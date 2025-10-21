@@ -1,0 +1,70 @@
+{
+  "header": {
+    "title": "Crisis Data",
+    "subtitle": "Funding Compass",
+    "betaBadge": "Beta Version",
+    "betaTooltip": "This beta version is based on publicly available information from the respective organizations and transparency portals like IATI. Updates are ongoing. If you have any feedback, please use the form in the upper right corner.",
+    "shareButton": "Share",
+    "shareButtonSuccess": "Copied!"
+  },
+  "stats": {
+    "dataProviders": {
+      "title": "Who receives funds",
+      "label": "Organizations",
+      "tooltip": "Organizations in the crisis data ecosystem who maintain essential assets."
+    },
+    "dataProjects": {
+      "title": "What funds are used for",
+      "label": "Products",
+      "tooltip": "Essential products that enable partners to anticipate, prevent, and respond to crises around the world."
+    },
+    "donorCountries": {
+      "title": "Where funds are from",
+      "label": "Donors",
+      "tooltip": "Key donors in the crisis data ecosystem who provide funding to maintain essential assets."
+    }
+  },
+  "filters": {
+    "searchPlaceholder": "Search organizations & products...",
+    "donorPlaceholder": "Select donor(s)...",
+    "typePlaceholder": "Select type(s)..."
+  },
+  "sections": {
+    "organizationsAndProjects": "Funding Registry",
+    "projectCategories": "Products by Type",
+    "organizationTypes": "Provider Organizations by Type"
+  },
+  "investmentTypes": {
+    "data": "Data Sets & Commons",
+    "infrastructure": "Infrastructure & Platforms",
+    "analytics": "Crisis Analytics & Insights",
+    "human": "Human Capital & Know-how",
+    "standards": "Standards & Coordination",
+    "learning": "Learning & Exchange"
+  },
+  "projectDetails": {
+    "donorCountries": "Product Donor Countries",
+    "investmentTypes": "Investment Types",
+    "notSpecified": "Not specified"
+  },
+  "filterDescription": {
+    "showingAll": "Showing all {projects} products from {organizations} organizations",
+    "showing": "Showing",
+    "funds": "funds",
+    "project": "product",
+    "projects": "products",
+    "in": "in",
+    "relatingTo": "relating to"
+  },
+  "footer": {
+    "dataGatheredBy": "Data gathered by the",
+    "organization": "Complex Risk Analytics Fund (CRAF'd)",
+    "copyright": "© {year} United Nations. All rights reserved."
+  },
+  "loading": {
+    "message": "Loading Compass..."
+  },
+  "error": {
+    "message": "Failed to load dashboard data."
+  }
+}
