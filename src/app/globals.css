@@ -1,0 +1,198 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;600;700;900&display=swap");
+@import "tailwindcss";
+
+/* Custom font declarations */
+@font-face {
+  font-family: 'Qanelas';
+  src: url('/fonts/QanelasBlack.otf') format('opentype');
+  font-weight: 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Qanelas';
+  src: url('/fonts/QanelasExtraBold.otf') format('opentype');
+  font-weight: 800;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Qanelas';
+  src: url('/fonts/QanelasHeavy.otf') format('opentype');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* 
+ * Tailwind CSS v4 Theme Configuration
+ * 
+ * @theme vs :root:
+ * - @theme: Defines design tokens that CREATE Tailwind utility classes
+ *   Example: --font-family-qanelas → generates "font-qanelas" class
+ *   Use for: fonts, colors, spacing, breakpoints - anything you want as utilities
+ * 
+ * - :root: Defines regular CSS variables WITHOUT creating utility classes
+ *   Example: --spacing-section → use as var(--spacing-section) in custom CSS
+ *   Use for: component-specific values, design tokens that don't need utilities
+ * 
+ * See: https://tailwindcss.com/docs/theme
+ */
+@theme {
+  /* Font families - these create font-* utility classes (e.g., font-qanelas, font-sans) */
+  --font-family-sans: Roboto, ui-sans-serif, system-ui, sans-serif;
+  --font-family-qanelas: Qanelas, ui-sans-serif, system-ui, sans-serif;
+  --font-family-roboto: Roboto, ui-sans-serif, system-ui, sans-serif;
+}
+
+:root {
+  /* Regular CSS variables below - these do NOT create Tailwind utility classes */
+  /* Use these with var(--variable-name) in your custom CSS */
+  
+  /* Spacing variables */
+  --spacing-section: 1.5rem; /* 24px - equivalent to gap-6 */
+
+  /* Component styles */
+  --card-glass: rgba(255, 255, 255, 0.8);
+  --card-glass-light: rgba(255, 255, 255, 0.7);
+  --card-border-radius: 0.5rem;
+  
+  /* Typography */
+  --text-heading-lg: 1.125rem; /* 18px - unified section headers */
+  --text-stat-value: 3rem; /* 48px */
+  --text-stat-label: 0.875rem; /* 14px */
+  --text-card-title: 1.25rem; /* 20px */
+  --header-icon-size: 1.25rem; /* 20px */
+  
+  /* Badge styles */
+  --badge-padding-x: 0.5rem;
+  --badge-padding-y: 0.25rem;
+  --badge-border-radius: 0.375rem;
+  --badge-font-size: 0.75rem;
+  
+  /* Chart styles */
+  --chart-bar-size: 20;
+  --chart-bar-radius: 4;
+  --chart-axis-stroke: #64748b;
+  --chart-grid-stroke: #e2e8f0;
+  --chart-font-size: 12;
+  
+  /* Interactive elements */
+  --hover-scale: 1.02;
+  --transition-duration: 200ms;
+
+  /* Custom color palette */
+  --color-primary: ##f8fafc;
+  --color-secondary: #64748b;
+  --color-accent: #E0F7FF; /* Light blue accent (matches --brand-bg-light) */
+  --color-warning: #f59e0b;
+  --color-error: #ef4444;
+  --color-surface: #E0F7FF; /* Light blue surface (matches --brand-bg-light) */
+  --color-surface-dark: #1e293b;
+
+  /* Brand colors - Crisis Data Funding Compass */
+  /* 
+   * Primary brand color scheme based on #1FBBEE
+   * To change the brand colors, update these values:
+   * - --brand-primary: Main brand color (used for icons, text, highlights)
+   * - --brand-primary-dark: Darker shade (used for gradients, hover states)
+   * - --brand-primary-light: Lighter shade (for subtle accents)
+   * - --brand-bg-light: Light background tint
+   * - --brand-bg-lighter: Very light background tint
+   * - --brand-border: Border color for highlighted elements
+   */
+--brand-primary: #e6af26;        /* main amber (vibrant golden tone) */
+--brand-primary-dark: #a78003;   /* darker amber for hover/active */
+--brand-primary-light: #fcd34d;  /* light amber for buttons/highlights */
+--brand-bg-light: #ffe8be;       /* soft warm background */
+--brand-bg-lighter: #fcf4e4;     /* even lighter background */
+--brand-border: #d9b206;        /* deep amber-brown for borders/text accents */
+
+--badge-beta-bg: #f9f5ec;      /* desaturated amber tint — soft, creamy background */
+--badge-beta-border: #eadcb8;  /* pale warm amber-beige border */
+--badge-beta-text: #7a6a46;    /* muted golden-brown text, readable and gentle */
+--badge-beta-icon: #9b864c;    /* slightly deeper amber-gray for icons */
+
+--badge-other-bg: #d7d8f5;      /* indigo-100: pale background */
+--badge-other-border: #7b7df7;  /* indigo-500: vivid but not overwhelming */
+--badge-other-text: #4d479c;    /* indigo-800: dark readable text */
+--badge-other-icon: #4338ca;  
+
+  /* Disable all shadows completely */
+  --shadow: none !important;
+  --shadow-sm: none !important;
+  --shadow-md: none !important;
+  --shadow-lg: none !important;
+  --shadow-xl: none !important;
+  --shadow-2xl: none !important;
+  --shadow-inner: none !important;
+  --drop-shadow: none !important;
+  --drop-shadow-sm: none !important;
+  --drop-shadow-md: none !important;
+  --drop-shadow-lg: none !important;
+  --drop-shadow-xl: none !important;
+  --drop-shadow-2xl: none !important;
+  
+  /* Override any shadow utilities */
+  --shadow-xs: none !important;
+}
+
+/* Force Roboto font globally */
+* {
+  font-family: Roboto, ui-sans-serif, system-ui, sans-serif !important;
+}
+
+/* Prevent layout shifts by always showing scrollbar */
+html {
+  overflow-y: scroll;
+  scrollbar-gutter: stable;
+  font-family: Roboto, ui-sans-serif, system-ui, sans-serif;
+}
+
+body {
+  overflow-y: scroll;
+  font-family: Roboto, ui-sans-serif, system-ui, sans-serif;
+  font-weight: 400;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Custom scrollbar styling */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f5f9;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #cbd5e1;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #94a3b8;
+}
+
+/* Force remove all shadows globally */
+*, *::before, *::after {
+  box-shadow: none !important;
+  filter: none !important;
+  -webkit-box-shadow: none !important;
+  -moz-box-shadow: none !important;
+}
+
+
+
+/* Enable text selection on inputs */
+input, textarea {
+  user-select: text;
+  -webkit-user-select: text;
+  -moz-user-select: text;
+  -ms-user-select: text;
+}
+

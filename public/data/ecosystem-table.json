@@ -1,0 +1,4230 @@
+[
+  {
+    "id": "rec04lJaB92fTs0JH",
+    "createdTime": "2025-07-03T18:31:32.000Z",
+    "fields": {
+      "Project/Product Name": "Field Mapping Tasking Manager (FMTM)",
+      "product_key": "fmtm",
+      "Provider Orgs Full Name": [
+        "recPNaYHYuKeRDfJn"
+      ],
+      "CRAF’d-Funded Project?": "NO",
+      "Investment Type(s)": [
+        "Infrastructure & Platforms"
+      ],
+      "Investment Theme(s)": [
+        "Geographic Information Systems (GIS)"
+      ],
+      "Project Website": "https://www.hotosm.org/updates/field-mapping-tasking-manager-fmtm/",
+      "Project Description": "Managed by the Humanitarian OpenStreetMap Team, FMTM coordinates mapping campaigns in crisis zones through volunteer contributions. It organizes tasks, quality controls labeling, and integrates open geospatial datasets into humanitarian operational platforms.\n"
+    }
+  },
+  {
+    "id": "rec0u1ul8iu7Yvbys",
+    "createdTime": "2025-03-24T18:43:59.000Z",
+    "fields": {
+      "Project/Product Name": "Health Indicators Data",
+      "product_key": "who-health-indicators",
+      "Provider Orgs Full Name": [
+        "recwQpJQH4LwmSOBE"
+      ],
+      "CRAF’d-Funded Project?": "NO",
+      "Investment Type(s)": [
+        "Data Sets & Commons"
+      ],
+      "Investment Theme(s)": [
+        "Health Data"
+      ],
+      "Project Website": "https://www.who.int/data/gho/data/indicators",
+      "Project Description": "WHO offers globally standardized health data through its GHO portal, providing indicators on disease, mortality, and service coverage via APIs and downloadable data under open access licenses.\n",
+      "Project Donor Agencies": [
+        "recqhcKxTv71yMfeI"
+      ]
+    }
+  },
+  {
+    "id": "rec22kfYpoIsldmEK",
+    "createdTime": "2025-03-24T19:04:34.000Z",
+    "fields": {
+      "Project/Product Name": "Data Entry and Exploration Platform (DEEP)",
+      "product_key": "deep",
+      "Provider Orgs Full Name": [
+        "recMRdDWNDoa8PFIn",
+        "recVvtFoKKF407fD1",
+        "recvzWSlYgzs0mffd"
+      ],
+      "CRAF’d-Funded Project?": "NO",
+      "Investment Type(s)": [
+        "Infrastructure & Platforms"
+      ],
+      "Investment Theme(s)": [
+        "Data Collection",
+        "Data Governance & Management"
+      ],
+      "Project Website": "https://www.thedeep.io/",
+      "Project Description": "The Data Entry and Exploration Platform (DEEP) offers a suite of tools and collaborative workflows that meet the needs for compiling, storing, structuring, analyzing and visualizing data and qualitative information. It was born out of the aftermath of the Nepal Earthquake in 2016 to strengthen collective analysis and coordinate efforts.\n\nDEEP’s open-source and free services allow more than 7,500 users from the humanitarian and development communities achieve a more robust, collaborative and transparent approach to needs assessments and situation analysis.\n",
+      "Project Donor Agencies": [
+        "rec6XRPA9pKgC8j1J"
+      ]
+    }
+  },
+  {
+    "id": "rec24cVLtWAWZB6gx",
+    "createdTime": "2025-03-24T18:22:52.000Z",
+    "fields": {
+      "Project/Product Name": "Fragility, Conflict, and Violence (FCV) Data",
+      "product_key": "wb-fcv",
+      "Provider Orgs Full Name": [
+        "recl51I0rcqfCzesL"
+      ],
+      "CRAF’d-Funded Project?": "NO",
+      "Investment Type(s)": [
+        "Data Sets & Commons",
+        "Crisis Analytics & Insights"
+      ],
+      "Investment Theme(s)": [
+        "Conflict & Violence Data"
+      ],
+      "Project Website": "https://www.worldbank.org/en/topic/fragilityconflictviolence",
+      "Project Description": "This platform curates and disseminates datasets, reports, and indicators related to fragility, conflict, and violence. It supports development and humanitarian actors by improving access to evidence on conflict dynamics and institutional resilience.\n"
+    }
+  },
+  {
+    "id": "rec28WeSKDEQ5wx45",
+    "createdTime": "2025-04-24T15:27:29.000Z",
+    "fields": {
+      "Project/Product Name": "Global Displacement Forecast",
+      "product_key": "global-displacement-forecast",
+      "Provider Orgs Full Name": [
+        "recMRdDWNDoa8PFIn"
+      ],
+      "CRAF’d-Funded Project?": "NO",
+      "Investment Type(s)": [
+        "Crisis Analytics & Insights"
+      ],
+      "Investment Theme(s)": [
+        "Displacement & Migration Data"
+      ],
+      "Project Website": "https://drc.ngo/resources/documents/global-displacement-forecast/",
+      "Project Description": "The forecast platform provides predictive models of displacement risk based on conflict, climate, and governance indicators. It offers downloadable datasets and visual forecasts to support anticipatory humanitarian programming.\n",
+      "Project Donor Agencies": [
+        "recRutqdhqEZSnOB2",
+        "recHSsEaPuaG3h2PQ",
+        "recOE3EszdHKOJ9hC"
+      ]
+    }
+  },
+  {
+    "id": "rec2Su6C7bHl4BC7h",
+    "createdTime": "2025-04-15T19:24:40.000Z",
+    "fields": {
+      "Project/Product Name": "QGIS",
+      "product_key": "qgis",
+      "Provider Orgs Full Name": [
+        "recQ0zc2mawvmP70T"
+      ],
+      "CRAF’d-Funded Project?": "NO",
+      "Investment Type(s)": [
+        "Infrastructure & Platforms"
+      ],
+      "Investment Theme(s)": [
+        "Geospatial Data",
+        "Geographic Information Systems (GIS)"
+      ],
+      "Project Website": "https://qgis.org/",
+      "Project Description": "QGIS is a free, open-source geographic information system (GIS) application used worldwide for mapping, spatial analysis, and geostatistical modeling. It supports both raster and vector data and is widely adopted by humanitarian, environmental, and development actors.\n"
+    }
+  },
+  {
+    "id": "rec2eT5BuCp87chHm",
+    "createdTime": "2025-03-21T19:10:18.000Z",
+    "fields": {
+      "Project/Product Name": "Humanitarian Data Dashboard",
+      "product_key": "inso-humanitarian-data-dashboard",
+      "Provider Orgs Full Name": [
+        "recHswBeKTxqz7ig7"
+      ],
+      "CRAF’d-Funded Project?": "NO",
+      "Investment Type(s)": [
+        "Data Sets & Commons"
+      ],
+      "Investment Theme(s)": [
+        "Conflict & Violence Data",
+        "Data Storage, Access & Sharing",
+        "Humanitarian Access Data"
+      ],
+      "Project Website": "https://ngosafety.org/humanitarian-data-dashboard/",
+      "Project Description": "The Conflict Data Dashboard displays _“all recorded security incidents”_ which means it shows all the ‘Security incidents’ (see above) recorded by INSO and not only those that affected NGOs.\n\n"
+    }
+  },
+  {
+    "id": "rec3SUNKdqZWbEktL",
+    "createdTime": "2025-03-24T15:58:31.000Z",
+    "fields": {
+      "Project/Product Name": "Subnational Population Statistics",
+      "product_key": "unfpa-subpop-stats",
+      "Provider Orgs Full Name": [
+        "rec5OGQnjAgjSFawp"
+      ],
+      "CRAF’d-Funded Project?": "NO",
+      "Investment Type(s)": [
+        "Data Sets & Commons"
+      ],
+      "Investment Theme(s)": [
+        "Baseline Population Data"
+      ],
+      "Project Website": "https://data.humdata.org/organization/unfpa?page=3#datasets-section",
+      "Project Description": "UNFPA, the United Nations Population Fund, works globally to ensure universal access to sexual and reproductive health, prevent and respond to gender-based violence, collect and use population data, and promote gender equality and the empowerment of women and youth across the humanitarian/development continuum.\n"
+    }
+  },
+  {
+    "id": "rec3t3TGt2tAmzl5B",
+    "createdTime": "2025-03-24T18:41:28.000Z",
+    "fields": {
+      "Project/Product Name": "Global Health Observatory (GHO)",
+      "product_key": "gho",
+      "Provider Orgs Full Name": [
+        "recwQpJQH4LwmSOBE"
+      ],
+      "CRAF’d-Funded Project?": "NO",
+      "Investment Type(s)": [
+        "Data Sets & Commons",
+        "Crisis Analytics & Insights"
+      ],
+      "Investment Theme(s)": [
+        "Health Data"
+      ],
+      "Project Website": "https://www.who.int/data/gho",
+      "Project Description": "WHO’s GHO is its flagship global portal for health statistics and indicators. It offers datasets across themes like mortality, disease burden, and service coverage with API access for researchers and policymakers.\n"
+    }
+  },
+  {
+    "id": "rec3xc850SaSrqS7t",
+    "createdTime": "2025-03-21T18:37:17.000Z",
+    "fields": {
+      "Project/Product Name": "Administrative Areas Data",
+      "product_key": "admin-areas",
+      "Provider Orgs Full Name": [
+        "rec2fgn4cmkvDsRB8"
+      ],
+      "CRAF’d-Funded Project?": "NO",
+      "Investment Type(s)": [
+        "Data Sets & Commons"
+      ],
+      "Investment Theme(s)": [
+        "Geospatial Data"
+      ],
+      "Project Website": "https://hub.worldpop.org/project/categories?id=17",
+      "Project Description": "Provides standardized global administrative boundary datasets, essential for geospatial analysis and mapping. Open-access and regularly updated, these boundaries support humanitarian planning, statistical frameworks, and international data interoperability.\n"
+    }
+  },
+  {
+    "id": "rec45gS90ejbQe8V3",
+    "createdTime": "2025-06-27T22:23:30.000Z",
+    "fields": {
+      "Project/Product Name": "PARIS21 Academy",
+      "product_key": "paris21-academy",
+      "Provider Orgs Full Name": [
+        "recvPPEVoXWarvaFS"
+      ],
+      "CRAF’d-Funded Project?": "NO",
+      "Investment Type(s)": [
+        "Learning & Exchange"
+      ],
+      "Investment Theme(s)": [
+        "Upskilling & Training"
+      ],
+      "Project Website": "https://academy.paris21.org/",
+      "Project Description": "An online learning platform offering training, MOOCs, and webinars on statistical capacity building and data system strengthening to support evidence-based policymaking.\n",
+      "Project Donor Agencies": [
+        "recIUg3K9vtroebVE"
+      ]
+    }
+  },
+  {
+    "id": "rec4NnFipAOHwTXCX",
+    "createdTime": "2025-03-21T16:08:21.000Z",
+    "fields": {
+      "Project/Product Name": "Internal Displacement Updates (IDU)",
+      "product_key": "idu",
+      "Provider Orgs Full Name": [
+        "reclJ2i9jD0TKjOJ8"
+      ],
+      "CRAF’d-Funded Project?": "NO",
+      "Investment Type(s)": [
+        "Data Sets & Commons"
+      ],
+      "Investment Theme(s)": [
+        "Displacement & Migration Data"
+      ],
+      "Project Website": "https://www.internal-displacement.org/database/api-documentation/",
+      "Project Description": "IDMC's IDU offers preliminary, timely, and detailed insights into new displacement events reflecting our ongoing daily monitoring efforts. This event-based dataset provides initial snapshots of displacement trends which may later be refined and consolidated in the GIDD. It's important to note that these figures do not undergo the same level of quality control as the GIDD data, as the IDU data reflects timely updates that are subject to change as more information becomes available following a displacement event.\n",
+      "Project Donor Agencies": [
+        "rec8gXVsPUUB517NE",
+        "rec6XRPA9pKgC8j1J",
+        "recf10RuM7qHUnC33",
+        "recHuY5QDGX7wJsTF",
+        "rec0QlT9YlTVhHfEn",
+        "recRutqdhqEZSnOB2",
+        "recatUveyYdfEOdbu",
+        "rec0sY1I5JZz6ZsUE",
+        "rec1VhOJv9U6QKBBs"
+      ]
+    }
+  },
+  {
+    "id": "rec4SqufwyxLeeDM4",
+    "createdTime": "2025-03-21T18:35:59.000Z",
+    "fields": {
+      "Project/Product Name": "Rainfall Indicators",
+      "product_key": "wfp-rainfall-indicators",
+      "Provider Orgs Full Name": [
+        "rec3QdLIyrZ4dNiPh"
+      ],
+      "CRAF’d-Funded Project?": "NO",
+      "Investment Type(s)": [
+        "Data Sets & Commons"
+      ],
+      "Investment Theme(s)": [
+        "Food Security Data",
+        "Climate Data",
+        "Environmental Data"
+      ],
+      "Project Website": "https://data.humdata.org/dataset/?dataseries_name=WFP+-+Rainfall+Indicators+at+Subnational+Level",
+      "Project Description": "This dataset contains dekadal rainfall indicators computed from Climate Hazards Group InfraRed Precipitation satellite imagery with insitu Station data (CHIRPS) version 2, aggregated by subnational administrative units\n"
+    }
+  },
+  {
+    "id": "rec4V0tKy9KP8Gw4h",
+    "createdTime": "2025-03-24T01:25:05.000Z",
+    "fields": {
+      "Project/Product Name": "Multi-Sector Needs Assessment (MSNA)",
+      "product_key": "unhcr-msna",
+      "Provider Orgs Full Name": [
+        "recfLMsJLUS9toAjS"
+      ],
+      "CRAF’d-Funded Project?": "NO",
+      "Investment Type(s)": [
+        "Data Sets & Commons"
+      ],
+      "Investment Theme(s)": [
+        "Needs Assessment Data"
+      ],
+      "Project Website": "https://www.unocha.org/publications/report/lebanon/multi-sector-needs-assessment-msna-key-findings-wash-december-2023",
+      "Project Description": "UNHCR’s MSNA platform collects standardized multi-sector needs data in refugee settings—covering shelter, protection, livelihood, and health metrics to guide program planning and coordination.\n"
+    }
+  },
+  {
+    "id": "rec4XuZsotMgaVbAm",
+    "createdTime": "2025-03-25T17:14:07.000Z",
+    "fields": {
+      "Project/Product Name": "INFORM Severity",
+      "product_key": "inform-severity",
+      "Provider Orgs Full Name": [
+        "recX11pAAzHjdqH0Y",
+        "recGCltHLsYiDo59B",
+        "recz5rdvfM2eaY0Sx"
+      ],
+      "CRAF’d-Funded Project?": "NO",
+      "Investment Type(s)": [
+        "Data Sets & Commons",
+        "Crisis Analytics & Insights"
+      ],
+      "Investment Theme(s)": [
+        "Humanitarian Access Analytics"
+      ],
+      "Project Website": "https://drmkc.jrc.ec.europa.eu/inform-index/INFORM-Severity",
+      "Project Description": "The INFORM Severity Index is an improved way to analyse the severity of humanitarian crises globally. It seeks to contribute to improved management of humanitarian crises by providing decision-makers with a comparable and reliable summary of information about the severity of humanitarian crises that is updated monthly and applicable globally. INFORM partners have been developing the INFORM Severity Index since 2016. It will complement the widely used INFORM Risk Index.\n\n\n\n"
+    }
+  },
+  {
+    "id": "rec4aulcundpJZOwl",
+    "createdTime": "2025-03-25T19:30:04.000Z",
+    "fields": {
+      "Project/Product Name": "CrisisWatch",
+      "product_key": "crisiswatch",
+      "Provider Orgs Full Name": [
+        "recXLswB4U05ZtaKy"
+      ],
+      "CRAF’d-Funded Project?": "NO",
+      "Investment Type(s)": [
+        "Data Sets & Commons",
+        "Infrastructure & Platforms"
+      ],
+      "Investment Theme(s)": [
+        "Forecasting / Early-Warning",
+        "Conflict & Violence Data"
+      ],
+      "Project Website": "https://www.crisisgroup.org/crisiswatch",
+      "Project Description": "CrisisWatch is our global conflict tracker, an early warning tool designed to help prevent deadly violence. It keeps decision-makers up-to-date with developments in over 70 conflicts and crises every month, identifying trends and alerting them to risks of escalation and opportunities to advance peace. In addition, CrisisWatch monitors over 50 situations (“standby monitoring”) to offer timely information if developments indicate a drift toward violence or instability. Entries dating back to 2003 provide easily searchable conflict histories\n",
+      "Project Donor Agencies": [
+        "recNLQhceOCXSMemo",
+        "recOebxHWdwSQ0RU6",
+        "recXnhGN4CKQG1yHg",
+        "recxopeJBWmkOfOtE",
+        "recBEtacusKEwpWho",
+        "recA0WfERzcVzV1Hh",
+        "rec02whZDEsRI0xkR",
+        "receHoGmo61oHXBAc",
+        "recpnGIsQx8Bb4aji",
+        "recnBCITljZPzm4Ga",
+        "recbbW0P8fxVtJBJP"
+      ]
+    }
+  },
+  {
+    "id": "rec4oWGeToxciytv3",
+    "createdTime": "2025-07-08T14:05:39.000Z",
+    "fields": {
+      "Project/Product Name": "World Weather Information Service (WWIS)",
+      "product_key": "wwis",
+      "Provider Orgs Full Name": [
+        "recekUHnu8tOPKcGU"
+      ],
+      "CRAF’d-Funded Project?": "NO",
+      "Investment Type(s)": [
+        "Infrastructure & Platforms"
+      ],
+      "Investment Theme(s)": [
+        "Geospatial Analytics",
+        "Forecasting / Early-Warning"
+      ],
+      "Project Website": "https://worldweather.wmo.int/en/home.html",
+      "Project Description": "WWIS is a centralized WMO platform delivering authoritative city-level weather forecasts and climate summaries sourced from national meteorological and hydrological services. It supports risk awareness and decision-making through free, real-time access to standardized global weather data.\n"
+    }
+  },
+  {
+    "id": "rec4x8zaZtHkZpdrK",
+    "createdTime": "2025-03-24T02:01:15.000Z",
+    "fields": {
+      "Project/Product Name": "WASH Knowledge, Attitudes and Practices (KAP) Survey",
+      "product_key": "wash-kap-survey",
+      "Provider Orgs Full Name": [
+        "recfLMsJLUS9toAjS"
+      ],
+      "CRAF’d-Funded Project?": "NO",
+      "Investment Type(s)": [
+        "Data Sets & Commons"
+      ],
+      "Investment Theme(s)": [
+        "Water, Sanitation & Hygiene (WASH) Data",
+        "Household Survey Data"
+      ],
+      "Project Website": "https://microdata.unhcr.org/index.php/catalog/1107",
+      "Project Description": "Routine monitoring of the WASH services provided is paramount for quality assurance, ensuring the set standards are met within stipulated timelines, challenges are identified in time and solutions are sought. UNHCR (Cox’s Bazar Field Office) conducted the third round of its WASH Knowledge, Attitude and Practice (KAP) survey from 15th to 23rd November 2023 in UNHCR’s area of operation in Kutupalong and Teknaf. Five WASH partners implemented the survey.\t\n"
+    }
+  },
+  {
+    "id": "rec5GA5F1UPlXATSj",
+    "createdTime": "2025-07-22T10:55:30.000Z",
+    "fields": {
+      "Project/Product Name": "Global Disaster Preparedness Center (GDPC)",
+      "product_key": "gdpc",
+      "Provider Orgs Full Name": [
+        "reccKH8GA8awjQEvp",
+        "recwaewYY2WMRF9ZI"
+      ],
+      "CRAF’d-Funded Project?": "NO",
+      "Investment Type(s)": [
+        "Data Sets & Commons",
+        "Learning & Exchange"
+      ],
+      "Investment Theme(s)": [
+        "Climate Data",
+        "Forecasting / Early-Warning"
+      ],
+      "Project Website": "https://preparecenter.org/",
+      "Project Description": "The IFRC Global Disaster Preparedness Center, together with the Red Cross Red Crescent Climate Centre and American Red Cross, develops data-driven tools and best practice templates. The center enables early warning preparedness and resilience building through open guides, scenario modeling tools, and dashboards.\n"
+    }
+  },
+  {
+    "id": "rec5XxteXiqc3vvmj",
+    "createdTime": "2025-04-14T20:41:02.000Z",
+    "fields": {
+      "Project/Product Name": "UN Register of Conventional Arms (ROCA)",
+      "product_key": "unoda-roca",
+      "Provider Orgs Full Name": [
+        "rec6XVf6yOpiKsglc"
+      ],
+      "CRAF’d-Funded Project?": "NO",
+      "Investment Type(s)": [
+        "Data Sets & Commons"
+      ],
+      "Investment Theme(s)": [
+        "Conflict & Violence Data"
+      ],
+      "Project Website": "https://disarmament.unoda.org/convarms/register/",
+      "Project Description": "The UN General Assembly established the UN Register of Conventional Arms (UNROCA) in 1991 through resolution 46/36 L to promote transparency in armaments. Through the UNROCA instrument, Member States are requested, on an annual basis, to report their international transfers of seven categories major conventional arms, as well as small arms and light weapons. They may also provide additional background information, such as data on military holdings and procurement through national production. To date, 175 Member States have reported to the UNROCA instrument at least once. In light of relatively consistent reporting by the world’s largest arms exporters, it is estimated that the Register captures around 90 percent of the volume of the global arms trade.\n"
+    }
+  },
+  {
+    "id": "rec5zVtFYWKUXASIr",
+    "createdTime": "2025-10-21T17:02:22.000Z",
+    "fields": {
+      "Project/Product Name": "Gannet AI",
+      "product_key": "gannet-ai",
+      "Provider Orgs Full Name": [
+        "recVvtFoKKF407fD1"
+      ],
+      "CRAF’d-Funded Project?": "NO",
+      "Investment Type(s)": [
+        "Data Sets & Commons",
+        "Infrastructure & Platforms"
+      ],
+      "Investment Theme(s)": [
+        "AI & ML Infrastructure"
+      ],
+      "Project Website": "https://www.datafriendlyspace.org/our-work/gannet",
+      "Project Description": "GANNET is a real-time, end-to-end Generative AI platforms that combine near real-time assistance, analytics, and monitoring features for humanitarian data collaboration and effective decision-making.\n"
+    }
+  },
+  {
+    "id": "rec6S0tX5hnP9I5DG",
+    "createdTime": "2025-07-29T14:46:25.000Z",
+    "fields": {
+      "Project/Product Name": "WorldPop",
+      "product_key": "worldpop",
+      "Provider Orgs Full Name": [
+        "rec2fgn4cmkvDsRB8"
+      ],
+      "CRAF’d-Funded Project?": "NO",
+      "Investment Type(s)": [
+        "Data Sets & Commons",
+        "Crisis Analytics & Insights",
+        "Learning & Exchange"
+      ],
+      "Investment Theme(s)": [
+        "Upskilling & Training"
+      ],
+      "Project Website": "https://www.worldpop.org/about/",
+      "Project Description": "WorldPop develops peer-reviewed research and methods for the construction of open and high-resolution geospatial data on population distributions, demographic and dynamics.\n",
+      "Project Donor Agencies": [
+        "recbtz43uuKKFVfvd",
+        "rec6XRPA9pKgC8j1J",
+        "recbvrcYZZW7mBnCU",
+        "recCDa9F6ntBxGGkm",
+        "recqMZBMvN0vxYv9v",
+        "rec3Ado0Jrl799Q8A",
+        "recqhcKxTv71yMfeI",
+        "recAXDKxEbXsaHav4",
+        "recl0rZvHPzrC6Jwd",
+        "recq6gN9R1C4tGmIx"
+      ]
+    }
+  },
+  {
+    "id": "rec6dmVAye6IslJOK",
+    "createdTime": "2025-03-21T18:33:03.000Z",
+    "fields": {
+      "Project/Product Name": "HungerMap Data",
+      "product_key": "wfp-hungermap",
+      "Provider Orgs Full Name": [
+        "rec3QdLIyrZ4dNiPh"
+      ],
+      "CRAF’d-Funded Project?": "NO",
+      "Investment Type(s)": [
+        "Data Sets & Commons"
+      ],
+      "Investment Theme(s)": [
+        "Geospatial Data",
+        "Food Security Data"
+      ],
+      "Project Website": "https://hungermap.wfp.org/",
+      "Project Description": "HungerMapLIVE is the World Food Programme (WFP)’s global hunger monitoring system. It combines key metrics from various data sources – such as food security information, weather, population size, conflict, hazards, nutrition information and macro-economic data – to help assess, monitor and predict the magnitude and severity of hunger in near real-time. The resulting analysis is displayed on an interactive map that helps WFP staff, key decision makers and the broader humanitarian community to make more informed and timely decisions relating to food security.\n\n"
+    }
+  },
+  {
+    "id": "rec6rg7iVHuTnkQVe",
+    "createdTime": "2025-03-24T18:56:17.000Z",
+    "fields": {
+      "Project/Product Name": "Global Database of Humanitarian Organisations (GDHO)",
+      "product_key": "gdho",
+      "Provider Orgs Full Name": [
+        "rec8O141RyUupQsRy"
+      ],
+      "CRAF’d-Funded Project?": "NO",
+      "Investment Type(s)": [
+        "Data Sets & Commons"
+      ],
+      "Investment Theme(s)": [
+        "Humanitarian Access Data"
+      ],
+      "Project Website": "https://humanitarianoutcomes.org/projects/gdho",
+      "Project Description": "GDHO is a global compendium of organisations that provide aid in humanitarian crises. The database includes basic organisational and operational information on these humanitarian providers, which include international non-governmental organisations (grouped by federation), national NGOs that deliver aid within their own borders, UN humanitarian agencies, and the International Red Cross and Red Crescent Movement. \n\n"
+    }
+  },
+  {
+    "id": "rec795N2KXfgxaM50",
+    "createdTime": "2025-03-24T19:34:34.000Z",
+    "fields": {
+      "Project/Product Name": "Enhanced Vulnerability and Capacity Assessment (EVCA)",
+      "product_key": "evca",
+      "Provider Orgs Full Name": [
+        "reccKH8GA8awjQEvp"
+      ],
+      "CRAF’d-Funded Project?": "NO",
+      "Investment Type(s)": [
+        "Crisis Analytics & Insights"
+      ],
+      "Investment Theme(s)": [
+        "Damage Assessments",
+        "Needs Assessment Data"
+      ],
+      "Project Website": "https://preparecenter.org/site/evca/",
+      "Project Description": "**Trigger models are employed to establish danger levels that activate humanitarian anticipatory Early Action Protocols (EAPs). **These models are developed using the Impact-Based Forecasting ([IBF](https://510.global/glossary/ibf/)) methodology. So far, we have built models that trigger EAPs for typhoon, flood, dzud, drought and dengue hazards. \n\n"
+    }
+  },
+  {
+    "id": "rec7HiwptaxnhVxui",
+    "createdTime": "2025-04-01T13:53:55.000Z",
+    "fields": {
+      "Project/Product Name": "Afrobarometer",
+      "product_key": "afrobarometer",
+      "Provider Orgs Full Name": [
+        "rechDlUwp5odgrH4t"
+      ],
+      "CRAF’d-Funded Project?": "NO",
+      "Investment Type(s)": [
+        "Data Sets & Commons"
+      ],
+      "Investment Theme(s)": [
+        "Sentiment Data",
+        "Disaggregated Country-level Data"
+      ],
+      "Project Website": "https://www.afrobarometer.org/",
+      "Project Description": "Afrobarometer is a pan-African public-opinion research network providing survey insights into democracy, governance, and economic conditions. Survey microdata and analysis tools are publicly available via an open-access portal.\n",
+      "Project Donor Agencies": [
+        "recRutqdhqEZSnOB2",
+        "rec6XRPA9pKgC8j1J",
+        "recbtz43uuKKFVfvd",
+        "recGNTHL9SKZxLDcw",
+        "recm5JztIHB9RUFLL",
+        "rec2KBp1IAA5TtnQl"
+      ]
+    }
+  },
+  {
+    "id": "rec8NkRbqO6zHCRgB",
+    "createdTime": "2025-04-15T00:02:15.000Z",
+    "fields": {
+      "Project/Product Name": "Joint Multi-Cluster Needs Assessment (JMCNA)",
+      "product_key": "ocha-jmcna",
+      "Provider Orgs Full Name": [
+        "recGCltHLsYiDo59B"
+      ],
+      "CRAF’d-Funded Project?": "NO",
+      "Investment Type(s)": [
+        "Crisis Analytics & Insights",
+        "Standards & Coordination"
+      ],
+      "Investment Theme(s)": [
+        "Needs Assessment Data"
+      ],
+      "Project Website": "Somalia example available: https://reliefweb.int/report/somalia/somalia-2021-joint-multi-cluster-needs-assessment-jmcna-bulletin-key-findings-march",
+      "Project Description": "JMCNA is a collaborative inter-agency tool used to assess humanitarian needs across sectors, typically in contexts like complex emergencies or sudden-onset disasters. It supports coordinated planning and funding appeals.\n"
+    }
+  },
+  {
+    "id": "rec8taCKOmbZu5s4Z",
+    "createdTime": "2025-08-28T16:32:55.000Z",
+    "fields": {
+      "Project/Product Name": "Global Repository of Good Practices",
+      "product_key": "idmc-good-practices-repo",
+      "Provider Orgs Full Name": [
+        "reclJ2i9jD0TKjOJ8"
+      ],
+      "Investment Type(s)": [
+        "Crisis Analytics & Insights",
+        "Learning & Exchange"
+      ],
+      "Investment Theme(s)": [
+        "Best Practices",
+        "Displacement & Migration Analytics"
+      ],
+      "Project Website": "https://www.internal-displacement.org/good-practices/",
+      "Project Description": "As part of IDMC's investment in more systematic monitoring of national and global efforts to reduce the risk, scale and negative impacts of internal displacement, the Global Repository of Good Practices provides a platform to compile, share and evaluate policies and programmatic approaches to support better solutions for internally displaced people worldwide.\n"
+    }
+  },
+  {
+    "id": "rec8wR515Mvu0YGx0",
+    "createdTime": "2025-07-08T02:10:42.000Z",
+    "fields": {
+      "Project/Product Name": "Rivers and Streams Data",
+      "product_key": "nasa-river-streams-data",
+      "Provider Orgs Full Name": [
+        "rec3elwvrBRnwOVEh"
+      ],
+      "CRAF’d-Funded Project?": "NO",
+      "Investment Type(s)": [
+        "Data Sets & Commons",
+        "Infrastructure & Platforms"
+      ],
+      "Investment Theme(s)": [
+        "Geospatial Analytics",
+        "Geospatial Data",
+        "Monitoring & Alerts"
+      ],
+      "Project Website": "https://www.earthdata.nasa.gov/topics/terrestrial-hydrosphere/rivers-streams",
+      "Project Description": "NASA provides open global datasets on hydrology (water flow, stream gauges) used to model climate risk, manage watershed health, and support climate adaptation planning.\n"
+    }
+  },
+  {
+    "id": "rec96xC14xTkyyKlP",
+    "createdTime": "2025-03-24T14:47:51.000Z",
+    "fields": {
+      "Project/Product Name": "Common Operational Datasets (CODs)",
+      "product_key": "cods",
+      "Provider Orgs Full Name": [
+        "recGCltHLsYiDo59B"
+      ],
+      "CRAF’d-Funded Project?": "NO",
+      "Investment Type(s)": [
+        "Data Sets & Commons"
+      ],
+      "Investment Theme(s)": [
+        "Humanitarian Access Data",
+        "Data Governance & Management",
+        "Data Collection"
+      ],
+      "Project Website": "https://knowledge.base.unocha.org/wiki/spaces/imtoolbox/pages/4099440644/Common+Operational+Datasets+CODs+and+Dashboard",
+      "Project Description": "Common Operational Datasets (CODs) are authoritative reference datasets used by humanitarian organizations to support response efforts and decision-making. They provide a consistent and standardized data framework for all actors in a crisis.\t\n"
+    }
+  },
+  {
+    "id": "rec9HIhsIpPjx48rc",
+    "createdTime": "2025-06-27T22:20:20.000Z",
+    "fields": {
+      "Project/Product Name": "DisasterAWARE",
+      "product_key": "disaster-aware",
+      "Provider Orgs Full Name": [
+        "recCvRYx3gzUtg9cf"
+      ],
+      "CRAF’d-Funded Project?": "NO",
+      "Investment Type(s)": [
+        "Infrastructure & Platforms"
+      ],
+      "Investment Theme(s)": [
+        "Forecasting / Early-Warning",
+        "Climate Data",
+        "Monitoring & Alerts",
+        "APIs"
+      ],
+      "Project Website": "https://www.disasteraware.com/",
+      "Project Description": "DisasterAWARE is a global platform offering real-time hazard alerts, dashboards, and geospatial tools for disaster preparedness and early warning. It integrates predictive models and hazard tracking from global datasets.\n"
+    }
+  },
+  {
+    "id": "rec9ZvuALWuRRSN5P",
+    "createdTime": "2025-03-24T15:43:43.000Z",
+    "fields": {
+      "Project/Product Name": "Administrative Boundaries Data (COD-AB)",
+      "product_key": "cod-ab",
+      "Provider Orgs Full Name": [
+        "recGCltHLsYiDo59B",
+        "rec2fgn4cmkvDsRB8"
+      ],
+      "CRAF’d-Funded Project?": "NO",
+      "Investment Type(s)": [
+        "Data Sets & Commons"
+      ],
+      "Investment Theme(s)": [
+        "Geospatial Data"
+      ],
+      "Project Website": "https://data.humdata.org/dataset/?dataseries_name=COD+-+Subnational+Administrative+Boundaries&dataseries_name=OCHA+-+Subnational+Edge-matched+Administrative+Boundaries&q=&sort=last_modified+desc&ext_page_size=25",
+      "Project Description": "OCHA’s Common Operational Data Administrative Boundaries (COD‑AB) is a curated, harmonized global dataset aligned with OCHA’s COD standard, designed to support mapping, analysis, and coordination in humanitarian operations.\n"
+    }
+  },
+  {
+    "id": "rec9tb7ISjeo7Sq78",
+    "createdTime": "2025-08-15T14:50:51.000Z",
+    "fields": {
+      "Project/Product Name": " Rapid Assessment Data",
+      "product_key": "rapid-assessment-data",
+      "Provider Orgs Full Name": [
+        "rec4yuocwbzqCzBUd"
+      ],
+      "CRAF’d-Funded Project?": "YES",
+      "Investment Type(s)": [
+        "Data Sets & Commons"
+      ],
+      "Investment Theme(s)": [
+        "Conflict & Violence Data",
+        "Gender Data"
+      ],
+      "Project Website": "https://mptf.undp.org/project/00141135"
+    }
+  },
+  {
+    "id": "recAAFwdCWrOgQGWL",
+    "createdTime": "2025-03-24T02:20:25.000Z",
+    "fields": {
+      "Project/Product Name": "Multiple Indicator Cluster Surveys (MICS)",
+      "product_key": "unicef-mics",
+      "Provider Orgs Full Name": [
+        "rec2OrPTxGHesgz1w"
+      ],
+      "CRAF’d-Funded Project?": "NO",
+      "Investment Type(s)": [
+        "Data Sets & Commons",
+        "Infrastructure & Platforms"
+      ],
+      "Investment Theme(s)": [
+        "Household Survey Data"
+      ],
+      "Project Website": "https://mics.unicef.org/",
+      "Project Description": "Since the mid-1990s, more than 120 countries have carried out one or more Multiple Indicator Cluster Survey, generating data on key indicators on the well-being of children, and helping shape policies for the improvement of their lives. \n\n"
+    }
+  },
+  {
+    "id": "recAeviz1XjLC8V6i",
+    "createdTime": "2025-07-22T11:21:51.000Z",
+    "fields": {
+      "Project/Product Name": "United Nations Satellite Centre (UNOSAT)",
+      "product_key": "unosat",
+      "Provider Orgs Full Name": [
+        "recsgHe4sU0ltYmhC"
+      ],
+      "CRAF’d-Funded Project?": "NO",
+      "Investment Type(s)": [
+        "Data Sets & Commons",
+        "Infrastructure & Platforms"
+      ],
+      "Investment Theme(s)": [
+        "Geospatial Data",
+        "Climate Analytics",
+        "Climate Data"
+      ],
+      "Project Website": "https://unosat.org/",
+      "Project Description": "UNOSAT provides geospatial analysis and satellite imagery to support disaster response, humanitarian aid, and sustainable development. It offers on-demand and open-access mapping services through interactive portals, data hubs, and geospatial APIs.\n",
+      "Project Donor Agencies": [
+        "recRutqdhqEZSnOB2",
+        "recA0WfERzcVzV1Hh"
+      ]
+    }
+  },
+  {
+    "id": "recAmBwUrrYDMtXtH",
+    "createdTime": "2025-04-24T22:06:58.000Z",
+    "fields": {
+      "Project/Product Name": "Global Humanitarian Operational Presence Who, What, Where (3W) Portal",
+      "product_key": "ocha-3w",
+      "Provider Orgs Full Name": [
+        "recGCltHLsYiDo59B"
+      ],
+      "CRAF’d-Funded Project?": "NO",
+      "Investment Type(s)": [
+        "Data Sets & Commons",
+        "Infrastructure & Platforms",
+        "Standards & Coordination"
+      ],
+      "Investment Theme(s)": [
+        "3W (Who does What, Where) Data"
+      ],
+      "Project Website": "https://data.humdata.org/m/dataset/ocha-global-humanitarian-operational-presence-who-what-where-3w-portal",
+      "Project Description": "The 3W data is sourced from OCHA country and regional offices around the world and compiled by the Field Information Services (FIS) Section of OCHA. The data are as provided and organization names and acronyms are not standardized. 3W data collection frequency varies across offices and the compiled database includes what is available up to the date of publishing, ... More\n"
+    }
+  },
+  {
+    "id": "recCGWvmunEXVzpzw",
+    "createdTime": "2025-04-01T15:53:42.000Z",
+    "fields": {
+      "Project/Product Name": "Latinobarómetro",
+      "product_key": "latinobarometro",
+      "Provider Orgs Full Name": [
+        "recnt0uuGwuTUCjCw"
+      ],
+      "CRAF’d-Funded Project?": "NO",
+      "Investment Type(s)": [
+        "Data Sets & Commons"
+      ],
+      "Investment Theme(s)": [
+        "Sentiment Data"
+      ],
+      "Project Website": "https://www.latinobarometro.org/lat.jsp",
+      "Project Description": "Latinobarómetro is an annual public opinion survey that involves some 20,000 interviews in 18 Latin American countries, representing more than 600 million inhabitants. Some of the most relevant sections of the Latinobarómetro for freedom of expression and media development are \"Democracy\" and \"Media, Internet and Social media\". 1. Activities people like to do in the internet. 2. Perception of use of private data for commercial uses. 3. Prefered social media platforms\n\n",
+      "Project Donor Agencies": [
+        "recRutqdhqEZSnOB2",
+        "recsrMWmoA037bW03",
+        "recf10RuM7qHUnC33",
+        "recK8nDxvYcbGdEgw",
+        "recks6hHpAgBV14d9",
+        "recYxlC8x9puB69tx"
+      ]
+    }
+  },
+  {
+    "id": "recCrLYQFMbrPxsId",
+    "createdTime": "2025-03-24T18:51:15.000Z",
+    "fields": {
+      "Project/Product Name": "Observatory of Killed Journalists",
+      "product_key": "unesco-okj",
+      "Provider Orgs Full Name": [
+        "recWOW3N9BgLJiHl5"
+      ],
+      "CRAF’d-Funded Project?": "NO",
+      "Investment Type(s)": [
+        "Data Sets & Commons"
+      ],
+      "Investment Theme(s)": [
+        "Conflict & Violence Data"
+      ],
+      "Project Website": "https://www.unesco.org/en/safety-journalists/observatory",
+      "Project Description": "This Observatory provides updated information on the killing of journalists since 1993 and on the [judicial status of condemned cases](https://www.unesco.org/en/safety-journalists/observatory/methodology?hub=72609) since 2006. It also provides [public access to country responses](https://unesdoc.unesco.org/permalink/P-3516a4e6-b69d-473a-8e85-b019735aa873) to UNESCO's requests for information into the judicial status of ongoing and unresolved cases. You may browse the [full list of killed journalists](https://www.unesco.org/safety-journalists/observatory/grid?hub=72609) and search for [visual statistics and data](https://www.unesco.org/safety-journalists/observatory/statistics?hub=72609).\n\n"
+    }
+  },
+  {
+    "id": "recD0o9DgLleR3ctz",
+    "createdTime": "2025-07-24T21:38:40.000Z",
+    "fields": {
+      "Project/Product Name": "Geoportal",
+      "product_key": "geoportal",
+      "Provider Orgs Full Name": [
+        "recFxb7HxYJjfGpwB"
+      ],
+      "CRAF’d-Funded Project?": "NO",
+      "Investment Type(s)": [
+        "Data Sets & Commons",
+        "Learning & Exchange"
+      ],
+      "Investment Theme(s)": [
+        "Geospatial Data",
+        "Food Security Data",
+        "Climate Data",
+        "Capacity Building"
+      ],
+      "Project Website": "https://www.institutodegeografia.org/geoportal-2/",
+      "Project Description": "**The Institute of Geography of the USFQ** has been created to generate scientific knowledge of the environmental, socioeconomic and biophysical processes that occur in the Ecuadorian territory. Thus, it creates relevant evidence for public policies, individual and social action for the conservation of ecosystems and well-being of populations.\n \n\n"
+    }
+  },
+  {
+    "id": "recD1auVM61iln620",
+    "createdTime": "2025-03-24T15:45:21.000Z",
+    "fields": {
+      "Project/Product Name": "Population Data Portal",
+      "product_key": "unfpa-popdata-portal",
+      "Provider Orgs Full Name": [
+        "rec5OGQnjAgjSFawp"
+      ],
+      "CRAF’d-Funded Project?": "NO",
+      "Investment Type(s)": [
+        "Data Sets & Commons",
+        "Infrastructure & Platforms"
+      ],
+      "Investment Theme(s)": [
+        "Baseline Population Data"
+      ],
+      "Project Website": "https://pdp.unfpa.org/",
+      "Project Description": "The **Population Data Portal** is UNFPA’s ultimate data source and tracker for population and development data. It combines the newest population data on topics like sexual and reproductive health and reproductive rights, family planning, maternal health, or gender based violence gathered from multiple sources.\n"
+    }
+  },
+  {
+    "id": "recEKzVdOqCJVhqrg",
+    "createdTime": "2025-03-25T19:58:02.000Z",
+    "fields": {
+      "Project/Product Name": "PRIMARI",
+      "product_key": "iom-primari",
+      "Provider Orgs Full Name": [
+        "recsrCWKAPu9dwkHb"
+      ],
+      "CRAF’d-Funded Project?": "YES",
+      "Investment Type(s)": [
+        "Data Sets & Commons"
+      ],
+      "Investment Theme(s)": [
+        "Displacement & Migration Data"
+      ],
+      "Project Website": "https://crafd.io/data-financing/iom",
+      "Project Description": "The International Organization for Migration’s Global Data Institute introduces PRIMARI, an ambitious initiative to enhance the grasp on global mobility by consolidating sub-national displacement data with migration insights. This project aims to forge a composite dataset spanning up to 60 countries, drawing on the rich data resources of the Displacement Tracking Matrix (DTM). PRIMARI stands out for its commitment to merging diverse data streams into a singular, accessible, and actionable dataset, supported by a comprehensive metadata repository to ensure data transparency and integrity.\n",
+      "Project Donor Agencies": [
+        "rec1VhOJv9U6QKBBs"
+      ]
+    }
+  },
+  {
+    "id": "recEf0pdKsN1Gbvo8",
+    "createdTime": "2025-06-23T16:50:33.000Z",
+    "fields": {
+      "Project/Product Name": "Humanitarian Geoanalytics",
+      "product_key": "hhi-humgeo",
+      "Provider Orgs Full Name": [
+        "rec18TzPP5pYZ8ezX"
+      ],
+      "CRAF’d-Funded Project?": "NO",
+      "Investment Type(s)": [
+        "Crisis Analytics & Insights"
+      ],
+      "Investment Theme(s)": [
+        "Geospatial Analytics",
+        "Displacement & Migration Data",
+        "Conflict Analytics",
+        "Health Analytics"
+      ],
+      "Project Website": "https://hhi.harvard.edu/humanitarian-geoanalytics",
+      "Project Description": "Humanitarian Geoanalytics integrates spatial data analysis, mapping, and field-based research to support humanitarian operations. It focuses on conflict dynamics, displacement, and vulnerability assessments using geospatial methods.\n"
+    }
+  },
+  {
+    "id": "recEuWdBixgTpQKhR",
+    "createdTime": "2025-07-22T10:59:38.000Z",
+    "fields": {
+      "Project/Product Name": "Heidelberg Institute for Geoinformation Technology (HeiGIT)",
+      "product_key": "heigit",
+      "Provider Orgs Full Name": [
+        "rec1UYGdN0XUBCmDY"
+      ],
+      "CRAF’d-Funded Project?": "NO",
+      "Investment Type(s)": [
+        "Infrastructure & Platforms",
+        "Learning & Exchange"
+      ],
+      "Investment Theme(s)": [
+        "Geographic Information Systems (GIS)",
+        "Climate Data"
+      ],
+      "Project Website": "https://heigit.org/",
+      "Project Description": "HeiGIT develops open geospatial tools and APIs—such as OpenRouteService—to support disaster response, health logistics, and mobility mapping. Its platforms process global spatial data to enable routing, accessibility, and hazard analysis.\n",
+      "Project Donor Agencies": [
+        "receDOQpfeb4YHc5p",
+        "recYMaEogEDwsfBG7",
+        "recIIdzFsepw9jSrJ",
+        "recZ40qUa3nCpgj9C"
+      ]
+    }
+  },
+  {
+    "id": "recEwLy3FESOhLeNs",
+    "createdTime": "2025-03-24T19:45:48.000Z",
+    "fields": {
+      "Project/Product Name": "Global Disaster Alert and Coordination System (GDACS)",
+      "product_key": "gdacs",
+      "Provider Orgs Full Name": [
+        "recGCltHLsYiDo59B",
+        "recsgHe4sU0ltYmhC",
+        "recclzSlstbcseYGN"
+      ],
+      "CRAF’d-Funded Project?": "NO",
+      "Investment Type(s)": [
+        "Crisis Analytics & Insights"
+      ],
+      "Investment Theme(s)": [
+        "Forecasting / Early-Warning",
+        "Climate Data",
+        "Monitoring & Alerts",
+        "Geographic Information Systems (GIS)"
+      ],
+      "Project Website": "https://www.gdacs.org/",
+      "Project Description": "GDACS is a cooperation framework between the United Nations, the European Commission and disaster managers worldwide to improve alerts, information exchange and coordination in the first phase after major sudden-onset disasters.\n"
+    }
+  },
+  {
+    "id": "recF1lTFIy27lMFwT",
+    "createdTime": "2025-03-21T18:28:20.000Z",
+    "fields": {
+      "Project/Product Name": "Platform for Real-Time Impact and Situation Monitoring (PRISM)",
+      "product_key": "wfp-prism",
+      "Provider Orgs Full Name": [
+        "rec3QdLIyrZ4dNiPh"
+      ],
+      "CRAF’d-Funded Project?": "NO",
+      "Investment Type(s)": [
+        "Infrastructure & Platforms",
+        "Crisis Analytics & Insights"
+      ],
+      "Investment Theme(s)": [
+        "Climate Data",
+        "Geospatial Data",
+        "Anticipatory Action Triggers / Forecasts"
+      ],
+      "Project Website": "https://innovation.wfp.org/project/prism",
+      "Project Description": "PRISM is a climate risk monitoring system that integrates geospatial data on hazards such as droughts, floods, tropical storms, and earthquakes, along with socioeconomic vulnerability information. It provides decision-makers with interactive maps and charts to support disaster risk reduction and social assistance programs\n"
+    }
+  },
+  {
+    "id": "recF8bGKczcSVXjRz",
+    "createdTime": "2025-03-24T01:14:22.000Z",
+    "fields": {
+      "Project/Product Name": "Maps Data",
+      "product_key": "hot-maps-data",
+      "Provider Orgs Full Name": [
+        "recPNaYHYuKeRDfJn"
+      ],
+      "CRAF’d-Funded Project?": "NO",
+      "Investment Type(s)": [
+        "Data Sets & Commons"
+      ],
+      "Investment Theme(s)": [
+        "Education Data",
+        "Geospatial Data"
+      ],
+      "Project Website": "https://www.hotosm.org/tools-and-data.html",
+      "Project Description": "HOT is an international team dedicated to humanitarian action and community development through open mapping. We work together to provide map data which revolutionises disaster management, reduces risks, and contributes to achievement of the Sustainable Development Goals.\n"
+    }
+  },
+  {
+    "id": "recFF8BskJRz2Lyjk",
+    "createdTime": "2025-03-21T16:08:21.000Z",
+    "fields": {
+      "Project/Product Name": "Armed Conflict Location & Event Data (ACLED) Dataset & Tools",
+      "product_key": "acled",
+      "Provider Orgs Full Name": [
+        "recRoMeLU57jzgHFs"
+      ],
+      "CRAF’d-Funded Project?": "YES",
+      "Investment Type(s)": [
+        "Data Sets & Commons",
+        "Infrastructure & Platforms",
+        "Crisis Analytics & Insights"
+      ],
+      "Investment Theme(s)": [
+        "Conflict & Violence Data",
+        "Peace Data",
+        "Geospatial Data",
+        "Data Collection",
+        "Forecasting / Early-Warning"
+      ],
+      "Project Website": "https://acleddata.com/",
+      "Project Description": "ACLED is a widely used conflict dataset that tracks the locations, dates, actors, and types of political violence and protest events across the world. Updated weekly, it covers over 150 countries and includes data on battles, riots, strategic developments, and civilian targeting. ACLED’s open-access data and analytical tools are used by policymakers, researchers, and humanitarian organizations to monitor conflict dynamics, assess risk, and support early warning systems and humanitarian planning.\n",
+      "Project Donor Agencies": [
+        "rec1VhOJv9U6QKBBs"
+      ]
+    }
+  },
+  {
+    "id": "recFN5wUiwxYe6lS9",
+    "createdTime": "2025-03-24T14:43:09.000Z",
+    "fields": {
+      "Project/Product Name": "Displacement Tracking Matrix (DTM)",
+      "product_key": "dtm",
+      "Provider Orgs Full Name": [
+        "recsrCWKAPu9dwkHb"
+      ],
+      "CRAF’d-Funded Project?": "YES",
+      "Investment Type(s)": [
+        "Data Sets & Commons"
+      ],
+      "Investment Theme(s)": [
+        "Displacement & Migration Data"
+      ],
+      "Project Website": "https://dtm.iom.int/",
+      "Project Description": "The Displacement Tracking Matrix (DTM) gathers and analyzes data to disseminate critical multi layered information on the mobility, vulnerabilities, and needs of displaced and mobile populations that enables decision makers and responders to provide these populations with better context specific assistance.\n"
+    }
+  },
+  {
+    "id": "recFk4AqE3TR83nNo",
+    "createdTime": "2025-03-27T19:43:50.000Z",
+    "fields": {
+      "Project/Product Name": "Violence and Impact Early Warning System–People In Need (VIEWS-PIN)",
+      "product_key": "views-pin",
+      "Provider Orgs Full Name": [
+        "recHAqTQikIG8K4tD",
+        "recDNGUjEqFBtSEq6"
+      ],
+      "CRAF’d-Funded Project?": "YES",
+      "Investment Type(s)": [
+        "Crisis Analytics & Insights"
+      ],
+      "Investment Theme(s)": [
+        "Forecasting / Early-Warning",
+        "Monitoring & Alerts"
+      ],
+      "Project Website": "https://crafd.io/data-financing/viewspin",
+      "Project Description": "Set at an extension to the world-leading conflict prediction system [VIEWS](https://viewsforecasting.org/), VIEWS-PIN will provide monthly worldwide forecasts for the number of people in need of humanitarian assistance following exposure to conflict. Defining need as adverse changes in average income, access to water, healthcare, education, and food, VIEWS-PIN will also provide forecasts for each of these five dimensions to facilitate targeted action.\n",
+      "Project Donor Agencies": [
+        "rec1VhOJv9U6QKBBs"
+      ]
+    }
+  },
+  {
+    "id": "recFnNCbi5RYJNchr",
+    "createdTime": "2025-07-04T19:56:54.000Z",
+    "fields": {
+      "Project/Product Name": "MapSwipe Data",
+      "product_key": "mapswipe-data",
+      "Provider Orgs Full Name": [
+        "recJUyRNHPNV6wRXI"
+      ],
+      "CRAF’d-Funded Project?": "NO",
+      "Investment Type(s)": [
+        "Infrastructure & Platforms"
+      ],
+      "Investment Theme(s)": [
+        "Geographic Information Systems (GIS)"
+      ],
+      "Project Website": "https://mapswipe.org/en/",
+      "Project Description": "MapSwipe coordinates volunteer mapping of satellite imagery to create open building and infrastructure datasets in underserved areas. It supports crisis mapping, response planning, and humanitarian targeting.\n"
+    }
+  },
+  {
+    "id": "recGG8gTf4t6l8Mue",
+    "createdTime": "2025-06-23T17:16:03.000Z",
+    "fields": {
+      "Project/Product Name": "Signal Program",
+      "product_key": "hhi-signal-program",
+      "Provider Orgs Full Name": [
+        "rec18TzPP5pYZ8ezX"
+      ],
+      "CRAF’d-Funded Project?": "NO",
+      "Investment Type(s)": [
+        "Infrastructure & Platforms",
+        "Learning & Exchange"
+      ],
+      "Investment Theme(s)": [
+        "Geospatial Data",
+        "Forecasting / Early-Warning",
+        "Guides"
+      ],
+      "Project Website": "https://hhi.harvard.edu/signal-program",
+      "Project Description": "The Signal Program explores how emerging technologies—like remote sensing and data analytics—can support protection in humanitarian emergencies. It develops tools, ethical frameworks, and applied research for crisis contexts.\n"
+    }
+  },
+  {
+    "id": "recGMlI70iaqyTtMo",
+    "createdTime": "2025-06-23T13:43:21.000Z",
+    "fields": {
+      "Project/Product Name": " Copernicus Climate Change Service (C3S) ",
+      "product_key": "c3s",
+      "CRAF’d-Funded Project?": "NO",
+      "Investment Type(s)": [
+        "Data Sets & Commons"
+      ],
+      "Investment Theme(s)": [
+        "Climate Data"
+      ],
+      "Project Website": "https://climate.copernicus.eu/",
+      "Project Description": "C3S provides authoritative, open-access climate data and tools, including forecasts, historical datasets, and impact indicators. Managed by ECMWF, it supports risk analysis, adaptation planning, and policy development globally.\n"
+    }
+  },
+  {
+    "id": "recGVHndBPIvMpuHb",
+    "createdTime": "2025-07-21T18:44:21.000Z",
+    "fields": {
+      "Project/Product Name": "Data2X",
+      "product_key": "data2x",
+      "Provider Orgs Full Name": [
+        "reccGGWprH0EFvRjo"
+      ],
+      "CRAF’d-Funded Project?": "NO",
+      "Investment Type(s)": [
+        "Data Sets & Commons",
+        "Learning & Exchange"
+      ],
+      "Investment Theme(s)": [
+        "Gender Data",
+        "Gender Analytics",
+        "Upskilling & Training"
+      ],
+      "Project Website": "https://data2x.org/",
+      "Project Description": "Data2X is a global partnership advancing gender-responsive data systems. It builds research, advocacy, and tools to support data on women and girls, including capacity strengthening and innovation grants.\n"
+    }
+  },
+  {
+    "id": "recGoW02CMXhVQ00S",
+    "createdTime": "2025-08-15T14:54:46.000Z",
+    "fields": {
+      "Project/Product Name": "Kente Threads: Weaving leadership from displacement data",
+      "product_key": "kente-leadership",
+      "Provider Orgs Full Name": [
+        "rec5SbkybILGgwGal"
+      ],
+      "CRAF’d-Funded Project?": "YES",
+      "Investment Type(s)": [
+        "Data Sets & Commons"
+      ],
+      "Investment Theme(s)": [
+        "Gender Data",
+        "Displacement & Migration Data"
+      ],
+      "Project Website": "Without website yet",
+      "Project Description": "Kente Threads is a feminist initiative that reimagines humanitarian action by centering refugee women’s resilience and lived experiences. \n",
+      "Project Donor Agencies": [
+        "rec1VhOJv9U6QKBBs"
+      ]
+    }
+  },
+  {
+    "id": "recHVA5VejuaVSohF",
+    "createdTime": "2025-04-15T19:35:30.000Z",
+    "fields": {
+      "Project/Product Name": "UNHCR Global Data Service (GDS)",
+      "product_key": "unhcr-gds",
+      "Provider Orgs Full Name": [
+        "recfLMsJLUS9toAjS",
+        "recsrCWKAPu9dwkHb"
+      ],
+      "CRAF’d-Funded Project?": "NO",
+      "Investment Type(s)": [
+        "Infrastructure & Platforms"
+      ],
+      "Investment Theme(s)": [
+        "Data Storage, Access & Sharing"
+      ],
+      "Project Website": "https://www.migrationdataportal.org/institute/unhcr-global-data-service",
+      "Project Description": "​The UNHCR Global Data Service (GDS) is a central hub for data and statistics on refugees, asylum-seekers, internally displaced persons (IDPs), and stateless individuals.It supports evidence-based decision-making, policy development, and humanitarian operations by providing access to a wide range of data tools and resources.​\n"
+    }
+  },
+  {
+    "id": "recIUSUS3NNXaMHCQ",
+    "createdTime": "2025-03-24T19:51:08.000Z",
+    "fields": {
+      "Project/Product Name": "PANDA",
+      "product_key": "impact-panda",
+      "Provider Orgs Full Name": [
+        "recNVePWbU6GAxsIP"
+      ],
+      "CRAF’d-Funded Project?": "NO",
+      "Investment Type(s)": [
+        "Infrastructure & Platforms",
+        "Human Capital & Know-how"
+      ],
+      "Investment Theme(s)": [
+        "Data Storage, Access & Sharing",
+        "Conflict & Violence Data",
+        "Needs Assessment Data",
+        "Impact Evaluation",
+        "Capacity Building"
+      ],
+      "Project Website": "https://www.impact-initiatives.org/what-we-do/panda/",
+      "Project Description": "IMPACT’s PANDA initiative aims to improve the effectiveness, efficiency and efficacy of humanitarian and development interventions. PANDA supports the entire humanitarian programme cycle, including programme design, assessments, baselines, monitoring and evaluation.\n\t\n"
+    }
+  },
+  {
+    "id": "recIUs7JTe4alrFDs",
+    "createdTime": "2025-04-14T23:50:12.000Z",
+    "fields": {
+      "Project/Product Name": "World Bank Living Standards Measurement Study (LSMS)",
+      "product_key": "wb-lsms",
+      "Provider Orgs Full Name": [
+        "recl51I0rcqfCzesL"
+      ],
+      "CRAF’d-Funded Project?": "NO",
+      "Investment Type(s)": [
+        "Data Sets & Commons"
+      ],
+      "Investment Theme(s)": [
+        "Household Survey Data"
+      ],
+      "Project Website": "https://www.worldbank.org/en/programs/lsms",
+      "Project Description": "LSMS is the World Bank’s flagship household survey initiative that provides high-quality, nationally representative panel data for analyzing poverty, inequality, and livelihoods. Datasets are downloadable through the World Bank Microdata Library and used to support data-driven policymaking.\n"
+    }
+  },
+  {
+    "id": "recIfMPpdyRhpBXD0",
+    "createdTime": "2025-04-15T19:14:30.000Z",
+    "fields": {
+      "Project/Product Name": "System for Mine Action Reporting and Tracking (SMART)",
+      "product_key": "smart-mineaction",
+      "Provider Orgs Full Name": [
+        "recfMWBZ4Di5d2bjs"
+      ],
+      "CRAF’d-Funded Project?": "NO",
+      "Investment Type(s)": [
+        "Infrastructure & Platforms",
+        "Standards & Coordination"
+      ],
+      "Investment Theme(s)": [
+        "Disarmament Data"
+      ],
+      "Project Website": "https://immap.org/story/immap-developed-system-contributes-to-improving-data-collection-and-analysis-for-unmas-iraq/",
+      "Project Description": "SMART provides standardized data tools and dashboards for tracking mine action and explosive hazard removal operations—used to coordinate clearance and inform safety efforts.\n"
+    }
+  },
+  {
+    "id": "recJQghyXlyK5WiCE",
+    "createdTime": "2025-03-25T17:44:44.000Z",
+    "fields": {
+      "Project/Product Name": "The State of the World’s Children Report",
+      "product_key": "unicef-sowc-report",
+      "Provider Orgs Full Name": [
+        "rec2OrPTxGHesgz1w"
+      ],
+      "CRAF’d-Funded Project?": "NO",
+      "Investment Type(s)": [
+        "Data Sets & Commons",
+        "Crisis Analytics & Insights",
+        "Learning & Exchange"
+      ],
+      "Investment Theme(s)": [
+        "Poverty Analytics",
+        "Conflict Analytics",
+        "Health Analytics"
+      ],
+      "Project Website": "https://www.unicef.org/reports/state-of-worlds-children",
+      "Project Description": "Published annually by UNICEF, The State of the World’s Children report is a flagship global publication that presents comprehensive data and analysis on issues affecting children’s well-being. Each edition focuses on a specific theme—such as nutrition, mental health, or education—and includes rigorous data from household surveys, administrative sources, and UNICEF’s global monitoring systems. The report is a key advocacy and programming resource for policymakers and humanitarian actors, offering evidence-based recommendations grounded in global and regional trends.\n"
+    }
+  },
+  {
+    "id": "recJRVBtpTaiDVmoT",
+    "createdTime": "2025-03-25T17:09:28.000Z",
+    "fields": {
+      "Project/Product Name": "Population Gridded Dataset",
+      "product_key": "popgrid",
+      "Provider Orgs Full Name": [
+        "rec2fgn4cmkvDsRB8"
+      ],
+      "CRAF’d-Funded Project?": "NO",
+      "Investment Type(s)": [
+        "Data Sets & Commons"
+      ],
+      "Investment Theme(s)": [
+        "Baseline Population Data"
+      ],
+      "Project Website": "https://www.worldpop.org/methods/population-estimation-for-sustainable-development/",
+      "Project Description": "WorldPop is an interdisciplinary applied research group focusing primarily on supporting improvement of the spatial demographic evidence base and the use of these data for health and development applications, including addressing the Sustainable Development Goals. Its mission is to enable decision makers to harness the power of spatial demographic data through high quality applied research, to achieve a vision of a world where everyone, everywhere is counted in decision making.\n"
+    }
+  },
+  {
+    "id": "recJye4S746MWWmW6",
+    "createdTime": "2025-03-24T18:18:18.000Z",
+    "fields": {
+      "Project/Product Name": "WPDx Platform",
+      "product_key": "wpdx-platform",
+      "Provider Orgs Full Name": [
+        "recumcU5w8ZLPD6Um"
+      ],
+      "CRAF’d-Funded Project?": "NO",
+      "Investment Type(s)": [
+        "Data Sets & Commons",
+        "Infrastructure & Platforms"
+      ],
+      "Investment Theme(s)": [
+        "Data Storage, Access & Sharing",
+        "Water, Sanitation & Hygiene (WASH) Data"
+      ],
+      "Project Website": "https://www.waterpointdata.org/home/",
+      "Project Description": "The Water Point Data Exchange (WPDx) platform is a global open data system that compiles and standardizes information on water point locations and characteristics from multiple countries. Hosted by the Global Water Challenge, it provides a critical repository for improving water service delivery by offering insights into functionality, service levels, and infrastructure gaps. WPDx data has been used by governments, NGOs, and development partners to enhance resource allocation, plan maintenance, and track progress toward water access goals, contributing to SDG 6.\n"
+    }
+  },
+  {
+    "id": "recLGd1qlYszSKznz",
+    "createdTime": "2025-03-24T18:56:44.000Z",
+    "fields": {
+      "Project/Product Name": "Coverage, Operational Reach, and Effectiveness (CORE)",
+      "product_key": "core",
+      "Provider Orgs Full Name": [
+        "rec8O141RyUupQsRy"
+      ],
+      "CRAF’d-Funded Project?": "NO",
+      "Investment Type(s)": [
+        "Data Sets & Commons"
+      ],
+      "Investment Theme(s)": [
+        "Humanitarian Access Data"
+      ],
+      "Project Website": "https://humanitarianoutcomes.org/projects/core",
+      "Project Description": "CORE is the latest data-driven initiative by Humanitarian Outcomes to provide quantifiable measures on the size of the humanitarian sector as well as its capacity and reach in crisis-affected countries.\n"
+    }
+  },
+  {
+    "id": "recLN9L7RGRz4p1zM",
+    "createdTime": "2025-03-24T18:15:14.000Z",
+    "fields": {
+      "Project/Product Name": "Insecurity Insight",
+      "product_key": "insecurity-insight",
+      "Provider Orgs Full Name": [
+        "reczbEjPhwigWwiJp"
+      ],
+      "CRAF’d-Funded Project?": "NO",
+      "Investment Type(s)": [
+        "Data Sets & Commons"
+      ],
+      "Investment Theme(s)": [
+        "Displacement & Migration Data",
+        "Humanitarian Access Data",
+        "Conflict & Violence Data",
+        "Food Security Data"
+      ],
+      "Project Website": "https://insecurityinsight.org/",
+      "Project Description": "Insecurity Insight examines threats facing people living and working in dangerous environments. Our innovative data collection and analysis methods generate insights relevant for aid workers, aid agencies and those concerned with the protection of health workers, educators, IDPs and refugees. Our aim is to empower those who deliver vital services and to give voices to those affected by insecurity\n",
+      "Project Donor Agencies": [
+        "rec6XRPA9pKgC8j1J",
+        "recHSsEaPuaG3h2PQ",
+        "rec0sY1I5JZz6ZsUE",
+        "rec17xB7AKc3ojdV5",
+        "recdGZTDhjgGOhWJ5",
+        "recq22wSlO1GrYUWb",
+        "recf10RuM7qHUnC33"
+      ]
+    }
+  },
+  {
+    "id": "recLT9IcOPHcIr1gC",
+    "createdTime": "2025-03-24T19:51:48.000Z",
+    "fields": {
+      "Project/Product Name": "ReliefWeb / HumanitarianResponse.info",
+      "product_key": "ocha-reliefweb-hrinfo",
+      "Provider Orgs Full Name": [
+        "recGCltHLsYiDo59B"
+      ],
+      "CRAF’d-Funded Project?": "NO",
+      "Investment Type(s)": [
+        "Infrastructure & Platforms",
+        "Crisis Analytics & Insights"
+      ],
+      "Investment Theme(s)": [
+        "Monitoring & Alerts",
+        "Environmental Data"
+      ],
+      "Project Website": "https://reliefweb.int/",
+      "Project Description": "A knowledge portal publishing real-time crisis updates, reporting, and humanitarian trends. It supports decision-making by aggregating dashboards, maps, datasets, and situation reports from credible sources.\n"
+    }
+  },
+  {
+    "id": "recLn4QiWGniBsWoe",
+    "createdTime": "2025-03-25T17:14:17.000Z",
+    "fields": {
+      "Project/Product Name": "INFORM Climate Change",
+      "product_key": "inform-climate-change",
+      "Provider Orgs Full Name": [
+        "recX11pAAzHjdqH0Y",
+        "recz5rdvfM2eaY0Sx"
+      ],
+      "CRAF’d-Funded Project?": "NO",
+      "Investment Type(s)": [
+        "Data Sets & Commons",
+        "Crisis Analytics & Insights"
+      ],
+      "Investment Theme(s)": [
+        "Climate Data"
+      ],
+      "Project Website": "https://drmkc.jrc.ec.europa.eu/inform-index/INFORM-Climate-Change",
+      "Project Description": "INFORM Climate Change Risk Index is an upgrade of INFORM Risk Index as it includes climate and socio-economic projections. It provides quantified estimates of the impacts of climate change on the future risk of humanitarian crises and disasters. The results are intended to inform policy choices across climate mitigation, climate adaptation, disaster risk reduction, sustainable development and humanitarian assistance.\n\n"
+    }
+  },
+  {
+    "id": "recNggnBqXIgii2hz",
+    "createdTime": "2025-07-08T00:18:59.000Z",
+    "fields": {
+      "Project/Product Name": "Epidemic Intelligence from Open Sources (EIOS)",
+      "product_key": "eios",
+      "Provider Orgs Full Name": [
+        "recwQpJQH4LwmSOBE",
+        "recclzSlstbcseYGN"
+      ],
+      "CRAF’d-Funded Project?": "NO",
+      "Investment Type(s)": [
+        "Data Sets & Commons",
+        "Infrastructure & Platforms"
+      ],
+      "Investment Theme(s)": [
+        "Health Data",
+        "Health Facilities Data"
+      ],
+      "Project Website": "https://www.who.int/initiatives/eios",
+      "Project Description": "EIOS is a real-time platform developed by WHO and the European Commission to collect, verify, and share public health threat information from open sources. It offers a centralized dashboard and alerting system to help health agencies monitor emerging epidemics and coordinate responses.\n"
+    }
+  },
+  {
+    "id": "recO3RZZ7IEA88GnQ",
+    "createdTime": "2025-08-20T18:05:08.000Z",
+    "fields": {
+      "Project/Product Name": "Transformative Outcomes: Leveraging Crisis Data in conflict",
+      "product_key": "unwomen-transformative-outcomes",
+      "Provider Orgs Full Name": [
+        "rec5yRG9Wnxu6XkrO"
+      ],
+      "CRAF’d-Funded Project?": "YES",
+      "Investment Type(s)": [
+        "Data Sets & Commons",
+        "Infrastructure & Platforms",
+        "Crisis Analytics & Insights"
+      ],
+      "Investment Theme(s)": [
+        "Gender Data",
+        "Conflict & Violence Data",
+        "Data Storage, Access & Sharing",
+        "Gender Analytics",
+        "Conflict Analytics"
+      ],
+      "Project Website": "https://mptf.undp.org/project/00141136",
+      "Project Description": "The Transformative Outcomes project deploys an interactive web platform and standardized analysis toolkit to deliver high-quality crisis data for vulnerable populations in conflict-affected settings. This promotes evidence-based planning, targeted interventions, and capacity building among local actors, humanitarian agencies, and policymakers. CRAF’d funding supports data collection in six pilot countries, platform development, and training, catalyzing scalable, accessible data as a global public good.\n"
+    }
+  },
+  {
+    "id": "recONFtYpO5v2qk7s",
+    "createdTime": "2025-06-23T16:46:48.000Z",
+    "fields": {
+      "Project/Product Name": "KoboToolbox",
+      "product_key": "kobotoolbox",
+      "Provider Orgs Full Name": [
+        "rec18TzPP5pYZ8ezX"
+      ],
+      "CRAF’d-Funded Project?": "NO",
+      "Investment Type(s)": [
+        "Infrastructure & Platforms"
+      ],
+      "Investment Theme(s)": [
+        "Data Collection",
+        "Conflict & Violence Data"
+      ],
+      "Project Website": "https://hhi.harvard.edu/kobotoolbox",
+      "Project Description": "KoboToolbox is a free and open-source tool for mobile data collection in humanitarian crises. Used by UN agencies, NGOs, and governments, it supports offline surveys, real-time dashboards, and collaborative field assessments.\n"
+    }
+  },
+  {
+    "id": "recOOQ5c99vFwz8i8",
+    "createdTime": "2025-07-21T18:23:50.000Z",
+    "fields": {
+      "Project/Product Name": "DPPA Innovation Cell",
+      "product_key": "dppa-innovation-cell",
+      "Provider Orgs Full Name": [
+        "recOidtZ5FFF8NN7j"
+      ],
+      "CRAF’d-Funded Project?": "NO",
+      "Investment Type(s)": [
+        "Infrastructure & Platforms"
+      ],
+      "Investment Theme(s)": [
+        "Peace Data",
+        "Conflict Analytics"
+      ],
+      "Project Website": "https://dppa.un.org/en/innovation",
+      "Project Description": "The DPPA Innovation Cell pilots digital tools—including AI, data visualization, and social media analysis—to support conflict prevention, early warning, and diplomacy efforts in fragile contexts.\n",
+      "Project Donor Agencies": [
+        "rec1YpvhkjwME6GOJ",
+        "reckIAhFXgj4XL29b",
+        "recZCZqKtB0JM5kmx",
+        "recI95P9GtOhiXNoU",
+        "recfNuwRv2DcnUQCK",
+        "recqSvUlZQjET4fCH",
+        "recYVizktLnxQPeKH"
+      ]
+    }
+  },
+  {
+    "id": "recOfj0kk5iKOrHE4",
+    "createdTime": "2025-04-15T19:20:07.000Z",
+    "fields": {
+      "Project/Product Name": "Compass",
+      "product_key": "compass",
+      "Provider Orgs Full Name": [
+        "recfMWBZ4Di5d2bjs"
+      ],
+      "CRAF’d-Funded Project?": "NO",
+      "Investment Type(s)": [
+        "Infrastructure & Platforms",
+        "Crisis Analytics & Insights",
+        "Learning & Exchange"
+      ],
+      "Investment Theme(s)": [
+        "Geospatial Data",
+        "Geographic Information Systems (GIS)",
+        "Monitoring & Alerts"
+      ],
+      "Project Website": "No website",
+      "Project Description": "COMPASS by the International Institute of Statistical Sciences provides tools and guidance to design robust data and evidence systems—often in support of countries implementing SDG-aligned data reforms.\n"
+    }
+  },
+  {
+    "id": "recPMQlg07QkflL3i",
+    "createdTime": "2025-03-24T18:02:06.000Z",
+    "fields": {
+      "Project/Product Name": "Information Management Support",
+      "product_key": "immap-information-management-support",
+      "Provider Orgs Full Name": [
+        "recvzWSlYgzs0mffd"
+      ],
+      "CRAF’d-Funded Project?": "NO",
+      "Investment Type(s)": [
+        "Infrastructure & Platforms"
+      ],
+      "Investment Theme(s)": [
+        "Data Governance & Management",
+        "Data Collection"
+      ],
+      "Project Website": "https://immap.org/product/information-management-services-in-support-of-humanitarian-action-in-nigeria/",
+      "Project Description": "The humanitarian crisis in Nigeria’s northeast states of Borno, Adamawa and Yobe (BAY) continues to severely affect millions of people who remain vulnerable to displacement, impoverishment, and threat of violence. What started as a localized insurgency more than eleven years ago has turned into a regional armed conflict with civilians, mostly women and children bearing the brunt of brutal clashes and attacks.\n"
+    }
+  },
+  {
+    "id": "recQ0XV79TSq6v4Sj",
+    "createdTime": "2025-04-01T20:12:21.000Z",
+    "fields": {
+      "Project/Product Name": "SIPRI Arms Industry Database",
+      "product_key": "sipri-arms-industry",
+      "Provider Orgs Full Name": [
+        "recDoZP6RL9A8FnDq"
+      ],
+      "CRAF’d-Funded Project?": "NO",
+      "Investment Type(s)": [
+        "Data Sets & Commons"
+      ],
+      "Investment Theme(s)": [
+        "Disarmament Data",
+        "Conflict & Violence Data",
+        "Peace Data"
+      ],
+      "Project Website": "https://www.sipri.org/databases",
+      "Project Description": "An open library of global arms production data, featuring company listings, production volumes, and export trends for use in disarmament analysis and policy design.\n"
+    }
+  },
+  {
+    "id": "recQMdm14niuRSFQp",
+    "createdTime": "2025-07-10T15:08:22.000Z",
+    "fields": {
+      "Project/Product Name": "WHO/UNICEF Joint Monitoring Programme for Water Supply, Sanitation and Hygiene (JMP)",
+      "product_key": "who-unicef-jmp",
+      "Provider Orgs Full Name": [
+        "recwQpJQH4LwmSOBE",
+        "rec2OrPTxGHesgz1w"
+      ],
+      "CRAF’d-Funded Project?": "NO",
+      "Investment Type(s)": [
+        "Data Sets & Commons",
+        "Crisis Analytics & Insights"
+      ],
+      "Investment Theme(s)": [
+        "Water, Sanitation & Hygiene (WASH) Data",
+        "Climate Data"
+      ],
+      "Project Website": "https://washdata.org/",
+      "Project Description": "Tracks access to water, sanitation, and hygiene (WASH) using global indicators and household survey data accessible under open access licenses.\n"
+    }
+  },
+  {
+    "id": "recQhIBhrdj8K7Loz",
+    "createdTime": "2025-04-24T15:47:06.000Z",
+    "fields": {
+      "Project/Product Name": "CHIRPS: Rainfall Estimates from Rain Gauge and Satellite Observations",
+      "product_key": "chirps-rainfall",
+      "CRAF’d-Funded Project?": "NO",
+      "Investment Type(s)": [
+        "Data Sets & Commons"
+      ],
+      "Investment Theme(s)": [
+        "Climate Data"
+      ],
+      "Project Website": "https://www.chc.ucsb.edu/data/chirps",
+      "Project Description": "CHIRPS delivers a high-resolution global rainfall dataset merging satellite imagery and gauge measurements (1981–present). It provides open-access data for climate resilience, agriculture, and risk forecasting.\n"
+    }
+  },
+  {
+    "id": "recQpqVqEuaLuj8jT",
+    "createdTime": "2025-04-01T20:11:35.000Z",
+    "fields": {
+      "Project/Product Name": "SIPRI Military Expenditure Database",
+      "product_key": "sipri-milex",
+      "Provider Orgs Full Name": [
+        "recDoZP6RL9A8FnDq"
+      ],
+      "CRAF’d-Funded Project?": "NO",
+      "Investment Type(s)": [
+        "Data Sets & Commons"
+      ],
+      "Investment Theme(s)": [
+        "Disarmament Data",
+        "Conflict & Violence Data",
+        "Peace Data"
+      ],
+      "Project Website": "https://www.sipri.org/databases",
+      "Project Description": "Offers historical data on military spending by country, allowing trend analysis and budget comparisons for global peace research.\n"
+    }
+  },
+  {
+    "id": "recQubJTGSwZoqzix",
+    "createdTime": "2025-06-27T20:59:51.000Z",
+    "fields": {
+      "Project/Product Name": "Pacific Data Hub Tools",
+      "product_key": "pacific-data-hub-tools",
+      "Provider Orgs Full Name": [
+        "recodAuism4k7Osi8"
+      ],
+      "CRAF’d-Funded Project?": "NO",
+      "Investment Type(s)": [
+        "Crisis Analytics & Insights"
+      ],
+      "Investment Theme(s)": [
+        "Climate Data",
+        "Climate Analytics",
+        "Geospatial Data"
+      ],
+      "Project Website": "https://pacificdata.org/tools",
+      "Project Description": "This regional platform delivers open-access dashboards, geospatial tools, and statistics to support Pacific states with governance, climate resilience, and disaster response planning.\n"
+    }
+  },
+  {
+    "id": "recR021jYyNleSCho",
+    "createdTime": "2025-03-24T19:09:26.000Z",
+    "fields": {
+      "Project/Product Name": "Migration Data Portal",
+      "product_key": "migration-portal",
+      "Provider Orgs Full Name": [
+        "recsrCWKAPu9dwkHb"
+      ],
+      "CRAF’d-Funded Project?": "NO",
+      "Investment Type(s)": [
+        "Data Sets & Commons",
+        "Infrastructure & Platforms"
+      ],
+      "Investment Theme(s)": [
+        "Displacement & Migration Data"
+      ],
+      "Project Website": "https://www.migrationdataportal.org/",
+      "Project Description": "The Migration Data Portal is a unique access point to timely, comprehensive migration statistics and reliable information about migration data globally.\n\n",
+      "Project Donor Agencies": [
+        "rec17xB7AKc3ojdV5",
+        "rec1YpvhkjwME6GOJ",
+        "reco4Um0k7Tgw2UCK",
+        "reckIAhFXgj4XL29b"
+      ]
+    }
+  },
+  {
+    "id": "recRERSUhmJ4M8jzA",
+    "createdTime": "2025-03-21T18:34:10.000Z",
+    "fields": {
+      "Project/Product Name": "Food Prices Data",
+      "product_key": "food-prices",
+      "Provider Orgs Full Name": [
+        "rec3QdLIyrZ4dNiPh",
+        "reckv2Buw9sXl3Eul"
+      ],
+      "CRAF’d-Funded Project?": "NO",
+      "Investment Type(s)": [
+        "Data Sets & Commons"
+      ],
+      "Investment Theme(s)": [
+        "Food Security Data"
+      ],
+      "Project Website": "https://data.humdata.org/dataset/global-wfp-food-prices",
+      "Project Description": "This dataset contains Countries, Commodities and Markets data, sourced from the World Food Programme Price Database. The volume of data means that the actual Food Prices data is in country level datasets. The World Food Programme Price Database covers foods such as maize, rice, beans, fish, and sugar for 98 countries and some 3000 markets. It is updated weekly but contains to a large extent monthly data. The data goes back as far as 1992 for a few countries, although many countries started reporting from 2003 or thereafter.\n"
+    }
+  },
+  {
+    "id": "recRMNk0JflJq6VMa",
+    "createdTime": "2025-03-24T02:03:39.000Z",
+    "fields": {
+      "Project/Product Name": "Refugee Data Finder",
+      "product_key": "unhcr-refugee-finder",
+      "Provider Orgs Full Name": [
+        "recfLMsJLUS9toAjS"
+      ],
+      "CRAF’d-Funded Project?": "NO",
+      "Investment Type(s)": [
+        "Data Sets & Commons",
+        "Infrastructure & Platforms"
+      ],
+      "Investment Theme(s)": [
+        "Displacement & Migration Data"
+      ],
+      "Project Website": "https://www.unhcr.org/refugee-statistics",
+      "Project Description": "The database contains information about forcibly displaced populations spanning more than 70 years of statistical activities. It covers displaced populations such as refugees, asylum-seekers and internally displaced people, including their demographics. Stateless people are also included, most of who have never been displaced. The database also reflects the different types of solutions for displaced populations such as repatriation or resettlement.\n\n<https://github.com/PopulationStatistics/refugees>\n"
+    }
+  },
+  {
+    "id": "recRqJS0I3kX5dYEJ",
+    "createdTime": "2025-03-24T18:07:48.000Z",
+    "fields": {
+      "Project/Product Name": "Global Exposure Database (GED)",
+      "product_key": "ged",
+      "Provider Orgs Full Name": [
+        "recIIg9jENlDRt2Oe"
+      ],
+      "CRAF’d-Funded Project?": "NO",
+      "Investment Type(s)": [
+        "Data Sets & Commons"
+      ],
+      "Investment Theme(s)": [
+        "Geospatial Data"
+      ],
+      "Project Website": "https://www.globalquakemodel.org/product/global-exposure-model",
+      "Project Description": "The Global Exposure Database (GED) is a spatial dataset created by GEM that quantifies the exposure of buildings and infrastructure to natural hazards across countries. It includes structural typologies, occupancy data, and geographic distributions, enabling users to estimate potential losses from earthquakes and other disasters. GED is openly available and widely used in conjunction with hazard models to inform national disaster risk management strategies and build resilience in urban development planning.\n"
+    }
+  },
+  {
+    "id": "recS00J4wbHllEKXs",
+    "createdTime": "2025-03-24T18:42:08.000Z",
+    "fields": {
+      "Project/Product Name": "Surveillance System for Attacks on Health Care (SSA)",
+      "product_key": "who-ssa-healthcare",
+      "Provider Orgs Full Name": [
+        "recwQpJQH4LwmSOBE"
+      ],
+      "CRAF’d-Funded Project?": "NO",
+      "Investment Type(s)": [
+        "Data Sets & Commons",
+        "Crisis Analytics & Insights"
+      ],
+      "Investment Theme(s)": [
+        "Health Data",
+        "Conflict & Violence Data"
+      ],
+      "Project Website": "https://extranet.who.int/ssa/LeftMenu/Index.aspx",
+      "Project Description": "WHO WHO’s SSA platform collects data on incidents threatening health care in conflict settings and provides dashboards and data for protection analysis.\n"
+    }
+  },
+  {
+    "id": "recS70dZaWiddCf5J",
+    "createdTime": "2025-03-25T20:01:58.000Z",
+    "fields": {
+      "Project/Product Name": "Risk Anticipation Data Hub",
+      "product_key": "undp-risk-anticipation-data-hub",
+      "Provider Orgs Full Name": [
+        "rec9NauCCUPUWMwfl"
+      ],
+      "CRAF’d-Funded Project?": "YES",
+      "Investment Type(s)": [
+        "Infrastructure & Platforms",
+        "Crisis Analytics & Insights"
+      ],
+      "Investment Theme(s)": [
+        "Data Storage, Access & Sharing",
+        "Data Processing & Transformation"
+      ],
+      "Project Website": "https://crafd.io/data-financing/undp",
+      "Project Description": "The Risk Anticipation Data Hub, a project of the United Nations Development Programme (UNDP), is a transformative open-access data platform. A ready-to-use data warehouse for over 15,000 indicators combines processed and cleaned public datasets on a multitude of risk factors. Equipped with state-of-the-art technology, including a generative Artificial Intelligence (AI) interface and real-time analytics, the Data Hub empowers ecosystem partners with data and insights for better crisis anticipation, prevention, and response. \n**<https://sdgintegration.undp.org/crisis-risk-dashboard>**\n",
+      "Project Donor Agencies": [
+        "rec1VhOJv9U6QKBBs"
+      ]
+    }
+  },
+  {
+    "id": "recST6hz3bs6MKakU",
+    "createdTime": "2025-03-24T02:04:00.000Z",
+    "fields": {
+      "Project/Product Name": "Joint Needs Assessments (JNA)",
+      "product_key": "unhcr-jna",
+      "Provider Orgs Full Name": [
+        "recfLMsJLUS9toAjS"
+      ],
+      "CRAF’d-Funded Project?": "NO",
+      "Investment Type(s)": [
+        "Data Sets & Commons"
+      ],
+      "Investment Theme(s)": [
+        "Needs Assessment Data"
+      ],
+      "Project Website": "https://data.unhcr.org/en/documents/details/86670",
+      "Project Description": "This report presents UNHCR’s engagement in multi-sectoral joint needs assessments in 2020 in line with Grand Bargain commitments towards improved harmonization and coordination of assessment exercises as well as increased transparency\n"
+    }
+  },
+  {
+    "id": "recSvtWQnSvfNoXdt",
+    "createdTime": "2025-07-21T18:41:19.000Z",
+    "fields": {
+      "Project/Product Name": "UN Environment Programme World Conservation Monitoring Centre (UNEP-WCMC)",
+      "product_key": "unep-wcmc",
+      "Provider Orgs Full Name": [
+        "recojRgWADP31J298"
+      ],
+      "CRAF’d-Funded Project?": "NO",
+      "Investment Type(s)": [
+        "Data Sets & Commons"
+      ],
+      "Investment Theme(s)": [
+        "Climate Data",
+        "Environmental Data"
+      ],
+      "Project Website": "https://www.unep-wcmc.org/",
+      "Project Description": "UNEP‑WCMC is a global science-policy interface that provides open-access datasets and tools on biodiversity, ecosystem services, and conservation strategies. Its data platforms support environmental reporting, climate resilience, and natural capital planning.\n",
+      "Project Donor Agencies": [
+        "recbvrcYZZW7mBnCU"
+      ]
+    }
+  },
+  {
+    "id": "recUotlR1ZJwVMAIS",
+    "createdTime": "2025-07-29T19:00:21.000Z",
+    "fields": {
+      "Project/Product Name": "Datum",
+      "product_key": "datum-project",
+      "Provider Orgs Full Name": [
+        "recf6O6q3OE6xjOTM"
+      ],
+      "CRAF’d-Funded Project?": "NO",
+      "Investment Type(s)": [
+        "Data Sets & Commons",
+        "Crisis Analytics & Insights"
+      ],
+      "Investment Theme(s)": [
+        "Climate Analytics",
+        "Needs Assessment Data",
+        "Impact Evaluation",
+        "Damage Assessments"
+      ],
+      "Project Website": "https://data.undrr.org/api/json",
+      "Project Description": "Datum is a centralized portal offering free, open-access databases and RESTful APIs designed to support disaster risk reduction (DRR) efforts worldwide. All datasets and metadata can be downloaded or queried under UNDRR’s terms, provided proper attribution. The content spans several thematic “data clusters,” each versioned and paginated for easy integration.\n"
+    }
+  },
+  {
+    "id": "recUtgQxL73zHDTCF",
+    "createdTime": "2025-04-30T00:36:40.000Z",
+    "fields": {
+      "Project/Product Name": "CLIMADA Platform",
+      "product_key": "climada-platform",
+      "Provider Orgs Full Name": [
+        "recmgIWVq6lLCCYWy"
+      ],
+      "CRAF’d-Funded Project?": "NO",
+      "Investment Type(s)": [
+        "Crisis Analytics & Insights"
+      ],
+      "Investment Theme(s)": [
+        "Climate Data"
+      ],
+      "Project Website": "https://climada.ethz.ch/",
+      "Project Description": "CLIMADA is an open-source risk assessment tool that models economic losses from natural hazards using hazard, exposure, and vulnerability data. It supports policy, research, and risk finance decision-making.\n",
+      "Project Donor Agencies": [
+        "recGNTHL9SKZxLDcw",
+        "recz1D3MdBg9w7tmt",
+        "rec8gXVsPUUB517NE"
+      ]
+    }
+  },
+  {
+    "id": "recVj2ULsOWhPFQ19",
+    "createdTime": "2025-03-24T19:45:32.000Z",
+    "fields": {
+      "Project/Product Name": "EM-DAT: The International Disaster Database",
+      "product_key": "em-dat",
+      "Provider Orgs Full Name": [
+        "rec5DdxnhKg1na7o8"
+      ],
+      "CRAF’d-Funded Project?": "NO",
+      "Investment Type(s)": [
+        "Data Sets & Commons"
+      ],
+      "Investment Theme(s)": [
+        "Environmental Data",
+        "Monitoring & Alerts"
+      ],
+      "Project Website": "https://www.emdat.be/",
+      "Project Description": "EM‑DAT compiles free, searchable global records of natural and technological disasters dating back to 1900. It provides standardized event-level data used extensively in disaster risk research, policy analysis, and early warning modeling.\n",
+      "Project Donor Agencies": [
+        "rec6XRPA9pKgC8j1J"
+      ]
+    }
+  },
+  {
+    "id": "recWhmG0QZIzRjtiC",
+    "createdTime": "2025-03-25T19:40:40.000Z",
+    "fields": {
+      "Project/Product Name": "OCHA Humanitarian Programme Cycle Tools (HPC Tools)",
+      "product_key": "ocha-hpc-tools",
+      "Provider Orgs Full Name": [
+        "recGCltHLsYiDo59B"
+      ],
+      "CRAF’d-Funded Project?": "NO",
+      "Investment Type(s)": [
+        "Infrastructure & Platforms"
+      ],
+      "Investment Theme(s)": [
+        "Data Storage, Access & Sharing",
+        "Data Collection"
+      ],
+      "Project Website": "https://knowledge.base.unocha.org/wiki/spaces/hpc/pages/3993436162/HPC+Tools",
+      "Project Description": "These HPC suite of tools provide comprehensive support for all aspects of HPC. From identifying needs to strategic planning, cluster-level coordination, and project monitoring, our modular and adaptable services facilitate effective data management and collaboration.\n"
+    }
+  },
+  {
+    "id": "recWziB7RyyVfMv3A",
+    "createdTime": "2025-03-24T18:52:41.000Z",
+    "fields": {
+      "Project/Product Name": "Cultural Heritage in Crisis Zones Data",
+      "product_key": "heritage-crisis",
+      "Provider Orgs Full Name": [
+        "recWOW3N9BgLJiHl5"
+      ],
+      "CRAF’d-Funded Project?": "NO",
+      "Investment Type(s)": [
+        "Data Sets & Commons"
+      ],
+      "Investment Theme(s)": [
+        "Conflict & Violence Data"
+      ],
+      "Project Website": "https://whc.unesco.org/en/danger/",
+      "Project Description": "The [List of World Heritage in Danger](https://whc.unesco.org/en/danger-list/) is designed to inform the international community of conditions which threaten the very characteristics for which a property was inscribed on the World Heritage List, and to encourage corrective action. \n"
+    }
+  },
+  {
+    "id": "recXAXl4lWxy06qt5",
+    "createdTime": "2025-07-08T02:04:40.000Z",
+    "fields": {
+      "Project/Product Name": "Earthquakes Maps",
+      "product_key": "earthquakes-maps",
+      "Provider Orgs Full Name": [
+        "rec5ygIfihCGA1cIh"
+      ],
+      "CRAF’d-Funded Project?": "NO",
+      "Investment Type(s)": [
+        "Infrastructure & Platforms"
+      ],
+      "Investment Theme(s)": [
+        "Geospatial Data",
+        "Geospatial Analytics"
+      ],
+      "Project Website": "https://earthquake.usgs.gov/earthquakes/map/?extent=17.47643,-136.8457&extent=54.67383,-53.17383",
+      "Project Description": "USGS systems offering real-time search and visualization of earthquake data, global hazards, and geophysical datasets. They support crisis response and scientific analysis through open APIs.\n"
+    }
+  },
+  {
+    "id": "recXZCOUpEBDjWHOu",
+    "createdTime": "2025-03-24T02:03:35.000Z",
+    "fields": {
+      "Project/Product Name": "Population Statistics",
+      "product_key": "unhcr-popstats",
+      "Provider Orgs Full Name": [
+        "recfLMsJLUS9toAjS"
+      ],
+      "CRAF’d-Funded Project?": "NO",
+      "Investment Type(s)": [
+        "Data Sets & Commons"
+      ],
+      "Investment Theme(s)": [
+        "Baseline Population Data"
+      ],
+      "Project Website": "https://www.unhcr.org/publications/unhcr-statistical-online-population-database-general-notes",
+      "Project Description": "The UNHCR Statistical Online Population Database summarizes changes in global trends and levels of the population of concern to UNHCR: refugees, asylum-seekers, returned refugees, internally displaced persons (IDPs) protected/assisted by UNHCR, returned IDPs, stateless persons, and others of concern to UNHCR. The information, reported by UNHCR country offices, generally reflects the data of the host country.\n"
+    }
+  },
+  {
+    "id": "recXaGjOLcrJQCuNn",
+    "createdTime": "2025-03-25T17:13:59.000Z",
+    "fields": {
+      "Project/Product Name": "INFORM Warning",
+      "product_key": "inform-warning",
+      "Provider Orgs Full Name": [
+        "recX11pAAzHjdqH0Y",
+        "recz5rdvfM2eaY0Sx"
+      ],
+      "CRAF’d-Funded Project?": "YES",
+      "Investment Type(s)": [
+        "Data Sets & Commons",
+        "Crisis Analytics & Insights"
+      ],
+      "Investment Theme(s)": [
+        "Forecasting / Early-Warning"
+      ],
+      "Project Website": "https://drmkc.jrc.ec.europa.eu/inform-index/INFORM-Warning",
+      "Project Description": "[INFORM Warning](https://drmkc.jrc.ec.europa.eu/inform-index/INFORM-Warning) is a state-of-the-art innovative global risk monitoring tool designed to anticipate complex risks up to a year in advance, directly linked to crisis funding instruments. It transcends traditional methods by presenting multi-hazard information from diverse sources. Its unique analysis offers insights into risk trends, forecasts, scenarios, and potential events leading to crisis impact.  \n",
+      "Project Donor Agencies": [
+        "rec1VhOJv9U6QKBBs"
+      ]
+    }
+  },
+  {
+    "id": "recXcSKhSy2s7tunj",
+    "createdTime": "2025-07-08T02:50:45.000Z",
+    "fields": {
+      "Project/Product Name": "Financial Tracking Services",
+      "product_key": "fintrack",
+      "Provider Orgs Full Name": [
+        "recGCltHLsYiDo59B"
+      ],
+      "CRAF’d-Funded Project?": "NO",
+      "Investment Type(s)": [
+        "Crisis Analytics & Insights"
+      ],
+      "Investment Theme(s)": [
+        "Data Governance & Management"
+      ],
+      "Project Website": "https://fts.unocha.org/",
+      "Project Description": "OCHA’s FTS collects, standardizes, and publishes real-time humanitarian funding data globally. It offers dashboards and downloadable datasets tracking donor and recipient transactions in emergencies—providing transparency across funding flows.\n"
+    }
+  },
+  {
+    "id": "recXkQODU8on8xy2v",
+    "createdTime": "2025-03-28T14:09:57.000Z",
+    "fields": {
+      "Project/Product Name": "UNDP Digital Standards",
+      "product_key": "undp-digital-standards",
+      "Provider Orgs Full Name": [
+        "rec9NauCCUPUWMwfl"
+      ],
+      "CRAF’d-Funded Project?": "NO",
+      "Investment Type(s)": [
+        "Standards & Coordination"
+      ],
+      "Investment Theme(s)": [
+        "Methodological Standards (e.g., Data Collection)"
+      ],
+      "Project Website": "https://www.undp.org/digital/standards",
+      "Project Description": "A toolkit of open-source principles and guidelines aimed at helping UNDP and partners design interoperable, user-centered digital solutions.\n"
+    }
+  },
+  {
+    "id": "recYwllVfGjgi7rdS",
+    "createdTime": "2025-04-24T15:09:55.000Z",
+    "fields": {
+      "Project/Product Name": "GloFAS – Global Flood Awareness System",
+      "product_key": "glofas",
+      "Provider Orgs Full Name": [
+        "recclzSlstbcseYGN"
+      ],
+      "CRAF’d-Funded Project?": "NO",
+      "Investment Type(s)": [
+        "Infrastructure & Platforms",
+        "Crisis Analytics & Insights"
+      ],
+      "Investment Theme(s)": [
+        "Environmental Data",
+        "Climate Data"
+      ],
+      "Project Website": "https://global-flood.emergency.copernicus.eu/",
+      "Project Description": "GloFAS, developed by EC-JRC and ECMWF, provides open-access flood forecasts and risk assessments. It integrates global hydrological models to support early warning systems and flood preparedness planning.\n"
+    }
+  },
+  {
+    "id": "recYzS7BrsxBG8llV",
+    "createdTime": "2025-03-24T18:08:16.000Z",
+    "fields": {
+      "Project/Product Name": "OpenQuake Platform",
+      "product_key": "openquake-platform",
+      "Provider Orgs Full Name": [
+        "recIIg9jENlDRt2Oe"
+      ],
+      "CRAF’d-Funded Project?": "NO",
+      "Investment Type(s)": [
+        "Crisis Analytics & Insights"
+      ],
+      "Investment Theme(s)": [
+        "Geospatial Data"
+      ],
+      "Project Website": "https://www.globalquakemodel.org/product/openquake-engine",
+      "Project Description": "Developed by the Global Earthquake Model (GEM) Foundation, the OpenQuake Platform is an open-source tool for seismic hazard and risk assessment. It provides researchers, engineers, and governments with models, tools, and databases to simulate earthquake impacts, assess vulnerability, and inform urban planning and disaster preparedness strategies. OpenQuake integrates data on seismicity, exposure, and building fragility, and is widely used in both academic research and national risk management initiatives.\n",
+      "Project Donor Agencies": [
+        "rec6XRPA9pKgC8j1J"
+      ]
+    }
+  },
+  {
+    "id": "recZ87vNFuxhuJIih",
+    "createdTime": "2025-06-27T22:23:13.000Z",
+    "fields": {
+      "Project/Product Name": "Advanced Data Planning Tool (ADAPT)",
+      "product_key": "adapt",
+      "Provider Orgs Full Name": [
+        "recvPPEVoXWarvaFS"
+      ],
+      "CRAF’d-Funded Project?": "NO",
+      "Investment Type(s)": [
+        "Learning & Exchange"
+      ],
+      "Investment Theme(s)": [
+        "Best Practices"
+      ],
+      "Project Website": "https://www.paris21.org/advanced-data-planning-tool-adapt",
+      "Project Description": "ADAPT helps governments assess their statistical capacity, plan national data strategies, and make cost-effective investments in data infrastructure—supporting SDG tracking and capacity development in low- and middle-income countries.\n"
+    }
+  },
+  {
+    "id": "recZaSDcZgIUtalO5",
+    "createdTime": "2025-03-24T15:11:02.000Z",
+    "fields": {
+      "Project/Product Name": "Humanitarian Exchange Language (HXL)",
+      "product_key": "ocha-hxl",
+      "Provider Orgs Full Name": [
+        "recGCltHLsYiDo59B"
+      ],
+      "CRAF’d-Funded Project?": "NO",
+      "Investment Type(s)": [
+        "Standards & Coordination"
+      ],
+      "Investment Theme(s)": [
+        "Methodological Standards (e.g., Data Collection)"
+      ],
+      "Project Website": "https://hxlstandard.org/",
+      "Project Description": "**HXL** is a simple standard for messy data. Use HXL hashtags to speed up data processing and create interoperability across data sources.\n"
+    }
+  },
+  {
+    "id": "recZmszPiwWGvrYee",
+    "createdTime": "2025-06-27T22:23:57.000Z",
+    "fields": {
+      "Project/Product Name": "Guidelines for National Strategy for the Development of Statistics (NSDS) ",
+      "product_key": "nsds-guidelines",
+      "Provider Orgs Full Name": [
+        "recvPPEVoXWarvaFS"
+      ],
+      "CRAF’d-Funded Project?": "NO",
+      "Investment Type(s)": [
+        "Data Sets & Commons",
+        "Standards & Coordination"
+      ],
+      "Investment Theme(s)": [
+        "Household Survey Data",
+        "Disaggregated Country-level Data"
+      ],
+      "Project Website": "https://nsdsguidelines.paris21.org/en/homepage",
+      "Project Description": "NSDS by PARIS21 provides structured guidance and tools to help countries design national statistics strategies, align donor support, and integrate data systems for sustainable development planning.\n"
+    }
+  },
+  {
+    "id": "reca35l4CEELxX2d1",
+    "createdTime": "2025-06-23T18:26:31.000Z",
+    "fields": {
+      "Project/Product Name": "Earth Data Search",
+      "product_key": "earth-data-search",
+      "Provider Orgs Full Name": [
+        "rec3elwvrBRnwOVEh"
+      ],
+      "CRAF’d-Funded Project?": "NO",
+      "Investment Type(s)": [
+        "Data Sets & Commons",
+        "Infrastructure & Platforms"
+      ],
+      "Investment Theme(s)": [
+        "Geospatial Data",
+        "Environmental Data"
+      ],
+      "Project Website": "https://search.earthdata.nasa.gov/",
+      "Project Description": "NASA’s Earth Data Search portal provides centralized access to global satellite imagery and environmental datasets. Users can search, download, or stream geospatial data via standardized APIs to support climate resilience, disaster response, and scientific research.\n"
+    }
+  },
+  {
+    "id": "recaWq49HJw4UXd9K",
+    "createdTime": "2025-03-24T14:52:25.000Z",
+    "fields": {
+      "Project/Product Name": "Integrated Food Security Phase Classification (IPC)",
+      "product_key": "ipc",
+      "Provider Orgs Full Name": [
+        "recoPRDBbxl0bVx7x",
+        "recAqAEBX8YBwPWlb"
+      ],
+      "CRAF’d-Funded Project?": "NO",
+      "Investment Type(s)": [
+        "Data Sets & Commons"
+      ],
+      "Investment Theme(s)": [
+        "Food Security Data",
+        "Nutrition Data"
+      ],
+      "Project Website": "https://www.ipcinfo.org/",
+      "Project Description": "The **Integrated Food Security Phase Classification (IPC)** is a common global scale for classifying the severity and magnitude of food insecurity and malnutrition. It is the result of a partnership of various organizations at the global, regional, and country levels dedicated to developing and maintaining the highest possible quality in food security and nutrition analysis. Increasingly, the IPC is the international standard for classifying food insecurity and malnutrition. The IPC is a ‘big picture’ classification focusing on providing information that is consistently required by stakeholders around the world for strategic decision-making. Nuanced information may also be needed to inform particular decisions or answer certain questions. The IPC provides the essential information needed in a wide range of contexts in consistent, comparable and accountable ways.\n<https://www.ipcinfo.org/> \n\n",
+      "Project Donor Agencies": [
+        "rec6XRPA9pKgC8j1J",
+        "rec0sY1I5JZz6ZsUE",
+        "recYxlC8x9puB69tx",
+        "rec2KBp1IAA5TtnQl"
+      ]
+    }
+  },
+  {
+    "id": "recbmA6Lmrr5AfAHJ",
+    "createdTime": "2025-03-24T18:03:04.000Z",
+    "fields": {
+      "Project/Product Name": "GRID3: Geo-Referenced Infrastructure and Demographic Data for Development ",
+      "product_key": "grid3",
+      "Provider Orgs Full Name": [
+        "recG3iaB3tMhPUTLg",
+        "rec5OGQnjAgjSFawp",
+        "rec2fgn4cmkvDsRB8"
+      ],
+      "CRAF’d-Funded Project?": "NO",
+      "Investment Type(s)": [
+        "Data Sets & Commons",
+        "Learning & Exchange"
+      ],
+      "Investment Theme(s)": [
+        "Geospatial Data",
+        "Upskilling & Training"
+      ],
+      "Project Website": "https://grid3.org/",
+      "Project Description": "GRID3 provides high-resolution geospatial data—including population estimates, infrastructure mapping, and administrative boundaries—to assist governments and organizations in planning, monitoring, and delivering services effectively.\n",
+      "Project Donor Agencies": [
+        "rec0sY1I5JZz6ZsUE",
+        "recbtz43uuKKFVfvd"
+      ]
+    }
+  },
+  {
+    "id": "recboBqVDp6QicKSq",
+    "createdTime": "2025-03-24T15:56:33.000Z",
+    "fields": {
+      "Project/Product Name": "World Population Dashboard",
+      "product_key": "world-pop-dashboard",
+      "Provider Orgs Full Name": [
+        "rec5OGQnjAgjSFawp"
+      ],
+      "CRAF’d-Funded Project?": "NO",
+      "Investment Type(s)": [
+        "Data Sets & Commons",
+        "Infrastructure & Platforms"
+      ],
+      "Investment Theme(s)": [
+        "Baseline Population Data"
+      ],
+      "Project Website": "https://www.unfpa.org/data/world-population-dashboard",
+      "Project Description": "The **World Population Dashboard** showcases global population data, including fertility rate, gender parity in school enrolment, information on sexual and reproductive health, and much more. Together, these data shine a light on the health and rights of people around the world, especially women and young people. The numbers here come from UNFPA and fellow UN agencies, and are updated annually.\n"
+    }
+  },
+  {
+    "id": "recbwtmwsCLbYZSBi",
+    "createdTime": "2025-03-24T18:43:21.000Z",
+    "fields": {
+      "Project/Product Name": "Health Resources Availability Monitoring System (HeRAMS)",
+      "product_key": "who-herams",
+      "Provider Orgs Full Name": [
+        "recwQpJQH4LwmSOBE"
+      ],
+      "CRAF’d-Funded Project?": "NO",
+      "Investment Type(s)": [
+        "Crisis Analytics & Insights"
+      ],
+      "Investment Theme(s)": [
+        "Health Data"
+      ],
+      "Project Website": "https://www.who.int/initiatives/herams",
+      "Project Description": "The HeRAMS Initiative aims to ensure that core information on essential health resources and services is readily available to decision makers at country, regional and global levels.\n",
+      "Project Donor Agencies": [
+        "recqhcKxTv71yMfeI"
+      ]
+    }
+  },
+  {
+    "id": "reccI6M0kWMcanXsD",
+    "createdTime": "2025-06-27T02:06:49.000Z",
+    "fields": {
+      "Project/Product Name": "Data in Emergencies Hub",
+      "product_key": "data-in-emergencies-hub",
+      "Provider Orgs Full Name": [
+        "reckv2Buw9sXl3Eul"
+      ],
+      "CRAF’d-Funded Project?": "NO",
+      "Investment Type(s)": [
+        "Data Sets & Commons",
+        "Infrastructure & Platforms"
+      ],
+      "Investment Theme(s)": [
+        "Food Security Data"
+      ],
+      "Project Website": "https://data-in-emergencies.fao.org/",
+      "Project Description": "Driven by regularly collected primary data, its objective is to understand the impact of shocks in food crisis contexts and inform decision-making in support of agricultural livelihoods. The DIEM Hub has been publicly available since June 2021.\n",
+      "Project Donor Agencies": [
+        "rec6XRPA9pKgC8j1J",
+        "recGMYeDQSV7jffjs",
+        "recKVILBOB3NBEJlE"
+      ]
+    }
+  },
+  {
+    "id": "reccYy5JWKJEASskp",
+    "createdTime": "2025-07-17T23:39:15.000Z",
+    "fields": {
+      "Project/Product Name": "Global Crisis Response Platform",
+      "product_key": "gcrp",
+      "Provider Orgs Full Name": [
+        "recsrCWKAPu9dwkHb"
+      ],
+      "CRAF’d-Funded Project?": "NO",
+      "Investment Type(s)": [
+        "Infrastructure & Platforms",
+        "Standards & Coordination"
+      ],
+      "Investment Theme(s)": [
+        "Needs Assessment Data",
+        "PiN Calculation"
+      ],
+      "Project Website": "https://crisisresponse.iom.int/index.php/",
+      "Project Description": "GCRP is a data and analytics platform that aggregates global risk indicators, country profiles, and dashboards to support early-warning, crisis preparedness, and financing decisions across development and humanitarian systems.\n"
+    }
+  },
+  {
+    "id": "reccyJzv7bOpjmC4B",
+    "createdTime": "2025-04-01T20:11:49.000Z",
+    "fields": {
+      "Project/Product Name": "SIPRI Multilateral Peace Operations Database",
+      "product_key": "sipri-mpod",
+      "Provider Orgs Full Name": [
+        "recDoZP6RL9A8FnDq"
+      ],
+      "CRAF’d-Funded Project?": "NO",
+      "Investment Type(s)": [
+        "Data Sets & Commons"
+      ],
+      "Investment Theme(s)": [
+        "Disarmament Data",
+        "Conflict & Violence Data",
+        "Peace Data"
+      ],
+      "Project Website": "https://www.sipri.org/databases",
+      "Project Description": "This database tracks country participation in UN and regional peace operations—including troop numbers, funding, and deployment dates.\n"
+    }
+  },
+  {
+    "id": "recdIskWoUIv166ue",
+    "createdTime": "2025-03-25T17:10:15.000Z",
+    "fields": {
+      "Project/Product Name": "Malaria Atlas Project (MAP)",
+      "product_key": "malaria-atlas-project",
+      "Provider Orgs Full Name": [
+        "recwQpJQH4LwmSOBE",
+        "rec2fgn4cmkvDsRB8"
+      ],
+      "CRAF’d-Funded Project?": "NO",
+      "Investment Type(s)": [
+        "Data Sets & Commons",
+        "Crisis Analytics & Insights"
+      ],
+      "Investment Theme(s)": [
+        "Health Data"
+      ],
+      "Project Website": "https://malariaatlas.org/",
+      "Project Description": "MAP provides high-resolution maps of malaria risk and stability, combining epidemiological and environmental data to support global health planning, investment, and disease modeling.\n",
+      "Project Donor Agencies": [
+        "recbtz43uuKKFVfvd"
+      ]
+    }
+  },
+  {
+    "id": "rece4fDBOtjCywl9q",
+    "createdTime": "2025-07-29T19:06:22.000Z",
+    "fields": {
+      "Project/Product Name": "PreventionWeb",
+      "product_key": "undrr-preventionweb",
+      "Provider Orgs Full Name": [
+        "recf6O6q3OE6xjOTM"
+      ],
+      "CRAF’d-Funded Project?": "NO",
+      "Investment Type(s)": [
+        "Data Sets & Commons",
+        "Human Capital & Know-how"
+      ],
+      "Investment Theme(s)": [
+        "Data Storage, Access & Sharing",
+        "Climate Data",
+        "Environmental Data",
+        "Climate Analytics"
+      ],
+      "Project Website": "https://www.preventionweb.net/",
+      "Project Description": "PreventionWeb is UNDRR’s global knowledge hub for disaster risk reduction, offering open-access content including research, policy documents, country profiles, and event listings. It provides curated data and analysis tools to help stakeholders stay informed, share practices, and support evidence-based DRR policy and programming.\n"
+    }
+  },
+  {
+    "id": "receGDImgeYZLVOPq",
+    "createdTime": "2025-03-24T18:31:30.000Z",
+    "fields": {
+      "Project/Product Name": "Famine Action Mechanism (FAM)",
+      "product_key": "fam",
+      "Provider Orgs Full Name": [
+        "recl51I0rcqfCzesL"
+      ],
+      "CRAF’d-Funded Project?": "NO",
+      "Investment Type(s)": [
+        "Data Sets & Commons",
+        "Crisis Analytics & Insights"
+      ],
+      "Investment Theme(s)": [
+        "Forecasting / Early-Warning",
+        "Food Security Data",
+        "Food Security Analytics"
+      ],
+      "Project Website": "https://www.worldbank.org/en/programs/famine-early-action-mechanism",
+      "Project Description": "The Famine Action Mechanism (FAM) is a global partnership dedicated to scaling up anticipatory and early action to protect lives and livelihoods from emerging food security crises.\t\n"
+    }
+  },
+  {
+    "id": "receXQgibfVmjvmeB",
+    "createdTime": "2025-07-22T11:08:13.000Z",
+    "fields": {
+      "Project/Product Name": "Minnesota Population Center (MPC)",
+      "product_key": "mpc",
+      "Provider Orgs Full Name": [
+        "recq4LDzw9kcBCuX3"
+      ],
+      "CRAF’d-Funded Project?": "NO",
+      "Investment Type(s)": [
+        "Data Sets & Commons"
+      ],
+      "Investment Theme(s)": [
+        "Baseline Population Data"
+      ],
+      "Project Website": "https://pop.umn.edu/",
+      "Project Description": "MPC is an interdisciplinary research center that advances demographic and population studies through large-scale data infrastructure. It supports open-access microdata, spatial data, and survey harmonization efforts across multiple global datasets.\n",
+      "Project Donor Agencies": [
+        "recbtz43uuKKFVfvd",
+        "recCDa9F6ntBxGGkm",
+        "reclUJwIt0bxL2bO0",
+        "recWpBIPgpNUcdSAn"
+      ]
+    }
+  },
+  {
+    "id": "recf0UvW6LzObKXGC",
+    "createdTime": "2025-03-24T18:36:34.000Z",
+    "fields": {
+      "Project/Product Name": "Global Crisis Risk Platform (GCRP)",
+      "product_key": "wb-gcrp",
+      "Provider Orgs Full Name": [
+        "recl51I0rcqfCzesL"
+      ],
+      "CRAF’d-Funded Project?": "NO",
+      "Investment Type(s)": [
+        "Crisis Analytics & Insights",
+        "Learning & Exchange"
+      ],
+      "Investment Theme(s)": [
+        "Anticipatory Action Triggers / Forecasts",
+        "Monitoring & Alerts",
+        "Upskilling & Training"
+      ],
+      "Project Website": "https://www.worldbank.org/en/topic/fragilityconflictviolence/brief/global-crisis-risk-platform-gcrp",
+      "Project Description": "GCRP is an integrated analytics platform for assessing and anticipating multidimensional crisis risks. It offers open-access dashboards, country risk profiles, and composite indicators to inform anticipatory action and crisis financing decisions.\n"
+    }
+  },
+  {
+    "id": "recf4QNnota3r1Jch",
+    "createdTime": "2025-03-24T18:07:38.000Z",
+    "fields": {
+      "Project/Product Name": "Global Seismic Hazard Map (GSHM)",
+      "product_key": "gshm",
+      "Provider Orgs Full Name": [
+        "recIIg9jENlDRt2Oe"
+      ],
+      "CRAF’d-Funded Project?": "NO",
+      "Investment Type(s)": [
+        "Data Sets & Commons",
+        "Crisis Analytics & Insights"
+      ],
+      "Investment Theme(s)": [
+        "Geospatial Data"
+      ],
+      "Project Website": "https://www.globalquakemodel.org/product/global-seismic-hazard-map",
+      "Project Description": "The Global Seismic Hazard Map (GSHM), developed under the auspices of the Global Earthquake Model (GEM), provides probabilistic assessments of earthquake hazards worldwide. It combines global seismicity data, geological models, and ground motion prediction equations to estimate the likelihood of earthquake-induced ground shaking. GSHM supports disaster risk reduction, urban planning, and insurance risk modeling by offering a harmonized and peer-reviewed reference for national and regional seismic hazard assessments. \t\n"
+    }
+  },
+  {
+    "id": "recfUO3eLXkFgevNd",
+    "createdTime": "2025-03-24T01:17:42.000Z",
+    "fields": {
+      "Project/Product Name": "Humanitarian Access",
+      "product_key": "ocha-human-access",
+      "Provider Orgs Full Name": [
+        "recGCltHLsYiDo59B"
+      ],
+      "CRAF’d-Funded Project?": "NO",
+      "Investment Type(s)": [
+        "Data Sets & Commons"
+      ],
+      "Investment Theme(s)": [
+        "Humanitarian Access Data"
+      ],
+      "Project Website": "https://www.unocha.org/humanitarian-access",
+      "Project Description": "OCHA’s Humanitarian Access platform tracks obstacles to aid delivery—including bureaucratic, security, and physical access challenges. It provides public dashboards and reports to support humanitarian planning and advocacy.\n"
+    }
+  },
+  {
+    "id": "recfjAhO2DxCjgEgM",
+    "createdTime": "2025-07-22T11:09:58.000Z",
+    "fields": {
+      "Project/Product Name": "Netherlands Red Cross‘ 510 Data Team",
+      "product_key": "510-data-team",
+      "Provider Orgs Full Name": [
+        "rec4rSsPP59Beed9i"
+      ],
+      "CRAF’d-Funded Project?": "YES",
+      "Investment Type(s)": [
+        "Data Sets & Commons",
+        "Crisis Analytics & Insights",
+        "Standards & Coordination"
+      ],
+      "Investment Theme(s)": [
+        "Anticipatory Action Triggers / Forecasts",
+        "Forecasting / Early-Warning",
+        "Upskilling & Training"
+      ],
+      "Project Website": "https://510.global/",
+      "Project Description": "The 510 Data Team supports innovation through data science projects targeting disaster preparedness, local early warning, and big data tools across the Red Cross network.\n",
+      "Project Donor Agencies": [
+        "recIUg3K9vtroebVE",
+        "recGNTHL9SKZxLDcw",
+        "recQj0XBQrBsLULvl",
+        "recE3ZEHFRqbifGOn",
+        "rec0QlT9YlTVhHfEn",
+        "recRgmk6Ew3NBvxGV",
+        "recFSAJtcprNtdNt3"
+      ]
+    }
+  },
+  {
+    "id": "recftrBsKUWwYWGA9",
+    "createdTime": "2025-03-21T19:09:22.000Z",
+    "fields": {
+      "Project/Product Name": "Safety and Access Review (SAR)",
+      "product_key": "inso-sar",
+      "Provider Orgs Full Name": [
+        "recHswBeKTxqz7ig7"
+      ],
+      "CRAF’d-Funded Project?": "NO",
+      "Investment Type(s)": [
+        "Data Sets & Commons"
+      ],
+      "Investment Theme(s)": [
+        "Conflict & Violence Data"
+      ],
+      "Project Website": "https://ngosafety.org/reports/safety-access-review-q42022/",
+      "Project Description": "INSO emerged from the complex political conflict of Afghanistan, where NGOs continue to face challenges to safety and access.\n"
+    }
+  },
+  {
+    "id": "recfzWyIVXJCeFFAN",
+    "createdTime": "2025-03-24T18:40:16.000Z",
+    "fields": {
+      "Project/Product Name": "Health Emergency Dashboard",
+      "product_key": "who-health-emergency-dashboard",
+      "Provider Orgs Full Name": [
+        "recwQpJQH4LwmSOBE"
+      ],
+      "CRAF’d-Funded Project?": "NO",
+      "Investment Type(s)": [
+        "Data Sets & Commons",
+        "Crisis Analytics & Insights"
+      ],
+      "Investment Theme(s)": [
+        "Health Data"
+      ],
+      "Project Website": "https://extranet.who.int/publicemergency/",
+      "Project Description": "The World Health Organization (WHO) Health Emergency Dashboard is a platform which aims to share information about public health events and emergencies. The data on the dashboard is refreshed every thirty (30) minutes and data is accurate as at time of refreshing.\n",
+      "Project Donor Agencies": [
+        "recqhcKxTv71yMfeI"
+      ]
+    }
+  },
+  {
+    "id": "recgPTOSUzIQS7uLs",
+    "createdTime": "2025-07-02T21:48:37.000Z",
+    "fields": {
+      "Project/Product Name": "Open Data Cube",
+      "product_key": "open-data-cube",
+      "Provider Orgs Full Name": [
+        "rec7o6iHPXg24y4mR"
+      ],
+      "CRAF’d-Funded Project?": "NO",
+      "Investment Type(s)": [
+        "Infrastructure & Platforms"
+      ],
+      "Investment Theme(s)": [
+        "Climate Analytics",
+        "Climate Data",
+        "Geographic Information Systems (GIS)"
+      ],
+      "Project Website": "https://www.opendatacube.org/",
+      "Project Description": "Open Data Cube is an open-source geospatial data platform designed to manage, analyze, and visualize large volumes of satellite Earth observation data. It provides tools for governments and researchers to turn raw imagery into actionable environmental insights.\n"
+    }
+  },
+  {
+    "id": "recgbAUAt9auV97KC",
+    "createdTime": "2025-03-24T18:21:39.000Z",
+    "fields": {
+      "Project/Product Name": "DataBank / Open Data Catalog",
+      "product_key": "wb-data-catalog",
+      "Provider Orgs Full Name": [
+        "recl51I0rcqfCzesL"
+      ],
+      "CRAF’d-Funded Project?": "NO",
+      "Investment Type(s)": [
+        "Data Sets & Commons",
+        "Infrastructure & Platforms"
+      ],
+      "Investment Theme(s)": [
+        "Data Storage, Access & Sharing",
+        "Open Access"
+      ],
+      "Project Website": "https://datacatalog.worldbank.org/home",
+      "Project Description": "The Data Catalog is designed to make World Bank's development data easy to find, download, use, and share. It includes data from the World Bank's [microdata](https://microdata.worldbank.org/), [finances](http://finances.worldbank.org/) and [energy data](https://energydata.info/) platforms, as well as datasets from the [open data catalog.](https://data.worldbank.org/) There are different ways to access and download datasets.\n\t\n"
+    }
+  },
+  {
+    "id": "recgftq4GZElVtfi6",
+    "createdTime": "2025-07-08T02:21:14.000Z",
+    "fields": {
+      "Project/Product Name": "AQUASTAT",
+      "product_key": "aquastat",
+      "Provider Orgs Full Name": [
+        "reckv2Buw9sXl3Eul"
+      ],
+      "CRAF’d-Funded Project?": "NO",
+      "Investment Type(s)": [
+        "Data Sets & Commons"
+      ],
+      "Investment Theme(s)": [
+        "Data Storage, Access & Sharing",
+        "Geospatial Data",
+        "Water, Sanitation & Hygiene (WASH) Data"
+      ],
+      "Project Website": "https://www.fao.org/aquastat/en/",
+      "Project Description": "FAO’s AQUASTAT is a global water information system offering open-access data on water availability, irrigation, and usage. It supports analysis and decision-making on food security, hydrology, and agricultural planning.\n",
+      "Project Donor Agencies": [
+        "recOebxHWdwSQ0RU6",
+        "recE3ZEHFRqbifGOn",
+        "rec8gXVsPUUB517NE",
+        "recRgmk6Ew3NBvxGV",
+        "recGNTHL9SKZxLDcw",
+        "recylzOrnxt3grWHh",
+        "recCctxpcCNPhxoXS"
+      ]
+    }
+  },
+  {
+    "id": "recgmCxRj8IVZMFF2",
+    "createdTime": "2025-07-22T11:23:11.000Z",
+    "fields": {
+      "Project/Product Name": "Uppsala Conflict Data Program (UCDP)",
+      "product_key": "ucdp",
+      "Provider Orgs Full Name": [
+        "recDNGUjEqFBtSEq6"
+      ],
+      "CRAF’d-Funded Project?": "NO",
+      "Investment Type(s)": [
+        "Data Sets & Commons",
+        "Learning & Exchange"
+      ],
+      "Investment Theme(s)": [
+        "Upskilling & Training",
+        "Conflict Analytics",
+        "Conflict & Violence Data",
+        "Peace Data",
+        "Forecasting / Early-Warning"
+      ],
+      "Project Website": "https://www.uu.se/en/department/peace-and-conflict-research/research/ucdp/",
+      "Project Description": "UCDP offers conflict datasets, battle event data, and fatalities statistics to support academic and policy research on global violence trends.\n",
+      "Project Donor Agencies": [
+        "recP0CwfhMP34aWn0"
+      ]
+    }
+  },
+  {
+    "id": "recgpnIj48zBCayHc",
+    "createdTime": "2025-03-21T19:02:44.000Z",
+    "fields": {
+      "Project/Product Name": "INFORM Risk",
+      "product_key": "inform-risk",
+      "Provider Orgs Full Name": [
+        "recX11pAAzHjdqH0Y",
+        "rec9NauCCUPUWMwfl",
+        "recz5rdvfM2eaY0Sx"
+      ],
+      "CRAF’d-Funded Project?": "NO",
+      "Investment Type(s)": [
+        "Data Sets & Commons",
+        "Crisis Analytics & Insights"
+      ],
+      "Investment Theme(s)": [
+        "Forecasting / Early-Warning",
+        "Climate Data"
+      ],
+      "Project Website": "https://drmkc.jrc.ec.europa.eu/inform-index",
+      "Project Description": "The INFORM Risk Index is a multi-hazard risk assessment tool developed by the Inter-Agency Standing Committee (IASC) and the European Commission. It combines data on hazards, vulnerability, and coping capacity to produce a composite score of disaster risk in over 190 countries. The index supports evidence-based disaster preparedness, humanitarian planning, and crisis response by identifying countries most at risk of crises that could overwhelm national response capacities. It is updated annually and incorporates more than 50 indicators.\n"
+    }
+  },
+  {
+    "id": "rech8GCismNX3Bm8p",
+    "createdTime": "2025-07-18T15:15:26.000Z",
+    "fields": {
+      "Project/Product Name": "Harvard Humanitarian Initiative (HHI)",
+      "product_key": "hhi",
+      "CRAF’d-Funded Project?": "NO",
+      "Investment Type(s)": [
+        "Infrastructure & Platforms",
+        "Learning & Exchange"
+      ],
+      "Investment Theme(s)": [
+        "Conferences",
+        "Data Collection",
+        "Workshops",
+        "Upskilling & Training"
+      ],
+      "Project Website": "https://hhi.harvard.edu/",
+      "Project Description": "HHI is an academic and applied research center focused on advancing humanitarian response through evidence-based practice, data science, and technology. It bridges academia, practitioners, and policy stakeholders.\n",
+      "Project Donor Agencies": [
+        "recCDa9F6ntBxGGkm",
+        "reclUJwIt0bxL2bO0"
+      ]
+    }
+  },
+  {
+    "id": "rechEM6RZ6by4ZLZK",
+    "createdTime": "2025-03-24T15:01:08.000Z",
+    "fields": {
+      "Project/Product Name": "Global Humanitarian Overview (GHO) Report",
+      "product_key": "gho-report",
+      "Provider Orgs Full Name": [
+        "recGCltHLsYiDo59B"
+      ],
+      "CRAF’d-Funded Project?": "NO",
+      "Investment Type(s)": [
+        "Data Sets & Commons",
+        "Crisis Analytics & Insights"
+      ],
+      "Investment Theme(s)": [
+        "Conflict & Violence Data",
+        "Data Storage, Access & Sharing"
+      ],
+      "Project Website": "https://humanitarianaction.info/",
+      "Project Description": "The **Global Humanitarian Overview** is an annual assessment of global humanitarian needs and how to respond to them. This document provides an analysis of the drivers of needs and an overview of the resources required to support people targeted for assistance. It also provides an account of the humanitarian system’s collective achievements.\n"
+    }
+  },
+  {
+    "id": "rechQ1azyTpypEDEy",
+    "createdTime": "2025-08-15T14:43:54.000Z",
+    "fields": {
+      "Project/Product Name": "Women Within Armed Groups",
+      "product_key": "wwag",
+      "Provider Orgs Full Name": [
+        "recJdh0jywpDa573r",
+        "rec5yRG9Wnxu6XkrO"
+      ],
+      "CRAF’d-Funded Project?": "YES",
+      "Investment Type(s)": [
+        "Data Sets & Commons",
+        "Standards & Coordination"
+      ],
+      "Investment Theme(s)": [
+        "Conflict & Violence Data",
+        "Gender Data",
+        "Methodological Standards (e.g., Data Collection)"
+      ],
+      "Project Website": "https://mptf.undp.org/project/00141136",
+      "Project Description": "\n"
+    }
+  },
+  {
+    "id": "rechc2GK2KtFL9IcK",
+    "createdTime": "2025-03-24T19:51:00.000Z",
+    "fields": {
+      "Project/Product Name": "AGORA",
+      "product_key": "agora",
+      "Provider Orgs Full Name": [
+        "recNVePWbU6GAxsIP",
+        "recGTvsDJ9pk4Atyh"
+      ],
+      "CRAF’d-Funded Project?": "NO",
+      "Investment Type(s)": [
+        "Human Capital & Know-how",
+        "Learning & Exchange"
+      ],
+      "Investment Theme(s)": [
+        "Data Storage, Access & Sharing",
+        "Damage Assessments",
+        "Upskilling & Training"
+      ],
+      "Project Website": "https://www.impact-initiatives.org/what-we-do/agora/",
+      "Project Description": "AGORA, a joint venture between ACTED and IMPACT Initiatives, was created in 2016 to ground humanitarian and development work in local knowledge, in keeping with the motto « Think local, Act global »\n"
+    }
+  },
+  {
+    "id": "rechtC1lJc96HgvFk",
+    "createdTime": "2025-04-01T19:39:45.000Z",
+    "fields": {
+      "Project/Product Name": "Arab Barometer",
+      "product_key": "arab-barometer",
+      "Provider Orgs Full Name": [
+        "reccGyY6Ep2ptBPKy"
+      ],
+      "CRAF’d-Funded Project?": "NO",
+      "Investment Type(s)": [
+        "Data Sets & Commons"
+      ],
+      "Investment Theme(s)": [
+        "Sentiment Data",
+        "Disaggregated Country-level Data"
+      ],
+      "Project Website": "https://www.arabbarometer.org/",
+      "Project Description": "Provides harmonized survey data covering public opinion on governance, religion, and economics in 20+ Arab countries. Data is freely accessible and supports comparative analysis across the region.\n",
+      "Project Donor Agencies": [
+        "rec6XRPA9pKgC8j1J",
+        "rec9TITYUt2a5OaKT",
+        "recsrMWmoA037bW03"
+      ]
+    }
+  },
+  {
+    "id": "recjAd7jOVvlh7mnp",
+    "createdTime": "2025-04-14T23:51:32.000Z",
+    "fields": {
+      "Project/Product Name": "Integrated Public Use Microdata Series (IPUMS)",
+      "product_key": "ipums",
+      "Provider Orgs Full Name": [
+        "recq4LDzw9kcBCuX3"
+      ],
+      "CRAF’d-Funded Project?": "NO",
+      "Investment Type(s)": [
+        "Data Sets & Commons",
+        "Infrastructure & Platforms"
+      ],
+      "Investment Theme(s)": [
+        "Household Survey Data",
+        "Baseline Population Data"
+      ],
+      "Project Website": "https://www.ipums.org/",
+      "Project Description": "IPUMS provides harmonized, high-quality census and survey data from over 100 countries. Available through an open-access platform, its datasets enable global research on health, population trends, labor, and development outcomes.\n",
+      "Project Donor Agencies": [
+        "recCDa9F6ntBxGGkm",
+        "reclUJwIt0bxL2bO0",
+        "recWpBIPgpNUcdSAn"
+      ]
+    }
+  },
+  {
+    "id": "reck0qeeLf1nGLbap",
+    "createdTime": "2025-03-24T18:23:29.000Z",
+    "fields": {
+      "Project/Product Name": "World Bank-UNHCR Joint Data Center on Forced Displacement",
+      "product_key": "wb-unhcr-jdc",
+      "Provider Orgs Full Name": [
+        "recfLMsJLUS9toAjS"
+      ],
+      "CRAF’d-Funded Project?": "NO",
+      "Investment Type(s)": [
+        "Data Sets & Commons",
+        "Learning & Exchange"
+      ],
+      "Investment Theme(s)": [
+        "Displacement & Migration Data",
+        "Upskilling & Training"
+      ],
+      "Project Website": "https://www.jointdatacenter.org/",
+      "Project Description": "The JDC is a joint initiative to improve the collection, analysis, and use of data on forcibly displaced populations. It provides public goods—surveys, microdata, and research—focused on informing development and humanitarian action through evidence-based approaches.\n"
+    }
+  },
+  {
+    "id": "reckTzB7RJs4TkCxQ",
+    "createdTime": "2025-04-15T00:04:58.000Z",
+    "fields": {
+      "Project/Product Name": "​HumanitarianAction.info",
+      "product_key": "ocha-humanitarian-action",
+      "Provider Orgs Full Name": [
+        "recGCltHLsYiDo59B"
+      ],
+      "CRAF’d-Funded Project?": "NO",
+      "Investment Type(s)": [
+        "Infrastructure & Platforms",
+        "Crisis Analytics & Insights"
+      ],
+      "Investment Theme(s)": [
+        "Needs Assessment Data",
+        "Conflict Analytics"
+      ],
+      "Project Website": "https://humanitarianaction.info/",
+      "Project Description": "​HumanitarianAction.info is an official platform managed by the United Nations Office for the Coordination of Humanitarian Affairs (OCHA). It serves as a centralized hub for information on global humanitarian needs, response plans, and funding appeals.​\n"
+    }
+  },
+  {
+    "id": "reckhF1PTR2hh135J",
+    "createdTime": "2025-03-24T18:05:48.000Z",
+    "fields": {
+      "Project/Product Name": "ROOTS Portal",
+      "product_key": "roots-portal",
+      "Provider Orgs Full Name": [
+        "recIeY5Kyx0oDYcLA"
+      ],
+      "CRAF’d-Funded Project?": "NO",
+      "Investment Type(s)": [
+        "Infrastructure & Platforms",
+        "Human Capital & Know-how"
+      ],
+      "Investment Theme(s)": [
+        "Data Storage, Access & Sharing",
+        "Upskilling & Training"
+      ],
+      "Project Website": "https://www.fieldsdata.org/",
+      "Project Description": "This platform offers a consolidated dataset on local organizations, presenting a 3W map (Who does What, Where) that details the operational presence of both national and international organizations.\n\n"
+    }
+  },
+  {
+    "id": "reckkGrUM2q2e7aeo",
+    "createdTime": "2025-03-24T15:06:14.000Z",
+    "fields": {
+      "Project/Product Name": "Humanitarian Data Exchange (HDX)",
+      "product_key": "ocha-hdx",
+      "Provider Orgs Full Name": [
+        "recGCltHLsYiDo59B"
+      ],
+      "CRAF’d-Funded Project?": "NO",
+      "Investment Type(s)": [
+        "Infrastructure & Platforms"
+      ],
+      "Investment Theme(s)": [
+        "Data Storage, Access & Sharing"
+      ],
+      "Project Website": "https://data.humdata.org/",
+      "Project Description": "Managed by the United Nations Office for the Coordination of Humanitarian Affairs (OCHA), the Humanitarian Data Exchange (HDX) is a centralized platform for sharing humanitarian data. It offers access to over 20,000 datasets from more than 300 organizations, covering themes such as population, conflict, health, and displacement. HDX includes the Data Grid and the COVID-19 Data Explorer, and it plays a crucial role in promoting data transparency, interoperability, and informed decision-making in humanitarian settings.\n"
+    }
+  },
+  {
+    "id": "recl1IcheJlYc36up",
+    "createdTime": "2025-03-21T17:52:04.000Z",
+    "fields": {
+      "Project/Product Name": "Multidimensional Poverty Index (MPI)",
+      "product_key": "mpi",
+      "Provider Orgs Full Name": [
+        "recvWbbjDxNDQ94Zk"
+      ],
+      "CRAF’d-Funded Project?": "NO",
+      "Investment Type(s)": [
+        "Data Sets & Commons"
+      ],
+      "Investment Theme(s)": [
+        "Poverty Data"
+      ],
+      "Project Website": "https://ophi.org.uk/global-mpi",
+      "Project Description": "The global Multidimensional Poverty Index (global MPI) is an annual international measure of acute multidimensional poverty covering over 100 developing countries. It complements traditional monetary poverty measures by capturing the acute, overlapping deprivations in health, education, and living standards that people in poverty face. OPHI computes the global MPI in partnership with the Human Development Report Office of the United Nations Development Programme. \n",
+      "Project Donor Agencies": [
+        "recRutqdhqEZSnOB2",
+        "recYxlC8x9puB69tx"
+      ]
+    }
+  },
+  {
+    "id": "recmH2oywWDYooamX",
+    "createdTime": "2025-03-25T19:32:58.000Z",
+    "fields": {
+      "Project/Product Name": "HDX HAPI",
+      "product_key": "hdx-hapi",
+      "Provider Orgs Full Name": [
+        "recGCltHLsYiDo59B"
+      ],
+      "CRAF’d-Funded Project?": "NO",
+      "Investment Type(s)": [
+        "Infrastructure & Platforms",
+        "Standards & Coordination"
+      ],
+      "Investment Theme(s)": [
+        "Data Storage, Access & Sharing"
+      ],
+      "Project Website": "https://data.humdata.org/hapi",
+      "Project Description": "The initial scope of HDX HAPI mirrored that of the HDX Data Grids, which include the foundational data needed to understand a humanitarian context. However we have since expanded beyond the Data Grids, and a live dashboard of data availability by country can be found at <https://ocha-dap.github.io/viz-hapi-availability/>.\n"
+    }
+  },
+  {
+    "id": "recmpKfg1MNVee0Bg",
+    "createdTime": "2025-06-24T14:34:31.000Z",
+    "fields": {
+      "Project/Product Name": "Centre for Humanitarian Data (CHD)",
+      "product_key": "ocha-chd",
+      "Provider Orgs Full Name": [
+        "recGCltHLsYiDo59B"
+      ],
+      "CRAF’d-Funded Project?": "NO",
+      "Investment Type(s)": [
+        "Data Sets & Commons",
+        "Infrastructure & Platforms",
+        "Crisis Analytics & Insights",
+        "Human Capital & Know-how",
+        "Standards & Coordination",
+        "Learning & Exchange"
+      ],
+      "Investment Theme(s)": [
+        "Upskilling & Training",
+        "Humanitarian Access Data",
+        "Geospatial Data"
+      ],
+      "Project Website": "https://centre.humdata.org/",
+      "Project Description": "CHD leads global data standards, open data repositories (HDX), and capacity-building for humanitarian data users. It offers APIs, tools, and training to support interoperable data sharing.\n"
+    }
+  },
+  {
+    "id": "recnE0dKdCAGHyIQG",
+    "createdTime": "2025-03-24T19:46:56.000Z",
+    "fields": {
+      "Project/Product Name": "REACH Initiative",
+      "product_key": "reach-initiative",
+      "Provider Orgs Full Name": [
+        "recNVePWbU6GAxsIP",
+        "recGTvsDJ9pk4Atyh"
+      ],
+      "CRAF’d-Funded Project?": "NO",
+      "Investment Type(s)": [
+        "Data Sets & Commons"
+      ],
+      "Investment Theme(s)": [
+        "Humanitarian Access Data"
+      ],
+      "Project Website": "https://www.reach-initiative.org",
+      "Project Description": "REACH is a leading humanitarian initiative providing granular data, timely information and in-depth analysis from contexts of crisis, disaster and displacement. The work of REACH directly feeds into aid response and decision-making by providing accessible and precise information on the humanitarian situation of crisis-affected populations.\n",
+      "Project Donor Agencies": [
+        "rec3Ado0Jrl799Q8A"
+      ]
+    }
+  },
+  {
+    "id": "recnU6ZioVzUVRKZo",
+    "createdTime": "2025-03-24T02:03:21.000Z",
+    "fields": {
+      "Project/Product Name": "Operational Data Portal (ODP)",
+      "product_key": "unhcr-odp",
+      "Provider Orgs Full Name": [
+        "recfLMsJLUS9toAjS"
+      ],
+      "CRAF’d-Funded Project?": "NO",
+      "Investment Type(s)": [
+        "Data Sets & Commons",
+        "Infrastructure & Platforms",
+        "Crisis Analytics & Insights"
+      ],
+      "Investment Theme(s)": [
+        "Data Storage, Access & Sharing"
+      ],
+      "Project Website": "https://data.unhcr.org/",
+      "Project Description": "The Operational Data Portal (ODP) enables UNHCR’s institutional responsibility to provide an information and data sharing platform to facilitate coordination of refugee emergencies. This was achieved using independent ‘situation views’ covering major emergencies such as the Syria situation or the Central African Republic emergency, among others\n"
+    }
+  },
+  {
+    "id": "recni7Cfecz6SBQ8S",
+    "createdTime": "2025-08-28T16:52:52.000Z",
+    "fields": {
+      "Project/Product Name": "Displacement Severity Assessments",
+      "product_key": "displacement-severity",
+      "Investment Type(s)": [
+        "Data Sets & Commons",
+        "Infrastructure & Platforms"
+      ],
+      "Investment Theme(s)": [
+        "Needs Assessment Data",
+        "Displacement & Migration Analytics"
+      ],
+      "Project Website": "https://www.internal-displacement.org/displacement-severity-assessments/",
+      "Project Description": "IDMC conducts annual severity assessments to compare the living conditions of internally displaced households to those of returnee and non-displaced households in the same country, including access to adequate housing, stable income, food security and education, as well as the fear of exposure to conflict or violence, explosive hazards and other threats.  \n"
+    }
+  },
+  {
+    "id": "recniOH9IPt0Vz07E",
+    "createdTime": "2025-03-24T18:56:01.000Z",
+    "fields": {
+      "Project/Product Name": "Aid Worker Security Database (AWSD)",
+      "product_key": "awsd",
+      "Provider Orgs Full Name": [
+        "rec8O141RyUupQsRy"
+      ],
+      "CRAF’d-Funded Project?": "NO",
+      "Investment Type(s)": [
+        "Data Sets & Commons"
+      ],
+      "Investment Theme(s)": [
+        "Humanitarian Access Data"
+      ],
+      "Project Website": "https://www.aidworkersecurity.org/",
+      "Project Description": "The Aid Worker Security Database (AWSD) records major incidents of violence against aid workers, with incident reports from 1997 through the present. Initiated in 2005, to date the AWSD remains the sole comprehensive global source of these data, providing the evidence base for analysis of the changing security environment for civilian aid operations.\n"
+    }
+  },
+  {
+    "id": "recniVpxHScJaQdLq",
+    "createdTime": "2025-03-25T17:45:39.000Z",
+    "fields": {
+      "Project/Product Name": "UNICEF Data Warehouse",
+      "product_key": "unicef-data-warehouse",
+      "Provider Orgs Full Name": [
+        "rec2OrPTxGHesgz1w"
+      ],
+      "CRAF’d-Funded Project?": "NO",
+      "Investment Type(s)": [
+        "Data Sets & Commons",
+        "Infrastructure & Platforms"
+      ],
+      "Investment Theme(s)": [
+        "Data Storage, Access & Sharing"
+      ],
+      "Project Website": "https://data.unicef.org/resources/data_explorer/unicef_f/",
+      "Project Description": "UNICEF is the world’s leading source of data on children and maintains databases of hundreds of international valid and comparable indicators. With such a wealth of information available, the Data Warehouse has been designed to allow easy access to those indicators across a range of countries, with some datasets spanning back decades.\n"
+    }
+  },
+  {
+    "id": "recnoFBXdvLa7XJHw",
+    "createdTime": "2025-07-08T02:36:06.000Z",
+    "fields": {
+      "Project/Product Name": "GIEWS - Global Information and Early Warning System on Food and Agriculture",
+      "product_key": "giews",
+      "Provider Orgs Full Name": [
+        "reckv2Buw9sXl3Eul"
+      ],
+      "CRAF’d-Funded Project?": "NO",
+      "Investment Type(s)": [
+        "Data Sets & Commons"
+      ],
+      "Investment Theme(s)": [
+        "Food Security Data",
+        "Food Security Analytics"
+      ],
+      "Project Website": "https://www.fao.org/giews/en/",
+      "Project Description": "FAO’s GIEWS delivers near real-time crop and food supply monitoring, offering geospatial visualizations and drought alerts across over 100 countries. Data supports food security risk assessment and response planning.\n"
+    }
+  },
+  {
+    "id": "recnt8m31aCnnA0my",
+    "createdTime": "2025-03-24T19:46:29.000Z",
+    "fields": {
+      "Project/Product Name": "HealthMap",
+      "product_key": "healthmap",
+      "Provider Orgs Full Name": [
+        "recjxKzlYBzlFLOvx"
+      ],
+      "CRAF’d-Funded Project?": "NO",
+      "Investment Type(s)": [
+        "Crisis Analytics & Insights"
+      ],
+      "Investment Theme(s)": [
+        "Health Data",
+        "Geospatial Data"
+      ],
+      "Project Website": "https://www.healthmap.org",
+      "Project Description": "HealthMap aggregates open-source public health data, including disease alerts and risk indicators, into interactive maps and dashboards for outbreak detection and global health monitoring.\n"
+    }
+  },
+  {
+    "id": "recopmKKe6HZ5qWWw",
+    "createdTime": "2025-04-14T23:53:08.000Z",
+    "fields": {
+      "Project/Product Name": "UNHCR Microdata Library",
+      "product_key": "unhcr-microdata-library",
+      "Provider Orgs Full Name": [
+        "recfLMsJLUS9toAjS"
+      ],
+      "CRAF’d-Funded Project?": "NO",
+      "Investment Type(s)": [
+        "Data Sets & Commons",
+        "Infrastructure & Platforms"
+      ],
+      "Investment Theme(s)": [
+        "Household Survey Data"
+      ],
+      "Project Website": "https://microdata.unhcr.org/index.php/home",
+      "Project Description": "An archive of anonymized survey and refugee data available under open-access licenses. It supports demographic and displacement research across global contexts.\n"
+    }
+  },
+  {
+    "id": "recoqDpIwcyVG3N5Z",
+    "createdTime": "2025-04-14T20:44:19.000Z",
+    "fields": {
+      "Project/Product Name": "United Nations Report on Military Expenditures (UNMilEx)",
+      "product_key": "unoda-unmilex",
+      "Provider Orgs Full Name": [
+        "rec6XVf6yOpiKsglc"
+      ],
+      "CRAF’d-Funded Project?": "NO",
+      "Investment Type(s)": [
+        "Data Sets & Commons"
+      ],
+      "Investment Theme(s)": [
+        "Disarmament Data"
+      ],
+      "Project Website": "https://disarmament.unoda.org/convarms/milex/",
+      "Project Description": "UNODA publishes annual data on military spending from Member States, informing arms control and global transparency through structured datasets.\n"
+    }
+  },
+  {
+    "id": "recp0YELy7eVj9FUs",
+    "createdTime": "2025-08-20T18:12:12.000Z",
+    "fields": {
+      "Project/Product Name": "EMPOW: Women’s Empowerment in Peace Processes",
+      "product_key": "prio-empow",
+      "Provider Orgs Full Name": [
+        "recHAqTQikIG8K4tD"
+      ],
+      "CRAF’d-Funded Project?": "YES",
+      "Investment Type(s)": [
+        "Data Sets & Commons",
+        "Standards & Coordination"
+      ],
+      "Investment Theme(s)": [
+        "Gender Data",
+        "Peace Data",
+        "Interoperable Formats",
+        "Consistent Data Formats"
+      ],
+      "Project Website": "https://mptf.undp.org/project/00141160",
+      "Project Description": "EMPOW will address the data gap on Women, Peace and Security [WPS] by creating interoperable datasets: EMPOW Agency and EMPOW Reform. The objective is to generate and harmonize data on women's empowerment across all peace process phases - from pre-negotiations to post-war peacebuilding - and ensure compatibility with leading crisis data, such as the Uppsala Conflict Data Program.\n",
+      "Project Donor Agencies": [
+        "rec1VhOJv9U6QKBBs"
+      ]
+    }
+  },
+  {
+    "id": "recpARdDyMReIUuDq",
+    "createdTime": "2025-03-25T20:03:21.000Z",
+    "fields": {
+      "Project/Product Name": "EEARTH",
+      "product_key": "eearth",
+      "Provider Orgs Full Name": [
+        "recXLswB4U05ZtaKy"
+      ],
+      "CRAF’d-Funded Project?": "YES",
+      "Investment Type(s)": [
+        "Crisis Analytics & Insights"
+      ],
+      "Investment Theme(s)": [
+        "Climate Data",
+        "Forecasting / Early-Warning"
+      ],
+      "Project Website": "https://crafd.io/data-financing/eearth",
+      "Project Description": "Developed by the [International Crisis Group](https://www.crisisgroup.org/), EEARTH is a revolutionary early warning system designed to identify climate-driven conflict pathways in the Horn of Africa. By integrating both quantitative and qualitative data, it offers a comprehensive approach to climate-security risks. Initially piloted in Somalia and South Sudan, EEARTH provides insights into the underlying causes of conflict risks. Its innovative approach is geared towards anticipating, preventing, and addressing the repercussions of climate-related security threats. \n",
+      "Project Donor Agencies": [
+        "rec1VhOJv9U6QKBBs"
+      ]
+    }
+  },
+  {
+    "id": "recpHSrK0iIVLYDKO",
+    "createdTime": "2025-07-18T15:07:53.000Z",
+    "fields": {
+      "Project/Product Name": "IOM's Global Data Institute (GDI)",
+      "product_key": "iom-gdi",
+      "Provider Orgs Full Name": [
+        "recsrCWKAPu9dwkHb"
+      ],
+      "CRAF’d-Funded Project?": "NO",
+      "Investment Type(s)": [
+        "Data Sets & Commons",
+        "Crisis Analytics & Insights"
+      ],
+      "Investment Theme(s)": [
+        "Displacement & Migration Data",
+        "Displacement & Migration Analytics",
+        "Humanitarian Access Data"
+      ],
+      "Project Website": "https://www.iom.int/migration-data",
+      "Project Description": "GDI strengthens IOM’s institutional capacity for data, analytics, and digital tools—supporting platforms like GMDAC, PRIMES, and the DTM API to deliver timely and interoperable migration data.\n",
+      "Project Donor Agencies": [
+        "rec6XRPA9pKgC8j1J",
+        "recQUVhcVyxZlXJ3H",
+        "rec8gXVsPUUB517NE",
+        "rec0QlT9YlTVhHfEn",
+        "recGtHxSOF0xgVlbl",
+        "recHSsEaPuaG3h2PQ",
+        "recYxlC8x9puB69tx",
+        "recOSSiNFT1E4S7gL",
+        "rec0sY1I5JZz6ZsUE",
+        "rectyuW4INCMaNoAM",
+        "recm5JztIHB9RUFLL",
+        "recwFMxuFEUJ4IK7S",
+        "recRgmk6Ew3NBvxGV",
+        "recHuY5QDGX7wJsTF",
+        "recf10RuM7qHUnC33",
+        "recbvrcYZZW7mBnCU"
+      ]
+    }
+  },
+  {
+    "id": "recpKRVapFMI3kGY0",
+    "createdTime": "2025-03-24T18:42:33.000Z",
+    "fields": {
+      "Project/Product Name": "Early Warning, Alert and Response System (EWARS)",
+      "product_key": "ewars",
+      "Provider Orgs Full Name": [
+        "recwQpJQH4LwmSOBE"
+      ],
+      "CRAF’d-Funded Project?": "NO",
+      "Investment Type(s)": [
+        "Crisis Analytics & Insights"
+      ],
+      "Investment Theme(s)": [
+        "Forecasting / Early-Warning"
+      ],
+      "Project Website": "https://www.who.int/emergencies/surveillance/early-warning-alert-and-response-system-ewars",
+      "Project Description": "The Early Warning Alert and Response System provides real-time monitoring of epidemic outbreaks. It supports crisis response planning and risk assessment using online reporting platforms and dashboards.\n"
+    }
+  },
+  {
+    "id": "recpP1KGKcmcpy2jo",
+    "createdTime": "2025-03-24T20:04:25.000Z",
+    "fields": {
+      "Project/Product Name": "Trigger Model Development",
+      "product_key": "ifrc-trigger-model",
+      "Provider Orgs Full Name": [
+        "reccKH8GA8awjQEvp"
+      ],
+      "CRAF’d-Funded Project?": "NO",
+      "Investment Type(s)": [
+        "Crisis Analytics & Insights"
+      ],
+      "Investment Theme(s)": [
+        "Forecasting / Early-Warning",
+        "Anticipatory Action Triggers / Forecasts",
+        "Monitoring & Alerts"
+      ],
+      "Project Website": "https://510.global/service/trigger-model-development/",
+      "Project Description": "Trigger models are employed to establish danger levels that activate humanitarian anticipatory Early Action Protocols (EAPs). These models are developed using the Impact-Based Forecasting ([IBF](https://510.global/glossary/ibf/)) methodology. So far, we have built models that trigger EAPs for typhoon, flood, dzud, drought and dengue hazards. \n\n"
+    }
+  },
+  {
+    "id": "recr5hGDgBiAH4xSm",
+    "createdTime": "2025-03-25T20:01:16.000Z",
+    "fields": {
+      "Project/Product Name": "Red Cross Climate Centre (RCC)",
+      "product_key": "red-cross-climate-center",
+      "Provider Orgs Full Name": [
+        "recwaewYY2WMRF9ZI"
+      ],
+      "CRAF’d-Funded Project?": "YES",
+      "Investment Type(s)": [
+        "Data Sets & Commons"
+      ],
+      "Investment Theme(s)": [
+        "Climate Data",
+        "Environmental Data"
+      ],
+      "Project Website": "https://crafd.io/data-financing/rccc",
+      "Project Description": "The [International Committee of the Red Cross](https://www.climatecentre.org/) (ICRC), in collaboration with the [Netherlands Red Cross‘ data and digital initiative 510](https://510.global/), one of the largest humanitarian organizations active in fragile and crisis-affected settings—is embarking on an innovative project to intertwine climate risk, displacement, and conflict data into comprehensive risk datasets. This initiative aims to equip the ICRC and the broader humanitarian community with open-source composite datasets and risk indices to enhance decision-making and programming capabilities in sub-Saharan Africa, the Middle East, and North Africa (MENA) regions.\n",
+      "Project Donor Agencies": [
+        "rec1VhOJv9U6QKBBs"
+      ]
+    }
+  },
+  {
+    "id": "recrAQT0YpFBCQ02U",
+    "createdTime": "2025-03-24T17:57:06.000Z",
+    "fields": {
+      "Project/Product Name": "Famine Early Warning Systems Network (FEWS NET)",
+      "product_key": "fews-net",
+      "Provider Orgs Full Name": [
+        "recOn1gqNzxTVBUgw"
+      ],
+      "CRAF’d-Funded Project?": "NO",
+      "Investment Type(s)": [
+        "Crisis Analytics & Insights"
+      ],
+      "Investment Theme(s)": [
+        "Food Security Data",
+        "Forecasting / Early-Warning"
+      ],
+      "Project Website": "https://fews.net/",
+      "Project Description": "FEWS NET issues monthly and event-driven food insecurity forecasts based on integrated climate, socioeconomic, and agricultural data. Its publicly shared maps and data support anticipatory humanitarian planning and funding allocation in high-risk areas.\n",
+      "Project Donor Agencies": [
+        "recQUVhcVyxZlXJ3H"
+      ]
+    }
+  },
+  {
+    "id": "recrWrHtaaCWN2TVH",
+    "createdTime": "2025-07-22T11:14:27.000Z",
+    "fields": {
+      "Project/Product Name": "UNESCO Institute for Statistics",
+      "product_key": "unesco-institute-for-statistics",
+      "Provider Orgs Full Name": [
+        "recWOW3N9BgLJiHl5"
+      ],
+      "CRAF’d-Funded Project?": "NO",
+      "Investment Type(s)": [
+        "Human Capital & Know-how"
+      ],
+      "Investment Theme(s)": [
+        "Education Data",
+        "Gender Data"
+      ],
+      "Project Website": "https://uis.unesco.org/",
+      "Project Description": "UIS is UNESCO's global statistical agency for education, science, culture, and communication—publishing SDG indicators and open data in standardized formats.\n"
+    }
+  },
+  {
+    "id": "recs629pSu4Ei5145",
+    "createdTime": "2025-06-27T22:23:39.000Z",
+    "fields": {
+      "Project/Product Name": "PARIS21’s Statistical Capacity Monitor ",
+      "product_key": "paris21-scm",
+      "Provider Orgs Full Name": [
+        "recvPPEVoXWarvaFS"
+      ],
+      "CRAF’d-Funded Project?": "NO",
+      "Investment Type(s)": [
+        "Data Sets & Commons"
+      ],
+      "Investment Theme(s)": [
+        "Household Survey Data"
+      ],
+      "Project Website": "https://statisticalcapacitymonitor.org/about/",
+      "Project Description": "An analytical platform tracking country-level data system development and SDG readiness, providing dashboards and indicators to help align donor support and national priorities.\n",
+      "Project Donor Agencies": [
+        "recIUg3K9vtroebVE"
+      ]
+    }
+  },
+  {
+    "id": "recsuIp5N5MkuxT1S",
+    "createdTime": "2025-03-21T16:08:21.000Z",
+    "fields": {
+      "Project/Product Name": "Global Internal Displacement Database (GIDD)",
+      "product_key": "gidd",
+      "Provider Orgs Full Name": [
+        "reclJ2i9jD0TKjOJ8"
+      ],
+      "CRAF’d-Funded Project?": "YES",
+      "Investment Type(s)": [
+        "Data Sets & Commons"
+      ],
+      "Investment Theme(s)": [
+        "Displacement & Migration Data"
+      ],
+      "Project Website": "https://www.internal-displacement.org/database/displacement-data/",
+      "Project Description": "This database is the product of an annual process that involves collecting, harmonizing, and validating data followed by a thorough peer review. We engage with primary data providers and relevant actors at various levels—national, regional, and global. Published annually, the GIDD has been acknowledged by several UN resolutions for its significance. The GIDD data is detailed by country and year for conflict-induced displacement, while disaster-induced displacement is recorded at the event level. Additional disaggregated data is also available since 2023\n",
+      "Project Donor Agencies": [
+        "rec8gXVsPUUB517NE",
+        "rec6XRPA9pKgC8j1J",
+        "recf10RuM7qHUnC33",
+        "recHuY5QDGX7wJsTF",
+        "rec0QlT9YlTVhHfEn",
+        "recRutqdhqEZSnOB2",
+        "recatUveyYdfEOdbu",
+        "rec0sY1I5JZz6ZsUE",
+        "rec1VhOJv9U6QKBBs"
+      ]
+    }
+  },
+  {
+    "id": "recszBikte0A6i6Dx",
+    "createdTime": "2025-04-01T20:11:28.000Z",
+    "fields": {
+      "Project/Product Name": "SIPRI Arms Transfers Database",
+      "product_key": "sipri-arms-transfers",
+      "Provider Orgs Full Name": [
+        "recDoZP6RL9A8FnDq"
+      ],
+      "CRAF’d-Funded Project?": "NO",
+      "Investment Type(s)": [
+        "Data Sets & Commons"
+      ],
+      "Investment Theme(s)": [
+        "Disarmament Data",
+        "Conflict & Violence Data",
+        "Peace Data"
+      ],
+      "Project Website": "https://www.sipri.org/databases",
+      "Project Description": "Provides publicly available datasets on the legal transfers of major conventional weapons between countries—widely used in security and disarmament monitoring.\n"
+    }
+  },
+  {
+    "id": "rectaDjtvGUN9jPNg",
+    "createdTime": "2025-03-21T17:22:27.000Z",
+    "fields": {
+      "Project/Product Name": "Global Report on Internal Displacement (GRID)",
+      "product_key": "grid",
+      "Provider Orgs Full Name": [
+        "reclJ2i9jD0TKjOJ8"
+      ],
+      "CRAF’d-Funded Project?": "NO",
+      "Investment Type(s)": [
+        "Crisis Analytics & Insights"
+      ],
+      "Investment Theme(s)": [
+        "Displacement & Migration Data"
+      ],
+      "Project Website": "https://www.internal-displacement.org/global-report/",
+      "Project Description": "IDMC’s Global Report on Internal Displacement (GRID) is the authoritative source for data and analysis on the state of internal displacement for the previous year. Each year, IDMC presents the validated estimates of internal displacements by conflict and disasters, and the total cumulative numbers of IDPs worldwide. The GRID also provides an overview of the year’s most significant internal displacement situations, highlighting potential measures to address the issue across the humanitarian, development, disaster risk reduction and climate change agendas.\n\n",
+      "Project Donor Agencies": [
+        "rec8gXVsPUUB517NE",
+        "rec6XRPA9pKgC8j1J",
+        "recf10RuM7qHUnC33",
+        "recHuY5QDGX7wJsTF",
+        "rec0QlT9YlTVhHfEn",
+        "recRutqdhqEZSnOB2",
+        "recatUveyYdfEOdbu",
+        "rec0sY1I5JZz6ZsUE",
+        "rec1VhOJv9U6QKBBs"
+      ]
+    }
+  },
+  {
+    "id": "rectg1V7Xcu5CcQq0",
+    "createdTime": "2025-04-14T22:14:15.000Z",
+    "fields": {
+      "Project/Product Name": "proGres",
+      "product_key": "unhcr-progres",
+      "Provider Orgs Full Name": [
+        "recfLMsJLUS9toAjS"
+      ],
+      "CRAF’d-Funded Project?": "NO",
+      "Investment Type(s)": [
+        "Data Sets & Commons",
+        "Infrastructure & Platforms"
+      ],
+      "Investment Theme(s)": [
+        "Displacement & Migration Data"
+      ],
+      "Project Website": "https://www.unhcr.org/registration-guidance/chapter3/registration-tools/",
+      "Project Description": "UNHCR’s case management and registration system manages refugee and asylum-seeker data. The platform supports operational planning, registration, and data interoperability across protection and assistance programs.\n"
+    }
+  },
+  {
+    "id": "recu82l0uk7d3IHeU",
+    "createdTime": "2025-06-27T22:24:14.000Z",
+    "fields": {
+      "Project/Product Name": "Clearinghouse for Financing Development Data",
+      "product_key": "clearinghouse-data-financing",
+      "Provider Orgs Full Name": [
+        "recvPPEVoXWarvaFS"
+      ],
+      "CRAF’d-Funded Project?": "NO",
+      "Investment Type(s)": [
+        "Learning & Exchange"
+      ],
+      "Investment Theme(s)": [
+        "Impact Evaluation"
+      ],
+      "Project Website": "https://paris21-data.github.io/CH_methodology_note/about-the-data.html",
+      "Project Description": "This is a global platform tracking investments in national statistical systems. It provides open-access monitoring of resource flows, donor commitments, and financing gaps for data for development.\n"
+    }
+  },
+  {
+    "id": "recuOsuVWoVNvCO5k",
+    "createdTime": "2025-06-26T13:51:38.000Z",
+    "fields": {
+      "Project/Product Name": "Public Health & Safety Insights (PHASI®)",
+      "product_key": "phasi",
+      "CRAF’d-Funded Project?": "NO",
+      "Investment Type(s)": [
+        "Data Sets & Commons"
+      ],
+      "Investment Theme(s)": [
+        "Health Data"
+      ],
+      "Project Website": "https://www.redcross.org/about-us/driven-by-data/public-health-and-safety-insights.html",
+      "Project Description": "PHASI® is a data integration and analysis platform developed by the American Red Cross that aggregates multi-sectoral indicators to identify public health and safety risks. It supports disaster planning, resource allocation, and early warning efforts.\n"
+    }
+  },
+  {
+    "id": "recueXHi1BfJrz30y",
+    "createdTime": "2025-08-20T17:55:34.000Z",
+    "fields": {
+      "Project/Product Name": "E4DRR: Hazard modeling, impact estimation, climate storylines for drought and flood disasters in Eastern Africa",
+      "product_key": "e4drr",
+      "Provider Orgs Full Name": [
+        "reci9Q8xAcus6YuKx"
+      ],
+      "CRAF’d-Funded Project?": "YES",
+      "Investment Type(s)": [
+        "Crisis Analytics & Insights"
+      ],
+      "Investment Theme(s)": [
+        "Climate Data",
+        "Climate Analytics"
+      ],
+      "Project Website": "https://www.icpac.net/our-projects/e4drr/"
+    }
+  },
+  {
+    "id": "recuqvvqKg7D86DIm",
+    "createdTime": "2025-04-14T22:53:46.000Z",
+    "fields": {
+      "Project/Product Name": "Refugee Assistance Information System (RAIS)",
+      "product_key": "unhcr-rais",
+      "Provider Orgs Full Name": [
+        "recfLMsJLUS9toAjS"
+      ],
+      "CRAF’d-Funded Project?": "NO",
+      "Investment Type(s)": [
+        "Infrastructure & Platforms"
+      ],
+      "Investment Theme(s)": [
+        "Displacement & Migration Data"
+      ],
+      "Project Website": "https://unhcr-mena.github.io/RAIS/",
+      "Project Description": "RAIS is a digital system for monitoring and coordinating assistance in refugee operations. It supports operations by registering aid delivery and tracking service provision across displacement contexts.\n"
+    }
+  },
+  {
+    "id": "recuv6YqfhZHQGvmd",
+    "createdTime": "2025-04-01T20:12:40.000Z",
+    "fields": {
+      "Project/Product Name": "SIPRI Mapping ATT-Relevant Cooperation and Assistance Activities Database",
+      "product_key": "sipri-att-map",
+      "Provider Orgs Full Name": [
+        "recDoZP6RL9A8FnDq"
+      ],
+      "CRAF’d-Funded Project?": "NO",
+      "Investment Type(s)": [
+        "Data Sets & Commons"
+      ],
+      "Investment Theme(s)": [
+        "Disarmament Data",
+        "Conflict & Violence Data",
+        "Peace Data"
+      ],
+      "Project Website": "https://www.sipri.org/databases",
+      "Project Description": "Tracks international arms transfer assistance and cooperation initiatives. It supports transparency and reporting under the Arms Trade Treaty through searchable data.\n"
+    }
+  },
+  {
+    "id": "recv2rUABIb3FhIRW",
+    "createdTime": "2025-03-24T18:26:25.000Z",
+    "fields": {
+      "Project/Product Name": "World Bank Microdata Library",
+      "product_key": "wb-microdata",
+      "Provider Orgs Full Name": [
+        "recl51I0rcqfCzesL"
+      ],
+      "CRAF’d-Funded Project?": "NO",
+      "Investment Type(s)": [
+        "Data Sets & Commons",
+        "Infrastructure & Platforms"
+      ],
+      "Investment Theme(s)": [
+        "Data Storage, Access & Sharing"
+      ],
+      "Project Website": "https://microdata.worldbank.org/index.php/home",
+      "Project Description": "The Microdata Library is a collection of datasets from the World Bank and other international, regional and national organizations.\nThe World Bank’s [Microdata Library](http://microdata.worldbank.org/) facilitates access to microdata collected through sample surveys of households, business establishments or other facilities. These microdataprovide information about people living in developing countries, their institutions, their environment, their communities and the operation of their economies. Many of these datasets are available as open data; check the [terms of use](http://microdata.worldbank.org/index.php/terms-of-use) associated with each dataset.\n"
+    }
+  },
+  {
+    "id": "recv5EjAR3NgCKSaI",
+    "createdTime": "2025-07-21T18:44:18.000Z",
+    "fields": {
+      "Project/Product Name": "UN Peace & Security Data Hub",
+      "product_key": "dpo-peace-data-hub",
+      "Provider Orgs Full Name": [
+        "recyZ1KYbbpFNTDu8"
+      ],
+      "CRAF’d-Funded Project?": "NO",
+      "Investment Type(s)": [
+        "Data Sets & Commons"
+      ],
+      "Investment Theme(s)": [
+        "Peace Data"
+      ],
+      "Project Website": "https://psdata.un.org/",
+      "Project Description": "A centralized data library offering curated conflict-related datasets, published by UN DPO to support analytic peace and security programming.\n"
+    }
+  },
+  {
+    "id": "recvaextZy2CbEkxr",
+    "createdTime": "2025-04-14T22:06:26.000Z",
+    "fields": {
+      "Project/Product Name": "Population Registration and Identity Management EcoSystem (PRIMES)",
+      "product_key": "unhcr-primes",
+      "Provider Orgs Full Name": [
+        "recfLMsJLUS9toAjS"
+      ],
+      "CRAF’d-Funded Project?": "NO",
+      "Investment Type(s)": [
+        "Data Sets & Commons",
+        "Infrastructure & Platforms"
+      ],
+      "Investment Theme(s)": [
+        "Displacement & Migration Data"
+      ],
+      "Project Website": "https://www.unhcr.org/us/what-we-do/protect-human-rights/protection/registration-and-identity-management",
+      "Project Description": "At the center of UNHCR’s work with registration and identity management, lies PRIMES, UNHCR’s digital Population Registration and Identity Management Ecosystem. PRIMES brings together all of UNHCR’s digital registration, identity management and case management tools into one internally connected and interoperable ecosystem.\nPRIMES is comprised of several repositories for personal data (biographic and biometric) and supporting information, along with multiple tools which safely make use of the data to deliver targeted protection, assistance, and solutions to refugees and other displaced populations. PRIMES is an enabler for:\n- Identity management (including registration and biometric enrolment) and documentation\n- Case management (including the principal Protection aspects: Refugee Status Determination, Resettlement, Statelessness, Repatriation, Legal and Physical Protection, Child Protection, SGBV and others)\n- Assistance ([cash](https://www.unhcr.org/us/what-we-do/emergency-response/cash-based-interventions) and in-kind)\n- Data management, including reporting and analysis for evidence-informed action for quality protection outcomes\nPRIMES has been designed with cooperation and interoperability in mind so that refugee supporting governments and partners can make use of the data and technology which UNHCR has developed to enhance their ability to deliver services often together with UNHCR, in a safe and secure manner. PRIMES is fully aligned with the [Policy on the Protection of Personal Data of Persons of Concern to UNHCR](http://www.refworld.org/cgi-bin/texis/vtx/rwmain?page=search&docid=55643c1d4).\n"
+    }
+  },
+  {
+    "id": "recw74V0QsPjTD0l3",
+    "createdTime": "2025-07-21T18:44:20.000Z",
+    "fields": {
+      "Project/Product Name": "Columbia University’s Center for International Earth Science Information Network (CIESIN)",
+      "product_key": "ciesin",
+      "CRAF’d-Funded Project?": "NO",
+      "Investment Type(s)": [
+        "Data Sets & Commons",
+        "Learning & Exchange"
+      ],
+      "Investment Theme(s)": [
+        "Climate Data",
+        "Environmental Data"
+      ],
+      "Project Website": "https://ciesin.climate.columbia.edu/",
+      "Project Description": "The Center for International Earth Science Information Network hosts global datasets—such as land use, population, urbanization, and environment—that support cross-sectoral research and policymaking.\n"
+    }
+  },
+  {
+    "id": "recwSp54iuK53ankI",
+    "createdTime": "2025-04-01T20:13:26.000Z",
+    "fields": {
+      "Project/Product Name": "National Budget Archive",
+      "product_key": "sipri-national-budget-archives",
+      "Provider Orgs Full Name": [
+        "recDoZP6RL9A8FnDq"
+      ],
+      "CRAF’d-Funded Project?": "NO",
+      "Investment Type(s)": [
+        "Data Sets & Commons"
+      ],
+      "Investment Theme(s)": [
+        "Data Storage, Access & Sharing"
+      ],
+      "Project Website": "https://www.sipri.org/databases",
+      "Project Description": "The SIPRI National Budget Archive offers government spending data across countries, enabling transparent comparison of military and civilian budget priorities to support disarmament and peacebuilding analysis.\n"
+    }
+  },
+  {
+    "id": "recwhJzb0ZRPL3F0A",
+    "createdTime": "2025-04-15T19:14:01.000Z",
+    "fields": {
+      "Project/Product Name": "River Basin Monitoring System",
+      "product_key": "river-basin-monitoring-system",
+      "Provider Orgs Full Name": [
+        "recfMWBZ4Di5d2bjs",
+        "rec9NauCCUPUWMwfl"
+      ],
+      "CRAF’d-Funded Project?": "NO",
+      "Investment Type(s)": [
+        "Crisis Analytics & Insights"
+      ],
+      "Investment Theme(s)": [
+        "Geospatial Data",
+        "Monitoring & Alerts",
+        "Climate Data",
+        "Environmental Data"
+      ],
+      "Project Website": "https://3is.org/wp-content/uploads/2025/03/3iS_2023_Snapshot_Iraq_UNDP_ENG-2.pdf",
+      "Project Description": "A geospatial data and dashboard platform tracking river basin metrics—e.g., water levels and watershed health—to support sustainable water governance and transboundary resource management.\n",
+      "Project Donor Agencies": [
+        "recYxlC8x9puB69tx"
+      ]
+    }
+  },
+  {
+    "id": "recwpLBPiqgZWOXyn",
+    "createdTime": "2025-06-29T19:14:32.000Z",
+    "fields": {
+      "Project/Product Name": "IMPACT Resource Centre",
+      "product_key": "impact-centre",
+      "Provider Orgs Full Name": [
+        "recNVePWbU6GAxsIP"
+      ],
+      "CRAF’d-Funded Project?": "NO",
+      "Investment Type(s)": [
+        "Data Sets & Commons",
+        "Infrastructure & Platforms",
+        "Crisis Analytics & Insights"
+      ],
+      "Investment Theme(s)": [
+        "Data Storage, Access & Sharing",
+        "Damage Assessments"
+      ],
+      "Project Website": "https://www.impact-initiatives.org/resource-centre/",
+      "Project Description": "The Resource Centre provides open-access tools, maps, and datasets to support humanitarian needs analysis and tools like MSNA and JMCNA, enabling evidence-based decision-making during crises.\n"
+    }
+  },
+  {
+    "id": "recwyWa10JHuVhWo9",
+    "createdTime": "2025-07-10T15:01:05.000Z",
+    "fields": {
+      "Project/Product Name": "United Kingdom Humanitarian Innovation Lab",
+      "product_key": "uk-hil",
+      "Provider Orgs Full Name": [
+        "rec1izGX18m256ood"
+      ],
+      "CRAF’d-Funded Project?": "NO",
+      "Investment Type(s)": [
+        "Learning & Exchange"
+      ],
+      "Investment Theme(s)": [
+        "Upskilling & Training",
+        "Communities of Practice"
+      ],
+      "Project Website": "https://www.ukhih.org/who-we-are/",
+      "Project Description": "A collaborative innovation lab promoting data-driven solutions in crisis settings. It supports tools prototyping and open datasets for humanitarian innovation.\n"
+    }
+  },
+  {
+    "id": "recxDTCWsUfAYPEv4",
+    "createdTime": "2025-03-24T19:56:45.000Z",
+    "fields": {
+      "Project/Product Name": "Assessment Capacities Project (ACAPS)",
+      "product_key": "acaps",
+      "Provider Orgs Full Name": [
+        "recmEJzCpBWYdH8wb",
+        "recn60nDa28jGlbTz",
+        "recAiy46Z3EEDPxuT"
+      ],
+      "CRAF’d-Funded Project?": "NO",
+      "Investment Type(s)": [
+        "Data Sets & Commons",
+        "Infrastructure & Platforms"
+      ],
+      "Investment Theme(s)": [
+        "Needs Assessment Data",
+        "Secondary Data Review / Analysis"
+      ],
+      "Project Website": "https://www.acaps.org/en/",
+      "Project Description": "ACAPS is a humanitarian data analytics initiative led by NRC, Save the Children, and Mercy Corps. It conducts needs overviews, early warning analysis, and sector assessments to support principled decision-making.\n",
+      "Project Donor Agencies": [
+        "recHSsEaPuaG3h2PQ",
+        "rec0sY1I5JZz6ZsUE",
+        "recylzOrnxt3grWHh"
+      ]
+    }
+  },
+  {
+    "id": "recxNVM0HeC0mSQyk",
+    "createdTime": "2025-03-25T20:09:06.000Z",
+    "fields": {
+      "Project/Product Name": "GEOGUARD",
+      "product_key": "geoguard",
+      "Provider Orgs Full Name": [
+        "recOidtZ5FFF8NN7j"
+      ],
+      "CRAF’d-Funded Project?": "YES",
+      "Investment Type(s)": [
+        "Crisis Analytics & Insights"
+      ],
+      "Investment Theme(s)": [
+        "Geospatial Data",
+        "Conflict & Violence Data",
+        "Climate Data"
+      ],
+      "Project Website": "https://crafd.io/data-financing/geoguard",
+      "Project Description": "Developed by the DPPA’s [Innovation Cell](https://futuringpeace.org/) in collaboration with academic partners, Geoguard is the first-ever geospatial dashboard for decision-makers with insight on environmental and conflict risks across the Middle East, Central, and West Africa. Using cutting-edge technology, Geoguard aggregates millions of data points on environmental conditions and geo-coded conflict events in an intuitive dashboard, using diverse data sources and locally collected or crowd-sourced information. It provides immediate insight on environmental risk-factors throughout specified regions and snapshots in time linked to trends in conflict and social unrest. \n",
+      "Project Donor Agencies": [
+        "rec1VhOJv9U6QKBBs"
+      ]
+    }
+  },
+  {
+    "id": "recxWS5Ys5dJ0dn1X",
+    "createdTime": "2025-04-15T15:11:59.000Z",
+    "fields": {
+      "Project/Product Name": "Humanitarian Data Science and Ethics Group (DSEG)",
+      "product_key": "iom-dseg",
+      "Provider Orgs Full Name": [
+        "recsrCWKAPu9dwkHb"
+      ],
+      "CRAF’d-Funded Project?": "NO",
+      "Investment Type(s)": [
+        "Human Capital & Know-how",
+        "Standards & Coordination",
+        "Learning & Exchange"
+      ],
+      "Investment Theme(s)": [
+        "Ethics",
+        "Communities of Practice"
+      ],
+      "Project Website": "https://www.hum-dseg.org/about",
+      "Project Description": "DSEG is a community of practice focused on advancing ethical, responsible, and inclusive data science in humanitarian contexts. It supports standards, tools, and guidance that center protection principles and data accountability.\n"
+    }
+  },
+  {
+    "id": "recxZmQWr8fIn8d1G",
+    "createdTime": "2025-03-24T18:01:38.000Z",
+    "fields": {
+      "Project/Product Name": "Multi-Sector Needs Assessments (MSNA)",
+      "product_key": "immap-msna",
+      "Provider Orgs Full Name": [
+        "recvzWSlYgzs0mffd"
+      ],
+      "CRAF’d-Funded Project?": "NO",
+      "Investment Type(s)": [
+        "Data Sets & Commons"
+      ],
+      "Investment Theme(s)": [
+        "Needs Assessment Data"
+      ],
+      "Project Website": "No website (See the notes column)",
+      "Project Description": "iMMAP delivers assessment tools, training, and data services to support MSNA-led humanitarian coordination across emergencies—streamlining data aggregation across sectors.\n"
+    }
+  },
+  {
+    "id": "recxuOxX8VxssdS6k",
+    "createdTime": "2025-03-24T02:01:27.000Z",
+    "fields": {
+      "Project/Product Name": "Socio-Economic Insights Survey (SEIS)",
+      "product_key": "unhcr-seis",
+      "Provider Orgs Full Name": [
+        "recfLMsJLUS9toAjS"
+      ],
+      "CRAF’d-Funded Project?": "NO",
+      "Investment Type(s)": [
+        "Data Sets & Commons"
+      ],
+      "Investment Theme(s)": [
+        "Poverty Data",
+        "Household Survey Data",
+        "Needs Assessment Data"
+      ],
+      "Project Website": "https://microdata.unhcr.org/index.php/catalog/1222",
+      "Project Description": "The 2024 Socio-Economic Insights Survey (SEIS) in Estonia provides a comprehensive assessment of the needs and vulnerabilities of refugees from Ukraine. Conducted as part of an annual interagency regional process led by UNHCR, this assessment supports the Regional Refugee Response Plan (RRP) for the Ukraine Situation. Covering topics such as protection, health, education, shelter, livelihoods, and food security, the survey offers critical data to inform evidence-based planning and prioritization, ensuring the specific needs of different refugee groups are addressed. Data collection was conducted through face-to-face interviews from May to July 2024 with a probability-based random sample of refugee households, managed collaboratively by UNHCR and the International Organization for Migration. Findings will guide strategic interventions and resource allocation to enhance the welfare and resilience of the refugee population in Estonia.\n"
+    }
+  },
+  {
+    "id": "recy1WUw4sZ55UmrS",
+    "createdTime": "2025-03-24T18:49:05.000Z",
+    "fields": {
+      "Project/Product Name": "Education in Emergencies Data",
+      "product_key": "education-in-emergencies",
+      "Provider Orgs Full Name": [
+        "recWOW3N9BgLJiHl5"
+      ],
+      "CRAF’d-Funded Project?": "NO",
+      "Investment Type(s)": [
+        "Data Sets & Commons"
+      ],
+      "Investment Theme(s)": [
+        "Education Data"
+      ],
+      "Project Website": "https://www.unesco.org/en/emergencies/education/need-know?hub=84615",
+      "Project Description": "UNESCO’s platform delivers open access data on emergency-affected education systems—including enrollment, disruptions, and inclusion metrics—supporting global response planning in crises and displacement settings.\n"
+    }
+  },
+  {
+    "id": "recyMSQo5lV032SER",
+    "createdTime": "2025-03-25T20:05:11.000Z",
+    "fields": {
+      "Project/Product Name": "CLIFDEW-GRID",
+      "product_key": "clifdew-grid",
+      "Provider Orgs Full Name": [
+        "recfLMsJLUS9toAjS",
+        "reckvvkhRKujyhOqD"
+      ],
+      "CRAF’d-Funded Project?": "YES",
+      "Investment Type(s)": [
+        "Crisis Analytics & Insights"
+      ],
+      "Investment Theme(s)": [
+        "Displacement & Migration Data",
+        "Forecasting / Early-Warning",
+        "Climate Data"
+      ],
+      "Project Website": "https://crafd.io/data-financing/clifdewgrid",
+      "Project Description": "CLIFDEW-GRID, developed by UNHCR in collaboration with the University of California Irvine, is an ambitious initiative dedicated to addressing the complex challenge of climate-induced forced displacement, including through the first risk index of its kind. This project leverages advanced data analytics and innovative approaches to empower CRAF’d ecosystem partners to anticipate and respond effectively to the growing crisis of climate-induced displacement. By forecasting subnational granularity, the project will better accommodate in-country heterogeneity than traditional country-level approaches. It will be piloted for countries in Western and Eastern Africa. \n\n<https://www.unhcr.org/us/clifdew-grid>\nCLIFDEW-GRID is an early warning grid-based modelling system designed to predict potential climate-induced forced displacement. It is a joint innovative data project led by UNHCR and the [University of California Irvine](https://catalogue.uci.edu/schoolofphysicalsciences/departmentofearthsystemscience/) and financed by the Complex Risk Analytics Fund ([CRAF'd](https://crafd.io/data-financing/clifdewgrid)).\n\n",
+      "Project Donor Agencies": [
+        "rec1VhOJv9U6QKBBs"
+      ]
+    }
+  },
+  {
+    "id": "recyn1h3FptgV2ZAv",
+    "createdTime": "2025-10-13T18:50:02.000Z",
+    "fields": {
+      "Project/Product Name": "INFORM Subnational Risk ",
+      "product_key": "inform-subnational",
+      "Provider Orgs Full Name": [
+        "recX11pAAzHjdqH0Y",
+        "rec9NauCCUPUWMwfl",
+        "recz5rdvfM2eaY0Sx"
+      ],
+      "CRAF’d-Funded Project?": "NO",
+      "Investment Type(s)": [
+        "Data Sets & Commons",
+        "Crisis Analytics & Insights"
+      ],
+      "Investment Theme(s)": [
+        "Forecasting / Early-Warning",
+        "Climate Data"
+      ],
+      "Project Website": "https://drmkc.jrc.ec.europa.eu/inform-index",
+      "Project Description": "The INFORM Risk Index is a multi-hazard risk assessment tool developed by the Inter-Agency Standing Committee (IASC) and the European Commission. It combines data on hazards, vulnerability, and coping capacity to produce a composite score of disaster risk in over 190 countries. The index supports evidence-based disaster preparedness, humanitarian planning, and crisis response by identifying countries most at risk of crises that could overwhelm national response capacities. It is updated annually and incorporates more than 50 indicators.\n"
+    }
+  },
+  {
+    "id": "recz2ZsyM0B05BdFP",
+    "createdTime": "2025-04-15T15:16:35.000Z",
+    "fields": {
+      "Project/Product Name": "Annual Survey of Refugees (ASR)",
+      "product_key": "asr-survey",
+      "Provider Orgs Full Name": [
+        "recfLMsJLUS9toAjS"
+      ],
+      "CRAF’d-Funded Project?": "NO",
+      "Investment Type(s)": [
+        "Data Sets & Commons"
+      ],
+      "Investment Theme(s)": [
+        "Displacement & Migration Data",
+        "Household Survey Data",
+        "Needs Assessment Data",
+        "Poverty Data"
+      ],
+      "Project Website": "https://acf.gov/orr/programs/refugees/annual-survey-refugees",
+      "Project Description": "ASR monitors the demographic and socioeconomic profiles of refugee populations worldwide. Its standardized surveys and data visualizations support evidence-based protection, education, and livelihood programming.\n"
+    }
+  },
+  {
+    "id": "reczIeSUeAdEWMKSk",
+    "createdTime": "2025-04-15T00:02:13.000Z",
+    "fields": {
+      "Project/Product Name": "Multi-Sectoral Needs Assessment (MSNA)",
+      "product_key": "msna",
+      "Provider Orgs Full Name": [
+        "recGCltHLsYiDo59B",
+        "recNVePWbU6GAxsIP"
+      ],
+      "CRAF’d-Funded Project?": "NO",
+      "Investment Type(s)": [
+        "Crisis Analytics & Insights",
+        "Standards & Coordination"
+      ],
+      "Investment Theme(s)": [
+        "Needs Assessment",
+        "Common Indicators"
+      ],
+      "Project Website": "https://dtm.iom.int/data-product-series/multi-sectoral-needs-assessment",
+      "Project Description": "MSNA is a standardized, country-level data collection initiative that captures multi-sectoral needs in crisis-affected populations. Data collected informs strategic planning, prioritization, and humanitarian response efforts.\n"
+    }
+  },
+  {
+    "id": "reczbufo0nFEwG49q",
+    "createdTime": "2025-07-21T18:27:42.000Z",
+    "fields": {
+      "Project/Product Name": "IOM Global Migration Data Analysis Centre (GMDAC)",
+      "product_key": "iom-gmdac",
+      "Provider Orgs Full Name": [
+        "recsrCWKAPu9dwkHb"
+      ],
+      "CRAF’d-Funded Project?": "NO",
+      "Investment Type(s)": [
+        "Data Sets & Commons",
+        "Crisis Analytics & Insights"
+      ],
+      "Investment Theme(s)": [
+        "Displacement & Migration Data",
+        "Displacement & Migration Analytics",
+        "Humanitarian Access Data"
+      ],
+      "Project Website": "https://gmdac.iom.int/",
+      "Project Description": "GMDAC provides migration data, trends, and analytical resources covering displacement, flows, and migration governance, using open data and APIs to support policy and humanitarian planning.\n",
+      "Project Donor Agencies": [
+        "rec6XRPA9pKgC8j1J",
+        "recQUVhcVyxZlXJ3H",
+        "rec8gXVsPUUB517NE",
+        "rec0QlT9YlTVhHfEn",
+        "recGtHxSOF0xgVlbl",
+        "recHSsEaPuaG3h2PQ",
+        "recYxlC8x9puB69tx",
+        "recOSSiNFT1E4S7gL",
+        "rec0sY1I5JZz6ZsUE",
+        "rectyuW4INCMaNoAM",
+        "recm5JztIHB9RUFLL",
+        "recwFMxuFEUJ4IK7S",
+        "recRgmk6Ew3NBvxGV",
+        "recHuY5QDGX7wJsTF",
+        "recf10RuM7qHUnC33",
+        "recbvrcYZZW7mBnCU"
+      ]
+    }
+  },
+  {
+    "id": "reczxU9NrSDw2mJcN",
+    "createdTime": "2025-03-21T17:45:16.000Z",
+    "fields": {
+      "Project/Product Name": "Population Data",
+      "product_key": "popdata",
+      "Provider Orgs Full Name": [
+        "rec2fgn4cmkvDsRB8"
+      ],
+      "CRAF’d-Funded Project?": "NO",
+      "Investment Type(s)": [
+        "Data Sets & Commons"
+      ],
+      "Investment Theme(s)": [
+        "Geospatial Data",
+        "Baseline Population Data"
+      ],
+      "Project Website": "https://www.worldpop.org/",
+      "Project Description": "WorldPop is an interdisciplinary applied research group focusing primarily on supporting improvement of the spatial demographic evidence base and the use of these data for health and development applications, including addressing the Sustainable Development Goals. Its mission is to enable decision makers to harness the power of spatial demographic data through high quality applied research, to achieve a vision of a world where everyone, everywhere is counted in decision making.\n",
+      "Project Donor Agencies": [
+        "recbtz43uuKKFVfvd",
+        "recbvrcYZZW7mBnCU",
+        "rec0sY1I5JZz6ZsUE",
+        "recAXDKxEbXsaHav4"
+      ]
+    }
+  },
+  {
+    "id": "reczyv8I05ihUAyML",
+    "createdTime": "2025-04-15T19:17:58.000Z",
+    "fields": {
+      "Project/Product Name": "LATAM Geospatial Data Center",
+      "product_key": "latam-geospatial-data-center",
+      "Provider Orgs Full Name": [
+        "recfMWBZ4Di5d2bjs"
+      ],
+      "CRAF’d-Funded Project?": "NO",
+      "Investment Type(s)": [
+        "Data Sets & Commons",
+        "Infrastructure & Platforms",
+        "Learning & Exchange"
+      ],
+      "Investment Theme(s)": [
+        "Geospatial Data"
+      ],
+      "Project Website": "https://csdc.latam.3is.org/#/",
+      "Project Description": "This regional data hub offers open geospatial datasets and dashboards to support urban planning, migration tracking, and climate risk analysis across Latin America.\n"
+    }
+  }
+]

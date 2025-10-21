@@ -1,0 +1,328 @@
+// data.ts - Data layer for Crisis Data Dashboard
+// Loads organizations-nested.json and applies filtering logic
+
+import type { NestedOrganization, OrganizationProjectData, OrganizationTypeData, OrganizationWithProjects, ProjectData, ProjectTypeData } from '@/types/airtable';
+import labels from '@/config/labels.json';
+
+// Re-export types for backward compatibility
+export type { OrganizationProjectData, OrganizationTypeData, OrganizationWithProjects, ProjectData, ProjectTypeData } from '@/types/airtable';
+
+// Load nested organizations data
+let cachedNestedData: NestedOrganization[] | null = null;
+
+async function loadNestedOrganizations(): Promise<NestedOrganization[]> {
+  if (cachedNestedData) {
+    return cachedNestedData;
+  }
+
+  try {
+    const response = await fetch('/data/organizations-nested.json');
+    if (!response.ok) {
+      throw new Error(`Failed to load nested data: ${response.status}`);
+    }
+    cachedNestedData = await response.json();
+    return cachedNestedData || [];
+  } catch (error) {
+    console.error('Error loading nested organizations:', error);
+    return [];
+  }
+}
+
+// Extract donor countries from agencies
+// Helper function to safely get donor countries from organization data
+function getDonorCountries(org: NestedOrganization): string[] {
+  return org.donor_countries || [];
+}
+
+// Extract investment types from projects
+function extractInvestmentTypesFromProjects(projects: Array<{ fields?: Record<string, unknown> }>): string[] {
+  const types = new Set<string>();
+  
+  for (const project of projects) {
+    const fields = project.fields || {};
+    const investmentTypes = fields['Investment Type(s)'] || fields['Investment Types'] || [];
+    
+    if (Array.isArray(investmentTypes)) {
+      investmentTypes.forEach(type => {
+        if (typeof type === 'string' && type.trim()) {
+          types.add(type.trim());
+        }
+      });
+    } else if (typeof investmentTypes === 'string' && investmentTypes.trim()) {
+      // Handle comma-separated string
+      investmentTypes.split(',').forEach(type => {
+        const cleaned = type.trim();
+        if (cleaned) {
+          types.add(cleaned);
+        }
+      });
+    }
+  }
+  
+  return Array.from(types).sort();
+}
+
+// Convert nested organization to OrganizationWithProjects format
+function convertToOrganizationWithProjects(org: NestedOrganization): OrganizationWithProjects {
+  const projects = org.projects || [];
+  
+  // Get pre-computed donor countries
+  const donorCountries = getDonorCountries(org);
+  
+  // Convert projects to ProjectData format
+  const projectsData: ProjectData[] = projects.map(project => {
+    const fields = project.fields || {};
+    // Extract donor countries only from the project's own agencies (if any)
+    // Do NOT fall back to organization-level donor countries
+    const projectAgencies = project.agencies || [];
+    const projectDonorCountriesSet = new Set<string>();
+    if (Array.isArray(projectAgencies) && projectAgencies.length > 0) {
+      projectAgencies.forEach(a => {
+        const aFields = (a && a.fields) || {};
+        const c = aFields['Country Name'] || aFields['Country'] || aFields['Agency Associated Country'];
+        if (Array.isArray(c)) {
+          c.forEach((cc: any) => { if (typeof cc === 'string' && cc.trim()) projectDonorCountriesSet.add(cc.trim()); });
+        } else if (typeof c === 'string' && c.trim()) {
+          projectDonorCountriesSet.add(c.trim());
+        }
+      });
+    }
+
+    // Only use project-level agencies; empty array if no agencies found
+    const projectDonorCountries = Array.from(projectDonorCountriesSet);
+
+    return {
+      id: project.id,
+      projectName: fields['Project/Product Name'] || 'Unnamed Project',
+      donorCountries: projectDonorCountries,
+      investmentTypes: extractInvestmentTypesFromProjects([project]),
+      investmentThemes: fields['Investment Theme(s)'] || [],
+      description: fields['Project Description'] || '',
+      projectDescription: fields['Project Description'] || '',
+      website: fields['Project Website'] || '',
+      projectWebsite: fields['Project Website'] || '',
+      isCrafdFunded: fields["CRAF'd-Funded Project?"] || false,
+      provider: org.name || 'Unknown Provider'
+    };
+  });
+  
+  // Extract organization type, handling both string and array formats
+  const orgTypeRaw = org.fields?.['Org Type'];
+  let orgType = 'Unknown';
+  if (typeof orgTypeRaw === 'string') {
+    orgType = orgTypeRaw;
+  } else if (Array.isArray(orgTypeRaw) && orgTypeRaw.length > 0) {
+    orgType = orgTypeRaw[0];
+  }
+
+  return {
+    id: org.id,
+    organizationName: org.name || 'Unnamed Organization',
+    type: orgType,
+    donorCountries,
+    projects: projectsData,
+    projectCount: projectsData.length
+  };
+}
+
+// Apply dashboard filters
+function applyFilters(
+  organizations: OrganizationWithProjects[],
+  filters: {
+    searchQuery?: string;
+    donorCountries?: string[];
+    investmentTypes?: string[];
+  }
+): OrganizationWithProjects[] {
+  return organizations.filter(org => {
+    // Search filter
+    if (filters.searchQuery && filters.searchQuery.trim()) {
+      const query = filters.searchQuery.toLowerCase().trim();
+      const matchesOrg = org.organizationName.toLowerCase().includes(query) ||
+                        org.type.toLowerCase().includes(query);
+      const matchesProjects = org.projects.some(project =>
+        project.projectName.toLowerCase().includes(query) ||
+        project.description.toLowerCase().includes(query)
+      );
+      
+      if (!matchesOrg && !matchesProjects) {
+        return false;
+      }
+    }
+    
+    // Donor countries filter
+    if (filters.donorCountries && filters.donorCountries.length > 0) {
+      const hasMatchingDonor = org.donorCountries.some(country =>
+        filters.donorCountries!.includes(country)
+      );
+      if (!hasMatchingDonor) {
+        return false;
+      }
+    }
+    
+    // Investment types filter
+    if (filters.investmentTypes && filters.investmentTypes.length > 0) {
+      const hasMatchingType = org.projects.some(project =>
+        project.investmentTypes.some(type =>
+          filters.investmentTypes!.some(filterType =>
+            type.toLowerCase().includes(filterType.toLowerCase()) ||
+            filterType.toLowerCase().includes(type.toLowerCase())
+          )
+        )
+      );
+      if (!hasMatchingType) {
+        return false;
+      }
+    }
+    
+    return true;
+  });
+}
+
+// Calculate dashboard statistics
+function calculateDashboardStats(organizations: OrganizationWithProjects[]): DashboardStats {
+  const donorCountries = new Set<string>();
+  const dataProviders = organizations.length;
+  const uniqueProjects = new Set<string>();
+  
+  organizations.forEach(org => {
+    org.donorCountries.forEach(country => donorCountries.add(country));
+    // Deduplicate projects by ID to avoid counting the same project multiple times
+    org.projects.forEach(project => {
+      uniqueProjects.add(project.projectName);
+    });
+  });
+  
+  return {
+    donorCountries: donorCountries.size,
+    dataProviders,
+    dataProjects: uniqueProjects.size
+  };
+}
+
+// Calculate project types for chart
+function calculateProjectTypes(organizations: OrganizationWithProjects[], allKnownInvestmentTypes: string[]): ProjectTypeData[] {
+  const typeCounts = new Map<string, number>();
+  
+  // Initialize with all known investment types
+  allKnownInvestmentTypes.forEach(type => {
+    typeCounts.set(type, 0);
+  });
+  
+  organizations.forEach(org => {
+    org.projects.forEach(project => {
+      project.investmentTypes.forEach(type => {
+        typeCounts.set(type, (typeCounts.get(type) || 0) + 1);
+      });
+    });
+  });
+  
+  return Array.from(typeCounts.entries())
+    .map(([name, count]) => ({ name, count }))
+    .sort((a, b) => b.count - a.count);
+}
+
+// Calculate organization types for chart
+export function calculateOrganizationTypesFromOrganizationsWithProjects(
+  organizations: OrganizationWithProjects[],
+  allKnownTypes: string[]
+): OrganizationTypeData[] {
+  const typeCounts = new Map<string, number>();
+  
+  // Initialize with all known types
+  allKnownTypes.forEach(type => {
+    typeCounts.set(type, 0);
+  });
+  
+  // Count actual organizations
+  organizations.forEach(org => {
+    if (org.type && org.type !== 'Unknown') {
+      typeCounts.set(org.type, (typeCounts.get(org.type) || 0) + 1);
+    }
+  });
+  
+  return Array.from(typeCounts.entries())
+    .map(([name, count]) => ({ name, count }))
+    .sort((a, b) => b.count - a.count);
+}
+
+// Calculate organization-project data
+function calculateOrganizationProjects(organizations: OrganizationWithProjects[]): OrganizationProjectData[] {
+  return organizations.map(org => ({
+    organizationName: org.organizationName,
+    projectCount: org.projects.length,
+    type: org.type
+  }));
+}
+
+// Get available filter options
+function getAvailableFilterOptions(organizations: OrganizationWithProjects[]) {
+  const donorCountries = new Set<string>();
+  const investmentTypes = new Set<string>();
+  
+  organizations.forEach(org => {
+    org.donorCountries.forEach(country => donorCountries.add(country));
+    org.projects.forEach(project => {
+      project.investmentTypes.forEach(type => investmentTypes.add(type));
+    });
+  });
+  
+  return {
+    donorCountries: Array.from(donorCountries).sort(),
+    investmentTypes: Array.from(investmentTypes).sort()
+  };
+}
+
+// Main function to process dashboard data with filters
+export async function processDashboardData(filters: {
+  searchQuery?: string;
+  donorCountries?: string[];
+  investmentTypes?: string[];
+} = {}) {
+  try {
+    // Load nested organizations
+    const nestedOrgs = await loadNestedOrganizations();
+    
+    // Convert to OrganizationWithProjects format
+    const allOrganizations = nestedOrgs.map(convertToOrganizationWithProjects);
+    
+    // Apply filters
+    const filteredOrganizations = applyFilters(allOrganizations, filters);
+    
+    // Calculate statistics and chart data
+    const stats = calculateDashboardStats(filteredOrganizations);
+    
+    // Get all known investment types from labels
+    const allKnownInvestmentTypes = Object.values(labels.investmentTypes);
+    const projectTypes = calculateProjectTypes(filteredOrganizations, allKnownInvestmentTypes);
+    const organizationProjects = calculateOrganizationProjects(filteredOrganizations);
+    
+    // Get available filter options from all organizations (not filtered)
+    const filterOptions = getAvailableFilterOptions(allOrganizations);
+    
+    return {
+      stats,
+      projectTypes,
+      organizationTypes: [], // Will be calculated separately with all known types
+      organizationProjects,
+      organizationsWithProjects: filteredOrganizations,
+      donorCountries: filterOptions.donorCountries,
+      investmentTypes: filterOptions.investmentTypes
+    };
+  } catch (error) {
+    console.error('Error processing dashboard data:', error);
+    throw error;
+  }
+}
+
+// Legacy function for backward compatibility
+export async function loadEcosystemData() {
+  return processDashboardData();
+}
+
+// Export interface for dashboard stats
+export interface DashboardStats {
+  donorCountries: number;
+  dataProviders: number;  
+  dataProjects: number;
+}
