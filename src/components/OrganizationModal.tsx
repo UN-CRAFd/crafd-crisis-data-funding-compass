@@ -15,6 +15,7 @@ interface OrganizationModalProps {
     // Centralized data maps from data.ts for consistent data access
     projectNameMap?: Record<string, string>;
     orgProjectsMap?: Record<string, Array<{ investmentTypes: string[] }>>;
+    orgDonorCountriesMap?: Record<string, string[]>;
     // onClose removed for serializability; modal will dispatch a CustomEvent 'closeOrganizationModal'
     loading: boolean;
 }
@@ -26,6 +27,7 @@ export default function OrganizationModal({
     organization,
     projectNameMap = {},
     orgProjectsMap = {},
+    orgDonorCountriesMap = {},
     loading
 }: OrganizationModalProps): React.ReactElement {
     const [isVisible, setIsVisible] = useState(false);
@@ -338,50 +340,24 @@ export default function OrganizationModal({
                     return <ModalOrganizationFocus projects={orgProjects} SubHeader={SubHeader} />;
                 })()}
 
-                {/* Projects funded (as chips) */}
+                {/* Provided Assets - Simple field access matching FIELDS_ORGANIZATIONS */}
                 {(() => {
-                    const projectFieldCandidates = [
-                        // Prefer a pre-resolved names field injected by the dashboard
-                        'Provided Data Ecosystem Projects (Names)',
-                        'Provided Data Ecosystem Projects',
-                        'Provided Data Ecosystem Projects (Linked)',
-                        'Linked Project(s)',
-                        'From field: Linked Project(s)'
-                    ];
-                    const raw = projectFieldCandidates.map(k => fields[k]).find(Boolean) as unknown | undefined;
-                    let projectsList: string[] = [];
-                    // safe split that doesn't split commas inside quotes or parentheses
-                    const splitSafe = (s: string) => {
-                        const out: string[] = [];
-                        let cur = '';
-                        let depth = 0;
-                        let inQuotes = false;
-                        let quoteChar = '';
-                        for (let i = 0; i < s.length; i++) {
-                            const ch = s[i];
-                            if ((ch === '"' || ch === "'") && !inQuotes) { inQuotes = true; quoteChar = ch; cur += ch; continue; }
-                            if (ch === quoteChar && inQuotes) { inQuotes = false; quoteChar = ''; cur += ch; continue; }
-                            if (ch === '(' && !inQuotes) { depth++; cur += ch; continue; }
-                            if (ch === ')' && !inQuotes) { depth--; cur += ch; continue; }
-                            if (ch === ',' && !inQuotes && depth === 0) { if (cur.trim()) out.push(cur.trim()); cur = ''; continue; }
-                            cur += ch;
-                        }
-                        if (cur.trim()) out.push(cur.trim());
-                        return out.map(x => x.replace(/^"|"$/g, '').replace(/^'|'$/g, '').trim()).filter(Boolean);
-                    };
+                    // Use the clean field name from FIELDS_ORGANIZATIONS: "Provided Data Ecosystem Projects"
+                    const providedProjects = fields['Provided Data Ecosystem Projects'];
 
-                    if (Array.isArray(raw)) {
-                        // If it's already an array of project names or IDs, map IDs to names when possible
-                        projectsList = (raw as unknown[])
-                            .map(r => String(r).trim())
-                            .map(s => (projectNameMap[s] ? projectNameMap[s] : s))
+                    if (!providedProjects || (Array.isArray(providedProjects) && providedProjects.length === 0)) {
+                        return null;
+                    }
+
+                    // Convert to array if needed
+                    let projectsList: string[] = [];
+                    if (Array.isArray(providedProjects)) {
+                        // Array of project IDs - resolve to names using projectNameMap
+                        projectsList = providedProjects
+                            .map(id => String(id).trim())
+                            .map(id => projectNameMap[id] || id)
                             .filter(Boolean)
-                            .sort((a, b) => a.localeCompare(b)); // Sort alphabetically
-                    } else if (typeof raw === 'string') {
-                        // Split string into items; items might be IDs or names
-                        projectsList = splitSafe(raw as string)
-                            .map(s => (projectNameMap[s] ? projectNameMap[s] : s))
-                            .sort((a, b) => a.localeCompare(b)); // Sort alphabetically
+                            .sort((a, b) => a.localeCompare(b));
                     }
 
                     if (projectsList.length === 0) return null;
@@ -390,10 +366,10 @@ export default function OrganizationModal({
                         <div className="mt-4">
                             <SubHeader>Provided Assets</SubHeader>
                             <div className="flex flex-col gap-2">
-                                {projectsList.map((p, i) => (
+                                {projectsList.map((projectName, i) => (
                                     <span key={i} className="inline-flex items-center gap-2 px-3 py-1.5 rounded-md text-sm font-medium bg-slate-100 text-slate-600">
                                         <Folder className="w-4 h-4 text-slate-500" />
-                                        <span className="truncate max-w-xs">{p}</span>
+                                        <span className="truncate max-w-xs">{projectName}</span>
                                     </span>
                                 ))}
                             </div>
@@ -401,29 +377,18 @@ export default function OrganizationModal({
                     );
                 })()}
 
-                {/* Organization Donors - Show all unique country badges */}
+                {/* Organization Donors - Clean field access from centralized data */}
                 {(() => {
-                    // Get donor countries from the field - try multiple possible field names
-                    const donorCountries = fields['Org Donor Countries (based on Agency)']
-                        || fields['donor_countries']
-                        || fields['Org Donor Countries']
-                        || fields['Donor Countries'];
+                    // Get donor countries from the centralized map (computed from nested data)
+                    const donorCountries = orgDonorCountriesMap[organization.id] || [];
 
-                    // Convert to array and ensure uniqueness
-                    let donors: string[] = [];
-                    if (Array.isArray(donorCountries)) {
-                        // Use Set to ensure uniqueness, then sort alphabetically
-                        const uniqueDonors = new Set(donorCountries.map(d => String(d).trim()).filter(Boolean));
-                        donors = Array.from(uniqueDonors).sort();
-                    }
-
-                    if (donors.length === 0) return null;
+                    if (donorCountries.length === 0) return null;
 
                     return (
                         <div className="mt-4">
                             <SubHeader>Organization Donors</SubHeader>
                             <div className="flex flex-wrap gap-2">
-                                {donors.map((country) => (
+                                {donorCountries.map((country) => (
                                     <span
                                         key={country}
                                         className="inline-flex items-center px-3 py-1.5 rounded-md text-sm font-medium bg-slate-100 text-slate-600"
