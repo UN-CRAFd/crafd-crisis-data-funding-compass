@@ -1,6 +1,6 @@
 'use client';
 
-import { Building2, ExternalLink, X } from 'lucide-react';
+import { Building2, ExternalLink, X, Folder} from 'lucide-react';
 import { useCallback, useEffect, useRef, useState } from 'react';
 
 interface OrganizationModalProps {
@@ -281,7 +281,7 @@ export default function OrganizationModal({ organization, loading }: Organizatio
         }
 
         return (
-            <div className="px-6 sm:px-8 pt-4 sm:pt-5 pb-6 sm:pb-8 space-y-6 font-['Roboto']">
+            <div className="px-6 sm:px-8 pt-4 sm:pt-5 pb-6 sm:pb-8 space-y-6 font-['Roboto'] flex flex-col h-full">
                 {/* Description (if present) */}
                 {typeof fields['Org Description'] === 'string' && String(fields['Org Description']).length > 0 && (
                     <p className="text-gray-700 leading-normal text-base">{renderValue(String(fields['Org Description']))}</p>
@@ -448,11 +448,11 @@ export default function OrganizationModal({ organization, loading }: Organizatio
 
                     return (
                         <div className="mt-6">
-                            <SubHeader>Projects</SubHeader>
+                            <SubHeader>Assets</SubHeader>
                             <div className="flex flex-wrap gap-2">
                                 {projectsList.map((p, i) => (
                                     <div key={i} className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-gray-100 text-gray-800 text-sm">
-                                        <Database className="w-4 h-4 text-gray-500" />
+                                        <Folder className="w-4 h-4 text-gray-500" />
                                         <span className="truncate max-w-xs">{p}</span>
                                     </div>
                                 ))}
@@ -461,12 +461,15 @@ export default function OrganizationModal({ organization, loading }: Organizatio
                     );
                 })()}
 
-                <div className="border-t border-gray-100 pt-4">
+                {/* Flexible spacer to push notes to bottom */}
+                <div className="flex-grow"></div>
+
+                <div className="border-t border-gray-100 pt-4 mt-auto">
                     <div className="text-xs text-gray-400 uppercase tracking-wider font-medium mb-2">NOTES</div>
                     <div className="text-xs text-gray-500 leading-snug space-y-1">
                         <div className="flex items-start">
                             <span className="text-gray-400 mr-2 flex-shrink-0">•</span>
-                            <span>Data collected by the Complex Risk Analytics Fund (CRAF'd)</span>
+                            <span>All insights are based on publicly accessible information and data.</span>
                         </div>
                     </div>
                 </div>
@@ -485,19 +488,20 @@ export default function OrganizationModal({ organization, loading }: Organizatio
         >
             <div
                 ref={modalRef}
-                className={`w-full sm:w-2/3 md:w-1/2 lg:w-1/3 sm:min-w-[400px] lg:min-w-[500px] h-full bg-white shadow-2xl transition-transform duration-300 ease-out ${organization ? 'overflow-y-auto' : ''
-                    } ${isVisible && !isClosing ? 'translate-x-0' : 'translate-x-full'}`}
+                className={`w-full sm:w-2/3 md:w-1/2 lg:w-1/3 sm:min-w-[400px] lg:min-w-[500px] h-full bg-white shadow-2xl transition-transform duration-300 ease-out flex flex-col ${isVisible && !isClosing ? 'translate-x-0' : 'translate-x-full'}`}
                 onTouchStart={onTouchStart}
                 onTouchMove={onTouchMove}
                 onTouchEnd={onTouchEnd}
             >
                 {/* Header */}
-                <div className={`px-6 sm:px-8 pt-4 sm:pt-6 pb-2 sm:pb-3 border-b border-gray-300 ${organization ? 'sticky top-0 bg-white' : ''}`}>
+                <div className={`px-6 sm:px-8 pt-4 sm:pt-6 pb-2 sm:pb-3 border-b border-gray-300 shrink-0 ${organization ? 'bg-white' : ''}`}>
                     {renderHeader()}
                 </div>
 
-                {/* Body Content */}
-                {renderBody()}
+                {/* Body Content - scrollable if content exceeds viewport */}
+                <div className="overflow-y-auto flex-1">
+                    {renderBody()}
+                </div>
             </div>
         </div>
     );
