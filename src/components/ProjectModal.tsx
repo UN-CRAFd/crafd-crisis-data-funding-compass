@@ -281,12 +281,12 @@ export default function ProjectModal({ project, allOrganizations, loading }: Pro
                     </div>
                 )}
 
-                {/* Product Donors */}
+                {/* Asset Donors */}
                 {project.donorCountries && project.donorCountries.length > 0 && (
                     <div className="mb-6">
                         <div className="mb-3 flex items-center gap-2">
                             <h3 className="text-xl font-qanelas font-black text-[#333333] uppercase tracking-wide leading-normal">
-                                Product Donors
+                                Asset Donors
                             </h3>
                             <span className="text-lg font-normal text-gray-500 tabular-nums">({project.donorCountries.length})</span>
                         </div>
@@ -302,6 +302,23 @@ export default function ProjectModal({ project, allOrganizations, loading }: Pro
                         </div>
                     </div>
                 )}
+
+                {/* Flexible spacer to push notes to bottom */}
+                <div className="grow min-h-8"></div>
+
+                <div className="border-t border-gray-200 pt-4 pb-4 mt-auto">
+                    <div className="text-xs text-gray-400 uppercase tracking-wider font-medium mb-2">NOTES</div>
+                    <div className="text-xs text-gray-500 leading-snug space-y-1">
+                        <div className="flex items-start">
+                            <span className="text-gray-400 mr-2 shrink-0">•</span>
+                            <span>All insights are based on publicly accessible information and data.</span>
+                        </div>
+                        <div className="flex items-start">
+                            <span className="text-gray-400 mr-2 shrink-0">•</span>
+                            <span>Project donor countries may differ from organization-level donor countries.</span>
+                        </div>
+                    </div>
+                </div>
             </div>
         );
     };
