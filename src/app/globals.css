@@ -104,16 +104,11 @@
    * - --brand-border: Border color for highlighted elements
    */
 --brand-primary: #e6af26;        /* main amber (vibrant golden tone) */
---brand-primary-dark: #a78003;   /* darker amber for hover/active */
---brand-primary-light: #fcd34d;  /* light amber for buttons/highlights */
---brand-bg-light: #ffe8be;       /* soft warm background */
---brand-bg-lighter: #fcf4e4;     /* even lighter background */
+--brand-primary-dark: #BC840F;   /* darker amber for hover/active */
+--brand-primary-light: #F3C35C;  /* light amber for buttons/highlights */
+--brand-bg-light: #FCF0D6;       /* soft warm background */
+--brand-bg-lighter: #FDF7EA;     /* even lighter background */
 --brand-border: #d9b206;        /* deep amber-brown for borders/text accents */
-
---badge-beta-bg: #f9f5ec;      /* desaturated amber tint — soft, creamy background */
---badge-beta-border: #eadcb8;  /* pale warm amber-beige border */
---badge-beta-text: #7a6a46;    /* muted golden-brown text, readable and gentle */
---badge-beta-icon: #9b864c;    /* slightly deeper amber-gray for icons */
 
 --badge-other-bg: #d7d8f5;      /* indigo-100: pale background */
 --badge-other-border: #7b7df7;  /* indigo-500: vivid but not overwhelming */
@@ -157,7 +152,8 @@
 
 .qanelas-subtitle {
   font-family: Qanelas, ui-sans-serif, system-ui, sans-serif !important;
-  font-weight: 700; /* Heavy for subtitle - lightest available */
+  font-weight: 400; /* Normal weight - will fallback to system font for lighter appearance */
+  opacity: 0.85; /* Add slight transparency for even lighter feel */
 }
 
 /* Prevent layout shifts by always showing scrollbar */
