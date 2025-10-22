@@ -353,7 +353,6 @@ const CrisisDataDashboard = ({
 
     // Generate dynamic filter description for Organizations & Projects section
     const getFilterDescription = () => {
-        const parts: string[] = [];
         const hasFilters = combinedDonors.length > 0 || investmentTypes.length > 0 || searchQuery;
 
         if (!hasFilters) {
@@ -362,7 +361,9 @@ const CrisisDataDashboard = ({
                 .replace('{organizations}', stats.dataProviders.toString());
         }
 
-        // Start with donor countries - list all selected donors with proper sentence punctuation
+        const parts: string[] = [];
+
+        // Start with donor countries
         if (combinedDonors.length > 0) {
             let donorString: string;
             if (combinedDonors.length === 1) {
@@ -373,23 +374,38 @@ const CrisisDataDashboard = ({
                 donorString = `${combinedDonors.slice(0, -1).join(', ')} & ${combinedDonors[combinedDonors.length - 1]}`;
             }
 
-            parts.push(donorString);
-            // Use singular/plural verb form: single donor -> 'funds' (from labels), multiple donors -> 'Fund' (capitalized per request)
-            const verb = combinedDonors.length === 1 ? labels.filterDescription.funds : 'co-finance';
-            parts.push(verb);
+            // Get all donors from the currently filtered organizations
+            const currentDonors = new Set<string>();
+            organizationsWithProjects.forEach(org => {
+                org.donorCountries.forEach(country => currentDonors.add(country));
+            });
+            
+            // Calculate other donors (current donors minus the selected ones)
+            const otherDonorsCount = currentDonors.size - combinedDonors.length;
+            
+            if (otherDonorsCount > 0) {
+                const otherDonorLabel = otherDonorsCount !== 1 ? 'donors' : 'donor';
+                const verb = combinedDonors.length === 1 ? 'co-finances' : 'co-finance';
+                parts.push(`${donorString}, together with ${otherDonorsCount} other ${otherDonorLabel}, ${verb}`);
+            } else {
+                const verb = combinedDonors.length === 1 ? 'funds' : 'co-finance';
+                parts.push(`${donorString} ${verb}`);
+            }
         } else {
-            parts.push(labels.filterDescription.showing);
+            parts.push('Showing');
         }
 
+        // Add organization count
+        const organizationLabel = stats.dataProviders !== 1 ? 'organizations' : 'organization';
+        parts.push(`${stats.dataProviders} ${organizationLabel}, providing`);
+
         // Add project count
-        const projectLabel = stats.dataProjects !== 1
-            ? labels.filterDescription.projects
-            : labels.filterDescription.project;
+        const projectLabel = stats.dataProjects !== 1 ? 'assets' : 'asset';
         parts.push(`${stats.dataProjects} ${projectLabel}`);
 
-        // Add investment types with full display names (list all selected types)
+        // Add investment types
         if (investmentTypes.length > 0) {
-            parts.push(labels.filterDescription.in);
+            parts.push('in');
             // Map selected type keys to display names where possible
             const displayTypes = investmentTypes.map(type => {
                 const typeKey = Object.keys(labels.investmentTypes).find(key =>
@@ -399,13 +415,12 @@ const CrisisDataDashboard = ({
                 return typeKey ? labels.investmentTypes[typeKey as keyof typeof labels.investmentTypes] : type;
             });
 
-            parts.push(displayTypes.join(', '));
+            parts.push(displayTypes.join(' & '));
         }
 
         // Add search query
         if (searchQuery) {
-            parts.push(labels.filterDescription.relatingTo);
-            parts.push(`"${searchQuery}"`);
+            parts.push(`relating to "${searchQuery}"`);
         }
 
         return parts.join(' ');
