@@ -42,6 +42,14 @@
     }
   },
   {
+    "id": "rec1In4CerWhTywiy",
+    "createdTime": "2025-10-22T21:16:36.000Z",
+    "fields": {
+      "Agency/Department Name": "Stiftung Mercator",
+      "Country Name": "NGO"
+    }
+  },
+  {
     "id": "rec1VhOJv9U6QKBBs",
     "createdTime": "2025-05-02T21:43:22.000Z",
     "fields": {
@@ -87,9 +95,9 @@
     "id": "rec3Ado0Jrl799Q8A",
     "createdTime": "2025-06-26T02:46:04.000Z",
     "fields": {
-      "Agency/Department Name": "The World Bank",
+      "Agency/Department Name": "Unspecified Agency",
       "Agency Data Portal": "https://www.worldbank.org/ext/en/home",
-      "Country Name": "International Financial Institutions (IFIs)"
+      "Country Name": "The World Bank"
     }
   },
   {
@@ -142,6 +150,14 @@
     }
   },
   {
+    "id": "rec5NKr3OLYmPMuOf",
+    "createdTime": "2025-10-22T21:16:21.000Z",
+    "fields": {
+      "Agency/Department Name": "Global Challenges Foundation",
+      "Country Name": "NGO"
+    }
+  },
+  {
     "id": "rec5OM4ToDzt2ycHr",
     "createdTime": "2025-06-28T02:06:19.000Z",
     "fields": {
@@ -156,6 +172,14 @@
     "fields": {
       "Agency/Department Name": "Korea International Cooperation Agency (KOICA)",
       "Country Name": "South Korea"
+    }
+  },
+  {
+    "id": "rec665usRSgrGizMC",
+    "createdTime": "2025-10-22T21:14:28.000Z",
+    "fields": {
+      "Agency/Department Name": "Skoll",
+      "Country Name": "NGO"
     }
   },
   {
@@ -178,8 +202,8 @@
     "id": "rec7AphhRvNQfntpA",
     "createdTime": "2025-07-14T13:42:23.000Z",
     "fields": {
-      "Agency/Department Name": "United Nations Population Fund (UNFPA)",
-      "Country Name": "United Nations (UN)"
+      "Agency/Department Name": "Unspecified Agency",
+      "Country Name": "United Nations Population Fund (UNFPA)"
     }
   },
   {
@@ -272,9 +296,9 @@
     "id": "recBEtacusKEwpWho",
     "createdTime": "2025-06-26T16:27:20.000Z",
     "fields": {
-      "Agency/Department Name": "Office of the United Nations High Commissioner for Refugees (UNHCR)",
+      "Agency/Department Name": "Unspecified Agency",
       "Agency Data Portal": "https://www.unhcr.org/",
-      "Country Name": "United Nations (UN)"
+      "Country Name": "Office of the United Nations High Commissioner for Refugees (UNHCR)"
     }
   },
   {
@@ -354,9 +378,9 @@
     "id": "recFDm6MHWUu6GSMI",
     "createdTime": "2025-07-03T19:39:42.000Z",
     "fields": {
-      "Agency/Department Name": "United Nations Children's Fund (UNICEF)",
+      "Agency/Department Name": "Unspecified Agency",
       "Agency Data Portal": "https://www.unicef.org/",
-      "Country Name": "United Nations (UN)"
+      "Country Name": "United Nations Children's Fund (UNICEF)"
     }
   },
   {
@@ -398,6 +422,14 @@
     "fields": {
       "Agency/Department Name": "Swiss Innovation Agency (Innosuisse)",
       "Country Name": "Switzerland"
+    }
+  },
+  {
+    "id": "recGlx8p4y1yzES7T",
+    "createdTime": "2025-10-22T21:14:05.000Z",
+    "fields": {
+      "Agency/Department Name": "Rippleworks",
+      "Country Name": "NGO"
     }
   },
   {
@@ -463,8 +495,8 @@
     "id": "recIUg3K9vtroebVE",
     "createdTime": "2025-06-27T22:28:16.000Z",
     "fields": {
-      "Agency/Department Name": "Food and Agriculture Organization (FAO)",
-      "Country Name": "United Nations (UN)"
+      "Agency/Department Name": "Unspecified Agency",
+      "Country Name": "Food and Agriculture Organization (FAO)"
     }
   },
   {
@@ -563,9 +595,9 @@
     "id": "recNLQhceOCXSMemo",
     "createdTime": "2025-06-26T15:49:13.000Z",
     "fields": {
-      "Agency/Department Name": "World Food Programme (WFP)",
+      "Agency/Department Name": "Unspecified Agency",
       "Agency Data Portal": "https://www.wfp.org/",
-      "Country Name": "United Nations (UN)"
+      "Country Name": "World Food Programme (WFP)"
     }
   },
   {
@@ -701,8 +733,8 @@
     "id": "recULIEfSZxBrWWZb",
     "createdTime": "2025-07-10T15:17:22.000Z",
     "fields": {
-      "Agency/Department Name": "United Nations Foundation (UN Foundation)",
-      "Country Name": "United Nations (UN)"
+      "Agency/Department Name": "Unspecified Agency",
+      "Country Name": "United Nations Foundation (UN Foundation)"
     }
   },
   {
@@ -751,6 +783,14 @@
     "fields": {
       "Agency/Department Name": "Unspecified Agency ",
       "Country Name": "Chile"
+    }
+  },
+  {
+    "id": "recWYxrSapIaQ5C4r",
+    "createdTime": "2025-10-22T21:13:45.000Z",
+    "fields": {
+      "Agency/Department Name": "Mackenzie Scott",
+      "Country Name": "NGO"
     }
   },
   {
@@ -846,14 +886,6 @@
     }
   },
   {
-    "id": "reca2A6QFk9XYNLjV",
-    "createdTime": "2025-08-04T20:04:46.000Z",
-    "fields": {
-      "Agency/Department Name": "Unspecified Agency",
-      "Country Name": "United Nations (UN)"
-    }
-  },
-  {
     "id": "reca4p0ohNjva2ein",
     "createdTime": "2025-07-03T13:59:42.000Z",
     "fields": {
@@ -918,6 +950,14 @@
     "fields": {
       "Agency/Department Name": "Spanish Agency for International Development Cooperation (AECID)",
       "Country Name": "Spain"
+    }
+  },
+  {
+    "id": "recdWBZgIeBfATRcv",
+    "createdTime": "2025-10-22T21:14:46.000Z",
+    "fields": {
+      "Agency/Department Name": "Unite",
+      "Country Name": "NGO"
     }
   },
   {
@@ -1148,9 +1188,9 @@
     "id": "recpnGIsQx8Bb4aji",
     "createdTime": "2025-06-26T18:44:11.000Z",
     "fields": {
-      "Agency/Department Name": "International Organization for Migration (IOM)",
+      "Agency/Department Name": "Unspecified Agency",
       "Agency Data Portal": "https://www.iom.int/",
-      "Country Name": "United Nations (UN)"
+      "Country Name": "International Organization for Migration (IOM)"
     }
   },
   {
@@ -1217,8 +1257,16 @@
     "id": "recr77XDSfR0O9Jen",
     "createdTime": "2025-07-04T20:44:09.000Z",
     "fields": {
-      "Agency/Department Name": "World Health Organization (WHO)",
-      "Country Name": "United Nations (UN)"
+      "Agency/Department Name": "Unspecified Agency",
+      "Country Name": "World Health Organization (WHO)"
+    }
+  },
+  {
+    "id": "recrPlN870ayqI9dO",
+    "createdTime": "2025-10-22T21:11:55.000Z",
+    "fields": {
+      "Agency/Department Name": "The Elma Relief Foundation",
+      "Country Name": "NGO"
     }
   },
   {
@@ -1233,9 +1281,9 @@
     "id": "recsrMWmoA037bW03",
     "createdTime": "2025-04-01T19:26:47.000Z",
     "fields": {
-      "Agency/Department Name": "United Nations Development Programme (UNDP)",
+      "Agency/Department Name": "Unspecified Agency",
       "Agency Data Portal": "https://open.undp.org/",
-      "Country Name": "United Nations (UN)"
+      "Country Name": "United Nations Development Programme (UNDP)"
     }
   },
   {
@@ -1258,9 +1306,9 @@
     "id": "rectyuW4INCMaNoAM",
     "createdTime": "2025-04-15T14:56:00.000Z",
     "fields": {
-      "Agency/Department Name": "United Nations Office for the Coordination of Humanitarian Affairs (OCHA)",
+      "Agency/Department Name": "Unspecified Agency",
       "Agency Data Portal": "https://fts.unocha.org/",
-      "Country Name": "United Nations (UN)"
+      "Country Name": "United Nations Office for the Coordination of Humanitarian Affairs (OCHA)"
     }
   },
   {
@@ -1291,9 +1339,9 @@
     "id": "recvvJF6VEfKjphtY",
     "createdTime": "2025-07-21T08:23:55.000Z",
     "fields": {
-      "Agency/Department Name": "International Fund for Agricultural Development (IFAD)",
+      "Agency/Department Name": "Unspecified Agency",
       "Agency Data Portal": "https://www.ifad.org/en/",
-      "Country Name": "United Nations (UN)"
+      "Country Name": "International Fund for Agricultural Development (IFAD)"
     }
   },
   {
