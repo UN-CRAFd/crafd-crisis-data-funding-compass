@@ -1,7 +1,8 @@
 'use client';
 
-import { ExternalLink, Folder, X } from 'lucide-react';
+import { ChevronDown, ChevronUp, ExternalLink, Folder, X } from 'lucide-react';
 import { useCallback, useEffect, useRef, useState } from 'react';
+import ModalOrganizationFocus from './ModalOrganizationFocus';
 
 interface OrganizationModalProps {
     // Accept the full organization record coming from `public/data/organizations-table.json`
@@ -11,35 +12,24 @@ interface OrganizationModalProps {
         createdTime?: string;
         fields: Record<string, unknown>;
     } | null;
+    // Centralized data maps from data.ts for consistent data access
+    projectNameMap?: Record<string, string>;
+    orgProjectsMap?: Record<string, Array<{ investmentTypes: string[] }>>;
+    orgDonorCountriesMap?: Record<string, string[]>;
     // onClose removed for serializability; modal will dispatch a CustomEvent 'closeOrganizationModal'
     loading: boolean;
 }
 
 // Import HeadquartersCountry component - comment out import to disable HQ display
 // import HeadquartersCountry from './HeadquartersCountry';
-// Load nested organizations so we can resolve project IDs to names when needed
-import organizationsNestedRaw from '../../public/data/organizations-nested.json';
 
-// Build a map from project id -> project name for quick lookup
-const PROJECT_NAME_BY_ID: Record<string, string> = ((): Record<string, string> => {
-    try {
-        const map: Record<string, string> = {};
-        const orgs: any[] = organizationsNestedRaw as any;
-        orgs.forEach(org => {
-            (org.projects || []).forEach((p: any) => {
-                if (p && p.id) {
-                    const name = (p.fields && (p.fields['Project/Product Name'] || p.fields['Project Name'])) || p.name || '';
-                    map[p.id] = String(name || '').trim() || p.id;
-                }
-            });
-        });
-        return map;
-    } catch (e) {
-        return {};
-    }
-})();
-
-export default function OrganizationModal({ organization, loading }: OrganizationModalProps): React.ReactElement {
+export default function OrganizationModal({
+    organization,
+    projectNameMap = {},
+    orgProjectsMap = {},
+    orgDonorCountriesMap = {},
+    loading
+}: OrganizationModalProps): React.ReactElement {
     const [isVisible, setIsVisible] = useState(false);
     const [isClosing, setIsClosing] = useState(false);
     const modalRef = useRef<HTMLDivElement>(null);
@@ -196,8 +186,8 @@ export default function OrganizationModal({ organization, loading }: Organizatio
 
         return (
             <div className="flex items-start justify-between gap-8">
-                {/* Main title - Largest element in modal */}
-                <h2 className="text-3xl font-bold text-[#333333] leading-tight font-roboto">
+                {/* Main title - Responsive sizing */}
+                <h2 className="text-lg sm:text-xl md:text-xl lg:text-2xl font-bold text-[#333333] leading-tight font-roboto">
                     {displayName}
                 </h2>
                 <CloseButton />
@@ -243,7 +233,7 @@ export default function OrganizationModal({ organization, loading }: Organizatio
             if (typeof val === 'object') {
                 try {
                     return <pre className="text-xs text-gray-700 whitespace-pre-wrap">{JSON.stringify(val, null, 2)}</pre>;
-                } catch (e) {
+                } catch {
                     return <span className="text-gray-700">{String(val)}</span>;
                 }
             }
@@ -251,10 +241,10 @@ export default function OrganizationModal({ organization, loading }: Organizatio
                 const s = String(val);
                 if (s === '') return <span className="text-gray-500">—</span>;
                 // If looks like a URL, render as link
-                if (s.startsWith('http://') || s.startsWith('https://') || s.startsWith('mailto:') || s.startsWith('<http')) {
+                if (s.startsWith('http://') || s.startsWith('https://')) {
                     const cleaned = s.replace(/^<|>$/g, '');
                     return (
-                        <a href={cleaned} target="_blank" rel="noopener noreferrer" className="text-[var(--brand-primary)] hover:underline">
+                        <a href={cleaned} target="_blank" rel="noopener noreferrer" className="text-(--brand-primary) hover:underline">
                             {cleaned}
                         </a>
                     );
@@ -269,9 +259,6 @@ export default function OrganizationModal({ organization, loading }: Organizatio
         const WEBSITE_KEYS = ['Org Website', 'Org Website (URL)', 'Org Website Url', 'Org Website URL'];
         const websiteKey = WEBSITE_KEYS.find((k) => typeof fields[k] === 'string' && fields[k]);
         const websiteValue: string | null = websiteKey ? String(fields[websiteKey]) : null;
-        const orgShortName = (typeof fields['Org Short Name'] === 'string' && fields['Org Short Name'])
-            || (typeof fields['Org Full Name'] === 'string' && fields['Org Full Name'])
-            || '';
 
         // Extract organization type, handling both string and array formats
         const orgTypeRaw = fields['Org Type'];
@@ -283,26 +270,36 @@ export default function OrganizationModal({ organization, loading }: Organizatio
         }
 
         return (
-            <div className="px-6 sm:px-8 pt-4 sm:pt-5 pb-6 sm:pb-8 space-y-5 font-roboto flex flex-col h-full">
-                {/* Description - Roboto Default (18px, Regular) for readable body text */}
-                {typeof fields['Org Description'] === 'string' && String(fields['Org Description']).length > 0 && (
-                    <p className="text-base font-normal text-[#333333] leading-relaxed font-roboto">
-                        {renderValue(String(fields['Org Description']))}
-                    </p>
+            <div className="px-6 sm:px-8 pt-4 sm:pt-5 pb-6 sm:pb-8 font-roboto flex flex-col h-full">
+                {/* Organization Type Badge */}
+                {orgType && (
+                    <span className="inline-flex items-center px-3 py-1.5 rounded-md text-sm font-medium bg-slate-100 text-slate-600 w-fit mb-4">
+                        {orgType}
+                    </span>
                 )}
 
-                {/* Organization Type */}
-                {orgType && (
-                    <div>
-                        {/* Field label - smaller than SubHeader, bigger than badge */}
-                        <h4 className="text-base font-qanelas font-black text-[#333333] mb-2 uppercase tracking-wide leading-normal">
-                            Organization Type
-                        </h4>
-                        {/* Badge - matching dashboard style but larger */}
-                        <div className="inline-flex items-center px-2.5 py-1 rounded text-sm font-medium text-slate-500 bg-transparent border border-slate-200 font-roboto">
-                            {orgType}
-                        </div>
-                    </div>
+                {/* Description with inline Learn more link */}
+                {typeof fields['Org Description'] === 'string' && String(fields['Org Description']).length > 0 && (
+                    <p className="text-base font-normal text-gray-700 leading-relaxed font-roboto">
+                        {String(fields['Org Description'])}
+                        {websiteValue && websiteValue.trim() !== '' && (
+                            <>
+                                {' '}
+                                <a
+                                    href={websiteValue.replace(/^<|>$/g, '')}
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    className="font-semibold transition-colors underline underline-offset-2 whitespace-nowrap align-baseline"
+                                    style={{ color: 'var(--brand-primary)' }}
+                                    onMouseEnter={(e) => e.currentTarget.style.color = 'var(--brand-primary-dark)'}
+                                    onMouseLeave={(e) => e.currentTarget.style.color = 'var(--brand-primary)'}
+                                >
+                                    Learn more
+                                    <ExternalLink className="w-3.5 h-3.5 inline-block align-text-bottom ml-0.5" />
+                                </a>
+                            </>
+                        )}
+                    </p>
                 )}
 
                 {/* Org HQ Country - Uncomment import and this line to enable */}
@@ -315,74 +312,6 @@ export default function OrganizationModal({ organization, loading }: Organizatio
                     />
                 )} */}
 
-
-                {/* Donor countries (if present) */}
-                {fields['Org Donor Countries (based on Agency)'] && Array.isArray(fields['Org Donor Countries (based on Agency)']) ? (
-                    <div>
-                        <SubHeader>Funding</SubHeader>
-                        <Field label="Organization Donor Countries">
-                            <div className="space-y-2">
-                                {(fields['Org Donor Countries (based on Agency)'] as unknown[]).map((country, i) => (
-                                    <div key={i} className="flex items-center gap-2">
-                                        <span className="text-gray-700">{String(country)}</span>
-                                    </div>
-                                ))}
-                            </div>
-                        </Field>
-                    </div>
-                ) : null}
-
-                {/* Funding donors (donor countries as badges) */}
-                {(() => {
-                    const donorFieldCandidates = [
-                        'Org Donor Countries (based on Agency)',
-                        'Org Donor Countries (based on Agency) (from Provider Org Full Name)',
-                        'Combined Donor Countries (Linked)',
-                        'Combined Donor Countries (Linked) (from Provider Org Full Name)'
-                    ];
-                    const raw = donorFieldCandidates.map(k => fields[k]).find(Boolean) as unknown | undefined;
-                    if (!raw) return null;
-
-                    // split by comma but avoid splitting within parentheses or quotes
-                    const splitSafe = (s: string) => {
-                        const out: string[] = [];
-                        let cur = '';
-                        let depth = 0;
-                        let inQuotes = false;
-                        let quoteChar = '';
-                        for (let i = 0; i < s.length; i++) {
-                            const ch = s[i];
-                            if ((ch === '"' || ch === "'") && !inQuotes) { inQuotes = true; quoteChar = ch; cur += ch; continue; }
-                            if (ch === quoteChar && inQuotes) { inQuotes = false; quoteChar = ''; cur += ch; continue; }
-                            if (ch === '(' && !inQuotes) { depth++; cur += ch; continue; }
-                            if (ch === ')' && !inQuotes) { depth--; cur += ch; continue; }
-                            if (ch === ',' && !inQuotes && depth === 0) { if (cur.trim()) out.push(cur.trim()); cur = ''; continue; }
-                            cur += ch;
-                        }
-                        if (cur.trim()) out.push(cur.trim());
-                        return out.map(x => x.replace(/^"|"$/g, '').replace(/^'|'$/g, '').trim()).filter(Boolean);
-                    };
-
-                    let donors: string[] = [];
-                    if (Array.isArray(raw)) donors = (raw as unknown[]).map(r => String(r).trim()).filter(Boolean);
-                    else if (typeof raw === 'string') donors = splitSafe(raw as string);
-
-                    if (donors.length === 0) return null;
-
-                    return (
-                        <div>
-                            <SubHeader>Funding donors</SubHeader>
-                            <div className="flex flex-wrap gap-2">
-                                {donors.map((d, i) => (
-                                    <span key={i} className="inline-flex items-center px-3 py-1 rounded-full bg-[var(--brand-bg-light)] text-[var(--brand-primary-dark)] text-sm">
-                                        {d}
-                                    </span>
-                                ))}
-                            </div>
-                        </div>
-                    );
-                })()}
-
                 {/* If website exists but description didn't show it, render a prominent Website button */}
                 {!fields['Org Description'] && websiteValue && websiteValue.trim() !== '' && (
                     <div>
@@ -393,7 +322,7 @@ export default function OrganizationModal({ organization, loading }: Organizatio
                                     const cleaned = websiteValue.replace(/^<|>$/g, '');
                                     window.open(cleaned, '_blank', 'noopener,noreferrer');
                                 }}
-                                className="mt-1 inline-flex items-center justify-center gap-2 px-4 py-2 rounded-full bg-[var(--brand-primary)] text-white text-sm font-medium shadow hover:bg-[var(--brand-primary-dark)] transition-colors"
+                                className="mt-1 inline-flex items-center justify-center gap-2 px-4 py-2 rounded-full bg-(--brand-primary) text-white text-sm font-medium shadow hover:bg-(--brand-primary-dark) transition-colors"
                             >
                                 <ExternalLink className="w-4 h-4" />
                                 <span className="flex items-center">Open Website</span>
@@ -402,76 +331,116 @@ export default function OrganizationModal({ organization, loading }: Organizatio
                     </div>
                 )}
 
-                {/* Metadata */}
+                {/* Separator line before metadata sections */}
+                <div className="border-t border-gray-200 mt-8 mb-4"></div>
 
-                {/* Projects funded (as chips) */}
-                {(() => {
-                    const projectFieldCandidates = [
-                        // Prefer a pre-resolved names field injected by the dashboard
-                        'Provided Data Ecosystem Projects (Names)',
-                        'Provided Data Ecosystem Projects',
-                        'Provided Data Ecosystem Projects (Linked)',
-                        'Linked Project(s)',
-                        'From field: Linked Project(s)'
-                    ];
-                    const raw = projectFieldCandidates.map(k => fields[k]).find(Boolean) as unknown | undefined;
-                    let projectsList: string[] = [];
-                    // safe split that doesn't split commas inside quotes or parentheses
-                    const splitSafe = (s: string) => {
-                        const out: string[] = [];
-                        let cur = '';
-                        let depth = 0;
-                        let inQuotes = false;
-                        let quoteChar = '';
-                        for (let i = 0; i < s.length; i++) {
-                            const ch = s[i];
-                            if ((ch === '"' || ch === "'") && !inQuotes) { inQuotes = true; quoteChar = ch; cur += ch; continue; }
-                            if (ch === quoteChar && inQuotes) { inQuotes = false; quoteChar = ''; cur += ch; continue; }
-                            if (ch === '(' && !inQuotes) { depth++; cur += ch; continue; }
-                            if (ch === ')' && !inQuotes) { depth--; cur += ch; continue; }
-                            if (ch === ',' && !inQuotes && depth === 0) { if (cur.trim()) out.push(cur.trim()); cur = ''; continue; }
-                            cur += ch;
+                {/* Metadata - Single column layout */}
+                <div className="space-y-8">
+                    {/* Organization Focus - Investment Types from Projects */}
+                    {(() => {
+                        const orgProjects = orgProjectsMap[organization.id];
+                        if (!orgProjects || orgProjects.length === 0) return null;
+
+                        return <ModalOrganizationFocus projects={orgProjects} SubHeader={SubHeader} />;
+                    })()}
+
+                    {/* Provided Assets - Simple field access matching FIELDS_ORGANIZATIONS */}
+                    {(() => {
+                        // Use the clean field name from FIELDS_ORGANIZATIONS: "Provided Data Ecosystem Projects"
+                        const providedProjects = fields['Provided Data Ecosystem Projects'];
+
+                        if (!providedProjects || (Array.isArray(providedProjects) && providedProjects.length === 0)) {
+                            return null;
                         }
-                        if (cur.trim()) out.push(cur.trim());
-                        return out.map(x => x.replace(/^"|"$/g, '').replace(/^'|'$/g, '').trim()).filter(Boolean);
-                    };
 
-                    if (Array.isArray(raw)) {
-                        // If it's already an array of project names or IDs, map IDs to names when possible
-                        projectsList = (raw as unknown[])
-                            .map(r => String(r).trim())
-                            .map(s => (PROJECT_NAME_BY_ID[s] ? PROJECT_NAME_BY_ID[s] : s))
-                            .filter(Boolean);
-                    } else if (typeof raw === 'string') {
-                        // Split string into items; items might be IDs or names
-                        projectsList = splitSafe(raw as string).map(s => (PROJECT_NAME_BY_ID[s] ? PROJECT_NAME_BY_ID[s] : s));
-                    }
+                        // Convert to array if needed
+                        let projectsList: string[] = [];
+                        if (Array.isArray(providedProjects)) {
+                            // Array of project IDs - resolve to names using projectNameMap
+                            projectsList = providedProjects
+                                .map(id => String(id).trim())
+                                .map(id => projectNameMap[id] || id)
+                                .filter(Boolean)
+                                .sort((a, b) => a.localeCompare(b));
+                        }
 
-                    if (projectsList.length === 0) return null;
+                        if (projectsList.length === 0) return null;
 
-                    return (
-                        <div className="mt-6">
-                            <SubHeader>Assets</SubHeader>
-                            <div className="flex flex-wrap gap-2">
-                                {projectsList.map((p, i) => (
-                                    <div key={i} className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-gray-100 text-gray-800 text-sm">
-                                        <Folder className="w-4 h-4 text-gray-500" />
-                                        <span className="truncate max-w-xs">{p}</span>
-                                    </div>
-                                ))}
+                        const showCollapsible = projectsList.length > 5;
+                        const [isExpanded, setIsExpanded] = useState(false);
+                        const displayedProjects = showCollapsible && !isExpanded ? projectsList.slice(0, 5) : projectsList;
+
+                        return (
+                            <div>
+                                <div className="mb-3 flex items-center gap-2">
+                                    <h3 className="text-xl font-qanelas font-black text-[#333333] uppercase tracking-wide leading-normal">
+                                        Provided Assets
+                                    </h3>
+                                    <span className="text-lg font-normal text-gray-500 tabular-nums">({projectsList.length})</span>
+                                </div>
+                                <div className="flex flex-col gap-2">
+                                    {displayedProjects.map((projectName, i) => (
+                                        <span key={i} className="inline-flex items-center gap-2 px-3 py-1.5 rounded-md text-sm font-medium bg-slate-100 text-slate-600">
+                                            <Folder className="w-4 h-4 text-slate-500" />
+                                            <span className="truncate max-w-xs">{projectName}</span>
+                                        </span>
+                                    ))}
+                                </div>
+                                {showCollapsible && (
+                                    <button
+                                        onClick={() => setIsExpanded(!isExpanded)}
+                                        className="mt-2 inline-flex items-center gap-1 text-sm font-medium text-gray-600 hover:text-gray-800 transition-colors"
+                                    >
+                                        {isExpanded ? (
+                                            <>
+                                                <ChevronUp className="w-4 h-4" />
+                                                <span>Show less</span>
+                                            </>
+                                        ) : (
+                                            <>
+                                                <ChevronDown className="w-4 h-4" />
+                                                <span>Show {projectsList.length - 5} more</span>
+                                            </>
+                                        )}
+                                    </button>
+                                )}
                             </div>
-                        </div>
-                    );
-                })()}
+                        );
+                    })()}
+
+                    {/* Organization Donors - Clean field access from centralized data */}
+                    {(() => {
+                        // Get donor countries from the centralized map (computed from nested data)
+                        const donorCountries = orgDonorCountriesMap[organization.id] || [];
+
+                        if (donorCountries.length === 0) return null;
+
+                        return (
+                            <div>
+                                <SubHeader>Organization Donors</SubHeader>
+                                <div className="flex flex-wrap gap-2">
+                                    {donorCountries.map((country) => (
+                                        <span
+                                            key={country}
+                                            className="inline-flex items-center px-3 py-1.5 rounded-md text-sm font-medium bg-slate-100 text-slate-600"
+                                        >
+                                            {country}
+                                        </span>
+                                    ))}
+                                </div>
+                            </div>
+                        );
+                    })()}
+                </div>
 
                 {/* Flexible spacer to push notes to bottom */}
-                <div className="flex-grow"></div>
+                <div className="grow min-h-8"></div>
 
-                <div className="border-t border-gray-100 pt-4 mt-auto">
+                <div className="border-t border-gray-200 pt-4 pb-4 mt-auto">
                     <div className="text-xs text-gray-400 uppercase tracking-wider font-medium mb-2">NOTES</div>
                     <div className="text-xs text-gray-500 leading-snug space-y-1">
                         <div className="flex items-start">
-                            <span className="text-gray-400 mr-2 flex-shrink-0">•</span>
+                            <span className="text-gray-400 mr-2 shrink-0">•</span>
                             <span>All insights are based on publicly accessible information and data.</span>
                         </div>
                     </div>
@@ -491,7 +460,7 @@ export default function OrganizationModal({ organization, loading }: Organizatio
         >
             <div
                 ref={modalRef}
-                className={`w-full sm:w-2/3 md:w-1/2 lg:w-1/3 sm:min-w-[400px] lg:min-w-[500px] h-full bg-white shadow-2xl transition-transform duration-300 ease-out flex flex-col ${isVisible && !isClosing ? 'translate-x-0' : 'translate-x-full'}`}
+                className={`w-full sm:w-3/5 md:w-[45%] lg:w-[37%] xl:w-[29%] sm:min-w-[435px] lg:min-w-[500px] xl:min-w-[550px] h-full bg-white shadow-2xl transition-transform duration-300 ease-out flex flex-col ${isVisible && !isClosing ? 'translate-x-0' : 'translate-x-full'}`}
                 onTouchStart={onTouchStart}
                 onTouchMove={onTouchMove}
                 onTouchEnd={onTouchEnd}

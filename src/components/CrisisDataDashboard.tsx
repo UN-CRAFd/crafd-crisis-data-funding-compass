@@ -19,11 +19,11 @@ import {
 import { Input } from '@/components/ui/input';
 import { TooltipContent, TooltipProvider, TooltipTrigger, Tooltip as TooltipUI } from '@/components/ui/tooltip';
 import labels from '@/config/labels.json';
-import type { DashboardStats, OrganizationProjectData, OrganizationTypeData, OrganizationWithProjects, ProjectData, ProjectTypeData } from '../types/airtable';
-import { calculateOrganizationTypesFromOrganizationsWithProjects } from '../lib/data';
-import { exportDashboardToPDF } from '../lib/exportPDF';
 import { Building2, ChevronDown, ChevronRight, Database, DatabaseBackup, FileDown, Filter, FolderDot, FolderOpenDot, Globe, Info, MessageCircle, RotateCcw, Search, Share2 } from 'lucide-react';
 import organizationsTableRaw from '../../public/data/organizations-table.json';
+import { buildOrgDonorCountriesMap, buildOrgProjectsMap, buildProjectNameMap, calculateOrganizationTypesFromOrganizationsWithProjects, getNestedOrganizationsForModals } from '../lib/data';
+import { exportDashboardToPDF } from '../lib/exportPDF';
+import type { DashboardStats, OrganizationProjectData, OrganizationTypeData, OrganizationWithProjects, ProjectData, ProjectTypeData } from '../types/airtable';
 
 // Consolidated style constants
 const STYLES = {
@@ -229,7 +229,27 @@ const CrisisDataDashboard = ({
     const [exportLoading, setExportLoading] = useState(false);
     const [selectedOrganization, setSelectedOrganization] = useState<OrganizationWithProjects | null>(null);
     // Load static organizations table for modal details
-    const organizationsTable: Array<{ id: string; createdTime?: string; fields: Record<string, unknown> }> = organizationsTableRaw as any;
+    const organizationsTable: Array<{ id: string; createdTime?: string; fields: Record<string, unknown> }> = organizationsTableRaw as Array<{ id: string; createdTime?: string; fields: Record<string, unknown> }>;
+
+    // Centralized data maps for modals
+    const [projectNameMap, setProjectNameMap] = useState<Record<string, string>>({});
+    const [orgProjectsMap, setOrgProjectsMap] = useState<Record<string, Array<{ investmentTypes: string[] }>>>({});
+    const [orgDonorCountriesMap, setOrgDonorCountriesMap] = useState<Record<string, string[]>>({});
+
+    // Load nested organization data for modal maps
+    useEffect(() => {
+        const loadModalData = async () => {
+            try {
+                const nestedOrgs = await getNestedOrganizationsForModals();
+                setProjectNameMap(buildProjectNameMap(nestedOrgs));
+                setOrgProjectsMap(buildOrgProjectsMap(nestedOrgs));
+                setOrgDonorCountriesMap(buildOrgDonorCountriesMap(nestedOrgs));
+            } catch (error) {
+                console.error('Error loading modal data:', error);
+            }
+        };
+        loadModalData();
+    }, []);
 
     // Listen for modal close events dispatched from client modal components (avoids passing functions as props)
     useEffect(() => {
@@ -243,11 +263,11 @@ const CrisisDataDashboard = ({
                 setSelectedOrganization(org);
             }
         };
-        
+
         window.addEventListener('closeProjectModal', onCloseProject as EventListener);
         window.addEventListener('closeOrganizationModal', onCloseOrg as EventListener);
         window.addEventListener('openOrganizationModal', onOpenOrg as EventListener);
-        
+
         return () => {
             window.removeEventListener('closeProjectModal', onCloseProject as EventListener);
             window.removeEventListener('closeOrganizationModal', onCloseOrg as EventListener);
@@ -1008,33 +1028,29 @@ const CrisisDataDashboard = ({
             {/* Organization Modal */}
             {selectedOrganization && (
                 (() => {
-                    // Try to find a matching record in the organizations table using multiple possible fields
+                    // Find matching record in organizations table using clean field names
                     const match = organizationsTable.find(rec => {
                         const full = (rec.fields['Org Full Name'] as string) || '';
                         const short = (rec.fields['Org Short Name'] as string) || '';
-                        const altFull = (rec.fields['Org Fullname'] as string) || '';
                         const normalized = (name: string) => name.replace(/\s+/g, ' ').trim().toLowerCase();
                         const target = normalized(selectedOrganization.organizationName || selectedOrganization.id);
-                        return [full, short, altFull].some(s => normalized(String(s || '')) === target);
+                        return [full, short].some(s => normalized(String(s || '')) === target);
                     });
 
-                    // Build a fallback orgRecord and include resolved project names from organizationsWithProjects
-                    const orgProjects = organizationsWithProjects.find(o => o.id === selectedOrganization.id);
-                    const projectNames = orgProjects ? orgProjects.projects.map(p => p.projectName) : [];
-
+                    // Use the matched record directly, or create a minimal fallback
                     const orgRecord = match || {
                         id: selectedOrganization.id,
                         fields: {
                             'Org Full Name': selectedOrganization.organizationName,
-                            'Org Donor Countries (based on Agency)': selectedOrganization.donorCountries || [],
-                            // Provide a friendly field containing project names so the modal can show names instead of IDs
-                            'Provided Data Ecosystem Projects (Names)': projectNames
                         }
                     };
 
                     return (
                         <OrganizationModal
                             organization={orgRecord}
+                            projectNameMap={projectNameMap}
+                            orgProjectsMap={orgProjectsMap}
+                            orgDonorCountriesMap={orgDonorCountriesMap}
                             loading={false}
                         />
                     );
