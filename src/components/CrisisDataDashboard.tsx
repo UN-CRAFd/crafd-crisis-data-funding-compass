@@ -418,7 +418,7 @@ const CrisisDataDashboard = ({
                     <div className="flex items-start justify-between mb-0">
                         <div className="flex items-center gap-3">
                             <h1 className="text-3xl bg-gradient-to-r from-slate-800 to-slate-600 bg-clip-text text-transparent">
-                                <span className="qanelas-title">{labels.header.title}</span> <span className="qanelas-subtitle">{labels.header.subtitle}</span>
+                                <span className="qanelas-title">{labels.header.title}</span> <span className="font-roboto">{labels.header.subtitle}</span>
                             </h1>
                             <TooltipProvider>
                                 <TooltipUI>
