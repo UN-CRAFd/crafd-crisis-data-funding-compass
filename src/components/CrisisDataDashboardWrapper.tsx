@@ -166,6 +166,7 @@ const CrisisDataDashboardWrapper = ({ logoutButton }: { logoutButton?: React.Rea
             combinedDonors={combinedDonors}
             investmentTypes={investmentTypes}
             searchQuery={localSearchQuery}
+            appliedSearchQuery={searchQuery}
             onDonorsChange={handleDonorsChange}
             onTypesChange={handleTypesChange}
             onSearchChange={handleSearchChange}
