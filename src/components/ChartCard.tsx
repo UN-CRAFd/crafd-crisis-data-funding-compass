@@ -5,7 +5,7 @@ import { Bar, BarChart, CartesianGrid, Cell, LabelList, ResponsiveContainer, XAx
 // Chart-specific styles
 const CHART_STYLES = {
     cardGlass: "!border-0 bg-white/80 backdrop-blur-sm",
-    sectionHeader: "flex items-center gap-2 text-lg font-qanelas font-black text-slate-800 mb-0 mt-0 uppercase",
+    sectionHeader: "flex items-center gap-2 text-lg font-qanelas-subtitle font-black text-slate-800 mb-0 mt-0 uppercase",
 } as const;
 
 interface SectionHeaderProps {
@@ -96,13 +96,13 @@ const ChartCard = React.memo(function ChartCard({ title, icon, data, barColor, f
                         layout="vertical"
                         margin={{ top: 0, right: 15, left: -50, bottom: 0 }}
                     >
-                        <CartesianGrid strokeDasharray="3 3" stroke="#e2e8f0" horizontal={false} />
-                        <XAxis type="number" stroke="#64748b" tick={{ fontSize: 12, dy: -2 }} tickLine={false} allowDecimals={false} />
+                        <CartesianGrid strokeDasharray="3 3" stroke="var(--chart-grid-stroke)" horizontal={false} />
+                        <XAxis type="number" stroke="var(--chart-axis-stroke)" tick={{ fontSize: 12, dy: -2 }} tickLine={false} allowDecimals={false} />
                         <YAxis
                             dataKey="name"
                             type="category"
                             width={240}
-                            stroke="#64748b"
+                            stroke="var(--chart-axis-stroke)"
                             tick={{ fontSize: 13, dx: 1 }}
                             tickLine={false}
                         />
@@ -114,8 +114,6 @@ const ChartCard = React.memo(function ChartCard({ title, icon, data, barColor, f
                             onMouseEnter={handleMouseEnter}
                             onMouseLeave={handleMouseLeave}
                             isAnimationActive={true}
-                            animationDuration={700}
-                            animationEasing="ease-out"
                         >
                             {data.map((entry, index) => (
                                 // Slightly vary lightness for each bar to create visual separation
@@ -141,6 +139,12 @@ const ChartCard = React.memo(function ChartCard({ title, icon, data, barColor, f
                                         const toHex = (v: number) => v.toString(16).padStart(2, '0');
                                         return `#${toHex(newR)}${toHex(newG)}${toHex(newB)}`;
                                     })()}
+                                    style={{
+                                        zIndex: hoveredIndex === index ? 1000 : 1,
+                                        position: 'relative',
+                                        pointerEvents: 'all',
+                                        transform: 'translateX(1px)'
+                                    }}
                                 />
                             ))}
                             <LabelList
@@ -154,16 +158,34 @@ const ChartCard = React.memo(function ChartCard({ title, icon, data, barColor, f
                                     const yPos = typeof y === 'number' ? y : parseFloat(y);
                                     const w = typeof width === 'number' ? width : parseFloat(width);
                                     const h = typeof height === 'number' ? height : parseFloat(height);
+                            
+
+                                    // Calculate text width (rough estimate: 8px per character)
+                                    const textWidth = String(value).length * 8;
+                                    const minBarWidth = textWidth + 16; // Add some padding
+
+                                    // Position inside bar if it's wide enough, otherwise outside
+                                    const isInside = w > minBarWidth;
+                                    const textX = isInside ? xPos + w - 8 : xPos + w + 8;
+                                    
+                                    const textAnchor = isInside ? 'end' : 'start';
+                                    const textColor = 'var(--chart-text-color)'
 
                                     return (
                                         <text
-                                            x={xPos + w + 8}
-                                            y={yPos + h / 2}
-                                            fill="#64748b"
+                                            x={textX}
+                                            y={yPos + h / 2 + 1.5}
+                                            fill={textColor}
                                             fontSize={13}
                                             fontWeight={600}
-                                            textAnchor="start"
+                                            textAnchor={textAnchor}
                                             dominantBaseline="middle"
+                                            style={{ 
+                                                transition: 'none',
+                                                opacity: 1,
+                                                zIndex: 1001,
+                                                textShadow: 'none'
+                                            }}
                                         >
                                             {value}
                                         </text>

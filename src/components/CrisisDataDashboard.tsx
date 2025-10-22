@@ -19,11 +19,11 @@ import {
 import { Input } from '@/components/ui/input';
 import { TooltipContent, TooltipProvider, TooltipTrigger, Tooltip as TooltipUI } from '@/components/ui/tooltip';
 import labels from '@/config/labels.json';
-import type { DashboardStats, OrganizationProjectData, OrganizationTypeData, OrganizationWithProjects, ProjectData, ProjectTypeData } from '../types/airtable';
-import { calculateOrganizationTypesFromOrganizationsWithProjects } from '../lib/data';
-import { exportDashboardToPDF } from '../lib/exportPDF';
 import { Building2, ChevronDown, ChevronRight, Database, DatabaseBackup, FileDown, Filter, FolderDot, FolderOpenDot, Globe, Info, MessageCircle, RotateCcw, Search, Share2 } from 'lucide-react';
 import organizationsTableRaw from '../../public/data/organizations-table.json';
+import { buildOrgDonorCountriesMap, buildOrgProjectsMap, buildProjectNameMap, calculateOrganizationTypesFromOrganizationsWithProjects, getNestedOrganizationsForModals } from '../lib/data';
+import { exportDashboardToPDF } from '../lib/exportPDF';
+import type { DashboardStats, OrganizationProjectData, OrganizationTypeData, OrganizationWithProjects, ProjectData, ProjectTypeData } from '../types/airtable';
 
 // Consolidated style constants
 const STYLES = {
@@ -33,8 +33,9 @@ const STYLES = {
     cardGlassLight: "!border-0 bg-white/70 backdrop-blur-sm p-1 rounded-md shadow-none",
 
     // Typography - Unified section headers
-    sectionHeader: "flex items-center gap-2 text-lg font-semibold text-slate-800 mb-0 mt-0",
-    statValue: "text-5xl font-bold bg-clip-text text-transparent leading-none",
+    sectionHeader: "flex items-center gap-2 text-lg font-qanelas-subtitle font-black text-slate-800 mb-0 mt-0 uppercase",
+    // Use a solid, non-shaded color for stat values (no bg-clip gradient)
+    statValue: "text-5xl font-bold font-mono leading-none tabular-nums",
     statLabel: "text-base font-medium mt-1",
     sectionLabel: "text-xs font-medium text-slate-600 mb-0",
 
@@ -47,9 +48,9 @@ const STYLES = {
 
     // Chart config
     chartTooltip: {
-        backgroundColor: 'rgba(255, 255, 255, 0.8)', // semi-transparent white
+        backgroundColor: 'var(--tooltip-bg)',
         backdropFilter: 'blur(12px)',
-        border: '1px solid #e2e8f0',
+        border: '1px solid var(--tooltip-border)',
         borderRadius: '10px',
         fontSize: '12px',
         padding: '8px',
@@ -64,6 +65,7 @@ interface CrisisDataDashboardProps {
         organizationTypes: OrganizationTypeData[];
         organizationProjects: OrganizationProjectData[];
         organizationsWithProjects: OrganizationWithProjects[];
+        allOrganizations: OrganizationWithProjects[]; // Add unfiltered organizations
         donorCountries: string[];
         investmentTypes: string[];
     } | null;
@@ -71,7 +73,8 @@ interface CrisisDataDashboardProps {
     error: string | null;
     combinedDonors: string[];
     investmentTypes: string[];
-    searchQuery: string;
+    searchQuery: string; // Current input value
+    appliedSearchQuery: string; // Applied search query (from URL)
     onDonorsChange: (values: string[]) => void;
     onTypesChange: (values: string[]) => void;
     onSearchChange: (value: string) => void;
@@ -109,7 +112,8 @@ const StatCard = React.memo(function StatCard({ icon, title, value, label, color
     const gradients = {
         amber: {
             bg: 'from-[var(--brand-bg-lighter)] to-[var(--brand-bg-light)]',
-            value: 'from-[var(--brand-primary)] to-[var(--brand-primary-dark)]',
+            // Use a solid text color for the stat value instead of a gradient
+            value: 'text-[var(--brand-primary)]',
             label: 'text-[var(--brand-primary)]'
         }
     };
@@ -124,9 +128,7 @@ const StatCard = React.memo(function StatCard({ icon, title, value, label, color
                 </CardDescription>
             </CardHeader>
             <CardContent className="pt-0">
-                <div
-                    className={`${STYLES.statValue} bg-gradient-to-r ${colors.value}`}
-                >
+                <div className={`${STYLES.statValue} ${colors.value}`}>
                     {value}
                 </div>
                 <div className={`${STYLES.statLabel} ${colors.label}`}>{label}</div>
@@ -207,6 +209,7 @@ const CrisisDataDashboard = ({
     combinedDonors,
     investmentTypes,
     searchQuery,
+    appliedSearchQuery,
     onDonorsChange,
     onTypesChange,
     onSearchChange,
@@ -217,6 +220,7 @@ const CrisisDataDashboard = ({
     // UI state (not related to routing)
     const [expandedOrgs, setExpandedOrgs] = useState<Set<string>>(new Set());
     const [expandedCountries, setExpandedCountries] = useState<Set<string>>(new Set());
+    const [donorSearchQuery, setDonorSearchQuery] = useState<string>('');
 
     // Project modal state
     const [selectedProject, setSelectedProject] = useState<{ project: ProjectData; organizationName: string } | null>(null);
@@ -225,7 +229,27 @@ const CrisisDataDashboard = ({
     const [exportLoading, setExportLoading] = useState(false);
     const [selectedOrganization, setSelectedOrganization] = useState<OrganizationWithProjects | null>(null);
     // Load static organizations table for modal details
-    const organizationsTable: Array<{ id: string; createdTime?: string; fields: Record<string, unknown> }> = organizationsTableRaw as any;
+    const organizationsTable: Array<{ id: string; createdTime?: string; fields: Record<string, unknown> }> = organizationsTableRaw as Array<{ id: string; createdTime?: string; fields: Record<string, unknown> }>;
+
+    // Centralized data maps for modals
+    const [projectNameMap, setProjectNameMap] = useState<Record<string, string>>({});
+    const [orgProjectsMap, setOrgProjectsMap] = useState<Record<string, Array<{ investmentTypes: string[] }>>>({});
+    const [orgDonorCountriesMap, setOrgDonorCountriesMap] = useState<Record<string, string[]>>({});
+
+    // Load nested organization data for modal maps
+    useEffect(() => {
+        const loadModalData = async () => {
+            try {
+                const nestedOrgs = await getNestedOrganizationsForModals();
+                setProjectNameMap(buildProjectNameMap(nestedOrgs));
+                setOrgProjectsMap(buildOrgProjectsMap(nestedOrgs));
+                setOrgDonorCountriesMap(buildOrgDonorCountriesMap(nestedOrgs));
+            } catch (error) {
+                console.error('Error loading modal data:', error);
+            }
+        };
+        loadModalData();
+    }, []);
 
     // Listen for modal close events dispatched from client modal components (avoids passing functions as props)
     useEffect(() => {
@@ -239,11 +263,11 @@ const CrisisDataDashboard = ({
                 setSelectedOrganization(org);
             }
         };
-        
+
         window.addEventListener('closeProjectModal', onCloseProject as EventListener);
         window.addEventListener('closeOrganizationModal', onCloseOrg as EventListener);
         window.addEventListener('openOrganizationModal', onOpenOrg as EventListener);
-        
+
         return () => {
             window.removeEventListener('closeProjectModal', onCloseProject as EventListener);
             window.removeEventListener('closeOrganizationModal', onCloseOrg as EventListener);
@@ -314,7 +338,7 @@ const CrisisDataDashboard = ({
     }
 
     // Extract data for use in component
-    const { stats, projectTypes, organizationsWithProjects, donorCountries: availableDonorCountries, investmentTypes: availableInvestmentTypes } = dashboardData;
+    const { stats, projectTypes, organizationsWithProjects, allOrganizations, donorCountries: availableDonorCountries, investmentTypes: availableInvestmentTypes } = dashboardData;
 
     // Ensure the organization type chart always shows all known types.
     // Get all types from the pre-generated organizations-with-types.json dictionary
@@ -351,8 +375,7 @@ const CrisisDataDashboard = ({
 
     // Generate dynamic filter description for Organizations & Projects section
     const getFilterDescription = () => {
-        const parts: string[] = [];
-        const hasFilters = combinedDonors.length > 0 || investmentTypes.length > 0 || searchQuery;
+        const hasFilters = combinedDonors.length > 0 || investmentTypes.length > 0 || appliedSearchQuery;
 
         if (!hasFilters) {
             return labels.filterDescription.showingAll
@@ -360,7 +383,9 @@ const CrisisDataDashboard = ({
                 .replace('{organizations}', stats.dataProviders.toString());
         }
 
-        // Start with donor countries - list all selected donors with proper sentence punctuation
+        const parts: string[] = [];
+
+        // Start with donor countries
         if (combinedDonors.length > 0) {
             let donorString: string;
             if (combinedDonors.length === 1) {
@@ -371,23 +396,38 @@ const CrisisDataDashboard = ({
                 donorString = `${combinedDonors.slice(0, -1).join(', ')} & ${combinedDonors[combinedDonors.length - 1]}`;
             }
 
-            parts.push(donorString);
-            // Use singular/plural verb form: single donor -> 'funds' (from labels), multiple donors -> 'Fund' (capitalized per request)
-            const verb = combinedDonors.length === 1 ? labels.filterDescription.funds : 'fund';
-            parts.push(verb);
+            // Get all donors from the currently filtered organizations
+            const currentDonors = new Set<string>();
+            organizationsWithProjects.forEach(org => {
+                org.donorCountries.forEach(country => currentDonors.add(country));
+            });
+            
+            // Calculate other donors (current donors minus the selected ones)
+            const otherDonorsCount = currentDonors.size - combinedDonors.length;
+            
+            if (otherDonorsCount > 0) {
+                const otherDonorLabel = otherDonorsCount !== 1 ? labels.filterDescription.donors : labels.filterDescription.donor;
+                const verb = combinedDonors.length === 1 ? 'co-finances' : 'co-finance';
+                parts.push(`${donorString}, together with ${otherDonorsCount} other ${otherDonorLabel}, ${verb}`);
+            } else {
+                const verb = combinedDonors.length === 1 ? 'funds' : 'co-finance';
+                parts.push(`${donorString} ${verb}`);
+            }
         } else {
-            parts.push(labels.filterDescription.showing);
+            parts.push('Showing');
         }
 
+        // Add organization count
+        const organizationLabel = stats.dataProviders !== 1 ? 'organizations' : 'organization';
+        parts.push(`${stats.dataProviders} ${organizationLabel}, providing`);
+
         // Add project count
-        const projectLabel = stats.dataProjects !== 1
-            ? labels.filterDescription.projects
-            : labels.filterDescription.project;
+        const projectLabel = stats.dataProjects !== 1 ? 'assets' : 'asset';
         parts.push(`${stats.dataProjects} ${projectLabel}`);
 
-        // Add investment types with full display names (list all selected types)
+        // Add investment types
         if (investmentTypes.length > 0) {
-            parts.push(labels.filterDescription.in);
+            parts.push('in');
             // Map selected type keys to display names where possible
             const displayTypes = investmentTypes.map(type => {
                 const typeKey = Object.keys(labels.investmentTypes).find(key =>
@@ -397,13 +437,12 @@ const CrisisDataDashboard = ({
                 return typeKey ? labels.investmentTypes[typeKey as keyof typeof labels.investmentTypes] : type;
             });
 
-            parts.push(displayTypes.join(', '));
+            parts.push(displayTypes.join(' & '));
         }
 
-        // Add search query
-        if (searchQuery) {
-            parts.push(labels.filterDescription.relatingTo);
-            parts.push(`"${searchQuery}"`);
+        // Add search query (only if it's been applied)
+        if (appliedSearchQuery) {
+            parts.push(`relating to "${appliedSearchQuery}"`);
         }
 
         return parts.join(' ');
@@ -417,7 +456,7 @@ const CrisisDataDashboard = ({
                     <div className="flex items-start justify-between mb-0">
                         <div className="flex items-center gap-3">
                             <h1 className="text-3xl bg-gradient-to-r from-slate-800 to-slate-600 bg-clip-text text-transparent">
-                                <span className="font-bold">{labels.header.title}</span> {labels.header.subtitle}
+                                <span className="qanelas-title">{labels.header.title}</span> <span className="font-roboto">{labels.header.subtitle}</span>
                             </h1>
                             <TooltipProvider>
                                 <TooltipUI>
@@ -450,10 +489,10 @@ const CrisisDataDashboard = ({
                                 size="sm"
                                 onClick={() => window.open(process.env.NEXT_PUBLIC_FEEDBACK_FORM_URL)}
                                 className="bg-slate-50/50 border-slate-200 hover:var(--brand-bg-light) hover:border-[var(--brand-primary)] hover:text-[var(--brand-primary)]"
-                                title="Give Feedback on Data Set"
+                                title={labels.header.feedbackTooltip}
                             >
                                 <MessageCircle className="w-4 h-4 mr-2" />
-                                {'Give Feedback'}
+                                {labels.header.feedbackButton}
                             </Button>
                             <Button
                                 variant="outline"
@@ -461,10 +500,10 @@ const CrisisDataDashboard = ({
                                 onClick={handleExportPDF}
                                 disabled={exportLoading}
                                 className="hidden bg-slate-50/50 border-slate-200 hover:var(--brand-bg-light) hover:border-[var(--brand-primary)] hover:text-[var(--brand-primary)]"
-                                title="Export current view as PDF"
+                                title={labels.header.exportTooltip}
                             >
                                 <FileDown className="w-4 h-4 mr-2" />
-                                {exportLoading ? 'Exporting...' : 'Export as One-Pager'}
+                                {exportLoading ? labels.header.exportButtonLoading : labels.header.exportButton}
                             </Button>
                             <Button
                                 variant="outline"
@@ -474,7 +513,7 @@ const CrisisDataDashboard = ({
                                     ? 'bg-green-50 border-green-200 text-green-700'
                                     : 'hover:var(--brand-bg-light)'
                                     }`}
-                                title="Copy link to clipboard"
+                                title={labels.ui.copyToClipboard}
                             >
                                 <Share2 className="w-7 h-4 mr-2" />
                                 {shareSuccess ? labels.header.shareButtonSuccess : labels.header.shareButton}
@@ -491,6 +530,7 @@ const CrisisDataDashboard = ({
 
                     {/* Statistics Cards */}
                     <div className="grid grid-cols-1 md:grid-cols-3 gap-[var(--spacing-section)]">
+
                         <StatCard
                             icon={<Globe style={{ color: 'var(--brand-primary)' }} />}
                             title={labels.stats.donorCountries.title}
@@ -499,6 +539,7 @@ const CrisisDataDashboard = ({
                             colorScheme="amber"
                             tooltip={labels.stats.donorCountries.tooltip}
                         />
+                        
                         <StatCard
                             icon={<Building2 style={{ color: 'var(--brand-primary)' }} />}
                             title={labels.stats.dataProviders.title}
@@ -507,6 +548,7 @@ const CrisisDataDashboard = ({
                             colorScheme="amber"
                             tooltip={labels.stats.dataProviders.tooltip}
                         />
+                        
                         <StatCard
                             icon={<Database style={{ color: 'var(--brand-primary)' }} />}
                             title={labels.stats.dataProjects.title}
@@ -578,7 +620,7 @@ const CrisisDataDashboard = ({
                                                                     ? labels.filters.donorPlaceholder
                                                                     : combinedDonors.length === 1
                                                                         ? combinedDonors[0]
-                                                                        : `${combinedDonors.length} donors`
+                                                                        : `${combinedDonors.length} ${labels.filterDescription.donors}`
                                                                 }
                                                             </span>
                                                         </div>
@@ -591,16 +633,36 @@ const CrisisDataDashboard = ({
                                                     className="w-52 max-h-[300px] overflow-y-auto bg-white border border-slate-200 shadow-lg"
                                                     onCloseAutoFocus={(e) => e.preventDefault()}
                                                 >
+                                                    {/* Search Input */}
+                                                    <div className="p-2">
+                                                        <div className="relative">
+                                                            <Search className="absolute left-2 top-1/2 -translate-y-1/2 h-3 w-3 text-slate-400" />
+                                                            <Input
+                                                                placeholder={labels.filters.donorSearchPlaceholder}
+                                                                value={donorSearchQuery}
+                                                                onChange={(e) => setDonorSearchQuery(e.target.value)}
+                                                                className="h-7 pl-7 text-xs bg-slate-50 border-slate-200 focus:bg-white"
+                                                                onKeyDown={(e) => e.stopPropagation()}
+                                                            />
+                                                        </div>
+                                                    </div>
+                                                    
                                                     {combinedDonors.length > 0 && (
                                                         <>
                                                             <DropdownMenuLabel className="text-xs font-semibold text-[var(--brand-primary)] flex items-center gap-1.5">
                                                                 <Filter className="h-3 w-3" />
-                                                                {combinedDonors.length} selected
+                                                                {combinedDonors.length} {labels.filters.selected}
                                                             </DropdownMenuLabel>
                                                             <DropdownMenuSeparator />
                                                         </>
                                                     )}
-                                                    {availableDonorCountries.map((donor) => (
+                                                    
+                                                    <div className="max-h-[200px] overflow-y-auto">
+                                                        {availableDonorCountries
+                                                            .filter(donor => 
+                                                                donor.toLowerCase().includes(donorSearchQuery.toLowerCase())
+                                                            )
+                                                            .map((donor) => (
                                                         <DropdownMenuCheckboxItem
                                                             key={donor}
                                                             checked={combinedDonors.includes(donor)}
@@ -617,7 +679,8 @@ const CrisisDataDashboard = ({
                                                         >
                                                             {donor}
                                                         </DropdownMenuCheckboxItem>
-                                                    ))}
+                                                            ))}
+                                                    </div>
                                                 </DropdownMenuContent>
                                             </DropdownMenu>
 
@@ -647,7 +710,7 @@ const CrisisDataDashboard = ({
                                                                                 ? labels.investmentTypes[typeKey as keyof typeof labels.investmentTypes]
                                                                                 : type;
                                                                         })()
-                                                                        : `${investmentTypes.length} types`
+                                                                        : `${investmentTypes.length} ${labels.filterDescription.types}`
                                                                 }
                                                             </span>
                                                         </div>
@@ -665,7 +728,7 @@ const CrisisDataDashboard = ({
                                                         <>
                                                             <DropdownMenuLabel className="text-xs font-semibold text-[var(--brand-primary)] flex items-center gap-1.5">
                                                                 <Filter className="h-3 w-3" />
-                                                                {investmentTypes.length} selected
+                                                                {investmentTypes.length} {labels.filters.selected}
                                                             </DropdownMenuLabel>
                                                             <DropdownMenuSeparator />
                                                         </>
@@ -719,12 +782,12 @@ const CrisisDataDashboard = ({
                                             <Button
                                                 variant="outline"
                                                 onClick={onResetFilters}
-                                                disabled={!(combinedDonors.length > 0 || investmentTypes.length > 0 || searchQuery)}
-                                                className={`h-10 px-4 font-medium transition-all ${combinedDonors.length > 0 || investmentTypes.length > 0 || searchQuery
+                                                disabled={!(combinedDonors.length > 0 || investmentTypes.length > 0 || appliedSearchQuery)}
+                                                className={`h-10 px-4 font-medium transition-all ${combinedDonors.length > 0 || investmentTypes.length > 0 || appliedSearchQuery
                                                     ? 'border-slate-300 bg-slate-100 text-slate-700 hover:bg-slate-200 hover:border-slate-300'
                                                     : 'bg-slate-50/50 border-slate-200 text-slate-400 hover:bg-slate-100 hover:border-slate-300'
                                                     }`}
-                                                title="Reset all filters"
+                                                title={labels.ui.resetFilters}
                                             >
                                                 <RotateCcw className="w-4 h-4" />
                                             </Button>
@@ -735,7 +798,9 @@ const CrisisDataDashboard = ({
                                     </p>
                                     <CardContent>
                                         <div className="space-y-2">
-                                            {organizationsWithProjects.map((org) => {
+                                            {organizationsWithProjects
+                                                .sort((a, b) => a.organizationName.localeCompare(b.organizationName))
+                                                .map((org) => {
                                                 const isExpanded = expandedOrgs.has(org.id);
 
                                                 return (
@@ -827,7 +892,7 @@ const CrisisDataDashboard = ({
                                                                                                 }}
                                                                                                 className="inline-flex items-center px-2 py-1 rounded-md text-xs font-medium bg-slate-000 text-slate-900 hover:bg-slate-100 transition-colors cursor-pointer"
                                                                                             >
-                                                                                                +{sortedCountries.length - 5} more
+                                                                                                +{sortedCountries.length - 5} {labels.filters.showMore}
                                                                                             </div>
                                                                                         )}
                                                                                         {isCountriesExpanded && sortedCountries.length > 5 && (
@@ -840,7 +905,7 @@ const CrisisDataDashboard = ({
                                                                                                 }}
                                                                                                 className="inline-flex items-center px-2 py-1 rounded-md text-xs font-medium bg-slate-000 text-slate-900 hover:bg-slate-100 transition-colors cursor-pointer"
                                                                                             >
-                                                                                                Show less
+                                                                                                {labels.filters.showLess}
                                                                                             </div>
                                                                                         )}
                                                                                     </>
@@ -850,7 +915,7 @@ const CrisisDataDashboard = ({
                                                                     </div>
                                                                 </div>
                                                                 <div className="text-sm text-slate-600">
-                                                                    {org.projects.length} product{org.projects.length !== 1 ? 's' : ''}
+                                                                    {org.projects.length} {org.projects.length === 1 ? labels.product.singular : labels.product.plural}
                                                                 </div>
                                                             </div>
                                                         </CollapsibleTrigger>
@@ -915,7 +980,7 @@ const CrisisDataDashboard = ({
                                 icon={<Database className="text-slate-600" />}
                                 data={projectTypesChartData}
                                 barColor="var(--brand-primary-lighter)"
-                                footnote="Note: A project can be assigned to multiple types."
+                                footnote={labels.ui.chartFootnote}
                             />
                         </div>
                     </div>
@@ -956,40 +1021,36 @@ const CrisisDataDashboard = ({
                 <ProjectModal
                     project={selectedProject.project}
                     organizationName={selectedProject.organizationName}
-                    allOrganizations={organizationsWithProjects}
+                    allOrganizations={allOrganizations}
                     loading={projectModalLoading}
                 />
             )}
             {/* Organization Modal */}
             {selectedOrganization && (
                 (() => {
-                    // Try to find a matching record in the organizations table using multiple possible fields
+                    // Find matching record in organizations table using clean field names
                     const match = organizationsTable.find(rec => {
                         const full = (rec.fields['Org Full Name'] as string) || '';
                         const short = (rec.fields['Org Short Name'] as string) || '';
-                        const altFull = (rec.fields['Org Fullname'] as string) || '';
                         const normalized = (name: string) => name.replace(/\s+/g, ' ').trim().toLowerCase();
                         const target = normalized(selectedOrganization.organizationName || selectedOrganization.id);
-                        return [full, short, altFull].some(s => normalized(String(s || '')) === target);
+                        return [full, short].some(s => normalized(String(s || '')) === target);
                     });
 
-                    // Build a fallback orgRecord and include resolved project names from organizationsWithProjects
-                    const orgProjects = organizationsWithProjects.find(o => o.id === selectedOrganization.id);
-                    const projectNames = orgProjects ? orgProjects.projects.map(p => p.projectName) : [];
-
+                    // Use the matched record directly, or create a minimal fallback
                     const orgRecord = match || {
                         id: selectedOrganization.id,
                         fields: {
                             'Org Full Name': selectedOrganization.organizationName,
-                            'Org Donor Countries (based on Agency)': selectedOrganization.donorCountries || [],
-                            // Provide a friendly field containing project names so the modal can show names instead of IDs
-                            'Provided Data Ecosystem Projects (Names)': projectNames
                         }
                     };
 
                     return (
                         <OrganizationModal
                             organization={orgRecord}
+                            projectNameMap={projectNameMap}
+                            orgProjectsMap={orgProjectsMap}
+                            orgDonorCountriesMap={orgDonorCountriesMap}
                             loading={false}
                         />
                     );
