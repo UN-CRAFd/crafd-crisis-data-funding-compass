@@ -1,11 +1,16 @@
 {
   "header": {
-    "title": "Crisis Data",
+    "title": "CRISIS DATA",
     "subtitle": "Funding Compass",
     "betaBadge": "Beta Version",
     "betaTooltip": "This beta version is based on publicly available information from the respective organizations and transparency portals like IATI. Updates are ongoing. If you have any feedback, please use the form in the upper right corner.",
     "shareButton": "Share",
-    "shareButtonSuccess": "Copied!"
+    "shareButtonSuccess": "Copied!",
+    "feedbackButton": "Give Feedback",
+    "feedbackTooltip": "Give Feedback on Data Set",
+    "exportButton": "Export as One-Pager",
+    "exportButtonLoading": "Exporting...",
+    "exportTooltip": "Export current view as PDF"
   },
   "stats": {
     "dataProviders": {
@@ -15,8 +20,8 @@
     },
     "dataProjects": {
       "title": "What funds are used for",
-      "label": "Products",
-      "tooltip": "Essential products that enable partners to anticipate, prevent, and respond to crises around the world."
+      "label": "Assets",
+      "tooltip": "Essential assets that enable partners to anticipate, prevent, and respond to crises around the world."
     },
     "donorCountries": {
       "title": "Where funds are from",
@@ -25,13 +30,17 @@
     }
   },
   "filters": {
-    "searchPlaceholder": "Search organizations & products...",
+    "searchPlaceholder": "Search organizations & assets...",
     "donorPlaceholder": "Select donor(s)...",
-    "typePlaceholder": "Select type(s)..."
+    "typePlaceholder": "Select type(s)...",
+    "donorSearchPlaceholder": "Search donors...",
+    "selected": "selected",
+    "showMore": "more",
+    "showLess": "Show less"
   },
   "sections": {
     "organizationsAndProjects": "Funding Registry",
-    "projectCategories": "Products by Type",
+    "projectCategories": "Assets by Type",
     "organizationTypes": "Provider Organizations by Type"
   },
   "investmentTypes": {
@@ -42,19 +51,28 @@
     "standards": "Standards & Coordination",
     "learning": "Learning & Exchange"
   },
+  "product": {
+    "singular": "asset",
+    "plural": "assets",
+    "capitalizedSingular": "Asset",
+    "capitalizedPlural": "Assets"
+  },
   "projectDetails": {
-    "donorCountries": "Product Donor Countries",
+    "donorCountries": "Asset Donor",
     "investmentTypes": "Investment Types",
     "notSpecified": "Not specified"
   },
   "filterDescription": {
-    "showingAll": "Showing all {projects} products from {organizations} organizations",
+    "showingAll": "Showing all {organizations} organizations, providing {projects} assets",
     "showing": "Showing",
     "funds": "funds",
-    "project": "product",
-    "projects": "products",
+    "project": "asset",
+    "projects": "assets",
     "in": "in",
-    "relatingTo": "relating to"
+    "relatingTo": "relating to",
+    "donor": "donor",
+    "donors": "donors",
+    "types": "types"
   },
   "footer": {
     "dataGatheredBy": "Data gathered by the",
@@ -66,5 +84,10 @@
   },
   "error": {
     "message": "Failed to load dashboard data."
+  },
+  "ui": {
+    "resetFilters": "Reset all filters",
+    "copyToClipboard": "Copy link to clipboard",
+    "chartFootnote": "Note: A project can be assigned to multiple types."
   }
 }

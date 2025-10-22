@@ -50,6 +50,7 @@ const CrisisDataDashboardWrapper = ({ logoutButton }: { logoutButton?: React.Rea
         organizationTypes: OrganizationTypeData[];
         organizationProjects: OrganizationProjectData[];
         organizationsWithProjects: OrganizationWithProjects[];
+        allOrganizations: OrganizationWithProjects[]; // Add unfiltered organizations
         donorCountries: string[];
         investmentTypes: string[];
     } | null>(null);
@@ -165,6 +166,7 @@ const CrisisDataDashboardWrapper = ({ logoutButton }: { logoutButton?: React.Rea
             combinedDonors={combinedDonors}
             investmentTypes={investmentTypes}
             searchQuery={localSearchQuery}
+            appliedSearchQuery={searchQuery}
             onDonorsChange={handleDonorsChange}
             onTypesChange={handleTypesChange}
             onSearchChange={handleSearchChange}
