@@ -360,6 +360,14 @@ export default function OrganizationModal({ organization, loading }: Organizatio
 
                 {/* Metadata */}
 
+                {/* Organization Focus - Investment Types from Projects */}
+                {(() => {
+                    const orgProjects = ORG_PROJECTS_MAP[organization.id];
+                    if (!orgProjects || orgProjects.length === 0) return null;
+
+                    return <ModalOrganizationFocus projects={orgProjects} SubHeader={SubHeader} />;
+                })()}
+
                 {/* Projects funded (as chips) */}
                 {(() => {
                     const projectFieldCandidates = [
@@ -397,23 +405,26 @@ export default function OrganizationModal({ organization, loading }: Organizatio
                         projectsList = (raw as unknown[])
                             .map(r => String(r).trim())
                             .map(s => (PROJECT_NAME_BY_ID[s] ? PROJECT_NAME_BY_ID[s] : s))
-                            .filter(Boolean);
+                            .filter(Boolean)
+                            .sort((a, b) => a.localeCompare(b)); // Sort alphabetically
                     } else if (typeof raw === 'string') {
                         // Split string into items; items might be IDs or names
-                        projectsList = splitSafe(raw as string).map(s => (PROJECT_NAME_BY_ID[s] ? PROJECT_NAME_BY_ID[s] : s));
+                        projectsList = splitSafe(raw as string)
+                            .map(s => (PROJECT_NAME_BY_ID[s] ? PROJECT_NAME_BY_ID[s] : s))
+                            .sort((a, b) => a.localeCompare(b)); // Sort alphabetically
                     }
 
                     if (projectsList.length === 0) return null;
 
                     return (
-                        <div className="mt-6">
-                            <SubHeader>Assets</SubHeader>
-                            <div className="flex flex-wrap gap-2">
+                        <div className="mt-4">
+                            <SubHeader>Provided Assets</SubHeader>
+                            <div className="flex flex-col gap-2">
                                 {projectsList.map((p, i) => (
-                                    <div key={i} className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-gray-100 text-gray-800 text-sm">
-                                        <Folder className="w-4 h-4 text-gray-500" />
+                                    <span key={i} className="inline-flex items-center gap-2 px-3 py-1.5 rounded-md text-sm font-medium bg-slate-100 text-slate-600">
+                                        <Folder className="w-4 h-4 text-slate-500" />
                                         <span className="truncate max-w-xs">{p}</span>
-                                    </div>
+                                    </span>
                                 ))}
                             </div>
                         </div>
@@ -423,11 +434,11 @@ export default function OrganizationModal({ organization, loading }: Organizatio
                 {/* Organization Donors - Show all unique country badges */}
                 {(() => {
                     // Get donor countries from the field - try multiple possible field names
-                    const donorCountries = fields['Org Donor Countries (based on Agency)'] 
+                    const donorCountries = fields['Org Donor Countries (based on Agency)']
                         || fields['donor_countries']
                         || fields['Org Donor Countries']
                         || fields['Donor Countries'];
-                    
+
                     // Convert to array and ensure uniqueness
                     let donors: string[] = [];
                     if (Array.isArray(donorCountries)) {
@@ -443,8 +454,8 @@ export default function OrganizationModal({ organization, loading }: Organizatio
                             <SubHeader>Organization Donors</SubHeader>
                             <div className="flex flex-wrap gap-2">
                                 {donors.map((country) => (
-                                    <span 
-                                        key={country} 
+                                    <span
+                                        key={country}
                                         className="inline-flex items-center px-3 py-1.5 rounded-md text-sm font-medium bg-slate-100 text-slate-600"
                                     >
                                         {country}
@@ -453,14 +464,6 @@ export default function OrganizationModal({ organization, loading }: Organizatio
                             </div>
                         </div>
                     );
-                })()}
-
-                {/* Organization Focus - Investment Types from Projects */}
-                {(() => {
-                    const orgProjects = ORG_PROJECTS_MAP[organization.id];
-                    if (!orgProjects || orgProjects.length === 0) return null;
-                    
-                    return <ModalOrganizationFocus projects={orgProjects} SubHeader={SubHeader} />;
                 })()}
 
                 {/* Flexible spacer to push notes to bottom */}
