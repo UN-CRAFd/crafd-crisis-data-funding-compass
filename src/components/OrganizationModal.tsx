@@ -12,58 +12,22 @@ interface OrganizationModalProps {
         createdTime?: string;
         fields: Record<string, unknown>;
     } | null;
+    // Centralized data maps from data.ts for consistent data access
+    projectNameMap?: Record<string, string>;
+    orgProjectsMap?: Record<string, Array<{ investmentTypes: string[] }>>;
     // onClose removed for serializability; modal will dispatch a CustomEvent 'closeOrganizationModal'
     loading: boolean;
 }
 
 // Import HeadquartersCountry component - comment out import to disable HQ display
 // import HeadquartersCountry from './HeadquartersCountry';
-// Load nested organizations so we can resolve project IDs to names when needed
-import organizationsNestedRaw from '../../public/data/organizations-nested.json';
 
-// Build a map from project id -> project name for quick lookup
-const PROJECT_NAME_BY_ID: Record<string, string> = ((): Record<string, string> => {
-    try {
-        const map: Record<string, string> = {};
-        const orgs: any[] = organizationsNestedRaw as any;
-        orgs.forEach(org => {
-            (org.projects || []).forEach((p: any) => {
-                if (p && p.id) {
-                    const name = (p.fields && (p.fields['Project/Product Name'] || p.fields['Project Name'])) || p.name || '';
-                    map[p.id] = String(name || '').trim() || p.id;
-                }
-            });
-        });
-        return map;
-    } catch (e) {
-        return {};
-    }
-})();
-
-// Build a map from organization id -> projects with investment types
-const ORG_PROJECTS_MAP: Record<string, Array<{ investmentTypes: string[] }>> = ((): Record<string, Array<{ investmentTypes: string[] }>> => {
-    try {
-        const map: Record<string, Array<{ investmentTypes: string[] }>> = {};
-        const orgs: any[] = organizationsNestedRaw as any;
-        orgs.forEach(org => {
-            if (org && org.id) {
-                const projects = (org.projects || []).map((p: any) => {
-                    const fields = p?.fields || {};
-                    const investmentTypes = fields['Investment Type(s)'] || fields['Investment Types'] || [];
-                    return {
-                        investmentTypes: Array.isArray(investmentTypes) ? investmentTypes : []
-                    };
-                });
-                map[org.id] = projects;
-            }
-        });
-        return map;
-    } catch (e) {
-        return {};
-    }
-})();
-
-export default function OrganizationModal({ organization, loading }: OrganizationModalProps): React.ReactElement {
+export default function OrganizationModal({
+    organization,
+    projectNameMap = {},
+    orgProjectsMap = {},
+    loading
+}: OrganizationModalProps): React.ReactElement {
     const [isVisible, setIsVisible] = useState(false);
     const [isClosing, setIsClosing] = useState(false);
     const modalRef = useRef<HTMLDivElement>(null);
@@ -267,7 +231,7 @@ export default function OrganizationModal({ organization, loading }: Organizatio
             if (typeof val === 'object') {
                 try {
                     return <pre className="text-xs text-gray-700 whitespace-pre-wrap">{JSON.stringify(val, null, 2)}</pre>;
-                } catch (e) {
+                } catch {
                     return <span className="text-gray-700">{String(val)}</span>;
                 }
             }
@@ -278,7 +242,7 @@ export default function OrganizationModal({ organization, loading }: Organizatio
                 if (s.startsWith('http://') || s.startsWith('https://') || s.startsWith('mailto:') || s.startsWith('<http')) {
                     const cleaned = s.replace(/^<|>$/g, '');
                     return (
-                        <a href={cleaned} target="_blank" rel="noopener noreferrer" className="text-[var(--brand-primary)] hover:underline">
+                        <a href={cleaned} target="_blank" rel="noopener noreferrer" className="text-(--brand-primary) hover:underline">
                             {cleaned}
                         </a>
                     );
@@ -368,7 +332,7 @@ export default function OrganizationModal({ organization, loading }: Organizatio
 
                 {/* Organization Focus - Investment Types from Projects */}
                 {(() => {
-                    const orgProjects = ORG_PROJECTS_MAP[organization.id];
+                    const orgProjects = orgProjectsMap[organization.id];
                     if (!orgProjects || orgProjects.length === 0) return null;
 
                     return <ModalOrganizationFocus projects={orgProjects} SubHeader={SubHeader} />;
@@ -410,13 +374,13 @@ export default function OrganizationModal({ organization, loading }: Organizatio
                         // If it's already an array of project names or IDs, map IDs to names when possible
                         projectsList = (raw as unknown[])
                             .map(r => String(r).trim())
-                            .map(s => (PROJECT_NAME_BY_ID[s] ? PROJECT_NAME_BY_ID[s] : s))
+                            .map(s => (projectNameMap[s] ? projectNameMap[s] : s))
                             .filter(Boolean)
                             .sort((a, b) => a.localeCompare(b)); // Sort alphabetically
                     } else if (typeof raw === 'string') {
                         // Split string into items; items might be IDs or names
                         projectsList = splitSafe(raw as string)
-                            .map(s => (PROJECT_NAME_BY_ID[s] ? PROJECT_NAME_BY_ID[s] : s))
+                            .map(s => (projectNameMap[s] ? projectNameMap[s] : s))
                             .sort((a, b) => a.localeCompare(b)); // Sort alphabetically
                     }
 

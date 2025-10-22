@@ -20,7 +20,7 @@ import { Input } from '@/components/ui/input';
 import { TooltipContent, TooltipProvider, TooltipTrigger, Tooltip as TooltipUI } from '@/components/ui/tooltip';
 import labels from '@/config/labels.json';
 import type { DashboardStats, OrganizationProjectData, OrganizationTypeData, OrganizationWithProjects, ProjectData, ProjectTypeData } from '../types/airtable';
-import { calculateOrganizationTypesFromOrganizationsWithProjects } from '../lib/data';
+import { calculateOrganizationTypesFromOrganizationsWithProjects, buildProjectNameMap, buildOrgProjectsMap, getNestedOrganizationsForModals } from '../lib/data';
 import { exportDashboardToPDF } from '../lib/exportPDF';
 import { Building2, ChevronDown, ChevronRight, Database, DatabaseBackup, FileDown, Filter, FolderDot, FolderOpenDot, Globe, Info, MessageCircle, RotateCcw, Search, Share2 } from 'lucide-react';
 import organizationsTableRaw from '../../public/data/organizations-table.json';
@@ -226,7 +226,25 @@ const CrisisDataDashboard = ({
     const [exportLoading, setExportLoading] = useState(false);
     const [selectedOrganization, setSelectedOrganization] = useState<OrganizationWithProjects | null>(null);
     // Load static organizations table for modal details
-    const organizationsTable: Array<{ id: string; createdTime?: string; fields: Record<string, unknown> }> = organizationsTableRaw as any;
+    const organizationsTable: Array<{ id: string; createdTime?: string; fields: Record<string, unknown> }> = organizationsTableRaw as Array<{ id: string; createdTime?: string; fields: Record<string, unknown> }>;
+    
+    // Centralized data maps for modals
+    const [projectNameMap, setProjectNameMap] = useState<Record<string, string>>({});
+    const [orgProjectsMap, setOrgProjectsMap] = useState<Record<string, Array<{ investmentTypes: string[] }>>>({});
+    
+    // Load nested organization data for modal maps
+    useEffect(() => {
+        const loadModalData = async () => {
+            try {
+                const nestedOrgs = await getNestedOrganizationsForModals();
+                setProjectNameMap(buildProjectNameMap(nestedOrgs));
+                setOrgProjectsMap(buildOrgProjectsMap(nestedOrgs));
+            } catch (error) {
+                console.error('Error loading modal data:', error);
+            }
+        };
+        loadModalData();
+    }, []);
 
     // Listen for modal close events dispatched from client modal components (avoids passing functions as props)
     useEffect(() => {
@@ -1003,6 +1021,8 @@ const CrisisDataDashboard = ({
                     return (
                         <OrganizationModal
                             organization={orgRecord}
+                            projectNameMap={projectNameMap}
+                            orgProjectsMap={orgProjectsMap}
                             loading={false}
                         />
                     );

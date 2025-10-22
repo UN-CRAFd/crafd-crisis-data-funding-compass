@@ -83,7 +83,7 @@ function convertToOrganizationWithProjects(org: NestedOrganization): Organizatio
                 const aFields = (a && a.fields) || {};
                 const c = aFields['Country Name'] || aFields['Country'] || aFields['Agency Associated Country'];
                 if (Array.isArray(c)) {
-                    c.forEach((cc: any) => { if (typeof cc === 'string' && cc.trim()) projectDonorCountriesSet.add(cc.trim()); });
+                    c.forEach((cc: unknown) => { if (typeof cc === 'string' && cc.trim()) projectDonorCountriesSet.add(cc.trim()); });
                 } else if (typeof c === 'string' && c.trim()) {
                     projectDonorCountriesSet.add(c.trim());
                 }
@@ -406,4 +406,57 @@ export interface DashboardStats {
     donorCountries: number;
     dataProviders: number;
     dataProjects: number;
+}
+
+// Helper functions for modal data processing
+
+/**
+ * Build a map from project ID to project name for quick lookup
+ * Used by modals to resolve project IDs to human-readable names
+ */
+export function buildProjectNameMap(organizations: NestedOrganization[]): Record<string, string> {
+    const map: Record<string, string> = {};
+    
+    organizations.forEach(org => {
+        (org.projects || []).forEach(project => {
+            if (project && project.id) {
+                const fields = project.fields || {};
+                const name = (fields['Project/Product Name'] || fields['Project Name']) as string || '';
+                map[project.id] = String(name || '').trim() || project.id;
+            }
+        });
+    });
+    
+    return map;
+}
+
+/**
+ * Build a map from organization ID to its projects with investment types
+ * Used by organization modal to display project investment types
+ */
+export function buildOrgProjectsMap(organizations: NestedOrganization[]): Record<string, Array<{ investmentTypes: string[] }>> {
+    const map: Record<string, Array<{ investmentTypes: string[] }>> = {};
+    
+    organizations.forEach(org => {
+        if (org && org.id) {
+            const projects = (org.projects || []).map(project => {
+                const fields = project?.fields || {};
+                const investmentTypes = fields['Investment Type(s)'] || fields['Investment Types'] || [];
+                return {
+                    investmentTypes: Array.isArray(investmentTypes) ? investmentTypes : []
+                };
+            });
+            map[org.id] = projects;
+        }
+    });
+    
+    return map;
+}
+
+/**
+ * Get nested organization data for modal use
+ * Returns the raw nested organization structure
+ */
+export async function getNestedOrganizationsForModals(): Promise<NestedOrganization[]> {
+    return loadNestedOrganizations();
 }
