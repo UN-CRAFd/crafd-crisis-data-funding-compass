@@ -196,7 +196,7 @@ export default function ProjectModal({ project, allOrganizations, loading }: Pro
                 {/* Description with inline Learn more link */}
 
                 {project.projectDescription && (
-                    <p className="text-base font-normal text-gray-700 leading-relaxed font-roboto mb-6">
+                    <p className="text-base font-normal text-gray-700 leading-relaxed font-roboto mb-2">
                         {project.projectDescription}
                         {projectWebsite && projectWebsite.trim() !== '' && (
                             <>
@@ -236,7 +236,7 @@ export default function ProjectModal({ project, allOrganizations, loading }: Pro
                 )}
 
                 {/* Separator line before metadata sections */}
-                <div className="border-t border-gray-200 my-6"></div>
+                <div className="border-t border-gray-200 mt-4 mb-6"></div>
 
                 {/* Provider Organizations */}
                 {supportingOrganizations.length > 0 && (
