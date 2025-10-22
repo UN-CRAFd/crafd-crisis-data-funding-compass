@@ -133,22 +133,6 @@ export default function ProjectModal({ project, allOrganizations, loading }: Pro
         </h3>
     );
 
-    // Reusable field label component - Smallest text for labels
-    const FieldLabel = ({ children }: { children: React.ReactNode }) => (
-        <span className="font-medium text-[#333333] text-xs leading-5 font-roboto uppercase tracking-wide">{children}</span>
-    );
-
-    // Reusable field value wrapper component
-    const FieldValue = ({ children }: { children: React.ReactNode }) => <div className="mt-0.5">{children}</div>;
-
-    // Complete field component combining label and value
-    const Field = ({ label, children }: { label: string; children: React.ReactNode }) => (
-        <div>
-            <FieldLabel>{label}</FieldLabel>
-            <FieldValue>{children}</FieldValue>
-        </div>
-    );
-
     const renderHeader = () => {
         if (loading) {
             return (
@@ -276,20 +260,26 @@ export default function ProjectModal({ project, allOrganizations, loading }: Pro
                     </div>
                 )}
 
-                {/* Asset Type */}
-                <div className="mb-6">
-                    <SubHeader>Asset Type</SubHeader>
-                    <div className="space-y-4">
-                        {/* CRAF'd Funding Status */}
-                        {project.isCrafdFunded && (
-                            <Field label="CRAF'd Funded">
-                                <span className={`inline-flex items-center px-3 py-1 rounded-md text-sm font-medium ${project.isCrafdFunded === 'YES' ? 'bg-green-100 text-green-700' : 'bg-gray-100 text-gray-700'}`}>
-                                    {project.isCrafdFunded === 'YES' ? 'Yes' : 'No'}
+                {/* Asset Type - Investment Types */}
+                {project.investmentTypes && project.investmentTypes.length > 0 && (
+                    <div className="mb-6">
+                        <SubHeader>Asset Type</SubHeader>
+                        <div className="flex flex-wrap gap-2">
+                            {project.investmentTypes.map((type, index) => (
+                                <span
+                                    key={index}
+                                    className="inline-flex items-center px-3 py-1.5 rounded-md text-sm font-semibold"
+                                    style={{
+                                        backgroundColor: 'var(--badge-other-bg)',
+                                        color: 'var(--badge-other-text)'
+                                    }}
+                                >
+                                    {type}
                                 </span>
-                            </Field>
-                        )}
+                            ))}
+                        </div>
                     </div>
-                </div>
+                )}
 
                 {/* Product Donors */}
                 {project.donorCountries && project.donorCountries.length > 0 && (
