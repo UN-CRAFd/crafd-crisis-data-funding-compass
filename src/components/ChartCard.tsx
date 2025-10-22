@@ -113,7 +113,7 @@ const ChartCard = React.memo(function ChartCard({ title, icon, data, barColor, f
                             style={{ transform: 'translateX(1px)', backgroundColor: resolvedColor }}
                             onMouseEnter={handleMouseEnter}
                             onMouseLeave={handleMouseLeave}
-                            isAnimationActive={false}
+                            isAnimationActive={true}
                         >
                             {data.map((entry, index) => (
                                 // Slightly vary lightness for each bar to create visual separation
