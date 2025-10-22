@@ -2,6 +2,7 @@
 
 import { ExternalLink, Folder, X } from 'lucide-react';
 import { useCallback, useEffect, useRef, useState } from 'react';
+import ModalOrganizationFocus from './ModalOrganizationFocus';
 
 interface OrganizationModalProps {
     // Accept the full organization record coming from `public/data/organizations-table.json`
@@ -32,6 +33,29 @@ const PROJECT_NAME_BY_ID: Record<string, string> = ((): Record<string, string> =
                     map[p.id] = String(name || '').trim() || p.id;
                 }
             });
+        });
+        return map;
+    } catch (e) {
+        return {};
+    }
+})();
+
+// Build a map from organization id -> projects with investment types
+const ORG_PROJECTS_MAP: Record<string, Array<{ investmentTypes: string[] }>> = ((): Record<string, Array<{ investmentTypes: string[] }>> => {
+    try {
+        const map: Record<string, Array<{ investmentTypes: string[] }>> = {};
+        const orgs: any[] = organizationsNestedRaw as any;
+        orgs.forEach(org => {
+            if (org && org.id) {
+                const projects = (org.projects || []).map((p: any) => {
+                    const fields = p?.fields || {};
+                    const investmentTypes = fields['Investment Type(s)'] || fields['Investment Types'] || [];
+                    return {
+                        investmentTypes: Array.isArray(investmentTypes) ? investmentTypes : []
+                    };
+                });
+                map[org.id] = projects;
+            }
         });
         return map;
     } catch (e) {
@@ -429,6 +453,14 @@ export default function OrganizationModal({ organization, loading }: Organizatio
                             </div>
                         </div>
                     );
+                })()}
+
+                {/* Organization Focus - Investment Types from Projects */}
+                {(() => {
+                    const orgProjects = ORG_PROJECTS_MAP[organization.id];
+                    if (!orgProjects || orgProjects.length === 0) return null;
+                    
+                    return <ModalOrganizationFocus projects={orgProjects} SubHeader={SubHeader} />;
                 })()}
 
                 {/* Flexible spacer to push notes to bottom */}
