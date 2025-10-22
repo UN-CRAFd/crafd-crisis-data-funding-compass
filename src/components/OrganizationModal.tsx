@@ -1,6 +1,6 @@
 'use client';
 
-import { Building2, ExternalLink, X, Folder} from 'lucide-react';
+import { ExternalLink, X, Folder} from 'lucide-react';
 import { useCallback, useEffect, useRef, useState } from 'react';
 
 interface OrganizationModalProps {
@@ -136,14 +136,16 @@ export default function OrganizationModal({ organization, loading }: Organizatio
             <X className="h-3 w-3" />
         </button>
     );
-    // Reusable subheader component
+    // Reusable subheader component - Major sections (Assets, Funding) - smaller than main title
     const SubHeader = ({ children }: { children: React.ReactNode }) => (
-        <h3 className="text-lg font-qanelas-subtitle font-black text-slate-800 mb-3 uppercase">{children}</h3>
+        <h3 className="text-xl font-qanelas font-black text-[#333333] mb-3 uppercase tracking-wide leading-normal">
+            {children}
+        </h3>
     );
 
-    // Reusable field label component
+    // Reusable field label component - Smallest text for labels
     const FieldLabel = ({ children }: { children: React.ReactNode }) => (
-        <span className="font-medium text-gray-600 text-sm font-['Roboto']">{children}</span>
+        <span className="font-medium text-[#333333] text-xs leading-5 font-roboto uppercase tracking-wide">{children}</span>
     );
 
     // Reusable field value wrapper component
@@ -195,7 +197,8 @@ export default function OrganizationModal({ organization, loading }: Organizatio
 
         return (
             <div className="flex items-start justify-between gap-4">
-                <h2 className="text-xl sm:text-2xl lg:text-2xl font-bold text-gray-900 leading-tight flex-1 font-['Roboto']">
+                {/* Main title - Largest element in modal */}
+                <h2 className="text-3xl font-bold text-[#333333] leading-tight font-roboto">
                     {displayName}
                 </h2>
                 <CloseButton />
@@ -281,26 +284,27 @@ export default function OrganizationModal({ organization, loading }: Organizatio
         }
 
         return (
-            <div className="px-6 sm:px-8 pt-4 sm:pt-5 pb-6 sm:pb-8 space-y-6 font-['Roboto'] flex flex-col h-full">
-                {/* Description (if present) */}
+            <div className="px-6 sm:px-8 pt-4 sm:pt-5 pb-6 sm:pb-8 space-y-6 font-roboto flex flex-col h-full">
+                {/* Description - Roboto Default (18px, Regular) for readable body text */}
                 {typeof fields['Org Description'] === 'string' && String(fields['Org Description']).length > 0 && (
-                    <p className="text-gray-700 leading-normal text-base">{renderValue(String(fields['Org Description']))}</p>
+                    <p className="text-base font-normal text-[#333333] leading-relaxed font-roboto">
+                        {renderValue(String(fields['Org Description']))}
+                    </p>
                 )}
 
-                {/* Organization Type Bar */}
-                <div
-                    className="px-4 py-3 rounded-full bg-gray-100 border border-gray-200 mb-8"
-                >
-                    <div className="flex items-center gap-2">
-                        <Building2 className="h-4 w-4 text-gray-500" />
-                        <span className="text-sm font-medium text-gray-700">
-                            Organization Type:
-                        </span>
-                        <span className="text-sm text-gray-900">
-                            {orgType ? (renderValue(String(orgType)) ?? '') : <span className="text-gray-400">—</span>}
-                        </span>
+                {/* Organization Type */}
+                {orgType && (
+                    <div>
+                        {/* Field label - smaller than SubHeader, bigger than badge */}
+                        <h4 className="text-base font-qanelas font-black text-[#333333] mb-2 uppercase tracking-wide leading-normal">
+                            Organization Type
+                        </h4>
+                        {/* Badge - smallest text element */}
+                        <div className="inline-flex items-center px-3 py-1 rounded text-xs font-normal leading-snug text-[#333333] bg-transparent border border-slate-200 font-roboto">
+                            {orgType}
+                        </div>
                     </div>
-                </div>
+                )}
 
                 {/* Org HQ Country - Uncomment import and this line to enable */}
                 {/* {typeof fields['Org HQ Country'] === 'string' && (
