@@ -315,6 +315,21 @@ export default function OrganizationModal({ organization, loading }: Organizatio
                     </p>
                 )}
 
+                {/* Website button */}
+                {websiteValue && websiteValue.trim() !== '' && (
+                    <button
+                        type="button"
+                        onClick={() => {
+                            const cleaned = websiteValue.replace(/^<|>$/g, '');
+                            window.open(cleaned, '_blank', 'noopener,noreferrer');
+                        }}
+                        className="inline-flex items-center justify-center gap-2 px-4 py-2 rounded-full bg-(--brand-primary) text-white text-sm font-medium shadow hover:bg-(--brand-primary-dark) transition-colors w-fit"
+                    >
+                        <ExternalLink className="w-4 h-4" />
+                        <span>Visit Website</span>
+                    </button>
+                )}
+
                 {/* Organization Type */}
                 {orgType && (
                     <div>
@@ -349,7 +364,7 @@ export default function OrganizationModal({ organization, loading }: Organizatio
                                     const cleaned = websiteValue.replace(/^<|>$/g, '');
                                     window.open(cleaned, '_blank', 'noopener,noreferrer');
                                 }}
-                                className="mt-1 inline-flex items-center justify-center gap-2 px-4 py-2 rounded-full bg-[var(--brand-primary)] text-white text-sm font-medium shadow hover:bg-[var(--brand-primary-dark)] transition-colors"
+                                className="mt-1 inline-flex items-center justify-center gap-2 px-4 py-2 rounded-full bg-(--brand-primary) text-white text-sm font-medium shadow hover:bg-(--brand-primary-dark) transition-colors"
                             >
                                 <ExternalLink className="w-4 h-4" />
                                 <span className="flex items-center">Open Website</span>
@@ -467,13 +482,13 @@ export default function OrganizationModal({ organization, loading }: Organizatio
                 })()}
 
                 {/* Flexible spacer to push notes to bottom */}
-                <div className="flex-grow"></div>
+                <div className="grow"></div>
 
                 <div className="border-t border-gray-100 pt-4 mt-auto">
                     <div className="text-xs text-gray-400 uppercase tracking-wider font-medium mb-2">NOTES</div>
                     <div className="text-xs text-gray-500 leading-snug space-y-1">
                         <div className="flex items-start">
-                            <span className="text-gray-400 mr-2 flex-shrink-0">•</span>
+                            <span className="text-gray-400 mr-2 shrink-0">•</span>
                             <span>All insights are based on publicly accessible information and data.</span>
                         </div>
                     </div>
