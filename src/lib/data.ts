@@ -460,3 +460,19 @@ export function buildOrgProjectsMap(organizations: NestedOrganization[]): Record
 export async function getNestedOrganizationsForModals(): Promise<NestedOrganization[]> {
     return loadNestedOrganizations();
 }
+
+/**
+ * Build a map from organization ID to donor countries
+ * Used by modals to display organization donor countries
+ */
+export function buildOrgDonorCountriesMap(organizations: NestedOrganization[]): Record<string, string[]> {
+    const map: Record<string, string[]> = {};
+    
+    organizations.forEach(org => {
+        if (org && org.id) {
+            map[org.id] = getDonorCountries(org);
+        }
+    });
+    
+    return map;
+}
