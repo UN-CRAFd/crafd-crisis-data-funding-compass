@@ -492,14 +492,16 @@ const CrisisDataDashboard = ({
 
                     {/* Statistics Cards */}
                     <div className="grid grid-cols-1 md:grid-cols-3 gap-[var(--spacing-section)]">
+
                         <StatCard
-                            icon={<Database style={{ color: 'var(--brand-primary)' }} />}
-                            title={labels.stats.dataProjects.title}
-                            value={stats.dataProjects}
-                            label={labels.stats.dataProjects.label}
+                            icon={<Globe style={{ color: 'var(--brand-primary)' }} />}
+                            title={labels.stats.donorCountries.title}
+                            value={stats.donorCountries}
+                            label={labels.stats.donorCountries.label}
                             colorScheme="amber"
-                            tooltip={labels.stats.dataProjects.tooltip}
+                            tooltip={labels.stats.donorCountries.tooltip}
                         />
+                        
                         <StatCard
                             icon={<Building2 style={{ color: 'var(--brand-primary)' }} />}
                             title={labels.stats.dataProviders.title}
@@ -508,13 +510,14 @@ const CrisisDataDashboard = ({
                             colorScheme="amber"
                             tooltip={labels.stats.dataProviders.tooltip}
                         />
+                        
                         <StatCard
-                            icon={<Globe style={{ color: 'var(--brand-primary)' }} />}
-                            title={labels.stats.donorCountries.title}
-                            value={stats.donorCountries}
-                            label={labels.stats.donorCountries.label}
+                            icon={<Database style={{ color: 'var(--brand-primary)' }} />}
+                            title={labels.stats.dataProjects.title}
+                            value={stats.dataProjects}
+                            label={labels.stats.dataProjects.label}
                             colorScheme="amber"
-                            tooltip={labels.stats.donorCountries.tooltip}
+                            tooltip={labels.stats.dataProjects.tooltip}
                         />
 
                     </div>
