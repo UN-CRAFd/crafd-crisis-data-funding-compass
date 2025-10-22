@@ -50,6 +50,7 @@ const CrisisDataDashboardWrapper = ({ logoutButton }: { logoutButton?: React.Rea
         organizationTypes: OrganizationTypeData[];
         organizationProjects: OrganizationProjectData[];
         organizationsWithProjects: OrganizationWithProjects[];
+        allOrganizations: OrganizationWithProjects[]; // Add unfiltered organizations
         donorCountries: string[];
         investmentTypes: string[];
     } | null>(null);

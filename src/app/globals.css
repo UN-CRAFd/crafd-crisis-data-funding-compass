@@ -139,9 +139,25 @@
   --shadow-xs: none !important;
 }
 
-/* Force Roboto font globally */
-* {
+/* Force Roboto font globally, but allow explicit font overrides */
+*:not(.font-qanelas):not([class*="font-qanelas"]) {
   font-family: Roboto, ui-sans-serif, system-ui, sans-serif !important;
+}
+
+/* Ensure qanelas font works properly */
+.font-qanelas, .font-qanelas * {
+  font-family: Qanelas, ui-sans-serif, system-ui, sans-serif !important;
+}
+
+/* Custom Qanelas font weight classes */
+.qanelas-title {
+  font-family: Qanelas, ui-sans-serif, system-ui, sans-serif !important;
+  font-weight: 800; /* ExtraBold for title */
+}
+
+.qanelas-subtitle {
+  font-family: Qanelas, ui-sans-serif, system-ui, sans-serif !important;
+  font-weight: 700; /* Heavy for subtitle - lightest available */
 }
 
 /* Prevent layout shifts by always showing scrollbar */
