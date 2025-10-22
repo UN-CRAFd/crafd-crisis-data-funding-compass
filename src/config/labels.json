@@ -54,7 +54,7 @@
     "notSpecified": "Not specified"
   },
   "filterDescription": {
-    "showingAll": "Showing all {projects} assets from {organizations} organizations",
+    "showingAll": "Showing all {organizations} organizations, providing {projects} assets",
     "showing": "Showing",
     "funds": "funds",
     "project": "asset",

@@ -73,7 +73,8 @@ interface CrisisDataDashboardProps {
     error: string | null;
     combinedDonors: string[];
     investmentTypes: string[];
-    searchQuery: string;
+    searchQuery: string; // Current input value
+    appliedSearchQuery: string; // Applied search query (from URL)
     onDonorsChange: (values: string[]) => void;
     onTypesChange: (values: string[]) => void;
     onSearchChange: (value: string) => void;
@@ -208,6 +209,7 @@ const CrisisDataDashboard = ({
     combinedDonors,
     investmentTypes,
     searchQuery,
+    appliedSearchQuery,
     onDonorsChange,
     onTypesChange,
     onSearchChange,
@@ -353,7 +355,7 @@ const CrisisDataDashboard = ({
 
     // Generate dynamic filter description for Organizations & Projects section
     const getFilterDescription = () => {
-        const hasFilters = combinedDonors.length > 0 || investmentTypes.length > 0 || searchQuery;
+        const hasFilters = combinedDonors.length > 0 || investmentTypes.length > 0 || appliedSearchQuery;
 
         if (!hasFilters) {
             return labels.filterDescription.showingAll
@@ -418,9 +420,9 @@ const CrisisDataDashboard = ({
             parts.push(displayTypes.join(' & '));
         }
 
-        // Add search query
-        if (searchQuery) {
-            parts.push(`relating to "${searchQuery}"`);
+        // Add search query (only if it's been applied)
+        if (appliedSearchQuery) {
+            parts.push(`relating to "${appliedSearchQuery}"`);
         }
 
         return parts.join(' ');
@@ -760,8 +762,8 @@ const CrisisDataDashboard = ({
                                             <Button
                                                 variant="outline"
                                                 onClick={onResetFilters}
-                                                disabled={!(combinedDonors.length > 0 || investmentTypes.length > 0 || searchQuery)}
-                                                className={`h-10 px-4 font-medium transition-all ${combinedDonors.length > 0 || investmentTypes.length > 0 || searchQuery
+                                                disabled={!(combinedDonors.length > 0 || investmentTypes.length > 0 || appliedSearchQuery)}
+                                                className={`h-10 px-4 font-medium transition-all ${combinedDonors.length > 0 || investmentTypes.length > 0 || appliedSearchQuery
                                                     ? 'border-slate-300 bg-slate-100 text-slate-700 hover:bg-slate-200 hover:border-slate-300'
                                                     : 'bg-slate-50/50 border-slate-200 text-slate-400 hover:bg-slate-100 hover:border-slate-300'
                                                     }`}
