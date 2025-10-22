@@ -218,6 +218,7 @@ const CrisisDataDashboard = ({
     // UI state (not related to routing)
     const [expandedOrgs, setExpandedOrgs] = useState<Set<string>>(new Set());
     const [expandedCountries, setExpandedCountries] = useState<Set<string>>(new Set());
+    const [donorSearchQuery, setDonorSearchQuery] = useState<string>('');
 
     // Project modal state
     const [selectedProject, setSelectedProject] = useState<{ project: ProjectData; organizationName: string } | null>(null);
@@ -595,6 +596,20 @@ const CrisisDataDashboard = ({
                                                     className="w-52 max-h-[300px] overflow-y-auto bg-white border border-slate-200 shadow-lg"
                                                     onCloseAutoFocus={(e) => e.preventDefault()}
                                                 >
+                                                    {/* Search Input */}
+                                                    <div className="p-2">
+                                                        <div className="relative">
+                                                            <Search className="absolute left-2 top-1/2 -translate-y-1/2 h-3 w-3 text-slate-400" />
+                                                            <Input
+                                                                placeholder="Search donors..."
+                                                                value={donorSearchQuery}
+                                                                onChange={(e) => setDonorSearchQuery(e.target.value)}
+                                                                className="h-7 pl-7 text-xs bg-slate-50 border-slate-200 focus:bg-white"
+                                                                onKeyDown={(e) => e.stopPropagation()}
+                                                            />
+                                                        </div>
+                                                    </div>
+                                                    
                                                     {combinedDonors.length > 0 && (
                                                         <>
                                                             <DropdownMenuLabel className="text-xs font-semibold text-[var(--brand-primary)] flex items-center gap-1.5">
@@ -604,7 +619,13 @@ const CrisisDataDashboard = ({
                                                             <DropdownMenuSeparator />
                                                         </>
                                                     )}
-                                                    {availableDonorCountries.map((donor) => (
+                                                    
+                                                    <div className="max-h-[200px] overflow-y-auto">
+                                                        {availableDonorCountries
+                                                            .filter(donor => 
+                                                                donor.toLowerCase().includes(donorSearchQuery.toLowerCase())
+                                                            )
+                                                            .map((donor) => (
                                                         <DropdownMenuCheckboxItem
                                                             key={donor}
                                                             checked={combinedDonors.includes(donor)}
@@ -621,7 +642,8 @@ const CrisisDataDashboard = ({
                                                         >
                                                             {donor}
                                                         </DropdownMenuCheckboxItem>
-                                                    ))}
+                                                            ))}
+                                                    </div>
                                                 </DropdownMenuContent>
                                             </DropdownMenu>
 
