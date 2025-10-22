@@ -158,19 +158,30 @@ const ChartCard = React.memo(function ChartCard({ title, icon, data, barColor, f
                                     const w = typeof width === 'number' ? width : parseFloat(width);
                                     const h = typeof height === 'number' ? height : parseFloat(height);
 
+                                    // Calculate text width (rough estimate: 8px per character)
+                                    const textWidth = String(value).length * 8;
+                                    const minBarWidth = textWidth + 16; // Add some padding
+
+                                    // Position inside bar if it's wide enough, otherwise outside
+                                    const isInside = w > minBarWidth;
+                                    const textX = isInside ? xPos + w - 8 : xPos + w + 8;
+                                    const textAnchor = isInside ? 'end' : 'start';
+                                    const textColor = '#333333'
+
                                     return (
                                         <text
-                                            x={xPos + w + 8}
+                                            x={textX}
                                             y={yPos + h / 2}
-                                            fill="#64748b"
+                                            fill={textColor}
                                             fontSize={13}
                                             fontWeight={600}
-                                            textAnchor="start"
+                                            textAnchor={textAnchor}
                                             dominantBaseline="middle"
                                             style={{ 
                                                 transition: 'none',
                                                 opacity: 1,
-                                                zIndex: 1001
+                                                zIndex: 1001,
+                                                textShadow: 'none'
                                             }}
                                         >
                                             {value}
