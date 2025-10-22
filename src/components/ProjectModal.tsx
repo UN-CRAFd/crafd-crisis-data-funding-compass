@@ -291,31 +291,27 @@ export default function ProjectModal({ project, allOrganizations, loading }: Pro
                     </div>
                 </div>
 
-                {/* Funding */}
-                <div className="mb-6">
-                    <SubHeader>Funding</SubHeader>
-                    <div className="space-y-4">
-                        {/* Product Donors */}
-                        {project.donorCountries && project.donorCountries.length > 0 ? (
-                            <Field label="Product Donors">
-                                <div className="flex flex-wrap gap-1 mt-1">
-                                    {project.donorCountries.map((country, index) => (
-                                        <span
-                                            key={index}
-                                            className="inline-block px-2 py-1 rounded-md text-xs font-medium mr-1 mb-1 bg-blue-100 text-blue-800"
-                                        >
-                                            {country}
-                                        </span>
-                                    ))}
-                                </div>
-                            </Field>
-                        ) : (
-                            <Field label="Product Donors">
-                                <span className="text-sm text-gray-500">No donor information available</span>
-                            </Field>
-                        )}
+                {/* Product Donors */}
+                {project.donorCountries && project.donorCountries.length > 0 && (
+                    <div className="mb-6">
+                        <div className="mb-3 flex items-center gap-2">
+                            <h3 className="text-xl font-qanelas font-black text-[#333333] uppercase tracking-wide leading-normal">
+                                Product Donors
+                            </h3>
+                            <span className="text-lg font-normal text-gray-500 tabular-nums">({project.donorCountries.length})</span>
+                        </div>
+                        <div className="flex flex-wrap gap-2">
+                            {project.donorCountries.map((country, index) => (
+                                <span
+                                    key={index}
+                                    className="inline-flex items-center px-3 py-1.5 rounded-md text-sm font-medium bg-slate-100 text-slate-600"
+                                >
+                                    {country}
+                                </span>
+                            ))}
+                        </div>
                     </div>
-                </div>
+                )}
             </div>
         );
     };
