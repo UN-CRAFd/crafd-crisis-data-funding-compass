@@ -134,49 +134,91 @@ function applyFilters(
     investmentTypes?: string[];
   }
 ): OrganizationWithProjects[] {
-  return organizations.filter(org => {
-    // Search filter
-    if (filters.searchQuery && filters.searchQuery.trim()) {
-      const query = filters.searchQuery.toLowerCase().trim();
-      const matchesOrg = org.organizationName.toLowerCase().includes(query) ||
+  return organizations.map(org => {
+    const hasSearchFilter = filters.searchQuery && filters.searchQuery.trim();
+    const hasDonorFilter = filters.donorCountries && filters.donorCountries.length > 0;
+    const hasTypeFilter = filters.investmentTypes && filters.investmentTypes.length > 0;
+
+    // Step 1: Check if organization matches search filter
+    let orgMatchesSearch = false;
+    if (hasSearchFilter) {
+      const query = filters.searchQuery!.toLowerCase().trim();
+      orgMatchesSearch = org.organizationName.toLowerCase().includes(query) ||
                         org.type.toLowerCase().includes(query);
-      const matchesProjects = org.projects.some(project =>
-        project.projectName.toLowerCase().includes(query) ||
-        project.description.toLowerCase().includes(query)
-      );
-      
-      if (!matchesOrg && !matchesProjects) {
-        return false;
-      }
     }
+
+    // Step 2: Determine which projects should be visible
+    let visibleProjects: ProjectData[] = [];
     
-    // Donor countries filter
-    if (filters.donorCountries && filters.donorCountries.length > 0) {
-      const hasMatchingDonor = org.donorCountries.some(country =>
-        filters.donorCountries!.includes(country)
-      );
-      if (!hasMatchingDonor) {
-        return false;
+    // Helper function to check if project matches current filters
+    const projectMatchesFilters = (project: ProjectData): boolean => {
+      // Search filter check
+      if (hasSearchFilter) {
+        const query = filters.searchQuery!.toLowerCase().trim();
+        const projectMatchesSearch = project.projectName.toLowerCase().includes(query) ||
+                                   project.description.toLowerCase().includes(query);
+        if (!projectMatchesSearch) return false;
       }
-    }
-    
-    // Investment types filter
-    if (filters.investmentTypes && filters.investmentTypes.length > 0) {
-      const hasMatchingType = org.projects.some(project =>
-        project.investmentTypes.some(type =>
+
+      // Type filter check
+      if (hasTypeFilter) {
+        const projectMatchesType = project.investmentTypes.some(type =>
           filters.investmentTypes!.some(filterType =>
             type.toLowerCase().includes(filterType.toLowerCase()) ||
             filterType.toLowerCase().includes(type.toLowerCase())
           )
-        )
-      );
-      if (!hasMatchingType) {
-        return false;
+        );
+        if (!projectMatchesType) return false;
+      }
+
+      return true;
+    };
+
+    // Check if organization meets donor requirements (gatekeeper)
+    const orgMeetsDonorRequirement = !hasDonorFilter || 
+      filters.donorCountries!.every(selectedDonor => org.donorCountries.includes(selectedDonor));
+
+    if (!orgMeetsDonorRequirement) {
+      // Organization doesn't meet donor requirements -> no projects can show
+      visibleProjects = [];
+    } else if (orgMatchesSearch || !hasSearchFilter) {
+      // Organization qualifies directly (matches search or no search filter)
+      // Apply project-level filters if they exist, otherwise show all projects
+      visibleProjects = (hasTypeFilter || hasSearchFilter) 
+        ? org.projects.filter(projectMatchesFilters)
+        : [...org.projects];
+    } else {
+      // Organization doesn't match search, but projects might qualify individually
+      // Only possible if there are project-level filters active
+      visibleProjects = (hasTypeFilter || hasSearchFilter) 
+        ? org.projects.filter(projectMatchesFilters)
+        : [];
+    }
+
+    // Step 3: Decide if organization should be shown
+    let shouldShowOrg = false;
+    
+    if (orgMeetsDonorRequirement) {
+      if (!hasTypeFilter) {
+        // No type filter: show org if it matches search (or no search filter) 
+        shouldShowOrg = orgMatchesSearch || !hasSearchFilter;
+      } else {
+        // Type filter active: only show if org has visible projects (projects that match type+search)
+        shouldShowOrg = visibleProjects.length > 0;
       }
     }
-    
-    return true;
-  });
+
+    if (!shouldShowOrg) {
+      return null;
+    }
+
+    // Return organization with visible projects
+    return {
+      ...org,
+      projects: visibleProjects,
+      projectCount: visibleProjects.length
+    };
+  }).filter((org): org is OrganizationWithProjects => org !== null);
 }
 
 // Calculate dashboard statistics
@@ -187,9 +229,11 @@ function calculateDashboardStats(organizations: OrganizationWithProjects[]): Das
   
   organizations.forEach(org => {
     org.donorCountries.forEach(country => donorCountries.add(country));
-    // Deduplicate projects by ID to avoid counting the same project multiple times
+    // Deduplicate projects by ID and name to avoid counting the same project multiple times
     org.projects.forEach(project => {
-      uniqueProjects.add(project.projectName);
+      // Use both ID and name for better deduplication
+      const projectKey = `${project.id}-${project.projectName}`;
+      uniqueProjects.add(projectKey);
     });
   });
   
@@ -202,23 +246,36 @@ function calculateDashboardStats(organizations: OrganizationWithProjects[]): Das
 
 // Calculate project types for chart
 function calculateProjectTypes(organizations: OrganizationWithProjects[], allKnownInvestmentTypes: string[]): ProjectTypeData[] {
-  const typeCounts = new Map<string, number>();
+  // Use Map of Sets to deduplicate projects within each investment type
+  const typeProjectSets = new Map<string, Set<string>>();
   
   // Initialize with all known investment types
   allKnownInvestmentTypes.forEach(type => {
-    typeCounts.set(type, 0);
+    typeProjectSets.set(type, new Set<string>());
   });
   
   organizations.forEach(org => {
     org.projects.forEach(project => {
+      // Create unique project identifier
+      const projectKey = `${project.id}-${project.projectName}`;
+      
       project.investmentTypes.forEach(type => {
-        typeCounts.set(type, (typeCounts.get(type) || 0) + 1);
+        // Add project to the set for this type (automatically deduplicates)
+        if (typeProjectSets.has(type)) {
+          typeProjectSets.get(type)!.add(projectKey);
+        } else {
+          // Handle investment types not in the known list
+          const newSet = new Set<string>();
+          newSet.add(projectKey);
+          typeProjectSets.set(type, newSet);
+        }
       });
     });
   });
   
-  return Array.from(typeCounts.entries())
-    .map(([name, count]) => ({ name, count }))
+  // Convert sets to counts
+  return Array.from(typeProjectSets.entries())
+    .map(([name, projectSet]) => ({ name, count: projectSet.size }))
     .sort((a, b) => b.count - a.count);
 }
 
