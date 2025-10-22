@@ -36,10 +36,20 @@ const ModalOrganizationFocus: React.FC<ModalOrganizationFocusProps> = ({ project
                 {investmentTypeCounts.map(({ type, count }) => (
                     <span
                         key={type}
-                        className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-md text-sm font-medium bg-indigo-50 text-indigo-700"
+                        className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-md text-sm font-semibold"
+                        style={{
+                            backgroundColor: 'var(--badge-other-bg)',
+                            color: 'var(--badge-other-text)'
+                        }}
                     >
                         <span>{type}</span>
-                        <span className="inline-flex items-center justify-center w-5 h-5 text-xs font-bold rounded-full bg-indigo-200 text-indigo-800">
+                        <span 
+                            className="inline-flex items-center justify-center w-5 h-5 text-xs font-bold rounded-full"
+                            style={{
+                                backgroundColor: 'var(--badge-other-text)',
+                                color: 'var(--badge-other-bg)'
+                            }}
+                        >
                             {count}
                         </span>
                     </span>
