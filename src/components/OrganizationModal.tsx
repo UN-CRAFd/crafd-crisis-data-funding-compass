@@ -417,7 +417,12 @@ export default function OrganizationModal({
 
                         return (
                             <div>
-                                <SubHeader>Organization Donors</SubHeader>
+                                <div className="mb-3 flex items-center gap-2">
+                                    <h3 className="text-xl font-qanelas font-black text-[#333333] uppercase tracking-wide leading-normal">
+                                        Organization Donors
+                                    </h3>
+                                    <span className="text-lg font-normal text-gray-500 tabular-nums">({donorCountries.length})</span>
+                                </div>
                                 <div className="flex flex-wrap gap-2">
                                     {donorCountries.map((country) => (
                                         <span
