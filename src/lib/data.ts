@@ -155,8 +155,7 @@ function applyFilters(
       // Search filter check
       if (hasSearchFilter) {
         const query = filters.searchQuery!.toLowerCase().trim();
-        const projectMatchesSearch = project.projectName.toLowerCase().includes(query) ||
-                                   project.description.toLowerCase().includes(query);
+        const projectMatchesSearch = project.projectName.toLowerCase().includes(query)
         if (!projectMatchesSearch) return false;
       }
 
@@ -181,27 +180,49 @@ function applyFilters(
     if (!orgMeetsDonorRequirement) {
       // Organization doesn't meet donor requirements -> no projects can show
       visibleProjects = [];
-    } else if (orgMatchesSearch || !hasSearchFilter) {
-      // Organization qualifies directly (matches search or no search filter)
-      // Apply project-level filters if they exist, otherwise show all projects
-      visibleProjects = (hasTypeFilter || hasSearchFilter) 
-        ? org.projects.filter(projectMatchesFilters)
+    } else if (orgMatchesSearch) {
+      // Organization matches search: show all its projects (apply type filter if exists)
+      visibleProjects = hasTypeFilter 
+        ? org.projects.filter(project => {
+            // Only apply type filter, skip search filter since org already matches
+            if (hasTypeFilter) {
+              return project.investmentTypes.some(type =>
+                filters.investmentTypes!.some(filterType =>
+                  type.toLowerCase().includes(filterType.toLowerCase()) ||
+                  filterType.toLowerCase().includes(type.toLowerCase())
+                )
+              );
+            }
+            return true;
+          })
+        : [...org.projects];
+    } else if (!hasSearchFilter) {
+      // No search filter: apply type filter if exists, otherwise show all projects
+      visibleProjects = hasTypeFilter 
+        ? org.projects.filter(project => {
+            return project.investmentTypes.some(type =>
+              filters.investmentTypes!.some(filterType =>
+                type.toLowerCase().includes(filterType.toLowerCase()) ||
+                filterType.toLowerCase().includes(type.toLowerCase())
+              )
+            );
+          })
         : [...org.projects];
     } else {
-      // Organization doesn't match search, but projects might qualify individually
-      // Only possible if there are project-level filters active
-      visibleProjects = (hasTypeFilter || hasSearchFilter) 
-        ? org.projects.filter(projectMatchesFilters)
-        : [];
+      // Organization doesn't match search, check individual projects
+      visibleProjects = org.projects.filter(projectMatchesFilters);
     }
 
     // Step 3: Decide if organization should be shown
     let shouldShowOrg = false;
     
     if (orgMeetsDonorRequirement) {
-      if (!hasTypeFilter) {
-        // No type filter: show org if it matches search (or no search filter) 
-        shouldShowOrg = orgMatchesSearch || !hasSearchFilter;
+      if (!hasTypeFilter && !hasSearchFilter) {
+        // No filters except donor: show all orgs that meet donor requirement
+        shouldShowOrg = true;
+      } else if (!hasTypeFilter && hasSearchFilter) {
+        // Only search filter: show org if it matches search OR has projects matching search
+        shouldShowOrg = orgMatchesSearch || visibleProjects.length > 0;
       } else {
         // Type filter active: only show if org has visible projects (projects that match type+search)
         shouldShowOrg = visibleProjects.length > 0;
