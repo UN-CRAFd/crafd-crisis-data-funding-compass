@@ -33,7 +33,7 @@ const STYLES = {
     cardGlassLight: "!border-0 bg-white/70 backdrop-blur-sm p-1 rounded-md shadow-none",
 
     // Typography - Unified section headers
-    sectionHeader: "flex items-center gap-2 text-lg font-qanelas font-black text-slate-800 mb-0 mt-0 uppercase",
+    sectionHeader: "flex items-center gap-2 text-lg font-qanelas-subtitle font-black text-slate-800 mb-0 mt-0 uppercase",
     statValue: "text-5xl font-bold bg-clip-text text-transparent leading-none",
     statLabel: "text-base font-medium mt-1",
     sectionLabel: "text-xs font-medium text-slate-600 mb-0",
@@ -418,7 +418,7 @@ const CrisisDataDashboard = ({
                     <div className="flex items-start justify-between mb-0">
                         <div className="flex items-center gap-3">
                             <h1 className="text-3xl bg-gradient-to-r from-slate-800 to-slate-600 bg-clip-text text-transparent">
-                                <span className="qanelas-title">{labels.header.title}</span> <span className="font-roboto">{labels.header.subtitle}</span>
+                                <span className="qanelas-subtitle">{labels.header.title}</span> <span className="font-roboto">{labels.header.subtitle}</span>
                             </h1>
                             <TooltipProvider>
                                 <TooltipUI>

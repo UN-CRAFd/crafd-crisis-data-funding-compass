@@ -5,7 +5,7 @@ import { Bar, BarChart, CartesianGrid, Cell, LabelList, ResponsiveContainer, XAx
 // Chart-specific styles
 const CHART_STYLES = {
     cardGlass: "!border-0 bg-white/80 backdrop-blur-sm",
-    sectionHeader: "flex items-center gap-2 text-lg font-qanelas font-black text-slate-800 mb-0 mt-0 uppercase",
+    sectionHeader: "flex items-center gap-2 text-lg font-qanelas-subtitle font-black text-slate-800 mb-0 mt-0 uppercase",
 } as const;
 
 interface SectionHeaderProps {
