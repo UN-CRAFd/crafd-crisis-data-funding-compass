@@ -15,8 +15,8 @@
     },
     "dataProjects": {
       "title": "What funds are used for",
-      "label": "Products",
-      "tooltip": "Essential products that enable partners to anticipate, prevent, and respond to crises around the world."
+      "label": "Assets",
+      "tooltip": "Essential assets that enable partners to anticipate, prevent, and respond to crises around the world."
     },
     "donorCountries": {
       "title": "Where funds are from",
@@ -25,13 +25,13 @@
     }
   },
   "filters": {
-    "searchPlaceholder": "Search organizations & products...",
+    "searchPlaceholder": "Search organizations & assets...",
     "donorPlaceholder": "Select donor(s)...",
     "typePlaceholder": "Select type(s)..."
   },
   "sections": {
     "organizationsAndProjects": "Funding Registry",
-    "projectCategories": "Products by Type",
+    "projectCategories": "Assets by Type",
     "organizationTypes": "Provider Organizations by Type"
   },
   "investmentTypes": {
@@ -42,17 +42,23 @@
     "standards": "Standards & Coordination",
     "learning": "Learning & Exchange"
   },
+  "product": {
+    "singular": "asset",
+    "plural": "assets",
+    "capitalizedSingular": "Asset",
+    "capitalizedPlural": "Assets"
+  },
   "projectDetails": {
-    "donorCountries": "Product Donor Countries",
+    "donorCountries": "Asset Donor",
     "investmentTypes": "Investment Types",
     "notSpecified": "Not specified"
   },
   "filterDescription": {
-    "showingAll": "Showing all {projects} products from {organizations} organizations",
+    "showingAll": "Showing all {projects} assets from {organizations} organizations",
     "showing": "Showing",
     "funds": "funds",
-    "project": "product",
-    "projects": "products",
+    "project": "asset",
+    "projects": "assets",
     "in": "in",
     "relatingTo": "relating to"
   },

@@ -853,7 +853,7 @@ const CrisisDataDashboard = ({
                                                                     </div>
                                                                 </div>
                                                                 <div className="text-sm text-slate-600">
-                                                                    {org.projects.length} product{org.projects.length !== 1 ? 's' : ''}
+                                                                    {org.projects.length} {org.projects.length === 1 ? labels.product.singular : labels.product.plural}
                                                                 </div>
                                                             </div>
                                                         </CollapsibleTrigger>
