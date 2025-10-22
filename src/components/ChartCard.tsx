@@ -142,7 +142,8 @@ const ChartCard = React.memo(function ChartCard({ title, icon, data, barColor, f
                                     style={{
                                         zIndex: hoveredIndex === index ? 1000 : 1,
                                         position: 'relative',
-                                        pointerEvents: 'all'
+                                        pointerEvents: 'all',
+                                        transform: 'translateX(1px)'
                                     }}
                                 />
                             ))}
