@@ -315,74 +315,6 @@ export default function OrganizationModal({ organization, loading }: Organizatio
                     />
                 )} */}
 
-
-                {/* Donor countries (if present) */}
-                {fields['Org Donor Countries (based on Agency)'] && Array.isArray(fields['Org Donor Countries (based on Agency)']) ? (
-                    <div>
-                        <SubHeader>Funding</SubHeader>
-                        <Field label="Organization Donor Countries">
-                            <div className="space-y-2">
-                                {(fields['Org Donor Countries (based on Agency)'] as unknown[]).map((country, i) => (
-                                    <div key={i} className="flex items-center gap-2">
-                                        <span className="text-gray-700">{String(country)}</span>
-                                    </div>
-                                ))}
-                            </div>
-                        </Field>
-                    </div>
-                ) : null}
-
-                {/* Funding donors (donor countries as badges) */}
-                {(() => {
-                    const donorFieldCandidates = [
-                        'Org Donor Countries (based on Agency)',
-                        'Org Donor Countries (based on Agency) (from Provider Org Full Name)',
-                        'Combined Donor Countries (Linked)',
-                        'Combined Donor Countries (Linked) (from Provider Org Full Name)'
-                    ];
-                    const raw = donorFieldCandidates.map(k => fields[k]).find(Boolean) as unknown | undefined;
-                    if (!raw) return null;
-
-                    // split by comma but avoid splitting within parentheses or quotes
-                    const splitSafe = (s: string) => {
-                        const out: string[] = [];
-                        let cur = '';
-                        let depth = 0;
-                        let inQuotes = false;
-                        let quoteChar = '';
-                        for (let i = 0; i < s.length; i++) {
-                            const ch = s[i];
-                            if ((ch === '"' || ch === "'") && !inQuotes) { inQuotes = true; quoteChar = ch; cur += ch; continue; }
-                            if (ch === quoteChar && inQuotes) { inQuotes = false; quoteChar = ''; cur += ch; continue; }
-                            if (ch === '(' && !inQuotes) { depth++; cur += ch; continue; }
-                            if (ch === ')' && !inQuotes) { depth--; cur += ch; continue; }
-                            if (ch === ',' && !inQuotes && depth === 0) { if (cur.trim()) out.push(cur.trim()); cur = ''; continue; }
-                            cur += ch;
-                        }
-                        if (cur.trim()) out.push(cur.trim());
-                        return out.map(x => x.replace(/^"|"$/g, '').replace(/^'|'$/g, '').trim()).filter(Boolean);
-                    };
-
-                    let donors: string[] = [];
-                    if (Array.isArray(raw)) donors = (raw as unknown[]).map(r => String(r).trim()).filter(Boolean);
-                    else if (typeof raw === 'string') donors = splitSafe(raw as string);
-
-                    if (donors.length === 0) return null;
-
-                    return (
-                        <div>
-                            <SubHeader>Funding donors</SubHeader>
-                            <div className="flex flex-wrap gap-2">
-                                {donors.map((d, i) => (
-                                    <span key={i} className="inline-flex items-center px-3 py-1 rounded-full bg-[var(--brand-bg-light)] text-[var(--brand-primary-dark)] text-sm">
-                                        {d}
-                                    </span>
-                                ))}
-                            </div>
-                        </div>
-                    );
-                })()}
-
                 {/* If website exists but description didn't show it, render a prominent Website button */}
                 {!fields['Org Description'] && websiteValue && websiteValue.trim() !== '' && (
                     <div>
@@ -458,6 +390,41 @@ export default function OrganizationModal({ organization, loading }: Organizatio
                                         <Folder className="w-4 h-4 text-gray-500" />
                                         <span className="truncate max-w-xs">{p}</span>
                                     </div>
+                                ))}
+                            </div>
+                        </div>
+                    );
+                })()}
+
+                {/* Organization Donors - Show all unique country badges */}
+                {(() => {
+                    // Get donor countries from the field - try multiple possible field names
+                    const donorCountries = fields['Org Donor Countries (based on Agency)'] 
+                        || fields['donor_countries']
+                        || fields['Org Donor Countries']
+                        || fields['Donor Countries'];
+                    
+                    // Convert to array and ensure uniqueness
+                    let donors: string[] = [];
+                    if (Array.isArray(donorCountries)) {
+                        // Use Set to ensure uniqueness, then sort alphabetically
+                        const uniqueDonors = new Set(donorCountries.map(d => String(d).trim()).filter(Boolean));
+                        donors = Array.from(uniqueDonors).sort();
+                    }
+
+                    if (donors.length === 0) return null;
+
+                    return (
+                        <div className="mt-4">
+                            <SubHeader>Organization Donors</SubHeader>
+                            <div className="flex flex-wrap gap-2">
+                                {donors.map((country) => (
+                                    <span 
+                                        key={country} 
+                                        className="inline-flex items-center px-3 py-1.5 rounded-md text-sm font-medium bg-slate-100 text-slate-600"
+                                    >
+                                        {country}
+                                    </span>
                                 ))}
                             </div>
                         </div>
