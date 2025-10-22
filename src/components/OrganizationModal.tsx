@@ -1,6 +1,6 @@
 'use client';
 
-import { ExternalLink, Folder, X } from 'lucide-react';
+import { ChevronDown, ChevronUp, ExternalLink, Folder, X } from 'lucide-react';
 import { useCallback, useEffect, useRef, useState } from 'react';
 import ModalOrganizationFocus from './ModalOrganizationFocus';
 
@@ -186,8 +186,8 @@ export default function OrganizationModal({
 
         return (
             <div className="flex items-start justify-between gap-8">
-                {/* Main title - Largest element in modal */}
-                <h2 className="text-3xl font-bold text-[#333333] leading-tight font-roboto">
+                {/* Main title - Responsive sizing */}
+                <h2 className="text-lg sm:text-xl md:text-xl lg:text-2xl font-bold text-[#333333] leading-tight font-roboto">
                     {displayName}
                 </h2>
                 <CloseButton />
@@ -278,27 +278,28 @@ export default function OrganizationModal({
                     </span>
                 )}
 
-                {/* Description */}
+                {/* Description with inline Learn more link */}
                 {typeof fields['Org Description'] === 'string' && String(fields['Org Description']).length > 0 && (
-                    <p className="text-base font-normal text-[#333333] leading-relaxed font-roboto mb-2">
-                        {renderValue(String(fields['Org Description']))}
+                    <p className="text-base font-normal text-gray-700 leading-relaxed font-roboto">
+                        {String(fields['Org Description'])}
+                        {websiteValue && websiteValue.trim() !== '' && (
+                            <>
+                                {' '}
+                                <a
+                                    href={websiteValue.replace(/^<|>$/g, '')}
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    className="font-semibold transition-colors underline underline-offset-2 whitespace-nowrap align-baseline"
+                                    style={{ color: 'var(--brand-primary)' }}
+                                    onMouseEnter={(e) => e.currentTarget.style.color = 'var(--brand-primary-dark)'}
+                                    onMouseLeave={(e) => e.currentTarget.style.color = 'var(--brand-primary)'}
+                                >
+                                    Learn more
+                                    <ExternalLink className="w-3.5 h-3.5 inline-block align-text-bottom ml-0.5" />
+                                </a>
+                            </>
+                        )}
                     </p>
-                )}
-
-                {/* Website link */}
-                {websiteValue && websiteValue.trim() !== '' && (
-                    <a
-                        href={websiteValue.replace(/^<|>$/g, '')}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="inline-flex items-center gap-2 text-base font-semibold transition-colors w-fit underline underline-offset-2 mb-4"
-                        style={{ color: 'var(--brand-primary)' }}
-                        onMouseEnter={(e) => e.currentTarget.style.color = 'var(--brand-primary-dark)'}
-                        onMouseLeave={(e) => e.currentTarget.style.color = 'var(--brand-primary)'}
-                    >
-                        <span>Learn more</span>
-                        <ExternalLink className="w-4 h-4" />
-                    </a>
                 )}
 
                 {/* Org HQ Country - Uncomment import and this line to enable */}
@@ -330,81 +331,112 @@ export default function OrganizationModal({
                     </div>
                 )}
 
-                {/* Metadata */}
+                {/* Separator line before metadata sections */}
+                <div className="border-t border-gray-200 mt-8 mb-4"></div>
 
-                {/* Organization Focus - Investment Types from Projects */}
-                {(() => {
-                    const orgProjects = orgProjectsMap[organization.id];
-                    if (!orgProjects || orgProjects.length === 0) return null;
+                {/* Metadata - Single column layout */}
+                <div className="space-y-8">
+                    {/* Organization Focus - Investment Types from Projects */}
+                    {(() => {
+                        const orgProjects = orgProjectsMap[organization.id];
+                        if (!orgProjects || orgProjects.length === 0) return null;
 
-                    return <ModalOrganizationFocus projects={orgProjects} SubHeader={SubHeader} />;
-                })()}
+                        return <ModalOrganizationFocus projects={orgProjects} SubHeader={SubHeader} />;
+                    })()}
 
-                {/* Provided Assets - Simple field access matching FIELDS_ORGANIZATIONS */}
-                {(() => {
-                    // Use the clean field name from FIELDS_ORGANIZATIONS: "Provided Data Ecosystem Projects"
-                    const providedProjects = fields['Provided Data Ecosystem Projects'];
+                    {/* Provided Assets - Simple field access matching FIELDS_ORGANIZATIONS */}
+                    {(() => {
+                        // Use the clean field name from FIELDS_ORGANIZATIONS: "Provided Data Ecosystem Projects"
+                        const providedProjects = fields['Provided Data Ecosystem Projects'];
 
-                    if (!providedProjects || (Array.isArray(providedProjects) && providedProjects.length === 0)) {
-                        return null;
-                    }
+                        if (!providedProjects || (Array.isArray(providedProjects) && providedProjects.length === 0)) {
+                            return null;
+                        }
 
-                    // Convert to array if needed
-                    let projectsList: string[] = [];
-                    if (Array.isArray(providedProjects)) {
-                        // Array of project IDs - resolve to names using projectNameMap
-                        projectsList = providedProjects
-                            .map(id => String(id).trim())
-                            .map(id => projectNameMap[id] || id)
-                            .filter(Boolean)
-                            .sort((a, b) => a.localeCompare(b));
-                    }
+                        // Convert to array if needed
+                        let projectsList: string[] = [];
+                        if (Array.isArray(providedProjects)) {
+                            // Array of project IDs - resolve to names using projectNameMap
+                            projectsList = providedProjects
+                                .map(id => String(id).trim())
+                                .map(id => projectNameMap[id] || id)
+                                .filter(Boolean)
+                                .sort((a, b) => a.localeCompare(b));
+                        }
 
-                    if (projectsList.length === 0) return null;
+                        if (projectsList.length === 0) return null;
 
-                    return (
-                        <div className="mt-8">
-                            <SubHeader>Provided Assets</SubHeader>
-                            <div className="flex flex-col gap-2">
-                                {projectsList.map((projectName, i) => (
-                                    <span key={i} className="inline-flex items-center gap-2 px-3 py-1.5 rounded-md text-sm font-medium bg-slate-100 text-slate-600">
-                                        <Folder className="w-4 h-4 text-slate-500" />
-                                        <span className="truncate max-w-xs">{projectName}</span>
-                                    </span>
-                                ))}
-                            </div>
-                        </div>
-                    );
-                })()}
+                        const showCollapsible = projectsList.length > 5;
+                        const [isExpanded, setIsExpanded] = useState(false);
+                        const displayedProjects = showCollapsible && !isExpanded ? projectsList.slice(0, 5) : projectsList;
 
-                {/* Organization Donors - Clean field access from centralized data */}
-                {(() => {
-                    // Get donor countries from the centralized map (computed from nested data)
-                    const donorCountries = orgDonorCountriesMap[organization.id] || [];
-
-                    if (donorCountries.length === 0) return null;
-
-                    return (
-                        <div className="mt-8">
-                            <SubHeader>Organization Donors</SubHeader>
-                            <div className="flex flex-wrap gap-2">
-                                {donorCountries.map((country) => (
-                                    <span
-                                        key={country}
-                                        className="inline-flex items-center px-3 py-1.5 rounded-md text-sm font-medium bg-slate-100 text-slate-600"
+                        return (
+                            <div>
+                                <div className="mb-3 flex items-center gap-2">
+                                    <h3 className="text-xl font-qanelas font-black text-[#333333] uppercase tracking-wide leading-normal">
+                                        Provided Assets
+                                    </h3>
+                                    <span className="text-lg font-normal text-gray-500 tabular-nums">({projectsList.length})</span>
+                                </div>
+                                <div className="flex flex-col gap-2">
+                                    {displayedProjects.map((projectName, i) => (
+                                        <span key={i} className="inline-flex items-center gap-2 px-3 py-1.5 rounded-md text-sm font-medium bg-slate-100 text-slate-600">
+                                            <Folder className="w-4 h-4 text-slate-500" />
+                                            <span className="truncate max-w-xs">{projectName}</span>
+                                        </span>
+                                    ))}
+                                </div>
+                                {showCollapsible && (
+                                    <button
+                                        onClick={() => setIsExpanded(!isExpanded)}
+                                        className="mt-2 inline-flex items-center gap-1 text-sm font-medium text-gray-600 hover:text-gray-800 transition-colors"
                                     >
-                                        {country}
-                                    </span>
-                                ))}
+                                        {isExpanded ? (
+                                            <>
+                                                <ChevronUp className="w-4 h-4" />
+                                                <span>Show less</span>
+                                            </>
+                                        ) : (
+                                            <>
+                                                <ChevronDown className="w-4 h-4" />
+                                                <span>Show {projectsList.length - 5} more</span>
+                                            </>
+                                        )}
+                                    </button>
+                                )}
                             </div>
-                        </div>
-                    );
-                })()}
+                        );
+                    })()}
+
+                    {/* Organization Donors - Clean field access from centralized data */}
+                    {(() => {
+                        // Get donor countries from the centralized map (computed from nested data)
+                        const donorCountries = orgDonorCountriesMap[organization.id] || [];
+
+                        if (donorCountries.length === 0) return null;
+
+                        return (
+                            <div>
+                                <SubHeader>Organization Donors</SubHeader>
+                                <div className="flex flex-wrap gap-2">
+                                    {donorCountries.map((country) => (
+                                        <span
+                                            key={country}
+                                            className="inline-flex items-center px-3 py-1.5 rounded-md text-sm font-medium bg-slate-100 text-slate-600"
+                                        >
+                                            {country}
+                                        </span>
+                                    ))}
+                                </div>
+                            </div>
+                        );
+                    })()}
+                </div>
 
                 {/* Flexible spacer to push notes to bottom */}
-                <div className="grow"></div>
+                <div className="grow min-h-8"></div>
 
-                <div className="border-t border-gray-100 pt-4 mt-auto">
+                <div className="border-t border-gray-200 pt-4 pb-4 mt-auto">
                     <div className="text-xs text-gray-400 uppercase tracking-wider font-medium mb-2">NOTES</div>
                     <div className="text-xs text-gray-500 leading-snug space-y-1">
                         <div className="flex items-start">
@@ -428,7 +460,7 @@ export default function OrganizationModal({
         >
             <div
                 ref={modalRef}
-                className={`w-full sm:w-2/3 md:w-1/2 lg:w-1/3 sm:min-w-[400px] lg:min-w-[500px] h-full bg-white shadow-2xl transition-transform duration-300 ease-out flex flex-col ${isVisible && !isClosing ? 'translate-x-0' : 'translate-x-full'}`}
+                className={`w-full sm:w-3/5 md:w-[45%] lg:w-[37%] xl:w-[29%] sm:min-w-[435px] lg:min-w-[500px] xl:min-w-[550px] h-full bg-white shadow-2xl transition-transform duration-300 ease-out flex flex-col ${isVisible && !isClosing ? 'translate-x-0' : 'translate-x-full'}`}
                 onTouchStart={onTouchStart}
                 onTouchMove={onTouchMove}
                 onTouchEnd={onTouchEnd}
