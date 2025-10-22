@@ -12,9 +12,6 @@
         "recEf0pdKsN1Gbvo8",
         "recGG8gTf4t6l8Mue"
       ],
-      "Org Type": [
-        "Academic / University"
-      ],
       "Org Donor Agencies": [
         "rec6XRPA9pKgC8j1J",
         "recRutqdhqEZSnOB2",
@@ -23,7 +20,10 @@
       ],
       "Org HQ Country": "United States",
       "Has received CRAF'd Funding?": "NO",
-      "org_key": "hhi"
+      "org_key": "hhi",
+      "Org Type": [
+        "Academia"
+      ]
     },
     "agencies": [
       {
@@ -142,23 +142,35 @@
   },
   {
     "id": "rec1UYGdN0XUBCmDY",
-    "name": "HeiGIT: Heidelberg Institute for Geoinformation Technology",
+    "name": "Heidelberg University",
     "fields": {
-      "Org Full Name": "HeiGIT: Heidelberg Institute for Geoinformation Technology",
+      "Org Full Name": "Heidelberg University",
       "Org Short Name": "HeiGIT",
       "Org Website": "https://www.uni-heidelberg.de/en",
       "Org Description": "HeiGIT (Heidelberg Institute for Geoinformation Technology) advances geoinformation technology for the benefit of society and the environment. We bridge the gap between fundamental research in geoinformatics and practical applications by developing innovative tools and methods. Examples include customized geodata for humanitarian missions and intelligent routing for disaster response and climate action.",
       "Provided Data Ecosystem Projects": [
         "recEuWdBixgTpQKhR"
       ],
-      "Org Type": [
-        "Academic / University"
+      "Org Donor Agencies": [
+        "rec1YpvhkjwME6GOJ"
       ],
       "Org HQ Country": "Germany",
       "Has received CRAF'd Funding?": "NO",
-      "org_key": "heigit"
+      "org_key": "heigit",
+      "Org Type": [
+        "Academia"
+      ]
     },
-    "agencies": [],
+    "agencies": [
+      {
+        "id": "rec1YpvhkjwME6GOJ",
+        "createdTime": "2025-08-04T20:03:08.000Z",
+        "fields": {
+          "Agency/Department Name": "Unspecified Agency",
+          "Country Name": "Germany"
+        }
+      }
+    ],
     "projects": [
       {
         "id": "recEuWdBixgTpQKhR",
@@ -182,9 +194,7 @@
           "Project Description": "HeiGIT develops open geospatial tools and APIs—such as OpenRouteService—to support disaster response, health logistics, and mobility mapping. Its platforms process global spatial data to enable routing, accessibility, and hazard analysis.\n",
           "Project Donor Agencies": [
             "receDOQpfeb4YHc5p",
-            "recYMaEogEDwsfBG7",
-            "recIIdzFsepw9jSrJ",
-            "recZ40qUa3nCpgj9C"
+            "recDY0ngiDePaQtm3"
           ]
         },
         "agencies": [
@@ -197,34 +207,19 @@
             }
           },
           {
-            "id": "recYMaEogEDwsfBG7",
-            "createdTime": "2025-07-04T20:06:42.000Z",
+            "id": "recDY0ngiDePaQtm3",
+            "createdTime": "2025-10-22T21:45:39.000Z",
             "fields": {
-              "Agency/Department Name": "German Red Cross",
-              "Agency Data Portal": "https://www.drk.de/en/home/",
-              "Country Name": "International Red Cross and Red Crescent Movement."
-            }
-          },
-          {
-            "id": "recIIdzFsepw9jSrJ",
-            "createdTime": "2025-07-04T20:07:59.000Z",
-            "fields": {
-              "Agency/Department Name": "Heidelberg University",
-              "Country Name": "University"
-            }
-          },
-          {
-            "id": "recZ40qUa3nCpgj9C",
-            "createdTime": "2025-07-04T20:12:30.000Z",
-            "fields": {
-              "Agency/Department Name": "Heidelberg University",
-              "Country Name": "University"
+              "Agency/Department Name": "Unspecified Agency",
+              "Country Name": "Klaus Tschira Stiftung"
             }
           }
         ]
       }
     ],
-    "donor_countries": []
+    "donor_countries": [
+      "Germany"
+    ]
   },
   {
     "id": "rec1izGX18m256ood",
@@ -237,15 +232,15 @@
       "Provided Data Ecosystem Projects": [
         "recwyWa10JHuVhWo9"
       ],
-      "Org Type": [
-        "Other"
-      ],
       "Org Donor Agencies": [
         "rec0sY1I5JZz6ZsUE"
       ],
       "Org HQ Country": "United Kingdom",
       "Has received CRAF'd Funding?": "NO",
-      "org_key": "ukhih"
+      "org_key": "ukhih",
+      "Org Type": [
+        "Network / Consortium"
+      ]
     },
     "agencies": [
       {
@@ -300,9 +295,6 @@
         "recniVpxHScJaQdLq",
         "recQMdm14niuRSFQp"
       ],
-      "Org Type": [
-        "United Nations"
-      ],
       "Org Donor Agencies": [
         "rec3Ado0Jrl799Q8A",
         "recHSsEaPuaG3h2PQ",
@@ -321,7 +313,10 @@
       "Est. Org Budget [2024, $M]": 8099000000,
       "Org HQ Country": "United States",
       "Has received CRAF'd Funding?": "NO",
-      "org_key": "unicef"
+      "org_key": "unicef",
+      "Org Type": [
+        "United Nations System"
+      ]
     },
     "agencies": [
       {
@@ -516,13 +511,13 @@
         "recJRVBtpTaiDVmoT",
         "rec6S0tX5hnP9I5DG"
       ],
-      "Org Type": [
-        "Academic / University"
-      ],
       "Est. Org Budget [2024, $M]": 718558048.2,
       "Org HQ Country": "United Kingdom",
       "Has received CRAF'd Funding?": "NO",
-      "org_key": "university-of-southampton"
+      "org_key": "university-of-southampton",
+      "Org Type": [
+        "Academia"
+      ]
     },
     "agencies": [],
     "projects": [
@@ -585,9 +580,9 @@
             "id": "recbtz43uuKKFVfvd",
             "createdTime": "2025-03-25T17:04:19.000Z",
             "fields": {
-              "Agency/Department Name": "Bill and Melinda Gates Foundation",
+              "Agency/Department Name": "Unspecified Agency",
               "Agency Data Portal": "https://www.gatesfoundation.org/about/committed-grants",
-              "Country Name": "Foundation"
+              "Country Name": "Bill and Melinda Gates Foundation"
             }
           },
           {
@@ -638,27 +633,27 @@
             "id": "recqhcKxTv71yMfeI",
             "createdTime": "2025-06-26T12:06:47.000Z",
             "fields": {
-              "Agency/Department Name": "Rockefeller Foundation",
+              "Agency/Department Name": "Unspecified Agency",
               "Agency Data Portal": "https://www.rockefellerfoundation.org/",
-              "Country Name": "Foundation"
+              "Country Name": "Rockefeller Foundation"
             }
           },
           {
             "id": "recAXDKxEbXsaHav4",
             "createdTime": "2025-06-27T16:10:40.000Z",
             "fields": {
-              "Agency/Department Name": "Clinton Health Acess Initiative",
+              "Agency/Department Name": "Unspecified Agency",
               "Agency Data Portal": "https://www.clintonhealthaccess.org/",
-              "Country Name": "Foundation"
+              "Country Name": "Clinton Health Acess Initiative"
             }
           },
           {
             "id": "recl0rZvHPzrC6Jwd",
             "createdTime": "2025-06-27T16:24:39.000Z",
             "fields": {
-              "Agency/Department Name": "Wellcome",
+              "Agency/Department Name": "Unspecified Agency",
               "Agency Data Portal": "https://wellcome.org/",
-              "Country Name": "Non-State Actor"
+              "Country Name": "Wellcome"
             }
           },
           {
@@ -756,9 +751,9 @@
             "id": "recbtz43uuKKFVfvd",
             "createdTime": "2025-03-25T17:04:19.000Z",
             "fields": {
-              "Agency/Department Name": "Bill and Melinda Gates Foundation",
+              "Agency/Department Name": "Unspecified Agency",
               "Agency Data Portal": "https://www.gatesfoundation.org/about/committed-grants",
-              "Country Name": "Foundation"
+              "Country Name": "Bill and Melinda Gates Foundation"
             }
           }
         ]
@@ -792,9 +787,9 @@
             "id": "recbtz43uuKKFVfvd",
             "createdTime": "2025-03-25T17:04:19.000Z",
             "fields": {
-              "Agency/Department Name": "Bill and Melinda Gates Foundation",
+              "Agency/Department Name": "Unspecified Agency",
               "Agency Data Portal": "https://www.gatesfoundation.org/about/committed-grants",
-              "Country Name": "Foundation"
+              "Country Name": "Bill and Melinda Gates Foundation"
             }
           }
         ]
@@ -830,9 +825,9 @@
             "id": "recbtz43uuKKFVfvd",
             "createdTime": "2025-03-25T17:04:19.000Z",
             "fields": {
-              "Agency/Department Name": "Bill and Melinda Gates Foundation",
+              "Agency/Department Name": "Unspecified Agency",
               "Agency Data Portal": "https://www.gatesfoundation.org/about/committed-grants",
-              "Country Name": "Foundation"
+              "Country Name": "Bill and Melinda Gates Foundation"
             }
           },
           {
@@ -857,9 +852,9 @@
             "id": "recAXDKxEbXsaHav4",
             "createdTime": "2025-06-27T16:10:40.000Z",
             "fields": {
-              "Agency/Department Name": "Clinton Health Acess Initiative",
+              "Agency/Department Name": "Unspecified Agency",
               "Agency Data Portal": "https://www.clintonhealthaccess.org/",
-              "Country Name": "Foundation"
+              "Country Name": "Clinton Health Acess Initiative"
             }
           }
         ]
@@ -883,9 +878,6 @@
         "rec4SqufwyxLeeDM4",
         "reczIeSUeAdEWMKSk"
       ],
-      "Org Type": [
-        "United Nations"
-      ],
       "Org Donor Agencies": [
         "rec0QlT9YlTVhHfEn",
         "rec8gXVsPUUB517NE",
@@ -897,7 +889,10 @@
       "Est. Org Budget [2024, $M]": 9041000000,
       "Org HQ Country": "Italy",
       "Has received CRAF'd Funding?": "NO",
-      "org_key": "wfp"
+      "org_key": "wfp",
+      "Org Type": [
+        "United Nations System"
+      ]
     },
     "agencies": [
       {
@@ -1028,7 +1023,8 @@
           "Provider Orgs Full Name": [
             "recGCltHLsYiDo59B",
             "recsrCWKAPu9dwkHb",
-            "rec3QdLIyrZ4dNiPh"
+            "rec3QdLIyrZ4dNiPh",
+            "recNVePWbU6GAxsIP"
           ],
           "CRAF’d-Funded Project?": "NO",
           "Investment Type(s)": [
@@ -1062,16 +1058,16 @@
         "rec8wR515Mvu0YGx0",
         "reca35l4CEELxX2d1"
       ],
-      "Org Type": [
-        "Research Institute / Think Tank"
-      ],
       "Org Donor Agencies": [
         "reckIAhFXgj4XL29b"
       ],
       "Est. Org Budget [2024, $M]": 24879500000,
       "Org HQ Country": "United States",
       "Has received CRAF'd Funding?": "NO",
-      "org_key": "nasa"
+      "org_key": "nasa",
+      "Org Type": [
+        "Government / Public Sector"
+      ]
     },
     "agencies": [
       {
@@ -1148,15 +1144,15 @@
       "Provided Data Ecosystem Projects": [
         "recfjAhO2DxCjgEgM"
       ],
-      "Org Type": [
-        "NGO"
-      ],
       "Related Organization(s) [Linked]": [
         "recwaewYY2WMRF9ZI"
       ],
       "Org HQ Country": "Netherlands",
       "Has received CRAF'd Funding?": "YES",
-      "org_key": "510-data-team"
+      "org_key": "510-data-team",
+      "Org Type": [
+        "Non-Governmental Organization"
+      ]
     },
     "agencies": [],
     "projects": [
@@ -1269,9 +1265,6 @@
       "Provided Data Ecosystem Projects": [
         "rec9tb7ISjeo7Sq78"
       ],
-      "Org Type": [
-        "United Nations"
-      ],
       "Org Donor Agencies": [
         "recGMYeDQSV7jffjs",
         "recqSvUlZQjET4fCH",
@@ -1311,7 +1304,10 @@
       "Est. Org Budget [2024, $M]": 268935688,
       "Org HQ Country": "Switzerland",
       "Has received CRAF'd Funding?": "YES",
-      "org_key": "ohchr"
+      "org_key": "ohchr",
+      "Org Type": [
+        "United Nations System"
+      ]
     },
     "agencies": [
       {
@@ -1342,8 +1338,8 @@
         "id": "recCqVCi3rwF77MxA",
         "createdTime": "2025-07-03T14:02:52.000Z",
         "fields": {
-          "Agency/Department Name": "African Union",
-          "Country Name": "Regional Organization"
+          "Agency/Department Name": "Unspecified Agency",
+          "Country Name": "African Union"
         }
       },
       {
@@ -1572,6 +1568,7 @@
       }
     ],
     "donor_countries": [
+      "African Union",
       "Australia",
       "Belgium",
       "Canada",
@@ -1590,7 +1587,6 @@
       "New Zealand",
       "Norway",
       "Qatar",
-      "Regional Organization",
       "Saudi Arabia",
       "South Korea",
       "Spain",
@@ -1610,9 +1606,6 @@
       "Provided Data Ecosystem Projects": [
         "recVj2ULsOWhPFQ19"
       ],
-      "Org Type": [
-        "Academic / University"
-      ],
       "Org Donor Agencies": [
         "rec15kH3AC5gKDeQu",
         "rec4K8WmVji37YMCr",
@@ -1622,7 +1615,10 @@
       "Est. Org Budget [2024, $M]": 744201600,
       "Org HQ Country": "Belgium",
       "Has received CRAF'd Funding?": "NO",
-      "org_key": "uclouvain"
+      "org_key": "uclouvain",
+      "Org Type": [
+        "Academia"
+      ]
     },
     "agencies": [
       {
@@ -1646,9 +1642,9 @@
         "id": "recfjNkXZXtdaH5xv",
         "createdTime": "2025-06-27T19:56:13.000Z",
         "fields": {
-          "Agency/Department Name": "Else Kröner-Fresenius-Stiftung",
+          "Agency/Department Name": "Unspecified Agency",
           "Agency Data Portal": "https://www.ekfs.de/en",
-          "Country Name": "Foundation"
+          "Country Name": "Else Kröner-Fresenius-Stiftung"
         }
       }
     ],
@@ -1690,7 +1686,7 @@
     ],
     "donor_countries": [
       "Belgium",
-      "Foundation"
+      "Else Kröner-Fresenius-Stiftung"
     ]
   },
   {
@@ -1707,9 +1703,6 @@
         "recboBqVDp6QicKSq",
         "rec3SUNKdqZWbEktL",
         "recbmA6Lmrr5AfAHJ"
-      ],
-      "Org Type": [
-        "United Nations"
       ],
       "Org Donor Agencies": [
         "recQUVhcVyxZlXJ3H",
@@ -1740,7 +1733,10 @@
       "Est. Org Budget [2024, $M]": 1274700000,
       "Org HQ Country": "United States",
       "Has received CRAF'd Funding?": "NO",
-      "org_key": "unfpa"
+      "org_key": "unfpa",
+      "Org Type": [
+        "United Nations System"
+      ]
     },
     "agencies": [
       {
@@ -1852,9 +1848,9 @@
         "id": "recbtz43uuKKFVfvd",
         "createdTime": "2025-03-25T17:04:19.000Z",
         "fields": {
-          "Agency/Department Name": "Bill and Melinda Gates Foundation",
+          "Agency/Department Name": "Unspecified Agency",
           "Agency Data Portal": "https://www.gatesfoundation.org/about/committed-grants",
-          "Country Name": "Foundation"
+          "Country Name": "Bill and Melinda Gates Foundation"
         }
       },
       {
@@ -2001,9 +1997,9 @@
             "id": "recbtz43uuKKFVfvd",
             "createdTime": "2025-03-25T17:04:19.000Z",
             "fields": {
-              "Agency/Department Name": "Bill and Melinda Gates Foundation",
+              "Agency/Department Name": "Unspecified Agency",
               "Agency Data Portal": "https://www.gatesfoundation.org/about/committed-grants",
-              "Country Name": "Foundation"
+              "Country Name": "Bill and Melinda Gates Foundation"
             }
           }
         ]
@@ -2034,11 +2030,11 @@
     "donor_countries": [
       "Australia",
       "Belgium",
+      "Bill and Melinda Gates Foundation",
       "Canada",
       "Denmark",
       "European Union",
       "Finland",
-      "Foundation",
       "France",
       "Germany",
       "Ireland",
@@ -2066,12 +2062,12 @@
       "Provided Data Ecosystem Projects": [
         "recGoW02CMXhVQ00S"
       ],
-      "Org Type": [
-        "NGO"
-      ],
       "Org HQ Country": "Global (distributed)",
       "Has received CRAF'd Funding?": "YES",
-      "org_key": "fhn"
+      "org_key": "fhn",
+      "Org Type": [
+        "Network / Consortium"
+      ]
     },
     "agencies": [],
     "projects": [
@@ -2124,9 +2120,6 @@
         "rechQ1azyTpypEDEy",
         "recO3RZZ7IEA88GnQ"
       ],
-      "Org Type": [
-        "United Nations"
-      ],
       "Org Donor Agencies": [
         "rece2l2IJRlTC2ERq",
         "rec1YpvhkjwME6GOJ",
@@ -2155,7 +2148,10 @@
       "Est. Org Budget [2024, $M]": 515000000,
       "Org HQ Country": "United States",
       "Has received CRAF'd Funding?": "YES",
-      "org_key": "un-women"
+      "org_key": "un-women",
+      "Org Type": [
+        "United Nations System"
+      ]
     },
     "agencies": [
       {
@@ -2380,16 +2376,16 @@
       "Provided Data Ecosystem Projects": [
         "recXAXl4lWxy06qt5"
       ],
-      "Org Type": [
-        "Other"
-      ],
       "Org Donor Agencies": [
         "reckIAhFXgj4XL29b"
       ],
       "Est. Org Budget [2024, $M]": 1800000000,
       "Org HQ Country": "United States",
       "Has received CRAF'd Funding?": "NO",
-      "org_key": "usgs"
+      "org_key": "usgs",
+      "Org Type": [
+        "Government / Public Sector"
+      ]
     },
     "agencies": [
       {
@@ -2441,16 +2437,16 @@
         "recoqDpIwcyVG3N5Z",
         "rec5XxteXiqc3vvmj"
       ],
-      "Org Type": [
-        "United Nations"
-      ],
       "Org IATI Name": "N/A",
       "Org Transparency Portal": "https://app.powerbi.com/view?r=eyJrIjoiZTcxZTYwZTgtODMyZC00MzQwLWFhM2ItMDdiODlkNjY4NmNlIiwidCI6IjBmOWUzNWRiLTU0NGYtNGY2MC1iZGNjLTVlYTQxNmU2ZGM3MCIsImMiOjh9",
       "Org Programme Budget": "https://open.un.org/un-secretariat-financials/expenses",
       "Est. Org Budget [2024, $M]": 3967370,
       "Org HQ Country": "United States",
       "Has received CRAF'd Funding?": "NO",
-      "org_key": "unoda"
+      "org_key": "unoda",
+      "Org Type": [
+        "United Nations System"
+      ]
     },
     "agencies": [],
     "projects": [
@@ -2510,12 +2506,12 @@
       "Provided Data Ecosystem Projects": [
         "recgPTOSUzIQS7uLs"
       ],
-      "Org Type": [
-        "Other"
-      ],
       "Org HQ Country": "Australia",
       "Has received CRAF'd Funding?": "NO",
-      "org_key": "open-data-cube"
+      "org_key": "open-data-cube",
+      "Org Type": [
+        "Network / Consortium"
+      ]
     },
     "agencies": [],
     "projects": [
@@ -2559,9 +2555,6 @@
         "rec6rg7iVHuTnkQVe",
         "recLGd1qlYszSKznz"
       ],
-      "Org Type": [
-        "Research Institute / Think Tank"
-      ],
       "Org Donor Agencies": [
         "rec6XRPA9pKgC8j1J",
         "rec57z0MkntuI0kvP",
@@ -2571,7 +2564,10 @@
       "Est. Org Budget [2024, $M]": 2904460,
       "Org HQ Country": "United Kingdom",
       "Has received CRAF'd Funding?": "NO",
-      "org_key": "humanitarian-outcomes"
+      "org_key": "humanitarian-outcomes",
+      "Org Type": [
+        "Research / Think Tank"
+      ]
     },
     "agencies": [
       {
@@ -2684,9 +2680,6 @@
         "recwhJzb0ZRPL3F0A",
         "recXaGjOLcrJQCuNn"
       ],
-      "Org Type": [
-        "United Nations"
-      ],
       "Org Donor Agencies": [
         "rec1YpvhkjwME6GOJ",
         "reckIAhFXgj4XL29b",
@@ -2727,7 +2720,10 @@
       "Est. Org Budget [2024, $M]": 4800000000,
       "Org HQ Country": "United States",
       "Has received CRAF'd Funding?": "YES",
-      "org_key": "undp"
+      "org_key": "undp",
+      "Org Type": [
+        "United Nations System"
+      ]
     },
     "agencies": [
       {
@@ -2750,8 +2746,8 @@
         "id": "recCqVCi3rwF77MxA",
         "createdTime": "2025-07-03T14:02:52.000Z",
         "fields": {
-          "Agency/Department Name": "African Union",
-          "Country Name": "Regional Organization"
+          "Agency/Department Name": "Unspecified Agency",
+          "Country Name": "African Union"
         }
       },
       {
@@ -3103,6 +3099,7 @@
       }
     ],
     "donor_countries": [
+      "African Union",
       "Australia",
       "Austria",
       "Belgium",
@@ -3125,7 +3122,6 @@
       "Phillippines",
       "Portugal",
       "Qatar",
-      "Regional Organization",
       "Saudi Arabia",
       "South Korea",
       "Spain",
@@ -3146,10 +3142,10 @@
         "reckkGrUM2q2e7aeo",
         "recZaSDcZgIUtalO5"
       ],
+      "org_key": "ocha-hum-data-centre",
       "Org Type": [
-        "United Nations"
-      ],
-      "org_key": "ocha-hum-data-centre"
+        "United Nations System"
+      ]
     },
     "agencies": [],
     "projects": [
@@ -3209,9 +3205,6 @@
       "Provided Data Ecosystem Projects": [
         "recaWq49HJw4UXd9K"
       ],
-      "Org Type": [
-        "Other"
-      ],
       "Org Donor Agencies": [
         "recGNTHL9SKZxLDcw",
         "rec0sY1I5JZz6ZsUE",
@@ -3225,7 +3218,10 @@
       ],
       "Org HQ Country": "Kenya",
       "Has received CRAF'd Funding?": "NO",
-      "org_key": "fsnwg"
+      "org_key": "fsnwg",
+      "Org Type": [
+        "Network / Consortium"
+      ]
     },
     "agencies": [
       {
@@ -3353,8 +3349,13 @@
     "name": "UNOSAT",
     "fields": {
       "Org Full Name": "UNOSAT",
+      "Org Short Name": "UNOSAT",
       "Provided Data Ecosystem Projects": [
         "recEwLy3FESOhLeNs"
+      ],
+      "org_key": "unosat",
+      "Org Type": [
+        "United Nations System"
       ]
     },
     "agencies": [],
@@ -3401,9 +3402,6 @@
       "Provided Data Ecosystem Projects": [
         "rec9HIhsIpPjx48rc"
       ],
-      "Org Type": [
-        "Research Institute / Think Tank"
-      ],
       "Org Donor Agencies": [
         "recAiCKdzASfJMVsG",
         "rec6XRPA9pKgC8j1J"
@@ -3411,7 +3409,10 @@
       "Org IATI Name": "N/A",
       "Org HQ Country": "United States",
       "Has received CRAF'd Funding?": "NO",
-      "org_key": "pacific-disaster-center"
+      "org_key": "pacific-disaster-center",
+      "Org Type": [
+        "Research / Think Tank"
+      ]
     },
     "agencies": [
       {
@@ -3474,9 +3475,6 @@
         "recFk4AqE3TR83nNo",
         "recgmCxRj8IVZMFF2"
       ],
-      "Org Type": [
-        "Academic / University"
-      ],
       "Org Donor Agencies": [
         "rece2l2IJRlTC2ERq"
       ],
@@ -3484,7 +3482,10 @@
       "Est. Org Budget [2024, $M]": 931408094.11,
       "Org HQ Country": "Sweden",
       "Has received CRAF'd Funding?": "NO",
-      "org_key": "uppsala-university"
+      "org_key": "uppsala-university",
+      "Org Type": [
+        "Academia"
+      ]
     },
     "agencies": [
       {
@@ -3592,9 +3593,6 @@
         "recuv6YqfhZHQGvmd",
         "recwSp54iuK53ankI"
       ],
-      "Org Type": [
-        "Research Institute / Think Tank"
-      ],
       "Org Donor Agencies": [
         "rec3axdk63YGrJWUW",
         "rec3UYaGR28sa4BCq",
@@ -3615,7 +3613,10 @@
       "Est. Org Budget [2024, $M]": 11510461.58,
       "Org HQ Country": "Sweden",
       "Has received CRAF'd Funding?": "NO",
-      "org_key": "sipri"
+      "org_key": "sipri",
+      "Org Type": [
+        "Research / Think Tank"
+      ]
     },
     "agencies": [
       {
@@ -3899,9 +3900,6 @@
       "Org Short Name": "UNMAS",
       "Org Website": "https://www.unmas.org/en",
       "Org Description": "UNMAS (United Nations Mine Action Service) utilizes data to inform and manage mine action programs globally, coordinating with other UN entities and partners. They maintain an Interactive Dashboard of the UN Mine Action Strategy, which presents data on program outcomes, outputs, targeted populations, and funding. UNMAS also collaborates on data-related projects, including a machine learning initiative to detect development indicators in cleared areas of Afghanistan using satellite imagery, which informs their efforts to eliminate the threat of mines and explosives.",
-      "Org Type": [
-        "United Nations"
-      ],
       "Org Donor Agencies": [
         "rectW5HrazH0ZIdjS",
         "rec57z0MkntuI0kvP",
@@ -3930,7 +3928,10 @@
       "Est. Org Budget [2024, $M]": 42018495,
       "Org HQ Country": "Switzerland",
       "Has received CRAF'd Funding?": "NO",
-      "org_key": "unmas"
+      "org_key": "unmas",
+      "Org Type": [
+        "United Nations System"
+      ]
     },
     "agencies": [
       {
@@ -3961,8 +3962,8 @@
         "id": "recCqVCi3rwF77MxA",
         "createdTime": "2025-07-03T14:02:52.000Z",
         "fields": {
-          "Agency/Department Name": "African Union",
-          "Country Name": "Regional Organization"
+          "Agency/Department Name": "Unspecified Agency",
+          "Country Name": "African Union"
         }
       },
       {
@@ -4104,6 +4105,7 @@
     ],
     "projects": [],
     "donor_countries": [
+      "African Union",
       "Belgium",
       "Canada",
       "China",
@@ -4119,7 +4121,6 @@
       "New Zealand",
       "Poland",
       "Portugal",
-      "Regional Organization",
       "South Korea",
       "Sweden",
       "USA",
@@ -4137,12 +4138,12 @@
       "Provided Data Ecosystem Projects": [
         "recD0o9DgLleR3ctz"
       ],
-      "Org Type": [
-        "Academic / University"
-      ],
       "Org HQ Country": "Ecuador",
       "Has received CRAF'd Funding?": "NO",
-      "org_key": "usfq"
+      "org_key": "usfq",
+      "Org Type": [
+        "Academia"
+      ]
     },
     "agencies": [],
     "projects": [
@@ -4185,9 +4186,6 @@
       "Provided Data Ecosystem Projects": [
         "recbmA6Lmrr5AfAHJ"
       ],
-      "Org Type": [
-        "NGO"
-      ],
       "Org Donor Agencies": [
         "recbbW0P8fxVtJBJP",
         "recbtz43uuKKFVfvd",
@@ -4203,7 +4201,10 @@
       "Est. Org Budget [2024, $M]": 1920000,
       "Org HQ Country": "United Kingdom",
       "Has received CRAF'd Funding?": "NO",
-      "org_key": "flowminder"
+      "org_key": "flowminder",
+      "Org Type": [
+        "Non-Governmental Organization"
+      ]
     },
     "agencies": [
       {
@@ -4219,9 +4220,9 @@
         "id": "recbtz43uuKKFVfvd",
         "createdTime": "2025-03-25T17:04:19.000Z",
         "fields": {
-          "Agency/Department Name": "Bill and Melinda Gates Foundation",
+          "Agency/Department Name": "Unspecified Agency",
           "Agency Data Portal": "https://www.gatesfoundation.org/about/committed-grants",
-          "Country Name": "Foundation"
+          "Country Name": "Bill and Melinda Gates Foundation"
         }
       },
       {
@@ -4245,9 +4246,9 @@
         "id": "recks6hHpAgBV14d9",
         "createdTime": "2025-04-01T19:29:18.000Z",
         "fields": {
-          "Agency/Department Name": "Inter-American Development Bank (IDB)",
+          "Agency/Department Name": "Unspecified Agency",
           "Agency Data Portal": "https://www.iadb.org/en/projects",
-          "Country Name": "International Financial Institutions (IFIs)"
+          "Country Name": "Inter-American Development Bank (IDB)"
         }
       },
       {
@@ -4270,9 +4271,9 @@
         "id": "recqhcKxTv71yMfeI",
         "createdTime": "2025-06-26T12:06:47.000Z",
         "fields": {
-          "Agency/Department Name": "Rockefeller Foundation",
+          "Agency/Department Name": "Unspecified Agency",
           "Agency Data Portal": "https://www.rockefellerfoundation.org/",
-          "Country Name": "Foundation"
+          "Country Name": "Rockefeller Foundation"
         }
       },
       {
@@ -4326,19 +4327,20 @@
             "id": "recbtz43uuKKFVfvd",
             "createdTime": "2025-03-25T17:04:19.000Z",
             "fields": {
-              "Agency/Department Name": "Bill and Melinda Gates Foundation",
+              "Agency/Department Name": "Unspecified Agency",
               "Agency Data Portal": "https://www.gatesfoundation.org/about/committed-grants",
-              "Country Name": "Foundation"
+              "Country Name": "Bill and Melinda Gates Foundation"
             }
           }
         ]
       }
     ],
     "donor_countries": [
+      "Bill and Melinda Gates Foundation",
       "European Union",
-      "Foundation",
       "France",
-      "International Financial Institutions (IFIs)",
+      "Inter-American Development Bank (IDB)",
+      "Rockefeller Foundation",
       "Switzerland",
       "USA",
       "United Nations Foundation (UN Foundation)"
@@ -4361,9 +4363,6 @@
         "recAmBwUrrYDMtXtH",
         "reczIeSUeAdEWMKSk",
         "recXcSKhSy2s7tunj"
-      ],
-      "Org Type": [
-        "United Nations"
       ],
       "Org Donor Agencies": [
         "rec1YpvhkjwME6GOJ",
@@ -4404,7 +4403,10 @@
       "Est. Org Budget [2024, $M]": 314000000,
       "Org HQ Country": "United States",
       "Has received CRAF'd Funding?": "NO",
-      "org_key": "ocha"
+      "org_key": "ocha",
+      "Org Type": [
+        "United Nations System"
+      ]
     },
     "agencies": [
       {
@@ -4483,8 +4485,8 @@
         "id": "recCqVCi3rwF77MxA",
         "createdTime": "2025-07-03T14:02:52.000Z",
         "fields": {
-          "Agency/Department Name": "African Union",
-          "Country Name": "Regional Organization"
+          "Agency/Department Name": "Unspecified Agency",
+          "Country Name": "African Union"
         }
       },
       {
@@ -4766,7 +4768,8 @@
           "Provider Orgs Full Name": [
             "recGCltHLsYiDo59B",
             "recsrCWKAPu9dwkHb",
-            "rec3QdLIyrZ4dNiPh"
+            "rec3QdLIyrZ4dNiPh",
+            "recNVePWbU6GAxsIP"
           ],
           "CRAF’d-Funded Project?": "NO",
           "Investment Type(s)": [
@@ -4784,6 +4787,7 @@
       }
     ],
     "donor_countries": [
+      "African Union",
       "Australia",
       "Austria",
       "Belgium",
@@ -4802,7 +4806,6 @@
       "Norway",
       "Poland",
       "Qatar",
-      "Regional Organization",
       "Saudi Arabia",
       "South Korea",
       "Spain",
@@ -4811,158 +4814,6 @@
       "USA",
       "United Arab Emirates",
       "United Kingdom"
-    ]
-  },
-  {
-    "id": "recGTvsDJ9pk4Atyh",
-    "name": "ACTED: Agency for Technical Cooperation and Development",
-    "fields": {
-      "Org Full Name": "ACTED: Agency for Technical Cooperation and Development",
-      "Org Short Name": "ACTED",
-      "Org Website": "https://www.acted.org/en/",
-      "Org Description": "We work on the first mile: Acted’s mission is to save lives and support people in meeting their needs in hard to reach areas. Acted develops and implements programmes that target the most vulnerable amongst populations that have suffered from conflict, natural disaster, or socio-economic hardship. Acted’s approach looks beyond the immediate emergency towards opportunities for longer term livelihoods reconstruction and sustainable development.",
-      "Provided Data Ecosystem Projects": [
-        "recnE0dKdCAGHyIQG",
-        "rechc2GK2KtFL9IcK"
-      ],
-      "Org Type": [
-        "NGO"
-      ],
-      "Org Donor Agencies": [
-        "recE3ZEHFRqbifGOn",
-        "recbbW0P8fxVtJBJP",
-        "rec6XRPA9pKgC8j1J",
-        "recHSsEaPuaG3h2PQ",
-        "recatUveyYdfEOdbu",
-        "recf10RuM7qHUnC33"
-      ],
-      "Org IATI Name": "ACTED",
-      "Org MPTFO Name": "ACTED",
-      "Org MPTFO URL [Formula]": "https://mptf.undp.org/participating-organizations/ACTED",
-      "Est. Org Budget [2024, $M]": 674844000,
-      "Org HQ Country": "France",
-      "Has received CRAF'd Funding?": "NO",
-      "org_key": "acted"
-    },
-    "agencies": [
-      {
-        "id": "recE3ZEHFRqbifGOn",
-        "createdTime": "2025-04-15T14:55:46.000Z",
-        "fields": {
-          "Agency/Department Name": "Ministry for Europe and Foreign Affairs (MEAE)",
-          "Country Name": "France"
-        }
-      },
-      {
-        "id": "recbbW0P8fxVtJBJP",
-        "createdTime": "2025-04-29T23:58:58.000Z",
-        "fields": {
-          "Agency/Department Name": "French Development Agency (AFD) ",
-          "Agency Data Portal": "https://www.afd.fr/en/carte-des-projets-list",
-          "Country Name": "France"
-        }
-      },
-      {
-        "id": "rec6XRPA9pKgC8j1J",
-        "createdTime": "2025-03-21T16:43:49.000Z",
-        "fields": {
-          "Agency/Department Name": "U.S. Agency for International Development (USAID)",
-          "Country Name": "USA"
-        }
-      },
-      {
-        "id": "recHSsEaPuaG3h2PQ",
-        "createdTime": "2025-03-21T16:58:30.000Z",
-        "fields": {
-          "Agency/Department Name": "Directorate-General for European Civil Protection and Humanitarian Aid Operations (DG ECHO)",
-          "Agency Data Portal": "funding overview, not portal https://civil-protection-humanitarian-aid.ec.europa.eu/funding-evaluations/funding-humanitarian-aid_en",
-          "Country Name": "European Union"
-        }
-      },
-      {
-        "id": "recatUveyYdfEOdbu",
-        "createdTime": "2025-03-21T16:59:04.000Z",
-        "fields": {
-          "Agency/Department Name": "INTPA: Directorate-General for International Partnerships",
-          "Country Name": "European Union"
-        }
-      },
-      {
-        "id": "recf10RuM7qHUnC33",
-        "createdTime": "2025-03-24T01:28:53.000Z",
-        "fields": {
-          "Agency/Department Name": "Ministry of Foreign Affairs (MFA)",
-          "Country Name": "Norway"
-        }
-      }
-    ],
-    "projects": [
-      {
-        "id": "rechc2GK2KtFL9IcK",
-        "createdTime": "2025-03-24T19:51:00.000Z",
-        "fields": {
-          "Project/Product Name": "AGORA",
-          "product_key": "agora",
-          "Provider Orgs Full Name": [
-            "recNVePWbU6GAxsIP",
-            "recGTvsDJ9pk4Atyh"
-          ],
-          "CRAF’d-Funded Project?": "NO",
-          "Investment Type(s)": [
-            "Human Capital & Know-how",
-            "Learning & Exchange"
-          ],
-          "Investment Theme(s)": [
-            "Data Storage, Access & Sharing",
-            "Damage Assessments",
-            "Upskilling & Training"
-          ],
-          "Project Website": "https://www.impact-initiatives.org/what-we-do/agora/",
-          "Project Description": "AGORA, a joint venture between ACTED and IMPACT Initiatives, was created in 2016 to ground humanitarian and development work in local knowledge, in keeping with the motto « Think local, Act global »\n"
-        },
-        "agencies": []
-      },
-      {
-        "id": "recnE0dKdCAGHyIQG",
-        "createdTime": "2025-03-24T19:46:56.000Z",
-        "fields": {
-          "Project/Product Name": "REACH Initiative",
-          "product_key": "reach-initiative",
-          "Provider Orgs Full Name": [
-            "recNVePWbU6GAxsIP",
-            "recGTvsDJ9pk4Atyh"
-          ],
-          "CRAF’d-Funded Project?": "NO",
-          "Investment Type(s)": [
-            "Data Sets & Commons"
-          ],
-          "Investment Theme(s)": [
-            "Humanitarian Access Data"
-          ],
-          "Project Website": "https://www.reach-initiative.org",
-          "Project Description": "REACH is a leading humanitarian initiative providing granular data, timely information and in-depth analysis from contexts of crisis, disaster and displacement. The work of REACH directly feeds into aid response and decision-making by providing accessible and precise information on the humanitarian situation of crisis-affected populations.\n",
-          "Project Donor Agencies": [
-            "rec3Ado0Jrl799Q8A"
-          ]
-        },
-        "agencies": [
-          {
-            "id": "rec3Ado0Jrl799Q8A",
-            "createdTime": "2025-06-26T02:46:04.000Z",
-            "fields": {
-              "Agency/Department Name": "Unspecified Agency",
-              "Agency Data Portal": "https://www.worldbank.org/ext/en/home",
-              "Country Name": "The World Bank"
-            }
-          }
-        ]
-      }
-    ],
-    "donor_countries": [
-      "European Union",
-      "France",
-      "Norway",
-      "USA"
     ]
   },
   {
@@ -4977,9 +4828,6 @@
       "Provided Data Ecosystem Projects": [
         "recFk4AqE3TR83nNo",
         "recp0YELy7eVj9FUs"
-      ],
-      "Org Type": [
-        "Research Institute / Think Tank"
       ],
       "Org Donor Agencies": [
         "recGNTHL9SKZxLDcw",
@@ -4998,7 +4846,10 @@
       "Est. Org Budget [2024, $M]": 15455407.5,
       "Org HQ Country": "Norway",
       "Has received CRAF'd Funding?": "YES",
-      "org_key": "prio"
+      "org_key": "prio",
+      "Org Type": [
+        "Research / Think Tank"
+      ]
     },
     "agencies": [
       {
@@ -5160,15 +5011,101 @@
       "Org Short Name": "Data Pop Alliance",
       "Org Website": "https://datapopalliance.org/",
       "Org Description": "Since 2013, Data-Pop Alliance has worked to apply cutting edge data science to solve the world’s most pressing problems. As the 2030 deadline for the UN sustainable development goals approaches, we believe novel approaches are needed to enhance the efficacy of the global development sector and reach those most in need. ",
-      "Org Type": [
-        "NGO"
+      "Org Donor Agencies": [
+        "recbbW0P8fxVtJBJP",
+        "rec0sY1I5JZz6ZsUE",
+        "recdGZTDhjgGOhWJ5",
+        "rec2KBp1IAA5TtnQl",
+        "recEiThTK959bqvUH",
+        "recmiFKDpEY82nhw2",
+        "recut1KLw0povqx0k",
+        "recFXEk93eiQlKjJU"
       ],
       "Org HQ Country": "United States",
-      "org_key": "data-pop-alliance"
+      "org_key": "data-pop-alliance",
+      "Org Type": [
+        "Non-Governmental Organization"
+      ]
     },
-    "agencies": [],
+    "agencies": [
+      {
+        "id": "recbbW0P8fxVtJBJP",
+        "createdTime": "2025-04-29T23:58:58.000Z",
+        "fields": {
+          "Agency/Department Name": "French Development Agency (AFD) ",
+          "Agency Data Portal": "https://www.afd.fr/en/carte-des-projets-list",
+          "Country Name": "France"
+        }
+      },
+      {
+        "id": "rec0sY1I5JZz6ZsUE",
+        "createdTime": "2025-03-21T16:43:49.000Z",
+        "fields": {
+          "Agency/Department Name": "Foreign, Commonwealth & Development Office (FCDO)",
+          "Agency Data Portal": "https://devtracker.fcdo.gov.uk/",
+          "Country Name": "United Kingdom"
+        }
+      },
+      {
+        "id": "recdGZTDhjgGOhWJ5",
+        "createdTime": "2025-07-10T14:17:06.000Z",
+        "fields": {
+          "Agency/Department Name": "Spanish Agency for International Development Cooperation (AECID)",
+          "Country Name": "Spain"
+        }
+      },
+      {
+        "id": "rec2KBp1IAA5TtnQl",
+        "createdTime": "2025-03-21T16:50:19.000Z",
+        "fields": {
+          "Agency/Department Name": "German Corporation for International Cooperation (GIZ)",
+          "Agency Data Portal": "https://www.giz.de/projektdaten/index.action?request_locale=en_GB",
+          "Country Name": "Germany"
+        }
+      },
+      {
+        "id": "recEiThTK959bqvUH",
+        "createdTime": "2025-10-22T22:43:21.000Z",
+        "fields": {
+          "Agency/Department Name": "iNNpulsa",
+          "Country Name": "Colombia"
+        }
+      },
+      {
+        "id": "recmiFKDpEY82nhw2",
+        "createdTime": "2025-10-22T22:44:49.000Z",
+        "fields": {
+          "Agency/Department Name": "National Institute of Statistics and Information (INEI)",
+          "Country Name": "Peru"
+        }
+      },
+      {
+        "id": "recut1KLw0povqx0k",
+        "createdTime": "2025-10-22T22:46:02.000Z",
+        "fields": {
+          "Agency/Department Name": "National Administrative Department of Statistics",
+          "Country Name": "Colombia"
+        }
+      },
+      {
+        "id": "recFXEk93eiQlKjJU",
+        "createdTime": "2025-10-22T22:46:53.000Z",
+        "fields": {
+          "Agency/Department Name": "Brazilian Institute of Geography and Statistics (IBGE)",
+          "Country Name": "Brazil"
+        }
+      }
+    ],
     "projects": [],
-    "donor_countries": []
+    "donor_countries": [
+      "Brazil",
+      "Colombia",
+      "France",
+      "Germany",
+      "Peru",
+      "Spain",
+      "United Kingdom"
+    ]
   },
   {
     "id": "recHswBeKTxqz7ig7",
@@ -5183,9 +5120,6 @@
       "Provided Data Ecosystem Projects": [
         "recftrBsKUWwYWGA9",
         "rec2eT5BuCp87chHm"
-      ],
-      "Org Type": [
-        "NGO"
       ],
       "Org Donor Agencies": [
         "rec6XRPA9pKgC8j1J",
@@ -5205,7 +5139,10 @@
       "Est. Org Budget [2024, $M]": 46833866.46,
       "Org HQ Country": "United Kingdom",
       "Has received CRAF'd Funding?": "NO",
-      "org_key": "inso"
+      "org_key": "inso",
+      "Org Type": [
+        "Non-Governmental Organization"
+      ]
     },
     "agencies": [
       {
@@ -5386,9 +5323,6 @@
         "recRqJS0I3kX5dYEJ",
         "recYzS7BrsxBG8llV"
       ],
-      "Org Type": [
-        "NGO"
-      ],
       "Org Donor Agencies": [
         "rec6XRPA9pKgC8j1J",
         "rec2G5THuTVhTanSX",
@@ -5405,7 +5339,10 @@
       "Est. Org Budget [2024, $M]": 3604651.17,
       "Org HQ Country": "Switzerland",
       "Has received CRAF'd Funding?": "NO",
-      "org_key": "gem"
+      "org_key": "gem",
+      "Org Type": [
+        "Non-Governmental Organization"
+      ]
     },
     "agencies": [
       {
@@ -5593,13 +5530,13 @@
       "Provided Data Ecosystem Projects": [
         "reckhF1PTR2hh135J"
       ],
-      "Org Type": [
-        "Private Sector"
-      ],
       "Org IATI Name": "Fields Data",
       "Org HQ Country": "Netherlands",
       "Has received CRAF'd Funding?": "NO",
-      "org_key": "fields-data"
+      "org_key": "fields-data",
+      "Org Type": [
+        "Non-Governmental Organization"
+      ]
     },
     "agencies": [],
     "projects": [
@@ -5640,12 +5577,12 @@
       "Provided Data Ecosystem Projects": [
         "recFnNCbi5RYJNchr"
       ],
-      "Org Type": [
-        "NGO"
-      ],
       "Org HQ Country": "Global (distributed)",
       "Has received CRAF'd Funding?": "NO",
-      "org_key": "mapswipe"
+      "org_key": "mapswipe",
+      "Org Type": [
+        "Non-Governmental Organization"
+      ]
     },
     "agencies": [],
     "projects": [
@@ -5684,13 +5621,13 @@
       "Provided Data Ecosystem Projects": [
         "rechQ1azyTpypEDEy"
       ],
-      "Org Type": [
-        "Academic / University"
-      ],
       "Est. Org Budget [2024, $M]": 52,
       "Org HQ Country": "United States",
       "Has received CRAF'd Funding?": "YES",
-      "org_key": "korbel"
+      "org_key": "korbel",
+      "Org Type": [
+        "Academia"
+      ]
     },
     "agencies": [],
     "projects": [
@@ -5734,9 +5671,6 @@
         "rec22kfYpoIsldmEK",
         "rec28WeSKDEQ5wx45"
       ],
-      "Org Type": [
-        "NGO"
-      ],
       "Org Donor Agencies": [
         "rec8gXVsPUUB517NE",
         "recE3ZEHFRqbifGOn",
@@ -5762,7 +5696,10 @@
       "Est. Org Budget [2024, $M]": 520000000,
       "Org HQ Country": "Denmark",
       "Has received CRAF'd Funding?": "NO",
-      "org_key": "drc"
+      "org_key": "drc",
+      "Org Type": [
+        "Non-Governmental Organization"
+      ]
     },
     "agencies": [
       {
@@ -6015,20 +5952,15 @@
   },
   {
     "id": "recNVePWbU6GAxsIP",
-    "name": "IMPACT Initiatives",
+    "name": "REACH",
     "fields": {
-      "Org Full Name": "IMPACT Initiatives",
-      "Org Short Name": "IMPACT Initiatives",
-      "Org Website": "https://www.impact-initiatives.org/what-we-do/",
-      "Org Description": "Created in 2010, IMPACT is a Geneva-based NGO and the largest independent data provider in contexts of crisis. We aim to support a range of stakeholders in making better, more informed decisions in humanitarian, stabilisation, and development settings. We believe that a key pathway to better planning and decision-making is direct engagement with local communities and their leaders.",
+      "Org Full Name": "REACH",
+      "Org Short Name": "REACH",
+      "Org Website": "https://www.reach-initiative.org",
+      "Org Description": "REACH is a leading humanitarian initiative providing granular data, timely information and in-depth analysis from contexts of crisis, disaster and displacement. The work of REACH directly feeds into aid response and decision-making by providing accessible and precise information on the humanitarian situation of crisis-affected populations.",
       "Provided Data Ecosystem Projects": [
-        "recnE0dKdCAGHyIQG",
-        "recIUSUS3NNXaMHCQ",
-        "rechc2GK2KtFL9IcK",
+        "reczIeSUeAdEWMKSk",
         "recwpLBPiqgZWOXyn"
-      ],
-      "Org Type": [
-        "NGO"
       ],
       "Org Donor Agencies": [
         "recHSsEaPuaG3h2PQ",
@@ -6055,7 +5987,10 @@
       "Est. Org Budget [2024, $M]": 43320889,
       "Org HQ Country": "Switzerland",
       "Has received CRAF'd Funding?": "NO",
-      "org_key": "impact-initiatives"
+      "org_key": "reach",
+      "Org Type": [
+        "Non-Governmental Organization"
+      ]
     },
     "agencies": [
       {
@@ -6131,16 +6066,16 @@
         "id": "recDtKjptlPgZaEVI",
         "createdTime": "2025-05-15T15:58:26.000Z",
         "fields": {
-          "Agency/Department Name": "Fund for Peace (FFP)",
-          "Country Name": "NGO"
+          "Agency/Department Name": "Unspecified Agency",
+          "Country Name": "Fund for Peace (FFP)"
         }
       },
       {
         "id": "rec4fIAt1DD6Vprw7",
         "createdTime": "2025-04-15T15:08:32.000Z",
         "fields": {
-          "Agency/Department Name": "Danish Refugee Council (DRC)",
-          "Country Name": "NGO"
+          "Agency/Department Name": "Unspecified Agency",
+          "Country Name": "Danish Refugee Council (DRC)"
         }
       },
       {
@@ -6214,92 +6149,6 @@
     ],
     "projects": [
       {
-        "id": "recIUSUS3NNXaMHCQ",
-        "createdTime": "2025-03-24T19:51:08.000Z",
-        "fields": {
-          "Project/Product Name": "PANDA",
-          "product_key": "impact-panda",
-          "Provider Orgs Full Name": [
-            "recNVePWbU6GAxsIP"
-          ],
-          "CRAF’d-Funded Project?": "NO",
-          "Investment Type(s)": [
-            "Infrastructure & Platforms",
-            "Human Capital & Know-how"
-          ],
-          "Investment Theme(s)": [
-            "Data Storage, Access & Sharing",
-            "Conflict & Violence Data",
-            "Needs Assessment Data",
-            "Impact Evaluation",
-            "Capacity Building"
-          ],
-          "Project Website": "https://www.impact-initiatives.org/what-we-do/panda/",
-          "Project Description": "IMPACT’s PANDA initiative aims to improve the effectiveness, efficiency and efficacy of humanitarian and development interventions. PANDA supports the entire humanitarian programme cycle, including programme design, assessments, baselines, monitoring and evaluation.\n\t\n"
-        },
-        "agencies": []
-      },
-      {
-        "id": "rechc2GK2KtFL9IcK",
-        "createdTime": "2025-03-24T19:51:00.000Z",
-        "fields": {
-          "Project/Product Name": "AGORA",
-          "product_key": "agora",
-          "Provider Orgs Full Name": [
-            "recNVePWbU6GAxsIP",
-            "recGTvsDJ9pk4Atyh"
-          ],
-          "CRAF’d-Funded Project?": "NO",
-          "Investment Type(s)": [
-            "Human Capital & Know-how",
-            "Learning & Exchange"
-          ],
-          "Investment Theme(s)": [
-            "Data Storage, Access & Sharing",
-            "Damage Assessments",
-            "Upskilling & Training"
-          ],
-          "Project Website": "https://www.impact-initiatives.org/what-we-do/agora/",
-          "Project Description": "AGORA, a joint venture between ACTED and IMPACT Initiatives, was created in 2016 to ground humanitarian and development work in local knowledge, in keeping with the motto « Think local, Act global »\n"
-        },
-        "agencies": []
-      },
-      {
-        "id": "recnE0dKdCAGHyIQG",
-        "createdTime": "2025-03-24T19:46:56.000Z",
-        "fields": {
-          "Project/Product Name": "REACH Initiative",
-          "product_key": "reach-initiative",
-          "Provider Orgs Full Name": [
-            "recNVePWbU6GAxsIP",
-            "recGTvsDJ9pk4Atyh"
-          ],
-          "CRAF’d-Funded Project?": "NO",
-          "Investment Type(s)": [
-            "Data Sets & Commons"
-          ],
-          "Investment Theme(s)": [
-            "Humanitarian Access Data"
-          ],
-          "Project Website": "https://www.reach-initiative.org",
-          "Project Description": "REACH is a leading humanitarian initiative providing granular data, timely information and in-depth analysis from contexts of crisis, disaster and displacement. The work of REACH directly feeds into aid response and decision-making by providing accessible and precise information on the humanitarian situation of crisis-affected populations.\n",
-          "Project Donor Agencies": [
-            "rec3Ado0Jrl799Q8A"
-          ]
-        },
-        "agencies": [
-          {
-            "id": "rec3Ado0Jrl799Q8A",
-            "createdTime": "2025-06-26T02:46:04.000Z",
-            "fields": {
-              "Agency/Department Name": "Unspecified Agency",
-              "Agency Data Portal": "https://www.worldbank.org/ext/en/home",
-              "Country Name": "The World Bank"
-            }
-          }
-        ]
-      },
-      {
         "id": "recwpLBPiqgZWOXyn",
         "createdTime": "2025-06-29T19:14:32.000Z",
         "fields": {
@@ -6322,17 +6171,44 @@
           "Project Description": "The Resource Centre provides open-access tools, maps, and datasets to support humanitarian needs analysis and tools like MSNA and JMCNA, enabling evidence-based decision-making during crises.\n"
         },
         "agencies": []
+      },
+      {
+        "id": "reczIeSUeAdEWMKSk",
+        "createdTime": "2025-04-15T00:02:13.000Z",
+        "fields": {
+          "Project/Product Name": "Multi-Sectoral Needs Assessment (MSNA)",
+          "product_key": "msna",
+          "Provider Orgs Full Name": [
+            "recGCltHLsYiDo59B",
+            "recsrCWKAPu9dwkHb",
+            "rec3QdLIyrZ4dNiPh",
+            "recNVePWbU6GAxsIP"
+          ],
+          "CRAF’d-Funded Project?": "NO",
+          "Investment Type(s)": [
+            "Crisis Analytics & Insights",
+            "Standards & Coordination"
+          ],
+          "Investment Theme(s)": [
+            "Needs Assessment",
+            "Common Indicators"
+          ],
+          "Project Website": "https://dtm.iom.int/data-product-series/multi-sectoral-needs-assessment",
+          "Project Description": "MSNA is a standardized, country-level data collection initiative that captures multi-sectoral needs in crisis-affected populations. Data collected informs strategic planning, prioritization, and humanitarian response efforts.\n"
+        },
+        "agencies": []
       }
     ],
     "donor_countries": [
       "Australia",
       "Belgium",
+      "Danish Refugee Council (DRC)",
       "Denmark",
       "European Union",
       "France",
+      "Fund for Peace (FFP)",
       "Germany",
       "Japan",
-      "NGO",
       "Norway",
       "Sweden",
       "Switzerland",
@@ -6352,12 +6228,12 @@
         "recOOQ5c99vFwz8i8",
         "recxNVM0HeC0mSQyk"
       ],
-      "Org Type": [
-        "United Nations"
-      ],
       "Org HQ Country": "United States",
       "Has received CRAF'd Funding?": "YES",
-      "org_key": "un-dppa"
+      "org_key": "un-dppa",
+      "Org Type": [
+        "United Nations System"
+      ]
     },
     "agencies": [],
     "projects": [
@@ -6498,9 +6374,6 @@
       "Provided Data Ecosystem Projects": [
         "recrAQT0YpFBCQ02U"
       ],
-      "Org Type": [
-        "Other"
-      ],
       "Org Donor Agencies": [
         "recQUVhcVyxZlXJ3H"
       ],
@@ -6508,7 +6381,10 @@
       "Est. Org Budget [2024, $M]": 34050000000,
       "Org HQ Country": "United States",
       "Has received CRAF'd Funding?": "NO",
-      "org_key": "state-department"
+      "org_key": "state-department",
+      "Org Type": [
+        "Government / Public Sector"
+      ]
     },
     "agencies": [
       {
@@ -6576,9 +6452,6 @@
         "recF8bGKczcSVXjRz",
         "rec04lJaB92fTs0JH"
       ],
-      "Org Type": [
-        "NGO"
-      ],
       "Org Donor Agencies": [
         "recpBuvL2uHuENIu7",
         "recrPlN870ayqI9dO",
@@ -6591,55 +6464,58 @@
       "Est. Org Budget [2024, $M]": 8387022,
       "Org HQ Country": "United States",
       "Has received CRAF'd Funding?": "NO",
-      "org_key": "hot"
+      "org_key": "hot",
+      "Org Type": [
+        "Non-Governmental Organization"
+      ]
     },
     "agencies": [
       {
         "id": "recpBuvL2uHuENIu7",
         "createdTime": "2025-07-03T18:54:14.000Z",
         "fields": {
-          "Agency/Department Name": " Silicon Valley Community Foundation",
-          "Country Name": "Foundation"
+          "Agency/Department Name": "Unspecified Agency",
+          "Country Name": " Silicon Valley Community Foundation"
         }
       },
       {
         "id": "recrPlN870ayqI9dO",
         "createdTime": "2025-10-22T21:11:55.000Z",
         "fields": {
-          "Agency/Department Name": "The Elma Relief Foundation",
-          "Country Name": "NGO"
+          "Agency/Department Name": "Unspecified Agency",
+          "Country Name": "The Elma Relief Foundation"
         }
       },
       {
         "id": "recWYxrSapIaQ5C4r",
         "createdTime": "2025-10-22T21:13:45.000Z",
         "fields": {
-          "Agency/Department Name": "Mackenzie Scott",
-          "Country Name": "NGO"
+          "Agency/Department Name": "Unspecified Agency",
+          "Country Name": "Mackenzie Scott"
         }
       },
       {
         "id": "recGlx8p4y1yzES7T",
         "createdTime": "2025-10-22T21:14:05.000Z",
         "fields": {
-          "Agency/Department Name": "Rippleworks",
-          "Country Name": "NGO"
+          "Agency/Department Name": "Unspecified Agency",
+          "Country Name": "Rippleworks"
         }
       },
       {
         "id": "rec665usRSgrGizMC",
         "createdTime": "2025-10-22T21:14:28.000Z",
         "fields": {
-          "Agency/Department Name": "Skoll",
-          "Country Name": "NGO"
+          "Agency/Department Name": "Unspecified Agency",
+          "Country Name": "Skoll"
         }
       },
       {
         "id": "recdWBZgIeBfATRcv",
         "createdTime": "2025-10-22T21:14:46.000Z",
         "fields": {
-          "Agency/Department Name": "Unite",
-          "Country Name": "NGO"
+          "Agency/Department Name": "Unspecified Agency",
+          "Country Name": "Unite"
         }
       }
     ],
@@ -6689,8 +6565,12 @@
       }
     ],
     "donor_countries": [
-      "Foundation",
-      "NGO"
+      "Mackenzie Scott",
+      "Rippleworks",
+      "Silicon Valley Community Foundation",
+      "Skoll",
+      "The Elma Relief Foundation",
+      "Unite"
     ]
   },
   {
@@ -6705,9 +6585,6 @@
       "Provided Data Ecosystem Projects": [
         "rec2Su6C7bHl4BC7h"
       ],
-      "Org Type": [
-        "NGO"
-      ],
       "Org Donor Agencies": [
         "recKqqMmG0fzm1WSr",
         "reckIAhFXgj4XL29b",
@@ -6716,7 +6593,10 @@
       "Est. Org Budget [2024, $M]": 492304.82,
       "Org HQ Country": "Global (distributed)",
       "Has received CRAF'd Funding?": "NO",
-      "org_key": "qgisorg"
+      "org_key": "qgisorg",
+      "Org Type": [
+        "Non-Governmental Organization"
+      ]
     },
     "agencies": [
       {
@@ -6783,13 +6663,13 @@
       "Org Website": "https://opendatawatch.com/",
       "Org Description": "Open Data Watch is a non-profit organization working at the intersection of open data and official statistics to promote data openness and completeness.",
       "Link to Data Products Overview": "<https://odin.opendatawatch.com/>\n",
-      "Org Type": [
-        "NGO"
-      ],
       "Org IATI Name": "N/A",
       "Org HQ Country": "United States",
       "Has received CRAF'd Funding?": "NO",
-      "org_key": "odw"
+      "org_key": "odw",
+      "Org Type": [
+        "Non-Governmental Organization"
+      ]
     },
     "agencies": [],
     "projects": [],
@@ -6812,9 +6692,6 @@
         "recjxVwrxVL90go5G",
         "recLA3jRq3bbZRVzu"
       ],
-      "Org Type": [
-        "Research Institute / Think Tank"
-      ],
       "Org Donor Agencies": [
         "rec1VhOJv9U6QKBBs"
       ],
@@ -6825,7 +6702,10 @@
       "Est. Org Budget [2024, $M]": 15656938,
       "Org HQ Country": "United States",
       "Has received CRAF'd Funding?": "YES",
-      "org_key": "acled"
+      "org_key": "acled",
+      "Org Type": [
+        "Research / Think Tank"
+      ]
     },
     "agencies": [
       {
@@ -6985,6 +6865,39 @@
     ]
   },
   {
+    "id": "recSqPg3XJM8pnI25",
+    "name": "PANDA",
+    "fields": {
+      "Org Full Name": "PANDA",
+      "Org Short Name": "Panda",
+      "Org Website": "https://www.impact-initiatives.org/what-we-do/panda/",
+      "Org Description": "IMPACT’s PANDA initiative aims to improve the effectiveness, efficiency and efficacy of humanitarian and development interventions. PANDA supports the entire humanitarian programme cycle, including programme design, assessments, baselines, monitoring and evaluation.",
+      "Org Donor Agencies": [
+        "rec3Ado0Jrl799Q8A"
+      ],
+      "Est. Org Budget [2024, $M]": 15,
+      "org_key": "panda",
+      "Org Type": [
+        "Non-Governmental Organization"
+      ]
+    },
+    "agencies": [
+      {
+        "id": "rec3Ado0Jrl799Q8A",
+        "createdTime": "2025-06-26T02:46:04.000Z",
+        "fields": {
+          "Agency/Department Name": "Unspecified Agency",
+          "Agency Data Portal": "https://www.worldbank.org/ext/en/home",
+          "Country Name": "The World Bank"
+        }
+      }
+    ],
+    "projects": [],
+    "donor_countries": [
+      "The World Bank"
+    ]
+  },
+  {
     "id": "recU1jAnjfLIhxtwj",
     "name": "The Demographic and Health Survey (DHS Program)",
     "fields": {
@@ -6993,9 +6906,6 @@
       "Org Website": "https://dhsprogram.com/",
       "Org Description": "The DHS Program (Demographic and Health Surveys) is a primary source of data on health and population trends in developing countries, having provided technical assistance to over 300 surveys in more than 90 countries since 1984. They collect and disseminate nationally representative data on critical areas including fertility, family planning, maternal and child health, gender, HIV/AIDS, malaria, and nutrition. Funded by USAID and other donors, and implemented by ICF International, The DHS Program plays a vital role in advancing global understanding of health and population issues.",
       "Link to Data Products Overview": "<https://dhsprogram.com/Data/>\n",
-      "Org Type": [
-        "Other"
-      ],
       "Org Donor Agencies": [
         "rec6XRPA9pKgC8j1J",
         "recFDm6MHWUu6GSMI",
@@ -7004,7 +6914,10 @@
       "Est. Org Budget [2024, $M]": 47000000,
       "Org HQ Country": "United States",
       "Has received CRAF'd Funding?": "NO",
-      "org_key": "dhs"
+      "org_key": "dhs",
+      "Org Type": [
+        "International Organization"
+      ]
     },
     "agencies": [
       {
@@ -7041,6 +6954,23 @@
     ]
   },
   {
+    "id": "recUzg1CowtWH7MWS",
+    "name": "AGORA",
+    "fields": {
+      "Org Full Name": "AGORA",
+      "Org Short Name": "AGORA",
+      "Org Website": "https://www.impact-initiatives.org/what-we-do/agora/",
+      "Org Description": "AGORA, a joint venture between ACTED and IMPACT Initiatives, was created in 2016 to ground humanitarian and development work in local knowledge, in keeping with the motto « Think local, Act global »",
+      "org_key": "agora",
+      "Org Type": [
+        "Non-Governmental Organization"
+      ]
+    },
+    "agencies": [],
+    "projects": [],
+    "donor_countries": []
+  },
+  {
     "id": "recVvtFoKKF407fD1",
     "name": "Data Friendly Space",
     "fields": {
@@ -7053,9 +6983,6 @@
         "rec22kfYpoIsldmEK",
         "rec5zVtFYWKUXASIr"
       ],
-      "Org Type": [
-        "NGO"
-      ],
       "Org Donor Agencies": [
         "recImK5HfYUoDfAgk",
         "rec6XRPA9pKgC8j1J",
@@ -7065,16 +6992,19 @@
       "Est. Org Budget [2024, $M]": 2008567,
       "Org HQ Country": "Netherlands",
       "Has received CRAF'd Funding?": "NO",
-      "org_key": "data-friendly-space"
+      "org_key": "data-friendly-space",
+      "Org Type": [
+        "Non-Governmental Organization"
+      ]
     },
     "agencies": [
       {
         "id": "recImK5HfYUoDfAgk",
         "createdTime": "2025-03-21T17:30:52.000Z",
         "fields": {
-          "Agency/Department Name": "Norwegian Refugee Council (NRC / NORCAP)",
+          "Agency/Department Name": "Unspecified Agency",
           "Agency Data Portal": "https://www.nrc.no/where-we-work",
-          "Country Name": "NGO"
+          "Country Name": "Norwegian Refugee Council (NRC / NORCAP)"
         }
       },
       {
@@ -7089,8 +7019,8 @@
         "id": "rec4fIAt1DD6Vprw7",
         "createdTime": "2025-04-15T15:08:32.000Z",
         "fields": {
-          "Agency/Department Name": "Danish Refugee Council (DRC)",
-          "Country Name": "NGO"
+          "Agency/Department Name": "Unspecified Agency",
+          "Country Name": "Danish Refugee Council (DRC)"
         }
       }
     ],
@@ -7154,7 +7084,8 @@
       }
     ],
     "donor_countries": [
-      "NGO",
+      "Danish Refugee Council (DRC)",
+      "Norwegian Refugee Council (NRC / NORCAP)",
       "USA"
     ]
   },
@@ -7171,9 +7102,6 @@
         "recCrLYQFMbrPxsId",
         "recWziB7RyyVfMv3A",
         "recrWrHtaaCWN2TVH"
-      ],
-      "Org Type": [
-        "United Nations"
       ],
       "Org Donor Agencies": [
         "reckIAhFXgj4XL29b",
@@ -7215,7 +7143,10 @@
       "Est. Org Budget [2024, $M]": 900000000,
       "Org HQ Country": "France",
       "Has received CRAF'd Funding?": "NO",
-      "org_key": "unesco"
+      "org_key": "unesco",
+      "Org Type": [
+        "United Nations System"
+      ]
     },
     "agencies": [
       {
@@ -7335,8 +7266,8 @@
         "id": "recCqVCi3rwF77MxA",
         "createdTime": "2025-07-03T14:02:52.000Z",
         "fields": {
-          "Agency/Department Name": "African Union",
-          "Country Name": "Regional Organization"
+          "Agency/Department Name": "Unspecified Agency",
+          "Country Name": "African Union"
         }
       },
       {
@@ -7548,6 +7479,7 @@
       }
     ],
     "donor_countries": [
+      "African Union",
       "Australia",
       "Austria",
       "Belgium",
@@ -7565,7 +7497,6 @@
       "Netherlands",
       "Norway",
       "Poland",
-      "Regional Organization",
       "Russia",
       "Saudi Arabia",
       "South Korea",
@@ -7587,9 +7518,6 @@
       "Org Short Name": "MapAction",
       "Org Website": "https://mapaction.org/",
       "Org Description": "We are a non-profit organisation collaborating with partners around the world to prepare for and respond to humanitarian emergencies. We strive to ensure global, regional, national and local disaster management and humanitarian agencies have access to the maps, visualised data, information and analysis that they need to make key decisions, at the right times, to save lives and reduce suffering. ",
-      "Org Type": [
-        "NGO"
-      ],
       "Org Donor Agencies": [
         "rec0QlT9YlTVhHfEn",
         "rec6XRPA9pKgC8j1J",
@@ -7599,7 +7527,10 @@
       "Est. Org Budget [2024, $M]": 8452390.87,
       "Org HQ Country": "United Kingdom",
       "Has received CRAF'd Funding?": "NO",
-      "org_key": "mapaction"
+      "org_key": "mapaction",
+      "Org Type": [
+        "Non-Governmental Organization"
+      ]
     },
     "agencies": [
       {
@@ -7648,9 +7579,6 @@
         "rec4aulcundpJZOwl",
         "recpARdDyMReIUuDq"
       ],
-      "Org Type": [
-        "Research Institute / Think Tank"
-      ],
       "Org Donor Agencies": [
         "recHuY5QDGX7wJsTF",
         "rec1VhOJv9U6QKBBs",
@@ -7680,7 +7608,10 @@
       "Est. Org Budget [2024, $M]": 27421260,
       "Org HQ Country": "Belgium",
       "Has received CRAF'd Funding?": "YES",
-      "org_key": "icg"
+      "org_key": "icg",
+      "Org Type": [
+        "Non-Governmental Organization"
+      ]
     },
     "agencies": [
       {
@@ -8051,16 +7982,16 @@
             "id": "rec5NKr3OLYmPMuOf",
             "createdTime": "2025-10-22T21:16:21.000Z",
             "fields": {
-              "Agency/Department Name": "Global Challenges Foundation",
-              "Country Name": "NGO"
+              "Agency/Department Name": "Unspecified Agency",
+              "Country Name": "Global Challenges Foundation"
             }
           },
           {
             "id": "rec1In4CerWhTywiy",
             "createdTime": "2025-10-22T21:16:36.000Z",
             "fields": {
-              "Agency/Department Name": "Stiftung Mercator",
-              "Country Name": "NGO"
+              "Agency/Department Name": "Unspecified Agency",
+              "Country Name": "Stiftung Mercator"
             }
           }
         ]
@@ -8099,13 +8030,13 @@
       "Provided Data Ecosystem Projects": [
         "recGVHndBPIvMpuHb"
       ],
-      "Org Type": [
-        "International Organization"
-      ],
       "Est. Org Budget [2024, $M]": 127465638,
       "Org HQ Country": "United States",
       "Has received CRAF'd Funding?": "NO",
-      "org_key": "un-foundation"
+      "org_key": "un-foundation",
+      "Org Type": [
+        "Non-Governmental Organization"
+      ]
     },
     "agencies": [],
     "projects": [
@@ -8148,9 +8079,6 @@
       "Provided Data Ecosystem Projects": [
         "rechtC1lJc96HgvFk"
       ],
-      "Org Type": [
-        "Research Institute / Think Tank"
-      ],
       "Org Donor Agencies": [
         "rec6XRPA9pKgC8j1J"
       ],
@@ -8159,7 +8087,10 @@
       "Est. Org Budget [2024, $M]": 2000000,
       "Org HQ Country": "Lebanon",
       "Has received CRAF'd Funding?": "NO",
-      "org_key": "arab-barometer"
+      "org_key": "arab-barometer",
+      "Org Type": [
+        "Research / Think Tank"
+      ]
     },
     "agencies": [
       {
@@ -8244,9 +8175,6 @@
         "rec5GA5F1UPlXATSj",
         "recpP1KGKcmcpy2jo"
       ],
-      "Org Type": [
-        "International Organization"
-      ],
       "Org Donor Agencies": [
         "recGNTHL9SKZxLDcw",
         "rec6XRPA9pKgC8j1J",
@@ -8268,7 +8196,10 @@
       "Est. Org Budget [2024, $M]": 64282064.2,
       "Org HQ Country": "Switzerland",
       "Has received CRAF'd Funding?": "YES",
-      "org_key": "ifrc"
+      "org_key": "ifrc",
+      "Org Type": [
+        "Non-Governmental Organization"
+      ]
     },
     "agencies": [
       {
@@ -8475,9 +8406,6 @@
         "recgpnIj48zBCayHc",
         "recLn4QiWGniBsWoe"
       ],
-      "Org Type": [
-        "International Organization"
-      ],
       "Org Donor Agencies": [
         "recGNTHL9SKZxLDcw"
       ],
@@ -8485,7 +8413,10 @@
       "Est. Org Budget [2024, $M]": 126137856.56,
       "Org HQ Country": "Belgium",
       "Has received CRAF'd Funding?": "NO",
-      "org_key": "ec-jrc"
+      "org_key": "ec-jrc",
+      "Org Type": [
+        "Government / Public Sector"
+      ]
     },
     "agencies": [
       {
@@ -8633,9 +8564,6 @@
       "Org Short Name": "UNCCD",
       "Org Website": "https://www.unccd.int/",
       "Org Description": "The UNCCD is the global voice for land. We promote practices that avoid, reduce and reverse land degradation and are the driving force behind Sustainable Development Goal 15 and Land Degradation Neutrality.",
-      "Org Type": [
-        "United Nations"
-      ],
       "Org Donor Agencies": [
         "reckIAhFXgj4XL29b",
         "recXfPKShGM1SGpOy",
@@ -8654,7 +8582,10 @@
       "Est. Org Budget [2024, $M]": 9620000,
       "Org HQ Country": "Germany",
       "Has received CRAF'd Funding?": "NO",
-      "org_key": "unccd"
+      "org_key": "unccd",
+      "Org Type": [
+        "United Nations System"
+      ]
     },
     "agencies": [
       {
@@ -8772,9 +8703,6 @@
       "Provided Data Ecosystem Projects": [
         "rec4oWGeToxciytv3"
       ],
-      "Org Type": [
-        "United Nations"
-      ],
       "Org Donor Agencies": [
         "recI95P9GtOhiXNoU",
         "reco4Um0k7Tgw2UCK",
@@ -8791,7 +8719,10 @@
       "Est. Org Budget [2024, $M]": 172992047.84,
       "Org HQ Country": "Switzerland",
       "Has received CRAF'd Funding?": "NO",
-      "org_key": "wmo"
+      "org_key": "wmo",
+      "Org Type": [
+        "International Organization"
+      ]
     },
     "agencies": [
       {
@@ -8839,16 +8770,16 @@
         "id": "recCqVCi3rwF77MxA",
         "createdTime": "2025-07-03T14:02:52.000Z",
         "fields": {
-          "Agency/Department Name": "African Union",
-          "Country Name": "Regional Organization"
+          "Agency/Department Name": "Unspecified Agency",
+          "Country Name": "African Union"
         }
       },
       {
         "id": "recMSfI5XCXoaFs9i",
         "createdTime": "2025-08-04T22:34:32.000Z",
         "fields": {
-          "Agency/Department Name": "African Development Bank",
-          "Country Name": "International Financial Institutions (IFIs)"
+          "Agency/Department Name": "Unspecified Agency",
+          "Country Name": "African Development Bank"
         }
       },
       {
@@ -8909,11 +8840,11 @@
       }
     ],
     "donor_countries": [
+      "African Development Bank",
+      "African Union",
       "Canada",
       "China",
       "European Union",
-      "International Financial Institutions (IFIs)",
-      "Regional Organization",
       "South Korea",
       "Switzerland",
       "The World Bank",
@@ -8933,9 +8864,6 @@
       "Provided Data Ecosystem Projects": [
         "recUotlR1ZJwVMAIS",
         "rece4fDBOtjCywl9q"
-      ],
-      "Org Type": [
-        "United Nations"
       ],
       "Org Donor Agencies": [
         "reckIAhFXgj4XL29b",
@@ -8968,7 +8896,10 @@
       "Est. Org Budget [2024, $M]": 69430000,
       "Org HQ Country": "Switzerland",
       "Has received CRAF'd Funding?": "NO",
-      "org_key": "undrr"
+      "org_key": "undrr",
+      "Org Type": [
+        "United Nations System"
+      ]
     },
     "agencies": [
       {
@@ -9250,9 +9181,6 @@
         "recHVA5VejuaVSohF",
         "recz2ZsyM0B05BdFP"
       ],
-      "Org Type": [
-        "United Nations"
-      ],
       "Org Donor Agencies": [
         "rece2l2IJRlTC2ERq",
         "reckIAhFXgj4XL29b",
@@ -9300,7 +9228,10 @@
       "Est. Org Budget [2024, $M]": 4877004328,
       "Org HQ Country": "Switzerland",
       "Has received CRAF'd Funding?": "YES",
-      "org_key": "unhcr"
+      "org_key": "unhcr",
+      "Org Type": [
+        "United Nations System"
+      ]
     },
     "agencies": [
       {
@@ -9355,8 +9286,8 @@
         "id": "recCqVCi3rwF77MxA",
         "createdTime": "2025-07-03T14:02:52.000Z",
         "fields": {
-          "Agency/Department Name": "African Union",
-          "Country Name": "Regional Organization"
+          "Agency/Department Name": "Unspecified Agency",
+          "Country Name": "African Union"
         }
       },
       {
@@ -9957,6 +9888,7 @@
       }
     ],
     "donor_countries": [
+      "African Union",
       "Australia",
       "Austria",
       "Belgium",
@@ -9981,7 +9913,6 @@
       "Phillippines",
       "Poland",
       "Qatar",
-      "Regional Organization",
       "Saudi Arabia",
       "South Africa",
       "South Korea",
@@ -10008,9 +9939,6 @@
         "reczyv8I05ihUAyML",
         "recOfj0kk5iKOrHE4"
       ],
-      "Org Type": [
-        "Private Sector"
-      ],
       "Org Donor Agencies": [
         "recE3ZEHFRqbifGOn",
         "rec2KBp1IAA5TtnQl",
@@ -10021,7 +9949,10 @@
       "Est. Org Budget [2024, $M]": 7467000,
       "Org HQ Country": "Netherlands",
       "Has received CRAF'd Funding?": "NO",
-      "org_key": "3is"
+      "org_key": "3is",
+      "Org Type": [
+        "Private Sector / Industry"
+      ]
     },
     "agencies": [
       {
@@ -10187,10 +10118,8 @@
       "Org Description": "Afrobarometer, a non-profit company limited by guarantee with headquarters in Ghana, is a pan-African, non-partisan survey research network that conducts public attitude surveys on democracy, governance, the economy, and society. We are the world’s leading source of high-quality data on what Africans are thinking.\n\nOur network encompasses more than 30 national partners responsible for data collection, analysis, and in-country dissemination of findings. Regional coordination is provided by the Ghana Center for Democratic Development (CDD-Ghana), the Institute for Justice and Reconciliation (IJR) in South Africa, and the Institute for Development Studies (IDS) at the University of Nairobi in Kenya. Michigan State University (MSU) and the University of Cape Town (UCT) provide technical support to the network.",
       "Org Mission": "To make citizen voice a key pillar of African policy and decision making\nA world in which Africa’s development is anchored in the realities and aspirations of its people \n\n\n",
       "Provided Data Ecosystem Projects": [
-        "rec7HiwptaxnhVxui"
-      ],
-      "Org Type": [
-        "Research Institute / Think Tank"
+        "rec7HiwptaxnhVxui",
+        "recLqIa10HXfvELNB"
       ],
       "Org Donor Agencies": [
         "recGNTHL9SKZxLDcw",
@@ -10205,7 +10134,10 @@
       "Est. Org Budget [2024, $M]": 8610000,
       "Org HQ Country": "Ghana",
       "Has received CRAF'd Funding?": "NO",
-      "org_key": "afrobarometer"
+      "org_key": "afrobarometer",
+      "Org Type": [
+        "Non-Governmental Organization"
+      ]
     },
     "agencies": [
       {
@@ -10313,9 +10245,9 @@
             "id": "recbtz43uuKKFVfvd",
             "createdTime": "2025-03-25T17:04:19.000Z",
             "fields": {
-              "Agency/Department Name": "Bill and Melinda Gates Foundation",
+              "Agency/Department Name": "Unspecified Agency",
               "Agency Data Portal": "https://www.gatesfoundation.org/about/committed-grants",
-              "Country Name": "Foundation"
+              "Country Name": "Bill and Melinda Gates Foundation"
             }
           },
           {
@@ -10345,6 +10277,26 @@
             }
           }
         ]
+      },
+      {
+        "id": "recLqIa10HXfvELNB",
+        "createdTime": "2025-10-22T21:59:46.000Z",
+        "fields": {
+          "Project/Product Name": "Online Data Analysis",
+          "Provider Orgs Full Name": [
+            "rechDlUwp5odgrH4t"
+          ],
+          "CRAF’d-Funded Project?": "NO",
+          "Investment Type(s)": [
+            "Data Sets & Commons"
+          ],
+          "Investment Theme(s)": [
+            "Household Survey Data"
+          ],
+          "Project Website": "https://www.afrobarometer.org/online-data-analysis/",
+          "Project Description": "Our online data analysis (ODA) tool is a free and easy way to find, analyse, and use high-quality data on the views and experiences of Africans. The ODA contains our data sets from 39 African countries going back to 1999.\nYou can search our data sets by country, by survey question, and by survey round. You can compare individual countries and regions, or get the continental view on the topics of your choice. You can slice and dice the data by gender, age, education level, and other demographic variables. You can identify trends over time.\n"
+        },
+        "agencies": []
       }
     ],
     "donor_countries": [
@@ -10368,9 +10320,6 @@
       "Provided Data Ecosystem Projects": [
         "recueXHi1BfJrz30y"
       ],
-      "Org Type": [
-        "International Organization"
-      ],
       "Org Donor Agencies": [
         "rec6XRPA9pKgC8j1J",
         "recGNTHL9SKZxLDcw",
@@ -10384,7 +10333,10 @@
       "Est. Org Budget [2024, $M]": 9000000,
       "Org HQ Country": "Kenya",
       "Has received CRAF'd Funding?": "YES",
-      "org_key": "icpac"
+      "org_key": "icpac",
+      "Org Type": [
+        "International Organization"
+      ]
     },
     "agencies": [
       {
@@ -10465,13 +10417,13 @@
       "Provided Data Ecosystem Projects": [
         "recnt8m31aCnnA0my"
       ],
-      "Org Type": [
-        "Research Institute / Think Tank"
-      ],
       "Org IATI Name": "N/A",
       "Org HQ Country": "United States",
       "Has received CRAF'd Funding?": "NO",
-      "org_key": "healthmap"
+      "org_key": "healthmap",
+      "Org Type": [
+        "Research / Think Tank"
+      ]
     },
     "agencies": [],
     "projects": [
@@ -10516,9 +10468,6 @@
         "recgftq4GZElVtfi6",
         "recnoFBXdvLa7XJHw"
       ],
-      "Org Type": [
-        "United Nations"
-      ],
       "Org Donor Agencies": [
         "rec3Ado0Jrl799Q8A",
         "rectyuW4INCMaNoAM",
@@ -10536,7 +10485,10 @@
       "Est. Org Budget [2024, $M]": 2000000000,
       "Org HQ Country": "Italy",
       "Has received CRAF'd Funding?": "NO",
-      "org_key": "fao"
+      "org_key": "fao",
+      "Org Type": [
+        "United Nations System"
+      ]
     },
     "agencies": [
       {
@@ -10804,9 +10756,6 @@
       "Provided Data Ecosystem Projects": [
         "recyMSQo5lV032SER"
       ],
-      "Org Type": [
-        "Academic / University"
-      ],
       "Org Donor Agencies": [
         "reckIAhFXgj4XL29b"
       ],
@@ -10814,7 +10763,10 @@
       "Est. Org Budget [2024, $M]": 6700000000,
       "Org HQ Country": "United States",
       "Has received CRAF'd Funding?": "NO",
-      "org_key": "uc-irvine"
+      "org_key": "uc-irvine",
+      "Org Type": [
+        "Academia"
+      ]
     },
     "agencies": [
       {
@@ -10885,16 +10837,16 @@
         "recf0UvW6LzObKXGC",
         "recIUs7JTe4alrFDs"
       ],
-      "Org Type": [
-        "International Organization"
-      ],
       "Org IATI Name": "The World Bank or World Bank Trust Funds",
       "Org MPTFO Name": "IBRD",
       "Org MPTFO URL [Formula]": "https://mptf.undp.org/participating-organizations/IBRD",
       "Est. Org Budget [2024, $M]": 117500000000,
       "Org HQ Country": "United States",
       "Has received CRAF'd Funding?": "NO",
-      "org_key": "world-bank"
+      "org_key": "world-bank",
+      "Org Type": [
+        "International Organization"
+      ]
     },
     "agencies": [],
     "projects": [
@@ -11053,9 +11005,6 @@
         "rectaDjtvGUN9jPNg",
         "rec8taCKOmbZu5s4Z"
       ],
-      "Org Type": [
-        "NGO"
-      ],
       "Org Donor Agencies": [
         "rec1VhOJv9U6QKBBs",
         "recRutqdhqEZSnOB2",
@@ -11064,14 +11013,23 @@
         "rec0QlT9YlTVhHfEn",
         "recxopeJBWmkOfOtE",
         "rec17xB7AKc3ojdV5",
-        "recf10RuM7qHUnC33"
+        "recf10RuM7qHUnC33",
+        "rec8gXVsPUUB517NE",
+        "recMSfI5XCXoaFs9i",
+        "recuh6VLNIOwuzoK4",
+        "recEe5VWXvva47Ew5",
+        "recGMYeDQSV7jffjs",
+        "recCwo6aH031TZava"
       ],
       "Org IATI Name": "N/A",
       "Est. Data Budget [2024, $M]": 3445930,
       "Est. Org Budget [2024, $M]": 6998718,
       "Org HQ Country": "Norway",
       "Has received CRAF'd Funding?": "YES",
-      "org_key": "idmc"
+      "org_key": "idmc",
+      "Org Type": [
+        "Non-Governmental Organization"
+      ]
     },
     "agencies": [
       {
@@ -11140,6 +11098,52 @@
           "Agency/Department Name": "Ministry of Foreign Affairs (MFA)",
           "Country Name": "Norway"
         }
+      },
+      {
+        "id": "rec8gXVsPUUB517NE",
+        "createdTime": "2025-03-21T16:50:19.000Z",
+        "fields": {
+          "Agency/Department Name": "Federal Ministry for Economic Cooperation and Development (BMZ)",
+          "Agency Data Portal": "https://www.transparenzportal.bund.de/en",
+          "Country Name": "Germany"
+        }
+      },
+      {
+        "id": "recMSfI5XCXoaFs9i",
+        "createdTime": "2025-08-04T22:34:32.000Z",
+        "fields": {
+          "Agency/Department Name": "Unspecified Agency",
+          "Country Name": "African Development Bank"
+        }
+      },
+      {
+        "id": "recuh6VLNIOwuzoK4",
+        "createdTime": "2025-10-22T22:39:45.000Z",
+        "fields": {
+          "Agency/Department Name": "Unspecified Agency",
+          "Country Name": "Robert Bosch Stiftung"
+        }
+      },
+      {
+        "id": "recEe5VWXvva47Ew5",
+        "createdTime": "2025-08-04T20:03:35.000Z",
+        "fields": {
+          "Agency/Department Name": "Unspecified Agency",
+          "Country Name": "Liechtenstein"
+        }
+      },
+      {
+        "id": "recGMYeDQSV7jffjs",
+        "createdTime": "2025-08-04T19:04:38.000Z",
+        "fields": {
+          "Agency/Department Name": "Unspecified Agency",
+          "Country Name": "European Union"
+        }
+      },
+      {
+        "id": "recCwo6aH031TZava",
+        "createdTime": "2025-10-22T22:41:14.000Z",
+        "fields": {}
       }
     ],
     "projects": [
@@ -11494,11 +11498,14 @@
       }
     ],
     "donor_countries": [
+      "African Development Bank",
       "Australia",
       "CRAF’d",
+      "European Union",
       "Germany",
       "Liechtenstein",
       "Norway",
+      "Robert Bosch Stiftung",
       "Sweden",
       "Switzerland",
       "USA"
@@ -11515,9 +11522,6 @@
       "Provided Data Ecosystem Projects": [
         "recUtgQxL73zHDTCF"
       ],
-      "Org Type": [
-        "Academic / University"
-      ],
       "Org Donor Agencies": [
         "recz1D3MdBg9w7tmt",
         "recGdX0X5tAVmnIdm",
@@ -11527,7 +11531,10 @@
       "Est. Org Budget [2024, $M]": 113649536,
       "Org HQ Country": "Switzerland",
       "Has received CRAF'd Funding?": "NO",
-      "org_key": "eth-zurich"
+      "org_key": "eth-zurich",
+      "Org Type": [
+        "Academia"
+      ]
     },
     "agencies": [
       {
@@ -11626,15 +11633,14 @@
       "Org Short Name": "World Bank-UNHCR",
       "Org Website": "https://www.jointdatacenter.org/",
       "Org Description": "The JDC offers different types of support and guidance to activity implementation teams. In most cases, this entails a combination of the following:\n• Financial investments covering full or partial costs of proposed activities as relevant;\n• Technical guidance and support in order to ensure high quality outputs and useful outcomes, to allow learning from expertise, and to streamline processes;\n• Strategic advice to initiate and develop activities that are relevant to shape policy dialogue and inform programs;\n• Partnership building and coordination to identify and connect partners to enhance project outcomes, capitalize on synergies and increase impact.",
-      "Org Type": [
-        "International Organization",
-        "United Nations"
-      ],
       "Org Donor Agencies": [
         "rec1VhOJv9U6QKBBs"
       ],
       "Org HQ Country": "Denmark",
-      "org_key": "world-bank-unhcr"
+      "org_key": "world-bank-unhcr",
+      "Org Type": [
+        "International Organization"
+      ]
     },
     "agencies": [
       {
@@ -11659,9 +11665,6 @@
       "Org Short Name": "START Network",
       "Org Website": "https://startnetwork.org/",
       "Org Description": "Start Network is a network of aid agencies across the world, working together to revolutionise the global humanitarian system.\n\n\t",
-      "Org Type": [
-        "NGO"
-      ],
       "Org Donor Agencies": [
         "rec5OM4ToDzt2ycHr",
         "recHSsEaPuaG3h2PQ",
@@ -11674,16 +11677,19 @@
       "Est. Org Budget [2024, $M]": 36483133.15,
       "Org HQ Country": "United Kingdom",
       "Has received CRAF'd Funding?": "NO",
-      "org_key": "start-network"
+      "org_key": "start-network",
+      "Org Type": [
+        "Network / Consortium"
+      ]
     },
     "agencies": [
       {
         "id": "rec5OM4ToDzt2ycHr",
         "createdTime": "2025-06-28T02:06:19.000Z",
         "fields": {
-          "Agency/Department Name": "Conrad N. Hilton Foundation",
+          "Agency/Department Name": "Unspecified Agency",
           "Agency Data Portal": "https://www.hiltonfoundation.org/",
-          "Country Name": "Foundation"
+          "Country Name": "Conrad N. Hilton Foundation"
         }
       },
       {
@@ -11708,18 +11714,18 @@
         "id": "rec7IwGp05Iby61ry",
         "createdTime": "2025-06-28T02:12:09.000Z",
         "fields": {
-          "Agency/Department Name": "Global Support and Development (GSD)",
+          "Agency/Department Name": "Unspecified Agency",
           "Agency Data Portal": "https://www.gsd.ngo/en",
-          "Country Name": "NGO"
+          "Country Name": "Global Support and Development (GSD)"
         }
       },
       {
         "id": "recqNfbmfHwWpPdYJ",
         "createdTime": "2025-06-28T02:22:36.000Z",
         "fields": {
-          "Agency/Department Name": "Howden Foundation",
+          "Agency/Department Name": "Unspecified Agency",
           "Agency Data Portal": "https://www.howdengroupholdings.com/sustainability/howden-foundation",
-          "Country Name": "Foundation"
+          "Country Name": "Howden Foundation"
         }
       },
       {
@@ -11733,9 +11739,10 @@
     ],
     "projects": [],
     "donor_countries": [
+      "Conrad N. Hilton Foundation",
       "European Union",
-      "Foundation",
-      "NGO",
+      "Global Support and Development (GSD)",
+      "Howden Foundation",
       "USA",
       "United Kingdom"
     ]
@@ -11751,9 +11758,6 @@
       "Link to Data Products Overview": "<https://www.latinobarometro.org/latContents.jsp>\n",
       "Provided Data Ecosystem Projects": [
         "recCGWvmunEXVzpzw"
-      ],
-      "Org Type": [
-        "Research Institute / Think Tank"
       ],
       "Org Donor Agencies": [
         "recsrMWmoA037bW03",
@@ -11777,7 +11781,10 @@
       "Est. Org Budget [2024, $M]": 1000000,
       "Org HQ Country": "Chile",
       "Has received CRAF'd Funding?": "NO",
-      "org_key": "latinobarometro"
+      "org_key": "latinobarometro",
+      "Org Type": [
+        "Research / Think Tank"
+      ]
     },
     "agencies": [
       {
@@ -11793,8 +11800,8 @@
         "id": "rec6f6Th74eRAeRn4",
         "createdTime": "2025-07-10T14:15:34.000Z",
         "fields": {
-          "Agency/Department Name": "Inter American Development Bank (IDB)",
-          "Country Name": "International Financial Institutions (IFIs)"
+          "Agency/Department Name": "Unspecified Agency",
+          "Country Name": "Inter American Development Bank (IDB)"
         }
       },
       {
@@ -11835,25 +11842,25 @@
         "id": "recFNcILze2MwJxUN",
         "createdTime": "2025-07-10T14:25:16.000Z",
         "fields": {
-          "Agency/Department Name": "Organization of American States ",
-          "Country Name": "Regional Organization"
+          "Agency/Department Name": "Unspecified Agency",
+          "Country Name": "Organization of American States "
         }
       },
       {
         "id": "recfY9SzUx3XdEb4s",
         "createdTime": "2025-07-10T14:29:39.000Z",
         "fields": {
-          "Agency/Department Name": "International Institute for Democracy and Electoral Assistance (IDEA)",
-          "Country Name": "NGO"
+          "Agency/Department Name": "Unspecified Agency",
+          "Country Name": "International Institute for Democracy and Electoral Assistance (IDEA)"
         }
       },
       {
         "id": "recK8nDxvYcbGdEgw",
         "createdTime": "2025-04-01T19:29:49.000Z",
         "fields": {
-          "Agency/Department Name": "Development Bank of Latin America and the Caribbean (CAF)",
+          "Agency/Department Name": "Unspecified Agency",
           "Agency Data Portal": "https://www.caf.com/en/projects/",
-          "Country Name": "International Financial Institutions (IFIs)"
+          "Country Name": "Development Bank of Latin America and the Caribbean (CAF)"
         }
       },
       {
@@ -11868,9 +11875,9 @@
         "id": "recks6hHpAgBV14d9",
         "createdTime": "2025-04-01T19:29:18.000Z",
         "fields": {
-          "Agency/Department Name": "Inter-American Development Bank (IDB)",
+          "Agency/Department Name": "Unspecified Agency",
           "Agency Data Portal": "https://www.iadb.org/en/projects",
-          "Country Name": "International Financial Institutions (IFIs)"
+          "Country Name": "Inter-American Development Bank (IDB)"
         }
       },
       {
@@ -11885,8 +11892,8 @@
         "id": "recCqVCi3rwF77MxA",
         "createdTime": "2025-07-03T14:02:52.000Z",
         "fields": {
-          "Agency/Department Name": "African Union",
-          "Country Name": "Regional Organization"
+          "Agency/Department Name": "Unspecified Agency",
+          "Country Name": "African Union"
         }
       },
       {
@@ -11965,18 +11972,18 @@
             "id": "recK8nDxvYcbGdEgw",
             "createdTime": "2025-04-01T19:29:49.000Z",
             "fields": {
-              "Agency/Department Name": "Development Bank of Latin America and the Caribbean (CAF)",
+              "Agency/Department Name": "Unspecified Agency",
               "Agency Data Portal": "https://www.caf.com/en/projects/",
-              "Country Name": "International Financial Institutions (IFIs)"
+              "Country Name": "Development Bank of Latin America and the Caribbean (CAF)"
             }
           },
           {
             "id": "recks6hHpAgBV14d9",
             "createdTime": "2025-04-01T19:29:18.000Z",
             "fields": {
-              "Agency/Department Name": "Inter-American Development Bank (IDB)",
+              "Agency/Department Name": "Unspecified Agency",
               "Agency Data Portal": "https://www.iadb.org/en/projects",
-              "Country Name": "International Financial Institutions (IFIs)"
+              "Country Name": "Inter-American Development Bank (IDB)"
             }
           },
           {
@@ -11992,12 +11999,15 @@
       }
     ],
     "donor_countries": [
+      "African Union",
       "Canada",
+      "Development Bank of Latin America and the Caribbean (CAF)",
       "European Union",
-      "International Financial Institutions (IFIs)",
-      "NGO",
+      "Inter American Development Bank (IDB)",
+      "Inter-American Development Bank (IDB)",
+      "International Institute for Democracy and Electoral Assistance (IDEA)",
       "Norway",
-      "Regional Organization",
+      "Organization of American States",
       "Spain",
       "Sweden",
       "USA",
@@ -12017,9 +12027,6 @@
       "Provided Data Ecosystem Projects": [
         "recaWq49HJw4UXd9K"
       ],
-      "Org Type": [
-        "Other"
-      ],
       "Org Donor Agencies": [
         "recGNTHL9SKZxLDcw",
         "rec0sY1I5JZz6ZsUE",
@@ -12030,7 +12037,10 @@
       "Est. Org Budget [2024, $M]": 11810000,
       "Org HQ Country": "United States",
       "Has received CRAF'd Funding?": "NO",
-      "org_key": "ipc"
+      "org_key": "ipc",
+      "Org Type": [
+        "Network / Consortium"
+      ]
     },
     "agencies": [
       {
@@ -12156,9 +12166,6 @@
       "Provided Data Ecosystem Projects": [
         "recQubJTGSwZoqzix"
       ],
-      "Org Type": [
-        "International Organization"
-      ],
       "Org Donor Agencies": [
         "recQUVhcVyxZlXJ3H",
         "recHuY5QDGX7wJsTF",
@@ -12179,7 +12186,10 @@
       "Org MPTFO URL [Formula]": "https://mptf.undp.org/participating-organizations/SPC",
       "Org HQ Country": "New Caledonia",
       "Has received CRAF'd Funding?": "NO",
-      "org_key": "pacific-community"
+      "org_key": "pacific-community",
+      "Org Type": [
+        "International Organization"
+      ]
     },
     "agencies": [
       {
@@ -12349,9 +12359,6 @@
       "Provided Data Ecosystem Projects": [
         "recSvtWQnSvfNoXdt"
       ],
-      "Org Type": [
-        "United Nations"
-      ],
       "Org Donor Agencies": [
         "rec1YpvhkjwME6GOJ",
         "recGMYeDQSV7jffjs",
@@ -12373,7 +12380,10 @@
       "Est. Org Budget [2024, $M]": 671300000,
       "Org HQ Country": "Kenya",
       "Has received CRAF'd Funding?": "NO",
-      "org_key": "unep"
+      "org_key": "unep",
+      "Org Type": [
+        "United Nations System"
+      ]
     },
     "agencies": [
       {
@@ -12539,15 +12549,52 @@
     "fields": {
       "Org Full Name": "ACAPS",
       "Org Short Name": "ACAPS",
+      "Org Website": "https://www.acaps.org/en/",
+      "Org Description": "ACAPS is a humanitarian data analytics initiative led by NRC, Save the Children, and Mercy Corps. It conducts needs overviews, early warning analysis, and sector assessments to support principled decision-making.",
       "Provided Data Ecosystem Projects": [
-        "rec4XuZsotMgaVbAm"
+        "rec4XuZsotMgaVbAm",
+        "recWKNeEWEv3vKeyX",
+        "recWiXtcwxhgmhgNY"
       ],
+      "Org Donor Agencies": [
+        "recHSsEaPuaG3h2PQ",
+        "rec0sY1I5JZz6ZsUE",
+        "recylzOrnxt3grWHh"
+      ],
+      "org_key": "acaps",
       "Org Type": [
-        "NGO"
-      ],
-      "org_key": "acaps"
+        "Non-Governmental Organization"
+      ]
     },
-    "agencies": [],
+    "agencies": [
+      {
+        "id": "recHSsEaPuaG3h2PQ",
+        "createdTime": "2025-03-21T16:58:30.000Z",
+        "fields": {
+          "Agency/Department Name": "Directorate-General for European Civil Protection and Humanitarian Aid Operations (DG ECHO)",
+          "Agency Data Portal": "funding overview, not portal https://civil-protection-humanitarian-aid.ec.europa.eu/funding-evaluations/funding-humanitarian-aid_en",
+          "Country Name": "European Union"
+        }
+      },
+      {
+        "id": "rec0sY1I5JZz6ZsUE",
+        "createdTime": "2025-03-21T16:43:49.000Z",
+        "fields": {
+          "Agency/Department Name": "Foreign, Commonwealth & Development Office (FCDO)",
+          "Agency Data Portal": "https://devtracker.fcdo.gov.uk/",
+          "Country Name": "United Kingdom"
+        }
+      },
+      {
+        "id": "recylzOrnxt3grWHh",
+        "createdTime": "2025-03-24T19:59:15.000Z",
+        "fields": {
+          "Agency/Department Name": "Swiss Agency for Development and Cooperation (SDC)",
+          "Agency Data Portal": "https://www.eda.admin.ch/deza/en/home/projekte/projekte.html",
+          "Country Name": "Switzerland"
+        }
+      }
+    ],
     "projects": [
       {
         "id": "rec4XuZsotMgaVbAm",
@@ -12571,9 +12618,53 @@
           "Project Description": "The INFORM Severity Index is an improved way to analyse the severity of humanitarian crises globally. It seeks to contribute to improved management of humanitarian crises by providing decision-makers with a comparable and reliable summary of information about the severity of humanitarian crises that is updated monthly and applicable globally. INFORM partners have been developing the INFORM Severity Index since 2016. It will complement the widely used INFORM Risk Index.\n\n\n\n"
         },
         "agencies": []
+      },
+      {
+        "id": "recWKNeEWEv3vKeyX",
+        "createdTime": "2025-10-22T21:26:01.000Z",
+        "fields": {
+          "Project/Product Name": "Humanitarian Access Overview ",
+          "Provider Orgs Full Name": [
+            "recoqtz0oMUwga8v5"
+          ],
+          "CRAF’d-Funded Project?": "NO",
+          "Investment Type(s)": [
+            "Data Sets & Commons"
+          ],
+          "Investment Theme(s)": [
+            "Humanitarian Access Data"
+          ],
+          "Project Website": "https://www.acaps.org/en/thematics/all-topics/humanitarian-access",
+          "Project Description": "The Global Humanitarian Access Overview is ACAPS’ twice-yearly assessment of the barriers that prevent aid from reaching people in crisis and people in crisis from receiving assistance.\n"
+        },
+        "agencies": []
+      },
+      {
+        "id": "recWiXtcwxhgmhgNY",
+        "createdTime": "2025-10-22T21:27:55.000Z",
+        "fields": {
+          "Project/Product Name": "Risk Radar",
+          "Provider Orgs Full Name": [
+            "recoqtz0oMUwga8v5"
+          ],
+          "CRAF’d-Funded Project?": "NO",
+          "Investment Type(s)": [
+            "Infrastructure & Platforms"
+          ],
+          "Investment Theme(s)": [
+            "Conflict & Violence Data"
+          ],
+          "Project Website": "https://www.acaps.org/en/countries",
+          "Project Description": "The Risk Radar is a forward-looking analytical tool developed by ACAPS that flags countries and contexts where the humanitarian situation is likely to deteriorate significantly in the next six months. It combines monitoring of hundreds of crises, evaluation of drivers and triggers, and a systematic risk‐analysis methodology (impact × probability) to highlight where urgent attention and preparedness may be needed.\n"
+        },
+        "agencies": []
       }
     ],
-    "donor_countries": []
+    "donor_countries": [
+      "European Union",
+      "Switzerland",
+      "United Kingdom"
+    ]
   },
   {
     "id": "recq4LDzw9kcBCuX3",
@@ -12587,13 +12678,13 @@
         "recjAd7jOVvlh7mnp",
         "receXQgibfVmjvmeB"
       ],
-      "Org Type": [
-        "Academic / University"
-      ],
       "Est. Org Budget [2024, $M]": 4722424711,
       "Org HQ Country": "United States",
       "Has received CRAF'd Funding?": "NO",
-      "org_key": "university-of-minnesota"
+      "org_key": "university-of-minnesota",
+      "Org Type": [
+        "Academia"
+      ]
     },
     "agencies": [],
     "projects": [
@@ -12627,9 +12718,9 @@
             "id": "recbtz43uuKKFVfvd",
             "createdTime": "2025-03-25T17:04:19.000Z",
             "fields": {
-              "Agency/Department Name": "Bill and Melinda Gates Foundation",
+              "Agency/Department Name": "Unspecified Agency",
               "Agency Data Portal": "https://www.gatesfoundation.org/about/committed-grants",
-              "Country Name": "Foundation"
+              "Country Name": "Bill and Melinda Gates Foundation"
             }
           },
           {
@@ -12733,14 +12824,14 @@
         "recEwLy3FESOhLeNs",
         "recAeviz1XjLC8V6i"
       ],
-      "Org Type": [
-        "United Nations"
-      ],
       "Org Programme Budget": "https://unitar.org/sites/default/files/media/publication/doc/UNITAR-Programme-Budget-2024-2025_adopted-17November2023.pdf?utm_source=chatgpt.com",
       "Est. Org Budget [2024, $M]": 48440000,
       "Org HQ Country": "Switzerland",
       "Has received CRAF'd Funding?": "NO",
-      "org_key": "unitar"
+      "org_key": "unitar",
+      "Org Type": [
+        "United Nations System"
+      ]
     },
     "agencies": [],
     "projects": [
@@ -12836,13 +12927,8 @@
         "recR021jYyNleSCho",
         "recxWS5Ys5dJ0dn1X",
         "recHVA5VejuaVSohF",
-        "recpHSrK0iIVLYDKO",
-        "reczbufo0nFEwG49q",
         "reccYy5JWKJEASskp",
         "reczIeSUeAdEWMKSk"
-      ],
-      "Org Type": [
-        "United Nations"
       ],
       "Org Donor Agencies": [
         "rec6XRPA9pKgC8j1J",
@@ -12872,7 +12958,10 @@
       "Est. Org Budget [2024, $M]": 3733229338.55,
       "Org HQ Country": "Switzerland",
       "Has received CRAF'd Funding?": "YES",
-      "org_key": "iom"
+      "org_key": "iom",
+      "Org Type": [
+        "International Organization"
+      ]
     },
     "agencies": [
       {
@@ -13177,188 +13266,6 @@
         "agencies": []
       },
       {
-        "id": "recpHSrK0iIVLYDKO",
-        "createdTime": "2025-07-18T15:07:53.000Z",
-        "fields": {
-          "Project/Product Name": "IOM's Global Data Institute (GDI)",
-          "product_key": "iom-gdi",
-          "Provider Orgs Full Name": [
-            "recsrCWKAPu9dwkHb"
-          ],
-          "CRAF’d-Funded Project?": "NO",
-          "Investment Type(s)": [
-            "Data Sets & Commons",
-            "Crisis Analytics & Insights"
-          ],
-          "Investment Theme(s)": [
-            "Displacement & Migration Data",
-            "Displacement & Migration Analytics",
-            "Humanitarian Access Data"
-          ],
-          "Project Website": "https://www.iom.int/migration-data",
-          "Project Description": "GDI strengthens IOM’s institutional capacity for data, analytics, and digital tools—supporting platforms like GMDAC, PRIMES, and the DTM API to deliver timely and interoperable migration data.\n",
-          "Project Donor Agencies": [
-            "rec6XRPA9pKgC8j1J",
-            "recQUVhcVyxZlXJ3H",
-            "rec8gXVsPUUB517NE",
-            "rec0QlT9YlTVhHfEn",
-            "recGtHxSOF0xgVlbl",
-            "recHSsEaPuaG3h2PQ",
-            "recYxlC8x9puB69tx",
-            "recOSSiNFT1E4S7gL",
-            "rec0sY1I5JZz6ZsUE",
-            "rectyuW4INCMaNoAM",
-            "recm5JztIHB9RUFLL",
-            "recwFMxuFEUJ4IK7S",
-            "recRgmk6Ew3NBvxGV",
-            "recHuY5QDGX7wJsTF",
-            "recf10RuM7qHUnC33",
-            "recbvrcYZZW7mBnCU"
-          ]
-        },
-        "agencies": [
-          {
-            "id": "rec6XRPA9pKgC8j1J",
-            "createdTime": "2025-03-21T16:43:49.000Z",
-            "fields": {
-              "Agency/Department Name": "U.S. Agency for International Development (USAID)",
-              "Country Name": "USA"
-            }
-          },
-          {
-            "id": "recQUVhcVyxZlXJ3H",
-            "createdTime": "2025-03-21T16:43:49.000Z",
-            "fields": {
-              "Agency/Department Name": "Department of State (DOS)",
-              "Agency Data Portal": "https://www.foreignassistance.gov/",
-              "Country Name": "USA"
-            }
-          },
-          {
-            "id": "rec8gXVsPUUB517NE",
-            "createdTime": "2025-03-21T16:50:19.000Z",
-            "fields": {
-              "Agency/Department Name": "Federal Ministry for Economic Cooperation and Development (BMZ)",
-              "Agency Data Portal": "https://www.transparenzportal.bund.de/en",
-              "Country Name": "Germany"
-            }
-          },
-          {
-            "id": "rec0QlT9YlTVhHfEn",
-            "createdTime": "2025-03-21T16:50:20.000Z",
-            "fields": {
-              "Agency/Department Name": "Federal Foreign Office (AA)",
-              "Country Name": "Germany"
-            }
-          },
-          {
-            "id": "recGtHxSOF0xgVlbl",
-            "createdTime": "2025-04-30T00:24:16.000Z",
-            "fields": {
-              "Agency/Department Name": "KfW Development Bank (KfW)",
-              "Agency Data Portal": "https://www.kfw-entwicklungsbank.de/International-financing/KfW-Development-Bank/Projekte/",
-              "Country Name": "Germany"
-            }
-          },
-          {
-            "id": "recHSsEaPuaG3h2PQ",
-            "createdTime": "2025-03-21T16:58:30.000Z",
-            "fields": {
-              "Agency/Department Name": "Directorate-General for European Civil Protection and Humanitarian Aid Operations (DG ECHO)",
-              "Agency Data Portal": "funding overview, not portal https://civil-protection-humanitarian-aid.ec.europa.eu/funding-evaluations/funding-humanitarian-aid_en",
-              "Country Name": "European Union"
-            }
-          },
-          {
-            "id": "recYxlC8x9puB69tx",
-            "createdTime": "2025-03-21T16:57:30.000Z",
-            "fields": {
-              "Agency/Department Name": "Global Affairs Canada (GAC) / Department of Foreign Affairs, Trade and Development ",
-              "Agency Data Portal": "Project Browser  International assistance projects funded by Global Affairs Canada https://w05.international.gc.ca/projectbrowser-banqueprojets/",
-              "Country Name": "Canada"
-            }
-          },
-          {
-            "id": "recOSSiNFT1E4S7gL",
-            "createdTime": "2025-06-26T03:53:41.000Z",
-            "fields": {
-              "Agency/Department Name": "Immigration, Refugees and Citizenship Canada (IRCC)",
-              "Agency Data Portal": "https://www.canada.ca/en/immigration-refugees-citizenship.html",
-              "Country Name": "Canada"
-            }
-          },
-          {
-            "id": "rec0sY1I5JZz6ZsUE",
-            "createdTime": "2025-03-21T16:43:49.000Z",
-            "fields": {
-              "Agency/Department Name": "Foreign, Commonwealth & Development Office (FCDO)",
-              "Agency Data Portal": "https://devtracker.fcdo.gov.uk/",
-              "Country Name": "United Kingdom"
-            }
-          },
-          {
-            "id": "rectyuW4INCMaNoAM",
-            "createdTime": "2025-04-15T14:56:00.000Z",
-            "fields": {
-              "Agency/Department Name": "Unspecified Agency",
-              "Agency Data Portal": "https://fts.unocha.org/",
-              "Country Name": "United Nations Office for the Coordination of Humanitarian Affairs (OCHA)"
-            }
-          },
-          {
-            "id": "recm5JztIHB9RUFLL",
-            "createdTime": "2025-04-01T19:35:08.000Z",
-            "fields": {
-              "Agency/Department Name": "Japan International Cooperation Agency (JICA)",
-              "Country Name": "Japan"
-            }
-          },
-          {
-            "id": "recwFMxuFEUJ4IK7S",
-            "createdTime": "2025-06-26T03:54:50.000Z",
-            "fields": {
-              "Agency/Department Name": "Ministry of Foreign Affairs (MOFA)",
-              "Country Name": "Japan"
-            }
-          },
-          {
-            "id": "recRgmk6Ew3NBvxGV",
-            "createdTime": "2025-03-21T17:01:38.000Z",
-            "fields": {
-              "Agency/Department Name": "Netherlands – Ministry of Foreign Affairs of the Netherlands (BZ / MFA)",
-              "Agency Data Portal": "https://www.dutchdevelopmentresults.nl/",
-              "Country Name": "Netherlands"
-            }
-          },
-          {
-            "id": "recHuY5QDGX7wJsTF",
-            "createdTime": "2025-03-24T01:30:44.000Z",
-            "fields": {
-              "Agency/Department Name": "Department of Foreign Affairs and Trade (DFAT)",
-              "Agency Data Portal": "https://adp.dfat.gov.au/",
-              "Country Name": "Australia"
-            }
-          },
-          {
-            "id": "recf10RuM7qHUnC33",
-            "createdTime": "2025-03-24T01:28:53.000Z",
-            "fields": {
-              "Agency/Department Name": "Ministry of Foreign Affairs (MFA)",
-              "Country Name": "Norway"
-            }
-          },
-          {
-            "id": "recbvrcYZZW7mBnCU",
-            "createdTime": "2025-03-25T17:06:03.000Z",
-            "fields": {
-              "Agency/Department Name": "Norwegian Agency for Development Cooperation (Norad)",
-              "Agency Data Portal": "https://resultater.norad.no/en",
-              "Country Name": "Norway"
-            }
-          }
-        ]
-      },
-      {
         "id": "recxWS5Ys5dJ0dn1X",
         "createdTime": "2025-04-15T15:11:59.000Z",
         "fields": {
@@ -13391,7 +13298,8 @@
           "Provider Orgs Full Name": [
             "recGCltHLsYiDo59B",
             "recsrCWKAPu9dwkHb",
-            "rec3QdLIyrZ4dNiPh"
+            "rec3QdLIyrZ4dNiPh",
+            "recNVePWbU6GAxsIP"
           ],
           "CRAF’d-Funded Project?": "NO",
           "Investment Type(s)": [
@@ -13406,188 +13314,6 @@
           "Project Description": "MSNA is a standardized, country-level data collection initiative that captures multi-sectoral needs in crisis-affected populations. Data collected informs strategic planning, prioritization, and humanitarian response efforts.\n"
         },
         "agencies": []
-      },
-      {
-        "id": "reczbufo0nFEwG49q",
-        "createdTime": "2025-07-21T18:27:42.000Z",
-        "fields": {
-          "Project/Product Name": "IOM Global Migration Data Analysis Centre (GMDAC)",
-          "product_key": "iom-gmdac",
-          "Provider Orgs Full Name": [
-            "recsrCWKAPu9dwkHb"
-          ],
-          "CRAF’d-Funded Project?": "NO",
-          "Investment Type(s)": [
-            "Data Sets & Commons",
-            "Crisis Analytics & Insights"
-          ],
-          "Investment Theme(s)": [
-            "Displacement & Migration Data",
-            "Displacement & Migration Analytics",
-            "Humanitarian Access Data"
-          ],
-          "Project Website": "https://gmdac.iom.int/",
-          "Project Description": "GMDAC provides migration data, trends, and analytical resources covering displacement, flows, and migration governance, using open data and APIs to support policy and humanitarian planning.\n",
-          "Project Donor Agencies": [
-            "rec6XRPA9pKgC8j1J",
-            "recQUVhcVyxZlXJ3H",
-            "rec8gXVsPUUB517NE",
-            "rec0QlT9YlTVhHfEn",
-            "recGtHxSOF0xgVlbl",
-            "recHSsEaPuaG3h2PQ",
-            "recYxlC8x9puB69tx",
-            "recOSSiNFT1E4S7gL",
-            "rec0sY1I5JZz6ZsUE",
-            "rectyuW4INCMaNoAM",
-            "recm5JztIHB9RUFLL",
-            "recwFMxuFEUJ4IK7S",
-            "recRgmk6Ew3NBvxGV",
-            "recHuY5QDGX7wJsTF",
-            "recf10RuM7qHUnC33",
-            "recbvrcYZZW7mBnCU"
-          ]
-        },
-        "agencies": [
-          {
-            "id": "rec6XRPA9pKgC8j1J",
-            "createdTime": "2025-03-21T16:43:49.000Z",
-            "fields": {
-              "Agency/Department Name": "U.S. Agency for International Development (USAID)",
-              "Country Name": "USA"
-            }
-          },
-          {
-            "id": "recQUVhcVyxZlXJ3H",
-            "createdTime": "2025-03-21T16:43:49.000Z",
-            "fields": {
-              "Agency/Department Name": "Department of State (DOS)",
-              "Agency Data Portal": "https://www.foreignassistance.gov/",
-              "Country Name": "USA"
-            }
-          },
-          {
-            "id": "rec8gXVsPUUB517NE",
-            "createdTime": "2025-03-21T16:50:19.000Z",
-            "fields": {
-              "Agency/Department Name": "Federal Ministry for Economic Cooperation and Development (BMZ)",
-              "Agency Data Portal": "https://www.transparenzportal.bund.de/en",
-              "Country Name": "Germany"
-            }
-          },
-          {
-            "id": "rec0QlT9YlTVhHfEn",
-            "createdTime": "2025-03-21T16:50:20.000Z",
-            "fields": {
-              "Agency/Department Name": "Federal Foreign Office (AA)",
-              "Country Name": "Germany"
-            }
-          },
-          {
-            "id": "recGtHxSOF0xgVlbl",
-            "createdTime": "2025-04-30T00:24:16.000Z",
-            "fields": {
-              "Agency/Department Name": "KfW Development Bank (KfW)",
-              "Agency Data Portal": "https://www.kfw-entwicklungsbank.de/International-financing/KfW-Development-Bank/Projekte/",
-              "Country Name": "Germany"
-            }
-          },
-          {
-            "id": "recHSsEaPuaG3h2PQ",
-            "createdTime": "2025-03-21T16:58:30.000Z",
-            "fields": {
-              "Agency/Department Name": "Directorate-General for European Civil Protection and Humanitarian Aid Operations (DG ECHO)",
-              "Agency Data Portal": "funding overview, not portal https://civil-protection-humanitarian-aid.ec.europa.eu/funding-evaluations/funding-humanitarian-aid_en",
-              "Country Name": "European Union"
-            }
-          },
-          {
-            "id": "recYxlC8x9puB69tx",
-            "createdTime": "2025-03-21T16:57:30.000Z",
-            "fields": {
-              "Agency/Department Name": "Global Affairs Canada (GAC) / Department of Foreign Affairs, Trade and Development ",
-              "Agency Data Portal": "Project Browser  International assistance projects funded by Global Affairs Canada https://w05.international.gc.ca/projectbrowser-banqueprojets/",
-              "Country Name": "Canada"
-            }
-          },
-          {
-            "id": "recOSSiNFT1E4S7gL",
-            "createdTime": "2025-06-26T03:53:41.000Z",
-            "fields": {
-              "Agency/Department Name": "Immigration, Refugees and Citizenship Canada (IRCC)",
-              "Agency Data Portal": "https://www.canada.ca/en/immigration-refugees-citizenship.html",
-              "Country Name": "Canada"
-            }
-          },
-          {
-            "id": "rec0sY1I5JZz6ZsUE",
-            "createdTime": "2025-03-21T16:43:49.000Z",
-            "fields": {
-              "Agency/Department Name": "Foreign, Commonwealth & Development Office (FCDO)",
-              "Agency Data Portal": "https://devtracker.fcdo.gov.uk/",
-              "Country Name": "United Kingdom"
-            }
-          },
-          {
-            "id": "rectyuW4INCMaNoAM",
-            "createdTime": "2025-04-15T14:56:00.000Z",
-            "fields": {
-              "Agency/Department Name": "Unspecified Agency",
-              "Agency Data Portal": "https://fts.unocha.org/",
-              "Country Name": "United Nations Office for the Coordination of Humanitarian Affairs (OCHA)"
-            }
-          },
-          {
-            "id": "recm5JztIHB9RUFLL",
-            "createdTime": "2025-04-01T19:35:08.000Z",
-            "fields": {
-              "Agency/Department Name": "Japan International Cooperation Agency (JICA)",
-              "Country Name": "Japan"
-            }
-          },
-          {
-            "id": "recwFMxuFEUJ4IK7S",
-            "createdTime": "2025-06-26T03:54:50.000Z",
-            "fields": {
-              "Agency/Department Name": "Ministry of Foreign Affairs (MOFA)",
-              "Country Name": "Japan"
-            }
-          },
-          {
-            "id": "recRgmk6Ew3NBvxGV",
-            "createdTime": "2025-03-21T17:01:38.000Z",
-            "fields": {
-              "Agency/Department Name": "Netherlands – Ministry of Foreign Affairs of the Netherlands (BZ / MFA)",
-              "Agency Data Portal": "https://www.dutchdevelopmentresults.nl/",
-              "Country Name": "Netherlands"
-            }
-          },
-          {
-            "id": "recHuY5QDGX7wJsTF",
-            "createdTime": "2025-03-24T01:30:44.000Z",
-            "fields": {
-              "Agency/Department Name": "Department of Foreign Affairs and Trade (DFAT)",
-              "Agency Data Portal": "https://adp.dfat.gov.au/",
-              "Country Name": "Australia"
-            }
-          },
-          {
-            "id": "recf10RuM7qHUnC33",
-            "createdTime": "2025-03-24T01:28:53.000Z",
-            "fields": {
-              "Agency/Department Name": "Ministry of Foreign Affairs (MFA)",
-              "Country Name": "Norway"
-            }
-          },
-          {
-            "id": "recbvrcYZZW7mBnCU",
-            "createdTime": "2025-03-25T17:06:03.000Z",
-            "fields": {
-              "Agency/Department Name": "Norwegian Agency for Development Cooperation (Norad)",
-              "Agency Data Portal": "https://resultater.norad.no/en",
-              "Country Name": "Norway"
-            }
-          }
-        ]
       }
     ],
     "donor_countries": [
@@ -13611,13 +13337,13 @@
       "Org Short Name": "UNESCAP",
       "Org Website": "https://www.unescap.org/",
       "Org Description": "UNESCAP leverages data and statistics to address key development challenges in the Asia-Pacific region, providing member states with results-oriented projects, technical assistance, and capacity building. They work across various areas, including macroeconomic policy, poverty reduction, trade, environment, disaster risk reduction, and social development. UNESCAP promotes the use of data for evidence-based decision-making and fosters regional cooperation on transboundary issues, utilizing rigorous analysis and peer learning to inform policy dialogues and recommendations.",
-      "Org Type": [
-        "United Nations"
-      ],
       "Est. Org Budget [2024, $M]": 56817100,
       "Org HQ Country": "Thailand",
       "Has received CRAF'd Funding?": "NO",
-      "org_key": "unescap"
+      "org_key": "unescap",
+      "Org Type": [
+        "United Nations System"
+      ]
     },
     "agencies": [],
     "projects": [],
@@ -13632,9 +13358,6 @@
       "Org Website": "https://data.org/about/",
       "Org Description": "data.org is accelerating the power of data and AI to solve some of the world’s biggest problems. By hosting innovation challenges to surface and scale groundbreaking ideas, and elevating use cases of the most effective tools and strategies, we are building the field of data for social impact.",
       "Org Mission": "By 2032, we will train one million purpose-driven data practitioners, ensuring there is capacity to drive meaningful, equitable impact.",
-      "Org Type": [
-        "NGO"
-      ],
       "Org Donor Agencies": [
         "recOTnda6XSuNUpvo",
         "recqhcKxTv71yMfeI",
@@ -13645,7 +13368,10 @@
       "Org IATI Name": "N/A",
       "Org HQ Country": "United States",
       "Has received CRAF'd Funding?": "NO",
-      "org_key": "dataorg"
+      "org_key": "dataorg",
+      "Org Type": [
+        "Non-Governmental Organization"
+      ]
     },
     "agencies": [
       {
@@ -13661,18 +13387,18 @@
         "id": "recqhcKxTv71yMfeI",
         "createdTime": "2025-06-26T12:06:47.000Z",
         "fields": {
-          "Agency/Department Name": "Rockefeller Foundation",
+          "Agency/Department Name": "Unspecified Agency",
           "Agency Data Portal": "https://www.rockefellerfoundation.org/",
-          "Country Name": "Foundation"
+          "Country Name": "Rockefeller Foundation"
         }
       },
       {
         "id": "recl0rZvHPzrC6Jwd",
         "createdTime": "2025-06-27T16:24:39.000Z",
         "fields": {
-          "Agency/Department Name": "Wellcome",
+          "Agency/Department Name": "Unspecified Agency",
           "Agency Data Portal": "https://wellcome.org/",
-          "Country Name": "Non-State Actor"
+          "Country Name": "Wellcome"
         }
       },
       {
@@ -13695,9 +13421,9 @@
     "projects": [],
     "donor_countries": [
       "Canada",
-      "Foundation",
-      "Non-State Actor",
+      "Rockefeller Foundation",
       "United Kingdom",
+      "Wellcome",
       "World Health Organization (WHO)"
     ]
   },
@@ -13713,9 +13439,6 @@
       "Provided Data Ecosystem Projects": [
         "recJye4S746MWWmW6"
       ],
-      "Org Type": [
-        "NGO"
-      ],
       "Org Donor Agencies": [
         "rec6XRPA9pKgC8j1J",
         "recFDm6MHWUu6GSMI"
@@ -13723,7 +13446,10 @@
       "Org IATI Name": "N/A",
       "Org HQ Country": "United States",
       "Has received CRAF'd Funding?": "NO",
-      "org_key": "wpdx"
+      "org_key": "wpdx",
+      "Org Type": [
+        "Non-Governmental Organization"
+      ]
     },
     "agencies": [
       {
@@ -13790,9 +13516,6 @@
         "recZmszPiwWGvrYee",
         "recu82l0uk7d3IHeU"
       ],
-      "Org Type": [
-        "Other"
-      ],
       "Org Donor Agencies": [
         "recbtz43uuKKFVfvd",
         "recMF4PsdEYmwvshn",
@@ -13808,16 +13531,19 @@
       "Est. Org Budget [2024, $M]": 5011472.38,
       "Org HQ Country": "France",
       "Has received CRAF'd Funding?": "NO",
-      "org_key": "paris21"
+      "org_key": "paris21",
+      "Org Type": [
+        "International Organization"
+      ]
     },
     "agencies": [
       {
         "id": "recbtz43uuKKFVfvd",
         "createdTime": "2025-03-25T17:04:19.000Z",
         "fields": {
-          "Agency/Department Name": "Bill and Melinda Gates Foundation",
+          "Agency/Department Name": "Unspecified Agency",
           "Agency Data Portal": "https://www.gatesfoundation.org/about/committed-grants",
-          "Country Name": "Foundation"
+          "Country Name": "Bill and Melinda Gates Foundation"
         }
       },
       {
@@ -14027,9 +13753,9 @@
     ],
     "donor_countries": [
       "Belgium",
+      "Bill and Melinda Gates Foundation",
       "Canada",
       "Food and Agriculture Organization (FAO)",
-      "Foundation",
       "Germany",
       "South Korea",
       "Sweden",
@@ -14048,16 +13774,16 @@
       "Provided Data Ecosystem Projects": [
         "recl1IcheJlYc36up"
       ],
-      "Org Type": [
-        "Academic / University"
-      ],
       "Org Donor Agencies": [
         "rec0sY1I5JZz6ZsUE"
       ],
       "Est. Org Budget [2024, $M]": 3032863500,
       "Org HQ Country": "United Kingdom",
       "Has received CRAF'd Funding?": "NO",
-      "org_key": "oxford-university"
+      "org_key": "oxford-university",
+      "Org Type": [
+        "Academia"
+      ]
     },
     "agencies": [
       {
@@ -14135,9 +13861,6 @@
         "recPMQlg07QkflL3i",
         "rec22kfYpoIsldmEK"
       ],
-      "Org Type": [
-        "NGO"
-      ],
       "Org Donor Agencies": [
         "rec6XRPA9pKgC8j1J",
         "rec3Ado0Jrl799Q8A",
@@ -14150,7 +13873,10 @@
       "Est. Org Budget [2024, $M]": 27760285.54,
       "Org HQ Country": "United States",
       "Has received CRAF'd Funding?": "NO",
-      "org_key": "immap"
+      "org_key": "immap",
+      "Org Type": [
+        "Non-Governmental Organization"
+      ]
     },
     "agencies": [
       {
@@ -14183,9 +13909,9 @@
         "id": "recLWqEZrThg4Drwo",
         "createdTime": "2025-07-03T19:36:08.000Z",
         "fields": {
-          "Agency/Department Name": "Geneva International Centre for Humanitarian Demining",
+          "Agency/Department Name": "Unspecified Agency",
           "Agency Data Portal": "https://www.gichd.org/",
-          "Country Name": "NGO"
+          "Country Name": "Geneva International Centre for Humanitarian Demining"
         }
       },
       {
@@ -14280,7 +14006,7 @@
       }
     ],
     "donor_countries": [
-      "NGO",
+      "Geneva International Centre for Humanitarian Demining",
       "The World Bank",
       "USA",
       "United Nations Children's Fund (UNICEF)"
@@ -14306,9 +14032,6 @@
         "recNggnBqXIgii2hz",
         "recQMdm14niuRSFQp"
       ],
-      "Org Type": [
-        "United Nations"
-      ],
       "Org Donor Agencies": [
         "rectyuW4INCMaNoAM",
         "recqhcKxTv71yMfeI",
@@ -14329,7 +14052,10 @@
       "Est. Org Budget [2024, $M]": 3763000000,
       "Org HQ Country": "Switzerland",
       "Has received CRAF'd Funding?": "NO",
-      "org_key": "who"
+      "org_key": "who",
+      "Org Type": [
+        "International Organization"
+      ]
     },
     "agencies": [
       {
@@ -14345,18 +14071,18 @@
         "id": "recqhcKxTv71yMfeI",
         "createdTime": "2025-06-26T12:06:47.000Z",
         "fields": {
-          "Agency/Department Name": "Rockefeller Foundation",
+          "Agency/Department Name": "Unspecified Agency",
           "Agency Data Portal": "https://www.rockefellerfoundation.org/",
-          "Country Name": "Foundation"
+          "Country Name": "Rockefeller Foundation"
         }
       },
       {
         "id": "recbtz43uuKKFVfvd",
         "createdTime": "2025-03-25T17:04:19.000Z",
         "fields": {
-          "Agency/Department Name": "Bill and Melinda Gates Foundation",
+          "Agency/Department Name": "Unspecified Agency",
           "Agency Data Portal": "https://www.gatesfoundation.org/about/committed-grants",
-          "Country Name": "Foundation"
+          "Country Name": "Bill and Melinda Gates Foundation"
         }
       },
       {
@@ -14431,9 +14157,9 @@
             "id": "recqhcKxTv71yMfeI",
             "createdTime": "2025-06-26T12:06:47.000Z",
             "fields": {
-              "Agency/Department Name": "Rockefeller Foundation",
+              "Agency/Department Name": "Unspecified Agency",
               "Agency Data Portal": "https://www.rockefellerfoundation.org/",
-              "Country Name": "Foundation"
+              "Country Name": "Rockefeller Foundation"
             }
           }
         ]
@@ -14558,9 +14284,9 @@
             "id": "recqhcKxTv71yMfeI",
             "createdTime": "2025-06-26T12:06:47.000Z",
             "fields": {
-              "Agency/Department Name": "Rockefeller Foundation",
+              "Agency/Department Name": "Unspecified Agency",
               "Agency Data Portal": "https://www.rockefellerfoundation.org/",
-              "Country Name": "Foundation"
+              "Country Name": "Rockefeller Foundation"
             }
           }
         ]
@@ -14594,9 +14320,9 @@
             "id": "recbtz43uuKKFVfvd",
             "createdTime": "2025-03-25T17:04:19.000Z",
             "fields": {
-              "Agency/Department Name": "Bill and Melinda Gates Foundation",
+              "Agency/Department Name": "Unspecified Agency",
               "Agency Data Portal": "https://www.gatesfoundation.org/about/committed-grants",
-              "Country Name": "Foundation"
+              "Country Name": "Bill and Melinda Gates Foundation"
             }
           }
         ]
@@ -14629,9 +14355,9 @@
             "id": "recqhcKxTv71yMfeI",
             "createdTime": "2025-06-26T12:06:47.000Z",
             "fields": {
-              "Agency/Department Name": "Rockefeller Foundation",
+              "Agency/Department Name": "Unspecified Agency",
               "Agency Data Portal": "https://www.rockefellerfoundation.org/",
-              "Country Name": "Foundation"
+              "Country Name": "Rockefeller Foundation"
             }
           }
         ]
@@ -14659,8 +14385,9 @@
       }
     ],
     "donor_countries": [
+      "Bill and Melinda Gates Foundation",
       "European Union",
-      "Foundation",
+      "Rockefeller Foundation",
       "The World Bank",
       "USA",
       "United Nations Office for the Coordination of Humanitarian Affairs (OCHA)"
@@ -14678,9 +14405,6 @@
         "recr5hGDgBiAH4xSm",
         "rec5GA5F1UPlXATSj"
       ],
-      "Org Type": [
-        "International Organization"
-      ],
       "Org Donor Agencies": [
         "recnCryJx9ixmHwby"
       ],
@@ -14692,7 +14416,10 @@
       "Est. Org Budget [2024, $M]": 6264522.32,
       "Org HQ Country": "Netherlands",
       "Has received CRAF'd Funding?": "YES",
-      "org_key": "rccc"
+      "org_key": "rccc",
+      "Org Type": [
+        "Non-Governmental Organization"
+      ]
     },
     "agencies": [
       {
@@ -14770,6 +14497,46 @@
     ]
   },
   {
+    "id": "recxUTvaAZbGHumjU",
+    "name": "European Centre for Medium-Range Weather Forecasts",
+    "fields": {
+      "Org Full Name": "European Centre for Medium-Range Weather Forecasts",
+      "Org Website": "https://www.ecmwf.int/",
+      "Org Description": "We are both a research institute and a 24/7 operational service, producing global numerical weather predictions and other data for our Member and Co-operating States and the broader community. We operate a world-class supercomputer facility for weather forecasting and hold one of the largest meteorological data archives. Other strategic activities include delivering advanced training and assisting the WMO in implementing its programmes.",
+      "Provided Data Ecosystem Projects": [
+        "recGMlI70iaqyTtMo"
+      ],
+      "Org Type": [
+        "International Organization"
+      ]
+    },
+    "agencies": [],
+    "projects": [
+      {
+        "id": "recGMlI70iaqyTtMo",
+        "createdTime": "2025-06-23T13:43:21.000Z",
+        "fields": {
+          "Project/Product Name": " Copernicus Climate Change Service (C3S) ",
+          "product_key": "c3s",
+          "Provider Orgs Full Name": [
+            "recxUTvaAZbGHumjU"
+          ],
+          "CRAF’d-Funded Project?": "NO",
+          "Investment Type(s)": [
+            "Data Sets & Commons"
+          ],
+          "Investment Theme(s)": [
+            "Climate Data"
+          ],
+          "Project Website": "https://climate.copernicus.eu/",
+          "Project Description": "C3S provides authoritative, open-access climate data and tools, including forecasts, historical datasets, and impact indicators. Managed by ECMWF, it supports risk analysis, adaptation planning, and policy development globally.\n"
+        },
+        "agencies": []
+      }
+    ],
+    "donor_countries": []
+  },
+  {
     "id": "recyZ1KYbbpFNTDu8",
     "name": "DPO: United Nations Department of Peace Operations",
     "fields": {
@@ -14779,9 +14546,6 @@
       "Org Description": "The UN Department of Peace Operations (DPO) utilizes data to enhance the effectiveness of peace operations and inform decision-making in conflict and post-conflict settings. They manage the UN Peace and Security Data Hub, a public library of datasets on peace and security, providing centralized access to up-to-date information. The Hub empowers a wide range of users, including UN staff, member states, academia, and the public, with data on peacekeeping mandates, quick impact projects, and other related initiatives. DPO also engages in data-related projects such as predictive modeling with peacekeeping demographic data and quantifying the implementation of the Women, Peace and Security agenda through text analysis.",
       "Provided Data Ecosystem Projects": [
         "recv5EjAR3NgCKSaI"
-      ],
-      "Org Type": [
-        "United Nations"
       ],
       "Org Donor Agencies": [
         "reckIAhFXgj4XL29b",
@@ -14800,7 +14564,10 @@
       "Est. Org Budget [2024, $M]": 5600000000,
       "Org HQ Country": "United States",
       "Has received CRAF'd Funding?": "NO",
-      "org_key": "un-dpo"
+      "org_key": "un-dpo",
+      "Org Type": [
+        "United Nations System"
+      ]
     },
     "agencies": [
       {
@@ -14863,8 +14630,8 @@
         "id": "recCqVCi3rwF77MxA",
         "createdTime": "2025-07-03T14:02:52.000Z",
         "fields": {
-          "Agency/Department Name": "African Union",
-          "Country Name": "Regional Organization"
+          "Agency/Department Name": "Unspecified Agency",
+          "Country Name": "African Union"
         }
       },
       {
@@ -14916,6 +14683,7 @@
       }
     ],
     "donor_countries": [
+      "African Union",
       "Australia",
       "Canada",
       "China",
@@ -14923,7 +14691,6 @@
       "Germany",
       "Italy",
       "Japan",
-      "Regional Organization",
       "South Korea",
       "USA",
       "United Kingdom"
@@ -14945,9 +14712,6 @@
         "recyn1h3FptgV2ZAv",
         "recgpnIj48zBCayHc"
       ],
-      "Org Type": [
-        "Research Institute / Think Tank"
-      ],
       "Org Donor Agencies": [
         "rec1VhOJv9U6QKBBs",
         "rec0sY1I5JZz6ZsUE",
@@ -14958,7 +14722,10 @@
       ],
       "Org HQ Country": "Belgium",
       "Has received CRAF'd Funding?": "YES",
-      "org_key": "inform"
+      "org_key": "inform",
+      "Org Type": [
+        "Network / Consortium"
+      ]
     },
     "agencies": [
       {
@@ -15161,13 +14928,13 @@
       "Org Website": "https://www.hera-ngo.org/",
       "Org Description": "As an international organization, HERA is dedicated to supporting other humanitarian and development organizations in the implementation of their projects and operational strategies.\n \nThis includes crafting strategic frameworks, establishing security policies, risk assessment, donor mapping, exploratory missions, and evaluation missions.\n \nHERA assists organizations in understanding the evolving landscape of the humanitarian system, particularly regarding epidemic control through epidemiological data collection and climate change adaptation by aiding organizations in measuring their carbon footprint and developing strategies to reduce greenhouse gas emissions.",
       "Link to Data Products Overview": "<https://www.hera-ngo.org/our-projects>\n",
-      "Org Type": [
-        "NGO"
-      ],
       "Org IATI Name": "N/A",
       "Org HQ Country": "United Kingdom",
       "Has received CRAF'd Funding?": "NO",
-      "org_key": "hera"
+      "org_key": "hera",
+      "Org Type": [
+        "Non-Governmental Organization"
+      ]
     },
     "agencies": [],
     "projects": [],
@@ -15185,9 +14952,6 @@
       "Provided Data Ecosystem Projects": [
         "recLN9L7RGRz4p1zM"
       ],
-      "Org Type": [
-        "Research Institute / Think Tank"
-      ],
       "Org Donor Agencies": [
         "rec6XRPA9pKgC8j1J",
         "recHSsEaPuaG3h2PQ",
@@ -15199,7 +14963,10 @@
       "Org IATI Name": "Insecurity Insight",
       "Org HQ Country": "Switzerland",
       "Has received CRAF'd Funding?": "NO",
-      "org_key": "insecurity-insight"
+      "org_key": "insecurity-insight",
+      "Org Type": [
+        "Non-Governmental Organization"
+      ]
     },
     "agencies": [
       {
