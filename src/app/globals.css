@@ -78,6 +78,11 @@
   --chart-axis-stroke: #64748b;
   --chart-grid-stroke: #e2e8f0;
   --chart-font-size: 12;
+  --chart-text-color: #333333;
+  
+  /* Tooltip styles */
+  --tooltip-bg: rgba(255, 255, 255, 0.8);
+  --tooltip-border: #e2e8f0;
   
   /* Interactive elements */
   --hover-scale: 1.02;
