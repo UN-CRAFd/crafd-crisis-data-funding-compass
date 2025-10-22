@@ -914,7 +914,7 @@ const CrisisDataDashboard = ({
                                                                         </div>
                                                                     </div>
                                                                 </div>
-                                                                <div className="text-sm text-slate-600">
+                                                                <div className="text-sm text-slate-600 capitalize">
                                                                     {org.projects.length} {org.projects.length === 1 ? labels.product.singular : labels.product.plural}
                                                                 </div>
                                                             </div>
