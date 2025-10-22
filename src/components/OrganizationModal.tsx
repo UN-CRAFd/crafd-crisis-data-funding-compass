@@ -241,7 +241,7 @@ export default function OrganizationModal({
                 const s = String(val);
                 if (s === '') return <span className="text-gray-500">—</span>;
                 // If looks like a URL, render as link
-                if (s.startsWith('http://') || s.startsWith('https://') || s.startsWith('mailto:') || s.startsWith('<http')) {
+                if (s.startsWith('http://') || s.startsWith('https://')) {
                     const cleaned = s.replace(/^<|>$/g, '');
                     return (
                         <a href={cleaned} target="_blank" rel="noopener noreferrer" className="text-(--brand-primary) hover:underline">
@@ -363,7 +363,7 @@ export default function OrganizationModal({
                     if (projectsList.length === 0) return null;
 
                     return (
-                        <div className="mt-4">
+                        <div className="mt-8">
                             <SubHeader>Provided Assets</SubHeader>
                             <div className="flex flex-col gap-2">
                                 {projectsList.map((projectName, i) => (
@@ -385,7 +385,7 @@ export default function OrganizationModal({
                     if (donorCountries.length === 0) return null;
 
                     return (
-                        <div className="mt-4">
+                        <div className="mt-8">
                             <SubHeader>Organization Donors</SubHeader>
                             <div className="flex flex-wrap gap-2">
                                 {donorCountries.map((country) => (
