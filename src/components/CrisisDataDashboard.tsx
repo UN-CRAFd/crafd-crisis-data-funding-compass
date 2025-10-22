@@ -34,7 +34,7 @@ const STYLES = {
 
     // Typography - Unified section headers
     sectionHeader: "flex items-center gap-2 text-lg font-qanelas-subtitle font-black text-slate-800 mb-0 mt-0 uppercase",
-    statValue: "text-5xl font-bold bg-clip-text text-transparent leading-none",
+    statValue: "text-5xl font-bold font-mono bg-clip-text text-transparent leading-none tabular-nums",
     statLabel: "text-base font-medium mt-1",
     sectionLabel: "text-xs font-medium text-slate-600 mb-0",
 
