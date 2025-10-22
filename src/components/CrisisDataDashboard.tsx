@@ -373,7 +373,7 @@ const CrisisDataDashboard = ({
 
             parts.push(donorString);
             // Use singular/plural verb form: single donor -> 'funds' (from labels), multiple donors -> 'Fund' (capitalized per request)
-            const verb = combinedDonors.length === 1 ? labels.filterDescription.funds : 'fund';
+            const verb = combinedDonors.length === 1 ? labels.filterDescription.funds : 'co-finance';
             parts.push(verb);
         } else {
             parts.push(labels.filterDescription.showing);
