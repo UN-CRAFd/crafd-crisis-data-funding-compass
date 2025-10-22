@@ -1,6 +1,6 @@
 'use client';
 
-import { ExternalLink, X, Folder} from 'lucide-react';
+import { ExternalLink, Folder, X } from 'lucide-react';
 import { useCallback, useEffect, useRef, useState } from 'react';
 
 interface OrganizationModalProps {
@@ -15,7 +15,6 @@ interface OrganizationModalProps {
     loading: boolean;
 }
 
-import { Database } from 'lucide-react';
 // Import HeadquartersCountry component - comment out import to disable HQ display
 // import HeadquartersCountry from './HeadquartersCountry';
 // Load nested organizations so we can resolve project IDs to names when needed
@@ -128,7 +127,7 @@ export default function OrganizationModal({ organization, loading }: Organizatio
         flex items-center justify-center h-8 w-8 rounded-full
         transition-all duration-200 ease-out touch-manipulation
         text-gray-600 bg-gray-200 hover:bg-gray-400 hover:text-gray-100 cursor-pointer
-        focus:outline-none focus:bg-gray-400 focus:text-gray-100 flex-shrink-0
+        focus:outline-none focus:bg-gray-400 focus:text-gray-100 shrink-0 ml-4
       "
             aria-label="Close modal"
             title="Close modal"
@@ -196,7 +195,7 @@ export default function OrganizationModal({ organization, loading }: Organizatio
             || organization.id;
 
         return (
-            <div className="flex items-start justify-between gap-4">
+            <div className="flex items-start justify-between gap-8">
                 {/* Main title - Largest element in modal */}
                 <h2 className="text-3xl font-bold text-[#333333] leading-tight font-roboto">
                     {displayName}
@@ -284,7 +283,7 @@ export default function OrganizationModal({ organization, loading }: Organizatio
         }
 
         return (
-            <div className="px-6 sm:px-8 pt-4 sm:pt-5 pb-6 sm:pb-8 space-y-6 font-roboto flex flex-col h-full">
+            <div className="px-6 sm:px-8 pt-4 sm:pt-5 pb-6 sm:pb-8 space-y-5 font-roboto flex flex-col h-full">
                 {/* Description - Roboto Default (18px, Regular) for readable body text */}
                 {typeof fields['Org Description'] === 'string' && String(fields['Org Description']).length > 0 && (
                     <p className="text-base font-normal text-[#333333] leading-relaxed font-roboto">
@@ -299,8 +298,8 @@ export default function OrganizationModal({ organization, loading }: Organizatio
                         <h4 className="text-base font-qanelas font-black text-[#333333] mb-2 uppercase tracking-wide leading-normal">
                             Organization Type
                         </h4>
-                        {/* Badge - smallest text element */}
-                        <div className="inline-flex items-center px-3 py-1 rounded text-xs font-normal leading-snug text-[#333333] bg-transparent border border-slate-200 font-roboto">
+                        {/* Badge - matching dashboard style but larger */}
+                        <div className="inline-flex items-center px-2.5 py-1 rounded text-sm font-medium text-slate-500 bg-transparent border border-slate-200 font-roboto">
                             {orgType}
                         </div>
                     </div>
