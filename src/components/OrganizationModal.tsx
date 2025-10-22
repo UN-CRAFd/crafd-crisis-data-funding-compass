@@ -293,9 +293,6 @@ export default function OrganizationModal({ organization, loading }: Organizatio
         const WEBSITE_KEYS = ['Org Website', 'Org Website (URL)', 'Org Website Url', 'Org Website URL'];
         const websiteKey = WEBSITE_KEYS.find((k) => typeof fields[k] === 'string' && fields[k]);
         const websiteValue: string | null = websiteKey ? String(fields[websiteKey]) : null;
-        const orgShortName = (typeof fields['Org Short Name'] === 'string' && fields['Org Short Name'])
-            || (typeof fields['Org Full Name'] === 'string' && fields['Org Full Name'])
-            || '';
 
         // Extract organization type, handling both string and array formats
         const orgTypeRaw = fields['Org Type'];
@@ -307,41 +304,35 @@ export default function OrganizationModal({ organization, loading }: Organizatio
         }
 
         return (
-            <div className="px-6 sm:px-8 pt-4 sm:pt-5 pb-6 sm:pb-8 space-y-5 font-roboto flex flex-col h-full">
-                {/* Description - Roboto Default (18px, Regular) for readable body text */}
+            <div className="px-6 sm:px-8 pt-4 sm:pt-5 pb-6 sm:pb-8 font-roboto flex flex-col h-full">
+                {/* Organization Type Badge */}
+                {orgType && (
+                    <span className="inline-flex items-center px-3 py-1.5 rounded-md text-sm font-medium bg-slate-100 text-slate-600 w-fit mb-4">
+                        {orgType}
+                    </span>
+                )}
+
+                {/* Description */}
                 {typeof fields['Org Description'] === 'string' && String(fields['Org Description']).length > 0 && (
-                    <p className="text-base font-normal text-[#333333] leading-relaxed font-roboto">
+                    <p className="text-base font-normal text-[#333333] leading-relaxed font-roboto mb-2">
                         {renderValue(String(fields['Org Description']))}
                     </p>
                 )}
 
-                {/* Website button */}
+                {/* Website link */}
                 {websiteValue && websiteValue.trim() !== '' && (
-                    <button
-                        type="button"
-                        onClick={() => {
-                            const cleaned = websiteValue.replace(/^<|>$/g, '');
-                            window.open(cleaned, '_blank', 'noopener,noreferrer');
-                        }}
-                        className="inline-flex items-center justify-center gap-2 px-4 py-2 rounded-full bg-(--brand-primary) text-white text-sm font-medium shadow hover:bg-(--brand-primary-dark) transition-colors w-fit"
+                    <a
+                        href={websiteValue.replace(/^<|>$/g, '')}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="inline-flex items-center gap-2 text-base font-semibold transition-colors w-fit underline underline-offset-2 mb-4"
+                        style={{ color: 'var(--brand-primary)' }}
+                        onMouseEnter={(e) => e.currentTarget.style.color = 'var(--brand-primary-dark)'}
+                        onMouseLeave={(e) => e.currentTarget.style.color = 'var(--brand-primary)'}
                     >
+                        <span>Learn more</span>
                         <ExternalLink className="w-4 h-4" />
-                        <span>Visit Website</span>
-                    </button>
-                )}
-
-                {/* Organization Type */}
-                {orgType && (
-                    <div>
-                        {/* Field label - smaller than SubHeader, bigger than badge */}
-                        <h4 className="text-base font-qanelas font-black text-[#333333] mb-2 uppercase tracking-wide leading-normal">
-                            Organization Type
-                        </h4>
-                        {/* Badge - matching dashboard style but larger */}
-                        <div className="inline-flex items-center px-2.5 py-1 rounded text-sm font-medium text-slate-500 bg-transparent border border-slate-200 font-roboto">
-                            {orgType}
-                        </div>
-                    </div>
+                    </a>
                 )}
 
                 {/* Org HQ Country - Uncomment import and this line to enable */}
