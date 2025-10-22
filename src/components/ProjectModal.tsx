@@ -1,12 +1,12 @@
 'use client';
 
-import type { ProjectData, OrganizationWithProjects } from '../lib/data';
-import { Building2, DollarSign, ExternalLink, MapPin, X } from 'lucide-react';
+import { Building2, ExternalLink, X } from 'lucide-react';
 import { useCallback, useEffect, useRef, useState } from 'react';
+import type { OrganizationWithProjects, ProjectData } from '../lib/data';
 
 interface ProjectModalProps {
     project: ProjectData | null;
-    organizationName: string;
+    organizationName?: string; // Legacy prop, no longer used
     allOrganizations: OrganizationWithProjects[];
     // onClose removed because functions are non-serializable when passed through
     // Next.js client/server boundary. The modal will dispatch a CustomEvent when
@@ -14,7 +14,7 @@ interface ProjectModalProps {
     loading: boolean;
 }
 
-export default function ProjectModal({ project, organizationName, allOrganizations, loading }: ProjectModalProps) {
+export default function ProjectModal({ project, allOrganizations, loading }: ProjectModalProps) {
     const [isVisible, setIsVisible] = useState(false);
     const [isClosing, setIsClosing] = useState(false);
     const modalRef = useRef<HTMLDivElement>(null);
@@ -114,11 +114,11 @@ export default function ProjectModal({ project, organizationName, allOrganizatio
         <button
             onClick={handleClose}
             className="
-                flex items-center justify-center h-8 w-8 rounded-full
-                transition-all duration-200 ease-out touch-manipulation
-                text-gray-600 bg-gray-200 hover:bg-gray-400 hover:text-gray-100 cursor-pointer
-                focus:outline-none focus:bg-gray-400 focus:text-gray-100 flex-shrink-0
-            "
+        flex items-center justify-center h-8 w-8 rounded-full
+        transition-all duration-200 ease-out touch-manipulation
+        text-gray-600 bg-gray-200 hover:bg-gray-400 hover:text-gray-100 cursor-pointer
+        focus:outline-none focus:bg-gray-400 focus:text-gray-100 shrink-0 ml-4
+      "
             aria-label="Close modal"
             title="Close modal"
         >
@@ -126,55 +126,13 @@ export default function ProjectModal({ project, organizationName, allOrganizatio
         </button>
     );
 
-    // Reusable subheader component
+    // Reusable subheader component - Major sections - smaller than main title
     const SubHeader = ({ children }: { children: React.ReactNode }) => (
-        <h3 className="text-lg sm:text-xl font-medium text-gray-900 mb-3 font-['Roboto']">{children}</h3>
-    );
-
-    // Reusable field label component
-    const FieldLabel = ({ children }: { children: React.ReactNode }) => (
-        <span className="font-medium text-gray-600 text-sm font-['Roboto']">{children}</span>
-    );
-
-    // Reusable badge/chip component
-    const Badge = ({ children }: { children: React.ReactNode }) => (
-        <span
-            className="inline-block px-3 py-1 rounded-full text-sm font-medium mr-1 mb-1"
-            style={{
-                backgroundColor: 'var(--brand-bg-light)',
-                color: 'var(--brand-primary-dark)'
-            }}
-        >
+        <h3 className="text-xl font-qanelas font-black text-[#333333] mb-3 uppercase tracking-wide leading-normal">
             {children}
-        </span>
+        </h3>
     );
 
-    const BadgeIndigo = ({ children }: { children: React.ReactNode }) => (
-        <span
-            className="inline-block px-3 py-1 rounded-md text-sm font-medium mr-1 mb-1"
-            style={{
-                backgroundColor: 'var(--badge-other-bg)',
-                color: 'var(--badge-other-text)'
-            }}
-        >
-            {children}
-        </span>
-    );
-
-    // Reusable field value wrapper component
-    const FieldValue = ({ children }: { children: React.ReactNode }) => (
-        <div className="mt-0.5">{children}</div>
-    );
-
-    // Complete field component combining label and value
-    const Field = ({ label, children }: { label: string; children: React.ReactNode }) => (
-        <div>
-            <FieldLabel>{label}</FieldLabel>
-            <FieldValue>{children}</FieldValue>
-        </div>
-    );
-
-    // Render header content based on state
     const renderHeader = () => {
         if (loading) {
             return (
@@ -188,15 +146,16 @@ export default function ProjectModal({ project, organizationName, allOrganizatio
         if (!project) {
             return (
                 <div className="flex items-center justify-between">
-                    <h2 className="text-lg sm:text-xl font-semibold text-gray-900 flex-1 pr-4">Project Not Found</h2>
+                    <h2 className="text-lg sm:text-xl font-bold text-[#333333] flex-1 pr-4 font-roboto">Project Not Found</h2>
                     <CloseButton />
                 </div>
             );
         }
 
         return (
-            <div className="flex items-start justify-between gap-4">
-                <h2 className="text-xl sm:text-2xl lg:text-2xl font-bold text-gray-900 leading-tight flex-1 font-['Roboto']">
+            <div className="flex items-start justify-between gap-8">
+                {/* Main title - Responsive sizing */}
+                <h2 className="text-lg sm:text-xl md:text-xl lg:text-2xl font-bold text-[#333333] leading-tight font-roboto">
                     {project.projectName}
                 </h2>
                 <CloseButton />
@@ -205,7 +164,7 @@ export default function ProjectModal({ project, organizationName, allOrganizatio
     };
 
     // Render body content based on state
-    const renderBody = () => {
+    const renderBody = (): React.ReactNode => {
         if (loading) {
             return (
                 <div className="p-4 sm:p-6 space-y-4">
@@ -225,142 +184,144 @@ export default function ProjectModal({ project, organizationName, allOrganizatio
         }
 
         // Find all organizations that support this project
-        const supportingOrganizations = allOrganizations.filter(org => 
+        const supportingOrganizations = allOrganizations.filter(org =>
             org.projects.some(p => p.id === project.id)
         );
 
-        // Full project content
-        return (
-            <div className="px-6 sm:px-8 pt-4 sm:pt-5 pb-6 sm:pb-8 space-y-6 font-['Roboto']">
-                {/* Supporting Organizations */}
-                <div>
-                    <div className="flex items-center gap-2 mb-3">
-                        <Building2 className="h-4 w-4" style={{ color: 'var(--brand-primary)' }} />
-                        <span className="text-sm font-medium" style={{ color: 'var(--brand-primary-dark)' }}>
-                            Supporting Organizations ({supportingOrganizations.length})
-                        </span>
-                    </div>
-                    <div className="flex flex-wrap gap-2">
-                        {supportingOrganizations.map((org) => (
-                            <button
-                                key={org.id}
-                                onClick={() => {
-                                    // Dispatch event to open organization modal
-                                    window.dispatchEvent(new CustomEvent('openOrganizationModal', { 
-                                        detail: { organization: org } 
-                                    }));
-                                }}
-                                className="px-3 py-2 rounded-lg border bg-white hover:bg-gray-50 transition-colors text-left"
-                                style={{ borderColor: 'var(--brand-border)' }}
-                            >
-                                <div className="text-sm font-medium text-gray-900">{org.organizationName}</div>
-                                <div className="text-xs text-gray-500">{org.type}</div>
-                            </button>
-                        ))}
-                    </div>
-                </div>
+        // Get project website for description inline link
+        const projectWebsite = project.projectWebsite || project.website || '';
 
-                {/* CRAF&apos;d Funding Status */}
-                {project.isCrafdFunded && (
-                    <div className={`px-4 py-3 rounded-lg border ${project.isCrafdFunded === 'YES'
-                            ? 'bg-green-50 border-green-200'
-                            : 'bg-gray-50 border-gray-200'
-                        }`}>
-                        <div className="flex items-center gap-2">
-                            <DollarSign className={`h-4 w-4 ${project.isCrafdFunded === 'YES' ? 'text-green-600' : 'text-gray-600'
-                                }`} />
-                            <span className={`text-sm font-medium ${project.isCrafdFunded === 'YES' ? 'text-green-800' : 'text-gray-800'
-                                }`}>
-                                CRAF&apos;d Funded: {project.isCrafdFunded}
-                            </span>
+        return (
+            <div className="px-6 sm:px-8 pt-4 sm:pt-5 pb-6 sm:pb-8 font-roboto flex flex-col h-full">
+                {/* Description with inline Learn more link */}
+
+                {project.projectDescription && (
+                    <p className="text-base font-normal text-gray-700 leading-relaxed font-roboto mb-2">
+                        {project.projectDescription}
+                        {projectWebsite && projectWebsite.trim() !== '' && (
+                            <>
+                                {' '}
+                                <a
+                                    href={projectWebsite}
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    className="inline-flex items-center gap-1 font-medium hover:underline"
+                                    style={{ color: 'var(--brand-primary)' }}
+                                >
+                                    Learn more
+                                    <ExternalLink className="h-3 w-3" />
+                                </a>
+                            </>
+                        )}
+                    </p>
+                )}
+
+                {/* If website exists but description didn't show it, render a prominent Website button */}
+                {!project.projectDescription && projectWebsite && projectWebsite.trim() !== '' && (
+                    <div className="mb-6">
+                        <a
+                            href={projectWebsite}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="inline-flex items-center gap-2 px-4 py-2 rounded-md text-sm font-medium hover:opacity-80 transition-opacity"
+                            style={{
+                                backgroundColor: 'var(--brand-primary)',
+                                color: 'white',
+                            }}
+                        >
+                            Visit Project Website
+                            <ExternalLink className="h-4 w-4" />
+                        </a>
+                    </div>
+                )}
+
+                {/* Separator line before metadata sections */}
+                <div className="border-t border-gray-200 mt-4 mb-6"></div>
+
+                {/* Provider Organizations */}
+                {supportingOrganizations.length > 0 && (
+                    <div className="mb-6">
+                        <SubHeader>Provider Organizations</SubHeader>
+                        <div className="flex flex-wrap gap-2">
+                            {supportingOrganizations.map(org => (
+                                <span
+                                    key={org.id}
+                                    className="inline-flex items-center gap-1.5 px-3 py-1 rounded-md text-sm font-medium"
+                                    style={{
+                                        backgroundColor: 'var(--brand-bg-light)',
+                                        color: 'var(--brand-primary-dark)'
+                                    }}
+                                >
+                                    <Building2 className="h-3.5 w-3.5" />
+                                    {org.organizationName}
+                                </span>
+                            ))}
                         </div>
                     </div>
                 )}
 
-                {/* Project Description */}
-                {project.projectDescription && (
-                    <div>
-                        <SubHeader>Description</SubHeader>
-                        <p className="text-gray-700 leading-relaxed text-sm">{project.projectDescription}</p>
-                        {/* Project Website */}
-                        {project.projectWebsite && (
-                            <Field label="Website">
-                                <button
-                                    type="button"
-                                    onClick={() => {
-                                        if (typeof project.projectWebsite === 'string') {
-                                            window.open(project.projectWebsite, '_blank', 'noopener,noreferrer');
-                                        }
+                {/* Asset Type - Investment Types */}
+                {project.investmentTypes && project.investmentTypes.length > 0 && (
+                    <div className="mb-6">
+                        <SubHeader>Asset Type</SubHeader>
+                        <div className="flex flex-wrap gap-2">
+                            {project.investmentTypes.map((type, index) => (
+                                <span
+                                    key={index}
+                                    className="inline-flex items-center px-3 py-1.5 rounded-md text-sm font-semibold"
+                                    style={{
+                                        backgroundColor: 'var(--badge-other-bg)',
+                                        color: 'var(--badge-other-text)'
                                     }}
-                                    className="mt-5 inline-flex items-center justify-center gap-2 px-4 py-2 rounded-full bg-[var(--brand-primary)] text-white text-sm font-small shadow hover:bg-[var(--brand-primary-dark)] transition-colors"
                                 >
-                                    <ExternalLink className="w-4 h-4" />
-                                    <span className="flex items-center">Open Website</span>
-                                </button>
-                            </Field>
+                                    {type}
+                                </span>
+                            ))}
+                        </div>
+                    </div>
+                )}
+
+                {/* Asset Donors */}
+                <div className="mb-6">
+                    <div className="mb-3 flex items-center gap-2">
+                        <h3 className="text-xl font-qanelas font-black text-[#333333] uppercase tracking-wide leading-normal">
+                            Asset Donors
+                        </h3>
+                        {project.donorCountries && project.donorCountries.length > 0 && (
+                            <span className="text-lg font-normal text-gray-500 tabular-nums">({project.donorCountries.length})</span>
                         )}
                     </div>
+                    {project.donorCountries && project.donorCountries.length > 0 ? (
+                        <div className="flex flex-wrap gap-2">
+                            {project.donorCountries.map((country, index) => (
+                                <span
+                                    key={index}
+                                    className="inline-flex items-center px-3 py-1.5 rounded-md text-sm font-medium bg-slate-100 text-slate-600"
+                                >
+                                    {country}
+                                </span>
+                            ))}
+                        </div>
+                    ) : (
+                        <div className="text-gray-500">
+                            No asset donor information available
+                        </div>
+                    )}
+                </div>
 
+                {/* Flexible spacer to push notes to bottom */}
+                <div className="grow min-h-8"></div>
 
-                )}
-
-
-                {/* Investment Types */}
-                {project.investmentTypes && project.investmentTypes.length > 0 && (
-                    <div>
-                        <SubHeader>Investment Category</SubHeader>
-                        <Field label="Types">
-                            <div className="mt-1 flex flex-wrap">
-                                {project.investmentTypes.map((type, index) => (
-                                    <BadgeIndigo key={index}>{type}</BadgeIndigo>
-                                ))}
-                            </div>
-                        </Field>
-                        <Field label="Themes">
-                            <div className="mt-1 flex flex-wrap">
-                                {project.investmentThemes.map((theme, index) => (
-                                    <BadgeIndigo key={index}>{theme}</BadgeIndigo>
-                                ))}
-                            </div>
-                        </Field>
-                    </div>
-                )}
-
-                {/* Donor Countries */}
-                {project.donorCountries && project.donorCountries.length > 0 ? (
-                    <div>
-                        <SubHeader>Funding</SubHeader>
-                        <Field label="Product Donors">
-                            <div className="space-y-2">
-                                {project.donorCountries.map((country, index) => (
-                                    <div key={index} className="flex items-center gap-2">
-                                        <MapPin className="h-4 w-4 text-gray-500" />
-                                        <span className="text-gray-700">{country}</span>
-                                    </div>
-                                ))}
-                            </div>
-                        </Field>
-                    </div>
-                ) : (
-                    <div>
-                        <SubHeader>Funding</SubHeader>
-                        <Field label="Product Donors">
-                            <span className="text-gray-500 text-sm">No specific project donor countries specified</span>
-                        </Field>
-                    </div>
-                )}
-
-                {/* Metadata */}
-                <div className="border-t border-gray-100 pt-4">
-                    <div className="text-xs text-gray-400 uppercase tracking-wider font-medium mb-2">Data Source</div>
+                <div className="border-t border-gray-200 pt-4 pb-4 mt-auto">
+                    <div className="text-xs text-gray-400 uppercase tracking-wider font-medium mb-2">NOTES</div>
                     <div className="text-xs text-gray-500 leading-snug space-y-1">
                         <div className="flex items-start">
-                            <span className="text-gray-400 mr-2 flex-shrink-0">•</span>
-                            <span>Data gathered by the Complex Risk Analytics Fund (CRAF&apos;d)</span>
+                            <span className="text-gray-400 mr-2 shrink-0">•</span>
+                            <span>All insights are based on publicly accessible information and data.</span>
                         </div>
                         <div className="flex items-start">
-                            <span className="text-gray-400 mr-2 flex-shrink-0">•</span>
-                            <span>Project donor countries may differ from organization-level donor countries</span>
+                            <span className="text-gray-400 mr-2 shrink-0">•</span>
+                            <span>Project donor countries may differ from organization-level donor countries.</span>
                         </div>
                     </div>
                 </div>
@@ -368,28 +329,27 @@ export default function ProjectModal({ project, organizationName, allOrganizatio
         );
     };
 
-    // Single modal wrapper with dynamic content
     return (
         <div
-            className={`fixed inset-0 bg-black/50 flex items-center justify-end z-50 transition-all duration-300 ease-out ${isVisible && !isClosing ? 'opacity-100' : 'opacity-0'
-                }`}
+            className={`fixed inset-0 bg-black/50 flex items-center justify-end z-50 transition-all duration-300 ease-out ${isVisible && !isClosing ? 'opacity-100' : 'opacity-0'}`}
             onClick={handleBackdropClick}
         >
             <div
                 ref={modalRef}
-                className={`w-full sm:w-2/3 md:w-1/2 lg:w-1/3 sm:min-w-[400px] lg:min-w-[500px] h-full bg-white shadow-2xl transition-transform duration-300 ease-out ${project ? 'overflow-y-auto' : ''
-                    } ${isVisible && !isClosing ? 'translate-x-0' : 'translate-x-full'}`}
+                className={`w-full sm:w-3/5 md:w-[45%] lg:w-[37%] xl:w-[29%] sm:min-w-[435px] lg:min-w-[500px] xl:min-w-[550px] h-full bg-white shadow-2xl transition-transform duration-300 ease-out flex flex-col ${isVisible && !isClosing ? 'translate-x-0' : 'translate-x-full'}`}
                 onTouchStart={onTouchStart}
                 onTouchMove={onTouchMove}
                 onTouchEnd={onTouchEnd}
             >
-                {/* Header */}
-                <div className={`px-6 sm:px-8 pt-4 sm:pt-6 pb-2 sm:pb-3 border-b border-gray-300 ${project ? 'sticky top-0 bg-white' : ''}`}>
+                {/* Header - Sticky at top during scroll */}
+                <div className={`px-6 sm:px-8 pt-4 sm:pt-6 pb-2 sm:pb-3 border-b border-gray-300 ${project ? 'sticky top-0 bg-white z-10' : ''}`}>
                     {renderHeader()}
                 </div>
 
-                {/* Body Content */}
-                {renderBody()}
+                {/* Body - Scrollable content */}
+                <div className="overflow-y-auto flex-1">
+                    {renderBody()}
+                </div>
             </div>
         </div>
     );

@@ -42,6 +42,14 @@
     }
   },
   {
+    "id": "rec1In4CerWhTywiy",
+    "createdTime": "2025-10-22T21:16:36.000Z",
+    "fields": {
+      "Agency/Department Name": "Unspecified Agency",
+      "Country Name": "Stiftung Mercator"
+    }
+  },
+  {
     "id": "rec1VhOJv9U6QKBBs",
     "createdTime": "2025-05-02T21:43:22.000Z",
     "fields": {
@@ -87,9 +95,9 @@
     "id": "rec3Ado0Jrl799Q8A",
     "createdTime": "2025-06-26T02:46:04.000Z",
     "fields": {
-      "Agency/Department Name": "The World Bank",
+      "Agency/Department Name": "Unspecified Agency",
       "Agency Data Portal": "https://www.worldbank.org/ext/en/home",
-      "Country Name": "International Financial Institutions (IFIs)"
+      "Country Name": "The World Bank"
     }
   },
   {
@@ -129,8 +137,8 @@
     "id": "rec4fIAt1DD6Vprw7",
     "createdTime": "2025-04-15T15:08:32.000Z",
     "fields": {
-      "Agency/Department Name": "Danish Refugee Council (DRC)",
-      "Country Name": "NGO"
+      "Agency/Department Name": "Unspecified Agency",
+      "Country Name": "Danish Refugee Council (DRC)"
     }
   },
   {
@@ -142,12 +150,20 @@
     }
   },
   {
+    "id": "rec5NKr3OLYmPMuOf",
+    "createdTime": "2025-10-22T21:16:21.000Z",
+    "fields": {
+      "Agency/Department Name": "Unspecified Agency",
+      "Country Name": "Global Challenges Foundation"
+    }
+  },
+  {
     "id": "rec5OM4ToDzt2ycHr",
     "createdTime": "2025-06-28T02:06:19.000Z",
     "fields": {
-      "Agency/Department Name": "Conrad N. Hilton Foundation",
+      "Agency/Department Name": "Unspecified Agency",
       "Agency Data Portal": "https://www.hiltonfoundation.org/",
-      "Country Name": "Foundation"
+      "Country Name": "Conrad N. Hilton Foundation"
     }
   },
   {
@@ -156,6 +172,14 @@
     "fields": {
       "Agency/Department Name": "Korea International Cooperation Agency (KOICA)",
       "Country Name": "South Korea"
+    }
+  },
+  {
+    "id": "rec665usRSgrGizMC",
+    "createdTime": "2025-10-22T21:14:28.000Z",
+    "fields": {
+      "Agency/Department Name": "Unspecified Agency",
+      "Country Name": "Skoll"
     }
   },
   {
@@ -170,25 +194,25 @@
     "id": "rec6f6Th74eRAeRn4",
     "createdTime": "2025-07-10T14:15:34.000Z",
     "fields": {
-      "Agency/Department Name": "Inter American Development Bank (IDB)",
-      "Country Name": "International Financial Institutions (IFIs)"
+      "Agency/Department Name": "Unspecified Agency",
+      "Country Name": "Inter American Development Bank (IDB)"
     }
   },
   {
     "id": "rec7AphhRvNQfntpA",
     "createdTime": "2025-07-14T13:42:23.000Z",
     "fields": {
-      "Agency/Department Name": "United Nations Population Fund (UNFPA)",
-      "Country Name": "United Nations (UN)"
+      "Agency/Department Name": "Unspecified Agency",
+      "Country Name": "United Nations Population Fund (UNFPA)"
     }
   },
   {
     "id": "rec7IwGp05Iby61ry",
     "createdTime": "2025-06-28T02:12:09.000Z",
     "fields": {
-      "Agency/Department Name": "Global Support and Development (GSD)",
+      "Agency/Department Name": "Unspecified Agency",
       "Agency Data Portal": "https://www.gsd.ngo/en",
-      "Country Name": "NGO"
+      "Country Name": "Global Support and Development (GSD)"
     }
   },
   {
@@ -225,6 +249,11 @@
     }
   },
   {
+    "id": "rec9ZJHPsW97RI2Rz",
+    "createdTime": "2025-10-22T22:39:07.000Z",
+    "fields": {}
+  },
+  {
     "id": "rec9fdnxyCxjo4AEk",
     "createdTime": "2025-09-08T14:05:27.000Z",
     "fields": {
@@ -246,9 +275,9 @@
     "id": "recAXDKxEbXsaHav4",
     "createdTime": "2025-06-27T16:10:40.000Z",
     "fields": {
-      "Agency/Department Name": "Clinton Health Acess Initiative",
+      "Agency/Department Name": "Unspecified Agency",
       "Agency Data Portal": "https://www.clintonhealthaccess.org/",
-      "Country Name": "Foundation"
+      "Country Name": "Clinton Health Acess Initiative"
     }
   },
   {
@@ -272,9 +301,9 @@
     "id": "recBEtacusKEwpWho",
     "createdTime": "2025-06-26T16:27:20.000Z",
     "fields": {
-      "Agency/Department Name": "Office of the United Nations High Commissioner for Refugees (UNHCR)",
+      "Agency/Department Name": "Unspecified Agency",
       "Agency Data Portal": "https://www.unhcr.org/",
-      "Country Name": "United Nations (UN)"
+      "Country Name": "Office of the United Nations High Commissioner for Refugees (UNHCR)"
     }
   },
   {
@@ -306,9 +335,14 @@
     "id": "recCqVCi3rwF77MxA",
     "createdTime": "2025-07-03T14:02:52.000Z",
     "fields": {
-      "Agency/Department Name": "African Union",
-      "Country Name": "Regional Organization"
+      "Agency/Department Name": "Unspecified Agency",
+      "Country Name": "African Union"
     }
+  },
+  {
+    "id": "recCwo6aH031TZava",
+    "createdTime": "2025-10-22T22:41:14.000Z",
+    "fields": {}
   },
   {
     "id": "recD33Egz57mFbuAl",
@@ -319,11 +353,19 @@
     }
   },
   {
+    "id": "recDY0ngiDePaQtm3",
+    "createdTime": "2025-10-22T21:45:39.000Z",
+    "fields": {
+      "Agency/Department Name": "Unspecified Agency",
+      "Country Name": "Klaus Tschira Stiftung"
+    }
+  },
+  {
     "id": "recDtKjptlPgZaEVI",
     "createdTime": "2025-05-15T15:58:26.000Z",
     "fields": {
-      "Agency/Department Name": "Fund for Peace (FFP)",
-      "Country Name": "NGO"
+      "Agency/Department Name": "Unspecified Agency",
+      "Country Name": "Fund for Peace (FFP)"
     }
   },
   {
@@ -343,6 +385,14 @@
     }
   },
   {
+    "id": "recEiThTK959bqvUH",
+    "createdTime": "2025-10-22T22:43:21.000Z",
+    "fields": {
+      "Agency/Department Name": "iNNpulsa",
+      "Country Name": "Colombia"
+    }
+  },
+  {
     "id": "recF2yzhW3jQCPdAt",
     "createdTime": "2025-08-06T18:50:22.000Z",
     "fields": {
@@ -354,17 +404,17 @@
     "id": "recFDm6MHWUu6GSMI",
     "createdTime": "2025-07-03T19:39:42.000Z",
     "fields": {
-      "Agency/Department Name": "United Nations Children's Fund (UNICEF)",
+      "Agency/Department Name": "Unspecified Agency",
       "Agency Data Portal": "https://www.unicef.org/",
-      "Country Name": "United Nations (UN)"
+      "Country Name": "United Nations Children's Fund (UNICEF)"
     }
   },
   {
     "id": "recFNcILze2MwJxUN",
     "createdTime": "2025-07-10T14:25:16.000Z",
     "fields": {
-      "Agency/Department Name": "Organization of American States ",
-      "Country Name": "Regional Organization"
+      "Agency/Department Name": "Unspecified Agency",
+      "Country Name": "Organization of American States "
     }
   },
   {
@@ -373,6 +423,14 @@
     "fields": {
       "Agency/Department Name": "Ministry of Education, Culture, and Science (OCW)",
       "Country Name": "Netherlands"
+    }
+  },
+  {
+    "id": "recFXEk93eiQlKjJU",
+    "createdTime": "2025-10-22T22:46:53.000Z",
+    "fields": {
+      "Agency/Department Name": "Brazilian Institute of Geography and Statistics (IBGE)",
+      "Country Name": "Brazil"
     }
   },
   {
@@ -398,6 +456,14 @@
     "fields": {
       "Agency/Department Name": "Swiss Innovation Agency (Innosuisse)",
       "Country Name": "Switzerland"
+    }
+  },
+  {
+    "id": "recGlx8p4y1yzES7T",
+    "createdTime": "2025-10-22T21:14:05.000Z",
+    "fields": {
+      "Agency/Department Name": "Unspecified Agency",
+      "Country Name": "Rippleworks"
     }
   },
   {
@@ -452,37 +518,29 @@
     }
   },
   {
-    "id": "recIIdzFsepw9jSrJ",
-    "createdTime": "2025-07-04T20:07:59.000Z",
-    "fields": {
-      "Agency/Department Name": "Heidelberg University",
-      "Country Name": "University"
-    }
-  },
-  {
     "id": "recIUg3K9vtroebVE",
     "createdTime": "2025-06-27T22:28:16.000Z",
     "fields": {
-      "Agency/Department Name": "Food and Agriculture Organization (FAO)",
-      "Country Name": "United Nations (UN)"
+      "Agency/Department Name": "Unspecified Agency",
+      "Country Name": "Food and Agriculture Organization (FAO)"
     }
   },
   {
     "id": "recImK5HfYUoDfAgk",
     "createdTime": "2025-03-21T17:30:52.000Z",
     "fields": {
-      "Agency/Department Name": "Norwegian Refugee Council (NRC / NORCAP)",
+      "Agency/Department Name": "Unspecified Agency",
       "Agency Data Portal": "https://www.nrc.no/where-we-work",
-      "Country Name": "NGO"
+      "Country Name": "Norwegian Refugee Council (NRC / NORCAP)"
     }
   },
   {
     "id": "recK8nDxvYcbGdEgw",
     "createdTime": "2025-04-01T19:29:49.000Z",
     "fields": {
-      "Agency/Department Name": "Development Bank of Latin America and the Caribbean (CAF)",
+      "Agency/Department Name": "Unspecified Agency",
       "Agency Data Portal": "https://www.caf.com/en/projects/",
-      "Country Name": "International Financial Institutions (IFIs)"
+      "Country Name": "Development Bank of Latin America and the Caribbean (CAF)"
     }
   },
   {
@@ -513,9 +571,9 @@
     "id": "recLWqEZrThg4Drwo",
     "createdTime": "2025-07-03T19:36:08.000Z",
     "fields": {
-      "Agency/Department Name": "Geneva International Centre for Humanitarian Demining",
+      "Agency/Department Name": "Unspecified Agency",
       "Agency Data Portal": "https://www.gichd.org/",
-      "Country Name": "NGO"
+      "Country Name": "Geneva International Centre for Humanitarian Demining"
     }
   },
   {
@@ -539,8 +597,8 @@
     "id": "recMSfI5XCXoaFs9i",
     "createdTime": "2025-08-04T22:34:32.000Z",
     "fields": {
-      "Agency/Department Name": "African Development Bank",
-      "Country Name": "International Financial Institutions (IFIs)"
+      "Agency/Department Name": "Unspecified Agency",
+      "Country Name": "African Development Bank"
     }
   },
   {
@@ -563,9 +621,9 @@
     "id": "recNLQhceOCXSMemo",
     "createdTime": "2025-06-26T15:49:13.000Z",
     "fields": {
-      "Agency/Department Name": "World Food Programme (WFP)",
+      "Agency/Department Name": "Unspecified Agency",
       "Agency Data Portal": "https://www.wfp.org/",
-      "Country Name": "United Nations (UN)"
+      "Country Name": "World Food Programme (WFP)"
     }
   },
   {
@@ -701,8 +759,8 @@
     "id": "recULIEfSZxBrWWZb",
     "createdTime": "2025-07-10T15:17:22.000Z",
     "fields": {
-      "Agency/Department Name": "United Nations Foundation (UN Foundation)",
-      "Country Name": "United Nations (UN)"
+      "Agency/Department Name": "Unspecified Agency",
+      "Country Name": "United Nations Foundation (UN Foundation)"
     }
   },
   {
@@ -754,6 +812,14 @@
     }
   },
   {
+    "id": "recWYxrSapIaQ5C4r",
+    "createdTime": "2025-10-22T21:13:45.000Z",
+    "fields": {
+      "Agency/Department Name": "Unspecified Agency",
+      "Country Name": "Mackenzie Scott"
+    }
+  },
+  {
     "id": "recWbTJi7d1LuSLoa",
     "createdTime": "2025-08-06T19:23:01.000Z",
     "fields": {
@@ -793,7 +859,7 @@
     "fields": {
       "Agency/Department Name": "German Red Cross",
       "Agency Data Portal": "https://www.drk.de/en/home/",
-      "Country Name": "International Red Cross and Red Crescent Movement."
+      "Country Name": "International Red Cross and Red Crescent Movement"
     }
   },
   {
@@ -830,27 +896,11 @@
     }
   },
   {
-    "id": "recZ40qUa3nCpgj9C",
-    "createdTime": "2025-07-04T20:12:30.000Z",
-    "fields": {
-      "Agency/Department Name": "Heidelberg University",
-      "Country Name": "University"
-    }
-  },
-  {
     "id": "recZCZqKtB0JM5kmx",
     "createdTime": "2025-08-04T19:58:31.000Z",
     "fields": {
       "Agency/Department Name": "Unspecified Agency",
       "Country Name": "Denmark"
-    }
-  },
-  {
-    "id": "reca2A6QFk9XYNLjV",
-    "createdTime": "2025-08-04T20:04:46.000Z",
-    "fields": {
-      "Agency/Department Name": "Unspecified Agency",
-      "Country Name": "United Nations (UN)"
     }
   },
   {
@@ -898,9 +948,9 @@
     "id": "recbtz43uuKKFVfvd",
     "createdTime": "2025-03-25T17:04:19.000Z",
     "fields": {
-      "Agency/Department Name": "Bill and Melinda Gates Foundation",
+      "Agency/Department Name": "Unspecified Agency",
       "Agency Data Portal": "https://www.gatesfoundation.org/about/committed-grants",
-      "Country Name": "Foundation"
+      "Country Name": "Bill and Melinda Gates Foundation"
     }
   },
   {
@@ -921,11 +971,19 @@
     }
   },
   {
+    "id": "recdWBZgIeBfATRcv",
+    "createdTime": "2025-10-22T21:14:46.000Z",
+    "fields": {
+      "Agency/Department Name": "Unspecified Agency",
+      "Country Name": "Unite"
+    }
+  },
+  {
     "id": "recdfJ8kc29BrRxi8",
     "createdTime": "2025-07-07T19:21:28.000Z",
     "fields": {
-      "Agency/Department Name": "Tableau Foundation",
-      "Country Name": "Foundation"
+      "Agency/Department Name": "Unspecified Agency",
+      "Country Name": "Tableau Foundation"
     }
   },
   {
@@ -981,8 +1039,8 @@
     "id": "recfY9SzUx3XdEb4s",
     "createdTime": "2025-07-10T14:29:39.000Z",
     "fields": {
-      "Agency/Department Name": "International Institute for Democracy and Electoral Assistance (IDEA)",
-      "Country Name": "NGO"
+      "Agency/Department Name": "Unspecified Agency",
+      "Country Name": "International Institute for Democracy and Electoral Assistance (IDEA)"
     }
   },
   {
@@ -997,9 +1055,9 @@
     "id": "recfjNkXZXtdaH5xv",
     "createdTime": "2025-06-27T19:56:13.000Z",
     "fields": {
-      "Agency/Department Name": "Else Kröner-Fresenius-Stiftung",
+      "Agency/Department Name": "Unspecified Agency",
       "Agency Data Portal": "https://www.ekfs.de/en",
-      "Country Name": "Foundation"
+      "Country Name": "Else Kröner-Fresenius-Stiftung"
     }
   },
   {
@@ -1055,18 +1113,18 @@
     "id": "recks6hHpAgBV14d9",
     "createdTime": "2025-04-01T19:29:18.000Z",
     "fields": {
-      "Agency/Department Name": "Inter-American Development Bank (IDB)",
+      "Agency/Department Name": "Unspecified Agency",
       "Agency Data Portal": "https://www.iadb.org/en/projects",
-      "Country Name": "International Financial Institutions (IFIs)"
+      "Country Name": "Inter-American Development Bank (IDB)"
     }
   },
   {
     "id": "recl0rZvHPzrC6Jwd",
     "createdTime": "2025-06-27T16:24:39.000Z",
     "fields": {
-      "Agency/Department Name": "Wellcome",
+      "Agency/Department Name": "Unspecified Agency",
       "Agency Data Portal": "https://wellcome.org/",
-      "Country Name": "Non-State Actor"
+      "Country Name": "Wellcome"
     }
   },
   {
@@ -1092,6 +1150,14 @@
     "fields": {
       "Agency/Department Name": "Ministry of Defence of Norway (MoD)",
       "Country Name": "Norway"
+    }
+  },
+  {
+    "id": "recmiFKDpEY82nhw2",
+    "createdTime": "2025-10-22T22:44:49.000Z",
+    "fields": {
+      "Agency/Department Name": "National Institute of Statistics and Information (INEI)",
+      "Country Name": "Peru"
     }
   },
   {
@@ -1140,17 +1206,17 @@
     "id": "recpBuvL2uHuENIu7",
     "createdTime": "2025-07-03T18:54:14.000Z",
     "fields": {
-      "Agency/Department Name": " Silicon Valley Community Foundation",
-      "Country Name": "Foundation"
+      "Agency/Department Name": "Unspecified Agency",
+      "Country Name": " Silicon Valley Community Foundation"
     }
   },
   {
     "id": "recpnGIsQx8Bb4aji",
     "createdTime": "2025-06-26T18:44:11.000Z",
     "fields": {
-      "Agency/Department Name": "International Organization for Migration (IOM)",
+      "Agency/Department Name": "Unspecified Agency",
       "Agency Data Portal": "https://www.iom.int/",
-      "Country Name": "United Nations (UN)"
+      "Country Name": "International Organization for Migration (IOM)"
     }
   },
   {
@@ -1191,9 +1257,9 @@
     "id": "recqNfbmfHwWpPdYJ",
     "createdTime": "2025-06-28T02:22:36.000Z",
     "fields": {
-      "Agency/Department Name": "Howden Foundation",
+      "Agency/Department Name": "Unspecified Agency",
       "Agency Data Portal": "https://www.howdengroupholdings.com/sustainability/howden-foundation",
-      "Country Name": "Foundation"
+      "Country Name": "Howden Foundation"
     }
   },
   {
@@ -1208,17 +1274,25 @@
     "id": "recqhcKxTv71yMfeI",
     "createdTime": "2025-06-26T12:06:47.000Z",
     "fields": {
-      "Agency/Department Name": "Rockefeller Foundation",
+      "Agency/Department Name": "Unspecified Agency",
       "Agency Data Portal": "https://www.rockefellerfoundation.org/",
-      "Country Name": "Foundation"
+      "Country Name": "Rockefeller Foundation"
     }
   },
   {
     "id": "recr77XDSfR0O9Jen",
     "createdTime": "2025-07-04T20:44:09.000Z",
     "fields": {
-      "Agency/Department Name": "World Health Organization (WHO)",
-      "Country Name": "United Nations (UN)"
+      "Agency/Department Name": "Unspecified Agency",
+      "Country Name": "World Health Organization (WHO)"
+    }
+  },
+  {
+    "id": "recrPlN870ayqI9dO",
+    "createdTime": "2025-10-22T21:11:55.000Z",
+    "fields": {
+      "Agency/Department Name": "Unspecified Agency",
+      "Country Name": "The Elma Relief Foundation"
     }
   },
   {
@@ -1233,9 +1307,9 @@
     "id": "recsrMWmoA037bW03",
     "createdTime": "2025-04-01T19:26:47.000Z",
     "fields": {
-      "Agency/Department Name": "United Nations Development Programme (UNDP)",
+      "Agency/Department Name": "Unspecified Agency",
       "Agency Data Portal": "https://open.undp.org/",
-      "Country Name": "United Nations (UN)"
+      "Country Name": "United Nations Development Programme (UNDP)"
     }
   },
   {
@@ -1258,9 +1332,25 @@
     "id": "rectyuW4INCMaNoAM",
     "createdTime": "2025-04-15T14:56:00.000Z",
     "fields": {
-      "Agency/Department Name": "United Nations Office for the Coordination of Humanitarian Affairs (OCHA)",
+      "Agency/Department Name": "Unspecified Agency",
       "Agency Data Portal": "https://fts.unocha.org/",
-      "Country Name": "United Nations (UN)"
+      "Country Name": "United Nations Office for the Coordination of Humanitarian Affairs (OCHA)"
+    }
+  },
+  {
+    "id": "recuh6VLNIOwuzoK4",
+    "createdTime": "2025-10-22T22:39:45.000Z",
+    "fields": {
+      "Agency/Department Name": "Unspecified Agency",
+      "Country Name": "Robert Bosch Stiftung"
+    }
+  },
+  {
+    "id": "recut1KLw0povqx0k",
+    "createdTime": "2025-10-22T22:46:02.000Z",
+    "fields": {
+      "Agency/Department Name": "National Administrative Department of Statistics",
+      "Country Name": "Colombia"
     }
   },
   {
@@ -1291,9 +1381,9 @@
     "id": "recvvJF6VEfKjphtY",
     "createdTime": "2025-07-21T08:23:55.000Z",
     "fields": {
-      "Agency/Department Name": "International Fund for Agricultural Development (IFAD)",
+      "Agency/Department Name": "Unspecified Agency",
       "Agency Data Portal": "https://www.ifad.org/en/",
-      "Country Name": "United Nations (UN)"
+      "Country Name": "International Fund for Agricultural Development (IFAD)"
     }
   },
   {
