@@ -96,13 +96,13 @@ const ChartCard = React.memo(function ChartCard({ title, icon, data, barColor, f
                         layout="vertical"
                         margin={{ top: 0, right: 15, left: -50, bottom: 0 }}
                     >
-                        <CartesianGrid strokeDasharray="3 3" stroke="#e2e8f0" horizontal={false} />
-                        <XAxis type="number" stroke="#64748b" tick={{ fontSize: 12, dy: -2 }} tickLine={false} allowDecimals={false} />
+                        <CartesianGrid strokeDasharray="3 3" stroke="var(--chart-grid-stroke)" horizontal={false} />
+                        <XAxis type="number" stroke="var(--chart-axis-stroke)" tick={{ fontSize: 12, dy: -2 }} tickLine={false} allowDecimals={false} />
                         <YAxis
                             dataKey="name"
                             type="category"
                             width={240}
-                            stroke="#64748b"
+                            stroke="var(--chart-axis-stroke)"
                             tick={{ fontSize: 13, dx: 1 }}
                             tickLine={false}
                         />
@@ -169,7 +169,7 @@ const ChartCard = React.memo(function ChartCard({ title, icon, data, barColor, f
                                     const textX = isInside ? xPos + w - 8 : xPos + w + 8;
                                     
                                     const textAnchor = isInside ? 'end' : 'start';
-                                    const textColor = '#333333'
+                                    const textColor = 'var(--chart-text-color)'
 
                                     return (
                                         <text

@@ -48,9 +48,9 @@ const STYLES = {
 
     // Chart config
     chartTooltip: {
-        backgroundColor: 'rgba(255, 255, 255, 0.8)', // semi-transparent white
+        backgroundColor: 'var(--tooltip-bg)',
         backdropFilter: 'blur(12px)',
-        border: '1px solid #e2e8f0',
+        border: '1px solid var(--tooltip-border)',
         borderRadius: '10px',
         fontSize: '12px',
         padding: '8px',
@@ -386,7 +386,7 @@ const CrisisDataDashboard = ({
             const otherDonorsCount = currentDonors.size - combinedDonors.length;
             
             if (otherDonorsCount > 0) {
-                const otherDonorLabel = otherDonorsCount !== 1 ? 'donors' : 'donor';
+                const otherDonorLabel = otherDonorsCount !== 1 ? labels.filterDescription.donors : labels.filterDescription.donor;
                 const verb = combinedDonors.length === 1 ? 'co-finances' : 'co-finance';
                 parts.push(`${donorString}, together with ${otherDonorsCount} other ${otherDonorLabel}, ${verb}`);
             } else {
@@ -469,10 +469,10 @@ const CrisisDataDashboard = ({
                                 size="sm"
                                 onClick={() => window.open(process.env.NEXT_PUBLIC_FEEDBACK_FORM_URL)}
                                 className="bg-slate-50/50 border-slate-200 hover:var(--brand-bg-light) hover:border-[var(--brand-primary)] hover:text-[var(--brand-primary)]"
-                                title="Give Feedback on Data Set"
+                                title={labels.header.feedbackTooltip}
                             >
                                 <MessageCircle className="w-4 h-4 mr-2" />
-                                {'Give Feedback'}
+                                {labels.header.feedbackButton}
                             </Button>
                             <Button
                                 variant="outline"
@@ -480,10 +480,10 @@ const CrisisDataDashboard = ({
                                 onClick={handleExportPDF}
                                 disabled={exportLoading}
                                 className="hidden bg-slate-50/50 border-slate-200 hover:var(--brand-bg-light) hover:border-[var(--brand-primary)] hover:text-[var(--brand-primary)]"
-                                title="Export current view as PDF"
+                                title={labels.header.exportTooltip}
                             >
                                 <FileDown className="w-4 h-4 mr-2" />
-                                {exportLoading ? 'Exporting...' : 'Export as One-Pager'}
+                                {exportLoading ? labels.header.exportButtonLoading : labels.header.exportButton}
                             </Button>
                             <Button
                                 variant="outline"
@@ -493,7 +493,7 @@ const CrisisDataDashboard = ({
                                     ? 'bg-green-50 border-green-200 text-green-700'
                                     : 'hover:var(--brand-bg-light)'
                                     }`}
-                                title="Copy link to clipboard"
+                                title={labels.ui.copyToClipboard}
                             >
                                 <Share2 className="w-7 h-4 mr-2" />
                                 {shareSuccess ? labels.header.shareButtonSuccess : labels.header.shareButton}
@@ -600,7 +600,7 @@ const CrisisDataDashboard = ({
                                                                     ? labels.filters.donorPlaceholder
                                                                     : combinedDonors.length === 1
                                                                         ? combinedDonors[0]
-                                                                        : `${combinedDonors.length} donors`
+                                                                        : `${combinedDonors.length} ${labels.filterDescription.donors}`
                                                                 }
                                                             </span>
                                                         </div>
@@ -618,7 +618,7 @@ const CrisisDataDashboard = ({
                                                         <div className="relative">
                                                             <Search className="absolute left-2 top-1/2 -translate-y-1/2 h-3 w-3 text-slate-400" />
                                                             <Input
-                                                                placeholder="Search donors..."
+                                                                placeholder={labels.filters.donorSearchPlaceholder}
                                                                 value={donorSearchQuery}
                                                                 onChange={(e) => setDonorSearchQuery(e.target.value)}
                                                                 className="h-7 pl-7 text-xs bg-slate-50 border-slate-200 focus:bg-white"
@@ -631,7 +631,7 @@ const CrisisDataDashboard = ({
                                                         <>
                                                             <DropdownMenuLabel className="text-xs font-semibold text-[var(--brand-primary)] flex items-center gap-1.5">
                                                                 <Filter className="h-3 w-3" />
-                                                                {combinedDonors.length} selected
+                                                                {combinedDonors.length} {labels.filters.selected}
                                                             </DropdownMenuLabel>
                                                             <DropdownMenuSeparator />
                                                         </>
@@ -690,7 +690,7 @@ const CrisisDataDashboard = ({
                                                                                 ? labels.investmentTypes[typeKey as keyof typeof labels.investmentTypes]
                                                                                 : type;
                                                                         })()
-                                                                        : `${investmentTypes.length} types`
+                                                                        : `${investmentTypes.length} ${labels.filterDescription.types}`
                                                                 }
                                                             </span>
                                                         </div>
@@ -708,7 +708,7 @@ const CrisisDataDashboard = ({
                                                         <>
                                                             <DropdownMenuLabel className="text-xs font-semibold text-[var(--brand-primary)] flex items-center gap-1.5">
                                                                 <Filter className="h-3 w-3" />
-                                                                {investmentTypes.length} selected
+                                                                {investmentTypes.length} {labels.filters.selected}
                                                             </DropdownMenuLabel>
                                                             <DropdownMenuSeparator />
                                                         </>
@@ -767,7 +767,7 @@ const CrisisDataDashboard = ({
                                                     ? 'border-slate-300 bg-slate-100 text-slate-700 hover:bg-slate-200 hover:border-slate-300'
                                                     : 'bg-slate-50/50 border-slate-200 text-slate-400 hover:bg-slate-100 hover:border-slate-300'
                                                     }`}
-                                                title="Reset all filters"
+                                                title={labels.ui.resetFilters}
                                             >
                                                 <RotateCcw className="w-4 h-4" />
                                             </Button>
@@ -872,7 +872,7 @@ const CrisisDataDashboard = ({
                                                                                                 }}
                                                                                                 className="inline-flex items-center px-2 py-1 rounded-md text-xs font-medium bg-slate-000 text-slate-900 hover:bg-slate-100 transition-colors cursor-pointer"
                                                                                             >
-                                                                                                +{sortedCountries.length - 5} more
+                                                                                                +{sortedCountries.length - 5} {labels.filters.showMore}
                                                                                             </div>
                                                                                         )}
                                                                                         {isCountriesExpanded && sortedCountries.length > 5 && (
@@ -885,7 +885,7 @@ const CrisisDataDashboard = ({
                                                                                                 }}
                                                                                                 className="inline-flex items-center px-2 py-1 rounded-md text-xs font-medium bg-slate-000 text-slate-900 hover:bg-slate-100 transition-colors cursor-pointer"
                                                                                             >
-                                                                                                Show less
+                                                                                                {labels.filters.showLess}
                                                                                             </div>
                                                                                         )}
                                                                                     </>
@@ -960,7 +960,7 @@ const CrisisDataDashboard = ({
                                 icon={<Database className="text-slate-600" />}
                                 data={projectTypesChartData}
                                 barColor="var(--brand-primary-lighter)"
-                                footnote="Note: A project can be assigned to multiple types."
+                                footnote={labels.ui.chartFootnote}
                             />
                         </div>
                     </div>
