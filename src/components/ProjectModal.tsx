@@ -282,14 +282,16 @@ export default function ProjectModal({ project, allOrganizations, loading }: Pro
                 )}
 
                 {/* Asset Donors */}
-                {project.donorCountries && project.donorCountries.length > 0 && (
-                    <div className="mb-6">
-                        <div className="mb-3 flex items-center gap-2">
-                            <h3 className="text-xl font-qanelas font-black text-[#333333] uppercase tracking-wide leading-normal">
-                                Asset Donors
-                            </h3>
+                <div className="mb-6">
+                    <div className="mb-3 flex items-center gap-2">
+                        <h3 className="text-xl font-qanelas font-black text-[#333333] uppercase tracking-wide leading-normal">
+                            Asset Donors
+                        </h3>
+                        {project.donorCountries && project.donorCountries.length > 0 && (
                             <span className="text-lg font-normal text-gray-500 tabular-nums">({project.donorCountries.length})</span>
-                        </div>
+                        )}
+                    </div>
+                    {project.donorCountries && project.donorCountries.length > 0 ? (
                         <div className="flex flex-wrap gap-2">
                             {project.donorCountries.map((country, index) => (
                                 <span
@@ -300,8 +302,12 @@ export default function ProjectModal({ project, allOrganizations, loading }: Pro
                                 </span>
                             ))}
                         </div>
-                    </div>
-                )}
+                    ) : (
+                        <div className="text-gray-500">
+                            No asset donor information available
+                        </div>
+                    )}
+                </div>
 
                 {/* Flexible spacer to push notes to bottom */}
                 <div className="grow min-h-8"></div>
