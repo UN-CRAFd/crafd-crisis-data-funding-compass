@@ -384,6 +384,7 @@ export async function processDashboardData(filters: {
       organizationTypes: [], // Will be calculated separately with all known types
       organizationProjects,
       organizationsWithProjects: filteredOrganizations,
+      allOrganizations, // Add unfiltered organizations for modal use
       donorCountries: filterOptions.donorCountries,
       investmentTypes: filterOptions.investmentTypes
     };
