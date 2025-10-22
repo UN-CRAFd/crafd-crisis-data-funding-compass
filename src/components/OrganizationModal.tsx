@@ -16,8 +16,8 @@ interface OrganizationModalProps {
 }
 
 import { Database } from 'lucide-react';
-// Use i18n-iso-countries for robust country name -> alpha-2 mapping
-import * as countries from 'i18n-iso-countries';
+// Import HeadquartersCountry component - comment out import to disable HQ display
+// import HeadquartersCountry from './HeadquartersCountry';
 // Load nested organizations so we can resolve project IDs to names when needed
 import organizationsNestedRaw from '../../public/data/organizations-nested.json';
 
@@ -39,16 +39,6 @@ const PROJECT_NAME_BY_ID: Record<string, string> = ((): Record<string, string> =
         return {};
     }
 })();
-// Load JSON locale using require to avoid needing `resolveJsonModule` in tsconfig
-let enLocale: any = null;
-try {
-    // eslint-disable-next-line @typescript-eslint/no-var-requires
-    enLocale = require('i18n-iso-countries/langs/en.json');
-    countries.registerLocale(enLocale as unknown as import('i18n-iso-countries').LocaleData);
-} catch (_e) {
-    // If registration fails, we'll still attempt simple fallbacks below
-    console.warn('Failed to register i18n-iso-countries locale', _e);
-}
 
 export default function OrganizationModal({ organization, loading }: OrganizationModalProps): React.ReactElement {
     const [isVisible, setIsVisible] = useState(false);
@@ -148,7 +138,7 @@ export default function OrganizationModal({ organization, loading }: Organizatio
     );
     // Reusable subheader component
     const SubHeader = ({ children }: { children: React.ReactNode }) => (
-        <h3 className="text-lg sm:text-xl font-medium text-gray-900 mb-3 font-['Roboto']">{children}</h3>
+        <h3 className="text-lg font-qanelas-subtitle font-black text-slate-800 mb-3 uppercase">{children}</h3>
     );
 
     // Reusable field label component
@@ -289,60 +279,6 @@ export default function OrganizationModal({ organization, loading }: Organizatio
         } else if (Array.isArray(orgTypeRaw) && orgTypeRaw.length > 0) {
             orgType = orgTypeRaw[0];
         }
-        // Precompute HQ country block with proper type narrowing
-        let hqCountryBlock: React.ReactNode = null;
-        if (typeof fields['Org HQ Country'] === 'string' && String(fields['Org HQ Country']).length > 0) {
-            hqCountryBlock = (() => {
-                // Use i18n-iso-countries to resolve a best-effort alpha-2 code
-                const getCountryAlpha2 = (input: unknown): string | null => {
-                    if (input === null || input === undefined) return null;
-                    let s = String(input).trim();
-                    if (!s) return null;
-                    // If already a 2-letter code
-                    if (/^[A-Za-z]{2}$/.test(s)) return s.toLowerCase();
-                    // Try parentheses like "Country (GB)"
-                    const paren = s.match(/\(([^)]+)\)/);
-                    if (paren) {
-                        const code = paren[1].trim();
-                        if (/^[A-Za-z]{2}$/.test(code)) return code.toLowerCase();
-                    }
-                    // Normalize (remove diacritics) and try direct lookup by name
-                    try { s = s.normalize('NFD').replace(/[\u0300-\u036f]/g, ''); } catch (e) { /* ignore */ }
-                    // The library expects exact English names; try direct and comma-first variant
-                    const direct = countries.getAlpha2Code(s, 'en');
-                    if (direct) return direct.toLowerCase();
-                    const commaFirst = s.split(',')[0].trim();
-                    const commaLookup = countries.getAlpha2Code(commaFirst, 'en');
-                    if (commaLookup) return commaLookup.toLowerCase();
-                    // Last-resort: try lowercased simple variants (e.g., 'usa' -> 'US')
-                    const alias = s.toLowerCase();
-                    const knownAliases: Record<string, string> = {
-                        'usa': 'us', 'us': 'us', 'u.s.': 'us', 'u.s.a.': 'us', 'uk': 'gb', 'u.k.': 'gb'
-                    };
-                    if (knownAliases[alias]) return knownAliases[alias];
-                    return null;
-                };
-
-                const iso = getCountryAlpha2(fields['Org HQ Country']);
-                const label = String(fields['Org HQ Country']);
-                const src = iso ? `https://flagcdn.com/${iso}.svg` : `https://flagcdn.com/${encodeURIComponent(label.toLowerCase())}.svg`;
-                return (
-                    <Field label="Headquarters Country">
-                        <div className="flex items-center gap-2">
-                            {/* Flag image */}
-                            <img
-                                src={src}
-                                alt={`${label} flag`}
-                                width={32}
-                                height={24}
-                                className="rounded shadow border border-gray-200"
-                            />
-                            <FieldValue>{renderValue(String(fields['Org HQ Country']))}</FieldValue>
-                        </div>
-                    </Field>
-                );
-            })();
-        }
 
         return (
             <div className="px-6 sm:px-8 pt-4 sm:pt-5 pb-6 sm:pb-8 space-y-6 font-['Roboto']">
@@ -366,8 +302,15 @@ export default function OrganizationModal({ organization, loading }: Organizatio
                     </div>
                 </div>
 
-                {/* Org HQ Country */}
-                {hqCountryBlock as React.ReactNode}
+                {/* Org HQ Country - Uncomment import and this line to enable */}
+                {/* {typeof fields['Org HQ Country'] === 'string' && (
+                    <HeadquartersCountry 
+                        countryValue={String(fields['Org HQ Country'])} 
+                        Field={Field}
+                        FieldValue={FieldValue}
+                        renderValue={renderValue}
+                    />
+                )} */}
 
 
                 {/* Donor countries (if present) */}
@@ -505,7 +448,7 @@ export default function OrganizationModal({ organization, loading }: Organizatio
 
                     return (
                         <div className="mt-6">
-                            <SubHeader>Projects funded</SubHeader>
+                            <SubHeader>Projects</SubHeader>
                             <div className="flex flex-wrap gap-2">
                                 {projectsList.map((p, i) => (
                                     <div key={i} className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-gray-100 text-gray-800 text-sm">
