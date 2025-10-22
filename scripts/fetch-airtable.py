@@ -17,28 +17,28 @@
 #
 # Run: python scripts/fetch_airtable.py
 
+import json
+import math
 import os
 import sys
-import json
 import time
-import math
 from pathlib import Path
-from typing import List, Dict, Any, Optional
-from dotenv import load_dotenv
-import requests
+from typing import Any, Dict, List, Optional
 
+import requests
+from dotenv import load_dotenv
 
 # Specification ohich fields to select from main projects table
 FIELDS_PROJECTS = [
-    "Project/Product Name", 
+    "Project/Product Name",
     "product_key",
-    "Provider Orgs Full Name", 
-    "CRAF’d-Funded Project?", 
+    "Provider Orgs Full Name",
+    "CRAF’d-Funded Project?",
     "Investment Type(s)",
     "Investment Theme(s)",
     "Project Website",
     "Project Description",
-    "Project Donor Agencies"
+    "Project Donor Agencies",
 ]
 
 FIELDS_ORGANIZATIONS = [
@@ -61,7 +61,7 @@ FIELDS_ORGANIZATIONS = [
     "Org Programme Budget",
     "Has received CRAF'd Funding?",
     "Org Donor Agencies",
-    "Provided Data Ecosystem Projects"
+    "Provided Data Ecosystem Projects",
 ]
 
 FIELDS_AGENCIES = [
@@ -85,43 +85,59 @@ API_KEY = os.getenv("AIRTABLE_API_KEY")
 BASE_ID = os.getenv("AIRTABLE_BASE_ID")
 
 # Main table (projects) - support legacy name for backward compatibility
-MAIN_TABLE_IDENTIFIER = os.getenv("AIRTABLE_TABLE_ID_PROJECTS") or os.getenv("AIRTABLE_TABLE_ID")
+MAIN_TABLE_IDENTIFIER = os.getenv("AIRTABLE_TABLE_ID_PROJECTS") or os.getenv(
+    "AIRTABLE_TABLE_ID"
+)
 
 # Additional tables (organizations, agencies)
 ORGANIZATIONS_TABLE_IDENTIFIER = os.getenv("AIRTABLE_TABLE_ID_ORGANIZATIONS")
 # Accept either AIRTABLE_TABLED_ID_AGENCIES (as requested) or the likely-correct AIRTABLE_TABLE_ID_AGENCIES
-AGENCIES_TABLE_IDENTIFIER = os.getenv("AIRTABLE_TABLED_ID_AGENCIES") or os.getenv("AIRTABLE_TABLE_ID_AGENCIES")
+AGENCIES_TABLE_IDENTIFIER = os.getenv("AIRTABLE_TABLED_ID_AGENCIES") or os.getenv(
+    "AIRTABLE_TABLE_ID_AGENCIES"
+)
 
 AIRTABLE_TIMEZONE = os.getenv("AIRTABLE_TIMEZONE", "UTC")
 AIRTABLE_USER_LOCALE = os.getenv("AIRTABLE_USER_LOCALE", "en-US")
 
 if not API_KEY or not BASE_ID or not MAIN_TABLE_IDENTIFIER:
-    print("Error: Ensure AIRTABLE_API_KEY, AIRTABLE_BASE_ID and AIRTABLE_TABLE_ID_PROJECTS (or AIRTABLE_TABLE_ID) are set in .env.local", file=sys.stderr)
+    print(
+        "Error: Ensure AIRTABLE_API_KEY, AIRTABLE_BASE_ID and AIRTABLE_TABLE_ID_PROJECTS (or AIRTABLE_TABLE_ID) are set in .env.local",
+        file=sys.stderr,
+    )
     sys.exit(1)
 
 OUTPUT_DIR = PROJECT_ROOT / "public" / "data"
 OUTPUT_DIR.mkdir(parents=True, exist_ok=True)
 
+
 # ---- Utilities ----
 def log(*args):
     print("[airtable-fetch]", *args)
+
 
 HEADERS = {
     "Authorization": f"Bearer {API_KEY}",
     "Content-Type": "application/json",
 }
 
+
 def airtable_fetch(url: str) -> Dict[str, Any]:
     resp = requests.get(url, headers=HEADERS, timeout=30)
     if not resp.ok:
-        raise RuntimeError(f"Airtable API error: {resp.status_code} {resp.reason}\n{resp.text}")
+        raise RuntimeError(
+            f"Airtable API error: {resp.status_code} {resp.reason}\n{resp.text}"
+        )
     return resp.json()
+
 
 def add_basic_params(params: Dict[str, str]):
     params["pageSize"] = "100"
 
-def build_table_url(table_identifier: str, extra_params: Optional[Dict[str, Any]] = None) -> str:
-    base = f"https://api.airtable.com/v0/{BASE_ID}/{requests.utils.quote(table_identifier, safe='')}" # type: ignore
+
+def build_table_url(
+    table_identifier: str, extra_params: Optional[Dict[str, Any]] = None
+) -> str:
+    base = f"https://api.airtable.com/v0/{BASE_ID}/{requests.utils.quote(table_identifier, safe='')}"  # type: ignore
     params = {}
     add_basic_params(params)
     if extra_params:
@@ -140,15 +156,20 @@ def build_table_url(table_identifier: str, extra_params: Optional[Dict[str, Any]
     for k, v in params.items():
         if isinstance(v, list):
             for item in v:
-                parts.append(f"{requests.utils.quote(k)}={requests.utils.quote(str(item))}") # type: ignore
+                parts.append(
+                    f"{requests.utils.quote(k)}={requests.utils.quote(str(item))}"
+                )  # type: ignore
         else:
-            parts.append(f"{requests.utils.quote(k)}={requests.utils.quote(str(v))}") # type: ignore
+            parts.append(f"{requests.utils.quote(k)}={requests.utils.quote(str(v))}")  # type: ignore
     if parts:
         return base + "?" + "&".join(parts)
     else:
         return base
 
-def fetch_airtable_table(table_identifier: str, extra_params: Optional[Dict[str, Any]] = None) -> List[Dict[str, Any]]:
+
+def fetch_airtable_table(
+    table_identifier: str, extra_params: Optional[Dict[str, Any]] = None
+) -> List[Dict[str, Any]]:
     all_records: List[Dict[str, Any]] = []
     offset = None
     page = 0
@@ -163,17 +184,22 @@ def fetch_airtable_table(table_identifier: str, extra_params: Optional[Dict[str,
         count = len(records)
         all_records.extend(records)
         offset = data.get("offset") or None
-        log(f"Fetched {count} records (total {len(all_records)}) from {table_identifier} (page {page})")
+        log(
+            f"Fetched {count} records (total {len(all_records)}) from {table_identifier} (page {page})"
+        )
         if not offset:
             break
     return all_records
 
-def fetch_records_by_ids(table_identifier: str, ids: List[str], chunk_size: int = 50) -> List[Dict[str, Any]]:
+
+def fetch_records_by_ids(
+    table_identifier: str, ids: List[str], chunk_size: int = 50
+) -> List[Dict[str, Any]]:
     if not ids:
         return []
     results: List[Dict[str, Any]] = []
     for i in range(0, len(ids), chunk_size):
-        chunk = ids[i:i+chunk_size]
+        chunk = ids[i : i + chunk_size]
         # Build formula OR(RECORD_ID()="recA",RECORD_ID()="recB",...)
         or_parts = ",".join(f'RECORD_ID()="{id_}"' for id_ in chunk)
         formula = f"OR({or_parts})"
@@ -182,8 +208,11 @@ def fetch_records_by_ids(table_identifier: str, ids: List[str], chunk_size: int 
         data = airtable_fetch(url)
         chunk_records = data.get("records", [])
         results.extend(chunk_records)
-        log(f"Resolved {len(chunk_records)} records from {table_identifier} (chunk {i//chunk_size + 1})")
+        log(
+            f"Resolved {len(chunk_records)} records from {table_identifier} (chunk {i // chunk_size + 1})"
+        )
     return results
+
 
 def save_to_json(data: Any, filename: str, apply_select_filter: bool = True) -> Path:
     file_path = OUTPUT_DIR / filename
@@ -191,7 +220,11 @@ def save_to_json(data: Any, filename: str, apply_select_filter: bool = True) -> 
     if apply_select_filter and FIELDS_PROJECTS and isinstance(data, list):
         filtered = []
         for rec in data:
-            if not isinstance(rec, dict) or "fields" not in rec or not isinstance(rec["fields"], dict):
+            if (
+                not isinstance(rec, dict)
+                or "fields" not in rec
+                or not isinstance(rec["fields"], dict)
+            ):
                 filtered.append(rec)
                 continue
             new_fields = {}
@@ -217,6 +250,7 @@ def save_to_json(data: Any, filename: str, apply_select_filter: bool = True) -> 
     log(f"Saved {count} items to {file_path}")
     return file_path
 
+
 # ---- Main flow ----
 def main():
     try:
@@ -224,7 +258,7 @@ def main():
 
         # 1) Fetch main (projects) table with basic params
         log(f"Fetching main/projects table: {MAIN_TABLE_IDENTIFIER}")
-        main_records = fetch_airtable_table(MAIN_TABLE_IDENTIFIER) # type: ignore
+        main_records = fetch_airtable_table(MAIN_TABLE_IDENTIFIER)  # type: ignore
         save_to_json(main_records, "ecosystem-table.json", apply_select_filter=True)
 
         # 2) Fetch organizations table (if provided)
@@ -236,11 +270,17 @@ def main():
                 org_extra_params = {}
                 if FIELDS_ORGANIZATIONS:
                     org_extra_params["fields"] = FIELDS_ORGANIZATIONS
-                org_records = fetch_airtable_table(ORGANIZATIONS_TABLE_IDENTIFIER, extra_params=org_extra_params)
-                save_to_json(org_records, "organizations-table.json", apply_select_filter=False)
+                org_records = fetch_airtable_table(
+                    ORGANIZATIONS_TABLE_IDENTIFIER, extra_params=org_extra_params
+                )
+                save_to_json(
+                    org_records, "organizations-table.json", apply_select_filter=False
+                )
                 org_count = len(org_records)
             except Exception as e:
-                log(f"Failed to fetch organizations table {ORGANIZATIONS_TABLE_IDENTIFIER}: {e}")
+                log(
+                    f"Failed to fetch organizations table {ORGANIZATIONS_TABLE_IDENTIFIER}: {e}"
+                )
 
         # 3) Fetch agencies table (if provided)
         agencies_count = 0
@@ -251,31 +291,44 @@ def main():
                 agencies_extra_params: Dict[str, Any] = {}
                 if FIELDS_AGENCIES:
                     agencies_extra_params["fields"] = FIELDS_AGENCIES
-                agencies_records = fetch_airtable_table(AGENCIES_TABLE_IDENTIFIER, extra_params=agencies_extra_params)
-                save_to_json(agencies_records, "agencies-table.json", apply_select_filter=False)
+                agencies_records = fetch_airtable_table(
+                    AGENCIES_TABLE_IDENTIFIER, extra_params=agencies_extra_params
+                )
+                save_to_json(
+                    agencies_records, "agencies-table.json", apply_select_filter=False
+                )
                 agencies_count = len(agencies_records)
             except Exception as e:
                 log(f"Failed to fetch agencies table {AGENCIES_TABLE_IDENTIFIER}: {e}")
 
         # Summary
         log("SUMMARY:")
-        log(f'  Main projects table "{MAIN_TABLE_IDENTIFIER}": {len(main_records)} records (saved to ecosystem-table.json)')
+        log(
+            f'  Main projects table "{MAIN_TABLE_IDENTIFIER}": {len(main_records)} records (saved to ecosystem-table.json)'
+        )
         if ORGANIZATIONS_TABLE_IDENTIFIER:
-            log(f'  Organizations table "{ORGANIZATIONS_TABLE_IDENTIFIER}": {org_count} records (saved to organizations-table.json)')
+            log(
+                f'  Organizations table "{ORGANIZATIONS_TABLE_IDENTIFIER}": {org_count} records (saved to organizations-table.json)'
+            )
         else:
             log("  Organizations table: not configured (skipped)")
         if AGENCIES_TABLE_IDENTIFIER:
-            log(f'  Agencies table "{AGENCIES_TABLE_IDENTIFIER}": {agencies_count} records (saved to agencies-table.json)')
+            log(
+                f'  Agencies table "{AGENCIES_TABLE_IDENTIFIER}": {agencies_count} records (saved to agencies-table.json)'
+            )
         else:
             log("  Agencies table: not configured (skipped)")
         log(f"  Files written to {OUTPUT_DIR}")
         log("Done.")
-        
+
         # Run nesting to merge agencies and projects into organizations
         log("Running nesting script to merge data...")
         import subprocess
         import sys
-        result = subprocess.run([sys.executable, "scripts/nesting.py"], cwd=PROJECT_ROOT)
+
+        result = subprocess.run(
+            [sys.executable, "scripts/nesting.py"], cwd=PROJECT_ROOT
+        )
         if result.returncode == 0:
             log("Nesting completed successfully")
         else:
@@ -284,6 +337,7 @@ def main():
     except Exception as err:
         print("Script failed:", str(err), file=sys.stderr)
         sys.exit(1)
+
 
 if __name__ == "__main__":
     main()
