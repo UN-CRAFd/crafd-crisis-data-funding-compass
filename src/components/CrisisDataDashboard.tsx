@@ -978,11 +978,23 @@ const CrisisDataDashboard = ({
                     const orgProjects = organizationsWithProjects.find(o => o.id === selectedOrganization.id);
                     const projectNames = orgProjects ? orgProjects.projects.map(p => p.projectName) : [];
 
-                    const orgRecord = match || {
+                    // Ensure donor countries are unique and sorted
+                    const uniqueDonorCountries = Array.from(new Set(selectedOrganization.donorCountries || [])).sort();
+
+                    const orgRecord = match ? {
+                        ...match,
+                        fields: {
+                            ...match.fields,
+                            // Override with unique donor countries from selectedOrganization
+                            'Org Donor Countries (based on Agency)': uniqueDonorCountries,
+                            // Add project names if not already present
+                            'Provided Data Ecosystem Projects (Names)': match.fields['Provided Data Ecosystem Projects (Names)'] || projectNames
+                        }
+                    } : {
                         id: selectedOrganization.id,
                         fields: {
                             'Org Full Name': selectedOrganization.organizationName,
-                            'Org Donor Countries (based on Agency)': selectedOrganization.donorCountries || [],
+                            'Org Donor Countries (based on Agency)': uniqueDonorCountries,
                             // Provide a friendly field containing project names so the modal can show names instead of IDs
                             'Provided Data Ecosystem Projects (Names)': projectNames
                         }
