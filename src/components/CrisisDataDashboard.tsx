@@ -170,12 +170,12 @@ interface BadgeProps {
 
 const Badge = ({ text, variant }: BadgeProps) => {
     const variants = {
-        blue: 'bg-[var(--brand-bg-light)] text-[var(--brand-primary-dark)]',
+        blue: 'bg-[var(--badge-blue-bg)] text-[var(--badge-blue-text)]',
         emerald: 'bg-emerald-50 text-emerald-700',
         violet: 'bg-violet-50 text-violet-700',
         indigo: 'bg-[var(--badge-other-bg)] text-[var(--badge-other-text)] font-semibold',
         types: 'bg-green-50 text-green-700',
-        slate: 'bg-slate-100 text-slate-600',
+        slate: 'bg-[var(--badge-slate-bg)] text-[var(--badge-slate-text)]',
         highlighted: 'bg-[var(--brand-primary)]/20 text-[var(--brand-primary)] border border-[var(--brand-border)] font-semibold',
         beta: '' // Will use inline styles
     };
@@ -942,14 +942,13 @@ const CrisisDataDashboard = ({
                                                                             </div>
                                                                         </div>
                                                                         <div>
-                                                                            <div className={STYLES.sectionLabel}>{labels.projectDetails.donorCountries}</div>
                                                                             <div className="flex flex-wrap gap-1">
                                                                                 {project.donorCountries.length > 0 ? (
                                                                                     project.donorCountries.map((country, idx) => (
-                                                                                        <Badge key={idx} text={country} variant="emerald" />
+                                                                                        <Badge key={idx} text={country} variant={combinedDonors.includes(country) ? 'blue' : 'slate'} />
                                                                                     ))
                                                                                 ) : (
-                                                                                    <span className="text-xs text-slate-500">{labels.projectDetails.notSpecified}</span>
+                                                                                    <span className="text-xs text-slate-500">Asset donors not specified</span>
                                                                                 )}
                                                                             </div>
                                                                         </div>
