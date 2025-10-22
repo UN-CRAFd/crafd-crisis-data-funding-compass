@@ -34,7 +34,8 @@ const STYLES = {
 
     // Typography - Unified section headers
     sectionHeader: "flex items-center gap-2 text-lg font-qanelas-subtitle font-black text-slate-800 mb-0 mt-0 uppercase",
-    statValue: "text-5xl font-bold font-mono bg-clip-text text-transparent leading-none tabular-nums",
+    // Use a solid, non-shaded color for stat values (no bg-clip gradient)
+    statValue: "text-5xl font-bold font-mono leading-none tabular-nums",
     statLabel: "text-base font-medium mt-1",
     sectionLabel: "text-xs font-medium text-slate-600 mb-0",
 
@@ -110,7 +111,8 @@ const StatCard = React.memo(function StatCard({ icon, title, value, label, color
     const gradients = {
         amber: {
             bg: 'from-[var(--brand-bg-lighter)] to-[var(--brand-bg-light)]',
-            value: 'from-[var(--brand-primary)]',
+            // Use a solid text color for the stat value instead of a gradient
+            value: 'text-[var(--brand-primary)]',
             label: 'text-[var(--brand-primary)]'
         }
     };
@@ -125,9 +127,7 @@ const StatCard = React.memo(function StatCard({ icon, title, value, label, color
                 </CardDescription>
             </CardHeader>
             <CardContent className="pt-0">
-                <div
-                    className={`${STYLES.statValue} bg-gradient-to-r ${colors.value}`}
-                >
+                <div className={`${STYLES.statValue} ${colors.value}`}>
                     {value}
                 </div>
                 <div className={`${STYLES.statLabel} ${colors.label}`}>{label}</div>
