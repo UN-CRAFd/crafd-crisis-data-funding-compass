@@ -113,9 +113,7 @@ const ChartCard = React.memo(function ChartCard({ title, icon, data, barColor, f
                             style={{ transform: 'translateX(1px)', backgroundColor: resolvedColor }}
                             onMouseEnter={handleMouseEnter}
                             onMouseLeave={handleMouseLeave}
-                            isAnimationActive={true}
-                            animationDuration={700}
-                            animationEasing="ease-out"
+                            isAnimationActive={false}
                         >
                             {data.map((entry, index) => (
                                 // Slightly vary lightness for each bar to create visual separation
@@ -141,6 +139,11 @@ const ChartCard = React.memo(function ChartCard({ title, icon, data, barColor, f
                                         const toHex = (v: number) => v.toString(16).padStart(2, '0');
                                         return `#${toHex(newR)}${toHex(newG)}${toHex(newB)}`;
                                     })()}
+                                    style={{
+                                        zIndex: hoveredIndex === index ? 1000 : 1,
+                                        position: 'relative',
+                                        pointerEvents: 'all'
+                                    }}
                                 />
                             ))}
                             <LabelList
@@ -164,6 +167,11 @@ const ChartCard = React.memo(function ChartCard({ title, icon, data, barColor, f
                                             fontWeight={600}
                                             textAnchor="start"
                                             dominantBaseline="middle"
+                                            style={{ 
+                                                transition: 'none',
+                                                opacity: 1,
+                                                zIndex: 1001
+                                            }}
                                         >
                                             {value}
                                         </text>
