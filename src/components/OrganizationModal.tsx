@@ -1,6 +1,6 @@
 'use client';
 
-import { ChevronDown, ChevronUp, ExternalLink, Folder, X } from 'lucide-react';
+import { Building2, ChevronDown, ChevronUp, ExternalLink, Package, X } from 'lucide-react';
 import { useCallback, useEffect, useRef, useState } from 'react';
 import ModalOrganizationFocus from './ModalOrganizationFocus';
 
@@ -187,11 +187,14 @@ export default function OrganizationModal({
             || organization.id;
 
         return (
-            <div className="flex items-start justify-between gap-8">
-                {/* Main title - Responsive sizing */}
-                <h2 className="text-lg sm:text-xl md:text-xl lg:text-2xl font-bold text-[#333333] leading-tight font-roboto">
-                    {displayName}
-                </h2>
+            <div className="flex items-center justify-between gap-8">
+                {/* Main title with icon - Responsive sizing */}
+                <div className="flex items-center gap-3">
+                    <Building2 className="h-6 w-6 sm:h-7 sm:w-7 text-[#333333] shrink-0" />
+                    <h2 className="text-lg sm:text-xl md:text-xl lg:text-2xl font-bold text-[#333333] leading-tight font-roboto">
+                        {displayName}
+                    </h2>
+                </div>
                 <CloseButton />
             </div>
         );
@@ -383,7 +386,7 @@ export default function OrganizationModal({
                                 <div className="flex flex-col gap-2">
                                     {displayedProjects.map((projectName, i) => (
                                         <span key={i} className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-md text-base font-medium bg-slate-100 text-slate-600">
-                                            <Folder className="w-4 h-4 text-slate-500" />
+                                            <Package className="w-4 h-4 text-slate-500" />
                                             <span className="truncate max-w-xs">{projectName}</span>
                                         </span>
                                     ))}
