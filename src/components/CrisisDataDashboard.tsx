@@ -606,7 +606,7 @@ const CrisisDataDashboard = ({
                                             </div>
 
                                             {/* Filter buttons container */}
-                                            <div className="flex flex-col sm:flex-row gap-6 sm:gap-3 order-2 sm:order-2">
+                                            <div className="flex flex-col sm:flex-row gap-4 sm:gap-3 order-2 sm:order-2">
                                                 {/* Donor Countries Multi-Select */}
                                                 <DropdownMenu>
                                                     <DropdownMenuTrigger asChild>
@@ -798,11 +798,11 @@ const CrisisDataDashboard = ({
                                                 </Button>
                                             </div>
                                         </div>
+                                        <p className="text-xs sm:text-sm text-slate-600 mt-5 mb-0 sm:mt-2 sm:mb-0">
+                                            {getFilterDescription()}
+                                        </p>
                                     </CardContent>
-                                    <p className="text-xs sm:text-sm text-slate-600 mt-1 ml-4 sm:ml-7 px-2 sm:px-0">
-                                        {getFilterDescription()}
-                                    </p>
-                                    <CardContent className="px-4 sm:px-6">
+                                    <CardContent className="px-4 sm:px-6 pt-60 sm:pt-10">
                                         <div className="space-y-2">
                                             {organizationsWithProjects
                                                 .sort((a, b) => a.organizationName.localeCompare(b.organizationName))
