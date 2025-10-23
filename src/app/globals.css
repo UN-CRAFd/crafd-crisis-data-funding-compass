@@ -219,3 +219,28 @@ input, textarea {
   -ms-user-select: text;
 }
 
+/* Mobile-specific improvements */
+@media (max-width: 640px) {
+  /* Improve touch targets on mobile */
+  button, [role="button"], input, select {
+    min-height: 44px;
+  }
+  
+  /* Ensure text doesn't get too small */
+  .text-xs {
+    font-size: 0.75rem !important;
+  }
+  
+  /* Better spacing for mobile */
+  .space-y-2 > * + * {
+    margin-top: 0.75rem;
+  }
+}
+
+/* Improve text readability */
+@media (max-width: 768px) {
+  body {
+    font-size: 16px; /* Prevents zoom on iOS */
+  }
+}
+
