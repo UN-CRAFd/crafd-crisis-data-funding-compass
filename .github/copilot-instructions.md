@@ -1,4 +1,4 @@
-- use Next.js v15.4 (https://nextjs.org/docs)
+- use Next.js 15+ (https://nextjs.org/docs)
 - ALWAYS use code for Tailwind CSS v4
   - make sure to consult https://tailwindcss.com/docs/ to update your knowledge since many things that you think would work are actually outdated
   - importantly, custom theming should use `@theme` instead of `:root` in the `globals.css` instead of the old Tailwind theme implementation in `tailwind.config.ts`
@@ -11,3 +11,5 @@
 - make sure to understand the general api and page structure before making singular changes
 - do not create parallel infrastructures, prefer global solutions, do not hardcode things where it would be hard to find.
 - the site is deployed to Vercel
+- use context7
+    - for Next.js, Tailwind CSS, shadcn UI, React, etc.
