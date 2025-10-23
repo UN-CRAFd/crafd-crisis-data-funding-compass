@@ -452,17 +452,17 @@ const CrisisDataDashboard = ({
         <div className="min-h-screen bg-slate-50">
             {/* Header Section - Fixed */}
             <div className="fixed top-0 left-0 right-0 z-50 bg-white border-b border-slate-200 shadow-sm">
-                <div className="max-w-[82rem] mx-auto px-4 sm:px-6 lg:px-8 py-3 sm:py-4">
-                    <div className="flex flex-col sm:flex-row items-start sm:items-start justify-between gap-3 sm:gap-0 mb-0">
-                        <div className="flex flex-col sm:flex-row items-start sm:items-center gap-2 sm:gap-3 w-full sm:w-auto">
-                            <h1 className="text-2xl sm:text-3xl bg-gradient-to-r from-slate-800 to-slate-600 bg-clip-text text-transparent">
+                <div className="max-w-[82rem] mx-auto px-4 sm:px-6 lg:px-8 py-2 sm:py-4">
+                    <div className="flex items-center justify-between gap-2 sm:gap-0 mb-0">
+                        <div className="flex items-center gap-2 sm:gap-3 min-w-0 flex-1">
+                            <h1 className="text-lg sm:text-3xl bg-gradient-to-r from-slate-800 to-slate-600 bg-clip-text text-transparent truncate">
                                 <span className="qanelas-title">{labels.header.title}</span> <span className="font-roboto">{labels.header.subtitle}</span>
                             </h1>
                             <TooltipProvider>
                                 <TooltipUI>
                                     <TooltipTrigger asChild>
                                         <div
-                                            className="flex items-center gap-1.5 px-2.5 py-1 rounded-full border cursor-help bg-slate-100 border-slate-200 text-slate-600"
+                                            className="hidden sm:flex items-center gap-1.5 px-2.5 py-1 rounded-full border cursor-help bg-slate-100 border-slate-200 text-slate-600"
                                         >
                                             <span className="text-xs font-semibold">
                                                 {labels.header.betaBadge}
@@ -483,7 +483,7 @@ const CrisisDataDashboard = ({
                                 </TooltipUI>
                             </TooltipProvider>
                         </div>
-                        <div className="flex flex-wrap gap-2 w-full sm:w-auto justify-start sm:justify-end">
+                        <div className="flex gap-1 sm:gap-2 flex-shrink-0">
                             <Button
                                 variant="outline"
                                 size="sm"
@@ -491,9 +491,8 @@ const CrisisDataDashboard = ({
                                 className="bg-slate-50/50 border-slate-200 hover:var(--brand-bg-light) hover:border-[var(--brand-primary)] hover:text-[var(--brand-primary)] text-xs sm:text-sm"
                                 title={labels.header.feedbackTooltip}
                             >
-                                <MessageCircle className="w-4 h-4 mr-1 sm:mr-2" />
+                                <MessageCircle className="w-4 h-4 sm:mr-2" />
                                 <span className="hidden sm:inline">{labels.header.feedbackButton}</span>
-                                <span className="sm:hidden">Feedback</span>
                             </Button>
                             <Button
                                 variant="outline"
@@ -516,9 +515,8 @@ const CrisisDataDashboard = ({
                                     }`}
                                 title={labels.ui.copyToClipboard}
                             >
-                                <Share2 className="w-4 h-4 mr-1 sm:mr-2" />
+                                <Share2 className="w-4 h-4 sm:mr-2" />
                                 <span className="hidden sm:inline">{shareSuccess ? labels.header.shareButtonSuccess : labels.header.shareButton}</span>
-                                <span className="sm:hidden">{shareSuccess ? 'Copied!' : 'Share'}</span>
                             </Button>
                             {logoutButton}
                         </div>
@@ -531,8 +529,46 @@ const CrisisDataDashboard = ({
                 <div className="space-y-4 sm:space-y-[var(--spacing-section)]">
 
                     {/* Statistics Cards */}
-                    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-[var(--spacing-section)]">
-
+                    <div className="sm:hidden">
+                        {/* Mobile Carousel */}
+                        <div className="relative overflow-hidden">
+                            <div className="flex gap-4 overflow-x-auto scrollbar-hide snap-x snap-mandatory pb-2 px-1">
+                                <div className="flex-shrink-0 w-[280px] snap-center">
+                                    <StatCard
+                                        icon={<Globe style={{ color: 'var(--brand-primary)' }} />}
+                                        title={labels.stats.donorCountries.title}
+                                        value={stats.donorCountries}
+                                        label={labels.stats.donorCountries.label}
+                                        colorScheme="amber"
+                                        tooltip={labels.stats.donorCountries.tooltip}
+                                    />
+                                </div>
+                                <div className="flex-shrink-0 w-[280px] snap-center">
+                                    <StatCard
+                                        icon={<Building2 style={{ color: 'var(--brand-primary)' }} />}
+                                        title={labels.stats.dataProviders.title}
+                                        value={stats.dataProviders}
+                                        label={labels.stats.dataProviders.label}
+                                        colorScheme="amber"
+                                        tooltip={labels.stats.dataProviders.tooltip}
+                                    />
+                                </div>
+                                <div className="flex-shrink-0 w-[280px] snap-center">
+                                    <StatCard
+                                        icon={<Database style={{ color: 'var(--brand-primary)' }} />}
+                                        title={labels.stats.dataProjects.title}
+                                        value={stats.dataProjects}
+                                        label={labels.stats.dataProjects.label}
+                                        colorScheme="amber"
+                                        tooltip={labels.stats.dataProjects.tooltip}
+                                    />
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    {/* Desktop Grid */}
+                    <div className="hidden sm:grid sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-[var(--spacing-section)]">
                         <StatCard
                             icon={<Globe style={{ color: 'var(--brand-primary)' }} />}
                             title={labels.stats.donorCountries.title}
@@ -559,7 +595,6 @@ const CrisisDataDashboard = ({
                             colorScheme="amber"
                             tooltip={labels.stats.dataProjects.tooltip}
                         />
-
                     </div>
 
                     {/* Main Layout - Two Columns */}
@@ -585,7 +620,7 @@ const CrisisDataDashboard = ({
                                     </CardHeader>
 
                                     {/* Filters */}
-                                    <CardContent className="p-4 sm:p-6 h-4">
+                                    <CardContent className="p-4 sm:p-6">
                                         <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-3">
                                             {/* Modern Search Bar */}
                                             <div className="relative flex-1 order-1 sm:order-1">
@@ -802,7 +837,7 @@ const CrisisDataDashboard = ({
                                             {getFilterDescription()}
                                         </p>
                                     </CardContent>
-                                    <CardContent className="px-4 sm:px-6 pt-60 sm:pt-10">
+                                    <CardContent className="px-4 sm:px-6 pt-2 sm:pt-0">
                                         <div className="space-y-2">
                                             {organizationsWithProjects
                                                 .sort((a, b) => a.organizationName.localeCompare(b.organizationName))
