@@ -1,5 +1,7 @@
 # Labels Configuration
 
+TO BE UPDATED
+
 This file contains all user-facing text and labels for the Crisis Data Funding Compass dashboard.
 
 ## How to Update Labels
