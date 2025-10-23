@@ -850,7 +850,6 @@ const CrisisDataDashboard = ({
                                                             key={org.id}
                                                             open={isExpanded}
                                                             onOpenChange={() => {
-                                                                if (!hasProjects) return; // Prevent opening if no projects
                                                                 const newExpanded = new Set(expandedOrgs);
                                                                 if (isExpanded) {
                                                                     newExpanded.delete(org.id);
@@ -862,7 +861,6 @@ const CrisisDataDashboard = ({
                                                         >
                                                             <CollapsibleTrigger
                                                                 className="w-full"
-                                                                disabled={!hasProjects}
                                                             >
                                                                 <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between p-3 sm:p-4 hover:bg-slate-50/70 rounded-lg border border-slate-200 bg-slate-50/30 animate-in fade-in gap-3 sm:gap-0">
                                                                     <div className="flex items-start space-x-3 flex-1">
