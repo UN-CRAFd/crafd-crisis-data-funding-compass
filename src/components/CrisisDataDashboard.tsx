@@ -170,12 +170,12 @@ interface BadgeProps {
 
 const Badge = ({ text, variant }: BadgeProps) => {
     const variants = {
-        blue: 'bg-[var(--brand-bg-light)] text-[var(--brand-primary-dark)]',
+        blue: 'bg-[var(--badge-blue-bg)] text-[var(--badge-blue-text)]',
         emerald: 'bg-emerald-50 text-emerald-700',
         violet: 'bg-violet-50 text-violet-700',
         indigo: 'bg-[var(--badge-other-bg)] text-[var(--badge-other-text)] font-semibold',
         types: 'bg-green-50 text-green-700',
-        slate: 'bg-slate-100 text-slate-600',
+        slate: 'bg-[var(--badge-slate-bg)] text-[var(--badge-slate-text)]',
         highlighted: 'bg-[var(--brand-primary)]/20 text-[var(--brand-primary)] border border-[var(--brand-border)] font-semibold',
         beta: '' // Will use inline styles
     };
@@ -401,10 +401,10 @@ const CrisisDataDashboard = ({
             organizationsWithProjects.forEach(org => {
                 org.donorCountries.forEach(country => currentDonors.add(country));
             });
-            
+
             // Calculate other donors (current donors minus the selected ones)
             const otherDonorsCount = currentDonors.size - combinedDonors.length;
-            
+
             if (otherDonorsCount > 0) {
                 const otherDonorLabel = otherDonorsCount !== 1 ? labels.filterDescription.donors : labels.filterDescription.donor;
                 const verb = combinedDonors.length === 1 ? 'co-finances' : 'co-finance';
@@ -539,7 +539,7 @@ const CrisisDataDashboard = ({
                             colorScheme="amber"
                             tooltip={labels.stats.donorCountries.tooltip}
                         />
-                        
+
                         <StatCard
                             icon={<Building2 style={{ color: 'var(--brand-primary)' }} />}
                             title={labels.stats.dataProviders.title}
@@ -548,7 +548,7 @@ const CrisisDataDashboard = ({
                             colorScheme="amber"
                             tooltip={labels.stats.dataProviders.tooltip}
                         />
-                        
+
                         <StatCard
                             icon={<Database style={{ color: 'var(--brand-primary)' }} />}
                             title={labels.stats.dataProjects.title}
@@ -646,7 +646,7 @@ const CrisisDataDashboard = ({
                                                             />
                                                         </div>
                                                     </div>
-                                                    
+
                                                     {combinedDonors.length > 0 && (
                                                         <>
                                                             <DropdownMenuLabel className="text-xs font-semibold text-[var(--brand-primary)] flex items-center gap-1.5">
@@ -656,29 +656,29 @@ const CrisisDataDashboard = ({
                                                             <DropdownMenuSeparator />
                                                         </>
                                                     )}
-                                                    
+
                                                     <div className="max-h-[200px] overflow-y-auto">
                                                         {availableDonorCountries
-                                                            .filter(donor => 
+                                                            .filter(donor =>
                                                                 donor.toLowerCase().includes(donorSearchQuery.toLowerCase())
                                                             )
                                                             .map((donor) => (
-                                                        <DropdownMenuCheckboxItem
-                                                            key={donor}
-                                                            checked={combinedDonors.includes(donor)}
-                                                            onCheckedChange={(checked) => {
-                                                                if (checked) {
-                                                                    // Add and deduplicate using a Set to guard against race or duplicate entries
-                                                                    onDonorsChange(Array.from(new Set([...combinedDonors, donor])));
-                                                                } else {
-                                                                    onDonorsChange(combinedDonors.filter(d => d !== donor));
-                                                                }
-                                                            }}
-                                                            onSelect={(e) => e.preventDefault()}
-                                                            className="cursor-pointer"
-                                                        >
-                                                            {donor}
-                                                        </DropdownMenuCheckboxItem>
+                                                                <DropdownMenuCheckboxItem
+                                                                    key={donor}
+                                                                    checked={combinedDonors.includes(donor)}
+                                                                    onCheckedChange={(checked) => {
+                                                                        if (checked) {
+                                                                            // Add and deduplicate using a Set to guard against race or duplicate entries
+                                                                            onDonorsChange(Array.from(new Set([...combinedDonors, donor])));
+                                                                        } else {
+                                                                            onDonorsChange(combinedDonors.filter(d => d !== donor));
+                                                                        }
+                                                                    }}
+                                                                    onSelect={(e) => e.preventDefault()}
+                                                                    className="cursor-pointer"
+                                                                >
+                                                                    {donor}
+                                                                </DropdownMenuCheckboxItem>
                                                             ))}
                                                     </div>
                                                 </DropdownMenuContent>
@@ -801,165 +801,180 @@ const CrisisDataDashboard = ({
                                             {organizationsWithProjects
                                                 .sort((a, b) => a.organizationName.localeCompare(b.organizationName))
                                                 .map((org) => {
-                                                const isExpanded = expandedOrgs.has(org.id);
+                                                    const isExpanded = expandedOrgs.has(org.id);
+                                                    const hasProjects = org.projects.length > 0;
 
-                                                return (
-                                                    <Collapsible
-                                                        key={org.id}
-                                                        open={isExpanded}
-                                                        onOpenChange={() => {
-                                                            const newExpanded = new Set(expandedOrgs);
-                                                            if (isExpanded) {
-                                                                newExpanded.delete(org.id);
-                                                            } else {
-                                                                newExpanded.add(org.id);
-                                                            }
-                                                            setExpandedOrgs(newExpanded);
-                                                        }}
-                                                    >
-                                                        <CollapsibleTrigger className="w-full">
-                                                            <div className={STYLES.orgRow}>
-                                                                <div className="flex items-center space-x-3">
-                                                                    <div className="w-4 h-4 flex-shrink-0"> {/* Fixed size container */}
-                                                                        {isExpanded ? (
-                                                                            <ChevronDown className="h-4 w-4 text-slate-500" />
+                                                    return (
+                                                        <Collapsible
+                                                            key={org.id}
+                                                            open={isExpanded}
+                                                            onOpenChange={() => {
+                                                                if (!hasProjects) return; // Prevent opening if no projects
+                                                                const newExpanded = new Set(expandedOrgs);
+                                                                if (isExpanded) {
+                                                                    newExpanded.delete(org.id);
+                                                                } else {
+                                                                    newExpanded.add(org.id);
+                                                                }
+                                                                setExpandedOrgs(newExpanded);
+                                                            }}
+                                                        >
+                                                            <CollapsibleTrigger
+                                                                className="w-full"
+                                                                disabled={!hasProjects}
+                                                            >
+                                                                <div className={STYLES.orgRow}>
+                                                                    <div className="flex items-center space-x-3 mr-6">
+                                                                        <div className="w-4 h-4 flex-shrink-0"> {/* Fixed size container */}
+                                                                            {hasProjects ? (
+                                                                                isExpanded ? (
+                                                                                    <ChevronDown className="h-4 w-4 text-slate-500" />
+                                                                                ) : (
+                                                                                    <ChevronRight className="h-4 w-4 text-slate-500" />
+                                                                                )
+                                                                            ) : (
+                                                                                <div className="h-4 w-4 rounded-full bg-slate-200" title="No assets to expand" />
+                                                                            )}
+                                                                        </div>
+                                                                        <div className="text-left">
+                                                                            <div className="flex flex-wrap items-baseline gap-2">
+                                                                                <h3
+                                                                                    className="font-medium text-slate-900 cursor-pointer transition-colors hover:text-[var(--brand-primary)]"
+                                                                                    onClick={e => {
+                                                                                        e.stopPropagation();
+                                                                                        setSelectedOrganization(org);
+                                                                                    }}
+                                                                                >
+                                                                                    {org.organizationName}
+                                                                                </h3>
+                                                                                {(() => {
+                                                                                    // Find matching record in organizations-table.json
+                                                                                    const orgTableMatch = organizationsTable.find(rec => {
+                                                                                        const full = (rec.fields['Org Full Name'] as string) || '';
+                                                                                        const short = (rec.fields['Org Short Name'] as string) || '';
+                                                                                        const altFull = (rec.fields['Org Fullname'] as string) || '';
+                                                                                        const normalized = (name: string) => name.replace(/\s+/g, ' ').trim().toLowerCase();
+                                                                                        const target = normalized(org.organizationName || org.id);
+                                                                                        return [full, short, altFull].some(s => normalized(String(s || '')) === target);
+                                                                                    });
+                                                                                    const orgType = orgTableMatch?.fields['Org Type'] as string | undefined;
+                                                                                    return orgType ? (
+                                                                                        <div className="inline-flex items-center px-1.5 py-px rounded text-[11px] font-medium text-slate-500 bg-transparent border border-slate-200 whitespace-nowrap flex-shrink-0">
+                                                                                            {orgType}
+                                                                                        </div>
+                                                                                    ) : null;
+                                                                                })()}
+                                                                            </div>
+                                                                            <div className="flex flex-wrap gap-1 mt-2 max-w-[600px] mr-4">
+                                                                                {(() => {
+                                                                                    const isCountriesExpanded = expandedCountries.has(org.id);
+
+                                                                                    // Deduplicate countries first
+                                                                                    const uniqueCountries = Array.from(new Set(org.donorCountries)) as string[];
+                                                                                    // Sort countries: selected donors first, then others alphabetically
+                                                                                    let sortedCountries = [...uniqueCountries];
+                                                                                    if (combinedDonors.length > 0) {
+                                                                                        sortedCountries = [
+                                                                                            ...uniqueCountries.filter((c: string) => combinedDonors.includes(c)),
+                                                                                            ...uniqueCountries.filter((c: string) => !combinedDonors.includes(c)).sort()
+                                                                                        ];
+                                                                                    }
+                                                                                    const countriesToShow = isCountriesExpanded
+                                                                                        ? sortedCountries
+                                                                                        : sortedCountries.slice(0, 5);
+
+                                                                                    return (
+                                                                                        <>
+                                                                                            {countriesToShow.map((country: string, idx: number) => (
+                                                                                                <Badge
+                                                                                                    key={idx}
+                                                                                                    text={country}
+                                                                                                    variant={combinedDonors.includes(country) ? 'blue' : 'slate'}
+                                                                                                />
+                                                                                            ))}
+                                                                                            {sortedCountries.length > 5 && !isCountriesExpanded && (
+                                                                                                <div
+                                                                                                    onClick={(e) => {
+                                                                                                        e.stopPropagation();
+                                                                                                        const newExpanded = new Set(expandedCountries);
+                                                                                                        newExpanded.add(org.id);
+                                                                                                        setExpandedCountries(newExpanded);
+                                                                                                    }}
+                                                                                                    className="inline-flex items-center px-2 py-1 rounded-md text-xs font-medium bg-slate-000 text-slate-900 hover:bg-slate-100 transition-colors cursor-pointer"
+                                                                                                >
+                                                                                                    +{sortedCountries.length - 5} {labels.filters.showMore}
+                                                                                                </div>
+                                                                                            )}
+                                                                                            {isCountriesExpanded && sortedCountries.length > 5 && (
+                                                                                                <div
+                                                                                                    onClick={(e) => {
+                                                                                                        e.stopPropagation();
+                                                                                                        const newExpanded = new Set(expandedCountries);
+                                                                                                        newExpanded.delete(org.id);
+                                                                                                        setExpandedCountries(newExpanded);
+                                                                                                    }}
+                                                                                                    className="inline-flex items-center px-2 py-1 rounded-md text-xs font-medium bg-slate-000 text-slate-900 hover:bg-slate-100 transition-colors cursor-pointer"
+                                                                                                >
+                                                                                                    {labels.filters.showLess}
+                                                                                                </div>
+                                                                                            )}
+                                                                                        </>
+                                                                                    );
+                                                                                })()}
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div className="text-sm text-slate-600 whitespace-nowrap mt-8">
+                                                                        {org.projects.length > 0 ? (
+                                                                            isExpanded ?
+                                                                                `Showing ${org.projects.length} Asset${org.projects.length === 1 ? '' : 's'}      ` :
+                                                                                `Expand to see ${org.projects.length} Asset${org.projects.length === 1 ? '' : 's'}`
                                                                         ) : (
-                                                                            <ChevronRight className="h-4 w-4 text-slate-500" />
+                                                                            `${org.projects.length} Asset${org.projects.length === 1 ? '' : 's'}`
                                                                         )}
                                                                     </div>
-                                                                    <div className="text-left">
-                                                                        <div className="flex items-center gap-2">
-                                                                            <h3
-                                                                                className="font-medium text-slate-900 cursor-pointer transition-colors hover:text-[var(--brand-primary)]"
-                                                                                onClick={e => {
-                                                                                    e.stopPropagation();
-                                                                                    setSelectedOrganization(org);
-                                                                                }}
-                                                                            >
-                                                                                {org.organizationName}
-                                                                            </h3>
-                                                                            {(() => {
-                                                                                // Find matching record in organizations-table.json
-                                                                                const orgTableMatch = organizationsTable.find(rec => {
-                                                                                    const full = (rec.fields['Org Full Name'] as string) || '';
-                                                                                    const short = (rec.fields['Org Short Name'] as string) || '';
-                                                                                    const altFull = (rec.fields['Org Fullname'] as string) || '';
-                                                                                    const normalized = (name: string) => name.replace(/\s+/g, ' ').trim().toLowerCase();
-                                                                                    const target = normalized(org.organizationName || org.id);
-                                                                                    return [full, short, altFull].some(s => normalized(String(s || '')) === target);
-                                                                                });
-                                                                                const orgType = orgTableMatch?.fields['Org Type'] as string | undefined;
-                                                                                return orgType ? (
-                                                                                    <div className="inline-flex items-center px-1.5 py-px rounded text-[11px] font-medium text-slate-500 bg-transparent border border-slate-200">
-                                                                                        {orgType}
-                                                                                    </div>
-                                                                                ) : null;
-                                                                            })()}                                                                                                                            </div>
-                                                                        <div className="flex flex-wrap gap-1 mt-2 max-w-[600px] mr-4">
-                                                                            {(() => {
-                                                                                const isCountriesExpanded = expandedCountries.has(org.id);
-
-                                                                                // Deduplicate countries first
-                                                                                const uniqueCountries = Array.from(new Set(org.donorCountries)) as string[];
-                                                                                // Sort countries: selected donors first, then others alphabetically
-                                                                                let sortedCountries = [...uniqueCountries];
-                                                                                if (combinedDonors.length > 0) {
-                                                                                    sortedCountries = [
-                                                                                        ...uniqueCountries.filter((c: string) => combinedDonors.includes(c)),
-                                                                                        ...uniqueCountries.filter((c: string) => !combinedDonors.includes(c)).sort()
-                                                                                    ];
-                                                                                }
-                                                                                const countriesToShow = isCountriesExpanded
-                                                                                    ? sortedCountries
-                                                                                    : sortedCountries.slice(0, 5);
-
-                                                                                return (
-                                                                                    <>
-                                                                                        {countriesToShow.map((country: string, idx: number) => (
-                                                                                            <Badge
-                                                                                                key={idx}
-                                                                                                text={country}
-                                                                                                variant={combinedDonors.includes(country) ? 'blue' : 'slate'}
-                                                                                            />
-                                                                                        ))}
-                                                                                        {sortedCountries.length > 5 && !isCountriesExpanded && (
-                                                                                            <div
-                                                                                                onClick={(e) => {
-                                                                                                    e.stopPropagation();
-                                                                                                    const newExpanded = new Set(expandedCountries);
-                                                                                                    newExpanded.add(org.id);
-                                                                                                    setExpandedCountries(newExpanded);
-                                                                                                }}
-                                                                                                className="inline-flex items-center px-2 py-1 rounded-md text-xs font-medium bg-slate-000 text-slate-900 hover:bg-slate-100 transition-colors cursor-pointer"
-                                                                                            >
-                                                                                                +{sortedCountries.length - 5} {labels.filters.showMore}
-                                                                                            </div>
-                                                                                        )}
-                                                                                        {isCountriesExpanded && sortedCountries.length > 5 && (
-                                                                                            <div
-                                                                                                onClick={(e) => {
-                                                                                                    e.stopPropagation();
-                                                                                                    const newExpanded = new Set(expandedCountries);
-                                                                                                    newExpanded.delete(org.id);
-                                                                                                    setExpandedCountries(newExpanded);
-                                                                                                }}
-                                                                                                className="inline-flex items-center px-2 py-1 rounded-md text-xs font-medium bg-slate-000 text-slate-900 hover:bg-slate-100 transition-colors cursor-pointer"
-                                                                                            >
-                                                                                                {labels.filters.showLess}
-                                                                                            </div>
-                                                                                        )}
-                                                                                    </>
-                                                                                );
-                                                                            })()}
-                                                                        </div>
-                                                                    </div>
                                                                 </div>
-                                                                <div className="text-sm text-slate-600">
-                                                                    {org.projects.length} {org.projects.length === 1 ? labels.product.singular : labels.product.plural}
-                                                                </div>
-                                                            </div>
-                                                        </CollapsibleTrigger>
-                                                        <CollapsibleContent>
-                                                            <div className="mt-2 ml-7 space-y-2">
-                                                                {org.projects.map((project: ProjectData) => (
-                                                                    <div
-                                                                        key={project.id}
-                                                                        className={STYLES.projectItem}
-                                                                        onClick={() => setSelectedProject({ project, organizationName: org.organizationName })}
-                                                                    >
-                                                                        <div className="mb-2">
-                                                                            <div className="flex flex-wrap items-center gap-2 gap-y-1">
-                                                                                <span className="font-medium text-slate-900 group-hover:text-[var(--brand-primary)] transition-colors">
-                                                                                    {project.projectName}
-                                                                                </span>
-                                                                                {project.investmentTypes.length > 0 && (
-                                                                                    <div className="flex flex-wrap gap-1 items-center">
-                                                                                        {project.investmentTypes.map((type, idx) => (
-                                                                                            <Badge key={idx} text={type} variant="indigo" />
-                                                                                        ))}
-                                                                                    </div>
-                                                                                )}
+                                                            </CollapsibleTrigger>
+                                                            <CollapsibleContent>
+                                                                <div className="mt-2 ml-7 space-y-2">
+                                                                    {org.projects.map((project: ProjectData) => (
+                                                                        <div
+                                                                            key={project.id}
+                                                                            className={STYLES.projectItem}
+                                                                            onClick={() => setSelectedProject({ project, organizationName: org.organizationName })}
+                                                                        >
+                                                                            <div className="mb-2">
+                                                                                <div className="flex flex-wrap items-center gap-2 gap-y-1">
+                                                                                    <span className="font-medium text-slate-900 group-hover:text-[var(--brand-primary)] transition-colors">
+                                                                                        {project.projectName}
+                                                                                    </span>
+                                                                                    {project.investmentTypes.length > 0 && (
+                                                                                        <div className="flex flex-wrap gap-1 items-center">
+                                                                                            {project.investmentTypes.map((type, idx) => (
+                                                                                                <Badge key={idx} text={type} variant="indigo" />
+                                                                                            ))}
+                                                                                        </div>
+                                                                                    )}
+                                                                                </div>
+                                                                            </div>
+                                                                            <div>
+                                                                                <div className="flex flex-wrap gap-1">
+                                                                                    {project.donorCountries.length > 0 ? (
+                                                                                        project.donorCountries.map((country, idx) => (
+                                                                                            <Badge key={idx} text={country} variant={combinedDonors.includes(country) ? 'blue' : 'slate'} />
+                                                                                        ))
+                                                                                    ) : (
+                                                                                        <span className="text-xs text-slate-500">Asset donors not specified</span>
+                                                                                    )}
+                                                                                </div>
                                                                             </div>
                                                                         </div>
-                                                                        <div>
-                                                                            <div className={STYLES.sectionLabel}>{labels.projectDetails.donorCountries}</div>
-                                                                            <div className="flex flex-wrap gap-1">
-                                                                                {project.donorCountries.length > 0 ? (
-                                                                                    project.donorCountries.map((country, idx) => (
-                                                                                        <Badge key={idx} text={country} variant="emerald" />
-                                                                                    ))
-                                                                                ) : (
-                                                                                    <span className="text-xs text-slate-500">{labels.projectDetails.notSpecified}</span>
-                                                                                )}
-                                                                            </div>
-                                                                        </div>
-                                                                    </div>
-                                                                ))}
-                                                            </div>
-                                                        </CollapsibleContent>
-                                                    </Collapsible>
-                                                );
-                                            })}
+                                                                    ))}
+                                                                </div>
+                                                            </CollapsibleContent>
+                                                        </Collapsible>
+                                                    );
+                                                })}
                                         </div>
                                     </CardContent>
                                 </Card>
