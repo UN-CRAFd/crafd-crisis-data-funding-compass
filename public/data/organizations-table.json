@@ -8,9 +8,9 @@
       "Org Website": "https://hhi.harvard.edu/",
       "Org Description": "The Harvard Humanitarian Initiative (HHI) is a university-wide academic and research center in humanitarian crisis and leadership. Our mission is to create new knowledge and advance evidence-based leadership in disasters and humanitarian crisis. Our work focuses on two main areas: the Humanitarian Academy at Harvard and Research & Translation.",
       "Provided Data Ecosystem Projects": [
-        "recONFtYpO5v2qk7s",
         "recEf0pdKsN1Gbvo8",
-        "recGG8gTf4t6l8Mue"
+        "recGG8gTf4t6l8Mue",
+        "rech8GCismNX3Bm8p"
       ],
       "Org Donor Agencies": [
         "rec6XRPA9pKgC8j1J",
@@ -573,12 +573,13 @@
     "id": "recAnhKXwgDyHOp8y",
     "createdTime": "2025-10-22T20:31:34.000Z",
     "fields": {
-      "Org Full Name": "OCHA Centre for Humanitarian Data",
+      "Org Full Name": "OCHA: Centre for Humanitarian Data",
       "Org Short Name": "OCHA/CHD",
       "Org Description": "The Centre for Humanitarian Data is focused on increasing the use and impact of data in the humanitarian sector. It is managed by the United Nations Office for the Coordination of Humanitarian Affairs (OCHA). As part of OCHA’s Information Management Branch, the Centre’s role is to enable the organization to deliver on its ambition to be more data-driven and analytical, and to ensure a responsible approach to technology and data management.  ",
       "Provided Data Ecosystem Projects": [
         "reckkGrUM2q2e7aeo",
-        "recZaSDcZgIUtalO5"
+        "recZaSDcZgIUtalO5",
+        "recmH2oywWDYooamX"
       ],
       "org_key": "ocha-hum-data-centre",
       "Org Type": [
@@ -620,7 +621,7 @@
     "id": "recBfH3p0af6HqXRf",
     "createdTime": "2025-10-22T20:19:31.000Z",
     "fields": {
-      "Org Full Name": "UNOSAT",
+      "Org Full Name": "UNOSAT: The United Nations Satellite Centre",
       "Org Short Name": "UNOSAT",
       "Provided Data Ecosystem Projects": [
         "recEwLy3FESOhLeNs"
@@ -833,7 +834,8 @@
         "recEwLy3FESOhLeNs",
         "recAmBwUrrYDMtXtH",
         "reczIeSUeAdEWMKSk",
-        "recXcSKhSy2s7tunj"
+        "recXcSKhSy2s7tunj",
+        "rechEM6RZ6by4ZLZK"
       ],
       "Org Donor Agencies": [
         "rec1YpvhkjwME6GOJ",
@@ -1208,7 +1210,7 @@
     "id": "recPNaYHYuKeRDfJn",
     "createdTime": "2025-03-24T01:13:45.000Z",
     "fields": {
-      "Org Full Name": "Humanitarian Street Map Team",
+      "Org Full Name": "HOT: Humanitarian Street Map Team",
       "Org Short Name": "HOT",
       "Org Website": "https://www.hotosm.org/what-we-do",
       "Org Description": "HOT is an international team dedicated to humanitarian action and community development through open mapping. We work together to provide map data which revolutionises disaster management, reduces risks, and contributes to achievement of the Sustainable Development Goals.",
@@ -1321,6 +1323,9 @@
       "Org Short Name": "Panda",
       "Org Website": "https://www.impact-initiatives.org/what-we-do/panda/",
       "Org Description": "IMPACT’s PANDA initiative aims to improve the effectiveness, efficiency and efficacy of humanitarian and development interventions. PANDA supports the entire humanitarian programme cycle, including programme design, assessments, baselines, monitoring and evaluation.",
+      "Provided Data Ecosystem Projects": [
+        "recIUSUS3NNXaMHCQ"
+      ],
       "Org Donor Agencies": [
         "rec3Ado0Jrl799Q8A"
       ],
@@ -1350,7 +1355,7 @@
       "Has received CRAF'd Funding?": "NO",
       "org_key": "dhs",
       "Org Type": [
-        "International Organization"
+        "Research / Think Tank"
       ]
     }
   },
@@ -1372,7 +1377,7 @@
     "id": "recVvtFoKKF407fD1",
     "createdTime": "2025-03-24T19:07:11.000Z",
     "fields": {
-      "Org Full Name": "Data Friendly Space",
+      "Org Full Name": "DFS: Data Friendly Space",
       "Org Short Name": "Data Friendly Space",
       "Org Website": "https://www.datafriendlyspace.org/",
       "Org Description": " Data Friendly Space (DFS) provides trustworthy digital tools and actionable data for social impact organisations to fulfil their mission. We believe that the international community holds not just the knowledge, but also the responsibility to utilise emerging technologies and data to better prepare for and respond to humanitarian needs, support the achievement of Sustainable Development Goals (SDGs), and accelerate climate action.\t",
@@ -1585,7 +1590,8 @@
       "Provided Data Ecosystem Projects": [
         "rec795N2KXfgxaM50",
         "rec5GA5F1UPlXATSj",
-        "recpP1KGKcmcpy2jo"
+        "recpP1KGKcmcpy2jo",
+        "recuOsuVWoVNvCO5k"
       ],
       "Org Donor Agencies": [
         "recGNTHL9SKZxLDcw",
@@ -1705,7 +1711,7 @@
       "Has received CRAF'd Funding?": "NO",
       "org_key": "wmo",
       "Org Type": [
-        "International Organization"
+        "United Nations System"
       ]
     }
   },
@@ -1865,7 +1871,7 @@
       "Has received CRAF'd Funding?": "NO",
       "org_key": "3is",
       "Org Type": [
-        "Private Sector / Industry"
+        "Non-Governmental Organization"
       ]
     }
   },
@@ -2031,7 +2037,8 @@
         "recv2rUABIb3FhIRW",
         "receGDImgeYZLVOPq",
         "recf0UvW6LzObKXGC",
-        "recIUs7JTe4alrFDs"
+        "recIUs7JTe4alrFDs",
+        "reck0qeeLf1nGLbap"
       ],
       "Org IATI Name": "The World Bank or World Bank Trust Funds",
       "Org MPTFO Name": "IBRD",
@@ -2059,7 +2066,8 @@
         "recsuIp5N5MkuxT1S",
         "rec4NnFipAOHwTXCX",
         "rectaDjtvGUN9jPNg",
-        "rec8taCKOmbZu5s4Z"
+        "rec8taCKOmbZu5s4Z",
+        "recni7Cfecz6SBQ8S"
       ],
       "Org Donor Agencies": [
         "rec1VhOJv9U6QKBBs",
@@ -2128,7 +2136,7 @@
       "Org HQ Country": "Denmark",
       "org_key": "world-bank-unhcr",
       "Org Type": [
-        "International Organization"
+        "United Nations System"
       ]
     }
   },
@@ -2195,6 +2203,22 @@
       "org_key": "latinobarometro",
       "Org Type": [
         "Research / Think Tank"
+      ]
+    }
+  },
+  {
+    "id": "recoKRQ2eGzpn3D2g",
+    "createdTime": "2025-10-22T23:32:30.000Z",
+    "fields": {
+      "Org Full Name": "Kobo",
+      "Org Short Name": "Kobo ",
+      "Org Website": "https://www.kobotoolbox.org/about-us/the-organization/",
+      "Org Description": "Kobo is an international nonprofit organization. We host and maintain KoboToolbox, the world’s most popular data collection tool in challenging settings. We are registered in Cambridge, Massachusetts in the United States, but our team is based around the world. Our mission is to provide highly usable tools for creating data-driven social impact. ",
+      "Provided Data Ecosystem Projects": [
+        "recONFtYpO5v2qk7s"
+      ],
+      "Org Type": [
+        "Non-Governmental Organization"
       ]
     }
   },
@@ -2625,7 +2649,7 @@
       "Has received CRAF'd Funding?": "NO",
       "org_key": "who",
       "Org Type": [
-        "International Organization"
+        "United Nations System"
       ]
     }
   },
@@ -2663,6 +2687,7 @@
     "createdTime": "2025-10-22T22:22:01.000Z",
     "fields": {
       "Org Full Name": "European Centre for Medium-Range Weather Forecasts",
+      "Org Short Name": "ECMRWF",
       "Org Website": "https://www.ecmwf.int/",
       "Org Description": "We are both a research institute and a 24/7 operational service, producing global numerical weather predictions and other data for our Member and Co-operating States and the broader community. We operate a world-class supercomputer facility for weather forecasting and hold one of the largest meteorological data archives. Other strategic activities include delivering advanced training and assisting the WMO in implementing its programmes.",
       "Provided Data Ecosystem Projects": [

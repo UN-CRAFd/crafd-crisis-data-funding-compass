@@ -609,6 +609,7 @@
       "Provider Orgs Full Name": [
         "reclJ2i9jD0TKjOJ8"
       ],
+      "CRAF’d-Funded Project?": "NO",
       "Investment Type(s)": [
         "Crisis Analytics & Insights",
         "Learning & Exchange"
@@ -727,7 +728,8 @@
         "Conflict & Violence Data",
         "Gender Data"
       ],
-      "Project Website": "https://mptf.undp.org/project/00141135"
+      "Project Website": "https://mptf.undp.org/project/00141135",
+      "Project Description": "The Rapid Assessment Data project accelerates reporting of conflict-related violence in fragile settings by automating data gathering from open and established sources and integrating Machine Learning (ML) driven analysis. Impacts will be enhanced risk assessment, targeted interventions, and empowered at-risk populations able to advocate protective measures. \n\n\n"
     }
   },
   {
@@ -1246,6 +1248,9 @@
     "fields": {
       "Project/Product Name": "PANDA",
       "product_key": "impact-panda",
+      "Provider Orgs Full Name": [
+        "recSqPg3XJM8pnI25"
+      ],
       "CRAF’d-Funded Project?": "NO",
       "Investment Type(s)": [
         "Infrastructure & Platforms",
@@ -1541,7 +1546,7 @@
       "Project/Product Name": "KoboToolbox",
       "product_key": "kobotoolbox",
       "Provider Orgs Full Name": [
-        "rec18TzPP5pYZ8ezX"
+        "recoKRQ2eGzpn3D2g"
       ],
       "CRAF’d-Funded Project?": "NO",
       "Investment Type(s)": [
@@ -1673,23 +1678,6 @@
       ],
       "Project Website": "https://washdata.org/",
       "Project Description": "Tracks access to water, sanitation, and hygiene (WASH) using global indicators and household survey data accessible under open access licenses.\n"
-    }
-  },
-  {
-    "id": "recQhIBhrdj8K7Loz",
-    "createdTime": "2025-04-24T15:47:06.000Z",
-    "fields": {
-      "Project/Product Name": "CHIRPS: Rainfall Estimates from Rain Gauge and Satellite Observations",
-      "product_key": "chirps-rainfall",
-      "CRAF’d-Funded Project?": "NO",
-      "Investment Type(s)": [
-        "Data Sets & Commons"
-      ],
-      "Investment Theme(s)": [
-        "Climate Data"
-      ],
-      "Project Website": "https://www.chc.ucsb.edu/data/chirps",
-      "Project Description": "CHIRPS delivers a high-resolution global rainfall dataset merging satellite imagery and gauge measurements (1981–present). It provides open-access data for climate resilience, agriculture, and risk forecasting.\n"
     }
   },
   {
@@ -2826,6 +2814,9 @@
     "fields": {
       "Project/Product Name": "Harvard Humanitarian Initiative (HHI)",
       "product_key": "hhi",
+      "Provider Orgs Full Name": [
+        "rec18TzPP5pYZ8ezX"
+      ],
       "CRAF’d-Funded Project?": "NO",
       "Investment Type(s)": [
         "Infrastructure & Platforms",
@@ -2851,6 +2842,9 @@
     "fields": {
       "Project/Product Name": "Global Humanitarian Overview (GHO) Report",
       "product_key": "gho-report",
+      "Provider Orgs Full Name": [
+        "recGCltHLsYiDo59B"
+      ],
       "CRAF’d-Funded Project?": "NO",
       "Investment Type(s)": [
         "Data Sets & Commons",
@@ -2884,8 +2878,8 @@
         "Gender Data",
         "Methodological Standards (e.g., Data Collection)"
       ],
-      "Project Website": "https://mptf.undp.org/project/00141136",
-      "Project Description": "\n"
+      "Project Website": "not available in mptfo website yet",
+      "Project Description": "No description yet (website not available)\n"
     }
   },
   {
@@ -2949,13 +2943,18 @@
       "Provider Orgs Full Name": [
         "recRoMeLU57jzgHFs"
       ],
+      "CRAF’d-Funded Project?": "YES",
       "Investment Type(s)": [
         "Infrastructure & Platforms"
       ],
       "Investment Theme(s)": [
         "Monitoring & Alerts"
       ],
-      "Project Website": "https://acleddata.com/global-analysis/spotlight-areas"
+      "Project Website": "https://acleddata.com/global-analysis/spotlight-areas",
+      "Project Description": "Innovative platforms that covers key areas and can support conflict analysis, violence-prevention initiatives, and efforts to monitor emerging crisis situations.\n",
+      "Project Donor Agencies": [
+        "rec1VhOJv9U6QKBBs"
+      ]
     }
   },
   {
@@ -2965,7 +2964,8 @@
       "Project/Product Name": "World Bank-UNHCR Joint Data Center on Forced Displacement",
       "product_key": "wb-unhcr-jdc",
       "Provider Orgs Full Name": [
-        "recfLMsJLUS9toAjS"
+        "recfLMsJLUS9toAjS",
+        "recl51I0rcqfCzesL"
       ],
       "CRAF’d-Funded Project?": "NO",
       "Investment Type(s)": [
@@ -3052,6 +3052,9 @@
     "fields": {
       "Project/Product Name": "HDX HAPI",
       "product_key": "hdx-hapi",
+      "Provider Orgs Full Name": [
+        "recAnhKXwgDyHOp8y"
+      ],
       "CRAF’d-Funded Project?": "NO",
       "Investment Type(s)": [
         "Infrastructure & Platforms",
@@ -3092,6 +3095,10 @@
     "fields": {
       "Project/Product Name": "Displacement Severity Assessments",
       "product_key": "displacement-severity",
+      "Provider Orgs Full Name": [
+        "reclJ2i9jD0TKjOJ8"
+      ],
+      "CRAF’d-Funded Project?": "NO",
       "Investment Type(s)": [
         "Data Sets & Commons",
         "Infrastructure & Platforms"
@@ -3547,6 +3554,9 @@
     "fields": {
       "Project/Product Name": "Public Health & Safety Insights (PHASI®)",
       "product_key": "phasi",
+      "Provider Orgs Full Name": [
+        "reccKH8GA8awjQEvp"
+      ],
       "CRAF’d-Funded Project?": "NO",
       "Investment Type(s)": [
         "Data Sets & Commons"
@@ -3575,7 +3585,8 @@
         "Climate Data",
         "Climate Analytics"
       ],
-      "Project Website": "https://www.icpac.net/our-projects/e4drr/"
+      "Project Website": "https://www.icpac.net/our-projects/e4drr/",
+      "Project Description": "CPAC's project is poised to enhance disaster risk management in Eastern Africa by integrating advanced hazard modeling, impact estimation, and climate storylines into the [East Africa Hazard Watch Portal](https://eahazardswatch.icpac.net/map/ea/). This approach aims to fill the critical data gaps for localized, actionable information.\n"
     }
   },
   {
@@ -3683,25 +3694,6 @@
     }
   },
   {
-    "id": "recw74V0QsPjTD0l3",
-    "createdTime": "2025-07-21T18:44:20.000Z",
-    "fields": {
-      "Project/Product Name": "Columbia University’s Center for International Earth Science Information Network (CIESIN)",
-      "product_key": "ciesin",
-      "CRAF’d-Funded Project?": "NO",
-      "Investment Type(s)": [
-        "Data Sets & Commons",
-        "Learning & Exchange"
-      ],
-      "Investment Theme(s)": [
-        "Climate Data",
-        "Environmental Data"
-      ],
-      "Project Website": "https://ciesin.climate.columbia.edu/",
-      "Project Description": "The Center for International Earth Science Information Network hosts global datasets—such as land use, population, urbanization, and environment—that support cross-sectoral research and policymaking.\n"
-    }
-  },
-  {
     "id": "recwMGK7lbvDfjR14",
     "createdTime": "2025-10-22T20:57:17.000Z",
     "fields": {
@@ -3709,13 +3701,18 @@
       "Provider Orgs Full Name": [
         "recRoMeLU57jzgHFs"
       ],
+      "CRAF’d-Funded Project?": "YES",
       "Investment Type(s)": [
         "Data Sets & Commons"
       ],
       "Investment Theme(s)": [
         "Conflict & Violence Data"
       ],
-      "Project Website": "https://acleddata.com/platform/conflict-exposure-calculator"
+      "Project Website": "https://acleddata.com/platform/conflict-exposure-calculator",
+      "Project Description": "The Conflict Exposure Calculator integrates data from ACLED with population size estimates from WorldPop, to estimate the civilian impact by proximity to an event, event type, type of violent actor or specific armed group, location, and time.\n",
+      "Project Donor Agencies": [
+        "rec1VhOJv9U6QKBBs"
+      ]
     }
   },
   {

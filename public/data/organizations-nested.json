@@ -8,9 +8,9 @@
       "Org Website": "https://hhi.harvard.edu/",
       "Org Description": "The Harvard Humanitarian Initiative (HHI) is a university-wide academic and research center in humanitarian crisis and leadership. Our mission is to create new knowledge and advance evidence-based leadership in disasters and humanitarian crisis. Our work focuses on two main areas: the Humanitarian Academy at Harvard and Research & Translation.",
       "Provided Data Ecosystem Projects": [
-        "recONFtYpO5v2qk7s",
         "recEf0pdKsN1Gbvo8",
-        "recGG8gTf4t6l8Mue"
+        "recGG8gTf4t6l8Mue",
+        "rech8GCismNX3Bm8p"
       ],
       "Org Donor Agencies": [
         "rec6XRPA9pKgC8j1J",
@@ -111,26 +111,52 @@
         "agencies": []
       },
       {
-        "id": "recONFtYpO5v2qk7s",
-        "createdTime": "2025-06-23T16:46:48.000Z",
+        "id": "rech8GCismNX3Bm8p",
+        "createdTime": "2025-07-18T15:15:26.000Z",
         "fields": {
-          "Project/Product Name": "KoboToolbox",
-          "product_key": "kobotoolbox",
+          "Project/Product Name": "Harvard Humanitarian Initiative (HHI)",
+          "product_key": "hhi",
           "Provider Orgs Full Name": [
             "rec18TzPP5pYZ8ezX"
           ],
           "CRAF’d-Funded Project?": "NO",
           "Investment Type(s)": [
-            "Infrastructure & Platforms"
+            "Infrastructure & Platforms",
+            "Learning & Exchange"
           ],
           "Investment Theme(s)": [
+            "Conferences",
             "Data Collection",
-            "Conflict & Violence Data"
+            "Workshops",
+            "Upskilling & Training"
           ],
-          "Project Website": "https://hhi.harvard.edu/kobotoolbox",
-          "Project Description": "KoboToolbox is a free and open-source tool for mobile data collection in humanitarian crises. Used by UN agencies, NGOs, and governments, it supports offline surveys, real-time dashboards, and collaborative field assessments.\n"
+          "Project Website": "https://hhi.harvard.edu/",
+          "Project Description": "HHI is an academic and applied research center focused on advancing humanitarian response through evidence-based practice, data science, and technology. It bridges academia, practitioners, and policy stakeholders.\n",
+          "Project Donor Agencies": [
+            "recCDa9F6ntBxGGkm",
+            "reclUJwIt0bxL2bO0"
+          ]
         },
-        "agencies": []
+        "agencies": [
+          {
+            "id": "recCDa9F6ntBxGGkm",
+            "createdTime": "2025-06-26T02:00:44.000Z",
+            "fields": {
+              "Agency/Department Name": "National Institutes of Health (NIH)",
+              "Agency Data Portal": "https://www.nih.gov/",
+              "Country Name": "USA"
+            }
+          },
+          {
+            "id": "reclUJwIt0bxL2bO0",
+            "createdTime": "2025-06-26T02:10:04.000Z",
+            "fields": {
+              "Agency/Department Name": "National Science Foundation (NSF)",
+              "Agency Data Portal": "https://www.nsf.gov/",
+              "Country Name": "USA"
+            }
+          }
+        ]
       }
     ],
     "donor_countries": [
@@ -1562,7 +1588,8 @@
             "Conflict & Violence Data",
             "Gender Data"
           ],
-          "Project Website": "https://mptf.undp.org/project/00141135"
+          "Project Website": "https://mptf.undp.org/project/00141135",
+          "Project Description": "The Rapid Assessment Data project accelerates reporting of conflict-related violence in fragile settings by automating data gathering from open and established sources and integrating Machine Learning (ML) driven analysis. Impacts will be enhanced risk assessment, targeted interventions, and empowered at-risk populations able to advocate protective measures. \n\n\n"
         },
         "agencies": []
       }
@@ -2339,8 +2366,8 @@
             "Gender Data",
             "Methodological Standards (e.g., Data Collection)"
           ],
-          "Project Website": "https://mptf.undp.org/project/00141136",
-          "Project Description": "\n"
+          "Project Website": "not available in mptfo website yet",
+          "Project Description": "No description yet (website not available)\n"
         },
         "agencies": []
       }
@@ -3133,14 +3160,15 @@
   },
   {
     "id": "recAnhKXwgDyHOp8y",
-    "name": "OCHA Centre for Humanitarian Data",
+    "name": "OCHA: Centre for Humanitarian Data",
     "fields": {
-      "Org Full Name": "OCHA Centre for Humanitarian Data",
+      "Org Full Name": "OCHA: Centre for Humanitarian Data",
       "Org Short Name": "OCHA/CHD",
       "Org Description": "The Centre for Humanitarian Data is focused on increasing the use and impact of data in the humanitarian sector. It is managed by the United Nations Office for the Coordination of Humanitarian Affairs (OCHA). As part of OCHA’s Information Management Branch, the Centre’s role is to enable the organization to deliver on its ambition to be more data-driven and analytical, and to ensure a responsible approach to technology and data management.  ",
       "Provided Data Ecosystem Projects": [
         "reckkGrUM2q2e7aeo",
-        "recZaSDcZgIUtalO5"
+        "recZaSDcZgIUtalO5",
+        "recmH2oywWDYooamX"
       ],
       "org_key": "ocha-hum-data-centre",
       "Org Type": [
@@ -3188,6 +3216,28 @@
           ],
           "Project Website": "https://data.humdata.org/",
           "Project Description": "Managed by the United Nations Office for the Coordination of Humanitarian Affairs (OCHA), the Humanitarian Data Exchange (HDX) is a centralized platform for sharing humanitarian data. It offers access to over 20,000 datasets from more than 300 organizations, covering themes such as population, conflict, health, and displacement. HDX includes the Data Grid and the COVID-19 Data Explorer, and it plays a crucial role in promoting data transparency, interoperability, and informed decision-making in humanitarian settings.\n"
+        },
+        "agencies": []
+      },
+      {
+        "id": "recmH2oywWDYooamX",
+        "createdTime": "2025-03-25T19:32:58.000Z",
+        "fields": {
+          "Project/Product Name": "HDX HAPI",
+          "product_key": "hdx-hapi",
+          "Provider Orgs Full Name": [
+            "recAnhKXwgDyHOp8y"
+          ],
+          "CRAF’d-Funded Project?": "NO",
+          "Investment Type(s)": [
+            "Infrastructure & Platforms",
+            "Standards & Coordination"
+          ],
+          "Investment Theme(s)": [
+            "Data Storage, Access & Sharing"
+          ],
+          "Project Website": "https://data.humdata.org/hapi",
+          "Project Description": "The initial scope of HDX HAPI mirrored that of the HDX Data Grids, which include the foundational data needed to understand a humanitarian context. However we have since expanded beyond the Data Grids, and a live dashboard of data availability by country can be found at <https://ocha-dap.github.io/viz-hapi-availability/>.\n"
         },
         "agencies": []
       }
@@ -3346,9 +3396,9 @@
   },
   {
     "id": "recBfH3p0af6HqXRf",
-    "name": "UNOSAT",
+    "name": "UNOSAT: The United Nations Satellite Centre",
     "fields": {
-      "Org Full Name": "UNOSAT",
+      "Org Full Name": "UNOSAT: The United Nations Satellite Centre",
       "Org Short Name": "UNOSAT",
       "Provided Data Ecosystem Projects": [
         "recEwLy3FESOhLeNs"
@@ -4362,7 +4412,8 @@
         "recEwLy3FESOhLeNs",
         "recAmBwUrrYDMtXtH",
         "reczIeSUeAdEWMKSk",
-        "recXcSKhSy2s7tunj"
+        "recXcSKhSy2s7tunj",
+        "rechEM6RZ6by4ZLZK"
       ],
       "Org Donor Agencies": [
         "rec1YpvhkjwME6GOJ",
@@ -4756,6 +4807,29 @@
           ],
           "Project Website": "https://fts.unocha.org/",
           "Project Description": "OCHA’s FTS collects, standardizes, and publishes real-time humanitarian funding data globally. It offers dashboards and downloadable datasets tracking donor and recipient transactions in emergencies—providing transparency across funding flows.\n"
+        },
+        "agencies": []
+      },
+      {
+        "id": "rechEM6RZ6by4ZLZK",
+        "createdTime": "2025-03-24T15:01:08.000Z",
+        "fields": {
+          "Project/Product Name": "Global Humanitarian Overview (GHO) Report",
+          "product_key": "gho-report",
+          "Provider Orgs Full Name": [
+            "recGCltHLsYiDo59B"
+          ],
+          "CRAF’d-Funded Project?": "NO",
+          "Investment Type(s)": [
+            "Data Sets & Commons",
+            "Crisis Analytics & Insights"
+          ],
+          "Investment Theme(s)": [
+            "Conflict & Violence Data",
+            "Data Storage, Access & Sharing"
+          ],
+          "Project Website": "https://humanitarianaction.info/",
+          "Project Description": "The **Global Humanitarian Overview** is an annual assessment of global humanitarian needs and how to respond to them. This document provides an analysis of the drivers of needs and an overview of the resources required to support people targeted for assistance. It also provides an account of the humanitarian system’s collective achievements.\n"
         },
         "agencies": []
       },
@@ -5651,8 +5725,8 @@
             "Gender Data",
             "Methodological Standards (e.g., Data Collection)"
           ],
-          "Project Website": "https://mptf.undp.org/project/00141136",
-          "Project Description": "\n"
+          "Project Website": "not available in mptfo website yet",
+          "Project Description": "No description yet (website not available)\n"
         },
         "agencies": []
       }
@@ -6440,9 +6514,9 @@
   },
   {
     "id": "recPNaYHYuKeRDfJn",
-    "name": "Humanitarian Street Map Team",
+    "name": "HOT: Humanitarian Street Map Team",
     "fields": {
-      "Org Full Name": "Humanitarian Street Map Team",
+      "Org Full Name": "HOT: Humanitarian Street Map Team",
       "Org Short Name": "HOT",
       "Org Website": "https://www.hotosm.org/what-we-do",
       "Org Description": "HOT is an international team dedicated to humanitarian action and community development through open mapping. We work together to provide map data which revolutionises disaster management, reduces risks, and contributes to achievement of the Sustainable Development Goals.",
@@ -6831,15 +6905,29 @@
           "Provider Orgs Full Name": [
             "recRoMeLU57jzgHFs"
           ],
+          "CRAF’d-Funded Project?": "YES",
           "Investment Type(s)": [
             "Infrastructure & Platforms"
           ],
           "Investment Theme(s)": [
             "Monitoring & Alerts"
           ],
-          "Project Website": "https://acleddata.com/global-analysis/spotlight-areas"
+          "Project Website": "https://acleddata.com/global-analysis/spotlight-areas",
+          "Project Description": "Innovative platforms that covers key areas and can support conflict analysis, violence-prevention initiatives, and efforts to monitor emerging crisis situations.\n",
+          "Project Donor Agencies": [
+            "rec1VhOJv9U6QKBBs"
+          ]
         },
-        "agencies": []
+        "agencies": [
+          {
+            "id": "rec1VhOJv9U6QKBBs",
+            "createdTime": "2025-05-02T21:43:22.000Z",
+            "fields": {
+              "Agency/Department Name": "CRAF’d Funding",
+              "Country Name": "CRAF’d"
+            }
+          }
+        ]
       },
       {
         "id": "recwMGK7lbvDfjR14",
@@ -6849,15 +6937,29 @@
           "Provider Orgs Full Name": [
             "recRoMeLU57jzgHFs"
           ],
+          "CRAF’d-Funded Project?": "YES",
           "Investment Type(s)": [
             "Data Sets & Commons"
           ],
           "Investment Theme(s)": [
             "Conflict & Violence Data"
           ],
-          "Project Website": "https://acleddata.com/platform/conflict-exposure-calculator"
+          "Project Website": "https://acleddata.com/platform/conflict-exposure-calculator",
+          "Project Description": "The Conflict Exposure Calculator integrates data from ACLED with population size estimates from WorldPop, to estimate the civilian impact by proximity to an event, event type, type of violent actor or specific armed group, location, and time.\n",
+          "Project Donor Agencies": [
+            "rec1VhOJv9U6QKBBs"
+          ]
         },
-        "agencies": []
+        "agencies": [
+          {
+            "id": "rec1VhOJv9U6QKBBs",
+            "createdTime": "2025-05-02T21:43:22.000Z",
+            "fields": {
+              "Agency/Department Name": "CRAF’d Funding",
+              "Country Name": "CRAF’d"
+            }
+          }
+        ]
       }
     ],
     "donor_countries": [
@@ -6872,6 +6974,9 @@
       "Org Short Name": "Panda",
       "Org Website": "https://www.impact-initiatives.org/what-we-do/panda/",
       "Org Description": "IMPACT’s PANDA initiative aims to improve the effectiveness, efficiency and efficacy of humanitarian and development interventions. PANDA supports the entire humanitarian programme cycle, including programme design, assessments, baselines, monitoring and evaluation.",
+      "Provided Data Ecosystem Projects": [
+        "recIUSUS3NNXaMHCQ"
+      ],
       "Org Donor Agencies": [
         "rec3Ado0Jrl799Q8A"
       ],
@@ -6892,7 +6997,34 @@
         }
       }
     ],
-    "projects": [],
+    "projects": [
+      {
+        "id": "recIUSUS3NNXaMHCQ",
+        "createdTime": "2025-03-24T19:51:08.000Z",
+        "fields": {
+          "Project/Product Name": "PANDA",
+          "product_key": "impact-panda",
+          "Provider Orgs Full Name": [
+            "recSqPg3XJM8pnI25"
+          ],
+          "CRAF’d-Funded Project?": "NO",
+          "Investment Type(s)": [
+            "Infrastructure & Platforms",
+            "Human Capital & Know-how"
+          ],
+          "Investment Theme(s)": [
+            "Data Storage, Access & Sharing",
+            "Conflict & Violence Data",
+            "Needs Assessment Data",
+            "Impact Evaluation",
+            "Capacity Building"
+          ],
+          "Project Website": "https://www.impact-initiatives.org/what-we-do/panda/",
+          "Project Description": "IMPACT’s PANDA initiative aims to improve the effectiveness, efficiency and efficacy of humanitarian and development interventions. PANDA supports the entire humanitarian programme cycle, including programme design, assessments, baselines, monitoring and evaluation.\n\t\n"
+        },
+        "agencies": []
+      }
+    ],
     "donor_countries": [
       "The World Bank"
     ]
@@ -6916,7 +7048,7 @@
       "Has received CRAF'd Funding?": "NO",
       "org_key": "dhs",
       "Org Type": [
-        "International Organization"
+        "Research / Think Tank"
       ]
     },
     "agencies": [
@@ -6972,9 +7104,9 @@
   },
   {
     "id": "recVvtFoKKF407fD1",
-    "name": "Data Friendly Space",
+    "name": "DFS: Data Friendly Space",
     "fields": {
-      "Org Full Name": "Data Friendly Space",
+      "Org Full Name": "DFS: Data Friendly Space",
       "Org Short Name": "Data Friendly Space",
       "Org Website": "https://www.datafriendlyspace.org/",
       "Org Description": " Data Friendly Space (DFS) provides trustworthy digital tools and actionable data for social impact organisations to fulfil their mission. We believe that the international community holds not just the knowledge, but also the responsibility to utilise emerging technologies and data to better prepare for and respond to humanitarian needs, support the achievement of Sustainable Development Goals (SDGs), and accelerate climate action.\t",
@@ -8173,7 +8305,8 @@
       "Provided Data Ecosystem Projects": [
         "rec795N2KXfgxaM50",
         "rec5GA5F1UPlXATSj",
-        "recpP1KGKcmcpy2jo"
+        "recpP1KGKcmcpy2jo",
+        "recuOsuVWoVNvCO5k"
       ],
       "Org Donor Agencies": [
         "recGNTHL9SKZxLDcw",
@@ -8371,6 +8504,27 @@
           ],
           "Project Website": "https://510.global/service/trigger-model-development/",
           "Project Description": "Trigger models are employed to establish danger levels that activate humanitarian anticipatory Early Action Protocols (EAPs). These models are developed using the Impact-Based Forecasting ([IBF](https://510.global/glossary/ibf/)) methodology. So far, we have built models that trigger EAPs for typhoon, flood, dzud, drought and dengue hazards. \n\n"
+        },
+        "agencies": []
+      },
+      {
+        "id": "recuOsuVWoVNvCO5k",
+        "createdTime": "2025-06-26T13:51:38.000Z",
+        "fields": {
+          "Project/Product Name": "Public Health & Safety Insights (PHASI®)",
+          "product_key": "phasi",
+          "Provider Orgs Full Name": [
+            "reccKH8GA8awjQEvp"
+          ],
+          "CRAF’d-Funded Project?": "NO",
+          "Investment Type(s)": [
+            "Data Sets & Commons"
+          ],
+          "Investment Theme(s)": [
+            "Health Data"
+          ],
+          "Project Website": "https://www.redcross.org/about-us/driven-by-data/public-health-and-safety-insights.html",
+          "Project Description": "PHASI® is a data integration and analysis platform developed by the American Red Cross that aggregates multi-sectoral indicators to identify public health and safety risks. It supports disaster planning, resource allocation, and early warning efforts.\n"
         },
         "agencies": []
       }
@@ -8721,7 +8875,7 @@
       "Has received CRAF'd Funding?": "NO",
       "org_key": "wmo",
       "Org Type": [
-        "International Organization"
+        "United Nations System"
       ]
     },
     "agencies": [
@@ -9677,7 +9831,8 @@
           "Project/Product Name": "World Bank-UNHCR Joint Data Center on Forced Displacement",
           "product_key": "wb-unhcr-jdc",
           "Provider Orgs Full Name": [
-            "recfLMsJLUS9toAjS"
+            "recfLMsJLUS9toAjS",
+            "recl51I0rcqfCzesL"
           ],
           "CRAF’d-Funded Project?": "NO",
           "Investment Type(s)": [
@@ -9951,7 +10106,7 @@
       "Has received CRAF'd Funding?": "NO",
       "org_key": "3is",
       "Org Type": [
-        "Private Sector / Industry"
+        "Non-Governmental Organization"
       ]
     },
     "agencies": [
@@ -10393,7 +10548,8 @@
             "Climate Data",
             "Climate Analytics"
           ],
-          "Project Website": "https://www.icpac.net/our-projects/e4drr/"
+          "Project Website": "https://www.icpac.net/our-projects/e4drr/",
+          "Project Description": "CPAC's project is poised to enhance disaster risk management in Eastern Africa by integrating advanced hazard modeling, impact estimation, and climate storylines into the [East Africa Hazard Watch Portal](https://eahazardswatch.icpac.net/map/ea/). This approach aims to fill the critical data gaps for localized, actionable information.\n"
         },
         "agencies": []
       }
@@ -10835,7 +10991,8 @@
         "recv2rUABIb3FhIRW",
         "receGDImgeYZLVOPq",
         "recf0UvW6LzObKXGC",
-        "recIUs7JTe4alrFDs"
+        "recIUs7JTe4alrFDs",
+        "reck0qeeLf1nGLbap"
       ],
       "Org IATI Name": "The World Bank or World Bank Trust Funds",
       "Org MPTFO Name": "IBRD",
@@ -10965,6 +11122,30 @@
         "agencies": []
       },
       {
+        "id": "reck0qeeLf1nGLbap",
+        "createdTime": "2025-03-24T18:23:29.000Z",
+        "fields": {
+          "Project/Product Name": "World Bank-UNHCR Joint Data Center on Forced Displacement",
+          "product_key": "wb-unhcr-jdc",
+          "Provider Orgs Full Name": [
+            "recfLMsJLUS9toAjS",
+            "recl51I0rcqfCzesL"
+          ],
+          "CRAF’d-Funded Project?": "NO",
+          "Investment Type(s)": [
+            "Data Sets & Commons",
+            "Learning & Exchange"
+          ],
+          "Investment Theme(s)": [
+            "Displacement & Migration Data",
+            "Upskilling & Training"
+          ],
+          "Project Website": "https://www.jointdatacenter.org/",
+          "Project Description": "The JDC is a joint initiative to improve the collection, analysis, and use of data on forcibly displaced populations. It provides public goods—surveys, microdata, and research—focused on informing development and humanitarian action through evidence-based approaches.\n"
+        },
+        "agencies": []
+      },
+      {
         "id": "recv2rUABIb3FhIRW",
         "createdTime": "2025-03-24T18:26:25.000Z",
         "fields": {
@@ -11003,7 +11184,8 @@
         "recsuIp5N5MkuxT1S",
         "rec4NnFipAOHwTXCX",
         "rectaDjtvGUN9jPNg",
-        "rec8taCKOmbZu5s4Z"
+        "rec8taCKOmbZu5s4Z",
+        "recni7Cfecz6SBQ8S"
       ],
       "Org Donor Agencies": [
         "rec1VhOJv9U6QKBBs",
@@ -11265,6 +11447,7 @@
           "Provider Orgs Full Name": [
             "reclJ2i9jD0TKjOJ8"
           ],
+          "CRAF’d-Funded Project?": "NO",
           "Investment Type(s)": [
             "Crisis Analytics & Insights",
             "Learning & Exchange"
@@ -11275,6 +11458,29 @@
           ],
           "Project Website": "https://www.internal-displacement.org/good-practices/",
           "Project Description": "As part of IDMC's investment in more systematic monitoring of national and global efforts to reduce the risk, scale and negative impacts of internal displacement, the Global Repository of Good Practices provides a platform to compile, share and evaluate policies and programmatic approaches to support better solutions for internally displaced people worldwide.\n"
+        },
+        "agencies": []
+      },
+      {
+        "id": "recni7Cfecz6SBQ8S",
+        "createdTime": "2025-08-28T16:52:52.000Z",
+        "fields": {
+          "Project/Product Name": "Displacement Severity Assessments",
+          "product_key": "displacement-severity",
+          "Provider Orgs Full Name": [
+            "reclJ2i9jD0TKjOJ8"
+          ],
+          "CRAF’d-Funded Project?": "NO",
+          "Investment Type(s)": [
+            "Data Sets & Commons",
+            "Infrastructure & Platforms"
+          ],
+          "Investment Theme(s)": [
+            "Needs Assessment Data",
+            "Displacement & Migration Analytics"
+          ],
+          "Project Website": "https://www.internal-displacement.org/displacement-severity-assessments/",
+          "Project Description": "IDMC conducts annual severity assessments to compare the living conditions of internally displaced households to those of returnee and non-displaced households in the same country, including access to adequate housing, stable income, food security and education, as well as the fear of exposure to conflict or violence, explosive hazards and other threats.  \n"
         },
         "agencies": []
       },
@@ -11639,7 +11845,7 @@
       "Org HQ Country": "Denmark",
       "org_key": "world-bank-unhcr",
       "Org Type": [
-        "International Organization"
+        "United Nations System"
       ]
     },
     "agencies": [
@@ -12014,6 +12220,48 @@
       "United Kingdom",
       "United Nations Development Programme (UNDP)"
     ]
+  },
+  {
+    "id": "recoKRQ2eGzpn3D2g",
+    "name": "Kobo",
+    "fields": {
+      "Org Full Name": "Kobo",
+      "Org Short Name": "Kobo ",
+      "Org Website": "https://www.kobotoolbox.org/about-us/the-organization/",
+      "Org Description": "Kobo is an international nonprofit organization. We host and maintain KoboToolbox, the world’s most popular data collection tool in challenging settings. We are registered in Cambridge, Massachusetts in the United States, but our team is based around the world. Our mission is to provide highly usable tools for creating data-driven social impact. ",
+      "Provided Data Ecosystem Projects": [
+        "recONFtYpO5v2qk7s"
+      ],
+      "Org Type": [
+        "Non-Governmental Organization"
+      ]
+    },
+    "agencies": [],
+    "projects": [
+      {
+        "id": "recONFtYpO5v2qk7s",
+        "createdTime": "2025-06-23T16:46:48.000Z",
+        "fields": {
+          "Project/Product Name": "KoboToolbox",
+          "product_key": "kobotoolbox",
+          "Provider Orgs Full Name": [
+            "recoKRQ2eGzpn3D2g"
+          ],
+          "CRAF’d-Funded Project?": "NO",
+          "Investment Type(s)": [
+            "Infrastructure & Platforms"
+          ],
+          "Investment Theme(s)": [
+            "Data Collection",
+            "Conflict & Violence Data"
+          ],
+          "Project Website": "https://hhi.harvard.edu/kobotoolbox",
+          "Project Description": "KoboToolbox is a free and open-source tool for mobile data collection in humanitarian crises. Used by UN agencies, NGOs, and governments, it supports offline surveys, real-time dashboards, and collaborative field assessments.\n"
+        },
+        "agencies": []
+      }
+    ],
+    "donor_countries": []
   },
   {
     "id": "recoPRDBbxl0bVx7x",
@@ -14054,7 +14302,7 @@
       "Has received CRAF'd Funding?": "NO",
       "org_key": "who",
       "Org Type": [
-        "International Organization"
+        "United Nations System"
       ]
     },
     "agencies": [
@@ -14501,6 +14749,7 @@
     "name": "European Centre for Medium-Range Weather Forecasts",
     "fields": {
       "Org Full Name": "European Centre for Medium-Range Weather Forecasts",
+      "Org Short Name": "ECMRWF",
       "Org Website": "https://www.ecmwf.int/",
       "Org Description": "We are both a research institute and a 24/7 operational service, producing global numerical weather predictions and other data for our Member and Co-operating States and the broader community. We operate a world-class supercomputer facility for weather forecasting and hold one of the largest meteorological data archives. Other strategic activities include delivering advanced training and assisting the WMO in implementing its programmes.",
       "Provided Data Ecosystem Projects": [
