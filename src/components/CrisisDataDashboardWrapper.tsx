@@ -1,10 +1,10 @@
 'use client';
 
-import type { DashboardFilters, DashboardStats, OrganizationProjectData, OrganizationTypeData, OrganizationWithProjects, ProjectTypeData } from '../types/airtable';
-import { processDashboardData } from '../lib/data';
 import { typeLabelToSlug, typeSlugToLabel } from '@/lib/urlShortcuts';
 import { usePathname, useRouter, useSearchParams } from 'next/navigation';
 import { useCallback, useEffect, useMemo, useState } from 'react';
+import { processDashboardData } from '../lib/data';
+import type { DashboardFilters, DashboardStats, OrganizationProjectData, OrganizationTypeData, OrganizationWithProjects, ProjectTypeData } from '../types/airtable';
 import CrisisDataDashboard from './CrisisDataDashboard';
 
 /**
@@ -55,12 +55,12 @@ const CrisisDataDashboardWrapper = ({ logoutButton }: { logoutButton?: React.Rea
     } | null>(null);
 
     // Determine if we're currently showing a modal
-    const isModalOpen = selectedOrgKey || selectedProjectKey;
-
     // Use underlying page state for dashboard data when modal is open
-    const effectiveSearchQuery = isModalOpen && underlyingPageState ? underlyingPageState.searchQuery : searchQuery;
-    const effectiveDonors = isModalOpen && underlyingPageState ? underlyingPageState.combinedDonors : combinedDonors;
-    const effectiveInvestmentTypes = isModalOpen && underlyingPageState ? underlyingPageState.investmentTypes : investmentTypes;
+    // Use a more stable check that doesn't change during URL transitions
+    const shouldUseStoredState = (selectedOrgKey || selectedProjectKey) && underlyingPageState;
+    const effectiveSearchQuery = shouldUseStoredState ? underlyingPageState.searchQuery : searchQuery;
+    const effectiveDonors = shouldUseStoredState ? underlyingPageState.combinedDonors : combinedDonors;
+    const effectiveInvestmentTypes = shouldUseStoredState ? underlyingPageState.investmentTypes : investmentTypes;
 
     // State for dashboard data
     const [dashboardData, setDashboardData] = useState<{
@@ -75,9 +75,6 @@ const CrisisDataDashboardWrapper = ({ logoutButton }: { logoutButton?: React.Rea
     } | null>(null);
     const [loading, setLoading] = useState(true);
     const [error, setError] = useState<string | null>(null);
-
-    // Load nested organizations for smart URL matching
-    const [nestedOrganizations, setNestedOrganizations] = useState<any[]>([]);
 
     // Sync local search with URL when URL changes externally (e.g., browser back/forward)
     useEffect(() => {
@@ -102,7 +99,7 @@ const CrisisDataDashboardWrapper = ({ logoutButton }: { logoutButton?: React.Rea
             if (params.types.length > 0) {
                 const slugs = params.types.map(t => typeLabelToSlug(t));
                 // Deduplicate slugs case-insensitively before writing to URL
-                const uniqueSlugs = Array.from(new Set(slugs.map(s => s.toLowerCase()))).map(s => 
+                const uniqueSlugs = Array.from(new Set(slugs.map(s => s.toLowerCase()))).map(s =>
                     slugs.find(slug => slug.toLowerCase() === s) || s
                 );
                 newSearchParams.set('t', uniqueSlugs.join(','));
@@ -213,13 +210,13 @@ const CrisisDataDashboardWrapper = ({ logoutButton }: { logoutButton?: React.Rea
         // Restore URL to previous state if we have it stored
         if (underlyingPageState) {
             const newSearchParams = new URLSearchParams();
-            
+
             if (underlyingPageState.combinedDonors.length > 0) {
                 newSearchParams.set('d', underlyingPageState.combinedDonors.join(','));
             }
             if (underlyingPageState.investmentTypes.length > 0) {
                 const slugs = underlyingPageState.investmentTypes.map(t => typeLabelToSlug(t));
-                const uniqueSlugs = Array.from(new Set(slugs.map(s => s.toLowerCase()))).map(s => 
+                const uniqueSlugs = Array.from(new Set(slugs.map(s => s.toLowerCase()))).map(s =>
                     slugs.find(slug => slug.toLowerCase() === s) || s
                 );
                 newSearchParams.set('t', uniqueSlugs.join(','));
@@ -230,26 +227,28 @@ const CrisisDataDashboardWrapper = ({ logoutButton }: { logoutButton?: React.Rea
 
             const queryString = newSearchParams.toString();
             router.replace(`${pathname}${queryString ? '?' + queryString : ''}`, { scroll: false });
+
+            // Clear stored state after a short delay to prevent flash
+            setTimeout(() => {
+                setUnderlyingPageState(null);
+            }, 50);
         } else {
             // Fallback: just remove the modal parameter
             router.replace(pathname, { scroll: false });
         }
-        
-        // Clear stored state
-        setUnderlyingPageState(null);
     }, [router, pathname, underlyingPageState, typeLabelToSlug]);
 
     const handleCloseProjectModal = useCallback(() => {
         // Restore URL to previous state if we have it stored
         if (underlyingPageState) {
             const newSearchParams = new URLSearchParams();
-            
+
             if (underlyingPageState.combinedDonors.length > 0) {
                 newSearchParams.set('d', underlyingPageState.combinedDonors.join(','));
             }
             if (underlyingPageState.investmentTypes.length > 0) {
                 const slugs = underlyingPageState.investmentTypes.map(t => typeLabelToSlug(t));
-                const uniqueSlugs = Array.from(new Set(slugs.map(s => s.toLowerCase()))).map(s => 
+                const uniqueSlugs = Array.from(new Set(slugs.map(s => s.toLowerCase()))).map(s =>
                     slugs.find(slug => slug.toLowerCase() === s) || s
                 );
                 newSearchParams.set('t', uniqueSlugs.join(','));
@@ -260,13 +259,15 @@ const CrisisDataDashboardWrapper = ({ logoutButton }: { logoutButton?: React.Rea
 
             const queryString = newSearchParams.toString();
             router.replace(`${pathname}${queryString ? '?' + queryString : ''}`, { scroll: false });
+
+            // Clear stored state after a short delay to prevent flash
+            setTimeout(() => {
+                setUnderlyingPageState(null);
+            }, 50);
         } else {
             // Fallback: just remove the modal parameter
             router.replace(pathname, { scroll: false });
         }
-        
-        // Clear stored state
-        setUnderlyingPageState(null);
     }, [router, pathname, underlyingPageState, typeLabelToSlug]);
 
     return (
