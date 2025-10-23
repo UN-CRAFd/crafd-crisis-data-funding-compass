@@ -114,15 +114,17 @@ export default function ProjectModal({ project, allOrganizations, loading }: Pro
         <button
             onClick={handleClose}
             className="
-        flex items-center justify-center h-8 w-8 rounded-full
+        flex items-center justify-center gap-2 h-12 w-12 sm:h-10 sm:w-auto sm:px-4 rounded-full sm:rounded-lg
         transition-all duration-200 ease-out touch-manipulation
-        text-gray-600 bg-gray-200 hover:bg-gray-400 hover:text-gray-100 cursor-pointer
-        focus:outline-none focus:bg-gray-400 focus:text-gray-100 shrink-0 ml-4
+        text-white bg-slate-600 hover:bg-slate-700 sm:text-gray-600 sm:bg-gray-200 sm:hover:bg-gray-400 sm:hover:text-gray-100 cursor-pointer
+        focus:outline-none focus:bg-slate-700 sm:focus:bg-gray-400 sm:focus:text-gray-100 shrink-0 ml-4
+        sm:text-sm font-medium shadow-lg sm:shadow-none
       "
             aria-label="Close modal"
             title="Close modal"
         >
-            <X className="h-3 w-3" />
+            <X className="h-5 w-5 sm:h-4 sm:w-4" />
+            <span className="hidden sm:inline">Close</span>
         </button>
     );
 

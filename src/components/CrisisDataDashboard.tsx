@@ -626,6 +626,7 @@ const CrisisDataDashboard = ({
                     
                     {/* Desktop Grid */}
                     <div className="hidden sm:grid sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-[var(--spacing-section)]">
+
                         <StatCard
                             icon={<Globe style={{ color: 'var(--brand-primary)' }} />}
                             title={labels.stats.donorCountries.title}
@@ -634,7 +635,7 @@ const CrisisDataDashboard = ({
                             colorScheme="amber"
                             tooltip={labels.stats.donorCountries.tooltip}
                         />
-
+                        
                         <StatCard
                             icon={<Building2 style={{ color: 'var(--brand-primary)' }} />}
                             title={labels.stats.dataProviders.title}
@@ -652,6 +653,7 @@ const CrisisDataDashboard = ({
                             colorScheme="amber"
                             tooltip={labels.stats.dataProjects.tooltip}
                         />
+
                     </div>
 
                     {/* Main Layout - Two Columns */}
