@@ -1,6 +1,6 @@
 'use client';
 
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useMemo, useState } from 'react';
 // Image import removed because it's not used in this file
 import ChartCard from '@/components/ChartCard';
 import OrganizationModal from '@/components/OrganizationModal';
@@ -75,11 +75,17 @@ interface CrisisDataDashboardProps {
     investmentTypes: string[];
     searchQuery: string; // Current input value
     appliedSearchQuery: string; // Applied search query (from URL)
+    selectedOrgKey: string; // Organization key from URL
+    selectedProjectKey: string; // Asset key from URL
     onDonorsChange: (values: string[]) => void;
     onTypesChange: (values: string[]) => void;
     onSearchChange: (value: string) => void;
     onSearchSubmit: () => void;
     onResetFilters: () => void;
+    onOpenOrganizationModal: (orgKey: string) => void;
+    onOpenProjectModal: (projectKey: string) => void;
+    onCloseOrganizationModal: () => void;
+    onCloseProjectModal: () => void;
     logoutButton?: React.ReactNode;
 }
 
@@ -210,11 +216,17 @@ const CrisisDataDashboard = ({
     investmentTypes,
     searchQuery,
     appliedSearchQuery,
+    selectedOrgKey,
+    selectedProjectKey,
     onDonorsChange,
     onTypesChange,
     onSearchChange,
     onSearchSubmit,
     onResetFilters,
+    onOpenOrganizationModal,
+    onOpenProjectModal,
+    onCloseOrganizationModal,
+    onCloseProjectModal,
     logoutButton
 }: CrisisDataDashboardProps) => {
     // UI state (not related to routing)
@@ -222,14 +234,16 @@ const CrisisDataDashboard = ({
     const [expandedCountries, setExpandedCountries] = useState<Set<string>>(new Set());
     const [donorSearchQuery, setDonorSearchQuery] = useState<string>('');
 
-    // Project modal state
-    const [selectedProject, setSelectedProject] = useState<{ project: ProjectData; organizationName: string } | null>(null);
+    // Modal loading states (project modal always URL-based now)
     const [projectModalLoading] = useState(false);
     const [shareSuccess, setShareSuccess] = useState(false);
     const [exportLoading, setExportLoading] = useState(false);
-    const [selectedOrganization, setSelectedOrganization] = useState<OrganizationWithProjects | null>(null);
+    
     // Load static organizations table for modal details
     const organizationsTable: Array<{ id: string; createdTime?: string; fields: Record<string, unknown> }> = organizationsTableRaw as Array<{ id: string; createdTime?: string; fields: Record<string, unknown> }>;
+
+    // Load nested data for modals
+    const [nestedOrganizations, setNestedOrganizations] = useState<any[]>([]);
 
     // Centralized data maps for modals
     const [projectNameMap, setProjectNameMap] = useState<Record<string, string>>({});
@@ -241,6 +255,7 @@ const CrisisDataDashboard = ({
         const loadModalData = async () => {
             try {
                 const nestedOrgs = await getNestedOrganizationsForModals();
+                setNestedOrganizations(nestedOrgs);
                 setProjectNameMap(buildProjectNameMap(nestedOrgs));
                 setOrgProjectsMap(buildOrgProjectsMap(nestedOrgs));
                 setOrgDonorCountriesMap(buildOrgDonorCountriesMap(nestedOrgs));
@@ -251,29 +266,71 @@ const CrisisDataDashboard = ({
         loadModalData();
     }, []);
 
-    // Listen for modal close events dispatched from client modal components (avoids passing functions as props)
+    // Listen for modal close events dispatched from client modal components (now using URL-based handlers)
     useEffect(() => {
-        const onCloseProject = () => setSelectedProject(null);
-        const onCloseOrg = () => setSelectedOrganization(null);
-        const onOpenOrg = (event: CustomEvent) => {
-            const org = event.detail?.organization;
-            if (org) {
-                // Close the project modal when opening an organization modal
-                setSelectedProject(null);
-                setSelectedOrganization(org);
-            }
-        };
-
-        window.addEventListener('closeProjectModal', onCloseProject as EventListener);
-        window.addEventListener('closeOrganizationModal', onCloseOrg as EventListener);
-        window.addEventListener('openOrganizationModal', onOpenOrg as EventListener);
+        // Event handlers for modal close events dispatched from within modals
+        window.addEventListener('closeProjectModal', onCloseProjectModal as EventListener);
+        window.addEventListener('closeOrganizationModal', onCloseOrganizationModal as EventListener);
 
         return () => {
-            window.removeEventListener('closeProjectModal', onCloseProject as EventListener);
-            window.removeEventListener('closeOrganizationModal', onCloseOrg as EventListener);
-            window.removeEventListener('openOrganizationModal', onOpenOrg as EventListener);
+            window.removeEventListener('closeProjectModal', onCloseProjectModal as EventListener);
+            window.removeEventListener('closeOrganizationModal', onCloseOrganizationModal as EventListener);
         };
-    }, []);
+    }, [onCloseProjectModal, onCloseOrganizationModal]);
+
+    // Find selected items based on URL parameters
+    const selectedProject = useMemo(() => {
+        if (!selectedProjectKey || !nestedOrganizations.length) return null;
+        
+        for (const org of nestedOrganizations) {
+            for (const project of org.projects || []) {
+                if (project.fields?.product_key === selectedProjectKey) {
+                    return {
+                        project: {
+                            id: project.id,
+                            projectName: project.fields?.['Project/Product Name'] || project.fields?.['Project Name'] || project.name || 'Unnamed Project',
+                            projectDescription: project.fields?.['Project Description'] || '',
+                            projectWebsite: project.fields?.['Project Website'] || '',
+                            investmentTypes: project.fields?.['Investment Type(s)'] || [],
+                            donorCountries: project.donor_countries || [],
+                            provider: org.name || 'Unknown Provider'
+                        } as ProjectData,
+                        organizationName: org.name || 'Unknown Organization'
+                    };
+                }
+            }
+        }
+        return null;
+    }, [selectedProjectKey, nestedOrganizations]);
+
+    const selectedOrganization = useMemo(() => {
+        if (!selectedOrgKey || !nestedOrganizations.length) return null;
+        
+        const nestedOrg = nestedOrganizations.find((org: any) => org.fields?.org_key === selectedOrgKey);
+        if (!nestedOrg) return null;
+
+        // Convert nested organization to OrganizationWithProjects format
+        const projectsData = (nestedOrg.projects || []).map((project: any) => ({
+            id: project.id,
+            projectName: project.fields?.['Project/Product Name'] || project.fields?.['Project Name'] || project.name || 'Unnamed Project',
+            projectDescription: project.fields?.['Project Description'] || '',
+            projectWebsite: project.fields?.['Project Website'] || '',
+            investmentTypes: project.fields?.['Investment Type(s)'] || [],
+            donorCountries: project.donor_countries || [],
+            provider: nestedOrg.name || 'Unknown Provider'
+        }));
+
+        return {
+            id: nestedOrg.id,
+            organizationName: nestedOrg.name || 'Unnamed Organization',
+            type: Array.isArray(nestedOrg.fields?.['Org Type']) 
+                ? nestedOrg.fields['Org Type'][0] 
+                : (nestedOrg.fields?.['Org Type'] || 'Unknown'),
+            donorCountries: nestedOrg.donor_countries || [],
+            projects: projectsData,
+            projectCount: projectsData.length
+        } as OrganizationWithProjects;
+    }, [selectedOrgKey, nestedOrganizations]);
 
     // Share functionality
     const handleShare = async () => {
@@ -881,7 +938,12 @@ const CrisisDataDashboard = ({
                                                                                     className="font-medium text-slate-900 cursor-pointer transition-colors hover:text-[var(--brand-primary)] text-sm sm:text-base"
                                                                                     onClick={e => {
                                                                                         e.stopPropagation();
-                                                                                        setSelectedOrganization(org);
+                                                                                        // Get org_key from nested organizations data
+                                                                                        const nestedOrg = nestedOrganizations.find(n => n.id === org.id);
+                                                                                        const orgKey = nestedOrg?.fields?.org_key;
+                                                                                        if (orgKey) {
+                                                                                            onOpenOrganizationModal(orgKey);
+                                                                                        }
                                                                                     }}
                                                                                 >
                                                                                     {org.organizationName}
@@ -1005,7 +1067,15 @@ const CrisisDataDashboard = ({
                                                                         <div
                                                                             key={project.id}
                                                                             className="p-3 bg-slate-50 rounded-lg border border-slate-100 hover:bg-slate-100 cursor-pointer transition-colors duration-200 animate-in fade-in group"
-                                                                            onClick={() => setSelectedProject({ project, organizationName: org.organizationName })}
+                                                                            onClick={() => {
+                                                                                // Get product_key from nested data
+                                                                                const nestedOrg = nestedOrganizations.find((n: any) => n.id === org.id);
+                                                                                const nestedProject = nestedOrg?.projects?.find((p: any) => p.id === project.id);
+                                                                                const projectKey = nestedProject?.fields?.product_key;
+                                                                                if (projectKey) {
+                                                                                    onOpenProjectModal(projectKey);
+                                                                                }
+                                                                            }}
                                                                         >
                                                                             <div className="mb-2">
                                                                                 <div className="flex flex-wrap items-center gap-2 gap-y-1">
