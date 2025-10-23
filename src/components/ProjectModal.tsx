@@ -1,6 +1,6 @@
 'use client';
 
-import { Building2, ExternalLink, X } from 'lucide-react';
+import { Building2, ExternalLink, Package, X } from 'lucide-react';
 import { useCallback, useEffect, useRef, useState } from 'react';
 import type { OrganizationWithProjects, ProjectData } from '../lib/data';
 
@@ -155,11 +155,14 @@ export default function ProjectModal({ project, allOrganizations, loading }: Pro
         }
 
         return (
-            <div className="flex items-start justify-between gap-8">
-                {/* Main title - Responsive sizing */}
-                <h2 className="text-lg sm:text-xl md:text-xl lg:text-2xl font-bold text-[#333333] leading-tight font-roboto">
-                    {project.projectName}
-                </h2>
+            <div className="flex items-center justify-between gap-8">
+                {/* Main title with icon - Responsive sizing */}
+                <div className="flex items-center gap-3">
+                    <Package className="h-6 w-6 sm:h-7 sm:w-7 text-[#333333] shrink-0" />
+                    <h2 className="text-lg sm:text-xl md:text-xl lg:text-2xl font-bold text-[#333333] leading-tight font-roboto">
+                        {project.projectName}
+                    </h2>
+                </div>
                 <CloseButton />
             </div>
         );
