@@ -184,7 +184,7 @@ const Badge = ({ text, variant }: BadgeProps) => {
     if (variant === 'beta') {
         return (
             <span
-                className="inline-flex items-center px-2 py-1 rounded-md text-xs font-semibold break-words"
+                className="inline-flex items-center px-1.5 py-0.5 sm:px-2 sm:py-1 rounded text-[10px] sm:text-xs font-semibold break-words"
                 style={{
                     backgroundColor: 'var(--badge-beta-bg)',
                     color: 'var(--badge-beta-text)'
@@ -196,7 +196,7 @@ const Badge = ({ text, variant }: BadgeProps) => {
     }
 
     return (
-        <span className={`inline-flex items-center px-2 py-1 rounded-md text-xs font-medium break-words ${variants[variant]}`}>
+        <span className={`inline-flex items-center px-1.5 py-0.5 sm:px-2 sm:py-1 rounded text-[10px] sm:text-xs font-medium break-words ${variants[variant]}`}>
             {text}
         </span>
     );
@@ -900,7 +900,7 @@ const CrisisDataDashboard = ({
                                                                                     });
                                                                                     const orgType = orgTableMatch?.fields['Org Type'] as string | undefined;
                                                                                     return orgType ? (
-                                                                                        <div className="inline-flex items-center px-1.5 py-px rounded text-[10px] sm:text-[11px] font-medium text-slate-500 bg-transparent border border-slate-200 whitespace-nowrap flex-shrink-0">
+                                                                                        <div className="hidden sm:inline-flex items-center px-1.5 py-px rounded text-[11px] font-medium text-slate-500 bg-transparent border border-slate-200 whitespace-nowrap flex-shrink-0">
                                                                                             {orgType}
                                                                                         </div>
                                                                                     ) : null;
@@ -920,11 +920,34 @@ const CrisisDataDashboard = ({
                                                                                             ...uniqueCountries.filter((c: string) => !combinedDonors.includes(c)).sort()
                                                                                         ];
                                                                                     }
-                                                                                    // Show fewer countries on mobile - using responsive display instead
-                                                                                    const maxCountries = 5;
-                                                                                    const countriesToShow = isCountriesExpanded
-                                                                                        ? sortedCountries
-                                                                                        : sortedCountries.slice(0, maxCountries);
+                                                                                    // Dynamic country limit based on available space
+                                                                                    const calculateCollapsedLimit = () => {
+                                                                                        // Estimate available space (characters) - mobile vs desktop
+                                                                                        const maxCharsMobile = 50;  // Approximate characters that fit on mobile
+                                                                                        const maxCharsDesktop = 100; // More space on desktop
+                                                                                        const maxChars = window.innerWidth < 640 ? maxCharsMobile : maxCharsDesktop;
+                                                                                        
+                                                                                        let totalChars = 0;
+                                                                                        let countriesToShow = [];
+                                                                                        
+                                                                                        for (const country of sortedCountries) {
+                                                                                            // Estimate badge size: country name + padding/margins (roughly +8 chars)
+                                                                                            const estimatedSize = country.length + 8;
+                                                                                            
+                                                                                            if (totalChars + estimatedSize <= maxChars) {
+                                                                                                countriesToShow.push(country);
+                                                                                                totalChars += estimatedSize;
+                                                                                            } else {
+                                                                                                break;
+                                                                                            }
+                                                                                        }
+                                                                                        
+                                                                                        // Ensure at least 1 country is shown, max 5 total
+                                                                                        return countriesToShow.length === 0 ? 1 : Math.min(countriesToShow.length, 5);
+                                                                                    };
+                                                                                    
+                                                                                    const maxCountriesToShowCollapsed = calculateCollapsedLimit();
+                                                                                    const countriesToShow = isCountriesExpanded ? sortedCountries : sortedCountries.slice(0, maxCountriesToShowCollapsed);
 
                                                                                     return (
                                                                                         <>
@@ -935,7 +958,7 @@ const CrisisDataDashboard = ({
                                                                                                     variant={combinedDonors.includes(country) ? 'blue' : 'slate'}
                                                                                                 />
                                                                                             ))}
-                                                                                            {sortedCountries.length > maxCountries && !isCountriesExpanded && (
+                                                                                            {sortedCountries.length > maxCountriesToShowCollapsed && !isCountriesExpanded && (
                                                                                                 <div
                                                                                                     onClick={(e) => {
                                                                                                         e.stopPropagation();
@@ -945,10 +968,10 @@ const CrisisDataDashboard = ({
                                                                                                     }}
                                                                                                     className="inline-flex items-center px-2 py-1 rounded-md text-xs font-medium bg-slate-000 text-slate-900 hover:bg-slate-100 transition-colors cursor-pointer"
                                                                                                 >
-                                                                                                    +{sortedCountries.length - maxCountries} {labels.filters.showMore}
+                                                                                                    +{sortedCountries.length - maxCountriesToShowCollapsed} {labels.filters.showMore}
                                                                                                 </div>
                                                                                             )}
-                                                                                            {isCountriesExpanded && sortedCountries.length > maxCountries && (
+                                                                                            {isCountriesExpanded && sortedCountries.length > maxCountriesToShowCollapsed && (
                                                                                                 <div
                                                                                                     onClick={(e) => {
                                                                                                         e.stopPropagation();
