@@ -606,7 +606,7 @@ const CrisisDataDashboard = ({
                                             </div>
 
                                             {/* Filter buttons container */}
-                                            <div className="flex flex-col sm:flex-row gap-3 sm:gap-3 order-2 sm:order-2">
+                                            <div className="flex flex-col sm:flex-row gap-5 sm:gap-3 order-2 sm:order-2">
                                                 {/* Donor Countries Multi-Select */}
                                                 <DropdownMenu>
                                                     <DropdownMenuTrigger asChild>
