@@ -1,8 +1,9 @@
 'use client';
 
-import { Building2, ExternalLink, Package, X } from 'lucide-react';
+import { Building2, ExternalLink, Package } from 'lucide-react';
 import { useCallback, useEffect, useRef, useState } from 'react';
 import type { OrganizationWithProjects, ProjectData } from '../lib/data';
+import CloseButton from './CloseButton';
 
 interface ProjectModalProps {
     project: ProjectData | null;
@@ -109,24 +110,7 @@ export default function ProjectModal({ project, allOrganizations, loading }: Pro
         }
     };
 
-    // Reusable close button component
-    const CloseButton = () => (
-        <button
-            onClick={handleClose}
-            className="
-        flex items-center justify-center gap-2 h-12 w-12 sm:h-10 sm:w-auto sm:px-4 rounded-full sm:rounded-lg
-        transition-all duration-200 ease-out touch-manipulation
-        text-white bg-slate-600 hover:bg-slate-700 sm:text-gray-600 sm:bg-gray-200 sm:hover:bg-gray-400 sm:hover:text-gray-100 cursor-pointer
-        focus:outline-none focus:bg-slate-700 sm:focus:bg-gray-400 sm:focus:text-gray-100 shrink-0 ml-4
-        sm:text-sm font-medium shadow-lg sm:shadow-none
-      "
-            aria-label="Close modal"
-            title="Close modal"
-        >
-            <X className="h-5 w-5 sm:h-4 sm:w-4" />
-            <span className="hidden sm:inline">Close</span>
-        </button>
-    );
+
 
     // Reusable subheader component - Major sections - smaller than main title
     const SubHeader = ({ children }: { children: React.ReactNode }) => (
@@ -140,7 +124,7 @@ export default function ProjectModal({ project, allOrganizations, loading }: Pro
             return (
                 <div className="flex items-center justify-between">
                     <div className="h-6 bg-gray-200 rounded w-48 animate-pulse flex-1 mr-4"></div>
-                    <CloseButton />
+                    <CloseButton onClick={handleClose} />
                 </div>
             );
         }
@@ -149,7 +133,7 @@ export default function ProjectModal({ project, allOrganizations, loading }: Pro
             return (
                 <div className="flex items-center justify-between">
                     <h2 className="text-lg sm:text-xl font-bold text-[#333333] flex-1 pr-4 font-roboto">Project Not Found</h2>
-                    <CloseButton />
+                    <CloseButton onClick={handleClose} />
                 </div>
             );
         }
@@ -163,7 +147,7 @@ export default function ProjectModal({ project, allOrganizations, loading }: Pro
                         {project.projectName}
                     </h2>
                 </div>
-                <CloseButton />
+                <CloseButton onClick={handleClose} />
             </div>
         );
     };
