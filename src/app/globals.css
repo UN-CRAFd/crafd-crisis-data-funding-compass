@@ -120,6 +120,12 @@
 --badge-other-text: #4d479c;    /* indigo-800: dark readable text */
 --badge-other-icon: #4338ca;  
 
+  /* Darker badge variants for better visibility */
+  --badge-blue-bg: #B8E0F5;        /* darker version of brand-bg-light */
+  --badge-blue-text: #9B6D0A;      /* darker version of brand-primary-dark */
+  --badge-slate-bg: #e2e8f0;       /* slate-200: darker than slate-100 */
+  --badge-slate-text: #475569;     /* slate-600: darker than current slate-600 */  
+
   /* Disable all shadows completely */
   --shadow: none !important;
   --shadow-sm: none !important;
