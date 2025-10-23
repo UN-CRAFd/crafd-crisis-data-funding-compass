@@ -90,11 +90,11 @@ interface SectionHeaderProps {
 }
 
 const SectionHeader = ({ icon, title }: SectionHeaderProps) => (
-    <div className={STYLES.sectionHeader}>
-        <span className="h-6 w-6 flex items-center justify-center">
+    <div className="flex items-center gap-2 text-base sm:text-lg font-qanelas-subtitle font-black text-slate-800 mb-0 mt-0 uppercase">
+        <span className="h-5 w-5 sm:h-6 sm:w-6 flex items-center justify-center">
             {icon}
         </span>
-        {title}
+        <span className="leading-tight">{title}</span>
     </div>
 );
 
@@ -128,10 +128,10 @@ const StatCard = React.memo(function StatCard({ icon, title, value, label, color
                 </CardDescription>
             </CardHeader>
             <CardContent className="pt-0">
-                <div className={`${STYLES.statValue} ${colors.value}`}>
+                <div className={`text-4xl sm:text-5xl font-bold font-mono leading-none tabular-nums ${colors.value}`}>
                     {value}
                 </div>
-                <div className={`${STYLES.statLabel} ${colors.label}`}>{label}</div>
+                <div className={`text-sm sm:text-base font-medium mt-1 ${colors.label}`}>{label}</div>
             </CardContent>
         </Card>
     );
@@ -184,7 +184,7 @@ const Badge = ({ text, variant }: BadgeProps) => {
     if (variant === 'beta') {
         return (
             <span
-                className={`${STYLES.badgeBase} font-semibold`}
+                className="inline-flex items-center px-2 py-1 rounded-md text-xs font-semibold break-words"
                 style={{
                     backgroundColor: 'var(--badge-beta-bg)',
                     color: 'var(--badge-beta-text)'
@@ -196,7 +196,7 @@ const Badge = ({ text, variant }: BadgeProps) => {
     }
 
     return (
-        <span className={`${STYLES.badgeBase} ${variants[variant]}`}>
+        <span className={`inline-flex items-center px-2 py-1 rounded-md text-xs font-medium break-words ${variants[variant]}`}>
             {text}
         </span>
     );
@@ -452,10 +452,10 @@ const CrisisDataDashboard = ({
         <div className="min-h-screen bg-slate-50">
             {/* Header Section - Fixed */}
             <div className="fixed top-0 left-0 right-0 z-50 bg-white border-b border-slate-200 shadow-sm">
-                <div className="max-w-[82rem] mx-auto px-8 py-4">
-                    <div className="flex items-start justify-between mb-0">
-                        <div className="flex items-center gap-3">
-                            <h1 className="text-3xl bg-gradient-to-r from-slate-800 to-slate-600 bg-clip-text text-transparent">
+                <div className="max-w-[82rem] mx-auto px-4 sm:px-6 lg:px-8 py-3 sm:py-4">
+                    <div className="flex flex-col sm:flex-row items-start sm:items-start justify-between gap-3 sm:gap-0 mb-0">
+                        <div className="flex flex-col sm:flex-row items-start sm:items-center gap-2 sm:gap-3 w-full sm:w-auto">
+                            <h1 className="text-2xl sm:text-3xl bg-gradient-to-r from-slate-800 to-slate-600 bg-clip-text text-transparent">
                                 <span className="qanelas-title">{labels.header.title}</span> <span className="font-roboto">{labels.header.subtitle}</span>
                             </h1>
                             <TooltipProvider>
@@ -483,16 +483,17 @@ const CrisisDataDashboard = ({
                                 </TooltipUI>
                             </TooltipProvider>
                         </div>
-                        <div className="flex gap-2">
+                        <div className="flex flex-wrap gap-2 w-full sm:w-auto justify-start sm:justify-end">
                             <Button
                                 variant="outline"
                                 size="sm"
                                 onClick={() => window.open(process.env.NEXT_PUBLIC_FEEDBACK_FORM_URL)}
-                                className="bg-slate-50/50 border-slate-200 hover:var(--brand-bg-light) hover:border-[var(--brand-primary)] hover:text-[var(--brand-primary)]"
+                                className="bg-slate-50/50 border-slate-200 hover:var(--brand-bg-light) hover:border-[var(--brand-primary)] hover:text-[var(--brand-primary)] text-xs sm:text-sm"
                                 title={labels.header.feedbackTooltip}
                             >
-                                <MessageCircle className="w-4 h-4 mr-2" />
-                                {labels.header.feedbackButton}
+                                <MessageCircle className="w-4 h-4 mr-1 sm:mr-2" />
+                                <span className="hidden sm:inline">{labels.header.feedbackButton}</span>
+                                <span className="sm:hidden">Feedback</span>
                             </Button>
                             <Button
                                 variant="outline"
@@ -509,14 +510,15 @@ const CrisisDataDashboard = ({
                                 variant="outline"
                                 size="sm"
                                 onClick={handleShare}
-                                className={`bg-slate-50/50 border-slate-200 hover:var(--brand-bg-light) hover:border-[var(--brand-primary)] hover:text-[var(--brand-primary)] ${shareSuccess
+                                className={`bg-slate-50/50 border-slate-200 hover:var(--brand-bg-light) hover:border-[var(--brand-primary)] hover:text-[var(--brand-primary)] text-xs sm:text-sm ${shareSuccess
                                     ? 'bg-green-50 border-green-200 text-green-700'
                                     : 'hover:var(--brand-bg-light)'
                                     }`}
                                 title={labels.ui.copyToClipboard}
                             >
-                                <Share2 className="w-7 h-4 mr-2" />
-                                {shareSuccess ? labels.header.shareButtonSuccess : labels.header.shareButton}
+                                <Share2 className="w-4 h-4 mr-1 sm:mr-2" />
+                                <span className="hidden sm:inline">{shareSuccess ? labels.header.shareButtonSuccess : labels.header.shareButton}</span>
+                                <span className="sm:hidden">{shareSuccess ? 'Copied!' : 'Share'}</span>
                             </Button>
                             {logoutButton}
                         </div>
@@ -525,11 +527,11 @@ const CrisisDataDashboard = ({
             </div>
 
             {/* Main Content - Add top padding to account for fixed header */}
-            <div className="max-w-[82rem] mx-auto px-8 py-6 pt-24">
-                <div className="space-y-[var(--spacing-section)]">
+            <div className="max-w-[82rem] mx-auto px-4 sm:px-6 lg:px-8 py-4 sm:py-6 pt-20 sm:pt-24">
+                <div className="space-y-4 sm:space-y-[var(--spacing-section)]">
 
                     {/* Statistics Cards */}
-                    <div className="grid grid-cols-1 md:grid-cols-3 gap-[var(--spacing-section)]">
+                    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-[var(--spacing-section)]">
 
                         <StatCard
                             icon={<Globe style={{ color: 'var(--brand-primary)' }} />}
@@ -561,10 +563,10 @@ const CrisisDataDashboard = ({
                     </div>
 
                     {/* Main Layout - Two Columns */}
-                    <div className="grid grid-cols-1 lg:grid-cols-3 gap-[var(--spacing-section)]">
+                    <div className="grid grid-cols-1 xl:grid-cols-3 gap-4 sm:gap-[var(--spacing-section)]">
 
                         {/* Left Column - Filters and Table */}
-                        <div className="lg:col-span-2 space-y-[var(--spacing-section)]">
+                        <div className="xl:col-span-2 space-y-4 sm:space-y-[var(--spacing-section)]">
                             {/* Organizations Table Section */}
                             <div>
                                 <Card className={STYLES.cardGlass}>
@@ -583,10 +585,10 @@ const CrisisDataDashboard = ({
                                     </CardHeader>
 
                                     {/* Filters */}
-                                    <CardContent className="p-6 h-4">
-                                        <div className="flex items-center gap-3">
+                                    <CardContent className="p-4 sm:p-6 h-4">
+                                        <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-3">
                                             {/* Modern Search Bar */}
-                                            <div className="relative flex-1">
+                                            <div className="relative flex-1 order-1 sm:order-1">
                                                 <Search className="absolute left-3 top-1/2 -translate-y-1/2 h-4 w-4 text-slate-400" />
                                                 <Input
                                                     id="search"
@@ -603,30 +605,32 @@ const CrisisDataDashboard = ({
                                                 />
                                             </div>
 
-                                            {/* Donor Countries Multi-Select */}
-                                            <DropdownMenu>
-                                                <DropdownMenuTrigger asChild>
-                                                    <Button
-                                                        variant="outline"
-                                                        className={`h-10 w-52 justify-between font-medium transition-all ${combinedDonors.length > 0
-                                                            ? 'border-[var(--brand-primary)] bg-[var(--brand-bg-lighter)] text-[var(--brand-primary)] hover:bg-[var(--brand-bg-light)]'
-                                                            : 'bg-slate-50/50 border-slate-200 hover:bg-white hover:border-slate-300'
-                                                            }`}
-                                                    >
-                                                        <div className="flex items-center gap-2 min-w-0 flex-1">
-                                                            <Globe className="h-4 w-4 shrink-0" />
-                                                            <span className="truncate">
-                                                                {combinedDonors.length === 0
-                                                                    ? labels.filters.donorPlaceholder
-                                                                    : combinedDonors.length === 1
-                                                                        ? combinedDonors[0]
-                                                                        : `${combinedDonors.length} ${labels.filterDescription.donors}`
-                                                                }
-                                                            </span>
-                                                        </div>
-                                                        <ChevronDown className="ml-2 h-4 w-4 opacity-50 shrink-0" />
-                                                    </Button>
-                                                </DropdownMenuTrigger>
+                                            {/* Filter buttons container */}
+                                            <div className="flex flex-col sm:flex-row gap-2 sm:gap-3 order-2 sm:order-2">
+                                                {/* Donor Countries Multi-Select */}
+                                                <DropdownMenu>
+                                                    <DropdownMenuTrigger asChild>
+                                                        <Button
+                                                            variant="outline"
+                                                            className={`h-10 w-full sm:w-52 justify-between font-medium transition-all ${combinedDonors.length > 0
+                                                                ? 'border-[var(--brand-primary)] bg-[var(--brand-bg-lighter)] text-[var(--brand-primary)] hover:bg-[var(--brand-bg-light)]'
+                                                                : 'bg-slate-50/50 border-slate-200 hover:bg-white hover:border-slate-300'
+                                                                }`}
+                                                        >
+                                                            <div className="flex items-center gap-2 min-w-0 flex-1">
+                                                                <Globe className="h-4 w-4 shrink-0" />
+                                                                <span className="truncate">
+                                                                    {combinedDonors.length === 0
+                                                                        ? labels.filters.donorPlaceholder
+                                                                        : combinedDonors.length === 1
+                                                                            ? combinedDonors[0]
+                                                                            : `${combinedDonors.length} ${labels.filterDescription.donors}`
+                                                                    }
+                                                                </span>
+                                                            </div>
+                                                            <ChevronDown className="ml-2 h-4 w-4 opacity-50 shrink-0" />
+                                                        </Button>
+                                                    </DropdownMenuTrigger>
                                                 <DropdownMenuContent align="start"
                                                     side="bottom"
                                                     sideOffset={4}
@@ -684,119 +688,121 @@ const CrisisDataDashboard = ({
                                                 </DropdownMenuContent>
                                             </DropdownMenu>
 
-                                            {/* Investment Types Multi-Select */}
-                                            <DropdownMenu>
-                                                <DropdownMenuTrigger asChild>
-                                                    <Button
-                                                        variant="outline"
-                                                        className={`h-10 w-52 justify-between font-medium transition-all ${investmentTypes.length > 0
-                                                            ? 'border-[var(--brand-primary)] bg-[var(--brand-bg-lighter)] text-[var(--brand-primary)] hover:bg-[var(--brand-bg-light)]'
-                                                            : 'bg-slate-50/50 border-slate-200 hover:bg-white hover:border-slate-300'
-                                                            }`}
-                                                    >
-                                                        <div className="flex items-center gap-2 min-w-0 flex-1">
-                                                            <DatabaseBackup className="h-4 w-4 shrink-0" />
-                                                            <span className="truncate">
-                                                                {investmentTypes.length === 0
-                                                                    ? labels.filters.typePlaceholder
-                                                                    : investmentTypes.length === 1
-                                                                        ? (() => {
-                                                                            const type = investmentTypes[0];
-                                                                            const typeKey = Object.keys(labels.investmentTypes).find(key =>
-                                                                                labels.investmentTypes[key as keyof typeof labels.investmentTypes].toLowerCase().includes(type.toLowerCase()) ||
-                                                                                type.toLowerCase().includes(key.toLowerCase())
-                                                                            );
-                                                                            return typeKey
-                                                                                ? labels.investmentTypes[typeKey as keyof typeof labels.investmentTypes]
-                                                                                : type;
-                                                                        })()
-                                                                        : `${investmentTypes.length} ${labels.filterDescription.types}`
-                                                                }
-                                                            </span>
-                                                        </div>
-                                                        <ChevronDown className="ml-2 h-4 w-4 opacity-50 shrink-0" />
-                                                    </Button>
-                                                </DropdownMenuTrigger>
-                                                <DropdownMenuContent
-                                                    align="start"
-                                                    side="bottom"
-                                                    sideOffset={4}
-                                                    className="w-64 max-h-[300px] overflow-y-auto bg-white border border-slate-200 shadow-lg"
-                                                    onCloseAutoFocus={(e) => e.preventDefault()}
-                                                >
-                                                    {investmentTypes.length > 0 && (
-                                                        <>
-                                                            <DropdownMenuLabel className="text-xs font-semibold text-[var(--brand-primary)] flex items-center gap-1.5">
-                                                                <Filter className="h-3 w-3" />
-                                                                {investmentTypes.length} {labels.filters.selected}
-                                                            </DropdownMenuLabel>
-                                                            <DropdownMenuSeparator />
-                                                        </>
-                                                    )}
-                                                    {availableInvestmentTypes.map((type) => {
-                                                        // Find the label from labels.json
-                                                        const typeKey = Object.keys(labels.investmentTypes).find(key =>
-                                                            labels.investmentTypes[key as keyof typeof labels.investmentTypes].toLowerCase().includes(type.toLowerCase()) ||
-                                                            type.toLowerCase().includes(key.toLowerCase())
-                                                        );
-                                                        const displayName = typeKey
-                                                            ? labels.investmentTypes[typeKey as keyof typeof labels.investmentTypes]
-                                                            : type;
-
-                                                        // Normalize comparison: check if any investmentType matches this type (case-insensitive)
-                                                        const isChecked = investmentTypes.some(selected =>
-                                                            selected.toLowerCase().trim() === type.toLowerCase().trim()
-                                                        );
-
-                                                        return (
-                                                            <DropdownMenuCheckboxItem
-                                                                key={type}
-                                                                checked={isChecked}
-                                                                onCheckedChange={(checked) => {
-                                                                    if (checked) {
-                                                                        // Add only if not already present (case-insensitive check)
-                                                                        const alreadyExists = investmentTypes.some(t =>
-                                                                            t.toLowerCase().trim() === type.toLowerCase().trim()
-                                                                        );
-                                                                        if (!alreadyExists) {
-                                                                            onTypesChange([...investmentTypes, type]);
-                                                                        }
-                                                                    } else {
-                                                                        // Remove all case-insensitive matches
-                                                                        onTypesChange(investmentTypes.filter(t =>
-                                                                            t.toLowerCase().trim() !== type.toLowerCase().trim()
-                                                                        ));
+                                                {/* Investment Types Multi-Select */}
+                                                <DropdownMenu>
+                                                    <DropdownMenuTrigger asChild>
+                                                        <Button
+                                                            variant="outline"
+                                                            className={`h-10 w-full sm:w-52 justify-between font-medium transition-all ${investmentTypes.length > 0
+                                                                ? 'border-[var(--brand-primary)] bg-[var(--brand-bg-lighter)] text-[var(--brand-primary)] hover:bg-[var(--brand-bg-light)]'
+                                                                : 'bg-slate-50/50 border-slate-200 hover:bg-white hover:border-slate-300'
+                                                                }`}
+                                                        >
+                                                            <div className="flex items-center gap-2 min-w-0 flex-1">
+                                                                <DatabaseBackup className="h-4 w-4 shrink-0" />
+                                                                <span className="truncate">
+                                                                    {investmentTypes.length === 0
+                                                                        ? labels.filters.typePlaceholder
+                                                                        : investmentTypes.length === 1
+                                                                            ? (() => {
+                                                                                const type = investmentTypes[0];
+                                                                                const typeKey = Object.keys(labels.investmentTypes).find(key =>
+                                                                                    labels.investmentTypes[key as keyof typeof labels.investmentTypes].toLowerCase().includes(type.toLowerCase()) ||
+                                                                                    type.toLowerCase().includes(key.toLowerCase())
+                                                                                );
+                                                                                return typeKey
+                                                                                    ? labels.investmentTypes[typeKey as keyof typeof labels.investmentTypes]
+                                                                                    : type;
+                                                                            })()
+                                                                            : `${investmentTypes.length} ${labels.filterDescription.types}`
                                                                     }
-                                                                }}
-                                                                onSelect={(e) => e.preventDefault()}
-                                                                className="cursor-pointer"
-                                                            >
-                                                                {displayName}
-                                                            </DropdownMenuCheckboxItem>
-                                                        );
-                                                    })}
-                                                </DropdownMenuContent>
-                                            </DropdownMenu>
+                                                                </span>
+                                                            </div>
+                                                            <ChevronDown className="ml-2 h-4 w-4 opacity-50 shrink-0" />
+                                                        </Button>
+                                                    </DropdownMenuTrigger>
+                                                    <DropdownMenuContent
+                                                        align="start"
+                                                        side="bottom"
+                                                        sideOffset={4}
+                                                        className="w-64 max-h-[300px] overflow-y-auto bg-white border border-slate-200 shadow-lg"
+                                                        onCloseAutoFocus={(e) => e.preventDefault()}
+                                                    >
+                                                        {investmentTypes.length > 0 && (
+                                                            <>
+                                                                <DropdownMenuLabel className="text-xs font-semibold text-[var(--brand-primary)] flex items-center gap-1.5">
+                                                                    <Filter className="h-3 w-3" />
+                                                                    {investmentTypes.length} {labels.filters.selected}
+                                                                </DropdownMenuLabel>
+                                                                <DropdownMenuSeparator />
+                                                            </>
+                                                        )}
+                                                        {availableInvestmentTypes.map((type) => {
+                                                            // Find the label from labels.json
+                                                            const typeKey = Object.keys(labels.investmentTypes).find(key =>
+                                                                labels.investmentTypes[key as keyof typeof labels.investmentTypes].toLowerCase().includes(type.toLowerCase()) ||
+                                                                type.toLowerCase().includes(key.toLowerCase())
+                                                            );
+                                                            const displayName = typeKey
+                                                                ? labels.investmentTypes[typeKey as keyof typeof labels.investmentTypes]
+                                                                : type;
 
-                                            {/* Reset Filters Button */}
-                                            <Button
-                                                variant="outline"
-                                                onClick={onResetFilters}
-                                                disabled={!(combinedDonors.length > 0 || investmentTypes.length > 0 || appliedSearchQuery)}
-                                                className={`h-10 px-4 font-medium transition-all ${combinedDonors.length > 0 || investmentTypes.length > 0 || appliedSearchQuery
-                                                    ? 'border-slate-300 bg-slate-100 text-slate-700 hover:bg-slate-200 hover:border-slate-300'
-                                                    : 'bg-slate-50/50 border-slate-200 text-slate-400 hover:bg-slate-100 hover:border-slate-300'
-                                                    }`}
-                                                title={labels.ui.resetFilters}
-                                            >
-                                                <RotateCcw className="w-4 h-4" />
-                                            </Button>
+                                                            // Normalize comparison: check if any investmentType matches this type (case-insensitive)
+                                                            const isChecked = investmentTypes.some(selected =>
+                                                                selected.toLowerCase().trim() === type.toLowerCase().trim()
+                                                            );
+
+                                                            return (
+                                                                <DropdownMenuCheckboxItem
+                                                                    key={type}
+                                                                    checked={isChecked}
+                                                                    onCheckedChange={(checked) => {
+                                                                        if (checked) {
+                                                                            // Add only if not already present (case-insensitive check)
+                                                                            const alreadyExists = investmentTypes.some(t =>
+                                                                                t.toLowerCase().trim() === type.toLowerCase().trim()
+                                                                            );
+                                                                            if (!alreadyExists) {
+                                                                                onTypesChange([...investmentTypes, type]);
+                                                                            }
+                                                                        } else {
+                                                                            // Remove all case-insensitive matches
+                                                                            onTypesChange(investmentTypes.filter(t =>
+                                                                                t.toLowerCase().trim() !== type.toLowerCase().trim()
+                                                                            ));
+                                                                        }
+                                                                    }}
+                                                                    onSelect={(e) => e.preventDefault()}
+                                                                    className="cursor-pointer"
+                                                                >
+                                                                    {displayName}
+                                                                </DropdownMenuCheckboxItem>
+                                                            );
+                                                        })}
+                                                    </DropdownMenuContent>
+                                                </DropdownMenu>
+
+                                                {/* Reset Filters Button */}
+                                                <Button
+                                                    variant="outline"
+                                                    onClick={onResetFilters}
+                                                    disabled={!(combinedDonors.length > 0 || investmentTypes.length > 0 || appliedSearchQuery)}
+                                                    className={`h-10 w-full sm:w-auto px-4 font-medium transition-all ${combinedDonors.length > 0 || investmentTypes.length > 0 || appliedSearchQuery
+                                                        ? 'border-slate-300 bg-slate-100 text-slate-700 hover:bg-slate-200 hover:border-slate-300'
+                                                        : 'bg-slate-50/50 border-slate-200 text-slate-400 hover:bg-slate-100 hover:border-slate-300'
+                                                        }`}
+                                                    title={labels.ui.resetFilters}
+                                                >
+                                                    <RotateCcw className="w-4 h-4" />
+                                                    <span className="ml-2 sm:hidden">Reset</span>
+                                                </Button>
+                                            </div>
                                         </div>
                                     </CardContent>
-                                    <p className="text-sm text-slate-600 mt-1 ml-7">
+                                    <p className="text-xs sm:text-sm text-slate-600 mt-1 ml-4 sm:ml-7 px-2 sm:px-0">
                                         {getFilterDescription()}
                                     </p>
-                                    <CardContent>
+                                    <CardContent className="px-4 sm:px-6">
                                         <div className="space-y-2">
                                             {organizationsWithProjects
                                                 .sort((a, b) => a.organizationName.localeCompare(b.organizationName))
@@ -823,9 +829,9 @@ const CrisisDataDashboard = ({
                                                                 className="w-full"
                                                                 disabled={!hasProjects}
                                                             >
-                                                                <div className={STYLES.orgRow}>
-                                                                    <div className="flex items-center space-x-3 mr-6">
-                                                                        <div className="w-4 h-4 flex-shrink-0"> {/* Fixed size container */}
+                                                                <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between p-3 sm:p-4 hover:bg-slate-50/70 rounded-lg border border-slate-200 bg-slate-50/30 animate-in fade-in gap-3 sm:gap-0">
+                                                                    <div className="flex items-start space-x-3 flex-1">
+                                                                        <div className="w-4 h-4 flex-shrink-0 mt-0.5"> {/* Fixed size container with top margin for alignment */}
                                                                             {hasProjects ? (
                                                                                 isExpanded ? (
                                                                                     <ChevronDown className="h-4 w-4 text-slate-500" />
@@ -836,10 +842,10 @@ const CrisisDataDashboard = ({
                                                                                 <div className="h-4 w-4 rounded-full bg-slate-200" title="No assets to expand" />
                                                                             )}
                                                                         </div>
-                                                                        <div className="text-left">
-                                                                            <div className="flex flex-wrap items-baseline gap-2">
+                                                                        <div className="text-left flex-1 min-w-0">
+                                                                            <div className="flex flex-col sm:flex-row sm:flex-wrap sm:items-baseline gap-1 sm:gap-2">
                                                                                 <h3
-                                                                                    className="font-medium text-slate-900 cursor-pointer transition-colors hover:text-[var(--brand-primary)]"
+                                                                                    className="font-medium text-slate-900 cursor-pointer transition-colors hover:text-[var(--brand-primary)] text-sm sm:text-base"
                                                                                     onClick={e => {
                                                                                         e.stopPropagation();
                                                                                         setSelectedOrganization(org);
@@ -859,13 +865,13 @@ const CrisisDataDashboard = ({
                                                                                     });
                                                                                     const orgType = orgTableMatch?.fields['Org Type'] as string | undefined;
                                                                                     return orgType ? (
-                                                                                        <div className="inline-flex items-center px-1.5 py-px rounded text-[11px] font-medium text-slate-500 bg-transparent border border-slate-200 whitespace-nowrap flex-shrink-0">
+                                                                                        <div className="inline-flex items-center px-1.5 py-px rounded text-[10px] sm:text-[11px] font-medium text-slate-500 bg-transparent border border-slate-200 whitespace-nowrap flex-shrink-0">
                                                                                             {orgType}
                                                                                         </div>
                                                                                     ) : null;
                                                                                 })()}
                                                                             </div>
-                                                                            <div className="flex flex-wrap gap-1 mt-2 max-w-[600px] mr-4">
+                                                                            <div className="flex flex-wrap gap-1 mt-2 max-w-full">
                                                                                 {(() => {
                                                                                     const isCountriesExpanded = expandedCountries.has(org.id);
 
@@ -879,9 +885,11 @@ const CrisisDataDashboard = ({
                                                                                             ...uniqueCountries.filter((c: string) => !combinedDonors.includes(c)).sort()
                                                                                         ];
                                                                                     }
+                                                                                    // Show fewer countries on mobile - using responsive display instead
+                                                                                    const maxCountries = 5;
                                                                                     const countriesToShow = isCountriesExpanded
                                                                                         ? sortedCountries
-                                                                                        : sortedCountries.slice(0, 5);
+                                                                                        : sortedCountries.slice(0, maxCountries);
 
                                                                                     return (
                                                                                         <>
@@ -892,7 +900,7 @@ const CrisisDataDashboard = ({
                                                                                                     variant={combinedDonors.includes(country) ? 'blue' : 'slate'}
                                                                                                 />
                                                                                             ))}
-                                                                                            {sortedCountries.length > 5 && !isCountriesExpanded && (
+                                                                                            {sortedCountries.length > maxCountries && !isCountriesExpanded && (
                                                                                                 <div
                                                                                                     onClick={(e) => {
                                                                                                         e.stopPropagation();
@@ -902,10 +910,10 @@ const CrisisDataDashboard = ({
                                                                                                     }}
                                                                                                     className="inline-flex items-center px-2 py-1 rounded-md text-xs font-medium bg-slate-000 text-slate-900 hover:bg-slate-100 transition-colors cursor-pointer"
                                                                                                 >
-                                                                                                    +{sortedCountries.length - 5} {labels.filters.showMore}
+                                                                                                    +{sortedCountries.length - maxCountries} {labels.filters.showMore}
                                                                                                 </div>
                                                                                             )}
-                                                                                            {isCountriesExpanded && sortedCountries.length > 5 && (
+                                                                                            {isCountriesExpanded && sortedCountries.length > maxCountries && (
                                                                                                 <div
                                                                                                     onClick={(e) => {
                                                                                                         e.stopPropagation();
@@ -924,11 +932,11 @@ const CrisisDataDashboard = ({
                                                                             </div>
                                                                         </div>
                                                                     </div>
-                                                                    <div className="text-sm text-slate-600 whitespace-nowrap mt-8">
+                                                                    <div className="text-xs sm:text-sm text-slate-600 whitespace-nowrap self-start sm:self-center">
                                                                         {org.projects.length > 0 ? (
                                                                             isExpanded ?
-                                                                                `Showing ${org.projects.length} Asset${org.projects.length === 1 ? '' : 's'}      ` :
-                                                                                `Expand to see ${org.projects.length} Asset${org.projects.length === 1 ? '' : 's'}`
+                                                                                `Showing ${org.projects.length} Asset${org.projects.length === 1 ? '' : 's'}` :
+                                                                                `${org.projects.length} Asset${org.projects.length === 1 ? '' : 's'}`
                                                                         ) : (
                                                                             `${org.projects.length} Asset${org.projects.length === 1 ? '' : 's'}`
                                                                         )}
@@ -936,11 +944,11 @@ const CrisisDataDashboard = ({
                                                                 </div>
                                                             </CollapsibleTrigger>
                                                             <CollapsibleContent>
-                                                                <div className="mt-2 ml-7 space-y-2">
+                                                                <div className="mt-2 ml-4 sm:ml-7 space-y-2">
                                                                     {org.projects.map((project: ProjectData) => (
                                                                         <div
                                                                             key={project.id}
-                                                                            className={STYLES.projectItem}
+                                                                            className="p-3 bg-slate-50 rounded-lg border border-slate-100 hover:bg-slate-100 cursor-pointer transition-colors duration-200 animate-in fade-in group"
                                                                             onClick={() => setSelectedProject({ project, organizationName: org.organizationName })}
                                                                         >
                                                                             <div className="mb-2">
@@ -982,7 +990,7 @@ const CrisisDataDashboard = ({
                         </div>
 
                         {/* Right Column - Charts */}
-                        <div className="space-y-[var(--spacing-section)]">
+                        <div className="space-y-4 sm:space-y-[var(--spacing-section)]">
 
                             <ChartCard
                                 title={labels.sections.organizationTypes}
@@ -1003,12 +1011,12 @@ const CrisisDataDashboard = ({
             </div>
 
             {/* Impressum Footer */}
-            <footer className="bg-slate-100 border-t border-slate-200 mt-16">
-                <div className="max-w-[82rem] mx-auto px-8 py-6">
-                    <div className="flex items-center justify-between">
+            <footer className="bg-slate-100 border-t border-slate-200 mt-8 sm:mt-16">
+                <div className="max-w-[82rem] mx-auto px-4 sm:px-6 lg:px-8 py-4 sm:py-6">
+                    <div className="flex flex-col sm:flex-row items-center justify-center sm:justify-between gap-2 sm:gap-0">
 
                         <div className="text-center flex-1">
-                            <p className="text-sm text-slate-600">
+                            <p className="text-xs sm:text-sm text-slate-600">
                                 {labels.footer.dataGatheredBy}{' '}
                                 <a
                                     href="https://crafd.io"
