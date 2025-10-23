@@ -1,3 +1,5 @@
+import { GoogleAnalytics } from '@next/third-parties/google'
+
 import ErrorBoundary from "@/components/ErrorBoundary";
 import type { Metadata } from "next";
 // import { Suspense } from "react";
@@ -28,6 +30,8 @@ export default function RootLayout({
 
 
             </body>
+            <GoogleAnalytics gaId="G-2TYZQHBWML" />
+
         </html>
     )
 }
