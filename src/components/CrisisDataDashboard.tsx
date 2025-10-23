@@ -819,12 +819,12 @@ const CrisisDataDashboard = ({
                                                                 setExpandedOrgs(newExpanded);
                                                             }}
                                                         >
-                                                            <CollapsibleTrigger 
-                                                                className="w-full" 
+                                                            <CollapsibleTrigger
+                                                                className="w-full"
                                                                 disabled={!hasProjects}
                                                             >
                                                                 <div className={STYLES.orgRow}>
-                                                                    <div className="flex items-center space-x-3">
+                                                                    <div className="flex items-center space-x-3 mr-6">
                                                                         <div className="w-4 h-4 flex-shrink-0"> {/* Fixed size container */}
                                                                             {hasProjects ? (
                                                                                 isExpanded ? (
@@ -837,7 +837,7 @@ const CrisisDataDashboard = ({
                                                                             )}
                                                                         </div>
                                                                         <div className="text-left">
-                                                                            <div className="flex items-center gap-2">
+                                                                            <div className="flex flex-wrap items-baseline gap-2">
                                                                                 <h3
                                                                                     className="font-medium text-slate-900 cursor-pointer transition-colors hover:text-[var(--brand-primary)]"
                                                                                     onClick={e => {
@@ -859,11 +859,12 @@ const CrisisDataDashboard = ({
                                                                                     });
                                                                                     const orgType = orgTableMatch?.fields['Org Type'] as string | undefined;
                                                                                     return orgType ? (
-                                                                                        <div className="inline-flex items-center px-1.5 py-px rounded text-[11px] font-medium text-slate-500 bg-transparent border border-slate-200">
+                                                                                        <div className="inline-flex items-center px-1.5 py-px rounded text-[11px] font-medium text-slate-500 bg-transparent border border-slate-200 whitespace-nowrap flex-shrink-0">
                                                                                             {orgType}
                                                                                         </div>
                                                                                     ) : null;
-                                                                                })()}                                                                                                                            </div>
+                                                                                })()}
+                                                                            </div>
                                                                             <div className="flex flex-wrap gap-1 mt-2 max-w-[600px] mr-4">
                                                                                 {(() => {
                                                                                     const isCountriesExpanded = expandedCountries.has(org.id);
@@ -923,7 +924,7 @@ const CrisisDataDashboard = ({
                                                                             </div>
                                                                         </div>
                                                                     </div>
-                                                                    <div className="text-sm text-slate-600 capitalize">
+                                                                    <div className="text-sm text-slate-600 capitalize whitespace-nowrap">
                                                                         {org.projects.length} {org.projects.length === 1 ? labels.product.singular : labels.product.plural}
                                                                     </div>
                                                                 </div>
