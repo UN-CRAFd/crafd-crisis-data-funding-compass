@@ -924,8 +924,14 @@ const CrisisDataDashboard = ({
                                                                             </div>
                                                                         </div>
                                                                     </div>
-                                                                    <div className="text-sm text-slate-600 capitalize whitespace-nowrap">
-                                                                        {org.projects.length} {org.projects.length === 1 ? labels.product.singular : labels.product.plural}
+                                                                    <div className="text-sm text-slate-600 whitespace-nowrap mt-8">
+                                                                        {org.projects.length > 0 ? (
+                                                                            isExpanded ?
+                                                                                `Showing ${org.projects.length} Asset${org.projects.length === 1 ? '' : 's'}      ` :
+                                                                                `Expand to see ${org.projects.length} Asset${org.projects.length === 1 ? '' : 's'}`
+                                                                        ) : (
+                                                                            `${org.projects.length} Asset${org.projects.length === 1 ? '' : 's'}`
+                                                                        )}
                                                                     </div>
                                                                 </div>
                                                             </CollapsibleTrigger>
