@@ -170,7 +170,7 @@ interface BadgeProps {
 
 const Badge = ({ text, variant }: BadgeProps) => {
     const variants = {
-        blue: 'bg-[var(--badge-blue-bg)] text-[var(--badge-blue-text)]',
+        blue: 'bg-[var(--brand-bg-light)] text-[var(--brand-primary)]',
         emerald: 'bg-emerald-50 text-emerald-700',
         violet: 'bg-violet-50 text-violet-700',
         indigo: 'bg-[var(--badge-other-bg)] text-[var(--badge-other-text)] font-semibold',
