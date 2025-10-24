@@ -916,7 +916,7 @@ const CrisisDataDashboard = ({
                                                 </Button>
                                             </div>
                                         </div>
-                                        <p className="text-xs sm:text-sm text-slate-600 mt-5 mb-0 sm:mt-2 sm:mb-0">
+                                        <p className="text-xs sm:text-sm text-slate-600 mt-5 mb-0 sm:mt-2 sm:mb-0 h-0">
                                             {getFilterDescription()}
                                         </p>
                                     </CardContent>
@@ -1095,7 +1095,7 @@ const CrisisDataDashboard = ({
                                                                             >
                                                                             <Info className="w-2 h-2" />
                                                                             Details
-                                                                            </Button>
+                                                                        </Button>
                                                                         <div className="text-xs sm:text-xs text-slate-600 whitespace-nowrap">
                                                                             {org.projects.length > 0 ? (
                                                                                 isExpanded ?
