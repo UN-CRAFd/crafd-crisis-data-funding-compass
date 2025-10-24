@@ -122,7 +122,7 @@
 --badge-other-text: #4d479c;    /* indigo-800: dark readable text */
 --badge-other-icon: #4338ca;  
 
---detail: #DDDDDD;        /* main amber (vibrant golden tone) */
+--detail: #CCCCCC;        /* main amber (vibrant golden tone) */
 --detail-text: #FFFFFF;   /* darker amber for hover/active */
 --detail-border: #666666;  
 --detail-light: #999999;       /* soft warm background */
