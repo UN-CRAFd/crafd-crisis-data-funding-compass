@@ -125,7 +125,7 @@
 --detail: #CCCCCC;        /* main amber (vibrant golden tone) */
 --detail-text: #FFFFFF;   /* darker amber for hover/active */
 --detail-border: #666666;  
---detail-light: #999999;       /* soft warm background */
+--detail-light: #BBBBBB;       /* soft warm background */
 
   /* Darker badge variants for better visibility */
   --badge-blue-bg: #B8E0F5;        /* darker version of brand-bg-light */
