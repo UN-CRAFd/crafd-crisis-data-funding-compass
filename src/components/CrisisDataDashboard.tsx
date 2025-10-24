@@ -1088,11 +1088,11 @@ const CrisisDataDashboard = ({
                                                                             </div>
                                                                         </div>
                                                                     </div>
-                                                                    <div className="text-xs sm:text-sm text-slate-600 whitespace-nowrap self-start sm:self-center">
+                                                                    <div className="text-xs sm:text-xs text-slate-600 whitespace-nowrap self-start sm:self-center">
                                                                         {org.projects.length > 0 ? (
                                                                             isExpanded ?
                                                                                 `Showing ${org.projects.length} Asset${org.projects.length === 1 ? '' : 's'}` :
-                                                                                `${org.projects.length} Asset${org.projects.length === 1 ? '' : 's'}`
+                                                                                `Expand to see ${org.projects.length} Asset${org.projects.length === 1 ? '' : 's'}`
                                                                         ) : (
                                                                             `${org.projects.length} Asset${org.projects.length === 1 ? '' : 's'}`
                                                                         )}
