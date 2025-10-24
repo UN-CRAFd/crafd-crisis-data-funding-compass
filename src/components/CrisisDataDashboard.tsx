@@ -21,7 +21,7 @@ import { Input } from '@/components/ui/input';
 import { TooltipContent, TooltipProvider, TooltipTrigger, Tooltip as TooltipUI } from '@/components/ui/tooltip';
 import labels from '@/config/labels.json';
 import { getIconForInvestmentType } from '@/config/investmentTypeIcons';
-import { Building2, ChevronDown, ChevronRight, Database, DatabaseBackup, FileDown, Filter, FolderDot, FolderOpenDot, Globe, Info, MessageCircle, RotateCcw, Search, Share2 } from 'lucide-react';
+import { Building2, ChevronDown, ChevronRight, Database, DatabaseBackup, FileDown, Filter, FolderDot, FolderOpenDot, Globe, Info, MessageCircle, RotateCcw, Search, Share2, ArrowUpDown } from 'lucide-react';
 import organizationsTableRaw from '../../public/data/organizations-table.json';
 import { buildOrgDonorCountriesMap, buildOrgProjectsMap, buildProjectNameMap, calculateOrganizationTypesFromOrganizationsWithProjects, getNestedOrganizationsForModals } from '../lib/data';
 import { exportDashboardToPDF } from '../lib/exportPDF';
@@ -236,6 +236,7 @@ const CrisisDataDashboard = ({
     const [expandedOrgs, setExpandedOrgs] = useState<Set<string>>(new Set());
     const [expandedCountries, setExpandedCountries] = useState<Set<string>>(new Set());
     const [donorSearchQuery, setDonorSearchQuery] = useState<string>('');
+    const [sortBy, setSortBy] = useState<'name' | 'projects'>('name'); // Add sort state
 
     // Modal loading states (project modal always URL-based now)
     const [projectModalLoading] = useState(false);
@@ -912,6 +913,19 @@ const CrisisDataDashboard = ({
                                                     </DropdownMenuContent>
                                                 </DropdownMenu>
 
+                                                {/* Sort Button */}
+                                                <Button
+                                                    variant="outline"
+                                                    onClick={() => setSortBy(sortBy === 'name' ? 'projects' : 'name')}
+                                                    className="h-10 w-full sm:w-auto px-4 font-medium transition-all bg-slate-50/50 border-slate-200 hover:bg-white hover:border-slate-300"
+                                                    title={sortBy === 'name' ? 'Sort by number of assets' : 'Sort alphabetically'}
+                                                >
+                                                    <ArrowUpDown className="w-4 h-4" />
+                                                    <span className="ml-2 hidden sm:inline">
+                                                        {sortBy === 'name' ? 'A-Z' : 'Assets'}
+                                                    </span>
+                                                </Button>
+
                                                 {/* Reset Filters Button */}
                                                 <Button
                                                     variant="outline"
@@ -935,7 +949,14 @@ const CrisisDataDashboard = ({
                                     <CardContent className="px-4 sm:px-6 pt-2 sm:pt-0">
                                         <div className="space-y-2">
                                             {organizationsWithProjects
-                                                .sort((a, b) => a.organizationName.localeCompare(b.organizationName))
+                                                .sort((a, b) => {
+                                                    if (sortBy === 'name') {
+                                                        return a.organizationName.localeCompare(b.organizationName);
+                                                    } else {
+                                                        // Sort by number of projects (descending)
+                                                        return b.projects.length - a.projects.length;
+                                                    }
+                                                })
                                                 .map((org) => {
                                                     const isExpanded = expandedOrgs.has(org.id);
                                                     const hasProjects = org.projects.length > 0;
