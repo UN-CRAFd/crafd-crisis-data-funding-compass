@@ -958,8 +958,8 @@ const CrisisDataDashboard = ({
                                                                 className="w-full"
                                                             >
                                                                 <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between p-3 sm:p-4 hover:bg-slate-50/70 rounded-lg border border-slate-200 bg-slate-50/30 animate-in fade-in gap-3 sm:gap-0">
-                                                                    <div className="flex items-start space-x-3 flex-1">
-                                                                        <div className="w-4 h-4 flex-shrink-0 mt-0.5"> {/* Fixed size container with top margin for alignment */}
+                                                                    <div className="flex items-center space-x-3 flex-1">
+                                                                        <div className="w-4 h-4 flex-shrink-0 flex items-center justify-center"> {/* Fixed size container with centering */}
                                                                             {hasProjects ? (
                                                                                 isExpanded ? (
                                                                                     <ChevronDown className="h-4 w-4 text-slate-500" />
@@ -967,7 +967,8 @@ const CrisisDataDashboard = ({
                                                                                     <ChevronRight className="h-4 w-4 text-slate-500" />
                                                                                 )
                                                                             ) : (
-                                                                                <div className="h-4 w-4 rounded-full bg-slate-200" title="No assets to expand" />
+                                                                                // Keep the same space but make the placeholder invisible when there are no projects
+                                                                                <div className="h-4 w-4 invisible" aria-hidden="true" />
                                                                             )}
                                                                         </div>
                                                                         <div className="text-left flex-1 min-w-0">
