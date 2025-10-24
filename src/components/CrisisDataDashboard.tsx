@@ -1101,7 +1101,7 @@ const CrisisDataDashboard = ({
                                                                                 onOpenOrganizationModal(orgKey);
                                                                                 }
                                                                             }}
-                                                                            className="flex items-center justify-center gap-1 bg-slate-50/50 border-slate-200 text-slate-500
+                                                                            className="hidden sm:inline-flex items-center justify-center gap-1 bg-slate-50/50 border-slate-200 text-slate-500
                                                                                         hover:bg-[var(--brand-bg-light)] hover:border-[var(--brand-primary)] 
                                                                                         hover:text-[var(--brand-primary)] text-[10px] h-6 px-2 rounded-md"
                                                                             >
