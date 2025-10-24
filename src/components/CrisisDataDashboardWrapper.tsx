@@ -72,6 +72,7 @@ const CrisisDataDashboardWrapper = ({ logoutButton }: { logoutButton?: React.Rea
         allOrganizations: OrganizationWithProjects[]; // Add unfiltered organizations
         donorCountries: string[];
         investmentTypes: string[];
+        topDonors: Array<{ name: string; value: number }>; // Add top co-financing donors
     } | null>(null);
     const [loading, setLoading] = useState(true);
     const [error, setError] = useState<string | null>(null);
