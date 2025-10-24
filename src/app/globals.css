@@ -94,6 +94,8 @@
   --color-accent: #E0F7FF; /* Light blue accent (matches --brand-bg-light) */
   --color-warning: #f59e0b;
   --color-error: #ef4444;
+  --color-success: #4CAF50; /* Success green for share buttons */
+  --color-success-hover: #45a049; /* Darker success green for hover states */
   --color-surface: #E0F7FF; /* Light blue surface (matches --brand-bg-light) */
   --color-surface-dark: #1e293b;
 
