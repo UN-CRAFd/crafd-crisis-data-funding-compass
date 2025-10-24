@@ -326,6 +326,37 @@ export function calculateOrganizationTypesFromOrganizationsWithProjects(
         .sort((a, b) => b.count - a.count);
 }
 
+// Calculate top co-financing donors (excluding selected donors)
+export function calculateTopCoFinancingDonors(
+    organizations: OrganizationWithProjects[],
+    excludedDonors: string[] = [],
+    limit: number = 5
+): Array<{ name: string; value: number }> {
+    const donorOrgCounts = new Map<string, Set<string>>();
+
+    // Count unique organizations each donor funds
+    organizations.forEach(org => {
+        org.donorCountries.forEach(donor => {
+            // Skip excluded donors
+            if (excludedDonors.includes(donor)) {
+                return;
+            }
+
+            if (!donorOrgCounts.has(donor)) {
+                donorOrgCounts.set(donor, new Set<string>());
+            }
+            // Add organization ID to this donor's set (automatically deduplicates)
+            donorOrgCounts.get(donor)!.add(org.id);
+        });
+    });
+
+    // Convert to array with counts and sort
+    return Array.from(donorOrgCounts.entries())
+        .map(([name, orgSet]) => ({ name, value: orgSet.size }))
+        .sort((a, b) => b.value - a.value)
+        .slice(0, limit);
+}
+
 // Calculate organization-project data
 function calculateOrganizationProjects(organizations: OrganizationWithProjects[]): OrganizationProjectData[] {
     return organizations.map(org => ({
@@ -377,6 +408,13 @@ export async function processDashboardData(filters: {
         const projectTypes = calculateProjectTypes(filteredOrganizations, allKnownInvestmentTypes);
         const organizationProjects = calculateOrganizationProjects(filteredOrganizations);
 
+        // Calculate top co-financing donors (excluding selected donors)
+        const topDonors = calculateTopCoFinancingDonors(
+            filteredOrganizations,
+            filters.donorCountries || [],
+            5
+        );
+
         // Get available filter options from all organizations (not filtered)
         const filterOptions = getAvailableFilterOptions(allOrganizations);
 
@@ -388,7 +426,8 @@ export async function processDashboardData(filters: {
             organizationsWithProjects: filteredOrganizations,
             allOrganizations, // Add unfiltered organizations for modal use
             donorCountries: filterOptions.donorCountries,
-            investmentTypes: filterOptions.investmentTypes
+            investmentTypes: filterOptions.investmentTypes,
+            topDonors // Add top co-financing donors
         };
     } catch (error) {
         console.error('Error processing dashboard data:', error);
