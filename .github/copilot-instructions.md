@@ -6,10 +6,13 @@
 - if you want to test run, use `npm run dev`
 - use `shadcn/ui` components (https://ui.shadcn.com/docs/components)
   - install via `npx shadcn@latest add`
-  - installed primitves in `src/components/ui` should not be edited directly
+  - installed primitves in `src/components/ui` should not be edited directly (only keep imported components in `src/components/ui`)
+  - our own custom components should go into `src/components` and not `src/components/ui`
 - follow best practices for UI/UX and web development
 - make sure to understand the general api and page structure before making singular changes
 - do not create parallel infrastructures, prefer global solutions, do not hardcode things where it would be hard to find.
 - the site is deployed to Vercel
 - use context7
     - for Next.js, Tailwind CSS, shadcn UI, React, etc.
+- you can assume that `npm run dev` is usually already running
+- you can use Playwright MCP to take a look at the website
