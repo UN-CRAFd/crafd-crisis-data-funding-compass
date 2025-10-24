@@ -435,12 +435,24 @@ const CrisisDataDashboard = ({
         const hasFilters = combinedDonors.length > 0 || investmentTypes.length > 0 || appliedSearchQuery;
 
         if (!hasFilters) {
-            return labels.filterDescription.showingAll
-                .replace('{projects}', stats.dataProjects.toString())
-                .replace('{organizations}', stats.dataProviders.toString());
+            const template = labels.filterDescription.showingAll;
+            const parts = template.split(/(\{[^}]+\})/);
+            
+            return (
+                <>
+                    {parts.map((part, index) => {
+                        if (part === '{projects}') {
+                            return <strong key={index}>{stats.dataProjects}</strong>;
+                        } else if (part === '{organizations}') {
+                            return <strong key={index}>{stats.dataProviders}</strong>;
+                        }
+                        return part;
+                    })}
+                </>
+            );
         }
 
-        const parts: string[] = [];
+        const elements: React.ReactNode[] = [];
 
         // Start with donor countries
         if (combinedDonors.length > 0) {
@@ -465,26 +477,41 @@ const CrisisDataDashboard = ({
             if (otherDonorsCount > 0) {
                 const otherDonorLabel = otherDonorsCount !== 1 ? labels.filterDescription.donors : labels.filterDescription.donor;
                 const verb = combinedDonors.length === 1 ? 'co-finances' : 'co-finance';
-                parts.push(`${donorString}, together with ${otherDonorsCount} other ${otherDonorLabel}, ${verb}`);
+                elements.push(
+                    <React.Fragment key="donors">
+                        <strong>{donorString}</strong>, together with <strong>{otherDonorsCount}</strong> other {otherDonorLabel}, {verb}
+                    </React.Fragment>
+                );
             } else {
                 const verb = combinedDonors.length === 1 ? 'funds' : 'co-finance';
-                parts.push(`${donorString} ${verb}`);
+                elements.push(
+                    <React.Fragment key="donors">
+                        <strong>{donorString}</strong> {verb}
+                    </React.Fragment>
+                );
             }
         } else {
-            parts.push('Showing');
+            elements.push('Showing');
         }
 
         // Add organization count
         const organizationLabel = stats.dataProviders !== 1 ? 'organizations' : 'organization';
-        parts.push(`${stats.dataProviders} ${organizationLabel}, providing`);
+        elements.push(
+            <React.Fragment key="orgs">
+                {elements.length > 0 ? ' ' : ''}<strong>{stats.dataProviders}</strong> {organizationLabel}, providing
+            </React.Fragment>
+        );
 
         // Add project count
         const projectLabel = stats.dataProjects !== 1 ? 'assets' : 'asset';
-        parts.push(`${stats.dataProjects} ${projectLabel}`);
+        elements.push(
+            <React.Fragment key="projects">
+                {' '}<strong>{stats.dataProjects}</strong> {projectLabel}
+            </React.Fragment>
+        );
 
         // Add investment types
         if (investmentTypes.length > 0) {
-            parts.push('in');
             // Map selected type keys to display names where possible
             const displayTypes = investmentTypes.map(type => {
                 const typeKey = Object.keys(labels.investmentTypes).find(key =>
@@ -494,15 +521,23 @@ const CrisisDataDashboard = ({
                 return typeKey ? labels.investmentTypes[typeKey as keyof typeof labels.investmentTypes] : type;
             });
 
-            parts.push(displayTypes.join(' & '));
+            elements.push(
+                <React.Fragment key="types">
+                    {' '}in <strong>{displayTypes.join(' & ')}</strong>
+                </React.Fragment>
+            );
         }
 
         // Add search query (only if it's been applied)
         if (appliedSearchQuery) {
-            parts.push(`relating to "${appliedSearchQuery}"`);
+            elements.push(
+                <React.Fragment key="search">
+                    {' '}relating to <strong>"{appliedSearchQuery}"</strong>
+                </React.Fragment>
+            );
         }
 
-        return parts.join(' ');
+        return <>{elements}</>;
     };
 
     return (
