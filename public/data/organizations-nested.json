@@ -6836,6 +6836,7 @@
         "createdTime": "2025-10-22T20:55:36.000Z",
         "fields": {
           "Project/Product Name": "CAST | Conflict Alert System",
+          "product_key": "cast-alert",
           "Provider Orgs Full Name": [
             "recRoMeLU57jzgHFs"
           ],
@@ -6869,6 +6870,7 @@
         "createdTime": "2025-10-22T20:53:29.000Z",
         "fields": {
           "Project/Product Name": "Trendfinder",
+          "product_key": "acled-trendfinder",
           "Provider Orgs Full Name": [
             "recRoMeLU57jzgHFs"
           ],
@@ -6902,6 +6904,7 @@
         "createdTime": "2025-10-22T20:58:29.000Z",
         "fields": {
           "Project/Product Name": "Spotlight areas",
+          "product_key": "acled-spotlight-areas",
           "Provider Orgs Full Name": [
             "recRoMeLU57jzgHFs"
           ],
@@ -6934,6 +6937,7 @@
         "createdTime": "2025-10-22T20:57:17.000Z",
         "fields": {
           "Project/Product Name": "Conflict Exposure Calculator",
+          "product_key": "conflict-exposure-calculator",
           "Provider Orgs Full Name": [
             "recRoMeLU57jzgHFs"
           ],
@@ -10438,6 +10442,7 @@
         "createdTime": "2025-10-22T21:59:46.000Z",
         "fields": {
           "Project/Product Name": "Online Data Analysis",
+          "product_key": "afrobarometer-oda",
           "Provider Orgs Full Name": [
             "rechDlUwp5odgrH4t"
           ],
@@ -12232,6 +12237,7 @@
       "Provided Data Ecosystem Projects": [
         "recONFtYpO5v2qk7s"
       ],
+      "org_key": "kobo",
       "Org Type": [
         "Non-Governmental Organization"
       ]
@@ -12872,6 +12878,7 @@
         "createdTime": "2025-10-22T21:26:01.000Z",
         "fields": {
           "Project/Product Name": "Humanitarian Access Overview ",
+          "product_key": "acaps-hao",
           "Provider Orgs Full Name": [
             "recoqtz0oMUwga8v5"
           ],
@@ -12892,6 +12899,7 @@
         "createdTime": "2025-10-22T21:27:55.000Z",
         "fields": {
           "Project/Product Name": "Risk Radar",
+          "product_key": "acaps-risk-radar",
           "Provider Orgs Full Name": [
             "recoqtz0oMUwga8v5"
           ],
@@ -14755,6 +14763,7 @@
       "Provided Data Ecosystem Projects": [
         "recGMlI70iaqyTtMo"
       ],
+      "org_key": "ecmrwf",
       "Org Type": [
         "International Organization"
       ]
