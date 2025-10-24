@@ -567,9 +567,10 @@ const CrisisDataDashboard = ({
                                 size="sm"
                                 onClick={handleShare}
                                 className={`bg-slate-50/50 border-slate-200 hover:var(--brand-bg-light) hover:border-[var(--brand-primary)] hover:text-[var(--brand-primary)] text-xs sm:text-sm ${shareSuccess
-                                    ? 'bg-green-50 border-green-200 text-green-700'
+                                    ? 'text-white border-[var(--color-success)]'
                                     : 'hover:var(--brand-bg-light)'
                                     }`}
+                                style={shareSuccess ? { backgroundColor: 'var(--color-success)' } : {}}
                                 title={labels.ui.copyToClipboard}
                             >
                                 <Share2 className="w-4 h-4 sm:mr-2" />

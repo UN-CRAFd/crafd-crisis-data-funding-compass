@@ -1,6 +1,6 @@
 'use client';
 
-import { Building2, ExternalLink, Package } from 'lucide-react';
+import { Building2, Check, ExternalLink, Package, Share2 } from 'lucide-react';
 import { useCallback, useEffect, useRef, useState } from 'react';
 import type { OrganizationWithProjects, ProjectData } from '../lib/data';
 import CloseButton from './CloseButton';
@@ -21,6 +21,7 @@ export default function ProjectModal({ project, allOrganizations, loading }: Pro
     const modalRef = useRef<HTMLDivElement>(null);
     const [touchStart, setTouchStart] = useState<number | null>(null);
     const [touchEnd, setTouchEnd] = useState<number | null>(null);
+    const [showCopied, setShowCopied] = useState(false);
 
     // Animation state management
     useEffect(() => {
@@ -122,32 +123,81 @@ export default function ProjectModal({ project, allOrganizations, loading }: Pro
     const renderHeader = () => {
         if (loading) {
             return (
-                <div className="flex items-center justify-between">
-                    <div className="h-6 bg-gray-200 rounded w-48 animate-pulse flex-1 mr-4"></div>
-                    <CloseButton onClick={handleClose} />
+                <div className="flex items-center justify-between gap-4">
+                    <div className="h-6 bg-gray-200 rounded w-48 animate-pulse flex-1"></div>
+                    <div className="flex items-center gap-2 shrink-0">
+                        <div className="h-10 w-10 bg-gray-200 rounded-lg animate-pulse"></div>
+                        <div className="h-10 w-20 bg-gray-200 rounded-lg animate-pulse"></div>
+                    </div>
                 </div>
             );
         }
 
         if (!project) {
             return (
-                <div className="flex items-center justify-between">
-                    <h2 className="text-lg sm:text-xl font-bold text-[#333333] flex-1 pr-4 font-roboto">Project Not Found</h2>
-                    <CloseButton onClick={handleClose} />
+                <div className="flex items-center justify-between gap-4">
+                    <h2 className="text-lg sm:text-xl font-bold text-[#333333] flex-1 font-roboto">Project Not Found</h2>
+                    <div className="flex items-center gap-2 shrink-0">
+                        <button
+                            onClick={() => {
+                                navigator.clipboard.writeText(window.location.href);
+                                setShowCopied(true);
+                                setTimeout(() => setShowCopied(false), 2000);
+                            }}
+                            className={`flex items-center justify-center h-12 w-12 sm:h-10 sm:w-10 rounded-full sm:rounded-lg transition-all duration-200 ease-out touch-manipulation cursor-pointer focus:outline-none shrink-0 shadow-lg sm:shadow-none ${
+                                showCopied
+                                    ? 'text-white'
+                                    : 'text-white bg-slate-600 hover:bg-slate-700 sm:text-gray-600 sm:bg-gray-200 sm:hover:bg-gray-400 sm:hover:text-gray-100 focus:bg-slate-700 sm:focus:bg-gray-400 sm:focus:text-gray-100'
+                            }`}
+                            style={showCopied ? { backgroundColor: 'var(--color-success)' } : {}}
+                            aria-label="Share"
+                            title="Share"
+                        >
+                            {showCopied ? (
+                                <Check className="h-5 w-5 sm:h-4 sm:w-4" />
+                            ) : (
+                                <Share2 className="h-5 w-5 sm:h-4 sm:w-4" />
+                            )}
+                        </button>
+                        <CloseButton onClick={handleClose} absolute={false} />
+                    </div>
                 </div>
             );
         }
 
         return (
-            <div className="flex items-center justify-between gap-8">
+            <div className="flex items-center justify-between gap-4">
                 {/* Main title with icon - Responsive sizing */}
-                <div className="flex items-center gap-3">
+                <div className="flex items-center gap-3 flex-1 min-w-0">
                     <Package className="h-6 w-6 sm:h-7 sm:w-7 text-[#333333] shrink-0" />
                     <h2 className="text-lg sm:text-xl md:text-xl lg:text-2xl font-bold text-[#333333] leading-tight font-roboto">
                         {project.projectName}
                     </h2>
                 </div>
-                <CloseButton onClick={handleClose} />
+                <div className="flex items-center gap-2 shrink-0">
+                    <button
+                        onClick={() => {
+                            navigator.clipboard.writeText(window.location.href);
+                            setShowCopied(true);
+                            setTimeout(() => setShowCopied(false), 2000);
+                        }}
+                        className={`flex items-center justify-center h-12 w-12 sm:h-10 sm:w-10 rounded-full sm:rounded-lg transition-all duration-200 ease-out touch-manipulation cursor-pointer focus:outline-none shrink-0 shadow-lg sm:shadow-none ${
+                            showCopied
+                                ? 'text-white'
+                                : 'text-white bg-slate-600 hover:bg-slate-700 sm:text-gray-600 sm:bg-gray-200 sm:hover:bg-gray-400 sm:hover:text-gray-100 focus:bg-slate-700 sm:focus:bg-gray-400 sm:focus:text-gray-100'
+                        }`}
+                        style={showCopied ? { backgroundColor: 'var(--color-success)' } : {}}
+                        aria-label="Share"
+                        title="Share"
+                    >
+                        {showCopied ? (
+                            <Check className="h-5 w-5 sm:h-4 sm:w-4" />
+                        ) : (
+                            <Share2 className="h-5 w-5 sm:h-4 sm:w-4" />
+                        )}
+                    </button>
+                    <CloseButton onClick={handleClose} absolute={false} />
+                </div>
             </div>
         );
     };
