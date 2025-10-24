@@ -5,6 +5,7 @@ import React, { useEffect, useMemo, useState } from 'react';
 import ChartCard from '@/components/ChartCard';
 import OrganizationModal from '@/components/OrganizationModal';
 import ProjectModal from '@/components/ProjectModal';
+import SurveyBanner from '@/components/SurveyBanner';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { Collapsible, CollapsibleContent, CollapsibleTrigger } from '@/components/ui/collapsible';
@@ -19,6 +20,7 @@ import {
 import { Input } from '@/components/ui/input';
 import { TooltipContent, TooltipProvider, TooltipTrigger, Tooltip as TooltipUI } from '@/components/ui/tooltip';
 import labels from '@/config/labels.json';
+import { getIconForInvestmentType } from '@/config/investmentTypeIcons';
 import { Building2, ChevronDown, ChevronRight, Database, DatabaseBackup, FileDown, Filter, FolderDot, FolderOpenDot, Globe, Info, MessageCircle, RotateCcw, Search, Share2 } from 'lucide-react';
 import organizationsTableRaw from '../../public/data/organizations-table.json';
 import { buildOrgDonorCountriesMap, buildOrgProjectsMap, buildProjectNameMap, calculateOrganizationTypesFromOrganizationsWithProjects, getNestedOrganizationsForModals } from '../lib/data';
@@ -68,6 +70,7 @@ interface CrisisDataDashboardProps {
         allOrganizations: OrganizationWithProjects[]; // Add unfiltered organizations
         donorCountries: string[];
         investmentTypes: string[];
+        topDonors: Array<{ name: string; value: number }>; // Add top co-financing donors
     } | null;
     loading: boolean;
     error: string | null;
@@ -239,7 +242,7 @@ const CrisisDataDashboard = ({
     const [shareSuccess, setShareSuccess] = useState(false);
     const [exportLoading, setExportLoading] = useState(false);
     
-    // Load static organizations table for modal details
+    // Load static organizations table for modals
     const organizationsTable: Array<{ id: string; createdTime?: string; fields: Record<string, unknown> }> = organizationsTableRaw as Array<{ id: string; createdTime?: string; fields: Record<string, unknown> }>;
 
     // Load nested data for modals
@@ -356,18 +359,6 @@ const CrisisDataDashboard = ({
     // Export to PDF functionality
     const handleExportPDF = async () => {
         setExportLoading(true);
-        try {
-            await exportDashboardToPDF({
-                stats,
-                projectTypes,
-                organizationTypes,
-                getFilterDescription
-            });
-        } catch {
-            alert('Failed to generate PDF. Please try again or check console for details.');
-        } finally {
-            setExportLoading(false);
-        }
     };
 
     // Loading state
@@ -395,7 +386,7 @@ const CrisisDataDashboard = ({
     }
 
     // Extract data for use in component
-    const { stats, projectTypes, organizationsWithProjects, allOrganizations, donorCountries: availableDonorCountries, investmentTypes: availableInvestmentTypes } = dashboardData;
+    const { stats, projectTypes, organizationsWithProjects, allOrganizations, donorCountries: availableDonorCountries, investmentTypes: availableInvestmentTypes, topDonors } = dashboardData;
 
     // Ensure the organization type chart always shows all known types.
     // Get all types from the pre-generated organizations-with-types.json dictionary
@@ -435,12 +426,24 @@ const CrisisDataDashboard = ({
         const hasFilters = combinedDonors.length > 0 || investmentTypes.length > 0 || appliedSearchQuery;
 
         if (!hasFilters) {
-            return labels.filterDescription.showingAll
-                .replace('{projects}', stats.dataProjects.toString())
-                .replace('{organizations}', stats.dataProviders.toString());
+            const template = labels.filterDescription.showingAll;
+            const parts = template.split(/(\{[^}]+\})/);
+            
+            return (
+                <>
+                    {parts.map((part, index) => {
+                        if (part === '{projects}') {
+                            return <strong key={index}>{stats.dataProjects}</strong>;
+                        } else if (part === '{organizations}') {
+                            return <strong key={index}>{stats.dataProviders}</strong>;
+                        }
+                        return part;
+                    })}
+                </>
+            );
         }
 
-        const parts: string[] = [];
+        const elements: React.ReactNode[] = [];
 
         // Start with donor countries
         if (combinedDonors.length > 0) {
@@ -465,26 +468,41 @@ const CrisisDataDashboard = ({
             if (otherDonorsCount > 0) {
                 const otherDonorLabel = otherDonorsCount !== 1 ? labels.filterDescription.donors : labels.filterDescription.donor;
                 const verb = combinedDonors.length === 1 ? 'co-finances' : 'co-finance';
-                parts.push(`${donorString}, together with ${otherDonorsCount} other ${otherDonorLabel}, ${verb}`);
+                elements.push(
+                    <React.Fragment key="donors">
+                        <strong>{donorString}</strong>, together with <strong>{otherDonorsCount}</strong> other {otherDonorLabel}, {verb}
+                    </React.Fragment>
+                );
             } else {
                 const verb = combinedDonors.length === 1 ? 'funds' : 'co-finance';
-                parts.push(`${donorString} ${verb}`);
+                elements.push(
+                    <React.Fragment key="donors">
+                        <strong>{donorString}</strong> {verb}
+                    </React.Fragment>
+                );
             }
         } else {
-            parts.push('Showing');
+            elements.push('Showing');
         }
 
         // Add organization count
         const organizationLabel = stats.dataProviders !== 1 ? 'organizations' : 'organization';
-        parts.push(`${stats.dataProviders} ${organizationLabel}, providing`);
+        elements.push(
+            <React.Fragment key="orgs">
+                {elements.length > 0 ? ' ' : ''}<strong>{stats.dataProviders}</strong> {organizationLabel}, providing
+            </React.Fragment>
+        );
 
         // Add project count
         const projectLabel = stats.dataProjects !== 1 ? 'assets' : 'asset';
-        parts.push(`${stats.dataProjects} ${projectLabel}`);
+        elements.push(
+            <React.Fragment key="projects">
+                {' '}<strong>{stats.dataProjects}</strong> {projectLabel}
+            </React.Fragment>
+        );
 
         // Add investment types
         if (investmentTypes.length > 0) {
-            parts.push('in');
             // Map selected type keys to display names where possible
             const displayTypes = investmentTypes.map(type => {
                 const typeKey = Object.keys(labels.investmentTypes).find(key =>
@@ -494,15 +512,23 @@ const CrisisDataDashboard = ({
                 return typeKey ? labels.investmentTypes[typeKey as keyof typeof labels.investmentTypes] : type;
             });
 
-            parts.push(displayTypes.join(' & '));
+            elements.push(
+                <React.Fragment key="types">
+                    {' '}in <strong>{displayTypes.join(' & ')}</strong>
+                </React.Fragment>
+            );
         }
 
         // Add search query (only if it's been applied)
         if (appliedSearchQuery) {
-            parts.push(`relating to "${appliedSearchQuery}"`);
+            elements.push(
+                <React.Fragment key="search">
+                    {' '}relating to <strong>"{appliedSearchQuery}"</strong>
+                </React.Fragment>
+            );
         }
 
-        return parts.join(' ');
+        return <>{elements}</>;
     };
 
     return (
@@ -567,7 +593,7 @@ const CrisisDataDashboard = ({
                                 size="sm"
                                 onClick={handleShare}
                                 className={`bg-slate-50/50 border-slate-200 hover:var(--brand-bg-light) hover:border-[var(--brand-primary)] hover:text-[var(--brand-primary)] text-xs sm:text-sm ${shareSuccess
-                                    ? 'text-white border-[var(--color-success)]'
+                                    ? 'text-white border-[var(--color-success)] bg-[var(--color-success)] hover:bg-[var(--color-success-hover)] hover:text-slate-100 hover:border-[var(--color-success-hover)]'
                                     : 'hover:var(--brand-bg-light)'
                                     }`}
                                 style={shareSuccess ? { backgroundColor: 'var(--color-success)' } : {}}
@@ -585,6 +611,9 @@ const CrisisDataDashboard = ({
             {/* Main Content - Add top padding to account for fixed header */}
             <div className="max-w-[82rem] mx-auto px-4 sm:px-6 lg:px-8 py-4 sm:py-6 pt-20 sm:pt-24">
                 <div className="space-y-4 sm:space-y-[var(--spacing-section)]">
+
+                    {/* Survey Banner */}
+                    <SurveyBanner />
 
                     {/* Statistics Cards */}
                     <div className="sm:hidden">
@@ -842,6 +871,9 @@ const CrisisDataDashboard = ({
                                                                 ? labels.investmentTypes[typeKey as keyof typeof labels.investmentTypes]
                                                                 : type;
 
+                                                            // Get the icon for this type
+                                                            const IconComponent = getIconForInvestmentType(displayName);
+
                                                             // Normalize comparison: check if any investmentType matches this type (case-insensitive)
                                                             const isChecked = investmentTypes.some(selected =>
                                                                 selected.toLowerCase().trim() === type.toLowerCase().trim()
@@ -870,7 +902,10 @@ const CrisisDataDashboard = ({
                                                                     onSelect={(e) => e.preventDefault()}
                                                                     className="cursor-pointer"
                                                                 >
-                                                                    {displayName}
+                                                                    <div className="flex items-center gap-2">
+                                                                        <IconComponent className="w-4 h-4" />
+                                                                        <span>{displayName}</span>
+                                                                    </div>
                                                                 </DropdownMenuCheckboxItem>
                                                             );
                                                         })}
@@ -893,7 +928,7 @@ const CrisisDataDashboard = ({
                                                 </Button>
                                             </div>
                                         </div>
-                                        <p className="text-xs sm:text-sm text-slate-600 mt-5 mb-0 sm:mt-2 sm:mb-0">
+                                        <p className="text-xs sm:text-sm text-slate-600 mt-5 -mb-6 sm:mt-2 sm:-mb-7">
                                             {getFilterDescription()}
                                         </p>
                                     </CardContent>
@@ -922,9 +957,9 @@ const CrisisDataDashboard = ({
                                                             <CollapsibleTrigger
                                                                 className="w-full"
                                                             >
-                                                                <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between p-3 sm:p-4 hover:bg-slate-50/70 rounded-lg border border-slate-200 bg-slate-50/30 animate-in fade-in gap-3 sm:gap-0">
-                                                                    <div className="flex items-start space-x-3 flex-1">
-                                                                        <div className="w-4 h-4 flex-shrink-0 mt-0.5"> {/* Fixed size container with top margin for alignment */}
+                                                                <div className="flex flex-col sm:flex-row sm:justify-between p-3 sm:p-4 hover:bg-slate-50/70 rounded-lg border border-slate-200 bg-slate-50/30 animate-in fade-in gap-3 sm:gap-0 cursor-pointer min-h-[80px]">
+                                                                    <div className="flex items-center space-x-3 flex-1">
+                                                                        <div className="w-4 h-4 flex-shrink-0 flex items-center justify-center"> {/* Fixed size container with centering */}
                                                                             {hasProjects ? (
                                                                                 isExpanded ? (
                                                                                     <ChevronDown className="h-4 w-4 text-slate-500" />
@@ -932,7 +967,8 @@ const CrisisDataDashboard = ({
                                                                                     <ChevronRight className="h-4 w-4 text-slate-500" />
                                                                                 )
                                                                             ) : (
-                                                                                <div className="h-4 w-4 rounded-full bg-slate-200" title="No assets to expand" />
+                                                                                // Keep the same space but make the placeholder invisible when there are no projects
+                                                                                <div className="h-4 w-4 invisible" aria-hidden="true" />
                                                                             )}
                                                                         </div>
                                                                         <div className="text-left flex-1 min-w-0">
@@ -1053,14 +1089,35 @@ const CrisisDataDashboard = ({
                                                                             </div>
                                                                         </div>
                                                                     </div>
-                                                                    <div className="text-xs sm:text-sm text-slate-600 whitespace-nowrap self-start sm:self-center">
-                                                                        {org.projects.length > 0 ? (
-                                                                            isExpanded ?
-                                                                                `Showing ${org.projects.length} Asset${org.projects.length === 1 ? '' : 's'}` :
+                                                                    <div className="flex flex-col justify-between items-end self-stretch flex-shrink-0 min-w-[100px]">
+                                                                        <Button
+                                                                            asChild
+                                                                            variant="outline"
+                                                                            size="sm"
+                                                                            onClick={(e) => {
+                                                                                e.stopPropagation();
+                                                                                const nestedOrg = nestedOrganizations.find((n) => n.id === org.id);
+                                                                                const orgKey = nestedOrg?.fields?.org_key;
+                                                                                if (orgKey) {
+                                                                                    onOpenOrganizationModal(orgKey);
+                                                                                }
+                                                                            }}
+                                                                            className="hidden sm:inline-flex items-center justify-center gap-1 bg-[var(--detail)] border-[var(--detail)] text-[var(--detail-text)] hover:bg-[var(--detail-light)] hover:border-[var(--detail-border)] text-[10px] h-6 px-2 rounded-md"
+                                                                        >
+                                                                            <div className="hidden sm:inline-flex items-center justify-center gap-1">
+                                                                                <Info className="w-3 h-3" />
+                                                                                <span>Details</span>
+                                                                            </div>
+                                                                        </Button>
+                                                                        <div className="text-xs sm:text-xs text-slate-600 whitespace-nowrap">
+                                                                            {org.projects.length > 0 ? (
+                                                                                isExpanded ?
+                                                                                    `Showing ${org.projects.length} Asset${org.projects.length === 1 ? '' : 's'}` :
+                                                                                    `Expand to see ${org.projects.length} Asset${org.projects.length === 1 ? '' : 's'}`
+                                                                            ) : (
                                                                                 `${org.projects.length} Asset${org.projects.length === 1 ? '' : 's'}`
-                                                                        ) : (
-                                                                            `${org.projects.length} Asset${org.projects.length === 1 ? '' : 's'}`
-                                                                        )}
+                                                                            )}
+                                                                        </div>
                                                                     </div>
                                                                 </div>
                                                             </CollapsibleTrigger>
@@ -1121,6 +1178,33 @@ const CrisisDataDashboard = ({
                         {/* Right Column - Charts */}
                         <div className="space-y-4 sm:space-y-[var(--spacing-section)]">
 
+                            {/* Co-financing donors chart - only show when donors are selected */}
+                            <div
+                                className={`transition-all duration-1200 ease-in-out ${
+                                    combinedDonors.length > 0
+                                        ? 'opacity-100 max-h-[1000px] mb-6'
+                                        : 'opacity-0 max-h-0 overflow-hidden mb-0'
+                                }`}
+                            >
+                                <ChartCard
+                                    title={labels.sections.donorCount}
+                                    icon={<Globe className="text-slate-600" />}
+                                    data={topDonors}
+                                    barColor="var(--brand-primary-lighter)"
+                                    footnote={
+                                        combinedDonors.length > 0
+                                            ? `Showing ${topDonors.length} donor${topDonors.length === 1 ? '' : 's'} co-financing the most organizations together with ${
+                                                combinedDonors.length === 1
+                                                    ? combinedDonors[0]
+                                                    : combinedDonors.length === 2
+                                                    ? `${combinedDonors[0]} & ${combinedDonors[1]}`
+                                                    : `${combinedDonors.slice(0, -1).join(', ')} & ${combinedDonors[combinedDonors.length - 1]}`
+                                            }`
+                                            : `Showing ${topDonors.length} donor${topDonors.length === 1 ? '' : 's'} funding the most organizations in the current view`
+                                    }
+                                />
+                            </div>
+
                             <ChartCard
                                 title={labels.sections.organizationTypes}
                                 icon={<Building2 className="text-slate-600" />}
@@ -1134,6 +1218,7 @@ const CrisisDataDashboard = ({
                                 barColor="var(--brand-primary-lighter)"
                                 footnote={labels.ui.chartFootnote}
                             />
+                           
                         </div>
                     </div>
                 </div>
