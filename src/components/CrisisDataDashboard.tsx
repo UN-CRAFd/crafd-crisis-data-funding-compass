@@ -1192,7 +1192,7 @@ const CrisisDataDashboard = ({
                                 footnote={labels.ui.chartFootnote}
                             />
                             <ChartCard
-                                title="Top Co-Financing Donors"
+                                title={labels.sections.donorCount}
                                 icon={<Globe className="text-slate-600" />}
                                 data={topDonors}
                                 barColor="var(--brand-primary-lighter)"
