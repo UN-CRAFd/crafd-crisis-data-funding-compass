@@ -1,8 +1,9 @@
 'use client';
 
-import { ChevronDown, ChevronUp, ExternalLink, Folder, X } from 'lucide-react';
+import { Building2, Check, ChevronDown, ChevronUp, ExternalLink, Package, Share2 } from 'lucide-react';
 import { useCallback, useEffect, useRef, useState } from 'react';
 import ModalOrganizationFocus from './ModalOrganizationFocus';
+import CloseButton from './CloseButton';
 
 interface OrganizationModalProps {
     // Accept the full organization record coming from `public/data/organizations-table.json`
@@ -35,6 +36,7 @@ export default function OrganizationModal({
     const modalRef = useRef<HTMLDivElement>(null);
     const [touchStart, setTouchStart] = useState<number | null>(null);
     const [touchEnd, setTouchEnd] = useState<number | null>(null);
+    const [showCopied, setShowCopied] = useState(false);
     // (fields is read from `organization` inside renderHeader/renderBody)
 
     // Animation state management
@@ -109,24 +111,7 @@ export default function OrganizationModal({
         }
     };
 
-    // Reusable close button component
-    const CloseButton = () => (
-        <button
-            onClick={handleClose}
-            className="
-        flex items-center justify-center gap-2 h-12 w-12 sm:h-10 sm:w-auto sm:px-4 rounded-full sm:rounded-lg
-        transition-all duration-200 ease-out touch-manipulation
-        text-white bg-slate-600 hover:bg-slate-700 sm:text-gray-600 sm:bg-gray-200 sm:hover:bg-gray-400 sm:hover:text-gray-100 cursor-pointer
-        focus:outline-none focus:bg-slate-700 sm:focus:bg-gray-400 sm:focus:text-gray-100 shrink-0 ml-4
-        sm:text-sm font-medium shadow-lg sm:shadow-none
-      "
-            aria-label="Close modal"
-            title="Close modal"
-        >
-            <X className="h-5 w-5 sm:h-4 sm:w-4" />
-            <span className="hidden sm:inline">Close</span>
-        </button>
-    );
+
     // Reusable subheader component - Major sections (Assets, Funding) - smaller than main title
     const SubHeader = ({ children }: { children: React.ReactNode }) => (
         <h3 className="text-xl font-qanelas font-black text-[#333333] mb-3 uppercase tracking-wide leading-normal">
@@ -165,18 +150,44 @@ export default function OrganizationModal({
     const renderHeader = () => {
         if (loading) {
             return (
-                <div className="flex items-center justify-between">
-                    <div className="h-6 bg-gray-200 rounded w-48 animate-pulse flex-1 mr-4"></div>
-                    <CloseButton />
+                <div className="flex items-center justify-between gap-4">
+                    <div className="h-6 bg-gray-200 rounded w-48 animate-pulse flex-1"></div>
+                    <div className="flex items-center gap-2 shrink-0">
+                        <div className="h-10 w-10 bg-gray-200 rounded-lg animate-pulse"></div>
+                        <div className="h-10 w-20 bg-gray-200 rounded-lg animate-pulse"></div>
+                    </div>
                 </div>
             );
         }
 
         if (!organization) {
             return (
-                <div className="flex items-center justify-between">
-                    <h2 className="text-lg sm:text-xl font-semibold text-gray-900 flex-1 pr-4">Organization Not Found</h2>
-                    <CloseButton />
+                <div className="flex items-center justify-between gap-4">
+                    <h2 className="text-lg sm:text-xl font-semibold text-gray-900 flex-1">Organization Not Found</h2>
+                    <div className="flex items-center gap-2 shrink-0">
+                        <button
+                            onClick={() => {
+                                navigator.clipboard.writeText(window.location.href);
+                                setShowCopied(true);
+                                setTimeout(() => setShowCopied(false), 2000);
+                            }}
+                            className={`flex items-center justify-center h-12 w-12 sm:h-10 sm:w-10 rounded-full sm:rounded-lg transition-all duration-200 ease-out touch-manipulation cursor-pointer focus:outline-none shrink-0 shadow-lg sm:shadow-none ${
+                                showCopied
+                                    ? 'text-white'
+                                    : 'text-white bg-slate-600 hover:bg-slate-700 sm:text-gray-600 sm:bg-gray-200 sm:hover:bg-gray-400 sm:hover:text-gray-100 focus:bg-slate-700 sm:focus:bg-gray-400 sm:focus:text-gray-100'
+                            }`}
+                            style={showCopied ? { backgroundColor: 'var(--color-success)' } : {}}
+                            aria-label="Share"
+                            title="Share"
+                        >
+                            {showCopied ? (
+                                <Check className="h-5 w-5 sm:h-4 sm:w-4" />
+                            ) : (
+                                <Share2 className="h-5 w-5 sm:h-4 sm:w-4" />
+                            )}
+                        </button>
+                        <CloseButton onClick={handleClose} absolute={false} />
+                    </div>
                 </div>
             );
         }
@@ -187,12 +198,39 @@ export default function OrganizationModal({
             || organization.id;
 
         return (
-            <div className="flex items-start justify-between gap-8">
-                {/* Main title - Responsive sizing */}
-                <h2 className="text-lg sm:text-xl md:text-xl lg:text-2xl font-bold text-[#333333] leading-tight font-roboto">
-                    {displayName}
-                </h2>
-                <CloseButton />
+            <div className="flex items-center justify-between gap-4">
+                {/* Main title with icon - Responsive sizing */}
+                <div className="flex items-center gap-3 flex-1 min-w-0">
+                    <Building2 className="h-6 w-6 sm:h-7 sm:w-7 text-[#333333] shrink-0" />
+                    <h2 className="text-lg sm:text-xl md:text-xl lg:text-2xl font-bold text-[#333333] leading-tight font-roboto">
+                        {displayName}
+                    </h2>
+                </div>
+                {/* Buttons container */}
+                <div className="flex items-center gap-2 shrink-0">
+                    <button
+                        onClick={() => {
+                            navigator.clipboard.writeText(window.location.href);
+                            setShowCopied(true);
+                            setTimeout(() => setShowCopied(false), 2000);
+                        }}
+                        className={`flex items-center justify-center h-12 w-12 sm:h-10 sm:w-10 rounded-full sm:rounded-lg transition-all duration-200 ease-out touch-manipulation cursor-pointer focus:outline-none shrink-0 shadow-lg sm:shadow-none ${
+                            showCopied
+                                ? 'text-white'
+                                : 'text-white bg-slate-600 hover:bg-slate-700 sm:text-gray-600 sm:bg-gray-200 sm:hover:bg-gray-400 sm:hover:text-gray-100 focus:bg-slate-700 sm:focus:bg-gray-400 sm:focus:text-gray-100'
+                        }`}
+                        style={showCopied ? { backgroundColor: 'var(--color-success)' } : {}}
+                        aria-label="Share"
+                        title="Share"
+                    >
+                        {showCopied ? (
+                            <Check className="h-5 w-5 sm:h-4 sm:w-4" />
+                        ) : (
+                            <Share2 className="h-5 w-5 sm:h-4 sm:w-4" />
+                        )}
+                    </button>
+                    <CloseButton onClick={handleClose} absolute={false} />
+                </div>
             </div>
         );
     };
@@ -383,7 +421,7 @@ export default function OrganizationModal({
                                 <div className="flex flex-col gap-2">
                                     {displayedProjects.map((projectName, i) => (
                                         <span key={i} className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-md text-base font-medium bg-slate-100 text-slate-600">
-                                            <Folder className="w-4 h-4 text-slate-500" />
+                                            <Package className="w-4 h-4 text-slate-500" />
                                             <span className="truncate max-w-xs">{projectName}</span>
                                         </span>
                                     ))}
@@ -467,13 +505,13 @@ export default function OrganizationModal({
         >
             <div
                 ref={modalRef}
-                className={`w-full sm:w-3/5 md:w-[45%] lg:w-[37%] xl:w-[29%] sm:min-w-[435px] lg:min-w-[500px] xl:min-w-[550px] h-full bg-white shadow-2xl transition-transform duration-300 ease-out flex flex-col ${isVisible && !isClosing ? 'translate-x-0' : 'translate-x-full'}`}
+                className={`relative w-full sm:w-3/5 md:w-[45%] lg:w-[37%] xl:w-[29%] sm:min-w-[435px] lg:min-w-[500px] xl:min-w-[550px] h-full bg-white shadow-2xl transition-transform duration-300 ease-out flex flex-col ${isVisible && !isClosing ? 'translate-x-0' : 'translate-x-full'}`}
                 onTouchStart={onTouchStart}
                 onTouchMove={onTouchMove}
                 onTouchEnd={onTouchEnd}
             >
                 {/* Header */}
-                <div className={`px-6 sm:px-8 pt-4 sm:pt-6 pb-2 sm:pb-3 border-b border-gray-300 shrink-0 ${organization ? 'bg-white' : ''}`}>
+                <div className={`px-6 sm:px-8 pt-4 sm:pt-6 pb-4 sm:pb-5 border-b border-gray-300 shrink-0 ${organization ? 'bg-white' : ''}`}>
                     {renderHeader()}
                 </div>
 
