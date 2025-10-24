@@ -354,7 +354,21 @@ const CrisisDataDashboard = ({
     };
 
     // Export to PDF functionality
-
+    const handleExportPDF = async () => {
+        setExportLoading(true);
+        try {
+            await exportDashboardToPDF({
+                stats,
+                projectTypes,
+                organizationTypes,
+                getFilterDescription
+            });
+        } catch {
+            alert('Failed to generate PDF. Please try again or check console for details.');
+        } finally {
+            setExportLoading(false);
+        }
+    };
 
     // Loading state
     if (loading) {
@@ -575,7 +589,7 @@ const CrisisDataDashboard = ({
                             <Button
                                 variant="outline"
                                 size="sm"
-                                onClick={() => {}}
+                                onClick={handleExportPDF}
                                 disabled={exportLoading}
                                 className="hidden bg-slate-50/50 border-slate-200 hover:var(--brand-bg-light) hover:border-[var(--brand-primary)] hover:text-[var(--brand-primary)]"
                                 title={labels.header.exportTooltip}
