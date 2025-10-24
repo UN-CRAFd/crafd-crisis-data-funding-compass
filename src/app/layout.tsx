@@ -1,4 +1,4 @@
-import { GoogleAnalytics } from '@next/third-parties/google'
+import { GoogleAnalytics } from '@next/third-parties/google';
 
 import ErrorBoundary from "@/components/ErrorBoundary";
 import type { Metadata } from "next";
@@ -18,6 +18,9 @@ export default function RootLayout({
 }: {
     children: React.ReactNode;
 }) {
+    // Only track analytics in production, not in preview/dev deployments
+    const isProduction = process.env.VERCEL_ENV === 'production';
+
     return (
         <html lang="en">
             <body className="font-sans antialiased">
@@ -30,7 +33,7 @@ export default function RootLayout({
 
 
             </body>
-            <GoogleAnalytics gaId="G-2TYZQHBWML" />
+            {isProduction && <GoogleAnalytics gaId="G-GECPTVLE68" />}
 
         </html>
     )
