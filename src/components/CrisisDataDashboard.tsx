@@ -923,7 +923,7 @@ const CrisisDataDashboard = ({
                                                 </Button>
                                             </div>
                                         </div>
-                                        <p className="text-xs sm:text-sm text-slate-600 mt-5 mb-0 sm:mt-2 sm:mb-0 h-0">
+                                        <p className="text-xs sm:text-sm text-slate-600 mt-5 -mb-6 sm:mt-2 sm:-mb-7">
                                             {getFilterDescription()}
                                         </p>
                                     </CardContent>
