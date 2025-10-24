@@ -331,7 +331,7 @@ export default function ProjectModal({ project, allOrganizations, loading }: Pro
                 onTouchEnd={onTouchEnd}
             >
                 {/* Header - Sticky at top during scroll */}
-                <div className={`px-6 sm:px-8 pt-4 sm:pt-6 pb-2 sm:pb-3 border-b border-gray-300 ${project ? 'sticky top-0 bg-white z-10' : ''}`}>
+                <div className={`px-6 sm:px-8 pt-4 sm:pt-6 pb-4 sm:pb-5 border-b border-gray-300 ${project ? 'sticky top-0 bg-white z-10' : ''}`}>
                     {renderHeader()}
                 </div>
 
