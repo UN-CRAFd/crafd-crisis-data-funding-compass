@@ -19,6 +19,7 @@ import {
 import { Input } from '@/components/ui/input';
 import { TooltipContent, TooltipProvider, TooltipTrigger, Tooltip as TooltipUI } from '@/components/ui/tooltip';
 import labels from '@/config/labels.json';
+import { getIconForInvestmentType } from '@/config/investmentTypeIcons';
 import { Building2, ChevronDown, ChevronRight, Database, DatabaseBackup, FileDown, Filter, FolderDot, FolderOpenDot, Globe, Info, MessageCircle, RotateCcw, Search, Share2 } from 'lucide-react';
 import organizationsTableRaw from '../../public/data/organizations-table.json';
 import { buildOrgDonorCountriesMap, buildOrgProjectsMap, buildProjectNameMap, calculateOrganizationTypesFromOrganizationsWithProjects, getNestedOrganizationsForModals } from '../lib/data';
@@ -865,6 +866,9 @@ const CrisisDataDashboard = ({
                                                                 ? labels.investmentTypes[typeKey as keyof typeof labels.investmentTypes]
                                                                 : type;
 
+                                                            // Get the icon for this type
+                                                            const IconComponent = getIconForInvestmentType(displayName);
+
                                                             // Normalize comparison: check if any investmentType matches this type (case-insensitive)
                                                             const isChecked = investmentTypes.some(selected =>
                                                                 selected.toLowerCase().trim() === type.toLowerCase().trim()
@@ -893,7 +897,10 @@ const CrisisDataDashboard = ({
                                                                     onSelect={(e) => e.preventDefault()}
                                                                     className="cursor-pointer"
                                                                 >
-                                                                    {displayName}
+                                                                    <div className="flex items-center gap-2">
+                                                                        <IconComponent className="w-4 h-4" />
+                                                                        <span>{displayName}</span>
+                                                                    </div>
                                                                 </DropdownMenuCheckboxItem>
                                                             );
                                                         })}
