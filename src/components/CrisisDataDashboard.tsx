@@ -155,7 +155,7 @@ const StatCard = React.memo(function StatCard({ icon, title, value, label, color
                     <TooltipContent
                         side="bottom"
                         align="center"
-                        className="animate-none max-w-100 p-3 bg-white text-slate-800 text-sm rounded-lg border border-slate-200"
+                        className="max-w-100 p-3 bg-white text-slate-800 text-sm rounded-lg border border-slate-200"
                         sideOffset={5}
                         avoidCollisions={true}
                         style={{ ...STYLES.chartTooltip }}
@@ -185,6 +185,7 @@ const Badge = ({ text, variant }: BadgeProps) => {
         indigo: 'bg-[var(--badge-other-bg)] text-[var(--badge-other-text)] font-semibold',
         types: 'bg-green-50 text-green-700',
         slate: 'bg-[var(--badge-slate-bg)] text-[var(--badge-slate-text)]',
+        slate2: 'text-[var(--badge-slate-bg)] bg-[var(--badge-slate-text)]',
         highlighted: 'bg-[var(--brand-primary)]/20 text-[var(--brand-primary)] border border-[var(--brand-border)] font-semibold',
         beta: '' // Will use inline styles
     };
@@ -999,7 +1000,7 @@ const CrisisDataDashboard = ({
                                                                                     });
                                                                                     const orgType = orgTableMatch?.fields['Org Type'] as string | undefined;
                                                                                     return orgType ? (
-                                                                                        <div className="hidden sm:inline-flex items-center px-1.5 py-px rounded text-[11px] font-medium text-slate-500 bg-transparent border border-slate-200 whitespace-nowrap flex-shrink-0">
+                                                                                        <div className="sm:inline-flex items-center px-1.5 py-px rounded text-[11px] font-medium text-slate-500 bg-transparent border border-slate-200 whitespace-nowrap flex-shrink-0">
                                                                                             {orgType}
                                                                                         </div>
                                                                                     ) : null;
