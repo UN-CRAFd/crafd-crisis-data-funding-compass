@@ -957,7 +957,7 @@ const CrisisDataDashboard = ({
                                                             <CollapsibleTrigger
                                                                 className="w-full"
                                                             >
-                                                                <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between p-3 sm:p-4 hover:bg-slate-50/70 rounded-lg border border-slate-200 bg-slate-50/30 animate-in fade-in gap-3 sm:gap-0">
+                                                                <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between p-3 sm:p-4 hover:bg-slate-50/70 rounded-lg border border-slate-200 bg-slate-50/30 animate-in fade-in gap-3 sm:gap-0 cursor-pointer">
                                                                     <div className="flex items-center space-x-3 flex-1">
                                                                         <div className="w-4 h-4 flex-shrink-0 flex items-center justify-center"> {/* Fixed size container with centering */}
                                                                             {hasProjects ? (
