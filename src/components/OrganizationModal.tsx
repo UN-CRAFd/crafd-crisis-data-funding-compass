@@ -149,18 +149,16 @@ export default function OrganizationModal({
     const renderHeader = () => {
         if (loading) {
             return (
-                <div className="flex items-center justify-between">
+                <div className="flex items-center">
                     <div className="h-6 bg-gray-200 rounded w-48 animate-pulse flex-1 mr-4"></div>
-                    <CloseButton onClick={handleClose} />
                 </div>
             );
         }
 
         if (!organization) {
             return (
-                <div className="flex items-center justify-between">
+                <div className="flex items-center">
                     <h2 className="text-lg sm:text-xl font-semibold text-gray-900 flex-1 pr-4">Organization Not Found</h2>
-                    <CloseButton onClick={handleClose} />
                 </div>
             );
         }
@@ -171,15 +169,12 @@ export default function OrganizationModal({
             || organization.id;
 
         return (
-            <div className="flex items-center justify-between gap-8">
+            <div className="flex items-center gap-3 pr-16">
                 {/* Main title with icon - Responsive sizing */}
-                <div className="flex items-center gap-3">
-                    <Building2 className="h-6 w-6 sm:h-7 sm:w-7 text-[#333333] shrink-0" />
-                    <h2 className="text-lg sm:text-xl md:text-xl lg:text-2xl font-bold text-[#333333] leading-tight font-roboto">
-                        {displayName}
-                    </h2>
-                </div>
-                <CloseButton onClick={handleClose} />
+                <Building2 className="h-6 w-6 sm:h-7 sm:w-7 text-[#333333] shrink-0" />
+                <h2 className="text-lg sm:text-xl md:text-xl lg:text-2xl font-bold text-[#333333] leading-tight font-roboto">
+                    {displayName}
+                </h2>
             </div>
         );
     };
@@ -454,13 +449,16 @@ export default function OrganizationModal({
         >
             <div
                 ref={modalRef}
-                className={`w-full sm:w-3/5 md:w-[45%] lg:w-[37%] xl:w-[29%] sm:min-w-[435px] lg:min-w-[500px] xl:min-w-[550px] h-full bg-white shadow-2xl transition-transform duration-300 ease-out flex flex-col ${isVisible && !isClosing ? 'translate-x-0' : 'translate-x-full'}`}
+                className={`relative w-full sm:w-3/5 md:w-[45%] lg:w-[37%] xl:w-[29%] sm:min-w-[435px] lg:min-w-[500px] xl:min-w-[550px] h-full bg-white shadow-2xl transition-transform duration-300 ease-out flex flex-col ${isVisible && !isClosing ? 'translate-x-0' : 'translate-x-full'}`}
                 onTouchStart={onTouchStart}
                 onTouchMove={onTouchMove}
                 onTouchEnd={onTouchEnd}
             >
+                {/* Close Button - Absolutely positioned */}
+                <CloseButton onClick={handleClose} />
+                
                 {/* Header */}
-                <div className={`px-6 sm:px-8 pt-4 sm:pt-6 pb-2 sm:pb-3 border-b border-gray-300 shrink-0 ${organization ? 'bg-white' : ''}`}>
+                <div className={`px-6 sm:px-8 pt-4 sm:pt-6 pb-4 sm:pb-5 border-b border-gray-300 shrink-0 ${organization ? 'bg-white' : ''}`}>
                     {renderHeader()}
                 </div>
 
