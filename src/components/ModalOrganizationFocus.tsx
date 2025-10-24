@@ -1,4 +1,5 @@
 import React from 'react';
+import { getIconForInvestmentType } from '@/config/investmentTypeIcons';
 
 interface ModalOrganizationFocusProps {
     projects: Array<{
@@ -33,27 +34,31 @@ const ModalOrganizationFocus: React.FC<ModalOrganizationFocusProps> = ({ project
         <div className="mt-4">
             <SubHeader>Organization Focus</SubHeader>
             <div className="flex flex-wrap gap-2">
-                {investmentTypeCounts.map(({ type, count }) => (
-                    <span
-                        key={type}
-                        className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-md text-sm font-semibold"
-                        style={{
-                            backgroundColor: 'var(--badge-other-bg)',
-                            color: 'var(--badge-other-text)'
-                        }}
-                    >
-                        <span>{type}</span>
-                        <span 
-                            className="inline-flex items-center justify-center w-5 h-5 text-xs font-bold rounded-full"
+                {investmentTypeCounts.map(({ type, count }) => {
+                    const IconComponent = getIconForInvestmentType(type);
+                    return (
+                        <span
+                            key={type}
+                            className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-md text-sm font-semibold"
                             style={{
-                                backgroundColor: 'var(--badge-other-text)',
-                                color: 'var(--badge-other-bg)'
+                                backgroundColor: 'var(--badge-other-bg)',
+                                color: 'var(--badge-other-text)'
                             }}
                         >
-                            {count}
+                            <IconComponent className="w-4 h-4" />
+                            <span>{type}</span>
+                            <span 
+                                className="inline-flex items-center justify-center w-5 h-5 text-xs font-bold rounded-full"
+                                style={{
+                                    backgroundColor: 'var(--badge-other-text)',
+                                    color: 'var(--badge-other-bg)'
+                                }}
+                            >
+                                {count}
+                            </span>
                         </span>
-                    </span>
-                ))}
+                    );
+                })}
             </div>
         </div>
     );
