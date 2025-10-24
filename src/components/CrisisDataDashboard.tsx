@@ -1178,6 +1178,33 @@ const CrisisDataDashboard = ({
                         {/* Right Column - Charts */}
                         <div className="space-y-4 sm:space-y-[var(--spacing-section)]">
 
+                            {/* Co-financing donors chart - only show when donors are selected */}
+                            <div
+                                className={`transition-all duration-1200 ease-in-out ${
+                                    combinedDonors.length > 0
+                                        ? 'opacity-100 max-h-[1000px] mb-6'
+                                        : 'opacity-0 max-h-0 overflow-hidden mb-0'
+                                }`}
+                            >
+                                <ChartCard
+                                    title={labels.sections.donorCount}
+                                    icon={<Globe className="text-slate-600" />}
+                                    data={topDonors}
+                                    barColor="var(--brand-primary-lighter)"
+                                    footnote={
+                                        combinedDonors.length > 0
+                                            ? `Showing ${topDonors.length} donor${topDonors.length === 1 ? '' : 's'} co-financing the most organizations together with ${
+                                                combinedDonors.length === 1
+                                                    ? combinedDonors[0]
+                                                    : combinedDonors.length === 2
+                                                    ? `${combinedDonors[0]} & ${combinedDonors[1]}`
+                                                    : `${combinedDonors.slice(0, -1).join(', ')} & ${combinedDonors[combinedDonors.length - 1]}`
+                                            }`
+                                            : `Showing ${topDonors.length} donor${topDonors.length === 1 ? '' : 's'} funding the most organizations in the current view`
+                                    }
+                                />
+                            </div>
+
                             <ChartCard
                                 title={labels.sections.organizationTypes}
                                 icon={<Building2 className="text-slate-600" />}
@@ -1191,23 +1218,7 @@ const CrisisDataDashboard = ({
                                 barColor="var(--brand-primary-lighter)"
                                 footnote={labels.ui.chartFootnote}
                             />
-                            <ChartCard
-                                title={labels.sections.donorCount}
-                                icon={<Globe className="text-slate-600" />}
-                                data={topDonors}
-                                barColor="var(--brand-primary-lighter)"
-                                footnote={
-                                    combinedDonors.length > 0
-                                        ? `Showing ${topDonors.length} donor${topDonors.length === 1 ? '' : 's'} co-financing the most organizations together with ${
-                                            combinedDonors.length === 1
-                                                ? combinedDonors[0]
-                                                : combinedDonors.length === 2
-                                                ? `${combinedDonors[0]} & ${combinedDonors[1]}`
-                                                : `${combinedDonors.slice(0, -1).join(', ')} & ${combinedDonors[combinedDonors.length - 1]}`
-                                        }`
-                                        : `Showing ${topDonors.length} donor${topDonors.length === 1 ? '' : 's'} funding the most organizations in the current view`
-                                }
-                            />
+                           
                         </div>
                     </div>
                 </div>
