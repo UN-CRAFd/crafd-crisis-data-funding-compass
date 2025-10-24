@@ -1232,26 +1232,6 @@
     }
   },
   {
-    "id": "recIfMPpdyRhpBXD0",
-    "fields": {
-      "Project/Product Name": "System for Mine Action Reporting and Tracking (SMART)",
-      "product_key": "smart-mineaction",
-      "Provider Orgs Full Name": [
-        "recfMWBZ4Di5d2bjs"
-      ],
-      "CRAF’d-Funded Project?": "NO",
-      "Investment Type(s)": [
-        "Infrastructure & Platforms",
-        "Standards & Coordination"
-      ],
-      "Investment Theme(s)": [
-        "Disarmament Data"
-      ],
-      "Project Website": "https://immap.org/story/immap-developed-system-contributes-to-improving-data-collection-and-analysis-for-unmas-iraq/",
-      "Project Description": "SMART provides standardized data tools and dashboards for tracking mine action and explosive hazard removal operations—used to coordinate clearance and inform safety efforts.\n"
-    }
-  },
-  {
     "id": "recJQghyXlyK5WiCE",
     "fields": {
       "Project/Product Name": "The State of the World’s Children Report",
@@ -1521,29 +1501,6 @@
         "recqSvUlZQjET4fCH",
         "recYVizktLnxQPeKH"
       ]
-    }
-  },
-  {
-    "id": "recOfj0kk5iKOrHE4",
-    "fields": {
-      "Project/Product Name": "Compass",
-      "product_key": "compass",
-      "Provider Orgs Full Name": [
-        "recfMWBZ4Di5d2bjs"
-      ],
-      "CRAF’d-Funded Project?": "NO",
-      "Investment Type(s)": [
-        "Infrastructure & Platforms",
-        "Crisis Analytics & Insights",
-        "Learning & Exchange"
-      ],
-      "Investment Theme(s)": [
-        "Geospatial Data",
-        "Geographic Information Systems (GIS)",
-        "Monitoring & Alerts"
-      ],
-      "Project Website": "No website",
-      "Project Description": "COMPASS by the International Institute of Statistical Sciences provides tools and guidance to design robust data and evidence systems—often in support of countries implementing SDG-aligned data reforms.\n"
     }
   },
   {
@@ -3580,32 +3537,6 @@
     }
   },
   {
-    "id": "recwhJzb0ZRPL3F0A",
-    "fields": {
-      "Project/Product Name": "River Basin Monitoring System",
-      "product_key": "river-basin-monitoring-system",
-      "Provider Orgs Full Name": [
-        "recfMWBZ4Di5d2bjs",
-        "rec9NauCCUPUWMwfl"
-      ],
-      "CRAF’d-Funded Project?": "NO",
-      "Investment Type(s)": [
-        "Crisis Analytics & Insights"
-      ],
-      "Investment Theme(s)": [
-        "Geospatial Data",
-        "Monitoring & Alerts",
-        "Climate Data",
-        "Environmental Data"
-      ],
-      "Project Website": "https://3is.org/wp-content/uploads/2025/03/3iS_2023_Snapshot_Iraq_UNDP_ENG-2.pdf",
-      "Project Description": "A geospatial data and dashboard platform tracking river basin metrics—e.g., water levels and watershed health—to support sustainable water governance and transboundary resource management.\n",
-      "Project Donor Agencies": [
-        "recYxlC8x9puB69tx"
-      ]
-    }
-  },
-  {
     "id": "recwpLBPiqgZWOXyn",
     "fields": {
       "Project/Product Name": "IMPACT Resource Centre",
@@ -3868,27 +3799,6 @@
         "rec0sY1I5JZz6ZsUE",
         "recAXDKxEbXsaHav4"
       ]
-    }
-  },
-  {
-    "id": "reczyv8I05ihUAyML",
-    "fields": {
-      "Project/Product Name": "LATAM Geospatial Data Center",
-      "product_key": "latam-geospatial-data-center",
-      "Provider Orgs Full Name": [
-        "recfMWBZ4Di5d2bjs"
-      ],
-      "CRAF’d-Funded Project?": "NO",
-      "Investment Type(s)": [
-        "Data Sets & Commons",
-        "Infrastructure & Platforms",
-        "Learning & Exchange"
-      ],
-      "Investment Theme(s)": [
-        "Geospatial Data"
-      ],
-      "Project Website": "https://csdc.latam.3is.org/#/",
-      "Project Description": "This regional data hub offers open geospatial datasets and dashboards to support urban planning, migration tracking, and climate risk analysis across Latin America.\n"
     }
   }
 ]
