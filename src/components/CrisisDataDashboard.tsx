@@ -5,6 +5,7 @@ import React, { useEffect, useMemo, useState } from 'react';
 import ChartCard from '@/components/ChartCard';
 import OrganizationModal from '@/components/OrganizationModal';
 import ProjectModal from '@/components/ProjectModal';
+import SurveyBanner from '@/components/SurveyBanner';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { Collapsible, CollapsibleContent, CollapsibleTrigger } from '@/components/ui/collapsible';
@@ -609,6 +610,9 @@ const CrisisDataDashboard = ({
             {/* Main Content - Add top padding to account for fixed header */}
             <div className="max-w-[82rem] mx-auto px-4 sm:px-6 lg:px-8 py-4 sm:py-6 pt-20 sm:pt-24">
                 <div className="space-y-4 sm:space-y-[var(--spacing-section)]">
+
+                    {/* Survey Banner */}
+                    <SurveyBanner />
 
                     {/* Statistics Cards */}
                     <div className="sm:hidden">
