@@ -602,7 +602,7 @@ const CrisisDataDashboard = ({
                                 size="sm"
                                 onClick={handleShare}
                                 className={`bg-slate-50/50 border-slate-200 hover:var(--brand-bg-light) hover:border-[var(--brand-primary)] hover:text-[var(--brand-primary)] text-xs sm:text-sm ${shareSuccess
-                                    ? 'text-white border-[var(--color-success)]'
+                                    ? 'text-white border-[var(--color-success)] bg-[var(--color-success)] hover:bg-[var(--color-success-hover)] hover:text-slate-100 hover:border-[var(--color-success-hover)]'
                                     : 'hover:var(--brand-bg-light)'
                                     }`}
                                 style={shareSuccess ? { backgroundColor: 'var(--color-success)' } : {}}
