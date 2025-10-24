@@ -14,3 +14,5 @@
 - the site is deployed to Vercel
 - use context7
     - for Next.js, Tailwind CSS, shadcn UI, React, etc.
+- you can assume that `npm run dev` is usually already running
+- you can use Playwright MCP to take a look at the website

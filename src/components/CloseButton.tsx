@@ -5,14 +5,15 @@ import { X } from 'lucide-react';
 interface CloseButtonProps {
     onClick: () => void;
     className?: string;
+    absolute?: boolean;
 }
 
-export default function CloseButton({ onClick, className = "" }: CloseButtonProps) {
+export default function CloseButton({ onClick, className = "", absolute = true }: CloseButtonProps) {
     return (
         <button
             onClick={onClick}
             className={`
-                absolute top-4 right-4 z-50
+                ${absolute ? 'absolute top-4 right-4 z-50' : ''}
                 flex items-center justify-center gap-2 h-12 w-12 sm:h-10 sm:w-auto sm:px-4 rounded-full sm:rounded-lg
                 transition-all duration-200 ease-out touch-manipulation
                 text-white bg-slate-600 hover:bg-slate-700 sm:text-gray-600 sm:bg-gray-200 sm:hover:bg-gray-400 sm:hover:text-gray-100 cursor-pointer
