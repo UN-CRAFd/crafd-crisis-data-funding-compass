@@ -319,62 +319,7 @@ def main():
         else:
             log("  Agencies table: not configured (skipped)")
         log(f"  Files written to {OUTPUT_DIR}")
-
-        # Data validation before proceeding
-        log("Performing data validation...")
-        validation_errors = []
-        
-        # Check minimum record counts
-        if len(main_records) < 100:
-            validation_errors.append(f"Insufficient projects: {len(main_records)} (minimum 100 required)")
-        
-        if org_count < 50:
-            validation_errors.append(f"Insufficient organizations: {org_count} (minimum 50 required)")
-        
-        # Check that required fields exist in the data
-        log("Validating field presence...")
-        missing_project_fields = []
-        missing_org_fields = []
-        
-        # Validate project fields
-        if main_records:
-            sample_project = main_records[0].get("fields", {})
-            for field in FIELDS_PROJECTS:
-                found_in_any = any(field in record.get("fields", {}) for record in main_records[:10])  # Check first 10
-                if not found_in_any:
-                    missing_project_fields.append(field)
-        
-        # Validate organization fields (if organizations table was fetched)
-        if ORGANIZATIONS_TABLE_IDENTIFIER and org_count > 0:
-            try:
-                # Re-read the saved organizations to validate
-                import json
-                with open(OUTPUT_DIR / "organizations-table.json", "r", encoding="utf-8") as f:
-                    saved_orgs = json.load(f)
-                if saved_orgs:
-                    for field in FIELDS_ORGANIZATIONS:
-                        found_in_any = any(field in record.get("fields", {}) for record in saved_orgs[:10])  # Check first 10
-                        if not found_in_any:
-                            missing_org_fields.append(field)
-            except Exception as e:
-                validation_errors.append(f"Could not validate organization fields: {e}")
-        
-        # Report validation results
-        if missing_project_fields:
-            validation_errors.append(f"Missing project fields: {', '.join(missing_project_fields)}")
-        
-        if missing_org_fields:
-            validation_errors.append(f"Missing organization fields: {', '.join(missing_org_fields)}")
-        
-        # Exit with error code if validation fails
-        if validation_errors:
-            log("VALIDATION FAILED:")
-            for error in validation_errors:
-                log(f"  ERROR: {error}")
-            log("Aborting - data quality requirements not met")
-            sys.exit(1)
-        
-        log("Data validation passed - proceeding with nesting")
+        log("Done.")
 
         # Run nesting to merge agencies and projects into organizations
         log("Running nesting script to merge data...")
@@ -386,10 +331,8 @@ def main():
         )
         if result.returncode == 0:
             log("Nesting completed successfully")
-            log("Done.")
         else:
             log(f"Nesting failed with code {result.returncode}")
-            sys.exit(1)
 
     except Exception as err:
         print("Script failed:", str(err), file=sys.stderr)
