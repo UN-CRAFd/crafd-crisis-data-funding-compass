@@ -11,7 +11,11 @@ import "./globals.css";
 export const metadata: Metadata = {
     title: "Crisis Data Funding Compass",
     description: "Dashboard for exploring crisis data funding and provider organizations",
+    icons: {
+        icon: "https://images.squarespace-cdn.com/content/v1/60df58f306c9b647835feb69/0ff64a86-21ab-4e14-82c8-17030f69be1f/favicon.ico?format=100w",
+    },
 };
+
 
 export default function RootLayout({
     children,
