@@ -31,28 +31,12 @@ jobs:
           AIRTABLE_TABLE_ID_AGENCIES: ${{ secrets.AIRTABLE_TABLE_ID_AGENCIES }}
           AIRTABLE_TABLE_ID_ORGANIZATIONS: ${{ secrets.AIRTABLE_TABLE_ID_ORGANIZATIONS }}
           AIRTABLE_TABLE_ID_PROJECTS: ${{ secrets.AIRTABLE_TABLE_ID_PROJECTS }}
-        run: |
-          echo "Starting data fetch with validation..."
-          uv run python scripts/fetch-airtable.py
-          echo "✅ Data validation passed - ready to commit"
+        run: uv run python scripts/fetch-airtable.py
 
-      - name: Commit and push validated changes
+      - name: Commit and push changes
         run: |
           git config --global user.name "github-actions[bot]"
           git config --global user.email "github-actions[bot]@users.noreply.github.com"
-          git add public/data/
-          if git diff --staged --quiet; then
-            echo "No data changes detected - skipping commit"
-          else
-            echo "Data changes detected - committing..."
-            git commit -m "Automated data update: Refresh entities data [GitHub Actions]
-
-            ✅ Data validation passed:
-            - Minimum 100 projects verified
-            - Minimum 50 organizations verified  
-            - All required fields present
-            
-            Generated: $(date -u '+%Y-%m-%d %H:%M:%S UTC')"
-            git push
-            echo "✅ Data successfully updated and pushed"
-          fi
+          git add .
+          git commit -m "Automated data update: Refresh entities data [GitHub Actions]" || exit 0
+          git push
