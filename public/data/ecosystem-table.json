@@ -1,7 +1,6 @@
 [
   {
     "id": "rec04lJaB92fTs0JH",
-    "createdTime": "2025-07-03T18:31:32.000Z",
     "fields": {
       "Project/Product Name": "Field Mapping Tasking Manager (FMTM)",
       "product_key": "fmtm",
@@ -21,7 +20,6 @@
   },
   {
     "id": "rec0u1ul8iu7Yvbys",
-    "createdTime": "2025-03-24T18:43:59.000Z",
     "fields": {
       "Project/Product Name": "Health Indicators Data",
       "product_key": "who-health-indicators",
@@ -44,7 +42,6 @@
   },
   {
     "id": "rec22kfYpoIsldmEK",
-    "createdTime": "2025-03-24T19:04:34.000Z",
     "fields": {
       "Project/Product Name": "Data Entry and Exploration Platform (DEEP)",
       "product_key": "deep",
@@ -70,7 +67,6 @@
   },
   {
     "id": "rec24cVLtWAWZB6gx",
-    "createdTime": "2025-03-24T18:22:52.000Z",
     "fields": {
       "Project/Product Name": "Fragility, Conflict, and Violence (FCV) Data",
       "product_key": "wb-fcv",
@@ -91,7 +87,6 @@
   },
   {
     "id": "rec28WeSKDEQ5wx45",
-    "createdTime": "2025-04-24T15:27:29.000Z",
     "fields": {
       "Project/Product Name": "Global Displacement Forecast",
       "product_key": "global-displacement-forecast",
@@ -116,7 +111,6 @@
   },
   {
     "id": "rec2Su6C7bHl4BC7h",
-    "createdTime": "2025-04-15T19:24:40.000Z",
     "fields": {
       "Project/Product Name": "QGIS",
       "product_key": "qgis",
@@ -137,7 +131,6 @@
   },
   {
     "id": "rec2eT5BuCp87chHm",
-    "createdTime": "2025-03-21T19:10:18.000Z",
     "fields": {
       "Project/Product Name": "Humanitarian Data Dashboard",
       "product_key": "inso-humanitarian-data-dashboard",
@@ -159,7 +152,6 @@
   },
   {
     "id": "rec3SUNKdqZWbEktL",
-    "createdTime": "2025-03-24T15:58:31.000Z",
     "fields": {
       "Project/Product Name": "Subnational Population Statistics",
       "product_key": "unfpa-subpop-stats",
@@ -179,7 +171,6 @@
   },
   {
     "id": "rec3t3TGt2tAmzl5B",
-    "createdTime": "2025-03-24T18:41:28.000Z",
     "fields": {
       "Project/Product Name": "Global Health Observatory (GHO)",
       "product_key": "gho",
@@ -200,7 +191,6 @@
   },
   {
     "id": "rec3xc850SaSrqS7t",
-    "createdTime": "2025-03-21T18:37:17.000Z",
     "fields": {
       "Project/Product Name": "Administrative Areas Data",
       "product_key": "admin-areas",
@@ -220,7 +210,6 @@
   },
   {
     "id": "rec45gS90ejbQe8V3",
-    "createdTime": "2025-06-27T22:23:30.000Z",
     "fields": {
       "Project/Product Name": "PARIS21 Academy",
       "product_key": "paris21-academy",
@@ -243,7 +232,6 @@
   },
   {
     "id": "rec4NnFipAOHwTXCX",
-    "createdTime": "2025-03-21T16:08:21.000Z",
     "fields": {
       "Project/Product Name": "Internal Displacement Updates (IDU)",
       "product_key": "idu",
@@ -274,7 +262,6 @@
   },
   {
     "id": "rec4SqufwyxLeeDM4",
-    "createdTime": "2025-03-21T18:35:59.000Z",
     "fields": {
       "Project/Product Name": "Rainfall Indicators",
       "product_key": "wfp-rainfall-indicators",
@@ -296,7 +283,6 @@
   },
   {
     "id": "rec4V0tKy9KP8Gw4h",
-    "createdTime": "2025-03-24T01:25:05.000Z",
     "fields": {
       "Project/Product Name": "Multi-Sector Needs Assessment (MSNA)",
       "product_key": "unhcr-msna",
@@ -316,7 +302,6 @@
   },
   {
     "id": "rec4XuZsotMgaVbAm",
-    "createdTime": "2025-03-25T17:14:07.000Z",
     "fields": {
       "Project/Product Name": "INFORM Severity",
       "product_key": "inform-severity",
@@ -338,7 +323,6 @@
   },
   {
     "id": "rec4aulcundpJZOwl",
-    "createdTime": "2025-03-25T19:30:04.000Z",
     "fields": {
       "Project/Product Name": "CrisisWatch",
       "product_key": "crisiswatch",
@@ -372,7 +356,6 @@
   },
   {
     "id": "rec4oWGeToxciytv3",
-    "createdTime": "2025-07-08T14:05:39.000Z",
     "fields": {
       "Project/Product Name": "World Weather Information Service (WWIS)",
       "product_key": "wwis",
@@ -393,7 +376,6 @@
   },
   {
     "id": "rec4x8zaZtHkZpdrK",
-    "createdTime": "2025-03-24T02:01:15.000Z",
     "fields": {
       "Project/Product Name": "WASH Knowledge, Attitudes and Practices (KAP) Survey",
       "product_key": "wash-kap-survey",
@@ -414,7 +396,6 @@
   },
   {
     "id": "rec5GA5F1UPlXATSj",
-    "createdTime": "2025-07-22T10:55:30.000Z",
     "fields": {
       "Project/Product Name": "Global Disaster Preparedness Center (GDPC)",
       "product_key": "gdpc",
@@ -437,7 +418,6 @@
   },
   {
     "id": "rec5XxteXiqc3vvmj",
-    "createdTime": "2025-04-14T20:41:02.000Z",
     "fields": {
       "Project/Product Name": "UN Register of Conventional Arms (ROCA)",
       "product_key": "unoda-roca",
@@ -457,7 +437,6 @@
   },
   {
     "id": "rec5zVtFYWKUXASIr",
-    "createdTime": "2025-10-21T17:02:22.000Z",
     "fields": {
       "Project/Product Name": "Gannet AI",
       "product_key": "gannet-ai",
@@ -477,7 +456,6 @@
   },
   {
     "id": "rec6S0tX5hnP9I5DG",
-    "createdTime": "2025-07-29T14:46:25.000Z",
     "fields": {
       "Project/Product Name": "WorldPop",
       "product_key": "worldpop",
@@ -511,7 +489,6 @@
   },
   {
     "id": "rec6dmVAye6IslJOK",
-    "createdTime": "2025-03-21T18:33:03.000Z",
     "fields": {
       "Project/Product Name": "HungerMapLIVE",
       "product_key": "wfp-hungermap",
@@ -532,7 +509,6 @@
   },
   {
     "id": "rec6rg7iVHuTnkQVe",
-    "createdTime": "2025-03-24T18:56:17.000Z",
     "fields": {
       "Project/Product Name": "Global Database of Humanitarian Organisations (GDHO)",
       "product_key": "gdho",
@@ -552,7 +528,6 @@
   },
   {
     "id": "rec795N2KXfgxaM50",
-    "createdTime": "2025-03-24T19:34:34.000Z",
     "fields": {
       "Project/Product Name": "Enhanced Vulnerability and Capacity Assessment (EVCA)",
       "product_key": "evca",
@@ -573,7 +548,6 @@
   },
   {
     "id": "rec7HiwptaxnhVxui",
-    "createdTime": "2025-04-01T13:53:55.000Z",
     "fields": {
       "Project/Product Name": "Afrobarometer",
       "product_key": "afrobarometer",
@@ -602,7 +576,6 @@
   },
   {
     "id": "rec8taCKOmbZu5s4Z",
-    "createdTime": "2025-08-28T16:32:55.000Z",
     "fields": {
       "Project/Product Name": "Global Repository of Good Practices",
       "product_key": "idmc-good-practices-repo",
@@ -624,7 +597,6 @@
   },
   {
     "id": "rec8wR515Mvu0YGx0",
-    "createdTime": "2025-07-08T02:10:42.000Z",
     "fields": {
       "Project/Product Name": "Rivers and Streams Data",
       "product_key": "nasa-river-streams-data",
@@ -647,7 +619,6 @@
   },
   {
     "id": "rec96xC14xTkyyKlP",
-    "createdTime": "2025-03-24T14:47:51.000Z",
     "fields": {
       "Project/Product Name": "Common Operational Datasets (CODs)",
       "product_key": "cods",
@@ -669,7 +640,6 @@
   },
   {
     "id": "rec9HIhsIpPjx48rc",
-    "createdTime": "2025-06-27T22:20:20.000Z",
     "fields": {
       "Project/Product Name": "DisasterAWARE",
       "product_key": "disaster-aware",
@@ -692,7 +662,6 @@
   },
   {
     "id": "rec9ZvuALWuRRSN5P",
-    "createdTime": "2025-03-24T15:43:43.000Z",
     "fields": {
       "Project/Product Name": "Administrative Boundaries Data (COD-AB)",
       "product_key": "cod-ab",
@@ -713,7 +682,6 @@
   },
   {
     "id": "rec9tb7ISjeo7Sq78",
-    "createdTime": "2025-08-15T14:50:51.000Z",
     "fields": {
       "Project/Product Name": " Rapid Assessment Data",
       "product_key": "rapid-assessment-data",
@@ -734,7 +702,6 @@
   },
   {
     "id": "recAAFwdCWrOgQGWL",
-    "createdTime": "2025-03-24T02:20:25.000Z",
     "fields": {
       "Project/Product Name": "Multiple Indicator Cluster Surveys (MICS)",
       "product_key": "unicef-mics",
@@ -755,7 +722,6 @@
   },
   {
     "id": "recAeviz1XjLC8V6i",
-    "createdTime": "2025-07-22T11:21:51.000Z",
     "fields": {
       "Project/Product Name": "United Nations Satellite Centre (UNOSAT)",
       "product_key": "unosat",
@@ -782,7 +748,6 @@
   },
   {
     "id": "recAmBwUrrYDMtXtH",
-    "createdTime": "2025-04-24T22:06:58.000Z",
     "fields": {
       "Project/Product Name": "Global Humanitarian Operational Presence Who, What, Where (3W) Portal",
       "product_key": "ocha-3w",
@@ -804,7 +769,6 @@
   },
   {
     "id": "recCGWvmunEXVzpzw",
-    "createdTime": "2025-04-01T15:53:42.000Z",
     "fields": {
       "Project/Product Name": "Latinobarómetro",
       "product_key": "latinobarometro",
@@ -832,7 +796,6 @@
   },
   {
     "id": "recCrLYQFMbrPxsId",
-    "createdTime": "2025-03-24T18:51:15.000Z",
     "fields": {
       "Project/Product Name": "Observatory of Killed Journalists",
       "product_key": "unesco-okj",
@@ -852,7 +815,6 @@
   },
   {
     "id": "recD0o9DgLleR3ctz",
-    "createdTime": "2025-07-24T21:38:40.000Z",
     "fields": {
       "Project/Product Name": "Geoportal",
       "product_key": "geoportal",
@@ -876,7 +838,6 @@
   },
   {
     "id": "recD1auVM61iln620",
-    "createdTime": "2025-03-24T15:45:21.000Z",
     "fields": {
       "Project/Product Name": "Population Data Portal",
       "product_key": "unfpa-popdata-portal",
@@ -897,7 +858,6 @@
   },
   {
     "id": "recEKzVdOqCJVhqrg",
-    "createdTime": "2025-03-25T19:58:02.000Z",
     "fields": {
       "Project/Product Name": "PRIMARI",
       "product_key": "iom-primari",
@@ -920,7 +880,6 @@
   },
   {
     "id": "recEf0pdKsN1Gbvo8",
-    "createdTime": "2025-06-23T16:50:33.000Z",
     "fields": {
       "Project/Product Name": "Humanitarian Geoanalytics",
       "product_key": "hhi-humgeo",
@@ -943,7 +902,6 @@
   },
   {
     "id": "recEuWdBixgTpQKhR",
-    "createdTime": "2025-07-22T10:59:38.000Z",
     "fields": {
       "Project/Product Name": "Heidelberg Institute for Geoinformation Technology (HeiGIT)",
       "product_key": "heigit",
@@ -969,7 +927,6 @@
   },
   {
     "id": "recEwLy3FESOhLeNs",
-    "createdTime": "2025-03-24T19:45:48.000Z",
     "fields": {
       "Project/Product Name": "Global Disaster Alert and Coordination System (GDACS)",
       "product_key": "gdacs",
@@ -995,7 +952,6 @@
   },
   {
     "id": "recF1lTFIy27lMFwT",
-    "createdTime": "2025-03-21T18:28:20.000Z",
     "fields": {
       "Project/Product Name": "Platform for Real-Time Impact and Situation Monitoring (PRISM)",
       "product_key": "wfp-prism",
@@ -1018,7 +974,6 @@
   },
   {
     "id": "recF8bGKczcSVXjRz",
-    "createdTime": "2025-03-24T01:14:22.000Z",
     "fields": {
       "Project/Product Name": "Maps Data",
       "product_key": "hot-maps-data",
@@ -1039,7 +994,6 @@
   },
   {
     "id": "recFF8BskJRz2Lyjk",
-    "createdTime": "2025-03-21T16:08:21.000Z",
     "fields": {
       "Project/Product Name": "Armed Conflict Location & Event Data (ACLED) Dataset & Tools",
       "product_key": "acled",
@@ -1068,7 +1022,6 @@
   },
   {
     "id": "recFN5wUiwxYe6lS9",
-    "createdTime": "2025-03-24T14:43:09.000Z",
     "fields": {
       "Project/Product Name": "Displacement Tracking Matrix (DTM)",
       "product_key": "dtm",
@@ -1088,7 +1041,6 @@
   },
   {
     "id": "recFk4AqE3TR83nNo",
-    "createdTime": "2025-03-27T19:43:50.000Z",
     "fields": {
       "Project/Product Name": "Violence and Impact Early Warning System–People In Need (VIEWS-PIN)",
       "product_key": "views-pin",
@@ -1113,7 +1065,6 @@
   },
   {
     "id": "recFnNCbi5RYJNchr",
-    "createdTime": "2025-07-04T19:56:54.000Z",
     "fields": {
       "Project/Product Name": "MapSwipe Data",
       "product_key": "mapswipe-data",
@@ -1133,7 +1084,6 @@
   },
   {
     "id": "recGG8gTf4t6l8Mue",
-    "createdTime": "2025-06-23T17:16:03.000Z",
     "fields": {
       "Project/Product Name": "Signal Program",
       "product_key": "hhi-signal-program",
@@ -1156,7 +1106,6 @@
   },
   {
     "id": "recGMlI70iaqyTtMo",
-    "createdTime": "2025-06-23T13:43:21.000Z",
     "fields": {
       "Project/Product Name": " Copernicus Climate Change Service (C3S) ",
       "product_key": "c3s",
@@ -1176,7 +1125,6 @@
   },
   {
     "id": "recGVHndBPIvMpuHb",
-    "createdTime": "2025-07-21T18:44:21.000Z",
     "fields": {
       "Project/Product Name": "Data2X",
       "product_key": "data2x",
@@ -1199,7 +1147,6 @@
   },
   {
     "id": "recGoW02CMXhVQ00S",
-    "createdTime": "2025-08-15T14:54:46.000Z",
     "fields": {
       "Project/Product Name": "Kente Threads: Weaving leadership from displacement data",
       "product_key": "kente-leadership",
@@ -1223,7 +1170,6 @@
   },
   {
     "id": "recHVA5VejuaVSohF",
-    "createdTime": "2025-04-15T19:35:30.000Z",
     "fields": {
       "Project/Product Name": "UNHCR Global Data Service (GDS)",
       "product_key": "unhcr-gds",
@@ -1244,7 +1190,6 @@
   },
   {
     "id": "recIUSUS3NNXaMHCQ",
-    "createdTime": "2025-03-24T19:51:08.000Z",
     "fields": {
       "Project/Product Name": "PANDA",
       "product_key": "impact-panda",
@@ -1269,7 +1214,6 @@
   },
   {
     "id": "recIUs7JTe4alrFDs",
-    "createdTime": "2025-04-14T23:50:12.000Z",
     "fields": {
       "Project/Product Name": "World Bank Living Standards Measurement Study (LSMS)",
       "product_key": "wb-lsms",
@@ -1289,7 +1233,6 @@
   },
   {
     "id": "recIfMPpdyRhpBXD0",
-    "createdTime": "2025-04-15T19:14:30.000Z",
     "fields": {
       "Project/Product Name": "System for Mine Action Reporting and Tracking (SMART)",
       "product_key": "smart-mineaction",
@@ -1310,7 +1253,6 @@
   },
   {
     "id": "recJQghyXlyK5WiCE",
-    "createdTime": "2025-03-25T17:44:44.000Z",
     "fields": {
       "Project/Product Name": "The State of the World’s Children Report",
       "product_key": "unicef-sowc-report",
@@ -1334,7 +1276,6 @@
   },
   {
     "id": "recJRVBtpTaiDVmoT",
-    "createdTime": "2025-03-25T17:09:28.000Z",
     "fields": {
       "Project/Product Name": "Population Gridded Dataset",
       "product_key": "popgrid",
@@ -1354,7 +1295,6 @@
   },
   {
     "id": "recJye4S746MWWmW6",
-    "createdTime": "2025-03-24T18:18:18.000Z",
     "fields": {
       "Project/Product Name": "WPDx Platform",
       "product_key": "wpdx-platform",
@@ -1376,7 +1316,6 @@
   },
   {
     "id": "recLA3jRq3bbZRVzu",
-    "createdTime": "2025-10-22T20:55:36.000Z",
     "fields": {
       "Project/Product Name": "CAST | Conflict Alert System",
       "product_key": "cast-alert",
@@ -1400,7 +1339,6 @@
   },
   {
     "id": "recLGd1qlYszSKznz",
-    "createdTime": "2025-03-24T18:56:44.000Z",
     "fields": {
       "Project/Product Name": "Coverage, Operational Reach, and Effectiveness (CORE)",
       "product_key": "core",
@@ -1420,7 +1358,6 @@
   },
   {
     "id": "recLN9L7RGRz4p1zM",
-    "createdTime": "2025-03-24T18:15:14.000Z",
     "fields": {
       "Project/Product Name": "Insecurity Insight",
       "product_key": "insecurity-insight",
@@ -1452,7 +1389,6 @@
   },
   {
     "id": "recLn4QiWGniBsWoe",
-    "createdTime": "2025-03-25T17:14:17.000Z",
     "fields": {
       "Project/Product Name": "INFORM Climate Change",
       "product_key": "inform-climate-change",
@@ -1474,7 +1410,6 @@
   },
   {
     "id": "recLqIa10HXfvELNB",
-    "createdTime": "2025-10-22T21:59:46.000Z",
     "fields": {
       "Project/Product Name": "Online Data Analysis",
       "product_key": "afrobarometer-oda",
@@ -1494,7 +1429,6 @@
   },
   {
     "id": "recNggnBqXIgii2hz",
-    "createdTime": "2025-07-08T00:18:59.000Z",
     "fields": {
       "Project/Product Name": "Epidemic Intelligence from Open Sources (EIOS)",
       "product_key": "eios",
@@ -1517,7 +1451,6 @@
   },
   {
     "id": "recO3RZZ7IEA88GnQ",
-    "createdTime": "2025-08-20T18:05:08.000Z",
     "fields": {
       "Project/Product Name": "Transformative Outcomes: Leveraging Crisis Data in conflict",
       "product_key": "unwomen-transformative-outcomes",
@@ -1543,7 +1476,6 @@
   },
   {
     "id": "recONFtYpO5v2qk7s",
-    "createdTime": "2025-06-23T16:46:48.000Z",
     "fields": {
       "Project/Product Name": "KoboToolbox",
       "product_key": "kobotoolbox",
@@ -1564,7 +1496,6 @@
   },
   {
     "id": "recOOQ5c99vFwz8i8",
-    "createdTime": "2025-07-21T18:23:50.000Z",
     "fields": {
       "Project/Product Name": "DPPA Innovation Cell",
       "product_key": "dppa-innovation-cell",
@@ -1594,7 +1525,6 @@
   },
   {
     "id": "recOfj0kk5iKOrHE4",
-    "createdTime": "2025-04-15T19:20:07.000Z",
     "fields": {
       "Project/Product Name": "Compass",
       "product_key": "compass",
@@ -1618,7 +1548,6 @@
   },
   {
     "id": "recPMQlg07QkflL3i",
-    "createdTime": "2025-03-24T18:02:06.000Z",
     "fields": {
       "Project/Product Name": "Information Management Support",
       "product_key": "immap-information-management-support",
@@ -1639,7 +1568,6 @@
   },
   {
     "id": "recQ0XV79TSq6v4Sj",
-    "createdTime": "2025-04-01T20:12:21.000Z",
     "fields": {
       "Project/Product Name": "SIPRI Arms Industry Database",
       "product_key": "sipri-arms-industry",
@@ -1661,7 +1589,6 @@
   },
   {
     "id": "recQMdm14niuRSFQp",
-    "createdTime": "2025-07-10T15:08:22.000Z",
     "fields": {
       "Project/Product Name": "WHO/UNICEF Joint Monitoring Programme for Water Supply, Sanitation and Hygiene (JMP)",
       "product_key": "who-unicef-jmp",
@@ -1684,7 +1611,6 @@
   },
   {
     "id": "recQpqVqEuaLuj8jT",
-    "createdTime": "2025-04-01T20:11:35.000Z",
     "fields": {
       "Project/Product Name": "SIPRI Military Expenditure Database",
       "product_key": "sipri-milex",
@@ -1706,7 +1632,6 @@
   },
   {
     "id": "recQubJTGSwZoqzix",
-    "createdTime": "2025-06-27T20:59:51.000Z",
     "fields": {
       "Project/Product Name": "Pacific Data Hub Tools",
       "product_key": "pacific-data-hub-tools",
@@ -1728,7 +1653,6 @@
   },
   {
     "id": "recR021jYyNleSCho",
-    "createdTime": "2025-03-24T19:09:26.000Z",
     "fields": {
       "Project/Product Name": "Migration Data Portal",
       "product_key": "migration-portal",
@@ -1755,7 +1679,6 @@
   },
   {
     "id": "recRERSUhmJ4M8jzA",
-    "createdTime": "2025-03-21T18:34:10.000Z",
     "fields": {
       "Project/Product Name": "Food Prices Data",
       "product_key": "food-prices",
@@ -1776,7 +1699,6 @@
   },
   {
     "id": "recRMNk0JflJq6VMa",
-    "createdTime": "2025-03-24T02:03:39.000Z",
     "fields": {
       "Project/Product Name": "Refugee Data Finder",
       "product_key": "unhcr-refugee-finder",
@@ -1797,7 +1719,6 @@
   },
   {
     "id": "recRqJS0I3kX5dYEJ",
-    "createdTime": "2025-03-24T18:07:48.000Z",
     "fields": {
       "Project/Product Name": "Global Exposure Database (GED)",
       "product_key": "ged",
@@ -1817,7 +1738,6 @@
   },
   {
     "id": "recS00J4wbHllEKXs",
-    "createdTime": "2025-03-24T18:42:08.000Z",
     "fields": {
       "Project/Product Name": "Surveillance System for Attacks on Health Care (SSA)",
       "product_key": "who-ssa-healthcare",
@@ -1839,7 +1759,6 @@
   },
   {
     "id": "recS70dZaWiddCf5J",
-    "createdTime": "2025-03-25T20:01:58.000Z",
     "fields": {
       "Project/Product Name": "Risk Anticipation Data Hub",
       "product_key": "undp-risk-anticipation-data-hub",
@@ -1864,7 +1783,6 @@
   },
   {
     "id": "recST6hz3bs6MKakU",
-    "createdTime": "2025-03-24T02:04:00.000Z",
     "fields": {
       "Project/Product Name": "Joint Needs Assessments (JNA)",
       "product_key": "unhcr-jna",
@@ -1884,7 +1802,6 @@
   },
   {
     "id": "recSvtWQnSvfNoXdt",
-    "createdTime": "2025-07-21T18:41:19.000Z",
     "fields": {
       "Project/Product Name": "UN Environment Programme World Conservation Monitoring Centre (UNEP-WCMC)",
       "product_key": "unep-wcmc",
@@ -1908,7 +1825,6 @@
   },
   {
     "id": "recUotlR1ZJwVMAIS",
-    "createdTime": "2025-07-29T19:00:21.000Z",
     "fields": {
       "Project/Product Name": "Datum",
       "product_key": "datum-project",
@@ -1932,7 +1848,6 @@
   },
   {
     "id": "recUtgQxL73zHDTCF",
-    "createdTime": "2025-04-30T00:36:40.000Z",
     "fields": {
       "Project/Product Name": "CLIMADA Platform",
       "product_key": "climada-platform",
@@ -1957,7 +1872,6 @@
   },
   {
     "id": "recVj2ULsOWhPFQ19",
-    "createdTime": "2025-03-24T19:45:32.000Z",
     "fields": {
       "Project/Product Name": "EM-DAT: The International Disaster Database",
       "product_key": "em-dat",
@@ -1981,7 +1895,6 @@
   },
   {
     "id": "recWKNeEWEv3vKeyX",
-    "createdTime": "2025-10-22T21:26:01.000Z",
     "fields": {
       "Project/Product Name": "Humanitarian Access Overview ",
       "product_key": "acaps-hao",
@@ -2001,7 +1914,6 @@
   },
   {
     "id": "recWiXtcwxhgmhgNY",
-    "createdTime": "2025-10-22T21:27:55.000Z",
     "fields": {
       "Project/Product Name": "Risk Radar",
       "product_key": "acaps-risk-radar",
@@ -2021,7 +1933,6 @@
   },
   {
     "id": "recWziB7RyyVfMv3A",
-    "createdTime": "2025-03-24T18:52:41.000Z",
     "fields": {
       "Project/Product Name": "Cultural Heritage in Crisis Zones Data",
       "product_key": "heritage-crisis",
@@ -2041,7 +1952,6 @@
   },
   {
     "id": "recXAXl4lWxy06qt5",
-    "createdTime": "2025-07-08T02:04:40.000Z",
     "fields": {
       "Project/Product Name": "Earthquakes Maps",
       "product_key": "earthquakes-maps",
@@ -2062,7 +1972,6 @@
   },
   {
     "id": "recXZCOUpEBDjWHOu",
-    "createdTime": "2025-03-24T02:03:35.000Z",
     "fields": {
       "Project/Product Name": "Population Statistics",
       "product_key": "unhcr-popstats",
@@ -2082,7 +1991,6 @@
   },
   {
     "id": "recXaGjOLcrJQCuNn",
-    "createdTime": "2025-03-25T17:13:59.000Z",
     "fields": {
       "Project/Product Name": "INFORM Warning",
       "product_key": "inform-warning",
@@ -2107,7 +2015,6 @@
   },
   {
     "id": "recXcSKhSy2s7tunj",
-    "createdTime": "2025-07-08T02:50:45.000Z",
     "fields": {
       "Project/Product Name": "Financial Tracking Services",
       "product_key": "fintrack",
@@ -2127,7 +2034,6 @@
   },
   {
     "id": "recXkQODU8on8xy2v",
-    "createdTime": "2025-03-28T14:09:57.000Z",
     "fields": {
       "Project/Product Name": "UNDP Digital Standards",
       "product_key": "undp-digital-standards",
@@ -2147,7 +2053,6 @@
   },
   {
     "id": "recYwllVfGjgi7rdS",
-    "createdTime": "2025-04-24T15:09:55.000Z",
     "fields": {
       "Project/Product Name": "GloFAS – Global Flood Awareness System",
       "product_key": "glofas",
@@ -2169,7 +2074,6 @@
   },
   {
     "id": "recYzS7BrsxBG8llV",
-    "createdTime": "2025-03-24T18:08:16.000Z",
     "fields": {
       "Project/Product Name": "OpenQuake Platform",
       "product_key": "openquake-platform",
@@ -2192,7 +2096,6 @@
   },
   {
     "id": "recZ87vNFuxhuJIih",
-    "createdTime": "2025-06-27T22:23:13.000Z",
     "fields": {
       "Project/Product Name": "Advanced Data Planning Tool (ADAPT)",
       "product_key": "adapt",
@@ -2212,7 +2115,6 @@
   },
   {
     "id": "recZaSDcZgIUtalO5",
-    "createdTime": "2025-03-24T15:11:02.000Z",
     "fields": {
       "Project/Product Name": "Humanitarian Exchange Language (HXL)",
       "product_key": "ocha-hxl",
@@ -2232,7 +2134,6 @@
   },
   {
     "id": "recZmszPiwWGvrYee",
-    "createdTime": "2025-06-27T22:23:57.000Z",
     "fields": {
       "Project/Product Name": "Guidelines for National Strategy for the Development of Statistics (NSDS) ",
       "product_key": "nsds-guidelines",
@@ -2254,7 +2155,6 @@
   },
   {
     "id": "reca35l4CEELxX2d1",
-    "createdTime": "2025-06-23T18:26:31.000Z",
     "fields": {
       "Project/Product Name": "Earth Data Search",
       "product_key": "earth-data-search",
@@ -2276,7 +2176,6 @@
   },
   {
     "id": "recaWq49HJw4UXd9K",
-    "createdTime": "2025-03-24T14:52:25.000Z",
     "fields": {
       "Project/Product Name": "Integrated Food Security Phase Classification (IPC)",
       "product_key": "ipc",
@@ -2304,7 +2203,6 @@
   },
   {
     "id": "recbmA6Lmrr5AfAHJ",
-    "createdTime": "2025-03-24T18:03:04.000Z",
     "fields": {
       "Project/Product Name": "GRID3: Geo-Referenced Infrastructure and Demographic Data for Development ",
       "product_key": "grid3",
@@ -2332,7 +2230,6 @@
   },
   {
     "id": "recboBqVDp6QicKSq",
-    "createdTime": "2025-03-24T15:56:33.000Z",
     "fields": {
       "Project/Product Name": "World Population Dashboard",
       "product_key": "world-pop-dashboard",
@@ -2353,7 +2250,6 @@
   },
   {
     "id": "recbwtmwsCLbYZSBi",
-    "createdTime": "2025-03-24T18:43:21.000Z",
     "fields": {
       "Project/Product Name": "Health Resources Availability Monitoring System (HeRAMS)",
       "product_key": "who-herams",
@@ -2376,7 +2272,6 @@
   },
   {
     "id": "reccI6M0kWMcanXsD",
-    "createdTime": "2025-06-27T02:06:49.000Z",
     "fields": {
       "Project/Product Name": "Data in Emergencies Hub",
       "product_key": "data-in-emergencies-hub",
@@ -2402,7 +2297,6 @@
   },
   {
     "id": "reccYy5JWKJEASskp",
-    "createdTime": "2025-07-17T23:39:15.000Z",
     "fields": {
       "Project/Product Name": "Global Crisis Response Platform",
       "product_key": "gcrp",
@@ -2424,7 +2318,6 @@
   },
   {
     "id": "reccyJzv7bOpjmC4B",
-    "createdTime": "2025-04-01T20:11:49.000Z",
     "fields": {
       "Project/Product Name": "SIPRI Multilateral Peace Operations Database",
       "product_key": "sipri-mpod",
@@ -2446,7 +2339,6 @@
   },
   {
     "id": "recdIskWoUIv166ue",
-    "createdTime": "2025-03-25T17:10:15.000Z",
     "fields": {
       "Project/Product Name": "Malaria Atlas Project (MAP)",
       "product_key": "malaria-atlas-project",
@@ -2471,7 +2363,6 @@
   },
   {
     "id": "rece4fDBOtjCywl9q",
-    "createdTime": "2025-07-29T19:06:22.000Z",
     "fields": {
       "Project/Product Name": "PreventionWeb",
       "product_key": "undrr-preventionweb",
@@ -2495,7 +2386,6 @@
   },
   {
     "id": "receGDImgeYZLVOPq",
-    "createdTime": "2025-03-24T18:31:30.000Z",
     "fields": {
       "Project/Product Name": "Famine Action Mechanism (FAM)",
       "product_key": "fam",
@@ -2518,7 +2408,6 @@
   },
   {
     "id": "receXQgibfVmjvmeB",
-    "createdTime": "2025-07-22T11:08:13.000Z",
     "fields": {
       "Project/Product Name": "Minnesota Population Center (MPC)",
       "product_key": "mpc",
@@ -2544,7 +2433,6 @@
   },
   {
     "id": "recf0UvW6LzObKXGC",
-    "createdTime": "2025-03-24T18:36:34.000Z",
     "fields": {
       "Project/Product Name": "Global Crisis Risk Platform (GCRP)",
       "product_key": "wb-gcrp",
@@ -2567,7 +2455,6 @@
   },
   {
     "id": "recf4QNnota3r1Jch",
-    "createdTime": "2025-03-24T18:07:38.000Z",
     "fields": {
       "Project/Product Name": "Global Seismic Hazard Map (GSHM)",
       "product_key": "gshm",
@@ -2588,7 +2475,6 @@
   },
   {
     "id": "recfTLQpzUgBOtlS5",
-    "createdTime": "2025-10-22T20:53:29.000Z",
     "fields": {
       "Project/Product Name": "Trendfinder",
       "product_key": "acled-trendfinder",
@@ -2612,7 +2498,6 @@
   },
   {
     "id": "recfjAhO2DxCjgEgM",
-    "createdTime": "2025-07-22T11:09:58.000Z",
     "fields": {
       "Project/Product Name": "Netherlands Red Cross‘ 510 Data Team",
       "product_key": "510-data-team",
@@ -2645,7 +2530,6 @@
   },
   {
     "id": "recftrBsKUWwYWGA9",
-    "createdTime": "2025-03-21T19:09:22.000Z",
     "fields": {
       "Project/Product Name": "Safety and Access Review (SAR)",
       "product_key": "inso-sar",
@@ -2665,7 +2549,6 @@
   },
   {
     "id": "recfzWyIVXJCeFFAN",
-    "createdTime": "2025-03-24T18:40:16.000Z",
     "fields": {
       "Project/Product Name": "Health Emergency Dashboard",
       "product_key": "who-health-emergency-dashboard",
@@ -2689,7 +2572,6 @@
   },
   {
     "id": "recgPTOSUzIQS7uLs",
-    "createdTime": "2025-07-02T21:48:37.000Z",
     "fields": {
       "Project/Product Name": "Open Data Cube",
       "product_key": "open-data-cube",
@@ -2711,7 +2593,6 @@
   },
   {
     "id": "recgbAUAt9auV97KC",
-    "createdTime": "2025-03-24T18:21:39.000Z",
     "fields": {
       "Project/Product Name": "DataBank / Open Data Catalog",
       "product_key": "wb-data-catalog",
@@ -2733,7 +2614,6 @@
   },
   {
     "id": "recgftq4GZElVtfi6",
-    "createdTime": "2025-07-08T02:21:14.000Z",
     "fields": {
       "Project/Product Name": "AQUASTAT",
       "product_key": "aquastat",
@@ -2764,7 +2644,6 @@
   },
   {
     "id": "recgmCxRj8IVZMFF2",
-    "createdTime": "2025-07-22T11:23:11.000Z",
     "fields": {
       "Project/Product Name": "Uppsala Conflict Data Program (UCDP)",
       "product_key": "ucdp",
@@ -2792,7 +2671,6 @@
   },
   {
     "id": "recgpnIj48zBCayHc",
-    "createdTime": "2025-03-21T19:02:44.000Z",
     "fields": {
       "Project/Product Name": "INFORM Risk",
       "product_key": "inform-risk",
@@ -2815,7 +2693,6 @@
   },
   {
     "id": "rech8GCismNX3Bm8p",
-    "createdTime": "2025-07-18T15:15:26.000Z",
     "fields": {
       "Project/Product Name": "Harvard Humanitarian Initiative (HHI)",
       "product_key": "hhi",
@@ -2843,7 +2720,6 @@
   },
   {
     "id": "rechEM6RZ6by4ZLZK",
-    "createdTime": "2025-03-24T15:01:08.000Z",
     "fields": {
       "Project/Product Name": "Global Humanitarian Overview (GHO) Report",
       "product_key": "gho-report",
@@ -2865,7 +2741,6 @@
   },
   {
     "id": "rechQ1azyTpypEDEy",
-    "createdTime": "2025-08-15T14:43:54.000Z",
     "fields": {
       "Project/Product Name": "Women Within Armed Groups",
       "product_key": "wwag",
@@ -2889,7 +2764,6 @@
   },
   {
     "id": "rechtC1lJc96HgvFk",
-    "createdTime": "2025-04-01T19:39:45.000Z",
     "fields": {
       "Project/Product Name": "Arab Barometer",
       "product_key": "arab-barometer",
@@ -2915,7 +2789,6 @@
   },
   {
     "id": "recjAd7jOVvlh7mnp",
-    "createdTime": "2025-04-14T23:51:32.000Z",
     "fields": {
       "Project/Product Name": "Integrated Public Use Microdata Series (IPUMS)",
       "product_key": "ipums",
@@ -2942,7 +2815,6 @@
   },
   {
     "id": "recjxVwrxVL90go5G",
-    "createdTime": "2025-10-22T20:58:29.000Z",
     "fields": {
       "Project/Product Name": "Spotlight areas",
       "product_key": "acled-spotlight-areas",
@@ -2965,7 +2837,6 @@
   },
   {
     "id": "reck0qeeLf1nGLbap",
-    "createdTime": "2025-03-24T18:23:29.000Z",
     "fields": {
       "Project/Product Name": "World Bank-UNHCR Joint Data Center on Forced Displacement",
       "product_key": "wb-unhcr-jdc",
@@ -2988,7 +2859,6 @@
   },
   {
     "id": "reckhF1PTR2hh135J",
-    "createdTime": "2025-03-24T18:05:48.000Z",
     "fields": {
       "Project/Product Name": "ROOTS Portal",
       "product_key": "roots-portal",
@@ -3010,7 +2880,6 @@
   },
   {
     "id": "reckkGrUM2q2e7aeo",
-    "createdTime": "2025-03-24T15:06:14.000Z",
     "fields": {
       "Project/Product Name": "Humanitarian Data Exchange (HDX)",
       "product_key": "ocha-hdx",
@@ -3030,7 +2899,6 @@
   },
   {
     "id": "recl1IcheJlYc36up",
-    "createdTime": "2025-03-21T17:52:04.000Z",
     "fields": {
       "Project/Product Name": "Multidimensional Poverty Index (MPI)",
       "product_key": "mpi",
@@ -3054,7 +2922,6 @@
   },
   {
     "id": "recmH2oywWDYooamX",
-    "createdTime": "2025-03-25T19:32:58.000Z",
     "fields": {
       "Project/Product Name": "HDX HAPI",
       "product_key": "hdx-hapi",
@@ -3075,7 +2942,6 @@
   },
   {
     "id": "recnU6ZioVzUVRKZo",
-    "createdTime": "2025-03-24T02:03:21.000Z",
     "fields": {
       "Project/Product Name": "Operational Data Portal (ODP)",
       "product_key": "unhcr-odp",
@@ -3097,7 +2963,6 @@
   },
   {
     "id": "recni7Cfecz6SBQ8S",
-    "createdTime": "2025-08-28T16:52:52.000Z",
     "fields": {
       "Project/Product Name": "Displacement Severity Assessments",
       "product_key": "displacement-severity",
@@ -3119,7 +2984,6 @@
   },
   {
     "id": "recniOH9IPt0Vz07E",
-    "createdTime": "2025-03-24T18:56:01.000Z",
     "fields": {
       "Project/Product Name": "Aid Worker Security Database (AWSD)",
       "product_key": "awsd",
@@ -3139,7 +3003,6 @@
   },
   {
     "id": "recniVpxHScJaQdLq",
-    "createdTime": "2025-03-25T17:45:39.000Z",
     "fields": {
       "Project/Product Name": "UNICEF Data Warehouse",
       "product_key": "unicef-data-warehouse",
@@ -3160,7 +3023,6 @@
   },
   {
     "id": "recnoFBXdvLa7XJHw",
-    "createdTime": "2025-07-08T02:36:06.000Z",
     "fields": {
       "Project/Product Name": "GIEWS - Global Information and Early Warning System on Food and Agriculture",
       "product_key": "giews",
@@ -3181,7 +3043,6 @@
   },
   {
     "id": "recnt8m31aCnnA0my",
-    "createdTime": "2025-03-24T19:46:29.000Z",
     "fields": {
       "Project/Product Name": "HealthMap",
       "product_key": "healthmap",
@@ -3202,7 +3063,6 @@
   },
   {
     "id": "recopmKKe6HZ5qWWw",
-    "createdTime": "2025-04-14T23:53:08.000Z",
     "fields": {
       "Project/Product Name": "UNHCR Microdata Library",
       "product_key": "unhcr-microdata-library",
@@ -3223,7 +3083,6 @@
   },
   {
     "id": "recoqDpIwcyVG3N5Z",
-    "createdTime": "2025-04-14T20:44:19.000Z",
     "fields": {
       "Project/Product Name": "United Nations Report on Military Expenditures (UNMilEx)",
       "product_key": "unoda-unmilex",
@@ -3243,7 +3102,6 @@
   },
   {
     "id": "recp0YELy7eVj9FUs",
-    "createdTime": "2025-08-20T18:12:12.000Z",
     "fields": {
       "Project/Product Name": "EMPOW: Women’s Empowerment in Peace Processes",
       "product_key": "prio-empow",
@@ -3270,7 +3128,6 @@
   },
   {
     "id": "recpARdDyMReIUuDq",
-    "createdTime": "2025-03-25T20:03:21.000Z",
     "fields": {
       "Project/Product Name": "EEARTH",
       "product_key": "eearth",
@@ -3297,7 +3154,6 @@
   },
   {
     "id": "recpKRVapFMI3kGY0",
-    "createdTime": "2025-03-24T18:42:33.000Z",
     "fields": {
       "Project/Product Name": "Early Warning, Alert and Response System (EWARS)",
       "product_key": "ewars",
@@ -3317,7 +3173,6 @@
   },
   {
     "id": "recpP1KGKcmcpy2jo",
-    "createdTime": "2025-03-24T20:04:25.000Z",
     "fields": {
       "Project/Product Name": "Trigger Model Development",
       "product_key": "ifrc-trigger-model",
@@ -3339,7 +3194,6 @@
   },
   {
     "id": "recr5hGDgBiAH4xSm",
-    "createdTime": "2025-03-25T20:01:16.000Z",
     "fields": {
       "Project/Product Name": "Red Cross Climate Centre (RCC)",
       "product_key": "red-cross-climate-center",
@@ -3363,7 +3217,6 @@
   },
   {
     "id": "recrAQT0YpFBCQ02U",
-    "createdTime": "2025-03-24T17:57:06.000Z",
     "fields": {
       "Project/Product Name": "Famine Early Warning Systems Network (FEWS NET)",
       "product_key": "fews-net",
@@ -3387,7 +3240,6 @@
   },
   {
     "id": "recrWrHtaaCWN2TVH",
-    "createdTime": "2025-07-22T11:14:27.000Z",
     "fields": {
       "Project/Product Name": "UNESCO Institute for Statistics",
       "product_key": "unesco-institute-for-statistics",
@@ -3408,7 +3260,6 @@
   },
   {
     "id": "recs629pSu4Ei5145",
-    "createdTime": "2025-06-27T22:23:39.000Z",
     "fields": {
       "Project/Product Name": "PARIS21’s Statistical Capacity Monitor ",
       "product_key": "paris21-scm",
@@ -3431,7 +3282,6 @@
   },
   {
     "id": "recsuIp5N5MkuxT1S",
-    "createdTime": "2025-03-21T16:08:21.000Z",
     "fields": {
       "Project/Product Name": "Global Internal Displacement Database (GIDD)",
       "product_key": "gidd",
@@ -3462,7 +3312,6 @@
   },
   {
     "id": "recszBikte0A6i6Dx",
-    "createdTime": "2025-04-01T20:11:28.000Z",
     "fields": {
       "Project/Product Name": "SIPRI Arms Transfers Database",
       "product_key": "sipri-arms-transfers",
@@ -3484,7 +3333,6 @@
   },
   {
     "id": "rectaDjtvGUN9jPNg",
-    "createdTime": "2025-03-21T17:22:27.000Z",
     "fields": {
       "Project/Product Name": "Global Report on Internal Displacement (GRID)",
       "product_key": "grid",
@@ -3515,7 +3363,6 @@
   },
   {
     "id": "rectg1V7Xcu5CcQq0",
-    "createdTime": "2025-04-14T22:14:15.000Z",
     "fields": {
       "Project/Product Name": "proGres",
       "product_key": "unhcr-progres",
@@ -3536,7 +3383,6 @@
   },
   {
     "id": "recu82l0uk7d3IHeU",
-    "createdTime": "2025-06-27T22:24:14.000Z",
     "fields": {
       "Project/Product Name": "Clearinghouse for Financing Development Data",
       "product_key": "clearinghouse-data-financing",
@@ -3556,7 +3402,6 @@
   },
   {
     "id": "recuOsuVWoVNvCO5k",
-    "createdTime": "2025-06-26T13:51:38.000Z",
     "fields": {
       "Project/Product Name": "Public Health & Safety Insights (PHASI®)",
       "product_key": "phasi",
@@ -3576,7 +3421,6 @@
   },
   {
     "id": "recueXHi1BfJrz30y",
-    "createdTime": "2025-08-20T17:55:34.000Z",
     "fields": {
       "Project/Product Name": "E4DRR: Hazard modeling, impact estimation, climate storylines for drought and flood disasters in Eastern Africa",
       "product_key": "e4drr",
@@ -3597,7 +3441,6 @@
   },
   {
     "id": "recuqvvqKg7D86DIm",
-    "createdTime": "2025-04-14T22:53:46.000Z",
     "fields": {
       "Project/Product Name": "Refugee Assistance Information System (RAIS)",
       "product_key": "unhcr-rais",
@@ -3617,7 +3460,6 @@
   },
   {
     "id": "recuv6YqfhZHQGvmd",
-    "createdTime": "2025-04-01T20:12:40.000Z",
     "fields": {
       "Project/Product Name": "SIPRI Mapping ATT-Relevant Cooperation and Assistance Activities Database",
       "product_key": "sipri-att-map",
@@ -3639,7 +3481,6 @@
   },
   {
     "id": "recv2rUABIb3FhIRW",
-    "createdTime": "2025-03-24T18:26:25.000Z",
     "fields": {
       "Project/Product Name": "World Bank Microdata Library",
       "product_key": "wb-microdata",
@@ -3660,7 +3501,6 @@
   },
   {
     "id": "recv5EjAR3NgCKSaI",
-    "createdTime": "2025-07-21T18:44:18.000Z",
     "fields": {
       "Project/Product Name": "UN Peace & Security Data Hub",
       "product_key": "dpo-peace-data-hub",
@@ -3680,7 +3520,6 @@
   },
   {
     "id": "recvaextZy2CbEkxr",
-    "createdTime": "2025-04-14T22:06:26.000Z",
     "fields": {
       "Project/Product Name": "Population Registration and Identity Management EcoSystem (PRIMES)",
       "product_key": "unhcr-primes",
@@ -3701,7 +3540,6 @@
   },
   {
     "id": "recwMGK7lbvDfjR14",
-    "createdTime": "2025-10-22T20:57:17.000Z",
     "fields": {
       "Project/Product Name": "Conflict Exposure Calculator",
       "product_key": "conflict-exposure-calculator",
@@ -3724,7 +3562,6 @@
   },
   {
     "id": "recwSp54iuK53ankI",
-    "createdTime": "2025-04-01T20:13:26.000Z",
     "fields": {
       "Project/Product Name": "National Budget Archive",
       "product_key": "sipri-national-budget-archives",
@@ -3744,7 +3581,6 @@
   },
   {
     "id": "recwhJzb0ZRPL3F0A",
-    "createdTime": "2025-04-15T19:14:01.000Z",
     "fields": {
       "Project/Product Name": "River Basin Monitoring System",
       "product_key": "river-basin-monitoring-system",
@@ -3771,7 +3607,6 @@
   },
   {
     "id": "recwpLBPiqgZWOXyn",
-    "createdTime": "2025-06-29T19:14:32.000Z",
     "fields": {
       "Project/Product Name": "IMPACT Resource Centre",
       "product_key": "impact-centre",
@@ -3794,7 +3629,6 @@
   },
   {
     "id": "recwyWa10JHuVhWo9",
-    "createdTime": "2025-07-10T15:01:05.000Z",
     "fields": {
       "Project/Product Name": "United Kingdom Humanitarian Innovation Lab",
       "product_key": "uk-hil",
@@ -3815,7 +3649,6 @@
   },
   {
     "id": "recxNVM0HeC0mSQyk",
-    "createdTime": "2025-03-25T20:09:06.000Z",
     "fields": {
       "Project/Product Name": "GEOGUARD",
       "product_key": "geoguard",
@@ -3840,7 +3673,6 @@
   },
   {
     "id": "recxWS5Ys5dJ0dn1X",
-    "createdTime": "2025-04-15T15:11:59.000Z",
     "fields": {
       "Project/Product Name": "Humanitarian Data Science and Ethics Group (DSEG)",
       "product_key": "iom-dseg",
@@ -3863,7 +3695,6 @@
   },
   {
     "id": "recxZmQWr8fIn8d1G",
-    "createdTime": "2025-03-24T18:01:38.000Z",
     "fields": {
       "Project/Product Name": "Multi-Sector Needs Assessments (MSNA)",
       "product_key": "immap-msna",
@@ -3883,7 +3714,6 @@
   },
   {
     "id": "recxuOxX8VxssdS6k",
-    "createdTime": "2025-03-24T02:01:27.000Z",
     "fields": {
       "Project/Product Name": "Socio-Economic Insights Survey (SEIS)",
       "product_key": "unhcr-seis",
@@ -3905,7 +3735,6 @@
   },
   {
     "id": "recy1WUw4sZ55UmrS",
-    "createdTime": "2025-03-24T18:49:05.000Z",
     "fields": {
       "Project/Product Name": "Education in Emergencies Data",
       "product_key": "education-in-emergencies",
@@ -3925,7 +3754,6 @@
   },
   {
     "id": "recyMSQo5lV032SER",
-    "createdTime": "2025-03-25T20:05:11.000Z",
     "fields": {
       "Project/Product Name": "CLIFDEW-GRID",
       "product_key": "clifdew-grid",
@@ -3951,7 +3779,6 @@
   },
   {
     "id": "recyn1h3FptgV2ZAv",
-    "createdTime": "2025-10-13T18:50:02.000Z",
     "fields": {
       "Project/Product Name": "INFORM Subnational Risk ",
       "product_key": "inform-subnational",
@@ -3973,7 +3800,6 @@
   },
   {
     "id": "recz2ZsyM0B05BdFP",
-    "createdTime": "2025-04-15T15:16:35.000Z",
     "fields": {
       "Project/Product Name": "Annual Survey of Refugees (ASR)",
       "product_key": "asr-survey",
@@ -3996,7 +3822,6 @@
   },
   {
     "id": "reczIeSUeAdEWMKSk",
-    "createdTime": "2025-04-15T00:02:13.000Z",
     "fields": {
       "Project/Product Name": "Multi-Sectoral Needs Assessment (MSNA)",
       "product_key": "msna",
@@ -4021,7 +3846,6 @@
   },
   {
     "id": "reczxU9NrSDw2mJcN",
-    "createdTime": "2025-03-21T17:45:16.000Z",
     "fields": {
       "Project/Product Name": "Population Data",
       "product_key": "popdata",
@@ -4048,7 +3872,6 @@
   },
   {
     "id": "reczyv8I05ihUAyML",
-    "createdTime": "2025-04-15T19:17:58.000Z",
     "fields": {
       "Project/Product Name": "LATAM Geospatial Data Center",
       "product_key": "latam-geospatial-data-center",
