@@ -1090,6 +1090,7 @@ const CrisisDataDashboard = ({
                                                                     </div>
                                                                     <div className="flex flex-col justify-between items-end self-stretch flex-shrink-0 min-w-[100px]">
                                                                         <Button
+                                                                            asChild
                                                                             variant="outline"
                                                                             size="sm"
                                                                             onClick={(e) => {
@@ -1097,15 +1098,15 @@ const CrisisDataDashboard = ({
                                                                                 const nestedOrg = nestedOrganizations.find((n) => n.id === org.id);
                                                                                 const orgKey = nestedOrg?.fields?.org_key;
                                                                                 if (orgKey) {
-                                                                                onOpenOrganizationModal(orgKey);
+                                                                                    onOpenOrganizationModal(orgKey);
                                                                                 }
                                                                             }}
-                                                                            className="hidden sm:inline-flex items-center justify-center gap-1 bg-[var(--detail)] border-[var(--detail)] text-[var(--detail-text)]
-                                                                                        hover:bg-[var(--detail-light)] hover:border-[var(--detail-border)] 
-                                                                                        text-[10px] h-6 px-2 rounded-md"
+                                                                            className="hidden sm:inline-flex items-center justify-center gap-1 bg-[var(--detail)] border-[var(--detail)] text-[var(--detail-text)] hover:bg-[var(--detail-light)] hover:border-[var(--detail-border)] text-[10px] h-6 px-2 rounded-md"
                                                                         >
-                                                                            <Info className="w-2 h-2" />
-                                                                            Details
+                                                                            <div className="hidden sm:inline-flex items-center justify-center gap-1">
+                                                                                <Info className="w-3 h-3" />
+                                                                                <span>Details</span>
+                                                                            </div>
                                                                         </Button>
                                                                         <div className="text-xs sm:text-xs text-slate-600 whitespace-nowrap">
                                                                             {org.projects.length > 0 ? (
