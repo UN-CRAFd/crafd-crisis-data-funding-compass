@@ -14,11 +14,11 @@ interface SectionHeaderProps {
 }
 
 const SectionHeader = ({ icon, title }: SectionHeaderProps) => (
-    <div className="flex items-center gap-2 text-base sm:text-lg font-qanelas-subtitle font-black text-slate-800 mb-0 mt-0 uppercase">
-        <span className="h-5 w-5 sm:h-6 sm:w-6 flex items-center justify-center">
+    <div className={CHART_STYLES.sectionHeader}>
+        <span className="h-6 w-6 flex items-center justify-center">
             {icon}
         </span>
-        <span className="leading-tight">{title}</span>
+        {title}
     </div>
 );
 
@@ -75,14 +75,14 @@ const ChartCard = React.memo(function ChartCard({ title, icon, data, barColor, f
     const resolvedColor = getColor(barColor);
 
     return (
-        <Card className={`${CHART_STYLES.cardGlass} xl:sticky xl:top-28`}>
+        <Card className={`${CHART_STYLES.cardGlass} sticky top-28`}>
             <CardHeader className="pb-0 h-6.5">
                 <CardTitle>
                     <SectionHeader icon={icon} title={title} />
                 </CardTitle>
             </CardHeader>
             <CardContent
-                className="pt-0 px-3 sm:px-6 [&_svg]:outline-none [&_svg]:!border-0"
+                className="pt-0 [&_svg]:outline-none [&_svg]:!border-0"
                 onMouseLeave={() => {
                     if (leaveTimeoutRef.current) {
                         clearTimeout(leaveTimeoutRef.current);
@@ -90,26 +90,26 @@ const ChartCard = React.memo(function ChartCard({ title, icon, data, barColor, f
                     setHoveredIndex(null);
                 }}
             >
-                <ResponsiveContainer width="100%" height={Math.max(data.length * 35, 200)}>
+                <ResponsiveContainer width="100%" height={data.length * 35}>
                     <BarChart
                         data={data}
                         layout="vertical"
-                        margin={{ top: 0, right: 10, left: -40, bottom: 0 }}
+                        margin={{ top: 0, right: 15, left: -50, bottom: 0 }}
                     >
                         <CartesianGrid strokeDasharray="3 3" stroke="var(--chart-grid-stroke)" horizontal={false} />
-                        <XAxis type="number" stroke="var(--chart-axis-stroke)" tick={{ fontSize: 11, dy: -2 }} tickLine={false} allowDecimals={false} />
+                        <XAxis type="number" stroke="var(--chart-axis-stroke)" tick={{ fontSize: 12, dy: -2 }} tickLine={false} allowDecimals={false} />
                         <YAxis
                             dataKey="name"
                             type="category"
-                            width={200}
+                            width={240}
                             stroke="var(--chart-axis-stroke)"
-                            tick={{ fontSize: 11, dx: 1 }}
+                            tick={{ fontSize: 13, dx: 1 }}
                             tickLine={false}
                         />
                         <Bar
                             dataKey="value"
-                            radius={[0, 4, 4, 0]}
-                            barSize={15}
+                            radius={[0, 5, 5, 0]}
+                            barSize={17}
                             style={{ transform: 'translateX(1px)', backgroundColor: resolvedColor }}
                             onMouseEnter={handleMouseEnter}
                             onMouseLeave={handleMouseLeave}
