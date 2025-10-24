@@ -240,7 +240,7 @@ const CrisisDataDashboard = ({
     const [shareSuccess, setShareSuccess] = useState(false);
     const [exportLoading, setExportLoading] = useState(false);
     
-    // Load static organizations table for modal details
+    // Load static organizations table for modals
     const organizationsTable: Array<{ id: string; createdTime?: string; fields: Record<string, unknown> }> = organizationsTableRaw as Array<{ id: string; createdTime?: string; fields: Record<string, unknown> }>;
 
     // Load nested data for modals
@@ -1096,10 +1096,10 @@ const CrisisDataDashboard = ({
                                                                                 onOpenOrganizationModal(orgKey);
                                                                                 }
                                                                             }}
-                                                                            className="hidden sm:inline-flex items-center justify-center gap-1 bg-slate-50/50 border-slate-200 text-slate-500
-                                                                                        hover:bg-[var(--brand-bg-light)] hover:border-[var(--brand-primary)] 
-                                                                                        hover:text-[var(--brand-primary)] text-[10px] h-6 px-2 rounded-md"
-                                                                            >
+                                                                            className="hidden sm:inline-flex items-center justify-center gap-1 bg-[var(--detail)] border-[var(--detail)] text-[var(--detail-text)]
+                                                                                        hover:bg-[var(--detail-light)] hover:border-[var(--detail-border)] 
+                                                                                        text-[10px] h-6 px-2 rounded-md"
+                                                                        >
                                                                             <Info className="w-2 h-2" />
                                                                             Details
                                                                         </Button>
