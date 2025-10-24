@@ -356,18 +356,6 @@ const CrisisDataDashboard = ({
     // Export to PDF functionality
     const handleExportPDF = async () => {
         setExportLoading(true);
-        try {
-            await exportDashboardToPDF({
-                stats,
-                projectTypes,
-                organizationTypes,
-                getFilterDescription
-            });
-        } catch {
-            alert('Failed to generate PDF. Please try again or check console for details.');
-        } finally {
-            setExportLoading(false);
-        }
     };
 
     // Loading state
