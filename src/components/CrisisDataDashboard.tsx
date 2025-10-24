@@ -70,6 +70,7 @@ interface CrisisDataDashboardProps {
         allOrganizations: OrganizationWithProjects[]; // Add unfiltered organizations
         donorCountries: string[];
         investmentTypes: string[];
+        topDonors: Array<{ name: string; value: number }>; // Add top co-financing donors
     } | null;
     loading: boolean;
     error: string | null;
@@ -385,7 +386,7 @@ const CrisisDataDashboard = ({
     }
 
     // Extract data for use in component
-    const { stats, projectTypes, organizationsWithProjects, allOrganizations, donorCountries: availableDonorCountries, investmentTypes: availableInvestmentTypes } = dashboardData;
+    const { stats, projectTypes, organizationsWithProjects, allOrganizations, donorCountries: availableDonorCountries, investmentTypes: availableInvestmentTypes, topDonors } = dashboardData;
 
     // Ensure the organization type chart always shows all known types.
     // Get all types from the pre-generated organizations-with-types.json dictionary
@@ -1189,6 +1190,23 @@ const CrisisDataDashboard = ({
                                 data={projectTypesChartData}
                                 barColor="var(--brand-primary-lighter)"
                                 footnote={labels.ui.chartFootnote}
+                            />
+                            <ChartCard
+                                title="Top Co-Financing Donors"
+                                icon={<Globe className="text-slate-600" />}
+                                data={topDonors}
+                                barColor="var(--brand-primary-lighter)"
+                                footnote={
+                                    combinedDonors.length > 0
+                                        ? `Showing ${topDonors.length} donor${topDonors.length === 1 ? '' : 's'} co-financing the most organizations together with ${
+                                            combinedDonors.length === 1
+                                                ? combinedDonors[0]
+                                                : combinedDonors.length === 2
+                                                ? `${combinedDonors[0]} & ${combinedDonors[1]}`
+                                                : `${combinedDonors.slice(0, -1).join(', ')} & ${combinedDonors[combinedDonors.length - 1]}`
+                                        }`
+                                        : `Showing ${topDonors.length} donor${topDonors.length === 1 ? '' : 's'} funding the most organizations in the current view`
+                                }
                             />
                         </div>
                     </div>
