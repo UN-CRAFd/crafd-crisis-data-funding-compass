@@ -502,7 +502,6 @@
       "Provided Data Ecosystem Projects": [
         "recS70dZaWiddCf5J",
         "recXkQODU8on8xy2v",
-        "recwhJzb0ZRPL3F0A",
         "recXaGjOLcrJQCuNn"
       ],
       "Org Donor Agencies": [
@@ -1792,22 +1791,20 @@
       "Org Full Name": "3iSolution",
       "Org Short Name": "3iS",
       "Org Website": "https://3is.org/",
-      "Org Description": "3iS’s mission is to empower and enhance the understanding of information through innovative technology, successfully driving strategic change and transforming decision-making. \nWe use data and cutting-edge technology to generate knowledge that equips leaders and change agents to better achieve their objectives in the humanitarian, development, and academic sectors. \n",
+      "Org Description": "3iS’s mission is to empower and enhance the understanding of information through innovative technology, successfully driving strategic change and transforming decision-making. We use data and cutting-edge technology to generate knowledge that equips leaders and change agents to better achieve their objectives in the humanitarian, development, and academic sectors. \n",
       "Link to Data Products Overview": "<https://data.humdata.org/organization/3isolution>\n",
-      "Provided Data Ecosystem Projects": [
-        "recwhJzb0ZRPL3F0A",
-        "recIfMPpdyRhpBXD0",
-        "reczyv8I05ihUAyML",
-        "recOfj0kk5iKOrHE4"
-      ],
       "Org Donor Agencies": [
-        "recE3ZEHFRqbifGOn",
         "rec2KBp1IAA5TtnQl",
         "recylzOrnxt3grWHh",
-        "recHSsEaPuaG3h2PQ"
+        "recHSsEaPuaG3h2PQ",
+        "recvapVp1Nk46rN3A",
+        "recsrMWmoA037bW03",
+        "recFDm6MHWUu6GSMI",
+        "recpnGIsQx8Bb4aji"
       ],
       "Org IATI Name": "N/A",
-      "Est. Org Budget [2024, $M]": 7467000,
+      "Est. Data Budget [2024, $M]": 3900000,
+      "Est. Org Budget [2024, $M]": 3900000,
       "Org HQ Country": "Netherlands",
       "Has received CRAF'd Funding?": "NO",
       "org_key": "3is",
@@ -2260,7 +2257,7 @@
       "Org Full Name": "ACAPS",
       "Org Short Name": "ACAPS",
       "Org Website": "https://www.acaps.org/en/",
-      "Org Description": "ACAPS is a humanitarian data analytics initiative led by NRC, Save the Children, and Mercy Corps. It conducts needs overviews, early warning analysis, and sector assessments to support principled decision-making.",
+      "Org Description": "ACAPS, which originally stood for the \"Assessment Capacities Project,\" is an independent, non-governmental organization that provides humanitarian information and analysis to support better-informed decision-making in crisis situations. It offers data and analysis on global humanitarian crises to organizations like the UN, humanitarian responders, and donors, with the goal of improving aid delivery and efficiency. ACAPS provides global analysis, and works with other organizations to improve evidence-based decision-making in humanitarian response. ",
       "Provided Data Ecosystem Projects": [
         "rec4XuZsotMgaVbAm",
         "recWKNeEWEv3vKeyX",
