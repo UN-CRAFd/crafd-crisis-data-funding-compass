@@ -41,7 +41,8 @@
   "sections": {
     "organizationsAndProjects": "Funding Registry",
     "projectCategories": "Assets by Type",
-    "organizationTypes": "Provider Organizations by Type"
+    "organizationTypes": "Provider Organizations by Type",
+    "donorCount": "Co-Financing Donors"
   },
   "investmentTypes": {
     "data": "Data Sets & Commons",

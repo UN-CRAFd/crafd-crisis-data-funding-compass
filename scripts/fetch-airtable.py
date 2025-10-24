@@ -240,6 +240,15 @@ def save_to_json(data: Any, filename: str, apply_select_filter: bool = True) -> 
             filtered.append(new_rec)
         to_write = filtered
     with open(file_path, "w", encoding="utf-8") as f:
+        # Ensure we do not include Airtable's top-level `createdTime` on any record
+        if isinstance(to_write, list):
+            for rec in to_write:
+                if isinstance(rec, dict):
+                    rec.pop("createdTime", None)
+        elif isinstance(to_write, dict):
+            # If a single object was passed, remove createdTime if present
+            to_write.pop("createdTime", None)
+
         json.dump(to_write, f, indent=2, ensure_ascii=False)
     if isinstance(data, list):
         count = len(data)
