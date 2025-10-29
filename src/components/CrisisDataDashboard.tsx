@@ -31,8 +31,8 @@ import type { DashboardStats, OrganizationProjectData, OrganizationTypeData, Org
 const STYLES = {
     // Card styles
     statCard: "!border-0 transition-all duration-300 hover:ring-2 hover:ring-slate-300/50",
-    cardGlass: "!border-0 bg-white/80 backdrop-blur-sm",
-    cardGlassLight: "!border-0 bg-white/70 backdrop-blur-sm p-1 rounded-md shadow-none",
+    cardGlass: "!border-0 bg-white",
+    cardGlassLight: "!border-0 bg-white p-1 rounded-md shadow-none",
 
     // Typography - Unified section headers
     sectionHeader: "flex items-center gap-2 text-lg font-qanelas-subtitle font-black text-slate-800 mb-0 mt-0 uppercase",
@@ -45,8 +45,8 @@ const STYLES = {
     badgeBase: "inline-flex items-center px-2 py-1 rounded-md text-xs font-medium",
 
     // Interactive elements
-    projectItem: "p-3 bg-slate-50 rounded-lg border border-slate-100 hover:bg-slate-100 cursor-pointer transition-colors duration-200 animate-in fade-in group",
-    orgRow: "flex items-center justify-between p-4 hover:bg-slate-50/70 rounded-lg border border-slate-200 bg-slate-50/30 animate-in fade-in",
+    projectItem: "p-3 bg-white rounded-lg border border-slate-100 hover:bg-slate-200 cursor-pointer transition-colors duration-200 group",
+    orgRow: "flex items-center justify-between p-4 hover:bg-slate-200 rounded-lg border border-slate-200 bg-white",
 
     // Chart config
     chartTooltip: {
@@ -403,7 +403,7 @@ const CrisisDataDashboard = ({
         const otherDonors = availableDonorCountries.filter(donor => !shownDonors.includes(donor));
         donorChartData = [
             ...topDonors,
-            { name: `${otherDonors.length} other donor${otherDonors.length === 1 ? '' : 's'}`, value: 0 }
+            { name: `+ ${otherDonors.length} other donor${otherDonors.length === 1 ? '' : 's'}`, value: 0 }
         ];
     }
 
@@ -552,7 +552,7 @@ const CrisisDataDashboard = ({
     };
 
     return (
-        <div className="min-h-screen bg-slate-50">
+        <div className="min-h-screen bg-slate-100">
             {/* Header Section - Fixed */}
             <div className="fixed top-0 left-0 right-0 z-50 bg-white border-b border-slate-200 shadow-sm">
                 <div className="max-w-[82rem] mx-auto px-4 sm:px-6 lg:px-8 py-2 sm:py-4">
@@ -1225,8 +1225,8 @@ const CrisisDataDashboard = ({
                             <div
                                 className={`transition-all duration-1200 ease-in-out ${
                                     combinedDonors.length > 0
-                                        ? 'opacity-100 max-h-[1000px] mb-6'
-                                        : 'opacity-0 max-h-0 overflow-hidden mb-0'
+                                        ? 'max-h-[1000px] mb-6'
+                                        : 'max-h-0 overflow-hidden mb-0'
                                 }`}
                             >
                                 <ChartCard
