@@ -3,7 +3,7 @@
 import React, { useEffect, useMemo, useState } from 'react';
 // Image import removed because it's not used in this file
 import ChartCard from '@/components/ChartCard';
-import NetworkGraph from '@/components/NetworkGraph';
+import dynamic from 'next/dynamic';
 import OrganizationModal from '@/components/OrganizationModal';
 import ProjectModal from '@/components/ProjectModal';
 import SurveyBanner from '@/components/SurveyBanner';
@@ -28,6 +28,16 @@ import organizationsTableRaw from '../../public/data/organizations-table.json';
 import { buildOrgDonorCountriesMap, buildOrgProjectsMap, buildProjectNameMap, calculateOrganizationTypesFromOrganizationsWithProjects, getNestedOrganizationsForModals } from '../lib/data';
 import { exportDashboardToPDF } from '../lib/exportPDF';
 import type { DashboardStats, OrganizationProjectData, OrganizationTypeData, OrganizationWithProjects, ProjectData, ProjectTypeData } from '../types/airtable';
+
+// Dynamic import for NetworkGraph to avoid SSR issues with force-graph
+const NetworkGraph = dynamic(() => import('@/components/NetworkGraph'), {
+    ssr: false,
+    loading: () => (
+        <div className="w-full h-full flex items-center justify-center bg-white rounded-lg border border-slate-200">
+            <div className="text-slate-500">Loading network visualization...</div>
+        </div>
+    ),
+});
 
 // Consolidated style constants
 const STYLES = {
@@ -246,6 +256,7 @@ const CrisisDataDashboard = ({
     const [donorsMenuOpen, setDonorsMenuOpen] = useState<boolean>(false);
     const [typesMenuOpen, setTypesMenuOpen] = useState<boolean>(false);
     const [sortBy, setSortBy] = useState<'name' | 'projects'>('name'); // Add sort state
+    const [activeView, setActiveView] = useState<'table' | 'network'>('table'); // Add view state
 
     // Modal loading states (project modal always URL-based now)
     const [projectModalLoading] = useState(false);
@@ -716,35 +727,58 @@ const CrisisDataDashboard = ({
                             {/* Organizations Table Section */}
                             <div>
                                 <Card className={STYLES.cardGlass}>
-                                    <CardHeader className="pb-0 h-0">
-                                        <CardTitle className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3 sm:gap-0 w-full mb-2">
-                                            <SectionHeader
-                                                icon={
-                                                    organizationsWithProjects && organizationsWithProjects.some(org => org.projects && org.projects.length > 0)
-                                                        ? <FolderOpenDot style={{ color: 'var(--brand-primary)' }}  />
-                                                        : <FolderDot style={{ color: 'var(--brand-primary)' }}  />
-                                                }
-                                                title={labels.sections.organizationsAndProjects}
-                                                
-                                            />
-                                            {/* Sort Button */}
-                                                <Button
-                                                    variant="outline"
-                                                    onClick={() => setSortBy(sortBy === 'name' ? 'projects' : 'name')}
-                                                    className="h-10 w-full sm:w-auto px-4 font-medium transition-all bg-slate-50 border-none hover:bg-slate-100 text-slate-600 hover:text-slate-800"
-                                                    title={sortBy === 'name' ? 'Sort by number of assets' : 'Sort alphabetically'}
-                                                >
-                                                    <ArrowUpDown className="w-4 h-4" />
-                                                    <span className="ml-0 hidden sm:inline text-xs">
-                                                        {sortBy === 'name' ? 'Sort alphabetically' : 'Sort by number of assets'}
-                                                    </span>
-                                                </Button>
-                                        </CardTitle>
-                                        
+                    <CardHeader className="pb-0 h-0">
+                        <CardTitle className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3 sm:gap-0 w-full mb-2">
+                            <SectionHeader
+                                icon={
+                                    organizationsWithProjects && organizationsWithProjects.some(org => org.projects && org.projects.length > 0)
+                                        ? <FolderOpenDot style={{ color: 'var(--brand-primary)' }}  />
+                                        : <FolderDot style={{ color: 'var(--brand-primary)' }}  />
+                                }
+                                title={labels.sections.organizationsAndProjects}
+                            />
 
-                                    </CardHeader>
+                            <div className="flex items-center gap-2">
+                                {/* Sort Button only for Table view */}
+                                {activeView === 'table' && (
+                                    <Button
+                                        variant="outline"
+                                        onClick={() => setSortBy(sortBy === 'name' ? 'projects' : 'name')}
+                                        className="h-10 w-auto px-4 font-medium transition-all bg-slate-50 border-none hover:bg-slate-100 text-slate-600 hover:text-slate-800 left-auto"
+                                        title={sortBy === 'name' ? 'Sort by number of assets' : 'Sort alphabetically'}
+                                    >
+                                        <ArrowUpDown className="w-4 h-4" />
+                                        <span className="ml-2 hidden sm:inline text-xs">
+                                            {sortBy === 'name' ? 'Sort alphabetically' : 'Sort by number of assets'}
+                                        </span>
+                                    </Button>
+                                )}
+                                {/* View Toggle Switch Tabs */}
+                                <Tabs value={activeView} onValueChange={(value) => setActiveView(value as 'table' | 'network')} className="w-auto">
+                                    <TabsList className="h-10 p-1 bg-slate-50 border border-slate-200 rounded-md">
+                                        <TabsTrigger
+                                            value="table"
+                                            className="h-8 px-4 text-xs font-medium rounded-md transition-all data-[state=active]:bg-white data-[state=active]:shadow-sm data-[state=active]:border data-[state=active]:border-slate-200 data-[state=active]:text-slate-800 text-slate-600 bg-slate-50 border-none"
+                                        >
+                                            <FolderOpenDot className="h-3.5 w-3.5 mr-1.5" />
+                                            Table
+                                        </TabsTrigger>
+                                        <TabsTrigger
+                                            value="network"
+                                            className="h-8 px-4 text-xs font-medium rounded-md transition-all data-[state=active]:bg-white data-[state=active]:shadow-sm data-[state=active]:border data-[state=active]:border-slate-200 data-[state=active]:text-slate-800 text-slate-600 bg-slate-50 border-none"
+                                        >
+                                            <Network className="h-3.5 w-3.5 mr-1.5" />
+                                            Network
+                                        </TabsTrigger>
+                                    </TabsList>
+                                </Tabs>
+                                
+                                
+                            </div>
+                        </CardTitle>
+                        
 
-                                    {/* Filters */}
+                    </CardHeader>                                    {/* Filters */}
                                     <CardContent className="p-4 sm:p-6">
                                         <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-3">
                                             {/* Modern Search Bar */}
@@ -972,18 +1006,7 @@ const CrisisDataDashboard = ({
 
                                     {/* Tabs for Table and Network View */}
                                     <CardContent className="px-4 sm:px-6 pt-2 sm:pt-0">
-                                        <Tabs defaultValue="table" className="w-full">
-                                            <TabsList className="w-full sm:w-auto mb-4">
-                                                <TabsTrigger value="table" className="flex items-center gap-2">
-                                                    <FolderOpenDot className="h-4 w-4" />
-                                                    Table View
-                                                </TabsTrigger>
-                                                <TabsTrigger value="network" className="flex items-center gap-2">
-                                                    <Network className="h-4 w-4" />
-                                                    Network View
-                                                </TabsTrigger>
-                                            </TabsList>
-
+                                        <Tabs value={activeView} className="w-full">
                                             <TabsContent value="table" className="mt-0">
                                         <div className="space-y-2">
                                             {organizationsWithProjects
