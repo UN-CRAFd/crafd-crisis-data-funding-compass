@@ -137,7 +137,7 @@ const StatCard = React.memo(function StatCard({ icon, title, value, label, color
                 </CardDescription>
             </CardHeader>
             <CardContent className="pt-0">
-                <div className="flex items-baseline gap-3">
+                <div className="flex items-baseline gap-2">
                     <div className={`text-4xl sm:text-5xl font-bold font-mono leading-none tabular-nums ${colors.value}`}>
                         {value}
                     </div>
@@ -396,7 +396,19 @@ const CrisisDataDashboard = ({
     // Extract data for use in component
     const { stats, projectTypes, organizationsWithProjects, allOrganizations, donorCountries: availableDonorCountries, investmentTypes: availableInvestmentTypes, topDonors } = dashboardData;
 
-    // Ensure the organization type chart always shows all known types.
+    // Add a 6th bar to the co-financing donor chart for 'n other donors'
+    let donorChartData = topDonors;
+    if (availableDonorCountries && topDonors && topDonors.length > 0) {
+        const shownDonors = topDonors.map(d => d.name);
+        const otherDonors = availableDonorCountries.filter(donor => !shownDonors.includes(donor));
+        donorChartData = [
+            ...topDonors,
+            { name: `${otherDonors.length} other donor${otherDonors.length === 1 ? '' : 's'}`, value: 0 }
+        ];
+    }
+
+    // Always show all investment types in the type filter
+    const allKnownInvestmentTypes = Object.values(labels.investmentTypes);
     // Get all types from the pre-generated organizations-with-types.json dictionary
     // and combine with any types inferred from the current organizations list.
     // Get all organization types from organizations-table.json and organizationsWithProjects
@@ -883,7 +895,7 @@ const CrisisDataDashboard = ({
                                                                 <DropdownMenuSeparator />
                                                             </>
                                                         )}
-                                                        {availableInvestmentTypes.map((type) => {
+                                                        {allKnownInvestmentTypes.map((type) => {
                                                             // Find the label from labels.json
                                                             const typeKey = Object.keys(labels.investmentTypes).find(key =>
                                                                 labels.investmentTypes[key as keyof typeof labels.investmentTypes].toLowerCase().includes(type.toLowerCase()) ||
@@ -1220,7 +1232,7 @@ const CrisisDataDashboard = ({
                                 <ChartCard
                                     title={labels.sections.donorCount}
                                     icon={<Globe style={{ color: 'var(--brand-primary)' }}  />}
-                                    data={topDonors}
+                                    data={donorChartData}
                                     barColor="var(--brand-primary-lighter)"
                                     footnote={
                                         combinedDonors.length > 0
