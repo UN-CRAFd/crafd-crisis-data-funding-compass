@@ -3,6 +3,7 @@
 import React, { useEffect, useMemo, useState } from 'react';
 // Image import removed because it's not used in this file
 import ChartCard from '@/components/ChartCard';
+import NetworkGraph from '@/components/NetworkGraph';
 import OrganizationModal from '@/components/OrganizationModal';
 import ProjectModal from '@/components/ProjectModal';
 import SurveyBanner from '@/components/SurveyBanner';
@@ -18,10 +19,11 @@ import {
     DropdownMenuTrigger,
 } from '@/components/ui/dropdown-menu';
 import { Input } from '@/components/ui/input';
+import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
 import { TooltipContent, TooltipProvider, TooltipTrigger, Tooltip as TooltipUI } from '@/components/ui/tooltip';
 import labels from '@/config/labels.json';
 import { getIconForInvestmentType } from '@/config/investmentTypeIcons';
-import { Building2, ChevronDown, ChevronRight, Database, DatabaseBackup, FileDown, Filter, FolderDot, FolderOpenDot, Globe, Info, MessageCircle, RotateCcw, Search, Share2, ArrowUpDown } from 'lucide-react';
+import { Building2, ChevronDown, ChevronRight, Database, DatabaseBackup, FileDown, Filter, FolderDot, FolderOpenDot, Globe, Info, MessageCircle, RotateCcw, Search, Share2, ArrowUpDown, Network } from 'lucide-react';
 import organizationsTableRaw from '../../public/data/organizations-table.json';
 import { buildOrgDonorCountriesMap, buildOrgProjectsMap, buildProjectNameMap, calculateOrganizationTypesFromOrganizationsWithProjects, getNestedOrganizationsForModals } from '../lib/data';
 import { exportDashboardToPDF } from '../lib/exportPDF';
@@ -764,8 +766,7 @@ const CrisisDataDashboard = ({
                                             </div>
 
                                             {/* Filter buttons container */}
-                                            <div className="flex flex-col sm:flex-row gap-4 sm:gap-3 order-2 sm:order-2">
-                                                {/* Donor Countries Multi-Select */}
+                                            <div className="flex flex-col sm:flex-row gap-4 sm:gap-3 order-2 sm:order-2">{/* Donor Countries Multi-Select */}
                                                 <DropdownMenu onOpenChange={(open) => setDonorsMenuOpen(open)}>
                                                     <DropdownMenuTrigger asChild>
                                                         <Button
@@ -968,7 +969,22 @@ const CrisisDataDashboard = ({
                                             {getFilterDescription()}
                                         </p>
                                     </CardContent>
+
+                                    {/* Tabs for Table and Network View */}
                                     <CardContent className="px-4 sm:px-6 pt-2 sm:pt-0">
+                                        <Tabs defaultValue="table" className="w-full">
+                                            <TabsList className="w-full sm:w-auto mb-4">
+                                                <TabsTrigger value="table" className="flex items-center gap-2">
+                                                    <FolderOpenDot className="h-4 w-4" />
+                                                    Table View
+                                                </TabsTrigger>
+                                                <TabsTrigger value="network" className="flex items-center gap-2">
+                                                    <Network className="h-4 w-4" />
+                                                    Network View
+                                                </TabsTrigger>
+                                            </TabsList>
+
+                                            <TabsContent value="table" className="mt-0">
                                         <div className="space-y-2">
                                             {organizationsWithProjects
                                                 .sort((a, b) => {
@@ -1213,6 +1229,20 @@ const CrisisDataDashboard = ({
                                                     );
                                                 })}
                                         </div>
+                                            </TabsContent>
+
+                                            <TabsContent value="network" className="mt-0">
+                                                <div className="w-full" style={{ height: '600px' }}>
+                                                    <NetworkGraph
+                                                        organizationsWithProjects={organizationsWithProjects}
+                                                        onOpenOrganizationModal={onOpenOrganizationModal}
+                                                        onOpenProjectModal={onOpenProjectModal}
+                                                        selectedOrgKey={selectedOrgKey}
+                                                        selectedProjectKey={selectedProjectKey}
+                                                    />
+                                                </div>
+                                            </TabsContent>
+                                        </Tabs>
                                     </CardContent>
                                 </Card>
                             </div>
