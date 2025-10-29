@@ -703,7 +703,7 @@ const CrisisDataDashboard = ({
                             <div>
                                 <Card className={STYLES.cardGlass}>
                                     <CardHeader className="pb-0 h-0">
-                                        <CardTitle>
+                                        <CardTitle className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3 sm:gap-0 w-full mb-2">
                                             <SectionHeader
                                                 icon={
                                                     organizationsWithProjects && organizationsWithProjects.some(org => org.projects && org.projects.length > 0)
@@ -711,8 +711,22 @@ const CrisisDataDashboard = ({
                                                         : <FolderDot style={{ color: 'var(--brand-primary)' }}  />
                                                 }
                                                 title={labels.sections.organizationsAndProjects}
+                                                
                                             />
+                                            {/* Sort Button */}
+                                                <Button
+                                                    variant="outline"
+                                                    onClick={() => setSortBy(sortBy === 'name' ? 'projects' : 'name')}
+                                                    className="h-10 w-full sm:w-auto px-4 font-medium transition-all bg-slate-50 border-none hover:bg-slate-100 text-slate-600 hover:text-slate-800"
+                                                    title={sortBy === 'name' ? 'Sort by number of assets' : 'Sort alphabetically'}
+                                                >
+                                                    <ArrowUpDown className="w-4 h-4" />
+                                                    <span className="ml-0 hidden sm:inline text-xs">
+                                                        {sortBy === 'name' ? 'Sort alphabetically' : 'Sort by number of assets'}
+                                                    </span>
+                                                </Button>
                                         </CardTitle>
+                                        
 
                                     </CardHeader>
 
@@ -920,18 +934,7 @@ const CrisisDataDashboard = ({
                                                     </DropdownMenuContent>
                                                 </DropdownMenu>
 
-                                                {/* Sort Button */}
-                                                <Button
-                                                    variant="outline"
-                                                    onClick={() => setSortBy(sortBy === 'name' ? 'projects' : 'name')}
-                                                    className="h-10 w-full sm:w-auto px-4 font-medium transition-all bg-slate-50/50 border-slate-200 hover:bg-white hover:border-slate-300"
-                                                    title={sortBy === 'name' ? 'Sort by number of assets' : 'Sort alphabetically'}
-                                                >
-                                                    <ArrowUpDown className="w-4 h-4" />
-                                                    <span className="ml-2 hidden sm:inline">
-                                                        {sortBy === 'name' ? 'A-Z' : 'Assets'}
-                                                    </span>
-                                                </Button>
+                                    
 
                                                 {/* Reset Filters Button */}
                                                 <Button
