@@ -152,7 +152,10 @@ const ChartCard = React.memo(function ChartCard({ title, icon, data, barColor, f
                                 position="right"
                                 content={(props: LabelProps) => {
                                     const { x, y, width, height, value, index } = props;
-                                    if (hoveredIndex !== index || x === undefined || y === undefined || width === undefined || height === undefined) return null;
+                                    const isVisible = hoveredIndex === index;
+                                    
+                                    // Always render but control visibility with opacity for smooth transitions
+                                    if (x === undefined || y === undefined || width === undefined || height === undefined) return null;
 
                                     const xPos = typeof x === 'number' ? x : parseFloat(x);
                                     const yPos = typeof y === 'number' ? y : parseFloat(y);
@@ -181,10 +184,10 @@ const ChartCard = React.memo(function ChartCard({ title, icon, data, barColor, f
                                             textAnchor={textAnchor}
                                             dominantBaseline="middle"
                                             style={{ 
-                                                transition: 'none',
-                                                opacity: 1,
+                                                transition: 'opacity 200ms ease-in-out',
+                                                opacity: isVisible ? 1 : 0,
                                                 zIndex: 1001,
-                                                textShadow: 'none'
+                                                pointerEvents: 'none'
                                             }}
                                         >
                                             {value}
