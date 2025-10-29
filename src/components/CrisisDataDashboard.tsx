@@ -137,10 +137,14 @@ const StatCard = React.memo(function StatCard({ icon, title, value, label, color
                 </CardDescription>
             </CardHeader>
             <CardContent className="pt-0">
-                <div className={`text-4xl sm:text-5xl font-bold font-mono leading-none tabular-nums ${colors.value}`}>
-                    {value}
+                <div className="flex items-baseline gap-3">
+                    <div className={`text-4xl sm:text-5xl font-bold font-mono leading-none tabular-nums ${colors.value}`}>
+                        {value}
+                    </div>
+                    <div className={`leading-none text-sm sm:text-lg font-medium ${colors.label}`}>
+                        {label}
+                    </div>
                 </div>
-                <div className={`text-sm sm:text-base font-medium mt-1 ${colors.label}`}>{label}</div>
             </CardContent>
         </Card>
     );
