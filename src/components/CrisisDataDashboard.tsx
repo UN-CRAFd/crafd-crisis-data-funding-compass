@@ -237,6 +237,8 @@ const CrisisDataDashboard = ({
     const [expandedOrgs, setExpandedOrgs] = useState<Set<string>>(new Set());
     const [expandedCountries, setExpandedCountries] = useState<Set<string>>(new Set());
     const [donorSearchQuery, setDonorSearchQuery] = useState<string>('');
+    const [donorsMenuOpen, setDonorsMenuOpen] = useState<boolean>(false);
+    const [typesMenuOpen, setTypesMenuOpen] = useState<boolean>(false);
     const [sortBy, setSortBy] = useState<'name' | 'projects'>('name'); // Add sort state
 
     // Modal loading states (project modal always URL-based now)
@@ -734,7 +736,7 @@ const CrisisDataDashboard = ({
                                             {/* Filter buttons container */}
                                             <div className="flex flex-col sm:flex-row gap-4 sm:gap-3 order-2 sm:order-2">
                                                 {/* Donor Countries Multi-Select */}
-                                                <DropdownMenu>
+                                                <DropdownMenu onOpenChange={(open) => setDonorsMenuOpen(open)}>
                                                     <DropdownMenuTrigger asChild>
                                                         <Button
                                                             variant="outline"
@@ -754,7 +756,7 @@ const CrisisDataDashboard = ({
                                                                     }
                                                                 </span>
                                                             </div>
-                                                            <ChevronDown className="ml-2 h-4 w-4 opacity-50 shrink-0" />
+                                                            <ChevronDown className={`ml-2 h-4 w-4 opacity-50 shrink-0 transform transition-transform ${donorsMenuOpen ? 'rotate-180' : ''}`} />
                                                         </Button>
                                                     </DropdownMenuTrigger>
                                                 <DropdownMenuContent align="start"
@@ -815,7 +817,7 @@ const CrisisDataDashboard = ({
                                             </DropdownMenu>
 
                                                 {/* Investment Types Multi-Select */}
-                                                <DropdownMenu>
+                                                <DropdownMenu onOpenChange={(open) => setTypesMenuOpen(open)}>
                                                     <DropdownMenuTrigger asChild>
                                                         <Button
                                                             variant="outline"
@@ -844,7 +846,7 @@ const CrisisDataDashboard = ({
                                                                     }
                                                                 </span>
                                                             </div>
-                                                            <ChevronDown className="ml-2 h-4 w-4 opacity-50 shrink-0" />
+                                                            <ChevronDown className={`ml-2 h-4 w-4 opacity-50 shrink-0 transform transition-transform ${typesMenuOpen ? 'rotate-180' : ''}`} />
                                                         </Button>
                                                     </DropdownMenuTrigger>
                                                     <DropdownMenuContent
