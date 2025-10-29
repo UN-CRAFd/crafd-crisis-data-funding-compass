@@ -147,6 +147,9 @@ const NetworkGraph: React.FC<NetworkGraphProps> = ({
             
             // Weaker centering force
             fg.d3Force('center').strength(0.05);
+            
+            // Increase velocity decay to make it less wobbly (higher = more damping)
+            fg.d3Force('simulation')?.velocityDecay(0.6);
         }
     }, [graphData]);
 
@@ -211,6 +214,17 @@ const NetworkGraph: React.FC<NetworkGraphProps> = ({
             }
         }, 100);
     }, [onOpenOrganizationModal, onOpenProjectModal]);
+
+    // Handle background click to deselect
+    const handleBackgroundClick = useCallback(() => {
+        // Close modals by clearing selection (calling with empty string)
+        if (selectedOrgKey) {
+            onOpenOrganizationModal('');
+        }
+        if (selectedProjectKey) {
+            onOpenProjectModal('');
+        }
+    }, [selectedOrgKey, selectedProjectKey, onOpenOrganizationModal, onOpenProjectModal]);
 
     // Custom node canvas rendering
     const paintNode = useCallback((node: GraphNode, ctx: CanvasRenderingContext2D, globalScale: number) => {
@@ -300,11 +314,12 @@ const NetworkGraph: React.FC<NetworkGraphProps> = ({
                 graphData={graphData}
                 width={dimensions.width}
                 height={dimensions.height}
-                nodeLabel="name"
+                nodeLabel=""
                 nodeVal="value"
                 nodeCanvasObject={paintNode}
                 onNodeClick={handleNodeClick}
                 onNodeHover={(node) => setHoveredNode(node as GraphNode | null)}
+                onBackgroundClick={handleBackgroundClick}
                 linkColor={(link) => {
                     if (highlightLinks.size === 0) return '#cbd5e1';
                     const sourceId = typeof link.source === 'object' ? (link.source as any).id : link.source;
@@ -328,7 +343,7 @@ const NetworkGraph: React.FC<NetworkGraphProps> = ({
                 }}
                 linkDirectionalParticleWidth={3}
                 linkDirectionalParticleSpeed={0.005}
-                d3VelocityDecay={0.2}
+                d3VelocityDecay={0.6}
                 d3AlphaDecay={0.01}
                 d3AlphaMin={0.001}
                 cooldownTicks={200}
