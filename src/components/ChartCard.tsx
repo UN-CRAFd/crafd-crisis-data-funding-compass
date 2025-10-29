@@ -4,7 +4,7 @@ import { Bar, BarChart, CartesianGrid, Cell, LabelList, ResponsiveContainer, XAx
 
 // Chart-specific styles
 const CHART_STYLES = {
-    cardGlass: "!border-0 bg-white/80 backdrop-blur-sm",
+    cardGlass: "!border-0 bg-white",
     sectionHeader: "flex items-center gap-2 text-lg font-qanelas-subtitle font-black text-slate-800 mb-0 mt-0 uppercase",
 } as const;
 
@@ -75,7 +75,7 @@ const ChartCard = React.memo(function ChartCard({ title, icon, data, barColor, f
     const resolvedColor = getColor(barColor);
 
     return (
-        <Card className={`${CHART_STYLES.cardGlass} sticky top-28`}>
+    <Card className={`${CHART_STYLES.cardGlass} sticky top-28`}>
             <CardHeader className="pb-0 h-6.5">
                 <CardTitle>
                     <SectionHeader icon={icon} title={title} />
