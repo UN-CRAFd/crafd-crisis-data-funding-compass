@@ -155,7 +155,7 @@ const StatCard = React.memo(function StatCard({ icon, title, value, label, color
                     <TooltipContent
                         side="bottom"
                         align="center"
-                        className="animate-none max-w-100 p-3 bg-white text-slate-800 text-sm rounded-lg border border-slate-200"
+                        className="max-w-100 p-3 bg-white text-slate-800 text-sm rounded-lg border border-slate-200"
                         sideOffset={5}
                         avoidCollisions={true}
                         style={{ ...STYLES.chartTooltip }}
@@ -185,6 +185,7 @@ const Badge = ({ text, variant }: BadgeProps) => {
         indigo: 'bg-[var(--badge-other-bg)] text-[var(--badge-other-text)] font-semibold',
         types: 'bg-green-50 text-green-700',
         slate: 'bg-[var(--badge-slate-bg)] text-[var(--badge-slate-text)]',
+        slate2: 'text-[var(--badge-slate-bg)] bg-[var(--badge-slate-text)]',
         highlighted: 'bg-[var(--brand-primary)]/20 text-[var(--brand-primary)] border border-[var(--brand-border)] font-semibold',
         beta: '' // Will use inline styles
     };
@@ -700,8 +701,8 @@ const CrisisDataDashboard = ({
                                             <SectionHeader
                                                 icon={
                                                     organizationsWithProjects && organizationsWithProjects.some(org => org.projects && org.projects.length > 0)
-                                                        ? <FolderOpenDot className="text-slate-600" />
-                                                        : <FolderDot className="text-slate-600" />
+                                                        ? <FolderOpenDot style={{ color: 'var(--brand-primary)' }}  />
+                                                        : <FolderDot style={{ color: 'var(--brand-primary)' }}  />
                                                 }
                                                 title={labels.sections.organizationsAndProjects}
                                             />
@@ -1020,7 +1021,7 @@ const CrisisDataDashboard = ({
                                                                                     });
                                                                                     const orgType = orgTableMatch?.fields['Org Type'] as string | undefined;
                                                                                     return orgType ? (
-                                                                                        <div className="hidden sm:inline-flex items-center px-1.5 py-px rounded text-[11px] font-medium text-slate-500 bg-transparent border border-slate-200 whitespace-nowrap flex-shrink-0">
+                                                                                        <div className="sm:inline-flex items-center px-1.5 py-px rounded text-[11px] font-medium text-slate-500 bg-transparent border border-slate-200 whitespace-nowrap flex-shrink-0">
                                                                                             {orgType}
                                                                                         </div>
                                                                                     ) : null;
@@ -1123,8 +1124,8 @@ const CrisisDataDashboard = ({
                                                                                     onOpenOrganizationModal(orgKey);
                                                                                 }
                                                                             }}
-                                                                            className="hidden sm:inline-flex items-center justify-center gap-1 bg-[var(--detail)] border-[var(--detail)] text-[var(--detail-text)] hover:bg-[var(--detail-light)] hover:border-[var(--detail-border)] text-[10px] h-6 px-2 rounded-md"
-                                                                        >
+                                                                                className="hidden sm:inline-flex items-center justify-center gap-1 text-[10px] h-6 px-2 rounded-md text-slate-100 bg-slate-300 hover:bg-slate-500 transition-colors duration-150"
+                                                                            >
                                                                             <div className="hidden sm:inline-flex items-center justify-center gap-1">
                                                                                 <Info className="w-3 h-3" />
                                                                                 <span>Details</span>
@@ -1209,7 +1210,7 @@ const CrisisDataDashboard = ({
                             >
                                 <ChartCard
                                     title={labels.sections.donorCount}
-                                    icon={<Globe className="text-slate-600" />}
+                                    icon={<Globe style={{ color: 'var(--brand-primary)' }}  />}
                                     data={topDonors}
                                     barColor="var(--brand-primary-lighter)"
                                     footnote={
@@ -1228,13 +1229,13 @@ const CrisisDataDashboard = ({
 
                             <ChartCard
                                 title={labels.sections.organizationTypes}
-                                icon={<Building2 className="text-slate-600" />}
+                                icon={<Building2 style={{ color: 'var(--brand-primary)' }}  />}
                                 data={organizationTypesChartData}
                                 barColor="var(--brand-primary-lighter)"
                             />
                             <ChartCard
                                 title={labels.sections.projectCategories}
-                                icon={<Database className="text-slate-600" />}
+                                icon={<Database style={{ color: 'var(--brand-primary)' }}  />}
                                 data={projectTypesChartData}
                                 barColor="var(--brand-primary-lighter)"
                                 footnote={labels.ui.chartFootnote}
