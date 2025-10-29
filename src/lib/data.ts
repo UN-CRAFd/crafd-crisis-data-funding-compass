@@ -415,8 +415,9 @@ export async function processDashboardData(filters: {
             5
         );
 
-        // Get available filter options from all organizations (not filtered)
-        const filterOptions = getAvailableFilterOptions(allOrganizations);
+        // Get available filter options from filtered organizations (viewport)
+        // This ensures dropdowns only show options that are currently available
+        const filterOptions = getAvailableFilterOptions(filteredOrganizations);
 
         return {
             stats,
