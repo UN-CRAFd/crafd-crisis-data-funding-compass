@@ -22,8 +22,12 @@ interface GraphNode {
     color: string;
     orgKey?: string;
     projectKey?: string;
+    orgType?: string; // For organization clustering
+    assetTypes?: string[]; // For project/asset clustering
     x?: number;
     y?: number;
+    fx?: number; // Fixed x position for clustering
+    fy?: number; // Fixed y position for clustering
 }
 
 interface GraphLink {
@@ -52,6 +56,9 @@ const NetworkGraph: React.FC<NetworkGraphProps> = ({
     const [hoverHighlightLinks, setHoverHighlightLinks] = useState<Set<string>>(new Set());
     const [isFullscreen, setIsFullscreen] = useState(false);
     const globalScaleRef = useRef<number>(1); // Track current zoom scale
+    const [clusterByOrgType, setClusterByOrgType] = useState(false);
+    const [clusterByAssetType, setClusterByAssetType] = useState(false);
+    const [isClusteringTransition, setIsClusteringTransition] = useState(false);
 
     // Handle fullscreen toggle
     const toggleFullscreen = useCallback(() => {
@@ -154,6 +161,7 @@ const NetworkGraph: React.FC<NetworkGraphProps> = ({
                 value: 22, // Medium nodes for organizations
                 color: brandBgLight, // Uses --brand-bg-light (amber/golden from organization badges)
                 orgKey: org.id,
+                orgType: org.type, // Store org type for clustering
             });
 
             // Link organizations to donors
@@ -179,6 +187,7 @@ const NetworkGraph: React.FC<NetworkGraphProps> = ({
                         value: 20, // Slightly larger nodes for projects (assets)
                         color: badgeOtherBg, // Uses --badge-other-bg (purple/indigo from asset type badges)
                         projectKey: project.id,
+                        assetTypes: project.investmentTypes || [], // Store asset types for clustering
                     });
                 }
 
@@ -262,6 +271,124 @@ const NetworkGraph: React.FC<NetworkGraphProps> = ({
             fg.d3Force('simulation')?.velocityDecay(0.6);
         }
     }, [graphData]);
+
+    // Apply clustering with a completely new approach
+    useEffect(() => {
+        if (!graphRef.current) return;
+        
+        const fg = graphRef.current;
+        
+        // Remove any existing cluster forces first
+        fg.d3Force('clusterX', null);
+        fg.d3Force('clusterY', null);
+        
+        if (clusterByOrgType || clusterByAssetType) {
+            // Weaken the default forces to allow clustering to dominate
+            fg.d3Force('charge').strength(-300); // Reduced from -700
+            fg.d3Force('center').strength(0.01); // Reduced from 0.05
+            
+            const clusterCenters = new Map<string, { x: number; y: number }>();
+            const clusterRadius = Math.min(dimensions.width, dimensions.height) * 0.35;
+            
+            // Collect unique cluster keys and count nodes per cluster
+            const clusterKeys = new Set<string>();
+            const clusterNodeCounts = new Map<string, number>();
+            
+            graphData.nodes.forEach(node => {
+                let clusterKey = null;
+                
+                if (clusterByOrgType && node.type === 'organization' && node.orgType) {
+                    clusterKey = `org-${node.orgType}`;
+                } else if (clusterByAssetType && node.type === 'project' && node.assetTypes && node.assetTypes.length > 0) {
+                    clusterKey = `asset-${node.assetTypes[0]}`;
+                }
+                
+                if (clusterKey) {
+                    clusterKeys.add(clusterKey);
+                    clusterNodeCounts.set(clusterKey, (clusterNodeCounts.get(clusterKey) || 0) + 1);
+                }
+            });
+            
+            // Assign well-separated positions for each cluster center
+            const clusterArray = Array.from(clusterKeys);
+            const numClusters = clusterArray.length;
+            
+            clusterArray.forEach((key, i) => {
+                // Arrange clusters in a grid or circular pattern with large spacing
+                if (numClusters <= 4) {
+                    // Use corners for up to 4 clusters
+                    const positions = [
+                        { x: -clusterRadius, y: -clusterRadius },
+                        { x: clusterRadius, y: -clusterRadius },
+                        { x: -clusterRadius, y: clusterRadius },
+                        { x: clusterRadius, y: clusterRadius }
+                    ];
+                    clusterCenters.set(key, positions[i]);
+                } else {
+                    // Use circle arrangement for more clusters
+                    const angle = (i / numClusters) * 2 * Math.PI;
+                    clusterCenters.set(key, {
+                        x: Math.cos(angle) * clusterRadius,
+                        y: Math.sin(angle) * clusterRadius
+                    });
+                }
+            });
+            
+            // Apply very strong clustering force using forceX and forceY pattern
+            const clusterStrength = 0.15; // Strong clustering
+            
+            fg.d3Force('clusterX', (alpha: number) => {
+                for (let i = 0; i < graphData.nodes.length; i++) {
+                    const node: any = graphData.nodes[i];
+                    let clusterKey = null;
+                    
+                    if (clusterByOrgType && node.type === 'organization' && node.orgType) {
+                        clusterKey = `org-${node.orgType}`;
+                    } else if (clusterByAssetType && node.type === 'project' && node.assetTypes && node.assetTypes.length > 0) {
+                        clusterKey = `asset-${node.assetTypes[0]}`;
+                    }
+                    
+                    if (clusterKey && clusterCenters.has(clusterKey)) {
+                        const center = clusterCenters.get(clusterKey)!;
+                        node.vx += (center.x - node.x) * clusterStrength;
+                    }
+                }
+            });
+            
+            fg.d3Force('clusterY', (alpha: number) => {
+                for (let i = 0; i < graphData.nodes.length; i++) {
+                    const node: any = graphData.nodes[i];
+                    let clusterKey = null;
+                    
+                    if (clusterByOrgType && node.type === 'organization' && node.orgType) {
+                        clusterKey = `org-${node.orgType}`;
+                    } else if (clusterByAssetType && node.type === 'project' && node.assetTypes && node.assetTypes.length > 0) {
+                        clusterKey = `asset-${node.assetTypes[0]}`;
+                    }
+                    
+                    if (clusterKey && clusterCenters.has(clusterKey)) {
+                        const center = clusterCenters.get(clusterKey)!;
+                        node.vy += (center.y - node.y) * clusterStrength;
+                    }
+                }
+            });
+        } else {
+            // Restore default forces when clustering is off
+            fg.d3Force('charge').strength(-700);
+            fg.d3Force('center').strength(0.05);
+        }
+        
+        // Always reheat to recalculate from current state with new forces
+        fg.d3ReheatSimulation();
+
+        // Set transition flag and reset after a delay
+        setIsClusteringTransition(true);
+        const timer = setTimeout(() => {
+            setIsClusteringTransition(false);
+        }, 500); // Adjust delay as needed
+
+        return () => clearTimeout(timer);
+    }, [graphData, clusterByOrgType, clusterByAssetType, dimensions]);
 
     // Note: persistent click-based highlighting removed to avoid performance issues.
 
@@ -405,6 +532,138 @@ const NetworkGraph: React.FC<NetworkGraphProps> = ({
         }
     }, [hoveredNode, hoverHighlightNodes]);
 
+    // Draw cluster hulls around grouped nodes (backgrounds only)
+    const drawClusterHulls = useCallback((ctx: CanvasRenderingContext2D, globalScale: number) => {
+        if (!clusterByOrgType && !clusterByAssetType) return;
+
+        // Group nodes by cluster
+        const clusters = new Map<string, GraphNode[]>();
+        
+        graphData.nodes.forEach(node => {
+            let clusterKey = null;
+            
+            if (clusterByOrgType && node.type === 'organization' && node.orgType) {
+                clusterKey = `org-${node.orgType}`;
+            } else if (clusterByAssetType && node.type === 'project' && node.assetTypes && node.assetTypes.length > 0) {
+                clusterKey = `asset-${node.assetTypes[0]}`;
+            }
+            
+            if (clusterKey) {
+                if (!clusters.has(clusterKey)) {
+                    clusters.set(clusterKey, []);
+                }
+                clusters.get(clusterKey)!.push(node);
+            }
+        });
+
+        // Draw hull for each cluster (without labels)
+        clusters.forEach((nodes, clusterKey) => {
+            if (nodes.length < 2) return; // Need at least 2 nodes for a hull
+            
+            // Calculate convex hull points with padding
+            const padding = 20 / globalScale;
+            const points = nodes.map(n => ({ x: n.x!, y: n.y!, r: (n.value / 2) + padding }));
+            
+            // Simple hull: find bounding circle
+            if (points.length > 0) {
+                const centroidX = points.reduce((sum, p) => sum + p.x, 0) / points.length;
+                const centroidY = points.reduce((sum, p) => sum + p.y, 0) / points.length;
+                const maxDist = Math.max(...points.map(p => 
+                    Math.sqrt(Math.pow(p.x - centroidX, 2) + Math.pow(p.y - centroidY, 2)) + p.r
+                ));
+                
+                // Draw cluster background
+                ctx.beginPath();
+                ctx.arc(centroidX, centroidY, maxDist + 10 / globalScale, 0, 2 * Math.PI);
+                
+                // Style based on cluster type
+                if (clusterKey.startsWith('org-')) {
+                    ctx.fillStyle = 'rgba(243, 195, 92, 0.1)'; // Amber with low opacity
+                    ctx.strokeStyle = 'rgba(188, 132, 15, 0.3)'; // Amber dark
+                } else {
+                    ctx.fillStyle = 'rgba(215, 216, 245, 0.15)'; // Purple/indigo with low opacity
+                    ctx.strokeStyle = 'rgba(77, 71, 156, 0.3)'; // Purple dark
+                }
+                
+                ctx.lineWidth = 2 / globalScale;
+                ctx.setLineDash([5 / globalScale, 5 / globalScale]);
+                ctx.fill();
+                ctx.stroke();
+                ctx.setLineDash([]); // Reset dash
+            }
+        });
+    }, [graphData, clusterByOrgType, clusterByAssetType]);
+
+    // Draw cluster labels on top of everything
+    const drawClusterLabels = useCallback((ctx: CanvasRenderingContext2D, globalScale: number) => {
+        if (!clusterByOrgType && !clusterByAssetType) return;
+
+        // Group nodes by cluster
+        const clusters = new Map<string, GraphNode[]>();
+        
+        graphData.nodes.forEach(node => {
+            let clusterKey = null;
+            
+            if (clusterByOrgType && node.type === 'organization' && node.orgType) {
+                clusterKey = `org-${node.orgType}`;
+            } else if (clusterByAssetType && node.type === 'project' && node.assetTypes && node.assetTypes.length > 0) {
+                clusterKey = `asset-${node.assetTypes[0]}`;
+            }
+            
+            if (clusterKey) {
+                if (!clusters.has(clusterKey)) {
+                    clusters.set(clusterKey, []);
+                }
+                clusters.get(clusterKey)!.push(node);
+            }
+        });
+
+        // Draw labels for each cluster
+        clusters.forEach((nodes, clusterKey) => {
+            if (nodes.length < 2) return;
+            
+            const padding = 20 / globalScale;
+            const points = nodes.map(n => ({ x: n.x!, y: n.y!, r: (n.value / 2) + padding }));
+            
+            if (points.length > 0) {
+                const centroidX = points.reduce((sum, p) => sum + p.x, 0) / points.length;
+                const centroidY = points.reduce((sum, p) => sum + p.y, 0) / points.length;
+                const maxDist = Math.max(...points.map(p => 
+                    Math.sqrt(Math.pow(p.x - centroidX, 2) + Math.pow(p.y - centroidY, 2)) + p.r
+                ));
+                
+                // Draw cluster label
+                const fontSize = 14 / globalScale;
+                ctx.font = `bold ${fontSize}px Sans-Serif`;
+                ctx.textAlign = 'center';
+                ctx.textBaseline = 'middle';
+                
+                // Extract readable label from cluster key
+                const label = clusterKey.replace('org-', '').replace('asset-', '');
+                const labelY = centroidY - maxDist - 20 / globalScale;
+                
+                // Draw label background
+                const labelWidth = ctx.measureText(label).width;
+                const labelPadding = 6 / globalScale;
+                ctx.fillStyle = 'rgba(255, 255, 255, 0.9)';
+                ctx.fillRect(
+                    centroidX - labelWidth / 2 - labelPadding,
+                    labelY - fontSize / 2 - labelPadding,
+                    labelWidth + labelPadding * 2,
+                    fontSize + labelPadding * 2
+                );
+                
+                // Draw label text
+                if (clusterKey.startsWith('org-')) {
+                    ctx.fillStyle = '#BC840F';
+                } else {
+                    ctx.fillStyle = '#4d479c';
+                }
+                ctx.fillText(label, centroidX, labelY);
+            }
+        });
+    }, [graphData, clusterByOrgType, clusterByAssetType]);
+
     return (
         <div ref={containerRef} className="w-full h-full bg-white rounded-lg border border-slate-200 overflow-hidden relative">
             {/* Legend */}
@@ -440,6 +699,57 @@ const NetworkGraph: React.FC<NetworkGraphProps> = ({
                 
             </div>
 
+            {/* Clustering Controls */}
+            <div className="absolute top-4 right-4 z-10 bg-white backdrop-blur-lg p-3 rounded-lg border border-slate-200 shadow-sm">
+                <div className="text-xs font-semibold text-slate-800/90 mb-2">Clustering</div>
+                <div className="space-y-2">
+                    <button
+                        onClick={() => setClusterByOrgType(!clusterByOrgType)}
+                        className={`w-full text-left px-2 py-1.5 rounded text-xs transition-colors ${
+                            clusterByOrgType
+                                ? 'bg-[var(--brand-bg-light)] text-[var(--brand-primary)] border border-[var(--brand-primary)]'
+                                : 'bg-slate-50 text-slate-600 border border-slate-200 hover:bg-slate-100'
+                        }`}
+                        title="Group organizations by type"
+                    >
+                        <div className="flex items-center justify-between">
+                            <span>By Org Type</span>
+                            <div className={`w-3 h-3 rounded-sm border ${
+                                clusterByOrgType ? 'bg-[var(--brand-primary)] border-[var(--brand-primary)]' : 'border-slate-300'
+                            }`}>
+                                {clusterByOrgType && (
+                                    <svg className="w-3 h-3 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={3} d="M5 13l4 4L19 7" />
+                                    </svg>
+                                )}
+                            </div>
+                        </div>
+                    </button>
+                    <button
+                        onClick={() => setClusterByAssetType(!clusterByAssetType)}
+                        className={`w-full text-left px-2 py-1.5 rounded text-xs transition-colors ${
+                            clusterByAssetType
+                                ? 'bg-[var(--badge-other-bg)] text-[var(--badge-other-text)] border border-[var(--badge-other-text)]'
+                                : 'bg-slate-50 text-slate-600 border border-slate-200 hover:bg-slate-100'
+                        }`}
+                        title="Group assets by investment type"
+                    >
+                        <div className="flex items-center justify-between">
+                            <span>By Asset Type</span>
+                            <div className={`w-3 h-3 rounded-sm border ${
+                                clusterByAssetType ? 'bg-[var(--badge-other-text)] border-[var(--badge-other-text)]' : 'border-slate-300'
+                            }`}>
+                                {clusterByAssetType && (
+                                    <svg className="w-3 h-3 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={3} d="M5 13l4 4L19 7" />
+                                    </svg>
+                                )}
+                            </div>
+                        </div>
+                    </button>
+                </div>
+            </div>
+
             <ForceGraph2D
                 ref={graphRef}
                 graphData={graphData}
@@ -451,11 +761,17 @@ const NetworkGraph: React.FC<NetworkGraphProps> = ({
                 nodeCanvasObjectMode={() => 'replace'}
                 onNodeHover={handleNodeHover}
                 onBackgroundClick={handleBackgroundClick}
+                onRenderFramePre={(ctx, globalScale) => {
+                    // Draw cluster hulls first (behind everything)
+                    drawClusterHulls(ctx, globalScale);
+                }}
                 onRenderFramePost={(ctx, globalScale) => {
                     // Track current zoom level for use in linkWidth callback
                     globalScaleRef.current = globalScale;
-                    // Draw all labels after all nodes are drawn
+                    // Draw all node labels
                     graphData.nodes.forEach(node => paintNodeLabel(node, ctx, globalScale));
+                    // Draw cluster labels on top of everything
+                    drawClusterLabels(ctx, globalScale);
                 }}
                 linkColor={(link) => {
                     const sourceId = typeof link.source === 'object' ? (link.source as any).id : link.source;
@@ -496,15 +812,13 @@ const NetworkGraph: React.FC<NetworkGraphProps> = ({
                     return 2 * globalScaleRef.current * 1.1;
                 }}
                 linkDirectionalParticleSpeed={0.005}
-                d3VelocityDecay={0.6}
+                d3VelocityDecay={0.4}
                 d3AlphaDecay={0.01}
-                d3AlphaMin={0.001}
-                cooldownTicks={200}
-                warmupTicks={100}
+                cooldownTicks={Infinity}
+                warmupTicks={isClusteringTransition ? 500 : 100}
                 enableNodeDrag={true}
                 enableZoomInteraction={true}
                 enablePanInteraction={true}
-                nodeRelSize={6}
             />
         </div>
     );
