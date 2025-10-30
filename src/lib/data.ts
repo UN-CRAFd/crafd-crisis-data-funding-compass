@@ -95,6 +95,7 @@ function convertToOrganizationWithProjects(org: NestedOrganization): Organizatio
 
         return {
             id: project.id,
+            productKey: String(fields['Product Key'] || fields['Product/Product Key'] || fields['Product Key (Airtable)'] || project.id).trim(),
             projectName: fields['Project/Product Name'] || 'Unnamed Project',
             donorCountries: projectDonorCountries,
             investmentTypes: extractInvestmentTypesFromProjects([project]),
@@ -120,6 +121,7 @@ function convertToOrganizationWithProjects(org: NestedOrganization): Organizatio
     return {
         id: org.id,
         organizationName: org.name || 'Unnamed Organization',
+        orgShortName: org.fields?.['Org Short Name'] || '',
         type: orgType,
         donorCountries,
         projects: projectsData,

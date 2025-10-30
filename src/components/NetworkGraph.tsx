@@ -48,6 +48,8 @@ const NetworkGraph: React.FC<NetworkGraphProps> = ({
     const [hoveredNode, setHoveredNode] = useState<GraphNode | null>(null);
     const [highlightNodes, setHighlightNodes] = useState<Set<string>>(new Set());
     const [highlightLinks, setHighlightLinks] = useState<Set<string>>(new Set());
+    const [hoverHighlightNodes, setHoverHighlightNodes] = useState<Set<string>>(new Set());
+    const [hoverHighlightLinks, setHoverHighlightLinks] = useState<Set<string>>(new Set());
 
     // Update dimensions on resize
     useEffect(() => {
@@ -95,7 +97,7 @@ const NetworkGraph: React.FC<NetworkGraphProps> = ({
                 id: orgNodeId,
                 name: org.organizationName,
                 type: 'organization',
-                value: 18, // Medium nodes for organizations
+                value: 22, // Medium nodes for organizations
                 color: '#1FBBEE', // Blue for organizations
                 orgKey: org.id,
             });
@@ -117,9 +119,9 @@ const NetworkGraph: React.FC<NetworkGraphProps> = ({
                     id: projectNodeId,
                     name: project.projectName,
                     type: 'project',
-                    value: 10, // Smaller nodes for projects
+                    value: 20, // Slightly larger nodes for projects (assets)
                     color: '#4CAF50', // Green for projects
-                    projectKey: project.id,
+                    projectKey: project.productKey,
                 });
 
                 links.push({
@@ -194,6 +196,37 @@ const NetworkGraph: React.FC<NetworkGraphProps> = ({
         setHighlightLinks(newHighlightLinks);
     }, [selectedOrgKey, selectedProjectKey, graphData]);
 
+    // Handle node hover to highlight connections
+    const handleNodeHover = useCallback((node: GraphNode | null) => {
+        setHoveredNode(node);
+        
+        if (!node) {
+            setHoverHighlightNodes(new Set());
+            setHoverHighlightLinks(new Set());
+            return;
+        }
+
+        const newHighlightNodes = new Set<string>();
+        const newHighlightLinks = new Set<string>();
+
+        newHighlightNodes.add(node.id);
+
+        // Find all connections for this node
+        graphData.links.forEach(link => {
+            const sourceId = typeof link.source === 'object' ? (link.source as any).id : link.source;
+            const targetId = typeof link.target === 'object' ? (link.target as any).id : link.target;
+
+            if (sourceId === node.id || targetId === node.id) {
+                newHighlightNodes.add(sourceId);
+                newHighlightNodes.add(targetId);
+                newHighlightLinks.add(`${sourceId}-${targetId}`);
+            }
+        });
+
+        setHoverHighlightNodes(newHighlightNodes);
+        setHoverHighlightLinks(newHighlightLinks);
+    }, [graphData]);
+
     // Handle node click
     const handleNodeClick = useCallback((node: GraphNode) => {
         // Pause the simulation to prevent movement
@@ -231,21 +264,25 @@ const NetworkGraph: React.FC<NetworkGraphProps> = ({
         const fontSize = 12 / globalScale;
         ctx.font = `${fontSize}px Sans-Serif`;
         
-        const isHighlighted = highlightNodes.size > 0 && highlightNodes.has(node.id);
-        const isDimmed = highlightNodes.size > 0 && !isHighlighted;
+        // Combine selection-based and hover-based highlighting
+        const isSelectedHighlighted = highlightNodes.size > 0 && highlightNodes.has(node.id);
+        const isHoverHighlighted = hoverHighlightNodes.size > 0 && hoverHighlightNodes.has(node.id);
+        const isHighlighted = isSelectedHighlighted || isHoverHighlighted;
+        const isDimmed = (highlightNodes.size > 0 || hoverHighlightNodes.size > 0) && !isHighlighted;
         
         // Draw node circle
         ctx.beginPath();
         ctx.arc(node.x!, node.y!, node.value / 2, 0, 2 * Math.PI, false);
         
-        // Apply dimming or highlighting
+        // Apply dimming or highlighting (subtle)
         if (isDimmed) {
-            ctx.globalAlpha = 0.2;
+            // Less aggressive dimming so the rest of the graph stays visible
+            ctx.globalAlpha = 0.65;
         } else if (isHighlighted) {
             ctx.globalAlpha = 1;
-            // Add glow effect for highlighted nodes
+            // Softer glow for highlighted nodes
             ctx.shadowColor = node.color;
-            ctx.shadowBlur = 15;
+            ctx.shadowBlur = 8;
         }
         
         ctx.fillStyle = node.color;
@@ -256,8 +293,8 @@ const NetworkGraph: React.FC<NetworkGraphProps> = ({
         
         // Add border for clickable nodes
         if (node.type === 'organization' || node.type === 'project') {
-            ctx.strokeStyle = isHighlighted ? '#fff' : '#fff';
-            ctx.lineWidth = isHighlighted ? 3 / globalScale : 2 / globalScale;
+            ctx.strokeStyle = '#fff';
+            ctx.lineWidth = isHighlighted ? 2.5 / globalScale : 1.5 / globalScale;
             ctx.stroke();
         }
         
@@ -283,7 +320,7 @@ const NetworkGraph: React.FC<NetworkGraphProps> = ({
             ctx.fillStyle = '#1e293b';
             ctx.fillText(label, node.x!, node.y! + node.value / 2 + fontSize / 2 + 4);
         }
-    }, [hoveredNode, highlightNodes]);
+    }, [hoveredNode, highlightNodes, hoverHighlightNodes]);
 
     return (
         <div ref={containerRef} className="w-full h-full bg-white rounded-lg border border-slate-200 overflow-hidden relative">
@@ -318,28 +355,42 @@ const NetworkGraph: React.FC<NetworkGraphProps> = ({
                 nodeVal="value"
                 nodeCanvasObject={paintNode}
                 onNodeClick={handleNodeClick}
-                onNodeHover={(node) => setHoveredNode(node as GraphNode | null)}
+                onNodeHover={handleNodeHover}
                 onBackgroundClick={handleBackgroundClick}
                 linkColor={(link) => {
-                    if (highlightLinks.size === 0) return '#cbd5e1';
                     const sourceId = typeof link.source === 'object' ? (link.source as any).id : link.source;
                     const targetId = typeof link.target === 'object' ? (link.target as any).id : link.target;
                     const linkId = `${sourceId}-${targetId}`;
-                    return highlightLinks.has(linkId) ? '#e6af26' : 'rgba(203, 213, 225, 0.2)';
+                    
+                    // Check both selection and hover highlights
+                    const isSelectedHighlight = highlightLinks.size > 0 && highlightLinks.has(linkId);
+                    const isHoverHighlight = hoverHighlightLinks.size > 0 && hoverHighlightLinks.has(linkId);
+                    
+                    if (highlightLinks.size === 0 && hoverHighlightLinks.size === 0) return '#cbd5e1';
+                    if (isSelectedHighlight || isHoverHighlight) return '#e6af26';
+                    return 'rgba(203, 213, 225, 0.2)';
                 }}
                 linkWidth={(link) => {
-                    if (highlightLinks.size === 0) return 1;
                     const sourceId = typeof link.source === 'object' ? (link.source as any).id : link.source;
                     const targetId = typeof link.target === 'object' ? (link.target as any).id : link.target;
                     const linkId = `${sourceId}-${targetId}`;
-                    return highlightLinks.has(linkId) ? 3 : 1;
+                    
+                    const isSelectedHighlight = highlightLinks.size > 0 && highlightLinks.has(linkId);
+                    const isHoverHighlight = hoverHighlightLinks.size > 0 && hoverHighlightLinks.has(linkId);
+                    
+                    if (highlightLinks.size === 0 && hoverHighlightLinks.size === 0) return 1;
+                    return (isSelectedHighlight || isHoverHighlight) ? 3 : 1;
                 }}
                 linkDirectionalParticles={(link) => {
-                    if (highlightLinks.size === 0) return 2;
                     const sourceId = typeof link.source === 'object' ? (link.source as any).id : link.source;
                     const targetId = typeof link.target === 'object' ? (link.target as any).id : link.target;
                     const linkId = `${sourceId}-${targetId}`;
-                    return highlightLinks.has(linkId) ? 4 : 0;
+                    
+                    const isSelectedHighlight = highlightLinks.size > 0 && highlightLinks.has(linkId);
+                    const isHoverHighlight = hoverHighlightLinks.size > 0 && hoverHighlightLinks.has(linkId);
+                    
+                    if (highlightLinks.size === 0 && hoverHighlightLinks.size === 0) return 2;
+                    return (isSelectedHighlight || isHoverHighlight) ? 4 : 0;
                 }}
                 linkDirectionalParticleWidth={3}
                 linkDirectionalParticleSpeed={0.005}
