@@ -288,8 +288,8 @@ const NetworkGraph: React.FC<NetworkGraphProps> = ({
     return (
         <div ref={containerRef} className="w-full h-full bg-white rounded-lg border border-slate-200 overflow-hidden relative">
             {/* Legend */}
-            <div className="absolute top-4 left-4 z-10 bg-white/95 backdrop-blur-sm p-3 rounded-lg border border-slate-200 shadow-sm">
-                <div className="text-xs font-semibold text-slate-700 mb-2">Legend</div>
+            <div className="absolute top-4 left-4 z-10 bg-white/30 backdrop-blur-lg p-3 rounded-lg border border-slate-200 shadow-sm">
+                <div className="text-xs font-semibold text-slate-800/90 mb-2">Legend</div>
                 <div className="space-y-1.5">
                     <div className="flex items-center gap-2">
                         <div className="w-4 h-4 rounded-full" style={{ backgroundColor: '#e6af26' }}></div>
