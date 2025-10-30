@@ -186,22 +186,22 @@ const NetworkGraph: React.FC<NetworkGraphProps> = ({
             fg.d3Force('charge').distanceMax(500);
 
             // Set link distance dynamically based on node types
-            fg.d3Force('link').distance((link) => {
-                const sourceType = typeof link.source === 'object' ? (link.source as GraphNode).type : '';
-                const targetType = typeof link.target === 'object' ? (link.target as GraphNode).type : '';
-
-                if ((sourceType === 'organization' && targetType === 'project') ||
-                    (sourceType === 'project' && targetType === 'organization')) {
-                    return 100; // Shorter distance for organization-project links
-                }
-
-                if ((sourceType === 'organization' && targetType === 'donor') ||
-                    (sourceType === 'donor' && targetType === 'organization')) {
-                    return 200; // Longer distance for organization-donor links
-                }
-
-                return 150; // Default distance
-            });
+                        fg.d3Force('link').distance((link: any) => {
+                            const sourceType = typeof link.source === 'object' ? (link.source as GraphNode).type : '';
+                            const targetType = typeof link.target === 'object' ? (link.target as GraphNode).type : '';
+            
+                            if ((sourceType === 'organization' && targetType === 'project') ||
+                                (sourceType === 'project' && targetType === 'organization')) {
+                                return 100; // Shorter distance for organization-project links
+                            }
+            
+                            if ((sourceType === 'organization' && targetType === 'donor') ||
+                                (sourceType === 'donor' && targetType === 'organization')) {
+                                return 200; // Longer distance for organization-donor links
+                            }
+            
+                            return 150; // Default distance
+                        });
 
             // Weaker centering force
             fg.d3Force('center').strength(0.05);
@@ -341,7 +341,7 @@ const NetworkGraph: React.FC<NetworkGraphProps> = ({
     return (
         <div ref={containerRef} className="w-full h-full bg-white rounded-lg border border-slate-200 overflow-hidden relative">
             {/* Legend */}
-            <div className="absolute top-4 left-4 z-10 bg-white/30 backdrop-blur-lg p-3 rounded-lg border border-slate-200 shadow-sm">
+            <div className="absolute top-4 left-4 z-10 bg-white backdrop-blur-lg p-3 rounded-lg border border-slate-200 shadow-sm">
                 <div className="flex items-center justify-between mb-2">
                     <div className="text-xs font-semibold text-slate-800/90">Legend</div>
                     <button
