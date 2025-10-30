@@ -2,6 +2,7 @@
 
 import React, { useCallback, useEffect, useRef, useState } from 'react';
 import ForceGraph2D from 'react-force-graph-2d';
+import { Maximize2, Minimize2 } from 'lucide-react';
 import type { OrganizationWithProjects } from '../types/airtable';
 
 interface NetworkGraphProps {
@@ -46,25 +47,37 @@ const NetworkGraph: React.FC<NetworkGraphProps> = ({
     const [dimensions, setDimensions] = useState({ width: 800, height: 600 });
     const containerRef = useRef<HTMLDivElement>(null);
     const [hoveredNode, setHoveredNode] = useState<GraphNode | null>(null);
-    const [highlightNodes, setHighlightNodes] = useState<Set<string>>(new Set());
-    const [highlightLinks, setHighlightLinks] = useState<Set<string>>(new Set());
     const [hoverHighlightNodes, setHoverHighlightNodes] = useState<Set<string>>(new Set());
     const [hoverHighlightLinks, setHoverHighlightLinks] = useState<Set<string>>(new Set());
+    const [isFullscreen, setIsFullscreen] = useState(false);
 
-    // Update dimensions on resize
+    // Update dimensions on resize (reusable)
+    const updateDimensions = useCallback(() => {
+        if (containerRef.current) {
+            const width = containerRef.current.offsetWidth;
+            const height = Math.max(600, window.innerHeight - 400);
+            setDimensions({ width, height });
+        }
+    }, []);
+
     useEffect(() => {
-        const updateDimensions = () => {
-            if (containerRef.current) {
-                const width = containerRef.current.offsetWidth;
-                const height = Math.max(600, window.innerHeight - 400);
-                setDimensions({ width, height });
-            }
-        };
-
         updateDimensions();
         window.addEventListener('resize', updateDimensions);
         return () => window.removeEventListener('resize', updateDimensions);
-    }, []);
+    }, [updateDimensions]);
+
+    // Keep dimensions updated when entering/exiting fullscreen
+    useEffect(() => {
+        const onFsChange = () => {
+            const isFs = !!document.fullscreenElement;
+            setIsFullscreen(isFs);
+            // Wait a tick for layout to update
+            setTimeout(updateDimensions, 50);
+        };
+
+        document.addEventListener('fullscreenchange', onFsChange);
+        return () => document.removeEventListener('fullscreenchange', onFsChange);
+    }, [updateDimensions]);
 
     // Transform data into graph format
     const graphData = React.useMemo<GraphData>(() => {
@@ -155,46 +168,7 @@ const NetworkGraph: React.FC<NetworkGraphProps> = ({
         }
     }, [graphData]);
 
-    // Update highlighted nodes and links when a modal is open
-    useEffect(() => {
-        const newHighlightNodes = new Set<string>();
-        const newHighlightLinks = new Set<string>();
-
-        if (selectedOrgKey) {
-            const orgNodeId = `org-${selectedOrgKey}`;
-            newHighlightNodes.add(orgNodeId);
-
-            // Find all connections for this organization
-            graphData.links.forEach(link => {
-                const sourceId = typeof link.source === 'object' ? (link.source as any).id : link.source;
-                const targetId = typeof link.target === 'object' ? (link.target as any).id : link.target;
-
-                if (sourceId === orgNodeId || targetId === orgNodeId) {
-                    newHighlightNodes.add(sourceId);
-                    newHighlightNodes.add(targetId);
-                    newHighlightLinks.add(`${sourceId}-${targetId}`);
-                }
-            });
-        } else if (selectedProjectKey) {
-            const projectNodeId = `project-${selectedProjectKey}`;
-            newHighlightNodes.add(projectNodeId);
-
-            // Find all connections for this project
-            graphData.links.forEach(link => {
-                const sourceId = typeof link.source === 'object' ? (link.source as any).id : link.source;
-                const targetId = typeof link.target === 'object' ? (link.target as any).id : link.target;
-
-                if (sourceId === projectNodeId || targetId === projectNodeId) {
-                    newHighlightNodes.add(sourceId);
-                    newHighlightNodes.add(targetId);
-                    newHighlightLinks.add(`${sourceId}-${targetId}`);
-                }
-            });
-        }
-
-        setHighlightNodes(newHighlightNodes);
-        setHighlightLinks(newHighlightLinks);
-    }, [selectedOrgKey, selectedProjectKey, graphData]);
+    // Note: persistent click-based highlighting removed to avoid performance issues.
 
     // Handle node hover to highlight connections
     const handleNodeHover = useCallback((node: GraphNode | null) => {
@@ -259,16 +233,32 @@ const NetworkGraph: React.FC<NetworkGraphProps> = ({
         }
     }, [selectedOrgKey, selectedProjectKey, onOpenOrganizationModal, onOpenProjectModal]);
 
+    // Fullscreen controls
+    const enterFullscreen = useCallback(() => {
+        if (containerRef.current && (containerRef.current as any).requestFullscreen) {
+            (containerRef.current as any).requestFullscreen();
+        }
+    }, []);
+
+    const exitFullscreen = useCallback(() => {
+        if (document.fullscreenElement && document.exitFullscreen) {
+            document.exitFullscreen();
+        }
+    }, []);
+
+    const toggleFullscreen = useCallback(() => {
+        if (document.fullscreenElement) exitFullscreen(); else enterFullscreen();
+    }, [enterFullscreen, exitFullscreen]);
+
     // Custom node canvas rendering
     const paintNode = useCallback((node: GraphNode, ctx: CanvasRenderingContext2D, globalScale: number) => {
         const fontSize = 12 / globalScale;
         ctx.font = `${fontSize}px Sans-Serif`;
         
-        // Combine selection-based and hover-based highlighting
-        const isSelectedHighlighted = highlightNodes.size > 0 && highlightNodes.has(node.id);
-        const isHoverHighlighted = hoverHighlightNodes.size > 0 && hoverHighlightNodes.has(node.id);
-        const isHighlighted = isSelectedHighlighted || isHoverHighlighted;
-        const isDimmed = (highlightNodes.size > 0 || hoverHighlightNodes.size > 0) && !isHighlighted;
+    // Use hover-based highlighting only (persistent click-based highlighting removed)
+    const isHoverHighlighted = hoverHighlightNodes.size > 0 && hoverHighlightNodes.has(node.id);
+    const isHighlighted = isHoverHighlighted;
+    const isDimmed = hoverHighlightNodes.size > 0 && !isHighlighted;
         
         // Draw node circle
         ctx.beginPath();
@@ -276,8 +266,8 @@ const NetworkGraph: React.FC<NetworkGraphProps> = ({
         
         // Apply dimming or highlighting (subtle)
         if (isDimmed) {
-            // Less aggressive dimming so the rest of the graph stays visible
-            ctx.globalAlpha = 0.65;
+            // Make non-highlighted bubbles more transparent so highlighted ones stand out
+            ctx.globalAlpha = 0.35;
         } else if (isHighlighted) {
             ctx.globalAlpha = 1;
             // Softer glow for highlighted nodes
@@ -320,12 +310,19 @@ const NetworkGraph: React.FC<NetworkGraphProps> = ({
             ctx.fillStyle = '#1e293b';
             ctx.fillText(label, node.x!, node.y! + node.value / 2 + fontSize / 2 + 4);
         }
-    }, [hoveredNode, highlightNodes, hoverHighlightNodes]);
+    }, [hoveredNode, hoverHighlightNodes]);
 
     return (
         <div ref={containerRef} className="w-full h-full bg-white rounded-lg border border-slate-200 overflow-hidden relative">
             {/* Legend */}
-            <div className="absolute top-4 left-4 z-10 bg-white/30 backdrop-blur-lg p-3 rounded-lg border border-slate-200 shadow-sm">
+            <div className="w-50 absolute top-4 left-4 z-10 bg-white/30 backdrop-blur-lg p-3 rounded-lg border border-slate-200 shadow-sm relative">
+                <button
+                    onClick={toggleFullscreen}
+                    aria-label={isFullscreen ? 'Exit fullscreen' : 'Enter fullscreen'}
+                    className="absolute top-2 right-2 h-7 w-7 flex items-center justify-center rounded-md bg-white/80 hover:bg-white text-slate-700 border border-slate-200"
+                >
+                    {isFullscreen ? <Minimize2 className="w-4 h-4" /> : <Maximize2 className="w-4 h-4" />}
+                </button>
                 <div className="text-xs font-semibold text-slate-800/90 mb-2">Legend</div>
                 <div className="space-y-1.5">
                     <div className="flex items-center gap-2">
@@ -334,16 +331,14 @@ const NetworkGraph: React.FC<NetworkGraphProps> = ({
                     </div>
                     <div className="flex items-center gap-2">
                         <div className="w-4 h-4 rounded-full" style={{ backgroundColor: '#1FBBEE' }}></div>
-                        <span className="text-xs text-slate-600">Organizations (clickable)</span>
+                        <span className="text-xs text-slate-600">Organizations</span>
                     </div>
                     <div className="flex items-center gap-2">
                         <div className="w-4 h-4 rounded-full" style={{ backgroundColor: '#4CAF50' }}></div>
-                        <span className="text-xs text-slate-600">Assets (clickable)</span>
+                        <span className="text-xs text-slate-600">Assets</span>
                     </div>
                 </div>
-                <div className="text-xs text-slate-500 mt-2 pt-2 border-t border-slate-200">
-                    Click to open • Connections highlighted • Hover for labels
-                </div>
+                
             </div>
 
             <ForceGraph2D
@@ -362,37 +357,35 @@ const NetworkGraph: React.FC<NetworkGraphProps> = ({
                     const targetId = typeof link.target === 'object' ? (link.target as any).id : link.target;
                     const linkId = `${sourceId}-${targetId}`;
                     
-                    // Check both selection and hover highlights
-                    const isSelectedHighlight = highlightLinks.size > 0 && highlightLinks.has(linkId);
+                    // Hover-based highlights only
                     const isHoverHighlight = hoverHighlightLinks.size > 0 && hoverHighlightLinks.has(linkId);
                     
-                    if (highlightLinks.size === 0 && hoverHighlightLinks.size === 0) return '#cbd5e1';
-                    if (isSelectedHighlight || isHoverHighlight) return '#e6af26';
-                    return 'rgba(203, 213, 225, 0.2)';
+                    if (hoverHighlightLinks.size === 0) return '#cbd5e1';
+                    if (isHoverHighlight) return '#e6af26';
+                    // Make non-highlighted links more visible when something is highlighted
+                    return 'rgba(203, 213, 225, 0.6)';
                 }}
                 linkWidth={(link) => {
                     const sourceId = typeof link.source === 'object' ? (link.source as any).id : link.source;
                     const targetId = typeof link.target === 'object' ? (link.target as any).id : link.target;
                     const linkId = `${sourceId}-${targetId}`;
                     
-                    const isSelectedHighlight = highlightLinks.size > 0 && highlightLinks.has(linkId);
                     const isHoverHighlight = hoverHighlightLinks.size > 0 && hoverHighlightLinks.has(linkId);
                     
-                    if (highlightLinks.size === 0 && hoverHighlightLinks.size === 0) return 1;
-                    return (isSelectedHighlight || isHoverHighlight) ? 3 : 1;
+                    if (hoverHighlightLinks.size === 0) return 1;
+                    return isHoverHighlight ? 2 : 1;
                 }}
                 linkDirectionalParticles={(link) => {
                     const sourceId = typeof link.source === 'object' ? (link.source as any).id : link.source;
                     const targetId = typeof link.target === 'object' ? (link.target as any).id : link.target;
                     const linkId = `${sourceId}-${targetId}`;
                     
-                    const isSelectedHighlight = highlightLinks.size > 0 && highlightLinks.has(linkId);
                     const isHoverHighlight = hoverHighlightLinks.size > 0 && hoverHighlightLinks.has(linkId);
                     
-                    if (highlightLinks.size === 0 && hoverHighlightLinks.size === 0) return 2;
-                    return (isSelectedHighlight || isHoverHighlight) ? 4 : 0;
+                    if (hoverHighlightLinks.size === 0) return 1;
+                    return isHoverHighlight ? 2 : 0;
                 }}
-                linkDirectionalParticleWidth={3}
+                linkDirectionalParticleWidth={2}
                 linkDirectionalParticleSpeed={0.005}
                 d3VelocityDecay={0.6}
                 d3AlphaDecay={0.01}
