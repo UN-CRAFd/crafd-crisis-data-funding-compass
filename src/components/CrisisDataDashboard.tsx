@@ -325,6 +325,7 @@ const CrisisDataDashboard = ({
                     return {
                         project: {
                             id: project.id,
+                            productKey: project.fields?.['product_key'] || '',
                             projectName: project.fields?.['Project/Product Name'] || project.fields?.['Project Name'] || project.name || 'Unnamed Project',
                             projectDescription: project.fields?.['Project Description'] || '',
                             projectWebsite: project.fields?.['Project Website'] || '',
