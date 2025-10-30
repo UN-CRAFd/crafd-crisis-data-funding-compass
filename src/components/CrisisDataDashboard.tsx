@@ -258,6 +258,19 @@ const CrisisDataDashboard = ({
     const [sortBy, setSortBy] = useState<'name' | 'projects'>('name'); // Add sort state
     const [activeView, setActiveView] = useState<'table' | 'network'>('table'); // Add view state
 
+    // Enforce table-only on small screens (mobile). Hide view switcher on mobile via responsive classes.
+    useEffect(() => {
+        const handleResize = () => {
+            if (typeof window !== 'undefined' && window.innerWidth < 640) {
+                setActiveView('table');
+            }
+        };
+
+        handleResize();
+        window.addEventListener('resize', handleResize);
+        return () => window.removeEventListener('resize', handleResize);
+    }, []);
+
     // Modal loading states (project modal always URL-based now)
     const [projectModalLoading] = useState(false);
     const [shareSuccess, setShareSuccess] = useState(false);
@@ -728,7 +741,7 @@ const CrisisDataDashboard = ({
                             <div>
                                 <Card className={STYLES.cardGlass}>
                     <CardHeader className="pb-0 h-0">
-                        <CardTitle className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3 sm:gap-0 w-full mb-2">
+                        <CardTitle className="flex flex-row items-center justify-between gap-3 w-full mb-2">
                             <SectionHeader
                                 icon={
                                     organizationsWithProjects && organizationsWithProjects.some(org => org.projects && org.projects.length > 0)
@@ -754,7 +767,7 @@ const CrisisDataDashboard = ({
                                     </Button>
                                 )}
                                 {/* View Toggle Switch Tabs */}
-                                <Tabs value={activeView} onValueChange={(value) => setActiveView(value as 'table' | 'network')} className="w-auto">
+                                <Tabs value={activeView} onValueChange={(value) => setActiveView(value as 'table' | 'network')} className="w-auto hidden sm:flex">
                                     <TabsList className="h-10 p-1 bg-slate-50 border border-slate-200 rounded-md">
                                         <TabsTrigger
                                             value="table"
