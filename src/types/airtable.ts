@@ -62,11 +62,13 @@ export interface ProjectData {
     projectWebsite: string;
     isCrafdFunded: boolean | string;
     provider: string;
+    productKey: string;
 }
 
 export interface OrganizationWithProjects {
     id: string;
     organizationName: string;
+    orgShortName: string;
     type: string;
     donorCountries: string[];
     projects: ProjectData[];

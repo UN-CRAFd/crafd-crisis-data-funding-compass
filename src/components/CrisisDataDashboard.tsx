@@ -3,6 +3,7 @@
 import React, { useEffect, useMemo, useState } from 'react';
 // Image import removed because it's not used in this file
 import ChartCard from '@/components/ChartCard';
+import dynamic from 'next/dynamic';
 import OrganizationModal from '@/components/OrganizationModal';
 import ProjectModal from '@/components/ProjectModal';
 import SurveyBanner from '@/components/SurveyBanner';
@@ -18,21 +19,32 @@ import {
     DropdownMenuTrigger,
 } from '@/components/ui/dropdown-menu';
 import { Input } from '@/components/ui/input';
+import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
 import { TooltipContent, TooltipProvider, TooltipTrigger, Tooltip as TooltipUI } from '@/components/ui/tooltip';
 import labels from '@/config/labels.json';
 import { getIconForInvestmentType } from '@/config/investmentTypeIcons';
-import { Building2, ChevronDown, ChevronRight, Database, DatabaseBackup, FileDown, Filter, FolderDot, FolderOpenDot, Globe, Info, MessageCircle, RotateCcw, Search, Share2, ArrowUpDown } from 'lucide-react';
+import { Building2, ChevronDown, ChevronRight, Database, DatabaseBackup, FileDown, Filter, FolderDot, FolderOpenDot, Globe, Info, MessageCircle, RotateCcw, Search, Share2, ArrowUpDown, Network } from 'lucide-react';
 import organizationsTableRaw from '../../public/data/organizations-table.json';
 import { buildOrgDonorCountriesMap, buildOrgProjectsMap, buildProjectNameMap, calculateOrganizationTypesFromOrganizationsWithProjects, getNestedOrganizationsForModals } from '../lib/data';
 import { exportDashboardToPDF } from '../lib/exportPDF';
 import type { DashboardStats, OrganizationProjectData, OrganizationTypeData, OrganizationWithProjects, ProjectData, ProjectTypeData } from '../types/airtable';
 
+// Dynamic import for NetworkGraph to avoid SSR issues with force-graph
+const NetworkGraph = dynamic(() => import('@/components/NetworkGraph'), {
+    ssr: false,
+    loading: () => (
+        <div className="w-full h-full flex items-center justify-center bg-white rounded-lg border border-slate-200">
+            <div className="text-slate-500">Loading network visualization...</div>
+        </div>
+    ),
+});
+
 // Consolidated style constants
 const STYLES = {
     // Card styles
     statCard: "!border-0 transition-all duration-300 hover:ring-2 hover:ring-slate-300/50",
-    cardGlass: "!border-0 bg-white/80 backdrop-blur-sm",
-    cardGlassLight: "!border-0 bg-white/70 backdrop-blur-sm p-1 rounded-md shadow-none",
+    cardGlass: "!border-0 bg-white",
+    cardGlassLight: "!border-0 bg-white p-1 rounded-md shadow-none",
 
     // Typography - Unified section headers
     sectionHeader: "flex items-center gap-2 text-lg font-qanelas-subtitle font-black text-slate-800 mb-0 mt-0 uppercase",
@@ -45,8 +57,8 @@ const STYLES = {
     badgeBase: "inline-flex items-center px-2 py-1 rounded-md text-xs font-medium",
 
     // Interactive elements
-    projectItem: "p-3 bg-slate-50 rounded-lg border border-slate-100 hover:bg-slate-100 cursor-pointer transition-colors duration-200 animate-in fade-in group",
-    orgRow: "flex items-center justify-between p-4 hover:bg-slate-50/70 rounded-lg border border-slate-200 bg-slate-50/30 animate-in fade-in",
+    projectItem: "p-3 bg-white rounded-lg border border-slate-100 hover:bg-slate-200 cursor-pointer transition-colors duration-200 group",
+    orgRow: "flex items-center justify-between p-4 hover:bg-slate-200 rounded-lg border border-slate-200 bg-white",
 
     // Chart config
     chartTooltip: {
@@ -244,6 +256,20 @@ const CrisisDataDashboard = ({
     const [donorsMenuOpen, setDonorsMenuOpen] = useState<boolean>(false);
     const [typesMenuOpen, setTypesMenuOpen] = useState<boolean>(false);
     const [sortBy, setSortBy] = useState<'name' | 'projects'>('name'); // Add sort state
+    const [activeView, setActiveView] = useState<'table' | 'network'>('table'); // Add view state
+
+    // Enforce table-only on small screens (mobile). Hide view switcher on mobile via responsive classes.
+    useEffect(() => {
+        const handleResize = () => {
+            if (typeof window !== 'undefined' && window.innerWidth < 640) {
+                setActiveView('table');
+            }
+        };
+
+        handleResize();
+        window.addEventListener('resize', handleResize);
+        return () => window.removeEventListener('resize', handleResize);
+    }, []);
 
     // Modal loading states (project modal always URL-based now)
     const [projectModalLoading] = useState(false);
@@ -299,6 +325,7 @@ const CrisisDataDashboard = ({
                     return {
                         project: {
                             id: project.id,
+                            productKey: project.fields?.['product_key'] || '',
                             projectName: project.fields?.['Project/Product Name'] || project.fields?.['Project Name'] || project.name || 'Unnamed Project',
                             projectDescription: project.fields?.['Project Description'] || '',
                             projectWebsite: project.fields?.['Project Website'] || '',
@@ -403,7 +430,7 @@ const CrisisDataDashboard = ({
         const otherDonors = availableDonorCountries.filter(donor => !shownDonors.includes(donor));
         donorChartData = [
             ...topDonors,
-            { name: `${otherDonors.length} other donor${otherDonors.length === 1 ? '' : 's'}`, value: 0 }
+            { name: `+ ${otherDonors.length} other donor${otherDonors.length === 1 ? '' : 's'}`, value: 0 }
         ];
     }
 
@@ -714,35 +741,58 @@ const CrisisDataDashboard = ({
                             {/* Organizations Table Section */}
                             <div>
                                 <Card className={STYLES.cardGlass}>
-                                    <CardHeader className="pb-0 h-0">
-                                        <CardTitle className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3 sm:gap-0 w-full mb-2">
-                                            <SectionHeader
-                                                icon={
-                                                    organizationsWithProjects && organizationsWithProjects.some(org => org.projects && org.projects.length > 0)
-                                                        ? <FolderOpenDot style={{ color: 'var(--brand-primary)' }}  />
-                                                        : <FolderDot style={{ color: 'var(--brand-primary)' }}  />
-                                                }
-                                                title={labels.sections.organizationsAndProjects}
-                                                
-                                            />
-                                            {/* Sort Button */}
-                                                <Button
-                                                    variant="outline"
-                                                    onClick={() => setSortBy(sortBy === 'name' ? 'projects' : 'name')}
-                                                    className="h-10 w-full sm:w-auto px-4 font-medium transition-all bg-slate-50 border-none hover:bg-slate-100 text-slate-600 hover:text-slate-800"
-                                                    title={sortBy === 'name' ? 'Sort by number of assets' : 'Sort alphabetically'}
-                                                >
-                                                    <ArrowUpDown className="w-4 h-4" />
-                                                    <span className="ml-0 hidden sm:inline text-xs">
-                                                        {sortBy === 'name' ? 'Sort alphabetically' : 'Sort by number of assets'}
-                                                    </span>
-                                                </Button>
-                                        </CardTitle>
-                                        
+                    <CardHeader className="pb-0 h-0">
+                        <CardTitle className="flex flex-row items-center justify-between gap-3 w-full mb-2">
+                            <SectionHeader
+                                icon={
+                                    organizationsWithProjects && organizationsWithProjects.some(org => org.projects && org.projects.length > 0)
+                                        ? <FolderOpenDot style={{ color: 'var(--brand-primary)' }}  />
+                                        : <FolderDot style={{ color: 'var(--brand-primary)' }}  />
+                                }
+                                title={labels.sections.organizationsAndProjects}
+                            />
 
-                                    </CardHeader>
+                            <div className="flex items-center gap-2">
+                                {/* Sort Button only for Table view */}
+                                {activeView === 'table' && (
+                                    <Button
+                                        variant="outline"
+                                        onClick={() => setSortBy(sortBy === 'name' ? 'projects' : 'name')}
+                                        className="h-10 w-auto px-4 font-medium transition-all bg-slate-50 border-none hover:bg-slate-100 text-slate-600 hover:text-slate-800 left-auto"
+                                        title={sortBy === 'name' ? 'Sort by number of assets' : 'Sort alphabetically'}
+                                    >
+                                        <ArrowUpDown className="w-4 h-4" />
+                                        <span className="ml-2 hidden sm:inline text-xs">
+                                            {sortBy === 'name' ? 'Sort alphabetically' : 'Sort by number of assets'}
+                                        </span>
+                                    </Button>
+                                )}
+                                {/* View Toggle Switch Tabs */}
+                                <Tabs value={activeView} onValueChange={(value) => setActiveView(value as 'table' | 'network')} className="w-auto hidden sm:flex">
+                                    <TabsList className="h-10 p-1 bg-slate-50 border border-slate-200 rounded-md">
+                                        <TabsTrigger
+                                            value="table"
+                                            className="h-8 px-4 text-xs font-medium rounded-md transition-all data-[state=active]:bg-white data-[state=active]:shadow-sm data-[state=active]:border data-[state=active]:border-slate-200 data-[state=active]:text-slate-800 text-slate-600 bg-slate-50 border-none"
+                                        >
+                                            <FolderOpenDot className="h-3.5 w-3.5 mr-1.5" />
+                                            Table
+                                        </TabsTrigger>
+                                        <TabsTrigger
+                                            value="network"
+                                            className="h-8 px-4 text-xs font-medium rounded-md transition-all data-[state=active]:bg-white data-[state=active]:shadow-sm data-[state=active]:border data-[state=active]:border-slate-200 data-[state=active]:text-slate-800 text-slate-600 bg-slate-50 border-none"
+                                        >
+                                            <Network className="h-3.5 w-3.5 mr-1.5" />
+                                            Network
+                                        </TabsTrigger>
+                                    </TabsList>
+                                </Tabs>
+                                
+                                
+                            </div>
+                        </CardTitle>
+                        
 
-                                    {/* Filters */}
+                    </CardHeader>                                    {/* Filters */}
                                     <CardContent className="p-4 sm:p-6">
                                         <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-3">
                                             {/* Modern Search Bar */}
@@ -764,8 +814,7 @@ const CrisisDataDashboard = ({
                                             </div>
 
                                             {/* Filter buttons container */}
-                                            <div className="flex flex-col sm:flex-row gap-4 sm:gap-3 order-2 sm:order-2">
-                                                {/* Donor Countries Multi-Select */}
+                                            <div className="flex flex-col sm:flex-row gap-4 sm:gap-3 order-2 sm:order-2">{/* Donor Countries Multi-Select */}
                                                 <DropdownMenu onOpenChange={(open) => setDonorsMenuOpen(open)}>
                                                     <DropdownMenuTrigger asChild>
                                                         <Button
@@ -968,7 +1017,11 @@ const CrisisDataDashboard = ({
                                             {getFilterDescription()}
                                         </p>
                                     </CardContent>
+
+                                    {/* Tabs for Table and Network View */}
                                     <CardContent className="px-4 sm:px-6 pt-2 sm:pt-0">
+                                        <Tabs value={activeView} className="w-full">
+                                            <TabsContent value="table" className="mt-0">
                                         <div className="space-y-2">
                                             {organizationsWithProjects
                                                 .sort((a, b) => {
@@ -1213,6 +1266,20 @@ const CrisisDataDashboard = ({
                                                     );
                                                 })}
                                         </div>
+                                            </TabsContent>
+
+                                            <TabsContent value="network" className="mt-0">
+                                                <div className="w-full" style={{ height: '600px' }}>
+                                                    <NetworkGraph
+                                                        organizationsWithProjects={organizationsWithProjects}
+                                                        onOpenOrganizationModal={onOpenOrganizationModal}
+                                                        onOpenProjectModal={onOpenProjectModal}
+                                                        selectedOrgKey={selectedOrgKey}
+                                                        selectedProjectKey={selectedProjectKey}
+                                                    />
+                                                </div>
+                                            </TabsContent>
+                                        </Tabs>
                                     </CardContent>
                                 </Card>
                             </div>
@@ -1225,8 +1292,8 @@ const CrisisDataDashboard = ({
                             <div
                                 className={`transition-all duration-1200 ease-in-out ${
                                     combinedDonors.length > 0
-                                        ? 'opacity-100 max-h-[1000px] mb-6'
-                                        : 'opacity-0 max-h-0 overflow-hidden mb-0'
+                                        ? 'max-h-[1000px] mb-6'
+                                        : 'max-h-0 overflow-hidden mb-0'
                                 }`}
                             >
                                 <ChartCard
@@ -1268,7 +1335,7 @@ const CrisisDataDashboard = ({
             </div>
 
             {/* Impressum Footer */}
-            <footer className="bg-slate-100 border-t border-slate-200 mt-8 sm:mt-16">
+            <footer className="bg-white border-t border-slate-200 mt-8 sm:mt-16">
                 <div className="max-w-[82rem] mx-auto px-4 sm:px-6 lg:px-8 py-4 sm:py-6">
                     <div className="flex flex-col sm:flex-row items-center justify-center sm:justify-between gap-2 sm:gap-0">
 
