@@ -51,6 +51,7 @@ const NetworkGraph: React.FC<NetworkGraphProps> = ({
     const [hoverHighlightNodes, setHoverHighlightNodes] = useState<Set<string>>(new Set());
     const [hoverHighlightLinks, setHoverHighlightLinks] = useState<Set<string>>(new Set());
     const [isFullscreen, setIsFullscreen] = useState(false);
+    const globalScaleRef = useRef<number>(1); // Track current zoom scale
 
     // Handle fullscreen toggle
     const toggleFullscreen = useCallback(() => {
@@ -126,17 +127,18 @@ const NetworkGraph: React.FC<NetworkGraphProps> = ({
         };
 
         const brandPrimary = getBrandColor('--brand-primary');
-        const brandPrimaryLight = getBrandColor('--brand-bg-light');
-        const brandPrimaryDark = getBrandColor('--brand-primary-dark');
+        const brandBgLight = getBrandColor('--brand-primary-light');
+        const badgeOtherBg = getBrandColor('--badge-other-bg');
+        const badgeSlateBg = getBrandColor('--badge-slate-bg');
 
-        // Add donor nodes - largest, using darkest brand color
+        // Add donor nodes - largest, using slate colors (like in tables)
         donorSet.forEach(donor => {
             nodes.push({
                 id: `donor-${donor}`,
                 name: donor,
                 type: 'donor',
                 value: 25, // Larger nodes for donors
-                color: brandPrimaryDark, // Uses --brand-primary-dark (darkest)
+                color: badgeSlateBg, // Use badge slate color
             });
         });
 
@@ -144,13 +146,13 @@ const NetworkGraph: React.FC<NetworkGraphProps> = ({
         organizationsWithProjects.forEach(org => {
             const orgNodeId = `org-${org.id}`;
             
-            // Add organization node - medium, using brand primary (middle tone)
+            // Add organization node - medium, using amber/golden badge color (like ACAPS badge)
             nodes.push({
                 id: orgNodeId,
                 name: org.organizationName,
                 type: 'organization',
                 value: 22, // Medium nodes for organizations
-                color: brandPrimary, // Uses --brand-primary (middle tone)
+                color: brandBgLight, // Uses --brand-bg-light (amber/golden from organization badges)
                 orgKey: org.id,
             });
 
@@ -163,7 +165,7 @@ const NetworkGraph: React.FC<NetworkGraphProps> = ({
                 });
             });
 
-            // Add project nodes and link to organizations - using brightest color
+            // Add project nodes and link to organizations - using purple/indigo badge color
             org.projects.forEach(project => {
                 const projectNodeId = `project-${project.id}`;
                 
@@ -175,7 +177,7 @@ const NetworkGraph: React.FC<NetworkGraphProps> = ({
                         name: project.projectName,
                         type: 'project',
                         value: 20, // Slightly larger nodes for projects (assets)
-                        color: brandPrimaryLight, // Uses --brand-primary-light (brightest)
+                        color: badgeOtherBg, // Uses --badge-other-bg (purple/indigo from asset type badges)
                         projectKey: project.id,
                     });
                 }
@@ -323,6 +325,11 @@ const NetworkGraph: React.FC<NetworkGraphProps> = ({
     }, []);
 
     const brandPrimaryColor = getBrandColor('--brand-primary');
+    const brandPrimaryDarkColor = getBrandColor('--brand-primary-dark');
+    const brandBgLightColor = getBrandColor('--brand-bg-light');
+    const badgeOtherTextColor = getBrandColor('--badge-other-text');
+    const badgeSlateBgColor = getBrandColor('--badge-slate-bg');
+    const badgeSlateTextColor = getBrandColor('--badge-slate-text');
 
     // Custom node canvas rendering - only draw the node circles
     const paintNode = useCallback((node: GraphNode, ctx: CanvasRenderingContext2D, globalScale: number) => {
@@ -352,13 +359,22 @@ const NetworkGraph: React.FC<NetworkGraphProps> = ({
         // Reset shadow
         ctx.shadowBlur = 0;
         
-        ctx.strokeStyle = '#000';
-        ctx.lineWidth = isHighlighted ? 1.5 / globalScale : 1 / globalScale;
+        // Use specific borders per node type to match badges/modals
+        if (node.type === 'organization') {
+            ctx.strokeStyle = brandPrimaryDarkColor;
+        } else if (node.type === 'project') {
+            ctx.strokeStyle = badgeOtherTextColor;
+        } else if (node.type === 'donor') {
+            ctx.strokeStyle = badgeSlateTextColor;
+        } else {
+            ctx.strokeStyle = '#000';
+        }
+    ctx.lineWidth = isHighlighted ? 1.5 / globalScale : 1 / globalScale;
         ctx.stroke();
         
         // Reset alpha
         ctx.globalAlpha = 1;
-    }, [hoverHighlightNodes]);
+    }, [hoverHighlightNodes, brandPrimaryDarkColor, badgeOtherTextColor, badgeSlateTextColor]);
 
     // Custom label rendering - drawn after all nodes to appear on top
     const paintNodeLabel = useCallback((node: GraphNode, ctx: CanvasRenderingContext2D, globalScale: number) => {
@@ -409,15 +425,15 @@ const NetworkGraph: React.FC<NetworkGraphProps> = ({
                 </div>
                 <div className="space-y-1.5">
                     <div className="flex items-center gap-2">
-                        <div className="w-4 h-4 rounded-full" style={{ backgroundColor: 'var(--brand-primary-dark)' }}></div>
+                        <div className="w-4 h-4 rounded-full" style={{ backgroundColor: '#cbd5e1', border: '1.5px solid var(--badge-slate-text)' }}></div>
                         <span className="text-xs text-slate-600">Donors</span>
                     </div>
                     <div className="flex items-center gap-2">
-                        <div className="w-4 h-4 rounded-full" style={{ backgroundColor: 'var(--brand-primary)' }}></div>
+                        <div className="w-4 h-4 rounded-full" style={{ backgroundColor: 'var(--brand-primary-light)', border: '1.5px solid var(--brand-primary-dark)' }}></div>
                         <span className="text-xs text-slate-600">Organizations</span>
                     </div>
                     <div className="flex items-center gap-2">
-                        <div className="w-4 h-4 rounded-full" style={{ backgroundColor: 'var(--brand-bg-light)' }}></div>
+                        <div className="w-4 h-4 rounded-full" style={{ backgroundColor: 'var(--badge-other-bg)', border: '1.5px solid var(--badge-other-text)' }}></div>
                         <span className="text-xs text-slate-600">Assets</span>
                     </div>
                 </div>
@@ -436,6 +452,8 @@ const NetworkGraph: React.FC<NetworkGraphProps> = ({
                 onNodeHover={handleNodeHover}
                 onBackgroundClick={handleBackgroundClick}
                 onRenderFramePost={(ctx, globalScale) => {
+                    // Track current zoom level for use in linkWidth callback
+                    globalScaleRef.current = globalScale;
                     // Draw all labels after all nodes are drawn
                     graphData.nodes.forEach(node => paintNodeLabel(node, ctx, globalScale));
                 }}
@@ -459,8 +477,9 @@ const NetworkGraph: React.FC<NetworkGraphProps> = ({
                     
                     const isHoverHighlight = hoverHighlightLinks.size > 0 && hoverHighlightLinks.has(linkId);
                     
-                    if (hoverHighlightLinks.size === 0) return 1;
-                    return isHoverHighlight ? 2 : 1;
+                    // Scale line width with zoom: thicker when zoomed out, thinner when zoomed in
+                    const baseWidth = hoverHighlightLinks.size === 0 ? 1 : (isHoverHighlight ? 2 : 1);
+                    return baseWidth * globalScaleRef.current * 1.1;
                 }}
                 linkDirectionalParticles={(link) => {
                     const sourceId = typeof link.source === 'object' ? (link.source as any).id : link.source;
@@ -472,7 +491,10 @@ const NetworkGraph: React.FC<NetworkGraphProps> = ({
                     if (hoverHighlightLinks.size === 0) return 1;
                     return isHoverHighlight ? 2 : 0;
                 }}
-                linkDirectionalParticleWidth={2}
+                linkDirectionalParticleWidth={(link) => {
+                    // Scale particle width with zoom: larger when zoomed out, smaller when zoomed in
+                    return 2 * globalScaleRef.current * 1.1;
+                }}
                 linkDirectionalParticleSpeed={0.005}
                 d3VelocityDecay={0.6}
                 d3AlphaDecay={0.01}
