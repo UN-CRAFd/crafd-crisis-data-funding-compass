@@ -50,28 +50,34 @@
 :root {
   /* Regular CSS variables below - these do NOT create Tailwind utility classes */
   /* Use these with var(--variable-name) in your custom CSS */
-  
+
   /* Spacing variables */
-  --spacing-section: 1.5rem; /* 24px - equivalent to gap-6 */
+  --spacing-section: 1.5rem;
+  /* 24px - equivalent to gap-6 */
 
   /* Component styles */
   --card-glass: rgba(255, 255, 255, 0.8);
   --card-glass-light: rgba(255, 255, 255, 0.7);
   --card-border-radius: 0.5rem;
-  
+
   /* Typography */
-  --text-heading-lg: 1.125rem; /* 18px - unified section headers */
-  --text-stat-value: 3rem; /* 48px */
-  --text-stat-label: 0.875rem; /* 14px */
-  --text-card-title: 1.25rem; /* 20px */
-  --header-icon-size: 1.25rem; /* 20px */
-  
+  --text-heading-lg: 1.125rem;
+  /* 18px - unified section headers */
+  --text-stat-value: 3rem;
+  /* 48px */
+  --text-stat-label: 0.875rem;
+  /* 14px */
+  --text-card-title: 1.25rem;
+  /* 20px */
+  --header-icon-size: 1.25rem;
+  /* 20px */
+
   /* Badge styles */
   --badge-padding-x: 0.5rem;
   --badge-padding-y: 0.25rem;
   --badge-border-radius: 0.375rem;
   --badge-font-size: 0.75rem;
-  
+
   /* Chart styles */
   --chart-bar-size: 20;
   --chart-bar-radius: 4;
@@ -79,25 +85,15 @@
   --chart-grid-stroke: #e2e8f0;
   --chart-font-size: 12;
   --chart-text-color: #333333;
-  
+
   /* Tooltip styles */
   --tooltip-bg: rgba(255, 255, 255, 0.8);
   --tooltip-border: #e2e8f0;
-  
+
   /* Interactive elements */
   --hover-scale: 1.02;
   --transition-duration: 200ms;
 
-  /* Custom color palette */
-  --color-primary: ##f8fafc;
-  --color-secondary: #64748b;
-  --color-accent: #E0F7FF; /* Light blue accent (matches --brand-bg-light) */
-  --color-warning: #f59e0b;
-  --color-error: #ef4444;
-  --color-success: #4CAF50; /* Success green for share buttons */
-  --color-success-hover: #45a049; /* Darker success green for hover states */
-  --color-surface: #E0F7FF; /* Light blue surface (matches --brand-bg-light) */
-  --color-surface-dark: #1e293b;
 
   /* Brand colors - Crisis Data Funding Compass */
   /* 
@@ -110,28 +106,44 @@
    * - --brand-bg-lighter: Very light background tint
    * - --brand-border: Border color for highlighted elements
    */
---brand-primary: #e6af26;        /* main amber (vibrant golden tone) */
---brand-primary-dark: #BC840F;   /* darker amber for hover/active */
---brand-primary-light: #F3C35C;  /* light amber for buttons/highlights */
---brand-bg-light: #FCF0D6;       /* soft warm background */
---brand-bg-lighter: #FDF7EA;     /* even lighter background */
---brand-border: #d9b206;        /* deep amber-brown for borders/text accents */
+  --brand-primary: #e6af26;
+  /* main amber (vibrant golden tone) */
+  --brand-primary-dark: #BC840F;
+  /* darker amber for hover/active */
+  --brand-primary-light: #F3C35C;
+  /* light amber for buttons/highlights */
+  --brand-bg-light: #FCF0D6;
+  /* soft warm background */
+  --brand-bg-lighter: #FDF7EA;
+  /* even lighter background */
+  --brand-border: #d9b206;
+  /* deep amber-brown for borders/text accents */
 
---badge-other-bg: #d7d8f5;      /* indigo-100: pale background */
---badge-other-border: #7b7df7;  /* indigo-500: vivid but not overwhelming */
---badge-other-text: #4d479c;    /* indigo-800: dark readable text */
---badge-other-icon: #4338ca;  
+  --badge-other-bg: #d7d8f5;
+  /* indigo-100: pale background */
+  --badge-other-border: #7b7df7;
+  /* indigo-500: vivid but not overwhelming */
+  --badge-other-text: #4d479c;
+  /* indigo-800: dark readable text */
+  --badge-other-icon: #4338ca;
 
---detail: #CCCCCC;        /* main amber (vibrant golden tone) */
---detail-text: #FFFFFF;   /* darker amber for hover/active */
---detail-border: #666666;  
---detail-light: #BBBBBB;       /* soft warm background */
+  --detail: #CCCCCC;
+  /* main amber (vibrant golden tone) */
+  --detail-text: #FFFFFF;
+  /* darker amber for hover/active */
+  --detail-border: #666666;
+  --detail-light: #BBBBBB;
+  /* soft warm background */
 
   /* Darker badge variants for better visibility */
-  --badge-blue-bg: #B8E0F5;        /* darker version of brand-bg-light */
-  --badge-blue-text: #9B6D0A;      /* darker version of brand-primary-dark */
-  --badge-slate-bg: #e2e8f0;       /* slate-200: darker than slate-100 */
-  --badge-slate-text: #475569;     /* slate-600: darker than current slate-600 */  
+  --badge-blue-bg: #B8E0F5;
+  /* darker version of brand-bg-light */
+  --badge-blue-text: #9B6D0A;
+  /* darker version of brand-primary-dark */
+  --badge-slate-bg: #e2e8f0;
+  /* slate-200: darker than slate-100 */
+  --badge-slate-text: #475569;
+  /* slate-600: darker than current slate-600 */
 
   /* Disable all shadows completely */
   --shadow: none !important;
@@ -147,7 +159,7 @@
   --drop-shadow-lg: none !important;
   --drop-shadow-xl: none !important;
   --drop-shadow-2xl: none !important;
-  
+
   /* Override any shadow utilities */
   --shadow-xs: none !important;
 }
@@ -158,20 +170,24 @@
 }
 
 /* Ensure qanelas font works properly */
-.font-qanelas, .font-qanelas * {
+.font-qanelas,
+.font-qanelas * {
   font-family: Qanelas, ui-sans-serif, system-ui, sans-serif !important;
 }
 
 /* Custom Qanelas font weight classes */
 .qanelas-title {
   font-family: Qanelas, ui-sans-serif, system-ui, sans-serif !important;
-  font-weight: 800; /* ExtraBold for title */
+  font-weight: 800;
+  /* ExtraBold for title */
 }
 
 .qanelas-subtitle {
   font-family: Qanelas, ui-sans-serif, system-ui, sans-serif !important;
-  font-weight: 400; /* Normal weight - will fallback to system font for lighter appearance */
-  opacity: 0.85; /* Add slight transparency for even lighter feel */
+  font-weight: 400;
+  /* Normal weight - will fallback to system font for lighter appearance */
+  opacity: 0.85;
+  /* Add slight transparency for even lighter feel */
 }
 
 /* Prevent layout shifts by always showing scrollbar */
@@ -210,15 +226,21 @@ body {
 
 /* Hide scrollbar utility */
 .scrollbar-hide {
-  -ms-overflow-style: none;  /* Internet Explorer 10+ */
-  scrollbar-width: none;  /* Firefox */
+  -ms-overflow-style: none;
+  /* Internet Explorer 10+ */
+  scrollbar-width: none;
+  /* Firefox */
 }
+
 .scrollbar-hide::-webkit-scrollbar {
-  display: none;  /* Safari and Chrome */
+  display: none;
+  /* Safari and Chrome */
 }
 
 /* Force remove all shadows globally */
-*, *::before, *::after {
+*,
+*::before,
+*::after {
   box-shadow: none !important;
   filter: none !important;
   -webkit-box-shadow: none !important;
@@ -228,7 +250,8 @@ body {
 
 
 /* Enable text selection on inputs */
-input, textarea {
+input,
+textarea {
   user-select: text;
   -webkit-user-select: text;
   -moz-user-select: text;
@@ -237,18 +260,22 @@ input, textarea {
 
 /* Mobile-specific improvements */
 @media (max-width: 640px) {
+
   /* Improve touch targets on mobile */
-  button, [role="button"], input, select {
+  button,
+  [role="button"],
+  input,
+  select {
     min-height: 44px;
   }
-  
+
   /* Ensure text doesn't get too small */
   .text-xs {
     font-size: 0.75rem !important;
   }
-  
+
   /* Better spacing for mobile */
-  .space-y-2 > * + * {
+  .space-y-2>*+* {
     margin-top: 0.75rem;
   }
 }
@@ -256,7 +283,7 @@ input, textarea {
 /* Improve text readability */
 @media (max-width: 768px) {
   body {
-    font-size: 16px; /* Prevents zoom on iOS */
+    font-size: 16px;
+    /* Prevents zoom on iOS */
   }
 }
-
