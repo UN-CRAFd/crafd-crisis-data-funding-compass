@@ -1240,9 +1240,22 @@ const CrisisDataDashboard = ({
                                                                                     </span>
                                                                                     {project.investmentTypes.length > 0 && (
                                                                                         <div className="flex flex-wrap gap-1 items-center">
-                                                                                            {project.investmentTypes.map((type, idx) => (
-                                                                                                <Badge key={idx} text={type} variant="indigo" />
-                                                                                            ))}
+                                                                                            {project.investmentTypes.map((type, idx) => {
+                                                                                                const IconComponent = getIconForInvestmentType(type);
+                                                                                                return (
+                                                                                                    <span 
+                                                                                                        key={idx} 
+                                                                                                        className="inline-flex items-center gap-1 px-2 py-1 rounded-md text-xs font-semibold"
+                                                                                                        style={{
+                                                                                                            backgroundColor: 'var(--badge-other-bg)',
+                                                                                                            color: 'var(--badge-other-text)'
+                                                                                                        }}
+                                                                                                    >
+                                                                                                        <IconComponent className="w-3.5 h-3.5" />
+                                                                                                        {type}
+                                                                                                    </span>
+                                                                                                );
+                                                                                            })}
                                                                                         </div>
                                                                                     )}
                                                                                 </div>
