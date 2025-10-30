@@ -168,11 +168,10 @@ const ChartCard = React.memo(function ChartCard({ title, icon, data, barColor, f
                                     const minBarWidth = textWidth + 16; // Add some padding
 
                                     // Position inside bar if it's wide enough, otherwise outside
-                                    const isInside = w > minBarWidth;
-                                    const textX = isInside ? xPos + w - 8 : xPos + w + 8;
-                                    
-                                    const textAnchor = isInside ? 'end' : 'start';
-                                    const textColor = 'var(--chart-text-color)'
+                                    // Always position label on the left side of the bar
+                                    const textX = xPos + 8; // 8px padding from left edge of bar
+                                    const textAnchor = 'start';
+                                    const textColor = 'var(--chart-text-color)';
 
                                     return (
                                         <text
@@ -183,7 +182,7 @@ const ChartCard = React.memo(function ChartCard({ title, icon, data, barColor, f
                                             fontWeight={600}
                                             textAnchor={textAnchor}
                                             dominantBaseline="middle"
-                                            style={{ 
+                                            style={{
                                                 transition: 'opacity 200ms ease-in-out',
                                                 opacity: isVisible ? 1 : 0,
                                                 zIndex: 1001,

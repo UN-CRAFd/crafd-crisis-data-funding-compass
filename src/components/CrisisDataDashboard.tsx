@@ -430,7 +430,7 @@ const CrisisDataDashboard = ({
         const otherDonors = availableDonorCountries.filter(donor => !shownDonors.includes(donor));
         donorChartData = [
             ...topDonors,
-            { name: `+ ${otherDonors.length} other donor${otherDonors.length === 1 ? '' : 's'}`, value: 0 }
+            { name: `+ ${otherDonors.length} other donor${otherDonors.length === 1 ? '' : 's'}`, value: 0}
         ];
     }
 
