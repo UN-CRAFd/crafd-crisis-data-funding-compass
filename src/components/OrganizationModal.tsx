@@ -114,7 +114,7 @@ export default function OrganizationModal({
 
     // Reusable subheader component - Major sections (Assets, Funding) - smaller than main title
     const SubHeader = ({ children }: { children: React.ReactNode }) => (
-        <h3 className="text-xl font-qanelas font-black text-[#333333] mb-3 uppercase tracking-wide leading-normal">
+        <h3 className="text-xl font-roboto font-black text-[#333333] mb-3 uppercase tracking-wide leading-normal">
             {children}
         </h3>
     );
@@ -413,7 +413,7 @@ export default function OrganizationModal({
                         return (
                             <div>
                                 <div className="mb-3 flex items-center gap-2">
-                                    <h3 className="text-xl font-qanelas font-black text-[#333333] uppercase tracking-wide leading-normal">
+                                    <h3 className="text-xl font-roboto font-black text-[#333333] uppercase tracking-wide leading-normal">
                                         Provided Assets
                                     </h3>
                                     <span className="text-lg font-normal text-gray-500 tabular-nums">({projectsList.length})</span>
@@ -458,7 +458,7 @@ export default function OrganizationModal({
                         return (
                             <div>
                                 <div className="mb-3 flex items-center gap-2">
-                                    <h3 className="text-xl font-qanelas font-black text-[#333333] uppercase tracking-wide leading-normal">
+                                    <h3 className="text-xl font-roboto font-black text-[#333333] uppercase tracking-wide leading-normal">
                                         Organization Donors
                                     </h3>
                                     <span className="text-lg font-normal text-gray-500 tabular-nums">({donorCountries.length})</span>

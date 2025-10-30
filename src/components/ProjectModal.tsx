@@ -3,6 +3,7 @@
 import { Building2, Check, ExternalLink, Package, Share2 } from 'lucide-react';
 import { useCallback, useEffect, useRef, useState } from 'react';
 import type { OrganizationWithProjects, ProjectData } from '../lib/data';
+import { getIconForInvestmentType } from '@/config/investmentTypeIcons';
 import CloseButton from './CloseButton';
 
 interface ProjectModalProps {
@@ -115,7 +116,7 @@ export default function ProjectModal({ project, allOrganizations, loading }: Pro
 
     // Reusable subheader component - Major sections - smaller than main title
     const SubHeader = ({ children }: { children: React.ReactNode }) => (
-        <h3 className="text-xl font-qanelas font-black text-[#333333] mb-3 uppercase tracking-wide leading-normal">
+        <h3 className="text-xl font-roboto font-black text-[#333333] mb-3 uppercase tracking-wide leading-normal">
             {children}
         </h3>
     );
@@ -235,7 +236,7 @@ export default function ProjectModal({ project, allOrganizations, loading }: Pro
                 {/* Description with inline Learn more link */}
 
                 {project.projectDescription && (
-                    <p className="text-base font-normal text-gray-700 leading-relaxed font-roboto mb-2">
+                    <p className="text-base font-normal text-gray-700 leading-6 font-roboto mb-2">
                         {project.projectDescription}
                         {projectWebsite && projectWebsite.trim() !== '' && (
                             <>
@@ -304,18 +305,22 @@ export default function ProjectModal({ project, allOrganizations, loading }: Pro
                     <div className="mb-6">
                         <SubHeader>Asset Type</SubHeader>
                         <div className="flex flex-wrap gap-2">
-                            {project.investmentTypes.map((type, index) => (
-                                <span
-                                    key={index}
-                                    className="inline-flex items-center px-3 py-1.5 rounded-md text-sm font-semibold"
-                                    style={{
-                                        backgroundColor: 'var(--badge-other-bg)',
-                                        color: 'var(--badge-other-text)'
-                                    }}
-                                >
-                                    {type}
-                                </span>
-                            ))}
+                            {project.investmentTypes.map((type, index) => {
+                                const IconComponent = getIconForInvestmentType(type);
+                                return (
+                                    <span
+                                        key={index}
+                                        className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-md text-sm font-semibold"
+                                        style={{
+                                            backgroundColor: 'var(--badge-other-bg)',
+                                            color: 'var(--badge-other-text)'
+                                        }}
+                                    >
+                                        <IconComponent className="w-4 h-4" />
+                                        {type}
+                                    </span>
+                                );
+                            })}
                         </div>
                     </div>
                 )}
@@ -323,7 +328,7 @@ export default function ProjectModal({ project, allOrganizations, loading }: Pro
                 {/* Asset Donors */}
                 <div className="mb-6">
                     <div className="mb-3 flex items-center gap-2">
-                        <h3 className="text-xl font-qanelas font-black text-[#333333] uppercase tracking-wide leading-normal">
+                        <h3 className="text-xl font-roboto font-black text-[#333333] uppercase tracking-wide leading-normal">
                             Asset Donors
                         </h3>
                         {project.donorCountries && project.donorCountries.length > 0 && (
