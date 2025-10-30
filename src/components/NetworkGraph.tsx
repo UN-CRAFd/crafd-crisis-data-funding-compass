@@ -83,14 +83,22 @@ const NetworkGraph: React.FC<NetworkGraphProps> = ({
         const updateDimensions = () => {
             if (containerRef.current) {
                 const width = containerRef.current.offsetWidth;
-                const height = Math.max(600, window.innerHeight - 400);
+                // In fullscreen mode, use full viewport height; otherwise subtract header/nav space
+                const height = document.fullscreenElement 
+                    ? window.innerHeight 
+                    : Math.max(600, window.innerHeight - 400);
                 setDimensions({ width, height });
             }
         };
 
         updateDimensions();
         window.addEventListener('resize', updateDimensions);
-        return () => window.removeEventListener('resize', updateDimensions);
+        // Also listen for fullscreen changes to update dimensions
+        document.addEventListener('fullscreenchange', updateDimensions);
+        return () => {
+            window.removeEventListener('resize', updateDimensions);
+            document.removeEventListener('fullscreenchange', updateDimensions);
+        };
     }, []);
 
     // Transform data into graph format
@@ -98,6 +106,7 @@ const NetworkGraph: React.FC<NetworkGraphProps> = ({
         const nodes: GraphNode[] = [];
         const links: GraphLink[] = [];
         const donorSet = new Set<string>();
+        const projectSet = new Set<string>(); // Track unique projects to avoid duplicates
 
         // Collect all unique donors first
         organizationsWithProjects.forEach(org => {
@@ -142,15 +151,20 @@ const NetworkGraph: React.FC<NetworkGraphProps> = ({
             org.projects.forEach(project => {
                 const projectNodeId = `project-${project.id}`;
                 
-                nodes.push({
-                    id: projectNodeId,
-                    name: project.projectName,
-                    type: 'project',
-                    value: 20, // Slightly larger nodes for projects (assets)
-                    color: '#4CAF50', // Green for projects
-                    projectKey: project.productKey,
-                });
+                // Only add the project node if we haven't seen it before
+                if (!projectSet.has(projectNodeId)) {
+                    projectSet.add(projectNodeId);
+                    nodes.push({
+                        id: projectNodeId,
+                        name: project.projectName,
+                        type: 'project',
+                        value: 20, // Slightly larger nodes for projects (assets)
+                        color: '#4CAF50', // Green for projects
+                        projectKey: project.id,
+                    });
+                }
 
+                // Always add the link from organization to project
                 links.push({
                     source: orgNodeId,
                     target: projectNodeId,
