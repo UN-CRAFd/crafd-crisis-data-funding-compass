@@ -180,17 +180,32 @@ const NetworkGraph: React.FC<NetworkGraphProps> = ({
     useEffect(() => {
         if (graphRef.current) {
             const fg = graphRef.current;
-            
+
             // Increase repulsion between nodes for better spacing
             fg.d3Force('charge').strength(-400);
             fg.d3Force('charge').distanceMax(500);
-            
-            // Set link distance for more spread
-            fg.d3Force('link').distance(150);
-            
+
+            // Set link distance dynamically based on node types
+            fg.d3Force('link').distance((link) => {
+                const sourceType = typeof link.source === 'object' ? (link.source as GraphNode).type : '';
+                const targetType = typeof link.target === 'object' ? (link.target as GraphNode).type : '';
+
+                if ((sourceType === 'organization' && targetType === 'project') ||
+                    (sourceType === 'project' && targetType === 'organization')) {
+                    return 100; // Shorter distance for organization-project links
+                }
+
+                if ((sourceType === 'organization' && targetType === 'donor') ||
+                    (sourceType === 'donor' && targetType === 'organization')) {
+                    return 200; // Longer distance for organization-donor links
+                }
+
+                return 150; // Default distance
+            });
+
             // Weaker centering force
             fg.d3Force('center').strength(0.05);
-            
+
             // Increase velocity decay to make it less wobbly (higher = more damping)
             fg.d3Force('simulation')?.velocityDecay(0.6);
         }
