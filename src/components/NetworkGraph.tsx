@@ -1,6 +1,7 @@
 'use client';
 
 import React, { useCallback, useEffect, useRef, useState } from 'react';
+import { forceCollide } from 'd3-force';
 import ForceGraph2D from 'react-force-graph-2d';
 import { Maximize, Minimize } from 'lucide-react';
 import type { OrganizationWithProjects } from '../types/airtable';
@@ -173,6 +174,27 @@ const NetworkGraph: React.FC<NetworkGraphProps> = ({
             });
         });
 
+        // Compute node degrees (number of incident links) to derive a relevance score
+        const degreeMap = new Map<string, number>();
+        nodes.forEach(n => degreeMap.set(n.id, 0));
+        links.forEach(link => {
+            const sourceId = typeof link.source === 'object' ? (link.source as any).id : link.source;
+            const targetId = typeof link.target === 'object' ? (link.target as any).id : link.target;
+            degreeMap.set(sourceId, (degreeMap.get(sourceId) || 0) + 1);
+            degreeMap.set(targetId, (degreeMap.get(targetId) || 0) + 1);
+        });
+
+        // Scale node visual size by log(degree+1) to keep growth controlled.
+        // Preserve original base sizes per type and add a scaled boost.
+        const SIZE_SCALE = 6; // multiplier for the log-scaling term
+        nodes.forEach(n => {
+            const deg = degreeMap.get(n.id) || 0;
+            const base = n.type === 'donor' ? 25 : n.type === 'organization' ? 22 : 20;
+            const scaled = Math.round(base + Math.log1p(deg) * SIZE_SCALE);
+            // Clamp to reasonable bounds to avoid overly large/small nodes
+            n.value = Math.min(80, Math.max(8, scaled));
+        });
+
         return { nodes, links };
     }, [organizationsWithProjects]);
 
@@ -182,8 +204,9 @@ const NetworkGraph: React.FC<NetworkGraphProps> = ({
             const fg = graphRef.current;
 
             // Increase repulsion between nodes for better spacing
-            fg.d3Force('charge').strength(-400);
-            fg.d3Force('charge').distanceMax(500);
+            // Stronger charge keeps nodes from clustering too tightly
+            fg.d3Force('charge').strength(-700);
+            fg.d3Force('charge').distanceMax(700);
 
             // Set link distance dynamically based on node types
                         fg.d3Force('link').distance((link: any) => {
@@ -205,6 +228,14 @@ const NetworkGraph: React.FC<NetworkGraphProps> = ({
 
             // Weaker centering force
             fg.d3Force('center').strength(0.05);
+
+            // Add a collision force so nodes don't overlap visually.
+            // Use node.value (which maps to visual size) to compute radius and add padding.
+            fg.d3Force('collision', forceCollide((node: any) => {
+                const r = (node.value || 10) / 2;
+                const padding = 6; // pixels between nodes
+                return r + padding;
+            }).iterations(2));
 
             // Increase velocity decay to make it less wobbly (higher = more damping)
             fg.d3Force('simulation')?.velocityDecay(0.6);
