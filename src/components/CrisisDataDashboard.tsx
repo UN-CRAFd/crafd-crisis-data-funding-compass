@@ -579,7 +579,7 @@ const CrisisDataDashboard = ({
     };
 
     return (
-        <div className="min-h-screen bg-slate-100">
+        <div className="min-h-screen bg-slate-50">
             {/* Header Section - Fixed */}
             <div className="fixed top-0 left-0 right-0 z-50 bg-white border-b border-slate-200 shadow-sm">
                 <div className="max-w-[82rem] mx-auto px-4 sm:px-6 lg:px-8 py-2 sm:py-4">
@@ -1335,7 +1335,7 @@ const CrisisDataDashboard = ({
             </div>
 
             {/* Impressum Footer */}
-            <footer className="bg-slate-100 border-t border-slate-200 mt-8 sm:mt-16">
+            <footer className="bg-white border-t border-slate-200 mt-8 sm:mt-16">
                 <div className="max-w-[82rem] mx-auto px-4 sm:px-6 lg:px-8 py-4 sm:py-6">
                     <div className="flex flex-col sm:flex-row items-center justify-center sm:justify-between gap-2 sm:gap-0">
 
