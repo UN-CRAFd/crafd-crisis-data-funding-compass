@@ -347,6 +347,9 @@
       "Provided Data Ecosystem Projects": [
         "recGoW02CMXhVQ00S"
       ],
+      "Org Donor Agencies": [
+        "rec1VhOJv9U6QKBBs"
+      ],
       "Org HQ Country": "Global (distributed)",
       "Has received CRAF'd Funding?": "YES",
       "org_key": "fhn",
@@ -775,7 +778,6 @@
         "recHSsEaPuaG3h2PQ",
         "rec17xB7AKc3ojdV5",
         "recks6hHpAgBV14d9",
-        "rec6XRPA9pKgC8j1J",
         "recztWTqT6smaiZ3q",
         "recqhcKxTv71yMfeI",
         "recULIEfSZxBrWWZb"
@@ -895,6 +897,9 @@
       "Org Short Name": "Data Pop Alliance",
       "Org Website": "https://datapopalliance.org/",
       "Org Description": "Since 2013, Data-Pop Alliance has worked to apply cutting edge data science to solve the world’s most pressing problems. As the 2030 deadline for the UN sustainable development goals approaches, we believe novel approaches are needed to enhance the efficacy of the global development sector and reach those most in need. ",
+      "Provided Data Ecosystem Projects": [
+        "recejrbDKmak6gySA"
+      ],
       "Org Donor Agencies": [
         "recbbW0P8fxVtJBJP",
         "rec0sY1I5JZz6ZsUE",
@@ -1046,9 +1051,8 @@
       "Org Full Name": "DRC: Danish Refugee Council",
       "Org Short Name": "DRC",
       "Org Website": "https://drc.ngo/",
-      "Org Description": "DRC is Denmark’s largest NGO. We are a leading international NGO - one of the few with a specific expertise in forced displacement. In 40 countries across the world our 8,000 employees work to protect, advocate and build sustainable futures for refugees and other displacement-affected people and communities.\t\t",
+      "Org Description": "Founded in 1956, the Danish Refugee Council (DRC) is Denmark’s largest international NGO, with a specific expertise in forced displacement. DRC is present in close to 40 countries. DRC advocates for the rights of and solutions for displacement-affected communities, and provides assistance during all stages of displacement: In acute crisis, in exile, when settling and integrating in a new place, or upon return. DRC supports displaced persons in becoming self-reliant and included into hosting societies. DRC works with civil society and responsible authorities to promote protection of rights and inclusion.",
       "Provided Data Ecosystem Projects": [
-        "rec22kfYpoIsldmEK",
         "rec28WeSKDEQ5wx45"
       ],
       "Org Donor Agencies": [
@@ -1066,7 +1070,6 @@
         "recRgmk6Ew3NBvxGV",
         "recylzOrnxt3grWHh",
         "recRutqdhqEZSnOB2",
-        "rec6XRPA9pKgC8j1J",
         "recQUVhcVyxZlXJ3H"
       ],
       "Org IATI Name": "Danish Refugee Council",
@@ -1184,8 +1187,7 @@
         "recrPlN870ayqI9dO",
         "recWYxrSapIaQ5C4r",
         "recGlx8p4y1yzES7T",
-        "rec665usRSgrGizMC",
-        "recdWBZgIeBfATRcv"
+        "rec665usRSgrGizMC"
       ],
       "Org IATI Name": "Humanitarian OpenStreetMap Team",
       "Est. Org Budget [2024, $M]": 8387022,
@@ -1249,11 +1251,11 @@
       "Org Mission": "Our mission is to provide accurate and accessible data and analysis to better inform decisions that reduce violent conflict.",
       "Link to Data Products Overview": "<https://acleddata.com/data/>\n",
       "Provided Data Ecosystem Projects": [
-        "recFF8BskJRz2Lyjk",
         "recfTLQpzUgBOtlS5",
         "recwMGK7lbvDfjR14",
         "recjxVwrxVL90go5G",
-        "recLA3jRq3bbZRVzu"
+        "recLA3jRq3bbZRVzu",
+        "recFF8BskJRz2Lyjk"
       ],
       "Org Donor Agencies": [
         "rec1VhOJv9U6QKBBs"
@@ -1267,7 +1269,7 @@
       "Has received CRAF'd Funding?": "YES",
       "org_key": "acled",
       "Org Type": [
-        "Research / Think Tank"
+        "Non-Governmental Organization"
       ]
     }
   },
@@ -1319,7 +1321,7 @@
       "Org Full Name": "AGORA",
       "Org Short Name": "AGORA",
       "Org Website": "https://www.impact-initiatives.org/what-we-do/agora/",
-      "Org Description": "AGORA, a joint venture between ACTED and IMPACT Initiatives, was created in 2016 to ground humanitarian and development work in local knowledge, in keeping with the motto « Think local, Act global »",
+      "Org Description": "AGORA, a joint venture between ACTED and IMPACT Initiatives, was created in 2016 to ground humanitarian and development work in local knowledge, in keeping with the motto « Think local, Act global ». \n\nFounded in 2010 and headquartered in Geneva, IMPACT Initiatives is a leading applied research organization and the largest independent provider of data in crisis-affected contexts. Through our initiatives—REACH, AGORA, and PANDA—we enable humanitarian and other aid actors to make better, evidence-based decisions by delivering timely, relevant, and methodologically rigorous data and analysis. Our extensive presence across crisis-contexts allows us to collect data directly from crisis-affected people wherever needed, including among the most vulnerable and hard-to-reach.\n\nIMPACT takes an initiative-based approach to structuring our programming. Each initiative has a specific aim, operational model, and portfolio of solutions.\n\n- REACH strengthens evidence-based humanitarian decision-making through efficient data collection, management, and analysis – before, during, and after an emergency.\n- AGORA promotes localised and multi-sectoral aid action in support of the recovery and stabilisation of crisis-affected communities, in partnership with local stakeholders.\n- PANDA improves the impact of humanitarian and development interventions through programme design, assessments, and monitoring & evaluation.",
       "org_key": "agora",
       "Org Type": [
         "Non-Governmental Organization"
@@ -1335,12 +1337,10 @@
       "Org Description": " Data Friendly Space (DFS) provides trustworthy digital tools and actionable data for social impact organisations to fulfil their mission. We believe that the international community holds not just the knowledge, but also the responsibility to utilise emerging technologies and data to better prepare for and respond to humanitarian needs, support the achievement of Sustainable Development Goals (SDGs), and accelerate climate action.\t",
       "Link to Data Products Overview": "- https://www.datafriendlyspace.org/our-work\n- <https://www.datafriendlyspace.org/our-work/gbv-aor>\n- https://www.datafriendlyspace.org/our-work/ifrc-go\n",
       "Provided Data Ecosystem Projects": [
-        "rec22kfYpoIsldmEK",
         "rec5zVtFYWKUXASIr"
       ],
       "Org Donor Agencies": [
         "recImK5HfYUoDfAgk",
-        "rec6XRPA9pKgC8j1J",
         "rec4fIAt1DD6Vprw7"
       ],
       "Org IATI Name": "N/A",
@@ -1793,6 +1793,13 @@
       "Org Website": "https://3is.org/",
       "Org Description": "3iS’s mission is to empower and enhance the understanding of information through innovative technology, successfully driving strategic change and transforming decision-making. We use data and cutting-edge technology to generate knowledge that equips leaders and change agents to better achieve their objectives in the humanitarian, development, and academic sectors. \n",
       "Link to Data Products Overview": "<https://data.humdata.org/organization/3isolution>\n",
+      "Provided Data Ecosystem Projects": [
+        "recfUQ0LgTnaydzWg",
+        "recJyonPtboyfoLet",
+        "recuMPe1WRudzeyXf",
+        "recxPDSfMPQYhiw5Q",
+        "recgzWbqbmwOXHLnq"
+      ],
       "Org Donor Agencies": [
         "rec2KBp1IAA5TtnQl",
         "recylzOrnxt3grWHh",
@@ -1800,7 +1807,8 @@
         "recvapVp1Nk46rN3A",
         "recsrMWmoA037bW03",
         "recFDm6MHWUu6GSMI",
-        "recpnGIsQx8Bb4aji"
+        "recpnGIsQx8Bb4aji",
+        "recACsCLhhDutMpAv"
       ],
       "Org IATI Name": "N/A",
       "Est. Data Budget [2024, $M]": 3900000,
@@ -1819,7 +1827,7 @@
       "Org Full Name": "Afrobarometer",
       "Org Short Name": "Afrobarometer",
       "Org Website": "https://www.afrobarometer.org/about/",
-      "Org Description": "Afrobarometer, a non-profit company limited by guarantee with headquarters in Ghana, is a pan-African, non-partisan survey research network that conducts public attitude surveys on democracy, governance, the economy, and society. We are the world’s leading source of high-quality data on what Africans are thinking.\n\nOur network encompasses more than 30 national partners responsible for data collection, analysis, and in-country dissemination of findings. Regional coordination is provided by the Ghana Center for Democratic Development (CDD-Ghana), the Institute for Justice and Reconciliation (IJR) in South Africa, and the Institute for Development Studies (IDS) at the University of Nairobi in Kenya. Michigan State University (MSU) and the University of Cape Town (UCT) provide technical support to the network.",
+      "Org Description": "Afrobarometer, a non-profit company limited by guarantee with headquarters in Ghana, is a pan-African, non-partisan survey research network that conducts public attitude surveys on democracy, governance, the economy, and society. Afrobarometer is the world’s leading source of high-quality data on what Africans are thinking.\n\nThe Afrobarometer network encompasses more than 30 national partners responsible for data collection, analysis, and in-country dissemination of findings. Regional coordination is provided by the Ghana Center for Democratic Development (CDD-Ghana), the Institute for Justice and Reconciliation (IJR) in South Africa, and the Institute for Development Studies (IDS) at the University of Nairobi in Kenya. Michigan State University (MSU) and the University of Cape Town (UCT) provide technical support to the network.",
       "Org Mission": "To make citizen voice a key pillar of African policy and decision making\nA world in which Africa’s development is anchored in the realities and aspirations of its people \n\n\n",
       "Provided Data Ecosystem Projects": [
         "rec7HiwptaxnhVxui",
@@ -1840,7 +1848,7 @@
       "Has received CRAF'd Funding?": "NO",
       "org_key": "afrobarometer",
       "Org Type": [
-        "Non-Governmental Organization"
+        "Research / Think Tank"
       ]
     }
   },
@@ -2013,8 +2021,7 @@
         "recMSfI5XCXoaFs9i",
         "recuh6VLNIOwuzoK4",
         "recEe5VWXvva47Ew5",
-        "recGMYeDQSV7jffjs",
-        "recCwo6aH031TZava"
+        "recGMYeDQSV7jffjs"
       ],
       "Org IATI Name": "N/A",
       "Est. Data Budget [2024, $M]": 3445930,
@@ -2500,8 +2507,7 @@
       "Link to Data Products Overview": "<https://immap.org/products/>\n",
       "Provided Data Ecosystem Projects": [
         "recxZmQWr8fIn8d1G",
-        "recPMQlg07QkflL3i",
-        "rec22kfYpoIsldmEK"
+        "recPMQlg07QkflL3i"
       ],
       "Org Donor Agencies": [
         "rec6XRPA9pKgC8j1J",
