@@ -2,7 +2,7 @@
 
 import React, { useCallback, useEffect, useRef, useState } from 'react';
 import ForceGraph2D from 'react-force-graph-2d';
-import { Maximize2, Minimize2 } from 'lucide-react';
+import { Maximize, Minimize } from 'lucide-react';
 import type { OrganizationWithProjects } from '../types/airtable';
 
 interface NetworkGraphProps {
@@ -51,33 +51,47 @@ const NetworkGraph: React.FC<NetworkGraphProps> = ({
     const [hoverHighlightLinks, setHoverHighlightLinks] = useState<Set<string>>(new Set());
     const [isFullscreen, setIsFullscreen] = useState(false);
 
-    // Update dimensions on resize (reusable)
-    const updateDimensions = useCallback(() => {
-        if (containerRef.current) {
-            const width = containerRef.current.offsetWidth;
-            const height = Math.max(600, window.innerHeight - 400);
-            setDimensions({ width, height });
+    // Handle fullscreen toggle
+    const toggleFullscreen = useCallback(() => {
+        if (!containerRef.current) return;
+
+        if (!document.fullscreenElement) {
+            containerRef.current.requestFullscreen().then(() => {
+                setIsFullscreen(true);
+            }).catch((err) => {
+                console.error('Error attempting to enable fullscreen:', err);
+            });
+        } else {
+            document.exitFullscreen().then(() => {
+                setIsFullscreen(false);
+            });
         }
     }, []);
 
+    // Listen for fullscreen changes (e.g., user presses ESC)
     useEffect(() => {
+        const handleFullscreenChange = () => {
+            setIsFullscreen(!!document.fullscreenElement);
+        };
+
+        document.addEventListener('fullscreenchange', handleFullscreenChange);
+        return () => document.removeEventListener('fullscreenchange', handleFullscreenChange);
+    }, []);
+
+    // Update dimensions on resize
+    useEffect(() => {
+        const updateDimensions = () => {
+            if (containerRef.current) {
+                const width = containerRef.current.offsetWidth;
+                const height = Math.max(600, window.innerHeight - 400);
+                setDimensions({ width, height });
+            }
+        };
+
         updateDimensions();
         window.addEventListener('resize', updateDimensions);
         return () => window.removeEventListener('resize', updateDimensions);
-    }, [updateDimensions]);
-
-    // Keep dimensions updated when entering/exiting fullscreen
-    useEffect(() => {
-        const onFsChange = () => {
-            const isFs = !!document.fullscreenElement;
-            setIsFullscreen(isFs);
-            // Wait a tick for layout to update
-            setTimeout(updateDimensions, 50);
-        };
-
-        document.addEventListener('fullscreenchange', onFsChange);
-        return () => document.removeEventListener('fullscreenchange', onFsChange);
-    }, [updateDimensions]);
+    }, []);
 
     // Transform data into graph format
     const graphData = React.useMemo<GraphData>(() => {
@@ -233,23 +247,6 @@ const NetworkGraph: React.FC<NetworkGraphProps> = ({
         }
     }, [selectedOrgKey, selectedProjectKey, onOpenOrganizationModal, onOpenProjectModal]);
 
-    // Fullscreen controls
-    const enterFullscreen = useCallback(() => {
-        if (containerRef.current && (containerRef.current as any).requestFullscreen) {
-            (containerRef.current as any).requestFullscreen();
-        }
-    }, []);
-
-    const exitFullscreen = useCallback(() => {
-        if (document.fullscreenElement && document.exitFullscreen) {
-            document.exitFullscreen();
-        }
-    }, []);
-
-    const toggleFullscreen = useCallback(() => {
-        if (document.fullscreenElement) exitFullscreen(); else enterFullscreen();
-    }, [enterFullscreen, exitFullscreen]);
-
     // Custom node canvas rendering
     const paintNode = useCallback((node: GraphNode, ctx: CanvasRenderingContext2D, globalScale: number) => {
         const fontSize = 12 / globalScale;
@@ -315,15 +312,21 @@ const NetworkGraph: React.FC<NetworkGraphProps> = ({
     return (
         <div ref={containerRef} className="w-full h-full bg-white rounded-lg border border-slate-200 overflow-hidden relative">
             {/* Legend */}
-            <div className="w-50 absolute top-4 left-4 z-10 bg-white/30 backdrop-blur-lg p-3 rounded-lg border border-slate-200 shadow-sm relative">
-                <button
-                    onClick={toggleFullscreen}
-                    aria-label={isFullscreen ? 'Exit fullscreen' : 'Enter fullscreen'}
-                    className="absolute top-2 right-2 h-7 w-7 flex items-center justify-center rounded-md bg-white/80 hover:bg-white text-slate-700 border border-slate-200"
-                >
-                    {isFullscreen ? <Minimize2 className="w-4 h-4" /> : <Maximize2 className="w-4 h-4" />}
-                </button>
-                <div className="text-xs font-semibold text-slate-800/90 mb-2">Legend</div>
+            <div className="absolute top-4 left-4 z-10 bg-white/30 backdrop-blur-lg p-3 rounded-lg border border-slate-200 shadow-sm">
+                <div className="flex items-center justify-between mb-2">
+                    <div className="text-xs font-semibold text-slate-800/90">Legend</div>
+                    <button
+                        onClick={toggleFullscreen}
+                        className="ml-4 p-1 hover:bg-slate-200/50 rounded transition-colors"
+                        title={isFullscreen ? 'Exit fullscreen' : 'Enter fullscreen'}
+                    >
+                        {isFullscreen ? (
+                            <Minimize className="w-3.5 h-3.5 text-slate-600" />
+                        ) : (
+                            <Maximize className="w-3.5 h-3.5 text-slate-600" />
+                        )}
+                    </button>
+                </div>
                 <div className="space-y-1.5">
                     <div className="flex items-center gap-2">
                         <div className="w-4 h-4 rounded-full" style={{ backgroundColor: '#e6af26' }}></div>
