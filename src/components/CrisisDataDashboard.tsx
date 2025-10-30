@@ -1198,7 +1198,7 @@ const CrisisDataDashboard = ({
                                                                                     onOpenOrganizationModal(orgKey);
                                                                                 }
                                                                             }}
-                                                                                className="hidden sm:inline-flex items-center justify-center gap-1 text-[10px] h-6 px-2 rounded-md text-slate-100 bg-slate-300 hover:bg-slate-500 transition-colors duration-150"
+                                                                                className="hidden sm:inline-flex items-center justify-center gap-1 text-[10px] h-6 px-2 rounded-md text-[var(--badge-slate-bg)] bg-[var(--badge-slate-text)] hover:bg-slate-400 duration-150"
                                                                             >
                                                                             <div className="hidden sm:inline-flex items-center justify-center gap-1">
                                                                                 <Info className="w-3 h-3" />
