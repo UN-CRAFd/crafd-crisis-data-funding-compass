@@ -195,7 +195,7 @@ const ChartCard = React.memo(function ChartCard({ title, icon, data, barColor, f
                                 }}
                             />
                         </Bar>
-                    </BarChart>
+                    </BarChart> 
                 </ResponsiveContainer>
                 {footnote && (
                     <p className="text-[10px] text-slate-400 mt-2">
