@@ -41,31 +41,6 @@
     }
   },
   {
-    "id": "rec22kfYpoIsldmEK",
-    "fields": {
-      "Project/Product Name": "Data Entry and Exploration Platform (DEEP)",
-      "product_key": "deep",
-      "Provider Orgs Full Name": [
-        "recMRdDWNDoa8PFIn",
-        "recVvtFoKKF407fD1",
-        "recvzWSlYgzs0mffd"
-      ],
-      "CRAF’d-Funded Project?": "NO",
-      "Investment Type(s)": [
-        "Infrastructure & Platforms"
-      ],
-      "Investment Theme(s)": [
-        "Data Collection",
-        "Data Governance & Management"
-      ],
-      "Project Website": "https://www.thedeep.io/",
-      "Project Description": "The Data Entry and Exploration Platform (DEEP) offers a suite of tools and collaborative workflows that meet the needs for compiling, storing, structuring, analyzing and visualizing data and qualitative information. It was born out of the aftermath of the Nepal Earthquake in 2016 to strengthen collective analysis and coordinate efforts.\n\nDEEP’s open-source and free services allow more than 7,500 users from the humanitarian and development communities achieve a more robust, collaborative and transparent approach to needs assessments and situation analysis.\n",
-      "Project Donor Agencies": [
-        "rec6XRPA9pKgC8j1J"
-      ]
-    }
-  },
-  {
     "id": "rec24cVLtWAWZB6gx",
     "fields": {
       "Project/Product Name": "Fragility, Conflict, and Violence (FCV) Data",
@@ -98,7 +73,11 @@
         "Crisis Analytics & Insights"
       ],
       "Investment Theme(s)": [
-        "Displacement & Migration Data"
+        "Anticipatory Action Triggers / Forecasts",
+        "Displacement & Migration Analytics",
+        "Conflict Analytics",
+        "Climate Analytics",
+        "AI Models"
       ],
       "Project Website": "https://drc.ngo/resources/documents/global-displacement-forecast/",
       "Project Description": "The forecast platform provides predictive models of displacement risk based on conflict, climate, and governance indicators. It offers downloadable datasets and visual forecasts to support anticipatory humanitarian programming.\n",
@@ -549,7 +528,7 @@
   {
     "id": "rec7HiwptaxnhVxui",
     "fields": {
-      "Project/Product Name": "Afrobarometer",
+      "Project/Product Name": "Afrobarometer Survey Data",
       "product_key": "afrobarometer",
       "Provider Orgs Full Name": [
         "rechDlUwp5odgrH4t"
@@ -566,7 +545,6 @@
       "Project Description": "Afrobarometer is a pan-African public-opinion research network providing survey insights into democracy, governance, and economic conditions. Survey microdata and analysis tools are publicly available via an open-access portal.\n",
       "Project Donor Agencies": [
         "recRutqdhqEZSnOB2",
-        "rec6XRPA9pKgC8j1J",
         "recbtz43uuKKFVfvd",
         "recGNTHL9SKZxLDcw",
         "recm5JztIHB9RUFLL",
@@ -995,23 +973,17 @@
   {
     "id": "recFF8BskJRz2Lyjk",
     "fields": {
-      "Project/Product Name": "Armed Conflict Location & Event Data (ACLED) Dataset & Tools",
-      "product_key": "acled",
+      "Project/Product Name": "ACLED Data",
+      "product_key": "acled-data",
       "Provider Orgs Full Name": [
         "recRoMeLU57jzgHFs"
       ],
       "CRAF’d-Funded Project?": "YES",
       "Investment Type(s)": [
-        "Data Sets & Commons",
-        "Infrastructure & Platforms",
-        "Crisis Analytics & Insights"
+        "Data Sets & Commons"
       ],
       "Investment Theme(s)": [
-        "Conflict & Violence Data",
-        "Peace Data",
-        "Geospatial Data",
-        "Data Collection",
-        "Forecasting / Early-Warning"
+        "Conflict & Violence Data"
       ],
       "Project Website": "https://acleddata.com/",
       "Project Description": "ACLED is a widely used conflict dataset that tracks the locations, dates, actors, and types of political violence and protest events across the world. Updated weekly, it covers over 150 countries and includes data on battles, riots, strategic developments, and civilian targeting. ACLED’s open-access data and analytical tools are used by policymakers, researchers, and humanitarian organizations to monitor conflict dynamics, assess risk, and support early warning systems and humanitarian planning.\n",
@@ -1295,10 +1267,28 @@
     }
   },
   {
+    "id": "recJyonPtboyfoLet",
+    "fields": {
+      "Project/Product Name": "Artificial Intelligence (AI)",
+      "Provider Orgs Full Name": [
+        "recfMWBZ4Di5d2bjs"
+      ],
+      "CRAF’d-Funded Project?": "NO",
+      "Investment Type(s)": [
+        "Infrastructure & Platforms"
+      ],
+      "Investment Theme(s)": [
+        "AI & ML Infrastructure"
+      ],
+      "Project Website": "https://3is.org/artificial-intelligence/",
+      "Project Description": "We are at the forefront of leveraging Artificial Intelligence (AI) as a foundational tool in our core services to transform humanitarian response and environmental management. Our commitment to innovation and social impact has earned significant recognition from leading technology partners. We are proud to announce our participation in key initiatives designed to amplify our reach and capabilities:\n"
+    }
+  },
+  {
     "id": "recLA3jRq3bbZRVzu",
     "fields": {
-      "Project/Product Name": "CAST | Conflict Alert System",
-      "product_key": "cast-alert",
+      "Project/Product Name": "Conflict Alert System (CAST)",
+      "product_key": "cast",
       "Provider Orgs Full Name": [
         "recRoMeLU57jzgHFs"
       ],
@@ -1308,7 +1298,9 @@
       ],
       "Investment Theme(s)": [
         "Anticipatory Action Triggers / Forecasts",
-        "Forecasting / Early-Warning"
+        "Forecasting / Early-Warning",
+        "AI Models",
+        "Conflict Analytics"
       ],
       "Project Website": "https://acleddata.com/platform/cast-conflict-alert-system",
       "Project Description": "The ACLED Conflict Alert System (CAST) is a conflict forecasting visualization platform that predicts political violence events up to six months in the future for every country in the world.\n",
@@ -2389,6 +2381,24 @@
     }
   },
   {
+    "id": "recejrbDKmak6gySA",
+    "fields": {
+      "Project/Product Name": "OPAL (old?)",
+      "Provider Orgs Full Name": [
+        "recHsNe20lr1CUAVu"
+      ],
+      "CRAF’d-Funded Project?": "NO",
+      "Investment Type(s)": [
+        "Infrastructure & Platforms"
+      ],
+      "Investment Theme(s)": [
+        "Data Storage, Access & Sharing"
+      ],
+      "Project Website": "https://www.opalproject.org/",
+      "Project Description": "OPAL is a data-powered decision and coordination support system for development and humanitarian interventions.\n"
+    }
+  },
+  {
     "id": "recf0UvW6LzObKXGC",
     "fields": {
       "Project/Product Name": "Global Crisis Risk Platform (GCRP)",
@@ -2434,23 +2444,41 @@
     "id": "recfTLQpzUgBOtlS5",
     "fields": {
       "Project/Product Name": "Trendfinder",
-      "product_key": "acled-trendfinder",
+      "product_key": "trendfinder",
       "Provider Orgs Full Name": [
         "recRoMeLU57jzgHFs"
       ],
       "CRAF’d-Funded Project?": "YES",
       "Investment Type(s)": [
-        "Infrastructure & Platforms"
+        "Crisis Analytics & Insights"
       ],
       "Investment Theme(s)": [
-        "Conflict & Violence Data",
-        "Conflict Analytics"
+        "Conflict Analytics",
+        "Monitoring & Alerts"
       ],
       "Project Website": "https://acleddata.com/platform/trendfinder",
       "Project Description": "ACLED Trendfinder offers an array of interconnected tools for tracking patterns of political violence and protest. Using the visualization platform, you can identify important changes in political violence and protest across and within countries, situate this activity within historical contexts, and spot early warning signs.\n",
       "Project Donor Agencies": [
         "rec1VhOJv9U6QKBBs"
       ]
+    }
+  },
+  {
+    "id": "recfUQ0LgTnaydzWg",
+    "fields": {
+      "Project/Product Name": "Information Management Services",
+      "Provider Orgs Full Name": [
+        "recfMWBZ4Di5d2bjs"
+      ],
+      "CRAF’d-Funded Project?": "NO",
+      "Investment Type(s)": [
+        "Human Capital & Know-how"
+      ],
+      "Investment Theme(s)": [
+        "Upskilling & Training"
+      ],
+      "Project Website": "https://3is.org/information-management/",
+      "Project Description": " Our approach focuses on optimizing data collection, analysis, and dissemination of information to enable transparent communication and cooperation between stakeholders. \n"
     }
   },
   {
@@ -2649,6 +2677,24 @@
     }
   },
   {
+    "id": "recgzWbqbmwOXHLnq",
+    "fields": {
+      "Project/Product Name": "Monitoring & Evaluation",
+      "Provider Orgs Full Name": [
+        "recfMWBZ4Di5d2bjs"
+      ],
+      "CRAF’d-Funded Project?": "NO",
+      "Investment Type(s)": [
+        "Crisis Analytics & Insights"
+      ],
+      "Investment Theme(s)": [
+        "Monitoring & Alerts"
+      ],
+      "Project Website": "https://3is.org/monitoring-evaluation/",
+      "Project Description": "We support monitoring and evaluation (M&E) activities, which are fundamental to understanding impact, ensuring transparency, and fostering continuous improvements to projects.  \nOur goal is to deliver customized, robust frameworks and methodologies specifically designed to capture our partners’ initiatives. We believe that the most effective M&E processes are continuous and should be integrated throughout the project wherever feasible.  \nThis approach not only ensures ongoing tracking of progress but transparently communicates the impact of the project to both donors and the communities that we support.  \n\n"
+    }
+  },
+  {
     "id": "rech8GCismNX3Bm8p",
     "fields": {
       "Project/Product Name": "Harvard Humanitarian Initiative (HHI)",
@@ -2773,20 +2819,21 @@
   {
     "id": "recjxVwrxVL90go5G",
     "fields": {
-      "Project/Product Name": "Spotlight areas",
-      "product_key": "acled-spotlight-areas",
+      "Project/Product Name": "Conflict Monitors",
+      "product_key": "conflict-monitors",
       "Provider Orgs Full Name": [
         "recRoMeLU57jzgHFs"
       ],
       "CRAF’d-Funded Project?": "YES",
       "Investment Type(s)": [
-        "Infrastructure & Platforms"
+        "Crisis Analytics & Insights"
       ],
       "Investment Theme(s)": [
-        "Monitoring & Alerts"
+        "Monitoring & Alerts",
+        "Conflict Analytics"
       ],
       "Project Website": "https://acleddata.com/global-analysis/spotlight-areas",
-      "Project Description": "Innovative platforms that covers key areas and can support conflict analysis, violence-prevention initiatives, and efforts to monitor emerging crisis situations.\n",
+      "Project Description": "The Conflict Monitors cover key areas and can support conflict analysis, violence-prevention initiatives, and efforts to monitor emerging crisis situations.\n",
       "Project Donor Agencies": [
         "rec1VhOJv9U6QKBBs"
       ]
@@ -3358,6 +3405,24 @@
     }
   },
   {
+    "id": "recuMPe1WRudzeyXf",
+    "fields": {
+      "Project/Product Name": "Capacity Building",
+      "Provider Orgs Full Name": [
+        "recfMWBZ4Di5d2bjs"
+      ],
+      "CRAF’d-Funded Project?": "NO",
+      "Investment Type(s)": [
+        "Human Capital & Know-how"
+      ],
+      "Investment Theme(s)": [
+        "Capacity Building"
+      ],
+      "Project Website": "https://3is.org/capacity-building/",
+      "Project Description": "Our goal is to empower and equip organizations with the knowledge, skill sets, and tools needed to overcome challenges, enabling them to respond more effectively now and better sustain that success going forward.  \nWe create both in-person and remote learning environments that foster continuous improvement and innovation, ensuring partners are always growing and adapting to change. \n\n"
+    }
+  },
+  {
     "id": "recuOsuVWoVNvCO5k",
     "fields": {
       "Project/Product Name": "Public Health & Safety Insights (PHASI®)",
@@ -3469,7 +3534,8 @@
         "Infrastructure & Platforms"
       ],
       "Investment Theme(s)": [
-        "Peace Data"
+        "Data Storage, Access & Sharing",
+        "Data Documentation & Metadata"
       ],
       "Project Website": "https://psdata.un.org/",
       "Project Description": "A centralized data library offering curated conflict-related datasets, published by UN DPO to support analytic peace and security programming.\n"
@@ -3505,10 +3571,11 @@
       ],
       "CRAF’d-Funded Project?": "YES",
       "Investment Type(s)": [
-        "Data Sets & Commons"
+        "Crisis Analytics & Insights"
       ],
       "Investment Theme(s)": [
-        "Conflict & Violence Data"
+        "Conflict Analytics",
+        "Geospatial Analytics"
       ],
       "Project Website": "https://acleddata.com/platform/conflict-exposure-calculator",
       "Project Description": "The Conflict Exposure Calculator integrates data from ACLED with population size estimates from WorldPop, to estimate the civilian impact by proximity to an event, event type, type of violent actor or specific armed group, location, and time.\n",
@@ -3600,6 +3667,24 @@
       "Project Donor Agencies": [
         "rec1VhOJv9U6QKBBs"
       ]
+    }
+  },
+  {
+    "id": "recxPDSfMPQYhiw5Q",
+    "fields": {
+      "Project/Product Name": "Strategy & Systems Development",
+      "Provider Orgs Full Name": [
+        "recfMWBZ4Di5d2bjs"
+      ],
+      "CRAF’d-Funded Project?": "NO",
+      "Investment Type(s)": [
+        "Human Capital & Know-how"
+      ],
+      "Investment Theme(s)": [
+        "Upskilling & Training"
+      ],
+      "Project Website": "https://3is.org/strategy-systems-development/",
+      "Project Description": "We provide a suite of services that ensure your work is targeted and effective, allowing you to plan strategically, implement operations efficiently, and adapt proactively to the dynamic and changing situations. \nOur goal is to implement efficient systems that optimize operations, allowing partners to work smarter, not harder. This includes, but is not limited to, the development and integration of technology, which enhances efficiency, scalability, and communication. By streaming processes, we help reduce operational costs and help pave the way for sustainable impact. \n\n"
     }
   },
   {
