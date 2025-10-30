@@ -245,25 +245,10 @@ const NetworkGraph: React.FC<NetworkGraphProps> = ({
     }, [graphData]);
 
     // Handle node click
-    const handleNodeClick = useCallback((node: GraphNode) => {
-        // Pause the simulation to prevent movement
-        if (graphRef.current) {
-            graphRef.current.pauseAnimation();
-        }
-
-        if (node.type === 'organization' && node.orgKey) {
-            onOpenOrganizationModal(node.orgKey);
-        } else if (node.type === 'project' && node.projectKey) {
-            onOpenProjectModal(node.projectKey);
-        }
-
-        // Resume animation after a short delay
-        setTimeout(() => {
-            if (graphRef.current) {
-                graphRef.current.resumeAnimation();
-            }
-        }, 100);
-    }, [onOpenOrganizationModal, onOpenProjectModal]);
+    // NOTE: organization and project nodes should not be clickable per UX request.
+    // We ignore clicks on those node types. Keep the handler so it can be extended
+    // later if donor-click behavior is added.
+  
 
     // Handle background click to deselect
     const handleBackgroundClick = useCallback(() => {
@@ -381,7 +366,6 @@ const NetworkGraph: React.FC<NetworkGraphProps> = ({
                 nodeLabel=""
                 nodeVal="value"
                 nodeCanvasObject={paintNode}
-                onNodeClick={handleNodeClick}
                 onNodeHover={handleNodeHover}
                 onBackgroundClick={handleBackgroundClick}
                 linkColor={(link) => {

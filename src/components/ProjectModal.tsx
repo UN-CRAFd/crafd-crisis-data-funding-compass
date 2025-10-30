@@ -236,7 +236,7 @@ export default function ProjectModal({ project, allOrganizations, loading }: Pro
                 {/* Description with inline Learn more link */}
 
                 {project.projectDescription && (
-                    <p className="text-base font-normal text-gray-700 leading-6 font-roboto mb-2">
+                    <p className="text-base font-normal text-gray-700 leading-snug font-roboto mb-1">
                         {project.projectDescription}
                         {projectWebsite && projectWebsite.trim() !== '' && (
                             <>
