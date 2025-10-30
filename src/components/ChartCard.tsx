@@ -94,7 +94,7 @@ const ChartCard = React.memo(function ChartCard({ title, icon, data, barColor, f
                     <BarChart
                         data={data}
                         layout="vertical"
-                        margin={{ top: 0, right: 15, left: -50, bottom: 0 }}
+                        margin={{ top: 0, right: 10, left: -49, bottom: 0 }}
                     >
                         <CartesianGrid strokeDasharray="3 3" stroke="var(--chart-grid-stroke)" horizontal={false} />
                         <XAxis type="number" stroke="var(--chart-axis-stroke)" tick={{ fontSize: 12, dy: -2 }} tickLine={false} allowDecimals={false} />
@@ -167,8 +167,8 @@ const ChartCard = React.memo(function ChartCard({ title, icon, data, barColor, f
                                     const textWidth = String(value).length * 8;
                                     const minBarWidth = textWidth + 16; // Add some padding
 
-                                    // Position inside bar if it's wide enough, otherwise outside
-                                    // Always position label on the left side of the bar
+                                    // Position on the left side of the bar when hovering
+                                    // Use the left edge of the bar + padding
                                     const textX = xPos + 8; // 8px padding from left edge of bar
                                     const textAnchor = 'start';
                                     const textColor = 'var(--chart-text-color)';
