@@ -114,14 +114,29 @@ const NetworkGraph: React.FC<NetworkGraphProps> = ({
             org.donorCountries.forEach(donor => donorSet.add(donor));
         });
 
-        // Add donor nodes - larger, amber color
+        // Get brand colors from CSS variables
+        const getBrandColor = (varName: string): string => {
+            if (typeof window !== 'undefined') {
+                const color = getComputedStyle(document.documentElement)
+                    .getPropertyValue(varName)
+                    .trim();
+                return color || '#e6af26'; // Fallback to amber
+            }
+            return '#e6af26';
+        };
+
+        const brandPrimary = getBrandColor('--brand-primary');
+        const brandPrimaryLight = getBrandColor('--brand-bg-light');
+        const brandPrimaryDark = getBrandColor('--brand-primary-dark');
+
+        // Add donor nodes - largest, using darkest brand color
         donorSet.forEach(donor => {
             nodes.push({
                 id: `donor-${donor}`,
                 name: donor,
                 type: 'donor',
                 value: 25, // Larger nodes for donors
-                color: '#e6af26', // --brand-primary
+                color: brandPrimaryDark, // Uses --brand-primary-dark (darkest)
             });
         });
 
@@ -129,13 +144,13 @@ const NetworkGraph: React.FC<NetworkGraphProps> = ({
         organizationsWithProjects.forEach(org => {
             const orgNodeId = `org-${org.id}`;
             
-            // Add organization node - medium, blue color
+            // Add organization node - medium, using brand primary (middle tone)
             nodes.push({
                 id: orgNodeId,
                 name: org.organizationName,
                 type: 'organization',
                 value: 22, // Medium nodes for organizations
-                color: '#1FBBEE', // Blue for organizations
+                color: brandPrimary, // Uses --brand-primary (middle tone)
                 orgKey: org.id,
             });
 
@@ -148,7 +163,7 @@ const NetworkGraph: React.FC<NetworkGraphProps> = ({
                 });
             });
 
-            // Add project nodes and link to organizations - smaller, green color
+            // Add project nodes and link to organizations - using brightest color
             org.projects.forEach(project => {
                 const projectNodeId = `project-${project.id}`;
                 
@@ -160,7 +175,7 @@ const NetworkGraph: React.FC<NetworkGraphProps> = ({
                         name: project.projectName,
                         type: 'project',
                         value: 20, // Slightly larger nodes for projects (assets)
-                        color: '#4CAF50', // Green for projects
+                        color: brandPrimaryLight, // Uses --brand-primary-light (brightest)
                         projectKey: project.id,
                     });
                 }
@@ -186,13 +201,17 @@ const NetworkGraph: React.FC<NetworkGraphProps> = ({
 
         // Scale node visual size by log(degree+1) to keep growth controlled.
         // Preserve original base sizes per type and add a scaled boost.
+        // Base sizes ensure: donors > organizations > assets at all connection levels
         const SIZE_SCALE = 6; // multiplier for the log-scaling term
         nodes.forEach(n => {
             const deg = degreeMap.get(n.id) || 0;
-            const base = n.type === 'donor' ? 25 : n.type === 'organization' ? 22 : 20;
+            // Base sizes: donors start larger, then organizations, then projects/assets
+            const base = n.type === 'donor' ? 28 : n.type === 'organization' ? 24 : 18;
             const scaled = Math.round(base + Math.log1p(deg) * SIZE_SCALE);
             // Clamp to reasonable bounds to avoid overly large/small nodes
-            n.value = Math.min(80, Math.max(8, scaled));
+            // Min bounds also maintain the hierarchy: donors >= 28, orgs >= 24, assets >= 18
+            const minSize = n.type === 'donor' ? 28 : n.type === 'organization' ? 24 : 18;
+            n.value = Math.min(80, Math.max(minSize, scaled));
         });
 
         return { nodes, links };
@@ -292,15 +311,25 @@ const NetworkGraph: React.FC<NetworkGraphProps> = ({
         }
     }, [selectedOrgKey, selectedProjectKey, onOpenOrganizationModal, onOpenProjectModal]);
 
-    // Custom node canvas rendering
+    // Get brand color at runtime for use in link highlighting
+    const getBrandColor = useCallback((varName: string): string => {
+        if (typeof window !== 'undefined') {
+            const color = getComputedStyle(document.documentElement)
+                .getPropertyValue(varName)
+                .trim();
+            return color || '#e6af26';
+        }
+        return '#e6af26';
+    }, []);
+
+    const brandPrimaryColor = getBrandColor('--brand-primary');
+
+    // Custom node canvas rendering - only draw the node circles
     const paintNode = useCallback((node: GraphNode, ctx: CanvasRenderingContext2D, globalScale: number) => {
-        const fontSize = 12 / globalScale;
-        ctx.font = `${fontSize}px Sans-Serif`;
-        
-    // Use hover-based highlighting only (persistent click-based highlighting removed)
-    const isHoverHighlighted = hoverHighlightNodes.size > 0 && hoverHighlightNodes.has(node.id);
-    const isHighlighted = isHoverHighlighted;
-    const isDimmed = hoverHighlightNodes.size > 0 && !isHighlighted;
+        // Use hover-based highlighting only (persistent click-based highlighting removed)
+        const isHoverHighlighted = hoverHighlightNodes.size > 0 && hoverHighlightNodes.has(node.id);
+        const isHighlighted = isHoverHighlighted;
+        const isDimmed = hoverHighlightNodes.size > 0 && !isHighlighted;
         
         // Draw node circle
         ctx.beginPath();
@@ -323,15 +352,21 @@ const NetworkGraph: React.FC<NetworkGraphProps> = ({
         // Reset shadow
         ctx.shadowBlur = 0;
         
-        // Add border for clickable nodes
-        if (node.type === 'organization' || node.type === 'project') {
-            ctx.strokeStyle = '#fff';
-            ctx.lineWidth = isHighlighted ? 2.5 / globalScale : 1.5 / globalScale;
-            ctx.stroke();
-        }
+        ctx.strokeStyle = '#000';
+        ctx.lineWidth = isHighlighted ? 1.5 / globalScale : 1 / globalScale;
+        ctx.stroke();
         
         // Reset alpha
         ctx.globalAlpha = 1;
+    }, [hoverHighlightNodes]);
+
+    // Custom label rendering - drawn after all nodes to appear on top
+    const paintNodeLabel = useCallback((node: GraphNode, ctx: CanvasRenderingContext2D, globalScale: number) => {
+        const fontSize = 12 / globalScale;
+        ctx.font = `${fontSize}px Sans-Serif`;
+        
+        const isHoverHighlighted = hoverHighlightNodes.size > 0 && hoverHighlightNodes.has(node.id);
+        const isHighlighted = isHoverHighlighted;
 
         // Draw label if hovered or highlighted
         if ((hoveredNode && hoveredNode.id === node.id) || isHighlighted) {
@@ -374,15 +409,15 @@ const NetworkGraph: React.FC<NetworkGraphProps> = ({
                 </div>
                 <div className="space-y-1.5">
                     <div className="flex items-center gap-2">
-                        <div className="w-4 h-4 rounded-full" style={{ backgroundColor: '#e6af26' }}></div>
+                        <div className="w-4 h-4 rounded-full" style={{ backgroundColor: 'var(--brand-primary-dark)' }}></div>
                         <span className="text-xs text-slate-600">Donors</span>
                     </div>
                     <div className="flex items-center gap-2">
-                        <div className="w-4 h-4 rounded-full" style={{ backgroundColor: '#1FBBEE' }}></div>
+                        <div className="w-4 h-4 rounded-full" style={{ backgroundColor: 'var(--brand-primary)' }}></div>
                         <span className="text-xs text-slate-600">Organizations</span>
                     </div>
                     <div className="flex items-center gap-2">
-                        <div className="w-4 h-4 rounded-full" style={{ backgroundColor: '#4CAF50' }}></div>
+                        <div className="w-4 h-4 rounded-full" style={{ backgroundColor: 'var(--brand-bg-light)' }}></div>
                         <span className="text-xs text-slate-600">Assets</span>
                     </div>
                 </div>
@@ -397,8 +432,13 @@ const NetworkGraph: React.FC<NetworkGraphProps> = ({
                 nodeLabel=""
                 nodeVal="value"
                 nodeCanvasObject={paintNode}
+                nodeCanvasObjectMode={() => 'replace'}
                 onNodeHover={handleNodeHover}
                 onBackgroundClick={handleBackgroundClick}
+                onRenderFramePost={(ctx, globalScale) => {
+                    // Draw all labels after all nodes are drawn
+                    graphData.nodes.forEach(node => paintNodeLabel(node, ctx, globalScale));
+                }}
                 linkColor={(link) => {
                     const sourceId = typeof link.source === 'object' ? (link.source as any).id : link.source;
                     const targetId = typeof link.target === 'object' ? (link.target as any).id : link.target;
@@ -408,7 +448,7 @@ const NetworkGraph: React.FC<NetworkGraphProps> = ({
                     const isHoverHighlight = hoverHighlightLinks.size > 0 && hoverHighlightLinks.has(linkId);
                     
                     if (hoverHighlightLinks.size === 0) return '#cbd5e1';
-                    if (isHoverHighlight) return '#e6af26';
+                    if (isHoverHighlight) return brandPrimaryColor;
                     // Make non-highlighted links more visible when something is highlighted
                     return 'rgba(203, 213, 225, 0.6)';
                 }}
