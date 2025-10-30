@@ -110,8 +110,10 @@ const NetworkGraph: React.FC<NetworkGraphProps> = ({
         };
     }, []);
 
-    // Transform data into graph format
+    // Transform data into graph format - memoized with stable reference
     const graphData = React.useMemo<GraphData>(() => {
+        const startTime = performance.now();
+        
         const nodes: GraphNode[] = [];
         const links: GraphLink[] = [];
         const donorSet = new Set<string>();
@@ -122,7 +124,7 @@ const NetworkGraph: React.FC<NetworkGraphProps> = ({
             org.donorCountries.forEach(donor => donorSet.add(donor));
         });
 
-        // Get brand colors from CSS variables
+        // Get brand colors from CSS variables (cached)
         const getBrandColor = (varName: string): string => {
             if (typeof window !== 'undefined') {
                 const color = getComputedStyle(document.documentElement)
@@ -225,52 +227,59 @@ const NetworkGraph: React.FC<NetworkGraphProps> = ({
             n.value = Math.min(80, Math.max(minSize, scaled));
         });
 
+        const endTime = performance.now();
+        console.log(`[NetworkGraph] Graph data computed in ${(endTime - startTime).toFixed(2)}ms (${nodes.length} nodes, ${links.length} links)`);
+
         return { nodes, links };
     }, [organizationsWithProjects]);
 
     // Configure force simulation for better spacing
     useEffect(() => {
-        if (graphRef.current) {
-            const fg = graphRef.current;
+        if (!graphRef.current) return;
+        
+        const startTime = performance.now();
+        const fg = graphRef.current;
 
-            // Increase repulsion between nodes for better spacing
-            // Stronger charge keeps nodes from clustering too tightly
-            fg.d3Force('charge').strength(-700);
-            fg.d3Force('charge').distanceMax(700);
+        // Increase repulsion between nodes for better spacing
+        // Stronger charge keeps nodes from clustering too tightly
+        fg.d3Force('charge').strength(-700);
+        fg.d3Force('charge').distanceMax(700);
 
-            // Set link distance dynamically based on node types
-                        fg.d3Force('link').distance((link: any) => {
-                            const sourceType = typeof link.source === 'object' ? (link.source as GraphNode).type : '';
-                            const targetType = typeof link.target === 'object' ? (link.target as GraphNode).type : '';
-            
-                            if ((sourceType === 'organization' && targetType === 'project') ||
-                                (sourceType === 'project' && targetType === 'organization')) {
-                                return 100; // Shorter distance for organization-project links
-                            }
-            
-                            if ((sourceType === 'organization' && targetType === 'donor') ||
-                                (sourceType === 'donor' && targetType === 'organization')) {
-                                return 200; // Longer distance for organization-donor links
-                            }
-            
-                            return 150; // Default distance
-                        });
+        // Set link distance dynamically based on node types
+        fg.d3Force('link').distance((link: any) => {
+            const sourceType = typeof link.source === 'object' ? (link.source as GraphNode).type : '';
+            const targetType = typeof link.target === 'object' ? (link.target as GraphNode).type : '';
 
-            // Weaker centering force
-            fg.d3Force('center').strength(0.05);
+            if ((sourceType === 'organization' && targetType === 'project') ||
+                (sourceType === 'project' && targetType === 'organization')) {
+                return 100; // Shorter distance for organization-project links
+            }
 
-            // Add a collision force so nodes don't overlap visually.
-            // Use node.value (which maps to visual size) to compute radius and add padding.
-            fg.d3Force('collision', forceCollide((node: any) => {
-                const r = (node.value || 10) / 2;
-                const padding = 6; // pixels between nodes
-                return r + padding;
-            }).iterations(2));
+            if ((sourceType === 'organization' && targetType === 'donor') ||
+                (sourceType === 'donor' && targetType === 'organization')) {
+                return 200; // Longer distance for organization-donor links
+            }
 
-            // Increase velocity decay to make it less wobbly (higher = more damping)
-            fg.d3Force('simulation')?.velocityDecay(0.6);
-        }
-    }, [graphData]);
+            return 150; // Default distance
+        });
+
+        // Weaker centering force
+        fg.d3Force('center').strength(0.05);
+
+        // Add a collision force so nodes don't overlap visually.
+        // Use node.value (which maps to visual size) to compute radius and add padding.
+        fg.d3Force('collision', forceCollide((node: any) => {
+            const r = (node.value || 10) / 2;
+            const padding = 6; // pixels between nodes
+            return r + padding;
+        }).iterations(2));
+
+        // Increase velocity decay to make it less wobbly (higher = more damping)
+        fg.d3Force('simulation')?.velocityDecay(0.6);
+
+        const endTime = performance.now();
+        console.log(`[NetworkGraph] Force simulation configured in ${(endTime - startTime).toFixed(2)}ms`);
+    }, []); // Only run once on mount, not on every graphData change
 
     // Apply clustering with a completely new approach
     useEffect(() => {
@@ -812,10 +821,10 @@ const NetworkGraph: React.FC<NetworkGraphProps> = ({
                     return 2 * globalScaleRef.current * 1.1;
                 }}
                 linkDirectionalParticleSpeed={0.005}
-                d3VelocityDecay={0.4}
-                d3AlphaDecay={0.01}
-                cooldownTicks={Infinity}
-                warmupTicks={isClusteringTransition ? 500 : 100}
+                d3VelocityDecay={0.1}
+                d3AlphaDecay={0.04}
+                cooldownTicks={150}
+                warmupTicks={0}
                 enableNodeDrag={true}
                 enableZoomInteraction={true}
                 enablePanInteraction={true}

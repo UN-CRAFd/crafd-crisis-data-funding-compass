@@ -29,14 +29,9 @@ import { buildOrgDonorCountriesMap, buildOrgProjectsMap, buildProjectNameMap, ca
 import { exportDashboardToPDF } from '../lib/exportPDF';
 import type { DashboardStats, OrganizationProjectData, OrganizationTypeData, OrganizationWithProjects, ProjectData, ProjectTypeData } from '../types/airtable';
 
-// Dynamic import for NetworkGraph to avoid SSR issues with force-graph
+// Eagerly load NetworkGraph on client side to avoid lazy loading delay
 const NetworkGraph = dynamic(() => import('@/components/NetworkGraph'), {
     ssr: false,
-    loading: () => (
-        <div className="w-full h-full flex items-center justify-center bg-white rounded-lg border border-slate-200">
-            <div className="text-slate-500">Loading network visualization...</div>
-        </div>
-    ),
 });
 
 // Consolidated style constants
