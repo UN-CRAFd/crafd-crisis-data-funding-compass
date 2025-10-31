@@ -287,3 +287,18 @@ textarea {
     /* Prevents zoom on iOS */
   }
 }
+
+html {
+  overflow-y: scroll;
+  scrollbar-gutter: stable;
+}
+
+body {
+  overflow-y: scroll;
+}
+
+/* Hide scrollbar for Webkit browsers (Chrome, Safari) */
+body::-webkit-scrollbar {
+  display: none;
+}
+
