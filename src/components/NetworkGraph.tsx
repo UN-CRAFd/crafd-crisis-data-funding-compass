@@ -740,46 +740,47 @@ const NetworkGraph: React.FC<NetworkGraphProps> = ({
     return (
         <>
             <div ref={containerRef} className="w-full h-full bg-white rounded-lg border border-slate-200 overflow-hidden relative">
-                {/* Legend */}
-                <div className={`absolute ${isFullscreen ? 'top-24' : 'top-4'} left-4 z-10 bg-white backdrop-blur-lg p-3 rounded-lg border border-slate-200 shadow-sm`}>
-                <div className="flex items-center justify-between mb-2">
-                    <div className="text-xs font-semibold text-slate-800/90">Legend</div>
-                    <button
-                        onClick={toggleFullscreen}
-                        className="ml-4 p-1 hover:bg-slate-200/50 rounded transition-colors"
-                        title={isFullscreen ? 'Exit fullscreen' : 'Enter fullscreen'}
-                    >
-                        {isFullscreen ? (
-                            <Minimize className="w-3.5 h-3.5 text-slate-600" />
-                        ) : (
-                            <Maximize className="w-3.5 h-3.5 text-slate-600" />
-                        )}
-                    </button>
-                </div>
-                <div className="space-y-1.5">
-                    <div className="flex items-center gap-2">
-                        <div className="w-4 h-4 rounded-full" style={{ backgroundColor: '#cbd5e1', border: '1.5px solid var(--badge-slate-text)' }}></div>
-                        <span className="text-xs text-slate-600">Donors</span>
+                {/* Legend and Clustering Controls - Combined */}
+                <div className={`absolute ${isFullscreen ? 'top-24' : 'top-4'} left-4 z-10 bg-white backdrop-blur-lg rounded-lg border border-slate-200 shadow-sm w-40`}>
+                    {/* Legend */}
+                    <div className="p-2.5 border-b border-slate-200">
+                        <div className="flex items-center justify-between mb-2">
+                            <div className="text-xs font-semibold text-slate-800/90">Legend</div>
+                            <button
+                                onClick={toggleFullscreen}
+                                className="ml-2 p-1 hover:bg-slate-200/50 rounded transition-colors"
+                                title={isFullscreen ? 'Exit fullscreen' : 'Enter fullscreen'}
+                            >
+                                {isFullscreen ? (
+                                    <Minimize className="w-3.5 h-3.5 text-slate-600" />
+                                ) : (
+                                    <Maximize className="w-3.5 h-3.5 text-slate-600" />
+                                )}
+                            </button>
+                        </div>
+                        <div className="space-y-1.5">
+                            <div className="flex items-center gap-2">
+                                <div className="w-3.5 h-3.5 rounded-full shrink-0" style={{ backgroundColor: '#cbd5e1', border: '1.5px solid var(--badge-slate-text)' }}></div>
+                                <span className="text-xs text-slate-600">Donors</span>
+                            </div>
+                            <div className="flex items-center gap-2">
+                                <div className="w-3.5 h-3.5 rounded-full shrink-0" style={{ backgroundColor: 'var(--brand-primary-light)', border: '1.5px solid var(--brand-primary-dark)' }}></div>
+                                <span className="text-xs text-slate-600">Organizations</span>
+                            </div>
+                            <div className="flex items-center gap-2">
+                                <div className="w-3.5 h-3.5 rounded-full shrink-0" style={{ backgroundColor: 'var(--badge-other-bg)', border: '1.5px solid var(--badge-other-text)' }}></div>
+                                <span className="text-xs text-slate-600">Assets</span>
+                            </div>
+                        </div>
                     </div>
-                    <div className="flex items-center gap-2">
-                        <div className="w-4 h-4 rounded-full" style={{ backgroundColor: 'var(--brand-primary-light)', border: '1.5px solid var(--brand-primary-dark)' }}></div>
-                        <span className="text-xs text-slate-600">Organizations</span>
-                    </div>
-                    <div className="flex items-center gap-2">
-                        <div className="w-4 h-4 rounded-full" style={{ backgroundColor: 'var(--badge-other-bg)', border: '1.5px solid var(--badge-other-text)' }}></div>
-                        <span className="text-xs text-slate-600">Assets</span>
-                    </div>
-                </div>
-                
-            </div>
 
-            {/* Clustering Controls */}
-            <div className="absolute top-4 right-4 z-10 bg-white backdrop-blur-lg p-3 rounded-lg border border-slate-200 shadow-sm">
-                <div className="text-xs font-semibold text-slate-800/90 mb-2">Clustering</div>
-                <div className="space-y-2">
+                    {/* Clustering Controls */}
+                    <div className="p-2.5">
+                        <div className="text-xs font-semibold text-slate-800/90 mb-2">Clustering</div>
+                        <div className="space-y-1.5">
                     <button
                         onClick={() => setClusterByOrgType(!clusterByOrgType)}
-                        className={`w-full text-left px-2 py-1.5 rounded text-xs transition-colors ${
+                        className={`w-full text-left px-2 py-1 rounded text-xs transition-colors ${
                             clusterByOrgType
                                 ? 'bg-[var(--brand-bg-light)] text-[var(--brand-primary)] border border-[var(--brand-primary)]'
                                 : 'bg-slate-50 text-slate-600 border border-slate-200 hover:bg-slate-100'
@@ -787,8 +788,8 @@ const NetworkGraph: React.FC<NetworkGraphProps> = ({
                         title="Group organizations by type"
                     >
                         <div className="flex items-center justify-between">
-                            <span>By Org Type</span>
-                            <div className={`w-3 h-3 rounded-sm border ${
+                            <span className="text-[11px]">Org Type</span>
+                            <div className={`w-3 h-3 rounded-sm border shrink-0 ${
                                 clusterByOrgType ? 'bg-[var(--brand-primary)] border-[var(--brand-primary)]' : 'border-slate-300'
                             }`}>
                                 {clusterByOrgType && (
@@ -801,7 +802,7 @@ const NetworkGraph: React.FC<NetworkGraphProps> = ({
                     </button>
                     <button
                         onClick={() => setClusterByAssetType(!clusterByAssetType)}
-                        className={`w-full text-left px-2 py-1.5 rounded text-xs transition-colors ${
+                        className={`w-full text-left px-2 py-1 rounded text-xs transition-colors ${
                             clusterByAssetType
                                 ? 'bg-[var(--badge-other-bg)] text-[var(--badge-other-text)] border border-[var(--badge-other-text)]'
                                 : 'bg-slate-50 text-slate-600 border border-slate-200 hover:bg-slate-100'
@@ -809,8 +810,8 @@ const NetworkGraph: React.FC<NetworkGraphProps> = ({
                         title="Group assets by investment type"
                     >
                         <div className="flex items-center justify-between">
-                            <span>By Asset Type</span>
-                            <div className={`w-3 h-3 rounded-sm border ${
+                            <span className="text-[11px]">Asset Type</span>
+                            <div className={`w-3 h-3 rounded-sm border shrink-0 ${
                                 clusterByAssetType ? 'bg-[var(--badge-other-text)] border-[var(--badge-other-text)]' : 'border-slate-300'
                             }`}>
                                 {clusterByAssetType && (
@@ -823,6 +824,7 @@ const NetworkGraph: React.FC<NetworkGraphProps> = ({
                     </button>
                 </div>
             </div>
+        </div>
 
             <ForceGraph2D
                 ref={graphRef}
@@ -899,7 +901,7 @@ const NetworkGraph: React.FC<NetworkGraphProps> = ({
         
         {/* Filter Bar Portal - render outside overflow-hidden container when in fullscreen */}
         {isFullscreen && filterBarContainer && createPortal(
-            <div className="fixed top-4 left-4 right-4 z-[9999] bg-white backdrop-blur-lg p-4 rounded-lg border border-slate-200 shadow-lg">
+            <div className="fixed top-4 left-4 right-4 z-[9900] bg-white backdrop-blur-lg p-4 rounded-lg border border-slate-200 shadow-lg">
                 <FilterBar
                     searchQuery={searchQuery}
                     appliedSearchQuery={appliedSearchQuery}
