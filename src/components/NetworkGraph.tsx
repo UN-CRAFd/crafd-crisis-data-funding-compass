@@ -959,6 +959,7 @@ const NetworkGraph: React.FC<NetworkGraphProps> = ({
                     onTypesChange={onTypesChange}
                     onResetFilters={onResetFilters}
                     portalContainer={filterBarContainer}
+                    isFullscreen={true}
                 />
             </div>,
             filterBarContainer
