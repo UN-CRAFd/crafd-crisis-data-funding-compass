@@ -751,7 +751,7 @@ const CrisisDataDashboard = ({
                                         <DropdownMenuTrigger asChild>
                                             <Button
                                                 variant="outline"
-                                                className="h-10 w-auto px-3 justify-between font-medium transition-all bg-slate-50/50 border-slate-200 hover:bg-white hover:border-slate-300"
+                                                className="h-8 w-auto px-3 justify-between font-medium transition-all bg-slate-50/50 border-slate-200 hover:bg-white hover:border-slate-300"
                                             >
                                                 <div className="flex items-center gap-1.5 min-w-0">
                                                     {sortDirection === 'asc' ? (
@@ -843,19 +843,19 @@ const CrisisDataDashboard = ({
                                 )}
                                 {/* View Toggle Switch Tabs */}
                                 <Tabs value={activeView} onValueChange={(value) => setActiveView(value as 'table' | 'network')} className="w-auto hidden sm:flex">
-                                    <TabsList className="h-10 p-1 bg-slate-50 border border-slate-200 rounded-md">
+                                    <TabsList className="h-8 p-1 bg-slate-50 border border-slate-200 rounded-md">
                                         <TabsTrigger
                                             value="table"
-                                            className="h-8 px-4 text-xs font-medium rounded-md transition-all data-[state=active]:bg-white data-[state=active]:shadow-sm data-[state=active]:border data-[state=active]:border-slate-200 data-[state=active]:text-slate-800 text-slate-600 bg-slate-50 border-none"
+                                            className="h-6 px-3 text-xs font-medium rounded-md transition-all data-[state=active]:bg-white data-[state=active]:shadow-sm data-[state=active]:border data-[state=active]:border-slate-200 data-[state=active]:text-slate-800 text-slate-600 bg-slate-50 border-none"
                                         >
-                                            <Table className="h-3.5 w-3.5 mr-1.5" />
+                                            <Table className="h-3 w-3 mr-1.5" />
                                             Table
                                         </TabsTrigger>
                                         <TabsTrigger
                                             value="network"
-                                            className="h-8 px-4 text-xs font-medium rounded-md transition-all data-[state=active]:bg-white data-[state=active]:shadow-sm data-[state=active]:border data-[state=active]:border-slate-200 data-[state=active]:text-slate-800 text-slate-600 bg-slate-50 border-none"
+                                            className="h-6 px-3 text-xs font-medium rounded-md transition-all data-[state=active]:bg-white data-[state=active]:shadow-sm data-[state=active]:border data-[state=active]:border-slate-200 data-[state=active]:text-slate-800 text-slate-600 bg-slate-50 border-none"
                                         >
-                                            <Network className="h-3.5 w-3.5 mr-1.5" />
+                                            <Network className="h-3 w-3 mr-1.5" />
                                             Network
                                         </TabsTrigger>
                                     </TabsList>
