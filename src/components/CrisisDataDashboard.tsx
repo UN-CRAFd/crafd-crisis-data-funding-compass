@@ -11,11 +11,12 @@ import SurveyBanner from '@/components/SurveyBanner';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { Collapsible, CollapsibleContent, CollapsibleTrigger } from '@/components/ui/collapsible';
+import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuTrigger } from '@/components/ui/dropdown-menu';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
 import { TooltipContent, TooltipProvider, TooltipTrigger, Tooltip as TooltipUI } from '@/components/ui/tooltip';
 import labels from '@/config/labels.json';
 import { getIconForInvestmentType } from '@/config/investmentTypeIcons';
-import { Building2, ChevronDown, ChevronRight, Database, Table, DatabaseBackup, FileDown, Filter, FolderDot, FolderOpenDot, Globe, Info, MessageCircle, RotateCcw, Search, Share2, ArrowUpDown, Network } from 'lucide-react';
+import { Building2, ChevronDown, ChevronRight, Database, Table, DatabaseBackup, FileDown, Filter, FolderDot, FolderOpenDot, Globe, Info, MessageCircle, RotateCcw, Search, Share2, ArrowUpDown, ArrowUpWideNarrow, ArrowDownWideNarrow, Network } from 'lucide-react';
 import organizationsTableRaw from '../../public/data/organizations-table.json';
 import { buildOrgDonorCountriesMap, buildOrgProjectsMap, buildProjectNameMap, calculateOrganizationTypesFromOrganizationsWithProjects, getNestedOrganizationsForModals } from '../lib/data';
 import { exportDashboardToPDF } from '../lib/exportPDF';
@@ -239,7 +240,9 @@ const CrisisDataDashboard = ({
     // UI state (not related to routing)
     const [expandedOrgs, setExpandedOrgs] = useState<Set<string>>(new Set());
     const [expandedCountries, setExpandedCountries] = useState<Set<string>>(new Set());
-    const [sortBy, setSortBy] = useState<'name' | 'projects'>('name'); // Add sort state
+    const [sortBy, setSortBy] = useState<'name' | 'donors' | 'assets'>('name');
+    const [sortDirection, setSortDirection] = useState<'asc' | 'desc'>('asc');
+    const [sortMenuOpen, setSortMenuOpen] = useState(false);
     const [activeView, setActiveView] = useState<'table' | 'network'>('table'); // Add view state
 
     // Enforce table-only on small screens (mobile). Hide view switcher on mobile via responsive classes.
@@ -742,19 +745,101 @@ const CrisisDataDashboard = ({
                             />
 
                             <div className="flex items-center gap-2">
-                                {/* Sort Button only for Table view */}
+                                {/* Sort Dropdown only for Table view */}
                                 {activeView === 'table' && (
-                                    <Button
-                                        variant="outline"
-                                        onClick={() => setSortBy(sortBy === 'name' ? 'projects' : 'name')}
-                                        className="h-10 w-auto px-4 font-medium transition-all bg-slate-50 border-none hover:bg-slate-100 text-slate-600 hover:text-slate-800 left-auto"
-                                        title={sortBy === 'name' ? 'Sort by number of assets' : 'Sort alphabetically'}
-                                    >
-                                        <ArrowUpDown className="w-4 h-4" />
-                                        <span className="ml-2 hidden sm:inline text-xs">
-                                            {sortBy === 'name' ? 'Sort alphabetically' : 'Sort by number of assets'}
-                                        </span>
-                                    </Button>
+                                    <DropdownMenu onOpenChange={(open) => setSortMenuOpen(open)}>
+                                        <DropdownMenuTrigger asChild>
+                                            <Button
+                                                variant="outline"
+                                                className="h-10 w-auto px-3 justify-between font-medium transition-all bg-slate-50/50 border-slate-200 hover:bg-white hover:border-slate-300"
+                                            >
+                                                <div className="flex items-center gap-1.5 min-w-0">
+                                                    {sortDirection === 'asc' ? (
+                                                        <ArrowUpWideNarrow className="w-3.5 h-3.5 shrink-0" />
+                                                    ) : (
+                                                        <ArrowDownWideNarrow className="w-3.5 h-3.5 shrink-0" />
+                                                    )}
+                                                    <span className="text-xs truncate">
+                                                        {sortBy === 'name' 
+                                                            ? 'Alphabetically' 
+                                                            : sortBy === 'donors' 
+                                                            ? 'Donors' 
+                                                            : 'Assets'}
+                                                    </span>
+                                                </div>
+                                                <ChevronDown className={`ml-1.5 h-3.5 w-3.5 opacity-50 shrink-0 transform transition-transform ${
+                                                    sortMenuOpen ? 'rotate-180' : ''
+                                                }`} />
+                                            </Button>
+                                        </DropdownMenuTrigger>
+                                        <DropdownMenuContent 
+                                            align="end" 
+                                            side="bottom"
+                                            sideOffset={4}
+                                            className="w-52 bg-white border border-slate-200 shadow-lg"
+                                        >
+                                            <DropdownMenuItem
+                                                onClick={() => {
+                                                    setSortBy('name');
+                                                    setSortDirection('asc');
+                                                }}
+                                                className="cursor-pointer text-xs py-1.5"
+                                            >
+                                                <ArrowUpWideNarrow className="w-3.5 h-3.5 mr-2" />
+                                                Alphabetically (A-Z)
+                                            </DropdownMenuItem>
+                                            <DropdownMenuItem
+                                                onClick={() => {
+                                                    setSortBy('name');
+                                                    setSortDirection('desc');
+                                                }}
+                                                className="cursor-pointer text-xs py-1.5"
+                                            >
+                                                <ArrowDownWideNarrow className="w-3.5 h-3.5 mr-2" />
+                                                Alphabetically (Z-A)
+                                            </DropdownMenuItem>
+                                            <DropdownMenuItem
+                                                onClick={() => {
+                                                    setSortBy('donors');
+                                                    setSortDirection('desc');
+                                                }}
+                                                className="cursor-pointer text-xs py-1.5"
+                                            >
+                                                <ArrowDownWideNarrow className="w-3.5 h-3.5 mr-2" />
+                                                Number of Donors (High-Low)
+                                            </DropdownMenuItem>
+                                            <DropdownMenuItem
+                                                onClick={() => {
+                                                    setSortBy('donors');
+                                                    setSortDirection('asc');
+                                                }}
+                                                className="cursor-pointer text-xs py-1.5"
+                                            >
+                                                <ArrowUpWideNarrow className="w-3.5 h-3.5 mr-2" />
+                                                Number of Donors (Low-High)
+                                            </DropdownMenuItem>
+                                            <DropdownMenuItem
+                                                onClick={() => {
+                                                    setSortBy('assets');
+                                                    setSortDirection('desc');
+                                                }}
+                                                className="cursor-pointer text-xs py-1.5"
+                                            >
+                                                <ArrowDownWideNarrow className="w-3.5 h-3.5 mr-2" />
+                                                Number of Assets (High-Low)
+                                            </DropdownMenuItem>
+                                            <DropdownMenuItem
+                                                onClick={() => {
+                                                    setSortBy('assets');
+                                                    setSortDirection('asc');
+                                                }}
+                                                className="cursor-pointer text-xs py-1.5"
+                                            >
+                                                <ArrowUpWideNarrow className="w-3.5 h-3.5 mr-2" />
+                                                Number of Assets (Low-High)
+                                            </DropdownMenuItem>
+                                        </DropdownMenuContent>
+                                    </DropdownMenu>
                                 )}
                                 {/* View Toggle Switch Tabs */}
                                 <Tabs value={activeView} onValueChange={(value) => setActiveView(value as 'table' | 'network')} className="w-auto hidden sm:flex">
@@ -808,12 +893,20 @@ const CrisisDataDashboard = ({
                                         <div className="space-y-2">
                                             {organizationsWithProjects
                                                 .sort((a, b) => {
+                                                    let comparison = 0;
+                                                    
                                                     if (sortBy === 'name') {
-                                                        return a.organizationName.localeCompare(b.organizationName);
-                                                    } else {
-                                                        // Sort by number of projects (descending)
-                                                        return b.projects.length - a.projects.length;
+                                                        comparison = a.organizationName.localeCompare(b.organizationName);
+                                                    } else if (sortBy === 'donors') {
+                                                        // Sort by number of unique donors
+                                                        comparison = a.donorCountries.length - b.donorCountries.length;
+                                                    } else if (sortBy === 'assets') {
+                                                        // Sort by number of projects/assets
+                                                        comparison = a.projects.length - b.projects.length;
                                                     }
+                                                    
+                                                    // Apply sort direction
+                                                    return sortDirection === 'asc' ? comparison : -comparison;
                                                 })
                                                 .map((org) => {
                                                     const isExpanded = expandedOrgs.has(org.id);
