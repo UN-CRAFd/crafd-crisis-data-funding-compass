@@ -763,10 +763,20 @@ const CrisisDataDashboard = ({
                                                 className="h-7 w-auto px-2.5 justify-between font-medium transition-all bg-slate-50/50 border-slate-200 hover:bg-white hover:border-slate-300 text-[11px]"
                                             >
                                                 <div className="flex items-center gap-1.5 min-w-0">
-                                                    {sortDirection === 'asc' ? (
-                                                        <ArrowUpWideNarrow className="w-3 h-3 shrink-0" />
+                                                    {sortBy === 'name' ? (
+                                                        // For alphabetical: asc = A-Z (down), desc = Z-A (up)
+                                                        sortDirection === 'asc' ? (
+                                                            <ArrowDownWideNarrow className="w-3 h-3 shrink-0" />
+                                                        ) : (
+                                                            <ArrowUpWideNarrow className="w-3 h-3 shrink-0" />
+                                                        )
                                                     ) : (
-                                                        <ArrowDownWideNarrow className="w-3 h-3 shrink-0" />
+                                                        // For numbers: asc = low-to-high (up), desc = high-to-low (down)
+                                                        sortDirection === 'asc' ? (
+                                                            <ArrowUpWideNarrow className="w-3 h-3 shrink-0" />
+                                                        ) : (
+                                                            <ArrowDownWideNarrow className="w-3 h-3 shrink-0" />
+                                                        )
                                                     )}
                                                     <span className="truncate">
                                                         {sortBy === 'name' 
@@ -795,7 +805,7 @@ const CrisisDataDashboard = ({
                                                 className="cursor-pointer text-xs py-1.5"
                                             >
                                                 <ArrowDownWideNarrow className="w-3.5 h-3.5 mr-2" />
-                                                Alphabetically
+                                                Alphabetically (A-Z)
                                             </DropdownMenuItem>
                                             <DropdownMenuItem
                                                 onClick={() => {
@@ -805,7 +815,7 @@ const CrisisDataDashboard = ({
                                                 className="cursor-pointer text-xs py-1.5"
                                             >
                                                 <ArrowUpWideNarrow className="w-3.5 h-3.5 mr-2" />
-                                                Alphabetically
+                                                Alphabetically (Z-A)
                                             </DropdownMenuItem>
                                             <DropdownMenuItem
                                                 onClick={() => {
