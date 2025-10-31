@@ -1,10 +1,12 @@
 'use client';
 
 import React, { useCallback, useEffect, useMemo, useRef, useState } from 'react';
+import { createPortal } from 'react-dom';
 import { forceCollide } from 'd3-force';
 import ForceGraph2D from 'react-force-graph-2d';
 import { Maximize, Minimize } from 'lucide-react';
 import type { OrganizationWithProjects } from '../types/airtable';
+import FilterBar from './FilterBar';
 
 interface NetworkGraphProps {
     organizationsWithProjects: OrganizationWithProjects[];
@@ -12,6 +14,18 @@ interface NetworkGraphProps {
     onOpenProjectModal: (projectKey: string) => void;
     selectedOrgKey?: string;
     selectedProjectKey?: string;
+    // Filter props for fullscreen mode
+    searchQuery?: string;
+    appliedSearchQuery?: string;
+    onSearchChange?: (value: string) => void;
+    onSearchSubmit?: () => void;
+    combinedDonors?: string[];
+    availableDonorCountries?: string[];
+    onDonorsChange?: (values: string[]) => void;
+    investmentTypes?: string[];
+    allKnownInvestmentTypes?: string[];
+    onTypesChange?: (values: string[]) => void;
+    onResetFilters?: () => void;
 }
 
 interface GraphNode {
@@ -48,6 +62,18 @@ const NetworkGraph: React.FC<NetworkGraphProps> = ({
     onOpenProjectModal,
     selectedOrgKey,
     selectedProjectKey,
+    // Filter props
+    searchQuery = '',
+    appliedSearchQuery = '',
+    onSearchChange = () => {},
+    onSearchSubmit = () => {},
+    combinedDonors = [],
+    availableDonorCountries = [],
+    onDonorsChange = () => {},
+    investmentTypes = [],
+    allKnownInvestmentTypes = [],
+    onTypesChange = () => {},
+    onResetFilters = () => {},
 }) => {
     const graphRef = useRef<any>(null);
     const [dimensions, setDimensions] = useState({ width: 800, height: 600 });
@@ -61,6 +87,7 @@ const NetworkGraph: React.FC<NetworkGraphProps> = ({
     const [clusterByAssetType, setClusterByAssetType] = useState(false);
     const [isClusteringTransition, setIsClusteringTransition] = useState(false);
     const lastClusterStateRef = useRef<string>(''); // Track last clustering state to prevent unnecessary updates
+    const [filterBarContainer, setFilterBarContainer] = useState<HTMLElement | null>(null);
 
     // Handle fullscreen toggle
     const toggleFullscreen = useCallback(() => {
@@ -79,10 +106,13 @@ const NetworkGraph: React.FC<NetworkGraphProps> = ({
         }
     }, []);
 
-    // Listen for fullscreen changes (e.g., user presses ESC)
+    // Listen for fullscreen changes (e.g., user presses ESC) and update portal container
     useEffect(() => {
         const handleFullscreenChange = () => {
-            setIsFullscreen(!!document.fullscreenElement);
+            const inFullscreen = !!document.fullscreenElement;
+            setIsFullscreen(inFullscreen);
+            // Update portal container to fullscreen element or body
+            setFilterBarContainer(inFullscreen ? (document.fullscreenElement as HTMLElement) : document.body);
         };
 
         document.addEventListener('fullscreenchange', handleFullscreenChange);
@@ -708,9 +738,10 @@ const NetworkGraph: React.FC<NetworkGraphProps> = ({
     }, [clusterData]);
 
     return (
-        <div ref={containerRef} className="w-full h-full bg-white rounded-lg border border-slate-200 overflow-hidden relative">
-            {/* Legend */}
-            <div className="absolute top-4 left-4 z-10 bg-white backdrop-blur-lg p-3 rounded-lg border border-slate-200 shadow-sm">
+        <>
+            <div ref={containerRef} className="w-full h-full bg-white rounded-lg border border-slate-200 overflow-hidden relative">
+                {/* Legend */}
+                <div className={`absolute ${isFullscreen ? 'top-24' : 'top-4'} left-4 z-10 bg-white backdrop-blur-lg p-3 rounded-lg border border-slate-200 shadow-sm`}>
                 <div className="flex items-center justify-between mb-2">
                     <div className="text-xs font-semibold text-slate-800/90">Legend</div>
                     <button
@@ -865,6 +896,28 @@ const NetworkGraph: React.FC<NetworkGraphProps> = ({
                 enablePanInteraction={true}
             />
         </div>
+        
+        {/* Filter Bar Portal - render outside overflow-hidden container when in fullscreen */}
+        {isFullscreen && filterBarContainer && createPortal(
+            <div className="fixed top-4 left-4 right-4 z-[9999] bg-white backdrop-blur-lg p-4 rounded-lg border border-slate-200 shadow-lg">
+                <FilterBar
+                    searchQuery={searchQuery}
+                    appliedSearchQuery={appliedSearchQuery}
+                    onSearchChange={onSearchChange}
+                    onSearchSubmit={onSearchSubmit}
+                    combinedDonors={combinedDonors}
+                    availableDonorCountries={availableDonorCountries}
+                    onDonorsChange={onDonorsChange}
+                    investmentTypes={investmentTypes}
+                    allKnownInvestmentTypes={allKnownInvestmentTypes}
+                    onTypesChange={onTypesChange}
+                    onResetFilters={onResetFilters}
+                    portalContainer={filterBarContainer}
+                />
+            </div>,
+            filterBarContainer
+        )}
+    </>
     );
 };
 
