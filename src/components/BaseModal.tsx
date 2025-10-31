@@ -2,6 +2,7 @@
 
 import { Check, Share2 } from 'lucide-react';
 import { useCallback, useEffect, useRef, useState } from 'react';
+import { createPortal } from 'react-dom';
 import CloseButton from './CloseButton';
 
 interface BaseModalProps {
@@ -39,6 +40,23 @@ export default function BaseModal({
     const [touchStart, setTouchStart] = useState<number | null>(null);
     const [touchEnd, setTouchEnd] = useState<number | null>(null);
     const [showCopied, setShowCopied] = useState(false);
+    const [portalContainer, setPortalContainer] = useState<Element | null>(null);
+
+    // Detect fullscreen element and set portal container
+    useEffect(() => {
+        const updatePortalContainer = () => {
+            // If in fullscreen, portal into the fullscreen element
+            // Otherwise, portal into document.body
+            const fullscreenEl = document.fullscreenElement;
+            setPortalContainer(fullscreenEl || document.body);
+        };
+
+        updatePortalContainer();
+        
+        // Listen for fullscreen changes
+        document.addEventListener('fullscreenchange', updatePortalContainer);
+        return () => document.removeEventListener('fullscreenchange', updatePortalContainer);
+    }, []);
 
     // Animation state management
     useEffect(() => {
@@ -133,7 +151,7 @@ export default function BaseModal({
         }
     };
 
-    return (
+    const modalContent = (
         <div
             className={`fixed inset-0 bg-black/50 flex items-center justify-end z-50 transition-all duration-300 ease-out ${
                 isVisible && !isClosing ? 'opacity-100' : 'opacity-0'
@@ -161,6 +179,14 @@ export default function BaseModal({
             </div>
         </div>
     );
+
+    // Portal the modal into the appropriate container (fullscreen element or body)
+    // Wait for portalContainer to be set before rendering
+    if (!portalContainer) {
+        return <></>;
+    }
+    
+    return createPortal(modalContent, portalContainer);
 }
 
 /**

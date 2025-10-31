@@ -339,7 +339,12 @@ const CrisisDataDashboard = ({
     const selectedOrganization = useMemo(() => {
         if (!selectedOrgKey || !nestedOrganizations.length) return null;
         
-        const nestedOrg = nestedOrganizations.find((org: any) => org.fields?.org_key === selectedOrgKey);
+        // Look up by Org Short Name (which is what the NetworkGraph passes)
+        const nestedOrg = nestedOrganizations.find((org: any) => {
+            const orgShortName = org.fields?.['Org Short Name'];
+            return orgShortName && orgShortName.toLowerCase() === selectedOrgKey.toLowerCase();
+        });
+        
         if (!nestedOrg) return null;
 
         // Convert nested organization to OrganizationWithProjects format
