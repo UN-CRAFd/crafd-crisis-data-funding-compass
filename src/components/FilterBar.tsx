@@ -88,7 +88,7 @@ const FilterBar: React.FC<FilterBarProps> = ({
                     <DropdownMenuTrigger asChild>
                         <Button
                             variant="outline"
-                            className={`h-10 w-full sm:w-52 justify-between font-medium transition-all text-xs ${
+                            className={`h-10 w-full sm:w-52 justify-between font-medium transition-all ${
                                 combinedDonors.length > 0
                                     ? 'border-[var(--brand-primary)] bg-[var(--brand-bg-lighter)] text-[var(--brand-primary)] hover:bg-[var(--brand-bg-light)]'
                                     : 'bg-slate-50/50 border-slate-200 hover:bg-white hover:border-slate-300'
