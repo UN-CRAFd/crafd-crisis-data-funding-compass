@@ -196,15 +196,19 @@ const NetworkGraph: React.FC<NetworkGraphProps> = ({
         const brandBgLight = getBrandColor('--brand-primary-light');
         const badgeOtherBg = getBrandColor('--badge-other-bg');
         const badgeSlateBg = getBrandColor('--badge-slate-bg');
+        const badgeSlateText = getBrandColor('--badge-slate-text'); // Darker shade for filtered donors
 
         // Add donor nodes - largest, using slate colors (like in tables)
         donorSet.forEach(donor => {
+            // Use darker color if this donor is in the filter
+            const isFiltered = combinedDonors && combinedDonors.length > 0 && combinedDonors.includes(donor);
+            
             nodes.push({
                 id: `donor-${donor}`,
                 name: donor,
                 type: 'donor',
                 value: 25, // Larger nodes for donors
-                color: badgeSlateBg, // Use badge slate color
+                color: isFiltered ? badgeSlateText : badgeSlateBg, // Darker shade for filtered donors
             });
         });
 
@@ -766,7 +770,7 @@ const NetworkGraph: React.FC<NetworkGraphProps> = ({
         <>
             <div ref={containerRef} className="w-full h-full bg-white rounded-lg border border-slate-200 overflow-hidden relative">
                 {/* Legend and Clustering Controls - Combined */}
-                <div className={`absolute ${isFullscreen ? 'top-24' : 'top-4'} left-4 z-10 bg-white backdrop-blur-lg rounded-lg border border-slate-200 shadow-sm w-40`}>
+                <div className={`absolute ${isFullscreen ? 'top-24' : 'top-4'} left-4 z-10 bg-white backdrop-blur-lg rounded-lg border border-slate-200 shadow-sm w-36`}>
                     {/* Legend */}
                     <div className="p-2.5 border-b border-slate-200">
                         <div className="flex items-center justify-between mb-2">
@@ -793,6 +797,12 @@ const NetworkGraph: React.FC<NetworkGraphProps> = ({
                             </div>
                         </div>
                         <div className="space-y-1.5">
+                            {combinedDonors && combinedDonors.length > 0 && (
+                                <div className="flex items-center gap-2">
+                                    <div className="w-3.5 h-3.5 rounded-full shrink-0" style={{ backgroundColor: 'var(--badge-slate-text)', border: '1.5px solid var(--badge-slate-text)' }}></div>
+                                    <span className="text-xs text-slate-600">Selected Donors</span>
+                                </div>
+                            )}
                             <div className="flex items-center gap-2">
                                 <div className="w-3.5 h-3.5 rounded-full shrink-0" style={{ backgroundColor: '#cbd5e1', border: '1.5px solid var(--badge-slate-text)' }}></div>
                                 <span className="text-xs text-slate-600">Donors</span>
