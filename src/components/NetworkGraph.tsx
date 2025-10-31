@@ -88,6 +88,24 @@ const NetworkGraph: React.FC<NetworkGraphProps> = ({
     const [isClusteringTransition, setIsClusteringTransition] = useState(false);
     const lastClusterStateRef = useRef<string>(''); // Track last clustering state to prevent unnecessary updates
     const [filterBarContainer, setFilterBarContainer] = useState<HTMLElement | null>(null);
+    const lastFiltersRef = useRef<string>(''); // Track filter state to detect changes
+
+    // Turn off clustering when filters change
+    useEffect(() => {
+        const currentFilters = JSON.stringify({
+            donors: combinedDonors,
+            types: investmentTypes,
+            search: appliedSearchQuery
+        });
+        
+        // If filters have changed (and this isn't the initial mount)
+        if (lastFiltersRef.current && lastFiltersRef.current !== currentFilters) {
+            setClusterByOrgType(false);
+            setClusterByAssetType(false);
+        }
+        
+        lastFiltersRef.current = currentFilters;
+    }, [combinedDonors, investmentTypes, appliedSearchQuery]);
 
     // Handle fullscreen toggle
     const toggleFullscreen = useCallback(() => {
