@@ -786,7 +786,7 @@ const CrisisDataDashboard = ({
                                                 className="cursor-pointer text-xs py-1.5"
                                             >
                                                 <ArrowUpWideNarrow className="w-3.5 h-3.5 mr-2" />
-                                                Alphabetically (A-Z)
+                                                Alphabetically
                                             </DropdownMenuItem>
                                             <DropdownMenuItem
                                                 onClick={() => {
@@ -796,7 +796,7 @@ const CrisisDataDashboard = ({
                                                 className="cursor-pointer text-xs py-1.5"
                                             >
                                                 <ArrowDownWideNarrow className="w-3.5 h-3.5 mr-2" />
-                                                Alphabetically (Z-A)
+                                                Alphabetically
                                             </DropdownMenuItem>
                                             <DropdownMenuItem
                                                 onClick={() => {
@@ -806,7 +806,7 @@ const CrisisDataDashboard = ({
                                                 className="cursor-pointer text-xs py-1.5"
                                             >
                                                 <ArrowDownWideNarrow className="w-3.5 h-3.5 mr-2" />
-                                                Number of Donors (High-Low)
+                                                Number of Donors
                                             </DropdownMenuItem>
                                             <DropdownMenuItem
                                                 onClick={() => {
@@ -816,7 +816,7 @@ const CrisisDataDashboard = ({
                                                 className="cursor-pointer text-xs py-1.5"
                                             >
                                                 <ArrowUpWideNarrow className="w-3.5 h-3.5 mr-2" />
-                                                Number of Donors (Low-High)
+                                                Number of Donors
                                             </DropdownMenuItem>
                                             <DropdownMenuItem
                                                 onClick={() => {
@@ -826,7 +826,7 @@ const CrisisDataDashboard = ({
                                                 className="cursor-pointer text-xs py-1.5"
                                             >
                                                 <ArrowDownWideNarrow className="w-3.5 h-3.5 mr-2" />
-                                                Number of Assets (High-Low)
+                                                Number of Assets
                                             </DropdownMenuItem>
                                             <DropdownMenuItem
                                                 onClick={() => {
@@ -836,7 +836,7 @@ const CrisisDataDashboard = ({
                                                 className="cursor-pointer text-xs py-1.5"
                                             >
                                                 <ArrowUpWideNarrow className="w-3.5 h-3.5 mr-2" />
-                                                Number of Assets (Low-High)
+                                                Number of Assets
                                             </DropdownMenuItem>
                                         </DropdownMenuContent>
                                     </DropdownMenu>
