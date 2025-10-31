@@ -95,6 +95,7 @@ function convertToOrganizationWithProjects(org: NestedOrganization): Organizatio
 
         return {
             id: project.id,
+            productKey: String(fields['product_key'] || fields['Product Key'] || fields['Product/Product Key'] || fields['Product Key (Airtable)'] || project.id).trim(),
             projectName: fields['Project/Product Name'] || 'Unnamed Project',
             donorCountries: projectDonorCountries,
             investmentTypes: extractInvestmentTypesFromProjects([project]),
@@ -120,6 +121,7 @@ function convertToOrganizationWithProjects(org: NestedOrganization): Organizatio
     return {
         id: org.id,
         organizationName: org.name || 'Unnamed Organization',
+        orgShortName: org.fields?.['Org Short Name'] || '',
         type: orgType,
         donorCountries,
         projects: projectsData,
@@ -415,8 +417,9 @@ export async function processDashboardData(filters: {
             5
         );
 
-        // Get available filter options from all organizations (not filtered)
-        const filterOptions = getAvailableFilterOptions(allOrganizations);
+        // Get available filter options from filtered organizations (viewport)
+        // This ensures dropdowns only show options that are currently available
+        const filterOptions = getAvailableFilterOptions(filteredOrganizations);
 
         return {
             stats,
