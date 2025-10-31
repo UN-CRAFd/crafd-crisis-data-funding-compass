@@ -17,13 +17,14 @@ interface NetworkGraphProps {
 interface GraphNode {
     id: string;
     name: string;
-    type: 'donor' | 'organization' | 'project';
+    type: 'donor' | 'organization' | 'project' | 'cluster-hull';
     value: number; // Size of the node
     color: string;
     orgKey?: string;
     projectKey?: string;
     orgType?: string; // For organization clustering
     assetTypes?: string[]; // For project/asset clustering
+    clusterKey?: string; // For identifying which cluster this hull belongs to
     x?: number;
     y?: number;
     fx?: number; // Fixed x position for clustering
@@ -293,17 +294,17 @@ const NetworkGraph: React.FC<NetworkGraphProps> = ({
         fg.d3Force('clusterY', null);
         
         if (clusterByOrgType || clusterByAssetType) {
-            // Dramatically weaken all competing forces during clustering
-            fg.d3Force('charge').strength(-50); // Very weak repulsion
+            // Strong charge repulsion to keep clusters well separated
+            fg.d3Force('charge').strength(-300); // Much stronger repulsion between clusters
             fg.d3Force('center').strength(0.001); // Almost no centering
             fg.d3Force('link').strength(0.1); // Very weak links
             
-            // Minimal collision - let nodes pack tightly
+            // More collision within clusters to prevent overlap
             fg.d3Force('collision', forceCollide((node: any) => {
                 const r = (node.value || 10) / 2;
-                const padding = 2; // Barely any padding
+                const padding = 6; // More padding to spread nodes within cluster
                 return r + padding;
-            }).iterations(1).strength(0.3)); // Minimal collision force
+            }).iterations(2).strength(0.7)); // Stronger collision force
             
             const clusterCenters = new Map<string, { x: number; y: number }>();
             // Make clusters much more spread out
@@ -496,6 +497,9 @@ const NetworkGraph: React.FC<NetworkGraphProps> = ({
 
     // Custom node canvas rendering - only draw the node circles
     const paintNode = useCallback((node: GraphNode, ctx: CanvasRenderingContext2D, globalScale: number) => {
+        // Skip rendering cluster hull nodes (invisible anchors)
+        if (node.type === 'cluster-hull') return;
+        
         // Use hover-based highlighting only (persistent click-based highlighting removed)
         const isHoverHighlighted = hoverHighlightNodes.size > 0 && hoverHighlightNodes.has(node.id);
         const isHighlighted = isHoverHighlighted;
