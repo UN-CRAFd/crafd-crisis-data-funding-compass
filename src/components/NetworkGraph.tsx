@@ -240,10 +240,9 @@ const NetworkGraph: React.FC<NetworkGraphProps> = ({
         const startTime = performance.now();
         const fg = graphRef.current;
 
-        // Increase repulsion between nodes for better spacing
-        // Stronger charge keeps nodes from clustering too tightly
-        fg.d3Force('charge').strength(-700);
-        fg.d3Force('charge').distanceMax(700);
+        // Moderate repulsion between nodes for calmer movement
+        fg.d3Force('charge').strength(-400);
+        fg.d3Force('charge').distanceMax(500);
 
         // Set link distance dynamically based on node types
         fg.d3Force('link').distance((link: any) => {
@@ -263,25 +262,27 @@ const NetworkGraph: React.FC<NetworkGraphProps> = ({
             return 150; // Default distance
         });
 
-        // Weaker centering force
-        fg.d3Force('center').strength(0.05);
+        // Set link strength for more stable connections
+        fg.d3Force('link').strength(0.5);
 
-        // Add a collision force so nodes don't overlap visually.
-        // Use node.value (which maps to visual size) to compute radius and add padding.
+        // Weaker centering force for less aggressive pulling
+        fg.d3Force('center').strength(0.02);
+
+        // Enhanced collision force with more iterations for smoother collision avoidance
         fg.d3Force('collision', forceCollide((node: any) => {
             const r = (node.value || 10) / 2;
-            const padding = 6; // pixels between nodes
+            const padding = 8; // More padding for smoother spacing
             return r + padding;
-        }).iterations(2));
+        }).iterations(3).strength(0.8)); // More iterations and higher strength for better collision handling
 
-        // Increase velocity decay to make it less wobbly (higher = more damping)
-        fg.d3Force('simulation')?.velocityDecay(0.6);
+        // Higher velocity decay for calmer, less jittery movement
+        fg.d3Force('simulation')?.velocityDecay(0.7);
 
         const endTime = performance.now();
         console.log(`[NetworkGraph] Force simulation configured in ${(endTime - startTime).toFixed(2)}ms`);
     }, []); // Only run once on mount, not on every graphData change
 
-    // Apply clustering with a completely new approach
+    // Apply clustering with smooth transitions and collision avoidance
     useEffect(() => {
         if (!graphRef.current) return;
         
@@ -292,14 +293,23 @@ const NetworkGraph: React.FC<NetworkGraphProps> = ({
         fg.d3Force('clusterY', null);
         
         if (clusterByOrgType || clusterByAssetType) {
-            // Weaken the default forces to allow clustering to dominate
-            fg.d3Force('charge').strength(-300); // Reduced from -700
-            fg.d3Force('center').strength(0.01); // Reduced from 0.05
+            // Dramatically weaken all competing forces during clustering
+            fg.d3Force('charge').strength(-50); // Very weak repulsion
+            fg.d3Force('center').strength(0.001); // Almost no centering
+            fg.d3Force('link').strength(0.1); // Very weak links
+            
+            // Minimal collision - let nodes pack tightly
+            fg.d3Force('collision', forceCollide((node: any) => {
+                const r = (node.value || 10) / 2;
+                const padding = 2; // Barely any padding
+                return r + padding;
+            }).iterations(1).strength(0.3)); // Minimal collision force
             
             const clusterCenters = new Map<string, { x: number; y: number }>();
-            const clusterRadius = Math.min(dimensions.width, dimensions.height) * 0.35;
+            // Make clusters much more spread out
+            const clusterRadius = Math.min(dimensions.width, dimensions.height) * 0.45;
             
-            // Collect unique cluster keys and count nodes per cluster
+            // Collect unique cluster keys
             const clusterKeys = new Set<string>();
             const clusterNodeCounts = new Map<string, number>();
             
@@ -343,8 +353,9 @@ const NetworkGraph: React.FC<NetworkGraphProps> = ({
                 }
             });
             
-            // Apply very strong clustering force using forceX and forceY pattern
-            const clusterStrength = 0.15; // Strong clustering
+            // Very strong clustering force that stays strong for a long time
+            const baseClusterStrength = 0.5; // Very strong pull
+            const decayStart = 0.7; // Start decaying very late
             
             fg.d3Force('clusterX', (alpha: number) => {
                 for (let i = 0; i < graphData.nodes.length; i++) {
@@ -359,7 +370,11 @@ const NetworkGraph: React.FC<NetworkGraphProps> = ({
                     
                     if (clusterKey && clusterCenters.has(clusterKey)) {
                         const center = clusterCenters.get(clusterKey)!;
-                        node.vx += (center.x - node.x) * clusterStrength;
+                        // Keep very strong until very late, then decay
+                        const strength = alpha > decayStart 
+                            ? baseClusterStrength 
+                            : baseClusterStrength * Math.pow(alpha / decayStart, 0.5);
+                        node.vx += (center.x - node.x) * strength;
                     }
                 }
             });
@@ -377,14 +392,26 @@ const NetworkGraph: React.FC<NetworkGraphProps> = ({
                     
                     if (clusterKey && clusterCenters.has(clusterKey)) {
                         const center = clusterCenters.get(clusterKey)!;
-                        node.vy += (center.y - node.y) * clusterStrength;
+                        // Keep very strong until very late, then decay
+                        const strength = alpha > decayStart 
+                            ? baseClusterStrength 
+                            : baseClusterStrength * Math.pow(alpha / decayStart, 0.5);
+                        node.vy += (center.y - node.y) * strength;
                     }
                 }
             });
         } else {
-            // Restore default forces when clustering is off
-            fg.d3Force('charge').strength(-700);
-            fg.d3Force('center').strength(0.05);
+            // Restore calmer default forces when clustering is off
+            fg.d3Force('charge').strength(-400);
+            fg.d3Force('center').strength(0.02);
+            fg.d3Force('link').strength(0.5); // Restore link strength
+            
+            // Restore normal collision force
+            fg.d3Force('collision', forceCollide((node: any) => {
+                const r = (node.value || 10) / 2;
+                const padding = 8;
+                return r + padding;
+            }).iterations(3).strength(0.8));
         }
         
         // Always reheat to recalculate from current state with new forces
@@ -394,7 +421,7 @@ const NetworkGraph: React.FC<NetworkGraphProps> = ({
         setIsClusteringTransition(true);
         const timer = setTimeout(() => {
             setIsClusteringTransition(false);
-        }, 500); // Adjust delay as needed
+        }, 3000); // Longer delay for full cluster resolution
 
         return () => clearTimeout(timer);
     }, [graphData, clusterByOrgType, clusterByAssetType, dimensions]);
@@ -821,9 +848,9 @@ const NetworkGraph: React.FC<NetworkGraphProps> = ({
                     return 2 * globalScaleRef.current * 1.1;
                 }}
                 linkDirectionalParticleSpeed={0.005}
-                d3VelocityDecay={0.1}
-                d3AlphaDecay={0.04}
-                cooldownTicks={150}
+                d3VelocityDecay={0.5}
+                d3AlphaDecay={0.008}
+                cooldownTicks={500}
                 warmupTicks={0}
                 enableNodeDrag={true}
                 enableZoomInteraction={true}
