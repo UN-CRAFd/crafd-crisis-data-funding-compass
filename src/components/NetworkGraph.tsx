@@ -612,8 +612,10 @@ const NetworkGraph: React.FC<NetworkGraphProps> = ({
         clusters.forEach((nodes, clusterKey) => {
             if (nodes.length < 2) return; // Need at least 2 nodes for a hull
             
-            // Calculate convex hull points with padding
-            const padding = 20 / globalScale;
+            // Calculate convex hull points with adaptive padding
+            // Padding scales with zoom: tighter when zoomed out, more visible when zoomed in
+            const basePadding = 15; // Base padding in canvas units
+            const padding = Math.max(5, basePadding / globalScale); // Minimum 5, scales with zoom
             const points = nodes.map(n => ({ x: n.x!, y: n.y!, r: (n.value / 2) + padding }));
             
             // Simple hull: find bounding circle
@@ -624,9 +626,12 @@ const NetworkGraph: React.FC<NetworkGraphProps> = ({
                     Math.sqrt(Math.pow(p.x - centroidX, 2) + Math.pow(p.y - centroidY, 2)) + p.r
                 ));
                 
+                // Add minimal extra radius that scales with zoom
+                const extraRadius = Math.max(5, 8 / globalScale);
+                
                 // Draw cluster background
                 ctx.beginPath();
-                ctx.arc(centroidX, centroidY, maxDist + 10 / globalScale, 0, 2 * Math.PI);
+                ctx.arc(centroidX, centroidY, maxDist + extraRadius, 0, 2 * Math.PI);
                 
                 // Style based on cluster type
                 if (clusterKey.startsWith('org-')) {
@@ -674,7 +679,9 @@ const NetworkGraph: React.FC<NetworkGraphProps> = ({
         clusters.forEach((nodes, clusterKey) => {
             if (nodes.length < 2) return;
             
-            const padding = 20 / globalScale;
+            // Use same adaptive padding as hull drawing
+            const basePadding = 15;
+            const padding = Math.max(5, basePadding / globalScale);
             const points = nodes.map(n => ({ x: n.x!, y: n.y!, r: (n.value / 2) + padding }));
             
             if (points.length > 0) {
@@ -684,6 +691,9 @@ const NetworkGraph: React.FC<NetworkGraphProps> = ({
                     Math.sqrt(Math.pow(p.x - centroidX, 2) + Math.pow(p.y - centroidY, 2)) + p.r
                 ));
                 
+                // Add same extra radius as hull
+                const extraRadius = Math.max(5, 8 / globalScale);
+                
                 // Draw cluster label
                 const fontSize = 14 / globalScale;
                 ctx.font = `bold ${fontSize}px Sans-Serif`;
@@ -692,7 +702,7 @@ const NetworkGraph: React.FC<NetworkGraphProps> = ({
                 
                 // Extract readable label from cluster key
                 const label = clusterKey.replace('org-', '').replace('asset-', '');
-                const labelY = centroidY - maxDist - 20 / globalScale;
+                const labelY = centroidY - maxDist - extraRadius - (15 / globalScale);
                 
                 // Draw label background
                 const labelWidth = ctx.measureText(label).width;
