@@ -2,7 +2,7 @@
 
 import { typeLabelToSlug, typeSlugToLabel } from '@/lib/urlShortcuts';
 import { usePathname, useRouter, useSearchParams } from 'next/navigation';
-import { useCallback, useEffect, useMemo, useState } from 'react';
+import { useCallback, useEffect, useMemo, useRef, useState } from 'react';
 import { processDashboardData } from '../lib/data';
 import type { DashboardFilters, DashboardStats, OrganizationProjectData, OrganizationTypeData, OrganizationWithProjects, ProjectTypeData } from '../types/airtable';
 import CrisisDataDashboard from './CrisisDataDashboard';
@@ -40,9 +40,9 @@ const CrisisDataDashboardWrapper = ({ logoutButton }: { logoutButton?: React.Rea
     }, [searchParams]);
     const searchQuery = searchParams.get('q') ?? searchParams.get('search') ?? '';
 
-    // Modal URL parameters
-    const selectedOrgKey = searchParams.get('org') ?? '';
-    const selectedProjectKey = searchParams.get('asset') ?? '';
+    // Modal state - keep in local state instead of URL to prevent graph resets
+    const [selectedOrgKey, setSelectedOrgKey] = useState('');
+    const [selectedProjectKey, setSelectedProjectKey] = useState('');
 
     // Local state for immediate search input (submitted on Enter key)
     const [localSearchQuery, setLocalSearchQuery] = useState(searchQuery);
@@ -53,14 +53,29 @@ const CrisisDataDashboardWrapper = ({ logoutButton }: { logoutButton?: React.Rea
         combinedDonors: string[];
         investmentTypes: string[];
     } | null>(null);
+    
+    // Track the last fetched filter state to prevent unnecessary refetches
+    const lastFetchedFiltersRef = useRef<string>('');
 
     // Determine if we're currently showing a modal
     // Use underlying page state for dashboard data when modal is open
-    // Use a more stable check that doesn't change during URL transitions
     const shouldUseStoredState = (selectedOrgKey || selectedProjectKey) && underlyingPageState;
-    const effectiveSearchQuery = shouldUseStoredState ? underlyingPageState.searchQuery : searchQuery;
-    const effectiveDonors = shouldUseStoredState ? underlyingPageState.combinedDonors : combinedDonors;
-    const effectiveInvestmentTypes = shouldUseStoredState ? underlyingPageState.investmentTypes : investmentTypes;
+    
+    // Memoize effective filters to prevent unnecessary recalculations
+    const effectiveSearchQuery = useMemo(() => 
+        shouldUseStoredState ? underlyingPageState.searchQuery : searchQuery,
+        [shouldUseStoredState, underlyingPageState, searchQuery]
+    );
+    
+    const effectiveDonors = useMemo(() => 
+        shouldUseStoredState ? underlyingPageState.combinedDonors : combinedDonors,
+        [shouldUseStoredState, underlyingPageState, combinedDonors]
+    );
+    
+    const effectiveInvestmentTypes = useMemo(() => 
+        shouldUseStoredState ? underlyingPageState.investmentTypes : investmentTypes,
+        [shouldUseStoredState, underlyingPageState, investmentTypes]
+    );
 
     // State for dashboard data
     const [dashboardData, setDashboardData] = useState<{
@@ -127,9 +142,23 @@ const CrisisDataDashboardWrapper = ({ logoutButton }: { logoutButton?: React.Rea
     useEffect(() => {
         async function fetchData() {
             try {
+                // Create a stable filter signature to detect actual changes
+                const filterSignature = JSON.stringify({
+                    donors: effectiveDonors.sort(),
+                    types: effectiveInvestmentTypes.sort(),
+                    search: effectiveSearchQuery
+                });
+                
+                // Skip fetch if filters haven't actually changed
+                if (lastFetchedFiltersRef.current === filterSignature) {
+                    return;
+                }
+                
+                lastFetchedFiltersRef.current = filterSignature;
+                
                 setError(null);
 
-                console.log('Loading dashboard data with filters:', { combinedDonors, investmentTypes });
+                console.log('Loading dashboard data with filters:', { effectiveDonors, effectiveInvestmentTypes });
 
                 const filters: DashboardFilters = {
                     donorCountries: effectiveDonors.length > 0 ? effectiveDonors : undefined,
@@ -178,98 +207,60 @@ const CrisisDataDashboardWrapper = ({ logoutButton }: { logoutButton?: React.Rea
         updateURLParams({ search: localSearchQuery });
     }, [localSearchQuery, updateURLParams]);
 
-    // Modal handlers - create clean URLs and store underlying state
+    // Modal handlers - use local state instead of URL to prevent graph resets
     const handleOpenOrganizationModal = useCallback((orgKey: string) => {
-        // Store current page state before opening modal
-        setUnderlyingPageState({
+        // Store current page state before opening modal - capture from closure immediately
+        const stateToStore = {
             searchQuery,
-            combinedDonors,
-            investmentTypes
-        });
-
-        // Create clean URL with only the modal parameter
-        const newSearchParams = new URLSearchParams();
-        newSearchParams.set('org', orgKey);
-        router.replace(`${pathname}?${newSearchParams.toString()}`, { scroll: false });
-    }, [router, pathname, searchQuery, combinedDonors, investmentTypes]);
+            combinedDonors: [...combinedDonors], // Create copy to prevent reference issues
+            investmentTypes: [...investmentTypes]
+        };
+        
+        console.log('[Modal Open] Storing state:', stateToStore);
+        setUnderlyingPageState(stateToStore);
+        
+        // Set modal state without changing URL
+        setSelectedOrgKey(orgKey);
+    }, [searchQuery, combinedDonors, investmentTypes]);
 
     const handleOpenProjectModal = useCallback((projectKey: string) => {
-        // Store current page state before opening modal
-        setUnderlyingPageState({
+        // Store current page state before opening modal - capture from closure immediately
+        const stateToStore = {
             searchQuery,
-            combinedDonors,
-            investmentTypes
-        });
-
-        // Create clean URL with only the modal parameter
-        const newSearchParams = new URLSearchParams();
-        newSearchParams.set('asset', projectKey);
-        router.replace(`${pathname}?${newSearchParams.toString()}`, { scroll: false });
-    }, [router, pathname, searchQuery, combinedDonors, investmentTypes]);
+            combinedDonors: [...combinedDonors], // Create copy to prevent reference issues
+            investmentTypes: [...investmentTypes]
+        };
+        
+        console.log('[Modal Open] Storing state:', stateToStore);
+        setUnderlyingPageState(stateToStore);
+        
+        // Set modal state without changing URL
+        setSelectedProjectKey(projectKey);
+    }, [searchQuery, combinedDonors, investmentTypes]);
 
     const handleCloseOrganizationModal = useCallback(() => {
-        // Restore URL to previous state if we have it stored
-        if (underlyingPageState) {
-            const newSearchParams = new URLSearchParams();
-
-            if (underlyingPageState.combinedDonors.length > 0) {
-                newSearchParams.set('d', underlyingPageState.combinedDonors.join(','));
-            }
-            if (underlyingPageState.investmentTypes.length > 0) {
-                const slugs = underlyingPageState.investmentTypes.map(t => typeLabelToSlug(t));
-                const uniqueSlugs = Array.from(new Set(slugs.map(s => s.toLowerCase()))).map(s =>
-                    slugs.find(slug => slug.toLowerCase() === s) || s
-                );
-                newSearchParams.set('t', uniqueSlugs.join(','));
-            }
-            if (underlyingPageState.searchQuery) {
-                newSearchParams.set('q', underlyingPageState.searchQuery);
-            }
-
-            const queryString = newSearchParams.toString();
-            router.replace(`${pathname}${queryString ? '?' + queryString : ''}`, { scroll: false });
-
-            // Clear stored state after a short delay to prevent flash
-            setTimeout(() => {
-                setUnderlyingPageState(null);
-            }, 50);
-        } else {
-            // Fallback: just remove the modal parameter
-            router.replace(pathname, { scroll: false });
-        }
-    }, [router, pathname, underlyingPageState, typeLabelToSlug]);
+        console.log('[Modal Close] Clearing org modal');
+        
+        // Clear modal state without changing URL
+        setSelectedOrgKey('');
+        
+        // Clear stored state after a short delay to prevent flash
+        setTimeout(() => {
+            setUnderlyingPageState(null);
+        }, 50);
+    }, []);
 
     const handleCloseProjectModal = useCallback(() => {
-        // Restore URL to previous state if we have it stored
-        if (underlyingPageState) {
-            const newSearchParams = new URLSearchParams();
-
-            if (underlyingPageState.combinedDonors.length > 0) {
-                newSearchParams.set('d', underlyingPageState.combinedDonors.join(','));
-            }
-            if (underlyingPageState.investmentTypes.length > 0) {
-                const slugs = underlyingPageState.investmentTypes.map(t => typeLabelToSlug(t));
-                const uniqueSlugs = Array.from(new Set(slugs.map(s => s.toLowerCase()))).map(s =>
-                    slugs.find(slug => slug.toLowerCase() === s) || s
-                );
-                newSearchParams.set('t', uniqueSlugs.join(','));
-            }
-            if (underlyingPageState.searchQuery) {
-                newSearchParams.set('q', underlyingPageState.searchQuery);
-            }
-
-            const queryString = newSearchParams.toString();
-            router.replace(`${pathname}${queryString ? '?' + queryString : ''}`, { scroll: false });
-
-            // Clear stored state after a short delay to prevent flash
-            setTimeout(() => {
-                setUnderlyingPageState(null);
-            }, 50);
-        } else {
-            // Fallback: just remove the modal parameter
-            router.replace(pathname, { scroll: false });
-        }
-    }, [router, pathname, underlyingPageState, typeLabelToSlug]);
+        console.log('[Modal Close] Clearing project modal');
+        
+        // Clear modal state without changing URL
+        setSelectedProjectKey('');
+        
+        // Clear stored state after a short delay to prevent flash
+        setTimeout(() => {
+            setUnderlyingPageState(null);
+        }, 50);
+    }, []);
 
     return (
         <CrisisDataDashboard
