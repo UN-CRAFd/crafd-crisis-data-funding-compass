@@ -60,6 +60,7 @@ const NetworkGraph: React.FC<NetworkGraphProps> = ({
     const [clusterByOrgType, setClusterByOrgType] = useState(false);
     const [clusterByAssetType, setClusterByAssetType] = useState(false);
     const [isClusteringTransition, setIsClusteringTransition] = useState(false);
+    const lastClusterStateRef = useRef<string>(''); // Track last clustering state to prevent unnecessary updates
 
     // Handle fullscreen toggle
     const toggleFullscreen = useCallback(() => {
@@ -163,7 +164,7 @@ const NetworkGraph: React.FC<NetworkGraphProps> = ({
                 type: 'organization',
                 value: 22, // Medium nodes for organizations
                 color: brandBgLight, // Uses --brand-bg-light (amber/golden from organization badges)
-                orgKey: org.id,
+                orgKey: org.orgShortName, // Use orgShortName for modal/URL
                 orgType: org.type, // Store org type for clustering
             });
 
@@ -189,7 +190,7 @@ const NetworkGraph: React.FC<NetworkGraphProps> = ({
                         type: 'project',
                         value: 20, // Slightly larger nodes for projects (assets)
                         color: badgeOtherBg, // Uses --badge-other-bg (purple/indigo from asset type badges)
-                        projectKey: project.id,
+                        projectKey: project.productKey, // Use productKey for modal/URL
                         assetTypes: project.investmentTypes || [], // Store asset types for clustering
                     });
                 }
@@ -288,6 +289,16 @@ const NetworkGraph: React.FC<NetworkGraphProps> = ({
         if (!graphRef.current) return;
         
         const fg = graphRef.current;
+        
+        // Create a state signature to detect actual changes
+        const currentState = `${clusterByOrgType}-${clusterByAssetType}`;
+        
+        // Skip if clustering state hasn't actually changed
+        if (lastClusterStateRef.current === currentState) {
+            return;
+        }
+        
+        lastClusterStateRef.current = currentState;
         
         // Remove any existing cluster forces first
         fg.d3Force('clusterX', null);
@@ -437,7 +448,7 @@ const NetworkGraph: React.FC<NetworkGraphProps> = ({
         }, 3000); // Longer delay for full cluster resolution
 
         return () => clearTimeout(timer);
-    }, [graphData, clusterByOrgType, clusterByAssetType, dimensions]);
+    }, [clusterByOrgType, clusterByAssetType]); // Only re-run when clustering toggles change
 
     // Note: persistent click-based highlighting removed to avoid performance issues.
 
@@ -472,11 +483,21 @@ const NetworkGraph: React.FC<NetworkGraphProps> = ({
         setHoverHighlightLinks(newHighlightLinks);
     }, [graphData]);
 
-    // Handle node click
-    // NOTE: organization and project nodes should not be clickable per UX request.
-    // We ignore clicks on those node types. Keep the handler so it can be extended
-    // later if donor-click behavior is added.
-  
+    // Handle node click to open modals
+    const handleNodeClick = useCallback((node: any) => {
+        // The node object from react-force-graph may have additional properties
+        // Extract the relevant fields
+        const nodeType = node.type;
+        const orgKey = node.orgKey;
+        const projectKey = node.projectKey;
+        
+        if (nodeType === 'organization' && orgKey) {
+            onOpenOrganizationModal(orgKey);
+        } else if (nodeType === 'project' && projectKey) {
+            onOpenProjectModal(projectKey);
+        }
+        // Ignore clicks on donor nodes and cluster hulls
+    }, [onOpenOrganizationModal, onOpenProjectModal]);
 
     // Handle background click to deselect
     const handleBackgroundClick = useCallback(() => {
@@ -822,6 +843,7 @@ const NetworkGraph: React.FC<NetworkGraphProps> = ({
                 nodeCanvasObject={paintNode}
                 nodeCanvasObjectMode={() => 'replace'}
                 onNodeHover={handleNodeHover}
+                onNodeClick={handleNodeClick}
                 onBackgroundClick={handleBackgroundClick}
                 onRenderFramePre={(ctx, globalScale) => {
                     // Draw cluster hulls first (behind everything)
