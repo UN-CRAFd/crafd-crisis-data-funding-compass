@@ -292,6 +292,7 @@ const NetworkGraph: React.FC<NetworkGraphProps> = ({
         // Remove any existing cluster forces first
         fg.d3Force('clusterX', null);
         fg.d3Force('clusterY', null);
+        fg.d3Force('clusterRepulsion', null);
         
         if (clusterByOrgType || clusterByAssetType) {
             // Strong charge repulsion to keep clusters well separated
@@ -358,7 +359,37 @@ const NetworkGraph: React.FC<NetworkGraphProps> = ({
             const baseClusterStrength = 0.5; // Very strong pull
             const decayStart = 0.7; // Start decaying very late
             
-            fg.d3Force('clusterX', (alpha: number) => {
+            // Add repulsion between cluster centers to keep them separated
+            fg.d3Force('clusterRepulsion', (alpha: number) => {
+                const clusterArray = Array.from(clusterCenters.entries());
+                const hullRepulsionStrength = 50000; // Strong repulsion between cluster hulls
+                
+                // Apply repulsion between each pair of cluster centers
+                for (let i = 0; i < clusterArray.length; i++) {
+                    for (let j = i + 1; j < clusterArray.length; j++) {
+                        const [key1, center1] = clusterArray[i];
+                        const [key2, center2] = clusterArray[j];
+                        
+                        const dx = center2.x - center1.x;
+                        const dy = center2.y - center1.y;
+                        const distSq = dx * dx + dy * dy;
+                        
+                        if (distSq > 0) {
+                            const dist = Math.sqrt(distSq);
+                            const force = hullRepulsionStrength / distSq; // Inverse square law
+                            const fx = (dx / dist) * force;
+                            const fy = (dy / dist) * force;
+                            
+                            // Push centers apart
+                            center1.x -= fx * alpha;
+                            center1.y -= fy * alpha;
+                            center2.x += fx * alpha;
+                            center2.y += fy * alpha;
+                        }
+                    }
+                }
+                
+                // Apply forces to all nodes in clusters based on updated centers
                 for (let i = 0; i < graphData.nodes.length; i++) {
                     const node: any = graphData.nodes[i];
                     let clusterKey = null;
@@ -371,36 +402,17 @@ const NetworkGraph: React.FC<NetworkGraphProps> = ({
                     
                     if (clusterKey && clusterCenters.has(clusterKey)) {
                         const center = clusterCenters.get(clusterKey)!;
-                        // Keep very strong until very late, then decay
                         const strength = alpha > decayStart 
                             ? baseClusterStrength 
                             : baseClusterStrength * Math.pow(alpha / decayStart, 0.5);
                         node.vx += (center.x - node.x) * strength;
-                    }
-                }
-            });
-            
-            fg.d3Force('clusterY', (alpha: number) => {
-                for (let i = 0; i < graphData.nodes.length; i++) {
-                    const node: any = graphData.nodes[i];
-                    let clusterKey = null;
-                    
-                    if (clusterByOrgType && node.type === 'organization' && node.orgType) {
-                        clusterKey = `org-${node.orgType}`;
-                    } else if (clusterByAssetType && node.type === 'project' && node.assetTypes && node.assetTypes.length > 0) {
-                        clusterKey = `asset-${node.assetTypes[0]}`;
-                    }
-                    
-                    if (clusterKey && clusterCenters.has(clusterKey)) {
-                        const center = clusterCenters.get(clusterKey)!;
-                        // Keep very strong until very late, then decay
-                        const strength = alpha > decayStart 
-                            ? baseClusterStrength 
-                            : baseClusterStrength * Math.pow(alpha / decayStart, 0.5);
                         node.vy += (center.y - node.y) * strength;
                     }
                 }
             });
+            
+            fg.d3Force('clusterX', null); // Remove old separate X force
+            fg.d3Force('clusterY', null); // Remove old separate Y force
         } else {
             // Restore calmer default forces when clustering is off
             fg.d3Force('charge').strength(-400);
