@@ -153,7 +153,7 @@ export default function BaseModal({
 
     const modalContent = (
         <div
-            className={`fixed inset-0 bg-black/50 flex items-center justify-end z-50 transition-all duration-300 ease-out ${
+            className={`fixed inset-0 bg-black/50 flex items-center justify-end z-[10000] transition-all duration-300 ease-out ${
                 isVisible && !isClosing ? 'opacity-100' : 'opacity-0'
             }`}
             onClick={handleBackdropClick}
