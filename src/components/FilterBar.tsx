@@ -40,6 +40,9 @@ interface FilterBarProps {
     
     // Portal container for dropdowns (needed for fullscreen mode)
     portalContainer?: HTMLElement | null;
+    
+    // Fullscreen mode flag (adjusts layout for more filter space)
+    isFullscreen?: boolean;
 }
 
 const FilterBar: React.FC<FilterBarProps> = ({
@@ -56,6 +59,7 @@ const FilterBar: React.FC<FilterBarProps> = ({
     onResetFilters,
     className = '',
     portalContainer = null,
+    isFullscreen = false,
 }) => {
     const [donorsMenuOpen, setDonorsMenuOpen] = useState(false);
     const [typesMenuOpen, setTypesMenuOpen] = useState(false);
@@ -64,7 +68,7 @@ const FilterBar: React.FC<FilterBarProps> = ({
     return (
         <div className={`flex flex-col sm:flex-row items-stretch sm:items-center gap-3 ${className}`}>
             {/* Modern Search Bar */}
-            <div className="relative flex-1 order-1 sm:order-1">
+                <div className={`relative order-1 sm:order-1 ${isFullscreen ? 'flex-none w-200' : 'flex-1'}`}>
                 <Search className="absolute left-3 top-1/2 -translate-y-1/2 h-4 w-4 text-slate-400" />
                 <Input
                     id="search"
@@ -82,13 +86,15 @@ const FilterBar: React.FC<FilterBarProps> = ({
             </div>
 
             {/* Filter buttons container */}
-            <div className="flex flex-col sm:flex-row gap-4 sm:gap-3 order-2 sm:order-2">
+            <div className={`flex flex-col sm:flex-row gap-4 sm:gap-3 order-2 sm:order-2 ${isFullscreen ? 'flex-1' : ''}`}>
                 {/* Donor Countries Multi-Select */}
                 <DropdownMenu onOpenChange={(open) => setDonorsMenuOpen(open)}>
                     <DropdownMenuTrigger asChild>
                         <Button
                             variant="outline"
-                            className={`h-10 w-full sm:w-52 justify-between font-medium transition-all ${
+                            className={`h-10 justify-between font-medium transition-all ${
+                                isFullscreen ? 'w-full flex-1' : 'w-full sm:w-52'
+                            } ${
                                 combinedDonors.length > 0
                                     ? 'border-[var(--brand-primary)] bg-[var(--brand-bg-lighter)] text-[var(--brand-primary)] hover:bg-[var(--brand-bg-light)]'
                                     : 'bg-slate-50/50 border-slate-200 hover:bg-white hover:border-slate-300'
@@ -172,7 +178,9 @@ const FilterBar: React.FC<FilterBarProps> = ({
                     <DropdownMenuTrigger asChild>
                         <Button
                             variant="outline"
-                            className={`h-10 w-full sm:w-52 justify-between font-medium transition-all ${
+                            className={`h-10 justify-between font-medium transition-all ${
+                                isFullscreen ? 'w-full flex-1' : 'w-full sm:w-52'
+                            } ${
                                 investmentTypes.length > 0
                                     ? 'border-[var(--brand-primary)] bg-[var(--brand-bg-lighter)] text-[var(--brand-primary)] hover:bg-[var(--brand-bg-light)]'
                                     : 'bg-slate-50/50 border-slate-200 hover:bg-white hover:border-slate-300'
