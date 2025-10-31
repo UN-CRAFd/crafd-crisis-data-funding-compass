@@ -1,6 +1,6 @@
 'use client';
 
-import React, { useCallback, useEffect, useRef, useState } from 'react';
+import React, { useCallback, useEffect, useMemo, useRef, useState } from 'react';
 import { forceCollide } from 'd3-force';
 import ForceGraph2D from 'react-force-graph-2d';
 import { Maximize, Minimize } from 'lucide-react';
@@ -510,23 +510,27 @@ const NetworkGraph: React.FC<NetworkGraphProps> = ({
         }
     }, [selectedOrgKey, selectedProjectKey, onOpenOrganizationModal, onOpenProjectModal]);
 
-    // Get brand color at runtime for use in link highlighting
-    const getBrandColor = useCallback((varName: string): string => {
-        if (typeof window !== 'undefined') {
-            const color = getComputedStyle(document.documentElement)
-                .getPropertyValue(varName)
-                .trim();
-            return color || '#e6af26';
-        }
-        return '#e6af26';
-    }, []);
+    // Get brand colors once on mount - memoized to avoid repeated CSS variable lookups
+    const themeColors = useMemo(() => {
+        const getBrandColor = (varName: string): string => {
+            if (typeof window !== 'undefined') {
+                const color = getComputedStyle(document.documentElement)
+                    .getPropertyValue(varName)
+                    .trim();
+                return color || '#e6af26';
+            }
+            return '#e6af26';
+        };
 
-    const brandPrimaryColor = getBrandColor('--brand-primary');
-    const brandPrimaryDarkColor = getBrandColor('--brand-primary-dark');
-    const brandBgLightColor = getBrandColor('--brand-bg-light');
-    const badgeOtherTextColor = getBrandColor('--badge-other-text');
-    const badgeSlateBgColor = getBrandColor('--badge-slate-bg');
-    const badgeSlateTextColor = getBrandColor('--badge-slate-text');
+        return {
+            brandPrimary: getBrandColor('--brand-primary'),
+            brandPrimaryDark: getBrandColor('--brand-primary-dark'),
+            brandBgLight: getBrandColor('--brand-bg-light'),
+            badgeOtherText: getBrandColor('--badge-other-text'),
+            badgeSlateBg: getBrandColor('--badge-slate-bg'),
+            badgeSlateText: getBrandColor('--badge-slate-text')
+        };
+    }, []);
 
     // Custom node canvas rendering - only draw the node circles
     const paintNode = useCallback((node: GraphNode, ctx: CanvasRenderingContext2D, globalScale: number) => {
@@ -561,11 +565,11 @@ const NetworkGraph: React.FC<NetworkGraphProps> = ({
         
         // Use specific borders per node type to match badges/modals
         if (node.type === 'organization') {
-            ctx.strokeStyle = brandPrimaryDarkColor;
+            ctx.strokeStyle = themeColors.brandPrimaryDark;
         } else if (node.type === 'project') {
-            ctx.strokeStyle = badgeOtherTextColor;
+            ctx.strokeStyle = themeColors.badgeOtherText;
         } else if (node.type === 'donor') {
-            ctx.strokeStyle = badgeSlateTextColor;
+            ctx.strokeStyle = themeColors.badgeSlateText;
         } else {
             ctx.strokeStyle = '#000';
         }
@@ -574,7 +578,7 @@ const NetworkGraph: React.FC<NetworkGraphProps> = ({
         
         // Reset alpha
         ctx.globalAlpha = 1;
-    }, [hoverHighlightNodes, brandPrimaryDarkColor, badgeOtherTextColor, badgeSlateTextColor]);
+    }, [hoverHighlightNodes, themeColors]);
 
     // Custom label rendering - drawn after all nodes to appear on top
     const paintNodeLabel = useCallback((node: GraphNode, ctx: CanvasRenderingContext2D, globalScale: number) => {
@@ -605,11 +609,10 @@ const NetworkGraph: React.FC<NetworkGraphProps> = ({
         }
     }, [hoveredNode, hoverHighlightNodes]);
 
-    // Draw cluster hulls around grouped nodes (backgrounds only)
-    const drawClusterHulls = useCallback((ctx: CanvasRenderingContext2D, globalScale: number) => {
-        if (!clusterByOrgType && !clusterByAssetType) return;
+    // Memoize cluster data to avoid recalculating node groupings on every render
+    const clusterData = useMemo(() => {
+        if (!clusterByOrgType && !clusterByAssetType) return null;
 
-        // Group nodes by cluster
         const clusters = new Map<string, GraphNode[]>();
         
         graphData.nodes.forEach(node => {
@@ -629,99 +632,60 @@ const NetworkGraph: React.FC<NetworkGraphProps> = ({
             }
         });
 
-        // Draw hull for each cluster (without labels)
-        clusters.forEach((nodes, clusterKey) => {
-            if (nodes.length < 2) return; // Need at least 2 nodes for a hull
+        return clusters;
+    }, [graphData.nodes, clusterByOrgType, clusterByAssetType]);
+
+    // Combined cluster drawing - calculates geometry once and can draw both hulls and labels
+    const drawClusters = useCallback((
+        ctx: CanvasRenderingContext2D, 
+        globalScale: number, 
+        drawType: 'hulls' | 'labels'
+    ) => {
+        if (!clusterData) return;
+
+        clusterData.forEach((nodes, clusterKey) => {
+            if (nodes.length < 2) return;
             
-            // Calculate convex hull points with adaptive padding
-            // Padding scales with zoom: tighter when zoomed out, more visible when zoomed in
-            const basePadding = 15; // Base padding in canvas units
-            const padding = Math.max(5, basePadding / globalScale); // Minimum 5, scales with zoom
+            // Calculate convex hull points with adaptive padding (shared logic)
+            const basePadding = 15;
+            const padding = Math.max(5, basePadding / globalScale);
             const points = nodes.map(n => ({ x: n.x!, y: n.y!, r: (n.value / 2) + padding }));
             
-            // Simple hull: find bounding circle
-            if (points.length > 0) {
-                const centroidX = points.reduce((sum, p) => sum + p.x, 0) / points.length;
-                const centroidY = points.reduce((sum, p) => sum + p.y, 0) / points.length;
-                const maxDist = Math.max(...points.map(p => 
-                    Math.sqrt(Math.pow(p.x - centroidX, 2) + Math.pow(p.y - centroidY, 2)) + p.r
-                ));
-                
-                // Add minimal extra radius that scales with zoom
-                const extraRadius = Math.max(5, 8 / globalScale);
-                
-                // Draw cluster background
+            if (points.length === 0) return;
+            
+            // Calculate centroid and radius (shared logic)
+            const centroidX = points.reduce((sum, p) => sum + p.x, 0) / points.length;
+            const centroidY = points.reduce((sum, p) => sum + p.y, 0) / points.length;
+            const maxDist = Math.max(...points.map(p => 
+                Math.sqrt(Math.pow(p.x - centroidX, 2) + Math.pow(p.y - centroidY, 2)) + p.r
+            ));
+            const extraRadius = Math.max(5, 8 / globalScale);
+            
+            if (drawType === 'hulls') {
+                // Draw cluster background hull
                 ctx.beginPath();
                 ctx.arc(centroidX, centroidY, maxDist + extraRadius, 0, 2 * Math.PI);
                 
-                // Style based on cluster type
                 if (clusterKey.startsWith('org-')) {
-                    ctx.fillStyle = 'rgba(243, 195, 92, 0.1)'; // Amber with low opacity
-                    ctx.strokeStyle = 'rgba(188, 132, 15, 0.3)'; // Amber dark
+                    ctx.fillStyle = 'rgba(243, 195, 92, 0.1)';
+                    ctx.strokeStyle = 'rgba(188, 132, 15, 0.3)';
                 } else {
-                    ctx.fillStyle = 'rgba(215, 216, 245, 0.15)'; // Purple/indigo with low opacity
-                    ctx.strokeStyle = 'rgba(77, 71, 156, 0.3)'; // Purple dark
+                    ctx.fillStyle = 'rgba(215, 216, 245, 0.15)';
+                    ctx.strokeStyle = 'rgba(77, 71, 156, 0.3)';
                 }
                 
                 ctx.lineWidth = 2 / globalScale;
                 ctx.setLineDash([5 / globalScale, 5 / globalScale]);
                 ctx.fill();
                 ctx.stroke();
-                ctx.setLineDash([]); // Reset dash
-            }
-        });
-    }, [graphData, clusterByOrgType, clusterByAssetType]);
-
-    // Draw cluster labels on top of everything
-    const drawClusterLabels = useCallback((ctx: CanvasRenderingContext2D, globalScale: number) => {
-        if (!clusterByOrgType && !clusterByAssetType) return;
-
-        // Group nodes by cluster
-        const clusters = new Map<string, GraphNode[]>();
-        
-        graphData.nodes.forEach(node => {
-            let clusterKey = null;
-            
-            if (clusterByOrgType && node.type === 'organization' && node.orgType) {
-                clusterKey = `org-${node.orgType}`;
-            } else if (clusterByAssetType && node.type === 'project' && node.assetTypes && node.assetTypes.length > 0) {
-                clusterKey = `asset-${node.assetTypes[0]}`;
-            }
-            
-            if (clusterKey) {
-                if (!clusters.has(clusterKey)) {
-                    clusters.set(clusterKey, []);
-                }
-                clusters.get(clusterKey)!.push(node);
-            }
-        });
-
-        // Draw labels for each cluster
-        clusters.forEach((nodes, clusterKey) => {
-            if (nodes.length < 2) return;
-            
-            // Use same adaptive padding as hull drawing
-            const basePadding = 15;
-            const padding = Math.max(5, basePadding / globalScale);
-            const points = nodes.map(n => ({ x: n.x!, y: n.y!, r: (n.value / 2) + padding }));
-            
-            if (points.length > 0) {
-                const centroidX = points.reduce((sum, p) => sum + p.x, 0) / points.length;
-                const centroidY = points.reduce((sum, p) => sum + p.y, 0) / points.length;
-                const maxDist = Math.max(...points.map(p => 
-                    Math.sqrt(Math.pow(p.x - centroidX, 2) + Math.pow(p.y - centroidY, 2)) + p.r
-                ));
-                
-                // Add same extra radius as hull
-                const extraRadius = Math.max(5, 8 / globalScale);
-                
+                ctx.setLineDash([]);
+            } else {
                 // Draw cluster label
                 const fontSize = 14 / globalScale;
                 ctx.font = `bold ${fontSize}px Sans-Serif`;
                 ctx.textAlign = 'center';
                 ctx.textBaseline = 'middle';
                 
-                // Extract readable label from cluster key
                 const label = clusterKey.replace('org-', '').replace('asset-', '');
                 const labelY = centroidY - maxDist - extraRadius - (15 / globalScale);
                 
@@ -737,15 +701,11 @@ const NetworkGraph: React.FC<NetworkGraphProps> = ({
                 );
                 
                 // Draw label text
-                if (clusterKey.startsWith('org-')) {
-                    ctx.fillStyle = '#BC840F';
-                } else {
-                    ctx.fillStyle = '#4d479c';
-                }
+                ctx.fillStyle = clusterKey.startsWith('org-') ? '#BC840F' : '#4d479c';
                 ctx.fillText(label, centroidX, labelY);
             }
         });
-    }, [graphData, clusterByOrgType, clusterByAssetType]);
+    }, [clusterData]);
 
     return (
         <div ref={containerRef} className="w-full h-full bg-white rounded-lg border border-slate-200 overflow-hidden relative">
@@ -847,7 +807,7 @@ const NetworkGraph: React.FC<NetworkGraphProps> = ({
                 onBackgroundClick={handleBackgroundClick}
                 onRenderFramePre={(ctx, globalScale) => {
                     // Draw cluster hulls first (behind everything)
-                    drawClusterHulls(ctx, globalScale);
+                    drawClusters(ctx, globalScale, 'hulls');
                 }}
                 onRenderFramePost={(ctx, globalScale) => {
                     // Track current zoom level for use in linkWidth callback
@@ -855,7 +815,7 @@ const NetworkGraph: React.FC<NetworkGraphProps> = ({
                     // Draw all node labels
                     graphData.nodes.forEach(node => paintNodeLabel(node, ctx, globalScale));
                     // Draw cluster labels on top of everything
-                    drawClusterLabels(ctx, globalScale);
+                    drawClusters(ctx, globalScale, 'labels');
                 }}
                 linkColor={(link) => {
                     const sourceId = typeof link.source === 'object' ? (link.source as any).id : link.source;
@@ -866,7 +826,7 @@ const NetworkGraph: React.FC<NetworkGraphProps> = ({
                     const isHoverHighlight = hoverHighlightLinks.size > 0 && hoverHighlightLinks.has(linkId);
                     
                     if (hoverHighlightLinks.size === 0) return '#cbd5e1';
-                    if (isHoverHighlight) return brandPrimaryColor;
+                    if (isHoverHighlight) return themeColors.brandPrimary;
                     // Make non-highlighted links more visible when something is highlighted
                     return 'rgba(203, 213, 225, 0.6)';
                 }}
