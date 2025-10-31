@@ -785,7 +785,7 @@ const CrisisDataDashboard = ({
                                                 }}
                                                 className="cursor-pointer text-xs py-1.5"
                                             >
-                                                <ArrowUpWideNarrow className="w-3.5 h-3.5 mr-2" />
+                                                <ArrowDownWideNarrow className="w-3.5 h-3.5 mr-2" />
                                                 Alphabetically
                                             </DropdownMenuItem>
                                             <DropdownMenuItem
@@ -795,7 +795,7 @@ const CrisisDataDashboard = ({
                                                 }}
                                                 className="cursor-pointer text-xs py-1.5"
                                             >
-                                                <ArrowDownWideNarrow className="w-3.5 h-3.5 mr-2" />
+                                                <ArrowUpWideNarrow className="w-3.5 h-3.5 mr-2" />
                                                 Alphabetically
                                             </DropdownMenuItem>
                                             <DropdownMenuItem
