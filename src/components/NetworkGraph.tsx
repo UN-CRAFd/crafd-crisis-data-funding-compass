@@ -196,7 +196,7 @@ const NetworkGraph: React.FC<NetworkGraphProps> = ({
         const brandBgLight = getBrandColor('--brand-primary-light');
         const badgeOtherBg = getBrandColor('--badge-other-bg');
         const badgeSlateBg = getBrandColor('--badge-slate-bg');
-        const badgeSlateText = getBrandColor('--badge-slate-text'); // Darker shade for filtered donors
+        const selectedDonorColor = '#94a3b8'; // Medium gray for filtered donors (slate-400)
 
         // Add donor nodes - largest, using slate colors (like in tables)
         donorSet.forEach(donor => {
@@ -208,7 +208,7 @@ const NetworkGraph: React.FC<NetworkGraphProps> = ({
                 name: donor,
                 type: 'donor',
                 value: 25, // Larger nodes for donors
-                color: isFiltered ? badgeSlateText : badgeSlateBg, // Darker shade for filtered donors
+                color: isFiltered ? selectedDonorColor : badgeSlateBg, // Medium gray for filtered donors
             });
         });
 
@@ -799,7 +799,7 @@ const NetworkGraph: React.FC<NetworkGraphProps> = ({
                         <div className="space-y-1.5">
                             {combinedDonors && combinedDonors.length > 0 && (
                                 <div className="flex items-center gap-2">
-                                    <div className="w-3.5 h-3.5 rounded-full shrink-0" style={{ backgroundColor: 'var(--badge-slate-text)', border: '1.5px solid var(--badge-slate-text)' }}></div>
+                                    <div className="w-3.5 h-3.5 rounded-full shrink-0" style={{ backgroundColor: '#94a3b8', border: '1.5px solid #64748b' }}></div>
                                     <span className="text-xs text-slate-600">Selected Donors</span>
                                 </div>
                             )}
