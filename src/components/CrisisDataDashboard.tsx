@@ -3,36 +3,36 @@
 import React, { useEffect, useMemo, useState } from 'react';
 // Image import removed because it's not used in this file
 import ChartCard from '@/components/ChartCard';
+import FilterBar from '@/components/FilterBar';
+import dynamic from 'next/dynamic';
 import OrganizationModal from '@/components/OrganizationModal';
 import ProjectModal from '@/components/ProjectModal';
 import SurveyBanner from '@/components/SurveyBanner';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { Collapsible, CollapsibleContent, CollapsibleTrigger } from '@/components/ui/collapsible';
-import {
-    DropdownMenu,
-    DropdownMenuCheckboxItem,
-    DropdownMenuContent,
-    DropdownMenuLabel,
-    DropdownMenuSeparator,
-    DropdownMenuTrigger,
-} from '@/components/ui/dropdown-menu';
-import { Input } from '@/components/ui/input';
+import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuTrigger } from '@/components/ui/dropdown-menu';
+import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
 import { TooltipContent, TooltipProvider, TooltipTrigger, Tooltip as TooltipUI } from '@/components/ui/tooltip';
 import labels from '@/config/labels.json';
 import { getIconForInvestmentType } from '@/config/investmentTypeIcons';
-import { Building2, ChevronDown, ChevronRight, Database, DatabaseBackup, FileDown, Filter, FolderDot, FolderOpenDot, Globe, Info, MessageCircle, RotateCcw, Search, Share2 } from 'lucide-react';
+import { Building2, ChevronDown, ChevronRight, Database, Table, DatabaseBackup, FileDown, Filter, FolderDot, FolderOpenDot, Globe, Info, MessageCircle, RotateCcw, Search, Share2, ArrowUpDown, ArrowUpWideNarrow, ArrowDownWideNarrow, Network } from 'lucide-react';
 import organizationsTableRaw from '../../public/data/organizations-table.json';
 import { buildOrgDonorCountriesMap, buildOrgProjectsMap, buildProjectNameMap, calculateOrganizationTypesFromOrganizationsWithProjects, getNestedOrganizationsForModals } from '../lib/data';
 import { exportDashboardToPDF } from '../lib/exportPDF';
 import type { DashboardStats, OrganizationProjectData, OrganizationTypeData, OrganizationWithProjects, ProjectData, ProjectTypeData } from '../types/airtable';
 
+// Eagerly load NetworkGraph on client side to avoid lazy loading delay
+const NetworkGraph = dynamic(() => import('@/components/NetworkGraph'), {
+    ssr: false,
+});
+
 // Consolidated style constants
 const STYLES = {
     // Card styles
     statCard: "!border-0 transition-all duration-300 hover:ring-2 hover:ring-slate-300/50",
-    cardGlass: "!border-0 bg-white/80 backdrop-blur-sm",
-    cardGlassLight: "!border-0 bg-white/70 backdrop-blur-sm p-1 rounded-md shadow-none",
+    cardGlass: "!border-0 bg-white",
+    cardGlassLight: "!border-0 bg-white p-1 rounded-md shadow-none",
 
     // Typography - Unified section headers
     sectionHeader: "flex items-center gap-2 text-lg font-qanelas-subtitle font-black text-slate-800 mb-0 mt-0 uppercase",
@@ -45,8 +45,8 @@ const STYLES = {
     badgeBase: "inline-flex items-center px-2 py-1 rounded-md text-xs font-medium",
 
     // Interactive elements
-    projectItem: "p-3 bg-slate-50 rounded-lg border border-slate-100 hover:bg-slate-100 cursor-pointer transition-colors duration-200 animate-in fade-in group",
-    orgRow: "flex items-center justify-between p-4 hover:bg-slate-50/70 rounded-lg border border-slate-200 bg-slate-50/30 animate-in fade-in",
+    projectItem: "p-3 bg-white rounded-lg border border-slate-100 hover:bg-slate-200 cursor-pointer transition-colors duration-200 group",
+    orgRow: "flex items-center justify-between p-4 hover:bg-slate-200 rounded-lg border border-slate-200 bg-white",
 
     // Chart config
     chartTooltip: {
@@ -89,6 +89,7 @@ interface CrisisDataDashboardProps {
     onOpenProjectModal: (projectKey: string) => void;
     onCloseOrganizationModal: () => void;
     onCloseProjectModal: () => void;
+    onViewChange?: (view: 'table' | 'network') => void;
     logoutButton?: React.ReactNode;
 }
 
@@ -137,10 +138,14 @@ const StatCard = React.memo(function StatCard({ icon, title, value, label, color
                 </CardDescription>
             </CardHeader>
             <CardContent className="pt-0">
-                <div className={`text-4xl sm:text-5xl font-bold font-mono leading-none tabular-nums ${colors.value}`}>
-                    {value}
+                <div className="flex items-baseline gap-2">
+                    <div className={`text-4xl sm:text-5xl font-bold font-mono leading-none tabular-nums ${colors.value}`}>
+                        {value}
+                    </div>
+                    <div className={`leading-none text-sm sm:text-lg font-medium ${colors.label}`}>
+                        {label}
+                    </div>
                 </div>
-                <div className={`text-sm sm:text-base font-medium mt-1 ${colors.label}`}>{label}</div>
             </CardContent>
         </Card>
     );
@@ -231,12 +236,36 @@ const CrisisDataDashboard = ({
     onOpenProjectModal,
     onCloseOrganizationModal,
     onCloseProjectModal,
+    onViewChange,
     logoutButton
 }: CrisisDataDashboardProps) => {
     // UI state (not related to routing)
     const [expandedOrgs, setExpandedOrgs] = useState<Set<string>>(new Set());
     const [expandedCountries, setExpandedCountries] = useState<Set<string>>(new Set());
-    const [donorSearchQuery, setDonorSearchQuery] = useState<string>('');
+    const [sortBy, setSortBy] = useState<'name' | 'donors' | 'assets'>('name');
+    const [sortDirection, setSortDirection] = useState<'asc' | 'desc'>('asc');
+    const [sortMenuOpen, setSortMenuOpen] = useState(false);
+    const [activeView, setActiveView] = useState<'table' | 'network'>('table'); // Add view state
+
+    // Enforce table-only on small screens (mobile). Hide view switcher on mobile via responsive classes.
+    useEffect(() => {
+        const handleResize = () => {
+            if (typeof window !== 'undefined' && window.innerWidth < 640) {
+                setActiveView('table');
+            }
+        };
+
+        handleResize();
+        window.addEventListener('resize', handleResize);
+        return () => window.removeEventListener('resize', handleResize);
+    }, []);
+
+    // Notify parent when view changes
+    useEffect(() => {
+        if (onViewChange) {
+            onViewChange(activeView);
+        }
+    }, [activeView, onViewChange]);
 
     // Modal loading states (project modal always URL-based now)
     const [projectModalLoading] = useState(false);
@@ -292,6 +321,7 @@ const CrisisDataDashboard = ({
                     return {
                         project: {
                             id: project.id,
+                            productKey: project.fields?.['product_key'] || '',
                             projectName: project.fields?.['Project/Product Name'] || project.fields?.['Project Name'] || project.name || 'Unnamed Project',
                             projectDescription: project.fields?.['Project Description'] || '',
                             projectWebsite: project.fields?.['Project Website'] || '',
@@ -310,7 +340,12 @@ const CrisisDataDashboard = ({
     const selectedOrganization = useMemo(() => {
         if (!selectedOrgKey || !nestedOrganizations.length) return null;
         
-        const nestedOrg = nestedOrganizations.find((org: any) => org.fields?.org_key === selectedOrgKey);
+        // Look up by Org Short Name (which is what the NetworkGraph passes)
+        const nestedOrg = nestedOrganizations.find((org: any) => {
+            const orgShortName = org.fields?.['Org Short Name'];
+            return orgShortName && orgShortName.toLowerCase() === selectedOrgKey.toLowerCase();
+        });
+        
         if (!nestedOrg) return null;
 
         // Convert nested organization to OrganizationWithProjects format
@@ -389,7 +424,19 @@ const CrisisDataDashboard = ({
     // Extract data for use in component
     const { stats, projectTypes, organizationsWithProjects, allOrganizations, donorCountries: availableDonorCountries, investmentTypes: availableInvestmentTypes, topDonors } = dashboardData;
 
-    // Ensure the organization type chart always shows all known types.
+    // Add a 6th bar to the co-financing donor chart for 'n other donors'
+    let donorChartData = topDonors;
+    if (availableDonorCountries && topDonors && topDonors.length > 0) {
+        const shownDonors = topDonors.map(d => d.name);
+        const otherDonors = availableDonorCountries.filter(donor => !shownDonors.includes(donor));
+        donorChartData = [
+            ...topDonors,
+            { name: `+ ${otherDonors.length} other donor${otherDonors.length === 1 ? '' : 's'}`, value: 0}
+        ];
+    }
+
+    // Always show all investment types in the type filter
+    const allKnownInvestmentTypes = Object.values(labels.investmentTypes);
     // Get all types from the pre-generated organizations-with-types.json dictionary
     // and combine with any types inferred from the current organizations list.
     // Get all organization types from organizations-table.json and organizationsWithProjects
@@ -695,248 +742,191 @@ const CrisisDataDashboard = ({
                             {/* Organizations Table Section */}
                             <div>
                                 <Card className={STYLES.cardGlass}>
-                                    <CardHeader className="pb-0 h-0">
-                                        <CardTitle>
-                                            <SectionHeader
-                                                icon={
-                                                    organizationsWithProjects && organizationsWithProjects.some(org => org.projects && org.projects.length > 0)
-                                                        ? <FolderOpenDot className="text-slate-600" />
-                                                        : <FolderDot className="text-slate-600" />
-                                                }
-                                                title={labels.sections.organizationsAndProjects}
-                                            />
-                                        </CardTitle>
+                    <CardHeader className="pb-0 h-0">
+                        <CardTitle className="flex flex-row items-center justify-between gap-3 w-full mb-2">
+                            <SectionHeader
+                                icon={
+                                    organizationsWithProjects && organizationsWithProjects.some(org => org.projects && org.projects.length > 0)
+                                        ? <FolderOpenDot style={{ color: 'var(--brand-primary)' }}  />
+                                        : <FolderDot style={{ color: 'var(--brand-primary)' }}  />
+                                }
+                                title={labels.sections.organizationsAndProjects}
+                            />
 
-                                    </CardHeader>
-
-                                    {/* Filters */}
-                                    <CardContent className="p-4 sm:p-6">
-                                        <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-3">
-                                            {/* Modern Search Bar */}
-                                            <div className="relative flex-1 order-1 sm:order-1">
-                                                <Search className="absolute left-3 top-1/2 -translate-y-1/2 h-4 w-4 text-slate-400" />
-                                                <Input
-                                                    id="search"
-                                                    type="text"
-                                                    placeholder={labels.filters.searchPlaceholder}
-                                                    value={searchQuery}
-                                                    onChange={(e) => onSearchChange(e.target.value)}
-                                                    onKeyDown={(e) => {
-                                                        if (e.key === 'Enter') {
-                                                            onSearchSubmit();
-                                                        }
-                                                    }}
-                                                    className="h-10 pl-10 pr-4 bg-slate-50/50 border-slate-200 focus:bg-white focus:border-[var(--brand-primary)] focus:ring-2 focus:ring-[var(--brand-primary)]/20 transition-all"
-                                                />
-                                            </div>
-
-                                            {/* Filter buttons container */}
-                                            <div className="flex flex-col sm:flex-row gap-4 sm:gap-3 order-2 sm:order-2">
-                                                {/* Donor Countries Multi-Select */}
-                                                <DropdownMenu>
-                                                    <DropdownMenuTrigger asChild>
-                                                        <Button
-                                                            variant="outline"
-                                                            className={`h-10 w-full sm:w-52 justify-between font-medium transition-all ${combinedDonors.length > 0
-                                                                ? 'border-[var(--brand-primary)] bg-[var(--brand-bg-lighter)] text-[var(--brand-primary)] hover:bg-[var(--brand-bg-light)]'
-                                                                : 'bg-slate-50/50 border-slate-200 hover:bg-white hover:border-slate-300'
-                                                                }`}
-                                                        >
-                                                            <div className="flex items-center gap-2 min-w-0 flex-1">
-                                                                <Globe className="h-4 w-4 shrink-0" />
-                                                                <span className="truncate">
-                                                                    {combinedDonors.length === 0
-                                                                        ? labels.filters.donorPlaceholder
-                                                                        : combinedDonors.length === 1
-                                                                            ? combinedDonors[0]
-                                                                            : `${combinedDonors.length} ${labels.filterDescription.donors}`
-                                                                    }
-                                                                </span>
-                                                            </div>
-                                                            <ChevronDown className="ml-2 h-4 w-4 opacity-50 shrink-0" />
-                                                        </Button>
-                                                    </DropdownMenuTrigger>
-                                                <DropdownMenuContent align="start"
-                                                    side="bottom"
-                                                    sideOffset={4}
-                                                    className="w-[var(--radix-dropdown-menu-trigger-width)] max-h-[300px] overflow-y-auto bg-white border border-slate-200 shadow-lg"
-                                                    onCloseAutoFocus={(e) => e.preventDefault()}
-                                                >
-                                                    {/* Search Input */}
-                                                    <div className="p-2">
-                                                        <div className="relative">
-                                                            <Search className="absolute left-2 top-1/2 -translate-y-1/2 h-3 w-3 text-slate-400" />
-                                                            <Input
-                                                                placeholder={labels.filters.donorSearchPlaceholder}
-                                                                value={donorSearchQuery}
-                                                                onChange={(e) => setDonorSearchQuery(e.target.value)}
-                                                                className="h-7 pl-7 text-xs bg-slate-50 border-slate-200 focus:bg-white"
-                                                                onKeyDown={(e) => e.stopPropagation()}
-                                                            />
-                                                        </div>
-                                                    </div>
-
-                                                    {combinedDonors.length > 0 && (
-                                                        <>
-                                                            <DropdownMenuLabel className="text-xs font-semibold text-[var(--brand-primary)] flex items-center gap-1.5">
-                                                                <Filter className="h-3 w-3" />
-                                                                {combinedDonors.length} {labels.filters.selected}
-                                                            </DropdownMenuLabel>
-                                                            <DropdownMenuSeparator />
-                                                        </>
+                            <div className="flex items-center gap-2">
+                                {/* Sort Dropdown only for Table view */}
+                                {activeView === 'table' && (
+                                    <DropdownMenu onOpenChange={(open) => setSortMenuOpen(open)}>
+                                        <DropdownMenuTrigger asChild>
+                                            <Button
+                                                variant="outline"
+                                                className="h-7 w-auto px-2.5 justify-between font-medium transition-all bg-slate-50/50 border-slate-200 hover:bg-white hover:border-slate-300 text-[11px]"
+                                            >
+                                                <div className="flex items-center gap-1.5 min-w-0">
+                                                    {sortBy === 'name' ? (
+                                                        // For alphabetical: asc = A-Z (down), desc = Z-A (up)
+                                                        sortDirection === 'asc' ? (
+                                                            <ArrowDownWideNarrow className="w-3 h-3 shrink-0" />
+                                                        ) : (
+                                                            <ArrowUpWideNarrow className="w-3 h-3 shrink-0" />
+                                                        )
+                                                    ) : (
+                                                        // For numbers: asc = low-to-high (up), desc = high-to-low (down)
+                                                        sortDirection === 'asc' ? (
+                                                            <ArrowUpWideNarrow className="w-3 h-3 shrink-0" />
+                                                        ) : (
+                                                            <ArrowDownWideNarrow className="w-3 h-3 shrink-0" />
+                                                        )
                                                     )}
+                                                    <span className="truncate">
+                                                        {sortBy === 'name' 
+                                                            ? 'Alphabetically' 
+                                                            : sortBy === 'donors' 
+                                                            ? 'Donors' 
+                                                            : 'Assets'}
+                                                    </span>
+                                                </div>
+                                                <ChevronDown className={`ml-1.5 h-3 w-3 opacity-50 shrink-0 transform transition-transform ${
+                                                    sortMenuOpen ? 'rotate-180' : ''
+                                                }`} />
+                                            </Button>
+                                        </DropdownMenuTrigger>
+                                        <DropdownMenuContent 
+                                            align="end" 
+                                            side="bottom"
+                                            sideOffset={4}
+                                            className="w-auto min-w-[180px] bg-white border border-slate-200 shadow-lg"
+                                        >
+                                            <DropdownMenuItem
+                                                onClick={() => {
+                                                    setSortBy('name');
+                                                    setSortDirection('asc');
+                                                }}
+                                                className="cursor-pointer text-[11px] py-1"
+                                            >
+                                                <ArrowDownWideNarrow className="w-3 h-3 mr-2" />
+                                                Alphabetically (A-Z)
+                                            </DropdownMenuItem>
+                                            <DropdownMenuItem
+                                                onClick={() => {
+                                                    setSortBy('name');
+                                                    setSortDirection('desc');
+                                                }}
+                                                className="cursor-pointer text-[11px] py-1"
+                                            >
+                                                <ArrowUpWideNarrow className="w-3 h-3 mr-2" />
+                                                Alphabetically (Z-A)
+                                            </DropdownMenuItem>
+                                            <DropdownMenuItem
+                                                onClick={() => {
+                                                    setSortBy('donors');
+                                                    setSortDirection('desc');
+                                                }}
+                                                className="cursor-pointer text-[11px] py-1"
+                                            >
+                                                <ArrowDownWideNarrow className="w-3 h-3 mr-2" />
+                                                Number of Donors
+                                            </DropdownMenuItem>
+                                            <DropdownMenuItem
+                                                onClick={() => {
+                                                    setSortBy('donors');
+                                                    setSortDirection('asc');
+                                                }}
+                                                className="cursor-pointer text-[11px] py-1"
+                                            >
+                                                <ArrowUpWideNarrow className="w-3 h-3 mr-2" />
+                                                Number of Donors
+                                            </DropdownMenuItem>
+                                            <DropdownMenuItem
+                                                onClick={() => {
+                                                    setSortBy('assets');
+                                                    setSortDirection('desc');
+                                                }}
+                                                className="cursor-pointer text-[11px] py-1"
+                                            >
+                                                <ArrowDownWideNarrow className="w-3 h-3 mr-2" />
+                                                Number of Assets
+                                            </DropdownMenuItem>
+                                            <DropdownMenuItem
+                                                onClick={() => {
+                                                    setSortBy('assets');
+                                                    setSortDirection('asc');
+                                                }}
+                                                className="cursor-pointer text-[11px] py-1"
+                                            >
+                                                <ArrowUpWideNarrow className="w-3 h-3 mr-2" />
+                                                Number of Assets
+                                            </DropdownMenuItem>
+                                        </DropdownMenuContent>
+                                    </DropdownMenu>
+                                )}
+                                {/* View Toggle Switch Tabs */}
+                                <Tabs value={activeView} onValueChange={(value) => setActiveView(value as 'table' | 'network')} className="w-auto hidden sm:flex">
+                                    <TabsList className="h-7 p-0.5 bg-slate-50 border border-slate-200 rounded-md">
+                                        <TabsTrigger
+                                            value="table"
+                                            className="h-6 px-2.5 text-[11px] font-medium rounded-md transition-all data-[state=active]:bg-white data-[state=active]:shadow-sm data-[state=active]:border data-[state=active]:border-slate-200 data-[state=active]:text-slate-800 text-slate-600 bg-slate-50 border-none"
+                                        >
+                                            <Table className="h-3 w-3 mr-1.5" />
+                                            Table
+                                        </TabsTrigger>
+                                        <TabsTrigger
+                                            value="network"
+                                            className="h-6 px-2.5 text-[11px] font-medium rounded-md transition-all data-[state=active]:bg-white data-[state=active]:shadow-sm data-[state=active]:border data-[state=active]:border-slate-200 data-[state=active]:text-slate-800 text-slate-600 bg-slate-50 border-none"
+                                        >
+                                            <Network className="h-3 w-3 mr-1.5" />
+                                            Network
+                                        </TabsTrigger>
+                                    </TabsList>
+                                </Tabs>
+                                
+                                
+                            </div>
+                        </CardTitle>
+                        
 
-                                                    <div className="max-h-[200px] overflow-y-auto">
-                                                        {availableDonorCountries
-                                                            .filter(donor =>
-                                                                donor.toLowerCase().includes(donorSearchQuery.toLowerCase())
-                                                            )
-                                                            .map((donor) => (
-                                                                <DropdownMenuCheckboxItem
-                                                                    key={donor}
-                                                                    checked={combinedDonors.includes(donor)}
-                                                                    onCheckedChange={(checked) => {
-                                                                        if (checked) {
-                                                                            // Add and deduplicate using a Set to guard against race or duplicate entries
-                                                                            onDonorsChange(Array.from(new Set([...combinedDonors, donor])));
-                                                                        } else {
-                                                                            onDonorsChange(combinedDonors.filter(d => d !== donor));
-                                                                        }
-                                                                    }}
-                                                                    onSelect={(e) => e.preventDefault()}
-                                                                    className="cursor-pointer"
-                                                                >
-                                                                    {donor}
-                                                                </DropdownMenuCheckboxItem>
-                                                            ))}
-                                                    </div>
-                                                </DropdownMenuContent>
-                                            </DropdownMenu>
-
-                                                {/* Investment Types Multi-Select */}
-                                                <DropdownMenu>
-                                                    <DropdownMenuTrigger asChild>
-                                                        <Button
-                                                            variant="outline"
-                                                            className={`h-10 w-full sm:w-52 justify-between font-medium transition-all ${investmentTypes.length > 0
-                                                                ? 'border-[var(--brand-primary)] bg-[var(--brand-bg-lighter)] text-[var(--brand-primary)] hover:bg-[var(--brand-bg-light)]'
-                                                                : 'bg-slate-50/50 border-slate-200 hover:bg-white hover:border-slate-300'
-                                                                }`}
-                                                        >
-                                                            <div className="flex items-center gap-2 min-w-0 flex-1">
-                                                                <DatabaseBackup className="h-4 w-4 shrink-0" />
-                                                                <span className="truncate">
-                                                                    {investmentTypes.length === 0
-                                                                        ? labels.filters.typePlaceholder
-                                                                        : investmentTypes.length === 1
-                                                                            ? (() => {
-                                                                                const type = investmentTypes[0];
-                                                                                const typeKey = Object.keys(labels.investmentTypes).find(key =>
-                                                                                    labels.investmentTypes[key as keyof typeof labels.investmentTypes].toLowerCase().includes(type.toLowerCase()) ||
-                                                                                    type.toLowerCase().includes(key.toLowerCase())
-                                                                                );
-                                                                                return typeKey
-                                                                                    ? labels.investmentTypes[typeKey as keyof typeof labels.investmentTypes]
-                                                                                    : type;
-                                                                            })()
-                                                                            : `${investmentTypes.length} ${labels.filterDescription.types}`
-                                                                    }
-                                                                </span>
-                                                            </div>
-                                                            <ChevronDown className="ml-2 h-4 w-4 opacity-50 shrink-0" />
-                                                        </Button>
-                                                    </DropdownMenuTrigger>
-                                                    <DropdownMenuContent
-                                                        align="start"
-                                                        side="bottom"
-                                                        sideOffset={4}
-                                                        className="w-64 max-h-[300px] overflow-y-auto bg-white border border-slate-200 shadow-lg"
-                                                        onCloseAutoFocus={(e) => e.preventDefault()}
-                                                    >
-                                                        {investmentTypes.length > 0 && (
-                                                            <>
-                                                                <DropdownMenuLabel className="text-xs font-semibold text-[var(--brand-primary)] flex items-center gap-1.5">
-                                                                    <Filter className="h-3 w-3" />
-                                                                    {investmentTypes.length} {labels.filters.selected}
-                                                                </DropdownMenuLabel>
-                                                                <DropdownMenuSeparator />
-                                                            </>
-                                                        )}
-                                                        {availableInvestmentTypes.map((type) => {
-                                                            // Find the label from labels.json
-                                                            const typeKey = Object.keys(labels.investmentTypes).find(key =>
-                                                                labels.investmentTypes[key as keyof typeof labels.investmentTypes].toLowerCase().includes(type.toLowerCase()) ||
-                                                                type.toLowerCase().includes(key.toLowerCase())
-                                                            );
-                                                            const displayName = typeKey
-                                                                ? labels.investmentTypes[typeKey as keyof typeof labels.investmentTypes]
-                                                                : type;
-
-                                                            // Get the icon for this type
-                                                            const IconComponent = getIconForInvestmentType(displayName);
-
-                                                            // Normalize comparison: check if any investmentType matches this type (case-insensitive)
-                                                            const isChecked = investmentTypes.some(selected =>
-                                                                selected.toLowerCase().trim() === type.toLowerCase().trim()
-                                                            );
-
-                                                            return (
-                                                                <DropdownMenuCheckboxItem
-                                                                    key={type}
-                                                                    checked={isChecked}
-                                                                    onCheckedChange={(checked) => {
-                                                                        if (checked) {
-                                                                            // Add only if not already present (case-insensitive check)
-                                                                            const alreadyExists = investmentTypes.some(t =>
-                                                                                t.toLowerCase().trim() === type.toLowerCase().trim()
-                                                                            );
-                                                                            if (!alreadyExists) {
-                                                                                onTypesChange([...investmentTypes, type]);
-                                                                            }
-                                                                        } else {
-                                                                            // Remove all case-insensitive matches
-                                                                            onTypesChange(investmentTypes.filter(t =>
-                                                                                t.toLowerCase().trim() !== type.toLowerCase().trim()
-                                                                            ));
-                                                                        }
-                                                                    }}
-                                                                    onSelect={(e) => e.preventDefault()}
-                                                                    className="cursor-pointer"
-                                                                >
-                                                                    <div className="flex items-center gap-2">
-                                                                        <IconComponent className="w-4 h-4" />
-                                                                        <span>{displayName}</span>
-                                                                    </div>
-                                                                </DropdownMenuCheckboxItem>
-                                                            );
-                                                        })}
-                                                    </DropdownMenuContent>
-                                                </DropdownMenu>
-
-                                                {/* Reset Filters Button */}
-                                                <Button
-                                                    variant="outline"
-                                                    onClick={onResetFilters}
-                                                    disabled={!(combinedDonors.length > 0 || investmentTypes.length > 0 || appliedSearchQuery)}
-                                                    className={`h-10 w-full sm:w-auto px-4 font-medium transition-all ${combinedDonors.length > 0 || investmentTypes.length > 0 || appliedSearchQuery
-                                                        ? 'border-slate-300 bg-slate-100 text-slate-700 hover:bg-slate-200 hover:border-slate-300'
-                                                        : 'bg-slate-50/50 border-slate-200 text-slate-400 hover:bg-slate-100 hover:border-slate-300'
-                                                        }`}
-                                                    title={labels.ui.resetFilters}
-                                                >
-                                                    <RotateCcw className="w-4 h-4" />
-                                                    <span className="ml-2 sm:hidden">Reset</span>
-                                                </Button>
-                                            </div>
-                                        </div>
+                    </CardHeader>                                    {/* Filters */}
+                                    <CardContent className="p-4 sm:p-6">
+                                        <FilterBar
+                                            searchQuery={searchQuery}
+                                            appliedSearchQuery={appliedSearchQuery}
+                                            onSearchChange={onSearchChange}
+                                            onSearchSubmit={onSearchSubmit}
+                                            combinedDonors={combinedDonors}
+                                            availableDonorCountries={availableDonorCountries}
+                                            onDonorsChange={onDonorsChange}
+                                            investmentTypes={investmentTypes}
+                                            allKnownInvestmentTypes={allKnownInvestmentTypes}
+                                            onTypesChange={onTypesChange}
+                                            onResetFilters={onResetFilters}
+                                        />
                                         <p className="text-xs sm:text-sm text-slate-600 mt-5 -mb-6 sm:mt-2 sm:-mb-7">
                                             {getFilterDescription()}
                                         </p>
                                     </CardContent>
+
+                                    {/* Tabs for Table and Network View */}
                                     <CardContent className="px-4 sm:px-6 pt-2 sm:pt-0">
+                                        <Tabs value={activeView} className="w-full">
+                                            <TabsContent value="table" className="mt-0">
                                         <div className="space-y-2">
                                             {organizationsWithProjects
-                                                .sort((a, b) => a.organizationName.localeCompare(b.organizationName))
+                                                .sort((a, b) => {
+                                                    let comparison = 0;
+                                                    
+                                                    if (sortBy === 'name') {
+                                                        comparison = a.organizationName.localeCompare(b.organizationName);
+                                                    } else if (sortBy === 'donors') {
+                                                        // Sort by number of unique donors
+                                                        comparison = a.donorCountries.length - b.donorCountries.length;
+                                                    } else if (sortBy === 'assets') {
+                                                        // Sort by number of projects/assets
+                                                        comparison = a.projects.length - b.projects.length;
+                                                    }
+                                                    
+                                                    // Apply sort direction
+                                                    return sortDirection === 'asc' ? comparison : -comparison;
+                                                })
                                                 .map((org) => {
                                                     const isExpanded = expandedOrgs.has(org.id);
                                                     const hasProjects = org.projects.length > 0;
@@ -1103,8 +1093,8 @@ const CrisisDataDashboard = ({
                                                                                     onOpenOrganizationModal(orgKey);
                                                                                 }
                                                                             }}
-                                                                            className="hidden sm:inline-flex items-center justify-center gap-1 bg-[var(--detail)] border-[var(--detail)] text-[var(--detail-text)] hover:bg-[var(--detail-light)] hover:border-[var(--detail-border)] text-[10px] h-6 px-2 rounded-md"
-                                                                        >
+                                                                                className="hidden sm:inline-flex items-center justify-center gap-1 text-[10px] h-6 px-2 rounded-md text-[var(--badge-slate-bg)] bg-[var(--badge-slate-text)] hover:bg-slate-400 duration-150"
+                                                                            >
                                                                             <div className="hidden sm:inline-flex items-center justify-center gap-1">
                                                                                 <Info className="w-3 h-3" />
                                                                                 <span>Details</span>
@@ -1145,9 +1135,22 @@ const CrisisDataDashboard = ({
                                                                                     </span>
                                                                                     {project.investmentTypes.length > 0 && (
                                                                                         <div className="flex flex-wrap gap-1 items-center">
-                                                                                            {project.investmentTypes.map((type, idx) => (
-                                                                                                <Badge key={idx} text={type} variant="indigo" />
-                                                                                            ))}
+                                                                                            {project.investmentTypes.map((type, idx) => {
+                                                                                                const IconComponent = getIconForInvestmentType(type);
+                                                                                                return (
+                                                                                                    <span 
+                                                                                                        key={idx} 
+                                                                                                        className="inline-flex items-center gap-1 px-2 py-1 rounded-md text-xs font-semibold"
+                                                                                                        style={{
+                                                                                                            backgroundColor: 'var(--badge-other-bg)',
+                                                                                                            color: 'var(--badge-other-text)'
+                                                                                                        }}
+                                                                                                    >
+                                                                                                        <IconComponent className="w-3.5 h-3.5" />
+                                                                                                        {type}
+                                                                                                    </span>
+                                                                                                );
+                                                                                            })}
                                                                                         </div>
                                                                                     )}
                                                                                 </div>
@@ -1171,6 +1174,31 @@ const CrisisDataDashboard = ({
                                                     );
                                                 })}
                                         </div>
+                                            </TabsContent>
+
+                                            <TabsContent value="network" className="mt-0">
+                                                <div className="w-full" style={{ height: '600px' }}>
+                                                    <NetworkGraph
+                                                        organizationsWithProjects={organizationsWithProjects}
+                                                        onOpenOrganizationModal={onOpenOrganizationModal}
+                                                        onOpenProjectModal={onOpenProjectModal}
+                                                        selectedOrgKey={selectedOrgKey}
+                                                        selectedProjectKey={selectedProjectKey}
+                                                        searchQuery={searchQuery}
+                                                        appliedSearchQuery={appliedSearchQuery}
+                                                        onSearchChange={onSearchChange}
+                                                        onSearchSubmit={onSearchSubmit}
+                                                        combinedDonors={combinedDonors}
+                                                        availableDonorCountries={availableDonorCountries}
+                                                        onDonorsChange={onDonorsChange}
+                                                        investmentTypes={investmentTypes}
+                                                        allKnownInvestmentTypes={allKnownInvestmentTypes}
+                                                        onTypesChange={onTypesChange}
+                                                        onResetFilters={onResetFilters}
+                                                    />
+                                                </div>
+                                            </TabsContent>
+                                        </Tabs>
                                     </CardContent>
                                 </Card>
                             </div>
@@ -1183,14 +1211,14 @@ const CrisisDataDashboard = ({
                             <div
                                 className={`transition-all duration-1200 ease-in-out ${
                                     combinedDonors.length > 0
-                                        ? 'opacity-100 max-h-[1000px] mb-6'
-                                        : 'opacity-0 max-h-0 overflow-hidden mb-0'
+                                        ? 'max-h-[1000px] mb-6'
+                                        : 'max-h-0 overflow-hidden mb-0'
                                 }`}
                             >
                                 <ChartCard
                                     title={labels.sections.donorCount}
-                                    icon={<Globe className="text-slate-600" />}
-                                    data={topDonors}
+                                    icon={<Globe style={{ color: 'var(--brand-primary)' }}  />}
+                                    data={donorChartData}
                                     barColor="var(--brand-primary-lighter)"
                                     footnote={
                                         combinedDonors.length > 0
@@ -1208,13 +1236,13 @@ const CrisisDataDashboard = ({
 
                             <ChartCard
                                 title={labels.sections.organizationTypes}
-                                icon={<Building2 className="text-slate-600" />}
+                                icon={<Building2 style={{ color: 'var(--brand-primary)' }}  />}
                                 data={organizationTypesChartData}
                                 barColor="var(--brand-primary-lighter)"
                             />
                             <ChartCard
                                 title={labels.sections.projectCategories}
-                                icon={<Database className="text-slate-600" />}
+                                icon={<Database style={{ color: 'var(--brand-primary)' }}  />}
                                 data={projectTypesChartData}
                                 barColor="var(--brand-primary-lighter)"
                                 footnote={labels.ui.chartFootnote}
@@ -1226,7 +1254,7 @@ const CrisisDataDashboard = ({
             </div>
 
             {/* Impressum Footer */}
-            <footer className="bg-slate-100 border-t border-slate-200 mt-8 sm:mt-16">
+            <footer className="bg-white border-t border-slate-200 mt-8 sm:mt-16">
                 <div className="max-w-[82rem] mx-auto px-4 sm:px-6 lg:px-8 py-4 sm:py-6">
                     <div className="flex flex-col sm:flex-row items-center justify-center sm:justify-between gap-2 sm:gap-0">
 
