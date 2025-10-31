@@ -751,7 +751,7 @@ const CrisisDataDashboard = ({
                                         <DropdownMenuTrigger asChild>
                                             <Button
                                                 variant="outline"
-                                                className="h-7 w-auto px-2.5 justify-between font-medium transition-all bg-slate-50/50 border-slate-200 hover:bg-white hover:border-slate-300"
+                                                className="h-7 w-auto px-2.5 justify-between font-medium transition-all bg-slate-50/50 border-slate-200 hover:bg-white hover:border-slate-300 text-[11px]"
                                             >
                                                 <div className="flex items-center gap-1.5 min-w-0">
                                                     {sortDirection === 'asc' ? (
@@ -759,7 +759,7 @@ const CrisisDataDashboard = ({
                                                     ) : (
                                                         <ArrowDownWideNarrow className="w-3 h-3 shrink-0" />
                                                     )}
-                                                    <span className="text-xs truncate">
+                                                    <span className="truncate">
                                                         {sortBy === 'name' 
                                                             ? 'Alphabetically' 
                                                             : sortBy === 'donors' 
@@ -846,16 +846,16 @@ const CrisisDataDashboard = ({
                                     <TabsList className="h-7 p-0.5 bg-slate-50 border border-slate-200 rounded-md">
                                         <TabsTrigger
                                             value="table"
-                                            className="h-6 px-2.5 text-xs font-medium rounded-md transition-all data-[state=active]:bg-white data-[state=active]:shadow-sm data-[state=active]:border data-[state=active]:border-slate-200 data-[state=active]:text-slate-800 text-slate-600 bg-slate-50 border-none"
+                                            className="h-6 px-2.5 text-[11px] font-medium rounded-md transition-all data-[state=active]:bg-white data-[state=active]:shadow-sm data-[state=active]:border data-[state=active]:border-slate-200 data-[state=active]:text-slate-800 text-slate-600 bg-slate-50 border-none"
                                         >
-                                            <Table className="h-3 w-3 mr-1" />
+                                            <Table className="h-3 w-3 mr-1.5" />
                                             Table
                                         </TabsTrigger>
                                         <TabsTrigger
                                             value="network"
-                                            className="h-6 px-2.5 text-xs font-medium rounded-md transition-all data-[state=active]:bg-white data-[state=active]:shadow-sm data-[state=active]:border data-[state=active]:border-slate-200 data-[state=active]:text-slate-800 text-slate-600 bg-slate-50 border-none"
+                                            className="h-6 px-2.5 text-[11px] font-medium rounded-md transition-all data-[state=active]:bg-white data-[state=active]:shadow-sm data-[state=active]:border data-[state=active]:border-slate-200 data-[state=active]:text-slate-800 text-slate-600 bg-slate-50 border-none"
                                         >
-                                            <Network className="h-3 w-3 mr-1" />
+                                            <Network className="h-3 w-3 mr-1.5" />
                                             Network
                                         </TabsTrigger>
                                     </TabsList>
