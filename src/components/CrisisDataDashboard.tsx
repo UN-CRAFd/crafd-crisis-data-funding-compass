@@ -89,6 +89,7 @@ interface CrisisDataDashboardProps {
     onOpenProjectModal: (projectKey: string) => void;
     onCloseOrganizationModal: () => void;
     onCloseProjectModal: () => void;
+    onViewChange?: (view: 'table' | 'network') => void;
     logoutButton?: React.ReactNode;
 }
 
@@ -235,6 +236,7 @@ const CrisisDataDashboard = ({
     onOpenProjectModal,
     onCloseOrganizationModal,
     onCloseProjectModal,
+    onViewChange,
     logoutButton
 }: CrisisDataDashboardProps) => {
     // UI state (not related to routing)
@@ -257,6 +259,13 @@ const CrisisDataDashboard = ({
         window.addEventListener('resize', handleResize);
         return () => window.removeEventListener('resize', handleResize);
     }, []);
+
+    // Notify parent when view changes
+    useEffect(() => {
+        if (onViewChange) {
+            onViewChange(activeView);
+        }
+    }, [activeView, onViewChange]);
 
     // Modal loading states (project modal always URL-based now)
     const [projectModalLoading] = useState(false);
