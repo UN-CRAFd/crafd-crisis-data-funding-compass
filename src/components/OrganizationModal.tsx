@@ -1,9 +1,9 @@
 'use client';
 
-import { Building2, Check, ChevronDown, ChevronUp, ExternalLink, Package, Share2 } from 'lucide-react';
-import { useCallback, useEffect, useRef, useState } from 'react';
+import { Building2, ChevronDown, ChevronUp, ExternalLink, Package } from 'lucide-react';
+import { useState } from 'react';
 import ModalOrganizationFocus from './ModalOrganizationFocus';
-import CloseButton from './CloseButton';
+import BaseModal, { ModalHeader } from './BaseModal';
 
 interface OrganizationModalProps {
     // Accept the full organization record coming from `public/data/organizations-table.json`
@@ -31,90 +31,10 @@ export default function OrganizationModal({
     orgDonorCountriesMap = {},
     loading
 }: OrganizationModalProps): React.ReactElement {
-    const [isVisible, setIsVisible] = useState(false);
-    const [isClosing, setIsClosing] = useState(false);
-    const modalRef = useRef<HTMLDivElement>(null);
-    const [touchStart, setTouchStart] = useState<number | null>(null);
-    const [touchEnd, setTouchEnd] = useState<number | null>(null);
-    const [showCopied, setShowCopied] = useState(false);
-    // (fields is read from `organization` inside renderHeader/renderBody)
-
-    // Animation state management
-    useEffect(() => {
-        if (organization) {
-            const timer = setTimeout(() => setIsVisible(true), 100);
-            return () => clearTimeout(timer);
-        }
-    }, [organization]);
-
-    // Reset visibility when modal closes
-    useEffect(() => {
-        if (!organization) {
-            setIsVisible(false);
-            setIsClosing(false);
-        }
-    }, [organization]);
-
-    const handleClose = useCallback(() => {
-        setIsClosing(true);
-        setTimeout(() => {
-            try {
-                window.dispatchEvent(new CustomEvent('closeOrganizationModal'));
-            } catch (e) {
-                console.error('Failed to dispatch closeOrganizationModal event', e);
-            }
-        }, 300);
-    }, []);
-
-    // Close modal on escape key
-    useEffect(() => {
-        const handleEscape = (e: KeyboardEvent) => {
-            if (e.key === 'Escape') {
-                handleClose();
-            }
-        };
-        document.addEventListener('keydown', handleEscape);
-        return () => document.removeEventListener('keydown', handleEscape);
-    }, [handleClose]);
-
-    // Swipe handling
-    const minSwipeDistance = 50;
-    const onTouchStart = (e: React.TouchEvent) => {
-        setTouchEnd(null);
-        setTouchStart(e.targetTouches[0].clientX);
-    };
-    const onTouchMove = (e: React.TouchEvent) => {
-        setTouchEnd(e.targetTouches[0].clientX);
-    };
-    const onTouchEnd = () => {
-        if (!touchStart || !touchEnd) return;
-        const distance = touchStart - touchEnd;
-        const isRightSwipe = distance < -minSwipeDistance;
-        if (isRightSwipe) {
-            handleClose();
-        }
-    };
-
-    // Prevent body scroll when modal is open while maintaining scrollbar space
-    useEffect(() => {
-        const originalOverflow = document.documentElement.style.overflow;
-        document.documentElement.style.overflow = 'hidden';
-        return () => {
-            document.documentElement.style.overflow = originalOverflow;
-        };
-    }, []);
-
-    // Handle click outside to close
-    const handleBackdropClick = (e: React.MouseEvent) => {
-        if (e.target === e.currentTarget) {
-            handleClose();
-        }
-    };
-
 
     // Reusable subheader component - Major sections (Assets, Funding) - smaller than main title
     const SubHeader = ({ children }: { children: React.ReactNode }) => (
-        <h3 className="text-xl font-qanelas font-black text-[#333333] mb-3 uppercase tracking-wide leading-normal">
+        <h3 className="text-xl font-roboto font-black text-[#333333] mb-3 uppercase tracking-wide leading-normal">
             {children}
         </h3>
     );
@@ -147,48 +67,18 @@ export default function OrganizationModal({
             {children}
         </span>
     );
-    const renderHeader = () => {
-        if (loading) {
-            return (
-                <div className="flex items-center justify-between gap-4">
-                    <div className="h-6 bg-gray-200 rounded w-48 animate-pulse flex-1"></div>
-                    <div className="flex items-center gap-2 shrink-0">
-                        <div className="h-10 w-10 bg-gray-200 rounded-lg animate-pulse"></div>
-                        <div className="h-10 w-20 bg-gray-200 rounded-lg animate-pulse"></div>
-                    </div>
-                </div>
-            );
-        }
 
+    const renderHeader = ({ showCopied, onShare, onClose }: { showCopied: boolean; onShare: () => void; onClose: () => void }) => {
         if (!organization) {
             return (
-                <div className="flex items-center justify-between gap-4">
-                    <h2 className="text-lg sm:text-xl font-semibold text-gray-900 flex-1">Organization Not Found</h2>
-                    <div className="flex items-center gap-2 shrink-0">
-                        <button
-                            onClick={() => {
-                                navigator.clipboard.writeText(window.location.href);
-                                setShowCopied(true);
-                                setTimeout(() => setShowCopied(false), 2000);
-                            }}
-                            className={`flex items-center justify-center h-12 w-12 sm:h-10 sm:w-10 rounded-full sm:rounded-lg transition-all duration-200 ease-out touch-manipulation cursor-pointer focus:outline-none shrink-0 shadow-lg sm:shadow-none ${
-                                showCopied
-                                    ? 'text-white'
-                                    : 'text-white bg-slate-600 hover:bg-slate-700 sm:text-gray-600 sm:bg-gray-200 sm:hover:bg-gray-400 sm:hover:text-gray-100 focus:bg-slate-700 sm:focus:bg-gray-400 sm:focus:text-gray-100'
-                            }`}
-                            style={showCopied ? { backgroundColor: 'var(--color-success)' } : {}}
-                            aria-label="Share"
-                            title="Share"
-                        >
-                            {showCopied ? (
-                                <Check className="h-5 w-5 sm:h-4 sm:w-4" />
-                            ) : (
-                                <Share2 className="h-5 w-5 sm:h-4 sm:w-4" />
-                            )}
-                        </button>
-                        <CloseButton onClick={handleClose} absolute={false} />
-                    </div>
-                </div>
+                <ModalHeader
+                    icon={<Building2 className="h-6 w-6 sm:h-7 sm:w-7 text-[#333333] shrink-0" />}
+                    title="Organization Not Found"
+                    showCopied={showCopied}
+                    onShare={onShare}
+                    onClose={onClose}
+                    loading={loading}
+                />
             );
         }
 
@@ -198,40 +88,14 @@ export default function OrganizationModal({
             || organization.id;
 
         return (
-            <div className="flex items-center justify-between gap-4">
-                {/* Main title with icon - Responsive sizing */}
-                <div className="flex items-center gap-3 flex-1 min-w-0">
-                    <Building2 className="h-6 w-6 sm:h-7 sm:w-7 text-[#333333] shrink-0" />
-                    <h2 className="text-lg sm:text-xl md:text-xl lg:text-2xl font-bold text-[#333333] leading-tight font-roboto">
-                        {displayName}
-                    </h2>
-                </div>
-                {/* Buttons container */}
-                <div className="flex items-center gap-2 shrink-0">
-                    <button
-                        onClick={() => {
-                            navigator.clipboard.writeText(window.location.href);
-                            setShowCopied(true);
-                            setTimeout(() => setShowCopied(false), 2000);
-                        }}
-                        className={`flex items-center justify-center h-12 w-12 sm:h-10 sm:w-10 rounded-full sm:rounded-lg transition-all duration-200 ease-out touch-manipulation cursor-pointer focus:outline-none shrink-0 shadow-lg sm:shadow-none ${
-                            showCopied
-                                ? 'text-white'
-                                : 'text-white bg-slate-600 hover:bg-slate-700 sm:text-gray-600 sm:bg-gray-200 sm:hover:bg-gray-400 sm:hover:text-gray-100 focus:bg-slate-700 sm:focus:bg-gray-400 sm:focus:text-gray-100'
-                        }`}
-                        style={showCopied ? { backgroundColor: 'var(--color-success)' } : {}}
-                        aria-label="Share"
-                        title="Share"
-                    >
-                        {showCopied ? (
-                            <Check className="h-5 w-5 sm:h-4 sm:w-4" />
-                        ) : (
-                            <Share2 className="h-5 w-5 sm:h-4 sm:w-4" />
-                        )}
-                    </button>
-                    <CloseButton onClick={handleClose} absolute={false} />
-                </div>
-            </div>
+            <ModalHeader
+                icon={<Building2 className="h-6 w-6 sm:h-7 sm:w-7 text-[#333333] shrink-0" />}
+                title={displayName}
+                showCopied={showCopied}
+                onShare={onShare}
+                onClose={onClose}
+                loading={loading}
+            />
         );
     };
 
@@ -413,7 +277,7 @@ export default function OrganizationModal({
                         return (
                             <div>
                                 <div className="mb-3 flex items-center gap-2">
-                                    <h3 className="text-xl font-qanelas font-black text-[#333333] uppercase tracking-wide leading-normal">
+                                    <h3 className="text-xl font-roboto font-black text-[#333333] uppercase tracking-wide leading-normal">
                                         Provided Assets
                                     </h3>
                                     <span className="text-lg font-normal text-gray-500 tabular-nums">({projectsList.length})</span>
@@ -458,7 +322,7 @@ export default function OrganizationModal({
                         return (
                             <div>
                                 <div className="mb-3 flex items-center gap-2">
-                                    <h3 className="text-xl font-qanelas font-black text-[#333333] uppercase tracking-wide leading-normal">
+                                    <h3 className="text-xl font-roboto font-black text-[#333333] uppercase tracking-wide leading-normal">
                                         Organization Donors
                                     </h3>
                                     <span className="text-lg font-normal text-gray-500 tabular-nums">({donorCountries.length})</span>
@@ -490,36 +354,17 @@ export default function OrganizationModal({
                         </div>
                     </div>
                 </div>
-
-
             </div>
         );
     };
 
-    // Single modal wrapper with dynamic content
     return (
-        <div
-            className={`fixed inset-0 bg-black/50 flex items-center justify-end z-50 transition-all duration-300 ease-out ${isVisible && !isClosing ? 'opacity-100' : 'opacity-0'
-                }`}
-            onClick={handleBackdropClick}
-        >
-            <div
-                ref={modalRef}
-                className={`relative w-full sm:w-3/5 md:w-[45%] lg:w-[37%] xl:w-[29%] sm:min-w-[435px] lg:min-w-[500px] xl:min-w-[550px] h-full bg-white shadow-2xl transition-transform duration-300 ease-out flex flex-col ${isVisible && !isClosing ? 'translate-x-0' : 'translate-x-full'}`}
-                onTouchStart={onTouchStart}
-                onTouchMove={onTouchMove}
-                onTouchEnd={onTouchEnd}
-            >
-                {/* Header */}
-                <div className={`px-6 sm:px-8 pt-4 sm:pt-6 pb-4 sm:pb-5 border-b border-gray-300 shrink-0 ${organization ? 'bg-white' : ''}`}>
-                    {renderHeader()}
-                </div>
-
-                {/* Body Content - scrollable if content exceeds viewport */}
-                <div className="overflow-y-auto flex-1">
-                    {renderBody()}
-                </div>
-            </div>
-        </div>
+        <BaseModal
+            isOpen={!!organization}
+            closeEventName="closeOrganizationModal"
+            loading={loading}
+            renderHeader={renderHeader}
+            renderBody={renderBody}
+        />
     );
 }

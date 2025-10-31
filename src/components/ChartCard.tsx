@@ -4,7 +4,7 @@ import { Bar, BarChart, CartesianGrid, Cell, LabelList, ResponsiveContainer, XAx
 
 // Chart-specific styles
 const CHART_STYLES = {
-    cardGlass: "!border-0 bg-white/80 backdrop-blur-sm",
+    cardGlass: "!border-0 bg-white",
     sectionHeader: "flex items-center gap-2 text-lg font-qanelas-subtitle font-black text-slate-800 mb-0 mt-0 uppercase",
 } as const;
 
@@ -75,7 +75,7 @@ const ChartCard = React.memo(function ChartCard({ title, icon, data, barColor, f
     const resolvedColor = getColor(barColor);
 
     return (
-        <Card className={`${CHART_STYLES.cardGlass} sticky top-28`}>
+    <Card className={`${CHART_STYLES.cardGlass} sticky top-28`}>
             <CardHeader className="pb-0 h-6.5">
                 <CardTitle>
                     <SectionHeader icon={icon} title={title} />
@@ -94,7 +94,7 @@ const ChartCard = React.memo(function ChartCard({ title, icon, data, barColor, f
                     <BarChart
                         data={data}
                         layout="vertical"
-                        margin={{ top: 0, right: 15, left: -50, bottom: 0 }}
+                        margin={{ top: 0, right: 10, left: -49, bottom: 0 }}
                     >
                         <CartesianGrid strokeDasharray="3 3" stroke="var(--chart-grid-stroke)" horizontal={false} />
                         <XAxis type="number" stroke="var(--chart-axis-stroke)" tick={{ fontSize: 12, dy: -2 }} tickLine={false} allowDecimals={false} />
@@ -167,12 +167,11 @@ const ChartCard = React.memo(function ChartCard({ title, icon, data, barColor, f
                                     const textWidth = String(value).length * 8;
                                     const minBarWidth = textWidth + 16; // Add some padding
 
-                                    // Position inside bar if it's wide enough, otherwise outside
-                                    const isInside = w > minBarWidth;
-                                    const textX = isInside ? xPos + w - 8 : xPos + w + 8;
-                                    
-                                    const textAnchor = isInside ? 'end' : 'start';
-                                    const textColor = 'var(--chart-text-color)'
+                                    // Position on the left side of the bar when hovering
+                                    // Use the left edge of the bar + padding
+                                    const textX = xPos + 8; // 8px padding from left edge of bar
+                                    const textAnchor = 'start';
+                                    const textColor = 'var(--chart-text-color)';
 
                                     return (
                                         <text
@@ -183,7 +182,7 @@ const ChartCard = React.memo(function ChartCard({ title, icon, data, barColor, f
                                             fontWeight={600}
                                             textAnchor={textAnchor}
                                             dominantBaseline="middle"
-                                            style={{ 
+                                            style={{
                                                 transition: 'opacity 200ms ease-in-out',
                                                 opacity: isVisible ? 1 : 0,
                                                 zIndex: 1001,
@@ -196,7 +195,7 @@ const ChartCard = React.memo(function ChartCard({ title, icon, data, barColor, f
                                 }}
                             />
                         </Bar>
-                    </BarChart>
+                    </BarChart> 
                 </ResponsiveContainer>
                 {footnote && (
                     <p className="text-[10px] text-slate-400 mt-2">
