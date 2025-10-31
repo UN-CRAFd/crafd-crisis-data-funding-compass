@@ -795,16 +795,16 @@ const CrisisDataDashboard = ({
                                             align="end" 
                                             side="bottom"
                                             sideOffset={4}
-                                            className="w-52 bg-white border border-slate-200 shadow-lg"
+                                            className="w-auto min-w-[180px] bg-white border border-slate-200 shadow-lg"
                                         >
                                             <DropdownMenuItem
                                                 onClick={() => {
                                                     setSortBy('name');
                                                     setSortDirection('asc');
                                                 }}
-                                                className="cursor-pointer text-xs py-1.5"
+                                                className="cursor-pointer text-[11px] py-1"
                                             >
-                                                <ArrowDownWideNarrow className="w-3.5 h-3.5 mr-2" />
+                                                <ArrowDownWideNarrow className="w-3 h-3 mr-2" />
                                                 Alphabetically (A-Z)
                                             </DropdownMenuItem>
                                             <DropdownMenuItem
@@ -812,9 +812,9 @@ const CrisisDataDashboard = ({
                                                     setSortBy('name');
                                                     setSortDirection('desc');
                                                 }}
-                                                className="cursor-pointer text-xs py-1.5"
+                                                className="cursor-pointer text-[11px] py-1"
                                             >
-                                                <ArrowUpWideNarrow className="w-3.5 h-3.5 mr-2" />
+                                                <ArrowUpWideNarrow className="w-3 h-3 mr-2" />
                                                 Alphabetically (Z-A)
                                             </DropdownMenuItem>
                                             <DropdownMenuItem
@@ -822,9 +822,9 @@ const CrisisDataDashboard = ({
                                                     setSortBy('donors');
                                                     setSortDirection('desc');
                                                 }}
-                                                className="cursor-pointer text-xs py-1.5"
+                                                className="cursor-pointer text-[11px] py-1"
                                             >
-                                                <ArrowDownWideNarrow className="w-3.5 h-3.5 mr-2" />
+                                                <ArrowDownWideNarrow className="w-3 h-3 mr-2" />
                                                 Number of Donors
                                             </DropdownMenuItem>
                                             <DropdownMenuItem
@@ -832,9 +832,9 @@ const CrisisDataDashboard = ({
                                                     setSortBy('donors');
                                                     setSortDirection('asc');
                                                 }}
-                                                className="cursor-pointer text-xs py-1.5"
+                                                className="cursor-pointer text-[11px] py-1"
                                             >
-                                                <ArrowUpWideNarrow className="w-3.5 h-3.5 mr-2" />
+                                                <ArrowUpWideNarrow className="w-3 h-3 mr-2" />
                                                 Number of Donors
                                             </DropdownMenuItem>
                                             <DropdownMenuItem
@@ -842,9 +842,9 @@ const CrisisDataDashboard = ({
                                                     setSortBy('assets');
                                                     setSortDirection('desc');
                                                 }}
-                                                className="cursor-pointer text-xs py-1.5"
+                                                className="cursor-pointer text-[11px] py-1"
                                             >
-                                                <ArrowDownWideNarrow className="w-3.5 h-3.5 mr-2" />
+                                                <ArrowDownWideNarrow className="w-3 h-3 mr-2" />
                                                 Number of Assets
                                             </DropdownMenuItem>
                                             <DropdownMenuItem
@@ -852,9 +852,9 @@ const CrisisDataDashboard = ({
                                                     setSortBy('assets');
                                                     setSortDirection('asc');
                                                 }}
-                                                className="cursor-pointer text-xs py-1.5"
+                                                className="cursor-pointer text-[11px] py-1"
                                             >
-                                                <ArrowUpWideNarrow className="w-3.5 h-3.5 mr-2" />
+                                                <ArrowUpWideNarrow className="w-3 h-3 mr-2" />
                                                 Number of Assets
                                             </DropdownMenuItem>
                                         </DropdownMenuContent>

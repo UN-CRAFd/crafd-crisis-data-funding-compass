@@ -4,7 +4,7 @@ import React, { useCallback, useEffect, useMemo, useRef, useState } from 'react'
 import { createPortal } from 'react-dom';
 import { forceCollide } from 'd3-force';
 import ForceGraph2D from 'react-force-graph-2d';
-import { Maximize, Minimize } from 'lucide-react';
+import { Maximize, Minimize, Crosshair } from 'lucide-react';
 import type { OrganizationWithProjects } from '../types/airtable';
 import FilterBar from './FilterBar';
 
@@ -121,6 +121,13 @@ const NetworkGraph: React.FC<NetworkGraphProps> = ({
             document.exitFullscreen().then(() => {
                 setIsFullscreen(false);
             });
+        }
+    }, []);
+
+    // Center the graph view
+    const centerView = useCallback(() => {
+        if (graphRef.current) {
+            graphRef.current.zoomToFit(400, 50); // 400ms animation, 50px padding
         }
     }, []);
 
@@ -692,7 +699,7 @@ const NetworkGraph: React.FC<NetworkGraphProps> = ({
         if (!clusterData) return;
 
         clusterData.forEach((nodes, clusterKey) => {
-            if (nodes.length < 2) return;
+            if (nodes.length < 1) return; // Allow single-node clusters
             
             // Calculate convex hull points with adaptive padding (shared logic)
             const basePadding = 15;
@@ -764,17 +771,26 @@ const NetworkGraph: React.FC<NetworkGraphProps> = ({
                     <div className="p-2.5 border-b border-slate-200">
                         <div className="flex items-center justify-between mb-2">
                             <div className="text-xs font-semibold text-slate-800/90">Legend</div>
-                            <button
-                                onClick={toggleFullscreen}
-                                className="ml-2 p-1 hover:bg-slate-200/50 rounded transition-colors"
-                                title={isFullscreen ? 'Exit fullscreen' : 'Enter fullscreen'}
-                            >
-                                {isFullscreen ? (
-                                    <Minimize className="w-3.5 h-3.5 text-slate-600" />
-                                ) : (
-                                    <Maximize className="w-3.5 h-3.5 text-slate-600" />
-                                )}
-                            </button>
+                            <div className="flex gap-1">
+                                <button
+                                    onClick={centerView}
+                                    className="p-1 hover:bg-slate-200/50 rounded transition-colors"
+                                    title="Center view"
+                                >
+                                    <Crosshair className="w-3.5 h-3.5 text-slate-600" />
+                                </button>
+                                <button
+                                    onClick={toggleFullscreen}
+                                    className="p-1 hover:bg-slate-200/50 rounded transition-colors"
+                                    title={isFullscreen ? 'Exit fullscreen' : 'Enter fullscreen'}
+                                >
+                                    {isFullscreen ? (
+                                        <Minimize className="w-3.5 h-3.5 text-slate-600" />
+                                    ) : (
+                                        <Maximize className="w-3.5 h-3.5 text-slate-600" />
+                                    )}
+                                </button>
+                            </div>
                         </div>
                         <div className="space-y-1.5">
                             <div className="flex items-center gap-2">
