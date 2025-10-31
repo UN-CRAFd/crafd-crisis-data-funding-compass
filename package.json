@@ -27,6 +27,7 @@
     "cheerio": "^1.1.2",
     "class-variance-authority": "^0.7.1",
     "clsx": "^2.1.1",
+    "d3-force": "^3.0.0",
     "dotenv": "^17.2.3",
     "force-graph": "^1.51.0",
     "i18n-iso-countries": "^7.0.0",
