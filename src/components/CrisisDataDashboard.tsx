@@ -678,7 +678,7 @@ const CrisisDataDashboard = ({
                                         tooltip={labels.stats.donorCountries.tooltip}
                                     />
                                 </div>
-                                <div className="flex-shrink-0 w-[280px] snap-center">
+                                <div className="flex-shrink-0 w-[290px] snap-center">
                                     <StatCard
                                         icon={<Building2 style={{ color: 'var(--brand-primary)' }} />}
                                         title={labels.stats.dataProviders.title}
