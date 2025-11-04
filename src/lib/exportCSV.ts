@@ -36,7 +36,7 @@ export function generateOrganizationsCSV(organizations: OrganizationWithProjects
         'Organization Name',
         'Organization Type',
         'Description',
-        'Supporting Countries',
+        'Supporting Donors',
     ];
     
     // Generate rows
@@ -56,7 +56,6 @@ export function generateOrganizationsCSV(organizations: OrganizationWithProjects
             org.type,
             org.description || '',
             supportingCountries,
-            investmentTypes
         ];
     });
     
@@ -72,7 +71,7 @@ export function generateProjectsCSV(organizations: OrganizationWithProjects[]): 
         'Asset Name',
         'Organization Name',
         'Investment Types',
-        'Supporting Countries',
+        'Supporting Donors',
         'Description',
         'Website'
     ];
@@ -86,7 +85,6 @@ export function generateProjectsCSV(organizations: OrganizationWithProjects[]): 
                 project.projectName,
                 org.organizationName,
                 project.investmentTypes.join('; '),
-                project.investmentThemes ? project.investmentThemes.join('; ') : '',
                 project.donorCountries.length > 0 ? project.donorCountries.sort().join('; ') : org.donorCountries.sort().join('; '),
                 project.projectDescription || project.description || '',
                 project.projectWebsite || project.website || ''
