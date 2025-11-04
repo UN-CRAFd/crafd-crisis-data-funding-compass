@@ -21,9 +21,7 @@
       "Org HQ Country": "United States",
       "Has received CRAF'd Funding?": "NO",
       "org_key": "hhi",
-      "Org Type": [
-        "Academia"
-      ]
+      "Org Type": "Academia"
     },
     "agencies": [
       {
@@ -174,9 +172,7 @@
       "Org HQ Country": "Germany",
       "Has received CRAF'd Funding?": "NO",
       "org_key": "heigit",
-      "Org Type": [
-        "Academia"
-      ]
+      "Org Type": "Academia"
     },
     "agencies": [
       {
@@ -251,9 +247,7 @@
       "Org HQ Country": "United Kingdom",
       "Has received CRAF'd Funding?": "NO",
       "org_key": "ukhih",
-      "Org Type": [
-        "Network / Consortium"
-      ]
+      "Org Type": "Network / Consortium"
     },
     "agencies": [
       {
@@ -297,15 +291,14 @@
     "name": "Barcelona School of Economics (BSE)",
     "fields": {
       "Org Full Name": "Barcelona School of Economics (BSE)",
+      "Org Short Name": "BSE",
       "Org Description": "The Barcelona School of Economics (BSE) was founded in 2006 by Andreu Mas-Colell as an institution for scientific cooperation between four academic units: two university departments and two research centers with a long tradition of collaboration and a history of leadership in the field of Economics.",
       "Org Mission": "BSE aims to promote the creation and transmission of frontier knowledge in Economics and related disciplines, by consolidating Barcelona as a world-class center of research, academic education, and professional training with the ultimate goals of informing policy and promoting economic and social wellbeing.",
       "Provided Data Ecosystem Projects": [
         "recxuDvQE71WPmpJV"
       ],
       "Org HQ Country": "Spain",
-      "Org Type": [
-        "Academia"
-      ]
+      "Org Type": "Academia"
     },
     "agencies": [],
     "projects": [
@@ -393,9 +386,7 @@
       "Org HQ Country": "United States",
       "Has received CRAF'd Funding?": "NO",
       "org_key": "unicef",
-      "Org Type": [
-        "United Nations System"
-      ]
+      "Org Type": "United Nations System"
     },
     "agencies": [
       {
@@ -582,9 +573,7 @@
       "Org HQ Country": "United Kingdom",
       "Has received CRAF'd Funding?": "NO",
       "org_key": "university-of-southampton",
-      "Org Type": [
-        "Academia"
-      ]
+      "Org Type": "Academia"
     },
     "agencies": [],
     "projects": [
@@ -933,9 +922,7 @@
       "Org HQ Country": "Italy",
       "Has received CRAF'd Funding?": "NO",
       "org_key": "wfp",
-      "Org Type": [
-        "United Nations System"
-      ]
+      "Org Type": "United Nations System"
     },
     "agencies": [
       {
@@ -1100,9 +1087,7 @@
       "Org HQ Country": "United States",
       "Has received CRAF'd Funding?": "NO",
       "org_key": "nasa",
-      "Org Type": [
-        "Government / Public Sector"
-      ]
+      "Org Type": "Government / Public Sector"
     },
     "agencies": [
       {
@@ -1176,15 +1161,10 @@
       "Provided Data Ecosystem Projects": [
         "recfjAhO2DxCjgEgM"
       ],
-      "Related Organization(s) [Linked]": [
-        "recwaewYY2WMRF9ZI"
-      ],
       "Org HQ Country": "Netherlands",
       "Has received CRAF'd Funding?": "YES",
       "org_key": "510-data-team",
-      "Org Type": [
-        "Non-Governmental Organization"
-      ]
+      "Org Type": "Non-Governmental Organization"
     },
     "agencies": [],
     "projects": [
@@ -1328,9 +1308,7 @@
       "Org HQ Country": "Switzerland",
       "Has received CRAF'd Funding?": "YES",
       "org_key": "ohchr",
-      "Org Type": [
-        "United Nations System"
-      ]
+      "Org Type": "United Nations System"
     },
     "agencies": [
       {
@@ -1610,9 +1588,7 @@
       "Org HQ Country": "Belgium",
       "Has received CRAF'd Funding?": "NO",
       "org_key": "uclouvain",
-      "Org Type": [
-        "Academia"
-      ]
+      "Org Type": "Academia"
     },
     "agencies": [
       {
@@ -1723,9 +1699,7 @@
       "Org HQ Country": "United States",
       "Has received CRAF'd Funding?": "NO",
       "org_key": "unfpa",
-      "Org Type": [
-        "United Nations System"
-      ]
+      "Org Type": "United Nations System"
     },
     "agencies": [
       {
@@ -2026,14 +2000,14 @@
         "recGoW02CMXhVQ00S"
       ],
       "Org Donor Agencies": [
-        "rec1VhOJv9U6QKBBs"
+        "rec1VhOJv9U6QKBBs",
+        "recVOTd76hfvjPbjZ",
+        "recJl9XUd7rAiz6dR"
       ],
       "Org HQ Country": "Global (distributed)",
       "Has received CRAF'd Funding?": "YES",
       "org_key": "fhn",
-      "Org Type": [
-        "Network / Consortium"
-      ]
+      "Org Type": "Network / Consortium"
     },
     "agencies": [
       {
@@ -2041,6 +2015,20 @@
         "fields": {
           "Agency/Department Name": "CRAF’d Funding",
           "Country Name": "CRAF’d"
+        }
+      },
+      {
+        "id": "recVOTd76hfvjPbjZ",
+        "fields": {
+          "Agency/Department Name": "The David and Lucile Packard Foundation",
+          "Country Name": "Non-State Actor"
+        }
+      },
+      {
+        "id": "recJl9XUd7rAiz6dR",
+        "fields": {
+          "Agency/Department Name": "The CS Fund",
+          "Country Name": "Non-State Actor"
         }
       }
     ],
@@ -2079,7 +2067,8 @@
       }
     ],
     "donor_countries": [
-      "CRAF’d"
+      "CRAF’d",
+      "Non-State Actor"
     ]
   },
   {
@@ -2123,9 +2112,7 @@
       "Org HQ Country": "United States",
       "Has received CRAF'd Funding?": "YES",
       "org_key": "un-women",
-      "Org Type": [
-        "United Nations System"
-      ]
+      "Org Type": "United Nations System"
     },
     "agencies": [
       {
@@ -2338,9 +2325,7 @@
       "Org HQ Country": "United States",
       "Has received CRAF'd Funding?": "NO",
       "org_key": "usgs",
-      "Org Type": [
-        "Government / Public Sector"
-      ]
+      "Org Type": "Government / Public Sector"
     },
     "agencies": [
       {
@@ -2397,9 +2382,7 @@
       "Org HQ Country": "United States",
       "Has received CRAF'd Funding?": "NO",
       "org_key": "unoda",
-      "Org Type": [
-        "United Nations System"
-      ]
+      "Org Type": "United Nations System"
     },
     "agencies": [],
     "projects": [
@@ -2460,9 +2443,7 @@
       "Org HQ Country": "Australia",
       "Has received CRAF'd Funding?": "NO",
       "org_key": "open-data-cube",
-      "Org Type": [
-        "Network / Consortium"
-      ]
+      "Org Type": "Network / Consortium"
     },
     "agencies": [],
     "projects": [
@@ -2514,10 +2495,7 @@
       "Org HQ Country": "United Kingdom",
       "Has received CRAF'd Funding?": "NO",
       "org_key": "humanitarian-outcomes",
-      "Org Type": [
-        "Consulting Firm",
-        "Technology Provider"
-      ]
+      "Org Type": "Technology & Consulting Provider"
     },
     "agencies": [
       {
@@ -2656,9 +2634,7 @@
       "Org HQ Country": "United States",
       "Has received CRAF'd Funding?": "YES",
       "org_key": "undp",
-      "Org Type": [
-        "United Nations System"
-      ]
+      "Org Type": "United Nations System"
     },
     "agencies": [
       {
@@ -3006,9 +2982,7 @@
         "recmH2oywWDYooamX"
       ],
       "org_key": "ocha-hum-data-centre",
-      "Org Type": [
-        "United Nations System"
-      ]
+      "Org Type": "United Nations System"
     },
     "agencies": [],
     "projects": [
@@ -3084,6 +3058,9 @@
       "Org Short Name": "FSNWG",
       "Org Website": "https://www.icpac.net/fsnwg/",
       "Org Description": "The Food Security and Nutrition Working Group (FSNWG) is a regional platform, currently co-chaired by ICPAC and FAO. It’s goal is two-fold: to provide an up-to-date food security and nutrition situation analysis (early warning) and to offer a forum to build consensus on critical issues facing policy and interventions. The FNSWG has served regional governments, donors, and non-governmental agencies since the early 2000’s. Current membership includes approximately 80 organisations (IGAD, UN agencies, NGOs, donors, and research institutions) who contribute to the operation of the working group, and its nutrition, markets, food security information, livestock and pastoralist sub-groups.",
+      "Provided Data Ecosystem Projects": [
+        "recvuixaI146ykcHe"
+      ],
       "Org Donor Agencies": [
         "recGNTHL9SKZxLDcw",
         "rec0sY1I5JZz6ZsUE",
@@ -3091,16 +3068,10 @@
         "rec2KBp1IAA5TtnQl"
       ],
       "Org IATI Name": "N/A",
-      "Related Organization(s) [Linked]": [
-        "reci9Q8xAcus6YuKx",
-        "reckv2Buw9sXl3Eul"
-      ],
       "Org HQ Country": "Kenya",
       "Has received CRAF'd Funding?": "NO",
       "org_key": "fsnwg",
-      "Org Type": [
-        "Network / Consortium"
-      ]
+      "Org Type": "Network / Consortium"
     },
     "agencies": [
       {
@@ -3136,7 +3107,26 @@
         }
       }
     ],
-    "projects": [],
+    "projects": [
+      {
+        "id": "recvuixaI146ykcHe",
+        "fields": {
+          "Project/Product Name": "Food Security and Nutrition Update",
+          "Provider Orgs Full Name": [
+            "recAqAEBX8YBwPWlb"
+          ],
+          "CRAF’d-Funded Project?": "NO",
+          "Investment Type(s)": [
+            "Crisis Analytics & Insights"
+          ],
+          "Investment Theme(s)": [
+            "Nutrition Analytics"
+          ],
+          "Project Website": "https://www.icpac.net/fsnwg/"
+        },
+        "agencies": []
+      }
+    ],
     "donor_countries": [
       "Canada",
       "European Union",
@@ -3154,9 +3144,7 @@
         "recEwLy3FESOhLeNs"
       ],
       "org_key": "unosat",
-      "Org Type": [
-        "United Nations System"
-      ]
+      "Org Type": "United Nations System"
     },
     "agencies": [],
     "projects": [
@@ -3209,9 +3197,7 @@
       "Org HQ Country": "United States",
       "Has received CRAF'd Funding?": "NO",
       "org_key": "pacific-disaster-center",
-      "Org Type": [
-        "Research / Think Tank"
-      ]
+      "Org Type": "Research / Think Tank"
     },
     "agencies": [
       {
@@ -3279,9 +3265,7 @@
       "Org HQ Country": "Sweden",
       "Has received CRAF'd Funding?": "NO",
       "org_key": "uppsala-university",
-      "Org Type": [
-        "Academia"
-      ]
+      "Org Type": "Academia"
     },
     "agencies": [
       {
@@ -3405,9 +3389,7 @@
       "Org HQ Country": "Sweden",
       "Has received CRAF'd Funding?": "NO",
       "org_key": "sipri",
-      "Org Type": [
-        "Research / Think Tank"
-      ]
+      "Org Type": "Research / Think Tank"
     },
     "agencies": [
       {
@@ -3700,9 +3682,7 @@
       "Org HQ Country": "Switzerland",
       "Has received CRAF'd Funding?": "NO",
       "org_key": "unmas",
-      "Org Type": [
-        "United Nations System"
-      ]
+      "Org Type": "United Nations System"
     },
     "agencies": [
       {
@@ -3891,9 +3871,7 @@
       "Org HQ Country": "Ecuador",
       "Has received CRAF'd Funding?": "NO",
       "org_key": "usfq",
-      "Org Type": [
-        "Academia"
-      ]
+      "Org Type": "Academia"
     },
     "agencies": [],
     "projects": [
@@ -3950,9 +3928,7 @@
       "Org HQ Country": "United Kingdom",
       "Has received CRAF'd Funding?": "NO",
       "org_key": "flowminder",
-      "Org Type": [
-        "Non-Governmental Organization"
-      ]
+      "Org Type": "Non-Governmental Organization"
     },
     "agencies": [
       {
@@ -4134,9 +4110,7 @@
       "Org HQ Country": "United States",
       "Has received CRAF'd Funding?": "NO",
       "org_key": "ocha",
-      "Org Type": [
-        "United Nations System"
-      ]
+      "Org Type": "United Nations System"
     },
     "agencies": [
       {
@@ -4564,9 +4538,7 @@
       "Org HQ Country": "Norway",
       "Has received CRAF'd Funding?": "YES",
       "org_key": "prio",
-      "Org Type": [
-        "Research / Think Tank"
-      ]
+      "Org Type": "Research / Think Tank"
     },
     "agencies": [
       {
@@ -4733,9 +4705,7 @@
       ],
       "Org HQ Country": "United States",
       "org_key": "data-pop-alliance",
-      "Org Type": [
-        "Non-Governmental Organization"
-      ]
+      "Org Type": "Non-Governmental Organization"
     },
     "agencies": [
       {
@@ -4883,9 +4853,7 @@
       "Org HQ Country": "United Kingdom",
       "Has received CRAF'd Funding?": "NO",
       "org_key": "inso",
-      "Org Type": [
-        "Non-Governmental Organization"
-      ]
+      "Org Type": "Non-Governmental Organization"
     },
     "agencies": [
       {
@@ -5068,9 +5036,7 @@
       "Org HQ Country": "Switzerland",
       "Has received CRAF'd Funding?": "NO",
       "org_key": "gem",
-      "Org Type": [
-        "Non-Governmental Organization"
-      ]
+      "Org Type": "Non-Governmental Organization"
     },
     "agencies": [
       {
@@ -5240,9 +5206,7 @@
       "Org HQ Country": "Netherlands",
       "Has received CRAF'd Funding?": "NO",
       "org_key": "fields-data",
-      "Org Type": [
-        "Non-Governmental Organization"
-      ]
+      "Org Type": "Non-Governmental Organization"
     },
     "agencies": [],
     "projects": [
@@ -5285,9 +5249,7 @@
       "Org HQ Country": "Global (distributed)",
       "Has received CRAF'd Funding?": "NO",
       "org_key": "mapswipe",
-      "Org Type": [
-        "Non-Governmental Organization"
-      ]
+      "Org Type": "Non-Governmental Organization"
     },
     "agencies": [],
     "projects": [
@@ -5329,9 +5291,7 @@
       "Org HQ Country": "United States",
       "Has received CRAF'd Funding?": "YES",
       "org_key": "korbel",
-      "Org Type": [
-        "Academia"
-      ]
+      "Org Type": "Academia"
     },
     "agencies": [],
     "projects": [
@@ -5404,9 +5364,7 @@
       "Org HQ Country": "Denmark",
       "Has received CRAF'd Funding?": "NO",
       "org_key": "drc",
-      "Org Type": [
-        "Non-Governmental Organization"
-      ]
+      "Org Type": "Non-Governmental Organization"
     },
     "agencies": [
       {
@@ -5687,9 +5645,7 @@
       "Org HQ Country": "Switzerland",
       "Has received CRAF'd Funding?": "NO",
       "org_key": "reach",
-      "Org Type": [
-        "Non-Governmental Organization"
-      ]
+      "Org Type": "Non-Governmental Organization"
     },
     "agencies": [
       {
@@ -5910,9 +5866,7 @@
       "Org HQ Country": "United States",
       "Has received CRAF'd Funding?": "YES",
       "org_key": "un-dppa",
-      "Org Type": [
-        "United Nations System"
-      ]
+      "Org Type": "United Nations System"
     },
     "agencies": [],
     "projects": [
@@ -6051,9 +6005,7 @@
       "Org HQ Country": "United States",
       "Has received CRAF'd Funding?": "NO",
       "org_key": "state-department",
-      "Org Type": [
-        "Government / Public Sector"
-      ]
+      "Org Type": "Government / Public Sector"
     },
     "agencies": [
       {
@@ -6130,9 +6082,7 @@
       "Org HQ Country": "United States",
       "Has received CRAF'd Funding?": "NO",
       "org_key": "hot",
-      "Org Type": [
-        "Non-Governmental Organization"
-      ]
+      "Org Type": "Non-Governmental Organization"
     },
     "agencies": [
       {
@@ -6243,9 +6193,7 @@
       "Org HQ Country": "Global (distributed)",
       "Has received CRAF'd Funding?": "NO",
       "org_key": "qgisorg",
-      "Org Type": [
-        "Non-Governmental Organization"
-      ]
+      "Org Type": "Non-Governmental Organization"
     },
     "agencies": [
       {
@@ -6312,9 +6260,7 @@
       "Org HQ Country": "United States",
       "Has received CRAF'd Funding?": "NO",
       "org_key": "odw",
-      "Org Type": [
-        "Non-Governmental Organization"
-      ]
+      "Org Type": "Non-Governmental Organization"
     },
     "agencies": [],
     "projects": [],
@@ -6348,9 +6294,7 @@
       "Org HQ Country": "United States",
       "Has received CRAF'd Funding?": "YES",
       "org_key": "acled",
-      "Org Type": [
-        "Non-Governmental Organization"
-      ]
+      "Org Type": "Non-Governmental Organization"
     },
     "agencies": [
       {
@@ -6543,9 +6487,7 @@
       ],
       "Est. Org Budget [2024, $M]": 15,
       "org_key": "panda",
-      "Org Type": [
-        "Non-Governmental Organization"
-      ]
+      "Org Type": "Non-Governmental Organization"
     },
     "agencies": [
       {
@@ -6606,9 +6548,7 @@
       "Org HQ Country": "United States",
       "Has received CRAF'd Funding?": "NO",
       "org_key": "dhs",
-      "Org Type": [
-        "Research / Think Tank"
-      ]
+      "Org Type": "Research / Think Tank"
     },
     "agencies": [
       {
@@ -6650,9 +6590,7 @@
       "Org Website": "https://www.impact-initiatives.org/what-we-do/agora/",
       "Org Description": "AGORA, a joint venture between ACTED and IMPACT Initiatives, was created in 2016 to ground humanitarian and development work in local knowledge, in keeping with the motto « Think local, Act global ». \n\nFounded in 2010 and headquartered in Geneva, IMPACT Initiatives is a leading applied research organization and the largest independent provider of data in crisis-affected contexts. Through our initiatives—REACH, AGORA, and PANDA—we enable humanitarian and other aid actors to make better, evidence-based decisions by delivering timely, relevant, and methodologically rigorous data and analysis. Our extensive presence across crisis-contexts allows us to collect data directly from crisis-affected people wherever needed, including among the most vulnerable and hard-to-reach.\n\nIMPACT takes an initiative-based approach to structuring our programming. Each initiative has a specific aim, operational model, and portfolio of solutions.\n\n- REACH strengthens evidence-based humanitarian decision-making through efficient data collection, management, and analysis – before, during, and after an emergency.\n- AGORA promotes localised and multi-sectoral aid action in support of the recovery and stabilisation of crisis-affected communities, in partnership with local stakeholders.\n- PANDA improves the impact of humanitarian and development interventions through programme design, assessments, and monitoring & evaluation.",
       "org_key": "agora",
-      "Org Type": [
-        "Non-Governmental Organization"
-      ]
+      "Org Type": "Non-Governmental Organization"
     },
     "agencies": [],
     "projects": [],
@@ -6679,10 +6617,7 @@
       "Org HQ Country": "Netherlands",
       "Has received CRAF'd Funding?": "NO",
       "org_key": "data-friendly-space",
-      "Org Type": [
-        "Consulting Firm",
-        "Technology Provider"
-      ]
+      "Org Type": "Technology & Consulting Provider"
     },
     "agencies": [
       {
@@ -6783,9 +6718,7 @@
       "Org HQ Country": "France",
       "Has received CRAF'd Funding?": "NO",
       "org_key": "unesco",
-      "Org Type": [
-        "United Nations System"
-      ]
+      "Org Type": "United Nations System"
     },
     "agencies": [
       {
@@ -7133,9 +7066,7 @@
       "Org HQ Country": "United Kingdom",
       "Has received CRAF'd Funding?": "NO",
       "org_key": "mapaction",
-      "Org Type": [
-        "Non-Governmental Organization"
-      ]
+      "Org Type": "Non-Governmental Organization"
     },
     "agencies": [
       {
@@ -7211,9 +7142,7 @@
       "Org HQ Country": "Belgium",
       "Has received CRAF'd Funding?": "YES",
       "org_key": "icg",
-      "Org Type": [
-        "Non-Governmental Organization"
-      ]
+      "Org Type": "Non-Governmental Organization"
     },
     "agencies": [
       {
@@ -7598,9 +7527,7 @@
       "Org HQ Country": "United States",
       "Has received CRAF'd Funding?": "NO",
       "org_key": "un-foundation",
-      "Org Type": [
-        "Non-Governmental Organization"
-      ]
+      "Org Type": "Non-Governmental Organization"
     },
     "agencies": [],
     "projects": [
@@ -7653,9 +7580,7 @@
       "Org HQ Country": "Lebanon",
       "Has received CRAF'd Funding?": "NO",
       "org_key": "arab-barometer",
-      "Org Type": [
-        "Research / Think Tank"
-      ]
+      "Org Type": "Research / Think Tank"
     },
     "agencies": [
       {
@@ -7779,16 +7704,11 @@
         "recE3ZEHFRqbifGOn"
       ],
       "Org IATI Name": "International Federation of the Red Cross and Red Crescent (IFRC)",
-      "Related Organization(s) [Linked]": [
-        "recwaewYY2WMRF9ZI"
-      ],
       "Est. Org Budget [2024, $M]": 64282064.2,
       "Org HQ Country": "Switzerland",
       "Has received CRAF'd Funding?": "YES",
       "org_key": "ifrc",
-      "Org Type": [
-        "Non-Governmental Organization"
-      ]
+      "Org Type": "Non-Governmental Organization"
     },
     "agencies": [
       {
@@ -8007,9 +7927,7 @@
       "Org HQ Country": "Belgium",
       "Has received CRAF'd Funding?": "NO",
       "org_key": "ec-jrc",
-      "Org Type": [
-        "Government / Public Sector"
-      ]
+      "Org Type": "Government / Public Sector"
     },
     "agencies": [
       {
@@ -8170,9 +8088,7 @@
       "Org HQ Country": "Germany",
       "Has received CRAF'd Funding?": "NO",
       "org_key": "unccd",
-      "Org Type": [
-        "United Nations System"
-      ]
+      "Org Type": "United Nations System"
     },
     "agencies": [
       {
@@ -8296,9 +8212,7 @@
       "Org HQ Country": "Switzerland",
       "Has received CRAF'd Funding?": "NO",
       "org_key": "wmo",
-      "Org Type": [
-        "United Nations System"
-      ]
+      "Org Type": "United Nations System"
     },
     "agencies": [
       {
@@ -8461,9 +8375,7 @@
       "Org HQ Country": "Switzerland",
       "Has received CRAF'd Funding?": "NO",
       "org_key": "undrr",
-      "Org Type": [
-        "United Nations System"
-      ]
+      "Org Type": "United Nations System"
     },
     "agencies": [
       {
@@ -8769,9 +8681,7 @@
       "Org HQ Country": "Switzerland",
       "Has received CRAF'd Funding?": "YES",
       "org_key": "unhcr",
-      "Org Type": [
-        "United Nations System"
-      ]
+      "Org Type": "United Nations System"
     },
     "agencies": [
       {
@@ -9443,10 +9353,7 @@
       "Org HQ Country": "Netherlands",
       "Has received CRAF'd Funding?": "NO",
       "org_key": "3is",
-      "Org Type": [
-        "Consulting Firm",
-        "Technology Provider"
-      ]
+      "Org Type": "Technology & Consulting Provider"
     },
     "agencies": [
       {
@@ -9646,9 +9553,7 @@
       "Org HQ Country": "Ghana",
       "Has received CRAF'd Funding?": "NO",
       "org_key": "afrobarometer",
-      "Org Type": [
-        "Research / Think Tank"
-      ]
+      "Org Type": "Research / Think Tank"
     },
     "agencies": [
       {
@@ -9824,9 +9729,7 @@
       "Org HQ Country": "Kenya",
       "Has received CRAF'd Funding?": "YES",
       "org_key": "icpac",
-      "Org Type": [
-        "International Organization"
-      ]
+      "Org Type": "International Organization"
     },
     "agencies": [
       {
@@ -9925,9 +9828,7 @@
       "Org HQ Country": "Italy",
       "Has received CRAF'd Funding?": "NO",
       "org_key": "fao",
-      "Org Type": [
-        "United Nations System"
-      ]
+      "Org Type": "United Nations System"
     },
     "agencies": [
       {
@@ -10183,9 +10084,7 @@
       "Org HQ Country": "United States",
       "Has received CRAF'd Funding?": "NO",
       "org_key": "uc-irvine",
-      "Org Type": [
-        "Academia"
-      ]
+      "Org Type": "Academia"
     },
     "agencies": [
       {
@@ -10261,9 +10160,7 @@
       "Org HQ Country": "United States",
       "Has received CRAF'd Funding?": "NO",
       "org_key": "world-bank",
-      "Org Type": [
-        "International Organization"
-      ]
+      "Org Type": "International Organization"
     },
     "agencies": [],
     "projects": [
@@ -10461,9 +10358,7 @@
       "Org HQ Country": "Norway",
       "Has received CRAF'd Funding?": "YES",
       "org_key": "idmc",
-      "Org Type": [
-        "Non-Governmental Organization"
-      ]
+      "Org Type": "Non-Governmental Organization"
     },
     "agencies": [
       {
@@ -10940,9 +10835,7 @@
       "Org HQ Country": "Switzerland",
       "Has received CRAF'd Funding?": "NO",
       "org_key": "eth-zurich",
-      "Org Type": [
-        "Academia"
-      ]
+      "Org Type": "Academia"
     },
     "agencies": [
       {
@@ -11039,9 +10932,7 @@
       ],
       "Org HQ Country": "Denmark",
       "org_key": "world-bank-unhcr",
-      "Org Type": [
-        "United Nations System"
-      ]
+      "Org Type": "United Nations System"
     },
     "agencies": [
       {
@@ -11078,9 +10969,7 @@
       "Org HQ Country": "United Kingdom",
       "Has received CRAF'd Funding?": "NO",
       "org_key": "start-network",
-      "Org Type": [
-        "Network / Consortium"
-      ]
+      "Org Type": "Network / Consortium"
     },
     "agencies": [
       {
@@ -11177,9 +11066,7 @@
       "Org HQ Country": "Chile",
       "Has received CRAF'd Funding?": "NO",
       "org_key": "latinobarometro",
-      "Org Type": [
-        "Research / Think Tank"
-      ]
+      "Org Type": "Research / Think Tank"
     },
     "agencies": [
       {
@@ -11417,9 +11304,7 @@
         "recONFtYpO5v2qk7s"
       ],
       "org_key": "kobo",
-      "Org Type": [
-        "Non-Governmental Organization"
-      ]
+      "Org Type": "Non-Governmental Organization"
     },
     "agencies": [],
     "projects": [
@@ -11457,22 +11342,27 @@
       "Org Description": "The IPC global partnership is comprised of 19 organizations and inter-governmental institutions including Action Against Hunger (AAH), CARE International, Comité Permanent Inter-Etats de Lutte Contre la Sécheresse au Sahel (Permanent Interstate Committee for Drought Control in the Sahel) (CILSS), Food and Agriculture Organization of the United Nations (FAO), Famine Early Warning Systems Network (FEWS NET), the Global Food Security Cluster, the Global Nutrition Cluster, Intergovernmental Authority on Development (IGAD), Joint Research Centre (JRC) of the European Commission, Oxford Committee for Famine Relief (Oxfam), Southern African Development Community (SADC), Save the Children, Sistema de la Integración Centroamericana (Central American Integration System) (SICA), World Food Programme (WFP), United Nations Children’s Fund (UNICEF), the World Bank, the Wolrd Health Organization (WHO), UNDP and IFPRI.",
       "Link to Data Products Overview": "<https://www.ipcinfo.org/ipcinfo-website/ipc-dashboard/en/>\n\n\n",
       "Provided Data Ecosystem Projects": [
-        "recaWq49HJw4UXd9K"
+        "recaWq49HJw4UXd9K",
+        "rec36dX7WTnSmv9Yo",
+        "rec7Gm0sUCCMECxFU"
       ],
       "Org Donor Agencies": [
         "recGNTHL9SKZxLDcw",
         "rec0sY1I5JZz6ZsUE",
         "recYxlC8x9puB69tx",
-        "rec2KBp1IAA5TtnQl"
+        "rec2KBp1IAA5TtnQl",
+        "recsrMWmoA037bW03",
+        "recr77XDSfR0O9Jen",
+        "recFDm6MHWUu6GSMI",
+        "rec3Ado0Jrl799Q8A",
+        "recNLQhceOCXSMemo"
       ],
       "Org IATI Name": "N/A",
       "Est. Org Budget [2024, $M]": 11810000,
       "Org HQ Country": "United States",
       "Has received CRAF'd Funding?": "NO",
       "org_key": "ipc",
-      "Org Type": [
-        "Network / Consortium"
-      ]
+      "Org Type": "Network / Consortium"
     },
     "agencies": [
       {
@@ -11506,9 +11396,86 @@
           "Agency Data Portal": "https://www.giz.de/projektdaten/index.action?request_locale=en_GB",
           "Country Name": "Germany"
         }
+      },
+      {
+        "id": "recsrMWmoA037bW03",
+        "fields": {
+          "Agency/Department Name": "Unspecified Agency",
+          "Agency Data Portal": "https://open.undp.org/",
+          "Country Name": "United Nations Development Programme (UNDP)"
+        }
+      },
+      {
+        "id": "recr77XDSfR0O9Jen",
+        "fields": {
+          "Agency/Department Name": "Unspecified Agency",
+          "Country Name": "World Health Organization (WHO)"
+        }
+      },
+      {
+        "id": "recFDm6MHWUu6GSMI",
+        "fields": {
+          "Agency/Department Name": "Unspecified Agency",
+          "Agency Data Portal": "https://www.unicef.org/",
+          "Country Name": "United Nations Children's Fund (UNICEF)"
+        }
+      },
+      {
+        "id": "rec3Ado0Jrl799Q8A",
+        "fields": {
+          "Agency/Department Name": "Unspecified Agency",
+          "Agency Data Portal": "https://www.worldbank.org/ext/en/home",
+          "Country Name": "The World Bank"
+        }
+      },
+      {
+        "id": "recNLQhceOCXSMemo",
+        "fields": {
+          "Agency/Department Name": "Unspecified Agency",
+          "Agency Data Portal": "https://www.wfp.org/",
+          "Country Name": "World Food Programme (WFP)"
+        }
       }
     ],
     "projects": [
+      {
+        "id": "rec36dX7WTnSmv9Yo",
+        "fields": {
+          "Project/Product Name": "IPC Mapping Tool",
+          "Provider Orgs Full Name": [
+            "recoPRDBbxl0bVx7x"
+          ],
+          "CRAF’d-Funded Project?": "NO",
+          "Investment Type(s)": [
+            "Data Sets & Commons"
+          ],
+          "Investment Theme(s)": [
+            "Food Security Data",
+            "Geospatial Data"
+          ],
+          "Project Description": "It’s an enhanced interactive interface that shows a map of all the countries the IPC works in and allows you to download population data. \n"
+        },
+        "agencies": []
+      },
+      {
+        "id": "rec7Gm0sUCCMECxFU",
+        "fields": {
+          "Project/Product Name": " IPC Population Tracking Tool",
+          "Provider Orgs Full Name": [
+            "recoPRDBbxl0bVx7x"
+          ],
+          "CRAF’d-Funded Project?": "NO",
+          "Investment Type(s)": [
+            "Data Sets & Commons"
+          ],
+          "Investment Theme(s)": [
+            "Baseline Population Data"
+          ],
+          "Project Website": "https://www.ipcinfo.org/ipc-country-analysis/population-tracking-tool/en/",
+          "Project Description": "The IPC Population Tracking Tool is an online platform that gives the public access to population data from more than 30 different countries. It allows users to download resource data for offline IPC analyses since 2017. All national population figures are based on official country population estimates. IPC estimates are those published in country IPC reports. \n"
+        },
+        "agencies": []
+      },
       {
         "id": "recaWq49HJw4UXd9K",
         "fields": {
@@ -11565,7 +11532,12 @@
       "Canada",
       "European Union",
       "Germany",
-      "United Kingdom"
+      "The World Bank",
+      "United Kingdom",
+      "United Nations Children's Fund (UNICEF)",
+      "United Nations Development Programme (UNDP)",
+      "World Food Programme (WFP)",
+      "World Health Organization (WHO)"
     ]
   },
   {
@@ -11601,9 +11573,7 @@
       "Org HQ Country": "New Caledonia",
       "Has received CRAF'd Funding?": "NO",
       "org_key": "pacific-community",
-      "Org Type": [
-        "International Organization"
-      ]
+      "Org Type": "International Organization"
     },
     "agencies": [
       {
@@ -11781,9 +11751,7 @@
       "Org HQ Country": "Kenya",
       "Has received CRAF'd Funding?": "NO",
       "org_key": "unep",
-      "Org Type": [
-        "United Nations System"
-      ]
+      "Org Type": "United Nations System"
     },
     "agencies": [
       {
@@ -11947,9 +11915,7 @@
         "recylzOrnxt3grWHh"
       ],
       "org_key": "acaps",
-      "Org Type": [
-        "Non-Governmental Organization"
-      ]
+      "Org Type": "Non-Governmental Organization"
     },
     "agencies": [
       {
@@ -12063,9 +12029,7 @@
       "Org HQ Country": "United States",
       "Has received CRAF'd Funding?": "NO",
       "org_key": "university-of-minnesota",
-      "Org Type": [
-        "Academia"
-      ]
+      "Org Type": "Academia"
     },
     "agencies": [],
     "projects": [
@@ -12201,9 +12165,7 @@
       "Org HQ Country": "Switzerland",
       "Has received CRAF'd Funding?": "NO",
       "org_key": "unitar",
-      "Org Type": [
-        "United Nations System"
-      ]
+      "Org Type": "United Nations System"
     },
     "agencies": [],
     "projects": [
@@ -12319,17 +12281,12 @@
       "Org IATI Name": "International Organization for Migration (IOM)",
       "Org MPTFO Name": "IOM",
       "Org MPTFO URL [Formula]": "https://mptf.undp.org/participating-organizations/IOM",
-      "Related Organization(s) [Linked]": [
-        "recsrCWKAPu9dwkHb"
-      ],
       "Est. Data Budget [2024, $M]": 4303404.07,
       "Est. Org Budget [2024, $M]": 3733229338.55,
       "Org HQ Country": "Switzerland",
       "Has received CRAF'd Funding?": "YES",
       "org_key": "iom",
-      "Org Type": [
-        "International Organization"
-      ]
+      "Org Type": "International Organization"
     },
     "agencies": [
       {
@@ -12681,9 +12638,7 @@
       "Org HQ Country": "Thailand",
       "Has received CRAF'd Funding?": "NO",
       "org_key": "unescap",
-      "Org Type": [
-        "United Nations System"
-      ]
+      "Org Type": "United Nations System"
     },
     "agencies": [],
     "projects": [],
@@ -12709,9 +12664,7 @@
       "Org HQ Country": "United States",
       "Has received CRAF'd Funding?": "NO",
       "org_key": "dataorg",
-      "Org Type": [
-        "Non-Governmental Organization"
-      ]
+      "Org Type": "Non-Governmental Organization"
     },
     "agencies": [
       {
@@ -12782,9 +12735,7 @@
       "Org HQ Country": "United States",
       "Has received CRAF'd Funding?": "NO",
       "org_key": "wpdx",
-      "Org Type": [
-        "Non-Governmental Organization"
-      ]
+      "Org Type": "Non-Governmental Organization"
     },
     "agencies": [
       {
@@ -12864,9 +12815,7 @@
       "Org HQ Country": "France",
       "Has received CRAF'd Funding?": "NO",
       "org_key": "paris21",
-      "Org Type": [
-        "International Organization"
-      ]
+      "Org Type": "International Organization"
     },
     "agencies": [
       {
@@ -13097,9 +13046,7 @@
       "Org HQ Country": "United Kingdom",
       "Has received CRAF'd Funding?": "NO",
       "org_key": "oxford-university",
-      "Org Type": [
-        "Academia"
-      ]
+      "Org Type": "Academia"
     },
     "agencies": [
       {
@@ -13185,9 +13132,7 @@
       "Org HQ Country": "United States",
       "Has received CRAF'd Funding?": "NO",
       "org_key": "immap",
-      "Org Type": [
-        "Non-Governmental Organization"
-      ]
+      "Org Type": "Non-Governmental Organization"
     },
     "agencies": [
       {
@@ -13313,17 +13258,12 @@
       "Org IATI Name": "World Health Organization (WHO)",
       "Org MPTFO Name": "WHO",
       "Org MPTFO URL [Formula]": "https://mptf.undp.org/participating-organizations/WHO",
-      "Related Organization(s) [Linked]": [
-        "recwQpJQH4LwmSOBE"
-      ],
       "Org Programme Budget": "https://www.who.int/about/accountability/budget?utm_source=chatgpt.com",
       "Est. Org Budget [2024, $M]": 3763000000,
       "Org HQ Country": "Switzerland",
       "Has received CRAF'd Funding?": "NO",
       "org_key": "who",
-      "Org Type": [
-        "United Nations System"
-      ]
+      "Org Type": "United Nations System"
     },
     "agencies": [
       {
@@ -13656,17 +13596,12 @@
         "recnCryJx9ixmHwby"
       ],
       "Org IATI Name": "Red Cross Red Crescent Climate Centre",
-      "Related Organization(s) [Linked]": [
-        "reccKH8GA8awjQEvp"
-      ],
       "Est. Data Budget [2024, $M]": 1870000,
       "Est. Org Budget [2024, $M]": 6264522.32,
       "Org HQ Country": "Netherlands",
       "Has received CRAF'd Funding?": "YES",
       "org_key": "rccc",
-      "Org Type": [
-        "Non-Governmental Organization"
-      ]
+      "Org Type": "Non-Governmental Organization"
     },
     "agencies": [
       {
@@ -13751,9 +13686,7 @@
         "recGMlI70iaqyTtMo"
       ],
       "org_key": "ecmrwf",
-      "Org Type": [
-        "International Organization"
-      ]
+      "Org Type": "International Organization"
     },
     "agencies": [],
     "projects": [
@@ -13809,9 +13742,7 @@
       "Org HQ Country": "United States",
       "Has received CRAF'd Funding?": "NO",
       "org_key": "un-dpo",
-      "Org Type": [
-        "United Nations System"
-      ]
+      "Org Type": "United Nations System"
     },
     "agencies": [
       {
@@ -13956,9 +13887,7 @@
       "Org HQ Country": "Belgium",
       "Has received CRAF'd Funding?": "YES",
       "org_key": "inform",
-      "Org Type": [
-        "Network / Consortium"
-      ]
+      "Org Type": "Network / Consortium"
     },
     "agencies": [
       {
@@ -14153,9 +14082,7 @@
       "Org HQ Country": "United Kingdom",
       "Has received CRAF'd Funding?": "NO",
       "org_key": "hera",
-      "Org Type": [
-        "Non-Governmental Organization"
-      ]
+      "Org Type": "Non-Governmental Organization"
     },
     "agencies": [],
     "projects": [],
@@ -14185,9 +14112,7 @@
       "Org HQ Country": "Switzerland",
       "Has received CRAF'd Funding?": "NO",
       "org_key": "insecurity-insight",
-      "Org Type": [
-        "Non-Governmental Organization"
-      ]
+      "Org Type": "Non-Governmental Organization"
     },
     "agencies": [
       {

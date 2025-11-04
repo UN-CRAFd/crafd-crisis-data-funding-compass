@@ -130,6 +130,24 @@
     }
   },
   {
+    "id": "rec36dX7WTnSmv9Yo",
+    "fields": {
+      "Project/Product Name": "IPC Mapping Tool",
+      "Provider Orgs Full Name": [
+        "recoPRDBbxl0bVx7x"
+      ],
+      "CRAF’d-Funded Project?": "NO",
+      "Investment Type(s)": [
+        "Data Sets & Commons"
+      ],
+      "Investment Theme(s)": [
+        "Food Security Data",
+        "Geospatial Data"
+      ],
+      "Project Description": "It’s an enhanced interactive interface that shows a map of all the countries the IPC works in and allows you to download population data. \n"
+    }
+  },
+  {
     "id": "rec3SUNKdqZWbEktL",
     "fields": {
       "Project/Product Name": "Subnational Population Statistics",
@@ -523,6 +541,24 @@
       ],
       "Project Website": "https://preparecenter.org/site/evca/",
       "Project Description": "**Trigger models are employed to establish danger levels that activate humanitarian anticipatory Early Action Protocols (EAPs). **These models are developed using the Impact-Based Forecasting ([IBF](https://510.global/glossary/ibf/)) methodology. So far, we have built models that trigger EAPs for typhoon, flood, dzud, drought and dengue hazards. \n\n"
+    }
+  },
+  {
+    "id": "rec7Gm0sUCCMECxFU",
+    "fields": {
+      "Project/Product Name": " IPC Population Tracking Tool",
+      "Provider Orgs Full Name": [
+        "recoPRDBbxl0bVx7x"
+      ],
+      "CRAF’d-Funded Project?": "NO",
+      "Investment Type(s)": [
+        "Data Sets & Commons"
+      ],
+      "Investment Theme(s)": [
+        "Baseline Population Data"
+      ],
+      "Project Website": "https://www.ipcinfo.org/ipc-country-analysis/population-tracking-tool/en/",
+      "Project Description": "The IPC Population Tracking Tool is an online platform that gives the public access to population data from more than 30 different countries. It allows users to download resource data for offline IPC analyses since 2017. All national population figures are based on official country population estimates. IPC estimates are those published in country IPC reports. \n"
     }
   },
   {
@@ -2129,6 +2165,20 @@
     }
   },
   {
+    "id": "recZw88835AgPqssk",
+    "fields": {
+      "Project/Product Name": "IPC Infographics",
+      "Investment Type(s)": [
+        "Crisis Analytics & Insights"
+      ],
+      "Investment Theme(s)": [
+        "Food Security Analytics"
+      ],
+      "Project Website": "https://www.ipcinfo.org/ipcinfo-website/resources/infographics/en/",
+      "Project Description": "Infographics made by IPC\n"
+    }
+  },
+  {
     "id": "reca35l4CEELxX2d1",
     "fields": {
       "Project/Product Name": "Earth Data Search",
@@ -3586,6 +3636,23 @@
       ],
       "Project Website": "https://www.unhcr.org/us/what-we-do/protect-human-rights/protection/registration-and-identity-management",
       "Project Description": "At the center of UNHCR’s work with registration and identity management, lies PRIMES, UNHCR’s digital Population Registration and Identity Management Ecosystem. PRIMES brings together all of UNHCR’s digital registration, identity management and case management tools into one internally connected and interoperable ecosystem.\nPRIMES is comprised of several repositories for personal data (biographic and biometric) and supporting information, along with multiple tools which safely make use of the data to deliver targeted protection, assistance, and solutions to refugees and other displaced populations. PRIMES is an enabler for:\n- Identity management (including registration and biometric enrolment) and documentation\n- Case management (including the principal Protection aspects: Refugee Status Determination, Resettlement, Statelessness, Repatriation, Legal and Physical Protection, Child Protection, SGBV and others)\n- Assistance ([cash](https://www.unhcr.org/us/what-we-do/emergency-response/cash-based-interventions) and in-kind)\n- Data management, including reporting and analysis for evidence-informed action for quality protection outcomes\nPRIMES has been designed with cooperation and interoperability in mind so that refugee supporting governments and partners can make use of the data and technology which UNHCR has developed to enhance their ability to deliver services often together with UNHCR, in a safe and secure manner. PRIMES is fully aligned with the [Policy on the Protection of Personal Data of Persons of Concern to UNHCR](http://www.refworld.org/cgi-bin/texis/vtx/rwmain?page=search&docid=55643c1d4).\n"
+    }
+  },
+  {
+    "id": "recvuixaI146ykcHe",
+    "fields": {
+      "Project/Product Name": "Food Security and Nutrition Update",
+      "Provider Orgs Full Name": [
+        "recAqAEBX8YBwPWlb"
+      ],
+      "CRAF’d-Funded Project?": "NO",
+      "Investment Type(s)": [
+        "Crisis Analytics & Insights"
+      ],
+      "Investment Theme(s)": [
+        "Nutrition Analytics"
+      ],
+      "Project Website": "https://www.icpac.net/fsnwg/"
     }
   },
   {
