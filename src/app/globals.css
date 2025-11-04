@@ -1,26 +1,27 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;600;700;900&display=swap");
 @import "tailwindcss";
+@import "tw-animate-css";
 
 /* Custom font declarations */
 @font-face {
-  font-family: 'Qanelas';
-  src: url('/fonts/QanelasBlack.otf') format('opentype');
+  font-family: "Qanelas";
+  src: url("/fonts/QanelasBlack.otf") format("opentype");
   font-weight: 900;
   font-style: normal;
   font-display: swap;
 }
 
 @font-face {
-  font-family: 'Qanelas';
-  src: url('/fonts/QanelasExtraBold.otf') format('opentype');
+  font-family: "Qanelas";
+  src: url("/fonts/QanelasExtraBold.otf") format("opentype");
   font-weight: 800;
   font-style: normal;
   font-display: swap;
 }
 
 @font-face {
-  font-family: 'Qanelas';
-  src: url('/fonts/QanelasHeavy.otf') format('opentype');
+  font-family: "Qanelas";
+  src: url("/fonts/QanelasHeavy.otf") format("opentype");
   font-weight: 700;
   font-style: normal;
   font-display: swap;
@@ -94,7 +95,6 @@
   --hover-scale: 1.02;
   --transition-duration: 200ms;
 
-
   /* Brand colors - Crisis Data Funding Compass */
   /* 
    * Primary brand color scheme based on #1FBBEE
@@ -108,13 +108,13 @@
    */
   --brand-primary: #e6af26;
   /* main amber (vibrant golden tone) */
-  --brand-primary-dark: #BC840F;
+  --brand-primary-dark: #bc840f;
   /* darker amber for hover/active */
-  --brand-primary-light: #F3C35C;
+  --brand-primary-light: #f3c35c;
   /* light amber for buttons/highlights */
-  --brand-bg-light: #FCF0D6;
+  --brand-bg-light: #fcf0d6;
   /* soft warm background */
-  --brand-bg-lighter: #FDF7EA;
+  --brand-bg-lighter: #fdf7ea;
   /* even lighter background */
   --brand-border: #d9b206;
   /* deep amber-brown for borders/text accents */
@@ -127,18 +127,18 @@
   /* indigo-800: dark readable text */
   --badge-other-icon: #4338ca;
 
-  --detail: #CCCCCC;
+  --detail: #cccccc;
   /* main amber (vibrant golden tone) */
-  --detail-text: #FFFFFF;
+  --detail-text: #ffffff;
   /* darker amber for hover/active */
   --detail-border: #666666;
-  --detail-light: #BBBBBB;
+  --detail-light: #bbbbbb;
   /* soft warm background */
 
   /* Darker badge variants for better visibility */
-  --badge-blue-bg: #B8E0F5;
+  --badge-blue-bg: #b8e0f5;
   /* darker version of brand-bg-light */
-  --badge-blue-text: #9B6D0A;
+  --badge-blue-text: #9b6d0a;
   /* darker version of brand-primary-dark */
   --badge-slate-bg: #e2e8f0;
   /* slate-200: darker than slate-100 */
@@ -257,8 +257,6 @@ body {
   -moz-box-shadow: none !important;
 }
 
-
-
 /* Enable text selection on inputs */
 input,
 textarea {
@@ -270,7 +268,6 @@ textarea {
 
 /* Mobile-specific improvements */
 @media (max-width: 640px) {
-
   /* Improve touch targets on mobile */
   button,
   [role="button"],
@@ -285,7 +282,7 @@ textarea {
   }
 
   /* Better spacing for mobile */
-  .space-y-2>*+* {
+  .space-y-2 > * + * {
     margin-top: 0.75rem;
   }
 }
@@ -311,4 +308,3 @@ body {
 body::-webkit-scrollbar {
   display: none;
 }
-
