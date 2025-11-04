@@ -939,7 +939,7 @@ const CrisisDataDashboard = ({
                                     <CardContent className="px-4 sm:px-6 pt-2 sm:pt-0">
                                         <Tabs value={activeView} className="w-full">
                                             <TabsContent value="table" className="mt-0">
-                                        <div className="space-y-2">
+                                        <div className="space-y-2 transition-all duration-500">
                                             {organizationsWithProjects
                                                 .sort((a, b) => {
                                                     let comparison = 0;
@@ -974,6 +974,7 @@ const CrisisDataDashboard = ({
                                                                 }
                                                                 setExpandedOrgs(newExpanded);
                                                             }}
+                                                            className="transition-all duration-500 ease-out"
                                                         >
                                                             <CollapsibleTrigger
                                                                 className="w-full"
