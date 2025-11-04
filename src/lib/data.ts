@@ -123,6 +123,7 @@ function convertToOrganizationWithProjects(org: NestedOrganization): Organizatio
         organizationName: org.name || 'Unnamed Organization',
         orgShortName: org.fields?.['Org Short Name'] || '',
         type: orgType,
+        description: org.fields?.['Org Description'] || '',
         donorCountries,
         projects: projectsData,
         projectCount: projectsData.length

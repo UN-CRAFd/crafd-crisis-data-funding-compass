@@ -403,7 +403,11 @@ const CrisisDataDashboard = ({
     const handleExportCSV = async () => {
         try {
             setCSVExportLoading(true);
-            await exportViewAsCSV(organizationsWithProjects);
+            await exportViewAsCSV(organizationsWithProjects, {
+                searchQuery: appliedSearchQuery || undefined,
+                donorCountries: combinedDonors,
+                investmentTypes: investmentTypes
+            });
         } catch (error) {
             console.error('Failed to export CSV:', error);
             alert('Failed to export CSV. Please try again.');

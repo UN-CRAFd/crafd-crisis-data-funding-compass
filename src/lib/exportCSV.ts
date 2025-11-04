@@ -35,7 +35,7 @@ export function generateOrganizationsCSV(organizations: OrganizationWithProjects
     const headers = [
         'Organization Name',
         'Organization Type',
-        'Number of Assets',
+        'Description',
         'Supporting Countries',
         'Investment Types'
     ];
@@ -55,7 +55,7 @@ export function generateOrganizationsCSV(organizations: OrganizationWithProjects
         return [
             org.organizationName,
             org.type,
-            org.projects.length.toString(),
+            org.description || '',
             supportingCountries,
             investmentTypes
         ];
@@ -100,18 +100,125 @@ export function generateProjectsCSV(organizations: OrganizationWithProjects[]): 
 }
 
 /**
+ * Generate README file with export information
+ */
+function generateReadme(
+    organizations: OrganizationWithProjects[],
+    filterInfo: {
+        searchQuery?: string;
+        donorCountries?: string[];
+        investmentTypes?: string[];
+        totalOrganizations: number;
+        totalProjects: number;
+    }
+): string {
+    const timestamp = new Date().toLocaleString('en-US', {
+        year: 'numeric',
+        month: 'long',
+        day: 'numeric',
+        hour: '2-digit',
+        minute: '2-digit',
+        timeZoneName: 'short'
+    });
+
+    let readme = `# Crisis Data Funding Compass - Data Export\n\n`;
+    readme += `Export Date: ${timestamp}\n\n`;
+    readme += `## About This Dataset\n\n`;
+    readme += `This export contains data from the Crisis Data Funding Compass, an overview of the crisis data funding ecosystem. The dataset includes information about organizations providing crisis data products and services, along with details about their specific assets/projects. The data set is subject to expansion and correction.\n\n`;
+    
+    readme += `## Export Contents\n\n`;
+    readme += `This export includes two CSV files:\n\n`;
+    readme += `1. organizations.csv - Information about data provider organizations\n`;
+    readme += `   - Organization Name\n`;
+    readme += `   - Organization Type\n`;
+    readme += `   - Description\n`;
+    readme += `   - Supporting Countries (donor countries funding the organization)\n`;
+    readme += `   - Investment Types (types of data assets provided)\n\n`;
+    readme += `2. assets.csv - Information about specific data products/projects\n`;
+    readme += `   - Asset Name\n`;
+    readme += `   - Organization Name (provider)\n`;
+    readme += `   - Investment Types\n`;
+    readme += `   - Investment Themes\n`;
+    readme += `   - Supporting Countries\n`;
+    readme += `   - Description\n`;
+    readme += `   - Website\n\n`;
+    
+    readme += `## Current View Filters\n\n`;
+    
+    const hasFilters = filterInfo.searchQuery || 
+                      (filterInfo.donorCountries && filterInfo.donorCountries.length > 0) || 
+                      (filterInfo.investmentTypes && filterInfo.investmentTypes.length > 0);
+    
+    if (hasFilters) {
+        readme += `This export represents a filtered view of the data with the following criteria:\n\n`;
+        
+        if (filterInfo.donorCountries && filterInfo.donorCountries.length > 0) {
+            readme += `Donor Countries: ${filterInfo.donorCountries.join(', ')}\n`;
+        }
+        
+        if (filterInfo.investmentTypes && filterInfo.investmentTypes.length > 0) {
+            readme += `Investment Types: ${filterInfo.investmentTypes.join(', ')}\n`;
+        }
+        
+        if (filterInfo.searchQuery) {
+            readme += `Search Query: "${filterInfo.searchQuery}"\n`;
+        }
+        
+        readme += `\n`;
+    } else {
+        readme += `This export contains the complete dataset with no filters applied.\n\n`;
+    }
+    
+    readme += `## Data Summary\n\n`;
+    readme += `- Total Organizations: ${filterInfo.totalOrganizations}\n`;
+    readme += `- Total Assets/Projects: ${filterInfo.totalProjects}\n`;
+    readme += `- Unique Donor Countries: ${new Set(organizations.flatMap(org => org.donorCountries)).size}\n\n`;
+    
+    readme += `## Data Notes\n\n`;
+    readme += `- Multiple values in a single field are separated by semicolons (;)\n`;
+    readme += `- Empty fields indicate that information was not available\n`;
+    readme += `- Supporting Countries refers to donor countries that fund the organization or asset\n`;
+    readme += `- For assets without specific donor information, organization-level donors are used\n\n`;
+    
+    readme += `## Source\n\n`;
+    readme += `This data is maintained by the Complex Risk Analytics Fund (CRAF'd).\n`;
+    readme += `For more information, visit: https://crafd.io\n\n`;
+    readme += `For questions about this dataset, please contact CRAF'd through the feedback form in the Crisis Data Funding Compass.\n`;
+    
+    return readme;
+}
+
+/**
  * Export current view as CSV (zipped folder with organizations and projects CSVs)
  */
-export async function exportViewAsCSV(organizations: OrganizationWithProjects[]): Promise<void> {
+export async function exportViewAsCSV(
+    organizations: OrganizationWithProjects[],
+    filterInfo?: {
+        searchQuery?: string;
+        donorCountries?: string[];
+        investmentTypes?: string[];
+    }
+): Promise<void> {
     try {
+        // Calculate totals
+        const totalProjects = organizations.reduce((sum, org) => sum + org.projects.length, 0);
+        
         // Generate CSV strings
         const organizationsCSV = generateOrganizationsCSV(organizations);
         const projectsCSV = generateProjectsCSV(organizations);
         
+        // Generate README
+        const readme = generateReadme(organizations, {
+            ...filterInfo,
+            totalOrganizations: organizations.length,
+            totalProjects
+        });
+        
         // Create a new JSZip instance
         const zip = new JSZip();
         
-        // Add CSV files to zip
+        // Add files to zip
+        zip.file('README.txt', readme);
         zip.file('organizations.csv', organizationsCSV);
         zip.file('assets.csv', projectsCSV);
         
