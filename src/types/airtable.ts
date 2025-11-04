@@ -70,6 +70,7 @@ export interface OrganizationWithProjects {
     organizationName: string;
     orgShortName: string;
     type: string;
+    description?: string;
     donorCountries: string[];
     projects: ProjectData[];
     projectCount: number;
