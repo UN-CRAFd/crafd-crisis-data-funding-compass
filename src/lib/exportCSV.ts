@@ -37,7 +37,6 @@ export function generateOrganizationsCSV(organizations: OrganizationWithProjects
         'Organization Type',
         'Description',
         'Supporting Countries',
-        'Investment Types'
     ];
     
     // Generate rows
@@ -73,7 +72,6 @@ export function generateProjectsCSV(organizations: OrganizationWithProjects[]): 
         'Asset Name',
         'Organization Name',
         'Investment Types',
-        'Investment Themes',
         'Supporting Countries',
         'Description',
         'Website'
@@ -200,8 +198,17 @@ export async function exportViewAsCSV(
     }
 ): Promise<void> {
     try {
-        // Calculate totals
-        const totalProjects = organizations.reduce((sum, org) => sum + org.projects.length, 0);
+        // Calculate totals with deduplication
+        // Use the same deduplication logic as in data.ts
+        const uniqueProjects = new Set<string>();
+        organizations.forEach(org => {
+            org.projects.forEach(project => {
+                // Use both ID and name for deduplication (same as data.ts)
+                const projectKey = `${project.id}-${project.projectName}`;
+                uniqueProjects.add(projectKey);
+            });
+        });
+        const totalProjects = uniqueProjects.size;
         
         // Generate CSV strings
         const organizationsCSV = generateOrganizationsCSV(organizations);
@@ -214,13 +221,22 @@ export async function exportViewAsCSV(
             totalProjects
         });
         
+        // Generate timestamp in ISO 8601 format (YYYY-MM-DD)
+        const timestamp = new Date().toISOString().split('T')[0];
+        
         // Create a new JSZip instance
         const zip = new JSZip();
         
-        // Add files to zip
-        zip.file('README.txt', readme);
-        zip.file('organizations.csv', organizationsCSV);
-        zip.file('assets.csv', projectsCSV);
+        // Create a folder with timestamp in the zip
+        const folder = zip.folder(`crisis-data-export-${timestamp}`);
+        if (!folder) {
+            throw new Error('Failed to create folder in zip');
+        }
+        
+        // Add files to the timestamped folder
+        folder.file('README.txt', readme);
+        folder.file(`organizations-${timestamp}.csv`, organizationsCSV);
+        folder.file(`assets-${timestamp}.csv`, projectsCSV);
         
         // Generate zip file
         const zipBlob = await zip.generateAsync({ type: 'blob' });
@@ -231,7 +247,6 @@ export async function exportViewAsCSV(
         link.href = url;
         
         // Generate filename with timestamp
-        const timestamp = new Date().toISOString().split('T')[0]; // YYYY-MM-DD
         link.download = `crisis-data-export-${timestamp}.zip`;
         
         // Trigger download
