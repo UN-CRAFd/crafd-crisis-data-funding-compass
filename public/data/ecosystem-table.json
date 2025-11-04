@@ -73,7 +73,7 @@
         "Crisis Analytics & Insights"
       ],
       "Investment Theme(s)": [
-        "Anticipatory Action Triggers / Forecasts",
+        "Anticipatory and Early Action Forecasts",
         "Displacement & Migration Analytics",
         "Conflict Analytics",
         "Climate Analytics",
@@ -313,8 +313,8 @@
         "Crisis Analytics & Insights"
       ],
       "Investment Theme(s)": [
-        "Forecasting / Early-Warning",
-        "Conflict & Violence Data"
+        "Conflict & Violence Data",
+        "Anticipatory and Early Action Forecasts"
       ],
       "Project Website": "https://www.crisisgroup.org/crisiswatch",
       "Project Description": "CrisisWatch is our global conflict tracker, an early warning tool designed to help prevent deadly violence. It keeps decision-makers up-to-date with developments in over 70 conflicts and crises every month, identifying trends and alerting them to risks of escalation and opportunities to advance peace. In addition, CrisisWatch monitors over 50 situations (“standby monitoring”) to offer timely information if developments indicate a drift toward violence or instability. Entries dating back to 2003 provide easily searchable conflict histories\n",
@@ -347,7 +347,7 @@
       ],
       "Investment Theme(s)": [
         "Geospatial Analytics",
-        "Forecasting / Early-Warning"
+        "Anticipatory and Early Action Forecasts"
       ],
       "Project Website": "https://worldweather.wmo.int/en/home.html",
       "Project Description": "WWIS is a centralized WMO platform delivering authoritative city-level weather forecasts and climate summaries sourced from national meteorological and hydrological services. It supports risk awareness and decision-making through free, real-time access to standardized global weather data.\n"
@@ -389,7 +389,7 @@
       ],
       "Investment Theme(s)": [
         "Climate Data",
-        "Forecasting / Early-Warning"
+        "Anticipatory and Early Action Forecasts"
       ],
       "Project Website": "https://preparecenter.org/",
       "Project Description": "The IFRC Global Disaster Preparedness Center, together with the Red Cross Red Crescent Climate Centre and American Red Cross, develops data-driven tools and best practice templates. The center enables early warning preparedness and resilience building through open guides, scenario modeling tools, and dashboards.\n"
@@ -629,10 +629,10 @@
         "Infrastructure & Platforms"
       ],
       "Investment Theme(s)": [
-        "Forecasting / Early-Warning",
         "Climate Data",
         "Monitoring & Alerts",
-        "APIs"
+        "APIs Standard",
+        "Anticipatory and Early Action Forecasts"
       ],
       "Project Website": "https://www.disasteraware.com/",
       "Project Description": "DisasterAWARE is a global platform offering real-time hazard alerts, dashboards, and geospatial tools for disaster preparedness and early warning. It integrates predictive models and hazard tracking from global datasets.\n"
@@ -748,7 +748,7 @@
   {
     "id": "recCGWvmunEXVzpzw",
     "fields": {
-      "Project/Product Name": "Latinobarómetro",
+      "Project/Product Name": "Survey Data (Corporación Latinobarómetro)",
       "product_key": "latinobarometro",
       "Provider Orgs Full Name": [
         "recnt0uuGwuTUCjCw"
@@ -758,7 +758,8 @@
         "Data Sets & Commons"
       ],
       "Investment Theme(s)": [
-        "Sentiment Data"
+        "Sentiment Data",
+        "Disaggregated Country-level Data"
       ],
       "Project Website": "https://www.latinobarometro.org/lat.jsp",
       "Project Description": "Latinobarómetro is an annual public opinion survey that involves some 20,000 interviews in 18 Latin American countries, representing more than 600 million inhabitants. Some of the most relevant sections of the Latinobarómetro for freedom of expression and media development are \"Democracy\" and \"Media, Internet and Social media\". 1. Activities people like to do in the internet. 2. Perception of use of private data for commercial uses. 3. Prefered social media platforms\n\n",
@@ -919,10 +920,10 @@
         "Crisis Analytics & Insights"
       ],
       "Investment Theme(s)": [
-        "Forecasting / Early-Warning",
         "Climate Data",
         "Monitoring & Alerts",
-        "Geographic Information Systems (GIS)"
+        "Geographic Information Systems (GIS)",
+        "Anticipatory and Early Action Forecasts"
       ],
       "Project Website": "https://www.gdacs.org/",
       "Project Description": "GDACS is a cooperation framework between the United Nations, the European Commission and disaster managers worldwide to improve alerts, information exchange and coordination in the first phase after major sudden-onset disasters.\n"
@@ -944,7 +945,7 @@
       "Investment Theme(s)": [
         "Climate Data",
         "Geospatial Data",
-        "Anticipatory Action Triggers / Forecasts"
+        "Anticipatory and Early Action Forecasts"
       ],
       "Project Website": "https://innovation.wfp.org/project/prism",
       "Project Description": "PRISM is a climate risk monitoring system that integrates geospatial data on hazards such as droughts, floods, tropical storms, and earthquakes, along with socioeconomic vulnerability information. It provides decision-makers with interactive maps and charts to support disaster risk reduction and social assistance programs\n"
@@ -1025,8 +1026,8 @@
         "Crisis Analytics & Insights"
       ],
       "Investment Theme(s)": [
-        "Forecasting / Early-Warning",
-        "Monitoring & Alerts"
+        "Monitoring & Alerts",
+        "Anticipatory and Early Action Forecasts"
       ],
       "Project Website": "https://crafd.io/data-financing/viewspin",
       "Project Description": "Set at an extension to the world-leading conflict prediction system [VIEWS](https://viewsforecasting.org/), VIEWS-PIN will provide monthly worldwide forecasts for the number of people in need of humanitarian assistance following exposure to conflict. Defining need as adverse changes in average income, access to water, healthcare, education, and food, VIEWS-PIN will also provide forecasts for each of these five dimensions to facilitate targeted action.\n",
@@ -1069,8 +1070,8 @@
       ],
       "Investment Theme(s)": [
         "Geospatial Data",
-        "Forecasting / Early-Warning",
-        "Guides"
+        "Guides",
+        "Anticipatory and Early Action Forecasts"
       ],
       "Project Website": "https://hhi.harvard.edu/signal-program",
       "Project Description": "The Signal Program explores how emerging technologies—like remote sensing and data analytics—can support protection in humanitarian emergencies. It develops tools, ethical frameworks, and applied research for crisis contexts.\n"
@@ -1297,8 +1298,7 @@
         "Crisis Analytics & Insights"
       ],
       "Investment Theme(s)": [
-        "Anticipatory Action Triggers / Forecasts",
-        "Forecasting / Early-Warning",
+        "Anticipatory and Early Action Forecasts",
         "AI Models",
         "Conflict Analytics"
       ],
@@ -1383,7 +1383,7 @@
   {
     "id": "recLqIa10HXfvELNB",
     "fields": {
-      "Project/Product Name": "Online Data Analysis",
+      "Project/Product Name": "Online Data Analytics",
       "product_key": "afrobarometer-oda",
       "Provider Orgs Full Name": [
         "rechDlUwp5odgrH4t"
@@ -1750,6 +1750,32 @@
     }
   },
   {
+    "id": "recSTdLTga3nMLgPn",
+    "fields": {
+      "Project/Product Name": "Arab Pulse",
+      "Provider Orgs Full Name": [
+        "reccGyY6Ep2ptBPKy"
+      ],
+      "CRAF’d-Funded Project?": "NO",
+      "Project Website": "https://www.arabbarometer.org/arab-pulse/"
+    }
+  },
+  {
+    "id": "recSbniShY9V8cE4L",
+    "fields": {
+      "Project/Product Name": "Data Analytics Tool",
+      "Provider Orgs Full Name": [
+        "reccGyY6Ep2ptBPKy"
+      ],
+      "CRAF’d-Funded Project?": "NO",
+      "Investment Type(s)": [
+        "Crisis Analytics & Insights"
+      ],
+      "Project Website": "https://www.arabbarometer.org/survey-data/data-analysis-tool/",
+      "Project Description": "Our data analysis tool allows researchers, who have no access to statistical software packages, to conduct simple descriptive analysis of all Arab Barometer waves and countries. All results can be downloaded in various different formats and can be integrated into reports, articles, and presentations.\n"
+    }
+  },
+  {
     "id": "recSvtWQnSvfNoXdt",
     "fields": {
       "Project/Product Name": "UN Environment Programme World Conservation Monitoring Centre (UNEP-WCMC)",
@@ -1953,7 +1979,7 @@
         "Crisis Analytics & Insights"
       ],
       "Investment Theme(s)": [
-        "Forecasting / Early-Warning"
+        "Anticipatory and Early Action Forecasts"
       ],
       "Project Website": "https://drmkc.jrc.ec.europa.eu/inform-index/INFORM-Warning",
       "Project Description": "[INFORM Warning](https://drmkc.jrc.ec.europa.eu/inform-index/INFORM-Warning) is a state-of-the-art innovative global risk monitoring tool designed to anticipate complex risks up to a year in advance, directly linked to crisis funding instruments. It transcends traditional methods by presenting multi-hazard information from diverse sources. Its unique analysis offers insights into risk trends, forecasts, scenarios, and potential events leading to crisis impact.  \n",
@@ -2126,11 +2152,10 @@
   {
     "id": "recaWq49HJw4UXd9K",
     "fields": {
-      "Project/Product Name": "Integrated Food Security Phase Classification (IPC)",
+      "Project/Product Name": "IPC Analytics Portal",
       "product_key": "ipc",
       "Provider Orgs Full Name": [
-        "recoPRDBbxl0bVx7x",
-        "recAqAEBX8YBwPWlb"
+        "recoPRDBbxl0bVx7x"
       ],
       "CRAF’d-Funded Project?": "NO",
       "Investment Type(s)": [
@@ -2140,10 +2165,9 @@
         "Food Security Data",
         "Nutrition Data"
       ],
-      "Project Website": "https://www.ipcinfo.org/",
-      "Project Description": "The **Integrated Food Security Phase Classification (IPC)** is a common global scale for classifying the severity and magnitude of food insecurity and malnutrition. It is the result of a partnership of various organizations at the global, regional, and country levels dedicated to developing and maintaining the highest possible quality in food security and nutrition analysis. Increasingly, the IPC is the international standard for classifying food insecurity and malnutrition. The IPC is a ‘big picture’ classification focusing on providing information that is consistently required by stakeholders around the world for strategic decision-making. Nuanced information may also be needed to inform particular decisions or answer certain questions. The IPC provides the essential information needed in a wide range of contexts in consistent, comparable and accountable ways.\n<https://www.ipcinfo.org/> \n\n",
+      "Project Website": "https://www.ipcinfo.org/ipc-country-analysis/en/",
+      "Project Description": "The IPC Analysis Portal is the global public platform where official IPC food insecurity analyses and maps are published, providing a single-entry point for validated IPC classifications worldwide.\n",
       "Project Donor Agencies": [
-        "rec6XRPA9pKgC8j1J",
         "rec0sY1I5JZz6ZsUE",
         "recYxlC8x9puB69tx",
         "rec2KBp1IAA5TtnQl"
@@ -2347,9 +2371,9 @@
         "Crisis Analytics & Insights"
       ],
       "Investment Theme(s)": [
-        "Forecasting / Early-Warning",
         "Food Security Data",
-        "Food Security Analytics"
+        "Food Security Analytics",
+        "Anticipatory and Early Action Forecasts"
       ],
       "Project Website": "https://www.worldbank.org/en/programs/famine-early-action-mechanism",
       "Project Description": "The Famine Action Mechanism (FAM) is a global partnership dedicated to scaling up anticipatory and early action to protect lives and livelihoods from emerging food security crises.\t\n"
@@ -2412,7 +2436,7 @@
         "Learning & Exchange"
       ],
       "Investment Theme(s)": [
-        "Anticipatory Action Triggers / Forecasts",
+        "Anticipatory and Early Action Forecasts",
         "Monitoring & Alerts",
         "Upskilling & Training"
       ],
@@ -2496,8 +2520,7 @@
         "Standards & Coordination"
       ],
       "Investment Theme(s)": [
-        "Anticipatory Action Triggers / Forecasts",
-        "Forecasting / Early-Warning",
+        "Anticipatory and Early Action Forecasts",
         "Upskilling & Training"
       ],
       "Project Website": "https://510.global/",
@@ -2645,7 +2668,7 @@
         "Conflict Analytics",
         "Conflict & Violence Data",
         "Peace Data",
-        "Forecasting / Early-Warning"
+        "Anticipatory and Early Action Forecasts"
       ],
       "Project Website": "https://www.uu.se/en/department/peace-and-conflict-research/research/ucdp/",
       "Project Description": "UCDP offers conflict datasets, battle event data, and fatalities statistics to support academic and policy research on global violence trends.\n",
@@ -2669,8 +2692,8 @@
         "Crisis Analytics & Insights"
       ],
       "Investment Theme(s)": [
-        "Forecasting / Early-Warning",
-        "Climate Data"
+        "Climate Data",
+        "Anticipatory and Early Action Forecasts"
       ],
       "Project Website": "https://drmkc.jrc.ec.europa.eu/inform-index",
       "Project Description": "The INFORM Risk Index is a multi-hazard risk assessment tool developed by the Inter-Agency Standing Committee (IASC) and the European Commission. It combines data on hazards, vulnerability, and coping capacity to produce a composite score of disaster risk in over 190 countries. The index supports evidence-based disaster preparedness, humanitarian planning, and crisis response by identifying countries most at risk of crises that could overwhelm national response capacities. It is updated annually and incorporates more than 50 indicators.\n"
@@ -2768,7 +2791,7 @@
   {
     "id": "rechtC1lJc96HgvFk",
     "fields": {
-      "Project/Product Name": "Arab Barometer",
+      "Project/Product Name": "Arab Barometer Survey Data",
       "product_key": "arab-barometer",
       "Provider Orgs Full Name": [
         "reccGyY6Ep2ptBPKy"
@@ -3046,23 +3069,13 @@
     }
   },
   {
-    "id": "recnt8m31aCnnA0my",
+    "id": "recogMAjsbKV95Pqs",
     "fields": {
-      "Project/Product Name": "HealthMap",
-      "product_key": "healthmap",
+      "Project/Product Name": "Data, Technology & Innovation (DTI) Services ",
       "Provider Orgs Full Name": [
-        "recjxKzlYBzlFLOvx"
+        "recHsNe20lr1CUAVu"
       ],
-      "CRAF’d-Funded Project?": "NO",
-      "Investment Type(s)": [
-        "Crisis Analytics & Insights"
-      ],
-      "Investment Theme(s)": [
-        "Health Data",
-        "Geospatial Data"
-      ],
-      "Project Website": "https://www.healthmap.org",
-      "Project Description": "HealthMap aggregates open-source public health data, including disease alerts and risk indicators, into interactive maps and dashboards for outbreak detection and global health monitoring.\n"
+      "CRAF’d-Funded Project?": "NO"
     }
   },
   {
@@ -3133,7 +3146,7 @@
   {
     "id": "recpARdDyMReIUuDq",
     "fields": {
-      "Project/Product Name": "EEARTH",
+      "Project/Product Name": "eEARTH",
       "product_key": "eearth",
       "Provider Orgs Full Name": [
         "recXLswB4U05ZtaKy"
@@ -3144,7 +3157,7 @@
       ],
       "Investment Theme(s)": [
         "Climate Data",
-        "Forecasting / Early-Warning"
+        "Anticipatory and Early Action Forecasts"
       ],
       "Project Website": "https://crafd.io/data-financing/eearth",
       "Project Description": "Developed by the [International Crisis Group](https://www.crisisgroup.org/), EEARTH is a revolutionary early warning system designed to identify climate-driven conflict pathways in the Horn of Africa. By integrating both quantitative and qualitative data, it offers a comprehensive approach to climate-security risks. Initially piloted in Somalia and South Sudan, EEARTH provides insights into the underlying causes of conflict risks. Its innovative approach is geared towards anticipating, preventing, and addressing the repercussions of climate-related security threats. \n",
@@ -3169,7 +3182,7 @@
         "Crisis Analytics & Insights"
       ],
       "Investment Theme(s)": [
-        "Forecasting / Early-Warning"
+        "Anticipatory and Early Action Forecasts"
       ],
       "Project Website": "https://www.who.int/emergencies/surveillance/early-warning-alert-and-response-system-ewars",
       "Project Description": "The Early Warning Alert and Response System provides real-time monitoring of epidemic outbreaks. It supports crisis response planning and risk assessment using online reporting platforms and dashboards.\n"
@@ -3188,12 +3201,26 @@
         "Crisis Analytics & Insights"
       ],
       "Investment Theme(s)": [
-        "Forecasting / Early-Warning",
-        "Anticipatory Action Triggers / Forecasts",
+        "Anticipatory and Early Action Forecasts",
         "Monitoring & Alerts"
       ],
       "Project Website": "https://510.global/service/trigger-model-development/",
       "Project Description": "Trigger models are employed to establish danger levels that activate humanitarian anticipatory Early Action Protocols (EAPs). These models are developed using the Impact-Based Forecasting ([IBF](https://510.global/glossary/ibf/)) methodology. So far, we have built models that trigger EAPs for typhoon, flood, dzud, drought and dengue hazards. \n\n"
+    }
+  },
+  {
+    "id": "recpVTiR964LzzJng",
+    "fields": {
+      "Project/Product Name": "Survey Analytics",
+      "Provider Orgs Full Name": [
+        "recnt0uuGwuTUCjCw"
+      ],
+      "CRAF’d-Funded Project?": "NO",
+      "Investment Type(s)": [
+        "Crisis Analytics & Insights"
+      ],
+      "Project Website": "https://www.latinobarometro.org/analisis-online",
+      "Project Description": "The Latinobarómetro Online Analysis Platform allows you to explore and analyze data directly in your browser — without downloading files or registering. It is powered by JDSurvey, an analysis tool developed by JD Systems (Madrid), the company that maintains the Latinobarómetro Data Archive.\n"
     }
   },
   {
@@ -3233,7 +3260,7 @@
       ],
       "Investment Theme(s)": [
         "Food Security Data",
-        "Forecasting / Early-Warning"
+        "Anticipatory and Early Action Forecasts"
       ],
       "Project Website": "https://fews.net/",
       "Project Description": "FEWS NET issues monthly and event-driven food insecurity forecasts based on integrated climate, socioeconomic, and agricultural data. Its publicly shared maps and data support anticipatory humanitarian planning and funding allocation in high-risk areas.\n",
@@ -3729,6 +3756,29 @@
     }
   },
   {
+    "id": "recxuDvQE71WPmpJV",
+    "fields": {
+      "Project/Product Name": "Conflict Forecast",
+      "Provider Orgs Full Name": [
+        "rec2BwDRFUPJJgINF"
+      ],
+      "CRAF’d-Funded Project?": "NO",
+      "Investment Type(s)": [
+        "Crisis Analytics & Insights"
+      ],
+      "Investment Theme(s)": [
+        "Anticipatory and Early Action Forecasts"
+      ],
+      "Project Website": "https://conflictforecast.org/",
+      "Project Description": "We specialize in conflict forecasting, prevention, and decision support. Our forecasting methodology is explicitly designed to detect new, subtle signals of conflict risk in countries not currently at war. Detecting these risks is extremely difficult and requires accepting false positives. We then integrate these predictions into a novel policy evaluation tool to assess the tradeoff between the benefits of preventive action and the costs of acting on false-positive signals. \n",
+      "Project Donor Agencies": [
+        "rec0sY1I5JZz6ZsUE",
+        "rec0QlT9YlTVhHfEn",
+        "recNLQhceOCXSMemo"
+      ]
+    }
+  },
+  {
     "id": "recxuOxX8VxssdS6k",
     "fields": {
       "Project/Product Name": "Socio-Economic Insights Survey (SEIS)",
@@ -3783,8 +3833,8 @@
       ],
       "Investment Theme(s)": [
         "Displacement & Migration Data",
-        "Forecasting / Early-Warning",
-        "Climate Data"
+        "Climate Data",
+        "Anticipatory and Early Action Forecasts"
       ],
       "Project Website": "https://crafd.io/data-financing/clifdewgrid",
       "Project Description": "CLIFDEW-GRID, developed by UNHCR in collaboration with the University of California Irvine, is an ambitious initiative dedicated to addressing the complex challenge of climate-induced forced displacement, including through the first risk index of its kind. This project leverages advanced data analytics and innovative approaches to empower CRAF’d ecosystem partners to anticipate and respond effectively to the growing crisis of climate-induced displacement. By forecasting subnational granularity, the project will better accommodate in-country heterogeneity than traditional country-level approaches. It will be piloted for countries in Western and Eastern Africa. \n\n<https://www.unhcr.org/us/clifdew-grid>\nCLIFDEW-GRID is an early warning grid-based modelling system designed to predict potential climate-induced forced displacement. It is a joint innovative data project led by UNHCR and the [University of California Irvine](https://catalogue.uci.edu/schoolofphysicalsciences/departmentofearthsystemscience/) and financed by the Complex Risk Analytics Fund ([CRAF'd](https://crafd.io/data-financing/clifdewgrid)).\n\n",
@@ -3807,8 +3857,8 @@
         "Crisis Analytics & Insights"
       ],
       "Investment Theme(s)": [
-        "Forecasting / Early-Warning",
-        "Climate Data"
+        "Climate Data",
+        "Anticipatory and Early Action Forecasts"
       ],
       "Project Website": "https://drmkc.jrc.ec.europa.eu/inform-index",
       "Project Description": "The INFORM Risk Index is a multi-hazard risk assessment tool developed by the Inter-Agency Standing Committee (IASC) and the European Commission. It combines data on hazards, vulnerability, and coping capacity to produce a composite score of disaster risk in over 190 countries. The index supports evidence-based disaster preparedness, humanitarian planning, and crisis response by identifying countries most at risk of crises that could overwhelm national response capacities. It is updated annually and incorporates more than 50 indicators.\n"
@@ -3858,6 +3908,15 @@
       ],
       "Project Website": "https://dtm.iom.int/data-product-series/multi-sectoral-needs-assessment",
       "Project Description": "MSNA is a standardized, country-level data collection initiative that captures multi-sectoral needs in crisis-affected populations. Data collected informs strategic planning, prioritization, and humanitarian response efforts.\n"
+    }
+  },
+  {
+    "id": "reczwfqv4kuJclB0U",
+    "fields": {
+      "Project/Product Name": "Capacity & Training Services",
+      "Provider Orgs Full Name": [
+        "recHsNe20lr1CUAVu"
+      ]
     }
   },
   {
