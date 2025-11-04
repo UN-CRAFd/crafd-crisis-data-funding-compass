@@ -128,14 +128,14 @@ function generateReadme(
     readme += `   - Organization Name\n`;
     readme += `   - Organization Type\n`;
     readme += `   - Description\n`;
-    readme += `   - Supporting Countries (donor countries funding the organization)\n`;
+    readme += `   - Supporting Donors (donor donors funding the organization)\n`;
     readme += `   - Investment Types (types of data assets provided)\n\n`;
     readme += `2. assets.csv - Information about specific data products/projects\n`;
     readme += `   - Asset Name\n`;
     readme += `   - Organization Name (provider)\n`;
     readme += `   - Investment Types\n`;
     readme += `   - Investment Themes\n`;
-    readme += `   - Supporting Countries\n`;
+    readme += `   - Supporting Donors\n`;
     readme += `   - Description\n`;
     readme += `   - Website\n\n`;
     
