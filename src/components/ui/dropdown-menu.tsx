@@ -45,7 +45,12 @@ function DropdownMenuContent({
         data-slot="dropdown-menu-content"
         sideOffset={sideOffset}
         className={cn(
-          "bg-popover text-popover-foreground z-[9950] max-h-[var(--radix-dropdown-menu-content-available-height)] min-w-[8rem] overflow-x-hidden overflow-y-auto rounded-md border p-1 animate-none",
+          "bg-popover text-popover-foreground z-[9950] max-h-[var(--radix-dropdown-menu-content-available-height)] min-w-[8rem] overflow-x-hidden overflow-y-auto rounded-md border p-1",
+          "data-[state=open]:animate-in data-[state=closed]:animate-out",
+          "data-[state=closed]:fade-out-0 data-[state=open]:fade-in-0",
+          "data-[state=open]:slide-in-from-top-2",
+          "origin-top",
+          "transition-all duration-200 ease-out",
           className
         )}
         {...props}
