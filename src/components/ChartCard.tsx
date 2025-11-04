@@ -171,7 +171,9 @@ const ChartCard = React.memo(function ChartCard({ title, icon, data, barColor, f
                                     // Use the left edge of the bar + padding
                                     const textX = xPos + 8; // 8px padding from left edge of bar
                                     const textAnchor = 'start';
-                                    const textColor = 'var(--chart-text-color)';
+                                    // Use the same color as the chart axis/labels so the hovered
+                                    // value matches the rest of the chart text styling.
+                                    const textColor = 'var(--chart-axis-stroke)';
 
                                     return (
                                         <text
