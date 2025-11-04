@@ -75,10 +75,11 @@ SCRIPT_DIR = Path(__file__).resolve().parent
 PROJECT_ROOT = SCRIPT_DIR.parent
 DOTENV_PATH = PROJECT_ROOT / ".env.local"
 if DOTENV_PATH.exists():
-    load_dotenv(DOTENV_PATH)
+    load_dotenv(DOTENV_PATH, override=False)
+
 else:
     # fall back to default .env if present
-    load_dotenv(PROJECT_ROOT / ".env")
+    load_dotenv(PROJECT_ROOT / ".env", override=False)
 
 # --- Configuration from env ---
 API_KEY = os.getenv("AIRTABLE_API_KEY")
