@@ -790,22 +790,22 @@ const CrisisDataDashboard = ({
                                         <DropdownMenuTrigger asChild>
                                             <Button
                                                 variant="outline"
-                                                className="h-7 w-auto px-2.5 justify-between font-medium transition-all bg-slate-50/50 border-slate-200 hover:bg-white hover:border-slate-300 text-[11px]"
+                                                className="h-5 sm:h-7 w-auto px-1.5 sm:px-2.5 py-0.5 sm:py-1 justify-between font-medium transition-all bg-slate-50/50 border-slate-200 hover:bg-white hover:border-slate-300 text-[10px] sm:text-[11px]"
                                             >
-                                                <div className="flex items-center gap-1.5 min-w-0">
+                                                <div className="flex items-center gap-1 sm:gap-1.5 min-w-0">
                                                     {sortBy === 'name' ? (
                                                         // For alphabetical: asc = A-Z (down), desc = Z-A (up)
                                                         sortDirection === 'asc' ? (
-                                                            <ArrowDownWideNarrow className="w-3 h-3 shrink-0" />
+                                                            <ArrowDownWideNarrow className="w-2.5 h-2.5 sm:w-3 sm:h-3 shrink-0" />
                                                         ) : (
-                                                            <ArrowUpWideNarrow className="w-3 h-3 shrink-0" />
+                                                            <ArrowUpWideNarrow className="w-2.5 h-2.5 sm:w-3 sm:h-3 shrink-0" />
                                                         )
                                                     ) : (
                                                         // For numbers: asc = low-to-high (up), desc = high-to-low (down)
                                                         sortDirection === 'asc' ? (
-                                                            <ArrowUpWideNarrow className="w-3 h-3 shrink-0" />
+                                                            <ArrowUpWideNarrow className="w-2.5 h-2.5 sm:w-3 sm:h-3 shrink-0" />
                                                         ) : (
-                                                            <ArrowDownWideNarrow className="w-3 h-3 shrink-0" />
+                                                            <ArrowDownWideNarrow className="w-2.5 h-2.5 sm:w-3 sm:h-3 shrink-0" />
                                                         )
                                                     )}
                                                     <span className="truncate">
@@ -816,7 +816,7 @@ const CrisisDataDashboard = ({
                                                             : 'Assets'}
                                                     </span>
                                                 </div>
-                                                <ChevronDown className={`ml-1.5 h-3 w-3 opacity-50 shrink-0 transform transition-transform ${
+                                                <ChevronDown className={`ml-1 sm:ml-1.5 h-2.5 w-2.5 sm:h-3 sm:w-3 opacity-50 shrink-0 transform transition-transform ${
                                                     sortMenuOpen ? 'rotate-180' : ''
                                                 }`} />
                                             </Button>
