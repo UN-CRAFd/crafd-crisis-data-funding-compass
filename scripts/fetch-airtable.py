@@ -56,7 +56,6 @@ FIELDS_ORGANIZATIONS = [
     "Org IATI Name",
     "Org MPTFO Name",
     "Org MPTFO URL [Formula]",
-    "Related Organization(s) [Linked]",
     "Org Transparency Portal",
     "Org Programme Budget",
     "Has received CRAF'd Funding?",
