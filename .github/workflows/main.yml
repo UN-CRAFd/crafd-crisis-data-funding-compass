@@ -1,0 +1,9 @@
+- name: Debug environment
+  run: |
+    echo "AIRTABLE_API_KEY length: ${#AIRTABLE_API_KEY}"
+    echo "AIRTABLE_BASE_ID length: ${#AIRTABLE_BASE_ID}"
+    echo "AIRTABLE_TABLE_ID_PROJECTS length: ${#AIRTABLE_TABLE_ID_PROJECTS}"
+  env:
+    AIRTABLE_API_KEY: ${{ secrets.AIRTABLE_API_KEY }}
+    AIRTABLE_BASE_ID: ${{ secrets.AIRTABLE_BASE_ID }}
+    AIRTABLE_TABLE_ID_PROJECTS: ${{ secrets.AIRTABLE_TABLE_ID_PROJECTS }}
