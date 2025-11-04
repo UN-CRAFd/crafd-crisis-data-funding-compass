@@ -649,7 +649,7 @@ const CrisisDataDashboard = ({
                                 size="sm"
                                 onClick={handleExportCSV}
                                 disabled={csvExportLoading}
-                                className="bg-slate-50/50 border-slate-200 hover:var(--brand-bg-light) hover:border-[var(--brand-primary)] hover:text-[var(--brand-primary)] text-xs sm:text-sm"
+                                className="hidden sm:flex bg-slate-50/50 border-slate-200 hover:var(--brand-bg-light) hover:border-[var(--brand-primary)] hover:text-[var(--brand-primary)] text-xs sm:text-sm"
                                 title="Export current view as CSV"
                             >
                                 <FileDown className="w-4 h-4 sm:mr-2" />
@@ -796,16 +796,16 @@ const CrisisDataDashboard = ({
                                                     {sortBy === 'name' ? (
                                                         // For alphabetical: asc = A-Z (down), desc = Z-A (up)
                                                         sortDirection === 'asc' ? (
-                                                            <ArrowDownWideNarrow className="w-2.5 h-2.5 sm:w-3 sm:h-3 shrink-0" />
+                                                            <ArrowDownWideNarrow className="w-3 h-3 shrink-0" />
                                                         ) : (
-                                                            <ArrowUpWideNarrow className="w-2.5 h-2.5 sm:w-3 sm:h-3 shrink-0" />
+                                                            <ArrowUpWideNarrow className="w-3 h-3 shrink-0" />
                                                         )
                                                     ) : (
                                                         // For numbers: asc = low-to-high (up), desc = high-to-low (down)
                                                         sortDirection === 'asc' ? (
-                                                            <ArrowUpWideNarrow className="w-2.5 h-2.5 sm:w-3 sm:h-3 shrink-0" />
+                                                            <ArrowUpWideNarrow className="w-3 h-3 shrink-0" />
                                                         ) : (
-                                                            <ArrowDownWideNarrow className="w-2.5 h-2.5 sm:w-3 sm:h-3 shrink-0" />
+                                                            <ArrowDownWideNarrow className="w-3 h-3 shrink-0" />
                                                         )
                                                     )}
                                                     <span className="truncate">
@@ -816,7 +816,7 @@ const CrisisDataDashboard = ({
                                                             : 'Assets'}
                                                     </span>
                                                 </div>
-                                                <ChevronDown className={`ml-1 sm:ml-1.5 h-2.5 w-2.5 sm:h-3 sm:w-3 opacity-50 shrink-0 transform transition-transform ${
+                                                <ChevronDown className={`ml-1.5 h-3 w-3 opacity-50 shrink-0 transform transition-transform ${
                                                     sortMenuOpen ? 'rotate-180' : ''
                                                 }`} />
                                             </Button>
