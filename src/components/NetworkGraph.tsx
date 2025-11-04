@@ -4,9 +4,10 @@ import React, { useCallback, useEffect, useMemo, useRef, useState } from 'react'
 import { createPortal } from 'react-dom';
 import { forceCollide } from 'd3-force';
 import ForceGraph2D from 'react-force-graph-2d';
-import { Maximize, Minimize, Crosshair } from 'lucide-react';
+import { Maximize, Minimize, Crosshair, MessageSquare, RotateCcw, AlertCircle } from 'lucide-react';
 import type { OrganizationWithProjects } from '../types/airtable';
 import FilterBar from './FilterBar';
+import { Button } from './ui/button';
 
 interface NetworkGraphProps {
     organizationsWithProjects: OrganizationWithProjects[];
@@ -965,6 +966,46 @@ const NetworkGraph: React.FC<NetworkGraphProps> = ({
                 enableZoomInteraction={true}
                 enablePanInteraction={true}
             />
+            
+            {/* Empty State Modal - Inside canvas */}
+            {graphData.nodes.length === 0 && (
+                <div className="absolute inset-0 flex items-center justify-center bg-slate-50/95 backdrop-blur-sm z-[100]">
+                    <div className="bg-white rounded-lg shadow-xl max-w-md w-full mx-4 border border-slate-200 animate-in fade-in zoom-in-95 duration-200">
+                        <div className="flex flex-col items-center text-center p-8">
+                            <div className="w-16 h-16 rounded-full bg-slate-100 flex items-center justify-center mb-4">
+                                <AlertCircle className="w-8 h-8 text-slate-400" />
+                            </div>
+                            <h3 className="text-lg font-semibold text-slate-900 mb-2">
+                                No Results Found
+                            </h3>
+                            <p className="text-sm text-slate-600 mb-6">
+                                No data matches your current filters. Try adjusting your filter criteria or reset all filters to see the complete network.
+                            </p>
+                            <div className="flex flex-col sm:flex-row gap-3 w-full">
+                                <Button
+                                    variant="outline"
+                                    onClick={() => {
+                                        if (onResetFilters) {
+                                            onResetFilters();
+                                        }
+                                    }}
+                                    className="flex items-center justify-center gap-2 flex-1"
+                                >
+                                    <RotateCcw className="w-4 h-4" />
+                                    Reset Filters
+                                </Button>
+                                <Button
+                                    onClick={() => window.open('https://framaforms.org/crisis-data-funding-compass-feedback-1730717400', '_blank')}
+                                    className="flex items-center justify-center gap-2 bg-[var(--brand-primary)] hover:bg-[var(--brand-primary-dark)] text-white flex-1"
+                                >
+                                    <MessageSquare className="w-4 h-4" />
+                                    Send Feedback
+                                </Button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            )}
         </div>
         
         {/* Filter Bar Portal - render outside overflow-hidden container when in fullscreen */}
