@@ -12,10 +12,10 @@
         "rech8GCismNX3Bm8p"
       ],
       "Org Donor Agencies": [
-        "rec6XRPA9pKgC8j1J",
         "recRutqdhqEZSnOB2",
         "rectyuW4INCMaNoAM",
-        "reco4Um0k7Tgw2UCK"
+        "reco4Um0k7Tgw2UCK",
+        "reckIAhFXgj4XL29b"
       ],
       "Org HQ Country": "United States",
       "Has received CRAF'd Funding?": "NO",
@@ -64,6 +64,21 @@
       "org_key": "ukhih",
       "Org Type": [
         "Network / Consortium"
+      ]
+    }
+  },
+  {
+    "id": "rec2BwDRFUPJJgINF",
+    "fields": {
+      "Org Full Name": "Barcelona School of Economics (BSE)",
+      "Org Description": "The Barcelona School of Economics (BSE) was founded in 2006 by Andreu Mas-Colell as an institution for scientific cooperation between four academic units: two university departments and two research centers with a long tradition of collaboration and a history of leadership in the field of Economics.",
+      "Org Mission": "BSE aims to promote the creation and transmission of frontier knowledge in Economics and related disciplines, by consolidating Barcelona as a world-class center of research, academic education, and professional training with the ultimate goals of informing policy and promoting economic and social wellbeing.",
+      "Provided Data Ecosystem Projects": [
+        "recxuDvQE71WPmpJV"
+      ],
+      "Org HQ Country": "Spain",
+      "Org Type": [
+        "Academia"
       ]
     }
   },
@@ -481,7 +496,6 @@
         "recLGd1qlYszSKznz"
       ],
       "Org Donor Agencies": [
-        "rec6XRPA9pKgC8j1J",
         "rec57z0MkntuI0kvP",
         "recjyWTotWvaTYTI4"
       ],
@@ -491,7 +505,8 @@
       "Has received CRAF'd Funding?": "NO",
       "org_key": "humanitarian-outcomes",
       "Org Type": [
-        "Research / Think Tank"
+        "Consulting Firm",
+        "Technology Provider"
       ]
     }
   },
@@ -577,19 +592,16 @@
       "Org Short Name": "FSNWG",
       "Org Website": "https://www.icpac.net/fsnwg/",
       "Org Description": "The Food Security and Nutrition Working Group (FSNWG) is a regional platform, currently co-chaired by ICPAC and FAO. It’s goal is two-fold: to provide an up-to-date food security and nutrition situation analysis (early warning) and to offer a forum to build consensus on critical issues facing policy and interventions. The FNSWG has served regional governments, donors, and non-governmental agencies since the early 2000’s. Current membership includes approximately 80 organisations (IGAD, UN agencies, NGOs, donors, and research institutions) who contribute to the operation of the working group, and its nutrition, markets, food security information, livestock and pastoralist sub-groups.",
-      "Provided Data Ecosystem Projects": [
-        "recaWq49HJw4UXd9K"
-      ],
       "Org Donor Agencies": [
         "recGNTHL9SKZxLDcw",
         "rec0sY1I5JZz6ZsUE",
-        "rec6XRPA9pKgC8j1J",
         "recYxlC8x9puB69tx",
         "rec2KBp1IAA5TtnQl"
       ],
       "Org IATI Name": "N/A",
       "Related Organization(s) [Linked]": [
-        "reci9Q8xAcus6YuKx"
+        "reci9Q8xAcus6YuKx",
+        "reckv2Buw9sXl3Eul"
       ],
       "Org HQ Country": "Kenya",
       "Has received CRAF'd Funding?": "NO",
@@ -898,7 +910,9 @@
       "Org Website": "https://datapopalliance.org/",
       "Org Description": "Since 2013, Data-Pop Alliance has worked to apply cutting edge data science to solve the world’s most pressing problems. As the 2030 deadline for the UN sustainable development goals approaches, we believe novel approaches are needed to enhance the efficacy of the global development sector and reach those most in need. ",
       "Provided Data Ecosystem Projects": [
-        "recejrbDKmak6gySA"
+        "recejrbDKmak6gySA",
+        "recogMAjsbKV95Pqs",
+        "reczwfqv4kuJclB0U"
       ],
       "Org Donor Agencies": [
         "recbbW0P8fxVtJBJP",
@@ -967,7 +981,6 @@
         "recYzS7BrsxBG8llV"
       ],
       "Org Donor Agencies": [
-        "rec6XRPA9pKgC8j1J",
         "rec2G5THuTVhTanSX",
         "recV2AwepaAv4YAQ5",
         "recGpymiMUVP7dfmL",
@@ -1070,7 +1083,13 @@
         "recRgmk6Ew3NBvxGV",
         "recylzOrnxt3grWHh",
         "recRutqdhqEZSnOB2",
-        "recQUVhcVyxZlXJ3H"
+        "recQUVhcVyxZlXJ3H",
+        "recsrMWmoA037bW03",
+        "recBEtacusKEwpWho",
+        "recFDm6MHWUu6GSMI",
+        "rec6XRPA9pKgC8j1J",
+        "recNLQhceOCXSMemo",
+        "recsjWjrgMK3lD6fw"
       ],
       "Org IATI Name": "Danish Refugee Council",
       "Org MPTFO Name": "DRC",
@@ -1349,7 +1368,8 @@
       "Has received CRAF'd Funding?": "NO",
       "org_key": "data-friendly-space",
       "Org Type": [
-        "Non-Governmental Organization"
+        "Consulting Firm",
+        "Technology Provider"
       ]
     }
   },
@@ -1509,7 +1529,9 @@
       "Org Description": "Arab Barometer is a nonpartisan research network that provides insight into the social, political, and economic attitudes and values of ordinary citizens across the Arab world. We have been conducting high quality and reliable public opinion surveys in the Middle East and North Africa since 2006. We are the longest-standing and the largest repository of publicly available data on the views of men and women in the MENA region. Our findings give a voice to the needs and concerns of Arab publics.",
       "Link to Data Products Overview": "<https://www.arabbarometer.org/survey-data/>\n",
       "Provided Data Ecosystem Projects": [
-        "rechtC1lJc96HgvFk"
+        "rechtC1lJc96HgvFk",
+        "recSbniShY9V8cE4L",
+        "recSTdLTga3nMLgPn"
       ],
       "Org Donor Agencies": [
         "rec6XRPA9pKgC8j1J"
@@ -1817,7 +1839,8 @@
       "Has received CRAF'd Funding?": "NO",
       "org_key": "3is",
       "Org Type": [
-        "Non-Governmental Organization"
+        "Consulting Firm",
+        "Technology Provider"
       ]
     }
   },
@@ -1879,26 +1902,6 @@
       "org_key": "icpac",
       "Org Type": [
         "International Organization"
-      ]
-    }
-  },
-  {
-    "id": "recjxKzlYBzlFLOvx",
-    "fields": {
-      "Org Full Name": "HealthMap",
-      "Org Short Name": "HealthMap",
-      "Org Website": "https://www.healthmap.org",
-      "Org Description": "The Disease Daily is created by a team of medical doctors, veterinarians, and public health professionals who believe that infectious disease news should be accessible and comprehensible to everyone. As a publication from HealthMap, The Disease Daily has access to real-time reporting of infectious disease events all over the world. While HealthMap alerts the community to the outbreaks, The Disease Daily puts those alerts into context, showing readers the impact of infectious disease on policy, economics, and community.",
-      "Link to Data Products Overview": "<https://healthmap.org/projects/>\n",
-      "Provided Data Ecosystem Projects": [
-        "recnt8m31aCnnA0my"
-      ],
-      "Org IATI Name": "N/A",
-      "Org HQ Country": "United States",
-      "Has received CRAF'd Funding?": "NO",
-      "org_key": "healthmap",
-      "Org Type": [
-        "Research / Think Tank"
       ]
     }
   },
@@ -2110,7 +2113,8 @@
       "Org Description": "Latinobarómetro Corporation is a non-profit NGO based in Santiago, Chile, and is solely responsible for the production and publication of the data.\nLatinobarómetro Corporation researches the development of democracy and economies as well as societies, using indicators of opinion, attitudes, behaviour and values. Its results are used by social and political actors, international organizations, governments and the media.\nThe executive director of the study is Marta Lagos.",
       "Link to Data Products Overview": "<https://www.latinobarometro.org/latContents.jsp>\n",
       "Provided Data Ecosystem Projects": [
-        "recCGWvmunEXVzpzw"
+        "recCGWvmunEXVzpzw",
+        "recpVTiR964LzzJng"
       ],
       "Org Donor Agencies": [
         "recsrMWmoA037bW03",
@@ -2159,7 +2163,7 @@
   {
     "id": "recoPRDBbxl0bVx7x",
     "fields": {
-      "Org Full Name": "IPC: Integrated Food Security Phase Classification Global Partnership",
+      "Org Full Name": "IPC: Integrated Food Security Phase Classification",
       "Org Short Name": "IPC",
       "Org Website": "https://www.ipcinfo.org/ipcinfo-website/ipc-global-partnership-and-programme/partnership/en/",
       "Org Description": "The IPC global partnership is comprised of 19 organizations and inter-governmental institutions including Action Against Hunger (AAH), CARE International, Comité Permanent Inter-Etats de Lutte Contre la Sécheresse au Sahel (Permanent Interstate Committee for Drought Control in the Sahel) (CILSS), Food and Agriculture Organization of the United Nations (FAO), Famine Early Warning Systems Network (FEWS NET), the Global Food Security Cluster, the Global Nutrition Cluster, Intergovernmental Authority on Development (IGAD), Joint Research Centre (JRC) of the European Commission, Oxford Committee for Famine Relief (Oxfam), Southern African Development Community (SADC), Save the Children, Sistema de la Integración Centroamericana (Central American Integration System) (SICA), World Food Programme (WFP), United Nations Children’s Fund (UNICEF), the World Bank, the Wolrd Health Organization (WHO), UNDP and IFPRI.",
@@ -2686,7 +2690,7 @@
       "Org Full Name": "HERA: Humanitarian Emergency Response Africa",
       "Org Short Name": "HERA",
       "Org Website": "https://www.hera-ngo.org/",
-      "Org Description": "As an international organization, HERA is dedicated to supporting other humanitarian and development organizations in the implementation of their projects and operational strategies.\n \nThis includes crafting strategic frameworks, establishing security policies, risk assessment, donor mapping, exploratory missions, and evaluation missions.\n \nHERA assists organizations in understanding the evolving landscape of the humanitarian system, particularly regarding epidemic control through epidemiological data collection and climate change adaptation by aiding organizations in measuring their carbon footprint and developing strategies to reduce greenhouse gas emissions.",
+      "Org Description": "As an international organization, HERA is dedicated to supporting other humanitarian and development organizations in the implementation of their projects and operational strategies. This includes crafting strategic frameworks, establishing security policies, risk assessment, donor mapping, exploratory missions, and evaluation missions. HERA assists organizations in understanding the evolving landscape of the humanitarian system, particularly regarding epidemic control through epidemiological data collection and climate change adaptation by aiding organizations in measuring their carbon footprint and developing strategies to reduce greenhouse gas emissions.",
       "Link to Data Products Overview": "<https://www.hera-ngo.org/our-projects>\n",
       "Org IATI Name": "N/A",
       "Org HQ Country": "United Kingdom",
