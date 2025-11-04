@@ -85,6 +85,7 @@ const NetworkGraph: React.FC<NetworkGraphProps> = ({
     const globalScaleRef = useRef<number>(1); // Track current zoom scale
     const [clusterByOrgType, setClusterByOrgType] = useState(false);
     const [clusterByAssetType, setClusterByAssetType] = useState(false);
+    const [legendCollapsed, setLegendCollapsed] = useState(false);
     const [isClusteringTransition, setIsClusteringTransition] = useState(false);
     const lastClusterStateRef = useRef<string>(''); // Track last clustering state to prevent unnecessary updates
     const [filterBarContainer, setFilterBarContainer] = useState<HTMLElement | null>(null);
@@ -769,106 +770,129 @@ const NetworkGraph: React.FC<NetworkGraphProps> = ({
     return (
         <>
             <div ref={containerRef} className="w-full h-full bg-white rounded-lg border border-slate-200 overflow-hidden relative">
-                {/* Legend and Clustering Controls - Combined */}
-                <div className={`absolute ${isFullscreen ? 'top-24' : 'top-4'} left-4 z-10 bg-white backdrop-blur-lg rounded-lg border border-slate-200 shadow-sm w-36`}>
-                    {/* Legend */}
-                    <div className="p-2.5 border-b border-slate-200">
-                        <div className="flex items-center justify-between mb-2">
-                            <div className="text-xs font-semibold text-slate-800/90">Legend</div>
-                            <div className="flex gap-1">
-                                <button
-                                    onClick={centerView}
-                                    className="p-1 hover:bg-slate-200/50 rounded transition-colors"
-                                    title="Center view"
-                                >
-                                    <Crosshair className="w-3.5 h-3.5 text-slate-600" />
-                                </button>
-                                <button
-                                    onClick={toggleFullscreen}
-                                    className="p-1 hover:bg-slate-200/50 rounded transition-colors"
-                                    title={isFullscreen ? 'Exit fullscreen' : 'Enter fullscreen'}
-                                >
-                                    {isFullscreen ? (
-                                        <Minimize className="w-3.5 h-3.5 text-slate-600" />
-                                    ) : (
-                                        <Maximize className="w-3.5 h-3.5 text-slate-600" />
-                                    )}
-                                </button>
-                            </div>
-                        </div>
-                        <div className="space-y-1.5">
-                            {combinedDonors && combinedDonors.length > 0 && (
-                                <div className="flex items-center gap-2">
-                                    <div className="w-3.5 h-3.5 rounded-full shrink-0" style={{ backgroundColor: '#94a3b8', border: '1.5px solid #64748b' }}></div>
-                                    <span className="text-xs text-slate-600">Selected Donors</span>
+                {/* Legend and Clustering Controls - Collapsible */}
+                <div className={`absolute ${isFullscreen ? 'top-24' : 'top-4'} left-4 z-10`}>
+                    {legendCollapsed ? (
+                        <button
+                            onClick={() => setLegendCollapsed(false)}
+                            className="p-2 bg-white rounded-full border border-slate-200 shadow-sm hover:bg-slate-50 transition-colors"
+                            title="Show legend"
+                        >
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" className="text-slate-700">
+                                <path d="M9 18l6-6-6-6" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                            </svg>
+                        </button>
+                    ) : (
+                        <div className="bg-white backdrop-blur-lg rounded-lg border border-slate-200 shadow-sm w-44">
+                            {/* Legend */}
+                            <div className="p-2.5 border-b border-slate-200">
+                                <div className="flex items-center justify-between mb-2">
+                                    <div className="text-xs font-semibold text-slate-800/90">Legend</div>
+                                    <div className="flex gap-1 items-center">
+                                        <button
+                                            onClick={centerView}
+                                            className="p-1 hover:bg-slate-200/50 rounded transition-colors"
+                                            title="Center view"
+                                        >
+                                            <Crosshair className="w-3.5 h-3.5 text-slate-600" />
+                                        </button>
+                                        <button
+                                            onClick={toggleFullscreen}
+                                            className="p-1 hover:bg-slate-200/50 rounded transition-colors"
+                                            title={isFullscreen ? 'Exit fullscreen' : 'Enter fullscreen'}
+                                        >
+                                            {isFullscreen ? (
+                                                <Minimize className="w-3.5 h-3.5 text-slate-600" />
+                                            ) : (
+                                                <Maximize className="w-3.5 h-3.5 text-slate-600" />
+                                            )}
+                                        </button>
+                                        <button
+                                            onClick={() => setLegendCollapsed(true)}
+                                            className="p-1 hover:bg-slate-200/50 rounded transition-colors"
+                                            title="Hide legend"
+                                        >
+                                            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" className="text-slate-600">
+                                                <path d="M15 18l-6-6 6-6" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                                            </svg>
+                                        </button>
+                                    </div>
                                 </div>
-                            )}
-                            <div className="flex items-center gap-2">
-                                <div className="w-3.5 h-3.5 rounded-full shrink-0" style={{ backgroundColor: '#cbd5e1', border: '1.5px solid var(--badge-slate-text)' }}></div>
-                                <span className="text-xs text-slate-600">Donors</span>
+                                <div className="space-y-1.5">
+                                    {combinedDonors && combinedDonors.length > 0 && (
+                                        <div className="flex items-center gap-2">
+                                            <div className="w-3.5 h-3.5 rounded-full shrink-0" style={{ backgroundColor: '#94a3b8', border: '1.5px solid #64748b' }}></div>
+                                            <span className="text-xs text-slate-600">Selected Donors</span>
+                                        </div>
+                                    )}
+                                    <div className="flex items-center gap-2">
+                                        <div className="w-3.5 h-3.5 rounded-full shrink-0" style={{ backgroundColor: '#cbd5e1', border: '1.5px solid var(--badge-slate-text)' }}></div>
+                                        <span className="text-xs text-slate-600">Donors</span>
+                                    </div>
+                                    <div className="flex items-center gap-2">
+                                        <div className="w-3.5 h-3.5 rounded-full shrink-0" style={{ backgroundColor: 'var(--brand-primary-light)', border: '1.5px solid var(--brand-primary-dark)' }}></div>
+                                        <span className="text-xs text-slate-600">Organizations</span>
+                                    </div>
+                                    <div className="flex items-center gap-2">
+                                        <div className="w-3.5 h-3.5 rounded-full shrink-0" style={{ backgroundColor: 'var(--badge-other-bg)', border: '1.5px solid var(--badge-other-text)' }}></div>
+                                        <span className="text-xs text-slate-600">Assets</span>
+                                    </div>
+                                </div>
                             </div>
-                            <div className="flex items-center gap-2">
-                                <div className="w-3.5 h-3.5 rounded-full shrink-0" style={{ backgroundColor: 'var(--brand-primary-light)', border: '1.5px solid var(--brand-primary-dark)' }}></div>
-                                <span className="text-xs text-slate-600">Organizations</span>
-                            </div>
-                            <div className="flex items-center gap-2">
-                                <div className="w-3.5 h-3.5 rounded-full shrink-0" style={{ backgroundColor: 'var(--badge-other-bg)', border: '1.5px solid var(--badge-other-text)' }}></div>
-                                <span className="text-xs text-slate-600">Assets</span>
-                            </div>
-                        </div>
-                    </div>
 
-                    {/* Clustering Controls */}
-                    <div className="p-2.5">
-                        <div className="text-xs font-semibold text-slate-800/90 mb-2">Clustering</div>
-                        <div className="space-y-1.5">
-                    <button
-                        onClick={() => setClusterByOrgType(!clusterByOrgType)}
-                        className={`w-full text-left px-2 py-1 rounded text-xs transition-colors ${
-                            clusterByOrgType
-                                ? 'bg-[var(--brand-bg-light)] text-[var(--brand-primary)] border border-[var(--brand-primary)]'
-                                : 'bg-slate-50 text-slate-600 border border-slate-200 hover:bg-slate-100'
-                        }`}
-                        title="Group organizations by type"
-                    >
-                        <div className="flex items-center justify-between">
-                            <span className="text-[11px]">Org Type</span>
-                            <div className={`w-3 h-3 rounded-sm border shrink-0 ${
-                                clusterByOrgType ? 'bg-[var(--brand-primary)] border-[var(--brand-primary)]' : 'border-slate-300'
-                            }`}>
-                                {clusterByOrgType && (
-                                    <svg className="w-3 h-3 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={3} d="M5 13l4 4L19 7" />
-                                    </svg>
-                                )}
+                            {/* Clustering Controls */}
+                            <div className="p-2.5">
+                                <div className="text-xs font-semibold text-slate-800/90 mb-2">Clustering</div>
+                                <div className="space-y-1.5">
+                                    <button
+                                        onClick={() => setClusterByOrgType(!clusterByOrgType)}
+                                        className={`w-full text-left px-2 py-1 rounded text-xs transition-colors ${
+                                            clusterByOrgType
+                                                ? 'bg-[var(--brand-bg-light)] text-[var(--brand-primary)] border border-[var(--brand-primary)]'
+                                                : 'bg-slate-50 text-slate-600 border border-slate-200 hover:bg-slate-100'
+                                        }`}
+                                        title="Group organizations by type"
+                                    >
+                                        <div className="flex items-center justify-between">
+                                            <span className="text-[11px]">Org Type</span>
+                                            <div className={`w-3 h-3 rounded-sm border shrink-0 ${
+                                                clusterByOrgType ? 'bg-[var(--brand-primary)] border-[var(--brand-primary)]' : 'border-slate-300'
+                                            }`}>
+                                                {clusterByOrgType && (
+                                                    <svg className="w-3 h-3 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={3} d="M5 13l4 4L19 7" />
+                                                    </svg>
+                                                )}
+                                            </div>
+                                        </div>
+                                    </button>
+                                    <button
+                                        onClick={() => setClusterByAssetType(!clusterByAssetType)}
+                                        className={`w-full text-left px-2 py-1 rounded text-xs transition-colors ${
+                                            clusterByAssetType
+                                                ? 'bg-[var(--badge-other-bg)] text-[var(--badge-other-text)] border border-[var(--badge-other-text)]'
+                                                : 'bg-slate-50 text-slate-600 border border-slate-200 hover:bg-slate-100'
+                                        }`}
+                                        title="Group assets by investment type"
+                                    >
+                                        <div className="flex items-center justify-between">
+                                            <span className="text-[11px]">Asset Type</span>
+                                            <div className={`w-3 h-3 rounded-sm border shrink-0 ${
+                                                clusterByAssetType ? 'bg-[var(--badge-other-text)] border-[var(--badge-other-text)]' : 'border-slate-300'
+                                            }`}>
+                                                {clusterByAssetType && (
+                                                    <svg className="w-3 h-3 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={3} d="M5 13l4 4L19 7" />
+                                                    </svg>
+                                                )}
+                                            </div>
+                                        </div>
+                                    </button>
+                                </div>
                             </div>
                         </div>
-                    </button>
-                    <button
-                        onClick={() => setClusterByAssetType(!clusterByAssetType)}
-                        className={`w-full text-left px-2 py-1 rounded text-xs transition-colors ${
-                            clusterByAssetType
-                                ? 'bg-[var(--badge-other-bg)] text-[var(--badge-other-text)] border border-[var(--badge-other-text)]'
-                                : 'bg-slate-50 text-slate-600 border border-slate-200 hover:bg-slate-100'
-                        }`}
-                        title="Group assets by investment type"
-                    >
-                        <div className="flex items-center justify-between">
-                            <span className="text-[11px]">Asset Type</span>
-                            <div className={`w-3 h-3 rounded-sm border shrink-0 ${
-                                clusterByAssetType ? 'bg-[var(--badge-other-text)] border-[var(--badge-other-text)]' : 'border-slate-300'
-                            }`}>
-                                {clusterByAssetType && (
-                                    <svg className="w-3 h-3 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={3} d="M5 13l4 4L19 7" />
-                                    </svg>
-                                )}
-                            </div>
-                        </div>
-                    </button>
+                    )}
                 </div>
-            </div>
-        </div>
 
             <ForceGraph2D
                 ref={graphRef}
