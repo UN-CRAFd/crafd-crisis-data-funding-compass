@@ -20,6 +20,7 @@ import { Building2, ChevronDown, ChevronRight, Database, Table, DatabaseBackup, 
 import organizationsTableRaw from '../../public/data/organizations-table.json';
 import { buildOrgDonorCountriesMap, buildOrgProjectsMap, buildProjectNameMap, calculateOrganizationTypesFromOrganizationsWithProjects, getNestedOrganizationsForModals } from '../lib/data';
 import { exportDashboardToPDF } from '../lib/exportPDF';
+import { exportViewAsCSV } from '../lib/exportCSV';
 import type { DashboardStats, OrganizationProjectData, OrganizationTypeData, OrganizationWithProjects, ProjectData, ProjectTypeData } from '../types/airtable';
 
 // Eagerly load NetworkGraph on client side to avoid lazy loading delay
@@ -271,6 +272,7 @@ const CrisisDataDashboard = ({
     const [projectModalLoading] = useState(false);
     const [shareSuccess, setShareSuccess] = useState(false);
     const [exportLoading, setExportLoading] = useState(false);
+    const [csvExportLoading, setCSVExportLoading] = useState(false);
     
     // Load static organizations table for modals
     const organizationsTable: Array<{ id: string; createdTime?: string; fields: Record<string, unknown> }> = organizationsTableRaw as Array<{ id: string; createdTime?: string; fields: Record<string, unknown> }>;
@@ -395,6 +397,19 @@ const CrisisDataDashboard = ({
     // Export to PDF functionality
     const handleExportPDF = async () => {
         setExportLoading(true);
+    };
+
+    // Export to CSV functionality
+    const handleExportCSV = async () => {
+        try {
+            setCSVExportLoading(true);
+            await exportViewAsCSV(organizationsWithProjects);
+        } catch (error) {
+            console.error('Failed to export CSV:', error);
+            alert('Failed to export CSV. Please try again.');
+        } finally {
+            setCSVExportLoading(false);
+        }
     };
 
     // Loading state
@@ -624,6 +639,17 @@ const CrisisDataDashboard = ({
                             >
                                 <MessageCircle className="w-4 h-4 sm:mr-2" />
                                 <span className="hidden sm:inline">{labels.header.feedbackButton}</span>
+                            </Button>
+                            <Button
+                                variant="outline"
+                                size="sm"
+                                onClick={handleExportCSV}
+                                disabled={csvExportLoading}
+                                className="bg-slate-50/50 border-slate-200 hover:var(--brand-bg-light) hover:border-[var(--brand-primary)] hover:text-[var(--brand-primary)] text-xs sm:text-sm"
+                                title="Export current view as CSV"
+                            >
+                                <FileDown className="w-4 h-4 sm:mr-2" />
+                                <span className="hidden sm:inline">{csvExportLoading ? 'Exporting...' : 'Export View as CSV'}</span>
                             </Button>
                             <Button
                                 variant="outline"
