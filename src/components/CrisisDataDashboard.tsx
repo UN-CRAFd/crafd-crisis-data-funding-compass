@@ -637,7 +637,7 @@ const CrisisDataDashboard = ({
                             <Button
                                 variant="outline"
                                 size="sm"
-                                onClick={() => window.open(process.env.NEXT_PUBLIC_FEEDBACK_FORM_URL)}
+                                onClick={() => window.open('https://airtable.com/apprObB2AsvMwfAAl/pagcre1SPjT0nJxa4/form', '_blank')}
                                 className="bg-slate-50/50 border-slate-200 hover:var(--brand-bg-light) hover:border-[var(--brand-primary)] hover:text-[var(--brand-primary)] text-xs sm:text-sm"
                                 title={labels.header.feedbackTooltip}
                             >
