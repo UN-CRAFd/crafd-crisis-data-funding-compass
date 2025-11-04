@@ -790,9 +790,9 @@ const CrisisDataDashboard = ({
                                         <DropdownMenuTrigger asChild>
                                             <Button
                                                 variant="outline"
-                                                className="h-5 sm:h-7 w-auto px-1.5 sm:px-2.5 py-0.5 sm:py-1 justify-between font-medium transition-all bg-slate-50/50 border-slate-200 hover:bg-white hover:border-slate-300 text-[10px] sm:text-[11px]"
+                                                className="hidden sm:flex h-7 w-auto px-2.5 justify-between font-medium transition-all bg-slate-50/50 border-slate-200 hover:bg-white hover:border-slate-300 text-[11px]"
                                             >
-                                                <div className="flex items-center gap-1 sm:gap-1.5 min-w-0">
+                                                <div className="flex items-center gap-1.5 min-w-0">
                                                     {sortBy === 'name' ? (
                                                         // For alphabetical: asc = A-Z (down), desc = Z-A (up)
                                                         sortDirection === 'asc' ? (
