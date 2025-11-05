@@ -78,7 +78,6 @@ export async function exportDashboardToPDF({
         
         // Draw bars
         pdf.setFontSize(8);
-        pdf.setFont('helvetica', 'normal');
         
         data.forEach((item, index) => {
             if (currentY > pageHeight - 40) {
@@ -91,7 +90,8 @@ export async function exportDashboardToPDF({
             const barStartX = margin + labelWidth;
             const barWidth = (item.value / maxValue) * maxBarWidth;
 
-            // Draw label
+            // Draw label - bold for all items
+            pdf.setFont('helvetica', 'bold');
             pdf.setTextColor(textDark);
             const truncatedName = item.name.length > 40 ? item.name.substring(0, 37) + '...' : item.name;
             pdf.text(truncatedName, margin, currentY + 3.2);
@@ -149,7 +149,7 @@ export async function exportDashboardToPDF({
     });
     pdf.setFontSize(9);
     pdf.setFont('helvetica', 'normal');
-    pdf.text('Briefing Document', pageWidth - margin, 20, { align: 'right' });
+    pdf.text('Summary Document', pageWidth - margin, 20, { align: 'right' });
     pdf.setFontSize(8);
     pdf.text(currentDate, pageWidth - margin, 26, { align: 'right' });
 
@@ -237,14 +237,11 @@ export async function exportDashboardToPDF({
         yPosition = margin;
     }
 
-    // Section header with icon-like decoration
-    pdf.setFillColor(brandPrimary);
-    pdf.circle(margin + 2, yPosition - 1.5, 2, 'F');
-    
+    // Section header without decoration
     pdf.setFontSize(13);
     pdf.setFont('helvetica', 'bold');
     pdf.setTextColor(brandPrimaryDark);
-    pdf.text('BREAKDOWN BY CATEGORY', margin + 7, yPosition);
+    pdf.text('BREAKDOWN BY CATEGORY', margin, yPosition);
     yPosition += 2;
     
     // Decorative line
@@ -263,6 +260,7 @@ export async function exportDashboardToPDF({
         .map(item => ({ name: item.name, value: item.count }));
     
     yPosition = drawBarChart(yPosition, topOrgTypes, 'Organizations by Type');
+    yPosition += 6; // Add extra space between charts
 
     // Check if we need a new page
     if (yPosition > pageHeight - 60) {

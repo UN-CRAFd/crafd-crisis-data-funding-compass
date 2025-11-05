@@ -757,6 +757,7 @@ const CrisisDataDashboard = ({
                                         <FileDown className="w-3 h-3 mr-2" />
                                         Export as Excel (XLSX)
                                     </DropdownMenuItem>
+                                    {/* PDF Export temporarily hidden
                                     <DropdownMenuItem
                                         onClick={handleExportPDF}
                                         disabled={csvExportLoading || xlsxExportLoading || pdfExportLoading}
@@ -765,6 +766,7 @@ const CrisisDataDashboard = ({
                                         <FileDown className="w-3 h-3 mr-2" />
                                         Export as PDF
                                     </DropdownMenuItem>
+                                    */}
                                 </DropdownMenuContent>
                             </DropdownMenu>
                             
