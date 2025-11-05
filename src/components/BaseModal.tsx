@@ -4,6 +4,7 @@ import { Check, Share2 } from 'lucide-react';
 import { useCallback, useEffect, useRef, useState } from 'react';
 import { createPortal } from 'react-dom';
 import CloseButton from './CloseButton';
+import { CountryFlag } from './CountryFlag';
 
 interface BaseModalProps {
     isOpen: boolean;
@@ -246,5 +247,25 @@ export function ModalHeader({ icon, title, showCopied, onShare, onClose, loading
                 <CloseButton onClick={onClose} absolute={false} />
             </div>
         </div>
+    );
+}
+
+/**
+ * Reusable country badge component with flag icon
+ * Use in modals to display donor countries consistently
+ */
+interface CountryBadgeProps {
+    country: string;
+    className?: string;
+}
+
+export function CountryBadge({ country, className = '' }: CountryBadgeProps) {
+    return (
+        <span
+            className={`inline-flex items-center gap-2 px-3 py-1.5 rounded-md text-sm font-medium bg-slate-100 text-slate-600 ${className}`}
+        >
+            <CountryFlag country={country} width={20} height={15} />
+            <span>{country}</span>
+        </span>
     );
 }

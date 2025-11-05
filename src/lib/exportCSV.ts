@@ -70,26 +70,65 @@ export function generateProjectsCSV(organizations: OrganizationWithProjects[]): 
     const headers = [
         'Asset Name',
         'Organization Name',
-        'Investment Types',
+        'Asset Types',
         'Supporting Donors',
         'Description',
         'Website'
     ];
     
-    // Generate rows - flatten all projects from all organizations
-    const rows: string[][] = [];
+    // First pass: collect all projects with their organizations
+    // Use a Map to group by unique asset identifier (ID + name)
+    const assetMap = new Map<string, {
+        projectName: string;
+        organizations: string[];
+        investmentTypes: Set<string>;
+        donorCountries: Set<string>;
+        description: string;
+        website: string;
+    }>();
     
     organizations.forEach(org => {
         org.projects.forEach(project => {
-            rows.push([
-                project.projectName,
-                org.organizationName,
-                project.investmentTypes.join('; '),
-                project.donorCountries.length > 0 ? project.donorCountries.sort().join('; ') : org.donorCountries.sort().join('; '),
-                project.projectDescription || project.description || '',
-                project.projectWebsite || project.website || ''
-            ]);
+            // Create unique key for this asset
+            const assetKey = `${project.id}-${project.projectName}`;
+            
+            if (assetMap.has(assetKey)) {
+                // Asset already exists, add this organization to the list
+                const existing = assetMap.get(assetKey)!;
+                existing.organizations.push(org.organizationName);
+                
+                // Merge investment types
+                project.investmentTypes.forEach(type => existing.investmentTypes.add(type));
+                
+                // Merge donor countries
+                const donors = project.donorCountries.length > 0 ? project.donorCountries : org.donorCountries;
+                donors.forEach(donor => existing.donorCountries.add(donor));
+            } else {
+                // New asset, create entry
+                const donors = project.donorCountries.length > 0 ? project.donorCountries : org.donorCountries;
+                assetMap.set(assetKey, {
+                    projectName: project.projectName,
+                    organizations: [org.organizationName],
+                    investmentTypes: new Set(project.investmentTypes),
+                    donorCountries: new Set(donors),
+                    description: project.projectDescription || project.description || '',
+                    website: project.projectWebsite || project.website || ''
+                });
+            }
         });
+    });
+    
+    // Second pass: convert Map to rows
+    const rows: string[][] = [];
+    assetMap.forEach(asset => {
+        rows.push([
+            asset.projectName,
+            asset.organizations.join('; '), // Combine multiple organizations with semicolon
+            Array.from(asset.investmentTypes).sort().join('; '),
+            Array.from(asset.donorCountries).sort().join('; '),
+            asset.description,
+            asset.website
+        ]);
     });
     
     return arrayToCSV([headers, ...rows]);

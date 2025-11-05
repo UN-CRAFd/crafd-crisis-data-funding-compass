@@ -8,6 +8,7 @@ import { Maximize, Minimize, Crosshair, MessageSquare, RotateCcw, AlertCircle } 
 import type { OrganizationWithProjects } from '../types/airtable';
 import FilterBar from './FilterBar';
 import { Button } from './ui/button';
+import { getCountryFlagUrl } from './CountryFlag';
 
 interface NetworkGraphProps {
     organizationsWithProjects: OrganizationWithProjects[];
@@ -91,6 +92,9 @@ const NetworkGraph: React.FC<NetworkGraphProps> = ({
     const lastClusterStateRef = useRef<string>(''); // Track last clustering state to prevent unnecessary updates
     const [filterBarContainer, setFilterBarContainer] = useState<HTMLElement | null>(null);
     const lastFiltersRef = useRef<string>(''); // Track filter state to detect changes
+    
+    // Cache for country flag images
+    const flagImageCache = useRef<Map<string, HTMLImageElement>>(new Map());
 
     // Turn off clustering when filters change
     useEffect(() => {
@@ -634,12 +638,49 @@ const NetworkGraph: React.FC<NetworkGraphProps> = ({
         } else {
             ctx.strokeStyle = '#000';
         }
-    ctx.lineWidth = isHighlighted ? 1.5 / globalScale : 1 / globalScale;
+        ctx.lineWidth = isHighlighted ? 1.5 / globalScale : 1 / globalScale;
         ctx.stroke();
         
         // Reset alpha
         ctx.globalAlpha = 1;
-    }, [hoverHighlightNodes, themeColors]);
+        
+        // Draw flag for selected/filtered donor nodes only
+        if (node.type === 'donor' && node.name && combinedDonors.length > 0 && combinedDonors.includes(node.name)) {
+            const flagUrl = getCountryFlagUrl(node.name);
+            if (flagUrl) {
+                // Check if flag image is already loaded in cache
+                let flagImg = flagImageCache.current.get(flagUrl);
+                
+                if (!flagImg) {
+                    // Create and load the image
+                    flagImg = new Image();
+                    flagImg.crossOrigin = 'anonymous'; // Enable CORS for flagcdn.com
+                    flagImg.src = flagUrl;
+                    flagImageCache.current.set(flagUrl, flagImg);
+                    
+                    // Trigger a redraw when the image loads
+                    flagImg.onload = () => {
+                        if (graphRef.current) {
+                            // Force a canvas refresh
+                            graphRef.current.refresh();
+                        }
+                    };
+                }
+                
+                // Draw the flag if it's loaded (rectangular, not clipped)
+                if (flagImg.complete && flagImg.naturalWidth > 0) {
+                    // Use standard flag aspect ratio (3:2) and scale to fit within node
+                    const flagHeight = node.value * 0.4; // Flag height is 40% of node diameter
+                    const flagWidth = flagHeight * 1.5; // 3:2 aspect ratio
+                    const flagX = node.x! - flagWidth / 2;
+                    const flagY = node.y! - flagHeight / 2;
+                    
+                    // Draw the rectangular flag image
+                    ctx.drawImage(flagImg, flagX, flagY, flagWidth, flagHeight);
+                }
+            }
+        }
+    }, [hoverHighlightNodes, themeColors, flagImageCache, combinedDonors]);
 
     // Custom label rendering - drawn after all nodes to appear on top
     const paintNodeLabel = useCallback((node: GraphNode, ctx: CanvasRenderingContext2D, globalScale: number) => {
