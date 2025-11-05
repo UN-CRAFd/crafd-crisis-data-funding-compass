@@ -66,12 +66,14 @@
     "fields": {
       "Org Full Name": "Barcelona School of Economics (BSE)",
       "Org Short Name": "BSE",
+      "Org Website": "https://bse.eu",
       "Org Description": "The Barcelona School of Economics (BSE) was founded in 2006 by Andreu Mas-Colell as an institution for scientific cooperation between four academic units: two university departments and two research centers with a long tradition of collaboration and a history of leadership in the field of Economics.",
       "Org Mission": "BSE aims to promote the creation and transmission of frontier knowledge in Economics and related disciplines, by consolidating Barcelona as a world-class center of research, academic education, and professional training with the ultimate goals of informing policy and promoting economic and social wellbeing.",
       "Provided Data Ecosystem Projects": [
         "recxuDvQE71WPmpJV"
       ],
       "Org HQ Country": "Spain",
+      "org_key": "bse",
       "Org Type": "Academia"
     }
   },
@@ -572,6 +574,7 @@
     "fields": {
       "Org Full Name": "UNOSAT: The United Nations Satellite Centre",
       "Org Short Name": "UNOSAT",
+      "Org Description": "The United Nations Satellite Centre (UNOSAT), part of UNITAR, delivers satellite analysis, training, and capacity development to UN entities and Member States. We leverage geospatial technologies to support humanitarian response, sustainable development, and resilience building worldwide.",
       "Provided Data Ecosystem Projects": [
         "recEwLy3FESOhLeNs"
       ],
@@ -2022,7 +2025,8 @@
       "Provided Data Ecosystem Projects": [
         "recaWq49HJw4UXd9K",
         "rec36dX7WTnSmv9Yo",
-        "rec7Gm0sUCCMECxFU"
+        "rec7Gm0sUCCMECxFU",
+        "recZw88835AgPqssk"
       ],
       "Org Donor Agencies": [
         "recGNTHL9SKZxLDcw",
