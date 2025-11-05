@@ -1017,11 +1017,11 @@ const CrisisDataDashboard = ({
                                                                                     className="font-medium text-slate-900 cursor-pointer transition-colors hover:text-[var(--brand-primary)] text-sm sm:text-base"
                                                                                     onClick={e => {
                                                                                         e.stopPropagation();
-                                                                                        // Get org_key from nested organizations data
+                                                                                        // Get Org Short Name from nested organizations data (used for lookup in selectedOrganization)
                                                                                         const nestedOrg = nestedOrganizations.find(n => n.id === org.id);
-                                                                                        const orgKey = nestedOrg?.fields?.org_key;
-                                                                                        if (orgKey) {
-                                                                                            onOpenOrganizationModal(orgKey);
+                                                                                        const orgShortName = nestedOrg?.fields?.['Org Short Name'];
+                                                                                        if (orgShortName) {
+                                                                                            onOpenOrganizationModal(orgShortName.toLowerCase());
                                                                                         }
                                                                                     }}
                                                                                 >
@@ -1137,9 +1137,9 @@ const CrisisDataDashboard = ({
                                                                             onClick={(e) => {
                                                                                 e.stopPropagation();
                                                                                 const nestedOrg = nestedOrganizations.find((n) => n.id === org.id);
-                                                                                const orgKey = nestedOrg?.fields?.org_key;
-                                                                                if (orgKey) {
-                                                                                    onOpenOrganizationModal(orgKey);
+                                                                                const orgShortName = nestedOrg?.fields?.['Org Short Name'];
+                                                                                if (orgShortName) {
+                                                                                    onOpenOrganizationModal(orgShortName.toLowerCase());
                                                                                 }
                                                                             }}
                                                                                 className="hidden sm:inline-flex items-center justify-center gap-1 text-[10px] h-6 px-2 rounded-md text-[var(--badge-slate-bg)] bg-[var(--badge-slate-text)] hover:bg-slate-400 duration-150"
