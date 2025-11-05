@@ -363,7 +363,7 @@ export async function exportViewAsXLSX(
         // About This Dataset
         let sectionRow = readmeSheet.getRow(rowIndex++);
         sectionRow.getCell(1).value = 'About This Dataset';
-        sectionRow.getCell(1).font = { name: 'Roboto', size: 11, bold: true, color: { argb: 'FF0066CC' } };
+        sectionRow.getCell(1).font = { name: 'Roboto', size: 11, bold: true, color: { argb: 'FFE6AF26' } }; // brand-primary
         
         const aboutText = readmeSheet.getRow(rowIndex++);
         aboutText.getCell(1).value = 'This export contains data from the Crisis Data Funding Compass, an overview of the crisis data funding ecosystem. The dataset includes information about organizations providing crisis data products and services, along with details about their specific assets/projects. The data set is subject to expansion and correction.';
@@ -377,7 +377,7 @@ export async function exportViewAsXLSX(
         // Export Contents
         sectionRow = readmeSheet.getRow(rowIndex++);
         sectionRow.getCell(1).value = 'Export Contents';
-        sectionRow.getCell(1).font = { name: 'Roboto', size: 11, bold: true, color: { argb: 'FF0066CC' } };
+        sectionRow.getCell(1).font = { name: 'Roboto', size: 11, bold: true, color: { argb: 'FFE6AF26' } }; // brand-primary
         
         rowIndex++; // Empty row
         
@@ -396,7 +396,7 @@ export async function exportViewAsXLSX(
         // Current View Filters
         sectionRow = readmeSheet.getRow(rowIndex++);
         sectionRow.getCell(1).value = 'Current View Filters';
-        sectionRow.getCell(1).font = { name: 'Roboto', size: 11, bold: true, color: { argb: 'FF0066CC' } };
+        sectionRow.getCell(1).font = { name: 'Roboto', size: 11, bold: true, color: { argb: 'FFE6AF26' } }; // brand-primary
         
         rowIndex++; // Empty row
         
@@ -446,7 +446,7 @@ export async function exportViewAsXLSX(
         // Data Summary
         sectionRow = readmeSheet.getRow(rowIndex++);
         sectionRow.getCell(1).value = 'Data Summary';
-        sectionRow.getCell(1).font = { name: 'Roboto', size: 11, bold: true, color: { argb: 'FF0066CC' } };
+        sectionRow.getCell(1).font = { name: 'Roboto', size: 11, bold: true, color: { argb: 'FFE6AF26' } }; // brand-primary
         
         rowIndex++; // Empty row
         
@@ -468,7 +468,7 @@ export async function exportViewAsXLSX(
         // Data Notes
         sectionRow = readmeSheet.getRow(rowIndex++);
         sectionRow.getCell(1).value = 'Data Notes';
-        sectionRow.getCell(1).font = { name: 'Roboto', size: 11, bold: true, color: { argb: 'FF0066CC' } };
+        sectionRow.getCell(1).font = { name: 'Roboto', size: 11, bold: true, color: { argb: 'FFE6AF26' } }; // brand-primary
         
         rowIndex++; // Empty row
         
@@ -489,7 +489,7 @@ export async function exportViewAsXLSX(
         // Source
         sectionRow = readmeSheet.getRow(rowIndex++);
         sectionRow.getCell(1).value = 'Source';
-        sectionRow.getCell(1).font = { name: 'Roboto', size: 11, bold: true, color: { argb: 'FF0066CC' } };
+        sectionRow.getCell(1).font = { name: 'Roboto', size: 11, bold: true, color: { argb: 'FFE6AF26' } }; // brand-primary
         
         rowIndex++; // Empty row
         
@@ -499,7 +499,7 @@ export async function exportViewAsXLSX(
         
         const sourceRow2 = readmeSheet.getRow(rowIndex++);
         sourceRow2.getCell(1).value = 'Website: https://crafd.io';
-        sourceRow2.getCell(1).font = { name: 'Roboto', size: 11, color: { argb: 'FF0066CC' }, underline: true };
+        sourceRow2.getCell(1).font = { name: 'Roboto', size: 11, color: { argb: 'FFE6AF26' }, underline: true }; // brand-primary
         
         rowIndex++; // Empty row
         
@@ -519,7 +519,7 @@ export async function exportViewAsXLSX(
         orgHeaderRow.fill = {
             type: 'pattern',
             pattern: 'solid',
-            fgColor: { argb: 'FF4472C4' }
+            fgColor: { argb: 'FFE6AF26' } // brand-primary (amber)
         };
         orgHeaderRow.alignment = { vertical: 'middle', horizontal: 'center' };
         orgHeaderRow.height = 30;
@@ -621,7 +621,7 @@ export async function exportViewAsXLSX(
         assetHeaderRow.fill = {
             type: 'pattern',
             pattern: 'solid',
-            fgColor: { argb: 'FF4472C4' }
+            fgColor: { argb: 'FFE6AF26' } // brand-primary (amber)
         };
         assetHeaderRow.alignment = { vertical: 'middle', horizontal: 'center' };
         assetHeaderRow.height = 30;
