@@ -322,17 +322,126 @@ export async function exportViewAsXLSX(
         });
         const totalProjects = uniqueProjects.size;
         
-        // Generate README text
-        const readmeText = generateReadme(organizations, {
-            ...filterInfo,
-            totalOrganizations: organizations.length,
-            totalProjects
+        const timestamp = new Date().toLocaleString('en-US', {
+            year: 'numeric',
+            month: 'long',
+            day: 'numeric',
+            hour: '2-digit',
+            minute: '2-digit',
+            timeZoneName: 'short'
         });
         
-        // Split README into lines for better Excel formatting
-        const readmeLines = readmeText.split('\n').map(line => [line]);
+        // Create workbook
+        const wb = XLSX.utils.book_new();
         
-        // Generate Organizations data
+        // ========== README SHEET ==========
+        const readmeData: any[][] = [];
+        
+        // Title row
+        readmeData.push(['Crisis Data Funding Compass - Data Export']);
+        readmeData.push([]);
+        readmeData.push([`Export Date: ${timestamp}`]);
+        readmeData.push([]);
+        
+        // About section
+        readmeData.push(['About This Dataset']);
+        readmeData.push(['This export contains data from the Crisis Data Funding Compass, an overview of the crisis data funding ecosystem.']);
+        readmeData.push(['The dataset includes information about organizations providing crisis data products and services, along with details']);
+        readmeData.push(['about their specific assets/projects. The data set is subject to expansion and correction.']);
+        readmeData.push([]);
+        
+        // Export Contents section
+        readmeData.push(['Export Contents']);
+        readmeData.push([]);
+        readmeData.push(['Sheet 1: README - This information sheet']);
+        readmeData.push(['Sheet 2: Organizations - Information about data provider organizations']);
+        readmeData.push(['Sheet 3: Assets - Information about specific data products/projects']);
+        readmeData.push([]);
+        
+        // Current View Filters section
+        readmeData.push(['Current View Filters']);
+        readmeData.push([]);
+        
+        const hasFilters = filterInfo?.searchQuery || 
+                          (filterInfo?.donorCountries && filterInfo.donorCountries.length > 0) || 
+                          (filterInfo?.investmentTypes && filterInfo.investmentTypes.length > 0);
+        
+        if (hasFilters) {
+            readmeData.push(['This export represents a filtered view of the data:']);
+            readmeData.push([]);
+            
+            if (filterInfo?.donorCountries && filterInfo.donorCountries.length > 0) {
+                readmeData.push(['Donor Countries:', filterInfo.donorCountries.join(', ')]);
+            }
+            
+            if (filterInfo?.investmentTypes && filterInfo.investmentTypes.length > 0) {
+                readmeData.push(['Investment Types:', filterInfo.investmentTypes.join(', ')]);
+            }
+            
+            if (filterInfo?.searchQuery) {
+                readmeData.push(['Search Query:', filterInfo.searchQuery]);
+            }
+        } else {
+            readmeData.push(['This export contains the complete dataset with no filters applied.']);
+        }
+        
+        readmeData.push([]);
+        
+        // Data Summary section
+        readmeData.push(['Data Summary']);
+        readmeData.push([]);
+        readmeData.push(['Total Organizations:', organizations.length]);
+        readmeData.push(['Total Assets/Projects:', totalProjects]);
+        readmeData.push(['Unique Donor Countries:', new Set(organizations.flatMap(org => org.donorCountries)).size]);
+        readmeData.push([]);
+        
+        // Data Notes section
+        readmeData.push(['Data Notes']);
+        readmeData.push([]);
+        readmeData.push(['• Multiple values in a single field are separated by semicolons (;)']);
+        readmeData.push(['• Empty fields indicate that information was not available']);
+        readmeData.push(['• Supporting Donors refers to donor countries that fund the organization or asset']);
+        readmeData.push(['• For assets without specific donor information, organization-level donors are used']);
+        readmeData.push([]);
+        
+        // Source section
+        readmeData.push(['Source']);
+        readmeData.push([]);
+        readmeData.push(['This data is maintained by the Complex Risk Analytics Fund (CRAF\'d).']);
+        readmeData.push(['Website: https://crafd.io']);
+        readmeData.push([]);
+        readmeData.push(['For questions about this dataset, please contact CRAF\'d through the feedback form in the Crisis Data Funding Compass.']);
+        
+        const readmeSheet = XLSX.utils.aoa_to_sheet(readmeData);
+        
+        // Format README sheet
+        readmeSheet['!cols'] = [{ wch: 90 }, { wch: 50 }];
+        
+        // Apply styles to README
+        // Title (row 0)
+        if (readmeSheet['A1']) {
+            readmeSheet['A1'].s = {
+                font: { bold: true, sz: 18, color: { rgb: 'FFFFFF' } },
+                fill: { fgColor: { rgb: 'E67E22' } },
+                alignment: { horizontal: 'left', vertical: 'center' }
+            };
+        }
+        
+        // Section headers (bold and colored)
+        const sectionHeaders = [5, 10, 17, 24, 31]; // Row indices for section headers
+        sectionHeaders.forEach(row => {
+            const cellRef = XLSX.utils.encode_cell({ r: row, c: 0 });
+            if (readmeSheet[cellRef]) {
+                readmeSheet[cellRef].s = {
+                    font: { bold: true, sz: 14, color: { rgb: 'E67E22' } },
+                    alignment: { horizontal: 'left', vertical: 'center' }
+                };
+            }
+        });
+        
+        XLSX.utils.book_append_sheet(wb, readmeSheet, 'README');
+        
+        // ========== ORGANIZATIONS SHEET ==========
         const orgHeaders = [
             'Organization Name',
             'Organization Type',
@@ -351,7 +460,60 @@ export async function exportViewAsXLSX(
             ];
         });
         
-        // Generate Assets data using the same deduplication logic
+        const orgSheet = XLSX.utils.aoa_to_sheet([orgHeaders, ...orgRows]);
+        
+        // Set column widths
+        orgSheet['!cols'] = [
+            { wch: 35 }, // Organization Name
+            { wch: 25 }, // Organization Type
+            { wch: 60 }, // Description
+            { wch: 35 }, // Supporting Donors
+        ];
+        
+        // Style the header row
+        for (let col = 0; col < orgHeaders.length; col++) {
+            const cellRef = XLSX.utils.encode_cell({ r: 0, c: col });
+            if (orgSheet[cellRef]) {
+                orgSheet[cellRef].s = {
+                    font: { bold: true, sz: 12, color: { rgb: 'FFFFFF' } },
+                    fill: { fgColor: { rgb: 'E67E22' } },
+                    alignment: { horizontal: 'center', vertical: 'center', wrapText: true },
+                    border: {
+                        top: { style: 'thin', color: { rgb: '000000' } },
+                        bottom: { style: 'thin', color: { rgb: '000000' } },
+                        left: { style: 'thin', color: { rgb: '000000' } },
+                        right: { style: 'thin', color: { rgb: '000000' } }
+                    }
+                };
+            }
+        }
+        
+        // Style data rows with alternating colors
+        for (let row = 1; row <= orgRows.length; row++) {
+            const fillColor = row % 2 === 0 ? 'FFFFFF' : 'F9F9F9';
+            for (let col = 0; col < orgHeaders.length; col++) {
+                const cellRef = XLSX.utils.encode_cell({ r: row, c: col });
+                if (orgSheet[cellRef]) {
+                    orgSheet[cellRef].s = {
+                        fill: { fgColor: { rgb: fillColor } },
+                        alignment: { vertical: 'top', wrapText: true },
+                        border: {
+                            top: { style: 'thin', color: { rgb: 'E0E0E0' } },
+                            bottom: { style: 'thin', color: { rgb: 'E0E0E0' } },
+                            left: { style: 'thin', color: { rgb: 'E0E0E0' } },
+                            right: { style: 'thin', color: { rgb: 'E0E0E0' } }
+                        }
+                    };
+                }
+            }
+        }
+        
+        // Add autofilter
+        orgSheet['!autofilter'] = { ref: XLSX.utils.encode_range({ s: { r: 0, c: 0 }, e: { r: orgRows.length, c: orgHeaders.length - 1 } }) };
+        
+        XLSX.utils.book_append_sheet(wb, orgSheet, 'Organizations');
+        
+        // ========== ASSETS SHEET ==========
         const assetHeaders = [
             'Asset Name',
             'Organization Name',
@@ -406,49 +568,75 @@ export async function exportViewAsXLSX(
             ]);
         });
         
-        // Create workbook
-        const wb = XLSX.utils.book_new();
-        
-        // Create README sheet
-        const readmeSheet = XLSX.utils.aoa_to_sheet(readmeLines);
-        // Set column width for README
-        readmeSheet['!cols'] = [{ wch: 100 }];
-        XLSX.utils.book_append_sheet(wb, readmeSheet, 'README');
-        
-        // Create Organizations sheet
-        const orgSheet = XLSX.utils.aoa_to_sheet([orgHeaders, ...orgRows]);
-        // Set column widths
-        orgSheet['!cols'] = [
-            { wch: 30 }, // Organization Name
-            { wch: 20 }, // Organization Type
-            { wch: 50 }, // Description
-            { wch: 30 }, // Supporting Donors
-        ];
-        XLSX.utils.book_append_sheet(wb, orgSheet, 'Organizations');
-        
-        // Create Assets sheet
         const assetSheet = XLSX.utils.aoa_to_sheet([assetHeaders, ...assetRows]);
+        
         // Set column widths
         assetSheet['!cols'] = [
-            { wch: 30 }, // Asset Name
-            { wch: 30 }, // Organization Name
+            { wch: 35 }, // Asset Name
+            { wch: 35 }, // Organization Name
             { wch: 30 }, // Asset Types
-            { wch: 30 }, // Supporting Donors
-            { wch: 50 }, // Description
-            { wch: 30 }, // Website
+            { wch: 35 }, // Supporting Donors
+            { wch: 60 }, // Description
+            { wch: 40 }, // Website
         ];
+        
+        // Style the header row
+        for (let col = 0; col < assetHeaders.length; col++) {
+            const cellRef = XLSX.utils.encode_cell({ r: 0, c: col });
+            if (assetSheet[cellRef]) {
+                assetSheet[cellRef].s = {
+                    font: { bold: true, sz: 12, color: { rgb: 'FFFFFF' } },
+                    fill: { fgColor: { rgb: 'E67E22' } },
+                    alignment: { horizontal: 'center', vertical: 'center', wrapText: true },
+                    border: {
+                        top: { style: 'thin', color: { rgb: '000000' } },
+                        bottom: { style: 'thin', color: { rgb: '000000' } },
+                        left: { style: 'thin', color: { rgb: '000000' } },
+                        right: { style: 'thin', color: { rgb: '000000' } }
+                    }
+                };
+            }
+        }
+        
+        // Style data rows with alternating colors
+        for (let row = 1; row <= assetRows.length; row++) {
+            const fillColor = row % 2 === 0 ? 'FFFFFF' : 'F9F9F9';
+            for (let col = 0; col < assetHeaders.length; col++) {
+                const cellRef = XLSX.utils.encode_cell({ r: row, c: col });
+                if (assetSheet[cellRef]) {
+                    assetSheet[cellRef].s = {
+                        fill: { fgColor: { rgb: fillColor } },
+                        alignment: { vertical: 'top', wrapText: true },
+                        border: {
+                            top: { style: 'thin', color: { rgb: 'E0E0E0' } },
+                            bottom: { style: 'thin', color: { rgb: 'E0E0E0' } },
+                            left: { style: 'thin', color: { rgb: 'E0E0E0' } },
+                            right: { style: 'thin', color: { rgb: 'E0E0E0' } }
+                        }
+                    };
+                }
+            }
+        }
+        
+        // Add autofilter
+        assetSheet['!autofilter'] = { ref: XLSX.utils.encode_range({ s: { r: 0, c: 0 }, e: { r: assetRows.length, c: assetHeaders.length - 1 } }) };
+        
         XLSX.utils.book_append_sheet(wb, assetSheet, 'Assets');
         
-        // Generate Excel file
-        const timestamp = new Date().toISOString().split('T')[0];
-        const excelBuffer = XLSX.write(wb, { bookType: 'xlsx', type: 'array' });
+        // Generate Excel file with cellStyles enabled
+        const timestampFile = new Date().toISOString().split('T')[0];
+        const excelBuffer = XLSX.write(wb, { 
+            bookType: 'xlsx', 
+            type: 'array',
+            cellStyles: true 
+        });
         const blob = new Blob([excelBuffer], { type: 'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet' });
         
         // Create download link
         const url = URL.createObjectURL(blob);
         const link = document.createElement('a');
         link.href = url;
-        link.download = `crisis-data-export-${timestamp}.xlsx`;
+        link.download = `crisis-data-export-${timestampFile}.xlsx`;
         
         // Trigger download
         document.body.appendChild(link);
@@ -462,4 +650,5 @@ export async function exportViewAsXLSX(
         throw error;
     }
 }
+
 
