@@ -644,17 +644,20 @@ const CrisisDataDashboard = ({
                                 <MessageCircle className="w-4 h-4 sm:mr-2" />
                                 <span className="hidden sm:inline">{labels.header.feedbackButton}</span>
                             </Button>
-                            <Button
-                                variant="outline"
-                                size="sm"
-                                onClick={handleExportCSV}
-                                disabled={csvExportLoading}
-                                className="hidden sm:flex bg-slate-50/50 border-slate-200 hover:var(--brand-bg-light) hover:border-[var(--brand-primary)] hover:text-[var(--brand-primary)] text-xs sm:text-sm"
-                                title="Export current view as CSV"
-                            >
-                                <FileDown className="w-4 h-4 sm:mr-2" />
-                                <span className="hidden sm:inline">{csvExportLoading ? 'Exporting...' : 'Export View as CSV'}</span>
-                            </Button>
+                            {/* Export CSV temporarily hidden — re-enable by removing `false &&` below */}
+                            {false && (
+                                <Button
+                                    variant="outline"
+                                    size="sm"
+                                    onClick={handleExportCSV}
+                                    disabled={csvExportLoading}
+                                    className="hidden sm:flex bg-slate-50/50 border-slate-200 hover:var(--brand-bg-light) hover:border-[var(--brand-primary)] hover:text-[var(--brand-primary)] text-xs sm:text-sm"
+                                    title="Export current view as CSV"
+                                >
+                                    <FileDown className="w-4 h-4 sm:mr-2" />
+                                    <span className="hidden sm:inline">{csvExportLoading ? 'Exporting...' : 'Export View as CSV'}</span>
+                                </Button>
+                            )}
                             <Button
                                 variant="outline"
                                 size="sm"
