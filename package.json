@@ -50,6 +50,7 @@
     "@playwright/test": "^1.56.1",
     "@tailwindcss/postcss": "^4",
     "@types/d3-force": "^3.0.10",
+    "@types/exceljs": "^0.5.3",
     "@types/jszip": "^3.4.0",
     "@types/node": "^20",
     "@types/react": "^19",
