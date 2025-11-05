@@ -274,6 +274,7 @@ const CrisisDataDashboard = ({
     const [exportLoading, setExportLoading] = useState(false);
     const [csvExportLoading, setCSVExportLoading] = useState(false);
     const [xlsxExportLoading, setXLSXExportLoading] = useState(false);
+    const [pdfExportLoading, setPDFExportLoading] = useState(false);
     const [exportMenuOpen, setExportMenuOpen] = useState(false);
     
     // Load static organizations table for modals
@@ -416,7 +417,40 @@ const CrisisDataDashboard = ({
 
     // Export to PDF functionality
     const handleExportPDF = async () => {
-        setExportLoading(true);
+        try {
+            setPDFExportLoading(true);
+            await exportDashboardToPDF({
+                stats: {
+                    dataProjects: stats.dataProjects,
+                    dataProviders: stats.dataProviders,
+                    donorCountries: stats.donorCountries,
+                },
+                projectTypes: projectTypes,
+                organizationTypes: organizationTypes,
+                organizationsWithProjects: organizationsWithProjects,
+                getFilterDescription: () => {
+                    if (combinedDonors.length === 0 && investmentTypes.length === 0 && !appliedSearchQuery) {
+                        return 'Showing all projects';
+                    }
+                    const parts: string[] = [];
+                    if (combinedDonors.length > 0) {
+                        parts.push(`${combinedDonors.length} donor ${combinedDonors.length === 1 ? 'country' : 'countries'}`);
+                    }
+                    if (investmentTypes.length > 0) {
+                        parts.push(`${investmentTypes.length} investment ${investmentTypes.length === 1 ? 'type' : 'types'}`);
+                    }
+                    if (appliedSearchQuery) {
+                        parts.push(`search: "${appliedSearchQuery}"`);
+                    }
+                    return parts.length > 0 ? `Showing ${parts.join(', ')}` : 'Showing all projects';
+                }
+            });
+        } catch (error) {
+            console.error('Failed to export PDF:', error);
+            alert('Failed to export PDF. Please try again.');
+        } finally {
+            setPDFExportLoading(false);
+        }
     };
 
     // Export to CSV functionality
@@ -688,13 +722,13 @@ const CrisisDataDashboard = ({
                                     <Button
                                         variant="outline"
                                         size="sm"
-                                        disabled={csvExportLoading || xlsxExportLoading}
+                                        disabled={csvExportLoading || xlsxExportLoading || pdfExportLoading}
                                         className="hidden sm:flex bg-slate-50/50 border-slate-200 hover:var(--brand-bg-light) hover:border-[var(--brand-primary)] hover:text-[var(--brand-primary)] text-xs sm:text-sm"
                                         title="Export current view"
                                     >
                                         <FileDown className="w-4 h-4 sm:mr-2" />
                                         <span className="hidden sm:inline">
-                                            {csvExportLoading ? 'Exporting CSV...' : xlsxExportLoading ? 'Exporting Excel...' : 'Export View'}
+                                            {csvExportLoading ? 'Exporting CSV...' : xlsxExportLoading ? 'Exporting Excel...' : pdfExportLoading ? 'Exporting PDF...' : 'Export View'}
                                         </span>
                                         <ChevronDown className={`ml-1.5 h-3 w-3 opacity-50 shrink-0 transform transition-transform ${
                                             exportMenuOpen ? 'rotate-180' : ''
@@ -705,11 +739,11 @@ const CrisisDataDashboard = ({
                                     align="end" 
                                     side="bottom"
                                     sideOffset={4}
-                                    className="w-auto min-w-[180px] bg-white border border-slate-200 shadow-lg"
+                                    className="w-auto min-w-[200px] bg-white border border-slate-200 shadow-lg"
                                 >
                                     <DropdownMenuItem
                                         onClick={handleExportCSV}
-                                        disabled={csvExportLoading || xlsxExportLoading}
+                                        disabled={csvExportLoading || xlsxExportLoading || pdfExportLoading}
                                         className="cursor-pointer text-[11px] py-2"
                                     >
                                         <FileDown className="w-3 h-3 mr-2" />
@@ -717,26 +751,23 @@ const CrisisDataDashboard = ({
                                     </DropdownMenuItem>
                                     <DropdownMenuItem
                                         onClick={handleExportXLSX}
-                                        disabled={csvExportLoading || xlsxExportLoading}
+                                        disabled={csvExportLoading || xlsxExportLoading || pdfExportLoading}
                                         className="cursor-pointer text-[11px] py-2"
                                     >
                                         <FileDown className="w-3 h-3 mr-2" />
                                         Export as Excel (XLSX)
                                     </DropdownMenuItem>
+                                    <DropdownMenuItem
+                                        onClick={handleExportPDF}
+                                        disabled={csvExportLoading || xlsxExportLoading || pdfExportLoading}
+                                        className="cursor-pointer text-[11px] py-2"
+                                    >
+                                        <FileDown className="w-3 h-3 mr-2" />
+                                        Export as PDF
+                                    </DropdownMenuItem>
                                 </DropdownMenuContent>
                             </DropdownMenu>
                             
-                            <Button
-                                variant="outline"
-                                size="sm"
-                                onClick={handleExportPDF}
-                                disabled={exportLoading}
-                                className="hidden bg-slate-50/50 border-slate-200 hover:var(--brand-bg-light) hover:border-[var(--brand-primary)] hover:text-[var(--brand-primary)]"
-                                title={labels.header.exportTooltip}
-                            >
-                                <FileDown className="w-4 h-4 mr-2" />
-                                {exportLoading ? labels.header.exportButtonLoading : labels.header.exportButton}
-                            </Button>
                             <Button
                                 variant="outline"
                                 size="sm"
