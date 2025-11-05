@@ -95,6 +95,7 @@ const NetworkGraph: React.FC<NetworkGraphProps> = ({
     
     // Cache for country flag images
     const flagImageCache = useRef<Map<string, HTMLImageElement>>(new Map());
+    const [, setFlagLoadCounter] = useState(0); // Counter to trigger re-render when flags load
 
     // Turn off clustering when filters change
     useEffect(() => {
@@ -660,10 +661,8 @@ const NetworkGraph: React.FC<NetworkGraphProps> = ({
                     
                     // Trigger a redraw when the image loads
                     flagImg.onload = () => {
-                        if (graphRef.current) {
-                            // Force a canvas refresh
-                            graphRef.current.refresh();
-                        }
+                        // Increment counter to trigger re-render
+                        setFlagLoadCounter(prev => prev + 1);
                     };
                 }
                 
