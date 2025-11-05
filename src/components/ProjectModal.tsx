@@ -3,7 +3,7 @@
 import { Building2, ExternalLink, Package } from 'lucide-react';
 import type { OrganizationWithProjects, ProjectData } from '../lib/data';
 import { getIconForInvestmentType } from '@/config/investmentTypeIcons';
-import BaseModal, { ModalHeader } from './BaseModal';
+import BaseModal, { ModalHeader, CountryBadge } from './BaseModal';
 
 interface ProjectModalProps {
     project: ProjectData | null;
@@ -171,12 +171,7 @@ export default function ProjectModal({ project, allOrganizations, loading }: Pro
                     {project.donorCountries && project.donorCountries.length > 0 ? (
                         <div className="flex flex-wrap gap-2">
                             {project.donorCountries.map((country, index) => (
-                                <span
-                                    key={index}
-                                    className="inline-flex items-center px-3 py-1.5 rounded-md text-sm font-medium bg-slate-100 text-slate-600"
-                                >
-                                    {country}
-                                </span>
+                                <CountryBadge key={index} country={country} />
                             ))}
                         </div>
                     ) : (
