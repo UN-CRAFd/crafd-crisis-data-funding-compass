@@ -353,7 +353,7 @@ export async function exportViewAsXLSX(
         // Export Contents section
         readmeData.push(['Export Contents']);
         readmeData.push([]);
-        readmeData.push(['Sheet 1: README - This information sheet']);
+        readmeData.push(['Sheet 1: This information sheet']);
         readmeData.push(['Sheet 2: Organizations - Information about data provider organizations']);
         readmeData.push(['Sheet 3: Assets - Information about specific data products/projects']);
         readmeData.push([]);
@@ -439,7 +439,7 @@ export async function exportViewAsXLSX(
             }
         });
         
-        XLSX.utils.book_append_sheet(wb, readmeSheet, 'README');
+        XLSX.utils.book_append_sheet(wb, readmeSheet, 'Meta Data');
         
         // ========== ORGANIZATIONS SHEET ==========
         const orgHeaders = [
