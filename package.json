@@ -29,6 +29,7 @@
     "clsx": "^2.1.1",
     "d3-force": "^3.0.0",
     "dotenv": "^17.2.3",
+    "exceljs": "^4.4.0",
     "force-graph": "^1.51.0",
     "i18n-iso-countries": "^7.0.0",
     "jspdf": "^3.0.3",
