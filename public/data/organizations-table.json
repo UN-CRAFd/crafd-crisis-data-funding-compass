@@ -2,21 +2,25 @@
   {
     "id": "rec18TzPP5pYZ8ezX",
     "fields": {
-      "Org Full Name": "HHI: Harvard Humanitarian Initiative ",
+      "Org Full Name": "Harvard Humanitarian Initiative",
       "Org Short Name": "HHI",
       "Org Website": "https://hhi.harvard.edu/",
       "Org Description": "The Harvard Humanitarian Initiative (HHI) is a university-wide academic and research center in humanitarian crisis and leadership. Our mission is to create new knowledge and advance evidence-based leadership in disasters and humanitarian crisis. Our work focuses on two main areas: the Humanitarian Academy at Harvard and Research & Translation.",
       "Provided Data Ecosystem Projects": [
         "recEf0pdKsN1Gbvo8",
         "recGG8gTf4t6l8Mue",
-        "rech8GCismNX3Bm8p"
+        "rech8GCismNX3Bm8p",
+        "recONFtYpO5v2qk7s"
       ],
       "Org Donor Agencies": [
         "recRutqdhqEZSnOB2",
         "rectyuW4INCMaNoAM",
         "reco4Um0k7Tgw2UCK",
-        "reckIAhFXgj4XL29b"
+        "reckIAhFXgj4XL29b",
+        "reclUJwIt0bxL2bO0",
+        "recCDa9F6ntBxGGkm"
       ],
+      "Est. Org Budget [2024, $M]": 16200000,
       "Org HQ Country": "United States",
       "Has received CRAF'd Funding?": "NO",
       "org_key": "hhi",

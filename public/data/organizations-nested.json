@@ -1,23 +1,27 @@
 [
   {
     "id": "rec18TzPP5pYZ8ezX",
-    "name": "HHI: Harvard Humanitarian Initiative ",
+    "name": "Harvard Humanitarian Initiative",
     "fields": {
-      "Org Full Name": "HHI: Harvard Humanitarian Initiative ",
+      "Org Full Name": "Harvard Humanitarian Initiative",
       "Org Short Name": "HHI",
       "Org Website": "https://hhi.harvard.edu/",
       "Org Description": "The Harvard Humanitarian Initiative (HHI) is a university-wide academic and research center in humanitarian crisis and leadership. Our mission is to create new knowledge and advance evidence-based leadership in disasters and humanitarian crisis. Our work focuses on two main areas: the Humanitarian Academy at Harvard and Research & Translation.",
       "Provided Data Ecosystem Projects": [
         "recEf0pdKsN1Gbvo8",
         "recGG8gTf4t6l8Mue",
-        "rech8GCismNX3Bm8p"
+        "rech8GCismNX3Bm8p",
+        "recONFtYpO5v2qk7s"
       ],
       "Org Donor Agencies": [
         "recRutqdhqEZSnOB2",
         "rectyuW4INCMaNoAM",
         "reco4Um0k7Tgw2UCK",
-        "reckIAhFXgj4XL29b"
+        "reckIAhFXgj4XL29b",
+        "reclUJwIt0bxL2bO0",
+        "recCDa9F6ntBxGGkm"
       ],
+      "Est. Org Budget [2024, $M]": 16200000,
       "Org HQ Country": "United States",
       "Has received CRAF'd Funding?": "NO",
       "org_key": "hhi",
@@ -51,6 +55,22 @@
         "id": "reckIAhFXgj4XL29b",
         "fields": {
           "Agency/Department Name": "Unspecified Agency",
+          "Country Name": "USA"
+        }
+      },
+      {
+        "id": "reclUJwIt0bxL2bO0",
+        "fields": {
+          "Agency/Department Name": "National Science Foundation (NSF)",
+          "Agency Data Portal": "https://www.nsf.gov/",
+          "Country Name": "USA"
+        }
+      },
+      {
+        "id": "recCDa9F6ntBxGGkm",
+        "fields": {
+          "Agency/Department Name": "National Institutes of Health (NIH)",
+          "Agency Data Portal": "https://www.nih.gov/",
           "Country Name": "USA"
         }
       }
@@ -103,9 +123,31 @@
         "agencies": []
       },
       {
+        "id": "recONFtYpO5v2qk7s",
+        "fields": {
+          "Project/Product Name": "KoboToolbox",
+          "product_key": "kobotoolbox",
+          "Provider Orgs Full Name": [
+            "recoKRQ2eGzpn3D2g",
+            "rec18TzPP5pYZ8ezX"
+          ],
+          "CRAF’d-Funded Project?": "NO",
+          "Investment Type(s)": [
+            "Infrastructure & Platforms"
+          ],
+          "Investment Theme(s)": [
+            "Data Collection",
+            "Conflict & Violence Data"
+          ],
+          "Project Website": "https://hhi.harvard.edu/kobotoolbox",
+          "Project Description": "KoboToolbox is a free and open-source tool for mobile data collection in humanitarian crises. Used by UN agencies, NGOs, and governments, it supports offline surveys, real-time dashboards, and collaborative field assessments.\n"
+        },
+        "agencies": []
+      },
+      {
         "id": "rech8GCismNX3Bm8p",
         "fields": {
-          "Project/Product Name": "Harvard Humanitarian Initiative (HHI)",
+          "Project/Product Name": "HHI Conferences",
           "product_key": "hhi",
           "Provider Orgs Full Name": [
             "rec18TzPP5pYZ8ezX"
@@ -11332,7 +11374,8 @@
           "Project/Product Name": "KoboToolbox",
           "product_key": "kobotoolbox",
           "Provider Orgs Full Name": [
-            "recoKRQ2eGzpn3D2g"
+            "recoKRQ2eGzpn3D2g",
+            "rec18TzPP5pYZ8ezX"
           ],
           "CRAF’d-Funded Project?": "NO",
           "Investment Type(s)": [
