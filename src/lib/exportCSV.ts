@@ -1,5 +1,6 @@
 // exportCSV.ts - CSV export functionality for Crisis Data Dashboard
 import JSZip from 'jszip';
+import * as XLSX from 'xlsx';
 import type { OrganizationWithProjects, ProjectData } from '@/types/airtable';
 
 /**
@@ -298,3 +299,167 @@ export async function exportViewAsCSV(
         throw error;
     }
 }
+
+/**
+ * Export current view as XLSX (Excel file with three sheets: README, Organizations, Assets)
+ */
+export async function exportViewAsXLSX(
+    organizations: OrganizationWithProjects[],
+    filterInfo?: {
+        searchQuery?: string;
+        donorCountries?: string[];
+        investmentTypes?: string[];
+    }
+): Promise<void> {
+    try {
+        // Calculate totals with deduplication
+        const uniqueProjects = new Set<string>();
+        organizations.forEach(org => {
+            org.projects.forEach(project => {
+                const projectKey = `${project.id}-${project.projectName}`;
+                uniqueProjects.add(projectKey);
+            });
+        });
+        const totalProjects = uniqueProjects.size;
+        
+        // Generate README text
+        const readmeText = generateReadme(organizations, {
+            ...filterInfo,
+            totalOrganizations: organizations.length,
+            totalProjects
+        });
+        
+        // Split README into lines for better Excel formatting
+        const readmeLines = readmeText.split('\n').map(line => [line]);
+        
+        // Generate Organizations data
+        const orgHeaders = [
+            'Organization Name',
+            'Organization Type',
+            'Description',
+            'Supporting Donors',
+        ];
+        
+        const orgRows = organizations.map(org => {
+            const supportingCountries = org.donorCountries.sort().join('; ');
+            
+            return [
+                org.organizationName,
+                org.type,
+                org.description || '',
+                supportingCountries,
+            ];
+        });
+        
+        // Generate Assets data using the same deduplication logic
+        const assetHeaders = [
+            'Asset Name',
+            'Organization Name',
+            'Asset Types',
+            'Supporting Donors',
+            'Description',
+            'Website'
+        ];
+        
+        const assetMap = new Map<string, {
+            projectName: string;
+            organizations: string[];
+            investmentTypes: Set<string>;
+            donorCountries: Set<string>;
+            description: string;
+            website: string;
+        }>();
+        
+        organizations.forEach(org => {
+            org.projects.forEach(project => {
+                const assetKey = `${project.id}-${project.projectName}`;
+                
+                if (assetMap.has(assetKey)) {
+                    const existing = assetMap.get(assetKey)!;
+                    existing.organizations.push(org.organizationName);
+                    project.investmentTypes.forEach(type => existing.investmentTypes.add(type));
+                    const donors = project.donorCountries.length > 0 ? project.donorCountries : org.donorCountries;
+                    donors.forEach(donor => existing.donorCountries.add(donor));
+                } else {
+                    const donors = project.donorCountries.length > 0 ? project.donorCountries : org.donorCountries;
+                    assetMap.set(assetKey, {
+                        projectName: project.projectName,
+                        organizations: [org.organizationName],
+                        investmentTypes: new Set(project.investmentTypes),
+                        donorCountries: new Set(donors),
+                        description: project.projectDescription || project.description || '',
+                        website: project.projectWebsite || project.website || ''
+                    });
+                }
+            });
+        });
+        
+        const assetRows: any[][] = [];
+        assetMap.forEach(asset => {
+            assetRows.push([
+                asset.projectName,
+                asset.organizations.join('; '),
+                Array.from(asset.investmentTypes).sort().join('; '),
+                Array.from(asset.donorCountries).sort().join('; '),
+                asset.description,
+                asset.website
+            ]);
+        });
+        
+        // Create workbook
+        const wb = XLSX.utils.book_new();
+        
+        // Create README sheet
+        const readmeSheet = XLSX.utils.aoa_to_sheet(readmeLines);
+        // Set column width for README
+        readmeSheet['!cols'] = [{ wch: 100 }];
+        XLSX.utils.book_append_sheet(wb, readmeSheet, 'README');
+        
+        // Create Organizations sheet
+        const orgSheet = XLSX.utils.aoa_to_sheet([orgHeaders, ...orgRows]);
+        // Set column widths
+        orgSheet['!cols'] = [
+            { wch: 30 }, // Organization Name
+            { wch: 20 }, // Organization Type
+            { wch: 50 }, // Description
+            { wch: 30 }, // Supporting Donors
+        ];
+        XLSX.utils.book_append_sheet(wb, orgSheet, 'Organizations');
+        
+        // Create Assets sheet
+        const assetSheet = XLSX.utils.aoa_to_sheet([assetHeaders, ...assetRows]);
+        // Set column widths
+        assetSheet['!cols'] = [
+            { wch: 30 }, // Asset Name
+            { wch: 30 }, // Organization Name
+            { wch: 30 }, // Asset Types
+            { wch: 30 }, // Supporting Donors
+            { wch: 50 }, // Description
+            { wch: 30 }, // Website
+        ];
+        XLSX.utils.book_append_sheet(wb, assetSheet, 'Assets');
+        
+        // Generate Excel file
+        const timestamp = new Date().toISOString().split('T')[0];
+        const excelBuffer = XLSX.write(wb, { bookType: 'xlsx', type: 'array' });
+        const blob = new Blob([excelBuffer], { type: 'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet' });
+        
+        // Create download link
+        const url = URL.createObjectURL(blob);
+        const link = document.createElement('a');
+        link.href = url;
+        link.download = `crisis-data-export-${timestamp}.xlsx`;
+        
+        // Trigger download
+        document.body.appendChild(link);
+        link.click();
+        
+        // Cleanup
+        document.body.removeChild(link);
+        URL.revokeObjectURL(url);
+    } catch (error) {
+        console.error('Error exporting XLSX:', error);
+        throw error;
+    }
+}
+

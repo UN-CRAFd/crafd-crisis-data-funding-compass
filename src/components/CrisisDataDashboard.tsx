@@ -20,7 +20,7 @@ import { Building2, ChevronDown, ChevronRight, Database, Table, DatabaseBackup, 
 import organizationsTableRaw from '../../public/data/organizations-table.json';
 import { buildOrgDonorCountriesMap, buildOrgProjectsMap, buildProjectNameMap, calculateOrganizationTypesFromOrganizationsWithProjects, getNestedOrganizationsForModals } from '../lib/data';
 import { exportDashboardToPDF } from '../lib/exportPDF';
-import { exportViewAsCSV } from '../lib/exportCSV';
+import { exportViewAsCSV, exportViewAsXLSX } from '../lib/exportCSV';
 import type { DashboardStats, OrganizationProjectData, OrganizationTypeData, OrganizationWithProjects, ProjectData, ProjectTypeData } from '../types/airtable';
 
 // Eagerly load NetworkGraph on client side to avoid lazy loading delay
@@ -273,6 +273,8 @@ const CrisisDataDashboard = ({
     const [shareSuccess, setShareSuccess] = useState(false);
     const [exportLoading, setExportLoading] = useState(false);
     const [csvExportLoading, setCSVExportLoading] = useState(false);
+    const [xlsxExportLoading, setXLSXExportLoading] = useState(false);
+    const [exportMenuOpen, setExportMenuOpen] = useState(false);
     
     // Load static organizations table for modals
     const organizationsTable: Array<{ id: string; createdTime?: string; fields: Record<string, unknown> }> = organizationsTableRaw as Array<{ id: string; createdTime?: string; fields: Record<string, unknown> }>;
@@ -431,6 +433,23 @@ const CrisisDataDashboard = ({
             alert('Failed to export CSV. Please try again.');
         } finally {
             setCSVExportLoading(false);
+        }
+    };
+
+    // Export to XLSX functionality
+    const handleExportXLSX = async () => {
+        try {
+            setXLSXExportLoading(true);
+            await exportViewAsXLSX(organizationsWithProjects, {
+                searchQuery: appliedSearchQuery || undefined,
+                donorCountries: combinedDonors,
+                investmentTypes: investmentTypes
+            });
+        } catch (error) {
+            console.error('Failed to export XLSX:', error);
+            alert('Failed to export XLSX. Please try again.');
+        } finally {
+            setXLSXExportLoading(false);
         }
     };
 
@@ -662,17 +681,51 @@ const CrisisDataDashboard = ({
                                 <MessageCircle className="w-4 h-4 sm:mr-2" />
                                 <span className="hidden sm:inline">{labels.header.feedbackButton}</span>
                             </Button>
-                            <Button
-                                variant="outline"
-                                size="sm"
-                                onClick={handleExportCSV}
-                                disabled={csvExportLoading}
-                                className="hidden sm:flex bg-slate-50/50 border-slate-200 hover:var(--brand-bg-light) hover:border-[var(--brand-primary)] hover:text-[var(--brand-primary)] text-xs sm:text-sm"
-                                title="Export current view as CSV"
-                            >
-                                <FileDown className="w-4 h-4 sm:mr-2" />
-                                <span className="hidden sm:inline">{csvExportLoading ? 'Exporting...' : 'Export View as CSV'}</span>
-                            </Button>
+                            
+                            {/* Export Dropdown */}
+                            <DropdownMenu onOpenChange={(open) => setExportMenuOpen(open)}>
+                                <DropdownMenuTrigger asChild>
+                                    <Button
+                                        variant="outline"
+                                        size="sm"
+                                        disabled={csvExportLoading || xlsxExportLoading}
+                                        className="hidden sm:flex bg-slate-50/50 border-slate-200 hover:var(--brand-bg-light) hover:border-[var(--brand-primary)] hover:text-[var(--brand-primary)] text-xs sm:text-sm"
+                                        title="Export current view"
+                                    >
+                                        <FileDown className="w-4 h-4 sm:mr-2" />
+                                        <span className="hidden sm:inline">
+                                            {csvExportLoading ? 'Exporting CSV...' : xlsxExportLoading ? 'Exporting Excel...' : 'Export View'}
+                                        </span>
+                                        <ChevronDown className={`ml-1.5 h-3 w-3 opacity-50 shrink-0 transform transition-transform ${
+                                            exportMenuOpen ? 'rotate-180' : ''
+                                        }`} />
+                                    </Button>
+                                </DropdownMenuTrigger>
+                                <DropdownMenuContent 
+                                    align="end" 
+                                    side="bottom"
+                                    sideOffset={4}
+                                    className="w-auto min-w-[180px] bg-white border border-slate-200 shadow-lg"
+                                >
+                                    <DropdownMenuItem
+                                        onClick={handleExportCSV}
+                                        disabled={csvExportLoading || xlsxExportLoading}
+                                        className="cursor-pointer text-[11px] py-2"
+                                    >
+                                        <FileDown className="w-3 h-3 mr-2" />
+                                        Export as CSV (ZIP)
+                                    </DropdownMenuItem>
+                                    <DropdownMenuItem
+                                        onClick={handleExportXLSX}
+                                        disabled={csvExportLoading || xlsxExportLoading}
+                                        className="cursor-pointer text-[11px] py-2"
+                                    >
+                                        <FileDown className="w-3 h-3 mr-2" />
+                                        Export as Excel (XLSX)
+                                    </DropdownMenuItem>
+                                </DropdownMenuContent>
+                            </DropdownMenu>
+                            
                             <Button
                                 variant="outline"
                                 size="sm"
