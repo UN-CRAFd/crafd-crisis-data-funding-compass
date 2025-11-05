@@ -46,18 +46,19 @@ export function getCountryAlpha2(input: string): string | null {
     if (commaLookup) return commaLookup.toLowerCase();
     
     // Last-resort: try lowercased simple variants (e.g., 'usa' -> 'US')
-    const alias = s.toLowerCase();
-    const knownAliases: Record<string, string> = {
-        'usa': 'us', 
-        'us': 'us', 
-        'u.s.': 'us', 
-        'u.s.a.': 'us', 
-        'uk': 'gb', 
-        'u.k.': 'gb',
-        'european union': 'eu',
-        'eu': 'eu'
-    };
-    if (knownAliases[alias]) return knownAliases[alias];
+        const alias = s.toLowerCase();
+        const knownAliases: Record<string, string> = {
+            'usa': 'us',
+            'us': 'us',
+            'u.s.': 'us',
+            'u.s.a.': 'us',
+            'uk': 'gb',
+            'u.k.': 'gb',
+            'european union': 'eu',
+            'eu': 'eu',
+            'turkiye': 'tr'
+        };
+        if (knownAliases[alias]) return knownAliases[alias];
     
     return null;
 }
