@@ -3,7 +3,7 @@
 import { Building2, ChevronDown, ChevronUp, ExternalLink, Package } from 'lucide-react';
 import { useState } from 'react';
 import ModalOrganizationFocus from './ModalOrganizationFocus';
-import BaseModal, { ModalHeader } from './BaseModal';
+import BaseModal, { ModalHeader, CountryBadge } from './BaseModal';
 
 interface OrganizationModalProps {
     // Accept the full organization record coming from `public/data/organizations-table.json`
@@ -329,12 +329,7 @@ export default function OrganizationModal({
                                 </div>
                                 <div className="flex flex-wrap gap-2">
                                     {donorCountries.map((country) => (
-                                        <span
-                                            key={country}
-                                            className="inline-flex items-center px-3 py-1.5 rounded-md text-sm font-medium bg-slate-100 text-slate-600"
-                                        >
-                                            {country}
-                                        </span>
+                                        <CountryBadge key={country} country={country} />
                                     ))}
                                 </div>
                             </div>

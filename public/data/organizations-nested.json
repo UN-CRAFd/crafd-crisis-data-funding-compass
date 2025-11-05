@@ -292,12 +292,14 @@
     "fields": {
       "Org Full Name": "Barcelona School of Economics (BSE)",
       "Org Short Name": "BSE",
+      "Org Website": "https://bse.eu",
       "Org Description": "The Barcelona School of Economics (BSE) was founded in 2006 by Andreu Mas-Colell as an institution for scientific cooperation between four academic units: two university departments and two research centers with a long tradition of collaboration and a history of leadership in the field of Economics.",
       "Org Mission": "BSE aims to promote the creation and transmission of frontier knowledge in Economics and related disciplines, by consolidating Barcelona as a world-class center of research, academic education, and professional training with the ultimate goals of informing policy and promoting economic and social wellbeing.",
       "Provided Data Ecosystem Projects": [
         "recxuDvQE71WPmpJV"
       ],
       "Org HQ Country": "Spain",
+      "org_key": "bse",
       "Org Type": "Academia"
     },
     "agencies": [],
@@ -306,6 +308,7 @@
         "id": "recxuDvQE71WPmpJV",
         "fields": {
           "Project/Product Name": "Conflict Forecast",
+          "product_key": "conflict-forecast",
           "Provider Orgs Full Name": [
             "rec2BwDRFUPJJgINF"
           ],
@@ -3112,6 +3115,7 @@
         "id": "recvuixaI146ykcHe",
         "fields": {
           "Project/Product Name": "Food Security and Nutrition Update",
+          "product_key": "fsn-update",
           "Provider Orgs Full Name": [
             "recAqAEBX8YBwPWlb"
           ],
@@ -3122,7 +3126,8 @@
           "Investment Theme(s)": [
             "Nutrition Analytics"
           ],
-          "Project Website": "https://www.icpac.net/fsnwg/"
+          "Project Website": "https://www.icpac.net/fsnwg/",
+          "Project Description": "\n"
         },
         "agencies": []
       }
@@ -3140,6 +3145,7 @@
     "fields": {
       "Org Full Name": "UNOSAT: The United Nations Satellite Centre",
       "Org Short Name": "UNOSAT",
+      "Org Description": "The United Nations Satellite Centre (UNOSAT), part of UNITAR, delivers satellite analysis, training, and capacity development to UN entities and Member States. We leverage geospatial technologies to support humanitarian response, sustainable development, and resilience building worldwide.",
       "Provided Data Ecosystem Projects": [
         "recEwLy3FESOhLeNs"
       ],
@@ -4773,6 +4779,7 @@
         "id": "recejrbDKmak6gySA",
         "fields": {
           "Project/Product Name": "OPAL (old?)",
+          "product_key": "opal",
           "Provider Orgs Full Name": [
             "recHsNe20lr1CUAVu"
           ],
@@ -4792,6 +4799,7 @@
         "id": "recogMAjsbKV95Pqs",
         "fields": {
           "Project/Product Name": "Data, Technology & Innovation (DTI) Services ",
+          "product_key": "dti-services",
           "Provider Orgs Full Name": [
             "recHsNe20lr1CUAVu"
           ],
@@ -4803,6 +4811,7 @@
         "id": "reczwfqv4kuJclB0U",
         "fields": {
           "Project/Product Name": "Capacity & Training Services",
+          "product_key": "capacity-training",
           "Provider Orgs Full Name": [
             "recHsNe20lr1CUAVu"
           ]
@@ -7596,11 +7605,13 @@
         "id": "recSTdLTga3nMLgPn",
         "fields": {
           "Project/Product Name": "Arab Pulse",
+          "product_key": "arab-pulse",
           "Provider Orgs Full Name": [
             "reccGyY6Ep2ptBPKy"
           ],
           "CRAF’d-Funded Project?": "NO",
-          "Project Website": "https://www.arabbarometer.org/arab-pulse/"
+          "Project Website": "https://www.arabbarometer.org/arab-pulse/",
+          "Project Description": "The Arab Pulse was founded in 2018 to provide an outlet for political discussion on the Middle East and North Africa (MENA) based on quantitative research. The MENA region is in constant flux and faces new and old challenges. The Arab Pulse represents a central nexus for empirical and data driven research focused on contemporary MENA politics, society, and values engaging scholars, policy makers, and the media from the region and beyond\n"
         },
         "agencies": []
       },
@@ -7608,6 +7619,7 @@
         "id": "recSbniShY9V8cE4L",
         "fields": {
           "Project/Product Name": "Data Analytics Tool",
+          "product_key": "datool",
           "Provider Orgs Full Name": [
             "reccGyY6Ep2ptBPKy"
           ],
@@ -9424,6 +9436,7 @@
         "id": "recJyonPtboyfoLet",
         "fields": {
           "Project/Product Name": "Artificial Intelligence (AI)",
+          "product_key": "ai-project",
           "Provider Orgs Full Name": [
             "recfMWBZ4Di5d2bjs"
           ],
@@ -9443,6 +9456,7 @@
         "id": "recfUQ0LgTnaydzWg",
         "fields": {
           "Project/Product Name": "Information Management Services",
+          "product_key": "ims-services",
           "Provider Orgs Full Name": [
             "recfMWBZ4Di5d2bjs"
           ],
@@ -9462,6 +9476,7 @@
         "id": "recgzWbqbmwOXHLnq",
         "fields": {
           "Project/Product Name": "Monitoring & Evaluation",
+          "product_key": "mon-eval",
           "Provider Orgs Full Name": [
             "recfMWBZ4Di5d2bjs"
           ],
@@ -9481,6 +9496,7 @@
         "id": "recuMPe1WRudzeyXf",
         "fields": {
           "Project/Product Name": "Capacity Building",
+          "product_key": "capacity-building",
           "Provider Orgs Full Name": [
             "recfMWBZ4Di5d2bjs"
           ],
@@ -9500,6 +9516,7 @@
         "id": "recxPDSfMPQYhiw5Q",
         "fields": {
           "Project/Product Name": "Strategy & Systems Development",
+          "product_key": "strategy-systems",
           "Provider Orgs Full Name": [
             "recfMWBZ4Di5d2bjs"
           ],
@@ -10819,7 +10836,7 @@
     "name": "ETH Zurich",
     "fields": {
       "Org Full Name": "ETH Zurich",
-      "Org Short Name": "ETH Zurich",
+      "Org Short Name": "ETH",
       "Org Website": "https://ethz.ch/en.html",
       "Org Description": "Freedom and individual responsibility, entrepreneurial spirit and open-mindedness: ETH Zurich stands on a bedrock of true Swiss values. Our university for science and technology dates back to the year 1855, when the founders of modern-day Switzerland created it as a centre of innovation and knowledge.\n\nWeather and Climate Risks (WCR) Group at ETH Zurich\nCLIMADA Platform: An open-source tool developed by the WCR Group for probabilistic climate risk assessment and adaptation planning. It supports decision-makers in evaluating the impacts of natural hazards and exploring adaptation strategies. ​Weather and Climate Risks\nscClim Project: A four-year interdisciplinary initiative funded by the Swiss National Science Foundation. It integrates high-resolution weather predictions with climate simulations to assess hail impacts across various sectors in Switzerland. ​Weather and Climate Risks\n+1Weather and Climate Risks\n+1\nSPARCCLE Project: Part of the EU Horizon research program, this project involves collaboration between the WCR and Land-Climate Dynamics groups. It focuses on climate model emulation and natural hazard risk modeling to understand climate extremes' impacts on global ecosystems.\n\n",
       "Provided Data Ecosystem Projects": [
@@ -11262,6 +11279,7 @@
         "id": "recpVTiR964LzzJng",
         "fields": {
           "Project/Product Name": "Survey Analytics",
+          "product_key": "survey-analytics",
           "Provider Orgs Full Name": [
             "recnt0uuGwuTUCjCw"
           ],
@@ -11344,7 +11362,8 @@
       "Provided Data Ecosystem Projects": [
         "recaWq49HJw4UXd9K",
         "rec36dX7WTnSmv9Yo",
-        "rec7Gm0sUCCMECxFU"
+        "rec7Gm0sUCCMECxFU",
+        "recZw88835AgPqssk"
       ],
       "Org Donor Agencies": [
         "recGNTHL9SKZxLDcw",
@@ -11442,6 +11461,7 @@
         "id": "rec36dX7WTnSmv9Yo",
         "fields": {
           "Project/Product Name": "IPC Mapping Tool",
+          "product_key": "ipc-mapping",
           "Provider Orgs Full Name": [
             "recoPRDBbxl0bVx7x"
           ],
@@ -11461,6 +11481,7 @@
         "id": "rec7Gm0sUCCMECxFU",
         "fields": {
           "Project/Product Name": " IPC Population Tracking Tool",
+          "product_key": "ipc-poptrack",
           "Provider Orgs Full Name": [
             "recoPRDBbxl0bVx7x"
           ],
@@ -11473,6 +11494,26 @@
           ],
           "Project Website": "https://www.ipcinfo.org/ipc-country-analysis/population-tracking-tool/en/",
           "Project Description": "The IPC Population Tracking Tool is an online platform that gives the public access to population data from more than 30 different countries. It allows users to download resource data for offline IPC analyses since 2017. All national population figures are based on official country population estimates. IPC estimates are those published in country IPC reports. \n"
+        },
+        "agencies": []
+      },
+      {
+        "id": "recZw88835AgPqssk",
+        "fields": {
+          "Project/Product Name": "IPC Infographics",
+          "product_key": "ipc-infographics",
+          "Provider Orgs Full Name": [
+            "recoPRDBbxl0bVx7x"
+          ],
+          "CRAF’d-Funded Project?": "NO",
+          "Investment Type(s)": [
+            "Crisis Analytics & Insights"
+          ],
+          "Investment Theme(s)": [
+            "Food Security Analytics"
+          ],
+          "Project Website": "https://www.ipcinfo.org/ipcinfo-website/resources/infographics/en/",
+          "Project Description": "Infographics made by IPC\n"
         },
         "agencies": []
       },

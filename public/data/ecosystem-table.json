@@ -133,6 +133,7 @@
     "id": "rec36dX7WTnSmv9Yo",
     "fields": {
       "Project/Product Name": "IPC Mapping Tool",
+      "product_key": "ipc-mapping",
       "Provider Orgs Full Name": [
         "recoPRDBbxl0bVx7x"
       ],
@@ -547,6 +548,7 @@
     "id": "rec7Gm0sUCCMECxFU",
     "fields": {
       "Project/Product Name": " IPC Population Tracking Tool",
+      "product_key": "ipc-poptrack",
       "Provider Orgs Full Name": [
         "recoPRDBbxl0bVx7x"
       ],
@@ -1307,6 +1309,7 @@
     "id": "recJyonPtboyfoLet",
     "fields": {
       "Project/Product Name": "Artificial Intelligence (AI)",
+      "product_key": "ai-project",
       "Provider Orgs Full Name": [
         "recfMWBZ4Di5d2bjs"
       ],
@@ -1789,17 +1792,20 @@
     "id": "recSTdLTga3nMLgPn",
     "fields": {
       "Project/Product Name": "Arab Pulse",
+      "product_key": "arab-pulse",
       "Provider Orgs Full Name": [
         "reccGyY6Ep2ptBPKy"
       ],
       "CRAF’d-Funded Project?": "NO",
-      "Project Website": "https://www.arabbarometer.org/arab-pulse/"
+      "Project Website": "https://www.arabbarometer.org/arab-pulse/",
+      "Project Description": "The Arab Pulse was founded in 2018 to provide an outlet for political discussion on the Middle East and North Africa (MENA) based on quantitative research. The MENA region is in constant flux and faces new and old challenges. The Arab Pulse represents a central nexus for empirical and data driven research focused on contemporary MENA politics, society, and values engaging scholars, policy makers, and the media from the region and beyond\n"
     }
   },
   {
     "id": "recSbniShY9V8cE4L",
     "fields": {
       "Project/Product Name": "Data Analytics Tool",
+      "product_key": "datool",
       "Provider Orgs Full Name": [
         "reccGyY6Ep2ptBPKy"
       ],
@@ -2168,6 +2174,11 @@
     "id": "recZw88835AgPqssk",
     "fields": {
       "Project/Product Name": "IPC Infographics",
+      "product_key": "ipc-infographics",
+      "Provider Orgs Full Name": [
+        "recoPRDBbxl0bVx7x"
+      ],
+      "CRAF’d-Funded Project?": "NO",
       "Investment Type(s)": [
         "Crisis Analytics & Insights"
       ],
@@ -2458,6 +2469,7 @@
     "id": "recejrbDKmak6gySA",
     "fields": {
       "Project/Product Name": "OPAL (old?)",
+      "product_key": "opal",
       "Provider Orgs Full Name": [
         "recHsNe20lr1CUAVu"
       ],
@@ -2541,6 +2553,7 @@
     "id": "recfUQ0LgTnaydzWg",
     "fields": {
       "Project/Product Name": "Information Management Services",
+      "product_key": "ims-services",
       "Provider Orgs Full Name": [
         "recfMWBZ4Di5d2bjs"
       ],
@@ -2753,6 +2766,7 @@
     "id": "recgzWbqbmwOXHLnq",
     "fields": {
       "Project/Product Name": "Monitoring & Evaluation",
+      "product_key": "mon-eval",
       "Provider Orgs Full Name": [
         "recfMWBZ4Di5d2bjs"
       ],
@@ -3122,6 +3136,7 @@
     "id": "recogMAjsbKV95Pqs",
     "fields": {
       "Project/Product Name": "Data, Technology & Innovation (DTI) Services ",
+      "product_key": "dti-services",
       "Provider Orgs Full Name": [
         "recHsNe20lr1CUAVu"
       ],
@@ -3262,6 +3277,7 @@
     "id": "recpVTiR964LzzJng",
     "fields": {
       "Project/Product Name": "Survey Analytics",
+      "product_key": "survey-analytics",
       "Provider Orgs Full Name": [
         "recnt0uuGwuTUCjCw"
       ],
@@ -3485,6 +3501,7 @@
     "id": "recuMPe1WRudzeyXf",
     "fields": {
       "Project/Product Name": "Capacity Building",
+      "product_key": "capacity-building",
       "Provider Orgs Full Name": [
         "recfMWBZ4Di5d2bjs"
       ],
@@ -3642,6 +3659,7 @@
     "id": "recvuixaI146ykcHe",
     "fields": {
       "Project/Product Name": "Food Security and Nutrition Update",
+      "product_key": "fsn-update",
       "Provider Orgs Full Name": [
         "recAqAEBX8YBwPWlb"
       ],
@@ -3652,7 +3670,8 @@
       "Investment Theme(s)": [
         "Nutrition Analytics"
       ],
-      "Project Website": "https://www.icpac.net/fsnwg/"
+      "Project Website": "https://www.icpac.net/fsnwg/",
+      "Project Description": "\n"
     }
   },
   {
@@ -3767,6 +3786,7 @@
     "id": "recxPDSfMPQYhiw5Q",
     "fields": {
       "Project/Product Name": "Strategy & Systems Development",
+      "product_key": "strategy-systems",
       "Provider Orgs Full Name": [
         "recfMWBZ4Di5d2bjs"
       ],
@@ -3826,6 +3846,7 @@
     "id": "recxuDvQE71WPmpJV",
     "fields": {
       "Project/Product Name": "Conflict Forecast",
+      "product_key": "conflict-forecast",
       "Provider Orgs Full Name": [
         "rec2BwDRFUPJJgINF"
       ],
@@ -3981,6 +4002,7 @@
     "id": "reczwfqv4kuJclB0U",
     "fields": {
       "Project/Product Name": "Capacity & Training Services",
+      "product_key": "capacity-training",
       "Provider Orgs Full Name": [
         "recHsNe20lr1CUAVu"
       ]
