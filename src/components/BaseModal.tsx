@@ -4,19 +4,7 @@ import { Check, Share2 } from 'lucide-react';
 import { useCallback, useEffect, useRef, useState } from 'react';
 import { createPortal } from 'react-dom';
 import CloseButton from './CloseButton';
-// Use i18n-iso-countries for robust country name -> alpha-2 mapping
-import * as countries from 'i18n-iso-countries';
-
-// Load JSON locale using require to avoid needing `resolveJsonModule` in tsconfig
-let enLocale: any = null;
-try {
-    // eslint-disable-next-line @typescript-eslint/no-var-requires
-    enLocale = require('i18n-iso-countries/langs/en.json');
-    countries.registerLocale(enLocale as unknown as import('i18n-iso-countries').LocaleData);
-} catch (_e) {
-    // If registration fails, we'll still attempt simple fallbacks below
-    console.warn('Failed to register i18n-iso-countries locale', _e);
-}
+import { CountryFlag } from './CountryFlag';
 
 interface BaseModalProps {
     isOpen: boolean;
@@ -263,55 +251,6 @@ export function ModalHeader({ icon, title, showCopied, onShare, onClose, loading
 }
 
 /**
- * Helper function to map country names to ISO alpha-2 codes for flag display
- */
-function getCountryAlpha2(input: string): string | null {
-    let s = input.trim();
-    if (!s) return null;
-    
-    // If already a 2-letter code
-    if (/^[A-Za-z]{2}$/.test(s)) return s.toLowerCase();
-    
-    // Try parentheses like "Country (GB)"
-    const paren = s.match(/\(([^)]+)\)/);
-    if (paren) {
-        const code = paren[1].trim();
-        if (/^[A-Za-z]{2}$/.test(code)) return code.toLowerCase();
-    }
-    
-    // Normalize (remove diacritics) and try direct lookup by name
-    try { 
-        s = s.normalize('NFD').replace(/[\u0300-\u036f]/g, ''); 
-    } catch (e) { 
-        /* ignore */ 
-    }
-    
-    // The library expects exact English names; try direct and comma-first variant
-    const direct = countries.getAlpha2Code(s, 'en');
-    if (direct) return direct.toLowerCase();
-    
-    const commaFirst = s.split(',')[0].trim();
-    const commaLookup = countries.getAlpha2Code(commaFirst, 'en');
-    if (commaLookup) return commaLookup.toLowerCase();
-    
-    // Last-resort: try lowercased simple variants (e.g., 'usa' -> 'US')
-    const alias = s.toLowerCase();
-    const knownAliases: Record<string, string> = {
-        'usa': 'us', 
-        'us': 'us', 
-        'u.s.': 'us', 
-        'u.s.a.': 'us', 
-        'uk': 'gb', 
-        'u.k.': 'gb',
-        'european union': 'eu',
-        'eu': 'eu'
-    };
-    if (knownAliases[alias]) return knownAliases[alias];
-    
-    return null;
-}
-
-/**
  * Reusable country badge component with flag icon
  * Use in modals to display donor countries consistently
  */
@@ -321,22 +260,11 @@ interface CountryBadgeProps {
 }
 
 export function CountryBadge({ country, className = '' }: CountryBadgeProps) {
-    const iso = getCountryAlpha2(country);
-    const flagUrl = iso ? `https://flagcdn.com/${iso}.svg` : null;
-    
     return (
         <span
             className={`inline-flex items-center gap-2 px-3 py-1.5 rounded-md text-sm font-medium bg-slate-100 text-slate-600 ${className}`}
         >
-            {flagUrl && (
-                <img
-                    src={flagUrl}
-                    alt={`${country} flag`}
-                    width={20}
-                    height={15}
-                    className="rounded shadow-sm border border-gray-200 shrink-0"
-                />
-            )}
+            <CountryFlag country={country} width={20} height={15} />
             <span>{country}</span>
         </span>
     );
