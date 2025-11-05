@@ -804,7 +804,8 @@ const CrisisDataDashboard = ({
                             <div className="flex items-center gap-2">
                                 {/* Sort Dropdown only for Table view */}
                                 {activeView === 'table' && (
-                                    <DropdownMenu onOpenChange={(open) => setSortMenuOpen(open)}>
+                                    <div className="animate-in slide-in-from-right-5 fade-in duration-300">
+                                        <DropdownMenu onOpenChange={(open) => setSortMenuOpen(open)}>
                                         <DropdownMenuTrigger asChild>
                                             <Button
                                                 variant="outline"
@@ -907,6 +908,7 @@ const CrisisDataDashboard = ({
                                             </DropdownMenuItem>
                                         </DropdownMenuContent>
                                     </DropdownMenu>
+                                    </div>
                                 )}
                                 {/* View Toggle Switch Tabs */}
                                 <Tabs value={activeView} onValueChange={(value) => setActiveView(value as 'table' | 'network')} className="w-auto hidden sm:flex">
