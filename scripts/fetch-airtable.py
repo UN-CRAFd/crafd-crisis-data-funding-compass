@@ -92,12 +92,13 @@ MAIN_TABLE_IDENTIFIER = os.getenv("AIRTABLE_TABLE_ID_PROJECTS") or os.getenv(
     "AIRTABLE_TABLE_ID"
 )
 
-# Additional tables (organizations, agencies)
+# Additional tables (organizations, agencies, themes)
 ORGANIZATIONS_TABLE_IDENTIFIER = os.getenv("AIRTABLE_TABLE_ID_ORGANIZATIONS")
 # Accept either AIRTABLE_TABLED_ID_AGENCIES (as requested) or the likely-correct AIRTABLE_TABLE_ID_AGENCIES
 AGENCIES_TABLE_IDENTIFIER = os.getenv("AIRTABLE_TABLED_ID_AGENCIES") or os.getenv(
     "AIRTABLE_TABLE_ID_AGENCIES"
 )
+THEMES_TABLE_IDENTIFIER = os.getenv("AIRTABLE_TABLE_ID_THEMES")
 
 AIRTABLE_TIMEZONE = os.getenv("AIRTABLE_TIMEZONE", "UTC")
 AIRTABLE_USER_LOCALE = os.getenv("AIRTABLE_USER_LOCALE", "en-US")
@@ -313,6 +314,19 @@ def main():
             except Exception as e:
                 log(f"Failed to fetch agencies table {AGENCIES_TABLE_IDENTIFIER}: {e}")
 
+        # 4) Fetch themes table (if provided)
+        themes_count = 0
+        if THEMES_TABLE_IDENTIFIER:
+            try:
+                log(f"Fetching themes table: {THEMES_TABLE_IDENTIFIER}")
+                themes_records = fetch_airtable_table(THEMES_TABLE_IDENTIFIER)
+                save_to_json(
+                    themes_records, "themes-table.json", apply_select_filter=False
+                )
+                themes_count = len(themes_records)
+            except Exception as e:
+                log(f"Failed to fetch themes table {THEMES_TABLE_IDENTIFIER}: {e}")
+
         # Summary
         log("SUMMARY:")
         log(
@@ -330,6 +344,12 @@ def main():
             )
         else:
             log("  Agencies table: not configured (skipped)")
+        if THEMES_TABLE_IDENTIFIER:
+            log(
+                f'  Themes table "{THEMES_TABLE_IDENTIFIER}": {themes_count} records (saved to themes-table.json)'
+            )
+        else:
+            log("  Themes table: not configured (skipped)")
         log(f"  Files written to {OUTPUT_DIR}")
 
         # Data validation before proceeding
