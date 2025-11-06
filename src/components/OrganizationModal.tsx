@@ -212,6 +212,34 @@ export default function OrganizationModal({
                     </p>
                 )}
 
+                {/* HDX Organization Link Button */}
+                {(() => {
+                    const hdxOrgKey = fields['HDX Org Key'];
+                    if (typeof hdxOrgKey === 'string' && hdxOrgKey.trim() !== '') {
+                        const hdxUrl = `https://data.humdata.org/organization/${hdxOrgKey.trim()}`;
+                        return (
+                            <div className="mt-3">
+                                <a
+                                    href={hdxUrl}
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    className="inline-flex items-center gap-2 px-4 py-2 rounded-md text-sm font-medium transition-colors"
+                                    style={{
+                                        backgroundColor: 'var(--brand-primary)',
+                                        color: 'white',
+                                    }}
+                                    onMouseEnter={(e) => e.currentTarget.style.backgroundColor = 'var(--brand-primary-dark)'}
+                                    onMouseLeave={(e) => e.currentTarget.style.backgroundColor = 'var(--brand-primary)'}
+                                >
+                                    View on HDX
+                                    <ExternalLink className="w-4 h-4" />
+                                </a>
+                            </div>
+                        );
+                    }
+                    return null;
+                })()}
+
                 {/* Org HQ Country - Uncomment import and this line to enable */}
                 {/* {typeof fields['Org HQ Country'] === 'string' && (
                     <HeadquartersCountry 
