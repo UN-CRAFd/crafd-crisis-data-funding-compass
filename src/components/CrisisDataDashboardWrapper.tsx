@@ -337,6 +337,34 @@ const CrisisDataDashboardWrapper = ({ logoutButton }: { logoutButton?: React.Rea
         }
     }, [localSelectedOrgKey, localSelectedProjectKey, searchParams, pathname, router]);
 
+    // Handle donor click from modal - add to filter and close modal
+    const handleDonorClick = useCallback((country: string) => {
+        const newSearchParams = new URLSearchParams(searchParams.toString());
+        
+        // Add donor to filter if not already present
+        const currentDonors = (newSearchParams.get('d') ?? newSearchParams.get('donors') ?? '').split(',').filter(Boolean);
+        if (!currentDonors.includes(country)) {
+            const updatedDonors = [...currentDonors, country];
+            newSearchParams.set('d', updatedDonors.join(','));
+        }
+        
+        // Close any open modal by removing org/asset params
+        newSearchParams.delete('org');
+        newSearchParams.delete('asset');
+        
+        // Update URL with both changes at once
+        router.push(`${pathname}?${newSearchParams.toString()}`, { scroll: false });
+        
+        // For network view, also clear local state
+        if (activeView === 'network') {
+            setLocalSelectedOrgKey('');
+            setLocalSelectedProjectKey('');
+            setTimeout(() => {
+                setUnderlyingPageState(null);
+            }, 50);
+        }
+    }, [searchParams, pathname, router, activeView]);
+
     return (
         <CrisisDataDashboard
             dashboardData={dashboardData}
@@ -357,6 +385,7 @@ const CrisisDataDashboardWrapper = ({ logoutButton }: { logoutButton?: React.Rea
             onOpenProjectModal={handleOpenProjectModal}
             onCloseOrganizationModal={handleCloseOrganizationModal}
             onCloseProjectModal={handleCloseProjectModal}
+            onDonorClick={handleDonorClick}
             onViewChange={handleViewChange}
             logoutButton={logoutButton}
         />

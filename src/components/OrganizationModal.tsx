@@ -23,6 +23,8 @@ interface OrganizationModalProps {
     onOpenProjectModal?: (projectKey: string) => void;
     // Map from project ID to product_key for navigation
     projectIdToKeyMap?: Record<string, string>;
+    // Callback when a donor is clicked
+    onDonorClick?: (country: string) => void;
 }
 
 // Import HeadquartersCountry component - comment out import to disable HQ display
@@ -35,7 +37,8 @@ export default function OrganizationModal({
     orgDonorCountriesMap = {},
     loading,
     onOpenProjectModal,
-    projectIdToKeyMap = {}
+    projectIdToKeyMap = {},
+    onDonorClick
 }: OrganizationModalProps): React.ReactElement {
 
     // Reusable subheader component - Major sections (Assets, Funding) - smaller than main title
@@ -367,7 +370,7 @@ export default function OrganizationModal({
                                 </div>
                                 <div className="flex flex-wrap gap-2">
                                     {donorCountries.map((country) => (
-                                        <CountryBadge key={country} country={country} />
+                                        <CountryBadge key={country} country={country} onClick={onDonorClick} />
                                     ))}
                                 </div>
                             </div>
