@@ -226,10 +226,10 @@ export default function OrganizationModal({
                                     href={hdxUrl}
                                     target="_blank"
                                     rel="noopener noreferrer"
-                                    className="inline-flex items-center gap-2 px-5 py-2 rounded-full text-sm font-medium transition-colors border border-slate-200 bg-white text-slate-800 hover:border-[var(--brand-primary)]"
+                                    className="inline-flex items-center gap-2 px-3 py-1.5 rounded-md text-sm font-medium bg-slate-100 text-slate-600 border border-slate-200 hover:border-slate-400 hover:bg-slate-200 transition-colors"
                                     aria-label="View on HDX (opens in new tab)"
                                 >
-                                    <img src="/hdx_logo.png" alt="HDX logo" className="w-5 h-5 rounded-sm" />
+                                    <img src="/hdx_logo.png" alt="HDX logo" className="w-5 h-5 rounded-none" />
                                     <span className="font-normal">View on <strong className="font-bold">HDX</strong></span>
                                     
                                 </a>
