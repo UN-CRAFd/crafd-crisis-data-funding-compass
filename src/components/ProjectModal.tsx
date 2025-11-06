@@ -5,12 +5,6 @@ import type { OrganizationWithProjects, ProjectData } from '../lib/data';
 import { getIconForInvestmentType } from '@/config/investmentTypeIcons';
 import BaseModal, { ModalHeader, CountryBadge } from './BaseModal';
 import { useEffect, useState } from 'react';
-import {
-    Tooltip,
-    TooltipContent,
-    TooltipProvider,
-    TooltipTrigger,
-} from '@/components/ui/tooltip';
 
 interface ProjectModalProps {
     project: ProjectData | null;
@@ -24,7 +18,6 @@ interface ProjectModalProps {
 export default function ProjectModal({ project, allOrganizations, loading, onOpenOrganizationModal, onDonorClick }: ProjectModalProps) {
 
     const [themeToTypeMapping, setThemeToTypeMapping] = useState<Record<string, string>>({});
-    const [themeDescriptions, setThemeDescriptions] = useState<Record<string, string>>({});
 
     // Load theme mapping from themes-table.json on mount
     useEffect(() => {
@@ -32,24 +25,18 @@ export default function ProjectModal({ project, allOrganizations, loading, onOpe
             .then(response => response.json())
             .then(data => {
                 const mapping: Record<string, string> = {};
-                const descriptions: Record<string, string> = {};
                 
                 // Build mapping from themes JSON
                 data.forEach((record: any) => {
                     const theme = record.fields?.['Investment Theme(s)'];
                     const type = record.fields?.['Investment Type']?.[0]; // First item from array
-                    const description = record.fields?.['theme_description'];
                     
                     if (theme && type) {
                         mapping[theme] = type;
                     }
-                    if (theme && description) {
-                        descriptions[theme] = description;
-                    }
                 });
                 
                 setThemeToTypeMapping(mapping);
-                setThemeDescriptions(descriptions);
             })
             .catch(error => console.error('Error loading theme mapping:', error));
     }, []);
@@ -229,39 +216,20 @@ export default function ProjectModal({ project, allOrganizations, loading, onOpe
                                                         opacity="0.4"
                                                     />
                                                 </svg>
-                                                <TooltipProvider>
-                                                    <div className="flex flex-wrap gap-2">
-                                                        {relatedThemes.map((theme, themeIndex) => {
-                                                            const description = themeDescriptions[theme];
-                                                            const badge = (
-                                                                <span
-                                                                    className="inline-flex items-center px-2.5 py-1 rounded-md text-xs font-medium cursor-help"
-                                                                    style={{
-                                                                        backgroundColor: '#e9eaf9',
-                                                                        color: '#6b6da8'
-                                                                    }}
-                                                                >
-                                                                    {theme}
-                                                                </span>
-                                                            );
-
-                                                            if (description) {
-                                                                return (
-                                                                    <Tooltip key={themeIndex}>
-                                                                        <TooltipTrigger asChild>
-                                                                            {badge}
-                                                                        </TooltipTrigger>
-                                                                        <TooltipContent className="max-w-xs z-[9999]">
-                                                                            <p>{description}</p>
-                                                                        </TooltipContent>
-                                                                    </Tooltip>
-                                                                );
-                                                            }
-                                                            
-                                                            return <span key={themeIndex}>{badge}</span>;
-                                                        })}
-                                                    </div>
-                                                </TooltipProvider>
+                                                <div className="flex flex-wrap gap-2">
+                                                    {relatedThemes.map((theme, themeIndex) => (
+                                                        <span
+                                                            key={themeIndex}
+                                                            className="inline-flex items-center px-2.5 py-1 rounded-md text-xs font-medium"
+                                                            style={{
+                                                                backgroundColor: '#e9eaf9',
+                                                                color: '#6b6da8'
+                                                            }}
+                                                        >
+                                                            {theme}
+                                                        </span>
+                                                    ))}
+                                                </div>
                                             </>
                                         )}
                                     </div>
