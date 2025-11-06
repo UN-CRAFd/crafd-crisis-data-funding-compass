@@ -43,7 +43,8 @@
       "Org HQ Country": "Germany",
       "Has received CRAF'd Funding?": "NO",
       "org_key": "heigit",
-      "Org Type": "Academia"
+      "Org Type": "Academia",
+      "HDX Org Key": "heidelberg-institute-for-geoinformation-technology"
     }
   },
   {
@@ -113,7 +114,8 @@
       "Org HQ Country": "United States",
       "Has received CRAF'd Funding?": "NO",
       "org_key": "unicef",
-      "Org Type": "United Nations System"
+      "Org Type": "United Nations System",
+      "HDX Org Key": "unicef-data"
     }
   },
   {
@@ -136,7 +138,8 @@
       "Org HQ Country": "United Kingdom",
       "Has received CRAF'd Funding?": "NO",
       "org_key": "university-of-southampton",
-      "Org Type": "Academia"
+      "Org Type": "Academia",
+      "HDX Org Key": "worldpop"
     }
   },
   {
@@ -166,7 +169,8 @@
       "Org HQ Country": "Italy",
       "Has received CRAF'd Funding?": "NO",
       "org_key": "wfp",
-      "Org Type": "United Nations System"
+      "Org Type": "United Nations System",
+      "HDX Org Key": "wfp"
     }
   },
   {
@@ -204,7 +208,8 @@
       "Org HQ Country": "Netherlands",
       "Has received CRAF'd Funding?": "YES",
       "org_key": "510-data-team",
-      "Org Type": "Non-Governmental Organization"
+      "Org Type": "Non-Governmental Organization",
+      "HDX Org Key": "netherlands-red-cross"
     }
   },
   {
@@ -328,7 +333,8 @@
       "Org HQ Country": "United States",
       "Has received CRAF'd Funding?": "NO",
       "org_key": "unfpa",
-      "Org Type": "United Nations System"
+      "Org Type": "United Nations System",
+      "HDX Org Key": "unfpa"
     }
   },
   {
@@ -532,7 +538,8 @@
       "Org HQ Country": "United States",
       "Has received CRAF'd Funding?": "YES",
       "org_key": "undp",
-      "Org Type": "United Nations System"
+      "Org Type": "United Nations System",
+      "HDX Org Key": "undp-human-development-reports-office"
     }
   },
   {
@@ -547,7 +554,8 @@
         "recmH2oywWDYooamX"
       ],
       "org_key": "ocha-hum-data-centre",
-      "Org Type": "United Nations System"
+      "Org Type": "United Nations System",
+      "HDX Org Key": "hdx"
     }
   },
   {
@@ -558,7 +566,9 @@
       "Org Website": "https://www.icpac.net/fsnwg/",
       "Org Description": "The Food Security and Nutrition Working Group (FSNWG) is a regional platform, currently co-chaired by ICPAC and FAO. It’s goal is two-fold: to provide an up-to-date food security and nutrition situation analysis (early warning) and to offer a forum to build consensus on critical issues facing policy and interventions. The FNSWG has served regional governments, donors, and non-governmental agencies since the early 2000’s. Current membership includes approximately 80 organisations (IGAD, UN agencies, NGOs, donors, and research institutions) who contribute to the operation of the working group, and its nutrition, markets, food security information, livestock and pastoralist sub-groups.",
       "Provided Data Ecosystem Projects": [
-        "recvuixaI146ykcHe"
+        "recvuixaI146ykcHe",
+        "recjZopPYlk0yU6sq",
+        "recO7hHncZQGqy2vJ"
       ],
       "Org Donor Agencies": [
         "recGNTHL9SKZxLDcw",
@@ -570,7 +580,8 @@
       "Org HQ Country": "Kenya",
       "Has received CRAF'd Funding?": "NO",
       "org_key": "fsnwg",
-      "Org Type": "Network / Consortium"
+      "Org Type": "Network / Consortium",
+      "HDX Org Key": "fsnwg"
     }
   },
   {
@@ -583,7 +594,8 @@
         "recEwLy3FESOhLeNs"
       ],
       "org_key": "unosat",
-      "Org Type": "United Nations System"
+      "Org Type": "United Nations System",
+      "HDX Org Key": "unosat"
     }
   },
   {
@@ -605,7 +617,8 @@
       "Org HQ Country": "United States",
       "Has received CRAF'd Funding?": "NO",
       "org_key": "pacific-disaster-center",
-      "Org Type": "Research / Think Tank"
+      "Org Type": "Research / Think Tank",
+      "HDX Org Key": "pdc"
     }
   },
   {
@@ -750,7 +763,8 @@
       "Org HQ Country": "United Kingdom",
       "Has received CRAF'd Funding?": "NO",
       "org_key": "flowminder",
-      "Org Type": "Non-Governmental Organization"
+      "Org Type": "Non-Governmental Organization",
+      "HDX Org Key": "flowminder"
     }
   },
   {
@@ -811,7 +825,8 @@
       "Org HQ Country": "United States",
       "Has received CRAF'd Funding?": "NO",
       "org_key": "ocha",
-      "Org Type": "United Nations System"
+      "Org Type": "United Nations System",
+      "HDX Org Key": "un-ocha"
     }
   },
   {
@@ -940,7 +955,8 @@
       "Org HQ Country": "Switzerland",
       "Has received CRAF'd Funding?": "NO",
       "org_key": "gem",
-      "Org Type": "Non-Governmental Organization"
+      "Org Type": "Non-Governmental Organization",
+      "HDX Org Key": "gem-foundation"
     }
   },
   {
@@ -952,13 +968,17 @@
       "Org Description": "Focus on having data ready before the occurrence of a disaster, thereby saving lives through preparedness and efficient response.",
       "Link to Data Products Overview": "<https://data.humdata.org/organization/stats/fieldsdata>\n",
       "Provided Data Ecosystem Projects": [
-        "reckhF1PTR2hh135J"
+        "reckhF1PTR2hh135J",
+        "recN8yVJX7xphyQME",
+        "recLjLXetvlqcDMXB",
+        "recrq5pa36yxwSE2c"
       ],
       "Org IATI Name": "Fields Data",
       "Org HQ Country": "Netherlands",
       "Has received CRAF'd Funding?": "NO",
       "org_key": "fields-data",
-      "Org Type": "Non-Governmental Organization"
+      "Org Type": "Non-Governmental Organization",
+      "HDX Org Key": "fieldsdata"
     }
   },
   {
@@ -974,7 +994,8 @@
       "Org HQ Country": "Global (distributed)",
       "Has received CRAF'd Funding?": "NO",
       "org_key": "mapswipe",
-      "Org Type": "Non-Governmental Organization"
+      "Org Type": "Non-Governmental Organization",
+      "HDX Org Key": "hot"
     }
   },
   {
@@ -1035,7 +1056,8 @@
       "Org HQ Country": "Denmark",
       "Has received CRAF'd Funding?": "NO",
       "org_key": "drc",
-      "Org Type": "Non-Governmental Organization"
+      "Org Type": "Non-Governmental Organization",
+      "HDX Org Key": "danish-refugee-council"
     }
   },
   {
@@ -1075,7 +1097,8 @@
       "Org HQ Country": "Switzerland",
       "Has received CRAF'd Funding?": "NO",
       "org_key": "reach",
-      "Org Type": "Non-Governmental Organization"
+      "Org Type": "Non-Governmental Organization",
+      "HDX Org Key": "reach-initiative"
     }
   },
   {
@@ -1092,7 +1115,8 @@
       "Org HQ Country": "United States",
       "Has received CRAF'd Funding?": "YES",
       "org_key": "un-dppa",
-      "Org Type": "United Nations System"
+      "Org Type": "United Nations System",
+      "HDX Org Key": "unpeacesecurity"
     }
   },
   {
@@ -1113,7 +1137,8 @@
       "Org HQ Country": "United States",
       "Has received CRAF'd Funding?": "NO",
       "org_key": "state-department",
-      "Org Type": "Government / Public Sector"
+      "Org Type": "Government / Public Sector",
+      "HDX Org Key": "us-state-hiu"
     }
   },
   {
@@ -1141,7 +1166,8 @@
       "Org HQ Country": "United States",
       "Has received CRAF'd Funding?": "NO",
       "org_key": "hot",
-      "Org Type": "Non-Governmental Organization"
+      "Org Type": "Non-Governmental Organization",
+      "HDX Org Key": "hot"
     }
   },
   {
@@ -1209,7 +1235,8 @@
       "Org HQ Country": "United States",
       "Has received CRAF'd Funding?": "YES",
       "org_key": "acled",
-      "Org Type": "Non-Governmental Organization"
+      "Org Type": "Non-Governmental Organization",
+      "HDX Org Key": "acled"
     }
   },
   {
@@ -1247,7 +1274,8 @@
       "Org HQ Country": "United States",
       "Has received CRAF'd Funding?": "NO",
       "org_key": "dhs",
-      "Org Type": "Research / Think Tank"
+      "Org Type": "Research / Think Tank",
+      "HDX Org Key": "dhs"
     }
   },
   {
@@ -1338,7 +1366,8 @@
       "Org HQ Country": "France",
       "Has received CRAF'd Funding?": "NO",
       "org_key": "unesco",
-      "Org Type": "United Nations System"
+      "Org Type": "United Nations System",
+      "HDX Org Key": "unesco"
     }
   },
   {
@@ -1358,7 +1387,8 @@
       "Org HQ Country": "United Kingdom",
       "Has received CRAF'd Funding?": "NO",
       "org_key": "mapaction",
-      "Org Type": "Non-Governmental Organization"
+      "Org Type": "Non-Governmental Organization",
+      "HDX Org Key": "mapaction"
     }
   },
   {
@@ -1420,7 +1450,8 @@
       "Org HQ Country": "United States",
       "Has received CRAF'd Funding?": "NO",
       "org_key": "un-foundation",
-      "Org Type": "Non-Governmental Organization"
+      "Org Type": "Non-Governmental Organization",
+      "HDX Org Key": "foundation-center-organization"
     }
   },
   {
@@ -1481,7 +1512,8 @@
       "Org HQ Country": "Switzerland",
       "Has received CRAF'd Funding?": "YES",
       "org_key": "ifrc",
-      "Org Type": "Non-Governmental Organization"
+      "Org Type": "Non-Governmental Organization",
+      "HDX Org Key": "ifrc"
     }
   },
   {
@@ -1507,7 +1539,8 @@
       "Org HQ Country": "Belgium",
       "Has received CRAF'd Funding?": "NO",
       "org_key": "ec-jrc",
-      "Org Type": "Government / Public Sector"
+      "Org Type": "Government / Public Sector",
+      "HDX Org Key": "joint-research-centre-of-the-european-commission"
     }
   },
   {
@@ -1567,7 +1600,8 @@
       "Org HQ Country": "Switzerland",
       "Has received CRAF'd Funding?": "NO",
       "org_key": "wmo",
-      "Org Type": "United Nations System"
+      "Org Type": "United Nations System",
+      "HDX Org Key": "world-meteorological-organization"
     }
   },
   {
@@ -1614,7 +1648,8 @@
       "Org HQ Country": "Switzerland",
       "Has received CRAF'd Funding?": "NO",
       "org_key": "undrr",
-      "Org Type": "United Nations System"
+      "Org Type": "United Nations System",
+      "HDX Org Key": "united-nations-office-for-disaster-risk-reduction-unisdr"
     }
   },
   {
@@ -1690,7 +1725,8 @@
       "Org HQ Country": "Switzerland",
       "Has received CRAF'd Funding?": "YES",
       "org_key": "unhcr",
-      "Org Type": "United Nations System"
+      "Org Type": "United Nations System",
+      "HDX Org Key": "unhcr"
     }
   },
   {
@@ -1724,7 +1760,8 @@
       "Org HQ Country": "Netherlands",
       "Has received CRAF'd Funding?": "NO",
       "org_key": "3is",
-      "Org Type": "Tech & Consulting Provider"
+      "Org Type": "Tech & Consulting Provider",
+      "HDX Org Key": "3is"
     }
   },
   {
@@ -1782,7 +1819,8 @@
       "Org HQ Country": "Kenya",
       "Has received CRAF'd Funding?": "YES",
       "org_key": "icpac",
-      "Org Type": "International Organization"
+      "Org Type": "International Organization",
+      "HDX Org Key": "igad-climate-prediction-and-application-center"
     }
   },
   {
@@ -1819,7 +1857,8 @@
       "Org HQ Country": "Italy",
       "Has received CRAF'd Funding?": "NO",
       "org_key": "fao",
-      "Org Type": "United Nations System"
+      "Org Type": "United Nations System",
+      "HDX Org Key": "fao"
     }
   },
   {
@@ -1867,7 +1906,8 @@
       "Org HQ Country": "United States",
       "Has received CRAF'd Funding?": "NO",
       "org_key": "world-bank",
-      "Org Type": "International Organization"
+      "Org Type": "International Organization",
+      "HDX Org Key": "world-bank-group"
     }
   },
   {
@@ -1907,7 +1947,8 @@
       "Org HQ Country": "Norway",
       "Has received CRAF'd Funding?": "YES",
       "org_key": "idmc",
-      "Org Type": "Non-Governmental Organization"
+      "Org Type": "Non-Governmental Organization",
+      "HDX Org Key": "international-displacement-monitoring-centre-idmc"
     }
   },
   {
@@ -1930,7 +1971,8 @@
       "Org HQ Country": "Switzerland",
       "Has received CRAF'd Funding?": "NO",
       "org_key": "eth-zurich",
-      "Org Type": "Academia"
+      "Org Type": "Academia",
+      "HDX Org Key": "eth-zurich-photogrammetry-and-remote-sensing   eth-zurich-weather-and-climate-risks"
     }
   },
   {
@@ -1945,7 +1987,8 @@
       ],
       "Org HQ Country": "Denmark",
       "org_key": "world-bank-unhcr",
-      "Org Type": "United Nations System"
+      "Org Type": "United Nations System",
+      "HDX Org Key": "world-bank-group"
     }
   },
   {
@@ -2053,7 +2096,8 @@
       "Org HQ Country": "United States",
       "Has received CRAF'd Funding?": "NO",
       "org_key": "ipc",
-      "Org Type": "Network / Consortium"
+      "Org Type": "Network / Consortium",
+      "HDX Org Key": "ipc"
     }
   },
   {
@@ -2088,7 +2132,8 @@
       "Org HQ Country": "New Caledonia",
       "Has received CRAF'd Funding?": "NO",
       "org_key": "pacific-community",
-      "Org Type": "International Organization"
+      "Org Type": "International Organization",
+      "HDX Org Key": "pacific-community"
     }
   },
   {
@@ -2124,7 +2169,8 @@
       "Org HQ Country": "Kenya",
       "Has received CRAF'd Funding?": "NO",
       "org_key": "unep",
-      "Org Type": "United Nations System"
+      "Org Type": "United Nations System",
+      "HDX Org Key": "unep-ocha-jeu"
     }
   },
   {
@@ -2145,7 +2191,8 @@
         "recylzOrnxt3grWHh"
       ],
       "org_key": "acaps",
-      "Org Type": "Non-Governmental Organization"
+      "Org Type": "Non-Governmental Organization",
+      "HDX Org Key": "acaps"
     }
   },
   {
@@ -2183,7 +2230,8 @@
       "Org HQ Country": "Switzerland",
       "Has received CRAF'd Funding?": "NO",
       "org_key": "unitar",
-      "Org Type": "United Nations System"
+      "Org Type": "United Nations System",
+      "HDX Org Key": "unosat"
     }
   },
   {
@@ -2229,7 +2277,8 @@
       "Org HQ Country": "Switzerland",
       "Has received CRAF'd Funding?": "YES",
       "org_key": "iom",
-      "Org Type": "International Organization"
+      "Org Type": "International Organization",
+      "HDX Org Key": "international-organization-for-migration"
     }
   },
   {
@@ -2244,28 +2293,6 @@
       "Has received CRAF'd Funding?": "NO",
       "org_key": "unescap",
       "Org Type": "United Nations System"
-    }
-  },
-  {
-    "id": "recuNmAO2MSQsVoI7",
-    "fields": {
-      "Org Full Name": "data.org",
-      "Org Short Name": "data.org",
-      "Org Website": "https://data.org/about/",
-      "Org Description": "data.org is accelerating the power of data and AI to solve some of the world’s biggest problems. By hosting innovation challenges to surface and scale groundbreaking ideas, and elevating use cases of the most effective tools and strategies, we are building the field of data for social impact.",
-      "Org Mission": "By 2032, we will train one million purpose-driven data practitioners, ensuring there is capacity to drive meaningful, equitable impact.",
-      "Org Donor Agencies": [
-        "recOTnda6XSuNUpvo",
-        "recqhcKxTv71yMfeI",
-        "recl0rZvHPzrC6Jwd",
-        "recr77XDSfR0O9Jen",
-        "recYN8kEljhzS3pU1"
-      ],
-      "Org IATI Name": "N/A",
-      "Org HQ Country": "United States",
-      "Has received CRAF'd Funding?": "NO",
-      "org_key": "dataorg",
-      "Org Type": "Non-Governmental Organization"
     }
   },
   {
@@ -2287,7 +2314,8 @@
       "Org HQ Country": "United States",
       "Has received CRAF'd Funding?": "NO",
       "org_key": "wpdx",
-      "Org Type": "Non-Governmental Organization"
+      "Org Type": "Non-Governmental Organization",
+      "HDX Org Key": "water-point-data-exchange"
     }
   },
   {
@@ -2341,7 +2369,8 @@
       "Org HQ Country": "United Kingdom",
       "Has received CRAF'd Funding?": "NO",
       "org_key": "oxford-university",
-      "Org Type": "Academia"
+      "Org Type": "Academia",
+      "HDX Org Key": "blavatnik-school-of-government-university-of-oxford"
     }
   },
   {
@@ -2370,7 +2399,8 @@
       "Org HQ Country": "United States",
       "Has received CRAF'd Funding?": "NO",
       "org_key": "immap",
-      "Org Type": "Non-Governmental Organization"
+      "Org Type": "Non-Governmental Organization",
+      "HDX Org Key": "immap"
     }
   },
   {
@@ -2410,7 +2440,8 @@
       "Org HQ Country": "Switzerland",
       "Has received CRAF'd Funding?": "NO",
       "org_key": "who",
-      "Org Type": "United Nations System"
+      "Org Type": "United Nations System",
+      "HDX Org Key": "world-health-organization"
     }
   },
   {
@@ -2433,7 +2464,8 @@
       "Org HQ Country": "Netherlands",
       "Has received CRAF'd Funding?": "YES",
       "org_key": "rccc",
-      "Org Type": "Non-Governmental Organization"
+      "Org Type": "Non-Governmental Organization",
+      "HDX Org Key": "rccc"
     }
   },
   {
@@ -2478,7 +2510,8 @@
       "Org HQ Country": "United States",
       "Has received CRAF'd Funding?": "NO",
       "org_key": "un-dpo",
-      "Org Type": "United Nations System"
+      "Org Type": "United Nations System",
+      "HDX Org Key": "unpeacesecurity"
     }
   },
   {
@@ -2507,7 +2540,8 @@
       "Org HQ Country": "Belgium",
       "Has received CRAF'd Funding?": "YES",
       "org_key": "inform",
-      "Org Type": "Network / Consortium"
+      "Org Type": "Network / Consortium",
+      "HDX Org Key": "inform"
     }
   },
   {
@@ -2522,7 +2556,8 @@
       "Org HQ Country": "United Kingdom",
       "Has received CRAF'd Funding?": "NO",
       "org_key": "hera",
-      "Org Type": "Non-Governmental Organization"
+      "Org Type": "Non-Governmental Organization",
+      "HDX Org Key": "hera-humanitarian-emergency-response-africa"
     }
   },
   {
@@ -2548,7 +2583,8 @@
       "Org HQ Country": "Switzerland",
       "Has received CRAF'd Funding?": "NO",
       "org_key": "insecurity-insight",
-      "Org Type": "Non-Governmental Organization"
+      "Org Type": "Non-Governmental Organization",
+      "HDX Org Key": "insecurity-insight"
     }
   }
 ]

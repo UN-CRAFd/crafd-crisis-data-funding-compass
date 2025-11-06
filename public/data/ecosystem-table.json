@@ -1398,6 +1398,24 @@
     }
   },
   {
+    "id": "recLjLXetvlqcDMXB",
+    "fields": {
+      "Project/Product Name": "Information Management ",
+      "Provider Orgs Full Name": [
+        "recIeY5Kyx0oDYcLA"
+      ],
+      "CRAF’d-Funded Project?": "NO",
+      "Investment Type(s)": [
+        "Human Capital & Know-how"
+      ],
+      "Investment Theme(s)": [
+        "Information Management Services"
+      ],
+      "Project Website": "https://www.fieldsdata.org/information-management",
+      "Project Description": "In the daily whirlwind, we often underestimate the data avalanche we create. But there's a golden opportunity – standardize and organize. This unlocks lessons from the past, supercharges efficiency, and fuels brilliant strategic decisions.\n"
+    }
+  },
+  {
     "id": "recLn4QiWGniBsWoe",
     "fields": {
       "Project/Product Name": "INFORM Climate Change",
@@ -1436,6 +1454,24 @@
       ],
       "Project Website": "https://www.afrobarometer.org/online-data-analysis/",
       "Project Description": "Our online data analysis (ODA) tool is a free and easy way to find, analyse, and use high-quality data on the views and experiences of Africans. The ODA contains our data sets from 39 African countries going back to 1999.\nYou can search our data sets by country, by survey question, and by survey round. You can compare individual countries and regions, or get the continental view on the topics of your choice. You can slice and dice the data by gender, age, education level, and other demographic variables. You can identify trends over time.\n"
+    }
+  },
+  {
+    "id": "recN8yVJX7xphyQME",
+    "fields": {
+      "Project/Product Name": "3W & Connections",
+      "Provider Orgs Full Name": [
+        "recIeY5Kyx0oDYcLA"
+      ],
+      "CRAF’d-Funded Project?": "NO",
+      "Investment Type(s)": [
+        "Data Sets & Commons"
+      ],
+      "Investment Theme(s)": [
+        "3W (Who does What, Where) Data"
+      ],
+      "Project Website": "https://data.humdata.org/organization/fieldsdata",
+      "Project Description": "At the heart of every humanitarian mission lies the critical 3Ws - _Who is doing what and where._\n"
     }
   },
   {
@@ -1483,6 +1519,26 @@
       ],
       "Project Website": "https://mptf.undp.org/project/00141136",
       "Project Description": "The Transformative Outcomes project deploys an interactive web platform and standardized analysis toolkit to deliver high-quality crisis data for vulnerable populations in conflict-affected settings. This promotes evidence-based planning, targeted interventions, and capacity building among local actors, humanitarian agencies, and policymakers. CRAF’d funding supports data collection in six pilot countries, platform development, and training, catalyzing scalable, accessible data as a global public good.\n"
+    }
+  },
+  {
+    "id": "recO7hHncZQGqy2vJ",
+    "fields": {
+      "Project/Product Name": "FNWG Alerts and Early Warning",
+      "Provider Orgs Full Name": [
+        "recAqAEBX8YBwPWlb"
+      ],
+      "CRAF’d-Funded Project?": "NO",
+      "Investment Type(s)": [
+        "Crisis Analytics & Insights"
+      ],
+      "Investment Theme(s)": [
+        "Monitoring & Alerts",
+        "Anticipatory and Early Action Forecasts",
+        "Food Security Analytics"
+      ],
+      "Project Website": "https://www.icpac.net/fsnwg/?update_type=5#results",
+      "Project Description": "FNWG Alerts and Early Warning\n"
     }
   },
   {
@@ -2956,6 +3012,24 @@
     }
   },
   {
+    "id": "recjZopPYlk0yU6sq",
+    "fields": {
+      "Project/Product Name": "FSNWG Special Reports",
+      "Provider Orgs Full Name": [
+        "recAqAEBX8YBwPWlb"
+      ],
+      "CRAF’d-Funded Project?": "NO",
+      "Investment Type(s)": [
+        "Crisis Analytics & Insights"
+      ],
+      "Investment Theme(s)": [
+        "Food Security Analytics"
+      ],
+      "Project Website": "https://www.icpac.net/fsnwg/?update_type=2#results",
+      "Project Description": "FSNWG Special Reports\n"
+    }
+  },
+  {
     "id": "recjxVwrxVL90go5G",
     "fields": {
       "Project/Product Name": "Conflict Monitors",
@@ -3405,6 +3479,21 @@
       ],
       "Project Website": "https://uis.unesco.org/",
       "Project Description": "UIS is UNESCO's global statistical agency for education, science, culture, and communication—publishing SDG indicators and open data in standardized formats.\n"
+    }
+  },
+  {
+    "id": "recrq5pa36yxwSE2c",
+    "fields": {
+      "Project/Product Name": "Data Analytics",
+      "Provider Orgs Full Name": [
+        "recIeY5Kyx0oDYcLA"
+      ],
+      "CRAF’d-Funded Project?": "NO",
+      "Investment Type(s)": [
+        "Human Capital & Know-how"
+      ],
+      "Project Website": "https://www.fieldsdata.org/data-analytics",
+      "Project Description": "Embracing a grassroots ethos, we forge vital connections on the frontline. Before diving into data collection, we scour the digital realm, unearthing existing efforts to eliminate redundancy. Then, we fuse these online insights with raw field data, thanks to our trusted local partners.\n"
     }
   },
   {
