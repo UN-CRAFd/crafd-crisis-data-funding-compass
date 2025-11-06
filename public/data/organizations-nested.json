@@ -3159,7 +3159,9 @@
           "Project/Product Name": "Food Security and Nutrition Update",
           "product_key": "fsn-update",
           "Provider Orgs Full Name": [
-            "recAqAEBX8YBwPWlb"
+            "recAqAEBX8YBwPWlb",
+            "reckv2Buw9sXl3Eul",
+            "reci9Q8xAcus6YuKx"
           ],
           "CRAF’d-Funded Project?": "NO",
           "Investment Type(s)": [
@@ -3212,10 +3214,9 @@
             "Crisis Analytics & Insights"
           ],
           "Investment Theme(s)": [
-            "Climate Data",
             "Monitoring & Alerts",
-            "Geographic Information Systems (GIS)",
-            "Anticipatory and Early Action Forecasts"
+            "Anticipatory and Early Action Forecasts",
+            "Climate Analytics"
           ],
           "Project Website": "https://www.gdacs.org/",
           "Project Description": "GDACS is a cooperation framework between the United Nations, the European Commission and disaster managers worldwide to improve alerts, information exchange and coordination in the first phase after major sudden-onset disasters.\n"
@@ -4447,10 +4448,9 @@
             "Crisis Analytics & Insights"
           ],
           "Investment Theme(s)": [
-            "Climate Data",
             "Monitoring & Alerts",
-            "Geographic Information Systems (GIS)",
-            "Anticipatory and Early Action Forecasts"
+            "Anticipatory and Early Action Forecasts",
+            "Climate Analytics"
           ],
           "Project Website": "https://www.gdacs.org/",
           "Project Description": "GDACS is a cooperation framework between the United Nations, the European Commission and disaster managers worldwide to improve alerts, information exchange and coordination in the first phase after major sudden-onset disasters.\n"
@@ -5069,7 +5069,10 @@
       "Provided Data Ecosystem Projects": [
         "recf4QNnota3r1Jch",
         "recRqJS0I3kX5dYEJ",
-        "recYzS7BrsxBG8llV"
+        "recYzS7BrsxBG8llV",
+        "recZxXY0AjXgSMXr7",
+        "recSIp9VIy4uKdPH3",
+        "recdr2wcQiX1Ch1ZF"
       ],
       "Org Donor Agencies": [
         "rec2G5THuTVhTanSX",
@@ -5166,13 +5169,31 @@
           ],
           "CRAF’d-Funded Project?": "NO",
           "Investment Type(s)": [
-            "Data Sets & Commons"
+            "Crisis Analytics & Insights"
           ],
           "Investment Theme(s)": [
-            "Geospatial Data"
+            "Geospatial Analytics",
+            "Damage Assessments"
           ],
           "Project Website": "https://www.globalquakemodel.org/product/global-exposure-model",
           "Project Description": "The Global Exposure Database (GED) is a spatial dataset created by GEM that quantifies the exposure of buildings and infrastructure to natural hazards across countries. It includes structural typologies, occupancy data, and geographic distributions, enabling users to estimate potential losses from earthquakes and other disasters. GED is openly available and widely used in conjunction with hazard models to inform national disaster risk management strategies and build resilience in urban development planning.\n"
+        },
+        "agencies": []
+      },
+      {
+        "id": "recSIp9VIy4uKdPH3",
+        "fields": {
+          "Project/Product Name": "Territory Seismic Risk Profiles",
+          "Provider Orgs Full Name": [
+            "recIIg9jENlDRt2Oe"
+          ],
+          "CRAF’d-Funded Project?": "NO",
+          "Investment Type(s)": [
+            "Crisis Analytics & Insights"
+          ],
+          "Investment Theme(s)": [
+            "Geospatial Analytics"
+          ]
         },
         "agencies": []
       },
@@ -5189,7 +5210,9 @@
             "Crisis Analytics & Insights"
           ],
           "Investment Theme(s)": [
-            "Geospatial Data"
+            "Geospatial Analytics",
+            "Damage Assessments",
+            "Composite Indices"
           ],
           "Project Website": "https://www.globalquakemodel.org/product/openquake-engine",
           "Project Description": "Developed by the Global Earthquake Model (GEM) Foundation, the OpenQuake Platform is an open-source tool for seismic hazard and risk assessment. It provides researchers, engineers, and governments with models, tools, and databases to simulate earthquake impacts, assess vulnerability, and inform urban planning and disaster preparedness strategies. OpenQuake integrates data on seismicity, exposure, and building fragility, and is widely used in both academic research and national risk management initiatives.\n",
@@ -5208,6 +5231,42 @@
         ]
       },
       {
+        "id": "recZxXY0AjXgSMXr7",
+        "fields": {
+          "Project/Product Name": "Global Vulnerability Model",
+          "Provider Orgs Full Name": [
+            "recIIg9jENlDRt2Oe"
+          ],
+          "CRAF’d-Funded Project?": "NO",
+          "Investment Type(s)": [
+            "Crisis Analytics & Insights"
+          ],
+          "Investment Theme(s)": [
+            "Damage Assessments"
+          ]
+        },
+        "agencies": []
+      },
+      {
+        "id": "recdr2wcQiX1Ch1ZF",
+        "fields": {
+          "Project/Product Name": "Global Seismic  Risk Map",
+          "Provider Orgs Full Name": [
+            "recIIg9jENlDRt2Oe"
+          ],
+          "CRAF’d-Funded Project?": "NO",
+          "Investment Type(s)": [
+            "Crisis Analytics & Insights"
+          ],
+          "Investment Theme(s)": [
+            "Geospatial Analytics",
+            "Damage Assessments",
+            "Composite Indices"
+          ]
+        },
+        "agencies": []
+      },
+      {
         "id": "recf4QNnota3r1Jch",
         "fields": {
           "Project/Product Name": "Global Seismic Hazard Map (GSHM)",
@@ -5217,11 +5276,11 @@
           ],
           "CRAF’d-Funded Project?": "NO",
           "Investment Type(s)": [
-            "Data Sets & Commons",
             "Crisis Analytics & Insights"
           ],
           "Investment Theme(s)": [
-            "Geospatial Data"
+            "Geospatial Analytics",
+            "Damage Assessments"
           ],
           "Project Website": "https://www.globalquakemodel.org/product/global-seismic-hazard-map",
           "Project Description": "The Global Seismic Hazard Map (GSHM), developed under the auspices of the Global Earthquake Model (GEM), provides probabilistic assessments of earthquake hazards worldwide. It combines global seismicity data, geological models, and ground motion prediction equations to estimate the likelihood of earthquake-induced ground shaking. GSHM supports disaster risk reduction, urban planning, and insurance risk modeling by offering a harmonized and peer-reviewed reference for national and regional seismic hazard assessments. \t\n"
@@ -6109,9 +6168,9 @@
   },
   {
     "id": "recPNaYHYuKeRDfJn",
-    "name": "HOT: Humanitarian Street Map Team",
+    "name": "HOT: Humanitarian Open Street Map Team",
     "fields": {
-      "Org Full Name": "HOT: Humanitarian Street Map Team",
+      "Org Full Name": "HOT: Humanitarian Open Street Map Team",
       "Org Short Name": "HOT",
       "Org Website": "https://www.hotosm.org/what-we-do",
       "Org Description": "HOT is an international team dedicated to humanitarian action and community development through open mapping. We work together to provide map data which revolutionises disaster management, reduces risks, and contributes to achievement of the Sustainable Development Goals.",
@@ -8010,10 +8069,9 @@
             "Crisis Analytics & Insights"
           ],
           "Investment Theme(s)": [
-            "Climate Data",
             "Monitoring & Alerts",
-            "Geographic Information Systems (GIS)",
-            "Anticipatory and Early Action Forecasts"
+            "Anticipatory and Early Action Forecasts",
+            "Climate Analytics"
           ],
           "Project Website": "https://www.gdacs.org/",
           "Project Description": "GDACS is a cooperation framework between the United Nations, the European Commission and disaster managers worldwide to improve alerts, information exchange and coordination in the first phase after major sudden-onset disasters.\n"
@@ -8031,11 +8089,12 @@
           ],
           "CRAF’d-Funded Project?": "NO",
           "Investment Type(s)": [
-            "Data Sets & Commons",
             "Crisis Analytics & Insights"
           ],
           "Investment Theme(s)": [
-            "Climate Data"
+            "Climate Analytics",
+            "Anticipatory and Early Action Forecasts",
+            "Composite Indices"
           ],
           "Project Website": "https://drmkc.jrc.ec.europa.eu/inform-index/INFORM-Climate-Change",
           "Project Description": "INFORM Climate Change Risk Index is an upgrade of INFORM Risk Index as it includes climate and socio-economic projections. It provides quantified estimates of the impacts of climate change on the future risk of humanitarian crises and disasters. The results are intended to inform policy choices across climate mitigation, climate adaptation, disaster risk reduction, sustainable development and humanitarian assistance.\n\n"
@@ -8053,12 +8112,12 @@
           ],
           "CRAF’d-Funded Project?": "NO",
           "Investment Type(s)": [
-            "Data Sets & Commons",
-            "Infrastructure & Platforms"
+            "Crisis Analytics & Insights"
           ],
           "Investment Theme(s)": [
-            "Health Data",
-            "Health Facilities Data"
+            "Health Analytics",
+            "Monitoring & Alerts",
+            "Anticipatory and Early Action Forecasts"
           ],
           "Project Website": "https://www.who.int/initiatives/eios",
           "Project Description": "EIOS is a real-time platform developed by WHO and the European Commission to collect, verify, and share public health threat information from open sources. It offers a centralized dashboard and alerting system to help health agencies monitor emerging epidemics and coordinate responses.\n"
@@ -8075,12 +8134,11 @@
           ],
           "CRAF’d-Funded Project?": "NO",
           "Investment Type(s)": [
-            "Infrastructure & Platforms",
             "Crisis Analytics & Insights"
           ],
           "Investment Theme(s)": [
-            "Environmental Data",
-            "Climate Data"
+            "Anticipatory and Early Action Forecasts",
+            "Climate Analytics"
           ],
           "Project Website": "https://global-flood.emergency.copernicus.eu/",
           "Project Description": "GloFAS, developed by EC-JRC and ECMWF, provides open-access flood forecasts and risk assessments. It integrates global hydrological models to support early warning systems and flood preparedness planning.\n"
@@ -8098,12 +8156,11 @@
           ],
           "CRAF’d-Funded Project?": "NO",
           "Investment Type(s)": [
-            "Data Sets & Commons",
             "Crisis Analytics & Insights"
           ],
           "Investment Theme(s)": [
-            "Climate Data",
-            "Anticipatory and Early Action Forecasts"
+            "Anticipatory and Early Action Forecasts",
+            "Climate Analytics"
           ],
           "Project Website": "https://drmkc.jrc.ec.europa.eu/inform-index",
           "Project Description": "The INFORM Risk Index is a multi-hazard risk assessment tool developed by the Inter-Agency Standing Committee (IASC) and the European Commission. It combines data on hazards, vulnerability, and coping capacity to produce a composite score of disaster risk in over 190 countries. The index supports evidence-based disaster preparedness, humanitarian planning, and crisis response by identifying countries most at risk of crises that could overwhelm national response capacities. It is updated annually and incorporates more than 50 indicators.\n"
@@ -9772,7 +9829,8 @@
       "Org Description": "The IGAD Climate Prediction and Applications Centre (ICPAC) plays a vital role in the humanitarian context of the Greater Horn of Africa (GHA) by providing critical climate services to 11 countries. ICPAC's mission is to foster climate services and knowledge to enhance community resilience in a region highly susceptible to climate change and extreme weather events. ",
       "Link to Data Products Overview": "<https://www.icpac.net/data-center/>\n",
       "Provided Data Ecosystem Projects": [
-        "recueXHi1BfJrz30y"
+        "recueXHi1BfJrz30y",
+        "recvuixaI146ykcHe"
       ],
       "Org Donor Agencies": [
         "rec6XRPA9pKgC8j1J",
@@ -9844,6 +9902,28 @@
           "Project Description": "CPAC's project is poised to enhance disaster risk management in Eastern Africa by integrating advanced hazard modeling, impact estimation, and climate storylines into the [East Africa Hazard Watch Portal](https://eahazardswatch.icpac.net/map/ea/). This approach aims to fill the critical data gaps for localized, actionable information.\n"
         },
         "agencies": []
+      },
+      {
+        "id": "recvuixaI146ykcHe",
+        "fields": {
+          "Project/Product Name": "Food Security and Nutrition Update",
+          "product_key": "fsn-update",
+          "Provider Orgs Full Name": [
+            "recAqAEBX8YBwPWlb",
+            "reckv2Buw9sXl3Eul",
+            "reci9Q8xAcus6YuKx"
+          ],
+          "CRAF’d-Funded Project?": "NO",
+          "Investment Type(s)": [
+            "Crisis Analytics & Insights"
+          ],
+          "Investment Theme(s)": [
+            "Nutrition Analytics"
+          ],
+          "Project Website": "https://www.icpac.net/fsnwg/",
+          "Project Description": "\n"
+        },
+        "agencies": []
       }
     ],
     "donor_countries": [
@@ -9867,7 +9947,8 @@
         "recRERSUhmJ4M8jzA",
         "reccI6M0kWMcanXsD",
         "recgftq4GZElVtfi6",
-        "recnoFBXdvLa7XJHw"
+        "recnoFBXdvLa7XJHw",
+        "recvuixaI146ykcHe"
       ],
       "Org Donor Agencies": [
         "rec3Ado0Jrl799Q8A",
@@ -10111,6 +10192,28 @@
           ],
           "Project Website": "https://www.fao.org/giews/en/",
           "Project Description": "FAO’s GIEWS delivers near real-time crop and food supply monitoring, offering geospatial visualizations and drought alerts across over 100 countries. Data supports food security risk assessment and response planning.\n"
+        },
+        "agencies": []
+      },
+      {
+        "id": "recvuixaI146ykcHe",
+        "fields": {
+          "Project/Product Name": "Food Security and Nutrition Update",
+          "product_key": "fsn-update",
+          "Provider Orgs Full Name": [
+            "recAqAEBX8YBwPWlb",
+            "reckv2Buw9sXl3Eul",
+            "reci9Q8xAcus6YuKx"
+          ],
+          "CRAF’d-Funded Project?": "NO",
+          "Investment Type(s)": [
+            "Crisis Analytics & Insights"
+          ],
+          "Investment Theme(s)": [
+            "Nutrition Analytics"
+          ],
+          "Project Website": "https://www.icpac.net/fsnwg/",
+          "Project Description": "\n"
         },
         "agencies": []
       }
@@ -12313,10 +12416,9 @@
             "Crisis Analytics & Insights"
           ],
           "Investment Theme(s)": [
-            "Climate Data",
             "Monitoring & Alerts",
-            "Geographic Information Systems (GIS)",
-            "Anticipatory and Early Action Forecasts"
+            "Anticipatory and Early Action Forecasts",
+            "Climate Analytics"
           ],
           "Project Website": "https://www.gdacs.org/",
           "Project Description": "GDACS is a cooperation framework between the United Nations, the European Commission and disaster managers worldwide to improve alerts, information exchange and coordination in the first phase after major sudden-onset disasters.\n"
@@ -13478,12 +13580,12 @@
           ],
           "CRAF’d-Funded Project?": "NO",
           "Investment Type(s)": [
-            "Data Sets & Commons",
-            "Infrastructure & Platforms"
+            "Crisis Analytics & Insights"
           ],
           "Investment Theme(s)": [
-            "Health Data",
-            "Health Facilities Data"
+            "Health Analytics",
+            "Monitoring & Alerts",
+            "Anticipatory and Early Action Forecasts"
           ],
           "Project Website": "https://www.who.int/initiatives/eios",
           "Project Description": "EIOS is a real-time platform developed by WHO and the European Commission to collect, verify, and share public health threat information from open sources. It offers a centralized dashboard and alerting system to help health agencies monitor emerging epidemics and coordinate responses.\n"
@@ -14055,11 +14157,12 @@
           ],
           "CRAF’d-Funded Project?": "NO",
           "Investment Type(s)": [
-            "Data Sets & Commons",
             "Crisis Analytics & Insights"
           ],
           "Investment Theme(s)": [
-            "Climate Data"
+            "Climate Analytics",
+            "Anticipatory and Early Action Forecasts",
+            "Composite Indices"
           ],
           "Project Website": "https://drmkc.jrc.ec.europa.eu/inform-index/INFORM-Climate-Change",
           "Project Description": "INFORM Climate Change Risk Index is an upgrade of INFORM Risk Index as it includes climate and socio-economic projections. It provides quantified estimates of the impacts of climate change on the future risk of humanitarian crises and disasters. The results are intended to inform policy choices across climate mitigation, climate adaptation, disaster risk reduction, sustainable development and humanitarian assistance.\n\n"
@@ -14110,12 +14213,11 @@
           ],
           "CRAF’d-Funded Project?": "NO",
           "Investment Type(s)": [
-            "Data Sets & Commons",
             "Crisis Analytics & Insights"
           ],
           "Investment Theme(s)": [
-            "Climate Data",
-            "Anticipatory and Early Action Forecasts"
+            "Anticipatory and Early Action Forecasts",
+            "Climate Analytics"
           ],
           "Project Website": "https://drmkc.jrc.ec.europa.eu/inform-index",
           "Project Description": "The INFORM Risk Index is a multi-hazard risk assessment tool developed by the Inter-Agency Standing Committee (IASC) and the European Commission. It combines data on hazards, vulnerability, and coping capacity to produce a composite score of disaster risk in over 190 countries. The index supports evidence-based disaster preparedness, humanitarian planning, and crisis response by identifying countries most at risk of crises that could overwhelm national response capacities. It is updated annually and incorporates more than 50 indicators.\n"
