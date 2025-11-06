@@ -11,9 +11,10 @@ interface ProjectModalProps {
     allOrganizations: OrganizationWithProjects[];
     loading: boolean;
     onOpenOrganizationModal?: (orgKey: string) => void;
+    onDonorClick?: (country: string) => void;
 }
 
-export default function ProjectModal({ project, allOrganizations, loading, onOpenOrganizationModal }: ProjectModalProps) {
+export default function ProjectModal({ project, allOrganizations, loading, onOpenOrganizationModal, onDonorClick }: ProjectModalProps) {
 
     const SubHeader = ({ children }: { children: React.ReactNode }) => (
         <h3 className="text-xl font-roboto font-black text-[#333333] mb-3 uppercase tracking-wide leading-normal">
@@ -178,7 +179,7 @@ export default function ProjectModal({ project, allOrganizations, loading, onOpe
                     {project.donorCountries && project.donorCountries.length > 0 ? (
                         <div className="flex flex-wrap gap-2">
                             {project.donorCountries.map((country, index) => (
-                                <CountryBadge key={index} country={country} />
+                                <CountryBadge key={index} country={country} onClick={onDonorClick} />
                             ))}
                         </div>
                     ) : (
