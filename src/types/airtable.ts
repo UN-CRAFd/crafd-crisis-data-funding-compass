@@ -63,6 +63,7 @@ export interface ProjectData {
     isCrafdFunded: boolean | string;
     provider: string;
     productKey: string;
+    hdxSohd?: string;
 }
 
 export interface OrganizationWithProjects {
