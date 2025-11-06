@@ -474,6 +474,28 @@ export function buildProjectNameMap(organizations: NestedOrganization[]): Record
 }
 
 /**
+ * Build a map from project ID to product_key
+ * Used by modals to navigate to project detail by product_key
+ */
+export function buildProjectIdToKeyMap(organizations: NestedOrganization[]): Record<string, string> {
+    const map: Record<string, string> = {};
+    
+    organizations.forEach(org => {
+        (org.projects || []).forEach(project => {
+            if (project && project.id) {
+                const fields = project.fields || {};
+                const productKey = fields['product_key'] || fields['Product Key'] || fields['Product/Product Key'] || fields['Product Key (Airtable)'];
+                if (productKey) {
+                    map[project.id] = String(productKey).trim();
+                }
+            }
+        });
+    });
+    
+    return map;
+}
+
+/**
  * Build a map from organization ID to its projects with investment types
  * Used by organization modal to display project investment types
  */

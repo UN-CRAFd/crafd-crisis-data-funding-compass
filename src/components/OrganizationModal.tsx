@@ -19,6 +19,10 @@ interface OrganizationModalProps {
     orgDonorCountriesMap?: Record<string, string[]>;
     // onClose removed for serializability; modal will dispatch a CustomEvent 'closeOrganizationModal'
     loading: boolean;
+    // Callback to open project modal
+    onOpenProjectModal?: (projectKey: string) => void;
+    // Map from project ID to product_key for navigation
+    projectIdToKeyMap?: Record<string, string>;
 }
 
 // Import HeadquartersCountry component - comment out import to disable HQ display
@@ -29,7 +33,9 @@ export default function OrganizationModal({
     projectNameMap = {},
     orgProjectsMap = {},
     orgDonorCountriesMap = {},
-    loading
+    loading,
+    onOpenProjectModal,
+    projectIdToKeyMap = {}
 }: OrganizationModalProps): React.ReactElement {
 
     // Reusable subheader component - Major sections (Assets, Funding) - smaller than main title
@@ -257,15 +263,19 @@ export default function OrganizationModal({
                             return null;
                         }
 
-                        // Convert to array if needed
-                        let projectsList: string[] = [];
+                        // Convert to array if needed - keep both IDs and names
+                        let projectsList: Array<{ id: string; name: string; productKey: string }> = [];
                         if (Array.isArray(providedProjects)) {
-                            // Array of project IDs - resolve to names using projectNameMap
+                            // Array of project IDs - resolve to names and product keys
                             projectsList = providedProjects
                                 .map(id => String(id).trim())
-                                .map(id => projectNameMap[id] || id)
-                                .filter(Boolean)
-                                .sort((a, b) => a.localeCompare(b));
+                                .map(id => ({
+                                    id,
+                                    name: projectNameMap[id] || id,
+                                    productKey: projectIdToKeyMap[id] || id
+                                }))
+                                .filter(p => p.name)
+                                .sort((a, b) => a.name.localeCompare(b.name));
                         }
 
                         if (projectsList.length === 0) return null;
@@ -283,11 +293,15 @@ export default function OrganizationModal({
                                     <span className="text-lg font-normal text-gray-500 tabular-nums">({projectsList.length})</span>
                                 </div>
                                 <div className="flex flex-col gap-2">
-                                    {displayedProjects.map((projectName, i) => (
-                                        <span key={i} className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-md text-base font-medium bg-slate-100 text-slate-600">
-                                            <Package className="w-4 h-4 text-slate-500" />
-                                            <span className="truncate max-w-xs">{projectName}</span>
-                                        </span>
+                                    {displayedProjects.map((proj, i) => (
+                                        <button
+                                            key={i}
+                                            onClick={() => onOpenProjectModal?.(proj.productKey)}
+                                            className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-md text-base font-medium bg-slate-100 text-slate-600 hover:bg-slate-200 transition-colors cursor-pointer text-left"
+                                        >
+                                            <Package className="w-4 h-4 text-slate-500 shrink-0" />
+                                            <span className="truncate max-w-xs">{proj.name}</span>
+                                        </button>
                                     ))}
                                 </div>
                                 {showCollapsible && (

@@ -18,7 +18,7 @@ import labels from '@/config/labels.json';
 import { getIconForInvestmentType } from '@/config/investmentTypeIcons';
 import { Building2, ChevronDown, ChevronRight, Database, Table, DatabaseBackup, FileDown, Filter, FolderDot, FolderOpenDot, Globe, Info, MessageCircle, RotateCcw, Search, Share2, ArrowUpDown, ArrowUpWideNarrow, ArrowDownWideNarrow, Network } from 'lucide-react';
 import organizationsTableRaw from '../../public/data/organizations-table.json';
-import { buildOrgDonorCountriesMap, buildOrgProjectsMap, buildProjectNameMap, calculateOrganizationTypesFromOrganizationsWithProjects, getNestedOrganizationsForModals } from '../lib/data';
+import { buildOrgDonorCountriesMap, buildOrgProjectsMap, buildProjectNameMap, buildProjectIdToKeyMap, calculateOrganizationTypesFromOrganizationsWithProjects, getNestedOrganizationsForModals } from '../lib/data';
 import { exportDashboardToPDF } from '../lib/exportPDF';
 import { exportViewAsCSV, exportViewAsXLSX } from '../lib/exportCSV';
 import type { DashboardStats, OrganizationProjectData, OrganizationTypeData, OrganizationWithProjects, ProjectData, ProjectTypeData } from '../types/airtable';
@@ -285,6 +285,7 @@ const CrisisDataDashboard = ({
 
     // Centralized data maps for modals
     const [projectNameMap, setProjectNameMap] = useState<Record<string, string>>({});
+    const [projectIdToKeyMap, setProjectIdToKeyMap] = useState<Record<string, string>>({});
     const [orgProjectsMap, setOrgProjectsMap] = useState<Record<string, Array<{ investmentTypes: string[] }>>>({});
     const [orgDonorCountriesMap, setOrgDonorCountriesMap] = useState<Record<string, string[]>>({});
 
@@ -295,6 +296,7 @@ const CrisisDataDashboard = ({
                 const nestedOrgs = await getNestedOrganizationsForModals();
                 setNestedOrganizations(nestedOrgs);
                 setProjectNameMap(buildProjectNameMap(nestedOrgs));
+                setProjectIdToKeyMap(buildProjectIdToKeyMap(nestedOrgs));
                 setOrgProjectsMap(buildOrgProjectsMap(nestedOrgs));
                 setOrgDonorCountriesMap(buildOrgDonorCountriesMap(nestedOrgs));
             } catch (error) {
@@ -1426,6 +1428,7 @@ const CrisisDataDashboard = ({
                     organizationName={selectedProject.organizationName}
                     allOrganizations={allOrganizations}
                     loading={projectModalLoading}
+                    onOpenOrganizationModal={onOpenOrganizationModal}
                 />
             )}
             {/* Organization Modal */}
@@ -1455,6 +1458,8 @@ const CrisisDataDashboard = ({
                             orgProjectsMap={orgProjectsMap}
                             orgDonorCountriesMap={orgDonorCountriesMap}
                             loading={false}
+                            onOpenProjectModal={onOpenProjectModal}
+                            projectIdToKeyMap={projectIdToKeyMap}
                         />
                     );
                 })()

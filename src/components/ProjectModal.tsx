@@ -10,9 +10,10 @@ interface ProjectModalProps {
     organizationName?: string;
     allOrganizations: OrganizationWithProjects[];
     loading: boolean;
+    onOpenOrganizationModal?: (orgKey: string) => void;
 }
 
-export default function ProjectModal({ project, allOrganizations, loading }: ProjectModalProps) {
+export default function ProjectModal({ project, allOrganizations, loading, onOpenOrganizationModal }: ProjectModalProps) {
 
     const SubHeader = ({ children }: { children: React.ReactNode }) => (
         <h3 className="text-xl font-roboto font-black text-[#333333] mb-3 uppercase tracking-wide leading-normal">
@@ -118,19 +119,25 @@ export default function ProjectModal({ project, allOrganizations, loading }: Pro
                     <div className="mb-6">
                         <SubHeader>Provider Organizations</SubHeader>
                         <div className="flex flex-wrap gap-2">
-                            {supportingOrganizations.map(org => (
-                                <span
-                                    key={org.id}
-                                    className="inline-flex items-center gap-1.5 px-3 py-1 rounded-md text-sm font-medium"
-                                    style={{
-                                        backgroundColor: 'var(--brand-bg-light)',
-                                        color: 'var(--brand-primary-dark)'
-                                    }}
-                                >
-                                    <Building2 className="h-3.5 w-3.5" />
-                                    {org.organizationName}
-                                </span>
-                            ))}
+                            {supportingOrganizations.map(org => {
+                                // Use orgShortName if available, otherwise use organizationName
+                                const orgKey = org.orgShortName?.toLowerCase() || org.organizationName.toLowerCase();
+                                
+                                return (
+                                    <button
+                                        key={org.id}
+                                        onClick={() => onOpenOrganizationModal?.(orgKey)}
+                                        className="inline-flex items-center gap-1.5 px-3 py-1 rounded-md text-sm font-medium hover:opacity-80 transition-opacity cursor-pointer"
+                                        style={{
+                                            backgroundColor: 'var(--brand-bg-light)',
+                                            color: 'var(--brand-primary-dark)'
+                                        }}
+                                    >
+                                        <Building2 className="h-3.5 w-3.5" />
+                                        {org.organizationName}
+                                    </button>
+                                );
+                            })}
                         </div>
                     </div>
                 )}
