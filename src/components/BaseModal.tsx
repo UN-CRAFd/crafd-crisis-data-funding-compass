@@ -257,12 +257,18 @@ export function ModalHeader({ icon, title, showCopied, onShare, onClose, loading
 interface CountryBadgeProps {
     country: string;
     className?: string;
+    onClick?: (country: string) => void;
 }
 
-export function CountryBadge({ country, className = '' }: CountryBadgeProps) {
+export function CountryBadge({ country, className = '', onClick }: CountryBadgeProps) {
+    const isClickable = !!onClick;
+    
     return (
         <span
-            className={`inline-flex items-center gap-2 px-3 py-1.5 rounded-md text-sm font-medium bg-slate-100 text-slate-600 ${className}`}
+            className={`inline-flex items-center gap-2 px-3 py-1.5 rounded-md text-sm font-medium bg-slate-100 text-slate-600 ${
+                isClickable ? 'cursor-pointer hover:bg-slate-200 transition-colors' : ''
+            } ${className}`}
+            onClick={isClickable ? () => onClick(country) : undefined}
         >
             <CountryFlag country={country} width={20} height={15} />
             <span>{country}</span>
