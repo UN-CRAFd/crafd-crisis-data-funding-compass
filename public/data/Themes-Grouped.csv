@@ -1,0 +1,91 @@
+﻿Investment Themes [Text Key],Investment Theme(s),Investment Type,theme_description,Investment Type Order
+AI Models,AI Models,Crisis Analytics & Insights,,3
+Anticipatory and Early Action Forecasts,Anticipatory and Early Action Forecasts,Crisis Analytics & Insights,,3
+Climate Analytics,Climate Analytics,Crisis Analytics & Insights,,3
+Composite Indices,Composite Indices,Crisis Analytics & Insights,,3
+Conflict Analytics,Conflict Analytics,Crisis Analytics & Insights,,3
+Damage Assessments,Damage Assessments,Crisis Analytics & Insights,,3
+Disaster Hazard & Risk Modelling,Disaster Hazard & Risk Modelling,Crisis Analytics & Insights,,3
+Displacement Analytics,Displacement & Migration Analytics,Crisis Analytics & Insights,,3
+Flood Risk Analytics,Flood Risk Analytics,Crisis Analytics & Insights,,3
+Food Security Analytics,Food Security Analytics,Crisis Analytics & Insights,,3
+Gender Analytics,Gender Analytics,Crisis Analytics & Insights,,3
+Geospatial Analytics,Geospatial Analytics,Crisis Analytics & Insights,,3
+Health Analytics,Health Analytics,Crisis Analytics & Insights,,3
+Humanitarian Access Analytics,Humanitarian Access Analytics,Crisis Analytics & Insights,,3
+Impact Evaluation,Impact Evaluation,Crisis Analytics & Insights,,3
+Migration Analytics ,Migration Analytics ,Crisis Analytics & Insights,,3
+Monitoring & Alerts,Monitoring & Alerts,Crisis Analytics & Insights,,3
+Needs Assessment Analytics,Needs Assessment,Crisis Analytics & Insights,,3
+Nutrition Analytics,Nutrition Analytics,Crisis Analytics & Insights,,3
+PiN Calculation,PiN Calculation,Crisis Analytics & Insights,,3
+Population Analytics ,Population Analytics,Crisis Analytics & Insights,,3
+Poverty Analytics,Poverty Analytics,Crisis Analytics & Insights,,3
+Secondary Data Review / Analysis,Secondary Data Review / Analysis,Crisis Analytics & Insights,,3
+Sentiment Analysis,Sentiment Analysis,Crisis Analytics & Insights,,3
+"Water, Sanitation & Hygiene (WASH) Analytics","Water, Sanitation & Hygiene (WASH) Analytics",Crisis Analytics & Insights,,3
+"3W (Who does What, Where) Data","3W (Who does What, Where) Data",Data Sets & Commons,,1
+Baseline Population Data,Baseline Population Data,Data Sets & Commons,,1
+Climate Data,Climate Data,Data Sets & Commons,,1
+Conflict & Violence Data,Conflict & Violence Data,Data Sets & Commons,,1
+Disaggregated Country-level Data,Disaggregated Country-level Data,Data Sets & Commons,,1
+Disarmament Data,Disarmament Data,Data Sets & Commons,,1
+Displacement & Migration Data,Displacement & Migration Data,Data Sets & Commons,,1
+Education Data,Education Data,Data Sets & Commons,,1
+Environmental Data,Environmental Data,Data Sets & Commons,,1
+Food Security Data,Food Security Data,Data Sets & Commons,,1
+Gender Data,Gender Data,Data Sets & Commons,,1
+Geospatial Data,Geospatial Data,Data Sets & Commons,,1
+Health Data,Health Data,Data Sets & Commons,,1
+Health Facilities Data,Health Facilities Data,Data Sets & Commons,,1
+Household Survey Data,Household Survey Data,Data Sets & Commons,,1
+Humanitarian Access Data,Humanitarian Access Data,Data Sets & Commons,This data pertains to XYZ,1
+Needs Assessment Data,Needs Assessment Data,Data Sets & Commons,,1
+Nutrition Data,Nutrition Data,Data Sets & Commons,,1
+Peace Data,Peace Data,Data Sets & Commons,,1
+Poverty Data,Poverty Data,Data Sets & Commons,,1
+Sentiment Data,Sentiment Data,Data Sets & Commons,,1
+Sexual & Reproductive Health Data,Sexual & Reproductive Health Data,Data Sets & Commons,,1
+"Water, Sanitation & Hygiene (WASH) Data","Water, Sanitation & Hygiene (WASH) Data",Data Sets & Commons,,1
+Capacity Building,Capacity Building,Human Capital & Know-how,,4
+Data Analytics,Data Analytics,Human Capital & Know-how,,4
+Information Management Services  ,Information Management Services,Human Capital & Know-how,,4
+Regional Hubs,Regional Hubs,Human Capital & Know-how,,4
+Surge Capacity,Surge Capacity,Human Capital & Know-how,,4
+Upskilling & Training,Upskilling & Training,Human Capital & Know-how,,4
+AI & ML Infrastructure,AI & ML Infrastructure,Infrastructure & Platforms,,2
+API Development & Management,API Development & Management,Infrastructure & Platforms,,2
+Automated Data Auditing,Automated Data Auditing,Infrastructure & Platforms,,2
+Data Collection,Data Collection,Infrastructure & Platforms,,2
+Data Documentation & Metadata,Data Documentation & Metadata,Infrastructure & Platforms,,2
+Data Governance & Management,Data Governance & Management,Infrastructure & Platforms,,2
+Data Processing & Transformation,Data Processing & Transformation,Infrastructure & Platforms,,2
+Data Quality & Validation,Data Quality & Validation,Infrastructure & Platforms,,2
+"Data Storage, Access & Sharing","Data Storage, Access & Sharing",Infrastructure & Platforms,,2
+Geographic Information Systems (GIS),Geographic Information Systems (GIS),Infrastructure & Platforms,,2
+Open Source LLMs,Open Source LLMs,Infrastructure & Platforms,,2
+Private Data Sharing,Private Data Sharing,Infrastructure & Platforms,,2
+Sensitive Data Detection,Sensitive Data Detection,Infrastructure & Platforms,,2
+Best Practices,Best Practices,Learning & Exchange,,6
+Case Studies ,Case Studies ,Learning & Exchange,,6
+Communities of Practice,Communities of Practice,Learning & Exchange,,6
+Conferences,Conferences,Learning & Exchange,,6
+Forums,Forums,Learning & Exchange,,6
+Guides,Guides,Learning & Exchange,,6
+Peer Learning,Peer Learning,Learning & Exchange,,6
+Talk Series,Talk Series,Learning & Exchange,,6
+Workshops,Workshops,Learning & Exchange,,6
+APIs Standard,APIs Standard,Standards & Coordination,,5
+Common Indicators,Common Indicators,Standards & Coordination,,5
+Consistent Data Formats,Consistent Data Formats,Standards & Coordination,,5
+Data Documentation,Data Documentation,Standards & Coordination,,5
+Data Protection & Privacy Frameworks,Data Protection & Privacy Frameworks,Standards & Coordination,,5
+Ethics,Ethics,Standards & Coordination,,5
+Interoperable Formats,Interoperable Formats,Standards & Coordination,,5
+Metadata,Metadata,Standards & Coordination,,5
+"Methodological Standards (e.g., Data Collection)","Methodological Standards (e.g., Data Collection)",Standards & Coordination,,5
+Open Access,Open Access,Standards & Coordination,,5
+Open Source,Open Source,Standards & Coordination,,5
+Peer Review,Peer Review,Standards & Coordination,,5
+Standard Geocodes,Standard Geocodes,Standards & Coordination,,5
+Version Tracking,Version Tracking,Standards & Coordination,,5

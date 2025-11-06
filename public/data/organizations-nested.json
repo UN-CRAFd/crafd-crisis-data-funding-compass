@@ -631,8 +631,7 @@
       "Org HQ Country": "United Kingdom",
       "Has received CRAF'd Funding?": "NO",
       "org_key": "university-of-southampton",
-      "Org Type": "Academia",
-      "HDX Org Key": "worldpop"
+      "Org Type": "Academia"
     },
     "agencies": [],
     "projects": [
@@ -11313,7 +11312,7 @@
       "Has received CRAF'd Funding?": "NO",
       "org_key": "eth-zurich",
       "Org Type": "Academia",
-      "HDX Org Key": "eth-zurich-photogrammetry-and-remote-sensing   eth-zurich-weather-and-climate-risks"
+      "HDX Org Key": "eth-zurich-weather-and-climate-risks"
     },
     "agencies": [
       {
