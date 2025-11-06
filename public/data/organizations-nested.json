@@ -3168,6 +3168,7 @@
         "id": "recO7hHncZQGqy2vJ",
         "fields": {
           "Project/Product Name": "FNWG Alerts and Early Warning",
+          "product_key": "fnwg-alerts",
           "Provider Orgs Full Name": [
             "recAqAEBX8YBwPWlb"
           ],
@@ -3189,6 +3190,7 @@
         "id": "recjZopPYlk0yU6sq",
         "fields": {
           "Project/Product Name": "FSNWG Special Reports",
+          "product_key": "fsnwg-special",
           "Provider Orgs Full Name": [
             "recAqAEBX8YBwPWlb"
           ],
@@ -5240,6 +5242,7 @@
         "id": "recSIp9VIy4uKdPH3",
         "fields": {
           "Project/Product Name": "Territory Seismic Risk Profiles",
+          "product_key": "territory-seismic",
           "Provider Orgs Full Name": [
             "recIIg9jENlDRt2Oe"
           ],
@@ -5290,6 +5293,7 @@
         "id": "recZxXY0AjXgSMXr7",
         "fields": {
           "Project/Product Name": "Global Vulnerability Model",
+          "product_key": "global-vulnerability",
           "Provider Orgs Full Name": [
             "recIIg9jENlDRt2Oe"
           ],
@@ -5306,7 +5310,8 @@
       {
         "id": "recdr2wcQiX1Ch1ZF",
         "fields": {
-          "Project/Product Name": "Global Seismic  Risk Map",
+          "Project/Product Name": "Global Seismic Risk Map",
+          "product_key": "global-seismic-map",
           "Provider Orgs Full Name": [
             "recIIg9jENlDRt2Oe"
           ],
@@ -5384,6 +5389,7 @@
         "id": "recLjLXetvlqcDMXB",
         "fields": {
           "Project/Product Name": "Information Management ",
+          "product_key": "infomgmt",
           "Provider Orgs Full Name": [
             "recIeY5Kyx0oDYcLA"
           ],
@@ -5403,6 +5409,7 @@
         "id": "recN8yVJX7xphyQME",
         "fields": {
           "Project/Product Name": "3W & Connections",
+          "product_key": "3w-connections",
           "Provider Orgs Full Name": [
             "recIeY5Kyx0oDYcLA"
           ],
@@ -5444,12 +5451,16 @@
         "id": "recrq5pa36yxwSE2c",
         "fields": {
           "Project/Product Name": "Data Analytics",
+          "product_key": "data-analytics",
           "Provider Orgs Full Name": [
             "recIeY5Kyx0oDYcLA"
           ],
           "CRAF’d-Funded Project?": "NO",
           "Investment Type(s)": [
             "Human Capital & Know-how"
+          ],
+          "Investment Theme(s)": [
+            "Data Analytics"
           ],
           "Project Website": "https://www.fieldsdata.org/data-analytics",
           "Project Description": "Embracing a grassroots ethos, we forge vital connections on the frontline. Before diving into data collection, we scour the digital realm, unearthing existing efforts to eliminate redundancy. Then, we fuse these online insights with raw field data, thanks to our trusted local partners.\n"
