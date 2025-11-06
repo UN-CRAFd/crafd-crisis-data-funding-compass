@@ -15,7 +15,8 @@
         "Geographic Information Systems (GIS)"
       ],
       "Project Website": "https://www.hotosm.org/updates/field-mapping-tasking-manager-fmtm/",
-      "Project Description": "Managed by the Humanitarian OpenStreetMap Team, FMTM coordinates mapping campaigns in crisis zones through volunteer contributions. It organizes tasks, quality controls labeling, and integrates open geospatial datasets into humanitarian operational platforms.\n"
+      "Project Description": "Managed by the Humanitarian OpenStreetMap Team, FMTM coordinates mapping campaigns in crisis zones through volunteer contributions. It organizes tasks, quality controls labeling, and integrates open geospatial datasets into humanitarian operational platforms.\n",
+      "HDX_SOHD": "None"
     }
   },
   {
@@ -37,7 +38,8 @@
       "Project Description": "WHO offers globally standardized health data through its GHO portal, providing indicators on disease, mortality, and service coverage via APIs and downloadable data under open access licenses.\n",
       "Project Donor Agencies": [
         "recqhcKxTv71yMfeI"
-      ]
+      ],
+      "HDX_SOHD": "None"
     }
   },
   {
@@ -57,7 +59,8 @@
         "Conflict & Violence Data"
       ],
       "Project Website": "https://www.worldbank.org/en/topic/fragilityconflictviolence",
-      "Project Description": "This platform curates and disseminates datasets, reports, and indicators related to fragility, conflict, and violence. It supports development and humanitarian actors by improving access to evidence on conflict dynamics and institutional resilience.\n"
+      "Project Description": "This platform curates and disseminates datasets, reports, and indicators related to fragility, conflict, and violence. It supports development and humanitarian actors by improving access to evidence on conflict dynamics and institutional resilience.\n",
+      "HDX_SOHD": "None"
     }
   },
   {
@@ -85,7 +88,8 @@
         "recRutqdhqEZSnOB2",
         "recHSsEaPuaG3h2PQ",
         "recOE3EszdHKOJ9hC"
-      ]
+      ],
+      "HDX_SOHD": "None"
     }
   },
   {
@@ -105,7 +109,8 @@
         "Geographic Information Systems (GIS)"
       ],
       "Project Website": "https://qgis.org/",
-      "Project Description": "QGIS is a free, open-source geographic information system (GIS) application used worldwide for mapping, spatial analysis, and geostatistical modeling. It supports both raster and vector data and is widely adopted by humanitarian, environmental, and development actors.\n"
+      "Project Description": "QGIS is a free, open-source geographic information system (GIS) application used worldwide for mapping, spatial analysis, and geostatistical modeling. It supports both raster and vector data and is widely adopted by humanitarian, environmental, and development actors.\n",
+      "HDX_SOHD": "None"
     }
   },
   {
@@ -126,7 +131,8 @@
         "Humanitarian Access Data"
       ],
       "Project Website": "https://ngosafety.org/humanitarian-data-dashboard/",
-      "Project Description": "The Conflict Data Dashboard displays _“all recorded security incidents”_ which means it shows all the ‘Security incidents’ (see above) recorded by INSO and not only those that affected NGOs.\n\n"
+      "Project Description": "The Conflict Data Dashboard displays _“all recorded security incidents”_ which means it shows all the ‘Security incidents’ (see above) recorded by INSO and not only those that affected NGOs.\n\n",
+      "HDX_SOHD": "None"
     }
   },
   {
@@ -145,7 +151,8 @@
         "Food Security Data",
         "Geospatial Data"
       ],
-      "Project Description": "It’s an enhanced interactive interface that shows a map of all the countries the IPC works in and allows you to download population data. \n"
+      "Project Description": "It’s an enhanced interactive interface that shows a map of all the countries the IPC works in and allows you to download population data. \n",
+      "HDX_SOHD": "None"
     }
   },
   {
@@ -164,7 +171,8 @@
         "Baseline Population Data"
       ],
       "Project Website": "https://data.humdata.org/organization/unfpa?page=3#datasets-section",
-      "Project Description": "UNFPA, the United Nations Population Fund, works globally to ensure universal access to sexual and reproductive health, prevent and respond to gender-based violence, collect and use population data, and promote gender equality and the empowerment of women and youth across the humanitarian/development continuum.\n"
+      "Project Description": "UNFPA, the United Nations Population Fund, works globally to ensure universal access to sexual and reproductive health, prevent and respond to gender-based violence, collect and use population data, and promote gender equality and the empowerment of women and youth across the humanitarian/development continuum.\n",
+      "HDX_SOHD": "None"
     }
   },
   {
@@ -184,7 +192,8 @@
         "Health Data"
       ],
       "Project Website": "https://www.who.int/data/gho",
-      "Project Description": "WHO’s GHO is its flagship global portal for health statistics and indicators. It offers datasets across themes like mortality, disease burden, and service coverage with API access for researchers and policymakers.\n"
+      "Project Description": "WHO’s GHO is its flagship global portal for health statistics and indicators. It offers datasets across themes like mortality, disease burden, and service coverage with API access for researchers and policymakers.\n",
+      "HDX_SOHD": "None"
     }
   },
   {
@@ -203,7 +212,8 @@
         "Geospatial Data"
       ],
       "Project Website": "https://hub.worldpop.org/project/categories?id=17",
-      "Project Description": "Provides standardized global administrative boundary datasets, essential for geospatial analysis and mapping. Open-access and regularly updated, these boundaries support humanitarian planning, statistical frameworks, and international data interoperability.\n"
+      "Project Description": "Provides standardized global administrative boundary datasets, essential for geospatial analysis and mapping. Open-access and regularly updated, these boundaries support humanitarian planning, statistical frameworks, and international data interoperability.\n",
+      "HDX_SOHD": "None"
     }
   },
   {
@@ -225,7 +235,8 @@
       "Project Description": "An online learning platform offering training, MOOCs, and webinars on statistical capacity building and data system strengthening to support evidence-based policymaking.\n",
       "Project Donor Agencies": [
         "recIUg3K9vtroebVE"
-      ]
+      ],
+      "HDX_SOHD": "None"
     }
   },
   {
@@ -255,7 +266,8 @@
         "recatUveyYdfEOdbu",
         "rec0sY1I5JZz6ZsUE",
         "rec1VhOJv9U6QKBBs"
-      ]
+      ],
+      "HDX_SOHD": "None"
     }
   },
   {
@@ -276,7 +288,8 @@
         "Environmental Data"
       ],
       "Project Website": "https://data.humdata.org/dataset/?dataseries_name=WFP+-+Rainfall+Indicators+at+Subnational+Level",
-      "Project Description": "This dataset contains dekadal rainfall indicators computed from Climate Hazards Group InfraRed Precipitation satellite imagery with insitu Station data (CHIRPS) version 2, aggregated by subnational administrative units\n"
+      "Project Description": "This dataset contains dekadal rainfall indicators computed from Climate Hazards Group InfraRed Precipitation satellite imagery with insitu Station data (CHIRPS) version 2, aggregated by subnational administrative units\n",
+      "HDX_SOHD": "None"
     }
   },
   {
@@ -295,7 +308,8 @@
         "Needs Assessment Data"
       ],
       "Project Website": "https://www.unocha.org/publications/report/lebanon/multi-sector-needs-assessment-msna-key-findings-wash-december-2023",
-      "Project Description": "UNHCR’s MSNA platform collects standardized multi-sector needs data in refugee settings—covering shelter, protection, livelihood, and health metrics to guide program planning and coordination.\n"
+      "Project Description": "UNHCR’s MSNA platform collects standardized multi-sector needs data in refugee settings—covering shelter, protection, livelihood, and health metrics to guide program planning and coordination.\n",
+      "HDX_SOHD": "None"
     }
   },
   {
@@ -316,7 +330,8 @@
         "Humanitarian Access Analytics"
       ],
       "Project Website": "https://drmkc.jrc.ec.europa.eu/inform-index/INFORM-Severity",
-      "Project Description": "The INFORM Severity Index is an improved way to analyse the severity of humanitarian crises globally. It seeks to contribute to improved management of humanitarian crises by providing decision-makers with a comparable and reliable summary of information about the severity of humanitarian crises that is updated monthly and applicable globally. INFORM partners have been developing the INFORM Severity Index since 2016. It will complement the widely used INFORM Risk Index.\n\n\n\n"
+      "Project Description": "The INFORM Severity Index is an improved way to analyse the severity of humanitarian crises globally. It seeks to contribute to improved management of humanitarian crises by providing decision-makers with a comparable and reliable summary of information about the severity of humanitarian crises that is updated monthly and applicable globally. INFORM partners have been developing the INFORM Severity Index since 2016. It will complement the widely used INFORM Risk Index.\n\n\n\n",
+      "HDX_SOHD": "None"
     }
   },
   {
@@ -349,7 +364,8 @@
         "recpnGIsQx8Bb4aji",
         "recnBCITljZPzm4Ga",
         "recbbW0P8fxVtJBJP"
-      ]
+      ],
+      "HDX_SOHD": "None"
     }
   },
   {
@@ -369,7 +385,8 @@
         "Anticipatory and Early Action Forecasts"
       ],
       "Project Website": "https://worldweather.wmo.int/en/home.html",
-      "Project Description": "WWIS is a centralized WMO platform delivering authoritative city-level weather forecasts and climate summaries sourced from national meteorological and hydrological services. It supports risk awareness and decision-making through free, real-time access to standardized global weather data.\n"
+      "Project Description": "WWIS is a centralized WMO platform delivering authoritative city-level weather forecasts and climate summaries sourced from national meteorological and hydrological services. It supports risk awareness and decision-making through free, real-time access to standardized global weather data.\n",
+      "HDX_SOHD": "None"
     }
   },
   {
@@ -389,7 +406,8 @@
         "Household Survey Data"
       ],
       "Project Website": "https://microdata.unhcr.org/index.php/catalog/1107",
-      "Project Description": "Routine monitoring of the WASH services provided is paramount for quality assurance, ensuring the set standards are met within stipulated timelines, challenges are identified in time and solutions are sought. UNHCR (Cox’s Bazar Field Office) conducted the third round of its WASH Knowledge, Attitude and Practice (KAP) survey from 15th to 23rd November 2023 in UNHCR’s area of operation in Kutupalong and Teknaf. Five WASH partners implemented the survey.\t\n"
+      "Project Description": "Routine monitoring of the WASH services provided is paramount for quality assurance, ensuring the set standards are met within stipulated timelines, challenges are identified in time and solutions are sought. UNHCR (Cox’s Bazar Field Office) conducted the third round of its WASH Knowledge, Attitude and Practice (KAP) survey from 15th to 23rd November 2023 in UNHCR’s area of operation in Kutupalong and Teknaf. Five WASH partners implemented the survey.\t\n",
+      "HDX_SOHD": "None"
     }
   },
   {
@@ -411,7 +429,8 @@
         "Anticipatory and Early Action Forecasts"
       ],
       "Project Website": "https://preparecenter.org/",
-      "Project Description": "The IFRC Global Disaster Preparedness Center, together with the Red Cross Red Crescent Climate Centre and American Red Cross, develops data-driven tools and best practice templates. The center enables early warning preparedness and resilience building through open guides, scenario modeling tools, and dashboards.\n"
+      "Project Description": "The IFRC Global Disaster Preparedness Center, together with the Red Cross Red Crescent Climate Centre and American Red Cross, develops data-driven tools and best practice templates. The center enables early warning preparedness and resilience building through open guides, scenario modeling tools, and dashboards.\n",
+      "HDX_SOHD": "None"
     }
   },
   {
@@ -430,7 +449,8 @@
         "Conflict & Violence Data"
       ],
       "Project Website": "https://disarmament.unoda.org/convarms/register/",
-      "Project Description": "The UN General Assembly established the UN Register of Conventional Arms (UNROCA) in 1991 through resolution 46/36 L to promote transparency in armaments. Through the UNROCA instrument, Member States are requested, on an annual basis, to report their international transfers of seven categories major conventional arms, as well as small arms and light weapons. They may also provide additional background information, such as data on military holdings and procurement through national production. To date, 175 Member States have reported to the UNROCA instrument at least once. In light of relatively consistent reporting by the world’s largest arms exporters, it is estimated that the Register captures around 90 percent of the volume of the global arms trade.\n"
+      "Project Description": "The UN General Assembly established the UN Register of Conventional Arms (UNROCA) in 1991 through resolution 46/36 L to promote transparency in armaments. Through the UNROCA instrument, Member States are requested, on an annual basis, to report their international transfers of seven categories major conventional arms, as well as small arms and light weapons. They may also provide additional background information, such as data on military holdings and procurement through national production. To date, 175 Member States have reported to the UNROCA instrument at least once. In light of relatively consistent reporting by the world’s largest arms exporters, it is estimated that the Register captures around 90 percent of the volume of the global arms trade.\n",
+      "HDX_SOHD": "None"
     }
   },
   {
@@ -449,7 +469,8 @@
         "AI & ML Infrastructure"
       ],
       "Project Website": "https://www.datafriendlyspace.org/our-work/gannet",
-      "Project Description": "GANNET is a real-time, end-to-end Generative AI platforms that combine near real-time assistance, analytics, and monitoring features for humanitarian data collaboration and effective decision-making.\n"
+      "Project Description": "GANNET is a real-time, end-to-end Generative AI platforms that combine near real-time assistance, analytics, and monitoring features for humanitarian data collaboration and effective decision-making.\n",
+      "HDX_SOHD": "None"
     }
   },
   {
@@ -482,7 +503,8 @@
         "recAXDKxEbXsaHav4",
         "recl0rZvHPzrC6Jwd",
         "recq6gN9R1C4tGmIx"
-      ]
+      ],
+      "HDX_SOHD": "None"
     }
   },
   {
@@ -502,7 +524,8 @@
         "Food Security Data"
       ],
       "Project Website": "https://hungermap.wfp.org/",
-      "Project Description": "HungerMapLIVE is the World Food Programme (WFP)’s global hunger monitoring system. It combines key metrics from various data sources – such as food security information, weather, population size, conflict, hazards, nutrition information and macro-economic data – to help assess, monitor and predict the magnitude and severity of hunger in near real-time. The resulting analysis is displayed on an interactive map that helps WFP staff, key decision makers and the broader humanitarian community to make more informed and timely decisions relating to food security.\n\n"
+      "Project Description": "HungerMapLIVE is the World Food Programme (WFP)’s global hunger monitoring system. It combines key metrics from various data sources – such as food security information, weather, population size, conflict, hazards, nutrition information and macro-economic data – to help assess, monitor and predict the magnitude and severity of hunger in near real-time. The resulting analysis is displayed on an interactive map that helps WFP staff, key decision makers and the broader humanitarian community to make more informed and timely decisions relating to food security.\n\n",
+      "HDX_SOHD": "None"
     }
   },
   {
@@ -521,7 +544,8 @@
         "Humanitarian Access Data"
       ],
       "Project Website": "https://humanitarianoutcomes.org/projects/gdho",
-      "Project Description": "GDHO is a global compendium of organisations that provide aid in humanitarian crises. The database includes basic organisational and operational information on these humanitarian providers, which include international non-governmental organisations (grouped by federation), national NGOs that deliver aid within their own borders, UN humanitarian agencies, and the International Red Cross and Red Crescent Movement. \n\n"
+      "Project Description": "GDHO is a global compendium of organisations that provide aid in humanitarian crises. The database includes basic organisational and operational information on these humanitarian providers, which include international non-governmental organisations (grouped by federation), national NGOs that deliver aid within their own borders, UN humanitarian agencies, and the International Red Cross and Red Crescent Movement. \n\n",
+      "HDX_SOHD": "None"
     }
   },
   {
@@ -541,7 +565,8 @@
         "Needs Assessment Data"
       ],
       "Project Website": "https://preparecenter.org/site/evca/",
-      "Project Description": "**Trigger models are employed to establish danger levels that activate humanitarian anticipatory Early Action Protocols (EAPs). **These models are developed using the Impact-Based Forecasting ([IBF](https://510.global/glossary/ibf/)) methodology. So far, we have built models that trigger EAPs for typhoon, flood, dzud, drought and dengue hazards. \n\n"
+      "Project Description": "**Trigger models are employed to establish danger levels that activate humanitarian anticipatory Early Action Protocols (EAPs). **These models are developed using the Impact-Based Forecasting ([IBF](https://510.global/glossary/ibf/)) methodology. So far, we have built models that trigger EAPs for typhoon, flood, dzud, drought and dengue hazards. \n\n",
+      "HDX_SOHD": "None"
     }
   },
   {
@@ -560,7 +585,8 @@
         "Baseline Population Data"
       ],
       "Project Website": "https://www.ipcinfo.org/ipc-country-analysis/population-tracking-tool/en/",
-      "Project Description": "The IPC Population Tracking Tool is an online platform that gives the public access to population data from more than 30 different countries. It allows users to download resource data for offline IPC analyses since 2017. All national population figures are based on official country population estimates. IPC estimates are those published in country IPC reports. \n"
+      "Project Description": "The IPC Population Tracking Tool is an online platform that gives the public access to population data from more than 30 different countries. It allows users to download resource data for offline IPC analyses since 2017. All national population figures are based on official country population estimates. IPC estimates are those published in country IPC reports. \n",
+      "HDX_SOHD": "None"
     }
   },
   {
@@ -587,7 +613,8 @@
         "recGNTHL9SKZxLDcw",
         "recm5JztIHB9RUFLL",
         "rec2KBp1IAA5TtnQl"
-      ]
+      ],
+      "HDX_SOHD": "None"
     }
   },
   {
@@ -608,7 +635,8 @@
         "Displacement & Migration Analytics"
       ],
       "Project Website": "https://www.internal-displacement.org/good-practices/",
-      "Project Description": "As part of IDMC's investment in more systematic monitoring of national and global efforts to reduce the risk, scale and negative impacts of internal displacement, the Global Repository of Good Practices provides a platform to compile, share and evaluate policies and programmatic approaches to support better solutions for internally displaced people worldwide.\n"
+      "Project Description": "As part of IDMC's investment in more systematic monitoring of national and global efforts to reduce the risk, scale and negative impacts of internal displacement, the Global Repository of Good Practices provides a platform to compile, share and evaluate policies and programmatic approaches to support better solutions for internally displaced people worldwide.\n",
+      "HDX_SOHD": "None"
     }
   },
   {
@@ -630,7 +658,8 @@
         "Monitoring & Alerts"
       ],
       "Project Website": "https://www.earthdata.nasa.gov/topics/terrestrial-hydrosphere/rivers-streams",
-      "Project Description": "NASA provides open global datasets on hydrology (water flow, stream gauges) used to model climate risk, manage watershed health, and support climate adaptation planning.\n"
+      "Project Description": "NASA provides open global datasets on hydrology (water flow, stream gauges) used to model climate risk, manage watershed health, and support climate adaptation planning.\n",
+      "HDX_SOHD": "None"
     }
   },
   {
@@ -651,7 +680,8 @@
         "Data Collection"
       ],
       "Project Website": "https://knowledge.base.unocha.org/wiki/spaces/imtoolbox/pages/4099440644/Common+Operational+Datasets+CODs+and+Dashboard",
-      "Project Description": "Common Operational Datasets (CODs) are authoritative reference datasets used by humanitarian organizations to support response efforts and decision-making. They provide a consistent and standardized data framework for all actors in a crisis.\t\n"
+      "Project Description": "Common Operational Datasets (CODs) are authoritative reference datasets used by humanitarian organizations to support response efforts and decision-making. They provide a consistent and standardized data framework for all actors in a crisis.\t\n",
+      "HDX_SOHD": "None"
     }
   },
   {
@@ -673,7 +703,8 @@
         "Anticipatory and Early Action Forecasts"
       ],
       "Project Website": "https://www.disasteraware.com/",
-      "Project Description": "DisasterAWARE is a global platform offering real-time hazard alerts, dashboards, and geospatial tools for disaster preparedness and early warning. It integrates predictive models and hazard tracking from global datasets.\n"
+      "Project Description": "DisasterAWARE is a global platform offering real-time hazard alerts, dashboards, and geospatial tools for disaster preparedness and early warning. It integrates predictive models and hazard tracking from global datasets.\n",
+      "HDX_SOHD": "None"
     }
   },
   {
@@ -693,7 +724,8 @@
         "Geospatial Data"
       ],
       "Project Website": "https://data.humdata.org/dataset/?dataseries_name=COD+-+Subnational+Administrative+Boundaries&dataseries_name=OCHA+-+Subnational+Edge-matched+Administrative+Boundaries&q=&sort=last_modified+desc&ext_page_size=25",
-      "Project Description": "OCHA’s Common Operational Data Administrative Boundaries (COD‑AB) is a curated, harmonized global dataset aligned with OCHA’s COD standard, designed to support mapping, analysis, and coordination in humanitarian operations.\n"
+      "Project Description": "OCHA’s Common Operational Data Administrative Boundaries (COD‑AB) is a curated, harmonized global dataset aligned with OCHA’s COD standard, designed to support mapping, analysis, and coordination in humanitarian operations.\n",
+      "HDX_SOHD": "19"
     }
   },
   {
@@ -713,7 +745,8 @@
         "Gender Data"
       ],
       "Project Website": "https://mptf.undp.org/project/00141135",
-      "Project Description": "The Rapid Assessment Data project accelerates reporting of conflict-related violence in fragile settings by automating data gathering from open and established sources and integrating Machine Learning (ML) driven analysis. Impacts will be enhanced risk assessment, targeted interventions, and empowered at-risk populations able to advocate protective measures. \n\n\n"
+      "Project Description": "The Rapid Assessment Data project accelerates reporting of conflict-related violence in fragile settings by automating data gathering from open and established sources and integrating Machine Learning (ML) driven analysis. Impacts will be enhanced risk assessment, targeted interventions, and empowered at-risk populations able to advocate protective measures. \n\n\n",
+      "HDX_SOHD": "None"
     }
   },
   {
@@ -733,7 +766,8 @@
         "Household Survey Data"
       ],
       "Project Website": "https://mics.unicef.org/",
-      "Project Description": "Since the mid-1990s, more than 120 countries have carried out one or more Multiple Indicator Cluster Survey, generating data on key indicators on the well-being of children, and helping shape policies for the improvement of their lives. \n\n"
+      "Project Description": "Since the mid-1990s, more than 120 countries have carried out one or more Multiple Indicator Cluster Survey, generating data on key indicators on the well-being of children, and helping shape policies for the improvement of their lives. \n\n",
+      "HDX_SOHD": "None"
     }
   },
   {
@@ -759,7 +793,8 @@
       "Project Donor Agencies": [
         "recRutqdhqEZSnOB2",
         "recA0WfERzcVzV1Hh"
-      ]
+      ],
+      "HDX_SOHD": "None"
     }
   },
   {
@@ -780,7 +815,8 @@
         "3W (Who does What, Where) Data"
       ],
       "Project Website": "https://data.humdata.org/m/dataset/ocha-global-humanitarian-operational-presence-who-what-where-3w-portal",
-      "Project Description": "The 3W data is sourced from OCHA country and regional offices around the world and compiled by the Field Information Services (FIS) Section of OCHA. The data are as provided and organization names and acronyms are not standardized. 3W data collection frequency varies across offices and the compiled database includes what is available up to the date of publishing, ... More\n"
+      "Project Description": "The 3W data is sourced from OCHA country and regional offices around the world and compiled by the Field Information Services (FIS) Section of OCHA. The data are as provided and organization names and acronyms are not standardized. 3W data collection frequency varies across offices and the compiled database includes what is available up to the date of publishing, ... More\n",
+      "HDX_SOHD": "None"
     }
   },
   {
@@ -808,7 +844,8 @@
         "recK8nDxvYcbGdEgw",
         "recks6hHpAgBV14d9",
         "recYxlC8x9puB69tx"
-      ]
+      ],
+      "HDX_SOHD": "None"
     }
   },
   {
@@ -827,7 +864,8 @@
         "Conflict & Violence Data"
       ],
       "Project Website": "https://www.unesco.org/en/safety-journalists/observatory",
-      "Project Description": "This Observatory provides updated information on the killing of journalists since 1993 and on the [judicial status of condemned cases](https://www.unesco.org/en/safety-journalists/observatory/methodology?hub=72609) since 2006. It also provides [public access to country responses](https://unesdoc.unesco.org/permalink/P-3516a4e6-b69d-473a-8e85-b019735aa873) to UNESCO's requests for information into the judicial status of ongoing and unresolved cases. You may browse the [full list of killed journalists](https://www.unesco.org/safety-journalists/observatory/grid?hub=72609) and search for [visual statistics and data](https://www.unesco.org/safety-journalists/observatory/statistics?hub=72609).\n\n"
+      "Project Description": "This Observatory provides updated information on the killing of journalists since 1993 and on the [judicial status of condemned cases](https://www.unesco.org/en/safety-journalists/observatory/methodology?hub=72609) since 2006. It also provides [public access to country responses](https://unesdoc.unesco.org/permalink/P-3516a4e6-b69d-473a-8e85-b019735aa873) to UNESCO's requests for information into the judicial status of ongoing and unresolved cases. You may browse the [full list of killed journalists](https://www.unesco.org/safety-journalists/observatory/grid?hub=72609) and search for [visual statistics and data](https://www.unesco.org/safety-journalists/observatory/statistics?hub=72609).\n\n",
+      "HDX_SOHD": "None"
     }
   },
   {
@@ -850,7 +888,8 @@
         "Capacity Building"
       ],
       "Project Website": "https://www.institutodegeografia.org/geoportal-2/",
-      "Project Description": "**The Institute of Geography of the USFQ** has been created to generate scientific knowledge of the environmental, socioeconomic and biophysical processes that occur in the Ecuadorian territory. Thus, it creates relevant evidence for public policies, individual and social action for the conservation of ecosystems and well-being of populations.\n \n\n"
+      "Project Description": "**The Institute of Geography of the USFQ** has been created to generate scientific knowledge of the environmental, socioeconomic and biophysical processes that occur in the Ecuadorian territory. Thus, it creates relevant evidence for public policies, individual and social action for the conservation of ecosystems and well-being of populations.\n \n\n",
+      "HDX_SOHD": "None"
     }
   },
   {
@@ -870,7 +909,8 @@
         "Baseline Population Data"
       ],
       "Project Website": "https://pdp.unfpa.org/",
-      "Project Description": "The **Population Data Portal** is UNFPA’s ultimate data source and tracker for population and development data. It combines the newest population data on topics like sexual and reproductive health and reproductive rights, family planning, maternal health, or gender based violence gathered from multiple sources.\n"
+      "Project Description": "The **Population Data Portal** is UNFPA’s ultimate data source and tracker for population and development data. It combines the newest population data on topics like sexual and reproductive health and reproductive rights, family planning, maternal health, or gender based violence gathered from multiple sources.\n",
+      "HDX_SOHD": "21"
     }
   },
   {
@@ -892,7 +932,8 @@
       "Project Description": "The International Organization for Migration’s Global Data Institute introduces PRIMARI, an ambitious initiative to enhance the grasp on global mobility by consolidating sub-national displacement data with migration insights. This project aims to forge a composite dataset spanning up to 60 countries, drawing on the rich data resources of the Displacement Tracking Matrix (DTM). PRIMARI stands out for its commitment to merging diverse data streams into a singular, accessible, and actionable dataset, supported by a comprehensive metadata repository to ensure data transparency and integrity.\n",
       "Project Donor Agencies": [
         "rec1VhOJv9U6QKBBs"
-      ]
+      ],
+      "HDX_SOHD": "None"
     }
   },
   {
@@ -914,7 +955,8 @@
         "Health Analytics"
       ],
       "Project Website": "https://hhi.harvard.edu/humanitarian-geoanalytics",
-      "Project Description": "Humanitarian Geoanalytics integrates spatial data analysis, mapping, and field-based research to support humanitarian operations. It focuses on conflict dynamics, displacement, and vulnerability assessments using geospatial methods.\n"
+      "Project Description": "Humanitarian Geoanalytics integrates spatial data analysis, mapping, and field-based research to support humanitarian operations. It focuses on conflict dynamics, displacement, and vulnerability assessments using geospatial methods.\n",
+      "HDX_SOHD": "None"
     }
   },
   {
@@ -939,7 +981,8 @@
       "Project Donor Agencies": [
         "receDOQpfeb4YHc5p",
         "recDY0ngiDePaQtm3"
-      ]
+      ],
+      "HDX_SOHD": "None"
     }
   },
   {
@@ -963,7 +1006,8 @@
         "Climate Analytics"
       ],
       "Project Website": "https://www.gdacs.org/",
-      "Project Description": "GDACS is a cooperation framework between the United Nations, the European Commission and disaster managers worldwide to improve alerts, information exchange and coordination in the first phase after major sudden-onset disasters.\n"
+      "Project Description": "GDACS is a cooperation framework between the United Nations, the European Commission and disaster managers worldwide to improve alerts, information exchange and coordination in the first phase after major sudden-onset disasters.\n",
+      "HDX_SOHD": "None"
     }
   },
   {
@@ -985,7 +1029,8 @@
         "Anticipatory and Early Action Forecasts"
       ],
       "Project Website": "https://innovation.wfp.org/project/prism",
-      "Project Description": "PRISM is a climate risk monitoring system that integrates geospatial data on hazards such as droughts, floods, tropical storms, and earthquakes, along with socioeconomic vulnerability information. It provides decision-makers with interactive maps and charts to support disaster risk reduction and social assistance programs\n"
+      "Project Description": "PRISM is a climate risk monitoring system that integrates geospatial data on hazards such as droughts, floods, tropical storms, and earthquakes, along with socioeconomic vulnerability information. It provides decision-makers with interactive maps and charts to support disaster risk reduction and social assistance programs\n",
+      "HDX_SOHD": "None"
     }
   },
   {
@@ -1005,7 +1050,8 @@
         "Geospatial Data"
       ],
       "Project Website": "https://www.hotosm.org/tools-and-data.html",
-      "Project Description": "HOT is an international team dedicated to humanitarian action and community development through open mapping. We work together to provide map data which revolutionises disaster management, reduces risks, and contributes to achievement of the Sustainable Development Goals.\n"
+      "Project Description": "HOT is an international team dedicated to humanitarian action and community development through open mapping. We work together to provide map data which revolutionises disaster management, reduces risks, and contributes to achievement of the Sustainable Development Goals.\n",
+      "HDX_SOHD": "None"
     }
   },
   {
@@ -1027,7 +1073,8 @@
       "Project Description": "ACLED is a widely used conflict dataset that tracks the locations, dates, actors, and types of political violence and protest events across the world. Updated weekly, it covers over 150 countries and includes data on battles, riots, strategic developments, and civilian targeting. ACLED’s open-access data and analytical tools are used by policymakers, researchers, and humanitarian organizations to monitor conflict dynamics, assess risk, and support early warning systems and humanitarian planning.\n",
       "Project Donor Agencies": [
         "rec1VhOJv9U6QKBBs"
-      ]
+      ],
+      "HDX_SOHD": "12"
     }
   },
   {
@@ -1046,7 +1093,8 @@
         "Displacement & Migration Data"
       ],
       "Project Website": "https://dtm.iom.int/",
-      "Project Description": "The Displacement Tracking Matrix (DTM) gathers and analyzes data to disseminate critical multi layered information on the mobility, vulnerabilities, and needs of displaced and mobile populations that enables decision makers and responders to provide these populations with better context specific assistance.\n"
+      "Project Description": "The Displacement Tracking Matrix (DTM) gathers and analyzes data to disseminate critical multi layered information on the mobility, vulnerabilities, and needs of displaced and mobile populations that enables decision makers and responders to provide these populations with better context specific assistance.\n",
+      "HDX_SOHD": "None"
     }
   },
   {
@@ -1070,7 +1118,8 @@
       "Project Description": "Set at an extension to the world-leading conflict prediction system [VIEWS](https://viewsforecasting.org/), VIEWS-PIN will provide monthly worldwide forecasts for the number of people in need of humanitarian assistance following exposure to conflict. Defining need as adverse changes in average income, access to water, healthcare, education, and food, VIEWS-PIN will also provide forecasts for each of these five dimensions to facilitate targeted action.\n",
       "Project Donor Agencies": [
         "rec1VhOJv9U6QKBBs"
-      ]
+      ],
+      "HDX_SOHD": "None"
     }
   },
   {
@@ -1089,7 +1138,8 @@
         "Geographic Information Systems (GIS)"
       ],
       "Project Website": "https://mapswipe.org/en/",
-      "Project Description": "MapSwipe coordinates volunteer mapping of satellite imagery to create open building and infrastructure datasets in underserved areas. It supports crisis mapping, response planning, and humanitarian targeting.\n"
+      "Project Description": "MapSwipe coordinates volunteer mapping of satellite imagery to create open building and infrastructure datasets in underserved areas. It supports crisis mapping, response planning, and humanitarian targeting.\n",
+      "HDX_SOHD": "None"
     }
   },
   {
@@ -1111,7 +1161,8 @@
         "Anticipatory and Early Action Forecasts"
       ],
       "Project Website": "https://hhi.harvard.edu/signal-program",
-      "Project Description": "The Signal Program explores how emerging technologies—like remote sensing and data analytics—can support protection in humanitarian emergencies. It develops tools, ethical frameworks, and applied research for crisis contexts.\n"
+      "Project Description": "The Signal Program explores how emerging technologies—like remote sensing and data analytics—can support protection in humanitarian emergencies. It develops tools, ethical frameworks, and applied research for crisis contexts.\n",
+      "HDX_SOHD": "None"
     }
   },
   {
@@ -1130,7 +1181,8 @@
         "Climate Data"
       ],
       "Project Website": "https://climate.copernicus.eu/",
-      "Project Description": "C3S provides authoritative, open-access climate data and tools, including forecasts, historical datasets, and impact indicators. Managed by ECMWF, it supports risk analysis, adaptation planning, and policy development globally.\n"
+      "Project Description": "C3S provides authoritative, open-access climate data and tools, including forecasts, historical datasets, and impact indicators. Managed by ECMWF, it supports risk analysis, adaptation planning, and policy development globally.\n",
+      "HDX_SOHD": "None"
     }
   },
   {
@@ -1152,7 +1204,8 @@
         "Upskilling & Training"
       ],
       "Project Website": "https://data2x.org/",
-      "Project Description": "Data2X is a global partnership advancing gender-responsive data systems. It builds research, advocacy, and tools to support data on women and girls, including capacity strengthening and innovation grants.\n"
+      "Project Description": "Data2X is a global partnership advancing gender-responsive data systems. It builds research, advocacy, and tools to support data on women and girls, including capacity strengthening and innovation grants.\n",
+      "HDX_SOHD": "None"
     }
   },
   {
@@ -1175,7 +1228,8 @@
       "Project Description": "Kente Threads is a feminist initiative that reimagines humanitarian action by centering refugee women’s resilience and lived experiences. \n",
       "Project Donor Agencies": [
         "rec1VhOJv9U6QKBBs"
-      ]
+      ],
+      "HDX_SOHD": "None"
     }
   },
   {
@@ -1195,7 +1249,8 @@
         "Data Storage, Access & Sharing"
       ],
       "Project Website": "https://www.migrationdataportal.org/institute/unhcr-global-data-service",
-      "Project Description": "​The UNHCR Global Data Service (GDS) is a central hub for data and statistics on refugees, asylum-seekers, internally displaced persons (IDPs), and stateless individuals.It supports evidence-based decision-making, policy development, and humanitarian operations by providing access to a wide range of data tools and resources.​\n"
+      "Project Description": "​The UNHCR Global Data Service (GDS) is a central hub for data and statistics on refugees, asylum-seekers, internally displaced persons (IDPs), and stateless individuals.It supports evidence-based decision-making, policy development, and humanitarian operations by providing access to a wide range of data tools and resources.​\n",
+      "HDX_SOHD": "None"
     }
   },
   {
@@ -1219,7 +1274,8 @@
         "Capacity Building"
       ],
       "Project Website": "https://www.impact-initiatives.org/what-we-do/panda/",
-      "Project Description": "IMPACT’s PANDA initiative aims to improve the effectiveness, efficiency and efficacy of humanitarian and development interventions. PANDA supports the entire humanitarian programme cycle, including programme design, assessments, baselines, monitoring and evaluation.\n\t\n"
+      "Project Description": "IMPACT’s PANDA initiative aims to improve the effectiveness, efficiency and efficacy of humanitarian and development interventions. PANDA supports the entire humanitarian programme cycle, including programme design, assessments, baselines, monitoring and evaluation.\n\t\n",
+      "HDX_SOHD": "None"
     }
   },
   {
@@ -1238,7 +1294,8 @@
         "Household Survey Data"
       ],
       "Project Website": "https://www.worldbank.org/en/programs/lsms",
-      "Project Description": "LSMS is the World Bank’s flagship household survey initiative that provides high-quality, nationally representative panel data for analyzing poverty, inequality, and livelihoods. Datasets are downloadable through the World Bank Microdata Library and used to support data-driven policymaking.\n"
+      "Project Description": "LSMS is the World Bank’s flagship household survey initiative that provides high-quality, nationally representative panel data for analyzing poverty, inequality, and livelihoods. Datasets are downloadable through the World Bank Microdata Library and used to support data-driven policymaking.\n",
+      "HDX_SOHD": "None"
     }
   },
   {
@@ -1261,7 +1318,8 @@
         "Health Analytics"
       ],
       "Project Website": "https://www.unicef.org/reports/state-of-worlds-children",
-      "Project Description": "Published annually by UNICEF, The State of the World’s Children report is a flagship global publication that presents comprehensive data and analysis on issues affecting children’s well-being. Each edition focuses on a specific theme—such as nutrition, mental health, or education—and includes rigorous data from household surveys, administrative sources, and UNICEF’s global monitoring systems. The report is a key advocacy and programming resource for policymakers and humanitarian actors, offering evidence-based recommendations grounded in global and regional trends.\n"
+      "Project Description": "Published annually by UNICEF, The State of the World’s Children report is a flagship global publication that presents comprehensive data and analysis on issues affecting children’s well-being. Each edition focuses on a specific theme—such as nutrition, mental health, or education—and includes rigorous data from household surveys, administrative sources, and UNICEF’s global monitoring systems. The report is a key advocacy and programming resource for policymakers and humanitarian actors, offering evidence-based recommendations grounded in global and regional trends.\n",
+      "HDX_SOHD": "None"
     }
   },
   {
@@ -1280,7 +1338,8 @@
         "Baseline Population Data"
       ],
       "Project Website": "https://www.worldpop.org/methods/population-estimation-for-sustainable-development/",
-      "Project Description": "WorldPop is an interdisciplinary applied research group focusing primarily on supporting improvement of the spatial demographic evidence base and the use of these data for health and development applications, including addressing the Sustainable Development Goals. Its mission is to enable decision makers to harness the power of spatial demographic data through high quality applied research, to achieve a vision of a world where everyone, everywhere is counted in decision making.\n"
+      "Project Description": "WorldPop is an interdisciplinary applied research group focusing primarily on supporting improvement of the spatial demographic evidence base and the use of these data for health and development applications, including addressing the Sustainable Development Goals. Its mission is to enable decision makers to harness the power of spatial demographic data through high quality applied research, to achieve a vision of a world where everyone, everywhere is counted in decision making.\n",
+      "HDX_SOHD": "None"
     }
   },
   {
@@ -1301,7 +1360,8 @@
         "Water, Sanitation & Hygiene (WASH) Data"
       ],
       "Project Website": "https://www.waterpointdata.org/home/",
-      "Project Description": "The Water Point Data Exchange (WPDx) platform is a global open data system that compiles and standardizes information on water point locations and characteristics from multiple countries. Hosted by the Global Water Challenge, it provides a critical repository for improving water service delivery by offering insights into functionality, service levels, and infrastructure gaps. WPDx data has been used by governments, NGOs, and development partners to enhance resource allocation, plan maintenance, and track progress toward water access goals, contributing to SDG 6.\n"
+      "Project Description": "The Water Point Data Exchange (WPDx) platform is a global open data system that compiles and standardizes information on water point locations and characteristics from multiple countries. Hosted by the Global Water Challenge, it provides a critical repository for improving water service delivery by offering insights into functionality, service levels, and infrastructure gaps. WPDx data has been used by governments, NGOs, and development partners to enhance resource allocation, plan maintenance, and track progress toward water access goals, contributing to SDG 6.\n",
+      "HDX_SOHD": "None"
     }
   },
   {
@@ -1320,7 +1380,8 @@
         "AI & ML Infrastructure"
       ],
       "Project Website": "https://3is.org/artificial-intelligence/",
-      "Project Description": "We are at the forefront of leveraging Artificial Intelligence (AI) as a foundational tool in our core services to transform humanitarian response and environmental management. Our commitment to innovation and social impact has earned significant recognition from leading technology partners. We are proud to announce our participation in key initiatives designed to amplify our reach and capabilities:\n"
+      "Project Description": "We are at the forefront of leveraging Artificial Intelligence (AI) as a foundational tool in our core services to transform humanitarian response and environmental management. Our commitment to innovation and social impact has earned significant recognition from leading technology partners. We are proud to announce our participation in key initiatives designed to amplify our reach and capabilities:\n",
+      "HDX_SOHD": "None"
     }
   },
   {
@@ -1344,7 +1405,8 @@
       "Project Description": "The ACLED Conflict Alert System (CAST) is a conflict forecasting visualization platform that predicts political violence events up to six months in the future for every country in the world.\n",
       "Project Donor Agencies": [
         "rec1VhOJv9U6QKBBs"
-      ]
+      ],
+      "HDX_SOHD": "None"
     }
   },
   {
@@ -1363,7 +1425,8 @@
         "Humanitarian Access Data"
       ],
       "Project Website": "https://humanitarianoutcomes.org/projects/core",
-      "Project Description": "CORE is the latest data-driven initiative by Humanitarian Outcomes to provide quantifiable measures on the size of the humanitarian sector as well as its capacity and reach in crisis-affected countries.\n"
+      "Project Description": "CORE is the latest data-driven initiative by Humanitarian Outcomes to provide quantifiable measures on the size of the humanitarian sector as well as its capacity and reach in crisis-affected countries.\n",
+      "HDX_SOHD": "None"
     }
   },
   {
@@ -1394,7 +1457,8 @@
         "recdGZTDhjgGOhWJ5",
         "recq22wSlO1GrYUWb",
         "recf10RuM7qHUnC33"
-      ]
+      ],
+      "HDX_SOHD": "None"
     }
   },
   {
@@ -1413,7 +1477,8 @@
         "Information Management Services"
       ],
       "Project Website": "https://www.fieldsdata.org/information-management",
-      "Project Description": "In the daily whirlwind, we often underestimate the data avalanche we create. But there's a golden opportunity – standardize and organize. This unlocks lessons from the past, supercharges efficiency, and fuels brilliant strategic decisions.\n"
+      "Project Description": "In the daily whirlwind, we often underestimate the data avalanche we create. But there's a golden opportunity – standardize and organize. This unlocks lessons from the past, supercharges efficiency, and fuels brilliant strategic decisions.\n",
+      "HDX_SOHD": "None"
     }
   },
   {
@@ -1435,7 +1500,8 @@
         "Composite Indices"
       ],
       "Project Website": "https://drmkc.jrc.ec.europa.eu/inform-index/INFORM-Climate-Change",
-      "Project Description": "INFORM Climate Change Risk Index is an upgrade of INFORM Risk Index as it includes climate and socio-economic projections. It provides quantified estimates of the impacts of climate change on the future risk of humanitarian crises and disasters. The results are intended to inform policy choices across climate mitigation, climate adaptation, disaster risk reduction, sustainable development and humanitarian assistance.\n\n"
+      "Project Description": "INFORM Climate Change Risk Index is an upgrade of INFORM Risk Index as it includes climate and socio-economic projections. It provides quantified estimates of the impacts of climate change on the future risk of humanitarian crises and disasters. The results are intended to inform policy choices across climate mitigation, climate adaptation, disaster risk reduction, sustainable development and humanitarian assistance.\n\n",
+      "HDX_SOHD": "None"
     }
   },
   {
@@ -1454,7 +1520,8 @@
         "Household Survey Data"
       ],
       "Project Website": "https://www.afrobarometer.org/online-data-analysis/",
-      "Project Description": "Our online data analysis (ODA) tool is a free and easy way to find, analyse, and use high-quality data on the views and experiences of Africans. The ODA contains our data sets from 39 African countries going back to 1999.\nYou can search our data sets by country, by survey question, and by survey round. You can compare individual countries and regions, or get the continental view on the topics of your choice. You can slice and dice the data by gender, age, education level, and other demographic variables. You can identify trends over time.\n"
+      "Project Description": "Our online data analysis (ODA) tool is a free and easy way to find, analyse, and use high-quality data on the views and experiences of Africans. The ODA contains our data sets from 39 African countries going back to 1999.\nYou can search our data sets by country, by survey question, and by survey round. You can compare individual countries and regions, or get the continental view on the topics of your choice. You can slice and dice the data by gender, age, education level, and other demographic variables. You can identify trends over time.\n",
+      "HDX_SOHD": "None"
     }
   },
   {
@@ -1473,7 +1540,8 @@
         "3W (Who does What, Where) Data"
       ],
       "Project Website": "https://data.humdata.org/organization/fieldsdata",
-      "Project Description": "At the heart of every humanitarian mission lies the critical 3Ws - _Who is doing what and where._\n"
+      "Project Description": "At the heart of every humanitarian mission lies the critical 3Ws - _Who is doing what and where._\n",
+      "HDX_SOHD": "None"
     }
   },
   {
@@ -1495,7 +1563,8 @@
         "Anticipatory and Early Action Forecasts"
       ],
       "Project Website": "https://www.who.int/initiatives/eios",
-      "Project Description": "EIOS is a real-time platform developed by WHO and the European Commission to collect, verify, and share public health threat information from open sources. It offers a centralized dashboard and alerting system to help health agencies monitor emerging epidemics and coordinate responses.\n"
+      "Project Description": "EIOS is a real-time platform developed by WHO and the European Commission to collect, verify, and share public health threat information from open sources. It offers a centralized dashboard and alerting system to help health agencies monitor emerging epidemics and coordinate responses.\n",
+      "HDX_SOHD": "None"
     }
   },
   {
@@ -1520,7 +1589,8 @@
         "Conflict Analytics"
       ],
       "Project Website": "https://mptf.undp.org/project/00141136",
-      "Project Description": "The Transformative Outcomes project deploys an interactive web platform and standardized analysis toolkit to deliver high-quality crisis data for vulnerable populations in conflict-affected settings. This promotes evidence-based planning, targeted interventions, and capacity building among local actors, humanitarian agencies, and policymakers. CRAF’d funding supports data collection in six pilot countries, platform development, and training, catalyzing scalable, accessible data as a global public good.\n"
+      "Project Description": "The Transformative Outcomes project deploys an interactive web platform and standardized analysis toolkit to deliver high-quality crisis data for vulnerable populations in conflict-affected settings. This promotes evidence-based planning, targeted interventions, and capacity building among local actors, humanitarian agencies, and policymakers. CRAF’d funding supports data collection in six pilot countries, platform development, and training, catalyzing scalable, accessible data as a global public good.\n",
+      "HDX_SOHD": "None"
     }
   },
   {
@@ -1541,7 +1611,8 @@
         "Food Security Analytics"
       ],
       "Project Website": "https://www.icpac.net/fsnwg/?update_type=5#results",
-      "Project Description": "FNWG Alerts and Early Warning\n"
+      "Project Description": "FNWG Alerts and Early Warning\n",
+      "HDX_SOHD": "None"
     }
   },
   {
@@ -1562,7 +1633,8 @@
         "Conflict & Violence Data"
       ],
       "Project Website": "https://hhi.harvard.edu/kobotoolbox",
-      "Project Description": "KoboToolbox is a free and open-source tool for mobile data collection in humanitarian crises. Used by UN agencies, NGOs, and governments, it supports offline surveys, real-time dashboards, and collaborative field assessments.\n"
+      "Project Description": "KoboToolbox is a free and open-source tool for mobile data collection in humanitarian crises. Used by UN agencies, NGOs, and governments, it supports offline surveys, real-time dashboards, and collaborative field assessments.\n",
+      "HDX_SOHD": "None"
     }
   },
   {
@@ -1591,7 +1663,8 @@
         "recfNuwRv2DcnUQCK",
         "recqSvUlZQjET4fCH",
         "recYVizktLnxQPeKH"
-      ]
+      ],
+      "HDX_SOHD": "None"
     }
   },
   {
@@ -1611,7 +1684,8 @@
         "Data Collection"
       ],
       "Project Website": "https://immap.org/product/information-management-services-in-support-of-humanitarian-action-in-nigeria/",
-      "Project Description": "The humanitarian crisis in Nigeria’s northeast states of Borno, Adamawa and Yobe (BAY) continues to severely affect millions of people who remain vulnerable to displacement, impoverishment, and threat of violence. What started as a localized insurgency more than eleven years ago has turned into a regional armed conflict with civilians, mostly women and children bearing the brunt of brutal clashes and attacks.\n"
+      "Project Description": "The humanitarian crisis in Nigeria’s northeast states of Borno, Adamawa and Yobe (BAY) continues to severely affect millions of people who remain vulnerable to displacement, impoverishment, and threat of violence. What started as a localized insurgency more than eleven years ago has turned into a regional armed conflict with civilians, mostly women and children bearing the brunt of brutal clashes and attacks.\n",
+      "HDX_SOHD": "None"
     }
   },
   {
@@ -1632,7 +1706,8 @@
         "Peace Data"
       ],
       "Project Website": "https://www.sipri.org/databases",
-      "Project Description": "An open library of global arms production data, featuring company listings, production volumes, and export trends for use in disarmament analysis and policy design.\n"
+      "Project Description": "An open library of global arms production data, featuring company listings, production volumes, and export trends for use in disarmament analysis and policy design.\n",
+      "HDX_SOHD": "None"
     }
   },
   {
@@ -1654,7 +1729,8 @@
         "Climate Data"
       ],
       "Project Website": "https://washdata.org/",
-      "Project Description": "Tracks access to water, sanitation, and hygiene (WASH) using global indicators and household survey data accessible under open access licenses.\n"
+      "Project Description": "Tracks access to water, sanitation, and hygiene (WASH) using global indicators and household survey data accessible under open access licenses.\n",
+      "HDX_SOHD": "None"
     }
   },
   {
@@ -1675,7 +1751,8 @@
         "Peace Data"
       ],
       "Project Website": "https://www.sipri.org/databases",
-      "Project Description": "Offers historical data on military spending by country, allowing trend analysis and budget comparisons for global peace research.\n"
+      "Project Description": "Offers historical data on military spending by country, allowing trend analysis and budget comparisons for global peace research.\n",
+      "HDX_SOHD": "None"
     }
   },
   {
@@ -1696,7 +1773,8 @@
         "Geospatial Data"
       ],
       "Project Website": "https://pacificdata.org/tools",
-      "Project Description": "This regional platform delivers open-access dashboards, geospatial tools, and statistics to support Pacific states with governance, climate resilience, and disaster response planning.\n"
+      "Project Description": "This regional platform delivers open-access dashboards, geospatial tools, and statistics to support Pacific states with governance, climate resilience, and disaster response planning.\n",
+      "HDX_SOHD": "None"
     }
   },
   {
@@ -1722,7 +1800,8 @@
         "rec1YpvhkjwME6GOJ",
         "reco4Um0k7Tgw2UCK",
         "reckIAhFXgj4XL29b"
-      ]
+      ],
+      "HDX_SOHD": "None"
     }
   },
   {
@@ -1742,7 +1821,8 @@
         "Food Security Data"
       ],
       "Project Website": "https://data.humdata.org/dataset/global-wfp-food-prices",
-      "Project Description": "This dataset contains Countries, Commodities and Markets data, sourced from the World Food Programme Price Database. The volume of data means that the actual Food Prices data is in country level datasets. The World Food Programme Price Database covers foods such as maize, rice, beans, fish, and sugar for 98 countries and some 3000 markets. It is updated weekly but contains to a large extent monthly data. The data goes back as far as 1992 for a few countries, although many countries started reporting from 2003 or thereafter.\n"
+      "Project Description": "This dataset contains Countries, Commodities and Markets data, sourced from the World Food Programme Price Database. The volume of data means that the actual Food Prices data is in country level datasets. The World Food Programme Price Database covers foods such as maize, rice, beans, fish, and sugar for 98 countries and some 3000 markets. It is updated weekly but contains to a large extent monthly data. The data goes back as far as 1992 for a few countries, although many countries started reporting from 2003 or thereafter.\n",
+      "HDX_SOHD": "11"
     }
   },
   {
@@ -1762,7 +1842,8 @@
         "Displacement & Migration Data"
       ],
       "Project Website": "https://www.unhcr.org/refugee-statistics",
-      "Project Description": "The database contains information about forcibly displaced populations spanning more than 70 years of statistical activities. It covers displaced populations such as refugees, asylum-seekers and internally displaced people, including their demographics. Stateless people are also included, most of who have never been displaced. The database also reflects the different types of solutions for displaced populations such as repatriation or resettlement.\n\n<https://github.com/PopulationStatistics/refugees>\n"
+      "Project Description": "The database contains information about forcibly displaced populations spanning more than 70 years of statistical activities. It covers displaced populations such as refugees, asylum-seekers and internally displaced people, including their demographics. Stateless people are also included, most of who have never been displaced. The database also reflects the different types of solutions for displaced populations such as repatriation or resettlement.\n\n<https://github.com/PopulationStatistics/refugees>\n",
+      "HDX_SOHD": "None"
     }
   },
   {
@@ -1782,7 +1863,8 @@
         "Damage Assessments"
       ],
       "Project Website": "https://www.globalquakemodel.org/product/global-exposure-model",
-      "Project Description": "The Global Exposure Database (GED) is a spatial dataset created by GEM that quantifies the exposure of buildings and infrastructure to natural hazards across countries. It includes structural typologies, occupancy data, and geographic distributions, enabling users to estimate potential losses from earthquakes and other disasters. GED is openly available and widely used in conjunction with hazard models to inform national disaster risk management strategies and build resilience in urban development planning.\n"
+      "Project Description": "The Global Exposure Database (GED) is a spatial dataset created by GEM that quantifies the exposure of buildings and infrastructure to natural hazards across countries. It includes structural typologies, occupancy data, and geographic distributions, enabling users to estimate potential losses from earthquakes and other disasters. GED is openly available and widely used in conjunction with hazard models to inform national disaster risk management strategies and build resilience in urban development planning.\n",
+      "HDX_SOHD": "None"
     }
   },
   {
@@ -1803,7 +1885,8 @@
         "Conflict & Violence Data"
       ],
       "Project Website": "https://extranet.who.int/ssa/LeftMenu/Index.aspx",
-      "Project Description": "WHO WHO’s SSA platform collects data on incidents threatening health care in conflict settings and provides dashboards and data for protection analysis.\n"
+      "Project Description": "WHO WHO’s SSA platform collects data on incidents threatening health care in conflict settings and provides dashboards and data for protection analysis.\n",
+      "HDX_SOHD": "None"
     }
   },
   {
@@ -1827,7 +1910,8 @@
       "Project Description": "The Risk Anticipation Data Hub, a project of the United Nations Development Programme (UNDP), is a transformative open-access data platform. A ready-to-use data warehouse for over 15,000 indicators combines processed and cleaned public datasets on a multitude of risk factors. Equipped with state-of-the-art technology, including a generative Artificial Intelligence (AI) interface and real-time analytics, the Data Hub empowers ecosystem partners with data and insights for better crisis anticipation, prevention, and response. \n**<https://sdgintegration.undp.org/crisis-risk-dashboard>**\n",
       "Project Donor Agencies": [
         "rec1VhOJv9U6QKBBs"
-      ]
+      ],
+      "HDX_SOHD": "None"
     }
   },
   {
@@ -1844,7 +1928,8 @@
       ],
       "Investment Theme(s)": [
         "Geospatial Analytics"
-      ]
+      ],
+      "HDX_SOHD": "None"
     }
   },
   {
@@ -1863,7 +1948,8 @@
         "Needs Assessment Data"
       ],
       "Project Website": "https://data.unhcr.org/en/documents/details/86670",
-      "Project Description": "This report presents UNHCR’s engagement in multi-sectoral joint needs assessments in 2020 in line with Grand Bargain commitments towards improved harmonization and coordination of assessment exercises as well as increased transparency\n"
+      "Project Description": "This report presents UNHCR’s engagement in multi-sectoral joint needs assessments in 2020 in line with Grand Bargain commitments towards improved harmonization and coordination of assessment exercises as well as increased transparency\n",
+      "HDX_SOHD": "None"
     }
   },
   {
@@ -1876,7 +1962,8 @@
       ],
       "CRAF’d-Funded Project?": "NO",
       "Project Website": "https://www.arabbarometer.org/arab-pulse/",
-      "Project Description": "The Arab Pulse was founded in 2018 to provide an outlet for political discussion on the Middle East and North Africa (MENA) based on quantitative research. The MENA region is in constant flux and faces new and old challenges. The Arab Pulse represents a central nexus for empirical and data driven research focused on contemporary MENA politics, society, and values engaging scholars, policy makers, and the media from the region and beyond\n"
+      "Project Description": "The Arab Pulse was founded in 2018 to provide an outlet for political discussion on the Middle East and North Africa (MENA) based on quantitative research. The MENA region is in constant flux and faces new and old challenges. The Arab Pulse represents a central nexus for empirical and data driven research focused on contemporary MENA politics, society, and values engaging scholars, policy makers, and the media from the region and beyond\n",
+      "HDX_SOHD": "None"
     }
   },
   {
@@ -1892,7 +1979,8 @@
         "Crisis Analytics & Insights"
       ],
       "Project Website": "https://www.arabbarometer.org/survey-data/data-analysis-tool/",
-      "Project Description": "Our data analysis tool allows researchers, who have no access to statistical software packages, to conduct simple descriptive analysis of all Arab Barometer waves and countries. All results can be downloaded in various different formats and can be integrated into reports, articles, and presentations.\n"
+      "Project Description": "Our data analysis tool allows researchers, who have no access to statistical software packages, to conduct simple descriptive analysis of all Arab Barometer waves and countries. All results can be downloaded in various different formats and can be integrated into reports, articles, and presentations.\n",
+      "HDX_SOHD": "None"
     }
   },
   {
@@ -1915,7 +2003,8 @@
       "Project Description": "UNEP‑WCMC is a global science-policy interface that provides open-access datasets and tools on biodiversity, ecosystem services, and conservation strategies. Its data platforms support environmental reporting, climate resilience, and natural capital planning.\n",
       "Project Donor Agencies": [
         "recbvrcYZZW7mBnCU"
-      ]
+      ],
+      "HDX_SOHD": "None"
     }
   },
   {
@@ -1938,7 +2027,8 @@
         "Damage Assessments"
       ],
       "Project Website": "https://data.undrr.org/api/json",
-      "Project Description": "Datum is a centralized portal offering free, open-access databases and RESTful APIs designed to support disaster risk reduction (DRR) efforts worldwide. All datasets and metadata can be downloaded or queried under UNDRR’s terms, provided proper attribution. The content spans several thematic “data clusters,” each versioned and paginated for easy integration.\n"
+      "Project Description": "Datum is a centralized portal offering free, open-access databases and RESTful APIs designed to support disaster risk reduction (DRR) efforts worldwide. All datasets and metadata can be downloaded or queried under UNDRR’s terms, provided proper attribution. The content spans several thematic “data clusters,” each versioned and paginated for easy integration.\n",
+      "HDX_SOHD": "None"
     }
   },
   {
@@ -1962,7 +2052,8 @@
         "recGNTHL9SKZxLDcw",
         "recz1D3MdBg9w7tmt",
         "rec8gXVsPUUB517NE"
-      ]
+      ],
+      "HDX_SOHD": "None"
     }
   },
   {
@@ -1985,7 +2076,8 @@
       "Project Description": "EM‑DAT compiles free, searchable global records of natural and technological disasters dating back to 1900. It provides standardized event-level data used extensively in disaster risk research, policy analysis, and early warning modeling.\n",
       "Project Donor Agencies": [
         "rec6XRPA9pKgC8j1J"
-      ]
+      ],
+      "HDX_SOHD": "None"
     }
   },
   {
@@ -2004,7 +2096,8 @@
         "Humanitarian Access Data"
       ],
       "Project Website": "https://www.acaps.org/en/thematics/all-topics/humanitarian-access",
-      "Project Description": "The Global Humanitarian Access Overview is ACAPS’ twice-yearly assessment of the barriers that prevent aid from reaching people in crisis and people in crisis from receiving assistance.\n"
+      "Project Description": "The Global Humanitarian Access Overview is ACAPS’ twice-yearly assessment of the barriers that prevent aid from reaching people in crisis and people in crisis from receiving assistance.\n",
+      "HDX_SOHD": "None"
     }
   },
   {
@@ -2023,7 +2116,8 @@
         "Conflict & Violence Data"
       ],
       "Project Website": "https://www.acaps.org/en/countries",
-      "Project Description": "The Risk Radar is a forward-looking analytical tool developed by ACAPS that flags countries and contexts where the humanitarian situation is likely to deteriorate significantly in the next six months. It combines monitoring of hundreds of crises, evaluation of drivers and triggers, and a systematic risk‐analysis methodology (impact × probability) to highlight where urgent attention and preparedness may be needed.\n"
+      "Project Description": "The Risk Radar is a forward-looking analytical tool developed by ACAPS that flags countries and contexts where the humanitarian situation is likely to deteriorate significantly in the next six months. It combines monitoring of hundreds of crises, evaluation of drivers and triggers, and a systematic risk‐analysis methodology (impact × probability) to highlight where urgent attention and preparedness may be needed.\n",
+      "HDX_SOHD": "None"
     }
   },
   {
@@ -2042,7 +2136,8 @@
         "Conflict & Violence Data"
       ],
       "Project Website": "https://whc.unesco.org/en/danger/",
-      "Project Description": "The [List of World Heritage in Danger](https://whc.unesco.org/en/danger-list/) is designed to inform the international community of conditions which threaten the very characteristics for which a property was inscribed on the World Heritage List, and to encourage corrective action. \n"
+      "Project Description": "The [List of World Heritage in Danger](https://whc.unesco.org/en/danger-list/) is designed to inform the international community of conditions which threaten the very characteristics for which a property was inscribed on the World Heritage List, and to encourage corrective action. \n",
+      "HDX_SOHD": "None"
     }
   },
   {
@@ -2062,7 +2157,8 @@
         "Geospatial Analytics"
       ],
       "Project Website": "https://earthquake.usgs.gov/earthquakes/map/?extent=17.47643,-136.8457&extent=54.67383,-53.17383",
-      "Project Description": "USGS systems offering real-time search and visualization of earthquake data, global hazards, and geophysical datasets. They support crisis response and scientific analysis through open APIs.\n"
+      "Project Description": "USGS systems offering real-time search and visualization of earthquake data, global hazards, and geophysical datasets. They support crisis response and scientific analysis through open APIs.\n",
+      "HDX_SOHD": "None"
     }
   },
   {
@@ -2081,7 +2177,8 @@
         "Baseline Population Data"
       ],
       "Project Website": "https://www.unhcr.org/publications/unhcr-statistical-online-population-database-general-notes",
-      "Project Description": "The UNHCR Statistical Online Population Database summarizes changes in global trends and levels of the population of concern to UNHCR: refugees, asylum-seekers, returned refugees, internally displaced persons (IDPs) protected/assisted by UNHCR, returned IDPs, stateless persons, and others of concern to UNHCR. The information, reported by UNHCR country offices, generally reflects the data of the host country.\n"
+      "Project Description": "The UNHCR Statistical Online Population Database summarizes changes in global trends and levels of the population of concern to UNHCR: refugees, asylum-seekers, returned refugees, internally displaced persons (IDPs) protected/assisted by UNHCR, returned IDPs, stateless persons, and others of concern to UNHCR. The information, reported by UNHCR country offices, generally reflects the data of the host country.\n",
+      "HDX_SOHD": "None"
     }
   },
   {
@@ -2105,7 +2202,8 @@
       "Project Description": "[INFORM Warning](https://drmkc.jrc.ec.europa.eu/inform-index/INFORM-Warning) is a state-of-the-art innovative global risk monitoring tool designed to anticipate complex risks up to a year in advance, directly linked to crisis funding instruments. It transcends traditional methods by presenting multi-hazard information from diverse sources. Its unique analysis offers insights into risk trends, forecasts, scenarios, and potential events leading to crisis impact.  \n",
       "Project Donor Agencies": [
         "rec1VhOJv9U6QKBBs"
-      ]
+      ],
+      "HDX_SOHD": "None"
     }
   },
   {
@@ -2124,7 +2222,8 @@
         "Data Governance & Management"
       ],
       "Project Website": "https://fts.unocha.org/",
-      "Project Description": "OCHA’s FTS collects, standardizes, and publishes real-time humanitarian funding data globally. It offers dashboards and downloadable datasets tracking donor and recipient transactions in emergencies—providing transparency across funding flows.\n"
+      "Project Description": "OCHA’s FTS collects, standardizes, and publishes real-time humanitarian funding data globally. It offers dashboards and downloadable datasets tracking donor and recipient transactions in emergencies—providing transparency across funding flows.\n",
+      "HDX_SOHD": "None"
     }
   },
   {
@@ -2143,7 +2242,8 @@
         "Methodological Standards (e.g., Data Collection)"
       ],
       "Project Website": "https://www.undp.org/digital/standards",
-      "Project Description": "A toolkit of open-source principles and guidelines aimed at helping UNDP and partners design interoperable, user-centered digital solutions.\n"
+      "Project Description": "A toolkit of open-source principles and guidelines aimed at helping UNDP and partners design interoperable, user-centered digital solutions.\n",
+      "HDX_SOHD": "None"
     }
   },
   {
@@ -2163,7 +2263,8 @@
         "Climate Analytics"
       ],
       "Project Website": "https://global-flood.emergency.copernicus.eu/",
-      "Project Description": "GloFAS, developed by EC-JRC and ECMWF, provides open-access flood forecasts and risk assessments. It integrates global hydrological models to support early warning systems and flood preparedness planning.\n"
+      "Project Description": "GloFAS, developed by EC-JRC and ECMWF, provides open-access flood forecasts and risk assessments. It integrates global hydrological models to support early warning systems and flood preparedness planning.\n",
+      "HDX_SOHD": "None"
     }
   },
   {
@@ -2187,7 +2288,8 @@
       "Project Description": "Developed by the Global Earthquake Model (GEM) Foundation, the OpenQuake Platform is an open-source tool for seismic hazard and risk assessment. It provides researchers, engineers, and governments with models, tools, and databases to simulate earthquake impacts, assess vulnerability, and inform urban planning and disaster preparedness strategies. OpenQuake integrates data on seismicity, exposure, and building fragility, and is widely used in both academic research and national risk management initiatives.\n",
       "Project Donor Agencies": [
         "rec6XRPA9pKgC8j1J"
-      ]
+      ],
+      "HDX_SOHD": "None"
     }
   },
   {
@@ -2206,7 +2308,8 @@
         "Best Practices"
       ],
       "Project Website": "https://www.paris21.org/advanced-data-planning-tool-adapt",
-      "Project Description": "ADAPT helps governments assess their statistical capacity, plan national data strategies, and make cost-effective investments in data infrastructure—supporting SDG tracking and capacity development in low- and middle-income countries.\n"
+      "Project Description": "ADAPT helps governments assess their statistical capacity, plan national data strategies, and make cost-effective investments in data infrastructure—supporting SDG tracking and capacity development in low- and middle-income countries.\n",
+      "HDX_SOHD": "None"
     }
   },
   {
@@ -2225,7 +2328,8 @@
         "Methodological Standards (e.g., Data Collection)"
       ],
       "Project Website": "https://hxlstandard.org/",
-      "Project Description": "**HXL** is a simple standard for messy data. Use HXL hashtags to speed up data processing and create interoperability across data sources.\n"
+      "Project Description": "**HXL** is a simple standard for messy data. Use HXL hashtags to speed up data processing and create interoperability across data sources.\n",
+      "HDX_SOHD": "None"
     }
   },
   {
@@ -2246,7 +2350,8 @@
         "Disaggregated Country-level Data"
       ],
       "Project Website": "https://nsdsguidelines.paris21.org/en/homepage",
-      "Project Description": "NSDS by PARIS21 provides structured guidance and tools to help countries design national statistics strategies, align donor support, and integrate data systems for sustainable development planning.\n"
+      "Project Description": "NSDS by PARIS21 provides structured guidance and tools to help countries design national statistics strategies, align donor support, and integrate data systems for sustainable development planning.\n",
+      "HDX_SOHD": "None"
     }
   },
   {
@@ -2265,7 +2370,8 @@
         "Food Security Analytics"
       ],
       "Project Website": "https://www.ipcinfo.org/ipcinfo-website/resources/infographics/en/",
-      "Project Description": "Infographics made by IPC\n"
+      "Project Description": "Infographics made by IPC\n",
+      "HDX_SOHD": "None"
     }
   },
   {
@@ -2282,7 +2388,8 @@
       ],
       "Investment Theme(s)": [
         "Damage Assessments"
-      ]
+      ],
+      "HDX_SOHD": "None"
     }
   },
   {
@@ -2303,7 +2410,8 @@
         "Environmental Data"
       ],
       "Project Website": "https://search.earthdata.nasa.gov/",
-      "Project Description": "NASA’s Earth Data Search portal provides centralized access to global satellite imagery and environmental datasets. Users can search, download, or stream geospatial data via standardized APIs to support climate resilience, disaster response, and scientific research.\n"
+      "Project Description": "NASA’s Earth Data Search portal provides centralized access to global satellite imagery and environmental datasets. Users can search, download, or stream geospatial data via standardized APIs to support climate resilience, disaster response, and scientific research.\n",
+      "HDX_SOHD": "None"
     }
   },
   {
@@ -2328,7 +2436,8 @@
         "rec0sY1I5JZz6ZsUE",
         "recYxlC8x9puB69tx",
         "rec2KBp1IAA5TtnQl"
-      ]
+      ],
+      "HDX_SOHD": "None"
     }
   },
   {
@@ -2355,7 +2464,8 @@
       "Project Donor Agencies": [
         "rec0sY1I5JZz6ZsUE",
         "recbtz43uuKKFVfvd"
-      ]
+      ],
+      "HDX_SOHD": "None"
     }
   },
   {
@@ -2375,7 +2485,8 @@
         "Baseline Population Data"
       ],
       "Project Website": "https://www.unfpa.org/data/world-population-dashboard",
-      "Project Description": "The **World Population Dashboard** showcases global population data, including fertility rate, gender parity in school enrolment, information on sexual and reproductive health, and much more. Together, these data shine a light on the health and rights of people around the world, especially women and young people. The numbers here come from UNFPA and fellow UN agencies, and are updated annually.\n"
+      "Project Description": "The **World Population Dashboard** showcases global population data, including fertility rate, gender parity in school enrolment, information on sexual and reproductive health, and much more. Together, these data shine a light on the health and rights of people around the world, especially women and young people. The numbers here come from UNFPA and fellow UN agencies, and are updated annually.\n",
+      "HDX_SOHD": "None"
     }
   },
   {
@@ -2397,7 +2508,8 @@
       "Project Description": "The HeRAMS Initiative aims to ensure that core information on essential health resources and services is readily available to decision makers at country, regional and global levels.\n",
       "Project Donor Agencies": [
         "recqhcKxTv71yMfeI"
-      ]
+      ],
+      "HDX_SOHD": "None"
     }
   },
   {
@@ -2422,7 +2534,8 @@
         "rec6XRPA9pKgC8j1J",
         "recGMYeDQSV7jffjs",
         "recKVILBOB3NBEJlE"
-      ]
+      ],
+      "HDX_SOHD": "None"
     }
   },
   {
@@ -2443,7 +2556,8 @@
         "PiN Calculation"
       ],
       "Project Website": "https://crisisresponse.iom.int/index.php/",
-      "Project Description": "GCRP is a data and analytics platform that aggregates global risk indicators, country profiles, and dashboards to support early-warning, crisis preparedness, and financing decisions across development and humanitarian systems.\n"
+      "Project Description": "GCRP is a data and analytics platform that aggregates global risk indicators, country profiles, and dashboards to support early-warning, crisis preparedness, and financing decisions across development and humanitarian systems.\n",
+      "HDX_SOHD": "None"
     }
   },
   {
@@ -2464,7 +2578,8 @@
         "Peace Data"
       ],
       "Project Website": "https://www.sipri.org/databases",
-      "Project Description": "This database tracks country participation in UN and regional peace operations—including troop numbers, funding, and deployment dates.\n"
+      "Project Description": "This database tracks country participation in UN and regional peace operations—including troop numbers, funding, and deployment dates.\n",
+      "HDX_SOHD": "None"
     }
   },
   {
@@ -2488,7 +2603,8 @@
       "Project Description": "MAP provides high-resolution maps of malaria risk and stability, combining epidemiological and environmental data to support global health planning, investment, and disease modeling.\n",
       "Project Donor Agencies": [
         "recbtz43uuKKFVfvd"
-      ]
+      ],
+      "HDX_SOHD": "None"
     }
   },
   {
@@ -2507,7 +2623,8 @@
         "Geospatial Analytics",
         "Damage Assessments",
         "Composite Indices"
-      ]
+      ],
+      "HDX_SOHD": "None"
     }
   },
   {
@@ -2530,7 +2647,8 @@
         "Climate Analytics"
       ],
       "Project Website": "https://www.preventionweb.net/",
-      "Project Description": "PreventionWeb is UNDRR’s global knowledge hub for disaster risk reduction, offering open-access content including research, policy documents, country profiles, and event listings. It provides curated data and analysis tools to help stakeholders stay informed, share practices, and support evidence-based DRR policy and programming.\n"
+      "Project Description": "PreventionWeb is UNDRR’s global knowledge hub for disaster risk reduction, offering open-access content including research, policy documents, country profiles, and event listings. It provides curated data and analysis tools to help stakeholders stay informed, share practices, and support evidence-based DRR policy and programming.\n",
+      "HDX_SOHD": "None"
     }
   },
   {
@@ -2552,7 +2670,8 @@
         "Anticipatory and Early Action Forecasts"
       ],
       "Project Website": "https://www.worldbank.org/en/programs/famine-early-action-mechanism",
-      "Project Description": "The Famine Action Mechanism (FAM) is a global partnership dedicated to scaling up anticipatory and early action to protect lives and livelihoods from emerging food security crises.\t\n"
+      "Project Description": "The Famine Action Mechanism (FAM) is a global partnership dedicated to scaling up anticipatory and early action to protect lives and livelihoods from emerging food security crises.\t\n",
+      "HDX_SOHD": "None"
     }
   },
   {
@@ -2577,7 +2696,8 @@
         "recCDa9F6ntBxGGkm",
         "reclUJwIt0bxL2bO0",
         "recWpBIPgpNUcdSAn"
-      ]
+      ],
+      "HDX_SOHD": "None"
     }
   },
   {
@@ -2596,7 +2716,8 @@
         "Data Storage, Access & Sharing"
       ],
       "Project Website": "https://www.opalproject.org/",
-      "Project Description": "OPAL is a data-powered decision and coordination support system for development and humanitarian interventions.\n"
+      "Project Description": "OPAL is a data-powered decision and coordination support system for development and humanitarian interventions.\n",
+      "HDX_SOHD": "None"
     }
   },
   {
@@ -2618,7 +2739,8 @@
         "Upskilling & Training"
       ],
       "Project Website": "https://www.worldbank.org/en/topic/fragilityconflictviolence/brief/global-crisis-risk-platform-gcrp",
-      "Project Description": "GCRP is an integrated analytics platform for assessing and anticipating multidimensional crisis risks. It offers open-access dashboards, country risk profiles, and composite indicators to inform anticipatory action and crisis financing decisions.\n"
+      "Project Description": "GCRP is an integrated analytics platform for assessing and anticipating multidimensional crisis risks. It offers open-access dashboards, country risk profiles, and composite indicators to inform anticipatory action and crisis financing decisions.\n",
+      "HDX_SOHD": "None"
     }
   },
   {
@@ -2638,7 +2760,8 @@
         "Damage Assessments"
       ],
       "Project Website": "https://www.globalquakemodel.org/product/global-seismic-hazard-map",
-      "Project Description": "The Global Seismic Hazard Map (GSHM), developed under the auspices of the Global Earthquake Model (GEM), provides probabilistic assessments of earthquake hazards worldwide. It combines global seismicity data, geological models, and ground motion prediction equations to estimate the likelihood of earthquake-induced ground shaking. GSHM supports disaster risk reduction, urban planning, and insurance risk modeling by offering a harmonized and peer-reviewed reference for national and regional seismic hazard assessments. \t\n"
+      "Project Description": "The Global Seismic Hazard Map (GSHM), developed under the auspices of the Global Earthquake Model (GEM), provides probabilistic assessments of earthquake hazards worldwide. It combines global seismicity data, geological models, and ground motion prediction equations to estimate the likelihood of earthquake-induced ground shaking. GSHM supports disaster risk reduction, urban planning, and insurance risk modeling by offering a harmonized and peer-reviewed reference for national and regional seismic hazard assessments. \t\n",
+      "HDX_SOHD": "None"
     }
   },
   {
@@ -2661,7 +2784,8 @@
       "Project Description": "ACLED Trendfinder offers an array of interconnected tools for tracking patterns of political violence and protest. Using the visualization platform, you can identify important changes in political violence and protest across and within countries, situate this activity within historical contexts, and spot early warning signs.\n",
       "Project Donor Agencies": [
         "rec1VhOJv9U6QKBBs"
-      ]
+      ],
+      "HDX_SOHD": "None"
     }
   },
   {
@@ -2680,7 +2804,8 @@
         "Upskilling & Training"
       ],
       "Project Website": "https://3is.org/information-management/",
-      "Project Description": " Our approach focuses on optimizing data collection, analysis, and dissemination of information to enable transparent communication and cooperation between stakeholders. \n"
+      "Project Description": " Our approach focuses on optimizing data collection, analysis, and dissemination of information to enable transparent communication and cooperation between stakeholders. \n",
+      "HDX_SOHD": "None"
     }
   },
   {
@@ -2711,7 +2836,8 @@
         "rec0QlT9YlTVhHfEn",
         "recRgmk6Ew3NBvxGV",
         "recFSAJtcprNtdNt3"
-      ]
+      ],
+      "HDX_SOHD": "None"
     }
   },
   {
@@ -2730,7 +2856,8 @@
         "Conflict & Violence Data"
       ],
       "Project Website": "https://ngosafety.org/reports/safety-access-review-q42022/",
-      "Project Description": "INSO emerged from the complex political conflict of Afghanistan, where NGOs continue to face challenges to safety and access.\n"
+      "Project Description": "INSO emerged from the complex political conflict of Afghanistan, where NGOs continue to face challenges to safety and access.\n",
+      "HDX_SOHD": "None"
     }
   },
   {
@@ -2753,7 +2880,8 @@
       "Project Description": "The World Health Organization (WHO) Health Emergency Dashboard is a platform which aims to share information about public health events and emergencies. The data on the dashboard is refreshed every thirty (30) minutes and data is accurate as at time of refreshing.\n",
       "Project Donor Agencies": [
         "recqhcKxTv71yMfeI"
-      ]
+      ],
+      "HDX_SOHD": "None"
     }
   },
   {
@@ -2774,7 +2902,8 @@
         "Geographic Information Systems (GIS)"
       ],
       "Project Website": "https://www.opendatacube.org/",
-      "Project Description": "Open Data Cube is an open-source geospatial data platform designed to manage, analyze, and visualize large volumes of satellite Earth observation data. It provides tools for governments and researchers to turn raw imagery into actionable environmental insights.\n"
+      "Project Description": "Open Data Cube is an open-source geospatial data platform designed to manage, analyze, and visualize large volumes of satellite Earth observation data. It provides tools for governments and researchers to turn raw imagery into actionable environmental insights.\n",
+      "HDX_SOHD": "None"
     }
   },
   {
@@ -2795,7 +2924,8 @@
         "Open Access"
       ],
       "Project Website": "https://datacatalog.worldbank.org/home",
-      "Project Description": "The Data Catalog is designed to make World Bank's development data easy to find, download, use, and share. It includes data from the World Bank's [microdata](https://microdata.worldbank.org/), [finances](http://finances.worldbank.org/) and [energy data](https://energydata.info/) platforms, as well as datasets from the [open data catalog.](https://data.worldbank.org/) There are different ways to access and download datasets.\n\t\n"
+      "Project Description": "The Data Catalog is designed to make World Bank's development data easy to find, download, use, and share. It includes data from the World Bank's [microdata](https://microdata.worldbank.org/), [finances](http://finances.worldbank.org/) and [energy data](https://energydata.info/) platforms, as well as datasets from the [open data catalog.](https://data.worldbank.org/) There are different ways to access and download datasets.\n\t\n",
+      "HDX_SOHD": "None"
     }
   },
   {
@@ -2825,7 +2955,8 @@
         "recGNTHL9SKZxLDcw",
         "recylzOrnxt3grWHh",
         "recCctxpcCNPhxoXS"
-      ]
+      ],
+      "HDX_SOHD": "None"
     }
   },
   {
@@ -2852,7 +2983,8 @@
       "Project Description": "UCDP offers conflict datasets, battle event data, and fatalities statistics to support academic and policy research on global violence trends.\n",
       "Project Donor Agencies": [
         "recP0CwfhMP34aWn0"
-      ]
+      ],
+      "HDX_SOHD": "None"
     }
   },
   {
@@ -2873,7 +3005,8 @@
         "Climate Analytics"
       ],
       "Project Website": "https://drmkc.jrc.ec.europa.eu/inform-index",
-      "Project Description": "The INFORM Risk Index is a multi-hazard risk assessment tool developed by the Inter-Agency Standing Committee (IASC) and the European Commission. It combines data on hazards, vulnerability, and coping capacity to produce a composite score of disaster risk in over 190 countries. The index supports evidence-based disaster preparedness, humanitarian planning, and crisis response by identifying countries most at risk of crises that could overwhelm national response capacities. It is updated annually and incorporates more than 50 indicators.\n"
+      "Project Description": "The INFORM Risk Index is a multi-hazard risk assessment tool developed by the Inter-Agency Standing Committee (IASC) and the European Commission. It combines data on hazards, vulnerability, and coping capacity to produce a composite score of disaster risk in over 190 countries. The index supports evidence-based disaster preparedness, humanitarian planning, and crisis response by identifying countries most at risk of crises that could overwhelm national response capacities. It is updated annually and incorporates more than 50 indicators.\n",
+      "HDX_SOHD": "None"
     }
   },
   {
@@ -2892,7 +3025,8 @@
         "Monitoring & Alerts"
       ],
       "Project Website": "https://3is.org/monitoring-evaluation/",
-      "Project Description": "We support monitoring and evaluation (M&E) activities, which are fundamental to understanding impact, ensuring transparency, and fostering continuous improvements to projects.  \nOur goal is to deliver customized, robust frameworks and methodologies specifically designed to capture our partners’ initiatives. We believe that the most effective M&E processes are continuous and should be integrated throughout the project wherever feasible.  \nThis approach not only ensures ongoing tracking of progress but transparently communicates the impact of the project to both donors and the communities that we support.  \n\n"
+      "Project Description": "We support monitoring and evaluation (M&E) activities, which are fundamental to understanding impact, ensuring transparency, and fostering continuous improvements to projects.  \nOur goal is to deliver customized, robust frameworks and methodologies specifically designed to capture our partners’ initiatives. We believe that the most effective M&E processes are continuous and should be integrated throughout the project wherever feasible.  \nThis approach not only ensures ongoing tracking of progress but transparently communicates the impact of the project to both donors and the communities that we support.  \n\n",
+      "HDX_SOHD": "None"
     }
   },
   {
@@ -2919,7 +3053,8 @@
       "Project Donor Agencies": [
         "recCDa9F6ntBxGGkm",
         "reclUJwIt0bxL2bO0"
-      ]
+      ],
+      "HDX_SOHD": "None"
     }
   },
   {
@@ -2940,7 +3075,8 @@
         "Data Storage, Access & Sharing"
       ],
       "Project Website": "https://humanitarianaction.info/",
-      "Project Description": "The **Global Humanitarian Overview** is an annual assessment of global humanitarian needs and how to respond to them. This document provides an analysis of the drivers of needs and an overview of the resources required to support people targeted for assistance. It also provides an account of the humanitarian system’s collective achievements.\n"
+      "Project Description": "The **Global Humanitarian Overview** is an annual assessment of global humanitarian needs and how to respond to them. This document provides an analysis of the drivers of needs and an overview of the resources required to support people targeted for assistance. It also provides an account of the humanitarian system’s collective achievements.\n",
+      "HDX_SOHD": "None"
     }
   },
   {
@@ -2963,7 +3099,8 @@
         "Methodological Standards (e.g., Data Collection)"
       ],
       "Project Website": "not available in mptfo website yet",
-      "Project Description": "No description yet (website not available)\n"
+      "Project Description": "No description yet (website not available)\n",
+      "HDX_SOHD": "None"
     }
   },
   {
@@ -2988,7 +3125,8 @@
         "rec6XRPA9pKgC8j1J",
         "rec9TITYUt2a5OaKT",
         "recsrMWmoA037bW03"
-      ]
+      ],
+      "HDX_SOHD": "None"
     }
   },
   {
@@ -3014,7 +3152,8 @@
         "recCDa9F6ntBxGGkm",
         "reclUJwIt0bxL2bO0",
         "recWpBIPgpNUcdSAn"
-      ]
+      ],
+      "HDX_SOHD": "None"
     }
   },
   {
@@ -3033,7 +3172,8 @@
         "Food Security Analytics"
       ],
       "Project Website": "https://www.icpac.net/fsnwg/?update_type=2#results",
-      "Project Description": "FSNWG Special Reports\n"
+      "Project Description": "FSNWG Special Reports\n",
+      "HDX_SOHD": "None"
     }
   },
   {
@@ -3056,7 +3196,8 @@
       "Project Description": "The Conflict Monitors cover key areas and can support conflict analysis, violence-prevention initiatives, and efforts to monitor emerging crisis situations.\n",
       "Project Donor Agencies": [
         "rec1VhOJv9U6QKBBs"
-      ]
+      ],
+      "HDX_SOHD": "None"
     }
   },
   {
@@ -3078,7 +3219,8 @@
         "Upskilling & Training"
       ],
       "Project Website": "https://www.jointdatacenter.org/",
-      "Project Description": "The JDC is a joint initiative to improve the collection, analysis, and use of data on forcibly displaced populations. It provides public goods—surveys, microdata, and research—focused on informing development and humanitarian action through evidence-based approaches.\n"
+      "Project Description": "The JDC is a joint initiative to improve the collection, analysis, and use of data on forcibly displaced populations. It provides public goods—surveys, microdata, and research—focused on informing development and humanitarian action through evidence-based approaches.\n",
+      "HDX_SOHD": "None"
     }
   },
   {
@@ -3099,7 +3241,8 @@
         "Upskilling & Training"
       ],
       "Project Website": "https://www.fieldsdata.org/",
-      "Project Description": "This platform offers a consolidated dataset on local organizations, presenting a 3W map (Who does What, Where) that details the operational presence of both national and international organizations.\n\n"
+      "Project Description": "This platform offers a consolidated dataset on local organizations, presenting a 3W map (Who does What, Where) that details the operational presence of both national and international organizations.\n\n",
+      "HDX_SOHD": "None"
     }
   },
   {
@@ -3118,7 +3261,8 @@
         "Data Storage, Access & Sharing"
       ],
       "Project Website": "https://data.humdata.org/",
-      "Project Description": "Managed by the United Nations Office for the Coordination of Humanitarian Affairs (OCHA), the Humanitarian Data Exchange (HDX) is a centralized platform for sharing humanitarian data. It offers access to over 20,000 datasets from more than 300 organizations, covering themes such as population, conflict, health, and displacement. HDX includes the Data Grid and the COVID-19 Data Explorer, and it plays a crucial role in promoting data transparency, interoperability, and informed decision-making in humanitarian settings.\n"
+      "Project Description": "Managed by the United Nations Office for the Coordination of Humanitarian Affairs (OCHA), the Humanitarian Data Exchange (HDX) is a centralized platform for sharing humanitarian data. It offers access to over 20,000 datasets from more than 300 organizations, covering themes such as population, conflict, health, and displacement. HDX includes the Data Grid and the COVID-19 Data Explorer, and it plays a crucial role in promoting data transparency, interoperability, and informed decision-making in humanitarian settings.\n",
+      "HDX_SOHD": "None"
     }
   },
   {
@@ -3141,7 +3285,8 @@
       "Project Donor Agencies": [
         "recRutqdhqEZSnOB2",
         "recYxlC8x9puB69tx"
-      ]
+      ],
+      "HDX_SOHD": "20"
     }
   },
   {
@@ -3161,7 +3306,8 @@
         "Data Storage, Access & Sharing"
       ],
       "Project Website": "https://data.humdata.org/hapi",
-      "Project Description": "The initial scope of HDX HAPI mirrored that of the HDX Data Grids, which include the foundational data needed to understand a humanitarian context. However we have since expanded beyond the Data Grids, and a live dashboard of data availability by country can be found at <https://ocha-dap.github.io/viz-hapi-availability/>.\n"
+      "Project Description": "The initial scope of HDX HAPI mirrored that of the HDX Data Grids, which include the foundational data needed to understand a humanitarian context. However we have since expanded beyond the Data Grids, and a live dashboard of data availability by country can be found at <https://ocha-dap.github.io/viz-hapi-availability/>.\n",
+      "HDX_SOHD": "None"
     }
   },
   {
@@ -3182,7 +3328,8 @@
         "Data Storage, Access & Sharing"
       ],
       "Project Website": "https://data.unhcr.org/",
-      "Project Description": "The Operational Data Portal (ODP) enables UNHCR’s institutional responsibility to provide an information and data sharing platform to facilitate coordination of refugee emergencies. This was achieved using independent ‘situation views’ covering major emergencies such as the Syria situation or the Central African Republic emergency, among others\n"
+      "Project Description": "The Operational Data Portal (ODP) enables UNHCR’s institutional responsibility to provide an information and data sharing platform to facilitate coordination of refugee emergencies. This was achieved using independent ‘situation views’ covering major emergencies such as the Syria situation or the Central African Republic emergency, among others\n",
+      "HDX_SOHD": "None"
     }
   },
   {
@@ -3203,7 +3350,8 @@
         "Displacement & Migration Analytics"
       ],
       "Project Website": "https://www.internal-displacement.org/displacement-severity-assessments/",
-      "Project Description": "IDMC conducts annual severity assessments to compare the living conditions of internally displaced households to those of returnee and non-displaced households in the same country, including access to adequate housing, stable income, food security and education, as well as the fear of exposure to conflict or violence, explosive hazards and other threats.  \n"
+      "Project Description": "IDMC conducts annual severity assessments to compare the living conditions of internally displaced households to those of returnee and non-displaced households in the same country, including access to adequate housing, stable income, food security and education, as well as the fear of exposure to conflict or violence, explosive hazards and other threats.  \n",
+      "HDX_SOHD": "None"
     }
   },
   {
@@ -3222,7 +3370,8 @@
         "Humanitarian Access Data"
       ],
       "Project Website": "https://www.aidworkersecurity.org/",
-      "Project Description": "The Aid Worker Security Database (AWSD) records major incidents of violence against aid workers, with incident reports from 1997 through the present. Initiated in 2005, to date the AWSD remains the sole comprehensive global source of these data, providing the evidence base for analysis of the changing security environment for civilian aid operations.\n"
+      "Project Description": "The Aid Worker Security Database (AWSD) records major incidents of violence against aid workers, with incident reports from 1997 through the present. Initiated in 2005, to date the AWSD remains the sole comprehensive global source of these data, providing the evidence base for analysis of the changing security environment for civilian aid operations.\n",
+      "HDX_SOHD": "None"
     }
   },
   {
@@ -3242,7 +3391,8 @@
         "Data Storage, Access & Sharing"
       ],
       "Project Website": "https://data.unicef.org/resources/data_explorer/unicef_f/",
-      "Project Description": "UNICEF is the world’s leading source of data on children and maintains databases of hundreds of international valid and comparable indicators. With such a wealth of information available, the Data Warehouse has been designed to allow easy access to those indicators across a range of countries, with some datasets spanning back decades.\n"
+      "Project Description": "UNICEF is the world’s leading source of data on children and maintains databases of hundreds of international valid and comparable indicators. With such a wealth of information available, the Data Warehouse has been designed to allow easy access to those indicators across a range of countries, with some datasets spanning back decades.\n",
+      "HDX_SOHD": "None"
     }
   },
   {
@@ -3262,7 +3412,8 @@
         "Food Security Analytics"
       ],
       "Project Website": "https://www.fao.org/giews/en/",
-      "Project Description": "FAO’s GIEWS delivers near real-time crop and food supply monitoring, offering geospatial visualizations and drought alerts across over 100 countries. Data supports food security risk assessment and response planning.\n"
+      "Project Description": "FAO’s GIEWS delivers near real-time crop and food supply monitoring, offering geospatial visualizations and drought alerts across over 100 countries. Data supports food security risk assessment and response planning.\n",
+      "HDX_SOHD": "None"
     }
   },
   {
@@ -3273,7 +3424,8 @@
       "Provider Orgs Full Name": [
         "recHsNe20lr1CUAVu"
       ],
-      "CRAF’d-Funded Project?": "NO"
+      "CRAF’d-Funded Project?": "NO",
+      "HDX_SOHD": "None"
     }
   },
   {
@@ -3293,7 +3445,8 @@
         "Household Survey Data"
       ],
       "Project Website": "https://microdata.unhcr.org/index.php/home",
-      "Project Description": "An archive of anonymized survey and refugee data available under open-access licenses. It supports demographic and displacement research across global contexts.\n"
+      "Project Description": "An archive of anonymized survey and refugee data available under open-access licenses. It supports demographic and displacement research across global contexts.\n",
+      "HDX_SOHD": "None"
     }
   },
   {
@@ -3312,7 +3465,8 @@
         "Disarmament Data"
       ],
       "Project Website": "https://disarmament.unoda.org/convarms/milex/",
-      "Project Description": "UNODA publishes annual data on military spending from Member States, informing arms control and global transparency through structured datasets.\n"
+      "Project Description": "UNODA publishes annual data on military spending from Member States, informing arms control and global transparency through structured datasets.\n",
+      "HDX_SOHD": "None"
     }
   },
   {
@@ -3338,7 +3492,8 @@
       "Project Description": "EMPOW will address the data gap on Women, Peace and Security [WPS] by creating interoperable datasets: EMPOW Agency and EMPOW Reform. The objective is to generate and harmonize data on women's empowerment across all peace process phases - from pre-negotiations to post-war peacebuilding - and ensure compatibility with leading crisis data, such as the Uppsala Conflict Data Program.\n",
       "Project Donor Agencies": [
         "rec1VhOJv9U6QKBBs"
-      ]
+      ],
+      "HDX_SOHD": "None"
     }
   },
   {
@@ -3364,7 +3519,8 @@
         "recxopeJBWmkOfOtE",
         "rec5NKr3OLYmPMuOf",
         "rec1In4CerWhTywiy"
-      ]
+      ],
+      "HDX_SOHD": "None"
     }
   },
   {
@@ -3383,7 +3539,8 @@
         "Anticipatory and Early Action Forecasts"
       ],
       "Project Website": "https://www.who.int/emergencies/surveillance/early-warning-alert-and-response-system-ewars",
-      "Project Description": "The Early Warning Alert and Response System provides real-time monitoring of epidemic outbreaks. It supports crisis response planning and risk assessment using online reporting platforms and dashboards.\n"
+      "Project Description": "The Early Warning Alert and Response System provides real-time monitoring of epidemic outbreaks. It supports crisis response planning and risk assessment using online reporting platforms and dashboards.\n",
+      "HDX_SOHD": "None"
     }
   },
   {
@@ -3403,7 +3560,8 @@
         "Monitoring & Alerts"
       ],
       "Project Website": "https://510.global/service/trigger-model-development/",
-      "Project Description": "Trigger models are employed to establish danger levels that activate humanitarian anticipatory Early Action Protocols (EAPs). These models are developed using the Impact-Based Forecasting ([IBF](https://510.global/glossary/ibf/)) methodology. So far, we have built models that trigger EAPs for typhoon, flood, dzud, drought and dengue hazards. \n\n"
+      "Project Description": "Trigger models are employed to establish danger levels that activate humanitarian anticipatory Early Action Protocols (EAPs). These models are developed using the Impact-Based Forecasting ([IBF](https://510.global/glossary/ibf/)) methodology. So far, we have built models that trigger EAPs for typhoon, flood, dzud, drought and dengue hazards. \n\n",
+      "HDX_SOHD": "None"
     }
   },
   {
@@ -3419,7 +3577,8 @@
         "Crisis Analytics & Insights"
       ],
       "Project Website": "https://www.latinobarometro.org/analisis-online",
-      "Project Description": "The Latinobarómetro Online Analysis Platform allows you to explore and analyze data directly in your browser — without downloading files or registering. It is powered by JDSurvey, an analysis tool developed by JD Systems (Madrid), the company that maintains the Latinobarómetro Data Archive.\n"
+      "Project Description": "The Latinobarómetro Online Analysis Platform allows you to explore and analyze data directly in your browser — without downloading files or registering. It is powered by JDSurvey, an analysis tool developed by JD Systems (Madrid), the company that maintains the Latinobarómetro Data Archive.\n",
+      "HDX_SOHD": "None"
     }
   },
   {
@@ -3442,7 +3601,8 @@
       "Project Description": "The [International Committee of the Red Cross](https://www.climatecentre.org/) (ICRC), in collaboration with the [Netherlands Red Cross‘ data and digital initiative 510](https://510.global/), one of the largest humanitarian organizations active in fragile and crisis-affected settings—is embarking on an innovative project to intertwine climate risk, displacement, and conflict data into comprehensive risk datasets. This initiative aims to equip the ICRC and the broader humanitarian community with open-source composite datasets and risk indices to enhance decision-making and programming capabilities in sub-Saharan Africa, the Middle East, and North Africa (MENA) regions.\n",
       "Project Donor Agencies": [
         "rec1VhOJv9U6QKBBs"
-      ]
+      ],
+      "HDX_SOHD": "None"
     }
   },
   {
@@ -3465,7 +3625,8 @@
       "Project Description": "FEWS NET issues monthly and event-driven food insecurity forecasts based on integrated climate, socioeconomic, and agricultural data. Its publicly shared maps and data support anticipatory humanitarian planning and funding allocation in high-risk areas.\n",
       "Project Donor Agencies": [
         "recQUVhcVyxZlXJ3H"
-      ]
+      ],
+      "HDX_SOHD": "None"
     }
   },
   {
@@ -3485,7 +3646,8 @@
         "Gender Data"
       ],
       "Project Website": "https://uis.unesco.org/",
-      "Project Description": "UIS is UNESCO's global statistical agency for education, science, culture, and communication—publishing SDG indicators and open data in standardized formats.\n"
+      "Project Description": "UIS is UNESCO's global statistical agency for education, science, culture, and communication—publishing SDG indicators and open data in standardized formats.\n",
+      "HDX_SOHD": "None"
     }
   },
   {
@@ -3504,7 +3666,8 @@
         "Data Analytics"
       ],
       "Project Website": "https://www.fieldsdata.org/data-analytics",
-      "Project Description": "Embracing a grassroots ethos, we forge vital connections on the frontline. Before diving into data collection, we scour the digital realm, unearthing existing efforts to eliminate redundancy. Then, we fuse these online insights with raw field data, thanks to our trusted local partners.\n"
+      "Project Description": "Embracing a grassroots ethos, we forge vital connections on the frontline. Before diving into data collection, we scour the digital realm, unearthing existing efforts to eliminate redundancy. Then, we fuse these online insights with raw field data, thanks to our trusted local partners.\n",
+      "HDX_SOHD": "None"
     }
   },
   {
@@ -3526,7 +3689,8 @@
       "Project Description": "An analytical platform tracking country-level data system development and SDG readiness, providing dashboards and indicators to help align donor support and national priorities.\n",
       "Project Donor Agencies": [
         "recIUg3K9vtroebVE"
-      ]
+      ],
+      "HDX_SOHD": "None"
     }
   },
   {
@@ -3556,7 +3720,8 @@
         "recatUveyYdfEOdbu",
         "rec0sY1I5JZz6ZsUE",
         "rec1VhOJv9U6QKBBs"
-      ]
+      ],
+      "HDX_SOHD": "None"
     }
   },
   {
@@ -3577,7 +3742,8 @@
         "Peace Data"
       ],
       "Project Website": "https://www.sipri.org/databases",
-      "Project Description": "Provides publicly available datasets on the legal transfers of major conventional weapons between countries—widely used in security and disarmament monitoring.\n"
+      "Project Description": "Provides publicly available datasets on the legal transfers of major conventional weapons between countries—widely used in security and disarmament monitoring.\n",
+      "HDX_SOHD": "None"
     }
   },
   {
@@ -3607,7 +3773,8 @@
         "recatUveyYdfEOdbu",
         "rec0sY1I5JZz6ZsUE",
         "rec1VhOJv9U6QKBBs"
-      ]
+      ],
+      "HDX_SOHD": "None"
     }
   },
   {
@@ -3627,7 +3794,8 @@
         "Displacement & Migration Data"
       ],
       "Project Website": "https://www.unhcr.org/registration-guidance/chapter3/registration-tools/",
-      "Project Description": "UNHCR’s case management and registration system manages refugee and asylum-seeker data. The platform supports operational planning, registration, and data interoperability across protection and assistance programs.\n"
+      "Project Description": "UNHCR’s case management and registration system manages refugee and asylum-seeker data. The platform supports operational planning, registration, and data interoperability across protection and assistance programs.\n",
+      "HDX_SOHD": "None"
     }
   },
   {
@@ -3646,7 +3814,8 @@
         "Impact Evaluation"
       ],
       "Project Website": "https://paris21-data.github.io/CH_methodology_note/about-the-data.html",
-      "Project Description": "This is a global platform tracking investments in national statistical systems. It provides open-access monitoring of resource flows, donor commitments, and financing gaps for data for development.\n"
+      "Project Description": "This is a global platform tracking investments in national statistical systems. It provides open-access monitoring of resource flows, donor commitments, and financing gaps for data for development.\n",
+      "HDX_SOHD": "None"
     }
   },
   {
@@ -3665,7 +3834,8 @@
         "Capacity Building"
       ],
       "Project Website": "https://3is.org/capacity-building/",
-      "Project Description": "Our goal is to empower and equip organizations with the knowledge, skill sets, and tools needed to overcome challenges, enabling them to respond more effectively now and better sustain that success going forward.  \nWe create both in-person and remote learning environments that foster continuous improvement and innovation, ensuring partners are always growing and adapting to change. \n\n"
+      "Project Description": "Our goal is to empower and equip organizations with the knowledge, skill sets, and tools needed to overcome challenges, enabling them to respond more effectively now and better sustain that success going forward.  \nWe create both in-person and remote learning environments that foster continuous improvement and innovation, ensuring partners are always growing and adapting to change. \n\n",
+      "HDX_SOHD": "None"
     }
   },
   {
@@ -3684,7 +3854,8 @@
         "Health Data"
       ],
       "Project Website": "https://www.redcross.org/about-us/driven-by-data/public-health-and-safety-insights.html",
-      "Project Description": "PHASI® is a data integration and analysis platform developed by the American Red Cross that aggregates multi-sectoral indicators to identify public health and safety risks. It supports disaster planning, resource allocation, and early warning efforts.\n"
+      "Project Description": "PHASI® is a data integration and analysis platform developed by the American Red Cross that aggregates multi-sectoral indicators to identify public health and safety risks. It supports disaster planning, resource allocation, and early warning efforts.\n",
+      "HDX_SOHD": "None"
     }
   },
   {
@@ -3704,7 +3875,8 @@
         "Climate Analytics"
       ],
       "Project Website": "https://www.icpac.net/our-projects/e4drr/",
-      "Project Description": "CPAC's project is poised to enhance disaster risk management in Eastern Africa by integrating advanced hazard modeling, impact estimation, and climate storylines into the [East Africa Hazard Watch Portal](https://eahazardswatch.icpac.net/map/ea/). This approach aims to fill the critical data gaps for localized, actionable information.\n"
+      "Project Description": "CPAC's project is poised to enhance disaster risk management in Eastern Africa by integrating advanced hazard modeling, impact estimation, and climate storylines into the [East Africa Hazard Watch Portal](https://eahazardswatch.icpac.net/map/ea/). This approach aims to fill the critical data gaps for localized, actionable information.\n",
+      "HDX_SOHD": "None"
     }
   },
   {
@@ -3723,7 +3895,8 @@
         "Displacement & Migration Data"
       ],
       "Project Website": "https://unhcr-mena.github.io/RAIS/",
-      "Project Description": "RAIS is a digital system for monitoring and coordinating assistance in refugee operations. It supports operations by registering aid delivery and tracking service provision across displacement contexts.\n"
+      "Project Description": "RAIS is a digital system for monitoring and coordinating assistance in refugee operations. It supports operations by registering aid delivery and tracking service provision across displacement contexts.\n",
+      "HDX_SOHD": "None"
     }
   },
   {
@@ -3744,7 +3917,8 @@
         "Peace Data"
       ],
       "Project Website": "https://www.sipri.org/databases",
-      "Project Description": "Tracks international arms transfer assistance and cooperation initiatives. It supports transparency and reporting under the Arms Trade Treaty through searchable data.\n"
+      "Project Description": "Tracks international arms transfer assistance and cooperation initiatives. It supports transparency and reporting under the Arms Trade Treaty through searchable data.\n",
+      "HDX_SOHD": "None"
     }
   },
   {
@@ -3764,7 +3938,8 @@
         "Data Storage, Access & Sharing"
       ],
       "Project Website": "https://microdata.worldbank.org/index.php/home",
-      "Project Description": "The Microdata Library is a collection of datasets from the World Bank and other international, regional and national organizations.\nThe World Bank’s [Microdata Library](http://microdata.worldbank.org/) facilitates access to microdata collected through sample surveys of households, business establishments or other facilities. These microdataprovide information about people living in developing countries, their institutions, their environment, their communities and the operation of their economies. Many of these datasets are available as open data; check the [terms of use](http://microdata.worldbank.org/index.php/terms-of-use) associated with each dataset.\n"
+      "Project Description": "The Microdata Library is a collection of datasets from the World Bank and other international, regional and national organizations.\nThe World Bank’s [Microdata Library](http://microdata.worldbank.org/) facilitates access to microdata collected through sample surveys of households, business establishments or other facilities. These microdataprovide information about people living in developing countries, their institutions, their environment, their communities and the operation of their economies. Many of these datasets are available as open data; check the [terms of use](http://microdata.worldbank.org/index.php/terms-of-use) associated with each dataset.\n",
+      "HDX_SOHD": "None"
     }
   },
   {
@@ -3784,7 +3959,8 @@
         "Data Documentation & Metadata"
       ],
       "Project Website": "https://psdata.un.org/",
-      "Project Description": "A centralized data library offering curated conflict-related datasets, published by UN DPO to support analytic peace and security programming.\n"
+      "Project Description": "A centralized data library offering curated conflict-related datasets, published by UN DPO to support analytic peace and security programming.\n",
+      "HDX_SOHD": "None"
     }
   },
   {
@@ -3804,7 +3980,8 @@
         "Displacement & Migration Data"
       ],
       "Project Website": "https://www.unhcr.org/us/what-we-do/protect-human-rights/protection/registration-and-identity-management",
-      "Project Description": "At the center of UNHCR’s work with registration and identity management, lies PRIMES, UNHCR’s digital Population Registration and Identity Management Ecosystem. PRIMES brings together all of UNHCR’s digital registration, identity management and case management tools into one internally connected and interoperable ecosystem.\nPRIMES is comprised of several repositories for personal data (biographic and biometric) and supporting information, along with multiple tools which safely make use of the data to deliver targeted protection, assistance, and solutions to refugees and other displaced populations. PRIMES is an enabler for:\n- Identity management (including registration and biometric enrolment) and documentation\n- Case management (including the principal Protection aspects: Refugee Status Determination, Resettlement, Statelessness, Repatriation, Legal and Physical Protection, Child Protection, SGBV and others)\n- Assistance ([cash](https://www.unhcr.org/us/what-we-do/emergency-response/cash-based-interventions) and in-kind)\n- Data management, including reporting and analysis for evidence-informed action for quality protection outcomes\nPRIMES has been designed with cooperation and interoperability in mind so that refugee supporting governments and partners can make use of the data and technology which UNHCR has developed to enhance their ability to deliver services often together with UNHCR, in a safe and secure manner. PRIMES is fully aligned with the [Policy on the Protection of Personal Data of Persons of Concern to UNHCR](http://www.refworld.org/cgi-bin/texis/vtx/rwmain?page=search&docid=55643c1d4).\n"
+      "Project Description": "At the center of UNHCR’s work with registration and identity management, lies PRIMES, UNHCR’s digital Population Registration and Identity Management Ecosystem. PRIMES brings together all of UNHCR’s digital registration, identity management and case management tools into one internally connected and interoperable ecosystem.\nPRIMES is comprised of several repositories for personal data (biographic and biometric) and supporting information, along with multiple tools which safely make use of the data to deliver targeted protection, assistance, and solutions to refugees and other displaced populations. PRIMES is an enabler for:\n- Identity management (including registration and biometric enrolment) and documentation\n- Case management (including the principal Protection aspects: Refugee Status Determination, Resettlement, Statelessness, Repatriation, Legal and Physical Protection, Child Protection, SGBV and others)\n- Assistance ([cash](https://www.unhcr.org/us/what-we-do/emergency-response/cash-based-interventions) and in-kind)\n- Data management, including reporting and analysis for evidence-informed action for quality protection outcomes\nPRIMES has been designed with cooperation and interoperability in mind so that refugee supporting governments and partners can make use of the data and technology which UNHCR has developed to enhance their ability to deliver services often together with UNHCR, in a safe and secure manner. PRIMES is fully aligned with the [Policy on the Protection of Personal Data of Persons of Concern to UNHCR](http://www.refworld.org/cgi-bin/texis/vtx/rwmain?page=search&docid=55643c1d4).\n",
+      "HDX_SOHD": "None"
     }
   },
   {
@@ -3825,7 +4002,8 @@
         "Nutrition Analytics"
       ],
       "Project Website": "https://www.icpac.net/fsnwg/",
-      "Project Description": "\n"
+      "Project Description": "\n",
+      "HDX_SOHD": "None"
     }
   },
   {
@@ -3848,7 +4026,8 @@
       "Project Description": "The Conflict Exposure Calculator integrates data from ACLED with population size estimates from WorldPop, to estimate the civilian impact by proximity to an event, event type, type of violent actor or specific armed group, location, and time.\n",
       "Project Donor Agencies": [
         "rec1VhOJv9U6QKBBs"
-      ]
+      ],
+      "HDX_SOHD": "None"
     }
   },
   {
@@ -3867,7 +4046,8 @@
         "Data Storage, Access & Sharing"
       ],
       "Project Website": "https://www.sipri.org/databases",
-      "Project Description": "The SIPRI National Budget Archive offers government spending data across countries, enabling transparent comparison of military and civilian budget priorities to support disarmament and peacebuilding analysis.\n"
+      "Project Description": "The SIPRI National Budget Archive offers government spending data across countries, enabling transparent comparison of military and civilian budget priorities to support disarmament and peacebuilding analysis.\n",
+      "HDX_SOHD": "None"
     }
   },
   {
@@ -3889,7 +4069,8 @@
         "Damage Assessments"
       ],
       "Project Website": "https://www.impact-initiatives.org/resource-centre/",
-      "Project Description": "The Resource Centre provides open-access tools, maps, and datasets to support humanitarian needs analysis and tools like MSNA and JMCNA, enabling evidence-based decision-making during crises.\n"
+      "Project Description": "The Resource Centre provides open-access tools, maps, and datasets to support humanitarian needs analysis and tools like MSNA and JMCNA, enabling evidence-based decision-making during crises.\n",
+      "HDX_SOHD": "None"
     }
   },
   {
@@ -3909,7 +4090,8 @@
         "Communities of Practice"
       ],
       "Project Website": "https://www.ukhih.org/who-we-are/",
-      "Project Description": "A collaborative innovation lab promoting data-driven solutions in crisis settings. It supports tools prototyping and open datasets for humanitarian innovation.\n"
+      "Project Description": "A collaborative innovation lab promoting data-driven solutions in crisis settings. It supports tools prototyping and open datasets for humanitarian innovation.\n",
+      "HDX_SOHD": "None"
     }
   },
   {
@@ -3933,7 +4115,8 @@
       "Project Description": "Developed by the DPPA’s [Innovation Cell](https://futuringpeace.org/) in collaboration with academic partners, Geoguard is the first-ever geospatial dashboard for decision-makers with insight on environmental and conflict risks across the Middle East, Central, and West Africa. Using cutting-edge technology, Geoguard aggregates millions of data points on environmental conditions and geo-coded conflict events in an intuitive dashboard, using diverse data sources and locally collected or crowd-sourced information. It provides immediate insight on environmental risk-factors throughout specified regions and snapshots in time linked to trends in conflict and social unrest. \n",
       "Project Donor Agencies": [
         "rec1VhOJv9U6QKBBs"
-      ]
+      ],
+      "HDX_SOHD": "None"
     }
   },
   {
@@ -3952,7 +4135,8 @@
         "Upskilling & Training"
       ],
       "Project Website": "https://3is.org/strategy-systems-development/",
-      "Project Description": "We provide a suite of services that ensure your work is targeted and effective, allowing you to plan strategically, implement operations efficiently, and adapt proactively to the dynamic and changing situations. \nOur goal is to implement efficient systems that optimize operations, allowing partners to work smarter, not harder. This includes, but is not limited to, the development and integration of technology, which enhances efficiency, scalability, and communication. By streaming processes, we help reduce operational costs and help pave the way for sustainable impact. \n\n"
+      "Project Description": "We provide a suite of services that ensure your work is targeted and effective, allowing you to plan strategically, implement operations efficiently, and adapt proactively to the dynamic and changing situations. \nOur goal is to implement efficient systems that optimize operations, allowing partners to work smarter, not harder. This includes, but is not limited to, the development and integration of technology, which enhances efficiency, scalability, and communication. By streaming processes, we help reduce operational costs and help pave the way for sustainable impact. \n\n",
+      "HDX_SOHD": "None"
     }
   },
   {
@@ -3974,7 +4158,8 @@
         "Communities of Practice"
       ],
       "Project Website": "https://www.hum-dseg.org/about",
-      "Project Description": "DSEG is a community of practice focused on advancing ethical, responsible, and inclusive data science in humanitarian contexts. It supports standards, tools, and guidance that center protection principles and data accountability.\n"
+      "Project Description": "DSEG is a community of practice focused on advancing ethical, responsible, and inclusive data science in humanitarian contexts. It supports standards, tools, and guidance that center protection principles and data accountability.\n",
+      "HDX_SOHD": "None"
     }
   },
   {
@@ -3993,7 +4178,8 @@
         "Needs Assessment Data"
       ],
       "Project Website": "No website (See the notes column)",
-      "Project Description": "iMMAP delivers assessment tools, training, and data services to support MSNA-led humanitarian coordination across emergencies—streamlining data aggregation across sectors.\n"
+      "Project Description": "iMMAP delivers assessment tools, training, and data services to support MSNA-led humanitarian coordination across emergencies—streamlining data aggregation across sectors.\n",
+      "HDX_SOHD": "None"
     }
   },
   {
@@ -4017,7 +4203,8 @@
         "rec0sY1I5JZz6ZsUE",
         "rec0QlT9YlTVhHfEn",
         "recNLQhceOCXSMemo"
-      ]
+      ],
+      "HDX_SOHD": "None"
     }
   },
   {
@@ -4038,7 +4225,8 @@
         "Needs Assessment Data"
       ],
       "Project Website": "https://microdata.unhcr.org/index.php/catalog/1222",
-      "Project Description": "The 2024 Socio-Economic Insights Survey (SEIS) in Estonia provides a comprehensive assessment of the needs and vulnerabilities of refugees from Ukraine. Conducted as part of an annual interagency regional process led by UNHCR, this assessment supports the Regional Refugee Response Plan (RRP) for the Ukraine Situation. Covering topics such as protection, health, education, shelter, livelihoods, and food security, the survey offers critical data to inform evidence-based planning and prioritization, ensuring the specific needs of different refugee groups are addressed. Data collection was conducted through face-to-face interviews from May to July 2024 with a probability-based random sample of refugee households, managed collaboratively by UNHCR and the International Organization for Migration. Findings will guide strategic interventions and resource allocation to enhance the welfare and resilience of the refugee population in Estonia.\n"
+      "Project Description": "The 2024 Socio-Economic Insights Survey (SEIS) in Estonia provides a comprehensive assessment of the needs and vulnerabilities of refugees from Ukraine. Conducted as part of an annual interagency regional process led by UNHCR, this assessment supports the Regional Refugee Response Plan (RRP) for the Ukraine Situation. Covering topics such as protection, health, education, shelter, livelihoods, and food security, the survey offers critical data to inform evidence-based planning and prioritization, ensuring the specific needs of different refugee groups are addressed. Data collection was conducted through face-to-face interviews from May to July 2024 with a probability-based random sample of refugee households, managed collaboratively by UNHCR and the International Organization for Migration. Findings will guide strategic interventions and resource allocation to enhance the welfare and resilience of the refugee population in Estonia.\n",
+      "HDX_SOHD": "None"
     }
   },
   {
@@ -4057,7 +4245,8 @@
         "Education Data"
       ],
       "Project Website": "https://www.unesco.org/en/emergencies/education/need-know?hub=84615",
-      "Project Description": "UNESCO’s platform delivers open access data on emergency-affected education systems—including enrollment, disruptions, and inclusion metrics—supporting global response planning in crises and displacement settings.\n"
+      "Project Description": "UNESCO’s platform delivers open access data on emergency-affected education systems—including enrollment, disruptions, and inclusion metrics—supporting global response planning in crises and displacement settings.\n",
+      "HDX_SOHD": "None"
     }
   },
   {
@@ -4082,7 +4271,8 @@
       "Project Description": "CLIFDEW-GRID, developed by UNHCR in collaboration with the University of California Irvine, is an ambitious initiative dedicated to addressing the complex challenge of climate-induced forced displacement, including through the first risk index of its kind. This project leverages advanced data analytics and innovative approaches to empower CRAF’d ecosystem partners to anticipate and respond effectively to the growing crisis of climate-induced displacement. By forecasting subnational granularity, the project will better accommodate in-country heterogeneity than traditional country-level approaches. It will be piloted for countries in Western and Eastern Africa. \n\n<https://www.unhcr.org/us/clifdew-grid>\nCLIFDEW-GRID is an early warning grid-based modelling system designed to predict potential climate-induced forced displacement. It is a joint innovative data project led by UNHCR and the [University of California Irvine](https://catalogue.uci.edu/schoolofphysicalsciences/departmentofearthsystemscience/) and financed by the Complex Risk Analytics Fund ([CRAF'd](https://crafd.io/data-financing/clifdewgrid)).\n\n",
       "Project Donor Agencies": [
         "rec1VhOJv9U6QKBBs"
-      ]
+      ],
+      "HDX_SOHD": "None"
     }
   },
   {
@@ -4103,7 +4293,8 @@
         "Anticipatory and Early Action Forecasts"
       ],
       "Project Website": "https://drmkc.jrc.ec.europa.eu/inform-index",
-      "Project Description": "The INFORM Risk Index is a multi-hazard risk assessment tool developed by the Inter-Agency Standing Committee (IASC) and the European Commission. It combines data on hazards, vulnerability, and coping capacity to produce a composite score of disaster risk in over 190 countries. The index supports evidence-based disaster preparedness, humanitarian planning, and crisis response by identifying countries most at risk of crises that could overwhelm national response capacities. It is updated annually and incorporates more than 50 indicators.\n"
+      "Project Description": "The INFORM Risk Index is a multi-hazard risk assessment tool developed by the Inter-Agency Standing Committee (IASC) and the European Commission. It combines data on hazards, vulnerability, and coping capacity to produce a composite score of disaster risk in over 190 countries. The index supports evidence-based disaster preparedness, humanitarian planning, and crisis response by identifying countries most at risk of crises that could overwhelm national response capacities. It is updated annually and incorporates more than 50 indicators.\n",
+      "HDX_SOHD": "None"
     }
   },
   {
@@ -4125,7 +4316,8 @@
         "Poverty Data"
       ],
       "Project Website": "https://acf.gov/orr/programs/refugees/annual-survey-refugees",
-      "Project Description": "ASR monitors the demographic and socioeconomic profiles of refugee populations worldwide. Its standardized surveys and data visualizations support evidence-based protection, education, and livelihood programming.\n"
+      "Project Description": "ASR monitors the demographic and socioeconomic profiles of refugee populations worldwide. Its standardized surveys and data visualizations support evidence-based protection, education, and livelihood programming.\n",
+      "HDX_SOHD": "None"
     }
   },
   {
@@ -4149,7 +4341,8 @@
         "Common Indicators"
       ],
       "Project Website": "https://dtm.iom.int/data-product-series/multi-sectoral-needs-assessment",
-      "Project Description": "MSNA is a standardized, country-level data collection initiative that captures multi-sectoral needs in crisis-affected populations. Data collected informs strategic planning, prioritization, and humanitarian response efforts.\n"
+      "Project Description": "MSNA is a standardized, country-level data collection initiative that captures multi-sectoral needs in crisis-affected populations. Data collected informs strategic planning, prioritization, and humanitarian response efforts.\n",
+      "HDX_SOHD": "None"
     }
   },
   {
@@ -4159,7 +4352,8 @@
       "product_key": "capacity-training",
       "Provider Orgs Full Name": [
         "recHsNe20lr1CUAVu"
-      ]
+      ],
+      "HDX_SOHD": "None"
     }
   },
   {
@@ -4185,7 +4379,8 @@
         "recbvrcYZZW7mBnCU",
         "rec0sY1I5JZz6ZsUE",
         "recAXDKxEbXsaHav4"
-      ]
+      ],
+      "HDX_SOHD": "None"
     }
   }
 ]

@@ -39,6 +39,7 @@ FIELDS_PROJECTS = [
     "Project Website",
     "Project Description",
     "Project Donor Agencies",
+    "HDX_SOHD"
     
 ]
 
