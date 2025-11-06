@@ -1,0 +1,3845 @@
+[
+  {
+    "id": "rec0GjvWJvXdjKPu0",
+    "fields": {
+      "THEME_ID": "rec0GjvWJvXdjKPu0",
+      "Linked Investment Type": [
+        "recqH1EJ0zW8l9lqn"
+      ],
+      "Investment Type": [
+        "Learning & Exchange"
+      ],
+      "Investment Themes [Text Key]": "Talk Series",
+      "Investment Type Order": [
+        6
+      ],
+      "Count: Data Sets & Commons Priorities": 0,
+      "Count (Survey: Infrastructure & Platforms Priorities)": 0,
+      "Count (Survey: Crisis Analytics & Insights Priorities)": 0,
+      "Count (Survey: Human Capital & Know-how Priorities)": 0,
+      "Count (Survey: Standards & Coordination Priorities)": 0,
+      "Count (Survey: Learning & Exchange Priorities)": 0,
+      "Investment Theme(s)": "Talk Series",
+      "Summary (Workshop: Donor/Contributing Partners)": {
+        "state": "error",
+        "errorType": "emptyDependency",
+        "value": null,
+        "isStale": false
+      }
+    }
+  },
+  {
+    "id": "rec1VqIgn5QkRULVv",
+    "fields": {
+      "THEME_ID": "rec1VqIgn5QkRULVv",
+      "Linked Investment Type": [
+        "recqH1EJ0zW8l9lqn"
+      ],
+      "Investment Type": [
+        "Learning & Exchange"
+      ],
+      "Investment Themes [Text Key]": "Peer Learning",
+      "Investment Type Order": [
+        6
+      ],
+      "Survey: Learning & Exchange Priorities": [
+        "recdD14hmJf4YBVgb",
+        "recsdJioQCh6jEJep",
+        "recG7awSTTZzFVP64",
+        "recmJftOXoJojM0Th",
+        "rec86pSbmLv8TbY8D",
+        "recAwNDEguHa5XK4J",
+        "recnwHuZwBwawj7Ct"
+      ],
+      "Count: Data Sets & Commons Priorities": 0,
+      "Count (Survey: Infrastructure & Platforms Priorities)": 0,
+      "Count (Survey: Crisis Analytics & Insights Priorities)": 0,
+      "Count (Survey: Human Capital & Know-how Priorities)": 0,
+      "Count (Survey: Standards & Coordination Priorities)": 0,
+      "Count (Survey: Learning & Exchange Priorities)": 7,
+      "Investment Theme(s)": "Peer Learning",
+      "Summary (Workshop: Donor/Contributing Partners)": {
+        "state": "error",
+        "errorType": "emptyDependency",
+        "value": null,
+        "isStale": false
+      }
+    }
+  },
+  {
+    "id": "rec3J0oK6yLW6VGxD",
+    "fields": {
+      "THEME_ID": "rec3J0oK6yLW6VGxD",
+      "Linked Investment Type": [
+        "recTabK8HX3v0dmPg"
+      ],
+      "Investment Type": [
+        "Crisis Analytics & Insights"
+      ],
+      "Investment Themes [Text Key]": "Secondary Data Review / Analysis",
+      "Investment Type Order": [
+        3
+      ],
+      "Survey: Crisis Analytics & Insights Priorities": [
+        "recKflMuy6GI01hoW",
+        "recdD14hmJf4YBVgb",
+        "recmJftOXoJojM0Th"
+      ],
+      "Count: Data Sets & Commons Priorities": 0,
+      "Count (Survey: Infrastructure & Platforms Priorities)": 0,
+      "Count (Survey: Crisis Analytics & Insights Priorities)": 3,
+      "Count (Survey: Human Capital & Know-how Priorities)": 0,
+      "Count (Survey: Standards & Coordination Priorities)": 0,
+      "Count (Survey: Learning & Exchange Priorities)": 0,
+      "Investment Theme(s)": "Secondary Data Review / Analysis",
+      "Summary (Workshop: Donor/Contributing Partners)": {
+        "state": "error",
+        "errorType": "emptyDependency",
+        "value": null,
+        "isStale": false
+      },
+      "theme_description": "Secondary Data Review/Analysis is the process of collecting, evaluating, and synthesizing existing data from various sources to inform crisis response and decision-making in humanitarian contexts."
+    }
+  },
+  {
+    "id": "rec3txr41waJFGqhU",
+    "fields": {
+      "THEME_ID": "rec3txr41waJFGqhU",
+      "Linked Investment Type": [
+        "rec6Pib8EhL0nZfPJ"
+      ],
+      "Investment Type": [
+        "Infrastructure & Platforms"
+      ],
+      "Investment Themes [Text Key]": "API Development & Management",
+      "Investment Type Order": [
+        2
+      ],
+      "Survey: Infrastructure & Platforms Priorities": [
+        "recyFeFv1wORnPhOX",
+        "recKflMuy6GI01hoW",
+        "recsdJioQCh6jEJep",
+        "recJwEAi6aNknm8g8",
+        "recndRlsuLcLAKu4w",
+        "reckquV6EPOOwHGpq",
+        "recG7awSTTZzFVP64",
+        "recykau7zFwNuuRfD"
+      ],
+      "Count: Data Sets & Commons Priorities": 0,
+      "Count (Survey: Infrastructure & Platforms Priorities)": 8,
+      "Count (Survey: Crisis Analytics & Insights Priorities)": 0,
+      "Count (Survey: Human Capital & Know-how Priorities)": 0,
+      "Count (Survey: Standards & Coordination Priorities)": 0,
+      "Count (Survey: Learning & Exchange Priorities)": 0,
+      "Investment Theme(s)": "API Development & Management",
+      "Summary (Workshop: Donor/Contributing Partners)": {
+        "state": "error",
+        "errorType": "emptyDependency",
+        "value": null,
+        "isStale": false
+      }
+    }
+  },
+  {
+    "id": "rec4AfeNsozbklm0t",
+    "fields": {
+      "THEME_ID": "rec4AfeNsozbklm0t",
+      "Linked Investment Type": [
+        "recrKFJAlS8YmW1Qi"
+      ],
+      "Investment Type": [
+        "Data Sets & Commons"
+      ],
+      "Survey: Data Sets & Commons Priorities": [
+        "rec44wmxI5Jk3NyKU",
+        "recsdJioQCh6jEJep",
+        "recvZdLldU4DDV3fL",
+        "recauIcjLxpShs4Av",
+        "recqdaVuFOyhgKa0t",
+        "recCY4InqL8mKlvgM",
+        "recUCZe9nJj8V8ULV"
+      ],
+      "Investment Themes [Text Key]": "Humanitarian Access Data",
+      "Data Ecosystem Projects": [
+        "rec6rg7iVHuTnkQVe",
+        "recLGd1qlYszSKznz",
+        "recniOH9IPt0Vz07E",
+        "rec96xC14xTkyyKlP",
+        "recLN9L7RGRz4p1zM",
+        "rec2eT5BuCp87chHm",
+        "recWKNeEWEv3vKeyX"
+      ],
+      "Investment Type Order": [
+        1
+      ],
+      "Count: Data Sets & Commons Priorities": 7,
+      "Count (Survey: Infrastructure & Platforms Priorities)": 0,
+      "Count (Survey: Crisis Analytics & Insights Priorities)": 0,
+      "Count (Survey: Human Capital & Know-how Priorities)": 0,
+      "Count (Survey: Standards & Coordination Priorities)": 0,
+      "Priority: Donor/Contributing Partners": "HIGH",
+      "Count (Survey: Learning & Exchange Priorities)": 0,
+      "Investment Theme(s)": "Humanitarian Access Data",
+      "Summary (Workshop: Donor/Contributing Partners)": {
+        "state": "error",
+        "errorType": "emptyDependency",
+        "value": null,
+        "isStale": false
+      }
+    }
+  },
+  {
+    "id": "rec5YL3DBNcO1yuvG",
+    "fields": {
+      "THEME_ID": "rec5YL3DBNcO1yuvG",
+      "Linked Investment Type": [
+        "recwuGLOXpe7ElgYv"
+      ],
+      "Investment Type": [
+        "Standards & Coordination"
+      ],
+      "Investment Themes [Text Key]": "Common Indicators",
+      "Data Ecosystem Projects": [
+        "reczIeSUeAdEWMKSk"
+      ],
+      "Investment Type Order": [
+        5
+      ],
+      "Survey: Standards & Coordination Priorities": [
+        "recUloRidGuWLPpDk",
+        "recRNvYEOVuVikm3o",
+        "recKflMuy6GI01hoW",
+        "recsdJioQCh6jEJep",
+        "rechMLW2zWKburRYY",
+        "reckquV6EPOOwHGpq",
+        "recSxJM7NXQpobyYi",
+        "recEPPl3NAv57t1MJ",
+        "recauIcjLxpShs4Av",
+        "recfKUpWThFexbOM8",
+        "recmJftOXoJojM0Th",
+        "recUCZe9nJj8V8ULV",
+        "recAwNDEguHa5XK4J",
+        "rec9YlBY9v3lz8Fda",
+        "recAHDIrT8uzr6iRj"
+      ],
+      "Count: Data Sets & Commons Priorities": 0,
+      "Count (Survey: Infrastructure & Platforms Priorities)": 0,
+      "Count (Survey: Crisis Analytics & Insights Priorities)": 0,
+      "Count (Survey: Human Capital & Know-how Priorities)": 0,
+      "Count (Survey: Standards & Coordination Priorities)": 15,
+      "Count (Survey: Learning & Exchange Priorities)": 0,
+      "Investment Theme(s)": "Common Indicators",
+      "Summary (Workshop: Donor/Contributing Partners)": {
+        "state": "error",
+        "errorType": "emptyDependency",
+        "value": null,
+        "isStale": false
+      }
+    }
+  },
+  {
+    "id": "rec610y9dWNUfhKjA",
+    "fields": {
+      "THEME_ID": "rec610y9dWNUfhKjA",
+      "Linked Investment Type": [
+        "rec6Pib8EhL0nZfPJ"
+      ],
+      "Investment Type": [
+        "Infrastructure & Platforms"
+      ],
+      "Investment Themes [Text Key]": "Geographic Information Systems (GIS)",
+      "Data Ecosystem Projects": [
+        "recgPTOSUzIQS7uLs",
+        "rec04lJaB92fTs0JH",
+        "rec2Su6C7bHl4BC7h",
+        "recFnNCbi5RYJNchr",
+        "recEuWdBixgTpQKhR"
+      ],
+      "Investment Type Order": [
+        2
+      ],
+      "Survey: Infrastructure & Platforms Priorities": [
+        "recTq8xGeKTVo1RY4",
+        "recEPPl3NAv57t1MJ",
+        "reclIpnVpxBj2H0YM",
+        "recG7awSTTZzFVP64",
+        "rec86pSbmLv8TbY8D",
+        "rec9YlBY9v3lz8Fda"
+      ],
+      "Count: Data Sets & Commons Priorities": 0,
+      "Count (Survey: Infrastructure & Platforms Priorities)": 6,
+      "Count (Survey: Crisis Analytics & Insights Priorities)": 0,
+      "Count (Survey: Human Capital & Know-how Priorities)": 0,
+      "Count (Survey: Standards & Coordination Priorities)": 0,
+      "Count (Survey: Learning & Exchange Priorities)": 0,
+      "Investment Theme(s)": "Geographic Information Systems (GIS)",
+      "Summary (Workshop: Donor/Contributing Partners)": {
+        "state": "error",
+        "errorType": "emptyDependency",
+        "value": null,
+        "isStale": false
+      }
+    }
+  },
+  {
+    "id": "rec6ka1VRk4BWEpTF",
+    "fields": {
+      "THEME_ID": "rec6ka1VRk4BWEpTF",
+      "Linked Investment Type": [
+        "recqH1EJ0zW8l9lqn"
+      ],
+      "Investment Type": [
+        "Learning & Exchange"
+      ],
+      "Investment Themes [Text Key]": "Workshops",
+      "Data Ecosystem Projects": [
+        "rech8GCismNX3Bm8p"
+      ],
+      "Investment Type Order": [
+        6
+      ],
+      "Survey: Learning & Exchange Priorities": [
+        "recRNvYEOVuVikm3o",
+        "recKflMuy6GI01hoW",
+        "recdD14hmJf4YBVgb",
+        "recJwEAi6aNknm8g8",
+        "reciRQowoWHhCPgd0",
+        "rechMLW2zWKburRYY",
+        "reco5W39j2T2GQbwh",
+        "recEPPl3NAv57t1MJ",
+        "reclIpnVpxBj2H0YM",
+        "recOYVkcXzWVEiXtL",
+        "recmJftOXoJojM0Th",
+        "recRsAJqKXShWeDP9",
+        "recMRTcX26O14WfSI",
+        "recUCZe9nJj8V8ULV",
+        "recAwNDEguHa5XK4J",
+        "recxywHnzVtzBPVB1",
+        "recCP7c2CsJttJFUj"
+      ],
+      "Count: Data Sets & Commons Priorities": 0,
+      "Count (Survey: Infrastructure & Platforms Priorities)": 0,
+      "Count (Survey: Crisis Analytics & Insights Priorities)": 0,
+      "Count (Survey: Human Capital & Know-how Priorities)": 0,
+      "Count (Survey: Standards & Coordination Priorities)": 0,
+      "Count (Survey: Learning & Exchange Priorities)": 17,
+      "Investment Theme(s)": "Workshops",
+      "Summary (Workshop: Donor/Contributing Partners)": {
+        "state": "error",
+        "errorType": "emptyDependency",
+        "value": null,
+        "isStale": false
+      }
+    }
+  },
+  {
+    "id": "rec77XAdInMuqjU0N",
+    "fields": {
+      "THEME_ID": "rec77XAdInMuqjU0N",
+      "Linked Investment Type": [
+        "recTabK8HX3v0dmPg"
+      ],
+      "Investment Type": [
+        "Crisis Analytics & Insights"
+      ],
+      "Investment Themes [Text Key]": "Composite Indices",
+      "Data Ecosystem Projects": [
+        "recYzS7BrsxBG8llV",
+        "recdr2wcQiX1Ch1ZF",
+        "recLn4QiWGniBsWoe"
+      ],
+      "Investment Type Order": [
+        3
+      ],
+      "Survey: Crisis Analytics & Insights Priorities": [
+        "recRNvYEOVuVikm3o",
+        "rechMLW2zWKburRYY",
+        "reckquV6EPOOwHGpq",
+        "recSxJM7NXQpobyYi"
+      ],
+      "Count: Data Sets & Commons Priorities": 0,
+      "Count (Survey: Infrastructure & Platforms Priorities)": 0,
+      "Count (Survey: Crisis Analytics & Insights Priorities)": 4,
+      "Count (Survey: Human Capital & Know-how Priorities)": 0,
+      "Count (Survey: Standards & Coordination Priorities)": 0,
+      "Count (Survey: Learning & Exchange Priorities)": 0,
+      "Investment Theme(s)": "Composite Indices",
+      "Summary (Workshop: Donor/Contributing Partners)": {
+        "state": "error",
+        "errorType": "emptyDependency",
+        "value": null,
+        "isStale": false
+      },
+      "theme_description": "Composite Indices in humanitarian data are aggregated measures that combine multiple indicators to provide a comprehensive overview of crisis severity, vulnerability, or needs for more effective crisis analytics and decision-making."
+    }
+  },
+  {
+    "id": "rec7XanVHUAb6VbEt",
+    "fields": {
+      "THEME_ID": "rec7XanVHUAb6VbEt",
+      "Linked Investment Type": [
+        "recUueuvKqzUgF7Xo"
+      ],
+      "Investment Type": [
+        "Human Capital & Know-how"
+      ],
+      "Investment Themes [Text Key]": "Surge Capacity",
+      "Investment Type Order": [
+        4
+      ],
+      "Survey: Human Capital & Know-how Priorities": [
+        "recGzuGtbK7nrQ6vB",
+        "recdD14hmJf4YBVgb",
+        "rec44wmxI5Jk3NyKU",
+        "reciRQowoWHhCPgd0",
+        "recEPPl3NAv57t1MJ",
+        "recauIcjLxpShs4Av",
+        "recG7awSTTZzFVP64",
+        "rec86pSbmLv8TbY8D",
+        "recUCZe9nJj8V8ULV",
+        "rec9YlBY9v3lz8Fda"
+      ],
+      "Count: Data Sets & Commons Priorities": 0,
+      "Count (Survey: Infrastructure & Platforms Priorities)": 0,
+      "Count (Survey: Crisis Analytics & Insights Priorities)": 0,
+      "Count (Survey: Human Capital & Know-how Priorities)": 10,
+      "Count (Survey: Standards & Coordination Priorities)": 0,
+      "Count (Survey: Learning & Exchange Priorities)": 0,
+      "Investment Theme(s)": "Surge Capacity",
+      "Summary (Workshop: Donor/Contributing Partners)": {
+        "state": "error",
+        "errorType": "emptyDependency",
+        "value": null,
+        "isStale": false
+      }
+    }
+  },
+  {
+    "id": "rec8eDmiWxMYSl91A",
+    "fields": {
+      "THEME_ID": "rec8eDmiWxMYSl91A",
+      "Linked Investment Type": [
+        "recrKFJAlS8YmW1Qi"
+      ],
+      "Investment Type": [
+        "Data Sets & Commons"
+      ],
+      "Investment Themes [Text Key]": "Sexual & Reproductive Health Data",
+      "Investment Type Order": [
+        1
+      ],
+      "Count: Data Sets & Commons Priorities": 0,
+      "Count (Survey: Infrastructure & Platforms Priorities)": 0,
+      "Count (Survey: Crisis Analytics & Insights Priorities)": 0,
+      "Count (Survey: Human Capital & Know-how Priorities)": 0,
+      "Count (Survey: Standards & Coordination Priorities)": 0,
+      "Count (Survey: Learning & Exchange Priorities)": 0,
+      "Investment Theme(s)": "Sexual & Reproductive Health Data",
+      "Summary (Workshop: Donor/Contributing Partners)": {
+        "state": "error",
+        "errorType": "emptyDependency",
+        "value": null,
+        "isStale": false
+      }
+    }
+  },
+  {
+    "id": "rec8sy4hajipCB8L2",
+    "fields": {
+      "THEME_ID": "rec8sy4hajipCB8L2",
+      "Linked Investment Type": [
+        "recTabK8HX3v0dmPg"
+      ],
+      "Investment Type": [
+        "Crisis Analytics & Insights"
+      ],
+      "Investment Themes [Text Key]": "Needs Assessment Analytics",
+      "Data Ecosystem Projects": [
+        "reczIeSUeAdEWMKSk"
+      ],
+      "Investment Type Order": [
+        3
+      ],
+      "Survey: Crisis Analytics & Insights Priorities": [
+        "recYN0aPBDa0Msynv",
+        "recJwEAi6aNknm8g8",
+        "reclIpnVpxBj2H0YM",
+        "recauIcjLxpShs4Av",
+        "recfKUpWThFexbOM8",
+        "recykau7zFwNuuRfD",
+        "recMRTcX26O14WfSI"
+      ],
+      "Count: Data Sets & Commons Priorities": 0,
+      "Count (Survey: Infrastructure & Platforms Priorities)": 0,
+      "Count (Survey: Crisis Analytics & Insights Priorities)": 7,
+      "Count (Survey: Human Capital & Know-how Priorities)": 0,
+      "Count (Survey: Standards & Coordination Priorities)": 0,
+      "Count (Survey: Learning & Exchange Priorities)": 0,
+      "Investment Theme(s)": "Needs Assessment",
+      "Summary (Workshop: Donor/Contributing Partners)": {
+        "state": "error",
+        "errorType": "emptyDependency",
+        "value": null,
+        "isStale": false
+      },
+      "theme_description": "Needs Assessment is the process of systematically collecting and analyzing data to identify and prioritize the most urgent needs of affected populations during a humanitarian crisis."
+    }
+  },
+  {
+    "id": "rec9VOolCx1p7Uj9I",
+    "fields": {
+      "THEME_ID": "rec9VOolCx1p7Uj9I",
+      "Linked Investment Type": [
+        "recUueuvKqzUgF7Xo"
+      ],
+      "Investment Type": [
+        "Human Capital & Know-how"
+      ],
+      "Investment Themes [Text Key]": "Capacity Building",
+      "Data Ecosystem Projects": [
+        "recIUSUS3NNXaMHCQ",
+        "recD0o9DgLleR3ctz",
+        "recuMPe1WRudzeyXf"
+      ],
+      "Investment Type Order": [
+        4
+      ],
+      "Survey: Human Capital & Know-how Priorities": [
+        "recyFeFv1wORnPhOX",
+        "recUloRidGuWLPpDk",
+        "recRNvYEOVuVikm3o",
+        "recKflMuy6GI01hoW",
+        "recGzuGtbK7nrQ6vB",
+        "recdD14hmJf4YBVgb",
+        "rec44wmxI5Jk3NyKU",
+        "recsdJioQCh6jEJep",
+        "recJwEAi6aNknm8g8",
+        "recTq8xGeKTVo1RY4",
+        "reciRQowoWHhCPgd0",
+        "recndRlsuLcLAKu4w",
+        "reckquV6EPOOwHGpq",
+        "reco5W39j2T2GQbwh",
+        "recEPPl3NAv57t1MJ",
+        "reclIpnVpxBj2H0YM",
+        "recauIcjLxpShs4Av",
+        "recfKUpWThFexbOM8",
+        "recG7awSTTZzFVP64",
+        "rec5ClssrbllpDxE5",
+        "recqdaVuFOyhgKa0t",
+        "recFhDbWgQ9kn69Sd",
+        "recmJftOXoJojM0Th",
+        "recRsAJqKXShWeDP9",
+        "recMzpGCOGkh8gxiN",
+        "recUCZe9nJj8V8ULV",
+        "recAwNDEguHa5XK4J",
+        "rec9YlBY9v3lz8Fda",
+        "recAHDIrT8uzr6iRj",
+        "recCP7c2CsJttJFUj"
+      ],
+      "Count: Data Sets & Commons Priorities": 0,
+      "Count (Survey: Infrastructure & Platforms Priorities)": 0,
+      "Count (Survey: Crisis Analytics & Insights Priorities)": 0,
+      "Count (Survey: Human Capital & Know-how Priorities)": 30,
+      "Count (Survey: Standards & Coordination Priorities)": 0,
+      "Count (Survey: Learning & Exchange Priorities)": 0,
+      "Investment Theme(s)": "Capacity Building",
+      "Summary (Workshop: Donor/Contributing Partners)": {
+        "state": "error",
+        "errorType": "emptyDependency",
+        "value": null,
+        "isStale": false
+      }
+    }
+  },
+  {
+    "id": "recBRc1Ug57BNya3W",
+    "fields": {
+      "THEME_ID": "recBRc1Ug57BNya3W",
+      "Linked Investment Type": [
+        "recqH1EJ0zW8l9lqn"
+      ],
+      "Investment Type": [
+        "Learning & Exchange"
+      ],
+      "Investment Themes [Text Key]": "Best Practices",
+      "Data Ecosystem Projects": [
+        "recZ87vNFuxhuJIih",
+        "rec8taCKOmbZu5s4Z"
+      ],
+      "Investment Type Order": [
+        6
+      ],
+      "Survey: Learning & Exchange Priorities": [
+        "recyFeFv1wORnPhOX",
+        "recGzuGtbK7nrQ6vB",
+        "rec44wmxI5Jk3NyKU",
+        "recsdJioQCh6jEJep",
+        "recTq8xGeKTVo1RY4",
+        "reciRQowoWHhCPgd0",
+        "rechMLW2zWKburRYY",
+        "recndRlsuLcLAKu4w",
+        "reckquV6EPOOwHGpq",
+        "recSxJM7NXQpobyYi",
+        "recEPPl3NAv57t1MJ",
+        "reclIpnVpxBj2H0YM",
+        "recauIcjLxpShs4Av",
+        "recfKUpWThFexbOM8",
+        "recG7awSTTZzFVP64",
+        "rec5ClssrbllpDxE5",
+        "recqdaVuFOyhgKa0t",
+        "recMzpGCOGkh8gxiN",
+        "rec86pSbmLv8TbY8D",
+        "recMRTcX26O14WfSI",
+        "recUCZe9nJj8V8ULV",
+        "rec9YlBY9v3lz8Fda"
+      ],
+      "Count: Data Sets & Commons Priorities": 0,
+      "Count (Survey: Infrastructure & Platforms Priorities)": 0,
+      "Count (Survey: Crisis Analytics & Insights Priorities)": 0,
+      "Count (Survey: Human Capital & Know-how Priorities)": 0,
+      "Count (Survey: Standards & Coordination Priorities)": 0,
+      "Count (Survey: Learning & Exchange Priorities)": 22,
+      "Investment Theme(s)": "Best Practices",
+      "Summary (Workshop: Donor/Contributing Partners)": {
+        "state": "error",
+        "errorType": "emptyDependency",
+        "value": null,
+        "isStale": false
+      }
+    }
+  },
+  {
+    "id": "recDajxpeMyjixDTZ",
+    "fields": {
+      "THEME_ID": "recDajxpeMyjixDTZ",
+      "Linked Investment Type": [
+        "rec6Pib8EhL0nZfPJ"
+      ],
+      "Investment Type": [
+        "Infrastructure & Platforms"
+      ],
+      "Investment Themes [Text Key]": "Data Governance & Management",
+      "Data Ecosystem Projects": [
+        "recPMQlg07QkflL3i",
+        "rec96xC14xTkyyKlP",
+        "recXcSKhSy2s7tunj"
+      ],
+      "Investment Type Order": [
+        2
+      ],
+      "Survey: Infrastructure & Platforms Priorities": [
+        "rec44wmxI5Jk3NyKU",
+        "rechMLW2zWKburRYY",
+        "recUCZe9nJj8V8ULV",
+        "recCP7c2CsJttJFUj"
+      ],
+      "Count: Data Sets & Commons Priorities": 0,
+      "Count (Survey: Infrastructure & Platforms Priorities)": 4,
+      "Count (Survey: Crisis Analytics & Insights Priorities)": 0,
+      "Count (Survey: Human Capital & Know-how Priorities)": 0,
+      "Count (Survey: Standards & Coordination Priorities)": 0,
+      "Count (Survey: Learning & Exchange Priorities)": 0,
+      "Investment Theme(s)": "Data Governance & Management",
+      "Summary (Workshop: Donor/Contributing Partners)": {
+        "state": "error",
+        "errorType": "emptyDependency",
+        "value": null,
+        "isStale": false
+      }
+    }
+  },
+  {
+    "id": "recDlBHZhSiCmMmlY",
+    "fields": {
+      "THEME_ID": "recDlBHZhSiCmMmlY",
+      "Linked Investment Type": [
+        "recUueuvKqzUgF7Xo"
+      ],
+      "Investment Type": [
+        "Human Capital & Know-how"
+      ],
+      "Investment Themes [Text Key]": "Information Management Services  ",
+      "Data Ecosystem Projects": [
+        "recLjLXetvlqcDMXB"
+      ],
+      "Investment Type Order": [
+        4
+      ],
+      "Count: Data Sets & Commons Priorities": 0,
+      "Count (Survey: Infrastructure & Platforms Priorities)": 0,
+      "Count (Survey: Crisis Analytics & Insights Priorities)": 0,
+      "Count (Survey: Human Capital & Know-how Priorities)": 0,
+      "Count (Survey: Standards & Coordination Priorities)": 0,
+      "Count (Survey: Learning & Exchange Priorities)": 0,
+      "Investment Theme(s)": "Information Management Services",
+      "Summary (Workshop: Donor/Contributing Partners)": {
+        "state": "error",
+        "errorType": "emptyDependency",
+        "value": null,
+        "isStale": false
+      }
+    }
+  },
+  {
+    "id": "recEe1qOrTw8QrenK",
+    "fields": {
+      "THEME_ID": "recEe1qOrTw8QrenK",
+      "Linked Investment Type": [
+        "recTabK8HX3v0dmPg"
+      ],
+      "Investment Type": [
+        "Crisis Analytics & Insights"
+      ],
+      "Investment Themes [Text Key]": "Climate Analytics",
+      "Data Ecosystem Projects": [
+        "recgPTOSUzIQS7uLs",
+        "recQubJTGSwZoqzix",
+        "recAeviz1XjLC8V6i",
+        "recUotlR1ZJwVMAIS",
+        "rece4fDBOtjCywl9q",
+        "recueXHi1BfJrz30y",
+        "rec28WeSKDEQ5wx45",
+        "recEwLy3FESOhLeNs",
+        "recYwllVfGjgi7rdS",
+        "recgpnIj48zBCayHc",
+        "recLn4QiWGniBsWoe"
+      ],
+      "Investment Type Order": [
+        3
+      ],
+      "Survey: Crisis Analytics & Insights Priorities": [
+        "recRNvYEOVuVikm3o",
+        "recf3w4yhmSJVcM4E",
+        "recFhDbWgQ9kn69Sd",
+        "recUCZe9nJj8V8ULV"
+      ],
+      "Count: Data Sets & Commons Priorities": 0,
+      "Count (Survey: Infrastructure & Platforms Priorities)": 0,
+      "Count (Survey: Crisis Analytics & Insights Priorities)": 4,
+      "Count (Survey: Human Capital & Know-how Priorities)": 0,
+      "Count (Survey: Standards & Coordination Priorities)": 0,
+      "Count (Survey: Learning & Exchange Priorities)": 0,
+      "Investment Theme(s)": "Climate Analytics",
+      "Summary (Workshop: Donor/Contributing Partners)": {
+        "state": "error",
+        "errorType": "emptyDependency",
+        "value": null,
+        "isStale": false
+      },
+      "theme_description": "Climate Analytics is the process of analyzing climate-related data to provide insights and support decision-making for humanitarian response and crisis management."
+    }
+  },
+  {
+    "id": "recEjWgvVhGDJJkfQ",
+    "fields": {
+      "THEME_ID": "recEjWgvVhGDJJkfQ",
+      "Linked Investment Type": [
+        "recrKFJAlS8YmW1Qi"
+      ],
+      "Investment Type": [
+        "Data Sets & Commons"
+      ],
+      "Survey: Data Sets & Commons Priorities": [
+        "rechMLW2zWKburRYY",
+        "recSxJM7NXQpobyYi"
+      ],
+      "Investment Themes [Text Key]": "Sentiment Data",
+      "Data Ecosystem Projects": [
+        "rec7HiwptaxnhVxui",
+        "recCGWvmunEXVzpzw",
+        "rechtC1lJc96HgvFk"
+      ],
+      "Investment Type Order": [
+        1
+      ],
+      "Count: Data Sets & Commons Priorities": 2,
+      "Count (Survey: Infrastructure & Platforms Priorities)": 0,
+      "Count (Survey: Crisis Analytics & Insights Priorities)": 0,
+      "Count (Survey: Human Capital & Know-how Priorities)": 0,
+      "Count (Survey: Standards & Coordination Priorities)": 0,
+      "Count (Survey: Learning & Exchange Priorities)": 0,
+      "Investment Theme(s)": "Sentiment Data",
+      "Summary (Workshop: Donor/Contributing Partners)": {
+        "state": "error",
+        "errorType": "emptyDependency",
+        "value": null,
+        "isStale": false
+      }
+    }
+  },
+  {
+    "id": "recEqEnolqe8s6B1q",
+    "fields": {
+      "THEME_ID": "recEqEnolqe8s6B1q",
+      "Linked Investment Type": [
+        "recUueuvKqzUgF7Xo"
+      ],
+      "Investment Type": [
+        "Human Capital & Know-how"
+      ],
+      "Investment Themes [Text Key]": "Regional Hubs",
+      "Investment Type Order": [
+        4
+      ],
+      "Survey: Human Capital & Know-how Priorities": [
+        "recyFeFv1wORnPhOX",
+        "rec3DRbSNzLcxjzNu",
+        "recRNvYEOVuVikm3o",
+        "recKflMuy6GI01hoW",
+        "recGzuGtbK7nrQ6vB",
+        "recJwEAi6aNknm8g8",
+        "rechMLW2zWKburRYY",
+        "rec5ClssrbllpDxE5",
+        "recqdaVuFOyhgKa0t",
+        "recMRTcX26O14WfSI",
+        "recAwNDEguHa5XK4J",
+        "rec9YlBY9v3lz8Fda",
+        "recAHDIrT8uzr6iRj",
+        "recnwHuZwBwawj7Ct"
+      ],
+      "Count: Data Sets & Commons Priorities": 0,
+      "Count (Survey: Infrastructure & Platforms Priorities)": 0,
+      "Count (Survey: Crisis Analytics & Insights Priorities)": 0,
+      "Count (Survey: Human Capital & Know-how Priorities)": 14,
+      "Count (Survey: Standards & Coordination Priorities)": 0,
+      "Count (Survey: Learning & Exchange Priorities)": 0,
+      "Investment Theme(s)": "Regional Hubs",
+      "Summary (Workshop: Donor/Contributing Partners)": {
+        "state": "error",
+        "errorType": "emptyDependency",
+        "value": null,
+        "isStale": false
+      }
+    }
+  },
+  {
+    "id": "recFAAxWlRpYL17cX",
+    "fields": {
+      "THEME_ID": "recFAAxWlRpYL17cX",
+      "Linked Investment Type": [
+        "recwuGLOXpe7ElgYv"
+      ],
+      "Investment Type": [
+        "Standards & Coordination"
+      ],
+      "Investment Themes [Text Key]": "Methodological Standards (e.g., Data Collection)",
+      "Data Ecosystem Projects": [
+        "recXkQODU8on8xy2v",
+        "recZaSDcZgIUtalO5",
+        "rechQ1azyTpypEDEy"
+      ],
+      "Investment Type Order": [
+        5
+      ],
+      "Survey: Standards & Coordination Priorities": [
+        "recRNvYEOVuVikm3o",
+        "rec44wmxI5Jk3NyKU",
+        "recJwEAi6aNknm8g8",
+        "recTq8xGeKTVo1RY4",
+        "reciRQowoWHhCPgd0",
+        "recndRlsuLcLAKu4w",
+        "reco5W39j2T2GQbwh",
+        "recOYVkcXzWVEiXtL",
+        "recCY4InqL8mKlvgM",
+        "recRsAJqKXShWeDP9",
+        "rec86pSbmLv8TbY8D",
+        "recAwNDEguHa5XK4J",
+        "rec9YlBY9v3lz8Fda",
+        "recCP7c2CsJttJFUj"
+      ],
+      "Count: Data Sets & Commons Priorities": 0,
+      "Count (Survey: Infrastructure & Platforms Priorities)": 0,
+      "Count (Survey: Crisis Analytics & Insights Priorities)": 0,
+      "Count (Survey: Human Capital & Know-how Priorities)": 0,
+      "Count (Survey: Standards & Coordination Priorities)": 14,
+      "Count (Survey: Learning & Exchange Priorities)": 0,
+      "Investment Theme(s)": "Methodological Standards (e.g., Data Collection)",
+      "Summary (Workshop: Donor/Contributing Partners)": {
+        "state": "error",
+        "errorType": "emptyDependency",
+        "value": null,
+        "isStale": false
+      }
+    }
+  },
+  {
+    "id": "recFMeR1CEDQn3ozL",
+    "fields": {
+      "THEME_ID": "recFMeR1CEDQn3ozL",
+      "Linked Investment Type": [
+        "recTabK8HX3v0dmPg"
+      ],
+      "Investment Type": [
+        "Crisis Analytics & Insights"
+      ],
+      "Investment Themes [Text Key]": "Health Analytics",
+      "Data Ecosystem Projects": [
+        "recEf0pdKsN1Gbvo8",
+        "recJQghyXlyK5WiCE",
+        "recNggnBqXIgii2hz"
+      ],
+      "Investment Type Order": [
+        3
+      ],
+      "Survey: Crisis Analytics & Insights Priorities": [
+        "recYN0aPBDa0Msynv",
+        "recTq8xGeKTVo1RY4",
+        "recykau7zFwNuuRfD",
+        "recUCZe9nJj8V8ULV"
+      ],
+      "Count: Data Sets & Commons Priorities": 0,
+      "Count (Survey: Infrastructure & Platforms Priorities)": 0,
+      "Count (Survey: Crisis Analytics & Insights Priorities)": 4,
+      "Count (Survey: Human Capital & Know-how Priorities)": 0,
+      "Count (Survey: Standards & Coordination Priorities)": 0,
+      "Count (Survey: Learning & Exchange Priorities)": 0,
+      "Investment Theme(s)": "Health Analytics",
+      "Summary (Workshop: Donor/Contributing Partners)": {
+        "state": "error",
+        "errorType": "emptyDependency",
+        "value": null,
+        "isStale": false
+      },
+      "theme_description": "Health Analytics involves analyzing health-related data to identify trends, risks, and needs, enabling better decision-making and targeted interventions in humanitarian crises."
+    }
+  },
+  {
+    "id": "recFrqtSRWxX7YlKq",
+    "fields": {
+      "THEME_ID": "recFrqtSRWxX7YlKq",
+      "Linked Investment Type": [
+        "recTabK8HX3v0dmPg"
+      ],
+      "Investment Type": [
+        "Crisis Analytics & Insights"
+      ],
+      "Investment Themes [Text Key]": "Monitoring & Alerts",
+      "Data Ecosystem Projects": [
+        "recpP1KGKcmcpy2jo",
+        "recFk4AqE3TR83nNo",
+        "recEwLy3FESOhLeNs",
+        "recf0UvW6LzObKXGC",
+        "recVj2ULsOWhPFQ19",
+        "rec9HIhsIpPjx48rc",
+        "rec8wR515Mvu0YGx0",
+        "recjxVwrxVL90go5G",
+        "recgzWbqbmwOXHLnq",
+        "recfTLQpzUgBOtlS5",
+        "recNggnBqXIgii2hz",
+        "recO7hHncZQGqy2vJ"
+      ],
+      "Investment Type Order": [
+        3
+      ],
+      "Survey: Crisis Analytics & Insights Priorities": [
+        "recGzuGtbK7nrQ6vB",
+        "recykau7zFwNuuRfD"
+      ],
+      "Count: Data Sets & Commons Priorities": 0,
+      "Count (Survey: Infrastructure & Platforms Priorities)": 0,
+      "Count (Survey: Crisis Analytics & Insights Priorities)": 2,
+      "Count (Survey: Human Capital & Know-how Priorities)": 0,
+      "Count (Survey: Standards & Coordination Priorities)": 0,
+      "Count (Survey: Learning & Exchange Priorities)": 0,
+      "Investment Theme(s)": "Monitoring & Alerts",
+      "Summary (Workshop: Donor/Contributing Partners)": {
+        "state": "error",
+        "errorType": "emptyDependency",
+        "value": null,
+        "isStale": false
+      },
+      "theme_description": "Monitoring & Alerts in Crisis Analytics & Insights involves continuously tracking humanitarian data to quickly detect and notify stakeholders of emerging crises or significant changes, enabling timely and informed responses."
+    }
+  },
+  {
+    "id": "recGbvGJ5cHs5eTlM",
+    "fields": {
+      "THEME_ID": "recGbvGJ5cHs5eTlM",
+      "Linked Investment Type": [
+        "recrKFJAlS8YmW1Qi"
+      ],
+      "Investment Type": [
+        "Data Sets & Commons"
+      ],
+      "Survey: Data Sets & Commons Priorities": [
+        "recyFeFv1wORnPhOX",
+        "recRNvYEOVuVikm3o",
+        "recdD14hmJf4YBVgb",
+        "recf3w4yhmSJVcM4E",
+        "recEPPl3NAv57t1MJ"
+      ],
+      "Investment Themes [Text Key]": "Climate Data",
+      "Data Ecosystem Projects": [
+        "recr5hGDgBiAH4xSm",
+        "recxNVM0HeC0mSQyk",
+        "rec4SqufwyxLeeDM4",
+        "recpARdDyMReIUuDq",
+        "recF1lTFIy27lMFwT",
+        "recUtgQxL73zHDTCF",
+        "recyMSQo5lV032SER",
+        "recGMlI70iaqyTtMo",
+        "recQubJTGSwZoqzix",
+        "rec9HIhsIpPjx48rc",
+        "recgPTOSUzIQS7uLs",
+        "recQMdm14niuRSFQp",
+        "recSvtWQnSvfNoXdt",
+        "rec5GA5F1UPlXATSj",
+        "recEuWdBixgTpQKhR",
+        "recAeviz1XjLC8V6i",
+        "recD0o9DgLleR3ctz",
+        "rece4fDBOtjCywl9q",
+        "recueXHi1BfJrz30y",
+        "recyn1h3FptgV2ZAv"
+      ],
+      "Investment Type Order": [
+        1
+      ],
+      "Count: Data Sets & Commons Priorities": 5,
+      "Count (Survey: Infrastructure & Platforms Priorities)": 0,
+      "Count (Survey: Crisis Analytics & Insights Priorities)": 0,
+      "Count (Survey: Human Capital & Know-how Priorities)": 0,
+      "Count (Survey: Standards & Coordination Priorities)": 0,
+      "Count (Survey: Learning & Exchange Priorities)": 0,
+      "Investment Theme(s)": "Climate Data",
+      "Summary (Workshop: Donor/Contributing Partners)": {
+        "state": "error",
+        "errorType": "emptyDependency",
+        "value": null,
+        "isStale": false
+      }
+    }
+  },
+  {
+    "id": "recGyX8uMKkY6JRiW",
+    "fields": {
+      "THEME_ID": "recGyX8uMKkY6JRiW",
+      "Linked Investment Type": [
+        "rec6Pib8EhL0nZfPJ"
+      ],
+      "Investment Type": [
+        "Infrastructure & Platforms"
+      ],
+      "Investment Themes [Text Key]": "Data Collection",
+      "Data Ecosystem Projects": [
+        "recPMQlg07QkflL3i",
+        "rec96xC14xTkyyKlP",
+        "recONFtYpO5v2qk7s",
+        "rech8GCismNX3Bm8p"
+      ],
+      "Investment Type Order": [
+        2
+      ],
+      "Survey: Infrastructure & Platforms Priorities": [
+        "recUloRidGuWLPpDk",
+        "recRNvYEOVuVikm3o",
+        "rec44wmxI5Jk3NyKU",
+        "recJwEAi6aNknm8g8",
+        "recTq8xGeKTVo1RY4",
+        "reciRQowoWHhCPgd0",
+        "recndRlsuLcLAKu4w",
+        "recf3w4yhmSJVcM4E",
+        "reco5W39j2T2GQbwh",
+        "recEPPl3NAv57t1MJ",
+        "reclIpnVpxBj2H0YM",
+        "recauIcjLxpShs4Av",
+        "recfKUpWThFexbOM8",
+        "recOYVkcXzWVEiXtL",
+        "recRsAJqKXShWeDP9",
+        "recykau7zFwNuuRfD",
+        "recMzpGCOGkh8gxiN",
+        "rec86pSbmLv8TbY8D",
+        "recMRTcX26O14WfSI",
+        "recUCZe9nJj8V8ULV",
+        "rec9YlBY9v3lz8Fda",
+        "recnwHuZwBwawj7Ct"
+      ],
+      "Count: Data Sets & Commons Priorities": 0,
+      "Count (Survey: Infrastructure & Platforms Priorities)": 22,
+      "Count (Survey: Crisis Analytics & Insights Priorities)": 0,
+      "Count (Survey: Human Capital & Know-how Priorities)": 0,
+      "Count (Survey: Standards & Coordination Priorities)": 0,
+      "Priority: UN Partner": "HIGH",
+      "Count (Survey: Learning & Exchange Priorities)": 0,
+      "Investment Theme(s)": "Data Collection",
+      "Summary (Workshop: Donor/Contributing Partners)": {
+        "state": "error",
+        "errorType": "emptyDependency",
+        "value": null,
+        "isStale": false
+      }
+    }
+  },
+  {
+    "id": "recH6sgSbYRZbhhY2",
+    "fields": {
+      "THEME_ID": "recH6sgSbYRZbhhY2",
+      "Linked Investment Type": [
+        "recTabK8HX3v0dmPg"
+      ],
+      "Investment Type": [
+        "Crisis Analytics & Insights"
+      ],
+      "Investment Themes [Text Key]": "Disaster Hazard & Risk Modelling",
+      "Investment Type Order": [
+        3
+      ],
+      "Count: Data Sets & Commons Priorities": 0,
+      "Count (Survey: Infrastructure & Platforms Priorities)": 0,
+      "Count (Survey: Crisis Analytics & Insights Priorities)": 0,
+      "Count (Survey: Human Capital & Know-how Priorities)": 0,
+      "Count (Survey: Standards & Coordination Priorities)": 0,
+      "Count (Survey: Learning & Exchange Priorities)": 0,
+      "Investment Theme(s)": "Disaster Hazard & Risk Modelling",
+      "Summary (Workshop: Donor/Contributing Partners)": {
+        "state": "error",
+        "errorType": "emptyDependency",
+        "value": null,
+        "isStale": false
+      },
+      "theme_description": "Disaster Hazard & Risk Modelling uses data and analytics to predict, assess, and visualize potential crises, enabling humanitarian organizations to better prepare for and respond to disasters."
+    }
+  },
+  {
+    "id": "recIcyVmMjP07dh2N",
+    "fields": {
+      "THEME_ID": "recIcyVmMjP07dh2N",
+      "Linked Investment Type": [
+        "recwuGLOXpe7ElgYv"
+      ],
+      "Investment Type": [
+        "Standards & Coordination"
+      ],
+      "Investment Themes [Text Key]": "Metadata",
+      "Investment Type Order": [
+        5
+      ],
+      "Survey: Standards & Coordination Priorities": [
+        "recYN0aPBDa0Msynv",
+        "recTq8xGeKTVo1RY4",
+        "recEPPl3NAv57t1MJ",
+        "recauIcjLxpShs4Av",
+        "recMRTcX26O14WfSI"
+      ],
+      "Count: Data Sets & Commons Priorities": 0,
+      "Count (Survey: Infrastructure & Platforms Priorities)": 0,
+      "Count (Survey: Crisis Analytics & Insights Priorities)": 0,
+      "Count (Survey: Human Capital & Know-how Priorities)": 0,
+      "Count (Survey: Standards & Coordination Priorities)": 5,
+      "Count (Survey: Learning & Exchange Priorities)": 0,
+      "Investment Theme(s)": "Metadata",
+      "Summary (Workshop: Donor/Contributing Partners)": {
+        "state": "error",
+        "errorType": "emptyDependency",
+        "value": null,
+        "isStale": false
+      }
+    }
+  },
+  {
+    "id": "recInb95gorutGyJY",
+    "fields": {
+      "THEME_ID": "recInb95gorutGyJY",
+      "Linked Investment Type": [
+        "recqH1EJ0zW8l9lqn"
+      ],
+      "Investment Type": [
+        "Learning & Exchange"
+      ],
+      "Investment Themes [Text Key]": "Conferences",
+      "Data Ecosystem Projects": [
+        "rech8GCismNX3Bm8p"
+      ],
+      "Investment Type Order": [
+        6
+      ],
+      "Survey: Learning & Exchange Priorities": [
+        "recRNvYEOVuVikm3o",
+        "rec44wmxI5Jk3NyKU",
+        "recJwEAi6aNknm8g8",
+        "recOYVkcXzWVEiXtL",
+        "recUCZe9nJj8V8ULV"
+      ],
+      "Count: Data Sets & Commons Priorities": 0,
+      "Count (Survey: Infrastructure & Platforms Priorities)": 0,
+      "Count (Survey: Crisis Analytics & Insights Priorities)": 0,
+      "Count (Survey: Human Capital & Know-how Priorities)": 0,
+      "Count (Survey: Standards & Coordination Priorities)": 0,
+      "Priority: UN Partner": "HIGH",
+      "Count (Survey: Learning & Exchange Priorities)": 5,
+      "Investment Theme(s)": "Conferences",
+      "Summary (Workshop: Donor/Contributing Partners)": {
+        "state": "error",
+        "errorType": "emptyDependency",
+        "value": null,
+        "isStale": false
+      }
+    }
+  },
+  {
+    "id": "recJBof6RarScPkbq",
+    "fields": {
+      "THEME_ID": "recJBof6RarScPkbq",
+      "Linked Investment Type": [
+        "recTabK8HX3v0dmPg"
+      ],
+      "Investment Type": [
+        "Crisis Analytics & Insights"
+      ],
+      "Investment Themes [Text Key]": "Nutrition Analytics",
+      "Data Ecosystem Projects": [
+        "recvuixaI146ykcHe"
+      ],
+      "Investment Type Order": [
+        3
+      ],
+      "Count: Data Sets & Commons Priorities": 0,
+      "Count (Survey: Infrastructure & Platforms Priorities)": 0,
+      "Count (Survey: Crisis Analytics & Insights Priorities)": 0,
+      "Count (Survey: Human Capital & Know-how Priorities)": 0,
+      "Count (Survey: Standards & Coordination Priorities)": 0,
+      "Count (Survey: Learning & Exchange Priorities)": 0,
+      "Investment Theme(s)": "Nutrition Analytics",
+      "Summary (Workshop: Donor/Contributing Partners)": {
+        "state": "error",
+        "errorType": "emptyDependency",
+        "value": null,
+        "isStale": false
+      },
+      "theme_description": "Nutrition Analytics involves collecting and analyzing nutrition-related data to provide insights that inform effective humanitarian interventions and improve nutritional outcomes in crisis situations."
+    }
+  },
+  {
+    "id": "recK1PZkzGVpLwmt4",
+    "fields": {
+      "THEME_ID": "recK1PZkzGVpLwmt4",
+      "Linked Investment Type": [
+        "recTabK8HX3v0dmPg"
+      ],
+      "Investment Type": [
+        "Crisis Analytics & Insights"
+      ],
+      "Investment Themes [Text Key]": "Gender Analytics",
+      "Data Ecosystem Projects": [
+        "recGVHndBPIvMpuHb",
+        "recO3RZZ7IEA88GnQ"
+      ],
+      "Investment Type Order": [
+        3
+      ],
+      "Survey: Crisis Analytics & Insights Priorities": [
+        "recGzuGtbK7nrQ6vB",
+        "recJwEAi6aNknm8g8"
+      ],
+      "Count: Data Sets & Commons Priorities": 0,
+      "Count (Survey: Infrastructure & Platforms Priorities)": 0,
+      "Count (Survey: Crisis Analytics & Insights Priorities)": 2,
+      "Count (Survey: Human Capital & Know-how Priorities)": 0,
+      "Count (Survey: Standards & Coordination Priorities)": 0,
+      "Count (Survey: Learning & Exchange Priorities)": 0,
+      "Investment Theme(s)": "Gender Analytics",
+      "Summary (Workshop: Donor/Contributing Partners)": {
+        "state": "error",
+        "errorType": "emptyDependency",
+        "value": null,
+        "isStale": false
+      },
+      "theme_description": "Gender Analytics examines how gender differences impact needs, experiences, and outcomes, providing insights to ensure humanitarian responses are equitable and effective."
+    }
+  },
+  {
+    "id": "recKa1nPLhHwdgUti",
+    "fields": {
+      "THEME_ID": "recKa1nPLhHwdgUti",
+      "Linked Investment Type": [
+        "recrKFJAlS8YmW1Qi"
+      ],
+      "Investment Type": [
+        "Data Sets & Commons"
+      ],
+      "Survey: Data Sets & Commons Priorities": [
+        "recJwEAi6aNknm8g8",
+        "recAwNDEguHa5XK4J"
+      ],
+      "Investment Themes [Text Key]": "Peace Data",
+      "Data Ecosystem Projects": [
+        "recQ0XV79TSq6v4Sj",
+        "recszBikte0A6i6Dx",
+        "recuv6YqfhZHQGvmd",
+        "recQpqVqEuaLuj8jT",
+        "reccyJzv7bOpjmC4B",
+        "recOOQ5c99vFwz8i8",
+        "recgmCxRj8IVZMFF2",
+        "recp0YELy7eVj9FUs"
+      ],
+      "Investment Type Order": [
+        1
+      ],
+      "Count: Data Sets & Commons Priorities": 2,
+      "Count (Survey: Infrastructure & Platforms Priorities)": 0,
+      "Count (Survey: Crisis Analytics & Insights Priorities)": 0,
+      "Count (Survey: Human Capital & Know-how Priorities)": 0,
+      "Count (Survey: Standards & Coordination Priorities)": 0,
+      "Priority: UN Partner": "HIGH",
+      "Count (Survey: Learning & Exchange Priorities)": 0,
+      "Investment Theme(s)": "Peace Data",
+      "Summary (Workshop: Donor/Contributing Partners)": {
+        "state": "error",
+        "errorType": "emptyDependency",
+        "value": null,
+        "isStale": false
+      }
+    }
+  },
+  {
+    "id": "recLEWTzYyer67d62",
+    "fields": {
+      "THEME_ID": "recLEWTzYyer67d62",
+      "Linked Investment Type": [
+        "recTabK8HX3v0dmPg"
+      ],
+      "Investment Type": [
+        "Crisis Analytics & Insights"
+      ],
+      "Investment Themes [Text Key]": "Migration Analytics ",
+      "Investment Type Order": [
+        3
+      ],
+      "Count: Data Sets & Commons Priorities": 0,
+      "Count (Survey: Infrastructure & Platforms Priorities)": 0,
+      "Count (Survey: Crisis Analytics & Insights Priorities)": 0,
+      "Count (Survey: Human Capital & Know-how Priorities)": 0,
+      "Count (Survey: Standards & Coordination Priorities)": 0,
+      "Count (Survey: Learning & Exchange Priorities)": 0,
+      "Investment Theme(s)": "Migration Analytics ",
+      "Summary (Workshop: Donor/Contributing Partners)": {
+        "state": "error",
+        "errorType": "emptyDependency",
+        "value": null,
+        "isStale": false
+      },
+      "theme_description": "Migration Analytics uses data and analytical tools to understand, monitor, and predict migration patterns, helping humanitarian organizations respond effectively to migration-related crises."
+    }
+  },
+  {
+    "id": "recLam5sXysWl0i2a",
+    "fields": {
+      "THEME_ID": "recLam5sXysWl0i2a",
+      "Linked Investment Type": [
+        "recrKFJAlS8YmW1Qi"
+      ],
+      "Investment Type": [
+        "Data Sets & Commons"
+      ],
+      "Survey: Data Sets & Commons Priorities": [
+        "recKflMuy6GI01hoW",
+        "recRsAJqKXShWeDP9"
+      ],
+      "Investment Themes [Text Key]": "Disarmament Data",
+      "Data Ecosystem Projects": [
+        "recoqDpIwcyVG3N5Z",
+        "recQ0XV79TSq6v4Sj",
+        "recszBikte0A6i6Dx",
+        "recuv6YqfhZHQGvmd",
+        "recQpqVqEuaLuj8jT",
+        "reccyJzv7bOpjmC4B"
+      ],
+      "Investment Type Order": [
+        1
+      ],
+      "Count: Data Sets & Commons Priorities": 2,
+      "Count (Survey: Infrastructure & Platforms Priorities)": 0,
+      "Count (Survey: Crisis Analytics & Insights Priorities)": 0,
+      "Count (Survey: Human Capital & Know-how Priorities)": 0,
+      "Count (Survey: Standards & Coordination Priorities)": 0,
+      "Count (Survey: Learning & Exchange Priorities)": 0,
+      "Investment Theme(s)": "Disarmament Data",
+      "Summary (Workshop: Donor/Contributing Partners)": {
+        "state": "error",
+        "errorType": "emptyDependency",
+        "value": null,
+        "isStale": false
+      }
+    }
+  },
+  {
+    "id": "recN8sYRo0kaFXYmE",
+    "fields": {
+      "THEME_ID": "recN8sYRo0kaFXYmE",
+      "Linked Investment Type": [
+        "recrKFJAlS8YmW1Qi"
+      ],
+      "Investment Type": [
+        "Data Sets & Commons"
+      ],
+      "Survey: Data Sets & Commons Priorities": [
+        "rec3DRbSNzLcxjzNu",
+        "rec44wmxI5Jk3NyKU",
+        "recndRlsuLcLAKu4w",
+        "recSxJM7NXQpobyYi",
+        "recEPPl3NAv57t1MJ",
+        "reclIpnVpxBj2H0YM",
+        "recauIcjLxpShs4Av",
+        "recHWBvnUpdfwBmfm",
+        "recOYVkcXzWVEiXtL",
+        "recFhDbWgQ9kn69Sd",
+        "recCY4InqL8mKlvgM",
+        "recnwHuZwBwawj7Ct"
+      ],
+      "Investment Themes [Text Key]": "Conflict & Violence Data",
+      "Data Ecosystem Projects": [
+        "recS00J4wbHllEKXs",
+        "rec4aulcundpJZOwl",
+        "recxNVM0HeC0mSQyk",
+        "rec24cVLtWAWZB6gx",
+        "rec2eT5BuCp87chHm",
+        "recftrBsKUWwYWGA9",
+        "rechEM6RZ6by4ZLZK",
+        "recIUSUS3NNXaMHCQ",
+        "recQ0XV79TSq6v4Sj",
+        "recWziB7RyyVfMv3A",
+        "recCrLYQFMbrPxsId",
+        "recszBikte0A6i6Dx",
+        "recuv6YqfhZHQGvmd",
+        "recQpqVqEuaLuj8jT",
+        "reccyJzv7bOpjmC4B",
+        "rec5XxteXiqc3vvmj",
+        "recONFtYpO5v2qk7s",
+        "recLN9L7RGRz4p1zM",
+        "recgmCxRj8IVZMFF2",
+        "rechQ1azyTpypEDEy",
+        "rec9tb7ISjeo7Sq78",
+        "recO3RZZ7IEA88GnQ",
+        "recWiXtcwxhgmhgNY",
+        "recFF8BskJRz2Lyjk"
+      ],
+      "Investment Type Order": [
+        1
+      ],
+      "Count: Data Sets & Commons Priorities": 12,
+      "Count (Survey: Infrastructure & Platforms Priorities)": 0,
+      "Count (Survey: Crisis Analytics & Insights Priorities)": 0,
+      "Count (Survey: Human Capital & Know-how Priorities)": 0,
+      "Count (Survey: Standards & Coordination Priorities)": 0,
+      "Priority: Donor/Contributing Partners": "HIGH",
+      "Count (Survey: Learning & Exchange Priorities)": 0,
+      "Investment Theme(s)": "Conflict & Violence Data",
+      "Summary (Workshop: Donor/Contributing Partners)": {
+        "state": "error",
+        "errorType": "emptyDependency",
+        "value": null,
+        "isStale": false
+      }
+    }
+  },
+  {
+    "id": "recNBl6IeAO49gTex",
+    "fields": {
+      "THEME_ID": "recNBl6IeAO49gTex",
+      "Linked Investment Type": [
+        "rec6Pib8EhL0nZfPJ"
+      ],
+      "Investment Type": [
+        "Infrastructure & Platforms"
+      ],
+      "Investment Themes [Text Key]": "Automated Data Auditing",
+      "Investment Type Order": [
+        2
+      ],
+      "Survey: Infrastructure & Platforms Priorities": [
+        "recsdJioQCh6jEJep",
+        "recUCZe9nJj8V8ULV"
+      ],
+      "Count: Data Sets & Commons Priorities": 0,
+      "Count (Survey: Infrastructure & Platforms Priorities)": 2,
+      "Count (Survey: Crisis Analytics & Insights Priorities)": 0,
+      "Count (Survey: Human Capital & Know-how Priorities)": 0,
+      "Count (Survey: Standards & Coordination Priorities)": 0,
+      "Count (Survey: Learning & Exchange Priorities)": 0,
+      "Investment Theme(s)": "Automated Data Auditing",
+      "Summary (Workshop: Donor/Contributing Partners)": {
+        "state": "error",
+        "errorType": "emptyDependency",
+        "value": null,
+        "isStale": false
+      }
+    }
+  },
+  {
+    "id": "recNn5nMuwGHOJMHy",
+    "fields": {
+      "THEME_ID": "recNn5nMuwGHOJMHy",
+      "Linked Investment Type": [
+        "rec6Pib8EhL0nZfPJ"
+      ],
+      "Investment Type": [
+        "Infrastructure & Platforms"
+      ],
+      "Investment Themes [Text Key]": "AI & ML Infrastructure",
+      "Data Ecosystem Projects": [
+        "rec5zVtFYWKUXASIr",
+        "recJyonPtboyfoLet"
+      ],
+      "Investment Type Order": [
+        2
+      ],
+      "Survey: Infrastructure & Platforms Priorities": [
+        "recUloRidGuWLPpDk",
+        "recKflMuy6GI01hoW",
+        "recdD14hmJf4YBVgb",
+        "reco5W39j2T2GQbwh",
+        "reclIpnVpxBj2H0YM",
+        "recqdaVuFOyhgKa0t",
+        "recFhDbWgQ9kn69Sd",
+        "recMzpGCOGkh8gxiN",
+        "recAwNDEguHa5XK4J"
+      ],
+      "Count: Data Sets & Commons Priorities": 0,
+      "Count (Survey: Infrastructure & Platforms Priorities)": 9,
+      "Count (Survey: Crisis Analytics & Insights Priorities)": 0,
+      "Count (Survey: Human Capital & Know-how Priorities)": 0,
+      "Count (Survey: Standards & Coordination Priorities)": 0,
+      "Count (Survey: Learning & Exchange Priorities)": 0,
+      "Investment Theme(s)": "AI & ML Infrastructure",
+      "Summary (Workshop: Donor/Contributing Partners)": {
+        "state": "error",
+        "errorType": "emptyDependency",
+        "value": null,
+        "isStale": false
+      }
+    }
+  },
+  {
+    "id": "recNo5TPuTA2oCbyV",
+    "fields": {
+      "THEME_ID": "recNo5TPuTA2oCbyV",
+      "Linked Investment Type": [
+        "recwuGLOXpe7ElgYv"
+      ],
+      "Investment Type": [
+        "Standards & Coordination"
+      ],
+      "Investment Themes [Text Key]": "Open Access",
+      "Data Ecosystem Projects": [
+        "recgbAUAt9auV97KC"
+      ],
+      "Investment Type Order": [
+        5
+      ],
+      "Survey: Standards & Coordination Priorities": [
+        "recGzuGtbK7nrQ6vB",
+        "recdD14hmJf4YBVgb",
+        "recf3w4yhmSJVcM4E",
+        "reco5W39j2T2GQbwh",
+        "recqdaVuFOyhgKa0t",
+        "recRsAJqKXShWeDP9",
+        "rec86pSbmLv8TbY8D",
+        "recMRTcX26O14WfSI"
+      ],
+      "Count: Data Sets & Commons Priorities": 0,
+      "Count (Survey: Infrastructure & Platforms Priorities)": 0,
+      "Count (Survey: Crisis Analytics & Insights Priorities)": 0,
+      "Count (Survey: Human Capital & Know-how Priorities)": 0,
+      "Count (Survey: Standards & Coordination Priorities)": 8,
+      "Count (Survey: Learning & Exchange Priorities)": 0,
+      "Investment Theme(s)": "Open Access",
+      "Summary (Workshop: Donor/Contributing Partners)": {
+        "state": "error",
+        "errorType": "emptyDependency",
+        "value": null,
+        "isStale": false
+      }
+    }
+  },
+  {
+    "id": "recO3kNUkNdnQIzbC",
+    "fields": {
+      "THEME_ID": "recO3kNUkNdnQIzbC",
+      "Linked Investment Type": [
+        "recrKFJAlS8YmW1Qi"
+      ],
+      "Investment Type": [
+        "Data Sets & Commons"
+      ],
+      "Survey: Data Sets & Commons Priorities": [
+        "recyFeFv1wORnPhOX",
+        "recKflMuy6GI01hoW",
+        "recdD14hmJf4YBVgb",
+        "recsdJioQCh6jEJep",
+        "reciRQowoWHhCPgd0",
+        "rechMLW2zWKburRYY",
+        "recf3w4yhmSJVcM4E",
+        "recEPPl3NAv57t1MJ",
+        "recG7awSTTZzFVP64",
+        "rec5ClssrbllpDxE5",
+        "recRsAJqKXShWeDP9"
+      ],
+      "Investment Themes [Text Key]": "3W (Who does What, Where) Data",
+      "Data Ecosystem Projects": [
+        "recAmBwUrrYDMtXtH",
+        "recN8yVJX7xphyQME"
+      ],
+      "Investment Type Order": [
+        1
+      ],
+      "Count: Data Sets & Commons Priorities": 11,
+      "Count (Survey: Infrastructure & Platforms Priorities)": 0,
+      "Count (Survey: Crisis Analytics & Insights Priorities)": 0,
+      "Count (Survey: Human Capital & Know-how Priorities)": 0,
+      "Count (Survey: Standards & Coordination Priorities)": 0,
+      "Count (Survey: Learning & Exchange Priorities)": 0,
+      "Investment Theme(s)": "3W (Who does What, Where) Data",
+      "Summary (Workshop: Donor/Contributing Partners)": {
+        "state": "error",
+        "errorType": "emptyDependency",
+        "value": null,
+        "isStale": false
+      }
+    }
+  },
+  {
+    "id": "recOm5Fp5ftnEZ1zq",
+    "fields": {
+      "THEME_ID": "recOm5Fp5ftnEZ1zq",
+      "Linked Investment Type": [
+        "recwuGLOXpe7ElgYv"
+      ],
+      "Investment Type": [
+        "Standards & Coordination"
+      ],
+      "Investment Themes [Text Key]": "Ethics",
+      "Data Ecosystem Projects": [
+        "recxWS5Ys5dJ0dn1X"
+      ],
+      "Investment Type Order": [
+        5
+      ],
+      "Survey: Standards & Coordination Priorities": [
+        "recEPPl3NAv57t1MJ",
+        "recauIcjLxpShs4Av",
+        "rec86pSbmLv8TbY8D",
+        "recUCZe9nJj8V8ULV",
+        "recAHDIrT8uzr6iRj",
+        "recnwHuZwBwawj7Ct"
+      ],
+      "Count: Data Sets & Commons Priorities": 0,
+      "Count (Survey: Infrastructure & Platforms Priorities)": 0,
+      "Count (Survey: Crisis Analytics & Insights Priorities)": 0,
+      "Count (Survey: Human Capital & Know-how Priorities)": 0,
+      "Count (Survey: Standards & Coordination Priorities)": 6,
+      "Count (Survey: Learning & Exchange Priorities)": 0,
+      "Investment Theme(s)": "Ethics",
+      "Summary (Workshop: Donor/Contributing Partners)": {
+        "state": "error",
+        "errorType": "emptyDependency",
+        "value": null,
+        "isStale": false
+      }
+    }
+  },
+  {
+    "id": "recPcA3YqZBpDRwK2",
+    "fields": {
+      "THEME_ID": "recPcA3YqZBpDRwK2",
+      "Linked Investment Type": [
+        "recTabK8HX3v0dmPg"
+      ],
+      "Investment Type": [
+        "Crisis Analytics & Insights"
+      ],
+      "Investment Themes [Text Key]": "Geospatial Analytics",
+      "Data Ecosystem Projects": [
+        "recEf0pdKsN1Gbvo8",
+        "recXAXl4lWxy06qt5",
+        "rec8wR515Mvu0YGx0",
+        "rec4oWGeToxciytv3",
+        "recwMGK7lbvDfjR14",
+        "recYzS7BrsxBG8llV",
+        "recf4QNnota3r1Jch",
+        "recRqJS0I3kX5dYEJ",
+        "recSIp9VIy4uKdPH3",
+        "recdr2wcQiX1Ch1ZF"
+      ],
+      "Investment Type Order": [
+        3
+      ],
+      "Survey: Crisis Analytics & Insights Priorities": [
+        "recUloRidGuWLPpDk",
+        "recTq8xGeKTVo1RY4",
+        "recf3w4yhmSJVcM4E",
+        "rec86pSbmLv8TbY8D",
+        "rec9YlBY9v3lz8Fda"
+      ],
+      "Count: Data Sets & Commons Priorities": 0,
+      "Count (Survey: Infrastructure & Platforms Priorities)": 0,
+      "Count (Survey: Crisis Analytics & Insights Priorities)": 5,
+      "Count (Survey: Human Capital & Know-how Priorities)": 0,
+      "Count (Survey: Standards & Coordination Priorities)": 0,
+      "Count (Survey: Learning & Exchange Priorities)": 0,
+      "Investment Theme(s)": "Geospatial Analytics",
+      "Summary (Workshop: Donor/Contributing Partners)": {
+        "state": "error",
+        "errorType": "emptyDependency",
+        "value": null,
+        "isStale": false
+      },
+      "theme_description": "Geospatial Analytics in humanitarian data uses location-based data to analyze and visualize crisis situations, enabling better decision-making and targeted response during emergencies."
+    }
+  },
+  {
+    "id": "recQaHGkvOAr8EDfE",
+    "fields": {
+      "THEME_ID": "recQaHGkvOAr8EDfE",
+      "Linked Investment Type": [
+        "recrKFJAlS8YmW1Qi"
+      ],
+      "Investment Type": [
+        "Data Sets & Commons"
+      ],
+      "Survey: Data Sets & Commons Priorities": [
+        "recJwEAi6aNknm8g8",
+        "recfKUpWThFexbOM8"
+      ],
+      "Investment Themes [Text Key]": "Gender Data",
+      "Data Ecosystem Projects": [
+        "recGVHndBPIvMpuHb",
+        "recrWrHtaaCWN2TVH",
+        "rechQ1azyTpypEDEy",
+        "rec9tb7ISjeo7Sq78",
+        "recGoW02CMXhVQ00S",
+        "recp0YELy7eVj9FUs",
+        "recO3RZZ7IEA88GnQ"
+      ],
+      "Investment Type Order": [
+        1
+      ],
+      "Count: Data Sets & Commons Priorities": 2,
+      "Count (Survey: Infrastructure & Platforms Priorities)": 0,
+      "Count (Survey: Crisis Analytics & Insights Priorities)": 0,
+      "Count (Survey: Human Capital & Know-how Priorities)": 0,
+      "Count (Survey: Standards & Coordination Priorities)": 0,
+      "Count (Survey: Learning & Exchange Priorities)": 0,
+      "Investment Theme(s)": "Gender Data",
+      "Summary (Workshop: Donor/Contributing Partners)": {
+        "state": "error",
+        "errorType": "emptyDependency",
+        "value": null,
+        "isStale": false
+      }
+    }
+  },
+  {
+    "id": "recRJphogy1XtEb9H",
+    "fields": {
+      "THEME_ID": "recRJphogy1XtEb9H",
+      "Linked Investment Type": [
+        "recqH1EJ0zW8l9lqn"
+      ],
+      "Investment Type": [
+        "Learning & Exchange"
+      ],
+      "Investment Themes [Text Key]": "Guides",
+      "Data Ecosystem Projects": [
+        "recGG8gTf4t6l8Mue"
+      ],
+      "Investment Type Order": [
+        6
+      ],
+      "Survey: Learning & Exchange Priorities": [
+        "recRNvYEOVuVikm3o",
+        "recKflMuy6GI01hoW",
+        "recGzuGtbK7nrQ6vB",
+        "reco5W39j2T2GQbwh",
+        "recfKUpWThFexbOM8",
+        "rec5ClssrbllpDxE5",
+        "recRsAJqKXShWeDP9",
+        "rec9YlBY9v3lz8Fda"
+      ],
+      "Count: Data Sets & Commons Priorities": 0,
+      "Count (Survey: Infrastructure & Platforms Priorities)": 0,
+      "Count (Survey: Crisis Analytics & Insights Priorities)": 0,
+      "Count (Survey: Human Capital & Know-how Priorities)": 0,
+      "Count (Survey: Standards & Coordination Priorities)": 0,
+      "Count (Survey: Learning & Exchange Priorities)": 8,
+      "Investment Theme(s)": "Guides",
+      "Summary (Workshop: Donor/Contributing Partners)": {
+        "state": "error",
+        "errorType": "emptyDependency",
+        "value": null,
+        "isStale": false
+      }
+    }
+  },
+  {
+    "id": "recRY3E5U8JOUoQaR",
+    "fields": {
+      "THEME_ID": "recRY3E5U8JOUoQaR",
+      "Linked Investment Type": [
+        "recTabK8HX3v0dmPg"
+      ],
+      "Investment Type": [
+        "Crisis Analytics & Insights"
+      ],
+      "Investment Themes [Text Key]": "AI Models",
+      "Data Ecosystem Projects": [
+        "recLA3jRq3bbZRVzu",
+        "rec28WeSKDEQ5wx45"
+      ],
+      "Investment Type Order": [
+        3
+      ],
+      "Survey: Crisis Analytics & Insights Priorities": [
+        "reciRQowoWHhCPgd0",
+        "reco5W39j2T2GQbwh",
+        "reclIpnVpxBj2H0YM",
+        "recG7awSTTZzFVP64",
+        "rec5ClssrbllpDxE5",
+        "recqdaVuFOyhgKa0t",
+        "recFhDbWgQ9kn69Sd",
+        "recMzpGCOGkh8gxiN",
+        "recAwNDEguHa5XK4J"
+      ],
+      "Count: Data Sets & Commons Priorities": 0,
+      "Count (Survey: Infrastructure & Platforms Priorities)": 0,
+      "Count (Survey: Crisis Analytics & Insights Priorities)": 9,
+      "Count (Survey: Human Capital & Know-how Priorities)": 0,
+      "Count (Survey: Standards & Coordination Priorities)": 0,
+      "Count (Survey: Learning & Exchange Priorities)": 0,
+      "Investment Theme(s)": "AI Models",
+      "Summary (Workshop: Donor/Contributing Partners)": {
+        "state": "error",
+        "errorType": "emptyDependency",
+        "value": null,
+        "isStale": false
+      },
+      "theme_description": "AI Models in Crisis Analytics & Insights analyze humanitarian data to detect patterns, predict crises, and provide actionable recommendations for effective emergency response."
+    }
+  },
+  {
+    "id": "recTuAWJ0qwGAfkSJ",
+    "fields": {
+      "THEME_ID": "recTuAWJ0qwGAfkSJ",
+      "Linked Investment Type": [
+        "rec6Pib8EhL0nZfPJ"
+      ],
+      "Investment Type": [
+        "Infrastructure & Platforms"
+      ],
+      "Investment Themes [Text Key]": "Open Source LLMs",
+      "Investment Type Order": [
+        2
+      ],
+      "Survey: Infrastructure & Platforms Priorities": [
+        "recGzuGtbK7nrQ6vB",
+        "recauIcjLxpShs4Av",
+        "recHWBvnUpdfwBmfm",
+        "recAwNDEguHa5XK4J"
+      ],
+      "Count: Data Sets & Commons Priorities": 0,
+      "Count (Survey: Infrastructure & Platforms Priorities)": 4,
+      "Count (Survey: Crisis Analytics & Insights Priorities)": 0,
+      "Count (Survey: Human Capital & Know-how Priorities)": 0,
+      "Count (Survey: Standards & Coordination Priorities)": 0,
+      "Count (Survey: Learning & Exchange Priorities)": 0,
+      "Investment Theme(s)": "Open Source LLMs",
+      "Summary (Workshop: Donor/Contributing Partners)": {
+        "state": "error",
+        "errorType": "emptyDependency",
+        "value": null,
+        "isStale": false
+      }
+    }
+  },
+  {
+    "id": "recTuqMrtnYv2FYjU",
+    "fields": {
+      "THEME_ID": "recTuqMrtnYv2FYjU",
+      "Linked Investment Type": [
+        "recwuGLOXpe7ElgYv"
+      ],
+      "Investment Type": [
+        "Standards & Coordination"
+      ],
+      "Investment Themes [Text Key]": "Interoperable Formats",
+      "Data Ecosystem Projects": [
+        "recp0YELy7eVj9FUs"
+      ],
+      "Investment Type Order": [
+        5
+      ],
+      "Survey: Standards & Coordination Priorities": [
+        "rec44wmxI5Jk3NyKU",
+        "reco5W39j2T2GQbwh",
+        "recSxJM7NXQpobyYi",
+        "reclIpnVpxBj2H0YM",
+        "recqdaVuFOyhgKa0t",
+        "recCY4InqL8mKlvgM"
+      ],
+      "Count: Data Sets & Commons Priorities": 0,
+      "Count (Survey: Infrastructure & Platforms Priorities)": 0,
+      "Count (Survey: Crisis Analytics & Insights Priorities)": 0,
+      "Count (Survey: Human Capital & Know-how Priorities)": 0,
+      "Count (Survey: Standards & Coordination Priorities)": 6,
+      "Priority: Donor/Contributing Partners": "HIGH",
+      "Count (Survey: Learning & Exchange Priorities)": 0,
+      "Investment Theme(s)": "Interoperable Formats",
+      "Summary (Workshop: Donor/Contributing Partners)": {
+        "state": "error",
+        "errorType": "emptyDependency",
+        "value": null,
+        "isStale": false
+      }
+    }
+  },
+  {
+    "id": "recUHBacYsAnfRWI3",
+    "fields": {
+      "THEME_ID": "recUHBacYsAnfRWI3",
+      "Linked Investment Type": [
+        "recwuGLOXpe7ElgYv"
+      ],
+      "Investment Type": [
+        "Standards & Coordination"
+      ],
+      "Investment Themes [Text Key]": "Data Documentation",
+      "Investment Type Order": [
+        5
+      ],
+      "Survey: Standards & Coordination Priorities": [
+        "recUloRidGuWLPpDk",
+        "recRNvYEOVuVikm3o",
+        "recYN0aPBDa0Msynv",
+        "rechMLW2zWKburRYY",
+        "recG7awSTTZzFVP64"
+      ],
+      "Count: Data Sets & Commons Priorities": 0,
+      "Count (Survey: Infrastructure & Platforms Priorities)": 0,
+      "Count (Survey: Crisis Analytics & Insights Priorities)": 0,
+      "Count (Survey: Human Capital & Know-how Priorities)": 0,
+      "Count (Survey: Standards & Coordination Priorities)": 5,
+      "Priority: Donor/Contributing Partners": "HIGH",
+      "Count (Survey: Learning & Exchange Priorities)": 0,
+      "Investment Theme(s)": "Data Documentation",
+      "Summary (Workshop: Donor/Contributing Partners)": {
+        "state": "error",
+        "errorType": "emptyDependency",
+        "value": null,
+        "isStale": false
+      }
+    }
+  },
+  {
+    "id": "recVPkGJ0sSCr3WKf",
+    "fields": {
+      "THEME_ID": "recVPkGJ0sSCr3WKf",
+      "Linked Investment Type": [
+        "recUueuvKqzUgF7Xo"
+      ],
+      "Investment Type": [
+        "Human Capital & Know-how"
+      ],
+      "Investment Themes [Text Key]": "Data Analytics",
+      "Data Ecosystem Projects": [
+        "recrq5pa36yxwSE2c"
+      ],
+      "Investment Type Order": [
+        4
+      ],
+      "Count: Data Sets & Commons Priorities": 0,
+      "Count (Survey: Infrastructure & Platforms Priorities)": 0,
+      "Count (Survey: Crisis Analytics & Insights Priorities)": 0,
+      "Count (Survey: Human Capital & Know-how Priorities)": 0,
+      "Count (Survey: Standards & Coordination Priorities)": 0,
+      "Count (Survey: Learning & Exchange Priorities)": 0,
+      "Investment Theme(s)": "Data Analytics",
+      "Summary (Workshop: Donor/Contributing Partners)": {
+        "state": "error",
+        "errorType": "emptyDependency",
+        "value": null,
+        "isStale": false
+      }
+    }
+  },
+  {
+    "id": "recW9rqCDd8HJ2miq",
+    "fields": {
+      "THEME_ID": "recW9rqCDd8HJ2miq",
+      "Linked Investment Type": [
+        "recrKFJAlS8YmW1Qi"
+      ],
+      "Investment Type": [
+        "Data Sets & Commons"
+      ],
+      "Survey: Data Sets & Commons Priorities": [
+        "recOYVkcXzWVEiXtL",
+        "recMRTcX26O14WfSI"
+      ],
+      "Investment Themes [Text Key]": "Water, Sanitation & Hygiene (WASH) Data",
+      "Data Ecosystem Projects": [
+        "rec4x8zaZtHkZpdrK",
+        "recJye4S746MWWmW6",
+        "recgftq4GZElVtfi6",
+        "recQMdm14niuRSFQp"
+      ],
+      "Investment Type Order": [
+        1
+      ],
+      "Count: Data Sets & Commons Priorities": 2,
+      "Count (Survey: Infrastructure & Platforms Priorities)": 0,
+      "Count (Survey: Crisis Analytics & Insights Priorities)": 0,
+      "Count (Survey: Human Capital & Know-how Priorities)": 0,
+      "Count (Survey: Standards & Coordination Priorities)": 0,
+      "Count (Survey: Learning & Exchange Priorities)": 0,
+      "Investment Theme(s)": "Water, Sanitation & Hygiene (WASH) Data",
+      "Summary (Workshop: Donor/Contributing Partners)": {
+        "state": "error",
+        "errorType": "emptyDependency",
+        "value": null,
+        "isStale": false
+      }
+    }
+  },
+  {
+    "id": "recWzwhHwknOoIQdA",
+    "fields": {
+      "THEME_ID": "recWzwhHwknOoIQdA",
+      "Linked Investment Type": [
+        "recrKFJAlS8YmW1Qi"
+      ],
+      "Investment Type": [
+        "Data Sets & Commons"
+      ],
+      "Survey: Data Sets & Commons Priorities": [
+        "recfKUpWThFexbOM8"
+      ],
+      "Investment Themes [Text Key]": "Education Data",
+      "Data Ecosystem Projects": [
+        "recy1WUw4sZ55UmrS",
+        "recF8bGKczcSVXjRz",
+        "recrWrHtaaCWN2TVH"
+      ],
+      "Investment Type Order": [
+        1
+      ],
+      "Count: Data Sets & Commons Priorities": 1,
+      "Count (Survey: Infrastructure & Platforms Priorities)": 0,
+      "Count (Survey: Crisis Analytics & Insights Priorities)": 0,
+      "Count (Survey: Human Capital & Know-how Priorities)": 0,
+      "Count (Survey: Standards & Coordination Priorities)": 0,
+      "Count (Survey: Learning & Exchange Priorities)": 0,
+      "Investment Theme(s)": "Education Data",
+      "Summary (Workshop: Donor/Contributing Partners)": {
+        "state": "error",
+        "errorType": "emptyDependency",
+        "value": null,
+        "isStale": false
+      }
+    }
+  },
+  {
+    "id": "recXSdtjH9NmO4xzB",
+    "fields": {
+      "THEME_ID": "recXSdtjH9NmO4xzB",
+      "Linked Investment Type": [
+        "recrKFJAlS8YmW1Qi"
+      ],
+      "Investment Type": [
+        "Data Sets & Commons"
+      ],
+      "Survey: Data Sets & Commons Priorities": [
+        "recYN0aPBDa0Msynv",
+        "recTq8xGeKTVo1RY4",
+        "recykau7zFwNuuRfD",
+        "recUCZe9nJj8V8ULV"
+      ],
+      "Investment Themes [Text Key]": "Health Data",
+      "Data Ecosystem Projects": [
+        "recS00J4wbHllEKXs",
+        "recdIskWoUIv166ue",
+        "rec3t3TGt2tAmzl5B",
+        "recfzWyIVXJCeFFAN",
+        "rec0u1ul8iu7Yvbys",
+        "recbwtmwsCLbYZSBi",
+        "recuOsuVWoVNvCO5k"
+      ],
+      "Investment Type Order": [
+        1
+      ],
+      "Count: Data Sets & Commons Priorities": 4,
+      "Count (Survey: Infrastructure & Platforms Priorities)": 0,
+      "Count (Survey: Crisis Analytics & Insights Priorities)": 0,
+      "Count (Survey: Human Capital & Know-how Priorities)": 0,
+      "Count (Survey: Standards & Coordination Priorities)": 0,
+      "Count (Survey: Learning & Exchange Priorities)": 0,
+      "Investment Theme(s)": "Health Data",
+      "Summary (Workshop: Donor/Contributing Partners)": {
+        "state": "error",
+        "errorType": "emptyDependency",
+        "value": null,
+        "isStale": false
+      }
+    }
+  },
+  {
+    "id": "recYRTy2NARPtiMoI",
+    "fields": {
+      "THEME_ID": "recYRTy2NARPtiMoI",
+      "Linked Investment Type": [
+        "recrKFJAlS8YmW1Qi"
+      ],
+      "Investment Type": [
+        "Data Sets & Commons"
+      ],
+      "Survey: Data Sets & Commons Priorities": [
+        "recUloRidGuWLPpDk",
+        "recGzuGtbK7nrQ6vB",
+        "rec44wmxI5Jk3NyKU",
+        "recndRlsuLcLAKu4w",
+        "reclIpnVpxBj2H0YM",
+        "recfKUpWThFexbOM8",
+        "recG7awSTTZzFVP64",
+        "recOYVkcXzWVEiXtL",
+        "recCY4InqL8mKlvgM",
+        "recAwNDEguHa5XK4J",
+        "rec9YlBY9v3lz8Fda",
+        "recAHDIrT8uzr6iRj"
+      ],
+      "Investment Themes [Text Key]": "Displacement & Migration Data",
+      "Data Ecosystem Projects": [
+        "recRMNk0JflJq6VMa",
+        "recvaextZy2CbEkxr",
+        "rectg1V7Xcu5CcQq0",
+        "recuqvvqKg7D86DIm",
+        "recR021jYyNleSCho",
+        "reck0qeeLf1nGLbap",
+        "recz2ZsyM0B05BdFP",
+        "recFN5wUiwxYe6lS9",
+        "recsuIp5N5MkuxT1S",
+        "rectaDjtvGUN9jPNg",
+        "rec4NnFipAOHwTXCX",
+        "recEKzVdOqCJVhqrg",
+        "recyMSQo5lV032SER",
+        "recEf0pdKsN1Gbvo8",
+        "recLN9L7RGRz4p1zM",
+        "recGoW02CMXhVQ00S"
+      ],
+      "Investment Type Order": [
+        1
+      ],
+      "Count: Data Sets & Commons Priorities": 12,
+      "Count (Survey: Infrastructure & Platforms Priorities)": 0,
+      "Count (Survey: Crisis Analytics & Insights Priorities)": 0,
+      "Count (Survey: Human Capital & Know-how Priorities)": 0,
+      "Count (Survey: Standards & Coordination Priorities)": 0,
+      "Priority: UN Partner": "HIGH",
+      "Priority: Donor/Contributing Partners": "HIGH",
+      "Count (Survey: Learning & Exchange Priorities)": 0,
+      "Investment Theme(s)": "Displacement & Migration Data",
+      "Workshop: Donor/Contributing Partners": "\n",
+      "Summary (Workshop: Donor/Contributing Partners)": {
+        "state": "error",
+        "errorType": "emptyDependency",
+        "value": null,
+        "isStale": false
+      }
+    }
+  },
+  {
+    "id": "recZ5VgC10WXf9inr",
+    "fields": {
+      "THEME_ID": "recZ5VgC10WXf9inr",
+      "Linked Investment Type": [
+        "recqH1EJ0zW8l9lqn"
+      ],
+      "Investment Type": [
+        "Learning & Exchange"
+      ],
+      "Investment Themes [Text Key]": "Case Studies ",
+      "Investment Type Order": [
+        6
+      ],
+      "Survey: Learning & Exchange Priorities": [
+        "recdD14hmJf4YBVgb",
+        "reckquV6EPOOwHGpq",
+        "reco5W39j2T2GQbwh",
+        "recauIcjLxpShs4Av",
+        "recFhDbWgQ9kn69Sd",
+        "recCY4InqL8mKlvgM",
+        "recCP7c2CsJttJFUj"
+      ],
+      "Count: Data Sets & Commons Priorities": 0,
+      "Count (Survey: Infrastructure & Platforms Priorities)": 0,
+      "Count (Survey: Crisis Analytics & Insights Priorities)": 0,
+      "Count (Survey: Human Capital & Know-how Priorities)": 0,
+      "Count (Survey: Standards & Coordination Priorities)": 0,
+      "Count (Survey: Learning & Exchange Priorities)": 7,
+      "Investment Theme(s)": "Case Studies ",
+      "Summary (Workshop: Donor/Contributing Partners)": {
+        "state": "error",
+        "errorType": "emptyDependency",
+        "value": null,
+        "isStale": false
+      }
+    }
+  },
+  {
+    "id": "recar8lWzYocPkUYQ",
+    "fields": {
+      "THEME_ID": "recar8lWzYocPkUYQ",
+      "Linked Investment Type": [
+        "recwuGLOXpe7ElgYv"
+      ],
+      "Investment Type": [
+        "Standards & Coordination"
+      ],
+      "Notes on Investment Theme": "\n",
+      "Investment Themes [Text Key]": "APIs Standard",
+      "Data Ecosystem Projects": [
+        "rec9HIhsIpPjx48rc"
+      ],
+      "Investment Type Order": [
+        5
+      ],
+      "Survey: Standards & Coordination Priorities": [
+        "recyFeFv1wORnPhOX",
+        "recKflMuy6GI01hoW",
+        "recdD14hmJf4YBVgb",
+        "recYN0aPBDa0Msynv",
+        "recJwEAi6aNknm8g8",
+        "recndRlsuLcLAKu4w",
+        "recf3w4yhmSJVcM4E",
+        "reckquV6EPOOwHGpq",
+        "reclIpnVpxBj2H0YM",
+        "recFhDbWgQ9kn69Sd",
+        "recCY4InqL8mKlvgM",
+        "recRsAJqKXShWeDP9",
+        "recykau7zFwNuuRfD",
+        "recMzpGCOGkh8gxiN"
+      ],
+      "Count: Data Sets & Commons Priorities": 0,
+      "Count (Survey: Infrastructure & Platforms Priorities)": 0,
+      "Count (Survey: Crisis Analytics & Insights Priorities)": 0,
+      "Count (Survey: Human Capital & Know-how Priorities)": 0,
+      "Count (Survey: Standards & Coordination Priorities)": 14,
+      "Priority: UN Partner": "MEDIUM",
+      "Priority: Donor/Contributing Partners": "MEDIUM",
+      "Count (Survey: Learning & Exchange Priorities)": 0,
+      "Investment Theme(s)": "APIs Standard",
+      "Summary (Workshop: Donor/Contributing Partners)": {
+        "state": "error",
+        "errorType": "emptyDependency",
+        "value": null,
+        "isStale": false
+      }
+    }
+  },
+  {
+    "id": "recbHnII5MykNpkfB",
+    "fields": {
+      "THEME_ID": "recbHnII5MykNpkfB",
+      "Linked Investment Type": [
+        "recTabK8HX3v0dmPg"
+      ],
+      "Investment Type": [
+        "Crisis Analytics & Insights"
+      ],
+      "Investment Themes [Text Key]": "Impact Evaluation",
+      "Data Ecosystem Projects": [
+        "recIUSUS3NNXaMHCQ",
+        "recu82l0uk7d3IHeU",
+        "recUotlR1ZJwVMAIS"
+      ],
+      "Investment Type Order": [
+        3
+      ],
+      "Survey: Crisis Analytics & Insights Priorities": [
+        "recsdJioQCh6jEJep",
+        "recJwEAi6aNknm8g8",
+        "recSxJM7NXQpobyYi",
+        "recG7awSTTZzFVP64",
+        "recqdaVuFOyhgKa0t",
+        "rec86pSbmLv8TbY8D",
+        "recAwNDEguHa5XK4J"
+      ],
+      "Count: Data Sets & Commons Priorities": 0,
+      "Count (Survey: Infrastructure & Platforms Priorities)": 0,
+      "Count (Survey: Crisis Analytics & Insights Priorities)": 7,
+      "Count (Survey: Human Capital & Know-how Priorities)": 0,
+      "Count (Survey: Standards & Coordination Priorities)": 0,
+      "Count (Survey: Learning & Exchange Priorities)": 0,
+      "Investment Theme(s)": "Impact Evaluation",
+      "Summary (Workshop: Donor/Contributing Partners)": {
+        "state": "error",
+        "errorType": "emptyDependency",
+        "value": null,
+        "isStale": false
+      },
+      "theme_description": "Impact Evaluation in Crisis Analytics & Insights assesses the effectiveness of humanitarian interventions by analyzing data to determine what changes occurred as a result of specific actions during crises."
+    }
+  },
+  {
+    "id": "recbXAJezjpZEFPI5",
+    "fields": {
+      "THEME_ID": "recbXAJezjpZEFPI5",
+      "Linked Investment Type": [
+        "recrKFJAlS8YmW1Qi"
+      ],
+      "Investment Type": [
+        "Data Sets & Commons"
+      ],
+      "Survey: Data Sets & Commons Priorities": [
+        "recRNvYEOVuVikm3o",
+        "recGzuGtbK7nrQ6vB",
+        "rechMLW2zWKburRYY",
+        "recndRlsuLcLAKu4w",
+        "reckquV6EPOOwHGpq",
+        "recauIcjLxpShs4Av",
+        "recG7awSTTZzFVP64",
+        "recqdaVuFOyhgKa0t",
+        "recmJftOXoJojM0Th",
+        "recMzpGCOGkh8gxiN",
+        "rec9YlBY9v3lz8Fda"
+      ],
+      "Investment Themes [Text Key]": "Baseline Population Data",
+      "Data Ecosystem Projects": [
+        "recboBqVDp6QicKSq",
+        "recJRVBtpTaiDVmoT",
+        "recD1auVM61iln620",
+        "rec3SUNKdqZWbEktL",
+        "reczxU9NrSDw2mJcN",
+        "recXZCOUpEBDjWHOu",
+        "receXQgibfVmjvmeB",
+        "recjAd7jOVvlh7mnp",
+        "rec7Gm0sUCCMECxFU"
+      ],
+      "Investment Type Order": [
+        1
+      ],
+      "Count: Data Sets & Commons Priorities": 11,
+      "Count (Survey: Infrastructure & Platforms Priorities)": 0,
+      "Count (Survey: Crisis Analytics & Insights Priorities)": 0,
+      "Count (Survey: Human Capital & Know-how Priorities)": 0,
+      "Count (Survey: Standards & Coordination Priorities)": 0,
+      "Count (Survey: Learning & Exchange Priorities)": 0,
+      "Investment Theme(s)": "Baseline Population Data",
+      "Summary (Workshop: Donor/Contributing Partners)": {
+        "state": "error",
+        "errorType": "emptyDependency",
+        "value": null,
+        "isStale": false
+      }
+    }
+  },
+  {
+    "id": "recbkK8z2KNFMGeVh",
+    "fields": {
+      "THEME_ID": "recbkK8z2KNFMGeVh",
+      "Linked Investment Type": [
+        "recTabK8HX3v0dmPg"
+      ],
+      "Investment Type": [
+        "Crisis Analytics & Insights"
+      ],
+      "Investment Themes [Text Key]": "Sentiment Analysis",
+      "Investment Type Order": [
+        3
+      ],
+      "Survey: Crisis Analytics & Insights Priorities": [
+        "recdD14hmJf4YBVgb",
+        "recSxJM7NXQpobyYi"
+      ],
+      "Count: Data Sets & Commons Priorities": 0,
+      "Count (Survey: Infrastructure & Platforms Priorities)": 0,
+      "Count (Survey: Crisis Analytics & Insights Priorities)": 2,
+      "Count (Survey: Human Capital & Know-how Priorities)": 0,
+      "Count (Survey: Standards & Coordination Priorities)": 0,
+      "Count (Survey: Learning & Exchange Priorities)": 0,
+      "Investment Theme(s)": "Sentiment Analysis",
+      "Summary (Workshop: Donor/Contributing Partners)": {
+        "state": "error",
+        "errorType": "emptyDependency",
+        "value": null,
+        "isStale": false
+      },
+      "theme_description": "Sentiment Analysis in Crisis Analytics & Insights involves using humanitarian data to automatically detect and interpret the emotions, attitudes, or opinions expressed in communications during crises, helping organizations understand public sentiment and respond more effectively."
+    }
+  },
+  {
+    "id": "recbtdyPA1genJSzt",
+    "fields": {
+      "THEME_ID": "recbtdyPA1genJSzt",
+      "Linked Investment Type": [
+        "recTabK8HX3v0dmPg"
+      ],
+      "Investment Type": [
+        "Crisis Analytics & Insights"
+      ],
+      "Investment Themes [Text Key]": "Poverty Analytics",
+      "Data Ecosystem Projects": [
+        "recJQghyXlyK5WiCE"
+      ],
+      "Investment Type Order": [
+        3
+      ],
+      "Survey: Crisis Analytics & Insights Priorities": [
+        "recUloRidGuWLPpDk"
+      ],
+      "Count: Data Sets & Commons Priorities": 0,
+      "Count (Survey: Infrastructure & Platforms Priorities)": 0,
+      "Count (Survey: Crisis Analytics & Insights Priorities)": 1,
+      "Count (Survey: Human Capital & Know-how Priorities)": 0,
+      "Count (Survey: Standards & Coordination Priorities)": 0,
+      "Count (Survey: Learning & Exchange Priorities)": 0,
+      "Investment Theme(s)": "Poverty Analytics",
+      "Summary (Workshop: Donor/Contributing Partners)": {
+        "state": "error",
+        "errorType": "emptyDependency",
+        "value": null,
+        "isStale": false
+      },
+      "theme_description": "Poverty Analytics uses data-driven methods to identify, measure, and understand patterns of poverty, enabling targeted humanitarian responses and informed decision-making during crises."
+    }
+  },
+  {
+    "id": "recbzoBzyYRwTwEx9",
+    "fields": {
+      "THEME_ID": "recbzoBzyYRwTwEx9",
+      "Linked Investment Type": [
+        "recrKFJAlS8YmW1Qi"
+      ],
+      "Investment Type": [
+        "Data Sets & Commons"
+      ],
+      "Notes on Investment Theme": "TODO: Disaggregate Geospatial from Boundaries Data (a subset)\n",
+      "Survey: Data Sets & Commons Priorities": [
+        "recyFeFv1wORnPhOX",
+        "recUloRidGuWLPpDk",
+        "reciRQowoWHhCPgd0",
+        "reco5W39j2T2GQbwh",
+        "reclIpnVpxBj2H0YM",
+        "rec86pSbmLv8TbY8D",
+        "recCP7c2CsJttJFUj"
+      ],
+      "Investment Themes [Text Key]": "Geospatial Data",
+      "Data Ecosystem Projects": [
+        "reczxU9NrSDw2mJcN",
+        "rec6dmVAye6IslJOK",
+        "rec2Su6C7bHl4BC7h",
+        "rec3xc850SaSrqS7t",
+        "rec9ZvuALWuRRSN5P",
+        "recbmA6Lmrr5AfAHJ",
+        "recxNVM0HeC0mSQyk",
+        "recF8bGKczcSVXjRz",
+        "recF1lTFIy27lMFwT",
+        "recGG8gTf4t6l8Mue",
+        "reca35l4CEELxX2d1",
+        "recQubJTGSwZoqzix",
+        "recXAXl4lWxy06qt5",
+        "rec8wR515Mvu0YGx0",
+        "recgftq4GZElVtfi6",
+        "recAeviz1XjLC8V6i",
+        "recD0o9DgLleR3ctz",
+        "rec36dX7WTnSmv9Yo"
+      ],
+      "Investment Type Order": [
+        1
+      ],
+      "Count: Data Sets & Commons Priorities": 7,
+      "Count (Survey: Infrastructure & Platforms Priorities)": 0,
+      "Count (Survey: Crisis Analytics & Insights Priorities)": 0,
+      "Count (Survey: Human Capital & Know-how Priorities)": 0,
+      "Count (Survey: Standards & Coordination Priorities)": 0,
+      "Priority: Red Team": "HIGH",
+      "Count (Survey: Learning & Exchange Priorities)": 0,
+      "Investment Theme(s)": "Geospatial Data",
+      "Summary (Workshop: Donor/Contributing Partners)": {
+        "state": "error",
+        "errorType": "emptyDependency",
+        "value": null,
+        "isStale": false
+      }
+    }
+  },
+  {
+    "id": "reccDu4npUYpXUCeW",
+    "fields": {
+      "THEME_ID": "reccDu4npUYpXUCeW",
+      "Linked Investment Type": [
+        "recTabK8HX3v0dmPg"
+      ],
+      "Investment Type": [
+        "Crisis Analytics & Insights"
+      ],
+      "Investment Themes [Text Key]": "PiN Calculation",
+      "Data Ecosystem Projects": [
+        "reccYy5JWKJEASskp"
+      ],
+      "Investment Type Order": [
+        3
+      ],
+      "Count: Data Sets & Commons Priorities": 0,
+      "Count (Survey: Infrastructure & Platforms Priorities)": 0,
+      "Count (Survey: Crisis Analytics & Insights Priorities)": 0,
+      "Count (Survey: Human Capital & Know-how Priorities)": 0,
+      "Count (Survey: Standards & Coordination Priorities)": 0,
+      "Count (Survey: Learning & Exchange Priorities)": 0,
+      "Investment Theme(s)": "PiN Calculation",
+      "Summary (Workshop: Donor/Contributing Partners)": {
+        "state": "error",
+        "errorType": "emptyDependency",
+        "value": null,
+        "isStale": false
+      },
+      "theme_description": "PiN (People in Need) Calculation estimates the number of individuals requiring humanitarian assistance in a crisis by analyzing data on vulnerabilities, exposure, and severity of needs within affected populations."
+    }
+  },
+  {
+    "id": "recceshEh5aPOZZTo",
+    "fields": {
+      "THEME_ID": "recceshEh5aPOZZTo",
+      "Linked Investment Type": [
+        "recrKFJAlS8YmW1Qi"
+      ],
+      "Investment Type": [
+        "Data Sets & Commons"
+      ],
+      "Survey: Data Sets & Commons Priorities": [
+        "recUloRidGuWLPpDk",
+        "rec5ClssrbllpDxE5",
+        "recykau7zFwNuuRfD",
+        "rec9YlBY9v3lz8Fda"
+      ],
+      "Investment Themes [Text Key]": "Household Survey Data",
+      "Data Ecosystem Projects": [
+        "recopmKKe6HZ5qWWw",
+        "recAAFwdCWrOgQGWL",
+        "recIUs7JTe4alrFDs",
+        "rec4x8zaZtHkZpdrK",
+        "recz2ZsyM0B05BdFP",
+        "recxuOxX8VxssdS6k",
+        "recjAd7jOVvlh7mnp",
+        "recs629pSu4Ei5145",
+        "recZmszPiwWGvrYee",
+        "recLqIa10HXfvELNB"
+      ],
+      "Investment Type Order": [
+        1
+      ],
+      "Count: Data Sets & Commons Priorities": 4,
+      "Count (Survey: Infrastructure & Platforms Priorities)": 0,
+      "Count (Survey: Crisis Analytics & Insights Priorities)": 0,
+      "Count (Survey: Human Capital & Know-how Priorities)": 0,
+      "Count (Survey: Standards & Coordination Priorities)": 0,
+      "Count (Survey: Learning & Exchange Priorities)": 0,
+      "Investment Theme(s)": "Household Survey Data",
+      "Summary (Workshop: Donor/Contributing Partners)": {
+        "state": "error",
+        "errorType": "emptyDependency",
+        "value": null,
+        "isStale": false
+      }
+    }
+  },
+  {
+    "id": "recdkrCTJ1cVVP56D",
+    "fields": {
+      "THEME_ID": "recdkrCTJ1cVVP56D",
+      "Linked Investment Type": [
+        "recrKFJAlS8YmW1Qi"
+      ],
+      "Investment Type": [
+        "Data Sets & Commons"
+      ],
+      "Survey: Data Sets & Commons Priorities": [
+        "recYN0aPBDa0Msynv",
+        "recTq8xGeKTVo1RY4",
+        "recUCZe9nJj8V8ULV"
+      ],
+      "Investment Themes [Text Key]": "Health Facilities Data",
+      "Investment Type Order": [
+        1
+      ],
+      "Count: Data Sets & Commons Priorities": 3,
+      "Count (Survey: Infrastructure & Platforms Priorities)": 0,
+      "Count (Survey: Crisis Analytics & Insights Priorities)": 0,
+      "Count (Survey: Human Capital & Know-how Priorities)": 0,
+      "Count (Survey: Standards & Coordination Priorities)": 0,
+      "Count (Survey: Learning & Exchange Priorities)": 0,
+      "Investment Theme(s)": "Health Facilities Data",
+      "Summary (Workshop: Donor/Contributing Partners)": {
+        "state": "error",
+        "errorType": "emptyDependency",
+        "value": null,
+        "isStale": false
+      }
+    }
+  },
+  {
+    "id": "recdribDmnZjUFTvO",
+    "fields": {
+      "THEME_ID": "recdribDmnZjUFTvO",
+      "Linked Investment Type": [
+        "recrKFJAlS8YmW1Qi"
+      ],
+      "Investment Type": [
+        "Data Sets & Commons"
+      ],
+      "Survey: Data Sets & Commons Priorities": [
+        "recKflMuy6GI01hoW",
+        "recdD14hmJf4YBVgb",
+        "recJwEAi6aNknm8g8",
+        "recmJftOXoJojM0Th",
+        "recykau7zFwNuuRfD",
+        "recMRTcX26O14WfSI",
+        "recCP7c2CsJttJFUj"
+      ],
+      "Investment Themes [Text Key]": "Needs Assessment Data",
+      "Data Ecosystem Projects": [
+        "recST6hz3bs6MKakU",
+        "rec4V0tKy9KP8Gw4h",
+        "rec795N2KXfgxaM50",
+        "recxZmQWr8fIn8d1G",
+        "recIUSUS3NNXaMHCQ",
+        "recz2ZsyM0B05BdFP",
+        "recxuOxX8VxssdS6k",
+        "recUotlR1ZJwVMAIS",
+        "reccYy5JWKJEASskp",
+        "recni7Cfecz6SBQ8S"
+      ],
+      "Investment Type Order": [
+        1
+      ],
+      "Count: Data Sets & Commons Priorities": 7,
+      "Count (Survey: Infrastructure & Platforms Priorities)": 0,
+      "Count (Survey: Crisis Analytics & Insights Priorities)": 0,
+      "Count (Survey: Human Capital & Know-how Priorities)": 0,
+      "Count (Survey: Standards & Coordination Priorities)": 0,
+      "Count (Survey: Learning & Exchange Priorities)": 0,
+      "Investment Theme(s)": "Needs Assessment Data",
+      "Summary (Workshop: Donor/Contributing Partners)": {
+        "state": "error",
+        "errorType": "emptyDependency",
+        "value": null,
+        "isStale": false
+      }
+    }
+  },
+  {
+    "id": "recerrlEGlkhqqtWj",
+    "fields": {
+      "THEME_ID": "recerrlEGlkhqqtWj",
+      "Linked Investment Type": [
+        "rec6Pib8EhL0nZfPJ"
+      ],
+      "Investment Type": [
+        "Infrastructure & Platforms"
+      ],
+      "Investment Themes [Text Key]": "Data Processing & Transformation",
+      "Data Ecosystem Projects": [
+        "recS70dZaWiddCf5J"
+      ],
+      "Investment Type Order": [
+        2
+      ],
+      "Survey: Infrastructure & Platforms Priorities": [
+        "recRNvYEOVuVikm3o",
+        "recdD14hmJf4YBVgb",
+        "recTq8xGeKTVo1RY4",
+        "rec9YlBY9v3lz8Fda"
+      ],
+      "Count: Data Sets & Commons Priorities": 0,
+      "Count (Survey: Infrastructure & Platforms Priorities)": 4,
+      "Count (Survey: Crisis Analytics & Insights Priorities)": 0,
+      "Count (Survey: Human Capital & Know-how Priorities)": 0,
+      "Count (Survey: Standards & Coordination Priorities)": 0,
+      "Count (Survey: Learning & Exchange Priorities)": 0,
+      "Investment Theme(s)": "Data Processing & Transformation",
+      "Summary (Workshop: Donor/Contributing Partners)": {
+        "state": "error",
+        "errorType": "emptyDependency",
+        "value": null,
+        "isStale": false
+      }
+    }
+  },
+  {
+    "id": "recg3CmHPN8olyg1m",
+    "fields": {
+      "THEME_ID": "recg3CmHPN8olyg1m",
+      "Linked Investment Type": [
+        "recTabK8HX3v0dmPg"
+      ],
+      "Investment Type": [
+        "Crisis Analytics & Insights"
+      ],
+      "Investment Themes [Text Key]": "Flood Risk Analytics",
+      "Investment Type Order": [
+        3
+      ],
+      "Count: Data Sets & Commons Priorities": 0,
+      "Count (Survey: Infrastructure & Platforms Priorities)": 0,
+      "Count (Survey: Crisis Analytics & Insights Priorities)": 0,
+      "Count (Survey: Human Capital & Know-how Priorities)": 0,
+      "Count (Survey: Standards & Coordination Priorities)": 0,
+      "Count (Survey: Learning & Exchange Priorities)": 0,
+      "Investment Theme(s)": "Flood Risk Analytics",
+      "Summary (Workshop: Donor/Contributing Partners)": {
+        "state": "error",
+        "errorType": "emptyDependency",
+        "value": null,
+        "isStale": false
+      },
+      "theme_description": "Flood Risk Analytics uses data and advanced analysis to assess, predict, and visualize flood risks, helping humanitarian organizations make informed decisions during crises."
+    }
+  },
+  {
+    "id": "recg5GD4EnNIV7QMg",
+    "fields": {
+      "THEME_ID": "recg5GD4EnNIV7QMg",
+      "Linked Investment Type": [
+        "recrKFJAlS8YmW1Qi"
+      ],
+      "Investment Type": [
+        "Data Sets & Commons"
+      ],
+      "Survey: Data Sets & Commons Priorities": [
+        "reco5W39j2T2GQbwh",
+        "recFhDbWgQ9kn69Sd"
+      ],
+      "Investment Themes [Text Key]": "Food Security Data",
+      "Data Ecosystem Projects": [
+        "recRERSUhmJ4M8jzA",
+        "rec6dmVAye6IslJOK",
+        "recaWq49HJw4UXd9K",
+        "rec4SqufwyxLeeDM4",
+        "recrAQT0YpFBCQ02U",
+        "receGDImgeYZLVOPq",
+        "reccI6M0kWMcanXsD",
+        "recLN9L7RGRz4p1zM",
+        "recnoFBXdvLa7XJHw",
+        "recD0o9DgLleR3ctz",
+        "rec36dX7WTnSmv9Yo"
+      ],
+      "Investment Type Order": [
+        1
+      ],
+      "Count: Data Sets & Commons Priorities": 2,
+      "Count (Survey: Infrastructure & Platforms Priorities)": 0,
+      "Count (Survey: Crisis Analytics & Insights Priorities)": 0,
+      "Count (Survey: Human Capital & Know-how Priorities)": 0,
+      "Count (Survey: Standards & Coordination Priorities)": 0,
+      "Priority: UN Partner": "MEDIUM",
+      "Priority: Donor/Contributing Partners": "HIGH",
+      "Count (Survey: Learning & Exchange Priorities)": 0,
+      "Investment Theme(s)": "Food Security Data",
+      "Summary (Workshop: Donor/Contributing Partners)": {
+        "state": "error",
+        "errorType": "emptyDependency",
+        "value": null,
+        "isStale": false
+      }
+    }
+  },
+  {
+    "id": "reci3PAIORBwrVbF7",
+    "fields": {
+      "THEME_ID": "reci3PAIORBwrVbF7",
+      "Linked Investment Type": [
+        "recTabK8HX3v0dmPg"
+      ],
+      "Investment Type": [
+        "Crisis Analytics & Insights"
+      ],
+      "Investment Themes [Text Key]": "Humanitarian Access Analytics",
+      "Data Ecosystem Projects": [
+        "rec4XuZsotMgaVbAm"
+      ],
+      "Investment Type Order": [
+        3
+      ],
+      "Survey: Crisis Analytics & Insights Priorities": [
+        "recsdJioQCh6jEJep",
+        "reco5W39j2T2GQbwh",
+        "recauIcjLxpShs4Av",
+        "recCY4InqL8mKlvgM",
+        "recUCZe9nJj8V8ULV"
+      ],
+      "Count: Data Sets & Commons Priorities": 0,
+      "Count (Survey: Infrastructure & Platforms Priorities)": 0,
+      "Count (Survey: Crisis Analytics & Insights Priorities)": 5,
+      "Count (Survey: Human Capital & Know-how Priorities)": 0,
+      "Count (Survey: Standards & Coordination Priorities)": 0,
+      "Count (Survey: Learning & Exchange Priorities)": 0,
+      "Investment Theme(s)": "Humanitarian Access Analytics",
+      "Summary (Workshop: Donor/Contributing Partners)": {
+        "state": "error",
+        "errorType": "emptyDependency",
+        "value": null,
+        "isStale": false
+      },
+      "theme_description": "Humanitarian Access Analytics provides data-driven insights and analysis to help organizations understand and navigate challenges in delivering aid during crises."
+    }
+  },
+  {
+    "id": "reci6a4Q9l1S3EvpB",
+    "fields": {
+      "THEME_ID": "reci6a4Q9l1S3EvpB",
+      "Linked Investment Type": [
+        "recTabK8HX3v0dmPg"
+      ],
+      "Investment Type": [
+        "Crisis Analytics & Insights"
+      ],
+      "Investment Themes [Text Key]": "Damage Assessments",
+      "Data Ecosystem Projects": [
+        "rec795N2KXfgxaM50",
+        "recwpLBPiqgZWOXyn",
+        "recUotlR1ZJwVMAIS",
+        "recYzS7BrsxBG8llV",
+        "recZxXY0AjXgSMXr7",
+        "recf4QNnota3r1Jch",
+        "recRqJS0I3kX5dYEJ",
+        "recdr2wcQiX1Ch1ZF"
+      ],
+      "Investment Type Order": [
+        3
+      ],
+      "Survey: Crisis Analytics & Insights Priorities": [
+        "recyFeFv1wORnPhOX",
+        "recYN0aPBDa0Msynv",
+        "reciRQowoWHhCPgd0",
+        "recEPPl3NAv57t1MJ",
+        "recmJftOXoJojM0Th",
+        "rec86pSbmLv8TbY8D",
+        "recCP7c2CsJttJFUj"
+      ],
+      "Count: Data Sets & Commons Priorities": 0,
+      "Count (Survey: Infrastructure & Platforms Priorities)": 0,
+      "Count (Survey: Crisis Analytics & Insights Priorities)": 7,
+      "Count (Survey: Human Capital & Know-how Priorities)": 0,
+      "Count (Survey: Standards & Coordination Priorities)": 0,
+      "Count (Survey: Learning & Exchange Priorities)": 0,
+      "Investment Theme(s)": "Damage Assessments",
+      "Summary (Workshop: Donor/Contributing Partners)": {
+        "state": "error",
+        "errorType": "emptyDependency",
+        "value": null,
+        "isStale": false
+      },
+      "theme_description": "Damage Assessments analyze the extent and impact of a crisis on people, infrastructure, and resources to inform effective humanitarian response decisions."
+    }
+  },
+  {
+    "id": "reciKntOBlmiwjeIa",
+    "fields": {
+      "THEME_ID": "reciKntOBlmiwjeIa",
+      "Linked Investment Type": [
+        "recwuGLOXpe7ElgYv"
+      ],
+      "Investment Type": [
+        "Standards & Coordination"
+      ],
+      "Investment Themes [Text Key]": "Open Source",
+      "Investment Type Order": [
+        5
+      ],
+      "Survey: Standards & Coordination Priorities": [
+        "recUloRidGuWLPpDk",
+        "reciRQowoWHhCPgd0",
+        "recfKUpWThFexbOM8",
+        "recUCZe9nJj8V8ULV"
+      ],
+      "Count: Data Sets & Commons Priorities": 0,
+      "Count (Survey: Infrastructure & Platforms Priorities)": 0,
+      "Count (Survey: Crisis Analytics & Insights Priorities)": 0,
+      "Count (Survey: Human Capital & Know-how Priorities)": 0,
+      "Count (Survey: Standards & Coordination Priorities)": 4,
+      "Count (Survey: Learning & Exchange Priorities)": 0,
+      "Investment Theme(s)": "Open Source",
+      "Summary (Workshop: Donor/Contributing Partners)": {
+        "state": "error",
+        "errorType": "emptyDependency",
+        "value": null,
+        "isStale": false
+      }
+    }
+  },
+  {
+    "id": "reciib8lAGGh1wFzx",
+    "fields": {
+      "THEME_ID": "reciib8lAGGh1wFzx",
+      "Linked Investment Type": [
+        "recwuGLOXpe7ElgYv"
+      ],
+      "Investment Type": [
+        "Standards & Coordination"
+      ],
+      "Investment Themes [Text Key]": "Data Protection & Privacy Frameworks",
+      "Investment Type Order": [
+        5
+      ],
+      "Survey: Standards & Coordination Priorities": [
+        "reclIpnVpxBj2H0YM",
+        "recG7awSTTZzFVP64",
+        "recqdaVuFOyhgKa0t",
+        "recAHDIrT8uzr6iRj"
+      ],
+      "Count: Data Sets & Commons Priorities": 0,
+      "Count (Survey: Infrastructure & Platforms Priorities)": 0,
+      "Count (Survey: Crisis Analytics & Insights Priorities)": 0,
+      "Count (Survey: Human Capital & Know-how Priorities)": 0,
+      "Count (Survey: Standards & Coordination Priorities)": 4,
+      "Count (Survey: Learning & Exchange Priorities)": 0,
+      "Investment Theme(s)": "Data Protection & Privacy Frameworks",
+      "Summary (Workshop: Donor/Contributing Partners)": {
+        "state": "error",
+        "errorType": "emptyDependency",
+        "value": null,
+        "isStale": false
+      }
+    }
+  },
+  {
+    "id": "recjkjv1mOhU9UMxp",
+    "fields": {
+      "THEME_ID": "recjkjv1mOhU9UMxp",
+      "Linked Investment Type": [
+        "recqH1EJ0zW8l9lqn"
+      ],
+      "Investment Type": [
+        "Learning & Exchange"
+      ],
+      "Investment Themes [Text Key]": "Communities of Practice",
+      "Data Ecosystem Projects": [
+        "recxWS5Ys5dJ0dn1X",
+        "recwyWa10JHuVhWo9"
+      ],
+      "Investment Type Order": [
+        6
+      ],
+      "Survey: Learning & Exchange Priorities": [
+        "recUloRidGuWLPpDk",
+        "recGzuGtbK7nrQ6vB",
+        "rec44wmxI5Jk3NyKU",
+        "recsdJioQCh6jEJep",
+        "reciRQowoWHhCPgd0",
+        "rechMLW2zWKburRYY",
+        "recEPPl3NAv57t1MJ",
+        "recauIcjLxpShs4Av",
+        "recG7awSTTZzFVP64",
+        "recqdaVuFOyhgKa0t",
+        "recCY4InqL8mKlvgM",
+        "recmJftOXoJojM0Th",
+        "recRsAJqKXShWeDP9",
+        "recykau7zFwNuuRfD",
+        "rec86pSbmLv8TbY8D",
+        "recAwNDEguHa5XK4J",
+        "rec9YlBY9v3lz8Fda"
+      ],
+      "Count: Data Sets & Commons Priorities": 0,
+      "Count (Survey: Infrastructure & Platforms Priorities)": 0,
+      "Count (Survey: Crisis Analytics & Insights Priorities)": 0,
+      "Count (Survey: Human Capital & Know-how Priorities)": 0,
+      "Count (Survey: Standards & Coordination Priorities)": 0,
+      "Count (Survey: Learning & Exchange Priorities)": 17,
+      "Investment Theme(s)": "Communities of Practice",
+      "Summary (Workshop: Donor/Contributing Partners)": {
+        "state": "error",
+        "errorType": "emptyDependency",
+        "value": null,
+        "isStale": false
+      }
+    }
+  },
+  {
+    "id": "recjpVRkfvEPAy8HO",
+    "fields": {
+      "THEME_ID": "recjpVRkfvEPAy8HO",
+      "Linked Investment Type": [
+        "rec6Pib8EhL0nZfPJ"
+      ],
+      "Investment Type": [
+        "Infrastructure & Platforms"
+      ],
+      "Investment Themes [Text Key]": "Data Storage, Access & Sharing",
+      "Data Ecosystem Projects": [
+        "recHVA5VejuaVSohF",
+        "recv2rUABIb3FhIRW",
+        "reckkGrUM2q2e7aeo",
+        "recmH2oywWDYooamX",
+        "recniVpxHScJaQdLq",
+        "rec2eT5BuCp87chHm",
+        "recnU6ZioVzUVRKZo",
+        "rechEM6RZ6by4ZLZK",
+        "recwSp54iuK53ankI",
+        "recIUSUS3NNXaMHCQ",
+        "recS70dZaWiddCf5J",
+        "recgbAUAt9auV97KC",
+        "recJye4S746MWWmW6",
+        "reckhF1PTR2hh135J",
+        "recwpLBPiqgZWOXyn",
+        "recgftq4GZElVtfi6",
+        "rece4fDBOtjCywl9q",
+        "recO3RZZ7IEA88GnQ",
+        "recv5EjAR3NgCKSaI",
+        "recejrbDKmak6gySA"
+      ],
+      "Investment Type Order": [
+        2
+      ],
+      "Survey: Infrastructure & Platforms Priorities": [
+        "recRNvYEOVuVikm3o",
+        "recKflMuy6GI01hoW",
+        "recJwEAi6aNknm8g8",
+        "reciRQowoWHhCPgd0",
+        "recndRlsuLcLAKu4w",
+        "recf3w4yhmSJVcM4E",
+        "reco5W39j2T2GQbwh",
+        "recSxJM7NXQpobyYi",
+        "recOYVkcXzWVEiXtL",
+        "recqdaVuFOyhgKa0t",
+        "recmJftOXoJojM0Th",
+        "recRsAJqKXShWeDP9"
+      ],
+      "Count: Data Sets & Commons Priorities": 0,
+      "Count (Survey: Infrastructure & Platforms Priorities)": 12,
+      "Count (Survey: Crisis Analytics & Insights Priorities)": 0,
+      "Count (Survey: Human Capital & Know-how Priorities)": 0,
+      "Count (Survey: Standards & Coordination Priorities)": 0,
+      "Priority: UN Partner": "HIGH",
+      "Count (Survey: Learning & Exchange Priorities)": 0,
+      "Investment Theme(s)": "Data Storage, Access & Sharing",
+      "Summary (Workshop: Donor/Contributing Partners)": {
+        "state": "error",
+        "errorType": "emptyDependency",
+        "value": null,
+        "isStale": false
+      }
+    }
+  },
+  {
+    "id": "reckQURNY0Hu9wJnI",
+    "fields": {
+      "THEME_ID": "reckQURNY0Hu9wJnI",
+      "Linked Investment Type": [
+        "recTabK8HX3v0dmPg"
+      ],
+      "Investment Type": [
+        "Crisis Analytics & Insights"
+      ],
+      "Investment Themes [Text Key]": "Water, Sanitation & Hygiene (WASH) Analytics",
+      "Investment Type Order": [
+        3
+      ],
+      "Count: Data Sets & Commons Priorities": 0,
+      "Count (Survey: Infrastructure & Platforms Priorities)": 0,
+      "Count (Survey: Crisis Analytics & Insights Priorities)": 0,
+      "Count (Survey: Human Capital & Know-how Priorities)": 0,
+      "Count (Survey: Standards & Coordination Priorities)": 0,
+      "Count (Survey: Learning & Exchange Priorities)": 0,
+      "Investment Theme(s)": "Water, Sanitation & Hygiene (WASH) Analytics",
+      "Summary (Workshop: Donor/Contributing Partners)": {
+        "state": "error",
+        "errorType": "emptyDependency",
+        "value": null,
+        "isStale": false
+      },
+      "theme_description": "WASH Analytics uses humanitarian data to assess and improve access to safe water, sanitation, and hygiene services during crises, enabling targeted and effective emergency responses."
+    }
+  },
+  {
+    "id": "reckZr6lgDjwa1ro1",
+    "fields": {
+      "THEME_ID": "reckZr6lgDjwa1ro1",
+      "Linked Investment Type": [
+        "recTabK8HX3v0dmPg"
+      ],
+      "Investment Type": [
+        "Crisis Analytics & Insights"
+      ],
+      "Investment Themes [Text Key]": "Displacement Analytics",
+      "Data Ecosystem Projects": [
+        "rec8taCKOmbZu5s4Z",
+        "recni7Cfecz6SBQ8S",
+        "rec28WeSKDEQ5wx45"
+      ],
+      "Investment Type Order": [
+        3
+      ],
+      "Survey: Crisis Analytics & Insights Priorities": [
+        "recUloRidGuWLPpDk",
+        "recfKUpWThFexbOM8",
+        "recqdaVuFOyhgKa0t",
+        "recCY4InqL8mKlvgM",
+        "rec9YlBY9v3lz8Fda"
+      ],
+      "Count: Data Sets & Commons Priorities": 0,
+      "Count (Survey: Infrastructure & Platforms Priorities)": 0,
+      "Count (Survey: Crisis Analytics & Insights Priorities)": 5,
+      "Count (Survey: Human Capital & Know-how Priorities)": 0,
+      "Count (Survey: Standards & Coordination Priorities)": 0,
+      "Count (Survey: Learning & Exchange Priorities)": 0,
+      "Investment Theme(s)": "Displacement & Migration Analytics",
+      "Summary (Workshop: Donor/Contributing Partners)": {
+        "state": "error",
+        "errorType": "emptyDependency",
+        "value": null,
+        "isStale": false
+      },
+      "theme_description": "Displacement & Migration Analytics uses humanitarian data to track, analyze, and provide insights on population movements and migration patterns during crises."
+    }
+  },
+  {
+    "id": "reckgpMfn2eoHYbRM",
+    "fields": {
+      "THEME_ID": "reckgpMfn2eoHYbRM",
+      "Linked Investment Type": [
+        "recwuGLOXpe7ElgYv"
+      ],
+      "Investment Type": [
+        "Standards & Coordination"
+      ],
+      "Investment Themes [Text Key]": "Standard Geocodes",
+      "Investment Type Order": [
+        5
+      ],
+      "Survey: Standards & Coordination Priorities": [
+        "recsdJioQCh6jEJep",
+        "recf3w4yhmSJVcM4E",
+        "recFhDbWgQ9kn69Sd",
+        "recmJftOXoJojM0Th"
+      ],
+      "Count: Data Sets & Commons Priorities": 0,
+      "Count (Survey: Infrastructure & Platforms Priorities)": 0,
+      "Count (Survey: Crisis Analytics & Insights Priorities)": 0,
+      "Count (Survey: Human Capital & Know-how Priorities)": 0,
+      "Count (Survey: Standards & Coordination Priorities)": 4,
+      "Count (Survey: Learning & Exchange Priorities)": 0,
+      "Investment Theme(s)": "Standard Geocodes",
+      "Summary (Workshop: Donor/Contributing Partners)": {
+        "state": "error",
+        "errorType": "emptyDependency",
+        "value": null,
+        "isStale": false
+      }
+    }
+  },
+  {
+    "id": "reclr5rV4J9YJMqZl",
+    "fields": {
+      "THEME_ID": "reclr5rV4J9YJMqZl",
+      "Linked Investment Type": [
+        "recTabK8HX3v0dmPg"
+      ],
+      "Investment Type": [
+        "Crisis Analytics & Insights"
+      ],
+      "Investment Themes [Text Key]": "Conflict Analytics",
+      "Data Ecosystem Projects": [
+        "recEf0pdKsN1Gbvo8",
+        "recJQghyXlyK5WiCE",
+        "recOOQ5c99vFwz8i8",
+        "recgmCxRj8IVZMFF2",
+        "recO3RZZ7IEA88GnQ",
+        "recfTLQpzUgBOtlS5",
+        "recLA3jRq3bbZRVzu",
+        "recwMGK7lbvDfjR14",
+        "recjxVwrxVL90go5G",
+        "rec28WeSKDEQ5wx45"
+      ],
+      "Investment Type Order": [
+        3
+      ],
+      "Survey: Crisis Analytics & Insights Priorities": [
+        "recyFeFv1wORnPhOX",
+        "recKflMuy6GI01hoW",
+        "rec44wmxI5Jk3NyKU",
+        "recndRlsuLcLAKu4w",
+        "reclIpnVpxBj2H0YM",
+        "recCY4InqL8mKlvgM",
+        "recnwHuZwBwawj7Ct"
+      ],
+      "Count: Data Sets & Commons Priorities": 0,
+      "Count (Survey: Infrastructure & Platforms Priorities)": 0,
+      "Count (Survey: Crisis Analytics & Insights Priorities)": 7,
+      "Count (Survey: Human Capital & Know-how Priorities)": 0,
+      "Count (Survey: Standards & Coordination Priorities)": 0,
+      "Count (Survey: Learning & Exchange Priorities)": 0,
+      "Investment Theme(s)": "Conflict Analytics",
+      "Summary (Workshop: Donor/Contributing Partners)": {
+        "state": "error",
+        "errorType": "emptyDependency",
+        "value": null,
+        "isStale": false
+      },
+      "theme_description": "Conflict Analytics uses data analysis to understand, monitor, and predict conflict situations, providing insights to support humanitarian decision-making and crisis response."
+    }
+  },
+  {
+    "id": "recm8b3wllEzdFwf0",
+    "fields": {
+      "THEME_ID": "recm8b3wllEzdFwf0",
+      "Linked Investment Type": [
+        "recUueuvKqzUgF7Xo"
+      ],
+      "Investment Type": [
+        "Human Capital & Know-how"
+      ],
+      "Investment Themes [Text Key]": "Upskilling & Training",
+      "Data Ecosystem Projects": [
+        "reckhF1PTR2hh135J",
+        "recf0UvW6LzObKXGC",
+        "reck0qeeLf1nGLbap",
+        "recbmA6Lmrr5AfAHJ",
+        "rec45gS90ejbQe8V3",
+        "recwyWa10JHuVhWo9",
+        "recGVHndBPIvMpuHb",
+        "recfjAhO2DxCjgEgM",
+        "recgmCxRj8IVZMFF2",
+        "rech8GCismNX3Bm8p",
+        "rec6S0tX5hnP9I5DG",
+        "recfUQ0LgTnaydzWg",
+        "recxPDSfMPQYhiw5Q"
+      ],
+      "Investment Type Order": [
+        4
+      ],
+      "Survey: Human Capital & Know-how Priorities": [
+        "recRNvYEOVuVikm3o",
+        "recKflMuy6GI01hoW",
+        "rec44wmxI5Jk3NyKU",
+        "recsdJioQCh6jEJep",
+        "recJwEAi6aNknm8g8",
+        "recTq8xGeKTVo1RY4",
+        "reciRQowoWHhCPgd0",
+        "rechMLW2zWKburRYY",
+        "reco5W39j2T2GQbwh",
+        "recEPPl3NAv57t1MJ",
+        "reclIpnVpxBj2H0YM",
+        "recauIcjLxpShs4Av",
+        "recfKUpWThFexbOM8",
+        "recG7awSTTZzFVP64",
+        "recOYVkcXzWVEiXtL",
+        "recqdaVuFOyhgKa0t",
+        "recmJftOXoJojM0Th",
+        "recRsAJqKXShWeDP9",
+        "recykau7zFwNuuRfD",
+        "rec86pSbmLv8TbY8D",
+        "recUCZe9nJj8V8ULV",
+        "recAwNDEguHa5XK4J",
+        "recCP7c2CsJttJFUj"
+      ],
+      "Count: Data Sets & Commons Priorities": 0,
+      "Count (Survey: Infrastructure & Platforms Priorities)": 0,
+      "Count (Survey: Crisis Analytics & Insights Priorities)": 0,
+      "Count (Survey: Human Capital & Know-how Priorities)": 23,
+      "Count (Survey: Standards & Coordination Priorities)": 0,
+      "Count (Survey: Learning & Exchange Priorities)": 0,
+      "Investment Theme(s)": "Upskilling & Training",
+      "Summary (Workshop: Donor/Contributing Partners)": {
+        "state": "error",
+        "errorType": "emptyDependency",
+        "value": null,
+        "isStale": false
+      }
+    }
+  },
+  {
+    "id": "recnwFlS6y3FgSaSm",
+    "fields": {
+      "THEME_ID": "recnwFlS6y3FgSaSm",
+      "Linked Investment Type": [
+        "recqH1EJ0zW8l9lqn"
+      ],
+      "Investment Type": [
+        "Learning & Exchange"
+      ],
+      "Investment Themes [Text Key]": "Forums",
+      "Investment Type Order": [
+        6
+      ],
+      "Survey: Learning & Exchange Priorities": [
+        "recyFeFv1wORnPhOX",
+        "recJwEAi6aNknm8g8",
+        "recTq8xGeKTVo1RY4"
+      ],
+      "Count: Data Sets & Commons Priorities": 0,
+      "Count (Survey: Infrastructure & Platforms Priorities)": 0,
+      "Count (Survey: Crisis Analytics & Insights Priorities)": 0,
+      "Count (Survey: Human Capital & Know-how Priorities)": 0,
+      "Count (Survey: Standards & Coordination Priorities)": 0,
+      "Count (Survey: Learning & Exchange Priorities)": 3,
+      "Investment Theme(s)": "Forums",
+      "Summary (Workshop: Donor/Contributing Partners)": {
+        "state": "error",
+        "errorType": "emptyDependency",
+        "value": null,
+        "isStale": false
+      }
+    }
+  },
+  {
+    "id": "recqZh7z8ILIVAL47",
+    "fields": {
+      "THEME_ID": "recqZh7z8ILIVAL47",
+      "Linked Investment Type": [
+        "recrKFJAlS8YmW1Qi"
+      ],
+      "Investment Type": [
+        "Data Sets & Commons"
+      ],
+      "Investment Themes [Text Key]": "Nutrition Data",
+      "Data Ecosystem Projects": [
+        "recaWq49HJw4UXd9K"
+      ],
+      "Investment Type Order": [
+        1
+      ],
+      "Count: Data Sets & Commons Priorities": 0,
+      "Count (Survey: Infrastructure & Platforms Priorities)": 0,
+      "Count (Survey: Crisis Analytics & Insights Priorities)": 0,
+      "Count (Survey: Human Capital & Know-how Priorities)": 0,
+      "Count (Survey: Standards & Coordination Priorities)": 0,
+      "Count (Survey: Learning & Exchange Priorities)": 0,
+      "Investment Theme(s)": "Nutrition Data",
+      "Summary (Workshop: Donor/Contributing Partners)": {
+        "state": "error",
+        "errorType": "emptyDependency",
+        "value": null,
+        "isStale": false
+      }
+    }
+  },
+  {
+    "id": "recqk0DBgeXkH8dLM",
+    "fields": {
+      "THEME_ID": "recqk0DBgeXkH8dLM",
+      "Linked Investment Type": [
+        "rec6Pib8EhL0nZfPJ"
+      ],
+      "Investment Type": [
+        "Infrastructure & Platforms"
+      ],
+      "Investment Themes [Text Key]": "Private Data Sharing",
+      "Investment Type Order": [
+        2
+      ],
+      "Survey: Infrastructure & Platforms Priorities": [
+        "recauIcjLxpShs4Av"
+      ],
+      "Count: Data Sets & Commons Priorities": 0,
+      "Count (Survey: Infrastructure & Platforms Priorities)": 1,
+      "Count (Survey: Crisis Analytics & Insights Priorities)": 0,
+      "Count (Survey: Human Capital & Know-how Priorities)": 0,
+      "Count (Survey: Standards & Coordination Priorities)": 0,
+      "Count (Survey: Learning & Exchange Priorities)": 0,
+      "Investment Theme(s)": "Private Data Sharing",
+      "Summary (Workshop: Donor/Contributing Partners)": {
+        "state": "error",
+        "errorType": "emptyDependency",
+        "value": null,
+        "isStale": false
+      }
+    }
+  },
+  {
+    "id": "recr63XyoK3P4Fid2",
+    "fields": {
+      "THEME_ID": "recr63XyoK3P4Fid2",
+      "Linked Investment Type": [
+        "recrKFJAlS8YmW1Qi"
+      ],
+      "Investment Type": [
+        "Data Sets & Commons"
+      ],
+      "Survey: Data Sets & Commons Priorities": [
+        "recRNvYEOVuVikm3o",
+        "recYN0aPBDa0Msynv",
+        "recsdJioQCh6jEJep",
+        "reciRQowoWHhCPgd0",
+        "recf3w4yhmSJVcM4E",
+        "reco5W39j2T2GQbwh",
+        "rec5ClssrbllpDxE5",
+        "recmJftOXoJojM0Th",
+        "recRsAJqKXShWeDP9",
+        "recAwNDEguHa5XK4J"
+      ],
+      "Investment Themes [Text Key]": "Disaggregated Country-level Data",
+      "Data Ecosystem Projects": [
+        "rec7HiwptaxnhVxui",
+        "recZmszPiwWGvrYee",
+        "rechtC1lJc96HgvFk",
+        "recCGWvmunEXVzpzw"
+      ],
+      "Investment Type Order": [
+        1
+      ],
+      "Count: Data Sets & Commons Priorities": 10,
+      "Count (Survey: Infrastructure & Platforms Priorities)": 0,
+      "Count (Survey: Crisis Analytics & Insights Priorities)": 0,
+      "Count (Survey: Human Capital & Know-how Priorities)": 0,
+      "Count (Survey: Standards & Coordination Priorities)": 0,
+      "Count (Survey: Learning & Exchange Priorities)": 0,
+      "Investment Theme(s)": "Disaggregated Country-level Data",
+      "Summary (Workshop: Donor/Contributing Partners)": {
+        "state": "error",
+        "errorType": "emptyDependency",
+        "value": null,
+        "isStale": false
+      }
+    }
+  },
+  {
+    "id": "recs24Jki5n2dPBnJ",
+    "fields": {
+      "THEME_ID": "recs24Jki5n2dPBnJ",
+      "Linked Investment Type": [
+        "rec6Pib8EhL0nZfPJ"
+      ],
+      "Investment Type": [
+        "Infrastructure & Platforms"
+      ],
+      "Investment Themes [Text Key]": "Sensitive Data Detection",
+      "Investment Type Order": [
+        2
+      ],
+      "Survey: Infrastructure & Platforms Priorities": [
+        "recGzuGtbK7nrQ6vB"
+      ],
+      "Count: Data Sets & Commons Priorities": 0,
+      "Count (Survey: Infrastructure & Platforms Priorities)": 1,
+      "Count (Survey: Crisis Analytics & Insights Priorities)": 0,
+      "Count (Survey: Human Capital & Know-how Priorities)": 0,
+      "Count (Survey: Standards & Coordination Priorities)": 0,
+      "Count (Survey: Learning & Exchange Priorities)": 0,
+      "Investment Theme(s)": "Sensitive Data Detection",
+      "Summary (Workshop: Donor/Contributing Partners)": {
+        "state": "error",
+        "errorType": "emptyDependency",
+        "value": null,
+        "isStale": false
+      }
+    }
+  },
+  {
+    "id": "recsj2rHA3KAxxStF",
+    "fields": {
+      "THEME_ID": "recsj2rHA3KAxxStF",
+      "Linked Investment Type": [
+        "recrKFJAlS8YmW1Qi"
+      ],
+      "Investment Type": [
+        "Data Sets & Commons"
+      ],
+      "Survey: Data Sets & Commons Priorities": [
+        "recFhDbWgQ9kn69Sd"
+      ],
+      "Investment Themes [Text Key]": "Poverty Data",
+      "Data Ecosystem Projects": [
+        "recl1IcheJlYc36up",
+        "recz2ZsyM0B05BdFP",
+        "recxuOxX8VxssdS6k"
+      ],
+      "Investment Type Order": [
+        1
+      ],
+      "Count: Data Sets & Commons Priorities": 1,
+      "Count (Survey: Infrastructure & Platforms Priorities)": 0,
+      "Count (Survey: Crisis Analytics & Insights Priorities)": 0,
+      "Count (Survey: Human Capital & Know-how Priorities)": 0,
+      "Count (Survey: Standards & Coordination Priorities)": 0,
+      "Count (Survey: Learning & Exchange Priorities)": 0,
+      "Investment Theme(s)": "Poverty Data",
+      "Summary (Workshop: Donor/Contributing Partners)": {
+        "state": "error",
+        "errorType": "emptyDependency",
+        "value": null,
+        "isStale": false
+      }
+    }
+  },
+  {
+    "id": "rectvH7z5xI7uqeJQ",
+    "fields": {
+      "THEME_ID": "rectvH7z5xI7uqeJQ",
+      "Linked Investment Type": [
+        "recwuGLOXpe7ElgYv"
+      ],
+      "Investment Type": [
+        "Standards & Coordination"
+      ],
+      "Investment Themes [Text Key]": "Version Tracking",
+      "Investment Type Order": [
+        5
+      ],
+      "Count: Data Sets & Commons Priorities": 0,
+      "Count (Survey: Infrastructure & Platforms Priorities)": 0,
+      "Count (Survey: Crisis Analytics & Insights Priorities)": 0,
+      "Count (Survey: Human Capital & Know-how Priorities)": 0,
+      "Count (Survey: Standards & Coordination Priorities)": 0,
+      "Count (Survey: Learning & Exchange Priorities)": 0,
+      "Investment Theme(s)": "Version Tracking",
+      "Summary (Workshop: Donor/Contributing Partners)": {
+        "state": "error",
+        "errorType": "emptyDependency",
+        "value": null,
+        "isStale": false
+      }
+    }
+  },
+  {
+    "id": "recu5FveLnsxjescB",
+    "fields": {
+      "THEME_ID": "recu5FveLnsxjescB",
+      "Linked Investment Type": [
+        "rec6Pib8EhL0nZfPJ"
+      ],
+      "Investment Type": [
+        "Infrastructure & Platforms"
+      ],
+      "Investment Themes [Text Key]": "Data Documentation & Metadata",
+      "Data Ecosystem Projects": [
+        "recv5EjAR3NgCKSaI"
+      ],
+      "Investment Type Order": [
+        2
+      ],
+      "Survey: Infrastructure & Platforms Priorities": [
+        "recUloRidGuWLPpDk",
+        "rechMLW2zWKburRYY",
+        "recf3w4yhmSJVcM4E",
+        "recEPPl3NAv57t1MJ",
+        "recAwNDEguHa5XK4J"
+      ],
+      "Count: Data Sets & Commons Priorities": 0,
+      "Count (Survey: Infrastructure & Platforms Priorities)": 5,
+      "Count (Survey: Crisis Analytics & Insights Priorities)": 0,
+      "Count (Survey: Human Capital & Know-how Priorities)": 0,
+      "Count (Survey: Standards & Coordination Priorities)": 0,
+      "Count (Survey: Learning & Exchange Priorities)": 0,
+      "Investment Theme(s)": "Data Documentation & Metadata",
+      "Summary (Workshop: Donor/Contributing Partners)": {
+        "state": "error",
+        "errorType": "emptyDependency",
+        "value": null,
+        "isStale": false
+      }
+    }
+  },
+  {
+    "id": "recuI58QU41dX4qdo",
+    "fields": {
+      "THEME_ID": "recuI58QU41dX4qdo",
+      "Linked Investment Type": [
+        "recTabK8HX3v0dmPg"
+      ],
+      "Investment Type": [
+        "Crisis Analytics & Insights"
+      ],
+      "Investment Themes [Text Key]": "Food Security Analytics",
+      "Data Ecosystem Projects": [
+        "recnoFBXdvLa7XJHw",
+        "receGDImgeYZLVOPq",
+        "recZw88835AgPqssk",
+        "recjZopPYlk0yU6sq",
+        "recO7hHncZQGqy2vJ"
+      ],
+      "Investment Type Order": [
+        3
+      ],
+      "Survey: Crisis Analytics & Insights Priorities": [
+        "recRNvYEOVuVikm3o",
+        "recf3w4yhmSJVcM4E",
+        "recFhDbWgQ9kn69Sd"
+      ],
+      "Count: Data Sets & Commons Priorities": 0,
+      "Count (Survey: Infrastructure & Platforms Priorities)": 0,
+      "Count (Survey: Crisis Analytics & Insights Priorities)": 3,
+      "Count (Survey: Human Capital & Know-how Priorities)": 0,
+      "Count (Survey: Standards & Coordination Priorities)": 0,
+      "Count (Survey: Learning & Exchange Priorities)": 0,
+      "Investment Theme(s)": "Food Security Analytics",
+      "Summary (Workshop: Donor/Contributing Partners)": {
+        "state": "error",
+        "errorType": "emptyDependency",
+        "value": null,
+        "isStale": false
+      },
+      "theme_description": "Food Security Analytics uses data-driven insights to assess and predict food availability, access, and risks, helping humanitarian organizations respond effectively to food crises."
+    }
+  },
+  {
+    "id": "recuPeSJyC93L3eBT",
+    "fields": {
+      "THEME_ID": "recuPeSJyC93L3eBT",
+      "Linked Investment Type": [
+        "recrKFJAlS8YmW1Qi"
+      ],
+      "Investment Type": [
+        "Data Sets & Commons"
+      ],
+      "Survey: Data Sets & Commons Priorities": [
+        "recGzuGtbK7nrQ6vB",
+        "recMRTcX26O14WfSI"
+      ],
+      "Investment Themes [Text Key]": "Environmental Data",
+      "Data Ecosystem Projects": [
+        "recr5hGDgBiAH4xSm",
+        "rec4SqufwyxLeeDM4",
+        "recVj2ULsOWhPFQ19",
+        "reca35l4CEELxX2d1",
+        "recSvtWQnSvfNoXdt",
+        "rece4fDBOtjCywl9q"
+      ],
+      "Investment Type Order": [
+        1
+      ],
+      "Count: Data Sets & Commons Priorities": 2,
+      "Count (Survey: Infrastructure & Platforms Priorities)": 0,
+      "Count (Survey: Crisis Analytics & Insights Priorities)": 0,
+      "Count (Survey: Human Capital & Know-how Priorities)": 0,
+      "Count (Survey: Standards & Coordination Priorities)": 0,
+      "Count (Survey: Learning & Exchange Priorities)": 0,
+      "Investment Theme(s)": "Environmental Data",
+      "Summary (Workshop: Donor/Contributing Partners)": {
+        "state": "error",
+        "errorType": "emptyDependency",
+        "value": null,
+        "isStale": false
+      }
+    }
+  },
+  {
+    "id": "recuRWE2LpSV2PljS",
+    "fields": {
+      "THEME_ID": "recuRWE2LpSV2PljS",
+      "Linked Investment Type": [
+        "recwuGLOXpe7ElgYv"
+      ],
+      "Investment Type": [
+        "Standards & Coordination"
+      ],
+      "Investment Themes [Text Key]": "Consistent Data Formats",
+      "Data Ecosystem Projects": [
+        "recp0YELy7eVj9FUs"
+      ],
+      "Investment Type Order": [
+        5
+      ],
+      "Survey: Standards & Coordination Priorities": [
+        "recGzuGtbK7nrQ6vB",
+        "rec44wmxI5Jk3NyKU",
+        "recsdJioQCh6jEJep",
+        "recJwEAi6aNknm8g8",
+        "reciRQowoWHhCPgd0",
+        "rechMLW2zWKburRYY",
+        "recndRlsuLcLAKu4w",
+        "recSxJM7NXQpobyYi",
+        "recFhDbWgQ9kn69Sd",
+        "recMRTcX26O14WfSI",
+        "recAwNDEguHa5XK4J",
+        "rec9YlBY9v3lz8Fda",
+        "recCP7c2CsJttJFUj"
+      ],
+      "Count: Data Sets & Commons Priorities": 0,
+      "Count (Survey: Infrastructure & Platforms Priorities)": 0,
+      "Count (Survey: Crisis Analytics & Insights Priorities)": 0,
+      "Count (Survey: Human Capital & Know-how Priorities)": 0,
+      "Count (Survey: Standards & Coordination Priorities)": 13,
+      "Priority: Red Team": "HIGH",
+      "Count (Survey: Learning & Exchange Priorities)": 0,
+      "Investment Theme(s)": "Consistent Data Formats",
+      "Summary (Workshop: Donor/Contributing Partners)": {
+        "state": "error",
+        "errorType": "emptyDependency",
+        "value": null,
+        "isStale": false
+      }
+    }
+  },
+  {
+    "id": "recv7X0Hbh2hYGOoS",
+    "fields": {
+      "THEME_ID": "recv7X0Hbh2hYGOoS",
+      "Linked Investment Type": [
+        "recTabK8HX3v0dmPg"
+      ],
+      "Investment Type": [
+        "Crisis Analytics & Insights"
+      ],
+      "Investment Themes [Text Key]": "Anticipatory and Early Action Forecasts",
+      "Data Ecosystem Projects": [
+        "recpP1KGKcmcpy2jo",
+        "recf0UvW6LzObKXGC",
+        "recF1lTFIy27lMFwT",
+        "recfjAhO2DxCjgEgM",
+        "recLA3jRq3bbZRVzu",
+        "rec28WeSKDEQ5wx45",
+        "recGG8gTf4t6l8Mue",
+        "recpARdDyMReIUuDq",
+        "rec5GA5F1UPlXATSj",
+        "recyn1h3FptgV2ZAv",
+        "recgpnIj48zBCayHc",
+        "recXaGjOLcrJQCuNn",
+        "recEwLy3FESOhLeNs",
+        "rec9HIhsIpPjx48rc",
+        "recFk4AqE3TR83nNo",
+        "recrAQT0YpFBCQ02U",
+        "recyMSQo5lV032SER",
+        "recgmCxRj8IVZMFF2",
+        "recpKRVapFMI3kGY0",
+        "rec4oWGeToxciytv3",
+        "receGDImgeYZLVOPq",
+        "rec4aulcundpJZOwl",
+        "recxuDvQE71WPmpJV",
+        "recYwllVfGjgi7rdS",
+        "recNggnBqXIgii2hz",
+        "recLn4QiWGniBsWoe",
+        "recO7hHncZQGqy2vJ"
+      ],
+      "Investment Type Order": [
+        3
+      ],
+      "Survey: Crisis Analytics & Insights Priorities": [
+        "rec3DRbSNzLcxjzNu",
+        "recKflMuy6GI01hoW",
+        "recGzuGtbK7nrQ6vB",
+        "rec44wmxI5Jk3NyKU",
+        "reciRQowoWHhCPgd0",
+        "rechMLW2zWKburRYY",
+        "recndRlsuLcLAKu4w",
+        "reco5W39j2T2GQbwh",
+        "recEPPl3NAv57t1MJ",
+        "recauIcjLxpShs4Av",
+        "rec5ClssrbllpDxE5",
+        "recHWBvnUpdfwBmfm",
+        "recOYVkcXzWVEiXtL",
+        "recAwNDEguHa5XK4J",
+        "rec9YlBY9v3lz8Fda"
+      ],
+      "Count: Data Sets & Commons Priorities": 0,
+      "Count (Survey: Infrastructure & Platforms Priorities)": 0,
+      "Count (Survey: Crisis Analytics & Insights Priorities)": 15,
+      "Count (Survey: Human Capital & Know-how Priorities)": 0,
+      "Count (Survey: Standards & Coordination Priorities)": 0,
+      "Priority: UN Partner": "HIGH",
+      "Count (Survey: Learning & Exchange Priorities)": 0,
+      "Investment Theme(s)": "Anticipatory and Early Action Forecasts",
+      "Summary (Workshop: Donor/Contributing Partners)": {
+        "state": "error",
+        "errorType": "emptyDependency",
+        "value": null,
+        "isStale": false
+      },
+      "theme_description": "Anticipatory and Early Action Forecasts use humanitarian data and crisis analytics to predict potential emergencies and enable timely interventions before disasters escalate."
+    }
+  },
+  {
+    "id": "reczEtnRmjtMWJHE7",
+    "fields": {
+      "THEME_ID": "reczEtnRmjtMWJHE7",
+      "Linked Investment Type": [
+        "rec6Pib8EhL0nZfPJ"
+      ],
+      "Investment Type": [
+        "Infrastructure & Platforms"
+      ],
+      "Investment Themes [Text Key]": "Data Quality & Validation",
+      "Investment Type Order": [
+        2
+      ],
+      "Survey: Infrastructure & Platforms Priorities": [
+        "recGzuGtbK7nrQ6vB",
+        "rec44wmxI5Jk3NyKU",
+        "recsdJioQCh6jEJep",
+        "reciRQowoWHhCPgd0",
+        "rechMLW2zWKburRYY",
+        "recG7awSTTZzFVP64",
+        "recqdaVuFOyhgKa0t",
+        "recFhDbWgQ9kn69Sd",
+        "recykau7zFwNuuRfD",
+        "rec86pSbmLv8TbY8D",
+        "recMRTcX26O14WfSI",
+        "recCP7c2CsJttJFUj"
+      ],
+      "Count: Data Sets & Commons Priorities": 0,
+      "Count (Survey: Infrastructure & Platforms Priorities)": 12,
+      "Count (Survey: Crisis Analytics & Insights Priorities)": 0,
+      "Count (Survey: Human Capital & Know-how Priorities)": 0,
+      "Count (Survey: Standards & Coordination Priorities)": 0,
+      "Count (Survey: Learning & Exchange Priorities)": 0,
+      "Investment Theme(s)": "Data Quality & Validation",
+      "Summary (Workshop: Donor/Contributing Partners)": {
+        "state": "error",
+        "errorType": "emptyDependency",
+        "value": null,
+        "isStale": false
+      }
+    }
+  },
+  {
+    "id": "reczH2aQ62zji7Ya3",
+    "fields": {
+      "THEME_ID": "reczH2aQ62zji7Ya3",
+      "Linked Investment Type": [
+        "recwuGLOXpe7ElgYv"
+      ],
+      "Investment Type": [
+        "Standards & Coordination"
+      ],
+      "Investment Themes [Text Key]": "Peer Review",
+      "Investment Type Order": [
+        5
+      ],
+      "Survey: Standards & Coordination Priorities": [
+        "recGzuGtbK7nrQ6vB",
+        "recG7awSTTZzFVP64"
+      ],
+      "Count: Data Sets & Commons Priorities": 0,
+      "Count (Survey: Infrastructure & Platforms Priorities)": 0,
+      "Count (Survey: Crisis Analytics & Insights Priorities)": 0,
+      "Count (Survey: Human Capital & Know-how Priorities)": 0,
+      "Count (Survey: Standards & Coordination Priorities)": 2,
+      "Count (Survey: Learning & Exchange Priorities)": 0,
+      "Investment Theme(s)": "Peer Review",
+      "Summary (Workshop: Donor/Contributing Partners)": {
+        "state": "error",
+        "errorType": "emptyDependency",
+        "value": null,
+        "isStale": false
+      }
+    }
+  },
+  {
+    "id": "reczykUMnuc1MKYbt",
+    "fields": {
+      "THEME_ID": "reczykUMnuc1MKYbt",
+      "Linked Investment Type": [
+        "recTabK8HX3v0dmPg"
+      ],
+      "Investment Type": [
+        "Crisis Analytics & Insights"
+      ],
+      "Investment Themes [Text Key]": "Population Analytics ",
+      "Investment Type Order": [
+        3
+      ],
+      "Survey: Crisis Analytics & Insights Priorities": [
+        "recCP7c2CsJttJFUj"
+      ],
+      "Count: Data Sets & Commons Priorities": 0,
+      "Count (Survey: Infrastructure & Platforms Priorities)": 0,
+      "Count (Survey: Crisis Analytics & Insights Priorities)": 1,
+      "Count (Survey: Human Capital & Know-how Priorities)": 0,
+      "Count (Survey: Standards & Coordination Priorities)": 0,
+      "Count (Survey: Learning & Exchange Priorities)": 0,
+      "Investment Theme(s)": "Population Analytics",
+      "Summary (Workshop: Donor/Contributing Partners)": {
+        "state": "error",
+        "errorType": "emptyDependency",
+        "value": null,
+        "isStale": false
+      },
+      "theme_description": "Population Analytics involves analyzing demographic and movement data to understand population trends, vulnerabilities, and needs, supporting effective crisis response and humanitarian decision-making."
+    }
+  }
+]
