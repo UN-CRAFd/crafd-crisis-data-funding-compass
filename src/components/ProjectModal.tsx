@@ -166,13 +166,13 @@ export default function ProjectModal({ project, allOrganizations, loading, onOpe
                                     <button
                                         key={org.id}
                                         onClick={() => onOpenOrganizationModal?.(orgKey)}
-                                        className="inline-flex items-center gap-1.5 px-3 py-1 rounded-md text-sm font-medium hover:opacity-80 transition-opacity cursor-pointer"
+                                        className="inline-flex items-center gap-1.5 px-3 py-1 rounded-md text-sm font-medium hover:opacity-80 transition-opacity cursor-pointer text-left"
                                         style={{
                                             backgroundColor: 'var(--brand-bg-light)',
                                             color: 'var(--brand-primary-dark)'
                                         }}
                                     >
-                                        <Building2 className="h-3.5 w-3.5" />
+                                        <Building2 className="h-3.5 w-3.5 shrink-0" />
                                         {org.organizationName}
                                     </button>
                                 );
