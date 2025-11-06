@@ -4,6 +4,7 @@ import { Building2, ExternalLink, Package } from 'lucide-react';
 import type { OrganizationWithProjects, ProjectData } from '../lib/data';
 import { getIconForInvestmentType } from '@/config/investmentTypeIcons';
 import BaseModal, { ModalHeader, CountryBadge } from './BaseModal';
+import { useEffect, useState } from 'react';
 
 interface ProjectModalProps {
     project: ProjectData | null;
@@ -15,6 +16,30 @@ interface ProjectModalProps {
 }
 
 export default function ProjectModal({ project, allOrganizations, loading, onOpenOrganizationModal, onDonorClick }: ProjectModalProps) {
+
+    const [themeToTypeMapping, setThemeToTypeMapping] = useState<Record<string, string>>({});
+
+    // Load theme mapping from themes-table.json on mount
+    useEffect(() => {
+        fetch('/data/themes-table.json')
+            .then(response => response.json())
+            .then(data => {
+                const mapping: Record<string, string> = {};
+                
+                // Build mapping from themes JSON
+                data.forEach((record: any) => {
+                    const theme = record.fields?.['Investment Theme(s)'];
+                    const type = record.fields?.['Investment Type']?.[0]; // First item from array
+                    
+                    if (theme && type) {
+                        mapping[theme] = type;
+                    }
+                });
+                
+                setThemeToTypeMapping(mapping);
+            })
+            .catch(error => console.error('Error loading theme mapping:', error));
+    }, []);
 
     const SubHeader = ({ children }: { children: React.ReactNode }) => (
         <h3 className="text-xl font-roboto font-black text-[#333333] mb-3 uppercase tracking-wide leading-normal">
@@ -72,9 +97,22 @@ export default function ProjectModal({ project, allOrganizations, loading, onOpe
         );
 
         const projectWebsite = project.projectWebsite || project.website || '';
+        
+        // Check if project is part of HDX Data Grid
+        const isHdxDataGrid = project.hdxSohd && project.hdxSohd !== 'None';
 
         return (
             <div className="px-6 sm:px-8 pt-4 sm:pt-5 pb-6 sm:pb-8 font-roboto flex flex-col h-full">
+                {/* HDX Data Grid Badge */}
+                {isHdxDataGrid && (
+                    <div className="mb-4">
+                        <span className="inline-flex items-center gap-2 px-3 py-1.5 rounded-md text-sm font-medium bg-slate-100 text-slate-600 border border-slate-200">
+                            <img src="/hdx_logo.png" alt="HDX logo" className="w-4 h-4 rounded-none" />
+                            <span>HDX Data Grid</span>
+                        </span>
+                    </div>
+                )}
+                
                 {project.projectDescription && (
                     <p className="text-base font-normal text-gray-700 leading-snug font-roboto mb-1">
                         {project.projectDescription}
@@ -145,22 +183,56 @@ export default function ProjectModal({ project, allOrganizations, loading, onOpe
 
                 {project.investmentTypes && project.investmentTypes.length > 0 && (
                     <div className="mb-6">
-                        <SubHeader>Asset Type</SubHeader>
-                        <div className="flex flex-wrap gap-2">
-                            {project.investmentTypes.map((type, index) => {
+                        <SubHeader>Asset Type & Theme</SubHeader>
+                        <div className="space-y-3">
+                            {project.investmentTypes.map((type, typeIndex) => {
                                 const IconComponent = getIconForInvestmentType(type);
+                                // Get themes that belong to this investment type
+                                const relatedThemes = (project.investmentThemes || []).filter(
+                                    theme => themeToTypeMapping[theme] === type
+                                );
+                                
                                 return (
-                                    <span
-                                        key={index}
-                                        className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-md text-sm font-semibold"
-                                        style={{
-                                            backgroundColor: 'var(--badge-other-bg)',
-                                            color: 'var(--badge-other-text)'
-                                        }}
-                                    >
-                                        <IconComponent className="w-4 h-4" />
-                                        {type}
-                                    </span>
+                                    <div key={typeIndex} className="flex flex-wrap gap-2 items-center">
+                                        <span
+                                            className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-md text-sm font-semibold"
+                                            style={{
+                                                backgroundColor: 'var(--badge-other-bg)',
+                                                color: 'var(--badge-other-text)'
+                                            }}
+                                        >
+                                            <IconComponent className="w-4 h-4" />
+                                            {type}
+                                        </span>
+                                        {relatedThemes.length > 0 && (
+                                            <>
+                                                {/* Connecting arc */}
+                                                <svg width="16" height="24" viewBox="0 0 16 24" className="shrink-0" style={{ marginLeft: '-4px', marginRight: '-4px' }}>
+                                                    <path
+                                                        d="M 2 12 Q 8 12, 14 12"
+                                                        stroke="#6b6da8"
+                                                        strokeWidth="1.5"
+                                                        fill="none"
+                                                        opacity="0.4"
+                                                    />
+                                                </svg>
+                                                <div className="flex flex-wrap gap-2">
+                                                    {relatedThemes.map((theme, themeIndex) => (
+                                                        <span
+                                                            key={themeIndex}
+                                                            className="inline-flex items-center px-2.5 py-1 rounded-md text-xs font-medium"
+                                                            style={{
+                                                                backgroundColor: '#e9eaf9',
+                                                                color: '#6b6da8'
+                                                            }}
+                                                        >
+                                                            {theme}
+                                                        </span>
+                                                    ))}
+                                                </div>
+                                            </>
+                                        )}
+                                    </div>
                                 );
                             })}
                         </div>
