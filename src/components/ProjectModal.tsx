@@ -72,9 +72,22 @@ export default function ProjectModal({ project, allOrganizations, loading, onOpe
         );
 
         const projectWebsite = project.projectWebsite || project.website || '';
+        
+        // Check if project is part of HDX Data Grid
+        const isHdxDataGrid = project.hdxSohd && project.hdxSohd !== 'None';
 
         return (
             <div className="px-6 sm:px-8 pt-4 sm:pt-5 pb-6 sm:pb-8 font-roboto flex flex-col h-full">
+                {/* HDX Data Grid Badge */}
+                {isHdxDataGrid && (
+                    <div className="mb-4">
+                        <span className="inline-flex items-center gap-2 px-3 py-1.5 rounded-md text-sm font-medium bg-slate-100 text-slate-600 border border-slate-200">
+                            <img src="/hdx_logo.png" alt="HDX logo" className="w-4 h-4 rounded-none" />
+                            <span>HDX Data Grid</span>
+                        </span>
+                    </div>
+                )}
+                
                 {project.projectDescription && (
                     <p className="text-base font-normal text-gray-700 leading-snug font-roboto mb-1">
                         {project.projectDescription}

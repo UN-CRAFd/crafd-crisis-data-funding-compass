@@ -354,7 +354,8 @@ const CrisisDataDashboard = ({
                             projectWebsite: project.fields?.['Project Website'] || '',
                             investmentTypes: project.fields?.['Investment Type(s)'] || [],
                             donorCountries: projectDonorCountries,
-                            provider: org.name || 'Unknown Provider'
+                            provider: org.name || 'Unknown Provider',
+                            hdxSohd: project.fields?.['HDX_SOHD'] || undefined
                         } as ProjectData,
                         organizationName: org.name || 'Unknown Organization'
                     };
