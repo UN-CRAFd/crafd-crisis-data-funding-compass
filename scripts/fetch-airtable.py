@@ -39,11 +39,13 @@ FIELDS_PROJECTS = [
     "Project Website",
     "Project Description",
     "Project Donor Agencies",
+    
 ]
 
 FIELDS_ORGANIZATIONS = [
     "org_key",
     "Org Full Name",
+    "HDX Org Key",
     "Org Type",
     "Org Short Name",
     "Org Website",
