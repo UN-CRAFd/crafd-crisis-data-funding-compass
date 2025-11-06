@@ -221,9 +221,11 @@ const CrisisDataDashboardWrapper = ({ logoutButton }: { logoutButton?: React.Rea
     // Modal handlers - use URL for table view, local state for network view
     const handleOpenOrganizationModal = useCallback((orgKey: string) => {
         if (activeView === 'table') {
-            // Table view: update URL
+            // Table view: update URL - replace any existing modal with org modal
             const newSearchParams = new URLSearchParams(searchParams.toString());
             newSearchParams.set('org', orgKey);
+            // Close project modal if open
+            newSearchParams.delete('asset');
             router.push(`${pathname}?${newSearchParams.toString()}`, { scroll: false });
         } else {
             // Network view: use local state only, store page state
@@ -235,15 +237,19 @@ const CrisisDataDashboardWrapper = ({ logoutButton }: { logoutButton?: React.Rea
             
             console.log('[Modal Open] Storing state:', stateToStore);
             setUnderlyingPageState(stateToStore);
+            // Close project modal if open
+            setLocalSelectedProjectKey('');
             setLocalSelectedOrgKey(orgKey);
         }
     }, [activeView, searchParams, pathname, router, searchQuery, combinedDonors, investmentTypes]);
 
     const handleOpenProjectModal = useCallback((projectKey: string) => {
         if (activeView === 'table') {
-            // Table view: update URL
+            // Table view: update URL - replace any existing modal with project modal
             const newSearchParams = new URLSearchParams(searchParams.toString());
             newSearchParams.set('asset', projectKey);
+            // Close organization modal if open
+            newSearchParams.delete('org');
             router.push(`${pathname}?${newSearchParams.toString()}`, { scroll: false });
         } else {
             // Network view: use local state only, store page state
@@ -255,6 +261,8 @@ const CrisisDataDashboardWrapper = ({ logoutButton }: { logoutButton?: React.Rea
             
             console.log('[Modal Open] Storing state:', stateToStore);
             setUnderlyingPageState(stateToStore);
+            // Close organization modal if open
+            setLocalSelectedOrgKey('');
             setLocalSelectedProjectKey(projectKey);
         }
     }, [activeView, searchParams, pathname, router, searchQuery, combinedDonors, investmentTypes]);
