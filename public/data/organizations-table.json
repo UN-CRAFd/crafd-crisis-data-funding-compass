@@ -1193,21 +1193,6 @@
     }
   },
   {
-    "id": "recR0ob75EON3XJub",
-    "fields": {
-      "Org Full Name": "ODW: Open Data Watch",
-      "Org Short Name": "ODW",
-      "Org Website": "https://opendatawatch.com/",
-      "Org Description": "Open Data Watch is a non-profit organization working at the intersection of open data and official statistics to promote data openness and completeness.",
-      "Link to Data Products Overview": "<https://odin.opendatawatch.com/>\n",
-      "Org IATI Name": "N/A",
-      "Org HQ Country": "United States",
-      "Has received CRAF'd Funding?": "NO",
-      "org_key": "odw",
-      "Org Type": "Non-Governmental Organization"
-    }
-  },
-  {
     "id": "recRoMeLU57jzgHFs",
     "fields": {
       "Org Full Name": "ACLED: Armed Conflict Location & Event Data",
@@ -2470,7 +2455,7 @@
   {
     "id": "recxUTvaAZbGHumjU",
     "fields": {
-      "Org Full Name": "European Centre for Medium-Range Weather Forecasts",
+      "Org Full Name": "ECMWF: European Centre for Medium-Range Weather Forecasts",
       "Org Short Name": "ECMRWF",
       "Org Website": "https://www.ecmwf.int/",
       "Org Description": "We are both a research institute and a 24/7 operational service, producing global numerical weather predictions and other data for our Member and Co-operating States and the broader community. We operate a world-class supercomputer facility for weather forecasting and hold one of the largest meteorological data archives. Other strategic activities include delivering advanced training and assisting the WMO in implementing its programmes.",
