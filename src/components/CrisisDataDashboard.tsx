@@ -90,6 +90,7 @@ interface CrisisDataDashboardProps {
     onOpenProjectModal: (projectKey: string) => void;
     onCloseOrganizationModal: () => void;
     onCloseProjectModal: () => void;
+    onDonorClick?: (country: string) => void;
     onViewChange?: (view: 'table' | 'network') => void;
     logoutButton?: React.ReactNode;
 }
@@ -237,6 +238,7 @@ const CrisisDataDashboard = ({
     onOpenProjectModal,
     onCloseOrganizationModal,
     onCloseProjectModal,
+    onDonorClick,
     onViewChange,
     logoutButton
 }: CrisisDataDashboardProps) => {
@@ -1429,6 +1431,7 @@ const CrisisDataDashboard = ({
                     allOrganizations={allOrganizations}
                     loading={projectModalLoading}
                     onOpenOrganizationModal={onOpenOrganizationModal}
+                    onDonorClick={onDonorClick}
                 />
             )}
             {/* Organization Modal */}
@@ -1460,6 +1463,7 @@ const CrisisDataDashboard = ({
                             loading={false}
                             onOpenProjectModal={onOpenProjectModal}
                             projectIdToKeyMap={projectIdToKeyMap}
+                            onDonorClick={onDonorClick}
                         />
                     );
                 })()
