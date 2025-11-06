@@ -223,16 +223,12 @@ export default function OrganizationModal({
                                     href={hdxUrl}
                                     target="_blank"
                                     rel="noopener noreferrer"
-                                    className="inline-flex items-center gap-2 px-4 py-2 rounded-full text-sm font-medium transition-colors"
-                                    style={{
-                                        backgroundColor: 'var(--brand-primary)',
-                                        color: 'white',
-                                    }}
-                                    onMouseEnter={(e) => e.currentTarget.style.backgroundColor = 'var(--brand-primary-dark)'}
-                                    onMouseLeave={(e) => e.currentTarget.style.backgroundColor = 'var(--brand-primary)'}
+                                    className="inline-flex items-center gap-2 px-5 py-2 rounded-full text-sm font-medium transition-colors border border-slate-200 bg-white text-slate-800 hover:border-[var(--brand-primary)]"
+                                    aria-label="View on HDX (opens in new tab)"
                                 >
-                                    View on HDX
-                                    <ExternalLink className="w-4 h-4" />
+                                    <img src="/hdx_logo.png" alt="HDX logo" className="w-5 h-5 rounded-sm" />
+                                    <span className="font-normal">View on <strong className="font-bold">HDX</strong></span>
+                                    
                                 </a>
                             </div>
                         );
