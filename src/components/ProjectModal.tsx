@@ -4,6 +4,7 @@ import { Building2, ExternalLink, Package } from 'lucide-react';
 import type { OrganizationWithProjects, ProjectData } from '../lib/data';
 import { getIconForInvestmentType } from '@/config/investmentTypeIcons';
 import BaseModal, { ModalHeader, CountryBadge } from './BaseModal';
+import { useEffect, useState } from 'react';
 
 interface ProjectModalProps {
     project: ProjectData | null;
@@ -15,6 +16,54 @@ interface ProjectModalProps {
 }
 
 export default function ProjectModal({ project, allOrganizations, loading, onOpenOrganizationModal, onDonorClick }: ProjectModalProps) {
+
+    const [themeToTypeMapping, setThemeToTypeMapping] = useState<Record<string, string>>({});
+
+    // Load theme mapping from CSV on mount
+    useEffect(() => {
+        fetch('/data/Themes-Grouped.csv')
+            .then(response => response.text())
+            .then(csv => {
+                const lines = csv.split('\n');
+                const mapping: Record<string, string> = {};
+                
+                // Skip header row
+                for (let i = 1; i < lines.length; i++) {
+                    const line = lines[i].trim();
+                    if (!line) continue;
+                    
+                    // Parse CSV (handle quoted fields with commas)
+                    const fields: string[] = [];
+                    let currentField = '';
+                    let inQuotes = false;
+                    
+                    for (let j = 0; j < line.length; j++) {
+                        const char = line[j];
+                        if (char === '"') {
+                            inQuotes = !inQuotes;
+                        } else if (char === ',' && !inQuotes) {
+                            fields.push(currentField);
+                            currentField = '';
+                        } else {
+                            currentField += char;
+                        }
+                    }
+                    fields.push(currentField); // Add last field
+                    
+                    // Column 1: Investment Theme(s), Column 2: Investment Type
+                    if (fields.length >= 3) {
+                        const theme = fields[1].trim();
+                        const type = fields[2].trim();
+                        if (theme && type) {
+                            mapping[theme] = type;
+                        }
+                    }
+                }
+                
+                setThemeToTypeMapping(mapping);
+            })
+            .catch(error => console.error('Error loading theme mapping:', error));
+    }, []);
 
     const SubHeader = ({ children }: { children: React.ReactNode }) => (
         <h3 className="text-xl font-roboto font-black text-[#333333] mb-3 uppercase tracking-wide leading-normal">
@@ -158,22 +207,56 @@ export default function ProjectModal({ project, allOrganizations, loading, onOpe
 
                 {project.investmentTypes && project.investmentTypes.length > 0 && (
                     <div className="mb-6">
-                        <SubHeader>Asset Type</SubHeader>
-                        <div className="flex flex-wrap gap-2">
-                            {project.investmentTypes.map((type, index) => {
+                        <SubHeader>Asset Type & Theme</SubHeader>
+                        <div className="space-y-3">
+                            {project.investmentTypes.map((type, typeIndex) => {
                                 const IconComponent = getIconForInvestmentType(type);
+                                // Get themes that belong to this investment type
+                                const relatedThemes = (project.investmentThemes || []).filter(
+                                    theme => themeToTypeMapping[theme] === type
+                                );
+                                
                                 return (
-                                    <span
-                                        key={index}
-                                        className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-md text-sm font-semibold"
-                                        style={{
-                                            backgroundColor: 'var(--badge-other-bg)',
-                                            color: 'var(--badge-other-text)'
-                                        }}
-                                    >
-                                        <IconComponent className="w-4 h-4" />
-                                        {type}
-                                    </span>
+                                    <div key={typeIndex} className="flex flex-wrap gap-2 items-center">
+                                        <span
+                                            className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-md text-sm font-semibold"
+                                            style={{
+                                                backgroundColor: 'var(--badge-other-bg)',
+                                                color: 'var(--badge-other-text)'
+                                            }}
+                                        >
+                                            <IconComponent className="w-4 h-4" />
+                                            {type}
+                                        </span>
+                                        {relatedThemes.length > 0 && (
+                                            <>
+                                                {/* Connecting arc */}
+                                                <svg width="16" height="24" viewBox="0 0 16 24" className="shrink-0" style={{ marginLeft: '-4px', marginRight: '-4px' }}>
+                                                    <path
+                                                        d="M 2 12 Q 8 12, 14 12"
+                                                        stroke="#6b6da8"
+                                                        strokeWidth="1.5"
+                                                        fill="none"
+                                                        opacity="0.4"
+                                                    />
+                                                </svg>
+                                                <div className="flex flex-wrap gap-2">
+                                                    {relatedThemes.map((theme, themeIndex) => (
+                                                        <span
+                                                            key={themeIndex}
+                                                            className="inline-flex items-center px-2.5 py-1 rounded-md text-xs font-medium"
+                                                            style={{
+                                                                backgroundColor: '#e9eaf9',
+                                                                color: '#6b6da8'
+                                                            }}
+                                                        >
+                                                            {theme}
+                                                        </span>
+                                                    ))}
+                                                </div>
+                                            </>
+                                        )}
+                                    </div>
                                 );
                             })}
                         </div>
