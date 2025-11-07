@@ -54,8 +54,6 @@ FIELDS_ORGANIZATIONS = [
     "Org Description",
     "Org Mission",
     "Link to Data Products Overview",
-    "Est. Org Budget [2024, $M]",
-    "Est. Data Budget [2024, $M]",
     "Org IATI Name",
     "Org MPTFO Name",
     "Org MPTFO URL [Formula]",
@@ -70,6 +68,14 @@ FIELDS_AGENCIES = [
     "Agency/Department Name",
     "Agency Data Portal",
     "Country Name",
+]
+
+FIELDS_THEMES = [
+    "THEME_ID",
+    "Linked Investment Type",
+    "Investment Type",
+    "Investment Themes [Text Key]",
+    "Data Ecosystem Projects",
 ]
 
 # Load .env.local from project root (one level up from scripts/)
@@ -319,7 +325,13 @@ def main():
         if THEMES_TABLE_IDENTIFIER:
             try:
                 log(f"Fetching themes table: {THEMES_TABLE_IDENTIFIER}")
-                themes_records = fetch_airtable_table(THEMES_TABLE_IDENTIFIER)
+                # Request only the configured theme fields from Airtable
+                themes_extra_params: Dict[str, Any] = {}
+                if FIELDS_THEMES:
+                    themes_extra_params["fields"] = FIELDS_THEMES
+                themes_records = fetch_airtable_table(
+                    THEMES_TABLE_IDENTIFIER, extra_params=themes_extra_params
+                )
                 save_to_json(
                     themes_records, "themes-table.json", apply_select_filter=False
                 )
