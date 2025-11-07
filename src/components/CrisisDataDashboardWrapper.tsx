@@ -169,8 +169,6 @@ const CrisisDataDashboardWrapper = ({ logoutButton }: { logoutButton?: React.Rea
                 
                 setError(null);
 
-                console.log('Loading dashboard data with filters:', { effectiveDonors, effectiveInvestmentTypes });
-
                 const filters: DashboardFilters = {
                     donorCountries: effectiveDonors.length > 0 ? effectiveDonors : undefined,
                     investmentTypes: effectiveInvestmentTypes.length > 0 ? effectiveInvestmentTypes : undefined,
@@ -178,7 +176,6 @@ const CrisisDataDashboardWrapper = ({ logoutButton }: { logoutButton?: React.Rea
                 };
 
                 const data = await processDashboardData(filters);
-                console.log('Dashboard data loaded:', data);
 
                 setDashboardData(data);
             } catch (err) {
@@ -235,7 +232,6 @@ const CrisisDataDashboardWrapper = ({ logoutButton }: { logoutButton?: React.Rea
                 investmentTypes: [...investmentTypes]
             };
             
-            console.log('[Modal Open] Storing state:', stateToStore);
             setUnderlyingPageState(stateToStore);
             // Close project modal if open
             setLocalSelectedProjectKey('');
@@ -259,7 +255,6 @@ const CrisisDataDashboardWrapper = ({ logoutButton }: { logoutButton?: React.Rea
                 investmentTypes: [...investmentTypes]
             };
             
-            console.log('[Modal Open] Storing state:', stateToStore);
             setUnderlyingPageState(stateToStore);
             // Close organization modal if open
             setLocalSelectedOrgKey('');
@@ -268,8 +263,6 @@ const CrisisDataDashboardWrapper = ({ logoutButton }: { logoutButton?: React.Rea
     }, [activeView, searchParams, pathname, router, searchQuery, combinedDonors, investmentTypes]);
 
     const handleCloseOrganizationModal = useCallback(() => {
-        console.log('[Modal Close] Clearing org modal');
-        
         if (activeView === 'table') {
             // Table view: clear URL param
             const newSearchParams = new URLSearchParams(searchParams.toString());
@@ -287,8 +280,6 @@ const CrisisDataDashboardWrapper = ({ logoutButton }: { logoutButton?: React.Rea
     }, [activeView, searchParams, pathname, router]);
 
     const handleCloseProjectModal = useCallback(() => {
-        console.log('[Modal Close] Clearing project modal');
-        
         if (activeView === 'table') {
             // Table view: clear URL param
             const newSearchParams = new URLSearchParams(searchParams.toString());

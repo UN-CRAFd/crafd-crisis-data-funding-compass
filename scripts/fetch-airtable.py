@@ -1,20 +1,3 @@
-# scripts/fetch_airtable.py
-# Python 3.8+
-# Simplified Airtable fetch script:
-# - Fetches raw records with IDs for linked fields (no string conversion)
-# - Handles pagination
-# - Optional field filtering
-# - Writes JSON to public/data
-#
-# Env file: .env.local (loaded via python-dotenv)
-# Required env vars:
-#  - AIRTABLE_API_KEY
-#  - AIRTABLE_BASE_ID
-#  - AIRTABLE_TABLE_ID_PROJECTS (or fallback AIRTABLE_TABLE_ID)
-# Optional:
-#  - AIRTABLE_TABLE_ID_ORGANIZATIONS
-#  - AIRTABLE_TABLED_ID_AGENCIES  (or fallback AIRTABLE_TABLE_ID_AGENCIES)
-#
 # Run: python scripts/fetch_airtable.py
 
 import json
@@ -28,7 +11,7 @@ from typing import Any, Dict, List, Optional
 import requests
 from dotenv import load_dotenv
 
-# Specification ohich fields to select from main projects table
+# Specification which fields to select from main projects table
 FIELDS_PROJECTS = [
     "Project/Product Name",
     "product_key",
@@ -44,6 +27,7 @@ FIELDS_PROJECTS = [
 ]
 
 FIELDS_ORGANIZATIONS = [
+
     "org_key",
     "Org Full Name",
     "HDX Org Key",
@@ -54,8 +38,6 @@ FIELDS_ORGANIZATIONS = [
     "Org Description",
     "Org Mission",
     "Link to Data Products Overview",
-    "Est. Org Budget [2024, $M]",
-    "Est. Data Budget [2024, $M]",
     "Org IATI Name",
     "Org MPTFO Name",
     "Org MPTFO URL [Formula]",
@@ -72,6 +54,15 @@ FIELDS_AGENCIES = [
     "Country Name",
 ]
 
+FIELDS_THEMES = [
+    "THEME_ID",
+    "Linked Investment Type",
+    "Investment Type",
+    "Investment Themes [Text Key]",
+    "Data Ecosystem Projects",
+    "theme_description",
+]
+
 # Load .env.local from project root (one level up from scripts/)
 SCRIPT_DIR = Path(__file__).resolve().parent
 PROJECT_ROOT = SCRIPT_DIR.parent
@@ -83,7 +74,7 @@ else:
     # fall back to default .env if present
     load_dotenv(PROJECT_ROOT / ".env", override=False)
 
-# --- Configuration from env ---
+# Configuration from env
 API_KEY = os.getenv("AIRTABLE_API_KEY")
 BASE_ID = os.getenv("AIRTABLE_BASE_ID")
 
@@ -114,7 +105,7 @@ OUTPUT_DIR = PROJECT_ROOT / "public" / "data"
 OUTPUT_DIR.mkdir(parents=True, exist_ok=True)
 
 
-# ---- Utilities ----
+# Utilities
 def log(*args):
     print("[airtable-fetch]", *args)
 
@@ -196,64 +187,19 @@ def fetch_airtable_table(
     return all_records
 
 
-def fetch_records_by_ids(
-    table_identifier: str, ids: List[str], chunk_size: int = 50
-) -> List[Dict[str, Any]]:
-    if not ids:
-        return []
-    results: List[Dict[str, Any]] = []
-    for i in range(0, len(ids), chunk_size):
-        chunk = ids[i : i + chunk_size]
-        # Build formula OR(RECORD_ID()="recA",RECORD_ID()="recB",...)
-        or_parts = ",".join(f'RECORD_ID()="{id_}"' for id_ in chunk)
-        formula = f"OR({or_parts})"
-        extra_params = {"filterByFormula": formula}
-        url = build_table_url(table_identifier, extra_params)
-        data = airtable_fetch(url)
-        chunk_records = data.get("records", [])
-        results.extend(chunk_records)
-        log(
-            f"Resolved {len(chunk_records)} records from {table_identifier} (chunk {i // chunk_size + 1})"
-        )
-    return results
-
-
-def save_to_json(data: Any, filename: str, apply_select_filter: bool = True) -> Path:
+def save_to_json(data: Any, filename: str) -> Path:
     file_path = OUTPUT_DIR / filename
-    to_write = data
-    if apply_select_filter and FIELDS_PROJECTS and isinstance(data, list):
-        filtered = []
-        for rec in data:
-            if (
-                not isinstance(rec, dict)
-                or "fields" not in rec
-                or not isinstance(rec["fields"], dict)
-            ):
-                filtered.append(rec)
-                continue
-            new_fields = {}
-            for k in FIELDS_PROJECTS:
-                if k in rec["fields"]:
-                    new_fields[k] = rec["fields"][k]
-            # preserve helper fields ending with __names
-            for fk in rec["fields"].keys():
-                if fk.endswith("__names"):
-                    new_fields[fk] = rec["fields"][fk]
-            new_rec = dict(rec)
-            new_rec["fields"] = new_fields
-            filtered.append(new_rec)
-        to_write = filtered
     with open(file_path, "w", encoding="utf-8") as f:
         # Ensure we do not include Airtable's top-level `createdTime` on any record
-        if isinstance(to_write, list):
-            for rec in to_write:
+        if isinstance(data, list):
+            for rec in data:
                 if isinstance(rec, dict):
                     rec.pop("createdTime", None)
-        elif isinstance(to_write, dict):
+        elif isinstance(data, dict):
             # If a single object was passed, remove createdTime if present
-            to_write.pop("createdTime", None)
+            data.pop("createdTime", None)
 
-        json.dump(to_write, f, indent=2, ensure_ascii=False)
+        json.dump(data, f, indent=2, ensure_ascii=False)
     if isinstance(data, list):
         count = len(data)
     elif isinstance(data, dict):
@@ -269,10 +215,16 @@ def main():
     try:
         log("Starting simplified Airtable fetch...")
 
-        # 1) Fetch main (projects) table with basic params
+        # 1) Fetch main (projects) table with specified fields
         log(f"Fetching main/projects table: {MAIN_TABLE_IDENTIFIER}")
-        main_records = fetch_airtable_table(MAIN_TABLE_IDENTIFIER)  # type: ignore
-        save_to_json(main_records, "ecosystem-table.json", apply_select_filter=True)
+        # Request only the configured project fields from Airtable
+        projects_extra_params: Dict[str, Any] = {}
+        if FIELDS_PROJECTS:
+            projects_extra_params["fields"] = FIELDS_PROJECTS
+        main_records = fetch_airtable_table(
+            MAIN_TABLE_IDENTIFIER, extra_params=projects_extra_params
+        )
+        save_to_json(main_records, "ecosystem-table.json")
 
         # 2) Fetch organizations table (if provided)
         org_count = 0
@@ -287,7 +239,7 @@ def main():
                     ORGANIZATIONS_TABLE_IDENTIFIER, extra_params=org_extra_params
                 )
                 save_to_json(
-                    org_records, "organizations-table.json", apply_select_filter=False
+                    org_records, "organizations-table.json"
                 )
                 org_count = len(org_records)
             except Exception as e:
@@ -308,7 +260,7 @@ def main():
                     AGENCIES_TABLE_IDENTIFIER, extra_params=agencies_extra_params
                 )
                 save_to_json(
-                    agencies_records, "agencies-table.json", apply_select_filter=False
+                    agencies_records, "agencies-table.json"
                 )
                 agencies_count = len(agencies_records)
             except Exception as e:
@@ -319,9 +271,15 @@ def main():
         if THEMES_TABLE_IDENTIFIER:
             try:
                 log(f"Fetching themes table: {THEMES_TABLE_IDENTIFIER}")
-                themes_records = fetch_airtable_table(THEMES_TABLE_IDENTIFIER)
+                # Request only the configured theme fields from Airtable
+                themes_extra_params: Dict[str, Any] = {}
+                if FIELDS_THEMES:
+                    themes_extra_params["fields"] = FIELDS_THEMES
+                themes_records = fetch_airtable_table(
+                    THEMES_TABLE_IDENTIFIER, extra_params=themes_extra_params
+                )
                 save_to_json(
-                    themes_records, "themes-table.json", apply_select_filter=False
+                    themes_records, "themes-table.json"
                 )
                 themes_count = len(themes_records)
             except Exception as e:

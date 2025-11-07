@@ -5,6 +5,7 @@ import type { OrganizationWithProjects, ProjectData } from '../lib/data';
 import { getIconForInvestmentType } from '@/config/investmentTypeIcons';
 import BaseModal, { ModalHeader, CountryBadge } from './BaseModal';
 import { useEffect, useState } from 'react';
+import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from '@/components/ui/tooltip';
 
 interface ProjectModalProps {
     project: ProjectData | null;
@@ -18,25 +19,32 @@ interface ProjectModalProps {
 export default function ProjectModal({ project, allOrganizations, loading, onOpenOrganizationModal, onDonorClick }: ProjectModalProps) {
 
     const [themeToTypeMapping, setThemeToTypeMapping] = useState<Record<string, string>>({});
+    const [themeDescriptions, setThemeDescriptions] = useState<Record<string, string>>({});
 
-    // Load theme mapping from themes-table.json on mount
+    // Load theme mapping and descriptions from themes-table.json on mount
     useEffect(() => {
         fetch('/data/themes-table.json')
             .then(response => response.json())
             .then(data => {
                 const mapping: Record<string, string> = {};
+                const descriptions: Record<string, string> = {};
                 
                 // Build mapping from themes JSON
                 data.forEach((record: any) => {
-                    const theme = record.fields?.['Investment Theme(s)'];
+                    const theme = record.fields?.['Investment Themes [Text Key]'];
                     const type = record.fields?.['Investment Type']?.[0]; // First item from array
+                    const description = record.fields?.['theme_description'];
                     
                     if (theme && type) {
                         mapping[theme] = type;
                     }
+                    if (theme && description) {
+                        descriptions[theme] = description;
+                    }
                 });
                 
                 setThemeToTypeMapping(mapping);
+                setThemeDescriptions(descriptions);
             })
             .catch(error => console.error('Error loading theme mapping:', error));
     }, []);
@@ -166,13 +174,13 @@ export default function ProjectModal({ project, allOrganizations, loading, onOpe
                                     <button
                                         key={org.id}
                                         onClick={() => onOpenOrganizationModal?.(orgKey)}
-                                        className="inline-flex items-center gap-1.5 px-3 py-1 rounded-md text-sm font-medium hover:opacity-80 transition-opacity cursor-pointer"
+                                        className="inline-flex items-center gap-1.5 px-3 py-1 rounded-md text-sm font-medium hover:opacity-80 transition-opacity cursor-pointer text-left"
                                         style={{
                                             backgroundColor: 'var(--brand-bg-light)',
                                             color: 'var(--brand-primary-dark)'
                                         }}
                                     >
-                                        <Building2 className="h-3.5 w-3.5" />
+                                        <Building2 className="h-3.5 w-3.5 shrink-0" />
                                         {org.organizationName}
                                     </button>
                                 );
@@ -217,18 +225,44 @@ export default function ProjectModal({ project, allOrganizations, loading, onOpe
                                                     />
                                                 </svg>
                                                 <div className="flex flex-wrap gap-2">
-                                                    {relatedThemes.map((theme, themeIndex) => (
-                                                        <span
-                                                            key={themeIndex}
-                                                            className="inline-flex items-center px-2.5 py-1 rounded-md text-xs font-medium"
-                                                            style={{
-                                                                backgroundColor: '#e9eaf9',
-                                                                color: '#6b6da8'
-                                                            }}
-                                                        >
-                                                            {theme}
-                                                        </span>
-                                                    ))}
+                                                    {relatedThemes.map((theme, themeIndex) => {
+                                                        const description = themeDescriptions[theme];
+                                                        
+                                                        const themeBadge = (
+                                                            <span
+                                                                key={themeIndex}
+                                                                className="inline-flex items-center px-2.5 py-1 rounded-md text-xs font-medium cursor-help"
+                                                                style={{
+                                                                    backgroundColor: '#e9eaf9',
+                                                                    color: '#6b6da8'
+                                                                }}
+                                                            >
+                                                                {theme}
+                                                            </span>
+                                                        );
+                                                        
+                                                        // Wrap in tooltip if description exists
+                                                        if (description) {
+                                                            return (
+                                                                <TooltipProvider key={themeIndex}>
+                                                                    <Tooltip delayDuration={200}>
+                                                                        <TooltipTrigger asChild>
+                                                                            {themeBadge}
+                                                                        </TooltipTrigger>
+                                                                        <TooltipContent 
+                                                                            side="top" 
+                                                                            className="max-w-xs text-xs bg-white/70 backdrop-blur-md border border-gray-200 z-[10001]"
+                                                                            sideOffset={5}
+                                                                        >
+                                                                            {description}
+                                                                        </TooltipContent>
+                                                                    </Tooltip>
+                                                                </TooltipProvider>
+                                                            );
+                                                        }
+                                                        
+                                                        return themeBadge;
+                                                    })}
                                                 </div>
                                             </>
                                         )}

@@ -96,9 +96,49 @@ export default function OrganizationModal({
             || (typeof fields['Org Short Name'] === 'string' && fields['Org Short Name'])
             || organization.id;
 
+        // Get org_key for logo lookup
+        const orgKey = typeof fields['org_key'] === 'string' ? fields['org_key'] : '';
+
+        // Try to load organization logo (supports png, jpg, svg, webp)
+        const [logoError, setLogoError] = useState(false);
+        const logoExtensions = ['png', 'jpg', 'svg', 'webp'];
+        
+        // Determine icon to use
+        let icon: React.ReactNode;
+        if (orgKey && !logoError) {
+            // Try to use organization logo - will fallback on error
+            const logoSrc = `/logos/${orgKey}.png`; // Default to png, but onError will try others
+            icon = (
+                <img 
+                    src={logoSrc} 
+                    alt={`${displayName} logo`}
+                    className="h-6 w-6 sm:h-7 sm:w-7 shrink-0 object-contain"
+                    onError={(e) => {
+                        // Try other extensions
+                        const currentSrc = (e.target as HTMLImageElement).src;
+                        const currentExt = currentSrc.split('.').pop()?.split('?')[0];
+                        const currentIndex = logoExtensions.indexOf(currentExt || '');
+                        
+                        if (currentIndex !== -1 && currentIndex < logoExtensions.length - 1) {
+                            // Try next extension
+                            (e.target as HTMLImageElement).src = `/logos/${orgKey}.${logoExtensions[currentIndex + 1]}`;
+                        } else {
+                            // All extensions failed, use fallback
+                            setLogoError(true);
+                        }
+                    }}
+                />
+            );
+        } else {
+
+            icon = (
+                <Building2 className="h-6 w-6 sm:h-7 sm:w-7 text-[#333333] shrink-0" />
+            );
+        }
+
         return (
             <ModalHeader
-                icon={<Building2 className="h-6 w-6 sm:h-7 sm:w-7 text-[#333333] shrink-0" />}
+                icon={icon}
                 title={displayName}
                 showCopied={showCopied}
                 onShare={onShare}
