@@ -4,6 +4,7 @@ import React, { useEffect, useMemo, useState } from 'react';
 // Image import removed because it's not used in this file
 import ChartCard from '@/components/ChartCard';
 import FilterBar from '@/components/FilterBar';
+import { SectionHeader, type SectionHeaderProps } from '@/components/SectionHeader';
 import dynamic from 'next/dynamic';
 import OrganizationModal from '@/components/OrganizationModal';
 import ProjectModal from '@/components/ProjectModal';
@@ -35,12 +36,8 @@ const STYLES = {
     cardGlass: "!border-0 bg-white",
     cardGlassLight: "!border-0 bg-white p-1 rounded-md shadow-none",
 
-    // Typography - Unified section headers
+    // Typography
     sectionHeader: "flex items-center gap-2 text-lg font-qanelas-subtitle font-black text-slate-800 mb-0 mt-0 uppercase",
-    // Use a solid, non-shaded color for stat values (no bg-clip gradient)
-    statValue: "text-5xl font-bold font-mono leading-none tabular-nums",
-    statLabel: "text-base font-medium mt-1",
-    sectionLabel: "text-xs font-medium text-slate-600 mb-0",
 
     // Badges
     badgeBase: "inline-flex items-center px-2 py-1 rounded-md text-xs font-medium",
@@ -94,21 +91,6 @@ interface CrisisDataDashboardProps {
     onViewChange?: (view: 'table' | 'network') => void;
     logoutButton?: React.ReactNode;
 }
-
-// Reusable SectionHeader component
-interface SectionHeaderProps {
-    icon: React.ReactNode;
-    title: string;
-}
-
-const SectionHeader = ({ icon, title }: SectionHeaderProps) => (
-    <div className="flex items-center gap-2 text-base sm:text-lg font-qanelas-subtitle font-black text-slate-800 mb-0 mt-0 uppercase">
-        <span className="h-5 w-5 sm:h-6 sm:w-6 flex items-center justify-center">
-            {icon}
-        </span>
-        <span className="leading-tight">{title}</span>
-    </div>
-);
 
 // Reusable StatCard component
 interface StatCardProps {
@@ -192,7 +174,6 @@ const Badge = ({ text, variant }: BadgeProps) => {
         indigo: 'bg-[var(--badge-other-bg)] text-[var(--badge-other-text)] font-semibold',
         types: 'bg-green-50 text-green-700',
         slate: 'bg-[var(--badge-slate-bg)] text-[var(--badge-slate-text)]',
-        slate2: 'text-[var(--badge-slate-bg)] bg-[var(--badge-slate-text)]',
         highlighted: 'bg-[var(--brand-primary)]/20 text-[var(--brand-primary)] border border-[var(--brand-border)] font-semibold',
         beta: '' // Will use inline styles
     };
@@ -270,10 +251,8 @@ const CrisisDataDashboard = ({
         }
     }, [activeView, onViewChange]);
 
-    // Modal loading states (project modal always URL-based now)
-    const [projectModalLoading] = useState(false);
+    // Modal and UI states
     const [shareSuccess, setShareSuccess] = useState(false);
-    const [exportLoading, setExportLoading] = useState(false);
     const [csvExportLoading, setCSVExportLoading] = useState(false);
     const [xlsxExportLoading, setXLSXExportLoading] = useState(false);
     const [pdfExportLoading, setPDFExportLoading] = useState(false);
@@ -1431,7 +1410,7 @@ const CrisisDataDashboard = ({
                     project={selectedProject.project}
                     organizationName={selectedProject.organizationName}
                     allOrganizations={allOrganizations}
-                    loading={projectModalLoading}
+                    loading={false}
                     onOpenOrganizationModal={onOpenOrganizationModal}
                     onDonorClick={onDonorClick}
                 />

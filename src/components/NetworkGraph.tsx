@@ -296,7 +296,9 @@ const NetworkGraph: React.FC<NetworkGraphProps> = ({
         });
 
         const endTime = performance.now();
-        console.log(`[NetworkGraph] Graph data computed in ${(endTime - startTime).toFixed(2)}ms (${nodes.length} nodes, ${links.length} links)`);
+        if (process.env.NODE_ENV === 'development') {
+            console.log(`[NetworkGraph] Graph data computed in ${(endTime - startTime).toFixed(2)}ms (${nodes.length} nodes, ${links.length} links)`);
+        }
 
         return { nodes, links };
     }, [organizationsWithProjects]);
@@ -347,7 +349,9 @@ const NetworkGraph: React.FC<NetworkGraphProps> = ({
         fg.d3Force('simulation')?.velocityDecay(0.7);
 
         const endTime = performance.now();
-        console.log(`[NetworkGraph] Force simulation configured in ${(endTime - startTime).toFixed(2)}ms`);
+        if (process.env.NODE_ENV === 'development') {
+            console.log(`[NetworkGraph] Force simulation configured in ${(endTime - startTime).toFixed(2)}ms`);
+        }
     }, []); // Only run once on mount, not on every graphData change
 
     // Apply clustering with smooth transitions and collision avoidance
