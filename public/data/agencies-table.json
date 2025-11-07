@@ -38,7 +38,10 @@
   },
   {
     "id": "rec19ocYvikhZMdRI",
-    "fields": {}
+    "fields": {
+      "Agency/Department Name": "Unspecified",
+      "Country Name": "United Nations (UN)"
+    }
   },
   {
     "id": "rec1In4CerWhTywiy",
@@ -169,13 +172,6 @@
     "fields": {
       "Agency/Department Name": "Unspecified Agency",
       "Country Name": "Skoll"
-    }
-  },
-  {
-    "id": "rec6XRPA9pKgC8j1J",
-    "fields": {
-      "Agency/Department Name": "U.S. Agency for International Development (USAID)",
-      "Country Name": "USA"
     }
   },
   {
@@ -644,6 +640,10 @@
     }
   },
   {
+    "id": "recRfAgDBPh6zXe1B",
+    "fields": {}
+  },
+  {
     "id": "recRgmk6Ew3NBvxGV",
     "fields": {
       "Agency/Department Name": "Netherlands – Ministry of Foreign Affairs of the Netherlands (BZ / MFA)",
@@ -758,10 +758,6 @@
       "Agency Data Portal": "https://www.fsa.usda.gov/",
       "Country Name": "USA"
     }
-  },
-  {
-    "id": "recX03zfXasGqDoi5",
-    "fields": {}
   },
   {
     "id": "recXfPKShGM1SGpOy",
@@ -963,7 +959,7 @@
   {
     "id": "recgAR3TqI7vt3ypc",
     "fields": {
-      "Agency/Department Name": " Unspecified Agency",
+      "Agency/Department Name": "Ministry of Foreign and European Affairs, Defence, Development Cooperation and Foreign Trade ",
       "Country Name": "Luxembourg"
     }
   },
