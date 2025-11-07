@@ -100,7 +100,6 @@
         "recHSsEaPuaG3h2PQ",
         "recGtHxSOF0xgVlbl",
         "recRutqdhqEZSnOB2",
-        "rec6XRPA9pKgC8j1J",
         "recRt57CGsQQK50dQ",
         "rec57z0MkntuI0kvP",
         "reco4Um0k7Tgw2UCK"
@@ -173,27 +172,6 @@
     }
   },
   {
-    "id": "rec3elwvrBRnwOVEh",
-    "fields": {
-      "Org Full Name": "NASA: North American Space Agency",
-      "Org Short Name": "NASA",
-      "Org Website": "https://www.nasa.gov/",
-      "Org Description": "Through initiatives like NASA Lifelines and partnerships with organizations like Mercy Corps and Lutheran World Relief, NASA applies its satellite data, remote sensing capabilities, and disaster response tools to improve humanitarian action around the globe.",
-      "Provided Data Ecosystem Projects": [
-        "rec8wR515Mvu0YGx0",
-        "reca35l4CEELxX2d1"
-      ],
-      "Org Donor Agencies": [
-        "reckIAhFXgj4XL29b"
-      ],
-      "Est. Org Budget [2024, $M]": 24879500000,
-      "Org HQ Country": "United States",
-      "Has received CRAF'd Funding?": "NO",
-      "org_key": "nasa",
-      "Org Type": "Government / Public Sector"
-    }
-  },
-  {
     "id": "rec4rSsPP59Beed9i",
     "fields": {
       "Org Full Name": "Netherlands Red Cross‘ 510 Data Team",
@@ -207,7 +185,7 @@
       "Org HQ Country": "Netherlands",
       "Has received CRAF'd Funding?": "YES",
       "org_key": "510-data-team",
-      "Org Type": "Non-Governmental Organization",
+      "Org Type": "Red Cross / Red Crescent Movement",
       "HDX Org Key": "netherlands-red-cross"
     }
   },
@@ -609,8 +587,7 @@
         "rec9HIhsIpPjx48rc"
       ],
       "Org Donor Agencies": [
-        "recAiCKdzASfJMVsG",
-        "rec6XRPA9pKgC8j1J"
+        "recAiCKdzASfJMVsG"
       ],
       "Org IATI Name": "N/A",
       "Org HQ Country": "United States",
@@ -671,7 +648,6 @@
         "receHoGmo61oHXBAc",
         "recRutqdhqEZSnOB2",
         "rec17xB7AKc3ojdV5",
-        "rec6XRPA9pKgC8j1J",
         "recbvrcYZZW7mBnCU"
       ],
       "Org IATI Name": "N/A",
@@ -781,8 +757,7 @@
         "recEwLy3FESOhLeNs",
         "recAmBwUrrYDMtXtH",
         "reczIeSUeAdEWMKSk",
-        "recXcSKhSy2s7tunj",
-        "rechEM6RZ6by4ZLZK"
+        "recXcSKhSy2s7tunj"
       ],
       "Org Donor Agencies": [
         "rec1YpvhkjwME6GOJ",
@@ -898,11 +873,9 @@
       "Org Mission": "We serve as the safety coordination and advisory body to the NGO community and provide daily support to more than 1,000 registered organisations working in high-risk contexts.\n\nINSO's mission is to support humanitarian safety and access in high-risk countries.",
       "Link to Data Products Overview": "<https://ngosafety.org/analysis-reports/>\n<https://ngosafety.org/conflict-data-dashboard/>\n<https://ngosafety.org/humanitarian-data-dashboard/>\n\n",
       "Provided Data Ecosystem Projects": [
-        "recftrBsKUWwYWGA9",
         "rec2eT5BuCp87chHm"
       ],
       "Org Donor Agencies": [
-        "rec6XRPA9pKgC8j1J",
         "recHSsEaPuaG3h2PQ",
         "recylzOrnxt3grWHh",
         "rec0sY1I5JZz6ZsUE",
@@ -1043,7 +1016,6 @@
         "recsrMWmoA037bW03",
         "recBEtacusKEwpWho",
         "recFDm6MHWUu6GSMI",
-        "rec6XRPA9pKgC8j1J",
         "recNLQhceOCXSMemo",
         "recsjWjrgMK3lD6fw"
       ],
@@ -1072,7 +1044,6 @@
       ],
       "Org Donor Agencies": [
         "recHSsEaPuaG3h2PQ",
-        "rec6XRPA9pKgC8j1J",
         "recylzOrnxt3grWHh",
         "recbbW0P8fxVtJBJP",
         "recHuY5QDGX7wJsTF",
@@ -1250,7 +1221,6 @@
       "Org Description": "The DHS Program (Demographic and Health Surveys) is a primary source of data on health and population trends in developing countries, having provided technical assistance to over 300 surveys in more than 90 countries since 1984. They collect and disseminate nationally representative data on critical areas including fertility, family planning, maternal and child health, gender, HIV/AIDS, malaria, and nutrition. Funded by USAID and other donors, and implemented by ICF International, The DHS Program plays a vital role in advancing global understanding of health and population issues.",
       "Link to Data Products Overview": "<https://dhsprogram.com/Data/>\n",
       "Org Donor Agencies": [
-        "rec6XRPA9pKgC8j1J",
         "recFDm6MHWUu6GSMI",
         "recr77XDSfR0O9Jen"
       ],
@@ -1260,17 +1230,6 @@
       "org_key": "dhs",
       "Org Type": "Research / Think Tank",
       "HDX Org Key": "dhs"
-    }
-  },
-  {
-    "id": "recUzg1CowtWH7MWS",
-    "fields": {
-      "Org Full Name": "AGORA",
-      "Org Short Name": "AGORA",
-      "Org Website": "https://www.impact-initiatives.org/what-we-do/agora/",
-      "Org Description": "AGORA, a joint venture between ACTED and IMPACT Initiatives, was created in 2016 to ground humanitarian and development work in local knowledge, in keeping with the motto « Think local, Act global ». \n\nFounded in 2010 and headquartered in Geneva, IMPACT Initiatives is a leading applied research organization and the largest independent provider of data in crisis-affected contexts. Through our initiatives—REACH, AGORA, and PANDA—we enable humanitarian and other aid actors to make better, evidence-based decisions by delivering timely, relevant, and methodologically rigorous data and analysis. Our extensive presence across crisis-contexts allows us to collect data directly from crisis-affected people wherever needed, including among the most vulnerable and hard-to-reach.\n\nIMPACT takes an initiative-based approach to structuring our programming. Each initiative has a specific aim, operational model, and portfolio of solutions.\n\n- REACH strengthens evidence-based humanitarian decision-making through efficient data collection, management, and analysis – before, during, and after an emergency.\n- AGORA promotes localised and multi-sectoral aid action in support of the recovery and stabilisation of crisis-affected communities, in partnership with local stakeholders.\n- PANDA improves the impact of humanitarian and development interventions through programme design, assessments, and monitoring & evaluation.",
-      "org_key": "agora",
-      "Org Type": "Non-Governmental Organization"
     }
   },
   {
@@ -1363,7 +1322,6 @@
       "Org Description": "We are a non-profit organisation collaborating with partners around the world to prepare for and respond to humanitarian emergencies. We strive to ensure global, regional, national and local disaster management and humanitarian agencies have access to the maps, visualised data, information and analysis that they need to make key decisions, at the right times, to save lives and reduce suffering. ",
       "Org Donor Agencies": [
         "rec0QlT9YlTVhHfEn",
-        "rec6XRPA9pKgC8j1J",
         "rec0sY1I5JZz6ZsUE"
       ],
       "Org IATI Name": "MapAction",
@@ -1451,9 +1409,6 @@
         "recSbniShY9V8cE4L",
         "recSTdLTga3nMLgPn"
       ],
-      "Org Donor Agencies": [
-        "rec6XRPA9pKgC8j1J"
-      ],
       "Org IATI Name": "N/A",
       "Est. Data Budget [2024, $M]": 2000000,
       "Est. Org Budget [2024, $M]": 2000000,
@@ -1479,7 +1434,6 @@
       ],
       "Org Donor Agencies": [
         "recGNTHL9SKZxLDcw",
-        "rec6XRPA9pKgC8j1J",
         "rec17xB7AKc3ojdV5",
         "rec0QlT9YlTVhHfEn",
         "recwFMxuFEUJ4IK7S",
@@ -1790,7 +1744,6 @@
         "recvuixaI146ykcHe"
       ],
       "Org Donor Agencies": [
-        "rec6XRPA9pKgC8j1J",
         "recGNTHL9SKZxLDcw",
         "rec3Ado0Jrl799Q8A",
         "rec0sY1I5JZz6ZsUE"
@@ -1913,7 +1866,6 @@
       "Org Donor Agencies": [
         "rec1VhOJv9U6QKBBs",
         "recRutqdhqEZSnOB2",
-        "rec6XRPA9pKgC8j1J",
         "recHuY5QDGX7wJsTF",
         "rec0QlT9YlTVhHfEn",
         "recxopeJBWmkOfOtE",
@@ -1987,8 +1939,7 @@
         "recHSsEaPuaG3h2PQ",
         "rec0sY1I5JZz6ZsUE",
         "rec7IwGp05Iby61ry",
-        "recqNfbmfHwWpPdYJ",
-        "rec6XRPA9pKgC8j1J"
+        "recqNfbmfHwWpPdYJ"
       ],
       "Org IATI Name": "Start Network",
       "Est. Org Budget [2024, $M]": 36483133.15,
@@ -2020,7 +1971,6 @@
         "recFNcILze2MwJxUN",
         "recfY9SzUx3XdEb4s",
         "recK8nDxvYcbGdEgw",
-        "rec6XRPA9pKgC8j1J",
         "recks6hHpAgBV14d9",
         "recGMYeDQSV7jffjs",
         "recCqVCi3rwF77MxA",
@@ -2034,20 +1984,6 @@
       "Has received CRAF'd Funding?": "NO",
       "org_key": "latinobarometro",
       "Org Type": "Research / Think Tank"
-    }
-  },
-  {
-    "id": "recoKRQ2eGzpn3D2g",
-    "fields": {
-      "Org Full Name": "Kobo",
-      "Org Short Name": "Kobo ",
-      "Org Website": "https://www.kobotoolbox.org/about-us/the-organization/",
-      "Org Description": "Kobo is an international nonprofit organization. We host and maintain KoboToolbox, the world’s most popular data collection tool in challenging settings. We are registered in Cambridge, Massachusetts in the United States, but our team is based around the world. Our mission is to provide highly usable tools for creating data-driven social impact. ",
-      "Provided Data Ecosystem Projects": [
-        "recONFtYpO5v2qk7s"
-      ],
-      "org_key": "kobo",
-      "Org Type": "Non-Governmental Organization"
     }
   },
   {
@@ -2104,7 +2040,6 @@
         "recNLQhceOCXSMemo",
         "rec2KBp1IAA5TtnQl",
         "recbbW0P8fxVtJBJP",
-        "rec6XRPA9pKgC8j1J",
         "rec3Ado0Jrl799Q8A",
         "rectyuW4INCMaNoAM",
         "recsrMWmoA037bW03",
@@ -2231,12 +2166,9 @@
         "recEKzVdOqCJVhqrg",
         "recR021jYyNleSCho",
         "recxWS5Ys5dJ0dn1X",
-        "recHVA5VejuaVSohF",
-        "reccYy5JWKJEASskp",
-        "reczIeSUeAdEWMKSk"
+        "reccYy5JWKJEASskp"
       ],
       "Org Donor Agencies": [
-        "rec6XRPA9pKgC8j1J",
         "recQUVhcVyxZlXJ3H",
         "rec8gXVsPUUB517NE",
         "rec0QlT9YlTVhHfEn",
@@ -2291,7 +2223,6 @@
         "recJye4S746MWWmW6"
       ],
       "Org Donor Agencies": [
-        "rec6XRPA9pKgC8j1J",
         "recFDm6MHWUu6GSMI"
       ],
       "Org IATI Name": "N/A",
@@ -2371,15 +2302,14 @@
         "recPMQlg07QkflL3i"
       ],
       "Org Donor Agencies": [
-        "rec6XRPA9pKgC8j1J",
         "rec3Ado0Jrl799Q8A",
         "recQUVhcVyxZlXJ3H",
-        "recLWqEZrThg4Drwo",
-        "recFDm6MHWUu6GSMI"
+        "rec0QlT9YlTVhHfEn",
+        "rec19ocYvikhZMdRI"
       ],
       "Org IATI Name": "N/A",
-      "Est. Data Budget [2024, $M]": 4000000,
-      "Est. Org Budget [2024, $M]": 27760285.54,
+      "Est. Data Budget [2024, $M]": 22400000,
+      "Est. Org Budget [2024, $M]": 22400000,
       "Org HQ Country": "United States",
       "Has received CRAF'd Funding?": "NO",
       "org_key": "immap",
@@ -2412,7 +2342,6 @@
         "recbtz43uuKKFVfvd",
         "rec3Ado0Jrl799Q8A",
         "recGNTHL9SKZxLDcw",
-        "rec6XRPA9pKgC8j1J",
         "recQUVhcVyxZlXJ3H",
         "recztWTqT6smaiZ3q"
       ],
@@ -2460,7 +2389,8 @@
       "Org Website": "https://www.ecmwf.int/",
       "Org Description": "We are both a research institute and a 24/7 operational service, producing global numerical weather predictions and other data for our Member and Co-operating States and the broader community. We operate a world-class supercomputer facility for weather forecasting and hold one of the largest meteorological data archives. Other strategic activities include delivering advanced training and assisting the WMO in implementing its programmes.",
       "Provided Data Ecosystem Projects": [
-        "recGMlI70iaqyTtMo"
+        "recGMlI70iaqyTtMo",
+        "recQJwZB8vyAFwK4C"
       ],
       "org_key": "ecmrwf",
       "Org Type": "International Organization"
@@ -2556,7 +2486,6 @@
         "recLN9L7RGRz4p1zM"
       ],
       "Org Donor Agencies": [
-        "rec6XRPA9pKgC8j1J",
         "recHSsEaPuaG3h2PQ",
         "rec0sY1I5JZz6ZsUE",
         "rec17xB7AKc3ojdV5",

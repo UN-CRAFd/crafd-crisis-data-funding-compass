@@ -130,7 +130,6 @@
           "Project/Product Name": "KoboToolbox",
           "product_key": "kobotoolbox",
           "Provider Orgs Full Name": [
-            "recoKRQ2eGzpn3D2g",
             "rec18TzPP5pYZ8ezX"
           ],
           "CRAF’d-Funded Project?": "NO",
@@ -138,8 +137,7 @@
             "Infrastructure & Platforms"
           ],
           "Investment Theme(s)": [
-            "Data Collection",
-            "Conflict & Violence Data"
+            "Data Collection"
           ],
           "Project Website": "https://hhi.harvard.edu/kobotoolbox",
           "Project Description": "KoboToolbox is a free and open-source tool for mobile data collection in humanitarian crises. Used by UN agencies, NGOs, and governments, it supports offline surveys, real-time dashboards, and collaborative field assessments.\n",
@@ -425,7 +423,6 @@
         "recHSsEaPuaG3h2PQ",
         "recGtHxSOF0xgVlbl",
         "recRutqdhqEZSnOB2",
-        "rec6XRPA9pKgC8j1J",
         "recRt57CGsQQK50dQ",
         "rec57z0MkntuI0kvP",
         "reco4Um0k7Tgw2UCK"
@@ -473,13 +470,6 @@
           "Agency/Department Name": "Swedish International Development Cooperation Agency (SIDA)",
           "Agency Data Portal": "https://openaid.se/en",
           "Country Name": "Sweden"
-        }
-      },
-      {
-        "id": "rec6XRPA9pKgC8j1J",
-        "fields": {
-          "Agency/Department Name": "U.S. Agency for International Development (USAID)",
-          "Country Name": "USA"
         }
       },
       {
@@ -606,7 +596,6 @@
       "Japan",
       "Sweden",
       "The World Bank",
-      "USA",
       "United Kingdom"
     ]
   },
@@ -677,7 +666,6 @@
           "Project Description": "WorldPop develops peer-reviewed research and methods for the construction of open and high-resolution geospatial data on population distributions, demographic and dynamics.\n",
           "Project Donor Agencies": [
             "recbtz43uuKKFVfvd",
-            "rec6XRPA9pKgC8j1J",
             "recbvrcYZZW7mBnCU",
             "recCDa9F6ntBxGGkm",
             "recqMZBMvN0vxYv9v",
@@ -696,13 +684,6 @@
               "Agency/Department Name": "Unspecified Agency",
               "Agency Data Portal": "https://www.gatesfoundation.org/about/committed-grants",
               "Country Name": "Bill and Melinda Gates Foundation"
-            }
-          },
-          {
-            "id": "rec6XRPA9pKgC8j1J",
-            "fields": {
-              "Agency/Department Name": "U.S. Agency for International Development (USAID)",
-              "Country Name": "USA"
             }
           },
           {
@@ -1114,7 +1095,6 @@
           "product_key": "msna",
           "Provider Orgs Full Name": [
             "recGCltHLsYiDo59B",
-            "recsrCWKAPu9dwkHb",
             "rec3QdLIyrZ4dNiPh",
             "recNVePWbU6GAxsIP"
           ],
@@ -1140,89 +1120,6 @@
     ]
   },
   {
-    "id": "rec3elwvrBRnwOVEh",
-    "name": "NASA: North American Space Agency",
-    "fields": {
-      "Org Full Name": "NASA: North American Space Agency",
-      "Org Short Name": "NASA",
-      "Org Website": "https://www.nasa.gov/",
-      "Org Description": "Through initiatives like NASA Lifelines and partnerships with organizations like Mercy Corps and Lutheran World Relief, NASA applies its satellite data, remote sensing capabilities, and disaster response tools to improve humanitarian action around the globe.",
-      "Provided Data Ecosystem Projects": [
-        "rec8wR515Mvu0YGx0",
-        "reca35l4CEELxX2d1"
-      ],
-      "Org Donor Agencies": [
-        "reckIAhFXgj4XL29b"
-      ],
-      "Est. Org Budget [2024, $M]": 24879500000,
-      "Org HQ Country": "United States",
-      "Has received CRAF'd Funding?": "NO",
-      "org_key": "nasa",
-      "Org Type": "Government / Public Sector"
-    },
-    "agencies": [
-      {
-        "id": "reckIAhFXgj4XL29b",
-        "fields": {
-          "Agency/Department Name": "Unspecified Agency",
-          "Country Name": "USA"
-        }
-      }
-    ],
-    "projects": [
-      {
-        "id": "rec8wR515Mvu0YGx0",
-        "fields": {
-          "Project/Product Name": "Rivers and Streams Data",
-          "product_key": "nasa-river-streams-data",
-          "Provider Orgs Full Name": [
-            "rec3elwvrBRnwOVEh"
-          ],
-          "CRAF’d-Funded Project?": "NO",
-          "Investment Type(s)": [
-            "Data Sets & Commons",
-            "Infrastructure & Platforms"
-          ],
-          "Investment Theme(s)": [
-            "Geospatial Analytics",
-            "Geospatial Data",
-            "Monitoring & Alerts"
-          ],
-          "Project Website": "https://www.earthdata.nasa.gov/topics/terrestrial-hydrosphere/rivers-streams",
-          "Project Description": "NASA provides open global datasets on hydrology (water flow, stream gauges) used to model climate risk, manage watershed health, and support climate adaptation planning.\n",
-          "HDX_SOHD": "None"
-        },
-        "agencies": []
-      },
-      {
-        "id": "reca35l4CEELxX2d1",
-        "fields": {
-          "Project/Product Name": "Earth Data Search",
-          "product_key": "earth-data-search",
-          "Provider Orgs Full Name": [
-            "rec3elwvrBRnwOVEh"
-          ],
-          "CRAF’d-Funded Project?": "NO",
-          "Investment Type(s)": [
-            "Data Sets & Commons",
-            "Infrastructure & Platforms"
-          ],
-          "Investment Theme(s)": [
-            "Geospatial Data",
-            "Environmental Data"
-          ],
-          "Project Website": "https://search.earthdata.nasa.gov/",
-          "Project Description": "NASA’s Earth Data Search portal provides centralized access to global satellite imagery and environmental datasets. Users can search, download, or stream geospatial data via standardized APIs to support climate resilience, disaster response, and scientific research.\n",
-          "HDX_SOHD": "None"
-        },
-        "agencies": []
-      }
-    ],
-    "donor_countries": [
-      "USA"
-    ]
-  },
-  {
     "id": "rec4rSsPP59Beed9i",
     "name": "Netherlands Red Cross‘ 510 Data Team",
     "fields": {
@@ -1237,7 +1134,7 @@
       "Org HQ Country": "Netherlands",
       "Has received CRAF'd Funding?": "YES",
       "org_key": "510-data-team",
-      "Org Type": "Non-Governmental Organization",
+      "Org Type": "Red Cross / Red Crescent Movement",
       "HDX Org Key": "netherlands-red-cross"
     },
     "agencies": [],
@@ -1252,13 +1149,13 @@
           ],
           "CRAF’d-Funded Project?": "YES",
           "Investment Type(s)": [
-            "Data Sets & Commons",
-            "Crisis Analytics & Insights",
-            "Standards & Coordination"
+            "Human Capital & Know-how"
           ],
           "Investment Theme(s)": [
-            "Anticipatory and Early Action Forecasts",
-            "Upskilling & Training"
+            "Upskilling & Training",
+            "Data Analytics",
+            "Applied Data Analytics & Insights Generation",
+            "Digital Product & Tool Development"
           ],
           "Project Website": "https://510.global/",
           "Project Description": "The 510 Data Team supports innovation through data science projects targeting disaster preparedness, local early warning, and big data tools across the Red Cross network.\n",
@@ -1508,7 +1405,7 @@
       {
         "id": "recgAR3TqI7vt3ypc",
         "fields": {
-          "Agency/Department Name": " Unspecified Agency",
+          "Agency/Department Name": "Ministry of Foreign and European Affairs, Defence, Development Cooperation and Foreign Trade ",
           "Country Name": "Luxembourg"
         }
       },
@@ -1710,20 +1607,9 @@
           ],
           "Project Website": "https://www.emdat.be/",
           "Project Description": "EM‑DAT compiles free, searchable global records of natural and technological disasters dating back to 1900. It provides standardized event-level data used extensively in disaster risk research, policy analysis, and early warning modeling.\n",
-          "Project Donor Agencies": [
-            "rec6XRPA9pKgC8j1J"
-          ],
           "HDX_SOHD": "None"
         },
-        "agencies": [
-          {
-            "id": "rec6XRPA9pKgC8j1J",
-            "fields": {
-              "Agency/Department Name": "U.S. Agency for International Development (USAID)",
-              "Country Name": "USA"
-            }
-          }
-        ]
+        "agencies": []
       }
     ],
     "donor_countries": [
@@ -1928,7 +1814,7 @@
       {
         "id": "recgAR3TqI7vt3ypc",
         "fields": {
-          "Agency/Department Name": " Unspecified Agency",
+          "Agency/Department Name": "Ministry of Foreign and European Affairs, Defence, Development Cooperation and Foreign Trade ",
           "Country Name": "Luxembourg"
         }
       }
@@ -2873,7 +2759,7 @@
       {
         "id": "recgAR3TqI7vt3ypc",
         "fields": {
-          "Agency/Department Name": " Unspecified Agency",
+          "Agency/Department Name": "Ministry of Foreign and European Affairs, Defence, Development Cooperation and Foreign Trade ",
           "Country Name": "Luxembourg"
         }
       },
@@ -3135,11 +3021,10 @@
           ],
           "CRAF’d-Funded Project?": "NO",
           "Investment Type(s)": [
-            "Infrastructure & Platforms",
-            "Standards & Coordination"
+            "Infrastructure & Platforms"
           ],
           "Investment Theme(s)": [
-            "Data Storage, Access & Sharing"
+            "API Development & Management"
           ],
           "Project Website": "https://data.humdata.org/hapi",
           "Project Description": "The initial scope of HDX HAPI mirrored that of the HDX Data Grids, which include the foundational data needed to understand a humanitarian context. However we have since expanded beyond the Data Grids, and a live dashboard of data availability by country can be found at <https://ocha-dap.github.io/viz-hapi-availability/>.\n",
@@ -3344,8 +3229,7 @@
         "rec9HIhsIpPjx48rc"
       ],
       "Org Donor Agencies": [
-        "recAiCKdzASfJMVsG",
-        "rec6XRPA9pKgC8j1J"
+        "recAiCKdzASfJMVsG"
       ],
       "Org IATI Name": "N/A",
       "Org HQ Country": "United States",
@@ -3360,13 +3244,6 @@
         "fields": {
           "Agency/Department Name": "Department of Defense (DoD)",
           "Agency Data Portal": "https://www.defense.gov/",
-          "Country Name": "USA"
-        }
-      },
-      {
-        "id": "rec6XRPA9pKgC8j1J",
-        "fields": {
-          "Agency/Department Name": "U.S. Agency for International Development (USAID)",
           "Country Name": "USA"
         }
       }
@@ -3539,7 +3416,6 @@
         "receHoGmo61oHXBAc",
         "recRutqdhqEZSnOB2",
         "rec17xB7AKc3ojdV5",
-        "rec6XRPA9pKgC8j1J",
         "recbvrcYZZW7mBnCU"
       ],
       "Org IATI Name": "N/A",
@@ -3638,13 +3514,6 @@
         "fields": {
           "Agency/Department Name": "Federal Department of Foreign Affairs (FDFA)",
           "Country Name": "Switzerland"
-        }
-      },
-      {
-        "id": "rec6XRPA9pKgC8j1J",
-        "fields": {
-          "Agency/Department Name": "U.S. Agency for International Development (USAID)",
-          "Country Name": "USA"
         }
       },
       {
@@ -3805,7 +3674,6 @@
       "South Korea",
       "Sweden",
       "Switzerland",
-      "USA",
       "United Kingdom"
     ]
   },
@@ -3929,7 +3797,7 @@
       {
         "id": "recgAR3TqI7vt3ypc",
         "fields": {
-          "Agency/Department Name": " Unspecified Agency",
+          "Agency/Department Name": "Ministry of Foreign and European Affairs, Defence, Development Cooperation and Foreign Trade ",
           "Country Name": "Luxembourg"
         }
       },
@@ -4234,8 +4102,7 @@
         "recEwLy3FESOhLeNs",
         "recAmBwUrrYDMtXtH",
         "reczIeSUeAdEWMKSk",
-        "recXcSKhSy2s7tunj",
-        "rechEM6RZ6by4ZLZK"
+        "recXcSKhSy2s7tunj"
       ],
       "Org Donor Agencies": [
         "rec1YpvhkjwME6GOJ",
@@ -4424,7 +4291,7 @@
       {
         "id": "recgAR3TqI7vt3ypc",
         "fields": {
-          "Agency/Department Name": " Unspecified Agency",
+          "Agency/Department Name": "Ministry of Foreign and European Affairs, Defence, Development Cooperation and Foreign Trade ",
           "Country Name": "Luxembourg"
         }
       },
@@ -4602,36 +4469,12 @@
         "agencies": []
       },
       {
-        "id": "rechEM6RZ6by4ZLZK",
-        "fields": {
-          "Project/Product Name": "Global Humanitarian Overview (GHO) Report",
-          "product_key": "gho-report",
-          "Provider Orgs Full Name": [
-            "recGCltHLsYiDo59B"
-          ],
-          "CRAF’d-Funded Project?": "NO",
-          "Investment Type(s)": [
-            "Data Sets & Commons",
-            "Crisis Analytics & Insights"
-          ],
-          "Investment Theme(s)": [
-            "Conflict & Violence Data",
-            "Data Storage, Access & Sharing"
-          ],
-          "Project Website": "https://humanitarianaction.info/",
-          "Project Description": "The **Global Humanitarian Overview** is an annual assessment of global humanitarian needs and how to respond to them. This document provides an analysis of the drivers of needs and an overview of the resources required to support people targeted for assistance. It also provides an account of the humanitarian system’s collective achievements.\n",
-          "HDX_SOHD": "None"
-        },
-        "agencies": []
-      },
-      {
         "id": "reczIeSUeAdEWMKSk",
         "fields": {
           "Project/Product Name": "Multi-Sectoral Needs Assessment (MSNA)",
           "product_key": "msna",
           "Provider Orgs Full Name": [
             "recGCltHLsYiDo59B",
-            "recsrCWKAPu9dwkHb",
             "rec3QdLIyrZ4dNiPh",
             "recNVePWbU6GAxsIP"
           ],
@@ -5013,11 +4856,9 @@
       "Org Mission": "We serve as the safety coordination and advisory body to the NGO community and provide daily support to more than 1,000 registered organisations working in high-risk contexts.\n\nINSO's mission is to support humanitarian safety and access in high-risk countries.",
       "Link to Data Products Overview": "<https://ngosafety.org/analysis-reports/>\n<https://ngosafety.org/conflict-data-dashboard/>\n<https://ngosafety.org/humanitarian-data-dashboard/>\n\n",
       "Provided Data Ecosystem Projects": [
-        "recftrBsKUWwYWGA9",
         "rec2eT5BuCp87chHm"
       ],
       "Org Donor Agencies": [
-        "rec6XRPA9pKgC8j1J",
         "recHSsEaPuaG3h2PQ",
         "recylzOrnxt3grWHh",
         "rec0sY1I5JZz6ZsUE",
@@ -5038,13 +4879,6 @@
       "Org Type": "Non-Governmental Organization"
     },
     "agencies": [
-      {
-        "id": "rec6XRPA9pKgC8j1J",
-        "fields": {
-          "Agency/Department Name": "U.S. Agency for International Development (USAID)",
-          "Country Name": "USA"
-        }
-      },
       {
         "id": "recHSsEaPuaG3h2PQ",
         "fields": {
@@ -5125,7 +4959,7 @@
       {
         "id": "recgAR3TqI7vt3ypc",
         "fields": {
-          "Agency/Department Name": " Unspecified Agency",
+          "Agency/Department Name": "Ministry of Foreign and European Affairs, Defence, Development Cooperation and Foreign Trade ",
           "Country Name": "Luxembourg"
         }
       }
@@ -5134,43 +4968,24 @@
       {
         "id": "rec2eT5BuCp87chHm",
         "fields": {
-          "Project/Product Name": "Humanitarian Data Dashboard",
+          "Project/Product Name": "Humanitarian Data & Insights",
           "product_key": "inso-humanitarian-data-dashboard",
           "Provider Orgs Full Name": [
             "recHswBeKTxqz7ig7"
           ],
           "CRAF’d-Funded Project?": "NO",
           "Investment Type(s)": [
-            "Data Sets & Commons"
+            "Data Sets & Commons",
+            "Crisis Analytics & Insights"
           ],
           "Investment Theme(s)": [
             "Conflict & Violence Data",
-            "Data Storage, Access & Sharing",
-            "Humanitarian Access Data"
+            "Humanitarian Access Data",
+            "Conflict Analytics",
+            "Humanitarian Access Analytics"
           ],
           "Project Website": "https://ngosafety.org/humanitarian-data-dashboard/",
           "Project Description": "The Conflict Data Dashboard displays _“all recorded security incidents”_ which means it shows all the ‘Security incidents’ (see above) recorded by INSO and not only those that affected NGOs.\n\n",
-          "HDX_SOHD": "None"
-        },
-        "agencies": []
-      },
-      {
-        "id": "recftrBsKUWwYWGA9",
-        "fields": {
-          "Project/Product Name": "Safety and Access Review (SAR)",
-          "product_key": "inso-sar",
-          "Provider Orgs Full Name": [
-            "recHswBeKTxqz7ig7"
-          ],
-          "CRAF’d-Funded Project?": "NO",
-          "Investment Type(s)": [
-            "Data Sets & Commons"
-          ],
-          "Investment Theme(s)": [
-            "Conflict & Violence Data"
-          ],
-          "Project Website": "https://ngosafety.org/reports/safety-access-review-q42022/",
-          "Project Description": "INSO emerged from the complex political conflict of Afghanistan, where NGOs continue to face challenges to safety and access.\n",
           "HDX_SOHD": "None"
         },
         "agencies": []
@@ -5186,7 +5001,6 @@
       "Norway",
       "Sweden",
       "Switzerland",
-      "USA",
       "United Kingdom",
       "United Nations Office for the Coordination of Humanitarian Affairs (OCHA)"
     ]
@@ -5353,20 +5167,9 @@
           ],
           "Project Website": "https://www.globalquakemodel.org/product/openquake-engine",
           "Project Description": "Developed by the Global Earthquake Model (GEM) Foundation, the OpenQuake Platform is an open-source tool for seismic hazard and risk assessment. It provides researchers, engineers, and governments with models, tools, and databases to simulate earthquake impacts, assess vulnerability, and inform urban planning and disaster preparedness strategies. OpenQuake integrates data on seismicity, exposure, and building fragility, and is widely used in both academic research and national risk management initiatives.\n",
-          "Project Donor Agencies": [
-            "rec6XRPA9pKgC8j1J"
-          ],
           "HDX_SOHD": "None"
         },
-        "agencies": [
-          {
-            "id": "rec6XRPA9pKgC8j1J",
-            "fields": {
-              "Agency/Department Name": "U.S. Agency for International Development (USAID)",
-              "Country Name": "USA"
-            }
-          }
-        ]
+        "agencies": []
       },
       {
         "id": "recZxXY0AjXgSMXr7",
@@ -5478,9 +5281,6 @@
           "CRAF’d-Funded Project?": "NO",
           "Investment Type(s)": [
             "Human Capital & Know-how"
-          ],
-          "Investment Theme(s)": [
-            "Information Management Services"
           ],
           "Project Website": "https://www.fieldsdata.org/information-management",
           "Project Description": "In the daily whirlwind, we often underestimate the data avalanche we create. But there's a golden opportunity – standardize and organize. This unlocks lessons from the past, supercharges efficiency, and fuels brilliant strategic decisions.\n",
@@ -5676,7 +5476,6 @@
         "recsrMWmoA037bW03",
         "recBEtacusKEwpWho",
         "recFDm6MHWUu6GSMI",
-        "rec6XRPA9pKgC8j1J",
         "recNLQhceOCXSMemo",
         "recsjWjrgMK3lD6fw"
       ],
@@ -5834,13 +5633,6 @@
         }
       },
       {
-        "id": "rec6XRPA9pKgC8j1J",
-        "fields": {
-          "Agency/Department Name": "U.S. Agency for International Development (USAID)",
-          "Country Name": "USA"
-        }
-      },
-      {
         "id": "recNLQhceOCXSMemo",
         "fields": {
           "Agency/Department Name": "Unspecified Agency",
@@ -5947,7 +5739,6 @@
       ],
       "Org Donor Agencies": [
         "recHSsEaPuaG3h2PQ",
-        "rec6XRPA9pKgC8j1J",
         "recylzOrnxt3grWHh",
         "recbbW0P8fxVtJBJP",
         "recHuY5QDGX7wJsTF",
@@ -5981,13 +5772,6 @@
           "Agency/Department Name": "Directorate-General for European Civil Protection and Humanitarian Aid Operations (DG ECHO)",
           "Agency Data Portal": "funding overview, not portal https://civil-protection-humanitarian-aid.ec.europa.eu/funding-evaluations/funding-humanitarian-aid_en",
           "Country Name": "European Union"
-        }
-      },
-      {
-        "id": "rec6XRPA9pKgC8j1J",
-        "fields": {
-          "Agency/Department Name": "U.S. Agency for International Development (USAID)",
-          "Country Name": "USA"
         }
       },
       {
@@ -6143,7 +5927,6 @@
           "product_key": "msna",
           "Provider Orgs Full Name": [
             "recGCltHLsYiDo59B",
-            "recsrCWKAPu9dwkHb",
             "rec3QdLIyrZ4dNiPh",
             "recNVePWbU6GAxsIP"
           ],
@@ -6866,7 +6649,6 @@
       "Org Description": "The DHS Program (Demographic and Health Surveys) is a primary source of data on health and population trends in developing countries, having provided technical assistance to over 300 surveys in more than 90 countries since 1984. They collect and disseminate nationally representative data on critical areas including fertility, family planning, maternal and child health, gender, HIV/AIDS, malaria, and nutrition. Funded by USAID and other donors, and implemented by ICF International, The DHS Program plays a vital role in advancing global understanding of health and population issues.",
       "Link to Data Products Overview": "<https://dhsprogram.com/Data/>\n",
       "Org Donor Agencies": [
-        "rec6XRPA9pKgC8j1J",
         "recFDm6MHWUu6GSMI",
         "recr77XDSfR0O9Jen"
       ],
@@ -6878,13 +6660,6 @@
       "HDX Org Key": "dhs"
     },
     "agencies": [
-      {
-        "id": "rec6XRPA9pKgC8j1J",
-        "fields": {
-          "Agency/Department Name": "U.S. Agency for International Development (USAID)",
-          "Country Name": "USA"
-        }
-      },
       {
         "id": "recFDm6MHWUu6GSMI",
         "fields": {
@@ -6903,25 +6678,9 @@
     ],
     "projects": [],
     "donor_countries": [
-      "USA",
       "United Nations Children's Fund (UNICEF)",
       "World Health Organization (WHO)"
     ]
-  },
-  {
-    "id": "recUzg1CowtWH7MWS",
-    "name": "AGORA",
-    "fields": {
-      "Org Full Name": "AGORA",
-      "Org Short Name": "AGORA",
-      "Org Website": "https://www.impact-initiatives.org/what-we-do/agora/",
-      "Org Description": "AGORA, a joint venture between ACTED and IMPACT Initiatives, was created in 2016 to ground humanitarian and development work in local knowledge, in keeping with the motto « Think local, Act global ». \n\nFounded in 2010 and headquartered in Geneva, IMPACT Initiatives is a leading applied research organization and the largest independent provider of data in crisis-affected contexts. Through our initiatives—REACH, AGORA, and PANDA—we enable humanitarian and other aid actors to make better, evidence-based decisions by delivering timely, relevant, and methodologically rigorous data and analysis. Our extensive presence across crisis-contexts allows us to collect data directly from crisis-affected people wherever needed, including among the most vulnerable and hard-to-reach.\n\nIMPACT takes an initiative-based approach to structuring our programming. Each initiative has a specific aim, operational model, and portfolio of solutions.\n\n- REACH strengthens evidence-based humanitarian decision-making through efficient data collection, management, and analysis – before, during, and after an emergency.\n- AGORA promotes localised and multi-sectoral aid action in support of the recovery and stabilisation of crisis-affected communities, in partnership with local stakeholders.\n- PANDA improves the impact of humanitarian and development interventions through programme design, assessments, and monitoring & evaluation.",
-      "org_key": "agora",
-      "Org Type": "Non-Governmental Organization"
-    },
-    "agencies": [],
-    "projects": [],
-    "donor_countries": []
   },
   {
     "id": "recVvtFoKKF407fD1",
@@ -7391,7 +7150,6 @@
       "Org Description": "We are a non-profit organisation collaborating with partners around the world to prepare for and respond to humanitarian emergencies. We strive to ensure global, regional, national and local disaster management and humanitarian agencies have access to the maps, visualised data, information and analysis that they need to make key decisions, at the right times, to save lives and reduce suffering. ",
       "Org Donor Agencies": [
         "rec0QlT9YlTVhHfEn",
-        "rec6XRPA9pKgC8j1J",
         "rec0sY1I5JZz6ZsUE"
       ],
       "Org IATI Name": "MapAction",
@@ -7411,13 +7169,6 @@
         }
       },
       {
-        "id": "rec6XRPA9pKgC8j1J",
-        "fields": {
-          "Agency/Department Name": "U.S. Agency for International Development (USAID)",
-          "Country Name": "USA"
-        }
-      },
-      {
         "id": "rec0sY1I5JZz6ZsUE",
         "fields": {
           "Agency/Department Name": "Foreign, Commonwealth & Development Office (FCDO)",
@@ -7429,7 +7180,6 @@
     "projects": [],
     "donor_countries": [
       "Germany",
-      "USA",
       "United Kingdom"
     ]
   },
@@ -7637,7 +7387,7 @@
       {
         "id": "recgAR3TqI7vt3ypc",
         "fields": {
-          "Agency/Department Name": " Unspecified Agency",
+          "Agency/Department Name": "Ministry of Foreign and European Affairs, Defence, Development Cooperation and Foreign Trade ",
           "Country Name": "Luxembourg"
         }
       }
@@ -7909,9 +7659,6 @@
         "recSbniShY9V8cE4L",
         "recSTdLTga3nMLgPn"
       ],
-      "Org Donor Agencies": [
-        "rec6XRPA9pKgC8j1J"
-      ],
       "Org IATI Name": "N/A",
       "Est. Data Budget [2024, $M]": 2000000,
       "Est. Org Budget [2024, $M]": 2000000,
@@ -7920,15 +7667,7 @@
       "org_key": "arab-barometer",
       "Org Type": "Research / Think Tank"
     },
-    "agencies": [
-      {
-        "id": "rec6XRPA9pKgC8j1J",
-        "fields": {
-          "Agency/Department Name": "U.S. Agency for International Development (USAID)",
-          "Country Name": "USA"
-        }
-      }
-    ],
+    "agencies": [],
     "projects": [
       {
         "id": "recSTdLTga3nMLgPn",
@@ -7982,20 +7721,12 @@
           "Project Website": "https://www.arabbarometer.org/",
           "Project Description": "Provides harmonized survey data covering public opinion on governance, religion, and economics in 20+ Arab countries. Data is freely accessible and supports comparative analysis across the region.\n",
           "Project Donor Agencies": [
-            "rec6XRPA9pKgC8j1J",
             "rec9TITYUt2a5OaKT",
             "recsrMWmoA037bW03"
           ],
           "HDX_SOHD": "None"
         },
         "agencies": [
-          {
-            "id": "rec6XRPA9pKgC8j1J",
-            "fields": {
-              "Agency/Department Name": "U.S. Agency for International Development (USAID)",
-              "Country Name": "USA"
-            }
-          },
           {
             "id": "rec9TITYUt2a5OaKT",
             "fields": {
@@ -8014,9 +7745,7 @@
         ]
       }
     ],
-    "donor_countries": [
-      "USA"
-    ]
+    "donor_countries": []
   },
   {
     "id": "reccKH8GA8awjQEvp",
@@ -8035,7 +7764,6 @@
       ],
       "Org Donor Agencies": [
         "recGNTHL9SKZxLDcw",
-        "rec6XRPA9pKgC8j1J",
         "rec17xB7AKc3ojdV5",
         "rec0QlT9YlTVhHfEn",
         "recwFMxuFEUJ4IK7S",
@@ -8062,13 +7790,6 @@
           "Agency/Department Name": "European Commission (EC)",
           "Agency Data Portal": "Maybe https://ec.europa.eu/info/funding-tenders/opportunities/portal/",
           "Country Name": "European Union"
-        }
-      },
-      {
-        "id": "rec6XRPA9pKgC8j1J",
-        "fields": {
-          "Agency/Department Name": "U.S. Agency for International Development (USAID)",
-          "Country Name": "USA"
         }
       },
       {
@@ -8248,7 +7969,6 @@
       "Spain",
       "Sweden",
       "Switzerland",
-      "USA",
       "United Kingdom"
     ]
   },
@@ -8842,7 +8562,7 @@
       {
         "id": "recgAR3TqI7vt3ypc",
         "fields": {
-          "Agency/Department Name": " Unspecified Agency",
+          "Agency/Department Name": "Ministry of Foreign and European Affairs, Defence, Development Cooperation and Foreign Trade ",
           "Country Name": "Luxembourg"
         }
       },
@@ -9187,7 +8907,7 @@
       {
         "id": "recgAR3TqI7vt3ypc",
         "fields": {
-          "Agency/Department Name": " Unspecified Agency",
+          "Agency/Department Name": "Ministry of Foreign and European Affairs, Defence, Development Cooperation and Foreign Trade ",
           "Country Name": "Luxembourg"
         }
       },
@@ -9361,8 +9081,7 @@
           "Project/Product Name": "UNHCR Global Data Service (GDS)",
           "product_key": "unhcr-gds",
           "Provider Orgs Full Name": [
-            "recfLMsJLUS9toAjS",
-            "recsrCWKAPu9dwkHb"
+            "recfLMsJLUS9toAjS"
           ],
           "CRAF’d-Funded Project?": "NO",
           "Investment Type(s)": [
@@ -10104,7 +9823,6 @@
         "recvuixaI146ykcHe"
       ],
       "Org Donor Agencies": [
-        "rec6XRPA9pKgC8j1J",
         "recGNTHL9SKZxLDcw",
         "rec3Ado0Jrl799Q8A",
         "rec0sY1I5JZz6ZsUE"
@@ -10121,13 +9839,6 @@
       "HDX Org Key": "igad-climate-prediction-and-application-center"
     },
     "agencies": [
-      {
-        "id": "rec6XRPA9pKgC8j1J",
-        "fields": {
-          "Agency/Department Name": "U.S. Agency for International Development (USAID)",
-          "Country Name": "USA"
-        }
-      },
       {
         "id": "recGNTHL9SKZxLDcw",
         "fields": {
@@ -10203,7 +9914,6 @@
     "donor_countries": [
       "European Union",
       "The World Bank",
-      "USA",
       "United Kingdom"
     ]
   },
@@ -10335,20 +10045,12 @@
           "Project Website": "https://data-in-emergencies.fao.org/",
           "Project Description": "Driven by regularly collected primary data, its objective is to understand the impact of shocks in food crisis contexts and inform decision-making in support of agricultural livelihoods. The DIEM Hub has been publicly available since June 2021.\n",
           "Project Donor Agencies": [
-            "rec6XRPA9pKgC8j1J",
             "recGMYeDQSV7jffjs",
             "recKVILBOB3NBEJlE"
           ],
           "HDX_SOHD": "None"
         },
         "agencies": [
-          {
-            "id": "rec6XRPA9pKgC8j1J",
-            "fields": {
-              "Agency/Department Name": "U.S. Agency for International Development (USAID)",
-              "Country Name": "USA"
-            }
-          },
           {
             "id": "recGMYeDQSV7jffjs",
             "fields": {
@@ -10791,7 +10493,6 @@
       "Org Donor Agencies": [
         "rec1VhOJv9U6QKBBs",
         "recRutqdhqEZSnOB2",
-        "rec6XRPA9pKgC8j1J",
         "recHuY5QDGX7wJsTF",
         "rec0QlT9YlTVhHfEn",
         "recxopeJBWmkOfOtE",
@@ -10826,13 +10527,6 @@
           "Agency/Department Name": "Swedish International Development Cooperation Agency (SIDA)",
           "Agency Data Portal": "https://openaid.se/en",
           "Country Name": "Sweden"
-        }
-      },
-      {
-        "id": "rec6XRPA9pKgC8j1J",
-        "fields": {
-          "Agency/Department Name": "U.S. Agency for International Development (USAID)",
-          "Country Name": "USA"
         }
       },
       {
@@ -10929,7 +10623,6 @@
           "Project Description": "IDMC's IDU offers preliminary, timely, and detailed insights into new displacement events reflecting our ongoing daily monitoring efforts. This event-based dataset provides initial snapshots of displacement trends which may later be refined and consolidated in the GIDD. It's important to note that these figures do not undergo the same level of quality control as the GIDD data, as the IDU data reflects timely updates that are subject to change as more information becomes available following a displacement event.\n",
           "Project Donor Agencies": [
             "rec8gXVsPUUB517NE",
-            "rec6XRPA9pKgC8j1J",
             "recf10RuM7qHUnC33",
             "recHuY5QDGX7wJsTF",
             "rec0QlT9YlTVhHfEn",
@@ -10947,13 +10640,6 @@
               "Agency/Department Name": "Federal Ministry for Economic Cooperation and Development (BMZ)",
               "Agency Data Portal": "https://www.transparenzportal.bund.de/en",
               "Country Name": "Germany"
-            }
-          },
-          {
-            "id": "rec6XRPA9pKgC8j1J",
-            "fields": {
-              "Agency/Department Name": "U.S. Agency for International Development (USAID)",
-              "Country Name": "USA"
             }
           },
           {
@@ -11075,7 +10761,6 @@
           "Project Description": "This database is the product of an annual process that involves collecting, harmonizing, and validating data followed by a thorough peer review. We engage with primary data providers and relevant actors at various levels—national, regional, and global. Published annually, the GIDD has been acknowledged by several UN resolutions for its significance. The GIDD data is detailed by country and year for conflict-induced displacement, while disaster-induced displacement is recorded at the event level. Additional disaggregated data is also available since 2023\n",
           "Project Donor Agencies": [
             "rec8gXVsPUUB517NE",
-            "rec6XRPA9pKgC8j1J",
             "recf10RuM7qHUnC33",
             "recHuY5QDGX7wJsTF",
             "rec0QlT9YlTVhHfEn",
@@ -11093,13 +10778,6 @@
               "Agency/Department Name": "Federal Ministry for Economic Cooperation and Development (BMZ)",
               "Agency Data Portal": "https://www.transparenzportal.bund.de/en",
               "Country Name": "Germany"
-            }
-          },
-          {
-            "id": "rec6XRPA9pKgC8j1J",
-            "fields": {
-              "Agency/Department Name": "U.S. Agency for International Development (USAID)",
-              "Country Name": "USA"
             }
           },
           {
@@ -11175,7 +10853,6 @@
           "Project Description": "IDMC’s Global Report on Internal Displacement (GRID) is the authoritative source for data and analysis on the state of internal displacement for the previous year. Each year, IDMC presents the validated estimates of internal displacements by conflict and disasters, and the total cumulative numbers of IDPs worldwide. The GRID also provides an overview of the year’s most significant internal displacement situations, highlighting potential measures to address the issue across the humanitarian, development, disaster risk reduction and climate change agendas.\n\n",
           "Project Donor Agencies": [
             "rec8gXVsPUUB517NE",
-            "rec6XRPA9pKgC8j1J",
             "recf10RuM7qHUnC33",
             "recHuY5QDGX7wJsTF",
             "rec0QlT9YlTVhHfEn",
@@ -11193,13 +10870,6 @@
               "Agency/Department Name": "Federal Ministry for Economic Cooperation and Development (BMZ)",
               "Agency Data Portal": "https://www.transparenzportal.bund.de/en",
               "Country Name": "Germany"
-            }
-          },
-          {
-            "id": "rec6XRPA9pKgC8j1J",
-            "fields": {
-              "Agency/Department Name": "U.S. Agency for International Development (USAID)",
-              "Country Name": "USA"
             }
           },
           {
@@ -11267,8 +10937,7 @@
       "Norway",
       "Robert Bosch Stiftung",
       "Sweden",
-      "Switzerland",
-      "USA"
+      "Switzerland"
     ]
   },
   {
@@ -11421,8 +11090,7 @@
         "recHSsEaPuaG3h2PQ",
         "rec0sY1I5JZz6ZsUE",
         "rec7IwGp05Iby61ry",
-        "recqNfbmfHwWpPdYJ",
-        "rec6XRPA9pKgC8j1J"
+        "recqNfbmfHwWpPdYJ"
       ],
       "Org IATI Name": "Start Network",
       "Est. Org Budget [2024, $M]": 36483133.15,
@@ -11471,13 +11139,6 @@
           "Agency Data Portal": "https://www.howdengroupholdings.com/sustainability/howden-foundation",
           "Country Name": "Howden Foundation"
         }
-      },
-      {
-        "id": "rec6XRPA9pKgC8j1J",
-        "fields": {
-          "Agency/Department Name": "U.S. Agency for International Development (USAID)",
-          "Country Name": "USA"
-        }
       }
     ],
     "projects": [],
@@ -11486,7 +11147,6 @@
       "European Union",
       "Global Support and Development (GSD)",
       "Howden Foundation",
-      "USA",
       "United Kingdom"
     ]
   },
@@ -11513,7 +11173,6 @@
         "recFNcILze2MwJxUN",
         "recfY9SzUx3XdEb4s",
         "recK8nDxvYcbGdEgw",
-        "rec6XRPA9pKgC8j1J",
         "recks6hHpAgBV14d9",
         "recGMYeDQSV7jffjs",
         "recCqVCi3rwF77MxA",
@@ -11594,13 +11253,6 @@
           "Agency/Department Name": "Unspecified Agency",
           "Agency Data Portal": "https://www.caf.com/en/projects/",
           "Country Name": "Development Bank of Latin America and the Caribbean (CAF)"
-        }
-      },
-      {
-        "id": "rec6XRPA9pKgC8j1J",
-        "fields": {
-          "Agency/Department Name": "U.S. Agency for International Development (USAID)",
-          "Country Name": "USA"
         }
       },
       {
@@ -11750,52 +11402,9 @@
       "Organization of American States",
       "Spain",
       "Sweden",
-      "USA",
       "United Kingdom",
       "United Nations Development Programme (UNDP)"
     ]
-  },
-  {
-    "id": "recoKRQ2eGzpn3D2g",
-    "name": "Kobo",
-    "fields": {
-      "Org Full Name": "Kobo",
-      "Org Short Name": "Kobo ",
-      "Org Website": "https://www.kobotoolbox.org/about-us/the-organization/",
-      "Org Description": "Kobo is an international nonprofit organization. We host and maintain KoboToolbox, the world’s most popular data collection tool in challenging settings. We are registered in Cambridge, Massachusetts in the United States, but our team is based around the world. Our mission is to provide highly usable tools for creating data-driven social impact. ",
-      "Provided Data Ecosystem Projects": [
-        "recONFtYpO5v2qk7s"
-      ],
-      "org_key": "kobo",
-      "Org Type": "Non-Governmental Organization"
-    },
-    "agencies": [],
-    "projects": [
-      {
-        "id": "recONFtYpO5v2qk7s",
-        "fields": {
-          "Project/Product Name": "KoboToolbox",
-          "product_key": "kobotoolbox",
-          "Provider Orgs Full Name": [
-            "recoKRQ2eGzpn3D2g",
-            "rec18TzPP5pYZ8ezX"
-          ],
-          "CRAF’d-Funded Project?": "NO",
-          "Investment Type(s)": [
-            "Infrastructure & Platforms"
-          ],
-          "Investment Theme(s)": [
-            "Data Collection",
-            "Conflict & Violence Data"
-          ],
-          "Project Website": "https://hhi.harvard.edu/kobotoolbox",
-          "Project Description": "KoboToolbox is a free and open-source tool for mobile data collection in humanitarian crises. Used by UN agencies, NGOs, and governments, it supports offline surveys, real-time dashboards, and collaborative field assessments.\n",
-          "HDX_SOHD": "None"
-        },
-        "agencies": []
-      }
-    ],
-    "donor_countries": []
   },
   {
     "id": "recoPRDBbxl0bVx7x",
@@ -11978,11 +11587,14 @@
           ],
           "CRAF’d-Funded Project?": "NO",
           "Investment Type(s)": [
-            "Data Sets & Commons"
+            "Data Sets & Commons",
+            "Crisis Analytics & Insights"
           ],
           "Investment Theme(s)": [
             "Food Security Data",
-            "Nutrition Data"
+            "Nutrition Data",
+            "Food Security Analytics",
+            "Nutrition Analytics"
           ],
           "Project Website": "https://www.ipcinfo.org/ipc-country-analysis/en/",
           "Project Description": "The IPC Analysis Portal is the global public platform where official IPC food insecurity analyses and maps are published, providing a single-entry point for validated IPC classifications worldwide.\n",
@@ -12054,7 +11666,6 @@
         "recNLQhceOCXSMemo",
         "rec2KBp1IAA5TtnQl",
         "recbbW0P8fxVtJBJP",
-        "rec6XRPA9pKgC8j1J",
         "rec3Ado0Jrl799Q8A",
         "rectyuW4INCMaNoAM",
         "recsrMWmoA037bW03",
@@ -12131,13 +11742,6 @@
           "Agency/Department Name": "French Development Agency (AFD) ",
           "Agency Data Portal": "https://www.afd.fr/en/carte-des-projets-list",
           "Country Name": "France"
-        }
-      },
-      {
-        "id": "rec6XRPA9pKgC8j1J",
-        "fields": {
-          "Agency/Department Name": "U.S. Agency for International Development (USAID)",
-          "Country Name": "USA"
         }
       },
       {
@@ -12761,12 +12365,9 @@
         "recEKzVdOqCJVhqrg",
         "recR021jYyNleSCho",
         "recxWS5Ys5dJ0dn1X",
-        "recHVA5VejuaVSohF",
-        "reccYy5JWKJEASskp",
-        "reczIeSUeAdEWMKSk"
+        "reccYy5JWKJEASskp"
       ],
       "Org Donor Agencies": [
-        "rec6XRPA9pKgC8j1J",
         "recQUVhcVyxZlXJ3H",
         "rec8gXVsPUUB517NE",
         "rec0QlT9YlTVhHfEn",
@@ -12795,13 +12396,6 @@
       "HDX Org Key": "international-organization-for-migration"
     },
     "agencies": [
-      {
-        "id": "rec6XRPA9pKgC8j1J",
-        "fields": {
-          "Agency/Department Name": "U.S. Agency for International Development (USAID)",
-          "Country Name": "USA"
-        }
-      },
       {
         "id": "recQUVhcVyxZlXJ3H",
         "fields": {
@@ -12974,28 +12568,6 @@
         "agencies": []
       },
       {
-        "id": "recHVA5VejuaVSohF",
-        "fields": {
-          "Project/Product Name": "UNHCR Global Data Service (GDS)",
-          "product_key": "unhcr-gds",
-          "Provider Orgs Full Name": [
-            "recfLMsJLUS9toAjS",
-            "recsrCWKAPu9dwkHb"
-          ],
-          "CRAF’d-Funded Project?": "NO",
-          "Investment Type(s)": [
-            "Infrastructure & Platforms"
-          ],
-          "Investment Theme(s)": [
-            "Data Storage, Access & Sharing"
-          ],
-          "Project Website": "https://www.migrationdataportal.org/institute/unhcr-global-data-service",
-          "Project Description": "​The UNHCR Global Data Service (GDS) is a central hub for data and statistics on refugees, asylum-seekers, internally displaced persons (IDPs), and stateless individuals.It supports evidence-based decision-making, policy development, and humanitarian operations by providing access to a wide range of data tools and resources.​\n",
-          "HDX_SOHD": "None"
-        },
-        "agencies": []
-      },
-      {
         "id": "recR021jYyNleSCho",
         "fields": {
           "Project/Product Name": "Migration Data Portal",
@@ -13098,32 +12670,6 @@
           "HDX_SOHD": "None"
         },
         "agencies": []
-      },
-      {
-        "id": "reczIeSUeAdEWMKSk",
-        "fields": {
-          "Project/Product Name": "Multi-Sectoral Needs Assessment (MSNA)",
-          "product_key": "msna",
-          "Provider Orgs Full Name": [
-            "recGCltHLsYiDo59B",
-            "recsrCWKAPu9dwkHb",
-            "rec3QdLIyrZ4dNiPh",
-            "recNVePWbU6GAxsIP"
-          ],
-          "CRAF’d-Funded Project?": "NO",
-          "Investment Type(s)": [
-            "Crisis Analytics & Insights",
-            "Standards & Coordination"
-          ],
-          "Investment Theme(s)": [
-            "Needs Assessment",
-            "Common Indicators"
-          ],
-          "Project Website": "https://dtm.iom.int/data-product-series/multi-sectoral-needs-assessment",
-          "Project Description": "MSNA is a standardized, country-level data collection initiative that captures multi-sectoral needs in crisis-affected populations. Data collected informs strategic planning, prioritization, and humanitarian response efforts.\n",
-          "HDX_SOHD": "None"
-        },
-        "agencies": []
       }
     ],
     "donor_countries": [
@@ -13170,7 +12716,6 @@
         "recJye4S746MWWmW6"
       ],
       "Org Donor Agencies": [
-        "rec6XRPA9pKgC8j1J",
         "recFDm6MHWUu6GSMI"
       ],
       "Org IATI Name": "N/A",
@@ -13181,13 +12726,6 @@
       "HDX Org Key": "water-point-data-exchange"
     },
     "agencies": [
-      {
-        "id": "rec6XRPA9pKgC8j1J",
-        "fields": {
-          "Agency/Department Name": "U.S. Agency for International Development (USAID)",
-          "Country Name": "USA"
-        }
-      },
       {
         "id": "recFDm6MHWUu6GSMI",
         "fields": {
@@ -13223,7 +12761,6 @@
       }
     ],
     "donor_countries": [
-      "USA",
       "United Nations Children's Fund (UNICEF)"
     ]
   },
@@ -13571,15 +13108,14 @@
         "recPMQlg07QkflL3i"
       ],
       "Org Donor Agencies": [
-        "rec6XRPA9pKgC8j1J",
         "rec3Ado0Jrl799Q8A",
         "recQUVhcVyxZlXJ3H",
-        "recLWqEZrThg4Drwo",
-        "recFDm6MHWUu6GSMI"
+        "rec0QlT9YlTVhHfEn",
+        "rec19ocYvikhZMdRI"
       ],
       "Org IATI Name": "N/A",
-      "Est. Data Budget [2024, $M]": 4000000,
-      "Est. Org Budget [2024, $M]": 27760285.54,
+      "Est. Data Budget [2024, $M]": 22400000,
+      "Est. Org Budget [2024, $M]": 22400000,
       "Org HQ Country": "United States",
       "Has received CRAF'd Funding?": "NO",
       "org_key": "immap",
@@ -13587,13 +13123,6 @@
       "HDX Org Key": "immap"
     },
     "agencies": [
-      {
-        "id": "rec6XRPA9pKgC8j1J",
-        "fields": {
-          "Agency/Department Name": "U.S. Agency for International Development (USAID)",
-          "Country Name": "USA"
-        }
-      },
       {
         "id": "rec3Ado0Jrl799Q8A",
         "fields": {
@@ -13611,19 +13140,17 @@
         }
       },
       {
-        "id": "recLWqEZrThg4Drwo",
+        "id": "rec0QlT9YlTVhHfEn",
         "fields": {
-          "Agency/Department Name": "Unspecified Agency",
-          "Agency Data Portal": "https://www.gichd.org/",
-          "Country Name": "Geneva International Centre for Humanitarian Demining"
+          "Agency/Department Name": "Federal Foreign Office (AA)",
+          "Country Name": "Germany"
         }
       },
       {
-        "id": "recFDm6MHWUu6GSMI",
+        "id": "rec19ocYvikhZMdRI",
         "fields": {
-          "Agency/Department Name": "Unspecified Agency",
-          "Agency Data Portal": "https://www.unicef.org/",
-          "Country Name": "United Nations Children's Fund (UNICEF)"
+          "Agency/Department Name": "Unspecified",
+          "Country Name": "United Nations (UN)"
         }
       }
     ],
@@ -13631,18 +13158,19 @@
       {
         "id": "recPMQlg07QkflL3i",
         "fields": {
-          "Project/Product Name": "Information Management Support",
+          "Project/Product Name": "Information Management Services",
           "product_key": "immap-information-management-support",
           "Provider Orgs Full Name": [
             "recvzWSlYgzs0mffd"
           ],
           "CRAF’d-Funded Project?": "NO",
           "Investment Type(s)": [
-            "Infrastructure & Platforms"
+            "Human Capital & Know-how"
           ],
           "Investment Theme(s)": [
-            "Data Governance & Management",
-            "Data Collection"
+            "Data Analytics",
+            " Data Collection & Generation",
+            "Applied Data Analytics & Insights Generation"
           ],
           "Project Website": "https://immap.org/product/information-management-services-in-support-of-humanitarian-action-in-nigeria/",
           "Project Description": "The humanitarian crisis in Nigeria’s northeast states of Borno, Adamawa and Yobe (BAY) continues to severely affect millions of people who remain vulnerable to displacement, impoverishment, and threat of violence. What started as a localized insurgency more than eleven years ago has turned into a regional armed conflict with civilians, mostly women and children bearing the brunt of brutal clashes and attacks.\n",
@@ -13665,7 +13193,6 @@
           "Investment Theme(s)": [
             "Needs Assessment Data"
           ],
-          "Project Website": "No website (See the notes column)",
           "Project Description": "iMMAP delivers assessment tools, training, and data services to support MSNA-led humanitarian coordination across emergencies—streamlining data aggregation across sectors.\n",
           "HDX_SOHD": "None"
         },
@@ -13673,10 +13200,10 @@
       }
     ],
     "donor_countries": [
-      "Geneva International Centre for Humanitarian Demining",
+      "Germany",
       "The World Bank",
       "USA",
-      "United Nations Children's Fund (UNICEF)"
+      "United Nations (UN)"
     ]
   },
   {
@@ -13705,7 +13232,6 @@
         "recbtz43uuKKFVfvd",
         "rec3Ado0Jrl799Q8A",
         "recGNTHL9SKZxLDcw",
-        "rec6XRPA9pKgC8j1J",
         "recQUVhcVyxZlXJ3H",
         "recztWTqT6smaiZ3q"
       ],
@@ -13759,13 +13285,6 @@
           "Agency/Department Name": "European Commission (EC)",
           "Agency Data Portal": "Maybe https://ec.europa.eu/info/funding-tenders/opportunities/portal/",
           "Country Name": "European Union"
-        }
-      },
-      {
-        "id": "rec6XRPA9pKgC8j1J",
-        "fields": {
-          "Agency/Department Name": "U.S. Agency for International Development (USAID)",
-          "Country Name": "USA"
         }
       },
       {
@@ -14150,7 +13669,8 @@
       "Org Website": "https://www.ecmwf.int/",
       "Org Description": "We are both a research institute and a 24/7 operational service, producing global numerical weather predictions and other data for our Member and Co-operating States and the broader community. We operate a world-class supercomputer facility for weather forecasting and hold one of the largest meteorological data archives. Other strategic activities include delivering advanced training and assisting the WMO in implementing its programmes.",
       "Provided Data Ecosystem Projects": [
-        "recGMlI70iaqyTtMo"
+        "recGMlI70iaqyTtMo",
+        "recQJwZB8vyAFwK4C"
       ],
       "org_key": "ecmrwf",
       "Org Type": "International Organization"
@@ -14177,6 +13697,36 @@
           "HDX_SOHD": "None"
         },
         "agencies": []
+      },
+      {
+        "id": "recQJwZB8vyAFwK4C",
+        "fields": {
+          "Project/Product Name": "Copernicus Atmosphere Monitoring Service (CAMS)",
+          "Provider Orgs Full Name": [
+            "recxUTvaAZbGHumjU"
+          ],
+          "CRAF’d-Funded Project?": "NO",
+          "Investment Type(s)": [
+            "Crisis Analytics & Insights"
+          ],
+          "Investment Theme(s)": [
+            "Climate Analytics"
+          ],
+          "Project Website": "https://atmosphere.copernicus.eu/",
+          "Project Donor Agencies": [
+            "reciWEHPYXviYoK02"
+          ],
+          "HDX_SOHD": "None"
+        },
+        "agencies": [
+          {
+            "id": "reciWEHPYXviYoK02",
+            "fields": {
+              "Agency/Department Name": "Members States",
+              "Country Name": "European Union"
+            }
+          }
+        ]
       }
     ],
     "donor_countries": []
@@ -14578,7 +14128,6 @@
         "recLN9L7RGRz4p1zM"
       ],
       "Org Donor Agencies": [
-        "rec6XRPA9pKgC8j1J",
         "recHSsEaPuaG3h2PQ",
         "rec0sY1I5JZz6ZsUE",
         "rec17xB7AKc3ojdV5",
@@ -14593,13 +14142,6 @@
       "HDX Org Key": "insecurity-insight"
     },
     "agencies": [
-      {
-        "id": "rec6XRPA9pKgC8j1J",
-        "fields": {
-          "Agency/Department Name": "U.S. Agency for International Development (USAID)",
-          "Country Name": "USA"
-        }
-      },
       {
         "id": "recHSsEaPuaG3h2PQ",
         "fields": {
@@ -14660,7 +14202,6 @@
           "Project Website": "https://insecurityinsight.org/",
           "Project Description": "Insecurity Insight examines threats facing people living and working in dangerous environments. Our innovative data collection and analysis methods generate insights relevant for aid workers, aid agencies and those concerned with the protection of health workers, educators, IDPs and refugees. Our aim is to empower those who deliver vital services and to give voices to those affected by insecurity\n",
           "Project Donor Agencies": [
-            "rec6XRPA9pKgC8j1J",
             "recHSsEaPuaG3h2PQ",
             "rec0sY1I5JZz6ZsUE",
             "rec17xB7AKc3ojdV5",
@@ -14671,13 +14212,6 @@
           "HDX_SOHD": "None"
         },
         "agencies": [
-          {
-            "id": "rec6XRPA9pKgC8j1J",
-            "fields": {
-              "Agency/Department Name": "U.S. Agency for International Development (USAID)",
-              "Country Name": "USA"
-            }
-          },
           {
             "id": "recHSsEaPuaG3h2PQ",
             "fields": {
@@ -14730,7 +14264,6 @@
       "Norway",
       "Spain",
       "Switzerland",
-      "USA",
       "United Kingdom"
     ]
   }
