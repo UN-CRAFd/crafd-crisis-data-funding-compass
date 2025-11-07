@@ -852,8 +852,8 @@
       "Org Mission": "We serve as the safety coordination and advisory body to the NGO community and provide daily support to more than 1,000 registered organisations working in high-risk contexts.\n\nINSO's mission is to support humanitarian safety and access in high-risk countries.",
       "Link to Data Products Overview": "<https://ngosafety.org/analysis-reports/>\n<https://ngosafety.org/conflict-data-dashboard/>\n<https://ngosafety.org/humanitarian-data-dashboard/>\n\n",
       "Provided Data Ecosystem Projects": [
-        "rec2eT5BuCp87chHm",
-        "recaApmxiLnw1JnZf"
+        "recftrBsKUWwYWGA9",
+        "rec2eT5BuCp87chHm"
       ],
       "Org Donor Agencies": [
         "recHSsEaPuaG3h2PQ",
@@ -2241,6 +2241,8 @@
         "rec19ocYvikhZMdRI"
       ],
       "Org IATI Name": "N/A",
+      "Est. Data Budget [2024, $M]": 4000000,
+      "Est. Org Budget [2024, $M]": 27760285.54,
       "Org HQ Country": "United States",
       "Has received CRAF'd Funding?": "NO",
       "org_key": "immap",

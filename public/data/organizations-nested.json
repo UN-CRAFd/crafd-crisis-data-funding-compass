@@ -1138,6 +1138,21 @@
         "id": "recfjAhO2DxCjgEgM",
         "fields": {
           "Project/Product Name": "Netherlands Red Cross‘ 510 Data Team",
+          "product_key": "510-data-team",
+          "Provider Orgs Full Name": [
+            "rec4rSsPP59Beed9i"
+          ],
+          "CRAF’d-Funded Project?": "YES",
+          "Investment Type(s)": [
+            "Data Sets & Commons",
+            "Crisis Analytics & Insights",
+            "Standards & Coordination"
+          ],
+          "Investment Theme(s)": [
+            "Anticipatory and Early Action Forecasts",
+            "Upskilling & Training"
+          ],
+          "Project Website": "https://510.global/",
           "Project Description": "The 510 Data Team supports innovation through data science projects targeting disaster preparedness, local early warning, and big data tools across the Red Cross network.\n",
           "Project Donor Agencies": [
             "recIUg3K9vtroebVE",
@@ -1598,7 +1613,11 @@
             "Environmental Data",
             "Monitoring & Alerts"
           ],
-          "product_key": "em-dat",
+          "Project Website": "https://www.emdat.be/",
+          "Project Description": "EM‑DAT compiles free, searchable global records of natural and technological disasters dating back to 1900. It provides standardized event-level data used extensively in disaster risk research, policy analysis, and early warning modeling.\n",
+          "Project Donor Agencies": [
+            "rec6XRPA9pKgC8j1J"
+          ],
           "HDX_SOHD": "None"
         },
         "agencies": []
@@ -3061,10 +3080,11 @@
           ],
           "CRAF’d-Funded Project?": "NO",
           "Investment Type(s)": [
-            "Crisis Analytics & Insights"
+            "Infrastructure & Platforms",
+            "Standards & Coordination"
           ],
           "Investment Theme(s)": [
-            "Monitoring & Alerts"
+            "Data Storage, Access & Sharing"
           ],
           "product_key": "hdx-signals",
           "HDX_SOHD": "None"
@@ -4497,7 +4517,31 @@
           "Investment Theme(s)": [
             "Data Governance & Management"
           ],
-          "product_key": "fintrack",
+          "Project Website": "https://fts.unocha.org/",
+          "Project Description": "OCHA’s FTS collects, standardizes, and publishes real-time humanitarian funding data globally. It offers dashboards and downloadable datasets tracking donor and recipient transactions in emergencies—providing transparency across funding flows.\n",
+          "HDX_SOHD": "None"
+        },
+        "agencies": []
+      },
+      {
+        "id": "rechEM6RZ6by4ZLZK",
+        "fields": {
+          "Project/Product Name": "Global Humanitarian Overview (GHO) Report",
+          "product_key": "gho-report",
+          "Provider Orgs Full Name": [
+            "recGCltHLsYiDo59B"
+          ],
+          "CRAF’d-Funded Project?": "NO",
+          "Investment Type(s)": [
+            "Data Sets & Commons",
+            "Crisis Analytics & Insights"
+          ],
+          "Investment Theme(s)": [
+            "Conflict & Violence Data",
+            "Data Storage, Access & Sharing"
+          ],
+          "Project Website": "https://humanitarianaction.info/",
+          "Project Description": "The **Global Humanitarian Overview** is an annual assessment of global humanitarian needs and how to respond to them. This document provides an analysis of the drivers of needs and an overview of the resources required to support people targeted for assistance. It also provides an account of the humanitarian system’s collective achievements.\n",
           "HDX_SOHD": "None"
         },
         "agencies": []
@@ -4888,8 +4932,8 @@
       "Org Mission": "We serve as the safety coordination and advisory body to the NGO community and provide daily support to more than 1,000 registered organisations working in high-risk contexts.\n\nINSO's mission is to support humanitarian safety and access in high-risk countries.",
       "Link to Data Products Overview": "<https://ngosafety.org/analysis-reports/>\n<https://ngosafety.org/conflict-data-dashboard/>\n<https://ngosafety.org/humanitarian-data-dashboard/>\n\n",
       "Provided Data Ecosystem Projects": [
-        "rec2eT5BuCp87chHm",
-        "recaApmxiLnw1JnZf"
+        "recftrBsKUWwYWGA9",
+        "rec2eT5BuCp87chHm"
       ],
       "Org Donor Agencies": [
         "recHSsEaPuaG3h2PQ",
@@ -5000,9 +5044,8 @@
       {
         "id": "rec2eT5BuCp87chHm",
         "fields": {
-          "Project/Product Name": "Humanitarian Data & Insights",
-          "Project Description": "The Conflict Data Dashboard displays _“all recorded security incidents”_ which means it shows all the ‘Security incidents’ (see above) recorded by INSO and not only those that affected NGOs.\n\n",
-          "Project Website": "https://ngosafety.org/humanitarian-data-dashboard/",
+          "Project/Product Name": "Humanitarian Data Dashboard",
+          "product_key": "inso-humanitarian-data-dashboard",
           "Provider Orgs Full Name": [
             "recHswBeKTxqz7ig7"
           ],
@@ -5023,24 +5066,22 @@
         "agencies": []
       },
       {
-        "id": "recaApmxiLnw1JnZf",
+        "id": "recftrBsKUWwYWGA9",
         "fields": {
-          "Project/Product Name": "Conflict Data Dashboard",
-          "Project Description": "The Conflict Data Dashboard presents all recorded security incidents by date, location, type, perpetrator and the impact on civilians. \n",
-          "Project Website": "https://ngosafety.org/conflict-data-dashboard/",
+          "Project/Product Name": "Safety and Access Review (SAR)",
+          "product_key": "inso-sar",
           "Provider Orgs Full Name": [
             "recHswBeKTxqz7ig7"
           ],
           "CRAF’d-Funded Project?": "NO",
           "Investment Type(s)": [
-            "Data Sets & Commons",
-            "Crisis Analytics & Insights"
+            "Data Sets & Commons"
           ],
           "Investment Theme(s)": [
-            "Conflict Analytics",
             "Conflict & Violence Data"
           ],
-          "product_key": "conflict-dashboard",
+          "Project Website": "https://ngosafety.org/reports/safety-access-review-q42022/",
+          "Project Description": "INSO emerged from the complex political conflict of Afghanistan, where NGOs continue to face challenges to safety and access.\n",
           "HDX_SOHD": "None"
         },
         "agencies": []
@@ -5220,7 +5261,11 @@
             "Damage Assessments",
             "Composite Indices"
           ],
-          "product_key": "openquake-platform",
+          "Project Website": "https://www.globalquakemodel.org/product/openquake-engine",
+          "Project Description": "Developed by the Global Earthquake Model (GEM) Foundation, the OpenQuake Platform is an open-source tool for seismic hazard and risk assessment. It provides researchers, engineers, and governments with models, tools, and databases to simulate earthquake impacts, assess vulnerability, and inform urban planning and disaster preparedness strategies. OpenQuake integrates data on seismicity, exposure, and building fragility, and is widely used in both academic research and national risk management initiatives.\n",
+          "Project Donor Agencies": [
+            "rec6XRPA9pKgC8j1J"
+          ],
           "HDX_SOHD": "None"
         },
         "agencies": []
@@ -5337,7 +5382,11 @@
           "Investment Type(s)": [
             "Human Capital & Know-how"
           ],
-          "product_key": "infomgmt",
+          "Investment Theme(s)": [
+            "Information Management Services"
+          ],
+          "Project Website": "https://www.fieldsdata.org/information-management",
+          "Project Description": "In the daily whirlwind, we often underestimate the data avalanche we create. But there's a golden opportunity – standardize and organize. This unlocks lessons from the past, supercharges efficiency, and fuels brilliant strategic decisions.\n",
           "HDX_SOHD": "None"
         },
         "agencies": []
@@ -7826,7 +7875,13 @@
             "Sentiment Data",
             "Disaggregated Country-level Data"
           ],
-          "product_key": "arab-barometer",
+          "Project Website": "https://www.arabbarometer.org/",
+          "Project Description": "Provides harmonized survey data covering public opinion on governance, religion, and economics in 20+ Arab countries. Data is freely accessible and supports comparative analysis across the region.\n",
+          "Project Donor Agencies": [
+            "rec6XRPA9pKgC8j1J",
+            "rec9TITYUt2a5OaKT",
+            "recsrMWmoA037bW03"
+          ],
           "HDX_SOHD": "None"
         },
         "agencies": [
@@ -10136,7 +10191,13 @@
           "Investment Theme(s)": [
             "Food Security Data"
           ],
-          "product_key": "data-in-emergencies-hub",
+          "Project Website": "https://data-in-emergencies.fao.org/",
+          "Project Description": "Driven by regularly collected primary data, its objective is to understand the impact of shocks in food crisis contexts and inform decision-making in support of agricultural livelihoods. The DIEM Hub has been publicly available since June 2021.\n",
+          "Project Donor Agencies": [
+            "rec6XRPA9pKgC8j1J",
+            "recGMYeDQSV7jffjs",
+            "recKVILBOB3NBEJlE"
+          ],
           "HDX_SOHD": "None"
         },
         "agencies": [
@@ -11933,11 +11994,15 @@
           ],
           "Investment Theme(s)": [
             "Food Security Data",
-            "Nutrition Data",
-            "Food Security Analytics",
-            "Nutrition Analytics"
+            "Nutrition Data"
           ],
-          "product_key": "ipc",
+          "Project Website": "https://www.ipcinfo.org/ipc-country-analysis/en/",
+          "Project Description": "The IPC Analysis Portal is the global public platform where official IPC food insecurity analyses and maps are published, providing a single-entry point for validated IPC classifications worldwide.\n",
+          "Project Donor Agencies": [
+            "rec0sY1I5JZz6ZsUE",
+            "recYxlC8x9puB69tx",
+            "rec2KBp1IAA5TtnQl"
+          ],
           "HDX_SOHD": "None"
         },
         "agencies": [
@@ -12939,7 +13004,30 @@
           "Investment Theme(s)": [
             "Displacement & Migration Data"
           ],
-          "product_key": "dtm",
+          "Project Website": "https://dtm.iom.int/",
+          "Project Description": "The Displacement Tracking Matrix (DTM) gathers and analyzes data to disseminate critical multi layered information on the mobility, vulnerabilities, and needs of displaced and mobile populations that enables decision makers and responders to provide these populations with better context specific assistance.\n",
+          "HDX_SOHD": "None"
+        },
+        "agencies": []
+      },
+      {
+        "id": "recHVA5VejuaVSohF",
+        "fields": {
+          "Project/Product Name": "UNHCR Global Data Service (GDS)",
+          "product_key": "unhcr-gds",
+          "Provider Orgs Full Name": [
+            "recfLMsJLUS9toAjS",
+            "recsrCWKAPu9dwkHb"
+          ],
+          "CRAF’d-Funded Project?": "NO",
+          "Investment Type(s)": [
+            "Infrastructure & Platforms"
+          ],
+          "Investment Theme(s)": [
+            "Data Storage, Access & Sharing"
+          ],
+          "Project Website": "https://www.migrationdataportal.org/institute/unhcr-global-data-service",
+          "Project Description": "​The UNHCR Global Data Service (GDS) is a central hub for data and statistics on refugees, asylum-seekers, internally displaced persons (IDPs), and stateless individuals.It supports evidence-based decision-making, policy development, and humanitarian operations by providing access to a wide range of data tools and resources.​\n",
           "HDX_SOHD": "None"
         },
         "agencies": []
@@ -13043,7 +13131,34 @@
             "Ethics",
             "Communities of Practice"
           ],
-          "product_key": "iom-dseg",
+          "Project Website": "https://www.hum-dseg.org/about",
+          "Project Description": "DSEG is a community of practice focused on advancing ethical, responsible, and inclusive data science in humanitarian contexts. It supports standards, tools, and guidance that center protection principles and data accountability.\n",
+          "HDX_SOHD": "None"
+        },
+        "agencies": []
+      },
+      {
+        "id": "reczIeSUeAdEWMKSk",
+        "fields": {
+          "Project/Product Name": "Multi-Sectoral Needs Assessment (MSNA)",
+          "product_key": "msna",
+          "Provider Orgs Full Name": [
+            "recGCltHLsYiDo59B",
+            "recsrCWKAPu9dwkHb",
+            "rec3QdLIyrZ4dNiPh",
+            "recNVePWbU6GAxsIP"
+          ],
+          "CRAF’d-Funded Project?": "NO",
+          "Investment Type(s)": [
+            "Crisis Analytics & Insights",
+            "Standards & Coordination"
+          ],
+          "Investment Theme(s)": [
+            "Needs Assessment",
+            "Common Indicators"
+          ],
+          "Project Website": "https://dtm.iom.int/data-product-series/multi-sectoral-needs-assessment",
+          "Project Description": "MSNA is a standardized, country-level data collection initiative that captures multi-sectoral needs in crisis-affected populations. Data collected informs strategic planning, prioritization, and humanitarian response efforts.\n",
           "HDX_SOHD": "None"
         },
         "agencies": []
@@ -13488,6 +13603,8 @@
         "rec19ocYvikhZMdRI"
       ],
       "Org IATI Name": "N/A",
+      "Est. Data Budget [2024, $M]": 4000000,
+      "Est. Org Budget [2024, $M]": 27760285.54,
       "Org HQ Country": "United States",
       "Has received CRAF'd Funding?": "NO",
       "org_key": "immap",
@@ -13530,9 +13647,8 @@
       {
         "id": "recPMQlg07QkflL3i",
         "fields": {
-          "Project/Product Name": "Information Management Services",
-          "Project Description": "The humanitarian crisis in Nigeria’s northeast states of Borno, Adamawa and Yobe (BAY) continues to severely affect millions of people who remain vulnerable to displacement, impoverishment, and threat of violence. What started as a localized insurgency more than eleven years ago has turned into a regional armed conflict with civilians, mostly women and children bearing the brunt of brutal clashes and attacks.\n",
-          "Project Website": "https://immap.org/product/information-management-services-in-support-of-humanitarian-action-in-nigeria/",
+          "Project/Product Name": "Information Management Support",
+          "product_key": "immap-information-management-support",
           "Provider Orgs Full Name": [
             "recvzWSlYgzs0mffd"
           ],
@@ -13565,7 +13681,8 @@
           "Investment Theme(s)": [
             "Needs Assessment Data"
           ],
-          "product_key": "immap-msna",
+          "Project Website": "No website (See the notes column)",
+          "Project Description": "iMMAP delivers assessment tools, training, and data services to support MSNA-led humanitarian coordination across emergencies—streamlining data aggregation across sectors.\n",
           "HDX_SOHD": "None"
         },
         "agencies": []
@@ -14066,36 +14183,6 @@
           "HDX_SOHD": "None"
         },
         "agencies": []
-      },
-      {
-        "id": "recQJwZB8vyAFwK4C",
-        "fields": {
-          "Project/Product Name": "Copernicus Atmosphere Monitoring Service (CAMS)",
-          "Project Donor Agencies": [
-            "reciWEHPYXviYoK02"
-          ],
-          "Project Website": "https://atmosphere.copernicus.eu/",
-          "Provider Orgs Full Name": [
-            "recxUTvaAZbGHumjU"
-          ],
-          "CRAF’d-Funded Project?": "NO",
-          "Investment Type(s)": [
-            "Crisis Analytics & Insights"
-          ],
-          "Investment Theme(s)": [
-            "Climate Analytics"
-          ],
-          "HDX_SOHD": "None"
-        },
-        "agencies": [
-          {
-            "id": "reciWEHPYXviYoK02",
-            "fields": {
-              "Agency/Department Name": "Members States",
-              "Country Name": "European Union"
-            }
-          }
-        ]
       }
     ],
     "donor_countries": []
@@ -14576,7 +14663,17 @@
             "Conflict & Violence Data",
             "Food Security Data"
           ],
-          "product_key": "insecurity-insight",
+          "Project Website": "https://insecurityinsight.org/",
+          "Project Description": "Insecurity Insight examines threats facing people living and working in dangerous environments. Our innovative data collection and analysis methods generate insights relevant for aid workers, aid agencies and those concerned with the protection of health workers, educators, IDPs and refugees. Our aim is to empower those who deliver vital services and to give voices to those affected by insecurity\n",
+          "Project Donor Agencies": [
+            "rec6XRPA9pKgC8j1J",
+            "recHSsEaPuaG3h2PQ",
+            "rec0sY1I5JZz6ZsUE",
+            "rec17xB7AKc3ojdV5",
+            "recdGZTDhjgGOhWJ5",
+            "recq22wSlO1GrYUWb",
+            "recf10RuM7qHUnC33"
+          ],
           "HDX_SOHD": "None"
         },
         "agencies": [

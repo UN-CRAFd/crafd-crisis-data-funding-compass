@@ -116,9 +116,8 @@
   {
     "id": "rec2eT5BuCp87chHm",
     "fields": {
-      "Project/Product Name": "Humanitarian Data & Insights",
-      "Project Description": "The Conflict Data Dashboard displays _“all recorded security incidents”_ which means it shows all the ‘Security incidents’ (see above) recorded by INSO and not only those that affected NGOs.\n\n",
-      "Project Website": "https://ngosafety.org/humanitarian-data-dashboard/",
+      "Project/Product Name": "Humanitarian Data Dashboard",
+      "product_key": "inso-humanitarian-data-dashboard",
       "Provider Orgs Full Name": [
         "recHswBeKTxqz7ig7"
       ],
@@ -660,24 +659,25 @@
     }
   },
   {
-    "id": "rec8taCKOmbZu5s4Z",
+    "id": "rec8wR515Mvu0YGx0",
     "fields": {
-      "Project/Product Name": "Global Repository of Good Practices",
-      "Project Description": "As part of IDMC's investment in more systematic monitoring of national and global efforts to reduce the risk, scale and negative impacts of internal displacement, the Global Repository of Good Practices provides a platform to compile, share and evaluate policies and programmatic approaches to support better solutions for internally displaced people worldwide.\n",
-      "Project Website": "https://www.internal-displacement.org/good-practices/",
+      "Project/Product Name": "Rivers and Streams Data",
+      "product_key": "nasa-river-streams-data",
       "Provider Orgs Full Name": [
-        "reclJ2i9jD0TKjOJ8"
+        "rec3elwvrBRnwOVEh"
       ],
       "CRAF’d-Funded Project?": "NO",
       "Investment Type(s)": [
-        "Crisis Analytics & Insights",
-        "Learning & Exchange"
+        "Data Sets & Commons",
+        "Infrastructure & Platforms"
       ],
       "Investment Theme(s)": [
-        "Best Practices",
-        "Displacement & Migration Analytics"
+        "Geospatial Analytics",
+        "Geospatial Data",
+        "Monitoring & Alerts"
       ],
-      "product_key": "idmc-good-practices-repo",
+      "Project Website": "https://www.earthdata.nasa.gov/topics/terrestrial-hydrosphere/rivers-streams",
+      "Project Description": "NASA provides open global datasets on hydrology (water flow, stream gauges) used to model climate risk, manage watershed health, and support climate adaptation planning.\n",
       "HDX_SOHD": "None"
     }
   },
@@ -1493,7 +1493,17 @@
         "Conflict & Violence Data",
         "Food Security Data"
       ],
-      "product_key": "insecurity-insight",
+      "Project Website": "https://insecurityinsight.org/",
+      "Project Description": "Insecurity Insight examines threats facing people living and working in dangerous environments. Our innovative data collection and analysis methods generate insights relevant for aid workers, aid agencies and those concerned with the protection of health workers, educators, IDPs and refugees. Our aim is to empower those who deliver vital services and to give voices to those affected by insecurity\n",
+      "Project Donor Agencies": [
+        "rec6XRPA9pKgC8j1J",
+        "recHSsEaPuaG3h2PQ",
+        "rec0sY1I5JZz6ZsUE",
+        "rec17xB7AKc3ojdV5",
+        "recdGZTDhjgGOhWJ5",
+        "recq22wSlO1GrYUWb",
+        "recf10RuM7qHUnC33"
+      ],
       "HDX_SOHD": "None"
     }
   },
@@ -1510,7 +1520,11 @@
       "Investment Type(s)": [
         "Human Capital & Know-how"
       ],
-      "product_key": "infomgmt",
+      "Investment Theme(s)": [
+        "Information Management Services"
+      ],
+      "Project Website": "https://www.fieldsdata.org/information-management",
+      "Project Description": "In the daily whirlwind, we often underestimate the data avalanche we create. But there's a golden opportunity – standardize and organize. This unlocks lessons from the past, supercharges efficiency, and fuels brilliant strategic decisions.\n",
       "HDX_SOHD": "None"
     }
   },
@@ -1701,9 +1715,8 @@
   {
     "id": "recPMQlg07QkflL3i",
     "fields": {
-      "Project/Product Name": "Information Management Services",
-      "Project Description": "The humanitarian crisis in Nigeria’s northeast states of Borno, Adamawa and Yobe (BAY) continues to severely affect millions of people who remain vulnerable to displacement, impoverishment, and threat of violence. What started as a localized insurgency more than eleven years ago has turned into a regional armed conflict with civilians, mostly women and children bearing the brunt of brutal clashes and attacks.\n",
-      "Project Website": "https://immap.org/product/information-management-services-in-support-of-humanitarian-action-in-nigeria/",
+      "Project/Product Name": "Information Management Support",
+      "product_key": "immap-information-management-support",
       "Provider Orgs Full Name": [
         "recvzWSlYgzs0mffd"
       ],
@@ -1759,6 +1772,27 @@
       ],
       "Investment Theme(s)": [
         "Climate Analytics"
+      ],
+      "HDX_SOHD": "None"
+    }
+  },
+  {
+    "id": "recQJwZB8vyAFwK4C",
+    "fields": {
+      "Project/Product Name": "Copernicus Atmosphere Monitoring Service (CAMS)",
+      "Provider Orgs Full Name": [
+        "recxUTvaAZbGHumjU"
+      ],
+      "CRAF’d-Funded Project?": "NO",
+      "Investment Type(s)": [
+        "Crisis Analytics & Insights"
+      ],
+      "Investment Theme(s)": [
+        "Climate Analytics"
+      ],
+      "Project Website": "https://atmosphere.copernicus.eu/",
+      "Project Donor Agencies": [
+        "reciWEHPYXviYoK02"
       ],
       "HDX_SOHD": "None"
     }
@@ -2126,7 +2160,11 @@
         "Environmental Data",
         "Monitoring & Alerts"
       ],
-      "product_key": "em-dat",
+      "Project Website": "https://www.emdat.be/",
+      "Project Description": "EM‑DAT compiles free, searchable global records of natural and technological disasters dating back to 1900. It provides standardized event-level data used extensively in disaster risk research, policy analysis, and early warning modeling.\n",
+      "Project Donor Agencies": [
+        "rec6XRPA9pKgC8j1J"
+      ],
       "HDX_SOHD": "None"
     }
   },
@@ -2335,7 +2373,11 @@
         "Damage Assessments",
         "Composite Indices"
       ],
-      "product_key": "openquake-platform",
+      "Project Website": "https://www.globalquakemodel.org/product/openquake-engine",
+      "Project Description": "Developed by the Global Earthquake Model (GEM) Foundation, the OpenQuake Platform is an open-source tool for seismic hazard and risk assessment. It provides researchers, engineers, and governments with models, tools, and databases to simulate earthquake impacts, assess vulnerability, and inform urban planning and disaster preparedness strategies. OpenQuake integrates data on seismicity, exposure, and building fragility, and is widely used in both academic research and national risk management initiatives.\n",
+      "Project Donor Agencies": [
+        "rec6XRPA9pKgC8j1J"
+      ],
       "HDX_SOHD": "None"
     }
   },
@@ -2451,24 +2493,24 @@
     }
   },
   {
-    "id": "recaApmxiLnw1JnZf",
+    "id": "reca35l4CEELxX2d1",
     "fields": {
-      "Project/Product Name": "Conflict Data Dashboard",
-      "Project Description": "The Conflict Data Dashboard presents all recorded security incidents by date, location, type, perpetrator and the impact on civilians. \n",
-      "Project Website": "https://ngosafety.org/conflict-data-dashboard/",
+      "Project/Product Name": "Earth Data Search",
+      "product_key": "earth-data-search",
       "Provider Orgs Full Name": [
-        "recHswBeKTxqz7ig7"
+        "rec3elwvrBRnwOVEh"
       ],
       "CRAF’d-Funded Project?": "NO",
       "Investment Type(s)": [
         "Data Sets & Commons",
-        "Crisis Analytics & Insights"
+        "Infrastructure & Platforms"
       ],
       "Investment Theme(s)": [
-        "Conflict Analytics",
-        "Conflict & Violence Data"
+        "Geospatial Data",
+        "Environmental Data"
       ],
-      "product_key": "conflict-dashboard",
+      "Project Website": "https://search.earthdata.nasa.gov/",
+      "Project Description": "NASA’s Earth Data Search portal provides centralized access to global satellite imagery and environmental datasets. Users can search, download, or stream geospatial data via standardized APIs to support climate resilience, disaster response, and scientific research.\n",
       "HDX_SOHD": "None"
     }
   },
@@ -2499,11 +2541,15 @@
       ],
       "Investment Theme(s)": [
         "Food Security Data",
-        "Nutrition Data",
-        "Food Security Analytics",
-        "Nutrition Analytics"
+        "Nutrition Data"
       ],
-      "product_key": "ipc",
+      "Project Website": "https://www.ipcinfo.org/ipc-country-analysis/en/",
+      "Project Description": "The IPC Analysis Portal is the global public platform where official IPC food insecurity analyses and maps are published, providing a single-entry point for validated IPC classifications worldwide.\n",
+      "Project Donor Agencies": [
+        "rec0sY1I5JZz6ZsUE",
+        "recYxlC8x9puB69tx",
+        "rec2KBp1IAA5TtnQl"
+      ],
       "HDX_SOHD": "None"
     }
   },
@@ -2600,7 +2646,13 @@
       "Investment Theme(s)": [
         "Food Security Data"
       ],
-      "product_key": "data-in-emergencies-hub",
+      "Project Website": "https://data-in-emergencies.fao.org/",
+      "Project Description": "Driven by regularly collected primary data, its objective is to understand the impact of shocks in food crisis contexts and inform decision-making in support of agricultural livelihoods. The DIEM Hub has been publicly available since June 2021.\n",
+      "Project Donor Agencies": [
+        "rec6XRPA9pKgC8j1J",
+        "recGMYeDQSV7jffjs",
+        "recKVILBOB3NBEJlE"
+      ],
       "HDX_SOHD": "None"
     }
   },
@@ -2901,6 +2953,21 @@
     "id": "recfjAhO2DxCjgEgM",
     "fields": {
       "Project/Product Name": "Netherlands Red Cross‘ 510 Data Team",
+      "product_key": "510-data-team",
+      "Provider Orgs Full Name": [
+        "rec4rSsPP59Beed9i"
+      ],
+      "CRAF’d-Funded Project?": "YES",
+      "Investment Type(s)": [
+        "Data Sets & Commons",
+        "Crisis Analytics & Insights",
+        "Standards & Coordination"
+      ],
+      "Investment Theme(s)": [
+        "Anticipatory and Early Action Forecasts",
+        "Upskilling & Training"
+      ],
+      "Project Website": "https://510.global/",
       "Project Description": "The 510 Data Team supports innovation through data science projects targeting disaster preparedness, local early warning, and big data tools across the Red Cross network.\n",
       "Project Donor Agencies": [
         "recIUg3K9vtroebVE",
@@ -2911,21 +2978,26 @@
         "recRgmk6Ew3NBvxGV",
         "recFSAJtcprNtdNt3"
       ],
-      "Project Website": "https://510.global/",
+      "HDX_SOHD": "None"
+    }
+  },
+  {
+    "id": "recftrBsKUWwYWGA9",
+    "fields": {
+      "Project/Product Name": "Safety and Access Review (SAR)",
+      "product_key": "inso-sar",
       "Provider Orgs Full Name": [
-        "rec4rSsPP59Beed9i"
+        "recHswBeKTxqz7ig7"
       ],
-      "CRAF’d-Funded Project?": "YES",
+      "CRAF’d-Funded Project?": "NO",
       "Investment Type(s)": [
-        "Human Capital & Know-how"
+        "Data Sets & Commons"
       ],
       "Investment Theme(s)": [
-        "Upskilling & Training",
-        "Data Analytics",
-        "Applied Data Analytics & Insights Generation",
-        "Digital Product & Tool Development"
+        "Conflict & Violence Data"
       ],
-      "product_key": "510-data-team",
+      "Project Website": "https://ngosafety.org/reports/safety-access-review-q42022/",
+      "Project Description": "INSO emerged from the complex political conflict of Afghanistan, where NGOs continue to face challenges to safety and access.\n",
       "HDX_SOHD": "None"
     }
   },
@@ -3122,7 +3194,34 @@
         "Workshops",
         "Upskilling & Training"
       ],
-      "product_key": "hhi",
+      "Project Website": "https://hhi.harvard.edu/",
+      "Project Description": "HHI is an academic and applied research center focused on advancing humanitarian response through evidence-based practice, data science, and technology. It bridges academia, practitioners, and policy stakeholders.\n",
+      "Project Donor Agencies": [
+        "recCDa9F6ntBxGGkm",
+        "reclUJwIt0bxL2bO0"
+      ],
+      "HDX_SOHD": "None"
+    }
+  },
+  {
+    "id": "rechEM6RZ6by4ZLZK",
+    "fields": {
+      "Project/Product Name": "Global Humanitarian Overview (GHO) Report",
+      "product_key": "gho-report",
+      "Provider Orgs Full Name": [
+        "recGCltHLsYiDo59B"
+      ],
+      "CRAF’d-Funded Project?": "NO",
+      "Investment Type(s)": [
+        "Data Sets & Commons",
+        "Crisis Analytics & Insights"
+      ],
+      "Investment Theme(s)": [
+        "Conflict & Violence Data",
+        "Data Storage, Access & Sharing"
+      ],
+      "Project Website": "https://humanitarianaction.info/",
+      "Project Description": "The **Global Humanitarian Overview** is an annual assessment of global humanitarian needs and how to respond to them. This document provides an analysis of the drivers of needs and an overview of the resources required to support people targeted for assistance. It also provides an account of the humanitarian system’s collective achievements.\n",
       "HDX_SOHD": "None"
     }
   },
@@ -3171,25 +3270,12 @@
         "Sentiment Data",
         "Disaggregated Country-level Data"
       ],
-      "product_key": "arab-barometer",
-      "HDX_SOHD": "None"
-    }
-  },
-  {
-    "id": "reciDzUjwtkVeh21I",
-    "fields": {
-      "Project/Product Name": "Anticipatory Action",
-      "Project Description": "As part of MapAction’s strategic commitment to locally-led, sustainability is defined as helping ensure the longevity and sustainability of AA projects by establishing effective evaluation frameworks and sharing lessons learned with the wider community. It is critical that local voices are embedded with these projects and processes.\n",
-      "Project Website": "https://mapaction.org/anticipatory-action-drr/",
-      "Provider Orgs Full Name": [
-        "recX11pAAzHjdqH0Y"
-      ],
-      "CRAF’d-Funded Project?": "NO",
-      "Investment Type(s)": [
-        "Crisis Analytics & Insights"
-      ],
-      "Investment Theme(s)": [
-        "Anticipatory and Early Action Forecasts"
+      "Project Website": "https://www.arabbarometer.org/",
+      "Project Description": "Provides harmonized survey data covering public opinion on governance, religion, and economics in 20+ Arab countries. Data is freely accessible and supports comparative analysis across the region.\n",
+      "Project Donor Agencies": [
+        "rec6XRPA9pKgC8j1J",
+        "rec9TITYUt2a5OaKT",
+        "recsrMWmoA037bW03"
       ],
       "product_key": "anticipatory-action",
       "HDX_SOHD": "None"
@@ -4240,7 +4326,8 @@
       "Investment Theme(s)": [
         "Needs Assessment Data"
       ],
-      "product_key": "immap-msna",
+      "Project Website": "No website (See the notes column)",
+      "Project Description": "iMMAP delivers assessment tools, training, and data services to support MSNA-led humanitarian coordination across emergencies—streamlining data aggregation across sectors.\n",
       "HDX_SOHD": "None"
     }
   },
