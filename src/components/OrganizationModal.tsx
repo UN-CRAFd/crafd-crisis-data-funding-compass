@@ -112,7 +112,7 @@ export default function OrganizationModal({
                 <img 
                     src={logoSrc} 
                     alt={`${displayName} logo`}
-                    className="h-6 w-6 sm:h-7 sm:w-7 shrink-0 object-contain"
+                    className="h-6 w-6 sm:h-10 sm:w-10 shrink-0 object-contain"
                     onError={(e) => {
                         // Try other extensions
                         const currentSrc = (e.target as HTMLImageElement).src;
