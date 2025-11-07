@@ -9,7 +9,8 @@ interface SurveyBannerProps {
 }
 
 const SurveyBanner: React.FC<SurveyBannerProps> = ({ 
-    surveyUrl = process.env.NEXT_PUBLIC_SURVEY_URL || '#' 
+    // Default to the requested Airtable form URL unless overridden by env
+    surveyUrl = process.env.NEXT_PUBLIC_SURVEY_URL || 'https://airtable.com/apprObB2AsvMwfAAl/pagcre1SPjT0nJxa4/form'
 }) => {
     const [isVisible, setIsVisible] = useState(false);
     const [shouldRender, setShouldRender] = useState(false);
