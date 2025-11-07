@@ -275,10 +275,16 @@ def main():
     try:
         log("Starting simplified Airtable fetch...")
 
-        # 1) Fetch main (projects) table with basic params
+        # 1) Fetch main (projects) table with specified fields
         log(f"Fetching main/projects table: {MAIN_TABLE_IDENTIFIER}")
-        main_records = fetch_airtable_table(MAIN_TABLE_IDENTIFIER)  # type: ignore
-        save_to_json(main_records, "ecosystem-table.json", apply_select_filter=True)
+        # Request only the configured project fields from Airtable
+        projects_extra_params: Dict[str, Any] = {}
+        if FIELDS_PROJECTS:
+            projects_extra_params["fields"] = FIELDS_PROJECTS
+        main_records = fetch_airtable_table(
+            MAIN_TABLE_IDENTIFIER, extra_params=projects_extra_params
+        )
+        save_to_json(main_records, "ecosystem-table.json", apply_select_filter=False)
 
         # 2) Fetch organizations table (if provided)
         org_count = 0
