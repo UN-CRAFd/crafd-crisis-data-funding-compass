@@ -186,9 +186,19 @@ export default function OrganizationModal({
             <div className="px-6 sm:px-8 pt-4 sm:pt-5 pb-6 sm:pb-8 font-roboto flex flex-col h-full">
                 {/* Organization Type Badge */}
                 {orgType && (
-                    <span className="inline-flex items-center px-3 py-1.5 rounded-md text-sm font-medium bg-slate-100 text-slate-600 w-fit mb-4">
-                        {orgType}
-                    </span>
+                    <div className="flex items-center gap-8 mb-4">
+                          {orgType.toLowerCase().includes('united nations') && (
+                            <img 
+                                src="/UN-Logo.png" 
+                                alt="UN Logo" 
+                                className="h-8 w-20 object-contain" 
+                            />
+                        )}
+                        <span className="inline-flex items-center px-3 py-1.5 rounded-md text-sm font-medium bg-slate-100 text-slate-600">
+                            {orgType}
+                        </span>
+                      
+                    </div>
                 )}
 
                 {/* Description with inline Learn more link */}
