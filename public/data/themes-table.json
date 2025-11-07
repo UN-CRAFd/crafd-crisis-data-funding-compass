@@ -51,7 +51,8 @@
       "Investment Type": [
         "Crisis Analytics & Insights"
       ],
-      "Investment Themes [Text Key]": "Secondary Data Review / Analysis"
+      "Investment Themes [Text Key]": "Secondary Data Review / Analysis",
+      "theme_description": "Secondary Data Review/Analysis is the process of collecting, evaluating, and synthesizing existing data from various sources to inform crisis response and decision-making in humanitarian contexts."
     }
   },
   {
@@ -153,7 +154,8 @@
         "recYzS7BrsxBG8llV",
         "recdr2wcQiX1Ch1ZF",
         "recLn4QiWGniBsWoe"
-      ]
+      ],
+      "theme_description": "Composite Indices in humanitarian data are aggregated measures that combine multiple indicators to provide a comprehensive overview of crisis severity, vulnerability, or needs for more effective crisis analytics and decision-making."
     }
   },
   {
@@ -195,7 +197,8 @@
       "Investment Themes [Text Key]": "Needs Assessment Analytics",
       "Data Ecosystem Projects": [
         "reczIeSUeAdEWMKSk"
-      ]
+      ],
+      "theme_description": "Needs Assessment is the process of systematically collecting and analyzing data to identify and prioritize the most urgent needs of affected populations during a humanitarian crisis."
     }
   },
   {
@@ -287,7 +290,8 @@
         "recgpnIj48zBCayHc",
         "recLn4QiWGniBsWoe",
         "recQJwZB8vyAFwK4C"
-      ]
+      ],
+      "theme_description": "Climate Analytics is the process of analyzing climate-related data to provide insights and support decision-making for humanitarian response and crisis management."
     }
   },
   {
@@ -354,7 +358,8 @@
         "recEf0pdKsN1Gbvo8",
         "recJQghyXlyK5WiCE",
         "recNggnBqXIgii2hz"
-      ]
+      ],
+      "theme_description": "Health Analytics involves analyzing health-related data to identify trends, risks, and needs, enabling better decision-making and targeted interventions in humanitarian crises."
     }
   },
   {
@@ -380,7 +385,8 @@
         "recfTLQpzUgBOtlS5",
         "recNggnBqXIgii2hz",
         "recO7hHncZQGqy2vJ"
-      ]
+      ],
+      "theme_description": "Monitoring & Alerts in Crisis Analytics & Insights involves continuously tracking humanitarian data to quickly detect and notify stakeholders of emerging crises or significant changes, enabling timely and informed responses."
     }
   },
   {
@@ -446,7 +452,8 @@
       "Investment Type": [
         "Crisis Analytics & Insights"
       ],
-      "Investment Themes [Text Key]": "Disaster Hazard & Risk Modelling"
+      "Investment Themes [Text Key]": "Disaster Hazard & Risk Modelling",
+      "theme_description": "Disaster Hazard & Risk Modelling uses data and analytics to predict, assess, and visualize potential crises, enabling humanitarian organizations to better prepare for and respond to disasters."
     }
   },
   {
@@ -492,7 +499,8 @@
       "Data Ecosystem Projects": [
         "recvuixaI146ykcHe",
         "recaWq49HJw4UXd9K"
-      ]
+      ],
+      "theme_description": "Nutrition Analytics involves collecting and analyzing nutrition-related data to provide insights that inform effective humanitarian interventions and improve nutritional outcomes in crisis situations."
     }
   },
   {
@@ -509,7 +517,8 @@
       "Data Ecosystem Projects": [
         "recGVHndBPIvMpuHb",
         "recO3RZZ7IEA88GnQ"
-      ]
+      ],
+      "theme_description": "Gender Analytics examines how gender differences impact needs, experiences, and outcomes, providing insights to ensure humanitarian responses are equitable and effective."
     }
   },
   {
@@ -562,7 +571,8 @@
       "Investment Type": [
         "Crisis Analytics & Insights"
       ],
-      "Investment Themes [Text Key]": "Migration Analytics "
+      "Investment Themes [Text Key]": "Migration Analytics ",
+      "theme_description": "Migration Analytics uses data and analytical tools to understand, monitor, and predict migration patterns, helping humanitarian organizations respond effectively to migration-related crises."
     }
   },
   {
@@ -722,7 +732,8 @@
         "recRqJS0I3kX5dYEJ",
         "recSIp9VIy4uKdPH3",
         "recdr2wcQiX1Ch1ZF"
-      ]
+      ],
+      "theme_description": "Geospatial Analytics in humanitarian data uses location-based data to analyze and visualize crisis situations, enabling better decision-making and targeted response during emergencies."
     }
   },
   {
@@ -777,7 +788,8 @@
       "Data Ecosystem Projects": [
         "recLA3jRq3bbZRVzu",
         "rec28WeSKDEQ5wx45"
-      ]
+      ],
+      "theme_description": "AI Models in Crisis Analytics & Insights analyze humanitarian data to detect patterns, predict crises, and provide actionable recommendations for effective emergency response."
     }
   },
   {
@@ -974,7 +986,8 @@
         "recIUSUS3NNXaMHCQ",
         "recu82l0uk7d3IHeU",
         "recUotlR1ZJwVMAIS"
-      ]
+      ],
+      "theme_description": "Impact Evaluation in Crisis Analytics & Insights assesses the effectiveness of humanitarian interventions by analyzing data to determine what changes occurred as a result of specific actions during crises."
     }
   },
   {
@@ -1011,7 +1024,8 @@
       "Investment Type": [
         "Crisis Analytics & Insights"
       ],
-      "Investment Themes [Text Key]": "Sentiment Analysis"
+      "Investment Themes [Text Key]": "Sentiment Analysis",
+      "theme_description": "Sentiment Analysis in Crisis Analytics & Insights involves using humanitarian data to automatically detect and interpret the emotions, attitudes, or opinions expressed in communications during crises, helping organizations understand public sentiment and respond more effectively."
     }
   },
   {
@@ -1027,7 +1041,8 @@
       "Investment Themes [Text Key]": "Poverty Analytics",
       "Data Ecosystem Projects": [
         "recJQghyXlyK5WiCE"
-      ]
+      ],
+      "theme_description": "Poverty Analytics uses data-driven methods to identify, measure, and understand patterns of poverty, enabling targeted humanitarian responses and informed decision-making during crises."
     }
   },
   {
@@ -1074,7 +1089,8 @@
       "Investment Themes [Text Key]": "PiN Calculation",
       "Data Ecosystem Projects": [
         "reccYy5JWKJEASskp"
-      ]
+      ],
+      "theme_description": "PiN (People in Need) Calculation estimates the number of individuals requiring humanitarian assistance in a crisis by analyzing data on vulnerabilities, exposure, and severity of needs within affected populations."
     }
   },
   {
@@ -1166,7 +1182,8 @@
       "Investment Type": [
         "Crisis Analytics & Insights"
       ],
-      "Investment Themes [Text Key]": "Flood Risk Analytics"
+      "Investment Themes [Text Key]": "Flood Risk Analytics",
+      "theme_description": "Flood Risk Analytics uses data and advanced analysis to assess, predict, and visualize flood risks, helping humanitarian organizations make informed decisions during crises."
     }
   },
   {
@@ -1209,7 +1226,8 @@
       "Data Ecosystem Projects": [
         "rec4XuZsotMgaVbAm",
         "rec2eT5BuCp87chHm"
-      ]
+      ],
+      "theme_description": "Humanitarian Access Analytics provides data-driven insights and analysis to help organizations understand and navigate challenges in delivering aid during crises."
     }
   },
   {
@@ -1232,7 +1250,8 @@
         "recf4QNnota3r1Jch",
         "recRqJS0I3kX5dYEJ",
         "recdr2wcQiX1Ch1ZF"
-      ]
+      ],
+      "theme_description": "Damage Assessments analyze the extent and impact of a crisis on people, infrastructure, and resources to inform effective humanitarian response decisions."
     }
   },
   {
@@ -1320,7 +1339,8 @@
       "Investment Type": [
         "Crisis Analytics & Insights"
       ],
-      "Investment Themes [Text Key]": "Water, Sanitation & Hygiene (WASH) Analytics"
+      "Investment Themes [Text Key]": "Water, Sanitation & Hygiene (WASH) Analytics",
+      "theme_description": "WASH Analytics uses humanitarian data to assess and improve access to safe water, sanitation, and hygiene services during crises, enabling targeted and effective emergency responses."
     }
   },
   {
@@ -1338,7 +1358,8 @@
         "rec8taCKOmbZu5s4Z",
         "recni7Cfecz6SBQ8S",
         "rec28WeSKDEQ5wx45"
-      ]
+      ],
+      "theme_description": "Displacement & Migration Analytics uses humanitarian data to track, analyze, and provide insights on population movements and migration patterns during crises."
     }
   },
   {
@@ -1377,7 +1398,8 @@
         "recjxVwrxVL90go5G",
         "rec28WeSKDEQ5wx45",
         "rec2eT5BuCp87chHm"
-      ]
+      ],
+      "theme_description": "Conflict Analytics uses data analysis to understand, monitor, and predict conflict situations, providing insights to support humanitarian decision-making and crisis response."
     }
   },
   {
@@ -1563,7 +1585,8 @@
         "recjZopPYlk0yU6sq",
         "recO7hHncZQGqy2vJ",
         "recaWq49HJw4UXd9K"
-      ]
+      ],
+      "theme_description": "Food Security Analytics uses data-driven insights to assess and predict food availability, access, and risks, helping humanitarian organizations respond effectively to food crises."
     }
   },
   {
@@ -1640,7 +1663,8 @@
         "recNggnBqXIgii2hz",
         "recLn4QiWGniBsWoe",
         "recO7hHncZQGqy2vJ"
-      ]
+      ],
+      "theme_description": "Anticipatory and Early Action Forecasts use humanitarian data and crisis analytics to predict potential emergencies and enable timely interventions before disasters escalate."
     }
   },
   {
@@ -1679,7 +1703,8 @@
       "Investment Type": [
         "Crisis Analytics & Insights"
       ],
-      "Investment Themes [Text Key]": "Population Analytics "
+      "Investment Themes [Text Key]": "Population Analytics ",
+      "theme_description": "Population Analytics involves analyzing demographic and movement data to understand population trends, vulnerabilities, and needs, supporting effective crisis response and humanitarian decision-making."
     }
   }
 ]

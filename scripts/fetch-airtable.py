@@ -59,6 +59,7 @@ FIELDS_THEMES = [
     "Investment Type",
     "Investment Themes [Text Key]",
     "Data Ecosystem Projects",
+    "theme_description",
 ]
 
 # Load .env.local from project root (one level up from scripts/)
