@@ -1,26 +1,12 @@
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import React, { useRef, useState } from 'react';
 import { Bar, BarChart, CartesianGrid, Cell, LabelList, ResponsiveContainer, XAxis, YAxis } from 'recharts';
+import { SectionHeader } from './SectionHeader';
 
 // Chart-specific styles
 const CHART_STYLES = {
     cardGlass: "!border-0 bg-white",
-    sectionHeader: "flex items-center gap-2 text-lg font-qanelas-subtitle font-black text-slate-800 mb-0 mt-0 uppercase",
 } as const;
-
-interface SectionHeaderProps {
-    icon: React.ReactNode;
-    title: string;
-}
-
-const SectionHeader = ({ icon, title }: SectionHeaderProps) => (
-    <div className={CHART_STYLES.sectionHeader}>
-        <span className="h-6 w-6 flex items-center justify-center">
-            {icon}
-        </span>
-        {title}
-    </div>
-);
 
 interface ChartCardProps {
     title: string;
