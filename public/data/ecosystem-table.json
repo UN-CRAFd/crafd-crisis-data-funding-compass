@@ -142,6 +142,17 @@
     "fields": {
       "Project/Product Name": "IPC Mapping Tool",
       "Project Description": "It’s an enhanced interactive interface that shows a map of all the countries the IPC works in and allows you to download population data. \n",
+      "Project Donor Agencies": [
+        "recGNTHL9SKZxLDcw",
+        "rec0sY1I5JZz6ZsUE",
+        "recYxlC8x9puB69tx",
+        "rec2KBp1IAA5TtnQl",
+        "recsrMWmoA037bW03",
+        "recr77XDSfR0O9Jen",
+        "recFDm6MHWUu6GSMI",
+        "rec3Ado0Jrl799Q8A",
+        "recNLQhceOCXSMemo"
+      ],
       "Provider Orgs Full Name": [
         "recoPRDBbxl0bVx7x"
       ],
@@ -574,6 +585,17 @@
     "fields": {
       "Project/Product Name": " IPC Population Tracking Tool",
       "Project Description": "The IPC Population Tracking Tool is an online platform that gives the public access to population data from more than 30 different countries. It allows users to download resource data for offline IPC analyses since 2017. All national population figures are based on official country population estimates. IPC estimates are those published in country IPC reports. \n",
+      "Project Donor Agencies": [
+        "recGNTHL9SKZxLDcw",
+        "rec0sY1I5JZz6ZsUE",
+        "recYxlC8x9puB69tx",
+        "rec2KBp1IAA5TtnQl",
+        "recsrMWmoA037bW03",
+        "recr77XDSfR0O9Jen",
+        "recFDm6MHWUu6GSMI",
+        "rec3Ado0Jrl799Q8A",
+        "recNLQhceOCXSMemo"
+      ],
       "Project Website": "https://www.ipcinfo.org/ipc-country-analysis/population-tracking-tool/en/",
       "Provider Orgs Full Name": [
         "recoPRDBbxl0bVx7x"
@@ -614,6 +636,26 @@
         "Disaggregated Country-level Data"
       ],
       "product_key": "afrobarometer",
+      "HDX_SOHD": "None"
+    }
+  },
+  {
+    "id": "rec8HCRgYhj3eDhQ0",
+    "fields": {
+      "Project/Product Name": "Emergency Response",
+      "Project Description": "When major emergencies happen, we can provide surge support to our partners at short notice, enabling them to make sense of chaotic, dangerous and rapidly evolving situations and coordinate the most effective response. We work both in country and remotely. Our well-rehearsed deployment model means our mapping professionals can be on the scene within 24-48 hours of a disaster striking. Even before they arrive in-country, they’ve started collecting data and information that will be crucial in helping coordinate the world’s response, and getting aid to where it is needed most.\n",
+      "Project Website": "https://mapaction.org/about-us/emergency-response/",
+      "Provider Orgs Full Name": [
+        "recX11pAAzHjdqH0Y"
+      ],
+      "CRAF’d-Funded Project?": "NO",
+      "Investment Type(s)": [
+        "Human Capital & Know-how"
+      ],
+      "Investment Theme(s)": [
+        "Applied Data Analytics & Insights Generation",
+        "Surge Capacity"
+      ],
       "HDX_SOHD": "None"
     }
   },
@@ -1182,6 +1224,25 @@
         "Upskilling & Training"
       ],
       "product_key": "data2x",
+      "HDX_SOHD": "None"
+    }
+  },
+  {
+    "id": "recGnEnRmDmoQ59wM",
+    "fields": {
+      "Project/Product Name": "Health Services",
+      "Project Description": "Whether it’s deploying data and GIS tools to fight malaria in Burundi, cholera in Malawi, Ebola in Sierra Leone & Liberia, or dengue in the Philippines, for more than a decade MapAction has supported the planning and delivery of public health campaigns and outbreak responses worldwide. Good data underpins effective health panning. That is why MapAction continues to increase its focus as an organisation on public health, from West Africa to the Philippines, via Burundi, Malawi and the Horn of Africa. \n",
+      "Project Website": "https://mapaction.org/about-us/our-services/health/",
+      "Provider Orgs Full Name": [
+        "recX11pAAzHjdqH0Y"
+      ],
+      "Investment Type(s)": [
+        "Crisis Analytics & Insights"
+      ],
+      "Investment Theme(s)": [
+        "Health Analytics"
+      ],
+      "product_key": "health-services",
       "HDX_SOHD": "None"
     }
   },
@@ -2345,6 +2406,17 @@
     "fields": {
       "Project/Product Name": "IPC Infographics",
       "Project Description": "Infographics made by IPC\n",
+      "Project Donor Agencies": [
+        "recGNTHL9SKZxLDcw",
+        "rec0sY1I5JZz6ZsUE",
+        "recYxlC8x9puB69tx",
+        "rec2KBp1IAA5TtnQl",
+        "recsrMWmoA037bW03",
+        "recr77XDSfR0O9Jen",
+        "recFDm6MHWUu6GSMI",
+        "rec3Ado0Jrl799Q8A",
+        "recNLQhceOCXSMemo"
+      ],
       "Project Website": "https://www.ipcinfo.org/ipcinfo-website/resources/infographics/en/",
       "Provider Orgs Full Name": [
         "recoPRDBbxl0bVx7x"
@@ -2379,14 +2451,42 @@
     }
   },
   {
+    "id": "recaApmxiLnw1JnZf",
+    "fields": {
+      "Project/Product Name": "Conflict Data Dashboard",
+      "Project Description": "The Conflict Data Dashboard presents all recorded security incidents by date, location, type, perpetrator and the impact on civilians. \n",
+      "Project Website": "https://ngosafety.org/conflict-data-dashboard/",
+      "Provider Orgs Full Name": [
+        "recHswBeKTxqz7ig7"
+      ],
+      "CRAF’d-Funded Project?": "NO",
+      "Investment Type(s)": [
+        "Data Sets & Commons",
+        "Crisis Analytics & Insights"
+      ],
+      "Investment Theme(s)": [
+        "Conflict Analytics",
+        "Conflict & Violence Data"
+      ],
+      "product_key": "conflict-dashboard",
+      "HDX_SOHD": "None"
+    }
+  },
+  {
     "id": "recaWq49HJw4UXd9K",
     "fields": {
       "Project/Product Name": "IPC Analytics Portal",
       "Project Description": "The IPC Analysis Portal is the global public platform where official IPC food insecurity analyses and maps are published, providing a single-entry point for validated IPC classifications worldwide.\n",
       "Project Donor Agencies": [
+        "recGNTHL9SKZxLDcw",
         "rec0sY1I5JZz6ZsUE",
         "recYxlC8x9puB69tx",
-        "rec2KBp1IAA5TtnQl"
+        "rec2KBp1IAA5TtnQl",
+        "recsrMWmoA037bW03",
+        "recr77XDSfR0O9Jen",
+        "recFDm6MHWUu6GSMI",
+        "rec3Ado0Jrl799Q8A",
+        "recNLQhceOCXSMemo"
       ],
       "Project Website": "https://www.ipcinfo.org/ipc-country-analysis/en/",
       "Provider Orgs Full Name": [
@@ -2545,6 +2645,29 @@
         "Peace Data"
       ],
       "product_key": "sipri-mpod",
+      "HDX_SOHD": "None"
+    }
+  },
+  {
+    "id": "recdGuPPf12Osu2Tw",
+    "fields": {
+      "Project/Product Name": "Humanitarian Data Forum",
+      "Project Description": "The Humanitarian Data Forum offers a chance to reconnect with the data community. Over 160 people from 42 countries participated in the first Forum in The Hague to shape the future of humanitarian data, representing UN agencies, local and global NGOs, governments, the private sector and academica.\n",
+      "Project Donor Agencies": [
+        "rec1VhOJv9U6QKBBs"
+      ],
+      "Project Website": "https://centre.humdata.org/humanitarian-data-forum-recap/",
+      "Provider Orgs Full Name": [
+        "recAnhKXwgDyHOp8y"
+      ],
+      "CRAF’d-Funded Project?": "YES",
+      "Investment Type(s)": [
+        "Learning & Exchange"
+      ],
+      "Investment Theme(s)": [
+        "Conferences"
+      ],
+      "product_key": "hd-forum",
       "HDX_SOHD": "None"
     }
   },
@@ -3049,6 +3172,26 @@
         "Disaggregated Country-level Data"
       ],
       "product_key": "arab-barometer",
+      "HDX_SOHD": "None"
+    }
+  },
+  {
+    "id": "reciDzUjwtkVeh21I",
+    "fields": {
+      "Project/Product Name": "Anticipatory Action",
+      "Project Description": "As part of MapAction’s strategic commitment to locally-led, sustainability is defined as helping ensure the longevity and sustainability of AA projects by establishing effective evaluation frameworks and sharing lessons learned with the wider community. It is critical that local voices are embedded with these projects and processes.\n",
+      "Project Website": "https://mapaction.org/anticipatory-action-drr/",
+      "Provider Orgs Full Name": [
+        "recX11pAAzHjdqH0Y"
+      ],
+      "CRAF’d-Funded Project?": "NO",
+      "Investment Type(s)": [
+        "Crisis Analytics & Insights"
+      ],
+      "Investment Theme(s)": [
+        "Anticipatory and Early Action Forecasts"
+      ],
+      "product_key": "anticipatory-action",
       "HDX_SOHD": "None"
     }
   },
@@ -4260,6 +4403,26 @@
         "Common Indicators"
       ],
       "product_key": "msna",
+      "HDX_SOHD": "None"
+    }
+  },
+  {
+    "id": "reczpMP2LZqBg7Cnd",
+    "fields": {
+      "Project/Product Name": "HDX Signals",
+      "Project Description": "A product and service by the Humanitarian Data Exchange (HDX), that monitors key datasets, and generates automated notifications via emails when significant, negative changes are detected.\n",
+      "Project Website": "https://data.humdata.org/signals",
+      "Provider Orgs Full Name": [
+        "recAnhKXwgDyHOp8y"
+      ],
+      "CRAF’d-Funded Project?": "NO",
+      "Investment Type(s)": [
+        "Crisis Analytics & Insights"
+      ],
+      "Investment Theme(s)": [
+        "Monitoring & Alerts"
+      ],
+      "product_key": "hdx-signals",
       "HDX_SOHD": "None"
     }
   },

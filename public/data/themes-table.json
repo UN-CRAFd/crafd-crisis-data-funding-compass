@@ -168,7 +168,10 @@
       "Investment Type": [
         "Human Capital & Know-how"
       ],
-      "Investment Themes [Text Key]": "Surge Capacity"
+      "Investment Themes [Text Key]": "Surge Capacity",
+      "Data Ecosystem Projects": [
+        "rec8HCRgYhj3eDhQ0"
+      ]
     }
   },
   {
@@ -357,7 +360,8 @@
       "Data Ecosystem Projects": [
         "recEf0pdKsN1Gbvo8",
         "recJQghyXlyK5WiCE",
-        "recNggnBqXIgii2hz"
+        "recNggnBqXIgii2hz",
+        "recGnEnRmDmoQ59wM"
       ],
       "theme_description": "Health Analytics involves analyzing health-related data to identify trends, risks, and needs, enabling better decision-making and targeted interventions in humanitarian crises."
     }
@@ -384,7 +388,8 @@
         "recgzWbqbmwOXHLnq",
         "recfTLQpzUgBOtlS5",
         "recNggnBqXIgii2hz",
-        "recO7hHncZQGqy2vJ"
+        "recO7hHncZQGqy2vJ",
+        "reczpMP2LZqBg7Cnd"
       ],
       "theme_description": "Monitoring & Alerts in Crisis Analytics & Insights involves continuously tracking humanitarian data to quickly detect and notify stakeholders of emerging crises or significant changes, enabling timely and informed responses."
     }
@@ -481,7 +486,8 @@
       ],
       "Investment Themes [Text Key]": "Conferences",
       "Data Ecosystem Projects": [
-        "rech8GCismNX3Bm8p"
+        "rech8GCismNX3Bm8p",
+        "recdGuPPf12Osu2Tw"
       ]
     }
   },
@@ -557,7 +563,8 @@
       "Investment Themes [Text Key]": "Applied Data Analytics & Insights Generation",
       "Data Ecosystem Projects": [
         "recPMQlg07QkflL3i",
-        "recfjAhO2DxCjgEgM"
+        "recfjAhO2DxCjgEgM",
+        "rec8HCRgYhj3eDhQ0"
       ]
     }
   },
@@ -628,7 +635,8 @@
         "rec9tb7ISjeo7Sq78",
         "recO3RZZ7IEA88GnQ",
         "recWiXtcwxhgmhgNY",
-        "recFF8BskJRz2Lyjk"
+        "recFF8BskJRz2Lyjk",
+        "recaApmxiLnw1JnZf"
       ]
     }
   },
@@ -1397,7 +1405,8 @@
         "recwMGK7lbvDfjR14",
         "recjxVwrxVL90go5G",
         "rec28WeSKDEQ5wx45",
-        "rec2eT5BuCp87chHm"
+        "rec2eT5BuCp87chHm",
+        "recaApmxiLnw1JnZf"
       ],
       "theme_description": "Conflict Analytics uses data analysis to understand, monitor, and predict conflict situations, providing insights to support humanitarian decision-making and crisis response."
     }
@@ -1662,7 +1671,8 @@
         "recYwllVfGjgi7rdS",
         "recNggnBqXIgii2hz",
         "recLn4QiWGniBsWoe",
-        "recO7hHncZQGqy2vJ"
+        "recO7hHncZQGqy2vJ",
+        "reciDzUjwtkVeh21I"
       ],
       "theme_description": "Anticipatory and Early Action Forecasts use humanitarian data and crisis analytics to predict potential emergencies and enable timely interventions before disasters escalate."
     }
