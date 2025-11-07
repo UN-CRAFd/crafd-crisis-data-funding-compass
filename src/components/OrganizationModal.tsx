@@ -96,9 +96,21 @@ export default function OrganizationModal({
             || (typeof fields['Org Short Name'] === 'string' && fields['Org Short Name'])
             || organization.id;
 
+        // Check if this is a UN organization
+        const orgTypeRaw = fields['Org Type'];
+        const orgType = typeof orgTypeRaw === 'string' ? orgTypeRaw : (Array.isArray(orgTypeRaw) && orgTypeRaw.length > 0 ? orgTypeRaw[0] : '');
+        const isUNOrg = orgType.includes('United Nations');
+
+        // Use UN logo for UN organizations, otherwise use building icon
+        const icon = isUNOrg ? (
+            <img src="/UN.png" alt="UN Logo" className="h-6 w-6 sm:h-7 sm:w-7 shrink-0 object-contain" />
+        ) : (
+            <Building2 className="h-6 w-6 sm:h-7 sm:w-7 text-[#333333] shrink-0" />
+        );
+
         return (
             <ModalHeader
-                icon={<Building2 className="h-6 w-6 sm:h-7 sm:w-7 text-[#333333] shrink-0" />}
+                icon={icon}
                 title={displayName}
                 showCopied={showCopied}
                 onShare={onShare}
@@ -186,19 +198,9 @@ export default function OrganizationModal({
             <div className="px-6 sm:px-8 pt-4 sm:pt-5 pb-6 sm:pb-8 font-roboto flex flex-col h-full">
                 {/* Organization Type Badge */}
                 {orgType && (
-                    <div className="flex items-center gap-8 mb-4">
-                          {orgType.toLowerCase().includes('united nations') && (
-                            <img 
-                                src="/UN-Logo.png" 
-                                alt="UN Logo" 
-                                className="h-8 w-20 object-contain" 
-                            />
-                        )}
-                        <span className="inline-flex items-center px-3 py-1.5 rounded-md text-sm font-medium bg-slate-100 text-slate-600">
-                            {orgType}
-                        </span>
-                      
-                    </div>
+                    <span className="inline-flex items-center px-3 py-1.5 rounded-md text-sm font-medium bg-slate-100 text-slate-600 w-fit mb-4">
+                        {orgType}
+                    </span>
                 )}
 
                 {/* Description with inline Learn more link */}
