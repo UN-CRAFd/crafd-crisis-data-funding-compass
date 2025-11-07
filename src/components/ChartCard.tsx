@@ -40,10 +40,12 @@ const ChartCard = React.memo(function ChartCard({ title, icon, data, barColor, f
     };
 
     const handleMouseLeave = () => {
-        // Only hide after a delay - this prevents flicker when moving between bars
-        leaveTimeoutRef.current = setTimeout(() => {
-            setHoveredIndex(null);
-        }, 1000);
+        // Hide immediately - no delay
+        if (leaveTimeoutRef.current) {
+            clearTimeout(leaveTimeoutRef.current);
+            leaveTimeoutRef.current = null;
+        }
+        setHoveredIndex(null);
     };
 
     // Get the actual color value from CSS variable if it starts with 'var('
@@ -99,7 +101,7 @@ const ChartCard = React.memo(function ChartCard({ title, icon, data, barColor, f
                             style={{ transform: 'translateX(1px)', backgroundColor: resolvedColor }}
                             onMouseEnter={handleMouseEnter}
                             onMouseLeave={handleMouseLeave}
-                            isAnimationActive={true}
+                            isAnimationActive={false}
                         >
                             {data.map((entry, index) => (
                                 // Slightly vary lightness for each bar to create visual separation
@@ -171,7 +173,6 @@ const ChartCard = React.memo(function ChartCard({ title, icon, data, barColor, f
                                             textAnchor={textAnchor}
                                             dominantBaseline="middle"
                                             style={{
-                                                transition: 'opacity 200ms ease-in-out',
                                                 opacity: isVisible ? 1 : 0,
                                                 zIndex: 1001,
                                                 pointerEvents: 'none'
