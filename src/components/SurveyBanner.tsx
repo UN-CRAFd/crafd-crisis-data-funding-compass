@@ -88,7 +88,7 @@ const SurveyBanner: React.FC<SurveyBannerProps> = ({
                                     Share Your Insights!
                                 </h3>
                                 <p className="text-xs sm:text-sm text-slate-600 font-medium">
-                                    Help shape the crisis data ecosystem — take our quick survey
+                                    Help shape the crisis data ecosystem
                                 </p>
                             </div>
                             
