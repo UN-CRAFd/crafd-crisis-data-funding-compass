@@ -1,26 +1,12 @@
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import React, { useRef, useState } from 'react';
 import { Bar, BarChart, CartesianGrid, Cell, LabelList, ResponsiveContainer, XAxis, YAxis } from 'recharts';
+import { SectionHeader } from './SectionHeader';
 
 // Chart-specific styles
 const CHART_STYLES = {
     cardGlass: "!border-0 bg-white",
-    sectionHeader: "flex items-center gap-2 text-lg font-qanelas-subtitle font-black text-slate-800 mb-0 mt-0 uppercase",
 } as const;
-
-interface SectionHeaderProps {
-    icon: React.ReactNode;
-    title: string;
-}
-
-const SectionHeader = ({ icon, title }: SectionHeaderProps) => (
-    <div className={CHART_STYLES.sectionHeader}>
-        <span className="h-6 w-6 flex items-center justify-center">
-            {icon}
-        </span>
-        {title}
-    </div>
-);
 
 interface ChartCardProps {
     title: string;
@@ -54,10 +40,12 @@ const ChartCard = React.memo(function ChartCard({ title, icon, data, barColor, f
     };
 
     const handleMouseLeave = () => {
-        // Only hide after a delay - this prevents flicker when moving between bars
-        leaveTimeoutRef.current = setTimeout(() => {
-            setHoveredIndex(null);
-        }, 1000);
+        // Hide immediately - no delay
+        if (leaveTimeoutRef.current) {
+            clearTimeout(leaveTimeoutRef.current);
+            leaveTimeoutRef.current = null;
+        }
+        setHoveredIndex(null);
     };
 
     // Get the actual color value from CSS variable if it starts with 'var('
@@ -113,7 +101,7 @@ const ChartCard = React.memo(function ChartCard({ title, icon, data, barColor, f
                             style={{ transform: 'translateX(1px)', backgroundColor: resolvedColor }}
                             onMouseEnter={handleMouseEnter}
                             onMouseLeave={handleMouseLeave}
-                            isAnimationActive={true}
+                            isAnimationActive={false}
                         >
                             {data.map((entry, index) => (
                                 // Slightly vary lightness for each bar to create visual separation
@@ -185,7 +173,6 @@ const ChartCard = React.memo(function ChartCard({ title, icon, data, barColor, f
                                             textAnchor={textAnchor}
                                             dominantBaseline="middle"
                                             style={{
-                                                transition: 'opacity 200ms ease-in-out',
                                                 opacity: isVisible ? 1 : 0,
                                                 zIndex: 1001,
                                                 pointerEvents: 'none'

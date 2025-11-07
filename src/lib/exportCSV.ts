@@ -190,7 +190,7 @@ function generateReadme(
         readme += `This export represents a filtered view of the data with the following criteria:\n\n`;
         
         if (filterInfo.donorCountries && filterInfo.donorCountries.length > 0) {
-            readme += `Donor Countries: ${filterInfo.donorCountries.join(', ')}\n`;
+            readme += `Donors: ${filterInfo.donorCountries.join(', ')}\n`;
         }
         
         if (filterInfo.investmentTypes && filterInfo.investmentTypes.length > 0) {
