@@ -28,7 +28,7 @@ export default function ProjectModal({ project, allOrganizations, loading, onOpe
                 
                 // Build mapping from themes JSON
                 data.forEach((record: any) => {
-                    const theme = record.fields?.['Investment Theme(s)'];
+                    const theme = record.fields?.['Investment Themes [Text Key]'];
                     const type = record.fields?.['Investment Type']?.[0]; // First item from array
                     
                     if (theme && type) {
