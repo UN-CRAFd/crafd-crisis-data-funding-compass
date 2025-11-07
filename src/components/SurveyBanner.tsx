@@ -51,72 +51,43 @@ const SurveyBanner: React.FC<SurveyBannerProps> = ({
                 ${isVisible ? 'opacity-100 max-h-40 mb-6 translate-y-0' : 'opacity-0 max-h-0 mb-0 -translate-y-4'}
             `}
         >
-            <div className="relative rounded-2xl p-[2px] shadow-2xl transition-all duration-300" style={{ 
-                background: 'linear-gradient(135deg, var(--brand-primary-dark), var(--brand-primary), var(--brand-primary-light))',
-                boxShadow: '0 25px 50px -12px rgba(230, 175, 38, 0.15)'
-            }}>
-                {/* Gradient border effect */}
-                <div className="relative bg-white rounded-[14px] overflow-hidden">
-                    {/* Animated background pattern */}
-                    <div className="absolute inset-0 opacity-[0.03]">
-                        <div className="absolute top-0 -left-4 w-72 h-72 rounded-full mix-blend-multiply filter blur-3xl animate-blob" style={{ backgroundColor: 'var(--brand-primary-dark)' }}></div>
-                        <div className="absolute top-0 -right-4 w-72 h-72 rounded-full mix-blend-multiply filter blur-3xl animate-blob animation-delay-2000" style={{ backgroundColor: 'var(--brand-primary)' }}></div>
-                        <div className="absolute -bottom-8 left-20 w-72 h-72 rounded-full mix-blend-multiply filter blur-3xl animate-blob animation-delay-4000" style={{ backgroundColor: 'var(--brand-primary-light)' }}></div>
-                    </div>
-                    
-                    <div className="relative flex items-center justify-between gap-4 p-5">
+            <div className="relative rounded-lg p-[1px] shadow-sm transition-all duration-150" style={{ boxShadow: '0 6px 18px rgba(0,0,0,0.06)' }}>
+                <div className="relative bg-white rounded-lg overflow-hidden border-var(--brand-primary-light)">
+                    <div className="relative flex items-center justify-between gap-4 p-4">
                         <div className="flex items-center gap-4 flex-1 min-w-0">
-                            {/* Animated icon container */}
-                            <div className="flex-shrink-0 relative">
-                                <div className="absolute inset-0 rounded-xl blur-lg opacity-50 animate-pulse" style={{ 
-                                    background: 'linear-gradient(135deg, var(--brand-primary-dark), var(--brand-primary))'
-                                }}></div>
-                                <div className="relative p-3 rounded-xl shadow-lg" style={{ 
-                                    background: 'linear-gradient(135deg, var(--brand-primary-dark), var(--brand-primary))'
-                                }}>
-                                    <Megaphone className="w-6 h-6 text-white" />
+                            {/* Simple icon container */}
+                            <div className="flex-shrink-0">
+                                <div className="w-10 h-10 rounded-lg flex items-center justify-center" style={{ backgroundColor: 'var(--brand-primary)' }}>
+                                    <Megaphone className="w-5 h-5 text-white" />
                                 </div>
                             </div>
-                            
+
                             {/* Content */}
                             <div className="flex-1 min-w-0">
-                                <h3 className="text-base sm:text-lg font-bold font-roboto mb-1" style={{
-                                    background: 'linear-gradient(90deg, var(--brand-primary-dark), var(--brand-primary))',
-                                    WebkitBackgroundClip: 'text',
-                                    WebkitTextFillColor: 'transparent',
-                                    backgroundClip: 'text'
-                                }}>
+                                <h3 className="text-base sm:text-lg font-bold font-roboto mb-1" style={{ color: 'var(--brand-primary-dark)' }}>
                                     Share Your Insights!
                                 </h3>
                                 <p className="text-xs sm:text-sm text-slate-600 font-medium">
                                     Help shape the crisis data ecosystem
                                 </p>
                             </div>
-                            
-                            {/* CTA Button */}
+
+                            {/* CTA Button - flat */}
                             <Button
                                 onClick={() => window.open(surveyUrl, '_blank')}
-                                className="text-white font-semibold px-5 py-2.5 text-sm sm:text-base whitespace-nowrap rounded-xl shadow-lg hover:shadow-xl hover:scale-105 transition-all duration-200 flex items-center gap-2"
-                                style={{
-                                    background: 'linear-gradient(90deg, var(--brand-primary-dark), var(--brand-primary))',
-                                }}
-                                onMouseEnter={(e) => {
-                                    e.currentTarget.style.background = 'linear-gradient(90deg, var(--brand-border), var(--brand-primary-dark))';
-                                }}
-                                onMouseLeave={(e) => {
-                                    e.currentTarget.style.background = 'linear-gradient(90deg, var(--brand-primary-dark), var(--brand-primary))';
-                                }}
+                                className="text-white font-normal px-4 py-2 text-sm sm:text-base whitespace-nowrap rounded-md transition-colors flex items-center gap-2 hover:bg-var(--brand-primary-dark)"
+                                style={{ backgroundColor: 'var(--brand-primary)' }}
                             >
                                 <span className="hidden sm:inline">Take Survey</span>
                                 <span className="sm:hidden">Survey</span>
                                 <ExternalLink className="w-4 h-4" />
                             </Button>
                         </div>
-                        
+
                         {/* Close button */}
                         <button
                             onClick={handleClose}
-                            className="flex-shrink-0 text-slate-400 hover:text-slate-600 transition-all duration-200 p-2 rounded-lg hover:bg-slate-100 hover:rotate-90"
+                            className="flex-shrink-0 text-slate-500 hover:text-slate-700 transition-colors duration-150 p-2 rounded-md"
                             aria-label="Close survey banner"
                         >
                             <X className="w-5 h-5" />
