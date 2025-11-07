@@ -23,35 +23,7 @@
       "Org HQ Country": "United States",
       "Has received CRAF'd Funding?": "NO",
       "org_key": "hhi",
-      "Org Type": "Academia",
-      "Logo": [
-        {
-          "id": "attHlbGqJsl5MlAbU",
-          "width": 889,
-          "height": 1024,
-          "url": "https://v5.airtableusercontent.com/v3/u/47/47/1762560000000/KVP51o28MRlsDGZk8XwfJQ/QPNdPkgJLW5JsbnS6JAYeNoqEkAgh8f4KOFPbuhkTOh8NwsMcDVI7NBdon8Vuh1kNs_78MmmopqVGQZL0cAHp3mW1BnPfB_51_TqkbfsgcxHH6P_5O8EeDrRVWwv2DLkWluF7Vyk8SnSgxTYk51Msziixtp1LqrguF-R8YdqK8O1rb8-zU6kWdwNq9pwcYyC/otCzHgUEiqaKK8I99LjnFA3lAUs0cCa4UgiLlViwBCo",
-          "filename": "Harvard_University_shield.svg.png",
-          "size": 108385,
-          "type": "image/png",
-          "thumbnails": {
-            "small": {
-              "url": "https://v5.airtableusercontent.com/v3/u/47/47/1762560000000/23yK-yDmKLJ_TnvIrwHw-g/ww0qK0HlnDvENWHwjKxJWiwCErboz3Tbo4vyQ9yYeh6Thlh-kZv-Zzv06LDIQtqKaOw9jAFSDEOyUH0xd5eH6u_ETUIouwIwJzzobtgZb1-x2cMS3eHsV6WO88KEIoa5caXBtmTFF2Om2y91T-pBAA/YrHP6REVXo-O3JbWaDHe3GOK_J8eRxVWB0R397BIIf0",
-              "width": 31,
-              "height": 36
-            },
-            "large": {
-              "url": "https://v5.airtableusercontent.com/v3/u/47/47/1762560000000/wug0IVWmjmosc_4Sm07iBQ/YqFR4AuimLEzToLkowd_JqcNFIxGXUEgUxIBZUQcdQLf3eK9ahTPDgmYZhdEl9IIQOFjIVl4k3Z3fmFkr4WZ3HwLhxTnblpDMP_8CZIniUJfmF-lAQrvVVaZOQLm3PXOj-G-0Qg_yWK5d-BhQ4stwQ/qBpa5jwRbzxGNS3F7CHZjK4fhsdS_Yorbz5tBIEV644",
-              "width": 512,
-              "height": 590
-            },
-            "full": {
-              "url": "https://v5.airtableusercontent.com/v3/u/47/47/1762560000000/SSyHg6Avzdxo8jZxgtkGEQ/JjqxEpisco5h5TECdaD_-Hlret38Cguj5bbomkxNUUZ3Fpwi2PZQi-0b7bXWO1P8Fwlw8iUvzqV0yQZjI4h44KYo4bv8fzjpu27HIbzaa4gtqlBOs90_LGsaW18JuZQY5g_CmI6dAXPDfDfKV9s9rQ/0kfrYB-ZdCMyGciZ3xxPM6fSb5wA4sWdkjR00ymN_80",
-              "width": 889,
-              "height": 1024
-            }
-          }
-        }
-      ]
+      "Org Type": "Academia"
     }
   },
   {
@@ -71,35 +43,7 @@
       "Has received CRAF'd Funding?": "NO",
       "org_key": "heigit",
       "Org Type": "Academia",
-      "HDX Org Key": "heidelberg-institute-for-geoinformation-technology",
-      "Logo": [
-        {
-          "id": "attaurCbpW2MOGRA4",
-          "width": 779,
-          "height": 779,
-          "url": "https://v5.airtableusercontent.com/v3/u/47/47/1762560000000/bYbYn0cBqZ27-SGYxeBc5A/Q2uf2SVevbV5B_lipszL4d9FMejDhaEER2IYaFsnp9BiuWSXJuAGDs-0aPg-IcbjNcPHr92y4oghBf_6kVVlqbcK0yAeYZEUkPhrSZ5ZyfMsgMbLfhwYrrW_PXTR9mJPkWb8wr0MrFOKD0tcfl4-QdGp7z9vDqdH6sfp9eihuq2sS8K7kXNmjd2ub694T-AZwyZbPtuUSHNb_F5rVa1YncF2epJEcqYE8BB7atQ2XJoqyLXKk9JSgu2q6RVOuW3WoFsfEg3kKgyR_ytmC2jM9Q/Kk1uwEOB0NFOLLpFzwf8o-bmIjEBtD6LVeNTrGRZxUE",
-          "filename": "sDTlqrIR6op0VjAs7U6HHfn9RU0i6Fx0oJats3lwLzGZwQ8lQDf-BzEJ2rlU-DtB2cbCYCzC7dojGEvBffUQnQ.webp",
-          "size": 49962,
-          "type": "image/webp",
-          "thumbnails": {
-            "small": {
-              "url": "https://v5.airtableusercontent.com/v3/u/47/47/1762560000000/NbAuDmFu9ETOeKVuc6IAdQ/jw-IzPWkaQvD1eau5G9c7yCHzdJY2liCyPDUGB18CwSuN1KH_mkD6BiIzbO6RiM_zqU_gtkw-oLnkNkSBvD0cc6HldKdCIlo892KTNLs_KlukJxVHhUHn1j0zai5q-DMRNgjZrXRgPn4fkVxm09OfA/QfNkc_OepzVTXWeOYQldaYKLozoRHoy7Pm0mA33t_5Q",
-              "width": 36,
-              "height": 36
-            },
-            "large": {
-              "url": "https://v5.airtableusercontent.com/v3/u/47/47/1762560000000/EZM36hVBn5MSzN8NlsOAuQ/ami1BgIqC-sj6ZnrVpgg9GQj8d0y3MZN1N68XNHRK1wkhS3YbfJkNW2xAvxKplc9oPjtjCbe4V4FPUd9Dz6TUnclb9smTulBMu8HgEyWtiUnreHIUJbfOvyM7lUJBYEXCjIdIPgkyLzmG5dsUN7wcw/MMS2jy95KGK5_mE8fRr-yNrgRqUGtEzvPUaUhXG2580",
-              "width": 512,
-              "height": 512
-            },
-            "full": {
-              "url": "https://v5.airtableusercontent.com/v3/u/47/47/1762560000000/l8OhZqDK80PW7EgWTWlgYA/7XTjleV7H11hWEVaSAnQoReyje8hYoxgYyAEOvPmqDDJi3m1PIgcFSZjEHMxjo_35pouwPML0kf8o8KvoCzzrmC7Kex44PvabAlH0g2H6_K9yWrgV4OPg47okaMKLCY5cw3hUkNcGYkqh09YqmYipA/z4v-GqYHMqMZjuVAexZHc6_3HCc7wd8_yclul03Eqa8",
-              "width": 779,
-              "height": 779
-            }
-          }
-        }
-      ]
+      "HDX Org Key": "heidelberg-institute-for-geoinformation-technology"
     }
   },
   {
@@ -118,35 +62,7 @@
       "Org HQ Country": "United Kingdom",
       "Has received CRAF'd Funding?": "NO",
       "org_key": "ukhih",
-      "Org Type": "Network / Consortium",
-      "Logo": [
-        {
-          "id": "attSufv6UJHp67Dge",
-          "width": 1200,
-          "height": 630,
-          "url": "https://v5.airtableusercontent.com/v3/u/47/47/1762560000000/c-hj3YuYIfujRj9WQSws8A/LOuffDFhEMjR_ECtko3l2vv5Qnr86oN8FfMRvZQ4Kxa-m8FbvrUuFqfqvDaC13i2z-yi6qMlTVl1hk6KikSHA7MrNfLceFXjLmxbSB70bC1O-7UHpOsUnjaos1QSjg6iN2ihx2zcsGvE6bgnWBt6gF3MK4Ne-upgwor_iBOuy9w/SfAhuHaOE5hfQvqC6vhTNM7Ydwta3MMRzu93kFJgIvk",
-          "filename": "ukhih-share-image.2e16d0ba.fill-1200x630.png",
-          "size": 18583,
-          "type": "image/png",
-          "thumbnails": {
-            "small": {
-              "url": "https://v5.airtableusercontent.com/v3/u/47/47/1762560000000/25puxTJqJLz8Lmijd2mozg/LOfP3DUwCf2mQkMq4UsMyoi3D4AkSqwZuzVBYdY_tdtYjMrJ6pcKkE7PqTBXpA3WM2VYsLJwjdasJRheDw7fxO1GNxgyFNuFSSbbnCXmqYOc319xYOoaWXROqE1P-rMbMb3PKVw121BnAJLT0g1ILA/YnVyxL_gueNQkW_sJonU99OJtT8AWq9vluFJmV4VTqQ",
-              "width": 69,
-              "height": 36
-            },
-            "large": {
-              "url": "https://v5.airtableusercontent.com/v3/u/47/47/1762560000000/wToKXddc-lHtOXfdPRa_rQ/saonikPukGJBQKgvOZQ7c7MMT_Ro6Lty5R_ru0TMOHh8woUnXqo6YC7jCyy9tdOpTgNB0Fvxw1-UrRYnxAUgOdk4G-d7M0GOal7-ohGEcRxEY88du_ua6-gvyZco-XvkTen2o9mfzEPr01SM_FvIGA/BhmgSF4yGlncLW_dF8LduS82OzZxlzbeZVQx8DU-VR0",
-              "width": 975,
-              "height": 512
-            },
-            "full": {
-              "url": "https://v5.airtableusercontent.com/v3/u/47/47/1762560000000/Z7FkzLnbO7am_nokYy_PtQ/B1x1sReZHZJk3_Gf9vPlZ9OeuqEhKstYRwaSGbM-3ulh5IWtxdQEN-xKlx5pmuKxBMrAG1TqMHJLMOlrZ5q0bkw2JdbP4VydYqx3NUN2IbXuUep_gZXlu3lBA4ZIGuGeWJY1raSYoOkmDsZaojXT2w/by6jA0Qos0U5dCc702LvSanHWHx6LvexFlGU-4qka1I",
-              "width": 1200,
-              "height": 630
-            }
-          }
-        }
-      ]
+      "Org Type": "Network / Consortium"
     }
   },
   {
@@ -162,35 +78,7 @@
       ],
       "Org HQ Country": "Spain",
       "org_key": "bse",
-      "Org Type": "Academia",
-      "Logo": [
-        {
-          "id": "atttLLu0UW8xYlyJu",
-          "width": 7727,
-          "height": 1940,
-          "url": "https://v5.airtableusercontent.com/v3/u/47/47/1762560000000/E0x0SdCG1kqQIJvN6KXTvA/E9FH9mrJSurqUYFZ1RJ0C5Qag7NsE4j1IjCJdl4uTgqOn12y88Nmi3FTanBEml4Sx0Cw5yu-bZnpACr44IVROMAtyx-BI1B0WBNPokuLdV-d6Sc0lDKNQ71wPg1rOtKvBz8CdmwArSJENsbCtE3r-MxqXPT2L40k9zK_iThV1WI/38Vq20tQr7tDSDlsaf-6vHda_d4Tu1odO0ZW9sQXPss",
-          "filename": "BSE_logo_horizontal_dark.826c6dc9.png",
-          "size": 136790,
-          "type": "image/png",
-          "thumbnails": {
-            "small": {
-              "url": "https://v5.airtableusercontent.com/v3/u/47/47/1762560000000/CZ1I5RNPMA2gqRifeI4loQ/Beqw6mSnkm5ZnGpGJoMKIH_UsV-_dEcPiTtC0iorQTiLAqQtfXCHsMGb_M00qgaeOBwz-j-LE2RRMB-FscH-BTXDeU2RR70N85JI9_HhC0jgdxRS7IWrWWTvnWmtxwPCDHqryfG1mf2RU8TGHJiS3g/gyATTpTREQvMmbQledDvjyZ6FLpDPjKeNJbGIjBjR3Q",
-              "width": 143,
-              "height": 36
-            },
-            "large": {
-              "url": "https://v5.airtableusercontent.com/v3/u/47/47/1762560000000/5N2U8vaLCq2_5lMpB54B6g/7t3rg6oq31-BzxvlHxyxptpXzTMFnoiNDGre363WuEMHAhJ3GEetbqUOO-W-OedKBYnh3DUu0jUfJkpN6KyLAQcUVB7JQb-N5aASs6QyB2_UHtxviEWUUtVswnUOAZhH04tESjzPnTOCaF2LSZ7UfA/VgER6cCjskqXCMRBTPEXkJ_gOfwP3cWQAj8iY5eG5-w",
-              "width": 2039,
-              "height": 512
-            },
-            "full": {
-              "url": "https://v5.airtableusercontent.com/v3/u/47/47/1762560000000/lw6zT2W_pwsp3DugH3XE3Q/J5rpWz9kTl6WO0lmx6eEIOXpdWfl-RDOIwBOuKooB7g9I5A31AcARDW2RVt3ZzCJxpxjNVYLW1URUpvQSoPwzoafNrdhkL9JPwrljT-Iiq2TGAu852oIOquv99PwlMBuwWj3ufZl9vv7dR1ucFjMog/Rt5KGAd7eZMjtn01wQ8atk5JqMVIDAxRL0qpOpHI2sI",
-              "width": 3000,
-              "height": 753
-            }
-          }
-        }
-      ]
+      "Org Type": "Academia"
     }
   },
   {
@@ -223,35 +111,7 @@
       "Has received CRAF'd Funding?": "NO",
       "org_key": "unicef",
       "Org Type": "United Nations System",
-      "HDX Org Key": "unicef-data",
-      "Logo": [
-        {
-          "id": "att0vm1FCy6793NRD",
-          "width": 2362,
-          "height": 2041,
-          "url": "https://v5.airtableusercontent.com/v3/u/47/47/1762560000000/sbMahH-FAiZTYTGpxNgdEQ/kyxY9KWcG6VSfGnjR1A7Kl4pouKZ3wYdD2qm38A8NrCKZmFscYuabOKszQj8OTL1TnyweR5gyAx3bjov85PboxoRvz3a04QIlmG-UdE-kIbMUVYZ2-17BkU_KEXpZePPzZ9uwggt3-Ivr5KabzKmGZ-KqeV_nuQkEz2CznkAnGcwdAZ21clwuVvMpjTF0E_w/64PE1nXtaiaj6HOPCpAxV7U0PUEIZZKqaJLZVYyKgKY",
-          "filename": "Logo_of_UNICEF_(cropped).svg.png",
-          "size": 278950,
-          "type": "image/png",
-          "thumbnails": {
-            "small": {
-              "url": "https://v5.airtableusercontent.com/v3/u/47/47/1762560000000/sLcsChroqjF7EKVag_DgUA/mDQYDvwjvo236SvCDhcxGPRvxFc-mXg9K5ODDxBGDHE4ISkoqiBIV2kLOPiKKR9W4l5G1ACZzsiDsJYRUeXlu-lF_WFmuCBHhuf4D7C8yg86SxEyLnd2ijgR_8Jn4DCTNEq3pwnR2Re-RHmVSza5zw/M84Xx7smg0IBCwzsqHoGr6GOsSeVmA2XX43N_x1WpLk",
-              "width": 42,
-              "height": 36
-            },
-            "large": {
-              "url": "https://v5.airtableusercontent.com/v3/u/47/47/1762560000000/X25q4l-lL7zerjRk1W2aVQ/w-pWsfUzxopNz-_fjnNQQfAK88t_woWpJlj04BiQX-7cQV7pzXE-SJEMwHyQN4ClgteZh-4KvhMfqihzMDvr89AAxuzkbiBS-bsfnciZi34_IPMhpDkHyHmVqUofImnefT31xl-4N56kcLiUI2fPnA/n4GEwuxnGjSBiUtBrGb9EuYD9QKd6pCk5Uz9TMysNsY",
-              "width": 593,
-              "height": 512
-            },
-            "full": {
-              "url": "https://v5.airtableusercontent.com/v3/u/47/47/1762560000000/OILTPjsQH7mPKAQDrxzt4g/WqMFaxt3oDL65F8Fn_wI-KloZUN9YtRXqMek9vPfAwWPo1eEFvBBdv0jtsurA2EmrlEEp1pzGIS5SJ7f79wLaTL8BL98RclCZHL0xxTXMScIDHgObi8VHRbMqCQc9bs02R3a3YucF7-cdgUOavL5Ng/Bqa4lIQQ26mUpAZ2BmA4Jyfuxbwe5FTisuSxrmXuuVQ",
-              "width": 2362,
-              "height": 2041
-            }
-          }
-        }
-      ]
+      "HDX Org Key": "unicef-data"
     }
   },
   {
@@ -273,35 +133,7 @@
       "Org HQ Country": "United Kingdom",
       "Has received CRAF'd Funding?": "NO",
       "org_key": "university-of-southampton",
-      "Org Type": "Academia",
-      "Logo": [
-        {
-          "id": "attj5vOI0Pzz7nfe3",
-          "width": 697,
-          "height": 157,
-          "url": "https://v5.airtableusercontent.com/v3/u/47/47/1762560000000/Uvf1JQuyvpCPwrUXtMHzlw/njGJPN2303tsQHvzh2QcDqxBXc1O69nEUauWU06xJnoQkodZ4p5XppJYrEYSaapvFB2IdXzr-6Gw8TiNnMN3q01T7GCItynUvgB04Sf95EueEXLqQNNJxyzVKLGVsfAMeYE_TjhXyZmZ_P5kqYiDmuSlB6EqxRrdkfdMRMtaN0g/tJIs0hSbWk0ph806OoFT_6AU9CEZfvO0tE4zU-ro_RM",
-          "filename": "University_logo_marine1_transparent.png",
-          "size": 10576,
-          "type": "image/png",
-          "thumbnails": {
-            "small": {
-              "url": "https://v5.airtableusercontent.com/v3/u/47/47/1762560000000/dKVDr9FbEIlZtKwzQUJdCQ/CYXbIjbSPij348U_AwJ0sPObGQ10oKUmV24FpFNfgjyqgt1cx1PChr_HbHbmjc6_S69wKyDp8QY4uPcnxUJFBC0H1pR2cmKtl6rI7_1Nf7sBuIOkyNpe_zcJAK6Xz_Rb8yR1o1GZKJOTDM29-K7t1A/LV2igwl7rMfml011S9AUlc19r3E2GtBduPnNPMMqlFw",
-              "width": 160,
-              "height": 36
-            },
-            "large": {
-              "url": "https://v5.airtableusercontent.com/v3/u/47/47/1762560000000/uqrOCiwuxUdCRBPWonP8zw/Uaj654VIpydaFOt9QFhn6RARCTPeZYJ2cHDM_qaEGUcXHBnx3OHdgX2mhnp0WkI52nIbkT56XidXQlhr5RJklnC2-d83648bbTNLMZIy06ZAzQxRRga61vtnvkuI-jOa1jBC7qYPpK8I-MH9syFU6w/poxrPOBUfznvhDLoJq2UJBOFYzi1BNvilkYKch0IiS8",
-              "width": 697,
-              "height": 157
-            },
-            "full": {
-              "url": "https://v5.airtableusercontent.com/v3/u/47/47/1762560000000/A6gItvbDU63xE1XbcHBoUg/RTOf-31KvxtRQ14Qs_tj96sctsydqFmE1ulZJlTiTrkg8tZnSaq1QTeTttyy886Kp0OvQwSuqVfCWfbKYqr9yLzJzGnHwzgAvX14k5Fv4cG4ZBkM4UcN2BOxlxVUQUQhhOHL0Pq3vOcDu9Or00MN-Q/pEfEhq79uz9Upx8LcfLvVlxJvR0oV5tVdff5CFNtqd0",
-              "width": 697,
-              "height": 157
-            }
-          }
-        }
-      ]
+      "Org Type": "Academia"
     }
   },
   {
@@ -331,35 +163,7 @@
       "Has received CRAF'd Funding?": "NO",
       "org_key": "wfp",
       "Org Type": "United Nations System",
-      "HDX Org Key": "wfp",
-      "Logo": [
-        {
-          "id": "att90eo0iXsCLmoab",
-          "width": 456,
-          "height": 688,
-          "url": "https://v5.airtableusercontent.com/v3/u/47/47/1762560000000/TDSrEImxp9dSDrjRMEKvrA/GJ4nykw_9sSS1Rghx932aYjay9u07jHU-yuZH-2ZqwZuiazRwMbI0WctK_EqzEAHnELQ8bnkvVuwS5-L27UIe1o6Vl6U4hWtlLBGAGzvFaYHbERAypp-apLWymvf867tvW0EgjHfln0oC1oP3HZzuFavgh4OjuoRr8g8qS4swEo/K1FaPolTUjou9yrf-oW9RnHgquVmC2pZQRZIL7kKoP8",
-          "filename": "wfp-logo-vertical-blue-en.png",
-          "size": 39069,
-          "type": "image/png",
-          "thumbnails": {
-            "small": {
-              "url": "https://v5.airtableusercontent.com/v3/u/47/47/1762560000000/l0Tv8y1N1S_MUEP-e4EQEQ/dLub7eFdj3STPLXTX7Scg6f8EhxdcC7695nvwxQpb-CQWKyt23Pk28IoEuzfpxIv2MkZEGzneNUh58LcKNKpWL-YwnISwfFe6j0jmQlWVedlAh_WSecZ9XvGY-809wAbyiUmuHX2cArWQ53aUjdgUA/6iSk1RxcmcyQFVSPgNX7AzJ--qEjiT1A87_7OF6nPSw",
-              "width": 24,
-              "height": 36
-            },
-            "large": {
-              "url": "https://v5.airtableusercontent.com/v3/u/47/47/1762560000000/d3SM8_YXCr9WK3iNLS7xdw/BXpYZquO0zw6MyLBUhROaS1VR5QJcibKqArZNfmmHjV7FR0K0Q1B2tWAO7ncjBOGwkQuyclU1Z6hN0jTsMtBKrZczsFeW_QO8UgwNJ0PrwziVupFJZgrSHTtimBEUMNRbO8E8sOABetlaK0FbjWnMQ/rqXEki5CjTelf1QnAPhhw4hvvrne1ewtc6GzqG2CZdc",
-              "width": 456,
-              "height": 688
-            },
-            "full": {
-              "url": "https://v5.airtableusercontent.com/v3/u/47/47/1762560000000/uf9c1P50Zn0y_bNzpO4qkw/aMqSAo6NktUNNXSfWMWXn4KE0KB-Siq_qfTmXM1A5Uj9DBj3p3dr10WcXyoBuKEJzp6ooXs9w3S4kbRKpcmpbyPsPpwCL2oc2uUCN1o0Y43WJhOXlctvCEKWW53ljmktJx-exhdCqPqPWkiDrqqAGA/JWiMnHxJz6eELfmZCv9U8NmcbUNEA2Z9F8EyArBtB-c",
-              "width": 456,
-              "height": 688
-            }
-          }
-        }
-      ]
+      "HDX Org Key": "wfp"
     }
   },
   {
@@ -377,35 +181,7 @@
       "Has received CRAF'd Funding?": "YES",
       "org_key": "510-data-team",
       "Org Type": "Red Cross / Red Crescent Movement",
-      "HDX Org Key": "netherlands-red-cross",
-      "Logo": [
-        {
-          "id": "attFpEXBhaMkFkmR4",
-          "width": 1221,
-          "height": 289,
-          "url": "https://v5.airtableusercontent.com/v3/u/47/47/1762560000000/Kykh0Rmhe603e-kgEyuNag/r-7LN40BiqvkzHXWhCTGAm-GI1W4BWUrQjvD-0m8KP-7Oym7P30ckZ3Wy1LmKxf-9blf43hsw9zbpS4HNvCaQVqymVkxIJ5ULI3iXbguu24hmGtAVjo-LCJThWL2f0506YYigq9cEtVT-7cwW6jx5EHQRub9O12tf_Tin8v0gCY/MpLKIwP1N0pJW_QICTJDBpB4frkQ9JibxNeeLyGz4fY",
-          "filename": "cropped-Logo-510.jpg",
-          "size": 16743,
-          "type": "image/jpeg",
-          "thumbnails": {
-            "small": {
-              "url": "https://v5.airtableusercontent.com/v3/u/47/47/1762560000000/VbPIFWtCWj9HLnKHXGfklQ/uuKMt8K6EU8v8LdlbFzD5_u44ym4XBxmMj67HT4WjWqkb57kKXsAhWARyfqHHkntWm2L-JTgaAr-ZpoM37Wm5rGk73ALwpADO8RMfbqsK6LZgsdFbLihdFzeGJYThwS7E-Oo8kaXWvwW_d83_7CuQQ/qQEw-IFTk7u5Aqo43dS3aLHd5L7V8PEw33jztsOa42g",
-              "width": 151,
-              "height": 36
-            },
-            "large": {
-              "url": "https://v5.airtableusercontent.com/v3/u/47/47/1762560000000/QCt3pbEeHNMMKRc2EKV3RA/6ikYGxp69-xupqj0G-B4qcbHrPKLgq2OCqgN-YDRRwmdXWWkWB_9yrV_dnZMO5GO2hDG2P7TuZMp_UKltzJgjfhLOw1dlgqdLH33JEJ0d-M_KPICh19hJozI4iO2uM7GMLVhR1xoRS_AGu6ImcTS3g/sCVzvDzGt84QwNvYcvh83TMWcqI1sB23YjVYdbbAia8",
-              "width": 1221,
-              "height": 289
-            },
-            "full": {
-              "url": "https://v5.airtableusercontent.com/v3/u/47/47/1762560000000/688kXmdY-zEwWL1kItkwmg/HQJOHpaK5iE_scm5KmEWImGlTVYXypL-nZXlFw_AzVPYHNulWa3GQfZunb7pI4PJAJMgVTZVAyRFjqb6lOmVagjy58D6A1EcImr7toK_jVc2AGzigOsd1Z2FrYXY5Atk6tRZ2rmBUnNZVZ0sHXwWrw/1dVwiElLGtbCrA0kCH6IPHBcNDMMHw0jmsBj519IL5I",
-              "width": 1221,
-              "height": 289
-            }
-          }
-        }
-      ]
+      "HDX Org Key": "netherlands-red-cross"
     }
   },
   {
@@ -457,35 +233,7 @@
       "Org HQ Country": "Switzerland",
       "Has received CRAF'd Funding?": "YES",
       "org_key": "ohchr",
-      "Org Type": "United Nations System",
-      "Logo": [
-        {
-          "id": "attfcxi5q1OClEej7",
-          "width": 8333,
-          "height": 2976,
-          "url": "https://v5.airtableusercontent.com/v3/u/47/47/1762560000000/eU8qPcunajmQ2RhQcB5fxA/J2UvnZDsqWjvrGyD_dWH32gJAlqR4UGEVqdGvtP9V0E3QBS11-MITU8PS80FEkZKqk170gOtJRH3YcXiH69OVURzI-Slqo4GFBERNWr8QvmoI7c6RiIscMNoGiBJ05Tml17FfdEeRVysXNIZQ1kfIgLXhMJ1e0pdqMSgfRtWVSY/oMKLimiuUDR88mMxNw_aVEcXZ7fZyECtc0x1dvs6nLE",
-          "filename": "logo.svg",
-          "size": 74332,
-          "type": "image/svg+xml",
-          "thumbnails": {
-            "small": {
-              "url": "https://v5.airtableusercontent.com/v3/u/47/47/1762560000000/MGJLnrXSXMqw1M26oRxNMg/_mk-P1as1CfsCsvLkw_e3mtzyYqtpbFAXsFXxCauXF8TFKVlHDRY4U8vXvCp0gs8VCFrXu1fVA6CmBRNFxQF81k4sq9dpe-Zni4nN9sF0FPsv3c1FdHMF7Meb0IDYqXeraUJppk1X_mgOqE2QjBLOQ/e-mhp-FW099CrVSM4RwdOz8J9AfEV8z_bNxsE2zlb_A",
-              "width": 101,
-              "height": 36
-            },
-            "large": {
-              "url": "https://v5.airtableusercontent.com/v3/u/47/47/1762560000000/G-WEyGs5wBk17jtl7gwZ4g/VntZwHCKwCQFG8R164b3Gjm8ssxKl4OiJ6i4907vmwhHzAtAp6zuCNmEQOikEr963PA-a0vkwwuxT-pAVUjY4FXzl-gBYpz4l2zLwJyZRfiSfGf1JkkYhA82IFvpjWJfgU8xc_2vaLSgxa2Qt0lqWA/0YUmAIX9gzVQ5-ye8ecxz7rkpUO7XhsoRL_h1eLQ7x4",
-              "width": 1434,
-              "height": 512
-            },
-            "full": {
-              "url": "https://v5.airtableusercontent.com/v3/u/47/47/1762560000000/25iaCRY0-XQZLaNSUdPiAw/QwNV6ihdyedmngq4qOj8WWRwJvu7lyuSq7kwegyIdcl2Uvu6U__kGl2poHqUV2iwU6nvHuv0YMaAP5FsrntK9oapTGMD0Vx0kersgS2JwdQ_v3coEqoslCG1efxlGjnfGmyFb9TAyksokpr2iKtVhQ/9p9o62B9RUdXIWE7NgYlkr2xQzYQR9WoUAESJl8kY50",
-              "width": 3000,
-              "height": 1071
-            }
-          }
-        }
-      ]
+      "Org Type": "United Nations System"
     }
   },
   {
@@ -507,35 +255,7 @@
       "Org HQ Country": "Belgium",
       "Has received CRAF'd Funding?": "NO",
       "org_key": "uclouvain",
-      "Org Type": "Academia",
-      "Logo": [
-        {
-          "id": "attOtjOCY6W3fsqJD",
-          "width": 2480,
-          "height": 573,
-          "url": "https://v5.airtableusercontent.com/v3/u/47/47/1762560000000/XWSCt4cp-hojeZlM1I9wsQ/T01ABU9kD45zmLV6cSEbMfD-U_5JmC0QeVn4l7wG4sO6PYMahGVQGr5Vb_y_DgoMmNncTqzsSyqxLufr7Myo5qlMtNcftEdo4uAH2NOWdz7XQ7VGjbQzZ4C0sKqzwCTqznqYoDk-QebAorWOwS0AijXd26rXYENKQr6qFSsZyL4/-90qMpN5M4Nilz_FvgGPM6Bw6P-eRP0ezG9dg9_IsMU",
-          "filename": "UCLouvain_Logo_Pos_RVB.png",
-          "size": 30051,
-          "type": "image/png",
-          "thumbnails": {
-            "small": {
-              "url": "https://v5.airtableusercontent.com/v3/u/47/47/1762560000000/SjSUtzGsi1Bqldvz7a1hWg/NiqUtNqfF4CPKjFwS7DU7LUbLzI9KudM9YDoOcjkAZ5zovFbeOdMRrzsvOG7p-Euj52zbcChf-Hbi0apw7UVMjKAgR-UwDqSWseyzqdX2GdLouuR33vKQfbb-aNXw-LahsJg3XtA3omEMXIqmsmrWQ/qO7wD5qpZs2D0YsWqFtDEK-kLJdZQDnPyFR60LuoQ1g",
-              "width": 156,
-              "height": 36
-            },
-            "large": {
-              "url": "https://v5.airtableusercontent.com/v3/u/47/47/1762560000000/lAf9iQ98AMo5iCB35FiReA/Fg4kun7v0Kg3CjVtztm_1QCpo3U8EWzYRciM2kQHbIyt09fuzCxZRYM0oygBEQH17tsrDcHnEVOmJojExleRjwpDlBdXGY6OL3QKHrHrwy89kshEJeYIF9W1GWKy-D7m3XB3VBYTY7Htc6xaZTYBcA/j0Mvza7aGPcQjOPXhd8CXvJISRuKtx2N8OIhTUsUbT8",
-              "width": 2216,
-              "height": 512
-            },
-            "full": {
-              "url": "https://v5.airtableusercontent.com/v3/u/47/47/1762560000000/vctNEJuI797S48uXGqDyXA/dTk5VjX-biBbEm_ZDG7Yz6R4KuSsxN9AklDgdMScGP5pG-BfmIO1hsHFu0MoGi83Atu_JSHT82pX0DczonZ02_8OK3gA0vDOdLSOkPiPRTlrcAV4hHnC4-Zx8dPE8Q8jzPDpVOrji79xaPqLxY4t9Q/hm3hSfGZUOdPtOauH9CXwKCYtmh-LRgHpYKgf7vyWgY",
-              "width": 2480,
-              "height": 573
-            }
-          }
-        }
-      ]
+      "Org Type": "Academia"
     }
   },
   {
@@ -581,35 +301,7 @@
       "Has received CRAF'd Funding?": "NO",
       "org_key": "unfpa",
       "Org Type": "United Nations System",
-      "HDX Org Key": "unfpa",
-      "Logo": [
-        {
-          "id": "atttYi0Br7rqr8Clk",
-          "width": 225,
-          "height": 225,
-          "url": "https://v5.airtableusercontent.com/v3/u/47/47/1762560000000/vwHglMQHeSjkEse6KHfSUw/4P2rGzi7C_yVgeqhn89s1r7Axm7Am4Kda-ycMdGaI4sr4YJSY6xEAZC7WUXVaxID1so87sa5rOYSE4Yw7b4sAb3WDFlR36CleAV69xllmuMr8NruDSgN8RC93JVhKp9bDAVurzh4ILMt3LIRulb_Dq-gyLh0txvpzoomUxpkfG8/FwSVpa-C5_5a2etvHKQo3-caj_At2Q5BucunqtljpTs",
-          "filename": "images.png",
-          "size": 6672,
-          "type": "image/png",
-          "thumbnails": {
-            "small": {
-              "url": "https://v5.airtableusercontent.com/v3/u/47/47/1762560000000/mriBB7MAV0NSBCesuZhXuw/-ZEj_aOSoM6L6OKciBAz85l9lCxdySPas2LaWu3yU1BD6OUd1IPvBCV9UO2b-2MLMhQ4Wt6unV7UWYryGqOr2yAKyZoQnNLagZ_u6vMhsGi1g5HmQltLAwHSlkwUGdl-5Gg7XcRbLmiddW2gMbxrNw/MnwltX0na0x-pzkayOxu6mhVcZvj2YfGzM-2t6h3dWk",
-              "width": 36,
-              "height": 36
-            },
-            "large": {
-              "url": "https://v5.airtableusercontent.com/v3/u/47/47/1762560000000/e_ZN45oAs1JNg6UO9ugIDg/nj6cY67R-C4et43p0ffWaD-mrygaJNnikq2n53Wnu6TzwcPbKR1i4EzNZ1U-R44FFOyyFZ0lqH1WSX461QDlFQL4-SK1NUQ2ZvFOsiLV_zeN5dUH3-Cnj8XsmVUxv9Q82Mk-6vv69RpDQdAVI0pVSA/4om-aO2de51NtmUgzbE42v3rCRw9r41JzHXMaujDYx4",
-              "width": 225,
-              "height": 225
-            },
-            "full": {
-              "url": "https://v5.airtableusercontent.com/v3/u/47/47/1762560000000/CFcNMTdHiuV74CRqjoUI0Q/SUMrNXlLvDBI6woT4zjqVZoXLqOn_mYetve4XxJSadsnpgpwEjOjfTQbA3M00UV9ScWFjSGVBGPKHuWQbDIyd-UxriuyRS_E6k8adRMyl-Q6gxh8-jLtWNMPVR9XdAfLy1fxngpTthTv4biohORAjQ/lQBn-6A7eH1uOwWTxyJ1feHD-vRY-BNOFgMq-Q5axWc",
-              "width": 225,
-              "height": 225
-            }
-          }
-        }
-      ]
+      "HDX Org Key": "unfpa"
     }
   },
   {
@@ -631,35 +323,7 @@
       "Org HQ Country": "Global (distributed)",
       "Has received CRAF'd Funding?": "YES",
       "org_key": "fhn",
-      "Org Type": "Network / Consortium",
-      "Logo": [
-        {
-          "id": "attNoxoqbNGM25oUC",
-          "width": 1000,
-          "height": 970,
-          "url": "https://v5.airtableusercontent.com/v3/u/47/47/1762560000000/TSCIIGPWftngOwbbP55kDw/3zvWs__-xbW3ESsNIaog6V6Z4AqHfb8ET3Qp_ShjwsXcgtdZPS-cZe5Jdo6Iowi0dR8ZRl6LoPg1eP3D06wpwSAXyMTvOoY5jNcZWrlBlYJRn3IUKK6pv1rUSecKY7MFTKDKohUGONz9Dr3xKylWWrAm4DdqjMGHF2X2G48BEQU/Hmi7ceMVK7eocaY1dZZ7eFOLzB0CyEJLI--PTWMLg14",
-          "filename": "LOGO-FINAL-COLOUR_edited.png",
-          "size": 40808,
-          "type": "image/png",
-          "thumbnails": {
-            "small": {
-              "url": "https://v5.airtableusercontent.com/v3/u/47/47/1762560000000/HzxRABmE65me2IX216ShSw/iOI9Kg2iJ8yo06Wa_-BmptABHA3F33j0jN4ygxbBIvInDpaTJ0YERwJWS3eE2Kfzzi_j-VRjfTxPXxuVplNtN30vorJ-44Fv7PxTs51zYTvnLgv4G_ykigaymBZ_AlOpTOKkY-JuFjg1-SMQBBDKVg/9uK3oEMdbAqHtp9SsGXTaWYFMTNtyMq0LYGV-IRf8aw",
-              "width": 37,
-              "height": 36
-            },
-            "large": {
-              "url": "https://v5.airtableusercontent.com/v3/u/47/47/1762560000000/C6dbtJrEbPH1YZVW95zmFQ/GqODBcT0wevkCg-Mqre6iaOB8nx_4XbAoPM36Zc3TS4GDunXNk8bZVz8oQ3wQNLNX7otS2BYpjLCxDMtV4Z_owayEDvULlrXcmrjW_K2L6gchfc9X6_SY4GXrW69aiikzvqwdhD8A466x6F_ftHUew/QYGh1Es-OpMrLfesXxghkspgBSUQfxe7Ti5Yo-52-Fk",
-              "width": 528,
-              "height": 512
-            },
-            "full": {
-              "url": "https://v5.airtableusercontent.com/v3/u/47/47/1762560000000/mHOqXzmgGocw6kWtQu-1Tg/cipvIeYgQOrWYvJeGaRG0OZXmtHrt5Yyvnm11sll-wgzvEAzeAkk8bw3nuC_fPp2Wlff0sy8F7085NLzdi2odkcEgTwt9EnwGOGVOxQ0TlPf75rDHeioHnYgg9QMD5oGXRcqpzJLM7PS1q_fF5UeIw/jJXkLGF_fiKKGe5nbQKwv-g8Ym1xtcLdxLxyQKZaQlw",
-              "width": 1000,
-              "height": 970
-            }
-          }
-        }
-      ]
+      "Org Type": "Network / Consortium"
     }
   },
   {
@@ -700,35 +364,7 @@
       "Org HQ Country": "United States",
       "Has received CRAF'd Funding?": "YES",
       "org_key": "un-women",
-      "Org Type": "United Nations System",
-      "Logo": [
-        {
-          "id": "attSRqancMlDcI8TO",
-          "width": 1024,
-          "height": 512,
-          "url": "https://v5.airtableusercontent.com/v3/u/47/47/1762560000000/1CW-TccVKLjKGpae1d1Erg/b6QXRX14Nj_gEq01b-t7Bk6yEArGDBnSuGTozvk9k-9OfbXTdFThKEq-ki1Ua8BdD_aBk6BGeSxhpwGKG_KOwaz28F4ABPyo6wEdjJjiw92srsLJeSlWvZ41spMabeKqbXilMXdJoIbqbD9GGyv4Ua0giRfX5lQpxsg3VuUEilE/_PR38zkXBjQJwOTnxw6Ys22uyQLRtJW4FSb4nEj0yTc",
-          "filename": "UN-Women-logo-social-media-1024x512-en.png",
-          "size": 15875,
-          "type": "image/png",
-          "thumbnails": {
-            "small": {
-              "url": "https://v5.airtableusercontent.com/v3/u/47/47/1762560000000/P4f8CcLZtB5EkYPre--koQ/xKHrqWk-MmpeUlYk8tNRF-9zmOS6VG77hjVZj3Nxh0zjcJYLP8SrEFZtRaytxtEQZXJFEvJAJqviz--gVHXqfLw6Aw4hW6hS7ap1rZD8kN0AL3FUYqzJcL5N8VTB9VPrIWlL9x7WzHV3aKShTvDyBw/AhdcW-VMYtkP5VVz9OjKhMEMdcVWYyY7LBruo_7SLkI",
-              "width": 72,
-              "height": 36
-            },
-            "large": {
-              "url": "https://v5.airtableusercontent.com/v3/u/47/47/1762560000000/9_Gp0preem9LJj-dvQC10g/jWRRa2gWdNkrhwQbFaQcBDOhRXNLYuyQ8EV7DkB_U_-ck2P-VWEkftGXplfpwgszhFHqsWFFNQWKLi0-qHm0_qfh-zCd-nxSMfsZ2KTCVGRXLyrY91q8MXgIyBeLM4KbREFLsLE3WYPF722s5PN8vg/NXB7fYhSpl_l7SffTqhUW40mpyYhNfYOtcXk4lDDWJk",
-              "width": 1024,
-              "height": 512
-            },
-            "full": {
-              "url": "https://v5.airtableusercontent.com/v3/u/47/47/1762560000000/B3rkprfJKHcgKAJmSpnooQ/ScQiXVcUbE_RL2Yw58Pso-j3syIFSXxcSJ6SGORxe8kXSnWUFqsRG6G46cSA8FojjssHCGTJjD5kls7iM1BUVcpjqf0BmPfF5cdbCyptoEG9wP__fUN_4hf-rHmoM40gcKSJL3hYEUYSViHpVjvIYA/Bg6uhLPyV7EyNu5ZdlLj4OXH3ek_9XkjNpexOa9-np8",
-              "width": 1024,
-              "height": 512
-            }
-          }
-        }
-      ]
+      "Org Type": "United Nations System"
     }
   },
   {
@@ -748,35 +384,7 @@
       "Org HQ Country": "United States",
       "Has received CRAF'd Funding?": "NO",
       "org_key": "usgs",
-      "Org Type": "Government / Public Sector",
-      "Logo": [
-        {
-          "id": "attJI3pywa13Su3Ht",
-          "width": 1336,
-          "height": 534,
-          "url": "https://v5.airtableusercontent.com/v3/u/47/47/1762560000000/3wi9MuxRPGvkLQ42GrOXmg/gQFaIARniSx1MzUMUWTyAaFNQfVIAXvbGfXPzWe13cvW8KjaWnWNfrLdD1jJ5jrzALQRIbl4K8F8AUxeNjcrxWJ8hUoU3e6ETMQIkK5mKBJCtu6_0CxEiqf4tb0lt00Y_IjPXvbs6alK62lTj8vx-y--uHX7f3TSFNGyD__uD5M/SICi5yvjZHNYWiL2WXtBs8fLAfRuaodTooYuXopziB0",
-          "filename": "USGS_logo_green.png",
-          "size": 122509,
-          "type": "image/png",
-          "thumbnails": {
-            "small": {
-              "url": "https://v5.airtableusercontent.com/v3/u/47/47/1762560000000/b5eAkNfeuZxIFK2VKw2Tvw/X0mb6y0T7Q7EynPvYD5i91BU1WDMh6lqSV2Or5Q_2AUzPjWJQImlU_FEnvrsg7MogjLTFQdyxKwfRbrm_q69v8EOEn7cIROnNh3WEQepdsCqXWMLmvtBEso0P2jugxTo4zU1uym3W1qhgdlFAKIVcw/j0l7nU5cV69MoOLNLjOpg95jnAk5kzhOdXCCJXcTxU8",
-              "width": 90,
-              "height": 36
-            },
-            "large": {
-              "url": "https://v5.airtableusercontent.com/v3/u/47/47/1762560000000/iJj3qzMRlsxYShZ_Hztf-g/QJ5BjnIP_8nQgOrrFCIqZ7RXG5s5fWBifs819ZU7smvfP3y9n1itV0lnI5YB9qGHgg8aFTVM0ukL0ev0HnMj3jb3cJVXVskk1uPN6MZn-d4rutYk3-4eF2_iv9_-Uh9WrH9D9RDEv_dGdibms9F9-Q/62w70gq_EoO-t_5Gmeow3jcdjSVtKOoqtjS3geWAfOg",
-              "width": 1281,
-              "height": 512
-            },
-            "full": {
-              "url": "https://v5.airtableusercontent.com/v3/u/47/47/1762560000000/3IEltWo9UufBt-WTMey_9Q/ppRO2YFjWbZI4yHqqaxonmK4lrpQrpGIWGxqqrh1yyT6ldkYgxEUM4cVAcPy5XyZeFfUNfCJs5igO8dgOIWeOVTkisn2NUN1xu_XWA4N-qFDRGPfa41Fg82oq9PZX8rYFfjF98lU9kvXzNWKw2tBKA/JX8KLjYvtQmdSQVvAme7fcPqIzXEFKNcXjgOeJxiqsM",
-              "width": 1336,
-              "height": 534
-            }
-          }
-        }
-      ]
+      "Org Type": "Government / Public Sector"
     }
   },
   {
@@ -796,35 +404,7 @@
       "Org HQ Country": "United States",
       "Has received CRAF'd Funding?": "NO",
       "org_key": "unoda",
-      "Org Type": "United Nations System",
-      "Logo": [
-        {
-          "id": "attIo9ARuTMK1xLEB",
-          "width": 2560,
-          "height": 403,
-          "url": "https://v5.airtableusercontent.com/v3/u/47/47/1762560000000/RX2KjBbz3HwF9GpT7G50MA/l91NJhvaZIIllELEB8XqDQ6teGPCv-HqiSZDYwKjb5qi8tVdCXt4LlqRCBZYMof2CNzIiL9epbN5bzYiwQ0KmYvFkv-GMOsLoMpj6pWc6gY9WEu03DHZ_WAQworRScRVb6tLGNMQurdxczEt_tgdEzzuSZnwdd_aREsSQ-Pv5xk/0OyhMsIwwBJ3KyARPycxFKbdIF2vHMifYdFLSLAcVG4",
-          "filename": "2023-UNODA-logo-scaled.png",
-          "size": 58520,
-          "type": "image/png",
-          "thumbnails": {
-            "small": {
-              "url": "https://v5.airtableusercontent.com/v3/u/47/47/1762560000000/mzwmaPpCbiN7u3tBiqhylA/0x9IpsxXgeFmHeAGvswZjA6o2jHNd96NlG1M110d_mnkta0mEmztlSCv9EAnlSS4E7TPniJGBwbhIrcN1irpNHUWxmpq3_6JivGsth02osdNVaYSJn3V9wr6ajDOBcEjsXTN-3WteNFSj-3zMha9bQ/yqXd-_5OVI1S_Ghqp-q09EEkrHXEEcouzYAimzBkt7U",
-              "width": 229,
-              "height": 36
-            },
-            "large": {
-              "url": "https://v5.airtableusercontent.com/v3/u/47/47/1762560000000/D70uWBulzVD1NpXnel9voQ/xxTe6khcke6fOmBBIBxvgBylGF7uitidd3YjOT2ptPFiQ4kidfeqoSZQZsSAKbQ3lwoe2HM7HdcTf-Kbr62-BFMKHGtVzG58Y1jNvIMX9tAU1q96RUgrnqM0ltncuC0JlDvtqemCHv8ojIDFGS1CBw/4WDpv9ZSfNEeAY8mlo8yxI8NmsTCc7f_IGxsphwZANo",
-              "width": 2560,
-              "height": 403
-            },
-            "full": {
-              "url": "https://v5.airtableusercontent.com/v3/u/47/47/1762560000000/WcA0aHTpDRSMNV1KpQzIZg/qTI9vQAR_86oKoEnBrVVyauBG9dDRxG90i_YKg6EaGZp1YiZyvAIHrLPlC17_WyW_tFYSCRIStNDq4NzTXJM5azyr5ivpNNrq5e9GMrUMNPNehQ_xbY7S6lI4uHpZYlDqh9efVe-lQIdPOBL1VE7SQ/8lzRup2ResjJgs0UMFfU30l_grm2p841xSZP0xXHtR8",
-              "width": 2560,
-              "height": 403
-            }
-          }
-        }
-      ]
+      "Org Type": "United Nations System"
     }
   },
   {
@@ -840,35 +420,7 @@
       "Org HQ Country": "Australia",
       "Has received CRAF'd Funding?": "NO",
       "org_key": "open-data-cube",
-      "Org Type": "Network / Consortium",
-      "Logo": [
-        {
-          "id": "attB3Y3Q1l42Ws3m0",
-          "width": 14168,
-          "height": 4343,
-          "url": "https://v5.airtableusercontent.com/v3/u/47/47/1762560000000/gI1klb11ID0Xzbb5y3alTA/6eQqtIZBMroHUBpXkcy-FCRYlHpgVars8g_rkuO4Kd3YcdI77Iqyq1V9ergiFWggSU_dRcD8Is_Nfv20zqSN1Xf6M13tp6aGTcQigM29j_x95za9X4C3bZ-GfxHWKP41P6c9MiLYUolivsIW20tWUiiUV28FnGLp1Byn5IP27po/_5J9OsrfrzDJdc69nvqRXTrXV6EDKYlvnfRIzUGetkc",
-          "filename": "8959d6_af917b5494184676952b5bc69f6d5e7b~mv2_d_14168_4343_s_3_2.png",
-          "size": 411243,
-          "type": "image/png",
-          "thumbnails": {
-            "small": {
-              "url": "https://v5.airtableusercontent.com/v3/u/47/47/1762560000000/cK6JB-4aI6Udfh18LrF3DA/Ezr13xXIO-6dfvvs6gDzEh64FmY-1Xwq3f62GZOiw5lV_RCJVsv27EcH-PSnZbjAEj3GaJecQ-aWzofmmBc-KHm_705ivqYRb4qX5i-d44pCZ6V16SNdw331-3sXXJSY6yPdn92McG4hh2XnSONCoA/0XA7id_WL5gh45bf35-VpvLObiD4POz5ToLWrdnoP-w",
-              "width": 117,
-              "height": 36
-            },
-            "large": {
-              "url": "https://v5.airtableusercontent.com/v3/u/47/47/1762560000000/zj_Idh1Czj4WZv1U63j3JQ/VBVkw75dCNjC_KLR4VUBX77SEuNUcGRQ2Zp7pN2TYfDmfVGk_KtCmzNMA6NbOPft5oFFLBUB7BsM8U4SjGKgra52XyQxO6zD3wLl3-FznZ1iIr9R4isevxbDMDoaXMlpvkuMOCZUMpRBQn8uQ2P1Fg/ZnfUrDsJyjOLkr9t-wS-5UaRKo-yOH7IdiCZTWp8Z4E",
-              "width": 1670,
-              "height": 512
-            },
-            "full": {
-              "url": "https://v5.airtableusercontent.com/v3/u/47/47/1762560000000/u4v05n5weeKqCwjODK-Rcw/CqvyOIWlVvWDpCiqN7dchNdSCvnS-BXL8_FMsXokbp212QB2jKYGpGny7xXqnlVxZf5IuOLvWfMJDfqP9Yz-qZrFvW59ukE4ZzguI6IzSDscoSjvc3RN1ASQhWK69xvwmUaN0353Hj3HlAXQNYJAJA/uUc2lyn1it3IycBnr91q-pvwpnCBSjUC5rwCjqI1-6U",
-              "width": 3000,
-              "height": 920
-            }
-          }
-        }
-      ]
+      "Org Type": "Network / Consortium"
     }
   },
   {
@@ -892,35 +444,7 @@
       "Org HQ Country": "United Kingdom",
       "Has received CRAF'd Funding?": "NO",
       "org_key": "humanitarian-outcomes",
-      "Org Type": "Tech & Consulting Provider",
-      "Logo": [
-        {
-          "id": "attAdyhpoQ2dJ5wDN",
-          "width": 1318,
-          "height": 212,
-          "url": "https://v5.airtableusercontent.com/v3/u/47/47/1762560000000/GLGbTyKscIanlPFJ7Wvu4Q/KB63PgZAgfKM8MRkzDndXCuOY_q-rglVN6ocbF-qPLZC-tC7zV1mXmAXCuPHr0aHpWeh8dFoslctMkboIKx2yZbx0vzSR1IRU85Gxl3Tl72tLabBZqVo7GLLgE9R5jL80oT5b6lTb-7eLczJFm5RIBexG0MPins4zkjPihNFkGA/XqIRXZJgvcabBP-3AsaJSaPQnxWL3h7K5mS9cyTrZHs",
-          "filename": "gdho_extrahorizontal_rgb.png",
-          "size": 21336,
-          "type": "image/png",
-          "thumbnails": {
-            "small": {
-              "url": "https://v5.airtableusercontent.com/v3/u/47/47/1762560000000/55nqpa-dZvB6F5eNGWnAvg/PEX2fgAlXzCO-qVdFDgP4VqUrRrZa1BuEYnLkCg0BEPTlfPKqGfvPOsQC3K2qEenQr9OH5mbDSb8rm5A4XfhiFchc8PmeGZCBay1qclYvZrzm0ojOA4po2d12J7cyDJw7TvVN7NQF2dcnfoQNX-UZg/62DrkrSM51Dra9-Ndv0p89Z5WTf9O4qWgHIXQ0S-FBM",
-              "width": 224,
-              "height": 36
-            },
-            "large": {
-              "url": "https://v5.airtableusercontent.com/v3/u/47/47/1762560000000/U7liruZGQhRkNxJjVo914A/QhJ2d5z2IJEGUGhwO5htCegKONv-ky9f31CIOwq_3fQphjTFvmA2BSNUvt9GLpC7XpXJbVoYAanoWQ_ionliB4oqgtbHFhhA-tCnsQLk9IO1BhXSV3Av1Ju9yS0xlFQU4az1TStNYs57UrNkgxQ_Zw/vUfZpsXErckc51L2o9hwKiIGLMUDR0dyWEg17BGwp2U",
-              "width": 1318,
-              "height": 212
-            },
-            "full": {
-              "url": "https://v5.airtableusercontent.com/v3/u/47/47/1762560000000/wkAOiV8P-DtIl8Oi_BJ1xA/xz2n2q9U8LdkiU05l02vPsi-doSDAf-xATDYiwTUmMDfp4BGQQ9PiJapflMPp7GFDPar1_Is8lShAGzgOjYf-LpWa7tdcStKOJyP2p-aur7QR_j2dEzeVSeVppo3dRJSj1Mm55Qn0OMTrLvgvhm0ZA/tVaPLH0qYBbxmF3lyl-MxLmu5jewOAdu5wvUzBQ_V-c",
-              "width": 1318,
-              "height": 212
-            }
-          }
-        }
-      ]
+      "Org Type": "Tech & Consulting Provider"
     }
   },
   {
@@ -976,35 +500,7 @@
       "Has received CRAF'd Funding?": "YES",
       "org_key": "undp",
       "Org Type": "United Nations System",
-      "HDX Org Key": "undp-human-development-reports-office",
-      "Logo": [
-        {
-          "id": "attVHrQmTd6NV7Dik",
-          "width": 904,
-          "height": 1376,
-          "url": "https://v5.airtableusercontent.com/v3/u/47/47/1762560000000/qqH_0aIuaU5Qg52XlUPP-Q/0Qa-T0BoMl7ZHE_GiuWgqIZjQhDvt-DDQVCExCyx8JHxdRTMV8APXgIcZOEyTBSU4aek9BxTZoSB_HM0BuXpNVb9VsslzXlXMPk2a0MSNLDviBr8IUrcZLpEjtBfaj1oEfM6D25NSlMpqrU7ma8JMOCJykL2Y98IkxAuH_7efpo/x7ewQppME-ctzR-qYa0k1ixKDo4Zi-OtAy0jv5ng_Eo",
-          "filename": "undp-logo-blue-large.png",
-          "size": 53772,
-          "type": "image/png",
-          "thumbnails": {
-            "small": {
-              "url": "https://v5.airtableusercontent.com/v3/u/47/47/1762560000000/LC3MVdbRYxUcu1n30CZUAA/UisPv2dDQ6belRYi6Xrv2ohKIA5q2rX7i4ihq47Ssn2MnSurzZeTAjF9Bc00LhesURXEK1X2iZiDI-2jt5iJmH-h_Q4K2Lyz0jVhXCTIsG_k4Di4Z_mQxL2LnP4hYZe0hQACaLLnCobKYEndD46JTg/_8A78BmYxLOxadL4yj9qYzkISWwpaRAMpPzy5nQI0HI",
-              "width": 24,
-              "height": 36
-            },
-            "large": {
-              "url": "https://v5.airtableusercontent.com/v3/u/47/47/1762560000000/Gio2t4HDC4D-EqMmU_7WIQ/Bw36Ybfv1Wy2XyC9UVxwUSNtLxsh93Eq68Fb0rbiM0VZiBg_Ff6OCMU7CnEmWvfDyEUe1jXYMPD60Rh9TYI1V0ceDtuiYUwtFU6-8FAsMl5OLLdq0hqnm47S6Kf1DL9WHb50vnwYKQ1PgxGSStjiEw/Aq_qvIjlpmn2NKBiS5NCC5o7jG5tUonA1OlEgy6VGRs",
-              "width": 512,
-              "height": 779
-            },
-            "full": {
-              "url": "https://v5.airtableusercontent.com/v3/u/47/47/1762560000000/RnzHetNjf55ZybHATPWCKg/FdLsjQpOKCPjXDE-MHCrVF63Mpnz29TqY49zYDhYVaTrWvXmqwvpqQPD19moTLCv5nYXQ0Key5TRax589qv_hGElaZo91VWTKhf72oXVnddkOB7UJrWVU7P1QJIo1I3_luoKIcHewVZXKnXvw9gV-A/uVmPMil_ZC7NddCux1Irg5bL8JdIqSrpYuw4rtj1uS4",
-              "width": 904,
-              "height": 1376
-            }
-          }
-        }
-      ]
+      "HDX Org Key": "undp-human-development-reports-office"
     }
   },
   {
@@ -1022,35 +518,7 @@
       ],
       "org_key": "ocha-hum-data-centre",
       "Org Type": "United Nations System",
-      "HDX Org Key": "hdx",
-      "Logo": [
-        {
-          "id": "attJDhisich3SdNmq",
-          "width": 300,
-          "height": 300,
-          "url": "https://v5.airtableusercontent.com/v3/u/47/47/1762560000000/NDweJiIU2uYUTNMsB16djQ/IiRhCaVZS9ZKIw5TlWUIHlWe53YLDVWAJ4p1xc8UyL9eEnjTGAGXAVccrgsikOh56g746P4ao7qAvBfFIGvQ3LxBieZd5KbMn00fDzatLBwMlabwGKIpwJlHSFblAsYFyQkJenyBeVRgxzvR1APjZb35EooEc6YyDxvqr6skkQY/LPj1NQR0M1MYWpW3JUYCoPoVrFmQNdwiWVuSiqvR7Aw",
-          "filename": "centreLogo.jpg",
-          "size": 34129,
-          "type": "image/jpeg",
-          "thumbnails": {
-            "small": {
-              "url": "https://v5.airtableusercontent.com/v3/u/47/47/1762560000000/wYIAog5VU7Oqx_epnxKSWQ/AyP-RtaGcJAJERzWnwOlw4pNM-GVc5lb4xx3Ej90u9YRCvguK7fMvfhlL9j7wYhjX-1zGSPM4McMsYTfVXwD4y0Ze1LjskudX4CBbRpQbIiPHjP7KEW-hpd58LVKs_U5BkbY8kBuAaOE6Ro673qI7Q/vqj8wiCQFqUEYGZK8z0pQpGDmQtoyJ3b3zamoco5wEw",
-              "width": 36,
-              "height": 36
-            },
-            "large": {
-              "url": "https://v5.airtableusercontent.com/v3/u/47/47/1762560000000/v3twnB9rmk2LD0Sb6C724w/wHZw7mfZlGiP2RC5ieaV3KoABMpeksbi-cmiB_5Ovn3jSqoJ-exQnMwqdLvbxlmWvv0CfkYcvjwlRpKA_gPBeUSkrLZXRzy7_tul2o44T54ceW4n6gELY7gAu5TsCBWWObKMdqkVujTUUYipCX4TRA/EVkoYRt_t3g8wXuzyaFTgE7YXVSI0tVoa2GJyRmtM3A",
-              "width": 300,
-              "height": 300
-            },
-            "full": {
-              "url": "https://v5.airtableusercontent.com/v3/u/47/47/1762560000000/4lovKaA8a0K5uU8VjONkUw/rNJN75LFw1OXBGvYWPktd0X3Yf95-Nj7bfudItbmQDV1N-qE_3h6tC6s7x679TWUl2_y_7Jlq2ErG2sDdTSlc6PZHoyb0CxK_pQWhD70qphnP4sPnukpP2zZH9mdEfgNO64HFrUgl_gJO6cdAPUX4A/sQ7rP4D2dPl5b8-RBssMRcXZ-4Rgxo-O9WoSLWPNLfc",
-              "width": 300,
-              "height": 300
-            }
-          }
-        }
-      ]
+      "HDX Org Key": "hdx"
     }
   },
   {
@@ -1076,35 +544,7 @@
       "Has received CRAF'd Funding?": "NO",
       "org_key": "fsnwg",
       "Org Type": "Network / Consortium",
-      "HDX Org Key": "fsnwg",
-      "Logo": [
-        {
-          "id": "attPdm1ifCCATbOk4",
-          "width": 1686,
-          "height": 850,
-          "url": "https://v5.airtableusercontent.com/v3/u/47/47/1762560000000/zNCpMsNce4D2rrGeOrE_0g/xZ11wyltGxoLxBO8t81W8QnPQFQC33YZNC4EVUzVamCTnVr1dqcQfQHeueJtTiB_zI2doXSNnUMo4LbzVZHhKgAB57Hk4A51N6BMlM9oUDRAem9GK9XIN68OUxhWekwytmkGC8GO71N-ff7HAyr4Fhy15C5Tf063391lhF2jmik/9yaGxAeBOvE6K9NFwdcV-07W3vTrkkJicYiGn78QyCI",
-          "filename": "WMO.original_uG2G2O2.png",
-          "size": 122788,
-          "type": "image/png",
-          "thumbnails": {
-            "small": {
-              "url": "https://v5.airtableusercontent.com/v3/u/47/47/1762560000000/HPTKGV8ku-IPX3ROIwXWXA/5J-u8uduEPM1foS1rfK_YzKSDIR46iU9RnjlZBZv-ejOoPtS-fx4-Smml51rZ7y2B-AqRlaYwqbQR5-tSdRbg9AmtYEX0iUAoT6h2DS9aMuNa0NeahLPs4rsfZLiDwQxScEzYY5p0qIsZrOV6JR2-A/UPHN885L8X3syFB_S36PBq3QsyCNknpSRmS_z6nXpSs",
-              "width": 71,
-              "height": 36
-            },
-            "large": {
-              "url": "https://v5.airtableusercontent.com/v3/u/47/47/1762560000000/xDCE3a85UT-WX4OjLEnVIQ/PYfohbedcVACAkn_s8sG5vrrLruDCJxZvXUoXa1J_mjmgDwUeZQJFsP7gcCrPGEIwa3AJfZ8B3YhEJLra2cbme3GmlI82Dr_y_-lL3xIwS-DRkn-AOTx8maL4PCaCcNeaWa6AfqnCqtL8wxrWuF26g/3KqnENBMHeu9tnPCLH187GvtO_Gfet3JVHEeZAMY2q8",
-              "width": 1016,
-              "height": 512
-            },
-            "full": {
-              "url": "https://v5.airtableusercontent.com/v3/u/47/47/1762560000000/bjWKd7KJ56AbU4SRmvNJzA/zye1eT12rENBupv52yHhEkg8v6_Q5uec1axdSLjeYA_8P7XSeRBDjBucMoZe00oPBufvdKSPWA3n4Hi5Dajvy4_iGC7J2COSVDTNuuahL0l3kXN4hDXpoQQQl2wPy24kPb8PsiZu_XU9b5gFtxM6Pw/0ksUibEKJ7J_NFL4zg2rddGWJV0XDgbvhEMaPSl6mw4",
-              "width": 1686,
-              "height": 850
-            }
-          }
-        }
-      ]
+      "HDX Org Key": "fsnwg"
     }
   },
   {
@@ -1118,35 +558,7 @@
       ],
       "org_key": "unosat",
       "Org Type": "United Nations System",
-      "HDX Org Key": "unosat",
-      "Logo": [
-        {
-          "id": "att7XKGxt0hcskAwI",
-          "width": 761,
-          "height": 364,
-          "url": "https://v5.airtableusercontent.com/v3/u/47/47/1762560000000/gaGIS6pKR9KBzWaEwYOEZA/m4lP4q1O5eH5LqYkhXb9A4dUkB4AdZfh7njU7gQOtzodVpKVSKDvH-6Hjm3XWpcBidzlztwIz8MZsHu08Y9osNRwgIfLi37idolQP9gIbtYaJU_ZGdeGYTPFzBmk7X4tAi5ivb8dXp7h42PXFbWoBKYG1c6sdMF-avqvJgDw51c/HWPyP6HQ3SvcGJCwuhI9s5jSvePtbll3C34OcWvn5KI",
-          "filename": "unosat-logo.svg",
-          "size": 73589,
-          "type": "image/svg+xml",
-          "thumbnails": {
-            "small": {
-              "url": "https://v5.airtableusercontent.com/v3/u/47/47/1762560000000/3OfmMuvMQ5vkJyChuqBgKQ/9TmfTiNxvDY0K-iZKNYNbWxYwwb-dGaAeESmJV09kebeXNndTUN1dX7eDFjtWmrWGbiG3yoXLalnf8kiSkwrtxtuDBIzv40Dxiga_D3EYVdW8WbM6naJitjJmePiYUg9KDp9sq_wdeZtz3F3mKRi1w/BnnpoqDqsiKiyl3QI_0xBfg-lodTfIAqjeatZ6UNDA8",
-              "width": 75,
-              "height": 36
-            },
-            "large": {
-              "url": "https://v5.airtableusercontent.com/v3/u/47/47/1762560000000/jpvNLw1KOxwiz9DWE5AebA/AlgMCqu6gGi8qGhqPjqxx4iHhwLBAFTttZh8Vx81Is7ohgktTAa8CdOuIMwan3gCB9PAgOGjNAr8iVi8ZT7MnYOaVd_u2f7jNcx26yFhP7P2BfVYhxN_82zvqfat1HNIIrgc7iY4raYGRjEeXZKTbg/UwSdq9x0s83sJ7C8Okx9qUyTi-4T2WCe17-5gaBz8Ho",
-              "width": 761,
-              "height": 364
-            },
-            "full": {
-              "url": "https://v5.airtableusercontent.com/v3/u/47/47/1762560000000/wwNwgox9XdgmYWS7kSeoSA/q50REO6p9UQ1VEDzFmE4ZN_gKux7xt4V3fxDGQzAEfJZjZ8WLaEFty9u9rF31lFqE4kqJNNH_JSPr7izewo-N65kBYaqQFoZZXSJNGKmXfeGmyb9LweXZbrRlkoPDc_hd3b7pNi4-SCfxBi3nHeY_w/J1jSSzeQoXy8Ae-1XoHteLhq8HsBcYcuou91k-ljJgw",
-              "width": 761,
-              "height": 364
-            }
-          }
-        }
-      ]
+      "HDX Org Key": "unosat"
     }
   },
   {
@@ -1168,35 +580,7 @@
       "Has received CRAF'd Funding?": "NO",
       "org_key": "pacific-disaster-center",
       "Org Type": "Research / Think Tank",
-      "HDX Org Key": "pdc",
-      "Logo": [
-        {
-          "id": "att5zPLGf0C3RNs0y",
-          "width": 375,
-          "height": 81,
-          "url": "https://v5.airtableusercontent.com/v3/u/47/47/1762560000000/cHcab_oMb7vFfuMOVYZW_A/GZzNCEIFgYyqpiXWOKCR-K-8bzDFC4cDhucDBw2RiEHLbPuNq-q5n97ettu4ezVyXSdHYX0_30ulrTCntwchUZ3MI-xM9iV6mc18mi3S-7Zyt8JDqKAkQcdVxqE-IZkF4Ad6vr5ic8UMqxbyhmC9TeRwLd_kRFjaDldii_JhWjY/LX7p_HrCXQzNSLn-sJkww6DnfBiruqcDRboWc6zQdNI",
-          "filename": "PDCLogo.svg",
-          "size": 5380,
-          "type": "image/svg+xml",
-          "thumbnails": {
-            "small": {
-              "url": "https://v5.airtableusercontent.com/v3/u/47/47/1762560000000/K2rxdwWsygSuSa5JWYq_7w/oX3L2Um4ac5drjc87r6YDVbVISLKRALn21q6ssEPpwYjotrM5YrGPqftbzS11dwL4lDpW8AHMVFdedGnff06skVBGAODlKvzLxTH4fT1v8iqeV5CxpgzrH2FSHqPc76dODo_kaAMHtsqSHA4ZfICyg/NAlJDvgN0tlVFROVS0f48eWg7n1nXa_kBG_t2_9m51g",
-              "width": 167,
-              "height": 36
-            },
-            "large": {
-              "url": "https://v5.airtableusercontent.com/v3/u/47/47/1762560000000/ohmpdksIoqlWB2cJHshUUw/DGtuwVswv_qaHj7MnWRtSNHVSA9BXXJoRl3CcOV96t-VoNvbCE3sBhc_Di_8BqSFlSTg5GEPe-TFDCLz6-6ALr-EkuFsWPrK_DxTTtWa9b-2JKu-N7hH0R-Zt_6iwYYrGb5_LiIByt8u4ktzz2FgxQ/ml-92qFTK-Hyy69Nx4DQ9xQBVYBL7ElWTOfB3B10juU",
-              "width": 375,
-              "height": 81
-            },
-            "full": {
-              "url": "https://v5.airtableusercontent.com/v3/u/47/47/1762560000000/00a2II9lWyI5PxGRTBnR3w/4U5hvyWnLIgs-UVGlFsIGdXOQziWy3c9Ex3cUMSOqSXNsTmLf5Gu3zdXuYtAGbdgpUi0BPsAWpnBIER15MZ6Xf4UYeZKobCjST5ue7XWlKOl4U78dvY0EPeIyuMCBRMLr946_325n3L6oJJaaehEeg/Py5vtcWmnv3htbvvNI1aFtH0LF-rqb97fw6hpr6_Oqw",
-              "width": 375,
-              "height": 81
-            }
-          }
-        }
-      ]
+      "HDX Org Key": "pdc"
     }
   },
   {
@@ -1217,35 +601,7 @@
       "Org HQ Country": "Sweden",
       "Has received CRAF'd Funding?": "NO",
       "org_key": "uppsala-university",
-      "Org Type": "Academia",
-      "Logo": [
-        {
-          "id": "attioZ27eJW0moRke",
-          "width": 1200,
-          "height": 1192,
-          "url": "https://v5.airtableusercontent.com/v3/u/47/47/1762560000000/Ae0aMCHquMc6oJYji8SxoQ/HTVRk3iHG83GjsXucssS3FLU3RTaxohtMUgw8zcFYokWPIOVAtesVNjsfeq6vJteVXzN_cGckEu-jesx51xBfbLPj5w4PkTA5043olhuxnFEichg8sHZNywUp-Vh13gUc645ILNoV981VnPp-I10V4-_SZ1eg4xUbgR5NTgxfs87YOVgYYn6cCskOfZc7ptE/qtqXwcmaHtTi0JdypW7Zhpm3Stiuj98mrr_4Y-On-3Y",
-          "filename": "Uppsala_University_logo.svg.png",
-          "size": 354823,
-          "type": "image/png",
-          "thumbnails": {
-            "small": {
-              "url": "https://v5.airtableusercontent.com/v3/u/47/47/1762560000000/WRyW-CcCbZ3g-fYin4_nOg/EhtoDGQdLB-bQxG4SvcuvNn28lxTdXw_3vmf4nLCLf1Tm47KTTQ_PO0m96oGH-aKvkae-C3lPttQJUakzWW39MtQsDr_Nga_Hts2vzDVbNsFvvlPHoJQSDqJirXYLv3qYj0j22SbDUPUFESfeC4X6Q/6SHGkl_1sDcX_sCh2kiPjM-UmeB4Mi6-amb4MJp1TKU",
-              "width": 36,
-              "height": 36
-            },
-            "large": {
-              "url": "https://v5.airtableusercontent.com/v3/u/47/47/1762560000000/nSZuyK5hly9PyguPi-UQTg/jl_7PZjL0eVvunD-51aKVbfuFCdsbgRNPnh94OjSJT0qhciKIDkixJv1YNoeZ_8NsPZ8wfqD5EwvjZXXLm6qIaEiBOF_XYrIJyaoLtxr-eib2Bhq0lQ7TSu3zi1nfPS6OUN1sIDgYwGgxxtnXdDnCQ/j4b5ckbviBcJxT6g_Gpk48dMSOcBOEd1m5gjhrBlzWE",
-              "width": 515,
-              "height": 512
-            },
-            "full": {
-              "url": "https://v5.airtableusercontent.com/v3/u/47/47/1762560000000/GwRoLnFE8e0GRox2aJ9-Aw/gGM3IANMYMkbfMgRxzhCNCQjWcE3XXzI_85nz32GEh5jzn0DCJRekjEhB3wGd_XESJdwNJ8WsavlD1_AhX3VU-6BmgLY5KlCA0sSrOnRq-z2VxoNwQkX5mwNQpP_wwkKd4ptyxBLTxeqUFp7xkMjyQ/-Gvz9ZqFT52K0DU3YP4JQn-T6rvLxUT5VRytFl4UArs",
-              "width": 1200,
-              "height": 1192
-            }
-          }
-        }
-      ]
+      "Org Type": "Academia"
     }
   },
   {
@@ -1283,35 +639,7 @@
       "Org HQ Country": "Sweden",
       "Has received CRAF'd Funding?": "NO",
       "org_key": "sipri",
-      "Org Type": "Research / Think Tank",
-      "Logo": [
-        {
-          "id": "attnpjfuZ3F53qjQ0",
-          "width": 178,
-          "height": 178,
-          "url": "https://v5.airtableusercontent.com/v3/u/47/47/1762560000000/SNOFk-T0xnPcFlGJrTVDHw/1thl6MSFkF8kQ39fS-qLdIOfi2gQFXtl55bA76vUF03u4F5VBAxEor5QWwb86bXncY_KfVNZtDYjTFkh7X-XQVUYvORLPd1dtGe_0lpE5SWpBve0b6CGcrVr4UnTHVCNCji4WK6PjV7yR5jtCFNA17xKgobxXnOpclGyiDd1dAQ/8CIaqi_DP_VapRnE4wQ-s299OH82R03JIvczXV9rMJE",
-          "filename": "logo_sm.png",
-          "size": 8708,
-          "type": "image/png",
-          "thumbnails": {
-            "small": {
-              "url": "https://v5.airtableusercontent.com/v3/u/47/47/1762560000000/94Mg63KLYy6Z_R-2dRFPVw/HegoIR0HG_UGThqE7760NfjB_hjFFpHB1UbfU6WuEUaPuzSaUbDMcteTH44_GGu7h99ZZoAlvm4ZoDODce8ZoTMYs0hcifAk9RVQzl5z8ymng7BX43V9odAvsmdIgI5br7-N55SpWX8mrJ4byt--AA/2_6KAsMHi1U8cXkVx0u8IkPfcwbiizJpd_Jd2T3oHmA",
-              "width": 36,
-              "height": 36
-            },
-            "large": {
-              "url": "https://v5.airtableusercontent.com/v3/u/47/47/1762560000000/LL2BylROdb_7mxcU21FvnA/k5HmQSvyAmQUI61MNUWlL25GUrDphjqmdi7D1w5mVDKKB-jy1h4GM7OU2O6H7vycxajc5m-QS7q7HPd6uVsYSqnSVQ3dUpx16PyMRYJOI9Gu-DiAxODXOE7LTTtMHyDh09_6eKfachPcVSCCz9vbLg/qFv9i8Y4gcYr9KcCyXKvfuQSOI9t6g-g2TFhj4klUuU",
-              "width": 178,
-              "height": 178
-            },
-            "full": {
-              "url": "https://v5.airtableusercontent.com/v3/u/47/47/1762560000000/xyuwm9NeHgcmJS3VLcllZQ/PKhdjocAwnTsK4tTi7oqPMANn0LMphgFK37eaNnlQgfd-TTs42nQWBhDY08tvECCCCdq15wquOAH-zOBL6cwGWXmYsf2dh7_9aprW5lAVNnBn7Sf9qZsOjMfvu2qvPH-FOlL-FSyBXBpGddia_gw1w/FWcksaA25-1JtdsYHrS76o8LbvKMbhGWV3KNndx2MuY",
-              "width": 178,
-              "height": 178
-            }
-          }
-        }
-      ]
+      "Org Type": "Research / Think Tank"
     }
   },
   {
@@ -1349,35 +677,7 @@
       "Org HQ Country": "Switzerland",
       "Has received CRAF'd Funding?": "NO",
       "org_key": "unmas",
-      "Org Type": "United Nations System",
-      "Logo": [
-        {
-          "id": "attSjDEyXLJGeUrPy",
-          "width": 380,
-          "height": 220,
-          "url": "https://v5.airtableusercontent.com/v3/u/47/47/1762560000000/51lbnDg9YHPpPP1cCaVnOQ/kguOynrWJMusuBU9l6eIj9Y-3r-7G-W62tl8oReHZggXrSvXO3FX6gkt5K8JYRHnHXH32bU_ObhANWrHObmZ4yZ4j5D7LudWPQJ4U4onIFjz6WeCGf9nyPOJLv840eRMsOL0uRoupFpL6j40ngPxphbZ2QufWgNSmxn5VWaqJSc/BesahlRVcLsg7B8IUxITu4RN7y3TedhPRIwpXrJ2jKA",
-          "filename": "UNMAS_square_3_v3_380x220.png",
-          "size": 26195,
-          "type": "image/png",
-          "thumbnails": {
-            "small": {
-              "url": "https://v5.airtableusercontent.com/v3/u/47/47/1762560000000/1OJD2T23neyStlIU_OLQTA/-xoyk7CN1xL71U-acusX6sQ0g2gqV-tO7bMcUKMhvonmTKGZz-szuBpPFqOScOn5F2t5wDpR58KpG73dk7hOyRyr8NuvE_MOhu2VzH5pEzTbURbxi5nblrScHw_GJvSSCCEaoV1gA2BQUvMJmHspWA/5gayIVCTMMzV3W4UDrcg2El30aCIv6r5YOsYqL9vgkU",
-              "width": 62,
-              "height": 36
-            },
-            "large": {
-              "url": "https://v5.airtableusercontent.com/v3/u/47/47/1762560000000/wV2IfW7r2gRsZSORJqB8BQ/LtwIhboYMx_onlJP3Do2WNuY8DgWXbWh4x4BEoAHNVnhLB5qtuimqkbReBt4bw97CzRtdnDv-PIB_p-YsdwRg-8l7JGMq1qadH8ljhnoaGna4em8WAhgrDP6Yb2R-BOO0Btz2XnFcqanh-WLvihAtw/n7A7KsttEECiSUysY3dA-AAH238I0pO6IFsYozu3EHA",
-              "width": 380,
-              "height": 220
-            },
-            "full": {
-              "url": "https://v5.airtableusercontent.com/v3/u/47/47/1762560000000/B516pzqpsjyYlw55-2T2Aw/E0t929v5fjj4mIzHG3e7jji5RTPsqCeEeLkayIOCJ9JIMdeMZVTSOTnf1VpubM3rU1OrK24UGSOaHOCviv0qrRZK5E0e1aGaAMeXzzSjxSPRlK8UTgF1Gw3l7Z8wgV3i8d7dSLTyiRwNnLWs2XV8Bw/WwVC8KYuFvLPDv7WnKRy3Dw7zHE8wjIdesm8yFTzGqM",
-              "width": 380,
-              "height": 220
-            }
-          }
-        }
-      ]
+      "Org Type": "United Nations System"
     }
   },
   {
@@ -1393,35 +693,7 @@
       "Org HQ Country": "Ecuador",
       "Has received CRAF'd Funding?": "NO",
       "org_key": "usfq",
-      "Org Type": "Academia",
-      "Logo": [
-        {
-          "id": "attsxILFACr5CJNuO",
-          "width": 1650,
-          "height": 523,
-          "url": "https://v5.airtableusercontent.com/v3/u/47/47/1762560000000/jGbKg-lJGA4ls8mewyW3FQ/KwWf2SdKozqjjhKjEM8SnMNDRChIgfE8PiBl62RdP3d4QIFHIxrI_IIVdZc2ZWE2fErHHVt0gUNtmIMFELyW8K_KW4FXvQ7P6JLP1PQyfs4UBfG1JREWS49alTppU6zDeoEILaq6ByD6eZhPCcQ46VqD7iKptlfzHpGguDEcLBg/u7e8B1OJQOJnSuQHy0eK3NUoNpIWLeJMb04oJaLOGbE",
-          "filename": "usfq-red.png",
-          "size": 35494,
-          "type": "image/png",
-          "thumbnails": {
-            "small": {
-              "url": "https://v5.airtableusercontent.com/v3/u/47/47/1762560000000/eJN_PcNr-tB5Hxs5zornTw/W7_ajQ0fjsyZB8F47cpDHtFZQQRoGt4G5zxG4837rc_B37qd6EVFsC_IzYsI7hxSpjUrvKJL_tf-2Pk0r2Wa244KKftXARMmxLkbiGIyRnNdDqqZs_psLLIH7YMHIrIBnJwr2TRqnlx4ra-DqLpMGg/s27ntl-PUmK8pew57g77sqnOeX3REgEJbwGeFbCQ1a8",
-              "width": 114,
-              "height": 36
-            },
-            "large": {
-              "url": "https://v5.airtableusercontent.com/v3/u/47/47/1762560000000/563aX3cwDdTz2bALWJ8Hww/XOXRy9yNolFL1embam3Sy8U6cXzatBw9TzdSP2n0g0ijZOIRsdQHQxoEvKBeSp6E76k5Hdrm0VB2gL2Ivsti_IkYlQ2SmzfyzhBZx7eM-rimZq6bdJ3cu3fnkAGPSg7YDcoIV_9Z5fV1NABxqoL_Jg/2jBxefhTi7oZLu9GTtwhJrF4ZllpUutvjKNoJyzeSlc",
-              "width": 1615,
-              "height": 512
-            },
-            "full": {
-              "url": "https://v5.airtableusercontent.com/v3/u/47/47/1762560000000/feNiNvWkq3meWNmZg2UxxA/xmiKaYhfsoQN8udpipdnHc3SkBfH8LUr9KyOR08E5c5OmiCfX0QdWtCQwiwS0IywpFyv3EBASTxuit43KWALwIDh5lI_kubVS9dDRnU1WbXiJkqW0yXB6GuA8Efpq1jIC7HpgL3rfpisOfQhUkgDbg/IAXthL6FMDJhunlIcLonKt31O9cK8L-SPXh6x-AYprA",
-              "width": 1650,
-              "height": 523
-            }
-          }
-        }
-      ]
+      "Org Type": "Academia"
     }
   },
   {
@@ -1449,35 +721,7 @@
       "Has received CRAF'd Funding?": "NO",
       "org_key": "flowminder",
       "Org Type": "Non-Governmental Organization",
-      "HDX Org Key": "flowminder",
-      "Logo": [
-        {
-          "id": "attDpM8jL5mB3OzfH",
-          "width": 450,
-          "height": 450,
-          "url": "https://v5.airtableusercontent.com/v3/u/47/47/1762560000000/MtVGs8TEeMu3-XUPBHGxQg/P470w-EMtIPuK45fdR3DWKNT9Htl5h0ta6EbjuG9jV37CsXzSsuab5w2LQ2tOlgC6JKhy4l6fvfW_6bUvLQ16iGhxBSYtjg2_RVPTiW-AFj88rtLLSI8wbzwpj3lJVOytmXP4IT4IZyHq74PCh-Zf-K5TkHU_sxtN9mlFDo-4EQ/W_nvLRk42Z6pHXQ05PNwLEQuVbupq4RSiq7ikWBwabE",
-          "filename": "Logo-Flowminder.png",
-          "size": 97326,
-          "type": "image/png",
-          "thumbnails": {
-            "small": {
-              "url": "https://v5.airtableusercontent.com/v3/u/47/47/1762560000000/_-COSZFuVlkTRjH-UivkuQ/o1non5qEw87bF7MAzP4NtEp5VmFmHvMwR7j1AXsq6gAgdjhJlFugvRacXm2vAalRT3lj9G_EvBZXzCPgBysi7Oz5IF6aPcX8sc_9s401NsraQKSIHoHuM0e8TzYq-qWwXh9mIfX1Y2uDLABJoOjg2A/i07GsWad1WyyKUfb_-lDLzXpRSJPwJhNTGgp8GKnpYg",
-              "width": 36,
-              "height": 36
-            },
-            "large": {
-              "url": "https://v5.airtableusercontent.com/v3/u/47/47/1762560000000/DpuLNiBACr5vC8yZOHgMAw/5F0FJ9Z3GJNcdSqOP3xeo1PUzjgytZt4TppsZQZWUbJmqnIh7-KS0rVzZ0v1_QxwPsl3dKNy340bpy7gcnzbaP8TAlhJ3-9dZJn8usCcFGRtF6hNJVFYOFTaq6rfUdnPAA4As0T_jfeUuefxUGwcgA/19Z-F68v7obGlvfyvZFHuUeH9rxADTYW52VUnWHwqs0",
-              "width": 450,
-              "height": 450
-            },
-            "full": {
-              "url": "https://v5.airtableusercontent.com/v3/u/47/47/1762560000000/cZhzeGOs18mrMqjSimEf3g/6cHI6QrdlcEiiH6dHei0c7S0-TkKxfNuKvzy_ighJS8W6bvdxygAIGalSq6MaIt4LXzV-ZU-IxxbPGUX8nYBlUfhmot32_wmPjgz2B1dlV65G88hNSGQSMv4RfPTPsfUtvUSkTAE2B0mrL0UrZ1PFA/hMd0SdYR9TqC6HgZz3kAaFfVJxd_NDfkpnz4wqncLzg",
-              "width": 450,
-              "height": 450
-            }
-          }
-        }
-      ]
+      "HDX Org Key": "flowminder"
     }
   },
   {
@@ -1537,35 +781,7 @@
       "Has received CRAF'd Funding?": "NO",
       "org_key": "ocha",
       "Org Type": "United Nations System",
-      "HDX Org Key": "un-ocha",
-      "Logo": [
-        {
-          "id": "attEMSTuFD2r3xIs9",
-          "width": 149,
-          "height": 37,
-          "url": "https://v5.airtableusercontent.com/v3/u/47/47/1762560000000/j9n3iCyFH9h4MrVI9zVwUA/8ykDASLylXarh9CT7JNQzl5_-H7DiDPp4sO9_7FF2qsQ4om1iFVJtTMZ0gdlTzgXX-Au3g6IgwUKya4nKZz-ofGruTySe3zXxqlEYd-HB6ffWA_YbxyTflrCzd3sc81MY1M94g7dHQnxlHncgQrF3Z3oMFU4h0hXh2sl0AiQtQ8/Tn8CtcTbXt5gi_kC0LR6-YZjsS6dUuENYWoZIHZYAn4",
-          "filename": "ocha-lockup-blue.svg",
-          "size": 72479,
-          "type": "image/svg+xml",
-          "thumbnails": {
-            "small": {
-              "url": "https://v5.airtableusercontent.com/v3/u/47/47/1762560000000/HBGUwJzdtY1zvzrrsCjeyA/yXYZl64mYJRw_d7ScDe9LnFd3lEKIreEVE6oCYJgF-nUQwPwgPikwG6Fj4XGp0IxNdQBHof1lBHES8EPpk_JOKcTPRoBOaORuJVJUaP0WQQxcSC1VRV5xbWHdgLYWYf_64PljO0yb-xBW1LsX9z86g/ChHZucyEkCK4PYd-qL601_eV6yml_uMWKUk5o_IBmqI",
-              "width": 145,
-              "height": 36
-            },
-            "large": {
-              "url": "https://v5.airtableusercontent.com/v3/u/47/47/1762560000000/SvwUxQudH43iPm8Z8S7Yxw/WcbjM9Ikj6nQhzr2Vj9g2x650ezVYhCkBWpqDgt5k1RqhJQQpMHhtLLNOt7VD33MyonGXiv4-Pz3jqkTA7M1G3fnx-kbx3CzF3OVfB2cmwY-ETb_MuS1tJInnMzJ-YsWoPq62LadcuJS1_BFptuPag/cL_OAZhpM2V21CmArKil2LMrUz_E78EQ0EnaVcS4kv0",
-              "width": 149,
-              "height": 37
-            },
-            "full": {
-              "url": "https://v5.airtableusercontent.com/v3/u/47/47/1762560000000/eSut5XqGngPY0kkmn_pEtw/H4Yu_2El1lGxx6LJ3ocy2SKY0YA5Dmh0XhKlcL5xmGkLvzV9TCj5VoZr5sYtGcodHHIftdiYdPdOX7QQBFYfJZ-xnEWSbiwDAiXPjv7LhrMSNadNZuu4DW2Q7Gji3Kapsc4TLr2-ZryWomhaOLL06w/ozgsqVuU-NRFMj0Png4nIIBgMBEI5guEgTCDe_VVtAw",
-              "width": 149,
-              "height": 37
-            }
-          }
-        }
-      ]
+      "HDX Org Key": "un-ocha"
     }
   },
   {
@@ -1596,35 +812,7 @@
       "Org HQ Country": "Norway",
       "Has received CRAF'd Funding?": "YES",
       "org_key": "prio",
-      "Org Type": "Research / Think Tank",
-      "Logo": [
-        {
-          "id": "attEQgGvcz34bmtsT",
-          "width": 474,
-          "height": 210,
-          "url": "https://v5.airtableusercontent.com/v3/u/47/47/1762560000000/JRgZSllY-if5M9I-8dMSUw/6TVKH67mYdkzV1CCiYOYhpF2WPC8JCrh-U88l9-vqLpaBy2t-x5V1QH6kj3SZcVOsH6e8ukugWWkAdiYY-ECR1vLBqk5yeFAz-0hNzdVZYNJL5rD2jbX-emDkupJf3glzT5vSEVy2pGr4dwNx7qI9aE7FEO5moao1dZgSxmLzkzbe3ji70uykyYJPrglKFndcSpyLEvrXeM2pv9nh0C_hGu86GbfvvWfgZIq6rmi5kWoPc-VyU8AyayGZaB2k3qP/lJGl3D_FzLjwJCOhwRv_lKSMO3cBq57PW64vwgZaqhM",
-          "filename": "Logo_of_the_Peace_Research_Institute_Oslo_(Institutt_for_fredsforskning,_PRIO).png",
-          "size": 38732,
-          "type": "image/png",
-          "thumbnails": {
-            "small": {
-              "url": "https://v5.airtableusercontent.com/v3/u/47/47/1762560000000/YPvBpaRb2c6rYss8NTqoeQ/NtCuo5efV9lDYaizVs6NR9iyji2RFIpHCizS3CX1mCC6Gh7d9pnkG22Ciu_dKPhQ2ZXs9VTatCpg0-e_cj6urB0S2njKqTZeGTh34NwWM5XQKgr6kA0rrvsj1uiOVk1C0Zn_PDZXZYouHrOXgChthQ/EVyuRERKsklG7ydaVYB3_NVEXhdu5ky08kfJskVmjvs",
-              "width": 81,
-              "height": 36
-            },
-            "large": {
-              "url": "https://v5.airtableusercontent.com/v3/u/47/47/1762560000000/qhhG91cfIkNnriBHISf-LA/T6FVfOuXMLuyQ158Sf4TjkBVAdhF2FEXcpziHT22Y3ohQp32h00yE5ariAJfA5O9ju510htIXFTCFOxWfP631mHrpV6DSRbE5Usxc8l0dJWe9A6K8pwP0xlIUjJ-iMFLKRqL5v3hIFhVpC_PPsqwFQ/qPlOngf3vhTy8HiRDSv-d94EQMZRdoOb15fLMUMWLsQ",
-              "width": 474,
-              "height": 210
-            },
-            "full": {
-              "url": "https://v5.airtableusercontent.com/v3/u/47/47/1762560000000/Dj4ap8pmWFEANHH7OuRuDA/CCvciELgSIQvlTL2YnLWAFO48p6zF1hg8FaTfGoB5woN5kKUJi1L5RpI76rUzkZ6wzkeaiC4qIv8PTDQxG-RNke6ZmUHzgdqggnzyj6dhbEFZ3T4hH_m-dSmv1hu5s9lGdBwBI_KXn3ojFj3_ttREw/loJIvWF5eAuNumnLZMK0vuccMK_i7i4xMqsWepXyYpk",
-              "width": 474,
-              "height": 210
-            }
-          }
-        }
-      ]
+      "Org Type": "Research / Think Tank"
     }
   },
   {
@@ -1651,35 +839,7 @@
       ],
       "Org HQ Country": "United States",
       "org_key": "data-pop-alliance",
-      "Org Type": "Non-Governmental Organization",
-      "Logo": [
-        {
-          "id": "attM0x2bTk5rJ2Vpe",
-          "width": 400,
-          "height": 400,
-          "url": "https://v5.airtableusercontent.com/v3/u/47/47/1762560000000/Nnqd2K9zkQPKWCS7GoUtzw/9CBDClU3gjatJ9_PMlKHR01AB68osILen1JStGcDH70ORw1-9llEb44FLZXcTk7n1aDnVLEECqpE83izMS3S1dktrxY_TLp9-Uwmnxuv2HAOtIUqhnBHYBrluI6uITEBmXeNau-uDXo269yzorDJGmwL2aeiyUQK5cTjH1_ukIE/FJCJJobcojVip3nACwfVIzTGdKCyT1hltdiQ-KJ4WiY",
-          "filename": "qS-MVERF_400x400.jpg",
-          "size": 18138,
-          "type": "image/jpeg",
-          "thumbnails": {
-            "small": {
-              "url": "https://v5.airtableusercontent.com/v3/u/47/47/1762560000000/J9KVzkwb67hGlZ-uoogg-A/ULC-qTOjhT1kLWQaFpDNRL9_s1bqTovJo7RQVTPNOrkTESHkxr45ucKx0kiH1nQGarwE7Vafv1bL4y573QvQP6_Y5LTnKld7TbUtrV_qOIklht3RHaU-7Z-u-8_r4YlpEl58gg21om7hdYQZ2rl2KQ/1dfg2nmUeghVFHi1LI-N0AIOHdDBpoXZSVUtgZHENpM",
-              "width": 36,
-              "height": 36
-            },
-            "large": {
-              "url": "https://v5.airtableusercontent.com/v3/u/47/47/1762560000000/eexGnnohXIqjJFDoRvgc2g/qDvuW1K8CIPhRUwafstkdAX2n3p-PJzBcqYS_G_gk66QrnPhs2d6Z5wpz8VJwYzw_EwnVuKiqF4ACVeZVhkJ9Jz-0A5xmMBG_482mhynjaRM4QBeemnNOYLoAA_ymhZLyCsBxNNPBloPou-IJcwvsw/zUISxyUdvUkOnIGoUwXA05Xkle6J8GMCjkJLjuUTCko",
-              "width": 400,
-              "height": 400
-            },
-            "full": {
-              "url": "https://v5.airtableusercontent.com/v3/u/47/47/1762560000000/5aorPls_ux8n_ilLNBQMxA/3QVTVo5CTdLf1_VjBfNqYFi2EzNrsAGsUUX5bvpaRCpBw8L_TQ8Da0yt48FsKqBkm8rF1s5MKouORQO1Qp-2zMGomW_cY2x7Odn_r4ivmR23rRuUq0VKpXWAYlBAEUDjbZxQsLNsatmrOAF3626MsA/4qs9rftuHs_NybMqBZZmr7UBEnYs-TsB36kuWLaKTXo",
-              "width": 400,
-              "height": 400
-            }
-          }
-        }
-      ]
+      "Org Type": "Non-Governmental Organization"
     }
   },
   {
@@ -1712,35 +872,7 @@
       "Org HQ Country": "United Kingdom",
       "Has received CRAF'd Funding?": "NO",
       "org_key": "inso",
-      "Org Type": "Non-Governmental Organization",
-      "Logo": [
-        {
-          "id": "attLxO9epZPRiu5r8",
-          "width": 912,
-          "height": 493,
-          "url": "https://v5.airtableusercontent.com/v3/u/47/47/1762560000000/KYD_CSqKRCsYUbH8pXtUgg/iewYHhS-WsJXPrV_FaQ1rZEX1lmV2rWhXIcRfCF19e3LusnO7zsvm3EkaGsldzAzV28MbN5UzkVKIwdGH-UeqMQPOvPShFxrPg4d3PsIgruR1Mjvv4cV4I_4FfHd6esVskNTX5DtaXtUwhCZIi3-ED2TeJA-zEzVG7kZzHN2wSQ/Y7qdgn49175ntlIla9RUp51FJLHpCUZn7s_dYQrG0AI",
-          "filename": "logo-partial-v2.svg",
-          "size": 58646,
-          "type": "image/svg+xml",
-          "thumbnails": {
-            "small": {
-              "url": "https://v5.airtableusercontent.com/v3/u/47/47/1762560000000/QkosXNPg-Jz-ve1oEcFHNA/XLjVuCWZ1Zw__To9O-WRyHQYhXHSMmAZkCeRImGsm3DyI3ap0YzEO5UVwjob6r0zInRiQj3h8kXQ8W8Xa65i0Cs9V_JqB5fUo33AAnPAUbhnQksXgjBvIYkUfUx9JLcZkSAiDNAPvHr2hLCHapBoLw/cfa6SQuYAZEN_iPt5Icrmlnfar8DABIziFMy7v636XU",
-              "width": 67,
-              "height": 36
-            },
-            "large": {
-              "url": "https://v5.airtableusercontent.com/v3/u/47/47/1762560000000/ExZ9oGT3IAoDoeAVxt95Fw/PhDBtglMk5CJ5YD4SqF3FE4cnT6uWZfKrH4VIvmk0qdjj8vRe4yTXMSd1BvHdqMfU3tzNlULAE205rjJq87qpv2roa9FIek8P1SRMazcyq8aA8x0DmEzgNaPEyyDDBVqZrB4RUBWGIuB_e_UjLRlOQ/9g2eBAwv1SC3x8cj94vDNRvpiGbfYdE6op9qO7It1MI",
-              "width": 912,
-              "height": 493
-            },
-            "full": {
-              "url": "https://v5.airtableusercontent.com/v3/u/47/47/1762560000000/7Htp1tUin5CAnOXU2d9BpA/uiwAlRIHzISP0P20W1WooYy2aFW_t8IsgHWiiCfZlRDRN6R3AmKq4kSiNFc7_nzT7V2kdPyfFGyOTjgezLY325iAMiCBjwbrXEDfmV-yDBu_unnEccsr9E9gT7jxi4ALr3gGDBC0Hw0_5vkEVFD1PQ/dM8JQCtAxrlyg6TOzNNUZ9iqWzdaJD4HDSskC9dVwBc",
-              "width": 912,
-              "height": 493
-            }
-          }
-        }
-      ]
+      "Org Type": "Non-Governmental Organization"
     }
   },
   {
@@ -1774,35 +906,7 @@
       "Has received CRAF'd Funding?": "NO",
       "org_key": "gem",
       "Org Type": "Non-Governmental Organization",
-      "HDX Org Key": "gem-foundation",
-      "Logo": [
-        {
-          "id": "attpqS1lQG02JYzPa",
-          "width": 1038,
-          "height": 550,
-          "url": "https://v5.airtableusercontent.com/v3/u/47/47/1762560000000/Y8FaDnMoICrpnUdZ6pWfLw/_CQBAPMT1SDF_wu3LsFZwKfI0k6TG9NLIVDAVfZZjCpBR_x1toLmO27jc-QDvmy9Cf5yK2_I1WgLf-OM-EF3j0I0490fgmZPpDt_HIfhPwbwqcaTp6d1WOEj_e3f9_1knlrZRfpUB8G2eTZm6HbMb0ppthyyNUohNBA6IJHZFTE/GEkdiR9sHRnRfO7OEUDVBvCiv19BnOJoTUFZ0L2NmhY",
-          "filename": "1dcea4_8af5e11404864c0c88d1b3b20cef5a88~mv2.png",
-          "size": 54381,
-          "type": "image/png",
-          "thumbnails": {
-            "small": {
-              "url": "https://v5.airtableusercontent.com/v3/u/47/47/1762560000000/-XgBGv8nr_DMoPMb27z6ng/DztZX8jGdWWt_uBsnpmzKAsVcHdc56Myn8AetzuQMBaBooQVOll8LgY_v52pWME47PClbTiMhz4yAlaWfztAiBb67_cXseor7ds_ZPkP7iSUs12R6sDPd_XhQSXQmYwF71G_rJa_DR60yANiUaCfcg/ouT0EtrSchi6_DWuDZkOD9budbeqt4oUlbKG0KWmMeE",
-              "width": 68,
-              "height": 36
-            },
-            "large": {
-              "url": "https://v5.airtableusercontent.com/v3/u/47/47/1762560000000/n0r4-oJXj5oQffzh1HuPcg/9oBbCPN9IGlGgvGrH3Cb71BTYbmXFEmwxqPwD_YTSYQR1ahdCyvDUadcbwtEUsAGmHN9c1eACTFm_nHoZZ2agzxdUj8yCzsjWYnF1SatLgm8P_31WNUivRSUd5zc_uS8UN-wHFbZIdSM4oNUGB1v1g/--bGZL5pJI7zWDmBNjcM_NQ_nL4xRX-PK0JbIHN0cz4",
-              "width": 966,
-              "height": 512
-            },
-            "full": {
-              "url": "https://v5.airtableusercontent.com/v3/u/47/47/1762560000000/7Bu3kMHcgmGkFlKUiqDqhw/jROttP1NGPF5CovjOuqx1PHcW8atg7ObuLQ6jRLsPo29rN1ELAA3fj8ib4PEEJuGMuCFdzlaW5hZJfsFQ2ZWxANxYz1kTwIz8aDHFc60lfj4qcglKc8Cv1IzOigCc92-Xs79bQA0VLZ_Iw2rw8QjMw/arZXNhZGP_lx_iwh-ZFYBEzRHY5XBhLAAToKHKyP59w",
-              "width": 1038,
-              "height": 550
-            }
-          }
-        }
-      ]
+      "HDX Org Key": "gem-foundation"
     }
   },
   {
@@ -1824,35 +928,7 @@
       "Has received CRAF'd Funding?": "NO",
       "org_key": "fields-data",
       "Org Type": "Non-Governmental Organization",
-      "HDX Org Key": "fieldsdata",
-      "Logo": [
-        {
-          "id": "attyklI4bMedXKXeA",
-          "width": 387,
-          "height": 328,
-          "url": "https://v5.airtableusercontent.com/v3/u/47/47/1762560000000/u-HR8sAduBZ0fydkhQKOiQ/IpX-heMEo_61NwbrabVOJ4JPlC2ldC5EBwlOPQy8VWaXofgWPffhO4QxMC2594cev_yA4LRgXh0xvEmNj1BHa1Ldo7WKO2naY2Eaf_A4BaLChq6dDZC2dciksBtFhpF-hQu1cm073VPHIZH0vS7qtQ/VutppPvXRVkafG0B6gJuFxqtK1VwIEcEH54TcYjpqzg",
-          "filename": "image.png",
-          "size": 11386,
-          "type": "image/png",
-          "thumbnails": {
-            "small": {
-              "url": "https://v5.airtableusercontent.com/v3/u/47/47/1762560000000/uNDGdlUUvHPggKK3F_HWeQ/8c96wclB5Y5Q5ty_ITWyyM8HV0n489MxQpDLxuCRPWDN2eCkzfHVBloWdwf6uuZa8TPEhVo9rX91KabHiJhwNhhZyfgO2Jzp53vgLG1ne7gUvORASoCjtcd4ZhAiMZmHdh11SNnvcnhURycekqicoQ/JqmpUis3Xu-BUNftL7-ViRapbpW4wmBCdFA14TUlnc0",
-              "width": 42,
-              "height": 36
-            },
-            "large": {
-              "url": "https://v5.airtableusercontent.com/v3/u/47/47/1762560000000/_mq9zjHMSkoQyOxmg2vB9Q/E1qHSr8bJmLU2zlnB22FbaM-UK49Sc9QO6HQtp0jKOI77cU6eshekfTtSdn30QgKPwSl6ynNFliiqREtv7xW5iiTvYOoLdVExi4Cy7uK79jOvgM46_h1H1Q7eDvDXtSfgQArnGXIAvAwuee4oVBOAg/1lUrQbexeMPQgk7hDlO5qlHXajx53O4KpyaET-KrIr0",
-              "width": 387,
-              "height": 328
-            },
-            "full": {
-              "url": "https://v5.airtableusercontent.com/v3/u/47/47/1762560000000/VnDCicVoQ3lsZYlG2eVP9A/I4lhsZD9Ks9a_6hv361eR2IoGkWFhMf5qdITOuseWy_9UdjtNAzluBmbR0Hw3O85dOhp1Zr4r-N1VwK37m4Tl2Na3A7logcN-rvJTmdhdplwGm2W2ogf6SSZ5CD74Sv11ZdLnLyTFumci9zFjgH96g/HACam_NFCPC91RkQJzeyuxUqbWAJtfeSmLcLXFZgvyg",
-              "width": 387,
-              "height": 328
-            }
-          }
-        }
-      ]
+      "HDX Org Key": "fieldsdata"
     }
   },
   {
@@ -1869,35 +945,7 @@
       "Has received CRAF'd Funding?": "NO",
       "org_key": "mapswipe",
       "Org Type": "Non-Governmental Organization",
-      "HDX Org Key": "hot",
-      "Logo": [
-        {
-          "id": "attMYgmWUACfMPfO3",
-          "width": 2288,
-          "height": 698,
-          "url": "https://v5.airtableusercontent.com/v3/u/47/47/1762560000000/DOKwTA-nAFp2SMRemTmcVA/DTBwbqTnnLZNFRNXY9dyeUdTgjwdZvEgcJMe6c5y95Faj5541auUO73da0Vu0LjYiVEU-eanykKH1TiwkYTaOB2aSE6jUbErG2CCzCYRTjihBXN-WP3RpSDtYPJtkTyWNRBQYeVKfZJ7bP2kvvKXOCtkoc7_seIBDJdKjbEFVtw/7dY97_1aI7Mts1TUYCCa2gHPsNrYAGBKqy_FrgxVwCU",
-          "filename": "ms-logo.png",
-          "size": 139698,
-          "type": "image/png",
-          "thumbnails": {
-            "small": {
-              "url": "https://v5.airtableusercontent.com/v3/u/47/47/1762560000000/8gVVsyE5OOi1daywTI0CYw/NuJ298uoPkTv72C9kujDjkH8-pKqrkgTxHmLNqZPMUzfFwoaKuh3Cfbu9c7-_Pxsoq4Q8WnosBfRX0gCke7p37a_Uf9jk7p1LYD2drNr_dMKNRGPXKihRiuBrkjWItQottD7uskvFVmUBH_N9kobog/8EaRmLWLWzmTJvrMG551qp1mrVv3pe0gqJvGajIR4nk",
-              "width": 118,
-              "height": 36
-            },
-            "large": {
-              "url": "https://v5.airtableusercontent.com/v3/u/47/47/1762560000000/wmly0X79ZPYOSiBhDIcUXg/Mdu4UMxiyA5N46aAUq_nakmrcIHqLCTnemJOTI6wSJ-vnzCOqFBEZC9XbYRx7g89OQ2hdmNbgGKSai5F5W8cwTzs5vJpaM3uB9NvKd2pVS8H-PER9eiL1mKBWF5BlbIu00vZ95YNtBU0GzPASyLZNQ/kJdgJ5U1mGNb8KnX4lLv7QfpUUa-vpjdYURnOuEfSco",
-              "width": 1678,
-              "height": 512
-            },
-            "full": {
-              "url": "https://v5.airtableusercontent.com/v3/u/47/47/1762560000000/unYOlSM-1MaaChW2B7UllA/NycoH1YsR_u8haZ8uGvZAGjPgxKpP2nRXLd-P62QlVJ9ocBMkWQqRlT3GN5ZK4OK0IjKi5SAwR_8yZ14-MnTIfNFtl4TosIKAWnmK-EbegzNyDfVC2-3O7mET9oS-r9y4GTyk3yuU1eL3CltQuU8GA/I-B0tzolzZ6-Ztlde4RjrNeg4rJJ6fR1KCLGgK9DfU0",
-              "width": 2288,
-              "height": 698
-            }
-          }
-        }
-      ]
+      "HDX Org Key": "hot"
     }
   },
   {
@@ -1913,35 +961,7 @@
       "Org HQ Country": "United States",
       "Has received CRAF'd Funding?": "YES",
       "org_key": "korbel",
-      "Org Type": "Academia",
-      "Logo": [
-        {
-          "id": "att7QWbg9MJsUDdzn",
-          "width": 225,
-          "height": 225,
-          "url": "https://v5.airtableusercontent.com/v3/u/47/47/1762560000000/wi_FIgX8OsYZd6PGaSkOLw/b455EWbitdkcEJkRxLbf9lmcNrRv2FxFrQu2Mglo8PYYxsJwrGEK_wH9aXVynCPvyfI4Yy6dEq07TFqEwyeWNOXbXsK44kJkFlmXg6T8Q_j1YOIAxhyCajlMKtAvdKoChLqaGZv0I-NNkssVahPH2hjKhK2mgvfaAFTi1wMnFdk/-CKgyOwe13pff1Bsi4G3OE-8cCoXpZSdRks6G5N03Wo",
-          "filename": "images.png",
-          "size": 5087,
-          "type": "image/png",
-          "thumbnails": {
-            "small": {
-              "url": "https://v5.airtableusercontent.com/v3/u/47/47/1762560000000/kNNFFfBGcbwOYP2uw2ByDA/Uhq0SIee_T8GFeTxLREICduOdzHUvSvETyCU7upy4DgIkyI8IoY3O8ZPOq7rbNskfU-5roB0Cm8lt0XQO1wrMRRBmO947jRuztAxn5TJSh-9Jm0kQZMFK33ihWwj2FNY_pDS5eLw8rBJezJ7OIKqjw/8eFuFXA8EkdUAZ2Cq63WVSylIy5UdENusi7RZkRzbNo",
-              "width": 36,
-              "height": 36
-            },
-            "large": {
-              "url": "https://v5.airtableusercontent.com/v3/u/47/47/1762560000000/NL6a4KP-9UQ9hZMO8WXkZg/5Y40UR0QaVy8ZdZwFp9sy-9wTArROcwwvX0_u3UG5LM5D2Hc2U079xpcYGZmlbW7xQ14X94cjePEM3pegDXlq0mAwKEkqUmsclsW0Ub8qiRPltQn7MXY__mAl6BZ598FqHF1rzXM_hQL88lDc6N3uQ/VPcFYJZxsA6IJ8R7WExnSdZQY8bOqIuqPSyNSr4c1nc",
-              "width": 225,
-              "height": 225
-            },
-            "full": {
-              "url": "https://v5.airtableusercontent.com/v3/u/47/47/1762560000000/7WegoN4ItIkpINYOiMvWUQ/ojxix61vvjTYmR3JROtxaKR0IJ828OIbIc-x425j-zevAPOcAVf2Yk3vyJndDIIVRb4-sjI8Or6qNxtqCMpU7J5js4j677PCQIX9bWtlaoMCI4D2H8_XK4VvpMpd3BqwXumrtJQtl-ru-lI8cZYf8Q/iN0BU7XDJsMQeAJ6MZiOb-76FnSdVBuTQVDhLrCiPgY",
-              "width": 225,
-              "height": 225
-            }
-          }
-        }
-      ]
+      "Org Type": "Academia"
     }
   },
   {
@@ -1983,35 +1003,7 @@
       "Has received CRAF'd Funding?": "NO",
       "org_key": "drc",
       "Org Type": "Non-Governmental Organization",
-      "HDX Org Key": "danish-refugee-council",
-      "Logo": [
-        {
-          "id": "attjjvmqOufp220eT",
-          "width": 1305,
-          "height": 618,
-          "url": "https://v5.airtableusercontent.com/v3/u/47/47/1762560000000/Fc5Io884wi2uTvMY7rf71w/upwzXt0ExAxJ7wlfpt15h96rZN8AANnEnuRzjRn2Qz6Np2rO-wBi_5s0wsokN-FqEaUTc6aUKr-Fp_KH5dlZtLcMk-AtvsaBGpQJqAFzJ7Bau0bGRvq1jEh1n0F3SUQXRVpDZ6kXwNgcBeDvkA_BkHwhB23iqmhOi9YgIbiFFz0/9-7iREms4Zzm5F4SX9CLK2-SX3koZaDLPDFHRNPyzWk",
-          "filename": "drc_logo.jpg",
-          "size": 159319,
-          "type": "image/jpeg",
-          "thumbnails": {
-            "small": {
-              "url": "https://v5.airtableusercontent.com/v3/u/47/47/1762560000000/YovwZqLwzZCFbHulkauYSQ/yqr5YvsYmBsCbvTolf98LEgULHXpgu-xZ6Pfx8GavetDIKsesoJV8xhdchb57aVcjoezyQAkSqwacNM6_cG_8qfHJjKz2k6TkB-ysuxkWJlBzwyuZFNedF1gxPTV-njZL-sRHBKYLY6ZFe41kHeqaQ/N6vkuOILEtwnrl8Og-8bIPDgjcbVk1f1ZBdDzhcZe8I",
-              "width": 76,
-              "height": 36
-            },
-            "large": {
-              "url": "https://v5.airtableusercontent.com/v3/u/47/47/1762560000000/gH3EQdO6laVSPe1_q-Fl1Q/-jL_i583BouxQFc6ltBVwAsRWnDDEMhvtYRaGXEsPpV5_pj1oT75_SCFF-RZbFfQWiBHRE4cWCNmMDNNTKKeQxEtvaQbLLFu8T8X4odNpvhKyuP4wVK1uJ4Brs-zBwRn50-9GKe5rJrrlqBL5-y9bQ/yPmnibMGvM1wTYn8nbzzTdsCbKlMap6pRQun4g_G8sI",
-              "width": 1081,
-              "height": 512
-            },
-            "full": {
-              "url": "https://v5.airtableusercontent.com/v3/u/47/47/1762560000000/3pQJQiXFldfxq5OFZV2pUQ/DmYyzGxcFjimY_POTC_qfBTibhV37lnpisy_7kIJYX5nSzDD9naKQkhv6S0Ppw-YUTd8u5Tnr8__CFKDZai72SS_JijPjCRhZD73k-N_S5oyYvIDqifrBXy4JoCaCvPHNFIkO66fFzx2z57_j-vitA/qU4AgnyAKWDqrYP7YdJgio7IeoXHY4RRGD_WOqY-oKs",
-              "width": 1305,
-              "height": 618
-            }
-          }
-        }
-      ]
+      "HDX Org Key": "danish-refugee-council"
     }
   },
   {
@@ -2049,35 +1041,7 @@
       "Has received CRAF'd Funding?": "NO",
       "org_key": "reach",
       "Org Type": "Non-Governmental Organization",
-      "HDX Org Key": "reach-initiative",
-      "Logo": [
-        {
-          "id": "attlZLyGhs5ZqMOvJ",
-          "width": 1998,
-          "height": 1211,
-          "url": "https://v5.airtableusercontent.com/v3/u/47/47/1762560000000/J-ldohRk4medceldpUbMiw/sjsA6T3HeQ9FWWnk63dRxttaa0Iux3dMX2qlSJ7r7zhhtIBTx6O3Ie6ENDtozhnkcX_QdY1quWaee_WiPfkT4nJyAyrp5R1HFAGfNsuj0nNgWq73WF4FGVRE-xiORWbxMIzuqSVRKZkwLLQoJb2cx0haVtXplOOJy24HLXkmrqs/fk3kT3f0uZY2zuF5IWOqUXGH0PtVYV1gfVI6ZAS0VHE",
-          "filename": "REACH_Founders-e1541509059705.png",
-          "size": 66534,
-          "type": "image/png",
-          "thumbnails": {
-            "small": {
-              "url": "https://v5.airtableusercontent.com/v3/u/47/47/1762560000000/KKsWngXKEa6FIfonrzyZ9A/2v-4plbJ1IF1ZST3BsQaaGPjhR2I_o_m8W6qpe-kxMSnti4qcwzivUen5OJ5CZRoQ21KIxDxhRpOMK_A31EOHu6EB0Op7ZJPBrqYj3Kh4Bjx-tZ6P1dOF75MyY_WAZ4T06BWGU_g74dzxYr8CtV4Rw/PSnIHu3_oTIxWjJ2JkM79MjFM-gjIc1XdHsQm-GEsZI",
-              "width": 59,
-              "height": 36
-            },
-            "large": {
-              "url": "https://v5.airtableusercontent.com/v3/u/47/47/1762560000000/1MT_zA2FLxq8PIZloi3E_Q/wtL6PQdQXPSANyiMavLJCKk1PBTs-IKLM16Z2ie5IbLBzWkskkYrZHm5ujOtUPNg5IcL9-VilTRAyVQtb5Fkxku981QECGoIrEffjESQnz2uOVzjt9IkKUo0DVlD4ka8zLio7w_H2WZjo2UYASLjDg/p1_v3TWQmxmjEoUQPv7gjaMFz7v6crLbdr4ja0Xd7uw",
-              "width": 845,
-              "height": 512
-            },
-            "full": {
-              "url": "https://v5.airtableusercontent.com/v3/u/47/47/1762560000000/ZbiXQTCu-71eMhPpJcDFig/E9VxjBLxaW4bs1sbYz32w0N-vTy417DKVbcyC-Ob21Z1BjsW9YyyI7n5nh028aXMF9FbjyQRLk98Rtx9AMbEdqLMXZDtUvFdKf043CrXPPy7OahF6E5TKJetzZLWL7JbL78dNvCfee2td1atvuu-LA/Kd9Q778Q8IKIb5UmMiWmPjC8bgGRZUABIqGrchGfyJ4",
-              "width": 1998,
-              "height": 1211
-            }
-          }
-        }
-      ]
+      "HDX Org Key": "reach-initiative"
     }
   },
   {
@@ -2095,35 +1059,7 @@
       "Has received CRAF'd Funding?": "YES",
       "org_key": "un-dppa",
       "Org Type": "United Nations System",
-      "HDX Org Key": "unpeacesecurity",
-      "Logo": [
-        {
-          "id": "attR62chZPVerELhU",
-          "width": 800,
-          "height": 282,
-          "url": "https://v5.airtableusercontent.com/v3/u/47/47/1762560000000/ADJcjATw-1q5pT7lLNG1DA/lcpdzSwPtEmPnDHCCNbaqDaC2Q1CFcJVnABVXnGOkO_vSdQlqww-JUrkVhbtaBrYAbQLQweynPQ0oHBPqKURHrsdW3S8AcvMLcPJaYuZhgONr5CHaMjx0dqiitkRRQRQgvG4xdSkmf8KqsP_iLdUMnH4dfoZoIN_tebr2Bnsjno/klTpTFIL0bz4B5gWTEnl5wF8nFlUUXn8-scxdr-T5Oc",
-          "filename": "dppa_logo_en_color_rgb_1600px72ppi.png",
-          "size": 69362,
-          "type": "image/png",
-          "thumbnails": {
-            "small": {
-              "url": "https://v5.airtableusercontent.com/v3/u/47/47/1762560000000/GsYYUCM_eiCTZ52PYQeBUQ/mW7S9hjMKX5OMthTocuHYhQJldNapWN3P3tqkSCg71iyE3jRjBkAfcuqm_g1Ej4DH5ihknBwLiibpVbwjvzQxbd1p4-SxsPz0HoqniVxr0THb9FdEe70Z5nzxNpD5ureIn7n388p2qC9XLaF9VhRkg/ekKHLu5L91SD3lel3XTbEPMQHp_FvwSvEHIRiXwnUO4",
-              "width": 102,
-              "height": 36
-            },
-            "large": {
-              "url": "https://v5.airtableusercontent.com/v3/u/47/47/1762560000000/QjhbnLDpYC_TaFHckki5wQ/ArjOVO71YdId79Eoay2r982QYjxpZsJOREBOlx1jbx02M7qGGRRyuOXZ36fKq6HfQXeJegmhBGBXMIMyVXUj7uLsphkGPgirEaWaxP-Vfl7-izPSHfS8QOyVmUmeskMRR7Hz0nsyDsr8JddWvIbrhw/MnjDdRxSc0t9EQpJweeFdvWiDCNHmKjnNlOaest7Fho",
-              "width": 800,
-              "height": 282
-            },
-            "full": {
-              "url": "https://v5.airtableusercontent.com/v3/u/47/47/1762560000000/Ssm_zKV2sP4JG0oyMZFR7w/ZlGHTlZZbXu_WS5gAcbxJFrA-7N1ngqmaxkmc0Hsl4Zu7V8bktyF2ei_bGBoCwpkrZOMvuTrQGh63jFSou4yv3TUXweZGk0aAlUv1FcmiKJUDZR13NHipPtTQHqt1Hf_x4-76paNhv5QjDLvijUiuQ/D0nlbAf3bGWpE-k2EepDzzwchCp7zA3aGHLB2mvjlHw",
-              "width": 800,
-              "height": 282
-            }
-          }
-        }
-      ]
+      "HDX Org Key": "unpeacesecurity"
     }
   },
   {
@@ -2144,35 +1080,7 @@
       "Has received CRAF'd Funding?": "NO",
       "org_key": "state-department",
       "Org Type": "Government / Public Sector",
-      "HDX Org Key": "us-state-hiu",
-      "Logo": [
-        {
-          "id": "attphTakQyJmQMbb1",
-          "width": 1200,
-          "height": 1201,
-          "url": "https://v5.airtableusercontent.com/v3/u/47/47/1762560000000/XWctuWc0EnxC1KH-meeD-A/iiUjrzObT5QGzudMsWuV1aqXbVxhuLKoFAC2B0ypejzK9Ov1m3W6HvSkFbYqtHKsZfk06V0HWL_talSkipZ6csJT_Li5Qg9Wf_ezDYzt6HGWJ9d5JVKXdB5_lXW4878Dc3rjaQPajAj7EQvQYAYRkorBbU9EM1rbjimJtLDbsRHCXweVqXvGbpb9C64jyj6UdaZI3zG-c-1uEeej-CyCcA/eObi5v5UnV0xgFlCt-TCXwXR00TO8uJv2d2q--smvus",
-          "filename": "U.S._Department_of_State_official_seal.svg.png",
-          "size": 479392,
-          "type": "image/png",
-          "thumbnails": {
-            "small": {
-              "url": "https://v5.airtableusercontent.com/v3/u/47/47/1762560000000/awMNVXg_8tSNpoyed_u-Vw/yMe1QZb912qtzfV-hHeUJxLpsPbVPDQlH3bEr6HEAQ16HsWjdxCUtw-9NL4k8b5gT5olRwXhi6fVxrahr-db6xRyJ1a-RFfB45SO2w3NmqmfXSljtAdjxI9zG8xJEtB1KPdXCipTxIzgQEfRQRe8QA/x3wxZS53o_lOMAMWiID8yySxWohO7F7hB7HWKgXjLqU",
-              "width": 36,
-              "height": 36
-            },
-            "large": {
-              "url": "https://v5.airtableusercontent.com/v3/u/47/47/1762560000000/ID0g-avsHI7DccBE1Rr3HQ/fH17pVSqI-6YkmYiAkxm2ouAzWVG18BMG7TUoAIWDQkUxm6HcGOAUnUjBfzmoouRToRhfVRKe_P9vIUIIwleiXHv7sEuDpiNJ-iw-ySZrrh-hP5CWBSuIy0ijLER7qEoDT_PtTmMWh2XtN79mH0yXw/tvhGOJKDZnAzZd1Xxu0qIQfdAxMtQmo5e-PtJxHDkCo",
-              "width": 512,
-              "height": 512
-            },
-            "full": {
-              "url": "https://v5.airtableusercontent.com/v3/u/47/47/1762560000000/Z48V2CBy8Zy52r4H_VHKfg/IQM2c23L5r9vndmSiOw2urgaWtxrkMI3ydhDV6Hzc2KROXdH77_MXdqvY0P1Jartpu_6wPv4RTTkmhClSoTsHJNlaReRs90Blx3gpWkFnD9enDfEmCEnHAc-32aKwvoYSLO_M-beLQBEp1DbUirM3w/LbysdUz4TmVHajACldeNUu9qbx981jFv_kbEauX-kOg",
-              "width": 1200,
-              "height": 1201
-            }
-          }
-        }
-      ]
+      "HDX Org Key": "us-state-hiu"
     }
   },
   {
@@ -2200,35 +1108,7 @@
       "Has received CRAF'd Funding?": "NO",
       "org_key": "hot",
       "Org Type": "Non-Governmental Organization",
-      "HDX Org Key": "hot",
-      "Logo": [
-        {
-          "id": "attRTDQEHT3UFeyOq",
-          "width": 1584,
-          "height": 384,
-          "url": "https://v5.airtableusercontent.com/v3/u/47/47/1762560000000/lKUign0yCumk57r9qD1J6w/7SLNFopqvJx1hAGqq3Nm9ZZ9yomEyHcwdGqEzowrMPcgnEPBAAg7q2lSknfeSynm7RikbrGGogryyqoGpl2pwvE0xoYd-s2CNMkNZQ5rVTsopeuOhpYqc1kndHDe_ndr8v1o-IEUdATQ8HR_59_PPyfpRynKNJc4CE0ypcVrbZc/s3FBtR0_-yH5W8p4SfIqd1iydrR5C-lMcBCfu_IfJao",
-          "filename": "hot-logo-png.png",
-          "size": 39838,
-          "type": "image/png",
-          "thumbnails": {
-            "small": {
-              "url": "https://v5.airtableusercontent.com/v3/u/47/47/1762560000000/8aXvezF8MId6NWI2ipdRSA/Tqz89XqBKY9dVruNjVEu5hFJfF9V9cXUynY4VNjSddPWiteX9w-uJjcv7DLdh6K7LF62NtWXYgf4kHVDRjUAdERC2JoLAHTJI7ucEX1x1mVJBequNkfUan7jmfKbTpbf2RbBK2_TUVw7JLVdxkrlKA/8GXqlItbPMe5cwhK92IY_7d2KiCVV3jX2JkKnhCA3uw",
-              "width": 149,
-              "height": 36
-            },
-            "large": {
-              "url": "https://v5.airtableusercontent.com/v3/u/47/47/1762560000000/nJYqcYJv4q1b7c1DhNg0Ng/uOSQ4z80vtQwE2Y9WnQ5HDyWBotnazKayfRvHRhBXHwV1-bmvTKtICN6_sLtVnsgCzgyzsXC2KHdxK_ngPtuVTXqCPheMjwogOyipnSktBYi1iB8U5RdPoBRyl6II1cu-ldxdCxekThy6SMWic-Z5w/VjqoGYBmNISdtJfmAD763PKtGvlCOHgYBHntwXw6t-Q",
-              "width": 1584,
-              "height": 384
-            },
-            "full": {
-              "url": "https://v5.airtableusercontent.com/v3/u/47/47/1762560000000/S5QPT-tHvmlML52yGoZ4hA/iT_OuEQsz-4IViMomhA6Gwg-mtWpV6Vb1E9Jg2aph6Jt_eHaQ4A1-uALBBrc6LPRlXEvfaZHNVDpcBjKClGmeGIAfAT-mzG6__mib6IPPm240E5URfcBNxlkEDpPt4KCzImhcGhc6kukWhWkia2mCQ/u0HSuBScBgIHsVhD0W5jvrwQafspheGLCx2hESR1Bsw",
-              "width": 1584,
-              "height": 384
-            }
-          }
-        }
-      ]
+      "HDX Org Key": "hot"
     }
   },
   {
@@ -2250,35 +1130,7 @@
       "Org HQ Country": "Global (distributed)",
       "Has received CRAF'd Funding?": "NO",
       "org_key": "qgisorg",
-      "Org Type": "Non-Governmental Organization",
-      "Logo": [
-        {
-          "id": "attiBWs7xEdwhG9X3",
-          "width": 370,
-          "height": 206,
-          "url": "https://v5.airtableusercontent.com/v3/u/47/47/1762560000000/GMMDAp1fX-7lRvdhriznRw/DNCbiF4_376LWRKRpLj_czIXGbGTEH86jvjjS2t8xPPayOqR8sB7GSzfmgF1kaRAlqQoHz82SsGu2w67byaJvylqQErG5XwwvfTxKkMBKPwFHC6zi67p7Z07rgmbiI1AEp6c64j8qB_jBmJa1AdLHJoyfJiYK98fwz0V1ShOA2Q/3ItZqCwub9dl9lOhhazv-jAQRQSOu7N8uuzrbEE7SdA",
-          "filename": "QGIS_740x412_acf_cropped-370x206.png",
-          "size": 3844,
-          "type": "image/png",
-          "thumbnails": {
-            "small": {
-              "url": "https://v5.airtableusercontent.com/v3/u/47/47/1762560000000/WUQX_ohItPOml3kSfTOHJg/9WcH29adlkEmVRn2EV6moBnicZz0kOieQT86RPqWgy73kMeZcnsn8Bq1vuE5dtm704sYSkBGyFOa-AXAx-OO8oAXQwYkII9wfZBEhnI6V3lX_40ebk4R0mxYUcfCCqc74UVIGVPW7dxglTiXhIiORA/AJ77LLIuYjYohldNNyZk466M5qdCIA5QeuX75WQo_w4",
-              "width": 65,
-              "height": 36
-            },
-            "large": {
-              "url": "https://v5.airtableusercontent.com/v3/u/47/47/1762560000000/fmXcmSXIV5M-yIc_sUWAhw/fhlvkh-kbzKhvf61PZ8EmfUJSLtmxBml0gQ8_uW6sqs-S3iofrdv6CzMuCCgPVZFytLGJrOMWnPfrA1pEsyoBcUA0c_KfjCgf6CE5YmeOrqdzHA8I-YX8BmD3E2r6QpolEURcHjScnk07mzvsJnsdg/KcTT96gS1kLWJVAJR4-gOXx6E_mAyw0mPw1Fee3W0aY",
-              "width": 370,
-              "height": 206
-            },
-            "full": {
-              "url": "https://v5.airtableusercontent.com/v3/u/47/47/1762560000000/N2XRHAVP0qbBjwl4e4O-5w/CIN8t5yKiR_T_edQJwlZrwXCJAgcaB6YudvisWQesSx9cPCfsnr7q8mR-LJKPHA5r2KRJ3MNFDzPF6X3Boq0oVEbmPf1YtYK_2GP4hHG46fzoy1LpfMdeFOQI-ivJeM-z9g1xi5Gd4TiGEF9-k8Ovg/fVs8lY566Dte4fUbbSgYsVpI1Qsmc5FmbEeLXz7Ll8Q",
-              "width": 370,
-              "height": 206
-            }
-          }
-        }
-      ]
+      "Org Type": "Non-Governmental Organization"
     }
   },
   {
@@ -2307,35 +1159,7 @@
       "Has received CRAF'd Funding?": "YES",
       "org_key": "acled",
       "Org Type": "Non-Governmental Organization",
-      "HDX Org Key": "acled",
-      "Logo": [
-        {
-          "id": "attQ8P78YPR3OQqXq",
-          "width": 1930,
-          "height": 553,
-          "url": "https://v5.airtableusercontent.com/v3/u/47/47/1762560000000/olsGomOZIOEkZTeiEXSn-g/CKC-xcLmkr0CWi8PohW6fzinpg3ZWzKaEkPhZl_KF4Ex1MFO7z2cYi61BgXu42ysmWPkmeOCTSw56hkT4heNleThx_QG872RZ-AKZf93dR4BORoZZctKAHUW51d1R_Ui4E4ByXt2pL4YC_jhChJhrGkNUebpjKhyd7oHdJBx1sg/VusywjX-iM4AvNZl7KUBZhZ93_g3_I6gYUWKeZpPuFU",
-          "filename": "8f5d756a-56f6-4d8f-a450-67c757d5e242.png",
-          "size": 109724,
-          "type": "image/png",
-          "thumbnails": {
-            "small": {
-              "url": "https://v5.airtableusercontent.com/v3/u/47/47/1762560000000/l4Q95OpghbfgKa3LuV3sAg/y9WakEGM7W8N8pbq8IpmNMmqEuQDKp6em6x9cOqBILKPF-zWgCesorJU0v3_-DOZXZkRpl2AaTTUldGI1ZJWvVUkKHa4_8-nqCUhu-KXwSIlKA3geu8EoHILSLKp8OheAFECdsjAOK2sUBAmjk9w8Q/UIpsiFj49twrBNu-KZAh2GmBk4uvKYSE3sL3NHBcccQ",
-              "width": 126,
-              "height": 36
-            },
-            "large": {
-              "url": "https://v5.airtableusercontent.com/v3/u/47/47/1762560000000/BJ4VeOHryL-x7GdIFeH3Rw/Pyhr6p9_12cbZUvYNe4djpevzNTP3DmaiyWUKOr7v27WFNYrcjBpMaRzgZyMpFvmIz7EIFQknp6cYnrNhVBQwGABJI0XXSPaC1Md5mPje9c2EHWFBOSu_hWf4_2WWwJtdxmazLw6NXKGMTR0VR92DQ/FIKTpWUK2TJvyXelVxFJGAXLY74f0lYG613J-35_ZS4",
-              "width": 1787,
-              "height": 512
-            },
-            "full": {
-              "url": "https://v5.airtableusercontent.com/v3/u/47/47/1762560000000/5B1KtzhvcOGC06U-QZK08A/GFOrZ9TK71HadN9Z8MD6xJgvs6KI63ToPdo_Bt0GU6lMFxRbEj4ELY3H8BEF1Y_ld3RX9wTSXyWTnnqPV2bNpRPjOJMS03ZUb3qwKQE06IWo8tH06zHhqTC-7gQ-sPvX1Gn4S3YnevoMKLhHZC1FbQ/73L9HnolG6ZiFdoqY6RPdH3v_lIU1Zm6eMQrEALl4aA",
-              "width": 1930,
-              "height": 553
-            }
-          }
-        }
-      ]
+      "HDX Org Key": "acled"
     }
   },
   {
@@ -2352,35 +1176,7 @@
         "rec3Ado0Jrl799Q8A"
       ],
       "org_key": "panda",
-      "Org Type": "Non-Governmental Organization",
-      "Logo": [
-        {
-          "id": "att4NdepRYxTwTqXB",
-          "width": 1280,
-          "height": 720,
-          "url": "https://v5.airtableusercontent.com/v3/u/47/47/1762560000000/bnujweEt-RPgOczyySYQHQ/QY-97qGpA9Cw7eAtJ0ZMneTmvlCJSVI2P44aDgS_TxOKfnUrkGMZ_xNY0m4tMAcHpVqEjAa9goO7o8DKS1Omcw1sMlP_AGoYJZ6hAMdYHviWK59U3_pebrElKGrITwmbVS1pvbE12niF47RG0W275uc8xYGIgRr2ERZjCIw8uBc/4ame9zlRbsJzwFhnUecWw-dWDY_irz2azrQ8Jl0q9MY",
-          "filename": "maxresdefault.jpg",
-          "size": 42603,
-          "type": "image/jpeg",
-          "thumbnails": {
-            "small": {
-              "url": "https://v5.airtableusercontent.com/v3/u/47/47/1762560000000/OGwQLgPqu45K9l19BK3_yQ/qhpZIFxqcX0kgYbu8QkkzZSiQrrXoh5IXH930WJFzr5ZM0znLJ_J1R5qeANoSTYFFD6Qard6QiLXJWD5rOexmvEDrfHdkuJO0t_TVM7MhIJGBnI90_5PlgoXtV6s3jFHjrgk-3rQ0EtNuGThoTfhmg/ddt55AyNTzDroxNzoB4838vmKGegruCmLhwuwidgblo",
-              "width": 64,
-              "height": 36
-            },
-            "large": {
-              "url": "https://v5.airtableusercontent.com/v3/u/47/47/1762560000000/KcYTNlRrIAkFyGEJ43Qimg/-_JF5UPAGGr4LutpoIkCtb94TXNEnTAPf9LLFujZS_MYwXMcUjaMYFa8mCCgXvP4PnMpzj9rGS-ENS_-GwzAdkf388Uod2LSLOUlIlEQ3urMpzDLzY6iNYSbJHeGbg2r4dozFjl36WIqSQ6RCmTrrg/FC4zsM-X2UKtdfpvyZtAZ871QnhPlMyNGhJ3ytUvQQE",
-              "width": 910,
-              "height": 512
-            },
-            "full": {
-              "url": "https://v5.airtableusercontent.com/v3/u/47/47/1762560000000/Nbh9KzMkHAt9zyHmQ4bkwQ/E1mInyrC-s1ENhpa56O2dIqdM1X3WolpYWkIuctsdUqRhkd7JfjY2uzSKyM-AmG9iPxSpSQvVMUCUUNeQNRwQrqsLZP6HtT73HMqYo7TPb38ccbxmTLV0FIHVJ-8weqmp-kut8MNiiA3Bo8I6YblAA/O57R3sNpZ85LZDq0VC-WlwAqiMciVrltTnctkWk9Ri8",
-              "width": 1280,
-              "height": 720
-            }
-          }
-        }
-      ]
+      "Org Type": "Non-Governmental Organization"
     }
   },
   {
@@ -2399,35 +1195,7 @@
       "Has received CRAF'd Funding?": "NO",
       "org_key": "dhs",
       "Org Type": "Research / Think Tank",
-      "HDX Org Key": "dhs",
-      "Logo": [
-        {
-          "id": "attIBd2FBasimPYME",
-          "width": 1200,
-          "height": 629,
-          "url": "https://v5.airtableusercontent.com/v3/u/47/47/1762560000000/pipFXs9jIsZyX9XVTXO9yA/oqFpPOk6XgOteUhvbNFRokc1CwfzqxvFwD69MFMcZrzwWiRDNPvU-4kYt4odG-sQjGoPbx_TeZhEJpUSqYdwBzu_MEKklDevoW51DX_u_4j99SSnOiSjWs0k9lVBv3q5PasZ_AhgQzVB8V9QUdgHhkV_dveAXBu2JbL0E8ulNQY/6fAuJ-4cAhCGojSA5uOHZsQbkE0Dh_xVhJ_A6GCJk-c",
-          "filename": "Blog-logo_FB.png",
-          "size": 126769,
-          "type": "image/png",
-          "thumbnails": {
-            "small": {
-              "url": "https://v5.airtableusercontent.com/v3/u/47/47/1762560000000/uc8R46DwVr8XCDgOdmh0vQ/Sowj38PgVGTDvimL-FdOkqapypAvPY-o2hsS1wJV4Cq351UQQvESlxL8Qbi97SeoHcm4NTPby6TRKIrl4YpFrEzsFrPgy6dkS8EnJ0At8Q9Tn27Y2BVZGWAfUGAEwqeo1pkwLyygwvGC1y_c-xYK3w/Q5-LjvQH6jj9niF79qhhAOUbdXvYLlzU14VEBWX0TbQ",
-              "width": 69,
-              "height": 36
-            },
-            "large": {
-              "url": "https://v5.airtableusercontent.com/v3/u/47/47/1762560000000/2aVU5GU7NJ1u7_ug8sNmTA/nOicGaLCaMhcDPb_Q57HmSqvI2lCtv3apzym7GQ4JPbtzSGZbw3mPl9JRQxjXHmEdf8rBVJhvSlxFroXC9IRdHirh1d24xkYS8GZ2qwWHsi66uyyqmduvo4linlNw1sG53ZLDRFUJY84KnUmC5Dnhg/RDR1pxm5gSi-Dkvx-Xp1a8dpD9UGSUpTT1k9vwEhvEU",
-              "width": 977,
-              "height": 512
-            },
-            "full": {
-              "url": "https://v5.airtableusercontent.com/v3/u/47/47/1762560000000/-wPTvL7tqmTu6fJwPnd3vw/t26eL_xMnzwJ2V1gw3Dcal3VSxmdvh2xnflnH3jQfaqC6ubSiUcovEEcLST5ivbLCTuqLnGhPTQ3zThcaYHC5Volkf36pbYXM8aWEj0udTjEVC3AR7wd1ovaKMamLO0dEfP9p25CDgkG2SCzhkdZsg/5qBQ9K5j3thkvwL87pPDGoxoZcjfL1D0U60QUsvoFZo",
-              "width": 1200,
-              "height": 629
-            }
-          }
-        }
-      ]
+      "HDX Org Key": "dhs"
     }
   },
   {
@@ -2449,35 +1217,7 @@
       "Org HQ Country": "Netherlands",
       "Has received CRAF'd Funding?": "NO",
       "org_key": "data-friendly-space",
-      "Org Type": "Tech & Consulting Provider",
-      "Logo": [
-        {
-          "id": "atttBpVnvqlEYjOJo",
-          "width": 400,
-          "height": 400,
-          "url": "https://v5.airtableusercontent.com/v3/u/47/47/1762560000000/oyDrFRz1P6YjZm9pl02tVw/GrdwSbv-uYrhSIot3Jj4ap8q46-g4-0vOWHUrlqQYcRYivtWcOLREjdMKoVraHCkBlVWbKXn2ebMXEKqrowIzfAssP8FqybQbvkThlWULfJSiIkFZI6dNKjJiq1GL0uXUCFyy7EUXyHpxhqtrcuP0DhKyNPY4XUPr6BXCuGlx6I/NhWfvMysN0EV2spHRADNhB7kpp1hV6V6QNa-fWdZjnE",
-          "filename": "o3XuEgiO_400x400.jpg",
-          "size": 13836,
-          "type": "image/jpeg",
-          "thumbnails": {
-            "small": {
-              "url": "https://v5.airtableusercontent.com/v3/u/47/47/1762560000000/zr4T3M2moCNh1upPtIqkFA/IlHBbIcKbvv6xmC3pNMv-cWw1fBtINSLobBX-URh1RCoqtvWA6xVtFLtT3ua5uSUxyA9XUhF6Gq-jCVSSAHgrcX3BcB1zP1XFLLPR2iKPaUjtKOgsR3MHOE5NUC9g0ElBtX67FzVGeM7Pvk0fDkHcg/vTb-Eyyt_tJ4K-A2RLYTVBOeZ7vz5S-D9DWnfGv56dY",
-              "width": 36,
-              "height": 36
-            },
-            "large": {
-              "url": "https://v5.airtableusercontent.com/v3/u/47/47/1762560000000/Z9g_kqwqriEy4639ZCCpqA/GRvdaLRYVZUC__N4izJxSxM7pFHv8sTrXIO55ngF1fUTCLRYXmtSAmI8g9EdrpuSWrDU8kOWFMhOebMCI0iTKoa6TCjQY-zQbwu5DVy6F1WzgT-hmDRks7Eu2pR8t8Z8XSPmU7N8DAjj93QMoHQeFg/eB6GChOt0GxvUaerLPD_Ioq3dCRfbZFg4ROzmmM7z1g",
-              "width": 400,
-              "height": 400
-            },
-            "full": {
-              "url": "https://v5.airtableusercontent.com/v3/u/47/47/1762560000000/zLpxJBIeIhYHDvXH7S4PeQ/7uebX89yKYzr7GW0-nnl18AemRz-W27z7v51xCoIFpwLHGb9UuWcFET_t3FERnOQJ_n9mXg_goEjenDKhPin1B3SYDNPAgfTy4VdTMjs9zrFIXEPS0zpU_geEe1NYH6lTgfsCJI8-S9D__ikZ1WeqQ/4xxa_v-pUEfeHnvS1QJh8sEaOtvpNXdNdAGPT-ZIWKM",
-              "width": 400,
-              "height": 400
-            }
-          }
-        }
-      ]
+      "Org Type": "Tech & Consulting Provider"
     }
   },
   {
@@ -2534,35 +1274,7 @@
       "Has received CRAF'd Funding?": "NO",
       "org_key": "unesco",
       "Org Type": "United Nations System",
-      "HDX Org Key": "unesco",
-      "Logo": [
-        {
-          "id": "attDTezX1Uwpywsxj",
-          "width": 3840,
-          "height": 2160,
-          "url": "https://v5.airtableusercontent.com/v3/u/47/47/1762560000000/E_uTv4rU2e70q0DWzsde5g/Z2lUzQETDcuVB87MNGup7R2hHnRX70m8rNel3S8zpLg5AQ9ul0YPILWC8moLEOBnL5l0g__lfvo2TXf6C-yIrD4cGyUHbHdwWLWzdUgfxZkjGq8P0fiBFHZ_IYuPWowJlVeh8FKgBBnZQnluQMJJ78Uuh7sFzX0FpMAuo9FAZXk/ZvoqJhOOSrlbDBDTIoi9jKpXt40mbXkDfX1zXBvxvS8",
-          "filename": "UNESCO-Emblem.png",
-          "size": 24949,
-          "type": "image/png",
-          "thumbnails": {
-            "small": {
-              "url": "https://v5.airtableusercontent.com/v3/u/47/47/1762560000000/rxiZJ6fHFM9DXJ6HuwT2yg/0KoiWDCg_zSZpLuMLNxkwM1srIuGD7YkHVnRzvyf7HVUVtBqdds4gqCdfwZvYReDu1mdZZcjck2BrDEJKz7Tyj-G0PtSDnPDK4-ra4ELUFR-Z4fPY2cJYeuwc8xDyNahulE7giZzTRllb056YI5fsw/3QFpCv7eXHMo7oa8R6FaLdnHVwIkDT6LtHJ-SLT1OqY",
-              "width": 64,
-              "height": 36
-            },
-            "large": {
-              "url": "https://v5.airtableusercontent.com/v3/u/47/47/1762560000000/B5yKm5EMYLXk-6_La3QNhQ/7v3_NIU5weqjzkbsFXhgsB-DNIdlmi-pusmpIrAduc3Kz66k70ykoCs48VTIovmLGU9tKQO2jQDoJhEgMN5UCl6DD3r71G8QL_OCpxHeIceVROIJ40SCVZUop_H5WnmiJjUWsLYAXS1XcFpkpZXvJA/CnsG8SIFkz9lCVWxfNk6obQWr2inIBY2MjJMFKl2qT0",
-              "width": 910,
-              "height": 512
-            },
-            "full": {
-              "url": "https://v5.airtableusercontent.com/v3/u/47/47/1762560000000/EFSdcJwGuv5D42ErB45x9Q/EcqaUoCV_Ysdo_I37qRprCrEkonnNigDUg2EBSCQ2IF5nFGMur8lfCeQV4cBYW4d4AHcdkvxY8JbmW4gkUCKPi0skzWK56mRFeRw_f-vJwbEXMKkQKibPrnvS0vYEyHvhTGZQlegs84f3nUadxTBJw/LP1lxjB9WUzruvBkLNHRIv2a_U60DGeLQInvJ2He8Zs",
-              "width": 3000,
-              "height": 1688
-            }
-          }
-        }
-      ]
+      "HDX Org Key": "unesco"
     }
   },
   {
@@ -2586,35 +1298,7 @@
       "Has received CRAF'd Funding?": "NO",
       "org_key": "mapaction",
       "Org Type": "Non-Governmental Organization",
-      "HDX Org Key": "mapaction",
-      "Logo": [
-        {
-          "id": "attjljWzA2YF2FWVL",
-          "width": 2480,
-          "height": 1181,
-          "url": "https://v5.airtableusercontent.com/v3/u/47/47/1762560000000/wexGFpPCe7PnvNcf2AW7lQ/i-BfCn5NE2o962RJCrOHZi1uGXSKImzqKPqe1PXq4PZfv2zcXw2emvugKWY_X3fYhouNS40nRe-XarSkovNYRX9SaIUqg0S8KCxqaVE-WlvSgCe5Msr4qavMF4Xy-9uhfODSU63c970uSmMbFYT05OfInwaE7QcK9yHlLNBll0w/m0oDWhV3XRsbTmnWA_9Bz-yEXyL3VYpsE9RqsobAlvo",
-          "filename": "2024-06-06-030546.3560182017-02-07-145341.650261MapAction-Logo-on-white.png",
-          "size": 1054151,
-          "type": "image/png",
-          "thumbnails": {
-            "small": {
-              "url": "https://v5.airtableusercontent.com/v3/u/47/47/1762560000000/M7CwIuyw8QvggqrTX7bs0Q/okUQT3SKzcH0AS9H6n6t4nxtdAyRmZmTIZBhgDhcXUZvOtrEfoVhNQwKj7wz3xM3UKA16_y0xbDd4rMr8c9NXkddxIxJpsk-SZxfSzNreLDh9UA27NKUgjKIctiELwtfmVt8kNOpnhNugc2H5jf_Qw/J3yviWUx2rr5y6yTbHHe1VqQJB-__mscOj-iz_rpbxI",
-              "width": 76,
-              "height": 36
-            },
-            "large": {
-              "url": "https://v5.airtableusercontent.com/v3/u/47/47/1762560000000/T5g7Y2QXUtlmUZBDGkoPGw/8Tjh_-FkIWPPBUYAh09YMUOyEkmevM2yMBToFJ2WC4DfTVvO2tDxuIrw332FXoCHLVaiJJdEMe8R4zleYs88c0EyNjuko9NweUy1Xi001qx37MYAK_oBqJ344UshcplsSnR4YztxURZ2Nizvhh1-Sw/O2D2VHxmEaGWRxtjr38LSsN-9VV0uJkB07CKI65FgO8",
-              "width": 1075,
-              "height": 512
-            },
-            "full": {
-              "url": "https://v5.airtableusercontent.com/v3/u/47/47/1762560000000/lNFNWXmKKU935PpuCq33OA/O2b4Y7nOxkKh_90WD54jRLeacILg7QWr-iDhFITAvX6KqPBguhOMWZjyet-mymprTvgC7JqEGqMk0K8AJm6yYG3-QPGlqa7vPg13Qw_2QtLmcqzGQnPntWqG9cxBXbEjlAvj2-eevZ6LbFA4MK5K7g/t5YpNq0Pu0P8oQoA5m4AbKJYyRYGZhwphw_OKwBYciU",
-              "width": 2480,
-              "height": 1181
-            }
-          }
-        }
-      ]
+      "HDX Org Key": "mapaction"
     }
   },
   {
@@ -2658,35 +1342,7 @@
       "Org HQ Country": "Belgium",
       "Has received CRAF'd Funding?": "YES",
       "org_key": "icg",
-      "Org Type": "Non-Governmental Organization",
-      "Logo": [
-        {
-          "id": "attqSXZgNHCUMAOWU",
-          "width": 225,
-          "height": 225,
-          "url": "https://v5.airtableusercontent.com/v3/u/47/47/1762560000000/IuWBuVYNa70BAMunMugqHw/VAIm5OFbeOXD_dZeQjaXHXCG_JgD5hNvnhfkzOiRvC9ShEqMVR2hseho-5UMzCCkdPeuV-VXLCWgmXgPwcNm6AnOklt3JDOXV_Fz8FQDS-HvVbxKIFVjt8cmXdmaHf1_elVrmeqnn40Mv3QCYPjhWQR23IQN4f1THkAhI7LqNfs/GnoI_Z5phYApDvt5EaO0FyRcJ-lLE8UrSD11FCb5RP0",
-          "filename": "images.png",
-          "size": 1682,
-          "type": "image/png",
-          "thumbnails": {
-            "small": {
-              "url": "https://v5.airtableusercontent.com/v3/u/47/47/1762560000000/Yqbxhwu4-Hpg2VWcg22SKQ/ffPjZq_c2YyajoJ132NNBfOenpAgkWbCi7hHUYS46LYpqzkwTlXkQ6-MgI0jpfrMj9lrHLW6lpOq2vpx4TwNErDCNqZY3-_Xr832fpfUpgixMpuehN-P5lCvBR8LEZHzAN751yLcJpcaltKhix8B-w/XB2sCnKaOzEVlrRJ0smnHo_By0zJP-Fio4X3_EqrrKw",
-              "width": 36,
-              "height": 36
-            },
-            "large": {
-              "url": "https://v5.airtableusercontent.com/v3/u/47/47/1762560000000/tbT5xn3f5234WI1ynG42bg/CDHMMaMSH479oW0tmIDFSuySEhrYx2SMSfAxg4lz5ZkPiq2PIkM3FwUY1GEuJLQQa7wGRG5UIZMoLTXHEO3o-a3GUNk_1Beq9aartdsqqVkI174CQgX3GqF9YECpkZ132jhpanRdwGQjzHHz9ZSuJg/PD6Q7rVYyFUbwoz1wO9fmQ5FFNDYpnNoRPgEBd0uSAQ",
-              "width": 225,
-              "height": 225
-            },
-            "full": {
-              "url": "https://v5.airtableusercontent.com/v3/u/47/47/1762560000000/nWCAtxZhi2kjmoaokfmkYQ/ms3bwvxNyZXktqrapNkJ3eMlsqkdtWG3gQkYD1JTkr2X1ltnO1hthiKoVL9ffOBb5WdXZ3MgaEjxBGuZcmpb--Tn4Sl_VhRIZeo-HJSeaRmzJlKFZ2njvwk4AIvy5molqmqiC4rBrAp99L8o3rmSWw/H5FwvUu1kW7Nkl0P8XIbn2MfEe8xOBhFQvwK0uKMEOU",
-              "width": 225,
-              "height": 225
-            }
-          }
-        }
-      ]
+      "Org Type": "Non-Governmental Organization"
     }
   },
   {
@@ -2703,35 +1359,7 @@
       "Has received CRAF'd Funding?": "NO",
       "org_key": "un-foundation",
       "Org Type": "Non-Governmental Organization",
-      "HDX Org Key": "foundation-center-organization",
-      "Logo": [
-        {
-          "id": "attNVC6tFJNdL1QbB",
-          "width": 622,
-          "height": 395,
-          "url": "https://v5.airtableusercontent.com/v3/u/47/47/1762560000000/ZCoI917cdP--WyUoQIITIg/wbun4441uOP1QEX8_CrDA9X7Dr6AGkuas3slyPE6QZ4sTLB_lc8nraD04EFz0KjluzNStESbDCDxwdm4LBPISuaftGC7UsYtZsBno8fsv5l23jV1JFxtR9DU4yCZ8v1m0yfKB3FMpbg4tk2s9B_RWg/rrr8RwMfdk-Hqqggly2RR6zt2jC6NGdl-N7G10P0tpk",
-          "filename": "image.png",
-          "size": 127516,
-          "type": "image/png",
-          "thumbnails": {
-            "small": {
-              "url": "https://v5.airtableusercontent.com/v3/u/47/47/1762560000000/ZWty6aTD_zL81dPScWud3Q/kGOtd0H_E1QEv2DAmKlNSuPGNc7qyH57-y0l-wukvF0_or0owa8TPg-hwCAI_PVdP4rjIa06YM-qBEh54HTsOpmZVUGBvW-n7GpTLWWQVdn_bDhBNpEMNNlWZ9BclG00dVuI_gjt5GrXHoHxdu8xXg/B0edZ47a-Ss7BzKXkq5yY2_UJT1RuCjhtbYF7QGoYv4",
-              "width": 57,
-              "height": 36
-            },
-            "large": {
-              "url": "https://v5.airtableusercontent.com/v3/u/47/47/1762560000000/TeEBm_PYbKJkmUDyY1bykA/sMDgzFF4t4xMcaDtin7CoYlcbDts50Cjsn77MRgKf0yJQlIdgalSbU5ctgkzBT82JEPIEAc3tLSxZdjg_Z49XAkaNOnXp4NJLrNADM3IJTQRRLNTTf-pK3P-V4PbeHNoJEGTKcBXSFguWXLE--wOOw/paAC48kuWLb5O4dAj2f9ECcAakFmI2641f6gtgincTM",
-              "width": 622,
-              "height": 395
-            },
-            "full": {
-              "url": "https://v5.airtableusercontent.com/v3/u/47/47/1762560000000/V4rHxDiAKOtXJD33KPjpNA/b58DcDUqAWj_bvuCkYa2MDOWz_tjpwBfSzs78M2-GtPg2ltOTVhZ8MJ8xd7YU59ASdjvdE2t4X9h_r9yVGs1ABvRvclP0-OYCCJ8hHO4kFKG7GBwKW0_aBMboSF32GipyAPT2htoljt_Ve8PCt-yEQ/PKkVb533bZxTcNVt5P01vXYJzciqC0coDOx4zn6ALO4",
-              "width": 622,
-              "height": 395
-            }
-          }
-        }
-      ]
+      "HDX Org Key": "foundation-center-organization"
     }
   },
   {
@@ -2751,35 +1379,7 @@
       "Org HQ Country": "Lebanon",
       "Has received CRAF'd Funding?": "NO",
       "org_key": "arab-barometer",
-      "Org Type": "Research / Think Tank",
-      "Logo": [
-        {
-          "id": "attBloqjUVioBKtDr",
-          "width": 500,
-          "height": 300,
-          "url": "https://v5.airtableusercontent.com/v3/u/47/47/1762560000000/Zy8CXepjjEAFqSeZkljPhw/rcVz6S-IRyIXJIbwqTHbqyV6tE1nq1M2Sya7fjkkuHbAckkgWvmuB-Fiq1BPZErBrY1FdljwB4hIFFvc2nzXFrKoSeb-aS2WwXovtazJnx9sfH81Zl9klFLJ0IZMepU4PHDpWajdP2KxgWjE5DDhxZrPyW165tiObPWyd-gYq5XkS2_zDuZBYGfaLhVyZI2DeZk2UX_HgIH8b_NTN4TyxA9JtGmfYloCsPmJ5k2WrbA/k0XdZ4NZHP5zjyMjbgrPDCm1HOGtcyh_70zhIhHv_M8",
-          "filename": "Arab_Barometer_Logo_Vertical_600x360_Color_White-e1585930823804.png",
-          "size": 22247,
-          "type": "image/png",
-          "thumbnails": {
-            "small": {
-              "url": "https://v5.airtableusercontent.com/v3/u/47/47/1762560000000/hNkpS6YcYgDjgwYv_yzhkg/ah2kVKDwhdvzFNtW57Iajrl3xpRhUjAFdGTBuUMLsPso5ygLm5VuURadDmEAKgX0Hd-vv0m1DhvntDwEgMX96dDkTTN3qSW_LBJAspfGYLaAJorGzOOhZcBdQzSD0PebxUK_BOZtgmIp87pUKgl99g/M2wfNU8QC-SMLKRHavJgoK5uGNvOQnyLmDQtSpznyHo",
-              "width": 60,
-              "height": 36
-            },
-            "large": {
-              "url": "https://v5.airtableusercontent.com/v3/u/47/47/1762560000000/3-EXuTjjLdq9nP0E66w2qw/2ayV4H6D6yTUAL3R2nEz1VRg2U4nL6DL9b-fyz29Asf_dvX8AiMs5YWcwoRTBUhhOl1NRF-O2hShJ4f-me21VE0hw4NSs0BFpXcrhi0-p-4Ol3zoL5lVIvAJO-0iYm_KibiEWQyZXDOMqiiYab5swg/UMeEe56CaOxVosc5OUeBnGyexmyA6WDo-B4GuL8xFyk",
-              "width": 500,
-              "height": 300
-            },
-            "full": {
-              "url": "https://v5.airtableusercontent.com/v3/u/47/47/1762560000000/1Mgwu5T-vIqo-upzp4joqw/7sU0XeuVzuvI3008ykX3WRWAHBIlBgFmIVsVhE5DCk_7JAbSewji_Eu5vNuBdhrp-kEc6690wtVNMIPS19NVhMPc7ntrzdu4PwdAAP5SE1Mo94EMmtr_t5FTThd7H3HCOjdPEoT-K21BGYjpP1M0Ww/1IWQ7_02_aCOLOoFwF9HALVhXWigfgwhME7pgqa7bfI",
-              "width": 500,
-              "height": 300
-            }
-          }
-        }
-      ]
+      "Org Type": "Research / Think Tank"
     }
   },
   {
@@ -2814,35 +1414,7 @@
       "Has received CRAF'd Funding?": "YES",
       "org_key": "ifrc",
       "Org Type": "Non-Governmental Organization",
-      "HDX Org Key": "ifrc",
-      "Logo": [
-        {
-          "id": "atta1q9Lt9NVehdJR",
-          "width": 825,
-          "height": 464,
-          "url": "https://v5.airtableusercontent.com/v3/u/47/47/1762560000000/8wQbSLeGF_BUjCMvKa7zjw/NuhX1Y14VghMiCF7mhyknZi3PiVHMRmdlXOOaK4Wk-lLnJ-RDvxT4_6OXMa7RwCm-wRjbJk7WMrc_N1Qfn-hVfON3kxOXjLggPuWBub-7Cb4FHOehSBPV9FXcG1DULHzYtvJ_8Q47X5hZehMRJehmbmXVygg8Ra56XKXE_wlccs/Srb-ZkYV-4MtoXlRMK-NVkfYsZznhYjjaN9CqgS_nfY",
-          "filename": "ifrc_logo.png",
-          "size": 31975,
-          "type": "image/png",
-          "thumbnails": {
-            "small": {
-              "url": "https://v5.airtableusercontent.com/v3/u/47/47/1762560000000/Jt3v1BrJiFg_wADntP7xzA/HZOgYsrY5TKLhoetUciaUhD25WCUJx6HCZDk0wuuV-I6kEd6jkhFQKAtVNsY9mlufPCmIPpahUAuC_pbyCIBQUuhtRIqtLKRyJsduRaeIrl8g0QohXIV1ZCxOJfkqEmNsdIIvknc2kWtCCMfYQr3TQ/ZFo80IsBmL9K_XAdgpYmrk1wCIz-1RkJF6y7_ZJyzLU",
-              "width": 64,
-              "height": 36
-            },
-            "large": {
-              "url": "https://v5.airtableusercontent.com/v3/u/47/47/1762560000000/lHmmqna98lITllKZYWgKDA/lf1zmFpe6AWLjj52OAGCTvyelVcICfe64aW0EEAqSBYVBOxNldO6Tl9zeAclJMQa0y7pm91wp1OdtwWr7mfyYiQtKwCVoY99UM2hjF8HAEBdTAKGhjMjMO6PKS6w-u66xyDRxuBeh06YBos5OiGVyA/tOA7XkiWWA07wsURXIlHqq2SPYNE4-xWHiDFMkbuF5Y",
-              "width": 825,
-              "height": 464
-            },
-            "full": {
-              "url": "https://v5.airtableusercontent.com/v3/u/47/47/1762560000000/OQIu4Tn-XhlJA3TFTdtidQ/QUGhpKJ69KboYbdKB_NHgtXG-HTNUWBDbmNWCQcDMpeMUMlIwQ8UDPpqpymCqSqIR79-FI9Uyihg6tZyUvlmT2_LaG4TNBKUtyHSJ9871PMUsCGrB_lyrF1W3qtdNb3Kc2iVCc8F2tQhP58WmHFSCg/MLd8krdeKvoc-7iEuYK-ZLQYkeyP1kASCrE2tesBGcE",
-              "width": 825,
-              "height": 464
-            }
-          }
-        }
-      ]
+      "HDX Org Key": "ifrc"
     }
   },
   {
@@ -2868,35 +1440,7 @@
       "Has received CRAF'd Funding?": "NO",
       "org_key": "ec-jrc",
       "Org Type": "Government / Public Sector",
-      "HDX Org Key": "joint-research-centre-of-the-european-commission",
-      "Logo": [
-        {
-          "id": "att3xsPXodIQFzbHt",
-          "width": 678,
-          "height": 571,
-          "url": "https://v5.airtableusercontent.com/v3/u/47/47/1762560000000/RgnTn1SNkt7djqnQsMIQNQ/rM19icHshTq31ezre6Q5cTCW0mYNjJ3z4TfQY02bkn5KQa6d9JRy1s7RMbv2gdxUdWhHSop1xjoBgJg0OU6ITedctBnBFEOCDNwvhrxoxQ1F5iad8g-qMUilKmSGuGyPaB98-ZKWS9NPkKeoe-dfah9Ji8KIxMVkJjPxlcuuqJA/DxD2o2x73TW0LEAow8Qum69fsLWpPTiPaUDzPASmmJQ",
-          "filename": "logo-JRC.png",
-          "size": 23060,
-          "type": "image/png",
-          "thumbnails": {
-            "small": {
-              "url": "https://v5.airtableusercontent.com/v3/u/47/47/1762560000000/y8LxqFm6giOtmZoyC3km4A/XSWkW4X-Lq-Y77s_lwN7uNN2LHuZsHkFtwc4J7qxIG-J7EmD1yQcJVLDyH8Tr-RvlY3jGPgBGQ66s0WfrIOVJ7BCKJPex7MGgp5ETUZdq5OBmI6H7vux49vnzhNI9O7Lbol2na33r0mTtHPx4p1F6A/ajy2znnwtTLtxStGePK9olJ3kyquKGEGBe4BOLOnLfQ",
-              "width": 43,
-              "height": 36
-            },
-            "large": {
-              "url": "https://v5.airtableusercontent.com/v3/u/47/47/1762560000000/qBsfgV50bIDn0E6Rbjp_7A/Mdeartstq-D2V7sF317JG1UzcFcupKBPCAYIsYG-k08lzxGkQX_A7BD5cn3t-4PG-F0e_CuUdESEvj2zU5rkqF-qgZQbUyBy2ZfsYRYOEeC3xS2XMnGeRvBAV--WtfC_vibbx05gnUTuH3YQg3MSWA/ocWhs87YBNOff6MtQvo8KlxHR732eIORCjJh9rkqXng",
-              "width": 608,
-              "height": 512
-            },
-            "full": {
-              "url": "https://v5.airtableusercontent.com/v3/u/47/47/1762560000000/lwVw0SG-AXCWQFhgA_Fajw/XgvWpfoRslcMZ-HgcdhsB8bBR0bMoRXkYcyPTgZ2q9g-hgydKalOx48Ph-VGv9rZVTcpxvvf8hG-psTVeRdHZVfFPRau_4ozopUSBg4ZaVzwOQ634c7EW7DOy5YbgphnNp-mXp9AMh0ImlkhSM5nQw/lWnS-j-F92LMnwLU0toLN8hSl8avgmSjkzGhJzQbUNk",
-              "width": 678,
-              "height": 571
-            }
-          }
-        }
-      ]
+      "HDX Org Key": "joint-research-centre-of-the-european-commission"
     }
   },
   {
@@ -2924,35 +1468,7 @@
       "Org HQ Country": "Germany",
       "Has received CRAF'd Funding?": "NO",
       "org_key": "unccd",
-      "Org Type": "United Nations System",
-      "Logo": [
-        {
-          "id": "attieMe0w1dPOgJyT",
-          "width": 256,
-          "height": 256,
-          "url": "https://v5.airtableusercontent.com/v3/u/47/47/1762560000000/3tCvMz6KoZJqCuR2TCK9eg/pj6v9aJsMsZV1bpN8RGEFyu0vM8OMJlkveNKK1b8H5bNIAj4XfNPbc_eiKk9rgroUUrRPNZvnFQWlXvedrXOt9rJTGLq2khbQOtN8v0vBnvUYGVCR7HZEjjzBkCdVa7SVVWFpz6LiyPslj4y_aPgzzIXLouBAKJsZ8DpKBqKmoA/1ugx8in3rW9bTIwlInaHCpA94OTwHOp-ATOAn5yB0yk",
-          "filename": "UNCCD-256.png",
-          "size": 20467,
-          "type": "image/png",
-          "thumbnails": {
-            "small": {
-              "url": "https://v5.airtableusercontent.com/v3/u/47/47/1762560000000/HcywLhJqDo1rQsPGWD4hfw/CjIIoE2Ta5d2TM5aPNn0PCIvS2se-pLujY38xmDF4EcRzrgLi6Ccp_ZhivMiEvCjwh7mw3pwNl24tOv29l-ON0ATLPUgjfs999Pkq8i2vqs9Kwm4wevqxud0iVbTGj5UwAlVbj-OgmDvYExc4elhyQ/W70CmoOY3-VUXv0nSVvAZIjMtfgUfHQYxlj7sXIhnjk",
-              "width": 36,
-              "height": 36
-            },
-            "large": {
-              "url": "https://v5.airtableusercontent.com/v3/u/47/47/1762560000000/8PynCiZ_3-aCdlH_Hs-l9g/b14-xVJ2chn9UM53Sl8kxZThG_fWKTCjungsUJGuDARiBKcMSOUlJuNDyROvexXVyHXEze7XfO2T3cAWfcgYLfjf_F3JrFrYDYatw3-Iw6P21xmkroI8ySzRFv9xszOQ9Tu6xjiq6zkL8M8aVRSV1g/FMTJoMHfcDkAxCdwuhtmS8F72jgQcI4jf45hUrDUFxc",
-              "width": 256,
-              "height": 256
-            },
-            "full": {
-              "url": "https://v5.airtableusercontent.com/v3/u/47/47/1762560000000/mSVYYjx231ynNlKE2s16sQ/t1Q1314B-nt5j_7MOsajuVoiUbFWUSG_EhCG_Grlza6NSdYzrJMDqlpn6BoiDERSi8FR_RuH36Xu9GUVkhKJv3TG2hmUL4MzuUsOGABZyQpSh7Ty48TGqdyt6n7OKRnmjChbZdezlLI2tX00wBPcjg/bI1iDUWSceD2Pzs0jqVE6RW_bsE4sZbHNpO0fV1i6bo",
-              "width": 256,
-              "height": 256
-            }
-          }
-        }
-      ]
+      "Org Type": "United Nations System"
     }
   },
   {
@@ -2983,35 +1499,7 @@
       "Has received CRAF'd Funding?": "NO",
       "org_key": "wmo",
       "Org Type": "United Nations System",
-      "HDX Org Key": "world-meteorological-organization",
-      "Logo": [
-        {
-          "id": "attaMETKnXw3LVm6q",
-          "width": 248,
-          "height": 272,
-          "url": "https://v5.airtableusercontent.com/v3/u/47/47/1762560000000/wvojNDQeFc9Q2StutHrQAA/LdCCHdm0tXimhv1IGpJgmJ5AXu7-Xf24_GAcAcffithE_Xr9KgG7iignlYZUzz1iD6hbTukwx_Bve5Y0cn1liYTDqVz_47VPlfnq0Q6rHHLepJ86ipfd54TNMEwOesH0ALxSX7715O2tADPzKTbUQrM9fuLUYQDxJETbVybZptI/7_NDalNFrCeoW3e0tGndWVOSuE7gtBrii5SUqnOc4WA",
-          "filename": "logo.svg",
-          "size": 17969,
-          "type": "image/svg+xml",
-          "thumbnails": {
-            "small": {
-              "url": "https://v5.airtableusercontent.com/v3/u/47/47/1762560000000/VT9CeGqZGhMsEuQsutjgEg/B21B3uZpBesG4IDpkxTL4jUqirJExesW-5AF-z7TncXGrlDMS-O-CH-4TswDXAnP1lZ4nKJVUvkmYEcJiGnEXE2-_br0UAB40NJDTe6-zlx2BqkAnO6lIKZz0MJLIbh18B6-TFCO2vANjSJJR-innA/2_Z-2eKn9IpCnRynPgA4E0DVZMjASnzSVS7WVMKfTvE",
-              "width": 33,
-              "height": 36
-            },
-            "large": {
-              "url": "https://v5.airtableusercontent.com/v3/u/47/47/1762560000000/e7dp_raRT8YK0EF79RvtmQ/fSPHTS149YsWozPSNajtcrW26jqf0gOOLLzm7jp7fU63SDlEZplr-Da-QTQKc-PKXt_arFncMq0nDyYvQJRFvaNL1Z-CbQutWQyQPqNg8JXSRTOp16kMMhKnjyAQdGZy8KnWqAryE27Ag0ER0ORlJQ/aqDH-6so4-nC6EuJ4FMUnGlI6HybZGiIf783vGngMEU",
-              "width": 248,
-              "height": 272
-            },
-            "full": {
-              "url": "https://v5.airtableusercontent.com/v3/u/47/47/1762560000000/96lxmcO7T3ZaX5otKU8eng/jIjSiMQUdQpedm2E0qc5SOdLOgNQ64y_nLc__sjUvyYtweCh5hQfojDVEv8bll6C-eiXOc3pkXTwKSo8pJ8IYTfG8QECf_8dMC8yHNfn07qTqYmiqNlUok8tfgRy-Z4ZbpepIt05S1wPD8t2tYzcYA/LvghtSDbE7I7xqHZf94JYVYnSf-NRChz8I3r7zunNBs",
-              "width": 248,
-              "height": 272
-            }
-          }
-        }
-      ]
+      "HDX Org Key": "world-meteorological-organization"
     }
   },
   {
@@ -3058,35 +1546,7 @@
       "Has received CRAF'd Funding?": "NO",
       "org_key": "undrr",
       "Org Type": "United Nations System",
-      "HDX Org Key": "united-nations-office-for-disaster-risk-reduction-unisdr",
-      "Logo": [
-        {
-          "id": "attzsJMELA9GMSXvn",
-          "width": 663,
-          "height": 240,
-          "url": "https://v5.airtableusercontent.com/v3/u/47/47/1762560000000/VCREBUuuE5CynJNVVw1mOg/gxsjzsYpHMokk_bQiwt_VBMTGU5ntPI-2_C7Yp0sUx2Ho4Y16MB6tql56-zZk1XDrOubacJfs8yjsjx3_U0k30TUPDeJR6vcT_Aw-N7oOwCBOXbf0iackCXzMhRdr-vSKip7tBkY6K3htF1a_h59DUtCChjmAbMP3WN26kJOrRg/r2nfDqcDeB8VvcqoKI62DDjI_cXnQpTrlhWSywjR0Rw",
-          "filename": "UNDRR_LOGO.png",
-          "size": 12021,
-          "type": "image/png",
-          "thumbnails": {
-            "small": {
-              "url": "https://v5.airtableusercontent.com/v3/u/47/47/1762560000000/JUK9SIacXlC6TTLa_sHCoQ/TJU8R7Bg_3v3VHNI-0jFGsNOKeow601fOhPBTiqwm6uS7i6AizpbgoToE-xgFxbdkAx72rrkpioopw6F4UV2YIGoV66wo-pCFO06i8RGb1Dn7TPzHYzThXZA5_-YLr1dM78djte-HgwylkWgx7-8BA/gBG3ljV6kPi06eA0FNuuT7Lfj-KDXMU0iwQecAE4jy4",
-              "width": 99,
-              "height": 36
-            },
-            "large": {
-              "url": "https://v5.airtableusercontent.com/v3/u/47/47/1762560000000/aWVE4IE_dYwuiNqQdtJM4Q/jmn3xiYuOxvTkxiRu9prLomKF-W2roimfg_ffhueC4ckTICPJXf7FwghUhEldgd9i-KzgyuBxCqQRBIPAXy0Jt2la4xEu3KN5Y-9dKR4gnQPR1K-L7U-QHQUaS-CHuuIqac7K42axWSmjo_2b32ZEw/GBqBWoUhwYuZNyAyapMXNGVtLl62DFW9zoo5Qm23hA4",
-              "width": 663,
-              "height": 240
-            },
-            "full": {
-              "url": "https://v5.airtableusercontent.com/v3/u/47/47/1762560000000/FflVFWHrpDlDWvRzTBpGxA/zAjpdVvhCIb0_mgtj9IdLaOkZKkoi2ED_EAMwIqWECbgOJdAeXToeJtS1FMH05lWdpKNAYka4E_kgywz0gN4M_ENZBzcwtIzqp1rHC4PLbOdF-E1k6KYyQiptkWO7jCd6Yaw-Y3AeLKk387cp8xI-A/4J2s83M8hS41jCGpw-Ayz3oMMegmdja_daWdbBZUKlk",
-              "width": 663,
-              "height": 240
-            }
-          }
-        }
-      ]
+      "HDX Org Key": "united-nations-office-for-disaster-risk-reduction-unisdr"
     }
   },
   {
@@ -3162,35 +1622,7 @@
       "Has received CRAF'd Funding?": "YES",
       "org_key": "unhcr",
       "Org Type": "United Nations System",
-      "HDX Org Key": "unhcr",
-      "Logo": [
-        {
-          "id": "attG0YZfC8KxDVmWl",
-          "width": 2476,
-          "height": 2049,
-          "url": "https://v5.airtableusercontent.com/v3/u/47/47/1762560000000/suSMqPCpLijtFbI6SBCsbQ/Vvt5wZziM3_UHTcbuOw7NjyCjK5GhG_K5bfcjg6nkeTfw2fmup2Sw8clB0XiXy6zH_93khEKRpXCMHLUG0QbfqecQdlWOoMK8cgGILSBepgfX1DUH5425na8qz64y0H1SnRq7NUkcoSvx4ko8g42B936Ib67gVQgcu4QpeIeH_ct4v3dMRBfMhOG7e0SIDsT/sxDCDF-8krMsWeRN5SpvnyA1hZ0Xxf7O7v3OrZ5arxU",
-          "filename": "UNHCR_logo_only_(cropped).svg.png",
-          "size": 246361,
-          "type": "image/png",
-          "thumbnails": {
-            "small": {
-              "url": "https://v5.airtableusercontent.com/v3/u/47/47/1762560000000/uxz2JBKDrewlb8JzGiP_XQ/q967tcwrAahDkH-UuAlWgHNHfnTG7btzybKq44mjsjytUCorbp4nwNyVg0xe9jb_asaqFtCtYmWDh_wcgSHl6YM21uOkz1PNRvY1LZFxgTRbeobTsmpjvArIRkinXU0OhgyyfPT06gpK7sw0V0sSyQ/-6A4FV-esPIdcHGLyROvWnAl7lXfMgTgAxb1ffSu8n4",
-              "width": 44,
-              "height": 36
-            },
-            "large": {
-              "url": "https://v5.airtableusercontent.com/v3/u/47/47/1762560000000/EVvmpY1fTix6fyfYoFSeJg/prklDmT0ylVMGhajIwMxw_VnTMQCoeVf3TwcU1dk0Kn6ZS4FaTZdkwrKZtUaHtVPmH-hUPeICHSPN8-yrKg4UJbufmCZkh7GnvUFxGSs0dX9560FgZ97yra2Y9d6DshPeqPeo_VaG7Tw475myP8IHw/8T8NQ4zqZc_BHqUXqIMxM5dZmI3N-_L_i2oPwnMdtro",
-              "width": 619,
-              "height": 512
-            },
-            "full": {
-              "url": "https://v5.airtableusercontent.com/v3/u/47/47/1762560000000/04S6laVQZ_5Cc_uqxqCwDg/GQGMcH4bBuLor6HZL1bQGIsukfFSCZaxR6gGVBAKEKHNYpJ4Bqtyov-rBq3HkYn33U_R74DxORN1ETDw_B2rFOM3sJHnYqXbRwYcxXBdGE587rezqBCxIMNFHuOsBsh5Mar_AtiRZ-ma7Ge1ARUgyg/2FX42NbSNISaHhlsRo1GpqnPjYetxSStyKic8-pHv0M",
-              "width": 2476,
-              "height": 2049
-            }
-          }
-        }
-      ]
+      "HDX Org Key": "unhcr"
     }
   },
   {
@@ -3223,35 +1655,7 @@
       "Has received CRAF'd Funding?": "NO",
       "org_key": "3is",
       "Org Type": "Tech & Consulting Provider",
-      "HDX Org Key": "3is",
-      "Logo": [
-        {
-          "id": "attluzP8bqUwLnjSy",
-          "width": 1592,
-          "height": 436,
-          "url": "https://v5.airtableusercontent.com/v3/u/47/47/1762560000000/xbeZxHyC3P85vyOT98XCsw/6vycjplaVcEPP3UR5V5BXTnMbPSfaggHfm-8O98uEiH9mjzTik05vd7jolsxwBWrjogtqJKa5U81rpX3MtWuuvFQSIXINkCFnJShA4_7FxC-sD9gquxpvIGc4ItQKYsscJ2fgv4gL6YuKn2lM-Gj1sPGj6lTb0wcAeHVgda0Sic/OTIfk5di5D-kg1Snu0rU7ik8QHkG6DGTkuBSL1Yz9hc",
-          "filename": "3iS-Main-Logo-with-Tagline-1.png",
-          "size": 42201,
-          "type": "image/png",
-          "thumbnails": {
-            "small": {
-              "url": "https://v5.airtableusercontent.com/v3/u/47/47/1762560000000/6iDvxEFdNck9A17a24lJcQ/5tDDCJwQITEY9vS7Zj2uAcnTd1yDeGGu5ol-sbgeAcJpJMlOi50oJdb7V7bz4wdDXzIoR9c-ZRzDGD8-GMj48ni_PCjuYBHfmBcDMlnu9ylXqcz40MnwxJXPCR8oL0TRvQZm-rYegbt1jDEhhcrePQ/csKhQdFWDZhW8dOAc6DL-TI0WRxJhvhThvwEq96xDyU",
-              "width": 131,
-              "height": 36
-            },
-            "large": {
-              "url": "https://v5.airtableusercontent.com/v3/u/47/47/1762560000000/I51OsfIjls0vIjdsIBFROw/dY35ZIHqTv7ht3_sbLYFeu77K4nGl_yZV_o6oP-VN5z-G1A8-HNdy7qczAL_IFg-jnn8a7Gp-33_6d4oASMSJKfUTNpVRvVMBCOip-dYmRC8k8mQkrzyyXpJUX2VHgumQavaA9xMmjjWyWdaEIi3uw/3IEecXOa0l3fVqTmViQB1UCJq9svm887Fv5-NCJtvGU",
-              "width": 1592,
-              "height": 436
-            },
-            "full": {
-              "url": "https://v5.airtableusercontent.com/v3/u/47/47/1762560000000/YMrc6OHhBHOaVhj5YEyQtA/MuDPLWVbQz2zbyGDhLhBrZBjP9XZ80ur_tkGVQhfQ6smt7kkL1f5kS_m0SIgdtvhLHPrfZy6sOLbetjzgSB7tI9yJ6Nv1AquY4gwG-rkqbveIHcss2HtqY24N4IDECK7M52HaNI1UaOG_pfE9UH5ig/1PSf5uIprGarfWEFgxs3C6D22qaHqgtl4O6vqeLp1YY",
-              "width": 1592,
-              "height": 436
-            }
-          }
-        }
-      ]
+      "HDX Org Key": "3is"
     }
   },
   {
@@ -3278,35 +1682,7 @@
       "Org HQ Country": "Ghana",
       "Has received CRAF'd Funding?": "NO",
       "org_key": "afrobarometer",
-      "Org Type": "Research / Think Tank",
-      "Logo": [
-        {
-          "id": "attJi5X7wj2mn2N7a",
-          "width": 484,
-          "height": 226,
-          "url": "https://v5.airtableusercontent.com/v3/u/47/47/1762560000000/6IGYpbrY9No9LnMUAE-w6Q/Sh4xHvnO7LHIcXuJPHNO7efOdoUnuGC7d6P8xFqqN5AtWfadqqB6rCdrgLr2paWMo-DapUvPuIX4WQ_sp7p-_FBPq9WsvTKDAqdOroTZEsG9AUkEhkiI9_cH7zIUVDWgoEGeusN15ExE71Zw_0MSpfWVYGYJaJjsADu5gzC3St8/X5ydGIejjGf75itdWKCzhRT00zt3W8MS240qtL8mrG0",
-          "filename": "AfroBarometer-logo.png",
-          "size": 19916,
-          "type": "image/png",
-          "thumbnails": {
-            "small": {
-              "url": "https://v5.airtableusercontent.com/v3/u/47/47/1762560000000/q8sWBbfkVRD-O-b7E1-siA/bZ5fSVOxYCJ6-eFONd96YOboB-ko6nVcHDqRa2KuQX1MHVAjbEcmhw9b9gjnJ-0vQfDOEcyxtywdQCrikLprPGPANW1k0aC3oxPZw5cxU4HsvevJ-2ki7UJBoqvacUCH7AbiD-5uHpFJhkEfJ-RFyw/5bE2fkFw34AHdw0Fz8ezlpqKRl6HMd--D6bDXtR92Xk",
-              "width": 77,
-              "height": 36
-            },
-            "large": {
-              "url": "https://v5.airtableusercontent.com/v3/u/47/47/1762560000000/rnxPWGZVtcACWEY-m5vNrQ/OWFGJXdeiX_DlKj7oOQ6aBJ1l4LfP0i0i5h8cQrTjH7sqKR4AR5sHbnCBAeNcoBS7QK5IEmUFEKCKOnhKzLsuViOnfhojyiIVLxfZicNfd7S45FTeT-MEswirAzMe2LduZsdrcLp3ljRbccW0JP_DA/-lchnGJ18EElJrYVfBQjU69MfwQXgiW1FVUhgl2uyLs",
-              "width": 484,
-              "height": 226
-            },
-            "full": {
-              "url": "https://v5.airtableusercontent.com/v3/u/47/47/1762560000000/VKqIEbksXUdQKy7u_W53bQ/O0y-tT38Opwm88a3IrR_IbjU3Lrf7PvJ_2R-1A44CvjgxyM_6uoU2tnKDWGK6giJ9IAT8yAD8SbbcCMhy8BSIqU8__XhDwiJZTtFvI_nZfziJoSGHcCajOtey4ojy8j-uCr2wd6YRQdUMN0N7CqaTA/oV6uwiYASz5CPqI_uYy5-H53TLv1FUaljF58MrHboBM",
-              "width": 484,
-              "height": 226
-            }
-          }
-        }
-      ]
+      "Org Type": "Research / Think Tank"
     }
   },
   {
@@ -3333,35 +1709,7 @@
       "Has received CRAF'd Funding?": "YES",
       "org_key": "icpac",
       "Org Type": "International Organization",
-      "HDX Org Key": "igad-climate-prediction-and-application-center",
-      "Logo": [
-        {
-          "id": "attmG10DwkVjfABoF",
-          "width": 800,
-          "height": 965,
-          "url": "https://v5.airtableusercontent.com/v3/u/47/47/1762560000000/ko4sQutW1zzA1-cAnTKvlw/cnntBhE4jsNbCmyM5u2286gCAG8HNeBw6hKnlcOH7-M-rF_mjR1nhIPBW06IM9CDJr9MIILaaFMirg-gV9LVlglmWPfLGxeyesWAz-VfWgqKqItDAT_vHqvuWgOzZYgYoFcJtNyKRTJ7ViwOu5RsXi99xDOLoBU3SF_hKQwmpV8/sB_mY9xY4g6ciHmGu9LrjpWMKWA9OKxTSmMYqJGWGx8",
-          "filename": "ICPAC_LOGO_WithSLogan.width-800.png",
-          "size": 300510,
-          "type": "image/png",
-          "thumbnails": {
-            "small": {
-              "url": "https://v5.airtableusercontent.com/v3/u/47/47/1762560000000/d0xHwTlXiXBH-olit_dUKw/7QghS1omCs4WWo6FrBemvTJKdBToinUGgYdeklKSuAeFmNOzzbp0Y9yGlGAHtCGvZX2motsDcwc-mRt9eU0cgEBuHIbZeZ6M0DyuDCLUWRk4bc26ihPM1NexjMoiVhmpLYwH6qpFV1JGocBtuT13rg/j2glfn7Gpy-YWtZmGTXJB7B47AsAQRZ2wUzyx5AT05w",
-              "width": 30,
-              "height": 36
-            },
-            "large": {
-              "url": "https://v5.airtableusercontent.com/v3/u/47/47/1762560000000/r-vXseL4zi4JDnvRckiQow/842_4Y_QnCyH5gncNAIl5h0Jn1GU7kPo-xJouq8pODM0nKrAFk9SskJ2SZ9pPJY0EvoDG5GWr5qKnkSpoj0S4Xc1Jpzazhw1OYmsToCM-omoIxHzR5xN1l1gZ-3TuxroxiT6meNz30bT4IS6-FsfiQ/5JVGOAXgT8g58L9p3pQjdLl1KmwEsPaBydojwUDrkaQ",
-              "width": 512,
-              "height": 618
-            },
-            "full": {
-              "url": "https://v5.airtableusercontent.com/v3/u/47/47/1762560000000/QR2_mSMNfOVWpqpiuHMBHA/YSUznVS5RO_BFdzzOVdtKHR9jfwHFbj9L7AfJtObx_rm3SFXUKFuc8kQj6mwocsn_CkE-YBQXEAG2CS9-mBg3X-psBXRUtF9uhSSTKWvan7j79mD7FcKgtxRhku_i-cAOWXDcDEBsHIenM1JZLMsdQ/S_6N9YykFWGCw_HT6-jk5y0lRskKvQs4U60tTYPiabI",
-              "width": 800,
-              "height": 965
-            }
-          }
-        }
-      ]
+      "HDX Org Key": "igad-climate-prediction-and-application-center"
     }
   },
   {
@@ -3397,35 +1745,7 @@
       "Has received CRAF'd Funding?": "NO",
       "org_key": "fao",
       "Org Type": "United Nations System",
-      "HDX Org Key": "fao",
-      "Logo": [
-        {
-          "id": "attUZpJnbLgP1vtuR",
-          "width": 2017,
-          "height": 2051,
-          "url": "https://v5.airtableusercontent.com/v3/u/47/47/1762560000000/qzR1pAWIxIffkQB6Ksl7aQ/FczfQrbYxbgZToN_naGNwVVy_h79ApylXuodl-7ZyxOSQOY8bZKnDvA0-Goyz0hgDHdgKAlZwnA7aG2DCDv2gdOveNoHFeXOeeOgQYT0c2mB5BmjElS950SNP4NH_TUFw_PSOptbZiTRNmV0kU8LNNO_meL0wSr7QrGE4fbYj1U/Y68pzZWYU5yCVlJFfAOZb2YH_9x-guVh1HpFtOoQsTA",
-          "filename": "FAO_logo.svg.png",
-          "size": 246514,
-          "type": "image/png",
-          "thumbnails": {
-            "small": {
-              "url": "https://v5.airtableusercontent.com/v3/u/47/47/1762560000000/XyqdsX5HdHmhpUugk6FySA/7fiMWUIcMNY6v1pvGRGb1jwAH3SMAfWwZSrDolMLP6Vt-CnDNnwJzqnREgUza-6wni0cr4-pgFOe8CHrA8TXOyo9qvuq5W5KyIyILHF23rTT4dYoOvkkVONJV2UWWWu7A5Llw059NLsiJxhEv5cqEA/csG5UfUGk6nWCqOs2LkoxjnG2EvBz0fCLocce_3iW7w",
-              "width": 35,
-              "height": 36
-            },
-            "large": {
-              "url": "https://v5.airtableusercontent.com/v3/u/47/47/1762560000000/vZ9hU_U6b3XPejzKYMuq1Q/iI5I1MxSGtuowmPM_vyKvZ5XnL_5_hVsuGq4gwnyzXWiW3fivUCtdu-ppDgnANGRtdKWQUDJ1a6rlaUPbYBiqISzrpbWI0nqpjF02Lbz6_VL55_dhE6gmi848V7UliLhi6A0TBm4jxkH8gVKGE0C0w/PcGKFGeNodZD7_2DbXMIRM1s9PPofe5BlTH5vhCF_rs",
-              "width": 512,
-              "height": 521
-            },
-            "full": {
-              "url": "https://v5.airtableusercontent.com/v3/u/47/47/1762560000000/ZuuvrUMKTc4AiecIdDISZA/16B9uVKUoNJiFrh-yEBuA-ceJVSe6Xa1SdqvPg3vs1xl2hSaXEzKMZacHj84t5jz_tsLzZLG7miqNX3I-c11jAGxxrN5VUdjWp4r_-HmBEo8bh6Rpl8iBd2mM6Soo-nef_ADEIXCFuhelei9nJcKOw/2-SM8IheIfZ1P-4MTDusKpS0k-l5f9QrbIJc1-okqdI",
-              "width": 2017,
-              "height": 2051
-            }
-          }
-        }
-      ]
+      "HDX Org Key": "fao"
     }
   },
   {
@@ -3445,35 +1765,7 @@
       "Org HQ Country": "United States",
       "Has received CRAF'd Funding?": "NO",
       "org_key": "uc-irvine",
-      "Org Type": "Academia",
-      "Logo": [
-        {
-          "id": "att5Q0Q26pse8XuHJ",
-          "width": 1200,
-          "height": 1200,
-          "url": "https://v5.airtableusercontent.com/v3/u/47/47/1762560000000/fDoew9LuBJOmwxaOraKX2Q/JlRt-aTe_5ZTBL1YPXs6LIoZHrTH1RWr_eOUP27lcXjC9c_i1mveG-N76tHPa4SVjcToZ0JkhXADOafzBG5gA6QzoxJDhfLj4kwDV26-MfBUDafPE_O6lHU5Uz_6AphhsIUelFxWMd1b2lBIAETFiIIlQp--zwJoR6J2EiqXpDUGkOg8pZD7iCBUli54IIkgW6iXnpTU82YHCV1862E9Yw/FRtKUPOz5IZSZy2vN8ZW94E99YKMUf_YJdcTs6X7HCM",
-          "filename": "University_of_California,_Irvine_seal.svg.png",
-          "size": 263416,
-          "type": "image/png",
-          "thumbnails": {
-            "small": {
-              "url": "https://v5.airtableusercontent.com/v3/u/47/47/1762560000000/ss3Q1ZEfGfcbKRtUD7cmMA/1YSFKClRVBuH9wwkWvCgv4JBikExKHdJwbMVAWou8iyrzaNXKbS7KX3IjG3cYupLKhW8HrABROCiTX33yDi_nil7IEhm_iXGnp638StpJH6QaGvOyeOcec_i2oxkGrNjynkGc0hlC63Va8pSOaj7Pg/IMO2HT4YpON9tu5u1xVEf0l57QkLMkI2L7Xz5aCU24U",
-              "width": 36,
-              "height": 36
-            },
-            "large": {
-              "url": "https://v5.airtableusercontent.com/v3/u/47/47/1762560000000/HaWVZTqO_dvub7jdVQYkzg/vMzsdi8tvc4kDXvmsNUqVk0Yt00nyiWEiDe_510eNIZAyuf72GSpN5czZorNdRTLDfc8STNZNx2wYgRCdJwvwtAibEcqCtywe0QkbyeBqrgt32Uwebeyx69pWEJOn95s4sVA1afyY9pcC-SmROjeHQ/18-FGGH8mo2w22VT1i4AAMvbc6T1Z47TtLUM_vSg_DY",
-              "width": 512,
-              "height": 512
-            },
-            "full": {
-              "url": "https://v5.airtableusercontent.com/v3/u/47/47/1762560000000/02XrKcF7qP-w3NCeeJMxFA/W0SO9RAlVg6Cc9UY2QzzjYN4ATpIsAAzq4juft4hhuQu9MYurX9Tdu_ZopBghfYMSwQwU3pUrOugRaslP5NK7U7A48TKO6tOiBVqr87-ma1w2qH1H-fu-9d4xZcr9LSgpKZtCGAXxwUH15YnzpEZmw/5onZBJjv8u1hVo07QIJuMJSOkhKu6ctJ64j-s2apck0",
-              "width": 1200,
-              "height": 1200
-            }
-          }
-        }
-      ]
+      "Org Type": "Academia"
     }
   },
   {
@@ -3500,35 +1792,7 @@
       "Has received CRAF'd Funding?": "NO",
       "org_key": "world-bank",
       "Org Type": "International Organization",
-      "HDX Org Key": "world-bank-group",
-      "Logo": [
-        {
-          "id": "attPhCv64agSEzzNo",
-          "width": 1863,
-          "height": 844,
-          "url": "https://v5.airtableusercontent.com/v3/u/47/47/1762560000000/xMA7nLHJSMTMLfwMOweaEQ/8hRM9d5b3Ax9QQitmHsbW92QFw_hU9Zp6mghOQsboD_NgUlnKAIxsXgr-1RYkEaV6zuc4iAhr83HExzY0EPoWvWlMjczrQcCjZSssuzTBldk71kZ4nc_FNLjb-r4BCGfujLAWBHYOdv2OCYmUJ8KeS_jLO35exoCmmfsdLEFL_8/1xWifXcPGrD7Hl-fULpbAM8s5gyKSQW6OZdvT78zvgU",
-          "filename": "WorldBank_Logo_optimized-17.png",
-          "size": 92531,
-          "type": "image/png",
-          "thumbnails": {
-            "small": {
-              "url": "https://v5.airtableusercontent.com/v3/u/47/47/1762560000000/z9lCQAo-811lC2knkShJKA/TfOkTRPG7bCiD3HidliEzsDPdEDAoZ7_cwpjrZ2K8XR4daf-p2G0V-IRYolacpqQu55CLyhRxMxPc1BD7b9FqQJFVSdPi5L-rpLFTxZ9swb4LvQ8DGyxDGYK5AYNTgLYiwM99W4WKPoItMWQryoQJg/mcQIjbHNC82zqpTsC9wJkog_OtxGpd2aKY2aFodfW40",
-              "width": 79,
-              "height": 36
-            },
-            "large": {
-              "url": "https://v5.airtableusercontent.com/v3/u/47/47/1762560000000/ZFqOxmtSK9jHGV_Wbnwv4A/aTMXXZs9dNe3-gsKB1JVvqDWnhQ7nnDesZ4uMaHBWx2rKlsskKylGc8L2WVQ3a0-wVGFizU8G5bdtded3GRvQtdDZCnrDXraED2WcfKOH0fOIAPl-2EEizyMKq3sxQG0dwb3IqFT34wN32iK8N7Krw/oDjXkV479C8A5CsMgfJBPMdh7fKQ6ifk2jYHa7JNYos",
-              "width": 1130,
-              "height": 512
-            },
-            "full": {
-              "url": "https://v5.airtableusercontent.com/v3/u/47/47/1762560000000/8au2_eo-cCTFQc4sf54iHg/1BUN6W91By1GMvJrua3sT1-IShiT9I7yrz6ulwiumP49Cn0Utwfcrsv-cxSB9_KOa5Yi2gcIXL3g5EZ5ZPThATcJv7_jDhph0TMr6xDGlnVxEqYrSqVAHM9Q9dbzu0X3aO9Xl9iknLZjKdiB_ObqHg/7dJuL10aXsPS0KRGBWIKEzJc2NcklJl9I4EFYv7-O0Y",
-              "width": 1863,
-              "height": 844
-            }
-          }
-        }
-      ]
+      "HDX Org Key": "world-bank-group"
     }
   },
   {
@@ -3566,35 +1830,7 @@
       "Has received CRAF'd Funding?": "YES",
       "org_key": "idmc",
       "Org Type": "Non-Governmental Organization",
-      "HDX Org Key": "international-displacement-monitoring-centre-idmc",
-      "Logo": [
-        {
-          "id": "att6qk3OGAPHRVXu9",
-          "width": 1620,
-          "height": 412,
-          "url": "https://v5.airtableusercontent.com/v3/u/47/47/1762560000000/M9nAEdk6OJBR5dw7OpqUwQ/Qnjf6971CDcyBxR8VQZQ4Hwp5Uy_t86sbkzxlFfNVYVIAdVPBrp8QducR1WJNCEaRI0shoJfPcIt4EvfUPAaLG_iRC1X1w-VrrbPEziotZXFwf3qobJgkgmv7dQ7ouy86zMC7fh8vhJ24xfpsVcF18V8lj30x3-aJfsr-KW-1WE/y43q2DNUZNmvAiYpPKDzO-9oH-dn9BJC9TL52FmQWpc",
-          "filename": "idmc-logo_blue_white-02-1620x412.png",
-          "size": 17954,
-          "type": "image/png",
-          "thumbnails": {
-            "small": {
-              "url": "https://v5.airtableusercontent.com/v3/u/47/47/1762560000000/wz7AVSckpk8HobfQOoxhXw/Kin-8OVBr5gIIK3C2LANCzL4FI-TzJbCaqOhwnL5Dfmd8eMghI9tCExZ0Og2zNab6ez28DE8ogrtDMMENU5TCaEJs2i2JJMe5DLcjiBIW7FUn_g-a61TFYCv3HsY-CukYfpU9f6kSLiYQabdXaL-Pg/bUuRlRPmS30snC9MnOouel23ZOvzzsveil4eL2XYIbw",
-              "width": 142,
-              "height": 36
-            },
-            "large": {
-              "url": "https://v5.airtableusercontent.com/v3/u/47/47/1762560000000/WfYTiOavxGlE47GAkLm5kw/19yx9KzJXJ2bvHgv6wagk8k3-rPTpy86jXSLObyQmfkk--kej4fk2kKpOoLOJTzMAiNkjRsFD7BN4WYnPwkJbs7ZVvBFZITK_eoFNOtgx0VDeSXpPFuZj9MDW8hNlo1uqXYsujufF2xofQiEwhl2-g/bSHqIHSYPBNro3Wd8A7YqKk1WnwHjxJesY1r6WhjDIE",
-              "width": 1620,
-              "height": 412
-            },
-            "full": {
-              "url": "https://v5.airtableusercontent.com/v3/u/47/47/1762560000000/Vv6FcmwlDiHH1T4_0hKgtQ/2J9EDWCEIqtjYGP20Qh1Mi5ecUbuIppRsGb35RxRppxc6P7ZAEnaEB_r5T7SqlwRzqwTHlgQsf-kyekNkD1V-NyxRkHYJmfdMJgClywFYoR0asV9N0ND8xKE1kd1zHzqmIusiG7L5z7xNJYCLwkl0g/_nWDn2pQwuFWkphBAMRVdn4_zq-z4Pm-lkgGz_TRV5Y",
-              "width": 1620,
-              "height": 412
-            }
-          }
-        }
-      ]
+      "HDX Org Key": "international-displacement-monitoring-centre-idmc"
     }
   },
   {
@@ -3617,35 +1853,7 @@
       "Has received CRAF'd Funding?": "NO",
       "org_key": "eth-zurich",
       "Org Type": "Academia",
-      "HDX Org Key": "eth-zurich-weather-and-climate-risks",
-      "Logo": [
-        {
-          "id": "attcMV0UzsITjLx3J",
-          "width": 516,
-          "height": 476,
-          "url": "https://v5.airtableusercontent.com/v3/u/47/47/1762560000000/ILOFVRZJQirD0MyFsfPtiQ/hJHE79BeYtbu3U_FyZP4zA-jrMDl45A4IhuUQhZXjwC4G_knByS2SsRwf79w6mHG_sJx34htzVOvt5WI75sfswxO8VEv0q5xngXEObf79x6VrptTG1NJlt5F-6nHrpS6oJ4KoQLv3x6aXyoE0zjBOw/V8cSBaB-2XDDRtOcsRPaTskVtujL4pTUW-czYNSURSM",
-          "filename": "image.png",
-          "size": 22692,
-          "type": "image/png",
-          "thumbnails": {
-            "small": {
-              "url": "https://v5.airtableusercontent.com/v3/u/47/47/1762560000000/2SMjYHymqv0t5s19VLyA4A/PIAz_E4JlwUK3cFPxGj3_9RLg0QLkHjApJHKFWPJL26w4uWEuYajXCCURgUzmaWTdaW_aL36eDc88aQwUD9rbethn8kRMs7JCGBUAEi5X_2HKkjBl7zHAZjk7ujj-N1u9nV6P0yblxt4c59xp2D6aQ/_Uicp04M_H4ar9mSMuYS8AWqEhlyXaRNJjUwOTRkago",
-              "width": 39,
-              "height": 36
-            },
-            "large": {
-              "url": "https://v5.airtableusercontent.com/v3/u/47/47/1762560000000/NEYC7fFY70ZD4XSP_CgTLQ/rQQlv-nIbNbJMT38SZhBZdmkojxxmleGnQ9TMyVkKQ0_D3P43TeH_jEHhleIpmS_Lc-1Kf3L8DUErFn6JMBJGF_ZUBb91fxC6xAQ1iaeBfYROVgBfG0JIOBQCWxDCw9yCfq1-clyky4NWK5m0JHSiw/WOkmQY7cXDOXcbn1b2nmMkQjzBUiEF_2SsSDPlt2EI4",
-              "width": 516,
-              "height": 476
-            },
-            "full": {
-              "url": "https://v5.airtableusercontent.com/v3/u/47/47/1762560000000/RfBBVcAhfkiWYSVppeay2Q/2L5efemJaiia-18cmGJX7BNaF7qTZDnEZSUznSkTe7HPXZwxjpcsEC8uzhapHZwu2oZ6IGLHEyAeZrUfmpLuoobq3mon0UWRcggEmZzW7noZOU6Duzz-OkKG2nPNoui1WNFlKJ2TVcSgRcVmUfpgFg/TH9tqlo5GAsP_1i2iGm6O3hMcDANSHeLStUrrHX-XhI",
-              "width": 516,
-              "height": 476
-            }
-          }
-        }
-      ]
+      "HDX Org Key": "eth-zurich-weather-and-climate-risks"
     }
   },
   {
@@ -3661,35 +1869,7 @@
       "Org HQ Country": "Denmark",
       "org_key": "world-bank-unhcr",
       "Org Type": "United Nations System",
-      "HDX Org Key": "world-bank-group",
-      "Logo": [
-        {
-          "id": "att6UYlOeGjLAvBkr",
-          "width": 700,
-          "height": 320,
-          "url": "https://v5.airtableusercontent.com/v3/u/47/47/1762560000000/wHzG00UHwz7vBDiJrHY6Og/daCjEVnS0cgwxc-FJk01wId3W8iBnatkTFDwvO_gXcdDNiebtDgQ2hjSRhfN9lrn-Co6uJe1aigFnQcckVJcac4HhawTDjFvp4bG15j8VcEUPXcXNIEGY78xfNY6Wjk7c-217RKnKDs92_HovfUtwezogdXoUwyu-oM7gXSaRQk/6EcNe3YO9sUo-wNPEYR-9_m-9qlyVcUbk4ILCYWufx4",
-          "filename": "jdc-wb-unhcr-headerlogo-mobile.png",
-          "size": 42228,
-          "type": "image/png",
-          "thumbnails": {
-            "small": {
-              "url": "https://v5.airtableusercontent.com/v3/u/47/47/1762560000000/tLupeGkzCRZPo743JXgJqg/EeJpwK7i3Tn3bg-u2EtryNbeMfZg7_Wm0C7hbyAP9RUX2h2A-q9d8rUpXxYcjuR2slTgxYHC20lcdDvEKVRAtwAAlHKV0tjo-OSmqP3iJAmMrGyqz44LEzmd6LDs-uh0vFEW7j-yGl2MJWeKvnufjA/HPSvj6JtF_O2S5IgmjNYGB4LY_AvlFNeOFWv8suDwTA",
-              "width": 79,
-              "height": 36
-            },
-            "large": {
-              "url": "https://v5.airtableusercontent.com/v3/u/47/47/1762560000000/r5XQUKQ81g1eUvvstHuPCQ/xdsNLzR5vAmL9WUGZ4PQU2zzlgkXvL9XvS35ii-UePMT0o1WiVValqQImWSF0KmJ5q7yangevsqDE0jP1I-ibRom-Uf4JidQ2-CgHXWYVzeWOMw0g1R0vbWIS247V3fAzAl2aH40_6aX--WGxEl1zA/TdpdpBlCPUCIh7fodKUx8gKCLxJdN3hq63EJauAAvLg",
-              "width": 700,
-              "height": 320
-            },
-            "full": {
-              "url": "https://v5.airtableusercontent.com/v3/u/47/47/1762560000000/tIzvWhItKPrYZKZ-C_mpPg/sY1YWtgvYTmBYMWzYaSKiQcs9l08-6XVl2mibnQ2PSqxU_54YuCU4EeUozaK5A9Azqqj2ItlrhqGy6GGBvwFd2vSpRsSWqBkTE1qlLMoYWYae5PRjsCm6roV9cb1OmGxRbC9RW2tnLrIlVHnNluekQ/5wWPg39crf9piVYOPmZfkEcXjRRzBjqgNQc3QYRwrzw",
-              "width": 700,
-              "height": 320
-            }
-          }
-        }
-      ]
+      "HDX Org Key": "world-bank-group"
     }
   },
   {
@@ -3710,35 +1890,7 @@
       "Org HQ Country": "United Kingdom",
       "Has received CRAF'd Funding?": "NO",
       "org_key": "start-network",
-      "Org Type": "Network / Consortium",
-      "Logo": [
-        {
-          "id": "attiyEEl5e1CiUxYU",
-          "width": 226,
-          "height": 140,
-          "url": "https://v5.airtableusercontent.com/v3/u/47/47/1762560000000/ivPTm7uLPfTmGxhad8WEdg/DfaWUIohsIuvdksrQAOzD_aE3db_4OWP2xRxIy6QtohkxIi2DPOxLkKkJJVmACbT1zpdiFFNxXe7uYB1H-f7q2_m_BrEQMd4Hty6iYl6IsQVkj-O3GqI2m61R7C-9MVvGXD_T15UdEBJOpIlvJCMKFU6kEHVV2aiZLHRdu6Jivw/ma-jSuC19WvDpymXos8cEpT5-pdMCwffj4LrzKkKz0U",
-          "filename": "logo.png",
-          "size": 3117,
-          "type": "image/png",
-          "thumbnails": {
-            "small": {
-              "url": "https://v5.airtableusercontent.com/v3/u/47/47/1762560000000/Gy4Z9H95i8YptCVqPgUb6A/HsBrZOKk5nMRDCIQ4e53eDTJj_l3jlsGK1gXapU4svl5ib22zr2U3Lk3vZVOdUSxewBDotp9qDEdOsUeV5TwUDb-XebvapheM8bP693PsKtv_IFmvrYnQqSvNu25HzQ8sgwzOa2JMGvaQ6w1RtAyCA/_zSf9U0wNUbuh12xkbi82aS9CnmvT9R1N3upZm-M8ms",
-              "width": 58,
-              "height": 36
-            },
-            "large": {
-              "url": "https://v5.airtableusercontent.com/v3/u/47/47/1762560000000/QsMj_XWj37tlSg9cwhYXfA/fp1tCowmtxvu5vTtCCbunuwMVBaf6DP6q99GP1A8PFsycmngZnqv2VgcVRJIVCBceo8XMn3SZAXGANMnXhr8kHDw_VJprBCC1jHJuT67b-3UjUGUn8_pwhCBwMAuOlgJEUihCv7-dCiuRr1VL95c0g/DGy_c9RK188b9T33_TZtEoSrMLqTR6svXGfylugKrYk",
-              "width": 226,
-              "height": 140
-            },
-            "full": {
-              "url": "https://v5.airtableusercontent.com/v3/u/47/47/1762560000000/3W1Oz_OtqsARqPqWb4s7wA/DazU5lFa0zsGXttalLLeN7GHR08HQMLnefdEx3hBOiC8a1s64w10fb9mJj8_IAwz-S16kXE1q7iFg1M5qV1KGtAUB1Y5r-5TrLPC4OxKqHkA-md41EKdnddvX5F1FEXUbImg3QrftpSFgM5SVuHgAQ/bwWQlb9BBpYgqoY4rkAco7bOgVr1VSn6865tiw6LSpU",
-              "width": 226,
-              "height": 140
-            }
-          }
-        }
-      ]
+      "Org Type": "Network / Consortium"
     }
   },
   {
@@ -3773,35 +1925,7 @@
       "Org HQ Country": "Chile",
       "Has received CRAF'd Funding?": "NO",
       "org_key": "latinobarometro",
-      "Org Type": "Research / Think Tank",
-      "Logo": [
-        {
-          "id": "att7mADCY1U3Zwg9N",
-          "width": 863,
-          "height": 913,
-          "url": "https://v5.airtableusercontent.com/v3/u/47/47/1762560000000/v768HnauuBvdbNy1iDlgeg/ZNagLPnnXDdfkr4gCI9bVIksUzDD9eos8NxjWzlnd4ncIz3QGFtn8mfbvV5SsrPp5EDsa4M3rrSsEfixzoEk1XcFh9AiznbKFbnBRrZnYqUlTd9z9bxrBcwb-OSFjXeCBByMdWRa41E17mKhfmnWpBFLhF0FcFV-FVii9poDjLA/ULqLFouBl37qRpsSWCgl1ubybwOjBukyEMBv06eCaz8",
-          "filename": "logoLatCuadrado.webp",
-          "size": 36390,
-          "type": "image/webp",
-          "thumbnails": {
-            "small": {
-              "url": "https://v5.airtableusercontent.com/v3/u/47/47/1762560000000/4e0pIa3FBA2xGXBQrh3wrg/usLB-CK2sgDgKkKLvUeuklWkiXspj_0i7Imig2dG25vgOIz6U4Y69-Mqk84kDviSbpXDnJtr4EXKTTydSWajbZ0vVdlQbxoV9duonk84HRrs3WVFAgYyGSTgXqw3xB1k88vGYuUvJZ1pDRRmgquBYQ/_Y122OleA4xEHPlBe-HfaVuiOtnrOwISGQWxaF6UruU",
-              "width": 34,
-              "height": 36
-            },
-            "large": {
-              "url": "https://v5.airtableusercontent.com/v3/u/47/47/1762560000000/YZCR7j7idfl4a_gSWgAifA/wKb04-gYTnKQmNgfKcDVCy1klZ7bos0htCutw2UVt_nFMQWq2RrsTBvAdrB7DqTI8rAjFg9KQKcx1cvzG4OXhGMeUh1Kt3QXdGD-6K9xMgKLgNL4QMVF8bEhY9-kvKPN2CFbtFSlxxU_ECpDtfByAw/ia2Z1laesO35ErwyJg2TtjSsxHFGlqjemfplQ3eguvg",
-              "width": 512,
-              "height": 542
-            },
-            "full": {
-              "url": "https://v5.airtableusercontent.com/v3/u/47/47/1762560000000/zyCcAh3lS8oG-pxoroK8TA/TBu-pE7NoXSTbB_5R-gHYOmQiv9ZJc1vFRnLNACm6eN-lZsqvWMus2rQZWDsyCjNh4JR71g5AQkse6u3VPNXPepvvuQISsnRa1umt47ueEAlHiVSAnpPy_ptNbsyWuU0jklVYzxcinqQJPwMwVAExA/tluuW56qp0uhEyCZQpvgq0gaHvcMCIUFsoXNmFIlD5Q",
-              "width": 863,
-              "height": 913
-            }
-          }
-        }
-      ]
+      "Org Type": "Research / Think Tank"
     }
   },
   {
@@ -3869,35 +1993,7 @@
       "Has received CRAF'd Funding?": "NO",
       "org_key": "pacific-community",
       "Org Type": "International Organization",
-      "HDX Org Key": "pacific-community",
-      "Logo": [
-        {
-          "id": "attFK3a1IEHCQikRl",
-          "width": 693,
-          "height": 281,
-          "url": "https://v5.airtableusercontent.com/v3/u/47/47/1762560000000/Ud92F38QvzoaXrZtE2eWCA/OrR47ad3tqiriQWgWvlaV87ahvLWlUnJpXIiwq39IkVPX0dqjfE341jFr_iuK2gzX6bwBQ9W6tPwv5_NmvUUuXCusJ3YgeE04KhMIW8E0OyM0Ssu3ogLUoPT6yCE0e6x8mAOZ4cHRKhrv1G6ACzDWcB7aUmjN_PT6nYnJbNmA2M/n-NbhAyXdFpH8KHwuADiYihD4b7cn84DrynBXezSS5k",
-          "filename": "SPC-CPS-logo_27_stars-2023.svg",
-          "size": 15283,
-          "type": "image/svg+xml",
-          "thumbnails": {
-            "small": {
-              "url": "https://v5.airtableusercontent.com/v3/u/47/47/1762560000000/9R95kvDr_bGgNTGyLzPiAw/U0E9U-_f49Mo5CAIzLs8Hji6BSaQ4RN3ukZcvozW4ZF3-QikUU3O8xnkRDXL_qJzYqa0sevRh0BGvwDhU4MixjUFsBl2i0E5LWtehm63JPAXe3OBl4wgXJPs4iYIi0pT9ZNYaN7tGMJhOjbD3vWvdw/wH4RMe9tzEKK2h6WlpmVb0Qmk5TYvMvnB3SqBAw3IwI",
-              "width": 89,
-              "height": 36
-            },
-            "large": {
-              "url": "https://v5.airtableusercontent.com/v3/u/47/47/1762560000000/Y79-9VCUInuiis4IElcEWA/SSA68liF9yTeSzx-F8ATmNjyXK20bXZVJGkYki6zkw9KTJq9TxCXGozsrZMIbqAD2CASMn_H1l0d2hcXOcxenSIFjpLeritEoAX22V8QFkYu2y-pDLYdRw3jc4L_cJbWtybtM0tr4SuldInhsqHtVw/HExK9OnUSJdv2KV4zgXmLfdsBwBsDDFbL84jxO3VFjY",
-              "width": 693,
-              "height": 281
-            },
-            "full": {
-              "url": "https://v5.airtableusercontent.com/v3/u/47/47/1762560000000/jZ411ezN1NpJ9FXx1T6M3Q/Ju5HZDFzHYJ4lND5sRud5cTxhueG-xBv1rOqYh5UL7AtMLPa0eWhQ4cKkYgvIA2hYPJWsOfZSOXn43He4anJjkaS3Iu25V4s819m-F-6BapVhV06A3nWHkRSpudD7S0xOT0ruzymuKiwh0v4vp8z3w/4syDQQstLMTPHBalGHmU7BX_LXz989aCKw2RPqtkt9M",
-              "width": 693,
-              "height": 281
-            }
-          }
-        }
-      ]
+      "HDX Org Key": "pacific-community"
     }
   },
   {
@@ -3933,35 +2029,7 @@
       "Has received CRAF'd Funding?": "NO",
       "org_key": "unep",
       "Org Type": "United Nations System",
-      "HDX Org Key": "unep-ocha-jeu",
-      "Logo": [
-        {
-          "id": "attDx68qT2HtwnuuF",
-          "width": 1742,
-          "height": 2048,
-          "url": "https://v5.airtableusercontent.com/v3/u/47/47/1762560000000/ICkakqOmZoMRMfgtOfVFHg/aW3nhuLCQG4mACufEusreDNx4xNV6_gDZ2v_686GYZe9L-mTCQdqD5uk7YqhNG7uSkT3caLG0-efPca-8zkYLWESqatEeBAXNgG2ABJw3c1-m_K9o6kmJP35ivAiQddhAfob3Ydyh20DgMCzXKnj0CqC-WucarFAt5j-x7g9qvqw8jYB9YUHE7qu8ERwFOBOx78qQHBypUqLYn5HfeEpPA/Ix0gfcHEhr1eD1bHmPvIfxyuU8C-f1wUxJ1LaZRAChI",
-          "filename": "United_Nations_Environment_Programme_Logo.svg.png",
-          "size": 217167,
-          "type": "image/png",
-          "thumbnails": {
-            "small": {
-              "url": "https://v5.airtableusercontent.com/v3/u/47/47/1762560000000/dF6yxtHQI5HCjqBWZnc94Q/SsVcYA62_JEJYhO3M2Ecpx6RbIXDTIUZzeTe_bfEdFfz970jCfQXRNowLVIk46xpHckrgPpPmkWatGf3ayxZwd9Mcx652PIzlrYQDQ5rx_Gtr29GiCf-jTzWI3_qdzUPpl25bxOZ9g4FLRNx17BCzg/afrmWpS5s-0tV1cfP-m-ncSQFlrqEY5Pk470yK03Hu4",
-              "width": 31,
-              "height": 36
-            },
-            "large": {
-              "url": "https://v5.airtableusercontent.com/v3/u/47/47/1762560000000/GWgGgImA48OkD5CehQ_grg/JMnqJwLNDk6S52NZekPpfSC48_6GeuLsaEzL5pQMZOVhVX5F8SM4nqcHzsdPuKJsDlCBtphx9wlxXLS2iD3braL__uvohbhHuwJODf0e1TKPQLI21HXePUL86gk5ssFcUmxSEeZdbrmjFx6gVe7spA/sHU6Y8otaI19NIMmJ6jAY2EtkIBE_jM2_e_qgvR8Wic",
-              "width": 512,
-              "height": 602
-            },
-            "full": {
-              "url": "https://v5.airtableusercontent.com/v3/u/47/47/1762560000000/4bwmKwJtl42_s2TpQDMwTQ/DT0XFEptsQuN23PtehcXAmxpMU4fZ9vUOKWa4MEw0qWQ2f5BPiecfIw2ofxBFnPKLkMApnkRDzu85vcXrP_TuujKo5ZyY22RsGxhYz_wlmjQb1OkH3EII_xbBXKczrbCK5V0Gandtg9iG3_WCelUaw/CXJBrQAJ7GtnJ2KMw6XYkVvEgmpSsV7ZWBUUmTgF-cA",
-              "width": 1742,
-              "height": 2048
-            }
-          }
-        }
-      ]
+      "HDX Org Key": "unep-ocha-jeu"
     }
   },
   {
@@ -3983,35 +2051,7 @@
       ],
       "org_key": "acaps",
       "Org Type": "Non-Governmental Organization",
-      "HDX Org Key": "acaps",
-      "Logo": [
-        {
-          "id": "attVafAuqhlst5tZk",
-          "width": 582,
-          "height": 305,
-          "url": "https://v5.airtableusercontent.com/v3/u/47/47/1762560000000/gmkLwQLaKWKmgCEwF1nGHw/aYx6uZzJKvVp2NeQilstIGCsvTlq1v6cAaKrCZG143Wb7Qh1DRy7Lh8EP8seFLkPxAzupANSYeuvbOtOPYW8oqMw_AOjGHSeLESdwT72yBM8sZ1EjmtPWdn_BcXYrDNwYm71FIsYrIDJgKX8ZkSwhIWQl3FdI-y4HJzPuq8xxV0/VgoY-40BwwCjkJETotAQKERmYsw_XPjizUx5DXBmZ70",
-          "filename": "csm_acaps_logo_social_media_012bdf3774.png",
-          "size": 29755,
-          "type": "image/png",
-          "thumbnails": {
-            "small": {
-              "url": "https://v5.airtableusercontent.com/v3/u/47/47/1762560000000/BjFUIfc_BhpsMyo6tz4ShA/7W4GAjGUbRAtm0fIbM82oBvnlSDmlZEn7_CiIXvyQjEbiAc715QvhHQzZaru_-kfdkmXiTm3gqDU4K0o4EmJ9oH6XosYxcztLhRiXMoy3tl_u9y0-l4KTFsVhFr00GzN5cH0TOLBBwBlha3xO5ydiQ/Bno4jH1Hpy8VuhckVaGUdaLPeTxzhiVUJq8FpguW7iI",
-              "width": 69,
-              "height": 36
-            },
-            "large": {
-              "url": "https://v5.airtableusercontent.com/v3/u/47/47/1762560000000/Btg5xO_IS5vI1-e-OMAckg/aLDsuhd4rAqdz_I-ubcfXa_J0rYFsYNs6zRXOCDmd2MiX5NA3zEny33h9LP2ElkSuAwzGrAA-87Aw7QO1JxeOo6jzlXCw_CEiqKrCYjXcJYoRAYL1UJ7bGiCtk7oTRz5f1MVHOsrq2gwUlrXMVvOXg/k4TYlwPqdfHtB8dbfOISWxQ_-_xSHWMuGTNHn8hjM3k",
-              "width": 582,
-              "height": 305
-            },
-            "full": {
-              "url": "https://v5.airtableusercontent.com/v3/u/47/47/1762560000000/Wsj0M-hqPdZZCXVMO2q6oQ/SOgj7rQvTZGJ7vjR3ptSlCrfe7Xrptf1V6MZzpNrAGnz2VJ-E9zjhlr8jDitbhv_s43tDdL-v5E9oMrGF22v3KVuf9803FTgO6cVFkqAnki7FzsRA39CpZpUvrVCjc1KuwOnh9N2K4Qy9PkPZLp8-g/wR2ksiBQIyWO85ZL3LaJoy9d0kOjtMl3s_O8GcrMhzg",
-              "width": 582,
-              "height": 305
-            }
-          }
-        }
-      ]
+      "HDX Org Key": "acaps"
     }
   },
   {
@@ -4028,35 +2068,7 @@
       "Org HQ Country": "United States",
       "Has received CRAF'd Funding?": "NO",
       "org_key": "university-of-minnesota",
-      "Org Type": "Academia",
-      "Logo": [
-        {
-          "id": "attALphLdy8yL2asq",
-          "width": 2560,
-          "height": 1440,
-          "url": "https://v5.airtableusercontent.com/v3/u/47/47/1762560000000/hAPxtEAMz8heHD_UDrRuyQ/PnICcmGvxw922DcqaaE-qbCqvkek64w51TWWxrTJ8i3d8cG2ULDKvhTN8qiN1-0h63hygj5sj4h--2ZudB3dpc2y-O9k6qLXV9EJGS7cwVkHYBYu1zAt0mFCcASquZKlSFexy7QPocFYnCfimm5JpsV70mKE43qVLvlyjRCdt11T-dE1eV6Ya7-F2CF3mmCW/HnT-3NivCOvgOnT4S1u-XxMyDBrXGBg3ukNk8pTYvjk",
-          "filename": "University_of_Minnesota_Logo.svg.png",
-          "size": 130192,
-          "type": "image/png",
-          "thumbnails": {
-            "small": {
-              "url": "https://v5.airtableusercontent.com/v3/u/47/47/1762560000000/Ig3MKc7jpXrXUi9hOyMh2g/qC1eNRYCbvViN6nE95RkrhlXE2K408aPhlktIwcRQx7VmArd625QFzBrOm7Ipo1P-8_SYkd9hWkcUTm758sc-qAy_H2JINEW4shOAKpqM6Wrd5iAG2kEslw4j89FkRocJJEbTuBksg1gbWUIXTbKVQ/NlVKDIi2kYpE6hVmkSJBgHpmeunRR2v9JZQL-mivjb8",
-              "width": 64,
-              "height": 36
-            },
-            "large": {
-              "url": "https://v5.airtableusercontent.com/v3/u/47/47/1762560000000/aOpzf_QQ64Pbjw47gROFsw/6BQmHJy5LtWwNupbel_lgUyNKs2UtI-coe8nsmb3J01WBWhxEX9EquF8QEnkMANyEiYso19dcuftaX9BiUSsd_reM6gPtJ3MAX6kDnirN0UQ9EdS-_H8qIyjk9LocgQJ6EMx29RLi9hogTeCIw3_rA/Wya9TTe3YJHpd2AWerRQSgUDlowJMk6k5rQL75jZYcA",
-              "width": 910,
-              "height": 512
-            },
-            "full": {
-              "url": "https://v5.airtableusercontent.com/v3/u/47/47/1762560000000/r9M2TIyOGMd_lELeNpBQUQ/i2YXbzM6fvMaDsb5QmaC_WHqr0TpgZztoDxT8WS_yY9G6EAt9P7tQjDvt2O3YJhX76msDXRf2svNb7_1sNm_VT4WQpK5_1rdF9a9FynOxEQatbS807j9pX1oTQonQl0kIoraQEztlcvkbXHdlCWkSw/NcVVQ2zRVCP4ZWwELaLMrfzRJzHeqfeOtFuqO_6YcMs",
-              "width": 2560,
-              "height": 1440
-            }
-          }
-        }
-      ]
+      "Org Type": "Academia"
     }
   },
   {
@@ -4076,35 +2088,7 @@
       "Has received CRAF'd Funding?": "NO",
       "org_key": "unitar",
       "Org Type": "United Nations System",
-      "HDX Org Key": "unosat",
-      "Logo": [
-        {
-          "id": "attNQkEMlZsvE7gEL",
-          "width": 1023,
-          "height": 627,
-          "url": "https://v5.airtableusercontent.com/v3/u/47/47/1762560000000/cc9ALDoyYgGDM7QqyHnZ4g/OgenIaZu_J_Byjf6r3xo9lAZMdhSaQAvDTLKY2Mq9OyGKk6lC3ITb3CEBjGMWri0SmU8iEg41mE0X5kRkzzYgYEiAgE79UFLgQOLjx46PfNfEm15c_6AgBrOhU2hZFD8748S9lIjvv5hLGebOwt-3NsuefenobLoJiJJuXE11os/kD9kp9l1lb7oFZ2vl-HvUpFg0eu2tI13BTWeonU1AbY",
-          "filename": "unitar_2023_vert_blue.jpg",
-          "size": 258786,
-          "type": "image/jpeg",
-          "thumbnails": {
-            "small": {
-              "url": "https://v5.airtableusercontent.com/v3/u/47/47/1762560000000/iEfJ5DnvL4HQ9QZoZ8mxdQ/ojR7bE-VgQVWUydGR0agrWHLJkcawm1wxlP9yqznVcfjxnCJ_eCLPnj0zFRHCzm3SHEYkc2dXxEr3E9LejOMhp9LzkX2tmrXqn9I1Tvezqo_q_knDxnqmjtYTrky8YhkAuZRlHUNNzw_LIjZ0QklUg/UaFNXy6Ptn36EaGjwub4PluuOAUxjbWrOsyVqbBY5xY",
-              "width": 58,
-              "height": 36
-            },
-            "large": {
-              "url": "https://v5.airtableusercontent.com/v3/u/47/47/1762560000000/56_CUjGuqasao08z5Q_SiA/XLXkeVbyy6Q1C9XOzch_I4tuDLKcbXPHPWxW5nMMRo-afFnwZNeXVmRe-rqI-7n1uN63IL-SxfUqiKLiFQgWqcJ-ihVvfLlb3_uD6n-eFiBb9qOw7AewlNohVsYgdVlvB-RMSSusgphdNh47BxeEwg/Rt-Pe4sZqzVYND8Brlx-RKvYRF2drvXDIRjoczIwf5Y",
-              "width": 835,
-              "height": 512
-            },
-            "full": {
-              "url": "https://v5.airtableusercontent.com/v3/u/47/47/1762560000000/t0A3umZrGVXpLk2mzmPO9A/1NLQ40z3UNkhO4p-PxdvPHjH9jSBnPR4A8njyUjfBK-X3_WwKyJ0WAqHi7lneQ1x8iNLuu7jU6wlUnP4fZ4YS8XMVCMWfh3fJ99qh0CMrcItMvE9dwVtKMyF55kmjw1sxTd30ifT5U4xPuWhNKTcEQ/v__h2oGmWhi2oz5wFeaLVxRSuhznh-c72DBZ6qlvH1M",
-              "width": 1023,
-              "height": 627
-            }
-          }
-        }
-      ]
+      "HDX Org Key": "unosat"
     }
   },
   {
@@ -4146,35 +2130,7 @@
       "Has received CRAF'd Funding?": "YES",
       "org_key": "iom",
       "Org Type": "International Organization",
-      "HDX Org Key": "international-organization-for-migration",
-      "Logo": [
-        {
-          "id": "att8TRS7los11sZvp",
-          "width": 900,
-          "height": 985,
-          "url": "https://v5.airtableusercontent.com/v3/u/47/47/1762560000000/suENVl7titqcI2UQeNtPRQ/MUmh0-hjgtB0jghI0rbf46LQkwtlbIPa-UxjM3jo-N-cWUdpR5CrymomYHnBVXaB4puELBAM8jPZYVb3yDKCcgucAnuTqrqpca5i7ofPHYzMql1RkexNDuP_nwXu-pVFQMkFplNhGdC1n9wdPezH5UsYiRNdTq0SmBFmPVWIjTA/NDF4sftODJiBfzjEtbYTjX-p59vluMZG4yny5jly53o",
-          "filename": "IOM.jpg",
-          "size": 102557,
-          "type": "image/jpeg",
-          "thumbnails": {
-            "small": {
-              "url": "https://v5.airtableusercontent.com/v3/u/47/47/1762560000000/ZMXNsMOaX6N9sq5tNlqM8w/IWePw0kZJwlIVWwxI7fYQcgSxkWOKqlebX2DWn0sXFj2uEim4eQmLKgBLJkEMf8dLocQgqOOp3E4W7MfmJPwfD4kt74QeHCuOHuwIu0qmENKO3rAuyXmr9GCG-FKweOcyj_6FF5ES3KmHSkGxDvHiw/nEejHgTNsnJfl5r0SfTmLEJozso-mb4qdXdzyqW7nPQ",
-              "width": 33,
-              "height": 36
-            },
-            "large": {
-              "url": "https://v5.airtableusercontent.com/v3/u/47/47/1762560000000/jJa5BeNvS6fuzc_sq5vgUA/ApYBbeOwZ_N6WqYv1KQVFNUa5zbrrtxVmPKTCq9wqFO-rATdEvcMJDX63qRIwl6My5FMqlu2a5J4Q5gHJVLKOvO2np2rUJyNfts6QyvGvcfJ-CAtfUHBLbmD-LcYY5u4qhA1J0FM9D1Nf7hPjQT4kw/FgApbXKjbvne2czZo4C88_uCILny2wDdVezJMRllXN8",
-              "width": 512,
-              "height": 560
-            },
-            "full": {
-              "url": "https://v5.airtableusercontent.com/v3/u/47/47/1762560000000/n9FI101n-Y2_YbaWxgHPEg/btUfoLfMNfBUKdvvwWzKwQesqB2FFp7Ct7MGM5RugiOme_wMFBgeqzGWF2ciWMIrudSDG36gvkJesUYjiKpMgwRfEHb3yzqYapdl__RfJ7i-up6JpOIXrAmGMB3acxpiSz3hDMmtwjTxicHl7cwEUQ/3JS3JAlp5KgGhTviqM_lfBsmotBL9b9HqBv676lPbKQ",
-              "width": 900,
-              "height": 985
-            }
-          }
-        }
-      ]
+      "HDX Org Key": "international-organization-for-migration"
     }
   },
   {
@@ -4187,35 +2143,7 @@
       "Org HQ Country": "Thailand",
       "Has received CRAF'd Funding?": "NO",
       "org_key": "unescap",
-      "Org Type": "United Nations System",
-      "Logo": [
-        {
-          "id": "attUtt7f1R2gw21Go",
-          "width": 360,
-          "height": 112,
-          "url": "https://v5.airtableusercontent.com/v3/u/47/47/1762560000000/Ad36DIqIY9fFNEU1yrhtKg/hSZSxaHE1ieWiFMRmds_fNNqOOp03hrr5jj5rIBK-INiTNwyWzMJUvJWfJx3n_Uy-OH_PZ7Aqp4_JC7g67GRpOsBYryFANWgAfsDidJQYAiUpnXucbN6K8Vrh7pBKtrZm2dn93a9oMBmG1vf8R6tV8Xd0RDWB1xjRrBKlHfa-Gw/xNEJEi2HfvV4aEKmTKU3YJOlpLXj8uieT-xjYcRfCsw",
-          "filename": "AW_ESCAP_LOGO_OFFICIAL.png",
-          "size": 20647,
-          "type": "image/png",
-          "thumbnails": {
-            "small": {
-              "url": "https://v5.airtableusercontent.com/v3/u/47/47/1762560000000/nx_H9tb0QteFgnlMHSUGog/gYPcfYACCHywR4M96Ha9KYEoPUnKzvdLU8dU9bhAK_81KPLV2bvTsOoTbNdDth3CJgEfmFGw25vy5g0wnz5BUnXRGxRtzbv3rtMu32Ea9n0-wJMne38G1wv0XeyAbsL4-WX6RaPJ79W3g8CZrYuT8w/6rpTdn3aaOV0g2tsOWBq8EAex9oUnryY6O-C8vbChc8",
-              "width": 116,
-              "height": 36
-            },
-            "large": {
-              "url": "https://v5.airtableusercontent.com/v3/u/47/47/1762560000000/vulJQI4pXkHfcLF_PCfEiQ/HG81H4rXSxVQnUz1U-Znjz1D9Xc4Bgc0_fG9JjUG-992ILbgShRl8_MQZjtAyaiQK_nyTPbWnMSia1diQZmSFJ_D138yiVMbN435MuIHoUHsCWfWx22cS3GWD6KUpFatJQQGeeWUNPvZWGMTi4OEFQ/hgZBXFEF6KzVeMrlWEKFW__pGuqkke2Th51Q5BMt7AU",
-              "width": 360,
-              "height": 112
-            },
-            "full": {
-              "url": "https://v5.airtableusercontent.com/v3/u/47/47/1762560000000/OZ7bIXK_guSPtIKKlc-tXg/jUTbw0-95gTI24YeE5sXpTHO2O0nXPyPrDH3fGqza3x4MlUR0cLewtSekmG242GiHEKnW1OwTCkR0-w0pt7eappy2pqJnvtEqySNcbF4yyRSH-eMAcPLN5auT2KChP3e9uPRMBaWmdwGTwT_VlOOZw/2EMcGJfWvNO2CHTV_s2niPooQbjfn8YKUaCXyLcjvgU",
-              "width": 360,
-              "height": 112
-            }
-          }
-        }
-      ]
+      "Org Type": "United Nations System"
     }
   },
   {
@@ -4237,35 +2165,7 @@
       "Has received CRAF'd Funding?": "NO",
       "org_key": "wpdx",
       "Org Type": "Non-Governmental Organization",
-      "HDX Org Key": "water-point-data-exchange",
-      "Logo": [
-        {
-          "id": "attS4bu79e0edngiS",
-          "width": 500,
-          "height": 210,
-          "url": "https://v5.airtableusercontent.com/v3/u/47/47/1762560000000/j7Tl76aKv1DLOTwMPV0-AA/Jm5pGteqn5nr-GrOLcwTco9mMg-Rq6A5kNHC1ng8N0fwZLClnN--TdsiQWUU8Mhg5y3gfHlxGcmfSs03iWOqZrPC1CMszLYz4BZ2npRtA9nX98vB6VkHNX-VrAmwYysZQNTT0wzD8uxsTz9znZkeIOZ7hEb93tGMnFD93u-dyxg/0oKKaTITOdqQSjYLkH06XWdd3YzEZk4gNwKOvVF7U5g",
-          "filename": "wpdx.png",
-          "size": 27482,
-          "type": "image/png",
-          "thumbnails": {
-            "small": {
-              "url": "https://v5.airtableusercontent.com/v3/u/47/47/1762560000000/kTQJITxDzkZEuhMxtHdQrg/52ho_2nazYjXzSx8k95uko0btTQG_lVVXtGr3RKrZL1vKXpGwbZldcqIHlC8kB2imVDn5M5HRPI1PxMrpQfN8q1T7y1eS1HHqSBXNq-Ydpl7OIqOxdPrh9Sj4aFNreKB6eV4S57t-SIB6ktisrNtqg/5GL2ZaeMyROap2_k-7oY3Gs_7-IP6-B-E2c6Z01RAIM",
-              "width": 86,
-              "height": 36
-            },
-            "large": {
-              "url": "https://v5.airtableusercontent.com/v3/u/47/47/1762560000000/XUqpyIWtaqocZ8YQT0gwEQ/Qon-ZV_m1_4SaTOV3DjteJ-xJ6COq9nVGJ4ybDjldXkJ3mSsGwoXg-EvB6sF4xc0y6vGUlQSkMLDiDb62I6UaQynyFP7crOmdzOZS_h8yVJqLsl7TEGNldC9OXiTL10Tkrt5sPRaP6f2ncYqlX-O5g/y-nSWhpLHgskXD6FV2unS1g0i4LYsb62ee52y10YeQ4",
-              "width": 500,
-              "height": 210
-            },
-            "full": {
-              "url": "https://v5.airtableusercontent.com/v3/u/47/47/1762560000000/zcclTc59VVWVSaM6wbX4XQ/kbOIPq8vhejeSYz1na8fCAfc8LSz6zFHTEMgSvmHQ0rxEjBJgZeGiJzuD3XzkMuvrOtUqh-zPymt_xiLW4USPtqzG5a7KP5y-cVwN_eiuU0Q_fw56xkWDSJ8jwtlRfdze8oUYakUfJ0TdUhGiBSxSw/sVo9Ab2CJL3isuPw4x-fP1YKnCGurDciXJMM1Em78s0",
-              "width": 500,
-              "height": 210
-            }
-          }
-        }
-      ]
+      "HDX Org Key": "water-point-data-exchange"
     }
   },
   {
@@ -4298,35 +2198,7 @@
       "Org HQ Country": "France",
       "Has received CRAF'd Funding?": "NO",
       "org_key": "paris21",
-      "Org Type": "International Organization",
-      "Logo": [
-        {
-          "id": "attGjG29vHABorMiU",
-          "width": 700,
-          "height": 525,
-          "url": "https://v5.airtableusercontent.com/v3/u/47/47/1762560000000/HFfDkiKC5YgV9ZDlEcLvNw/6tIHkfeB0ia0WSlgzJK-uRI8Py3AU3mbSiWUzSwdLbxi6IrRsIabv-MFY2bGFXqLVvftV3W35qdA1w7Aq1Ejqzp7SriWTbs_mfTTNxna0zH-EQ1g96-A7My5QR_cFrF6y9BfCOU0o-vDNJwsQFtpisEhhJGUYGPMH0Kn2PoU8m0/1qube6Z_rrZl07izoIcsM4ZBAmEB-Ajqc4CtkAZcKAk",
-          "filename": "capture.png.jpg",
-          "size": 16229,
-          "type": "image/jpeg",
-          "thumbnails": {
-            "small": {
-              "url": "https://v5.airtableusercontent.com/v3/u/47/47/1762560000000/Mu4krhlV4XTVA1k1zyR9og/oymIHhY3N5x553BTbIoS0HjiENcjxoslV_Tl7-JEo99q2n5u7O7T-3-FOG34LoJbo4iMUeTCQDLzCeYJU-6VqIioVwvbNLvTH7tE_LU7mV40PJyGMRvXizbi8_6a9frow8SjuenEmvTxei4agfSbgQ/OppBrvNLS4t_GfdAZR7bLRKSqD4dokvcrwy-kCNtZwU",
-              "width": 48,
-              "height": 36
-            },
-            "large": {
-              "url": "https://v5.airtableusercontent.com/v3/u/47/47/1762560000000/_a5KRiFrZjLgWTN3IDFaIQ/6YWmUpMZfO3kapzsbGZAM7HlFF0x0Nu7OzljCDauaLArk2YYnCqAWEnRL33to9s4RWWvs-TAdiVcdwKi2VlcLp69LioOn6rFt4C-13k2xgl6j_ZDyqd0ZoMJmzjPyFqOFWwfbkB8Vvd8uQVkb-zqSw/F9B_-zpV6Uu-J1wvqg5XAVxfcsIxFv8_GUVYqPnoDOs",
-              "width": 683,
-              "height": 512
-            },
-            "full": {
-              "url": "https://v5.airtableusercontent.com/v3/u/47/47/1762560000000/W6KqhJAGwevd0LA_wQ_S9w/NSHHanWWVfT4n1bHikBPqIQBvZ04GOAJ-6gRRMf_ThEL4NTVrzvzvOhcDdUyOVLU1L4d3ytON3aEmQ3-BwMZSCbiE3HHTsZd-CUnoh2ojGxr0PW9FKEGzKrSMvr0IXVDqcaWJg0PKi0qL7bG-NMLfQ/cPF8scAAoIljHkUNDr85lKCsNsbcWDDeHBeI3ZSqN1U",
-              "width": 700,
-              "height": 525
-            }
-          }
-        }
-      ]
+      "Org Type": "International Organization"
     }
   },
   {
@@ -4346,35 +2218,7 @@
       "Has received CRAF'd Funding?": "NO",
       "org_key": "oxford-university",
       "Org Type": "Academia",
-      "HDX Org Key": "blavatnik-school-of-government-university-of-oxford",
-      "Logo": [
-        {
-          "id": "attEf7yKRArPoMrUw",
-          "width": 613,
-          "height": 768,
-          "url": "https://v5.airtableusercontent.com/v3/u/47/47/1762560000000/plpGLidSoqPwtVG3LRUlzQ/45Nn_6MMizlh_Gu7t-deAtDQHbNQ55MxEikvw0uDLvjfxrtX6Yyd3mm-TvtjB43Yax4LGCJwEVhdTTg-MDHRlR-5rfu_kvAdBgR5f7wM-RuvUPfC-zDOXeV3oSUt7wqHwVWac_EIoPP3ne2qhXmIXql2PQIXw8lPyckbkh5acEmXcUqXZ3G5Osp6Gf-8drwU/u4L44HzxxyWNJy0cLzQtP4k0V8JN_AEzLjV6O7QWFhg",
-          "filename": "Oxford-University-Circlet.svg.png",
-          "size": 176580,
-          "type": "image/png",
-          "thumbnails": {
-            "small": {
-              "url": "https://v5.airtableusercontent.com/v3/u/47/47/1762560000000/vEfrQVNBQx2M8P5Pj2-xDQ/ixxQE4OaGgL-QfRxc66DNZCIJNfDU3A-qxMGJCn6Qyj2G1XLDLjAIebBf9QcWmusE0bY6iad6tVSy8AqDcLE0HtsEkNy2Lk96WTkEsCl-gMWslh4DlcGcJUMSkRrdrDsdl_qYzi6YE_ybbKP7ns2Jw/E9Uo5iChqR_JslRft7JjEViX4JVZb-MUhJggq-4gtRY",
-              "width": 29,
-              "height": 36
-            },
-            "large": {
-              "url": "https://v5.airtableusercontent.com/v3/u/47/47/1762560000000/G-BQkBrTgGG-asyUS8nNpA/UgcVPyRFWNSFGE-Nrc-IKH0C2-Mib004O-zFQdVtvzszQ_yOKusZMqf0EK1i2ClquVEVFbsfXF3JZtrp4zYnshEbYNAuo1mwxpF4ocvz1B-_RismyxXFzzsNmy0yknQ73DzCHcDSK3Ki0kBG-CtAnQ/3xQ69MwJLDn_UDY3Ca5NZLT90IIINrUMgqFI_oM-dwE",
-              "width": 512,
-              "height": 641
-            },
-            "full": {
-              "url": "https://v5.airtableusercontent.com/v3/u/47/47/1762560000000/AydycCZpM9uFOOael72CMg/90O0DN4sCmibTIN34_dRIBcDIfE8WwsFC4J6WPPdA8dUPlFDhSAX0k-pM_8Ep5ry0DnGfbpof_OUr64RAuQa-SdPe7JHhGQi1iLVkUSZa6e5RrKb5Ey7XXiLpjryaNWuuDvJlzZ2-O_e891YzKgWvQ/EYLt0AJX1sryweS2vdFA6WVNTzYgRV_TCwnvOtcsGO0",
-              "width": 613,
-              "height": 768
-            }
-          }
-        }
-      ]
+      "HDX Org Key": "blavatnik-school-of-government-university-of-oxford"
     }
   },
   {
@@ -4401,35 +2245,7 @@
       "Has received CRAF'd Funding?": "NO",
       "org_key": "immap",
       "Org Type": "Non-Governmental Organization",
-      "HDX Org Key": "immap",
-      "Logo": [
-        {
-          "id": "attHMGqEIU06li6F8",
-          "width": 2970,
-          "height": 2597,
-          "url": "https://v5.airtableusercontent.com/v3/u/47/47/1762560000000/LU5PjvreHfrE9K8QWPkfsQ/RLHlU0gxlEgdJX0wgWZ9_0hd8CnBB21lPQJurDQbaA_LyxzWjIgEqCJbEbmpsPb4FHv28TNUKj6mwflhn_bLIrr5Kk8dDxe70lW4U5saM9WC3_kqHbKbM3lUJmtuIFexpqgh29HxXW_mrSCobTtkBrTb7WwxM32VrC-gZ7WGIyM/9tEYTIkR2ffkDA5gi8IG-0tAJVIr-MKVDMmB7JHe7SI",
-          "filename": "iMMAPlogo-1.png",
-          "size": 84289,
-          "type": "image/png",
-          "thumbnails": {
-            "small": {
-              "url": "https://v5.airtableusercontent.com/v3/u/47/47/1762560000000/to5XqxFP6Gt0YimiMs8XIg/3ospUd54hwwgt0M-fGCAOcdNAklwpFVQiQMEElsU0-diwKNb6KJRoM45bEgfRxsBLnkp1X6AnDboADu5-aIKCCfSN7vwWD7R9HdwPKrisgADQkp7BUVWLOfqQ4mTQZUo8BJOUP_5duXwL3KiNbB39g/RkY3QBtZprhReecsOoLCz8Lq31LlV_Z8otyBr_BLlz0",
-              "width": 41,
-              "height": 36
-            },
-            "large": {
-              "url": "https://v5.airtableusercontent.com/v3/u/47/47/1762560000000/n-LGOY3jbo_PCxx30G-RRQ/7KGBQB66r4SDrJtlUGV9wpZToJp2itD4fZ2CeUpvWVByzXhzd7_kRFlMGamTXc27TLpavfTF2iYqxRW25YjKqEUjtaGEfwv06SOkJiYGgGLOJ_FW7IPEgGiGHBjnzU7t64hj2-kOD7FnjyChP34VNw/W0tCfyIrj82nKzqx2rT5un-1BJV7Zx7CASo67MQ6OTk",
-              "width": 586,
-              "height": 512
-            },
-            "full": {
-              "url": "https://v5.airtableusercontent.com/v3/u/47/47/1762560000000/ydgYc-3YRHRm93tXzJWlSw/ucF9I8LOVBO1fe985mzawpVdsWdTXBNlg12LSpnkWbVP5P7N2NaLz63q7CsOLM3-HkXQTci7_KpQI9gCYNWS7bAq_FWfssnPaEtoUg8B2LondkdnlbJ0NZMVw5QbtWwqpiDb1HdR4sm6E51WLjYMjg/MaMJvzVUjFlUc9YPvmAAwiFMQDUAzfMDgRXvgkGRTtk",
-              "width": 2970,
-              "height": 2597
-            }
-          }
-        }
-      ]
+      "HDX Org Key": "immap"
     }
   },
   {
@@ -4468,35 +2284,7 @@
       "Has received CRAF'd Funding?": "NO",
       "org_key": "who",
       "Org Type": "United Nations System",
-      "HDX Org Key": "world-health-organization",
-      "Logo": [
-        {
-          "id": "attAJfGJZDF8ruU4p",
-          "width": 841,
-          "height": 742,
-          "url": "https://v5.airtableusercontent.com/v3/u/47/47/1762560000000/SNsh6_qc2UzPUWpaP5WVtw/FKaEPODNfB12dvR6vFQOqc3qmsKELm24qwmT2nRSq1SF93_sRK1e5WpkvKZaxE3GN1Cye1gCi0N7dxKMsUX3r4LRtgKMl_VoFYCSFLPmhE9PT8Xhkr4ZhlLCgaGWU8G7fjIOhKbaFXi8Tl-oPZMWCb4GmWN_aDD5-wCVqhgg3u8/eO0zKzXxmtE1SPbOmoKuANPjBb__3VA7qQgB2IRm4UQ",
-          "filename": "who-emblem.png",
-          "size": 80671,
-          "type": "image/png",
-          "thumbnails": {
-            "small": {
-              "url": "https://v5.airtableusercontent.com/v3/u/47/47/1762560000000/mOMdMrA2C1TbA3D0GB2ZOg/vzRmeUyhQGp2vX6W7YARnB3vMmKszJ6mrU42JODBZ5YkNiPkuKIn07PHR9uQ_QsCljPJnFI4wQmPkQeWt4RAqbQDpVkf8BeV-K3Jpc58fpZc4Q3sYjf5KoDRyWrYBR3XrQTTiG6Z8npmzBFbcfh_Sw/_mIgJmIlt9UdMkKgF5NHXYFVxTGqsIHVBzgfjw_CUKQ",
-              "width": 41,
-              "height": 36
-            },
-            "large": {
-              "url": "https://v5.airtableusercontent.com/v3/u/47/47/1762560000000/LVrHM4Bo6yMExDA1SS21BA/GkXwRyoIfWmHKKsrpXpgtHXiTI-QgZo92yWNgaSpmq6rsxzL5PlhZcX0TG5QOztN-t8H2ZZ6ZH2ucmqQfwI5EtLcAS00WsL7QNQhRVPXGaMS40hZ0GAQzwduCD_O9HzGQwIlTCOk6CYi-M6kOOfFig/PPoi-28ZedAmBAc8MJipYS7nfYA4j5ECA7ElEeXJ364",
-              "width": 580,
-              "height": 512
-            },
-            "full": {
-              "url": "https://v5.airtableusercontent.com/v3/u/47/47/1762560000000/-Jn-vGBaSwhEjMUP_TfFrg/vmkNSc0hV0LYkO44qIeJQ4HCKDsl2vI238daVscEdGi-ru2Bh9lt0wJHnK8OltrbULPyC9UeXY6pCFh4WKSZKsd6uBF5evq9KZUZzRAVG95D1pO8pJBzv75gSzEclbiyCR-aIwhSpy3-BEQNS0kJ1A/SrGCpOTP5lXJItmn4R65-9SROshzTZ-w7L7L2WsBlzA",
-              "width": 841,
-              "height": 742
-            }
-          }
-        }
-      ]
+      "HDX Org Key": "world-health-organization"
     }
   },
   {
@@ -4518,35 +2306,7 @@
       "Has received CRAF'd Funding?": "YES",
       "org_key": "rccc",
       "Org Type": "Non-Governmental Organization",
-      "HDX Org Key": "rccc",
-      "Logo": [
-        {
-          "id": "attGcL1TtJJtiTYnM",
-          "width": 300,
-          "height": 129,
-          "url": "https://v5.airtableusercontent.com/v3/u/47/47/1762560000000/EG91fl9y70aIQYlYO3ddHA/2UJ0e8a5jYUTzsWDqLKsKTqLsMoxR8EVTxbZVyeh_Ceq2Ao2iqQ5ao5DB9gRy-UPVhsFlZiuSIuVCH_48wnn6cyvkddpo23HzuRdQ7Upu7j2K1-UpjqWjOddo5MSNJCYaMBbvN_Qgr7ycIZ6hhoXuWGfQ6HffMfq5JBlsbyTjCM/J0DkQzlfjLy_5eEZaI5fFg4dliujpWDDYV9fshHLlEE",
-          "filename": "logo.svg",
-          "size": 69052,
-          "type": "image/svg+xml",
-          "thumbnails": {
-            "small": {
-              "url": "https://v5.airtableusercontent.com/v3/u/47/47/1762560000000/Bxekfady8ztyn45LhNDdNg/04CFQNO-y-Fjs1pt0ZKWgxnptk6gnayhCcIrfj4FcWMIj3g33B8tuGZjd8pFtNmtTjiAFnCzWp7gRKaSeVNr_1Q0GRw8NFFVbvd5MjgbYyNFtGCm0tTjdzbJkkoLXr3np1MNAufybB4ffGV3vjaO8w/uaJDDMGecYm6T3xjyQhYlX32vczrr78kNJUAl1rnfrw",
-              "width": 84,
-              "height": 36
-            },
-            "large": {
-              "url": "https://v5.airtableusercontent.com/v3/u/47/47/1762560000000/d840EVT4heHuwhPh_XpCQw/XqrYUWa-Xitpi2l-ABQPZwobrY9zVh2KqFhr0-K-aSs5TBSJrVjZVwHInZoRavCVMkqFOKMkxeO7Yh9PC-t_8blaBZwcuZ98vUmm_cjvmrx-PO3aU_OWwGFxdkBJ-JNKoWEc-TrEgyB2A4OAg_0e1A/y-Vt85dWDx8pkS3G6PwmZPB1T1NJHUQQtX-4e6paKAs",
-              "width": 300,
-              "height": 129
-            },
-            "full": {
-              "url": "https://v5.airtableusercontent.com/v3/u/47/47/1762560000000/UUW7opq5BIumTOVyH3EPPQ/9Vk8LoROJVzUC9OTJc1fVN-_vOuQl8k7Ps5clbl0vW6NYktI49bZfW9-s4l902BaP090ZbLc1KwnljjYBLFhBkpRQE-TsCQKQTtqP2AKRWD2sOFbFKUkXEek7zWKkXLHuTvMuf_84CVmo0754iWXLw/so4z2lMVD-yN9zFm2LvlbO3sGDTsAG0uQeUaubE-asE",
-              "width": 300,
-              "height": 129
-            }
-          }
-        }
-      ]
+      "HDX Org Key": "rccc"
     }
   },
   {
@@ -4561,35 +2321,7 @@
         "recQJwZB8vyAFwK4C"
       ],
       "org_key": "ecmrwf",
-      "Org Type": "International Organization",
-      "Logo": [
-        {
-          "id": "attcjwTsqzpAmHFKM",
-          "width": 1001,
-          "height": 172,
-          "url": "https://v5.airtableusercontent.com/v3/u/47/47/1762560000000/0VvOJbnMJ7vrs-scuoPs6Q/py1NRXojAnDkTa3XLTnQtiNYpU8Sd47Jrk3kY6mMIodP5wkD7uecgHpvATrhN7Ad1idJQ3ij47sX4OlX0vi5zJM9VTZFc00qawWfJgkJtipwRJRew6HT8JVfrg70oIMrSnmZssScofPrbe12E8OrDb3ylP_Db7xIHevoMnJF4kQ/3FRCb1XjAknq5xL4exeKA8Jaj-f2Sqb2mUKDdfNNpcQ",
-          "filename": "ecmwf.eef84472.png",
-          "size": 10365,
-          "type": "image/png",
-          "thumbnails": {
-            "small": {
-              "url": "https://v5.airtableusercontent.com/v3/u/47/47/1762560000000/qbNJ7DZd4sD3qR1wrllaug/9GEE3jMqeor-7oT6clmqBiTaG9JIunj4b5qrMpCtG5NsAGaAJ0E1CduBtCgoSMXiWGvshsV6_8rEj9hdETU4D3D-pyFs8lIbkZRRVGL_FLAxoqpPCTnKlj7gk_Pi1WW3ZQILQw4LCmVq2E_oYIBrAQ/PLipqWtWKDfvyQn6Zp149kkObUjjFDQX-hdXMkb7IhQ",
-              "width": 210,
-              "height": 36
-            },
-            "large": {
-              "url": "https://v5.airtableusercontent.com/v3/u/47/47/1762560000000/zuCUtoRb7xeWVIfyL0lWXg/ZkuSAUT44tbr5okuBFRt6cSyGtpk1PmtNBifxTwCV-ycD19YD5vq6m_YQwtzTO3kay5XCr2SUjGj8oXP_4gQtC5NXQK6P6jewNCgDurm4gVzP60WpzHbugTzBHrF0IonFlKtqNTzCsjT4Wrqs6wtyQ/Otr7ECdg1qRcOfmDGOq5yh7eI7uNSKGbrNwRvOQ9SAg",
-              "width": 1001,
-              "height": 172
-            },
-            "full": {
-              "url": "https://v5.airtableusercontent.com/v3/u/47/47/1762560000000/fyQhZ7jqAmBdlgH1klzxSQ/F3WTPNHDs6lTmiLAcm5zFh2GctVup3EFLnqFU5CtMyPffaKJELDs2lszhzFbVOpPlgGdkfl6S2Nli7ZtZv2V8cP_TxNKTtF9KOpN5W4Iq6zeoG00rFPU1VwewU2OeJ8EpOkSSU4wyXr1eqPcj4-wTg/jEqmKsXdy92EvN3IrfXKHcum5nNW8Vu3PitV_1OWSBA",
-              "width": 1001,
-              "height": 172
-            }
-          }
-        }
-      ]
+      "Org Type": "International Organization"
     }
   },
   {
@@ -4620,35 +2352,7 @@
       "Has received CRAF'd Funding?": "NO",
       "org_key": "un-dpo",
       "Org Type": "United Nations System",
-      "HDX Org Key": "unpeacesecurity",
-      "Logo": [
-        {
-          "id": "att80jLIkJxKThai3",
-          "width": 500,
-          "height": 500,
-          "url": "https://v5.airtableusercontent.com/v3/u/47/47/1762560000000/AKUP9ISinrNSnrKzGlIWtg/QS2nry1IXU-eBcLCAp5Et-syTn7tBzAwx-zl-r0LSrEP1jI45T7M8WqTgdgCysKV780QCmxxWDNGpv5K4vJ4zkEbfv8vMq4vPBADGU7qNTzCOSMMcWHY67idq6jmIZ-FNDRWCwnvBhqQ1OAMb9oMHK775vndZneMmXKjHVKoxIo/QErLZMclRSwrVKZM9WuAosik_Ad8-rRY9ulVS_m7JW4",
-          "filename": "csm_undpo_6b9d1ba33a.webp",
-          "size": 9284,
-          "type": "image/webp",
-          "thumbnails": {
-            "small": {
-              "url": "https://v5.airtableusercontent.com/v3/u/47/47/1762560000000/PIZa8pk4KuZBM9WZPtptGw/14zR2-Zf9BPa3WBwLl3n6n8Xl9dXgW06fZ6d5FI_DVnFRJ-jbhd8g7UnqPEfsAruDwseDA-Qqc5J1vT5WHhucQebhqWHDz-hzoXjs6KSHqLDzgw_5auKibiDx5Iu6KZfS508ZKETFK1Pe2jZksCJxg/6ZwBbLtK3Bp5aZFQf-A8bpohE1K10ZSu6jGfzCx5Nag",
-              "width": 36,
-              "height": 36
-            },
-            "large": {
-              "url": "https://v5.airtableusercontent.com/v3/u/47/47/1762560000000/g6RSX9dOpMYMOsz7pkarbA/aacCX4MNOmyKWsFIX2JVXoPxYkCsRPbiVkistDa4DHEV5t9oWWY5VxnxKTaxoaMO1s0eDq_rpN7ZK5tm6sXjfgM7s030rvoRYW98izPb9lB3GARtdEH-b73PQurTlnfsSSFp482uWODVC_w81YN7sg/7I6BvJI04ss5GDNkNxN8MDXeswK9P961-ibCmzBG0Vo",
-              "width": 500,
-              "height": 500
-            },
-            "full": {
-              "url": "https://v5.airtableusercontent.com/v3/u/47/47/1762560000000/yVQxgiqktSsDtZhzcHGJBw/NN51NK8b_NxWsxBy0D8k6gVf1_CNWjkD1JhM7mxhgU8D0EUwa6V_uwjabbRRKGSQP1t0Qr1Nr3adTCU7NSdoT9YXD0z0K2Ik2BAcdtYtvQfuiCwb-fyv7tGnRoE5QiQjOwe8Cs2fn2_HejVmb5UtnQ/LECXePEoXSC6mdmNutNK7p590w4k2mhoI6lb2ZZchB8",
-              "width": 500,
-              "height": 500
-            }
-          }
-        }
-      ]
+      "HDX Org Key": "unpeacesecurity"
     }
   },
   {
@@ -4678,35 +2382,7 @@
       "Has received CRAF'd Funding?": "YES",
       "org_key": "inform",
       "Org Type": "Network / Consortium",
-      "HDX Org Key": "inform",
-      "Logo": [
-        {
-          "id": "attKPoFOGOiogFc6j",
-          "width": 1094,
-          "height": 440,
-          "url": "https://v5.airtableusercontent.com/v3/u/47/47/1762560000000/-DsIo8ZzAatqAk82v1D6PA/ZweRaMF5oLbNdmPE7v_P0IjBw5yLMXoJHlgDLLaDzDLFwsNvUNw_RRmc82e9-MptXOFjhH06RAjG_y1KDI59ZJO7jyg_XC3F9Bnj5D4-bk3EFwTAiSlgoaZFQhWlZMksLMQmseDtdRrWe0CeUvO9LrtOmr4BgJcMSa33lmUY0r0/0Y-Du_qBU52zPUKGGgTNRUyJ-XbikR8-KIM32S1ysso",
-          "filename": "INFORM-STRAP-01.png",
-          "size": 21824,
-          "type": "image/png",
-          "thumbnails": {
-            "small": {
-              "url": "https://v5.airtableusercontent.com/v3/u/47/47/1762560000000/Uln1uhHR6WcjZoi4zV1XjQ/nFwXcYIMgJZ76a5yASB2K588DNNn89TwPLClmxe8OOIRYd2ihYE6i51ZOkkXB61S65AhcaCY4-LmKqX-yl6WeWNUfRLhI51kgzaQNtJP-VeV41UejkjK5bcDsW0TB967K5XOjV01Jij8IzFqFumVOQ/wT5SRwugL1sslk_YL6n5q_8Si4m2wg6TZ37SjdvQ6Wg",
-              "width": 90,
-              "height": 36
-            },
-            "large": {
-              "url": "https://v5.airtableusercontent.com/v3/u/47/47/1762560000000/mEkgBszKYiggKXx2B80Kvw/RS2FPlTHtz2LafEsd56Jo4SCtcYMpMNFLWyMBqfiRbf907B-hHnSKpQxZ06-gfp5OYCLmx-2IMSzcjHAkWroR92_ZPeqeBCR1dlq16QjefzrstplWz9UXVPSiddrtCjK1MBxcesHn3VpjdOhJIuK-A/7ht90F_AAfbxaN1l3ba5x0vl-rZNYwZyDjhxWkiOUA0",
-              "width": 1094,
-              "height": 440
-            },
-            "full": {
-              "url": "https://v5.airtableusercontent.com/v3/u/47/47/1762560000000/7vx326NQVo1lncTiw_FWdQ/1q_AW2NiXKHU2wImJDj2v-zijbEvk5WY_9Pos60mrj5kBUAERPJgQBwYNRshyJTuRgbW54348U5fPX-Qq8N34MumtWIEc5UbEJjrO0l9NIpP8HH93PgSP4m9k8ydaWvl5H5Rlg-3MhpV0ZvRzGR5aA/huFpbIyj5P-GdxuQVDZBzHVM1CbQAZ__4Ulub8EiDe0",
-              "width": 1094,
-              "height": 440
-            }
-          }
-        }
-      ]
+      "HDX Org Key": "inform"
     }
   },
   {
@@ -4722,35 +2398,7 @@
       "Has received CRAF'd Funding?": "NO",
       "org_key": "hera",
       "Org Type": "Non-Governmental Organization",
-      "HDX Org Key": "hera-humanitarian-emergency-response-africa",
-      "Logo": [
-        {
-          "id": "att48MrNS4ZhCQAii",
-          "width": 4836,
-          "height": 3141,
-          "url": "https://v5.airtableusercontent.com/v3/u/47/47/1762560000000/n9bQf_i8PdnIN3HXE9UtOQ/Aqk2HZT7Q7QOaGdNxDA1sI7RNKRv6DFXvaz7u2MpKVM7DmsyWWXACzB8tTYTzDs4ZF0QNtZ7iebkeQttQZ9MJVCsQLpZXtoXD4mx5xFvTSUh21EL12Ej5q_aUv7_877nR6kZmIkcJQjdyzs_NfXQUIvCCExDCY8qjrd-FaW6fJU/1Y_I7JhmX3UCPVEezqKeml3uIFu5s_qP-YhIriA2gJI",
-          "filename": "0b7eb1_1d22f48efd174c18abf819fee96a9c09~mv2.png",
-          "size": 922681,
-          "type": "image/png",
-          "thumbnails": {
-            "small": {
-              "url": "https://v5.airtableusercontent.com/v3/u/47/47/1762560000000/1N5ha6ImIyHVRHoGhs5-7w/EB_-K_RheZi0rGnhkI-OMlUhvAQ5-8tCi9zjEmRjHJKK_KA0PKOI7q9NeloqpUuyv1P_nstUS2CfCqvze04XsPDbRZ9-JLIFzt3qGa90V9qe4q95A5noILIhpq04upLvzSy0fFw3gVbp16ygU5Ei_Q/MqNwHcp20txa_YjdlDCiWWzPHLV5vbOwgz-RojLrbZA",
-              "width": 55,
-              "height": 36
-            },
-            "large": {
-              "url": "https://v5.airtableusercontent.com/v3/u/47/47/1762560000000/QQ7EhbYEd8OqdQTUFT24BA/VwQLlVKuXQgq01C_jSnvFNq4Ax0PEao7TZAkROKH46KN50p5vw6eV5iL_Ghp6yu4yNnaOt7MkdJn3pG6MkKJaryhrzlhza-yQ3WmMvTJK77jPjqQVUxwe_ZyyB2Bm907AIuyWW5bqSKOefCpeC7UHA/ylAQJrt0PzkHVgDt_laHeyDM_x6SXTqtx8-dgi64T-o",
-              "width": 788,
-              "height": 512
-            },
-            "full": {
-              "url": "https://v5.airtableusercontent.com/v3/u/47/47/1762560000000/5W7jBmJ3SUu__YQEeKgpUw/Wo9Rod94yC_HDKSUFzJwSAkCNNCiABrqovdVHcMnhsS-R3AmNvTIPNqw7xXXQ-1JIkWZhWlzP8kVxmhjCrJTgnJg6sOKG2jjMzSiBR1o2NKRup5dORPYsPdQKSdBk_HvqmHYpud6UXr_9d6R14ksFQ/syfSTAz_NeofiX1zw_NvlCZVkuauNGG5lH5kYmYDKrY",
-              "width": 3000,
-              "height": 1949
-            }
-          }
-        }
-      ]
+      "HDX Org Key": "hera-humanitarian-emergency-response-africa"
     }
   },
   {
@@ -4776,35 +2424,7 @@
       "Has received CRAF'd Funding?": "NO",
       "org_key": "insecurity-insight",
       "Org Type": "Non-Governmental Organization",
-      "HDX Org Key": "insecurity-insight",
-      "Logo": [
-        {
-          "id": "attq3H3gXvCEzMFLt",
-          "width": 1152,
-          "height": 687,
-          "url": "https://v5.airtableusercontent.com/v3/u/47/47/1762560000000/x9CoDp3dcJ408E785wjoMg/SlKaQSoVy93hQqLbZqLr6lRyTQ2osPCAs63KR8s1mwriAw2cDtqpvGnOdbyypp-KcBHLRpPUabqb3NfXf0-8rPaYTQWcCRct9WNwOQO9RIeICMPmnqpc-cigpv44hyCeuPGULkhrA2etCuDI0EIHatpmSmBOdVPn9vDlRHS5PMI/lIV7G9LXQOckCYxuC3zEZtpoevzCUUVXtPBiV3jG4EE",
-          "filename": "Insecurity-Insight-Logo.jpg",
-          "size": 183310,
-          "type": "image/jpeg",
-          "thumbnails": {
-            "small": {
-              "url": "https://v5.airtableusercontent.com/v3/u/47/47/1762560000000/pUSRUhRAbHNwW74Gwourmw/5_D8J8ZDbG78cRDRjUsO5ojE2RZrvQnEqeHOPa6H9tA5pO3byVjA1ewbEV2kygmWSVtp3axSDq_SyfvV4l4DvzJnblLeHJDJlMfilSiXMe4z9lFvbhs-qU4DVw-Epb1ekah7vW-PAinGj__fbcG2eA/EIahBCmVCF8esPR2_Dwddfy-PyLwZ1T6cvBsWO18dto",
-              "width": 60,
-              "height": 36
-            },
-            "large": {
-              "url": "https://v5.airtableusercontent.com/v3/u/47/47/1762560000000/mh34xH9BWf5i9Z8_tK6Yww/WzIaXeimOoWf8o9w5lzj5KeZ3vTP3qU8rEGNmpVOdfNXAXxJqO_1NftdqQGZ9Q_Vemzc12XbpW7iLjwHUiX7x01uUthiI3nAfD1lG9Y8Aw0BI6WzpvcJLaCY-PsnmZlZRgpHacYbaGgiCogQSH9GMg/xxfQbEFiIBtso7XjY2MKno7wpZYH-R7CXB5zq7pY1Mk",
-              "width": 859,
-              "height": 512
-            },
-            "full": {
-              "url": "https://v5.airtableusercontent.com/v3/u/47/47/1762560000000/k-eGhg-3-duzdYvWMZNCGg/0YuvG4QXvolyGogbZeAGxZeh7m2Pc1YwTiCERy9aBne4UArs86OcKNTc_PWtc5BpOCUSw3WevOr6kf8CRT_Tty8jTDMJcVkFsQZ_MTUE-q1kdk2RERqCDZyNvzBdrv1Gpnmtj9uNVuS9j2MBJJbHlA/S2sWBZAKdARuTxTVfxKp5voc_roAkRRwLwA1qk4U7Hs",
-              "width": 1152,
-              "height": 687
-            }
-          }
-        }
-      ]
+      "HDX Org Key": "insecurity-insight"
     }
   }
 ]
