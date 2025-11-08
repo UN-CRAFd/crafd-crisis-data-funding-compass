@@ -408,22 +408,6 @@
     }
   },
   {
-    "id": "rec7o6iHPXg24y4mR",
-    "fields": {
-      "Org Full Name": "Open Data Cube",
-      "Org Short Name": "Open Data Cube",
-      "Org Website": "https://www.opendatacube.org/",
-      "Org Description": "The Open Data Cube (ODC) is a free, open-source software package that simplifies the management and analysis of large amounts of satellite imagery and other Earth observation data.",
-      "Provided Data Ecosystem Projects": [
-        "recgPTOSUzIQS7uLs"
-      ],
-      "Org HQ Country": "Australia",
-      "Has received CRAF'd Funding?": "NO",
-      "org_key": "open-data-cube",
-      "Org Type": "Network / Consortium"
-    }
-  },
-  {
     "id": "rec8O141RyUupQsRy",
     "fields": {
       "Org Full Name": "Humanitarian Outcomes",
@@ -852,8 +836,8 @@
       "Org Mission": "We serve as the safety coordination and advisory body to the NGO community and provide daily support to more than 1,000 registered organisations working in high-risk contexts.\n\nINSO's mission is to support humanitarian safety and access in high-risk countries.",
       "Link to Data Products Overview": "<https://ngosafety.org/analysis-reports/>\n<https://ngosafety.org/conflict-data-dashboard/>\n<https://ngosafety.org/humanitarian-data-dashboard/>\n\n",
       "Provided Data Ecosystem Projects": [
-        "recftrBsKUWwYWGA9",
-        "rec2eT5BuCp87chHm"
+        "rec2eT5BuCp87chHm",
+        "recaApmxiLnw1JnZf"
       ],
       "Org Donor Agencies": [
         "recHSsEaPuaG3h2PQ",
@@ -1014,8 +998,7 @@
       "Org Website": "https://www.reach-initiative.org",
       "Org Description": "REACH is a leading humanitarian initiative providing granular data, timely information and in-depth analysis from contexts of crisis, disaster and displacement. The work of REACH directly feeds into aid response and decision-making by providing accessible and precise information on the humanitarian situation of crisis-affected populations.",
       "Provided Data Ecosystem Projects": [
-        "reczIeSUeAdEWMKSk",
-        "recwpLBPiqgZWOXyn"
+        "reczIeSUeAdEWMKSk"
       ],
       "Org Donor Agencies": [
         "recHSsEaPuaG3h2PQ",
@@ -1109,28 +1092,6 @@
       "org_key": "hot",
       "Org Type": "Non-Governmental Organization",
       "HDX Org Key": "hot"
-    }
-  },
-  {
-    "id": "recQ0zc2mawvmP70T",
-    "fields": {
-      "Org Full Name": "QGIS.ORG Association",
-      "Org Short Name": "QGIS.ORG",
-      "Org Website": "https://www.qgis.org/",
-      "Org Description": "QGIS, also known as Quantum Geographic Information System, is a free and open-source Geographic Information System (GIS) software. It allows users to create, edit, visualize, analyze, and publish geospatial information. QGIS supports various data formats and is widely used for mapping and spatial analysis tasks. ",
-      "Link to Data Products Overview": "<https://www.qgis.org/>\n",
-      "Provided Data Ecosystem Projects": [
-        "rec2Su6C7bHl4BC7h"
-      ],
-      "Org Donor Agencies": [
-        "recKqqMmG0fzm1WSr",
-        "reckIAhFXgj4XL29b",
-        "recYVizktLnxQPeKH"
-      ],
-      "Org HQ Country": "Global (distributed)",
-      "Has received CRAF'd Funding?": "NO",
-      "org_key": "qgisorg",
-      "Org Type": "Non-Governmental Organization"
     }
   },
   {
@@ -2241,8 +2202,6 @@
         "rec19ocYvikhZMdRI"
       ],
       "Org IATI Name": "N/A",
-      "Est. Data Budget [2024, $M]": 4000000,
-      "Est. Org Budget [2024, $M]": 27760285.54,
       "Org HQ Country": "United States",
       "Has received CRAF'd Funding?": "NO",
       "org_key": "immap",
