@@ -2235,7 +2235,7 @@
           "Investment Theme(s)": [
             "Conflict & Violence Data",
             "Gender Data",
-            "Methodological Standards (e.g., Data Collection)"
+            "Methodological Standards"
           ],
           "product_key": "wwag",
           "HDX_SOHD": "None"
@@ -2847,7 +2847,7 @@
             "Standards & Coordination"
           ],
           "Investment Theme(s)": [
-            "Methodological Standards (e.g., Data Collection)"
+            "Methodological Standards"
           ],
           "product_key": "undp-digital-standards",
           "HDX_SOHD": "None"
@@ -2922,7 +2922,7 @@
             "Standards & Coordination"
           ],
           "Investment Theme(s)": [
-            "Methodological Standards (e.g., Data Collection)"
+            "Methodological Standards"
           ],
           "product_key": "ocha-hxl",
           "HDX_SOHD": "None"
@@ -4413,7 +4413,7 @@
             "Standards & Coordination"
           ],
           "Investment Theme(s)": [
-            "Methodological Standards (e.g., Data Collection)",
+            "Methodological Standards",
             "Consistent Data Formats",
             "Standard Geocodes",
             "Version Tracking"
@@ -5498,7 +5498,7 @@
           "Investment Theme(s)": [
             "Conflict & Violence Data",
             "Gender Data",
-            "Methodological Standards (e.g., Data Collection)"
+            "Methodological Standards"
           ],
           "product_key": "wwag",
           "HDX_SOHD": "None"
