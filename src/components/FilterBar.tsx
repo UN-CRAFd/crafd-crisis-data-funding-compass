@@ -35,6 +35,7 @@ interface FilterBarProps {
     // Investment Themes
     investmentThemes: string[];
     allKnownInvestmentThemes: string[];
+    investmentThemesByType?: Record<string, string[]>;
     onThemesChange: (values: string[]) => void;
 
     // Reset
@@ -63,6 +64,7 @@ const FilterBar: React.FC<FilterBarProps> = ({
     onTypesChange,
     investmentThemes,
     allKnownInvestmentThemes,
+    investmentThemesByType = {},
     onThemesChange,
     onResetFilters,
     className = '',
@@ -182,7 +184,7 @@ const FilterBar: React.FC<FilterBarProps> = ({
                 </DropdownMenu>
             </div>
 
-            {/* Second Row: Investment Types, Themes, and Reset (equal width) */}
+            {/* Second Row: Investment Types and Themes (equal width) */}
             <div className="flex flex-col sm:flex-row gap-3">
                 {/* Investment Types Multi-Select */}
                 <DropdownMenu onOpenChange={(open) => setTypesMenuOpen(open)}>
@@ -354,59 +356,103 @@ const FilterBar: React.FC<FilterBarProps> = ({
                         )}
 
                         <div className="max-h-[200px] overflow-y-auto">
-                        {allKnownInvestmentThemes
-                            .filter((theme) => theme.toLowerCase().includes(themeSearchQuery.toLowerCase()))
-                            .map((theme) => {
-                            const isChecked = investmentThemes.some(
-                                (selected) => selected.toLowerCase().trim() === theme.toLowerCase().trim()
-                            );
+                        {Object.keys(investmentThemesByType).length > 0 ? (
+                            // Show grouped themes by investment type
+                            Object.entries(investmentThemesByType)
+                                .sort(([typeA], [typeB]) => typeA.localeCompare(typeB))
+                                .map(([investmentType, themes]) => {
+                                    // Filter themes based on search query
+                                    const filteredThemes = themes.filter((theme) =>
+                                        theme.toLowerCase().includes(themeSearchQuery.toLowerCase())
+                                    );
 
-                            return (
-                                <DropdownMenuCheckboxItem
-                                    key={theme}
-                                    checked={isChecked}
-                                    onCheckedChange={(checked) => {
-                                        if (checked) {
-                                            const alreadyExists = investmentThemes.some(
-                                                (t) => t.toLowerCase().trim() === theme.toLowerCase().trim()
-                                            );
-                                            if (!alreadyExists) {
-                                                onThemesChange([...investmentThemes, theme]);
-                                            }
-                                        } else {
-                                            onThemesChange(
-                                                investmentThemes.filter(
-                                                    (t) => t.toLowerCase().trim() !== theme.toLowerCase().trim()
-                                                )
-                                            );
-                                        }
-                                    }}
-                                    onSelect={(e) => e.preventDefault()}
-                                    className="cursor-pointer"
-                                >
-                                    {theme}
-                                </DropdownMenuCheckboxItem>
-                            );
-                        })}
+                                    if (filteredThemes.length === 0) return null;
+
+                                    const IconComponent = getIconForInvestmentType(investmentType);
+                                    
+                                    return (
+                                        <div key={investmentType}>
+                                            {/* Category Header */}
+                                                <div className="px-2 py-1.5 text-xs font-semibold text-slate-600 bg-slate-100 border-b border-slate-200 sticky top-0 z-10 flex items-center gap-1.5">
+                                                <IconComponent className="h-3 w-3" />
+                                                {investmentType}
+                                            </div>
+                                            {/* Themes under this category */}
+                                            {filteredThemes.map((theme) => {
+                                                const isChecked = investmentThemes.some(
+                                                    (selected) => selected.toLowerCase().trim() === theme.toLowerCase().trim()
+                                                );
+
+                                                return (
+                                                    <DropdownMenuCheckboxItem
+                                                        key={theme}
+                                                        checked={isChecked}
+                                                        onCheckedChange={(checked) => {
+                                                            if (checked) {
+                                                                const alreadyExists = investmentThemes.some(
+                                                                    (t) => t.toLowerCase().trim() === theme.toLowerCase().trim()
+                                                                );
+                                                                if (!alreadyExists) {
+                                                                    onThemesChange([...investmentThemes, theme]);
+                                                                }
+                                                            } else {
+                                                                onThemesChange(
+                                                                    investmentThemes.filter(
+                                                                        (t) => t.toLowerCase().trim() !== theme.toLowerCase().trim()
+                                                                    )
+                                                                );
+                                                            }
+                                                        }}
+                                                        onSelect={(e) => e.preventDefault()}
+                                                        className="cursor-pointer pl-6 py-1"
+                                                    >
+                                                        {theme}
+                                                    </DropdownMenuCheckboxItem>
+                                                );
+                                            })}
+                                        </div>
+                                    );
+                                })
+                        ) : (
+                            // Fallback to flat list if grouped data not available
+                            allKnownInvestmentThemes
+                                .filter((theme) => theme.toLowerCase().includes(themeSearchQuery.toLowerCase()))
+                                .map((theme) => {
+                                    const isChecked = investmentThemes.some(
+                                        (selected) => selected.toLowerCase().trim() === theme.toLowerCase().trim()
+                                    );
+
+                                    return (
+                                        <DropdownMenuCheckboxItem
+                                            key={theme}
+                                            checked={isChecked}
+                                            onCheckedChange={(checked) => {
+                                                if (checked) {
+                                                    const alreadyExists = investmentThemes.some(
+                                                        (t) => t.toLowerCase().trim() === theme.toLowerCase().trim()
+                                                    );
+                                                    if (!alreadyExists) {
+                                                        onThemesChange([...investmentThemes, theme]);
+                                                    }
+                                                } else {
+                                                    onThemesChange(
+                                                        investmentThemes.filter(
+                                                            (t) => t.toLowerCase().trim() !== theme.toLowerCase().trim()
+                                                        )
+                                                    );
+                                                }
+                                            }}
+                                            onSelect={(e) => e.preventDefault()}
+                                            className="cursor-pointer py-1"
+                                        >
+                                            {theme}
+                                        </DropdownMenuCheckboxItem>
+                                    );
+                                })
+                        )}
                         </div>
                     </DropdownMenuContent>
                 </DropdownMenu>
-
-                {/* Reset Filters Button */}
-                <Button
-                    variant="outline"
-                    onClick={onResetFilters}
-                    disabled={!(combinedDonors.length > 0 || investmentTypes.length > 0 || investmentThemes.length > 0 || appliedSearchQuery)}
-                    className={`h-10 flex-1 px-4 font-medium transition-all ${
-                        combinedDonors.length > 0 || investmentTypes.length > 0 || investmentThemes.length > 0 || appliedSearchQuery
-                            ? 'border-slate-300 bg-slate-100 text-slate-700 hover:bg-slate-200 hover:border-slate-300'
-                            : 'bg-slate-50/50 border-slate-200 text-slate-400 hover:bg-slate-100 hover:border-slate-300'
-                    }`}
-                    title={labels.ui.resetFilters}
-                >
-                    <RotateCcw className="w-4 h-4" />
-                    <span className="ml-2">Reset</span>
-                </Button>
             </div>
         </div>
     );
