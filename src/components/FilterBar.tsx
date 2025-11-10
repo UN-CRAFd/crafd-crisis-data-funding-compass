@@ -315,7 +315,7 @@ const FilterBar: React.FC<FilterBarProps> = ({
                                 <DatabaseBackup className="h-4 w-4 shrink-0" />
                                 <span className="truncate">
                                     {investmentThemes.length === 0
-                                        ? 'Investment Themes'
+                                        ? labels.filters.themePlaceholder
                                         : investmentThemes.length === 1
                                         ? investmentThemes[0]
                                         : `${investmentThemes.length} themes`}

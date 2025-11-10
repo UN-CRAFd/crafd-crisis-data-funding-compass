@@ -46,6 +46,19 @@ const CrisisDataDashboardWrapper = ({ logoutButton }: { logoutButton?: React.Rea
         return keys.map(key => themeKeyToName(key));
     }, [searchParams]);
     const searchQuery = searchParams.get('q') ?? searchParams.get('search') ?? '';
+    
+    // Get sort parameters from URL (compact keys: sb -> sortBy, sd -> sortDirection)
+    const sortBy = useMemo(() => {
+        const raw = searchParams.get('sb') ?? searchParams.get('sortBy');
+        if (raw === 'donors' || raw === 'assets') return raw;
+        return 'name'; // default
+    }, [searchParams]);
+    
+    const sortDirection = useMemo(() => {
+        const raw = searchParams.get('sd') ?? searchParams.get('sortDirection');
+        if (raw === 'desc') return 'desc';
+        return 'asc'; // default
+    }, [searchParams]);
 
     // Track active view (table or network)
     const [activeView, setActiveView] = useState<'table' | 'network'>('table');
@@ -124,7 +137,14 @@ const CrisisDataDashboardWrapper = ({ logoutButton }: { logoutButton?: React.Rea
     }, [searchQuery]);
 
     // Helper function to update URL search params
-    const updateURLParams = useCallback((params: { donors?: string[]; types?: string[]; themes?: string[]; search?: string }) => {
+    const updateURLParams = useCallback((params: { 
+        donors?: string[]; 
+        types?: string[]; 
+        themes?: string[]; 
+        search?: string;
+        sortBy?: 'name' | 'donors' | 'assets';
+        sortDirection?: 'asc' | 'desc';
+    }) => {
         const newSearchParams = new URLSearchParams(searchParams.toString());
 
         // Update or remove donors param (compact 'd')
@@ -166,6 +186,25 @@ const CrisisDataDashboardWrapper = ({ logoutButton }: { logoutButton?: React.Rea
                 newSearchParams.set('q', params.search);
             } else {
                 newSearchParams.delete('q');
+            }
+        }
+
+        // Update or remove sort params (compact 'sb' and 'sd')
+        if (params.sortBy !== undefined) {
+            // Only set in URL if non-default
+            if (params.sortBy !== 'name') {
+                newSearchParams.set('sb', params.sortBy);
+            } else {
+                newSearchParams.delete('sb');
+            }
+        }
+        
+        if (params.sortDirection !== undefined) {
+            // Only set in URL if non-default
+            if (params.sortDirection !== 'asc') {
+                newSearchParams.set('sd', params.sortDirection);
+            } else {
+                newSearchParams.delete('sd');
             }
         }
 
@@ -219,7 +258,7 @@ const CrisisDataDashboardWrapper = ({ logoutButton }: { logoutButton?: React.Rea
     // Handle reset filters
     const handleResetFilters = () => {
         setLocalSearchQuery(''); // Clear local search immediately
-        updateURLParams({ donors: [], types: [], themes: [], search: '' });
+        updateURLParams({ donors: [], types: [], themes: [], search: '', sortBy: 'name', sortDirection: 'asc' });
     };
 
     // Handle filter changes
@@ -233,6 +272,10 @@ const CrisisDataDashboardWrapper = ({ logoutButton }: { logoutButton?: React.Rea
 
     const handleThemesChange = (values: string[]) => {
         updateURLParams({ themes: values });
+    };
+
+    const handleSortChange = (newSortBy: 'name' | 'donors' | 'assets', newSortDirection: 'asc' | 'desc') => {
+        updateURLParams({ sortBy: newSortBy, sortDirection: newSortDirection });
     };
 
     // Search handler - updates local state immediately, URL only on Enter key
@@ -401,12 +444,15 @@ const CrisisDataDashboardWrapper = ({ logoutButton }: { logoutButton?: React.Rea
             appliedSearchQuery={effectiveSearchQuery}
             selectedOrgKey={selectedOrgKey}
             selectedProjectKey={selectedProjectKey}
+            sortBy={sortBy}
+            sortDirection={sortDirection}
             onDonorsChange={handleDonorsChange}
             onTypesChange={handleTypesChange}
             onThemesChange={handleThemesChange}
             onSearchChange={handleSearchChange}
             onSearchSubmit={handleSearchSubmit}
             onResetFilters={handleResetFilters}
+            onSortChange={handleSortChange}
             onOpenOrganizationModal={handleOpenOrganizationModal}
             onOpenProjectModal={handleOpenProjectModal}
             onCloseOrganizationModal={handleCloseOrganizationModal}
