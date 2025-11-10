@@ -94,6 +94,21 @@ async function loadThemesTable(): Promise<ThemesMappings> {
     return themesTableLoadPromise;
 }
 
+// Helper functions for theme key conversion
+export function themeNameToKey(themeName: string): string {
+    if (!cachedThemesMappings) {
+        return themeName; // Fallback to theme name if not loaded yet
+    }
+    return cachedThemesMappings.themeToKey.get(themeName) || themeName;
+}
+
+export function themeKeyToName(themeKey: string): string {
+    if (!cachedThemesMappings) {
+        return themeKey; // Fallback to theme key if not loaded yet
+    }
+    return cachedThemesMappings.keyToTheme.get(themeKey) || themeKey;
+}
+
 // Extract donor countries from agencies
 // Helper function to safely get donor countries from organization data
 function getDonorCountries(org: NestedOrganization): string[] {
@@ -498,13 +513,13 @@ async function getAvailableFilterOptions(organizations: OrganizationWithProjects
         });
     });
 
-    // Load theme-to-type mapping (non-blocking with fallback)
-    let themeToTypeMap: Map<string, string>;
+    // Load theme mappings (non-blocking with fallback)
+    let themesMappings: ThemesMappings;
     try {
-        themeToTypeMap = await loadThemesTable();
+        themesMappings = await loadThemesTable();
     } catch (error) {
         console.warn('Failed to load themes table, using ungrouped themes:', error);
-        themeToTypeMap = new Map();
+        themesMappings = { themeToType: new Map(), themeToKey: new Map(), keyToTheme: new Map() };
     }
 
     // Group themes by their investment type
@@ -512,7 +527,7 @@ async function getAvailableFilterOptions(organizations: OrganizationWithProjects
     const themesArray = Array.from(investmentThemes);
     
     themesArray.forEach(theme => {
-        const investmentType = themeToTypeMap.get(theme);
+        const investmentType = themesMappings.themeToType.get(theme);
         if (investmentType) {
             if (!themesByType[investmentType]) {
                 themesByType[investmentType] = [];
