@@ -375,8 +375,24 @@ const FilterBar: React.FC<FilterBarProps> = ({
                             Object.entries(investmentThemesByType)
                                 .sort(([typeA], [typeB]) => typeA.localeCompare(typeB))
                                 .map(([investmentType, themes]) => {
+                                    // Show ALL themes available in projectCountsByTheme for this type
+                                    // regardless of current theme selection
+                                    const allThemesForType = new Set<string>();
+                                    
+                                    // Add all themes that have counts (from query/donor/type filtering)
+                                    Object.keys(projectCountsByTheme).forEach(themeKey => {
+                                        // Find the original case-sensitive theme name from allKnownInvestmentThemes
+                                        const originalTheme = allKnownInvestmentThemes.find(
+                                            t => t.toLowerCase().trim() === themeKey.toLowerCase().trim()
+                                        );
+                                        // Check if this theme belongs to this investment type category
+                                        if (originalTheme && themes.some(t => t.toLowerCase().trim() === themeKey)) {
+                                            allThemesForType.add(originalTheme);
+                                        }
+                                    });
+                                    
                                     // Filter themes based on search query
-                                    const filteredThemes = themes.filter((theme) =>
+                                    const filteredThemes = Array.from(allThemesForType).filter((theme) =>
                                         theme.toLowerCase().includes(themeSearchQuery.toLowerCase())
                                     );
 
