@@ -81,12 +81,15 @@ interface CrisisDataDashboardProps {
     appliedSearchQuery: string; // Applied search query (from URL)
     selectedOrgKey: string; // Organization key from URL
     selectedProjectKey: string; // Asset key from URL
+    sortBy: 'name' | 'donors' | 'assets'; // Sort field from URL
+    sortDirection: 'asc' | 'desc'; // Sort direction from URL
     onDonorsChange: (values: string[]) => void;
     onTypesChange: (values: string[]) => void;
     onThemesChange: (values: string[]) => void;
     onSearchChange: (value: string) => void;
     onSearchSubmit: () => void;
     onResetFilters: () => void;
+    onSortChange: (sortBy: 'name' | 'donors' | 'assets', sortDirection: 'asc' | 'desc') => void;
     onOpenOrganizationModal: (orgKey: string) => void;
     onOpenProjectModal: (projectKey: string) => void;
     onCloseOrganizationModal: () => void;
@@ -227,13 +230,14 @@ const CrisisDataDashboard = ({
     onCloseProjectModal,
     onDonorClick,
     onViewChange,
-    logoutButton
+    logoutButton,
+    sortBy,
+    sortDirection,
+    onSortChange
 }: CrisisDataDashboardProps) => {
     // UI state (not related to routing)
     const [expandedOrgs, setExpandedOrgs] = useState<Set<string>>(new Set());
     const [expandedCountries, setExpandedCountries] = useState<Set<string>>(new Set());
-    const [sortBy, setSortBy] = useState<'name' | 'donors' | 'assets'>('name');
-    const [sortDirection, setSortDirection] = useState<'asc' | 'desc'>('asc');
     const [sortMenuOpen, setSortMenuOpen] = useState(false);
     const [activeView, setActiveView] = useState<'table' | 'network'>('table'); // Add view state
 
@@ -945,60 +949,42 @@ const CrisisDataDashboard = ({
                                             className="w-auto min-w-[180px] bg-white border border-slate-200 shadow-lg"
                                         >
                                             <DropdownMenuItem
-                                                onClick={() => {
-                                                    setSortBy('name');
-                                                    setSortDirection('asc');
-                                                }}
+                                                onClick={() => onSortChange('name', 'asc')}
                                                 className="cursor-pointer text-[11px] py-1"
                                             >
                                                 <ArrowDownWideNarrow className="w-3 h-3 mr-2" />
                                                 Alphabetically (A-Z)
                                             </DropdownMenuItem>
                                             <DropdownMenuItem
-                                                onClick={() => {
-                                                    setSortBy('name');
-                                                    setSortDirection('desc');
-                                                }}
+                                                onClick={() => onSortChange('name', 'desc')}
                                                 className="cursor-pointer text-[11px] py-1"
                                             >
                                                 <ArrowUpWideNarrow className="w-3 h-3 mr-2" />
                                                 Alphabetically (Z-A)
                                             </DropdownMenuItem>
                                             <DropdownMenuItem
-                                                onClick={() => {
-                                                    setSortBy('donors');
-                                                    setSortDirection('desc');
-                                                }}
+                                                onClick={() => onSortChange('donors', 'desc')}
                                                 className="cursor-pointer text-[11px] py-1"
                                             >
                                                 <ArrowDownWideNarrow className="w-3 h-3 mr-2" />
                                                 Number of Donors
                                             </DropdownMenuItem>
                                             <DropdownMenuItem
-                                                onClick={() => {
-                                                    setSortBy('donors');
-                                                    setSortDirection('asc');
-                                                }}
+                                                onClick={() => onSortChange('donors', 'asc')}
                                                 className="cursor-pointer text-[11px] py-1"
                                             >
                                                 <ArrowUpWideNarrow className="w-3 h-3 mr-2" />
                                                 Number of Donors
                                             </DropdownMenuItem>
                                             <DropdownMenuItem
-                                                onClick={() => {
-                                                    setSortBy('assets');
-                                                    setSortDirection('desc');
-                                                }}
+                                                onClick={() => onSortChange('assets', 'desc')}
                                                 className="cursor-pointer text-[11px] py-1"
                                             >
                                                 <ArrowDownWideNarrow className="w-3 h-3 mr-2" />
                                                 Number of Assets
                                             </DropdownMenuItem>
                                             <DropdownMenuItem
-                                                onClick={() => {
-                                                    setSortBy('assets');
-                                                    setSortDirection('asc');
-                                                }}
+                                                onClick={() => onSortChange('assets', 'asc')}
                                                 className="cursor-pointer text-[11px] py-1"
                                             >
                                                 <ArrowUpWideNarrow className="w-3 h-3 mr-2" />
