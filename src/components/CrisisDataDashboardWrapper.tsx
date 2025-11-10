@@ -1,62 +1,12 @@
 'use client';
 
 import { typeLabelToSlug, typeSlugToLabel } from '@/lib/urlShortcuts';
+import { themeKeyToName, themeNameToKey } from '@/lib/data';
 import { usePathname, useRouter, useSearchParams } from 'next/navigation';
 import { useCallback, useEffect, useMemo, useRef, useState } from 'react';
 import { processDashboardData } from '../lib/data';
 import type { DashboardFilters, DashboardStats, OrganizationProjectData, OrganizationTypeData, OrganizationWithProjects, ProjectTypeData } from '../types/airtable';
 import CrisisDataDashboard from './CrisisDataDashboard';
-
-/**
- * Helper function to parse comma-separated values while respecting quoted strings.
- * Themes with commas in their name should be wrapped in double quotes.
- * Example: "Theme A","Theme B, with comma","Theme C" -> ["Theme A", "Theme B, with comma", "Theme C"]
- */
-function parseCommaSeparatedWithQuotes(value: string): string[] {
-    if (!value) return [];
-    
-    const result: string[] = [];
-    let current = '';
-    let inQuotes = false;
-    
-    for (let i = 0; i < value.length; i++) {
-        const char = value[i];
-        
-        if (char === '"') {
-            inQuotes = !inQuotes;
-        } else if (char === ',' && !inQuotes) {
-            if (current.trim()) {
-                result.push(current.trim());
-            }
-            current = '';
-        } else {
-            current += char;
-        }
-    }
-    
-    if (current.trim()) {
-        result.push(current.trim());
-    }
-    
-    return result.filter(Boolean);
-}
-
-/**
- * Helper function to encode array of strings to comma-separated format,
- * wrapping values with commas in double quotes.
- * Example: ["Theme A", "Theme B, with comma", "Theme C"] -> "Theme A","Theme B, with comma","Theme C"
- */
-function encodeCommaSeparatedWithQuotes(values: string[]): string {
-    return values
-        .map(value => {
-            // If value contains comma, wrap in quotes
-            if (value.includes(',')) {
-                return `"${value}"`;
-            }
-            return value;
-        })
-        .join(',');
-}
 
 /**
  * Wrapper component that handles routing, URL params, and data fetching.
@@ -91,7 +41,9 @@ const CrisisDataDashboardWrapper = ({ logoutButton }: { logoutButton?: React.Rea
     }, [searchParams]);
     const investmentThemes = useMemo(() => {
         const raw = searchParams.get('th') ?? searchParams.get('themes');
-        return raw ? parseCommaSeparatedWithQuotes(raw) : [];
+        // raw values are theme keys in the URL; convert to theme names for app use
+        const keys = raw?.split(',').filter(Boolean) || [];
+        return keys.map(key => themeKeyToName(key));
     }, [searchParams]);
     const searchQuery = searchParams.get('q') ?? searchParams.get('search') ?? '';
 
@@ -198,10 +150,11 @@ const CrisisDataDashboardWrapper = ({ logoutButton }: { logoutButton?: React.Rea
             }
         }
 
-        // Update or remove themes param (compact 'th')
+        // Update or remove themes param (compact 'th') - write theme keys
         if (params.themes !== undefined) {
             if (params.themes.length > 0) {
-                newSearchParams.set('th', encodeCommaSeparatedWithQuotes(params.themes));
+                const themeKeys = params.themes.map(t => themeNameToKey(t));
+                newSearchParams.set('th', themeKeys.join(','));
             } else {
                 newSearchParams.delete('th');
             }
