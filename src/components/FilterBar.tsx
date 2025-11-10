@@ -80,10 +80,10 @@ const FilterBar: React.FC<FilterBarProps> = ({
     return (
         <div className={`flex flex-col gap-3 ${className}`}>
             {/* First Row: Search and Donors (equal width) */}
-            <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-3">
+            <div className="flex flex-col sm:flex-row gap-3">
                 {/* Modern Search Bar */}
-                <div className="relative flex-1">
-                    <Search className="absolute left-3 top-1/2 -translate-y-1/2 h-4 w-4 text-slate-400" />
+                <div className="relative flex-1 min-w-0">
+                    <Search className="absolute left-3 top-1/2 -translate-y-1/2 h-4 w-4 text-slate-400 pointer-events-none" />
                     <Input
                         id="search"
                         type="text"
@@ -95,16 +95,17 @@ const FilterBar: React.FC<FilterBarProps> = ({
                                 onSearchSubmit();
                             }
                         }}
-                        className="h-10 pl-10 pr-4 bg-slate-50/50 border-slate-200 focus:bg-white focus:border-[var(--brand-primary)] focus:ring-2 focus:ring-[var(--brand-primary)]/20 transition-all"
+                        className="w-full h-10 pl-10 pr-4 bg-slate-50/50 border-slate-200 hover:bg-white hover:border-slate-300 focus:bg-white focus:border-[var(--brand-primary)] focus:ring-2 focus:ring-[var(--brand-primary)]/20 transition-all font-normal"
                     />
                 </div>
 
                 {/* Donor Countries Multi-Select */}
+                <div className="flex-1 min-w-0">
                 <DropdownMenu onOpenChange={(open) => setDonorsMenuOpen(open)}>
                     <DropdownMenuTrigger asChild>
                         <Button
                             variant="outline"
-                            className={`h-10 justify-between font-medium transition-all flex-1 ${
+                            className={`w-full h-10 justify-between font-medium transition-all ${
                                 combinedDonors.length > 0
                                     ? 'border-[var(--brand-primary)] bg-[var(--brand-bg-lighter)] text-[var(--brand-primary)] hover:bg-[var(--brand-bg-light)]'
                                     : 'bg-slate-50/50 border-slate-200 hover:bg-white hover:border-slate-300'
@@ -182,16 +183,18 @@ const FilterBar: React.FC<FilterBarProps> = ({
                         </div>
                     </DropdownMenuContent>
                 </DropdownMenu>
+                </div>
             </div>
 
             {/* Second Row: Investment Types and Themes (equal width) */}
             <div className="flex flex-col sm:flex-row gap-3">
                 {/* Investment Types Multi-Select */}
+                <div className="flex-1 min-w-0">
                 <DropdownMenu onOpenChange={(open) => setTypesMenuOpen(open)}>
                     <DropdownMenuTrigger asChild>
                         <Button
                             variant="outline"
-                            className={`h-10 justify-between font-medium transition-all flex-1 ${
+                            className={`w-full h-10 justify-between font-medium transition-all ${
                                 investmentTypes.length > 0
                                     ? 'border-[var(--brand-primary)] bg-[var(--brand-bg-lighter)] text-[var(--brand-primary)] hover:bg-[var(--brand-bg-light)]'
                                     : 'bg-slate-50/50 border-slate-200 hover:bg-white hover:border-slate-300'
@@ -294,13 +297,15 @@ const FilterBar: React.FC<FilterBarProps> = ({
                         })}
                     </DropdownMenuContent>
                 </DropdownMenu>
+                </div>
 
                 {/* Investment Themes Multi-Select */}
+                <div className="flex-1 min-w-0">
                 <DropdownMenu onOpenChange={(open) => setThemesMenuOpen(open)}>
                     <DropdownMenuTrigger asChild>
                         <Button
                             variant="outline"
-                            className={`h-10 justify-between font-medium transition-all flex-1 ${
+                            className={`w-full h-10 justify-between font-medium transition-all ${
                                 investmentThemes.length > 0
                                     ? 'border-[var(--brand-primary)] bg-[var(--brand-bg-lighter)] text-[var(--brand-primary)] hover:bg-[var(--brand-bg-light)]'
                                     : 'bg-slate-50/50 border-slate-200 hover:bg-white hover:border-slate-300'
@@ -453,6 +458,7 @@ const FilterBar: React.FC<FilterBarProps> = ({
                         </div>
                     </DropdownMenuContent>
                 </DropdownMenu>
+                </div>
             </div>
         </div>
     );
