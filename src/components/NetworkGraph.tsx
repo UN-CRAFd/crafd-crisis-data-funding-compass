@@ -128,6 +128,50 @@ const NetworkGraph: React.FC<NetworkGraphProps> = ({
         lastOrgCountRef.current = currentOrgCount;
     }, [combinedDonors, investmentTypes, investmentThemes, appliedSearchQuery, organizationsWithProjects]);
 
+    // Calculate project counts for each investment type and theme in the current view
+    // Deduplicate projects by ID to avoid counting the same project multiple times
+    const projectCountsByType = useMemo(() => {
+        const projectsByType: Record<string, Set<string>> = {};
+        organizationsWithProjects.forEach(org => {
+            org.projects.forEach(project => {
+                project.investmentTypes?.forEach(type => {
+                    const normalizedType = type.toLowerCase().trim();
+                    if (!projectsByType[normalizedType]) {
+                        projectsByType[normalizedType] = new Set();
+                    }
+                    projectsByType[normalizedType].add(project.id);
+                });
+            });
+        });
+        // Convert Sets to counts
+        const counts: Record<string, number> = {};
+        Object.keys(projectsByType).forEach(type => {
+            counts[type] = projectsByType[type].size;
+        });
+        return counts;
+    }, [organizationsWithProjects]);
+
+    const projectCountsByTheme = useMemo(() => {
+        const projectsByTheme: Record<string, Set<string>> = {};
+        organizationsWithProjects.forEach(org => {
+            org.projects.forEach(project => {
+                project.investmentThemes?.forEach(theme => {
+                    const normalizedTheme = theme.toLowerCase().trim();
+                    if (!projectsByTheme[normalizedTheme]) {
+                        projectsByTheme[normalizedTheme] = new Set();
+                    }
+                    projectsByTheme[normalizedTheme].add(project.id);
+                });
+            });
+        });
+        // Convert Sets to counts
+        const counts: Record<string, number> = {};
+        Object.keys(projectsByTheme).forEach(theme => {
+            counts[theme] = projectsByTheme[theme].size;
+        });
+        return counts;
+    }, [organizationsWithProjects]);
+
     // Handle fullscreen toggle
     const toggleFullscreen = useCallback(() => {
         if (!containerRef.current) return;
@@ -1098,6 +1142,8 @@ const NetworkGraph: React.FC<NetworkGraphProps> = ({
                     investmentThemesByType={investmentThemesByType}
                     onThemesChange={onThemesChange}
                     onResetFilters={onResetFilters}
+                    projectCountsByType={projectCountsByType}
+                    projectCountsByTheme={projectCountsByTheme}
                     portalContainer={filterBarContainer}
                     isFullscreen={true}
                 />

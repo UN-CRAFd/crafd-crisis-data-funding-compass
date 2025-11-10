@@ -38,6 +38,10 @@ interface FilterBarProps {
     investmentThemesByType?: Record<string, string[]>;
     onThemesChange: (values: string[]) => void;
 
+    // Project counts
+    projectCountsByType?: Record<string, number>;
+    projectCountsByTheme?: Record<string, number>;
+
     // Reset
     onResetFilters: () => void;
 
@@ -66,6 +70,8 @@ const FilterBar: React.FC<FilterBarProps> = ({
     allKnownInvestmentThemes,
     investmentThemesByType = {},
     onThemesChange,
+    projectCountsByType = {},
+    projectCountsByTheme = {},
     onResetFilters,
     className = '',
     portalContainer = null,
@@ -265,6 +271,8 @@ const FilterBar: React.FC<FilterBarProps> = ({
                                 (selected) => selected.toLowerCase().trim() === type.toLowerCase().trim()
                             );
 
+                            const projectCount = projectCountsByType[type.toLowerCase().trim()] || 0;
+
                             return (
                                 <DropdownMenuCheckboxItem
                                     key={type}
@@ -288,9 +296,10 @@ const FilterBar: React.FC<FilterBarProps> = ({
                                     onSelect={(e) => e.preventDefault()}
                                     className="cursor-pointer"
                                 >
-                                    <div className="flex items-center gap-2">
+                                    <div className="flex items-center gap-2 flex-1">
                                         <IconComponent className="w-4 h-4" />
-                                        <span>{displayName}</span>
+                                        <span className="flex-1">{displayName}</span>
+                                        <span className="text-xs text-slate-500 ml-auto">({projectCount})</span>
                                     </div>
                                 </DropdownMenuCheckboxItem>
                             );
@@ -388,6 +397,8 @@ const FilterBar: React.FC<FilterBarProps> = ({
                                                     (selected) => selected.toLowerCase().trim() === theme.toLowerCase().trim()
                                                 );
 
+                                                const projectCount = projectCountsByTheme[theme.toLowerCase().trim()] || 0;
+
                                                 return (
                                                     <DropdownMenuCheckboxItem
                                                         key={theme}
@@ -411,7 +422,10 @@ const FilterBar: React.FC<FilterBarProps> = ({
                                                         onSelect={(e) => e.preventDefault()}
                                                         className="cursor-pointer pl-6 py-1"
                                                     >
-                                                        {theme}
+                                                        <div className="flex items-center gap-2 flex-1 w-full">
+                                                            <span className="flex-1">{theme}</span>
+                                                            <span className="text-xs text-slate-500 ml-auto">({projectCount})</span>
+                                                        </div>
                                                     </DropdownMenuCheckboxItem>
                                                 );
                                             })}
@@ -426,6 +440,8 @@ const FilterBar: React.FC<FilterBarProps> = ({
                                     const isChecked = investmentThemes.some(
                                         (selected) => selected.toLowerCase().trim() === theme.toLowerCase().trim()
                                     );
+
+                                    const projectCount = projectCountsByTheme[theme.toLowerCase().trim()] || 0;
 
                                     return (
                                         <DropdownMenuCheckboxItem
@@ -450,7 +466,10 @@ const FilterBar: React.FC<FilterBarProps> = ({
                                             onSelect={(e) => e.preventDefault()}
                                             className="cursor-pointer py-1"
                                         >
-                                            {theme}
+                                            <div className="flex items-center gap-2 flex-1 w-full">
+                                                <span className="flex-1">{theme}</span>
+                                                <span className="text-xs text-slate-500 ml-auto">({projectCount})</span>
+                                            </div>
                                         </DropdownMenuCheckboxItem>
                                     );
                                 })
