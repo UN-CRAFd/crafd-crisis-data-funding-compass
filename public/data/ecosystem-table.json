@@ -1,5 +1,24 @@
 [
   {
+    "id": "rec04YelpRCFjpBV8",
+    "fields": {
+      "Project/Product Name": "National Disaster Preparedness",
+      "Project Description": "PDC’s National Disaster Preparedness Baseline Assessment is more than an assessment. It’s a long-term program that helps countries assess risk and disaster management capacity and apply it to:\n- Early warning\n- Disaster preparedness\n- Policy and planning\n- Sustainable development\n- Resilience-building initiatives\nThe national baseline assessment is the only U.S. program recognized by the United Nations to help countries operationalize the goals of the Sendai Framework for Disaster Risk Reduction—providing an evidence-based foundation for actions to be taken and investments to be made in achieving long-term resilience and\n",
+      "Project Website": "https://www.pdc.org/ndpba/",
+      "Provider Orgs Full Name": [
+        "recCvRYx3gzUtg9cf"
+      ],
+      "CRAF’d-Funded Project?": "NO",
+      "Investment Type(s)": [
+        "Crisis Analytics & Insights"
+      ],
+      "Investment Theme(s)": [
+        "Needs Assessment"
+      ],
+      "HDX_SOHD": "None"
+    }
+  },
+  {
     "id": "rec04lJaB92fTs0JH",
     "fields": {
       "Project/Product Name": "Field Mapping Tasking Manager (FMTM)",
@@ -2499,6 +2518,24 @@
     }
   },
   {
+    "id": "recb50ne79iS2TFYz",
+    "fields": {
+      "Project/Product Name": "AI for Humanity",
+      "Project Description": "PDC’s advanced natural language processing and generative AI is being leveraged to greatly reduce the manual labor and time involved with finding, analyzing, and curating global hazard content. This allows PDC to provide more comprehensive coverage of hazard events around the globe through its DisasterAWARE Pro risk intelligence and early warning platform. These repetitive and time consuming tasks are now performed by AI Hazard Finder with greater speed and accuracy than ever before possible.\n\n",
+      "Project Website": "https://www.pdc.org/artificial-intelligence/",
+      "Provider Orgs Full Name": [
+        "recCvRYx3gzUtg9cf"
+      ],
+      "Investment Type(s)": [
+        "Crisis Analytics & Insights"
+      ],
+      "Investment Theme(s)": [
+        "AI Models"
+      ],
+      "HDX_SOHD": "None"
+    }
+  },
+  {
     "id": "recbmA6Lmrr5AfAHJ",
     "fields": {
       "Project/Product Name": "GRID3: Geo-Referenced Infrastructure and Demographic Data for Development ",
@@ -3226,7 +3263,8 @@
       ],
       "Investment Theme(s)": [
         "Disaster Hazard & Risk Modelling",
-        "Composite Indices"
+        "Composite Indices",
+        "Climate Analytics"
       ],
       "HDX_SOHD": "None"
     }

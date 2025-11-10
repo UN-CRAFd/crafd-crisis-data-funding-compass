@@ -69,6 +69,7 @@ interface CrisisDataDashboardProps {
         donorCountries: string[];
         investmentTypes: string[];
         investmentThemes: string[];
+        investmentThemesByType: Record<string, string[]>; // Grouped themes by investment type
         topDonors: Array<{ name: string; value: number }>; // Add top co-financing donors
     } | null;
     loading: boolean;
@@ -270,6 +271,12 @@ const CrisisDataDashboard = ({
     const allKnownInvestmentThemes = useMemo(() => 
         dashboardData?.investmentThemes || [],
         [dashboardData?.investmentThemes]
+    );
+
+    // Get grouped themes by investment type
+    const investmentThemesByType = useMemo(() => 
+        dashboardData?.investmentThemesByType || {},
+        [dashboardData?.investmentThemesByType]
     );
 
     // Load nested data for modals
@@ -1041,12 +1048,26 @@ const CrisisDataDashboard = ({
                                             onTypesChange={onTypesChange}
                                             investmentThemes={investmentThemes}
                                             allKnownInvestmentThemes={allKnownInvestmentThemes}
+                                            investmentThemesByType={investmentThemesByType}
                                             onThemesChange={onThemesChange}
                                             onResetFilters={onResetFilters}
                                         />
-                                        <p className="text-xs sm:text-sm text-slate-600 mt-5 -mb-6 sm:mt-2 sm:-mb-7">
-                                            {getFilterDescription()}
-                                        </p>
+                                        <div className="flex items-center justify-between mt-5 -mb-6 sm:mt-2 sm:-mb-7">
+                                            <p className="text-xs sm:text-sm text-slate-600">
+                                                {getFilterDescription()}
+                                            </p>
+                                            {(combinedDonors.length > 0 || investmentTypes.length > 0 || investmentThemes.length > 0 || appliedSearchQuery) && (
+                                                <Button
+                                                    variant="outline"
+                                                    size="sm"
+                                                    onClick={onResetFilters}
+                                                    className="h-7 px-3 text-xs border-slate-300 bg-slate-100 text-slate-700 hover:bg-slate-200 hover:border-slate-300"
+                                                >
+                                                    <RotateCcw className="w-3 h-3 mr-1.5" />
+                                                    Reset
+                                                </Button>
+                                            )}
+                                        </div>
                                     </CardContent>
 
                                     {/* Tabs for Table and Network View */}
@@ -1341,6 +1362,7 @@ const CrisisDataDashboard = ({
                                                         onTypesChange={onTypesChange}
                                                         investmentThemes={investmentThemes}
                                                         allKnownInvestmentThemes={allKnownInvestmentThemes}
+                                                        investmentThemesByType={investmentThemesByType}
                                                         onThemesChange={onThemesChange}
                                                         onResetFilters={onResetFilters}
                                                     />
