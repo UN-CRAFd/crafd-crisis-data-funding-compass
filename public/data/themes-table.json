@@ -209,7 +209,7 @@
         "reczIeSUeAdEWMKSk",
         "rec04YelpRCFjpBV8"
       ],
-      "theme_key": "naa",
+      "theme_key": "needs-assessment",
       "theme_description": "Analyzes data to identify and prioritize urgent needs during crises, supporting informed decision-making and resource allocation."
     }
   },
@@ -363,7 +363,7 @@
         "recZaSDcZgIUtalO5",
         "rec96xC14xTkyyKlP"
       ],
-      "theme_key": "data-collection",
+      "theme_key": "standards",
       "theme_description": "Establishes best practices to ensure consistency, reliability, and quality in how information is gathered and analyzed across projects."
     }
   },
@@ -384,7 +384,7 @@
         "recNggnBqXIgii2hz",
         "recGnEnRmDmoQ59wM"
       ],
-      "theme_key": "term",
+      "theme_key": "health-analytics",
       "theme_description": "Analyzes health-related data to inform decision-making and improve outcomes during crises."
     }
   },
@@ -551,7 +551,7 @@
         "recvuixaI146ykcHe",
         "recaWq49HJw4UXd9K"
       ],
-      "theme_key": "nutana",
+      "theme_key": "nutrition-analytics",
       "theme_description": "Analyzes food security and nutritional data to inform effective crisis response and resource allocation."
     }
   },
@@ -653,7 +653,7 @@
         "recQpqVqEuaLuj8jT",
         "reccyJzv7bOpjmC4B"
       ],
-      "theme_key": "term",
+      "theme_key": "disararment\n",
       "theme_description": "Disarmament Data provides access to datasets and resources that support research and analysis on global disarmament efforts and arms control."
     }
   },
@@ -917,7 +917,7 @@
         "Standards & Coordination"
       ],
       "Investment Themes [Text Key]": "Data Documentation",
-      "theme_key": "term",
+      "theme_key": "data-documentation",
       "theme_description": "Ensures consistent and accurate recording of data details to support interoperability and effective data sharing."
     }
   },
@@ -937,7 +937,7 @@
         "recPMQlg07QkflL3i",
         "recfjAhO2DxCjgEgM"
       ],
-      "theme_key": "term",
+      "theme_key": "data-analytics",
       "theme_description": "Data analytics leverages workforce data to inform talent strategies, optimize performance, and support evidence-based decision-making within organizations."
     }
   },
@@ -1002,7 +1002,7 @@
         "recbwtmwsCLbYZSBi",
         "recuOsuVWoVNvCO5k"
       ],
-      "theme_key": "term",
+      "theme_key": "health-data",
       "theme_description": "This area focuses on the collection, sharing, and management of datasets related to health and healthcare for research and innovation."
     }
   },
@@ -1238,7 +1238,7 @@
         "Data Sets & Commons"
       ],
       "Investment Themes [Text Key]": "Health Facilities Data",
-      "theme_key": "term",
+      "theme_key": "health-facilities",
       "theme_description": "Information about the locations, services, and capacities of healthcare institutions is made available for research and public use."
     }
   },
@@ -1346,7 +1346,7 @@
         "rec2eT5BuCp87chHm",
         "reczIeSUeAdEWMKSk"
       ],
-      "theme_key": "haa",
+      "theme_key": "humanitarian-access",
       "theme_description": "Humanitarian Access Analytics uses data-driven insights to assess and improve the ability of aid organizations to reach people in need during crises."
     }
   },
@@ -1400,7 +1400,7 @@
         "Standards & Coordination"
       ],
       "Investment Themes [Text Key]": "Data Protection & Privacy Frameworks",
-      "theme_key": "termkey",
+      "theme_key": "data-protection",
       "theme_description": "Guidelines and best practices are established to ensure the secure and lawful handling of personal data across organizations and jurisdictions."
     }
   },
@@ -1415,7 +1415,7 @@
         "Data Sets & Commons"
       ],
       "Investment Themes [Text Key]": "Humanitarian Funding Data ",
-      "theme_key": "term",
+      "theme_key": "humanitarian-funding\n",
       "theme_description": "Humanitarian Funding Data provides information on financial resources allocated to humanitarian efforts, supporting transparency and informed decision-making."
     }
   },
@@ -1614,7 +1614,7 @@
       "Data Ecosystem Projects": [
         "recaWq49HJw4UXd9K"
       ],
-      "theme_key": "term",
+      "theme_key": "nutrition-data",
       "theme_description": "Nutrition Data provides access to comprehensive datasets related to food composition, dietary intake, and nutritional values for research and analysis."
     }
   },
