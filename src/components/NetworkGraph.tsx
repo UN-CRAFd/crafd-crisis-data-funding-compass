@@ -831,7 +831,7 @@ const NetworkGraph: React.FC<NetworkGraphProps> = ({
         <>
             <div ref={containerRef} className="w-full h-full bg-white rounded-lg border border-slate-200 overflow-hidden relative">
                 {/* Legend and Clustering Controls - Collapsible */}
-                <div className={`absolute ${isFullscreen ? 'top-24' : 'top-4'} left-4 z-10`}>
+                <div className={`absolute ${isFullscreen ? 'top-40' : 'top-4'} left-4 z-10`}>
                     {legendCollapsed ? (
                         <button
                             onClick={() => setLegendCollapsed(false)}

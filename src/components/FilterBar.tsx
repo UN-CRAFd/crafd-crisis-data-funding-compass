@@ -235,7 +235,7 @@ const FilterBar: React.FC<FilterBarProps> = ({
                         align="start"
                         side="bottom"
                         sideOffset={4}
-                        className="w-64 max-h-[300px] overflow-y-auto bg-white border border-slate-200 shadow-lg"
+                        className="w-[var(--radix-dropdown-menu-trigger-width)] max-h-[300px] overflow-y-auto bg-white border border-slate-200 shadow-lg"
                         onCloseAutoFocus={(e) => e.preventDefault()}
                         container={portalContainer}
                     >
@@ -332,7 +332,7 @@ const FilterBar: React.FC<FilterBarProps> = ({
                         align="start"
                         side="bottom"
                         sideOffset={4}
-                        className="w-64 max-h-[300px] overflow-y-auto bg-white border border-slate-200 shadow-lg"
+                        className="w-[var(--radix-dropdown-menu-trigger-width)] max-h-[300px] overflow-y-auto bg-white border border-slate-200 shadow-lg"
                         onCloseAutoFocus={(e) => e.preventDefault()}
                         container={portalContainer}
                     >
