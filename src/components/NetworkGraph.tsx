@@ -12,6 +12,7 @@ import { getCountryFlagUrl } from './CountryFlag';
 
 interface NetworkGraphProps {
     organizationsWithProjects: OrganizationWithProjects[];
+    allOrganizations?: OrganizationWithProjects[]; // Unfiltered organizations for counting
     onOpenOrganizationModal: (orgKey: string) => void;
     onOpenProjectModal: (projectKey: string) => void;
     selectedOrgKey?: string;
@@ -64,6 +65,7 @@ interface GraphData {
 
 const NetworkGraph: React.FC<NetworkGraphProps> = ({
     organizationsWithProjects,
+    allOrganizations,
     onOpenOrganizationModal,
     onOpenProjectModal,
     selectedOrgKey,
@@ -128,12 +130,43 @@ const NetworkGraph: React.FC<NetworkGraphProps> = ({
         lastOrgCountRef.current = currentOrgCount;
     }, [combinedDonors, investmentTypes, investmentThemes, appliedSearchQuery, organizationsWithProjects]);
 
-    // Calculate project counts for each investment type and theme in the current view
-    // Deduplicate projects by ID to avoid counting the same project multiple times
+    // Calculate project counts for each investment type based on current donors, query, and themes
+    // (but not filtered by types themselves)
     const projectCountsByType = useMemo(() => {
         const projectsByType: Record<string, Set<string>> = {};
-        organizationsWithProjects.forEach(org => {
+        const allOrgs = allOrganizations || organizationsWithProjects;
+        
+        allOrgs.forEach(org => {
+            // Filter by donors
+            if (combinedDonors.length > 0) {
+                const hasMatchingDonor = org.donorCountries.some(country => 
+                    combinedDonors.includes(country)
+                );
+                if (!hasMatchingDonor) return;
+            }
+            
             org.projects.forEach(project => {
+                // Filter by search query
+                if (appliedSearchQuery) {
+                    const searchLower = appliedSearchQuery.toLowerCase();
+                    const matchesSearch = 
+                        project.projectName?.toLowerCase().includes(searchLower) ||
+                        project.description?.toLowerCase().includes(searchLower) ||
+                        org.organizationName?.toLowerCase().includes(searchLower);
+                    if (!matchesSearch) return;
+                }
+                
+                // Filter by themes
+                if (investmentThemes.length > 0) {
+                    const hasMatchingTheme = project.investmentThemes?.some(theme =>
+                        investmentThemes.some(selectedTheme => 
+                            theme.toLowerCase().trim() === selectedTheme.toLowerCase().trim()
+                        )
+                    );
+                    if (!hasMatchingTheme) return;
+                }
+                
+                // Count this project for each of its types
                 project.investmentTypes?.forEach(type => {
                     const normalizedType = type.toLowerCase().trim();
                     if (!projectsByType[normalizedType]) {
@@ -143,18 +176,52 @@ const NetworkGraph: React.FC<NetworkGraphProps> = ({
                 });
             });
         });
+        
         // Convert Sets to counts
         const counts: Record<string, number> = {};
         Object.keys(projectsByType).forEach(type => {
             counts[type] = projectsByType[type].size;
         });
         return counts;
-    }, [organizationsWithProjects]);
+    }, [allOrganizations, organizationsWithProjects, combinedDonors, appliedSearchQuery, investmentThemes]);
 
+    // Calculate project counts for each theme based on current donors, query, and types
+    // (but not filtered by themes themselves)
     const projectCountsByTheme = useMemo(() => {
         const projectsByTheme: Record<string, Set<string>> = {};
-        organizationsWithProjects.forEach(org => {
+        const allOrgs = allOrganizations || organizationsWithProjects;
+        
+        allOrgs.forEach(org => {
+            // Filter by donors
+            if (combinedDonors.length > 0) {
+                const hasMatchingDonor = org.donorCountries.some(country => 
+                    combinedDonors.includes(country)
+                );
+                if (!hasMatchingDonor) return;
+            }
+            
             org.projects.forEach(project => {
+                // Filter by search query
+                if (appliedSearchQuery) {
+                    const searchLower = appliedSearchQuery.toLowerCase();
+                    const matchesSearch = 
+                        project.projectName?.toLowerCase().includes(searchLower) ||
+                        project.description?.toLowerCase().includes(searchLower) ||
+                        org.organizationName?.toLowerCase().includes(searchLower);
+                    if (!matchesSearch) return;
+                }
+                
+                // Filter by types
+                if (investmentTypes.length > 0) {
+                    const hasMatchingType = project.investmentTypes?.some(type =>
+                        investmentTypes.some(selectedType => 
+                            type.toLowerCase().trim() === selectedType.toLowerCase().trim()
+                        )
+                    );
+                    if (!hasMatchingType) return;
+                }
+                
+                // Count this project for each of its themes
                 project.investmentThemes?.forEach(theme => {
                     const normalizedTheme = theme.toLowerCase().trim();
                     if (!projectsByTheme[normalizedTheme]) {
@@ -164,13 +231,14 @@ const NetworkGraph: React.FC<NetworkGraphProps> = ({
                 });
             });
         });
+        
         // Convert Sets to counts
         const counts: Record<string, number> = {};
         Object.keys(projectsByTheme).forEach(theme => {
             counts[theme] = projectsByTheme[theme].size;
         });
         return counts;
-    }, [organizationsWithProjects]);
+    }, [allOrganizations, organizationsWithProjects, combinedDonors, appliedSearchQuery, investmentTypes]);
 
     // Handle fullscreen toggle
     const toggleFullscreen = useCallback(() => {
