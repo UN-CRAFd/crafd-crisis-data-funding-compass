@@ -68,18 +68,21 @@ interface CrisisDataDashboardProps {
         allOrganizations: OrganizationWithProjects[]; // Add unfiltered organizations
         donorCountries: string[];
         investmentTypes: string[];
+        investmentThemes: string[];
         topDonors: Array<{ name: string; value: number }>; // Add top co-financing donors
     } | null;
     loading: boolean;
     error: string | null;
     combinedDonors: string[];
     investmentTypes: string[];
+    investmentThemes: string[];
     searchQuery: string; // Current input value
     appliedSearchQuery: string; // Applied search query (from URL)
     selectedOrgKey: string; // Organization key from URL
     selectedProjectKey: string; // Asset key from URL
     onDonorsChange: (values: string[]) => void;
     onTypesChange: (values: string[]) => void;
+    onThemesChange: (values: string[]) => void;
     onSearchChange: (value: string) => void;
     onSearchSubmit: () => void;
     onResetFilters: () => void;
@@ -206,12 +209,14 @@ const CrisisDataDashboard = ({
     error,
     combinedDonors,
     investmentTypes,
+    investmentThemes,
     searchQuery,
     appliedSearchQuery,
     selectedOrgKey,
     selectedProjectKey,
     onDonorsChange,
     onTypesChange,
+    onThemesChange,
     onSearchChange,
     onSearchSubmit,
     onResetFilters,
@@ -260,6 +265,12 @@ const CrisisDataDashboard = ({
     
     // Load static organizations table for modals
     const organizationsTable: Array<{ id: string; createdTime?: string; fields: Record<string, unknown> }> = organizationsTableRaw as Array<{ id: string; createdTime?: string; fields: Record<string, unknown> }>;
+
+    // Get all investment themes from dashboardData (must be before early returns)
+    const allKnownInvestmentThemes = useMemo(() => 
+        dashboardData?.investmentThemes || [],
+        [dashboardData?.investmentThemes]
+    );
 
     // Load nested data for modals
     const [nestedOrganizations, setNestedOrganizations] = useState<any[]>([]);
@@ -546,7 +557,7 @@ const CrisisDataDashboard = ({
 
     // Generate dynamic filter description for Organizations & Projects section
     const getFilterDescription = () => {
-        const hasFilters = combinedDonors.length > 0 || investmentTypes.length > 0 || appliedSearchQuery;
+        const hasFilters = combinedDonors.length > 0 || investmentTypes.length > 0 || investmentThemes.length > 0 || appliedSearchQuery;
 
         if (!hasFilters) {
             const template = labels.filterDescription.showingAll;
@@ -638,6 +649,15 @@ const CrisisDataDashboard = ({
             elements.push(
                 <React.Fragment key="types">
                     {' '}in <strong>{displayTypes.join(' & ')}</strong>
+                </React.Fragment>
+            );
+        }
+
+        // Add investment themes
+        if (investmentThemes.length > 0) {
+            elements.push(
+                <React.Fragment key="themes">
+                    {' '}with themes <strong>{investmentThemes.join(' & ')}</strong>
                 </React.Fragment>
             );
         }
@@ -1019,6 +1039,9 @@ const CrisisDataDashboard = ({
                                             investmentTypes={investmentTypes}
                                             allKnownInvestmentTypes={allKnownInvestmentTypes}
                                             onTypesChange={onTypesChange}
+                                            investmentThemes={investmentThemes}
+                                            allKnownInvestmentThemes={allKnownInvestmentThemes}
+                                            onThemesChange={onThemesChange}
                                             onResetFilters={onResetFilters}
                                         />
                                         <p className="text-xs sm:text-sm text-slate-600 mt-5 -mb-6 sm:mt-2 sm:-mb-7">
@@ -1316,6 +1339,9 @@ const CrisisDataDashboard = ({
                                                         investmentTypes={investmentTypes}
                                                         allKnownInvestmentTypes={allKnownInvestmentTypes}
                                                         onTypesChange={onTypesChange}
+                                                        investmentThemes={investmentThemes}
+                                                        allKnownInvestmentThemes={allKnownInvestmentThemes}
+                                                        onThemesChange={onThemesChange}
                                                         onResetFilters={onResetFilters}
                                                     />
                                                 </div>

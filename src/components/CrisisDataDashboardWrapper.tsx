@@ -38,6 +38,10 @@ const CrisisDataDashboardWrapper = ({ logoutButton }: { logoutButton?: React.Rea
             return true;
         });
     }, [searchParams]);
+    const investmentThemes = useMemo(() => {
+        const raw = searchParams.get('th') ?? searchParams.get('themes');
+        return raw?.split(',').filter(Boolean) || [];
+    }, [searchParams]);
     const searchQuery = searchParams.get('q') ?? searchParams.get('search') ?? '';
 
     // Track active view (table or network)
@@ -63,6 +67,7 @@ const CrisisDataDashboardWrapper = ({ logoutButton }: { logoutButton?: React.Rea
         searchQuery: string;
         combinedDonors: string[];
         investmentTypes: string[];
+        investmentThemes: string[];
     } | null>(null);
     
     // Track the last fetched filter state to prevent unnecessary refetches
@@ -87,6 +92,11 @@ const CrisisDataDashboardWrapper = ({ logoutButton }: { logoutButton?: React.Rea
         shouldUseStoredState ? underlyingPageState.investmentTypes : investmentTypes,
         [shouldUseStoredState, underlyingPageState, investmentTypes]
     );
+    
+    const effectiveInvestmentThemes = useMemo(() => 
+        shouldUseStoredState ? underlyingPageState.investmentThemes : investmentThemes,
+        [shouldUseStoredState, underlyingPageState, investmentThemes]
+    );
 
     // State for dashboard data
     const [dashboardData, setDashboardData] = useState<{
@@ -98,6 +108,7 @@ const CrisisDataDashboardWrapper = ({ logoutButton }: { logoutButton?: React.Rea
         allOrganizations: OrganizationWithProjects[]; // Add unfiltered organizations
         donorCountries: string[];
         investmentTypes: string[];
+        investmentThemes: string[];
         topDonors: Array<{ name: string; value: number }>; // Add top co-financing donors
     } | null>(null);
     const [loading, setLoading] = useState(true);
@@ -109,7 +120,7 @@ const CrisisDataDashboardWrapper = ({ logoutButton }: { logoutButton?: React.Rea
     }, [searchQuery]);
 
     // Helper function to update URL search params
-    const updateURLParams = useCallback((params: { donors?: string[]; types?: string[]; search?: string }) => {
+    const updateURLParams = useCallback((params: { donors?: string[]; types?: string[]; themes?: string[]; search?: string }) => {
         const newSearchParams = new URLSearchParams(searchParams.toString());
 
         // Update or remove donors param (compact 'd')
@@ -135,6 +146,15 @@ const CrisisDataDashboardWrapper = ({ logoutButton }: { logoutButton?: React.Rea
             }
         }
 
+        // Update or remove themes param (compact 'th')
+        if (params.themes !== undefined) {
+            if (params.themes.length > 0) {
+                newSearchParams.set('th', params.themes.join(','));
+            } else {
+                newSearchParams.delete('th');
+            }
+        }
+
         // Update or remove search param (compact 'q')
         if (params.search !== undefined) {
             if (params.search) {
@@ -157,6 +177,7 @@ const CrisisDataDashboardWrapper = ({ logoutButton }: { logoutButton?: React.Rea
                 const filterSignature = JSON.stringify({
                     donors: effectiveDonors.sort(),
                     types: effectiveInvestmentTypes.sort(),
+                    themes: effectiveInvestmentThemes.sort(),
                     search: effectiveSearchQuery
                 });
                 
@@ -172,6 +193,7 @@ const CrisisDataDashboardWrapper = ({ logoutButton }: { logoutButton?: React.Rea
                 const filters: DashboardFilters = {
                     donorCountries: effectiveDonors.length > 0 ? effectiveDonors : undefined,
                     investmentTypes: effectiveInvestmentTypes.length > 0 ? effectiveInvestmentTypes : undefined,
+                    investmentThemes: effectiveInvestmentThemes.length > 0 ? effectiveInvestmentThemes : undefined,
                     searchQuery: effectiveSearchQuery || undefined
                 };
 
@@ -187,12 +209,12 @@ const CrisisDataDashboardWrapper = ({ logoutButton }: { logoutButton?: React.Rea
         }
 
         fetchData();
-    }, [effectiveDonors, effectiveInvestmentTypes, effectiveSearchQuery]); // Re-run when effective filters change
+    }, [effectiveDonors, effectiveInvestmentTypes, effectiveInvestmentThemes, effectiveSearchQuery]); // Re-run when effective filters change
 
     // Handle reset filters
     const handleResetFilters = () => {
         setLocalSearchQuery(''); // Clear local search immediately
-        updateURLParams({ donors: [], types: [], search: '' });
+        updateURLParams({ donors: [], types: [], themes: [], search: '' });
     };
 
     // Handle filter changes
@@ -202,6 +224,10 @@ const CrisisDataDashboardWrapper = ({ logoutButton }: { logoutButton?: React.Rea
 
     const handleTypesChange = (values: string[]) => {
         updateURLParams({ types: values });
+    };
+
+    const handleThemesChange = (values: string[]) => {
+        updateURLParams({ themes: values });
     };
 
     // Search handler - updates local state immediately, URL only on Enter key
@@ -229,7 +255,8 @@ const CrisisDataDashboardWrapper = ({ logoutButton }: { logoutButton?: React.Rea
             const stateToStore = {
                 searchQuery,
                 combinedDonors: [...combinedDonors],
-                investmentTypes: [...investmentTypes]
+                investmentTypes: [...investmentTypes],
+                investmentThemes: [...investmentThemes]
             };
             
             setUnderlyingPageState(stateToStore);
@@ -237,7 +264,7 @@ const CrisisDataDashboardWrapper = ({ logoutButton }: { logoutButton?: React.Rea
             setLocalSelectedProjectKey('');
             setLocalSelectedOrgKey(orgKey);
         }
-    }, [activeView, searchParams, pathname, router, searchQuery, combinedDonors, investmentTypes]);
+    }, [activeView, searchParams, pathname, router, searchQuery, combinedDonors, investmentTypes, investmentThemes]);
 
     const handleOpenProjectModal = useCallback((projectKey: string) => {
         if (activeView === 'table') {
@@ -252,7 +279,8 @@ const CrisisDataDashboardWrapper = ({ logoutButton }: { logoutButton?: React.Rea
             const stateToStore = {
                 searchQuery,
                 combinedDonors: [...combinedDonors],
-                investmentTypes: [...investmentTypes]
+                investmentTypes: [...investmentTypes],
+                investmentThemes: [...investmentThemes]
             };
             
             setUnderlyingPageState(stateToStore);
@@ -260,7 +288,7 @@ const CrisisDataDashboardWrapper = ({ logoutButton }: { logoutButton?: React.Rea
             setLocalSelectedOrgKey('');
             setLocalSelectedProjectKey(projectKey);
         }
-    }, [activeView, searchParams, pathname, router, searchQuery, combinedDonors, investmentTypes]);
+    }, [activeView, searchParams, pathname, router, searchQuery, combinedDonors, investmentTypes, investmentThemes]);
 
     const handleCloseOrganizationModal = useCallback(() => {
         if (activeView === 'table') {
@@ -363,12 +391,14 @@ const CrisisDataDashboardWrapper = ({ logoutButton }: { logoutButton?: React.Rea
             error={error}
             combinedDonors={effectiveDonors}
             investmentTypes={effectiveInvestmentTypes}
+            investmentThemes={effectiveInvestmentThemes}
             searchQuery={localSearchQuery}
             appliedSearchQuery={effectiveSearchQuery}
             selectedOrgKey={selectedOrgKey}
             selectedProjectKey={selectedProjectKey}
             onDonorsChange={handleDonorsChange}
             onTypesChange={handleTypesChange}
+            onThemesChange={handleThemesChange}
             onSearchChange={handleSearchChange}
             onSearchSubmit={handleSearchSubmit}
             onResetFilters={handleResetFilters}

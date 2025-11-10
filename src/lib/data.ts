@@ -137,12 +137,14 @@ function applyFilters(
         searchQuery?: string;
         donorCountries?: string[];
         investmentTypes?: string[];
+        investmentThemes?: string[];
     }
 ): OrganizationWithProjects[] {
     return organizations.map(org => {
         const hasSearchFilter = filters.searchQuery && filters.searchQuery.trim();
         const hasDonorFilter = filters.donorCountries && filters.donorCountries.length > 0;
         const hasTypeFilter = filters.investmentTypes && filters.investmentTypes.length > 0;
+        const hasThemeFilter = filters.investmentThemes && filters.investmentThemes.length > 0;
 
         // Step 1: Check if organization matches search filter
         let orgMatchesSearch = false;
@@ -164,7 +166,7 @@ function applyFilters(
                 if (!projectMatchesSearch) return false;
             }
 
-            // Type filter check
+            // Type filter check (OR logic)
             if (hasTypeFilter) {
                 const projectMatchesType = project.investmentTypes.some(type =>
                     filters.investmentTypes!.some(filterType =>
@@ -173,6 +175,19 @@ function applyFilters(
                     )
                 );
                 if (!projectMatchesType) return false;
+            }
+
+            // Theme filter check (OR logic)
+            if (hasThemeFilter) {
+                const projectMatchesTheme = Array.isArray(project.investmentThemes) && 
+                    project.investmentThemes.some(theme =>
+                        filters.investmentThemes!.some(filterTheme =>
+                            typeof theme === 'string' &&
+                            (theme.toLowerCase().includes(filterTheme.toLowerCase()) ||
+                            filterTheme.toLowerCase().includes(theme.toLowerCase()))
+                        )
+                    );
+                if (!projectMatchesTheme) return false;
             }
 
             return true;
@@ -186,31 +201,58 @@ function applyFilters(
             // Organization doesn't meet donor requirements -> no projects can show
             visibleProjects = [];
         } else if (orgMatchesSearch) {
-            // Organization matches search: show all its projects (apply type filter if exists)
-            visibleProjects = hasTypeFilter
+            // Organization matches search: show all its projects (apply type/theme filter if exists)
+            visibleProjects = (hasTypeFilter || hasThemeFilter)
                 ? org.projects.filter(project => {
-                    // Only apply type filter, skip search filter since org already matches
+                    // Only apply type and theme filters, skip search filter since org already matches
                     if (hasTypeFilter) {
-                        return project.investmentTypes.some(type =>
+                        const matchesType = project.investmentTypes.some(type =>
                             filters.investmentTypes!.some(filterType =>
                                 type.toLowerCase().includes(filterType.toLowerCase()) ||
                                 filterType.toLowerCase().includes(type.toLowerCase())
                             )
                         );
+                        if (!matchesType) return false;
+                    }
+                    if (hasThemeFilter) {
+                        const matchesTheme = Array.isArray(project.investmentThemes) && 
+                            project.investmentThemes.some(theme =>
+                                filters.investmentThemes!.some(filterTheme =>
+                                    typeof theme === 'string' &&
+                                    (theme.toLowerCase().includes(filterTheme.toLowerCase()) ||
+                                    filterTheme.toLowerCase().includes(theme.toLowerCase()))
+                                )
+                            );
+                        if (!matchesTheme) return false;
                     }
                     return true;
                 })
                 : [...org.projects];
         } else if (!hasSearchFilter) {
-            // No search filter: apply type filter if exists, otherwise show all projects
-            visibleProjects = hasTypeFilter
+            // No search filter: apply type/theme filter if exists, otherwise show all projects
+            visibleProjects = (hasTypeFilter || hasThemeFilter)
                 ? org.projects.filter(project => {
-                    return project.investmentTypes.some(type =>
-                        filters.investmentTypes!.some(filterType =>
-                            type.toLowerCase().includes(filterType.toLowerCase()) ||
-                            filterType.toLowerCase().includes(type.toLowerCase())
-                        )
-                    );
+                    if (hasTypeFilter) {
+                        const matchesType = project.investmentTypes.some(type =>
+                            filters.investmentTypes!.some(filterType =>
+                                type.toLowerCase().includes(filterType.toLowerCase()) ||
+                                filterType.toLowerCase().includes(type.toLowerCase())
+                            )
+                        );
+                        if (!matchesType) return false;
+                    }
+                    if (hasThemeFilter) {
+                        const matchesTheme = Array.isArray(project.investmentThemes) && 
+                            project.investmentThemes.some(theme =>
+                                filters.investmentThemes!.some(filterTheme =>
+                                    typeof theme === 'string' &&
+                                    (theme.toLowerCase().includes(filterTheme.toLowerCase()) ||
+                                    filterTheme.toLowerCase().includes(theme.toLowerCase()))
+                                )
+                            );
+                        if (!matchesTheme) return false;
+                    }
+                    return true;
                 })
                 : [...org.projects];
         } else {
@@ -222,14 +264,14 @@ function applyFilters(
         let shouldShowOrg = false;
 
         if (orgMeetsDonorRequirement) {
-            if (!hasTypeFilter && !hasSearchFilter) {
+            if (!hasTypeFilter && !hasThemeFilter && !hasSearchFilter) {
                 // No filters except donor: show all orgs that meet donor requirement
                 shouldShowOrg = true;
-            } else if (!hasTypeFilter && hasSearchFilter) {
+            } else if (!hasTypeFilter && !hasThemeFilter && hasSearchFilter) {
                 // Only search filter: show org if it matches search OR has projects matching search
                 shouldShowOrg = orgMatchesSearch || visibleProjects.length > 0;
             } else {
-                // Type filter active: only show if org has visible projects (projects that match type+search)
+                // Type/theme filter active: only show if org has visible projects (projects that match type/theme+search)
                 shouldShowOrg = visibleProjects.length > 0;
             }
         }
@@ -373,17 +415,27 @@ function calculateOrganizationProjects(organizations: OrganizationWithProjects[]
 function getAvailableFilterOptions(organizations: OrganizationWithProjects[]) {
     const donorCountries = new Set<string>();
     const investmentTypes = new Set<string>();
+    const investmentThemes = new Set<string>();
 
     organizations.forEach(org => {
         org.donorCountries.forEach(country => donorCountries.add(country));
         org.projects.forEach(project => {
             project.investmentTypes.forEach(type => investmentTypes.add(type));
+            // Extract investment themes
+            if (Array.isArray(project.investmentThemes)) {
+                project.investmentThemes.forEach(theme => {
+                    if (typeof theme === 'string' && theme.trim()) {
+                        investmentThemes.add(theme.trim());
+                    }
+                });
+            }
         });
     });
 
     return {
         donorCountries: Array.from(donorCountries).sort(),
-        investmentTypes: Array.from(investmentTypes).sort()
+        investmentTypes: Array.from(investmentTypes).sort(),
+        investmentThemes: Array.from(investmentThemes).sort()
     };
 }
 
@@ -392,6 +444,7 @@ export async function processDashboardData(filters: {
     searchQuery?: string;
     donorCountries?: string[];
     investmentTypes?: string[];
+    investmentThemes?: string[];
 } = {}) {
     try {
         // Load nested organizations
@@ -431,6 +484,7 @@ export async function processDashboardData(filters: {
             allOrganizations, // Add unfiltered organizations for modal use
             donorCountries: filterOptions.donorCountries,
             investmentTypes: filterOptions.investmentTypes,
+            investmentThemes: filterOptions.investmentThemes, // Add investment themes
             topDonors // Add top co-financing donors
         };
     } catch (error) {

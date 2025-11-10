@@ -56,16 +56,6 @@
     }
   },
   {
-    "id": "rec3txr41waJFGqhU",
-    "fields": {
-      "THEME_ID": "rec3txr41waJFGqhU",
-      "Investment Themes [Text Key]": "API Development & Management",
-      "Data Ecosystem Projects": [
-        "recmH2oywWDYooamX"
-      ]
-    }
-  },
-  {
     "id": "rec4AfeNsozbklm0t",
     "fields": {
       "THEME_ID": "rec4AfeNsozbklm0t",
@@ -80,7 +70,6 @@
         "rec6rg7iVHuTnkQVe",
         "recLGd1qlYszSKznz",
         "recniOH9IPt0Vz07E",
-        "rec96xC14xTkyyKlP",
         "recLN9L7RGRz4p1zM",
         "rec2eT5BuCp87chHm",
         "recWKNeEWEv3vKeyX"
@@ -97,10 +86,7 @@
       "Investment Type": [
         "Standards & Coordination"
       ],
-      "Investment Themes [Text Key]": "Common Indicators",
-      "Data Ecosystem Projects": [
-        "reczIeSUeAdEWMKSk"
-      ]
+      "Investment Themes [Text Key]": "Common Indicators"
     }
   },
   {
@@ -115,11 +101,11 @@
       ],
       "Investment Themes [Text Key]": "Geographic Information Systems (GIS)",
       "Data Ecosystem Projects": [
-        "recgPTOSUzIQS7uLs",
         "rec04lJaB92fTs0JH",
         "rec2Su6C7bHl4BC7h",
         "recFnNCbi5RYJNchr",
-        "recEuWdBixgTpQKhR"
+        "recEuWdBixgTpQKhR",
+        "rec9HIhsIpPjx48rc"
       ]
     }
   },
@@ -153,7 +139,8 @@
       "Data Ecosystem Projects": [
         "recYzS7BrsxBG8llV",
         "recdr2wcQiX1Ch1ZF",
-        "recLn4QiWGniBsWoe"
+        "recLn4QiWGniBsWoe",
+        "recjbIls3C4riPk4C"
       ],
       "theme_description": "Composite Indices in humanitarian data are aggregated measures that combine multiple indicators to provide a comprehensive overview of crisis severity, vulnerability, or needs for more effective crisis analytics and decision-making."
     }
@@ -262,11 +249,7 @@
       "Investment Type": [
         "Infrastructure & Platforms"
       ],
-      "Investment Themes [Text Key]": "Data Governance & Management",
-      "Data Ecosystem Projects": [
-        "rec96xC14xTkyyKlP",
-        "recXcSKhSy2s7tunj"
-      ]
+      "Investment Themes [Text Key]": "Data Governance & Management"
     }
   },
   {
@@ -281,7 +264,6 @@
       ],
       "Investment Themes [Text Key]": "Climate Analytics",
       "Data Ecosystem Projects": [
-        "recgPTOSUzIQS7uLs",
         "recQubJTGSwZoqzix",
         "recAeviz1XjLC8V6i",
         "recUotlR1ZJwVMAIS",
@@ -342,7 +324,8 @@
       "Data Ecosystem Projects": [
         "recXkQODU8on8xy2v",
         "rechQ1azyTpypEDEy",
-        "recZaSDcZgIUtalO5"
+        "recZaSDcZgIUtalO5",
+        "rec96xC14xTkyyKlP"
       ]
     }
   },
@@ -379,11 +362,9 @@
       "Investment Themes [Text Key]": "Monitoring & Alerts",
       "Data Ecosystem Projects": [
         "recpP1KGKcmcpy2jo",
-        "recFk4AqE3TR83nNo",
         "recEwLy3FESOhLeNs",
         "recf0UvW6LzObKXGC",
         "recVj2ULsOWhPFQ19",
-        "rec9HIhsIpPjx48rc",
         "recjxVwrxVL90go5G",
         "recgzWbqbmwOXHLnq",
         "recfTLQpzUgBOtlS5",
@@ -392,6 +373,19 @@
         "reczpMP2LZqBg7Cnd"
       ],
       "theme_description": "Monitoring & Alerts in Crisis Analytics & Insights involves continuously tracking humanitarian data to quickly detect and notify stakeholders of emerging crises or significant changes, enabling timely and informed responses."
+    }
+  },
+  {
+    "id": "recFwccnjpH0fMP9a",
+    "fields": {
+      "THEME_ID": "recFwccnjpH0fMP9a",
+      "Linked Investment Type": [
+        "recrKFJAlS8YmW1Qi"
+      ],
+      "Investment Type": [
+        "Data Sets & Commons"
+      ],
+      "Investment Themes [Text Key]": "Administrative Boundaries"
     }
   },
   {
@@ -415,8 +409,6 @@
         "recyMSQo5lV032SER",
         "recGMlI70iaqyTtMo",
         "recQubJTGSwZoqzix",
-        "rec9HIhsIpPjx48rc",
-        "recgPTOSUzIQS7uLs",
         "recQMdm14niuRSFQp",
         "recSvtWQnSvfNoXdt",
         "rec5GA5F1UPlXATSj",
@@ -441,7 +433,6 @@
       ],
       "Investment Themes [Text Key]": "Data Collection",
       "Data Ecosystem Projects": [
-        "rec96xC14xTkyyKlP",
         "recONFtYpO5v2qk7s",
         "rech8GCismNX3Bm8p"
       ]
@@ -458,6 +449,9 @@
         "Crisis Analytics & Insights"
       ],
       "Investment Themes [Text Key]": "Disaster Hazard & Risk Modelling",
+      "Data Ecosystem Projects": [
+        "recjbIls3C4riPk4C"
+      ],
       "theme_description": "Disaster Hazard & Risk Modelling uses data and analytics to predict, assess, and visualize potential crises, enabling humanitarian organizations to better prepare for and respond to disasters."
     }
   },
@@ -696,7 +690,7 @@
       "Investment Type": [
         "Data Sets & Commons"
       ],
-      "Investment Themes [Text Key]": "3W (Who does What, Where) Data",
+      "Investment Themes [Text Key]": "3W (Who does What & Where) Data",
       "Data Ecosystem Projects": [
         "recAmBwUrrYDMtXtH",
         "recN8yVJX7xphyQME"
@@ -973,10 +967,7 @@
       "Investment Type": [
         "Standards & Coordination"
       ],
-      "Investment Themes [Text Key]": "APIs Standard",
-      "Data Ecosystem Projects": [
-        "rec9HIhsIpPjx48rc"
-      ]
+      "Investment Themes [Text Key]": "APIs Standard"
     }
   },
   {
@@ -993,7 +984,8 @@
       "Data Ecosystem Projects": [
         "recIUSUS3NNXaMHCQ",
         "recu82l0uk7d3IHeU",
-        "recUotlR1ZJwVMAIS"
+        "recUotlR1ZJwVMAIS",
+        "reczIeSUeAdEWMKSk"
       ],
       "theme_description": "Impact Evaluation in Crisis Analytics & Insights assesses the effectiveness of humanitarian interventions by analyzing data to determine what changes occurred as a result of specific actions during crises."
     }
@@ -1069,7 +1061,6 @@
         "rec6dmVAye6IslJOK",
         "rec2Su6C7bHl4BC7h",
         "rec3xc850SaSrqS7t",
-        "rec9ZvuALWuRRSN5P",
         "recbmA6Lmrr5AfAHJ",
         "recxNVM0HeC0mSQyk",
         "recF8bGKczcSVXjRz",
@@ -1094,9 +1085,10 @@
       "Investment Type": [
         "Crisis Analytics & Insights"
       ],
-      "Investment Themes [Text Key]": "PiN Calculation",
+      "Investment Themes [Text Key]": "People in Need (PIN) Calculations",
       "Data Ecosystem Projects": [
-        "reccYy5JWKJEASskp"
+        "reccYy5JWKJEASskp",
+        "recFk4AqE3TR83nNo"
       ],
       "theme_description": "PiN (People in Need) Calculation estimates the number of individuals requiring humanitarian assistance in a crisis by analyzing data on vulnerabilities, exposure, and severity of needs within affected populations."
     }
@@ -1233,7 +1225,8 @@
       "Investment Themes [Text Key]": "Humanitarian Access Analytics",
       "Data Ecosystem Projects": [
         "rec4XuZsotMgaVbAm",
-        "rec2eT5BuCp87chHm"
+        "rec2eT5BuCp87chHm",
+        "reczIeSUeAdEWMKSk"
       ],
       "theme_description": "Humanitarian Access Analytics provides data-driven insights and analysis to help organizations understand and navigate challenges in delivering aid during crises."
     }
@@ -1251,7 +1244,6 @@
       "Investment Themes [Text Key]": "Damage Assessments",
       "Data Ecosystem Projects": [
         "rec795N2KXfgxaM50",
-        "recwpLBPiqgZWOXyn",
         "recUotlR1ZJwVMAIS",
         "recYzS7BrsxBG8llV",
         "recZxXY0AjXgSMXr7",
@@ -1286,6 +1278,19 @@
         "Standards & Coordination"
       ],
       "Investment Themes [Text Key]": "Data Protection & Privacy Frameworks"
+    }
+  },
+  {
+    "id": "recjFsrS2U0xRGURB",
+    "fields": {
+      "THEME_ID": "recjFsrS2U0xRGURB",
+      "Linked Investment Type": [
+        "recrKFJAlS8YmW1Qi"
+      ],
+      "Investment Type": [
+        "Data Sets & Commons"
+      ],
+      "Investment Themes [Text Key]": "Humanitarian Funding Data "
     }
   },
   {
@@ -1328,12 +1333,12 @@
         "recgbAUAt9auV97KC",
         "recJye4S746MWWmW6",
         "reckhF1PTR2hh135J",
-        "recwpLBPiqgZWOXyn",
         "recgftq4GZElVtfi6",
         "rece4fDBOtjCywl9q",
         "recO3RZZ7IEA88GnQ",
         "recv5EjAR3NgCKSaI",
-        "recejrbDKmak6gySA"
+        "recejrbDKmak6gySA",
+        "recXcSKhSy2s7tunj"
       ]
     }
   },
@@ -1380,7 +1385,10 @@
       "Investment Type": [
         "Standards & Coordination"
       ],
-      "Investment Themes [Text Key]": "Standard Geocodes"
+      "Investment Themes [Text Key]": "Standard Geocodes",
+      "Data Ecosystem Projects": [
+        "rec96xC14xTkyyKlP"
+      ]
     }
   },
   {
@@ -1406,7 +1414,8 @@
         "recjxVwrxVL90go5G",
         "rec28WeSKDEQ5wx45",
         "rec2eT5BuCp87chHm",
-        "recaApmxiLnw1JnZf"
+        "recaApmxiLnw1JnZf",
+        "recFk4AqE3TR83nNo"
       ],
       "theme_description": "Conflict Analytics uses data analysis to understand, monitor, and predict conflict situations, providing insights to support humanitarian decision-making and crisis response."
     }
@@ -1541,7 +1550,10 @@
       "Investment Type": [
         "Standards & Coordination"
       ],
-      "Investment Themes [Text Key]": "Version Tracking"
+      "Investment Themes [Text Key]": "Version Tracking",
+      "Data Ecosystem Projects": [
+        "rec96xC14xTkyyKlP"
+      ]
     }
   },
   {
@@ -1630,7 +1642,8 @@
       ],
       "Investment Themes [Text Key]": "Consistent Data Formats",
       "Data Ecosystem Projects": [
-        "recp0YELy7eVj9FUs"
+        "recp0YELy7eVj9FUs",
+        "rec96xC14xTkyyKlP"
       ]
     }
   },
@@ -1658,7 +1671,6 @@
         "recgpnIj48zBCayHc",
         "recXaGjOLcrJQCuNn",
         "recEwLy3FESOhLeNs",
-        "rec9HIhsIpPjx48rc",
         "recFk4AqE3TR83nNo",
         "recrAQT0YpFBCQ02U",
         "recyMSQo5lV032SER",
