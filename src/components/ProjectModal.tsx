@@ -251,7 +251,7 @@ export default function ProjectModal({ project, allOrganizations, loading, onOpe
                                                                         </TooltipTrigger>
                                                                         <TooltipContent 
                                                                             side="top" 
-                                                                            className="max-w-xs text-xs bg-white/70 backdrop-blur-md border border-gray-200 z-[10001]"
+                                                                            className="max-w-xs text-xs bg-white/70 backdrop-blur-md border border-gray-200 !z-[6000]"
                                                                             sideOffset={5}
                                                                         >
                                                                             {description}
