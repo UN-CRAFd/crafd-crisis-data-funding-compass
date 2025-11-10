@@ -97,4 +97,5 @@ export interface DashboardFilters {
     searchQuery?: string;
     donorCountries?: string[];
     investmentTypes?: string[];
+    investmentThemes?: string[];
 }
