@@ -659,7 +659,7 @@
   {
     "id": "rec8HCRgYhj3eDhQ0",
     "fields": {
-      "Project/Product Name": "Emergency Response",
+      "Project/Product Name": "MapAction Services",
       "Project Description": "When major emergencies happen, we can provide surge support to our partners at short notice, enabling them to make sense of chaotic, dangerous and rapidly evolving situations and coordinate the most effective response. We work both in country and remotely. Our well-rehearsed deployment model means our mapping professionals can be on the scene within 24-48 hours of a disaster striking. Even before they arrive in-country, they’ve started collecting data and information that will be crucial in helping coordinate the world’s response, and getting aid to where it is needed most.\n",
       "Project Website": "https://mapaction.org/about-us/emergency-response/",
       "Provider Orgs Full Name": [
@@ -671,7 +671,9 @@
       ],
       "Investment Theme(s)": [
         "Applied Data Analytics & Insights Generation",
-        "Surge Capacity"
+        "Surge Capacity",
+        "Information Managment",
+        " Data Collection & Generation"
       ],
       "product_key": "emergency-response",
       "HDX_SOHD": "None"
@@ -729,7 +731,8 @@
       "Project Description": "DisasterAWARE is a global platform offering real-time hazard alerts, dashboards, and geospatial tools for disaster preparedness and early warning. It integrates predictive models and hazard tracking from global datasets.\n",
       "Project Website": "https://www.disasteraware.com/",
       "Provider Orgs Full Name": [
-        "recCvRYx3gzUtg9cf"
+        "recCvRYx3gzUtg9cf",
+        "recodAuism4k7Osi8"
       ],
       "CRAF’d-Funded Project?": "NO",
       "Investment Type(s)": [
@@ -1236,25 +1239,6 @@
         "Upskilling & Training"
       ],
       "product_key": "data2x",
-      "HDX_SOHD": "None"
-    }
-  },
-  {
-    "id": "recGnEnRmDmoQ59wM",
-    "fields": {
-      "Project/Product Name": "Health Services",
-      "Project Description": "Whether it’s deploying data and GIS tools to fight malaria in Burundi, cholera in Malawi, Ebola in Sierra Leone & Liberia, or dengue in the Philippines, for more than a decade MapAction has supported the planning and delivery of public health campaigns and outbreak responses worldwide. Good data underpins effective health panning. That is why MapAction continues to increase its focus as an organisation on public health, from West Africa to the Philippines, via Burundi, Malawi and the Horn of Africa. \n",
-      "Project Website": "https://mapaction.org/about-us/our-services/health/",
-      "Provider Orgs Full Name": [
-        "recX11pAAzHjdqH0Y"
-      ],
-      "Investment Type(s)": [
-        "Crisis Analytics & Insights"
-      ],
-      "Investment Theme(s)": [
-        "Health Analytics"
-      ],
-      "product_key": "health-services",
       "HDX_SOHD": "None"
     }
   },
@@ -3200,26 +3184,6 @@
         "Disaggregated Country-level Data"
       ],
       "product_key": "arab-barometer",
-      "HDX_SOHD": "None"
-    }
-  },
-  {
-    "id": "reciDzUjwtkVeh21I",
-    "fields": {
-      "Project/Product Name": "Anticipatory Action",
-      "Project Description": "As part of MapAction’s strategic commitment to locally-led, sustainability is defined as helping ensure the longevity and sustainability of AA projects by establishing effective evaluation frameworks and sharing lessons learned with the wider community. It is critical that local voices are embedded with these projects and processes.\n",
-      "Project Website": "https://mapaction.org/anticipatory-action-drr/",
-      "Provider Orgs Full Name": [
-        "recX11pAAzHjdqH0Y"
-      ],
-      "CRAF’d-Funded Project?": "NO",
-      "Investment Type(s)": [
-        "Crisis Analytics & Insights"
-      ],
-      "Investment Theme(s)": [
-        "Anticipatory and Early Action Forecasts"
-      ],
-      "product_key": "anticipatory-action",
       "HDX_SOHD": "None"
     }
   },
