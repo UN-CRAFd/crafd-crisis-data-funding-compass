@@ -830,6 +830,30 @@ const NetworkGraph: React.FC<NetworkGraphProps> = ({
     return (
         <>
             <div ref={containerRef} className="w-full h-full bg-white rounded-lg border border-slate-200 overflow-hidden relative">
+                {/* Graph Controls - Top Right */}
+                <div className={`absolute ${isFullscreen ? 'top-40' : 'top-4'} right-4 z-10`}>
+                    <div className="bg-white backdrop-blur-lg rounded-lg border border-slate-200 shadow-sm p-1.5 flex gap-1">
+                        <button
+                            onClick={centerView}
+                            className="p-1.5 hover:bg-slate-200/50 rounded transition-colors"
+                            title="Center view"
+                        >
+                            <Crosshair className="w-4 h-4 text-slate-600" />
+                        </button>
+                        <button
+                            onClick={toggleFullscreen}
+                            className="p-1.5 hover:bg-slate-200/50 rounded transition-colors"
+                            title={isFullscreen ? 'Exit fullscreen' : 'Enter fullscreen'}
+                        >
+                            {isFullscreen ? (
+                                <Minimize className="w-4 h-4 text-slate-600" />
+                            ) : (
+                                <Maximize className="w-4 h-4 text-slate-600" />
+                            )}
+                        </button>
+                    </div>
+                </div>
+
                 {/* Legend and Clustering Controls - Collapsible */}
                 <div className={`absolute ${isFullscreen ? 'top-40' : 'top-4'} left-4 z-10`}>
                     {legendCollapsed ? (
@@ -848,35 +872,15 @@ const NetworkGraph: React.FC<NetworkGraphProps> = ({
                             <div className="p-2.5 border-b border-slate-200">
                                 <div className="flex items-center justify-between mb-2">
                                     <div className="text-xs font-semibold text-slate-800/90">Legend</div>
-                                    <div className="flex gap-1 items-center">
-                                        <button
-                                            onClick={centerView}
-                                            className="p-1 hover:bg-slate-200/50 rounded transition-colors"
-                                            title="Center view"
-                                        >
-                                            <Crosshair className="w-3.5 h-3.5 text-slate-600" />
-                                        </button>
-                                        <button
-                                            onClick={toggleFullscreen}
-                                            className="p-1 hover:bg-slate-200/50 rounded transition-colors"
-                                            title={isFullscreen ? 'Exit fullscreen' : 'Enter fullscreen'}
-                                        >
-                                            {isFullscreen ? (
-                                                <Minimize className="w-3.5 h-3.5 text-slate-600" />
-                                            ) : (
-                                                <Maximize className="w-3.5 h-3.5 text-slate-600" />
-                                            )}
-                                        </button>
-                                        <button
-                                            onClick={() => setLegendCollapsed(true)}
-                                            className="p-1 hover:bg-slate-200/50 rounded transition-colors"
-                                            title="Hide legend"
-                                        >
-                                            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" className="text-slate-600">
-                                                <path d="M15 18l-6-6 6-6" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-                                            </svg>
-                                        </button>
-                                    </div>
+                                    <button
+                                        onClick={() => setLegendCollapsed(true)}
+                                        className="p-1 hover:bg-slate-200/50 rounded transition-colors"
+                                        title="Hide legend"
+                                    >
+                                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" className="text-slate-600">
+                                            <path d="M15 18l-6-6 6-6" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                                        </svg>
+                                    </button>
                                 </div>
                                 <div className="space-y-1.5">
                                     {combinedDonors && combinedDonors.length > 0 && (
