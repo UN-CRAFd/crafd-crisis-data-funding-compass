@@ -13,7 +13,7 @@ import {
 import { Input } from '@/components/ui/input';
 import labels from '@/config/labels.json';
 import { getIconForInvestmentType } from '@/config/investmentTypeIcons';
-import { ChevronDown, DatabaseBackup, Filter, Globe, RotateCcw, Search } from 'lucide-react';
+import { ChevronDown, DatabaseBackup, DatabaseZap, Filter, Globe, RotateCcw, Search } from 'lucide-react';
 
 interface FilterBarProps {
     // Search
@@ -312,7 +312,7 @@ const FilterBar: React.FC<FilterBarProps> = ({
                             }`}
                         >
                             <div className="flex items-center gap-2 min-w-0 flex-1">
-                                <DatabaseBackup className="h-4 w-4 shrink-0" />
+                                <DatabaseZap className="h-4 w-4 shrink-0" />
                                 <span className="truncate">
                                     {investmentThemes.length === 0
                                         ? labels.filters.themePlaceholder

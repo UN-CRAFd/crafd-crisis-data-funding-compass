@@ -100,27 +100,33 @@ const NetworkGraph: React.FC<NetworkGraphProps> = ({
     const lastClusterStateRef = useRef<string>(''); // Track last clustering state to prevent unnecessary updates
     const [filterBarContainer, setFilterBarContainer] = useState<HTMLElement | null>(null);
     const lastFiltersRef = useRef<string>(''); // Track filter state to detect changes
+    const lastOrgCountRef = useRef<number>(0); // Track organization count to detect graph refresh
     
     // Cache for country flag images
     const flagImageCache = useRef<Map<string, HTMLImageElement>>(new Map());
     const [, setFlagLoadCounter] = useState(0); // Counter to trigger re-render when flags load
 
-    // Turn off clustering when filters change
+    // Turn off clustering when filters change or graph refreshes
     useEffect(() => {
         const currentFilters = JSON.stringify({
             donors: combinedDonors,
             types: investmentTypes,
+            themes: investmentThemes,
             search: appliedSearchQuery
         });
         
-        // If filters have changed (and this isn't the initial mount)
-        if (lastFiltersRef.current && lastFiltersRef.current !== currentFilters) {
+        const currentOrgCount = organizationsWithProjects.length;
+        
+        // If filters have changed or organization count changed (graph refresh)
+        if (lastFiltersRef.current && 
+            (lastFiltersRef.current !== currentFilters || lastOrgCountRef.current !== currentOrgCount)) {
             setClusterByOrgType(false);
             setClusterByAssetType(false);
         }
         
         lastFiltersRef.current = currentFilters;
-    }, [combinedDonors, investmentTypes, appliedSearchQuery]);
+        lastOrgCountRef.current = currentOrgCount;
+    }, [combinedDonors, investmentTypes, investmentThemes, appliedSearchQuery, organizationsWithProjects]);
 
     // Handle fullscreen toggle
     const toggleFullscreen = useCallback(() => {
