@@ -28,6 +28,50 @@ async function loadNestedOrganizations(): Promise<NestedOrganization[]> {
     }
 }
 
+// Load themes table to map themes to their investment types
+let cachedThemeToTypeMap: Map<string, string> | null = null;
+let themesTableLoadPromise: Promise<Map<string, string>> | null = null;
+
+async function loadThemesTable(): Promise<Map<string, string>> {
+    // Return cached map if available
+    if (cachedThemeToTypeMap) {
+        return cachedThemeToTypeMap;
+    }
+
+    // If already loading, return the existing promise
+    if (themesTableLoadPromise) {
+        return themesTableLoadPromise;
+    }
+
+    // Start loading
+    themesTableLoadPromise = (async () => {
+        try {
+            const response = await fetch('/data/themes-table.json');
+            if (!response.ok) {
+                console.warn(`Failed to load themes data: ${response.status}`);
+                return new Map();
+            }
+            const themesData = await response.json();
+            const themeToTypeMap = new Map<string, string>();
+            themesData?.forEach((theme: any) => {
+                const themeName = theme.fields?.['Investment Themes [Text Key]'];
+                const investmentTypes = theme.fields?.['Investment Type'];
+                if (themeName && Array.isArray(investmentTypes) && investmentTypes.length > 0) {
+                    themeToTypeMap.set(themeName, investmentTypes[0]);
+                }
+            });
+            cachedThemeToTypeMap = themeToTypeMap;
+            return themeToTypeMap;
+        } catch (error) {
+            console.error('Error loading themes table:', error);
+            cachedThemeToTypeMap = new Map(); // Cache empty map to avoid retrying
+            return new Map();
+        }
+    })();
+
+    return themesTableLoadPromise;
+}
+
 // Extract donor countries from agencies
 // Helper function to safely get donor countries from organization data
 function getDonorCountries(org: NestedOrganization): string[] {
@@ -412,7 +456,7 @@ function calculateOrganizationProjects(organizations: OrganizationWithProjects[]
 }
 
 // Get available filter options
-function getAvailableFilterOptions(organizations: OrganizationWithProjects[]) {
+async function getAvailableFilterOptions(organizations: OrganizationWithProjects[]) {
     const donorCountries = new Set<string>();
     const investmentTypes = new Set<string>();
     const investmentThemes = new Set<string>();
@@ -432,10 +476,45 @@ function getAvailableFilterOptions(organizations: OrganizationWithProjects[]) {
         });
     });
 
+    // Load theme-to-type mapping (non-blocking with fallback)
+    let themeToTypeMap: Map<string, string>;
+    try {
+        themeToTypeMap = await loadThemesTable();
+    } catch (error) {
+        console.warn('Failed to load themes table, using ungrouped themes:', error);
+        themeToTypeMap = new Map();
+    }
+
+    // Group themes by their investment type
+    const themesByType: Record<string, string[]> = {};
+    const themesArray = Array.from(investmentThemes);
+    
+    themesArray.forEach(theme => {
+        const investmentType = themeToTypeMap.get(theme);
+        if (investmentType) {
+            if (!themesByType[investmentType]) {
+                themesByType[investmentType] = [];
+            }
+            themesByType[investmentType].push(theme);
+        } else {
+            // Fallback for themes without a mapped type
+            if (!themesByType['Other']) {
+                themesByType['Other'] = [];
+            }
+            themesByType['Other'].push(theme);
+        }
+    });
+
+    // Sort themes within each type
+    Object.keys(themesByType).forEach(type => {
+        themesByType[type].sort();
+    });
+
     return {
         donorCountries: Array.from(donorCountries).sort(),
         investmentTypes: Array.from(investmentTypes).sort(),
-        investmentThemes: Array.from(investmentThemes).sort()
+        investmentThemes: themesArray.sort(), // Keep flat array for backward compatibility
+        investmentThemesByType: themesByType // New grouped structure
     };
 }
 
@@ -473,7 +552,7 @@ export async function processDashboardData(filters: {
 
         // Get available filter options from filtered organizations (viewport)
         // This ensures dropdowns only show options that are currently available
-        const filterOptions = getAvailableFilterOptions(filteredOrganizations);
+        const filterOptions = await getAvailableFilterOptions(filteredOrganizations);
 
         return {
             stats,
@@ -484,7 +563,8 @@ export async function processDashboardData(filters: {
             allOrganizations, // Add unfiltered organizations for modal use
             donorCountries: filterOptions.donorCountries,
             investmentTypes: filterOptions.investmentTypes,
-            investmentThemes: filterOptions.investmentThemes, // Add investment themes
+            investmentThemes: filterOptions.investmentThemes, // Add investment themes (flat array for backward compatibility)
+            investmentThemesByType: filterOptions.investmentThemesByType, // Add grouped themes by type
             topDonors // Add top co-financing donors
         };
     } catch (error) {

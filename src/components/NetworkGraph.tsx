@@ -29,6 +29,7 @@ interface NetworkGraphProps {
     onTypesChange?: (values: string[]) => void;
     investmentThemes?: string[];
     allKnownInvestmentThemes?: string[];
+    investmentThemesByType?: Record<string, string[]>;
     onThemesChange?: (values: string[]) => void;
     onResetFilters?: () => void;
 }
@@ -80,6 +81,7 @@ const NetworkGraph: React.FC<NetworkGraphProps> = ({
     onTypesChange = () => {},
     investmentThemes = [],
     allKnownInvestmentThemes = [],
+    investmentThemesByType = {},
     onThemesChange = () => {},
     onResetFilters = () => {},
 }) => {
@@ -1076,6 +1078,7 @@ const NetworkGraph: React.FC<NetworkGraphProps> = ({
                     onTypesChange={onTypesChange}
                     investmentThemes={investmentThemes}
                     allKnownInvestmentThemes={allKnownInvestmentThemes}
+                    investmentThemesByType={investmentThemesByType}
                     onThemesChange={onThemesChange}
                     onResetFilters={onResetFilters}
                     portalContainer={filterBarContainer}
