@@ -15,6 +15,7 @@
       "Investment Theme(s)": [
         "Needs Assessment"
       ],
+      "product_key": "national-disaster",
       "HDX_SOHD": "None"
     }
   },
@@ -672,6 +673,7 @@
         "Applied Data Analytics & Insights Generation",
         "Surge Capacity"
       ],
+      "product_key": "emergency-response",
       "HDX_SOHD": "None"
     }
   },
@@ -1770,6 +1772,7 @@
       "Investment Theme(s)": [
         "Climate Analytics"
       ],
+      "product_key": "cams",
       "HDX_SOHD": "None"
     }
   },
@@ -2532,6 +2535,7 @@
       "Investment Theme(s)": [
         "AI Models"
       ],
+      "product_key": "ai-humanity",
       "HDX_SOHD": "None"
     }
   },
@@ -3266,6 +3270,7 @@
         "Composite Indices",
         "Climate Analytics"
       ],
+      "product_key": "global-risk",
       "HDX_SOHD": "None"
     }
   },
@@ -3391,6 +3396,7 @@
       "Provider Orgs Full Name": [
         "recvzWSlYgzs0mffd"
       ],
+      "product_key": "global-information",
       "HDX_SOHD": "None"
     }
   },
