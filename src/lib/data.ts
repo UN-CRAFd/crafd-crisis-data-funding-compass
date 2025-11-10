@@ -28,14 +28,20 @@ async function loadNestedOrganizations(): Promise<NestedOrganization[]> {
     }
 }
 
-// Load themes table to map themes to their investment types
-let cachedThemeToTypeMap: Map<string, string> | null = null;
-let themesTableLoadPromise: Promise<Map<string, string>> | null = null;
+// Load themes table to map themes to their investment types and keys
+interface ThemesMappings {
+    themeToType: Map<string, string>;
+    themeToKey: Map<string, string>;
+    keyToTheme: Map<string, string>;
+}
 
-async function loadThemesTable(): Promise<Map<string, string>> {
-    // Return cached map if available
-    if (cachedThemeToTypeMap) {
-        return cachedThemeToTypeMap;
+let cachedThemesMappings: ThemesMappings | null = null;
+let themesTableLoadPromise: Promise<ThemesMappings> | null = null;
+
+async function loadThemesTable(): Promise<ThemesMappings> {
+    // Return cached mappings if available
+    if (cachedThemesMappings) {
+        return cachedThemesMappings;
     }
 
     // If already loading, return the existing promise
@@ -49,23 +55,39 @@ async function loadThemesTable(): Promise<Map<string, string>> {
             const response = await fetch('/data/themes-table.json');
             if (!response.ok) {
                 console.warn(`Failed to load themes data: ${response.status}`);
-                return new Map();
+                return { themeToType: new Map(), themeToKey: new Map(), keyToTheme: new Map() };
             }
             const themesData = await response.json();
-            const themeToTypeMap = new Map<string, string>();
+            const themeToType = new Map<string, string>();
+            const themeToKey = new Map<string, string>();
+            const keyToTheme = new Map<string, string>();
+            
             themesData?.forEach((theme: any) => {
                 const themeName = theme.fields?.['Investment Themes [Text Key]'];
                 const investmentTypes = theme.fields?.['Investment Type'];
-                if (themeName && Array.isArray(investmentTypes) && investmentTypes.length > 0) {
-                    themeToTypeMap.set(themeName, investmentTypes[0]);
+                const themeKeyObj = theme.fields?.['theme_key'];
+                const themeKey = themeKeyObj?.value || themeKeyObj;
+                
+                if (themeName) {
+                    // Map theme to type
+                    if (Array.isArray(investmentTypes) && investmentTypes.length > 0) {
+                        themeToType.set(themeName, investmentTypes[0]);
+                    }
+                    
+                    // Map theme to key and key to theme
+                    if (themeKey && typeof themeKey === 'string') {
+                        themeToKey.set(themeName, themeKey);
+                        keyToTheme.set(themeKey, themeName);
+                    }
                 }
             });
-            cachedThemeToTypeMap = themeToTypeMap;
-            return themeToTypeMap;
+            
+            cachedThemesMappings = { themeToType, themeToKey, keyToTheme };
+            return cachedThemesMappings;
         } catch (error) {
             console.error('Error loading themes table:', error);
-            cachedThemeToTypeMap = new Map(); // Cache empty map to avoid retrying
-            return new Map();
+            cachedThemesMappings = { themeToType: new Map(), themeToKey: new Map(), keyToTheme: new Map() };
+            return cachedThemesMappings;
         }
     })();
 
