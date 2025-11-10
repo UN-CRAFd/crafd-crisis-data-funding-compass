@@ -408,6 +408,23 @@
     }
   },
   {
+    "id": "rec7BmCO0j9do4gKE",
+    "fields": {
+      "Org Full Name": "University of Edinburgh",
+      "Org Short Name": "UOE",
+      "Org Website": "https://www.ed.ac.uk/",
+      "Org Description": "The University of Edinburgh is a public research university based in Edinburgh, Scotland. Founded by the town council under the authority of a royal charter from King James VI in 1582 and officially opened in 1583, it is one of Scotland's four ancient universities and the sixth-oldest university in continuous operation in the English-speaking world.",
+      "Provided Data Ecosystem Projects": [
+        "recp4lLg28MQMpBnW"
+      ],
+      "Org Donor Agencies": [
+        "recbtCkeJk3QthFZj"
+      ],
+      "org_key": "uoe",
+      "Org Type": "Academia"
+    }
+  },
+  {
     "id": "rec8O141RyUupQsRy",
     "fields": {
       "Org Full Name": "Humanitarian Outcomes",
@@ -691,7 +708,8 @@
       "Org Website": "https://www.flowminder.org/",
       "Org Description": "Flowminder also co-founded, in partnership with UNFPA, WorldPop at the University of Southampton, and CIESIN at Columbia University the GRID3 programme. GRID3 was an international partnership programme funded by the Bill & Melinda Gates Foundation and the United Kingdom’s Foreign, Commonwealth and Development Office to map a path to sustainable development for everyone with geospatial data solutions.",
       "Provided Data Ecosystem Projects": [
-        "recbmA6Lmrr5AfAHJ"
+        "recbmA6Lmrr5AfAHJ",
+        "recYR5aZ0pWEFezdF"
       ],
       "Org Donor Agencies": [
         "recbbW0P8fxVtJBJP",

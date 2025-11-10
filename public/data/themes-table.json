@@ -593,7 +593,8 @@
         "reccyJzv7bOpjmC4B",
         "recOOQ5c99vFwz8i8",
         "recgmCxRj8IVZMFF2",
-        "recp0YELy7eVj9FUs"
+        "recp0YELy7eVj9FUs",
+        "recp4lLg28MQMpBnW"
       ],
       "theme_key": "peacedata",
       "theme_description": "Peace Data focuses on collecting and sharing information that supports research and initiatives aimed at promoting peace and conflict resolution."
@@ -1466,7 +1467,8 @@
         "recO3RZZ7IEA88GnQ",
         "recv5EjAR3NgCKSaI",
         "recejrbDKmak6gySA",
-        "recXcSKhSy2s7tunj"
+        "recXcSKhSy2s7tunj",
+        "recYR5aZ0pWEFezdF"
       ],
       "theme_key": "datashare",
       "theme_description": "Solutions that enable organizations to efficiently store, retrieve, and share data across platforms and systems."
@@ -1629,6 +1631,9 @@
         "Infrastructure & Platforms"
       ],
       "Investment Themes [Text Key]": "Private Data Sharing",
+      "Data Ecosystem Projects": [
+        "recYR5aZ0pWEFezdF"
+      ],
       "theme_key": "pds",
       "theme_description": "Enables secure and controlled exchange of sensitive information between organizations through robust infrastructure solutions."
     }
