@@ -234,6 +234,23 @@
     }
   },
   {
+    "id": "recA7HCrfnZDtBUlg",
+    "fields": {
+      "THEME_ID": "recA7HCrfnZDtBUlg",
+      "Linked Investment Type": [
+        "recUueuvKqzUgF7Xo"
+      ],
+      "Investment Type": [
+        "Human Capital & Know-how"
+      ],
+      "Investment Themes [Text Key]": "Information Managment",
+      "Data Ecosystem Projects": [
+        "rec8HCRgYhj3eDhQ0"
+      ],
+      "theme_key": "info-management\n"
+    }
+  },
+  {
     "id": "recBRc1Ug57BNya3W",
     "fields": {
       "THEME_ID": "recBRc1Ug57BNya3W",
@@ -381,8 +398,7 @@
       "Data Ecosystem Projects": [
         "recEf0pdKsN1Gbvo8",
         "recJQghyXlyK5WiCE",
-        "recNggnBqXIgii2hz",
-        "recGnEnRmDmoQ59wM"
+        "recNggnBqXIgii2hz"
       ],
       "theme_key": "health-analytics",
       "theme_description": "Analyzes health-related data to inform decision-making and improve outcomes during crises."
@@ -1406,21 +1422,6 @@
     }
   },
   {
-    "id": "recjFsrS2U0xRGURB",
-    "fields": {
-      "THEME_ID": "recjFsrS2U0xRGURB",
-      "Linked Investment Type": [
-        "recrKFJAlS8YmW1Qi"
-      ],
-      "Investment Type": [
-        "Data Sets & Commons"
-      ],
-      "Investment Themes [Text Key]": "Humanitarian Funding Data ",
-      "theme_key": "humanitarian-funding\n",
-      "theme_description": "Humanitarian Funding Data provides information on financial resources allocated to humanitarian efforts, supporting transparency and informed decision-making."
-    }
-  },
-  {
     "id": "recjkjv1mOhU9UMxp",
     "fields": {
       "THEME_ID": "recjkjv1mOhU9UMxp",
@@ -1742,7 +1743,8 @@
       ],
       "Investment Themes [Text Key]": "Data Collection & Generation",
       "Data Ecosystem Projects": [
-        "recPMQlg07QkflL3i"
+        "recPMQlg07QkflL3i",
+        "rec8HCRgYhj3eDhQ0"
       ],
       "theme_key": "datagen",
       "theme_description": "Gathering and creating datasets enables organizations to build, refine, and apply expertise for improved decision-making and innovation."
@@ -1848,8 +1850,7 @@
         "recYwllVfGjgi7rdS",
         "recNggnBqXIgii2hz",
         "recLn4QiWGniBsWoe",
-        "recO7hHncZQGqy2vJ",
-        "reciDzUjwtkVeh21I"
+        "recO7hHncZQGqy2vJ"
       ],
       "theme_key": "aea",
       "theme_description": "Using data-driven analysis to predict and respond to crises before they escalate, enabling timely and effective humanitarian action."
