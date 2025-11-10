@@ -521,6 +521,50 @@ const CrisisDataDashboard = ({
     // Extract data for use in component
     const { stats, projectTypes, organizationsWithProjects, allOrganizations, donorCountries: availableDonorCountries, investmentTypes: availableInvestmentTypes, topDonors } = dashboardData;
 
+    // Calculate project counts for each investment type and theme in the current view
+    // Deduplicate projects by ID to avoid counting the same project multiple times
+    const projectCountsByType = useMemo(() => {
+        const projectsByType: Record<string, Set<string>> = {};
+        organizationsWithProjects.forEach(org => {
+            org.projects.forEach(project => {
+                project.investmentTypes?.forEach(type => {
+                    const normalizedType = type.toLowerCase().trim();
+                    if (!projectsByType[normalizedType]) {
+                        projectsByType[normalizedType] = new Set();
+                    }
+                    projectsByType[normalizedType].add(project.id);
+                });
+            });
+        });
+        // Convert Sets to counts
+        const counts: Record<string, number> = {};
+        Object.keys(projectsByType).forEach(type => {
+            counts[type] = projectsByType[type].size;
+        });
+        return counts;
+    }, [organizationsWithProjects]);
+
+    const projectCountsByTheme = useMemo(() => {
+        const projectsByTheme: Record<string, Set<string>> = {};
+        organizationsWithProjects.forEach(org => {
+            org.projects.forEach(project => {
+                project.investmentThemes?.forEach(theme => {
+                    const normalizedTheme = theme.toLowerCase().trim();
+                    if (!projectsByTheme[normalizedTheme]) {
+                        projectsByTheme[normalizedTheme] = new Set();
+                    }
+                    projectsByTheme[normalizedTheme].add(project.id);
+                });
+            });
+        });
+        // Convert Sets to counts
+        const counts: Record<string, number> = {};
+        Object.keys(projectsByTheme).forEach(theme => {
+            counts[theme] = projectsByTheme[theme].size;
+        });
+        return counts;
+    }, [organizationsWithProjects]);
+
     // Add a 6th bar to the co-financing donor chart for 'n other donors'
     let donorChartData = topDonors;
     if (availableDonorCountries && topDonors && topDonors.length > 0) {
@@ -1037,6 +1081,8 @@ const CrisisDataDashboard = ({
                                             investmentThemesByType={investmentThemesByType}
                                             onThemesChange={onThemesChange}
                                             onResetFilters={onResetFilters}
+                                            projectCountsByType={projectCountsByType}
+                                            projectCountsByTheme={projectCountsByTheme}
                                         />
                                         <div className="flex items-center justify-between mt-5 -mb-6 sm:mt-2 sm:-mb-7">
                                             <p className="text-xs sm:text-sm text-slate-600">
