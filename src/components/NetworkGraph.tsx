@@ -343,8 +343,9 @@ const NetworkGraph: React.FC<NetworkGraphProps> = ({
         // Set link strength for more stable connections
         fg.d3Force('link').strength(0.5);
 
-        // Weaker centering force for less aggressive pulling
-        fg.d3Force('center').strength(0.02);
+        // Set the center force to the actual center of the canvas (not 0,0)
+        // This prevents nodes from being pulled toward the top-left corner
+        fg.d3Force('center').x(dimensions.width / 2).y(dimensions.height / 2).strength(0.02);
 
         // Enhanced collision force with more iterations for smoother collision avoidance
         fg.d3Force('collision', forceCollide((node: any) => {
@@ -360,7 +361,7 @@ const NetworkGraph: React.FC<NetworkGraphProps> = ({
         if (process.env.NODE_ENV === 'development') {
             console.log(`[NetworkGraph] Force simulation configured in ${(endTime - startTime).toFixed(2)}ms`);
         }
-    }, []); // Only run once on mount, not on every graphData change
+    }, [dimensions]); // Re-run when dimensions change to update center position
 
     // Apply clustering with smooth transitions and collision avoidance
     useEffect(() => {
@@ -400,6 +401,10 @@ const NetworkGraph: React.FC<NetworkGraphProps> = ({
             // Make clusters much more spread out
             const clusterRadius = Math.min(dimensions.width, dimensions.height) * 0.45;
             
+            // Calculate the center of the canvas
+            const centerX = dimensions.width / 2;
+            const centerY = dimensions.height / 2;
+            
             // Collect unique cluster keys
             const clusterKeys = new Set<string>();
             const clusterNodeCounts = new Map<string, number>();
@@ -425,21 +430,22 @@ const NetworkGraph: React.FC<NetworkGraphProps> = ({
             
             clusterArray.forEach((key, i) => {
                 // Arrange clusters in a grid or circular pattern with large spacing
+                // All positions are offset from the canvas center, not (0,0)
                 if (numClusters <= 4) {
-                    // Use corners for up to 4 clusters
+                    // Use corners for up to 4 clusters, offset from center
                     const positions = [
-                        { x: -clusterRadius, y: -clusterRadius },
-                        { x: clusterRadius, y: -clusterRadius },
-                        { x: -clusterRadius, y: clusterRadius },
-                        { x: clusterRadius, y: clusterRadius }
+                        { x: centerX - clusterRadius, y: centerY - clusterRadius },
+                        { x: centerX + clusterRadius, y: centerY - clusterRadius },
+                        { x: centerX - clusterRadius, y: centerY + clusterRadius },
+                        { x: centerX + clusterRadius, y: centerY + clusterRadius }
                     ];
                     clusterCenters.set(key, positions[i]);
                 } else {
-                    // Use circle arrangement for more clusters
+                    // Use circle arrangement for more clusters, offset from center
                     const angle = (i / numClusters) * 2 * Math.PI;
                     clusterCenters.set(key, {
-                        x: Math.cos(angle) * clusterRadius,
-                        y: Math.sin(angle) * clusterRadius
+                        x: centerX + Math.cos(angle) * clusterRadius,
+                        y: centerY + Math.sin(angle) * clusterRadius
                     });
                 }
             });
@@ -505,7 +511,8 @@ const NetworkGraph: React.FC<NetworkGraphProps> = ({
         } else {
             // Restore calmer default forces when clustering is off
             fg.d3Force('charge').strength(-400);
-            fg.d3Force('center').strength(0.02);
+            // Restore center force with proper canvas center coordinates
+            fg.d3Force('center').x(dimensions.width / 2).y(dimensions.height / 2).strength(0.02);
             fg.d3Force('link').strength(0.5); // Restore link strength
             
             // Restore normal collision force
