@@ -290,12 +290,12 @@ const CrisisDataDashboard = ({
         const allOrgs = dashboardData?.allOrganizations || [];
         
         allOrgs.forEach(org => {
-            // Filter by donors
+            // Filter by donors (AND logic - all selected donors must be present)
             if (combinedDonors.length > 0) {
-                const hasMatchingDonor = org.donorCountries.some(country => 
-                    combinedDonors.includes(country)
+                const hasAllDonors = combinedDonors.every(selectedDonor => 
+                    org.donorCountries.includes(selectedDonor)
                 );
-                if (!hasMatchingDonor) return;
+                if (!hasAllDonors) return;
             }
             
             org.projects.forEach(project => {
@@ -345,12 +345,12 @@ const CrisisDataDashboard = ({
         const allOrgs = dashboardData?.allOrganizations || [];
         
         allOrgs.forEach(org => {
-            // Filter by donors
+            // Filter by donors (AND logic - all selected donors must be present)
             if (combinedDonors.length > 0) {
-                const hasMatchingDonor = org.donorCountries.some(country => 
-                    combinedDonors.includes(country)
+                const hasAllDonors = combinedDonors.every(selectedDonor => 
+                    org.donorCountries.includes(selectedDonor)
                 );
-                if (!hasMatchingDonor) return;
+                if (!hasAllDonors) return;
             }
             
             org.projects.forEach(project => {
@@ -618,11 +618,7 @@ const CrisisDataDashboard = ({
         );
     }
 
-
-    // Extract data for use in component
-    const { stats, projectTypes, organizationsWithProjects, allOrganizations, donorCountries: availableDonorCountries, investmentTypes: availableInvestmentTypes, topDonors } = dashboardData;
-
-    
+        
     // Error state
     if (error || !dashboardData) {
         return (
@@ -634,6 +630,10 @@ const CrisisDataDashboard = ({
             </div>
         );
     }
+    // Extract data for use in component
+    const { stats, projectTypes, organizationsWithProjects, allOrganizations, donorCountries: availableDonorCountries, investmentTypes: availableInvestmentTypes, topDonors } = dashboardData;
+
+
 
     // Add a 6th bar to the co-financing donor chart for 'n other donors'
     let donorChartData = topDonors;

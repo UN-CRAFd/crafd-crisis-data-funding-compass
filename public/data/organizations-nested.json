@@ -276,7 +276,7 @@
         "fields": {
           "Project/Product Name": "Heidelberg Institute for International Conflict Research",
           "Project Description": "The Heidelberg Institute for International Conflict Research (HIIK) is an independent, non-profit, interdisciplinary association. Since 1991, we have been dedicated to promoting, disseminating, and implementing knowledge about the emergence, course, and resolution of intra- and inter-state political conflicts. Following tremendous growth in recent years, the HIIK currently has over 200 volunteers. \n",
-          "Project Website": "hiik.de",
+          "Project Website": "https://www.hiik.de",
           "Provider Orgs Full Name": [
             "rec1UYGdN0XUBCmDY"
           ],
@@ -309,11 +309,22 @@
       "Provided Data Ecosystem Projects": [
         "recxuDvQE71WPmpJV"
       ],
+      "Org Donor Agencies": [
+        "recGMYeDQSV7jffjs"
+      ],
       "Org HQ Country": "Spain",
       "org_key": "bse",
       "Org Type": "Academia"
     },
-    "agencies": [],
+    "agencies": [
+      {
+        "id": "recGMYeDQSV7jffjs",
+        "fields": {
+          "Agency/Department Name": "Unspecified Agency",
+          "Country Name": "European Union"
+        }
+      }
+    ],
     "projects": [
       {
         "id": "recxuDvQE71WPmpJV",
@@ -366,7 +377,9 @@
         ]
       }
     ],
-    "donor_countries": []
+    "donor_countries": [
+      "European Union"
+    ]
   },
   {
     "id": "rec2OrPTxGHesgz1w",
@@ -578,12 +591,23 @@
         "recJRVBtpTaiDVmoT",
         "rec6S0tX5hnP9I5DG"
       ],
+      "Org Donor Agencies": [
+        "reco4Um0k7Tgw2UCK"
+      ],
       "Org HQ Country": "United Kingdom",
       "Has received CRAF'd Funding?": "NO",
       "org_key": "university-of-southampton",
       "Org Type": "Academia"
     },
-    "agencies": [],
+    "agencies": [
+      {
+        "id": "reco4Um0k7Tgw2UCK",
+        "fields": {
+          "Agency/Department Name": "Unspecified Agency",
+          "Country Name": "United Kingdom"
+        }
+      }
+    ],
     "projects": [
       {
         "id": "rec3xc850SaSrqS7t",
@@ -896,7 +920,9 @@
         ]
       }
     ],
-    "donor_countries": []
+    "donor_countries": [
+      "United Kingdom"
+    ]
   },
   {
     "id": "rec3QdLIyrZ4dNiPh",
@@ -1583,8 +1609,7 @@
             "Data Sets & Commons"
           ],
           "Investment Theme(s)": [
-            "Environmental Data",
-            "Monitoring & Alerts"
+            "Environmental Data"
           ],
           "product_key": "em-dat",
           "HDX_SOHD": "None"
@@ -2554,7 +2579,6 @@
       "Org Description": "UNDP works in about 170 countries and territories, helping to eradicate poverty, reduce inequalities and exclusion, and build resilience so countries can sustain progress. As the UN’s development agency, UNDP plays a critical role in helping countries achieve the Sustainable Development Goals.\t",
       "Provided Data Ecosystem Projects": [
         "recS70dZaWiddCf5J",
-        "recXkQODU8on8xy2v",
         "recXaGjOLcrJQCuNn"
       ],
       "Org Donor Agencies": [
@@ -2827,12 +2851,12 @@
           ],
           "CRAF’d-Funded Project?": "YES",
           "Investment Type(s)": [
-            "Infrastructure & Platforms",
-            "Crisis Analytics & Insights"
+            "Infrastructure & Platforms"
           ],
           "Investment Theme(s)": [
             "Data Storage, Access & Sharing",
-            "Data Processing & Transformation"
+            "Data Processing & Transformation",
+            "AI & ML Infrastructure"
           ],
           "product_key": "undp-risk-anticipation-data-hub",
           "HDX_SOHD": "None"
@@ -2862,11 +2886,12 @@
           ],
           "CRAF’d-Funded Project?": "YES",
           "Investment Type(s)": [
-            "Data Sets & Commons",
             "Crisis Analytics & Insights"
           ],
           "Investment Theme(s)": [
-            "Anticipatory and Early Action Forecasts"
+            "Anticipatory and Early Action Forecasts",
+            "Composite Indices",
+            "Monitoring & Alerts"
           ],
           "product_key": "inform-warning",
           "HDX_SOHD": "None"
@@ -2880,27 +2905,6 @@
             }
           }
         ]
-      },
-      {
-        "id": "recXkQODU8on8xy2v",
-        "fields": {
-          "Project/Product Name": "UNDP Digital Standards",
-          "Project Description": "A toolkit of open-source principles and guidelines aimed at helping UNDP and partners design interoperable, user-centered digital solutions.\n",
-          "Project Website": "https://www.undp.org/digital/standards",
-          "Provider Orgs Full Name": [
-            "rec9NauCCUPUWMwfl"
-          ],
-          "CRAF’d-Funded Project?": "NO",
-          "Investment Type(s)": [
-            "Standards & Coordination"
-          ],
-          "Investment Theme(s)": [
-            "Methodological Standards"
-          ],
-          "product_key": "undp-digital-standards",
-          "HDX_SOHD": "None"
-        },
-        "agencies": []
       }
     ],
     "donor_countries": [
@@ -3403,6 +3407,7 @@
           "Investment Type(s)": [
             "Learning & Exchange"
           ],
+          "product_key": "dmt",
           "HDX_SOHD": "None"
         },
         "agencies": []
@@ -4177,6 +4182,7 @@
           "Investment Type(s)": [
             "Human Capital & Know-how"
           ],
+          "product_key": "cap-strength",
           "HDX_SOHD": "None"
         },
         "agencies": []
@@ -4194,6 +4200,7 @@
           "Investment Type(s)": [
             "Human Capital & Know-how"
           ],
+          "product_key": "population-distribution",
           "HDX_SOHD": "None"
         },
         "agencies": []
@@ -4211,6 +4218,7 @@
           "Investment Type(s)": [
             "Human Capital & Know-how"
           ],
+          "product_key": "service-site",
           "HDX_SOHD": "None"
         },
         "agencies": []
@@ -6124,7 +6132,6 @@
       "Org Website": "https://dppa.un.org/en",
       "Org Description": "The Department of Political and Peacebuilding Affairs (DPPA) plays a central role in United Nations efforts to prevent and resolve conflict around the world. DPPA supports the Secretary-General’s peace initiatives, oversees mediation, political transition and peacebuilding processes, and assists UN Member States as they carry out elections.",
       "Provided Data Ecosystem Projects": [
-        "recOOQ5c99vFwz8i8",
         "recxNVM0HeC0mSQyk"
       ],
       "Org HQ Country": "United States",
@@ -6135,87 +6142,6 @@
     },
     "agencies": [],
     "projects": [
-      {
-        "id": "recOOQ5c99vFwz8i8",
-        "fields": {
-          "Project/Product Name": "DPPA Innovation Cell",
-          "Project Description": "The DPPA Innovation Cell pilots digital tools—including AI, data visualization, and social media analysis—to support conflict prevention, early warning, and diplomacy efforts in fragile contexts.\n",
-          "Project Donor Agencies": [
-            "rec1YpvhkjwME6GOJ",
-            "reckIAhFXgj4XL29b",
-            "recZCZqKtB0JM5kmx",
-            "recI95P9GtOhiXNoU",
-            "recfNuwRv2DcnUQCK",
-            "recqSvUlZQjET4fCH",
-            "recYVizktLnxQPeKH"
-          ],
-          "Project Website": "https://dppa.un.org/en/innovation",
-          "Provider Orgs Full Name": [
-            "recOidtZ5FFF8NN7j"
-          ],
-          "CRAF’d-Funded Project?": "NO",
-          "Investment Type(s)": [
-            "Infrastructure & Platforms"
-          ],
-          "Investment Theme(s)": [
-            "Peace Data",
-            "Conflict Analytics"
-          ],
-          "product_key": "dppa-innovation-cell",
-          "HDX_SOHD": "None"
-        },
-        "agencies": [
-          {
-            "id": "rec1YpvhkjwME6GOJ",
-            "fields": {
-              "Agency/Department Name": "Unspecified Agency",
-              "Country Name": "Germany"
-            }
-          },
-          {
-            "id": "reckIAhFXgj4XL29b",
-            "fields": {
-              "Agency/Department Name": "Unspecified Agency",
-              "Country Name": "USA"
-            }
-          },
-          {
-            "id": "recZCZqKtB0JM5kmx",
-            "fields": {
-              "Agency/Department Name": "Unspecified Agency",
-              "Country Name": "Denmark"
-            }
-          },
-          {
-            "id": "recI95P9GtOhiXNoU",
-            "fields": {
-              "Agency/Department Name": "Unspecified Agency",
-              "Country Name": "South Korea"
-            }
-          },
-          {
-            "id": "recfNuwRv2DcnUQCK",
-            "fields": {
-              "Agency/Department Name": "Unspecified Agency",
-              "Country Name": "Norway"
-            }
-          },
-          {
-            "id": "recqSvUlZQjET4fCH",
-            "fields": {
-              "Agency/Department Name": "Unspecified Agency",
-              "Country Name": "Netherlands"
-            }
-          },
-          {
-            "id": "recYVizktLnxQPeKH",
-            "fields": {
-              "Agency/Department Name": "Unspecified Agency",
-              "Country Name": "Australia"
-            }
-          }
-        ]
-      },
       {
         "id": "recxNVM0HeC0mSQyk",
         "fields": {
@@ -6233,9 +6159,10 @@
             "Crisis Analytics & Insights"
           ],
           "Investment Theme(s)": [
-            "Geospatial Data",
-            "Conflict & Violence Data",
-            "Climate Data"
+            "Climate Analytics",
+            "Geospatial Analytics",
+            "Disaster Hazard & Risk Modelling",
+            "Conflict Analytics"
           ],
           "product_key": "geoguard",
           "HDX_SOHD": "None"
@@ -6446,6 +6373,7 @@
           "Investment Type(s)": [
             "Learning & Exchange"
           ],
+          "product_key": "losm",
           "HDX_SOHD": "None"
         },
         "agencies": []
@@ -7769,13 +7697,24 @@
         "recSbniShY9V8cE4L",
         "recSTdLTga3nMLgPn"
       ],
+      "Org Donor Agencies": [
+        "rec9TITYUt2a5OaKT"
+      ],
       "Org IATI Name": "N/A",
       "Org HQ Country": "Lebanon",
       "Has received CRAF'd Funding?": "NO",
       "org_key": "arab-barometer",
       "Org Type": "Research / Think Tank"
     },
-    "agencies": [],
+    "agencies": [
+      {
+        "id": "rec9TITYUt2a5OaKT",
+        "fields": {
+          "Agency/Department Name": "Middle East Partnership Initiative (MEPI)",
+          "Country Name": "USA"
+        }
+      }
+    ],
     "projects": [
       {
         "id": "recSTdLTga3nMLgPn",
@@ -7853,7 +7792,9 @@
         ]
       }
     ],
-    "donor_countries": []
+    "donor_countries": [
+      "USA"
+    ]
   },
   {
     "id": "reccKH8GA8awjQEvp",
@@ -12519,6 +12460,7 @@
           ],
           "CRAF’d-Funded Project?": "NO",
           "Investment Type(s)": [
+            "Data Sets & Commons",
             "Infrastructure & Platforms"
           ],
           "Investment Theme(s)": [
@@ -12548,12 +12490,24 @@
         "recjAd7jOVvlh7mnp",
         "receXQgibfVmjvmeB"
       ],
+      "Org Donor Agencies": [
+        "reclUJwIt0bxL2bO0"
+      ],
       "Org HQ Country": "United States",
       "Has received CRAF'd Funding?": "NO",
       "org_key": "university-of-minnesota",
       "Org Type": "Academia"
     },
-    "agencies": [],
+    "agencies": [
+      {
+        "id": "reclUJwIt0bxL2bO0",
+        "fields": {
+          "Agency/Department Name": "National Science Foundation (NSF)",
+          "Agency Data Portal": "https://www.nsf.gov/",
+          "Country Name": "USA"
+        }
+      }
+    ],
     "projects": [
       {
         "id": "receXQgibfVmjvmeB",
@@ -12669,7 +12623,9 @@
         ]
       }
     ],
-    "donor_countries": []
+    "donor_countries": [
+      "USA"
+    ]
   },
   {
     "id": "recsgHe4sU0ltYmhC",
@@ -14093,10 +14049,21 @@
         "recGMlI70iaqyTtMo",
         "recQJwZB8vyAFwK4C"
       ],
+      "Org Donor Agencies": [
+        "reciWEHPYXviYoK02"
+      ],
       "org_key": "ecmrwf",
       "Org Type": "International Organization"
     },
-    "agencies": [],
+    "agencies": [
+      {
+        "id": "reciWEHPYXviYoK02",
+        "fields": {
+          "Agency/Department Name": "Members States",
+          "Country Name": "European Union"
+        }
+      }
+    ],
     "projects": [
       {
         "id": "recGMlI70iaqyTtMo",
@@ -14151,7 +14118,9 @@
         ]
       }
     ],
-    "donor_countries": []
+    "donor_countries": [
+      "European Union"
+    ]
   },
   {
     "id": "recyZ1KYbbpFNTDu8",
@@ -14442,11 +14411,12 @@
           ],
           "CRAF’d-Funded Project?": "YES",
           "Investment Type(s)": [
-            "Data Sets & Commons",
             "Crisis Analytics & Insights"
           ],
           "Investment Theme(s)": [
-            "Anticipatory and Early Action Forecasts"
+            "Anticipatory and Early Action Forecasts",
+            "Composite Indices",
+            "Monitoring & Alerts"
           ],
           "product_key": "inform-warning",
           "HDX_SOHD": "None"
@@ -14550,6 +14520,7 @@
           "Investment Type(s)": [
             "Human Capital & Know-how"
           ],
+          "product_key": "hera-dc",
           "HDX_SOHD": "None"
         },
         "agencies": []
@@ -14567,6 +14538,7 @@
           "Investment Type(s)": [
             "Human Capital & Know-how"
           ],
+          "product_key": "hera-stn",
           "HDX_SOHD": "None"
         },
         "agencies": []

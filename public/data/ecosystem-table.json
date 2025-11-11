@@ -75,6 +75,7 @@
       "Investment Type(s)": [
         "Human Capital & Know-how"
       ],
+      "product_key": "cap-strength",
       "HDX_SOHD": "None"
     }
   },
@@ -1204,6 +1205,7 @@
       "Investment Type(s)": [
         "Human Capital & Know-how"
       ],
+      "product_key": "hera-dc",
       "HDX_SOHD": "None"
     }
   },
@@ -1696,36 +1698,6 @@
     }
   },
   {
-    "id": "recOOQ5c99vFwz8i8",
-    "fields": {
-      "Project/Product Name": "DPPA Innovation Cell",
-      "Project Description": "The DPPA Innovation Cell pilots digital tools—including AI, data visualization, and social media analysis—to support conflict prevention, early warning, and diplomacy efforts in fragile contexts.\n",
-      "Project Donor Agencies": [
-        "rec1YpvhkjwME6GOJ",
-        "reckIAhFXgj4XL29b",
-        "recZCZqKtB0JM5kmx",
-        "recI95P9GtOhiXNoU",
-        "recfNuwRv2DcnUQCK",
-        "recqSvUlZQjET4fCH",
-        "recYVizktLnxQPeKH"
-      ],
-      "Project Website": "https://dppa.un.org/en/innovation",
-      "Provider Orgs Full Name": [
-        "recOidtZ5FFF8NN7j"
-      ],
-      "CRAF’d-Funded Project?": "NO",
-      "Investment Type(s)": [
-        "Infrastructure & Platforms"
-      ],
-      "Investment Theme(s)": [
-        "Peace Data",
-        "Conflict Analytics"
-      ],
-      "product_key": "dppa-innovation-cell",
-      "HDX_SOHD": "None"
-    }
-  },
-  {
     "id": "recPMQlg07QkflL3i",
     "fields": {
       "Project/Product Name": "Information Management Services",
@@ -1984,12 +1956,12 @@
       ],
       "CRAF’d-Funded Project?": "YES",
       "Investment Type(s)": [
-        "Infrastructure & Platforms",
-        "Crisis Analytics & Insights"
+        "Infrastructure & Platforms"
       ],
       "Investment Theme(s)": [
         "Data Storage, Access & Sharing",
-        "Data Processing & Transformation"
+        "Data Processing & Transformation",
+        "AI & ML Infrastructure"
       ],
       "product_key": "undp-risk-anticipation-data-hub",
       "HDX_SOHD": "None"
@@ -2093,7 +2065,7 @@
     "fields": {
       "Project/Product Name": "Heidelberg Institute for International Conflict Research",
       "Project Description": "The Heidelberg Institute for International Conflict Research (HIIK) is an independent, non-profit, interdisciplinary association. Since 1991, we have been dedicated to promoting, disseminating, and implementing knowledge about the emergence, course, and resolution of intra- and inter-state political conflicts. Following tremendous growth in recent years, the HIIK currently has over 200 volunteers. \n",
-      "Project Website": "hiik.de",
+      "Project Website": "https://www.hiik.de",
       "Provider Orgs Full Name": [
         "rec1UYGdN0XUBCmDY"
       ],
@@ -2145,6 +2117,7 @@
       "Investment Type(s)": [
         "Human Capital & Know-how"
       ],
+      "product_key": "population-distribution",
       "HDX_SOHD": "None"
     }
   },
@@ -2187,8 +2160,7 @@
         "Data Sets & Commons"
       ],
       "Investment Theme(s)": [
-        "Environmental Data",
-        "Monitoring & Alerts"
+        "Environmental Data"
       ],
       "product_key": "em-dat",
       "HDX_SOHD": "None"
@@ -2227,6 +2199,7 @@
       "Investment Type(s)": [
         "Human Capital & Know-how"
       ],
+      "product_key": "service-site",
       "HDX_SOHD": "None"
     }
   },
@@ -2241,6 +2214,7 @@
       ],
       "CRAF’d-Funded Project?": "NO",
       "Investment Type(s)": [
+        "Data Sets & Commons",
         "Infrastructure & Platforms"
       ],
       "Investment Theme(s)": [
@@ -2326,11 +2300,12 @@
       ],
       "CRAF’d-Funded Project?": "YES",
       "Investment Type(s)": [
-        "Data Sets & Commons",
         "Crisis Analytics & Insights"
       ],
       "Investment Theme(s)": [
-        "Anticipatory and Early Action Forecasts"
+        "Anticipatory and Early Action Forecasts",
+        "Composite Indices",
+        "Monitoring & Alerts"
       ],
       "product_key": "inform-warning",
       "HDX_SOHD": "None"
@@ -2353,26 +2328,6 @@
         "Data Storage, Access & Sharing"
       ],
       "product_key": "fintrack",
-      "HDX_SOHD": "None"
-    }
-  },
-  {
-    "id": "recXkQODU8on8xy2v",
-    "fields": {
-      "Project/Product Name": "UNDP Digital Standards",
-      "Project Description": "A toolkit of open-source principles and guidelines aimed at helping UNDP and partners design interoperable, user-centered digital solutions.\n",
-      "Project Website": "https://www.undp.org/digital/standards",
-      "Provider Orgs Full Name": [
-        "rec9NauCCUPUWMwfl"
-      ],
-      "CRAF’d-Funded Project?": "NO",
-      "Investment Type(s)": [
-        "Standards & Coordination"
-      ],
-      "Investment Theme(s)": [
-        "Methodological Standards"
-      ],
-      "product_key": "undp-digital-standards",
       "HDX_SOHD": "None"
     }
   },
@@ -3493,6 +3448,7 @@
       "Investment Type(s)": [
         "Learning & Exchange"
       ],
+      "product_key": "dmt",
       "HDX_SOHD": "None"
     }
   },
@@ -3800,6 +3756,7 @@
       "Investment Type(s)": [
         "Human Capital & Know-how"
       ],
+      "product_key": "hera-stn",
       "HDX_SOHD": "None"
     }
   },
@@ -4287,9 +4244,10 @@
         "Crisis Analytics & Insights"
       ],
       "Investment Theme(s)": [
-        "Geospatial Data",
-        "Conflict & Violence Data",
-        "Climate Data"
+        "Climate Analytics",
+        "Geospatial Analytics",
+        "Disaster Hazard & Risk Modelling",
+        "Conflict Analytics"
       ],
       "product_key": "geoguard",
       "HDX_SOHD": "None"
@@ -4532,6 +4490,7 @@
       "Investment Type(s)": [
         "Learning & Exchange"
       ],
+      "product_key": "losm",
       "HDX_SOHD": "None"
     }
   },
