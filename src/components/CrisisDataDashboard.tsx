@@ -577,7 +577,8 @@ const CrisisDataDashboard = ({
             await exportViewAsCSV(organizationsWithProjects, {
                 searchQuery: appliedSearchQuery || undefined,
                 donorCountries: combinedDonors,
-                investmentTypes: investmentTypes
+                investmentTypes: investmentTypes,
+                investmentThemes: investmentThemes
             });
         } catch (error) {
             console.error('Failed to export CSV:', error);
@@ -594,7 +595,8 @@ const CrisisDataDashboard = ({
             await exportViewAsXLSX(organizationsWithProjects, {
                 searchQuery: appliedSearchQuery || undefined,
                 donorCountries: combinedDonors,
-                investmentTypes: investmentTypes
+                investmentTypes: investmentTypes,
+                investmentThemes: investmentThemes
             });
         } catch (error) {
             console.error('Failed to export XLSX:', error);
