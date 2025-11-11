@@ -488,9 +488,9 @@ const NetworkGraph: React.FC<NetworkGraphProps> = ({
         // Set link strength for more stable connections
         fg.d3Force('link').strength(0.5);
 
-        // Set the center force to the actual center of the canvas (not 0,0)
-        // This prevents nodes from being pulled toward the top-left corner
-        fg.d3Force('center').x(dimensions.width / 2).y(dimensions.height / 2).strength(0.02);
+        // Remove center force - nodes should only be pulled by links and repelled by charge
+        // This prevents unwanted gravitational pull to center
+        fg.d3Force('center', null);
 
         // Enhanced collision force with more iterations for smoother collision avoidance
         fg.d3Force('collision', forceCollide((node: any) => {
@@ -532,7 +532,7 @@ const NetworkGraph: React.FC<NetworkGraphProps> = ({
         if (clusterByOrgType || clusterByAssetType) {
             // Strong charge repulsion to keep clusters well separated
             fg.d3Force('charge').strength(-300); // Much stronger repulsion between clusters
-            fg.d3Force('center').strength(0.001); // Almost no centering
+            fg.d3Force('center', null); // Remove center force - clustering provides positioning
             fg.d3Force('link').strength(0.1); // Very weak links
             
             // More collision within clusters to prevent overlap
@@ -630,6 +630,9 @@ const NetworkGraph: React.FC<NetworkGraphProps> = ({
                 }
                 
                 // Apply forces to all nodes in clusters based on updated centers
+                // Build a map of non-clustered nodes to their connected cluster centers
+                const nodeToClusterCenters = new Map<string, Array<{ x: number; y: number }>>();
+                
                 for (let i = 0; i < graphData.nodes.length; i++) {
                     const node: any = graphData.nodes[i];
                     let clusterKey = null;
@@ -641,14 +644,58 @@ const NetworkGraph: React.FC<NetworkGraphProps> = ({
                     }
                     
                     if (clusterKey && clusterCenters.has(clusterKey)) {
+                        // Direct cluster members get strong pull
                         const center = clusterCenters.get(clusterKey)!;
                         const strength = alpha > decayStart 
                             ? baseClusterStrength 
                             : baseClusterStrength * Math.pow(alpha / decayStart, 0.5);
                         node.vx += (center.x - node.x) * strength;
                         node.vy += (center.y - node.y) * strength;
+                    } else {
+                        // For nodes not in clusters (e.g., organizations when clustering by asset type),
+                        // find which clusters they're connected to via links
+                        graphData.links.forEach((link: any) => {
+                            const sourceId = typeof link.source === 'object' ? link.source.id : link.source;
+                            const targetId = typeof link.target === 'object' ? link.target.id : link.target;
+                            
+                            if (sourceId === node.id || targetId === node.id) {
+                                const connectedNodeId = sourceId === node.id ? targetId : sourceId;
+                                const connectedNode = graphData.nodes.find((n: any) => n.id === connectedNodeId);
+                                
+                                if (connectedNode) {
+                                    let connectedClusterKey = null;
+                                    if (clusterByOrgType && connectedNode.type === 'organization' && connectedNode.orgType) {
+                                        connectedClusterKey = `org-${connectedNode.orgType}`;
+                                    } else if (clusterByAssetType && connectedNode.type === 'project' && connectedNode.assetTypes && connectedNode.assetTypes.length > 0) {
+                                        connectedClusterKey = `asset-${connectedNode.assetTypes[0]}`;
+                                    }
+                                    
+                                    if (connectedClusterKey && clusterCenters.has(connectedClusterKey)) {
+                                        if (!nodeToClusterCenters.has(node.id)) {
+                                            nodeToClusterCenters.set(node.id, []);
+                                        }
+                                        nodeToClusterCenters.get(node.id)!.push(clusterCenters.get(connectedClusterKey)!);
+                                    }
+                                }
+                            }
+                        });
                     }
                 }
+                
+                // Apply weak pull to non-clustered nodes toward their connected clusters
+                nodeToClusterCenters.forEach((centers, nodeId) => {
+                    const node: any = graphData.nodes.find((n: any) => n.id === nodeId);
+                    if (node && centers.length > 0) {
+                        // Calculate average position of connected cluster centers
+                        const avgX = centers.reduce((sum, c) => sum + c.x, 0) / centers.length;
+                        const avgY = centers.reduce((sum, c) => sum + c.y, 0) / centers.length;
+                        
+                        // Apply very weak pull (10% of cluster force) to keep them near their connected clusters
+                        const weakStrength = baseClusterStrength * 0.1;
+                        node.vx += (avgX - node.x) * weakStrength;
+                        node.vy += (avgY - node.y) * weakStrength;
+                    }
+                });
             });
             
             fg.d3Force('clusterX', null); // Remove old separate X force
@@ -656,8 +703,8 @@ const NetworkGraph: React.FC<NetworkGraphProps> = ({
         } else {
             // Restore calmer default forces when clustering is off
             fg.d3Force('charge').strength(-400);
-            // Restore center force with proper canvas center coordinates
-            fg.d3Force('center').x(dimensions.width / 2).y(dimensions.height / 2).strength(0.02);
+            // Remove center force - no gravitational pull when clustering is off
+            fg.d3Force('center', null);
             fg.d3Force('link').strength(0.5); // Restore link strength
             
             // Restore normal collision force
