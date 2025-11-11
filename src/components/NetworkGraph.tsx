@@ -105,6 +105,8 @@ const NetworkGraph: React.FC<NetworkGraphProps> = ({
     const [filterBarContainer, setFilterBarContainer] = useState<HTMLElement | null>(null);
     const lastFiltersRef = useRef<string>(''); // Track filter state to detect changes
     const lastOrgCountRef = useRef<number>(0); // Track organization count to detect graph refresh
+    const [filterBarHeight, setFilterBarHeight] = useState<number>(0);
+    const filterBarRef = useRef<HTMLDivElement>(null);
     
     // Cache for country flag images
     const flagImageCache = useRef<Map<string, HTMLImageElement>>(new Map());
@@ -278,6 +280,29 @@ const NetworkGraph: React.FC<NetworkGraphProps> = ({
         document.addEventListener('fullscreenchange', handleFullscreenChange);
         return () => document.removeEventListener('fullscreenchange', handleFullscreenChange);
     }, []);
+
+    // Measure FilterBar height in fullscreen mode
+    useEffect(() => {
+        if (isFullscreen && filterBarRef.current) {
+            const updateHeight = () => {
+                if (filterBarRef.current) {
+                    const height = filterBarRef.current.offsetHeight;
+                    setFilterBarHeight(height);
+                }
+            };
+
+            // Initial measurement
+            updateHeight();
+
+            // Use ResizeObserver to track height changes
+            const resizeObserver = new ResizeObserver(updateHeight);
+            resizeObserver.observe(filterBarRef.current);
+
+            return () => resizeObserver.disconnect();
+        } else {
+            setFilterBarHeight(0);
+        }
+    }, [isFullscreen, filterBarContainer, combinedDonors, investmentTypes, investmentThemes, appliedSearchQuery]);
 
     // Update dimensions on resize
     useEffect(() => {
@@ -951,7 +976,10 @@ const NetworkGraph: React.FC<NetworkGraphProps> = ({
         <>
             <div ref={containerRef} className="w-full h-full bg-white rounded-lg border border-slate-200 overflow-hidden relative">
                 {/* Graph Controls - Top Right */}
-                <div className={`absolute ${isFullscreen ? 'top-40' : 'top-4'} right-4 z-10`}>
+                <div 
+                    className="absolute right-4 z-10 transition-all duration-200"
+                    style={{ top: isFullscreen ? `${filterBarHeight + 30}px` : '16px' }}
+                >
                     <div className="bg-white backdrop-blur-lg rounded-lg border border-slate-200 shadow-sm p-1.5 flex gap-1">
                         <button
                             onClick={centerView}
@@ -975,7 +1003,10 @@ const NetworkGraph: React.FC<NetworkGraphProps> = ({
                 </div>
 
                 {/* Legend and Clustering Controls - Collapsible */}
-                <div className={`absolute ${isFullscreen ? 'top-40' : 'top-4'} left-4 z-10`}>
+                <div 
+                    className="absolute left-4 z-10 transition-all duration-200"
+                    style={{ top: isFullscreen ? `${filterBarHeight + 30}px` : '16px' }}
+                >
                     {legendCollapsed ? (
                         <button
                             onClick={() => setLegendCollapsed(false)}
@@ -1195,7 +1226,7 @@ const NetworkGraph: React.FC<NetworkGraphProps> = ({
         
         {/* Filter Bar Portal - render outside overflow-hidden container when in fullscreen */}
         {isFullscreen && filterBarContainer && createPortal(
-            <div className="fixed top-4 left-4 right-4 z-[2000] bg-white backdrop-blur-lg p-4 rounded-lg border border-slate-200 shadow-lg">
+            <div ref={filterBarRef} className="fixed top-4 left-4 right-4 z-[2000] bg-white backdrop-blur-lg p-4 rounded-lg border border-slate-200 shadow-lg">
                 <FilterBar
                     searchQuery={searchQuery}
                     appliedSearchQuery={appliedSearchQuery}
