@@ -205,9 +205,10 @@
       "Org Full Name": "Heidelberg University",
       "Org Short Name": "HeiGIT",
       "Org Website": "https://www.uni-heidelberg.de/en",
-      "Org Description": "HeiGIT (Heidelberg Institute for Geoinformation Technology) advances geoinformation technology for the benefit of society and the environment. We bridge the gap between fundamental research in geoinformatics and practical applications by developing innovative tools and methods. Examples include customized geodata for humanitarian missions and intelligent routing for disaster response and climate action.",
+      "Org Description": "Founded in 1386, Ruperto Carola is the oldest university in today's Germany and one of Europe’s leading research institutions. It defines itself as an internationally networked research university dedicated to research-oriented teaching. With over 160 fields of study, it offers the broad spectrum of subjects representative of a comprehensive university as well as abundant opportunities to acquire a singular and internationally competitive qualification profile.",
       "Provided Data Ecosystem Projects": [
-        "recEuWdBixgTpQKhR"
+        "recEuWdBixgTpQKhR",
+        "recTaCZEF36yEoMIT"
       ],
       "Org Donor Agencies": [
         "rec1YpvhkjwME6GOJ"
@@ -232,7 +233,7 @@
         "id": "recEuWdBixgTpQKhR",
         "fields": {
           "Project/Product Name": "Heidelberg Institute for Geoinformation Technology (HeiGIT)",
-          "Project Description": "HeiGIT develops open geospatial tools and APIs—such as OpenRouteService—to support disaster response, health logistics, and mobility mapping. Its platforms process global spatial data to enable routing, accessibility, and hazard analysis.\n",
+          "Project Description": "HeiGIT (Heidelberg Institute for Geoinformation Technology) advances geoinformation technology for the benefit of society and the environment. It develops open geospatial tools and APIs—such as OpenRouteService—to support disaster response, health logistics, and mobility mapping. Its platforms process global spatial data to enable routing, accessibility, and hazard analysis. Examples include customized geodata for humanitarian missions and intelligent routing for disaster response and climate action.\n",
           "Project Donor Agencies": [
             "receDOQpfeb4YHc5p",
             "recDY0ngiDePaQtm3"
@@ -269,67 +270,31 @@
             }
           }
         ]
-      }
-    ],
-    "donor_countries": [
-      "Germany"
-    ]
-  },
-  {
-    "id": "rec1izGX18m256ood",
-    "name": "UK Humanitarian Innovation Hub",
-    "fields": {
-      "Org Full Name": "UK Humanitarian Innovation Hub",
-      "Org Short Name": "UKHIH",
-      "Org Website": "https://www.ukhih.org/",
-      "Org Description": "The UK Humanitarian Innovation Hub supports and accelerates data-related projects that aim to improve humanitarian response, collaborating with various actors including academia, the private sector, and other innovation hubs. While not a direct provider of data services, the Hub facilitates research and development in areas like predictive analytics, the ethical use of technology, and the application of data science to understand and respond to humanitarian needs. Their work involves assessing existing models and forecasts, designing trigger mechanisms for anticipatory action, and guiding the humanitarian community on climate science and its implications. The Hub also draws on insights from the Centre for Humanitarian Data and its Humanitarian Data Exchange (HDX) platform, which makes humanitarian data easily accessible for analysis and decision-making.",
-      "Provided Data Ecosystem Projects": [
-        "recwyWa10JHuVhWo9"
-      ],
-      "Org Donor Agencies": [
-        "rec0sY1I5JZz6ZsUE"
-      ],
-      "Org HQ Country": "United Kingdom",
-      "Has received CRAF'd Funding?": "NO",
-      "org_key": "ukhih",
-      "Org Type": "Network / Consortium"
-    },
-    "agencies": [
+      },
       {
-        "id": "rec0sY1I5JZz6ZsUE",
+        "id": "recTaCZEF36yEoMIT",
         "fields": {
-          "Agency/Department Name": "Foreign, Commonwealth & Development Office (FCDO)",
-          "Agency Data Portal": "https://devtracker.fcdo.gov.uk/",
-          "Country Name": "United Kingdom"
-        }
-      }
-    ],
-    "projects": [
-      {
-        "id": "recwyWa10JHuVhWo9",
-        "fields": {
-          "Project/Product Name": "United Kingdom Humanitarian Innovation Lab",
-          "Project Description": "A collaborative innovation lab promoting data-driven solutions in crisis settings. It supports tools prototyping and open datasets for humanitarian innovation.\n",
-          "Project Website": "https://www.ukhih.org/who-we-are/",
+          "Project/Product Name": "Heidelberg Institute for International Conflict Research",
+          "Project Description": "The Heidelberg Institute for International Conflict Research (HIIK) is an independent, non-profit, interdisciplinary association. Since 1991, we have been dedicated to promoting, disseminating, and implementing knowledge about the emergence, course, and resolution of intra- and inter-state political conflicts. Following tremendous growth in recent years, the HIIK currently has over 200 volunteers. \n",
+          "Project Website": "hiik.de",
           "Provider Orgs Full Name": [
-            "rec1izGX18m256ood"
+            "rec1UYGdN0XUBCmDY"
           ],
           "CRAF’d-Funded Project?": "NO",
           "Investment Type(s)": [
-            "Learning & Exchange"
+            "Data Sets & Commons"
           ],
           "Investment Theme(s)": [
-            "Upskilling & Training",
-            "Communities of Practice"
+            "Conflict & Violence Data"
           ],
-          "product_key": "uk-hil",
+          "product_key": "hiik",
           "HDX_SOHD": "None"
         },
         "agencies": []
       }
     ],
     "donor_countries": [
-      "United Kingdom"
+      "Germany"
     ]
   },
   {
@@ -1203,7 +1168,7 @@
           {
             "id": "recRgmk6Ew3NBvxGV",
             "fields": {
-              "Agency/Department Name": "Netherlands – Ministry of Foreign Affairs of the Netherlands (BZ / MFA)",
+              "Agency/Department Name": "Ministry of Foreign Affairs of the Netherlands (BZ / MFA)",
               "Agency Data Portal": "https://www.dutchdevelopmentresults.nl/",
               "Country Name": "Netherlands"
             }
@@ -1532,19 +1497,22 @@
   },
   {
     "id": "rec5DdxnhKg1na7o8",
-    "name": "UCLouvain: University of Louvain",
+    "name": "University of Louvain Centre for Research on the Epidemiology of Disasters (CRED) ",
     "fields": {
-      "Org Full Name": "UCLouvain: University of Louvain",
-      "Org Short Name": "UCLouvain",
-      "Org Website": "https://www.uclouvain.be/fr",
-      "Org Description": "UCLouvain aims to enable those who wish to do so – young people leaving secondary education or adults engaged in professional life – to train and acquire the skills useful for their development and their professional activities.",
+      "Org Full Name": "University of Louvain Centre for Research on the Epidemiology of Disasters (CRED) ",
+      "Org Short Name": "CRED",
+      "Org Website": "https://www.uclouvain.be/en/research-institutes/irss/cred-epidemiology-of-disasters",
+      "Org Description": "The Centre for Research on the Epidemiology of Disasters (CRED  has been active for over 50 years and is recognized as a reference institution in the field of disasters and emergency situations: CRED promotes research, training, and technical expertise in humanitarian emergencies, particularly in public health and epidemiology. Its main research topic is natural disasters. By providing a wealth of data related to health, the centre aims to improve disasters preparedness and response. CRED is managing the EM-DAT database, quantifying the occurrence, human and economic impacts associated with natural and technological disasters.",
       "Provided Data Ecosystem Projects": [
         "recVj2ULsOWhPFQ19"
       ],
       "Org Donor Agencies": [
-        "rec15kH3AC5gKDeQu",
-        "rec4K8WmVji37YMCr",
-        "recfjNkXZXtdaH5xv"
+        "reckIAhFXgj4XL29b",
+        "rectyuW4INCMaNoAM",
+        "recNLQhceOCXSMemo",
+        "recr77XDSfR0O9Jen",
+        "recqhcKxTv71yMfeI",
+        "recsrMWmoA037bW03"
       ],
       "Org IATI Name": "N/A",
       "Org HQ Country": "Belgium",
@@ -1554,26 +1522,49 @@
     },
     "agencies": [
       {
-        "id": "rec15kH3AC5gKDeQu",
-        "fields": {
-          "Agency/Department Name": "Belgian Development Agency (Enabel)",
-          "Country Name": "Belgium"
-        }
-      },
-      {
-        "id": "rec4K8WmVji37YMCr",
-        "fields": {
-          "Agency/Department Name": "Fund for Scientific Research (FNRS)",
-          "Agency Data Portal": "https://www.frs-fnrs.be/fr/",
-          "Country Name": "Belgium"
-        }
-      },
-      {
-        "id": "recfjNkXZXtdaH5xv",
+        "id": "reckIAhFXgj4XL29b",
         "fields": {
           "Agency/Department Name": "Unspecified Agency",
-          "Agency Data Portal": "https://www.ekfs.de/en",
-          "Country Name": "Else Kröner-Fresenius-Stiftung"
+          "Country Name": "USA"
+        }
+      },
+      {
+        "id": "rectyuW4INCMaNoAM",
+        "fields": {
+          "Agency/Department Name": "Unspecified Agency",
+          "Agency Data Portal": "https://fts.unocha.org/",
+          "Country Name": "United Nations Office for the Coordination of Humanitarian Affairs (OCHA)"
+        }
+      },
+      {
+        "id": "recNLQhceOCXSMemo",
+        "fields": {
+          "Agency/Department Name": "Unspecified Agency",
+          "Agency Data Portal": "https://www.wfp.org/",
+          "Country Name": "World Food Programme (WFP)"
+        }
+      },
+      {
+        "id": "recr77XDSfR0O9Jen",
+        "fields": {
+          "Agency/Department Name": "Unspecified Agency",
+          "Country Name": "World Health Organization (WHO)"
+        }
+      },
+      {
+        "id": "recqhcKxTv71yMfeI",
+        "fields": {
+          "Agency/Department Name": "Unspecified Agency",
+          "Agency Data Portal": "https://www.rockefellerfoundation.org/",
+          "Country Name": "Rockefeller Foundation"
+        }
+      },
+      {
+        "id": "recsrMWmoA037bW03",
+        "fields": {
+          "Agency/Department Name": "Unspecified Agency",
+          "Agency Data Portal": "https://open.undp.org/",
+          "Country Name": "United Nations Development Programme (UNDP)"
         }
       }
     ],
@@ -1602,8 +1593,12 @@
       }
     ],
     "donor_countries": [
-      "Belgium",
-      "Else Kröner-Fresenius-Stiftung"
+      "Rockefeller Foundation",
+      "USA",
+      "United Nations Development Programme (UNDP)",
+      "United Nations Office for the Coordination of Humanitarian Affairs (OCHA)",
+      "World Food Programme (WFP)",
+      "World Health Organization (WHO)"
     ]
   },
   {
@@ -1694,7 +1689,7 @@
       {
         "id": "recRgmk6Ew3NBvxGV",
         "fields": {
-          "Agency/Department Name": "Netherlands – Ministry of Foreign Affairs of the Netherlands (BZ / MFA)",
+          "Agency/Department Name": "Ministry of Foreign Affairs of the Netherlands (BZ / MFA)",
           "Agency Data Portal": "https://www.dutchdevelopmentresults.nl/",
           "Country Name": "Netherlands"
         }
@@ -2235,7 +2230,7 @@
           "Investment Theme(s)": [
             "Conflict & Violence Data",
             "Gender Data",
-            "Methodological Standards (e.g., Data Collection)"
+            "Methodological Standards"
           ],
           "product_key": "wwag",
           "HDX_SOHD": "None"
@@ -2385,6 +2380,59 @@
       }
     ],
     "donor_countries": []
+  },
+  {
+    "id": "rec7BmCO0j9do4gKE",
+    "name": "University of Edinburgh",
+    "fields": {
+      "Org Full Name": "University of Edinburgh",
+      "Org Short Name": "UOE",
+      "Org Website": "https://www.ed.ac.uk/",
+      "Org Description": "The University of Edinburgh is a public research university based in Edinburgh, Scotland. Founded by the town council under the authority of a royal charter from King James VI in 1582 and officially opened in 1583, it is one of Scotland's four ancient universities and the sixth-oldest university in continuous operation in the English-speaking world.",
+      "Provided Data Ecosystem Projects": [
+        "recp4lLg28MQMpBnW"
+      ],
+      "Org Donor Agencies": [
+        "reco4Um0k7Tgw2UCK"
+      ],
+      "org_key": "uoe",
+      "Org Type": "Academia"
+    },
+    "agencies": [
+      {
+        "id": "reco4Um0k7Tgw2UCK",
+        "fields": {
+          "Agency/Department Name": "Unspecified Agency",
+          "Country Name": "United Kingdom"
+        }
+      }
+    ],
+    "projects": [
+      {
+        "id": "recp4lLg28MQMpBnW",
+        "fields": {
+          "Project/Product Name": "PA-X Analytics",
+          "Project Description": "The PA-X Tracker is a new, innovative digital tool offering data-driven insights to support peace and transition processes. The suite of PeaceTech tools contained within the PA-X Tracker enables users to track and monitor progress and implementation of peace and transition processes. The Tracker allows users to understand how peace processes are unfolding, who is involved in them, and what impact the processes have had on a range of institutional, political, economic, humanitarian and security indicators.\n",
+          "Project Website": "https://www.peaceagreements.org/",
+          "Provider Orgs Full Name": [
+            "rec7BmCO0j9do4gKE"
+          ],
+          "CRAF’d-Funded Project?": "NO",
+          "Investment Type(s)": [
+            "Data Sets & Commons"
+          ],
+          "Investment Theme(s)": [
+            "Peace Data"
+          ],
+          "product_key": "pax",
+          "HDX_SOHD": "None"
+        },
+        "agencies": []
+      }
+    ],
+    "donor_countries": [
+      "United Kingdom"
+    ]
   },
   {
     "id": "rec8O141RyUupQsRy",
@@ -2847,7 +2895,7 @@
             "Standards & Coordination"
           ],
           "Investment Theme(s)": [
-            "Methodological Standards (e.g., Data Collection)"
+            "Methodological Standards"
           ],
           "product_key": "undp-digital-standards",
           "HDX_SOHD": "None"
@@ -2894,6 +2942,7 @@
     "fields": {
       "Org Full Name": "OCHA: Centre for Humanitarian Data",
       "Org Short Name": "OCHA/CHD",
+      "Org Website": "https://centre.humdata.org/",
       "Org Description": "The Centre for Humanitarian Data is focused on increasing the use and impact of data in the humanitarian sector. It is managed by the United Nations Office for the Coordination of Humanitarian Affairs (OCHA). As part of OCHA’s Information Management Branch, the Centre’s role is to enable the organization to deliver on its ambition to be more data-driven and analytical, and to ensure a responsible approach to technology and data management.  ",
       "Provided Data Ecosystem Projects": [
         "reckkGrUM2q2e7aeo",
@@ -2902,11 +2951,40 @@
         "reczpMP2LZqBg7Cnd",
         "recdGuPPf12Osu2Tw"
       ],
+      "Org Donor Agencies": [
+        "recRgmk6Ew3NBvxGV",
+        "recgAR3TqI7vt3ypc",
+        "recHSsEaPuaG3h2PQ"
+      ],
       "org_key": "ocha-hum-data-centre",
       "Org Type": "United Nations System",
       "HDX Org Key": "hdx"
     },
-    "agencies": [],
+    "agencies": [
+      {
+        "id": "recRgmk6Ew3NBvxGV",
+        "fields": {
+          "Agency/Department Name": "Ministry of Foreign Affairs of the Netherlands (BZ / MFA)",
+          "Agency Data Portal": "https://www.dutchdevelopmentresults.nl/",
+          "Country Name": "Netherlands"
+        }
+      },
+      {
+        "id": "recgAR3TqI7vt3ypc",
+        "fields": {
+          "Agency/Department Name": "Ministry of Foreign and European Affairs, Defence, Development Cooperation and Foreign Trade ",
+          "Country Name": "Luxembourg"
+        }
+      },
+      {
+        "id": "recHSsEaPuaG3h2PQ",
+        "fields": {
+          "Agency/Department Name": "Directorate-General for European Civil Protection and Humanitarian Aid Operations (DG ECHO)",
+          "Agency Data Portal": "funding overview, not portal https://civil-protection-humanitarian-aid.ec.europa.eu/funding-evaluations/funding-humanitarian-aid_en",
+          "Country Name": "European Union"
+        }
+      }
+    ],
     "projects": [
       {
         "id": "recZaSDcZgIUtalO5",
@@ -2922,7 +3000,7 @@
             "Standards & Coordination"
           ],
           "Investment Theme(s)": [
-            "Methodological Standards (e.g., Data Collection)"
+            "Methodological Standards"
           ],
           "product_key": "ocha-hxl",
           "HDX_SOHD": "None"
@@ -3022,7 +3100,11 @@
         "agencies": []
       }
     ],
-    "donor_countries": []
+    "donor_countries": [
+      "European Union",
+      "Luxembourg",
+      "Netherlands"
+    ]
   },
   {
     "id": "recAqAEBX8YBwPWlb",
@@ -3166,6 +3248,7 @@
     "fields": {
       "Org Full Name": "UNOSAT: The United Nations Satellite Centre",
       "Org Short Name": "UNOSAT",
+      "Org Website": "https://unosat.org/",
       "Org Description": "The United Nations Satellite Centre (UNOSAT), part of UNITAR, delivers satellite analysis, training, and capacity development to UN entities and Member States. We leverage geospatial technologies to support humanitarian response, sustainable development, and resilience building worldwide.",
       "Provided Data Ecosystem Projects": [
         "recEwLy3FESOhLeNs"
@@ -3216,7 +3299,9 @@
       "Link to Data Products Overview": "<https://www.pdc.org/disasteraware/>\n",
       "Provided Data Ecosystem Projects": [
         "rec9HIhsIpPjx48rc",
-        "recjbIls3C4riPk4C"
+        "recjbIls3C4riPk4C",
+        "rec04YelpRCFjpBV8",
+        "recmoxMiTZoAQ8Cvg"
       ],
       "Org Donor Agencies": [
         "recAiCKdzASfJMVsG"
@@ -3240,13 +3325,35 @@
     ],
     "projects": [
       {
+        "id": "rec04YelpRCFjpBV8",
+        "fields": {
+          "Project/Product Name": "National Disaster Preparedness",
+          "Project Description": "PDC’s National Disaster Preparedness Baseline Assessment is more than an assessment. It’s a long-term program that helps countries assess risk and disaster management capacity and apply it to:\n- Early warning\n- Disaster preparedness\n- Policy and planning\n- Sustainable development\n- Resilience-building initiatives\nThe national baseline assessment is the only U.S. program recognized by the United Nations to help countries operationalize the goals of the Sendai Framework for Disaster Risk Reduction—providing an evidence-based foundation for actions to be taken and investments to be made in achieving long-term resilience and\n",
+          "Project Website": "https://www.pdc.org/ndpba/",
+          "Provider Orgs Full Name": [
+            "recCvRYx3gzUtg9cf"
+          ],
+          "CRAF’d-Funded Project?": "NO",
+          "Investment Type(s)": [
+            "Crisis Analytics & Insights"
+          ],
+          "Investment Theme(s)": [
+            "Needs Assessment"
+          ],
+          "product_key": "national-disaster",
+          "HDX_SOHD": "None"
+        },
+        "agencies": []
+      },
+      {
         "id": "rec9HIhsIpPjx48rc",
         "fields": {
           "Project/Product Name": "DisasterAWARE",
           "Project Description": "DisasterAWARE is a global platform offering real-time hazard alerts, dashboards, and geospatial tools for disaster preparedness and early warning. It integrates predictive models and hazard tracking from global datasets.\n",
           "Project Website": "https://www.disasteraware.com/",
           "Provider Orgs Full Name": [
-            "recCvRYx3gzUtg9cf"
+            "recCvRYx3gzUtg9cf",
+            "recodAuism4k7Osi8"
           ],
           "CRAF’d-Funded Project?": "NO",
           "Investment Type(s)": [
@@ -3263,7 +3370,7 @@
       {
         "id": "recjbIls3C4riPk4C",
         "fields": {
-          "Project/Product Name": "Global Risk and Vulnerability Index",
+          "Project/Product Name": "Advanced Analytics",
           "Project Description": "PDC’s Multi-hazard risk score is a combination of multi-hazard exposure, vulnerability (susceptibility to impact), and coping capacity (the relative ability to absorb negative disaster impacts). This provides a collective measure of how each country may be affected by hazards and disasters as a whole over time.\n",
           "Project Website": "https://www.pdc.org/advanced-analytics/",
           "Provider Orgs Full Name": [
@@ -3275,7 +3382,26 @@
           ],
           "Investment Theme(s)": [
             "Disaster Hazard & Risk Modelling",
-            "Composite Indices"
+            "Composite Indices",
+            "Climate Analytics"
+          ],
+          "product_key": "global-risk",
+          "HDX_SOHD": "None"
+        },
+        "agencies": []
+      },
+      {
+        "id": "recmoxMiTZoAQ8Cvg",
+        "fields": {
+          "Project/Product Name": "Disaster Management Training",
+          "Project Description": " Learn the basics and progress to becoming an advanced user in DisasterAWARE software. You may also request an on site, instructor-led classroom training at your location or ours. We can help you accomplish nearly any training objective.\n",
+          "Project Website": "https://www.pdc.org/training-and-exercises/",
+          "Provider Orgs Full Name": [
+            "recCvRYx3gzUtg9cf"
+          ],
+          "CRAF’d-Funded Project?": "NO",
+          "Investment Type(s)": [
+            "Learning & Exchange"
           ],
           "HDX_SOHD": "None"
         },
@@ -3362,7 +3488,8 @@
           ],
           "Project Website": "https://www.uu.se/en/department/peace-and-conflict-research/research/ucdp/",
           "Provider Orgs Full Name": [
-            "recDNGUjEqFBtSEq6"
+            "recDNGUjEqFBtSEq6",
+            "recHAqTQikIG8K4tD"
           ],
           "CRAF’d-Funded Project?": "NO",
           "Investment Type(s)": [
@@ -3466,7 +3593,7 @@
       {
         "id": "recRgmk6Ew3NBvxGV",
         "fields": {
-          "Agency/Department Name": "Netherlands – Ministry of Foreign Affairs of the Netherlands (BZ / MFA)",
+          "Agency/Department Name": "Ministry of Foreign Affairs of the Netherlands (BZ / MFA)",
           "Agency Data Portal": "https://www.dutchdevelopmentresults.nl/",
           "Country Name": "Netherlands"
         }
@@ -3950,7 +4077,11 @@
       "Org Website": "https://www.flowminder.org/",
       "Org Description": "Flowminder also co-founded, in partnership with UNFPA, WorldPop at the University of Southampton, and CIESIN at Columbia University the GRID3 programme. GRID3 was an international partnership programme funded by the Bill & Melinda Gates Foundation and the United Kingdom’s Foreign, Commonwealth and Development Office to map a path to sustainable development for everyone with geospatial data solutions.",
       "Provided Data Ecosystem Projects": [
-        "recbmA6Lmrr5AfAHJ"
+        "recbmA6Lmrr5AfAHJ",
+        "recYR5aZ0pWEFezdF",
+        "recUtNMMh0FAIx6SD",
+        "recWaF6STUFBHx50r",
+        "rec15YViTm12t9q9C"
       ],
       "Org Donor Agencies": [
         "recbbW0P8fxVtJBJP",
@@ -4034,6 +4165,76 @@
     ],
     "projects": [
       {
+        "id": "rec15YViTm12t9q9C",
+        "fields": {
+          "Project/Product Name": "Capacity Strenghtening",
+          "Project Description": "Flowminder strengthens the capacity of governments, UN agencies, mobile operators, private companies and NGOs to make the most of new analytic techniques and data sources. From geospatial to mobile operator data analytics, Flowminder works with in-country partners to support data use among decision makers and create sustainable and long-lasting solutions.\n",
+          "Project Website": "https://www.flowminder.org/what-we-do/capacity-strengthening",
+          "Provider Orgs Full Name": [
+            "recG3iaB3tMhPUTLg"
+          ],
+          "CRAF’d-Funded Project?": "NO",
+          "Investment Type(s)": [
+            "Human Capital & Know-how"
+          ],
+          "HDX_SOHD": "None"
+        },
+        "agencies": []
+      },
+      {
+        "id": "recUtNMMh0FAIx6SD",
+        "fields": {
+          "Project/Product Name": "Population Distribution & Mobility Analysis",
+          "Project Description": "To provide decision makers with **precise and accurate estimates of population changes and movements**, and thereby support interventions in sectors such as health and disaster management, we have developed** state-of-the-art methods for estimating population distribution and human mobility **using mobile phone usage data, and specifically**[ Call Detail Records (CDRs)](https://www.flowgeek.org/what-are-cdrs), **survey/census and geospatial data. CDRs are a dataset automatically generated by operators for billing purposes, regardless of phone types, and which represent an attractive data source for estimating internal migration and displacement in low- and middle-income countries, where data on human mobility are scarce.\n",
+          "Project Website": "https://www.flowminder.org/what-we-do/population-distribution-and-mobility-analysis",
+          "Provider Orgs Full Name": [
+            "recG3iaB3tMhPUTLg"
+          ],
+          "CRAF’d-Funded Project?": "NO",
+          "Investment Type(s)": [
+            "Human Capital & Know-how"
+          ],
+          "HDX_SOHD": "None"
+        },
+        "agencies": []
+      },
+      {
+        "id": "recWaF6STUFBHx50r",
+        "fields": {
+          "Project/Product Name": "Service Site Placement Optimisation",
+          "Project Description": "To maximise the use of public and private sites and services, such as schools, health facilities, vaccination sites or mobile money agents, they need to be located where they can reach the largest possible share of the population.\nNowadays, detailed data on population distributions, roads and river networks, population mobility patterns and a range of other geospatial data are now available, which can help decision makers better identify service allocation issues. With these data, **Flowminder has developed a new methodology to support decision makers in identifying the best locations for their services, and facilitate data-driven decision making. **\n",
+          "Project Website": "https://www.flowminder.org/what-we-do/service-site-placement-optimisation",
+          "Provider Orgs Full Name": [
+            "recG3iaB3tMhPUTLg"
+          ],
+          "CRAF’d-Funded Project?": "NO",
+          "Investment Type(s)": [
+            "Human Capital & Know-how"
+          ],
+          "HDX_SOHD": "None"
+        },
+        "agencies": []
+      },
+      {
+        "id": "recYR5aZ0pWEFezdF",
+        "fields": {
+          "Project/Product Name": "FlowKit",
+          "Provider Orgs Full Name": [
+            "recG3iaB3tMhPUTLg"
+          ],
+          "CRAF’d-Funded Project?": "NO",
+          "Investment Type(s)": [
+            "Infrastructure & Platforms"
+          ],
+          "Investment Theme(s)": [
+            "Data Storage, Access & Sharing",
+            "Private Data Sharing"
+          ],
+          "HDX_SOHD": "None"
+        },
+        "agencies": []
+      },
+      {
         "id": "recbmA6Lmrr5AfAHJ",
         "fields": {
           "Project/Product Name": "GRID3: Geo-Referenced Infrastructure and Demographic Data for Development ",
@@ -4110,35 +4311,26 @@
         "recXcSKhSy2s7tunj"
       ],
       "Org Donor Agencies": [
-        "rec1YpvhkjwME6GOJ",
+        "recKVILBOB3NBEJlE",
         "reco4Um0k7Tgw2UCK",
-        "recqSvUlZQjET4fCH",
         "rece2l2IJRlTC2ERq",
-        "recYVizktLnxQPeKH",
-        "reckIAhFXgj4XL29b",
+        "recGNTHL9SKZxLDcw",
+        "rec1YpvhkjwME6GOJ",
         "recfNuwRv2DcnUQCK",
         "recZCZqKtB0JM5kmx",
-        "recjyWTotWvaTYTI4",
-        "recCqVCi3rwF77MxA",
-        "rec57z0MkntuI0kvP",
-        "recKq6SBjonibtE1r",
-        "rectW5HrazH0ZIdjS",
-        "reca4p0ohNjva2ein",
-        "recI95P9GtOhiXNoU",
-        "recD33Egz57mFbuAl",
-        "recGMYeDQSV7jffjs",
-        "recNy9QGuHQgz7uAf",
-        "recfAq4iluzgA9q4g",
         "recTMNSZMjMRAv6jz",
-        "recgAR3TqI7vt3ypc",
-        "recMrXxdeLa7ThLf8",
-        "recRt57CGsQQK50dQ",
-        "recizeDfrqG6lA92A",
-        "recvGtb6DmohOEC5n",
-        "recqM20m0W6iS5Y0t",
-        "recNud8p6FGI83cjR",
+        "recqSvUlZQjET4fCH",
+        "rec57z0MkntuI0kvP",
+        "rectW5HrazH0ZIdjS",
+        "recjyWTotWvaTYTI4",
+        "recYVizktLnxQPeKH",
+        "recKq6SBjonibtE1r",
         "rec8BkimQ5W9z8pvk",
-        "recKVILBOB3NBEJlE"
+        "recMrXxdeLa7ThLf8",
+        "recfAq4iluzgA9q4g",
+        "recNy9QGuHQgz7uAf",
+        "recvGtb6DmohOEC5n",
+        "recRt57CGsQQK50dQ"
       ],
       "Org IATI Name": "United Nations Office for the Coordination of Humanitarian Affairs (OCHA)",
       "Org MPTFO Name": "OCHA",
@@ -4153,10 +4345,10 @@
     },
     "agencies": [
       {
-        "id": "rec1YpvhkjwME6GOJ",
+        "id": "recKVILBOB3NBEJlE",
         "fields": {
-          "Agency/Department Name": "Unspecified Agency",
-          "Country Name": "Germany"
+          "Agency/Department Name": "Joint Research Centre ",
+          "Country Name": "European Union"
         }
       },
       {
@@ -4167,13 +4359,6 @@
         }
       },
       {
-        "id": "recqSvUlZQjET4fCH",
-        "fields": {
-          "Agency/Department Name": "Unspecified Agency",
-          "Country Name": "Netherlands"
-        }
-      },
-      {
         "id": "rece2l2IJRlTC2ERq",
         "fields": {
           "Agency/Department Name": "Unspecified Agency",
@@ -4181,17 +4366,18 @@
         }
       },
       {
-        "id": "recYVizktLnxQPeKH",
+        "id": "recGNTHL9SKZxLDcw",
         "fields": {
-          "Agency/Department Name": "Unspecified Agency",
-          "Country Name": "Australia"
+          "Agency/Department Name": "European Commission (EC)",
+          "Agency Data Portal": "Maybe https://ec.europa.eu/info/funding-tenders/opportunities/portal/",
+          "Country Name": "European Union"
         }
       },
       {
-        "id": "reckIAhFXgj4XL29b",
+        "id": "rec1YpvhkjwME6GOJ",
         "fields": {
           "Agency/Department Name": "Unspecified Agency",
-          "Country Name": "USA"
+          "Country Name": "Germany"
         }
       },
       {
@@ -4209,17 +4395,17 @@
         }
       },
       {
-        "id": "recjyWTotWvaTYTI4",
+        "id": "recTMNSZMjMRAv6jz",
         "fields": {
           "Agency/Department Name": "Unspecified Agency",
-          "Country Name": "Ireland"
+          "Country Name": "Qatar"
         }
       },
       {
-        "id": "recCqVCi3rwF77MxA",
+        "id": "recqSvUlZQjET4fCH",
         "fields": {
           "Agency/Department Name": "Unspecified Agency",
-          "Country Name": "African Union"
+          "Country Name": "Netherlands"
         }
       },
       {
@@ -4230,13 +4416,6 @@
         }
       },
       {
-        "id": "recKq6SBjonibtE1r",
-        "fields": {
-          "Agency/Department Name": "Unspecified Agency",
-          "Country Name": "Switzerland"
-        }
-      },
-      {
         "id": "rectW5HrazH0ZIdjS",
         "fields": {
           "Agency/Department Name": "Unspecified Agency",
@@ -4244,101 +4423,24 @@
         }
       },
       {
-        "id": "reca4p0ohNjva2ein",
-        "fields": {
-          "Agency/Department Name": "International Development Cooperation Agency (CIDCA)",
-          "Country Name": "China"
-        }
-      },
-      {
-        "id": "recI95P9GtOhiXNoU",
+        "id": "recjyWTotWvaTYTI4",
         "fields": {
           "Agency/Department Name": "Unspecified Agency",
-          "Country Name": "South Korea"
+          "Country Name": "Ireland"
         }
       },
       {
-        "id": "recD33Egz57mFbuAl",
+        "id": "recYVizktLnxQPeKH",
         "fields": {
           "Agency/Department Name": "Unspecified Agency",
-          "Country Name": "Italy"
+          "Country Name": "Australia"
         }
       },
       {
-        "id": "recGMYeDQSV7jffjs",
+        "id": "recKq6SBjonibtE1r",
         "fields": {
           "Agency/Department Name": "Unspecified Agency",
-          "Country Name": "European Union"
-        }
-      },
-      {
-        "id": "recNy9QGuHQgz7uAf",
-        "fields": {
-          "Agency/Department Name": "Unspecified Agency",
-          "Country Name": "Finland"
-        }
-      },
-      {
-        "id": "recfAq4iluzgA9q4g",
-        "fields": {
-          "Agency/Department Name": "Unspecified Agency",
-          "Country Name": "Spain"
-        }
-      },
-      {
-        "id": "recTMNSZMjMRAv6jz",
-        "fields": {
-          "Agency/Department Name": "Unspecified Agency",
-          "Country Name": "Qatar"
-        }
-      },
-      {
-        "id": "recgAR3TqI7vt3ypc",
-        "fields": {
-          "Agency/Department Name": "Ministry of Foreign and European Affairs, Defence, Development Cooperation and Foreign Trade ",
-          "Country Name": "Luxembourg"
-        }
-      },
-      {
-        "id": "recMrXxdeLa7ThLf8",
-        "fields": {
-          "Agency/Department Name": "Unspecified Agency",
-          "Country Name": "New Zealand"
-        }
-      },
-      {
-        "id": "recRt57CGsQQK50dQ",
-        "fields": {
-          "Agency/Department Name": "Unspecified Agency",
-          "Country Name": "Japan"
-        }
-      },
-      {
-        "id": "recizeDfrqG6lA92A",
-        "fields": {
-          "Agency/Department Name": "European External Action Service (EEAS)",
-          "Country Name": "European Union"
-        }
-      },
-      {
-        "id": "recvGtb6DmohOEC5n",
-        "fields": {
-          "Agency/Department Name": "Unspecified Agency",
-          "Country Name": "Saudi Arabia"
-        }
-      },
-      {
-        "id": "recqM20m0W6iS5Y0t",
-        "fields": {
-          "Agency/Department Name": "Unspecified Agency",
-          "Country Name": "United Arab Emirates"
-        }
-      },
-      {
-        "id": "recNud8p6FGI83cjR",
-        "fields": {
-          "Agency/Department Name": "Unspecified Agency",
-          "Country Name": "Austria"
+          "Country Name": "Switzerland"
         }
       },
       {
@@ -4349,10 +4451,38 @@
         }
       },
       {
-        "id": "recKVILBOB3NBEJlE",
+        "id": "recMrXxdeLa7ThLf8",
         "fields": {
-          "Agency/Department Name": "Joint Research Centre ",
-          "Country Name": "European Union"
+          "Agency/Department Name": "Unspecified Agency",
+          "Country Name": "New Zealand"
+        }
+      },
+      {
+        "id": "recfAq4iluzgA9q4g",
+        "fields": {
+          "Agency/Department Name": "Unspecified Agency",
+          "Country Name": "Spain"
+        }
+      },
+      {
+        "id": "recNy9QGuHQgz7uAf",
+        "fields": {
+          "Agency/Department Name": "Unspecified Agency",
+          "Country Name": "Finland"
+        }
+      },
+      {
+        "id": "recvGtb6DmohOEC5n",
+        "fields": {
+          "Agency/Department Name": "Unspecified Agency",
+          "Country Name": "Saudi Arabia"
+        }
+      },
+      {
+        "id": "recRt57CGsQQK50dQ",
+        "fields": {
+          "Agency/Department Name": "Unspecified Agency",
+          "Country Name": "Japan"
         }
       }
     ],
@@ -4371,7 +4501,7 @@
             "Standards & Coordination"
           ],
           "Investment Theme(s)": [
-            "Methodological Standards (e.g., Data Collection)",
+            "Methodological Standards",
             "Consistent Data Formats",
             "Standard Geocodes",
             "Version Tracking"
@@ -4495,32 +4625,24 @@
       }
     ],
     "donor_countries": [
-      "African Union",
       "Australia",
-      "Austria",
       "Belgium",
       "Canada",
-      "China",
       "Denmark",
       "European Union",
       "Finland",
       "Germany",
       "Ireland",
-      "Italy",
       "Japan",
-      "Luxembourg",
       "Netherlands",
       "New Zealand",
       "Norway",
       "Poland",
       "Qatar",
       "Saudi Arabia",
-      "South Korea",
       "Spain",
       "Sweden",
       "Switzerland",
-      "USA",
-      "United Arab Emirates",
       "United Kingdom"
     ]
   },
@@ -4535,7 +4657,8 @@
       "Link to Data Products Overview": "<https://www.prio.org/data>\n",
       "Provided Data Ecosystem Projects": [
         "recFk4AqE3TR83nNo",
-        "recp0YELy7eVj9FUs"
+        "recp0YELy7eVj9FUs",
+        "recgmCxRj8IVZMFF2"
       ],
       "Org Donor Agencies": [
         "recGNTHL9SKZxLDcw",
@@ -4649,6 +4772,44 @@
             "fields": {
               "Agency/Department Name": "CRAF’d Funding",
               "Country Name": "CRAF’d"
+            }
+          }
+        ]
+      },
+      {
+        "id": "recgmCxRj8IVZMFF2",
+        "fields": {
+          "Project/Product Name": "Uppsala Conflict Data Program (UCDP)",
+          "Project Description": "UCDP offers conflict datasets, battle event data, and fatalities statistics to support academic and policy research on global violence trends.\n",
+          "Project Donor Agencies": [
+            "recP0CwfhMP34aWn0"
+          ],
+          "Project Website": "https://www.uu.se/en/department/peace-and-conflict-research/research/ucdp/",
+          "Provider Orgs Full Name": [
+            "recDNGUjEqFBtSEq6",
+            "recHAqTQikIG8K4tD"
+          ],
+          "CRAF’d-Funded Project?": "NO",
+          "Investment Type(s)": [
+            "Data Sets & Commons",
+            "Learning & Exchange"
+          ],
+          "Investment Theme(s)": [
+            "Upskilling & Training",
+            "Conflict Analytics",
+            "Conflict & Violence Data",
+            "Peace Data",
+            "Anticipatory and Early Action Forecasts"
+          ],
+          "product_key": "ucdp",
+          "HDX_SOHD": "None"
+        },
+        "agencies": [
+          {
+            "id": "recP0CwfhMP34aWn0",
+            "fields": {
+              "Agency/Department Name": "Ministry of Education and Research / Swedish Research Council (VR)",
+              "Country Name": "Sweden"
             }
           }
         ]
@@ -4942,7 +5103,7 @@
       {
         "id": "recRgmk6Ew3NBvxGV",
         "fields": {
-          "Agency/Department Name": "Netherlands – Ministry of Foreign Affairs of the Netherlands (BZ / MFA)",
+          "Agency/Department Name": "Ministry of Foreign Affairs of the Netherlands (BZ / MFA)",
           "Agency Data Portal": "https://www.dutchdevelopmentresults.nl/",
           "Country Name": "Netherlands"
         }
@@ -5456,7 +5617,7 @@
           "Investment Theme(s)": [
             "Conflict & Violence Data",
             "Gender Data",
-            "Methodological Standards (e.g., Data Collection)"
+            "Methodological Standards"
           ],
           "product_key": "wwag",
           "HDX_SOHD": "None"
@@ -5597,7 +5758,7 @@
       {
         "id": "recRgmk6Ew3NBvxGV",
         "fields": {
-          "Agency/Department Name": "Netherlands – Ministry of Foreign Affairs of the Netherlands (BZ / MFA)",
+          "Agency/Department Name": "Ministry of Foreign Affairs of the Netherlands (BZ / MFA)",
           "Agency Data Portal": "https://www.dutchdevelopmentresults.nl/",
           "Country Name": "Netherlands"
         }
@@ -6099,7 +6260,6 @@
       "Org Full Name": "U.S. Department of State",
       "Org Short Name": "State Department",
       "Org Website": "https://www.usaid.gov/",
-      "Org Description": "The United States Agency for International Development is an independent agency of the United States government responsible for administering civilian foreign aid and development assistance.",
       "Provided Data Ecosystem Projects": [
         "recrAQT0YpFBCQ02U"
       ],
@@ -6138,11 +6298,11 @@
           ],
           "CRAF’d-Funded Project?": "NO",
           "Investment Type(s)": [
+            "Data Sets & Commons",
             "Crisis Analytics & Insights"
           ],
           "Investment Theme(s)": [
-            "Food Security Data",
-            "Anticipatory and Early Action Forecasts"
+            "Food Security Data"
           ],
           "product_key": "fews-net",
           "HDX_SOHD": "None"
@@ -6175,7 +6335,8 @@
       "Link to Data Products Overview": "<https://www.hotosm.org/tech-suite>\n",
       "Provided Data Ecosystem Projects": [
         "recF8bGKczcSVXjRz",
-        "rec04lJaB92fTs0JH"
+        "rec04lJaB92fTs0JH",
+        "recze16CRXWao1Mma"
       ],
       "Org Donor Agencies": [
         "recpBuvL2uHuENIu7",
@@ -6268,6 +6429,23 @@
             "Geospatial Data"
           ],
           "product_key": "hot-maps-data",
+          "HDX_SOHD": "None"
+        },
+        "agencies": []
+      },
+      {
+        "id": "recze16CRXWao1Mma",
+        "fields": {
+          "Project/Product Name": "LearnOSM",
+          "Project Description": "LearnOSM provides easy to understand, step-by-step guides for you to get started with contributing to OpenStreetMap and using OpenStreetMap and using OpenStreetMap data. If you are interested in running an OpenStreetMap workshop, check out the LearnOSM trainer resources.\n",
+          "Project Website": "https://learnosm.org/en/",
+          "Provider Orgs Full Name": [
+            "recPNaYHYuKeRDfJn"
+          ],
+          "CRAF’d-Funded Project?": "NO",
+          "Investment Type(s)": [
+            "Learning & Exchange"
+          ],
           "HDX_SOHD": "None"
         },
         "agencies": []
@@ -7056,8 +7234,6 @@
       "Org Website": "https://mapaction.org/",
       "Org Description": "We are a non-profit organisation collaborating with partners around the world to prepare for and respond to humanitarian emergencies. We strive to ensure global, regional, national and local disaster management and humanitarian agencies have access to the maps, visualised data, information and analysis that they need to make key decisions, at the right times, to save lives and reduce suffering. ",
       "Provided Data Ecosystem Projects": [
-        "reciDzUjwtkVeh21I",
-        "recGnEnRmDmoQ59wM",
         "rec8HCRgYhj3eDhQ0"
       ],
       "Org Donor Agencies": [
@@ -7092,7 +7268,7 @@
       {
         "id": "rec8HCRgYhj3eDhQ0",
         "fields": {
-          "Project/Product Name": "Emergency Response",
+          "Project/Product Name": "MapAction Services",
           "Project Description": "When major emergencies happen, we can provide surge support to our partners at short notice, enabling them to make sense of chaotic, dangerous and rapidly evolving situations and coordinate the most effective response. We work both in country and remotely. Our well-rehearsed deployment model means our mapping professionals can be on the scene within 24-48 hours of a disaster striking. Even before they arrive in-country, they’ve started collecting data and information that will be crucial in helping coordinate the world’s response, and getting aid to where it is needed most.\n",
           "Project Website": "https://mapaction.org/about-us/emergency-response/",
           "Provider Orgs Full Name": [
@@ -7104,49 +7280,11 @@
           ],
           "Investment Theme(s)": [
             "Applied Data Analytics & Insights Generation",
-            "Surge Capacity"
+            "Surge Capacity",
+            "Information Managment",
+            " Data Collection & Generation"
           ],
-          "HDX_SOHD": "None"
-        },
-        "agencies": []
-      },
-      {
-        "id": "recGnEnRmDmoQ59wM",
-        "fields": {
-          "Project/Product Name": "Health Services",
-          "Project Description": "Whether it’s deploying data and GIS tools to fight malaria in Burundi, cholera in Malawi, Ebola in Sierra Leone & Liberia, or dengue in the Philippines, for more than a decade MapAction has supported the planning and delivery of public health campaigns and outbreak responses worldwide. Good data underpins effective health panning. That is why MapAction continues to increase its focus as an organisation on public health, from West Africa to the Philippines, via Burundi, Malawi and the Horn of Africa. \n",
-          "Project Website": "https://mapaction.org/about-us/our-services/health/",
-          "Provider Orgs Full Name": [
-            "recX11pAAzHjdqH0Y"
-          ],
-          "Investment Type(s)": [
-            "Crisis Analytics & Insights"
-          ],
-          "Investment Theme(s)": [
-            "Health Analytics"
-          ],
-          "product_key": "health-services",
-          "HDX_SOHD": "None"
-        },
-        "agencies": []
-      },
-      {
-        "id": "reciDzUjwtkVeh21I",
-        "fields": {
-          "Project/Product Name": "Anticipatory Action",
-          "Project Description": "As part of MapAction’s strategic commitment to locally-led, sustainability is defined as helping ensure the longevity and sustainability of AA projects by establishing effective evaluation frameworks and sharing lessons learned with the wider community. It is critical that local voices are embedded with these projects and processes.\n",
-          "Project Website": "https://mapaction.org/anticipatory-action-drr/",
-          "Provider Orgs Full Name": [
-            "recX11pAAzHjdqH0Y"
-          ],
-          "CRAF’d-Funded Project?": "NO",
-          "Investment Type(s)": [
-            "Crisis Analytics & Insights"
-          ],
-          "Investment Theme(s)": [
-            "Anticipatory and Early Action Forecasts"
-          ],
-          "product_key": "anticipatory-action",
+          "product_key": "emergency-response",
           "HDX_SOHD": "None"
         },
         "agencies": []
@@ -10080,7 +10218,7 @@
           {
             "id": "recRgmk6Ew3NBvxGV",
             "fields": {
-              "Agency/Department Name": "Netherlands – Ministry of Foreign Affairs of the Netherlands (BZ / MFA)",
+              "Agency/Department Name": "Ministry of Foreign Affairs of the Netherlands (BZ / MFA)",
               "Agency Data Portal": "https://www.dutchdevelopmentresults.nl/",
               "Country Name": "Netherlands"
             }
@@ -10177,7 +10315,8 @@
         "recyMSQo5lV032SER"
       ],
       "Org Donor Agencies": [
-        "reckIAhFXgj4XL29b"
+        "reckIAhFXgj4XL29b",
+        "rec1VhOJv9U6QKBBs"
       ],
       "Org IATI Name": "N/A",
       "Org HQ Country": "United States",
@@ -10191,6 +10330,13 @@
         "fields": {
           "Agency/Department Name": "Unspecified Agency",
           "Country Name": "USA"
+        }
+      },
+      {
+        "id": "rec1VhOJv9U6QKBBs",
+        "fields": {
+          "Agency/Department Name": "CRAF’d Funding",
+          "Country Name": "CRAF’d"
         }
       }
     ],
@@ -10232,6 +10378,7 @@
       }
     ],
     "donor_countries": [
+      "CRAF’d",
       "USA"
     ]
   },
@@ -11904,7 +12051,8 @@
       "Org Description": "The Pacific Community (SPC) is the principal scientific and technical organisation in the Pacific region, proudly supporting development since 1947. We are an international development organisation owned and governed by our 27 country and territory members. The Pacific Community supports sustainable development by applying a people-centred approach to science, research and technology across all of the Sustainable Development Goals (SDGs). We serve our members by interweaving and harnessing the nexus of climate, ocean, land, culture, rights and good governance; through trusted partnerships; investing in Pacific people; and understanding Pacific contexts.",
       "Link to Data Products Overview": "<https://pacificdata.org/>\n",
       "Provided Data Ecosystem Projects": [
-        "recQubJTGSwZoqzix"
+        "recQubJTGSwZoqzix",
+        "rec9HIhsIpPjx48rc"
       ],
       "Org Donor Agencies": [
         "recQUVhcVyxZlXJ3H",
@@ -12027,6 +12175,28 @@
       }
     ],
     "projects": [
+      {
+        "id": "rec9HIhsIpPjx48rc",
+        "fields": {
+          "Project/Product Name": "DisasterAWARE",
+          "Project Description": "DisasterAWARE is a global platform offering real-time hazard alerts, dashboards, and geospatial tools for disaster preparedness and early warning. It integrates predictive models and hazard tracking from global datasets.\n",
+          "Project Website": "https://www.disasteraware.com/",
+          "Provider Orgs Full Name": [
+            "recCvRYx3gzUtg9cf",
+            "recodAuism4k7Osi8"
+          ],
+          "CRAF’d-Funded Project?": "NO",
+          "Investment Type(s)": [
+            "Infrastructure & Platforms"
+          ],
+          "Investment Theme(s)": [
+            "Geographic Information Systems (GIS)"
+          ],
+          "product_key": "disaster-aware",
+          "HDX_SOHD": "None"
+        },
+        "agencies": []
+      },
       {
         "id": "recQubJTGSwZoqzix",
         "fields": {
@@ -12728,7 +12898,7 @@
       {
         "id": "recRgmk6Ew3NBvxGV",
         "fields": {
-          "Agency/Department Name": "Netherlands – Ministry of Foreign Affairs of the Netherlands (BZ / MFA)",
+          "Agency/Department Name": "Ministry of Foreign Affairs of the Netherlands (BZ / MFA)",
           "Agency Data Portal": "https://www.dutchdevelopmentresults.nl/",
           "Country Name": "Netherlands"
         }
@@ -13427,6 +13597,7 @@
           "Provider Orgs Full Name": [
             "recvzWSlYgzs0mffd"
           ],
+          "product_key": "global-information",
           "HDX_SOHD": "None"
         },
         "agencies": []
@@ -13966,6 +14137,7 @@
           "Investment Theme(s)": [
             "Climate Analytics"
           ],
+          "product_key": "cams",
           "HDX_SOHD": "None"
         },
         "agencies": [
@@ -14353,6 +14525,10 @@
       "Org Website": "https://www.hera-ngo.org/",
       "Org Description": "As an international organization, HERA is dedicated to supporting other humanitarian and development organizations in the implementation of their projects and operational strategies. This includes crafting strategic frameworks, establishing security policies, risk assessment, donor mapping, exploratory missions, and evaluation missions. HERA assists organizations in understanding the evolving landscape of the humanitarian system, particularly regarding epidemic control through epidemiological data collection and climate change adaptation by aiding organizations in measuring their carbon footprint and developing strategies to reduce greenhouse gas emissions.",
       "Link to Data Products Overview": "<https://www.hera-ngo.org/our-projects>\n",
+      "Provided Data Ecosystem Projects": [
+        "recG8QCqF1In5fBcv",
+        "recqvGzOfmdkjYOHe"
+      ],
       "Org IATI Name": "N/A",
       "Org HQ Country": "United Kingdom",
       "Has received CRAF'd Funding?": "NO",
@@ -14361,7 +14537,41 @@
       "HDX Org Key": "hera-humanitarian-emergency-response-africa"
     },
     "agencies": [],
-    "projects": [],
+    "projects": [
+      {
+        "id": "recG8QCqF1In5fBcv",
+        "fields": {
+          "Project/Product Name": "HERA Data Collection",
+          "Project Website": "https://www.hera-ngo.org/our-services",
+          "Provider Orgs Full Name": [
+            "reczDVCg6JFw8gHxR"
+          ],
+          "CRAF’d-Funded Project?": "NO",
+          "Investment Type(s)": [
+            "Human Capital & Know-how"
+          ],
+          "HDX_SOHD": "None"
+        },
+        "agencies": []
+      },
+      {
+        "id": "recqvGzOfmdkjYOHe",
+        "fields": {
+          "Project/Product Name": "HERA Support to NGO's",
+          "Project Description": "HERA supports NGOs in their development by assisting with strategic framework creation, annual action plans, exploratory missions, project evaluations, security package implementation, and risk assessments. This comprehensive support enables organizations to enhance their effectiveness and achieve their goal\n",
+          "Project Website": "https://www.hera-ngo.org/our-services",
+          "Provider Orgs Full Name": [
+            "reczDVCg6JFw8gHxR"
+          ],
+          "CRAF’d-Funded Project?": "NO",
+          "Investment Type(s)": [
+            "Human Capital & Know-how"
+          ],
+          "HDX_SOHD": "None"
+        },
+        "agencies": []
+      }
+    ],
     "donor_countries": []
   },
   {

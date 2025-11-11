@@ -1,6 +1,7 @@
 'use client';
 
 import { typeLabelToSlug, typeSlugToLabel } from '@/lib/urlShortcuts';
+import { themeKeyToName, themeNameToKey, ensureThemesMappingsLoaded } from '@/lib/data';
 import { usePathname, useRouter, useSearchParams } from 'next/navigation';
 import { useCallback, useEffect, useMemo, useRef, useState } from 'react';
 import { processDashboardData } from '../lib/data';
@@ -16,6 +17,24 @@ const CrisisDataDashboardWrapper = ({ logoutButton }: { logoutButton?: React.Rea
     const router = useRouter();
     const pathname = usePathname();
     const searchParams = useSearchParams();
+    
+    // State for themes (needs async loading)
+    const [themesLoaded, setThemesLoaded] = useState(false);
+    const [investmentThemes, setInvestmentThemes] = useState<string[]>([]);
+    
+    // Load themes mappings and parse URL themes
+    useEffect(() => {
+        (async () => {
+            await ensureThemesMappingsLoaded();
+            setThemesLoaded(true);
+            
+            // Parse themes from URL
+            const raw = searchParams.get('th') ?? searchParams.get('themes');
+            const keys = raw?.split(',').filter(Boolean) || [];
+            const themeNames = keys.map(key => themeKeyToName(key));
+            setInvestmentThemes(themeNames);
+        })();
+    }, [searchParams]);
 
     // Get filter values from URL (comma-separated for multi-select)
     // Using compact query keys: donors -> d, types -> t, search -> q
@@ -38,11 +57,20 @@ const CrisisDataDashboardWrapper = ({ logoutButton }: { logoutButton?: React.Rea
             return true;
         });
     }, [searchParams]);
-    const investmentThemes = useMemo(() => {
-        const raw = searchParams.get('th') ?? searchParams.get('themes');
-        return raw?.split(',').filter(Boolean) || [];
-    }, [searchParams]);
     const searchQuery = searchParams.get('q') ?? searchParams.get('search') ?? '';
+    
+    // Get sort parameters from URL (compact keys: sb -> sortBy, sd -> sortDirection)
+    const sortBy = useMemo(() => {
+        const raw = searchParams.get('sb') ?? searchParams.get('sortBy');
+        if (raw === 'donors' || raw === 'assets') return raw;
+        return 'name'; // default
+    }, [searchParams]);
+    
+    const sortDirection = useMemo(() => {
+        const raw = searchParams.get('sd') ?? searchParams.get('sortDirection');
+        if (raw === 'desc') return 'desc';
+        return 'asc'; // default
+    }, [searchParams]);
 
     // Track active view (table or network)
     const [activeView, setActiveView] = useState<'table' | 'network'>('table');
@@ -109,6 +137,7 @@ const CrisisDataDashboardWrapper = ({ logoutButton }: { logoutButton?: React.Rea
         donorCountries: string[];
         investmentTypes: string[];
         investmentThemes: string[];
+        investmentThemesByType: Record<string, string[]>; // Grouped themes by investment type
         topDonors: Array<{ name: string; value: number }>; // Add top co-financing donors
     } | null>(null);
     const [loading, setLoading] = useState(true);
@@ -120,7 +149,14 @@ const CrisisDataDashboardWrapper = ({ logoutButton }: { logoutButton?: React.Rea
     }, [searchQuery]);
 
     // Helper function to update URL search params
-    const updateURLParams = useCallback((params: { donors?: string[]; types?: string[]; themes?: string[]; search?: string }) => {
+    const updateURLParams = useCallback((params: { 
+        donors?: string[]; 
+        types?: string[]; 
+        themes?: string[]; 
+        search?: string;
+        sortBy?: 'name' | 'donors' | 'assets';
+        sortDirection?: 'asc' | 'desc';
+    }) => {
         const newSearchParams = new URLSearchParams(searchParams.toString());
 
         // Update or remove donors param (compact 'd')
@@ -146,10 +182,11 @@ const CrisisDataDashboardWrapper = ({ logoutButton }: { logoutButton?: React.Rea
             }
         }
 
-        // Update or remove themes param (compact 'th')
+        // Update or remove themes param (compact 'th') - write theme keys
         if (params.themes !== undefined) {
             if (params.themes.length > 0) {
-                newSearchParams.set('th', params.themes.join(','));
+                const themeKeys = params.themes.map(t => themeNameToKey(t));
+                newSearchParams.set('th', themeKeys.join(','));
             } else {
                 newSearchParams.delete('th');
             }
@@ -161,6 +198,25 @@ const CrisisDataDashboardWrapper = ({ logoutButton }: { logoutButton?: React.Rea
                 newSearchParams.set('q', params.search);
             } else {
                 newSearchParams.delete('q');
+            }
+        }
+
+        // Update or remove sort params (compact 'sb' and 'sd')
+        if (params.sortBy !== undefined) {
+            // Only set in URL if non-default
+            if (params.sortBy !== 'name') {
+                newSearchParams.set('sb', params.sortBy);
+            } else {
+                newSearchParams.delete('sb');
+            }
+        }
+        
+        if (params.sortDirection !== undefined) {
+            // Only set in URL if non-default
+            if (params.sortDirection !== 'asc') {
+                newSearchParams.set('sd', params.sortDirection);
+            } else {
+                newSearchParams.delete('sd');
             }
         }
 
@@ -211,10 +267,69 @@ const CrisisDataDashboardWrapper = ({ logoutButton }: { logoutButton?: React.Rea
         fetchData();
     }, [effectiveDonors, effectiveInvestmentTypes, effectiveInvestmentThemes, effectiveSearchQuery]); // Re-run when effective filters change
 
+    // Validate selected themes against available themes based on current filters
+    // Remove themes that no longer have matching projects
+    useEffect(() => {
+        if (!dashboardData?.allOrganizations || investmentThemes.length === 0 || !themesLoaded) {
+            return; // Nothing to validate
+        }
+
+        // Calculate which themes are available given current donors, types, and query
+        const availableThemes = new Set<string>();
+        const allOrgs = dashboardData.allOrganizations;
+
+        allOrgs.forEach(org => {
+            // Filter by donors
+            if (combinedDonors.length > 0) {
+                const hasMatchingDonor = org.donorCountries.some(country => 
+                    combinedDonors.includes(country)
+                );
+                if (!hasMatchingDonor) return;
+            }
+
+            org.projects.forEach(project => {
+                // Filter by search query
+                if (searchQuery) {
+                    const searchLower = searchQuery.toLowerCase();
+                    const matchesSearch = 
+                        project.projectName?.toLowerCase().includes(searchLower) ||
+                        project.description?.toLowerCase().includes(searchLower) ||
+                        org.organizationName?.toLowerCase().includes(searchLower);
+                    if (!matchesSearch) return;
+                }
+
+                // Filter by types
+                if (investmentTypes.length > 0) {
+                    const hasMatchingType = project.investmentTypes?.some(type =>
+                        investmentTypes.some(selectedType => 
+                            type.toLowerCase().trim() === selectedType.toLowerCase().trim()
+                        )
+                    );
+                    if (!hasMatchingType) return;
+                }
+
+                // This project matches all filters except themes - add its themes to available set
+                project.investmentThemes?.forEach(theme => {
+                    availableThemes.add(theme.toLowerCase().trim());
+                });
+            });
+        });
+
+        // Check if any selected themes are no longer available
+        const validThemes = investmentThemes.filter(theme => 
+            availableThemes.has(theme.toLowerCase().trim())
+        );
+
+        // If some themes were removed, update the URL
+        if (validThemes.length !== investmentThemes.length) {
+            updateURLParams({ themes: validThemes });
+        }
+    }, [dashboardData?.allOrganizations, combinedDonors, investmentTypes, searchQuery, investmentThemes, themesLoaded, updateURLParams]);
+
     // Handle reset filters
     const handleResetFilters = () => {
         setLocalSearchQuery(''); // Clear local search immediately
-        updateURLParams({ donors: [], types: [], themes: [], search: '' });
+        updateURLParams({ donors: [], types: [], themes: [], search: '', sortBy: 'name', sortDirection: 'asc' });
     };
 
     // Handle filter changes
@@ -228,6 +343,10 @@ const CrisisDataDashboardWrapper = ({ logoutButton }: { logoutButton?: React.Rea
 
     const handleThemesChange = (values: string[]) => {
         updateURLParams({ themes: values });
+    };
+
+    const handleSortChange = (newSortBy: 'name' | 'donors' | 'assets', newSortDirection: 'asc' | 'desc') => {
+        updateURLParams({ sortBy: newSortBy, sortDirection: newSortDirection });
     };
 
     // Search handler - updates local state immediately, URL only on Enter key
@@ -396,12 +515,15 @@ const CrisisDataDashboardWrapper = ({ logoutButton }: { logoutButton?: React.Rea
             appliedSearchQuery={effectiveSearchQuery}
             selectedOrgKey={selectedOrgKey}
             selectedProjectKey={selectedProjectKey}
+            sortBy={sortBy}
+            sortDirection={sortDirection}
             onDonorsChange={handleDonorsChange}
             onTypesChange={handleTypesChange}
             onThemesChange={handleThemesChange}
             onSearchChange={handleSearchChange}
             onSearchSubmit={handleSearchSubmit}
             onResetFilters={handleResetFilters}
+            onSortChange={handleSortChange}
             onOpenOrganizationModal={handleOpenOrganizationModal}
             onOpenProjectModal={handleOpenProjectModal}
             onCloseOrganizationModal={handleCloseOrganizationModal}

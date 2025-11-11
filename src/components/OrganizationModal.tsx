@@ -1,6 +1,6 @@
 'use client';
 
-import { Building2, ChevronDown, ChevronUp, ExternalLink, Package } from 'lucide-react';
+import { Building2, ChevronDown, ChevronUp, ExternalLink, Package, PackageOpen } from 'lucide-react';
 import { useState } from 'react';
 import ModalOrganizationFocus from './ModalOrganizationFocus';
 import BaseModal, { ModalHeader, CountryBadge } from './BaseModal';
@@ -76,6 +76,9 @@ export default function OrganizationModal({
             {children}
         </span>
     );
+
+    // Hover state for project items to toggle the icon
+    const [hoveredProjectId, setHoveredProjectId] = useState<string | null>(null);
 
     const renderHeader = ({ showCopied, onShare, onClose }: { showCopied: boolean; onShare: () => void; onClose: () => void }) => {
         if (!organization) {
@@ -362,11 +365,17 @@ export default function OrganizationModal({
                                 <div className="flex flex-col gap-2">
                                     {displayedProjects.map((proj, i) => (
                                         <button
-                                            key={i}
+                                            key={proj.id || i}
                                             onClick={() => onOpenProjectModal?.(proj.productKey)}
+                                            onMouseEnter={() => setHoveredProjectId(proj.id)}
+                                            onMouseLeave={() => setHoveredProjectId(null)}
                                             className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-md text-base font-medium bg-slate-100 text-slate-600 hover:bg-slate-200 transition-colors cursor-pointer text-left"
                                         >
-                                            <Package className="w-4 h-4 text-slate-500 shrink-0" />
+                                            {hoveredProjectId === proj.id ? (
+                                                <PackageOpen className="w-4 h-4 text-slate-500 shrink-0" />
+                                            ) : (
+                                                <Package className="w-4 h-4 text-slate-500 shrink-0" />
+                                            )}
                                             <span className="truncate max-w-xs">{proj.name}</span>
                                         </button>
                                     ))}
