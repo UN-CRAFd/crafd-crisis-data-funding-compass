@@ -299,7 +299,7 @@ const FilterBar: React.FC<FilterBarProps> = ({
                                     <div className="flex items-center gap-2 flex-1">
                                         <IconComponent className="w-4 h-4" />
                                         <span className="flex-1">{displayName}</span>
-                                        <span className="text-xs text-slate-500 ml-auto">({projectCount})</span>
+                                        <span className="text-xs text-slate-400 ml-auto">({projectCount})</span>
                                     </div>
                                 </DropdownMenuCheckboxItem>
                             );
@@ -451,7 +451,7 @@ const FilterBar: React.FC<FilterBarProps> = ({
                                                     >
                                                         <div className="flex items-center gap-2 flex-1 w-full">
                                                             <span className="flex-1">{theme}</span>
-                                                            <span className="text-xs text-slate-500 ml-auto">({projectCount})</span>
+                                                            <span className="text-xs text-slate-400 ml-auto">({projectCount})</span>
                                                         </div>
                                                     </DropdownMenuCheckboxItem>
                                                 );
