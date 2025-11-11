@@ -114,10 +114,16 @@ export default function ProjectModal({ project, allOrganizations, loading, onOpe
                 {/* HDX Data Grid Badge */}
                 {isHdxDataGrid && (
                     <div className="mb-4">
-                        <span className="inline-flex items-center gap-2 px-3 py-1.5 rounded-md text-sm font-medium bg-slate-100 text-slate-600 border border-slate-200">
+                        <a
+                            href="https://data.humdata.org/dashboards/overview-of-data-grids"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="inline-flex items-center gap-2 px-3 py-1.5 rounded-md text-sm font-medium bg-slate-100 text-slate-600 border border-slate-200"
+                        >
                             <img src="/hdx_logo.png" alt="HDX logo" className="w-4 h-4 rounded-none" />
                             <span>HDX Data Grid</span>
-                        </span>
+                            <ExternalLink className="w-3 h-3 text-slate-600" />
+                        </a>
                     </div>
                 )}
                 
@@ -251,7 +257,7 @@ export default function ProjectModal({ project, allOrganizations, loading, onOpe
                                                                         </TooltipTrigger>
                                                                         <TooltipContent 
                                                                             side="top" 
-                                                                            className="max-w-xs text-xs bg-white/70 backdrop-blur-md border border-gray-200 z-[10001]"
+                                                                            className="max-w-xs text-xs bg-white/70 backdrop-blur-md border border-gray-200 !z-[999999]"
                                                                             sideOffset={5}
                                                                         >
                                                                             {description}

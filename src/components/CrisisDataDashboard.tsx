@@ -69,6 +69,7 @@ interface CrisisDataDashboardProps {
         donorCountries: string[];
         investmentTypes: string[];
         investmentThemes: string[];
+        investmentThemesByType: Record<string, string[]>; // Grouped themes by investment type
         topDonors: Array<{ name: string; value: number }>; // Add top co-financing donors
     } | null;
     loading: boolean;
@@ -80,12 +81,15 @@ interface CrisisDataDashboardProps {
     appliedSearchQuery: string; // Applied search query (from URL)
     selectedOrgKey: string; // Organization key from URL
     selectedProjectKey: string; // Asset key from URL
+    sortBy: 'name' | 'donors' | 'assets'; // Sort field from URL
+    sortDirection: 'asc' | 'desc'; // Sort direction from URL
     onDonorsChange: (values: string[]) => void;
     onTypesChange: (values: string[]) => void;
     onThemesChange: (values: string[]) => void;
     onSearchChange: (value: string) => void;
     onSearchSubmit: () => void;
     onResetFilters: () => void;
+    onSortChange: (sortBy: 'name' | 'donors' | 'assets', sortDirection: 'asc' | 'desc') => void;
     onOpenOrganizationModal: (orgKey: string) => void;
     onOpenProjectModal: (projectKey: string) => void;
     onCloseOrganizationModal: () => void;
@@ -226,13 +230,14 @@ const CrisisDataDashboard = ({
     onCloseProjectModal,
     onDonorClick,
     onViewChange,
-    logoutButton
+    logoutButton,
+    sortBy,
+    sortDirection,
+    onSortChange
 }: CrisisDataDashboardProps) => {
     // UI state (not related to routing)
     const [expandedOrgs, setExpandedOrgs] = useState<Set<string>>(new Set());
     const [expandedCountries, setExpandedCountries] = useState<Set<string>>(new Set());
-    const [sortBy, setSortBy] = useState<'name' | 'donors' | 'assets'>('name');
-    const [sortDirection, setSortDirection] = useState<'asc' | 'desc'>('asc');
     const [sortMenuOpen, setSortMenuOpen] = useState(false);
     const [activeView, setActiveView] = useState<'table' | 'network'>('table'); // Add view state
 
@@ -271,6 +276,122 @@ const CrisisDataDashboard = ({
         dashboardData?.investmentThemes || [],
         [dashboardData?.investmentThemes]
     );
+
+    // Get grouped themes by investment type
+    const investmentThemesByType = useMemo(() => 
+        dashboardData?.investmentThemesByType || {},
+        [dashboardData?.investmentThemesByType]
+    );
+
+    // Calculate project counts for each investment type based on current donors, query, and themes
+    // (but not filtered by types themselves)
+    const projectCountsByType = useMemo(() => {
+        const projectsByType: Record<string, Set<string>> = {};
+        const allOrgs = dashboardData?.allOrganizations || [];
+        
+        allOrgs.forEach(org => {
+            // Filter by donors
+            if (combinedDonors.length > 0) {
+                const hasMatchingDonor = org.donorCountries.some(country => 
+                    combinedDonors.includes(country)
+                );
+                if (!hasMatchingDonor) return;
+            }
+            
+            org.projects.forEach(project => {
+                // Filter by search query
+                if (appliedSearchQuery) {
+                    const searchLower = appliedSearchQuery.toLowerCase();
+                    const matchesSearch = 
+                        project.projectName?.toLowerCase().includes(searchLower) ||
+                        project.description?.toLowerCase().includes(searchLower) ||
+                        org.organizationName?.toLowerCase().includes(searchLower);
+                    if (!matchesSearch) return;
+                }
+                
+                // Filter by themes
+                if (investmentThemes.length > 0) {
+                    const hasMatchingTheme = project.investmentThemes?.some(theme =>
+                        investmentThemes.some(selectedTheme => 
+                            theme.toLowerCase().trim() === selectedTheme.toLowerCase().trim()
+                        )
+                    );
+                    if (!hasMatchingTheme) return;
+                }
+                
+                // Count this project for each of its types
+                project.investmentTypes?.forEach(type => {
+                    const normalizedType = type.toLowerCase().trim();
+                    if (!projectsByType[normalizedType]) {
+                        projectsByType[normalizedType] = new Set();
+                    }
+                    projectsByType[normalizedType].add(project.id);
+                });
+            });
+        });
+        
+        // Convert Sets to counts
+        const counts: Record<string, number> = {};
+        Object.keys(projectsByType).forEach(type => {
+            counts[type] = projectsByType[type].size;
+        });
+        return counts;
+    }, [dashboardData?.allOrganizations, combinedDonors, appliedSearchQuery, investmentThemes]);
+
+    // Calculate project counts for each theme based on current donors, query, and types
+    // (but not filtered by themes themselves)
+    const projectCountsByTheme = useMemo(() => {
+        const projectsByTheme: Record<string, Set<string>> = {};
+        const allOrgs = dashboardData?.allOrganizations || [];
+        
+        allOrgs.forEach(org => {
+            // Filter by donors
+            if (combinedDonors.length > 0) {
+                const hasMatchingDonor = org.donorCountries.some(country => 
+                    combinedDonors.includes(country)
+                );
+                if (!hasMatchingDonor) return;
+            }
+            
+            org.projects.forEach(project => {
+                // Filter by search query
+                if (appliedSearchQuery) {
+                    const searchLower = appliedSearchQuery.toLowerCase();
+                    const matchesSearch = 
+                        project.projectName?.toLowerCase().includes(searchLower) ||
+                        project.description?.toLowerCase().includes(searchLower) ||
+                        org.organizationName?.toLowerCase().includes(searchLower);
+                    if (!matchesSearch) return;
+                }
+                
+                // Filter by types
+                if (investmentTypes.length > 0) {
+                    const hasMatchingType = project.investmentTypes?.some(type =>
+                        investmentTypes.some(selectedType => 
+                            type.toLowerCase().trim() === selectedType.toLowerCase().trim()
+                        )
+                    );
+                    if (!hasMatchingType) return;
+                }
+                
+                // Count this project for each of its themes
+                project.investmentThemes?.forEach(theme => {
+                    const normalizedTheme = theme.toLowerCase().trim();
+                    if (!projectsByTheme[normalizedTheme]) {
+                        projectsByTheme[normalizedTheme] = new Set();
+                    }
+                    projectsByTheme[normalizedTheme].add(project.id);
+                });
+            });
+        });
+        
+        // Convert Sets to counts
+        const counts: Record<string, number> = {};
+        Object.keys(projectsByTheme).forEach(theme => {
+            counts[theme] = projectsByTheme[theme].size;
+        });
+        return counts;
+    }, [dashboardData?.allOrganizations, combinedDonors, appliedSearchQuery, investmentTypes]);
 
     // Load nested data for modals
     const [nestedOrganizations, setNestedOrganizations] = useState<any[]>([]);
@@ -456,7 +577,8 @@ const CrisisDataDashboard = ({
             await exportViewAsCSV(organizationsWithProjects, {
                 searchQuery: appliedSearchQuery || undefined,
                 donorCountries: combinedDonors,
-                investmentTypes: investmentTypes
+                investmentTypes: investmentTypes,
+                investmentThemes: investmentThemes
             });
         } catch (error) {
             console.error('Failed to export CSV:', error);
@@ -473,7 +595,8 @@ const CrisisDataDashboard = ({
             await exportViewAsXLSX(organizationsWithProjects, {
                 searchQuery: appliedSearchQuery || undefined,
                 donorCountries: combinedDonors,
-                investmentTypes: investmentTypes
+                investmentTypes: investmentTypes,
+                investmentThemes: investmentThemes
             });
         } catch (error) {
             console.error('Failed to export XLSX:', error);
@@ -938,60 +1061,42 @@ const CrisisDataDashboard = ({
                                             className="w-auto min-w-[180px] bg-white border border-slate-200 shadow-lg"
                                         >
                                             <DropdownMenuItem
-                                                onClick={() => {
-                                                    setSortBy('name');
-                                                    setSortDirection('asc');
-                                                }}
+                                                onClick={() => onSortChange('name', 'asc')}
                                                 className="cursor-pointer text-[11px] py-1"
                                             >
                                                 <ArrowDownWideNarrow className="w-3 h-3 mr-2" />
                                                 Alphabetically (A-Z)
                                             </DropdownMenuItem>
                                             <DropdownMenuItem
-                                                onClick={() => {
-                                                    setSortBy('name');
-                                                    setSortDirection('desc');
-                                                }}
+                                                onClick={() => onSortChange('name', 'desc')}
                                                 className="cursor-pointer text-[11px] py-1"
                                             >
                                                 <ArrowUpWideNarrow className="w-3 h-3 mr-2" />
                                                 Alphabetically (Z-A)
                                             </DropdownMenuItem>
                                             <DropdownMenuItem
-                                                onClick={() => {
-                                                    setSortBy('donors');
-                                                    setSortDirection('desc');
-                                                }}
+                                                onClick={() => onSortChange('donors', 'desc')}
                                                 className="cursor-pointer text-[11px] py-1"
                                             >
                                                 <ArrowDownWideNarrow className="w-3 h-3 mr-2" />
                                                 Number of Donors
                                             </DropdownMenuItem>
                                             <DropdownMenuItem
-                                                onClick={() => {
-                                                    setSortBy('donors');
-                                                    setSortDirection('asc');
-                                                }}
+                                                onClick={() => onSortChange('donors', 'asc')}
                                                 className="cursor-pointer text-[11px] py-1"
                                             >
                                                 <ArrowUpWideNarrow className="w-3 h-3 mr-2" />
                                                 Number of Donors
                                             </DropdownMenuItem>
                                             <DropdownMenuItem
-                                                onClick={() => {
-                                                    setSortBy('assets');
-                                                    setSortDirection('desc');
-                                                }}
+                                                onClick={() => onSortChange('assets', 'desc')}
                                                 className="cursor-pointer text-[11px] py-1"
                                             >
                                                 <ArrowDownWideNarrow className="w-3 h-3 mr-2" />
                                                 Number of Assets
                                             </DropdownMenuItem>
                                             <DropdownMenuItem
-                                                onClick={() => {
-                                                    setSortBy('assets');
-                                                    setSortDirection('asc');
-                                                }}
+                                                onClick={() => onSortChange('assets', 'asc')}
                                                 className="cursor-pointer text-[11px] py-1"
                                             >
                                                 <ArrowUpWideNarrow className="w-3 h-3 mr-2" />
@@ -1041,12 +1146,14 @@ const CrisisDataDashboard = ({
                                             onTypesChange={onTypesChange}
                                             investmentThemes={investmentThemes}
                                             allKnownInvestmentThemes={allKnownInvestmentThemes}
+                                            investmentThemesByType={investmentThemesByType}
                                             onThemesChange={onThemesChange}
                                             onResetFilters={onResetFilters}
+                                            projectCountsByType={projectCountsByType}
+                                            projectCountsByTheme={projectCountsByTheme}
+                                            filterDescription={getFilterDescription()}
+                                            className="-mb-6 sm:-mb-7"
                                         />
-                                        <p className="text-xs sm:text-sm text-slate-600 mt-5 -mb-6 sm:mt-2 sm:-mb-7">
-                                            {getFilterDescription()}
-                                        </p>
                                     </CardContent>
 
                                     {/* Tabs for Table and Network View */}
@@ -1325,6 +1432,7 @@ const CrisisDataDashboard = ({
                                                 <div className="w-full" style={{ height: '600px' }}>
                                                     <NetworkGraph
                                                         organizationsWithProjects={organizationsWithProjects}
+                                                        allOrganizations={allOrganizations}
                                                         onOpenOrganizationModal={onOpenOrganizationModal}
                                                         onOpenProjectModal={onOpenProjectModal}
                                                         selectedOrgKey={selectedOrgKey}
@@ -1341,8 +1449,10 @@ const CrisisDataDashboard = ({
                                                         onTypesChange={onTypesChange}
                                                         investmentThemes={investmentThemes}
                                                         allKnownInvestmentThemes={allKnownInvestmentThemes}
+                                                        investmentThemesByType={investmentThemesByType}
                                                         onThemesChange={onThemesChange}
                                                         onResetFilters={onResetFilters}
+                                                        filterDescription={getFilterDescription()}
                                                     />
                                                 </div>
                                             </TabsContent>
