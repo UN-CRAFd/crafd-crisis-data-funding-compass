@@ -1358,7 +1358,7 @@ const CrisisDataDashboard = ({
                                                                             {org.projects.length > 0 ? (
                                                                                 isExpanded ?
                                                                                     `Showing ${org.projects.length} Asset${org.projects.length === 1 ? '' : 's'}` :
-                                                                                    `Expand to see ${org.projects.length} Asset${org.projects.length === 1 ? '' : 's'}`
+                                                                                    `Show ${org.projects.length} Asset${org.projects.length === 1 ? '' : 's'}`
                                                                             ) : (
                                                                                 `${org.projects.length} Asset${org.projects.length === 1 ? '' : 's'}`
                                                                             )}
