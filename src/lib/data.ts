@@ -269,8 +269,7 @@ function applyFilters(
                     project.investmentThemes.some(theme =>
                         filters.investmentThemes!.some(filterTheme =>
                             typeof theme === 'string' &&
-                            (theme.toLowerCase().includes(filterTheme.toLowerCase()) ||
-                            filterTheme.toLowerCase().includes(theme.toLowerCase()))
+                            theme.toLowerCase().trim() === filterTheme.toLowerCase().trim()
                         )
                     );
                 if (!projectMatchesTheme) return false;
@@ -305,8 +304,7 @@ function applyFilters(
                             project.investmentThemes.some(theme =>
                                 filters.investmentThemes!.some(filterTheme =>
                                     typeof theme === 'string' &&
-                                    (theme.toLowerCase().includes(filterTheme.toLowerCase()) ||
-                                    filterTheme.toLowerCase().includes(theme.toLowerCase()))
+                                    theme.toLowerCase().trim() === filterTheme.toLowerCase().trim()
                                 )
                             );
                         if (!matchesTheme) return false;
@@ -332,8 +330,7 @@ function applyFilters(
                             project.investmentThemes.some(theme =>
                                 filters.investmentThemes!.some(filterTheme =>
                                     typeof theme === 'string' &&
-                                    (theme.toLowerCase().includes(filterTheme.toLowerCase()) ||
-                                    filterTheme.toLowerCase().includes(theme.toLowerCase()))
+                                    theme.toLowerCase().trim() === filterTheme.toLowerCase().trim()
                                 )
                             );
                         if (!matchesTheme) return false;
