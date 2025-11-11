@@ -267,6 +267,65 @@ const CrisisDataDashboardWrapper = ({ logoutButton }: { logoutButton?: React.Rea
         fetchData();
     }, [effectiveDonors, effectiveInvestmentTypes, effectiveInvestmentThemes, effectiveSearchQuery]); // Re-run when effective filters change
 
+    // Validate selected themes against available themes based on current filters
+    // Remove themes that no longer have matching projects
+    useEffect(() => {
+        if (!dashboardData?.allOrganizations || investmentThemes.length === 0 || !themesLoaded) {
+            return; // Nothing to validate
+        }
+
+        // Calculate which themes are available given current donors, types, and query
+        const availableThemes = new Set<string>();
+        const allOrgs = dashboardData.allOrganizations;
+
+        allOrgs.forEach(org => {
+            // Filter by donors
+            if (combinedDonors.length > 0) {
+                const hasMatchingDonor = org.donorCountries.some(country => 
+                    combinedDonors.includes(country)
+                );
+                if (!hasMatchingDonor) return;
+            }
+
+            org.projects.forEach(project => {
+                // Filter by search query
+                if (searchQuery) {
+                    const searchLower = searchQuery.toLowerCase();
+                    const matchesSearch = 
+                        project.projectName?.toLowerCase().includes(searchLower) ||
+                        project.description?.toLowerCase().includes(searchLower) ||
+                        org.organizationName?.toLowerCase().includes(searchLower);
+                    if (!matchesSearch) return;
+                }
+
+                // Filter by types
+                if (investmentTypes.length > 0) {
+                    const hasMatchingType = project.investmentTypes?.some(type =>
+                        investmentTypes.some(selectedType => 
+                            type.toLowerCase().trim() === selectedType.toLowerCase().trim()
+                        )
+                    );
+                    if (!hasMatchingType) return;
+                }
+
+                // This project matches all filters except themes - add its themes to available set
+                project.investmentThemes?.forEach(theme => {
+                    availableThemes.add(theme.toLowerCase().trim());
+                });
+            });
+        });
+
+        // Check if any selected themes are no longer available
+        const validThemes = investmentThemes.filter(theme => 
+            availableThemes.has(theme.toLowerCase().trim())
+        );
+
+        // If some themes were removed, update the URL
+        if (validThemes.length !== investmentThemes.length) {
+            updateURLParams({ themes: validThemes });
+        }
+    }, [dashboardData?.allOrganizations, combinedDonors, investmentTypes, searchQuery, investmentThemes, themesLoaded, updateURLParams]);
+
     // Handle reset filters
     const handleResetFilters = () => {
         setLocalSearchQuery(''); // Clear local search immediately
