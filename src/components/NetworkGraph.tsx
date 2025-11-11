@@ -12,6 +12,7 @@ import { getCountryFlagUrl } from './CountryFlag';
 
 interface NetworkGraphProps {
     organizationsWithProjects: OrganizationWithProjects[];
+    allOrganizations?: OrganizationWithProjects[]; // Unfiltered organizations for counting
     onOpenOrganizationModal: (orgKey: string) => void;
     onOpenProjectModal: (projectKey: string) => void;
     selectedOrgKey?: string;
@@ -29,8 +30,10 @@ interface NetworkGraphProps {
     onTypesChange?: (values: string[]) => void;
     investmentThemes?: string[];
     allKnownInvestmentThemes?: string[];
+    investmentThemesByType?: Record<string, string[]>;
     onThemesChange?: (values: string[]) => void;
     onResetFilters?: () => void;
+    filterDescription?: React.ReactNode;
 }
 
 interface GraphNode {
@@ -63,6 +66,7 @@ interface GraphData {
 
 const NetworkGraph: React.FC<NetworkGraphProps> = ({
     organizationsWithProjects,
+    allOrganizations,
     onOpenOrganizationModal,
     onOpenProjectModal,
     selectedOrgKey,
@@ -80,8 +84,10 @@ const NetworkGraph: React.FC<NetworkGraphProps> = ({
     onTypesChange = () => {},
     investmentThemes = [],
     allKnownInvestmentThemes = [],
+    investmentThemesByType = {},
     onThemesChange = () => {},
     onResetFilters = () => {},
+    filterDescription,
 }) => {
     const graphRef = useRef<any>(null);
     const [dimensions, setDimensions] = useState({ width: 800, height: 600 });
@@ -98,27 +104,145 @@ const NetworkGraph: React.FC<NetworkGraphProps> = ({
     const lastClusterStateRef = useRef<string>(''); // Track last clustering state to prevent unnecessary updates
     const [filterBarContainer, setFilterBarContainer] = useState<HTMLElement | null>(null);
     const lastFiltersRef = useRef<string>(''); // Track filter state to detect changes
+    const lastOrgCountRef = useRef<number>(0); // Track organization count to detect graph refresh
+    const [filterBarHeight, setFilterBarHeight] = useState<number>(0);
+    const filterBarRef = useRef<HTMLDivElement>(null);
     
     // Cache for country flag images
     const flagImageCache = useRef<Map<string, HTMLImageElement>>(new Map());
     const [, setFlagLoadCounter] = useState(0); // Counter to trigger re-render when flags load
 
-    // Turn off clustering when filters change
+    // Turn off clustering when filters change or graph refreshes
     useEffect(() => {
         const currentFilters = JSON.stringify({
             donors: combinedDonors,
             types: investmentTypes,
+            themes: investmentThemes,
             search: appliedSearchQuery
         });
         
-        // If filters have changed (and this isn't the initial mount)
-        if (lastFiltersRef.current && lastFiltersRef.current !== currentFilters) {
+        const currentOrgCount = organizationsWithProjects.length;
+        
+        // If filters have changed or organization count changed (graph refresh)
+        if (lastFiltersRef.current && 
+            (lastFiltersRef.current !== currentFilters || lastOrgCountRef.current !== currentOrgCount)) {
             setClusterByOrgType(false);
             setClusterByAssetType(false);
         }
         
         lastFiltersRef.current = currentFilters;
-    }, [combinedDonors, investmentTypes, appliedSearchQuery]);
+        lastOrgCountRef.current = currentOrgCount;
+    }, [combinedDonors, investmentTypes, investmentThemes, appliedSearchQuery, organizationsWithProjects]);
+
+    // Calculate project counts for each investment type based on current donors, query, and themes
+    // (but not filtered by types themselves)
+    const projectCountsByType = useMemo(() => {
+        const projectsByType: Record<string, Set<string>> = {};
+        const allOrgs = allOrganizations || organizationsWithProjects;
+        
+        allOrgs.forEach(org => {
+            // Filter by donors
+            if (combinedDonors.length > 0) {
+                const hasMatchingDonor = org.donorCountries.some(country => 
+                    combinedDonors.includes(country)
+                );
+                if (!hasMatchingDonor) return;
+            }
+            
+            org.projects.forEach(project => {
+                // Filter by search query
+                if (appliedSearchQuery) {
+                    const searchLower = appliedSearchQuery.toLowerCase();
+                    const matchesSearch = 
+                        project.projectName?.toLowerCase().includes(searchLower) ||
+                        project.description?.toLowerCase().includes(searchLower) ||
+                        org.organizationName?.toLowerCase().includes(searchLower);
+                    if (!matchesSearch) return;
+                }
+                
+                // Filter by themes
+                if (investmentThemes.length > 0) {
+                    const hasMatchingTheme = project.investmentThemes?.some(theme =>
+                        investmentThemes.some(selectedTheme => 
+                            theme.toLowerCase().trim() === selectedTheme.toLowerCase().trim()
+                        )
+                    );
+                    if (!hasMatchingTheme) return;
+                }
+                
+                // Count this project for each of its types
+                project.investmentTypes?.forEach(type => {
+                    const normalizedType = type.toLowerCase().trim();
+                    if (!projectsByType[normalizedType]) {
+                        projectsByType[normalizedType] = new Set();
+                    }
+                    projectsByType[normalizedType].add(project.id);
+                });
+            });
+        });
+        
+        // Convert Sets to counts
+        const counts: Record<string, number> = {};
+        Object.keys(projectsByType).forEach(type => {
+            counts[type] = projectsByType[type].size;
+        });
+        return counts;
+    }, [allOrganizations, organizationsWithProjects, combinedDonors, appliedSearchQuery, investmentThemes]);
+
+    // Calculate project counts for each theme based on current donors, query, and types
+    // (but not filtered by themes themselves)
+    const projectCountsByTheme = useMemo(() => {
+        const projectsByTheme: Record<string, Set<string>> = {};
+        const allOrgs = allOrganizations || organizationsWithProjects;
+        
+        allOrgs.forEach(org => {
+            // Filter by donors
+            if (combinedDonors.length > 0) {
+                const hasMatchingDonor = org.donorCountries.some(country => 
+                    combinedDonors.includes(country)
+                );
+                if (!hasMatchingDonor) return;
+            }
+            
+            org.projects.forEach(project => {
+                // Filter by search query
+                if (appliedSearchQuery) {
+                    const searchLower = appliedSearchQuery.toLowerCase();
+                    const matchesSearch = 
+                        project.projectName?.toLowerCase().includes(searchLower) ||
+                        project.description?.toLowerCase().includes(searchLower) ||
+                        org.organizationName?.toLowerCase().includes(searchLower);
+                    if (!matchesSearch) return;
+                }
+                
+                // Filter by types
+                if (investmentTypes.length > 0) {
+                    const hasMatchingType = project.investmentTypes?.some(type =>
+                        investmentTypes.some(selectedType => 
+                            type.toLowerCase().trim() === selectedType.toLowerCase().trim()
+                        )
+                    );
+                    if (!hasMatchingType) return;
+                }
+                
+                // Count this project for each of its themes
+                project.investmentThemes?.forEach(theme => {
+                    const normalizedTheme = theme.toLowerCase().trim();
+                    if (!projectsByTheme[normalizedTheme]) {
+                        projectsByTheme[normalizedTheme] = new Set();
+                    }
+                    projectsByTheme[normalizedTheme].add(project.id);
+                });
+            });
+        });
+        
+        // Convert Sets to counts
+        const counts: Record<string, number> = {};
+        Object.keys(projectsByTheme).forEach(theme => {
+            counts[theme] = projectsByTheme[theme].size;
+        });
+        return counts;
+    }, [allOrganizations, organizationsWithProjects, combinedDonors, appliedSearchQuery, investmentTypes]);
 
     // Handle fullscreen toggle
     const toggleFullscreen = useCallback(() => {
@@ -156,6 +280,29 @@ const NetworkGraph: React.FC<NetworkGraphProps> = ({
         document.addEventListener('fullscreenchange', handleFullscreenChange);
         return () => document.removeEventListener('fullscreenchange', handleFullscreenChange);
     }, []);
+
+    // Measure FilterBar height in fullscreen mode
+    useEffect(() => {
+        if (isFullscreen && filterBarRef.current) {
+            const updateHeight = () => {
+                if (filterBarRef.current) {
+                    const height = filterBarRef.current.offsetHeight;
+                    setFilterBarHeight(height);
+                }
+            };
+
+            // Initial measurement
+            updateHeight();
+
+            // Use ResizeObserver to track height changes
+            const resizeObserver = new ResizeObserver(updateHeight);
+            resizeObserver.observe(filterBarRef.current);
+
+            return () => resizeObserver.disconnect();
+        } else {
+            setFilterBarHeight(0);
+        }
+    }, [isFullscreen, filterBarContainer, combinedDonors, investmentTypes, investmentThemes, appliedSearchQuery]);
 
     // Update dimensions on resize
     useEffect(() => {
@@ -341,8 +488,9 @@ const NetworkGraph: React.FC<NetworkGraphProps> = ({
         // Set link strength for more stable connections
         fg.d3Force('link').strength(0.5);
 
-        // Weaker centering force for less aggressive pulling
-        fg.d3Force('center').strength(0.02);
+        // Set the center force to the actual center of the canvas (not 0,0)
+        // This prevents nodes from being pulled toward the top-left corner
+        fg.d3Force('center').x(dimensions.width / 2).y(dimensions.height / 2).strength(0.02);
 
         // Enhanced collision force with more iterations for smoother collision avoidance
         fg.d3Force('collision', forceCollide((node: any) => {
@@ -358,7 +506,7 @@ const NetworkGraph: React.FC<NetworkGraphProps> = ({
         if (process.env.NODE_ENV === 'development') {
             console.log(`[NetworkGraph] Force simulation configured in ${(endTime - startTime).toFixed(2)}ms`);
         }
-    }, []); // Only run once on mount, not on every graphData change
+    }, [dimensions]); // Re-run when dimensions change to update center position
 
     // Apply clustering with smooth transitions and collision avoidance
     useEffect(() => {
@@ -398,6 +546,10 @@ const NetworkGraph: React.FC<NetworkGraphProps> = ({
             // Make clusters much more spread out
             const clusterRadius = Math.min(dimensions.width, dimensions.height) * 0.45;
             
+            // Calculate the center of the canvas
+            const centerX = dimensions.width / 2;
+            const centerY = dimensions.height / 2;
+            
             // Collect unique cluster keys
             const clusterKeys = new Set<string>();
             const clusterNodeCounts = new Map<string, number>();
@@ -423,21 +575,22 @@ const NetworkGraph: React.FC<NetworkGraphProps> = ({
             
             clusterArray.forEach((key, i) => {
                 // Arrange clusters in a grid or circular pattern with large spacing
+                // All positions are offset from the canvas center, not (0,0)
                 if (numClusters <= 4) {
-                    // Use corners for up to 4 clusters
+                    // Use corners for up to 4 clusters, offset from center
                     const positions = [
-                        { x: -clusterRadius, y: -clusterRadius },
-                        { x: clusterRadius, y: -clusterRadius },
-                        { x: -clusterRadius, y: clusterRadius },
-                        { x: clusterRadius, y: clusterRadius }
+                        { x: centerX - clusterRadius, y: centerY - clusterRadius },
+                        { x: centerX + clusterRadius, y: centerY - clusterRadius },
+                        { x: centerX - clusterRadius, y: centerY + clusterRadius },
+                        { x: centerX + clusterRadius, y: centerY + clusterRadius }
                     ];
                     clusterCenters.set(key, positions[i]);
                 } else {
-                    // Use circle arrangement for more clusters
+                    // Use circle arrangement for more clusters, offset from center
                     const angle = (i / numClusters) * 2 * Math.PI;
                     clusterCenters.set(key, {
-                        x: Math.cos(angle) * clusterRadius,
-                        y: Math.sin(angle) * clusterRadius
+                        x: centerX + Math.cos(angle) * clusterRadius,
+                        y: centerY + Math.sin(angle) * clusterRadius
                     });
                 }
             });
@@ -503,7 +656,8 @@ const NetworkGraph: React.FC<NetworkGraphProps> = ({
         } else {
             // Restore calmer default forces when clustering is off
             fg.d3Force('charge').strength(-400);
-            fg.d3Force('center').strength(0.02);
+            // Restore center force with proper canvas center coordinates
+            fg.d3Force('center').x(dimensions.width / 2).y(dimensions.height / 2).strength(0.02);
             fg.d3Force('link').strength(0.5); // Restore link strength
             
             // Restore normal collision force
@@ -821,8 +975,38 @@ const NetworkGraph: React.FC<NetworkGraphProps> = ({
     return (
         <>
             <div ref={containerRef} className="w-full h-full bg-white rounded-lg border border-slate-200 overflow-hidden relative">
+                {/* Graph Controls - Top Right */}
+                <div 
+                    className="absolute right-4 z-10 transition-all duration-200"
+                    style={{ top: isFullscreen ? `${filterBarHeight + 30}px` : '16px' }}
+                >
+                    <div className="bg-white backdrop-blur-lg rounded-lg border border-slate-200 shadow-sm p-1.5 flex gap-1">
+                        <button
+                            onClick={centerView}
+                            className="p-1.5 hover:bg-slate-200/50 rounded transition-colors"
+                            title="Center view"
+                        >
+                            <Crosshair className="w-4 h-4 text-slate-600" />
+                        </button>
+                        <button
+                            onClick={toggleFullscreen}
+                            className="p-1.5 hover:bg-slate-200/50 rounded transition-colors"
+                            title={isFullscreen ? 'Exit fullscreen' : 'Enter fullscreen'}
+                        >
+                            {isFullscreen ? (
+                                <Minimize className="w-4 h-4 text-slate-600" />
+                            ) : (
+                                <Maximize className="w-4 h-4 text-slate-600" />
+                            )}
+                        </button>
+                    </div>
+                </div>
+
                 {/* Legend and Clustering Controls - Collapsible */}
-                <div className={`absolute ${isFullscreen ? 'top-24' : 'top-4'} left-4 z-10`}>
+                <div 
+                    className="absolute left-4 z-10 transition-all duration-200"
+                    style={{ top: isFullscreen ? `${filterBarHeight + 30}px` : '16px' }}
+                >
                     {legendCollapsed ? (
                         <button
                             onClick={() => setLegendCollapsed(false)}
@@ -839,35 +1023,15 @@ const NetworkGraph: React.FC<NetworkGraphProps> = ({
                             <div className="p-2.5 border-b border-slate-200">
                                 <div className="flex items-center justify-between mb-2">
                                     <div className="text-xs font-semibold text-slate-800/90">Legend</div>
-                                    <div className="flex gap-1 items-center">
-                                        <button
-                                            onClick={centerView}
-                                            className="p-1 hover:bg-slate-200/50 rounded transition-colors"
-                                            title="Center view"
-                                        >
-                                            <Crosshair className="w-3.5 h-3.5 text-slate-600" />
-                                        </button>
-                                        <button
-                                            onClick={toggleFullscreen}
-                                            className="p-1 hover:bg-slate-200/50 rounded transition-colors"
-                                            title={isFullscreen ? 'Exit fullscreen' : 'Enter fullscreen'}
-                                        >
-                                            {isFullscreen ? (
-                                                <Minimize className="w-3.5 h-3.5 text-slate-600" />
-                                            ) : (
-                                                <Maximize className="w-3.5 h-3.5 text-slate-600" />
-                                            )}
-                                        </button>
-                                        <button
-                                            onClick={() => setLegendCollapsed(true)}
-                                            className="p-1 hover:bg-slate-200/50 rounded transition-colors"
-                                            title="Hide legend"
-                                        >
-                                            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" className="text-slate-600">
-                                                <path d="M15 18l-6-6 6-6" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-                                            </svg>
-                                        </button>
-                                    </div>
+                                    <button
+                                        onClick={() => setLegendCollapsed(true)}
+                                        className="p-1 hover:bg-slate-200/50 rounded transition-colors"
+                                        title="Hide legend"
+                                    >
+                                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" className="text-slate-600">
+                                            <path d="M15 18l-6-6 6-6" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                                        </svg>
+                                    </button>
                                 </div>
                                 <div className="space-y-1.5">
                                     {combinedDonors && combinedDonors.length > 0 && (
@@ -1062,7 +1226,7 @@ const NetworkGraph: React.FC<NetworkGraphProps> = ({
         
         {/* Filter Bar Portal - render outside overflow-hidden container when in fullscreen */}
         {isFullscreen && filterBarContainer && createPortal(
-            <div className="fixed top-4 left-4 right-4 z-[9900] bg-white backdrop-blur-lg p-4 rounded-lg border border-slate-200 shadow-lg">
+            <div ref={filterBarRef} className="fixed top-4 left-4 right-4 z-[2000] bg-white backdrop-blur-lg p-4 rounded-lg border border-slate-200 shadow-lg">
                 <FilterBar
                     searchQuery={searchQuery}
                     appliedSearchQuery={appliedSearchQuery}
@@ -1076,8 +1240,12 @@ const NetworkGraph: React.FC<NetworkGraphProps> = ({
                     onTypesChange={onTypesChange}
                     investmentThemes={investmentThemes}
                     allKnownInvestmentThemes={allKnownInvestmentThemes}
+                    investmentThemesByType={investmentThemesByType}
                     onThemesChange={onThemesChange}
                     onResetFilters={onResetFilters}
+                    projectCountsByType={projectCountsByType}
+                    projectCountsByTheme={projectCountsByTheme}
+                    filterDescription={filterDescription}
                     portalContainer={filterBarContainer}
                     isFullscreen={true}
                 />

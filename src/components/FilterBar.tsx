@@ -13,7 +13,7 @@ import {
 import { Input } from '@/components/ui/input';
 import labels from '@/config/labels.json';
 import { getIconForInvestmentType } from '@/config/investmentTypeIcons';
-import { ChevronDown, DatabaseBackup, Filter, Globe, RotateCcw, Search } from 'lucide-react';
+import { ChevronDown, DatabaseBackup, DatabaseZap, Filter, Globe, RotateCcw, Search } from 'lucide-react';
 
 interface FilterBarProps {
     // Search
@@ -35,10 +35,18 @@ interface FilterBarProps {
     // Investment Themes
     investmentThemes: string[];
     allKnownInvestmentThemes: string[];
+    investmentThemesByType?: Record<string, string[]>;
     onThemesChange: (values: string[]) => void;
+
+    // Project counts
+    projectCountsByType?: Record<string, number>;
+    projectCountsByTheme?: Record<string, number>;
 
     // Reset
     onResetFilters: () => void;
+
+    // Filter description
+    filterDescription?: React.ReactNode;
 
     // Optional styling
     className?: string;
@@ -63,8 +71,12 @@ const FilterBar: React.FC<FilterBarProps> = ({
     onTypesChange,
     investmentThemes,
     allKnownInvestmentThemes,
+    investmentThemesByType = {},
     onThemesChange,
+    projectCountsByType = {},
+    projectCountsByTheme = {},
     onResetFilters,
+    filterDescription,
     className = '',
     portalContainer = null,
     isFullscreen = false,
@@ -78,10 +90,10 @@ const FilterBar: React.FC<FilterBarProps> = ({
     return (
         <div className={`flex flex-col gap-3 ${className}`}>
             {/* First Row: Search and Donors (equal width) */}
-            <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-3">
+            <div className="flex flex-col sm:flex-row gap-3">
                 {/* Modern Search Bar */}
-                <div className="relative flex-1">
-                    <Search className="absolute left-3 top-1/2 -translate-y-1/2 h-4 w-4 text-slate-400" />
+                <div className="relative flex-1 min-w-0">
+                    <Search className="absolute left-3 top-1/2 -translate-y-1/2 h-4 w-4 text-slate-400 pointer-events-none" />
                     <Input
                         id="search"
                         type="text"
@@ -93,16 +105,17 @@ const FilterBar: React.FC<FilterBarProps> = ({
                                 onSearchSubmit();
                             }
                         }}
-                        className="h-10 pl-10 pr-4 bg-slate-50/50 border-slate-200 focus:bg-white focus:border-[var(--brand-primary)] focus:ring-2 focus:ring-[var(--brand-primary)]/20 transition-all"
+                        className="w-full h-10 pl-10 pr-4 bg-slate-50/50 border-slate-200 hover:bg-white hover:border-slate-300 focus:bg-white focus:border-[var(--brand-primary)] focus:ring-2 focus:ring-[var(--brand-primary)]/20 transition-all font-normal"
                     />
                 </div>
 
                 {/* Donor Countries Multi-Select */}
+                <div className="flex-1 min-w-0">
                 <DropdownMenu onOpenChange={(open) => setDonorsMenuOpen(open)}>
                     <DropdownMenuTrigger asChild>
                         <Button
                             variant="outline"
-                            className={`h-10 justify-between font-medium transition-all flex-1 ${
+                            className={`w-full h-10 justify-between font-medium transition-all ${
                                 combinedDonors.length > 0
                                     ? 'border-[var(--brand-primary)] bg-[var(--brand-bg-lighter)] text-[var(--brand-primary)] hover:bg-[var(--brand-bg-light)]'
                                     : 'bg-slate-50/50 border-slate-200 hover:bg-white hover:border-slate-300'
@@ -180,16 +193,18 @@ const FilterBar: React.FC<FilterBarProps> = ({
                         </div>
                     </DropdownMenuContent>
                 </DropdownMenu>
+                </div>
             </div>
 
-            {/* Second Row: Investment Types, Themes, and Reset (equal width) */}
+            {/* Second Row: Investment Types and Themes (equal width) */}
             <div className="flex flex-col sm:flex-row gap-3">
                 {/* Investment Types Multi-Select */}
+                <div className="flex-1 min-w-0">
                 <DropdownMenu onOpenChange={(open) => setTypesMenuOpen(open)}>
                     <DropdownMenuTrigger asChild>
                         <Button
                             variant="outline"
-                            className={`h-10 justify-between font-medium transition-all flex-1 ${
+                            className={`w-full h-10 justify-between font-medium transition-all ${
                                 investmentTypes.length > 0
                                     ? 'border-[var(--brand-primary)] bg-[var(--brand-bg-lighter)] text-[var(--brand-primary)] hover:bg-[var(--brand-bg-light)]'
                                     : 'bg-slate-50/50 border-slate-200 hover:bg-white hover:border-slate-300'
@@ -230,7 +245,7 @@ const FilterBar: React.FC<FilterBarProps> = ({
                         align="start"
                         side="bottom"
                         sideOffset={4}
-                        className="w-64 max-h-[300px] overflow-y-auto bg-white border border-slate-200 shadow-lg"
+                        className="w-[var(--radix-dropdown-menu-trigger-width)] max-h-[300px] overflow-y-auto bg-white border border-slate-200 shadow-lg"
                         onCloseAutoFocus={(e) => e.preventDefault()}
                         container={portalContainer}
                     >
@@ -260,6 +275,8 @@ const FilterBar: React.FC<FilterBarProps> = ({
                                 (selected) => selected.toLowerCase().trim() === type.toLowerCase().trim()
                             );
 
+                            const projectCount = projectCountsByType[type.toLowerCase().trim()] || 0;
+
                             return (
                                 <DropdownMenuCheckboxItem
                                     key={type}
@@ -283,32 +300,35 @@ const FilterBar: React.FC<FilterBarProps> = ({
                                     onSelect={(e) => e.preventDefault()}
                                     className="cursor-pointer"
                                 >
-                                    <div className="flex items-center gap-2">
+                                    <div className="flex items-center gap-2 flex-1">
                                         <IconComponent className="w-4 h-4" />
-                                        <span>{displayName}</span>
+                                        <span className="flex-1">{displayName}</span>
+                                        <span className="text-xs text-slate-400 ml-auto">({projectCount})</span>
                                     </div>
                                 </DropdownMenuCheckboxItem>
                             );
                         })}
                     </DropdownMenuContent>
                 </DropdownMenu>
+                </div>
 
                 {/* Investment Themes Multi-Select */}
+                <div className="flex-1 min-w-0">
                 <DropdownMenu onOpenChange={(open) => setThemesMenuOpen(open)}>
                     <DropdownMenuTrigger asChild>
                         <Button
                             variant="outline"
-                            className={`h-10 justify-between font-medium transition-all flex-1 ${
+                            className={`w-full h-10 justify-between font-medium transition-all ${
                                 investmentThemes.length > 0
                                     ? 'border-[var(--brand-primary)] bg-[var(--brand-bg-lighter)] text-[var(--brand-primary)] hover:bg-[var(--brand-bg-light)]'
                                     : 'bg-slate-50/50 border-slate-200 hover:bg-white hover:border-slate-300'
                             }`}
                         >
                             <div className="flex items-center gap-2 min-w-0 flex-1">
-                                <DatabaseBackup className="h-4 w-4 shrink-0" />
+                                <DatabaseZap className="h-4 w-4 shrink-0" />
                                 <span className="truncate">
                                     {investmentThemes.length === 0
-                                        ? 'Investment Themes'
+                                        ? labels.filters.themePlaceholder
                                         : investmentThemes.length === 1
                                         ? investmentThemes[0]
                                         : `${investmentThemes.length} themes`}
@@ -325,7 +345,7 @@ const FilterBar: React.FC<FilterBarProps> = ({
                         align="start"
                         side="bottom"
                         sideOffset={4}
-                        className="w-64 max-h-[300px] overflow-y-auto bg-white border border-slate-200 shadow-lg"
+                        className="w-[var(--radix-dropdown-menu-trigger-width)] max-h-[300px] overflow-y-auto bg-white border border-slate-200 shadow-lg"
                         onCloseAutoFocus={(e) => e.preventDefault()}
                         container={portalContainer}
                     >
@@ -354,60 +374,163 @@ const FilterBar: React.FC<FilterBarProps> = ({
                         )}
 
                         <div className="max-h-[200px] overflow-y-auto">
-                        {allKnownInvestmentThemes
-                            .filter((theme) => theme.toLowerCase().includes(themeSearchQuery.toLowerCase()))
-                            .map((theme) => {
-                            const isChecked = investmentThemes.some(
-                                (selected) => selected.toLowerCase().trim() === theme.toLowerCase().trim()
-                            );
-
-                            return (
-                                <DropdownMenuCheckboxItem
-                                    key={theme}
-                                    checked={isChecked}
-                                    onCheckedChange={(checked) => {
-                                        if (checked) {
-                                            const alreadyExists = investmentThemes.some(
-                                                (t) => t.toLowerCase().trim() === theme.toLowerCase().trim()
-                                            );
-                                            if (!alreadyExists) {
-                                                onThemesChange([...investmentThemes, theme]);
+                        {Object.keys(investmentThemesByType).length > 0 ? (
+                            // Build a map of all themes with counts and their investment type categories
+                            (() => {
+                                const themesByCategory: Record<string, string[]> = {};
+                                
+                                // For each theme that has a count, find which category it belongs to
+                                Object.keys(projectCountsByTheme).forEach(themeKey => {
+                                    const count = projectCountsByTheme[themeKey];
+                                    if (count > 0) {
+                                        // Find the original case-sensitive theme name
+                                        const originalTheme = allKnownInvestmentThemes.find(
+                                            t => t.toLowerCase().trim() === themeKey.toLowerCase().trim()
+                                        );
+                                        if (originalTheme) {
+                                            // Find which investment type category this theme belongs to
+                                            for (const [investmentType, themes] of Object.entries(investmentThemesByType)) {
+                                                if (themes.some(t => t.toLowerCase().trim() === themeKey)) {
+                                                    if (!themesByCategory[investmentType]) {
+                                                        themesByCategory[investmentType] = [];
+                                                    }
+                                                    themesByCategory[investmentType].push(originalTheme);
+                                                    break;
+                                                }
                                             }
-                                        } else {
-                                            onThemesChange(
-                                                investmentThemes.filter(
-                                                    (t) => t.toLowerCase().trim() !== theme.toLowerCase().trim()
-                                                )
-                                            );
                                         }
-                                    }}
-                                    onSelect={(e) => e.preventDefault()}
-                                    className="cursor-pointer"
-                                >
-                                    {theme}
-                                </DropdownMenuCheckboxItem>
-                            );
-                        })}
+                                    }
+                                });
+                                
+                                // Render grouped themes
+                                return Object.entries(themesByCategory)
+                                    .sort(([typeA], [typeB]) => typeA.localeCompare(typeB))
+                                    .map(([investmentType, themes]) => {
+                                        // Filter themes based on search query
+                                        const filteredThemes = themes.filter((theme) =>
+                                            theme.toLowerCase().includes(themeSearchQuery.toLowerCase())
+                                        );
+
+                                        if (filteredThemes.length === 0) return null;
+
+                                        const IconComponent = getIconForInvestmentType(investmentType);
+                                    
+                                    return (
+                                        <div key={investmentType}>
+                                            {/* Category Header */}
+                                                <div className="px-2 py-1.5 text-xs font-semibold text-slate-600 bg-slate-100 border-b border-slate-200 sticky top-0 z-10 flex items-center gap-1.5">
+                                                <IconComponent className="h-3 w-3" />
+                                                {investmentType}
+                                            </div>
+                                            {/* Themes under this category */}
+                                            {filteredThemes.map((theme) => {
+                                                const isChecked = investmentThemes.some(
+                                                    (selected) => selected.toLowerCase().trim() === theme.toLowerCase().trim()
+                                                );
+
+                                                const projectCount = projectCountsByTheme[theme.toLowerCase().trim()] || 0;
+
+                                                return (
+                                                    <DropdownMenuCheckboxItem
+                                                        key={theme}
+                                                        checked={isChecked}
+                                                        onCheckedChange={(checked) => {
+                                                            if (checked) {
+                                                                const alreadyExists = investmentThemes.some(
+                                                                    (t) => t.toLowerCase().trim() === theme.toLowerCase().trim()
+                                                                );
+                                                                if (!alreadyExists) {
+                                                                    onThemesChange([...investmentThemes, theme]);
+                                                                }
+                                                            } else {
+                                                                onThemesChange(
+                                                                    investmentThemes.filter(
+                                                                        (t) => t.toLowerCase().trim() !== theme.toLowerCase().trim()
+                                                                    )
+                                                                );
+                                                            }
+                                                        }}
+                                                        onSelect={(e) => e.preventDefault()}
+                                                        className="cursor-pointer pl-6 py-1"
+                                                    >
+                                                        <div className="flex items-center gap-2 flex-1 w-full">
+                                                            <span className="flex-1">{theme}</span>
+                                                            <span className="text-xs text-slate-400 ml-auto">({projectCount})</span>
+                                                        </div>
+                                                    </DropdownMenuCheckboxItem>
+                                                );
+                                            })}
+                                        </div>
+                                    );
+                                    });
+                            })()
+                        ) : (
+                            // Fallback to flat list if grouped data not available
+                            allKnownInvestmentThemes
+                                .filter((theme) => theme.toLowerCase().includes(themeSearchQuery.toLowerCase()))
+                                .map((theme) => {
+                                    const isChecked = investmentThemes.some(
+                                        (selected) => selected.toLowerCase().trim() === theme.toLowerCase().trim()
+                                    );
+
+                                    const projectCount = projectCountsByTheme[theme.toLowerCase().trim()] || 0;
+
+                                    return (
+                                        <DropdownMenuCheckboxItem
+                                            key={theme}
+                                            checked={isChecked}
+                                            onCheckedChange={(checked) => {
+                                                if (checked) {
+                                                    const alreadyExists = investmentThemes.some(
+                                                        (t) => t.toLowerCase().trim() === theme.toLowerCase().trim()
+                                                    );
+                                                    if (!alreadyExists) {
+                                                        onThemesChange([...investmentThemes, theme]);
+                                                    }
+                                                } else {
+                                                    onThemesChange(
+                                                        investmentThemes.filter(
+                                                            (t) => t.toLowerCase().trim() !== theme.toLowerCase().trim()
+                                                        )
+                                                    );
+                                                }
+                                            }}
+                                            onSelect={(e) => e.preventDefault()}
+                                            className="cursor-pointer py-1"
+                                        >
+                                            <div className="flex items-center gap-2 flex-1 w-full">
+                                                <span className="flex-1">{theme}</span>
+                                                <span className="text-xs text-slate-500 ml-auto">({projectCount})</span>
+                                            </div>
+                                        </DropdownMenuCheckboxItem>
+                                    );
+                                })
+                        )}
                         </div>
                     </DropdownMenuContent>
                 </DropdownMenu>
-
-                {/* Reset Filters Button */}
-                <Button
-                    variant="outline"
-                    onClick={onResetFilters}
-                    disabled={!(combinedDonors.length > 0 || investmentTypes.length > 0 || investmentThemes.length > 0 || appliedSearchQuery)}
-                    className={`h-10 flex-1 px-4 font-medium transition-all ${
-                        combinedDonors.length > 0 || investmentTypes.length > 0 || investmentThemes.length > 0 || appliedSearchQuery
-                            ? 'border-slate-300 bg-slate-100 text-slate-700 hover:bg-slate-200 hover:border-slate-300'
-                            : 'bg-slate-50/50 border-slate-200 text-slate-400 hover:bg-slate-100 hover:border-slate-300'
-                    }`}
-                    title={labels.ui.resetFilters}
-                >
-                    <RotateCcw className="w-4 h-4" />
-                    <span className="ml-2">Reset</span>
-                </Button>
+                </div>
             </div>
+
+            {/* Filter Description and Reset Button */}
+            {filterDescription && (
+                <div className="flex items-center justify-between mt-2">
+                    <p className="text-xs sm:text-sm text-slate-600">
+                        {filterDescription}
+                    </p>
+                    {(combinedDonors.length > 0 || investmentTypes.length > 0 || investmentThemes.length > 0 || appliedSearchQuery) && (
+                        <Button
+                            variant="outline"
+                            size="sm"
+                            onClick={onResetFilters}
+                            className="h-7 px-3 text-xs border-slate-300 bg-slate-100 text-slate-700 hover:bg-slate-200 hover:border-slate-300"
+                        >
+                            <RotateCcw className="w-3 h-3 mr-1.5" />
+                            Reset
+                        </Button>
+                    )}
+                </div>
+            )}
         </div>
     );
 };
