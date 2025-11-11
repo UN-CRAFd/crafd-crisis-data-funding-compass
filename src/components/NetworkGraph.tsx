@@ -33,6 +33,7 @@ interface NetworkGraphProps {
     investmentThemesByType?: Record<string, string[]>;
     onThemesChange?: (values: string[]) => void;
     onResetFilters?: () => void;
+    filterDescription?: React.ReactNode;
 }
 
 interface GraphNode {
@@ -86,6 +87,7 @@ const NetworkGraph: React.FC<NetworkGraphProps> = ({
     investmentThemesByType = {},
     onThemesChange = () => {},
     onResetFilters = () => {},
+    filterDescription,
 }) => {
     const graphRef = useRef<any>(null);
     const [dimensions, setDimensions] = useState({ width: 800, height: 600 });
@@ -1212,6 +1214,7 @@ const NetworkGraph: React.FC<NetworkGraphProps> = ({
                     onResetFilters={onResetFilters}
                     projectCountsByType={projectCountsByType}
                     projectCountsByTheme={projectCountsByTheme}
+                    filterDescription={filterDescription}
                     portalContainer={filterBarContainer}
                     isFullscreen={true}
                 />
