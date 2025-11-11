@@ -145,6 +145,7 @@ function generateReadme(
         searchQuery?: string;
         donorCountries?: string[];
         investmentTypes?: string[];
+        investmentThemes?: string[];
         totalOrganizations: number;
         totalProjects: number;
     }
@@ -184,7 +185,8 @@ function generateReadme(
     
     const hasFilters = filterInfo.searchQuery || 
                       (filterInfo.donorCountries && filterInfo.donorCountries.length > 0) || 
-                      (filterInfo.investmentTypes && filterInfo.investmentTypes.length > 0);
+                      (filterInfo.investmentTypes && filterInfo.investmentTypes.length > 0) ||
+                      (filterInfo.investmentThemes && filterInfo.investmentThemes.length > 0);
     
     if (hasFilters) {
         readme += `This export represents a filtered view of the data with the following criteria:\n\n`;
@@ -195,6 +197,10 @@ function generateReadme(
         
         if (filterInfo.investmentTypes && filterInfo.investmentTypes.length > 0) {
             readme += `Investment Types: ${filterInfo.investmentTypes.join(', ')}\n`;
+        }
+        
+        if (filterInfo.investmentThemes && filterInfo.investmentThemes.length > 0) {
+            readme += `Investment Themes: ${filterInfo.investmentThemes.join(', ')}\n`;
         }
         
         if (filterInfo.searchQuery) {
@@ -234,6 +240,7 @@ export async function exportViewAsCSV(
         searchQuery?: string;
         donorCountries?: string[];
         investmentTypes?: string[];
+        investmentThemes?: string[];
     }
 ): Promise<void> {
     try {
@@ -310,6 +317,7 @@ export async function exportViewAsXLSX(
         searchQuery?: string;
         donorCountries?: string[];
         investmentTypes?: string[];
+        investmentThemes?: string[];
     }
 ): Promise<void> {
     try {
@@ -402,7 +410,8 @@ export async function exportViewAsXLSX(
         
         const hasFilters = filterInfo?.searchQuery || 
                           (filterInfo?.donorCountries && filterInfo.donorCountries.length > 0) || 
-                          (filterInfo?.investmentTypes && filterInfo.investmentTypes.length > 0);
+                          (filterInfo?.investmentTypes && filterInfo.investmentTypes.length > 0) ||
+                          (filterInfo?.investmentThemes && filterInfo.investmentThemes.length > 0);
         
         if (hasFilters) {
             const filtersRow = readmeSheet.getRow(rowIndex++);
@@ -423,6 +432,14 @@ export async function exportViewAsXLSX(
                 const row = readmeSheet.getRow(rowIndex++);
                 row.getCell(1).value = 'Investment Types:';
                 row.getCell(2).value = filterInfo.investmentTypes.join(', ');
+                row.getCell(1).font = { name: 'Roboto', size: 11 };
+                row.getCell(2).font = { name: 'Roboto', size: 11 };
+            }
+            
+            if (filterInfo?.investmentThemes && filterInfo.investmentThemes.length > 0) {
+                const row = readmeSheet.getRow(rowIndex++);
+                row.getCell(1).value = 'Investment Themes:';
+                row.getCell(2).value = filterInfo.investmentThemes.join(', ');
                 row.getCell(1).font = { name: 'Roboto', size: 11 };
                 row.getCell(2).font = { name: 'Roboto', size: 11 };
             }
