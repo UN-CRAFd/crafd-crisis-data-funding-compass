@@ -45,6 +45,9 @@ interface FilterBarProps {
     // Reset
     onResetFilters: () => void;
 
+    // Filter description
+    filterDescription?: React.ReactNode;
+
     // Optional styling
     className?: string;
     
@@ -73,6 +76,7 @@ const FilterBar: React.FC<FilterBarProps> = ({
     projectCountsByType = {},
     projectCountsByTheme = {},
     onResetFilters,
+    filterDescription,
     className = '',
     portalContainer = null,
     isFullscreen = false,
@@ -507,6 +511,26 @@ const FilterBar: React.FC<FilterBarProps> = ({
                 </DropdownMenu>
                 </div>
             </div>
+
+            {/* Filter Description and Reset Button */}
+            {filterDescription && (
+                <div className="flex items-center justify-between mt-2">
+                    <p className="text-xs sm:text-sm text-slate-600">
+                        {filterDescription}
+                    </p>
+                    {(combinedDonors.length > 0 || investmentTypes.length > 0 || investmentThemes.length > 0 || appliedSearchQuery) && (
+                        <Button
+                            variant="outline"
+                            size="sm"
+                            onClick={onResetFilters}
+                            className="h-7 px-3 text-xs border-slate-300 bg-slate-100 text-slate-700 hover:bg-slate-200 hover:border-slate-300"
+                        >
+                            <RotateCcw className="w-3 h-3 mr-1.5" />
+                            Reset
+                        </Button>
+                    )}
+                </div>
+            )}
         </div>
     );
 };
