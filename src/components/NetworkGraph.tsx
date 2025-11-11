@@ -1226,7 +1226,7 @@ const NetworkGraph: React.FC<NetworkGraphProps> = ({
         
         {/* Filter Bar Portal - render outside overflow-hidden container when in fullscreen */}
         {isFullscreen && filterBarContainer && createPortal(
-            <div ref={filterBarRef} className="fixed top-4 left-4 right-4 z-[2000] bg-white backdrop-blur-lg p-4 rounded-lg border border-slate-200 shadow-lg">
+            <div ref={filterBarRef} className="fixed top-4 left-4 right-4 z-[100] bg-white backdrop-blur-lg p-4 rounded-lg border border-slate-200 shadow-lg">
                 <FilterBar
                     searchQuery={searchQuery}
                     appliedSearchQuery={appliedSearchQuery}

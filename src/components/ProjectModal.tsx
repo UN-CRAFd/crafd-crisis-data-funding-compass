@@ -81,7 +81,7 @@ export default function ProjectModal({ project, allOrganizations, loading, onOpe
         );
     };
 
-    const renderBody = (): React.ReactNode => {
+    const renderBody = ({ tooltipContainer }: { tooltipContainer?: Element | null }): React.ReactNode => {
         if (loading) {
             return (
                 <div className="p-4 sm:p-6 space-y-4">
@@ -257,8 +257,9 @@ export default function ProjectModal({ project, allOrganizations, loading, onOpe
                                                                         </TooltipTrigger>
                                                                         <TooltipContent 
                                                                             side="top" 
-                                                                            className="max-w-xs text-xs bg-white/70 backdrop-blur-md border border-gray-200 !z-[999999]"
+                                                                            className="max-w-xs text-xs bg-white/70 backdrop-blur-md border border-gray-200 !z-[300]"
                                                                             sideOffset={5}
+                                                                            container={tooltipContainer as HTMLElement | null}
                                                                         >
                                                                             {description}
                                                                         </TooltipContent>

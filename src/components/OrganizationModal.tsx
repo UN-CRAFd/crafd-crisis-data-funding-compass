@@ -152,7 +152,7 @@ export default function OrganizationModal({
     };
 
     // Render body content based on state
-    const renderBody = (): React.ReactNode => {
+    const renderBody = ({ tooltipContainer }: { tooltipContainer?: Element | null }): React.ReactNode => {
         if (loading) {
             return (
                 <div className="p-4 sm:p-6 space-y-4">
