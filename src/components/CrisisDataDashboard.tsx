@@ -622,6 +622,19 @@ const CrisisDataDashboard = ({
     // Extract data for use in component
     const { stats, projectTypes, organizationsWithProjects, allOrganizations, donorCountries: availableDonorCountries, investmentTypes: availableInvestmentTypes, topDonors } = dashboardData;
 
+    
+    // Error state
+    if (error || !dashboardData) {
+        return (
+            <div className="min-h-screen bg-slate-50 flex items-center justify-center">
+                <div className="text-center">
+                    <p className="text-red-600 mb-2">{labels.error.message}</p>
+                    <p className="text-slate-500 text-sm">{error}</p>
+                </div>
+            </div>
+        );
+    }
+
     // Add a 6th bar to the co-financing donor chart for 'n other donors'
     let donorChartData = topDonors;
     if (availableDonorCountries && topDonors && topDonors.length > 0) {
