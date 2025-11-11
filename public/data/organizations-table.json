@@ -408,6 +408,23 @@
     }
   },
   {
+    "id": "rec7BmCO0j9do4gKE",
+    "fields": {
+      "Org Full Name": "University of Edinburgh",
+      "Org Short Name": "UOE",
+      "Org Website": "https://www.ed.ac.uk/",
+      "Org Description": "The University of Edinburgh is a public research university based in Edinburgh, Scotland. Founded by the town council under the authority of a royal charter from King James VI in 1582 and officially opened in 1583, it is one of Scotland's four ancient universities and the sixth-oldest university in continuous operation in the English-speaking world.",
+      "Provided Data Ecosystem Projects": [
+        "recp4lLg28MQMpBnW"
+      ],
+      "Org Donor Agencies": [
+        "reco4Um0k7Tgw2UCK"
+      ],
+      "org_key": "uoe",
+      "Org Type": "Academia"
+    }
+  },
+  {
     "id": "rec8O141RyUupQsRy",
     "fields": {
       "Org Full Name": "Humanitarian Outcomes",
@@ -554,7 +571,10 @@
       "Org Description": "Pacific Disaster Center (PDC) is a leading scientific innovator of global risk reduction science and technology. As a University of Hawai’i applied science and research center, our work intersects with a variety of government, community, academic, and scientific organizations at home and around the world to build resilience to natural and man-made hazards, assess risk, and enhance the capacity to quickly and accurately anticipate and prepare for new and emerging threats.\t",
       "Link to Data Products Overview": "<https://www.pdc.org/disasteraware/>\n",
       "Provided Data Ecosystem Projects": [
-        "rec9HIhsIpPjx48rc"
+        "rec9HIhsIpPjx48rc",
+        "recjbIls3C4riPk4C",
+        "rec04YelpRCFjpBV8",
+        "recb50ne79iS2TFYz"
       ],
       "Org Donor Agencies": [
         "recAiCKdzASfJMVsG"
@@ -688,7 +708,8 @@
       "Org Website": "https://www.flowminder.org/",
       "Org Description": "Flowminder also co-founded, in partnership with UNFPA, WorldPop at the University of Southampton, and CIESIN at Columbia University the GRID3 programme. GRID3 was an international partnership programme funded by the Bill & Melinda Gates Foundation and the United Kingdom’s Foreign, Commonwealth and Development Office to map a path to sustainable development for everyone with geospatial data solutions.",
       "Provided Data Ecosystem Projects": [
-        "recbmA6Lmrr5AfAHJ"
+        "recbmA6Lmrr5AfAHJ",
+        "recYR5aZ0pWEFezdF"
       ],
       "Org Donor Agencies": [
         "recbbW0P8fxVtJBJP",
@@ -1246,8 +1267,6 @@
       "Org Website": "https://mapaction.org/",
       "Org Description": "We are a non-profit organisation collaborating with partners around the world to prepare for and respond to humanitarian emergencies. We strive to ensure global, regional, national and local disaster management and humanitarian agencies have access to the maps, visualised data, information and analysis that they need to make key decisions, at the right times, to save lives and reduce suffering. ",
       "Provided Data Ecosystem Projects": [
-        "reciDzUjwtkVeh21I",
-        "recGnEnRmDmoQ59wM",
         "rec8HCRgYhj3eDhQ0"
       ],
       "Org Donor Agencies": [
@@ -1931,7 +1950,8 @@
       "Org Description": "The Pacific Community (SPC) is the principal scientific and technical organisation in the Pacific region, proudly supporting development since 1947. We are an international development organisation owned and governed by our 27 country and territory members. The Pacific Community supports sustainable development by applying a people-centred approach to science, research and technology across all of the Sustainable Development Goals (SDGs). We serve our members by interweaving and harnessing the nexus of climate, ocean, land, culture, rights and good governance; through trusted partnerships; investing in Pacific people; and understanding Pacific contexts.",
       "Link to Data Products Overview": "<https://pacificdata.org/>\n",
       "Provided Data Ecosystem Projects": [
-        "recQubJTGSwZoqzix"
+        "recQubJTGSwZoqzix",
+        "rec9HIhsIpPjx48rc"
       ],
       "Org Donor Agencies": [
         "recQUVhcVyxZlXJ3H",
@@ -2193,7 +2213,8 @@
       "Link to Data Products Overview": "<https://immap.org/products/>\n",
       "Provided Data Ecosystem Projects": [
         "recxZmQWr8fIn8d1G",
-        "recPMQlg07QkflL3i"
+        "recPMQlg07QkflL3i",
+        "reclcvFLzfAlhADFB"
       ],
       "Org Donor Agencies": [
         "rec3Ado0Jrl799Q8A",

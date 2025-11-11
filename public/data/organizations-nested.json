@@ -2235,7 +2235,7 @@
           "Investment Theme(s)": [
             "Conflict & Violence Data",
             "Gender Data",
-            "Methodological Standards (e.g., Data Collection)"
+            "Methodological Standards"
           ],
           "product_key": "wwag",
           "HDX_SOHD": "None"
@@ -2385,6 +2385,59 @@
       }
     ],
     "donor_countries": []
+  },
+  {
+    "id": "rec7BmCO0j9do4gKE",
+    "name": "University of Edinburgh",
+    "fields": {
+      "Org Full Name": "University of Edinburgh",
+      "Org Short Name": "UOE",
+      "Org Website": "https://www.ed.ac.uk/",
+      "Org Description": "The University of Edinburgh is a public research university based in Edinburgh, Scotland. Founded by the town council under the authority of a royal charter from King James VI in 1582 and officially opened in 1583, it is one of Scotland's four ancient universities and the sixth-oldest university in continuous operation in the English-speaking world.",
+      "Provided Data Ecosystem Projects": [
+        "recp4lLg28MQMpBnW"
+      ],
+      "Org Donor Agencies": [
+        "reco4Um0k7Tgw2UCK"
+      ],
+      "org_key": "uoe",
+      "Org Type": "Academia"
+    },
+    "agencies": [
+      {
+        "id": "reco4Um0k7Tgw2UCK",
+        "fields": {
+          "Agency/Department Name": "Unspecified Agency",
+          "Country Name": "United Kingdom"
+        }
+      }
+    ],
+    "projects": [
+      {
+        "id": "recp4lLg28MQMpBnW",
+        "fields": {
+          "Project/Product Name": "PA-X Analytics",
+          "Project Description": "The PA-X Tracker is a new, innovative digital tool offering data-driven insights to support peace and transition processes. The suite of PeaceTech tools contained within the PA-X Tracker enables users to track and monitor progress and implementation of peace and transition processes. The Tracker allows users to understand how peace processes are unfolding, who is involved in them, and what impact the processes have had on a range of institutional, political, economic, humanitarian and security indicators.\n",
+          "Project Website": "https://www.peaceagreements.org/",
+          "Provider Orgs Full Name": [
+            "rec7BmCO0j9do4gKE"
+          ],
+          "CRAF’d-Funded Project?": "NO",
+          "Investment Type(s)": [
+            "Data Sets & Commons"
+          ],
+          "Investment Theme(s)": [
+            "Peace Data"
+          ],
+          "product_key": "pax",
+          "HDX_SOHD": "None"
+        },
+        "agencies": []
+      }
+    ],
+    "donor_countries": [
+      "United Kingdom"
+    ]
   },
   {
     "id": "rec8O141RyUupQsRy",
@@ -2847,7 +2900,7 @@
             "Standards & Coordination"
           ],
           "Investment Theme(s)": [
-            "Methodological Standards (e.g., Data Collection)"
+            "Methodological Standards"
           ],
           "product_key": "undp-digital-standards",
           "HDX_SOHD": "None"
@@ -2922,7 +2975,7 @@
             "Standards & Coordination"
           ],
           "Investment Theme(s)": [
-            "Methodological Standards (e.g., Data Collection)"
+            "Methodological Standards"
           ],
           "product_key": "ocha-hxl",
           "HDX_SOHD": "None"
@@ -3215,7 +3268,10 @@
       "Org Description": "Pacific Disaster Center (PDC) is a leading scientific innovator of global risk reduction science and technology. As a University of Hawai’i applied science and research center, our work intersects with a variety of government, community, academic, and scientific organizations at home and around the world to build resilience to natural and man-made hazards, assess risk, and enhance the capacity to quickly and accurately anticipate and prepare for new and emerging threats.\t",
       "Link to Data Products Overview": "<https://www.pdc.org/disasteraware/>\n",
       "Provided Data Ecosystem Projects": [
-        "rec9HIhsIpPjx48rc"
+        "rec9HIhsIpPjx48rc",
+        "recjbIls3C4riPk4C",
+        "rec04YelpRCFjpBV8",
+        "recb50ne79iS2TFYz"
       ],
       "Org Donor Agencies": [
         "recAiCKdzASfJMVsG"
@@ -3239,25 +3295,87 @@
     ],
     "projects": [
       {
+        "id": "rec04YelpRCFjpBV8",
+        "fields": {
+          "Project/Product Name": "National Disaster Preparedness",
+          "Project Description": "PDC’s National Disaster Preparedness Baseline Assessment is more than an assessment. It’s a long-term program that helps countries assess risk and disaster management capacity and apply it to:\n- Early warning\n- Disaster preparedness\n- Policy and planning\n- Sustainable development\n- Resilience-building initiatives\nThe national baseline assessment is the only U.S. program recognized by the United Nations to help countries operationalize the goals of the Sendai Framework for Disaster Risk Reduction—providing an evidence-based foundation for actions to be taken and investments to be made in achieving long-term resilience and\n",
+          "Project Website": "https://www.pdc.org/ndpba/",
+          "Provider Orgs Full Name": [
+            "recCvRYx3gzUtg9cf"
+          ],
+          "CRAF’d-Funded Project?": "NO",
+          "Investment Type(s)": [
+            "Crisis Analytics & Insights"
+          ],
+          "Investment Theme(s)": [
+            "Needs Assessment"
+          ],
+          "product_key": "national-disaster",
+          "HDX_SOHD": "None"
+        },
+        "agencies": []
+      },
+      {
         "id": "rec9HIhsIpPjx48rc",
         "fields": {
           "Project/Product Name": "DisasterAWARE",
           "Project Description": "DisasterAWARE is a global platform offering real-time hazard alerts, dashboards, and geospatial tools for disaster preparedness and early warning. It integrates predictive models and hazard tracking from global datasets.\n",
           "Project Website": "https://www.disasteraware.com/",
           "Provider Orgs Full Name": [
-            "recCvRYx3gzUtg9cf"
+            "recCvRYx3gzUtg9cf",
+            "recodAuism4k7Osi8"
           ],
           "CRAF’d-Funded Project?": "NO",
           "Investment Type(s)": [
             "Infrastructure & Platforms"
           ],
           "Investment Theme(s)": [
-            "Climate Data",
-            "Monitoring & Alerts",
-            "APIs Standard",
-            "Anticipatory and Early Action Forecasts"
+            "Geographic Information Systems (GIS)"
           ],
           "product_key": "disaster-aware",
+          "HDX_SOHD": "None"
+        },
+        "agencies": []
+      },
+      {
+        "id": "recb50ne79iS2TFYz",
+        "fields": {
+          "Project/Product Name": "AI for Humanity",
+          "Project Description": "PDC’s advanced natural language processing and generative AI is being leveraged to greatly reduce the manual labor and time involved with finding, analyzing, and curating global hazard content. This allows PDC to provide more comprehensive coverage of hazard events around the globe through its DisasterAWARE Pro risk intelligence and early warning platform. These repetitive and time consuming tasks are now performed by AI Hazard Finder with greater speed and accuracy than ever before possible.\n\n",
+          "Project Website": "https://www.pdc.org/artificial-intelligence/",
+          "Provider Orgs Full Name": [
+            "recCvRYx3gzUtg9cf"
+          ],
+          "Investment Type(s)": [
+            "Crisis Analytics & Insights"
+          ],
+          "Investment Theme(s)": [
+            "AI Models"
+          ],
+          "product_key": "ai-humanity",
+          "HDX_SOHD": "None"
+        },
+        "agencies": []
+      },
+      {
+        "id": "recjbIls3C4riPk4C",
+        "fields": {
+          "Project/Product Name": "Global Risk and Vulnerability Index",
+          "Project Description": "PDC’s Multi-hazard risk score is a combination of multi-hazard exposure, vulnerability (susceptibility to impact), and coping capacity (the relative ability to absorb negative disaster impacts). This provides a collective measure of how each country may be affected by hazards and disasters as a whole over time.\n",
+          "Project Website": "https://www.pdc.org/advanced-analytics/",
+          "Provider Orgs Full Name": [
+            "recCvRYx3gzUtg9cf"
+          ],
+          "CRAF’d-Funded Project?": "NO",
+          "Investment Type(s)": [
+            "Crisis Analytics & Insights"
+          ],
+          "Investment Theme(s)": [
+            "Disaster Hazard & Risk Modelling",
+            "Composite Indices",
+            "Climate Analytics"
+          ],
+          "product_key": "global-risk",
           "HDX_SOHD": "None"
         },
         "agencies": []
@@ -3931,7 +4049,8 @@
       "Org Website": "https://www.flowminder.org/",
       "Org Description": "Flowminder also co-founded, in partnership with UNFPA, WorldPop at the University of Southampton, and CIESIN at Columbia University the GRID3 programme. GRID3 was an international partnership programme funded by the Bill & Melinda Gates Foundation and the United Kingdom’s Foreign, Commonwealth and Development Office to map a path to sustainable development for everyone with geospatial data solutions.",
       "Provided Data Ecosystem Projects": [
-        "recbmA6Lmrr5AfAHJ"
+        "recbmA6Lmrr5AfAHJ",
+        "recYR5aZ0pWEFezdF"
       ],
       "Org Donor Agencies": [
         "recbbW0P8fxVtJBJP",
@@ -4014,6 +4133,25 @@
       }
     ],
     "projects": [
+      {
+        "id": "recYR5aZ0pWEFezdF",
+        "fields": {
+          "Project/Product Name": "FlowKit",
+          "Provider Orgs Full Name": [
+            "recG3iaB3tMhPUTLg"
+          ],
+          "CRAF’d-Funded Project?": "NO",
+          "Investment Type(s)": [
+            "Infrastructure & Platforms"
+          ],
+          "Investment Theme(s)": [
+            "Data Storage, Access & Sharing",
+            "Private Data Sharing"
+          ],
+          "HDX_SOHD": "None"
+        },
+        "agencies": []
+      },
       {
         "id": "recbmA6Lmrr5AfAHJ",
         "fields": {
@@ -4352,7 +4490,7 @@
             "Standards & Coordination"
           ],
           "Investment Theme(s)": [
-            "Methodological Standards (e.g., Data Collection)",
+            "Methodological Standards",
             "Consistent Data Formats",
             "Standard Geocodes",
             "Version Tracking"
@@ -4395,7 +4533,7 @@
             "Data Sets & Commons"
           ],
           "Investment Theme(s)": [
-            "3W (Who does What, Where) Data"
+            "3W (Who does What & Where) Data"
           ],
           "product_key": "ocha-3w",
           "HDX_SOHD": "None"
@@ -5304,7 +5442,7 @@
             "Data Sets & Commons"
           ],
           "Investment Theme(s)": [
-            "3W (Who does What, Where) Data"
+            "3W (Who does What & Where) Data"
           ],
           "product_key": "3w-connections",
           "HDX_SOHD": "None"
@@ -5437,7 +5575,7 @@
           "Investment Theme(s)": [
             "Conflict & Violence Data",
             "Gender Data",
-            "Methodological Standards (e.g., Data Collection)"
+            "Methodological Standards"
           ],
           "product_key": "wwag",
           "HDX_SOHD": "None"
@@ -7037,8 +7175,6 @@
       "Org Website": "https://mapaction.org/",
       "Org Description": "We are a non-profit organisation collaborating with partners around the world to prepare for and respond to humanitarian emergencies. We strive to ensure global, regional, national and local disaster management and humanitarian agencies have access to the maps, visualised data, information and analysis that they need to make key decisions, at the right times, to save lives and reduce suffering. ",
       "Provided Data Ecosystem Projects": [
-        "reciDzUjwtkVeh21I",
-        "recGnEnRmDmoQ59wM",
         "rec8HCRgYhj3eDhQ0"
       ],
       "Org Donor Agencies": [
@@ -7073,7 +7209,7 @@
       {
         "id": "rec8HCRgYhj3eDhQ0",
         "fields": {
-          "Project/Product Name": "Emergency Response",
+          "Project/Product Name": "MapAction Services",
           "Project Description": "When major emergencies happen, we can provide surge support to our partners at short notice, enabling them to make sense of chaotic, dangerous and rapidly evolving situations and coordinate the most effective response. We work both in country and remotely. Our well-rehearsed deployment model means our mapping professionals can be on the scene within 24-48 hours of a disaster striking. Even before they arrive in-country, they’ve started collecting data and information that will be crucial in helping coordinate the world’s response, and getting aid to where it is needed most.\n",
           "Project Website": "https://mapaction.org/about-us/emergency-response/",
           "Provider Orgs Full Name": [
@@ -7085,49 +7221,11 @@
           ],
           "Investment Theme(s)": [
             "Applied Data Analytics & Insights Generation",
-            "Surge Capacity"
+            "Surge Capacity",
+            "Information Managment",
+            " Data Collection & Generation"
           ],
-          "HDX_SOHD": "None"
-        },
-        "agencies": []
-      },
-      {
-        "id": "recGnEnRmDmoQ59wM",
-        "fields": {
-          "Project/Product Name": "Health Services",
-          "Project Description": "Whether it’s deploying data and GIS tools to fight malaria in Burundi, cholera in Malawi, Ebola in Sierra Leone & Liberia, or dengue in the Philippines, for more than a decade MapAction has supported the planning and delivery of public health campaigns and outbreak responses worldwide. Good data underpins effective health panning. That is why MapAction continues to increase its focus as an organisation on public health, from West Africa to the Philippines, via Burundi, Malawi and the Horn of Africa. \n",
-          "Project Website": "https://mapaction.org/about-us/our-services/health/",
-          "Provider Orgs Full Name": [
-            "recX11pAAzHjdqH0Y"
-          ],
-          "Investment Type(s)": [
-            "Crisis Analytics & Insights"
-          ],
-          "Investment Theme(s)": [
-            "Health Analytics"
-          ],
-          "product_key": "health-services",
-          "HDX_SOHD": "None"
-        },
-        "agencies": []
-      },
-      {
-        "id": "reciDzUjwtkVeh21I",
-        "fields": {
-          "Project/Product Name": "Anticipatory Action",
-          "Project Description": "As part of MapAction’s strategic commitment to locally-led, sustainability is defined as helping ensure the longevity and sustainability of AA projects by establishing effective evaluation frameworks and sharing lessons learned with the wider community. It is critical that local voices are embedded with these projects and processes.\n",
-          "Project Website": "https://mapaction.org/anticipatory-action-drr/",
-          "Provider Orgs Full Name": [
-            "recX11pAAzHjdqH0Y"
-          ],
-          "CRAF’d-Funded Project?": "NO",
-          "Investment Type(s)": [
-            "Crisis Analytics & Insights"
-          ],
-          "Investment Theme(s)": [
-            "Anticipatory and Early Action Forecasts"
-          ],
-          "product_key": "anticipatory-action",
+          "product_key": "emergency-response",
           "HDX_SOHD": "None"
         },
         "agencies": []
@@ -11885,7 +11983,8 @@
       "Org Description": "The Pacific Community (SPC) is the principal scientific and technical organisation in the Pacific region, proudly supporting development since 1947. We are an international development organisation owned and governed by our 27 country and territory members. The Pacific Community supports sustainable development by applying a people-centred approach to science, research and technology across all of the Sustainable Development Goals (SDGs). We serve our members by interweaving and harnessing the nexus of climate, ocean, land, culture, rights and good governance; through trusted partnerships; investing in Pacific people; and understanding Pacific contexts.",
       "Link to Data Products Overview": "<https://pacificdata.org/>\n",
       "Provided Data Ecosystem Projects": [
-        "recQubJTGSwZoqzix"
+        "recQubJTGSwZoqzix",
+        "rec9HIhsIpPjx48rc"
       ],
       "Org Donor Agencies": [
         "recQUVhcVyxZlXJ3H",
@@ -12008,6 +12107,28 @@
       }
     ],
     "projects": [
+      {
+        "id": "rec9HIhsIpPjx48rc",
+        "fields": {
+          "Project/Product Name": "DisasterAWARE",
+          "Project Description": "DisasterAWARE is a global platform offering real-time hazard alerts, dashboards, and geospatial tools for disaster preparedness and early warning. It integrates predictive models and hazard tracking from global datasets.\n",
+          "Project Website": "https://www.disasteraware.com/",
+          "Provider Orgs Full Name": [
+            "recCvRYx3gzUtg9cf",
+            "recodAuism4k7Osi8"
+          ],
+          "CRAF’d-Funded Project?": "NO",
+          "Investment Type(s)": [
+            "Infrastructure & Platforms"
+          ],
+          "Investment Theme(s)": [
+            "Geographic Information Systems (GIS)"
+          ],
+          "product_key": "disaster-aware",
+          "HDX_SOHD": "None"
+        },
+        "agencies": []
+      },
       {
         "id": "recQubJTGSwZoqzix",
         "fields": {
@@ -13327,7 +13448,8 @@
       "Link to Data Products Overview": "<https://immap.org/products/>\n",
       "Provided Data Ecosystem Projects": [
         "recxZmQWr8fIn8d1G",
-        "recPMQlg07QkflL3i"
+        "recPMQlg07QkflL3i",
+        "reclcvFLzfAlhADFB"
       ],
       "Org Donor Agencies": [
         "rec3Ado0Jrl799Q8A",
@@ -13394,6 +13516,20 @@
             "Applied Data Analytics & Insights Generation"
           ],
           "product_key": "immap-information-management-support",
+          "HDX_SOHD": "None"
+        },
+        "agencies": []
+      },
+      {
+        "id": "reclcvFLzfAlhADFB",
+        "fields": {
+          "Project/Product Name": "Global Information Management Surge Capacity",
+          "Project Description": "The iMMAP Inc. global surge team is made up of over **400 highly qualified and diverse national and international technical information management (IM) specialists**. iMMAP Inc., when required, deploys experts on mission that combine technical IM skills with sectoral and programmatic experience such as Coordination, Food Security, Health, Water, Sanitation and Hygiene (WASH), Protection, Nutrition, Cash, market and value chain analysis, context and geopolitical analysis, assessments, research and more, to improve country, regional and global decision-making and planning processes in line with the Humanitarian Programme Cycle (HPC) principles.\n",
+          "Project Website": "https://immap.org/global-surge-program/#:~:text=The%20iMMAP%20Inc,HPC%29%20principles",
+          "Provider Orgs Full Name": [
+            "recvzWSlYgzs0mffd"
+          ],
+          "product_key": "global-information",
           "HDX_SOHD": "None"
         },
         "agencies": []
@@ -13933,6 +14069,7 @@
           "Investment Theme(s)": [
             "Climate Analytics"
           ],
+          "product_key": "cams",
           "HDX_SOHD": "None"
         },
         "agencies": [
