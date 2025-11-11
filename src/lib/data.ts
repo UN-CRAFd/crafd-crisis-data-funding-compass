@@ -94,6 +94,11 @@ async function loadThemesTable(): Promise<ThemesMappings> {
     return themesTableLoadPromise;
 }
 
+// Export the load function so it can be called early
+export async function ensureThemesMappingsLoaded(): Promise<void> {
+    await loadThemesTable();
+}
+
 // Helper functions for theme key conversion
 export function themeNameToKey(themeName: string): string {
     if (!cachedThemesMappings) {
@@ -563,6 +568,9 @@ export async function processDashboardData(filters: {
     investmentThemes?: string[];
 } = {}) {
     try {
+        // Load themes table first to ensure theme key mappings are available
+        await loadThemesTable();
+        
         // Load nested organizations
         const nestedOrgs = await loadNestedOrganizations();
 
