@@ -590,6 +590,9 @@ export async function processDashboardData(filters: {
         // Get available filter options from filtered organizations (viewport)
         // This ensures dropdowns only show options that are currently available
         const filterOptions = await getAvailableFilterOptions(filteredOrganizations);
+        
+        // Also get all available filter options from unfiltered data for theme dropdown
+        const allFilterOptions = await getAvailableFilterOptions(allOrganizations);
 
         return {
             stats,
@@ -600,8 +603,8 @@ export async function processDashboardData(filters: {
             allOrganizations, // Add unfiltered organizations for modal use
             donorCountries: filterOptions.donorCountries,
             investmentTypes: filterOptions.investmentTypes,
-            investmentThemes: filterOptions.investmentThemes, // Add investment themes (flat array for backward compatibility)
-            investmentThemesByType: filterOptions.investmentThemesByType, // Add grouped themes by type
+            investmentThemes: allFilterOptions.investmentThemes, // Use unfiltered themes
+            investmentThemesByType: allFilterOptions.investmentThemesByType, // Use unfiltered grouped themes by type
             topDonors // Add top co-financing donors
         };
     } catch (error) {
