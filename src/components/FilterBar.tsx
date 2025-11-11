@@ -371,34 +371,45 @@ const FilterBar: React.FC<FilterBarProps> = ({
 
                         <div className="max-h-[200px] overflow-y-auto">
                         {Object.keys(investmentThemesByType).length > 0 ? (
-                            // Show grouped themes by investment type
-                            Object.entries(investmentThemesByType)
-                                .sort(([typeA], [typeB]) => typeA.localeCompare(typeB))
-                                .map(([investmentType, themes]) => {
-                                    // Show ALL themes available in projectCountsByTheme for this type
-                                    // regardless of current theme selection
-                                    const allThemesForType = new Set<string>();
-                                    
-                                    // Add all themes that have counts (from query/donor/type filtering)
-                                    Object.keys(projectCountsByTheme).forEach(themeKey => {
-                                        // Find the original case-sensitive theme name from allKnownInvestmentThemes
+                            // Build a map of all themes with counts and their investment type categories
+                            (() => {
+                                const themesByCategory: Record<string, string[]> = {};
+                                
+                                // For each theme that has a count, find which category it belongs to
+                                Object.keys(projectCountsByTheme).forEach(themeKey => {
+                                    const count = projectCountsByTheme[themeKey];
+                                    if (count > 0) {
+                                        // Find the original case-sensitive theme name
                                         const originalTheme = allKnownInvestmentThemes.find(
                                             t => t.toLowerCase().trim() === themeKey.toLowerCase().trim()
                                         );
-                                        // Check if this theme belongs to this investment type category
-                                        if (originalTheme && themes.some(t => t.toLowerCase().trim() === themeKey)) {
-                                            allThemesForType.add(originalTheme);
+                                        if (originalTheme) {
+                                            // Find which investment type category this theme belongs to
+                                            for (const [investmentType, themes] of Object.entries(investmentThemesByType)) {
+                                                if (themes.some(t => t.toLowerCase().trim() === themeKey)) {
+                                                    if (!themesByCategory[investmentType]) {
+                                                        themesByCategory[investmentType] = [];
+                                                    }
+                                                    themesByCategory[investmentType].push(originalTheme);
+                                                    break;
+                                                }
+                                            }
                                         }
-                                    });
-                                    
-                                    // Filter themes based on search query
-                                    const filteredThemes = Array.from(allThemesForType).filter((theme) =>
-                                        theme.toLowerCase().includes(themeSearchQuery.toLowerCase())
-                                    );
+                                    }
+                                });
+                                
+                                // Render grouped themes
+                                return Object.entries(themesByCategory)
+                                    .sort(([typeA], [typeB]) => typeA.localeCompare(typeB))
+                                    .map(([investmentType, themes]) => {
+                                        // Filter themes based on search query
+                                        const filteredThemes = themes.filter((theme) =>
+                                            theme.toLowerCase().includes(themeSearchQuery.toLowerCase())
+                                        );
 
-                                    if (filteredThemes.length === 0) return null;
+                                        if (filteredThemes.length === 0) return null;
 
-                                    const IconComponent = getIconForInvestmentType(investmentType);
+                                        const IconComponent = getIconForInvestmentType(investmentType);
                                     
                                     return (
                                         <div key={investmentType}>
@@ -447,7 +458,8 @@ const FilterBar: React.FC<FilterBarProps> = ({
                                             })}
                                         </div>
                                     );
-                                })
+                                    });
+                            })()
                         ) : (
                             // Fallback to flat list if grouped data not available
                             allKnownInvestmentThemes
