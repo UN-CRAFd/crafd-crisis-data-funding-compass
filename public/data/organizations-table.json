@@ -32,9 +32,10 @@
       "Org Full Name": "Heidelberg University",
       "Org Short Name": "HeiGIT",
       "Org Website": "https://www.uni-heidelberg.de/en",
-      "Org Description": "HeiGIT (Heidelberg Institute for Geoinformation Technology) advances geoinformation technology for the benefit of society and the environment. We bridge the gap between fundamental research in geoinformatics and practical applications by developing innovative tools and methods. Examples include customized geodata for humanitarian missions and intelligent routing for disaster response and climate action.",
+      "Org Description": "Founded in 1386, Ruperto Carola is the oldest university in today's Germany and one of Europe’s leading research institutions. It defines itself as an internationally networked research university dedicated to research-oriented teaching. With over 160 fields of study, it offers the broad spectrum of subjects representative of a comprehensive university as well as abundant opportunities to acquire a singular and internationally competitive qualification profile.",
       "Provided Data Ecosystem Projects": [
-        "recEuWdBixgTpQKhR"
+        "recEuWdBixgTpQKhR",
+        "recTaCZEF36yEoMIT"
       ],
       "Org Donor Agencies": [
         "rec1YpvhkjwME6GOJ"
@@ -44,25 +45,6 @@
       "org_key": "heigit",
       "Org Type": "Academia",
       "HDX Org Key": "heidelberg-institute-for-geoinformation-technology"
-    }
-  },
-  {
-    "id": "rec1izGX18m256ood",
-    "fields": {
-      "Org Full Name": "UK Humanitarian Innovation Hub",
-      "Org Short Name": "UKHIH",
-      "Org Website": "https://www.ukhih.org/",
-      "Org Description": "The UK Humanitarian Innovation Hub supports and accelerates data-related projects that aim to improve humanitarian response, collaborating with various actors including academia, the private sector, and other innovation hubs. While not a direct provider of data services, the Hub facilitates research and development in areas like predictive analytics, the ethical use of technology, and the application of data science to understand and respond to humanitarian needs. Their work involves assessing existing models and forecasts, designing trigger mechanisms for anticipatory action, and guiding the humanitarian community on climate science and its implications. The Hub also draws on insights from the Centre for Humanitarian Data and its Humanitarian Data Exchange (HDX) platform, which makes humanitarian data easily accessible for analysis and decision-making.",
-      "Provided Data Ecosystem Projects": [
-        "recwyWa10JHuVhWo9"
-      ],
-      "Org Donor Agencies": [
-        "rec0sY1I5JZz6ZsUE"
-      ],
-      "Org HQ Country": "United Kingdom",
-      "Has received CRAF'd Funding?": "NO",
-      "org_key": "ukhih",
-      "Org Type": "Network / Consortium"
     }
   },
   {
@@ -239,17 +221,20 @@
   {
     "id": "rec5DdxnhKg1na7o8",
     "fields": {
-      "Org Full Name": "UCLouvain: University of Louvain",
-      "Org Short Name": "UCLouvain",
-      "Org Website": "https://www.uclouvain.be/fr",
-      "Org Description": "UCLouvain aims to enable those who wish to do so – young people leaving secondary education or adults engaged in professional life – to train and acquire the skills useful for their development and their professional activities.",
+      "Org Full Name": "University of Louvain Centre for Research on the Epidemiology of Disasters (CRED) ",
+      "Org Short Name": "CRED",
+      "Org Website": "https://www.uclouvain.be/en/research-institutes/irss/cred-epidemiology-of-disasters",
+      "Org Description": "The Centre for Research on the Epidemiology of Disasters (CRED  has been active for over 50 years and is recognized as a reference institution in the field of disasters and emergency situations: CRED promotes research, training, and technical expertise in humanitarian emergencies, particularly in public health and epidemiology. Its main research topic is natural disasters. By providing a wealth of data related to health, the centre aims to improve disasters preparedness and response. CRED is managing the EM-DAT database, quantifying the occurrence, human and economic impacts associated with natural and technological disasters.",
       "Provided Data Ecosystem Projects": [
         "recVj2ULsOWhPFQ19"
       ],
       "Org Donor Agencies": [
-        "rec15kH3AC5gKDeQu",
-        "rec4K8WmVji37YMCr",
-        "recfjNkXZXtdaH5xv"
+        "reckIAhFXgj4XL29b",
+        "rectyuW4INCMaNoAM",
+        "recNLQhceOCXSMemo",
+        "recr77XDSfR0O9Jen",
+        "recqhcKxTv71yMfeI",
+        "recsrMWmoA037bW03"
       ],
       "Org IATI Name": "N/A",
       "Org HQ Country": "Belgium",
@@ -509,6 +494,7 @@
     "fields": {
       "Org Full Name": "OCHA: Centre for Humanitarian Data",
       "Org Short Name": "OCHA/CHD",
+      "Org Website": "https://centre.humdata.org/",
       "Org Description": "The Centre for Humanitarian Data is focused on increasing the use and impact of data in the humanitarian sector. It is managed by the United Nations Office for the Coordination of Humanitarian Affairs (OCHA). As part of OCHA’s Information Management Branch, the Centre’s role is to enable the organization to deliver on its ambition to be more data-driven and analytical, and to ensure a responsible approach to technology and data management.  ",
       "Provided Data Ecosystem Projects": [
         "reckkGrUM2q2e7aeo",
@@ -516,6 +502,11 @@
         "recmH2oywWDYooamX",
         "reczpMP2LZqBg7Cnd",
         "recdGuPPf12Osu2Tw"
+      ],
+      "Org Donor Agencies": [
+        "recRgmk6Ew3NBvxGV",
+        "recgAR3TqI7vt3ypc",
+        "recHSsEaPuaG3h2PQ"
       ],
       "org_key": "ocha-hum-data-centre",
       "Org Type": "United Nations System",
@@ -553,6 +544,7 @@
     "fields": {
       "Org Full Name": "UNOSAT: The United Nations Satellite Centre",
       "Org Short Name": "UNOSAT",
+      "Org Website": "https://unosat.org/",
       "Org Description": "The United Nations Satellite Centre (UNOSAT), part of UNITAR, delivers satellite analysis, training, and capacity development to UN entities and Member States. We leverage geospatial technologies to support humanitarian response, sustainable development, and resilience building worldwide.",
       "Provided Data Ecosystem Projects": [
         "recEwLy3FESOhLeNs"
@@ -574,7 +566,7 @@
         "rec9HIhsIpPjx48rc",
         "recjbIls3C4riPk4C",
         "rec04YelpRCFjpBV8",
-        "recb50ne79iS2TFYz"
+        "recmoxMiTZoAQ8Cvg"
       ],
       "Org Donor Agencies": [
         "recAiCKdzASfJMVsG"
@@ -709,7 +701,10 @@
       "Org Description": "Flowminder also co-founded, in partnership with UNFPA, WorldPop at the University of Southampton, and CIESIN at Columbia University the GRID3 programme. GRID3 was an international partnership programme funded by the Bill & Melinda Gates Foundation and the United Kingdom’s Foreign, Commonwealth and Development Office to map a path to sustainable development for everyone with geospatial data solutions.",
       "Provided Data Ecosystem Projects": [
         "recbmA6Lmrr5AfAHJ",
-        "recYR5aZ0pWEFezdF"
+        "recYR5aZ0pWEFezdF",
+        "recUtNMMh0FAIx6SD",
+        "recWaF6STUFBHx50r",
+        "rec15YViTm12t9q9C"
       ],
       "Org Donor Agencies": [
         "recbbW0P8fxVtJBJP",
@@ -747,35 +742,26 @@
         "recXcSKhSy2s7tunj"
       ],
       "Org Donor Agencies": [
-        "rec1YpvhkjwME6GOJ",
+        "recKVILBOB3NBEJlE",
         "reco4Um0k7Tgw2UCK",
-        "recqSvUlZQjET4fCH",
         "rece2l2IJRlTC2ERq",
-        "recYVizktLnxQPeKH",
-        "reckIAhFXgj4XL29b",
+        "recGNTHL9SKZxLDcw",
+        "rec1YpvhkjwME6GOJ",
         "recfNuwRv2DcnUQCK",
         "recZCZqKtB0JM5kmx",
-        "recjyWTotWvaTYTI4",
-        "recCqVCi3rwF77MxA",
-        "rec57z0MkntuI0kvP",
-        "recKq6SBjonibtE1r",
-        "rectW5HrazH0ZIdjS",
-        "reca4p0ohNjva2ein",
-        "recI95P9GtOhiXNoU",
-        "recD33Egz57mFbuAl",
-        "recGMYeDQSV7jffjs",
-        "recNy9QGuHQgz7uAf",
-        "recfAq4iluzgA9q4g",
         "recTMNSZMjMRAv6jz",
-        "recgAR3TqI7vt3ypc",
-        "recMrXxdeLa7ThLf8",
-        "recRt57CGsQQK50dQ",
-        "recizeDfrqG6lA92A",
-        "recvGtb6DmohOEC5n",
-        "recqM20m0W6iS5Y0t",
-        "recNud8p6FGI83cjR",
+        "recqSvUlZQjET4fCH",
+        "rec57z0MkntuI0kvP",
+        "rectW5HrazH0ZIdjS",
+        "recjyWTotWvaTYTI4",
+        "recYVizktLnxQPeKH",
+        "recKq6SBjonibtE1r",
         "rec8BkimQ5W9z8pvk",
-        "recKVILBOB3NBEJlE"
+        "recMrXxdeLa7ThLf8",
+        "recfAq4iluzgA9q4g",
+        "recNy9QGuHQgz7uAf",
+        "recvGtb6DmohOEC5n",
+        "recRt57CGsQQK50dQ"
       ],
       "Org IATI Name": "United Nations Office for the Coordination of Humanitarian Affairs (OCHA)",
       "Org MPTFO Name": "OCHA",
@@ -799,7 +785,8 @@
       "Link to Data Products Overview": "<https://www.prio.org/data>\n",
       "Provided Data Ecosystem Projects": [
         "recFk4AqE3TR83nNo",
-        "recp0YELy7eVj9FUs"
+        "recp0YELy7eVj9FUs",
+        "recgmCxRj8IVZMFF2"
       ],
       "Org Donor Agencies": [
         "recGNTHL9SKZxLDcw",
@@ -1072,7 +1059,6 @@
       "Org Full Name": "U.S. Department of State",
       "Org Short Name": "State Department",
       "Org Website": "https://www.usaid.gov/",
-      "Org Description": "The United States Agency for International Development is an independent agency of the United States government responsible for administering civilian foreign aid and development assistance.",
       "Provided Data Ecosystem Projects": [
         "recrAQT0YpFBCQ02U"
       ],
@@ -1098,7 +1084,8 @@
       "Link to Data Products Overview": "<https://www.hotosm.org/tech-suite>\n",
       "Provided Data Ecosystem Projects": [
         "recF8bGKczcSVXjRz",
-        "rec04lJaB92fTs0JH"
+        "rec04lJaB92fTs0JH",
+        "recze16CRXWao1Mma"
       ],
       "Org Donor Agencies": [
         "recpBuvL2uHuENIu7",
@@ -1739,7 +1726,8 @@
         "recyMSQo5lV032SER"
       ],
       "Org Donor Agencies": [
-        "reckIAhFXgj4XL29b"
+        "reckIAhFXgj4XL29b",
+        "rec1VhOJv9U6QKBBs"
       ],
       "Org IATI Name": "N/A",
       "Org HQ Country": "United States",
@@ -2375,6 +2363,10 @@
       "Org Website": "https://www.hera-ngo.org/",
       "Org Description": "As an international organization, HERA is dedicated to supporting other humanitarian and development organizations in the implementation of their projects and operational strategies. This includes crafting strategic frameworks, establishing security policies, risk assessment, donor mapping, exploratory missions, and evaluation missions. HERA assists organizations in understanding the evolving landscape of the humanitarian system, particularly regarding epidemic control through epidemiological data collection and climate change adaptation by aiding organizations in measuring their carbon footprint and developing strategies to reduce greenhouse gas emissions.",
       "Link to Data Products Overview": "<https://www.hera-ngo.org/our-projects>\n",
+      "Provided Data Ecosystem Projects": [
+        "recG8QCqF1In5fBcv",
+        "recqvGzOfmdkjYOHe"
+      ],
       "Org IATI Name": "N/A",
       "Org HQ Country": "United Kingdom",
       "Has received CRAF'd Funding?": "NO",
