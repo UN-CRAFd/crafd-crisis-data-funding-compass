@@ -1,7 +1,7 @@
 'use client';
 
 import { typeLabelToSlug, typeSlugToLabel } from '@/lib/urlShortcuts';
-import { themeKeyToName, themeNameToKey } from '@/lib/data';
+import { themeKeyToName, themeNameToKey, ensureThemesMappingsLoaded } from '@/lib/data';
 import { usePathname, useRouter, useSearchParams } from 'next/navigation';
 import { useCallback, useEffect, useMemo, useRef, useState } from 'react';
 import { processDashboardData } from '../lib/data';
@@ -17,6 +17,24 @@ const CrisisDataDashboardWrapper = ({ logoutButton }: { logoutButton?: React.Rea
     const router = useRouter();
     const pathname = usePathname();
     const searchParams = useSearchParams();
+    
+    // State for themes (needs async loading)
+    const [themesLoaded, setThemesLoaded] = useState(false);
+    const [investmentThemes, setInvestmentThemes] = useState<string[]>([]);
+    
+    // Load themes mappings and parse URL themes
+    useEffect(() => {
+        (async () => {
+            await ensureThemesMappingsLoaded();
+            setThemesLoaded(true);
+            
+            // Parse themes from URL
+            const raw = searchParams.get('th') ?? searchParams.get('themes');
+            const keys = raw?.split(',').filter(Boolean) || [];
+            const themeNames = keys.map(key => themeKeyToName(key));
+            setInvestmentThemes(themeNames);
+        })();
+    }, [searchParams]);
 
     // Get filter values from URL (comma-separated for multi-select)
     // Using compact query keys: donors -> d, types -> t, search -> q
@@ -38,12 +56,6 @@ const CrisisDataDashboardWrapper = ({ logoutButton }: { logoutButton?: React.Rea
             seen.add(normalized);
             return true;
         });
-    }, [searchParams]);
-    const investmentThemes = useMemo(() => {
-        const raw = searchParams.get('th') ?? searchParams.get('themes');
-        // raw values are theme keys in the URL; convert to theme names for app use
-        const keys = raw?.split(',').filter(Boolean) || [];
-        return keys.map(key => themeKeyToName(key));
     }, [searchParams]);
     const searchQuery = searchParams.get('q') ?? searchParams.get('search') ?? '';
     
