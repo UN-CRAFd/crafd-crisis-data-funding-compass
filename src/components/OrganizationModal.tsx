@@ -376,7 +376,7 @@ export default function OrganizationModal({
                                             ) : (
                                                 <Package className="w-4 h-4 text-slate-500 shrink-0" />
                                             )}
-                                            <span className="truncate max-w-xs">{proj.name}</span>
+                                            <span className="truncate">{proj.name}</span>
                                         </button>
                                     ))}
                                 </div>
