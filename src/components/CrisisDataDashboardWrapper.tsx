@@ -279,12 +279,12 @@ const CrisisDataDashboardWrapper = ({ logoutButton }: { logoutButton?: React.Rea
         const allOrgs = dashboardData.allOrganizations;
 
         allOrgs.forEach(org => {
-            // Filter by donors
+            // Filter by donors (AND logic - all selected donors must be present)
             if (combinedDonors.length > 0) {
-                const hasMatchingDonor = org.donorCountries.some(country => 
-                    combinedDonors.includes(country)
+                const hasAllDonors = combinedDonors.every(selectedDonor => 
+                    org.donorCountries.includes(selectedDonor)
                 );
-                if (!hasMatchingDonor) return;
+                if (!hasAllDonors) return;
             }
 
             org.projects.forEach(project => {

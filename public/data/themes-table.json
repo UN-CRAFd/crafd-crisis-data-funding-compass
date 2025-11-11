@@ -155,7 +155,8 @@
         "recYzS7BrsxBG8llV",
         "recdr2wcQiX1Ch1ZF",
         "recLn4QiWGniBsWoe",
-        "recjbIls3C4riPk4C"
+        "recjbIls3C4riPk4C",
+        "recXaGjOLcrJQCuNn"
       ],
       "theme_key": "composite",
       "theme_description": "Combining multiple data sources, this area provides holistic measurements to assess and monitor crisis situations more effectively."
@@ -322,7 +323,8 @@
         "recgpnIj48zBCayHc",
         "recLn4QiWGniBsWoe",
         "recQJwZB8vyAFwK4C",
-        "recjbIls3C4riPk4C"
+        "recjbIls3C4riPk4C",
+        "recxNVM0HeC0mSQyk"
       ],
       "theme_key": "climate-analytics",
       "theme_description": "Climate Analytics focuses on analyzing climate-related data to help organizations understand and respond to climate risks and impacts during crises."
@@ -375,7 +377,6 @@
       ],
       "Investment Themes [Text Key]": "Methodological Standards",
       "Data Ecosystem Projects": [
-        "recXkQODU8on8xy2v",
         "rechQ1azyTpypEDEy",
         "recZaSDcZgIUtalO5",
         "rec96xC14xTkyyKlP"
@@ -419,13 +420,13 @@
         "recpP1KGKcmcpy2jo",
         "recEwLy3FESOhLeNs",
         "recf0UvW6LzObKXGC",
-        "recVj2ULsOWhPFQ19",
         "recjxVwrxVL90go5G",
         "recgzWbqbmwOXHLnq",
         "recfTLQpzUgBOtlS5",
         "recNggnBqXIgii2hz",
         "recO7hHncZQGqy2vJ",
-        "reczpMP2LZqBg7Cnd"
+        "reczpMP2LZqBg7Cnd",
+        "recXaGjOLcrJQCuNn"
       ],
       "theme_key": "monitoring",
       "theme_description": "Provides real-time detection and notification of emerging crises to support timely decision-making and response."
@@ -459,7 +460,6 @@
       "Investment Themes [Text Key]": "Climate Data",
       "Data Ecosystem Projects": [
         "recr5hGDgBiAH4xSm",
-        "recxNVM0HeC0mSQyk",
         "rec4SqufwyxLeeDM4",
         "recpARdDyMReIUuDq",
         "recF1lTFIy27lMFwT",
@@ -512,7 +512,8 @@
       ],
       "Investment Themes [Text Key]": "Disaster Hazard & Risk Modelling",
       "Data Ecosystem Projects": [
-        "recjbIls3C4riPk4C"
+        "recjbIls3C4riPk4C",
+        "recxNVM0HeC0mSQyk"
       ],
       "theme_key": "risk",
       "theme_description": "This subfield uses data and analytical models to assess potential disaster impacts and inform risk reduction strategies."
@@ -607,7 +608,6 @@
         "recuv6YqfhZHQGvmd",
         "recQpqVqEuaLuj8jT",
         "reccyJzv7bOpjmC4B",
-        "recOOQ5c99vFwz8i8",
         "recgmCxRj8IVZMFF2",
         "recp0YELy7eVj9FUs",
         "recp4lLg28MQMpBnW"
@@ -688,7 +688,6 @@
       "Data Ecosystem Projects": [
         "recS00J4wbHllEKXs",
         "rec4aulcundpJZOwl",
-        "recxNVM0HeC0mSQyk",
         "rec24cVLtWAWZB6gx",
         "rec2eT5BuCp87chHm",
         "recIUSUS3NNXaMHCQ",
@@ -742,7 +741,8 @@
       "Investment Themes [Text Key]": "AI & ML Infrastructure",
       "Data Ecosystem Projects": [
         "rec5zVtFYWKUXASIr",
-        "recJyonPtboyfoLet"
+        "recJyonPtboyfoLet",
+        "recS70dZaWiddCf5J"
       ],
       "theme_key": "ai-ml-infra",
       "theme_description": "This area provides the computing resources, tools, and frameworks needed to develop, deploy, and scale artificial intelligence and machine learning solutions."
@@ -823,7 +823,8 @@
         "recf4QNnota3r1Jch",
         "recRqJS0I3kX5dYEJ",
         "recSIp9VIy4uKdPH3",
-        "recdr2wcQiX1Ch1ZF"
+        "recdr2wcQiX1Ch1ZF",
+        "recxNVM0HeC0mSQyk"
       ],
       "theme_key": "geoanalytics",
       "theme_description": "Geospatial Analytics leverages location-based data to help understand, predict, and respond to crises more effectively."
@@ -1184,7 +1185,6 @@
         "rec2Su6C7bHl4BC7h",
         "rec3xc850SaSrqS7t",
         "recbmA6Lmrr5AfAHJ",
-        "recxNVM0HeC0mSQyk",
         "recF8bGKczcSVXjRz",
         "recF1lTFIy27lMFwT",
         "recGG8gTf4t6l8Mue",
@@ -1542,7 +1542,6 @@
       "Data Ecosystem Projects": [
         "recEf0pdKsN1Gbvo8",
         "recJQghyXlyK5WiCE",
-        "recOOQ5c99vFwz8i8",
         "recgmCxRj8IVZMFF2",
         "recO3RZZ7IEA88GnQ",
         "recfTLQpzUgBOtlS5",
@@ -1552,7 +1551,8 @@
         "rec28WeSKDEQ5wx45",
         "rec2eT5BuCp87chHm",
         "recaApmxiLnw1JnZf",
-        "recFk4AqE3TR83nNo"
+        "recFk4AqE3TR83nNo",
+        "recxNVM0HeC0mSQyk"
       ],
       "theme_key": "conflict-analytics",
       "theme_description": "This offering provides data-driven insights to help organizations understand, anticipate, and respond to conflict situations within broader crisis contexts."
