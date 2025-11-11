@@ -1151,23 +1151,9 @@ const CrisisDataDashboard = ({
                                             onResetFilters={onResetFilters}
                                             projectCountsByType={projectCountsByType}
                                             projectCountsByTheme={projectCountsByTheme}
+                                            filterDescription={getFilterDescription()}
+                                            className="-mb-6 sm:-mb-7"
                                         />
-                                        <div className="flex items-center justify-between mt-5 -mb-6 sm:mt-2 sm:-mb-7">
-                                            <p className="text-xs sm:text-sm text-slate-600">
-                                                {getFilterDescription()}
-                                            </p>
-                                            {(combinedDonors.length > 0 || investmentTypes.length > 0 || investmentThemes.length > 0 || appliedSearchQuery) && (
-                                                <Button
-                                                    variant="outline"
-                                                    size="sm"
-                                                    onClick={onResetFilters}
-                                                    className="h-7 px-3 text-xs border-slate-300 bg-slate-100 text-slate-700 hover:bg-slate-200 hover:border-slate-300"
-                                                >
-                                                    <RotateCcw className="w-3 h-3 mr-1.5" />
-                                                    Reset
-                                                </Button>
-                                            )}
-                                        </div>
                                     </CardContent>
 
                                     {/* Tabs for Table and Network View */}
@@ -1466,6 +1452,7 @@ const CrisisDataDashboard = ({
                                                         investmentThemesByType={investmentThemesByType}
                                                         onThemesChange={onThemesChange}
                                                         onResetFilters={onResetFilters}
+                                                        filterDescription={getFilterDescription()}
                                                     />
                                                 </div>
                                             </TabsContent>
