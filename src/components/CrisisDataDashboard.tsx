@@ -618,28 +618,9 @@ const CrisisDataDashboard = ({
         );
     }
 
-    // Error state - only show if we're not loading and there's an error or no data
-    if (error) {
-        return (
-            <div className="min-h-screen bg-slate-50 flex items-center justify-center">
-                <div className="text-center">
-                    <p className="text-red-600 mb-2">{labels.error.message}</p>
-                    <p className="text-slate-500 text-sm">{error}</p>
-                </div>
-            </div>
-        );
-    }
-    
-    // If not loading, no error, but still no data - something went wrong
+    // If no data, just return null (no error screen)
     if (!dashboardData) {
-        return (
-            <div className="min-h-screen bg-slate-50 flex items-center justify-center">
-                <div className="text-center">
-                    <p className="text-red-600 mb-2">{labels.error.message}</p>
-                    <p className="text-slate-500 text-sm">No data available</p>
-                </div>
-            </div>
-        );
+        return null;
     }
     
     // Extract data for use in component
