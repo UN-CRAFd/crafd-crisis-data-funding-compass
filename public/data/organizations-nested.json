@@ -2450,14 +2450,41 @@
         "rec5RfuXsmtGtPDP8"
       ],
       "Org Donor Agencies": [
-        "recSrpTHE0mGFNF65"
+        "recSrpTHE0mGFNF65",
+        "recpOiAVqOz4n7ROD",
+        "reca3vbLWS2MqtmnV",
+        "rech10djtgHRF0JFS"
       ],
       "Org Type": "United Nations System"
     },
     "agencies": [
       {
         "id": "recSrpTHE0mGFNF65",
-        "fields": {}
+        "fields": {
+          "Agency/Department Name": "Patrick J McGovern",
+          "Country Name": "Foundation"
+        }
+      },
+      {
+        "id": "recpOiAVqOz4n7ROD",
+        "fields": {
+          "Agency/Department Name": "McKinsey & Company",
+          "Country Name": "Private"
+        }
+      },
+      {
+        "id": "reca3vbLWS2MqtmnV",
+        "fields": {
+          "Agency/Department Name": "Jain Family Institute",
+          "Country Name": "Foundation"
+        }
+      },
+      {
+        "id": "rech10djtgHRF0JFS",
+        "fields": {
+          "Agency/Department Name": "Google.org",
+          "Country Name": "Foundation"
+        }
       }
     ],
     "projects": [
@@ -2482,7 +2509,10 @@
         "agencies": []
       }
     ],
-    "donor_countries": []
+    "donor_countries": [
+      "Foundation",
+      "Private"
+    ]
   },
   {
     "id": "rec7BmCO0j9do4gKE",
@@ -3563,48 +3593,10 @@
           ],
           "CRAF’d-Funded Project?": "NO",
           "Investment Type(s)": [
-            "Learning & Exchange"
-          ],
-          "product_key": "dmt",
-          "HDX_SOHD": "None"
-        },
-        "agencies": []
-      },
-      {
-        "id": "recjbIls3C4riPk4C",
-        "fields": {
-          "Project/Product Name": "Advanced Analytics",
-          "Project Description": "PDC’s Multi-hazard risk score is a combination of multi-hazard exposure, vulnerability (susceptibility to impact), and coping capacity (the relative ability to absorb negative disaster impacts). This provides a collective measure of how each country may be affected by hazards and disasters as a whole over time.\n",
-          "Project Website": "https://www.pdc.org/advanced-analytics/",
-          "Provider Orgs Full Name": [
-            "recCvRYx3gzUtg9cf"
-          ],
-          "CRAF’d-Funded Project?": "NO",
-          "Investment Type(s)": [
-            "Crisis Analytics & Insights"
+            "Human Capital & Know-how"
           ],
           "Investment Theme(s)": [
-            "Disaster Hazard & Risk Modelling",
-            "Composite Indices",
-            "Climate Analytics"
-          ],
-          "product_key": "global-risk",
-          "HDX_SOHD": "None"
-        },
-        "agencies": []
-      },
-      {
-        "id": "recmoxMiTZoAQ8Cvg",
-        "fields": {
-          "Project/Product Name": "Disaster Management Training",
-          "Project Description": " Learn the basics and progress to becoming an advanced user in DisasterAWARE software. You may also request an on site, instructor-led classroom training at your location or ours. We can help you accomplish nearly any training objective.\n",
-          "Project Website": "https://www.pdc.org/training-and-exercises/",
-          "Provider Orgs Full Name": [
-            "recCvRYx3gzUtg9cf"
-          ],
-          "CRAF’d-Funded Project?": "NO",
-          "Investment Type(s)": [
-            "Learning & Exchange"
+            "Upskilling & Training"
           ],
           "product_key": "dmt",
           "HDX_SOHD": "None"
@@ -4443,6 +4435,7 @@
             "Data Storage, Access & Sharing",
             "Private Data Sharing"
           ],
+          "product_key": "flow-kit",
           "HDX_SOHD": "None"
         },
         "agencies": []
@@ -5081,7 +5074,8 @@
       "Org Description": "The Famine Early Warning Systems Network (FEWS NET) is a leading provider of early warning and analysis on acute food insecurity around the world.",
       "Org Donor Agencies": [
         "recQUVhcVyxZlXJ3H",
-        "recjiYJTFpNO2PDDl"
+        "recjiYJTFpNO2PDDl",
+        "reckIAhFXgj4XL29b"
       ],
       "org_key": "fews-net",
       "Org Type": "Government / Public Sector"
@@ -5099,6 +5093,13 @@
         "id": "recjiYJTFpNO2PDDl",
         "fields": {
           "Agency/Department Name": "National Aeronautics and Space Administration (NASA)",
+          "Country Name": "USA"
+        }
+      },
+      {
+        "id": "reckIAhFXgj4XL29b",
+        "fields": {
+          "Agency/Department Name": "Unspecified Agency",
           "Country Name": "USA"
         }
       }
@@ -6569,7 +6570,10 @@
           ],
           "CRAF’d-Funded Project?": "NO",
           "Investment Type(s)": [
-            "Learning & Exchange"
+            "Human Capital & Know-how"
+          ],
+          "Investment Theme(s)": [
+            "Upskilling & Training"
           ],
           "product_key": "losm",
           "HDX_SOHD": "None"
@@ -10530,7 +10534,8 @@
       "Org Website": "https://uci.edu/",
       "Org Description": "University of California, Irvine was founded with a mission to catalyze the community and enhance lives through rigorous academics, cutting-edge research, and dedicated public service. Today, we draw on the unyielding spirit of our pioneering faculty, staff and students who arrived on campus with a dream to inspire change and generate new ideas. We believe that true progress is made when different perspectives come together to advance our understanding of the world around us. And we enlighten our communities and point the way to a better future. At UCI, we shine brighter.",
       "Provided Data Ecosystem Projects": [
-        "recyMSQo5lV032SER"
+        "recyMSQo5lV032SER",
+        "recv5dYsIn6eMs7MI"
       ],
       "Org Donor Agencies": [
         "reckIAhFXgj4XL29b",
@@ -10559,6 +10564,26 @@
       }
     ],
     "projects": [
+      {
+        "id": "recv5dYsIn6eMs7MI",
+        "fields": {
+          "Project/Product Name": "SWOT: The Safe Water Optimization Tool",
+          "Project Website": "https://www.safeh2o.app/",
+          "Provider Orgs Full Name": [
+            "reckvvkhRKujyhOqD"
+          ],
+          "CRAF’d-Funded Project?": "NO",
+          "Investment Type(s)": [
+            "Infrastructure & Platforms"
+          ],
+          "Investment Theme(s)": [
+            "AI & ML Infrastructure",
+            "Data Collection"
+          ],
+          "HDX_SOHD": "None"
+        },
+        "agencies": []
+      },
       {
         "id": "recyMSQo5lV032SER",
         "fields": {
