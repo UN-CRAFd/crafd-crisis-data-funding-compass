@@ -239,11 +239,14 @@ const CrisisDataDashboardWrapper = ({ logoutButton }: { logoutButton?: React.Rea
                 
                 // Skip fetch if filters haven't actually changed
                 if (lastFetchedFiltersRef.current === filterSignature) {
+                    // Ensure loading is false if we're skipping the fetch
+                    setLoading(false);
                     return;
                 }
                 
                 lastFetchedFiltersRef.current = filterSignature;
                 
+                setLoading(true); // Set loading when starting fetch
                 setError(null);
 
                 const filters: DashboardFilters = {
