@@ -540,6 +540,20 @@ const NetworkGraph: React.FC<NetworkGraphProps> = ({
         }
     }, [dimensions]); // Re-run when dimensions change to update center position
 
+    // Center view immediately when component mounts or becomes visible
+    useEffect(() => {
+        if (!graphRef.current || !graphData.nodes.length) return;
+        
+        // Small delay to ensure the graph is rendered
+        const timer = setTimeout(() => {
+            if (graphRef.current) {
+                graphRef.current.zoomToFit(0, 50); // 0ms = instant, no animation
+            }
+        }, 100);
+        
+        return () => clearTimeout(timer);
+    }, []); // Run once on mount
+
     // Apply clustering with smooth transitions and collision avoidance
     useEffect(() => {
         if (!graphRef.current) return;

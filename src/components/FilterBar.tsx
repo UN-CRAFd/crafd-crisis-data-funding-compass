@@ -514,7 +514,7 @@ const FilterBar: React.FC<FilterBarProps> = ({
 
             {/* Filter Description and Reset Button */}
             {filterDescription && (
-                <div className="flex items-center justify-between mt-2">
+                <div className="flex items-center justify-between gap-4 mt-2">
                     <p className="text-xs sm:text-sm text-slate-600">
                         {filterDescription}
                     </p>
