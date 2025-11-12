@@ -9,7 +9,9 @@
       "Investment Type": [
         "Learning & Exchange"
       ],
-      "Investment Themes [Text Key]": "Talk Series"
+      "Investment Themes [Text Key]": "Talk Series",
+      "theme_key": "talkseries",
+      "theme_description": "A series of expert-led sessions designed to facilitate knowledge sharing and discussion on key topics."
     }
   },
   {
@@ -24,8 +26,11 @@
       ],
       "Investment Themes [Text Key]": "Digital Product & Tool Development",
       "Data Ecosystem Projects": [
-        "recfjAhO2DxCjgEgM"
-      ]
+        "recfjAhO2DxCjgEgM",
+        "rec3YDnHw5YkToiKf"
+      ],
+      "theme_key": "dptd",
+      "theme_description": "Creating and refining digital solutions that enhance workforce skills, knowledge sharing, and organizational effectiveness."
     }
   },
   {
@@ -38,7 +43,9 @@
       "Investment Type": [
         "Learning & Exchange"
       ],
-      "Investment Themes [Text Key]": "Peer Learning"
+      "Investment Themes [Text Key]": "Peer Learning",
+      "theme_key": "peer",
+      "theme_description": "Participants share knowledge and experiences with each other to enhance collective understanding and skills."
     }
   },
   {
@@ -52,17 +59,11 @@
         "Crisis Analytics & Insights"
       ],
       "Investment Themes [Text Key]": "Secondary Data Review / Analysis",
-      "theme_description": "Secondary Data Review/Analysis is the process of collecting, evaluating, and synthesizing existing data from various sources to inform crisis response and decision-making in humanitarian contexts."
-    }
-  },
-  {
-    "id": "rec3txr41waJFGqhU",
-    "fields": {
-      "THEME_ID": "rec3txr41waJFGqhU",
-      "Investment Themes [Text Key]": "API Development & Management",
       "Data Ecosystem Projects": [
-        "recmH2oywWDYooamX"
-      ]
+        "recSbniShY9V8cE4L"
+      ],
+      "theme_key": "sdr",
+      "theme_description": "Collects and examines existing data sources to inform decision-making and response strategies during crises."
     }
   },
   {
@@ -80,11 +81,12 @@
         "rec6rg7iVHuTnkQVe",
         "recLGd1qlYszSKznz",
         "recniOH9IPt0Vz07E",
-        "rec96xC14xTkyyKlP",
         "recLN9L7RGRz4p1zM",
         "rec2eT5BuCp87chHm",
         "recWKNeEWEv3vKeyX"
-      ]
+      ],
+      "theme_key": "access",
+      "theme_description": "Humanitarian Access Data provides information to support safe and effective humanitarian operations in challenging environments."
     }
   },
   {
@@ -98,9 +100,8 @@
         "Standards & Coordination"
       ],
       "Investment Themes [Text Key]": "Common Indicators",
-      "Data Ecosystem Projects": [
-        "reczIeSUeAdEWMKSk"
-      ]
+      "theme_key": "indicator",
+      "theme_description": "Common Indicators support consistent measurement and reporting practices across initiatives, enabling better coordination and comparability of results."
     }
   },
   {
@@ -115,12 +116,14 @@
       ],
       "Investment Themes [Text Key]": "Geographic Information Systems (GIS)",
       "Data Ecosystem Projects": [
-        "recgPTOSUzIQS7uLs",
         "rec04lJaB92fTs0JH",
-        "rec2Su6C7bHl4BC7h",
         "recFnNCbi5RYJNchr",
-        "recEuWdBixgTpQKhR"
-      ]
+        "recEuWdBixgTpQKhR",
+        "rec9HIhsIpPjx48rc",
+        "rec2Su6C7bHl4BC7h"
+      ],
+      "theme_key": "gis",
+      "theme_description": "Tools and platforms that enable the collection, analysis, and visualization of spatial and geographic data to support infrastructure planning and management."
     }
   },
   {
@@ -136,7 +139,9 @@
       "Investment Themes [Text Key]": "Workshops",
       "Data Ecosystem Projects": [
         "rech8GCismNX3Bm8p"
-      ]
+      ],
+      "theme_key": "workshops",
+      "theme_description": "Interactive sessions designed to build practical skills and knowledge through hands-on activities and group participation."
     }
   },
   {
@@ -153,9 +158,12 @@
       "Data Ecosystem Projects": [
         "recYzS7BrsxBG8llV",
         "recdr2wcQiX1Ch1ZF",
-        "recLn4QiWGniBsWoe"
+        "recLn4QiWGniBsWoe",
+        "recjbIls3C4riPk4C",
+        "recXaGjOLcrJQCuNn"
       ],
-      "theme_description": "Composite Indices in humanitarian data are aggregated measures that combine multiple indicators to provide a comprehensive overview of crisis severity, vulnerability, or needs for more effective crisis analytics and decision-making."
+      "theme_key": "composite",
+      "theme_description": "Combining multiple data sources, this area provides holistic measurements to assess and monitor crisis situations more effectively."
     }
   },
   {
@@ -171,7 +179,9 @@
       "Investment Themes [Text Key]": "Surge Capacity",
       "Data Ecosystem Projects": [
         "rec8HCRgYhj3eDhQ0"
-      ]
+      ],
+      "theme_key": "surgecap",
+      "theme_description": "Surge Capacity focuses on rapidly mobilizing and scaling skilled personnel to meet urgent organizational or societal needs."
     }
   },
   {
@@ -184,7 +194,9 @@
       "Investment Type": [
         "Data Sets & Commons"
       ],
-      "Investment Themes [Text Key]": "Sexual & Reproductive Health Data"
+      "Investment Themes [Text Key]": "Sexual & Reproductive Health Data",
+      "theme_key": "sex-rep-health",
+      "theme_description": "This area focuses on collecting, sharing, and analyzing data related to sexual and reproductive health to support research, policy, and public health initiatives."
     }
   },
   {
@@ -199,9 +211,11 @@
       ],
       "Investment Themes [Text Key]": "Needs Assessment Analytics",
       "Data Ecosystem Projects": [
-        "reczIeSUeAdEWMKSk"
+        "reczIeSUeAdEWMKSk",
+        "rec04YelpRCFjpBV8"
       ],
-      "theme_description": "Needs Assessment is the process of systematically collecting and analyzing data to identify and prioritize the most urgent needs of affected populations during a humanitarian crisis."
+      "theme_key": "needs-assessment",
+      "theme_description": "Analyzes data to identify and prioritize urgent needs during crises, supporting informed decision-making and resource allocation."
     }
   },
   {
@@ -218,8 +232,34 @@
       "Data Ecosystem Projects": [
         "recIUSUS3NNXaMHCQ",
         "recD0o9DgLleR3ctz",
-        "recuMPe1WRudzeyXf"
-      ]
+        "recuMPe1WRudzeyXf",
+        "reczwfqv4kuJclB0U",
+        "recqvGzOfmdkjYOHe",
+        "rec15YViTm12t9q9C",
+        "rec3YDnHw5YkToiKf"
+      ],
+      "theme_key": "capbuild",
+      "theme_description": "Developing skills, knowledge, and resources to enhance individual and organizational effectiveness."
+    }
+  },
+  {
+    "id": "recA7HCrfnZDtBUlg",
+    "fields": {
+      "THEME_ID": "recA7HCrfnZDtBUlg",
+      "Linked Investment Type": [
+        "recUueuvKqzUgF7Xo"
+      ],
+      "Investment Type": [
+        "Human Capital & Know-how"
+      ],
+      "Investment Themes [Text Key]": "Information Managment",
+      "Data Ecosystem Projects": [
+        "rec8HCRgYhj3eDhQ0",
+        "reclcvFLzfAlhADFB",
+        "recLjLXetvlqcDMXB",
+        "rec3YDnHw5YkToiKf"
+      ],
+      "theme_key": "info-management\n"
     }
   },
   {
@@ -236,7 +276,9 @@
       "Data Ecosystem Projects": [
         "recZ87vNFuxhuJIih",
         "rec8taCKOmbZu5s4Z"
-      ]
+      ],
+      "theme_key": "best-practices",
+      "theme_description": "Sharing proven methods and strategies to enhance knowledge and improve outcomes across the organization."
     }
   },
   {
@@ -249,7 +291,9 @@
       "Investment Type": [
         "Human Capital & Know-how"
       ],
-      "Investment Themes [Text Key]": "Change Management Services"
+      "Investment Themes [Text Key]": "Change Management Services",
+      "theme_key": "cms",
+      "theme_description": "Helps organizations guide employees through transitions by providing strategies and support to adapt to new processes, technologies, or structures."
     }
   },
   {
@@ -263,10 +307,8 @@
         "Infrastructure & Platforms"
       ],
       "Investment Themes [Text Key]": "Data Governance & Management",
-      "Data Ecosystem Projects": [
-        "rec96xC14xTkyyKlP",
-        "recXcSKhSy2s7tunj"
-      ]
+      "theme_key": "datagov",
+      "theme_description": "Ensures that data is properly organized, secured, and accessible across technology systems."
     }
   },
   {
@@ -281,20 +323,24 @@
       ],
       "Investment Themes [Text Key]": "Climate Analytics",
       "Data Ecosystem Projects": [
-        "recgPTOSUzIQS7uLs",
         "recQubJTGSwZoqzix",
-        "recAeviz1XjLC8V6i",
         "recUotlR1ZJwVMAIS",
-        "rece4fDBOtjCywl9q",
         "recueXHi1BfJrz30y",
         "rec28WeSKDEQ5wx45",
         "recEwLy3FESOhLeNs",
         "recYwllVfGjgi7rdS",
         "recgpnIj48zBCayHc",
         "recLn4QiWGniBsWoe",
-        "recQJwZB8vyAFwK4C"
+        "recQJwZB8vyAFwK4C",
+        "recjbIls3C4riPk4C",
+        "recxNVM0HeC0mSQyk",
+        "recyMSQo5lV032SER",
+        "recUtgQxL73zHDTCF",
+        "recpARdDyMReIUuDq",
+        "recmzmFWkB8g2kiyj"
       ],
-      "theme_description": "Climate Analytics is the process of analyzing climate-related data to provide insights and support decision-making for humanitarian response and crisis management."
+      "theme_key": "climate-analytics",
+      "theme_description": "Climate Analytics focuses on analyzing climate-related data to help organizations understand and respond to climate risks and impacts during crises."
     }
   },
   {
@@ -311,8 +357,12 @@
       "Data Ecosystem Projects": [
         "rec7HiwptaxnhVxui",
         "recCGWvmunEXVzpzw",
-        "rechtC1lJc96HgvFk"
-      ]
+        "rechtC1lJc96HgvFk",
+        "recSTdLTga3nMLgPn",
+        "recpVTiR964LzzJng"
+      ],
+      "theme_key": "sentiment",
+      "theme_description": "This offering provides access to collections of data reflecting public attitudes and opinions."
     }
   },
   {
@@ -325,7 +375,9 @@
       "Investment Type": [
         "Human Capital & Know-how"
       ],
-      "Investment Themes [Text Key]": "Regional Hubs"
+      "Investment Themes [Text Key]": "Regional Hubs",
+      "theme_key": "regional-hubs",
+      "theme_description": "Regional Hubs foster local talent development and knowledge sharing to strengthen human capital within specific geographic areas."
     }
   },
   {
@@ -338,12 +390,14 @@
       "Investment Type": [
         "Standards & Coordination"
       ],
-      "Investment Themes [Text Key]": "Methodological Standards (e.g., Data Collection)",
+      "Investment Themes [Text Key]": "Methodological Standards",
       "Data Ecosystem Projects": [
-        "recXkQODU8on8xy2v",
         "rechQ1azyTpypEDEy",
-        "recZaSDcZgIUtalO5"
-      ]
+        "recZaSDcZgIUtalO5",
+        "rec96xC14xTkyyKlP"
+      ],
+      "theme_key": "standards",
+      "theme_description": "Establishes best practices to ensure consistency, reliability, and quality in how information is gathered and analyzed across projects."
     }
   },
   {
@@ -361,9 +415,10 @@
         "recEf0pdKsN1Gbvo8",
         "recJQghyXlyK5WiCE",
         "recNggnBqXIgii2hz",
-        "recGnEnRmDmoQ59wM"
+        "recpaU5vlkr1O5EVC"
       ],
-      "theme_description": "Health Analytics involves analyzing health-related data to identify trends, risks, and needs, enabling better decision-making and targeted interventions in humanitarian crises."
+      "theme_key": "health-analytics",
+      "theme_description": "Analyzes health-related data to inform decision-making and improve outcomes during crises."
     }
   },
   {
@@ -379,19 +434,34 @@
       "Investment Themes [Text Key]": "Monitoring & Alerts",
       "Data Ecosystem Projects": [
         "recpP1KGKcmcpy2jo",
-        "recFk4AqE3TR83nNo",
         "recEwLy3FESOhLeNs",
         "recf0UvW6LzObKXGC",
-        "recVj2ULsOWhPFQ19",
-        "rec9HIhsIpPjx48rc",
         "recjxVwrxVL90go5G",
         "recgzWbqbmwOXHLnq",
         "recfTLQpzUgBOtlS5",
         "recNggnBqXIgii2hz",
         "recO7hHncZQGqy2vJ",
-        "reczpMP2LZqBg7Cnd"
+        "reczpMP2LZqBg7Cnd",
+        "recXaGjOLcrJQCuNn",
+        "recpaU5vlkr1O5EVC"
       ],
-      "theme_description": "Monitoring & Alerts in Crisis Analytics & Insights involves continuously tracking humanitarian data to quickly detect and notify stakeholders of emerging crises or significant changes, enabling timely and informed responses."
+      "theme_key": "monitoring",
+      "theme_description": "Provides real-time detection and notification of emerging crises to support timely decision-making and response."
+    }
+  },
+  {
+    "id": "recFwccnjpH0fMP9a",
+    "fields": {
+      "THEME_ID": "recFwccnjpH0fMP9a",
+      "Linked Investment Type": [
+        "recrKFJAlS8YmW1Qi"
+      ],
+      "Investment Type": [
+        "Data Sets & Commons"
+      ],
+      "Investment Themes [Text Key]": "Administrative Boundaries",
+      "theme_key": "admin",
+      "theme_description": "Defines and provides access to official geographic borders for regions, cities, and other administrative areas."
     }
   },
   {
@@ -407,16 +477,10 @@
       "Investment Themes [Text Key]": "Climate Data",
       "Data Ecosystem Projects": [
         "recr5hGDgBiAH4xSm",
-        "recxNVM0HeC0mSQyk",
         "rec4SqufwyxLeeDM4",
-        "recpARdDyMReIUuDq",
         "recF1lTFIy27lMFwT",
-        "recUtgQxL73zHDTCF",
-        "recyMSQo5lV032SER",
         "recGMlI70iaqyTtMo",
         "recQubJTGSwZoqzix",
-        "rec9HIhsIpPjx48rc",
-        "recgPTOSUzIQS7uLs",
         "recQMdm14niuRSFQp",
         "recSvtWQnSvfNoXdt",
         "rec5GA5F1UPlXATSj",
@@ -426,7 +490,9 @@
         "rece4fDBOtjCywl9q",
         "recueXHi1BfJrz30y",
         "recyn1h3FptgV2ZAv"
-      ]
+      ],
+      "theme_key": "climate",
+      "theme_description": "Provides access to collections of weather and environmental measurements for research and analysis."
     }
   },
   {
@@ -441,10 +507,11 @@
       ],
       "Investment Themes [Text Key]": "Data Collection",
       "Data Ecosystem Projects": [
-        "rec96xC14xTkyyKlP",
         "recONFtYpO5v2qk7s",
         "rech8GCismNX3Bm8p"
-      ]
+      ],
+      "theme_key": "collect",
+      "theme_description": "Enables the reliable gathering and aggregation of information from diverse sources to support robust digital operations."
     }
   },
   {
@@ -458,7 +525,12 @@
         "Crisis Analytics & Insights"
       ],
       "Investment Themes [Text Key]": "Disaster Hazard & Risk Modelling",
-      "theme_description": "Disaster Hazard & Risk Modelling uses data and analytics to predict, assess, and visualize potential crises, enabling humanitarian organizations to better prepare for and respond to disasters."
+      "Data Ecosystem Projects": [
+        "recjbIls3C4riPk4C",
+        "recxNVM0HeC0mSQyk"
+      ],
+      "theme_key": "risk",
+      "theme_description": "This subfield uses data and analytical models to assess potential disaster impacts and inform risk reduction strategies."
     }
   },
   {
@@ -471,7 +543,9 @@
       "Investment Type": [
         "Standards & Coordination"
       ],
-      "Investment Themes [Text Key]": "Metadata"
+      "Investment Themes [Text Key]": "Metadata",
+      "theme_key": "meta",
+      "theme_description": "Establishes common frameworks for describing and organizing data to ensure consistency and interoperability across systems."
     }
   },
   {
@@ -488,7 +562,9 @@
       "Data Ecosystem Projects": [
         "rech8GCismNX3Bm8p",
         "recdGuPPf12Osu2Tw"
-      ]
+      ],
+      "theme_key": "conf",
+      "theme_description": "Brings people together to share knowledge, insights, and best practices through expert-led sessions and collaborative discussions."
     }
   },
   {
@@ -506,7 +582,8 @@
         "recvuixaI146ykcHe",
         "recaWq49HJw4UXd9K"
       ],
-      "theme_description": "Nutrition Analytics involves collecting and analyzing nutrition-related data to provide insights that inform effective humanitarian interventions and improve nutritional outcomes in crisis situations."
+      "theme_key": "nutrition-analytics",
+      "theme_description": "Analyzes food security and nutritional data to inform effective crisis response and resource allocation."
     }
   },
   {
@@ -521,10 +598,10 @@
       ],
       "Investment Themes [Text Key]": "Gender Analytics",
       "Data Ecosystem Projects": [
-        "recGVHndBPIvMpuHb",
         "recO3RZZ7IEA88GnQ"
       ],
-      "theme_description": "Gender Analytics examines how gender differences impact needs, experiences, and outcomes, providing insights to ensure humanitarian responses are equitable and effective."
+      "theme_key": "gender-analytics",
+      "theme_description": "Gender Analytics applies data-driven insights to understand how crises impact different genders, supporting more equitable and effective crisis response strategies."
     }
   },
   {
@@ -544,10 +621,12 @@
         "recuv6YqfhZHQGvmd",
         "recQpqVqEuaLuj8jT",
         "reccyJzv7bOpjmC4B",
-        "recOOQ5c99vFwz8i8",
         "recgmCxRj8IVZMFF2",
-        "recp0YELy7eVj9FUs"
-      ]
+        "recp0YELy7eVj9FUs",
+        "recp4lLg28MQMpBnW"
+      ],
+      "theme_key": "peacedata",
+      "theme_description": "Peace Data focuses on collecting and sharing information that supports research and initiatives aimed at promoting peace and conflict resolution."
     }
   },
   {
@@ -564,8 +643,13 @@
       "Data Ecosystem Projects": [
         "recPMQlg07QkflL3i",
         "recfjAhO2DxCjgEgM",
-        "rec8HCRgYhj3eDhQ0"
-      ]
+        "rec8HCRgYhj3eDhQ0",
+        "recogMAjsbKV95Pqs",
+        "recUtNMMh0FAIx6SD",
+        "recWaF6STUFBHx50r"
+      ],
+      "theme_key": "adai",
+      "theme_description": "Leveraging data analysis to uncover workforce trends and actionable insights that enhance organizational talent strategies."
     }
   },
   {
@@ -579,7 +663,8 @@
         "Crisis Analytics & Insights"
       ],
       "Investment Themes [Text Key]": "Migration Analytics ",
-      "theme_description": "Migration Analytics uses data and analytical tools to understand, monitor, and predict migration patterns, helping humanitarian organizations respond effectively to migration-related crises."
+      "theme_key": "migration-analytics",
+      "theme_description": "Analyzes migration patterns and trends to inform crisis response and decision-making."
     }
   },
   {
@@ -600,7 +685,9 @@
         "recuv6YqfhZHQGvmd",
         "recQpqVqEuaLuj8jT",
         "reccyJzv7bOpjmC4B"
-      ]
+      ],
+      "theme_key": "disararment\n",
+      "theme_description": "Disarmament Data provides access to datasets and resources that support research and analysis on global disarmament efforts and arms control."
     }
   },
   {
@@ -616,11 +703,8 @@
       "Investment Themes [Text Key]": "Conflict & Violence Data",
       "Data Ecosystem Projects": [
         "recS00J4wbHllEKXs",
-        "rec4aulcundpJZOwl",
-        "recxNVM0HeC0mSQyk",
         "rec24cVLtWAWZB6gx",
         "rec2eT5BuCp87chHm",
-        "recIUSUS3NNXaMHCQ",
         "recQ0XV79TSq6v4Sj",
         "recWziB7RyyVfMv3A",
         "recCrLYQFMbrPxsId",
@@ -636,8 +720,11 @@
         "recO3RZZ7IEA88GnQ",
         "recWiXtcwxhgmhgNY",
         "recFF8BskJRz2Lyjk",
-        "recaApmxiLnw1JnZf"
-      ]
+        "recaApmxiLnw1JnZf",
+        "recTaCZEF36yEoMIT"
+      ],
+      "theme_key": "conflict-violence-data",
+      "theme_description": "This data focuses on documenting and analyzing incidents, patterns, and impacts of conflict and violence to support research and informed decision-making."
     }
   },
   {
@@ -650,7 +737,9 @@
       "Investment Type": [
         "Infrastructure & Platforms"
       ],
-      "Investment Themes [Text Key]": "Automated Data Auditing"
+      "Investment Themes [Text Key]": "Automated Data Auditing",
+      "theme_key": "ada",
+      "theme_description": "Automated Data Auditing uses technology to continuously monitor and verify data integrity and compliance within digital infrastructure systems."
     }
   },
   {
@@ -666,8 +755,11 @@
       "Investment Themes [Text Key]": "AI & ML Infrastructure",
       "Data Ecosystem Projects": [
         "rec5zVtFYWKUXASIr",
-        "recJyonPtboyfoLet"
-      ]
+        "recJyonPtboyfoLet",
+        "recS70dZaWiddCf5J"
+      ],
+      "theme_key": "ai-ml-infra",
+      "theme_description": "This area provides the computing resources, tools, and frameworks needed to develop, deploy, and scale artificial intelligence and machine learning solutions."
     }
   },
   {
@@ -681,9 +773,8 @@
         "Standards & Coordination"
       ],
       "Investment Themes [Text Key]": "Open Access",
-      "Data Ecosystem Projects": [
-        "recgbAUAt9auV97KC"
-      ]
+      "theme_key": "oa",
+      "theme_description": "Facilitates the development and adoption of standards that ensure research outputs are freely accessible and interoperable across platforms."
     }
   },
   {
@@ -696,11 +787,13 @@
       "Investment Type": [
         "Data Sets & Commons"
       ],
-      "Investment Themes [Text Key]": "3W (Who does What, Where) Data",
+      "Investment Themes [Text Key]": "3W (Who does What & Where) Data",
       "Data Ecosystem Projects": [
         "recAmBwUrrYDMtXtH",
         "recN8yVJX7xphyQME"
-      ]
+      ],
+      "theme_key": "3w",
+      "theme_description": "Information about which organizations are carrying out specific activities in particular locations."
     }
   },
   {
@@ -715,8 +808,11 @@
       ],
       "Investment Themes [Text Key]": "Ethics",
       "Data Ecosystem Projects": [
-        "recxWS5Ys5dJ0dn1X"
-      ]
+        "recxWS5Ys5dJ0dn1X",
+        "recGG8gTf4t6l8Mue"
+      ],
+      "theme_key": "ethics",
+      "theme_description": "Guidance is provided to ensure responsible and principled decision-making in the development and implementation of standards."
     }
   },
   {
@@ -739,9 +835,12 @@
         "recf4QNnota3r1Jch",
         "recRqJS0I3kX5dYEJ",
         "recSIp9VIy4uKdPH3",
-        "recdr2wcQiX1Ch1ZF"
+        "recdr2wcQiX1Ch1ZF",
+        "recxNVM0HeC0mSQyk",
+        "rec5RfuXsmtGtPDP8"
       ],
-      "theme_description": "Geospatial Analytics in humanitarian data uses location-based data to analyze and visualize crisis situations, enabling better decision-making and targeted response during emergencies."
+      "theme_key": "geoanalytics",
+      "theme_description": "Geospatial Analytics leverages location-based data to help understand, predict, and respond to crises more effectively."
     }
   },
   {
@@ -757,13 +856,14 @@
       "Investment Themes [Text Key]": "Gender Data",
       "Data Ecosystem Projects": [
         "recGVHndBPIvMpuHb",
-        "recrWrHtaaCWN2TVH",
         "rechQ1azyTpypEDEy",
         "rec9tb7ISjeo7Sq78",
         "recGoW02CMXhVQ00S",
         "recp0YELy7eVj9FUs",
         "recO3RZZ7IEA88GnQ"
-      ]
+      ],
+      "theme_key": "genderdata",
+      "theme_description": "This collection focuses on data related to gender, supporting research and analysis on gender-related topics."
     }
   },
   {
@@ -777,9 +877,8 @@
         "Learning & Exchange"
       ],
       "Investment Themes [Text Key]": "Guides",
-      "Data Ecosystem Projects": [
-        "recGG8gTf4t6l8Mue"
-      ]
+      "theme_key": "guides",
+      "theme_description": "Guides provide structured resources to help users deepen their understanding and skills within a specific topic."
     }
   },
   {
@@ -795,9 +894,12 @@
       "Investment Themes [Text Key]": "AI Models",
       "Data Ecosystem Projects": [
         "recLA3jRq3bbZRVzu",
-        "rec28WeSKDEQ5wx45"
+        "rec28WeSKDEQ5wx45",
+        "recb50ne79iS2TFYz",
+        "rec5RfuXsmtGtPDP8"
       ],
-      "theme_description": "AI Models in Crisis Analytics & Insights analyze humanitarian data to detect patterns, predict crises, and provide actionable recommendations for effective emergency response."
+      "theme_key": "ai-models",
+      "theme_description": "AI Models enable advanced analysis and prediction to support data-driven decision-making during crises."
     }
   },
   {
@@ -810,7 +912,9 @@
       "Investment Type": [
         "Infrastructure & Platforms"
       ],
-      "Investment Themes [Text Key]": "Open Source LLMs"
+      "Investment Themes [Text Key]": "Open Source LLMs",
+      "theme_key": "ossllm",
+      "theme_description": "Open source large language models provide foundational tools and frameworks that enable organizations to build, deploy, and scale AI solutions on their own infrastructure."
     }
   },
   {
@@ -826,7 +930,9 @@
       "Investment Themes [Text Key]": "Interoperable Formats",
       "Data Ecosystem Projects": [
         "recp0YELy7eVj9FUs"
-      ]
+      ],
+      "theme_key": "interop",
+      "theme_description": "Facilitates seamless data exchange and integration across diverse systems by promoting the use of common data formats and protocols."
     }
   },
   {
@@ -839,7 +945,9 @@
       "Investment Type": [
         "Standards & Coordination"
       ],
-      "Investment Themes [Text Key]": "Data Documentation"
+      "Investment Themes [Text Key]": "Data Documentation",
+      "theme_key": "data-documentation",
+      "theme_description": "Ensures consistent and accurate recording of data details to support interoperability and effective data sharing."
     }
   },
   {
@@ -857,7 +965,9 @@
         "recrq5pa36yxwSE2c",
         "recPMQlg07QkflL3i",
         "recfjAhO2DxCjgEgM"
-      ]
+      ],
+      "theme_key": "data-analytics",
+      "theme_description": "Data analytics leverages workforce data to inform talent strategies, optimize performance, and support evidence-based decision-making within organizations."
     }
   },
   {
@@ -876,7 +986,9 @@
         "recJye4S746MWWmW6",
         "recgftq4GZElVtfi6",
         "recQMdm14niuRSFQp"
-      ]
+      ],
+      "theme_key": "wash",
+      "theme_description": "Data on Water, Sanitation & Hygiene (WASH) provides insights into access, quality, and management of water and sanitation services to support public health and development efforts."
     }
   },
   {
@@ -893,8 +1005,10 @@
       "Data Ecosystem Projects": [
         "recy1WUw4sZ55UmrS",
         "recF8bGKczcSVXjRz",
-        "recrWrHtaaCWN2TVH"
-      ]
+        "recniVpxHScJaQdLq"
+      ],
+      "theme_key": "eddata",
+      "theme_description": "Education Data focuses on collecting, organizing, and sharing datasets related to educational systems, outcomes, and resources."
     }
   },
   {
@@ -915,8 +1029,12 @@
         "recfzWyIVXJCeFFAN",
         "rec0u1ul8iu7Yvbys",
         "recbwtmwsCLbYZSBi",
-        "recuOsuVWoVNvCO5k"
-      ]
+        "recuOsuVWoVNvCO5k",
+        "recfvtc6piaTv5ar2",
+        "recblEG9dcRNcvYaX"
+      ],
+      "theme_key": "health-data",
+      "theme_description": "This area focuses on the collection, sharing, and management of datasets related to health and healthcare for research and innovation."
     }
   },
   {
@@ -933,7 +1051,6 @@
       "Data Ecosystem Projects": [
         "recRMNk0JflJq6VMa",
         "recvaextZy2CbEkxr",
-        "rectg1V7Xcu5CcQq0",
         "recuqvvqKg7D86DIm",
         "recR021jYyNleSCho",
         "reck0qeeLf1nGLbap",
@@ -943,11 +1060,12 @@
         "rectaDjtvGUN9jPNg",
         "rec4NnFipAOHwTXCX",
         "recEKzVdOqCJVhqrg",
-        "recyMSQo5lV032SER",
         "recEf0pdKsN1Gbvo8",
         "recLN9L7RGRz4p1zM",
         "recGoW02CMXhVQ00S"
-      ]
+      ],
+      "theme_key": "displacement-migration",
+      "theme_description": "This area focuses on collections of information related to population movements and migration patterns."
     }
   },
   {
@@ -960,7 +1078,9 @@
       "Investment Type": [
         "Learning & Exchange"
       ],
-      "Investment Themes [Text Key]": "Case Studies "
+      "Investment Themes [Text Key]": "Case Studies ",
+      "theme_key": "case-studies",
+      "theme_description": "In-depth analyses of real-world examples are shared to facilitate learning from practical experiences and best practices."
     }
   },
   {
@@ -974,9 +1094,8 @@
         "Standards & Coordination"
       ],
       "Investment Themes [Text Key]": "APIs Standard",
-      "Data Ecosystem Projects": [
-        "rec9HIhsIpPjx48rc"
-      ]
+      "theme_key": "api",
+      "theme_description": "APIs Standard establishes guidelines to ensure consistent, secure, and interoperable application programming interfaces across systems."
     }
   },
   {
@@ -993,9 +1112,11 @@
       "Data Ecosystem Projects": [
         "recIUSUS3NNXaMHCQ",
         "recu82l0uk7d3IHeU",
-        "recUotlR1ZJwVMAIS"
+        "recUotlR1ZJwVMAIS",
+        "reczIeSUeAdEWMKSk"
       ],
-      "theme_description": "Impact Evaluation in Crisis Analytics & Insights assesses the effectiveness of humanitarian interventions by analyzing data to determine what changes occurred as a result of specific actions during crises."
+      "theme_key": "impact",
+      "theme_description": "It measures the effectiveness of crisis response efforts by analyzing data to determine what interventions work and why."
     }
   },
   {
@@ -1018,8 +1139,12 @@
         "recXZCOUpEBDjWHOu",
         "receXQgibfVmjvmeB",
         "recjAd7jOVvlh7mnp",
-        "rec7Gm0sUCCMECxFU"
-      ]
+        "rec7Gm0sUCCMECxFU",
+        "rec6S0tX5hnP9I5DG",
+        "recpaU5vlkr1O5EVC"
+      ],
+      "theme_key": "baselinepop",
+      "theme_description": "Provides foundational demographic and population statistics to support research, analysis, and policy development."
     }
   },
   {
@@ -1033,7 +1158,8 @@
         "Crisis Analytics & Insights"
       ],
       "Investment Themes [Text Key]": "Sentiment Analysis",
-      "theme_description": "Sentiment Analysis in Crisis Analytics & Insights involves using humanitarian data to automatically detect and interpret the emotions, attitudes, or opinions expressed in communications during crises, helping organizations understand public sentiment and respond more effectively."
+      "theme_key": "sentiment",
+      "theme_description": "Analyzing public emotions and opinions during crises helps organizations understand community reactions and improve response strategies."
     }
   },
   {
@@ -1050,7 +1176,8 @@
       "Data Ecosystem Projects": [
         "recJQghyXlyK5WiCE"
       ],
-      "theme_description": "Poverty Analytics uses data-driven methods to identify, measure, and understand patterns of poverty, enabling targeted humanitarian responses and informed decision-making during crises."
+      "theme_key": "poverty-analytics",
+      "theme_description": "Poverty Analytics uses data-driven methods to assess and monitor poverty trends, supporting informed decision-making during crises."
     }
   },
   {
@@ -1067,21 +1194,19 @@
       "Data Ecosystem Projects": [
         "reczxU9NrSDw2mJcN",
         "rec6dmVAye6IslJOK",
-        "rec2Su6C7bHl4BC7h",
         "rec3xc850SaSrqS7t",
-        "rec9ZvuALWuRRSN5P",
         "recbmA6Lmrr5AfAHJ",
-        "recxNVM0HeC0mSQyk",
         "recF8bGKczcSVXjRz",
         "recF1lTFIy27lMFwT",
-        "recGG8gTf4t6l8Mue",
         "recQubJTGSwZoqzix",
-        "recXAXl4lWxy06qt5",
         "recgftq4GZElVtfi6",
         "recAeviz1XjLC8V6i",
         "recD0o9DgLleR3ctz",
-        "rec36dX7WTnSmv9Yo"
-      ]
+        "rec36dX7WTnSmv9Yo",
+        "rec9ZvuALWuRRSN5P"
+      ],
+      "theme_key": "geo",
+      "theme_description": "This area focuses on the collection, sharing, and use of location-based information to support spatial analysis and decision-making."
     }
   },
   {
@@ -1094,11 +1219,13 @@
       "Investment Type": [
         "Crisis Analytics & Insights"
       ],
-      "Investment Themes [Text Key]": "PiN Calculation",
+      "Investment Themes [Text Key]": "People in Need (PIN) Calculations",
       "Data Ecosystem Projects": [
-        "reccYy5JWKJEASskp"
+        "reccYy5JWKJEASskp",
+        "recFk4AqE3TR83nNo"
       ],
-      "theme_description": "PiN (People in Need) Calculation estimates the number of individuals requiring humanitarian assistance in a crisis by analyzing data on vulnerabilities, exposure, and severity of needs within affected populations."
+      "theme_key": "pin",
+      "theme_description": "People in Need (PIN) Calculations use crisis data and analytical methods to estimate the number of individuals requiring humanitarian assistance during emergencies."
     }
   },
   {
@@ -1123,7 +1250,9 @@
         "recs629pSu4Ei5145",
         "recZmszPiwWGvrYee",
         "recLqIa10HXfvELNB"
-      ]
+      ],
+      "theme_key": "hhdata",
+      "theme_description": "This subfield provides access to data collected from households, enabling analysis of demographic, economic, and social trends."
     }
   },
   {
@@ -1136,7 +1265,12 @@
       "Investment Type": [
         "Data Sets & Commons"
       ],
-      "Investment Themes [Text Key]": "Health Facilities Data"
+      "Investment Themes [Text Key]": "Health Facilities Data",
+      "Data Ecosystem Projects": [
+        "rec73Bmds9k3InQkm"
+      ],
+      "theme_key": "health-facilities",
+      "theme_description": "Information about the locations, services, and capacities of healthcare institutions is made available for research and public use."
     }
   },
   {
@@ -1153,15 +1287,15 @@
       "Data Ecosystem Projects": [
         "recST6hz3bs6MKakU",
         "rec4V0tKy9KP8Gw4h",
-        "rec795N2KXfgxaM50",
         "recxZmQWr8fIn8d1G",
-        "recIUSUS3NNXaMHCQ",
         "recz2ZsyM0B05BdFP",
         "recxuOxX8VxssdS6k",
         "recUotlR1ZJwVMAIS",
         "reccYy5JWKJEASskp",
         "recni7Cfecz6SBQ8S"
-      ]
+      ],
+      "theme_key": "needs-assessment",
+      "theme_description": "Data focused on identifying and analyzing gaps, priorities, and requirements to inform decision-making and resource allocation."
     }
   },
   {
@@ -1176,8 +1310,11 @@
       ],
       "Investment Themes [Text Key]": "Data Processing & Transformation",
       "Data Ecosystem Projects": [
-        "recS70dZaWiddCf5J"
-      ]
+        "recS70dZaWiddCf5J",
+        "rectg1V7Xcu5CcQq0"
+      ],
+      "theme_key": "dataproc",
+      "theme_description": "Enables efficient collection, cleaning, and conversion of raw data into usable formats to support analytics and operations."
     }
   },
   {
@@ -1191,7 +1328,8 @@
         "Crisis Analytics & Insights"
       ],
       "Investment Themes [Text Key]": "Flood Risk Analytics",
-      "theme_description": "Flood Risk Analytics uses data and advanced analysis to assess, predict, and visualize flood risks, helping humanitarian organizations make informed decisions during crises."
+      "theme_key": "floodrisk",
+      "theme_description": "Analyzes data to assess and predict flood risks, supporting informed decision-making during crisis situations."
     }
   },
   {
@@ -1210,14 +1348,14 @@
         "rec6dmVAye6IslJOK",
         "recaWq49HJw4UXd9K",
         "rec4SqufwyxLeeDM4",
-        "recrAQT0YpFBCQ02U",
-        "receGDImgeYZLVOPq",
         "reccI6M0kWMcanXsD",
         "recLN9L7RGRz4p1zM",
         "recnoFBXdvLa7XJHw",
         "recD0o9DgLleR3ctz",
         "rec36dX7WTnSmv9Yo"
-      ]
+      ],
+      "theme_key": "fsd",
+      "theme_description": "Food Security Data provides access to datasets and resources focused on measuring and understanding food availability, access, and nutrition."
     }
   },
   {
@@ -1233,9 +1371,11 @@
       "Investment Themes [Text Key]": "Humanitarian Access Analytics",
       "Data Ecosystem Projects": [
         "rec4XuZsotMgaVbAm",
-        "rec2eT5BuCp87chHm"
+        "rec2eT5BuCp87chHm",
+        "reczIeSUeAdEWMKSk"
       ],
-      "theme_description": "Humanitarian Access Analytics provides data-driven insights and analysis to help organizations understand and navigate challenges in delivering aid during crises."
+      "theme_key": "humanitarian-access",
+      "theme_description": "Humanitarian Access Analytics uses data-driven insights to assess and improve the ability of aid organizations to reach people in need during crises."
     }
   },
   {
@@ -1250,16 +1390,16 @@
       ],
       "Investment Themes [Text Key]": "Damage Assessments",
       "Data Ecosystem Projects": [
-        "rec795N2KXfgxaM50",
-        "recwpLBPiqgZWOXyn",
         "recUotlR1ZJwVMAIS",
         "recYzS7BrsxBG8llV",
         "recZxXY0AjXgSMXr7",
         "recf4QNnota3r1Jch",
         "recRqJS0I3kX5dYEJ",
-        "recdr2wcQiX1Ch1ZF"
+        "recdr2wcQiX1Ch1ZF",
+        "rec5RfuXsmtGtPDP8"
       ],
-      "theme_description": "Damage Assessments analyze the extent and impact of a crisis on people, infrastructure, and resources to inform effective humanitarian response decisions."
+      "theme_key": "damage-assessment",
+      "theme_description": "Evaluates and quantifies the impact of crises to inform effective response and recovery strategies."
     }
   },
   {
@@ -1272,7 +1412,9 @@
       "Investment Type": [
         "Standards & Coordination"
       ],
-      "Investment Themes [Text Key]": "Open Source"
+      "Investment Themes [Text Key]": "Open Source",
+      "theme_key": "oss",
+      "theme_description": "Open Source initiatives promote the development and adoption of shared technical standards through collaborative, transparent coordination among diverse stakeholders."
     }
   },
   {
@@ -1285,7 +1427,9 @@
       "Investment Type": [
         "Standards & Coordination"
       ],
-      "Investment Themes [Text Key]": "Data Protection & Privacy Frameworks"
+      "Investment Themes [Text Key]": "Data Protection & Privacy Frameworks",
+      "theme_key": "data-protection",
+      "theme_description": "Guidelines and best practices are established to ensure the secure and lawful handling of personal data across organizations and jurisdictions."
     }
   },
   {
@@ -1300,9 +1444,10 @@
       ],
       "Investment Themes [Text Key]": "Communities of Practice",
       "Data Ecosystem Projects": [
-        "recxWS5Ys5dJ0dn1X",
-        "recwyWa10JHuVhWo9"
-      ]
+        "recxWS5Ys5dJ0dn1X"
+      ],
+      "theme_key": "cop",
+      "theme_description": "This offering brings together individuals with shared interests to collaboratively deepen their knowledge and expertise through ongoing interaction and shared practice."
     }
   },
   {
@@ -1320,21 +1465,23 @@
         "recHVA5VejuaVSohF",
         "recv2rUABIb3FhIRW",
         "reckkGrUM2q2e7aeo",
-        "recniVpxHScJaQdLq",
         "recnU6ZioVzUVRKZo",
         "recwSp54iuK53ankI",
-        "recIUSUS3NNXaMHCQ",
         "recS70dZaWiddCf5J",
         "recgbAUAt9auV97KC",
         "recJye4S746MWWmW6",
         "reckhF1PTR2hh135J",
-        "recwpLBPiqgZWOXyn",
-        "recgftq4GZElVtfi6",
         "rece4fDBOtjCywl9q",
         "recO3RZZ7IEA88GnQ",
         "recv5EjAR3NgCKSaI",
-        "recejrbDKmak6gySA"
-      ]
+        "recXcSKhSy2s7tunj",
+        "recYR5aZ0pWEFezdF",
+        "recmH2oywWDYooamX",
+        "reckrBbkioEQP7wtd",
+        "recaY3lDEu5I8aL6D"
+      ],
+      "theme_key": "datashare",
+      "theme_description": "Solutions that enable organizations to efficiently store, retrieve, and share data across platforms and systems."
     }
   },
   {
@@ -1348,7 +1495,8 @@
         "Crisis Analytics & Insights"
       ],
       "Investment Themes [Text Key]": "Water, Sanitation & Hygiene (WASH) Analytics",
-      "theme_description": "WASH Analytics uses humanitarian data to assess and improve access to safe water, sanitation, and hygiene services during crises, enabling targeted and effective emergency responses."
+      "theme_key": "wash",
+      "theme_description": "WASH Analytics uses data-driven insights to assess and improve access to safe water, sanitation, and hygiene during crises."
     }
   },
   {
@@ -1364,10 +1512,10 @@
       "Investment Themes [Text Key]": "Displacement Analytics",
       "Data Ecosystem Projects": [
         "rec8taCKOmbZu5s4Z",
-        "recni7Cfecz6SBQ8S",
         "rec28WeSKDEQ5wx45"
       ],
-      "theme_description": "Displacement & Migration Analytics uses humanitarian data to track, analyze, and provide insights on population movements and migration patterns during crises."
+      "theme_key": "displacement",
+      "theme_description": "Analyzes patterns and impacts of population displacement during crises to inform response strategies."
     }
   },
   {
@@ -1380,7 +1528,12 @@
       "Investment Type": [
         "Standards & Coordination"
       ],
-      "Investment Themes [Text Key]": "Standard Geocodes"
+      "Investment Themes [Text Key]": "Standard Geocodes",
+      "Data Ecosystem Projects": [
+        "rec96xC14xTkyyKlP"
+      ],
+      "theme_key": "stdgeo",
+      "theme_description": "Standard Geocodes ensures consistent geographic data formats and interoperability across systems."
     }
   },
   {
@@ -1397,8 +1550,6 @@
       "Data Ecosystem Projects": [
         "recEf0pdKsN1Gbvo8",
         "recJQghyXlyK5WiCE",
-        "recOOQ5c99vFwz8i8",
-        "recgmCxRj8IVZMFF2",
         "recO3RZZ7IEA88GnQ",
         "recfTLQpzUgBOtlS5",
         "recLA3jRq3bbZRVzu",
@@ -1406,9 +1557,13 @@
         "recjxVwrxVL90go5G",
         "rec28WeSKDEQ5wx45",
         "rec2eT5BuCp87chHm",
-        "recaApmxiLnw1JnZf"
+        "recaApmxiLnw1JnZf",
+        "recFk4AqE3TR83nNo",
+        "recxNVM0HeC0mSQyk",
+        "rec4aulcundpJZOwl"
       ],
-      "theme_description": "Conflict Analytics uses data analysis to understand, monitor, and predict conflict situations, providing insights to support humanitarian decision-making and crisis response."
+      "theme_key": "conflict-analytics",
+      "theme_description": "This offering provides data-driven insights to help organizations understand, anticipate, and respond to conflict situations within broader crisis contexts."
     }
   },
   {
@@ -1428,15 +1583,14 @@
         "reck0qeeLf1nGLbap",
         "recbmA6Lmrr5AfAHJ",
         "rec45gS90ejbQe8V3",
-        "recwyWa10JHuVhWo9",
-        "recGVHndBPIvMpuHb",
-        "recgmCxRj8IVZMFF2",
         "rech8GCismNX3Bm8p",
-        "rec6S0tX5hnP9I5DG",
         "recfUQ0LgTnaydzWg",
         "recxPDSfMPQYhiw5Q",
-        "recfjAhO2DxCjgEgM"
-      ]
+        "recfjAhO2DxCjgEgM",
+        "rec795N2KXfgxaM50"
+      ],
+      "theme_key": "upskill",
+      "theme_description": "Programs and resources are provided to help individuals develop new skills and enhance their expertise for improved job performance and career growth."
     }
   },
   {
@@ -1449,7 +1603,9 @@
       "Investment Type": [
         "Learning & Exchange"
       ],
-      "Investment Themes [Text Key]": "Forums"
+      "Investment Themes [Text Key]": "Forums",
+      "theme_key": "forum",
+      "theme_description": "Forums provide a space for participants to share knowledge, ask questions, and engage in discussions to enhance collective learning and exchange of ideas."
     }
   },
   {
@@ -1465,7 +1621,9 @@
       "Investment Themes [Text Key]": "Nutrition Data",
       "Data Ecosystem Projects": [
         "recaWq49HJw4UXd9K"
-      ]
+      ],
+      "theme_key": "nutrition-data",
+      "theme_description": "Nutrition Data provides access to comprehensive datasets related to food composition, dietary intake, and nutritional values for research and analysis."
     }
   },
   {
@@ -1478,7 +1636,12 @@
       "Investment Type": [
         "Infrastructure & Platforms"
       ],
-      "Investment Themes [Text Key]": "Private Data Sharing"
+      "Investment Themes [Text Key]": "Private Data Sharing",
+      "Data Ecosystem Projects": [
+        "recYR5aZ0pWEFezdF"
+      ],
+      "theme_key": "pds",
+      "theme_description": "Enables secure and controlled exchange of sensitive information between organizations through robust infrastructure solutions."
     }
   },
   {
@@ -1496,8 +1659,13 @@
         "rec7HiwptaxnhVxui",
         "recZmszPiwWGvrYee",
         "rechtC1lJc96HgvFk",
-        "recCGWvmunEXVzpzw"
-      ]
+        "recCGWvmunEXVzpzw",
+        "recSTdLTga3nMLgPn",
+        "recpVTiR964LzzJng",
+        "recniVpxHScJaQdLq"
+      ],
+      "theme_key": "dcld",
+      "theme_description": "Provides access to detailed data broken down by individual countries for comparative analysis and research."
     }
   },
   {
@@ -1510,7 +1678,9 @@
       "Investment Type": [
         "Infrastructure & Platforms"
       ],
-      "Investment Themes [Text Key]": "Sensitive Data Detection"
+      "Investment Themes [Text Key]": "Sensitive Data Detection",
+      "theme_key": "sdd",
+      "theme_description": "Identifies and manages confidential information within digital systems to enhance security and compliance across infrastructure and platforms."
     }
   },
   {
@@ -1528,7 +1698,9 @@
         "recl1IcheJlYc36up",
         "recz2ZsyM0B05BdFP",
         "recxuOxX8VxssdS6k"
-      ]
+      ],
+      "theme_key": "poverty",
+      "theme_description": "Provides access to information and statistics related to poverty for research and analysis."
     }
   },
   {
@@ -1541,7 +1713,12 @@
       "Investment Type": [
         "Standards & Coordination"
       ],
-      "Investment Themes [Text Key]": "Version Tracking"
+      "Investment Themes [Text Key]": "Version Tracking",
+      "Data Ecosystem Projects": [
+        "rec96xC14xTkyyKlP"
+      ],
+      "theme_key": "version-tracking",
+      "theme_description": "Version tracking ensures that all stakeholders are aligned on the latest standards and updates, supporting consistent coordination across projects."
     }
   },
   {
@@ -1557,7 +1734,9 @@
       "Investment Themes [Text Key]": "Data Documentation & Metadata",
       "Data Ecosystem Projects": [
         "recv5EjAR3NgCKSaI"
-      ]
+      ],
+      "theme_key": "datadoc",
+      "theme_description": "Ensures that information about data is accurately recorded and accessible, supporting effective data management and platform interoperability."
     }
   },
   {
@@ -1572,8 +1751,13 @@
       ],
       "Investment Themes [Text Key]": "Data Collection & Generation",
       "Data Ecosystem Projects": [
-        "recPMQlg07QkflL3i"
-      ]
+        "recPMQlg07QkflL3i",
+        "rec8HCRgYhj3eDhQ0",
+        "recG8QCqF1In5fBcv",
+        "recUtNMMh0FAIx6SD"
+      ],
+      "theme_key": "datagen",
+      "theme_description": "Gathering and creating datasets enables organizations to build, refine, and apply expertise for improved decision-making and innovation."
     }
   },
   {
@@ -1595,7 +1779,26 @@
         "recO7hHncZQGqy2vJ",
         "recaWq49HJw4UXd9K"
       ],
-      "theme_description": "Food Security Analytics uses data-driven insights to assess and predict food availability, access, and risks, helping humanitarian organizations respond effectively to food crises."
+      "theme_key": "foodsec",
+      "theme_description": "Analyzes data to assess and predict food availability, access, and risks during crises to inform effective response strategies."
+    }
+  },
+  {
+    "id": "recuPE76bH1m3LwRQ",
+    "fields": {
+      "THEME_ID": "recuPE76bH1m3LwRQ",
+      "Linked Investment Type": [
+        "recUueuvKqzUgF7Xo"
+      ],
+      "Investment Type": [
+        "Human Capital & Know-how"
+      ],
+      "Investment Themes [Text Key]": "Data Management & Visualization",
+      "Data Ecosystem Projects": [
+        "recGVHndBPIvMpuHb",
+        "recogMAjsbKV95Pqs"
+      ],
+      "theme_description": "Organizes, cleans, and structures data while developing visualization tools and dashboards that enhance accessibility, quality, and operational use across organizations."
     }
   },
   {
@@ -1615,7 +1818,9 @@
         "recVj2ULsOWhPFQ19",
         "recSvtWQnSvfNoXdt",
         "rece4fDBOtjCywl9q"
-      ]
+      ],
+      "theme_key": "envdata",
+      "theme_description": "Provides access to information and resources related to environmental conditions, trends, and impacts."
     }
   },
   {
@@ -1630,8 +1835,11 @@
       ],
       "Investment Themes [Text Key]": "Consistent Data Formats",
       "Data Ecosystem Projects": [
-        "recp0YELy7eVj9FUs"
-      ]
+        "recp0YELy7eVj9FUs",
+        "rec96xC14xTkyyKlP"
+      ],
+      "theme_key": "cdf",
+      "theme_description": "Ensures that information is structured uniformly across systems to enable seamless data sharing and integration."
     }
   },
   {
@@ -1651,18 +1859,14 @@
         "recF1lTFIy27lMFwT",
         "recLA3jRq3bbZRVzu",
         "rec28WeSKDEQ5wx45",
-        "recGG8gTf4t6l8Mue",
         "recpARdDyMReIUuDq",
         "rec5GA5F1UPlXATSj",
         "recyn1h3FptgV2ZAv",
         "recgpnIj48zBCayHc",
         "recXaGjOLcrJQCuNn",
         "recEwLy3FESOhLeNs",
-        "rec9HIhsIpPjx48rc",
         "recFk4AqE3TR83nNo",
-        "recrAQT0YpFBCQ02U",
         "recyMSQo5lV032SER",
-        "recgmCxRj8IVZMFF2",
         "recpKRVapFMI3kGY0",
         "rec4oWGeToxciytv3",
         "receGDImgeYZLVOPq",
@@ -1672,9 +1876,10 @@
         "recNggnBqXIgii2hz",
         "recLn4QiWGniBsWoe",
         "recO7hHncZQGqy2vJ",
-        "reciDzUjwtkVeh21I"
+        "recGG8gTf4t6l8Mue"
       ],
-      "theme_description": "Anticipatory and Early Action Forecasts use humanitarian data and crisis analytics to predict potential emergencies and enable timely interventions before disasters escalate."
+      "theme_key": "aea",
+      "theme_description": "Using data-driven analysis to predict and respond to crises before they escalate, enabling timely and effective humanitarian action."
     }
   },
   {
@@ -1687,7 +1892,9 @@
       "Investment Type": [
         "Infrastructure & Platforms"
       ],
-      "Investment Themes [Text Key]": "Data Quality & Validation"
+      "Investment Themes [Text Key]": "Data Quality & Validation",
+      "theme_key": "dqv",
+      "theme_description": "Ensures that data within infrastructure and platform solutions is accurate, consistent, and reliable for downstream use."
     }
   },
   {
@@ -1700,7 +1907,9 @@
       "Investment Type": [
         "Standards & Coordination"
       ],
-      "Investment Themes [Text Key]": "Peer Review"
+      "Investment Themes [Text Key]": "Peer Review",
+      "theme_key": "peer-review",
+      "theme_description": "Facilitates the evaluation and improvement of standards through collaborative expert feedback and consensus-building."
     }
   },
   {
@@ -1714,7 +1923,11 @@
         "Crisis Analytics & Insights"
       ],
       "Investment Themes [Text Key]": "Population Analytics ",
-      "theme_description": "Population Analytics involves analyzing demographic and movement data to understand population trends, vulnerabilities, and needs, supporting effective crisis response and humanitarian decision-making."
+      "Data Ecosystem Projects": [
+        "recpaU5vlkr1O5EVC"
+      ],
+      "theme_key": "popana",
+      "theme_description": "Analyzes demographic data to inform crisis response strategies and improve decision-making during emergencies."
     }
   }
 ]
