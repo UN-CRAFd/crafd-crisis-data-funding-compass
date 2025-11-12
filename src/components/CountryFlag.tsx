@@ -56,9 +56,17 @@ export function getCountryAlpha2(input: string): string | null {
             'u.k.': 'gb',
             'european union': 'eu',
             'eu': 'eu',
-            'turkiye': 'tr'
+            'turkiye': 'tr',
+            'united nations': 'un',
+            'un': 'un',
+            'u.n.': 'un',
+            'united nations (un)': 'un'
         };
         if (knownAliases[alias]) return knownAliases[alias];
+        
+        // Check if the string starts with "United Nations" (for various UN agencies)
+        if (alias.startsWith('united nations ')) return 'un';
+        if (alias.startsWith('office of the united nations ')) return 'un';
     
     return null;
 }
@@ -68,7 +76,8 @@ export function getCountryAlpha2(input: string): string | null {
  */
 export function getCountryFlagUrl(country: string): string | null {
     const iso = getCountryAlpha2(country);
-    return iso ? `https://flagcdn.com/${iso}.svg` : null;
+    if (!iso) return null; 
+    return `https://flagcdn.com/${iso}.svg`;
 }
 
 /**

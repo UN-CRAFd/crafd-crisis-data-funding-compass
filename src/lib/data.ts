@@ -28,6 +28,92 @@ async function loadNestedOrganizations(): Promise<NestedOrganization[]> {
     }
 }
 
+// Load themes table to map themes to their investment types and keys
+interface ThemesMappings {
+    themeToType: Map<string, string>;
+    themeToKey: Map<string, string>;
+    keyToTheme: Map<string, string>;
+}
+
+let cachedThemesMappings: ThemesMappings | null = null;
+let themesTableLoadPromise: Promise<ThemesMappings> | null = null;
+
+async function loadThemesTable(): Promise<ThemesMappings> {
+    // Return cached mappings if available
+    if (cachedThemesMappings) {
+        return cachedThemesMappings;
+    }
+
+    // If already loading, return the existing promise
+    if (themesTableLoadPromise) {
+        return themesTableLoadPromise;
+    }
+
+    // Start loading
+    themesTableLoadPromise = (async () => {
+        try {
+            const response = await fetch('/data/themes-table.json');
+            if (!response.ok) {
+                console.warn(`Failed to load themes data: ${response.status}`);
+                return { themeToType: new Map(), themeToKey: new Map(), keyToTheme: new Map() };
+            }
+            const themesData = await response.json();
+            const themeToType = new Map<string, string>();
+            const themeToKey = new Map<string, string>();
+            const keyToTheme = new Map<string, string>();
+            
+            themesData?.forEach((theme: any) => {
+                const themeName = theme.fields?.['Investment Themes [Text Key]'];
+                const investmentTypes = theme.fields?.['Investment Type'];
+                const themeKeyObj = theme.fields?.['theme_key'];
+                const themeKey = themeKeyObj?.value || themeKeyObj;
+                
+                if (themeName) {
+                    // Map theme to type
+                    if (Array.isArray(investmentTypes) && investmentTypes.length > 0) {
+                        themeToType.set(themeName, investmentTypes[0]);
+                    }
+                    
+                    // Map theme to key and key to theme
+                    if (themeKey && typeof themeKey === 'string') {
+                        themeToKey.set(themeName, themeKey);
+                        keyToTheme.set(themeKey, themeName);
+                    }
+                }
+            });
+            
+            cachedThemesMappings = { themeToType, themeToKey, keyToTheme };
+            return cachedThemesMappings;
+        } catch (error) {
+            console.error('Error loading themes table:', error);
+            cachedThemesMappings = { themeToType: new Map(), themeToKey: new Map(), keyToTheme: new Map() };
+            return cachedThemesMappings;
+        }
+    })();
+
+    return themesTableLoadPromise;
+}
+
+// Export the load function so it can be called early
+export async function ensureThemesMappingsLoaded(): Promise<void> {
+    await loadThemesTable();
+}
+
+// Helper functions for theme key conversion
+export function themeNameToKey(themeName: string): string {
+    if (!cachedThemesMappings) {
+        return themeName; // Fallback to theme name if not loaded yet
+    }
+    return cachedThemesMappings.themeToKey.get(themeName) || themeName;
+}
+
+export function themeKeyToName(themeKey: string): string {
+    if (!cachedThemesMappings) {
+        return themeKey; // Fallback to theme key if not loaded yet
+    }
+    return cachedThemesMappings.keyToTheme.get(themeKey) || themeKey;
+}
+
 // Extract donor countries from agencies
 // Helper function to safely get donor countries from organization data
 function getDonorCountries(org: NestedOrganization): string[] {
@@ -137,12 +223,14 @@ function applyFilters(
         searchQuery?: string;
         donorCountries?: string[];
         investmentTypes?: string[];
+        investmentThemes?: string[];
     }
 ): OrganizationWithProjects[] {
     return organizations.map(org => {
         const hasSearchFilter = filters.searchQuery && filters.searchQuery.trim();
         const hasDonorFilter = filters.donorCountries && filters.donorCountries.length > 0;
         const hasTypeFilter = filters.investmentTypes && filters.investmentTypes.length > 0;
+        const hasThemeFilter = filters.investmentThemes && filters.investmentThemes.length > 0;
 
         // Step 1: Check if organization matches search filter
         let orgMatchesSearch = false;
@@ -164,7 +252,7 @@ function applyFilters(
                 if (!projectMatchesSearch) return false;
             }
 
-            // Type filter check
+            // Type filter check (OR logic)
             if (hasTypeFilter) {
                 const projectMatchesType = project.investmentTypes.some(type =>
                     filters.investmentTypes!.some(filterType =>
@@ -173,6 +261,18 @@ function applyFilters(
                     )
                 );
                 if (!projectMatchesType) return false;
+            }
+
+            // Theme filter check (OR logic)
+            if (hasThemeFilter) {
+                const projectMatchesTheme = Array.isArray(project.investmentThemes) && 
+                    project.investmentThemes.some(theme =>
+                        filters.investmentThemes!.some(filterTheme =>
+                            typeof theme === 'string' &&
+                            theme.toLowerCase().trim() === filterTheme.toLowerCase().trim()
+                        )
+                    );
+                if (!projectMatchesTheme) return false;
             }
 
             return true;
@@ -186,31 +286,56 @@ function applyFilters(
             // Organization doesn't meet donor requirements -> no projects can show
             visibleProjects = [];
         } else if (orgMatchesSearch) {
-            // Organization matches search: show all its projects (apply type filter if exists)
-            visibleProjects = hasTypeFilter
+            // Organization matches search: show all its projects (apply type/theme filter if exists)
+            visibleProjects = (hasTypeFilter || hasThemeFilter)
                 ? org.projects.filter(project => {
-                    // Only apply type filter, skip search filter since org already matches
+                    // Only apply type and theme filters, skip search filter since org already matches
                     if (hasTypeFilter) {
-                        return project.investmentTypes.some(type =>
+                        const matchesType = project.investmentTypes.some(type =>
                             filters.investmentTypes!.some(filterType =>
                                 type.toLowerCase().includes(filterType.toLowerCase()) ||
                                 filterType.toLowerCase().includes(type.toLowerCase())
                             )
                         );
+                        if (!matchesType) return false;
+                    }
+                    if (hasThemeFilter) {
+                        const matchesTheme = Array.isArray(project.investmentThemes) && 
+                            project.investmentThemes.some(theme =>
+                                filters.investmentThemes!.some(filterTheme =>
+                                    typeof theme === 'string' &&
+                                    theme.toLowerCase().trim() === filterTheme.toLowerCase().trim()
+                                )
+                            );
+                        if (!matchesTheme) return false;
                     }
                     return true;
                 })
                 : [...org.projects];
         } else if (!hasSearchFilter) {
-            // No search filter: apply type filter if exists, otherwise show all projects
-            visibleProjects = hasTypeFilter
+            // No search filter: apply type/theme filter if exists, otherwise show all projects
+            visibleProjects = (hasTypeFilter || hasThemeFilter)
                 ? org.projects.filter(project => {
-                    return project.investmentTypes.some(type =>
-                        filters.investmentTypes!.some(filterType =>
-                            type.toLowerCase().includes(filterType.toLowerCase()) ||
-                            filterType.toLowerCase().includes(type.toLowerCase())
-                        )
-                    );
+                    if (hasTypeFilter) {
+                        const matchesType = project.investmentTypes.some(type =>
+                            filters.investmentTypes!.some(filterType =>
+                                type.toLowerCase().includes(filterType.toLowerCase()) ||
+                                filterType.toLowerCase().includes(type.toLowerCase())
+                            )
+                        );
+                        if (!matchesType) return false;
+                    }
+                    if (hasThemeFilter) {
+                        const matchesTheme = Array.isArray(project.investmentThemes) && 
+                            project.investmentThemes.some(theme =>
+                                filters.investmentThemes!.some(filterTheme =>
+                                    typeof theme === 'string' &&
+                                    theme.toLowerCase().trim() === filterTheme.toLowerCase().trim()
+                                )
+                            );
+                        if (!matchesTheme) return false;
+                    }
+                    return true;
                 })
                 : [...org.projects];
         } else {
@@ -222,14 +347,14 @@ function applyFilters(
         let shouldShowOrg = false;
 
         if (orgMeetsDonorRequirement) {
-            if (!hasTypeFilter && !hasSearchFilter) {
+            if (!hasTypeFilter && !hasThemeFilter && !hasSearchFilter) {
                 // No filters except donor: show all orgs that meet donor requirement
                 shouldShowOrg = true;
-            } else if (!hasTypeFilter && hasSearchFilter) {
+            } else if (!hasTypeFilter && !hasThemeFilter && hasSearchFilter) {
                 // Only search filter: show org if it matches search OR has projects matching search
                 shouldShowOrg = orgMatchesSearch || visibleProjects.length > 0;
             } else {
-                // Type filter active: only show if org has visible projects (projects that match type+search)
+                // Type/theme filter active: only show if org has visible projects (projects that match type/theme+search)
                 shouldShowOrg = visibleProjects.length > 0;
             }
         }
@@ -370,20 +495,65 @@ function calculateOrganizationProjects(organizations: OrganizationWithProjects[]
 }
 
 // Get available filter options
-function getAvailableFilterOptions(organizations: OrganizationWithProjects[]) {
+async function getAvailableFilterOptions(organizations: OrganizationWithProjects[]) {
     const donorCountries = new Set<string>();
     const investmentTypes = new Set<string>();
+    const investmentThemes = new Set<string>();
 
     organizations.forEach(org => {
         org.donorCountries.forEach(country => donorCountries.add(country));
         org.projects.forEach(project => {
             project.investmentTypes.forEach(type => investmentTypes.add(type));
+            // Extract investment themes
+            if (Array.isArray(project.investmentThemes)) {
+                project.investmentThemes.forEach(theme => {
+                    if (typeof theme === 'string' && theme.trim()) {
+                        investmentThemes.add(theme.trim());
+                    }
+                });
+            }
         });
+    });
+
+    // Load theme mappings (non-blocking with fallback)
+    let themesMappings: ThemesMappings;
+    try {
+        themesMappings = await loadThemesTable();
+    } catch (error) {
+        console.warn('Failed to load themes table, using ungrouped themes:', error);
+        themesMappings = { themeToType: new Map(), themeToKey: new Map(), keyToTheme: new Map() };
+    }
+
+    // Group themes by their investment type
+    const themesByType: Record<string, string[]> = {};
+    const themesArray = Array.from(investmentThemes);
+    
+    themesArray.forEach(theme => {
+        const investmentType = themesMappings.themeToType.get(theme);
+        if (investmentType) {
+            if (!themesByType[investmentType]) {
+                themesByType[investmentType] = [];
+            }
+            themesByType[investmentType].push(theme);
+        } else {
+            // Fallback for themes without a mapped type
+            if (!themesByType['Other']) {
+                themesByType['Other'] = [];
+            }
+            themesByType['Other'].push(theme);
+        }
+    });
+
+    // Sort themes within each type
+    Object.keys(themesByType).forEach(type => {
+        themesByType[type].sort();
     });
 
     return {
         donorCountries: Array.from(donorCountries).sort(),
-        investmentTypes: Array.from(investmentTypes).sort()
+        investmentTypes: Array.from(investmentTypes).sort(),
+        investmentThemes: themesArray.sort(), // Keep flat array for backward compatibility
+        investmentThemesByType: themesByType // New grouped structure
     };
 }
 
@@ -392,8 +562,12 @@ export async function processDashboardData(filters: {
     searchQuery?: string;
     donorCountries?: string[];
     investmentTypes?: string[];
+    investmentThemes?: string[];
 } = {}) {
     try {
+        // Load themes table first to ensure theme key mappings are available
+        await loadThemesTable();
+        
         // Load nested organizations
         const nestedOrgs = await loadNestedOrganizations();
 
@@ -420,7 +594,10 @@ export async function processDashboardData(filters: {
 
         // Get available filter options from filtered organizations (viewport)
         // This ensures dropdowns only show options that are currently available
-        const filterOptions = getAvailableFilterOptions(filteredOrganizations);
+        const filterOptions = await getAvailableFilterOptions(filteredOrganizations);
+        
+        // Also get all available filter options from unfiltered data for theme dropdown
+        const allFilterOptions = await getAvailableFilterOptions(allOrganizations);
 
         return {
             stats,
@@ -431,6 +608,8 @@ export async function processDashboardData(filters: {
             allOrganizations, // Add unfiltered organizations for modal use
             donorCountries: filterOptions.donorCountries,
             investmentTypes: filterOptions.investmentTypes,
+            investmentThemes: allFilterOptions.investmentThemes, // Use unfiltered themes
+            investmentThemesByType: allFilterOptions.investmentThemesByType, // Use unfiltered grouped themes by type
             topDonors // Add top co-financing donors
         };
     } catch (error) {
