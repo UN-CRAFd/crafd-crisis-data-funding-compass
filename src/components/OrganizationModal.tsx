@@ -282,16 +282,6 @@ export default function OrganizationModal({
                     return null;
                 })()}
 
-                {/* Org HQ Country - Uncomment import and this line to enable */}
-                {/* {typeof fields['Org HQ Country'] === 'string' && (
-                    <HeadquartersCountry 
-                        countryValue={String(fields['Org HQ Country'])} 
-                        Field={Field}
-                        FieldValue={FieldValue}
-                        renderValue={renderValue}
-                    />
-                )} */}
-
                 {/* If website exists but description didn't show it, render a prominent Website button */}
                 {!fields['Org Description'] && websiteValue && websiteValue.trim() !== '' && (
                     <div>
