@@ -39,14 +39,13 @@ interface NetworkGraphProps {
 interface GraphNode {
     id: string;
     name: string;
-    type: 'donor' | 'organization' | 'project' | 'cluster-hull';
+    type: 'donor' | 'organization' | 'project';
     value: number; // Size of the node
     color: string;
     orgKey?: string;
     projectKey?: string;
     orgType?: string; // For organization clustering
     assetTypes?: string[]; // For project/asset clustering
-    clusterKey?: string; // For identifying which cluster this hull belongs to
     x?: number;
     y?: number;
     fx?: number; // Fixed x position for clustering
@@ -100,7 +99,6 @@ const NetworkGraph: React.FC<NetworkGraphProps> = ({
     const [clusterByOrgType, setClusterByOrgType] = useState(false);
     const [clusterByAssetType, setClusterByAssetType] = useState(false);
     const [legendCollapsed, setLegendCollapsed] = useState(false);
-    const [isClusteringTransition, setIsClusteringTransition] = useState(false);
     const lastClusterStateRef = useRef<string>(''); // Track last clustering state to prevent unnecessary updates
     const [filterBarContainer, setFilterBarContainer] = useState<HTMLElement | null>(null);
     const lastFiltersRef = useRef<string>(''); // Track filter state to detect changes
@@ -523,9 +521,8 @@ const NetworkGraph: React.FC<NetworkGraphProps> = ({
         // Set link strength for more stable connections
         fg.d3Force('link').strength(0.5);
 
-        // Set the center force to the actual center of the canvas (not 0,0)
-        // This prevents nodes from being pulled toward the top-left corner
-        fg.d3Force('center').x(dimensions.width / 2).y(dimensions.height / 2).strength(0.02);
+        // No center force - allows nodes to distribute naturally based on their connections only
+        fg.d3Force('center', null);
 
         // Enhanced collision force with more iterations for smoother collision avoidance
         fg.d3Force('collision', forceCollide((node: any) => {
@@ -566,9 +563,31 @@ const NetworkGraph: React.FC<NetworkGraphProps> = ({
         
         if (clusterByOrgType || clusterByAssetType) {
             // Strong charge repulsion to keep clusters well separated
-            fg.d3Force('charge').strength(-300); // Much stronger repulsion between clusters
-            fg.d3Force('center').strength(0.001); // Almost no centering
-            fg.d3Force('link').strength(0.1); // Very weak links
+            fg.d3Force('charge').strength(-300);
+            
+            // No center force - let clusters spread naturally
+            fg.d3Force('center', null);
+            
+            // Maintain standard link strength to preserve connection distances
+            fg.d3Force('link').strength(0.5);
+            
+            // Apply link distance function during clustering too
+            fg.d3Force('link').distance((link: any) => {
+                const sourceType = link.source.type || link.source;
+                const targetType = link.target.type || link.target;
+
+                if ((sourceType === 'organization' && targetType === 'project') ||
+                    (sourceType === 'project' && targetType === 'organization')) {
+                    return 100;
+                }
+
+                if ((sourceType === 'organization' && targetType === 'donor') ||
+                    (sourceType === 'donor' && targetType === 'organization')) {
+                    return 200;
+                }
+
+                return 150;
+            });
             
             // More collision within clusters to prevent overlap
             fg.d3Force('collision', forceCollide((node: any) => {
@@ -587,7 +606,6 @@ const NetworkGraph: React.FC<NetworkGraphProps> = ({
             
             // Collect unique cluster keys
             const clusterKeys = new Set<string>();
-            const clusterNodeCounts = new Map<string, number>();
             
             graphData.nodes.forEach(node => {
                 let clusterKey = null;
@@ -600,7 +618,6 @@ const NetworkGraph: React.FC<NetworkGraphProps> = ({
                 
                 if (clusterKey) {
                     clusterKeys.add(clusterKey);
-                    clusterNodeCounts.set(clusterKey, (clusterNodeCounts.get(clusterKey) || 0) + 1);
                 }
             });
             
@@ -630,8 +647,8 @@ const NetworkGraph: React.FC<NetworkGraphProps> = ({
                 }
             });
             
-            // Very strong clustering force that stays strong for a long time
-            const baseClusterStrength = 0.5; // Very strong pull
+            // Strong clustering force that pulls nodes to their cluster centers
+            const baseClusterStrength = 0.8; // Increased from 0.5 for stronger clustering
             const decayStart = 0.7; // Start decaying very late
             
             // Add repulsion between cluster centers to keep them separated
@@ -689,11 +706,30 @@ const NetworkGraph: React.FC<NetworkGraphProps> = ({
             fg.d3Force('clusterX', null); // Remove old separate X force
             fg.d3Force('clusterY', null); // Remove old separate Y force
         } else {
-            // Restore calmer default forces when clustering is off
+            // Restore default forces when clustering is off
             fg.d3Force('charge').strength(-400);
-            // Restore center force with proper canvas center coordinates
-            fg.d3Force('center').x(dimensions.width / 2).y(dimensions.height / 2).strength(0.02);
-            fg.d3Force('link').strength(0.5); // Restore link strength
+            
+            // No center force - nodes distribute naturally
+            fg.d3Force('center', null);
+            
+            // Restore standard link strength and distances
+            fg.d3Force('link').strength(0.5);
+            fg.d3Force('link').distance((link: any) => {
+                const sourceType = link.source.type || link.source;
+                const targetType = link.target.type || link.target;
+
+                if ((sourceType === 'organization' && targetType === 'project') ||
+                    (sourceType === 'project' && targetType === 'organization')) {
+                    return 100;
+                }
+
+                if ((sourceType === 'organization' && targetType === 'donor') ||
+                    (sourceType === 'donor' && targetType === 'organization')) {
+                    return 200;
+                }
+
+                return 150;
+            });
             
             // Restore normal collision force
             fg.d3Force('collision', forceCollide((node: any) => {
@@ -706,13 +742,6 @@ const NetworkGraph: React.FC<NetworkGraphProps> = ({
         // Always reheat to recalculate from current state with new forces
         fg.d3ReheatSimulation();
 
-        // Set transition flag and reset after a delay
-        setIsClusteringTransition(true);
-        const timer = setTimeout(() => {
-            setIsClusteringTransition(false);
-        }, 3000); // Longer delay for full cluster resolution
-
-        return () => clearTimeout(timer);
     }, [clusterByOrgType, clusterByAssetType]); // Only re-run when clustering toggles change
 
     // Note: persistent click-based highlighting removed to avoid performance issues.
@@ -799,9 +828,6 @@ const NetworkGraph: React.FC<NetworkGraphProps> = ({
 
     // Custom node canvas rendering - only draw the node circles
     const paintNode = useCallback((node: GraphNode, ctx: CanvasRenderingContext2D, globalScale: number) => {
-        // Skip rendering cluster hull nodes (invisible anchors)
-        if (node.type === 'cluster-hull') return;
-        
         // Use hover-based highlighting only (persistent click-based highlighting removed)
         const isHoverHighlighted = hoverHighlightNodes.size > 0 && hoverHighlightNodes.has(node.id);
         const isHighlighted = isHoverHighlighted;

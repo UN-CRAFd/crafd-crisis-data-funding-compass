@@ -1384,7 +1384,7 @@ const CrisisDataDashboard = ({
                                                                         >
                                                                             <div className="mb-2">
                                                                                 <div className="flex flex-wrap items-center gap-2 gap-y-1">
-                                                                                    <span className="font-medium text-slate-900 group-hover:text-[var(--brand-primary)] transition-colors">
+                                                                                    <span className="font-medium text-slate-900 group-hover:text-[var(--badge-other-border)] transition-colors">
                                                                                         {project.projectName}
                                                                                     </span>
                                                                                     {project.investmentTypes.length > 0 && (
