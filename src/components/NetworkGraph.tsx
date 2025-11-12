@@ -845,13 +845,15 @@ const NetworkGraph: React.FC<NetworkGraphProps> = ({
         ctx.globalAlpha = 1;
         
         // Draw flag for selected/filtered donor nodes only
-        if (node.type === 'donor' && node.name && combinedDonors.length > 0 && combinedDonors.includes(node.name)) {
+        if (node.type === 'donor' && combinedDonors && combinedDonors.length > 0 && combinedDonors.includes(node.name)) {
             const flagUrl = getCountryFlagUrl(node.name);
             if (flagUrl) {
                 // Check if flag image is already loaded in cache
                 let flagImg = flagImageCache.current.get(flagUrl);
+
                 
                 if (!flagImg) {
+
                     // Create and load the image
                     flagImg = new Image();
                     flagImg.crossOrigin = 'anonymous'; // Enable CORS for flagcdn.com
@@ -864,7 +866,6 @@ const NetworkGraph: React.FC<NetworkGraphProps> = ({
                         setFlagLoadCounter(prev => prev + 1);
                     };
                 }
-                
                 // Draw the flag if it's loaded (rectangular, not clipped)
                 if (flagImg.complete && flagImg.naturalWidth > 0) {
                     // Use standard flag aspect ratio (3:2) and scale to fit within node
