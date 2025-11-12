@@ -110,12 +110,11 @@
           ],
           "CRAF’d-Funded Project?": "NO",
           "Investment Type(s)": [
-            "Infrastructure & Platforms",
-            "Learning & Exchange"
+            "Crisis Analytics & Insights",
+            "Standards & Coordination"
           ],
           "Investment Theme(s)": [
-            "Geospatial Data",
-            "Guides",
+            "Ethics",
             "Anticipatory and Early Action Forecasts"
           ],
           "product_key": "hhi-signal-program",
@@ -342,7 +341,7 @@
           ],
           "CRAF’d-Funded Project?": "NO",
           "Investment Type(s)": [
-            "Crisis Analytics & Insights"
+            "Data Sets & Commons"
           ],
           "Investment Theme(s)": [
             "Anticipatory and Early Action Forecasts"
@@ -503,9 +502,7 @@
           ],
           "CRAF’d-Funded Project?": "NO",
           "Investment Type(s)": [
-            "Data Sets & Commons",
-            "Crisis Analytics & Insights",
-            "Learning & Exchange"
+            "Crisis Analytics & Insights"
           ],
           "Investment Theme(s)": [
             "Poverty Analytics",
@@ -552,11 +549,11 @@
           ],
           "CRAF’d-Funded Project?": "NO",
           "Investment Type(s)": [
-            "Data Sets & Commons",
-            "Infrastructure & Platforms"
+            "Data Sets & Commons"
           ],
           "Investment Theme(s)": [
-            "Data Storage, Access & Sharing"
+            "Education Data",
+            "Disaggregated Country-level Data"
           ],
           "product_key": "unicef-data-warehouse",
           "HDX_SOHD": "None"
@@ -652,12 +649,10 @@
           ],
           "CRAF’d-Funded Project?": "NO",
           "Investment Type(s)": [
-            "Data Sets & Commons",
-            "Crisis Analytics & Insights",
-            "Learning & Exchange"
+            "Data Sets & Commons"
           ],
           "Investment Theme(s)": [
-            "Upskilling & Training"
+            "Baseline Population Data"
           ],
           "product_key": "worldpop",
           "HDX_SOHD": "None"
@@ -750,6 +745,9 @@
           "CRAF’d-Funded Project?": "NO",
           "Investment Type(s)": [
             "Data Sets & Commons"
+          ],
+          "Investment Theme(s)": [
+            "Geospatial Data"
           ],
           "product_key": "cod-ab",
           "HDX_SOHD": "19"
@@ -2057,26 +2055,20 @@
       "Org Description": "UN Women is the United Nations entity dedicated to gender equality and the empowerment of women. A global champion for women and girls, UN Women was established to accelerate progress on meeting their needs worldwide.",
       "Provided Data Ecosystem Projects": [
         "rechQ1azyTpypEDEy",
-        "recO3RZZ7IEA88GnQ"
+        "recO3RZZ7IEA88GnQ",
+        "reckrBbkioEQP7wtd"
       ],
       "Org Donor Agencies": [
+        "rec19ocYvikhZMdRI",
         "rece2l2IJRlTC2ERq",
         "rec1YpvhkjwME6GOJ",
-        "recGMYeDQSV7jffjs",
+        "recGNTHL9SKZxLDcw",
         "rec57z0MkntuI0kvP",
         "recNy9QGuHQgz7uAf",
         "recfNuwRv2DcnUQCK",
-        "reckIAhFXgj4XL29b",
         "recKq6SBjonibtE1r",
-        "recRt57CGsQQK50dQ",
-        "recZCZqKtB0JM5kmx",
-        "recI95P9GtOhiXNoU",
-        "reco4Um0k7Tgw2UCK",
-        "recYVizktLnxQPeKH",
-        "recqSvUlZQjET4fCH",
-        "rec8otX5QGDSVA5CH",
-        "recqM20m0W6iS5Y0t",
-        "recKVILBOB3NBEJlE"
+        "reckIAhFXgj4XL29b",
+        "recRt57CGsQQK50dQ"
       ],
       "Org IATI Name": "UN Women",
       "Org MPTFO Name": "UNWOMEN",
@@ -2089,6 +2081,13 @@
       "Org Type": "United Nations System"
     },
     "agencies": [
+      {
+        "id": "rec19ocYvikhZMdRI",
+        "fields": {
+          "Agency/Department Name": "Unspecified Agency",
+          "Country Name": "United Nations (UN)"
+        }
+      },
       {
         "id": "rece2l2IJRlTC2ERq",
         "fields": {
@@ -2104,9 +2103,10 @@
         }
       },
       {
-        "id": "recGMYeDQSV7jffjs",
+        "id": "recGNTHL9SKZxLDcw",
         "fields": {
-          "Agency/Department Name": "Unspecified Agency",
+          "Agency/Department Name": "European Commission (EC)",
+          "Agency Data Portal": "Maybe https://ec.europa.eu/info/funding-tenders/opportunities/portal/",
           "Country Name": "European Union"
         }
       },
@@ -2132,13 +2132,6 @@
         }
       },
       {
-        "id": "reckIAhFXgj4XL29b",
-        "fields": {
-          "Agency/Department Name": "Unspecified Agency",
-          "Country Name": "USA"
-        }
-      },
-      {
         "id": "recKq6SBjonibtE1r",
         "fields": {
           "Agency/Department Name": "Unspecified Agency",
@@ -2146,66 +2139,17 @@
         }
       },
       {
+        "id": "reckIAhFXgj4XL29b",
+        "fields": {
+          "Agency/Department Name": "Unspecified Agency",
+          "Country Name": "USA"
+        }
+      },
+      {
         "id": "recRt57CGsQQK50dQ",
         "fields": {
           "Agency/Department Name": "Unspecified Agency",
           "Country Name": "Japan"
-        }
-      },
-      {
-        "id": "recZCZqKtB0JM5kmx",
-        "fields": {
-          "Agency/Department Name": "Unspecified Agency",
-          "Country Name": "Denmark"
-        }
-      },
-      {
-        "id": "recI95P9GtOhiXNoU",
-        "fields": {
-          "Agency/Department Name": "Unspecified Agency",
-          "Country Name": "South Korea"
-        }
-      },
-      {
-        "id": "reco4Um0k7Tgw2UCK",
-        "fields": {
-          "Agency/Department Name": "Unspecified Agency",
-          "Country Name": "United Kingdom"
-        }
-      },
-      {
-        "id": "recYVizktLnxQPeKH",
-        "fields": {
-          "Agency/Department Name": "Unspecified Agency",
-          "Country Name": "Australia"
-        }
-      },
-      {
-        "id": "recqSvUlZQjET4fCH",
-        "fields": {
-          "Agency/Department Name": "Unspecified Agency",
-          "Country Name": "Netherlands"
-        }
-      },
-      {
-        "id": "rec8otX5QGDSVA5CH",
-        "fields": {
-          "Agency/Department Name": "Unspecified Agency",
-          "Country Name": "France"
-        }
-      },
-      {
-        "id": "recqM20m0W6iS5Y0t",
-        "fields": {
-          "Agency/Department Name": "Unspecified Agency",
-          "Country Name": "United Arab Emirates"
-        }
-      },
-      {
-        "id": "recKVILBOB3NBEJlE",
-        "fields": {
-          "Agency/Department Name": "Joint Research Centre ",
-          "Country Name": "European Union"
         }
       }
     ],
@@ -2261,25 +2205,116 @@
           "HDX_SOHD": "None"
         },
         "agencies": []
+      },
+      {
+        "id": "reckrBbkioEQP7wtd",
+        "fields": {
+          "Project/Product Name": "Women Count",
+          "Project Description": "UN Women’s strategy for change is Women Count, which seeks to bring about a radical shift in how gender statistics are used, created and promoted.\n",
+          "Project Donor Agencies": [
+            "recNud8p6FGI83cjR",
+            "recjyWTotWvaTYTI4",
+            "recVyMcwjAOzKc6HA",
+            "rece2l2IJRlTC2ERq",
+            "reco4Um0k7Tgw2UCK",
+            "reckIAhFXgj4XL29b",
+            "recbtz43uuKKFVfvd",
+            "rec44UV2liT4wu1tg",
+            "recUEOSvKGVMYEPqX"
+          ],
+          "Project Website": "https://data.unwomen.org/women-count",
+          "Provider Orgs Full Name": [
+            "rec5yRG9Wnxu6XkrO"
+          ],
+          "CRAF’d-Funded Project?": "NO",
+          "Investment Type(s)": [
+            "Infrastructure & Platforms"
+          ],
+          "Investment Theme(s)": [
+            "Data Storage, Access & Sharing"
+          ],
+          "product_key": "women-count",
+          "HDX_SOHD": "None"
+        },
+        "agencies": [
+          {
+            "id": "recNud8p6FGI83cjR",
+            "fields": {
+              "Agency/Department Name": "Unspecified Agency",
+              "Country Name": "Austria"
+            }
+          },
+          {
+            "id": "recjyWTotWvaTYTI4",
+            "fields": {
+              "Agency/Department Name": "Unspecified Agency",
+              "Country Name": "Ireland"
+            }
+          },
+          {
+            "id": "recVyMcwjAOzKc6HA",
+            "fields": {
+              "Agency/Department Name": "Unspecified Agency",
+              "Country Name": "Mexico"
+            }
+          },
+          {
+            "id": "rece2l2IJRlTC2ERq",
+            "fields": {
+              "Agency/Department Name": "Unspecified Agency",
+              "Country Name": "Sweden"
+            }
+          },
+          {
+            "id": "reco4Um0k7Tgw2UCK",
+            "fields": {
+              "Agency/Department Name": "Unspecified Agency",
+              "Country Name": "United Kingdom"
+            }
+          },
+          {
+            "id": "reckIAhFXgj4XL29b",
+            "fields": {
+              "Agency/Department Name": "Unspecified Agency",
+              "Country Name": "USA"
+            }
+          },
+          {
+            "id": "recbtz43uuKKFVfvd",
+            "fields": {
+              "Agency/Department Name": "Unspecified Agency",
+              "Agency Data Portal": "https://www.gatesfoundation.org/about/committed-grants",
+              "Country Name": "Bill and Melinda Gates Foundation"
+            }
+          },
+          {
+            "id": "rec44UV2liT4wu1tg",
+            "fields": {
+              "Agency/Department Name": "Unspecified Agency",
+              "Country Name": "Alwaleed Philanthropies"
+            }
+          },
+          {
+            "id": "recUEOSvKGVMYEPqX",
+            "fields": {
+              "Agency/Department Name": "Unspecified Agency",
+              "Country Name": "Alibaba Foundation"
+            }
+          }
+        ]
       }
     ],
     "donor_countries": [
-      "Australia",
       "Canada",
-      "Denmark",
       "European Union",
       "Finland",
-      "France",
       "Germany",
       "Japan",
-      "Netherlands",
       "Norway",
-      "South Korea",
       "Sweden",
       "Switzerland",
       "USA",
-      "United Arab Emirates",
-      "United Kingdom"
+      "United Nations (UN)"
     ]
   },
   {
@@ -2323,10 +2358,9 @@
           ],
           "CRAF’d-Funded Project?": "NO",
           "Investment Type(s)": [
-            "Infrastructure & Platforms"
+            "Crisis Analytics & Insights"
           ],
           "Investment Theme(s)": [
-            "Geospatial Data",
             "Geospatial Analytics"
           ],
           "product_key": "earthquakes-maps",
@@ -2399,6 +2433,50 @@
             "Disarmament Data"
           ],
           "product_key": "unoda-unmilex",
+          "HDX_SOHD": "None"
+        },
+        "agencies": []
+      }
+    ],
+    "donor_countries": []
+  },
+  {
+    "id": "rec6yP4Ms95Zkxode",
+    "name": "Global Pulse",
+    "fields": {
+      "Org Full Name": "Global Pulse",
+      "Org Description": "Data Insights for Social & Humanitarian Action, also known as DISHA, is a multi-partner initiative led by UN Global Pulse, the Secretary-General’s Innovation Lab, that aims to accelerate ethical and responsible access to data and artificial intelligence (AI) solutions to unlock social impact at scale.",
+      "Provided Data Ecosystem Projects": [
+        "rec5RfuXsmtGtPDP8"
+      ],
+      "Org Donor Agencies": [
+        "recSrpTHE0mGFNF65"
+      ],
+      "Org Type": "United Nations System"
+    },
+    "agencies": [
+      {
+        "id": "recSrpTHE0mGFNF65",
+        "fields": {}
+      }
+    ],
+    "projects": [
+      {
+        "id": "rec5RfuXsmtGtPDP8",
+        "fields": {
+          "Project/Product Name": "Disha",
+          "Provider Orgs Full Name": [
+            "rec6yP4Ms95Zkxode"
+          ],
+          "CRAF’d-Funded Project?": "NO",
+          "Investment Type(s)": [
+            "Crisis Analytics & Insights"
+          ],
+          "Investment Theme(s)": [
+            "AI Models",
+            "Damage Assessments",
+            "Geospatial Analytics"
+          ],
           "HDX_SOHD": "None"
         },
         "agencies": []
@@ -2579,7 +2657,8 @@
       "Org Description": "UNDP works in about 170 countries and territories, helping to eradicate poverty, reduce inequalities and exclusion, and build resilience so countries can sustain progress. As the UN’s development agency, UNDP plays a critical role in helping countries achieve the Sustainable Development Goals.\t",
       "Provided Data Ecosystem Projects": [
         "recS70dZaWiddCf5J",
-        "recXaGjOLcrJQCuNn"
+        "recXaGjOLcrJQCuNn",
+        "recaY3lDEu5I8aL6D"
       ],
       "Org Donor Agencies": [
         "rec1YpvhkjwME6GOJ",
@@ -2905,6 +2984,82 @@
             }
           }
         ]
+      },
+      {
+        "id": "recaY3lDEu5I8aL6D",
+        "fields": {
+          "Project/Product Name": "Data Futures Exchange",
+          "Project Description": "The Data Futures Exchange is an open-source platform that serves as a central hub for data innovation with development impact. Based on the UNDP's thematic priorities, we use a systemic approach and advanced analytics to identify actions that accelerate sustainable development worldwide. \n",
+          "Project Donor Agencies": [
+            "rec2KBp1IAA5TtnQl",
+            "rec8gXVsPUUB517NE",
+            "recRt57CGsQQK50dQ",
+            "receHoGmo61oHXBAc",
+            "recfWcw0CdUs0STc3",
+            "recGNTHL9SKZxLDcw"
+          ],
+          "Project Website": "https://data.undp.org/",
+          "Provider Orgs Full Name": [
+            "rec9NauCCUPUWMwfl"
+          ],
+          "CRAF’d-Funded Project?": "NO",
+          "Investment Type(s)": [
+            "Infrastructure & Platforms"
+          ],
+          "Investment Theme(s)": [
+            "Data Storage, Access & Sharing"
+          ],
+          "product_key": "data-futures",
+          "HDX_SOHD": "None"
+        },
+        "agencies": [
+          {
+            "id": "rec2KBp1IAA5TtnQl",
+            "fields": {
+              "Agency/Department Name": "German Corporation for International Cooperation (GIZ)",
+              "Agency Data Portal": "https://www.giz.de/projektdaten/index.action?request_locale=en_GB",
+              "Country Name": "Germany"
+            }
+          },
+          {
+            "id": "rec8gXVsPUUB517NE",
+            "fields": {
+              "Agency/Department Name": "Federal Ministry for Economic Cooperation and Development (BMZ)",
+              "Agency Data Portal": "https://www.transparenzportal.bund.de/en",
+              "Country Name": "Germany"
+            }
+          },
+          {
+            "id": "recRt57CGsQQK50dQ",
+            "fields": {
+              "Agency/Department Name": "Unspecified Agency",
+              "Country Name": "Japan"
+            }
+          },
+          {
+            "id": "receHoGmo61oHXBAc",
+            "fields": {
+              "Agency/Department Name": "Ministry of Foreign Affairs (MOFA)",
+              "Agency Data Portal": "https://www.mofa.go.kr/eng/wpge/m_24811/contents.do",
+              "Country Name": "South Korea"
+            }
+          },
+          {
+            "id": "recfWcw0CdUs0STc3",
+            "fields": {
+              "Agency/Department Name": "Unspecified Agency",
+              "Country Name": "Microsoft"
+            }
+          },
+          {
+            "id": "recGNTHL9SKZxLDcw",
+            "fields": {
+              "Agency/Department Name": "European Commission (EC)",
+              "Agency Data Portal": "Maybe https://ec.europa.eu/info/funding-tenders/opportunities/portal/",
+              "Country Name": "European Union"
+            }
+          }
+        ]
       }
     ],
     "donor_countries": [
@@ -3076,6 +3231,9 @@
           "CRAF’d-Funded Project?": "NO",
           "Investment Type(s)": [
             "Infrastructure & Platforms"
+          ],
+          "Investment Theme(s)": [
+            "Data Storage, Access & Sharing"
           ],
           "product_key": "hdx-hapi",
           "HDX_SOHD": "None"
@@ -3498,15 +3656,11 @@
           ],
           "CRAF’d-Funded Project?": "NO",
           "Investment Type(s)": [
-            "Data Sets & Commons",
-            "Learning & Exchange"
+            "Data Sets & Commons"
           ],
           "Investment Theme(s)": [
-            "Upskilling & Training",
-            "Conflict Analytics",
             "Conflict & Violence Data",
-            "Peace Data",
-            "Anticipatory and Early Action Forecasts"
+            "Peace Data"
           ],
           "product_key": "ucdp",
           "HDX_SOHD": "None"
@@ -4182,6 +4336,9 @@
           "Investment Type(s)": [
             "Human Capital & Know-how"
           ],
+          "Investment Theme(s)": [
+            "Capacity Building"
+          ],
           "product_key": "cap-strength",
           "HDX_SOHD": "None"
         },
@@ -4200,6 +4357,10 @@
           "Investment Type(s)": [
             "Human Capital & Know-how"
           ],
+          "Investment Theme(s)": [
+            " Data Collection & Generation",
+            "Applied Data Analytics & Insights Generation"
+          ],
           "product_key": "population-distribution",
           "HDX_SOHD": "None"
         },
@@ -4217,6 +4378,9 @@
           "CRAF’d-Funded Project?": "NO",
           "Investment Type(s)": [
             "Human Capital & Know-how"
+          ],
+          "Investment Theme(s)": [
+            "Applied Data Analytics & Insights Generation"
           ],
           "product_key": "service-site",
           "HDX_SOHD": "None"
@@ -4533,6 +4697,9 @@
           "Investment Type(s)": [
             "Data Sets & Commons"
           ],
+          "Investment Theme(s)": [
+            "Geospatial Data"
+          ],
           "product_key": "cod-ab",
           "HDX_SOHD": "19"
         },
@@ -4799,15 +4966,11 @@
           ],
           "CRAF’d-Funded Project?": "NO",
           "Investment Type(s)": [
-            "Data Sets & Commons",
-            "Learning & Exchange"
+            "Data Sets & Commons"
           ],
           "Investment Theme(s)": [
-            "Upskilling & Training",
-            "Conflict Analytics",
             "Conflict & Violence Data",
-            "Peace Data",
-            "Anticipatory and Early Action Forecasts"
+            "Peace Data"
           ],
           "product_key": "ucdp",
           "HDX_SOHD": "None"
@@ -4868,6 +5031,43 @@
     ]
   },
   {
+    "id": "recHPSF1rhFJKTJJY",
+    "name": "Famine Early Warning Systems Network (FEWS NET)",
+    "fields": {
+      "Org Full Name": "Famine Early Warning Systems Network (FEWS NET)",
+      "Org Short Name": "FEWS",
+      "Org Website": "https://fews.net/",
+      "Org Description": "The Famine Early Warning Systems Network (FEWS NET) is a leading provider of early warning and analysis on acute food insecurity around the world.",
+      "Org Donor Agencies": [
+        "recQUVhcVyxZlXJ3H",
+        "recjiYJTFpNO2PDDl"
+      ],
+      "org_key": "fews-net",
+      "Org Type": "Government / Public Sector"
+    },
+    "agencies": [
+      {
+        "id": "recQUVhcVyxZlXJ3H",
+        "fields": {
+          "Agency/Department Name": "Department of State (DOS)",
+          "Agency Data Portal": "https://www.foreignassistance.gov/",
+          "Country Name": "USA"
+        }
+      },
+      {
+        "id": "recjiYJTFpNO2PDDl",
+        "fields": {
+          "Agency/Department Name": "National Aeronautics and Space Administration (NASA)",
+          "Country Name": "USA"
+        }
+      }
+    ],
+    "projects": [],
+    "donor_countries": [
+      "USA"
+    ]
+  },
+  {
     "id": "recHsNe20lr1CUAVu",
     "name": "Data Pop Alliance",
     "fields": {
@@ -4876,7 +5076,6 @@
       "Org Website": "https://datapopalliance.org/",
       "Org Description": "Since 2013, Data-Pop Alliance has worked to apply cutting edge data science to solve the world’s most pressing problems. As the 2030 deadline for the UN sustainable development goals approaches, we believe novel approaches are needed to enhance the efficacy of the global development sector and reach those most in need. ",
       "Provided Data Ecosystem Projects": [
-        "recejrbDKmak6gySA",
         "recogMAjsbKV95Pqs",
         "reczwfqv4kuJclB0U"
       ],
@@ -4957,34 +5156,21 @@
     ],
     "projects": [
       {
-        "id": "recejrbDKmak6gySA",
+        "id": "recogMAjsbKV95Pqs",
         "fields": {
-          "Project/Product Name": "OPAL (old?)",
-          "Project Description": "OPAL is a data-powered decision and coordination support system for development and humanitarian interventions.\n",
-          "Project Website": "https://www.opalproject.org/",
+          "Project/Product Name": "Data, Technology & Innovation (DTI) Services ",
+          "Project Website": "https://datapopalliance.org/our-work/data-tech-innovation/",
           "Provider Orgs Full Name": [
             "recHsNe20lr1CUAVu"
           ],
           "CRAF’d-Funded Project?": "NO",
           "Investment Type(s)": [
-            "Infrastructure & Platforms"
+            "Human Capital & Know-how"
           ],
           "Investment Theme(s)": [
-            "Data Storage, Access & Sharing"
+            "Applied Data Analytics & Insights Generation",
+            "Data Management & Visualization"
           ],
-          "product_key": "opal",
-          "HDX_SOHD": "None"
-        },
-        "agencies": []
-      },
-      {
-        "id": "recogMAjsbKV95Pqs",
-        "fields": {
-          "Project/Product Name": "Data, Technology & Innovation (DTI) Services ",
-          "Provider Orgs Full Name": [
-            "recHsNe20lr1CUAVu"
-          ],
-          "CRAF’d-Funded Project?": "NO",
           "product_key": "dti-services",
           "HDX_SOHD": "None"
         },
@@ -4996,6 +5182,12 @@
           "Project/Product Name": "Capacity & Training Services",
           "Provider Orgs Full Name": [
             "recHsNe20lr1CUAVu"
+          ],
+          "Investment Type(s)": [
+            "Human Capital & Know-how"
+          ],
+          "Investment Theme(s)": [
+            "Capacity Building"
           ],
           "product_key": "capacity-training",
           "HDX_SOHD": "None"
@@ -5472,6 +5664,9 @@
           "CRAF’d-Funded Project?": "NO",
           "Investment Type(s)": [
             "Human Capital & Know-how"
+          ],
+          "Investment Theme(s)": [
+            "Information Managment"
           ],
           "product_key": "infomgmt",
           "HDX_SOHD": "None"
@@ -6187,9 +6382,6 @@
       "Org Full Name": "U.S. Department of State",
       "Org Short Name": "State Department",
       "Org Website": "https://www.usaid.gov/",
-      "Provided Data Ecosystem Projects": [
-        "recrAQT0YpFBCQ02U"
-      ],
       "Org Donor Agencies": [
         "recQUVhcVyxZlXJ3H"
       ],
@@ -6210,42 +6402,7 @@
         }
       }
     ],
-    "projects": [
-      {
-        "id": "recrAQT0YpFBCQ02U",
-        "fields": {
-          "Project/Product Name": "Famine Early Warning Systems Network (FEWS NET)",
-          "Project Description": "FEWS NET issues monthly and event-driven food insecurity forecasts based on integrated climate, socioeconomic, and agricultural data. Its publicly shared maps and data support anticipatory humanitarian planning and funding allocation in high-risk areas.\n",
-          "Project Donor Agencies": [
-            "recQUVhcVyxZlXJ3H"
-          ],
-          "Project Website": "https://fews.net/",
-          "Provider Orgs Full Name": [
-            "recOn1gqNzxTVBUgw"
-          ],
-          "CRAF’d-Funded Project?": "NO",
-          "Investment Type(s)": [
-            "Data Sets & Commons",
-            "Crisis Analytics & Insights"
-          ],
-          "Investment Theme(s)": [
-            "Food Security Data"
-          ],
-          "product_key": "fews-net",
-          "HDX_SOHD": "None"
-        },
-        "agencies": [
-          {
-            "id": "recQUVhcVyxZlXJ3H",
-            "fields": {
-              "Agency/Department Name": "Department of State (DOS)",
-              "Agency Data Portal": "https://www.foreignassistance.gov/",
-              "Country Name": "USA"
-            }
-          }
-        ]
-      }
-    ],
+    "projects": [],
     "donor_countries": [
       "USA"
     ]
@@ -6605,7 +6762,8 @@
       "Org Website": "https://www.impact-initiatives.org/what-we-do/panda/",
       "Org Description": "IMPACT’s PANDA initiative aims to improve the effectiveness, efficiency and efficacy of humanitarian and development interventions. PANDA supports the entire humanitarian programme cycle, including programme design, assessments, baselines, monitoring and evaluation.",
       "Provided Data Ecosystem Projects": [
-        "recIUSUS3NNXaMHCQ"
+        "recIUSUS3NNXaMHCQ",
+        "rec3YDnHw5YkToiKf"
       ],
       "Org Donor Agencies": [
         "rec3Ado0Jrl799Q8A"
@@ -6625,9 +6783,30 @@
     ],
     "projects": [
       {
+        "id": "rec3YDnHw5YkToiKf",
+        "fields": {
+          "Project/Product Name": "PANDA Building Capacities",
+          "Project Website": "https://www.impact-initiatives.org/what-we-do/panda/",
+          "Provider Orgs Full Name": [
+            "recSqPg3XJM8pnI25"
+          ],
+          "CRAF’d-Funded Project?": "NO",
+          "Investment Type(s)": [
+            "Human Capital & Know-how"
+          ],
+          "Investment Theme(s)": [
+            "Capacity Building",
+            "Digital Product & Tool Development",
+            "Information Managment"
+          ],
+          "HDX_SOHD": "None"
+        },
+        "agencies": []
+      },
+      {
         "id": "recIUSUS3NNXaMHCQ",
         "fields": {
-          "Project/Product Name": "PANDA",
+          "Project/Product Name": "Monitoring & Evaluation",
           "Project Description": "IMPACT’s PANDA initiative aims to improve the effectiveness, efficiency and efficacy of humanitarian and development interventions. PANDA supports the entire humanitarian programme cycle, including programme design, assessments, baselines, monitoring and evaluation.\n\t\n",
           "Project Website": "https://www.impact-initiatives.org/what-we-do/panda/",
           "Provider Orgs Full Name": [
@@ -6635,13 +6814,10 @@
           ],
           "CRAF’d-Funded Project?": "NO",
           "Investment Type(s)": [
-            "Infrastructure & Platforms",
+            "Crisis Analytics & Insights",
             "Human Capital & Know-how"
           ],
           "Investment Theme(s)": [
-            "Data Storage, Access & Sharing",
-            "Conflict & Violence Data",
-            "Needs Assessment Data",
             "Impact Evaluation",
             "Capacity Building"
           ],
@@ -6664,9 +6840,16 @@
       "Org Website": "https://dhsprogram.com/",
       "Org Description": "The DHS Program (Demographic and Health Surveys) is a primary source of data on health and population trends in developing countries, having provided technical assistance to over 300 surveys in more than 90 countries since 1984. They collect and disseminate nationally representative data on critical areas including fertility, family planning, maternal and child health, gender, HIV/AIDS, malaria, and nutrition. Funded by USAID and other donors, and implemented by ICF International, The DHS Program plays a vital role in advancing global understanding of health and population issues.",
       "Link to Data Products Overview": "<https://dhsprogram.com/Data/>\n",
+      "Provided Data Ecosystem Projects": [
+        "recfvtc6piaTv5ar2",
+        "recblEG9dcRNcvYaX",
+        "rec73Bmds9k3InQkm",
+        "recpaU5vlkr1O5EVC"
+      ],
       "Org Donor Agencies": [
         "recFDm6MHWUu6GSMI",
-        "recr77XDSfR0O9Jen"
+        "recr77XDSfR0O9Jen",
+        "recbtz43uuKKFVfvd"
       ],
       "Org HQ Country": "United States",
       "Has received CRAF'd Funding?": "NO",
@@ -6689,10 +6872,106 @@
           "Agency/Department Name": "Unspecified Agency",
           "Country Name": "World Health Organization (WHO)"
         }
+      },
+      {
+        "id": "recbtz43uuKKFVfvd",
+        "fields": {
+          "Agency/Department Name": "Unspecified Agency",
+          "Agency Data Portal": "https://www.gatesfoundation.org/about/committed-grants",
+          "Country Name": "Bill and Melinda Gates Foundation"
+        }
       }
     ],
-    "projects": [],
+    "projects": [
+      {
+        "id": "rec73Bmds9k3InQkm",
+        "fields": {
+          "Project/Product Name": "Service Provision Assessment (SPA)",
+          "Project Description": "The Service Provision Assessment (SPA) is a health facility survey that collects information on service availability and Quality of Care (QoC) measures within a country’s health system. SPAs fill an urgent need for actionable monitoring data in participating countries. The SPA assesses availability and QoC for a wide variety of services with a focus on antenatal care (ANC), family planning (FP), maternity care, and sick child services. Quality of Care measures include indicators in two dimensions: structural quality (physical and human resources) and process quality (provision of care and experience of care).\n",
+          "Project Website": "https://dhsprogram.com/methodology/Survey-Types/SPA.cfm",
+          "Provider Orgs Full Name": [
+            "recU1jAnjfLIhxtwj"
+          ],
+          "CRAF’d-Funded Project?": "NO",
+          "Investment Type(s)": [
+            "Data Sets & Commons"
+          ],
+          "Investment Theme(s)": [
+            "Health Facilities Data"
+          ],
+          "product_key": "spa",
+          "HDX_SOHD": "None"
+        },
+        "agencies": []
+      },
+      {
+        "id": "recblEG9dcRNcvYaX",
+        "fields": {
+          "Project/Product Name": "Malaria Indicators Survey (MIS)",
+          "Project Description": "The Malaria Indicator Surveys (MIS) collect data on household ownership and use of mosquito nets, malaria prevention during pregnancy, and access to effective treatment for fever in children. They often include biomarker testing for malaria and anemia, enabling countries to assess progress toward malaria control targets.\n",
+          "Project Website": "https://dhsprogram.com/Methodology/Survey-Types/MIS.cfm",
+          "Provider Orgs Full Name": [
+            "recU1jAnjfLIhxtwj"
+          ],
+          "Investment Type(s)": [
+            "Data Sets & Commons"
+          ],
+          "Investment Theme(s)": [
+            "Health Data"
+          ],
+          "product_key": "mis",
+          "HDX_SOHD": "None"
+        },
+        "agencies": []
+      },
+      {
+        "id": "recfvtc6piaTv5ar2",
+        "fields": {
+          "Project/Product Name": "Demographic and Health Surveys (DHS)",
+          "Project Description": "The Demographic and Health Surveys (DHS) provide comprehensive and nationally representative data for monitoring and evaluating population, health, and nutrition indicators. They support evidence-based decision-making and program design in developing countries by collecting high-quality information on fertility, family planning, maternal and child health, and HIV/AIDS.\n",
+          "Project Website": "https://dhsprogram.com/",
+          "Provider Orgs Full Name": [
+            "recU1jAnjfLIhxtwj"
+          ],
+          "CRAF’d-Funded Project?": "NO",
+          "Investment Type(s)": [
+            "Data Sets & Commons"
+          ],
+          "Investment Theme(s)": [
+            "Health Data"
+          ],
+          "product_key": "dhs",
+          "HDX_SOHD": "None"
+        },
+        "agencies": []
+      },
+      {
+        "id": "recpaU5vlkr1O5EVC",
+        "fields": {
+          "Project/Product Name": "Key Indicators Survey (KIS)",
+          "Project Description": "The Key Indicators Survey (KIS) is designed to help meet the monitoring and evaluation needs of programs involved in population and health activities in developing countries, especially to produce data for small areas (regions, districts, catchment areas) that may be targeted by an individual project, although they can be used in nationally representative surveys as well. The KIS tool includes questionnaires, interviewer’s manuals, guidelines for sampling and a tabulation plan.\n",
+          "Project Website": "https://dhsprogram.com/methodology/Survey-Types/KIS.cfm",
+          "Provider Orgs Full Name": [
+            "recU1jAnjfLIhxtwj"
+          ],
+          "Investment Type(s)": [
+            "Data Sets & Commons",
+            "Crisis Analytics & Insights"
+          ],
+          "Investment Theme(s)": [
+            "Baseline Population Data",
+            "Monitoring & Alerts",
+            "Population Analytics",
+            "Health Analytics"
+          ],
+          "product_key": "kis",
+          "HDX_SOHD": "None"
+        },
+        "agencies": []
+      }
+    ],
     "donor_countries": [
+      "Bill and Melinda Gates Foundation",
       "United Nations Children's Fund (UNICEF)",
       "World Health Organization (WHO)"
     ]
@@ -6775,8 +7054,7 @@
       "Provided Data Ecosystem Projects": [
         "recy1WUw4sZ55UmrS",
         "recCrLYQFMbrPxsId",
-        "recWziB7RyyVfMv3A",
-        "recrWrHtaaCWN2TVH"
+        "recWziB7RyyVfMv3A"
       ],
       "Org Donor Agencies": [
         "reckIAhFXgj4XL29b",
@@ -7073,28 +7351,6 @@
             "Conflict & Violence Data"
           ],
           "product_key": "heritage-crisis",
-          "HDX_SOHD": "None"
-        },
-        "agencies": []
-      },
-      {
-        "id": "recrWrHtaaCWN2TVH",
-        "fields": {
-          "Project/Product Name": "UNESCO Institute for Statistics",
-          "Project Description": "UIS is UNESCO's global statistical agency for education, science, culture, and communication—publishing SDG indicators and open data in standardized formats.\n",
-          "Project Website": "https://uis.unesco.org/",
-          "Provider Orgs Full Name": [
-            "recWOW3N9BgLJiHl5"
-          ],
-          "CRAF’d-Funded Project?": "NO",
-          "Investment Type(s)": [
-            "Human Capital & Know-how"
-          ],
-          "Investment Theme(s)": [
-            "Education Data",
-            "Gender Data"
-          ],
-          "product_key": "unesco-institute-for-statistics",
           "HDX_SOHD": "None"
         },
         "agencies": []
@@ -7459,8 +7715,8 @@
             "Crisis Analytics & Insights"
           ],
           "Investment Theme(s)": [
-            "Conflict & Violence Data",
-            "Anticipatory and Early Action Forecasts"
+            "Anticipatory and Early Action Forecasts",
+            "Conflict Analytics"
           ],
           "product_key": "crisiswatch",
           "HDX_SOHD": "None"
@@ -7576,8 +7832,8 @@
             "Crisis Analytics & Insights"
           ],
           "Investment Theme(s)": [
-            "Climate Data",
-            "Anticipatory and Early Action Forecasts"
+            "Anticipatory and Early Action Forecasts",
+            "Climate Analytics"
           ],
           "product_key": "eearth",
           "HDX_SOHD": "None"
@@ -7638,52 +7894,6 @@
     ]
   },
   {
-    "id": "reccGGWprH0EFvRjo",
-    "name": "UN Foundation",
-    "fields": {
-      "Org Full Name": "UN Foundation",
-      "Org Short Name": "UN Foundation",
-      "Org Website": "https://unfoundation.org/",
-      "Org Description": "The UN Foundation facilitates data and technology initiatives to support sustainable development by convening UN agencies, governments, civil society, academics, and the private sector. They host and support partnerships like the Global Partnership for Sustainable Development Data, which uses data to achieve the Sustainable Development Goals, and DIAL, which aims to overcome barriers preventing digital solutions from reaching everyone. They also support Data2X, a gender data alliance working to improve the quality, availability, and use of gender data to make a practical difference in the lives of women, girls, and gender-diverse people worldwide.",
-      "Provided Data Ecosystem Projects": [
-        "recGVHndBPIvMpuHb"
-      ],
-      "Org HQ Country": "United States",
-      "Has received CRAF'd Funding?": "NO",
-      "org_key": "un-foundation",
-      "Org Type": "Non-Governmental Organization",
-      "HDX Org Key": "foundation-center-organization"
-    },
-    "agencies": [],
-    "projects": [
-      {
-        "id": "recGVHndBPIvMpuHb",
-        "fields": {
-          "Project/Product Name": "Data2X",
-          "Project Description": "Data2X is a global partnership advancing gender-responsive data systems. It builds research, advocacy, and tools to support data on women and girls, including capacity strengthening and innovation grants.\n",
-          "Project Website": "https://data2x.org/",
-          "Provider Orgs Full Name": [
-            "reccGGWprH0EFvRjo"
-          ],
-          "CRAF’d-Funded Project?": "NO",
-          "Investment Type(s)": [
-            "Data Sets & Commons",
-            "Learning & Exchange"
-          ],
-          "Investment Theme(s)": [
-            "Gender Data",
-            "Gender Analytics",
-            "Upskilling & Training"
-          ],
-          "product_key": "data2x",
-          "HDX_SOHD": "None"
-        },
-        "agencies": []
-      }
-    ],
-    "donor_countries": []
-  },
-  {
     "id": "reccGyY6Ep2ptBPKy",
     "name": "Arab Barometer",
     "fields": {
@@ -7726,6 +7936,13 @@
             "reccGyY6Ep2ptBPKy"
           ],
           "CRAF’d-Funded Project?": "NO",
+          "Investment Type(s)": [
+            "Data Sets & Commons"
+          ],
+          "Investment Theme(s)": [
+            "Sentiment Data",
+            "Disaggregated Country-level Data"
+          ],
           "product_key": "arab-pulse",
           "HDX_SOHD": "None"
         },
@@ -7743,6 +7960,9 @@
           "CRAF’d-Funded Project?": "NO",
           "Investment Type(s)": [
             "Crisis Analytics & Insights"
+          ],
+          "Investment Theme(s)": [
+            "Secondary Data Review / Analysis"
           ],
           "product_key": "datool",
           "HDX_SOHD": "None"
@@ -7951,11 +8171,10 @@
           ],
           "CRAF’d-Funded Project?": "NO",
           "Investment Type(s)": [
-            "Crisis Analytics & Insights"
+            "Human Capital & Know-how"
           ],
           "Investment Theme(s)": [
-            "Damage Assessments",
-            "Needs Assessment Data"
+            "Upskilling & Training"
           ],
           "product_key": "evca",
           "HDX_SOHD": "None"
@@ -8189,6 +8408,9 @@
       "Org Short Name": "UNCCD",
       "Org Website": "https://www.unccd.int/",
       "Org Description": "The UNCCD is the global voice for land. We promote practices that avoid, reduce and reverse land degradation and are the driving force behind Sustainable Development Goal 15 and Land Degradation Neutrality.",
+      "Provided Data Ecosystem Projects": [
+        "recmzmFWkB8g2kiyj"
+      ],
       "Org Donor Agencies": [
         "reckIAhFXgj4XL29b",
         "recXfPKShGM1SGpOy",
@@ -8288,7 +8510,28 @@
         }
       }
     ],
-    "projects": [],
+    "projects": [
+      {
+        "id": "recmzmFWkB8g2kiyj",
+        "fields": {
+          "Project/Product Name": "Desertification Country Profiles",
+          "Project Description": "Country Profiles  from UNCCD\n",
+          "Project Website": "https://www.unccd.int/our-work/country-profiles",
+          "Provider Orgs Full Name": [
+            "receHoEBpdo8LefZP"
+          ],
+          "CRAF’d-Funded Project?": "NO",
+          "Investment Type(s)": [
+            "Crisis Analytics & Insights"
+          ],
+          "Investment Theme(s)": [
+            "Climate Analytics"
+          ],
+          "HDX_SOHD": "None"
+        },
+        "agencies": []
+      }
+    ],
     "donor_countries": [
       "Brazil",
       "Canada",
@@ -8457,7 +8700,7 @@
       "Org Full Name": "UNDRR: United Nations Office for Disaster Risk Reduction",
       "Org Short Name": "UNDRR",
       "Org Website": "https://www.undrr.org/",
-      "Org Description": "The United Nations Office for Disaster Risk Reduction (UNDRR) has a big ambition: to help decision makers across the globe better understand and act on risk. \nAt UNDRR, we envision a world where disasters no longer threaten the well-being of people and the future of the planet. Sustainable development and the 2030 Agenda cannot be achieved without working towards that goal of building resilience.\t",
+      "Org Description": "The United Nations Office for Disaster Risk Reduction (UNDRR) has a big ambition: to help decision makers across the globe better understand and act on risk.  At UNDRR, we envision a world where disasters no longer threaten the well-being of people and the future of the planet. Sustainable development and the 2030 Agenda cannot be achieved without working towards that goal of building resilience.\t",
       "Link to Data Products Overview": "<https://data.undrr.org/api/json>\n",
       "Provided Data Ecosystem Projects": [
         "recUotlR1ZJwVMAIS",
@@ -8696,8 +8939,7 @@
           "Investment Theme(s)": [
             "Data Storage, Access & Sharing",
             "Climate Data",
-            "Environmental Data",
-            "Climate Analytics"
+            "Environmental Data"
           ],
           "product_key": "undrr-preventionweb",
           "HDX_SOHD": "None"
@@ -9150,8 +9392,7 @@
           ],
           "CRAF’d-Funded Project?": "NO",
           "Investment Type(s)": [
-            "Data Sets & Commons",
-            "Infrastructure & Platforms"
+            "Data Sets & Commons"
           ],
           "Investment Theme(s)": [
             "Displacement & Migration Data"
@@ -9261,8 +9502,7 @@
           ],
           "CRAF’d-Funded Project?": "NO",
           "Investment Type(s)": [
-            "Data Sets & Commons",
-            "Infrastructure & Platforms"
+            "Data Sets & Commons"
           ],
           "Investment Theme(s)": [
             "Household Survey Data"
@@ -9283,11 +9523,10 @@
           ],
           "CRAF’d-Funded Project?": "NO",
           "Investment Type(s)": [
-            "Data Sets & Commons",
             "Infrastructure & Platforms"
           ],
           "Investment Theme(s)": [
-            "Displacement & Migration Data"
+            "Data Processing & Transformation"
           ],
           "product_key": "unhcr-progres",
           "HDX_SOHD": "None"
@@ -9305,7 +9544,7 @@
           ],
           "CRAF’d-Funded Project?": "NO",
           "Investment Type(s)": [
-            "Infrastructure & Platforms"
+            "Data Sets & Commons"
           ],
           "Investment Theme(s)": [
             "Displacement & Migration Data"
@@ -9378,9 +9617,8 @@
             "Crisis Analytics & Insights"
           ],
           "Investment Theme(s)": [
-            "Displacement & Migration Data",
-            "Climate Data",
-            "Anticipatory and Early Action Forecasts"
+            "Anticipatory and Early Action Forecasts",
+            "Climate Analytics"
           ],
           "product_key": "clifdew-grid",
           "HDX_SOHD": "None"
@@ -10076,8 +10314,7 @@
           ],
           "CRAF’d-Funded Project?": "NO",
           "Investment Type(s)": [
-            "Data Sets & Commons",
-            "Infrastructure & Platforms"
+            "Data Sets & Commons"
           ],
           "Investment Theme(s)": [
             "Food Security Data"
@@ -10125,7 +10362,6 @@
             "Data Sets & Commons"
           ],
           "Investment Theme(s)": [
-            "Data Storage, Access & Sharing",
             "Geospatial Data",
             "Water, Sanitation & Hygiene (WASH) Data"
           ],
@@ -10300,9 +10536,8 @@
             "Crisis Analytics & Insights"
           ],
           "Investment Theme(s)": [
-            "Displacement & Migration Data",
-            "Climate Data",
-            "Anticipatory and Early Action Forecasts"
+            "Anticipatory and Early Action Forecasts",
+            "Climate Analytics"
           ],
           "product_key": "clifdew-grid",
           "HDX_SOHD": "None"
@@ -10363,8 +10598,7 @@
           ],
           "CRAF’d-Funded Project?": "NO",
           "Investment Type(s)": [
-            "Data Sets & Commons",
-            "Crisis Analytics & Insights"
+            "Data Sets & Commons"
           ],
           "Investment Theme(s)": [
             "Conflict & Violence Data"
@@ -10406,11 +10640,9 @@
           ],
           "CRAF’d-Funded Project?": "NO",
           "Investment Type(s)": [
-            "Data Sets & Commons",
             "Crisis Analytics & Insights"
           ],
           "Investment Theme(s)": [
-            "Food Security Data",
             "Food Security Analytics",
             "Anticipatory and Early Action Forecasts"
           ],
@@ -10458,8 +10690,7 @@
             "Infrastructure & Platforms"
           ],
           "Investment Theme(s)": [
-            "Data Storage, Access & Sharing",
-            "Open Access"
+            "Data Storage, Access & Sharing"
           ],
           "product_key": "wb-data-catalog",
           "HDX_SOHD": "None"
@@ -10748,7 +10979,7 @@
           "CRAF’d-Funded Project?": "NO",
           "Investment Type(s)": [
             "Crisis Analytics & Insights",
-            "Learning & Exchange"
+            "Standards & Coordination"
           ],
           "Investment Theme(s)": [
             "Best Practices",
@@ -10770,12 +11001,10 @@
           ],
           "CRAF’d-Funded Project?": "NO",
           "Investment Type(s)": [
-            "Data Sets & Commons",
-            "Infrastructure & Platforms"
+            "Data Sets & Commons"
           ],
           "Investment Theme(s)": [
-            "Needs Assessment Data",
-            "Displacement & Migration Analytics"
+            "Needs Assessment Data"
           ],
           "product_key": "displacement-severity",
           "HDX_SOHD": "None"
@@ -11048,7 +11277,7 @@
             "Crisis Analytics & Insights"
           ],
           "Investment Theme(s)": [
-            "Climate Data"
+            "Climate Analytics"
           ],
           "product_key": "climada-platform",
           "HDX_SOHD": "None"
@@ -11418,7 +11647,11 @@
           ],
           "CRAF’d-Funded Project?": "NO",
           "Investment Type(s)": [
-            "Crisis Analytics & Insights"
+            "Data Sets & Commons"
+          ],
+          "Investment Theme(s)": [
+            "Sentiment Data",
+            "Disaggregated Country-level Data"
           ],
           "product_key": "survey-analytics",
           "HDX_SOHD": "None"
@@ -11440,6 +11673,78 @@
       "Sweden",
       "United Kingdom",
       "United Nations Development Programme (UNDP)"
+    ]
+  },
+  {
+    "id": "recoAzfuGAQYkD8l8",
+    "name": "Data2x",
+    "fields": {
+      "Org Full Name": "Data2x",
+      "Org Website": "https://data2x.org/",
+      "Org Description": "Collaboration is Data2X’s guiding principle and signature way of working. This reflects our core strength: our convening power based on the trust we have earned from government, private sector, civil society, and academic partners. In the coming years, Data2X will play an even more active facilitator role, mobilizing stakeholders around a cooperative global approach to fill gender data gaps.",
+      "Provided Data Ecosystem Projects": [
+        "recGVHndBPIvMpuHb"
+      ],
+      "Org Donor Agencies": [
+        "recULIEfSZxBrWWZb",
+        "recbtz43uuKKFVfvd",
+        "recjAQGJeJQbasrLl"
+      ],
+      "Org Type": "United Nations System"
+    },
+    "agencies": [
+      {
+        "id": "recULIEfSZxBrWWZb",
+        "fields": {
+          "Agency/Department Name": "Unspecified Agency",
+          "Country Name": "United Nations Foundation (UN Foundation)"
+        }
+      },
+      {
+        "id": "recbtz43uuKKFVfvd",
+        "fields": {
+          "Agency/Department Name": "Unspecified Agency",
+          "Agency Data Portal": "https://www.gatesfoundation.org/about/committed-grants",
+          "Country Name": "Bill and Melinda Gates Foundation"
+        }
+      },
+      {
+        "id": "recjAQGJeJQbasrLl",
+        "fields": {
+          "Agency/Department Name": "Hewellet Foundation",
+          "Country Name": "NGO"
+        }
+      }
+    ],
+    "projects": [
+      {
+        "id": "recGVHndBPIvMpuHb",
+        "fields": {
+          "Project/Product Name": "Gender Data Center",
+          "Project Description": "Data2X is a global partnership advancing gender-responsive data systems. It builds research, advocacy, and tools to support data on women and girls, including capacity strengthening and innovation grants.\n",
+          "Project Website": "https://data2x.org/",
+          "Provider Orgs Full Name": [
+            "recoAzfuGAQYkD8l8"
+          ],
+          "CRAF’d-Funded Project?": "NO",
+          "Investment Type(s)": [
+            "Data Sets & Commons",
+            "Human Capital & Know-how"
+          ],
+          "Investment Theme(s)": [
+            "Gender Data",
+            "Data Management & Visualization"
+          ],
+          "product_key": "data2x",
+          "HDX_SOHD": "None"
+        },
+        "agencies": []
+      }
+    ],
+    "donor_countries": [
+      "Bill and Melinda Gates Foundation",
+      "NGO",
+      "United Nations Foundation (UN Foundation)"
     ]
   },
   {
@@ -12183,7 +12488,7 @@
       "Org Full Name": "UNEP: United Nations Environment Programme ",
       "Org Short Name": "UNEP",
       "Org Website": "https://www.unep.org/",
-      "Org Description": "The United Nations Environment Programme (UNEP) is the leading global authority on the environment.\nUNEP’s mission is to inspire, inform, and enable nations and peoples to improve their quality of life without compromising that of future generations.",
+      "Org Description": "The United Nations Environment Programme (UNEP) is the leading global authority on the environment. UNEP’s mission is to inspire, inform, and enable nations and peoples to improve their quality of life without compromising that of future generations.",
       "Link to Data Products Overview": "<https://wesr.unep.org/>\n",
       "Provided Data Ecosystem Projects": [
         "recSvtWQnSvfNoXdt"
@@ -12664,12 +12969,10 @@
           ],
           "CRAF’d-Funded Project?": "NO",
           "Investment Type(s)": [
-            "Data Sets & Commons",
-            "Infrastructure & Platforms"
+            "Data Sets & Commons"
           ],
           "Investment Theme(s)": [
             "Geospatial Data",
-            "Climate Analytics",
             "Climate Data"
           ],
           "product_key": "unosat",
@@ -13359,7 +13662,7 @@
           ],
           "CRAF’d-Funded Project?": "NO",
           "Investment Type(s)": [
-            "Learning & Exchange"
+            "Crisis Analytics & Insights"
           ],
           "Investment Theme(s)": [
             "Impact Evaluation"
@@ -13515,7 +13818,7 @@
       {
         "id": "rec19ocYvikhZMdRI",
         "fields": {
-          "Agency/Department Name": "Unspecified",
+          "Agency/Department Name": "Unspecified Agency",
           "Country Name": "United Nations (UN)"
         }
       }
@@ -13552,6 +13855,12 @@
           "Project Website": "https://immap.org/global-surge-program/#:~:text=The%20iMMAP%20Inc,HPC%29%20principles",
           "Provider Orgs Full Name": [
             "recvzWSlYgzs0mffd"
+          ],
+          "Investment Type(s)": [
+            "Human Capital & Know-how"
+          ],
+          "Investment Theme(s)": [
+            "Information Managment"
           ],
           "product_key": "global-information",
           "HDX_SOHD": "None"
@@ -13797,8 +14106,7 @@
           ],
           "CRAF’d-Funded Project?": "NO",
           "Investment Type(s)": [
-            "Data Sets & Commons",
-            "Crisis Analytics & Insights"
+            "Data Sets & Commons"
           ],
           "Investment Theme(s)": [
             "Health Data",
@@ -14520,6 +14828,9 @@
           "Investment Type(s)": [
             "Human Capital & Know-how"
           ],
+          "Investment Theme(s)": [
+            " Data Collection & Generation"
+          ],
           "product_key": "hera-dc",
           "HDX_SOHD": "None"
         },
@@ -14537,6 +14848,9 @@
           "CRAF’d-Funded Project?": "NO",
           "Investment Type(s)": [
             "Human Capital & Know-how"
+          ],
+          "Investment Theme(s)": [
+            "Capacity Building"
           ],
           "product_key": "hera-stn",
           "HDX_SOHD": "None"
