@@ -481,6 +481,38 @@ const NetworkGraph: React.FC<NetworkGraphProps> = ({
             n.value = Math.min(80, Math.max(minSize, scaled));
         });
 
+        // Calculate average coordinates
+        let sumX = 0;
+        let sumY = 0;
+        nodes.forEach(n => {
+            sumX += n.x || 0;
+            sumY += n.y || 0;
+        });
+        const avgX = sumX / nodes.length;
+        const avgY = sumY / nodes.length;
+        
+        // Find the most central node (highest degree)
+        let maxDegree = 0;
+        let mostCentralNode: GraphNode | null = null;
+        
+        nodes.forEach(n => {
+            const degree = degreeMap.get(n.id) || 0;
+            if (degree > maxDegree) {
+                maxDegree = degree;
+                mostCentralNode = n;
+            }
+        });
+        
+        // Fix the most central node at the average coordinates to anchor the graph initially
+        // Store the node ID to unfix it after 3 seconds
+        if (mostCentralNode) {
+            mostCentralNode.fx = avgX;
+            mostCentralNode.fy = avgY;
+            // Store metadata for later unfixing
+            (mostCentralNode as any).__initiallyFixed = true;
+            (mostCentralNode as any).__fixedNodeId = mostCentralNode.id;
+        }
+
         const endTime = performance.now();
         if (process.env.NODE_ENV === 'development') {
             console.log(`[NetworkGraph] Graph data computed in ${(endTime - startTime).toFixed(2)}ms (${nodes.length} nodes, ${links.length} links)`);
@@ -544,15 +576,42 @@ const NetworkGraph: React.FC<NetworkGraphProps> = ({
     useEffect(() => {
         if (!graphRef.current || !graphData.nodes.length) return;
         
+        // Calculate the average position of all nodes
+        let sumX = 0;
+        let sumY = 0;
+        graphData.nodes.forEach(node => {
+            sumX += node.x || 0;
+            sumY += node.y || 0;
+        });
+        const avgX = sumX / graphData.nodes.length;
+        const avgY = sumY / graphData.nodes.length;
+        
         // Small delay to ensure the graph is rendered
         const timer = setTimeout(() => {
             if (graphRef.current) {
-                graphRef.current.zoomToFit(0, 50); // 0ms = instant, no animation
+                // Center the view on the average node coordinates, preserving current zoom
+                graphRef.current.centerAt(avgX, avgY, 0); // 0ms = instant
             }
         }, 100);
         
         return () => clearTimeout(timer);
-    }, []); // Run once on mount
+    }, [graphData.nodes, dimensions]); // Re-run when nodes or dimensions change
+
+    // Unfix the central node after 3 seconds
+    useEffect(() => {
+        const timer = setTimeout(() => {
+            // Find and unfix the initially fixed node
+            const fixedNode = graphData.nodes.find((node: any) => node.__initiallyFixed);
+            if (fixedNode) {
+                fixedNode.fx = undefined;
+                fixedNode.fy = undefined;
+                delete (fixedNode as any).__initiallyFixed;
+                delete (fixedNode as any).__fixedNodeId;
+            }
+        }, 3000); // 3 seconds
+        
+        return () => clearTimeout(timer);
+    }, [graphData.nodes]); // Re-run when nodes change
 
     // Apply clustering with smooth transitions and collision avoidance
     useEffect(() => {
