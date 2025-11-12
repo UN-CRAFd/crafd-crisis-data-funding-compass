@@ -15,7 +15,9 @@ interface BaseModalProps {
         onShare: () => void;
         onClose: () => void;
     }) => React.ReactNode;
-    renderBody: () => React.ReactNode;
+    renderBody: (props: {
+        tooltipContainer?: Element | null;
+    }) => React.ReactNode;
 }
 
 /**
@@ -154,7 +156,7 @@ export default function BaseModal({
 
     const modalContent = (
         <div
-            className={`fixed inset-0 bg-black/50 flex items-center justify-end z-[10000] transition-all duration-300 ease-out ${
+            className={`fixed inset-0 bg-black/50 flex items-center justify-end z-[200] transition-all duration-300 ease-out ${
                 isVisible && !isClosing ? 'opacity-100' : 'opacity-0'
             }`}
             onClick={handleBackdropClick}
@@ -175,7 +177,7 @@ export default function BaseModal({
 
                 {/* Body Content - scrollable if content exceeds viewport */}
                 <div className="overflow-y-auto flex-1">
-                    {renderBody()}
+                    {renderBody({ tooltipContainer: portalContainer })}
                 </div>
             </div>
         </div>

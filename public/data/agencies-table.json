@@ -39,7 +39,7 @@
   {
     "id": "rec19ocYvikhZMdRI",
     "fields": {
-      "Agency/Department Name": "Unspecified",
+      "Agency/Department Name": "Unspecified Agency",
       "Country Name": "United Nations (UN)"
     }
   },
@@ -114,6 +114,13 @@
     "fields": {
       "Agency/Department Name": "Ministry for Foreign Affairs (UD / MFA)",
       "Country Name": "Sweden"
+    }
+  },
+  {
+    "id": "rec44UV2liT4wu1tg",
+    "fields": {
+      "Agency/Department Name": "Unspecified Agency",
+      "Country Name": "Alwaleed Philanthropies"
     }
   },
   {
@@ -667,10 +674,21 @@
     }
   },
   {
+    "id": "recSrpTHE0mGFNF65",
+    "fields": {}
+  },
+  {
     "id": "recTMNSZMjMRAv6jz",
     "fields": {
       "Agency/Department Name": "Unspecified Agency",
       "Country Name": "Qatar"
+    }
+  },
+  {
+    "id": "recUEOSvKGVMYEPqX",
+    "fields": {
+      "Agency/Department Name": "Unspecified Agency",
+      "Country Name": "Alibaba Foundation"
     }
   },
   {
@@ -942,6 +960,13 @@
     }
   },
   {
+    "id": "recfWcw0CdUs0STc3",
+    "fields": {
+      "Agency/Department Name": "Unspecified Agency",
+      "Country Name": "Microsoft"
+    }
+  },
+  {
     "id": "recfY9SzUx3XdEb4s",
     "fields": {
       "Agency/Department Name": "Unspecified Agency",
@@ -1011,6 +1036,13 @@
       "Agency/Department Name": "Ministry of Foreign Affairs and Trade (MFAT)",
       "Agency Data Portal": "https://www.mfat.govt.nz/",
       "Country Name": "New Zealand"
+    }
+  },
+  {
+    "id": "recjiYJTFpNO2PDDl",
+    "fields": {
+      "Agency/Department Name": "National Aeronautics and Space Administration (NASA)",
+      "Country Name": "USA"
     }
   },
   {
