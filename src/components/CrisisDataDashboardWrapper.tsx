@@ -246,7 +246,10 @@ const CrisisDataDashboardWrapper = ({ logoutButton }: { logoutButton?: React.Rea
                 
                 lastFetchedFiltersRef.current = filterSignature;
                 
-                setLoading(true); // Set loading when starting fetch
+                // Only show loading spinner if we don't have data yet (initial load)
+                if (!dashboardData) {
+                    setLoading(true);
+                }
                 setError(null);
 
                 const filters: DashboardFilters = {
@@ -259,9 +262,6 @@ const CrisisDataDashboardWrapper = ({ logoutButton }: { logoutButton?: React.Rea
                 const data = await processDashboardData(filters);
 
                 setDashboardData(data);
-            } catch (err) {
-                console.error('Failed to load dashboard data:', err);
-                setError(err instanceof Error ? err.message : 'Failed to load data');
             } finally {
                 setLoading(false);
             }
