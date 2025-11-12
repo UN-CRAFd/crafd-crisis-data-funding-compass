@@ -1058,6 +1058,15 @@ const NetworkGraph: React.FC<NetworkGraphProps> = ({
         }
     }, [hoveredNode, hoverHighlightNodes]);
 
+    // Define the clickable area for nodes (required when using custom nodeCanvasObject)
+    const nodePointerAreaPaint = useCallback((node: GraphNode, color: string, ctx: CanvasRenderingContext2D) => {
+        // Draw a circle matching the node's size to define the clickable area
+        ctx.fillStyle = color;
+        ctx.beginPath();
+        ctx.arc(node.x!, node.y!, node.value / 2, 0, 2 * Math.PI, false);
+        ctx.fill();
+    }, []);
+
     // Memoize cluster data to avoid recalculating node groupings on every render
     const clusterData = useMemo(() => {
         if (!clusterByOrgType && !clusterByAssetType) return null;
@@ -1302,6 +1311,7 @@ const NetworkGraph: React.FC<NetworkGraphProps> = ({
                 nodeVal="value"
                 nodeCanvasObject={paintNode}
                 nodeCanvasObjectMode={() => 'replace'}
+                nodePointerAreaPaint={nodePointerAreaPaint}
                 onNodeHover={handleNodeHover}
                 onNodeClick={handleNodeClick}
                 onBackgroundClick={handleBackgroundClick}
