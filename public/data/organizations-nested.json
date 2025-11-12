@@ -3569,6 +3569,47 @@
           "HDX_SOHD": "None"
         },
         "agencies": []
+      },
+      {
+        "id": "recjbIls3C4riPk4C",
+        "fields": {
+          "Project/Product Name": "Advanced Analytics",
+          "Project Description": "PDC’s Multi-hazard risk score is a combination of multi-hazard exposure, vulnerability (susceptibility to impact), and coping capacity (the relative ability to absorb negative disaster impacts). This provides a collective measure of how each country may be affected by hazards and disasters as a whole over time.\n",
+          "Project Website": "https://www.pdc.org/advanced-analytics/",
+          "Provider Orgs Full Name": [
+            "recCvRYx3gzUtg9cf"
+          ],
+          "CRAF’d-Funded Project?": "NO",
+          "Investment Type(s)": [
+            "Crisis Analytics & Insights"
+          ],
+          "Investment Theme(s)": [
+            "Disaster Hazard & Risk Modelling",
+            "Composite Indices",
+            "Climate Analytics"
+          ],
+          "product_key": "global-risk",
+          "HDX_SOHD": "None"
+        },
+        "agencies": []
+      },
+      {
+        "id": "recmoxMiTZoAQ8Cvg",
+        "fields": {
+          "Project/Product Name": "Disaster Management Training",
+          "Project Description": " Learn the basics and progress to becoming an advanced user in DisasterAWARE software. You may also request an on site, instructor-led classroom training at your location or ours. We can help you accomplish nearly any training objective.\n",
+          "Project Website": "https://www.pdc.org/training-and-exercises/",
+          "Provider Orgs Full Name": [
+            "recCvRYx3gzUtg9cf"
+          ],
+          "CRAF’d-Funded Project?": "NO",
+          "Investment Type(s)": [
+            "Learning & Exchange"
+          ],
+          "product_key": "dmt",
+          "HDX_SOHD": "None"
+        },
+        "agencies": []
       }
     ],
     "donor_countries": [
