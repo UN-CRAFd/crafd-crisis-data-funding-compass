@@ -76,13 +76,7 @@ export function getCountryAlpha2(input: string): string | null {
  */
 export function getCountryFlagUrl(country: string): string | null {
     const iso = getCountryAlpha2(country);
-    if (!iso) return null;
-    
-    // Use PNG format for international organizations (UN, EU) as flagcdn.com SVGs don't support them
-    if (iso === 'un' || iso === 'eu') {
-        return `https://flagcdn.com/w40/${iso}.png`;
-    }
- 
+    if (!iso) return null; 
     return `https://flagcdn.com/${iso}.svg`;
 }
 
