@@ -604,8 +604,9 @@ const NetworkGraph: React.FC<NetworkGraphProps> = ({
             const centerX = dimensions.width / 2;
             const centerY = dimensions.height / 2;
             
-            // Collect unique cluster keys
+            // Collect unique cluster keys and calculate initial positions at member averages
             const clusterKeys = new Set<string>();
+            const clusterNodePositions = new Map<string, { sumX: number; sumY: number; count: number }>();
             
             graphData.nodes.forEach(node => {
                 let clusterKey = null;
@@ -618,32 +619,32 @@ const NetworkGraph: React.FC<NetworkGraphProps> = ({
                 
                 if (clusterKey) {
                     clusterKeys.add(clusterKey);
+                    
+                    // Accumulate positions for averaging
+                    if (!clusterNodePositions.has(clusterKey)) {
+                        clusterNodePositions.set(clusterKey, { sumX: 0, sumY: 0, count: 0 });
+                    }
+                    const pos = clusterNodePositions.get(clusterKey)!;
+                    pos.sumX += node.x || centerX;
+                    pos.sumY += node.y || centerY;
+                    pos.count += 1;
                 }
             });
             
-            // Assign well-separated positions for each cluster center
+            // Initialize cluster centers at the average position of their members
             const clusterArray = Array.from(clusterKeys);
-            const numClusters = clusterArray.length;
             
-            clusterArray.forEach((key, i) => {
-                // Arrange clusters in a grid or circular pattern with large spacing
-                // All positions are offset from the canvas center, not (0,0)
-                if (numClusters <= 4) {
-                    // Use corners for up to 4 clusters, offset from center
-                    const positions = [
-                        { x: centerX - clusterRadius, y: centerY - clusterRadius },
-                        { x: centerX + clusterRadius, y: centerY - clusterRadius },
-                        { x: centerX - clusterRadius, y: centerY + clusterRadius },
-                        { x: centerX + clusterRadius, y: centerY + clusterRadius }
-                    ];
-                    clusterCenters.set(key, positions[i]);
-                } else {
-                    // Use circle arrangement for more clusters, offset from center
-                    const angle = (i / numClusters) * 2 * Math.PI;
+            clusterArray.forEach((key) => {
+                const pos = clusterNodePositions.get(key);
+                if (pos && pos.count > 0) {
+                    // Start at the average position of all member nodes
                     clusterCenters.set(key, {
-                        x: centerX + Math.cos(angle) * clusterRadius,
-                        y: centerY + Math.sin(angle) * clusterRadius
+                        x: pos.sumX / pos.count,
+                        y: pos.sumY / pos.count
                     });
+                } else {
+                    // Fallback to center if no nodes found (shouldn't happen)
+                    clusterCenters.set(key, { x: centerX, y: centerY });
                 }
             });
             
@@ -651,12 +652,50 @@ const NetworkGraph: React.FC<NetworkGraphProps> = ({
             const baseClusterStrength = 0.8; // Increased from 0.5 for stronger clustering
             const decayStart = 0.7; // Start decaying very late
             
-            // Add repulsion between cluster centers to keep them separated
+            // Dynamic cluster center adjustment and node clustering
             fg.d3Force('clusterRepulsion', (alpha: number) => {
                 const clusterArray = Array.from(clusterCenters.entries());
-                const hullRepulsionStrength = 50000; // Strong repulsion between cluster hulls
+                const hullRepulsionStrength = 50000; // Strong repulsion between cluster centers
+                const centerAttractionStrength = 0.3; // Strength of attraction toward cluster members
                 
-                // Apply repulsion between each pair of cluster centers
+                // First, calculate average position of nodes in each cluster
+                const clusterNodePositions = new Map<string, { sumX: number; sumY: number; count: number }>();
+                
+                for (let i = 0; i < graphData.nodes.length; i++) {
+                    const node: any = graphData.nodes[i];
+                    let clusterKey = null;
+                    
+                    if (clusterByOrgType && node.type === 'organization' && node.orgType) {
+                        clusterKey = `org-${node.orgType}`;
+                    } else if (clusterByAssetType && node.type === 'project' && node.assetTypes && node.assetTypes.length > 0) {
+                        clusterKey = `asset-${node.assetTypes[0]}`;
+                    }
+                    
+                    if (clusterKey) {
+                        if (!clusterNodePositions.has(clusterKey)) {
+                            clusterNodePositions.set(clusterKey, { sumX: 0, sumY: 0, count: 0 });
+                        }
+                        const pos = clusterNodePositions.get(clusterKey)!;
+                        pos.sumX += node.x || 0;
+                        pos.sumY += node.y || 0;
+                        pos.count += 1;
+                    }
+                }
+                
+                // Move cluster centers toward their nodes' average position
+                clusterNodePositions.forEach((pos, key) => {
+                    if (pos.count > 0 && clusterCenters.has(key)) {
+                        const center = clusterCenters.get(key)!;
+                        const avgX = pos.sumX / pos.count;
+                        const avgY = pos.sumY / pos.count;
+                        
+                        // Pull center toward average position of its nodes
+                        center.x += (avgX - center.x) * centerAttractionStrength * alpha;
+                        center.y += (avgY - center.y) * centerAttractionStrength * alpha;
+                    }
+                });
+                
+                // Apply repulsion between cluster centers to keep them separated
                 for (let i = 0; i < clusterArray.length; i++) {
                     for (let j = i + 1; j < clusterArray.length; j++) {
                         const [key1, center1] = clusterArray[i];
@@ -681,6 +720,48 @@ const NetworkGraph: React.FC<NetworkGraphProps> = ({
                     }
                 }
                 
+                // Build map of non-clustered nodes to their connected cluster centers
+                const nodeToConnectedClusters = new Map<string, Set<string>>();
+                
+                graphData.links.forEach((link: any) => {
+                    const sourceNode = typeof link.source === 'object' ? link.source : graphData.nodes.find((n: any) => n.id === link.source);
+                    const targetNode = typeof link.target === 'object' ? link.target : graphData.nodes.find((n: any) => n.id === link.target);
+                    
+                    if (sourceNode && targetNode) {
+                        // Check if source is clustered
+                        let sourceClusterKey = null;
+                        if (clusterByOrgType && sourceNode.type === 'organization' && sourceNode.orgType) {
+                            sourceClusterKey = `org-${sourceNode.orgType}`;
+                        } else if (clusterByAssetType && sourceNode.type === 'project' && sourceNode.assetTypes && sourceNode.assetTypes.length > 0) {
+                            sourceClusterKey = `asset-${sourceNode.assetTypes[0]}`;
+                        }
+                        
+                        // Check if target is clustered
+                        let targetClusterKey = null;
+                        if (clusterByOrgType && targetNode.type === 'organization' && targetNode.orgType) {
+                            targetClusterKey = `org-${targetNode.orgType}`;
+                        } else if (clusterByAssetType && targetNode.type === 'project' && targetNode.assetTypes && targetNode.assetTypes.length > 0) {
+                            targetClusterKey = `asset-${targetNode.assetTypes[0]}`;
+                        }
+                        
+                        // If source is clustered and target is not, track connection
+                        if (sourceClusterKey && !targetClusterKey) {
+                            if (!nodeToConnectedClusters.has(targetNode.id)) {
+                                nodeToConnectedClusters.set(targetNode.id, new Set());
+                            }
+                            nodeToConnectedClusters.get(targetNode.id)!.add(sourceClusterKey);
+                        }
+                        
+                        // If target is clustered and source is not, track connection
+                        if (targetClusterKey && !sourceClusterKey) {
+                            if (!nodeToConnectedClusters.has(sourceNode.id)) {
+                                nodeToConnectedClusters.set(sourceNode.id, new Set());
+                            }
+                            nodeToConnectedClusters.get(sourceNode.id)!.add(targetClusterKey);
+                        }
+                    }
+                });
+                
                 // Apply forces to all nodes in clusters based on updated centers
                 for (let i = 0; i < graphData.nodes.length; i++) {
                     const node: any = graphData.nodes[i];
@@ -693,12 +774,39 @@ const NetworkGraph: React.FC<NetworkGraphProps> = ({
                     }
                     
                     if (clusterKey && clusterCenters.has(clusterKey)) {
+                        // Node is clustered - pull toward its cluster center
                         const center = clusterCenters.get(clusterKey)!;
                         const strength = alpha > decayStart 
                             ? baseClusterStrength 
                             : baseClusterStrength * Math.pow(alpha / decayStart, 0.5);
                         node.vx += (center.x - node.x) * strength;
                         node.vy += (center.y - node.y) * strength;
+                    } else if (nodeToConnectedClusters.has(node.id)) {
+                        // Node is not clustered but connected to clustered nodes
+                        // Apply weak pull toward average of connected cluster centers
+                        const connectedClusterKeys = nodeToConnectedClusters.get(node.id)!;
+                        let avgCenterX = 0;
+                        let avgCenterY = 0;
+                        let count = 0;
+                        
+                        connectedClusterKeys.forEach(key => {
+                            if (clusterCenters.has(key)) {
+                                const center = clusterCenters.get(key)!;
+                                avgCenterX += center.x;
+                                avgCenterY += center.y;
+                                count++;
+                            }
+                        });
+                        
+                        if (count > 0) {
+                            avgCenterX /= count;
+                            avgCenterY /= count;
+                            
+                            // Weak pull (10% of cluster strength) to keep non-clustered nodes near their connected clusters
+                            const weakStrength = baseClusterStrength * 0.1 * alpha;
+                            node.vx += (avgCenterX - node.x) * weakStrength;
+                            node.vy += (avgCenterY - node.y) * weakStrength;
+                        }
                     }
                 }
             });
