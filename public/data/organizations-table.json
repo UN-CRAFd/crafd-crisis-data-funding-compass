@@ -326,26 +326,20 @@
       "Org Description": "UN Women is the United Nations entity dedicated to gender equality and the empowerment of women. A global champion for women and girls, UN Women was established to accelerate progress on meeting their needs worldwide.",
       "Provided Data Ecosystem Projects": [
         "rechQ1azyTpypEDEy",
-        "recO3RZZ7IEA88GnQ"
+        "recO3RZZ7IEA88GnQ",
+        "reckrBbkioEQP7wtd"
       ],
       "Org Donor Agencies": [
+        "rec19ocYvikhZMdRI",
         "rece2l2IJRlTC2ERq",
         "rec1YpvhkjwME6GOJ",
-        "recGMYeDQSV7jffjs",
+        "recGNTHL9SKZxLDcw",
         "rec57z0MkntuI0kvP",
         "recNy9QGuHQgz7uAf",
         "recfNuwRv2DcnUQCK",
-        "reckIAhFXgj4XL29b",
         "recKq6SBjonibtE1r",
-        "recRt57CGsQQK50dQ",
-        "recZCZqKtB0JM5kmx",
-        "recI95P9GtOhiXNoU",
-        "reco4Um0k7Tgw2UCK",
-        "recYVizktLnxQPeKH",
-        "recqSvUlZQjET4fCH",
-        "rec8otX5QGDSVA5CH",
-        "recqM20m0W6iS5Y0t",
-        "recKVILBOB3NBEJlE"
+        "reckIAhFXgj4XL29b",
+        "recRt57CGsQQK50dQ"
       ],
       "Org IATI Name": "UN Women",
       "Org MPTFO Name": "UNWOMEN",
@@ -399,6 +393,20 @@
     }
   },
   {
+    "id": "rec6yP4Ms95Zkxode",
+    "fields": {
+      "Org Full Name": "Global Pulse",
+      "Org Description": "Data Insights for Social & Humanitarian Action, also known as DISHA, is a multi-partner initiative led by UN Global Pulse, the Secretary-General’s Innovation Lab, that aims to accelerate ethical and responsible access to data and artificial intelligence (AI) solutions to unlock social impact at scale.",
+      "Provided Data Ecosystem Projects": [
+        "rec5RfuXsmtGtPDP8"
+      ],
+      "Org Donor Agencies": [
+        "recSrpTHE0mGFNF65"
+      ],
+      "Org Type": "United Nations System"
+    }
+  },
+  {
     "id": "rec7BmCO0j9do4gKE",
     "fields": {
       "Org Full Name": "University of Edinburgh",
@@ -448,7 +456,8 @@
       "Org Description": "UNDP works in about 170 countries and territories, helping to eradicate poverty, reduce inequalities and exclusion, and build resilience so countries can sustain progress. As the UN’s development agency, UNDP plays a critical role in helping countries achieve the Sustainable Development Goals.\t",
       "Provided Data Ecosystem Projects": [
         "recS70dZaWiddCf5J",
-        "recXaGjOLcrJQCuNn"
+        "recXaGjOLcrJQCuNn",
+        "recaY3lDEu5I8aL6D"
       ],
       "Org Donor Agencies": [
         "rec1YpvhkjwME6GOJ",
@@ -813,6 +822,21 @@
     }
   },
   {
+    "id": "recHPSF1rhFJKTJJY",
+    "fields": {
+      "Org Full Name": "Famine Early Warning Systems Network (FEWS NET)",
+      "Org Short Name": "FEWS",
+      "Org Website": "https://fews.net/",
+      "Org Description": "The Famine Early Warning Systems Network (FEWS NET) is a leading provider of early warning and analysis on acute food insecurity around the world.",
+      "Org Donor Agencies": [
+        "recQUVhcVyxZlXJ3H",
+        "recjiYJTFpNO2PDDl"
+      ],
+      "org_key": "fews-net",
+      "Org Type": "Government / Public Sector"
+    }
+  },
+  {
     "id": "recHsNe20lr1CUAVu",
     "fields": {
       "Org Full Name": "Data Pop Alliance",
@@ -820,7 +844,6 @@
       "Org Website": "https://datapopalliance.org/",
       "Org Description": "Since 2013, Data-Pop Alliance has worked to apply cutting edge data science to solve the world’s most pressing problems. As the 2030 deadline for the UN sustainable development goals approaches, we believe novel approaches are needed to enhance the efficacy of the global development sector and reach those most in need. ",
       "Provided Data Ecosystem Projects": [
-        "recejrbDKmak6gySA",
         "recogMAjsbKV95Pqs",
         "reczwfqv4kuJclB0U"
       ],
@@ -1063,9 +1086,6 @@
       "Org Full Name": "U.S. Department of State",
       "Org Short Name": "State Department",
       "Org Website": "https://www.usaid.gov/",
-      "Provided Data Ecosystem Projects": [
-        "recrAQT0YpFBCQ02U"
-      ],
       "Org Donor Agencies": [
         "recQUVhcVyxZlXJ3H"
       ],
@@ -1143,7 +1163,8 @@
       "Org Website": "https://www.impact-initiatives.org/what-we-do/panda/",
       "Org Description": "IMPACT’s PANDA initiative aims to improve the effectiveness, efficiency and efficacy of humanitarian and development interventions. PANDA supports the entire humanitarian programme cycle, including programme design, assessments, baselines, monitoring and evaluation.",
       "Provided Data Ecosystem Projects": [
-        "recIUSUS3NNXaMHCQ"
+        "recIUSUS3NNXaMHCQ",
+        "rec3YDnHw5YkToiKf"
       ],
       "Org Donor Agencies": [
         "rec3Ado0Jrl799Q8A"
@@ -1160,9 +1181,16 @@
       "Org Website": "https://dhsprogram.com/",
       "Org Description": "The DHS Program (Demographic and Health Surveys) is a primary source of data on health and population trends in developing countries, having provided technical assistance to over 300 surveys in more than 90 countries since 1984. They collect and disseminate nationally representative data on critical areas including fertility, family planning, maternal and child health, gender, HIV/AIDS, malaria, and nutrition. Funded by USAID and other donors, and implemented by ICF International, The DHS Program plays a vital role in advancing global understanding of health and population issues.",
       "Link to Data Products Overview": "<https://dhsprogram.com/Data/>\n",
+      "Provided Data Ecosystem Projects": [
+        "recfvtc6piaTv5ar2",
+        "recblEG9dcRNcvYaX",
+        "rec73Bmds9k3InQkm",
+        "recpaU5vlkr1O5EVC"
+      ],
       "Org Donor Agencies": [
         "recFDm6MHWUu6GSMI",
-        "recr77XDSfR0O9Jen"
+        "recr77XDSfR0O9Jen",
+        "recbtz43uuKKFVfvd"
       ],
       "Org HQ Country": "United States",
       "Has received CRAF'd Funding?": "NO",
@@ -1203,8 +1231,7 @@
       "Provided Data Ecosystem Projects": [
         "recy1WUw4sZ55UmrS",
         "recCrLYQFMbrPxsId",
-        "recWziB7RyyVfMv3A",
-        "recrWrHtaaCWN2TVH"
+        "recWziB7RyyVfMv3A"
       ],
       "Org Donor Agencies": [
         "reckIAhFXgj4XL29b",
@@ -1317,23 +1344,6 @@
     }
   },
   {
-    "id": "reccGGWprH0EFvRjo",
-    "fields": {
-      "Org Full Name": "UN Foundation",
-      "Org Short Name": "UN Foundation",
-      "Org Website": "https://unfoundation.org/",
-      "Org Description": "The UN Foundation facilitates data and technology initiatives to support sustainable development by convening UN agencies, governments, civil society, academics, and the private sector. They host and support partnerships like the Global Partnership for Sustainable Development Data, which uses data to achieve the Sustainable Development Goals, and DIAL, which aims to overcome barriers preventing digital solutions from reaching everyone. They also support Data2X, a gender data alliance working to improve the quality, availability, and use of gender data to make a practical difference in the lives of women, girls, and gender-diverse people worldwide.",
-      "Provided Data Ecosystem Projects": [
-        "recGVHndBPIvMpuHb"
-      ],
-      "Org HQ Country": "United States",
-      "Has received CRAF'd Funding?": "NO",
-      "org_key": "un-foundation",
-      "Org Type": "Non-Governmental Organization",
-      "HDX Org Key": "foundation-center-organization"
-    }
-  },
-  {
     "id": "reccGyY6Ep2ptBPKy",
     "fields": {
       "Org Full Name": "Arab Barometer",
@@ -1424,6 +1434,9 @@
       "Org Short Name": "UNCCD",
       "Org Website": "https://www.unccd.int/",
       "Org Description": "The UNCCD is the global voice for land. We promote practices that avoid, reduce and reverse land degradation and are the driving force behind Sustainable Development Goal 15 and Land Degradation Neutrality.",
+      "Provided Data Ecosystem Projects": [
+        "recmzmFWkB8g2kiyj"
+      ],
       "Org Donor Agencies": [
         "reckIAhFXgj4XL29b",
         "recXfPKShGM1SGpOy",
@@ -1482,7 +1495,7 @@
       "Org Full Name": "UNDRR: United Nations Office for Disaster Risk Reduction",
       "Org Short Name": "UNDRR",
       "Org Website": "https://www.undrr.org/",
-      "Org Description": "The United Nations Office for Disaster Risk Reduction (UNDRR) has a big ambition: to help decision makers across the globe better understand and act on risk. \nAt UNDRR, we envision a world where disasters no longer threaten the well-being of people and the future of the planet. Sustainable development and the 2030 Agenda cannot be achieved without working towards that goal of building resilience.\t",
+      "Org Description": "The United Nations Office for Disaster Risk Reduction (UNDRR) has a big ambition: to help decision makers across the globe better understand and act on risk.  At UNDRR, we envision a world where disasters no longer threaten the well-being of people and the future of the planet. Sustainable development and the 2030 Agenda cannot be achieved without working towards that goal of building resilience.\t",
       "Link to Data Products Overview": "<https://data.undrr.org/api/json>\n",
       "Provided Data Ecosystem Projects": [
         "recUotlR1ZJwVMAIS",
@@ -1904,6 +1917,23 @@
     }
   },
   {
+    "id": "recoAzfuGAQYkD8l8",
+    "fields": {
+      "Org Full Name": "Data2x",
+      "Org Website": "https://data2x.org/",
+      "Org Description": "Collaboration is Data2X’s guiding principle and signature way of working. This reflects our core strength: our convening power based on the trust we have earned from government, private sector, civil society, and academic partners. In the coming years, Data2X will play an even more active facilitator role, mobilizing stakeholders around a cooperative global approach to fill gender data gaps.",
+      "Provided Data Ecosystem Projects": [
+        "recGVHndBPIvMpuHb"
+      ],
+      "Org Donor Agencies": [
+        "recULIEfSZxBrWWZb",
+        "recbtz43uuKKFVfvd",
+        "recjAQGJeJQbasrLl"
+      ],
+      "Org Type": "United Nations System"
+    }
+  },
+  {
     "id": "recoPRDBbxl0bVx7x",
     "fields": {
       "Org Full Name": "IPC: Integrated Food Security Phase Classification",
@@ -1978,7 +2008,7 @@
       "Org Full Name": "UNEP: United Nations Environment Programme ",
       "Org Short Name": "UNEP",
       "Org Website": "https://www.unep.org/",
-      "Org Description": "The United Nations Environment Programme (UNEP) is the leading global authority on the environment.\nUNEP’s mission is to inspire, inform, and enable nations and peoples to improve their quality of life without compromising that of future generations.",
+      "Org Description": "The United Nations Environment Programme (UNEP) is the leading global authority on the environment. UNEP’s mission is to inspire, inform, and enable nations and peoples to improve their quality of life without compromising that of future generations.",
       "Link to Data Products Overview": "<https://wesr.unep.org/>\n",
       "Provided Data Ecosystem Projects": [
         "recSvtWQnSvfNoXdt"

@@ -75,6 +75,9 @@
       "Investment Type(s)": [
         "Human Capital & Know-how"
       ],
+      "Investment Theme(s)": [
+        "Capacity Building"
+      ],
       "product_key": "cap-strength",
       "HDX_SOHD": "None"
     }
@@ -90,8 +93,7 @@
       ],
       "CRAF’d-Funded Project?": "NO",
       "Investment Type(s)": [
-        "Data Sets & Commons",
-        "Crisis Analytics & Insights"
+        "Data Sets & Commons"
       ],
       "Investment Theme(s)": [
         "Conflict & Violence Data"
@@ -140,7 +142,6 @@
         "Infrastructure & Platforms"
       ],
       "Investment Theme(s)": [
-        "Geospatial Data",
         "Geographic Information Systems (GIS)"
       ],
       "product_key": "qgis",
@@ -219,6 +220,26 @@
         "Baseline Population Data"
       ],
       "product_key": "unfpa-subpop-stats",
+      "HDX_SOHD": "None"
+    }
+  },
+  {
+    "id": "rec3YDnHw5YkToiKf",
+    "fields": {
+      "Project/Product Name": "PANDA Building Capacities",
+      "Project Website": "https://www.impact-initiatives.org/what-we-do/panda/",
+      "Provider Orgs Full Name": [
+        "recSqPg3XJM8pnI25"
+      ],
+      "CRAF’d-Funded Project?": "NO",
+      "Investment Type(s)": [
+        "Human Capital & Know-how"
+      ],
+      "Investment Theme(s)": [
+        "Capacity Building",
+        "Digital Product & Tool Development",
+        "Information Managment"
+      ],
       "HDX_SOHD": "None"
     }
   },
@@ -407,8 +428,8 @@
         "Crisis Analytics & Insights"
       ],
       "Investment Theme(s)": [
-        "Conflict & Violence Data",
-        "Anticipatory and Early Action Forecasts"
+        "Anticipatory and Early Action Forecasts",
+        "Conflict Analytics"
       ],
       "product_key": "crisiswatch",
       "HDX_SOHD": "None"
@@ -480,6 +501,25 @@
     }
   },
   {
+    "id": "rec5RfuXsmtGtPDP8",
+    "fields": {
+      "Project/Product Name": "Disha",
+      "Provider Orgs Full Name": [
+        "rec6yP4Ms95Zkxode"
+      ],
+      "CRAF’d-Funded Project?": "NO",
+      "Investment Type(s)": [
+        "Crisis Analytics & Insights"
+      ],
+      "Investment Theme(s)": [
+        "AI Models",
+        "Damage Assessments",
+        "Geospatial Analytics"
+      ],
+      "HDX_SOHD": "None"
+    }
+  },
+  {
     "id": "rec5XxteXiqc3vvmj",
     "fields": {
       "Project/Product Name": "UN Register of Conventional Arms (ROCA)",
@@ -541,12 +581,10 @@
       ],
       "CRAF’d-Funded Project?": "NO",
       "Investment Type(s)": [
-        "Data Sets & Commons",
-        "Crisis Analytics & Insights",
-        "Learning & Exchange"
+        "Data Sets & Commons"
       ],
       "Investment Theme(s)": [
-        "Upskilling & Training"
+        "Baseline Population Data"
       ],
       "product_key": "worldpop",
       "HDX_SOHD": "None"
@@ -594,6 +632,26 @@
     }
   },
   {
+    "id": "rec73Bmds9k3InQkm",
+    "fields": {
+      "Project/Product Name": "Service Provision Assessment (SPA)",
+      "Project Description": "The Service Provision Assessment (SPA) is a health facility survey that collects information on service availability and Quality of Care (QoC) measures within a country’s health system. SPAs fill an urgent need for actionable monitoring data in participating countries. The SPA assesses availability and QoC for a wide variety of services with a focus on antenatal care (ANC), family planning (FP), maternity care, and sick child services. Quality of Care measures include indicators in two dimensions: structural quality (physical and human resources) and process quality (provision of care and experience of care).\n",
+      "Project Website": "https://dhsprogram.com/methodology/Survey-Types/SPA.cfm",
+      "Provider Orgs Full Name": [
+        "recU1jAnjfLIhxtwj"
+      ],
+      "CRAF’d-Funded Project?": "NO",
+      "Investment Type(s)": [
+        "Data Sets & Commons"
+      ],
+      "Investment Theme(s)": [
+        "Health Facilities Data"
+      ],
+      "product_key": "spa",
+      "HDX_SOHD": "None"
+    }
+  },
+  {
     "id": "rec795N2KXfgxaM50",
     "fields": {
       "Project/Product Name": "Enhanced Vulnerability and Capacity Assessment (EVCA)",
@@ -604,11 +662,10 @@
       ],
       "CRAF’d-Funded Project?": "NO",
       "Investment Type(s)": [
-        "Crisis Analytics & Insights"
+        "Human Capital & Know-how"
       ],
       "Investment Theme(s)": [
-        "Damage Assessments",
-        "Needs Assessment Data"
+        "Upskilling & Training"
       ],
       "product_key": "evca",
       "HDX_SOHD": "None"
@@ -708,7 +765,7 @@
       "CRAF’d-Funded Project?": "NO",
       "Investment Type(s)": [
         "Crisis Analytics & Insights",
-        "Learning & Exchange"
+        "Standards & Coordination"
       ],
       "Investment Theme(s)": [
         "Best Practices",
@@ -776,6 +833,9 @@
       "Investment Type(s)": [
         "Data Sets & Commons"
       ],
+      "Investment Theme(s)": [
+        "Geospatial Data"
+      ],
       "product_key": "cod-ab",
       "HDX_SOHD": "19"
     }
@@ -837,12 +897,10 @@
       ],
       "CRAF’d-Funded Project?": "NO",
       "Investment Type(s)": [
-        "Data Sets & Commons",
-        "Infrastructure & Platforms"
+        "Data Sets & Commons"
       ],
       "Investment Theme(s)": [
         "Geospatial Data",
-        "Climate Analytics",
         "Climate Data"
       ],
       "product_key": "unosat",
@@ -1205,6 +1263,9 @@
       "Investment Type(s)": [
         "Human Capital & Know-how"
       ],
+      "Investment Theme(s)": [
+        " Data Collection & Generation"
+      ],
       "product_key": "hera-dc",
       "HDX_SOHD": "None"
     }
@@ -1220,12 +1281,11 @@
       ],
       "CRAF’d-Funded Project?": "NO",
       "Investment Type(s)": [
-        "Infrastructure & Platforms",
-        "Learning & Exchange"
+        "Crisis Analytics & Insights",
+        "Standards & Coordination"
       ],
       "Investment Theme(s)": [
-        "Geospatial Data",
-        "Guides",
+        "Ethics",
         "Anticipatory and Early Action Forecasts"
       ],
       "product_key": "hhi-signal-program",
@@ -1255,21 +1315,20 @@
   {
     "id": "recGVHndBPIvMpuHb",
     "fields": {
-      "Project/Product Name": "Data2X",
+      "Project/Product Name": "Gender Data Center",
       "Project Description": "Data2X is a global partnership advancing gender-responsive data systems. It builds research, advocacy, and tools to support data on women and girls, including capacity strengthening and innovation grants.\n",
       "Project Website": "https://data2x.org/",
       "Provider Orgs Full Name": [
-        "reccGGWprH0EFvRjo"
+        "recoAzfuGAQYkD8l8"
       ],
       "CRAF’d-Funded Project?": "NO",
       "Investment Type(s)": [
         "Data Sets & Commons",
-        "Learning & Exchange"
+        "Human Capital & Know-how"
       ],
       "Investment Theme(s)": [
         "Gender Data",
-        "Gender Analytics",
-        "Upskilling & Training"
+        "Data Management & Visualization"
       ],
       "product_key": "data2x",
       "HDX_SOHD": "None"
@@ -1322,7 +1381,7 @@
   {
     "id": "recIUSUS3NNXaMHCQ",
     "fields": {
-      "Project/Product Name": "PANDA",
+      "Project/Product Name": "Monitoring & Evaluation",
       "Project Description": "IMPACT’s PANDA initiative aims to improve the effectiveness, efficiency and efficacy of humanitarian and development interventions. PANDA supports the entire humanitarian programme cycle, including programme design, assessments, baselines, monitoring and evaluation.\n\t\n",
       "Project Website": "https://www.impact-initiatives.org/what-we-do/panda/",
       "Provider Orgs Full Name": [
@@ -1330,13 +1389,10 @@
       ],
       "CRAF’d-Funded Project?": "NO",
       "Investment Type(s)": [
-        "Infrastructure & Platforms",
+        "Crisis Analytics & Insights",
         "Human Capital & Know-how"
       ],
       "Investment Theme(s)": [
-        "Data Storage, Access & Sharing",
-        "Conflict & Violence Data",
-        "Needs Assessment Data",
         "Impact Evaluation",
         "Capacity Building"
       ],
@@ -1375,9 +1431,7 @@
       ],
       "CRAF’d-Funded Project?": "NO",
       "Investment Type(s)": [
-        "Data Sets & Commons",
-        "Crisis Analytics & Insights",
-        "Learning & Exchange"
+        "Crisis Analytics & Insights"
       ],
       "Investment Theme(s)": [
         "Poverty Analytics",
@@ -1527,6 +1581,17 @@
     }
   },
   {
+    "id": "recLRsr8PE6ukAfC8",
+    "fields": {
+      "Project Donor Agencies": [
+        "recbtz43uuKKFVfvd",
+        "recULIEfSZxBrWWZb",
+        "recjAQGJeJQbasrLl"
+      ],
+      "HDX_SOHD": "None"
+    }
+  },
+  {
     "id": "recLjLXetvlqcDMXB",
     "fields": {
       "Project/Product Name": "Information Management ",
@@ -1538,6 +1603,9 @@
       "CRAF’d-Funded Project?": "NO",
       "Investment Type(s)": [
         "Human Capital & Know-how"
+      ],
+      "Investment Theme(s)": [
+        "Information Managment"
       ],
       "product_key": "infomgmt",
       "HDX_SOHD": "None"
@@ -1889,8 +1957,7 @@
       ],
       "CRAF’d-Funded Project?": "NO",
       "Investment Type(s)": [
-        "Data Sets & Commons",
-        "Infrastructure & Platforms"
+        "Data Sets & Commons"
       ],
       "Investment Theme(s)": [
         "Displacement & Migration Data"
@@ -1931,8 +1998,7 @@
       ],
       "CRAF’d-Funded Project?": "NO",
       "Investment Type(s)": [
-        "Data Sets & Commons",
-        "Crisis Analytics & Insights"
+        "Data Sets & Commons"
       ],
       "Investment Theme(s)": [
         "Health Data",
@@ -2015,6 +2081,13 @@
         "reccGyY6Ep2ptBPKy"
       ],
       "CRAF’d-Funded Project?": "NO",
+      "Investment Type(s)": [
+        "Data Sets & Commons"
+      ],
+      "Investment Theme(s)": [
+        "Sentiment Data",
+        "Disaggregated Country-level Data"
+      ],
       "product_key": "arab-pulse",
       "HDX_SOHD": "None"
     }
@@ -2031,6 +2104,9 @@
       "CRAF’d-Funded Project?": "NO",
       "Investment Type(s)": [
         "Crisis Analytics & Insights"
+      ],
+      "Investment Theme(s)": [
+        "Secondary Data Review / Analysis"
       ],
       "product_key": "datool",
       "HDX_SOHD": "None"
@@ -2117,6 +2193,10 @@
       "Investment Type(s)": [
         "Human Capital & Know-how"
       ],
+      "Investment Theme(s)": [
+        " Data Collection & Generation",
+        "Applied Data Analytics & Insights Generation"
+      ],
       "product_key": "population-distribution",
       "HDX_SOHD": "None"
     }
@@ -2140,7 +2220,7 @@
         "Crisis Analytics & Insights"
       ],
       "Investment Theme(s)": [
-        "Climate Data"
+        "Climate Analytics"
       ],
       "product_key": "climada-platform",
       "HDX_SOHD": "None"
@@ -2199,6 +2279,9 @@
       "Investment Type(s)": [
         "Human Capital & Know-how"
       ],
+      "Investment Theme(s)": [
+        "Applied Data Analytics & Insights Generation"
+      ],
       "product_key": "service-site",
       "HDX_SOHD": "None"
     }
@@ -2255,10 +2338,9 @@
       ],
       "CRAF’d-Funded Project?": "NO",
       "Investment Type(s)": [
-        "Infrastructure & Platforms"
+        "Crisis Analytics & Insights"
       ],
       "Investment Theme(s)": [
-        "Geospatial Data",
         "Geospatial Analytics"
       ],
       "product_key": "earthquakes-maps",
@@ -2561,6 +2643,34 @@
     }
   },
   {
+    "id": "recaY3lDEu5I8aL6D",
+    "fields": {
+      "Project/Product Name": "Data Futures Exchange",
+      "Project Description": "The Data Futures Exchange is an open-source platform that serves as a central hub for data innovation with development impact. Based on the UNDP's thematic priorities, we use a systemic approach and advanced analytics to identify actions that accelerate sustainable development worldwide. \n",
+      "Project Donor Agencies": [
+        "rec2KBp1IAA5TtnQl",
+        "rec8gXVsPUUB517NE",
+        "recRt57CGsQQK50dQ",
+        "receHoGmo61oHXBAc",
+        "recfWcw0CdUs0STc3",
+        "recGNTHL9SKZxLDcw"
+      ],
+      "Project Website": "https://data.undp.org/",
+      "Provider Orgs Full Name": [
+        "rec9NauCCUPUWMwfl"
+      ],
+      "CRAF’d-Funded Project?": "NO",
+      "Investment Type(s)": [
+        "Infrastructure & Platforms"
+      ],
+      "Investment Theme(s)": [
+        "Data Storage, Access & Sharing"
+      ],
+      "product_key": "data-futures",
+      "HDX_SOHD": "None"
+    }
+  },
+  {
     "id": "recb50ne79iS2TFYz",
     "fields": {
       "Project/Product Name": "AI for Humanity",
@@ -2573,6 +2683,25 @@
         "AI Models"
       ],
       "product_key": "ai-humanity",
+      "HDX_SOHD": "None"
+    }
+  },
+  {
+    "id": "recblEG9dcRNcvYaX",
+    "fields": {
+      "Project/Product Name": "Malaria Indicators Survey (MIS)",
+      "Project Description": "The Malaria Indicator Surveys (MIS) collect data on household ownership and use of mosquito nets, malaria prevention during pregnancy, and access to effective treatment for fever in children. They often include biomarker testing for malaria and anemia, enabling countries to assess progress toward malaria control targets.\n",
+      "Project Website": "https://dhsprogram.com/Methodology/Survey-Types/MIS.cfm",
+      "Provider Orgs Full Name": [
+        "recU1jAnjfLIhxtwj"
+      ],
+      "Investment Type(s)": [
+        "Data Sets & Commons"
+      ],
+      "Investment Theme(s)": [
+        "Health Data"
+      ],
+      "product_key": "mis",
       "HDX_SOHD": "None"
     }
   },
@@ -2663,8 +2792,7 @@
       ],
       "CRAF’d-Funded Project?": "NO",
       "Investment Type(s)": [
-        "Data Sets & Commons",
-        "Infrastructure & Platforms"
+        "Data Sets & Commons"
       ],
       "Investment Theme(s)": [
         "Food Security Data"
@@ -2802,8 +2930,7 @@
       "Investment Theme(s)": [
         "Data Storage, Access & Sharing",
         "Climate Data",
-        "Environmental Data",
-        "Climate Analytics"
+        "Environmental Data"
       ],
       "product_key": "undrr-preventionweb",
       "HDX_SOHD": "None"
@@ -2820,11 +2947,9 @@
       ],
       "CRAF’d-Funded Project?": "NO",
       "Investment Type(s)": [
-        "Data Sets & Commons",
         "Crisis Analytics & Insights"
       ],
       "Investment Theme(s)": [
-        "Food Security Data",
         "Food Security Analytics",
         "Anticipatory and Early Action Forecasts"
       ],
@@ -2855,26 +2980,6 @@
         "Baseline Population Data"
       ],
       "product_key": "mpc",
-      "HDX_SOHD": "None"
-    }
-  },
-  {
-    "id": "recejrbDKmak6gySA",
-    "fields": {
-      "Project/Product Name": "OPAL (old?)",
-      "Project Description": "OPAL is a data-powered decision and coordination support system for development and humanitarian interventions.\n",
-      "Project Website": "https://www.opalproject.org/",
-      "Provider Orgs Full Name": [
-        "recHsNe20lr1CUAVu"
-      ],
-      "CRAF’d-Funded Project?": "NO",
-      "Investment Type(s)": [
-        "Infrastructure & Platforms"
-      ],
-      "Investment Theme(s)": [
-        "Data Storage, Access & Sharing"
-      ],
-      "product_key": "opal",
       "HDX_SOHD": "None"
     }
   },
@@ -2999,6 +3104,26 @@
     }
   },
   {
+    "id": "recfvtc6piaTv5ar2",
+    "fields": {
+      "Project/Product Name": "Demographic and Health Surveys (DHS)",
+      "Project Description": "The Demographic and Health Surveys (DHS) provide comprehensive and nationally representative data for monitoring and evaluating population, health, and nutrition indicators. They support evidence-based decision-making and program design in developing countries by collecting high-quality information on fertility, family planning, maternal and child health, and HIV/AIDS.\n",
+      "Project Website": "https://dhsprogram.com/",
+      "Provider Orgs Full Name": [
+        "recU1jAnjfLIhxtwj"
+      ],
+      "CRAF’d-Funded Project?": "NO",
+      "Investment Type(s)": [
+        "Data Sets & Commons"
+      ],
+      "Investment Theme(s)": [
+        "Health Data"
+      ],
+      "product_key": "dhs",
+      "HDX_SOHD": "None"
+    }
+  },
+  {
     "id": "recfzWyIVXJCeFFAN",
     "fields": {
       "Project/Product Name": "Health Emergency Dashboard",
@@ -3037,8 +3162,7 @@
         "Infrastructure & Platforms"
       ],
       "Investment Theme(s)": [
-        "Data Storage, Access & Sharing",
-        "Open Access"
+        "Data Storage, Access & Sharing"
       ],
       "product_key": "wb-data-catalog",
       "HDX_SOHD": "None"
@@ -3067,7 +3191,6 @@
         "Data Sets & Commons"
       ],
       "Investment Theme(s)": [
-        "Data Storage, Access & Sharing",
         "Geospatial Data",
         "Water, Sanitation & Hygiene (WASH) Data"
       ],
@@ -3090,15 +3213,11 @@
       ],
       "CRAF’d-Funded Project?": "NO",
       "Investment Type(s)": [
-        "Data Sets & Commons",
-        "Learning & Exchange"
+        "Data Sets & Commons"
       ],
       "Investment Theme(s)": [
-        "Upskilling & Training",
-        "Conflict Analytics",
         "Conflict & Violence Data",
-        "Peace Data",
-        "Anticipatory and Early Action Forecasts"
+        "Peace Data"
       ],
       "product_key": "ucdp",
       "HDX_SOHD": "None"
@@ -3382,6 +3501,37 @@
     }
   },
   {
+    "id": "reckrBbkioEQP7wtd",
+    "fields": {
+      "Project/Product Name": "Women Count",
+      "Project Description": "UN Women’s strategy for change is Women Count, which seeks to bring about a radical shift in how gender statistics are used, created and promoted.\n",
+      "Project Donor Agencies": [
+        "recNud8p6FGI83cjR",
+        "recjyWTotWvaTYTI4",
+        "recVyMcwjAOzKc6HA",
+        "rece2l2IJRlTC2ERq",
+        "reco4Um0k7Tgw2UCK",
+        "reckIAhFXgj4XL29b",
+        "recbtz43uuKKFVfvd",
+        "rec44UV2liT4wu1tg",
+        "recUEOSvKGVMYEPqX"
+      ],
+      "Project Website": "https://data.unwomen.org/women-count",
+      "Provider Orgs Full Name": [
+        "rec5yRG9Wnxu6XkrO"
+      ],
+      "CRAF’d-Funded Project?": "NO",
+      "Investment Type(s)": [
+        "Infrastructure & Platforms"
+      ],
+      "Investment Theme(s)": [
+        "Data Storage, Access & Sharing"
+      ],
+      "product_key": "women-count",
+      "HDX_SOHD": "None"
+    }
+  },
+  {
     "id": "recl1IcheJlYc36up",
     "fields": {
       "Project/Product Name": "Multidimensional Poverty Index (MPI)",
@@ -3414,6 +3564,12 @@
       "Provider Orgs Full Name": [
         "recvzWSlYgzs0mffd"
       ],
+      "Investment Type(s)": [
+        "Human Capital & Know-how"
+      ],
+      "Investment Theme(s)": [
+        "Information Managment"
+      ],
       "product_key": "global-information",
       "HDX_SOHD": "None"
     }
@@ -3430,6 +3586,9 @@
       "CRAF’d-Funded Project?": "NO",
       "Investment Type(s)": [
         "Infrastructure & Platforms"
+      ],
+      "Investment Theme(s)": [
+        "Data Storage, Access & Sharing"
       ],
       "product_key": "hdx-hapi",
       "HDX_SOHD": "None"
@@ -3449,6 +3608,25 @@
         "Learning & Exchange"
       ],
       "product_key": "dmt",
+      "HDX_SOHD": "None"
+    }
+  },
+  {
+    "id": "recmzmFWkB8g2kiyj",
+    "fields": {
+      "Project/Product Name": "Desertification Country Profiles",
+      "Project Description": "Country Profiles  from UNCCD\n",
+      "Project Website": "https://www.unccd.int/our-work/country-profiles",
+      "Provider Orgs Full Name": [
+        "receHoEBpdo8LefZP"
+      ],
+      "CRAF’d-Funded Project?": "NO",
+      "Investment Type(s)": [
+        "Crisis Analytics & Insights"
+      ],
+      "Investment Theme(s)": [
+        "Climate Analytics"
+      ],
       "HDX_SOHD": "None"
     }
   },
@@ -3485,12 +3663,10 @@
       ],
       "CRAF’d-Funded Project?": "NO",
       "Investment Type(s)": [
-        "Data Sets & Commons",
-        "Infrastructure & Platforms"
+        "Data Sets & Commons"
       ],
       "Investment Theme(s)": [
-        "Needs Assessment Data",
-        "Displacement & Migration Analytics"
+        "Needs Assessment Data"
       ],
       "product_key": "displacement-severity",
       "HDX_SOHD": "None"
@@ -3527,11 +3703,11 @@
       ],
       "CRAF’d-Funded Project?": "NO",
       "Investment Type(s)": [
-        "Data Sets & Commons",
-        "Infrastructure & Platforms"
+        "Data Sets & Commons"
       ],
       "Investment Theme(s)": [
-        "Data Storage, Access & Sharing"
+        "Education Data",
+        "Disaggregated Country-level Data"
       ],
       "product_key": "unicef-data-warehouse",
       "HDX_SOHD": "None"
@@ -3562,10 +3738,18 @@
     "id": "recogMAjsbKV95Pqs",
     "fields": {
       "Project/Product Name": "Data, Technology & Innovation (DTI) Services ",
+      "Project Website": "https://datapopalliance.org/our-work/data-tech-innovation/",
       "Provider Orgs Full Name": [
         "recHsNe20lr1CUAVu"
       ],
       "CRAF’d-Funded Project?": "NO",
+      "Investment Type(s)": [
+        "Human Capital & Know-how"
+      ],
+      "Investment Theme(s)": [
+        "Applied Data Analytics & Insights Generation",
+        "Data Management & Visualization"
+      ],
       "product_key": "dti-services",
       "HDX_SOHD": "None"
     }
@@ -3581,8 +3765,7 @@
       ],
       "CRAF’d-Funded Project?": "NO",
       "Investment Type(s)": [
-        "Data Sets & Commons",
-        "Infrastructure & Platforms"
+        "Data Sets & Commons"
       ],
       "Investment Theme(s)": [
         "Household Survey Data"
@@ -3678,8 +3861,8 @@
         "Crisis Analytics & Insights"
       ],
       "Investment Theme(s)": [
-        "Climate Data",
-        "Anticipatory and Early Action Forecasts"
+        "Anticipatory and Early Action Forecasts",
+        "Climate Analytics"
       ],
       "product_key": "eearth",
       "HDX_SOHD": "None"
@@ -3737,9 +3920,36 @@
       ],
       "CRAF’d-Funded Project?": "NO",
       "Investment Type(s)": [
-        "Crisis Analytics & Insights"
+        "Data Sets & Commons"
+      ],
+      "Investment Theme(s)": [
+        "Sentiment Data",
+        "Disaggregated Country-level Data"
       ],
       "product_key": "survey-analytics",
+      "HDX_SOHD": "None"
+    }
+  },
+  {
+    "id": "recpaU5vlkr1O5EVC",
+    "fields": {
+      "Project/Product Name": "Key Indicators Survey (KIS)",
+      "Project Description": "The Key Indicators Survey (KIS) is designed to help meet the monitoring and evaluation needs of programs involved in population and health activities in developing countries, especially to produce data for small areas (regions, districts, catchment areas) that may be targeted by an individual project, although they can be used in nationally representative surveys as well. The KIS tool includes questionnaires, interviewer’s manuals, guidelines for sampling and a tabulation plan.\n",
+      "Project Website": "https://dhsprogram.com/methodology/Survey-Types/KIS.cfm",
+      "Provider Orgs Full Name": [
+        "recU1jAnjfLIhxtwj"
+      ],
+      "Investment Type(s)": [
+        "Data Sets & Commons",
+        "Crisis Analytics & Insights"
+      ],
+      "Investment Theme(s)": [
+        "Baseline Population Data",
+        "Monitoring & Alerts",
+        "Population Analytics",
+        "Health Analytics"
+      ],
+      "product_key": "kis",
       "HDX_SOHD": "None"
     }
   },
@@ -3755,6 +3965,9 @@
       "CRAF’d-Funded Project?": "NO",
       "Investment Type(s)": [
         "Human Capital & Know-how"
+      ],
+      "Investment Theme(s)": [
+        "Capacity Building"
       ],
       "product_key": "hera-stn",
       "HDX_SOHD": "None"
@@ -3785,47 +3998,8 @@
     }
   },
   {
-    "id": "recrAQT0YpFBCQ02U",
+    "id": "recrfggGRAK2p6T7F",
     "fields": {
-      "Project/Product Name": "Famine Early Warning Systems Network (FEWS NET)",
-      "Project Description": "FEWS NET issues monthly and event-driven food insecurity forecasts based on integrated climate, socioeconomic, and agricultural data. Its publicly shared maps and data support anticipatory humanitarian planning and funding allocation in high-risk areas.\n",
-      "Project Donor Agencies": [
-        "recQUVhcVyxZlXJ3H"
-      ],
-      "Project Website": "https://fews.net/",
-      "Provider Orgs Full Name": [
-        "recOn1gqNzxTVBUgw"
-      ],
-      "CRAF’d-Funded Project?": "NO",
-      "Investment Type(s)": [
-        "Data Sets & Commons",
-        "Crisis Analytics & Insights"
-      ],
-      "Investment Theme(s)": [
-        "Food Security Data"
-      ],
-      "product_key": "fews-net",
-      "HDX_SOHD": "None"
-    }
-  },
-  {
-    "id": "recrWrHtaaCWN2TVH",
-    "fields": {
-      "Project/Product Name": "UNESCO Institute for Statistics",
-      "Project Description": "UIS is UNESCO's global statistical agency for education, science, culture, and communication—publishing SDG indicators and open data in standardized formats.\n",
-      "Project Website": "https://uis.unesco.org/",
-      "Provider Orgs Full Name": [
-        "recWOW3N9BgLJiHl5"
-      ],
-      "CRAF’d-Funded Project?": "NO",
-      "Investment Type(s)": [
-        "Human Capital & Know-how"
-      ],
-      "Investment Theme(s)": [
-        "Education Data",
-        "Gender Data"
-      ],
-      "product_key": "unesco-institute-for-statistics",
       "HDX_SOHD": "None"
     }
   },
@@ -3965,11 +4139,10 @@
       ],
       "CRAF’d-Funded Project?": "NO",
       "Investment Type(s)": [
-        "Data Sets & Commons",
         "Infrastructure & Platforms"
       ],
       "Investment Theme(s)": [
-        "Displacement & Migration Data"
+        "Data Processing & Transformation"
       ],
       "product_key": "unhcr-progres",
       "HDX_SOHD": "None"
@@ -3986,7 +4159,7 @@
       ],
       "CRAF’d-Funded Project?": "NO",
       "Investment Type(s)": [
-        "Learning & Exchange"
+        "Crisis Analytics & Insights"
       ],
       "Investment Theme(s)": [
         "Impact Evaluation"
@@ -4067,7 +4240,7 @@
       ],
       "CRAF’d-Funded Project?": "NO",
       "Investment Type(s)": [
-        "Infrastructure & Platforms"
+        "Data Sets & Commons"
       ],
       "Investment Theme(s)": [
         "Displacement & Migration Data"
@@ -4331,7 +4504,7 @@
       ],
       "CRAF’d-Funded Project?": "NO",
       "Investment Type(s)": [
-        "Crisis Analytics & Insights"
+        "Data Sets & Commons"
       ],
       "Investment Theme(s)": [
         "Anticipatory and Early Action Forecasts"
@@ -4400,9 +4573,8 @@
         "Crisis Analytics & Insights"
       ],
       "Investment Theme(s)": [
-        "Displacement & Migration Data",
-        "Climate Data",
-        "Anticipatory and Early Action Forecasts"
+        "Anticipatory and Early Action Forecasts",
+        "Climate Analytics"
       ],
       "product_key": "clifdew-grid",
       "HDX_SOHD": "None"
@@ -4520,6 +4692,12 @@
       "Project/Product Name": "Capacity & Training Services",
       "Provider Orgs Full Name": [
         "recHsNe20lr1CUAVu"
+      ],
+      "Investment Type(s)": [
+        "Human Capital & Know-how"
+      ],
+      "Investment Theme(s)": [
+        "Capacity Building"
       ],
       "product_key": "capacity-training",
       "HDX_SOHD": "None"
