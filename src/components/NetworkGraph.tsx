@@ -336,6 +336,11 @@ const NetworkGraph: React.FC<NetworkGraphProps> = ({
         const donorSet = new Set<string>();
         const projectSet = new Set<string>(); // Track unique projects to avoid duplicates
 
+        // Calculate initial positions based on canvas center
+        const centerX = dimensions.width / 2;
+        const centerY = dimensions.height / 2;
+        const spreadRadius = Math.min(dimensions.width, dimensions.height) * 0.3;
+
         // Collect all unique donors first
         organizationsWithProjects.forEach(org => {
             org.donorCountries.forEach(donor => donorSet.add(donor));
@@ -359,9 +364,16 @@ const NetworkGraph: React.FC<NetworkGraphProps> = ({
         const selectedDonorColor = '#94a3b8'; // Medium gray for filtered donors (slate-400)
 
         // Add donor nodes - largest, using slate colors (like in tables)
-        donorSet.forEach(donor => {
+        // Arrange donors in a circle around the top of the canvas
+        const donorArray = Array.from(donorSet);
+        donorArray.forEach((donor, index) => {
             // Use darker color if this donor is in the filter
             const isFiltered = combinedDonors && combinedDonors.length > 0 && combinedDonors.includes(donor);
+            
+            // Calculate initial position in an arc at the top
+            const angle = (index / donorArray.length) * Math.PI - Math.PI / 2; // Arc from left to right at top
+            const x = centerX + Math.cos(angle) * spreadRadius * 0.8;
+            const y = centerY - spreadRadius * 0.6; // Position toward top
             
             nodes.push({
                 id: `donor-${donor}`,
@@ -369,12 +381,22 @@ const NetworkGraph: React.FC<NetworkGraphProps> = ({
                 type: 'donor',
                 value: 25, // Larger nodes for donors
                 color: isFiltered ? selectedDonorColor : badgeSlateBg, // Medium gray for filtered donors
+                x,
+                y,
             });
         });
 
         // Add organization and project nodes
+        let orgIndex = 0;
+        const totalOrgs = organizationsWithProjects.length;
+        
         organizationsWithProjects.forEach(org => {
             const orgNodeId = `org-${org.id}`;
+            
+            // Calculate initial position for organizations in a circle around center
+            const angle = (orgIndex / totalOrgs) * 2 * Math.PI;
+            const x = centerX + Math.cos(angle) * spreadRadius * 0.5;
+            const y = centerY + Math.sin(angle) * spreadRadius * 0.5;
             
             // Add organization node - medium, using amber/golden badge color (like ACAPS badge)
             nodes.push({
@@ -385,7 +407,11 @@ const NetworkGraph: React.FC<NetworkGraphProps> = ({
                 color: brandBgLight, // Uses --brand-bg-light (amber/golden from organization badges)
                 orgKey: org.orgShortName, // Use orgShortName for modal/URL
                 orgType: org.type, // Store org type for clustering
+                x,
+                y,
             });
+            
+            orgIndex++;
 
             // Link organizations to donors
             org.donorCountries.forEach(donor => {
@@ -403,6 +429,13 @@ const NetworkGraph: React.FC<NetworkGraphProps> = ({
                 // Only add the project node if we haven't seen it before
                 if (!projectSet.has(projectNodeId)) {
                     projectSet.add(projectNodeId);
+                    
+                    // Position projects near their organization with some random offset
+                    const offsetAngle = Math.random() * 2 * Math.PI;
+                    const offsetDist = 50 + Math.random() * 50;
+                    const px = x + Math.cos(offsetAngle) * offsetDist;
+                    const py = y + Math.sin(offsetAngle) * offsetDist;
+                    
                     nodes.push({
                         id: projectNodeId,
                         name: project.projectName,
@@ -411,6 +444,8 @@ const NetworkGraph: React.FC<NetworkGraphProps> = ({
                         color: badgeOtherBg, // Uses --badge-other-bg (purple/indigo from asset type badges)
                         projectKey: project.productKey, // Use productKey for modal/URL
                         assetTypes: project.investmentTypes || [], // Store asset types for clustering
+                        x: px,
+                        y: py,
                     });
                 }
 
@@ -488,9 +523,9 @@ const NetworkGraph: React.FC<NetworkGraphProps> = ({
         // Set link strength for more stable connections
         fg.d3Force('link').strength(0.5);
 
-        // Remove center force - nodes should only be pulled by links and repelled by charge
-        // This prevents unwanted gravitational pull to center
-        fg.d3Force('center', null);
+        // Set the center force to the actual center of the canvas (not 0,0)
+        // This prevents nodes from being pulled toward the top-left corner
+        fg.d3Force('center').x(dimensions.width / 2).y(dimensions.height / 2).strength(0.02);
 
         // Enhanced collision force with more iterations for smoother collision avoidance
         fg.d3Force('collision', forceCollide((node: any) => {
@@ -532,7 +567,7 @@ const NetworkGraph: React.FC<NetworkGraphProps> = ({
         if (clusterByOrgType || clusterByAssetType) {
             // Strong charge repulsion to keep clusters well separated
             fg.d3Force('charge').strength(-300); // Much stronger repulsion between clusters
-            fg.d3Force('center', null); // Remove center force - clustering provides positioning
+            fg.d3Force('center').strength(0.001); // Almost no centering
             fg.d3Force('link').strength(0.1); // Very weak links
             
             // More collision within clusters to prevent overlap
@@ -630,9 +665,6 @@ const NetworkGraph: React.FC<NetworkGraphProps> = ({
                 }
                 
                 // Apply forces to all nodes in clusters based on updated centers
-                // Build a map of non-clustered nodes to their connected cluster centers
-                const nodeToClusterCenters = new Map<string, Array<{ x: number; y: number }>>();
-                
                 for (let i = 0; i < graphData.nodes.length; i++) {
                     const node: any = graphData.nodes[i];
                     let clusterKey = null;
@@ -644,58 +676,14 @@ const NetworkGraph: React.FC<NetworkGraphProps> = ({
                     }
                     
                     if (clusterKey && clusterCenters.has(clusterKey)) {
-                        // Direct cluster members get strong pull
                         const center = clusterCenters.get(clusterKey)!;
                         const strength = alpha > decayStart 
                             ? baseClusterStrength 
                             : baseClusterStrength * Math.pow(alpha / decayStart, 0.5);
                         node.vx += (center.x - node.x) * strength;
                         node.vy += (center.y - node.y) * strength;
-                    } else {
-                        // For nodes not in clusters (e.g., organizations when clustering by asset type),
-                        // find which clusters they're connected to via links
-                        graphData.links.forEach((link: any) => {
-                            const sourceId = typeof link.source === 'object' ? link.source.id : link.source;
-                            const targetId = typeof link.target === 'object' ? link.target.id : link.target;
-                            
-                            if (sourceId === node.id || targetId === node.id) {
-                                const connectedNodeId = sourceId === node.id ? targetId : sourceId;
-                                const connectedNode = graphData.nodes.find((n: any) => n.id === connectedNodeId);
-                                
-                                if (connectedNode) {
-                                    let connectedClusterKey = null;
-                                    if (clusterByOrgType && connectedNode.type === 'organization' && connectedNode.orgType) {
-                                        connectedClusterKey = `org-${connectedNode.orgType}`;
-                                    } else if (clusterByAssetType && connectedNode.type === 'project' && connectedNode.assetTypes && connectedNode.assetTypes.length > 0) {
-                                        connectedClusterKey = `asset-${connectedNode.assetTypes[0]}`;
-                                    }
-                                    
-                                    if (connectedClusterKey && clusterCenters.has(connectedClusterKey)) {
-                                        if (!nodeToClusterCenters.has(node.id)) {
-                                            nodeToClusterCenters.set(node.id, []);
-                                        }
-                                        nodeToClusterCenters.get(node.id)!.push(clusterCenters.get(connectedClusterKey)!);
-                                    }
-                                }
-                            }
-                        });
                     }
                 }
-                
-                // Apply weak pull to non-clustered nodes toward their connected clusters
-                nodeToClusterCenters.forEach((centers, nodeId) => {
-                    const node: any = graphData.nodes.find((n: any) => n.id === nodeId);
-                    if (node && centers.length > 0) {
-                        // Calculate average position of connected cluster centers
-                        const avgX = centers.reduce((sum, c) => sum + c.x, 0) / centers.length;
-                        const avgY = centers.reduce((sum, c) => sum + c.y, 0) / centers.length;
-                        
-                        // Apply very weak pull (10% of cluster force) to keep them near their connected clusters
-                        const weakStrength = baseClusterStrength * 0.1;
-                        node.vx += (avgX - node.x) * weakStrength;
-                        node.vy += (avgY - node.y) * weakStrength;
-                    }
-                });
             });
             
             fg.d3Force('clusterX', null); // Remove old separate X force
@@ -703,8 +691,8 @@ const NetworkGraph: React.FC<NetworkGraphProps> = ({
         } else {
             // Restore calmer default forces when clustering is off
             fg.d3Force('charge').strength(-400);
-            // Remove center force - no gravitational pull when clustering is off
-            fg.d3Force('center', null);
+            // Restore center force with proper canvas center coordinates
+            fg.d3Force('center').x(dimensions.width / 2).y(dimensions.height / 2).strength(0.02);
             fg.d3Force('link').strength(0.5); // Restore link strength
             
             // Restore normal collision force
