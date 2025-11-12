@@ -1371,7 +1371,7 @@ const CrisisDataDashboard = ({
                                                                     {org.projects.map((project: ProjectData) => (
                                                                         <div
                                                                             key={project.id}
-                                                                            className="p-3 bg-slate-50 rounded-lg border border-slate-100 hover:bg-slate-100 cursor-pointer transition-colors duration-200 animate-in fade-in group"
+                                                                            className="p-3 bg-slate-50/50 rounded-lg border border-slate-100 hover:bg-slate-50 cursor-pointer transition-colors duration-200 animate-in fade-in group"
                                                                             onClick={() => {
                                                                                 // Get product_key from nested data
                                                                                 const nestedOrg = nestedOrganizations.find((n: any) => n.id === org.id);
