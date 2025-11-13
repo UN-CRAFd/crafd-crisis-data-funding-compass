@@ -110,6 +110,13 @@
     }
   },
   {
+    "id": "rec3ZfAfkmBo4n8is",
+    "fields": {
+      "Agency/Department Name": "Open Society Foundations",
+      "Country Name": "Foundation"
+    }
+  },
+  {
     "id": "rec3axdk63YGrJWUW",
     "fields": {
       "Agency/Department Name": "Ministry for Foreign Affairs (UD / MFA)",
@@ -327,6 +334,13 @@
     "fields": {
       "Agency/Department Name": "Unspecified Agency",
       "Country Name": "Klaus Tschira Stiftung"
+    }
+  },
+  {
+    "id": "recDeOTSV3vQ7pXcx",
+    "fields": {
+      "Agency/Department Name": "Ford Foundation",
+      "Country Name": "Foundation"
     }
   },
   {
@@ -688,6 +702,13 @@
     }
   },
   {
+    "id": "recTZoka2MXKUJae9",
+    "fields": {
+      "Agency/Department Name": "Mastercard Foundation",
+      "Country Name": "Foundation"
+    }
+  },
+  {
     "id": "recUEOSvKGVMYEPqX",
     "fields": {
       "Agency/Department Name": "Unspecified Agency",
@@ -749,6 +770,13 @@
     "fields": {
       "Agency/Department Name": "Unspecified Agency",
       "Country Name": "Mexico"
+    }
+  },
+  {
+    "id": "recW6C5J7pShpYbzy",
+    "fields": {
+      "Agency/Department Name": "Mo Ibrahim Foundation ",
+      "Country Name": "Foundation"
     }
   },
   {
@@ -970,6 +998,13 @@
     }
   },
   {
+    "id": "recfP3UTNGJplFaiX",
+    "fields": {
+      "Agency/Department Name": "International Development Research Centre (IDRC)",
+      "Country Name": "Canada"
+    }
+  },
+  {
     "id": "recfWcw0CdUs0STc3",
     "fields": {
       "Agency/Department Name": "Unspecified Agency",
@@ -1043,8 +1078,15 @@
   {
     "id": "recjAQGJeJQbasrLl",
     "fields": {
-      "Agency/Department Name": "Hewellet Foundation",
-      "Country Name": "NGO"
+      "Agency/Department Name": "Unspecified Agency",
+      "Country Name": "Foundation"
+    }
+  },
+  {
+    "id": "recjO2oFzfahtDqQf",
+    "fields": {
+      "Agency/Department Name": "Obama Foundation",
+      "Country Name": "Foundation"
     }
   },
   {
@@ -1216,6 +1258,13 @@
       "Agency/Department Name": "Unspecified Agency",
       "Agency Data Portal": "https://www.howdengroupholdings.com/sustainability/howden-foundation",
       "Country Name": "Howden Foundation"
+    }
+  },
+  {
+    "id": "recqR4fRvKwQsk54E",
+    "fields": {
+      "Agency/Department Name": "William and Flora Hewlett Foundation",
+      "Country Name": "Foundation"
     }
   },
   {

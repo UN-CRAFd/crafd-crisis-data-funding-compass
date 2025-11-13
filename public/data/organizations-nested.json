@@ -115,7 +115,7 @@
           ],
           "Investment Theme(s)": [
             "Ethics",
-            "Anticipatory and Early Action Forecasts"
+            "Anticipatory & Early Action Forecasts"
           ],
           "product_key": "hhi-signal-program",
           "HDX_SOHD": "None"
@@ -309,7 +309,8 @@
         "recxuDvQE71WPmpJV"
       ],
       "Org Donor Agencies": [
-        "recGMYeDQSV7jffjs"
+        "rec0QlT9YlTVhHfEn",
+        "rec0sY1I5JZz6ZsUE"
       ],
       "Org HQ Country": "Spain",
       "org_key": "bse",
@@ -317,10 +318,18 @@
     },
     "agencies": [
       {
-        "id": "recGMYeDQSV7jffjs",
+        "id": "rec0QlT9YlTVhHfEn",
         "fields": {
-          "Agency/Department Name": "Unspecified Agency",
-          "Country Name": "European Union"
+          "Agency/Department Name": "Federal Foreign Office (AA)",
+          "Country Name": "Germany"
+        }
+      },
+      {
+        "id": "rec0sY1I5JZz6ZsUE",
+        "fields": {
+          "Agency/Department Name": "Foreign, Commonwealth & Development Office (FCDO)",
+          "Agency Data Portal": "https://devtracker.fcdo.gov.uk/",
+          "Country Name": "United Kingdom"
         }
       }
     ],
@@ -332,8 +341,7 @@
           "Project Description": "We specialize in conflict forecasting, prevention, and decision support. Our forecasting methodology is explicitly designed to detect new, subtle signals of conflict risk in countries not currently at war. Detecting these risks is extremely difficult and requires accepting false positives. We then integrate these predictions into a novel policy evaluation tool to assess the tradeoff between the benefits of preventive action and the costs of acting on false-positive signals. \n",
           "Project Donor Agencies": [
             "rec0sY1I5JZz6ZsUE",
-            "rec0QlT9YlTVhHfEn",
-            "recNLQhceOCXSMemo"
+            "rec0QlT9YlTVhHfEn"
           ],
           "Project Website": "https://conflictforecast.org/",
           "Provider Orgs Full Name": [
@@ -341,10 +349,11 @@
           ],
           "CRAF’d-Funded Project?": "NO",
           "Investment Type(s)": [
-            "Data Sets & Commons"
+            "Crisis Analytics & Insights"
           ],
           "Investment Theme(s)": [
-            "Anticipatory and Early Action Forecasts"
+            "Anticipatory & Early Action Forecasts",
+            "Conflict Analytics"
           ],
           "product_key": "conflict-forecast",
           "HDX_SOHD": "None"
@@ -364,20 +373,13 @@
               "Agency/Department Name": "Federal Foreign Office (AA)",
               "Country Name": "Germany"
             }
-          },
-          {
-            "id": "recNLQhceOCXSMemo",
-            "fields": {
-              "Agency/Department Name": "Unspecified Agency",
-              "Agency Data Portal": "https://www.wfp.org/",
-              "Country Name": "World Food Programme (WFP)"
-            }
           }
         ]
       }
     ],
     "donor_countries": [
-      "European Union"
+      "Germany",
+      "United Kingdom"
     ]
   },
   {
@@ -1040,7 +1042,7 @@
           "Investment Theme(s)": [
             "Climate Data",
             "Geospatial Data",
-            "Anticipatory and Early Action Forecasts"
+            "Anticipatory & Early Action Forecasts"
           ],
           "product_key": "wfp-prism",
           "HDX_SOHD": "None"
@@ -2589,7 +2591,7 @@
       "Org HQ Country": "United Kingdom",
       "Has received CRAF'd Funding?": "NO",
       "org_key": "humanitarian-outcomes",
-      "Org Type": "Tech & Consulting Provider"
+      "Org Type": "Tech / Consulting Provider"
     },
     "agencies": [
       {
@@ -2998,7 +3000,7 @@
             "Crisis Analytics & Insights"
           ],
           "Investment Theme(s)": [
-            "Anticipatory and Early Action Forecasts",
+            "Anticipatory & Early Action Forecasts",
             "Composite Indices",
             "Monitoring & Alerts"
           ],
@@ -3374,7 +3376,7 @@
           ],
           "Investment Theme(s)": [
             "Monitoring & Alerts",
-            "Anticipatory and Early Action Forecasts",
+            "Anticipatory & Early Action Forecasts",
             "Food Security Analytics"
           ],
           "product_key": "fnwg-alerts",
@@ -3469,7 +3471,7 @@
           ],
           "Investment Theme(s)": [
             "Monitoring & Alerts",
-            "Anticipatory and Early Action Forecasts",
+            "Anticipatory & Early Action Forecasts",
             "Climate Analytics"
           ],
           "product_key": "gdacs",
@@ -3657,7 +3659,7 @@
             "Crisis Analytics & Insights"
           ],
           "Investment Theme(s)": [
-            "Anticipatory and Early Action Forecasts",
+            "Anticipatory & Early Action Forecasts",
             "Conflict Analytics",
             "PiN Calculation"
           ],
@@ -4778,7 +4780,7 @@
           ],
           "Investment Theme(s)": [
             "Monitoring & Alerts",
-            "Anticipatory and Early Action Forecasts",
+            "Anticipatory & Early Action Forecasts",
             "Climate Analytics"
           ],
           "product_key": "gdacs",
@@ -4968,7 +4970,7 @@
             "Crisis Analytics & Insights"
           ],
           "Investment Theme(s)": [
-            "Anticipatory and Early Action Forecasts",
+            "Anticipatory & Early Action Forecasts",
             "Conflict Analytics",
             "PiN Calculation"
           ],
@@ -6092,7 +6094,7 @@
             "Crisis Analytics & Insights"
           ],
           "Investment Theme(s)": [
-            "Anticipatory and Early Action Forecasts",
+            "Anticipatory & Early Action Forecasts",
             "Displacement & Migration Analytics",
             "Conflict Analytics",
             "Climate Analytics",
@@ -6677,7 +6679,7 @@
             "Crisis Analytics & Insights"
           ],
           "Investment Theme(s)": [
-            "Anticipatory and Early Action Forecasts",
+            "Anticipatory & Early Action Forecasts",
             "AI Models",
             "Conflict Analytics"
           ],
@@ -7041,7 +7043,7 @@
       "Org HQ Country": "Netherlands",
       "Has received CRAF'd Funding?": "NO",
       "org_key": "data-friendly-space",
-      "Org Type": "Tech & Consulting Provider"
+      "Org Type": "Tech / Consulting Provider"
     },
     "agencies": [
       {
@@ -7760,7 +7762,7 @@
             "Crisis Analytics & Insights"
           ],
           "Investment Theme(s)": [
-            "Anticipatory and Early Action Forecasts",
+            "Anticipatory & Early Action Forecasts",
             "Conflict Analytics"
           ],
           "product_key": "crisiswatch",
@@ -7877,7 +7879,7 @@
             "Crisis Analytics & Insights"
           ],
           "Investment Theme(s)": [
-            "Anticipatory and Early Action Forecasts",
+            "Anticipatory & Early Action Forecasts",
             "Climate Analytics"
           ],
           "product_key": "eearth",
@@ -8198,7 +8200,7 @@
           ],
           "Investment Theme(s)": [
             "Climate Data",
-            "Anticipatory and Early Action Forecasts"
+            "Anticipatory & Early Action Forecasts"
           ],
           "product_key": "gdpc",
           "HDX_SOHD": "None"
@@ -8240,7 +8242,7 @@
             "Crisis Analytics & Insights"
           ],
           "Investment Theme(s)": [
-            "Anticipatory and Early Action Forecasts",
+            "Anticipatory & Early Action Forecasts",
             "Monitoring & Alerts"
           ],
           "product_key": "ifrc-trigger-model",
@@ -8339,7 +8341,7 @@
           ],
           "Investment Theme(s)": [
             "Monitoring & Alerts",
-            "Anticipatory and Early Action Forecasts",
+            "Anticipatory & Early Action Forecasts",
             "Climate Analytics"
           ],
           "product_key": "gdacs",
@@ -8363,7 +8365,7 @@
           ],
           "Investment Theme(s)": [
             "Climate Analytics",
-            "Anticipatory and Early Action Forecasts",
+            "Anticipatory & Early Action Forecasts",
             "Composite Indices"
           ],
           "product_key": "inform-climate-change",
@@ -8388,7 +8390,7 @@
           "Investment Theme(s)": [
             "Health Analytics",
             "Monitoring & Alerts",
-            "Anticipatory and Early Action Forecasts"
+            "Anticipatory & Early Action Forecasts"
           ],
           "product_key": "eios",
           "HDX_SOHD": "None"
@@ -8409,7 +8411,7 @@
             "Crisis Analytics & Insights"
           ],
           "Investment Theme(s)": [
-            "Anticipatory and Early Action Forecasts",
+            "Anticipatory & Early Action Forecasts",
             "Climate Analytics"
           ],
           "product_key": "glofas",
@@ -8432,7 +8434,7 @@
             "Crisis Analytics & Insights"
           ],
           "Investment Theme(s)": [
-            "Anticipatory and Early Action Forecasts",
+            "Anticipatory & Early Action Forecasts",
             "Climate Analytics"
           ],
           "product_key": "inform-risk",
@@ -8717,7 +8719,7 @@
           ],
           "Investment Theme(s)": [
             "Geospatial Analytics",
-            "Anticipatory and Early Action Forecasts"
+            "Anticipatory & Early Action Forecasts"
           ],
           "product_key": "wwis",
           "HDX_SOHD": "None"
@@ -9662,7 +9664,7 @@
             "Crisis Analytics & Insights"
           ],
           "Investment Theme(s)": [
-            "Anticipatory and Early Action Forecasts",
+            "Anticipatory & Early Action Forecasts",
             "Climate Analytics"
           ],
           "product_key": "clifdew-grid",
@@ -9751,7 +9753,6 @@
       "Link to Data Products Overview": "<https://data.humdata.org/organization/3isolution>\n",
       "Provided Data Ecosystem Projects": [
         "recfUQ0LgTnaydzWg",
-        "recJyonPtboyfoLet",
         "recuMPe1WRudzeyXf",
         "recxPDSfMPQYhiw5Q",
         "recgzWbqbmwOXHLnq"
@@ -9770,7 +9771,7 @@
       "Org HQ Country": "Netherlands",
       "Has received CRAF'd Funding?": "NO",
       "org_key": "3is",
-      "Org Type": "Tech & Consulting Provider",
+      "Org Type": "Tech / Consulting Provider",
       "HDX Org Key": "3is"
     },
     "agencies": [
@@ -9838,27 +9839,6 @@
       }
     ],
     "projects": [
-      {
-        "id": "recJyonPtboyfoLet",
-        "fields": {
-          "Project/Product Name": "Artificial Intelligence (AI)",
-          "Project Description": "We are at the forefront of leveraging Artificial Intelligence (AI) as a foundational tool in our core services to transform humanitarian response and environmental management. Our commitment to innovation and social impact has earned significant recognition from leading technology partners. We are proud to announce our participation in key initiatives designed to amplify our reach and capabilities:\n",
-          "Project Website": "https://3is.org/artificial-intelligence/",
-          "Provider Orgs Full Name": [
-            "recfMWBZ4Di5d2bjs"
-          ],
-          "CRAF’d-Funded Project?": "NO",
-          "Investment Type(s)": [
-            "Infrastructure & Platforms"
-          ],
-          "Investment Theme(s)": [
-            "AI & ML Infrastructure"
-          ],
-          "product_key": "ai-project",
-          "HDX_SOHD": "None"
-        },
-        "agencies": []
-      },
       {
         "id": "recfUQ0LgTnaydzWg",
         "fields": {
@@ -9973,7 +9953,14 @@
         "recOTnda6XSuNUpvo",
         "recbvrcYZZW7mBnCU",
         "recRutqdhqEZSnOB2",
-        "recqSvUlZQjET4fCH"
+        "recRgmk6Ew3NBvxGV",
+        "recDeOTSV3vQ7pXcx",
+        "recqR4fRvKwQsk54E",
+        "recfP3UTNGJplFaiX",
+        "recTZoka2MXKUJae9",
+        "recW6C5J7pShpYbzy",
+        "recjO2oFzfahtDqQf",
+        "rec3ZfAfkmBo4n8is"
       ],
       "Org IATI Name": "N/A",
       "Org HQ Country": "Ghana",
@@ -10023,10 +10010,60 @@
         }
       },
       {
-        "id": "recqSvUlZQjET4fCH",
+        "id": "recRgmk6Ew3NBvxGV",
         "fields": {
-          "Agency/Department Name": "Unspecified Agency",
+          "Agency/Department Name": "Ministry of Foreign Affairs of the Netherlands (BZ / MFA)",
+          "Agency Data Portal": "https://www.dutchdevelopmentresults.nl/",
           "Country Name": "Netherlands"
+        }
+      },
+      {
+        "id": "recDeOTSV3vQ7pXcx",
+        "fields": {
+          "Agency/Department Name": "Ford Foundation",
+          "Country Name": "Foundation"
+        }
+      },
+      {
+        "id": "recqR4fRvKwQsk54E",
+        "fields": {
+          "Agency/Department Name": "William and Flora Hewlett Foundation",
+          "Country Name": "Foundation"
+        }
+      },
+      {
+        "id": "recfP3UTNGJplFaiX",
+        "fields": {
+          "Agency/Department Name": "International Development Research Centre (IDRC)",
+          "Country Name": "Canada"
+        }
+      },
+      {
+        "id": "recTZoka2MXKUJae9",
+        "fields": {
+          "Agency/Department Name": "Mastercard Foundation",
+          "Country Name": "Foundation"
+        }
+      },
+      {
+        "id": "recW6C5J7pShpYbzy",
+        "fields": {
+          "Agency/Department Name": "Mo Ibrahim Foundation ",
+          "Country Name": "Foundation"
+        }
+      },
+      {
+        "id": "recjO2oFzfahtDqQf",
+        "fields": {
+          "Agency/Department Name": "Obama Foundation",
+          "Country Name": "Foundation"
+        }
+      },
+      {
+        "id": "rec3ZfAfkmBo4n8is",
+        "fields": {
+          "Agency/Department Name": "Open Society Foundations",
+          "Country Name": "Foundation"
         }
       }
     ],
@@ -10036,13 +10073,6 @@
         "fields": {
           "Project/Product Name": "Afrobarometer Survey Data",
           "Project Description": "Afrobarometer is a pan-African public-opinion research network providing survey insights into democracy, governance, and economic conditions. Survey microdata and analysis tools are publicly available via an open-access portal.\n",
-          "Project Donor Agencies": [
-            "recRutqdhqEZSnOB2",
-            "recbtz43uuKKFVfvd",
-            "recGNTHL9SKZxLDcw",
-            "recm5JztIHB9RUFLL",
-            "rec2KBp1IAA5TtnQl"
-          ],
           "Project Website": "https://www.afrobarometer.org/",
           "Provider Orgs Full Name": [
             "rechDlUwp5odgrH4t"
@@ -10058,47 +10088,7 @@
           "product_key": "afrobarometer",
           "HDX_SOHD": "None"
         },
-        "agencies": [
-          {
-            "id": "recRutqdhqEZSnOB2",
-            "fields": {
-              "Agency/Department Name": "Swedish International Development Cooperation Agency (SIDA)",
-              "Agency Data Portal": "https://openaid.se/en",
-              "Country Name": "Sweden"
-            }
-          },
-          {
-            "id": "recbtz43uuKKFVfvd",
-            "fields": {
-              "Agency/Department Name": "Unspecified Agency",
-              "Agency Data Portal": "https://www.gatesfoundation.org/about/committed-grants",
-              "Country Name": "Bill and Melinda Gates Foundation"
-            }
-          },
-          {
-            "id": "recGNTHL9SKZxLDcw",
-            "fields": {
-              "Agency/Department Name": "European Commission (EC)",
-              "Agency Data Portal": "Maybe https://ec.europa.eu/info/funding-tenders/opportunities/portal/",
-              "Country Name": "European Union"
-            }
-          },
-          {
-            "id": "recm5JztIHB9RUFLL",
-            "fields": {
-              "Agency/Department Name": "Japan International Cooperation Agency (JICA)",
-              "Country Name": "Japan"
-            }
-          },
-          {
-            "id": "rec2KBp1IAA5TtnQl",
-            "fields": {
-              "Agency/Department Name": "German Corporation for International Cooperation (GIZ)",
-              "Agency Data Portal": "https://www.giz.de/projektdaten/index.action?request_locale=en_GB",
-              "Country Name": "Germany"
-            }
-          }
-        ]
+        "agencies": []
       },
       {
         "id": "recLqIa10HXfvELNB",
@@ -10125,6 +10115,7 @@
     "donor_countries": [
       "Canada",
       "European Union",
+      "Foundation",
       "Germany",
       "Netherlands",
       "Norway",
@@ -10602,7 +10593,7 @@
             "Crisis Analytics & Insights"
           ],
           "Investment Theme(s)": [
-            "Anticipatory and Early Action Forecasts",
+            "Anticipatory & Early Action Forecasts",
             "Climate Analytics"
           ],
           "product_key": "clifdew-grid",
@@ -10710,7 +10701,7 @@
           ],
           "Investment Theme(s)": [
             "Food Security Analytics",
-            "Anticipatory and Early Action Forecasts"
+            "Anticipatory & Early Action Forecasts"
           ],
           "product_key": "fam",
           "HDX_SOHD": "None"
@@ -10732,7 +10723,7 @@
             "Learning & Exchange"
           ],
           "Investment Theme(s)": [
-            "Anticipatory and Early Action Forecasts",
+            "Anticipatory & Early Action Forecasts",
             "Monitoring & Alerts",
             "Upskilling & Training"
           ],
@@ -11777,8 +11768,8 @@
       {
         "id": "recjAQGJeJQbasrLl",
         "fields": {
-          "Agency/Department Name": "Hewellet Foundation",
-          "Country Name": "NGO"
+          "Agency/Department Name": "Unspecified Agency",
+          "Country Name": "Foundation"
         }
       }
     ],
@@ -11809,7 +11800,7 @@
     ],
     "donor_countries": [
       "Bill and Melinda Gates Foundation",
-      "NGO",
+      "Foundation",
       "United Nations Foundation (UN Foundation)"
     ]
   },
@@ -12743,7 +12734,9 @@
       "Org Donor Agencies": [
         "recHSsEaPuaG3h2PQ",
         "rec0sY1I5JZz6ZsUE",
-        "recylzOrnxt3grWHh"
+        "recylzOrnxt3grWHh",
+        "recf10RuM7qHUnC33",
+        "recYxlC8x9puB69tx"
       ],
       "org_key": "acaps",
       "Org Type": "Non-Governmental Organization",
@@ -12772,6 +12765,21 @@
           "Agency/Department Name": "Swiss Agency for Development and Cooperation (SDC)",
           "Agency Data Portal": "https://www.eda.admin.ch/deza/en/home/projekte/projekte.html",
           "Country Name": "Switzerland"
+        }
+      },
+      {
+        "id": "recf10RuM7qHUnC33",
+        "fields": {
+          "Agency/Department Name": "Ministry of Foreign Affairs (MFA)",
+          "Country Name": "Norway"
+        }
+      },
+      {
+        "id": "recYxlC8x9puB69tx",
+        "fields": {
+          "Agency/Department Name": "Global Affairs Canada (GAC) / Department of Foreign Affairs, Trade and Development ",
+          "Agency Data Portal": "Project Browser  International assistance projects funded by Global Affairs Canada https://w05.international.gc.ca/projectbrowser-banqueprojets/",
+          "Country Name": "Canada"
         }
       }
     ],
@@ -12844,7 +12852,9 @@
       }
     ],
     "donor_countries": [
+      "Canada",
       "European Union",
+      "Norway",
       "Switzerland",
       "United Kingdom"
     ]
@@ -13081,7 +13091,7 @@
           ],
           "Investment Theme(s)": [
             "Monitoring & Alerts",
-            "Anticipatory and Early Action Forecasts",
+            "Anticipatory & Early Action Forecasts",
             "Climate Analytics"
           ],
           "product_key": "gdacs",
@@ -14130,7 +14140,7 @@
           "Investment Theme(s)": [
             "Health Analytics",
             "Monitoring & Alerts",
-            "Anticipatory and Early Action Forecasts"
+            "Anticipatory & Early Action Forecasts"
           ],
           "product_key": "eios",
           "HDX_SOHD": "None"
@@ -14299,7 +14309,7 @@
             "Crisis Analytics & Insights"
           ],
           "Investment Theme(s)": [
-            "Anticipatory and Early Action Forecasts"
+            "Anticipatory & Early Action Forecasts"
           ],
           "product_key": "ewars",
           "HDX_SOHD": "None"
@@ -14366,7 +14376,7 @@
           ],
           "Investment Theme(s)": [
             "Climate Data",
-            "Anticipatory and Early Action Forecasts"
+            "Anticipatory & Early Action Forecasts"
           ],
           "product_key": "gdpc",
           "HDX_SOHD": "None"
@@ -14762,7 +14772,7 @@
           ],
           "Investment Theme(s)": [
             "Climate Analytics",
-            "Anticipatory and Early Action Forecasts",
+            "Anticipatory & Early Action Forecasts",
             "Composite Indices"
           ],
           "product_key": "inform-climate-change",
@@ -14788,7 +14798,7 @@
             "Crisis Analytics & Insights"
           ],
           "Investment Theme(s)": [
-            "Anticipatory and Early Action Forecasts",
+            "Anticipatory & Early Action Forecasts",
             "Composite Indices",
             "Monitoring & Alerts"
           ],
@@ -14820,7 +14830,7 @@
             "Crisis Analytics & Insights"
           ],
           "Investment Theme(s)": [
-            "Anticipatory and Early Action Forecasts",
+            "Anticipatory & Early Action Forecasts",
             "Climate Analytics"
           ],
           "product_key": "inform-risk",
@@ -14844,7 +14854,7 @@
           ],
           "Investment Theme(s)": [
             "Climate Data",
-            "Anticipatory and Early Action Forecasts"
+            "Anticipatory & Early Action Forecasts"
           ],
           "product_key": "inform-subnational",
           "HDX_SOHD": "None"

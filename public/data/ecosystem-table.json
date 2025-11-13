@@ -121,7 +121,7 @@
         "Crisis Analytics & Insights"
       ],
       "Investment Theme(s)": [
-        "Anticipatory and Early Action Forecasts",
+        "Anticipatory & Early Action Forecasts",
         "Displacement & Migration Analytics",
         "Conflict Analytics",
         "Climate Analytics",
@@ -428,7 +428,7 @@
         "Crisis Analytics & Insights"
       ],
       "Investment Theme(s)": [
-        "Anticipatory and Early Action Forecasts",
+        "Anticipatory & Early Action Forecasts",
         "Conflict Analytics"
       ],
       "product_key": "crisiswatch",
@@ -450,7 +450,7 @@
       ],
       "Investment Theme(s)": [
         "Geospatial Analytics",
-        "Anticipatory and Early Action Forecasts"
+        "Anticipatory & Early Action Forecasts"
       ],
       "product_key": "wwis",
       "HDX_SOHD": "None"
@@ -494,7 +494,7 @@
       ],
       "Investment Theme(s)": [
         "Climate Data",
-        "Anticipatory and Early Action Forecasts"
+        "Anticipatory & Early Action Forecasts"
       ],
       "product_key": "gdpc",
       "HDX_SOHD": "None"
@@ -707,13 +707,6 @@
     "fields": {
       "Project/Product Name": "Afrobarometer Survey Data",
       "Project Description": "Afrobarometer is a pan-African public-opinion research network providing survey insights into democracy, governance, and economic conditions. Survey microdata and analysis tools are publicly available via an open-access portal.\n",
-      "Project Donor Agencies": [
-        "recRutqdhqEZSnOB2",
-        "recbtz43uuKKFVfvd",
-        "recGNTHL9SKZxLDcw",
-        "recm5JztIHB9RUFLL",
-        "rec2KBp1IAA5TtnQl"
-      ],
       "Project Website": "https://www.afrobarometer.org/",
       "Provider Orgs Full Name": [
         "rechDlUwp5odgrH4t"
@@ -1111,7 +1104,7 @@
       ],
       "Investment Theme(s)": [
         "Monitoring & Alerts",
-        "Anticipatory and Early Action Forecasts",
+        "Anticipatory & Early Action Forecasts",
         "Climate Analytics"
       ],
       "product_key": "gdacs",
@@ -1135,7 +1128,7 @@
       "Investment Theme(s)": [
         "Climate Data",
         "Geospatial Data",
-        "Anticipatory and Early Action Forecasts"
+        "Anticipatory & Early Action Forecasts"
       ],
       "product_key": "wfp-prism",
       "HDX_SOHD": "None"
@@ -1223,7 +1216,7 @@
         "Crisis Analytics & Insights"
       ],
       "Investment Theme(s)": [
-        "Anticipatory and Early Action Forecasts",
+        "Anticipatory & Early Action Forecasts",
         "Conflict Analytics",
         "PiN Calculation"
       ],
@@ -1286,7 +1279,7 @@
       ],
       "Investment Theme(s)": [
         "Ethics",
-        "Anticipatory and Early Action Forecasts"
+        "Anticipatory & Early Action Forecasts"
       ],
       "product_key": "hhi-signal-program",
       "HDX_SOHD": "None"
@@ -1485,26 +1478,6 @@
     }
   },
   {
-    "id": "recJyonPtboyfoLet",
-    "fields": {
-      "Project/Product Name": "Artificial Intelligence (AI)",
-      "Project Description": "We are at the forefront of leveraging Artificial Intelligence (AI) as a foundational tool in our core services to transform humanitarian response and environmental management. Our commitment to innovation and social impact has earned significant recognition from leading technology partners. We are proud to announce our participation in key initiatives designed to amplify our reach and capabilities:\n",
-      "Project Website": "https://3is.org/artificial-intelligence/",
-      "Provider Orgs Full Name": [
-        "recfMWBZ4Di5d2bjs"
-      ],
-      "CRAF’d-Funded Project?": "NO",
-      "Investment Type(s)": [
-        "Infrastructure & Platforms"
-      ],
-      "Investment Theme(s)": [
-        "AI & ML Infrastructure"
-      ],
-      "product_key": "ai-project",
-      "HDX_SOHD": "None"
-    }
-  },
-  {
     "id": "recLA3jRq3bbZRVzu",
     "fields": {
       "Project/Product Name": "Conflict Alert System (CAST)",
@@ -1521,7 +1494,7 @@
         "Crisis Analytics & Insights"
       ],
       "Investment Theme(s)": [
-        "Anticipatory and Early Action Forecasts",
+        "Anticipatory & Early Action Forecasts",
         "AI Models",
         "Conflict Analytics"
       ],
@@ -1616,7 +1589,7 @@
       ],
       "Investment Theme(s)": [
         "Climate Analytics",
-        "Anticipatory and Early Action Forecasts",
+        "Anticipatory & Early Action Forecasts",
         "Composite Indices"
       ],
       "product_key": "inform-climate-change",
@@ -1680,7 +1653,7 @@
       "Investment Theme(s)": [
         "Health Analytics",
         "Monitoring & Alerts",
-        "Anticipatory and Early Action Forecasts"
+        "Anticipatory & Early Action Forecasts"
       ],
       "product_key": "eios",
       "HDX_SOHD": "None"
@@ -1727,7 +1700,7 @@
       ],
       "Investment Theme(s)": [
         "Monitoring & Alerts",
-        "Anticipatory and Early Action Forecasts",
+        "Anticipatory & Early Action Forecasts",
         "Food Security Analytics"
       ],
       "product_key": "fnwg-alerts",
@@ -2374,7 +2347,7 @@
         "Crisis Analytics & Insights"
       ],
       "Investment Theme(s)": [
-        "Anticipatory and Early Action Forecasts",
+        "Anticipatory & Early Action Forecasts",
         "Composite Indices",
         "Monitoring & Alerts"
       ],
@@ -2435,7 +2408,7 @@
         "Crisis Analytics & Insights"
       ],
       "Investment Theme(s)": [
-        "Anticipatory and Early Action Forecasts",
+        "Anticipatory & Early Action Forecasts",
         "Climate Analytics"
       ],
       "product_key": "glofas",
@@ -2941,7 +2914,7 @@
       ],
       "Investment Theme(s)": [
         "Food Security Analytics",
-        "Anticipatory and Early Action Forecasts"
+        "Anticipatory & Early Action Forecasts"
       ],
       "product_key": "fam",
       "HDX_SOHD": "None"
@@ -2988,7 +2961,7 @@
         "Learning & Exchange"
       ],
       "Investment Theme(s)": [
-        "Anticipatory and Early Action Forecasts",
+        "Anticipatory & Early Action Forecasts",
         "Monitoring & Alerts",
         "Upskilling & Training"
       ],
@@ -3228,7 +3201,7 @@
         "Crisis Analytics & Insights"
       ],
       "Investment Theme(s)": [
-        "Anticipatory and Early Action Forecasts",
+        "Anticipatory & Early Action Forecasts",
         "Climate Analytics"
       ],
       "product_key": "inform-risk",
@@ -3854,7 +3827,7 @@
         "Crisis Analytics & Insights"
       ],
       "Investment Theme(s)": [
-        "Anticipatory and Early Action Forecasts",
+        "Anticipatory & Early Action Forecasts",
         "Climate Analytics"
       ],
       "product_key": "eearth",
@@ -3875,7 +3848,7 @@
         "Crisis Analytics & Insights"
       ],
       "Investment Theme(s)": [
-        "Anticipatory and Early Action Forecasts"
+        "Anticipatory & Early Action Forecasts"
       ],
       "product_key": "ewars",
       "HDX_SOHD": "None"
@@ -3895,7 +3868,7 @@
         "Crisis Analytics & Insights"
       ],
       "Investment Theme(s)": [
-        "Anticipatory and Early Action Forecasts",
+        "Anticipatory & Early Action Forecasts",
         "Monitoring & Alerts"
       ],
       "product_key": "ifrc-trigger-model",
@@ -4501,8 +4474,7 @@
       "Project Description": "We specialize in conflict forecasting, prevention, and decision support. Our forecasting methodology is explicitly designed to detect new, subtle signals of conflict risk in countries not currently at war. Detecting these risks is extremely difficult and requires accepting false positives. We then integrate these predictions into a novel policy evaluation tool to assess the tradeoff between the benefits of preventive action and the costs of acting on false-positive signals. \n",
       "Project Donor Agencies": [
         "rec0sY1I5JZz6ZsUE",
-        "rec0QlT9YlTVhHfEn",
-        "recNLQhceOCXSMemo"
+        "rec0QlT9YlTVhHfEn"
       ],
       "Project Website": "https://conflictforecast.org/",
       "Provider Orgs Full Name": [
@@ -4510,10 +4482,11 @@
       ],
       "CRAF’d-Funded Project?": "NO",
       "Investment Type(s)": [
-        "Data Sets & Commons"
+        "Crisis Analytics & Insights"
       ],
       "Investment Theme(s)": [
-        "Anticipatory and Early Action Forecasts"
+        "Anticipatory & Early Action Forecasts",
+        "Conflict Analytics"
       ],
       "product_key": "conflict-forecast",
       "HDX_SOHD": "None"
@@ -4579,7 +4552,7 @@
         "Crisis Analytics & Insights"
       ],
       "Investment Theme(s)": [
-        "Anticipatory and Early Action Forecasts",
+        "Anticipatory & Early Action Forecasts",
         "Climate Analytics"
       ],
       "product_key": "clifdew-grid",
@@ -4602,7 +4575,7 @@
       ],
       "Investment Theme(s)": [
         "Climate Data",
-        "Anticipatory and Early Action Forecasts"
+        "Anticipatory & Early Action Forecasts"
       ],
       "product_key": "inform-subnational",
       "HDX_SOHD": "None"
