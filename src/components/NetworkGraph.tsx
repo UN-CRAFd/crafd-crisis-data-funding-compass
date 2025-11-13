@@ -506,11 +506,12 @@ const NetworkGraph: React.FC<NetworkGraphProps> = ({
         // Fix the most central node at the average coordinates to anchor the graph initially
         // Store the node ID to unfix it after 3 seconds
         if (mostCentralNode) {
-            mostCentralNode.fx = avgX;
-            mostCentralNode.fy = avgY;
+            const centralNode = mostCentralNode as GraphNode;
+            centralNode.fx = avgX;
+            centralNode.fy = avgY;
             // Store metadata for later unfixing
-            (mostCentralNode as any).__initiallyFixed = true;
-            (mostCentralNode as any).__fixedNodeId = mostCentralNode.id;
+            (centralNode as any).__initiallyFixed = true;
+            (centralNode as any).__fixedNodeId = centralNode.id;
         }
 
         const endTime = performance.now();
