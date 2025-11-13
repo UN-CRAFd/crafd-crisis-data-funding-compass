@@ -59,7 +59,8 @@
         "recxuDvQE71WPmpJV"
       ],
       "Org Donor Agencies": [
-        "recGMYeDQSV7jffjs"
+        "rec0QlT9YlTVhHfEn",
+        "rec0sY1I5JZz6ZsUE"
       ],
       "Org HQ Country": "Spain",
       "org_key": "bse",
@@ -447,7 +448,7 @@
       "Org HQ Country": "United Kingdom",
       "Has received CRAF'd Funding?": "NO",
       "org_key": "humanitarian-outcomes",
-      "Org Type": "Tech & Consulting Provider"
+      "Org Type": "Tech / Consulting Provider"
     }
   },
   {
@@ -1222,7 +1223,7 @@
       "Org HQ Country": "Netherlands",
       "Has received CRAF'd Funding?": "NO",
       "org_key": "data-friendly-space",
-      "Org Type": "Tech & Consulting Provider"
+      "Org Type": "Tech / Consulting Provider"
     }
   },
   {
@@ -1626,7 +1627,6 @@
       "Link to Data Products Overview": "<https://data.humdata.org/organization/3isolution>\n",
       "Provided Data Ecosystem Projects": [
         "recfUQ0LgTnaydzWg",
-        "recJyonPtboyfoLet",
         "recuMPe1WRudzeyXf",
         "recxPDSfMPQYhiw5Q",
         "recgzWbqbmwOXHLnq"
@@ -1645,7 +1645,7 @@
       "Org HQ Country": "Netherlands",
       "Has received CRAF'd Funding?": "NO",
       "org_key": "3is",
-      "Org Type": "Tech & Consulting Provider",
+      "Org Type": "Tech / Consulting Provider",
       "HDX Org Key": "3is"
     }
   },
@@ -1667,7 +1667,14 @@
         "recOTnda6XSuNUpvo",
         "recbvrcYZZW7mBnCU",
         "recRutqdhqEZSnOB2",
-        "recqSvUlZQjET4fCH"
+        "recRgmk6Ew3NBvxGV",
+        "recDeOTSV3vQ7pXcx",
+        "recqR4fRvKwQsk54E",
+        "recfP3UTNGJplFaiX",
+        "recTZoka2MXKUJae9",
+        "recW6C5J7pShpYbzy",
+        "recjO2oFzfahtDqQf",
+        "rec3ZfAfkmBo4n8is"
       ],
       "Org IATI Name": "N/A",
       "Org HQ Country": "Ghana",
@@ -2058,7 +2065,9 @@
       "Org Donor Agencies": [
         "recHSsEaPuaG3h2PQ",
         "rec0sY1I5JZz6ZsUE",
-        "recylzOrnxt3grWHh"
+        "recylzOrnxt3grWHh",
+        "recf10RuM7qHUnC33",
+        "recYxlC8x9puB69tx"
       ],
       "org_key": "acaps",
       "Org Type": "Non-Governmental Organization",
