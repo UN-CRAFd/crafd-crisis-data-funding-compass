@@ -970,30 +970,6 @@
     }
   },
   {
-    "id": "recD0o9DgLleR3ctz",
-    "fields": {
-      "Project/Product Name": "Geoportal",
-      "Project Description": "**The Institute of Geography of the USFQ** has been created to generate scientific knowledge of the environmental, socioeconomic and biophysical processes that occur in the Ecuadorian territory. Thus, it creates relevant evidence for public policies, individual and social action for the conservation of ecosystems and well-being of populations.\n \n\n",
-      "Project Website": "https://www.institutodegeografia.org/geoportal-2/",
-      "Provider Orgs Full Name": [
-        "recFxb7HxYJjfGpwB"
-      ],
-      "CRAF’d-Funded Project?": "NO",
-      "Investment Type(s)": [
-        "Data Sets & Commons",
-        "Learning & Exchange"
-      ],
-      "Investment Theme(s)": [
-        "Geospatial Data",
-        "Food Security Data",
-        "Climate Data",
-        "Capacity Building"
-      ],
-      "product_key": "geoportal",
-      "HDX_SOHD": "None"
-    }
-  },
-  {
     "id": "recD1auVM61iln620",
     "fields": {
       "Project/Product Name": "Population Data Portal",
@@ -1466,12 +1442,13 @@
       ],
       "CRAF’d-Funded Project?": "NO",
       "Investment Type(s)": [
-        "Data Sets & Commons",
-        "Infrastructure & Platforms"
+        "Infrastructure & Platforms",
+        "Standards & Coordination"
       ],
       "Investment Theme(s)": [
         "Data Storage, Access & Sharing",
-        "Water, Sanitation & Hygiene (WASH) Data"
+        "Data Documentation & Metadata",
+        "Methodological Standards"
       ],
       "product_key": "wpdx-platform",
       "HDX_SOHD": "None"
@@ -2921,32 +2898,6 @@
     }
   },
   {
-    "id": "receXQgibfVmjvmeB",
-    "fields": {
-      "Project/Product Name": "Minnesota Population Center (MPC)",
-      "Project Description": "MPC is an interdisciplinary research center that advances demographic and population studies through large-scale data infrastructure. It supports open-access microdata, spatial data, and survey harmonization efforts across multiple global datasets.\n",
-      "Project Donor Agencies": [
-        "recbtz43uuKKFVfvd",
-        "recCDa9F6ntBxGGkm",
-        "reclUJwIt0bxL2bO0",
-        "recWpBIPgpNUcdSAn"
-      ],
-      "Project Website": "https://pop.umn.edu/",
-      "Provider Orgs Full Name": [
-        "recq4LDzw9kcBCuX3"
-      ],
-      "CRAF’d-Funded Project?": "NO",
-      "Investment Type(s)": [
-        "Data Sets & Commons"
-      ],
-      "Investment Theme(s)": [
-        "Baseline Population Data"
-      ],
-      "product_key": "mpc",
-      "HDX_SOHD": "None"
-    }
-  },
-  {
     "id": "recf0UvW6LzObKXGC",
     "fields": {
       "Project/Product Name": "Global Crisis Risk Platform (GCRP)",
@@ -3313,7 +3264,8 @@
       "Project Donor Agencies": [
         "recCDa9F6ntBxGGkm",
         "reclUJwIt0bxL2bO0",
-        "recWpBIPgpNUcdSAn"
+        "recWpBIPgpNUcdSAn",
+        "recbtz43uuKKFVfvd"
       ],
       "Project Website": "https://www.ipums.org/",
       "Provider Orgs Full Name": [
@@ -3321,12 +3273,11 @@
       ],
       "CRAF’d-Funded Project?": "NO",
       "Investment Type(s)": [
-        "Data Sets & Commons",
         "Infrastructure & Platforms"
       ],
       "Investment Theme(s)": [
-        "Household Survey Data",
-        "Baseline Population Data"
+        "Data Documentation & Metadata",
+        "Data Storage, Access & Sharing"
       ],
       "product_key": "ipums",
       "HDX_SOHD": "None"
@@ -3501,7 +3452,15 @@
       "Project Description": "The global Multidimensional Poverty Index (global MPI) is an annual international measure of acute multidimensional poverty covering over 100 developing countries. It complements traditional monetary poverty measures by capturing the acute, overlapping deprivations in health, education, and living standards that people in poverty face. OPHI computes the global MPI in partnership with the Human Development Report Office of the United Nations Development Programme. \n",
       "Project Donor Agencies": [
         "recRutqdhqEZSnOB2",
-        "recYxlC8x9puB69tx"
+        "recYxlC8x9puB69tx",
+        "recsrMWmoA037bW03",
+        "recFDm6MHWUu6GSMI",
+        "recizeDfrqG6lA92A",
+        "rec3Ado0Jrl799Q8A",
+        "recIUg3K9vtroebVE",
+        "recNLQhceOCXSMemo",
+        "recr77XDSfR0O9Jen",
+        "rec2KBp1IAA5TtnQl"
       ],
       "Project Website": "https://ophi.org.uk/global-mpi",
       "Provider Orgs Full Name": [

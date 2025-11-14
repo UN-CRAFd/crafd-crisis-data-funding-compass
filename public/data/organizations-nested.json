@@ -2447,6 +2447,7 @@
     "name": "Global Pulse",
     "fields": {
       "Org Full Name": "Global Pulse",
+      "Org Short Name": "UN Global Pulse",
       "Org Description": "Data Insights for Social & Humanitarian Action, also known as DISHA, is a multi-partner initiative led by UN Global Pulse, the Secretary-General’s Innovation Lab, that aims to accelerate ethical and responsible access to data and artificial intelligence (AI) solutions to unlock social impact at scale.",
       "Provided Data Ecosystem Projects": [
         "rec5RfuXsmtGtPDP8"
@@ -2457,6 +2458,7 @@
         "reca3vbLWS2MqtmnV",
         "rech10djtgHRF0JFS"
       ],
+      "org_key": "global-pulse",
       "Org Type": "United Nations System"
     },
     "agencies": [
@@ -4215,52 +4217,6 @@
       "USA",
       "United Kingdom"
     ]
-  },
-  {
-    "id": "recFxb7HxYJjfGpwB",
-    "name": "Universidad San Francisco de Quito",
-    "fields": {
-      "Org Full Name": "Universidad San Francisco de Quito",
-      "Org Short Name": "USFQ",
-      "Org Website": "https://www.usfq.edu.ec/en",
-      "Org Description": "The University of San Francisco Quito (USFQ) incorporates data services and projects within its academic and research endeavors, particularly through programs like the Data Science major, which combines mathematics, statistics, and computer science to equip students with data analysis and machine learning skills. Projects include building data pipelines for text-to-image and image-to-image semantic search using various technologies and developing solutions for unstructured data extraction.",
-      "Provided Data Ecosystem Projects": [
-        "recD0o9DgLleR3ctz"
-      ],
-      "Org HQ Country": "Ecuador",
-      "Has received CRAF'd Funding?": "NO",
-      "org_key": "usfq",
-      "Org Type": "Academia"
-    },
-    "agencies": [],
-    "projects": [
-      {
-        "id": "recD0o9DgLleR3ctz",
-        "fields": {
-          "Project/Product Name": "Geoportal",
-          "Project Description": "**The Institute of Geography of the USFQ** has been created to generate scientific knowledge of the environmental, socioeconomic and biophysical processes that occur in the Ecuadorian territory. Thus, it creates relevant evidence for public policies, individual and social action for the conservation of ecosystems and well-being of populations.\n \n\n",
-          "Project Website": "https://www.institutodegeografia.org/geoportal-2/",
-          "Provider Orgs Full Name": [
-            "recFxb7HxYJjfGpwB"
-          ],
-          "CRAF’d-Funded Project?": "NO",
-          "Investment Type(s)": [
-            "Data Sets & Commons",
-            "Learning & Exchange"
-          ],
-          "Investment Theme(s)": [
-            "Geospatial Data",
-            "Food Security Data",
-            "Climate Data",
-            "Capacity Building"
-          ],
-          "product_key": "geoportal",
-          "HDX_SOHD": "None"
-        },
-        "agencies": []
-      }
-    ],
-    "donor_countries": []
   },
   {
     "id": "recG3iaB3tMhPUTLg",
@@ -9025,7 +8981,7 @@
       "Org Full Name": "UNHCR: United Nations High Commissioner for Refugees",
       "Org Short Name": "UNHCR",
       "Org Website": "https://www.unhcr.org/",
-      "Org Description": "UNHCR, the UN Refugee Agency, is a global organization dedicated to saving lives, protecting rights and building a better future for people forced to flee their homes because of conflict and persecution. \nWe lead international action to protect refugees, forcibly displaced communities and stateless people. \n\t",
+      "Org Description": "UNHCR, the UN Refugee Agency, is a global organization dedicated to saving lives, protecting rights and building a better future for people forced to flee their homes because of conflict and persecution. We lead international action to protect refugees, forcibly displaced communities and stateless people. \n\t",
       "Link to Data Products Overview": "<https://www.unhcr.org/what-we-do/data-and-publications/unhcr-data>\n",
       "Provided Data Ecosystem Projects": [
         "rec4V0tKy9KP8Gw4h",
@@ -11737,6 +11693,7 @@
     "name": "Data2x",
     "fields": {
       "Org Full Name": "Data2x",
+      "Org Short Name": "Data2X",
       "Org Website": "https://data2x.org/",
       "Org Description": "Collaboration is Data2X’s guiding principle and signature way of working. This reflects our core strength: our convening power based on the trust we have earned from government, private sector, civil society, and academic partners. In the coming years, Data2X will play an even more active facilitator role, mobilizing stakeholders around a cooperative global approach to fill gender data gaps.",
       "Provided Data Ecosystem Projects": [
@@ -11747,6 +11704,7 @@
         "recbtz43uuKKFVfvd",
         "recjAQGJeJQbasrLl"
       ],
+      "org_key": "data2x",
       "Org Type": "United Nations System"
     },
     "agencies": [
@@ -12868,8 +12826,7 @@
       "Org Website": "https://twin-cities.umn.edu/",
       "Org Description": "The University of Minnesota provides extensive data services and projects through various centers, including the Minnesota Research Data Center (MnRDC), which provides researchers secure access to non-public data from the U.S. Census Bureau and other government agencies. Their data services also encompass data infrastructure assessment, record linkage, machine learning, innovative data capture, and data access and preservation. The IPUMS Center for Data Integration is a prominent provider of census and survey data globally, further showcasing the University's commitment to data integration and research.",
       "Provided Data Ecosystem Projects": [
-        "recjAd7jOVvlh7mnp",
-        "receXQgibfVmjvmeB"
+        "recjAd7jOVvlh7mnp"
       ],
       "Org Donor Agencies": [
         "reclUJwIt0bxL2bO0"
@@ -12891,66 +12848,6 @@
     ],
     "projects": [
       {
-        "id": "receXQgibfVmjvmeB",
-        "fields": {
-          "Project/Product Name": "Minnesota Population Center (MPC)",
-          "Project Description": "MPC is an interdisciplinary research center that advances demographic and population studies through large-scale data infrastructure. It supports open-access microdata, spatial data, and survey harmonization efforts across multiple global datasets.\n",
-          "Project Donor Agencies": [
-            "recbtz43uuKKFVfvd",
-            "recCDa9F6ntBxGGkm",
-            "reclUJwIt0bxL2bO0",
-            "recWpBIPgpNUcdSAn"
-          ],
-          "Project Website": "https://pop.umn.edu/",
-          "Provider Orgs Full Name": [
-            "recq4LDzw9kcBCuX3"
-          ],
-          "CRAF’d-Funded Project?": "NO",
-          "Investment Type(s)": [
-            "Data Sets & Commons"
-          ],
-          "Investment Theme(s)": [
-            "Baseline Population Data"
-          ],
-          "product_key": "mpc",
-          "HDX_SOHD": "None"
-        },
-        "agencies": [
-          {
-            "id": "recbtz43uuKKFVfvd",
-            "fields": {
-              "Agency/Department Name": "Unspecified Agency",
-              "Agency Data Portal": "https://www.gatesfoundation.org/about/committed-grants",
-              "Country Name": "Bill and Melinda Gates Foundation"
-            }
-          },
-          {
-            "id": "recCDa9F6ntBxGGkm",
-            "fields": {
-              "Agency/Department Name": "National Institutes of Health (NIH)",
-              "Agency Data Portal": "https://www.nih.gov/",
-              "Country Name": "USA"
-            }
-          },
-          {
-            "id": "reclUJwIt0bxL2bO0",
-            "fields": {
-              "Agency/Department Name": "National Science Foundation (NSF)",
-              "Agency Data Portal": "https://www.nsf.gov/",
-              "Country Name": "USA"
-            }
-          },
-          {
-            "id": "recWpBIPgpNUcdSAn",
-            "fields": {
-              "Agency/Department Name": "Food and Drug Administration (FDA)",
-              "Agency Data Portal": "https://www.fsa.usda.gov/",
-              "Country Name": "USA"
-            }
-          }
-        ]
-      },
-      {
         "id": "recjAd7jOVvlh7mnp",
         "fields": {
           "Project/Product Name": "Integrated Public Use Microdata Series (IPUMS)",
@@ -12958,7 +12855,8 @@
           "Project Donor Agencies": [
             "recCDa9F6ntBxGGkm",
             "reclUJwIt0bxL2bO0",
-            "recWpBIPgpNUcdSAn"
+            "recWpBIPgpNUcdSAn",
+            "recbtz43uuKKFVfvd"
           ],
           "Project Website": "https://www.ipums.org/",
           "Provider Orgs Full Name": [
@@ -12966,12 +12864,11 @@
           ],
           "CRAF’d-Funded Project?": "NO",
           "Investment Type(s)": [
-            "Data Sets & Commons",
             "Infrastructure & Platforms"
           ],
           "Investment Theme(s)": [
-            "Household Survey Data",
-            "Baseline Population Data"
+            "Data Documentation & Metadata",
+            "Data Storage, Access & Sharing"
           ],
           "product_key": "ipums",
           "HDX_SOHD": "None"
@@ -12999,6 +12896,14 @@
               "Agency/Department Name": "Food and Drug Administration (FDA)",
               "Agency Data Portal": "https://www.fsa.usda.gov/",
               "Country Name": "USA"
+            }
+          },
+          {
+            "id": "recbtz43uuKKFVfvd",
+            "fields": {
+              "Agency/Department Name": "Unspecified Agency",
+              "Agency Data Portal": "https://www.gatesfoundation.org/about/committed-grants",
+              "Country Name": "Bill and Melinda Gates Foundation"
             }
           }
         ]
@@ -13464,7 +13369,9 @@
         "recJye4S746MWWmW6"
       ],
       "Org Donor Agencies": [
-        "recFDm6MHWUu6GSMI"
+        "recFDm6MHWUu6GSMI",
+        "reckIAhFXgj4XL29b",
+        "rec5OM4ToDzt2ycHr"
       ],
       "Org IATI Name": "N/A",
       "Org HQ Country": "United States",
@@ -13481,6 +13388,21 @@
           "Agency Data Portal": "https://www.unicef.org/",
           "Country Name": "United Nations Children's Fund (UNICEF)"
         }
+      },
+      {
+        "id": "reckIAhFXgj4XL29b",
+        "fields": {
+          "Agency/Department Name": "Unspecified Agency",
+          "Country Name": "USA"
+        }
+      },
+      {
+        "id": "rec5OM4ToDzt2ycHr",
+        "fields": {
+          "Agency/Department Name": "Unspecified Agency",
+          "Agency Data Portal": "https://www.hiltonfoundation.org/",
+          "Country Name": "Conrad N. Hilton Foundation"
+        }
       }
     ],
     "projects": [
@@ -13495,12 +13417,13 @@
           ],
           "CRAF’d-Funded Project?": "NO",
           "Investment Type(s)": [
-            "Data Sets & Commons",
-            "Infrastructure & Platforms"
+            "Infrastructure & Platforms",
+            "Standards & Coordination"
           ],
           "Investment Theme(s)": [
             "Data Storage, Access & Sharing",
-            "Water, Sanitation & Hygiene (WASH) Data"
+            "Data Documentation & Metadata",
+            "Methodological Standards"
           ],
           "product_key": "wpdx-platform",
           "HDX_SOHD": "None"
@@ -13509,6 +13432,8 @@
       }
     ],
     "donor_countries": [
+      "Conrad N. Hilton Foundation",
+      "USA",
       "United Nations Children's Fund (UNICEF)"
     ]
   },
@@ -13799,7 +13724,15 @@
           "Project Description": "The global Multidimensional Poverty Index (global MPI) is an annual international measure of acute multidimensional poverty covering over 100 developing countries. It complements traditional monetary poverty measures by capturing the acute, overlapping deprivations in health, education, and living standards that people in poverty face. OPHI computes the global MPI in partnership with the Human Development Report Office of the United Nations Development Programme. \n",
           "Project Donor Agencies": [
             "recRutqdhqEZSnOB2",
-            "recYxlC8x9puB69tx"
+            "recYxlC8x9puB69tx",
+            "recsrMWmoA037bW03",
+            "recFDm6MHWUu6GSMI",
+            "recizeDfrqG6lA92A",
+            "rec3Ado0Jrl799Q8A",
+            "recIUg3K9vtroebVE",
+            "recNLQhceOCXSMemo",
+            "recr77XDSfR0O9Jen",
+            "rec2KBp1IAA5TtnQl"
           ],
           "Project Website": "https://ophi.org.uk/global-mpi",
           "Provider Orgs Full Name": [
@@ -13830,6 +13763,67 @@
               "Agency/Department Name": "Global Affairs Canada (GAC) / Department of Foreign Affairs, Trade and Development ",
               "Agency Data Portal": "Project Browser  International assistance projects funded by Global Affairs Canada https://w05.international.gc.ca/projectbrowser-banqueprojets/",
               "Country Name": "Canada"
+            }
+          },
+          {
+            "id": "recsrMWmoA037bW03",
+            "fields": {
+              "Agency/Department Name": "Unspecified Agency",
+              "Agency Data Portal": "https://open.undp.org/",
+              "Country Name": "United Nations Development Programme (UNDP)"
+            }
+          },
+          {
+            "id": "recFDm6MHWUu6GSMI",
+            "fields": {
+              "Agency/Department Name": "Unspecified Agency",
+              "Agency Data Portal": "https://www.unicef.org/",
+              "Country Name": "United Nations Children's Fund (UNICEF)"
+            }
+          },
+          {
+            "id": "recizeDfrqG6lA92A",
+            "fields": {
+              "Agency/Department Name": "European External Action Service (EEAS)",
+              "Country Name": "European Union"
+            }
+          },
+          {
+            "id": "rec3Ado0Jrl799Q8A",
+            "fields": {
+              "Agency/Department Name": "Unspecified Agency",
+              "Agency Data Portal": "https://www.worldbank.org/ext/en/home",
+              "Country Name": "The World Bank"
+            }
+          },
+          {
+            "id": "recIUg3K9vtroebVE",
+            "fields": {
+              "Agency/Department Name": "Unspecified Agency",
+              "Country Name": "Food and Agriculture Organization (FAO)"
+            }
+          },
+          {
+            "id": "recNLQhceOCXSMemo",
+            "fields": {
+              "Agency/Department Name": "Unspecified Agency",
+              "Agency Data Portal": "https://www.wfp.org/",
+              "Country Name": "World Food Programme (WFP)"
+            }
+          },
+          {
+            "id": "recr77XDSfR0O9Jen",
+            "fields": {
+              "Agency/Department Name": "Unspecified Agency",
+              "Country Name": "World Health Organization (WHO)"
+            }
+          },
+          {
+            "id": "rec2KBp1IAA5TtnQl",
+            "fields": {
+              "Agency/Department Name": "German Corporation for International Cooperation (GIZ)",
+              "Agency Data Portal": "https://www.giz.de/projektdaten/index.action?request_locale=en_GB",
+              "Country Name": "Germany"
             }
           }
         ]
