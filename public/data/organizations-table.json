@@ -397,6 +397,7 @@
     "id": "rec6yP4Ms95Zkxode",
     "fields": {
       "Org Full Name": "Global Pulse",
+      "Org Short Name": "UN Global Pulse",
       "Org Description": "Data Insights for Social & Humanitarian Action, also known as DISHA, is a multi-partner initiative led by UN Global Pulse, the Secretary-General’s Innovation Lab, that aims to accelerate ethical and responsible access to data and artificial intelligence (AI) solutions to unlock social impact at scale.",
       "Provided Data Ecosystem Projects": [
         "rec5RfuXsmtGtPDP8"
@@ -407,6 +408,7 @@
         "reca3vbLWS2MqtmnV",
         "rech10djtgHRF0JFS"
       ],
+      "org_key": "global-pulse",
       "Org Type": "United Nations System"
     }
   },
@@ -692,22 +694,6 @@
       "Has received CRAF'd Funding?": "NO",
       "org_key": "unmas",
       "Org Type": "United Nations System"
-    }
-  },
-  {
-    "id": "recFxb7HxYJjfGpwB",
-    "fields": {
-      "Org Full Name": "Universidad San Francisco de Quito",
-      "Org Short Name": "USFQ",
-      "Org Website": "https://www.usfq.edu.ec/en",
-      "Org Description": "The University of San Francisco Quito (USFQ) incorporates data services and projects within its academic and research endeavors, particularly through programs like the Data Science major, which combines mathematics, statistics, and computer science to equip students with data analysis and machine learning skills. Projects include building data pipelines for text-to-image and image-to-image semantic search using various technologies and developing solutions for unstructured data extraction.",
-      "Provided Data Ecosystem Projects": [
-        "recD0o9DgLleR3ctz"
-      ],
-      "Org HQ Country": "Ecuador",
-      "Has received CRAF'd Funding?": "NO",
-      "org_key": "usfq",
-      "Org Type": "Academia"
     }
   },
   {
@@ -1547,7 +1533,7 @@
       "Org Full Name": "UNHCR: United Nations High Commissioner for Refugees",
       "Org Short Name": "UNHCR",
       "Org Website": "https://www.unhcr.org/",
-      "Org Description": "UNHCR, the UN Refugee Agency, is a global organization dedicated to saving lives, protecting rights and building a better future for people forced to flee their homes because of conflict and persecution. \nWe lead international action to protect refugees, forcibly displaced communities and stateless people. \n\t",
+      "Org Description": "UNHCR, the UN Refugee Agency, is a global organization dedicated to saving lives, protecting rights and building a better future for people forced to flee their homes because of conflict and persecution. We lead international action to protect refugees, forcibly displaced communities and stateless people. \n\t",
       "Link to Data Products Overview": "<https://www.unhcr.org/what-we-do/data-and-publications/unhcr-data>\n",
       "Provided Data Ecosystem Projects": [
         "rec4V0tKy9KP8Gw4h",
@@ -1932,6 +1918,7 @@
     "id": "recoAzfuGAQYkD8l8",
     "fields": {
       "Org Full Name": "Data2x",
+      "Org Short Name": "Data2X",
       "Org Website": "https://data2x.org/",
       "Org Description": "Collaboration is Data2X’s guiding principle and signature way of working. This reflects our core strength: our convening power based on the trust we have earned from government, private sector, civil society, and academic partners. In the coming years, Data2X will play an even more active facilitator role, mobilizing stakeholders around a cooperative global approach to fill gender data gaps.",
       "Provided Data Ecosystem Projects": [
@@ -1942,6 +1929,7 @@
         "recbtz43uuKKFVfvd",
         "recjAQGJeJQbasrLl"
       ],
+      "org_key": "data2x",
       "Org Type": "United Nations System"
     }
   },
@@ -2082,8 +2070,7 @@
       "Org Website": "https://twin-cities.umn.edu/",
       "Org Description": "The University of Minnesota provides extensive data services and projects through various centers, including the Minnesota Research Data Center (MnRDC), which provides researchers secure access to non-public data from the U.S. Census Bureau and other government agencies. Their data services also encompass data infrastructure assessment, record linkage, machine learning, innovative data capture, and data access and preservation. The IPUMS Center for Data Integration is a prominent provider of census and survey data globally, further showcasing the University's commitment to data integration and research.",
       "Provided Data Ecosystem Projects": [
-        "recjAd7jOVvlh7mnp",
-        "receXQgibfVmjvmeB"
+        "recjAd7jOVvlh7mnp"
       ],
       "Org Donor Agencies": [
         "reclUJwIt0bxL2bO0"
@@ -2181,7 +2168,9 @@
         "recJye4S746MWWmW6"
       ],
       "Org Donor Agencies": [
-        "recFDm6MHWUu6GSMI"
+        "recFDm6MHWUu6GSMI",
+        "reckIAhFXgj4XL29b",
+        "rec5OM4ToDzt2ycHr"
       ],
       "Org IATI Name": "N/A",
       "Org HQ Country": "United States",
