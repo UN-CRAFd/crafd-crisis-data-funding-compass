@@ -240,6 +240,7 @@
         "Digital Product & Tool Development",
         "Information Managment"
       ],
+      "product_key": "panda-bc",
       "HDX_SOHD": "None"
     }
   },
@@ -504,6 +505,7 @@
     "id": "rec5RfuXsmtGtPDP8",
     "fields": {
       "Project/Product Name": "Disha",
+      "Project Website": "https://disha.unglobalpulse.org/",
       "Provider Orgs Full Name": [
         "rec6yP4Ms95Zkxode"
       ],
@@ -516,6 +518,7 @@
         "Damage Assessments",
         "Geospatial Analytics"
       ],
+      "product_key": "disha",
       "HDX_SOHD": "None"
     }
   },
@@ -966,6 +969,25 @@
         "Conflict & Violence Data"
       ],
       "product_key": "unesco-okj",
+      "HDX_SOHD": "None"
+    }
+  },
+  {
+    "id": "recD0hG4x9w340oYA",
+    "fields": {
+      "Project/Product Name": "Missing Maps",
+      "Project Description": "Each year, disasters around the world kill nearly 100,000 and affect or displace 200 million people. Many of the places where these disasters occur are literally 'missing' from open and accessible maps and first responders lack the information to make valuable decisions regarding relief efforts. Missing Maps is an open, collaborative project in which you can help to map areas where humanitarian organisations are trying to meet the needs of people who live at risk of disasters and crises.\n",
+      "Project Website": "https://www.missingmaps.org/",
+      "Provider Orgs Full Name": [
+        "recJUyRNHPNV6wRXI",
+        "recPNaYHYuKeRDfJn",
+        "rec4rSsPP59Beed9i"
+      ],
+      "CRAF’d-Funded Project?": "NO",
+      "Investment Type(s)": [
+        "Data Sets & Commons"
+      ],
+      "product_key": "missing-maps",
       "HDX_SOHD": "None"
     }
   },
@@ -3460,7 +3482,10 @@
         "recIUg3K9vtroebVE",
         "recNLQhceOCXSMemo",
         "recr77XDSfR0O9Jen",
-        "rec2KBp1IAA5TtnQl"
+        "rec2KBp1IAA5TtnQl",
+        "recYsM7K4yl3TSRdS",
+        "recT2C2l3Ua0qmnR3",
+        "recqhcKxTv71yMfeI"
       ],
       "Project Website": "https://ophi.org.uk/global-mpi",
       "Provider Orgs Full Name": [
@@ -3540,7 +3565,7 @@
     "id": "recmzmFWkB8g2kiyj",
     "fields": {
       "Project/Product Name": "Desertification Country Profiles",
-      "Project Description": "Country Profiles  from UNCCD\n",
+      "Project Description": "Country Profiles  from UNCCDs\n",
       "Project Website": "https://www.unccd.int/our-work/country-profiles",
       "Provider Orgs Full Name": [
         "receHoEBpdo8LefZP"
@@ -3552,6 +3577,7 @@
       "Investment Theme(s)": [
         "Climate Analytics"
       ],
+      "product_key": "desert-cp",
       "HDX_SOHD": "None"
     }
   },
@@ -3875,6 +3901,21 @@
         "Health Analytics"
       ],
       "product_key": "kis",
+      "HDX_SOHD": "None"
+    }
+  },
+  {
+    "id": "recqHhYvJfnmPDoez",
+    "fields": {
+      "Project/Product Name": "PeaceRep",
+      "Project Website": "https://peacerep.org/",
+      "Provider Orgs Full Name": [
+        "rec7BmCO0j9do4gKE",
+        "recl1dOMXGu6LN6VT",
+        "recZFA1GrNd8swlAz",
+        "reczfCOras69wN6CO"
+      ],
+      "product_key": "peacerep",
       "HDX_SOHD": "None"
     }
   },
@@ -4248,6 +4289,7 @@
         "AI & ML Infrastructure",
         "Data Collection"
       ],
+      "product_key": "swot",
       "HDX_SOHD": "None"
     }
   },

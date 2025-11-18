@@ -162,16 +162,16 @@
   {
     "id": "rec5NKr3OLYmPMuOf",
     "fields": {
-      "Agency/Department Name": "Unspecified Agency",
-      "Country Name": "Global Challenges Foundation"
+      "Agency/Department Name": "Global Challenges Foundation",
+      "Country Name": "Foundation"
     }
   },
   {
     "id": "rec5OM4ToDzt2ycHr",
     "fields": {
-      "Agency/Department Name": "Unspecified Agency",
+      "Agency/Department Name": "Conrad N. Hilton Foundation",
       "Agency Data Portal": "https://www.hiltonfoundation.org/",
-      "Country Name": "Conrad N. Hilton Foundation"
+      "Country Name": "Foundation"
     }
   },
   {
@@ -695,6 +695,13 @@
     }
   },
   {
+    "id": "recT2C2l3Ua0qmnR3",
+    "fields": {
+      "Agency/Department Name": "Unspecified Agency",
+      "Country Name": "Institute for Economics and Peace (IEP)"
+    }
+  },
+  {
     "id": "recTMNSZMjMRAv6jz",
     "fields": {
       "Agency/Department Name": "Unspecified Agency",
@@ -711,8 +718,8 @@
   {
     "id": "recUEOSvKGVMYEPqX",
     "fields": {
-      "Agency/Department Name": "Unspecified Agency",
-      "Country Name": "Alibaba Foundation"
+      "Agency/Department Name": "Alibaba Foundation",
+      "Country Name": "Foundation"
     }
   },
   {
@@ -726,8 +733,8 @@
   {
     "id": "recULIEfSZxBrWWZb",
     "fields": {
-      "Agency/Department Name": "Unspecified Agency",
-      "Country Name": "United Nations Foundation (UN Foundation)"
+      "Agency/Department Name": "United Nations Foundation",
+      "Country Name": "Foundation"
     }
   },
   {
@@ -762,7 +769,7 @@
     "id": "recVOTd76hfvjPbjZ",
     "fields": {
       "Agency/Department Name": "The David and Lucile Packard Foundation",
-      "Country Name": "Non-State Actor"
+      "Country Name": "Foundation"
     }
   },
   {
@@ -846,6 +853,13 @@
     }
   },
   {
+    "id": "recYsM7K4yl3TSRdS",
+    "fields": {
+      "Agency/Department Name": "Unspecified Agency",
+      "Country Name": "Islamic Development Bank"
+    }
+  },
+  {
     "id": "recYxlC8x9puB69tx",
     "fields": {
       "Agency/Department Name": "Global Affairs Canada (GAC) / Department of Foreign Affairs, Trade and Development ",
@@ -920,9 +934,9 @@
   {
     "id": "recbtz43uuKKFVfvd",
     "fields": {
-      "Agency/Department Name": "Unspecified Agency",
+      "Agency/Department Name": "Bill and Melinda Gates Foundation",
       "Agency Data Portal": "https://www.gatesfoundation.org/about/committed-grants",
-      "Country Name": "Bill and Melinda Gates Foundation"
+      "Country Name": "Foundation"
     }
   },
   {
@@ -943,8 +957,8 @@
   {
     "id": "recdfJ8kc29BrRxi8",
     "fields": {
-      "Agency/Department Name": "Unspecified Agency",
-      "Country Name": "Tableau Foundation"
+      "Agency/Department Name": "Tableau Foundation",
+      "Country Name": "Foundation"
     }
   },
   {
@@ -1007,8 +1021,8 @@
   {
     "id": "recfWcw0CdUs0STc3",
     "fields": {
-      "Agency/Department Name": "Unspecified Agency",
-      "Country Name": "Microsoft"
+      "Agency/Department Name": "Microsoft",
+      "Country Name": "Private Firm"
     }
   },
   {
@@ -1203,15 +1217,15 @@
   {
     "id": "recpBuvL2uHuENIu7",
     "fields": {
-      "Agency/Department Name": "Unspecified Agency",
-      "Country Name": " Silicon Valley Community Foundation"
+      "Agency/Department Name": "Silicon Valley Community Foundation",
+      "Country Name": "Foundation"
     }
   },
   {
     "id": "recpOiAVqOz4n7ROD",
     "fields": {
       "Agency/Department Name": "McKinsey & Company",
-      "Country Name": "Private"
+      "Country Name": "Private Firm"
     }
   },
   {
@@ -1255,9 +1269,9 @@
   {
     "id": "recqNfbmfHwWpPdYJ",
     "fields": {
-      "Agency/Department Name": "Unspecified Agency",
+      "Agency/Department Name": "Howden Foundation",
       "Agency Data Portal": "https://www.howdengroupholdings.com/sustainability/howden-foundation",
-      "Country Name": "Howden Foundation"
+      "Country Name": "Foundation"
     }
   },
   {
@@ -1277,9 +1291,9 @@
   {
     "id": "recqhcKxTv71yMfeI",
     "fields": {
-      "Agency/Department Name": "Unspecified Agency",
+      "Agency/Department Name": "Rockefeller Foundation",
       "Agency Data Portal": "https://www.rockefellerfoundation.org/",
-      "Country Name": "Rockefeller Foundation"
+      "Country Name": "Foundation"
     }
   },
   {
@@ -1292,8 +1306,8 @@
   {
     "id": "recrPlN870ayqI9dO",
     "fields": {
-      "Agency/Department Name": "Unspecified Agency",
-      "Country Name": "The Elma Relief Foundation"
+      "Agency/Department Name": "The Elma Relief Foundation",
+      "Country Name": "Foundation"
     }
   },
   {
