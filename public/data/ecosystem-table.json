@@ -40,6 +40,21 @@
     }
   },
   {
+    "id": "rec0BNm6Y7xM6v7Gl",
+    "fields": {
+      "Project/Product Name": "Regional Climate Change Conference",
+      "Project Website": "https://rccc.tiikm.com/",
+      "Provider Orgs Full Name": [
+        "recwaewYY2WMRF9ZI"
+      ],
+      "CRAF’d-Funded Project?": "NO",
+      "Investment Type(s)": [
+        "Learning & Exchange"
+      ],
+      "HDX_SOHD": "None"
+    }
+  },
+  {
     "id": "rec0u1ul8iu7Yvbys",
     "fields": {
       "Project/Product Name": "Health Indicators Data",
@@ -272,7 +287,7 @@
       "Project Description": "Provides standardized global administrative boundary datasets, essential for geospatial analysis and mapping. Open-access and regularly updated, these boundaries support humanitarian planning, statistical frameworks, and international data interoperability.\n",
       "Project Website": "https://hub.worldpop.org/project/categories?id=17",
       "Provider Orgs Full Name": [
-        "rec2fgn4cmkvDsRB8"
+        "recTRbZA2fpb5FEmd"
       ],
       "CRAF’d-Funded Project?": "NO",
       "Investment Type(s)": [
@@ -579,9 +594,6 @@
         "recq6gN9R1C4tGmIx"
       ],
       "Project Website": "https://www.worldpop.org/about/",
-      "Provider Orgs Full Name": [
-        "rec2fgn4cmkvDsRB8"
-      ],
       "CRAF’d-Funded Project?": "NO",
       "Investment Type(s)": [
         "Data Sets & Commons"
@@ -823,7 +835,7 @@
       "Project Website": "https://data.humdata.org/dataset/?dataseries_name=COD+-+Subnational+Administrative+Boundaries&dataseries_name=OCHA+-+Subnational+Edge-matched+Administrative+Boundaries&q=&sort=last_modified+desc&ext_page_size=25",
       "Provider Orgs Full Name": [
         "recGCltHLsYiDo59B",
-        "rec2fgn4cmkvDsRB8"
+        "recTRbZA2fpb5FEmd"
       ],
       "CRAF’d-Funded Project?": "NO",
       "Investment Type(s)": [
@@ -949,6 +961,21 @@
         "Disaggregated Country-level Data"
       ],
       "product_key": "latinobarometro",
+      "HDX_SOHD": "None"
+    }
+  },
+  {
+    "id": "recCkgL7i4kRmP0PL",
+    "fields": {
+      "Project/Product Name": "ACLED Webinar",
+      "Project Website": "https://acleddata.com/events-webinars#:~:text=Events%20%26%20Webinars",
+      "Provider Orgs Full Name": [
+        "recRoMeLU57jzgHFs"
+      ],
+      "CRAF’d-Funded Project?": "YES",
+      "Investment Type(s)": [
+        "Learning & Exchange"
+      ],
       "HDX_SOHD": "None"
     }
   },
@@ -1133,6 +1160,25 @@
     }
   },
   {
+    "id": "recF4Js3Gn54EPxbP",
+    "fields": {
+      "Project/Product Name": "Data systems and tools",
+      "Project Website": "https://www.jointdatacenter.org/data-activities/data-systems-and-tools/",
+      "Provider Orgs Full Name": [
+        "recn4JTdYK8g4Eqjk"
+      ],
+      "CRAF’d-Funded Project?": "NO",
+      "Investment Type(s)": [
+        "Data Sets & Commons"
+      ],
+      "Investment Theme(s)": [
+        "Displacement & Migration Data",
+        "Geospatial Data"
+      ],
+      "HDX_SOHD": "None"
+    }
+  },
+  {
     "id": "recF8bGKczcSVXjRz",
     "fields": {
       "Project/Product Name": "Maps Data",
@@ -1306,20 +1352,18 @@
   {
     "id": "recGVHndBPIvMpuHb",
     "fields": {
-      "Project/Product Name": "Gender Data Center",
+      "Project/Product Name": "Solutions Inventory",
       "Project Description": "Data2X is a global partnership advancing gender-responsive data systems. It builds research, advocacy, and tools to support data on women and girls, including capacity strengthening and innovation grants.\n",
-      "Project Website": "https://data2x.org/",
+      "Project Website": "https://data2x.org/state-of-gender-data/gender-data-solutions/",
       "Provider Orgs Full Name": [
         "recoAzfuGAQYkD8l8"
       ],
       "CRAF’d-Funded Project?": "NO",
       "Investment Type(s)": [
-        "Data Sets & Commons",
-        "Human Capital & Know-how"
+        "Crisis Analytics & Insights"
       ],
       "Investment Theme(s)": [
-        "Gender Data",
-        "Data Management & Visualization"
+        "Gender Analytics"
       ],
       "product_key": "data2x",
       "HDX_SOHD": "None"
@@ -1412,6 +1456,24 @@
     }
   },
   {
+    "id": "recJ1uv7EMf5HbXfr",
+    "fields": {
+      "Project/Product Name": "Data Collection and Surveys",
+      "Project Website": "https://www.jointdatacenter.org/data-activities/data-collection-and-surveys/",
+      "Provider Orgs Full Name": [
+        "recn4JTdYK8g4Eqjk"
+      ],
+      "CRAF’d-Funded Project?": "NO",
+      "Investment Type(s)": [
+        "Crisis Analytics & Insights"
+      ],
+      "Investment Theme(s)": [
+        "Displacement & Migration Analytics"
+      ],
+      "HDX_SOHD": "None"
+    }
+  },
+  {
     "id": "recJQghyXlyK5WiCE",
     "fields": {
       "Project/Product Name": "The State of the World’s Children Report",
@@ -1440,7 +1502,7 @@
       "Project Description": "WorldPop is an interdisciplinary applied research group focusing primarily on supporting improvement of the spatial demographic evidence base and the use of these data for health and development applications, including addressing the Sustainable Development Goals. Its mission is to enable decision makers to harness the power of spatial demographic data through high quality applied research, to achieve a vision of a world where everyone, everywhere is counted in decision making.\n",
       "Project Website": "https://www.worldpop.org/methods/population-estimation-for-sustainable-development/",
       "Provider Orgs Full Name": [
-        "rec2fgn4cmkvDsRB8"
+        "recTRbZA2fpb5FEmd"
       ],
       "CRAF’d-Funded Project?": "NO",
       "Investment Type(s)": [
@@ -1612,6 +1674,43 @@
         "Household Survey Data"
       ],
       "product_key": "afrobarometer-oda",
+      "HDX_SOHD": "None"
+    }
+  },
+  {
+    "id": "recMOmPSS6OoIxqAM",
+    "fields": {
+      "Project/Product Name": "Data Standards and Governance",
+      "Project Website": "https://www.jointdatacenter.org/data-activities/data-standards-and-governance/",
+      "Provider Orgs Full Name": [
+        "recn4JTdYK8g4Eqjk"
+      ],
+      "CRAF’d-Funded Project?": "NO",
+      "Investment Type(s)": [
+        "Standards & Coordination"
+      ],
+      "Investment Theme(s)": [
+        "Methodological Standards"
+      ],
+      "HDX_SOHD": "None"
+    }
+  },
+  {
+    "id": "recN5qhUuev0DlKt8",
+    "fields": {
+      "Project/Product Name": "Fragility Forum",
+      "Project Description": "The Fragility Forum is a bi-annual event organized by the World Bank Group which brings together practitioners and policymakers from around the world to exchange knowledge and experience on engaging in environments affected by fragility, conflict and violence.\n",
+      "Project Website": "https://www.worldbank.org/en/events/2024/02/27/fragility-forum-2024",
+      "Provider Orgs Full Name": [
+        "recl51I0rcqfCzesL"
+      ],
+      "CRAF’d-Funded Project?": "NO",
+      "Investment Type(s)": [
+        "Learning & Exchange"
+      ],
+      "Investment Theme(s)": [
+        "Forums"
+      ],
       "HDX_SOHD": "None"
     }
   },
@@ -2633,6 +2732,24 @@
     }
   },
   {
+    "id": "recax9xDItng1V4ZL",
+    "fields": {
+      "Project/Product Name": "HOT OpenSummit",
+      "Project Website": "https://www.hotosm.org/opensummit23-24",
+      "Provider Orgs Full Name": [
+        "recPNaYHYuKeRDfJn"
+      ],
+      "CRAF’d-Funded Project?": "NO",
+      "Investment Type(s)": [
+        "Learning & Exchange"
+      ],
+      "Investment Theme(s)": [
+        "Conferences"
+      ],
+      "HDX_SOHD": "None"
+    }
+  },
+  {
     "id": "recb50ne79iS2TFYz",
     "fields": {
       "Project/Product Name": "AI for Humanity",
@@ -2680,7 +2797,7 @@
       "Provider Orgs Full Name": [
         "recG3iaB3tMhPUTLg",
         "rec5OGQnjAgjSFawp",
-        "rec2fgn4cmkvDsRB8"
+        "recTRbZA2fpb5FEmd"
       ],
       "CRAF’d-Funded Project?": "NO",
       "Investment Type(s)": [
@@ -2841,7 +2958,7 @@
       "Project Website": "https://malariaatlas.org/",
       "Provider Orgs Full Name": [
         "recwQpJQH4LwmSOBE",
-        "rec2fgn4cmkvDsRB8"
+        "recTRbZA2fpb5FEmd"
       ],
       "CRAF’d-Funded Project?": "NO",
       "Investment Type(s)": [
@@ -2872,29 +2989,6 @@
         "Composite Indices"
       ],
       "product_key": "global-seismic-map",
-      "HDX_SOHD": "None"
-    }
-  },
-  {
-    "id": "rece4fDBOtjCywl9q",
-    "fields": {
-      "Project/Product Name": "PreventionWeb",
-      "Project Description": "PreventionWeb is UNDRR’s global knowledge hub for disaster risk reduction, offering open-access content including research, policy documents, country profiles, and event listings. It provides curated data and analysis tools to help stakeholders stay informed, share practices, and support evidence-based DRR policy and programming.\n",
-      "Project Website": "https://www.preventionweb.net/",
-      "Provider Orgs Full Name": [
-        "recf6O6q3OE6xjOTM"
-      ],
-      "CRAF’d-Funded Project?": "NO",
-      "Investment Type(s)": [
-        "Data Sets & Commons",
-        "Human Capital & Know-how"
-      ],
-      "Investment Theme(s)": [
-        "Data Storage, Access & Sharing",
-        "Climate Data",
-        "Environmental Data"
-      ],
-      "product_key": "undrr-preventionweb",
       "HDX_SOHD": "None"
     }
   },
@@ -3156,6 +3250,25 @@
         "Peace Data"
       ],
       "product_key": "ucdp",
+      "HDX_SOHD": "None"
+    }
+  },
+  {
+    "id": "recgpKcJltAQO2pbh",
+    "fields": {
+      "Project/Product Name": "Stockholm Forum on Peace and Development",
+      "Project Description": "Held annually, the Stockholm Forum is a dialogue-driven event that provides a neutral platform for interdisciplinary exchange among members of international communities in the development, humanitarian, peacebuilding and security spheres. The discussion-led roundtable sessions—which the Stockholm Forum is well-known for—are developed in collaboration with partner organisations and invite active participation from stakeholders at all levels.\n",
+      "Project Website": "https://www.sipri.org/events/stockholm-forum-peace-and-development",
+      "Provider Orgs Full Name": [
+        "recDoZP6RL9A8FnDq"
+      ],
+      "CRAF’d-Funded Project?": "NO",
+      "Investment Type(s)": [
+        "Learning & Exchange"
+      ],
+      "Investment Theme(s)": [
+        "Conferences"
+      ],
       "HDX_SOHD": "None"
     }
   },
@@ -3775,11 +3888,22 @@
   {
     "id": "recp4lLg28MQMpBnW",
     "fields": {
-      "Project/Product Name": "PA-X Analytics",
-      "Project Description": "The PA-X Tracker is a new, innovative digital tool offering data-driven insights to support peace and transition processes. The suite of PeaceTech tools contained within the PA-X Tracker enables users to track and monitor progress and implementation of peace and transition processes. The Tracker allows users to understand how peace processes are unfolding, who is involved in them, and what impact the processes have had on a range of institutional, political, economic, humanitarian and security indicators.\n",
+      "Project/Product Name": "PeaceRep",
+      "Project Description": "PeaceRep distributes the PA-X Tracker, a new and innovative digital tool that offers data-driven insights to support peace and transition processes. The suite of PeaceTech tools contained within the PA-X Tracker enables users to track and monitor progress and implementation of peace and transition processes. The Tracker allows users to understand how peace processes are unfolding, who is involved in them, and what impact the processes have had on a range of institutional, political, economic, humanitarian and security indicators.\n",
+      "Project Donor Agencies": [
+        "recAgX8zjyt6NFtcd",
+        "recnBCITljZPzm4Ga",
+        "recq6gN9R1C4tGmIx"
+      ],
       "Project Website": "https://www.peaceagreements.org/",
       "Provider Orgs Full Name": [
-        "rec7BmCO0j9do4gKE"
+        "rec7BmCO0j9do4gKE",
+        "reczfCOras69wN6CO",
+        "recl1dOMXGu6LN6VT",
+        "recZFA1GrNd8swlAz",
+        "reclIEQ2XENwXcnyy",
+        "recapsch9j1uuLKoo",
+        "rec9E4pDM2v7mozZb"
       ],
       "CRAF’d-Funded Project?": "NO",
       "Investment Type(s)": [
@@ -3788,7 +3912,7 @@
       "Investment Theme(s)": [
         "Peace Data"
       ],
-      "product_key": "pax",
+      "product_key": "peacerep",
       "HDX_SOHD": "None"
     }
   },
@@ -3905,17 +4029,39 @@
     }
   },
   {
-    "id": "recqHhYvJfnmPDoez",
+    "id": "recq78QHoffIcjEmO",
     "fields": {
-      "Project/Product Name": "PeaceRep",
-      "Project Website": "https://peacerep.org/",
+      "Project/Product Name": "WFP Innovation Forum 2025",
+      "Project Description": "The** **WFP Innovation** Forum** is a global platform that showcases groundbreaking solutions to address food insecurity and humanitarian challenges. Bringing together innovators, humanitarian actors, private sector leaders, and policymakers, the forum highlights cutting-edge technologies, from AI-powered disaster response to sustainable agriculture, that are transforming the way hunger and crises are tackled around the world.\n",
+      "Project Website": "https://innovation.wfp.org/innovation-forum-2025",
       "Provider Orgs Full Name": [
-        "rec7BmCO0j9do4gKE",
-        "recl1dOMXGu6LN6VT",
-        "recZFA1GrNd8swlAz",
-        "reczfCOras69wN6CO"
+        "rec3QdLIyrZ4dNiPh"
       ],
-      "product_key": "peacerep",
+      "CRAF’d-Funded Project?": "NO",
+      "Investment Type(s)": [
+        "Learning & Exchange"
+      ],
+      "Investment Theme(s)": [
+        "Forums"
+      ],
+      "HDX_SOHD": "None"
+    }
+  },
+  {
+    "id": "recqtLfrSvDFeeKb9",
+    "fields": {
+      "Project/Product Name": "WorldPop Webinars",
+      "Project Website": "https://www.worldpop.org/webinars/",
+      "Provider Orgs Full Name": [
+        "recTRbZA2fpb5FEmd"
+      ],
+      "CRAF’d-Funded Project?": "NO",
+      "Investment Type(s)": [
+        "Learning & Exchange"
+      ],
+      "Investment Theme(s)": [
+        "Workshops"
+      ],
       "HDX_SOHD": "None"
     }
   },
@@ -4630,6 +4776,23 @@
     }
   },
   {
+    "id": "reczPiGnmhBrolMGr",
+    "fields": {
+      "Project/Product Name": " NYU + VIEWS: Data for Peace Conference",
+      "Provider Orgs Full Name": [
+        "recHAqTQikIG8K4tD"
+      ],
+      "CRAF’d-Funded Project?": "NO",
+      "Investment Type(s)": [
+        "Learning & Exchange"
+      ],
+      "Investment Theme(s)": [
+        "Conferences"
+      ],
+      "HDX_SOHD": "None"
+    }
+  },
+  {
     "id": "recze16CRXWao1Mma",
     "fields": {
       "Project/Product Name": "LearnOSM",
@@ -4698,9 +4861,6 @@
         "recAXDKxEbXsaHav4"
       ],
       "Project Website": "https://www.worldpop.org/",
-      "Provider Orgs Full Name": [
-        "rec2fgn4cmkvDsRB8"
-      ],
       "CRAF’d-Funded Project?": "NO",
       "Investment Type(s)": [
         "Data Sets & Commons"
