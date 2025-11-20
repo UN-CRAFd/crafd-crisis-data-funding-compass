@@ -88,7 +88,7 @@
   --chart-text-color: #333333;
 
   /* Tooltip styles */
-  --tooltip-bg: rgba(255, 255, 255, 0.8);
+  --tooltip-bg: rgb(255, 255, 255);
   --tooltip-border: #e2e8f0;
 
   /* Interactive elements */
