@@ -17,6 +17,7 @@ interface OrganizationModalProps {
     projectNameMap?: Record<string, string>;
     orgProjectsMap?: Record<string, Array<{ investmentTypes: string[] }>>;
     orgDonorCountriesMap?: Record<string, string[]>;
+    orgAgenciesMap?: Record<string, Record<string, string[]>>;
     // onClose removed for serializability; modal will dispatch a CustomEvent 'closeOrganizationModal'
     loading: boolean;
     // Callback to open project modal
@@ -35,6 +36,7 @@ export default function OrganizationModal({
     projectNameMap = {},
     orgProjectsMap = {},
     orgDonorCountriesMap = {},
+    orgAgenciesMap = {},
     loading,
     onOpenProjectModal,
     projectIdToKeyMap = {},
@@ -408,9 +410,17 @@ export default function OrganizationModal({
                                     <span className="text-lg font-normal text-gray-500 tabular-nums">({donorCountries.length})</span>
                                 </div>
                                 <div className="flex flex-wrap gap-2">
-                                    {donorCountries.map((country) => (
-                                        <CountryBadge key={country} country={country} onClick={onDonorClick} />
-                                    ))}
+                                    {donorCountries.map((country) => {
+                                        const orgAgencies = orgAgenciesMap[organization.id] || {};
+                                        return (
+                                            <CountryBadge 
+                                                key={country} 
+                                                country={country} 
+                                                onClick={onDonorClick}
+                                                agencies={orgAgencies[country]}
+                                            />
+                                        );
+                                    })}
                                 </div>
                             </div>
                         );

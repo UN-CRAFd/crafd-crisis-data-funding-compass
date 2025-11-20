@@ -12,11 +12,12 @@ interface ProjectModalProps {
     organizationName?: string;
     allOrganizations: OrganizationWithProjects[];
     loading: boolean;
+    projectAgenciesMap?: Record<string, Record<string, string[]>>;
     onOpenOrganizationModal?: (orgKey: string) => void;
     onDonorClick?: (country: string) => void;
 }
 
-export default function ProjectModal({ project, allOrganizations, loading, onOpenOrganizationModal, onDonorClick }: ProjectModalProps) {
+export default function ProjectModal({ project, allOrganizations, loading, projectAgenciesMap = {}, onOpenOrganizationModal, onDonorClick }: ProjectModalProps) {
 
     const [themeToTypeMapping, setThemeToTypeMapping] = useState<Record<string, string>>({});
     const [themeDescriptions, setThemeDescriptions] = useState<Record<string, string>>({});
@@ -291,9 +292,17 @@ export default function ProjectModal({ project, allOrganizations, loading, onOpe
                     </div>
                     {project.donorCountries && project.donorCountries.length > 0 ? (
                         <div className="flex flex-wrap gap-2">
-                            {project.donorCountries.map((country, index) => (
-                                <CountryBadge key={index} country={country} onClick={onDonorClick} />
-                            ))}
+                            {project.donorCountries.map((country, index) => {
+                                const projAgencies = projectAgenciesMap[project.id] || {};
+                                return (
+                                    <CountryBadge 
+                                        key={index} 
+                                        country={country} 
+                                        onClick={onDonorClick}
+                                        agencies={projAgencies[country]}
+                                    />
+                                );
+                            })}
                         </div>
                     ) : (
                         <div className="text-gray-500">

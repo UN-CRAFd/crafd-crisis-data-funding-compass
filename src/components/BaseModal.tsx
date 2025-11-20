@@ -5,6 +5,7 @@ import { useCallback, useEffect, useRef, useState } from 'react';
 import { createPortal } from 'react-dom';
 import CloseButton from './CloseButton';
 import { CountryFlag } from './CountryFlag';
+import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from '@/components/ui/tooltip';
 
 interface BaseModalProps {
     isOpen: boolean;
@@ -260,12 +261,13 @@ interface CountryBadgeProps {
     country: string;
     className?: string;
     onClick?: (country: string) => void;
+    agencies?: string[];
 }
 
-export function CountryBadge({ country, className = '', onClick }: CountryBadgeProps) {
+export function CountryBadge({ country, className = '', onClick, agencies }: CountryBadgeProps) {
     const isClickable = !!onClick;
     
-    return (
+    const badgeContent = (
         <span
             className={`inline-flex items-center gap-2 px-3 py-1.5 rounded-md text-sm font-medium bg-slate-100 text-slate-600 ${
                 isClickable ? 'cursor-pointer hover:bg-slate-200 transition-colors' : ''
@@ -276,4 +278,36 @@ export function CountryBadge({ country, className = '', onClick }: CountryBadgeP
             <span>{country}</span>
         </span>
     );
+    
+    // If agencies are provided, wrap in tooltip
+    if (agencies && agencies.length > 0) {
+        return (
+            <TooltipProvider delayDuration={200}>
+                <Tooltip>
+                    <TooltipTrigger asChild>
+                        {badgeContent}
+                    </TooltipTrigger>
+                    <TooltipContent 
+                        side="top" 
+                        className="max-w-xs p-3 text-xs bg-white !bg-opacity-100 border border-gray-300"
+                        style={{
+                            backgroundColor: 'rgb(255, 255, 255)',
+                            color: 'var(--tooltip-text)',
+                            border: '1px solid var(--tooltip-border)',
+                            opacity: 1
+                        }}
+                    >
+                        <div className="font-semibold mb-1">Financing Agencies:</div>
+                        <ul className="space-y-0.5">
+                            {agencies.map((agency, idx) => (
+                                <li key={idx}>• {agency}</li>
+                            ))}
+                        </ul>
+                    </TooltipContent>
+                </Tooltip>
+            </TooltipProvider>
+        );
+    }
+    
+    return badgeContent;
 }
