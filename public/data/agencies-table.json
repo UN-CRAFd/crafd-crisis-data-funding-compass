@@ -90,9 +90,9 @@
   {
     "id": "rec3Ado0Jrl799Q8A",
     "fields": {
-      "Agency/Department Name": "Unspecified Agency",
+      "Agency/Department Name": "The World Bank",
       "Agency Data Portal": "https://www.worldbank.org/ext/en/home",
-      "Country Name": "The World Bank"
+      "Country Name": "International Financial Institutions (IFIs)"
     }
   },
   {
@@ -191,8 +191,8 @@
   {
     "id": "rec6f6Th74eRAeRn4",
     "fields": {
-      "Agency/Department Name": "Unspecified Agency",
-      "Country Name": "Inter American Development Bank (IDB)"
+      "Agency/Department Name": "Inter American Development Bank (IDB)",
+      "Country Name": "International Financial Institutions (IFIs)"
     }
   },
   {
@@ -513,9 +513,9 @@
   {
     "id": "recK8nDxvYcbGdEgw",
     "fields": {
-      "Agency/Department Name": "Unspecified Agency",
+      "Agency/Department Name": "Development Bank of Latin America and the Caribbean (CAF)",
       "Agency Data Portal": "https://www.caf.com/en/projects/",
-      "Country Name": "Development Bank of Latin America and the Caribbean (CAF)"
+      "Country Name": "International Financial Institutions (IFIs)"
     }
   },
   {
@@ -565,8 +565,8 @@
   {
     "id": "recMSfI5XCXoaFs9i",
     "fields": {
-      "Agency/Department Name": "Unspecified Agency",
-      "Country Name": "African Development Bank"
+      "Agency/Department Name": "African Development Bank",
+      "Country Name": "International Financial Institutions (IFIs)"
     }
   },
   {
@@ -862,8 +862,8 @@
   {
     "id": "recYsM7K4yl3TSRdS",
     "fields": {
-      "Agency/Department Name": "Unspecified Agency",
-      "Country Name": "Islamic Development Bank"
+      "Agency/Department Name": "Islamic Development Bank",
+      "Country Name": "International Financial Institutions (IFIs)"
     }
   },
   {
@@ -1142,9 +1142,9 @@
   {
     "id": "recks6hHpAgBV14d9",
     "fields": {
-      "Agency/Department Name": "Unspecified Agency",
+      "Agency/Department Name": "Inter-American Development Bank (IDB)",
       "Agency Data Portal": "https://www.iadb.org/en/projects",
-      "Country Name": "Inter-American Development Bank (IDB)"
+      "Country Name": "International Financial Institutions (IFIs)"
     }
   },
   {

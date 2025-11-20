@@ -419,9 +419,9 @@
       {
         "id": "rec3Ado0Jrl799Q8A",
         "fields": {
-          "Agency/Department Name": "Unspecified Agency",
+          "Agency/Department Name": "The World Bank",
           "Agency Data Portal": "https://www.worldbank.org/ext/en/home",
-          "Country Name": "The World Bank"
+          "Country Name": "International Financial Institutions (IFIs)"
         }
       },
       {
@@ -567,9 +567,9 @@
       "Canada",
       "European Union",
       "Germany",
+      "International Financial Institutions (IFIs)",
       "Japan",
       "Sweden",
-      "The World Bank",
       "United Kingdom"
     ]
   },
@@ -4109,9 +4109,9 @@
       {
         "id": "recks6hHpAgBV14d9",
         "fields": {
-          "Agency/Department Name": "Unspecified Agency",
+          "Agency/Department Name": "Inter-American Development Bank (IDB)",
           "Agency Data Portal": "https://www.iadb.org/en/projects",
-          "Country Name": "Inter-American Development Bank (IDB)"
+          "Country Name": "International Financial Institutions (IFIs)"
         }
       },
       {
@@ -4273,7 +4273,7 @@
       "European Union",
       "Foundation",
       "France",
-      "Inter-American Development Bank (IDB)",
+      "International Financial Institutions (IFIs)",
       "Switzerland",
       "USA"
     ]
@@ -6697,9 +6697,9 @@
       {
         "id": "rec3Ado0Jrl799Q8A",
         "fields": {
-          "Agency/Department Name": "Unspecified Agency",
+          "Agency/Department Name": "The World Bank",
           "Agency Data Portal": "https://www.worldbank.org/ext/en/home",
-          "Country Name": "The World Bank"
+          "Country Name": "International Financial Institutions (IFIs)"
         }
       }
     ],
@@ -6751,7 +6751,7 @@
       }
     ],
     "donor_countries": [
-      "The World Bank"
+      "International Financial Institutions (IFIs)"
     ]
   },
   {
@@ -6826,9 +6826,9 @@
       {
         "id": "rec3Ado0Jrl799Q8A",
         "fields": {
-          "Agency/Department Name": "Unspecified Agency",
+          "Agency/Department Name": "The World Bank",
           "Agency Data Portal": "https://www.worldbank.org/ext/en/home",
-          "Country Name": "The World Bank"
+          "Country Name": "International Financial Institutions (IFIs)"
         }
       },
       {
@@ -7017,8 +7017,8 @@
     "donor_countries": [
       "Clinton Health Acess Initiative",
       "Foundation",
+      "International Financial Institutions (IFIs)",
       "Norway",
-      "The World Bank",
       "USA",
       "United Kingdom"
     ]
@@ -7323,9 +7323,9 @@
       {
         "id": "rec3Ado0Jrl799Q8A",
         "fields": {
-          "Agency/Department Name": "Unspecified Agency",
+          "Agency/Department Name": "The World Bank",
           "Agency Data Portal": "https://www.worldbank.org/ext/en/home",
-          "Country Name": "The World Bank"
+          "Country Name": "International Financial Institutions (IFIs)"
         }
       },
       {
@@ -7581,6 +7581,7 @@
       "European Union",
       "France",
       "Germany",
+      "International Financial Institutions (IFIs)",
       "Ireland",
       "Italy",
       "Japan",
@@ -7594,7 +7595,6 @@
       "Spain",
       "Sweden",
       "Switzerland",
-      "The World Bank",
       "Turkiye",
       "USA",
       "United Arab Emirates",
@@ -7742,9 +7742,9 @@
       {
         "id": "rec3Ado0Jrl799Q8A",
         "fields": {
-          "Agency/Department Name": "Unspecified Agency",
+          "Agency/Department Name": "The World Bank",
           "Agency Data Portal": "https://www.worldbank.org/ext/en/home",
-          "Country Name": "The World Bank"
+          "Country Name": "International Financial Institutions (IFIs)"
         }
       },
       {
@@ -8070,6 +8070,7 @@
       "Denmark",
       "European Union",
       "France",
+      "International Financial Institutions (IFIs)",
       "International Organization for Migration (IOM)",
       "Ireland",
       "Japan",
@@ -8081,7 +8082,6 @@
       "South Korea",
       "Sweden",
       "Switzerland",
-      "The World Bank",
       "World Food Programme (WFP)"
     ]
   },
@@ -8945,9 +8945,9 @@
       {
         "id": "rec3Ado0Jrl799Q8A",
         "fields": {
-          "Agency/Department Name": "Unspecified Agency",
+          "Agency/Department Name": "The World Bank",
           "Agency Data Portal": "https://www.worldbank.org/ext/en/home",
-          "Country Name": "The World Bank"
+          "Country Name": "International Financial Institutions (IFIs)"
         }
       },
       {
@@ -8960,8 +8960,8 @@
       {
         "id": "recMSfI5XCXoaFs9i",
         "fields": {
-          "Agency/Department Name": "Unspecified Agency",
-          "Country Name": "African Development Bank"
+          "Agency/Department Name": "African Development Bank",
+          "Country Name": "International Financial Institutions (IFIs)"
         }
       },
       {
@@ -9018,14 +9018,13 @@
       }
     ],
     "donor_countries": [
-      "African Development Bank",
       "African Union",
       "Canada",
       "China",
       "European Union",
+      "International Financial Institutions (IFIs)",
       "South Korea",
       "Switzerland",
-      "The World Bank",
       "USA",
       "United Kingdom"
     ]
@@ -10426,9 +10425,9 @@
       {
         "id": "rec3Ado0Jrl799Q8A",
         "fields": {
-          "Agency/Department Name": "Unspecified Agency",
+          "Agency/Department Name": "The World Bank",
           "Agency Data Portal": "https://www.worldbank.org/ext/en/home",
-          "Country Name": "The World Bank"
+          "Country Name": "International Financial Institutions (IFIs)"
         }
       },
       {
@@ -10489,7 +10488,7 @@
     ],
     "donor_countries": [
       "European Union",
-      "The World Bank",
+      "International Financial Institutions (IFIs)",
       "United Kingdom"
     ]
   },
@@ -10533,9 +10532,9 @@
       {
         "id": "rec3Ado0Jrl799Q8A",
         "fields": {
-          "Agency/Department Name": "Unspecified Agency",
+          "Agency/Department Name": "The World Bank",
           "Agency Data Portal": "https://www.worldbank.org/ext/en/home",
-          "Country Name": "The World Bank"
+          "Country Name": "International Financial Institutions (IFIs)"
         }
       },
       {
@@ -10774,9 +10773,9 @@
     ],
     "donor_countries": [
       "European Union",
+      "International Financial Institutions (IFIs)",
       "Netherlands",
       "Sweden",
-      "The World Bank",
       "USA",
       "United Nations Office for the Coordination of Humanitarian Affairs (OCHA)"
     ]
@@ -11354,8 +11353,8 @@
       {
         "id": "recMSfI5XCXoaFs9i",
         "fields": {
-          "Agency/Department Name": "Unspecified Agency",
-          "Country Name": "African Development Bank"
+          "Agency/Department Name": "African Development Bank",
+          "Country Name": "International Financial Institutions (IFIs)"
         }
       },
       {
@@ -11703,11 +11702,11 @@
       }
     ],
     "donor_countries": [
-      "African Development Bank",
       "Australia",
       "CRAF’d",
       "European Union",
       "Germany",
+      "International Financial Institutions (IFIs)",
       "Liechtenstein",
       "Norway",
       "Robert Bosch Stiftung",
@@ -12033,8 +12032,8 @@
       {
         "id": "rec6f6Th74eRAeRn4",
         "fields": {
-          "Agency/Department Name": "Unspecified Agency",
-          "Country Name": "Inter American Development Bank (IDB)"
+          "Agency/Department Name": "Inter American Development Bank (IDB)",
+          "Country Name": "International Financial Institutions (IFIs)"
         }
       },
       {
@@ -12084,17 +12083,17 @@
       {
         "id": "recK8nDxvYcbGdEgw",
         "fields": {
-          "Agency/Department Name": "Unspecified Agency",
+          "Agency/Department Name": "Development Bank of Latin America and the Caribbean (CAF)",
           "Agency Data Portal": "https://www.caf.com/en/projects/",
-          "Country Name": "Development Bank of Latin America and the Caribbean (CAF)"
+          "Country Name": "International Financial Institutions (IFIs)"
         }
       },
       {
         "id": "recks6hHpAgBV14d9",
         "fields": {
-          "Agency/Department Name": "Unspecified Agency",
+          "Agency/Department Name": "Inter-American Development Bank (IDB)",
           "Agency Data Portal": "https://www.iadb.org/en/projects",
-          "Country Name": "Inter-American Development Bank (IDB)"
+          "Country Name": "International Financial Institutions (IFIs)"
         }
       },
       {
@@ -12182,17 +12181,17 @@
           {
             "id": "recK8nDxvYcbGdEgw",
             "fields": {
-              "Agency/Department Name": "Unspecified Agency",
+              "Agency/Department Name": "Development Bank of Latin America and the Caribbean (CAF)",
               "Agency Data Portal": "https://www.caf.com/en/projects/",
-              "Country Name": "Development Bank of Latin America and the Caribbean (CAF)"
+              "Country Name": "International Financial Institutions (IFIs)"
             }
           },
           {
             "id": "recks6hHpAgBV14d9",
             "fields": {
-              "Agency/Department Name": "Unspecified Agency",
+              "Agency/Department Name": "Inter-American Development Bank (IDB)",
               "Agency Data Portal": "https://www.iadb.org/en/projects",
-              "Country Name": "Inter-American Development Bank (IDB)"
+              "Country Name": "International Financial Institutions (IFIs)"
             }
           },
           {
@@ -12231,10 +12230,8 @@
     "donor_countries": [
       "African Union",
       "Canada",
-      "Development Bank of Latin America and the Caribbean (CAF)",
       "European Union",
-      "Inter American Development Bank (IDB)",
-      "Inter-American Development Bank (IDB)",
+      "International Financial Institutions (IFIs)",
       "International Institute for Democracy and Electoral Assistance (IDEA)",
       "Norway",
       "Organization of American States",
@@ -12406,9 +12403,9 @@
       {
         "id": "rec3Ado0Jrl799Q8A",
         "fields": {
-          "Agency/Department Name": "Unspecified Agency",
+          "Agency/Department Name": "The World Bank",
           "Agency Data Portal": "https://www.worldbank.org/ext/en/home",
-          "Country Name": "The World Bank"
+          "Country Name": "International Financial Institutions (IFIs)"
         }
       },
       {
@@ -12510,9 +12507,9 @@
           {
             "id": "rec3Ado0Jrl799Q8A",
             "fields": {
-              "Agency/Department Name": "Unspecified Agency",
+              "Agency/Department Name": "The World Bank",
               "Agency Data Portal": "https://www.worldbank.org/ext/en/home",
-              "Country Name": "The World Bank"
+              "Country Name": "International Financial Institutions (IFIs)"
             }
           },
           {
@@ -12614,9 +12611,9 @@
           {
             "id": "rec3Ado0Jrl799Q8A",
             "fields": {
-              "Agency/Department Name": "Unspecified Agency",
+              "Agency/Department Name": "The World Bank",
               "Agency Data Portal": "https://www.worldbank.org/ext/en/home",
-              "Country Name": "The World Bank"
+              "Country Name": "International Financial Institutions (IFIs)"
             }
           },
           {
@@ -12718,9 +12715,9 @@
           {
             "id": "rec3Ado0Jrl799Q8A",
             "fields": {
-              "Agency/Department Name": "Unspecified Agency",
+              "Agency/Department Name": "The World Bank",
               "Agency Data Portal": "https://www.worldbank.org/ext/en/home",
-              "Country Name": "The World Bank"
+              "Country Name": "International Financial Institutions (IFIs)"
             }
           },
           {
@@ -12826,9 +12823,9 @@
           {
             "id": "rec3Ado0Jrl799Q8A",
             "fields": {
-              "Agency/Department Name": "Unspecified Agency",
+              "Agency/Department Name": "The World Bank",
               "Agency Data Portal": "https://www.worldbank.org/ext/en/home",
-              "Country Name": "The World Bank"
+              "Country Name": "International Financial Institutions (IFIs)"
             }
           },
           {
@@ -12846,7 +12843,7 @@
       "Canada",
       "European Union",
       "Germany",
-      "The World Bank",
+      "International Financial Institutions (IFIs)",
       "United Kingdom",
       "United Nations Children's Fund (UNICEF)",
       "United Nations Development Programme (UNDP)",
@@ -12957,9 +12954,9 @@
       {
         "id": "rec3Ado0Jrl799Q8A",
         "fields": {
-          "Agency/Department Name": "Unspecified Agency",
+          "Agency/Department Name": "The World Bank",
           "Agency Data Portal": "https://www.worldbank.org/ext/en/home",
-          "Country Name": "The World Bank"
+          "Country Name": "International Financial Institutions (IFIs)"
         }
       },
       {
@@ -13039,9 +13036,9 @@
       "European Union",
       "France",
       "Germany",
+      "International Financial Institutions (IFIs)",
       "New Zealand",
       "Sweden",
-      "The World Bank",
       "USA",
       "United Nations Development Programme (UNDP)",
       "United Nations Office for the Coordination of Humanitarian Affairs (OCHA)",
@@ -14346,9 +14343,9 @@
           {
             "id": "rec3Ado0Jrl799Q8A",
             "fields": {
-              "Agency/Department Name": "Unspecified Agency",
+              "Agency/Department Name": "The World Bank",
               "Agency Data Portal": "https://www.worldbank.org/ext/en/home",
-              "Country Name": "The World Bank"
+              "Country Name": "International Financial Institutions (IFIs)"
             }
           },
           {
@@ -14384,8 +14381,8 @@
           {
             "id": "recYsM7K4yl3TSRdS",
             "fields": {
-              "Agency/Department Name": "Unspecified Agency",
-              "Country Name": "Islamic Development Bank"
+              "Agency/Department Name": "Islamic Development Bank",
+              "Country Name": "International Financial Institutions (IFIs)"
             }
           },
           {
@@ -14442,9 +14439,9 @@
       {
         "id": "rec3Ado0Jrl799Q8A",
         "fields": {
-          "Agency/Department Name": "Unspecified Agency",
+          "Agency/Department Name": "The World Bank",
           "Agency Data Portal": "https://www.worldbank.org/ext/en/home",
-          "Country Name": "The World Bank"
+          "Country Name": "International Financial Institutions (IFIs)"
         }
       },
       {
@@ -14537,7 +14534,7 @@
     ],
     "donor_countries": [
       "Germany",
-      "The World Bank",
+      "International Financial Institutions (IFIs)",
       "USA",
       "United Nations (UN)"
     ]
@@ -14609,9 +14606,9 @@
       {
         "id": "rec3Ado0Jrl799Q8A",
         "fields": {
-          "Agency/Department Name": "Unspecified Agency",
+          "Agency/Department Name": "The World Bank",
           "Agency Data Portal": "https://www.worldbank.org/ext/en/home",
-          "Country Name": "The World Bank"
+          "Country Name": "International Financial Institutions (IFIs)"
         }
       },
       {
@@ -14891,7 +14888,7 @@
     "donor_countries": [
       "European Union",
       "Foundation",
-      "The World Bank",
+      "International Financial Institutions (IFIs)",
       "USA",
       "United Nations Office for the Coordination of Humanitarian Affairs (OCHA)"
     ]
