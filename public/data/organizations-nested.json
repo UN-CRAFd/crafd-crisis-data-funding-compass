@@ -419,9 +419,9 @@
       {
         "id": "rec3Ado0Jrl799Q8A",
         "fields": {
-          "Agency/Department Name": "Unspecified Agency",
+          "Agency/Department Name": "The World Bank",
           "Agency Data Portal": "https://www.worldbank.org/ext/en/home",
-          "Country Name": "The World Bank"
+          "Country Name": "International Financial Institutions (IFIs)"
         }
       },
       {
@@ -567,360 +567,9 @@
       "Canada",
       "European Union",
       "Germany",
+      "International Financial Institutions (IFIs)",
       "Japan",
       "Sweden",
-      "The World Bank",
-      "United Kingdom"
-    ]
-  },
-  {
-    "id": "rec2fgn4cmkvDsRB8",
-    "name": "University of Southampton",
-    "fields": {
-      "Org Full Name": "University of Southampton",
-      "Org Short Name": "University of Southampton",
-      "Org Website": "https://www.southampton.ac.uk/",
-      "Org Description": "The University of Southampton's data services focus heavily on clinical research, offered through the Clinical Informatics Research Unit (CIRU). They provide services like clinical trials management, form design, data integration, global health research analysis, and clinical innovation. Their cloud-based clinical trials management system, 'EDGE,' is widely used in the NHS and internationally for managing and tracking studies. Southampton's research also addresses data accessibility, privacy, and technical limitations through data science projects, and they have expertise in the ethical, legal, and social aspects of data (ELSA).",
-      "Provided Data Ecosystem Projects": [
-        "rec3xc850SaSrqS7t",
-        "rec9ZvuALWuRRSN5P",
-        "recbmA6Lmrr5AfAHJ",
-        "recdIskWoUIv166ue",
-        "reczxU9NrSDw2mJcN",
-        "recJRVBtpTaiDVmoT",
-        "rec6S0tX5hnP9I5DG"
-      ],
-      "Org Donor Agencies": [
-        "reco4Um0k7Tgw2UCK"
-      ],
-      "Org HQ Country": "United Kingdom",
-      "Has received CRAF'd Funding?": "NO",
-      "org_key": "university-of-southampton",
-      "Org Type": "Academia"
-    },
-    "agencies": [
-      {
-        "id": "reco4Um0k7Tgw2UCK",
-        "fields": {
-          "Agency/Department Name": "Unspecified Agency",
-          "Country Name": "United Kingdom"
-        }
-      }
-    ],
-    "projects": [
-      {
-        "id": "rec3xc850SaSrqS7t",
-        "fields": {
-          "Project/Product Name": "Administrative Areas Data",
-          "Project Description": "Provides standardized global administrative boundary datasets, essential for geospatial analysis and mapping. Open-access and regularly updated, these boundaries support humanitarian planning, statistical frameworks, and international data interoperability.\n",
-          "Project Website": "https://hub.worldpop.org/project/categories?id=17",
-          "Provider Orgs Full Name": [
-            "rec2fgn4cmkvDsRB8"
-          ],
-          "CRAF’d-Funded Project?": "NO",
-          "Investment Type(s)": [
-            "Data Sets & Commons"
-          ],
-          "Investment Theme(s)": [
-            "Geospatial Data"
-          ],
-          "product_key": "admin-areas",
-          "HDX_SOHD": "None"
-        },
-        "agencies": []
-      },
-      {
-        "id": "rec6S0tX5hnP9I5DG",
-        "fields": {
-          "Project/Product Name": "WorldPop",
-          "Project Description": "WorldPop develops peer-reviewed research and methods for the construction of open and high-resolution geospatial data on population distributions, demographic and dynamics.\n",
-          "Project Donor Agencies": [
-            "recbtz43uuKKFVfvd",
-            "recbvrcYZZW7mBnCU",
-            "recCDa9F6ntBxGGkm",
-            "recqMZBMvN0vxYv9v",
-            "rec3Ado0Jrl799Q8A",
-            "recqhcKxTv71yMfeI",
-            "recAXDKxEbXsaHav4",
-            "recl0rZvHPzrC6Jwd",
-            "recq6gN9R1C4tGmIx"
-          ],
-          "Project Website": "https://www.worldpop.org/about/",
-          "Provider Orgs Full Name": [
-            "rec2fgn4cmkvDsRB8"
-          ],
-          "CRAF’d-Funded Project?": "NO",
-          "Investment Type(s)": [
-            "Data Sets & Commons"
-          ],
-          "Investment Theme(s)": [
-            "Baseline Population Data"
-          ],
-          "product_key": "worldpop",
-          "HDX_SOHD": "None"
-        },
-        "agencies": [
-          {
-            "id": "recbtz43uuKKFVfvd",
-            "fields": {
-              "Agency/Department Name": "Unspecified Agency",
-              "Agency Data Portal": "https://www.gatesfoundation.org/about/committed-grants",
-              "Country Name": "Bill and Melinda Gates Foundation"
-            }
-          },
-          {
-            "id": "recbvrcYZZW7mBnCU",
-            "fields": {
-              "Agency/Department Name": "Norwegian Agency for Development Cooperation (Norad)",
-              "Agency Data Portal": "https://resultater.norad.no/en",
-              "Country Name": "Norway"
-            }
-          },
-          {
-            "id": "recCDa9F6ntBxGGkm",
-            "fields": {
-              "Agency/Department Name": "National Institutes of Health (NIH)",
-              "Agency Data Portal": "https://www.nih.gov/",
-              "Country Name": "USA"
-            }
-          },
-          {
-            "id": "recqMZBMvN0vxYv9v",
-            "fields": {
-              "Agency/Department Name": "Department of Homeland Security (DHS)",
-              "Agency Data Portal": "https://www.dhs.gov/",
-              "Country Name": "USA"
-            }
-          },
-          {
-            "id": "rec3Ado0Jrl799Q8A",
-            "fields": {
-              "Agency/Department Name": "Unspecified Agency",
-              "Agency Data Portal": "https://www.worldbank.org/ext/en/home",
-              "Country Name": "The World Bank"
-            }
-          },
-          {
-            "id": "recqhcKxTv71yMfeI",
-            "fields": {
-              "Agency/Department Name": "Unspecified Agency",
-              "Agency Data Portal": "https://www.rockefellerfoundation.org/",
-              "Country Name": "Rockefeller Foundation"
-            }
-          },
-          {
-            "id": "recAXDKxEbXsaHav4",
-            "fields": {
-              "Agency/Department Name": "Unspecified Agency",
-              "Agency Data Portal": "https://www.clintonhealthaccess.org/",
-              "Country Name": "Clinton Health Acess Initiative"
-            }
-          },
-          {
-            "id": "recl0rZvHPzrC6Jwd",
-            "fields": {
-              "Agency/Department Name": "Unspecified Agency",
-              "Agency Data Portal": "https://wellcome.org/",
-              "Country Name": "Wellcome"
-            }
-          },
-          {
-            "id": "recq6gN9R1C4tGmIx",
-            "fields": {
-              "Agency/Department Name": "Economic and Social Research Council (ESRC)",
-              "Agency Data Portal": "https://www.ukri.org/councils/esrc/",
-              "Country Name": "United Kingdom"
-            }
-          }
-        ]
-      },
-      {
-        "id": "rec9ZvuALWuRRSN5P",
-        "fields": {
-          "Project/Product Name": "Administrative Boundaries Data (COD-AB)",
-          "Project Description": "OCHA’s Common Operational Data Administrative Boundaries (COD‑AB) is a curated, harmonized global dataset aligned with OCHA’s COD standard, designed to support mapping, analysis, and coordination in humanitarian operations.\n",
-          "Project Website": "https://data.humdata.org/dataset/?dataseries_name=COD+-+Subnational+Administrative+Boundaries&dataseries_name=OCHA+-+Subnational+Edge-matched+Administrative+Boundaries&q=&sort=last_modified+desc&ext_page_size=25",
-          "Provider Orgs Full Name": [
-            "recGCltHLsYiDo59B",
-            "rec2fgn4cmkvDsRB8"
-          ],
-          "CRAF’d-Funded Project?": "NO",
-          "Investment Type(s)": [
-            "Data Sets & Commons"
-          ],
-          "Investment Theme(s)": [
-            "Geospatial Data"
-          ],
-          "product_key": "cod-ab",
-          "HDX_SOHD": "19"
-        },
-        "agencies": []
-      },
-      {
-        "id": "recJRVBtpTaiDVmoT",
-        "fields": {
-          "Project/Product Name": "Population Gridded Dataset",
-          "Project Description": "WorldPop is an interdisciplinary applied research group focusing primarily on supporting improvement of the spatial demographic evidence base and the use of these data for health and development applications, including addressing the Sustainable Development Goals. Its mission is to enable decision makers to harness the power of spatial demographic data through high quality applied research, to achieve a vision of a world where everyone, everywhere is counted in decision making.\n",
-          "Project Website": "https://www.worldpop.org/methods/population-estimation-for-sustainable-development/",
-          "Provider Orgs Full Name": [
-            "rec2fgn4cmkvDsRB8"
-          ],
-          "CRAF’d-Funded Project?": "NO",
-          "Investment Type(s)": [
-            "Data Sets & Commons"
-          ],
-          "Investment Theme(s)": [
-            "Baseline Population Data"
-          ],
-          "product_key": "popgrid",
-          "HDX_SOHD": "None"
-        },
-        "agencies": []
-      },
-      {
-        "id": "recbmA6Lmrr5AfAHJ",
-        "fields": {
-          "Project/Product Name": "GRID3: Geo-Referenced Infrastructure and Demographic Data for Development ",
-          "Project Description": "GRID3 provides high-resolution geospatial data—including population estimates, infrastructure mapping, and administrative boundaries—to assist governments and organizations in planning, monitoring, and delivering services effectively.\n",
-          "Project Donor Agencies": [
-            "rec0sY1I5JZz6ZsUE",
-            "recbtz43uuKKFVfvd"
-          ],
-          "Project Website": "https://grid3.org/",
-          "Provider Orgs Full Name": [
-            "recG3iaB3tMhPUTLg",
-            "rec5OGQnjAgjSFawp",
-            "rec2fgn4cmkvDsRB8"
-          ],
-          "CRAF’d-Funded Project?": "NO",
-          "Investment Type(s)": [
-            "Data Sets & Commons",
-            "Learning & Exchange"
-          ],
-          "Investment Theme(s)": [
-            "Geospatial Data",
-            "Upskilling & Training"
-          ],
-          "product_key": "grid3",
-          "HDX_SOHD": "None"
-        },
-        "agencies": [
-          {
-            "id": "rec0sY1I5JZz6ZsUE",
-            "fields": {
-              "Agency/Department Name": "Foreign, Commonwealth & Development Office (FCDO)",
-              "Agency Data Portal": "https://devtracker.fcdo.gov.uk/",
-              "Country Name": "United Kingdom"
-            }
-          },
-          {
-            "id": "recbtz43uuKKFVfvd",
-            "fields": {
-              "Agency/Department Name": "Unspecified Agency",
-              "Agency Data Portal": "https://www.gatesfoundation.org/about/committed-grants",
-              "Country Name": "Bill and Melinda Gates Foundation"
-            }
-          }
-        ]
-      },
-      {
-        "id": "recdIskWoUIv166ue",
-        "fields": {
-          "Project/Product Name": "Malaria Atlas Project (MAP)",
-          "Project Description": "MAP provides high-resolution maps of malaria risk and stability, combining epidemiological and environmental data to support global health planning, investment, and disease modeling.\n",
-          "Project Donor Agencies": [
-            "recbtz43uuKKFVfvd"
-          ],
-          "Project Website": "https://malariaatlas.org/",
-          "Provider Orgs Full Name": [
-            "recwQpJQH4LwmSOBE",
-            "rec2fgn4cmkvDsRB8"
-          ],
-          "CRAF’d-Funded Project?": "NO",
-          "Investment Type(s)": [
-            "Data Sets & Commons",
-            "Crisis Analytics & Insights"
-          ],
-          "Investment Theme(s)": [
-            "Health Data"
-          ],
-          "product_key": "malaria-atlas-project",
-          "HDX_SOHD": "None"
-        },
-        "agencies": [
-          {
-            "id": "recbtz43uuKKFVfvd",
-            "fields": {
-              "Agency/Department Name": "Unspecified Agency",
-              "Agency Data Portal": "https://www.gatesfoundation.org/about/committed-grants",
-              "Country Name": "Bill and Melinda Gates Foundation"
-            }
-          }
-        ]
-      },
-      {
-        "id": "reczxU9NrSDw2mJcN",
-        "fields": {
-          "Project/Product Name": "Population Data",
-          "Project Description": "WorldPop is an interdisciplinary applied research group focusing primarily on supporting improvement of the spatial demographic evidence base and the use of these data for health and development applications, including addressing the Sustainable Development Goals. Its mission is to enable decision makers to harness the power of spatial demographic data through high quality applied research, to achieve a vision of a world where everyone, everywhere is counted in decision making.\n",
-          "Project Donor Agencies": [
-            "recbtz43uuKKFVfvd",
-            "recbvrcYZZW7mBnCU",
-            "rec0sY1I5JZz6ZsUE",
-            "recAXDKxEbXsaHav4"
-          ],
-          "Project Website": "https://www.worldpop.org/",
-          "Provider Orgs Full Name": [
-            "rec2fgn4cmkvDsRB8"
-          ],
-          "CRAF’d-Funded Project?": "NO",
-          "Investment Type(s)": [
-            "Data Sets & Commons"
-          ],
-          "Investment Theme(s)": [
-            "Geospatial Data",
-            "Baseline Population Data"
-          ],
-          "product_key": "popdata",
-          "HDX_SOHD": "None"
-        },
-        "agencies": [
-          {
-            "id": "recbtz43uuKKFVfvd",
-            "fields": {
-              "Agency/Department Name": "Unspecified Agency",
-              "Agency Data Portal": "https://www.gatesfoundation.org/about/committed-grants",
-              "Country Name": "Bill and Melinda Gates Foundation"
-            }
-          },
-          {
-            "id": "recbvrcYZZW7mBnCU",
-            "fields": {
-              "Agency/Department Name": "Norwegian Agency for Development Cooperation (Norad)",
-              "Agency Data Portal": "https://resultater.norad.no/en",
-              "Country Name": "Norway"
-            }
-          },
-          {
-            "id": "rec0sY1I5JZz6ZsUE",
-            "fields": {
-              "Agency/Department Name": "Foreign, Commonwealth & Development Office (FCDO)",
-              "Agency Data Portal": "https://devtracker.fcdo.gov.uk/",
-              "Country Name": "United Kingdom"
-            }
-          },
-          {
-            "id": "recAXDKxEbXsaHav4",
-            "fields": {
-              "Agency/Department Name": "Unspecified Agency",
-              "Agency Data Portal": "https://www.clintonhealthaccess.org/",
-              "Country Name": "Clinton Health Acess Initiative"
-            }
-          }
-        ]
-      }
-    ],
-    "donor_countries": [
       "United Kingdom"
     ]
   },
@@ -938,7 +587,8 @@
         "rec6dmVAye6IslJOK",
         "recRERSUhmJ4M8jzA",
         "rec4SqufwyxLeeDM4",
-        "reczIeSUeAdEWMKSk"
+        "reczIeSUeAdEWMKSk",
+        "recq78QHoffIcjEmO"
       ],
       "Org Donor Agencies": [
         "rec0QlT9YlTVhHfEn",
@@ -1072,6 +722,26 @@
         "agencies": []
       },
       {
+        "id": "recq78QHoffIcjEmO",
+        "fields": {
+          "Project/Product Name": "WFP Innovation Forum 2025",
+          "Project Description": "The** **WFP Innovation** Forum** is a global platform that showcases groundbreaking solutions to address food insecurity and humanitarian challenges. Bringing together innovators, humanitarian actors, private sector leaders, and policymakers, the forum highlights cutting-edge technologies, from AI-powered disaster response to sustainable agriculture, that are transforming the way hunger and crises are tackled around the world.\n",
+          "Project Website": "https://innovation.wfp.org/innovation-forum-2025",
+          "Provider Orgs Full Name": [
+            "rec3QdLIyrZ4dNiPh"
+          ],
+          "CRAF’d-Funded Project?": "NO",
+          "Investment Type(s)": [
+            "Learning & Exchange"
+          ],
+          "Investment Theme(s)": [
+            "Forums"
+          ],
+          "HDX_SOHD": "None"
+        },
+        "agencies": []
+      },
+      {
         "id": "reczIeSUeAdEWMKSk",
         "fields": {
           "Project/Product Name": "Multi-Sectoral Needs Assessment (MSNA)",
@@ -1112,7 +782,8 @@
       "Org Description": "The Netherlands Red Cross‘ data and digital unit 510 aims to help every National Red Cross and Red Crescent Society in need anywhere. It is named after the total surface area of the earth (510 million square kilometres). 510 started in 2016 with a core team of 3 and never stopped growing. Currently, 510 has more than 100 team members, of whom 70+ are professional volunteers and academic students.\n",
       "Org Mission": "It’s purpose is to improve speed, quality and cost-effectiveness of humanitarian aid by creating products and services using data and digital. ",
       "Provided Data Ecosystem Projects": [
-        "recfjAhO2DxCjgEgM"
+        "recfjAhO2DxCjgEgM",
+        "recD0hG4x9w340oYA"
       ],
       "Org HQ Country": "Netherlands",
       "Has received CRAF'd Funding?": "YES",
@@ -1122,6 +793,26 @@
     },
     "agencies": [],
     "projects": [
+      {
+        "id": "recD0hG4x9w340oYA",
+        "fields": {
+          "Project/Product Name": "Missing Maps",
+          "Project Description": "Each year, disasters around the world kill nearly 100,000 and affect or displace 200 million people. Many of the places where these disasters occur are literally 'missing' from open and accessible maps and first responders lack the information to make valuable decisions regarding relief efforts. Missing Maps is an open, collaborative project in which you can help to map areas where humanitarian organisations are trying to meet the needs of people who live at risk of disasters and crises.\n",
+          "Project Website": "https://www.missingmaps.org/",
+          "Provider Orgs Full Name": [
+            "recJUyRNHPNV6wRXI",
+            "recPNaYHYuKeRDfJn",
+            "rec4rSsPP59Beed9i"
+          ],
+          "CRAF’d-Funded Project?": "NO",
+          "Investment Type(s)": [
+            "Data Sets & Commons"
+          ],
+          "product_key": "missing-maps",
+          "HDX_SOHD": "None"
+        },
+        "agencies": []
+      },
       {
         "id": "recfjAhO2DxCjgEgM",
         "fields": {
@@ -1580,9 +1271,9 @@
       {
         "id": "recqhcKxTv71yMfeI",
         "fields": {
-          "Agency/Department Name": "Unspecified Agency",
+          "Agency/Department Name": "Rockefeller Foundation",
           "Agency Data Portal": "https://www.rockefellerfoundation.org/",
-          "Country Name": "Rockefeller Foundation"
+          "Country Name": "Foundation"
         }
       },
       {
@@ -1618,7 +1309,7 @@
       }
     ],
     "donor_countries": [
-      "Rockefeller Foundation",
+      "Foundation",
       "USA",
       "United Nations Development Programme (UNDP)",
       "United Nations Office for the Coordination of Humanitarian Affairs (OCHA)",
@@ -1769,9 +1460,9 @@
       {
         "id": "recbtz43uuKKFVfvd",
         "fields": {
-          "Agency/Department Name": "Unspecified Agency",
+          "Agency/Department Name": "Bill and Melinda Gates Foundation",
           "Agency Data Portal": "https://www.gatesfoundation.org/about/committed-grants",
-          "Country Name": "Bill and Melinda Gates Foundation"
+          "Country Name": "Foundation"
         }
       },
       {
@@ -1883,7 +1574,7 @@
           "Provider Orgs Full Name": [
             "recG3iaB3tMhPUTLg",
             "rec5OGQnjAgjSFawp",
-            "rec2fgn4cmkvDsRB8"
+            "recTRbZA2fpb5FEmd"
           ],
           "CRAF’d-Funded Project?": "NO",
           "Investment Type(s)": [
@@ -1909,9 +1600,9 @@
           {
             "id": "recbtz43uuKKFVfvd",
             "fields": {
-              "Agency/Department Name": "Unspecified Agency",
+              "Agency/Department Name": "Bill and Melinda Gates Foundation",
               "Agency Data Portal": "https://www.gatesfoundation.org/about/committed-grants",
-              "Country Name": "Bill and Melinda Gates Foundation"
+              "Country Name": "Foundation"
             }
           }
         ]
@@ -1942,11 +1633,11 @@
     "donor_countries": [
       "Australia",
       "Belgium",
-      "Bill and Melinda Gates Foundation",
       "Canada",
       "Denmark",
       "European Union",
       "Finland",
+      "Foundation",
       "France",
       "Germany",
       "Ireland",
@@ -1996,7 +1687,7 @@
         "id": "recVOTd76hfvjPbjZ",
         "fields": {
           "Agency/Department Name": "The David and Lucile Packard Foundation",
-          "Country Name": "Non-State Actor"
+          "Country Name": "Foundation"
         }
       },
       {
@@ -2044,6 +1735,7 @@
     ],
     "donor_countries": [
       "CRAF’d",
+      "Foundation",
       "Non-State Actor"
     ]
   },
@@ -2284,9 +1976,9 @@
           {
             "id": "recbtz43uuKKFVfvd",
             "fields": {
-              "Agency/Department Name": "Unspecified Agency",
+              "Agency/Department Name": "Bill and Melinda Gates Foundation",
               "Agency Data Portal": "https://www.gatesfoundation.org/about/committed-grants",
-              "Country Name": "Bill and Melinda Gates Foundation"
+              "Country Name": "Foundation"
             }
           },
           {
@@ -2299,8 +1991,8 @@
           {
             "id": "recUEOSvKGVMYEPqX",
             "fields": {
-              "Agency/Department Name": "Unspecified Agency",
-              "Country Name": "Alibaba Foundation"
+              "Agency/Department Name": "Alibaba Foundation",
+              "Country Name": "Foundation"
             }
           }
         ]
@@ -2447,6 +2139,7 @@
     "name": "Global Pulse",
     "fields": {
       "Org Full Name": "Global Pulse",
+      "Org Short Name": "UN Global Pulse",
       "Org Description": "Data Insights for Social & Humanitarian Action, also known as DISHA, is a multi-partner initiative led by UN Global Pulse, the Secretary-General’s Innovation Lab, that aims to accelerate ethical and responsible access to data and artificial intelligence (AI) solutions to unlock social impact at scale.",
       "Provided Data Ecosystem Projects": [
         "rec5RfuXsmtGtPDP8"
@@ -2457,6 +2150,7 @@
         "reca3vbLWS2MqtmnV",
         "rech10djtgHRF0JFS"
       ],
+      "org_key": "global-pulse",
       "Org Type": "United Nations System"
     },
     "agencies": [
@@ -2471,7 +2165,7 @@
         "id": "recpOiAVqOz4n7ROD",
         "fields": {
           "Agency/Department Name": "McKinsey & Company",
-          "Country Name": "Private"
+          "Country Name": "Private Firm"
         }
       },
       {
@@ -2494,6 +2188,7 @@
         "id": "rec5RfuXsmtGtPDP8",
         "fields": {
           "Project/Product Name": "Disha",
+          "Project Website": "https://disha.unglobalpulse.org/",
           "Provider Orgs Full Name": [
             "rec6yP4Ms95Zkxode"
           ],
@@ -2506,6 +2201,7 @@
             "Damage Assessments",
             "Geospatial Analytics"
           ],
+          "product_key": "disha",
           "HDX_SOHD": "None"
         },
         "agencies": []
@@ -2513,7 +2209,7 @@
     ],
     "donor_countries": [
       "Foundation",
-      "Private"
+      "Private Firm"
     ]
   },
   {
@@ -2546,11 +2242,22 @@
       {
         "id": "recp4lLg28MQMpBnW",
         "fields": {
-          "Project/Product Name": "PA-X Analytics",
-          "Project Description": "The PA-X Tracker is a new, innovative digital tool offering data-driven insights to support peace and transition processes. The suite of PeaceTech tools contained within the PA-X Tracker enables users to track and monitor progress and implementation of peace and transition processes. The Tracker allows users to understand how peace processes are unfolding, who is involved in them, and what impact the processes have had on a range of institutional, political, economic, humanitarian and security indicators.\n",
+          "Project/Product Name": "PeaceRep",
+          "Project Description": "PeaceRep distributes the PA-X Tracker, a new and innovative digital tool that offers data-driven insights to support peace and transition processes. The suite of PeaceTech tools contained within the PA-X Tracker enables users to track and monitor progress and implementation of peace and transition processes. The Tracker allows users to understand how peace processes are unfolding, who is involved in them, and what impact the processes have had on a range of institutional, political, economic, humanitarian and security indicators.\n",
+          "Project Donor Agencies": [
+            "recAgX8zjyt6NFtcd",
+            "recnBCITljZPzm4Ga",
+            "recq6gN9R1C4tGmIx"
+          ],
           "Project Website": "https://www.peaceagreements.org/",
           "Provider Orgs Full Name": [
-            "rec7BmCO0j9do4gKE"
+            "rec7BmCO0j9do4gKE",
+            "reczfCOras69wN6CO",
+            "recl1dOMXGu6LN6VT",
+            "recZFA1GrNd8swlAz",
+            "reclIEQ2XENwXcnyy",
+            "recapsch9j1uuLKoo",
+            "rec9E4pDM2v7mozZb"
           ],
           "CRAF’d-Funded Project?": "NO",
           "Investment Type(s)": [
@@ -2559,10 +2266,34 @@
           "Investment Theme(s)": [
             "Peace Data"
           ],
-          "product_key": "pax",
+          "product_key": "peacerep",
           "HDX_SOHD": "None"
         },
-        "agencies": []
+        "agencies": [
+          {
+            "id": "recAgX8zjyt6NFtcd",
+            "fields": {
+              "Agency/Department Name": "UN Women",
+              "Country Name": "United Nations (UN)"
+            }
+          },
+          {
+            "id": "recnBCITljZPzm4Ga",
+            "fields": {
+              "Agency/Department Name": "Department of Foreign Affairs (DFA)",
+              "Agency Data Portal": "https://www.ireland.ie/en/dfa/",
+              "Country Name": "Ireland"
+            }
+          },
+          {
+            "id": "recq6gN9R1C4tGmIx",
+            "fields": {
+              "Agency/Department Name": "Economic and Social Research Council (ESRC)",
+              "Agency Data Portal": "https://www.ukri.org/councils/esrc/",
+              "Country Name": "United Kingdom"
+            }
+          }
+        ]
       }
     ],
     "donor_countries": [
@@ -2678,6 +2409,80 @@
       "Canada",
       "Ireland"
     ]
+  },
+  {
+    "id": "rec9E4pDM2v7mozZb",
+    "name": "University of Stirling",
+    "fields": {
+      "Org Full Name": "University of Stirling",
+      "Org Short Name": "UOS",
+      "Provided Data Ecosystem Projects": [
+        "recp4lLg28MQMpBnW"
+      ],
+      "Org HQ Country": "United Kingdom",
+      "org_key": "uos",
+      "Org Type": "Academia"
+    },
+    "agencies": [],
+    "projects": [
+      {
+        "id": "recp4lLg28MQMpBnW",
+        "fields": {
+          "Project/Product Name": "PeaceRep",
+          "Project Description": "PeaceRep distributes the PA-X Tracker, a new and innovative digital tool that offers data-driven insights to support peace and transition processes. The suite of PeaceTech tools contained within the PA-X Tracker enables users to track and monitor progress and implementation of peace and transition processes. The Tracker allows users to understand how peace processes are unfolding, who is involved in them, and what impact the processes have had on a range of institutional, political, economic, humanitarian and security indicators.\n",
+          "Project Donor Agencies": [
+            "recAgX8zjyt6NFtcd",
+            "recnBCITljZPzm4Ga",
+            "recq6gN9R1C4tGmIx"
+          ],
+          "Project Website": "https://www.peaceagreements.org/",
+          "Provider Orgs Full Name": [
+            "rec7BmCO0j9do4gKE",
+            "reczfCOras69wN6CO",
+            "recl1dOMXGu6LN6VT",
+            "recZFA1GrNd8swlAz",
+            "reclIEQ2XENwXcnyy",
+            "recapsch9j1uuLKoo",
+            "rec9E4pDM2v7mozZb"
+          ],
+          "CRAF’d-Funded Project?": "NO",
+          "Investment Type(s)": [
+            "Data Sets & Commons"
+          ],
+          "Investment Theme(s)": [
+            "Peace Data"
+          ],
+          "product_key": "peacerep",
+          "HDX_SOHD": "None"
+        },
+        "agencies": [
+          {
+            "id": "recAgX8zjyt6NFtcd",
+            "fields": {
+              "Agency/Department Name": "UN Women",
+              "Country Name": "United Nations (UN)"
+            }
+          },
+          {
+            "id": "recnBCITljZPzm4Ga",
+            "fields": {
+              "Agency/Department Name": "Department of Foreign Affairs (DFA)",
+              "Agency Data Portal": "https://www.ireland.ie/en/dfa/",
+              "Country Name": "Ireland"
+            }
+          },
+          {
+            "id": "recq6gN9R1C4tGmIx",
+            "fields": {
+              "Agency/Department Name": "Economic and Social Research Council (ESRC)",
+              "Agency Data Portal": "https://www.ukri.org/councils/esrc/",
+              "Country Name": "United Kingdom"
+            }
+          }
+        ]
+      }
+    ],
+    "donor_countries": []
   },
   {
     "id": "rec9NauCCUPUWMwfl",
@@ -3079,8 +2884,8 @@
           {
             "id": "recfWcw0CdUs0STc3",
             "fields": {
-              "Agency/Department Name": "Unspecified Agency",
-              "Country Name": "Microsoft"
+              "Agency/Department Name": "Microsoft",
+              "Country Name": "Private Firm"
             }
           },
           {
@@ -3730,7 +3535,8 @@
         "reccyJzv7bOpjmC4B",
         "recQ0XV79TSq6v4Sj",
         "recuv6YqfhZHQGvmd",
-        "recwSp54iuK53ankI"
+        "recwSp54iuK53ankI",
+        "recgpKcJltAQO2pbh"
       ],
       "Org Donor Agencies": [
         "rec3axdk63YGrJWUW",
@@ -3919,6 +3725,26 @@
             "Peace Data"
           ],
           "product_key": "sipri-mpod",
+          "HDX_SOHD": "None"
+        },
+        "agencies": []
+      },
+      {
+        "id": "recgpKcJltAQO2pbh",
+        "fields": {
+          "Project/Product Name": "Stockholm Forum on Peace and Development",
+          "Project Description": "Held annually, the Stockholm Forum is a dialogue-driven event that provides a neutral platform for interdisciplinary exchange among members of international communities in the development, humanitarian, peacebuilding and security spheres. The discussion-led roundtable sessions—which the Stockholm Forum is well-known for—are developed in collaboration with partner organisations and invite active participation from stakeholders at all levels.\n",
+          "Project Website": "https://www.sipri.org/events/stockholm-forum-peace-and-development",
+          "Provider Orgs Full Name": [
+            "recDoZP6RL9A8FnDq"
+          ],
+          "CRAF’d-Funded Project?": "NO",
+          "Investment Type(s)": [
+            "Learning & Exchange"
+          ],
+          "Investment Theme(s)": [
+            "Conferences"
+          ],
           "HDX_SOHD": "None"
         },
         "agencies": []
@@ -4217,52 +4043,6 @@
     ]
   },
   {
-    "id": "recFxb7HxYJjfGpwB",
-    "name": "Universidad San Francisco de Quito",
-    "fields": {
-      "Org Full Name": "Universidad San Francisco de Quito",
-      "Org Short Name": "USFQ",
-      "Org Website": "https://www.usfq.edu.ec/en",
-      "Org Description": "The University of San Francisco Quito (USFQ) incorporates data services and projects within its academic and research endeavors, particularly through programs like the Data Science major, which combines mathematics, statistics, and computer science to equip students with data analysis and machine learning skills. Projects include building data pipelines for text-to-image and image-to-image semantic search using various technologies and developing solutions for unstructured data extraction.",
-      "Provided Data Ecosystem Projects": [
-        "recD0o9DgLleR3ctz"
-      ],
-      "Org HQ Country": "Ecuador",
-      "Has received CRAF'd Funding?": "NO",
-      "org_key": "usfq",
-      "Org Type": "Academia"
-    },
-    "agencies": [],
-    "projects": [
-      {
-        "id": "recD0o9DgLleR3ctz",
-        "fields": {
-          "Project/Product Name": "Geoportal",
-          "Project Description": "**The Institute of Geography of the USFQ** has been created to generate scientific knowledge of the environmental, socioeconomic and biophysical processes that occur in the Ecuadorian territory. Thus, it creates relevant evidence for public policies, individual and social action for the conservation of ecosystems and well-being of populations.\n \n\n",
-          "Project Website": "https://www.institutodegeografia.org/geoportal-2/",
-          "Provider Orgs Full Name": [
-            "recFxb7HxYJjfGpwB"
-          ],
-          "CRAF’d-Funded Project?": "NO",
-          "Investment Type(s)": [
-            "Data Sets & Commons",
-            "Learning & Exchange"
-          ],
-          "Investment Theme(s)": [
-            "Geospatial Data",
-            "Food Security Data",
-            "Climate Data",
-            "Capacity Building"
-          ],
-          "product_key": "geoportal",
-          "HDX_SOHD": "None"
-        },
-        "agencies": []
-      }
-    ],
-    "donor_countries": []
-  },
-  {
     "id": "recG3iaB3tMhPUTLg",
     "name": "Flowminder Foundation",
     "fields": {
@@ -4306,9 +4086,9 @@
       {
         "id": "recbtz43uuKKFVfvd",
         "fields": {
-          "Agency/Department Name": "Unspecified Agency",
+          "Agency/Department Name": "Bill and Melinda Gates Foundation",
           "Agency Data Portal": "https://www.gatesfoundation.org/about/committed-grants",
-          "Country Name": "Bill and Melinda Gates Foundation"
+          "Country Name": "Foundation"
         }
       },
       {
@@ -4329,9 +4109,9 @@
       {
         "id": "recks6hHpAgBV14d9",
         "fields": {
-          "Agency/Department Name": "Unspecified Agency",
+          "Agency/Department Name": "Inter-American Development Bank (IDB)",
           "Agency Data Portal": "https://www.iadb.org/en/projects",
-          "Country Name": "Inter-American Development Bank (IDB)"
+          "Country Name": "International Financial Institutions (IFIs)"
         }
       },
       {
@@ -4344,16 +4124,16 @@
       {
         "id": "recqhcKxTv71yMfeI",
         "fields": {
-          "Agency/Department Name": "Unspecified Agency",
+          "Agency/Department Name": "Rockefeller Foundation",
           "Agency Data Portal": "https://www.rockefellerfoundation.org/",
-          "Country Name": "Rockefeller Foundation"
+          "Country Name": "Foundation"
         }
       },
       {
         "id": "recULIEfSZxBrWWZb",
         "fields": {
-          "Agency/Department Name": "Unspecified Agency",
-          "Country Name": "United Nations Foundation (UN Foundation)"
+          "Agency/Department Name": "United Nations Foundation",
+          "Country Name": "Foundation"
         }
       }
     ],
@@ -4455,7 +4235,7 @@
           "Provider Orgs Full Name": [
             "recG3iaB3tMhPUTLg",
             "rec5OGQnjAgjSFawp",
-            "rec2fgn4cmkvDsRB8"
+            "recTRbZA2fpb5FEmd"
           ],
           "CRAF’d-Funded Project?": "NO",
           "Investment Type(s)": [
@@ -4481,23 +4261,21 @@
           {
             "id": "recbtz43uuKKFVfvd",
             "fields": {
-              "Agency/Department Name": "Unspecified Agency",
+              "Agency/Department Name": "Bill and Melinda Gates Foundation",
               "Agency Data Portal": "https://www.gatesfoundation.org/about/committed-grants",
-              "Country Name": "Bill and Melinda Gates Foundation"
+              "Country Name": "Foundation"
             }
           }
         ]
       }
     ],
     "donor_countries": [
-      "Bill and Melinda Gates Foundation",
       "European Union",
+      "Foundation",
       "France",
-      "Inter-American Development Bank (IDB)",
-      "Rockefeller Foundation",
+      "International Financial Institutions (IFIs)",
       "Switzerland",
-      "USA",
-      "United Nations Foundation (UN Foundation)"
+      "USA"
     ]
   },
   {
@@ -4727,7 +4505,7 @@
           "Project Website": "https://data.humdata.org/dataset/?dataseries_name=COD+-+Subnational+Administrative+Boundaries&dataseries_name=OCHA+-+Subnational+Edge-matched+Administrative+Boundaries&q=&sort=last_modified+desc&ext_page_size=25",
           "Provider Orgs Full Name": [
             "recGCltHLsYiDo59B",
-            "rec2fgn4cmkvDsRB8"
+            "recTRbZA2fpb5FEmd"
           ],
           "CRAF’d-Funded Project?": "NO",
           "Investment Type(s)": [
@@ -4869,7 +4647,8 @@
       "Provided Data Ecosystem Projects": [
         "recFk4AqE3TR83nNo",
         "recp0YELy7eVj9FUs",
-        "recgmCxRj8IVZMFF2"
+        "recgmCxRj8IVZMFF2",
+        "reczPiGnmhBrolMGr"
       ],
       "Org Donor Agencies": [
         "recGNTHL9SKZxLDcw",
@@ -5056,6 +4835,24 @@
             }
           }
         ]
+      },
+      {
+        "id": "reczPiGnmhBrolMGr",
+        "fields": {
+          "Project/Product Name": " NYU + VIEWS: Data for Peace Conference",
+          "Provider Orgs Full Name": [
+            "recHAqTQikIG8K4tD"
+          ],
+          "CRAF’d-Funded Project?": "NO",
+          "Investment Type(s)": [
+            "Learning & Exchange"
+          ],
+          "Investment Theme(s)": [
+            "Conferences"
+          ],
+          "HDX_SOHD": "None"
+        },
+        "agencies": []
       }
     ],
     "donor_countries": [
@@ -5794,7 +5591,8 @@
       "Org Website": "https://mapswipe.org/en/",
       "Org Description": "MapSwipe is a humanitarian crowdsourcing app where volunteers swipe through satellite images to help map vulnerable areas that aid organizations rely on.",
       "Provided Data Ecosystem Projects": [
-        "recFnNCbi5RYJNchr"
+        "recFnNCbi5RYJNchr",
+        "recD0hG4x9w340oYA"
       ],
       "Org HQ Country": "Global (distributed)",
       "Has received CRAF'd Funding?": "NO",
@@ -5804,6 +5602,26 @@
     },
     "agencies": [],
     "projects": [
+      {
+        "id": "recD0hG4x9w340oYA",
+        "fields": {
+          "Project/Product Name": "Missing Maps",
+          "Project Description": "Each year, disasters around the world kill nearly 100,000 and affect or displace 200 million people. Many of the places where these disasters occur are literally 'missing' from open and accessible maps and first responders lack the information to make valuable decisions regarding relief efforts. Missing Maps is an open, collaborative project in which you can help to map areas where humanitarian organisations are trying to meet the needs of people who live at risk of disasters and crises.\n",
+          "Project Website": "https://www.missingmaps.org/",
+          "Provider Orgs Full Name": [
+            "recJUyRNHPNV6wRXI",
+            "recPNaYHYuKeRDfJn",
+            "rec4rSsPP59Beed9i"
+          ],
+          "CRAF’d-Funded Project?": "NO",
+          "Investment Type(s)": [
+            "Data Sets & Commons"
+          ],
+          "product_key": "missing-maps",
+          "HDX_SOHD": "None"
+        },
+        "agencies": []
+      },
       {
         "id": "recFnNCbi5RYJNchr",
         "fields": {
@@ -6464,7 +6282,9 @@
       "Provided Data Ecosystem Projects": [
         "recF8bGKczcSVXjRz",
         "rec04lJaB92fTs0JH",
-        "recze16CRXWao1Mma"
+        "recze16CRXWao1Mma",
+        "recD0hG4x9w340oYA",
+        "recax9xDItng1V4ZL"
       ],
       "Org Donor Agencies": [
         "recpBuvL2uHuENIu7",
@@ -6484,15 +6304,15 @@
       {
         "id": "recpBuvL2uHuENIu7",
         "fields": {
-          "Agency/Department Name": "Unspecified Agency",
-          "Country Name": " Silicon Valley Community Foundation"
+          "Agency/Department Name": "Silicon Valley Community Foundation",
+          "Country Name": "Foundation"
         }
       },
       {
         "id": "recrPlN870ayqI9dO",
         "fields": {
-          "Agency/Department Name": "Unspecified Agency",
-          "Country Name": "The Elma Relief Foundation"
+          "Agency/Department Name": "The Elma Relief Foundation",
+          "Country Name": "Foundation"
         }
       },
       {
@@ -6540,6 +6360,26 @@
         "agencies": []
       },
       {
+        "id": "recD0hG4x9w340oYA",
+        "fields": {
+          "Project/Product Name": "Missing Maps",
+          "Project Description": "Each year, disasters around the world kill nearly 100,000 and affect or displace 200 million people. Many of the places where these disasters occur are literally 'missing' from open and accessible maps and first responders lack the information to make valuable decisions regarding relief efforts. Missing Maps is an open, collaborative project in which you can help to map areas where humanitarian organisations are trying to meet the needs of people who live at risk of disasters and crises.\n",
+          "Project Website": "https://www.missingmaps.org/",
+          "Provider Orgs Full Name": [
+            "recJUyRNHPNV6wRXI",
+            "recPNaYHYuKeRDfJn",
+            "rec4rSsPP59Beed9i"
+          ],
+          "CRAF’d-Funded Project?": "NO",
+          "Investment Type(s)": [
+            "Data Sets & Commons"
+          ],
+          "product_key": "missing-maps",
+          "HDX_SOHD": "None"
+        },
+        "agencies": []
+      },
+      {
         "id": "recF8bGKczcSVXjRz",
         "fields": {
           "Project/Product Name": "Maps Data",
@@ -6557,6 +6397,25 @@
             "Geospatial Data"
           ],
           "product_key": "hot-maps-data",
+          "HDX_SOHD": "None"
+        },
+        "agencies": []
+      },
+      {
+        "id": "recax9xDItng1V4ZL",
+        "fields": {
+          "Project/Product Name": "HOT OpenSummit",
+          "Project Website": "https://www.hotosm.org/opensummit23-24",
+          "Provider Orgs Full Name": [
+            "recPNaYHYuKeRDfJn"
+          ],
+          "CRAF’d-Funded Project?": "NO",
+          "Investment Type(s)": [
+            "Learning & Exchange"
+          ],
+          "Investment Theme(s)": [
+            "Conferences"
+          ],
           "HDX_SOHD": "None"
         },
         "agencies": []
@@ -6584,11 +6443,10 @@
       }
     ],
     "donor_countries": [
+      "Foundation",
       "Mackenzie Scott",
       "Rippleworks",
-      "Silicon Valley Community Foundation",
-      "Skoll",
-      "The Elma Relief Foundation"
+      "Skoll"
     ]
   },
   {
@@ -6606,7 +6464,8 @@
         "recwMGK7lbvDfjR14",
         "recjxVwrxVL90go5G",
         "recLA3jRq3bbZRVzu",
-        "recFF8BskJRz2Lyjk"
+        "recFF8BskJRz2Lyjk",
+        "recCkgL7i4kRmP0PL"
       ],
       "Org Donor Agencies": [
         "rec1VhOJv9U6QKBBs"
@@ -6630,6 +6489,22 @@
       }
     ],
     "projects": [
+      {
+        "id": "recCkgL7i4kRmP0PL",
+        "fields": {
+          "Project/Product Name": "ACLED Webinar",
+          "Project Website": "https://acleddata.com/events-webinars#:~:text=Events%20%26%20Webinars",
+          "Provider Orgs Full Name": [
+            "recRoMeLU57jzgHFs"
+          ],
+          "CRAF’d-Funded Project?": "YES",
+          "Investment Type(s)": [
+            "Learning & Exchange"
+          ],
+          "HDX_SOHD": "None"
+        },
+        "agencies": []
+      },
       {
         "id": "recFF8BskJRz2Lyjk",
         "fields": {
@@ -6822,9 +6697,9 @@
       {
         "id": "rec3Ado0Jrl799Q8A",
         "fields": {
-          "Agency/Department Name": "Unspecified Agency",
+          "Agency/Department Name": "The World Bank",
           "Agency Data Portal": "https://www.worldbank.org/ext/en/home",
-          "Country Name": "The World Bank"
+          "Country Name": "International Financial Institutions (IFIs)"
         }
       }
     ],
@@ -6846,6 +6721,7 @@
             "Digital Product & Tool Development",
             "Information Managment"
           ],
+          "product_key": "panda-bc",
           "HDX_SOHD": "None"
         },
         "agencies": []
@@ -6875,7 +6751,276 @@
       }
     ],
     "donor_countries": [
-      "The World Bank"
+      "International Financial Institutions (IFIs)"
+    ]
+  },
+  {
+    "id": "recTRbZA2fpb5FEmd",
+    "name": "WorldPop",
+    "fields": {
+      "Org Full Name": "WorldPop",
+      "Org Short Name": "WorldPop",
+      "Org Website": "https://www.worldpop.org/",
+      "Org Description": "WorldPop is an interdisciplinary applied research group focusing primarily on supporting improvement of the spatial demographic evidence base and the use of these data for health and development applications, including addressing the Sustainable Development Goals. Its mission is to enable decision makers to harness the power of spatial demographic data through high quality applied research, to achieve a vision of a world where everyone, everywhere is counted in decision making.",
+      "Provided Data Ecosystem Projects": [
+        "rec3xc850SaSrqS7t",
+        "rec9ZvuALWuRRSN5P",
+        "recbmA6Lmrr5AfAHJ",
+        "recdIskWoUIv166ue",
+        "recJRVBtpTaiDVmoT",
+        "recqtLfrSvDFeeKb9"
+      ],
+      "Org Donor Agencies": [
+        "reco4Um0k7Tgw2UCK",
+        "recbtz43uuKKFVfvd",
+        "recbvrcYZZW7mBnCU",
+        "recCDa9F6ntBxGGkm",
+        "recqMZBMvN0vxYv9v",
+        "rec3Ado0Jrl799Q8A",
+        "recqhcKxTv71yMfeI",
+        "recAXDKxEbXsaHav4"
+      ],
+      "Org Type": "Research / Think Tank",
+      "HDX Org Key": "worldpop"
+    },
+    "agencies": [
+      {
+        "id": "reco4Um0k7Tgw2UCK",
+        "fields": {
+          "Agency/Department Name": "Unspecified Agency",
+          "Country Name": "United Kingdom"
+        }
+      },
+      {
+        "id": "recbtz43uuKKFVfvd",
+        "fields": {
+          "Agency/Department Name": "Bill and Melinda Gates Foundation",
+          "Agency Data Portal": "https://www.gatesfoundation.org/about/committed-grants",
+          "Country Name": "Foundation"
+        }
+      },
+      {
+        "id": "recbvrcYZZW7mBnCU",
+        "fields": {
+          "Agency/Department Name": "Norwegian Agency for Development Cooperation (Norad)",
+          "Agency Data Portal": "https://resultater.norad.no/en",
+          "Country Name": "Norway"
+        }
+      },
+      {
+        "id": "recCDa9F6ntBxGGkm",
+        "fields": {
+          "Agency/Department Name": "National Institutes of Health (NIH)",
+          "Agency Data Portal": "https://www.nih.gov/",
+          "Country Name": "USA"
+        }
+      },
+      {
+        "id": "recqMZBMvN0vxYv9v",
+        "fields": {
+          "Agency/Department Name": "Department of Homeland Security (DHS)",
+          "Agency Data Portal": "https://www.dhs.gov/",
+          "Country Name": "USA"
+        }
+      },
+      {
+        "id": "rec3Ado0Jrl799Q8A",
+        "fields": {
+          "Agency/Department Name": "The World Bank",
+          "Agency Data Portal": "https://www.worldbank.org/ext/en/home",
+          "Country Name": "International Financial Institutions (IFIs)"
+        }
+      },
+      {
+        "id": "recqhcKxTv71yMfeI",
+        "fields": {
+          "Agency/Department Name": "Rockefeller Foundation",
+          "Agency Data Portal": "https://www.rockefellerfoundation.org/",
+          "Country Name": "Foundation"
+        }
+      },
+      {
+        "id": "recAXDKxEbXsaHav4",
+        "fields": {
+          "Agency/Department Name": "Unspecified Agency",
+          "Agency Data Portal": "https://www.clintonhealthaccess.org/",
+          "Country Name": "Clinton Health Acess Initiative"
+        }
+      }
+    ],
+    "projects": [
+      {
+        "id": "rec3xc850SaSrqS7t",
+        "fields": {
+          "Project/Product Name": "Administrative Areas Data",
+          "Project Description": "Provides standardized global administrative boundary datasets, essential for geospatial analysis and mapping. Open-access and regularly updated, these boundaries support humanitarian planning, statistical frameworks, and international data interoperability.\n",
+          "Project Website": "https://hub.worldpop.org/project/categories?id=17",
+          "Provider Orgs Full Name": [
+            "recTRbZA2fpb5FEmd"
+          ],
+          "CRAF’d-Funded Project?": "NO",
+          "Investment Type(s)": [
+            "Data Sets & Commons"
+          ],
+          "Investment Theme(s)": [
+            "Geospatial Data"
+          ],
+          "product_key": "admin-areas",
+          "HDX_SOHD": "None"
+        },
+        "agencies": []
+      },
+      {
+        "id": "rec9ZvuALWuRRSN5P",
+        "fields": {
+          "Project/Product Name": "Administrative Boundaries Data (COD-AB)",
+          "Project Description": "OCHA’s Common Operational Data Administrative Boundaries (COD‑AB) is a curated, harmonized global dataset aligned with OCHA’s COD standard, designed to support mapping, analysis, and coordination in humanitarian operations.\n",
+          "Project Website": "https://data.humdata.org/dataset/?dataseries_name=COD+-+Subnational+Administrative+Boundaries&dataseries_name=OCHA+-+Subnational+Edge-matched+Administrative+Boundaries&q=&sort=last_modified+desc&ext_page_size=25",
+          "Provider Orgs Full Name": [
+            "recGCltHLsYiDo59B",
+            "recTRbZA2fpb5FEmd"
+          ],
+          "CRAF’d-Funded Project?": "NO",
+          "Investment Type(s)": [
+            "Data Sets & Commons"
+          ],
+          "Investment Theme(s)": [
+            "Geospatial Data"
+          ],
+          "product_key": "cod-ab",
+          "HDX_SOHD": "19"
+        },
+        "agencies": []
+      },
+      {
+        "id": "recJRVBtpTaiDVmoT",
+        "fields": {
+          "Project/Product Name": "Population Gridded Dataset",
+          "Project Description": "WorldPop is an interdisciplinary applied research group focusing primarily on supporting improvement of the spatial demographic evidence base and the use of these data for health and development applications, including addressing the Sustainable Development Goals. Its mission is to enable decision makers to harness the power of spatial demographic data through high quality applied research, to achieve a vision of a world where everyone, everywhere is counted in decision making.\n",
+          "Project Website": "https://www.worldpop.org/methods/population-estimation-for-sustainable-development/",
+          "Provider Orgs Full Name": [
+            "recTRbZA2fpb5FEmd"
+          ],
+          "CRAF’d-Funded Project?": "NO",
+          "Investment Type(s)": [
+            "Data Sets & Commons"
+          ],
+          "Investment Theme(s)": [
+            "Baseline Population Data"
+          ],
+          "product_key": "popgrid",
+          "HDX_SOHD": "None"
+        },
+        "agencies": []
+      },
+      {
+        "id": "recbmA6Lmrr5AfAHJ",
+        "fields": {
+          "Project/Product Name": "GRID3: Geo-Referenced Infrastructure and Demographic Data for Development ",
+          "Project Description": "GRID3 provides high-resolution geospatial data—including population estimates, infrastructure mapping, and administrative boundaries—to assist governments and organizations in planning, monitoring, and delivering services effectively.\n",
+          "Project Donor Agencies": [
+            "rec0sY1I5JZz6ZsUE",
+            "recbtz43uuKKFVfvd"
+          ],
+          "Project Website": "https://grid3.org/",
+          "Provider Orgs Full Name": [
+            "recG3iaB3tMhPUTLg",
+            "rec5OGQnjAgjSFawp",
+            "recTRbZA2fpb5FEmd"
+          ],
+          "CRAF’d-Funded Project?": "NO",
+          "Investment Type(s)": [
+            "Data Sets & Commons",
+            "Learning & Exchange"
+          ],
+          "Investment Theme(s)": [
+            "Geospatial Data",
+            "Upskilling & Training"
+          ],
+          "product_key": "grid3",
+          "HDX_SOHD": "None"
+        },
+        "agencies": [
+          {
+            "id": "rec0sY1I5JZz6ZsUE",
+            "fields": {
+              "Agency/Department Name": "Foreign, Commonwealth & Development Office (FCDO)",
+              "Agency Data Portal": "https://devtracker.fcdo.gov.uk/",
+              "Country Name": "United Kingdom"
+            }
+          },
+          {
+            "id": "recbtz43uuKKFVfvd",
+            "fields": {
+              "Agency/Department Name": "Bill and Melinda Gates Foundation",
+              "Agency Data Portal": "https://www.gatesfoundation.org/about/committed-grants",
+              "Country Name": "Foundation"
+            }
+          }
+        ]
+      },
+      {
+        "id": "recdIskWoUIv166ue",
+        "fields": {
+          "Project/Product Name": "Malaria Atlas Project (MAP)",
+          "Project Description": "MAP provides high-resolution maps of malaria risk and stability, combining epidemiological and environmental data to support global health planning, investment, and disease modeling.\n",
+          "Project Donor Agencies": [
+            "recbtz43uuKKFVfvd"
+          ],
+          "Project Website": "https://malariaatlas.org/",
+          "Provider Orgs Full Name": [
+            "recwQpJQH4LwmSOBE",
+            "recTRbZA2fpb5FEmd"
+          ],
+          "CRAF’d-Funded Project?": "NO",
+          "Investment Type(s)": [
+            "Data Sets & Commons",
+            "Crisis Analytics & Insights"
+          ],
+          "Investment Theme(s)": [
+            "Health Data"
+          ],
+          "product_key": "malaria-atlas-project",
+          "HDX_SOHD": "None"
+        },
+        "agencies": [
+          {
+            "id": "recbtz43uuKKFVfvd",
+            "fields": {
+              "Agency/Department Name": "Bill and Melinda Gates Foundation",
+              "Agency Data Portal": "https://www.gatesfoundation.org/about/committed-grants",
+              "Country Name": "Foundation"
+            }
+          }
+        ]
+      },
+      {
+        "id": "recqtLfrSvDFeeKb9",
+        "fields": {
+          "Project/Product Name": "WorldPop Webinars",
+          "Project Website": "https://www.worldpop.org/webinars/",
+          "Provider Orgs Full Name": [
+            "recTRbZA2fpb5FEmd"
+          ],
+          "CRAF’d-Funded Project?": "NO",
+          "Investment Type(s)": [
+            "Learning & Exchange"
+          ],
+          "Investment Theme(s)": [
+            "Workshops"
+          ],
+          "HDX_SOHD": "None"
+        },
+        "agencies": []
+      }
+    ],
+    "donor_countries": [
+      "Clinton Health Acess Initiative",
+      "Foundation",
+      "International Financial Institutions (IFIs)",
+      "Norway",
+      "USA",
+      "United Kingdom"
     ]
   },
   {
@@ -6923,9 +7068,9 @@
       {
         "id": "recbtz43uuKKFVfvd",
         "fields": {
-          "Agency/Department Name": "Unspecified Agency",
+          "Agency/Department Name": "Bill and Melinda Gates Foundation",
           "Agency Data Portal": "https://www.gatesfoundation.org/about/committed-grants",
-          "Country Name": "Bill and Melinda Gates Foundation"
+          "Country Name": "Foundation"
         }
       }
     ],
@@ -7018,7 +7163,7 @@
       }
     ],
     "donor_countries": [
-      "Bill and Melinda Gates Foundation",
+      "Foundation",
       "United Nations Children's Fund (UNICEF)",
       "World Health Organization (WHO)"
     ]
@@ -7178,9 +7323,9 @@
       {
         "id": "rec3Ado0Jrl799Q8A",
         "fields": {
-          "Agency/Department Name": "Unspecified Agency",
+          "Agency/Department Name": "The World Bank",
           "Agency Data Portal": "https://www.worldbank.org/ext/en/home",
-          "Country Name": "The World Bank"
+          "Country Name": "International Financial Institutions (IFIs)"
         }
       },
       {
@@ -7436,6 +7581,7 @@
       "European Union",
       "France",
       "Germany",
+      "International Financial Institutions (IFIs)",
       "Ireland",
       "Italy",
       "Japan",
@@ -7449,7 +7595,6 @@
       "Spain",
       "Sweden",
       "Switzerland",
-      "The World Bank",
       "Turkiye",
       "USA",
       "United Arab Emirates",
@@ -7597,9 +7742,9 @@
       {
         "id": "rec3Ado0Jrl799Q8A",
         "fields": {
-          "Agency/Department Name": "Unspecified Agency",
+          "Agency/Department Name": "The World Bank",
           "Agency Data Portal": "https://www.worldbank.org/ext/en/home",
-          "Country Name": "The World Bank"
+          "Country Name": "International Financial Institutions (IFIs)"
         }
       },
       {
@@ -7904,8 +8049,8 @@
           {
             "id": "rec5NKr3OLYmPMuOf",
             "fields": {
-              "Agency/Department Name": "Unspecified Agency",
-              "Country Name": "Global Challenges Foundation"
+              "Agency/Department Name": "Global Challenges Foundation",
+              "Country Name": "Foundation"
             }
           },
           {
@@ -7925,6 +8070,7 @@
       "Denmark",
       "European Union",
       "France",
+      "International Financial Institutions (IFIs)",
       "International Organization for Migration (IOM)",
       "Ireland",
       "Japan",
@@ -7936,9 +8082,152 @@
       "South Korea",
       "Sweden",
       "Switzerland",
-      "The World Bank",
       "World Food Programme (WFP)"
     ]
+  },
+  {
+    "id": "recZFA1GrNd8swlAz",
+    "name": "Coventry University",
+    "fields": {
+      "Org Full Name": "Coventry University",
+      "Org Short Name": "CU",
+      "Provided Data Ecosystem Projects": [
+        "recp4lLg28MQMpBnW"
+      ]
+    },
+    "agencies": [],
+    "projects": [
+      {
+        "id": "recp4lLg28MQMpBnW",
+        "fields": {
+          "Project/Product Name": "PeaceRep",
+          "Project Description": "PeaceRep distributes the PA-X Tracker, a new and innovative digital tool that offers data-driven insights to support peace and transition processes. The suite of PeaceTech tools contained within the PA-X Tracker enables users to track and monitor progress and implementation of peace and transition processes. The Tracker allows users to understand how peace processes are unfolding, who is involved in them, and what impact the processes have had on a range of institutional, political, economic, humanitarian and security indicators.\n",
+          "Project Donor Agencies": [
+            "recAgX8zjyt6NFtcd",
+            "recnBCITljZPzm4Ga",
+            "recq6gN9R1C4tGmIx"
+          ],
+          "Project Website": "https://www.peaceagreements.org/",
+          "Provider Orgs Full Name": [
+            "rec7BmCO0j9do4gKE",
+            "reczfCOras69wN6CO",
+            "recl1dOMXGu6LN6VT",
+            "recZFA1GrNd8swlAz",
+            "reclIEQ2XENwXcnyy",
+            "recapsch9j1uuLKoo",
+            "rec9E4pDM2v7mozZb"
+          ],
+          "CRAF’d-Funded Project?": "NO",
+          "Investment Type(s)": [
+            "Data Sets & Commons"
+          ],
+          "Investment Theme(s)": [
+            "Peace Data"
+          ],
+          "product_key": "peacerep",
+          "HDX_SOHD": "None"
+        },
+        "agencies": [
+          {
+            "id": "recAgX8zjyt6NFtcd",
+            "fields": {
+              "Agency/Department Name": "UN Women",
+              "Country Name": "United Nations (UN)"
+            }
+          },
+          {
+            "id": "recnBCITljZPzm4Ga",
+            "fields": {
+              "Agency/Department Name": "Department of Foreign Affairs (DFA)",
+              "Agency Data Portal": "https://www.ireland.ie/en/dfa/",
+              "Country Name": "Ireland"
+            }
+          },
+          {
+            "id": "recq6gN9R1C4tGmIx",
+            "fields": {
+              "Agency/Department Name": "Economic and Social Research Council (ESRC)",
+              "Agency Data Portal": "https://www.ukri.org/councils/esrc/",
+              "Country Name": "United Kingdom"
+            }
+          }
+        ]
+      }
+    ],
+    "donor_countries": []
+  },
+  {
+    "id": "recapsch9j1uuLKoo",
+    "name": "Queen's University Belfast",
+    "fields": {
+      "Org Full Name": "Queen's University Belfast",
+      "Org Short Name": "QUB",
+      "Provided Data Ecosystem Projects": [
+        "recp4lLg28MQMpBnW"
+      ],
+      "org_key": "qub",
+      "Org Type": "Academia"
+    },
+    "agencies": [],
+    "projects": [
+      {
+        "id": "recp4lLg28MQMpBnW",
+        "fields": {
+          "Project/Product Name": "PeaceRep",
+          "Project Description": "PeaceRep distributes the PA-X Tracker, a new and innovative digital tool that offers data-driven insights to support peace and transition processes. The suite of PeaceTech tools contained within the PA-X Tracker enables users to track and monitor progress and implementation of peace and transition processes. The Tracker allows users to understand how peace processes are unfolding, who is involved in them, and what impact the processes have had on a range of institutional, political, economic, humanitarian and security indicators.\n",
+          "Project Donor Agencies": [
+            "recAgX8zjyt6NFtcd",
+            "recnBCITljZPzm4Ga",
+            "recq6gN9R1C4tGmIx"
+          ],
+          "Project Website": "https://www.peaceagreements.org/",
+          "Provider Orgs Full Name": [
+            "rec7BmCO0j9do4gKE",
+            "reczfCOras69wN6CO",
+            "recl1dOMXGu6LN6VT",
+            "recZFA1GrNd8swlAz",
+            "reclIEQ2XENwXcnyy",
+            "recapsch9j1uuLKoo",
+            "rec9E4pDM2v7mozZb"
+          ],
+          "CRAF’d-Funded Project?": "NO",
+          "Investment Type(s)": [
+            "Data Sets & Commons"
+          ],
+          "Investment Theme(s)": [
+            "Peace Data"
+          ],
+          "product_key": "peacerep",
+          "HDX_SOHD": "None"
+        },
+        "agencies": [
+          {
+            "id": "recAgX8zjyt6NFtcd",
+            "fields": {
+              "Agency/Department Name": "UN Women",
+              "Country Name": "United Nations (UN)"
+            }
+          },
+          {
+            "id": "recnBCITljZPzm4Ga",
+            "fields": {
+              "Agency/Department Name": "Department of Foreign Affairs (DFA)",
+              "Agency Data Portal": "https://www.ireland.ie/en/dfa/",
+              "Country Name": "Ireland"
+            }
+          },
+          {
+            "id": "recq6gN9R1C4tGmIx",
+            "fields": {
+              "Agency/Department Name": "Economic and Social Research Council (ESRC)",
+              "Agency Data Portal": "https://www.ukri.org/councils/esrc/",
+              "Country Name": "United Kingdom"
+            }
+          }
+        ]
+      }
+    ],
+    "donor_countries": []
   },
   {
     "id": "reccGyY6Ep2ptBPKy",
@@ -8562,7 +8851,7 @@
         "id": "recmzmFWkB8g2kiyj",
         "fields": {
           "Project/Product Name": "Desertification Country Profiles",
-          "Project Description": "Country Profiles  from UNCCD\n",
+          "Project Description": "Country Profiles  from UNCCDs\n",
           "Project Website": "https://www.unccd.int/our-work/country-profiles",
           "Provider Orgs Full Name": [
             "receHoEBpdo8LefZP"
@@ -8574,6 +8863,7 @@
           "Investment Theme(s)": [
             "Climate Analytics"
           ],
+          "product_key": "desert-cp",
           "HDX_SOHD": "None"
         },
         "agencies": []
@@ -8655,9 +8945,9 @@
       {
         "id": "rec3Ado0Jrl799Q8A",
         "fields": {
-          "Agency/Department Name": "Unspecified Agency",
+          "Agency/Department Name": "The World Bank",
           "Agency Data Portal": "https://www.worldbank.org/ext/en/home",
-          "Country Name": "The World Bank"
+          "Country Name": "International Financial Institutions (IFIs)"
         }
       },
       {
@@ -8670,8 +8960,8 @@
       {
         "id": "recMSfI5XCXoaFs9i",
         "fields": {
-          "Agency/Department Name": "Unspecified Agency",
-          "Country Name": "African Development Bank"
+          "Agency/Department Name": "African Development Bank",
+          "Country Name": "International Financial Institutions (IFIs)"
         }
       },
       {
@@ -8728,14 +9018,13 @@
       }
     ],
     "donor_countries": [
-      "African Development Bank",
       "African Union",
       "Canada",
       "China",
       "European Union",
+      "International Financial Institutions (IFIs)",
       "South Korea",
       "Switzerland",
-      "The World Bank",
       "USA",
       "United Kingdom"
     ]
@@ -8750,8 +9039,7 @@
       "Org Description": "The United Nations Office for Disaster Risk Reduction (UNDRR) has a big ambition: to help decision makers across the globe better understand and act on risk.  At UNDRR, we envision a world where disasters no longer threaten the well-being of people and the future of the planet. Sustainable development and the 2030 Agenda cannot be achieved without working towards that goal of building resilience.\t",
       "Link to Data Products Overview": "<https://data.undrr.org/api/json>\n",
       "Provided Data Ecosystem Projects": [
-        "recUotlR1ZJwVMAIS",
-        "rece4fDBOtjCywl9q"
+        "recUotlR1ZJwVMAIS"
       ],
       "Org Donor Agencies": [
         "reckIAhFXgj4XL29b",
@@ -8968,30 +9256,6 @@
           "HDX_SOHD": "None"
         },
         "agencies": []
-      },
-      {
-        "id": "rece4fDBOtjCywl9q",
-        "fields": {
-          "Project/Product Name": "PreventionWeb",
-          "Project Description": "PreventionWeb is UNDRR’s global knowledge hub for disaster risk reduction, offering open-access content including research, policy documents, country profiles, and event listings. It provides curated data and analysis tools to help stakeholders stay informed, share practices, and support evidence-based DRR policy and programming.\n",
-          "Project Website": "https://www.preventionweb.net/",
-          "Provider Orgs Full Name": [
-            "recf6O6q3OE6xjOTM"
-          ],
-          "CRAF’d-Funded Project?": "NO",
-          "Investment Type(s)": [
-            "Data Sets & Commons",
-            "Human Capital & Know-how"
-          ],
-          "Investment Theme(s)": [
-            "Data Storage, Access & Sharing",
-            "Climate Data",
-            "Environmental Data"
-          ],
-          "product_key": "undrr-preventionweb",
-          "HDX_SOHD": "None"
-        },
-        "agencies": []
       }
     ],
     "donor_countries": [
@@ -9025,7 +9289,7 @@
       "Org Full Name": "UNHCR: United Nations High Commissioner for Refugees",
       "Org Short Name": "UNHCR",
       "Org Website": "https://www.unhcr.org/",
-      "Org Description": "UNHCR, the UN Refugee Agency, is a global organization dedicated to saving lives, protecting rights and building a better future for people forced to flee their homes because of conflict and persecution. \nWe lead international action to protect refugees, forcibly displaced communities and stateless people. \n\t",
+      "Org Description": "UNHCR, the UN Refugee Agency, is a global organization dedicated to saving lives, protecting rights and building a better future for people forced to flee their homes because of conflict and persecution. We lead international action to protect refugees, forcibly displaced communities and stateless people. \n\t",
       "Link to Data Products Overview": "<https://www.unhcr.org/what-we-do/data-and-publications/unhcr-data>\n",
       "Provided Data Ecosystem Projects": [
         "rec4V0tKy9KP8Gw4h",
@@ -10161,9 +10425,9 @@
       {
         "id": "rec3Ado0Jrl799Q8A",
         "fields": {
-          "Agency/Department Name": "Unspecified Agency",
+          "Agency/Department Name": "The World Bank",
           "Agency Data Portal": "https://www.worldbank.org/ext/en/home",
-          "Country Name": "The World Bank"
+          "Country Name": "International Financial Institutions (IFIs)"
         }
       },
       {
@@ -10224,7 +10488,7 @@
     ],
     "donor_countries": [
       "European Union",
-      "The World Bank",
+      "International Financial Institutions (IFIs)",
       "United Kingdom"
     ]
   },
@@ -10268,9 +10532,9 @@
       {
         "id": "rec3Ado0Jrl799Q8A",
         "fields": {
-          "Agency/Department Name": "Unspecified Agency",
+          "Agency/Department Name": "The World Bank",
           "Agency Data Portal": "https://www.worldbank.org/ext/en/home",
-          "Country Name": "The World Bank"
+          "Country Name": "International Financial Institutions (IFIs)"
         }
       },
       {
@@ -10509,9 +10773,9 @@
     ],
     "donor_countries": [
       "European Union",
+      "International Financial Institutions (IFIs)",
       "Netherlands",
       "Sweden",
-      "The World Bank",
       "USA",
       "United Nations Office for the Coordination of Humanitarian Affairs (OCHA)"
     ]
@@ -10571,6 +10835,7 @@
             "AI & ML Infrastructure",
             "Data Collection"
           ],
+          "product_key": "swot",
           "HDX_SOHD": "None"
         },
         "agencies": []
@@ -10616,6 +10881,80 @@
     ]
   },
   {
+    "id": "recl1dOMXGu6LN6VT",
+    "name": "University of St. Andrews",
+    "fields": {
+      "Org Full Name": "University of St. Andrews",
+      "Org Short Name": "uosa",
+      "Provided Data Ecosystem Projects": [
+        "recp4lLg28MQMpBnW"
+      ],
+      "Org HQ Country": "United Kingdom",
+      "org_key": "uosa",
+      "Org Type": "Academia"
+    },
+    "agencies": [],
+    "projects": [
+      {
+        "id": "recp4lLg28MQMpBnW",
+        "fields": {
+          "Project/Product Name": "PeaceRep",
+          "Project Description": "PeaceRep distributes the PA-X Tracker, a new and innovative digital tool that offers data-driven insights to support peace and transition processes. The suite of PeaceTech tools contained within the PA-X Tracker enables users to track and monitor progress and implementation of peace and transition processes. The Tracker allows users to understand how peace processes are unfolding, who is involved in them, and what impact the processes have had on a range of institutional, political, economic, humanitarian and security indicators.\n",
+          "Project Donor Agencies": [
+            "recAgX8zjyt6NFtcd",
+            "recnBCITljZPzm4Ga",
+            "recq6gN9R1C4tGmIx"
+          ],
+          "Project Website": "https://www.peaceagreements.org/",
+          "Provider Orgs Full Name": [
+            "rec7BmCO0j9do4gKE",
+            "reczfCOras69wN6CO",
+            "recl1dOMXGu6LN6VT",
+            "recZFA1GrNd8swlAz",
+            "reclIEQ2XENwXcnyy",
+            "recapsch9j1uuLKoo",
+            "rec9E4pDM2v7mozZb"
+          ],
+          "CRAF’d-Funded Project?": "NO",
+          "Investment Type(s)": [
+            "Data Sets & Commons"
+          ],
+          "Investment Theme(s)": [
+            "Peace Data"
+          ],
+          "product_key": "peacerep",
+          "HDX_SOHD": "None"
+        },
+        "agencies": [
+          {
+            "id": "recAgX8zjyt6NFtcd",
+            "fields": {
+              "Agency/Department Name": "UN Women",
+              "Country Name": "United Nations (UN)"
+            }
+          },
+          {
+            "id": "recnBCITljZPzm4Ga",
+            "fields": {
+              "Agency/Department Name": "Department of Foreign Affairs (DFA)",
+              "Agency Data Portal": "https://www.ireland.ie/en/dfa/",
+              "Country Name": "Ireland"
+            }
+          },
+          {
+            "id": "recq6gN9R1C4tGmIx",
+            "fields": {
+              "Agency/Department Name": "Economic and Social Research Council (ESRC)",
+              "Agency Data Portal": "https://www.ukri.org/councils/esrc/",
+              "Country Name": "United Kingdom"
+            }
+          }
+        ]
+      }
+    ],
+    "donor_countries": []
+  },
+  {
     "id": "recl51I0rcqfCzesL",
     "name": "World Bank Group ",
     "fields": {
@@ -10631,7 +10970,8 @@
         "receGDImgeYZLVOPq",
         "recf0UvW6LzObKXGC",
         "recIUs7JTe4alrFDs",
-        "reck0qeeLf1nGLbap"
+        "reck0qeeLf1nGLbap",
+        "recN5qhUuev0DlKt8"
       ],
       "Org IATI Name": "The World Bank or World Bank Trust Funds",
       "Org MPTFO Name": "IBRD",
@@ -10682,6 +11022,26 @@
             "Household Survey Data"
           ],
           "product_key": "wb-lsms",
+          "HDX_SOHD": "None"
+        },
+        "agencies": []
+      },
+      {
+        "id": "recN5qhUuev0DlKt8",
+        "fields": {
+          "Project/Product Name": "Fragility Forum",
+          "Project Description": "The Fragility Forum is a bi-annual event organized by the World Bank Group which brings together practitioners and policymakers from around the world to exchange knowledge and experience on engaging in environments affected by fragility, conflict and violence.\n",
+          "Project Website": "https://www.worldbank.org/en/events/2024/02/27/fragility-forum-2024",
+          "Provider Orgs Full Name": [
+            "recl51I0rcqfCzesL"
+          ],
+          "CRAF’d-Funded Project?": "NO",
+          "Investment Type(s)": [
+            "Learning & Exchange"
+          ],
+          "Investment Theme(s)": [
+            "Forums"
+          ],
           "HDX_SOHD": "None"
         },
         "agencies": []
@@ -10804,6 +11164,94 @@
     "donor_countries": []
   },
   {
+    "id": "reclIEQ2XENwXcnyy",
+    "name": "World Peace Foundation",
+    "fields": {
+      "Org Full Name": "World Peace Foundation",
+      "Org Short Name": "WPF",
+      "Org Website": "https://worldpeacefoundation.org/",
+      "Org Description": "World Peace Foundation is a center at Tufts University's The Fletcher School, that produces innovative research for nonviolent futures. The WPF redefines peace through research, advocacy and engagement that creates pathways for non-violent futures. Since 1910, when WPF was created, ideas about peace and how to attain it have evolved. Our contribution lies in research and outreach informed by principles of justice.",
+      "Provided Data Ecosystem Projects": [
+        "recp4lLg28MQMpBnW"
+      ],
+      "Org Donor Agencies": [
+        "reckIAhFXgj4XL29b"
+      ],
+      "Org HQ Country": "United States",
+      "Org Type": "Academia"
+    },
+    "agencies": [
+      {
+        "id": "reckIAhFXgj4XL29b",
+        "fields": {
+          "Agency/Department Name": "Unspecified Agency",
+          "Country Name": "USA"
+        }
+      }
+    ],
+    "projects": [
+      {
+        "id": "recp4lLg28MQMpBnW",
+        "fields": {
+          "Project/Product Name": "PeaceRep",
+          "Project Description": "PeaceRep distributes the PA-X Tracker, a new and innovative digital tool that offers data-driven insights to support peace and transition processes. The suite of PeaceTech tools contained within the PA-X Tracker enables users to track and monitor progress and implementation of peace and transition processes. The Tracker allows users to understand how peace processes are unfolding, who is involved in them, and what impact the processes have had on a range of institutional, political, economic, humanitarian and security indicators.\n",
+          "Project Donor Agencies": [
+            "recAgX8zjyt6NFtcd",
+            "recnBCITljZPzm4Ga",
+            "recq6gN9R1C4tGmIx"
+          ],
+          "Project Website": "https://www.peaceagreements.org/",
+          "Provider Orgs Full Name": [
+            "rec7BmCO0j9do4gKE",
+            "reczfCOras69wN6CO",
+            "recl1dOMXGu6LN6VT",
+            "recZFA1GrNd8swlAz",
+            "reclIEQ2XENwXcnyy",
+            "recapsch9j1uuLKoo",
+            "rec9E4pDM2v7mozZb"
+          ],
+          "CRAF’d-Funded Project?": "NO",
+          "Investment Type(s)": [
+            "Data Sets & Commons"
+          ],
+          "Investment Theme(s)": [
+            "Peace Data"
+          ],
+          "product_key": "peacerep",
+          "HDX_SOHD": "None"
+        },
+        "agencies": [
+          {
+            "id": "recAgX8zjyt6NFtcd",
+            "fields": {
+              "Agency/Department Name": "UN Women",
+              "Country Name": "United Nations (UN)"
+            }
+          },
+          {
+            "id": "recnBCITljZPzm4Ga",
+            "fields": {
+              "Agency/Department Name": "Department of Foreign Affairs (DFA)",
+              "Agency Data Portal": "https://www.ireland.ie/en/dfa/",
+              "Country Name": "Ireland"
+            }
+          },
+          {
+            "id": "recq6gN9R1C4tGmIx",
+            "fields": {
+              "Agency/Department Name": "Economic and Social Research Council (ESRC)",
+              "Agency Data Portal": "https://www.ukri.org/councils/esrc/",
+              "Country Name": "United Kingdom"
+            }
+          }
+        ]
+      }
+    ],
+    "donor_countries": [
+      "USA"
+    ]
+  },
+  {
     "id": "reclJ2i9jD0TKjOJ8",
     "name": "IDMC: Internal Displacement Monitoring Centre",
     "fields": {
@@ -10905,8 +11353,8 @@
       {
         "id": "recMSfI5XCXoaFs9i",
         "fields": {
-          "Agency/Department Name": "Unspecified Agency",
-          "Country Name": "African Development Bank"
+          "Agency/Department Name": "African Development Bank",
+          "Country Name": "International Financial Institutions (IFIs)"
         }
       },
       {
@@ -11254,11 +11702,11 @@
       }
     ],
     "donor_countries": [
-      "African Development Bank",
       "Australia",
       "CRAF’d",
       "European Union",
       "Germany",
+      "International Financial Institutions (IFIs)",
       "Liechtenstein",
       "Norway",
       "Robert Bosch Stiftung",
@@ -11380,6 +11828,11 @@
       "Org Short Name": "World Bank-UNHCR",
       "Org Website": "https://www.jointdatacenter.org/",
       "Org Description": "The JDC offers different types of support and guidance to activity implementation teams. In most cases, this entails a combination of the following:\n• Financial investments covering full or partial costs of proposed activities as relevant;\n• Technical guidance and support in order to ensure high quality outputs and useful outcomes, to allow learning from expertise, and to streamline processes;\n• Strategic advice to initiate and develop activities that are relevant to shape policy dialogue and inform programs;\n• Partnership building and coordination to identify and connect partners to enhance project outcomes, capitalize on synergies and increase impact.",
+      "Provided Data Ecosystem Projects": [
+        "recJ1uv7EMf5HbXfr",
+        "recF4Js3Gn54EPxbP",
+        "recMOmPSS6OoIxqAM"
+      ],
       "Org Donor Agencies": [
         "rec1VhOJv9U6QKBBs"
       ],
@@ -11397,7 +11850,66 @@
         }
       }
     ],
-    "projects": [],
+    "projects": [
+      {
+        "id": "recF4Js3Gn54EPxbP",
+        "fields": {
+          "Project/Product Name": "Data systems and tools",
+          "Project Website": "https://www.jointdatacenter.org/data-activities/data-systems-and-tools/",
+          "Provider Orgs Full Name": [
+            "recn4JTdYK8g4Eqjk"
+          ],
+          "CRAF’d-Funded Project?": "NO",
+          "Investment Type(s)": [
+            "Data Sets & Commons"
+          ],
+          "Investment Theme(s)": [
+            "Displacement & Migration Data",
+            "Geospatial Data"
+          ],
+          "HDX_SOHD": "None"
+        },
+        "agencies": []
+      },
+      {
+        "id": "recJ1uv7EMf5HbXfr",
+        "fields": {
+          "Project/Product Name": "Data Collection and Surveys",
+          "Project Website": "https://www.jointdatacenter.org/data-activities/data-collection-and-surveys/",
+          "Provider Orgs Full Name": [
+            "recn4JTdYK8g4Eqjk"
+          ],
+          "CRAF’d-Funded Project?": "NO",
+          "Investment Type(s)": [
+            "Crisis Analytics & Insights"
+          ],
+          "Investment Theme(s)": [
+            "Displacement & Migration Analytics"
+          ],
+          "HDX_SOHD": "None"
+        },
+        "agencies": []
+      },
+      {
+        "id": "recMOmPSS6OoIxqAM",
+        "fields": {
+          "Project/Product Name": "Data Standards and Governance",
+          "Project Website": "https://www.jointdatacenter.org/data-activities/data-standards-and-governance/",
+          "Provider Orgs Full Name": [
+            "recn4JTdYK8g4Eqjk"
+          ],
+          "CRAF’d-Funded Project?": "NO",
+          "Investment Type(s)": [
+            "Standards & Coordination"
+          ],
+          "Investment Theme(s)": [
+            "Methodological Standards"
+          ],
+          "HDX_SOHD": "None"
+        },
+        "agencies": []
+      }
+    ],
     "donor_countries": [
       "CRAF’d"
     ]
@@ -11427,9 +11939,9 @@
       {
         "id": "rec5OM4ToDzt2ycHr",
         "fields": {
-          "Agency/Department Name": "Unspecified Agency",
+          "Agency/Department Name": "Conrad N. Hilton Foundation",
           "Agency Data Portal": "https://www.hiltonfoundation.org/",
-          "Country Name": "Conrad N. Hilton Foundation"
+          "Country Name": "Foundation"
         }
       },
       {
@@ -11459,18 +11971,17 @@
       {
         "id": "recqNfbmfHwWpPdYJ",
         "fields": {
-          "Agency/Department Name": "Unspecified Agency",
+          "Agency/Department Name": "Howden Foundation",
           "Agency Data Portal": "https://www.howdengroupholdings.com/sustainability/howden-foundation",
-          "Country Name": "Howden Foundation"
+          "Country Name": "Foundation"
         }
       }
     ],
     "projects": [],
     "donor_countries": [
-      "Conrad N. Hilton Foundation",
       "European Union",
+      "Foundation",
       "Global Support and Development (GSD)",
-      "Howden Foundation",
       "United Kingdom"
     ]
   },
@@ -11521,8 +12032,8 @@
       {
         "id": "rec6f6Th74eRAeRn4",
         "fields": {
-          "Agency/Department Name": "Unspecified Agency",
-          "Country Name": "Inter American Development Bank (IDB)"
+          "Agency/Department Name": "Inter American Development Bank (IDB)",
+          "Country Name": "International Financial Institutions (IFIs)"
         }
       },
       {
@@ -11572,17 +12083,17 @@
       {
         "id": "recK8nDxvYcbGdEgw",
         "fields": {
-          "Agency/Department Name": "Unspecified Agency",
+          "Agency/Department Name": "Development Bank of Latin America and the Caribbean (CAF)",
           "Agency Data Portal": "https://www.caf.com/en/projects/",
-          "Country Name": "Development Bank of Latin America and the Caribbean (CAF)"
+          "Country Name": "International Financial Institutions (IFIs)"
         }
       },
       {
         "id": "recks6hHpAgBV14d9",
         "fields": {
-          "Agency/Department Name": "Unspecified Agency",
+          "Agency/Department Name": "Inter-American Development Bank (IDB)",
           "Agency Data Portal": "https://www.iadb.org/en/projects",
-          "Country Name": "Inter-American Development Bank (IDB)"
+          "Country Name": "International Financial Institutions (IFIs)"
         }
       },
       {
@@ -11670,17 +12181,17 @@
           {
             "id": "recK8nDxvYcbGdEgw",
             "fields": {
-              "Agency/Department Name": "Unspecified Agency",
+              "Agency/Department Name": "Development Bank of Latin America and the Caribbean (CAF)",
               "Agency Data Portal": "https://www.caf.com/en/projects/",
-              "Country Name": "Development Bank of Latin America and the Caribbean (CAF)"
+              "Country Name": "International Financial Institutions (IFIs)"
             }
           },
           {
             "id": "recks6hHpAgBV14d9",
             "fields": {
-              "Agency/Department Name": "Unspecified Agency",
+              "Agency/Department Name": "Inter-American Development Bank (IDB)",
               "Agency Data Portal": "https://www.iadb.org/en/projects",
-              "Country Name": "Inter-American Development Bank (IDB)"
+              "Country Name": "International Financial Institutions (IFIs)"
             }
           },
           {
@@ -11719,10 +12230,8 @@
     "donor_countries": [
       "African Union",
       "Canada",
-      "Development Bank of Latin America and the Caribbean (CAF)",
       "European Union",
-      "Inter American Development Bank (IDB)",
-      "Inter-American Development Bank (IDB)",
+      "International Financial Institutions (IFIs)",
       "International Institute for Democracy and Electoral Assistance (IDEA)",
       "Norway",
       "Organization of American States",
@@ -11737,6 +12246,7 @@
     "name": "Data2x",
     "fields": {
       "Org Full Name": "Data2x",
+      "Org Short Name": "Data2X",
       "Org Website": "https://data2x.org/",
       "Org Description": "Collaboration is Data2X’s guiding principle and signature way of working. This reflects our core strength: our convening power based on the trust we have earned from government, private sector, civil society, and academic partners. In the coming years, Data2X will play an even more active facilitator role, mobilizing stakeholders around a cooperative global approach to fill gender data gaps.",
       "Provided Data Ecosystem Projects": [
@@ -11747,22 +12257,23 @@
         "recbtz43uuKKFVfvd",
         "recjAQGJeJQbasrLl"
       ],
+      "org_key": "data2x",
       "Org Type": "United Nations System"
     },
     "agencies": [
       {
         "id": "recULIEfSZxBrWWZb",
         "fields": {
-          "Agency/Department Name": "Unspecified Agency",
-          "Country Name": "United Nations Foundation (UN Foundation)"
+          "Agency/Department Name": "United Nations Foundation",
+          "Country Name": "Foundation"
         }
       },
       {
         "id": "recbtz43uuKKFVfvd",
         "fields": {
-          "Agency/Department Name": "Unspecified Agency",
+          "Agency/Department Name": "Bill and Melinda Gates Foundation",
           "Agency Data Portal": "https://www.gatesfoundation.org/about/committed-grants",
-          "Country Name": "Bill and Melinda Gates Foundation"
+          "Country Name": "Foundation"
         }
       },
       {
@@ -11777,20 +12288,18 @@
       {
         "id": "recGVHndBPIvMpuHb",
         "fields": {
-          "Project/Product Name": "Gender Data Center",
+          "Project/Product Name": "Solutions Inventory",
           "Project Description": "Data2X is a global partnership advancing gender-responsive data systems. It builds research, advocacy, and tools to support data on women and girls, including capacity strengthening and innovation grants.\n",
-          "Project Website": "https://data2x.org/",
+          "Project Website": "https://data2x.org/state-of-gender-data/gender-data-solutions/",
           "Provider Orgs Full Name": [
             "recoAzfuGAQYkD8l8"
           ],
           "CRAF’d-Funded Project?": "NO",
           "Investment Type(s)": [
-            "Data Sets & Commons",
-            "Human Capital & Know-how"
+            "Crisis Analytics & Insights"
           ],
           "Investment Theme(s)": [
-            "Gender Data",
-            "Data Management & Visualization"
+            "Gender Analytics"
           ],
           "product_key": "data2x",
           "HDX_SOHD": "None"
@@ -11799,9 +12308,7 @@
       }
     ],
     "donor_countries": [
-      "Bill and Melinda Gates Foundation",
-      "Foundation",
-      "United Nations Foundation (UN Foundation)"
+      "Foundation"
     ]
   },
   {
@@ -11896,9 +12403,9 @@
       {
         "id": "rec3Ado0Jrl799Q8A",
         "fields": {
-          "Agency/Department Name": "Unspecified Agency",
+          "Agency/Department Name": "The World Bank",
           "Agency Data Portal": "https://www.worldbank.org/ext/en/home",
-          "Country Name": "The World Bank"
+          "Country Name": "International Financial Institutions (IFIs)"
         }
       },
       {
@@ -12000,9 +12507,9 @@
           {
             "id": "rec3Ado0Jrl799Q8A",
             "fields": {
-              "Agency/Department Name": "Unspecified Agency",
+              "Agency/Department Name": "The World Bank",
               "Agency Data Portal": "https://www.worldbank.org/ext/en/home",
-              "Country Name": "The World Bank"
+              "Country Name": "International Financial Institutions (IFIs)"
             }
           },
           {
@@ -12104,9 +12611,9 @@
           {
             "id": "rec3Ado0Jrl799Q8A",
             "fields": {
-              "Agency/Department Name": "Unspecified Agency",
+              "Agency/Department Name": "The World Bank",
               "Agency Data Portal": "https://www.worldbank.org/ext/en/home",
-              "Country Name": "The World Bank"
+              "Country Name": "International Financial Institutions (IFIs)"
             }
           },
           {
@@ -12208,9 +12715,9 @@
           {
             "id": "rec3Ado0Jrl799Q8A",
             "fields": {
-              "Agency/Department Name": "Unspecified Agency",
+              "Agency/Department Name": "The World Bank",
               "Agency Data Portal": "https://www.worldbank.org/ext/en/home",
-              "Country Name": "The World Bank"
+              "Country Name": "International Financial Institutions (IFIs)"
             }
           },
           {
@@ -12316,9 +12823,9 @@
           {
             "id": "rec3Ado0Jrl799Q8A",
             "fields": {
-              "Agency/Department Name": "Unspecified Agency",
+              "Agency/Department Name": "The World Bank",
               "Agency Data Portal": "https://www.worldbank.org/ext/en/home",
-              "Country Name": "The World Bank"
+              "Country Name": "International Financial Institutions (IFIs)"
             }
           },
           {
@@ -12336,7 +12843,7 @@
       "Canada",
       "European Union",
       "Germany",
-      "The World Bank",
+      "International Financial Institutions (IFIs)",
       "United Kingdom",
       "United Nations Children's Fund (UNICEF)",
       "United Nations Development Programme (UNDP)",
@@ -12447,9 +12954,9 @@
       {
         "id": "rec3Ado0Jrl799Q8A",
         "fields": {
-          "Agency/Department Name": "Unspecified Agency",
+          "Agency/Department Name": "The World Bank",
           "Agency Data Portal": "https://www.worldbank.org/ext/en/home",
-          "Country Name": "The World Bank"
+          "Country Name": "International Financial Institutions (IFIs)"
         }
       },
       {
@@ -12529,9 +13036,9 @@
       "European Union",
       "France",
       "Germany",
+      "International Financial Institutions (IFIs)",
       "New Zealand",
       "Sweden",
-      "The World Bank",
       "USA",
       "United Nations Development Programme (UNDP)",
       "United Nations Office for the Coordination of Humanitarian Affairs (OCHA)",
@@ -12868,8 +13375,7 @@
       "Org Website": "https://twin-cities.umn.edu/",
       "Org Description": "The University of Minnesota provides extensive data services and projects through various centers, including the Minnesota Research Data Center (MnRDC), which provides researchers secure access to non-public data from the U.S. Census Bureau and other government agencies. Their data services also encompass data infrastructure assessment, record linkage, machine learning, innovative data capture, and data access and preservation. The IPUMS Center for Data Integration is a prominent provider of census and survey data globally, further showcasing the University's commitment to data integration and research.",
       "Provided Data Ecosystem Projects": [
-        "recjAd7jOVvlh7mnp",
-        "receXQgibfVmjvmeB"
+        "recjAd7jOVvlh7mnp"
       ],
       "Org Donor Agencies": [
         "reclUJwIt0bxL2bO0"
@@ -12891,66 +13397,6 @@
     ],
     "projects": [
       {
-        "id": "receXQgibfVmjvmeB",
-        "fields": {
-          "Project/Product Name": "Minnesota Population Center (MPC)",
-          "Project Description": "MPC is an interdisciplinary research center that advances demographic and population studies through large-scale data infrastructure. It supports open-access microdata, spatial data, and survey harmonization efforts across multiple global datasets.\n",
-          "Project Donor Agencies": [
-            "recbtz43uuKKFVfvd",
-            "recCDa9F6ntBxGGkm",
-            "reclUJwIt0bxL2bO0",
-            "recWpBIPgpNUcdSAn"
-          ],
-          "Project Website": "https://pop.umn.edu/",
-          "Provider Orgs Full Name": [
-            "recq4LDzw9kcBCuX3"
-          ],
-          "CRAF’d-Funded Project?": "NO",
-          "Investment Type(s)": [
-            "Data Sets & Commons"
-          ],
-          "Investment Theme(s)": [
-            "Baseline Population Data"
-          ],
-          "product_key": "mpc",
-          "HDX_SOHD": "None"
-        },
-        "agencies": [
-          {
-            "id": "recbtz43uuKKFVfvd",
-            "fields": {
-              "Agency/Department Name": "Unspecified Agency",
-              "Agency Data Portal": "https://www.gatesfoundation.org/about/committed-grants",
-              "Country Name": "Bill and Melinda Gates Foundation"
-            }
-          },
-          {
-            "id": "recCDa9F6ntBxGGkm",
-            "fields": {
-              "Agency/Department Name": "National Institutes of Health (NIH)",
-              "Agency Data Portal": "https://www.nih.gov/",
-              "Country Name": "USA"
-            }
-          },
-          {
-            "id": "reclUJwIt0bxL2bO0",
-            "fields": {
-              "Agency/Department Name": "National Science Foundation (NSF)",
-              "Agency Data Portal": "https://www.nsf.gov/",
-              "Country Name": "USA"
-            }
-          },
-          {
-            "id": "recWpBIPgpNUcdSAn",
-            "fields": {
-              "Agency/Department Name": "Food and Drug Administration (FDA)",
-              "Agency Data Portal": "https://www.fsa.usda.gov/",
-              "Country Name": "USA"
-            }
-          }
-        ]
-      },
-      {
         "id": "recjAd7jOVvlh7mnp",
         "fields": {
           "Project/Product Name": "Integrated Public Use Microdata Series (IPUMS)",
@@ -12958,7 +13404,8 @@
           "Project Donor Agencies": [
             "recCDa9F6ntBxGGkm",
             "reclUJwIt0bxL2bO0",
-            "recWpBIPgpNUcdSAn"
+            "recWpBIPgpNUcdSAn",
+            "recbtz43uuKKFVfvd"
           ],
           "Project Website": "https://www.ipums.org/",
           "Provider Orgs Full Name": [
@@ -12966,12 +13413,11 @@
           ],
           "CRAF’d-Funded Project?": "NO",
           "Investment Type(s)": [
-            "Data Sets & Commons",
             "Infrastructure & Platforms"
           ],
           "Investment Theme(s)": [
-            "Household Survey Data",
-            "Baseline Population Data"
+            "Data Documentation & Metadata",
+            "Data Storage, Access & Sharing"
           ],
           "product_key": "ipums",
           "HDX_SOHD": "None"
@@ -12999,6 +13445,14 @@
               "Agency/Department Name": "Food and Drug Administration (FDA)",
               "Agency Data Portal": "https://www.fsa.usda.gov/",
               "Country Name": "USA"
+            }
+          },
+          {
+            "id": "recbtz43uuKKFVfvd",
+            "fields": {
+              "Agency/Department Name": "Bill and Melinda Gates Foundation",
+              "Agency Data Portal": "https://www.gatesfoundation.org/about/committed-grants",
+              "Country Name": "Foundation"
             }
           }
         ]
@@ -13464,7 +13918,9 @@
         "recJye4S746MWWmW6"
       ],
       "Org Donor Agencies": [
-        "recFDm6MHWUu6GSMI"
+        "recFDm6MHWUu6GSMI",
+        "reckIAhFXgj4XL29b",
+        "rec5OM4ToDzt2ycHr"
       ],
       "Org IATI Name": "N/A",
       "Org HQ Country": "United States",
@@ -13481,6 +13937,21 @@
           "Agency Data Portal": "https://www.unicef.org/",
           "Country Name": "United Nations Children's Fund (UNICEF)"
         }
+      },
+      {
+        "id": "reckIAhFXgj4XL29b",
+        "fields": {
+          "Agency/Department Name": "Unspecified Agency",
+          "Country Name": "USA"
+        }
+      },
+      {
+        "id": "rec5OM4ToDzt2ycHr",
+        "fields": {
+          "Agency/Department Name": "Conrad N. Hilton Foundation",
+          "Agency Data Portal": "https://www.hiltonfoundation.org/",
+          "Country Name": "Foundation"
+        }
       }
     ],
     "projects": [
@@ -13495,12 +13966,13 @@
           ],
           "CRAF’d-Funded Project?": "NO",
           "Investment Type(s)": [
-            "Data Sets & Commons",
-            "Infrastructure & Platforms"
+            "Infrastructure & Platforms",
+            "Standards & Coordination"
           ],
           "Investment Theme(s)": [
             "Data Storage, Access & Sharing",
-            "Water, Sanitation & Hygiene (WASH) Data"
+            "Data Documentation & Metadata",
+            "Methodological Standards"
           ],
           "product_key": "wpdx-platform",
           "HDX_SOHD": "None"
@@ -13509,6 +13981,8 @@
       }
     ],
     "donor_countries": [
+      "Foundation",
+      "USA",
       "United Nations Children's Fund (UNICEF)"
     ]
   },
@@ -13549,9 +14023,9 @@
       {
         "id": "recbtz43uuKKFVfvd",
         "fields": {
-          "Agency/Department Name": "Unspecified Agency",
+          "Agency/Department Name": "Bill and Melinda Gates Foundation",
           "Agency Data Portal": "https://www.gatesfoundation.org/about/committed-grants",
-          "Country Name": "Bill and Melinda Gates Foundation"
+          "Country Name": "Foundation"
         }
       },
       {
@@ -13751,9 +14225,9 @@
     ],
     "donor_countries": [
       "Belgium",
-      "Bill and Melinda Gates Foundation",
       "Canada",
       "Food and Agriculture Organization (FAO)",
+      "Foundation",
       "Germany",
       "South Korea",
       "Sweden",
@@ -13799,7 +14273,18 @@
           "Project Description": "The global Multidimensional Poverty Index (global MPI) is an annual international measure of acute multidimensional poverty covering over 100 developing countries. It complements traditional monetary poverty measures by capturing the acute, overlapping deprivations in health, education, and living standards that people in poverty face. OPHI computes the global MPI in partnership with the Human Development Report Office of the United Nations Development Programme. \n",
           "Project Donor Agencies": [
             "recRutqdhqEZSnOB2",
-            "recYxlC8x9puB69tx"
+            "recYxlC8x9puB69tx",
+            "recsrMWmoA037bW03",
+            "recFDm6MHWUu6GSMI",
+            "recizeDfrqG6lA92A",
+            "rec3Ado0Jrl799Q8A",
+            "recIUg3K9vtroebVE",
+            "recNLQhceOCXSMemo",
+            "recr77XDSfR0O9Jen",
+            "rec2KBp1IAA5TtnQl",
+            "recYsM7K4yl3TSRdS",
+            "recT2C2l3Ua0qmnR3",
+            "recqhcKxTv71yMfeI"
           ],
           "Project Website": "https://ophi.org.uk/global-mpi",
           "Provider Orgs Full Name": [
@@ -13830,6 +14315,89 @@
               "Agency/Department Name": "Global Affairs Canada (GAC) / Department of Foreign Affairs, Trade and Development ",
               "Agency Data Portal": "Project Browser  International assistance projects funded by Global Affairs Canada https://w05.international.gc.ca/projectbrowser-banqueprojets/",
               "Country Name": "Canada"
+            }
+          },
+          {
+            "id": "recsrMWmoA037bW03",
+            "fields": {
+              "Agency/Department Name": "Unspecified Agency",
+              "Agency Data Portal": "https://open.undp.org/",
+              "Country Name": "United Nations Development Programme (UNDP)"
+            }
+          },
+          {
+            "id": "recFDm6MHWUu6GSMI",
+            "fields": {
+              "Agency/Department Name": "Unspecified Agency",
+              "Agency Data Portal": "https://www.unicef.org/",
+              "Country Name": "United Nations Children's Fund (UNICEF)"
+            }
+          },
+          {
+            "id": "recizeDfrqG6lA92A",
+            "fields": {
+              "Agency/Department Name": "European External Action Service (EEAS)",
+              "Country Name": "European Union"
+            }
+          },
+          {
+            "id": "rec3Ado0Jrl799Q8A",
+            "fields": {
+              "Agency/Department Name": "The World Bank",
+              "Agency Data Portal": "https://www.worldbank.org/ext/en/home",
+              "Country Name": "International Financial Institutions (IFIs)"
+            }
+          },
+          {
+            "id": "recIUg3K9vtroebVE",
+            "fields": {
+              "Agency/Department Name": "Unspecified Agency",
+              "Country Name": "Food and Agriculture Organization (FAO)"
+            }
+          },
+          {
+            "id": "recNLQhceOCXSMemo",
+            "fields": {
+              "Agency/Department Name": "Unspecified Agency",
+              "Agency Data Portal": "https://www.wfp.org/",
+              "Country Name": "World Food Programme (WFP)"
+            }
+          },
+          {
+            "id": "recr77XDSfR0O9Jen",
+            "fields": {
+              "Agency/Department Name": "Unspecified Agency",
+              "Country Name": "World Health Organization (WHO)"
+            }
+          },
+          {
+            "id": "rec2KBp1IAA5TtnQl",
+            "fields": {
+              "Agency/Department Name": "German Corporation for International Cooperation (GIZ)",
+              "Agency Data Portal": "https://www.giz.de/projektdaten/index.action?request_locale=en_GB",
+              "Country Name": "Germany"
+            }
+          },
+          {
+            "id": "recYsM7K4yl3TSRdS",
+            "fields": {
+              "Agency/Department Name": "Islamic Development Bank",
+              "Country Name": "International Financial Institutions (IFIs)"
+            }
+          },
+          {
+            "id": "recT2C2l3Ua0qmnR3",
+            "fields": {
+              "Agency/Department Name": "Unspecified Agency",
+              "Country Name": "Institute for Economics and Peace (IEP)"
+            }
+          },
+          {
+            "id": "recqhcKxTv71yMfeI",
+            "fields": {
+              "Agency/Department Name": "Rockefeller Foundation",
+              "Agency Data Portal": "https://www.rockefellerfoundation.org/",
+              "Country Name": "Foundation"
             }
           }
         ]
@@ -13871,9 +14439,9 @@
       {
         "id": "rec3Ado0Jrl799Q8A",
         "fields": {
-          "Agency/Department Name": "Unspecified Agency",
+          "Agency/Department Name": "The World Bank",
           "Agency Data Portal": "https://www.worldbank.org/ext/en/home",
-          "Country Name": "The World Bank"
+          "Country Name": "International Financial Institutions (IFIs)"
         }
       },
       {
@@ -13966,7 +14534,7 @@
     ],
     "donor_countries": [
       "Germany",
-      "The World Bank",
+      "International Financial Institutions (IFIs)",
       "USA",
       "United Nations (UN)"
     ]
@@ -14022,25 +14590,25 @@
       {
         "id": "recqhcKxTv71yMfeI",
         "fields": {
-          "Agency/Department Name": "Unspecified Agency",
+          "Agency/Department Name": "Rockefeller Foundation",
           "Agency Data Portal": "https://www.rockefellerfoundation.org/",
-          "Country Name": "Rockefeller Foundation"
+          "Country Name": "Foundation"
         }
       },
       {
         "id": "recbtz43uuKKFVfvd",
         "fields": {
-          "Agency/Department Name": "Unspecified Agency",
+          "Agency/Department Name": "Bill and Melinda Gates Foundation",
           "Agency Data Portal": "https://www.gatesfoundation.org/about/committed-grants",
-          "Country Name": "Bill and Melinda Gates Foundation"
+          "Country Name": "Foundation"
         }
       },
       {
         "id": "rec3Ado0Jrl799Q8A",
         "fields": {
-          "Agency/Department Name": "Unspecified Agency",
+          "Agency/Department Name": "The World Bank",
           "Agency Data Portal": "https://www.worldbank.org/ext/en/home",
-          "Country Name": "The World Bank"
+          "Country Name": "International Financial Institutions (IFIs)"
         }
       },
       {
@@ -14094,9 +14662,9 @@
           {
             "id": "recqhcKxTv71yMfeI",
             "fields": {
-              "Agency/Department Name": "Unspecified Agency",
+              "Agency/Department Name": "Rockefeller Foundation",
               "Agency Data Portal": "https://www.rockefellerfoundation.org/",
-              "Country Name": "Rockefeller Foundation"
+              "Country Name": "Foundation"
             }
           }
         ]
@@ -14219,9 +14787,9 @@
           {
             "id": "recqhcKxTv71yMfeI",
             "fields": {
-              "Agency/Department Name": "Unspecified Agency",
+              "Agency/Department Name": "Rockefeller Foundation",
               "Agency Data Portal": "https://www.rockefellerfoundation.org/",
-              "Country Name": "Rockefeller Foundation"
+              "Country Name": "Foundation"
             }
           }
         ]
@@ -14237,7 +14805,7 @@
           "Project Website": "https://malariaatlas.org/",
           "Provider Orgs Full Name": [
             "recwQpJQH4LwmSOBE",
-            "rec2fgn4cmkvDsRB8"
+            "recTRbZA2fpb5FEmd"
           ],
           "CRAF’d-Funded Project?": "NO",
           "Investment Type(s)": [
@@ -14254,9 +14822,9 @@
           {
             "id": "recbtz43uuKKFVfvd",
             "fields": {
-              "Agency/Department Name": "Unspecified Agency",
+              "Agency/Department Name": "Bill and Melinda Gates Foundation",
               "Agency Data Portal": "https://www.gatesfoundation.org/about/committed-grants",
-              "Country Name": "Bill and Melinda Gates Foundation"
+              "Country Name": "Foundation"
             }
           }
         ]
@@ -14288,9 +14856,9 @@
           {
             "id": "recqhcKxTv71yMfeI",
             "fields": {
-              "Agency/Department Name": "Unspecified Agency",
+              "Agency/Department Name": "Rockefeller Foundation",
               "Agency Data Portal": "https://www.rockefellerfoundation.org/",
-              "Country Name": "Rockefeller Foundation"
+              "Country Name": "Foundation"
             }
           }
         ]
@@ -14318,10 +14886,9 @@
       }
     ],
     "donor_countries": [
-      "Bill and Melinda Gates Foundation",
       "European Union",
-      "Rockefeller Foundation",
-      "The World Bank",
+      "Foundation",
+      "International Financial Institutions (IFIs)",
       "USA",
       "United Nations Office for the Coordination of Humanitarian Affairs (OCHA)"
     ]
@@ -14336,7 +14903,8 @@
       "Org Description": "The Climate Centre focuses primarily on providing guidance and tools to National Societies and their partners, and fostering the exchange of experience, training and technical back-up for Red Cross Red Crescent volunteers, delegates and managers specializing in the management of disaster risk and health.",
       "Provided Data Ecosystem Projects": [
         "recr5hGDgBiAH4xSm",
-        "rec5GA5F1UPlXATSj"
+        "rec5GA5F1UPlXATSj",
+        "rec0BNm6Y7xM6v7Gl"
       ],
       "Org Donor Agencies": [
         "recnCryJx9ixmHwby"
@@ -14359,6 +14927,22 @@
       }
     ],
     "projects": [
+      {
+        "id": "rec0BNm6Y7xM6v7Gl",
+        "fields": {
+          "Project/Product Name": "Regional Climate Change Conference",
+          "Project Website": "https://rccc.tiikm.com/",
+          "Provider Orgs Full Name": [
+            "recwaewYY2WMRF9ZI"
+          ],
+          "CRAF’d-Funded Project?": "NO",
+          "Investment Type(s)": [
+            "Learning & Exchange"
+          ],
+          "HDX_SOHD": "None"
+        },
+        "agencies": []
+      },
       {
         "id": "rec5GA5F1UPlXATSj",
         "fields": {
@@ -15085,6 +15669,92 @@
       "Norway",
       "Spain",
       "Switzerland",
+      "United Kingdom"
+    ]
+  },
+  {
+    "id": "reczfCOras69wN6CO",
+    "name": "London School of Economics and Political Science (LSE)",
+    "fields": {
+      "Org Full Name": "London School of Economics and Political Science (LSE)",
+      "Org Short Name": "LSE",
+      "Provided Data Ecosystem Projects": [
+        "recp4lLg28MQMpBnW"
+      ],
+      "Org Donor Agencies": [
+        "recq6gN9R1C4tGmIx"
+      ],
+      "Org Type": "Academia"
+    },
+    "agencies": [
+      {
+        "id": "recq6gN9R1C4tGmIx",
+        "fields": {
+          "Agency/Department Name": "Economic and Social Research Council (ESRC)",
+          "Agency Data Portal": "https://www.ukri.org/councils/esrc/",
+          "Country Name": "United Kingdom"
+        }
+      }
+    ],
+    "projects": [
+      {
+        "id": "recp4lLg28MQMpBnW",
+        "fields": {
+          "Project/Product Name": "PeaceRep",
+          "Project Description": "PeaceRep distributes the PA-X Tracker, a new and innovative digital tool that offers data-driven insights to support peace and transition processes. The suite of PeaceTech tools contained within the PA-X Tracker enables users to track and monitor progress and implementation of peace and transition processes. The Tracker allows users to understand how peace processes are unfolding, who is involved in them, and what impact the processes have had on a range of institutional, political, economic, humanitarian and security indicators.\n",
+          "Project Donor Agencies": [
+            "recAgX8zjyt6NFtcd",
+            "recnBCITljZPzm4Ga",
+            "recq6gN9R1C4tGmIx"
+          ],
+          "Project Website": "https://www.peaceagreements.org/",
+          "Provider Orgs Full Name": [
+            "rec7BmCO0j9do4gKE",
+            "reczfCOras69wN6CO",
+            "recl1dOMXGu6LN6VT",
+            "recZFA1GrNd8swlAz",
+            "reclIEQ2XENwXcnyy",
+            "recapsch9j1uuLKoo",
+            "rec9E4pDM2v7mozZb"
+          ],
+          "CRAF’d-Funded Project?": "NO",
+          "Investment Type(s)": [
+            "Data Sets & Commons"
+          ],
+          "Investment Theme(s)": [
+            "Peace Data"
+          ],
+          "product_key": "peacerep",
+          "HDX_SOHD": "None"
+        },
+        "agencies": [
+          {
+            "id": "recAgX8zjyt6NFtcd",
+            "fields": {
+              "Agency/Department Name": "UN Women",
+              "Country Name": "United Nations (UN)"
+            }
+          },
+          {
+            "id": "recnBCITljZPzm4Ga",
+            "fields": {
+              "Agency/Department Name": "Department of Foreign Affairs (DFA)",
+              "Agency Data Portal": "https://www.ireland.ie/en/dfa/",
+              "Country Name": "Ireland"
+            }
+          },
+          {
+            "id": "recq6gN9R1C4tGmIx",
+            "fields": {
+              "Agency/Department Name": "Economic and Social Research Council (ESRC)",
+              "Agency Data Portal": "https://www.ukri.org/councils/esrc/",
+              "Country Name": "United Kingdom"
+            }
+          }
+        ]
+      }
+    ],
+    "donor_countries": [
       "United Kingdom"
     ]
   }
