@@ -101,31 +101,6 @@
     }
   },
   {
-    "id": "rec2fgn4cmkvDsRB8",
-    "fields": {
-      "Org Full Name": "University of Southampton",
-      "Org Short Name": "University of Southampton",
-      "Org Website": "https://www.southampton.ac.uk/",
-      "Org Description": "The University of Southampton's data services focus heavily on clinical research, offered through the Clinical Informatics Research Unit (CIRU). They provide services like clinical trials management, form design, data integration, global health research analysis, and clinical innovation. Their cloud-based clinical trials management system, 'EDGE,' is widely used in the NHS and internationally for managing and tracking studies. Southampton's research also addresses data accessibility, privacy, and technical limitations through data science projects, and they have expertise in the ethical, legal, and social aspects of data (ELSA).",
-      "Provided Data Ecosystem Projects": [
-        "rec3xc850SaSrqS7t",
-        "rec9ZvuALWuRRSN5P",
-        "recbmA6Lmrr5AfAHJ",
-        "recdIskWoUIv166ue",
-        "reczxU9NrSDw2mJcN",
-        "recJRVBtpTaiDVmoT",
-        "rec6S0tX5hnP9I5DG"
-      ],
-      "Org Donor Agencies": [
-        "reco4Um0k7Tgw2UCK"
-      ],
-      "Org HQ Country": "United Kingdom",
-      "Has received CRAF'd Funding?": "NO",
-      "org_key": "university-of-southampton",
-      "Org Type": "Academia"
-    }
-  },
-  {
     "id": "rec3QdLIyrZ4dNiPh",
     "fields": {
       "Org Full Name": "WFP: United Nations World Food Programme",
@@ -138,7 +113,8 @@
         "rec6dmVAye6IslJOK",
         "recRERSUhmJ4M8jzA",
         "rec4SqufwyxLeeDM4",
-        "reczIeSUeAdEWMKSk"
+        "reczIeSUeAdEWMKSk",
+        "recq78QHoffIcjEmO"
       ],
       "Org Donor Agencies": [
         "rec0QlT9YlTVhHfEn",
@@ -164,7 +140,8 @@
       "Org Description": "The Netherlands Red Cross‘ data and digital unit 510 aims to help every National Red Cross and Red Crescent Society in need anywhere. It is named after the total surface area of the earth (510 million square kilometres). 510 started in 2016 with a core team of 3 and never stopped growing. Currently, 510 has more than 100 team members, of whom 70+ are professional volunteers and academic students.\n",
       "Org Mission": "It’s purpose is to improve speed, quality and cost-effectiveness of humanitarian aid by creating products and services using data and digital. ",
       "Provided Data Ecosystem Projects": [
-        "recfjAhO2DxCjgEgM"
+        "recfjAhO2DxCjgEgM",
+        "recD0hG4x9w340oYA"
       ],
       "Org HQ Country": "Netherlands",
       "Has received CRAF'd Funding?": "YES",
@@ -397,6 +374,7 @@
     "id": "rec6yP4Ms95Zkxode",
     "fields": {
       "Org Full Name": "Global Pulse",
+      "Org Short Name": "UN Global Pulse",
       "Org Description": "Data Insights for Social & Humanitarian Action, also known as DISHA, is a multi-partner initiative led by UN Global Pulse, the Secretary-General’s Innovation Lab, that aims to accelerate ethical and responsible access to data and artificial intelligence (AI) solutions to unlock social impact at scale.",
       "Provided Data Ecosystem Projects": [
         "rec5RfuXsmtGtPDP8"
@@ -407,6 +385,7 @@
         "reca3vbLWS2MqtmnV",
         "rech10djtgHRF0JFS"
       ],
+      "org_key": "global-pulse",
       "Org Type": "United Nations System"
     }
   },
@@ -449,6 +428,19 @@
       "Has received CRAF'd Funding?": "NO",
       "org_key": "humanitarian-outcomes",
       "Org Type": "Tech / Consulting Provider"
+    }
+  },
+  {
+    "id": "rec9E4pDM2v7mozZb",
+    "fields": {
+      "Org Full Name": "University of Stirling",
+      "Org Short Name": "UOS",
+      "Provided Data Ecosystem Projects": [
+        "recp4lLg28MQMpBnW"
+      ],
+      "Org HQ Country": "United Kingdom",
+      "org_key": "uos",
+      "Org Type": "Academia"
     }
   },
   {
@@ -632,7 +624,8 @@
         "reccyJzv7bOpjmC4B",
         "recQ0XV79TSq6v4Sj",
         "recuv6YqfhZHQGvmd",
-        "recwSp54iuK53ankI"
+        "recwSp54iuK53ankI",
+        "recgpKcJltAQO2pbh"
       ],
       "Org Donor Agencies": [
         "rec3axdk63YGrJWUW",
@@ -692,22 +685,6 @@
       "Has received CRAF'd Funding?": "NO",
       "org_key": "unmas",
       "Org Type": "United Nations System"
-    }
-  },
-  {
-    "id": "recFxb7HxYJjfGpwB",
-    "fields": {
-      "Org Full Name": "Universidad San Francisco de Quito",
-      "Org Short Name": "USFQ",
-      "Org Website": "https://www.usfq.edu.ec/en",
-      "Org Description": "The University of San Francisco Quito (USFQ) incorporates data services and projects within its academic and research endeavors, particularly through programs like the Data Science major, which combines mathematics, statistics, and computer science to equip students with data analysis and machine learning skills. Projects include building data pipelines for text-to-image and image-to-image semantic search using various technologies and developing solutions for unstructured data extraction.",
-      "Provided Data Ecosystem Projects": [
-        "recD0o9DgLleR3ctz"
-      ],
-      "Org HQ Country": "Ecuador",
-      "Has received CRAF'd Funding?": "NO",
-      "org_key": "usfq",
-      "Org Type": "Academia"
     }
   },
   {
@@ -804,7 +781,8 @@
       "Provided Data Ecosystem Projects": [
         "recFk4AqE3TR83nNo",
         "recp0YELy7eVj9FUs",
-        "recgmCxRj8IVZMFF2"
+        "recgmCxRj8IVZMFF2",
+        "reczPiGnmhBrolMGr"
       ],
       "Org Donor Agencies": [
         "recGNTHL9SKZxLDcw",
@@ -964,7 +942,8 @@
       "Org Website": "https://mapswipe.org/en/",
       "Org Description": "MapSwipe is a humanitarian crowdsourcing app where volunteers swipe through satellite images to help map vulnerable areas that aid organizations rely on.",
       "Provided Data Ecosystem Projects": [
-        "recFnNCbi5RYJNchr"
+        "recFnNCbi5RYJNchr",
+        "recD0hG4x9w340oYA"
       ],
       "Org HQ Country": "Global (distributed)",
       "Has received CRAF'd Funding?": "NO",
@@ -1114,7 +1093,9 @@
       "Provided Data Ecosystem Projects": [
         "recF8bGKczcSVXjRz",
         "rec04lJaB92fTs0JH",
-        "recze16CRXWao1Mma"
+        "recze16CRXWao1Mma",
+        "recD0hG4x9w340oYA",
+        "recax9xDItng1V4ZL"
       ],
       "Org Donor Agencies": [
         "recpBuvL2uHuENIu7",
@@ -1145,7 +1126,8 @@
         "recwMGK7lbvDfjR14",
         "recjxVwrxVL90go5G",
         "recLA3jRq3bbZRVzu",
-        "recFF8BskJRz2Lyjk"
+        "recFF8BskJRz2Lyjk",
+        "recCkgL7i4kRmP0PL"
       ],
       "Org Donor Agencies": [
         "rec1VhOJv9U6QKBBs"
@@ -1176,6 +1158,35 @@
       ],
       "org_key": "panda",
       "Org Type": "Non-Governmental Organization"
+    }
+  },
+  {
+    "id": "recTRbZA2fpb5FEmd",
+    "fields": {
+      "Org Full Name": "WorldPop",
+      "Org Short Name": "WorldPop",
+      "Org Website": "https://www.worldpop.org/",
+      "Org Description": "WorldPop is an interdisciplinary applied research group focusing primarily on supporting improvement of the spatial demographic evidence base and the use of these data for health and development applications, including addressing the Sustainable Development Goals. Its mission is to enable decision makers to harness the power of spatial demographic data through high quality applied research, to achieve a vision of a world where everyone, everywhere is counted in decision making.",
+      "Provided Data Ecosystem Projects": [
+        "rec3xc850SaSrqS7t",
+        "rec9ZvuALWuRRSN5P",
+        "recbmA6Lmrr5AfAHJ",
+        "recdIskWoUIv166ue",
+        "recJRVBtpTaiDVmoT",
+        "recqtLfrSvDFeeKb9"
+      ],
+      "Org Donor Agencies": [
+        "reco4Um0k7Tgw2UCK",
+        "recbtz43uuKKFVfvd",
+        "recbvrcYZZW7mBnCU",
+        "recCDa9F6ntBxGGkm",
+        "recqMZBMvN0vxYv9v",
+        "rec3Ado0Jrl799Q8A",
+        "recqhcKxTv71yMfeI",
+        "recAXDKxEbXsaHav4"
+      ],
+      "Org Type": "Research / Think Tank",
+      "HDX Org Key": "worldpop"
     }
   },
   {
@@ -1349,6 +1360,28 @@
     }
   },
   {
+    "id": "recZFA1GrNd8swlAz",
+    "fields": {
+      "Org Full Name": "Coventry University",
+      "Org Short Name": "CU",
+      "Provided Data Ecosystem Projects": [
+        "recp4lLg28MQMpBnW"
+      ]
+    }
+  },
+  {
+    "id": "recapsch9j1uuLKoo",
+    "fields": {
+      "Org Full Name": "Queen's University Belfast",
+      "Org Short Name": "QUB",
+      "Provided Data Ecosystem Projects": [
+        "recp4lLg28MQMpBnW"
+      ],
+      "org_key": "qub",
+      "Org Type": "Academia"
+    }
+  },
+  {
     "id": "reccGyY6Ep2ptBPKy",
     "fields": {
       "Org Full Name": "Arab Barometer",
@@ -1503,8 +1536,7 @@
       "Org Description": "The United Nations Office for Disaster Risk Reduction (UNDRR) has a big ambition: to help decision makers across the globe better understand and act on risk.  At UNDRR, we envision a world where disasters no longer threaten the well-being of people and the future of the planet. Sustainable development and the 2030 Agenda cannot be achieved without working towards that goal of building resilience.\t",
       "Link to Data Products Overview": "<https://data.undrr.org/api/json>\n",
       "Provided Data Ecosystem Projects": [
-        "recUotlR1ZJwVMAIS",
-        "rece4fDBOtjCywl9q"
+        "recUotlR1ZJwVMAIS"
       ],
       "Org Donor Agencies": [
         "reckIAhFXgj4XL29b",
@@ -1547,7 +1579,7 @@
       "Org Full Name": "UNHCR: United Nations High Commissioner for Refugees",
       "Org Short Name": "UNHCR",
       "Org Website": "https://www.unhcr.org/",
-      "Org Description": "UNHCR, the UN Refugee Agency, is a global organization dedicated to saving lives, protecting rights and building a better future for people forced to flee their homes because of conflict and persecution. \nWe lead international action to protect refugees, forcibly displaced communities and stateless people. \n\t",
+      "Org Description": "UNHCR, the UN Refugee Agency, is a global organization dedicated to saving lives, protecting rights and building a better future for people forced to flee their homes because of conflict and persecution. We lead international action to protect refugees, forcibly displaced communities and stateless people. \n\t",
       "Link to Data Products Overview": "<https://www.unhcr.org/what-we-do/data-and-publications/unhcr-data>\n",
       "Provided Data Ecosystem Projects": [
         "rec4V0tKy9KP8Gw4h",
@@ -1769,6 +1801,19 @@
     }
   },
   {
+    "id": "recl1dOMXGu6LN6VT",
+    "fields": {
+      "Org Full Name": "University of St. Andrews",
+      "Org Short Name": "uosa",
+      "Provided Data Ecosystem Projects": [
+        "recp4lLg28MQMpBnW"
+      ],
+      "Org HQ Country": "United Kingdom",
+      "org_key": "uosa",
+      "Org Type": "Academia"
+    }
+  },
+  {
     "id": "recl51I0rcqfCzesL",
     "fields": {
       "Org Full Name": "World Bank Group ",
@@ -1783,7 +1828,8 @@
         "receGDImgeYZLVOPq",
         "recf0UvW6LzObKXGC",
         "recIUs7JTe4alrFDs",
-        "reck0qeeLf1nGLbap"
+        "reck0qeeLf1nGLbap",
+        "recN5qhUuev0DlKt8"
       ],
       "Org IATI Name": "The World Bank or World Bank Trust Funds",
       "Org MPTFO Name": "IBRD",
@@ -1793,6 +1839,23 @@
       "org_key": "world-bank",
       "Org Type": "International Organization",
       "HDX Org Key": "world-bank-group"
+    }
+  },
+  {
+    "id": "reclIEQ2XENwXcnyy",
+    "fields": {
+      "Org Full Name": "World Peace Foundation",
+      "Org Short Name": "WPF",
+      "Org Website": "https://worldpeacefoundation.org/",
+      "Org Description": "World Peace Foundation is a center at Tufts University's The Fletcher School, that produces innovative research for nonviolent futures. The WPF redefines peace through research, advocacy and engagement that creates pathways for non-violent futures. Since 1910, when WPF was created, ideas about peace and how to attain it have evolved. Our contribution lies in research and outreach informed by principles of justice.",
+      "Provided Data Ecosystem Projects": [
+        "recp4lLg28MQMpBnW"
+      ],
+      "Org Donor Agencies": [
+        "reckIAhFXgj4XL29b"
+      ],
+      "Org HQ Country": "United States",
+      "Org Type": "Academia"
     }
   },
   {
@@ -1863,6 +1926,11 @@
       "Org Short Name": "World Bank-UNHCR",
       "Org Website": "https://www.jointdatacenter.org/",
       "Org Description": "The JDC offers different types of support and guidance to activity implementation teams. In most cases, this entails a combination of the following:\n• Financial investments covering full or partial costs of proposed activities as relevant;\n• Technical guidance and support in order to ensure high quality outputs and useful outcomes, to allow learning from expertise, and to streamline processes;\n• Strategic advice to initiate and develop activities that are relevant to shape policy dialogue and inform programs;\n• Partnership building and coordination to identify and connect partners to enhance project outcomes, capitalize on synergies and increase impact.",
+      "Provided Data Ecosystem Projects": [
+        "recJ1uv7EMf5HbXfr",
+        "recF4Js3Gn54EPxbP",
+        "recMOmPSS6OoIxqAM"
+      ],
       "Org Donor Agencies": [
         "rec1VhOJv9U6QKBBs"
       ],
@@ -1932,6 +2000,7 @@
     "id": "recoAzfuGAQYkD8l8",
     "fields": {
       "Org Full Name": "Data2x",
+      "Org Short Name": "Data2X",
       "Org Website": "https://data2x.org/",
       "Org Description": "Collaboration is Data2X’s guiding principle and signature way of working. This reflects our core strength: our convening power based on the trust we have earned from government, private sector, civil society, and academic partners. In the coming years, Data2X will play an even more active facilitator role, mobilizing stakeholders around a cooperative global approach to fill gender data gaps.",
       "Provided Data Ecosystem Projects": [
@@ -1942,6 +2011,7 @@
         "recbtz43uuKKFVfvd",
         "recjAQGJeJQbasrLl"
       ],
+      "org_key": "data2x",
       "Org Type": "United Nations System"
     }
   },
@@ -2082,8 +2152,7 @@
       "Org Website": "https://twin-cities.umn.edu/",
       "Org Description": "The University of Minnesota provides extensive data services and projects through various centers, including the Minnesota Research Data Center (MnRDC), which provides researchers secure access to non-public data from the U.S. Census Bureau and other government agencies. Their data services also encompass data infrastructure assessment, record linkage, machine learning, innovative data capture, and data access and preservation. The IPUMS Center for Data Integration is a prominent provider of census and survey data globally, further showcasing the University's commitment to data integration and research.",
       "Provided Data Ecosystem Projects": [
-        "recjAd7jOVvlh7mnp",
-        "receXQgibfVmjvmeB"
+        "recjAd7jOVvlh7mnp"
       ],
       "Org Donor Agencies": [
         "reclUJwIt0bxL2bO0"
@@ -2181,7 +2250,9 @@
         "recJye4S746MWWmW6"
       ],
       "Org Donor Agencies": [
-        "recFDm6MHWUu6GSMI"
+        "recFDm6MHWUu6GSMI",
+        "reckIAhFXgj4XL29b",
+        "rec5OM4ToDzt2ycHr"
       ],
       "Org IATI Name": "N/A",
       "Org HQ Country": "United States",
@@ -2320,7 +2391,8 @@
       "Org Description": "The Climate Centre focuses primarily on providing guidance and tools to National Societies and their partners, and fostering the exchange of experience, training and technical back-up for Red Cross Red Crescent volunteers, delegates and managers specializing in the management of disaster risk and health.",
       "Provided Data Ecosystem Projects": [
         "recr5hGDgBiAH4xSm",
-        "rec5GA5F1UPlXATSj"
+        "rec5GA5F1UPlXATSj",
+        "rec0BNm6Y7xM6v7Gl"
       ],
       "Org Donor Agencies": [
         "recnCryJx9ixmHwby"
@@ -2456,6 +2528,20 @@
       "org_key": "insecurity-insight",
       "Org Type": "Non-Governmental Organization",
       "HDX Org Key": "insecurity-insight"
+    }
+  },
+  {
+    "id": "reczfCOras69wN6CO",
+    "fields": {
+      "Org Full Name": "London School of Economics and Political Science (LSE)",
+      "Org Short Name": "LSE",
+      "Provided Data Ecosystem Projects": [
+        "recp4lLg28MQMpBnW"
+      ],
+      "Org Donor Agencies": [
+        "recq6gN9R1C4tGmIx"
+      ],
+      "Org Type": "Academia"
     }
   }
 ]
