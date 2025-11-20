@@ -720,3 +720,71 @@ export function buildOrgDonorCountriesMap(organizations: NestedOrganization[]): 
     
     return map;
 }
+
+/**
+ * Build a map from organization ID to a map of country -> agency names
+ * Used by organization modals to show which agencies finance each organization
+ */
+export function buildOrgAgenciesMap(organizations: NestedOrganization[]): Record<string, Record<string, string[]>> {
+    const map: Record<string, Record<string, string[]>> = {};
+    
+    organizations.forEach(org => {
+        if (org && org.id && org.agencies) {
+            const countryToAgencies: Record<string, string[]> = {};
+            
+            org.agencies.forEach((agency: any) => {
+                const fields = agency.fields || {};
+                const countryName = fields['Country Name'];
+                const agencyName = fields['Agency/Department Name'];
+                
+                if (countryName && agencyName) {
+                    if (!countryToAgencies[countryName]) {
+                        countryToAgencies[countryName] = [];
+                    }
+                    if (!countryToAgencies[countryName].includes(agencyName)) {
+                        countryToAgencies[countryName].push(agencyName);
+                    }
+                }
+            });
+            
+            map[org.id] = countryToAgencies;
+        }
+    });
+    
+    return map;
+}
+
+/**
+ * Build a map from project ID to a map of country -> agency names
+ * Used by project modals to show which agencies finance each project
+ */
+export function buildProjectAgenciesMap(organizations: NestedOrganization[]): Record<string, Record<string, string[]>> {
+    const map: Record<string, Record<string, string[]>> = {};
+    
+    organizations.forEach(org => {
+        (org.projects || []).forEach(project => {
+            if (project && project.id && project.agencies) {
+                const countryToAgencies: Record<string, string[]> = {};
+                
+                project.agencies.forEach((agency: any) => {
+                    const fields = agency.fields || {};
+                    const countryName = fields['Country Name'];
+                    const agencyName = fields['Agency/Department Name'];
+                    
+                    if (countryName && agencyName) {
+                        if (!countryToAgencies[countryName]) {
+                            countryToAgencies[countryName] = [];
+                        }
+                        if (!countryToAgencies[countryName].includes(agencyName)) {
+                            countryToAgencies[countryName].push(agencyName);
+                        }
+                    }
+                });
+                
+                map[project.id] = countryToAgencies;
+            }
+        });
+    });
+    
+    return map;
+}
