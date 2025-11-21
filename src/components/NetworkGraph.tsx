@@ -924,12 +924,12 @@ const NetworkGraph: React.FC<NetworkGraphProps> = ({
             // Restore standard link strength and distances
             // Donor-project links (value 0) have zero strength - visual only, no pull
             fg.d3Force('link').strength((link: any) => {
-                if (link.value === 0) return 0; // No attraction for donor-project links
+                if (link.value === 0) return 0.4; // No attraction for donor-project links
                 return 0.5; // Standard strength for other links
             });
             fg.d3Force('link').distance((link: any) => {
                 // Donor-project links (value 0) have no attractive force
-                if (link.value === 0) return 1; // Minimal distance, no pulling
+                if (link.value === 0) return 0; // Minimal distance, no pulling
                 
                 const sourceType = link.source.type || link.source;
                 const targetType = link.target.type || link.target;
