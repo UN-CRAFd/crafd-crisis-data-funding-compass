@@ -1,14 +1,27 @@
 import React from 'react';
 import { getIconForInvestmentType } from '@/config/investmentTypeIcons';
+import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from '@/components/ui/tooltip';
+
+// Investment type definitions for tooltips
+const INVESTMENT_TYPE_DESCRIPTIONS: Record<string, string> = {
+    'Data Sets & Commons': 'Shared data repositories and standardized datasets that enable analysis and decision-making across the humanitarian sector.',
+    'Infrastructure & Platforms': 'Technical systems, tools, and platforms that support data collection, storage, processing, and sharing.',
+    'Crisis Analytics & Insights': 'Analysis, modeling, and insights derived from data to inform humanitarian response and preparedness.',
+    'Human Capital & Know-how': 'Training, capacity building, and expertise development for humanitarian data practitioners.',
+    'Standards & Coordination': 'Common standards, protocols, and coordination mechanisms for humanitarian data management.',
+    'Learning & Exchange': 'Knowledge sharing, communities of practice, and collaborative learning initiatives.'
+};
 
 interface ModalOrganizationFocusProps {
     projects: Array<{
         investmentTypes: string[];
     }>;
     SubHeader: React.ComponentType<{ children: React.ReactNode }>;
+    onTypeClick?: (type: string) => void;
+    tooltipContainer?: Element | null;
 }
 
-const ModalOrganizationFocus: React.FC<ModalOrganizationFocusProps> = ({ projects, SubHeader }) => {
+const ModalOrganizationFocus: React.FC<ModalOrganizationFocusProps> = ({ projects, SubHeader, onTypeClick, tooltipContainer }) => {
     // Count investment types across all projects
     const investmentTypeCounts = React.useMemo(() => {
         const counts = new Map<string, number>();
@@ -37,26 +50,40 @@ const ModalOrganizationFocus: React.FC<ModalOrganizationFocusProps> = ({ project
                 {investmentTypeCounts.map(({ type, count }) => {
                     const IconComponent = getIconForInvestmentType(type);
                     return (
-                        <span
-                            key={type}
-                            className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-md text-sm font-semibold"
-                            style={{
-                                backgroundColor: 'var(--badge-other-bg)',
-                                color: 'var(--badge-other-text)'
-                            }}
-                        >
-                            <IconComponent className="w-4 h-4" />
-                            <span>{type}</span>
-                            <span 
-                                className="inline-flex items-center justify-center w-5 h-5 text-xs font-bold rounded-full"
-                                style={{
-                                    backgroundColor: 'var(--badge-other-text)',
-                                    color: 'var(--badge-other-bg)'
-                                }}
-                            >
-                                {count}
-                            </span>
-                        </span>
+                        <TooltipProvider key={type}>
+                            <Tooltip delayDuration={200}>
+                                <TooltipTrigger asChild>
+                                    <button
+                                        onClick={() => onTypeClick?.(type)}
+                                        className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-md text-sm font-semibold hover:opacity-80 transition-opacity cursor-pointer"
+                                        style={{
+                                            backgroundColor: 'var(--badge-other-bg)',
+                                            color: 'var(--badge-other-text)'
+                                        }}
+                                    >
+                                        <IconComponent className="w-4 h-4" />
+                                        <span>{type}</span>
+                                        <span 
+                                            className="inline-flex items-center justify-center w-5 h-5 text-xs font-bold rounded-full"
+                                            style={{
+                                                backgroundColor: 'var(--badge-other-text)',
+                                                color: 'var(--badge-other-bg)'
+                                            }}
+                                        >
+                                            {count}
+                                        </span>
+                                    </button>
+                                </TooltipTrigger>
+                                <TooltipContent 
+                                    side="top" 
+                                    className="max-w-xs text-xs bg-white/70 backdrop-blur-md border border-gray-200 !z-[300]"
+                                    sideOffset={5}
+                                    container={tooltipContainer as HTMLElement | null}
+                                >
+                                    {INVESTMENT_TYPE_DESCRIPTIONS[type] || 'Click to filter by this investment type'}
+                                </TooltipContent>
+                            </Tooltip>
+                        </TooltipProvider>
                     );
                 })}
             </div>

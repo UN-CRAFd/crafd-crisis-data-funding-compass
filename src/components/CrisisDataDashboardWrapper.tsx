@@ -506,6 +506,42 @@ const CrisisDataDashboardWrapper = ({ logoutButton }: { logoutButton?: React.Rea
         }
     }, [searchParams, pathname, router, activeView]);
 
+    // Handle investment type click from modal - add to filter and close modal
+    const handleTypeClick = useCallback((type: string) => {
+        const newSearchParams = new URLSearchParams(searchParams.toString());
+        
+        // Add type to filter if not already present
+        const currentTypesRaw = (newSearchParams.get('t') ?? newSearchParams.get('types') ?? '').split(',').filter(Boolean);
+        // Convert slugs back to labels for comparison
+        const currentTypes = currentTypesRaw.map(slug => typeSlugToLabel(slug));
+        
+        if (!currentTypes.includes(type)) {
+            const updatedTypes = [...currentTypes, type];
+            // Convert to slugs for URL
+            const slugs = updatedTypes.map(t => typeLabelToSlug(t));
+            const uniqueSlugs = Array.from(new Set(slugs.map(s => s.toLowerCase()))).map(s =>
+                slugs.find(slug => slug.toLowerCase() === s) || s
+            );
+            newSearchParams.set('t', uniqueSlugs.join(','));
+        }
+        
+        // Close any open modal by removing org/asset params
+        newSearchParams.delete('org');
+        newSearchParams.delete('asset');
+        
+        // Update URL with both changes at once
+        router.push(`${pathname}?${newSearchParams.toString()}`, { scroll: false });
+        
+        // For network view, also clear local state
+        if (activeView === 'network') {
+            setLocalSelectedOrgKey('');
+            setLocalSelectedProjectKey('');
+            setTimeout(() => {
+                setUnderlyingPageState(null);
+            }, 50);
+        }
+    }, [searchParams, pathname, router, activeView]);
+
     return (
         <CrisisDataDashboard
             dashboardData={dashboardData}
@@ -532,6 +568,7 @@ const CrisisDataDashboardWrapper = ({ logoutButton }: { logoutButton?: React.Rea
             onCloseOrganizationModal={handleCloseOrganizationModal}
             onCloseProjectModal={handleCloseProjectModal}
             onDonorClick={handleDonorClick}
+            onTypeClick={handleTypeClick}
             onViewChange={handleViewChange}
             logoutButton={logoutButton}
         />
