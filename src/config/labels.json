@@ -30,11 +30,11 @@
     }
   },
   "filters": {
-    "searchPlaceholder": "Search organizations & assets...",
-    "donorPlaceholder": "Select donor(s)...",
-    "typePlaceholder": "Select type(s)...",
-    "themePlaceholder": "Select theme(s)...",
-    "donorSearchPlaceholder": "Search donors...",
+    "searchPlaceholder": "Search Organizations & Assets...",
+    "donorPlaceholder": "Select Donor(s)...",
+    "typePlaceholder": "Select Type(s)...",
+    "themePlaceholder": "Select Theme(s)...",
+    "donorSearchPlaceholder": "Search Donor...",
     "selected": "selected",
     "showMore": "more",
     "showLess": "Show less"
