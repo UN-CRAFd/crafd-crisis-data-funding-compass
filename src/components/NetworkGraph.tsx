@@ -454,6 +454,18 @@ const NetworkGraph: React.FC<NetworkGraphProps> = ({
                     target: projectNodeId,
                     value: 1,
                 });
+                
+                // Add visual connections between donors and projects (no attraction force)
+                // Only add links for donors that exist in the donor nodes
+                project.donorCountries?.forEach(donor => {
+                    if (donorSet.has(donor)) {
+                        links.push({
+                            source: `donor-${donor}`,
+                            target: projectNodeId,
+                            value: 0, // Zero value means no attractive force
+                        });
+                    }
+                });
             });
         });
 
@@ -536,6 +548,9 @@ const NetworkGraph: React.FC<NetworkGraphProps> = ({
 
         // Set link distance dynamically based on node types
         fg.d3Force('link').distance((link: any) => {
+            // Donor-project links (value 0) have no attractive force
+            if (link.value === 0) return 1; // Minimal distance, no pulling
+            
             const sourceType = typeof link.source === 'object' ? (link.source as GraphNode).type : '';
             const targetType = typeof link.target === 'object' ? (link.target as GraphNode).type : '';
 
@@ -553,7 +568,11 @@ const NetworkGraph: React.FC<NetworkGraphProps> = ({
         });
 
         // Set link strength for more stable connections
-        fg.d3Force('link').strength(0.5);
+        // Donor-project links (value 0) have zero strength - visual only, no pull
+        fg.d3Force('link').strength((link: any) => {
+            if (link.value === 0) return 0; // No attraction for donor-project links
+            return 0.5; // Standard strength for other links
+        });
 
         // No center force - allows nodes to distribute naturally based on their connections only
         fg.d3Force('center', null);
@@ -644,10 +663,17 @@ const NetworkGraph: React.FC<NetworkGraphProps> = ({
             fg.d3Force('center', null);
             
             // Maintain standard link strength to preserve connection distances
-            fg.d3Force('link').strength(0.5);
+            // Donor-project links (value 0) have zero strength - visual only, no pull
+            fg.d3Force('link').strength((link: any) => {
+                if (link.value === 0) return 0; // No attraction for donor-project links
+                return 0.5; // Standard strength for other links
+            });
             
             // Apply link distance function during clustering too
             fg.d3Force('link').distance((link: any) => {
+                // Donor-project links (value 0) have no attractive force
+                if (link.value === 0) return 1; // Minimal distance, no pulling
+                
                 const sourceType = link.source.type || link.source;
                 const targetType = link.target.type || link.target;
 
@@ -896,8 +922,15 @@ const NetworkGraph: React.FC<NetworkGraphProps> = ({
             fg.d3Force('center', null);
             
             // Restore standard link strength and distances
-            fg.d3Force('link').strength(0.5);
+            // Donor-project links (value 0) have zero strength - visual only, no pull
+            fg.d3Force('link').strength((link: any) => {
+                if (link.value === 0) return 0; // No attraction for donor-project links
+                return 0.5; // Standard strength for other links
+            });
             fg.d3Force('link').distance((link: any) => {
+                // Donor-project links (value 0) have no attractive force
+                if (link.value === 0) return 1; // Minimal distance, no pulling
+                
                 const sourceType = link.source.type || link.source;
                 const targetType = link.target.type || link.target;
 
@@ -1394,6 +1427,11 @@ const NetworkGraph: React.FC<NetworkGraphProps> = ({
                     const targetId = typeof link.target === 'object' ? (link.target as any).id : link.target;
                     const linkId = `${sourceId}-${targetId}`;
                     
+                    // Donor-project links (value 0) should be more visible
+                    if (link.value === 0) {
+                        return 'rgba(203, 213, 225, 0.5)'; // More visible than before
+                    }
+                    
                     // Hover-based highlights only
                     const isHoverHighlight = hoverHighlightLinks.size > 0 && hoverHighlightLinks.has(linkId);
                     
@@ -1407,6 +1445,11 @@ const NetworkGraph: React.FC<NetworkGraphProps> = ({
                     const targetId = typeof link.target === 'object' ? (link.target as any).id : link.target;
                     const linkId = `${sourceId}-${targetId}`;
                     
+                    // Donor-project links (value 0) should be more visible
+                    if (link.value === 0) {
+                        return 0.7 * globalScaleRef.current; // More visible than before
+                    }
+                    
                     const isHoverHighlight = hoverHighlightLinks.size > 0 && hoverHighlightLinks.has(linkId);
                     
                     // Scale line width with zoom: thicker when zoomed out, thinner when zoomed in
@@ -1414,6 +1457,9 @@ const NetworkGraph: React.FC<NetworkGraphProps> = ({
                     return baseWidth * globalScaleRef.current * 1.1;
                 }}
                 linkDirectionalParticles={(link) => {
+                    // No particles for donor-project links (visual only)
+                    if (link.value === 0) return 0;
+                    
                     const sourceId = typeof link.source === 'object' ? (link.source as any).id : link.source;
                     const targetId = typeof link.target === 'object' ? (link.target as any).id : link.target;
                     const linkId = `${sourceId}-${targetId}`;
