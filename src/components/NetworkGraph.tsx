@@ -1043,7 +1043,8 @@ const NetworkGraph: React.FC<NetworkGraphProps> = ({
         } else if (node.type === 'project') {
             ctx.strokeStyle = themeColors.badgeOtherText;
         } else if (node.type === 'donor') {
-            ctx.strokeStyle = themeColors.badgeSlateText;
+            // Use the slate/gray badge text color for donor borders to match legend/tables
+            ctx.strokeStyle = themeColors.badgeSlateText || '#64748b';
         } else {
             ctx.strokeStyle = '#000';
         }
