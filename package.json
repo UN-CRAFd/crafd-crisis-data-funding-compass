@@ -41,8 +41,7 @@
     "react-dom": "19.1.0",
     "react-force-graph-2d": "^1.29.0",
     "recharts": "^3.2.1",
-    "tailwind-merge": "^3.3.1",
-    "xlsx": "^0.18.5"
+    "tailwind-merge": "^3.3.1"
   },
   "devDependencies": {
     "@eslint/eslintrc": "^3",
