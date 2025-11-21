@@ -672,7 +672,7 @@ const NetworkGraph: React.FC<NetworkGraphProps> = ({
             // Apply link distance function during clustering too
             fg.d3Force('link').distance((link: any) => {
                 // Donor-project links (value 0) have no attractive force
-                if (link.value === 0) return 1; // Minimal distance, no pulling
+                if (link.value === 0) return 0; // Minimal distance, no pulling
                 
                 const sourceType = link.source.type || link.source;
                 const targetType = link.target.type || link.target;
