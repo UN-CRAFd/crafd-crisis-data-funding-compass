@@ -7,6 +7,16 @@ import BaseModal, { ModalHeader, CountryBadge } from './BaseModal';
 import { useEffect, useState } from 'react';
 import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from '@/components/ui/tooltip';
 
+// Investment type definitions for tooltips
+const INVESTMENT_TYPE_DESCRIPTIONS: Record<string, string> = {
+    'Data Sets & Commons': 'Shared data repositories and standardized datasets that enable analysis and decision-making across the humanitarian sector.',
+    'Infrastructure & Platforms': 'Technical systems, tools, and platforms that support data collection, storage, processing, and sharing.',
+    'Crisis Analytics & Insights': 'Analysis, modeling, and insights derived from data to inform humanitarian response and preparedness.',
+    'Human Capital & Know-how': 'Training, capacity building, and expertise development for humanitarian data practitioners.',
+    'Standards & Coordination': 'Common standards, protocols, and coordination mechanisms for humanitarian data management.',
+    'Learning & Exchange': 'Knowledge sharing, communities of practice, and collaborative learning initiatives.'
+};
+
 interface ProjectModalProps {
     project: ProjectData | null;
     organizationName?: string;
@@ -15,9 +25,10 @@ interface ProjectModalProps {
     projectAgenciesMap?: Record<string, Record<string, string[]>>;
     onOpenOrganizationModal?: (orgKey: string) => void;
     onDonorClick?: (country: string) => void;
+    onTypeClick?: (type: string) => void;
 }
 
-export default function ProjectModal({ project, allOrganizations, loading, projectAgenciesMap = {}, onOpenOrganizationModal, onDonorClick }: ProjectModalProps) {
+export default function ProjectModal({ project, allOrganizations, loading, projectAgenciesMap = {}, onOpenOrganizationModal, onDonorClick, onTypeClick }: ProjectModalProps) {
 
     const [themeToTypeMapping, setThemeToTypeMapping] = useState<Record<string, string>>({});
     const [themeDescriptions, setThemeDescriptions] = useState<Record<string, string>>({});
@@ -209,16 +220,31 @@ export default function ProjectModal({ project, allOrganizations, loading, proje
                                 
                                 return (
                                     <div key={typeIndex} className="flex flex-wrap gap-2 items-center">
-                                        <span
-                                            className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-md text-sm font-semibold"
-                                            style={{
-                                                backgroundColor: 'var(--badge-other-bg)',
-                                                color: 'var(--badge-other-text)'
-                                            }}
-                                        >
-                                            <IconComponent className="w-4 h-4" />
-                                            {type}
-                                        </span>
+                                        <TooltipProvider>
+                                            <Tooltip delayDuration={200}>
+                                                <TooltipTrigger asChild>
+                                                    <button
+                                                        onClick={() => onTypeClick?.(type)}
+                                                        className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-md text-sm font-semibold hover:opacity-80 transition-opacity cursor-pointer"
+                                                        style={{
+                                                            backgroundColor: 'var(--badge-other-bg)',
+                                                            color: 'var(--badge-other-text)'
+                                                        }}
+                                                    >
+                                                        <IconComponent className="w-4 h-4" />
+                                                        {type}
+                                                    </button>
+                                                </TooltipTrigger>
+                                                <TooltipContent 
+                                                    side="top" 
+                                                    className="max-w-xs text-xs bg-white/70 backdrop-blur-md border border-gray-200 !z-[300]"
+                                                    sideOffset={5}
+                                                    container={tooltipContainer as HTMLElement | null}
+                                                >
+                                                    {INVESTMENT_TYPE_DESCRIPTIONS[type] || 'Click to filter by this investment type'}
+                                                </TooltipContent>
+                                            </Tooltip>
+                                        </TooltipProvider>
                                         {relatedThemes.length > 0 && (
                                             <>
                                                 {/* Connecting arc */}

@@ -30,6 +30,16 @@ const NetworkGraph = dynamic(() => import('@/components/NetworkGraph'), {
     ssr: false,
 });
 
+// Investment type definitions for tooltips
+const INVESTMENT_TYPE_DESCRIPTIONS: Record<string, string> = {
+    'Data Sets & Commons': 'Shared data repositories and standardized datasets that enable analysis and decision-making across the humanitarian sector.',
+    'Infrastructure & Platforms': 'Technical systems, tools, and platforms that support data collection, storage, processing, and sharing.',
+    'Crisis Analytics & Insights': 'Analysis, modeling, and insights derived from data to inform humanitarian response and preparedness.',
+    'Human Capital & Know-how': 'Training, capacity building, and expertise development for humanitarian data practitioners.',
+    'Standards & Coordination': 'Common standards, protocols, and coordination mechanisms for humanitarian data management.',
+    'Learning & Exchange': 'Knowledge sharing, communities of practice, and collaborative learning initiatives.'
+};
+
 // Consolidated style constants
 const STYLES = {
     // Card styles
@@ -96,6 +106,7 @@ interface CrisisDataDashboardProps {
     onCloseOrganizationModal: () => void;
     onCloseProjectModal: () => void;
     onDonorClick?: (country: string) => void;
+    onTypeClick?: (type: string) => void;
     onViewChange?: (view: 'table' | 'network') => void;
     logoutButton?: React.ReactNode;
 }
@@ -230,6 +241,7 @@ const CrisisDataDashboard = ({
     onCloseOrganizationModal,
     onCloseProjectModal,
     onDonorClick,
+    onTypeClick,
     onViewChange,
     logoutButton,
     sortBy,
@@ -1391,10 +1403,11 @@ const CrisisDataDashboard = ({
                                                                                         <div className="flex flex-wrap gap-1 items-center">
                                                                                             {project.investmentTypes.map((type, idx) => {
                                                                                                 const IconComponent = getIconForInvestmentType(type);
-                                                                                                return (
+                                                                                                const description = INVESTMENT_TYPE_DESCRIPTIONS[type];
+                                                                                                const badge = (
                                                                                                     <span 
                                                                                                         key={idx} 
-                                                                                                        className="inline-flex items-center gap-1 px-2 py-1 rounded-md text-xs font-semibold"
+                                                                                                        className="inline-flex items-center gap-1 px-2 py-1 rounded-md text-xs font-semibold cursor-help"
                                                                                                         style={{
                                                                                                             backgroundColor: 'var(--badge-other-bg)',
                                                                                                             color: 'var(--badge-other-text)'
@@ -1404,6 +1417,28 @@ const CrisisDataDashboard = ({
                                                                                                         {type}
                                                                                                     </span>
                                                                                                 );
+                                                                                                
+                                                                                                // Wrap in tooltip if description exists
+                                                                                                if (description) {
+                                                                                                    return (
+                                                                                                        <TooltipProvider key={idx}>
+                                                                                                            <TooltipUI delayDuration={200}>
+                                                                                                                <TooltipTrigger asChild>
+                                                                                                                    {badge}
+                                                                                                                </TooltipTrigger>
+                                                                                                                <TooltipContent 
+                                                                                                                    side="top" 
+                                                                                                                    className="max-w-xs text-xs bg-white/70 backdrop-blur-md border border-gray-200 !z-[300]"
+                                                                                                                    sideOffset={5}
+                                                                                                                >
+                                                                                                                    {description}
+                                                                                                                </TooltipContent>
+                                                                                                            </TooltipUI>
+                                                                                                        </TooltipProvider>
+                                                                                                    );
+                                                                                                }
+                                                                                                
+                                                                                                return badge;
                                                                                             })}
                                                                                         </div>
                                                                                     )}
@@ -1555,6 +1590,7 @@ const CrisisDataDashboard = ({
                     projectAgenciesMap={projectAgenciesMap}
                     onOpenOrganizationModal={onOpenOrganizationModal}
                     onDonorClick={onDonorClick}
+                    onTypeClick={onTypeClick}
                 />
             )}
             {/* Organization Modal */}
@@ -1588,6 +1624,7 @@ const CrisisDataDashboard = ({
                             onOpenProjectModal={onOpenProjectModal}
                             projectIdToKeyMap={projectIdToKeyMap}
                             onDonorClick={onDonorClick}
+                            onTypeClick={onTypeClick}
                         />
                     );
                 })()
