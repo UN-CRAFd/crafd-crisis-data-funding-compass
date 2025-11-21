@@ -289,12 +289,14 @@ export function CountryBadge({ country, className = '', onClick, agencies }: Cou
                     </TooltipTrigger>
                     <TooltipContent 
                         side="top" 
-                        className="max-w-xs p-3 text-xs bg-white !bg-opacity-100 border border-gray-300"
+                        className="max-w-xs p-3 text-xs bg-white !bg-opacity-100 border border-gray-300 !z-[9999]"
+                        sideOffset={8}
                         style={{
                             backgroundColor: 'rgb(255, 255, 255)',
                             color: 'var(--tooltip-text)',
                             border: '1px solid var(--tooltip-border)',
-                            opacity: 1
+                            opacity: 1,
+                            zIndex: 9999
                         }}
                     >
                         <div className="font-semibold mb-1">Financing Agencies:</div>
