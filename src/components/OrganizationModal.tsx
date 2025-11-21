@@ -4,6 +4,18 @@ import { Building2, ChevronDown, ChevronUp, ExternalLink, Package, PackageOpen }
 import { useState } from 'react';
 import ModalOrganizationFocus from './ModalOrganizationFocus';
 import BaseModal, { ModalHeader, CountryBadge } from './BaseModal';
+import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from '@/components/ui/tooltip';
+import { getIconForInvestmentType } from '@/config/investmentTypeIcons';
+
+// Investment type definitions for tooltips
+const INVESTMENT_TYPE_DESCRIPTIONS: Record<string, string> = {
+    'Data Sets & Commons': 'Shared data repositories and standardized datasets that enable analysis and decision-making across the humanitarian sector.',
+    'Infrastructure & Platforms': 'Technical systems, tools, and platforms that support data collection, storage, processing, and sharing.',
+    'Crisis Analytics & Insights': 'Analysis, modeling, and insights derived from data to inform humanitarian response and preparedness.',
+    'Human Capital & Know-how': 'Training, capacity building, and expertise development for humanitarian data practitioners.',
+    'Standards & Coordination': 'Common standards, protocols, and coordination mechanisms for humanitarian data management.',
+    'Learning & Exchange': 'Knowledge sharing, communities of practice, and collaborative learning initiatives.'
+};
 
 interface OrganizationModalProps {
     // Accept the full organization record coming from `public/data/organizations-table.json`
@@ -26,6 +38,8 @@ interface OrganizationModalProps {
     projectIdToKeyMap?: Record<string, string>;
     // Callback when a donor is clicked
     onDonorClick?: (country: string) => void;
+    // Callback when an investment type is clicked
+    onTypeClick?: (type: string) => void;
 }
 
 // Import HeadquartersCountry component - comment out import to disable HQ display
@@ -40,7 +54,8 @@ export default function OrganizationModal({
     loading,
     onOpenProjectModal,
     projectIdToKeyMap = {},
-    onDonorClick
+    onDonorClick,
+    onTypeClick
 }: OrganizationModalProps): React.ReactElement {
 
     // Reusable subheader component - Major sections (Assets, Funding) - smaller than main title
@@ -313,7 +328,7 @@ export default function OrganizationModal({
                         const orgProjects = orgProjectsMap[organization.id];
                         if (!orgProjects || orgProjects.length === 0) return null;
 
-                        return <ModalOrganizationFocus projects={orgProjects} SubHeader={SubHeader} />;
+                        return <ModalOrganizationFocus projects={orgProjects} SubHeader={SubHeader} onTypeClick={onTypeClick} tooltipContainer={tooltipContainer} />;
                     })()}
 
                     {/* Provided Assets - Simple field access matching FIELDS_ORGANIZATIONS */}
