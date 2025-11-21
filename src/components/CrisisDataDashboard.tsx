@@ -4,6 +4,7 @@ import React, { useEffect, useMemo, useState } from 'react';
 // Image import removed because it's not used in this file
 import ChartCard from '@/components/ChartCard';
 import FilterBar from '@/components/FilterBar';
+import NoResultsPopup from '@/components/NoResultsPopup';
 import { SectionHeader, type SectionHeaderProps } from '@/components/SectionHeader';
 import dynamic from 'next/dynamic';
 import OrganizationModal from '@/components/OrganizationModal';
@@ -1427,6 +1428,9 @@ const CrisisDataDashboard = ({
                                                     );
                                                 })}
                                         </div>
+                                        {organizationsWithProjects.length === 0 && activeView === 'table' && (
+                                            <NoResultsPopup onResetFilters={onResetFilters} />
+                                        )}
                                             </TabsContent>
 
                                             <TabsContent value="network" className="mt-0">

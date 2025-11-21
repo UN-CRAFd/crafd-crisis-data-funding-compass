@@ -4,9 +4,10 @@ import React, { useCallback, useEffect, useMemo, useRef, useState } from 'react'
 import { createPortal } from 'react-dom';
 import { forceCollide } from 'd3-force';
 import ForceGraph2D from 'react-force-graph-2d';
-import { Maximize, Minimize, Crosshair, MessageSquare, RotateCcw, AlertCircle } from 'lucide-react';
+import { Maximize, Minimize, Crosshair } from 'lucide-react';
 import type { OrganizationWithProjects } from '../types/airtable';
 import FilterBar from './FilterBar';
+import NoResultsModal from './NoResultsModal';
 import { Button } from './ui/button';
 import { getCountryFlagUrl } from './CountryFlag';
 
@@ -1437,44 +1438,7 @@ const NetworkGraph: React.FC<NetworkGraphProps> = ({
             
                             {/* Empty State Modal - Inside canvas */}
             {graphData.nodes.length === 0 && (
-                <div className="absolute inset-0 flex items-center justify-center bg-slate-50/95 backdrop-blur-sm z-[100]">
-                    <div className="bg-white rounded-lg shadow-xl max-w-sm w-full mx-4 border border-slate-200 animate-in fade-in zoom-in-95 duration-200">
-                        <div className="flex flex-col items-center text-center p-6">
-                            <div className="w-12 h-12 rounded-full bg-slate-100 flex items-center justify-center mb-3">
-                                <AlertCircle className="w-6 h-6 text-slate-400" />
-                            </div>
-                            <h3 className="text-base font-semibold text-slate-900 mb-2">
-                                No Results Found
-                            </h3>
-                            <p className="text-sm text-slate-600 mb-4">
-                                No data matches your current filters. Try adjusting your criteria or reset all filters.
-                            </p>
-                            <div className="flex flex-col gap-2 w-full">
-                                <Button
-                                    variant="outline"
-                                    size="sm"
-                                    onClick={() => {
-                                        if (onResetFilters) {
-                                            onResetFilters();
-                                        }
-                                    }}
-                                    className="flex items-center justify-center gap-2 w-full"
-                                >
-                                    <RotateCcw className="w-4 h-4" />
-                                    Reset Filters
-                                </Button>
-                                <Button
-                                    size="sm"
-                                    onClick={() => window.open('https://airtable.com/apprObB2AsvMwfAAl/pagcre1SPjT0nJxa4/form', '_blank')}
-                                    className="flex items-center justify-center gap-2 bg-[var(--brand-primary)] hover:bg-[var(--brand-primary-dark)] text-white w-full"
-                                >
-                                    <MessageSquare className="w-4 h-4" />
-                                    Send Feedback
-                                </Button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+                <NoResultsModal onResetFilters={onResetFilters} />
             )}
         </div>
         
