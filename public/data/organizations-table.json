@@ -375,6 +375,7 @@
     "fields": {
       "Org Full Name": "Global Pulse",
       "Org Short Name": "UN Global Pulse",
+      "Org Website": "https://www.unglobalpulse.org/",
       "Org Description": "Data Insights for Social & Humanitarian Action, also known as DISHA, is a multi-partner initiative led by UN Global Pulse, the Secretary-General’s Innovation Lab, that aims to accelerate ethical and responsible access to data and artificial intelligence (AI) solutions to unlock social impact at scale.",
       "Provided Data Ecosystem Projects": [
         "rec5RfuXsmtGtPDP8"
@@ -435,6 +436,8 @@
     "fields": {
       "Org Full Name": "University of Stirling",
       "Org Short Name": "UOS",
+      "Org Website": "https://www.stir.ac.uk/",
+      "Org Description": "The University of Stirling builds its academic identity around research-informed social science, environmental studies, and behavioral science, integrating interdisciplinary approaches with a campus designed to support empirical fieldwork, sports science development, and public policy analysis.",
       "Provided Data Ecosystem Projects": [
         "recp4lLg28MQMpBnW"
       ],
@@ -576,7 +579,8 @@
         "rec9HIhsIpPjx48rc",
         "recjbIls3C4riPk4C",
         "rec04YelpRCFjpBV8",
-        "recmoxMiTZoAQ8Cvg"
+        "recmoxMiTZoAQ8Cvg",
+        "recb50ne79iS2TFYz"
       ],
       "Org Donor Agencies": [
         "recAiCKdzASfJMVsG"
@@ -1364,9 +1368,16 @@
     "fields": {
       "Org Full Name": "Coventry University",
       "Org Short Name": "CU",
+      "Org Website": "https://www.coventry.ac.uk/",
+      "Org Description": "Coventry University focuses on applied teaching and industry-linked learning, emphasizing practical skills, professional accreditation, and career-oriented programs in fields such as engineering, business, and health, while expanding its profile through international partnerships and vocational innovation.",
       "Provided Data Ecosystem Projects": [
         "recp4lLg28MQMpBnW"
-      ]
+      ],
+      "Org Donor Agencies": [
+        "reco4Um0k7Tgw2UCK"
+      ],
+      "org_key": "cu",
+      "Org Type": "Academia"
     }
   },
   {
@@ -1374,6 +1385,8 @@
     "fields": {
       "Org Full Name": "Queen's University Belfast",
       "Org Short Name": "QUB",
+      "Org Website": "https://www.qub.ac.uk/",
+      "Org Description": "Queen’s University Belfast positions itself as a research-intensive institution supported by strong engineering, medicine, and social science faculties, contributing to technological innovation, public health research, and regional economic development while maintaining structured links with government and industry.",
       "Provided Data Ecosystem Projects": [
         "recp4lLg28MQMpBnW"
       ],
@@ -1805,6 +1818,8 @@
     "fields": {
       "Org Full Name": "University of St. Andrews",
       "Org Short Name": "uosa",
+      "Org Website": "https://www.st-andrews.ac.uk/",
+      "Org Description": "The University of St Andrews emphasizes rigorous teaching and research across the humanities, sciences, and social sciences, supporting scholarship through small-group instruction, historical academic traditions, and internationally oriented research in disciplines such as international relations, philosophy, and marine science.",
       "Provided Data Ecosystem Projects": [
         "recp4lLg28MQMpBnW"
       ],
@@ -2535,12 +2550,15 @@
     "fields": {
       "Org Full Name": "London School of Economics and Political Science (LSE)",
       "Org Short Name": "LSE",
+      "Org Website": "https://www.lse.ac.uk/",
+      "Org Description": "The London School of Economics and Political Science concentrates on the study of societies, markets, and governance, producing research in economics, politics, sociology, and international relations, and shaping policy through empirical analysis, comparative institutional study, and global-facing intellectual networks.",
       "Provided Data Ecosystem Projects": [
         "recp4lLg28MQMpBnW"
       ],
       "Org Donor Agencies": [
         "recq6gN9R1C4tGmIx"
       ],
+      "org_key": "lse",
       "Org Type": "Academia"
     }
   }

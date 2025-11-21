@@ -51,6 +51,10 @@
       "Investment Type(s)": [
         "Learning & Exchange"
       ],
+      "Investment Theme(s)": [
+        "Conferences"
+      ],
+      "product_key": "regional-ccc",
       "HDX_SOHD": "None"
     }
   },
@@ -976,6 +980,7 @@
       "Investment Type(s)": [
         "Learning & Exchange"
       ],
+      "product_key": "acled-webinar",
       "HDX_SOHD": "None"
     }
   },
@@ -1013,6 +1018,10 @@
       "CRAF’d-Funded Project?": "NO",
       "Investment Type(s)": [
         "Data Sets & Commons"
+      ],
+      "Investment Theme(s)": [
+        "Displacement & Migration Data",
+        "Geospatial Data"
       ],
       "product_key": "missing-maps",
       "HDX_SOHD": "None"
@@ -1175,6 +1184,7 @@
         "Displacement & Migration Data",
         "Geospatial Data"
       ],
+      "product_key": "data-sys",
       "HDX_SOHD": "None"
     }
   },
@@ -1470,6 +1480,7 @@
       "Investment Theme(s)": [
         "Displacement & Migration Analytics"
       ],
+      "product_key": "data-collec",
       "HDX_SOHD": "None"
     }
   },
@@ -1692,6 +1703,7 @@
       "Investment Theme(s)": [
         "Methodological Standards"
       ],
+      "product_key": "data-governance",
       "HDX_SOHD": "None"
     }
   },
@@ -1711,6 +1723,7 @@
       "Investment Theme(s)": [
         "Forums"
       ],
+      "product_key": "fragility",
       "HDX_SOHD": "None"
     }
   },
@@ -1852,7 +1865,7 @@
     "fields": {
       "Project/Product Name": "SIPRI Arms Industry Database",
       "Project Description": "An open library of global arms production data, featuring company listings, production volumes, and export trends for use in disarmament analysis and policy design.\n",
-      "Project Website": "https://www.sipri.org/databases",
+      "Project Website": "https://www.sipri.org/databases/armsindustry",
       "Provider Orgs Full Name": [
         "recDoZP6RL9A8FnDq"
       ],
@@ -1919,7 +1932,7 @@
     "fields": {
       "Project/Product Name": "SIPRI Military Expenditure Database",
       "Project Description": "Offers historical data on military spending by country, allowing trend analysis and budget comparisons for global peace research.\n",
-      "Project Website": "https://www.sipri.org/databases",
+      "Project Website": "https://www.sipri.org/databases/milex",
       "Provider Orgs Full Name": [
         "recDoZP6RL9A8FnDq"
       ],
@@ -2746,6 +2759,7 @@
       "Investment Theme(s)": [
         "Conferences"
       ],
+      "product_key": "hotos",
       "HDX_SOHD": "None"
     }
   },
@@ -2755,6 +2769,9 @@
       "Project/Product Name": "AI for Humanity",
       "Project Description": "PDC’s advanced natural language processing and generative AI is being leveraged to greatly reduce the manual labor and time involved with finding, analyzing, and curating global hazard content. This allows PDC to provide more comprehensive coverage of hazard events around the globe through its DisasterAWARE Pro risk intelligence and early warning platform. These repetitive and time consuming tasks are now performed by AI Hazard Finder with greater speed and accuracy than ever before possible.\n\n",
       "Project Website": "https://www.pdc.org/artificial-intelligence/",
+      "Provider Orgs Full Name": [
+        "recCvRYx3gzUtg9cf"
+      ],
       "Investment Type(s)": [
         "Crisis Analytics & Insights"
       ],
@@ -2907,7 +2924,7 @@
     "fields": {
       "Project/Product Name": "SIPRI Multilateral Peace Operations Database",
       "Project Description": "This database tracks country participation in UN and regional peace operations—including troop numbers, funding, and deployment dates.\n",
-      "Project Website": "https://www.sipri.org/databases",
+      "Project Website": "https://www.sipri.org/databases/pko",
       "Provider Orgs Full Name": [
         "recDoZP6RL9A8FnDq"
       ],
@@ -3269,6 +3286,7 @@
       "Investment Theme(s)": [
         "Conferences"
       ],
+      "product_key": "sfopd",
       "HDX_SOHD": "None"
     }
   },
@@ -4044,6 +4062,7 @@
       "Investment Theme(s)": [
         "Forums"
       ],
+      "product_key": "wfp-innovation",
       "HDX_SOHD": "None"
     }
   },
@@ -4062,6 +4081,7 @@
       "Investment Theme(s)": [
         "Workshops"
       ],
+      "product_key": "worldpop-webinar",
       "HDX_SOHD": "None"
     }
   },
@@ -4187,7 +4207,7 @@
     "fields": {
       "Project/Product Name": "SIPRI Arms Transfers Database",
       "Project Description": "Provides publicly available datasets on the legal transfers of major conventional weapons between countries—widely used in security and disarmament monitoring.\n",
-      "Project Website": "https://www.sipri.org/databases",
+      "Project Website": "https://www.sipri.org/databases/armstransfers",
       "Provider Orgs Full Name": [
         "recDoZP6RL9A8FnDq"
       ],
@@ -4360,7 +4380,7 @@
     "fields": {
       "Project/Product Name": "SIPRI Mapping ATT-Relevant Cooperation and Assistance Activities Database",
       "Project Description": "Tracks international arms transfer assistance and cooperation initiatives. It supports transparency and reporting under the Arms Trade Treaty through searchable data.\n",
-      "Project Website": "https://www.sipri.org/databases",
+      "Project Website": "https://www.att-assistance.org/?page_id=45#headerSlides",
       "Provider Orgs Full Name": [
         "recDoZP6RL9A8FnDq"
       ],
@@ -4789,6 +4809,7 @@
       "Investment Theme(s)": [
         "Conferences"
       ],
+      "product_key": "nyu-views",
       "HDX_SOHD": "None"
     }
   },

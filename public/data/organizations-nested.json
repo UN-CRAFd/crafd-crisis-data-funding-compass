@@ -737,6 +737,7 @@
           "Investment Theme(s)": [
             "Forums"
           ],
+          "product_key": "wfp-innovation",
           "HDX_SOHD": "None"
         },
         "agencies": []
@@ -807,6 +808,10 @@
           "CRAF’d-Funded Project?": "NO",
           "Investment Type(s)": [
             "Data Sets & Commons"
+          ],
+          "Investment Theme(s)": [
+            "Displacement & Migration Data",
+            "Geospatial Data"
           ],
           "product_key": "missing-maps",
           "HDX_SOHD": "None"
@@ -2140,6 +2145,7 @@
     "fields": {
       "Org Full Name": "Global Pulse",
       "Org Short Name": "UN Global Pulse",
+      "Org Website": "https://www.unglobalpulse.org/",
       "Org Description": "Data Insights for Social & Humanitarian Action, also known as DISHA, is a multi-partner initiative led by UN Global Pulse, the Secretary-General’s Innovation Lab, that aims to accelerate ethical and responsible access to data and artificial intelligence (AI) solutions to unlock social impact at scale.",
       "Provided Data Ecosystem Projects": [
         "rec5RfuXsmtGtPDP8"
@@ -2416,6 +2422,8 @@
     "fields": {
       "Org Full Name": "University of Stirling",
       "Org Short Name": "UOS",
+      "Org Website": "https://www.stir.ac.uk/",
+      "Org Description": "The University of Stirling builds its academic identity around research-informed social science, environmental studies, and behavioral science, integrating interdisciplinary approaches with a campus designed to support empirical fieldwork, sports science development, and public policy analysis.",
       "Provided Data Ecosystem Projects": [
         "recp4lLg28MQMpBnW"
       ],
@@ -3300,7 +3308,8 @@
         "rec9HIhsIpPjx48rc",
         "recjbIls3C4riPk4C",
         "rec04YelpRCFjpBV8",
-        "recmoxMiTZoAQ8Cvg"
+        "recmoxMiTZoAQ8Cvg",
+        "recb50ne79iS2TFYz"
       ],
       "Org Donor Agencies": [
         "recAiCKdzASfJMVsG"
@@ -3362,6 +3371,26 @@
             "Geographic Information Systems (GIS)"
           ],
           "product_key": "disaster-aware",
+          "HDX_SOHD": "None"
+        },
+        "agencies": []
+      },
+      {
+        "id": "recb50ne79iS2TFYz",
+        "fields": {
+          "Project/Product Name": "AI for Humanity",
+          "Project Description": "PDC’s advanced natural language processing and generative AI is being leveraged to greatly reduce the manual labor and time involved with finding, analyzing, and curating global hazard content. This allows PDC to provide more comprehensive coverage of hazard events around the globe through its DisasterAWARE Pro risk intelligence and early warning platform. These repetitive and time consuming tasks are now performed by AI Hazard Finder with greater speed and accuracy than ever before possible.\n\n",
+          "Project Website": "https://www.pdc.org/artificial-intelligence/",
+          "Provider Orgs Full Name": [
+            "recCvRYx3gzUtg9cf"
+          ],
+          "Investment Type(s)": [
+            "Crisis Analytics & Insights"
+          ],
+          "Investment Theme(s)": [
+            "AI Models"
+          ],
+          "product_key": "ai-humanity",
           "HDX_SOHD": "None"
         },
         "agencies": []
@@ -3665,7 +3694,7 @@
         "fields": {
           "Project/Product Name": "SIPRI Arms Industry Database",
           "Project Description": "An open library of global arms production data, featuring company listings, production volumes, and export trends for use in disarmament analysis and policy design.\n",
-          "Project Website": "https://www.sipri.org/databases",
+          "Project Website": "https://www.sipri.org/databases/armsindustry",
           "Provider Orgs Full Name": [
             "recDoZP6RL9A8FnDq"
           ],
@@ -3688,7 +3717,7 @@
         "fields": {
           "Project/Product Name": "SIPRI Military Expenditure Database",
           "Project Description": "Offers historical data on military spending by country, allowing trend analysis and budget comparisons for global peace research.\n",
-          "Project Website": "https://www.sipri.org/databases",
+          "Project Website": "https://www.sipri.org/databases/milex",
           "Provider Orgs Full Name": [
             "recDoZP6RL9A8FnDq"
           ],
@@ -3711,7 +3740,7 @@
         "fields": {
           "Project/Product Name": "SIPRI Multilateral Peace Operations Database",
           "Project Description": "This database tracks country participation in UN and regional peace operations—including troop numbers, funding, and deployment dates.\n",
-          "Project Website": "https://www.sipri.org/databases",
+          "Project Website": "https://www.sipri.org/databases/pko",
           "Provider Orgs Full Name": [
             "recDoZP6RL9A8FnDq"
           ],
@@ -3745,6 +3774,7 @@
           "Investment Theme(s)": [
             "Conferences"
           ],
+          "product_key": "sfopd",
           "HDX_SOHD": "None"
         },
         "agencies": []
@@ -3754,7 +3784,7 @@
         "fields": {
           "Project/Product Name": "SIPRI Arms Transfers Database",
           "Project Description": "Provides publicly available datasets on the legal transfers of major conventional weapons between countries—widely used in security and disarmament monitoring.\n",
-          "Project Website": "https://www.sipri.org/databases",
+          "Project Website": "https://www.sipri.org/databases/armstransfers",
           "Provider Orgs Full Name": [
             "recDoZP6RL9A8FnDq"
           ],
@@ -3777,7 +3807,7 @@
         "fields": {
           "Project/Product Name": "SIPRI Mapping ATT-Relevant Cooperation and Assistance Activities Database",
           "Project Description": "Tracks international arms transfer assistance and cooperation initiatives. It supports transparency and reporting under the Arms Trade Treaty through searchable data.\n",
-          "Project Website": "https://www.sipri.org/databases",
+          "Project Website": "https://www.att-assistance.org/?page_id=45#headerSlides",
           "Provider Orgs Full Name": [
             "recDoZP6RL9A8FnDq"
           ],
@@ -4850,6 +4880,7 @@
           "Investment Theme(s)": [
             "Conferences"
           ],
+          "product_key": "nyu-views",
           "HDX_SOHD": "None"
         },
         "agencies": []
@@ -5617,6 +5648,10 @@
           "Investment Type(s)": [
             "Data Sets & Commons"
           ],
+          "Investment Theme(s)": [
+            "Displacement & Migration Data",
+            "Geospatial Data"
+          ],
           "product_key": "missing-maps",
           "HDX_SOHD": "None"
         },
@@ -6374,6 +6409,10 @@
           "Investment Type(s)": [
             "Data Sets & Commons"
           ],
+          "Investment Theme(s)": [
+            "Displacement & Migration Data",
+            "Geospatial Data"
+          ],
           "product_key": "missing-maps",
           "HDX_SOHD": "None"
         },
@@ -6416,6 +6455,7 @@
           "Investment Theme(s)": [
             "Conferences"
           ],
+          "product_key": "hotos",
           "HDX_SOHD": "None"
         },
         "agencies": []
@@ -6501,6 +6541,7 @@
           "Investment Type(s)": [
             "Learning & Exchange"
           ],
+          "product_key": "acled-webinar",
           "HDX_SOHD": "None"
         },
         "agencies": []
@@ -6842,9 +6883,9 @@
       {
         "id": "recAXDKxEbXsaHav4",
         "fields": {
-          "Agency/Department Name": "Unspecified Agency",
+          "Agency/Department Name": "Clinton Health Access Initiative",
           "Agency Data Portal": "https://www.clintonhealthaccess.org/",
-          "Country Name": "Clinton Health Acess Initiative"
+          "Country Name": "Non-State Actor"
         }
       }
     ],
@@ -7009,15 +7050,16 @@
           "Investment Theme(s)": [
             "Workshops"
           ],
+          "product_key": "worldpop-webinar",
           "HDX_SOHD": "None"
         },
         "agencies": []
       }
     ],
     "donor_countries": [
-      "Clinton Health Acess Initiative",
       "Foundation",
       "International Financial Institutions (IFIs)",
+      "Non-State Actor",
       "Norway",
       "USA",
       "United Kingdom"
@@ -8091,11 +8133,26 @@
     "fields": {
       "Org Full Name": "Coventry University",
       "Org Short Name": "CU",
+      "Org Website": "https://www.coventry.ac.uk/",
+      "Org Description": "Coventry University focuses on applied teaching and industry-linked learning, emphasizing practical skills, professional accreditation, and career-oriented programs in fields such as engineering, business, and health, while expanding its profile through international partnerships and vocational innovation.",
       "Provided Data Ecosystem Projects": [
         "recp4lLg28MQMpBnW"
-      ]
+      ],
+      "Org Donor Agencies": [
+        "reco4Um0k7Tgw2UCK"
+      ],
+      "org_key": "cu",
+      "Org Type": "Academia"
     },
-    "agencies": [],
+    "agencies": [
+      {
+        "id": "reco4Um0k7Tgw2UCK",
+        "fields": {
+          "Agency/Department Name": "Unspecified Agency",
+          "Country Name": "United Kingdom"
+        }
+      }
+    ],
     "projects": [
       {
         "id": "recp4lLg28MQMpBnW",
@@ -8154,7 +8211,9 @@
         ]
       }
     ],
-    "donor_countries": []
+    "donor_countries": [
+      "United Kingdom"
+    ]
   },
   {
     "id": "recapsch9j1uuLKoo",
@@ -8162,6 +8221,8 @@
     "fields": {
       "Org Full Name": "Queen's University Belfast",
       "Org Short Name": "QUB",
+      "Org Website": "https://www.qub.ac.uk/",
+      "Org Description": "Queen’s University Belfast positions itself as a research-intensive institution supported by strong engineering, medicine, and social science faculties, contributing to technological innovation, public health research, and regional economic development while maintaining structured links with government and industry.",
       "Provided Data Ecosystem Projects": [
         "recp4lLg28MQMpBnW"
       ],
@@ -10886,6 +10947,8 @@
     "fields": {
       "Org Full Name": "University of St. Andrews",
       "Org Short Name": "uosa",
+      "Org Website": "https://www.st-andrews.ac.uk/",
+      "Org Description": "The University of St Andrews emphasizes rigorous teaching and research across the humanities, sciences, and social sciences, supporting scholarship through small-group instruction, historical academic traditions, and internationally oriented research in disciplines such as international relations, philosophy, and marine science.",
       "Provided Data Ecosystem Projects": [
         "recp4lLg28MQMpBnW"
       ],
@@ -11042,6 +11105,7 @@
           "Investment Theme(s)": [
             "Forums"
           ],
+          "product_key": "fragility",
           "HDX_SOHD": "None"
         },
         "agencies": []
@@ -11867,6 +11931,7 @@
             "Displacement & Migration Data",
             "Geospatial Data"
           ],
+          "product_key": "data-sys",
           "HDX_SOHD": "None"
         },
         "agencies": []
@@ -11886,6 +11951,7 @@
           "Investment Theme(s)": [
             "Displacement & Migration Analytics"
           ],
+          "product_key": "data-collec",
           "HDX_SOHD": "None"
         },
         "agencies": []
@@ -11905,6 +11971,7 @@
           "Investment Theme(s)": [
             "Methodological Standards"
           ],
+          "product_key": "data-governance",
           "HDX_SOHD": "None"
         },
         "agencies": []
@@ -14939,6 +15006,10 @@
           "Investment Type(s)": [
             "Learning & Exchange"
           ],
+          "Investment Theme(s)": [
+            "Conferences"
+          ],
+          "product_key": "regional-ccc",
           "HDX_SOHD": "None"
         },
         "agencies": []
@@ -15678,12 +15749,15 @@
     "fields": {
       "Org Full Name": "London School of Economics and Political Science (LSE)",
       "Org Short Name": "LSE",
+      "Org Website": "https://www.lse.ac.uk/",
+      "Org Description": "The London School of Economics and Political Science concentrates on the study of societies, markets, and governance, producing research in economics, politics, sociology, and international relations, and shaping policy through empirical analysis, comparative institutional study, and global-facing intellectual networks.",
       "Provided Data Ecosystem Projects": [
         "recp4lLg28MQMpBnW"
       ],
       "Org Donor Agencies": [
         "recq6gN9R1C4tGmIx"
       ],
+      "org_key": "lse",
       "Org Type": "Academia"
     },
     "agencies": [

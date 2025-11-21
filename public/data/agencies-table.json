@@ -265,9 +265,9 @@
   {
     "id": "recAXDKxEbXsaHav4",
     "fields": {
-      "Agency/Department Name": "Unspecified Agency",
+      "Agency/Department Name": "Clinton Health Access Initiative",
       "Agency Data Portal": "https://www.clintonhealthaccess.org/",
-      "Country Name": "Clinton Health Acess Initiative"
+      "Country Name": "Non-State Actor"
     }
   },
   {
@@ -1044,14 +1044,6 @@
     "fields": {
       "Agency/Department Name": "Unspecified Agency ",
       "Country Name": "Iceland"
-    }
-  },
-  {
-    "id": "recfjNkXZXtdaH5xv",
-    "fields": {
-      "Agency/Department Name": "Unspecified Agency",
-      "Agency Data Portal": "https://www.ekfs.de/en",
-      "Country Name": "Else Kröner-Fresenius-Stiftung"
     }
   },
   {
