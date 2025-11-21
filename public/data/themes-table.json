@@ -138,10 +138,28 @@
       ],
       "Investment Themes [Text Key]": "Workshops",
       "Data Ecosystem Projects": [
-        "rech8GCismNX3Bm8p"
+        "rech8GCismNX3Bm8p",
+        "recqtLfrSvDFeeKb9"
       ],
       "theme_key": "workshops",
       "theme_description": "Interactive sessions designed to build practical skills and knowledge through hands-on activities and group participation."
+    }
+  },
+  {
+    "id": "rec74U3H8DTDUdCtu",
+    "fields": {
+      "THEME_ID": "rec74U3H8DTDUdCtu",
+      "Linked Investment Type": [
+        "recqH1EJ0zW8l9lqn"
+      ],
+      "Investment Type": [
+        "Learning & Exchange"
+      ],
+      "Investment Themes [Text Key]": "Webinar",
+      "Data Ecosystem Projects": [
+        "recqtLfrSvDFeeKb9",
+        "recCkgL7i4kRmP0PL"
+      ]
     }
   },
   {
@@ -231,7 +249,6 @@
       "Investment Themes [Text Key]": "Capacity Building",
       "Data Ecosystem Projects": [
         "recIUSUS3NNXaMHCQ",
-        "recD0o9DgLleR3ctz",
         "recuMPe1WRudzeyXf",
         "reczwfqv4kuJclB0U",
         "recqvGzOfmdkjYOHe",
@@ -394,7 +411,9 @@
       "Data Ecosystem Projects": [
         "rechQ1azyTpypEDEy",
         "recZaSDcZgIUtalO5",
-        "rec96xC14xTkyyKlP"
+        "rec96xC14xTkyyKlP",
+        "recJye4S746MWWmW6",
+        "recMOmPSS6OoIxqAM"
       ],
       "theme_key": "standards",
       "theme_description": "Establishes best practices to ensure consistency, reliability, and quality in how information is gathered and analyzed across projects."
@@ -486,8 +505,6 @@
         "rec5GA5F1UPlXATSj",
         "recEuWdBixgTpQKhR",
         "recAeviz1XjLC8V6i",
-        "recD0o9DgLleR3ctz",
-        "rece4fDBOtjCywl9q",
         "recueXHi1BfJrz30y",
         "recyn1h3FptgV2ZAv"
       ],
@@ -562,7 +579,11 @@
       "Investment Themes [Text Key]": "Conferences",
       "Data Ecosystem Projects": [
         "rech8GCismNX3Bm8p",
-        "recdGuPPf12Osu2Tw"
+        "recdGuPPf12Osu2Tw",
+        "reczPiGnmhBrolMGr",
+        "recgpKcJltAQO2pbh",
+        "recax9xDItng1V4ZL",
+        "rec0BNm6Y7xM6v7Gl"
       ],
       "theme_key": "conf",
       "theme_description": "Brings people together to share knowledge, insights, and best practices through expert-led sessions and collaborative discussions."
@@ -599,7 +620,8 @@
       ],
       "Investment Themes [Text Key]": "Gender Analytics",
       "Data Ecosystem Projects": [
-        "recO3RZZ7IEA88GnQ"
+        "recO3RZZ7IEA88GnQ",
+        "recGVHndBPIvMpuHb"
       ],
       "theme_key": "gender-analytics",
       "theme_description": "Gender Analytics applies data-driven insights to understand how crises impact different genders, supporting more equitable and effective crisis response strategies."
@@ -756,7 +778,6 @@
       "Investment Themes [Text Key]": "AI & ML Infrastructure",
       "Data Ecosystem Projects": [
         "rec5zVtFYWKUXASIr",
-        "recJyonPtboyfoLet",
         "recS70dZaWiddCf5J",
         "recv5dYsIn6eMs7MI"
       ],
@@ -857,7 +878,6 @@
       ],
       "Investment Themes [Text Key]": "Gender Data",
       "Data Ecosystem Projects": [
-        "recGVHndBPIvMpuHb",
         "rechQ1azyTpypEDEy",
         "rec9tb7ISjeo7Sq78",
         "recGoW02CMXhVQ00S",
@@ -985,7 +1005,6 @@
       "Investment Themes [Text Key]": "Water, Sanitation & Hygiene (WASH) Data",
       "Data Ecosystem Projects": [
         "rec4x8zaZtHkZpdrK",
-        "recJye4S746MWWmW6",
         "recgftq4GZElVtfi6",
         "recQMdm14niuRSFQp"
       ],
@@ -1064,7 +1083,9 @@
         "recEKzVdOqCJVhqrg",
         "recEf0pdKsN1Gbvo8",
         "recLN9L7RGRz4p1zM",
-        "recGoW02CMXhVQ00S"
+        "recGoW02CMXhVQ00S",
+        "recF4Js3Gn54EPxbP",
+        "recD0hG4x9w340oYA"
       ],
       "theme_key": "displacement-migration",
       "theme_description": "This area focuses on collections of information related to population movements and migration patterns."
@@ -1139,8 +1160,6 @@
         "rec3SUNKdqZWbEktL",
         "reczxU9NrSDw2mJcN",
         "recXZCOUpEBDjWHOu",
-        "receXQgibfVmjvmeB",
-        "recjAd7jOVvlh7mnp",
         "rec7Gm0sUCCMECxFU",
         "rec6S0tX5hnP9I5DG",
         "recpaU5vlkr1O5EVC"
@@ -1203,9 +1222,10 @@
         "recQubJTGSwZoqzix",
         "recgftq4GZElVtfi6",
         "recAeviz1XjLC8V6i",
-        "recD0o9DgLleR3ctz",
         "rec36dX7WTnSmv9Yo",
-        "rec9ZvuALWuRRSN5P"
+        "rec9ZvuALWuRRSN5P",
+        "recF4Js3Gn54EPxbP",
+        "recD0hG4x9w340oYA"
       ],
       "theme_key": "geo",
       "theme_description": "This area focuses on the collection, sharing, and use of location-based information to support spatial analysis and decision-making."
@@ -1248,7 +1268,6 @@
         "rec4x8zaZtHkZpdrK",
         "recz2ZsyM0B05BdFP",
         "recxuOxX8VxssdS6k",
-        "recjAd7jOVvlh7mnp",
         "recs629pSu4Ei5145",
         "recZmszPiwWGvrYee",
         "recLqIa10HXfvELNB"
@@ -1353,7 +1372,6 @@
         "reccI6M0kWMcanXsD",
         "recLN9L7RGRz4p1zM",
         "recnoFBXdvLa7XJHw",
-        "recD0o9DgLleR3ctz",
         "rec36dX7WTnSmv9Yo"
       ],
       "theme_key": "fsd",
@@ -1473,14 +1491,14 @@
         "recgbAUAt9auV97KC",
         "recJye4S746MWWmW6",
         "reckhF1PTR2hh135J",
-        "rece4fDBOtjCywl9q",
         "recO3RZZ7IEA88GnQ",
         "recv5EjAR3NgCKSaI",
         "recXcSKhSy2s7tunj",
         "recYR5aZ0pWEFezdF",
         "recmH2oywWDYooamX",
         "reckrBbkioEQP7wtd",
-        "recaY3lDEu5I8aL6D"
+        "recaY3lDEu5I8aL6D",
+        "recjAd7jOVvlh7mnp"
       ],
       "theme_key": "datashare",
       "theme_description": "Solutions that enable organizations to efficiently store, retrieve, and share data across platforms and systems."
@@ -1514,7 +1532,8 @@
       "Investment Themes [Text Key]": "Displacement Analytics",
       "Data Ecosystem Projects": [
         "rec8taCKOmbZu5s4Z",
-        "rec28WeSKDEQ5wx45"
+        "rec28WeSKDEQ5wx45",
+        "recJ1uv7EMf5HbXfr"
       ],
       "theme_key": "displacement",
       "theme_description": "Analyzes patterns and impacts of population displacement during crises to inform response strategies."
@@ -1562,7 +1581,8 @@
         "recaApmxiLnw1JnZf",
         "recFk4AqE3TR83nNo",
         "recxNVM0HeC0mSQyk",
-        "rec4aulcundpJZOwl"
+        "rec4aulcundpJZOwl",
+        "recxuDvQE71WPmpJV"
       ],
       "theme_key": "conflict-analytics",
       "theme_description": "This offering provides data-driven insights to help organizations understand, anticipate, and respond to conflict situations within broader crisis contexts."
@@ -1608,6 +1628,10 @@
         "Learning & Exchange"
       ],
       "Investment Themes [Text Key]": "Forums",
+      "Data Ecosystem Projects": [
+        "recN5qhUuev0DlKt8",
+        "recq78QHoffIcjEmO"
+      ],
       "theme_key": "forum",
       "theme_description": "Forums provide a space for participants to share knowledge, ask questions, and engage in discussions to enhance collective learning and exchange of ideas."
     }
@@ -1737,7 +1761,9 @@
       ],
       "Investment Themes [Text Key]": "Data Documentation & Metadata",
       "Data Ecosystem Projects": [
-        "recv5EjAR3NgCKSaI"
+        "recv5EjAR3NgCKSaI",
+        "recjAd7jOVvlh7mnp",
+        "recJye4S746MWWmW6"
       ],
       "theme_key": "datadoc",
       "theme_description": "Ensures that information about data is accurately recorded and accessible, supporting effective data management and platform interoperability."
@@ -1799,7 +1825,6 @@
       ],
       "Investment Themes [Text Key]": "Data Management & Visualization",
       "Data Ecosystem Projects": [
-        "recGVHndBPIvMpuHb",
         "recogMAjsbKV95Pqs"
       ],
       "theme_description": "Organizes, cleans, and structures data while developing visualization tools and dashboards that enhance accessibility, quality, and operational use across organizations."
@@ -1820,8 +1845,7 @@
         "recr5hGDgBiAH4xSm",
         "rec4SqufwyxLeeDM4",
         "recVj2ULsOWhPFQ19",
-        "recSvtWQnSvfNoXdt",
-        "rece4fDBOtjCywl9q"
+        "recSvtWQnSvfNoXdt"
       ],
       "theme_key": "envdata",
       "theme_description": "Provides access to information and resources related to environmental conditions, trends, and impacts."
@@ -1856,7 +1880,7 @@
       "Investment Type": [
         "Crisis Analytics & Insights"
       ],
-      "Investment Themes [Text Key]": "Anticipatory and Early Action Forecasts",
+      "Investment Themes [Text Key]": "Anticipatory & Early Action Forecasts",
       "Data Ecosystem Projects": [
         "recpP1KGKcmcpy2jo",
         "recf0UvW6LzObKXGC",
@@ -1883,7 +1907,7 @@
         "recGG8gTf4t6l8Mue"
       ],
       "theme_key": "aea",
-      "theme_description": "Using data-driven analysis to predict and respond to crises before they escalate, enabling timely and effective humanitarian action."
+      "theme_description": "Using data-driven analysis to predict and respond to crises before they escalate, enabling timely and effective crisis action."
     }
   },
   {
