@@ -242,6 +242,17 @@ export default function OrganizationModal({
             orgType = orgTypeRaw[0];
         }
 
+        // Derive displayName here as well for use in the body
+        const displayName = (typeof fields['Org Full Name'] === 'string' && fields['Org Full Name'])
+            || (typeof fields['Org Short Name'] === 'string' && fields['Org Short Name'])
+            || organization.id;
+
+        // Detect United Nations organizations (simple heuristics)
+        const isUN = /united nation/i.test(String(displayName))
+            || /united nation/i.test(String(orgType))
+            || /\bUN\b/.test(String(displayName))
+            || /\bUN\b/.test(String(orgType));
+
         return (
             <div className="px-6 sm:px-8 pt-4 sm:pt-5 pb-6 sm:pb-8 font-roboto flex flex-col h-full">
                 {/* Organization Type Badge */}
@@ -448,10 +459,16 @@ export default function OrganizationModal({
                 <div className="border-t border-gray-200 pt-4 pb-4 mt-auto">
                     <div className="text-xs text-gray-400 uppercase tracking-wider font-medium mb-2">NOTES</div>
                     <div className="text-xs text-gray-500 leading-snug space-y-1">
-                        <div className="flex items-start">
-                            <span className="text-gray-400 mr-2 shrink-0">•</span>
-                            <span>All insights are based on publicly accessible information and data.</span>
-                        </div>
+                            <div className="flex items-start">
+                                <span className="text-gray-400 mr-2 shrink-0">•</span>
+                                <span>All insights are based on publicly accessible information and data.</span>
+                            </div>
+                        {isUN && (
+                            <div className="flex items-start">
+                                <span className="text-gray-400 mr-2 shrink-0">•</span>
+                                <span>For United Nations (UN) Organizations, donors were limited to the top 15 for simplification.</span>
+                            </div>
+                        )}
                     </div>
                 </div>
             </div>
