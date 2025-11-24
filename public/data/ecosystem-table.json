@@ -3031,6 +3031,25 @@
     }
   },
   {
+    "id": "recek6dy0wTNEQ64L",
+    "fields": {
+      "Project/Product Name": "Peace Facilitation Organizations (PFOs) Mapping",
+      "Project Description": "Since the end of World War II, the practice of peace mediation was restricted to the diplomatic circles and the international organizations, such as the UN. Nevertheless, in the last decades, the field has seen the emergence of a new group of non-governmental actors that we have called Peace Facilitation Organizations (PFOs). PFOs are defined as follows: independent organizations which work consists in facilitating, advising, supporting or implementing peace mediation or dialogue initiatives. The PFOs mapping dataset maps the PFOs that currently operate worldwide, and provides information on their background, structure, approach, modus operandi, funding model and other characteristics. The mapping aims to provide some light to this field and give name to these organizations, mostly from Western countries, that have professionalised peace mediation and brought a certain degree of dexterity and standardisation to peace processes.\n",
+      "Project Website": "https://www.prio.org/data/34",
+      "Provider Orgs Full Name": [
+        "recHAqTQikIG8K4tD"
+      ],
+      "Investment Type(s)": [
+        "Data Sets & Commons"
+      ],
+      "Investment Theme(s)": [
+        "3W (Who does What & Where) Data"
+      ],
+      "product_key": "pfo-mapping",
+      "HDX_SOHD": "None"
+    }
+  },
+  {
     "id": "recf0UvW6LzObKXGC",
     "fields": {
       "Project/Product Name": "Global Crisis Risk Platform (GCRP)",
