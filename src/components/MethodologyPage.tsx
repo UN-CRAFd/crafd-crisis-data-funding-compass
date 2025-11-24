@@ -5,6 +5,7 @@ import PageHeader from '@/components/PageHeader';
 import { SectionHeader } from '@/components/SectionHeader';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
+import { Input } from '@/components/ui/input';
 import labels from '@/config/labels.json';
 import { 
     BookOpen, 
@@ -19,7 +20,9 @@ import {
     Search,
     MessageCircle,
     TrendingUp,
-    Shield
+    Shield,
+    Filter,
+    ChevronDown
 } from 'lucide-react';
 
 interface MethodologyPageProps {
@@ -393,9 +396,158 @@ export default function MethodologyPage({ logoutButton }: MethodologyPageProps) 
                                         </div>
                                         </div>
                                         
-                                        {/* Image Placeholder */}
-                                        <div className="bg-slate-100 rounded-lg p-8 border border-slate-200 flex items-center justify-center min-h-[400px]">
-                                            <p className="text-slate-400 text-sm">Screenshot: Filter Logic & Query Interface</p>
+                                        {/* Interactive Filter Logic Flow */}
+                                        <div className="bg-white rounded-lg p-6 border-2 border-slate-200 shadow-sm">
+                                            <h4 className="text-sm font-semibold text-slate-700 mb-4 flex items-center gap-2">
+                                                <Filter className="w-4 h-4" style={{ color: 'var(--brand-primary)' }} />
+                                                Filter Logic Flow Diagram
+                                            </h4>
+                                            
+                                            {/* Flow Diagram */}
+                                            <div className="space-y-3 text-xs">
+                                                {/* Step 1: Donor Check */}
+                                                <div className="bg-blue-50 border-2 border-blue-300 rounded-lg p-3">
+                                                    <div className="font-bold text-blue-900 mb-2 flex items-center gap-2">
+                                                        <span className="bg-blue-600 text-white rounded-full w-5 h-5 flex items-center justify-center text-xs">1</span>
+                                                        Donor Filter (Gatekeeper)
+                                                    </div>
+                                                    <div className="pl-7 space-y-1 text-blue-800">
+                                                        <div>🔍 Check: Does org have <strong>ALL</strong> selected donors?</div>
+                                                        <div className="bg-white rounded px-2 py-1 border border-blue-200 font-mono text-[10px]">
+                                                            donors.every(d → org.donors.includes(d))
+                                                        </div>
+                                                        <div className="flex gap-2 mt-2">
+                                                            <div className="flex-1 bg-green-100 border border-green-300 rounded px-2 py-1 text-green-800">
+                                                                ✓ YES → Continue to Step 2
+                                                            </div>
+                                                            <div className="flex-1 bg-red-100 border border-red-300 rounded px-2 py-1 text-red-800">
+                                                                ✗ NO → Hide org entirely
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                                <div className="flex justify-center">
+                                                    <div className="w-0.5 h-4 bg-slate-300"></div>
+                                                </div>
+
+                                                {/* Step 2: Search Check */}
+                                                <div className="bg-amber-50 border-2 border-amber-300 rounded-lg p-3">
+                                                    <div className="font-bold text-amber-900 mb-2 flex items-center gap-2">
+                                                        <span className="bg-amber-600 text-white rounded-full w-5 h-5 flex items-center justify-center text-xs">2</span>
+                                                        Search Filter Check
+                                                    </div>
+                                                    <div className="pl-7 space-y-1 text-amber-800">
+                                                        <div>🔍 Check: Does org name match search?</div>
+                                                        <div className="bg-white rounded px-2 py-1 border border-amber-200 font-mono text-[10px]">
+                                                            org.name.includes(searchQuery)
+                                                        </div>
+                                                        <div className="mt-2 space-y-2">
+                                                            <div className="bg-green-100 border border-green-300 rounded px-2 py-1.5 text-green-800">
+                                                                <div className="font-semibold mb-1">✓ YES → Show ALL org projects</div>
+                                                                <div className="text-[10px] pl-4">Then filter by Type/Theme if selected</div>
+                                                            </div>
+                                                            <div className="bg-orange-100 border border-orange-300 rounded px-2 py-1.5 text-orange-800">
+                                                                <div className="font-semibold mb-1">✗ NO → Check each project</div>
+                                                                <div className="text-[10px] pl-4">Go to Step 3 for project-level filtering</div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                                <div className="flex justify-center">
+                                                    <div className="w-0.5 h-4 bg-slate-300"></div>
+                                                </div>
+
+                                                {/* Step 3: Project-Level Filters */}
+                                                <div className="bg-purple-50 border-2 border-purple-300 rounded-lg p-3">
+                                                    <div className="font-bold text-purple-900 mb-2 flex items-center gap-2">
+                                                        <span className="bg-purple-600 text-white rounded-full w-5 h-5 flex items-center justify-center text-xs">3</span>
+                                                        Project-Level Filters
+                                                    </div>
+                                                    <div className="pl-7 space-y-2 text-purple-800">
+                                                        <div className="bg-white rounded px-3 py-2 border border-purple-200">
+                                                            <div className="font-semibold mb-1">A. Search (if org didn't match)</div>
+                                                            <div className="text-[10px] font-mono bg-slate-50 px-2 py-1 rounded">
+                                                                project.name.includes(searchQuery)
+                                                            </div>
+                                                            <div className="mt-1 text-[10px]">Must match for project to be visible</div>
+                                                        </div>
+                                                        
+                                                        <div className="bg-white rounded px-3 py-2 border border-purple-200">
+                                                            <div className="font-semibold mb-1 flex items-center gap-1">
+                                                                B. Type Filter <span className="text-green-600">(OR logic)</span>
+                                                            </div>
+                                                            <div className="text-[10px] font-mono bg-slate-50 px-2 py-1 rounded">
+                                                                project.types.some(t → selectedTypes.includes(t))
+                                                            </div>
+                                                            <div className="mt-1 text-[10px]">Project needs ≥1 matching type</div>
+                                                        </div>
+                                                        
+                                                        <div className="bg-white rounded px-3 py-2 border border-purple-200">
+                                                            <div className="font-semibold mb-1 flex items-center gap-1">
+                                                                C. Theme Filter <span className="text-amber-600">(AND logic)</span>
+                                                            </div>
+                                                            <div className="text-[10px] font-mono bg-slate-50 px-2 py-1 rounded">
+                                                                selectedThemes.every(th → project.themes.includes(th))
+                                                            </div>
+                                                            <div className="mt-1 text-[10px]">Project needs ALL selected themes</div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                                <div className="flex justify-center">
+                                                    <div className="w-0.5 h-4 bg-slate-300"></div>
+                                                </div>
+
+                                                {/* Step 4: Final Decision */}
+                                                <div className="bg-slate-50 border-2 border-slate-300 rounded-lg p-3">
+                                                    <div className="font-bold text-slate-900 mb-2 flex items-center gap-2">
+                                                        <span className="bg-slate-600 text-white rounded-full w-5 h-5 flex items-center justify-center text-xs">4</span>
+                                                        Final Decision
+                                                    </div>
+                                                    <div className="pl-7 space-y-2 text-slate-700">
+                                                        <div className="bg-green-50 border border-green-300 rounded px-2 py-1.5">
+                                                            <div className="font-semibold text-green-800">Show Organization IF:</div>
+                                                            <ul className="text-[10px] mt-1 space-y-0.5 text-green-700">
+                                                                <li>• Passes donor check (Step 1)</li>
+                                                                <li>• AND has ≥1 visible project after filtering</li>
+                                                                <li>• OR org name matches search (shows all projects)</li>
+                                                            </ul>
+                                                        </div>
+                                                        <div className="bg-red-50 border border-red-300 rounded px-2 py-1.5">
+                                                            <div className="font-semibold text-red-800">Hide Organization IF:</div>
+                                                            <ul className="text-[10px] mt-1 space-y-0.5 text-red-700">
+                                                                <li>• Fails donor check</li>
+                                                                <li>• OR has 0 visible projects after filtering</li>
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                                {/* Key Insights */}
+                                                <div className="bg-gradient-to-r from-blue-50 to-purple-50 border-2 border-indigo-300 rounded-lg p-3 mt-4">
+                                                    <div className="font-bold text-indigo-900 mb-2 text-xs">🔑 Key Insights:</div>
+                                                    <ul className="space-y-1 text-[10px] text-indigo-800">
+                                                        <li className="flex gap-2">
+                                                            <span className="font-bold">1.</span>
+                                                            <span><strong>Donor filter</strong> is a gatekeeper — fails = entire org hidden</span>
+                                                        </li>
+                                                        <li className="flex gap-2">
+                                                            <span className="font-bold">2.</span>
+                                                            <span><strong>Search on org name</strong> shows ALL org projects (bypasses project search)</span>
+                                                        </li>
+                                                        <li className="flex gap-2">
+                                                            <span className="font-bold">3.</span>
+                                                            <span><strong>Type uses OR</strong> (any match) → <strong>Theme uses AND</strong> (all match)</span>
+                                                        </li>
+                                                        <li className="flex gap-2">
+                                                            <span className="font-bold">4.</span>
+                                                            <span>Filters cascade: Donor → Search → Type → Theme</span>
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                            </div>
                                         </div>
                                     </div>
                                 </TabsContent>
@@ -439,9 +591,14 @@ export default function MethodologyPage({ logoutButton }: MethodologyPageProps) 
                                         </div>
                                         </div>
                                         
-                                        {/* Image Placeholder */}
-                                        <div className="bg-slate-100 rounded-lg p-8 border border-slate-200 flex items-center justify-center min-h-[400px]">
-                                            <p className="text-slate-400 text-sm">Screenshot: Network Graph Visualization</p>
+                                        {/* Network Graph Screenshot */}
+                                        <div className="bg-white rounded-lg p-8 border border-none flex items-center justify-center min-h-[400px]">
+                                            <img
+                                                src="/screenshots/network.png"
+                                                alt="Network Graph Visualization"
+                                                className="max-w-full max-h-[520px] rounded-md object-contain"
+                                                loading="lazy"
+                                            />
                                         </div>
                                     </div>
                                 </TabsContent>
