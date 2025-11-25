@@ -139,7 +139,8 @@
       "Investment Themes [Text Key]": "Workshops",
       "Data Ecosystem Projects": [
         "rech8GCismNX3Bm8p",
-        "recqtLfrSvDFeeKb9"
+        "recqtLfrSvDFeeKb9",
+        "recGFetocWutnDtYV"
       ],
       "theme_key": "workshops",
       "theme_description": "Interactive sessions designed to build practical skills and knowledge through hands-on activities and group participation."
@@ -525,11 +526,10 @@
       "Investment Themes [Text Key]": "Data Collection",
       "Data Ecosystem Projects": [
         "recONFtYpO5v2qk7s",
-        "rech8GCismNX3Bm8p",
         "recv5dYsIn6eMs7MI"
       ],
       "theme_key": "collect",
-      "theme_description": "Enables the reliable gathering and aggregation of information from diverse sources to support robust digital operations."
+      "theme_description": "The tools; they are using Enables the reliable gathering and aggregation of information from diverse sources to support robust digital operations."
     }
   },
   {
@@ -583,7 +583,8 @@
         "reczPiGnmhBrolMGr",
         "recgpKcJltAQO2pbh",
         "recax9xDItng1V4ZL",
-        "rec0BNm6Y7xM6v7Gl"
+        "rec0BNm6Y7xM6v7Gl",
+        "recGFetocWutnDtYV"
       ],
       "theme_key": "conf",
       "theme_description": "Brings people together to share knowledge, insights, and best practices through expert-led sessions and collaborative discussions."
@@ -1606,7 +1607,6 @@
         "reck0qeeLf1nGLbap",
         "recbmA6Lmrr5AfAHJ",
         "rec45gS90ejbQe8V3",
-        "rech8GCismNX3Bm8p",
         "recfUQ0LgTnaydzWg",
         "recxPDSfMPQYhiw5Q",
         "recfjAhO2DxCjgEgM",
