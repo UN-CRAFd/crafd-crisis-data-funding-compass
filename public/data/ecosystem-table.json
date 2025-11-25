@@ -980,6 +980,9 @@
       "Investment Type(s)": [
         "Learning & Exchange"
       ],
+      "Investment Theme(s)": [
+        "Webinar"
+      ],
       "product_key": "acled-webinar",
       "HDX_SOHD": "None"
     }
@@ -4098,7 +4101,8 @@
         "Learning & Exchange"
       ],
       "Investment Theme(s)": [
-        "Workshops"
+        "Workshops",
+        "Webinar"
       ],
       "product_key": "worldpop-webinar",
       "HDX_SOHD": "None"
