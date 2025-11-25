@@ -86,66 +86,9 @@ export default function MethodologyPage({ logoutButton }: MethodologyPageProps) 
                     </div>
 
                     {/* Overview Cards */}
-                    <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-                        <Card className="!border-0 bg-white hover:shadow-lg transition-all duration-300">
-                            <CardHeader className="pb-3">
-                                <CardTitle>
-                                <SectionHeader
-                                    icon={<Target style={{ color: 'var(--brand-primary)' }} />}
-                                    title="Objective"
-                                />
-                            </CardTitle>
-                            </CardHeader>
-                            <CardContent>
-                                <p className="text-sm text-slate-600 leading-relaxed">
-                                    Provide transparent, systematic insights into crisis data funding to support evidence-based decision-making in the humanitarian sector.
-                                </p>
-                            </CardContent>
-                        </Card>
-
-                        <Card className="!border-0 bg-white hover:shadow-lg transition-all duration-300">
-                            <CardHeader className="pb-3">
-                                <CardTitle>
-                                <SectionHeader
-                                    icon={<Database style={{ color: 'var(--brand-primary)' }} />}
-                                    title="Data Sources"
-                                />
-                            </CardTitle>
-                            </CardHeader>
-                            <CardContent>
-                                <p className="text-sm text-slate-600 leading-relaxed">
-                                    Aggregated from public portals, international organizations, and partner sources with automated and manual curation.
-                                </p>
-                            </CardContent>
-                        </Card>
-
-                        <Card className="!border-0 bg-white hover:shadow-lg transition-all duration-300">
-                            <CardHeader className="pb-3">
-                                <CardTitle>
-                                <SectionHeader
-                                    icon={<Users style={{ color: 'var(--brand-primary)' }} />}
-                                    title="Collaboration"
-                                />
-                            </CardTitle>
-                            </CardHeader>
-                            <CardContent>
-                                <p className="text-sm text-slate-600 leading-relaxed">
-                                    Built with community feedback and expert review to ensure data quality and relevance.
-                                </p>
-                            </CardContent>
-                        </Card>
-                    </div>
-
+               
                     {/* Main Methodology Content */}
                     <Card className={STYLES.cardGlass}>
-                        <CardHeader className="-pb-0">
-                            <CardTitle>
-                                <SectionHeader
-                                    icon={<Layers style={{ color: 'var(--brand-primary)' }} />}
-                                    title="Detailed Methodology"
-                                />
-                            </CardTitle>
-                        </CardHeader>
                         <CardContent className="p-4 sm:p-6">
                             <Tabs defaultValue="collection" className="w-full">
                                 <TabsList className="grid w-full grid-cols-2 lg:grid-cols-6 h-auto gap-2 bg-slate-50 p-2">
@@ -201,6 +144,7 @@ export default function MethodologyPage({ logoutButton }: MethodologyPageProps) 
                                                 <Search className="w-5 h-5" style={{ color: 'var(--brand-primary)' }} />
                                                 Data Collection
                                             </h3>
+                                            
                                             <div className="space-y-4">
                                             <div className="bg-slate-50 rounded-lg p-4 border border-slate-200">
                                                 <div className="flex items-center gap-3 mb-2">
