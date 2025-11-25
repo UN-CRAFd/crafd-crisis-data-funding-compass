@@ -310,6 +310,29 @@ export default function OrganizationModal({
                     return null;
                 })()}
 
+                 {(() => {
+                    const IATIOrgKey = fields['IATI Org Key'];
+                    if (typeof IATIOrgKey === 'string' && IATIOrgKey.trim() !== '') {
+                        const IATIurl = `https://d-portal.iatistandard.org/ctrack.html?publisher=${IATIOrgKey.trim()}`;
+                        return (
+                            <div className="mt-3">
+                                <a
+                                    href={IATIurl}
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    className="inline-flex items-center gap-2 px-3 py-1.5 rounded-md text-sm font-medium bg-slate-100 text-slate-600 border border-slate-200 hover:border-slate-400 hover:bg-slate-200 transition-colors"
+                                    aria-label="View on HDX (opens in new tab)"
+                                >
+                                    <img src="/hdx_logo.png" alt="HDX logo" className="w-5 h-5 rounded-none" />
+                                    <span className="font-normal">View on <strong className="font-bold">IATI</strong></span>
+                                    
+                                </a>
+                            </div>
+                        );
+                    }
+                    return null;
+                })()}
+
                 {/* If website exists but description didn't show it, render a prominent Website button */}
                 {!fields['Org Description'] && websiteValue && websiteValue.trim() !== '' && (
                     <div>
