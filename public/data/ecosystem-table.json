@@ -1321,6 +1321,26 @@
     }
   },
   {
+    "id": "recGFetocWutnDtYV",
+    "fields": {
+      "Project/Product Name": "Copernicus Emergency Management Service Annual Conference",
+      "Project Description": "Copernicus Events\n",
+      "Project Website": "https://www.copernicus.eu/en/events/events",
+      "Provider Orgs Full Name": [
+        "recxUTvaAZbGHumjU"
+      ],
+      "CRAF’d-Funded Project?": "NO",
+      "Investment Type(s)": [
+        "Learning & Exchange"
+      ],
+      "Investment Theme(s)": [
+        "Conferences",
+        "Workshops"
+      ],
+      "HDX_SOHD": "None"
+    }
+  },
+  {
     "id": "recGG8gTf4t6l8Mue",
     "fields": {
       "Project/Product Name": "Signal Program",
@@ -1757,8 +1777,8 @@
       "Project Description": "EIOS is a real-time platform developed by WHO and the European Commission to collect, verify, and share public health threat information from open sources. It offers a centralized dashboard and alerting system to help health agencies monitor emerging epidemics and coordinate responses.\n",
       "Project Website": "https://www.who.int/initiatives/eios",
       "Provider Orgs Full Name": [
-        "recwQpJQH4LwmSOBE",
-        "recclzSlstbcseYGN"
+        "recclzSlstbcseYGN",
+        "recwQpJQH4LwmSOBE"
       ],
       "CRAF’d-Funded Project?": "NO",
       "Investment Type(s)": [
@@ -1914,8 +1934,8 @@
       "Project Description": "Tracks access to water, sanitation, and hygiene (WASH) using global indicators and household survey data accessible under open access licenses.\n",
       "Project Website": "https://washdata.org/",
       "Provider Orgs Full Name": [
-        "recwQpJQH4LwmSOBE",
-        "rec2OrPTxGHesgz1w"
+        "rec2OrPTxGHesgz1w",
+        "recwQpJQH4LwmSOBE"
       ],
       "CRAF’d-Funded Project?": "NO",
       "Investment Type(s)": [
@@ -2977,8 +2997,8 @@
       ],
       "Project Website": "https://malariaatlas.org/",
       "Provider Orgs Full Name": [
-        "recwQpJQH4LwmSOBE",
-        "recTRbZA2fpb5FEmd"
+        "recTRbZA2fpb5FEmd",
+        "recwQpJQH4LwmSOBE"
       ],
       "CRAF’d-Funded Project?": "NO",
       "Investment Type(s)": [
@@ -3369,14 +3389,11 @@
       ],
       "CRAF’d-Funded Project?": "NO",
       "Investment Type(s)": [
-        "Infrastructure & Platforms",
         "Learning & Exchange"
       ],
       "Investment Theme(s)": [
         "Conferences",
-        "Data Collection",
-        "Workshops",
-        "Upskilling & Training"
+        "Workshops"
       ],
       "product_key": "hhi",
       "HDX_SOHD": "None"
