@@ -80,7 +80,7 @@ export default function MethodologyPage({ logoutButton }: MethodologyPageProps) 
                                 </h1>
                             </div>
                             <p className="text-base sm:text-lg text-slate-700 max-w-3xl leading-relaxed">
-                                Understand how we derive insights for crisis data funding through systematic data collection, classification, validation, and interactive analysis.
+                                Understand how to derive insights for crisis data funding through data collection, classification, validation, and interactive analysis.
                             </p>
                         </div>
                     </div>
