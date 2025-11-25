@@ -1205,6 +1205,7 @@
         "recqhcKxTv71yMfeI",
         "recAXDKxEbXsaHav4"
       ],
+      "org_key": "worldpop",
       "Org Type": "Research / Think Tank",
       "HDX Org Key": "worldpop"
     }
@@ -1893,6 +1894,7 @@
         "reckIAhFXgj4XL29b"
       ],
       "Org HQ Country": "United States",
+      "org_key": "wpf",
       "Org Type": "Academia"
     }
   },
@@ -2206,7 +2208,7 @@
   {
     "id": "recsgHe4sU0ltYmhC",
     "fields": {
-      "Org Full Name": "UNITAR: UN institute for Training and Research",
+      "Org Full Name": "UNITAR: UN Institute for Training and Research",
       "Org Short Name": "UNITAR",
       "Org Website": "https://unitar.org/",
       "Org Description": "UNITAR focuses on building capacity in the use of data for evidence-based decision-making, particularly in developing countries. They organize workshops and develop toolkits on governance for data ecosystems, with a special emphasis on supporting the implementation of the Sustainable Development Goals (SDGs). UNITAR also helps strengthen statistical training at national and local levels, promotes access to statistical learning for data producers, enables the use of new data sources like citizen data, and enhances the effective use of data by policymakers and stakeholders through statistical literacy initiatives.",
@@ -2353,7 +2355,8 @@
       "Has received CRAF'd Funding?": "NO",
       "org_key": "oxford-university",
       "Org Type": "Academia",
-      "HDX Org Key": "blavatnik-school-of-government-university-of-oxford"
+      "HDX Org Key": "blavatnik-school-of-government-university-of-oxford",
+      "IATI Org Key": "GB-UKPRN-10007774"
     }
   },
   {
