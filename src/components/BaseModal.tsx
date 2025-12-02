@@ -281,35 +281,78 @@ export function CountryBadge({ country, className = '', onClick, agencies }: Cou
     
     // If agencies are provided, wrap in tooltip
     if (agencies && agencies.length > 0) {
+        const agenciesContent = (
+            <div className="font-semibold mb-1">Financing Agencies:</div>
+        );
         return (
-            <TooltipProvider delayDuration={200}>
-                <Tooltip>
-                    <TooltipTrigger asChild>
-                        {badgeContent}
-                    </TooltipTrigger>
-                    <TooltipContent 
-                        side="top" 
-                        className="max-w-xs p-3 text-xs bg-white !bg-opacity-100 border border-gray-300 !z-[9999]"
-                        sideOffset={8}
-                        style={{
-                            backgroundColor: 'rgb(255, 255, 255)',
-                            color: 'var(--tooltip-text)',
-                            border: '1px solid var(--tooltip-border)',
-                            opacity: 1,
-                            zIndex: 9999
-                        }}
-                    >
+            <ModalTooltip
+                content={
+                    <div>
                         <div className="font-semibold mb-1">Financing Agencies:</div>
                         <ul className="space-y-0.5">
                             {agencies.map((agency, idx) => (
                                 <li key={idx}>• {agency}</li>
                             ))}
                         </ul>
-                    </TooltipContent>
-                </Tooltip>
-            </TooltipProvider>
+                    </div>
+                }
+                side="top"
+                delayDuration={200}
+            >
+                {badgeContent}
+            </ModalTooltip>
         );
     }
     
     return badgeContent;
+}
+
+/**
+ * Reusable ModalTooltip component for consistent tooltip styling across all modals
+ * Single unified style used everywhere for countries, types, themes, and info content
+ */
+interface ModalTooltipProps {
+    children: React.ReactNode; // The element that triggers the tooltip
+    content: React.ReactNode; // Tooltip content
+    side?: 'left' | 'right' | 'top' | 'bottom';
+    delayDuration?: number;
+    tooltipContainer?: Element | null;
+}
+
+export function ModalTooltip({ 
+    children, 
+    content,
+    side = 'top',
+    delayDuration = 200,
+    tooltipContainer 
+}: ModalTooltipProps) {
+    // If no content, just render children without tooltip
+    if (!content) {
+        return children;
+    }
+    
+    return (
+        <TooltipProvider delayDuration={delayDuration}>
+            <Tooltip>
+                <TooltipTrigger asChild>
+                    {children}
+                </TooltipTrigger>
+                <TooltipContent 
+                    side={side} 
+                    className="max-w-xs p-2 text-xs bg-white border border-gray-300 !z-[9999]"
+                    sideOffset={5}
+                    container={tooltipContainer as HTMLElement | null}
+                    style={{
+                        backgroundColor: 'rgb(255, 255, 255)',
+                        color: 'var(--tooltip-text)',
+                        border: '1px solid var(--tooltip-border)',
+                        opacity: 1,
+                        zIndex: 9999
+                    }}
+                >
+                    {content}
+                </TooltipContent>
+            </Tooltip>
+        </TooltipProvider>
+    );
 }

@@ -1,6 +1,6 @@
 import React from 'react';
 import { getIconForInvestmentType } from '@/config/investmentTypeIcons';
-import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from '@/components/ui/tooltip';
+import { ModalTooltip } from './BaseModal';
 
 // Investment type definitions for tooltips
 const INVESTMENT_TYPE_DESCRIPTIONS: Record<string, string> = {
@@ -49,41 +49,38 @@ const ModalOrganizationFocus: React.FC<ModalOrganizationFocusProps> = ({ project
             <div className="flex flex-wrap gap-2">
                 {investmentTypeCounts.map(({ type, count }) => {
                     const IconComponent = getIconForInvestmentType(type);
+                    const button = (
+                        <button
+                            onClick={() => onTypeClick?.(type)}
+                            className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-md text-sm font-semibold hover:opacity-80 transition-opacity cursor-pointer"
+                            style={{
+                                backgroundColor: 'var(--badge-other-bg)',
+                                color: 'var(--badge-other-text)'
+                            }}
+                        >
+                            <IconComponent className="w-4 h-4" />
+                            <span>{type}</span>
+                            <span 
+                                className="inline-flex items-center justify-center w-5 h-5 text-xs font-bold rounded-full"
+                                style={{
+                                    backgroundColor: 'var(--badge-other-text)',
+                                    color: 'var(--badge-other-bg)'
+                                }}
+                            >
+                                {count}
+                            </span>
+                        </button>
+                    );
+                    
                     return (
-                        <TooltipProvider key={type}>
-                            <Tooltip delayDuration={200}>
-                                <TooltipTrigger asChild>
-                                    <button
-                                        onClick={() => onTypeClick?.(type)}
-                                        className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-md text-sm font-semibold hover:opacity-80 transition-opacity cursor-pointer"
-                                        style={{
-                                            backgroundColor: 'var(--badge-other-bg)',
-                                            color: 'var(--badge-other-text)'
-                                        }}
-                                    >
-                                        <IconComponent className="w-4 h-4" />
-                                        <span>{type}</span>
-                                        <span 
-                                            className="inline-flex items-center justify-center w-5 h-5 text-xs font-bold rounded-full"
-                                            style={{
-                                                backgroundColor: 'var(--badge-other-text)',
-                                                color: 'var(--badge-other-bg)'
-                                            }}
-                                        >
-                                            {count}
-                                        </span>
-                                    </button>
-                                </TooltipTrigger>
-                                <TooltipContent 
-                                    side="top" 
-                                    className="max-w-xs text-xs bg-white/70 backdrop-blur-md border border-gray-200 !z-[300]"
-                                    sideOffset={5}
-                                    container={tooltipContainer as HTMLElement | null}
-                                >
-                                    {INVESTMENT_TYPE_DESCRIPTIONS[type] || 'Click to filter by this investment type'}
-                                </TooltipContent>
-                            </Tooltip>
-                        </TooltipProvider>
+                        <ModalTooltip 
+                            key={type}
+                            content={INVESTMENT_TYPE_DESCRIPTIONS[type] || 'Click to filter by this investment type'}
+                            side="top"
+                            tooltipContainer={tooltipContainer}
+                        >
+                            {button}
+                        </ModalTooltip>
                     );
                 })}
             </div>
