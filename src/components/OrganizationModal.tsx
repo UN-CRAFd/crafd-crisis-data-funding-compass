@@ -357,12 +357,14 @@ export default function OrganizationModal({
                                             <span className="text-sm tracking-wide text-slate-400">Total Funding</span>
                                             <span className="text-base font-medium text-slate-700">—</span>
                                         </div>
-                                        <div className="flex flex-col">
-                                            <span className="text-sm tracking-wide text-slate-400">Last Updated</span>
-                                            <span className="text-base font-medium text-slate-700">—</span>
-                                        </div>
+                                        
                                         <div className="flex flex-col">
                                             <span className="text-sm tracking-wide text-slate-400">Sources</span>
+                                            <span className="text-base font-medium text-slate-700">—</span>
+                                        </div>
+
+                                        <div className="flex flex-col">
+                                            <span className="text-sm tracking-wide text-slate-400">Last Updated</span>
                                             <span className="text-base font-medium text-slate-700">—</span>
                                         </div>
                                     </div>
