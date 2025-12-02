@@ -463,7 +463,7 @@ export default function OrganizationModal({
                                                 <span className="text-base font-medium text-slate-700">
                                                     {estBudget 
                                                         ? (typeof estBudget === 'number' 
-                                                            ? `$${(estBudget / 1000000).toFixed(1)}M`
+                                                            ? `$${(estBudget / 1000000000).toFixed(1)} B`
                                                             : String(estBudget))
                                                         : '—'}
                                                 </span>
