@@ -172,7 +172,12 @@ export default function ProjectModal({ project, allOrganizations, loading, proje
 
                 {supportingOrganizations.length > 0 && (
                     <div className="mb-6">
-                        <SubHeader>Provider Organizations</SubHeader>
+                        <div className="mb-3 flex items-center gap-2">
+                        <h3 className="text-xl font-roboto font-black text-[#333333] uppercase tracking-wide leading-normal">
+                                        Provider Organizations
+                                    </h3>
+                        <span className="text-lg font-normal text-gray-500 tabular-nums">({supportingOrganizations.length})</span>
+                        </div>
                         <div className="flex flex-wrap gap-2">
                             {supportingOrganizations.map(org => {
                                 // Use orgShortName if available, otherwise use organizationName
@@ -182,7 +187,7 @@ export default function ProjectModal({ project, allOrganizations, loading, proje
                                     <button
                                         key={org.id}
                                         onClick={() => onOpenOrganizationModal?.(orgKey)}
-                                        className="inline-flex items-center gap-1.5 px-3 py-1 rounded-md text-sm font-medium hover:opacity-80 transition-opacity cursor-pointer text-left"
+                                        className="inline-flex items-center w-full gap-1.5 px-3 py-1.5 rounded-md text-base font-medium transition-colors cursor-pointer text-left hover:opacity-80"
                                         style={{
                                             backgroundColor: 'var(--brand-bg-light)',
                                             color: 'var(--brand-primary-dark)'
@@ -285,7 +290,7 @@ export default function ProjectModal({ project, allOrganizations, loading, proje
                 <div className="mb-6">
                     <div className="mb-3 flex items-center gap-2">
                         <h3 className="text-xl font-roboto font-black text-[#333333] uppercase tracking-wide leading-normal">
-                            Asset Donors
+                            Asset Funding
                         </h3>
                         {project.donorCountries && project.donorCountries.length > 0 && (
                             <span className="text-lg font-normal text-gray-500 tabular-nums">({project.donorCountries.length})</span>
