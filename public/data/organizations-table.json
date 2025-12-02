@@ -1088,6 +1088,7 @@
       "Org Full Name": "U.S. Department of State",
       "Org Short Name": "State Department",
       "Org Website": "https://www.usaid.gov/",
+      "Org Description": "The U.S. Department of State is a federal government agency responsible for leading the nation’s foreign policy and international relations. It represents the United States to other countries, negotiates treaties and agreements, and promotes American interests abroad. The Department also provides support to U.S. citizens traveling or living overseas, issues passports and visas, and works to advance global peace, security, and prosperity. As the principal diplomatic arm of the federal government, the Department of State plays a vital role in shaping and implementing the country’s foreign policy objectives.",
       "Org Donor Agencies": [
         "recQUVhcVyxZlXJ3H"
       ],
@@ -1783,7 +1784,7 @@
       "Org Full Name": "FAO: Food and Agriculture Organization of the United Nations ",
       "Org Short Name": "FAO",
       "Org Website": "https://www.fao.org/about/about-fao/en/",
-      "Org Description": "The Food and Agriculture Organization (FAO) is a specialized agency of the United Nations that leads international efforts to defeat hunger.",
+      "Org Description": "The Food and Agriculture Organization (FAO) is a specialized agency of the United Nations dedicated to leading global efforts to eliminate hunger. Established to improve nutrition, increase agricultural productivity, and raise the standard of living in rural populations, the FAO works with governments and partners worldwide. Its mission includes developing policies, sharing knowledge, and providing technical assistance to ensure food security and sustainable agricultural development for all. Through its initiatives, the FAO aims to create a world where everyone has regular access to enough high-quality food to lead active, healthy lives.",
       "Org Mission": "Our goal is to achieve food security for all and make sure that people have regular access to enough high-quality food to lead active, healthy lives. With 195 members - 194 countries and the European Union, FAO works in over 130 countries worldwide.",
       "Link to Data Products Overview": "<https://www.fao.org/faostat/en/#home>\n\n<https://www.fao.org/transparency/dashboards/annual-and-monthly-data>\n\n",
       "Provided Data Ecosystem Projects": [
@@ -1942,7 +1943,7 @@
       "Org Full Name": "ETH Zurich",
       "Org Short Name": "ETH",
       "Org Website": "https://ethz.ch/en.html",
-      "Org Description": "Freedom and individual responsibility, entrepreneurial spirit and open-mindedness: ETH Zurich stands on a bedrock of true Swiss values. Our university for science and technology dates back to the year 1855, when the founders of modern-day Switzerland created it as a centre of innovation and knowledge.\n\nWeather and Climate Risks (WCR) Group at ETH Zurich\nCLIMADA Platform: An open-source tool developed by the WCR Group for probabilistic climate risk assessment and adaptation planning. It supports decision-makers in evaluating the impacts of natural hazards and exploring adaptation strategies. ​Weather and Climate Risks\nscClim Project: A four-year interdisciplinary initiative funded by the Swiss National Science Foundation. It integrates high-resolution weather predictions with climate simulations to assess hail impacts across various sectors in Switzerland. ​Weather and Climate Risks\n+1Weather and Climate Risks\n+1\nSPARCCLE Project: Part of the EU Horizon research program, this project involves collaboration between the WCR and Land-Climate Dynamics groups. It focuses on climate model emulation and natural hazard risk modeling to understand climate extremes' impacts on global ecosystems.\n\n",
+      "Org Description": "ETH Zurich is founded on core Swiss values such as freedom, individual responsibility, entrepreneurial spirit, and open-mindedness. Established in 1855 as a center for innovation and knowledge, the university is home to the Weather and Climate Risks (WCR) Group. The WCR Group develops the CLIMADA platform, an open-source tool for probabilistic climate risk assessment and adaptation planning, and leads projects like scClim, which integrates weather predictions and climate simulations to assess hail impacts, and SPARCCLE, which models climate extremes and their effects on global ecosystems.",
       "Provided Data Ecosystem Projects": [
         "recUtgQxL73zHDTCF"
       ],
@@ -2231,7 +2232,7 @@
       "Org Full Name": "IOM: International Organization for Migration",
       "Org Short Name": "IOM",
       "Org Website": "https://www.iom.int/",
-      "Org Description": "IOM works to ensure the dignity, safety and protection of people in the most challenging crisis response contexts in the world.",
+      "Org Description": "IOM’s work is guided by a commitment to upholding the dignity, safety, and protection of individuals affected by crises, even in the most challenging response contexts worldwide. All activities are designed to respect the rights and needs of people in vulnerable situations, ensuring that humanitarian assistance is delivered with sensitivity, impartiality, and a focus on safeguarding those at risk. IOM prioritizes ethical standards and best practices to foster environments where affected populations are treated with respect and their well-being is central to every intervention.",
       "Link to Data Products Overview": "<https://www.iom.int/migration-data>\n",
       "Provided Data Ecosystem Projects": [
         "recFN5wUiwxYe6lS9",
@@ -2393,7 +2394,7 @@
       "Org Full Name": "WHO: World Health Organization ",
       "Org Short Name": "WHO",
       "Org Website": "https://www.who.int/en/",
-      "Org Description": "The WHO's purpose is to achieve the highest possible level of health for all the world's people, defining health as \"a state of complete physical, mental and social well-being and not merely the absence of disease or infirmity.\"[5] The main functions of the World Health Organization include promoting the control of epidemic and endemic diseases; providing and improving the teaching and training in public health, the medical treatment of disease, and related matters; and promoting the establishment of international standards for biological products.\t",
+      "Org Description": "The World Health Organization (WHO) aims to achieve the highest attainable standard of health for all people worldwide, defining health as a state of complete physical, mental, and social well-being, not merely the absence of disease or infirmity. Its primary functions include promoting the control of epidemic and endemic diseases, enhancing education and training in public health and medical treatment, and establishing international standards for biological products. The WHO works globally to improve health outcomes and foster cooperation among nations in addressing health challenges.",
       "Link to Data Products Overview": "<https://data.humdata.org/organization/world-health-organization>\n",
       "Provided Data Ecosystem Projects": [
         "recfzWyIVXJCeFFAN",
@@ -2456,7 +2457,7 @@
       "Org Full Name": "ECMWF: European Centre for Medium-Range Weather Forecasts",
       "Org Short Name": "ECMRWF",
       "Org Website": "https://www.ecmwf.int/",
-      "Org Description": "We are both a research institute and a 24/7 operational service, producing global numerical weather predictions and other data for our Member and Co-operating States and the broader community. We operate a world-class supercomputer facility for weather forecasting and hold one of the largest meteorological data archives. Other strategic activities include delivering advanced training and assisting the WMO in implementing its programmes.",
+      "Org Description": "The European Centre for Medium-Range Weather Forecasts (ECMWF) is both a research institute and a 24/7 operational service, providing global numerical weather predictions and related data to its Member and Co-operating States, as well as the wider community. ECMWF operates a world-class supercomputer facility dedicated to weather forecasting and maintains one of the largest meteorological data archives in the world. Its strategic activities also include delivering advanced training and supporting the World Meteorological Organization (WMO) in the implementation of its programmes.",
       "Provided Data Ecosystem Projects": [
         "recGMlI70iaqyTtMo",
         "recQJwZB8vyAFwK4C",
