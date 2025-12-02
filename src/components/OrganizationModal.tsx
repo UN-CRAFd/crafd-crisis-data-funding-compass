@@ -349,6 +349,22 @@ export default function OrganizationModal({
                         return <ModalOrganizationFocus projects={orgProjects} SubHeader={SubHeader} onTypeClick={onTypeClick} tooltipContainer={tooltipContainer} />;
                     })()}
 
+                    {/* Organization Funding*/}
+                    {(() => {
+                       
+                        return (
+                            <div>
+                                <div className="mb-3 flex items-center gap-2">
+                                    <h3 className="text-xl font-roboto font-black text-[#333333] uppercase tracking-wide leading-normal">
+                                        Organization Funding
+                                    </h3>
+                                    <span className="text-lg font-normal text-gray-500"></span>
+                                </div>
+                             
+                            </div>
+                        );
+                    })()}
+
                     {/* Provided Assets - Simple field access matching FIELDS_ORGANIZATIONS */}
                     {(() => {
                         // Use the clean field name from FIELDS_ORGANIZATIONS: "Provided Data Ecosystem Projects"
