@@ -445,11 +445,16 @@ export default function OrganizationModal({
                                             <div className="flex flex-col">
                                                 <span className="text-sm tracking-wide text-slate-400">Est. Org Budget</span>
                                                 <span className="text-base font-medium text-slate-700">
-                                                    {estBudget 
-                                                        ? (typeof estBudget === 'number' 
-                                                            ? `$${(estBudget / 1000000000).toFixed(1)} B`
-                                                            : String(estBudget))
-                                                        : '—'}
+                                                    {
+                                                        estBudget
+                                                            ? (() => {
+                                                                if (typeof estBudget !== 'number') return String(estBudget);
+                                                                if (estBudget >= 1_000_000_000) return `$${(estBudget / 1_000_000_000).toFixed(1)} B`;
+                                                                if (estBudget >= 1_000_000) return `$${(estBudget / 1_000_000).toFixed(1)} M`;
+                                                                return `$${estBudget}`;
+                                                            })()
+                                                            : '—'
+                                                        }
                                                 </span>
                                             </div>
                                             
@@ -469,7 +474,7 @@ export default function OrganizationModal({
                                             <div className="flex">
                                                 <div className="flex-1"></div>
                                                 <ModalTooltip 
-                                                    content="The data was extracted by the CRAF'd"
+                                                    content="This Data was extracted from publicly available sources and collected by the Complex Risk Analytics Fund (CRAF'd). It may not reflect the most current information."
                                                     side="left"
                                                     tooltipContainer={tooltipContainer}
                                                 >

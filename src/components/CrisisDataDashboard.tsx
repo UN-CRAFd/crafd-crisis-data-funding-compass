@@ -940,21 +940,13 @@ const CrisisDataDashboard = ({
                                                 }}
                                                 title={sortDirection === 'asc' ? 'Sort ascending' : 'Sort descending'}
                                             >
-                                                {sortBy === 'name' ? (
-                                                    // For alphabetical: asc = A-Z (down), desc = Z-A (up)
-                                                    sortDirection === 'asc' ? (
-                                                        <ArrowDownWideNarrow className="w-3 h-3" />
-                                                    ) : (
-                                                        <ArrowUpWideNarrow className="w-3 h-3" />
-                                                    )
-                                                ) : (
-                                                    // For numbers: asc = low-to-high (up), desc = high-to-low (down)
-                                                    sortDirection === 'asc' ? (
+                                                
+                                                   {sortDirection === 'asc' ? (
                                                         <ArrowUpWideNarrow className="w-3 h-3" />
                                                     ) : (
                                                         <ArrowDownWideNarrow className="w-3 h-3" />
                                                     )
-                                                )}
+                                                }
                                             </Button>
                                             <DropdownMenu onOpenChange={(open) => setSortMenuOpen(open)}>
                                                 <div className="w-px h-4 bg-slate-200"></div>
@@ -1076,7 +1068,7 @@ const CrisisDataDashboard = ({
                                                     let comparison = 0;
                                                     
                                                     if (sortBy === 'name') {
-                                                        comparison = a.organizationName.localeCompare(b.organizationName);
+                                                        comparison = b.organizationName.localeCompare(a.organizationName);
                                                     } else if (sortBy === 'donors') {
                                                         // Sort by number of unique donors
                                                         comparison = a.donorCountries.length - b.donorCountries.length;
