@@ -454,7 +454,7 @@ export default function OrganizationModal({
                                     </h3>
                                     <span className="text-lg font-normal text-gray-500 tabular-nums">({donorCountries.length})</span>
                                 </div>
-                                    <div className="rounded-lg border border-slate-200 bg-white p-6 shadow-sm">
+                                    <div className="rounded-lg border border-slate-200 bg-slate-100 p-4 shadow-sm">
                                         <div className="mt-0 grid grid-cols-3 gap-4">
                                             <div className="flex flex-col">
                                                 <span className="text-sm tracking-wide text-slate-400">Est. Org Budget</span>
