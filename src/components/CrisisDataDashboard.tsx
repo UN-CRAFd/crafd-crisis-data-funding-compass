@@ -24,6 +24,7 @@ import organizationsTableRaw from '../../public/data/organizations-table.json';
 import { buildOrgDonorCountriesMap, buildOrgProjectsMap, buildProjectNameMap, buildProjectIdToKeyMap, buildOrgAgenciesMap, buildProjectAgenciesMap, buildProjectDescriptionMap, calculateOrganizationTypesFromOrganizationsWithProjects, getNestedOrganizationsForModals } from '../lib/data';
 import { exportDashboardToPDF } from '../lib/exportPDF';
 import { exportViewAsCSV, exportViewAsXLSX } from '../lib/exportCSV';
+import { useTips } from '@/contexts/TipsContext';
 import type { DashboardStats, OrganizationProjectData, OrganizationTypeData, OrganizationWithProjects, ProjectData, ProjectTypeData } from '../types/airtable';
 
 // Eagerly load NetworkGraph on client side to avoid lazy loading delay
@@ -123,6 +124,7 @@ interface StatCardProps {
 }
 
 const StatCard = React.memo(function StatCard({ icon, title, value, label, colorScheme, tooltip }: StatCardProps) {
+    const { tipsEnabled } = useTips();
     const gradients = {
         amber: {
             bg: 'from-[var(--brand-bg-lighter)] to-[var(--brand-bg-light)]',
@@ -154,7 +156,7 @@ const StatCard = React.memo(function StatCard({ icon, title, value, label, color
         </Card>
     );
 
-    if (tooltip) {
+    if (tooltip && tipsEnabled) {
         return (
             <TooltipProvider delayDuration={0}>
                 <TooltipUI>
@@ -249,6 +251,9 @@ const CrisisDataDashboard = ({
     sortDirection,
     onSortChange
 }: CrisisDataDashboardProps) => {
+    // Get tips enabled state
+    const { tipsEnabled } = useTips();
+    
     // UI state (not related to routing)
     const [expandedOrgs, setExpandedOrgs] = useState<Set<string>>(new Set());
     const [expandedCountries, setExpandedCountries] = useState<Set<string>>(new Set());
@@ -1313,8 +1318,8 @@ const CrisisDataDashboard = ({
                                                                                                     </span>
                                                                                                 );
                                                                                                 
-                                                                                                // Wrap in tooltip if description exists
-                                                                                                if (description) {
+                                                                                                // Wrap in tooltip if description exists and tips are enabled
+                                                                                                if (description && tipsEnabled) {
                                                                                                     return (
                                                                                                         <TooltipProvider key={idx}>
                                                                                                             <TooltipUI delayDuration={200}>

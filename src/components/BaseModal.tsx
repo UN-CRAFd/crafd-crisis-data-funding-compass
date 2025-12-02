@@ -6,6 +6,7 @@ import { createPortal } from 'react-dom';
 import CloseButton from './CloseButton';
 import { CountryFlag } from './CountryFlag';
 import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from '@/components/ui/tooltip';
+import { useTips } from '@/contexts/TipsContext';
 
 interface BaseModalProps {
     isOpen: boolean;
@@ -325,8 +326,10 @@ export function ModalTooltip({
     delayDuration = 200,
     tooltipContainer 
 }: ModalTooltipProps) {
-    // If no content, just render children without tooltip
-    if (!content) {
+    const { tipsEnabled } = useTips();
+    
+    // If tips are disabled or no content, just render children without tooltip
+    if (!tipsEnabled || !content) {
         return children;
     }
     

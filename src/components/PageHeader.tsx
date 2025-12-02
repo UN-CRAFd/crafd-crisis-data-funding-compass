@@ -3,7 +3,8 @@
 import { Button } from '@/components/ui/button';
 import { TooltipContent, TooltipProvider, Tooltip as TooltipUI, TooltipTrigger } from '@/components/ui/tooltip';
 import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuTrigger } from '@/components/ui/dropdown-menu';
-import { ChevronDown, FileDown, Info, MessageCircle, Share2, Menu } from 'lucide-react';
+import { ChevronDown, FileDown, Info, MessageCircle, Share2, Menu, Lightbulb } from 'lucide-react';
+import { useTips } from '@/contexts/TipsContext';
 import labels from '@/config/labels.json';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
@@ -44,6 +45,7 @@ export default function PageHeader({
     onExportMenuChange,
 }: PageHeaderProps) {
     const pathname = usePathname();
+    const { tipsEnabled, setTipsEnabled } = useTips();
 
     return (
         <div className="fixed top-0 left-0 right-0 z-50 bg-white border-b border-slate-200">
@@ -79,6 +81,20 @@ export default function PageHeader({
                         </TooltipProvider>
                     </div>
                     <div className="flex gap-1 sm:gap-2 flex-shrink-0">
+                        <Button
+                            variant="outline"
+                            size="sm"
+                            onClick={() => setTipsEnabled(!tipsEnabled)}
+                            className={`bg-slate-50/50 border-slate-200 text-xs sm:text-sm transition-colors ${
+                                tipsEnabled
+                                    ? 'hover:var(--brand-bg-light) hover:border-[var(--brand-primary)] hover:text-[var(--brand-primary)] text-slate-600'
+                                    : 'border-slate-300 bg-slate-200 text-slate-500'
+                            }`}
+                            title={tipsEnabled ? 'Tips are on' : 'Tips are off'}
+                        >
+                            <Lightbulb className={`w-4 h-4 sm:mr-2 ${tipsEnabled ? '' : 'opacity-50'}`} />
+                            <span className="hidden sm:inline">{tipsEnabled ? 'Tips' : 'Tips Off'}</span>
+                        </Button>
                         <Button
                             variant="outline"
                             size="sm"
