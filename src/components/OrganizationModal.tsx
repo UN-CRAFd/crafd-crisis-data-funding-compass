@@ -3,8 +3,7 @@
 import { Building2, ChevronDown, ChevronUp, ExternalLink, Info, Package, PackageOpen } from 'lucide-react';
 import { useState } from 'react';
 import ModalOrganizationFocus from './ModalOrganizationFocus';
-import BaseModal, { ModalHeader, CountryBadge } from './BaseModal';
-import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from '@/components/ui/tooltip';
+import BaseModal, { ModalHeader, CountryBadge, ModalTooltip } from './BaseModal';
 import { getIconForInvestmentType } from '@/config/investmentTypeIcons';
 
 // Investment type definitions for tooltips
@@ -483,18 +482,14 @@ export default function OrganizationModal({
                                                 </span>
                                             </div>
                                             <div className="flex">
-                                            <div className="flex-1"></div>
-                                            <TooltipProvider>
-                                                <Tooltip>
-                                                    <TooltipTrigger asChild>
-                                                        <Info className="w-4 h-4 text-slate-400 hover:text-slate-600 transition-colors cursor-help shrink-0 " />
-                                                    </TooltipTrigger>
-                                                    <TooltipContent side="left" className="text-xs">
-                                                        The data was extracted by the CRAF'd
-                                                    </TooltipContent>
-                                                </Tooltip>
-                                            </TooltipProvider>
-                                        </div>
+                                                <div className="flex-1"></div>
+                                                <ModalTooltip 
+                                                    content="The data was extracted by the CRAF'd"
+                                                    side="left"
+                                                >
+                                                    <Info className="w-4 h-4 text-slate-400 hover:text-slate-600 transition-colors cursor-help shrink-0" />
+                                                </ModalTooltip>
+                                            </div>
                                         </div>
                                     </div>
                                 <div className="flex flex-wrap gap-2 mt-4">

@@ -3,9 +3,8 @@
 import { Building2, ExternalLink, Package } from 'lucide-react';
 import type { OrganizationWithProjects, ProjectData } from '../lib/data';
 import { getIconForInvestmentType } from '@/config/investmentTypeIcons';
-import BaseModal, { ModalHeader, CountryBadge } from './BaseModal';
+import BaseModal, { ModalHeader, CountryBadge, ModalTooltip } from './BaseModal';
 import { useEffect, useState } from 'react';
-import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from '@/components/ui/tooltip';
 
 // Investment type definitions for tooltips
 const INVESTMENT_TYPE_DESCRIPTIONS: Record<string, string> = {
@@ -220,31 +219,23 @@ export default function ProjectModal({ project, allOrganizations, loading, proje
                                 
                                 return (
                                     <div key={typeIndex} className="flex flex-wrap gap-2 items-center">
-                                        <TooltipProvider>
-                                            <Tooltip delayDuration={200}>
-                                                <TooltipTrigger asChild>
-                                                    <button
-                                                        onClick={() => onTypeClick?.(type)}
-                                                        className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-md text-sm font-semibold hover:opacity-80 transition-opacity cursor-pointer"
-                                                        style={{
-                                                            backgroundColor: 'var(--badge-other-bg)',
-                                                            color: 'var(--badge-other-text)'
-                                                        }}
-                                                    >
-                                                        <IconComponent className="w-4 h-4" />
-                                                        {type}
-                                                    </button>
-                                                </TooltipTrigger>
-                                                <TooltipContent 
-                                                    side="top" 
-                                                    className="max-w-xs text-xs bg-white/70 backdrop-blur-md border border-gray-200 !z-[300]"
-                                                    sideOffset={5}
-                                                    container={tooltipContainer as HTMLElement | null}
-                                                >
-                                                    {INVESTMENT_TYPE_DESCRIPTIONS[type] || 'Click to filter by this investment type'}
-                                                </TooltipContent>
-                                            </Tooltip>
-                                        </TooltipProvider>
+                                        <ModalTooltip 
+                                            content={INVESTMENT_TYPE_DESCRIPTIONS[type] || 'Click to filter by this investment type'}
+                                            side="top"
+                                            tooltipContainer={tooltipContainer}
+                                        >
+                                            <button
+                                                onClick={() => onTypeClick?.(type)}
+                                                className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-md text-sm font-semibold hover:opacity-80 transition-opacity cursor-pointer"
+                                                style={{
+                                                    backgroundColor: 'var(--badge-other-bg)',
+                                                    color: 'var(--badge-other-text)'
+                                                }}
+                                            >
+                                                <IconComponent className="w-4 h-4" />
+                                                {type}
+                                            </button>
+                                        </ModalTooltip>
                                         {relatedThemes.length > 0 && (
                                             <>
                                                 {/* Connecting arc */}
@@ -277,21 +268,14 @@ export default function ProjectModal({ project, allOrganizations, loading, proje
                                                         // Wrap in tooltip if description exists
                                                         if (description) {
                                                             return (
-                                                                <TooltipProvider key={themeIndex}>
-                                                                    <Tooltip delayDuration={200}>
-                                                                        <TooltipTrigger asChild>
-                                                                            {themeBadge}
-                                                                        </TooltipTrigger>
-                                                                        <TooltipContent 
-                                                                            side="top" 
-                                                                            className="max-w-xs text-xs bg-white/70 backdrop-blur-md border border-gray-200 !z-[300]"
-                                                                            sideOffset={5}
-                                                                            container={tooltipContainer as HTMLElement | null}
-                                                                        >
-                                                                            {description}
-                                                                        </TooltipContent>
-                                                                    </Tooltip>
-                                                                </TooltipProvider>
+                                                                <ModalTooltip 
+                                                                    key={themeIndex}
+                                                                    content={description}
+                                                                    side="top"
+                                                                    tooltipContainer={tooltipContainer}
+                                                                >
+                                                                    {themeBadge}
+                                                                </ModalTooltip>
                                                             );
                                                         }
                                                         
