@@ -329,15 +329,7 @@ export default function OrganizationModal({
                 {/* Organization Funding*/}
 
                 <div className="space-y-8">
-                    {/* Organization Focus - Investment Types from Projects */}
-                    {(() => {
-                        const orgProjects = orgProjectsMap[organization.id];
-                        if (!orgProjects || orgProjects.length === 0) return null;
-
-                        return <ModalOrganizationFocus projects={orgProjects} SubHeader={SubHeader} onTypeClick={onTypeClick} tooltipContainer={tooltipContainer} />;
-                    })()}
-
-                   
+                                     
 
                     {/* Provided Assets - Simple field access matching FIELDS_ORGANIZATIONS */}
                     {(() => {
@@ -377,7 +369,15 @@ export default function OrganizationModal({
                                     </h3>
                                     <span className="text-lg font-normal text-gray-500 tabular-nums">({projectsList.length})</span>
                                 </div>
-                                <div className="flex flex-col gap-2">
+                                {(() => {
+                                                        const orgProjects = orgProjectsMap[organization.id];
+                                                        if (!orgProjects || orgProjects.length === 0) return null;
+
+                                                        return <ModalOrganizationFocus projects={orgProjects} onTypeClick={onTypeClick} tooltipContainer={tooltipContainer} />;
+                                })()}
+
+
+                                <div className="flex flex-col gap-2 mt-4">
                                     {displayedProjects.map((proj, i) => (
                                         <button
                                             key={proj.id || i}
@@ -420,15 +420,20 @@ export default function OrganizationModal({
                     {/* Organization Donors - Clean field access from centralized data */}
                     {(() => {
                         // Get donor countries from the centralized map (computed from nested data)
-                        const donorCountries = orgDonorCountriesMap[organization.id] || [];                        
+                        const donorCountries = orgDonorCountriesMap[organization.id] || [];
                         const estBudget = fields['Est. Org Budget'];
-                        const budgetSource = fields['Budget Source'];
-                        
+
+                        // Narrow unknown typed fields to explicit string/null values for safe rendering
+                        const budgetSourceRaw = fields['Budget Source'];
+                        const budgetSourceStr = budgetSourceRaw != null ? String(budgetSourceRaw) : null;
+                        const linkRaw = fields['Link to Budget Source'];
+                        const linkToBudgetSource = typeof linkRaw === 'string' && linkRaw.trim() !== '' ? linkRaw.trim() : null;
+
                         // Only show if at least one field has a value
-                        if (!estBudget && !budgetSource && donorCountries.length === 0) {
+                        if (!estBudget && !budgetSourceStr && donorCountries.length === 0) {
                             return null;
                         }
-                       
+
 
                         return (
                             <div>
@@ -460,9 +465,22 @@ export default function OrganizationModal({
                                             
                                             <div className="flex flex-col">
                                                 <span className="text-sm tracking-wide text-slate-400">Budget Source</span>
-                                                <span className="text-base font-medium text-slate-700">
-                                                    {budgetSource ? String(budgetSource) : '—'}
-                                                </span>
+                                                <div className="flex items-center gap-2">
+                                                    <span className="text-base font-medium text-slate-700">
+                                                        {budgetSourceStr ? budgetSourceStr : '—'}
+                                                    </span>
+                                                    {linkToBudgetSource && (
+                                                        <a
+                                                            href={linkToBudgetSource}
+                                                            target="_blank"
+                                                            rel="noopener noreferrer"
+                                                            className="text-slate-400 hover:text-slate-600 transition-colors cursor-pointer shrink-0"
+                                                            title="View Budget Source"
+                                                        >
+                                                            <ExternalLink className="w-4 h-4" />
+                                                        </a>
+                                                    )}
+                                                </div>
                                             </div>
 
                                             <div className="flex flex-col">
