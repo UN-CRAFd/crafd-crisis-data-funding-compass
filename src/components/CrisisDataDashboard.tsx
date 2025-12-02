@@ -968,13 +968,13 @@ const CrisisDataDashboard = ({
                                                     onClick={() => onSortChange('donors', sortDirection)}
                                                     className="cursor-pointer text-[11px] py-1"
                                                 >
-                                                    Donors
+                                                    No. of Donors
                                                 </DropdownMenuItem>
                                                 <DropdownMenuItem
                                                     onClick={() => onSortChange('assets', sortDirection)}
                                                     className="cursor-pointer text-[11px] py-1"
                                                 >
-                                                    Assets
+                                                    No. of Assets
                                                 </DropdownMenuItem>
                                                 <DropdownMenuItem
                                                     onClick={() => onSortChange('funding', sortDirection)}
