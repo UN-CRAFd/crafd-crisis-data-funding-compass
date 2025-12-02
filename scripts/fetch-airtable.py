@@ -32,6 +32,9 @@ FIELDS_ORGANIZATIONS = [
     "Org Full Name",
     "HDX Org Key",
     "IATI Org Key",
+    "Est. Org Budget",
+    "Budget Source",
+    "Last Budget Update"
     "Org Type",
     "Org Short Name",
     "Org Website",
