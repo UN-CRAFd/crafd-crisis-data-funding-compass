@@ -434,14 +434,12 @@ export default function OrganizationModal({
                     {/* Organization Donors - Clean field access from centralized data */}
                     {(() => {
                         // Get donor countries from the centralized map (computed from nested data)
-                        const donorCountries = orgDonorCountriesMap[organization.id] || [];
-
-                        if (donorCountries.length === 0) return null;
+                        const donorCountries = orgDonorCountriesMap[organization.id] || [];                        
                         const estBudget = fields['Est. Org Budget'];
                         const budgetSource = fields['Budget Source'];
                         
                         // Only show if at least one field has a value
-                        if (!estBudget && !budgetSource) {
+                        if (!estBudget && !budgetSource && donorCountries.length === 0) {
                             return null;
                         }
                        
