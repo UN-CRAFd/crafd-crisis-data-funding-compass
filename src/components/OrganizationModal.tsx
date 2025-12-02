@@ -450,38 +450,38 @@ export default function OrganizationModal({
                             <div>
                                 <div className="mb-3 flex items-center gap-2">
                                     <h3 className="text-xl font-roboto font-black text-[#333333] uppercase tracking-wide leading-normal">
-                                        Organization Donors
+                                        Organization Funding
                                     </h3>
                                     <span className="text-lg font-normal text-gray-500 tabular-nums">({donorCountries.length})</span>
                                 </div>
                                     <div className="rounded-lg border border-slate-200 bg-white p-6 shadow-sm">
-                                    <div className="mt-0 grid grid-cols-3 gap-4">
-                                        <div className="flex flex-col">
-                                            <span className="text-sm tracking-wide text-slate-400">Est. Org Budget</span>
-                                            <span className="text-base font-medium text-slate-700">
-                                                {estBudget 
-                                                    ? (typeof estBudget === 'number' 
-                                                        ? `$${(estBudget / 1000000).toFixed(1)}M`
-                                                        : String(estBudget))
-                                                    : '—'}
-                                            </span>
-                                        </div>
-                                        
-                                        <div className="flex flex-col">
-                                            <span className="text-sm tracking-wide text-slate-400">Budget Source</span>
-                                            <span className="text-base font-medium text-slate-700">
-                                                {budgetSource ? String(budgetSource) : '—'}
-                                            </span>
-                                        </div>
+                                        <div className="mt-0 grid grid-cols-3 gap-4">
+                                            <div className="flex flex-col">
+                                                <span className="text-sm tracking-wide text-slate-400">Est. Org Budget</span>
+                                                <span className="text-base font-medium text-slate-700">
+                                                    {estBudget 
+                                                        ? (typeof estBudget === 'number' 
+                                                            ? `$${(estBudget / 1000000).toFixed(1)}M`
+                                                            : String(estBudget))
+                                                        : '—'}
+                                                </span>
+                                            </div>
+                                            
+                                            <div className="flex flex-col">
+                                                <span className="text-sm tracking-wide text-slate-400">Budget Source</span>
+                                                <span className="text-base font-medium text-slate-700">
+                                                    {budgetSource ? String(budgetSource) : '—'}
+                                                </span>
+                                            </div>
 
-                                        <div className="flex flex-col">
-                                            <span className="text-sm tracking-wide text-slate-400">Last Updated</span>
-                                            <span className="text-base font-medium text-slate-700">
-                                                {fields['Last Updated'] ? String(fields['Last Updated']) : '—'}
-                                            </span>
+                                            <div className="flex flex-col">
+                                                <span className="text-sm tracking-wide text-slate-400">Last Updated</span>
+                                                <span className="text-base font-medium text-slate-700">
+                                                    {fields['Last Updated'] ? String(fields['Last Updated']) : '—'}
+                                                </span>
+                                            </div>
                                         </div>
                                     </div>
-                                </div>
                                 <div className="flex flex-wrap gap-2 mt-4">
                                     {donorCountries.map((country) => {
                                         const orgAgencies = orgAgenciesMap[organization.id] || {};
