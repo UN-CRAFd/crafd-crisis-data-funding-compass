@@ -177,7 +177,7 @@ export default function BaseModal({
                 </div>
 
                 {/* Body Content - scrollable if content exceeds viewport */}
-                <div className="overflow-y-auto flex-1">
+                <div className="overflow-y-auto flex-1 scrollbar-hide">
                     {renderBody({ tooltipContainer: portalContainer })}
                 </div>
             </div>
