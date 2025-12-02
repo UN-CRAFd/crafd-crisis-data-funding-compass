@@ -16,6 +16,7 @@ interface OrganizationModalProps {
     } | null;
     // Centralized data maps from data.ts for consistent data access
     projectNameMap?: Record<string, string>;
+    projectDescriptionMap?: Record<string, string>;
     orgProjectsMap?: Record<string, Array<{ investmentTypes: string[] }>>;
     orgDonorCountriesMap?: Record<string, string[]>;
     orgAgenciesMap?: Record<string, Record<string, string[]>>;
@@ -37,6 +38,7 @@ interface OrganizationModalProps {
 export default function OrganizationModal({
     organization,
     projectNameMap = {},
+    projectDescriptionMap = {},
     orgProjectsMap = {},
     orgDonorCountriesMap = {},
     orgAgenciesMap = {},
@@ -82,6 +84,14 @@ export default function OrganizationModal({
             {children}
         </span>
     );
+
+    // Helper function to extract first sentence from text
+    const getFirstSentence = (text: string): string => {
+        if (!text || text.trim().length === 0) return '';
+        // Match text up to the first period, exclamation mark, or question mark
+        const match = text.match(/^[^.!?]*[.!?]/);
+        return match ? match[0].trim() : text.trim();
+    };
 
     // Hover state for project items to toggle the icon
     const [hoveredProjectId, setHoveredProjectId] = useState<string | null>(null);
@@ -328,7 +338,7 @@ export default function OrganizationModal({
                 {/* Metadata - Single column layout */}
                 {/* Organization Funding*/}
 
-                <div className="space-y-8">
+                <div className="mt-2 space-y-4">
                                      
 
                     {/* Provided Assets - Simple field access matching FIELDS_ORGANIZATIONS */}
@@ -369,31 +379,52 @@ export default function OrganizationModal({
                                     </h3>
                                     <span className="text-lg font-normal text-gray-500 tabular-nums">({projectsList.length})</span>
                                 </div>
-                                {(() => {
+                                
+                                <div className="flex flex-col gap-2 mt-4">
+                                    {(() => {
                                                         const orgProjects = orgProjectsMap[organization.id];
                                                         if (!orgProjects || orgProjects.length === 0) return null;
 
-                                                        return <ModalOrganizationFocus projects={orgProjects} onTypeClick={onTypeClick} tooltipContainer={tooltipContainer} />;
+                                                        return <ModalOrganizationFocus projects={orgProjects} onTypeClick={onTypeClick} tooltipContainer={tooltipContainer} SubHeader={undefined} />;
                                 })()}
+                                    {displayedProjects.map((proj, i) => {
+                                        const description = projectDescriptionMap[proj.id] || '';
+                                        const firstSentence = getFirstSentence(description);
+                                        
+                                        const projectButton = (
+                                            <button
+                                                key={proj.id || i}
+                                                onClick={() => onOpenProjectModal?.(proj.productKey)}
+                                                onMouseEnter={() => setHoveredProjectId(proj.id)}
+                                                onMouseLeave={() => setHoveredProjectId(null)}
+                                                className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-md text-base font-medium bg-slate-100 text-slate-600 hover:bg-slate-200 transition-colors cursor-pointer text-left"
+                                            >
+                                                {hoveredProjectId === proj.id ? (
+                                                    <PackageOpen className="w-4 h-4 text-slate-500 shrink-0" />
+                                                ) : (
+                                                    <Package className="w-4 h-4 text-slate-500 shrink-0" />
+                                                )}
+                                                <span className="truncate">{proj.name}</span>
+                                            </button>
+                                        );
 
+                                        // Only wrap in tooltip if there's a description
+                                        if (firstSentence) {
+                                            return (
+                                                <ModalTooltip
+                                                    key={proj.id || i}
+                                                    content={firstSentence}
+                                                    side="top"
+                                                    tooltipContainer={tooltipContainer}
+                                                >
+                                                    {projectButton}
+                                                </ModalTooltip>
+                                            );
+                                        }
 
-                                <div className="flex flex-col gap-2 mt-4">
-                                    {displayedProjects.map((proj, i) => (
-                                        <button
-                                            key={proj.id || i}
-                                            onClick={() => onOpenProjectModal?.(proj.productKey)}
-                                            onMouseEnter={() => setHoveredProjectId(proj.id)}
-                                            onMouseLeave={() => setHoveredProjectId(null)}
-                                            className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-md text-base font-medium bg-slate-100 text-slate-600 hover:bg-slate-200 transition-colors cursor-pointer text-left"
-                                        >
-                                            {hoveredProjectId === proj.id ? (
-                                                <PackageOpen className="w-4 h-4 text-slate-500 shrink-0" />
-                                            ) : (
-                                                <Package className="w-4 h-4 text-slate-500 shrink-0" />
-                                            )}
-                                            <span className="truncate">{proj.name}</span>
-                                        </button>
-                                    ))}
+                                        return projectButton;
+                                    })}
+                                    
                                 </div>
                                 {showCollapsible && (
                                     <button
@@ -413,7 +444,9 @@ export default function OrganizationModal({
                                         )}
                                     </button>
                                 )}
+                                
                             </div>
+                            
                         );
                     })()}
 

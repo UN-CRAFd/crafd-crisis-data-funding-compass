@@ -21,7 +21,7 @@ import labels from '@/config/labels.json';
 import { getIconForInvestmentType } from '@/config/investmentTypeIcons';
 import { Building2, ChevronDown, ChevronRight, Database, Table, DatabaseBackup, FileDown, Filter, FolderDot, FolderOpenDot, Globe, Info, MessageCircle, RotateCcw, Search, Share2, ArrowUpDown, ArrowUpWideNarrow, ArrowDownWideNarrow, Network } from 'lucide-react';
 import organizationsTableRaw from '../../public/data/organizations-table.json';
-import { buildOrgDonorCountriesMap, buildOrgProjectsMap, buildProjectNameMap, buildProjectIdToKeyMap, buildOrgAgenciesMap, buildProjectAgenciesMap, calculateOrganizationTypesFromOrganizationsWithProjects, getNestedOrganizationsForModals } from '../lib/data';
+import { buildOrgDonorCountriesMap, buildOrgProjectsMap, buildProjectNameMap, buildProjectIdToKeyMap, buildOrgAgenciesMap, buildProjectAgenciesMap, buildProjectDescriptionMap, calculateOrganizationTypesFromOrganizationsWithProjects, getNestedOrganizationsForModals } from '../lib/data';
 import { exportDashboardToPDF } from '../lib/exportPDF';
 import { exportViewAsCSV, exportViewAsXLSX } from '../lib/exportCSV';
 import type { DashboardStats, OrganizationProjectData, OrganizationTypeData, OrganizationWithProjects, ProjectData, ProjectTypeData } from '../types/airtable';
@@ -413,6 +413,7 @@ const CrisisDataDashboard = ({
     // Centralized data maps for modals
     const [projectNameMap, setProjectNameMap] = useState<Record<string, string>>({});
     const [projectIdToKeyMap, setProjectIdToKeyMap] = useState<Record<string, string>>({});
+    const [projectDescriptionMap, setProjectDescriptionMap] = useState<Record<string, string>>({});
     const [orgProjectsMap, setOrgProjectsMap] = useState<Record<string, Array<{ investmentTypes: string[] }>>>({});
     const [orgDonorCountriesMap, setOrgDonorCountriesMap] = useState<Record<string, string[]>>({});
     const [orgAgenciesMap, setOrgAgenciesMap] = useState<Record<string, Record<string, string[]>>>({});
@@ -426,6 +427,7 @@ const CrisisDataDashboard = ({
                 setNestedOrganizations(nestedOrgs);
                 setProjectNameMap(buildProjectNameMap(nestedOrgs));
                 setProjectIdToKeyMap(buildProjectIdToKeyMap(nestedOrgs));
+                setProjectDescriptionMap(buildProjectDescriptionMap(nestedOrgs));
                 setOrgProjectsMap(buildOrgProjectsMap(nestedOrgs));
                 setOrgDonorCountriesMap(buildOrgDonorCountriesMap(nestedOrgs));
                 
@@ -1510,6 +1512,7 @@ const CrisisDataDashboard = ({
                         <OrganizationModal
                             organization={orgRecord}
                             projectNameMap={projectNameMap}
+                            projectDescriptionMap={projectDescriptionMap}
                             orgProjectsMap={orgProjectsMap}
                             orgDonorCountriesMap={orgDonorCountriesMap}
                             orgAgenciesMap={orgAgenciesMap}

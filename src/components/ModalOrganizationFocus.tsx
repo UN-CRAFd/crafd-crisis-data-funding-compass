@@ -36,8 +36,8 @@ const ModalOrganizationFocus: React.FC<ModalOrganizationFocusProps> = ({ project
 
     return (
         <div>  
-            <div className="rounded-lg border border-[var(--badge-other-text)]/20 bg-[var(--badge-other-text)]/10 p-2 shadow-sm mt-3">
-                <div className="flex flex-wrap gap-1">
+            
+                <div className="flex flex-wrap gap-1 mb-2">
                     {investmentTypeCounts.map(({ type, count }) => {
                         const IconComponent = getIconForInvestmentType(type);
                         const button = (
@@ -76,7 +76,7 @@ const ModalOrganizationFocus: React.FC<ModalOrganizationFocusProps> = ({ project
                     })}
                 </div>
             </div>
-        </div>
+       
     );
 };
 
