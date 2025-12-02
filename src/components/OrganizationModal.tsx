@@ -351,23 +351,22 @@ export default function OrganizationModal({
                                     </h3>
                                     <span className="text-lg font-normal text-gray-500"></span>
                                 </div>
-                                <div className="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm">
- 
-    <div className="mt-0 grid grid-cols-3 gap-4">
-        <div className="flex flex-col">
-            <span className="text-xs tracking-wide text-slate-400">Total Funding</span>
-            <span className="text-base font-medium text-slate-700">—</span>
-        </div>
-        <div className="flex flex-col">
-            <span className="text-xs tracking-wide text-slate-400">Last Updated</span>
-            <span className="text-base font-medium text-slate-700">—</span>
-        </div>
-        <div className="flex flex-col">
-            <span className="text-xs tracking-wide text-slate-400">Sources</span>
-            <span className="text-base font-medium text-slate-700">—</span>
-        </div>
-    </div>
-</div>
+                                <div className="rounded-lg border border-slate-200 bg-white p-6 shadow-sm">
+                                    <div className="mt-0 grid grid-cols-3 gap-4">
+                                        <div className="flex flex-col">
+                                            <span className="text-sm tracking-wide text-slate-400">Total Funding</span>
+                                            <span className="text-base font-medium text-slate-700">—</span>
+                                        </div>
+                                        <div className="flex flex-col">
+                                            <span className="text-sm tracking-wide text-slate-400">Last Updated</span>
+                                            <span className="text-base font-medium text-slate-700">—</span>
+                                        </div>
+                                        <div className="flex flex-col">
+                                            <span className="text-sm tracking-wide text-slate-400">Sources</span>
+                                            <span className="text-base font-medium text-slate-700">—</span>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
                             
                         );
