@@ -380,7 +380,9 @@ export default function OrganizationModal({
 
                                         <div className="flex flex-col">
                                             <span className="text-sm tracking-wide text-slate-400">Last Updated</span>
-                                            <span className="text-base font-medium text-slate-700">—</span>
+                                            <span className="text-base font-medium text-slate-700">
+                                                {fields['Last Updated'] ? String(fields['Last Updated']) : '—'}
+                                            </span>
                                         </div>
                                     </div>
                                 </div>
