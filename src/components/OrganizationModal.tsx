@@ -308,13 +308,7 @@ export default function OrganizationModal({
     )}
 </div>
 
- {/* Organization Type Badge */}
-                {orgType && (
-                    <span className="inline-flex items-center px-3 py-1.5 rounded-md text-sm font-medium bg-slate-100 text-slate-600 w-fit mb-0 mt-4">
-                        {orgType}
-                    </span>
-                )}
-
+ 
 
 
 
@@ -336,9 +330,15 @@ export default function OrganizationModal({
                         </Field>
                     </div>
                 )}
-
-                {/* Separator line before metadata sections */}
-                <div className="border-t border-gray-200 mt-8 mb-4"></div>
+                <div className="flex items-center justify-between mt-4">
+                    <div className="flex-1 border-t border-gray-200 ml-4"></div>
+                    {orgType && (
+                        <span className="inline-flex items-center px-3 py-1.5 rounded-md text-sm font-small text-slate-600 w-fit">
+                            {orgType}
+                        </span>
+                    )}
+                    <div className="flex-1 border-t border-gray-200 ml-4"></div>
+                </div>
 
                 {/* Metadata - Single column layout */}
                 {/* Organization Funding*/}
