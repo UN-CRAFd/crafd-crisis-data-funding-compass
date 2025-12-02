@@ -342,6 +342,13 @@ export default function OrganizationModal({
                 {/* Metadata - Single column layout */}
                 {/* Organization Funding*/}
                     {(() => {
+                        const estBudget = fields['Est. Org Budget'];
+                        const budgetSource = fields['Budget Source'];
+                        
+                        // Only show if at least one field has a value
+                        if (!estBudget && !budgetSource) {
+                            return null;
+                        }
                        
                         return (
                             <div>
@@ -354,13 +361,21 @@ export default function OrganizationModal({
                                 <div className="rounded-lg border border-slate-200 bg-white p-6 shadow-sm">
                                     <div className="mt-0 grid grid-cols-3 gap-4">
                                         <div className="flex flex-col">
-                                            <span className="text-sm tracking-wide text-slate-400">Total Funding</span>
-                                            <span className="text-base font-medium text-slate-700">—</span>
+                                            <span className="text-sm tracking-wide text-slate-400">Est. Org Budget</span>
+                                            <span className="text-base font-medium text-slate-700">
+                                                {estBudget 
+                                                    ? (typeof estBudget === 'number' 
+                                                        ? `$${(estBudget / 1000000).toFixed(1)}M`
+                                                        : String(estBudget))
+                                                    : '—'}
+                                            </span>
                                         </div>
                                         
                                         <div className="flex flex-col">
-                                            <span className="text-sm tracking-wide text-slate-400">Sources</span>
-                                            <span className="text-base font-medium text-slate-700">—</span>
+                                            <span className="text-sm tracking-wide text-slate-400">Budget Source</span>
+                                            <span className="text-base font-medium text-slate-700">
+                                                {budgetSource ? String(budgetSource) : '—'}
+                                            </span>
                                         </div>
 
                                         <div className="flex flex-col">
