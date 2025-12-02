@@ -6,16 +6,6 @@ import ModalOrganizationFocus from './ModalOrganizationFocus';
 import BaseModal, { ModalHeader, CountryBadge, ModalTooltip } from './BaseModal';
 import { getIconForInvestmentType } from '@/config/investmentTypeIcons';
 
-// Investment type definitions for tooltips
-const INVESTMENT_TYPE_DESCRIPTIONS: Record<string, string> = {
-    'Data Sets & Commons': 'Shared data repositories and standardized datasets that enable analysis and decision-making across the humanitarian sector.',
-    'Infrastructure & Platforms': 'Technical systems, tools, and platforms that support data collection, storage, processing, and sharing.',
-    'Crisis Analytics & Insights': 'Analysis, modeling, and insights derived from data to inform humanitarian response and preparedness.',
-    'Human Capital & Know-how': 'Training, capacity building, and expertise development for humanitarian data practitioners.',
-    'Standards & Coordination': 'Common standards, protocols, and coordination mechanisms for humanitarian data management.',
-    'Learning & Exchange': 'Knowledge sharing, communities of practice, and collaborative learning initiatives.'
-};
-
 interface OrganizationModalProps {
     // Accept the full organization record coming from `public/data/organizations-table.json`
     // Structure: { id: string; createdTime?: string; fields: Record<string, unknown> }
@@ -496,6 +486,7 @@ export default function OrganizationModal({
                                                 country={country} 
                                                 onClick={onDonorClick}
                                                 agencies={orgAgencies[country]}
+                                                tooltipContainer={tooltipContainer}
                                             />
                                         );
                                     })}
