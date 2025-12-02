@@ -204,6 +204,10 @@ function convertToOrganizationWithProjects(org: NestedOrganization): Organizatio
         orgType = orgTypeRaw[0];
     }
 
+    // Extract organization budget
+    const estimatedBudget = org.fields?.['Est. Org Budget'];
+    const budgetValue = typeof estimatedBudget === 'number' ? estimatedBudget : undefined;
+
     return {
         id: org.id,
         organizationName: org.name || 'Unnamed Organization',
@@ -212,7 +216,8 @@ function convertToOrganizationWithProjects(org: NestedOrganization): Organizatio
         description: org.fields?.['Org Description'] || '',
         donorCountries,
         projects: projectsData,
-        projectCount: projectsData.length
+        projectCount: projectsData.length,
+        estimatedBudget: budgetValue
     };
 }
 
