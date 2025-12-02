@@ -1,6 +1,7 @@
 import { GoogleAnalytics } from '@next/third-parties/google';
 
 import ErrorBoundary from "@/components/ErrorBoundary";
+import { TipsProvider } from "@/contexts/TipsContext";
 import type { Metadata } from "next";
 // import { Suspense } from "react";
 import "./globals.css";
@@ -29,10 +30,12 @@ export default function RootLayout({
         <html lang="en">
             <body className="font-sans antialiased">
                 <ErrorBoundary>
-                    {children}
-                    {/* <Suspense fallback={null}>
-                        <OnboardingTour />
-                    </Suspense> */}
+                    <TipsProvider>
+                        {children}
+                        {/* <Suspense fallback={null}>
+                            <OnboardingTour />
+                        </Suspense> */}
+                    </TipsProvider>
                 </ErrorBoundary>
 
 
