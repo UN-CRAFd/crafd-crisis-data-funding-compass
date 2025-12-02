@@ -93,7 +93,7 @@ interface CrisisDataDashboardProps {
     appliedSearchQuery: string; // Applied search query (from URL)
     selectedOrgKey: string; // Organization key from URL
     selectedProjectKey: string; // Asset key from URL
-    sortBy: 'name' | 'donors' | 'assets'; // Sort field from URL
+    sortBy: 'name' | 'donors' | 'assets' | 'funding'; // Sort field from URL
     sortDirection: 'asc' | 'desc'; // Sort direction from URL
     onDonorsChange: (values: string[]) => void;
     onTypesChange: (values: string[]) => void;
@@ -101,7 +101,7 @@ interface CrisisDataDashboardProps {
     onSearchChange: (value: string) => void;
     onSearchSubmit: () => void;
     onResetFilters: () => void;
-    onSortChange: (sortBy: 'name' | 'donors' | 'assets', sortDirection: 'asc' | 'desc') => void;
+    onSortChange: (sortBy: 'name' | 'donors' | 'assets' | 'funding', sortDirection: 'asc' | 'desc') => void;
     onOpenOrganizationModal: (orgKey: string) => void;
     onOpenProjectModal: (projectKey: string) => void;
     onCloseOrganizationModal: () => void;
@@ -928,92 +928,90 @@ const CrisisDataDashboard = ({
                             <div className="flex items-center gap-2">
                                 {/* Sort Dropdown only for Table view */}
                                 {activeView === 'table' && (
-                                    <div className="animate-in slide-in-from-right-5 fade-in duration-300">
+                                    <div className="animate-in slide-in-from-right-5 fade-in duration-300 flex items-center gap-2">
+                                        {/* Sort Topic Dropdown */}
                                         <DropdownMenu onOpenChange={(open) => setSortMenuOpen(open)}>
-                                        <DropdownMenuTrigger asChild>
-                                            <Button
-                                                variant="outline"
-                                                className="hidden sm:flex h-7 w-auto px-2.5 justify-between font-medium transition-all bg-slate-50/50 border-slate-200 hover:bg-white hover:border-slate-300 text-[11px]"
+                                            <DropdownMenuTrigger asChild>
+                                                <Button
+                                                    variant="outline"
+                                                    className="hidden sm:flex h-7 w-auto px-2.5 font-medium transition-all bg-slate-50/50 border-slate-200 hover:bg-white hover:border-slate-300 text-[11px]"
+                                                >
+                                                    <div className="flex items-center gap-1.5 min-w-0">
+                                                        <span className="truncate">
+                                                            {sortBy === 'name' 
+                                                                ? 'Alphabetically' 
+                                                                : sortBy === 'donors' 
+                                                                ? 'Donors' 
+                                                                : sortBy === 'assets'
+                                                                ? 'Assets'
+                                                                : 'Funding'}
+                                                        </span>
+                                                    </div>
+                                                    <ChevronDown className={`ml-1.5 h-3 w-3 opacity-50 shrink-0 transform transition-transform ${
+                                                        sortMenuOpen ? 'rotate-180' : ''
+                                                    }`} />
+                                                </Button>
+                                            </DropdownMenuTrigger>
+                                            <DropdownMenuContent 
+                                                align="end" 
+                                                side="bottom"
+                                                sideOffset={4}
+                                                className="w-auto min-w-[140px] bg-white border border-slate-200 shadow-lg"
                                             >
-                                                <div className="flex items-center gap-1.5 min-w-0">
-                                                    {sortBy === 'name' ? (
-                                                        // For alphabetical: asc = A-Z (down), desc = Z-A (up)
-                                                        sortDirection === 'asc' ? (
-                                                            <ArrowDownWideNarrow className="w-3 h-3 shrink-0" />
-                                                        ) : (
-                                                            <ArrowUpWideNarrow className="w-3 h-3 shrink-0" />
-                                                        )
-                                                    ) : (
-                                                        // For numbers: asc = low-to-high (up), desc = high-to-low (down)
-                                                        sortDirection === 'asc' ? (
-                                                            <ArrowUpWideNarrow className="w-3 h-3 shrink-0" />
-                                                        ) : (
-                                                            <ArrowDownWideNarrow className="w-3 h-3 shrink-0" />
-                                                        )
-                                                    )}
-                                                    <span className="truncate">
-                                                        {sortBy === 'name' 
-                                                            ? 'Alphabetically' 
-                                                            : sortBy === 'donors' 
-                                                            ? 'Donors' 
-                                                            : 'Assets'}
-                                                    </span>
-                                                </div>
-                                                <ChevronDown className={`ml-1.5 h-3 w-3 opacity-50 shrink-0 transform transition-transform ${
-                                                    sortMenuOpen ? 'rotate-180' : ''
-                                                }`} />
-                                            </Button>
-                                        </DropdownMenuTrigger>
-                                        <DropdownMenuContent 
-                                            align="end" 
-                                            side="bottom"
-                                            sideOffset={4}
-                                            className="w-auto min-w-[180px] bg-white border border-slate-200 shadow-lg"
+                                                <DropdownMenuItem
+                                                    onClick={() => onSortChange('name', sortDirection)}
+                                                    className="cursor-pointer text-[11px] py-1"
+                                                >
+                                                    Alphabetically
+                                                </DropdownMenuItem>
+                                                <DropdownMenuItem
+                                                    onClick={() => onSortChange('donors', sortDirection)}
+                                                    className="cursor-pointer text-[11px] py-1"
+                                                >
+                                                    Donors
+                                                </DropdownMenuItem>
+                                                <DropdownMenuItem
+                                                    onClick={() => onSortChange('assets', sortDirection)}
+                                                    className="cursor-pointer text-[11px] py-1"
+                                                >
+                                                    Assets
+                                                </DropdownMenuItem>
+                                                <DropdownMenuItem
+                                                    onClick={() => onSortChange('funding', sortDirection)}
+                                                    className="cursor-pointer text-[11px] py-1"
+                                                >
+                                                    Funding
+                                                </DropdownMenuItem>
+                                            </DropdownMenuContent>
+                                        </DropdownMenu>
+
+                                        {/* Sort Direction Toggle Button - Icon Only */}
+                                        <Button
+                                            variant="outline"
+                                            size="sm"
+                                            className="hidden sm:flex h-7 w-7 p-0 font-medium transition-all bg-slate-50/50 border-slate-200 hover:bg-white hover:border-slate-300"
+                                            onClick={() => {
+                                                const newDirection = sortDirection === 'asc' ? 'desc' : 'asc';
+                                                onSortChange(sortBy, newDirection);
+                                            }}
+                                            title={sortDirection === 'asc' ? 'Sort ascending' : 'Sort descending'}
                                         >
-                                            <DropdownMenuItem
-                                                onClick={() => onSortChange('name', 'asc')}
-                                                className="cursor-pointer text-[11px] py-1"
-                                            >
-                                                <ArrowDownWideNarrow className="w-3 h-3 mr-2" />
-                                                Alphabetically (A-Z)
-                                            </DropdownMenuItem>
-                                            <DropdownMenuItem
-                                                onClick={() => onSortChange('name', 'desc')}
-                                                className="cursor-pointer text-[11px] py-1"
-                                            >
-                                                <ArrowUpWideNarrow className="w-3 h-3 mr-2" />
-                                                Alphabetically (Z-A)
-                                            </DropdownMenuItem>
-                                            <DropdownMenuItem
-                                                onClick={() => onSortChange('donors', 'desc')}
-                                                className="cursor-pointer text-[11px] py-1"
-                                            >
-                                                <ArrowDownWideNarrow className="w-3 h-3 mr-2" />
-                                                Number of Donors
-                                            </DropdownMenuItem>
-                                            <DropdownMenuItem
-                                                onClick={() => onSortChange('donors', 'asc')}
-                                                className="cursor-pointer text-[11px] py-1"
-                                            >
-                                                <ArrowUpWideNarrow className="w-3 h-3 mr-2" />
-                                                Number of Donors
-                                            </DropdownMenuItem>
-                                            <DropdownMenuItem
-                                                onClick={() => onSortChange('assets', 'desc')}
-                                                className="cursor-pointer text-[11px] py-1"
-                                            >
-                                                <ArrowDownWideNarrow className="w-3 h-3 mr-2" />
-                                                Number of Assets
-                                            </DropdownMenuItem>
-                                            <DropdownMenuItem
-                                                onClick={() => onSortChange('assets', 'asc')}
-                                                className="cursor-pointer text-[11px] py-1"
-                                            >
-                                                <ArrowUpWideNarrow className="w-3 h-3 mr-2" />
-                                                Number of Assets
-                                            </DropdownMenuItem>
-                                        </DropdownMenuContent>
-                                    </DropdownMenu>
+                                            {sortBy === 'name' ? (
+                                                // For alphabetical: asc = A-Z (down), desc = Z-A (up)
+                                                sortDirection === 'asc' ? (
+                                                    <ArrowDownWideNarrow className="w-3 h-3" />
+                                                ) : (
+                                                    <ArrowUpWideNarrow className="w-3 h-3" />
+                                                )
+                                            ) : (
+                                                // For numbers: asc = low-to-high (up), desc = high-to-low (down)
+                                                sortDirection === 'asc' ? (
+                                                    <ArrowUpWideNarrow className="w-3 h-3" />
+                                                ) : (
+                                                    <ArrowDownWideNarrow className="w-3 h-3" />
+                                                )
+                                            )}
+                                        </Button>
                                     </div>
                                 )}
                                 {/* View Toggle Switch Tabs */}
@@ -1083,6 +1081,11 @@ const CrisisDataDashboard = ({
                                                     } else if (sortBy === 'assets') {
                                                         // Sort by number of projects/assets
                                                         comparison = a.projects.length - b.projects.length;
+                                                    } else if (sortBy === 'funding') {
+                                                        // Sort by estimated budget (handle undefined/null values)
+                                                        const aBudget = a.estimatedBudget || 0;
+                                                        const bBudget = b.estimatedBudget || 0;
+                                                        comparison = aBudget - bBudget;
                                                     }
                                                     
                                                     // Apply sort direction

@@ -62,7 +62,7 @@ const CrisisDataDashboardWrapper = ({ logoutButton }: { logoutButton?: React.Rea
     // Get sort parameters from URL (compact keys: sb -> sortBy, sd -> sortDirection)
     const sortBy = useMemo(() => {
         const raw = searchParams.get('sb') ?? searchParams.get('sortBy');
-        if (raw === 'donors' || raw === 'assets') return raw;
+        if (raw === 'donors' || raw === 'assets' || raw === 'funding') return raw;
         return 'name'; // default
     }, [searchParams]);
     
@@ -154,7 +154,7 @@ const CrisisDataDashboardWrapper = ({ logoutButton }: { logoutButton?: React.Rea
         types?: string[]; 
         themes?: string[]; 
         search?: string;
-        sortBy?: 'name' | 'donors' | 'assets';
+        sortBy?: 'name' | 'donors' | 'assets' | 'funding';
         sortDirection?: 'asc' | 'desc';
     }) => {
         const newSearchParams = new URLSearchParams(searchParams.toString());
@@ -348,7 +348,7 @@ const CrisisDataDashboardWrapper = ({ logoutButton }: { logoutButton?: React.Rea
         updateURLParams({ themes: values });
     };
 
-    const handleSortChange = (newSortBy: 'name' | 'donors' | 'assets', newSortDirection: 'asc' | 'desc') => {
+    const handleSortChange = (newSortBy: 'name' | 'donors' | 'assets' | 'funding', newSortDirection: 'asc' | 'desc') => {
         updateURLParams({ sortBy: newSortBy, sortDirection: newSortDirection });
     };
 
