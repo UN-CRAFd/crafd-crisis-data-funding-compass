@@ -930,7 +930,34 @@ const CrisisDataDashboard = ({
                                 {activeView === 'table' && (
                                     <div className="animate-in slide-in-from-right-5 fade-in duration-300">
                                         <div className="hidden sm:flex h-7 px-2.5 font-medium transition-all bg-slate-50/50 border border-slate-200 hover:bg-white hover:border-slate-300 text-[11px] rounded-md items-center gap-1.5">
+                                           <Button
+                                                variant="ghost"
+                                                size="sm"
+                                                className="h-auto p-0 m-0 font-medium transition-all hover:bg-transparent"
+                                                onClick={() => {
+                                                    const newDirection = sortDirection === 'asc' ? 'desc' : 'asc';
+                                                    onSortChange(sortBy, newDirection);
+                                                }}
+                                                title={sortDirection === 'asc' ? 'Sort ascending' : 'Sort descending'}
+                                            >
+                                                {sortBy === 'name' ? (
+                                                    // For alphabetical: asc = A-Z (down), desc = Z-A (up)
+                                                    sortDirection === 'asc' ? (
+                                                        <ArrowDownWideNarrow className="w-3 h-3" />
+                                                    ) : (
+                                                        <ArrowUpWideNarrow className="w-3 h-3" />
+                                                    )
+                                                ) : (
+                                                    // For numbers: asc = low-to-high (up), desc = high-to-low (down)
+                                                    sortDirection === 'asc' ? (
+                                                        <ArrowUpWideNarrow className="w-3 h-3" />
+                                                    ) : (
+                                                        <ArrowDownWideNarrow className="w-3 h-3" />
+                                                    )
+                                                )}
+                                            </Button>
                                             <DropdownMenu onOpenChange={(open) => setSortMenuOpen(open)}>
+                                                <div className="w-px h-4 bg-slate-200"></div>
                                                 <DropdownMenuTrigger asChild>
                                                     <Button
                                                         variant="ghost"
@@ -950,7 +977,9 @@ const CrisisDataDashboard = ({
                                                         <ChevronDown className={`h-3 w-3 opacity-50 shrink-0 transform transition-transform ${
                                                             sortMenuOpen ? 'rotate-180' : ''
                                                         }`} />
+                                                        
                                                     </Button>
+                                                           
                                                 </DropdownMenuTrigger>
                                                 <DropdownMenuContent 
                                                     align="end" 
@@ -983,36 +1012,7 @@ const CrisisDataDashboard = ({
                                                         Funding
                                                     </DropdownMenuItem>
                                                 </DropdownMenuContent>
-                                            </DropdownMenu>
-
-                                            {/* Sort Direction Toggle Button - Icon Only */}
-                                            <div className="w-px h-4 bg-slate-200"></div>
-                                            <Button
-                                                variant="ghost"
-                                                size="sm"
-                                                className="h-auto p-0 m-0 font-medium transition-all hover:bg-transparent"
-                                                onClick={() => {
-                                                    const newDirection = sortDirection === 'asc' ? 'desc' : 'asc';
-                                                    onSortChange(sortBy, newDirection);
-                                                }}
-                                                title={sortDirection === 'asc' ? 'Sort ascending' : 'Sort descending'}
-                                            >
-                                                {sortBy === 'name' ? (
-                                                    // For alphabetical: asc = A-Z (down), desc = Z-A (up)
-                                                    sortDirection === 'asc' ? (
-                                                        <ArrowDownWideNarrow className="w-3 h-3" />
-                                                    ) : (
-                                                        <ArrowUpWideNarrow className="w-3 h-3" />
-                                                    )
-                                                ) : (
-                                                    // For numbers: asc = low-to-high (up), desc = high-to-low (down)
-                                                    sortDirection === 'asc' ? (
-                                                        <ArrowUpWideNarrow className="w-3 h-3" />
-                                                    ) : (
-                                                        <ArrowDownWideNarrow className="w-3 h-3" />
-                                                    )
-                                                )}
-                                            </Button>
+                                            </DropdownMenu>                                         
                                         </div>
                                     </div>
                                 )}
