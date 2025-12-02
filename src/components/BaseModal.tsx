@@ -262,9 +262,10 @@ interface CountryBadgeProps {
     className?: string;
     onClick?: (country: string) => void;
     agencies?: string[];
+    tooltipContainer?: Element | null;
 }
 
-export function CountryBadge({ country, className = '', onClick, agencies }: CountryBadgeProps) {
+export function CountryBadge({ country, className = '', onClick, agencies, tooltipContainer }: CountryBadgeProps) {
     const isClickable = !!onClick;
     
     const badgeContent = (
@@ -281,9 +282,6 @@ export function CountryBadge({ country, className = '', onClick, agencies }: Cou
     
     // If agencies are provided, wrap in tooltip
     if (agencies && agencies.length > 0) {
-        const agenciesContent = (
-            <div className="font-semibold mb-1">Financing Agencies:</div>
-        );
         return (
             <ModalTooltip
                 content={
@@ -298,6 +296,7 @@ export function CountryBadge({ country, className = '', onClick, agencies }: Cou
                 }
                 side="top"
                 delayDuration={200}
+                tooltipContainer={tooltipContainer}
             >
                 {badgeContent}
             </ModalTooltip>
