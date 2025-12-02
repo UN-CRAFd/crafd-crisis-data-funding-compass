@@ -786,7 +786,7 @@ const CrisisDataDashboard = ({
 
             elements.push(
                 <React.Fragment key="types">
-                    {' '}in <strong>{displayTypes.join(' & ')}</strong>
+                    {' '}in <strong>{displayTypes.join(' / ')}</strong>
                 </React.Fragment>
             );
         }
@@ -795,7 +795,7 @@ const CrisisDataDashboard = ({
         if (investmentThemes.length > 0) {
             elements.push(
                 <React.Fragment key="themes">
-                    {' '}with themes <strong>{investmentThemes.join(' & ')}</strong>
+                    {' '}with themes <strong>{investmentThemes.join(' / ')}</strong>
                 </React.Fragment>
             );
         }
@@ -925,11 +925,11 @@ const CrisisDataDashboard = ({
                                 title={labels.sections.organizationsAndProjects}
                             />
 
-                            <div className="flex items-center gap-2">
+                            <div className="flex items-center gap-1">
                                 {/* Sort Dropdown only for Table view */}
                                 {activeView === 'table' && (
                                     <div className="animate-in slide-in-from-right-5 fade-in duration-300">
-                                        <div className="hidden sm:flex h-7 px-2.5 font-medium transition-all bg-slate-50/50 border border-slate-200 hover:bg-white hover:border-slate-300 text-[11px] rounded-md items-center gap-1.5">
+                                        <div className="hidden sm:flex h-7 px-2 font-medium transition-all bg-slate-50/50 border border-slate-200 hover:bg-white hover:border-slate-300 text-[11px] rounded-md items-center gap-1">
                                            <Button
                                                 variant="ghost"
                                                 size="sm"

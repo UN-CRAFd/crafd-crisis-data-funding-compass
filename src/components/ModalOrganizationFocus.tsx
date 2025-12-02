@@ -35,45 +35,46 @@ const ModalOrganizationFocus: React.FC<ModalOrganizationFocusProps> = ({ project
     if (investmentTypeCounts.length === 0) return null;
 
     return (
-        <div className="mt-4">
-            <SubHeader>Organization Focus</SubHeader>
-            <div className="flex flex-wrap gap-2">
-                {investmentTypeCounts.map(({ type, count }) => {
-                    const IconComponent = getIconForInvestmentType(type);
-                    const button = (
-                        <button
-                            onClick={() => onTypeClick?.(type)}
-                            className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-md text-sm font-semibold hover:opacity-80 transition-opacity cursor-pointer"
-                            style={{
-                                backgroundColor: 'var(--badge-other-bg)',
-                                color: 'var(--badge-other-text)'
-                            }}
-                        >
-                            <IconComponent className="w-4 h-4" />
-                            <span>{type}</span>
-                            <span 
-                                className="inline-flex items-center justify-center w-5 h-5 text-xs font-bold rounded-full"
+        <div>  
+            <div className="rounded-lg border border-[var(--badge-other-text)]/20 bg-[var(--badge-other-text)]/10 p-2 shadow-sm mt-3">
+                <div className="flex flex-wrap gap-1">
+                    {investmentTypeCounts.map(({ type, count }) => {
+                        const IconComponent = getIconForInvestmentType(type);
+                        const button = (
+                            <button
+                                onClick={() => onTypeClick?.(type)}
+                                className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-md text-sm font-semibold hover:opacity-80 transition-opacity cursor-pointer"
                                 style={{
-                                    backgroundColor: 'var(--badge-other-text)',
-                                    color: 'var(--badge-other-bg)'
+                                    backgroundColor: 'var(--badge-other-bg)',
+                                    color: 'var(--badge-other-text)'
                                 }}
                             >
-                                {count}
-                            </span>
-                        </button>
-                    );
-                    
-                    return (
-                        <ModalTooltip 
-                            key={type}
-                            content={INVESTMENT_TYPE_DESCRIPTIONS[type] || 'Click to filter by this investment type'}
-                            side="top"
-                            tooltipContainer={tooltipContainer}
-                        >
-                            {button}
-                        </ModalTooltip>
-                    );
-                })}
+                                <IconComponent className="w-4 h-4" />
+                                <span>{type}</span>
+                                <span 
+                                    className="inline-flex items-center justify-center w-4 h-4 text-xs font-bold rounded-full"
+                                    style={{
+                                        backgroundColor: 'var(--badge-other-text)',
+                                        color: 'var(--badge-other-bg)'
+                                    }}
+                                >
+                                    {count}
+                                </span>
+                            </button>
+                        );
+                        
+                        return (
+                            <ModalTooltip 
+                                key={type}
+                                content={INVESTMENT_TYPE_DESCRIPTIONS[type] || 'Click to filter by this investment type'}
+                                side="top"
+                                tooltipContainer={tooltipContainer}
+                            >
+                                {button}
+                            </ModalTooltip>
+                        );
+                    })}
+                </div>
             </div>
         </div>
     );
