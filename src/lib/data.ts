@@ -680,6 +680,26 @@ export function buildProjectIdToKeyMap(organizations: NestedOrganization[]): Rec
 }
 
 /**
+ * Build a map from project ID to project description
+ * Used by organization modal to display project descriptions in tooltips
+ */
+export function buildProjectDescriptionMap(organizations: NestedOrganization[]): Record<string, string> {
+    const map: Record<string, string> = {};
+    
+    organizations.forEach(org => {
+        (org.projects || []).forEach(project => {
+            if (project && project.id) {
+                const fields = project.fields || {};
+                const description = fields['Project Description'] || '';
+                map[project.id] = String(description).trim();
+            }
+        });
+    });
+    
+    return map;
+}
+
+/**
  * Build a map from organization ID to its projects with investment types
  * Used by organization modal to display project investment types
  */
