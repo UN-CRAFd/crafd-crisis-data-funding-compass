@@ -279,39 +279,34 @@ export default function OrganizationModal({
                     </p>
                 )}
 
- {/* HDX + IATI Buttons */}
-<div className="mt-3 flex items-center gap-3">
-    {/* HDX */}
-    {typeof fields['HDX Org Key'] === 'string' && fields['HDX Org Key'].trim() !== '' && (
-        <a
-            href={`https://data.humdata.org/organization/${fields['HDX Org Key'].trim()}`}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="inline-flex items-center gap-2 px-3 py-1.5 rounded-md text-sm font-medium bg-slate-100 text-slate-600 border border-slate-200 hover:border-slate-400 hover:bg-slate-200 transition-colors"
-        >
-            <img src="/hdx_logo.png" alt="HDX logo" className="w-5 h-5 rounded-none" />
-            <span className="font-normal">View on <strong className="font-bold">HDX</strong></span>
-        </a>
-    )}
+                    {/* HDX + IATI Buttons */}
+                    <div className="mt-3 flex items-center gap-3">
+                        {/* HDX */}
+                        {typeof fields['HDX Org Key'] === 'string' && fields['HDX Org Key'].trim() !== '' && (
+                            <a
+                                href={`https://data.humdata.org/organization/${fields['HDX Org Key'].trim()}`}
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="inline-flex items-center gap-2 px-3 py-1.5 rounded-md text-sm font-medium bg-slate-100 text-slate-600 border border-slate-200 hover:border-slate-400 hover:bg-slate-200 transition-colors"
+                            >
+                                <img src="/hdx_logo.png" alt="HDX logo" className="w-5 h-5 rounded-none" />
+                                <span className="font-normal">View on <strong className="font-bold">HDX</strong></span>
+                            </a>
+                        )}
 
-    {/* IATI */}
-    {typeof fields['IATI Org Key'] === 'string' && fields['IATI Org Key'].trim() !== '' && (
-        <a
-            href={`https://d-portal.org/ctrack.html?publisher=${fields['IATI Org Key'].trim()}#view=main`}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="inline-flex items-center gap-2 px-3 py-1.5 rounded-md text-sm font-medium bg-slate-100 text-slate-600 border border-slate-200 hover:border-slate-400 hover:bg-slate-200 transition-colors"
-        >
-            <img src="/iati_logo.png" alt="IATI logo" className=" h-5 rounded-none" />
-            <span className="font-normal">View on <strong className="font-bold">IATI</strong></span>
-        </a>
-    )}
-</div>
-
- 
-
-
-
+                        {/* IATI */}
+                        {typeof fields['IATI Org Key'] === 'string' && fields['IATI Org Key'].trim() !== '' && (
+                            <a
+                                href={`https://d-portal.org/ctrack.html?publisher=${fields['IATI Org Key'].trim()}#view=main`}
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="inline-flex items-center gap-2 px-3 py-1.5 rounded-md text-sm font-medium bg-slate-100 text-slate-600 border border-slate-200 hover:border-slate-400 hover:bg-slate-200 transition-colors"
+                            >
+                                <img src="/iati_logo.png" alt="IATI logo" className=" h-5 rounded-none" />
+                                <span className="font-normal">View on <strong className="font-bold">IATI</strong></span>
+                            </a>
+                        )}
+                    </div>
                 {/* If website exists but description didn't show it, render a prominent Website button */}
                 {!fields['Org Description'] && websiteValue && websiteValue.trim() !== '' && (
                     <div>
