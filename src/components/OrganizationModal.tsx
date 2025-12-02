@@ -1,6 +1,6 @@
 'use client';
 
-import { Building2, ChevronDown, ChevronUp, ExternalLink, Package, PackageOpen } from 'lucide-react';
+import { Building2, ChevronDown, ChevronUp, ExternalLink, Info, Package, PackageOpen } from 'lucide-react';
 import { useState } from 'react';
 import ModalOrganizationFocus from './ModalOrganizationFocus';
 import BaseModal, { ModalHeader, CountryBadge } from './BaseModal';
@@ -455,7 +455,9 @@ export default function OrganizationModal({
                                     <span className="text-lg font-normal text-gray-500 tabular-nums">({donorCountries.length})</span>
                                 </div>
                                     <div className="rounded-lg border border-slate-200 bg-slate-100 p-4 shadow-sm">
-                                        <div className="mt-0 grid grid-cols-3 gap-4">
+                                        
+                                        <div className="mt-0 grid grid-cols-[3fr_3fr_3fr_0.2fr] gap-4">
+
                                             <div className="flex flex-col">
                                                 <span className="text-sm tracking-wide text-slate-400">Est. Org Budget</span>
                                                 <span className="text-base font-medium text-slate-700">
@@ -480,6 +482,19 @@ export default function OrganizationModal({
                                                     {fields['Last Updated'] ? String(fields['Last Updated']) : '—'}
                                                 </span>
                                             </div>
+                                            <div className="flex">
+                                            <div className="flex-1"></div>
+                                            <TooltipProvider>
+                                                <Tooltip>
+                                                    <TooltipTrigger asChild>
+                                                        <Info className="w-4 h-4 text-slate-400 hover:text-slate-600 transition-colors cursor-help shrink-0 " />
+                                                    </TooltipTrigger>
+                                                    <TooltipContent side="left" className="text-xs">
+                                                        The data was extracted by the CRAF'd
+                                                    </TooltipContent>
+                                                </Tooltip>
+                                            </TooltipProvider>
+                                        </div>
                                         </div>
                                     </div>
                                 <div className="flex flex-wrap gap-2 mt-4">
