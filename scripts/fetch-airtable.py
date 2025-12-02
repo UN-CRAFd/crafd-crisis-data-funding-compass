@@ -34,7 +34,6 @@ FIELDS_ORGANIZATIONS = [
     "IATI Org Key",
     "Est. Org Budget",
     "Budget Source",
-    "Last Budget Update"
     "Org Type",
     "Org Short Name",
     "Org Website",
