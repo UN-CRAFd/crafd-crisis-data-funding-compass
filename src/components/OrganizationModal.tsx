@@ -471,6 +471,7 @@ export default function OrganizationModal({
                                                 <ModalTooltip 
                                                     content="The data was extracted by the CRAF'd"
                                                     side="left"
+                                                    tooltipContainer={tooltipContainer}
                                                 >
                                                     <Info className="w-4 h-4 text-slate-400 hover:text-slate-600 transition-colors cursor-help shrink-0" />
                                                 </ModalTooltip>
