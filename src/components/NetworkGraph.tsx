@@ -1417,7 +1417,7 @@ const NetworkGraph: React.FC<NetworkGraphProps> = ({
                             </svg>
                         </button>
                     ) : (
-                        <div className="bg-white backdrop-blur-lg rounded-lg border border-slate-200 shadow-sm w-44">
+                        <div className="bg-white backdrop-blur-lg rounded-lg border border-slate-200 shadow-sm w-30">
                             {/* Legend */}
                             <div className="p-2.5 border-b border-slate-200">
                                 <div className="flex items-center justify-between mb-2">
@@ -1436,7 +1436,7 @@ const NetworkGraph: React.FC<NetworkGraphProps> = ({
                                     {combinedDonors && combinedDonors.length > 0 && (
                                         <div className="flex items-center gap-2">
                                             <div className="w-3.5 h-3.5 rounded-full shrink-0" style={{ backgroundColor: '#94a3b8', border: '1.5px solid #64748b' }}></div>
-                                            <span className="text-xs text-slate-600">Selected Donors</span>
+                                            <span className="text-xs text-slate-600">Sel. Donors</span>
                                         </div>
                                     )}
                                     <div className="flex items-center gap-2">
