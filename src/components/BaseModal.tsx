@@ -283,14 +283,16 @@ export function CountryBadge({ country, className = '', onClick, agencies, toolt
     );
     
     // If agencies are provided, wrap in tooltip
-    if (agencies && agencies.length > 0) {
+    // Filter out "Unspecified Agency"
+    const filteredAgencies = agencies ? agencies.filter(agency => agency !== 'Unspecified Agency') : [];
+    if (filteredAgencies && filteredAgencies.length > 0) {
         return (
             <ModalTooltip
                 content={
                     <div>
                         <div className="font-semibold mb-1">{labels.modals.financingAgencies}</div>
                         <ul className="space-y-0.5">
-                            {agencies.map((agency, idx) => (
+                            {filteredAgencies.map((agency, idx) => (
                                 <li key={idx}>• {agency}</li>
                             ))}
                         </ul>
