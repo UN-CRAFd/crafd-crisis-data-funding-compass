@@ -90,10 +90,10 @@ export default function PageHeader({
                                     ? 'hover:var(--brand-bg-light) hover:border-[var(--brand-primary)] hover:text-[var(--brand-primary)] text-slate-600'
                                     : 'border-slate-300 bg-slate-200 text-slate-500'
                             }`}
-                            title={tipsEnabled ? 'Tips are on' : 'Tips are off'}
+                            title={tipsEnabled ? labels.header.tipsOn : labels.header.tipsOff}
                         >
                             <Lightbulb className={`w-4 h-4 sm:mr-2 ${tipsEnabled ? '' : 'opacity-50'}`} />
-                            <span className="hidden sm:inline">{tipsEnabled ? 'Tips' : 'Tips Off'}</span>
+                            <span className="hidden sm:inline">{tipsEnabled ? labels.header.tipsOn : labels.header.tipsOff}</span>
                         </Button>
                         <Button
                             variant="outline"
@@ -119,7 +119,7 @@ export default function PageHeader({
                                     >
                                         <FileDown className="w-4 h-4 sm:mr-2" />
                                         <span className="hidden sm:inline">
-                                            {csvExportLoading ? 'Exporting CSV...' : xlsxExportLoading ? 'Exporting Excel...' : pdfExportLoading ? 'Exporting PDF...' : 'Export View'}
+                                            {csvExportLoading ? labels.header.exportingCsv : xlsxExportLoading ? labels.header.exportingXlsx : pdfExportLoading ? labels.header.exportingPdf : labels.header.exportView}
                                         </span>
                                         <ChevronDown className={`ml-1.5 h-3 w-3 opacity-50 shrink-0 transform transition-transform ${
                                             exportMenuOpen ? 'rotate-180' : ''
@@ -138,7 +138,7 @@ export default function PageHeader({
                                         className="cursor-pointer text-[11px] py-2"
                                     >
                                         <FileDown className="w-3 h-3 mr-2" />
-                                        Export as CSV (ZIP)
+                                        {labels.header.exportMenuCsv}
                                     </DropdownMenuItem>
                                     <DropdownMenuItem
                                         onClick={onExportXLSX}
@@ -146,7 +146,7 @@ export default function PageHeader({
                                         className="cursor-pointer text-[11px] py-2"
                                     >
                                         <FileDown className="w-3 h-3 mr-2" />
-                                        Export as Excel (XLSX)
+                                        {labels.header.exportMenuXlsx}
                                     </DropdownMenuItem>
                                 </DropdownMenuContent>
                             </DropdownMenu>
@@ -192,12 +192,12 @@ export default function PageHeader({
                             >
                                 <Link href="/">
                                     <DropdownMenuItem className={`cursor-pointer text-sm py-2 ${pathname === '/' ? 'bg-slate-100 font-semibold' : ''}`}>
-                                        Dashboard
+                                        {labels.header.dashboard}
                                     </DropdownMenuItem>
                                 </Link>
                                 <Link href="/methodology">
                                     <DropdownMenuItem className={`cursor-pointer text-sm py-2 ${pathname === '/methodology' ? 'bg-slate-100 font-semibold' : ''}`}>
-                                        Methodology
+                                        {labels.header.methodology}
                                     </DropdownMenuItem>
                                 </Link>
                             </DropdownMenuContent>

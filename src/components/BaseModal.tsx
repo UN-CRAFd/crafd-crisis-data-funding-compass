@@ -7,6 +7,7 @@ import CloseButton from './CloseButton';
 import { CountryFlag } from './CountryFlag';
 import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from '@/components/ui/tooltip';
 import { useTips } from '@/contexts/TipsContext';
+import labels from '@/config/labels.json';
 
 interface BaseModalProps {
     isOpen: boolean;
@@ -287,7 +288,7 @@ export function CountryBadge({ country, className = '', onClick, agencies, toolt
             <ModalTooltip
                 content={
                     <div>
-                        <div className="font-semibold mb-1">Financing Agencies:</div>
+                        <div className="font-semibold mb-1">{labels.modals.financingAgencies}</div>
                         <ul className="space-y-0.5">
                             {agencies.map((agency, idx) => (
                                 <li key={idx}>• {agency}</li>
