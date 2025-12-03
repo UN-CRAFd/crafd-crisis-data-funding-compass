@@ -378,7 +378,7 @@ export default function OrganizationModal({
                                     <h3 className="text-xl font-roboto font-black text-[#333333] uppercase tracking-wide leading-normal">
                                         {labels.modals.providedAssets}
                                     </h3>
-                                    <span className="text-lg font-normal text-gray-500 tabular-nums">({projectsList.length})</span>
+                                    <span className="text-lg font-normal text-slate-600 tabular-nums">({projectsList.length})</span>
                                 </div>
                                 
                                 <div className="flex flex-col gap-2 mt-4">
@@ -401,9 +401,9 @@ export default function OrganizationModal({
                                                 className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-md text-base font-medium bg-slate-100 text-slate-600 hover:bg-slate-200 transition-colors cursor-pointer text-left"
                                             >
                                                 {hoveredProjectId === proj.id ? (
-                                                    <PackageOpen className="w-4 h-4 text-slate-500 shrink-0" />
+                                                    <PackageOpen className="w-4 h-4 text-slate-600 shrink-0" />
                                                 ) : (
-                                                    <Package className="w-4 h-4 text-slate-500 shrink-0" />
+                                                    <Package className="w-4 h-4 text-slate-600 shrink-0" />
                                                 )}
                                                 <span className="truncate">{proj.name}</span>
                                             </button>
@@ -430,7 +430,7 @@ export default function OrganizationModal({
                                 {showCollapsible && (
                                     <button
                                         onClick={() => setIsExpanded(!isExpanded)}
-                                        className="mt-2 inline-flex items-center gap-1 text-sm font-medium text-gray-600 hover:text-gray-800 transition-colors"
+                                        className="mt-2 inline-flex items-center gap-1 text-sm font-medium text-slate-600 hover:text-slate-400 transition-colors"
                                     >
                                         {isExpanded ? (
                                             <>
@@ -483,7 +483,7 @@ export default function OrganizationModal({
 
                                             <div className="flex flex-col">
                                                 <span className="text-sm tracking-wide text-slate-400">{labels.modals.estOrgBudget}</span>
-                                                <span className="text-base font-medium text-slate-700">
+                                                <span className="text-base font-medium text-slate-600">
                                                     {
                                                         estBudget
                                                             ? (() => {
@@ -500,7 +500,7 @@ export default function OrganizationModal({
                                             <div className="flex flex-col">
                                                 <span className="text-sm tracking-wide text-slate-400">{labels.modals.budgetSource}</span>
                                                 <div className="flex items-center gap-2">
-                                                    <span className="text-base font-medium text-slate-700">
+                                                    <span className="text-base font-medium text-slate-600">
                                                         {budgetSourceStr ? budgetSourceStr : '—'}
                                                     </span>
                                                     {linkToBudgetSource && (
@@ -519,7 +519,7 @@ export default function OrganizationModal({
 
                                             <div className="flex flex-col">
                                                 <span className="text-sm tracking-wide text-slate-400">{labels.modals.lastUpdated}</span>
-                                                <span className="text-base font-medium text-slate-700">
+                                                <span className="text-base font-medium text-slate-600">
                                                     {fields['Last Updated'] ? String(fields['Last Updated']) : '—'}
                                                 </span>
                                             </div>
@@ -557,16 +557,16 @@ export default function OrganizationModal({
                 {/* Flexible spacer to push notes to bottom */}
                 <div className="grow min-h-8"></div>
 
-                <div className="border-t border-gray-200 pt-4 pb-4 mt-auto">
-                    <div className="text-xs text-gray-400 uppercase tracking-wider font-medium mb-2">{labels.modals.notes}</div>
-                    <div className="text-xs text-gray-500 leading-snug space-y-1">
+                <div className="border-t border-slate-200 pt-4 pb-4 mt-auto">
+                    <div className="text-xs text-slate-400 uppercase tracking-wider font-medium mb-2">{labels.modals.notes}</div>
+                    <div className="text-xs text-slate-500 leading-snug space-y-1">
                             <div className="flex items-start">
-                                <span className="text-gray-400 mr-2 shrink-0">•</span>
+                                <span className="text-slate-400 mr-2 shrink-0">•</span>
                                 <span>{labels.modals.notesInsights}</span>
                             </div>
                         {isUN && (
                             <div className="flex items-start">
-                                <span className="text-gray-400 mr-2 shrink-0">•</span>
+                                <span className="text-slate-400 mr-2 shrink-0">•</span>
                                 <span>{labels.modals.notesUn}</span>
                             </div>
                         )}
