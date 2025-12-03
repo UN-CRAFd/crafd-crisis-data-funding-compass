@@ -47,6 +47,7 @@ interface GraphNode {
     projectKey?: string;
     orgType?: string; // For organization clustering
     assetTypes?: string[]; // For project/asset clustering
+    estimatedBudget?: number; // For funding-based scaling
     x?: number;
     y?: number;
     fx?: number; // Fixed x position for clustering
@@ -99,6 +100,7 @@ const NetworkGraph: React.FC<NetworkGraphProps> = ({
     const globalScaleRef = useRef<number>(1); // Track current zoom scale
     const [clusterByOrgType, setClusterByOrgType] = useState(false);
     const [clusterByAssetType, setClusterByAssetType] = useState(false);
+    const [scalingMode, setScalingMode] = useState<'connections' | 'funding'>('connections');
     const [legendCollapsed, setLegendCollapsed] = useState(false);
     const lastClusterStateRef = useRef<string>(''); // Track last clustering state to prevent unnecessary updates
     const [filterBarContainer, setFilterBarContainer] = useState<HTMLElement | null>(null);
@@ -406,6 +408,7 @@ const NetworkGraph: React.FC<NetworkGraphProps> = ({
                 color: brandBgLight, // Uses --brand-bg-light (amber/golden from organization badges)
                 orgKey: org.orgShortName, // Use orgShortName for modal/URL
                 orgType: org.type, // Store org type for clustering
+                estimatedBudget: org.estimatedBudget, // Store budget for funding-based scaling
                 x,
                 y,
             });
@@ -479,19 +482,44 @@ const NetworkGraph: React.FC<NetworkGraphProps> = ({
             degreeMap.set(targetId, (degreeMap.get(targetId) || 0) + 1);
         });
 
-        // Scale node visual size by log(degree+1) to keep growth controlled.
-        // Preserve original base sizes per type and add a scaled boost.
-        // Base sizes ensure: donors > organizations > assets at all connection levels
+        // Calculate max budget for normalization (only for orgs with budget data)
+        const orgBudgets = nodes
+            .filter(n => n.type === 'organization' && n.estimatedBudget && n.estimatedBudget > 0)
+            .map(n => n.estimatedBudget!);
+        const maxBudget = orgBudgets.length > 0 ? Math.max(...orgBudgets) : 1;
+        const minBudget = orgBudgets.length > 0 ? Math.min(...orgBudgets) : 0;
+
+        // Scale node visual size based on scalingMode
+        // 'connections' = size by degree (number of links)
+        // 'funding' = organizations sized by budget, others by connections
         const SIZE_SCALE = 6; // multiplier for the log-scaling term
         nodes.forEach(n => {
             const deg = degreeMap.get(n.id) || 0;
             // Base sizes: donors start larger, then organizations, then projects/assets
             const base = n.type === 'donor' ? 28 : n.type === 'organization' ? 24 : 18;
-            const scaled = Math.round(base + Math.log1p(deg) * SIZE_SCALE);
-            // Clamp to reasonable bounds to avoid overly large/small nodes
-            // Min bounds also maintain the hierarchy: donors >= 28, orgs >= 24, assets >= 18
             const minSize = n.type === 'donor' ? 28 : n.type === 'organization' ? 24 : 18;
-            n.value = Math.min(80, Math.max(minSize, scaled));
+            
+            if (scalingMode === 'funding' && n.type === 'organization') {
+                // For funding mode: scale organizations by their budget
+                if (n.estimatedBudget && n.estimatedBudget > 0) {
+                    // Use log scale for budget to handle large range
+                    // Normalize to 0-1 range using log scale
+                    const logBudget = Math.log10(n.estimatedBudget);
+                    const logMin = minBudget > 0 ? Math.log10(minBudget) : 0;
+                    const logMax = Math.log10(maxBudget);
+                    const normalized = logMax > logMin ? (logBudget - logMin) / (logMax - logMin) : 0.5;
+                    // Scale from minSize to 70 based on normalized budget
+                    n.value = Math.round(minSize + normalized * (70 - minSize));
+                } else {
+                    // No budget data - use minimum size
+                    n.value = minSize;
+                }
+            } else {
+                // Connection-based scaling (default)
+                const scaled = Math.round(base + Math.log1p(deg) * SIZE_SCALE);
+                // Clamp to reasonable bounds
+                n.value = Math.min(80, Math.max(minSize, scaled));
+            }
         });
 
         // Calculate average coordinates
@@ -533,7 +561,89 @@ const NetworkGraph: React.FC<NetworkGraphProps> = ({
         }
 
         return { nodes, links };
-    }, [organizationsWithProjects]);
+    }, [organizationsWithProjects]); // scalingMode removed - handled in separate effect for smooth transitions
+
+    // Smoothly update node sizes when scalingMode changes (without rebuilding the graph)
+    useEffect(() => {
+        if (graphData.nodes.length === 0) return;
+
+        // Compute node degrees for connection-based scaling
+        const degreeMap = new Map<string, number>();
+        graphData.nodes.forEach(n => degreeMap.set(n.id, 0));
+        graphData.links.forEach(link => {
+            const sourceId = typeof link.source === 'object' ? (link.source as any).id : link.source;
+            const targetId = typeof link.target === 'object' ? (link.target as any).id : link.target;
+            degreeMap.set(sourceId, (degreeMap.get(sourceId) || 0) + 1);
+            degreeMap.set(targetId, (degreeMap.get(targetId) || 0) + 1);
+        });
+
+        // Calculate budget range for funding-based scaling
+        const orgBudgets = graphData.nodes
+            .filter(n => n.type === 'organization' && n.estimatedBudget && n.estimatedBudget > 0)
+            .map(n => n.estimatedBudget!);
+        const maxBudget = orgBudgets.length > 0 ? Math.max(...orgBudgets) : 1;
+        const minBudget = orgBudgets.length > 0 ? Math.min(...orgBudgets) : 0;
+
+        const SIZE_SCALE = 6;
+
+        // Calculate target sizes for all nodes
+        const targetSizes = graphData.nodes.map(n => {
+            const deg = degreeMap.get(n.id) || 0;
+            const base = n.type === 'donor' ? 28 : n.type === 'organization' ? 24 : 18;
+            const minSize = n.type === 'donor' ? 28 : n.type === 'organization' ? 24 : 18;
+            
+            if (scalingMode === 'funding' && n.type === 'organization') {
+                if (n.estimatedBudget && n.estimatedBudget > 0) {
+                    const logBudget = Math.log10(n.estimatedBudget);
+                    const logMin = minBudget > 0 ? Math.log10(minBudget) : 0;
+                    const logMax = Math.log10(maxBudget);
+                    const normalized = logMax > logMin ? (logBudget - logMin) / (logMax - logMin) : 0.5;
+                    return Math.round(minSize + normalized * (70 - minSize));
+                } else {
+                    return minSize;
+                }
+            } else {
+                const scaled = Math.round(base + Math.log1p(deg) * SIZE_SCALE);
+                return Math.min(80, Math.max(minSize, scaled));
+            }
+        });
+
+        // Animate the size change over 300ms
+        const duration = 300;
+        const startTime = performance.now();
+        const startSizes = graphData.nodes.map(n => n.value);
+        let animationId: number;
+
+        const animate = (currentTime: number) => {
+            const elapsed = currentTime - startTime;
+            const progress = Math.min(elapsed / duration, 1);
+            // Ease-out cubic for smooth deceleration
+            const eased = 1 - Math.pow(1 - progress, 3);
+
+            graphData.nodes.forEach((n, i) => {
+                n.value = Math.round(startSizes[i] + (targetSizes[i] - startSizes[i]) * eased);
+            });
+
+            // Force a visual refresh without reheating the simulation
+            // The graph will repaint on the next animation frame
+            if (graphRef.current) {
+                // Tickle the simulation very gently to force a repaint
+                // This doesn't restart the simulation, just triggers a render
+                (graphRef.current as any).refresh?.() || 
+                    graphRef.current.centerAt(graphRef.current.centerAt().x, graphRef.current.centerAt().y, 0);
+            }
+
+            if (progress < 1) {
+                animationId = requestAnimationFrame(animate);
+            }
+        };
+
+        animationId = requestAnimationFrame(animate);
+
+        return () => {
+            if (animationId) cancelAnimationFrame(animationId);
+        };
+    }, [scalingMode, graphData.nodes, graphData.links]);
 
     // Configure force simulation for better spacing
     useEffect(() => {
@@ -1385,6 +1495,57 @@ const NetworkGraph: React.FC<NetworkGraphProps> = ({
                                                 clusterByAssetType ? 'bg-[var(--badge-other-text)] border-[var(--badge-other-text)]' : 'border-slate-300'
                                             }`}>
                                                 {clusterByAssetType && (
+                                                    <svg className="w-2.5 h-2.5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={3} d="M5 13l4 4L19 7" />
+                                                    </svg>
+                                                )}
+                                            </div>
+                                        </div>
+                                    </button>
+                                </div>
+                            </div>
+
+                            {/* Scaling Controls */}
+                            <div className="p-2.5 border-t border-slate-200">
+                                <div className="text-xs font-semibold text-slate-800/90 mb-2">Scaling</div>
+                                <div className="space-y-1.5">
+                                    <button
+                                        onClick={() => setScalingMode('connections')}
+                                        className={`w-full text-left px-2 py-1 rounded text-xs transition-colors ${
+                                            scalingMode === 'connections'
+                                                ? 'bg-slate-200 text-slate-800 border border-slate-400'
+                                                : 'bg-slate-50 text-slate-600 border border-slate-200 hover:bg-slate-100'
+                                        }`}
+                                        title="Size nodes by number of connections"
+                                    >
+                                        <div className="flex items-center justify-between">
+                                            <span className="text-[11px]">Connections</span>
+                                            <div className={`w-3 h-3 rounded-sm border shrink-0 flex items-center justify-center ${
+                                                scalingMode === 'connections' ? 'bg-slate-600 border-slate-600' : 'border-slate-300'
+                                            }`}>
+                                                {scalingMode === 'connections' && (
+                                                    <svg className="w-2.5 h-2.5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={3} d="M5 13l4 4L19 7" />
+                                                    </svg>
+                                                )}
+                                            </div>
+                                        </div>
+                                    </button>
+                                    <button
+                                        onClick={() => setScalingMode('funding')}
+                                        className={`w-full text-left px-2 py-1 rounded text-xs transition-colors ${
+                                            scalingMode === 'funding'
+                                                ? 'bg-[var(--brand-bg-light)] text-[var(--brand-primary)] border border-[var(--brand-primary)]'
+                                                : 'bg-slate-50 text-slate-600 border border-slate-200 hover:bg-slate-100'
+                                        }`}
+                                        title="Size organization nodes by estimated budget"
+                                    >
+                                        <div className="flex items-center justify-between">
+                                            <span className="text-[11px]">Funding</span>
+                                            <div className={`w-3 h-3 rounded-sm border shrink-0 flex items-center justify-center ${
+                                                scalingMode === 'funding' ? 'bg-[var(--brand-primary)] border-[var(--brand-primary)]' : 'border-slate-300'
+                                            }`}>
+                                                {scalingMode === 'funding' && (
                                                     <svg className="w-2.5 h-2.5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={3} d="M5 13l4 4L19 7" />
                                                     </svg>
