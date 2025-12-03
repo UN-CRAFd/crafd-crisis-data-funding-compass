@@ -4,6 +4,7 @@ import { Building2, ExternalLink, Package } from 'lucide-react';
 import type { OrganizationWithProjects, ProjectData } from '../lib/data';
 import { getIconForInvestmentType } from '@/config/investmentTypeIcons';
 import { INVESTMENT_TYPE_DESCRIPTIONS } from '@/config/tooltipDescriptions';
+import labels from '@/config/labels.json';
 import BaseModal, { ModalHeader, CountryBadge, ModalTooltip } from './BaseModal';
 import { useEffect, useState } from 'react';
 
@@ -62,7 +63,7 @@ export default function ProjectModal({ project, allOrganizations, loading, proje
             return (
                 <ModalHeader
                     icon={<Package className="h-6 w-6 sm:h-7 sm:w-7 text-[#333333] shrink-0" />}
-                    title="Project Not Found"
+                    title={labels.modals.projectNotFound}
                     showCopied={showCopied}
                     onShare={onShare}
                     onClose={onClose}
@@ -97,7 +98,7 @@ export default function ProjectModal({ project, allOrganizations, loading, proje
         if (!project) {
             return (
                 <div className="p-4 sm:p-6">
-                    <p className="text-gray-600">The requested project could not be found.</p>
+                    <p className="text-gray-600">{labels.modals.projectNotFoundMessage}</p>
                 </div>
             );
         }
@@ -123,7 +124,7 @@ export default function ProjectModal({ project, allOrganizations, loading, proje
                             className="inline-flex items-center gap-2 px-3 py-1.5 rounded-md text-sm font-medium bg-slate-100 text-slate-600 border border-slate-200"
                         >
                             <img src="/hdx_logo.png" alt="HDX logo" className="w-4 h-4 rounded-none" />
-                            <span>HDX Data Grid</span>
+                            <span>{labels.modals.hdxDataGrid}</span>
                             <ExternalLink className="w-3 h-3 text-slate-600" />
                         </a>
                     </div>
@@ -142,7 +143,7 @@ export default function ProjectModal({ project, allOrganizations, loading, proje
                                     className="inline-flex items-center gap-1 font-medium hover:underline"
                                     style={{ color: 'var(--brand-primary)' }}
                                 >
-                                    Learn more
+                                    {labels.modals.learnMore}
                                     <ExternalLink className="h-3 w-3" />
                                 </a>
                             </>
@@ -162,7 +163,7 @@ export default function ProjectModal({ project, allOrganizations, loading, proje
                                 color: 'white',
                             }}
                         >
-                            Visit Project Website
+                            {labels.modals.visitProjectWebsite}
                             <ExternalLink className="h-4 w-4" />
                         </a>
                     </div>
@@ -174,7 +175,7 @@ export default function ProjectModal({ project, allOrganizations, loading, proje
                     <div className="mb-6">
                         <div className="mb-3 flex items-center gap-2">
                         <h3 className="text-xl font-roboto font-black text-[#333333] uppercase tracking-wide leading-normal">
-                                        Provider Organizations
+                                        {labels.modals.providerOrganizations}
                                     </h3>
                         <span className="text-lg font-normal text-gray-500 tabular-nums">({supportingOrganizations.length})</span>
                         </div>
@@ -204,7 +205,7 @@ export default function ProjectModal({ project, allOrganizations, loading, proje
 
                 {project.investmentTypes && project.investmentTypes.length > 0 && (
                     <div className="mb-6">
-                        <SubHeader>Asset Type & Theme</SubHeader>
+                        <SubHeader>{labels.modals.assetTypeAndTheme}</SubHeader>
                         <div className="space-y-3">
                             {project.investmentTypes.map((type, typeIndex) => {
                                 const IconComponent = getIconForInvestmentType(type);
@@ -216,7 +217,7 @@ export default function ProjectModal({ project, allOrganizations, loading, proje
                                 return (
                                     <div key={typeIndex} className="flex flex-wrap gap-2 items-center">
                                         <ModalTooltip 
-                                            content={INVESTMENT_TYPE_DESCRIPTIONS[type] || 'Click to filter by this investment type'}
+                                            content={INVESTMENT_TYPE_DESCRIPTIONS[type] || labels.modals.clickToFilterByType}
                                             side="top"
                                             tooltipContainer={tooltipContainer}
                                         >
@@ -290,7 +291,7 @@ export default function ProjectModal({ project, allOrganizations, loading, proje
                 <div className="mb-6">
                     <div className="mb-3 flex items-center gap-2">
                         <h3 className="text-xl font-roboto font-black text-[#333333] uppercase tracking-wide leading-normal">
-                            Asset Funding
+                            {labels.modals.assetFunding}
                         </h3>
                         {project.donorCountries && project.donorCountries.length > 0 && (
                             <span className="text-lg font-normal text-gray-500 tabular-nums">({project.donorCountries.length})</span>
@@ -313,7 +314,7 @@ export default function ProjectModal({ project, allOrganizations, loading, proje
                         </div>
                     ) : (
                         <div className="text-gray-500">
-                            No asset donor information available
+                            {labels.modals.noAssetDonorInfo}
                         </div>
                     )}
                 </div>
@@ -321,15 +322,15 @@ export default function ProjectModal({ project, allOrganizations, loading, proje
                 <div className="grow min-h-8"></div>
 
                 <div className="border-t border-gray-200 pt-4 pb-4 mt-auto">
-                    <div className="text-xs text-gray-400 uppercase tracking-wider font-medium mb-2">NOTES</div>
+                    <div className="text-xs text-gray-400 uppercase tracking-wider font-medium mb-2">{labels.modals.notes}</div>
                     <div className="text-xs text-gray-500 leading-snug space-y-1">
                         <div className="flex items-start">
                             <span className="text-gray-400 mr-2 shrink-0"></span>
-                            <span>All insights are based on publicly accessible information and data.</span>
+                            <span>{labels.modals.notesInsights}</span>
                         </div>
                         <div className="flex items-start">
                             <span className="text-gray-400 mr-2 shrink-0"></span>
-                            <span>Project donor countries may differ from organization-level donor countries.</span>
+                            <span>{labels.modals.notesProjectDonors}</span>
                         </div>
                     </div>
                 </div>
