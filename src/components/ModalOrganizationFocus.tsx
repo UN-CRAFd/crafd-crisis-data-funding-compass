@@ -1,13 +1,14 @@
 import React from 'react';
 import { getIconForInvestmentType } from '@/config/investmentTypeIcons';
 import { INVESTMENT_TYPE_DESCRIPTIONS } from '@/config/tooltipDescriptions';
+import labels from '@/config/labels.json';
 import { ModalTooltip } from './BaseModal';
 
 interface ModalOrganizationFocusProps {
     projects: Array<{
         investmentTypes: string[];
     }>;
-    SubHeader: React.ComponentType<{ children: React.ReactNode }>;
+    SubHeader?: React.ComponentType<{ children: React.ReactNode }>;
     onTypeClick?: (type: string) => void;
     tooltipContainer?: Element | null;
 }
@@ -66,7 +67,7 @@ const ModalOrganizationFocus: React.FC<ModalOrganizationFocusProps> = ({ project
                         return (
                             <ModalTooltip 
                                 key={type}
-                                content={INVESTMENT_TYPE_DESCRIPTIONS[type] || 'Click to filter by this investment type'}
+                                content={INVESTMENT_TYPE_DESCRIPTIONS[type] || labels.modals.clickToFilterByType}
                                 side="top"
                                 tooltipContainer={tooltipContainer}
                             >
