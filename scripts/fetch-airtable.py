@@ -332,6 +332,19 @@ def main():
         missing_project_fields = []
         missing_org_fields = []
         
+        # Define required vs optional fields (optional fields may be empty/sparse in Airtable)
+        OPTIONAL_ORG_FIELDS = {
+            "Link to Budget Source",  # May not be populated for all orgs
+            "Org Description",
+            "Org Mission", 
+            "Link to Data Products Overview",
+            "Org IATI Name",
+            "Org MPTFO Name",
+            "Org MPTFO URL [Formula]",
+            "Org Transparency Portal",
+            "Org Programme Budget",
+        }
+        
         # Validate project fields
         if main_records:
             sample_project = main_records[0].get("fields", {})
@@ -349,6 +362,9 @@ def main():
                     saved_orgs = json.load(f)
                 if saved_orgs:
                     for field in FIELDS_ORGANIZATIONS:
+                        # Skip validation for optional fields (they may be empty/sparse)
+                        if field in OPTIONAL_ORG_FIELDS:
+                            continue
                         found_in_any = any(field in record.get("fields", {}) for record in saved_orgs[:10])  # Check first 10
                         if not found_in_any:
                             missing_org_fields.append(field)
