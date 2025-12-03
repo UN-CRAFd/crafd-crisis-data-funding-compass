@@ -542,9 +542,9 @@ const NetworkGraph: React.FC<NetworkGraphProps> = ({
         const startTime = performance.now();
         const fg = graphRef.current;
 
-        // Moderate repulsion between nodes for calmer movement
-        fg.d3Force('charge').strength(-400);
-        fg.d3Force('charge').distanceMax(500);
+        // Moderate repulsion between nodes - lower values = calmer movement
+        fg.d3Force('charge').strength(-200);
+        fg.d3Force('charge').distanceMax(400);
 
         // Set link distance dynamically based on node types
         fg.d3Force('link').distance((link: any) => {
@@ -571,7 +571,7 @@ const NetworkGraph: React.FC<NetworkGraphProps> = ({
         // Donor-project links (value 0) have zero strength - visual only, no pull
         fg.d3Force('link').strength((link: any) => {
             if (link.value === 0) return 0; // No attraction for donor-project links
-            return 0.5; // Standard strength for other links
+            return 0.3; // Lower strength for calmer settling
         });
 
         // No center force - allows nodes to distribute naturally based on their connections only
@@ -580,12 +580,9 @@ const NetworkGraph: React.FC<NetworkGraphProps> = ({
         // Enhanced collision force with more iterations for smoother collision avoidance
         fg.d3Force('collision', forceCollide((node: any) => {
             const r = (node.value || 10) / 2;
-            const padding = 8; // More padding for smoother spacing
+            const padding = 6; // Moderate padding
             return r + padding;
-        }).iterations(3).strength(0.8)); // More iterations and higher strength for better collision handling
-
-        // Higher velocity decay for calmer, less jittery movement
-        fg.d3Force('simulation')?.velocityDecay(0.7);
+        }).iterations(2).strength(0.6)); // Balanced collision handling
 
         const endTime = performance.now();
         if (process.env.NODE_ENV === 'development') {
@@ -656,17 +653,17 @@ const NetworkGraph: React.FC<NetworkGraphProps> = ({
         fg.d3Force('clusterRepulsion', null);
         
         if (clusterByOrgType || clusterByAssetType) {
-            // Strong charge repulsion to keep clusters well separated
-            fg.d3Force('charge').strength(-300);
+            // Moderate charge repulsion to keep clusters separated while stable
+            fg.d3Force('charge').strength(-150);
             
             // No center force - let clusters spread naturally
             fg.d3Force('center', null);
             
-            // Maintain standard link strength to preserve connection distances
+            // Maintain moderate link strength to preserve connection distances
             // Donor-project links (value 0) have zero strength - visual only, no pull
             fg.d3Force('link').strength((link: any) => {
                 if (link.value === 0) return 0; // No attraction for donor-project links
-                return 0.5; // Standard strength for other links
+                return 0.25; // Lower strength during clustering for stability
             });
             
             // Apply link distance function during clustering too
@@ -690,12 +687,12 @@ const NetworkGraph: React.FC<NetworkGraphProps> = ({
                 return 150;
             });
             
-            // More collision within clusters to prevent overlap
+            // Collision within clusters to prevent overlap
             fg.d3Force('collision', forceCollide((node: any) => {
                 const r = (node.value || 10) / 2;
-                const padding = 6; // More padding to spread nodes within cluster
+                const padding = 5;
                 return r + padding;
-            }).iterations(2).strength(0.7)); // Stronger collision force
+            }).iterations(2).strength(0.5)); // Moderate collision force
             
             const clusterCenters = new Map<string, { x: number; y: number }>();
             // Make clusters much more spread out
@@ -749,9 +746,9 @@ const NetworkGraph: React.FC<NetworkGraphProps> = ({
                 }
             });
             
-            // Strong clustering force that pulls nodes to their cluster centers
-            const baseClusterStrength = 0.8; // Increased from 0.5 for stronger clustering
-            const decayStart = 0.7; // Start decaying very late
+            // Moderate clustering force that pulls nodes to their cluster centers
+            const baseClusterStrength = 0.4; // Lower for smoother clustering
+            const decayStart = 0.5; // Start decaying earlier for stability
             
             // Dynamic cluster center adjustment and node clustering
             fg.d3Force('clusterRepulsion', (alpha: number) => {
@@ -916,7 +913,7 @@ const NetworkGraph: React.FC<NetworkGraphProps> = ({
             fg.d3Force('clusterY', null); // Remove old separate Y force
         } else {
             // Restore default forces when clustering is off
-            fg.d3Force('charge').strength(-400);
+            fg.d3Force('charge').strength(-200);
             
             // No center force - nodes distribute naturally
             fg.d3Force('center', null);
@@ -924,8 +921,8 @@ const NetworkGraph: React.FC<NetworkGraphProps> = ({
             // Restore standard link strength and distances
             // Donor-project links (value 0) have zero strength - visual only, no pull
             fg.d3Force('link').strength((link: any) => {
-                if (link.value === 0) return 0.4; // No attraction for donor-project links
-                return 0.5; // Standard strength for other links
+                if (link.value === 0) return 0; // No attraction for donor-project links
+                return 0.3; // Lower strength for stability
             });
             fg.d3Force('link').distance((link: any) => {
                 // Donor-project links (value 0) have no attractive force
@@ -950,13 +947,17 @@ const NetworkGraph: React.FC<NetworkGraphProps> = ({
             // Restore normal collision force
             fg.d3Force('collision', forceCollide((node: any) => {
                 const r = (node.value || 10) / 2;
-                const padding = 8;
+                const padding = 6;
                 return r + padding;
-            }).iterations(3).strength(0.8));
+            }).iterations(2).strength(0.6));
         }
         
-        // Always reheat to recalculate from current state with new forces
-        fg.d3ReheatSimulation();
+        // Reheat simulation gently - lower alpha for smoother transition
+        if (graphRef.current.d3Force('simulation')) {
+            graphRef.current.d3Force('simulation').alpha(0.3).restart();
+        } else {
+            fg.d3ReheatSimulation();
+        }
 
     }, [clusterByOrgType, clusterByAssetType]); // Only re-run when clustering toggles change
 
@@ -1474,10 +1475,10 @@ const NetworkGraph: React.FC<NetworkGraphProps> = ({
                     return 2 * globalScaleRef.current * 1.1;
                 }}
                 linkDirectionalParticleSpeed={0.005}
-                d3VelocityDecay={0.5}
-                d3AlphaDecay={0.008}
-                cooldownTicks={500}
-                warmupTicks={0}
+                d3VelocityDecay={0.6}
+                d3AlphaDecay={0.02}
+                cooldownTicks={200}
+                warmupTicks={50}
                 enableNodeDrag={true}
                 enableZoomInteraction={true}
                 enablePanInteraction={true}
