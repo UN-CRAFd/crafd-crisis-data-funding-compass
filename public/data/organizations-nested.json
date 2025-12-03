@@ -2146,7 +2146,7 @@
       "Org Full Name": "Global Pulse",
       "Org Short Name": "UN Global Pulse",
       "Org Website": "https://www.unglobalpulse.org/",
-      "Org Description": "Data Insights for Social & Humanitarian Action, also known as DISHA, is a multi-partner initiative led by UN Global Pulse, the Secretary-General’s Innovation Lab, that aims to accelerate ethical and responsible access to data and artificial intelligence (AI) solutions to unlock social impact at scale.",
+      "Org Description": "Global Pulse is an initiative of the United Nations focused on harnessing big data, artificial intelligence, and emerging technologies to support sustainable development and humanitarian action. The organization collaborates with UN agencies, governments, and partners worldwide to analyze real-time data and generate insights that inform decision-making. By leveraging advanced analytics, Global Pulse aims to improve crisis response, monitor global trends, and promote data-driven policies.",
       "Provided Data Ecosystem Projects": [
         "rec5RfuXsmtGtPDP8"
       ],
@@ -2193,7 +2193,8 @@
       {
         "id": "rec5RfuXsmtGtPDP8",
         "fields": {
-          "Project/Product Name": "Disha",
+          "Project/Product Name": "DISHA",
+          "Project Description": "Data Insights for Social & Humanitarian Action, also known as DISHA, is a multi-partner initiative led by UN Global Pulse, the Secretary-General’s Innovation Lab, that aims to accelerate ethical and responsible access to data and artificial intelligence (AI) solutions to unlock social impact at scale.\n",
           "Project Website": "https://disha.unglobalpulse.org/",
           "Provider Orgs Full Name": [
             "rec6yP4Ms95Zkxode"
@@ -2313,7 +2314,7 @@
       "Org Full Name": "Humanitarian Outcomes",
       "Org Short Name": "Humanitarian Outcomes",
       "Org Website": "https://humanitarianoutcomes.org/",
-      "Org Description": "An independent research organisation providing evidence and policy advice to inform better humanitarian action.",
+      "Org Description": "Humanitarian Outcomes is an independent research organisation providing evidence and policy advice to inform better humanitarian action.",
       "Link to Data Products Overview": "<https://humanitarianoutcomes.org/projects>\n",
       "Provided Data Ecosystem Projects": [
         "recniOH9IPt0Vz07E",
@@ -5533,7 +5534,7 @@
       "Org Full Name": "Fields Data",
       "Org Short Name": "Fields Data",
       "Org Website": "https://www.fieldsdata.org/",
-      "Org Description": "Focus on having data ready before the occurrence of a disaster, thereby saving lives through preparedness and efficient response.",
+      "Org Description": "Fields Data focusses on having data ready before the occurrence of a disaster, thereby saving lives through preparedness and efficient response.",
       "Link to Data Products Overview": "<https://data.humdata.org/organization/stats/fieldsdata>\n",
       "Provided Data Ecosystem Projects": [
         "reckhF1PTR2hh135J",
