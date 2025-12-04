@@ -317,7 +317,8 @@
       "Org HQ Country": "Spain",
       "org_key": "bse",
       "Org Type": "Academia",
-      "Last Updated": 2024
+      "Last Updated": 2024,
+      "Link to Budget Source": "https://bw.bse.eu/wp-content/uploads/2025/02/Download-BSE-Budget-2024-25.pdf?_gl=1*1j4f3pc*_up*MQ..*_gs*MQ..&gclid=Cj0KCQiA_8TJBhDNARIsAPX5qxTgrV665MKhAIKun4YCJxxFSqeQ2GSoPO6XWq5vPUZ0Oz9QQHdmwL4aAnCaEALw_wcB&gbraid=0AAAAADgrDQ6tDT9tUDsGTC-GgAyE2EUQb"
     },
     "agencies": [
       {
@@ -797,6 +798,9 @@
         "recfjAhO2DxCjgEgM",
         "recD0hG4x9w340oYA"
       ],
+      "Org Donor Agencies": [
+        "recqSvUlZQjET4fCH"
+      ],
       "Org HQ Country": "Netherlands",
       "Has received CRAF'd Funding?": "YES",
       "org_key": "510-data-team",
@@ -805,7 +809,15 @@
       "IATI Org Key": "NL-KVK-40409352",
       "Last Updated": 2024
     },
-    "agencies": [],
+    "agencies": [
+      {
+        "id": "recqSvUlZQjET4fCH",
+        "fields": {
+          "Agency/Department Name": "Unspecified Agency",
+          "Country Name": "Netherlands"
+        }
+      }
+    ],
     "projects": [
       {
         "id": "recD0hG4x9w340oYA",
@@ -918,7 +930,9 @@
         ]
       }
     ],
-    "donor_countries": []
+    "donor_countries": [
+      "Netherlands"
+    ]
   },
   {
     "id": "rec4yuocwbzqCzBUd",
@@ -2463,12 +2477,23 @@
       "Provided Data Ecosystem Projects": [
         "recp4lLg28MQMpBnW"
       ],
+      "Org Donor Agencies": [
+        "reco4Um0k7Tgw2UCK"
+      ],
       "Org HQ Country": "United Kingdom",
       "org_key": "uos",
       "Org Type": "Academia",
       "Last Updated": 2024
     },
-    "agencies": [],
+    "agencies": [
+      {
+        "id": "reco4Um0k7Tgw2UCK",
+        "fields": {
+          "Agency/Department Name": "Unspecified Agency",
+          "Country Name": "United Kingdom"
+        }
+      }
+    ],
     "projects": [
       {
         "id": "recp4lLg28MQMpBnW",
@@ -2527,7 +2552,9 @@
         ]
       }
     ],
-    "donor_countries": []
+    "donor_countries": [
+      "United Kingdom"
+    ]
   },
   {
     "id": "rec9NauCCUPUWMwfl",
@@ -5789,6 +5816,9 @@
       "Provided Data Ecosystem Projects": [
         "rechQ1azyTpypEDEy"
       ],
+      "Org Donor Agencies": [
+        "reckIAhFXgj4XL29b"
+      ],
       "Est. Org Budget": 52,
       "Org HQ Country": "United States",
       "Has received CRAF'd Funding?": "YES",
@@ -5797,7 +5827,15 @@
       "Budget Source": "Annual Report",
       "Last Updated": 2024
     },
-    "agencies": [],
+    "agencies": [
+      {
+        "id": "reckIAhFXgj4XL29b",
+        "fields": {
+          "Agency/Department Name": "Unspecified Agency",
+          "Country Name": "USA"
+        }
+      }
+    ],
     "projects": [
       {
         "id": "rechQ1azyTpypEDEy",
@@ -5825,7 +5863,9 @@
         "agencies": []
       }
     ],
-    "donor_countries": []
+    "donor_countries": [
+      "USA"
+    ]
   },
   {
     "id": "recMRdDWNDoa8PFIn",
@@ -6633,8 +6673,9 @@
       "org_key": "acled",
       "Org Type": "Non-Governmental Organization",
       "HDX Org Key": "acled",
-      "Budget Source": "Annual Report",
-      "Last Updated": 2024
+      "Budget Source": "Tax Filing",
+      "Last Updated": 2024,
+      "Link to Budget Source": "https://projects.propublica.org/nonprofits/organizations/470972683"
     },
     "agencies": [
       {
@@ -8370,11 +8411,22 @@
       "Provided Data Ecosystem Projects": [
         "recp4lLg28MQMpBnW"
       ],
+      "Org Donor Agencies": [
+        "reco4Um0k7Tgw2UCK"
+      ],
       "org_key": "qub",
       "Org Type": "Academia",
       "Last Updated": 2024
     },
-    "agencies": [],
+    "agencies": [
+      {
+        "id": "reco4Um0k7Tgw2UCK",
+        "fields": {
+          "Agency/Department Name": "Unspecified Agency",
+          "Country Name": "United Kingdom"
+        }
+      }
+    ],
     "projects": [
       {
         "id": "recp4lLg28MQMpBnW",
@@ -8433,7 +8485,9 @@
         ]
       }
     ],
-    "donor_countries": []
+    "donor_countries": [
+      "United Kingdom"
+    ]
   },
   {
     "id": "reccGyY6Ep2ptBPKy",
@@ -8457,9 +8511,7 @@
       "Org HQ Country": "Lebanon",
       "Has received CRAF'd Funding?": "NO",
       "org_key": "arab-barometer",
-      "Org Type": "Research / Think Tank",
-      "Budget Source": "Annual Report",
-      "Last Updated": 2024
+      "Org Type": "Research / Think Tank"
     },
     "agencies": [
       {
@@ -10098,7 +10150,7 @@
         "id": "recvaextZy2CbEkxr",
         "fields": {
           "Project/Product Name": "Population Registration and Identity Management EcoSystem (PRIMES)",
-          "Project Description": "At the center of UNHCR’s work with registration and identity management, lies PRIMES, UNHCR’s digital Population Registration and Identity Management Ecosystem. PRIMES brings together all of UNHCR’s digital registration, identity management and case management tools into one internally connected and interoperable ecosystem.\nPRIMES is comprised of several repositories for personal data (biographic and biometric) and supporting information, along with multiple tools which safely make use of the data to deliver targeted protection, assistance, and solutions to refugees and other displaced populations. PRIMES is an enabler for:\n- Identity management (including registration and biometric enrolment) and documentation\n- Case management (including the principal Protection aspects: Refugee Status Determination, Resettlement, Statelessness, Repatriation, Legal and Physical Protection, Child Protection, SGBV and others)\n- Assistance ([cash](https://www.unhcr.org/us/what-we-do/emergency-response/cash-based-interventions) and in-kind)\n- Data management, including reporting and analysis for evidence-informed action for quality protection outcomes\nPRIMES has been designed with cooperation and interoperability in mind so that refugee supporting governments and partners can make use of the data and technology which UNHCR has developed to enhance their ability to deliver services often together with UNHCR, in a safe and secure manner. PRIMES is fully aligned with the [Policy on the Protection of Personal Data of Persons of Concern to UNHCR](http://www.refworld.org/cgi-bin/texis/vtx/rwmain?page=search&docid=55643c1d4).\n",
+          "Project Description": "At the center of UNHCR’s work with registration and identity management is PRIMES, the digital Population Registration and Identity Management Ecosystem developed by UNHCR. PRIMES integrates all of UNHCR’s digital registration, identity management, and case management tools into a single, internally connected and interoperable ecosystem.\n\nPRIMES consists of several repositories for personal data, including both biographic and biometric information, as well as supporting data. It incorporates multiple tools that securely utilize this information to deliver targeted protection, assistance, and solutions to refugees and other displaced populations. PRIMES enables a range of functions, including:\n\n\\- Identity management, encompassing registration, biometric enrolment, and documentation\n\\- Case management, covering key protection aspects such as Refugee Status Determination, Resettlement, Statelessness, Repatriation, Legal and Physical Protection, Child Protection, Sexual and Gender-Based Violence (SGBV), and others\n\\- Assistance, including both cash and in-kind support\n\\- Data management, which includes reporting and analysis to support evidence-informed action for quality protection outcomes\n\nPRIMES is designed with cooperation and interoperability as core principles, allowing governments and partners supporting refugees to utilize the data and technology developed by UNHCR. This enhances their capacity to deliver services, often in collaboration with UNHCR, in a safe and secure manner. PRIMES is fully aligned with the Policy on the Protection of Personal Data of Persons of Concern to UNHCR.\n",
           "Project Website": "https://www.unhcr.org/us/what-we-do/protect-human-rights/protection/registration-and-identity-management",
           "Provider Orgs Full Name": [
             "recfLMsJLUS9toAjS"
@@ -10464,7 +10516,8 @@
       "org_key": "afrobarometer",
       "Org Type": "Research / Think Tank",
       "Budget Source": "Annual Report",
-      "Last Updated": 2024
+      "Last Updated": 2024,
+      "Link to Budget Source": "https://www.afrobarometer.org/wp-content/uploads/2025/03/Afrobarometer-Annual-Report-2024-Eng.pdf"
     },
     "agencies": [
       {
@@ -11135,12 +11188,23 @@
       "Provided Data Ecosystem Projects": [
         "recp4lLg28MQMpBnW"
       ],
+      "Org Donor Agencies": [
+        "reco4Um0k7Tgw2UCK"
+      ],
       "Org HQ Country": "United Kingdom",
       "org_key": "uosa",
       "Org Type": "Academia",
       "Last Updated": 2024
     },
-    "agencies": [],
+    "agencies": [
+      {
+        "id": "reco4Um0k7Tgw2UCK",
+        "fields": {
+          "Agency/Department Name": "Unspecified Agency",
+          "Country Name": "United Kingdom"
+        }
+      }
+    ],
     "projects": [
       {
         "id": "recp4lLg28MQMpBnW",
@@ -11199,7 +11263,9 @@
         ]
       }
     ],
-    "donor_countries": []
+    "donor_countries": [
+      "United Kingdom"
+    ]
   },
   {
     "id": "recl51I0rcqfCzesL",
@@ -13523,7 +13589,6 @@
       "org_key": "acaps",
       "Org Type": "Non-Governmental Organization",
       "HDX Org Key": "acaps",
-      "Last Updated": 2024,
       "Link to Budget Source": "none"
     },
     "agencies": [
