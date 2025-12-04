@@ -817,18 +817,25 @@ const NetworkGraph: React.FC<NetworkGraphProps> = ({
             const clusterNodePositions = new Map<string, { sumX: number; sumY: number; count: number }>();
             
             graphData.nodes.forEach(node => {
-                let clusterKey = null;
-                
+                // Track org-type clusters
                 if (clusterByOrgType && node.type === 'organization' && node.orgType) {
-                    clusterKey = `org-${node.orgType}`;
-                } else if (clusterByAssetType && node.type === 'project' && node.assetTypes && node.assetTypes.length > 0) {
-                    clusterKey = `asset-${node.assetTypes[0]}`;
-                }
-                
-                if (clusterKey) {
+                    const clusterKey = `org-${node.orgType}`;
                     clusterKeys.add(clusterKey);
                     
-                    // Accumulate positions for averaging
+                    if (!clusterNodePositions.has(clusterKey)) {
+                        clusterNodePositions.set(clusterKey, { sumX: 0, sumY: 0, count: 0 });
+                    }
+                    const pos = clusterNodePositions.get(clusterKey)!;
+                    pos.sumX += node.x || centerX;
+                    pos.sumY += node.y || centerY;
+                    pos.count += 1;
+                }
+                
+                // Track asset-type clusters (separately, not else-if)
+                if (clusterByAssetType && node.type === 'project' && node.assetTypes && node.assetTypes.length > 0) {
+                    const clusterKey = `asset-${node.assetTypes[0]}`;
+                    clusterKeys.add(clusterKey);
+                    
                     if (!clusterNodePositions.has(clusterKey)) {
                         clusterNodePositions.set(clusterKey, { sumX: 0, sumY: 0, count: 0 });
                     }
@@ -863,39 +870,93 @@ const NetworkGraph: React.FC<NetworkGraphProps> = ({
             // Dynamic cluster center adjustment and node clustering
             fg.d3Force('clusterRepulsion', (alpha: number) => {
                 const clusterArray = Array.from(clusterCenters.entries());
-                const hullRepulsionStrength = 50000; // Strong repulsion between cluster centers
+                const hullRepulsionStrength = 0.6; // Strong repulsion when hulls overlap
                 const centerAttractionStrength = 0.3; // Strength of attraction toward cluster members
+                const hullPadding = 100; // Padding between hulls
                 
-                // First, calculate average position of nodes in each cluster
-                const clusterNodePositions = new Map<string, { sumX: number; sumY: number; count: number }>();
+                // First, calculate average position and radius for each cluster
+                // Track BOTH org-type and asset-type clusters when both are enabled
+                const clusterStats = new Map<string, { sumX: number; sumY: number; count: number; maxRadius: number }>();
                 
                 for (let i = 0; i < graphData.nodes.length; i++) {
                     const node: any = graphData.nodes[i];
-                    let clusterKey = null;
                     
+                    // Track org-type clusters
                     if (clusterByOrgType && node.type === 'organization' && node.orgType) {
-                        clusterKey = `org-${node.orgType}`;
-                    } else if (clusterByAssetType && node.type === 'project' && node.assetTypes && node.assetTypes.length > 0) {
-                        clusterKey = `asset-${node.assetTypes[0]}`;
+                        const clusterKey = `org-${node.orgType}`;
+                        if (!clusterStats.has(clusterKey)) {
+                            clusterStats.set(clusterKey, { sumX: 0, sumY: 0, count: 0, maxRadius: 0 });
+                        }
+                        const stats = clusterStats.get(clusterKey)!;
+                        stats.sumX += node.x || 0;
+                        stats.sumY += node.y || 0;
+                        stats.count += 1;
                     }
                     
-                    if (clusterKey) {
-                        if (!clusterNodePositions.has(clusterKey)) {
-                            clusterNodePositions.set(clusterKey, { sumX: 0, sumY: 0, count: 0 });
+                    // Track asset-type clusters (separately, not else-if)
+                    if (clusterByAssetType && node.type === 'project' && node.assetTypes && node.assetTypes.length > 0) {
+                        const clusterKey = `asset-${node.assetTypes[0]}`;
+                        if (!clusterStats.has(clusterKey)) {
+                            clusterStats.set(clusterKey, { sumX: 0, sumY: 0, count: 0, maxRadius: 0 });
                         }
-                        const pos = clusterNodePositions.get(clusterKey)!;
-                        pos.sumX += node.x || 0;
-                        pos.sumY += node.y || 0;
-                        pos.count += 1;
+                        const stats = clusterStats.get(clusterKey)!;
+                        stats.sumX += node.x || 0;
+                        stats.sumY += node.y || 0;
+                        stats.count += 1;
+                    }
+                }
+                
+                // Calculate cluster centroids
+                const clusterCentroids = new Map<string, { x: number; y: number }>();
+                clusterStats.forEach((stats, key) => {
+                    if (stats.count > 0) {
+                        clusterCentroids.set(key, {
+                            x: stats.sumX / stats.count,
+                            y: stats.sumY / stats.count
+                        });
+                    }
+                });
+                
+                // Calculate hull radii (max distance from centroid to any node edge)
+                // Helper function to update radius for a cluster
+                const clusterRadii = new Map<string, number>();
+                const updateClusterRadius = (clusterKey: string, node: any) => {
+                    if (clusterCentroids.has(clusterKey)) {
+                        const centroid = clusterCentroids.get(clusterKey)!;
+                        const nodeRadius = (node.value || 10) / 2;
+                        const distToCentroid = Math.sqrt(
+                            Math.pow((node.x || 0) - centroid.x, 2) + 
+                            Math.pow((node.y || 0) - centroid.y, 2)
+                        );
+                        const edgeDist = distToCentroid + nodeRadius + 15; // 15 = base padding
+                        
+                        const currentMax = clusterRadii.get(clusterKey) || 0;
+                        if (edgeDist > currentMax) {
+                            clusterRadii.set(clusterKey, edgeDist);
+                        }
+                    }
+                };
+                
+                for (let i = 0; i < graphData.nodes.length; i++) {
+                    const node: any = graphData.nodes[i];
+                    
+                    // Update radius for org-type clusters
+                    if (clusterByOrgType && node.type === 'organization' && node.orgType) {
+                        updateClusterRadius(`org-${node.orgType}`, node);
+                    }
+                    
+                    // Update radius for asset-type clusters (separately)
+                    if (clusterByAssetType && node.type === 'project' && node.assetTypes && node.assetTypes.length > 0) {
+                        updateClusterRadius(`asset-${node.assetTypes[0]}`, node);
                     }
                 }
                 
                 // Move cluster centers toward their nodes' average position
-                clusterNodePositions.forEach((pos, key) => {
-                    if (pos.count > 0 && clusterCenters.has(key)) {
+                clusterStats.forEach((stats, key) => {
+                    if (stats.count > 0 && clusterCenters.has(key)) {
                         const center = clusterCenters.get(key)!;
-                        const avgX = pos.sumX / pos.count;
-                        const avgY = pos.sumY / pos.count;
+                        const avgX = stats.sumX / stats.count;
+                        const avgY = stats.sumY / stats.count;
                         
                         // Pull center toward average position of its nodes
                         center.x += (avgX - center.x) * centerAttractionStrength * alpha;
@@ -903,23 +964,36 @@ const NetworkGraph: React.FC<NetworkGraphProps> = ({
                     }
                 });
                 
-                // Apply repulsion between cluster centers to keep them separated
+                // Apply repulsion between cluster hulls to prevent overlap
                 for (let i = 0; i < clusterArray.length; i++) {
                     for (let j = i + 1; j < clusterArray.length; j++) {
                         const [key1, center1] = clusterArray[i];
                         const [key2, center2] = clusterArray[j];
                         
-                        const dx = center2.x - center1.x;
-                        const dy = center2.y - center1.y;
-                        const distSq = dx * dx + dy * dy;
+                        const centroid1 = clusterCentroids.get(key1);
+                        const centroid2 = clusterCentroids.get(key2);
+                        const radius1 = clusterRadii.get(key1) || 50;
+                        const radius2 = clusterRadii.get(key2) || 50;
                         
-                        if (distSq > 0) {
-                            const dist = Math.sqrt(distSq);
-                            const force = hullRepulsionStrength / distSq; // Inverse square law
+                        if (!centroid1 || !centroid2) continue;
+                        
+                        const dx = centroid2.x - centroid1.x;
+                        const dy = centroid2.y - centroid1.y;
+                        const dist = Math.sqrt(dx * dx + dy * dy);
+                        
+                        // Minimum distance = sum of hull radii + padding
+                        const minDist = radius1 + radius2 + hullPadding;
+                        
+                        if (dist < minDist && dist > 0) {
+                            // Hulls are overlapping - apply gentle repulsion
+                            const overlap = minDist - dist;
+                            // Cap the force to prevent jumpy movement
+                            const cappedOverlap = Math.min(overlap, 50);
+                            const force = cappedOverlap * hullRepulsionStrength;
                             const fx = (dx / dist) * force;
                             const fy = (dy / dist) * force;
                             
-                            // Push centers apart
+                            // Push centers apart gradually
                             center1.x -= fx * alpha;
                             center1.y -= fy * alpha;
                             center2.x += fx * alpha;
