@@ -2,38 +2,103 @@
 
 import { useState } from 'react';
 import PageHeader from '@/components/PageHeader';
-import { SectionHeader } from '@/components/SectionHeader';
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
+import { Card, CardContent } from '@/components/ui/card';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
-import { Input } from '@/components/ui/input';
 import labels from '@/config/labels.json';
 import { 
     BookOpen, 
     Database, 
     CheckCircle2, 
     AlertTriangle,
-    Target,
     Layers,
     Users,
-    Globe,
     FileText,
     Search,
     MessageCircle,
     TrendingUp,
     Shield,
-    Filter,
-    ChevronDown,
     Server,
     BarChart3,
     Settings,
-    Download
+    Download,
+    LucideIcon
 } from 'lucide-react';
+
+// ============================================================================
+// REUSABLE COMPONENTS
+// ============================================================================
+
+/** Basic info card with title and description */
+const InfoCard = ({ title, children }: { title: string; children: React.ReactNode }) => (
+    <div className="bg-slate-50 rounded-lg p-4 border border-slate-200">
+        <h4 className="font-semibold text-slate-800 mb-2">{title}</h4>
+        <p className="text-sm text-slate-600 leading-relaxed">{children}</p>
+    </div>
+);
+
+/** Info card with icon in title */
+const IconInfoCard = ({ icon: Icon, title, children }: { icon: LucideIcon; title: string; children: React.ReactNode }) => (
+    <div className="bg-slate-50 rounded-lg p-4 border border-slate-200">
+        <h4 className="font-semibold text-slate-800 mb-2 flex items-center gap-2">
+            <Icon className="w-4 h-4" style={{ color: 'var(--brand-primary)' }} />
+            {title}
+        </h4>
+        <p className="text-sm text-slate-600 leading-relaxed">{children}</p>
+    </div>
+);
+
+/** Numbered step card */
+const NumberedStep = ({ step, title, children }: { step: number; title: string; children: React.ReactNode }) => (
+    <div className="bg-slate-50 rounded-lg p-4 border border-slate-200">
+        <div className="flex items-center gap-3 mb-2">
+            <div className="flex items-center justify-center w-8 h-8 rounded-full text-white font-bold text-sm" style={{ backgroundColor: 'var(--brand-primary)' }}>
+                {step}
+            </div>
+            <h4 className="font-semibold text-slate-800">{title}</h4>
+        </div>
+        <p className="text-sm text-slate-600 ml-11 leading-relaxed">{children}</p>
+    </div>
+);
+
+/** Warning/limitation card with amber background */
+const WarningCard = ({ title, children }: { title: string; children: React.ReactNode }) => (
+    <div className="bg-amber-50 rounded-lg p-4 border border-amber-200">
+        <h4 className="font-semibold text-slate-800 mb-2">{title}</h4>
+        <p className="text-sm text-slate-600 leading-relaxed">{children}</p>
+    </div>
+);
+
+/** Section header with icon */
+const SectionTitle = ({ icon: Icon, children }: { icon: LucideIcon; children: React.ReactNode }) => (
+    <h3 className="text-lg font-semibold text-slate-800 mb-3 flex items-center gap-2">
+        <Icon className="w-5 h-5" style={{ color: 'var(--brand-primary)' }} />
+        {children}
+    </h3>
+);
+
+/** Screenshot display */
+const Screenshot = ({ src, alt }: { src: string; alt: string }) => (
+    <div className="bg-white rounded-lg p-8 border border-none flex items-center justify-center min-h-[400px]">
+        <img src={src} alt={alt} className="max-w-full max-h-[520px] rounded-md object-contain" loading="lazy" />
+    </div>
+);
+
+/** Bullet list item */
+const BulletItem = ({ children }: { children: React.ReactNode }) => (
+    <li className="flex items-start gap-2">
+        <span className="font-semibold min-w-fit" style={{ color: 'var(--brand-primary)' }}>•</span>
+        <span><strong>{children}</strong></span>
+    </li>
+);
+
+// ============================================================================
+// DATA & CONFIG
+// ============================================================================
 
 interface MethodologyPageProps {
     logoutButton?: React.ReactNode;
 }
 
-// Investment type colors - derived from chart lightening algorithm
 const INVESTMENT_TYPE_COLORS: Record<string, { bg: string; border: string; text: string; step: string }> = {
     'Data Sets & Commons': { bg: 'bg-blue-50', border: 'border-blue-300', text: 'text-blue-900', step: 'bg-blue-600' },
     'Infrastructure & Platforms': { bg: 'bg-red-50', border: 'border-red-300', text: 'text-red-900', step: 'bg-red-600' },
@@ -43,18 +108,7 @@ const INVESTMENT_TYPE_COLORS: Record<string, { bg: string; border: string; text:
     'Learning & Exchange': { bg: 'bg-indigo-50', border: 'border-indigo-300', text: 'text-indigo-900', step: 'bg-indigo-600' },
 };
 
-// Consolidated style constants matching CrisisDataDashboard
-const STYLES = {
-    cardGlass: "!border-0 bg-white",
-    sectionHeader: "flex items-center gap-2 text-lg font-qanelas-subtitle font-black text-slate-800 mb-0 mt-0 uppercase",
-} as const;
-
-// Investment type data for interactive explorer - themes sourced from themes-table.json
-const INVESTMENT_TYPE_DATA: Record<string, { 
-    icon: React.ComponentType<any>; 
-    description: string; 
-    themes: string[];
-}> = {
+const INVESTMENT_TYPE_DATA: Record<string, { icon: LucideIcon; description: string; themes: string[] }> = {
     'Data Sets & Commons': {
         icon: Database,
         description: 'Open and shared data resources that provide foundational information for crisis response and humanitarian action.',
@@ -86,6 +140,12 @@ const INVESTMENT_TYPE_DATA: Record<string, {
         themes: ['Workshops', 'Webinars', 'Best Practices', 'Conferences', 'Guides', 'Case Studies', 'Communities of Practice', 'Forums', 'Peer Learning', 'Talk Series']
     },
 };
+
+const INVESTMENT_TYPES = Object.keys(INVESTMENT_TYPE_DATA);
+
+// ============================================================================
+// MAIN COMPONENT
+// ============================================================================
 
 export default function MethodologyPage({ logoutButton }: MethodologyPageProps) {
     const [shareSuccess, setShareSuccess] = useState(false);
@@ -131,112 +191,42 @@ export default function MethodologyPage({ logoutButton }: MethodologyPageProps) 
                     {/* Overview Cards */}
                
                     {/* Main Methodology Content */}
-                    <Card className={STYLES.cardGlass}>
+                    <Card className="!border-0 bg-white">
                         <CardContent className="p-4 sm:p-6">
                             <Tabs defaultValue="collection" className="w-full">
                                 <TabsList className="grid w-full grid-cols-2 lg:grid-cols-6 h-auto gap-2 bg-slate-50 p-2">
-                                    <TabsTrigger 
-                                        value="collection" 
-                                        className="text-xs sm:text-sm data-[state=active]:bg-white data-[state=active]:shadow-sm"
-                                    >
-                                        <Search className="w-4 h-4 mr-2" />
-                                        Collection
-                                    </TabsTrigger>
-                                    <TabsTrigger 
-                                        value="classification" 
-                                        className="text-xs sm:text-sm data-[state=active]:bg-white data-[state=active]:shadow-sm"
-                                    >
-                                        <FileText className="w-4 h-4 mr-2" />
-                                        Classification
-                                    </TabsTrigger>
-                                    <TabsTrigger 
-                                        value="validation" 
-                                        className="text-xs sm:text-sm data-[state=active]:bg-white data-[state=active]:shadow-sm"
-                                    >
-                                        <CheckCircle2 className="w-4 h-4 mr-2" />
-                                        Validation
-                                    </TabsTrigger>
-                                    <TabsTrigger 
-                                        value="filtering" 
-                                        className="text-xs sm:text-sm data-[state=active]:bg-white data-[state=active]:shadow-sm"
-                                    >
-                                        <Layers className="w-4 h-4 mr-2" />
-                                        Filtering
-                                    </TabsTrigger>
-                                    <TabsTrigger 
-                                        value="network" 
-                                        className="text-xs sm:text-sm data-[state=active]:bg-white data-[state=active]:shadow-sm"
-                                    >
-                                        <TrendingUp className="w-4 h-4 mr-2" />
-                                        Network
-                                    </TabsTrigger>
-                                    <TabsTrigger 
-                                        value="export" 
-                                        className="text-xs sm:text-sm data-[state=active]:bg-white data-[state=active]:shadow-sm"
-                                    >
-                                        <Download className="w-4 h-4 mr-2" />
-                                        Export
-                                    </TabsTrigger>
-                                    
+                                    {[
+                                        { value: 'collection', icon: Search, label: 'Collection' },
+                                        { value: 'classification', icon: FileText, label: 'Classification' },
+                                        { value: 'validation', icon: CheckCircle2, label: 'Validation' },
+                                        { value: 'filtering', icon: Layers, label: 'Filtering' },
+                                        { value: 'network', icon: TrendingUp, label: 'Network' },
+                                        { value: 'export', icon: Download, label: 'Export' },
+                                    ].map(({ value, icon: Icon, label }) => (
+                                        <TabsTrigger key={value} value={value} className="text-xs sm:text-sm data-[state=active]:bg-white data-[state=active]:shadow-sm">
+                                            <Icon className="w-4 h-4 mr-2" />{label}
+                                        </TabsTrigger>
+                                    ))}
                                 </TabsList>
 
                                 {/* Data Collection Tab */}
                                 <TabsContent value="collection" className="mt-6 animate-tab-enter">
                                     <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
                                         <div>
-                                            <h3 className="text-lg font-semibold text-slate-800 mb-3 flex items-center gap-2">
-                                                <Search className="w-5 h-5" style={{ color: 'var(--brand-primary)' }} />
-                                                Data Collection
-                                            </h3>
-                                            
+                                            <SectionTitle icon={Search}>Data Collection</SectionTitle>
                                             <div className="space-y-4">
-                                            <div className="bg-slate-50 rounded-lg p-4 border border-slate-200">
-                                                <div className="flex items-center gap-3 mb-2">
-                                                    <div className="flex items-center justify-center w-8 h-8 rounded-full text-white font-bold text-sm" style={{ backgroundColor: 'var(--brand-primary)' }}>
-                                                        1
-                                                    </div>
-                                                    <h4 className="font-semibold text-slate-800">Source Identification</h4>
-                                                </div>
-                                                <p className="text-sm text-slate-600 ml-11 leading-relaxed">
+                                                <NumberedStep step={1} title="Source Identification">
                                                     We aggregate data from a curated set of public and partner sources, including international organizations, government portals, and open data repositories relevant to crisis funding and humanitarian response.
-                                                </p>
-                                            </div>
-
-                                            <div className="bg-slate-50 rounded-lg p-4 border border-slate-200">
-                                                <div className="flex items-center gap-3 mb-2">
-                                                    <div className="flex items-center justify-center w-8 h-8 rounded-full text-white font-bold text-sm" style={{ backgroundColor: 'var(--brand-primary)' }}>
-                                                        2
-                                                    </div>
-                                                    <h4 className="font-semibold text-slate-800">Automated & Manual Gathering</h4>
-                                                </div>
-                                                <p className="text-sm text-slate-600 ml-11 leading-relaxed">
+                                                </NumberedStep>
+                                                <NumberedStep step={2} title="Automated & Manual Gathering">
                                                     Data is collected through a combination of automated pipelines (APIs, web scraping) and manual curation to ensure completeness and accuracy.
-                                                </p>
-                                            </div>
-
-                                            <div className="bg-slate-50 rounded-lg p-4 border border-slate-200">
-                                                <div className="flex items-center gap-3 mb-2">
-                                                    <div className="flex items-center justify-center w-8 h-8 rounded-full text-white font-bold text-sm" style={{ backgroundColor: 'var(--brand-primary)' }}>
-                                                        3
-                                                    </div>
-                                                    <h4 className="font-semibold text-slate-800">Regular Updates</h4>
-                                                </div>
-                                                <p className="text-sm text-slate-600 ml-11 leading-relaxed">
+                                                </NumberedStep>
+                                                <NumberedStep step={3} title="Regular Updates">
                                                     The dataset is refreshed periodically to capture new funding flows, projects, and organizational changes.
-                                                </p>
+                                                </NumberedStep>
                                             </div>
                                         </div>
-                                        </div>
-                                        
-                                        {/* Network Graph Screenshot */}
-                                        <div className="bg-white rounded-lg p-8 border border-none flex items-center justify-center min-h-[400px]">
-                                            <img
-                                                src="/screenshots/collection.png"
-                                                alt="Network Graph Visualization"
-                                                className="max-w-full max-h-[520px] rounded-md object-contain"
-                                                loading="lazy"
-                                            />
-                                        </div>
+                                        <Screenshot src="/screenshots/collection.png" alt="Data Collection Process" />
                                     </div>
                                 </TabsContent>
 
@@ -244,58 +234,24 @@ export default function MethodologyPage({ logoutButton }: MethodologyPageProps) 
                                 <TabsContent value="classification" className="mt-6 animate-tab-enter">
                                     <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
                                         <div>
-                                            <h3 className="text-lg font-semibold text-slate-800 mb-3 flex items-center gap-2">
-                                                <FileText className="w-5 h-5" style={{ color: 'var(--brand-primary)' }} />
-                                                Data Classification
-                                            </h3>
+                                            <SectionTitle icon={FileText}>Data Classification</SectionTitle>
                                             <div className="space-y-4">
-                                            <div className="bg-slate-50 rounded-lg p-4 border border-slate-200">
-                                                <h4 className="font-semibold text-slate-800 mb-2">Entity Mapping</h4>
-                                                <p className="text-sm text-slate-600 leading-relaxed">
+                                                <InfoCard title="Entity Mapping">
                                                     Organizations, donors, and projects are mapped to unique identifiers to avoid duplication and enable cross-referencing.
-                                                </p>
-                                            </div>
-
-                                            <div className="bg-slate-50 rounded-lg p-4 border border-slate-200">
-                                                <h4 className="font-semibold text-slate-800 mb-2">Investment Typing</h4>
-                                                <p className="text-sm text-slate-600 mb-3 leading-relaxed">
-                                                    Each project is classified into one or more investment types based on project descriptions and metadata:
-                                                </p>
-                                                <ul className="space-y-2 text-sm text-slate-600">
-                                                    <li className="flex items-start gap-2">
-                                                        <span className="font-semibold min-w-fit" style={{ color: 'var(--brand-primary)' }}>•</span>
-                                                        <span><strong>Data Sets & Commons</strong></span>
-                                                    </li>
-                                                    <li className="flex items-start gap-2">
-                                                        <span className="font-semibold min-w-fit" style={{ color: 'var(--brand-primary)' }}>•</span>
-                                                        <span><strong>Infrastructure & Platforms</strong></span>
-                                                    </li>
-                                                    <li className="flex items-start gap-2">
-                                                        <span className="font-semibold min-w-fit" style={{ color: 'var(--brand-primary)' }}>•</span>
-                                                        <span><strong>Crisis Analytics & Insights</strong></span>
-                                                    </li>
-                                                    <li className="flex items-start gap-2">
-                                                        <span className="font-semibold min-w-fit" style={{ color: 'var(--brand-primary)' }}>•</span>
-                                                        <span><strong>Human Capital & Know-how</strong></span>
-                                                    </li>
-                                                    <li className="flex items-start gap-2">
-                                                        <span className="font-semibold min-w-fit" style={{ color: 'var(--brand-primary)' }}>•</span>
-                                                        <span><strong>Standards & Coordination</strong></span>
-                                                    </li>
-                                                    <li className="flex items-start gap-2">
-                                                        <span className="font-semibold min-w-fit" style={{ color: 'var(--brand-primary)' }}>•</span>
-                                                        <span><strong>Learning & Exchange</strong></span>
-                                                    </li>
-                                                </ul>
-                                            </div>
-
-                                            <div className="bg-slate-50 rounded-lg p-4 border border-slate-200">
-                                                <h4 className="font-semibold text-slate-800 mb-2">Theme Tagging</h4>
-                                                <p className="text-sm text-slate-600 leading-relaxed">
+                                                </InfoCard>
+                                                <div className="bg-slate-50 rounded-lg p-4 border border-slate-200">
+                                                    <h4 className="font-semibold text-slate-800 mb-2">Investment Typing</h4>
+                                                    <p className="text-sm text-slate-600 mb-3 leading-relaxed">
+                                                        Each project is classified into one or more investment types based on project descriptions and metadata:
+                                                    </p>
+                                                    <ul className="space-y-2 text-sm text-slate-600">
+                                                        {INVESTMENT_TYPES.map(type => <BulletItem key={type}>{type}</BulletItem>)}
+                                                    </ul>
+                                                </div>
+                                                <InfoCard title="Theme Tagging">
                                                     Projects are tagged with thematic areas (e.g., health, displacement, food security) using keyword analysis and expert review.
-                                                </p>
+                                                </InfoCard>
                                             </div>
-                                        </div>
                                         </div>
                                         
                                         {/* Interactive Classification Explorer */}
@@ -311,23 +267,17 @@ export default function MethodologyPage({ logoutButton }: MethodologyPageProps) 
                                             {/* Type Selector Buttons */}
                                             <div className="p-3 border-b border-slate-100 bg-slate-50/50">
                                                 <div className="grid grid-cols-2 gap-2">
-                                                    {Object.entries(INVESTMENT_TYPE_COLORS).map(([type, colors]) => {
-                                                        const TypeIcon = INVESTMENT_TYPE_DATA[type]?.icon || Database;
+                                                    {INVESTMENT_TYPES.map(type => {
+                                                        const TypeIcon = INVESTMENT_TYPE_DATA[type].icon;
                                                         const isSelected = selectedType === type;
                                                         return (
                                                             <button
                                                                 key={type}
                                                                 onClick={() => setSelectedType(type)}
                                                                 className={`flex items-center gap-2 px-3 py-2 rounded-lg text-xs font-medium transition-all duration-200 ${
-                                                                    isSelected 
-                                                                        ? `border-2 shadow-sm` 
-                                                                        : 'bg-white border border-slate-200 text-slate-600 hover:border-slate-300 hover:bg-slate-50'
+                                                                    isSelected ? 'border-2 shadow-sm' : 'bg-white border border-slate-200 text-slate-600 hover:border-slate-300 hover:bg-slate-50'
                                                                 }`}
-                                                                style={isSelected ? {
-                                                                    backgroundColor: 'var(--badge-other-bg)',
-                                                                    color: 'var(--badge-other-text)',
-                                                                    borderColor: 'var(--badge-other-border)'
-                                                                } : {}}
+                                                                style={isSelected ? { backgroundColor: 'var(--badge-other-bg)', color: 'var(--badge-other-text)', borderColor: 'var(--badge-other-border)' } : {}}
                                                             >
                                                                 <TypeIcon className={`w-4 h-4 shrink-0 ${isSelected ? '' : 'text-slate-400'}`} />
                                                                 <span className="truncate">{type}</span>
@@ -338,63 +288,30 @@ export default function MethodologyPage({ logoutButton }: MethodologyPageProps) 
                                             </div>
                                             
                                             {/* Selected Type Details */}
-                                            {selectedType && INVESTMENT_TYPE_DATA[selectedType] && (
-                                                <div className="p-4 space-y-4">
-                                                    {(() => {
-                                                        const data = INVESTMENT_TYPE_DATA[selectedType];
-                                                        const TypeIcon = data.icon;
-                                                        return (
-                                                            <>
-                                                                {/* Header */}
-                                                                <div 
-                                                                    className="flex items-center gap-3 p-3 rounded-lg"
-                                                                    style={{
-                                                                        backgroundColor: 'var(--badge-other-bg)',
-                                                                        border: '1px solid var(--badge-other-border)'
-                                                                    }}
-                                                                >
-                                                                    <div 
-                                                                        className="p-2 rounded-lg"
-                                                                        style={{ backgroundColor: 'var(--badge-other-text)' }}
-                                                                    >
-                                                                        <TypeIcon className="w-5 h-5 text-white" />
-                                                                    </div>
-                                                                    <div>
-                                                                        <h5 className="font-bold" style={{ color: 'var(--badge-other-text)' }}>{selectedType}</h5>
-                                                                    </div>
-                                                                </div>
-                                                                
-                                                                {/* Description */}
-                                                                <div>
-                                                                    <p className="text-sm text-slate-600 leading-relaxed">
-                                                                        {data.description}
-                                                                    </p>
-                                                                </div>
-                                                                
-                                                                {/* Related Themes */}
-                                                                <div>
-                                                                    <h6 className="text-xs font-semibold text-slate-700 uppercase tracking-wide mb-2">Related Themes</h6>
-                                                                    <div className="flex flex-wrap gap-1.5">
-                                                                        {data.themes.map((theme, idx) => (
-                                                                            <span 
-                                                                                key={idx}
-                                                                                className="inline-flex items-center px-2 py-1 rounded text-xs"
-                                                                                style={{
-                                                                                    backgroundColor: 'var(--badge-other-bg)',
-                                                                                    color: 'var(--badge-other-text)',
-                                                                                    border: '1px solid var(--badge-other-border)'
-                                                                                }}
-                                                                            >
-                                                                                {theme}
-                                                                            </span>
-                                                                        ))}
-                                                                    </div>
-                                                                </div>
-                                                            </>
-                                                        );
-                                                    })()}
-                                                </div>
-                                            )}
+                                            {selectedType && INVESTMENT_TYPE_DATA[selectedType] && (() => {
+                                                const { icon: TypeIcon, description, themes } = INVESTMENT_TYPE_DATA[selectedType];
+                                                return (
+                                                    <div className="p-4 space-y-4">
+                                                        <div className="flex items-center gap-3 p-3 rounded-lg" style={{ backgroundColor: 'var(--badge-other-bg)', border: '1px solid var(--badge-other-border)' }}>
+                                                            <div className="p-2 rounded-lg" style={{ backgroundColor: 'var(--badge-other-text)' }}>
+                                                                <TypeIcon className="w-5 h-5 text-white" />
+                                                            </div>
+                                                            <h5 className="font-bold" style={{ color: 'var(--badge-other-text)' }}>{selectedType}</h5>
+                                                        </div>
+                                                        <p className="text-sm text-slate-600 leading-relaxed">{description}</p>
+                                                        <div>
+                                                            <h6 className="text-xs font-semibold text-slate-700 uppercase tracking-wide mb-2">Related Themes</h6>
+                                                            <div className="flex flex-wrap gap-1.5">
+                                                                {themes.map((theme, idx) => (
+                                                                    <span key={idx} className="inline-flex items-center px-2 py-1 rounded text-xs" style={{ backgroundColor: 'var(--badge-other-bg)', color: 'var(--badge-other-text)', border: '1px solid var(--badge-other-border)' }}>
+                                                                        {theme}
+                                                                    </span>
+                                                                ))}
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                );
+                                            })()}
                                         </div>
                                     </div>
                                 </TabsContent>
@@ -403,73 +320,33 @@ export default function MethodologyPage({ logoutButton }: MethodologyPageProps) 
                                 <TabsContent value="validation" className="mt-6 animate-tab-enter">
                                     <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
                                         <div>
-                                            <h3 className="text-lg font-semibold text-slate-800 mb-3 flex items-center gap-2">
-                                                <CheckCircle2 className="w-5 h-5" style={{ color: 'var(--brand-primary)' }} />
-                                                Data Validation
-                                            </h3>
+                                            <SectionTitle icon={CheckCircle2}>Data Validation</SectionTitle>
                                             <div className="space-y-4">
-                                            <div className="bg-slate-50 rounded-lg p-4 border border-slate-200">
-                                                <h4 className="font-semibold text-slate-800 mb-2 flex items-center gap-2">
-                                                    <Shield className="w-4 h-4" style={{ color: 'var(--brand-primary)' }} />
-                                                    Quality Assurance
-                                                </h4>
-                                                <p className="text-sm text-slate-600 leading-relaxed">
+                                                <IconInfoCard icon={Shield} title="Quality Assurance">
                                                     Automated checks flag inconsistencies, missing fields, and outliers. Manual review is conducted for high-impact records and edge cases.
-                                                </p>
-                                            </div>
-
-                                            <div className="bg-slate-50 rounded-lg p-4 border border-slate-200">
-                                                <h4 className="font-semibold text-slate-800 mb-2 flex items-center gap-2">
-                                                    <CheckCircle2 className="w-4 h-4" style={{ color: 'var(--brand-primary)' }} />
-                                                    Source Verification
-                                                </h4>
-                                                <p className="text-sm text-slate-600 leading-relaxed">
+                                                </IconInfoCard>
+                                                <IconInfoCard icon={CheckCircle2} title="Source Verification">
                                                     Where possible, funding flows and project details are cross-checked against original sources or official reports.
-                                                </p>
-                                            </div>
-
-                                            <div className="bg-slate-50 rounded-lg p-4 border border-slate-200">
-                                                <h4 className="font-semibold text-slate-800 mb-2 flex items-center gap-2">
-                                                    <Users className="w-4 h-4" style={{ color: 'var(--brand-primary)' }} />
-                                                    Community Feedback
-                                                </h4>
-                                                <p className="text-sm text-slate-600 leading-relaxed">
+                                                </IconInfoCard>
+                                                <IconInfoCard icon={Users} title="Community Feedback">
                                                     Users can suggest corrections, suggest new entries or flag issues, which are reviewed by the data team.
-                                                </p>
+                                                </IconInfoCard>
                                             </div>
                                         </div>
-                                        </div>
-
-                                          <div>
-                                            <h3 className="text-lg font-semibold text-slate-800 mb-3 flex items-center gap-2">
-                                                <AlertTriangle className="w-5 h-5" style={{ color: 'var(--brand-primary)' }} />
-                                                Limitations
-                                            </h3>
+                                        <div>
+                                            <SectionTitle icon={AlertTriangle}>Limitations</SectionTitle>
                                             <div className="space-y-4">
-                                            <div className="bg-amber-50 rounded-lg p-4 border border-amber-200">
-                                                <h4 className="font-semibold text-slate-800 mb-2">Data Gaps</h4>
-                                                <p className="text-sm text-slate-600 leading-relaxed">
+                                                <WarningCard title="Data Gaps">
                                                     Not all funding flows or projects are publicly reported; some data may be incomplete or delayed.
-                                                </p>
-                                            </div>
-
-                                            <div className="bg-amber-50 rounded-lg p-4 border border-amber-200">
-                                                <h4 className="font-semibold text-slate-800 mb-2">Classification Subjectivity</h4>
-                                                <p className="text-sm text-slate-600 leading-relaxed">
+                                                </WarningCard>
+                                                <WarningCard title="Classification Subjectivity">
                                                     Investment type and theme assignments may involve interpretation, especially for multi-sector projects.
-                                                </p>
-                                            </div>
-
-                                            <div className="bg-amber-50 rounded-lg p-4 border border-amber-200">
-                                                <h4 className="font-semibold text-slate-800 mb-2">Simplification</h4>
-                                                <p className="text-sm text-slate-600 leading-relaxed">
+                                                </WarningCard>
+                                                <WarningCard title="Simplification">
                                                     For clarity, some visualizations (e.g., UN donor lists) are simplified and do not reflect the full complexity of funding relationships.
-                                                </p>
+                                                </WarningCard>
                                             </div>
                                         </div>
-                                        </div>
-                                        
-                                        
                                     </div>
                                 </TabsContent>
 
@@ -477,46 +354,20 @@ export default function MethodologyPage({ logoutButton }: MethodologyPageProps) 
                                 <TabsContent value="filtering" className="mt-6 animate-tab-enter">
                                     <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
                                         <div>
-                                            <h3 className="text-lg font-semibold text-slate-800 mb-3 flex items-center gap-2">
-                                                <Layers className="w-5 h-5" style={{ color: 'var(--brand-primary)' }} />
-                                                Filtering & Query
-                                            </h3>
+                                            <SectionTitle icon={Layers}>Filtering & Query</SectionTitle>
                                             <div className="space-y-4">
-                                            <div className="bg-slate-50 rounded-lg p-4 border border-slate-200">
-                                                <h4 className="font-semibold text-slate-800 mb-2">Search Logic</h4>
-                                                <p className="text-sm text-slate-600 leading-relaxed">
-                                                    Search operates on project titles and organization names.
-                                                </p>
-                                            </div>
-
-                                            <div className="bg-slate-50 rounded-lg p-4 border border-slate-200">
-                                                <h4 className="font-semibold text-slate-800 mb-2">Donor Filter</h4>
-                                                <p className="text-sm text-slate-600 leading-relaxed">
-                                                    Multiple donors trigger a conjunction. Returned projects must be co-financed by every selected donor.
-                                                </p>
-                                            </div>
-
-                                            <div className="bg-slate-50 rounded-lg p-4 border border-slate-200">
-                                                <h4 className="font-semibold text-slate-800 mb-2">Type Filter</h4>
-                                                <p className="text-sm text-slate-600 leading-relaxed">
+                                                <InfoCard title="Search Logic">Search operates on project titles and organization names.</InfoCard>
+                                                <InfoCard title="Donor Filter">Multiple donors trigger a conjunction. Returned projects must be co-financed by every selected donor.</InfoCard>
+                                                <InfoCard title="Type Filter">
                                                     Multiple types trigger a disjunction. Organizations appear if any of their projects match at least one selected type.
-                                                </p>
-                                            </div>
-
-                                            <div className="bg-slate-50 rounded-lg p-4 border border-slate-200">
-                                                <h4 className="font-semibold text-slate-800 mb-2">Theme Filter</h4>
-                                                <p className="text-sm text-slate-600 leading-relaxed">
+                                                </InfoCard>
+                                                <InfoCard title="Theme Filter">
                                                     Multiple themes trigger a disjunction. Projects appear if they match at least one of the selected themes.
-                                                </p>
-                                            </div>
-
-                                            <div className="bg-slate-50 rounded-lg p-4 border border-slate-200">
-                                                <h4 className="font-semibold text-slate-800 mb-2">Type–Theme Relationship</h4>
-                                                <p className="text-sm text-slate-600 leading-relaxed">
+                                                </InfoCard>
+                                                <InfoCard title="Type–Theme Relationship">
                                                     Themes are nested under types. Selecting a type restricts theme options to those linked to that type. Themes from other types can still surface when projects span multiple types and carry overlapping themes.
-                                                </p>
+                                                </InfoCard>
                                             </div>
-                                        </div>
                                         </div>
                                         
                                         {/* Interactive Filter Logic Flow */}
@@ -675,50 +526,23 @@ export default function MethodologyPage({ logoutButton }: MethodologyPageProps) 
                                 <TabsContent value="network" className="mt-6 animate-tab-enter">
                                     <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
                                         <div>
-                                            <h3 className="text-lg font-semibold text-slate-800 mb-3 flex items-center gap-2">
-                                                <TrendingUp className="w-5 h-5" style={{ color: 'var(--brand-primary)' }} />
-                                                Network Analysis
-                                            </h3>
+                                            <SectionTitle icon={TrendingUp}>Network Analysis</SectionTitle>
                                             <div className="space-y-4">
-                                            <div className="bg-slate-50 rounded-lg p-4 border border-slate-200">
-                                                <h4 className="font-semibold text-slate-800 mb-2">Graph Structure</h4>
-                                                <p className="text-sm text-slate-600 leading-relaxed">
+                                                <InfoCard title="Graph Structure">
                                                     The network view displays the filtered dataset as an undirected graph, showing relationships between donors, organizations, and projects.
-                                                </p>
-                                            </div>
-
-                                            <div className="bg-slate-50 rounded-lg p-4 border border-slate-200">
-                                                <h4 className="font-semibold text-slate-800 mb-2">Clustering Options</h4>
-                                                <p className="text-sm text-slate-600 leading-relaxed">
+                                                </InfoCard>
+                                                <InfoCard title="Clustering Options">
                                                     Clustering options aggregate projects and organizations by type, making it easier to identify patterns and connections within specific investment categories.
-                                                </p>
-                                            </div>
-
-                                            <div className="bg-slate-50 rounded-lg p-4 border border-slate-200">
-                                                <h4 className="font-semibold text-slate-800 mb-2">Interactive Nodes</h4>
-                                                <p className="text-sm text-slate-600 leading-relaxed">
+                                                </InfoCard>
+                                                <InfoCard title="Interactive Nodes">
                                                     Project and organization nodes are interactive and open a detail modal when clicked, providing in-depth information about entities and their relationships.
-                                                </p>
-                                            </div>
-
-                                            <div className="bg-slate-50 rounded-lg p-4 border border-slate-200">
-                                                <h4 className="font-semibold text-slate-800 mb-2">Spatial Interpretation</h4>
-                                                <p className="text-sm text-slate-600 leading-relaxed">
+                                                </InfoCard>
+                                                <InfoCard title="Spatial Interpretation">
                                                     Spatial proximity in the graph has no geographic or ideological meaning. Node positions are determined by the force-directed layout algorithm to optimize visualization clarity.
-                                                </p>
+                                                </InfoCard>
                                             </div>
                                         </div>
-                                        </div>
-                                        
-                                        {/* Network Graph Screenshot */}
-                                        <div className="bg-white rounded-lg p-8 border border-none flex items-center justify-center min-h-[400px]">
-                                            <img
-                                                src="/screenshots/network.png"
-                                                alt="Network Graph Visualization"
-                                                className="max-w-full max-h-[520px] rounded-md object-contain"
-                                                loading="lazy"
-                                            />
-                                        </div>
+                                        <Screenshot src="/screenshots/network.png" alt="Network Graph Visualization" />
                                     </div>
                                 </TabsContent>
 
@@ -726,86 +550,33 @@ export default function MethodologyPage({ logoutButton }: MethodologyPageProps) 
                                 <TabsContent value="export" className="mt-6 animate-tab-enter">
                                     <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
                                         <div>
-                                            <h3 className="text-lg font-semibold text-slate-800 mb-3 flex items-center gap-2">
-                                                <Download className="w-5 h-5" style={{ color: 'var(--brand-primary)' }} />
-                                                Export Functionality
-                                            </h3>
+                                            <SectionTitle icon={Download}>Export Functionality</SectionTitle>
                                             <div className="space-y-4">
-                                                <div className="bg-slate-50 rounded-lg p-4 border border-slate-200">
-                                                    <h4 className="font-semibold text-slate-800 mb-2">CSV Export</h4>
-                                                    <p className="text-sm text-slate-600 leading-relaxed">
-                                                        Exports two CSV files (organization table and asset table) in a ZIP archive. Organizations CSV includes names, types, descriptions, and funding sources. Assets CSV includes names, associated organizations, types, themes, donors, descriptions, and website.
-                                                    </p>
-                                                </div>
-
-                                                <div className="bg-slate-50 rounded-lg p-4 border border-slate-200">
-                                                    <h4 className="font-semibold text-slate-800 mb-2">Excel Export</h4>
-                                                    <p className="text-sm text-slate-600 leading-relaxed">
-                                                        Export the same data as a professionally formatted Excel workbook. Includes organizations and assets sheets with styling and optimized column widths. Includes a README file with export metadata and current filter details.
-                                                    </p>
-                                                </div>
-
-                                                <div className="bg-slate-50 rounded-lg p-4 border border-slate-200">
-                                                    <h4 className="font-semibold text-slate-800 mb-2">Filtered Exports</h4>
-                                                    <p className="text-sm text-slate-600 leading-relaxed">
-                                                        All exports respect your current filters (donors, investment types, themes, search query). The metadata and README file includes information about which filters were applied.
-                                                    </p>
-                                                </div>
+                                                <InfoCard title="CSV Export">
+                                                    Exports two CSV files (organization table and asset table) in a ZIP archive. Organizations CSV includes names, types, descriptions, and funding sources. Assets CSV includes names, associated organizations, types, themes, donors, descriptions, and website.
+                                                </InfoCard>
+                                                <InfoCard title="Excel Export">
+                                                    Export the same data as a professionally formatted Excel workbook. Includes organizations and assets sheets with styling and optimized column widths. Includes a README file with export metadata and current filter details.
+                                                </InfoCard>
+                                                <InfoCard title="Filtered Exports">
+                                                    All exports respect your current filters (donors, investment types, themes, search query). The metadata and README file includes information about which filters were applied.
+                                                </InfoCard>
                                             </div>
                                         </div>
-
                                         <div>
-                                            <h3 className="text-lg font-semibold text-slate-800 mb-3 flex items-center gap-2">
-                                                <FileText className="w-5 h-5" style={{ color: 'var(--brand-primary)' }} />
-                                                How to Use & Share
-                                            </h3>
+                                            <SectionTitle icon={FileText}>How to Use & Share</SectionTitle>
                                             <div className="space-y-4">
-                                                <div className="bg-slate-50 rounded-lg p-4 border border-slate-200">
-                                                    <div className="flex items-center gap-3 mb-2">
-                                                        <div className="flex items-center justify-center w-8 h-8 rounded-full text-white font-bold text-sm" style={{ backgroundColor: 'var(--brand-primary)' }}>
-                                                            1
-                                                        </div>
-                                                        <h4 className="font-semibold text-slate-800">Apply Filters</h4>
-                                                    </div>
-                                                    <p className="text-sm text-slate-600 ml-11 leading-relaxed">
-                                                        Use the filter panel to narrow down the data to what you need (donor countries, investment types, themes, or search query).
-                                                    </p>
-                                                </div>
-
-                                                <div className="bg-slate-50 rounded-lg p-4 border border-slate-200">
-                                                    <div className="flex items-center gap-3 mb-2">
-                                                        <div className="flex items-center justify-center w-8 h-8 rounded-full text-white font-bold text-sm" style={{ backgroundColor: 'var(--brand-primary)' }}>
-                                                            2
-                                                        </div>
-                                                        <h4 className="font-semibold text-slate-800">Export or Share</h4>
-                                                    </div>
-                                                    <p className="text-sm text-slate-600 ml-11 leading-relaxed">
-                                                        Click the export button to download your data as CSV, Excel, or PDF. Or use the share button to copy a link that preserves all your current filters for easy collaboration.
-                                                    </p>
-                                                </div>
-
-                                                <div className="bg-slate-50 rounded-lg p-4 border border-slate-200">
-                                                    <div className="flex items-center gap-3 mb-2">
-                                                        <div className="flex items-center justify-center w-8 h-8 rounded-full text-white font-bold text-sm" style={{ backgroundColor: 'var(--brand-primary)' }}>
-                                                            3
-                                                        </div>
-                                                        <h4 className="font-semibold text-slate-800">Share Filtered Views</h4>
-                                                    </div>
-                                                    <p className="text-sm text-slate-600 ml-11 leading-relaxed">
-                                                        Click the share button to copy a link that includes all your current filters. Anyone who opens the link will see the exact same filtered view you're looking at.
-                                                    </p>
-                                                </div>
-
+                                                <NumberedStep step={1} title="Apply Filters">
+                                                    Use the filter panel to narrow down the data to what you need (donor countries, investment types, themes, or search query).
+                                                </NumberedStep>
+                                                <NumberedStep step={2} title="Export or Share">
+                                                    Click the export button to download your data as CSV, Excel, or PDF. Or use the share button to copy a link that preserves all your current filters for easy collaboration.
+                                                </NumberedStep>
+                                                <NumberedStep step={3} title="Share Filtered Views">
+                                                    Click the share button to copy a link that includes all your current filters. Anyone who opens the link will see the exact same filtered view you're looking at.
+                                                </NumberedStep>
                                             </div>
                                         </div>
-                                    </div>
-                                </TabsContent>
-
-                                {/* Limitations Tab */}
-                                <TabsContent value="limitations" className="mt-6 animate-tab-enter">
-                                    <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
-                                      
-                                       
                                     </div>
                                 </TabsContent>
                             </Tabs>
