@@ -254,7 +254,7 @@ export default function DonorModal({
                 icon={
                     <CountryFlag 
                         country={donorCountry} 
-                        className="h-6 w-6 sm:h-10 sm:w-10 shrink-0 rounded object-cover"
+                        className="h-6 sm:h-8 w-auto shrink-0 rounded object-cover"
                     />
                 }
                 title={donorCountry}
@@ -445,6 +445,20 @@ export default function DonorModal({
                         })}
                     </div>
                 )}
+
+                {/* Flexible spacer to push notes to bottom */}
+                <div className="grow min-h-8"></div>
+
+                {/* Footnote section */}
+                <div className="border-t border-slate-200 pt-4 pb-4 mt-auto">
+                    <div className="text-xs text-slate-400 uppercase tracking-wider font-medium mb-2">{labels.modals.notes}</div>
+                    <div className="text-xs text-slate-500 leading-snug space-y-1">
+                        <div className="flex items-start">
+                            <span className="text-slate-400 mr-2 shrink-0">•</span>
+                            <span>{labels.modals.notesInsights}</span>
+                        </div>
+                    </div>
+                </div>
             </div>
         );
     };
