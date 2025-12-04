@@ -1,6 +1,6 @@
 'use client';
 
-import { useState } from 'react';
+import { useState, useRef } from 'react';
 import PageHeader from '@/components/PageHeader';
 import { Card, CardContent } from '@/components/ui/card';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
@@ -82,6 +82,102 @@ const Screenshot = ({ src, alt }: { src: string; alt: string }) => (
         <img src={src} alt={alt} className="max-w-full max-h-[520px] rounded-md object-contain" loading="lazy" />
     </div>
 );
+
+/** Interactive network image with color-based tooltips */
+const InteractiveNetworkImage = () => {
+    const [tooltip, setTooltip] = useState<{ text: string; x: number; y: number } | null>(null);
+    const canvasRef = useRef<HTMLCanvasElement>(null);
+    const imgRef = useRef<HTMLImageElement>(null);
+
+    const getColorLabel = (r: number, g: number, b: number): string => {
+        // Slate colors (donors) - greyish
+        if (r > 150 && r < 200 && g > 150 && g < 200 && b > 180 && b < 220) {
+            return 'Donor Node';
+        }
+        // Brand primary light (organizations) - blue/orange-ish tones
+        if (r > 200 && g > 150 && b < 100) {
+            return 'Organization Node';
+        }
+        // Purple/other colors (projects) - purple tones
+        if (r > 150 && b > 150 && g < 150) {
+            return 'Asset/Project Node';
+        }
+        // Links or connections - darker colors
+        if (r < 100 && g < 100 && b < 100) {
+            return 'Connection Link';
+        }
+        // White/light background
+        if (r > 240 && g > 240 && b > 240) {
+            return 'Canvas Background';
+        }
+        return 'Network Element';
+    };
+
+    const handleMouseMove = (e: React.MouseEvent<HTMLDivElement>) => {
+        if (!canvasRef.current || !imgRef.current || !imgRef.current.complete) return;
+
+        const rect = canvasRef.current.getBoundingClientRect();
+        const x = e.clientX - rect.left;
+        const y = e.clientY - rect.top;
+
+        // Create temporary canvas for pixel reading
+        const tempCanvas = document.createElement('canvas');
+        tempCanvas.width = imgRef.current.naturalWidth;
+        tempCanvas.height = imgRef.current.naturalHeight;
+        const ctx = tempCanvas.getContext('2d');
+        
+        if (!ctx) return;
+
+        // Scale coordinates from canvas to image
+        const scale = imgRef.current.naturalWidth / rect.width;
+        const imgX = Math.floor(x * scale);
+        const imgY = Math.floor(y * scale);
+
+        // Draw image and get pixel data
+        ctx.drawImage(imgRef.current, 0, 0);
+        const imageData = ctx.getImageData(imgX, imgY, 1, 1);
+        const [r, g, b] = imageData.data;
+
+        setTooltip({
+            text: getColorLabel(r, g, b),
+            x: e.clientX - rect.left,
+            y: e.clientY - rect.top
+        });
+    };
+
+    const handleMouseLeave = () => {
+        setTooltip(null);
+    };
+
+    return (
+        <div 
+            ref={canvasRef}
+            className="relative bg-white rounded-lg p-8 border border-none flex items-center justify-center min-h-[400px] cursor-crosshair"
+            onMouseMove={handleMouseMove}
+            onMouseLeave={handleMouseLeave}
+        >
+            <img 
+                ref={imgRef}
+                src="/screenshots/network.png" 
+                alt="Network Graph Visualization" 
+                className="max-w-full max-h-[520px] rounded-md object-contain" 
+                loading="lazy"
+            />
+            {tooltip && (
+                <div 
+                    className="fixed bg-slate-800 text-white text-xs rounded px-2 py-1 pointer-events-none whitespace-nowrap"
+                    style={{
+                        left: `${tooltip.x + 10}px`,
+                        top: `${tooltip.y - 20}px`,
+                        transform: 'translateX(0)'
+                    }}
+                >
+                    {tooltip.text}
+                </div>
+            )}
+        </div>
+    );
+};
 
 /** Bullet list item */
 const BulletItem = ({ children }: { children: React.ReactNode }) => (
@@ -542,7 +638,7 @@ export default function MethodologyPage({ logoutButton }: MethodologyPageProps) 
                                                 </InfoCard>
                                             </div>
                                         </div>
-                                        <Screenshot src="/screenshots/network.png" alt="Network Graph Visualization" />
+                                        <InteractiveNetworkImage />
                                     </div>
                                 </TabsContent>
 
