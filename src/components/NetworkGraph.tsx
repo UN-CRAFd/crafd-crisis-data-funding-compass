@@ -1711,24 +1711,6 @@ const NetworkGraph: React.FC<NetworkGraphProps> = ({
                     const baseWidth = hoverHighlightLinks.size === 0 ? 1 : (isHoverHighlight ? 2 : 1);
                     return baseWidth * globalScaleRef.current * 1.1;
                 }}
-                linkDirectionalParticles={(link) => {
-                    // No particles for donor-project links (visual only)
-                    if (link.value === 0) return 0;
-                    
-                    const sourceId = typeof link.source === 'object' ? (link.source as any).id : link.source;
-                    const targetId = typeof link.target === 'object' ? (link.target as any).id : link.target;
-                    const linkId = `${sourceId}-${targetId}`;
-                    
-                    const isHoverHighlight = hoverHighlightLinks.size > 0 && hoverHighlightLinks.has(linkId);
-                    
-                    if (hoverHighlightLinks.size === 0) return 1;
-                    return isHoverHighlight ? 2 : 0;
-                }}
-                linkDirectionalParticleWidth={(link) => {
-                    // Scale particle width with zoom: larger when zoomed out, smaller when zoomed in
-                    return 2 * globalScaleRef.current * 1.1;
-                }}
-                linkDirectionalParticleSpeed={0.005}
                 d3VelocityDecay={0.6}
                 d3AlphaDecay={0.02}
                 cooldownTicks={300}
