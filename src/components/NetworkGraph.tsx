@@ -1227,16 +1227,28 @@ const NetworkGraph: React.FC<NetworkGraphProps> = ({
         };
     }, []);
 
-    // Custom node canvas rendering - only draw the node circles
+    // Helper function to draw a hexagon on canvas
+    const drawHexagon = useCallback((ctx: CanvasRenderingContext2D, x: number, y: number, radius: number) => {
+        const angles = [0, 60, 120, 180, 240, 300].map(angle => (angle * Math.PI) / 180);
+        ctx.beginPath();
+        angles.forEach((angle, i) => {
+            const px = x + radius * Math.cos(angle);
+            const py = y + radius * Math.sin(angle);
+            if (i === 0) ctx.moveTo(px, py);
+            else ctx.lineTo(px, py);
+        });
+        ctx.closePath();
+    }, []);
+
+    // Custom node canvas rendering - only draw the node hexagons
     const paintNode = useCallback((node: GraphNode, ctx: CanvasRenderingContext2D, globalScale: number) => {
         // Use hover-based highlighting only (persistent click-based highlighting removed)
         const isHoverHighlighted = hoverHighlightNodes.size > 0 && hoverHighlightNodes.has(node.id);
         const isHighlighted = isHoverHighlighted;
         const isDimmed = hoverHighlightNodes.size > 0 && !isHighlighted;
         
-        // Draw node circle
-        ctx.beginPath();
-        ctx.arc(node.x!, node.y!, node.value / 2, 0, 2 * Math.PI, false);
+        // Draw node hexagon
+        drawHexagon(ctx, node.x!, node.y!, node.value / 2);
         
         // Apply dimming or highlighting (subtle)
         if (isDimmed) {
@@ -1307,7 +1319,7 @@ const NetworkGraph: React.FC<NetworkGraphProps> = ({
                 }
             }
         }
-    }, [hoverHighlightNodes, themeColors, flagImageCache, combinedDonors]);
+    }, [hoverHighlightNodes, themeColors, flagImageCache, combinedDonors, drawHexagon]);
 
     // Custom label rendering - drawn after all nodes to appear on top
     const paintNodeLabel = useCallback((node: GraphNode, ctx: CanvasRenderingContext2D, globalScale: number) => {
@@ -1340,12 +1352,11 @@ const NetworkGraph: React.FC<NetworkGraphProps> = ({
 
     // Define the clickable area for nodes (required when using custom nodeCanvasObject)
     const nodePointerAreaPaint = useCallback((node: GraphNode, color: string, ctx: CanvasRenderingContext2D) => {
-        // Draw a circle matching the node's size to define the clickable area
+        // Draw a hexagon matching the node's size to define the clickable area
         ctx.fillStyle = color;
-        ctx.beginPath();
-        ctx.arc(node.x!, node.y!, node.value / 2, 0, 2 * Math.PI, false);
+        drawHexagon(ctx, node.x!, node.y!, node.value / 2);
         ctx.fill();
-    }, []);
+    }, [drawHexagon]);
 
     // Memoize cluster data to avoid recalculating node groupings on every render
     const clusterData = useMemo(() => {
@@ -1509,20 +1520,28 @@ const NetworkGraph: React.FC<NetworkGraphProps> = ({
                                 <div className="space-y-1.5">
                                     {combinedDonors && combinedDonors.length > 0 && (
                                         <div className="flex items-center gap-2">
-                                            <div className="w-3.5 h-3.5 rounded-full shrink-0" style={{ backgroundColor: '#94a3b8', border: '1.5px solid #64748b' }}></div>
+                                            <svg width="14" height="14" viewBox="0 0 14 14" className="shrink-0">
+                                                <polygon points="7,1 12,4 12,10 7,13 2,10 2,4" fill="#94a3b8" stroke="#64748b" strokeWidth="1.5"/>
+                                            </svg>
                                             <span className="text-xs text-slate-600">Sel. Donors</span>
                                         </div>
                                     )}
                                     <div className="flex items-center gap-2">
-                                        <div className="w-3.5 h-3.5 rounded-full shrink-0" style={{ backgroundColor: '#cbd5e1', border: '1.5px solid var(--badge-slate-text)' }}></div>
+                                        <svg width="14" height="14" viewBox="0 0 14 14" className="shrink-0">
+                                            <polygon points="7,1 12,4 12,10 7,13 2,10 2,4" fill="#cbd5e1" stroke="var(--badge-slate-text)" strokeWidth="1.5"/>
+                                        </svg>
                                         <span className="text-xs text-slate-600">Donors</span>
                                     </div>
                                     <div className="flex items-center gap-2">
-                                        <div className="w-3.5 h-3.5 rounded-full shrink-0" style={{ backgroundColor: 'var(--brand-primary-light)', border: '1.5px solid var(--brand-primary-dark)' }}></div>
+                                        <svg width="14" height="14" viewBox="0 0 14 14" className="shrink-0">
+                                            <polygon points="7,1 12,4 12,10 7,13 2,10 2,4" fill="var(--brand-primary-light)" stroke="var(--brand-primary-dark)" strokeWidth="1.5"/>
+                                        </svg>
                                         <span className="text-xs text-slate-600">Organizations</span>
                                     </div>
                                     <div className="flex items-center gap-2">
-                                        <div className="w-3.5 h-3.5 rounded-full shrink-0" style={{ backgroundColor: 'var(--badge-other-bg)', border: '1.5px solid var(--badge-other-text)' }}></div>
+                                        <svg width="14" height="14" viewBox="0 0 14 14" className="shrink-0">
+                                            <polygon points="7,1 12,4 12,10 7,13 2,10 2,4" fill="var(--badge-other-bg)" stroke="var(--badge-other-text)" strokeWidth="1.5"/>
+                                        </svg>
                                         <span className="text-xs text-slate-600">Assets</span>
                                     </div>
                                 </div>
@@ -1712,7 +1731,7 @@ const NetworkGraph: React.FC<NetworkGraphProps> = ({
                 linkDirectionalParticleSpeed={0.005}
                 d3VelocityDecay={0.6}
                 d3AlphaDecay={0.02}
-                cooldownTicks={200}
+                cooldownTicks={300}
                 warmupTicks={50}
                 enableNodeDrag={true}
                 enableZoomInteraction={true}
