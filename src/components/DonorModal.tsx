@@ -1,6 +1,6 @@
 'use client';
 
-import { Building2, ChevronDown, ChevronRight, ExternalLink, Package, PackageOpen } from 'lucide-react';
+import { Building2, ChevronDown, ChevronRight, ExternalLink, Package, PackageOpen, Building } from 'lucide-react';
 import { useState, useMemo } from 'react';
 import BaseModal, { ModalHeader, ModalTooltip } from './BaseModal';
 import { Collapsible, CollapsibleContent, CollapsibleTrigger } from '@/components/ui/collapsible';
@@ -74,6 +74,19 @@ export default function DonorModal({
         <h3 className="text-lg font-roboto font-bold text-[#333333] leading-normal text-left">
             {children}
         </h3>
+    );
+
+    // Compact stat card for modal header - matching dashboard StatCard style
+    const CompactStatCard = ({ icon: Icon, value, label }: { icon: typeof Building2; value: number; label: string }) => (
+        <div className="rounded-lg p-4 bg-gradient-to-br from-[var(--brand-bg-lighter)] to-[var(--brand-bg-light)]">
+            <div className="flex items-center gap-1.5 mb-1">
+                <Icon className="h-3.5 w-3.5 text-[var(--brand-primary)]" />
+                <span className="text-sm font-qanelas-subtitle font-black text-slate-700 uppercase">{label}</span>
+            </div>
+            <div className="text-2xl font-bold font-mono leading-none tabular-nums text-[var(--brand-primary)]">
+                {value}
+            </div>
+        </div>
     );
 
     // Helper function to extract first sentence from text
@@ -274,9 +287,23 @@ export default function DonorModal({
 
         return (
             <div className="p-4 sm:p-6 space-y-6">
-                {/* Summary line */}
-                <div className="text-sm text-slate-500">
-                    {agencyData.length} {agencyData.length === 1 ? 'Agency' : 'Agencies'} • {totalOrganizations} {totalOrganizations === 1 ? 'Organization' : 'Organizations'} • {totalProjects} {totalProjects === 1 ? 'Asset' : 'Assets'}
+                {/* Summary stat cards */}
+                <div className="grid grid-cols-3 gap-2">
+                    <CompactStatCard 
+                        icon={Building} 
+                        value={agencyData.length} 
+                        label={agencyData.length === 1 ? 'Agency' : 'Agencies'} 
+                    />
+                    <CompactStatCard 
+                        icon={Building2} 
+                        value={totalOrganizations} 
+                        label={totalOrganizations === 1 ? 'Organization' : 'Organizations'} 
+                    />
+                    <CompactStatCard 
+                        icon={Package} 
+                        value={totalProjects} 
+                        label={totalProjects === 1 ? 'Asset' : 'Assets'} 
+                    />
                 </div>
 
                 {/* Agencies list */}
@@ -332,26 +359,26 @@ export default function DonorModal({
                                         <div className="ml-7 mt-3">
                                             {/* Directly funded organizations */}
                                         {organizations.length > 0 && (
-                                            <div className="mb-4">
-                                                <div className="mb-2 flex items-center gap-2">
-                                                    <span className="text-sm font-medium text-slate-600 uppercase tracking-wide">
+                                            <div className="mb-4 pb-4 border-b border-slate-200">
+                                                <div className="mb-3 flex items-center gap-2">
+                                                    <span className="text-xs font-semibold text-slate-500 uppercase tracking-wider letter-spacing">
                                                         {labels.modals.financedOrgs || 'Organizations'}
                                                     </span>
-                                                    <span className="text-sm font-normal text-slate-400 tabular-nums">({organizations.length})</span>
+                                                    <span className="text-xs font-normal text-slate-400 tabular-nums">({organizations.length})</span>
                                                 </div>
                                                 <div className="flex flex-col gap-2">
                                                     {organizations.map(org => (
                                                         <button
                                                             key={org.id}
                                                             onClick={() => org.shortName && handleOpenOrganization(org.shortName)}
-                                                            className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-md text-base font-medium transition-colors cursor-pointer text-left hover:opacity-80"
+                                                            className="flex items-center gap-1.5 px-3 py-2 rounded-md text-sm font-medium transition-colors cursor-pointer text-left hover:opacity-80 w-full"
                                                             style={{
                                                                 backgroundColor: 'var(--brand-bg-light)',
                                                                 color: 'var(--brand-primary-dark)'
                                                             }}
                                                         >
-                                                            <Building2 className="h-3.5 w-3.5 shrink-0" />
-                                                            {org.name}
+                                                            <Building2 className="h-4 w-4 shrink-0" />
+                                                            <span className="truncate">{org.name}</span>
                                                         </button>
                                                     ))}
                                                 </div>
@@ -361,11 +388,11 @@ export default function DonorModal({
                                         {/* Directly funded projects */}
                                         {projects.length > 0 && (
                                             <div>
-                                                <div className="mb-2 flex items-center gap-2">
-                                                    <span className="text-sm font-medium text-slate-600 uppercase tracking-wide">
+                                                <div className="mb-3 flex items-center gap-2">
+                                                    <span className="text-xs font-semibold text-slate-500 uppercase tracking-wider">
                                                         {labels.modals.financedAssets || 'Assets'}
                                                     </span>
-                                                    <span className="text-sm font-normal text-slate-400 tabular-nums">({projects.length})</span>
+                                                    <span className="text-xs font-normal text-slate-400 tabular-nums">({projects.length})</span>
                                                 </div>
                                                 <div className="flex flex-col gap-2">
                                                     {projects.map(project => {
@@ -377,7 +404,7 @@ export default function DonorModal({
                                                                 onClick={() => project.productKey && handleOpenProject(project.productKey)}
                                                                 onMouseEnter={() => setHoveredProjectId(project.id)}
                                                                 onMouseLeave={() => setHoveredProjectId(null)}
-                                                                className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-md text-base font-medium bg-slate-100 text-slate-600 hover:bg-slate-200 transition-colors cursor-pointer text-left"
+                                                                className="flex items-center gap-1.5 px-3 py-2 rounded-md text-sm font-medium bg-slate-100 text-slate-600 hover:bg-slate-200 transition-colors cursor-pointer text-left w-full"
                                                             >
                                                                 {hoveredProjectId === project.id ? (
                                                                     <PackageOpen className="w-4 h-4 text-slate-600 shrink-0" />
