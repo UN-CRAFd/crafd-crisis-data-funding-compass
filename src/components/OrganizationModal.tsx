@@ -568,7 +568,17 @@ export default function OrganizationModal({
                             <div className="flex items-start">
                                 <span className="text-slate-400 mr-2 shrink-0">•</span>
                                 <span>{labels.modals.notesUn}</span>
+                                
                             </div>
+                            
+                        )}
+                        {isUN && (
+                            <div className="flex items-start">
+                                <span className="text-slate-400 mr-2 shrink-0">•</span>
+                                <span>{labels.modals.budgetlineUn}</span>
+                                
+                            </div>
+                            
                         )}
                     </div>
                 </div>
