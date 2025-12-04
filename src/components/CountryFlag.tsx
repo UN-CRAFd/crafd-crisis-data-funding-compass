@@ -55,6 +55,7 @@ export function getCountryAlpha2(input: string): string | null {
             'uk': 'gb',
             'u.k.': 'gb',
             'european union': 'eu',
+            'african union': 'aun',
             'eu': 'eu',
             'turkiye': 'tr',
             'united nations': 'un',
@@ -76,7 +77,15 @@ export function getCountryAlpha2(input: string): string | null {
  */
 export function getCountryFlagUrl(country: string): string | null {
     const iso = getCountryAlpha2(country);
-    if (!iso) return null; 
+    if (!iso) return null;
+    
+    // Use custom flag URLs for regional organizations
+    const customFlags: Record<string, string> = {
+        'aun': 'https://flagpedia.net/data/org/w1160/au.webp'
+    };
+    
+    if (customFlags[iso]) return customFlags[iso];
+    
     return `https://flagcdn.com/${iso}.svg`;
 }
 
