@@ -1156,7 +1156,7 @@ const CrisisDataDashboard = ({
                                                                                     });
                                                                                     const orgType = orgTableMatch?.fields['Org Type'] as string | undefined;
                                                                                     return orgType ? (
-                                                                                        <div className="sm:inline-flex items-center px-1.5 py-px rounded text-[11px] font-medium text-slate-500 bg-transparent border border-slate-200 whitespace-nowrap flex-shrink-0">
+                                                                                        <div className="sm:inline-flex items-center px-0.5 py-0 rounded text-[10px] font-sm text-slate-400 bg-transparent whitespace-nowrap flex-shrink-0">
                                                                                             {orgType}
                                                                                         </div>
                                                                                     ) : null;
@@ -1266,7 +1266,7 @@ const CrisisDataDashboard = ({
                                                                                 <span>Details</span>
                                                                             </div>
                                                                         </Button>
-                                                                        <div className="text-xs sm:text-xs text-slate-600 whitespace-nowrap">
+                                                                        <div className="text-xs sm:text-xs text-slate-400 whitespace-nowrap">
                                                                             {org.projects.length > 0 ? (
                                                                                 isExpanded ?
                                                                                     `Showing ${org.projects.length} Asset${org.projects.length === 1 ? '' : 's'}` :
