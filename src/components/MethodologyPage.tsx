@@ -134,7 +134,7 @@ export default function MethodologyPage({ logoutButton }: MethodologyPageProps) 
                     <Card className={STYLES.cardGlass}>
                         <CardContent className="p-4 sm:p-6">
                             <Tabs defaultValue="collection" className="w-full">
-                                <TabsList className="grid w-full grid-cols-2 lg:grid-cols-5 h-auto gap-2 bg-slate-50 p-2">
+                                <TabsList className="grid w-full grid-cols-2 lg:grid-cols-6 h-auto gap-2 bg-slate-50 p-2">
                                     <TabsTrigger 
                                         value="collection" 
                                         className="text-xs sm:text-sm data-[state=active]:bg-white data-[state=active]:shadow-sm"
@@ -734,21 +734,21 @@ export default function MethodologyPage({ logoutButton }: MethodologyPageProps) 
                                                 <div className="bg-slate-50 rounded-lg p-4 border border-slate-200">
                                                     <h4 className="font-semibold text-slate-800 mb-2">CSV Export</h4>
                                                     <p className="text-sm text-slate-600 leading-relaxed">
-                                                        Export the filtered or full dataset as a CSV file. This is ideal for analysis in spreadsheets, data visualization tools, or statistical software. The export includes all visible columns and respects your current filters.
+                                                        Exports two CSV files (organization table and asset table) in a ZIP archive. Organizations CSV includes names, types, descriptions, and funding sources. Assets CSV includes names, associated organizations, types, themes, donors, descriptions, and website.
                                                     </p>
                                                 </div>
 
                                                 <div className="bg-slate-50 rounded-lg p-4 border border-slate-200">
-                                                    <h4 className="font-semibold text-slate-800 mb-2">PDF Export</h4>
+                                                    <h4 className="font-semibold text-slate-800 mb-2">Excel Export</h4>
                                                     <p className="text-sm text-slate-600 leading-relaxed">
-                                                        Export visualizations and summary reports as PDF documents. Perfect for presentations, reports, and sharing findings with stakeholders. The PDF preserves formatting and charts.
+                                                        Export the same data as a professionally formatted Excel workbook. Includes organizations and assets sheets with styling and optimized column widths. Includes a README file with export metadata and current filter details.
                                                     </p>
                                                 </div>
 
                                                 <div className="bg-slate-50 rounded-lg p-4 border border-slate-200">
                                                     <h4 className="font-semibold text-slate-800 mb-2">Filtered Exports</h4>
                                                     <p className="text-sm text-slate-600 leading-relaxed">
-                                                        All exports respect your active filters. Use the filtering controls to select specific organizations, investment types, themes, or regions before exporting to focus on relevant data.
+                                                        All exports respect your current filters (donors, investment types, themes, search query). The metadata and README file includes information about which filters were applied.
                                                     </p>
                                                 </div>
                                             </div>
@@ -757,7 +757,7 @@ export default function MethodologyPage({ logoutButton }: MethodologyPageProps) 
                                         <div>
                                             <h3 className="text-lg font-semibold text-slate-800 mb-3 flex items-center gap-2">
                                                 <FileText className="w-5 h-5" style={{ color: 'var(--brand-primary)' }} />
-                                                How to Use
+                                                How to Use & Share
                                             </h3>
                                             <div className="space-y-4">
                                                 <div className="bg-slate-50 rounded-lg p-4 border border-slate-200">
@@ -768,7 +768,7 @@ export default function MethodologyPage({ logoutButton }: MethodologyPageProps) 
                                                         <h4 className="font-semibold text-slate-800">Apply Filters</h4>
                                                     </div>
                                                     <p className="text-sm text-slate-600 ml-11 leading-relaxed">
-                                                        Use the filter panel to narrow down the data to what you need (organization, investment type, theme, region, etc.).
+                                                        Use the filter panel to narrow down the data to what you need (donor countries, investment types, themes, or search query).
                                                     </p>
                                                 </div>
 
@@ -777,10 +777,10 @@ export default function MethodologyPage({ logoutButton }: MethodologyPageProps) 
                                                         <div className="flex items-center justify-center w-8 h-8 rounded-full text-white font-bold text-sm" style={{ backgroundColor: 'var(--brand-primary)' }}>
                                                             2
                                                         </div>
-                                                        <h4 className="font-semibold text-slate-800">Select Export Format</h4>
+                                                        <h4 className="font-semibold text-slate-800">Export or Share</h4>
                                                     </div>
                                                     <p className="text-sm text-slate-600 ml-11 leading-relaxed">
-                                                        Click the export button and choose between CSV for data analysis or PDF for reporting and presentation.
+                                                        Click the export button to download your data as CSV, Excel, or PDF. Or use the share button to copy a link that preserves all your current filters for easy collaboration.
                                                     </p>
                                                 </div>
 
@@ -789,12 +789,13 @@ export default function MethodologyPage({ logoutButton }: MethodologyPageProps) 
                                                         <div className="flex items-center justify-center w-8 h-8 rounded-full text-white font-bold text-sm" style={{ backgroundColor: 'var(--brand-primary)' }}>
                                                             3
                                                         </div>
-                                                        <h4 className="font-semibold text-slate-800">Download & Use</h4>
+                                                        <h4 className="font-semibold text-slate-800">Share Filtered Views</h4>
                                                     </div>
                                                     <p className="text-sm text-slate-600 ml-11 leading-relaxed">
-                                                        Your file will download automatically. Use it in your analysis, reports, or share it with colleagues for collaboration.
+                                                        Click the share button to copy a link that includes all your current filters. Anyone who opens the link will see the exact same filtered view you're looking at.
                                                     </p>
                                                 </div>
+
                                             </div>
                                         </div>
                                     </div>
