@@ -78,6 +78,7 @@ const CrisisDataDashboardWrapper = ({ logoutButton }: { logoutButton?: React.Rea
     // Modal state for network view (local state, no URL changes)
     const [localSelectedOrgKey, setLocalSelectedOrgKey] = useState('');
     const [localSelectedProjectKey, setLocalSelectedProjectKey] = useState('');
+    const [localSelectedDonorCountry, setLocalSelectedDonorCountry] = useState('');
 
     // Modal state from URL for table view
     const urlOrgKey = searchParams.get('org') ?? '';
@@ -86,6 +87,7 @@ const CrisisDataDashboardWrapper = ({ logoutButton }: { logoutButton?: React.Rea
     // Choose modal state based on active view
     const selectedOrgKey = activeView === 'table' ? urlOrgKey : localSelectedOrgKey;
     const selectedProjectKey = activeView === 'table' ? urlProjectKey : localSelectedProjectKey;
+    const selectedDonorCountry = localSelectedDonorCountry; // Donor modal is always local (network view only)
 
     // Local state for immediate search input (submitted on Enter key)
     const [localSearchQuery, setLocalSearchQuery] = useState(searchQuery);
@@ -446,6 +448,32 @@ const CrisisDataDashboardWrapper = ({ logoutButton }: { logoutButton?: React.Rea
         }
     }, [activeView, searchParams, pathname, router]);
 
+    // Donor modal handlers (network view only - donors are not clickable in table view)
+    const handleOpenDonorModal = useCallback((donorCountry: string) => {
+        // Store page state
+        const stateToStore = {
+            searchQuery,
+            combinedDonors: [...combinedDonors],
+            investmentTypes: [...investmentTypes],
+            investmentThemes: [...investmentThemes]
+        };
+        
+        setUnderlyingPageState(stateToStore);
+        // Close other modals
+        setLocalSelectedOrgKey('');
+        setLocalSelectedProjectKey('');
+        setLocalSelectedDonorCountry(donorCountry);
+    }, [searchQuery, combinedDonors, investmentTypes, investmentThemes]);
+
+    const handleCloseDonorModal = useCallback(() => {
+        setLocalSelectedDonorCountry('');
+        
+        // Clear stored state after a short delay to prevent flash
+        setTimeout(() => {
+            setUnderlyingPageState(null);
+        }, 50);
+    }, []);
+
     // Handle view change
     const handleViewChange = useCallback((view: 'table' | 'network') => {
         setActiveView(view);
@@ -470,13 +498,14 @@ const CrisisDataDashboardWrapper = ({ logoutButton }: { logoutButton?: React.Rea
             }
         } else if (view === 'table') {
             // Switching to table - clear local modals if any
-            if (localSelectedOrgKey || localSelectedProjectKey) {
+            if (localSelectedOrgKey || localSelectedProjectKey || localSelectedDonorCountry) {
                 setLocalSelectedOrgKey('');
                 setLocalSelectedProjectKey('');
+                setLocalSelectedDonorCountry('');
                 setUnderlyingPageState(null);
             }
         }
-    }, [localSelectedOrgKey, localSelectedProjectKey, searchParams, pathname, router]);
+    }, [localSelectedOrgKey, localSelectedProjectKey, localSelectedDonorCountry, searchParams, pathname, router]);
 
     // Handle donor click from modal - add to filter and close modal
     const handleDonorClick = useCallback((country: string) => {
@@ -554,6 +583,7 @@ const CrisisDataDashboardWrapper = ({ logoutButton }: { logoutButton?: React.Rea
             appliedSearchQuery={effectiveSearchQuery}
             selectedOrgKey={selectedOrgKey}
             selectedProjectKey={selectedProjectKey}
+            selectedDonorCountry={selectedDonorCountry}
             sortBy={sortBy}
             sortDirection={sortDirection}
             onDonorsChange={handleDonorsChange}
@@ -565,8 +595,10 @@ const CrisisDataDashboardWrapper = ({ logoutButton }: { logoutButton?: React.Rea
             onSortChange={handleSortChange}
             onOpenOrganizationModal={handleOpenOrganizationModal}
             onOpenProjectModal={handleOpenProjectModal}
+            onOpenDonorModal={handleOpenDonorModal}
             onCloseOrganizationModal={handleCloseOrganizationModal}
             onCloseProjectModal={handleCloseProjectModal}
+            onCloseDonorModal={handleCloseDonorModal}
             onDonorClick={handleDonorClick}
             onTypeClick={handleTypeClick}
             onViewChange={handleViewChange}

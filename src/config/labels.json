@@ -136,6 +136,9 @@
     "hdxDataGrid": "HDX Data Grid",
     "visitProjectWebsite": "Visit Project Website",
     "financingAgencies": "Financed through:",
-    "clickToFilterByType": "Click to filter by this investment type"
+    "clickToFilterByType": "Click to filter by this investment type",
+    "financedOrgs": "Financed Organizations",
+    "financedAssets": "Financed Assets"
+
   }
 }

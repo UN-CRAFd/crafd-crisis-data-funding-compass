@@ -16,6 +16,7 @@ interface NetworkGraphProps {
     allOrganizations?: OrganizationWithProjects[]; // Unfiltered organizations for counting
     onOpenOrganizationModal: (orgKey: string) => void;
     onOpenProjectModal: (projectKey: string) => void;
+    onOpenDonorModal?: (donorCountry: string) => void;
     selectedOrgKey?: string;
     selectedProjectKey?: string;
     // Filter props for fullscreen mode
@@ -70,6 +71,7 @@ const NetworkGraph: React.FC<NetworkGraphProps> = ({
     allOrganizations,
     onOpenOrganizationModal,
     onOpenProjectModal,
+    onOpenDonorModal,
     selectedOrgKey,
     selectedProjectKey,
     // Filter props
@@ -1185,14 +1187,16 @@ const NetworkGraph: React.FC<NetworkGraphProps> = ({
         const nodeType = node.type;
         const orgKey = node.orgKey;
         const projectKey = node.projectKey;
+        const nodeName = node.name;
         
         if (nodeType === 'organization' && orgKey) {
             onOpenOrganizationModal(orgKey);
         } else if (nodeType === 'project' && projectKey) {
             onOpenProjectModal(projectKey);
+        } else if (nodeType === 'donor' && nodeName && onOpenDonorModal) {
+            onOpenDonorModal(nodeName);
         }
-        // Ignore clicks on donor nodes and cluster hulls
-    }, [onOpenOrganizationModal, onOpenProjectModal]);
+    }, [onOpenOrganizationModal, onOpenProjectModal, onOpenDonorModal]);
 
     // Handle background click to deselect
     const handleBackgroundClick = useCallback(() => {
