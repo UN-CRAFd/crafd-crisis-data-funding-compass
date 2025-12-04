@@ -10,6 +10,7 @@ import { SectionHeader, type SectionHeaderProps } from '@/components/SectionHead
 import dynamic from 'next/dynamic';
 import OrganizationModal from '@/components/OrganizationModal';
 import ProjectModal from '@/components/ProjectModal';
+import DonorModal from '@/components/DonorModal';
 import SurveyBanner from '@/components/SurveyBanner';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
@@ -21,6 +22,7 @@ import labels from '@/config/labels.json';
 import { getIconForInvestmentType } from '@/config/investmentTypeIcons';
 import { Building2, ChevronDown, ChevronRight, Database, Table, DatabaseBackup, FileDown, Filter, FolderDot, FolderOpenDot, Globe, Info, MessageCircle, RotateCcw, Search, Share2, ArrowUpDown, ArrowUpWideNarrow, ArrowDownWideNarrow, Network } from 'lucide-react';
 import organizationsTableRaw from '../../public/data/organizations-table.json';
+import nestedOrganizationsRaw from '../../public/data/organizations-nested.json';
 import { buildOrgDonorCountriesMap, buildOrgProjectsMap, buildProjectNameMap, buildProjectIdToKeyMap, buildOrgAgenciesMap, buildProjectAgenciesMap, buildProjectDescriptionMap, calculateOrganizationTypesFromOrganizationsWithProjects, getNestedOrganizationsForModals } from '../lib/data';
 import { exportDashboardToPDF } from '../lib/exportPDF';
 import { exportViewAsCSV, exportViewAsXLSX } from '../lib/exportCSV';
@@ -105,8 +107,11 @@ interface CrisisDataDashboardProps {
     onSortChange: (sortBy: 'name' | 'donors' | 'assets' | 'funding', sortDirection: 'asc' | 'desc') => void;
     onOpenOrganizationModal: (orgKey: string) => void;
     onOpenProjectModal: (projectKey: string) => void;
+    onOpenDonorModal?: (donorCountry: string) => void;
     onCloseOrganizationModal: () => void;
     onCloseProjectModal: () => void;
+    onCloseDonorModal?: () => void;
+    selectedDonorCountry?: string;
     onDonorClick?: (country: string) => void;
     onTypeClick?: (type: string) => void;
     onViewChange?: (view: 'table' | 'network') => void;
@@ -233,6 +238,7 @@ const CrisisDataDashboard = ({
     appliedSearchQuery,
     selectedOrgKey,
     selectedProjectKey,
+    selectedDonorCountry,
     onDonorsChange,
     onTypesChange,
     onThemesChange,
@@ -241,8 +247,10 @@ const CrisisDataDashboard = ({
     onResetFilters,
     onOpenOrganizationModal,
     onOpenProjectModal,
+    onOpenDonorModal,
     onCloseOrganizationModal,
     onCloseProjectModal,
+    onCloseDonorModal,
     onDonorClick,
     onTypeClick,
     onViewChange,
@@ -451,12 +459,18 @@ const CrisisDataDashboard = ({
         // Event handlers for modal close events dispatched from within modals
         window.addEventListener('closeProjectModal', onCloseProjectModal as EventListener);
         window.addEventListener('closeOrganizationModal', onCloseOrganizationModal as EventListener);
+        if (onCloseDonorModal) {
+            window.addEventListener('closeDonorModal', onCloseDonorModal as EventListener);
+        }
 
         return () => {
             window.removeEventListener('closeProjectModal', onCloseProjectModal as EventListener);
             window.removeEventListener('closeOrganizationModal', onCloseOrganizationModal as EventListener);
+            if (onCloseDonorModal) {
+                window.removeEventListener('closeDonorModal', onCloseDonorModal as EventListener);
+            }
         };
-    }, [onCloseProjectModal, onCloseOrganizationModal]);
+    }, [onCloseProjectModal, onCloseOrganizationModal, onCloseDonorModal]);
 
     // Find selected items based on URL parameters
     const selectedProject = useMemo(() => {
@@ -1375,6 +1389,7 @@ const CrisisDataDashboard = ({
                                                         allOrganizations={allOrganizations}
                                                         onOpenOrganizationModal={onOpenOrganizationModal}
                                                         onOpenProjectModal={onOpenProjectModal}
+                                                        onOpenDonorModal={onOpenDonorModal}
                                                         selectedOrgKey={selectedOrgKey}
                                                         selectedProjectKey={selectedProjectKey}
                                                         searchQuery={searchQuery}
@@ -1529,6 +1544,16 @@ const CrisisDataDashboard = ({
                         />
                     );
                 })()
+            )}
+            {/* Donor Modal */}
+            {selectedDonorCountry && (
+                <DonorModal
+                    donorCountry={selectedDonorCountry}
+                    nestedOrganizations={nestedOrganizationsRaw as any}
+                    loading={false}
+                    onOpenOrganizationModal={onOpenOrganizationModal}
+                    onOpenProjectModal={onOpenProjectModal}
+                />
             )}
         </div>
     );
