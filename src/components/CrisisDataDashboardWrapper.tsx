@@ -68,8 +68,8 @@ const CrisisDataDashboardWrapper = ({ logoutButton }: { logoutButton?: React.Rea
     
     const sortDirection = useMemo(() => {
         const raw = searchParams.get('sd') ?? searchParams.get('sortDirection');
-        if (raw === 'desc') return 'desc';
-        return 'asc'; // default
+        if (raw === 'asc') return 'asc';
+        return 'desc'; // default
     }, [searchParams]);
 
     // Track active view (table or network)
@@ -212,8 +212,8 @@ const CrisisDataDashboardWrapper = ({ logoutButton }: { logoutButton?: React.Rea
         }
         
         if (params.sortDirection !== undefined) {
-            // Only set in URL if non-default
-            if (params.sortDirection !== 'asc') {
+            // Only set in URL if non-default (default is now 'desc')
+            if (params.sortDirection === 'asc') {
                 newSearchParams.set('sd', params.sortDirection);
             } else {
                 newSearchParams.delete('sd');
@@ -332,7 +332,7 @@ const CrisisDataDashboardWrapper = ({ logoutButton }: { logoutButton?: React.Rea
     // Handle reset filters
     const handleResetFilters = () => {
         setLocalSearchQuery(''); // Clear local search immediately
-        updateURLParams({ donors: [], types: [], themes: [], search: '', sortBy: 'name', sortDirection: 'asc' });
+        updateURLParams({ donors: [], types: [], themes: [], search: '', sortBy: 'name', sortDirection: 'desc' });
     };
 
     // Handle filter changes
