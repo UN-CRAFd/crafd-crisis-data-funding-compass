@@ -22,7 +22,11 @@ import {
     TrendingUp,
     Shield,
     Filter,
-    ChevronDown
+    ChevronDown,
+    Server,
+    BarChart3,
+    Settings,
+    Download
 } from 'lucide-react';
 
 interface MethodologyPageProps {
@@ -33,7 +37,7 @@ interface MethodologyPageProps {
 const INVESTMENT_TYPE_COLORS: Record<string, { bg: string; border: string; text: string; step: string }> = {
     'Data Sets & Commons': { bg: 'bg-blue-50', border: 'border-blue-300', text: 'text-blue-900', step: 'bg-blue-600' },
     'Infrastructure & Platforms': { bg: 'bg-red-50', border: 'border-red-300', text: 'text-red-900', step: 'bg-red-600' },
-    'Crisis Analytics & Insights': { bg: 'bg-orange-50', border: 'border-orange-300', text: 'text-orange-900', step: 'bg-orange-600' },
+    'Crisis Analytics & Insights': { bg: 'bg-orange-50', border: 'border-orange-300', text: 'text-orange-900', step: 'bg-orange-400' },
     'Human Capital & Know-how': { bg: 'bg-green-50', border: 'border-green-300', text: 'text-green-900', step: 'bg-green-600' },
     'Standards & Coordination': { bg: 'bg-purple-50', border: 'border-purple-300', text: 'text-purple-900', step: 'bg-purple-600' },
     'Learning & Exchange': { bg: 'bg-indigo-50', border: 'border-indigo-300', text: 'text-indigo-900', step: 'bg-indigo-600' },
@@ -45,8 +49,47 @@ const STYLES = {
     sectionHeader: "flex items-center gap-2 text-lg font-qanelas-subtitle font-black text-slate-800 mb-0 mt-0 uppercase",
 } as const;
 
+// Investment type data for interactive explorer - themes sourced from themes-table.json
+const INVESTMENT_TYPE_DATA: Record<string, { 
+    icon: React.ComponentType<any>; 
+    description: string; 
+    themes: string[];
+}> = {
+    'Data Sets & Commons': {
+        icon: Database,
+        description: 'Open and shared data resources that provide foundational information for crisis response and humanitarian action.',
+        themes: ['Humanitarian Access Data', 'Displacement & Migration Data', 'Baseline Population Data', 'Geospatial Data', 'Household Survey Data', 'Health Data', 'Food Security Data', 'Nutrition Data', 'Climate Data', 'Conflict & Violence Data', 'Gender Data', 'Education Data', 'WASH Data', 'Poverty Data', 'Environmental Data', '3W Data', 'Administrative Boundaries']
+    },
+    'Infrastructure & Platforms': {
+        icon: Server,
+        description: 'Technical systems and platforms that enable data collection, storage, processing, and distribution at scale.',
+        themes: ['Geographic Information Systems (GIS)', 'Data Governance & Management', 'Data Collection', 'AI & ML Infrastructure', 'Data Processing & Transformation', 'Data Storage', 'Access & Sharing', 'Data Quality & Validation', 'Data Documentation & Metadata', 'Open Source LLMs']
+    },
+    'Crisis Analytics & Insights': {
+        icon: BarChart3,
+        description: 'Analytical products, models, and visualizations that transform raw data into actionable intelligence.',
+        themes: ['Needs Assessment Analytics', 'Climate Analytics', 'Health Analytics', 'Monitoring & Alerts', 'Disaster Hazard & Risk Modelling', 'Food Security Analytics', 'Displacement Analytics', 'Conflict Analytics', 'Population Analytics', 'Geospatial Analytics', 'AI Models', 'Anticipatory & Early Action Forecasts', 'Gender Analytics', 'Poverty Analytics', 'Damage Assessments']
+    },
+    'Human Capital & Know-how': {
+        icon: Users,
+        description: 'Investments in people, skills, and organizational capacity to effectively use and produce crisis data.',
+        themes: ['Capacity Building', 'Upskilling & Training', 'Data Analytics', 'Information Management', 'Surge Capacity', 'Regional Hubs', 'Data Collection & Generation', 'Data Management & Visualization', 'Applied Data Analytics & Insights Generation', 'Digital Product & Tool Development']
+    },
+    'Standards & Coordination': {
+        icon: Settings,
+        description: 'Frameworks, protocols, and coordination mechanisms that enable interoperability and collective action.',
+        themes: ['Common Indicators', 'Methodological Standards', 'Metadata', 'Open Access', 'Ethics', 'Interoperable Formats', 'Data Documentation', 'APIs Standard', 'Open Source', 'Data Protection & Privacy Frameworks', 'Standard Geocodes', 'Peer Review']
+    },
+    'Learning & Exchange': {
+        icon: BookOpen,
+        description: 'Knowledge sharing, documentation, and community building that advances the field of crisis data.',
+        themes: ['Workshops', 'Webinars', 'Best Practices', 'Conferences', 'Guides', 'Case Studies', 'Communities of Practice', 'Forums', 'Peer Learning', 'Talk Series']
+    },
+};
+
 export default function MethodologyPage({ logoutButton }: MethodologyPageProps) {
     const [shareSuccess, setShareSuccess] = useState(false);
+    const [selectedType, setSelectedType] = useState<string | null>('Data Sets & Commons');
 
     const handleShare = () => {
         const url = window.location.href;
@@ -75,12 +118,12 @@ export default function MethodologyPage({ logoutButton }: MethodologyPageProps) 
                         <div className="relative z-10">
                             <div className="flex items-center gap-3 mb-4">
                                 <BookOpen className="w-8 h-8" style={{ color: 'var(--brand-primary)' }} />
-                                <h1 className="text-3xl sm:text-4xl font-bold font-qanelas-subtitle" style={{ color: 'var(--brand-primary)' }}>
+                                <h1 className="text-3xl sm:text-4xl font-bold font-qanelas-subtitle" style={{ color: 'black' }}>
                                     Methodology
                                 </h1>
                             </div>
                             <p className="text-base sm:text-lg text-slate-700 max-w-3xl leading-relaxed">
-                                Understand how to derive insights for crisis data funding through data collection, classification, validation, and interactive analysis.
+                                Understand how data was collected and how to use it best for your research
                             </p>
                         </div>
                     </div>
@@ -91,7 +134,7 @@ export default function MethodologyPage({ logoutButton }: MethodologyPageProps) 
                     <Card className={STYLES.cardGlass}>
                         <CardContent className="p-4 sm:p-6">
                             <Tabs defaultValue="collection" className="w-full">
-                                <TabsList className="grid w-full grid-cols-2 lg:grid-cols-6 h-auto gap-2 bg-slate-50 p-2">
+                                <TabsList className="grid w-full grid-cols-2 lg:grid-cols-5 h-auto gap-2 bg-slate-50 p-2">
                                     <TabsTrigger 
                                         value="collection" 
                                         className="text-xs sm:text-sm data-[state=active]:bg-white data-[state=active]:shadow-sm"
@@ -128,16 +171,17 @@ export default function MethodologyPage({ logoutButton }: MethodologyPageProps) 
                                         Network
                                     </TabsTrigger>
                                     <TabsTrigger 
-                                        value="limitations" 
+                                        value="export" 
                                         className="text-xs sm:text-sm data-[state=active]:bg-white data-[state=active]:shadow-sm"
                                     >
-                                        <AlertTriangle className="w-4 h-4 mr-2" />
-                                        Limitations
+                                        <Download className="w-4 h-4 mr-2" />
+                                        Export
                                     </TabsTrigger>
+                                    
                                 </TabsList>
 
                                 {/* Data Collection Tab */}
-                                <TabsContent value="collection" className="mt-6">
+                                <TabsContent value="collection" className="mt-6 animate-tab-enter">
                                     <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
                                         <div>
                                             <h3 className="text-lg font-semibold text-slate-800 mb-3 flex items-center gap-2">
@@ -184,15 +228,20 @@ export default function MethodologyPage({ logoutButton }: MethodologyPageProps) 
                                         </div>
                                         </div>
                                         
-                                        {/* Image Placeholder */}
-                                        <div className="bg-slate-100 rounded-lg p-8 border border-slate-200 flex items-center justify-center min-h-[400px]">
-                                            <p className="text-slate-400 text-sm">Screenshot: Data Collection Process</p>
+                                        {/* Network Graph Screenshot */}
+                                        <div className="bg-white rounded-lg p-8 border border-none flex items-center justify-center min-h-[400px]">
+                                            <img
+                                                src="/screenshots/collection.png"
+                                                alt="Network Graph Visualization"
+                                                className="max-w-full max-h-[520px] rounded-md object-contain"
+                                                loading="lazy"
+                                            />
                                         </div>
                                     </div>
                                 </TabsContent>
 
                                 {/* Classification Tab */}
-                                <TabsContent value="classification" className="mt-6">
+                                <TabsContent value="classification" className="mt-6 animate-tab-enter">
                                     <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
                                         <div>
                                             <h3 className="text-lg font-semibold text-slate-800 mb-3 flex items-center gap-2">
@@ -249,15 +298,109 @@ export default function MethodologyPage({ logoutButton }: MethodologyPageProps) 
                                         </div>
                                         </div>
                                         
-                                        {/* Image Placeholder */}
-                                        <div className="bg-slate-100 rounded-lg p-8 border border-slate-200 flex items-center justify-center min-h-[400px]">
-                                            <p className="text-slate-400 text-sm">Screenshot: Investment Types & Theme Classification</p>
+                                        {/* Interactive Classification Explorer */}
+                                        <div className="bg-white rounded-lg border-2 border-slate-200 shadow-sm overflow-hidden">
+                                            <div className="p-4 border-b border-slate-200 bg-slate-50">
+                                                <h4 className="text-sm font-semibold text-slate-700 flex items-center gap-2">
+                                                    <Layers className="w-4 h-4" style={{ color: 'var(--brand-primary)' }} />
+                                                    Asset Type Explorer
+                                                </h4>
+                                                <p className="text-xs text-slate-500 mt-1">Click on an investment type to explore</p>
+                                            </div>
+                                            
+                                            {/* Type Selector Buttons */}
+                                            <div className="p-3 border-b border-slate-100 bg-slate-50/50">
+                                                <div className="grid grid-cols-2 gap-2">
+                                                    {Object.entries(INVESTMENT_TYPE_COLORS).map(([type, colors]) => {
+                                                        const TypeIcon = INVESTMENT_TYPE_DATA[type]?.icon || Database;
+                                                        const isSelected = selectedType === type;
+                                                        return (
+                                                            <button
+                                                                key={type}
+                                                                onClick={() => setSelectedType(type)}
+                                                                className={`flex items-center gap-2 px-3 py-2 rounded-lg text-xs font-medium transition-all duration-200 ${
+                                                                    isSelected 
+                                                                        ? `border-2 shadow-sm` 
+                                                                        : 'bg-white border border-slate-200 text-slate-600 hover:border-slate-300 hover:bg-slate-50'
+                                                                }`}
+                                                                style={isSelected ? {
+                                                                    backgroundColor: 'var(--badge-other-bg)',
+                                                                    color: 'var(--badge-other-text)',
+                                                                    borderColor: 'var(--badge-other-border)'
+                                                                } : {}}
+                                                            >
+                                                                <TypeIcon className={`w-4 h-4 shrink-0 ${isSelected ? '' : 'text-slate-400'}`} />
+                                                                <span className="truncate">{type}</span>
+                                                            </button>
+                                                        );
+                                                    })}
+                                                </div>
+                                            </div>
+                                            
+                                            {/* Selected Type Details */}
+                                            {selectedType && INVESTMENT_TYPE_DATA[selectedType] && (
+                                                <div className="p-4 space-y-4">
+                                                    {(() => {
+                                                        const data = INVESTMENT_TYPE_DATA[selectedType];
+                                                        const TypeIcon = data.icon;
+                                                        return (
+                                                            <>
+                                                                {/* Header */}
+                                                                <div 
+                                                                    className="flex items-center gap-3 p-3 rounded-lg"
+                                                                    style={{
+                                                                        backgroundColor: 'var(--badge-other-bg)',
+                                                                        border: '1px solid var(--badge-other-border)'
+                                                                    }}
+                                                                >
+                                                                    <div 
+                                                                        className="p-2 rounded-lg"
+                                                                        style={{ backgroundColor: 'var(--badge-other-text)' }}
+                                                                    >
+                                                                        <TypeIcon className="w-5 h-5 text-white" />
+                                                                    </div>
+                                                                    <div>
+                                                                        <h5 className="font-bold" style={{ color: 'var(--badge-other-text)' }}>{selectedType}</h5>
+                                                                    </div>
+                                                                </div>
+                                                                
+                                                                {/* Description */}
+                                                                <div>
+                                                                    <p className="text-sm text-slate-600 leading-relaxed">
+                                                                        {data.description}
+                                                                    </p>
+                                                                </div>
+                                                                
+                                                                {/* Related Themes */}
+                                                                <div>
+                                                                    <h6 className="text-xs font-semibold text-slate-700 uppercase tracking-wide mb-2">Related Themes</h6>
+                                                                    <div className="flex flex-wrap gap-1.5">
+                                                                        {data.themes.map((theme, idx) => (
+                                                                            <span 
+                                                                                key={idx}
+                                                                                className="inline-flex items-center px-2 py-1 rounded text-xs"
+                                                                                style={{
+                                                                                    backgroundColor: 'var(--badge-other-bg)',
+                                                                                    color: 'var(--badge-other-text)',
+                                                                                    border: '1px solid var(--badge-other-border)'
+                                                                                }}
+                                                                            >
+                                                                                {theme}
+                                                                            </span>
+                                                                        ))}
+                                                                    </div>
+                                                                </div>
+                                                            </>
+                                                        );
+                                                    })()}
+                                                </div>
+                                            )}
                                         </div>
                                     </div>
                                 </TabsContent>
 
                                 {/* Validation Tab */}
-                                <TabsContent value="validation" className="mt-6">
+                                <TabsContent value="validation" className="mt-6 animate-tab-enter">
                                     <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
                                         <div>
                                             <h3 className="text-lg font-semibold text-slate-800 mb-3 flex items-center gap-2">
@@ -291,21 +434,47 @@ export default function MethodologyPage({ logoutButton }: MethodologyPageProps) 
                                                     Community Feedback
                                                 </h4>
                                                 <p className="text-sm text-slate-600 leading-relaxed">
-                                                    Users can suggest corrections or flag issues, which are reviewed by the data team.
+                                                    Users can suggest corrections, suggest new entries or flag issues, which are reviewed by the data team.
+                                                </p>
+                                            </div>
+                                        </div>
+                                        </div>
+
+                                          <div>
+                                            <h3 className="text-lg font-semibold text-slate-800 mb-3 flex items-center gap-2">
+                                                <AlertTriangle className="w-5 h-5" style={{ color: 'var(--brand-primary)' }} />
+                                                Limitations
+                                            </h3>
+                                            <div className="space-y-4">
+                                            <div className="bg-amber-50 rounded-lg p-4 border border-amber-200">
+                                                <h4 className="font-semibold text-slate-800 mb-2">Data Gaps</h4>
+                                                <p className="text-sm text-slate-600 leading-relaxed">
+                                                    Not all funding flows or projects are publicly reported; some data may be incomplete or delayed.
+                                                </p>
+                                            </div>
+
+                                            <div className="bg-amber-50 rounded-lg p-4 border border-amber-200">
+                                                <h4 className="font-semibold text-slate-800 mb-2">Classification Subjectivity</h4>
+                                                <p className="text-sm text-slate-600 leading-relaxed">
+                                                    Investment type and theme assignments may involve interpretation, especially for multi-sector projects.
+                                                </p>
+                                            </div>
+
+                                            <div className="bg-amber-50 rounded-lg p-4 border border-amber-200">
+                                                <h4 className="font-semibold text-slate-800 mb-2">Simplification</h4>
+                                                <p className="text-sm text-slate-600 leading-relaxed">
+                                                    For clarity, some visualizations (e.g., UN donor lists) are simplified and do not reflect the full complexity of funding relationships.
                                                 </p>
                                             </div>
                                         </div>
                                         </div>
                                         
-                                        {/* Image Placeholder */}
-                                        <div className="bg-slate-100 rounded-lg p-8 border border-slate-200 flex items-center justify-center min-h-[400px]">
-                                            <p className="text-slate-400 text-sm">Screenshot: Quality Assurance & Validation Process</p>
-                                        </div>
+                                        
                                     </div>
                                 </TabsContent>
 
                                 {/* Filtering & Query Tab */}
-                                <TabsContent value="filtering" className="mt-6">
+                                <TabsContent value="filtering" className="mt-6 animate-tab-enter">
                                     <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
                                         <div>
                                             <h3 className="text-lg font-semibold text-slate-800 mb-3 flex items-center gap-2">
@@ -337,7 +506,7 @@ export default function MethodologyPage({ logoutButton }: MethodologyPageProps) 
                                             <div className="bg-slate-50 rounded-lg p-4 border border-slate-200">
                                                 <h4 className="font-semibold text-slate-800 mb-2">Theme Filter</h4>
                                                 <p className="text-sm text-slate-600 leading-relaxed">
-                                                    Themes function under conjunction. Returned projects must include all selected themes.
+                                                    Multiple themes trigger a disjunction. Projects appear if they match at least one of the selected themes.
                                                 </p>
                                             </div>
 
@@ -351,11 +520,7 @@ export default function MethodologyPage({ logoutButton }: MethodologyPageProps) 
                                         </div>
                                         
                                         {/* Interactive Filter Logic Flow */}
-                                        <div className="bg-white rounded-lg p-6 border-2 border-slate-200 shadow-sm">
-                                            <h4 className="text-sm font-semibold text-slate-700 mb-4 flex items-center gap-2">
-                                                <Filter className="w-4 h-4" style={{ color: 'var(--brand-primary)' }} />
-                                                Filter Logic Flow Diagram
-                                            </h4>
+                                        <div className="bg-white rounded-lg p-6 border-2 border-slate-200 shadow-sm max-h-[668px] overflow-y-auto">
                                             
                                             {/* Flow Diagram */}
                                             <div className="space-y-3 text-xs">
@@ -440,12 +605,12 @@ export default function MethodologyPage({ logoutButton }: MethodologyPageProps) 
                                                         
                                                         <div className="bg-white rounded px-3 py-2 border-2 border-orange-200">
                                                             <div className="font-semibold mb-1 flex items-center gap-1">
-                                                                C. Theme Filter <span className="text-amber-600 font-bold">(AND logic)</span>
+                                                                C. Theme Filter <span className="text-green-600 font-bold">(OR logic)</span>
                                                             </div>
                                                             <div className="text-[10px] font-mono bg-slate-50 px-2 py-1 rounded">
-                                                                selectedThemes.every(th → project.themes.includes(th))
+                                                                project.themes.some(th → selectedThemes.includes(th))
                                                             </div>
-                                                            <div className="mt-1 text-[10px]">Project needs ALL selected themes</div>
+                                                            <div className="mt-1 text-[10px]">Project needs ≥1 matching theme</div>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -493,7 +658,7 @@ export default function MethodologyPage({ logoutButton }: MethodologyPageProps) 
                                                         </li>
                                                         <li className="flex gap-2">
                                                             <span className="font-bold">3.</span>
-                                                            <span><strong>Type uses OR</strong> (any match) → <strong>Theme uses AND</strong> (all match)</span>
+                                                            <span><strong>Type uses OR</strong> (any match) → <strong>Theme uses OR</strong> (any match)</span>
                                                         </li>
                                                         <li className="flex gap-2">
                                                             <span className="font-bold">4.</span>
@@ -507,7 +672,7 @@ export default function MethodologyPage({ logoutButton }: MethodologyPageProps) 
                                 </TabsContent>
 
                                 {/* Network Analysis Tab */}
-                                <TabsContent value="network" className="mt-6">
+                                <TabsContent value="network" className="mt-6 animate-tab-enter">
                                     <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
                                         <div>
                                             <h3 className="text-lg font-semibold text-slate-800 mb-3 flex items-center gap-2">
@@ -557,42 +722,89 @@ export default function MethodologyPage({ logoutButton }: MethodologyPageProps) 
                                     </div>
                                 </TabsContent>
 
-                                {/* Limitations Tab */}
-                                <TabsContent value="limitations" className="mt-6">
+                                {/* Export Tab */}
+                                <TabsContent value="export" className="mt-6 animate-tab-enter">
                                     <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
                                         <div>
                                             <h3 className="text-lg font-semibold text-slate-800 mb-3 flex items-center gap-2">
-                                                <AlertTriangle className="w-5 h-5" style={{ color: 'var(--brand-primary)' }} />
-                                                Limitations
+                                                <Download className="w-5 h-5" style={{ color: 'var(--brand-primary)' }} />
+                                                Export Functionality
                                             </h3>
                                             <div className="space-y-4">
-                                            <div className="bg-amber-50 rounded-lg p-4 border border-amber-200">
-                                                <h4 className="font-semibold text-slate-800 mb-2">Data Gaps</h4>
-                                                <p className="text-sm text-slate-600 leading-relaxed">
-                                                    Not all funding flows or projects are publicly reported; some data may be incomplete or delayed.
-                                                </p>
-                                            </div>
+                                                <div className="bg-slate-50 rounded-lg p-4 border border-slate-200">
+                                                    <h4 className="font-semibold text-slate-800 mb-2">CSV Export</h4>
+                                                    <p className="text-sm text-slate-600 leading-relaxed">
+                                                        Export the filtered or full dataset as a CSV file. This is ideal for analysis in spreadsheets, data visualization tools, or statistical software. The export includes all visible columns and respects your current filters.
+                                                    </p>
+                                                </div>
 
-                                            <div className="bg-amber-50 rounded-lg p-4 border border-amber-200">
-                                                <h4 className="font-semibold text-slate-800 mb-2">Classification Subjectivity</h4>
-                                                <p className="text-sm text-slate-600 leading-relaxed">
-                                                    Investment type and theme assignments may involve interpretation, especially for multi-sector projects.
-                                                </p>
-                                            </div>
+                                                <div className="bg-slate-50 rounded-lg p-4 border border-slate-200">
+                                                    <h4 className="font-semibold text-slate-800 mb-2">PDF Export</h4>
+                                                    <p className="text-sm text-slate-600 leading-relaxed">
+                                                        Export visualizations and summary reports as PDF documents. Perfect for presentations, reports, and sharing findings with stakeholders. The PDF preserves formatting and charts.
+                                                    </p>
+                                                </div>
 
-                                            <div className="bg-amber-50 rounded-lg p-4 border border-amber-200">
-                                                <h4 className="font-semibold text-slate-800 mb-2">Simplification</h4>
-                                                <p className="text-sm text-slate-600 leading-relaxed">
-                                                    For clarity, some visualizations (e.g., UN donor lists) are simplified and do not reflect the full complexity of funding relationships.
-                                                </p>
+                                                <div className="bg-slate-50 rounded-lg p-4 border border-slate-200">
+                                                    <h4 className="font-semibold text-slate-800 mb-2">Filtered Exports</h4>
+                                                    <p className="text-sm text-slate-600 leading-relaxed">
+                                                        All exports respect your active filters. Use the filtering controls to select specific organizations, investment types, themes, or regions before exporting to focus on relevant data.
+                                                    </p>
+                                                </div>
                                             </div>
                                         </div>
+
+                                        <div>
+                                            <h3 className="text-lg font-semibold text-slate-800 mb-3 flex items-center gap-2">
+                                                <FileText className="w-5 h-5" style={{ color: 'var(--brand-primary)' }} />
+                                                How to Use
+                                            </h3>
+                                            <div className="space-y-4">
+                                                <div className="bg-slate-50 rounded-lg p-4 border border-slate-200">
+                                                    <div className="flex items-center gap-3 mb-2">
+                                                        <div className="flex items-center justify-center w-8 h-8 rounded-full text-white font-bold text-sm" style={{ backgroundColor: 'var(--brand-primary)' }}>
+                                                            1
+                                                        </div>
+                                                        <h4 className="font-semibold text-slate-800">Apply Filters</h4>
+                                                    </div>
+                                                    <p className="text-sm text-slate-600 ml-11 leading-relaxed">
+                                                        Use the filter panel to narrow down the data to what you need (organization, investment type, theme, region, etc.).
+                                                    </p>
+                                                </div>
+
+                                                <div className="bg-slate-50 rounded-lg p-4 border border-slate-200">
+                                                    <div className="flex items-center gap-3 mb-2">
+                                                        <div className="flex items-center justify-center w-8 h-8 rounded-full text-white font-bold text-sm" style={{ backgroundColor: 'var(--brand-primary)' }}>
+                                                            2
+                                                        </div>
+                                                        <h4 className="font-semibold text-slate-800">Select Export Format</h4>
+                                                    </div>
+                                                    <p className="text-sm text-slate-600 ml-11 leading-relaxed">
+                                                        Click the export button and choose between CSV for data analysis or PDF for reporting and presentation.
+                                                    </p>
+                                                </div>
+
+                                                <div className="bg-slate-50 rounded-lg p-4 border border-slate-200">
+                                                    <div className="flex items-center gap-3 mb-2">
+                                                        <div className="flex items-center justify-center w-8 h-8 rounded-full text-white font-bold text-sm" style={{ backgroundColor: 'var(--brand-primary)' }}>
+                                                            3
+                                                        </div>
+                                                        <h4 className="font-semibold text-slate-800">Download & Use</h4>
+                                                    </div>
+                                                    <p className="text-sm text-slate-600 ml-11 leading-relaxed">
+                                                        Your file will download automatically. Use it in your analysis, reports, or share it with colleagues for collaboration.
+                                                    </p>
+                                                </div>
+                                            </div>
                                         </div>
-                                        
-                                        {/* Image Placeholder */}
-                                        <div className="bg-slate-100 rounded-lg p-8 border border-slate-200 flex items-center justify-center min-h-[400px]">
-                                            <p className="text-slate-400 text-sm">Screenshot: Data Coverage & Known Limitations</p>
-                                        </div>
+                                    </div>
+                                </TabsContent>
+
+                                {/* Limitations Tab */}
+                                <TabsContent value="limitations" className="mt-6 animate-tab-enter">
+                                    <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
+                                      
+                                       
                                     </div>
                                 </TabsContent>
                             </Tabs>
