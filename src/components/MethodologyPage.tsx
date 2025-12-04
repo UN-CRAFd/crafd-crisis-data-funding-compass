@@ -21,6 +21,8 @@ import {
     BarChart3,
     Settings,
     Download,
+    Copy,
+    Check,
     LucideIcon
 } from 'lucide-react';
 
@@ -90,6 +92,104 @@ const BulletItem = ({ children }: { children: React.ReactNode }) => (
         <span><strong>{children}</strong></span>
     </li>
 );
+
+/** Code block with copy button and syntax highlighting */
+const CodeBlock = ({ code }: { code: string }) => {
+    const [copied, setCopied] = useState(false);
+
+    const handleCopy = () => {
+        navigator.clipboard.writeText(code);
+        setCopied(true);
+        setTimeout(() => setCopied(false), 2000);
+    };
+
+    // Simple Python syntax highlighting
+    const highlightCode = (text: string) => {
+        // Keywords
+        const keywords = ['import', 'from', 'as', 'def', 'class', 'if', 'else', 'for', 'while', 'return', 'with', 'open', 'print'];
+        const builtins = ['pd', 'zip_ref', 'zipfile', 'Path', 'len', 'read_csv', 'extractall', 'ZipFile', 'contains', 'groupby', 'size', 'str'];
+        
+        let html = text
+            // Escape HTML first
+            .replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
+        
+        // Process line by line to handle comments properly
+        html = html.split('\n').map(line => {
+            // Find comment position
+            const commentIndex = line.indexOf('#');
+            let beforeComment = line;
+            let comment = '';
+            
+            if (commentIndex !== -1) {
+                // Check if # is inside a string
+                const singleQuotePos = line.lastIndexOf("'", commentIndex);
+                const doubleQuotePos = line.lastIndexOf('"', commentIndex);
+                const singleQuoteEnd = line.indexOf("'", singleQuotePos + 1);
+                const doubleQuoteEnd = line.indexOf('"', doubleQuotePos + 1);
+                
+                const inSingleQuote = singleQuotePos !== -1 && (singleQuoteEnd === -1 || singleQuoteEnd > commentIndex);
+                const inDoubleQuote = doubleQuotePos !== -1 && (doubleQuoteEnd === -1 || doubleQuoteEnd > commentIndex);
+                
+                if (!inSingleQuote && !inDoubleQuote) {
+                    beforeComment = line.substring(0, commentIndex);
+                    comment = line.substring(commentIndex);
+                }
+            }
+            
+            // Highlight strings (amber) in the non-comment part
+            beforeComment = beforeComment.replace(/(['"])(?:(?=(\\?))\2.)*?\1/g, '<span style="color: #dab776;">$&</span>');
+            
+            // Highlight numbers (cyan) in the non-comment part
+            beforeComment = beforeComment.replace(/\b\d+\b/g, '<span style="color: #7dd3fc;">$&</span>');
+            
+            // Highlight keywords (purple) in the non-comment part
+            beforeComment = beforeComment.replace(new RegExp(`\\b(${keywords.join('|')})\\b`, 'g'), '<span style="color: #c084fc;">$1</span>');
+            
+            // Highlight builtins (blue) in the non-comment part
+            beforeComment = beforeComment.replace(new RegExp(`\\b(${builtins.join('|')})\\b`, 'g'), '<span style="color: #60a5fa;">$1</span>');
+            
+            // Highlight comment (green) - only if there is one
+            if (comment) {
+                comment = `<span style="color: #10b981;">${comment}</span>`;
+            }
+            
+            return beforeComment + comment;
+        }).join('\n');
+        
+        return html;
+    };
+
+    return (
+        <div className="bg-slate-950 rounded-lg border border-slate-800 overflow-hidden shadow-lg">
+            <div className="flex items-center justify-between px-4 py-2 bg-slate-900 border-b border-slate-800">
+                <span className="text-xs font-semibold text-slate-400 uppercase tracking-wider">Python</span>
+                <button
+                    onClick={handleCopy}
+                    className="p-1.5 rounded bg-slate-800 hover:bg-slate-700 transition-colors flex items-center gap-1.5"
+                    title="Copy to clipboard"
+                >
+                    {copied ? (
+                        <>
+                            <Check className="w-3.5 h-3.5 text-emerald-400" />
+                            <span className="text-xs text-emerald-400 font-medium">Copied</span>
+                        </>
+                    ) : (
+                        <>
+                            <Copy className="w-3.5 h-3.5 text-slate-400" />
+                            <span className="text-xs text-slate-400">Copy</span>
+                        </>
+                    )}
+                </button>
+            </div>
+            <pre className="text-xs text-slate-100 overflow-x-auto p-4 font-mono leading-relaxed" style={{ fontFamily: "'Courier New', monospace" }}>
+                <code 
+                    className="whitespace-pre"
+                    dangerouslySetInnerHTML={{ __html: highlightCode(code) }}
+                />
+            </pre>
+        </div>
+    );
+};
 
 // ============================================================================
 // DATA & CONFIG
@@ -558,23 +658,41 @@ export default function MethodologyPage({ logoutButton }: MethodologyPageProps) 
                                                 <InfoCard title="Excel Export">
                                                     Export the same data as a professionally formatted Excel workbook. Includes organizations and assets sheets with styling and optimized column widths. Includes a README file with export metadata and current filter details.
                                                 </InfoCard>
-                                                <InfoCard title="Filtered Exports">
-                                                    All exports respect your current filters (donors, investment types, themes, search query). The metadata and README file includes information about which filters were applied.
+                                                <InfoCard title="Sharing & Reproducibility">
+                                                    All exports respect your current filters (donors, investment types, themes, search query). The metadata and README file includes information about which filters were applied. Also, when sharing a link to the app, the same filters will be pre-applied for recipients, as the filter criteria are denoted in the URL.
+                                    
                                                 </InfoCard>
                                             </div>
                                         </div>
                                         <div>
-                                            <SectionTitle icon={FileText}>How to Use & Share</SectionTitle>
+                                            <SectionTitle icon={FileText}>Working with the Data</SectionTitle>
                                             <div className="space-y-4">
-                                                <NumberedStep step={1} title="Apply Filters">
-                                                    Use the filter panel to narrow down the data to what you need (donor countries, investment types, themes, or search query).
-                                                </NumberedStep>
-                                                <NumberedStep step={2} title="Export or Share">
-                                                    Click the export button to download your data as CSV, Excel, or PDF. Or use the share button to copy a link that preserves all your current filters for easy collaboration.
-                                                </NumberedStep>
-                                                <NumberedStep step={3} title="Share Filtered Views">
-                                                    Click the share button to copy a link that includes all your current filters. Anyone who opens the link will see the exact same filtered view you're looking at.
-                                                </NumberedStep>
+                                                <div>
+                                                    
+                                                    <CodeBlock code={`import pandas as pd
+import zipfile
+from pathlib import Path
+
+# Extract CSV files from the downloaded ZIP
+with zipfile.ZipFile('export.zip', 'r') as zip_ref:
+    zip_ref.extractall('./data')
+
+# Load the organizations and assets data
+orgs_df = pd.read_csv('./data/organizations.csv')
+assets_df = pd.read_csv('./data/assets.csv')
+
+# Display basic info
+print(f"Organizations: {len(orgs_df)} records")
+print(f"Assets: {len(assets_df)} records")
+
+# Filter by donor country
+filtered = assets_df[assets_df['Donor Countries'].str.contains('[Example Country]', na=False)]
+print(f"\\nAssets from [Example Country] donors: {len(filtered)}")
+
+# Group assets by type
+by_type = assets_df.groupby('Investment Type').size()
+print(f"\\nAssets by type:\\n{by_type}")`} />
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
