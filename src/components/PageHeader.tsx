@@ -191,12 +191,12 @@ export default function PageHeader({
                                 className="w-auto min-w-[180px] bg-white border border-slate-200 shadow-lg"
                             >
                                 <Link href="/">
-                                    <DropdownMenuItem className={`cursor-pointer text-sm py-2 ${pathname === '/' ? 'bg-slate-100 font-semibold' : ''}`}>
+                                    <DropdownMenuItem className={`cursor-pointer text-sm py-2 ${pathname === '/' ? '!bg-slate-100 font-semibold' : ''}`}>
                                         {labels.header.dashboard}
                                     </DropdownMenuItem>
                                 </Link>
                                 <Link href="/methodology">
-                                    <DropdownMenuItem className={`cursor-pointer text-sm py-2 ${pathname === '/methodology' ? 'bg-slate-100 font-semibold' : ''}`}>
+                                    <DropdownMenuItem className={`cursor-pointer text-sm py-2 ${pathname === '/methodology' ? '!bg-slate-100 font-semibold' : ''}`}>
                                         {labels.header.methodology}
                                     </DropdownMenuItem>
                                 </Link>
