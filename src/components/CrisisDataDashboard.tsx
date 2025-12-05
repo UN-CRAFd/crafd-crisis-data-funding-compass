@@ -1504,6 +1504,7 @@ const CrisisDataDashboard = ({
                     loading={false}
                     projectAgenciesMap={projectAgenciesMap}
                     onOpenOrganizationModal={onOpenOrganizationModal}
+                    onOpenProjectModal={onOpenProjectModal}
                     onDonorClick={onDonorClick}
                     onTypeClick={onTypeClick}
                 />

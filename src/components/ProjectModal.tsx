@@ -1,12 +1,12 @@
 ﻿'use client';
 
-import { Building2, ExternalLink, Package } from 'lucide-react';
+import { Building2, ExternalLink, Package, PackageOpen } from 'lucide-react';
 import type { OrganizationWithProjects, ProjectData } from '../lib/data';
 import { getIconForInvestmentType } from '@/config/investmentTypeIcons';
 import { INVESTMENT_TYPE_DESCRIPTIONS } from '@/config/tooltipDescriptions';
 import labels from '@/config/labels.json';
 import BaseModal, { ModalHeader, CountryBadge, ModalTooltip } from './BaseModal';
-import { useEffect, useState } from 'react';
+import { useEffect, useState, useMemo } from 'react';
 
 interface ProjectModalProps {
     project: ProjectData | null;
@@ -15,14 +15,47 @@ interface ProjectModalProps {
     loading: boolean;
     projectAgenciesMap?: Record<string, Record<string, string[]>>;
     onOpenOrganizationModal?: (orgKey: string) => void;
+    onOpenProjectModal?: (projectKey: string) => void;
     onDonorClick?: (country: string) => void;
     onTypeClick?: (type: string) => void;
 }
 
-export default function ProjectModal({ project, allOrganizations, loading, projectAgenciesMap = {}, onOpenOrganizationModal, onDonorClick, onTypeClick }: ProjectModalProps) {
+export default function ProjectModal({ project, allOrganizations, loading, projectAgenciesMap = {}, onOpenOrganizationModal, onOpenProjectModal, onDonorClick, onTypeClick }: ProjectModalProps) {
 
     const [themeToTypeMapping, setThemeToTypeMapping] = useState<Record<string, string>>({});
     const [themeDescriptions, setThemeDescriptions] = useState<Record<string, string>>({});
+    const [hoveredProjectId, setHoveredProjectId] = useState<string | null>(null);
+
+    // Helper to check if two theme arrays have the exact same themes
+    const haveSameThemes = (themes1: string[], themes2: string[]): boolean => {
+        if (themes1.length !== themes2.length) return false;
+        const sorted1 = [...themes1].sort();
+        const sorted2 = [...themes2].sort();
+        return sorted1.every((theme, index) => theme === sorted2[index]);
+    };
+
+    // Find projects with exact same theme combination
+    const similarProjects = useMemo(() => {
+        if (!project?.investmentThemes || project.investmentThemes.length === 0) return [];
+        
+        // Get all projects from allOrganizations
+        const allProjects = allOrganizations.flatMap(org => org.projects);
+        
+        // Filter for projects with exact same themes (excluding current project)
+        const matches = allProjects.filter(p => 
+            p.id !== project.id && 
+            p.investmentThemes && 
+            p.investmentThemes.length > 0 &&
+            haveSameThemes(p.investmentThemes, project.investmentThemes || [])
+        );
+        
+        // Deduplicate by project id (since a project may appear in multiple orgs)
+        const uniqueProjects = Array.from(
+            new Map(matches.map(p => [p.id, p])).values()
+        );
+        
+        return uniqueProjects;
+    }, [project, allOrganizations]);
 
     // Load theme mapping and descriptions from themes-table.json on mount
     useEffect(() => {
@@ -318,6 +351,35 @@ export default function ProjectModal({ project, allOrganizations, loading, proje
                         </div>
                     )}
                 </div>
+
+                {similarProjects.length > 0 && (
+                    <div className="mb-6">
+                        <div className="mb-3 flex items-center gap-2">
+                            <h3 className="text-xl font-roboto font-black text-[#333333] uppercase tracking-wide leading-normal">
+                                {labels.modals.similarProjects}
+                            </h3>
+                            <span className="text-lg font-normal text-slate-600 tabular-nums">({similarProjects.length})</span>
+                        </div>
+                        <div className="flex flex-col gap-2">
+                            {similarProjects.map(proj => (
+                                <button
+                                    key={proj.id}
+                                    onClick={() => onOpenProjectModal?.(proj.productKey)}
+                                    onMouseEnter={() => setHoveredProjectId(proj.id)}
+                                    onMouseLeave={() => setHoveredProjectId(null)}
+                                    className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-md text-base font-medium bg-slate-100 text-slate-600 hover:bg-slate-200 transition-colors cursor-pointer text-left"
+                                >
+                                    {hoveredProjectId === proj.id ? (
+                                        <PackageOpen className="w-4 h-4 text-slate-600 shrink-0" />
+                                    ) : (
+                                        <Package className="w-4 h-4 text-slate-600 shrink-0" />
+                                    )}
+                                    <span className="truncate">{proj.projectName}</span>
+                                </button>
+                            ))}
+                        </div>
+                    </div>
+                )}
 
                 <div className="grow min-h-8"></div>
 
