@@ -272,7 +272,7 @@
         "id": "recTaCZEF36yEoMIT",
         "fields": {
           "Project/Product Name": "Heidelberg Institute for International Conflict Research",
-          "Project Description": "The Heidelberg Institute for International Conflict Research (HIIK) is an independent, non-profit, interdisciplinary association. Since 1991, we have been dedicated to promoting, disseminating, and implementing knowledge about the emergence, course, and resolution of intra- and inter-state political conflicts. Following tremendous growth in recent years, the HIIK currently has over 200 volunteers. \n",
+          "Project Description": "The Heidelberg Institute for International Conflict Research (HIIK) is an independent, non-profit, and interdisciplinary association. Established in 1991, the organization is dedicated to promoting, disseminating, and implementing knowledge regarding the emergence, progression, and resolution of both intra-state and inter-state political conflicts. In recent years, the HIIK has experienced significant growth and currently comprises over 200 volunteers.\n",
           "Project Website": "https://www.hiik.de",
           "Provider Orgs Full Name": [
             "rec1UYGdN0XUBCmDY"
@@ -786,6 +786,9 @@
         "recfjAhO2DxCjgEgM",
         "recD0hG4x9w340oYA"
       ],
+      "Org Donor Agencies": [
+        "recqSvUlZQjET4fCH"
+      ],
       "Org HQ Country": "Netherlands",
       "Has received CRAF'd Funding?": "YES",
       "org_key": "510-data-team",
@@ -793,7 +796,15 @@
       "HDX Org Key": "netherlands-red-cross",
       "IATI Org Key": "NL-KVK-40409352"
     },
-    "agencies": [],
+    "agencies": [
+      {
+        "id": "recqSvUlZQjET4fCH",
+        "fields": {
+          "Agency/Department Name": "Unspecified Agency",
+          "Country Name": "Netherlands"
+        }
+      }
+    ],
     "projects": [
       {
         "id": "recD0hG4x9w340oYA",
@@ -906,7 +917,9 @@
         ]
       }
     ],
-    "donor_countries": []
+    "donor_countries": [
+      "Netherlands"
+    ]
   },
   {
     "id": "rec4yuocwbzqCzBUd",
@@ -2429,11 +2442,22 @@
       "Provided Data Ecosystem Projects": [
         "recp4lLg28MQMpBnW"
       ],
+      "Org Donor Agencies": [
+        "reco4Um0k7Tgw2UCK"
+      ],
       "Org HQ Country": "United Kingdom",
       "org_key": "uos",
       "Org Type": "Academia"
     },
-    "agencies": [],
+    "agencies": [
+      {
+        "id": "reco4Um0k7Tgw2UCK",
+        "fields": {
+          "Agency/Department Name": "Unspecified Agency",
+          "Country Name": "United Kingdom"
+        }
+      }
+    ],
     "projects": [
       {
         "id": "recp4lLg28MQMpBnW",
@@ -2492,7 +2516,9 @@
         ]
       }
     ],
-    "donor_countries": []
+    "donor_countries": [
+      "United Kingdom"
+    ]
   },
   {
     "id": "rec9NauCCUPUWMwfl",
@@ -2768,7 +2794,7 @@
         "id": "recS70dZaWiddCf5J",
         "fields": {
           "Project/Product Name": "Risk Anticipation Data Hub",
-          "Project Description": "The Risk Anticipation Data Hub, a project of the United Nations Development Programme (UNDP), is a transformative open-access data platform. A ready-to-use data warehouse for over 15,000 indicators combines processed and cleaned public datasets on a multitude of risk factors. Equipped with state-of-the-art technology, including a generative Artificial Intelligence (AI) interface and real-time analytics, the Data Hub empowers ecosystem partners with data and insights for better crisis anticipation, prevention, and response. \n**<https://sdgintegration.undp.org/crisis-risk-dashboard>**\n",
+          "Project Description": "The Risk Anticipation Data Hub, a project of the United Nations Development Programme (UNDP), is a transformative open-access data platform. This comprehensive data warehouse contains over 15,000 indicators, integrating processed and cleaned public datasets that cover a wide range of risk factors. Utilizing advanced technology, including a generative Artificial Intelligence (AI) interface and real-time analytics, the Data Hub provides ecosystem partners with essential data and insights. These resources support improved crisis anticipation, prevention, and response, enabling more informed decision-making and effective action.\n",
           "Project Donor Agencies": [
             "rec1VhOJv9U6QKBBs"
           ],
@@ -2837,7 +2863,7 @@
         "id": "recaY3lDEu5I8aL6D",
         "fields": {
           "Project/Product Name": "Data Futures Exchange",
-          "Project Description": "The Data Futures Exchange is an open-source platform that serves as a central hub for data innovation with development impact. Based on the UNDP's thematic priorities, we use a systemic approach and advanced analytics to identify actions that accelerate sustainable development worldwide. \n",
+          "Project Description": "The Data Futures Exchange is an open-source platform designed to function as a central hub for data innovation with a focus on development impact. Aligned with the United Nations Development Programme’s thematic priorities, the platform employs a systemic approach and advanced analytics to identify actions that accelerate sustainable development on a global scale.\n",
           "Project Donor Agencies": [
             "rec2KBp1IAA5TtnQl",
             "rec8gXVsPUUB517NE",
@@ -3072,7 +3098,7 @@
         "id": "recmH2oywWDYooamX",
         "fields": {
           "Project/Product Name": "HDX HAPI",
-          "Project Description": "The initial scope of HDX HAPI mirrored that of the HDX Data Grids, which include the foundational data needed to understand a humanitarian context. However we have since expanded beyond the Data Grids, and a live dashboard of data availability by country can be found at <https://ocha-dap.github.io/viz-hapi-availability/>.\n",
+          "Project Description": "The initial scope of HDX HAPI was aligned with that of the HDX Data Grids, focusing on providing the foundational data required to understand humanitarian contexts. Over time, the scope of HDX HAPI has expanded beyond the original Data Grids to encompass a broader range of data. A live dashboard is available to monitor data availability by country.\n",
           "Project Website": "https://data.humdata.org/hapi",
           "Provider Orgs Full Name": [
             "recAnhKXwgDyHOp8y"
@@ -4197,7 +4223,7 @@
         "id": "recUtNMMh0FAIx6SD",
         "fields": {
           "Project/Product Name": "Population Distribution & Mobility Analysis",
-          "Project Description": "To provide decision makers with **precise and accurate estimates of population changes and movements**, and thereby support interventions in sectors such as health and disaster management, we have developed** state-of-the-art methods for estimating population distribution and human mobility **using mobile phone usage data, and specifically**[ Call Detail Records (CDRs)](https://www.flowgeek.org/what-are-cdrs), **survey/census and geospatial data. CDRs are a dataset automatically generated by operators for billing purposes, regardless of phone types, and which represent an attractive data source for estimating internal migration and displacement in low- and middle-income countries, where data on human mobility are scarce.\n",
+          "Project Description": "To provide decision makers with precise and accurate estimates of population changes and movements, and thereby support interventions in sectors such as health and disaster management, state-of-the-art methods have been developed for estimating population distribution and human mobility using mobile phone usage data, specifically Call Detail Records (CDRs), as well as survey, census, and geospatial data. CDRs are datasets automatically generated by mobile operators for billing purposes, regardless of phone type, and represent an attractive data source for estimating internal migration and displacement, particularly in low- and middle-income countries where data on human mobility are often scarce. These methods enable a more comprehensive understanding of population dynamics, supporting evidence-based decision making in critical sectors.\n",
           "Project Website": "https://www.flowminder.org/what-we-do/population-distribution-and-mobility-analysis",
           "Provider Orgs Full Name": [
             "recG3iaB3tMhPUTLg"
@@ -5719,12 +5745,23 @@
       "Provided Data Ecosystem Projects": [
         "rechQ1azyTpypEDEy"
       ],
+      "Org Donor Agencies": [
+        "reckIAhFXgj4XL29b"
+      ],
       "Org HQ Country": "United States",
       "Has received CRAF'd Funding?": "YES",
       "org_key": "korbel",
       "Org Type": "Academia"
     },
-    "agencies": [],
+    "agencies": [
+      {
+        "id": "reckIAhFXgj4XL29b",
+        "fields": {
+          "Agency/Department Name": "Unspecified Agency",
+          "Country Name": "USA"
+        }
+      }
+    ],
     "projects": [
       {
         "id": "rechQ1azyTpypEDEy",
@@ -5752,7 +5789,9 @@
         "agencies": []
       }
     ],
-    "donor_countries": []
+    "donor_countries": [
+      "USA"
+    ]
   },
   {
     "id": "recMRdDWNDoa8PFIn",
@@ -8259,10 +8298,21 @@
       "Provided Data Ecosystem Projects": [
         "recp4lLg28MQMpBnW"
       ],
+      "Org Donor Agencies": [
+        "reco4Um0k7Tgw2UCK"
+      ],
       "org_key": "qub",
       "Org Type": "Academia"
     },
-    "agencies": [],
+    "agencies": [
+      {
+        "id": "reco4Um0k7Tgw2UCK",
+        "fields": {
+          "Agency/Department Name": "Unspecified Agency",
+          "Country Name": "United Kingdom"
+        }
+      }
+    ],
     "projects": [
       {
         "id": "recp4lLg28MQMpBnW",
@@ -8321,7 +8371,9 @@
         ]
       }
     ],
-    "donor_countries": []
+    "donor_countries": [
+      "United Kingdom"
+    ]
   },
   {
     "id": "reccGyY6Ep2ptBPKy",
@@ -8595,7 +8647,7 @@
         "id": "rec795N2KXfgxaM50",
         "fields": {
           "Project/Product Name": "Enhanced Vulnerability and Capacity Assessment (EVCA)",
-          "Project Description": "**Trigger models are employed to establish danger levels that activate humanitarian anticipatory Early Action Protocols (EAPs). **These models are developed using the Impact-Based Forecasting ([IBF](https://510.global/glossary/ibf/)) methodology. So far, we have built models that trigger EAPs for typhoon, flood, dzud, drought and dengue hazards. \n\n",
+          "Project Description": "Trigger models are employed to establish danger levels that activate humanitarian anticipatory Early Action Protocols (EAPs). These models are developed using the Impact-Based Forecasting (IBF) methodology. Models have been built to trigger EAPs for hazards such as typhoon, flood, dzud, drought, and dengue. This approach supports the Enhanced Vulnerability and Capacity Assessment (EVCA) by providing a systematic and evidence-based process for determining when early action should be taken in response to specific risks.\n",
           "Project Website": "https://preparecenter.org/site/evca/",
           "Provider Orgs Full Name": [
             "reccKH8GA8awjQEvp"
@@ -9792,7 +9844,7 @@
         "id": "recRMNk0JflJq6VMa",
         "fields": {
           "Project/Product Name": "Refugee Data Finder",
-          "Project Description": "The database contains information about forcibly displaced populations spanning more than 70 years of statistical activities. It covers displaced populations such as refugees, asylum-seekers and internally displaced people, including their demographics. Stateless people are also included, most of who have never been displaced. The database also reflects the different types of solutions for displaced populations such as repatriation or resettlement.\n\n<https://github.com/PopulationStatistics/refugees>\n",
+          "Project Description": "The database contains information about forcibly displaced populations, compiled from over 70 years of statistical activities. It includes data on various displaced groups such as refugees, asylum-seekers, and internally displaced people, along with their demographic characteristics. The database also covers stateless individuals, most of whom have never experienced displacement. Additionally, it provides information on different solutions for displaced populations, including repatriation and resettlement.\n",
           "Project Website": "https://www.unhcr.org/refugee-statistics",
           "Provider Orgs Full Name": [
             "recfLMsJLUS9toAjS"
@@ -9965,7 +10017,7 @@
         "id": "recvaextZy2CbEkxr",
         "fields": {
           "Project/Product Name": "Population Registration and Identity Management EcoSystem (PRIMES)",
-          "Project Description": "At the center of UNHCR’s work with registration and identity management, lies PRIMES, UNHCR’s digital Population Registration and Identity Management Ecosystem. PRIMES brings together all of UNHCR’s digital registration, identity management and case management tools into one internally connected and interoperable ecosystem.\nPRIMES is comprised of several repositories for personal data (biographic and biometric) and supporting information, along with multiple tools which safely make use of the data to deliver targeted protection, assistance, and solutions to refugees and other displaced populations. PRIMES is an enabler for:\n- Identity management (including registration and biometric enrolment) and documentation\n- Case management (including the principal Protection aspects: Refugee Status Determination, Resettlement, Statelessness, Repatriation, Legal and Physical Protection, Child Protection, SGBV and others)\n- Assistance ([cash](https://www.unhcr.org/us/what-we-do/emergency-response/cash-based-interventions) and in-kind)\n- Data management, including reporting and analysis for evidence-informed action for quality protection outcomes\nPRIMES has been designed with cooperation and interoperability in mind so that refugee supporting governments and partners can make use of the data and technology which UNHCR has developed to enhance their ability to deliver services often together with UNHCR, in a safe and secure manner. PRIMES is fully aligned with the [Policy on the Protection of Personal Data of Persons of Concern to UNHCR](http://www.refworld.org/cgi-bin/texis/vtx/rwmain?page=search&docid=55643c1d4).\n",
+          "Project Description": "At the center of UNHCR’s work with registration and identity management is PRIMES, the digital Population Registration and Identity Management Ecosystem developed by UNHCR. PRIMES integrates all of UNHCR’s digital registration, identity management, and case management tools into a single, internally connected and interoperable ecosystem.\n\nPRIMES consists of several repositories for personal data, including both biographic and biometric information, as well as supporting data. It incorporates multiple tools that securely utilize this information to deliver targeted protection, assistance, and solutions to refugees and other displaced populations. PRIMES enables a range of functions, including:\n\n\\- Identity management, encompassing registration, biometric enrolment, and documentation\n\\- Case management, covering key protection aspects such as Refugee Status Determination, Resettlement, Statelessness, Repatriation, Legal and Physical Protection, Child Protection, Sexual and Gender-Based Violence (SGBV), and others\n\\- Assistance, including both cash and in-kind support\n\\- Data management, which includes reporting and analysis to support evidence-informed action for quality protection outcomes\n\nPRIMES is designed with cooperation and interoperability as core principles, allowing governments and partners supporting refugees to utilize the data and technology developed by UNHCR. This enhances their capacity to deliver services, often in collaboration with UNHCR, in a safe and secure manner. PRIMES is fully aligned with the Policy on the Protection of Personal Data of Persons of Concern to UNHCR.\n",
           "Project Website": "https://www.unhcr.org/us/what-we-do/protect-human-rights/protection/registration-and-identity-management",
           "Provider Orgs Full Name": [
             "recfLMsJLUS9toAjS"
@@ -10010,7 +10062,7 @@
         "id": "recyMSQo5lV032SER",
         "fields": {
           "Project/Product Name": "CLIFDEW-GRID",
-          "Project Description": "CLIFDEW-GRID, developed by UNHCR in collaboration with the University of California Irvine, is an ambitious initiative dedicated to addressing the complex challenge of climate-induced forced displacement, including through the first risk index of its kind. This project leverages advanced data analytics and innovative approaches to empower CRAF’d ecosystem partners to anticipate and respond effectively to the growing crisis of climate-induced displacement. By forecasting subnational granularity, the project will better accommodate in-country heterogeneity than traditional country-level approaches. It will be piloted for countries in Western and Eastern Africa. \n\n<https://www.unhcr.org/us/clifdew-grid>\nCLIFDEW-GRID is an early warning grid-based modelling system designed to predict potential climate-induced forced displacement. It is a joint innovative data project led by UNHCR and the [University of California Irvine](https://catalogue.uci.edu/schoolofphysicalsciences/departmentofearthsystemscience/) and financed by the Complex Risk Analytics Fund ([CRAF'd](https://crafd.io/data-financing/clifdewgrid)).\n\n",
+          "Project Description": "CLIFDEW-GRID, developed by UNHCR in collaboration with the University of California Irvine, is an ambitious initiative dedicated to addressing the complex challenge of climate-induced forced displacement, including through the creation of the first risk index of its kind. This project leverages advanced data analytics and innovative methodologies to enable CRAF’d ecosystem partners to anticipate and respond effectively to the escalating crisis of climate-induced displacement. By providing forecasts at a subnational level, CLIFDEW-GRID offers a more nuanced understanding of in-country heterogeneity compared to traditional country-level approaches. The system will be piloted in selected countries in Western and Eastern Africa.\n\nCLIFDEW-GRID functions as an early warning, grid-based modeling system designed to predict potential climate-induced forced displacement. It is a joint, innovative data project led by UNHCR and the University of California Irvine, with financial support from the Complex Risk Analytics Fund (CRAF’d).\n",
           "Project Donor Agencies": [
             "rec1VhOJv9U6QKBBs"
           ],
@@ -10266,7 +10318,7 @@
         "id": "recxPDSfMPQYhiw5Q",
         "fields": {
           "Project/Product Name": "Strategy & Systems Development",
-          "Project Description": "We provide a suite of services that ensure your work is targeted and effective, allowing you to plan strategically, implement operations efficiently, and adapt proactively to the dynamic and changing situations. \nOur goal is to implement efficient systems that optimize operations, allowing partners to work smarter, not harder. This includes, but is not limited to, the development and integration of technology, which enhances efficiency, scalability, and communication. By streaming processes, we help reduce operational costs and help pave the way for sustainable impact. \n\n",
+          "Project Description": "Strategy & Systems Development offers a comprehensive suite of services designed to ensure that work is targeted and effective. These services enable organizations to plan strategically, implement operations efficiently, and adapt proactively to dynamic and evolving situations. The primary objective is to establish efficient systems that optimize operations, empowering partners to work smarter rather than harder. This approach encompasses the development and integration of technology to enhance efficiency, scalability, and communication. By streamlining processes, operational costs are reduced and a foundation is laid for sustainable impact.\n",
           "Project Website": "https://3is.org/strategy-systems-development/",
           "Provider Orgs Full Name": [
             "recfMWBZ4Di5d2bjs"
@@ -10939,7 +10991,7 @@
         "id": "recyMSQo5lV032SER",
         "fields": {
           "Project/Product Name": "CLIFDEW-GRID",
-          "Project Description": "CLIFDEW-GRID, developed by UNHCR in collaboration with the University of California Irvine, is an ambitious initiative dedicated to addressing the complex challenge of climate-induced forced displacement, including through the first risk index of its kind. This project leverages advanced data analytics and innovative approaches to empower CRAF’d ecosystem partners to anticipate and respond effectively to the growing crisis of climate-induced displacement. By forecasting subnational granularity, the project will better accommodate in-country heterogeneity than traditional country-level approaches. It will be piloted for countries in Western and Eastern Africa. \n\n<https://www.unhcr.org/us/clifdew-grid>\nCLIFDEW-GRID is an early warning grid-based modelling system designed to predict potential climate-induced forced displacement. It is a joint innovative data project led by UNHCR and the [University of California Irvine](https://catalogue.uci.edu/schoolofphysicalsciences/departmentofearthsystemscience/) and financed by the Complex Risk Analytics Fund ([CRAF'd](https://crafd.io/data-financing/clifdewgrid)).\n\n",
+          "Project Description": "CLIFDEW-GRID, developed by UNHCR in collaboration with the University of California Irvine, is an ambitious initiative dedicated to addressing the complex challenge of climate-induced forced displacement, including through the creation of the first risk index of its kind. This project leverages advanced data analytics and innovative methodologies to enable CRAF’d ecosystem partners to anticipate and respond effectively to the escalating crisis of climate-induced displacement. By providing forecasts at a subnational level, CLIFDEW-GRID offers a more nuanced understanding of in-country heterogeneity compared to traditional country-level approaches. The system will be piloted in selected countries in Western and Eastern Africa.\n\nCLIFDEW-GRID functions as an early warning, grid-based modeling system designed to predict potential climate-induced forced displacement. It is a joint, innovative data project led by UNHCR and the University of California Irvine, with financial support from the Complex Risk Analytics Fund (CRAF’d).\n",
           "Project Donor Agencies": [
             "rec1VhOJv9U6QKBBs"
           ],
@@ -10986,11 +11038,22 @@
       "Provided Data Ecosystem Projects": [
         "recp4lLg28MQMpBnW"
       ],
+      "Org Donor Agencies": [
+        "reco4Um0k7Tgw2UCK"
+      ],
       "Org HQ Country": "United Kingdom",
       "org_key": "uosa",
       "Org Type": "Academia"
     },
-    "agencies": [],
+    "agencies": [
+      {
+        "id": "reco4Um0k7Tgw2UCK",
+        "fields": {
+          "Agency/Department Name": "Unspecified Agency",
+          "Country Name": "United Kingdom"
+        }
+      }
+    ],
     "projects": [
       {
         "id": "recp4lLg28MQMpBnW",
@@ -11049,7 +11112,9 @@
         ]
       }
     ],
-    "donor_countries": []
+    "donor_countries": [
+      "United Kingdom"
+    ]
   },
   {
     "id": "recl51I0rcqfCzesL",
@@ -11620,7 +11685,7 @@
         "id": "recsuIp5N5MkuxT1S",
         "fields": {
           "Project/Product Name": "Global Internal Displacement Database (GIDD)",
-          "Project Description": "This database is the product of an annual process that involves collecting, harmonizing, and validating data followed by a thorough peer review. We engage with primary data providers and relevant actors at various levels—national, regional, and global. Published annually, the GIDD has been acknowledged by several UN resolutions for its significance. The GIDD data is detailed by country and year for conflict-induced displacement, while disaster-induced displacement is recorded at the event level. Additional disaggregated data is also available since 2023\n",
+          "Project Description": "The Global Internal Displacement Database (GIDD) is the result of an annual process that includes the collection, harmonization, and validation of data, followed by a comprehensive peer review. The process involves engagement with primary data providers and relevant stakeholders at national, regional, and global levels. Published each year, the GIDD has been recognized in several United Nations resolutions for its importance. The database provides detailed data by country and year for conflict-induced displacement, while disaster-induced displacement is documented at the event level. Since 2023, additional disaggregated data has also been made available.\n",
           "Project Donor Agencies": [
             "rec8gXVsPUUB517NE",
             "recf10RuM7qHUnC33",
@@ -15145,7 +15210,7 @@
         "id": "recGFetocWutnDtYV",
         "fields": {
           "Project/Product Name": "Copernicus Emergency Management Service Annual Conference",
-          "Project Description": "Copernicus Events\n",
+          "Project Description": "The Copernicus Emergency Management Service Annual Conference is a key event that brings together experts, stakeholders, and decision-makers from across Europe and beyond. The conference provides a platform for sharing knowledge, discussing best practices, and exploring the latest developments in emergency management. Participants engage in presentations, panel discussions, and interactive sessions focused on the use of Copernicus data and services in disaster risk reduction, preparedness, response, and recovery. The event highlights the impact of Copernicus Emergency Management Service products and fosters collaboration among the emergency management community, policy makers, and scientific experts.\n",
           "Project Website": "https://www.copernicus.eu/en/events/events",
           "Provider Orgs Full Name": [
             "recxUTvaAZbGHumjU"
