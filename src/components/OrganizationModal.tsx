@@ -1,6 +1,6 @@
 'use client';
 
-import { Building2, ChevronDown, ChevronUp, ExternalLink, Info, Package, PackageOpen } from 'lucide-react';
+import { Building2, ChevronDown, ChevronUp, ExternalLink, Image, Info, Package, PackageOpen } from 'lucide-react';
 import { useState } from 'react';
 import ModalOrganizationFocus from './ModalOrganizationFocus';
 import BaseModal, { ModalHeader, CountryBadge, ModalTooltip } from './BaseModal';
@@ -462,6 +462,12 @@ export default function OrganizationModal({
                         const budgetSourceStr = budgetSourceRaw != null ? String(budgetSourceRaw) : null;
                         const linkRaw = fields['Link to Budget Source'];
                         const linkToBudgetSource = typeof linkRaw === 'string' && linkRaw.trim() !== '' ? linkRaw.trim() : null;
+                        
+                        // Extract budget source screenshot URL
+                        const budgetScreenshotRaw = fields['Budget Source Screenshot'];
+                        const budgetScreenshotUrl = Array.isArray(budgetScreenshotRaw) && budgetScreenshotRaw.length > 0
+                            ? (budgetScreenshotRaw[0] as { url?: string; thumbnails?: { large?: { url?: string } } })?.thumbnails?.large?.url || (budgetScreenshotRaw[0] as { url?: string })?.url || null
+                            : null;
 
                         // Only show if at least one field has a value
                         if (!estBudget && !budgetSourceStr && donorCountries.length === 0) {
@@ -500,9 +506,30 @@ export default function OrganizationModal({
                                             <div className="flex flex-col">
                                                 <span className="text-sm tracking-wide text-slate-400">{labels.modals.budgetSource}</span>
                                                 <div className="flex items-center gap-2">
-                                                    <span className="text-base font-medium text-slate-600">
-                                                        {budgetSourceStr ? budgetSourceStr : '—'}
-                                                    </span>
+                                                    {budgetScreenshotUrl ? (
+                                                        <ModalTooltip
+                                                            content={
+                                                                <div className="p-1">
+                                                                    <img 
+                                                                        src={budgetScreenshotUrl} 
+                                                                        alt="Budget Source Screenshot" 
+                                                                        className="max-w-[400px] max-h-[300px] rounded-md object-contain"
+                                                                    />
+                                                                </div>
+                                                            }
+                                                            side="bottom"
+                                                            tooltipContainer={tooltipContainer}
+                                                        >
+                                                            <span className="text-base font-medium text-slate-600 cursor-help underline decoration-dotted decoration-slate-400 underline-offset-2 inline-flex items-center gap-1">
+                                                                {budgetSourceStr ? budgetSourceStr : '—'}
+                                                                
+                                                            </span>
+                                                        </ModalTooltip>
+                                                    ) : (
+                                                        <span className="text-base font-medium text-slate-600">
+                                                            {budgetSourceStr ? budgetSourceStr : '—'}
+                                                        </span>
+                                                    )}
                                                     {linkToBudgetSource && (
                                                         <a
                                                             href={linkToBudgetSource}
