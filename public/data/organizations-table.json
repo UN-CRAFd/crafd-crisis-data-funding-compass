@@ -67,9 +67,11 @@
         "rec0QlT9YlTVhHfEn",
         "rec0sY1I5JZz6ZsUE"
       ],
+      "Est. Org Budget": 9700000,
       "Org HQ Country": "Spain",
       "org_key": "bse",
       "Org Type": "Academia",
+      "Budget Source": "Website",
       "Last Updated": 2024,
       "Link to Budget Source": "https://bw.bse.eu/wp-content/uploads/2025/02/Download-BSE-Budget-2024-25.pdf?_gl=1*1j4f3pc*_up*MQ..*_gs*MQ..&gclid=Cj0KCQiA_8TJBhDNARIsAPX5qxTgrV665MKhAIKun4YCJxxFSqeQ2GSoPO6XWq5vPUZ0Oz9QQHdmwL4aAnCaEALw_wcB&gbraid=0AAAAADgrDQ6tDT9tUDsGTC-GgAyE2EUQb"
     }
@@ -926,7 +928,9 @@
       "Org HQ Country": "United States",
       "org_key": "data-pop-alliance",
       "Org Type": "Non-Governmental Organization",
-      "Last Updated": 2024
+      "Budget Source": "Annual Report",
+      "Last Updated": 2024,
+      "Link to Budget Source": "https://datapopalliance.org/annual-report-overview-and-outlook-2023-2024/#support"
     }
   },
   {
@@ -1110,7 +1114,8 @@
       "HDX Org Key": "danish-refugee-council",
       "IATI Org Key": "DK-CVR-20699310",
       "Budget Source": "Annual Report",
-      "Last Updated": 2024
+      "Last Updated": 2024,
+      "Link to Budget Source": "https://drc.ngo/media/5oedlmso/annual-report_2024_drc_final.pdf"
     }
   },
   {
@@ -1367,8 +1372,9 @@
       "Has received CRAF'd Funding?": "NO",
       "org_key": "data-friendly-space",
       "Org Type": "Tech / Consulting Provider",
-      "Budget Source": "Annual Report",
-      "Last Updated": 2024
+      "Budget Source": "Tax Filing",
+      "Last Updated": 2024,
+      "Link to Budget Source": "https://projects.propublica.org/nonprofits/organizations/832368839"
     }
   },
   {
@@ -1520,7 +1526,8 @@
       ],
       "org_key": "cu",
       "Org Type": "Academia",
-      "Last Updated": 2024
+      "Last Updated": 2024,
+      "Link to Budget Source": "https://www.coventry.ac.uk/the-university/financial-information/finance/"
     }
   },
   {
@@ -1562,7 +1569,8 @@
       "Org HQ Country": "Lebanon",
       "Has received CRAF'd Funding?": "NO",
       "org_key": "arab-barometer",
-      "Org Type": "Research / Think Tank"
+      "Org Type": "Research / Think Tank",
+      "Link to Budget Source": "none"
     }
   },
   {
@@ -1630,7 +1638,8 @@
       "Org Type": "Government / Public Sector",
       "HDX Org Key": "joint-research-centre-of-the-european-commission",
       "Budget Source": "Annual Report",
-      "Last Updated": 2024
+      "Last Updated": 2024,
+      "Link to Budget Source": "https://commission.europa.eu/publications/annual-activity-report-2024-joint-research-centre_en"
     }
   },
   {
@@ -2126,7 +2135,7 @@
         "recGNTHL9SKZxLDcw"
       ],
       "Org IATI Name": "N/A",
-      "Est. Org Budget": 113649536,
+      "Est. Org Budget": 2487100000,
       "Org HQ Country": "Switzerland",
       "Has received CRAF'd Funding?": "NO",
       "org_key": "eth-zurich",
@@ -2218,8 +2227,7 @@
       "Has received CRAF'd Funding?": "NO",
       "org_key": "latinobarometro",
       "Org Type": "Research / Think Tank",
-      "Budget Source": "Annual Report",
-      "Last Updated": 2024
+      "Link to Budget Source": "none"
     }
   },
   {
@@ -2239,7 +2247,8 @@
       ],
       "org_key": "data2x",
       "Org Type": "United Nations System",
-      "Last Updated": 2024
+      "Last Updated": 2024,
+      "Link to Budget Source": "none"
     }
   },
   {
@@ -2689,7 +2698,9 @@
       ],
       "org_key": "ecmrwf",
       "Org Type": "International Organization",
-      "Last Updated": 2024
+      "Budget Source": "Annual Report",
+      "Last Updated": 2024,
+      "Link to Budget Source": "https://www.ecmwf.int/sites/default/files/elibrary/062025/81665-annual-report-2024.pdf"
     }
   },
   {
@@ -2722,8 +2733,9 @@
       "org_key": "un-dpo",
       "Org Type": "United Nations System",
       "HDX Org Key": "unpeacesecurity",
-      "Budget Source": "Annual Report",
-      "Last Updated": 2024
+      "Budget Source": "Website",
+      "Last Updated": 2024,
+      "Link to Budget Source": "https://peacekeeping.un.org/en/how-we-are-funded"
     }
   },
   {
