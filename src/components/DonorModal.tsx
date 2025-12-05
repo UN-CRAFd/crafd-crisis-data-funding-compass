@@ -496,7 +496,7 @@ export default function DonorModal({
                                     </div>
                                     <div className="flex items-center gap-2 shrink-0">
                                         {org.type && (
-                                            <span className="text-xs text-slate-500 bg-slate-100 px-2 py-0.5 rounded">
+                                            <span className="text-xs text-slate-400 bg-transparent px-2 py-0.5 rounded">
                                                 {org.type}
                                             </span>
                                         )}
