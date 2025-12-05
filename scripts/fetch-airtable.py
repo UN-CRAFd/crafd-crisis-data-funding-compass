@@ -35,6 +35,7 @@ FIELDS_ORGANIZATIONS = [
     "Est. Org Budget",
     "Budget Source",
     "Link to Budget Source",
+    "Budget Source Screenshot",
     "Last Updated",
     "Org Type",
     "Org Short Name",
