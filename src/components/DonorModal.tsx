@@ -1,6 +1,6 @@
 'use client';
 
-import { Building2, ChevronDown, ChevronRight, ExternalLink, Package, PackageOpen, Building } from 'lucide-react';
+import { Building2, ChevronDown, ChevronRight, ExternalLink, Package, PackageOpen, Building, MapPin } from 'lucide-react';
 import { useState, useMemo } from 'react';
 import BaseModal, { ModalHeader, ModalTooltip } from './BaseModal';
 import { Collapsible, CollapsibleContent, CollapsibleTrigger } from '@/components/ui/collapsible';
@@ -235,6 +235,29 @@ export default function DonorModal({
         return projectIds.size;
     }, [agencyData]);
 
+    // Find organizations headquartered in this country
+    const headquarteredOrganizations = useMemo(() => {
+        if (!donorCountry || !nestedOrganizations) return [];
+        
+        return nestedOrganizations
+            .filter(org => {
+                const orgFields = org.fields || {};
+                const hqCountry = orgFields['Org HQ Country'];
+                return hqCountry === donorCountry;
+            })
+            .map(org => {
+                const orgFields = org.fields || {};
+                return {
+                    id: org.id,
+                    name: orgFields['Org Full Name'] || orgFields['Org Short Name'] || org.name,
+                    shortName: orgFields['org_key'] || orgFields['Org Short Name'] || '',
+                    type: orgFields['Org Type'] || '',
+                    projectCount: (org.projects || []).length,
+                };
+            })
+            .sort((a, b) => a.name.localeCompare(b.name));
+    }, [donorCountry, nestedOrganizations]);
+
     const renderHeader = ({ showCopied, onShare, onClose }: { showCopied: boolean; onShare: () => void; onClose: () => void }) => {
         if (!donorCountry) {
             return (
@@ -443,6 +466,49 @@ export default function DonorModal({
                                 </Collapsible>
                             );
                         })}
+                    </div>
+                )}
+
+                {/* Organizations headquartered in this country */}
+                {headquarteredOrganizations.length > 0 && (
+                    <div className="border-t border-slate-200 pt-6">
+                        <div className="flex items-center gap-2 mb-4">
+                            <MapPin className="h-5 w-5 text-slate-500" />
+                            <h3 className="text-lg font-roboto font-bold text-[#333333]">
+                                Organizations Headquartered in {donorCountry}
+                            </h3>
+                            <span className="text-sm text-slate-400 tabular-nums">({headquarteredOrganizations.length})</span>
+                        </div>
+                        <div className="flex flex-col gap-2">
+                            {headquarteredOrganizations.map(org => (
+                                <button
+                                    key={org.id}
+                                    onClick={() => org.shortName && handleOpenOrganization(org.shortName)}
+                                    className="flex items-center justify-between gap-2 px-3 py-2 rounded-md text-sm font-medium transition-colors cursor-pointer text-left hover:opacity-80 w-full"
+                                    style={{
+                                        backgroundColor: 'var(--brand-bg-light)',
+                                        color: 'var(--brand-primary-dark)'
+                                    }}
+                                >
+                                    <div className="flex items-center gap-1.5 min-w-0">
+                                        <Building2 className="h-4 w-4 shrink-0" />
+                                        <span className="truncate">{org.name}</span>
+                                    </div>
+                                    <div className="flex items-center gap-2 shrink-0">
+                                        {org.type && (
+                                            <span className="text-xs text-slate-500 bg-slate-100 px-2 py-0.5 rounded">
+                                                {org.type}
+                                            </span>
+                                        )}
+                                        {org.projectCount > 0 && (
+                                            <span className="text-xs text-slate-400">
+                                                {org.projectCount} {org.projectCount === 1 ? 'asset' : 'assets'}
+                                            </span>
+                                        )}
+                                    </div>
+                                </button>
+                            ))}
+                        </div>
                     </div>
                 )}
 
