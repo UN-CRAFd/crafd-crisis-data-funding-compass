@@ -317,15 +317,19 @@ const CrisisDataDashboard = ({
         const allOrgs = dashboardData?.allOrganizations || [];
         
         allOrgs.forEach(org => {
-            // Filter by donors (AND logic - all selected donors must be present)
-            if (combinedDonors.length > 0) {
-                const hasAllDonors = combinedDonors.every(selectedDonor => 
-                    org.donorCountries.includes(selectedDonor)
-                );
-                if (!hasAllDonors) return;
-            }
+            // Check if org meets donor requirements at org level
+            const orgMeetsDonorRequirement = combinedDonors.length === 0 ||
+                combinedDonors.every(selectedDonor => org.donorCountries.includes(selectedDonor));
             
             org.projects.forEach(project => {
+                // If org doesn't meet donor requirement, check project-level donors
+                if (!orgMeetsDonorRequirement) {
+                    const projectMeetsDonorRequirement = combinedDonors.every(selectedDonor =>
+                        Array.isArray(project.donorCountries) && project.donorCountries.includes(selectedDonor)
+                    );
+                    if (!projectMeetsDonorRequirement) return;
+                }
+                
                 // Filter by search query
                 if (appliedSearchQuery) {
                     const searchLower = appliedSearchQuery.toLowerCase();
@@ -372,15 +376,19 @@ const CrisisDataDashboard = ({
         const allOrgs = dashboardData?.allOrganizations || [];
         
         allOrgs.forEach(org => {
-            // Filter by donors (AND logic - all selected donors must be present)
-            if (combinedDonors.length > 0) {
-                const hasAllDonors = combinedDonors.every(selectedDonor => 
-                    org.donorCountries.includes(selectedDonor)
-                );
-                if (!hasAllDonors) return;
-            }
+            // Check if org meets donor requirements at org level
+            const orgMeetsDonorRequirement = combinedDonors.length === 0 ||
+                combinedDonors.every(selectedDonor => org.donorCountries.includes(selectedDonor));
             
             org.projects.forEach(project => {
+                // If org doesn't meet donor requirement, check project-level donors
+                if (!orgMeetsDonorRequirement) {
+                    const projectMeetsDonorRequirement = combinedDonors.every(selectedDonor =>
+                        Array.isArray(project.donorCountries) && project.donorCountries.includes(selectedDonor)
+                    );
+                    if (!projectMeetsDonorRequirement) return;
+                }
+                
                 // Filter by search query
                 if (appliedSearchQuery) {
                     const searchLower = appliedSearchQuery.toLowerCase();
