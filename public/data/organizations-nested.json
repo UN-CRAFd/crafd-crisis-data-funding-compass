@@ -91,9 +91,9 @@
           ],
           "Investment Theme(s)": [
             "Geospatial Analytics",
-            "Displacement & Migration Data",
             "Conflict Analytics",
-            "Health Analytics"
+            "Health Analytics",
+            "Displacement & Migration Analytics"
           ],
           "product_key": "hhi-humgeo",
           "HDX_SOHD": "None"
@@ -241,8 +241,8 @@
           ],
           "CRAF’d-Funded Project?": "NO",
           "Investment Type(s)": [
-            "Infrastructure & Platforms",
-            "Learning & Exchange"
+            "Data Sets & Commons",
+            "Infrastructure & Platforms"
           ],
           "Investment Theme(s)": [
             "Geographic Information Systems (GIS)",
@@ -686,6 +686,7 @@
           ],
           "CRAF’d-Funded Project?": "NO",
           "Investment Type(s)": [
+            "Data Sets & Commons",
             "Infrastructure & Platforms",
             "Crisis Analytics & Insights"
           ],
@@ -1596,7 +1597,7 @@
           "CRAF’d-Funded Project?": "NO",
           "Investment Type(s)": [
             "Data Sets & Commons",
-            "Learning & Exchange"
+            "Human Capital & Know-how"
           ],
           "Investment Theme(s)": [
             "Geospatial Data",
@@ -4300,7 +4301,7 @@
           "CRAF’d-Funded Project?": "NO",
           "Investment Type(s)": [
             "Data Sets & Commons",
-            "Learning & Exchange"
+            "Human Capital & Know-how"
           ],
           "Investment Theme(s)": [
             "Geospatial Data",
@@ -6599,6 +6600,9 @@
         "id": "recCkgL7i4kRmP0PL",
         "fields": {
           "Project/Product Name": "ACLED Webinar",
+          "Project Donor Agencies": [
+            "rec1VhOJv9U6QKBBs"
+          ],
           "Project Website": "https://acleddata.com/events-webinars#:~:text=Events%20%26%20Webinars",
           "Provider Orgs Full Name": [
             "recRoMeLU57jzgHFs"
@@ -6613,7 +6617,15 @@
           "product_key": "acled-webinar",
           "HDX_SOHD": "None"
         },
-        "agencies": []
+        "agencies": [
+          {
+            "id": "rec1VhOJv9U6QKBBs",
+            "fields": {
+              "Agency/Department Name": "CRAF’d Funding",
+              "Country Name": "CRAF’d"
+            }
+          }
+        ]
       },
       {
         "id": "recFF8BskJRz2Lyjk",
@@ -7043,7 +7055,7 @@
           "CRAF’d-Funded Project?": "NO",
           "Investment Type(s)": [
             "Data Sets & Commons",
-            "Learning & Exchange"
+            "Human Capital & Know-how"
           ],
           "Investment Theme(s)": [
             "Geospatial Data",
@@ -9152,7 +9164,7 @@
           ],
           "CRAF’d-Funded Project?": "NO",
           "Investment Type(s)": [
-            "Infrastructure & Platforms"
+            "Crisis Analytics & Insights"
           ],
           "Investment Theme(s)": [
             "Geospatial Analytics",
@@ -9916,7 +9928,7 @@
           "CRAF’d-Funded Project?": "NO",
           "Investment Type(s)": [
             "Data Sets & Commons",
-            "Learning & Exchange"
+            "Human Capital & Know-how"
           ],
           "Investment Theme(s)": [
             "Displacement & Migration Data",
@@ -10597,6 +10609,7 @@
           ],
           "CRAF’d-Funded Project?": "YES",
           "Investment Type(s)": [
+            "Data Sets & Commons",
             "Crisis Analytics & Insights"
           ],
           "Investment Theme(s)": [
@@ -10883,7 +10896,8 @@
           ],
           "CRAF’d-Funded Project?": "NO",
           "Investment Type(s)": [
-            "Data Sets & Commons"
+            "Data Sets & Commons",
+            "Crisis Analytics & Insights"
           ],
           "Investment Theme(s)": [
             "Food Security Data",
@@ -11244,7 +11258,7 @@
           "CRAF’d-Funded Project?": "NO",
           "Investment Type(s)": [
             "Crisis Analytics & Insights",
-            "Learning & Exchange"
+            "Human Capital & Know-how"
           ],
           "Investment Theme(s)": [
             "Anticipatory & Early Action Forecasts",
@@ -11291,7 +11305,7 @@
           "CRAF’d-Funded Project?": "NO",
           "Investment Type(s)": [
             "Data Sets & Commons",
-            "Learning & Exchange"
+            "Human Capital & Know-how"
           ],
           "Investment Theme(s)": [
             "Displacement & Migration Data",
@@ -11649,7 +11663,7 @@
           "CRAF’d-Funded Project?": "NO",
           "Investment Type(s)": [
             "Crisis Analytics & Insights",
-            "Standards & Coordination"
+            "Learning & Exchange"
           ],
           "Investment Theme(s)": [
             "Best Practices",
@@ -14027,7 +14041,6 @@
           ],
           "CRAF’d-Funded Project?": "NO",
           "Investment Type(s)": [
-            "Human Capital & Know-how",
             "Standards & Coordination",
             "Learning & Exchange"
           ],
