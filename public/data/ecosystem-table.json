@@ -498,29 +498,6 @@
     }
   },
   {
-    "id": "rec5GA5F1UPlXATSj",
-    "fields": {
-      "Project/Product Name": "Global Disaster Preparedness Center (GDPC)",
-      "Project Description": "The IFRC Global Disaster Preparedness Center, together with the Red Cross Red Crescent Climate Centre and American Red Cross, develops data-driven tools and best practice templates. The center enables early warning preparedness and resilience building through open guides, scenario modeling tools, and dashboards.\n",
-      "Project Website": "https://preparecenter.org/",
-      "Provider Orgs Full Name": [
-        "reccKH8GA8awjQEvp",
-        "recwaewYY2WMRF9ZI"
-      ],
-      "CRAF’d-Funded Project?": "NO",
-      "Investment Type(s)": [
-        "Data Sets & Commons",
-        "Learning & Exchange"
-      ],
-      "Investment Theme(s)": [
-        "Climate Data",
-        "Anticipatory & Early Action Forecasts"
-      ],
-      "product_key": "gdpc",
-      "HDX_SOHD": "None"
-    }
-  },
-  {
     "id": "rec5RfuXsmtGtPDP8",
     "fields": {
       "Project/Product Name": "DISHA",
@@ -966,28 +943,6 @@
         "Disaggregated Country-level Data"
       ],
       "product_key": "latinobarometro",
-      "HDX_SOHD": "None"
-    }
-  },
-  {
-    "id": "recCkgL7i4kRmP0PL",
-    "fields": {
-      "Project/Product Name": "ACLED Webinar",
-      "Project Donor Agencies": [
-        "rec1VhOJv9U6QKBBs"
-      ],
-      "Project Website": "https://acleddata.com/events-webinars#:~:text=Events%20%26%20Webinars",
-      "Provider Orgs Full Name": [
-        "recRoMeLU57jzgHFs"
-      ],
-      "CRAF’d-Funded Project?": "YES",
-      "Investment Type(s)": [
-        "Learning & Exchange"
-      ],
-      "Investment Theme(s)": [
-        "Webinar"
-      ],
-      "product_key": "acled-webinar",
       "HDX_SOHD": "None"
     }
   },
@@ -4112,26 +4067,6 @@
     }
   },
   {
-    "id": "recqtLfrSvDFeeKb9",
-    "fields": {
-      "Project/Product Name": "WorldPop Webinars",
-      "Project Website": "https://www.worldpop.org/webinars/",
-      "Provider Orgs Full Name": [
-        "recTRbZA2fpb5FEmd"
-      ],
-      "CRAF’d-Funded Project?": "NO",
-      "Investment Type(s)": [
-        "Learning & Exchange"
-      ],
-      "Investment Theme(s)": [
-        "Workshops",
-        "Webinar"
-      ],
-      "product_key": "worldpop-webinar",
-      "HDX_SOHD": "None"
-    }
-  },
-  {
     "id": "recqvGzOfmdkjYOHe",
     "fields": {
       "Project/Product Name": "HERA Support to NGO's",
@@ -4148,30 +4083,6 @@
         "Capacity Building"
       ],
       "product_key": "hera-stn",
-      "HDX_SOHD": "None"
-    }
-  },
-  {
-    "id": "recr5hGDgBiAH4xSm",
-    "fields": {
-      "Project/Product Name": "Red Cross Climate Centre (RCC)",
-      "Project Description": "The [International Committee of the Red Cross](https://www.climatecentre.org/) (ICRC), in collaboration with the [Netherlands Red Cross‘ data and digital initiative 510](https://510.global/), one of the largest humanitarian organizations active in fragile and crisis-affected settings—is embarking on an innovative project to intertwine climate risk, displacement, and conflict data into comprehensive risk datasets. This initiative aims to equip the ICRC and the broader humanitarian community with open-source composite datasets and risk indices to enhance decision-making and programming capabilities in sub-Saharan Africa, the Middle East, and North Africa (MENA) regions.\n",
-      "Project Donor Agencies": [
-        "rec1VhOJv9U6QKBBs"
-      ],
-      "Project Website": "https://crafd.io/data-financing/rccc",
-      "Provider Orgs Full Name": [
-        "recwaewYY2WMRF9ZI"
-      ],
-      "CRAF’d-Funded Project?": "YES",
-      "Investment Type(s)": [
-        "Data Sets & Commons"
-      ],
-      "Investment Theme(s)": [
-        "Climate Data",
-        "Environmental Data"
-      ],
-      "product_key": "red-cross-climate-center",
       "HDX_SOHD": "None"
     }
   },
