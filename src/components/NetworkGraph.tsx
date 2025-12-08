@@ -45,6 +45,7 @@ interface GraphNode {
     value: number; // Size of the node
     color: string;
     orgKey?: string;
+    orgShortName?: string; // Short name for organizations
     projectKey?: string;
     orgType?: string; // For organization clustering
     assetTypes?: string[]; // For project/asset clustering
@@ -409,6 +410,7 @@ const NetworkGraph: React.FC<NetworkGraphProps> = ({
                 value: 22, // Medium nodes for organizations
                 color: brandBgLight, // Uses --brand-bg-light (amber/golden from organization badges)
                 orgKey: org.orgShortName, // Use orgShortName for modal/URL
+                orgShortName: org.orgShortName, // Store short name for label display
                 orgType: org.type, // Store org type for clustering
                 estimatedBudget: org.estimatedBudget, // Store budget for funding-based scaling
                 x,
@@ -1331,11 +1333,17 @@ const NetworkGraph: React.FC<NetworkGraphProps> = ({
         ctx.font = `${fontSize}px Sans-Serif`;
         
         const isHoverHighlighted = hoverHighlightNodes.size > 0 && hoverHighlightNodes.has(node.id);
+        const isDirectlyHovered = hoveredNode && hoveredNode.id === node.id;
         const isHighlighted = isHoverHighlighted;
 
         // Draw label if hovered or highlighted
-        if ((hoveredNode && hoveredNode.id === node.id) || isHighlighted) {
-            const label = node.name;
+        if (isDirectlyHovered || isHighlighted) {
+            // Show full name when directly hovering, short name when shown due to connected node hover
+            let label = node.name;
+            if (!isDirectlyHovered && isHighlighted && node.type === 'organization' && node.orgShortName) {
+                label = node.orgShortName;
+            }
+            
             const textWidth = ctx.measureText(label).width;
             const bckgDimensions = [textWidth, fontSize].map(n => n + fontSize * 0.2);
             
