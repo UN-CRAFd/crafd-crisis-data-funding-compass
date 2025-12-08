@@ -273,31 +273,23 @@ export default function MethodologyPage({ logoutButton }: MethodologyPageProps) 
             />
             
             {/* Main Content */}
-            <div className="max-w-[82rem] mx-auto px-4 sm:px-6 lg:px-8 py-4 sm:py-4 pt-20 sm:pt-24">
-                <div className="space-y-4 sm:space-y-4">
+            <div className="max-w-[82rem] mx-auto px-4 sm:px-6 lg:px-8 py-0 sm:py-0 pt-20 sm:pt-24">
+                <Tabs defaultValue="collection" className="w-full">
+                    <div className="space-y-4 sm:space-y-4">
 
-                    {/* Hero Section */}
-                    <div className="relative overflow-hidden rounded-xl bg-gradient-to-br from-[var(--brand-bg-lighter)] to-[var(--brand-bg-light)] p-6 sm:p-8 border-none">
-                        <div className="relative z-10">
-                            <div className="flex items-center gap-3 mb-4">
-                                <BookOpen className="w-8 h-8" style={{ color: 'var(--brand-primary)' }} />
-                                <h1 className="text-3xl sm:text-4xl font-bold font-qanelas-subtitle" style={{ color: 'black' }}>
-                                    Methodology
-                                </h1>
-                            </div>
-                            <p className="text-base sm:text-lg text-slate-700 max-w-3xl leading-relaxed">
-                                Understand how data was collected and how to use it best for your research
-                            </p>
-                        </div>
-                    </div>
-
-                    {/* Overview Cards */}
-               
-                    {/* Main Methodology Content */}
-                    <Card className="!border-0 bg-white">
-                        <CardContent className="p-4 sm:p-6">
-                            <Tabs defaultValue="collection" className="w-full">
-                                <TabsList className="grid w-full grid-cols-2 lg:grid-cols-6 h-auto gap-2 bg-slate-50 p-2">
+                        {/* Hero Section */}
+                        <div className="relative overflow-hidden rounded-xl bg-gradient-to-br from-[var(--brand-bg-lighter)] to-[var(--brand-bg-light)] p-6 sm:p-8 border-none">
+                            <div className="relative z-10">
+                                <div className="flex items-center gap-3 mb-4">
+                                    <BookOpen className="w-8 h-8" style={{ color: 'var(--brand-primary)' }} />
+                                    <h1 className="text-3xl sm:text-4xl font-bold font-qanelas-subtitle" style={{ color: 'black' }}>
+                                        Methodology
+                                    </h1>
+                                </div>
+                                <p className="text-base sm:text-lg text-slate-700 max-w-3xl leading-relaxed mb-6">
+                                    Understand how our data was collected and how to use it best for your research
+                                </p>
+                                <TabsList className="grid w-full grid-cols-2 lg:grid-cols-6 h-auto gap-2 bg-white/60 p-2">
                                     {[
                                         { value: 'collection', icon: Search, label: 'Collection' },
                                         { value: 'classification', icon: FileText, label: 'Classification' },
@@ -311,9 +303,17 @@ export default function MethodologyPage({ logoutButton }: MethodologyPageProps) 
                                         </TabsTrigger>
                                     ))}
                                 </TabsList>
+                            </div>
+                        </div>
+
+                        {/* Overview Cards */}
+                   
+                        {/* Main Methodology Content */}
+                        <Card className="!border-0 bg-white">
+                            <CardContent className="p-4 sm:p-6 mt-0 mb-0">
 
                                 {/* Data Collection Tab */}
-                                <TabsContent value="collection" className="mt-6 animate-tab-enter">
+                                <TabsContent value="collection" className="mt-0 animate-tab-enter mb-0">
                                     <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
                                         <div>
                                             <SectionTitle icon={Search}>Data Collection</SectionTitle>
@@ -334,7 +334,7 @@ export default function MethodologyPage({ logoutButton }: MethodologyPageProps) 
                                 </TabsContent>
 
                                 {/* Classification Tab */}
-                                <TabsContent value="classification" className="mt-6 animate-tab-enter">
+                                <TabsContent value="classification" className="mt-0 animate-tab-enter">
                                     <div className="space-y-6">
                                         <div>
                                             <SectionTitle icon={FileText}>Data Classification</SectionTitle>
@@ -420,7 +420,7 @@ export default function MethodologyPage({ logoutButton }: MethodologyPageProps) 
                                 </TabsContent>
 
                                 {/* Limitations Tab */}
-                                <TabsContent value="limitations" className="mt-6 animate-tab-enter">
+                                <TabsContent value="limitations" className="mt-0 animate-tab-enter">
                                     <div className="space-y-6">
                                         
                                         <div>
@@ -441,7 +441,7 @@ export default function MethodologyPage({ logoutButton }: MethodologyPageProps) 
                                 </TabsContent>
 
                                 {/* Filtering & Query Tab */}
-                                <TabsContent value="filtering" className="mt-6 animate-tab-enter">
+                                <TabsContent value="filtering" className="mt-0 animate-tab-enter">
                                     <div className="space-y-6">
                                         <div>
                                             <SectionTitle icon={Layers}>Filtering & Query</SectionTitle>
@@ -616,7 +616,7 @@ export default function MethodologyPage({ logoutButton }: MethodologyPageProps) 
                                 </TabsContent>
 
                                 {/* Network Analysis Tab */}
-                                <TabsContent value="network" className="mt-6 animate-tab-enter">
+                                <TabsContent value="network" className="mt-0 animate-tab-enter">
                                     <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
                                         <div>
                                             <SectionTitle icon={TrendingUp}>Network Analysis</SectionTitle>
@@ -640,8 +640,8 @@ export default function MethodologyPage({ logoutButton }: MethodologyPageProps) 
                                 </TabsContent>
 
                                 {/* Export Tab */}
-                                <TabsContent value="export" className="mt-6 animate-tab-enter">
-                                    <div className="space-y-6">
+                                <TabsContent value="export" className="mt-0 animate-tab-enter">
+                                    <div className="space-y-8">
                                         <div>
                                             <SectionTitle icon={Download}>Export Functionality</SectionTitle>
                                             <div className="space-y-4">
@@ -663,38 +663,37 @@ export default function MethodologyPage({ logoutButton }: MethodologyPageProps) 
                                                 <div>
                                                     
                                                     <CodeBlock code={`import pandas as pd
-import zipfile
-from pathlib import Path
+                                                        import zipfile
+                                                        from pathlib import Path
 
-# Extract CSV files from the downloaded ZIP
-with zipfile.ZipFile('export.zip', 'r') as zip_ref:
-    zip_ref.extractall('./data')
+                                                        # Extract CSV files from the downloaded ZIP
+                                                        with zipfile.ZipFile('export.zip', 'r') as zip_ref:
+                                                            zip_ref.extractall('./data')
 
-# Load the organizations and assets data
-orgs_df = pd.read_csv('./data/organizations.csv')
-assets_df = pd.read_csv('./data/assets.csv')
+                                                        # Load the organizations and assets data
+                                                        orgs_df = pd.read_csv('./data/organizations.csv')
+                                                        assets_df = pd.read_csv('./data/assets.csv')
 
-# Display basic info
-print(f"Organizations: {len(orgs_df)} records")
-print(f"Assets: {len(assets_df)} records")
+                                                        # Display basic info
+                                                        print(f"Organizations: {len(orgs_df)} records")
+                                                        print(f"Assets: {len(assets_df)} records")
 
-# Filter by donor country
-filtered = assets_df[assets_df['Donor Countries'].str.contains('[Example Country]', na=False)]
-print(f"\\nAssets from [Example Country] donors: {len(filtered)}")
+                                                        # Filter by donor country
+                                                        filtered = assets_df[assets_df['Donor Countries'].str.contains('[Example Country]', na=False)]
+                                                        print(f"\\nAssets from [Example Country] donors: {len(filtered)}")
 
-# Group assets by type
-by_type = assets_df.groupby('Investment Type').size()
-print(f"\\nAssets by type:\\n{by_type}")`} />
+                                                        # Group assets by type
+                                                        by_type = assets_df.groupby('Investment Type').size()
+                                                        print(f"\\nAssets by type:\\n{by_type}")`} />
                                                 </div>
                                             </div>
                                         </div>
                                     </div>
                                 </TabsContent>
-                            </Tabs>
-                        </CardContent>
-                    </Card>
+                            </CardContent>
+                        </Card>
 
-                    {/* Contact Section */}
+                        {/* Contact Section */}
                     <Card className="!border-0 bg-gradient-to-br from-[var(--brand-bg-lighter)] to-[var(--brand-bg-light)]">
                         <CardContent className="p-6 sm:p-8">
                             <div className="flex flex-col sm:flex-row items-center justify-between gap-4">
@@ -719,6 +718,7 @@ print(f"\\nAssets by type:\\n{by_type}")`} />
                         </CardContent>
                     </Card>
                 </div>
+                </Tabs>
             </div>
 
             {/* Footer */}
