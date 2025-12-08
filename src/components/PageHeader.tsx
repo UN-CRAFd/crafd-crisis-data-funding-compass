@@ -45,7 +45,18 @@ export default function PageHeader({
     onExportMenuChange,
 }: PageHeaderProps) {
     const pathname = usePathname();
-    const { tipsEnabled, setTipsEnabled } = useTips();
+    
+    // Safely use useTips with fallback defaults
+    let tipsEnabled = false;
+    let setTipsEnabled: (enabled: boolean) => void = () => {};
+    try {
+        const tipsContext = useTips();
+        tipsEnabled = tipsContext.tipsEnabled;
+        setTipsEnabled = tipsContext.setTipsEnabled;
+    } catch (e) {
+        // TipsProvider not available (e.g., during prerendering)
+        // Use default values
+    }
 
     return (
         <div className="fixed top-0 left-0 right-0 z-50 bg-white border-b border-slate-200">
