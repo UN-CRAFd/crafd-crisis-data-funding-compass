@@ -483,7 +483,7 @@ export default function OrganizationModal({
                                     </h3>
                                     <span className="text-lg font-normal text-gray-500 tabular-nums">({donorCountries.length})</span>
                                 </div>
-                                    <div className="hidden rounded-lg border border-slate-200 bg-slate-100 p-4 shadow-sm">
+                                    <div className="rounded-lg border border-slate-200 bg-slate-100 p-4 shadow-sm">
                                         
                                         <div className="mt-0 grid grid-cols-[3fr_3fr_3fr_0.2fr] gap-4">
 
