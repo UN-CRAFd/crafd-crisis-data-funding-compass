@@ -600,7 +600,7 @@ const CrisisDataDashboard = ({
                     }
                     const parts: string[] = [];
                     if (combinedDonors.length > 0) {
-                        parts.push(`${combinedDonors.length} donor ${combinedDonors.length === 1 ? 'country' : 'countries'}`);
+                        parts.push(`${combinedDonors.length} donor ${combinedDonors.length === 1 ? 'donor' : 'donors'}`);
                     }
                     if (investmentTypes.length > 0) {
                         parts.push(`${investmentTypes.length} investment ${investmentTypes.length === 1 ? 'type' : 'types'}`);
