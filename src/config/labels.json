@@ -10,7 +10,18 @@
     "feedbackTooltip": "Give Feedback on Data Set",
     "exportButton": "Export as One-Pager",
     "exportButtonLoading": "Exporting...",
-    "exportTooltip": "Export current view as PDF"
+    "exportTooltip": "Export current view as PDF",
+    "tipsOn": "Tips",
+    "tipsOff": "Tips Off",
+    "exportMenuCsv": "Export as CSV (ZIP)",
+    "exportMenuXlsx": "Export as Excel (XLSX)",
+    "exportingCsv": "Exporting CSV...",
+    "exportingXlsx": "Exporting Excel...",
+    "exportingPdf": "Exporting PDF...",
+    "exportView": "Export View",
+    "navigation": "Navigation",
+    "dashboard": "Dashboard",
+    "methodology": "Methodology"
   },
   "stats": {
     "dataProviders": {
@@ -90,6 +101,45 @@
   "ui": {
     "resetFilters": "Reset all filters",
     "copyToClipboard": "Copy link to clipboard",
-    "chartFootnote": "Note: A project can be assigned to multiple types."
+    "chartFootnote": "Note: A project can be assigned to multiple types.",
+    "share": "Share",
+    "showLess": "Show less",
+    "showMore": "Show {count} more"
+  },
+  "modals": {
+    "organizationNotFound": "Organization Not Found",
+    "organizationNotFoundMessage": "The requested organization could not be found.",
+    "projectNotFound": "Project Not Found",
+    "projectNotFoundMessage": "The requested project could not be found.",
+    "learnMore": "Learn more",
+    "viewOnHdx": "View Data on",
+    "viewOnIati": "View Funding on",
+    "hdx": "HDX",
+    "iati": "IATI",
+    "openWebsite": "Open Website",
+    "providedAssets": "Provided Assets",
+    "organizationFunding": "Organization Funding",
+    "estOrgBudget": "Est. Org Budget",
+    "budgetSource": "Budget Source",
+    "lastUpdated": "Last Updated",
+    "viewBudgetSource": "View Budget Source",
+    "budgetInfoTooltip": "This Data was extracted from publicly available sources and collected by the Complex Risk Analytics Fund (CRAF'd). It may not reflect the most current information.",
+    "notes": "NOTES",
+    "notesInsights": "All insights are based on publicly accessible information and data.",
+    "notesUn": "For United Nations (UN) Organizations, donors were limited to the top 15 for simplification.",
+    "budgetlineUn": "Part of the general budget.",
+    "providerOrganizations": "Provider Organizations",
+    "assetTypeAndTheme": "Asset Type & Theme",
+    "assetFunding": "Asset Funding",
+    "noAssetDonorInfo": "No asset donor information available",
+    "notesProjectDonors": "Project donor countries may differ from organization-level donor countries.",
+    "hdxDataGrid": "HDX Data Grid",
+    "visitProjectWebsite": "Visit Project Website",
+    "financingAgencies": "Financed through:",
+    "clickToFilterByType": "Click to filter by this investment type",
+    "similarProjects": "Similar Projects",
+    "financedOrgs": "Financed Organizations",
+    "financedAssets": "Financed Assets"
+
   }
 }

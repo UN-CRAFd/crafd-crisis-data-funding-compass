@@ -204,6 +204,10 @@ function convertToOrganizationWithProjects(org: NestedOrganization): Organizatio
         orgType = orgTypeRaw[0];
     }
 
+    // Extract organization budget
+    const estimatedBudget = org.fields?.['Est. Org Budget'];
+    const budgetValue = typeof estimatedBudget === 'number' ? estimatedBudget : undefined;
+
     return {
         id: org.id,
         organizationName: org.name || 'Unnamed Organization',
@@ -212,7 +216,8 @@ function convertToOrganizationWithProjects(org: NestedOrganization): Organizatio
         description: org.fields?.['Org Description'] || '',
         donorCountries,
         projects: projectsData,
-        projectCount: projectsData.length
+        projectCount: projectsData.length,
+        estimatedBudget: budgetValue
     };
 }
 
@@ -243,8 +248,17 @@ function applyFilters(
         // Step 2: Determine which projects should be visible
         let visibleProjects: ProjectData[] = [];
 
-        // Helper function to check if project matches current filters
-        const projectMatchesFilters = (project: ProjectData): boolean => {
+        // Helper function to check if a project matches donor filter at project level
+        const projectMatchesDonorFilter = (project: ProjectData): boolean => {
+            if (!hasDonorFilter) return true;
+            // Check if project has all selected donors at project level
+            return filters.donorCountries!.every(selectedDonor => 
+                Array.isArray(project.donorCountries) && project.donorCountries.includes(selectedDonor)
+            );
+        };
+
+        // Helper function to check if project matches current filters (excluding donor)
+        const projectMatchesOtherFilters = (project: ProjectData): boolean => {
             // Search filter check
             if (hasSearchFilter) {
                 const query = filters.searchQuery!.toLowerCase().trim();
@@ -278,69 +292,75 @@ function applyFilters(
             return true;
         };
 
-        // Check if organization meets donor requirements (gatekeeper)
+        // Check if organization meets donor requirements at org level
         const orgMeetsDonorRequirement = !hasDonorFilter ||
             filters.donorCountries!.every(selectedDonor => org.donorCountries.includes(selectedDonor));
 
-        if (!orgMeetsDonorRequirement) {
-            // Organization doesn't meet donor requirements -> no projects can show
-            visibleProjects = [];
-        } else if (orgMatchesSearch) {
-            // Organization matches search: show all its projects (apply type/theme filter if exists)
-            visibleProjects = (hasTypeFilter || hasThemeFilter)
-                ? org.projects.filter(project => {
-                    // Only apply type and theme filters, skip search filter since org already matches
-                    if (hasTypeFilter) {
-                        const matchesType = project.investmentTypes.some(type =>
-                            filters.investmentTypes!.some(filterType =>
-                                type.toLowerCase().includes(filterType.toLowerCase()) ||
-                                filterType.toLowerCase().includes(type.toLowerCase())
-                            )
-                        );
-                        if (!matchesType) return false;
-                    }
-                    if (hasThemeFilter) {
-                        const matchesTheme = Array.isArray(project.investmentThemes) && 
-                            project.investmentThemes.some(theme =>
-                                filters.investmentThemes!.some(filterTheme =>
-                                    typeof theme === 'string' &&
-                                    theme.toLowerCase().trim() === filterTheme.toLowerCase().trim()
+        if (orgMeetsDonorRequirement) {
+            // Organization meets donor requirement - filter projects by other filters only
+            if (orgMatchesSearch) {
+                // Organization matches search: show all its projects (apply type/theme filter if exists)
+                visibleProjects = (hasTypeFilter || hasThemeFilter)
+                    ? org.projects.filter(project => {
+                        // Only apply type and theme filters, skip search filter since org already matches
+                        if (hasTypeFilter) {
+                            const matchesType = project.investmentTypes.some(type =>
+                                filters.investmentTypes!.some(filterType =>
+                                    type.toLowerCase().includes(filterType.toLowerCase()) ||
+                                    filterType.toLowerCase().includes(type.toLowerCase())
                                 )
                             );
-                        if (!matchesTheme) return false;
-                    }
-                    return true;
-                })
-                : [...org.projects];
-        } else if (!hasSearchFilter) {
-            // No search filter: apply type/theme filter if exists, otherwise show all projects
-            visibleProjects = (hasTypeFilter || hasThemeFilter)
-                ? org.projects.filter(project => {
-                    if (hasTypeFilter) {
-                        const matchesType = project.investmentTypes.some(type =>
-                            filters.investmentTypes!.some(filterType =>
-                                type.toLowerCase().includes(filterType.toLowerCase()) ||
-                                filterType.toLowerCase().includes(type.toLowerCase())
-                            )
-                        );
-                        if (!matchesType) return false;
-                    }
-                    if (hasThemeFilter) {
-                        const matchesTheme = Array.isArray(project.investmentThemes) && 
-                            project.investmentThemes.some(theme =>
-                                filters.investmentThemes!.some(filterTheme =>
-                                    typeof theme === 'string' &&
-                                    theme.toLowerCase().trim() === filterTheme.toLowerCase().trim()
+                            if (!matchesType) return false;
+                        }
+                        if (hasThemeFilter) {
+                            const matchesTheme = Array.isArray(project.investmentThemes) && 
+                                project.investmentThemes.some(theme =>
+                                    filters.investmentThemes!.some(filterTheme =>
+                                        typeof theme === 'string' &&
+                                        theme.toLowerCase().trim() === filterTheme.toLowerCase().trim()
+                                    )
+                                );
+                            if (!matchesTheme) return false;
+                        }
+                        return true;
+                    })
+                    : [...org.projects];
+            } else if (!hasSearchFilter) {
+                // No search filter: apply type/theme filter if exists, otherwise show all projects
+                visibleProjects = (hasTypeFilter || hasThemeFilter)
+                    ? org.projects.filter(project => {
+                        if (hasTypeFilter) {
+                            const matchesType = project.investmentTypes.some(type =>
+                                filters.investmentTypes!.some(filterType =>
+                                    type.toLowerCase().includes(filterType.toLowerCase()) ||
+                                    filterType.toLowerCase().includes(type.toLowerCase())
                                 )
                             );
-                        if (!matchesTheme) return false;
-                    }
-                    return true;
-                })
-                : [...org.projects];
+                            if (!matchesType) return false;
+                        }
+                        if (hasThemeFilter) {
+                            const matchesTheme = Array.isArray(project.investmentThemes) && 
+                                project.investmentThemes.some(theme =>
+                                    filters.investmentThemes!.some(filterTheme =>
+                                        typeof theme === 'string' &&
+                                        theme.toLowerCase().trim() === filterTheme.toLowerCase().trim()
+                                    )
+                                );
+                            if (!matchesTheme) return false;
+                        }
+                        return true;
+                    })
+                    : [...org.projects];
+            } else {
+                // Organization doesn't match search, check individual projects
+                visibleProjects = org.projects.filter(projectMatchesOtherFilters);
+            }
         } else {
-            // Organization doesn't match search, check individual projects
-            visibleProjects = org.projects.filter(projectMatchesFilters);
+            // Organization doesn't meet donor requirement at org level
+            // BUT check if any projects have the donor at project level
+            visibleProjects = org.projects.filter(project => 
+                projectMatchesDonorFilter(project) && projectMatchesOtherFilters(project)
+            );
         }
 
         // Step 3: Decide if organization should be shown
@@ -357,6 +377,9 @@ function applyFilters(
                 // Type/theme filter active: only show if org has visible projects (projects that match type/theme+search)
                 shouldShowOrg = visibleProjects.length > 0;
             }
+        } else {
+            // Org doesn't meet donor at org level, but show if it has projects with matching donors
+            shouldShowOrg = visibleProjects.length > 0;
         }
 
         if (!shouldShowOrg) {
@@ -667,6 +690,26 @@ export function buildProjectIdToKeyMap(organizations: NestedOrganization[]): Rec
                 if (productKey) {
                     map[project.id] = String(productKey).trim();
                 }
+            }
+        });
+    });
+    
+    return map;
+}
+
+/**
+ * Build a map from project ID to project description
+ * Used by organization modal to display project descriptions in tooltips
+ */
+export function buildProjectDescriptionMap(organizations: NestedOrganization[]): Record<string, string> {
+    const map: Record<string, string> = {};
+    
+    organizations.forEach(org => {
+        (org.projects || []).forEach(project => {
+            if (project && project.id) {
+                const fields = project.fields || {};
+                const description = fields['Project Description'] || '';
+                map[project.id] = String(description).trim();
             }
         });
     });

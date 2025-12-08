@@ -24,7 +24,9 @@
       "Has received CRAF'd Funding?": "NO",
       "org_key": "hhi",
       "Org Type": "Academia",
-      "IATI Org Key": "US-EIN-45-4535664"
+      "IATI Org Key": "US-EIN-45-4535664",
+      "Last Updated": 2024,
+      "Link to Budget Source": "none"
     }
   },
   {
@@ -45,7 +47,8 @@
       "Has received CRAF'd Funding?": "NO",
       "org_key": "heigit",
       "Org Type": "Academia",
-      "HDX Org Key": "heidelberg-institute-for-geoinformation-technology"
+      "HDX Org Key": "heidelberg-institute-for-geoinformation-technology",
+      "Last Updated": 2024
     }
   },
   {
@@ -63,9 +66,41 @@
         "rec0QlT9YlTVhHfEn",
         "rec0sY1I5JZz6ZsUE"
       ],
+      "Est. Org Budget": 9700000,
       "Org HQ Country": "Spain",
       "org_key": "bse",
-      "Org Type": "Academia"
+      "Org Type": "Academia",
+      "Budget Source": "Website",
+      "Last Updated": 2024,
+      "Link to Budget Source": "https://bw.bse.eu/wp-content/uploads/2025/02/Download-BSE-Budget-2024-25.pdf?_gl=1*1j4f3pc*_up*MQ..*_gs*MQ..&gclid=Cj0KCQiA_8TJBhDNARIsAPX5qxTgrV665MKhAIKun4YCJxxFSqeQ2GSoPO6XWq5vPUZ0Oz9QQHdmwL4aAnCaEALw_wcB&gbraid=0AAAAADgrDQ6tDT9tUDsGTC-GgAyE2EUQb",
+      "Budget Source Screenshot": [
+        {
+          "id": "attPRRLTI2RQLiWfq",
+          "width": 1514,
+          "height": 454,
+          "url": "https://v5.airtableusercontent.com/v3/u/48/48/1764979200000/1jcujv-Ynlk3iY9dBPcqdQ/JRl4WXsIHGqmnHuHqDl3Ls-UfovkITN__UGW1-lOcdlm3pgvm5VNQEjH-q8ZDhB7YAmZj88Q-LeADrDf-4AI2hwJIXGUlVCqF4XjIwy8dN5FUsc8H5IOPiQOlrUnzxPIcokfJK4KH50NN_4JNW6uW5mqE5My_DYdSeuMQxNN9P0FwXOMPBU8HSJcDMzZQjMM/56UKVhca5Gfd4vUwu0GQjyjxDYlKCiSWShjN5n0NA9o",
+          "filename": "Screenshot 2025-12-04 at 12.25.42 PM.png",
+          "size": 142454,
+          "type": "image/png",
+          "thumbnails": {
+            "small": {
+              "url": "https://v5.airtableusercontent.com/v3/u/48/48/1764979200000/oj4ElbNEgVri8RIU7au9Eg/GEgrHLz3UlHQ6JycaLk-ppDeOx1mISSXo1HU5lwq350FZYT3navdyoX9nA8IU0rNiQljH6cqMFUFQ3JjK8fovfU5Ohy-bi7PRaqDL7WCfJl63wAylxytm4KN6RhJzpKel-VkXD_vLmwwhyZuZhAihA/dI_I9YplVdEdVTcmkQ9i5f2H6bzvBMPl5CI9X58KdfE",
+              "width": 120,
+              "height": 36
+            },
+            "large": {
+              "url": "https://v5.airtableusercontent.com/v3/u/48/48/1764979200000/H1X2Kmr8-hoCN1bDTgxX-Q/xRnc1DdHRbCr5Z6s_enY1VOUv5kP256ZJdr9ov2pluczUa5ES6-IATiH3QRJBDjEk9N-vv1q5Oi6hFFekicrLsmj34iJwTW104AB5fX3q7gY3c9u6N8XXL2K0I_qpwFJByKaqFa3fJR8jRAXanto-g/npjhELCmibR6YrX6fxfvzhjcIm3KM-cAQqTX2ln5gSs",
+              "width": 1514,
+              "height": 454
+            },
+            "full": {
+              "url": "https://v5.airtableusercontent.com/v3/u/48/48/1764979200000/i7tu5o0Nc-nI-OzbNWYlrA/c0KIlDD3vQ_4Ei2WBG6a_w10mNZcfd4RPuDoARgXsFHCKRWBw2jYCg2lW9V4Y-Y4Q1GsAB71t0sU9BdpwJH4I3bDp6QooCH_yRx35IlG1QFJgFXm2nfY0VVY0bUCFHHorf8fcU5TitLUl41sTUfYZA/5YMzC0xgVHMsxCSbQrJRYns7GMDHnMD_8rN1CU6FC4Q",
+              "width": 1514,
+              "height": 454
+            }
+          }
+        }
+      ]
     }
   },
   {
@@ -94,12 +129,15 @@
       "Org MPTFO Name": "UNICEF",
       "Org MPTFO URL [Formula]": "https://mptf.undp.org/participating-organizations/UNICEF",
       "Org Transparency Portal": "https://open.unicef.org/?",
+      "Est. Org Budget": 8099000000,
       "Org HQ Country": "United States",
       "Has received CRAF'd Funding?": "NO",
       "org_key": "unicef",
       "Org Type": "United Nations System",
       "HDX Org Key": "unicef-data",
-      "IATI Org Key": "XM-DAC-41122"
+      "IATI Org Key": "XM-DAC-41122",
+      "Budget Source": "Annual Report",
+      "Last Updated": 2024
     }
   },
   {
@@ -126,12 +164,15 @@
       "Org IATI Name": "United Nations World Food Programme (WFP)",
       "Org MPTFO Name": "WFP",
       "Org MPTFO URL [Formula]": "https://mptf.undp.org/participating-organizations/WFP",
+      "Est. Org Budget": 9041000000,
       "Org HQ Country": "Italy",
       "Has received CRAF'd Funding?": "NO",
       "org_key": "wfp",
       "Org Type": "United Nations System",
       "HDX Org Key": "wfp",
-      "IATI Org Key": "XM-DAC-41140"
+      "IATI Org Key": "XM-DAC-41140",
+      "Budget Source": "Annual Report",
+      "Last Updated": 2024
     }
   },
   {
@@ -146,12 +187,16 @@
         "recfjAhO2DxCjgEgM",
         "recD0hG4x9w340oYA"
       ],
+      "Org Donor Agencies": [
+        "recqSvUlZQjET4fCH"
+      ],
       "Org HQ Country": "Netherlands",
       "Has received CRAF'd Funding?": "YES",
       "org_key": "510-data-team",
       "Org Type": "Red Cross / Red Crescent Movement",
       "HDX Org Key": "netherlands-red-cross",
-      "IATI Org Key": "NL-KVK-40409352"
+      "IATI Org Key": "NL-KVK-40409352",
+      "Last Updated": 2024
     }
   },
   {
@@ -200,10 +245,13 @@
       "Org MPTFO Name": "OHCHR",
       "Org MPTFO URL [Formula]": "https://mptf.undp.org/participating-organizations/OHCHR",
       "Org Programme Budget": "https://www.ohchr.org/en/about-us/funding-and-budget",
+      "Est. Org Budget": 268935688,
       "Org HQ Country": "Switzerland",
       "Has received CRAF'd Funding?": "YES",
       "org_key": "ohchr",
-      "Org Type": "United Nations System"
+      "Org Type": "United Nations System",
+      "Budget Source": "Annual Report",
+      "Last Updated": 2024
     }
   },
   {
@@ -228,7 +276,8 @@
       "Org HQ Country": "Belgium",
       "Has received CRAF'd Funding?": "NO",
       "org_key": "uclouvain",
-      "Org Type": "Academia"
+      "Org Type": "Academia",
+      "Last Updated": 2024
     }
   },
   {
@@ -270,12 +319,15 @@
       "Org IATI Name": "United Nations Population Fund",
       "Org MPTFO Name": "UNFPA",
       "Org MPTFO URL [Formula]": "https://mptf.undp.org/participating-organizations/UNFPA",
+      "Est. Org Budget": 1274700000,
       "Org HQ Country": "United States",
       "Has received CRAF'd Funding?": "NO",
       "org_key": "unfpa",
       "Org Type": "United Nations System",
       "HDX Org Key": "unfpa",
-      "IATI Org Key": "XM-DAC-41119"
+      "IATI Org Key": "XM-DAC-41119",
+      "Budget Source": "Annual Report",
+      "Last Updated": 2024
     }
   },
   {
@@ -297,7 +349,9 @@
       "Org HQ Country": "Global (distributed)",
       "Has received CRAF'd Funding?": "YES",
       "org_key": "fhn",
-      "Org Type": "Network / Consortium"
+      "Org Type": "Network / Consortium",
+      "Last Updated": 2024,
+      "Link to Budget Source": "none"
     }
   },
   {
@@ -329,11 +383,14 @@
       "Org MPTFO URL [Formula]": "https://mptf.undp.org/participating-organizations/UNWOMEN",
       "Org Transparency Portal": "https://open.unwomen.org/en/global-results/resource-overview/2022-2025",
       "Org Programme Budget": "https://www.unwomen.org/sites/default/files/2023-05/UNW_Draft%20Integrated%20Budget%202024-25_updated.pdf",
+      "Est. Org Budget": 515000000,
       "Org HQ Country": "United States",
       "Has received CRAF'd Funding?": "YES",
       "org_key": "un-women",
       "Org Type": "United Nations System",
-      "IATI Org Key": "XM-DAC-41146"
+      "IATI Org Key": "XM-DAC-41146",
+      "Budget Source": "Annual Report",
+      "Last Updated": 2024
     }
   },
   {
@@ -350,10 +407,13 @@
       "Org Donor Agencies": [
         "reckIAhFXgj4XL29b"
       ],
+      "Est. Org Budget": 1800000000,
       "Org HQ Country": "United States",
       "Has received CRAF'd Funding?": "NO",
       "org_key": "usgs",
-      "Org Type": "Government / Public Sector"
+      "Org Type": "Government / Public Sector",
+      "Budget Source": "Annual Report",
+      "Last Updated": 2024
     }
   },
   {
@@ -370,10 +430,13 @@
       "Org IATI Name": "N/A",
       "Org Transparency Portal": "https://app.powerbi.com/view?r=eyJrIjoiZTcxZTYwZTgtODMyZC00MzQwLWFhM2ItMDdiODlkNjY4NmNlIiwidCI6IjBmOWUzNWRiLTU0NGYtNGY2MC1iZGNjLTVlYTQxNmU2ZGM3MCIsImMiOjh9",
       "Org Programme Budget": "https://open.un.org/un-secretariat-financials/expenses",
+      "Est. Org Budget": 3967370,
       "Org HQ Country": "United States",
       "Has received CRAF'd Funding?": "NO",
       "org_key": "unoda",
-      "Org Type": "United Nations System"
+      "Org Type": "United Nations System",
+      "Budget Source": "Annual Report",
+      "Last Updated": 2024
     }
   },
   {
@@ -382,7 +445,7 @@
       "Org Full Name": "Global Pulse",
       "Org Short Name": "UN Global Pulse",
       "Org Website": "https://www.unglobalpulse.org/",
-      "Org Description": "Data Insights for Social & Humanitarian Action, also known as DISHA, is a multi-partner initiative led by UN Global Pulse, the Secretary-General’s Innovation Lab, that aims to accelerate ethical and responsible access to data and artificial intelligence (AI) solutions to unlock social impact at scale.",
+      "Org Description": "Global Pulse is an initiative of the United Nations focused on harnessing big data, artificial intelligence, and emerging technologies to support sustainable development and humanitarian action. The organization collaborates with UN agencies, governments, and partners worldwide to analyze real-time data and generate insights that inform decision-making. By leveraging advanced analytics, Global Pulse aims to improve crisis response, monitor global trends, and promote data-driven policies.",
       "Provided Data Ecosystem Projects": [
         "rec5RfuXsmtGtPDP8"
       ],
@@ -393,7 +456,8 @@
         "rech10djtgHRF0JFS"
       ],
       "org_key": "global-pulse",
-      "Org Type": "United Nations System"
+      "Org Type": "United Nations System",
+      "Last Updated": 2024
     }
   },
   {
@@ -410,7 +474,8 @@
         "reco4Um0k7Tgw2UCK"
       ],
       "org_key": "uoe",
-      "Org Type": "Academia"
+      "Org Type": "Academia",
+      "Last Updated": 2024
     }
   },
   {
@@ -419,7 +484,7 @@
       "Org Full Name": "Humanitarian Outcomes",
       "Org Short Name": "Humanitarian Outcomes",
       "Org Website": "https://humanitarianoutcomes.org/",
-      "Org Description": "An independent research organisation providing evidence and policy advice to inform better humanitarian action.",
+      "Org Description": "Humanitarian Outcomes is an independent research organisation providing evidence and policy advice to inform better humanitarian action.",
       "Link to Data Products Overview": "<https://humanitarianoutcomes.org/projects>\n",
       "Provided Data Ecosystem Projects": [
         "recniOH9IPt0Vz07E",
@@ -431,11 +496,14 @@
         "recjyWTotWvaTYTI4"
       ],
       "Org IATI Name": "Humanitarian Outcomes",
+      "Est. Org Budget": 2904460,
       "Org HQ Country": "United Kingdom",
       "Has received CRAF'd Funding?": "NO",
       "org_key": "humanitarian-outcomes",
       "Org Type": "Tech / Consulting Provider",
-      "IATI Org Key": "XM-DAC-41122"
+      "IATI Org Key": "XM-DAC-41122",
+      "Last Updated": 2024,
+      "Link to Budget Source": "none"
     }
   },
   {
@@ -448,9 +516,13 @@
       "Provided Data Ecosystem Projects": [
         "recp4lLg28MQMpBnW"
       ],
+      "Org Donor Agencies": [
+        "reco4Um0k7Tgw2UCK"
+      ],
       "Org HQ Country": "United Kingdom",
       "org_key": "uos",
-      "Org Type": "Academia"
+      "Org Type": "Academia",
+      "Last Updated": 2024
     }
   },
   {
@@ -502,12 +574,15 @@
       "Org MPTFO URL [Formula]": "https://mptf.undp.org/participating-organizations/UNDP",
       "Org Transparency Portal": "https://open.undp.org/",
       "Org Programme Budget": "https://www.undp.org/funding",
+      "Est. Org Budget": 4800000000,
       "Org HQ Country": "United States",
       "Has received CRAF'd Funding?": "YES",
       "org_key": "undp",
       "Org Type": "United Nations System",
       "HDX Org Key": "undp-human-development-reports-office",
-      "IATI Org Key": "XM-DAC-41114"
+      "IATI Org Key": "XM-DAC-41114",
+      "Budget Source": "Annual Report",
+      "Last Updated": 2024
     }
   },
   {
@@ -532,7 +607,8 @@
       "org_key": "ocha-hum-data-centre",
       "Org Type": "United Nations System",
       "HDX Org Key": "hdx",
-      "IATI Org Key": "XM-DAC-41127"
+      "IATI Org Key": "XM-DAC-41127",
+      "Last Updated": 2024
     }
   },
   {
@@ -558,7 +634,9 @@
       "Has received CRAF'd Funding?": "NO",
       "org_key": "fsnwg",
       "Org Type": "Network / Consortium",
-      "HDX Org Key": "fsnwg"
+      "HDX Org Key": "fsnwg",
+      "Last Updated": 2024,
+      "Link to Budget Source": "none"
     }
   },
   {
@@ -573,7 +651,8 @@
       ],
       "org_key": "unosat",
       "Org Type": "United Nations System",
-      "HDX Org Key": "unosat"
+      "HDX Org Key": "unosat",
+      "Last Updated": 2024
     }
   },
   {
@@ -599,7 +678,8 @@
       "Has received CRAF'd Funding?": "NO",
       "org_key": "pacific-disaster-center",
       "Org Type": "Research / Think Tank",
-      "HDX Org Key": "pdc"
+      "HDX Org Key": "pdc",
+      "Last Updated": 2024
     }
   },
   {
@@ -617,10 +697,13 @@
         "rece2l2IJRlTC2ERq"
       ],
       "Org IATI Name": "N/A",
+      "Est. Org Budget": 931408094.11,
       "Org HQ Country": "Sweden",
       "Has received CRAF'd Funding?": "NO",
       "org_key": "uppsala-university",
-      "Org Type": "Academia"
+      "Org Type": "Academia",
+      "Budget Source": "Annual Report",
+      "Last Updated": 2024
     }
   },
   {
@@ -656,10 +739,13 @@
         "recbvrcYZZW7mBnCU"
       ],
       "Org IATI Name": "N/A",
+      "Est. Org Budget": 11510461.58,
       "Org HQ Country": "Sweden",
       "Has received CRAF'd Funding?": "NO",
       "org_key": "sipri",
-      "Org Type": "Research / Think Tank"
+      "Org Type": "Research / Think Tank",
+      "Budget Source": "Annual Report",
+      "Last Updated": 2024
     }
   },
   {
@@ -694,10 +780,13 @@
       ],
       "Org Transparency Portal": "https://www.unmas.org/sites/default/files/styles/full_width/public/unmas_2024_annual_report-images-58-updated.jpg?itok=QvJhQMeO",
       "Org Programme Budget": "https://open.un.org/un-secretariat-financials/expenses",
+      "Est. Org Budget": 42018495,
       "Org HQ Country": "Switzerland",
       "Has received CRAF'd Funding?": "NO",
       "org_key": "unmas",
-      "Org Type": "United Nations System"
+      "Org Type": "United Nations System",
+      "Budget Source": "Annual Report",
+      "Last Updated": 2024
     }
   },
   {
@@ -725,11 +814,43 @@
         "recULIEfSZxBrWWZb"
       ],
       "Org IATI Name": "Flowminder",
+      "Est. Org Budget": 3400000,
       "Org HQ Country": "United Kingdom",
       "Has received CRAF'd Funding?": "NO",
       "org_key": "flowminder",
       "Org Type": "Non-Governmental Organization",
-      "HDX Org Key": "flowminder"
+      "HDX Org Key": "flowminder",
+      "Budget Source": "Annual Report",
+      "Last Updated": 2024,
+      "Link to Budget Source": "https://www.flowminder.org/media/ph2jnc1s/flowminder_fy2022-2023-annual-report-accounts_swe.pdf",
+      "Budget Source Screenshot": [
+        {
+          "id": "attakhUw9nKZriQFe",
+          "width": 714,
+          "height": 227,
+          "url": "https://v5.airtableusercontent.com/v3/u/48/48/1764979200000/vBg3aoBi2XFHJlWHw4NbVA/m1jpQFNVb8X8x0HXrA-Nv3Ep-jdzuVvf-tS1GPXFoz8Fhj0q951hwrB8a9CIe-yZo9gHHKSWUEVK-LkDRNAsnwaWsCuSxA6s5j8FlfWcea-Z89TrEOsLC8KIIi5Qki3YmZxvtlQwJZGbRLM8I4AqxhehgjVMdw61_xKJZWCiaL5ugK16BoG5RnetzC9zDfuJ/ih0ve4p9len9xQTsZm19le1XutLuLH7ydHjpstDjyHU",
+          "filename": "Screenshot 2025-12-05 at 12.12.11 PM.png",
+          "size": 70232,
+          "type": "image/png",
+          "thumbnails": {
+            "small": {
+              "url": "https://v5.airtableusercontent.com/v3/u/48/48/1764979200000/CwWHTFVBKs-stmEB1Nf1KA/JUtpYUgs4q6WVheyW91qxcybBKes8lOyczzvAI_KqCY3H5FpkZ4DrfqTxACf002TAkloCYUi0CN2Uf5k502LCN8bOw7MwiZIXITzWJXYNWjLvsoBVsCBxyJiEkN28bmOsPP2IuGCIpFK7ko_6T1RVw/Fmx5EDD0SNwx39kJyCn5-ZVcir7P5oKmnkvtTDp0ZDE",
+              "width": 113,
+              "height": 36
+            },
+            "large": {
+              "url": "https://v5.airtableusercontent.com/v3/u/48/48/1764979200000/f7V-CiL0eWS0JxKcQ6WNUg/cMjLM9z8e-Gn7Ch0n-BCP4CqE-_J1AHJvjAn1LcD5DNP0sv_vgKF14tdxLxp2n6ULjyJ4_FIdggaRr9vh_OkgwalZD5jrEA8yt3cSvu27nYZaB4dkVOXwIZlS6t9MaYyW1DZ-sbc28tGfie2cv8FbA/iOYIZabVrSA1jC0EU8ykOdf0IvyOn5uHHWHVEdJgDWk",
+              "width": 714,
+              "height": 227
+            },
+            "full": {
+              "url": "https://v5.airtableusercontent.com/v3/u/48/48/1764979200000/A-M_eTOSQFhj1oYOQ4eVkg/AKPhHynHIFCgcA10_gwMKyrHNZ4thmh4tc3DHGM6PZ34d5bwPa9fkPGt9LfS0TeTrA0tEnnqRFaBg_SfTmQiShSOWuxI57rJO8i7N75m9JGPGrEkm09ruxr8CW4Dcj2wKr3Vh6dhk5gePy05RZr8cA/T4qc5TFDKtf42zJxL5T06J7xigAxvlIWezq-wcvUn6M",
+              "width": 714,
+              "height": 227
+            }
+          }
+        }
+      ]
     }
   },
   {
@@ -776,12 +897,15 @@
       "Org MPTFO URL [Formula]": "https://mptf.undp.org/participating-organizations/OCHA",
       "Org Transparency Portal": "https://www.unocha.org/our-funding",
       "Org Programme Budget": "https://open.un.org/un-secretariat-financials/expenses",
+      "Est. Org Budget": 314000000,
       "Org HQ Country": "United States",
       "Has received CRAF'd Funding?": "NO",
       "org_key": "ocha",
       "Org Type": "United Nations System",
       "HDX Org Key": "un-ocha",
-      "IATI Org Key": "XM-DAC-41127"
+      "IATI Org Key": "XM-DAC-41127",
+      "Budget Source": "Annual Report",
+      "Last Updated": 2024
     }
   },
   {
@@ -812,10 +936,13 @@
       "Org IATI Name": "N/A",
       "Org MPTFO Name": "PRIO",
       "Org MPTFO URL [Formula]": "https://mptf.undp.org/participating-organizations/PRIO",
+      "Est. Org Budget": 15455407.5,
       "Org HQ Country": "Norway",
       "Has received CRAF'd Funding?": "YES",
       "org_key": "prio",
-      "Org Type": "Research / Think Tank"
+      "Org Type": "Research / Think Tank",
+      "Budget Source": "Annual Report",
+      "Last Updated": 2024
     }
   },
   {
@@ -831,7 +958,9 @@
         "reckIAhFXgj4XL29b"
       ],
       "org_key": "fews-net",
-      "Org Type": "Government / Public Sector"
+      "Org Type": "Government / Public Sector",
+      "Last Updated": 2024,
+      "Link to Budget Source": "none"
     }
   },
   {
@@ -857,7 +986,38 @@
       ],
       "Org HQ Country": "United States",
       "org_key": "data-pop-alliance",
-      "Org Type": "Non-Governmental Organization"
+      "Org Type": "Non-Governmental Organization",
+      "Budget Source": "Annual Report",
+      "Last Updated": 2024,
+      "Link to Budget Source": "https://datapopalliance.org/annual-report-overview-and-outlook-2023-2024/#support",
+      "Budget Source Screenshot": [
+        {
+          "id": "attWT8KG25GELXO0k",
+          "width": 2108,
+          "height": 930,
+          "url": "https://v5.airtableusercontent.com/v3/u/48/48/1764979200000/WeyZYyaWS2q0qb5JDKRpBw/zou_Aox02a4cjCEhybnyriXtIh9A3a1MMM2hDqxMRBCDwuhK6EonOyjycu51Kg4V4MrrstSa2ufLt9DkvKUJDvxo-WZerh-MZPl9VKzpnCjItqvMxBAzGwmQHmI0OvHQ8ivfmdhwvCGg86FhLoDJaaXfU_yKlKgM_vqW9OrYpNezMLq9ZhnT1gfmHUsvNFG_/OWoSyVi9wIMjDEtHvwWgcnRdHCZ5YMLnmUXvBDftLXs",
+          "filename": "Screenshot 2025-12-04 at 2.51.46 PM.png",
+          "size": 164427,
+          "type": "image/png",
+          "thumbnails": {
+            "small": {
+              "url": "https://v5.airtableusercontent.com/v3/u/48/48/1764979200000/OryjxVcs5mNOVYO48KnC5g/MmasN5bUM9rZRwBKrhg6l1EQOUETScWiXC7kqQfOV_89KFpEW8u4-Trqyvww0JdpyAB1QpxMqrWjggeiAYENH5AMCPU64dO3WPK9GfPXsW63Z_i60KsEWU3D30-CkyBI6zJSwb9-riyNxI5e2f6j6g/Cye8f4MgWISoN703eTEhjqRJvTFeYP9QtZg-QvWZEbA",
+              "width": 82,
+              "height": 36
+            },
+            "large": {
+              "url": "https://v5.airtableusercontent.com/v3/u/48/48/1764979200000/lIBN2FAWHie_VxGUUUW6zA/MesYZQbGs7i7G4y5NdFKr1eR4NXrGy3pQDFasWws2_olOuVK3KovWr-3msdHViHZApKBEePrunApCVVXvXZTV6QtQ2Rz8uq5kS9450FW8z2nUyM43hW-3wdVLYjY7MiCCYlvQK-e7Fj26GHfZ5EBsg/3HHcLcmxT9QqXVzhjUs7uPAuldbmqhxgdT7aGDu6KLY",
+              "width": 1161,
+              "height": 512
+            },
+            "full": {
+              "url": "https://v5.airtableusercontent.com/v3/u/48/48/1764979200000/l_675ZDbN9jZjZwXyTMsdA/pggbhU_w5rUvTtIHhyywRJnyuJq5_axaiWUujucnGfFxjzSAPgtxPJSgFE-nOgt-VMyXOC9LAji8T1ZIfnEy1enOscV3DYc0EGHfnZX7fm3TNqOjXMS2dqoGc1Q52fylFq0LaYNJ08Xqybd6TlS2OA/zs06VLuACB0ROigTFzyhfMATfBfobb-Yg1MqOLqyecY",
+              "width": 2108,
+              "height": 930
+            }
+          }
+        }
+      ]
     }
   },
   {
@@ -887,11 +1047,43 @@
         "recgAR3TqI7vt3ypc"
       ],
       "Org IATI Name": "International NGO Safety Orgnisation",
+      "Est. Org Budget": 48551935.5,
       "Org HQ Country": "United Kingdom",
       "Has received CRAF'd Funding?": "NO",
       "org_key": "inso",
       "Org Type": "Non-Governmental Organization",
-      "IATI Org Key": "NL-KVK-73728489"
+      "IATI Org Key": "NL-KVK-73728489",
+      "Budget Source": "Annual Report",
+      "Last Updated": 2024,
+      "Link to Budget Source": "https://ngosafety.org/our-funding/",
+      "Budget Source Screenshot": [
+        {
+          "id": "attm8I5iT827OvQKx",
+          "width": 1420,
+          "height": 840,
+          "url": "https://v5.airtableusercontent.com/v3/u/48/48/1764979200000/35sjHuhotrzDTI8cZSzIhg/PjOmHTcTUsdY-98MGjZ3S6FNW06p2oMFEnBnozbYcJ8F7iqXU1LtYmA0qmU3ADbtvJ1eQOygksFLs-YWn7JYWwz-SgI79jMUBbrGU8ZAHQClnSMpeZJc9jAeBZMUTd8P_Vr4VrWvGTXsnJO5qqzfNDIi9c3-03mLzoHYcKVzQVF1pj-rKry1E4ptk_ITBk9W/9BEzPvf8M3Ia87K0tkuZZCgOEpKO-c8RkMbc-Aa4kL0",
+          "filename": "Screenshot 2025-12-05 at 2.55.33 PM.png",
+          "size": 161805,
+          "type": "image/png",
+          "thumbnails": {
+            "small": {
+              "url": "https://v5.airtableusercontent.com/v3/u/48/48/1764979200000/ceDiZAxB3AUDnNF90DhKSg/RVvWH_JNJ1I0s41cUYwDGY6giMCqRsQgzhnqaBo4ZCO3qd1ITn7zCfhd-OS-XKtZsYSMI--mv8mIkF1nw76VP_15L2FiWu5Q3pO4V8PTxhgED0WEvWtsIEXc3MtGI5RRKC3NXvfhfYzhBtLapphQpg/y4YbeCMgtKEVLLJo3oTtILqPTwlVIWv54aNUGHFjgjI",
+              "width": 61,
+              "height": 36
+            },
+            "large": {
+              "url": "https://v5.airtableusercontent.com/v3/u/48/48/1764979200000/evyN0JYWowR6zT7ybYYgQg/_usAfgEUKhJ3Kk51U0D8hlUwkTPuLKFS6TqAnvwz7wsbnj05fpboOvJVboJM9v_TQnksL-wn8XhXpJejQQPTrJup-80RejD1hz8LR4kSdQNZPWpJN_g514cXqFNoOjKGTYazu2-zGsaremK0SAR0WA/akuP9bCZ9ASAP64X0bgq1ciQHYRfp2PHZfyHSHM2u48",
+              "width": 866,
+              "height": 512
+            },
+            "full": {
+              "url": "https://v5.airtableusercontent.com/v3/u/48/48/1764979200000/N4_qzgOVHd9d-T4UsczsMQ/IhlMHTR9SFJG9-RLhbn9pkYH2ahpXGhwu-aaVO8IePlowQ6tS7UipXcCEjUS3_reCg4kkMUQYkyGib_pyZ5MW5wxxZHUBJHtRUjxejuT2t7MOtl5HyItn4WFSSeQ-yvJK-A6AUEkb3ikpHXIAo5law/kzvWrBA6jgRXuUaSEwD9iK5k7t914_a8adzSWxWdqE0",
+              "width": 1420,
+              "height": 840
+            }
+          }
+        }
+      ]
     }
   },
   {
@@ -921,11 +1113,14 @@
         "recfNuwRv2DcnUQCK"
       ],
       "Org IATI Name": "N/A",
+      "Est. Org Budget": 3604651.17,
       "Org HQ Country": "Switzerland",
       "Has received CRAF'd Funding?": "NO",
       "org_key": "gem",
       "Org Type": "Non-Governmental Organization",
-      "HDX Org Key": "gem-foundation"
+      "HDX Org Key": "gem-foundation",
+      "Last Updated": 2024,
+      "Link to Budget Source": "none"
     }
   },
   {
@@ -934,7 +1129,7 @@
       "Org Full Name": "Fields Data",
       "Org Short Name": "Fields Data",
       "Org Website": "https://www.fieldsdata.org/",
-      "Org Description": "Focus on having data ready before the occurrence of a disaster, thereby saving lives through preparedness and efficient response.",
+      "Org Description": "Fields Data focusses on having data ready before the occurrence of a disaster, thereby saving lives through preparedness and efficient response.",
       "Link to Data Products Overview": "<https://data.humdata.org/organization/stats/fieldsdata>\n",
       "Provided Data Ecosystem Projects": [
         "reckhF1PTR2hh135J",
@@ -947,7 +1142,9 @@
       "Has received CRAF'd Funding?": "NO",
       "org_key": "fields-data",
       "Org Type": "Non-Governmental Organization",
-      "HDX Org Key": "fieldsdata"
+      "HDX Org Key": "fieldsdata",
+      "Last Updated": 2024,
+      "Link to Budget Source": "none"
     }
   },
   {
@@ -965,7 +1162,8 @@
       "Has received CRAF'd Funding?": "NO",
       "org_key": "mapswipe",
       "Org Type": "Non-Governmental Organization",
-      "HDX Org Key": "hot"
+      "HDX Org Key": "hot",
+      "Last Updated": 2024
     }
   },
   {
@@ -978,10 +1176,16 @@
       "Provided Data Ecosystem Projects": [
         "rechQ1azyTpypEDEy"
       ],
+      "Org Donor Agencies": [
+        "reckIAhFXgj4XL29b"
+      ],
+      "Est. Org Budget": 52,
       "Org HQ Country": "United States",
       "Has received CRAF'd Funding?": "YES",
       "org_key": "korbel",
-      "Org Type": "Academia"
+      "Org Type": "Academia",
+      "Budget Source": "Annual Report",
+      "Last Updated": 2024
     }
   },
   {
@@ -1019,12 +1223,44 @@
       "Org IATI Name": "Danish Refugee Council",
       "Org MPTFO Name": "DRC",
       "Org MPTFO URL [Formula]": "https://mptf.undp.org/participating-organizations/DRC",
+      "Est. Org Budget": 520000000,
       "Org HQ Country": "Denmark",
       "Has received CRAF'd Funding?": "NO",
       "org_key": "drc",
       "Org Type": "Non-Governmental Organization",
       "HDX Org Key": "danish-refugee-council",
-      "IATI Org Key": "DK-CVR-20699310"
+      "IATI Org Key": "DK-CVR-20699310",
+      "Budget Source": "Annual Report",
+      "Last Updated": 2024,
+      "Link to Budget Source": "https://drc.ngo/media/5oedlmso/annual-report_2024_drc_final.pdf",
+      "Budget Source Screenshot": [
+        {
+          "id": "attvG0OdQ5Nz5vQ2T",
+          "width": 703,
+          "height": 301,
+          "url": "https://v5.airtableusercontent.com/v3/u/48/48/1764979200000/mRP4vkWlmsaBvzrhWyRgjg/gGWdMEqK_pWZdzKHYjx1sxxAYXtyG4i44Fq4yFXuQ2V_BoIJnpGXOqkgnzSkgm7MEXihMROZVdAmjY4BVziAjPf88JDtv9lh92h_R1jk5AX8oPOhm_0pK6TaB0yfXYfLmd3zAEPZm64ogLYet8nrdvcbJ0EMqMefURZPdVSSDBikpFhBOO6obnf0-TOafiQ0/Pj_HtEaOP2akQ1rL7E1jooooFH92W-Qonb79a69ztfA",
+          "filename": "Screenshot 2025-12-04 at 4.22.54 PM.png",
+          "size": 40205,
+          "type": "image/png",
+          "thumbnails": {
+            "small": {
+              "url": "https://v5.airtableusercontent.com/v3/u/48/48/1764979200000/z7IwSWn-3pfOvOmXopiXmg/ms-Ne0rVpHpP0omb9OmOP6i7LILvUP-3EI8KlcjN5j2ynIsLmyQPDG__dG9YEfF9C0MWGxPVm9o9sD2njkY0-3-kpVmRJQO4WFBx_xFGpk0AOljec3qE7iq4bn7BfrPgzwTVIQZXhvObsETQtdA0tw/n-OKpdwXKe1-XvYYpCezCSBMjkUfnzlU3FTFJhBQOPo",
+              "width": 84,
+              "height": 36
+            },
+            "large": {
+              "url": "https://v5.airtableusercontent.com/v3/u/48/48/1764979200000/stZibOh_xYRjSoyjGBb2EA/oXVYoihmVvrgP95IG0gk67amyKmJUiehPaLNotEtQCapI8LifQbTBtwu-JAUe6h0jcPyX5_JlINSV2jWym3dIwLkk1PPQ40xqVvDiRFsmmZjRpXW7YmVapYMlaeihPz-w8z2VClmIy7HIayVZoYEHg/T_FFjj97bedtpmeOW2tlkhQYGvF1xn6CeTDfUxcqFPc",
+              "width": 703,
+              "height": 301
+            },
+            "full": {
+              "url": "https://v5.airtableusercontent.com/v3/u/48/48/1764979200000/X_xXdkUZyPt4rvnMRmxV6A/-hy4PWjFtNZSxZHcwK-DsMli3z2jollZABuXg0M-S8K2ViINt92i5Duqtl12ugWqXZcu3OkmFagZvS09il8e4Icrt8kKvDV6SpAH_OL7zIxJ84P0C1QVqBXcUq5dBZIEcdgLebXuHSsQ5Slh2JwdDw/Z7aeIXFhXmCx8MEJ5MJ-Qn_D0-iPZB9Wqm9pXFLYYrs",
+              "width": 703,
+              "height": 301
+            }
+          }
+        }
+      ]
     }
   },
   {
@@ -1057,12 +1293,16 @@
         "rec2KBp1IAA5TtnQl"
       ],
       "Org IATI Name": "IMPACT Initiatives",
+      "Est. Org Budget": 43320889,
       "Org HQ Country": "Switzerland",
       "Has received CRAF'd Funding?": "NO",
       "org_key": "reach",
       "Org Type": "Non-Governmental Organization",
       "HDX Org Key": "reach-initiative",
-      "IATI Org Key": "XM-OCHA-HPC9829"
+      "IATI Org Key": "XM-OCHA-HPC9829",
+      "Budget Source": "Annual Report",
+      "Last Updated": 2024,
+      "Link to Budget Source": "test"
     }
   },
   {
@@ -1079,7 +1319,8 @@
       "Has received CRAF'd Funding?": "YES",
       "org_key": "un-dppa",
       "Org Type": "United Nations System",
-      "HDX Org Key": "unpeacesecurity"
+      "HDX Org Key": "unpeacesecurity",
+      "Last Updated": 2024
     }
   },
   {
@@ -1093,12 +1334,15 @@
         "recQUVhcVyxZlXJ3H"
       ],
       "Org IATI Name": "United States Agency for International Development (USAID)",
+      "Est. Org Budget": 34050000000,
       "Org HQ Country": "United States",
       "Has received CRAF'd Funding?": "NO",
       "org_key": "state-department",
       "Org Type": "Government / Public Sector",
       "HDX Org Key": "us-state-hiu",
-      "IATI Org Key": "US-GOV-11"
+      "IATI Org Key": "US-GOV-11",
+      "Budget Source": "Annual Report",
+      "Last Updated": 2024
     }
   },
   {
@@ -1125,11 +1369,43 @@
         "rec665usRSgrGizMC"
       ],
       "Org IATI Name": "Humanitarian OpenStreetMap Team",
+      "Est. Org Budget": 8387022,
       "Org HQ Country": "United States",
       "Has received CRAF'd Funding?": "NO",
       "org_key": "hot",
       "Org Type": "Non-Governmental Organization",
-      "HDX Org Key": "hot"
+      "HDX Org Key": "hot",
+      "Budget Source": "Annual Report",
+      "Last Updated": 2024,
+      "Link to Budget Source": "https://cdn.hotosm.org/website/2023-2024-ImpactReport_2025Updated.pdf",
+      "Budget Source Screenshot": [
+        {
+          "id": "attrDMmgNwFsTBUPV",
+          "width": 1120,
+          "height": 1146,
+          "url": "https://v5.airtableusercontent.com/v3/u/48/48/1764979200000/WD5quxOz60Z0fTT4KTJ6ag/jJvPeZTuVga83cVH3ZECHPDDl3IqYbDcwi4jvjxkYRAyyE9Neko0lIBZj2YsAIMv2uyzcc1CDG9vHpH0z9QfDpRO1Z252iCUAUGat_yE5MJZPBIUVRV1nDZu65j4SxJa5xXXuFuI9l_sxH_ahKuq9kQan4G1qouULpkjYyi87gWl72X3vu9Arbm_No4Q-ULJ/_CLoCkcB3Hv46FXnlKblkJjLfME32zzhPS4s3QUlJY4",
+          "filename": "Screenshot 2025-12-05 at 2.19.25 PM.png",
+          "size": 172155,
+          "type": "image/png",
+          "thumbnails": {
+            "small": {
+              "url": "https://v5.airtableusercontent.com/v3/u/48/48/1764979200000/J1K7M0bQ1fdJwsTNTOYomQ/-sbD6p0pwcDlzBxjyOevadW90uTAOkllXCI_bR7fh4O-nmqY3b-sQPaFSD01oT-7i3b-ZLtYL9evfe2IFbz1kcW6inaKQx4BN9S51rfVZNuHFqYZLkFKdksMLIQSPY8ZB-n4aIHPU3O_Ew7SplK-Og/7O9IICu1-LBUmmMjbUBolETK7bJAFHhT1cLaDoToESU",
+              "width": 35,
+              "height": 36
+            },
+            "large": {
+              "url": "https://v5.airtableusercontent.com/v3/u/48/48/1764979200000/zxfrXQMDMH_ercOQ2n_MwA/TKFyggRq9-9y1kXnOTOHJrlbNJoxff396lX54rce7mVFHmwij40n6CfYSCJjpIcOf5KDpVNJDTTRFHD2-lORViokzOpC57Q9hmGlxK6eBCLc69lszXoy_1M2cQfV-BEpKp3AaWjKgy-O4U98Z-2UKA/D97HSi6hwc8wROjqyBCOXcDkggULxUomb8x7uACl4gg",
+              "width": 512,
+              "height": 524
+            },
+            "full": {
+              "url": "https://v5.airtableusercontent.com/v3/u/48/48/1764979200000/g0YtgKEUQ-8fzaw1aDHanQ/Rk4Xv0PzBgzBdiaE8NIgtHfUfHQqeNLMP46sY2aJ3XgdKgh1lkd7N_1h12aequfdECHZFeKut1nTow-mBkCZACrzwDVyhgDJwnUPZOgXYZk0ov5dsFixFEZTRB2WXhfm_wthiVr2WTiUMHJlcoqbRw/P7yxcPQWkg6Cj0YVvQ5gfrGDUBm0L1szVPVoNnaV3_g",
+              "width": 1120,
+              "height": 1146
+            }
+          }
+        }
+      ]
     }
   },
   {
@@ -1155,11 +1431,43 @@
       "Org IATI Name": "N/A",
       "Org MPTFO Name": "ACLED",
       "Org MPTFO URL [Formula]": "https://mptf.undp.org/participating-organizations/ACLED",
+      "Est. Org Budget": 15656938,
       "Org HQ Country": "United States",
       "Has received CRAF'd Funding?": "YES",
       "org_key": "acled",
       "Org Type": "Non-Governmental Organization",
-      "HDX Org Key": "acled"
+      "HDX Org Key": "acled",
+      "Budget Source": "Tax Filing",
+      "Last Updated": 2024,
+      "Link to Budget Source": "https://projects.propublica.org/nonprofits/organizations/470972683",
+      "Budget Source Screenshot": [
+        {
+          "id": "attE8sVd2sfRXSiVA",
+          "width": 1040,
+          "height": 474,
+          "url": "https://v5.airtableusercontent.com/v3/u/48/48/1764979200000/pvxpt9qVxafNb6WMpFRNnw/QTuCKAWByEXGEutjUe4gUeYHu-mGTDkekyRmAxche5ya0N396K4TSZc5alclO47xjXDKL5RfVdfyA2LP-yAJ9xRD5HJ7g9mpROLVuQyJi-gFZaxBBTabji0CGJxVXyYKi-zU8GiKUPJYbV2B0QtZ0_BRD03rw-UJ9Rw9PPokuYnLRvL_OKqHTgb0dzfzuJvG/l8ZPATEv-zJFMNOunQ2TqWMdGeoWiH_--dp0Nu4_hZc",
+          "filename": "Screenshot 2025-12-04 at 11.18.59 AM.png",
+          "size": 86889,
+          "type": "image/png",
+          "thumbnails": {
+            "small": {
+              "url": "https://v5.airtableusercontent.com/v3/u/48/48/1764979200000/EiEvmW3vxpM-DQVImfTFgQ/dySXjXz6gYPxZd_vfpV1nAu5J5heWcDlfw4oTg0AQbi9-OH3LCyaZS5lILNlJRLUr0tb7_gclOKVOB3KghA8CiL9Xk2ESiYUX9T5vysaprAhZBsuEzXjkaWg-a5xU-VLaDrExaVPdM447al4jnQM9g/MdOQLEGCiJQizQioWuoKBQ1XVjzWR-UOu4Z8adr9pKQ",
+              "width": 79,
+              "height": 36
+            },
+            "large": {
+              "url": "https://v5.airtableusercontent.com/v3/u/48/48/1764979200000/PiHFRUpCDhRPxJ0oa40hPg/iWeI0OqKE8TKYnoFL8d91Ow2OAWOpBY8SUKHaBIkJb3TwWwd5-Eqo-TdyziMSQssw2uMYFneKBm9uG0CWprkCr0-Tc6HV3SW-kWHdvZyjQXyjp8Mn22vH-8cWmmlb1-wUSO26Q-55-YpjQoFWrUWXA/TFA3OMj5KMAmGMbJzOyZRB5hU77htpvi7WYn9hqh-p4",
+              "width": 1040,
+              "height": 474
+            },
+            "full": {
+              "url": "https://v5.airtableusercontent.com/v3/u/48/48/1764979200000/n6yIwJLhZhvM7x8zyaNybQ/AwqoTs1vpG5UhOq58JhOe9EzpIZOqoyCCmHNWnQMZatZRdm975KFBdcMoikXjjuEoENMjS6Q_spN8kJKP8eNIX3PqltU2qY0va6B6NkuXvx5Cv3oNyqBLCjQK_qvVhQrHViY4AFbNoHhl7KxnGtVeA/85tyNRm0MRhEgUGyPaXs5pyV1wx8po6gHrOD0yBIv6A",
+              "width": 1040,
+              "height": 474
+            }
+          }
+        }
+      ]
     }
   },
   {
@@ -1176,9 +1484,13 @@
       "Org Donor Agencies": [
         "rec3Ado0Jrl799Q8A"
       ],
+      "Est. Org Budget": 15,
       "org_key": "panda",
       "Org Type": "Non-Governmental Organization",
-      "IATI Org Key": "XM-OCHA-HPC9829"
+      "IATI Org Key": "XM-OCHA-HPC9829",
+      "Budget Source": "Annual Report",
+      "Last Updated": 2024,
+      "Link to Budget Source": "test"
     }
   },
   {
@@ -1208,7 +1520,8 @@
       ],
       "org_key": "worldpop",
       "Org Type": "Research / Think Tank",
-      "HDX Org Key": "worldpop"
+      "HDX Org Key": "worldpop",
+      "Last Updated": 2024
     }
   },
   {
@@ -1230,11 +1543,14 @@
         "recr77XDSfR0O9Jen",
         "recbtz43uuKKFVfvd"
       ],
+      "Est. Org Budget": 47000000,
       "Org HQ Country": "United States",
       "Has received CRAF'd Funding?": "NO",
       "org_key": "dhs",
       "Org Type": "Research / Think Tank",
-      "HDX Org Key": "dhs"
+      "HDX Org Key": "dhs",
+      "Budget Source": "Annual Report",
+      "Last Updated": 2024
     }
   },
   {
@@ -1253,10 +1569,42 @@
         "rec4fIAt1DD6Vprw7"
       ],
       "Org IATI Name": "N/A",
+      "Est. Org Budget": 2008567,
       "Org HQ Country": "Netherlands",
       "Has received CRAF'd Funding?": "NO",
       "org_key": "data-friendly-space",
-      "Org Type": "Tech / Consulting Provider"
+      "Org Type": "Tech / Consulting Provider",
+      "Budget Source": "Tax Filing",
+      "Last Updated": 2024,
+      "Link to Budget Source": "https://projects.propublica.org/nonprofits/organizations/832368839",
+      "Budget Source Screenshot": [
+        {
+          "id": "attlaRIeVMTUPueRN",
+          "width": 1644,
+          "height": 974,
+          "url": "https://v5.airtableusercontent.com/v3/u/48/48/1764979200000/zI-Wut5MjU8CnogT-I-vig/RiczFjKe-QRUeHk9p3da9m8RdxltjsLDPMjCDIGTcJqRV5MDcLwMVuHyTe-KTLeYHaLrxHuTVFWLEELODaMA3ZC_jL0hHg05f760bCGc9rY43Olo6jH3nx9SVhRgKcq1XRIPV8rBk5nRZ0StK0EvFSFTg4V7hd55tu0luy13Gm_poOkBmSzyJROoTtabYjOJ/Q4FEV2AU_07fNqL8M2no-pJvDpY9N6hClAwmr1PnrU0",
+          "filename": "Screenshot 2025-12-04 at 4.07.46 PM.png",
+          "size": 221269,
+          "type": "image/png",
+          "thumbnails": {
+            "small": {
+              "url": "https://v5.airtableusercontent.com/v3/u/48/48/1764979200000/2G20DoTWzZ9vCsuEvVn8mA/TBePdGUCXGDnaV_YC3PrjG2WWv420WiBPO9NXkhhD4TUHsGkwqu2q29FxESFyqny3iXaoeffCxxD5z8UN44F66TpZPZGATRbYiXGK-HzthLUA4ysVSxLWY_mRc4Ecb5zSqUvkUkVTC2P1okcr0sNUA/hYgiQMeAcQvDTk1Shfwh2ibUBCVZ3XTRNTwV1SRILZw",
+              "width": 61,
+              "height": 36
+            },
+            "large": {
+              "url": "https://v5.airtableusercontent.com/v3/u/48/48/1764979200000/KrOnvbOkvkikzqgWS2cQHA/GKeXS9gf0FlzOab5cxljiy4TUgxJCzFG2pGmHipm94SRtM5AbR6F4r0YqQACpiYfThQRo5i9krGLkxmnufo_ceD-rfJec-zm4dWp0mtb4DKrmf1eHPfT9GFXzcPoiYxf0UU77XbPtaa0hqynoZ_6_Q/FXBAMphw6AzeVxm566CvfFkgv9L7hNvdcHsxLUSBUic",
+              "width": 864,
+              "height": 512
+            },
+            "full": {
+              "url": "https://v5.airtableusercontent.com/v3/u/48/48/1764979200000/9GTNk6ern6cVaTYtUVL3eQ/D-vjicCPydO7tJF6rRHirYG6uWB18w2OEKtFzPBsmQhV1-nD8ujYPoQFJYrBqDMCCydd7FrVS009JlKKV-vgaen1TNxpbfCakURRz7giKIbcbsT7f66an_z-mYu-xCpqVnlSBK_TWp1wi2SDSGVgiw/x3F9mHZSTGjKU5E7qeeZq5PRNvCfFJLQiZKfwxaRLAo",
+              "width": 1644,
+              "height": 974
+            }
+          }
+        }
+      ]
     }
   },
   {
@@ -1308,12 +1656,15 @@
       "Org MPTFO URL [Formula]": "https://mptf.undp.org/participating-organizations/UNESCO",
       "Org Transparency Portal": "https://core.unesco.org/en/uses-of-funding",
       "Org Programme Budget": "https://core.unesco.org/en/sources-of-funding",
+      "Est. Org Budget": 900000000,
       "Org HQ Country": "France",
       "Has received CRAF'd Funding?": "NO",
       "org_key": "unesco",
       "Org Type": "United Nations System",
       "HDX Org Key": "unesco",
-      "IATI Org Key": "XM-DAC-41304"
+      "IATI Org Key": "XM-DAC-41304",
+      "Budget Source": "Annual Report",
+      "Last Updated": 2024
     }
   },
   {
@@ -1331,12 +1682,15 @@
         "rec0sY1I5JZz6ZsUE"
       ],
       "Org IATI Name": "MapAction",
+      "Est. Org Budget": 8452390.87,
       "Org HQ Country": "United Kingdom",
       "Has received CRAF'd Funding?": "NO",
       "org_key": "mapaction",
       "Org Type": "Non-Governmental Organization",
       "HDX Org Key": "mapaction",
-      "IATI Org Key": "GB-CHC-1126727"
+      "IATI Org Key": "GB-CHC-1126727",
+      "Budget Source": "Annual Report",
+      "Last Updated": 2024
     }
   },
   {
@@ -1377,11 +1731,43 @@
       "Org IATI Name": "International Crisis Group",
       "Org MPTFO Name": "ICG",
       "Org MPTFO URL [Formula]": "https://mptf.undp.org/participating-organizations/ICG",
+      "Est. Org Budget": 25737982,
       "Org HQ Country": "Belgium",
       "Has received CRAF'd Funding?": "YES",
       "org_key": "icg",
       "Org Type": "Non-Governmental Organization",
-      "IATI Org Key": "US-EIN-52-5170039"
+      "IATI Org Key": "US-EIN-52-5170039",
+      "Budget Source": "Annual Report",
+      "Last Updated": 2024,
+      "Link to Budget Source": "http://crisisgroup.org/sites/default/files/2024-11/ICG-2024-FS.pdf",
+      "Budget Source Screenshot": [
+        {
+          "id": "attZ0ypWd0HGlWtrW",
+          "width": 743,
+          "height": 365,
+          "url": "https://v5.airtableusercontent.com/v3/u/48/48/1764979200000/XIQGU2pws8hN3OtrTrG5dA/K1_ts6gelHugVbBWvZd7gEz2Rs02Z85KfsPa_I3AWcqMz9RnjuStZ94K1bqHTGwBjAb0Pvs1EJn8wqEA6b_czGF1GF7tqI_3jDBAd3JTt2NAVTBH_miHCDeZn7b7NZxN_HopLfS2WsFdSRLC4rcDrY3umRZbGo8L1wkhDJi94JWUau4FNU4PdqleZXZjHJIF/9TJb217EbyeYojoc9KIAZqQLEIaklbUrDgeinRelp1c",
+          "filename": "Screenshot 2025-12-05 at 2.25.36 PM.png",
+          "size": 77882,
+          "type": "image/png",
+          "thumbnails": {
+            "small": {
+              "url": "https://v5.airtableusercontent.com/v3/u/48/48/1764979200000/MrvVnlzR1eX5HTmOynVeKQ/-xERFc-4f2vArKrxRP0B7XJIHW_lHQVdeQ5o9lR9qK29ovzQm6dgkqRnrtJurIWHszyc_Zet4nIFWGw6ttJvvrX6jj35M_WgMneOAySVKI-aHFeC7ZLViHSzpn_UHf2GZo-bA_K28rGf7O3bix7QxQ/Esi7p3i7boF5-fkEFhuY1O_f_uVlXw6cJF-o4-ggqQA",
+              "width": 73,
+              "height": 36
+            },
+            "large": {
+              "url": "https://v5.airtableusercontent.com/v3/u/48/48/1764979200000/RSUC8J3Xycs5wPKJFJIqIA/Bw1eVHR4-pqeT9P_Y3ZO1J8gYwVUe5GdgUEuaJXOlfIOhO8yFLNwJKp_65pCEq5ZSGAZd8un_YK0Ngwsz9rbAD5WFdjLlnP-Z9nDD54WLjqXHi8c6-kMbNBtKskpnXWj_iXRWHUqm6urxXRlW-iJmg/BboExHpOdmpJz6mD39MCkdKxXt41DdFTOx4S7Urjegw",
+              "width": 743,
+              "height": 365
+            },
+            "full": {
+              "url": "https://v5.airtableusercontent.com/v3/u/48/48/1764979200000/lvXqrN45zo_yjg0fxl4CTg/1QiKHhdHV0KsLIJkIi7o8w9oOVzmT67-Bcy0-LlcL1F3IXm0_YXFaH1iY-9UGcwuuEMJKo41GjM9tbE2IbXVkLJmW8mVYdii24Fkr5Ggq7gTXxv94sAwO5ozbE4Ksmf0G_W78EQ6x_tFoDpvI5BhbA/tia0g158qk3Zw8zw6a52RTLzS_8G60yyPCdjsiVJzOs",
+              "width": 743,
+              "height": 365
+            }
+          }
+        }
+      ]
     }
   },
   {
@@ -1398,7 +1784,37 @@
         "reco4Um0k7Tgw2UCK"
       ],
       "org_key": "cu",
-      "Org Type": "Academia"
+      "Org Type": "Academia",
+      "Last Updated": 2024,
+      "Link to Budget Source": "https://www.coventry.ac.uk/the-university/financial-information/finance/",
+      "Budget Source Screenshot": [
+        {
+          "id": "attw9tC9ch9kC4mHq",
+          "width": 710,
+          "height": 522,
+          "url": "https://v5.airtableusercontent.com/v3/u/48/48/1764979200000/4rRc96s3gzD_jYa1PU2z3w/Gga1bJfRAdUHWQT5UsSRw-Sri0IhxH0L2zugh21um4Jgx5QPMeI62z7bKLbuzgB0sFGrXmAFKslwLXgBOhudKXjQvLYOanwVs1jPAma5sczAxYL0vh_spJPB2hglT2l10Cl0IlfzcjSxCRK6cgpaS584rOthwQowGOA3iffLmjzIUTIrYO_PdEjgFIJBPOTd/yNaHSfx_ES1ZDj7ILTy-p85q2KoltGBHyNntT63__Kk",
+          "filename": "Screenshot 2025-12-04 at 2.42.24 PM.png",
+          "size": 92671,
+          "type": "image/png",
+          "thumbnails": {
+            "small": {
+              "url": "https://v5.airtableusercontent.com/v3/u/48/48/1764979200000/_RtSObAxO4zY-uZBuDTtwQ/rewjwqTcpBSyzx6ERFGmzdeHYqgSMrXJnVmYXBEF3WcI7-B0wCExw0J83X9wb2l9XzH_c2KShO6RFGjFU0teHbAyEYGvsUPJIsPZNcl8wByMEBB2Qf_Us_lPZ3l-0J8VBvvsbMPJ2Mg3BbjGcI_Wpg/SWjEDPcJvfsLrPhT_BCYW7o_fHb-7Pu1-stw1Nm-72Q",
+              "width": 49,
+              "height": 36
+            },
+            "large": {
+              "url": "https://v5.airtableusercontent.com/v3/u/48/48/1764979200000/jEheBrNoygm--wI0RrtEeQ/Dbf_pDem6IXvomzYQZH5t6iHkLxCL94lOfv0Jcc4zQzWqEhYyIOxYVLbpGpRshw7zKkJfOq-VqG0Lo8c0nTpANUPmA9rZQOyBMbcD-F5Cn971KueN66pY0eu-Seut1o-Sco0DC9ySc-aY-9IS64JHg/EjzH_6I_-qtFsJ_Unbda5eQzuecQ9AuMTW9yzOd5UOA",
+              "width": 696,
+              "height": 512
+            },
+            "full": {
+              "url": "https://v5.airtableusercontent.com/v3/u/48/48/1764979200000/G7Wv9xCnlccYxjtDMMc36A/D3eHqlPCtmqqQILcJn-11jycBZJ_DmhIYdkFobKcTIF7fWkodu5HRJOuOE8iw7VBSikX3FUPXeSpjrE30N5I_9Cq9oQY8awOzR-q0ueHDeY7qeWTSI1VkIThI4j5u5IFQeJ75iZ0igRtDx7pgP5S_A/OeydTSeWSiZFztj2pf30ErSymNvWyotqmnazkM-CJK0",
+              "width": 710,
+              "height": 522
+            }
+          }
+        }
+      ]
     }
   },
   {
@@ -1411,8 +1827,12 @@
       "Provided Data Ecosystem Projects": [
         "recp4lLg28MQMpBnW"
       ],
+      "Org Donor Agencies": [
+        "reco4Um0k7Tgw2UCK"
+      ],
       "org_key": "qub",
-      "Org Type": "Academia"
+      "Org Type": "Academia",
+      "Last Updated": 2024
     }
   },
   {
@@ -1432,10 +1852,12 @@
         "rec9TITYUt2a5OaKT"
       ],
       "Org IATI Name": "N/A",
+      "Est. Org Budget": 2000000,
       "Org HQ Country": "Lebanon",
       "Has received CRAF'd Funding?": "NO",
       "org_key": "arab-barometer",
-      "Org Type": "Research / Think Tank"
+      "Org Type": "Research / Think Tank",
+      "Link to Budget Source": "none"
     }
   },
   {
@@ -1466,12 +1888,15 @@
         "recE3ZEHFRqbifGOn"
       ],
       "Org IATI Name": "International Federation of the Red Cross and Red Crescent (IFRC)",
+      "Est. Org Budget": 64282064.2,
       "Org HQ Country": "Switzerland",
       "Has received CRAF'd Funding?": "YES",
       "org_key": "ifrc",
       "Org Type": "Non-Governmental Organization",
       "HDX Org Key": "ifrc",
-      "IATI Org Key": "XM-DAC-21018"
+      "IATI Org Key": "XM-DAC-21018",
+      "Budget Source": "Annual Report",
+      "Last Updated": 2024
     }
   },
   {
@@ -1493,11 +1918,43 @@
         "recGNTHL9SKZxLDcw"
       ],
       "Org IATI Name": "N/A",
+      "Est. Org Budget": 126137856.56,
       "Org HQ Country": "Belgium",
       "Has received CRAF'd Funding?": "NO",
       "org_key": "ec-jrc",
       "Org Type": "Government / Public Sector",
-      "HDX Org Key": "joint-research-centre-of-the-european-commission"
+      "HDX Org Key": "joint-research-centre-of-the-european-commission",
+      "Budget Source": "Annual Report",
+      "Last Updated": 2024,
+      "Link to Budget Source": "https://commission.europa.eu/publications/annual-activity-report-2024-joint-research-centre_en",
+      "Budget Source Screenshot": [
+        {
+          "id": "atttR7W9qMYP2ATuz",
+          "width": 1028,
+          "height": 542,
+          "url": "https://v5.airtableusercontent.com/v3/u/48/48/1764979200000/mqmWvsvZdkYiTFf1PIuv4Q/bVRCG9SPN14enKspzzAtLr23cSx8yZ-RqzcaBM_a-j_I-WHNCZstKMbocT_JXxfPI7xMoljABSQx63cKiHlPQgbkXmSF80oSr0VFAwBwhYMfqhuEuXIJpsVxpwJeWsopOaLnPTUMNLIoZzse0mYKUEgwAOyKGq4IGniP2IkODGEfHebgPiaXjIkKaCA2uAqA/UAdftb-2m3En8WFxDrWRjOyvJQHpwjbip2atYa7Fxl8",
+          "filename": "Screenshot 2025-12-04 at 4.35.46 PM.png",
+          "size": 111970,
+          "type": "image/png",
+          "thumbnails": {
+            "small": {
+              "url": "https://v5.airtableusercontent.com/v3/u/48/48/1764979200000/lvp1kMkf2orxbHYp-wG4GA/wg6uy3vyT5eDeCs7ZK2DMA5Mag8E-2tRRi3olawoxL6LRI9nQ5QSqpXR5C82HZ5khG_f5Qbrt0uRrYmE89tIg96ejLHXnM9rxdZgH6Ca31PUCzSlb-aueIz5dMS4X-wPZI0nAC7yjwKIB1jC5wnWFg/LLTTfdgSCtuKRaBYX-glqML1rvBsKEzPxifWuzd8rYM",
+              "width": 68,
+              "height": 36
+            },
+            "large": {
+              "url": "https://v5.airtableusercontent.com/v3/u/48/48/1764979200000/Y_NL4XEBEYBmETYLWV_P1Q/4vVgqyRsT3OeTckC_4CuWU6IldbU4rtVNfQFzVPEukgbfrmF9K5mnnyYfKhf2hSBtw2DgOVlnAwA5urd5yjl9FQfQS4mmGdC_a88FumZbh9jobWZPl9TCDOyXB1DfsMxDPB2-YofCj3HGFuPvkpKtQ/M4p5NQDPRD-3QWVDoQzMBleQSntLDa2vepjxuazbMkM",
+              "width": 971,
+              "height": 512
+            },
+            "full": {
+              "url": "https://v5.airtableusercontent.com/v3/u/48/48/1764979200000/4UzYj8Hp2ZSQ0ncwKy-vkw/so3euohf3FbDvURMENYtSgGhsKIgqMDjtVu2_9YJoW2hXxD2Hk72aPaswAF7gQi4sUgmOjmOUYe4PIP2QzICWCWU34GXtiCqUGw_TmQfUeQj-6c5zJO3IzKoaD0M72t3U0ynJMZIahjGRz0PyTXVGQ/E9KQjf4n858k-U0RW0niseLq63HzRSIUIxxx35khkIQ",
+              "width": 1028,
+              "height": 542
+            }
+          }
+        }
+      ]
     }
   },
   {
@@ -1525,10 +1982,13 @@
       ],
       "Org IATI Name": "N/A",
       "Org Programme Budget": "https://www.unccd.int/sites/default/files/2024-11/2417493E.pdf",
+      "Est. Org Budget": 9620000,
       "Org HQ Country": "Germany",
       "Has received CRAF'd Funding?": "NO",
       "org_key": "unccd",
-      "Org Type": "United Nations System"
+      "Org Type": "United Nations System",
+      "Budget Source": "Annual Report",
+      "Last Updated": 2024
     }
   },
   {
@@ -1555,11 +2015,14 @@
         "rec57z0MkntuI0kvP",
         "recKVILBOB3NBEJlE"
       ],
+      "Est. Org Budget": 172992047.84,
       "Org HQ Country": "Switzerland",
       "Has received CRAF'd Funding?": "NO",
       "org_key": "wmo",
       "Org Type": "United Nations System",
-      "HDX Org Key": "world-meteorological-organization"
+      "HDX Org Key": "world-meteorological-organization",
+      "Budget Source": "Annual Report",
+      "Last Updated": 2024
     }
   },
   {
@@ -1601,11 +2064,14 @@
       "Org MPTFO Name": "UNDRR",
       "Org MPTFO URL [Formula]": "https://mptf.undp.org/participating-organizations/UNDRR",
       "Org Transparency Portal": "https://www.undrr.org/about-undrr/funding",
+      "Est. Org Budget": 69430000,
       "Org HQ Country": "Switzerland",
       "Has received CRAF'd Funding?": "NO",
       "org_key": "undrr",
       "Org Type": "United Nations System",
-      "HDX Org Key": "united-nations-office-for-disaster-risk-reduction-unisdr"
+      "HDX Org Key": "united-nations-office-for-disaster-risk-reduction-unisdr",
+      "Budget Source": "Annual Report",
+      "Last Updated": 2024
     }
   },
   {
@@ -1677,12 +2143,15 @@
       "Org MPTFO Name": "UNHCR",
       "Org MPTFO URL [Formula]": "https://mptf.undp.org/participating-organizations/UNHCR",
       "Org Transparency Portal": "https://d-portal.org/ctrack.html?search&publisher=XM-DAC-41121#view=main",
+      "Est. Org Budget": 4877004328,
       "Org HQ Country": "Switzerland",
       "Has received CRAF'd Funding?": "YES",
       "org_key": "unhcr",
       "Org Type": "United Nations System",
       "HDX Org Key": "unhcr",
-      "IATI Org Key": "XM-DAC-41121"
+      "IATI Org Key": "XM-DAC-41121",
+      "Budget Source": "Annual Report",
+      "Last Updated": 2024
     }
   },
   {
@@ -1710,11 +2179,43 @@
         "recACsCLhhDutMpAv"
       ],
       "Org IATI Name": "N/A",
+      "Est. Org Budget": 3900000,
       "Org HQ Country": "Netherlands",
       "Has received CRAF'd Funding?": "NO",
       "org_key": "3is",
       "Org Type": "Tech / Consulting Provider",
-      "HDX Org Key": "3is"
+      "HDX Org Key": "3is",
+      "Budget Source": "Annual Report",
+      "Last Updated": 2024,
+      "Link to Budget Source": "https://3is.org/annual-reports/",
+      "Budget Source Screenshot": [
+        {
+          "id": "attbB4bohaqFdexzC",
+          "width": 639,
+          "height": 155,
+          "url": "https://v5.airtableusercontent.com/v3/u/48/48/1764979200000/Fm7kPYW_6cHauzQcJiEf2A/4A5zHDe1d4m_jL2nYRSNuhu68AqdqN0k6peI_wS2HIcJo65yfiMOJ4vRe8_7RS6YnL5rc704xXkGlm9JbOu9o_bqsT5fd1aQ58bijLe5ZwDbae-ZSuCdIwxlHgRvjtPL05SjNCA43xsa3SuU4K-8gqdiOT5IIJu8qXpvLJn8Noy2gl5ANq0_svwjCpxUCFCI/6k9SduU_XB1tOkouLI_uvOeZ25BSsAMuxsGi6dJ9ExQ",
+          "filename": "Screenshot 2025-12-04 at 11.07.31 AM.png",
+          "size": 26847,
+          "type": "image/png",
+          "thumbnails": {
+            "small": {
+              "url": "https://v5.airtableusercontent.com/v3/u/48/48/1764979200000/U3MsIAoilbcVjkkuWfFckw/gvlL8PhR-oRd7XNIxJGC0_eyjjrKYxU4ypsqH3hLTl3lhV7dK-XzWIYy9gs3BdwW2tykwNiLdEhHCV5zvrqkyWB4Qrmn3-dIfpP0zCITcuAxe4KnSnvrMDzNCQsVDbQzYgyWR8fWD9YwT19wHHKjEw/2n9NLPHDQZJLp0PvpGgJe-a-LpfYKiWD7E6VC5k4a14",
+              "width": 148,
+              "height": 36
+            },
+            "large": {
+              "url": "https://v5.airtableusercontent.com/v3/u/48/48/1764979200000/DuQwMv93KnNRaeEETPzRvA/xIZQOWFAk8l1Fki_A_FZBzZAzKyibDG8uIjMMtcN_Y5HS50ACnfWKwDZGX1dSz3arcqAuLghkLOVfkdP-thXxtKL3TGGprV7ziYnC2odq2thxtVH2lZU8sEX8V7lhu7nkaUeQgvn0oE7H-gfx_IAZQ/NFonRJlKQ-_Mwvxswl6t2DxcR_fXfFdPM0xQxpNnYUE",
+              "width": 639,
+              "height": 155
+            },
+            "full": {
+              "url": "https://v5.airtableusercontent.com/v3/u/48/48/1764979200000/JssZ2tTJcJI6nUJyaX1MCw/GNJYsm9pth6NWV7Z2RN14e5ttcQSVFlkvk4xYZ1EDFFiGSIqUbpybd2muKSgqf07esLBZ6FQsWDg7b6gWB7uTysXw1niP6fyOidMHboCB-57PrqtaO6SnH1N5GpetdkWVODmPAETDADGiBv7zz6ngw/aWqH0UE6etneU4ID5ZaFmouyB_KsoIfm7UgGuD4oCqA",
+              "width": 639,
+              "height": 155
+            }
+          }
+        }
+      ]
     }
   },
   {
@@ -1745,10 +2246,42 @@
         "rec3ZfAfkmBo4n8is"
       ],
       "Org IATI Name": "N/A",
+      "Est. Org Budget": 8610000,
       "Org HQ Country": "Ghana",
       "Has received CRAF'd Funding?": "NO",
       "org_key": "afrobarometer",
-      "Org Type": "Research / Think Tank"
+      "Org Type": "Research / Think Tank",
+      "Budget Source": "Annual Report",
+      "Last Updated": 2024,
+      "Link to Budget Source": "https://www.afrobarometer.org/wp-content/uploads/2025/03/Afrobarometer-Annual-Report-2024-Eng.pdf",
+      "Budget Source Screenshot": [
+        {
+          "id": "attIwowOUzdqIbwdk",
+          "width": 811,
+          "height": 854,
+          "url": "https://v5.airtableusercontent.com/v3/u/48/48/1764979200000/slBUATtCIwIkxT_dR6LNUA/bOMQZKJzdEzfhutwGt1lyBS9oS2CR5fvbYapX0u0uUFk2dqpY5CD-oFcljdN2BKBS1nMVUKzwH04pQQLTKwwjoPVrNxnaETFQFCx3bzP5jnP4P52obnMUTdA-XXnIfwd5icSOfUrE2TVPbegjr24BEruhaRLoWpHT1T5yrT-kd4TKoHWEoL3K5oTOadlmJhX/_KK77bR1nrxYb1zX39ALY0WfnK-ktaOsrJCeaw20DA8",
+          "filename": "Screenshot 2025-12-04 at 11.28.08 AM.png",
+          "size": 164830,
+          "type": "image/png",
+          "thumbnails": {
+            "small": {
+              "url": "https://v5.airtableusercontent.com/v3/u/48/48/1764979200000/F5X4xylSIBSUgpALbJn9MA/2E5EEsgx5EAPlZKa_uAVFaYIhXznWHjv4ZeoSHeEipnRUdrirdSfWWo9oZ-ksvpRMaD_E3Dv3aYuc0DOAFujT4CgmpCxz6sUlw9NTrENVVyKLTfpVoB6fUIil8K3ngllKU0S0pXuAFjKkZB9h3xG0g/In_Lt4zYowgjc5FqO6FwSHItgv89Ng-WoBuD79a97BU",
+              "width": 34,
+              "height": 36
+            },
+            "large": {
+              "url": "https://v5.airtableusercontent.com/v3/u/48/48/1764979200000/e0tY-gNxtN3pryNFdtItOQ/Utyf1gVYPkRJDn4oEPfxlbAt_ngY0wMQI8zk0IZeqqUeg7oC5ryDToSCLVBhb7jg0BsnCgYmtDHaNDO3Jiu9v4ZylTI0J9rB28VsD4PNUTi6l7OZwYnrybveJHD_IC3FqV7vZEUb4lPRP8mqM1QXKQ/AwPW8SP3ebV2rYUDPyj7TGa--yeOCijTQBgb4Bk18bg",
+              "width": 512,
+              "height": 539
+            },
+            "full": {
+              "url": "https://v5.airtableusercontent.com/v3/u/48/48/1764979200000/sIANpodFUi85LxPDTG1J-w/Tpm1RLWQWtq2lNll8p4zooHY0e16vTLtfOwYCZzDphCqSwFjetIlJHnsBf4DeiuhprH178UMMBgPHVsbqUJZMGSgyQiqpxpuPXmW8PJLvFZcJb7Aw4nKrN5kuDwmsaZB0GSwTnFRdkMR5cLIMyN5LA/JLrWh26xq2znSTdS5aK170CVA23hpCQwFc24swZ_C5g",
+              "width": 811,
+              "height": 854
+            }
+          }
+        }
+      ]
     }
   },
   {
@@ -1771,11 +2304,14 @@
       "Org IATI Name": "N/A",
       "Org MPTFO Name": "ICPAC_IGAD",
       "Org MPTFO URL [Formula]": "https://mptf.undp.org/participating-organizations/ICPAC_IGAD",
+      "Est. Org Budget": 9000000,
       "Org HQ Country": "Kenya",
       "Has received CRAF'd Funding?": "YES",
       "org_key": "icpac",
       "Org Type": "International Organization",
-      "HDX Org Key": "igad-climate-prediction-and-application-center"
+      "HDX Org Key": "igad-climate-prediction-and-application-center",
+      "Last Updated": 2024,
+      "Link to Budget Source": "none"
     }
   },
   {
@@ -1807,12 +2343,15 @@
       "Org MPTFO URL [Formula]": "https://mptf.undp.org/participating-organizations/FAO",
       "Org Transparency Portal": "https://www.fao.org/transparency",
       "Org Programme Budget": "https://www.fao.org/transparency/dashboards/programme-budget-hr",
+      "Est. Org Budget": 2000000000,
       "Org HQ Country": "Italy",
       "Has received CRAF'd Funding?": "NO",
       "org_key": "fao",
       "Org Type": "United Nations System",
       "HDX Org Key": "fao",
-      "IATI Org Key": "XM-DAC-41301"
+      "IATI Org Key": "XM-DAC-41301",
+      "Budget Source": "Annual Report",
+      "Last Updated": 2024
     }
   },
   {
@@ -1831,10 +2370,13 @@
         "rec1VhOJv9U6QKBBs"
       ],
       "Org IATI Name": "N/A",
+      "Est. Org Budget": 6700000000,
       "Org HQ Country": "United States",
       "Has received CRAF'd Funding?": "NO",
       "org_key": "uc-irvine",
-      "Org Type": "Academia"
+      "Org Type": "Academia",
+      "Budget Source": "Annual Report",
+      "Last Updated": 2024
     }
   },
   {
@@ -1847,9 +2389,13 @@
       "Provided Data Ecosystem Projects": [
         "recp4lLg28MQMpBnW"
       ],
+      "Org Donor Agencies": [
+        "reco4Um0k7Tgw2UCK"
+      ],
       "Org HQ Country": "United Kingdom",
       "org_key": "uosa",
-      "Org Type": "Academia"
+      "Org Type": "Academia",
+      "Last Updated": 2024
     }
   },
   {
@@ -1873,12 +2419,15 @@
       "Org IATI Name": "The World Bank or World Bank Trust Funds",
       "Org MPTFO Name": "IBRD",
       "Org MPTFO URL [Formula]": "https://mptf.undp.org/participating-organizations/IBRD",
+      "Est. Org Budget": 117500000000,
       "Org HQ Country": "United States",
       "Has received CRAF'd Funding?": "NO",
       "org_key": "world-bank",
       "Org Type": "International Organization",
       "HDX Org Key": "world-bank-group",
-      "IATI Org Key": "44000"
+      "IATI Org Key": "44000",
+      "Budget Source": "Annual Report",
+      "Last Updated": 2024
     }
   },
   {
@@ -1896,7 +2445,8 @@
       ],
       "Org HQ Country": "United States",
       "org_key": "wpf",
-      "Org Type": "Academia"
+      "Org Type": "Academia",
+      "Last Updated": 2024
     }
   },
   {
@@ -1930,11 +2480,43 @@
         "recGMYeDQSV7jffjs"
       ],
       "Org IATI Name": "N/A",
+      "Est. Org Budget": 6998718,
       "Org HQ Country": "Norway",
       "Has received CRAF'd Funding?": "YES",
       "org_key": "idmc",
       "Org Type": "Non-Governmental Organization",
-      "HDX Org Key": "international-displacement-monitoring-centre-idmc"
+      "HDX Org Key": "international-displacement-monitoring-centre-idmc",
+      "Budget Source": "Annual Report",
+      "Last Updated": 2024,
+      "Link to Budget Source": "https://api.internal-displacement.org/sites/default/files/publications/documents/IDMC-Annual-Report-2023.pdf?_gl=1*14qkjlz*_ga*MTMwODgzNTM2Ni4xNzY0OTYzMDY1*_ga_PKVS5L6N8V*czE3NjQ5NjMwNjQkbzEkZzEkdDE3NjQ5NjMxOTQkajU3JGwwJGgw",
+      "Budget Source Screenshot": [
+        {
+          "id": "att6Lg3iFZ139wRzb",
+          "width": 697,
+          "height": 688,
+          "url": "https://v5.airtableusercontent.com/v3/u/48/48/1764979200000/5E9lKMx98SBvyimZZSpXFQ/M5kjF6OAGQnUUwGBs4JHABU2rSCqG1dTDiVvu1wazvzEEq9cO0j2FYlq8FZCesucInnYBT5-F6twolrpPH0VfH5q3s9tCJ5-tWy-C7l15yz6UASDq5r3sk8DuSjjF82Ow2wXdN4ZFLAw8XRUgzRIV65dJgfbTnsbzjKpawZURXpUR7YhYUHNv_LMd_nCkF8V/AX6CmA2I40jzZ296n6tQsl-rdinVixrDo4fyzfF5M28",
+          "filename": "Screenshot 2025-12-05 at 2.34.02 PM.png",
+          "size": 90579,
+          "type": "image/png",
+          "thumbnails": {
+            "small": {
+              "url": "https://v5.airtableusercontent.com/v3/u/48/48/1764979200000/tcF8ZfK3-lUC_zk934uRnw/uguAFE73RFwz6fl7yntZsbZrgGz5wiLuWi3JHjbR1jzP0log6L-z3m0qRNQGDA6rv_eYYK-HWsFtP89iy5VZraYnNsHMiprbkjmv3vytuz_wKkTJJEGnEGqGd6ZhL0l-z-x6j8d1g3zou3wk2-pT6A/f7OMEs6QH12Ot4RyEM88J2tMcV8R5B-uFXoGph2VDVc",
+              "width": 36,
+              "height": 36
+            },
+            "large": {
+              "url": "https://v5.airtableusercontent.com/v3/u/48/48/1764979200000/JtD9xk-8cqd3tI95C2NJfw/Oxv9JUWpTZ3q_NgDRNdG4MFsp_fIBdOOMLkdcxPkk_Wvtq1-k07Hwh6_gioHtSzmGv2LA82y-nDhgDLyY4NnnHp-_-pMw0XcObCa1rOzsSotftE9y1oaYDOIwoy6r1CbVWk5yT-b9m6Wx4rzGH73Eg/igFT_R9aPh-NhDv5LtA6ltgvvbHUHrVGcqo2eNmrXt4",
+              "width": 519,
+              "height": 512
+            },
+            "full": {
+              "url": "https://v5.airtableusercontent.com/v3/u/48/48/1764979200000/fQJdbTEuuIIh0tvOEBkxww/UclOBP2bPf7TY_oMd-P4tcjygDbsm0lt8WdGcwx5YsZpGeqLGNiBI4QRvGZWr74Az7540pL_7bUSXrVGRDHj2VVnhZHoMQLmwHv4nbi088E06-SLzCWfP49FsMi5BUWTeYd_naARX8To7fA6m-97tw/ARfzLu3ItT87BXrZJ79-ufpPRDRI_RFsf3Mexg4gwJU",
+              "width": 697,
+              "height": 688
+            }
+          }
+        }
+      ]
     }
   },
   {
@@ -1953,11 +2535,43 @@
         "recGNTHL9SKZxLDcw"
       ],
       "Org IATI Name": "N/A",
+      "Est. Org Budget": 2487100000,
       "Org HQ Country": "Switzerland",
       "Has received CRAF'd Funding?": "NO",
       "org_key": "eth-zurich",
       "Org Type": "Academia",
-      "HDX Org Key": "eth-zurich-weather-and-climate-risks"
+      "HDX Org Key": "eth-zurich-weather-and-climate-risks",
+      "Budget Source": "Annual Report",
+      "Last Updated": 2024,
+      "Link to Budget Source": "https://ethz.ch/en/the-eth-zurich/portrait/annual-report-2024/finance.html",
+      "Budget Source Screenshot": [
+        {
+          "id": "attLR23suES85MBMM",
+          "width": 524,
+          "height": 268,
+          "url": "https://v5.airtableusercontent.com/v3/u/48/48/1764979200000/-YeQFl2GhE8n5EWqo6awiw/hKwQnajJQf84uCy_UJprl3Gvv5XXb1TujI8g6_Px-zeuoL_N5SF7A2cswu_kC4_xm6bqu6AVOwYqI0_97IQax3eRnXYhC1XZmI1diz8z8CcqdffCrpj6exjoSpmmZ8HjuB83D8Go81mA3QonrWTDTv5IgAL_WKCjewXJukz-975w2yLORght_jnUgVZ7M4-1/aVHNPaPanolTfdVjNIC4VaqY_Z2VNt4nYUZfBLJ1yNA",
+          "filename": "Screenshot 2025-12-05 at 12.07.38 PM.png",
+          "size": 68065,
+          "type": "image/png",
+          "thumbnails": {
+            "small": {
+              "url": "https://v5.airtableusercontent.com/v3/u/48/48/1764979200000/PCyHyGn52PltN8OX9jE_4A/q2FfUdrZvjAdP_uvalM02SPEy3eILbUAZih8RA0kr-_-AD_AgaHKSVHKLBt-z7qkRNrgfFPCsaLQ9Xd8C0JTFzS_o2qFkgTuQHuggZvC0HCsZU1wK92JP7UOzLcLb1pTWHO3AGxXNyUtBm19BjUJog/q8aqzZDrnAZ9lI-OLaKJru-Xdl5PpKCWNEfvhHqCsgU",
+              "width": 70,
+              "height": 36
+            },
+            "large": {
+              "url": "https://v5.airtableusercontent.com/v3/u/48/48/1764979200000/HXtFHnG0QYKPxZeEjg882A/swzNq3h9yv6MgizKiHtZaEpghLmEAIFxXGsTksOpUQv9F5dhwj36UehMykq3jB9f5xfgfEW2bkga-Zv79Td1zX8QFTnPTlnST7Z2S7LIeB_eq2zChfFWYGgQLX2gnhVK-oy-1Krp9RKynoDkzpMuQQ/-9zr_UcZ3T2dJOb7AfVRfNVUXxiP7uQa1ocfh3rMS4M",
+              "width": 524,
+              "height": 268
+            },
+            "full": {
+              "url": "https://v5.airtableusercontent.com/v3/u/48/48/1764979200000/VpI7RoVb0koHSTSdFM3Nrg/zcCXkE6q9qKw_DKY3Od250N8IV6mf4x7akXbNXra3zClBwiTsuiyX6PobNkDCDY5z1iH44NI19CuF01FbEPWMIAuCXe8PkW7tt6z8Pi8ur9ouwHBRZXFnQNLHlEvh4cFmpefbLm4b9Q7e_6Hbu_wKQ/lCL0GFPh13faNnUKUWEDP8w11PlXRmYPmBNtVCYU998",
+              "width": 524,
+              "height": 268
+            }
+          }
+        }
+      ]
     }
   },
   {
@@ -1979,7 +2593,8 @@
       "org_key": "world-bank-unhcr",
       "Org Type": "United Nations System",
       "HDX Org Key": "world-bank-group",
-      "IATI Org Key": "XM-DAC-41121"
+      "IATI Org Key": "XM-DAC-41121",
+      "Last Updated": 2024
     }
   },
   {
@@ -1997,11 +2612,14 @@
         "recqNfbmfHwWpPdYJ"
       ],
       "Org IATI Name": "Start Network",
+      "Est. Org Budget": 36483133.15,
       "Org HQ Country": "United Kingdom",
       "Has received CRAF'd Funding?": "NO",
       "org_key": "start-network",
       "Org Type": "Network / Consortium",
-      "IATI Org Key": "GB-CHC-1159483"
+      "IATI Org Key": "GB-CHC-1159483",
+      "Budget Source": "Annual Report",
+      "Last Updated": 2024
     }
   },
   {
@@ -2033,10 +2651,12 @@
         "recKVILBOB3NBEJlE"
       ],
       "Org IATI Name": "N/A",
+      "Est. Org Budget": 1000000,
       "Org HQ Country": "Chile",
       "Has received CRAF'd Funding?": "NO",
       "org_key": "latinobarometro",
-      "Org Type": "Research / Think Tank"
+      "Org Type": "Research / Think Tank",
+      "Link to Budget Source": "none"
     }
   },
   {
@@ -2055,7 +2675,9 @@
         "recjAQGJeJQbasrLl"
       ],
       "org_key": "data2x",
-      "Org Type": "United Nations System"
+      "Org Type": "United Nations System",
+      "Last Updated": 2024,
+      "Link to Budget Source": "none"
     }
   },
   {
@@ -2084,11 +2706,14 @@
         "recNLQhceOCXSMemo"
       ],
       "Org IATI Name": "N/A",
+      "Est. Org Budget": 11810000,
       "Org HQ Country": "United States",
       "Has received CRAF'd Funding?": "NO",
       "org_key": "ipc",
       "Org Type": "Network / Consortium",
-      "HDX Org Key": "ipc"
+      "HDX Org Key": "ipc",
+      "Budget Source": "Annual Report",
+      "Last Updated": 2024
     }
   },
   {
@@ -2124,7 +2749,8 @@
       "Has received CRAF'd Funding?": "NO",
       "org_key": "pacific-community",
       "Org Type": "International Organization",
-      "HDX Org Key": "pacific-community"
+      "HDX Org Key": "pacific-community",
+      "Last Updated": 2024
     }
   },
   {
@@ -2156,11 +2782,14 @@
       "Org IATI Name": "United Nations Environment Programme (UNEP)",
       "Org MPTFO Name": "UNEP",
       "Org MPTFO URL [Formula]": "https://mptf.undp.org/participating-organizations/UNEP",
+      "Est. Org Budget": 671300000,
       "Org HQ Country": "Kenya",
       "Has received CRAF'd Funding?": "NO",
       "org_key": "unep",
       "Org Type": "United Nations System",
-      "HDX Org Key": "unep-ocha-jeu"
+      "HDX Org Key": "unep-ocha-jeu",
+      "Budget Source": "Annual Report",
+      "Last Updated": 2024
     }
   },
   {
@@ -2184,7 +2813,8 @@
       ],
       "org_key": "acaps",
       "Org Type": "Non-Governmental Organization",
-      "HDX Org Key": "acaps"
+      "HDX Org Key": "acaps",
+      "Link to Budget Source": "none"
     }
   },
   {
@@ -2200,10 +2830,13 @@
       "Org Donor Agencies": [
         "reclUJwIt0bxL2bO0"
       ],
+      "Est. Org Budget": 4722424711,
       "Org HQ Country": "United States",
       "Has received CRAF'd Funding?": "NO",
       "org_key": "university-of-minnesota",
-      "Org Type": "Academia"
+      "Org Type": "Academia",
+      "Budget Source": "Annual Report",
+      "Last Updated": 2024
     }
   },
   {
@@ -2219,11 +2852,14 @@
         "recAeviz1XjLC8V6i"
       ],
       "Org Programme Budget": "https://unitar.org/sites/default/files/media/publication/doc/UNITAR-Programme-Budget-2024-2025_adopted-17November2023.pdf?utm_source=chatgpt.com",
+      "Est. Org Budget": 48440000,
       "Org HQ Country": "Switzerland",
       "Has received CRAF'd Funding?": "NO",
       "org_key": "unitar",
       "Org Type": "United Nations System",
-      "HDX Org Key": "unosat"
+      "HDX Org Key": "unosat",
+      "Budget Source": "Annual Report",
+      "Last Updated": 2024
     }
   },
   {
@@ -2261,12 +2897,16 @@
       "Org IATI Name": "International Organization for Migration (IOM)",
       "Org MPTFO Name": "IOM",
       "Org MPTFO URL [Formula]": "https://mptf.undp.org/participating-organizations/IOM",
+      "Est. Org Budget": 3733229338.55,
       "Org HQ Country": "Switzerland",
       "Has received CRAF'd Funding?": "YES",
       "org_key": "iom",
       "Org Type": "International Organization",
       "HDX Org Key": "international-organization-for-migration",
-      "IATI Org Key": "XM-DAC-47066"
+      "IATI Org Key": "XM-DAC-47066",
+      "Budget Source": "Annual Report",
+      "Last Updated": 2024,
+      "Link to Budget Source": "test"
     }
   },
   {
@@ -2276,10 +2916,13 @@
       "Org Short Name": "UNESCAP",
       "Org Website": "https://www.unescap.org/",
       "Org Description": "UNESCAP leverages data and statistics to address key development challenges in the Asia-Pacific region, providing member states with results-oriented projects, technical assistance, and capacity building. They work across various areas, including macroeconomic policy, poverty reduction, trade, environment, disaster risk reduction, and social development. UNESCAP promotes the use of data for evidence-based decision-making and fosters regional cooperation on transboundary issues, utilizing rigorous analysis and peer learning to inform policy dialogues and recommendations.",
+      "Est. Org Budget": 56817100,
       "Org HQ Country": "Thailand",
       "Has received CRAF'd Funding?": "NO",
       "org_key": "unescap",
-      "Org Type": "United Nations System"
+      "Org Type": "United Nations System",
+      "Budget Source": "Annual Report",
+      "Last Updated": 2024
     }
   },
   {
@@ -2303,7 +2946,8 @@
       "Has received CRAF'd Funding?": "NO",
       "org_key": "wpdx",
       "Org Type": "Non-Governmental Organization",
-      "HDX Org Key": "water-point-data-exchange"
+      "HDX Org Key": "water-point-data-exchange",
+      "Last Updated": 2024
     }
   },
   {
@@ -2333,10 +2977,13 @@
         "recRutqdhqEZSnOB2"
       ],
       "Org IATI Name": "PARIS21 Foundation",
+      "Est. Org Budget": 5011472.38,
       "Org HQ Country": "France",
       "Has received CRAF'd Funding?": "NO",
       "org_key": "paris21",
-      "Org Type": "International Organization"
+      "Org Type": "International Organization",
+      "Budget Source": "Annual Report",
+      "Last Updated": 2024
     }
   },
   {
@@ -2352,12 +2999,15 @@
       "Org Donor Agencies": [
         "rec0sY1I5JZz6ZsUE"
       ],
+      "Est. Org Budget": 3032863500,
       "Org HQ Country": "United Kingdom",
       "Has received CRAF'd Funding?": "NO",
       "org_key": "oxford-university",
       "Org Type": "Academia",
       "HDX Org Key": "blavatnik-school-of-government-university-of-oxford",
-      "IATI Org Key": "GB-UKPRN-10007774"
+      "IATI Org Key": "GB-UKPRN-10007774",
+      "Budget Source": "Annual Report",
+      "Last Updated": 2024
     }
   },
   {
@@ -2381,11 +3031,43 @@
         "rec19ocYvikhZMdRI"
       ],
       "Org IATI Name": "N/A",
+      "Est. Org Budget": 27500000,
       "Org HQ Country": "United States",
       "Has received CRAF'd Funding?": "NO",
       "org_key": "immap",
       "Org Type": "Non-Governmental Organization",
-      "HDX Org Key": "immap"
+      "HDX Org Key": "immap",
+      "Budget Source": "Annual Report",
+      "Last Updated": 2024,
+      "Link to Budget Source": "https://projects.propublica.org/nonprofits/organizations/208744927?utm_source=chatgpt.com",
+      "Budget Source Screenshot": [
+        {
+          "id": "attXkVns3LtyOjFwp",
+          "width": 1006,
+          "height": 449,
+          "url": "https://v5.airtableusercontent.com/v3/u/48/48/1764979200000/ICEZqwbEE6FAdfTP40dwdw/gznqKXPwA6NCljouVzqV_3k_uCesTRd9Ny3qiwpRK1pXtUugq36Rc4XJzVHhj-Bph1_XGXOm1sOl2ERqePFC-aFe4b-wEdZZMCAVXs7OKkmBD1hHDDVvtj-D1zRZ6e42ZNmgjDW6oPCZJCBecVbP5ZRQHjnDJIuVbu_JC-v_Nsv5U3U5248lIeFvWOrNdEqY/5zLVaSS_mkijOx7fANOG19D4DtANN7GPqljsm4Ph6Zo",
+          "filename": "Screenshot 2025-12-05 at 2.35.19 PM.png",
+          "size": 85402,
+          "type": "image/png",
+          "thumbnails": {
+            "small": {
+              "url": "https://v5.airtableusercontent.com/v3/u/48/48/1764979200000/gSbHrQDmS0dT4FhSxZtx6g/APIb4CO5Sq_UciR1-NxIR-WogHmyLnf4qG5E8D6arF0LMlnRB4ifD8hHvzqJsqfqHmyqT7d-LRosYi_r3Q1S1UpMkXm3ZvzgmmbY42jNf20YOpIY8-VSykY2m8fSSiPX5DSGgdflX_YO2XA0sYOTCQ/bzEqg3mbepfAlq4mWhlHc81mBFqwO5z-Qe9hyBlzcHk",
+              "width": 81,
+              "height": 36
+            },
+            "large": {
+              "url": "https://v5.airtableusercontent.com/v3/u/48/48/1764979200000/FoyOI8uR5njlLB1wzFrZTA/0a1yFvUKGe5IV0PkHQS_0Ppp9y5dlQ7j_kwJZ2T6W_NaEHMkrVz63qrulwUHvoKO66nRZxvEPr1ZedwOpJ7vtKfR1tfcwonMwp3YRLiYzFiWe9k3cqTUwISG23f1Wuipho4FPOe92idv2IhwmpnjMA/TcJKv1r6eVIjFlsEsrWNs2sWoF2yyTh3s6PvELmbP58",
+              "width": 1006,
+              "height": 449
+            },
+            "full": {
+              "url": "https://v5.airtableusercontent.com/v3/u/48/48/1764979200000/rdu7S43hDjNghzAAfdjr1w/gW0PtcT5ziPInSgE_Jg0u9-ROf3GBQi5j5BwUZl0l1nsaxYwiRDRLwpabe0S6Co0R6V1stZXXDGgHeg7wuLrHJwg5R_jxTMzHl0MtguCsvlj5OVyOTx2GVBi5D6pvFy6ntnMR76T9GlWzNZIMnYBDw/nCRLmazOGJOweOxd4B8TrtJN_DBRUab3ZvFamvoj7cs",
+              "width": 1006,
+              "height": 449
+            }
+          }
+        }
+      ]
     }
   },
   {
@@ -2420,12 +3102,15 @@
       "Org MPTFO Name": "WHO",
       "Org MPTFO URL [Formula]": "https://mptf.undp.org/participating-organizations/WHO",
       "Org Programme Budget": "https://www.who.int/about/accountability/budget?utm_source=chatgpt.com",
+      "Est. Org Budget": 3763000000,
       "Org HQ Country": "Switzerland",
       "Has received CRAF'd Funding?": "NO",
       "org_key": "who",
       "Org Type": "United Nations System",
       "HDX Org Key": "world-health-organization",
-      "IATI Org Key": "XM-DAC-928"
+      "IATI Org Key": "XM-DAC-928",
+      "Budget Source": "Annual Report",
+      "Last Updated": 2024
     }
   },
   {
@@ -2444,11 +3129,14 @@
         "recnCryJx9ixmHwby"
       ],
       "Org IATI Name": "Red Cross Red Crescent Climate Centre",
+      "Est. Org Budget": 6264522.32,
       "Org HQ Country": "Netherlands",
       "Has received CRAF'd Funding?": "YES",
       "org_key": "rccc",
       "Org Type": "Non-Governmental Organization",
-      "HDX Org Key": "rccc"
+      "HDX Org Key": "rccc",
+      "Budget Source": "Annual Report",
+      "Last Updated": 2024
     }
   },
   {
@@ -2467,7 +3155,38 @@
         "reciWEHPYXviYoK02"
       ],
       "org_key": "ecmrwf",
-      "Org Type": "International Organization"
+      "Org Type": "International Organization",
+      "Budget Source": "Annual Report",
+      "Last Updated": 2024,
+      "Link to Budget Source": "https://www.ecmwf.int/sites/default/files/elibrary/062025/81665-annual-report-2024.pdf",
+      "Budget Source Screenshot": [
+        {
+          "id": "attmCDvbu94o2dLV0",
+          "width": 1232,
+          "height": 804,
+          "url": "https://v5.airtableusercontent.com/v3/u/48/48/1764979200000/VUF5aP57fdZXCySXZBMQxg/PKdzQRtpA3mCHE9EO_tqMQIrFNtz751Fe9Ov8xOqV-85xeRBYMM9_UO3yFeeGQsuYJ_3kI9ZEly0JQamRwk2bob-hx98QJxlX-uiwW6ZCkDpFfSFOhevGNF_GAJlOFiSohJhvQRtqOl3RiFWbpIfOtWqu_nd1eiyznwpFFcIcjR7J70Td-X3f_A33C1h24zE/763Kz84K1ULQsCfWoPF8zkEU9B3R7YB3msKeSpUqi0E",
+          "filename": "Screenshot 2025-12-04 at 4.46.40 PM.png",
+          "size": 301556,
+          "type": "image/png",
+          "thumbnails": {
+            "small": {
+              "url": "https://v5.airtableusercontent.com/v3/u/48/48/1764979200000/a4P4KyR1dyQXJXqTGRZAwA/iJe_WzuSPYXY3EKInk3GOA5AggIhykS9B6iaBu35Wf_g7NNgYDSqyxI1AM3SCh0TbjIL7ezMRqwoOWS1UN1A3X-DbmeyZUjGV3H3hlSalrN2eskvpD_O-nHjXfD7kkky42QHYMBqGpTtqnsBtR7AuQ/u24Kpd1HJUUSEehMMPPlasHqwPs1mj2CcAyg2uVcX5M",
+              "width": 55,
+              "height": 36
+            },
+            "large": {
+              "url": "https://v5.airtableusercontent.com/v3/u/48/48/1764979200000/0uXLgR4CQp_ssO98Z9oLGg/pcE4Qo5xpiq4ksntUBquNeqCY76MD-kPsUP-a7OqEB0BYTZM-Pjxl-LmVYytIzJutASLMpW11bI_cTCtAFrarpaa8TFA-QCZgee8PFP5upZ37UgIAmyDS3b2JgcpGSWvwfEwISIrAcI1lU6mQjrEHQ/e7WkoRPpSNVsTEbkeRA_n_HdTyTYLNhkkRLjIuz-JhI",
+              "width": 785,
+              "height": 512
+            },
+            "full": {
+              "url": "https://v5.airtableusercontent.com/v3/u/48/48/1764979200000/VZb5cj7fT6KXu5Sy9Cq1Ng/FD3ZoymPP5l-wRZ9gCOAPt02cVNKAvc0XOp2kpV3U7iBCc4-s2HO4cdIiiqzFU_P3r0f1cBkjboVeBE3YRezE7GnWyB668oKRk8htEiQGVXjXuk2iOUtFIvSfLdxdV4ogY_8uJIUSTBZDfJJJngK4Q/mcOQREd0z2kT_1cMRbCm3S11eif5KmyCperQ6HwZxi8",
+              "width": 1232,
+              "height": 804
+            }
+          }
+        }
+      ]
     }
   },
   {
@@ -2494,11 +3213,43 @@
         "recYVizktLnxQPeKH"
       ],
       "Org Programme Budget": "https://peacekeeping.un.org/en/how-we-are-funded",
+      "Est. Org Budget": 5600000000,
       "Org HQ Country": "United States",
       "Has received CRAF'd Funding?": "NO",
       "org_key": "un-dpo",
       "Org Type": "United Nations System",
-      "HDX Org Key": "unpeacesecurity"
+      "HDX Org Key": "unpeacesecurity",
+      "Budget Source": "Website",
+      "Last Updated": 2024,
+      "Link to Budget Source": "https://peacekeeping.un.org/en/how-we-are-funded",
+      "Budget Source Screenshot": [
+        {
+          "id": "att5ZCrhCP5A6h8hg",
+          "width": 784,
+          "height": 92,
+          "url": "https://v5.airtableusercontent.com/v3/u/48/48/1764979200000/e-KhFT30TftEgDP-FdSiGA/TrtyFTW5fY25fB4tFwLdxuFUbkMEyYM_eaL3CjVEWr_W9Ktvizp_IkBJN0YQ34BA7E_AxfQaPNUaihHUJkjLdsvuyehXDGIuNCg5UFZmgpNMq6tKNKUQGfv2-6s55GjqTfGScF5Y7UH6aqpM8OQoavdWdKd5Y1f0hFfLE3DtQPMqIMoES7GU1v9P5CcXclS_/CUa5aDb50T9KYJHOinBUTJ1snk0girup911NdjfALmY",
+          "filename": "Screenshot 2025-12-04 at 4.19.30 PM.png",
+          "size": 18485,
+          "type": "image/png",
+          "thumbnails": {
+            "small": {
+              "url": "https://v5.airtableusercontent.com/v3/u/48/48/1764979200000/NLWX_yfwfsuyhzIx7zrUrw/9RHeLDcC3TA7po1cz8g4epbSx3o6psUy2FG7-50bkyBjpGqczZuzUY3ESpwQLEkKru2mNpJJlu53s0hv97y4vM-cmcVtFJ0WNeNyRU8af2ewpKKtJ_yce4RZdGV9Gej0GZ1Mjpb-co5C3dPr-9YK5w/0zeilhIwLCgg8bQsQeLwM5JZMhxQKUbFl5uPDUYx7AE",
+              "width": 307,
+              "height": 36
+            },
+            "large": {
+              "url": "https://v5.airtableusercontent.com/v3/u/48/48/1764979200000/DFK09vWypXvabiG_UWfb-g/M_g8JzEZAivF2a41zXno6vloEiwgSMHsULn1lMuqa8ODWj03z-LbQUkIilMeL4crw9SxRYNK3Qva6oz6rM02Q2OSx983HoeL5tK6QnT1TnWYemqSNbZrH8tZcWtO_3Qc3EUMa6GT-9p0qPLGJWyFTg/5PI_iFIzopLts5alxsDWP-t78ylyoSujfAniDlGwkM0",
+              "width": 784,
+              "height": 92
+            },
+            "full": {
+              "url": "https://v5.airtableusercontent.com/v3/u/48/48/1764979200000/VXigudiNxLYnYguFv5i1iQ/Fiv-TkP8YWTvJiz-lXhFhyzbqIdx4shNZTYOhHBx6qdMP0EgekoeJUklgB8Pth5CeV-9ZikyVPjHKT-xu8N3YVS6fsIV5AhkailCMhk26MZquvl4y9RtyJkOunivqxEvcUJaicnsGKVz0Skbo4EokQ/6If9eCQGOArDSfNDOCD_p6YI1Fwe7I_EM9j4I50HPt4",
+              "width": 784,
+              "height": 92
+            }
+          }
+        }
+      ]
     }
   },
   {
@@ -2528,7 +3279,9 @@
       "Has received CRAF'd Funding?": "YES",
       "org_key": "inform",
       "Org Type": "Network / Consortium",
-      "HDX Org Key": "inform"
+      "HDX Org Key": "inform",
+      "Last Updated": 2024,
+      "Link to Budget Source": "none"
     }
   },
   {
@@ -2548,7 +3301,9 @@
       "Has received CRAF'd Funding?": "NO",
       "org_key": "hera",
       "Org Type": "Non-Governmental Organization",
-      "HDX Org Key": "hera-humanitarian-emergency-response-africa"
+      "HDX Org Key": "hera-humanitarian-emergency-response-africa",
+      "Last Updated": 2024,
+      "Link to Budget Source": "none"
     }
   },
   {
@@ -2574,7 +3329,9 @@
       "Has received CRAF'd Funding?": "NO",
       "org_key": "insecurity-insight",
       "Org Type": "Non-Governmental Organization",
-      "HDX Org Key": "insecurity-insight"
+      "HDX Org Key": "insecurity-insight",
+      "Last Updated": 2024,
+      "Link to Budget Source": "none"
     }
   },
   {
@@ -2590,9 +3347,41 @@
       "Org Donor Agencies": [
         "recq6gN9R1C4tGmIx"
       ],
+      "Est. Org Budget": 553300000,
       "org_key": "lse",
       "Org Type": "Academia",
-      "IATI Org Key": "GB-COH-00070527"
+      "IATI Org Key": "GB-COH-00070527",
+      "Budget Source": "Annual Report",
+      "Last Updated": 2024,
+      "Link to Budget Source": "https://info.lse.ac.uk/staff/divisions/Finance-Division/assets/annual-accounts/PDF/LSE-Financial-Statements-FY-24-25-FINAL-Signatures-Redacted.pdf",
+      "Budget Source Screenshot": [
+        {
+          "id": "attMxCI8bZGwdNv8F",
+          "width": 801,
+          "height": 320,
+          "url": "https://v5.airtableusercontent.com/v3/u/48/48/1764979200000/cmrf8ZEj86I77YB9-E62Pg/RxdeC5BQZt--m690rrhFxC6wA1SZblFZ-FtV4YQpqm-1V3KEBm9AKaBJRURGWzmQ1o5bsc5Wx0AVmucuhw4pq0KYfg_6iThKt9r1oL7Pk9U4s3aK9GBJyHJhG9pjNFGRkKnT1vA5fNPuLPRkptfbow/6O3il_j7lm6pBj1eZ8YUYApPIjHUMHlmkgIOFNsXrjw",
+          "filename": "image.png",
+          "size": 59677,
+          "type": "image/png",
+          "thumbnails": {
+            "small": {
+              "url": "https://v5.airtableusercontent.com/v3/u/48/48/1764979200000/w64HTmftTOX3oDqBzYxdJA/G0Rq_fSbrXiI8oanSuIupWc1Zti8XmRJ2kj1Mwh0CQ3UFV4Tp_IjNKwwM8j3PgZFOHKwXYDnJE50uKIl4VK-wNDpjUckaUjiXz8Vz7gOn3ZmUDGcIa3WNqg7sh7CPO-N-gTIiMOpLuJ0UTxlVWNTWQ/2R7rpthpireYclmjMLtSZwPDyYVLF5qNlyL1uRx_HjM",
+              "width": 90,
+              "height": 36
+            },
+            "large": {
+              "url": "https://v5.airtableusercontent.com/v3/u/48/48/1764979200000/TEdjyY8gQ1GbmpDM92X5fA/1JDc_XC_9k4YR1BscFSllkC7XjR5rrQ64nJh1yAeTgshO6wQ1pawZLY36Ce6oBkyxEqlUWlkWrepOyJ-u8etdpUca8Jmk4alm3Wufy7Zx3kUF-MpDt5AOLtUMV1bnu3-TMa6-Uj4Ia8gfLsq7OMWwA/9ZkMaWBARkjkxX4eHU024eAOnK5FncPHi8gUGj8Lt4c",
+              "width": 801,
+              "height": 320
+            },
+            "full": {
+              "url": "https://v5.airtableusercontent.com/v3/u/48/48/1764979200000/q-eNhpRPJJYKY1NHv8a--A/zGnhEg6N6dbUJBfaQg3HoV7mjAsAdFf_eViNv1Tfh8Vqqm08fw9oWWiwMEjEi_cPOuUqPtYKzW2_5-zzAJHahUTrA0v-Rig9DD0XqakBQNWWNvY9AS_IIhKX5wD-uPIq-i5Xc0lpCgcVukgCpJvEHA/wjeDVGnOL5cEz0yAR9dvKoV4vXdHlSX0lTKeI0GjqY4",
+              "width": 801,
+              "height": 320
+            }
+          }
+        }
+      ]
     }
   }
 ]
