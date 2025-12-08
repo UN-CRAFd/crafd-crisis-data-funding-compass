@@ -254,8 +254,9 @@ export default function OrganizationModal({
             || /\bUN\b/.test(String(orgType));
 
         return (
+            
             <div className="px-6 sm:px-8 pt-4 sm:pt-5 pb-6 sm:pb-8 font-roboto flex flex-col h-full">
-               
+                    
                 {/* Description with inline Learn more link */}
                 {typeof fields['Org Description'] === 'string' && String(fields['Org Description']).length > 0 && (
                     <p className="text-base font-normal text-gray-700 leading-relaxed font-roboto">
@@ -326,20 +327,15 @@ export default function OrganizationModal({
                         </Field>
                     </div>
                 )}
-                <div className="flex items-center justify-between mt-4">
-                    <div className="flex-1 border-t border-gray-200 ml-4"></div>
-                    {orgType && (
-                        <span className="inline-flex items-center px-3 py-1.5 rounded-md text-sm font-small text-slate-600 w-fit">
-                            {orgType}
-                        </span>
-                    )}
+                <div className="flex items-center justify-between mt-4 mb-4">
+                    
                     <div className="flex-1 border-t border-gray-200 ml-4"></div>
                 </div>
 
                 {/* Metadata - Single column layout */}
                 {/* Organization Funding*/}
 
-                <div className="mt-2 space-y-4">
+                <div className="mt-2 space-y-8">
                                      
 
                     {/* Provided Assets - Simple field access matching FIELDS_ORGANIZATIONS */}
@@ -483,7 +479,7 @@ export default function OrganizationModal({
                                     </h3>
                                     <span className="text-lg font-normal text-gray-500 tabular-nums">({donorCountries.length})</span>
                                 </div>
-                                    <div className="rounded-lg border border-slate-200 bg-slate-100 p-4 shadow-sm">
+                                    <div className="hidden rounded-lg border border-slate-200 bg-slate-100 p-4 shadow-sm">
                                         
                                         <div className="mt-0 grid grid-cols-[3fr_3fr_3fr_0.2fr] gap-4">
 
