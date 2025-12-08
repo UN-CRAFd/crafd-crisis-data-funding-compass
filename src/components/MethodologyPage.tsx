@@ -23,7 +23,10 @@ import {
     Download,
     Copy,
     Check,
-    LucideIcon
+    LucideIcon,
+    CalendarSync,
+    Workflow,
+    BookCheck
 } from 'lucide-react';
 
 // ============================================================================
@@ -298,7 +301,7 @@ export default function MethodologyPage({ logoutButton }: MethodologyPageProps) 
                                     {[
                                         { value: 'collection', icon: Search, label: 'Collection' },
                                         { value: 'classification', icon: FileText, label: 'Classification' },
-                                        { value: 'validation', icon: CheckCircle2, label: 'Validation' },
+                                        { value: 'limitations', icon: AlertTriangle, label: 'Limitations' },
                                         { value: 'filtering', icon: Layers, label: 'Filtering' },
                                         { value: 'network', icon: TrendingUp, label: 'Network' },
                                         { value: 'export', icon: Download, label: 'Export' },
@@ -315,15 +318,15 @@ export default function MethodologyPage({ logoutButton }: MethodologyPageProps) 
                                         <div>
                                             <SectionTitle icon={Search}>Data Collection</SectionTitle>
                                             <div className="space-y-4">
-                                                <NumberedStep step={1} title="Source Identification">
+                                                <IconInfoCard icon={BookCheck}title="Source Identification">
                                                     We aggregate data from a curated set of public and partner sources, including international organizations, government portals, and open data repositories relevant to crisis funding and humanitarian response.
-                                                </NumberedStep>
-                                                <NumberedStep step={2} title="Automated & Manual Gathering">
+                                                </IconInfoCard>
+                                                <IconInfoCard icon={Workflow} title="Automated & Manual Gathering">
                                                     Data is collected through a combination of automated pipelines (APIs, web scraping) and manual curation to ensure completeness and accuracy.
-                                                </NumberedStep>
-                                                <NumberedStep step={3} title="Regular Updates">
+                                                </IconInfoCard>
+                                                <IconInfoCard icon={CalendarSync} title="Regular Updates">
                                                     The dataset is refreshed periodically to capture new funding flows, projects, and organizational changes.
-                                                </NumberedStep>
+                                                </IconInfoCard>
                                             </div>
                                         </div>
                                         <Screenshot src="/screenshots/collection.png" alt="Data Collection Process" />
@@ -332,7 +335,7 @@ export default function MethodologyPage({ logoutButton }: MethodologyPageProps) 
 
                                 {/* Classification Tab */}
                                 <TabsContent value="classification" className="mt-6 animate-tab-enter">
-                                    <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
+                                    <div className="space-y-6">
                                         <div>
                                             <SectionTitle icon={FileText}>Data Classification</SectionTitle>
                                             <div className="space-y-4">
@@ -416,35 +419,22 @@ export default function MethodologyPage({ logoutButton }: MethodologyPageProps) 
                                     </div>
                                 </TabsContent>
 
-                                {/* Validation Tab */}
-                                <TabsContent value="validation" className="mt-6 animate-tab-enter">
-                                    <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
-                                        <div>
-                                            <SectionTitle icon={CheckCircle2}>Data Validation</SectionTitle>
-                                            <div className="space-y-4">
-                                                <IconInfoCard icon={Shield} title="Quality Assurance">
-                                                    Automated checks flag inconsistencies, missing fields, and outliers. Manual review is conducted for high-impact records and edge cases.
-                                                </IconInfoCard>
-                                                <IconInfoCard icon={CheckCircle2} title="Source Verification">
-                                                    Where possible, funding flows and project details are cross-checked against original sources or official reports.
-                                                </IconInfoCard>
-                                                <IconInfoCard icon={Users} title="Community Feedback">
-                                                    Users can suggest corrections, suggest new entries or flag issues, which are reviewed by the data team.
-                                                </IconInfoCard>
-                                            </div>
-                                        </div>
+                                {/* Limitations Tab */}
+                                <TabsContent value="limitations" className="mt-6 animate-tab-enter">
+                                    <div className="space-y-6">
+                                        
                                         <div>
                                             <SectionTitle icon={AlertTriangle}>Limitations</SectionTitle>
                                             <div className="space-y-4">
-                                                <WarningCard title="Data Gaps">
+                                                <InfoCard title="Data Gaps">
                                                     Not all funding flows or projects are publicly reported; some data may be incomplete or delayed.
-                                                </WarningCard>
-                                                <WarningCard title="Classification Subjectivity">
+                                                </InfoCard>
+                                                <InfoCard title="Classification Subjectivity">
                                                     Investment type and theme assignments may involve interpretation, especially for multi-sector projects.
-                                                </WarningCard>
-                                                <WarningCard title="Simplification">
+                                                </InfoCard>
+                                                <InfoCard title="Simplification">
                                                     For clarity, some visualizations (e.g., UN donor lists) are simplified and do not reflect the full complexity of funding relationships.
-                                                </WarningCard>
+                                                </InfoCard>
                                             </div>
                                         </div>
                                     </div>
@@ -452,7 +442,7 @@ export default function MethodologyPage({ logoutButton }: MethodologyPageProps) 
 
                                 {/* Filtering & Query Tab */}
                                 <TabsContent value="filtering" className="mt-6 animate-tab-enter">
-                                    <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
+                                    <div className="space-y-6">
                                         <div>
                                             <SectionTitle icon={Layers}>Filtering & Query</SectionTitle>
                                             <div className="space-y-4">
@@ -471,26 +461,29 @@ export default function MethodologyPage({ logoutButton }: MethodologyPageProps) 
                                         </div>
                                         
                                         {/* Interactive Filter Logic Flow */}
-                                        <div className="bg-white rounded-lg p-6 border-2 border-slate-200 shadow-sm max-h-[668px] overflow-y-auto">
+                                        <SectionTitle icon={Search}>Filtering Process</SectionTitle>
+
+                                        <div className="bg-white rounded-lg p-6 border-2 border-none shadow-sm">
                                             
                                             {/* Flow Diagram */}
                                             <div className="space-y-3 text-xs">
+                                                
                                                 {/* Step 1: Donor Check */}
-                                                <div className={`${INVESTMENT_TYPE_COLORS['Data Sets & Commons'].bg} border-2 ${INVESTMENT_TYPE_COLORS['Data Sets & Commons'].border} rounded-lg p-3`}>
-                                                    <div className={`font-bold ${INVESTMENT_TYPE_COLORS['Data Sets & Commons'].text} mb-2 flex items-center gap-2`}>
-                                                        <span className={`${INVESTMENT_TYPE_COLORS['Data Sets & Commons'].step} text-white rounded-full w-5 h-5 flex items-center justify-center text-xs`}>1</span>
+                                                <div className="bg-slate-100 border-2 border-slate-300 rounded-lg p-3">
+                                                    <div className="font-bold text-slate-800 mb-2 flex items-center gap-2">
+                                                        <span className="bg-slate-700 text-white rounded-full w-5 h-5 flex items-center justify-center text-xs">1</span>
                                                         Donor Filter (Gatekeeper)
                                                     </div>
-                                                    <div className={`pl-7 space-y-1 ${INVESTMENT_TYPE_COLORS['Data Sets & Commons'].text}`}>
+                                                    <div className="pl-7 space-y-1 text-slate-700">
                                                         <div>🔍 Check: Does org have <strong>ALL</strong> selected donors?</div>
-                                                        <div className="bg-white rounded px-2 py-1 border-2 border-blue-200 font-mono text-[10px]">
+                                                        <div className="bg-white rounded px-2 py-1 border-2 border-slate-200 font-mono text-[10px]">
                                                             donors.every(d → org.donors.includes(d))
                                                         </div>
                                                         <div className="flex gap-2 mt-2">
-                                                            <div className="flex-1 bg-green-100 border-2 border-green-300 rounded px-2 py-1 text-green-800">
+                                                            <div className="flex-1 bg-slate-50 border-2 border-slate-300 rounded px-2 py-1 text-slate-700">
                                                                 ✓ YES → Continue to Step 2
                                                             </div>
-                                                            <div className="flex-1 bg-red-100 border-2 border-red-300 rounded px-2 py-1 text-red-800">
+                                                            <div className="flex-1 bg-slate-200 border-2 border-slate-400 rounded px-2 py-1 text-slate-800">
                                                                 ✗ NO → Hide org entirely
                                                             </div>
                                                         </div>
@@ -502,22 +495,22 @@ export default function MethodologyPage({ logoutButton }: MethodologyPageProps) 
                                                 </div>
 
                                                 {/* Step 2: Search Check */}
-                                                <div className={`${INVESTMENT_TYPE_COLORS['Infrastructure & Platforms'].bg} border-2 ${INVESTMENT_TYPE_COLORS['Infrastructure & Platforms'].border} rounded-lg p-3`}>
-                                                    <div className={`font-bold ${INVESTMENT_TYPE_COLORS['Infrastructure & Platforms'].text} mb-2 flex items-center gap-2`}>
-                                                        <span className={`${INVESTMENT_TYPE_COLORS['Infrastructure & Platforms'].step} text-white rounded-full w-5 h-5 flex items-center justify-center text-xs`}>2</span>
+                                                <div className="bg-slate-100 border-2 border-slate-300 rounded-lg p-3">
+                                                    <div className="font-bold text-slate-800 mb-2 flex items-center gap-2">
+                                                        <span className="bg-slate-700 text-white rounded-full w-5 h-5 flex items-center justify-center text-xs">2</span>
                                                         Search Filter Check
                                                     </div>
-                                                    <div className={`pl-7 space-y-1 ${INVESTMENT_TYPE_COLORS['Infrastructure & Platforms'].text}`}>
+                                                    <div className="pl-7 space-y-1 text-slate-700">
                                                         <div>🔍 Check: Does org name match search?</div>
-                                                        <div className="bg-white rounded px-2 py-1 border-2 border-red-200 font-mono text-[10px]">
+                                                        <div className="bg-white rounded px-2 py-1 border-2 border-slate-200 font-mono text-[10px]">
                                                             org.name.includes(searchQuery)
                                                         </div>
                                                         <div className="mt-2 space-y-2">
-                                                            <div className="bg-green-100 border-2 border-green-300 rounded px-2 py-1.5 text-green-800">
+                                                            <div className="bg-slate-50 border-2 border-slate-300 rounded px-2 py-1.5 text-slate-700">
                                                                 <div className="font-semibold mb-1">✓ YES → Show ALL org projects</div>
                                                                 <div className="text-[10px] pl-4">Then filter by Type/Theme if selected</div>
                                                             </div>
-                                                            <div className="bg-orange-100 border-2 border-orange-300 rounded px-2 py-1.5 text-orange-800">
+                                                            <div className="bg-slate-200 border-2 border-slate-400 rounded px-2 py-1.5 text-slate-800">
                                                                 <div className="font-semibold mb-1">✗ NO → Check each project</div>
                                                                 <div className="text-[10px] pl-4">Go to Step 3 for project-level filtering</div>
                                                             </div>
@@ -530,13 +523,13 @@ export default function MethodologyPage({ logoutButton }: MethodologyPageProps) 
                                                 </div>
 
                                                 {/* Step 3: Project-Level Filters */}
-                                                <div className={`${INVESTMENT_TYPE_COLORS['Crisis Analytics & Insights'].bg} border-2 ${INVESTMENT_TYPE_COLORS['Crisis Analytics & Insights'].border} rounded-lg p-3`}>
-                                                    <div className={`font-bold ${INVESTMENT_TYPE_COLORS['Crisis Analytics & Insights'].text} mb-2 flex items-center gap-2`}>
-                                                        <span className={`${INVESTMENT_TYPE_COLORS['Crisis Analytics & Insights'].step} text-white rounded-full w-5 h-5 flex items-center justify-center text-xs`}>3</span>
+                                                <div className="bg-slate-100 border-2 border-slate-300 rounded-lg p-3">
+                                                    <div className="font-bold text-slate-800 mb-2 flex items-center gap-2">
+                                                        <span className="bg-slate-700 text-white rounded-full w-5 h-5 flex items-center justify-center text-xs">3</span>
                                                         Project-Level Filters
                                                     </div>
-                                                    <div className={`pl-7 space-y-2 ${INVESTMENT_TYPE_COLORS['Crisis Analytics & Insights'].text}`}>
-                                                        <div className="bg-white rounded px-3 py-2 border-2 border-orange-200">
+                                                    <div className="pl-7 space-y-2 text-slate-700">
+                                                        <div className="bg-white rounded px-3 py-2 border-2 border-slate-200">
                                                             <div className="font-semibold mb-1">A. Search (if org didn't match)</div>
                                                             <div className="text-[10px] font-mono bg-slate-50 px-2 py-1 rounded">
                                                                 project.name.includes(searchQuery)
@@ -544,9 +537,9 @@ export default function MethodologyPage({ logoutButton }: MethodologyPageProps) 
                                                             <div className="mt-1 text-[10px]">Must match for project to be visible</div>
                                                         </div>
                                                         
-                                                        <div className="bg-white rounded px-3 py-2 border-2 border-orange-200">
+                                                        <div className="bg-white rounded px-3 py-2 border-2 border-slate-200">
                                                             <div className="font-semibold mb-1 flex items-center gap-1">
-                                                                B. Type Filter <span className="text-green-600 font-bold">(OR logic)</span>
+                                                                B. Type Filter <span style={{ color: 'var(--brand-primary-dark)' }} className="font-bold">(OR logic)</span>
                                                             </div>
                                                             <div className="text-[10px] font-mono bg-slate-50 px-2 py-1 rounded">
                                                                 project.types.some(t → selectedTypes.includes(t))
@@ -554,9 +547,9 @@ export default function MethodologyPage({ logoutButton }: MethodologyPageProps) 
                                                             <div className="mt-1 text-[10px]">Project needs ≥1 matching type</div>
                                                         </div>
                                                         
-                                                        <div className="bg-white rounded px-3 py-2 border-2 border-orange-200">
+                                                        <div className="bg-white rounded px-3 py-2 border-2 border-slate-200">
                                                             <div className="font-semibold mb-1 flex items-center gap-1">
-                                                                C. Theme Filter <span className="text-green-600 font-bold">(OR logic)</span>
+                                                                C. Theme Filter <span style={{ color: 'var(--brand-primary-dark)' }} className="font-bold">(OR logic)</span>
                                                             </div>
                                                             <div className="text-[10px] font-mono bg-slate-50 px-2 py-1 rounded">
                                                                 project.themes.some(th → selectedThemes.includes(th))
@@ -571,23 +564,23 @@ export default function MethodologyPage({ logoutButton }: MethodologyPageProps) 
                                                 </div>
 
                                                 {/* Step 4: Final Decision */}
-                                                <div className={`${INVESTMENT_TYPE_COLORS['Human Capital & Know-how'].bg} border-2 ${INVESTMENT_TYPE_COLORS['Human Capital & Know-how'].border} rounded-lg p-3`}>
-                                                    <div className={`font-bold ${INVESTMENT_TYPE_COLORS['Human Capital & Know-how'].text} mb-2 flex items-center gap-2`}>
-                                                        <span className={`${INVESTMENT_TYPE_COLORS['Human Capital & Know-how'].step} text-white rounded-full w-5 h-5 flex items-center justify-center text-xs`}>4</span>
+                                                <div className="bg-slate-100 border-2 border-slate-300 rounded-lg p-3">
+                                                    <div className="font-bold text-slate-800 mb-2 flex items-center gap-2">
+                                                        <span className="bg-slate-700 text-white rounded-full w-5 h-5 flex items-center justify-center text-xs">4</span>
                                                         Final Decision
                                                     </div>
-                                                    <div className={`pl-7 space-y-2 ${INVESTMENT_TYPE_COLORS['Human Capital & Know-how'].text}`}>
-                                                        <div className="bg-green-50 border-2 border-green-300 rounded px-2 py-1.5">
-                                                            <div className="font-semibold text-green-800">Show Organization IF:</div>
-                                                            <ul className="text-[10px] mt-1 space-y-0.5 text-green-700">
+                                                    <div className="pl-7 space-y-2 text-slate-700">
+                                                        <div className="bg-slate-50 border-2 border-slate-300 rounded px-2 py-1.5">
+                                                            <div className="font-semibold text-slate-800">Show Organization IF:</div>
+                                                            <ul className="text-[10px] mt-1 space-y-0.5 text-slate-700">
                                                                 <li>• Passes donor check (Step 1)</li>
                                                                 <li>• AND has ≥1 visible project after filtering</li>
                                                                 <li>• OR org name matches search (shows all projects)</li>
                                                             </ul>
                                                         </div>
-                                                        <div className="bg-red-50 border-2 border-red-300 rounded px-2 py-1.5">
-                                                            <div className="font-semibold text-red-800">Hide Organization IF:</div>
-                                                            <ul className="text-[10px] mt-1 space-y-0.5 text-red-700">
+                                                        <div className="bg-slate-200 border-2 border-slate-400 rounded px-2 py-1.5">
+                                                            <div className="font-semibold text-slate-800">Hide Organization IF:</div>
+                                                            <ul className="text-[10px] mt-1 space-y-0.5 text-slate-700">
                                                                 <li>• Fails donor check</li>
                                                                 <li>• OR has 0 visible projects after filtering</li>
                                                             </ul>
@@ -596,9 +589,9 @@ export default function MethodologyPage({ logoutButton }: MethodologyPageProps) 
                                                 </div>
 
                                                 {/* Key Insights */}
-                                                <div className={`${INVESTMENT_TYPE_COLORS['Standards & Coordination'].bg} border-2 ${INVESTMENT_TYPE_COLORS['Standards & Coordination'].border} rounded-lg p-3 mt-4`}>
-                                                    <div className={`font-bold ${INVESTMENT_TYPE_COLORS['Standards & Coordination'].text} mb-2 text-xs`}>🔑 Key Insights:</div>
-                                                    <ul className={`space-y-1 text-[10px] ${INVESTMENT_TYPE_COLORS['Standards & Coordination'].text}`}>
+                                                <div className="border-2 rounded-lg p-3 mt-4" style={{ backgroundColor: 'var(--brand-bg-light)', borderColor: 'var(--brand-border)' }}>
+                                                    <div className="font-bold mb-2 text-xs" style={{ color: 'var(--brand-primary-dark)' }}>🔑 Key Insights:</div>
+                                                    <ul className="space-y-1 text-[10px]" style={{ color: 'var(--brand-primary-dark)' }}>
                                                         <li className="flex gap-2">
                                                             <span className="font-bold">1.</span>
                                                             <span><strong>Donor filter</strong> is a gatekeeper — fails = entire org hidden</span>
@@ -648,7 +641,7 @@ export default function MethodologyPage({ logoutButton }: MethodologyPageProps) 
 
                                 {/* Export Tab */}
                                 <TabsContent value="export" className="mt-6 animate-tab-enter">
-                                    <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
+                                    <div className="space-y-6">
                                         <div>
                                             <SectionTitle icon={Download}>Export Functionality</SectionTitle>
                                             <div className="space-y-4">
