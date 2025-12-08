@@ -5938,10 +5938,6 @@
       "Provided Data Ecosystem Projects": [
         "rechQ1azyTpypEDEy"
       ],
-      "Org Donor Agencies": [
-        "reckIAhFXgj4XL29b"
-      ],
-      "Est. Org Budget": 52,
       "Org HQ Country": "United States",
       "Has received CRAF'd Funding?": "YES",
       "org_key": "korbel",
@@ -6899,6 +6895,9 @@
         "id": "recCkgL7i4kRmP0PL",
         "fields": {
           "Project/Product Name": "ACLED Webinar",
+          "Project Donor Agencies": [
+            "rec1VhOJv9U6QKBBs"
+          ],
           "Project Website": "https://acleddata.com/events-webinars#:~:text=Events%20%26%20Webinars",
           "Provider Orgs Full Name": [
             "recRoMeLU57jzgHFs"
@@ -6913,7 +6912,15 @@
           "product_key": "acled-webinar",
           "HDX_SOHD": "None"
         },
-        "agencies": []
+        "agencies": [
+          {
+            "id": "rec1VhOJv9U6QKBBs",
+            "fields": {
+              "Agency/Department Name": "CRAF’d Funding",
+              "Country Name": "CRAF’d"
+            }
+          }
+        ]
       },
       {
         "id": "recFF8BskJRz2Lyjk",
