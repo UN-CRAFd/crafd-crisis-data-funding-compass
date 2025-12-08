@@ -75,6 +75,7 @@ export interface OrganizationWithProjects {
     donorCountries: string[];
     projects: ProjectData[];
     projectCount: number;
+    estimatedBudget?: number;
 }
 
 export interface ProjectTypeData {
