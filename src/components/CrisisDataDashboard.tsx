@@ -10,6 +10,7 @@ import { SectionHeader, type SectionHeaderProps } from '@/components/SectionHead
 import dynamic from 'next/dynamic';
 import OrganizationModal from '@/components/OrganizationModal';
 import ProjectModal from '@/components/ProjectModal';
+import DonorModal from '@/components/DonorModal';
 import SurveyBanner from '@/components/SurveyBanner';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
@@ -21,9 +22,11 @@ import labels from '@/config/labels.json';
 import { getIconForInvestmentType } from '@/config/investmentTypeIcons';
 import { Building2, ChevronDown, ChevronRight, Database, Table, DatabaseBackup, FileDown, Filter, FolderDot, FolderOpenDot, Globe, Info, MessageCircle, RotateCcw, Search, Share2, ArrowUpDown, ArrowUpWideNarrow, ArrowDownWideNarrow, Network } from 'lucide-react';
 import organizationsTableRaw from '../../public/data/organizations-table.json';
-import { buildOrgDonorCountriesMap, buildOrgProjectsMap, buildProjectNameMap, buildProjectIdToKeyMap, buildOrgAgenciesMap, buildProjectAgenciesMap, calculateOrganizationTypesFromOrganizationsWithProjects, getNestedOrganizationsForModals } from '../lib/data';
+import nestedOrganizationsRaw from '../../public/data/organizations-nested.json';
+import { buildOrgDonorCountriesMap, buildOrgProjectsMap, buildProjectNameMap, buildProjectIdToKeyMap, buildOrgAgenciesMap, buildProjectAgenciesMap, buildProjectDescriptionMap, calculateOrganizationTypesFromOrganizationsWithProjects, getNestedOrganizationsForModals } from '../lib/data';
 import { exportDashboardToPDF } from '../lib/exportPDF';
 import { exportViewAsCSV, exportViewAsXLSX } from '../lib/exportCSV';
+import { useTips } from '@/contexts/TipsContext';
 import type { DashboardStats, OrganizationProjectData, OrganizationTypeData, OrganizationWithProjects, ProjectData, ProjectTypeData } from '../types/airtable';
 
 // Eagerly load NetworkGraph on client side to avoid lazy loading delay
@@ -93,7 +96,7 @@ interface CrisisDataDashboardProps {
     appliedSearchQuery: string; // Applied search query (from URL)
     selectedOrgKey: string; // Organization key from URL
     selectedProjectKey: string; // Asset key from URL
-    sortBy: 'name' | 'donors' | 'assets'; // Sort field from URL
+    sortBy: 'name' | 'donors' | 'assets' | 'funding'; // Sort field from URL
     sortDirection: 'asc' | 'desc'; // Sort direction from URL
     onDonorsChange: (values: string[]) => void;
     onTypesChange: (values: string[]) => void;
@@ -101,11 +104,14 @@ interface CrisisDataDashboardProps {
     onSearchChange: (value: string) => void;
     onSearchSubmit: () => void;
     onResetFilters: () => void;
-    onSortChange: (sortBy: 'name' | 'donors' | 'assets', sortDirection: 'asc' | 'desc') => void;
+    onSortChange: (sortBy: 'name' | 'donors' | 'assets' | 'funding', sortDirection: 'asc' | 'desc') => void;
     onOpenOrganizationModal: (orgKey: string) => void;
     onOpenProjectModal: (projectKey: string) => void;
+    onOpenDonorModal?: (donorCountry: string) => void;
     onCloseOrganizationModal: () => void;
     onCloseProjectModal: () => void;
+    onCloseDonorModal?: () => void;
+    selectedDonorCountry?: string;
     onDonorClick?: (country: string) => void;
     onTypeClick?: (type: string) => void;
     onViewChange?: (view: 'table' | 'network') => void;
@@ -123,6 +129,7 @@ interface StatCardProps {
 }
 
 const StatCard = React.memo(function StatCard({ icon, title, value, label, colorScheme, tooltip }: StatCardProps) {
+    const { tipsEnabled } = useTips();
     const gradients = {
         amber: {
             bg: 'from-[var(--brand-bg-lighter)] to-[var(--brand-bg-light)]',
@@ -154,7 +161,7 @@ const StatCard = React.memo(function StatCard({ icon, title, value, label, color
         </Card>
     );
 
-    if (tooltip) {
+    if (tooltip && tipsEnabled) {
         return (
             <TooltipProvider delayDuration={0}>
                 <TooltipUI>
@@ -231,6 +238,7 @@ const CrisisDataDashboard = ({
     appliedSearchQuery,
     selectedOrgKey,
     selectedProjectKey,
+    selectedDonorCountry,
     onDonorsChange,
     onTypesChange,
     onThemesChange,
@@ -239,8 +247,10 @@ const CrisisDataDashboard = ({
     onResetFilters,
     onOpenOrganizationModal,
     onOpenProjectModal,
+    onOpenDonorModal,
     onCloseOrganizationModal,
     onCloseProjectModal,
+    onCloseDonorModal,
     onDonorClick,
     onTypeClick,
     onViewChange,
@@ -249,6 +259,9 @@ const CrisisDataDashboard = ({
     sortDirection,
     onSortChange
 }: CrisisDataDashboardProps) => {
+    // Get tips enabled state
+    const { tipsEnabled } = useTips();
+    
     // UI state (not related to routing)
     const [expandedOrgs, setExpandedOrgs] = useState<Set<string>>(new Set());
     const [expandedCountries, setExpandedCountries] = useState<Set<string>>(new Set());
@@ -304,15 +317,19 @@ const CrisisDataDashboard = ({
         const allOrgs = dashboardData?.allOrganizations || [];
         
         allOrgs.forEach(org => {
-            // Filter by donors (AND logic - all selected donors must be present)
-            if (combinedDonors.length > 0) {
-                const hasAllDonors = combinedDonors.every(selectedDonor => 
-                    org.donorCountries.includes(selectedDonor)
-                );
-                if (!hasAllDonors) return;
-            }
+            // Check if org meets donor requirements at org level
+            const orgMeetsDonorRequirement = combinedDonors.length === 0 ||
+                combinedDonors.every(selectedDonor => org.donorCountries.includes(selectedDonor));
             
             org.projects.forEach(project => {
+                // If org doesn't meet donor requirement, check project-level donors
+                if (!orgMeetsDonorRequirement) {
+                    const projectMeetsDonorRequirement = combinedDonors.every(selectedDonor =>
+                        Array.isArray(project.donorCountries) && project.donorCountries.includes(selectedDonor)
+                    );
+                    if (!projectMeetsDonorRequirement) return;
+                }
+                
                 // Filter by search query
                 if (appliedSearchQuery) {
                     const searchLower = appliedSearchQuery.toLowerCase();
@@ -359,15 +376,19 @@ const CrisisDataDashboard = ({
         const allOrgs = dashboardData?.allOrganizations || [];
         
         allOrgs.forEach(org => {
-            // Filter by donors (AND logic - all selected donors must be present)
-            if (combinedDonors.length > 0) {
-                const hasAllDonors = combinedDonors.every(selectedDonor => 
-                    org.donorCountries.includes(selectedDonor)
-                );
-                if (!hasAllDonors) return;
-            }
+            // Check if org meets donor requirements at org level
+            const orgMeetsDonorRequirement = combinedDonors.length === 0 ||
+                combinedDonors.every(selectedDonor => org.donorCountries.includes(selectedDonor));
             
             org.projects.forEach(project => {
+                // If org doesn't meet donor requirement, check project-level donors
+                if (!orgMeetsDonorRequirement) {
+                    const projectMeetsDonorRequirement = combinedDonors.every(selectedDonor =>
+                        Array.isArray(project.donorCountries) && project.donorCountries.includes(selectedDonor)
+                    );
+                    if (!projectMeetsDonorRequirement) return;
+                }
+                
                 // Filter by search query
                 if (appliedSearchQuery) {
                     const searchLower = appliedSearchQuery.toLowerCase();
@@ -413,6 +434,7 @@ const CrisisDataDashboard = ({
     // Centralized data maps for modals
     const [projectNameMap, setProjectNameMap] = useState<Record<string, string>>({});
     const [projectIdToKeyMap, setProjectIdToKeyMap] = useState<Record<string, string>>({});
+    const [projectDescriptionMap, setProjectDescriptionMap] = useState<Record<string, string>>({});
     const [orgProjectsMap, setOrgProjectsMap] = useState<Record<string, Array<{ investmentTypes: string[] }>>>({});
     const [orgDonorCountriesMap, setOrgDonorCountriesMap] = useState<Record<string, string[]>>({});
     const [orgAgenciesMap, setOrgAgenciesMap] = useState<Record<string, Record<string, string[]>>>({});
@@ -426,6 +448,7 @@ const CrisisDataDashboard = ({
                 setNestedOrganizations(nestedOrgs);
                 setProjectNameMap(buildProjectNameMap(nestedOrgs));
                 setProjectIdToKeyMap(buildProjectIdToKeyMap(nestedOrgs));
+                setProjectDescriptionMap(buildProjectDescriptionMap(nestedOrgs));
                 setOrgProjectsMap(buildOrgProjectsMap(nestedOrgs));
                 setOrgDonorCountriesMap(buildOrgDonorCountriesMap(nestedOrgs));
                 
@@ -444,12 +467,18 @@ const CrisisDataDashboard = ({
         // Event handlers for modal close events dispatched from within modals
         window.addEventListener('closeProjectModal', onCloseProjectModal as EventListener);
         window.addEventListener('closeOrganizationModal', onCloseOrganizationModal as EventListener);
+        if (onCloseDonorModal) {
+            window.addEventListener('closeDonorModal', onCloseDonorModal as EventListener);
+        }
 
         return () => {
             window.removeEventListener('closeProjectModal', onCloseProjectModal as EventListener);
             window.removeEventListener('closeOrganizationModal', onCloseOrganizationModal as EventListener);
+            if (onCloseDonorModal) {
+                window.removeEventListener('closeDonorModal', onCloseDonorModal as EventListener);
+            }
         };
-    }, [onCloseProjectModal, onCloseOrganizationModal]);
+    }, [onCloseProjectModal, onCloseOrganizationModal, onCloseDonorModal]);
 
     // Find selected items based on URL parameters
     const selectedProject = useMemo(() => {
@@ -786,7 +815,7 @@ const CrisisDataDashboard = ({
 
             elements.push(
                 <React.Fragment key="types">
-                    {' '}in <strong>{displayTypes.join(' & ')}</strong>
+                    {' '}in <strong>{displayTypes.join(' / ')}</strong>
                 </React.Fragment>
             );
         }
@@ -795,7 +824,7 @@ const CrisisDataDashboard = ({
         if (investmentThemes.length > 0) {
             elements.push(
                 <React.Fragment key="themes">
-                    {' '}with themes <strong>{investmentThemes.join(' & ')}</strong>
+                    {' '}with themes <strong>{investmentThemes.join(' / ')}</strong>
                 </React.Fragment>
             );
         }
@@ -925,95 +954,87 @@ const CrisisDataDashboard = ({
                                 title={labels.sections.organizationsAndProjects}
                             />
 
-                            <div className="flex items-center gap-2">
+                            <div className="flex items-center gap-1">
                                 {/* Sort Dropdown only for Table view */}
                                 {activeView === 'table' && (
                                     <div className="animate-in slide-in-from-right-5 fade-in duration-300">
-                                        <DropdownMenu onOpenChange={(open) => setSortMenuOpen(open)}>
-                                        <DropdownMenuTrigger asChild>
-                                            <Button
-                                                variant="outline"
-                                                className="hidden sm:flex h-7 w-auto px-2.5 justify-between font-medium transition-all bg-slate-50/50 border-slate-200 hover:bg-white hover:border-slate-300 text-[11px]"
+                                        <div className="hidden sm:flex h-7 px-2 font-medium transition-all bg-slate-50/50 border border-slate-200 hover:bg-white hover:border-slate-300 text-[11px] rounded-md items-center gap-1">
+                                           <Button
+                                                variant="ghost"
+                                                size="sm"
+                                                className="h-auto p-0 m-0 font-medium transition-all hover:bg-transparent"
+                                                onClick={() => {
+                                                    const newDirection = sortDirection === 'asc' ? 'desc' : 'asc';
+                                                    onSortChange(sortBy, newDirection);
+                                                }}
+                                                title={sortDirection === 'asc' ? 'Sort ascending' : 'Sort descending'}
                                             >
-                                                <div className="flex items-center gap-1.5 min-w-0">
-                                                    {sortBy === 'name' ? (
-                                                        // For alphabetical: asc = A-Z (down), desc = Z-A (up)
-                                                        sortDirection === 'asc' ? (
-                                                            <ArrowDownWideNarrow className="w-3 h-3 shrink-0" />
-                                                        ) : (
-                                                            <ArrowUpWideNarrow className="w-3 h-3 shrink-0" />
-                                                        )
+                                                
+                                                   {sortDirection === 'asc' ? (
+                                                        <ArrowUpWideNarrow className="w-3 h-3" />
                                                     ) : (
-                                                        // For numbers: asc = low-to-high (up), desc = high-to-low (down)
-                                                        sortDirection === 'asc' ? (
-                                                            <ArrowUpWideNarrow className="w-3 h-3 shrink-0" />
-                                                        ) : (
-                                                            <ArrowDownWideNarrow className="w-3 h-3 shrink-0" />
-                                                        )
-                                                    )}
-                                                    <span className="truncate">
-                                                        {sortBy === 'name' 
-                                                            ? 'Alphabetically' 
-                                                            : sortBy === 'donors' 
-                                                            ? 'Donors' 
-                                                            : 'Assets'}
-                                                    </span>
-                                                </div>
-                                                <ChevronDown className={`ml-1.5 h-3 w-3 opacity-50 shrink-0 transform transition-transform ${
-                                                    sortMenuOpen ? 'rotate-180' : ''
-                                                }`} />
+                                                        <ArrowDownWideNarrow className="w-3 h-3" />
+                                                    )
+                                                }
                                             </Button>
-                                        </DropdownMenuTrigger>
-                                        <DropdownMenuContent 
-                                            align="end" 
-                                            side="bottom"
-                                            sideOffset={4}
-                                            className="w-auto min-w-[180px] bg-white border border-slate-200 shadow-lg"
-                                        >
-                                            <DropdownMenuItem
-                                                onClick={() => onSortChange('name', 'asc')}
-                                                className="cursor-pointer text-[11px] py-1"
-                                            >
-                                                <ArrowDownWideNarrow className="w-3 h-3 mr-2" />
-                                                Alphabetically (A-Z)
-                                            </DropdownMenuItem>
-                                            <DropdownMenuItem
-                                                onClick={() => onSortChange('name', 'desc')}
-                                                className="cursor-pointer text-[11px] py-1"
-                                            >
-                                                <ArrowUpWideNarrow className="w-3 h-3 mr-2" />
-                                                Alphabetically (Z-A)
-                                            </DropdownMenuItem>
-                                            <DropdownMenuItem
-                                                onClick={() => onSortChange('donors', 'desc')}
-                                                className="cursor-pointer text-[11px] py-1"
-                                            >
-                                                <ArrowDownWideNarrow className="w-3 h-3 mr-2" />
-                                                Number of Donors
-                                            </DropdownMenuItem>
-                                            <DropdownMenuItem
-                                                onClick={() => onSortChange('donors', 'asc')}
-                                                className="cursor-pointer text-[11px] py-1"
-                                            >
-                                                <ArrowUpWideNarrow className="w-3 h-3 mr-2" />
-                                                Number of Donors
-                                            </DropdownMenuItem>
-                                            <DropdownMenuItem
-                                                onClick={() => onSortChange('assets', 'desc')}
-                                                className="cursor-pointer text-[11px] py-1"
-                                            >
-                                                <ArrowDownWideNarrow className="w-3 h-3 mr-2" />
-                                                Number of Assets
-                                            </DropdownMenuItem>
-                                            <DropdownMenuItem
-                                                onClick={() => onSortChange('assets', 'asc')}
-                                                className="cursor-pointer text-[11px] py-1"
-                                            >
-                                                <ArrowUpWideNarrow className="w-3 h-3 mr-2" />
-                                                Number of Assets
-                                            </DropdownMenuItem>
-                                        </DropdownMenuContent>
-                                    </DropdownMenu>
+                                            <DropdownMenu onOpenChange={(open) => setSortMenuOpen(open)}>
+                                                <div className="w-px h-4 bg-slate-200"></div>
+                                                <DropdownMenuTrigger asChild>
+                                                    <Button
+                                                        variant="ghost"
+                                                        className="h-auto p-0 m-0 font-medium text-[11px] hover:bg-transparent text-slate-700"
+                                                    >
+                                                        <div className="flex items-center gap-1.5 min-w-0">
+                                                            <span className="truncate">
+                                                                {sortBy === 'name' 
+                                                                    ? 'Alphabetically' 
+                                                                    : sortBy === 'donors' 
+                                                                    ? 'Donors' 
+                                                                    : sortBy === 'assets'
+                                                                    ? 'Assets'
+                                                                    : 'Funding'}
+                                                            </span>
+                                                        </div>
+                                                        <ChevronDown className={`h-3 w-3 opacity-50 shrink-0 transform transition-transform ${
+                                                            sortMenuOpen ? 'rotate-180' : ''
+                                                        }`} />
+                                                        
+                                                    </Button>
+                                                           
+                                                </DropdownMenuTrigger>
+                                                <DropdownMenuContent 
+                                                    align="end" 
+                                                    side="bottom"
+                                                    sideOffset={4}
+                                                    className="w-auto min-w-[140px] bg-white border border-slate-200 shadow-lg"
+                                                >
+                                                    <DropdownMenuItem
+                                                        onClick={() => onSortChange('name', sortDirection)}
+                                                        className="cursor-pointer text-[11px] py-1"
+                                                    >
+                                                        Alphabetically
+                                                    </DropdownMenuItem>
+                                                    <DropdownMenuItem
+                                                        onClick={() => onSortChange('donors', sortDirection)}
+                                                        className="cursor-pointer text-[11px] py-1"
+                                                    >
+                                                        No. of Donors
+                                                    </DropdownMenuItem>
+                                                    <DropdownMenuItem
+                                                        onClick={() => onSortChange('assets', sortDirection)}
+                                                        className="cursor-pointer text-[11px] py-1"
+                                                    >
+                                                        No. of Assets
+                                                    </DropdownMenuItem>
+                                                    <DropdownMenuItem
+                                                        onClick={() => onSortChange('funding', sortDirection)}
+                                                        className="cursor-pointer text-[11px] py-1"
+                                                    >
+                                                        Funding
+                                                    </DropdownMenuItem>
+                                                </DropdownMenuContent>
+                                            </DropdownMenu>                                         
+                                        </div>
                                     </div>
                                 )}
                                 {/* View Toggle Switch Tabs */}
@@ -1076,13 +1097,18 @@ const CrisisDataDashboard = ({
                                                     let comparison = 0;
                                                     
                                                     if (sortBy === 'name') {
-                                                        comparison = a.organizationName.localeCompare(b.organizationName);
+                                                        comparison = b.organizationName.localeCompare(a.organizationName);
                                                     } else if (sortBy === 'donors') {
                                                         // Sort by number of unique donors
                                                         comparison = a.donorCountries.length - b.donorCountries.length;
                                                     } else if (sortBy === 'assets') {
                                                         // Sort by number of projects/assets
                                                         comparison = a.projects.length - b.projects.length;
+                                                    } else if (sortBy === 'funding') {
+                                                        // Sort by estimated budget (handle undefined/null values)
+                                                        const aBudget = a.estimatedBudget || 0;
+                                                        const bBudget = b.estimatedBudget || 0;
+                                                        comparison = aBudget - bBudget;
                                                     }
                                                     
                                                     // Apply sort direction
@@ -1152,7 +1178,7 @@ const CrisisDataDashboard = ({
                                                                                     });
                                                                                     const orgType = orgTableMatch?.fields['Org Type'] as string | undefined;
                                                                                     return orgType ? (
-                                                                                        <div className="sm:inline-flex items-center px-1.5 py-px rounded text-[11px] font-medium text-slate-500 bg-transparent border border-slate-200 whitespace-nowrap flex-shrink-0">
+                                                                                        <div className="sm:inline-flex items-center px-0.5 py-0 rounded text-[10px] font-sm text-slate-400 bg-transparent whitespace-nowrap flex-shrink-0">
                                                                                             {orgType}
                                                                                         </div>
                                                                                     ) : null;
@@ -1257,12 +1283,12 @@ const CrisisDataDashboard = ({
                                                                             }}
                                                                                 className="hidden sm:inline-flex items-center justify-center gap-1 text-[10px] h-6 px-2 rounded-md text-[var(--badge-slate-bg)] bg-[var(--badge-slate-text)] hover:bg-slate-400 duration-150"
                                                                             >
-                                                                            <div className="hidden sm:inline-flex items-center justify-center gap-1">
+                                                                            <div className="hidden sm:inline-flex items-center justify-center gap-1 border-none">
                                                                                 <Info className="w-3 h-3" />
                                                                                 <span>Details</span>
                                                                             </div>
                                                                         </Button>
-                                                                        <div className="text-xs sm:text-xs text-slate-600 whitespace-nowrap">
+                                                                        <div className="text-xs sm:text-xs text-slate-400 whitespace-nowrap">
                                                                             {org.projects.length > 0 ? (
                                                                                 isExpanded ?
                                                                                     `Showing ${org.projects.length} Asset${org.projects.length === 1 ? '' : 's'}` :
@@ -1314,8 +1340,8 @@ const CrisisDataDashboard = ({
                                                                                                     </span>
                                                                                                 );
                                                                                                 
-                                                                                                // Wrap in tooltip if description exists
-                                                                                                if (description) {
+                                                                                                // Wrap in tooltip if description exists and tips are enabled
+                                                                                                if (description && tipsEnabled) {
                                                                                                     return (
                                                                                                         <TooltipProvider key={idx}>
                                                                                                             <TooltipUI delayDuration={200}>
@@ -1371,6 +1397,7 @@ const CrisisDataDashboard = ({
                                                         allOrganizations={allOrganizations}
                                                         onOpenOrganizationModal={onOpenOrganizationModal}
                                                         onOpenProjectModal={onOpenProjectModal}
+                                                        onOpenDonorModal={onOpenDonorModal}
                                                         selectedOrgKey={selectedOrgKey}
                                                         selectedProjectKey={selectedProjectKey}
                                                         searchQuery={searchQuery}
@@ -1485,6 +1512,7 @@ const CrisisDataDashboard = ({
                     loading={false}
                     projectAgenciesMap={projectAgenciesMap}
                     onOpenOrganizationModal={onOpenOrganizationModal}
+                    onOpenProjectModal={onOpenProjectModal}
                     onDonorClick={onDonorClick}
                     onTypeClick={onTypeClick}
                 />
@@ -1513,6 +1541,7 @@ const CrisisDataDashboard = ({
                         <OrganizationModal
                             organization={orgRecord}
                             projectNameMap={projectNameMap}
+                            projectDescriptionMap={projectDescriptionMap}
                             orgProjectsMap={orgProjectsMap}
                             orgDonorCountriesMap={orgDonorCountriesMap}
                             orgAgenciesMap={orgAgenciesMap}
@@ -1524,6 +1553,16 @@ const CrisisDataDashboard = ({
                         />
                     );
                 })()
+            )}
+            {/* Donor Modal */}
+            {selectedDonorCountry && (
+                <DonorModal
+                    donorCountry={selectedDonorCountry}
+                    nestedOrganizations={nestedOrganizationsRaw as any}
+                    loading={false}
+                    onOpenOrganizationModal={onOpenOrganizationModal}
+                    onOpenProjectModal={onOpenProjectModal}
+                />
             )}
         </div>
     );

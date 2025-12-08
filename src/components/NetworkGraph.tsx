@@ -16,6 +16,7 @@ interface NetworkGraphProps {
     allOrganizations?: OrganizationWithProjects[]; // Unfiltered organizations for counting
     onOpenOrganizationModal: (orgKey: string) => void;
     onOpenProjectModal: (projectKey: string) => void;
+    onOpenDonorModal?: (donorCountry: string) => void;
     selectedOrgKey?: string;
     selectedProjectKey?: string;
     // Filter props for fullscreen mode
@@ -47,6 +48,7 @@ interface GraphNode {
     projectKey?: string;
     orgType?: string; // For organization clustering
     assetTypes?: string[]; // For project/asset clustering
+    estimatedBudget?: number; // For funding-based scaling
     x?: number;
     y?: number;
     fx?: number; // Fixed x position for clustering
@@ -69,6 +71,7 @@ const NetworkGraph: React.FC<NetworkGraphProps> = ({
     allOrganizations,
     onOpenOrganizationModal,
     onOpenProjectModal,
+    onOpenDonorModal,
     selectedOrgKey,
     selectedProjectKey,
     // Filter props
@@ -99,6 +102,7 @@ const NetworkGraph: React.FC<NetworkGraphProps> = ({
     const globalScaleRef = useRef<number>(1); // Track current zoom scale
     const [clusterByOrgType, setClusterByOrgType] = useState(false);
     const [clusterByAssetType, setClusterByAssetType] = useState(false);
+    const [scalingMode, setScalingMode] = useState<'connections' | 'funding'>('connections');
     const [legendCollapsed, setLegendCollapsed] = useState(false);
     const lastClusterStateRef = useRef<string>(''); // Track last clustering state to prevent unnecessary updates
     const [filterBarContainer, setFilterBarContainer] = useState<HTMLElement | null>(null);
@@ -406,6 +410,7 @@ const NetworkGraph: React.FC<NetworkGraphProps> = ({
                 color: brandBgLight, // Uses --brand-bg-light (amber/golden from organization badges)
                 orgKey: org.orgShortName, // Use orgShortName for modal/URL
                 orgType: org.type, // Store org type for clustering
+                estimatedBudget: org.estimatedBudget, // Store budget for funding-based scaling
                 x,
                 y,
             });
@@ -479,19 +484,44 @@ const NetworkGraph: React.FC<NetworkGraphProps> = ({
             degreeMap.set(targetId, (degreeMap.get(targetId) || 0) + 1);
         });
 
-        // Scale node visual size by log(degree+1) to keep growth controlled.
-        // Preserve original base sizes per type and add a scaled boost.
-        // Base sizes ensure: donors > organizations > assets at all connection levels
+        // Calculate max budget for normalization (only for orgs with budget data)
+        const orgBudgets = nodes
+            .filter(n => n.type === 'organization' && n.estimatedBudget && n.estimatedBudget > 0)
+            .map(n => n.estimatedBudget!);
+        const maxBudget = orgBudgets.length > 0 ? Math.max(...orgBudgets) : 1;
+        const minBudget = orgBudgets.length > 0 ? Math.min(...orgBudgets) : 0;
+
+        // Scale node visual size based on scalingMode
+        // 'connections' = size by degree (number of links)
+        // 'funding' = organizations sized by budget, others by connections
         const SIZE_SCALE = 6; // multiplier for the log-scaling term
         nodes.forEach(n => {
             const deg = degreeMap.get(n.id) || 0;
             // Base sizes: donors start larger, then organizations, then projects/assets
             const base = n.type === 'donor' ? 28 : n.type === 'organization' ? 24 : 18;
-            const scaled = Math.round(base + Math.log1p(deg) * SIZE_SCALE);
-            // Clamp to reasonable bounds to avoid overly large/small nodes
-            // Min bounds also maintain the hierarchy: donors >= 28, orgs >= 24, assets >= 18
             const minSize = n.type === 'donor' ? 28 : n.type === 'organization' ? 24 : 18;
-            n.value = Math.min(80, Math.max(minSize, scaled));
+            
+            if (scalingMode === 'funding' && n.type === 'organization') {
+                // For funding mode: scale organizations by their budget
+                if (n.estimatedBudget && n.estimatedBudget > 0) {
+                    // Use log scale for budget to handle large range
+                    // Normalize to 0-1 range using log scale
+                    const logBudget = Math.log10(n.estimatedBudget);
+                    const logMin = minBudget > 0 ? Math.log10(minBudget) : 0;
+                    const logMax = Math.log10(maxBudget);
+                    const normalized = logMax > logMin ? (logBudget - logMin) / (logMax - logMin) : 0.5;
+                    // Scale from minSize to 70 based on normalized budget
+                    n.value = Math.round(minSize + normalized * (70 - minSize));
+                } else {
+                    // No budget data - use minimum size
+                    n.value = minSize;
+                }
+            } else {
+                // Connection-based scaling (default)
+                const scaled = Math.round(base + Math.log1p(deg) * SIZE_SCALE);
+                // Clamp to reasonable bounds
+                n.value = Math.min(80, Math.max(minSize, scaled));
+            }
         });
 
         // Calculate average coordinates
@@ -533,7 +563,89 @@ const NetworkGraph: React.FC<NetworkGraphProps> = ({
         }
 
         return { nodes, links };
-    }, [organizationsWithProjects]);
+    }, [organizationsWithProjects]); // scalingMode removed - handled in separate effect for smooth transitions
+
+    // Smoothly update node sizes when scalingMode changes (without rebuilding the graph)
+    useEffect(() => {
+        if (graphData.nodes.length === 0) return;
+
+        // Compute node degrees for connection-based scaling
+        const degreeMap = new Map<string, number>();
+        graphData.nodes.forEach(n => degreeMap.set(n.id, 0));
+        graphData.links.forEach(link => {
+            const sourceId = typeof link.source === 'object' ? (link.source as any).id : link.source;
+            const targetId = typeof link.target === 'object' ? (link.target as any).id : link.target;
+            degreeMap.set(sourceId, (degreeMap.get(sourceId) || 0) + 1);
+            degreeMap.set(targetId, (degreeMap.get(targetId) || 0) + 1);
+        });
+
+        // Calculate budget range for funding-based scaling
+        const orgBudgets = graphData.nodes
+            .filter(n => n.type === 'organization' && n.estimatedBudget && n.estimatedBudget > 0)
+            .map(n => n.estimatedBudget!);
+        const maxBudget = orgBudgets.length > 0 ? Math.max(...orgBudgets) : 1;
+        const minBudget = orgBudgets.length > 0 ? Math.min(...orgBudgets) : 0;
+
+        const SIZE_SCALE = 6;
+
+        // Calculate target sizes for all nodes
+        const targetSizes = graphData.nodes.map(n => {
+            const deg = degreeMap.get(n.id) || 0;
+            const base = n.type === 'donor' ? 28 : n.type === 'organization' ? 24 : 18;
+            const minSize = n.type === 'donor' ? 28 : n.type === 'organization' ? 24 : 18;
+            
+            if (scalingMode === 'funding' && n.type === 'organization') {
+                if (n.estimatedBudget && n.estimatedBudget > 0) {
+                    const logBudget = Math.log10(n.estimatedBudget);
+                    const logMin = minBudget > 0 ? Math.log10(minBudget) : 0;
+                    const logMax = Math.log10(maxBudget);
+                    const normalized = logMax > logMin ? (logBudget - logMin) / (logMax - logMin) : 0.5;
+                    return Math.round(minSize + normalized * (70 - minSize));
+                } else {
+                    return minSize;
+                }
+            } else {
+                const scaled = Math.round(base + Math.log1p(deg) * SIZE_SCALE);
+                return Math.min(80, Math.max(minSize, scaled));
+            }
+        });
+
+        // Animate the size change over 300ms
+        const duration = 300;
+        const startTime = performance.now();
+        const startSizes = graphData.nodes.map(n => n.value);
+        let animationId: number;
+
+        const animate = (currentTime: number) => {
+            const elapsed = currentTime - startTime;
+            const progress = Math.min(elapsed / duration, 1);
+            // Ease-out cubic for smooth deceleration
+            const eased = 1 - Math.pow(1 - progress, 3);
+
+            graphData.nodes.forEach((n, i) => {
+                n.value = Math.round(startSizes[i] + (targetSizes[i] - startSizes[i]) * eased);
+            });
+
+            // Force a visual refresh without reheating the simulation
+            // The graph will repaint on the next animation frame
+            if (graphRef.current) {
+                // Tickle the simulation very gently to force a repaint
+                // This doesn't restart the simulation, just triggers a render
+                (graphRef.current as any).refresh?.() || 
+                    graphRef.current.centerAt(graphRef.current.centerAt().x, graphRef.current.centerAt().y, 0);
+            }
+
+            if (progress < 1) {
+                animationId = requestAnimationFrame(animate);
+            }
+        };
+
+        animationId = requestAnimationFrame(animate);
+
+        return () => {
+            if (animationId) cancelAnimationFrame(animationId);
+        };
+    }, [scalingMode, graphData.nodes, graphData.links]);
 
     // Configure force simulation for better spacing
     useEffect(() => {
@@ -542,9 +654,9 @@ const NetworkGraph: React.FC<NetworkGraphProps> = ({
         const startTime = performance.now();
         const fg = graphRef.current;
 
-        // Moderate repulsion between nodes for calmer movement
-        fg.d3Force('charge').strength(-400);
-        fg.d3Force('charge').distanceMax(500);
+        // Moderate repulsion between nodes - lower values = calmer movement
+        fg.d3Force('charge').strength(-200);
+        fg.d3Force('charge').distanceMax(400);
 
         // Set link distance dynamically based on node types
         fg.d3Force('link').distance((link: any) => {
@@ -571,7 +683,7 @@ const NetworkGraph: React.FC<NetworkGraphProps> = ({
         // Donor-project links (value 0) have zero strength - visual only, no pull
         fg.d3Force('link').strength((link: any) => {
             if (link.value === 0) return 0; // No attraction for donor-project links
-            return 0.5; // Standard strength for other links
+            return 0.3; // Lower strength for calmer settling
         });
 
         // No center force - allows nodes to distribute naturally based on their connections only
@@ -580,12 +692,9 @@ const NetworkGraph: React.FC<NetworkGraphProps> = ({
         // Enhanced collision force with more iterations for smoother collision avoidance
         fg.d3Force('collision', forceCollide((node: any) => {
             const r = (node.value || 10) / 2;
-            const padding = 8; // More padding for smoother spacing
+            const padding = 6; // Moderate padding
             return r + padding;
-        }).iterations(3).strength(0.8)); // More iterations and higher strength for better collision handling
-
-        // Higher velocity decay for calmer, less jittery movement
-        fg.d3Force('simulation')?.velocityDecay(0.7);
+        }).iterations(2).strength(0.6)); // Balanced collision handling
 
         const endTime = performance.now();
         if (process.env.NODE_ENV === 'development') {
@@ -656,17 +765,17 @@ const NetworkGraph: React.FC<NetworkGraphProps> = ({
         fg.d3Force('clusterRepulsion', null);
         
         if (clusterByOrgType || clusterByAssetType) {
-            // Strong charge repulsion to keep clusters well separated
-            fg.d3Force('charge').strength(-300);
+            // Moderate charge repulsion to keep clusters separated while stable
+            fg.d3Force('charge').strength(-150);
             
             // No center force - let clusters spread naturally
             fg.d3Force('center', null);
             
-            // Maintain standard link strength to preserve connection distances
+            // Maintain moderate link strength to preserve connection distances
             // Donor-project links (value 0) have zero strength - visual only, no pull
             fg.d3Force('link').strength((link: any) => {
                 if (link.value === 0) return 0; // No attraction for donor-project links
-                return 0.5; // Standard strength for other links
+                return 0.25; // Lower strength during clustering for stability
             });
             
             // Apply link distance function during clustering too
@@ -690,12 +799,12 @@ const NetworkGraph: React.FC<NetworkGraphProps> = ({
                 return 150;
             });
             
-            // More collision within clusters to prevent overlap
+            // Collision within clusters to prevent overlap
             fg.d3Force('collision', forceCollide((node: any) => {
                 const r = (node.value || 10) / 2;
-                const padding = 6; // More padding to spread nodes within cluster
+                const padding = 5;
                 return r + padding;
-            }).iterations(2).strength(0.7)); // Stronger collision force
+            }).iterations(2).strength(0.5)); // Moderate collision force
             
             const clusterCenters = new Map<string, { x: number; y: number }>();
             // Make clusters much more spread out
@@ -710,18 +819,25 @@ const NetworkGraph: React.FC<NetworkGraphProps> = ({
             const clusterNodePositions = new Map<string, { sumX: number; sumY: number; count: number }>();
             
             graphData.nodes.forEach(node => {
-                let clusterKey = null;
-                
+                // Track org-type clusters
                 if (clusterByOrgType && node.type === 'organization' && node.orgType) {
-                    clusterKey = `org-${node.orgType}`;
-                } else if (clusterByAssetType && node.type === 'project' && node.assetTypes && node.assetTypes.length > 0) {
-                    clusterKey = `asset-${node.assetTypes[0]}`;
-                }
-                
-                if (clusterKey) {
+                    const clusterKey = `org-${node.orgType}`;
                     clusterKeys.add(clusterKey);
                     
-                    // Accumulate positions for averaging
+                    if (!clusterNodePositions.has(clusterKey)) {
+                        clusterNodePositions.set(clusterKey, { sumX: 0, sumY: 0, count: 0 });
+                    }
+                    const pos = clusterNodePositions.get(clusterKey)!;
+                    pos.sumX += node.x || centerX;
+                    pos.sumY += node.y || centerY;
+                    pos.count += 1;
+                }
+                
+                // Track asset-type clusters (separately, not else-if)
+                if (clusterByAssetType && node.type === 'project' && node.assetTypes && node.assetTypes.length > 0) {
+                    const clusterKey = `asset-${node.assetTypes[0]}`;
+                    clusterKeys.add(clusterKey);
+                    
                     if (!clusterNodePositions.has(clusterKey)) {
                         clusterNodePositions.set(clusterKey, { sumX: 0, sumY: 0, count: 0 });
                     }
@@ -749,46 +865,100 @@ const NetworkGraph: React.FC<NetworkGraphProps> = ({
                 }
             });
             
-            // Strong clustering force that pulls nodes to their cluster centers
-            const baseClusterStrength = 0.8; // Increased from 0.5 for stronger clustering
-            const decayStart = 0.7; // Start decaying very late
+            // Moderate clustering force that pulls nodes to their cluster centers
+            const baseClusterStrength = 0.4; // Lower for smoother clustering
+            const decayStart = 0.5; // Start decaying earlier for stability
             
             // Dynamic cluster center adjustment and node clustering
             fg.d3Force('clusterRepulsion', (alpha: number) => {
                 const clusterArray = Array.from(clusterCenters.entries());
-                const hullRepulsionStrength = 50000; // Strong repulsion between cluster centers
+                const hullRepulsionStrength = 0.6; // Strong repulsion when hulls overlap
                 const centerAttractionStrength = 0.3; // Strength of attraction toward cluster members
+                const hullPadding = 100; // Padding between hulls
                 
-                // First, calculate average position of nodes in each cluster
-                const clusterNodePositions = new Map<string, { sumX: number; sumY: number; count: number }>();
+                // First, calculate average position and radius for each cluster
+                // Track BOTH org-type and asset-type clusters when both are enabled
+                const clusterStats = new Map<string, { sumX: number; sumY: number; count: number; maxRadius: number }>();
                 
                 for (let i = 0; i < graphData.nodes.length; i++) {
                     const node: any = graphData.nodes[i];
-                    let clusterKey = null;
                     
+                    // Track org-type clusters
                     if (clusterByOrgType && node.type === 'organization' && node.orgType) {
-                        clusterKey = `org-${node.orgType}`;
-                    } else if (clusterByAssetType && node.type === 'project' && node.assetTypes && node.assetTypes.length > 0) {
-                        clusterKey = `asset-${node.assetTypes[0]}`;
+                        const clusterKey = `org-${node.orgType}`;
+                        if (!clusterStats.has(clusterKey)) {
+                            clusterStats.set(clusterKey, { sumX: 0, sumY: 0, count: 0, maxRadius: 0 });
+                        }
+                        const stats = clusterStats.get(clusterKey)!;
+                        stats.sumX += node.x || 0;
+                        stats.sumY += node.y || 0;
+                        stats.count += 1;
                     }
                     
-                    if (clusterKey) {
-                        if (!clusterNodePositions.has(clusterKey)) {
-                            clusterNodePositions.set(clusterKey, { sumX: 0, sumY: 0, count: 0 });
+                    // Track asset-type clusters (separately, not else-if)
+                    if (clusterByAssetType && node.type === 'project' && node.assetTypes && node.assetTypes.length > 0) {
+                        const clusterKey = `asset-${node.assetTypes[0]}`;
+                        if (!clusterStats.has(clusterKey)) {
+                            clusterStats.set(clusterKey, { sumX: 0, sumY: 0, count: 0, maxRadius: 0 });
                         }
-                        const pos = clusterNodePositions.get(clusterKey)!;
-                        pos.sumX += node.x || 0;
-                        pos.sumY += node.y || 0;
-                        pos.count += 1;
+                        const stats = clusterStats.get(clusterKey)!;
+                        stats.sumX += node.x || 0;
+                        stats.sumY += node.y || 0;
+                        stats.count += 1;
+                    }
+                }
+                
+                // Calculate cluster centroids
+                const clusterCentroids = new Map<string, { x: number; y: number }>();
+                clusterStats.forEach((stats, key) => {
+                    if (stats.count > 0) {
+                        clusterCentroids.set(key, {
+                            x: stats.sumX / stats.count,
+                            y: stats.sumY / stats.count
+                        });
+                    }
+                });
+                
+                // Calculate hull radii (max distance from centroid to any node edge)
+                // Helper function to update radius for a cluster
+                const clusterRadii = new Map<string, number>();
+                const updateClusterRadius = (clusterKey: string, node: any) => {
+                    if (clusterCentroids.has(clusterKey)) {
+                        const centroid = clusterCentroids.get(clusterKey)!;
+                        const nodeRadius = (node.value || 10) / 2;
+                        const distToCentroid = Math.sqrt(
+                            Math.pow((node.x || 0) - centroid.x, 2) + 
+                            Math.pow((node.y || 0) - centroid.y, 2)
+                        );
+                        const edgeDist = distToCentroid + nodeRadius + 15; // 15 = base padding
+                        
+                        const currentMax = clusterRadii.get(clusterKey) || 0;
+                        if (edgeDist > currentMax) {
+                            clusterRadii.set(clusterKey, edgeDist);
+                        }
+                    }
+                };
+                
+                for (let i = 0; i < graphData.nodes.length; i++) {
+                    const node: any = graphData.nodes[i];
+                    
+                    // Update radius for org-type clusters
+                    if (clusterByOrgType && node.type === 'organization' && node.orgType) {
+                        updateClusterRadius(`org-${node.orgType}`, node);
+                    }
+                    
+                    // Update radius for asset-type clusters (separately)
+                    if (clusterByAssetType && node.type === 'project' && node.assetTypes && node.assetTypes.length > 0) {
+                        updateClusterRadius(`asset-${node.assetTypes[0]}`, node);
                     }
                 }
                 
                 // Move cluster centers toward their nodes' average position
-                clusterNodePositions.forEach((pos, key) => {
-                    if (pos.count > 0 && clusterCenters.has(key)) {
+                clusterStats.forEach((stats, key) => {
+                    if (stats.count > 0 && clusterCenters.has(key)) {
                         const center = clusterCenters.get(key)!;
-                        const avgX = pos.sumX / pos.count;
-                        const avgY = pos.sumY / pos.count;
+                        const avgX = stats.sumX / stats.count;
+                        const avgY = stats.sumY / stats.count;
                         
                         // Pull center toward average position of its nodes
                         center.x += (avgX - center.x) * centerAttractionStrength * alpha;
@@ -796,23 +966,36 @@ const NetworkGraph: React.FC<NetworkGraphProps> = ({
                     }
                 });
                 
-                // Apply repulsion between cluster centers to keep them separated
+                // Apply repulsion between cluster hulls to prevent overlap
                 for (let i = 0; i < clusterArray.length; i++) {
                     for (let j = i + 1; j < clusterArray.length; j++) {
                         const [key1, center1] = clusterArray[i];
                         const [key2, center2] = clusterArray[j];
                         
-                        const dx = center2.x - center1.x;
-                        const dy = center2.y - center1.y;
-                        const distSq = dx * dx + dy * dy;
+                        const centroid1 = clusterCentroids.get(key1);
+                        const centroid2 = clusterCentroids.get(key2);
+                        const radius1 = clusterRadii.get(key1) || 50;
+                        const radius2 = clusterRadii.get(key2) || 50;
                         
-                        if (distSq > 0) {
-                            const dist = Math.sqrt(distSq);
-                            const force = hullRepulsionStrength / distSq; // Inverse square law
+                        if (!centroid1 || !centroid2) continue;
+                        
+                        const dx = centroid2.x - centroid1.x;
+                        const dy = centroid2.y - centroid1.y;
+                        const dist = Math.sqrt(dx * dx + dy * dy);
+                        
+                        // Minimum distance = sum of hull radii + padding
+                        const minDist = radius1 + radius2 + hullPadding;
+                        
+                        if (dist < minDist && dist > 0) {
+                            // Hulls are overlapping - apply gentle repulsion
+                            const overlap = minDist - dist;
+                            // Cap the force to prevent jumpy movement
+                            const cappedOverlap = Math.min(overlap, 50);
+                            const force = cappedOverlap * hullRepulsionStrength;
                             const fx = (dx / dist) * force;
                             const fy = (dy / dist) * force;
                             
-                            // Push centers apart
+                            // Push centers apart gradually
                             center1.x -= fx * alpha;
                             center1.y -= fy * alpha;
                             center2.x += fx * alpha;
@@ -916,7 +1099,7 @@ const NetworkGraph: React.FC<NetworkGraphProps> = ({
             fg.d3Force('clusterY', null); // Remove old separate Y force
         } else {
             // Restore default forces when clustering is off
-            fg.d3Force('charge').strength(-400);
+            fg.d3Force('charge').strength(-200);
             
             // No center force - nodes distribute naturally
             fg.d3Force('center', null);
@@ -924,8 +1107,8 @@ const NetworkGraph: React.FC<NetworkGraphProps> = ({
             // Restore standard link strength and distances
             // Donor-project links (value 0) have zero strength - visual only, no pull
             fg.d3Force('link').strength((link: any) => {
-                if (link.value === 0) return 0.4; // No attraction for donor-project links
-                return 0.5; // Standard strength for other links
+                if (link.value === 0) return 0; // No attraction for donor-project links
+                return 0.3; // Lower strength for stability
             });
             fg.d3Force('link').distance((link: any) => {
                 // Donor-project links (value 0) have no attractive force
@@ -950,13 +1133,17 @@ const NetworkGraph: React.FC<NetworkGraphProps> = ({
             // Restore normal collision force
             fg.d3Force('collision', forceCollide((node: any) => {
                 const r = (node.value || 10) / 2;
-                const padding = 8;
+                const padding = 6;
                 return r + padding;
-            }).iterations(3).strength(0.8));
+            }).iterations(2).strength(0.6));
         }
         
-        // Always reheat to recalculate from current state with new forces
-        fg.d3ReheatSimulation();
+        // Reheat simulation gently - lower alpha for smoother transition
+        if (graphRef.current.d3Force('simulation')) {
+            graphRef.current.d3Force('simulation').alpha(0.3).restart();
+        } else {
+            fg.d3ReheatSimulation();
+        }
 
     }, [clusterByOrgType, clusterByAssetType]); // Only re-run when clustering toggles change
 
@@ -1000,14 +1187,16 @@ const NetworkGraph: React.FC<NetworkGraphProps> = ({
         const nodeType = node.type;
         const orgKey = node.orgKey;
         const projectKey = node.projectKey;
+        const nodeName = node.name;
         
         if (nodeType === 'organization' && orgKey) {
             onOpenOrganizationModal(orgKey);
         } else if (nodeType === 'project' && projectKey) {
             onOpenProjectModal(projectKey);
+        } else if (nodeType === 'donor' && nodeName && onOpenDonorModal) {
+            onOpenDonorModal(nodeName);
         }
-        // Ignore clicks on donor nodes and cluster hulls
-    }, [onOpenOrganizationModal, onOpenProjectModal]);
+    }, [onOpenOrganizationModal, onOpenProjectModal, onOpenDonorModal]);
 
     // Handle background click to deselect
     const handleBackgroundClick = useCallback(() => {
@@ -1042,16 +1231,28 @@ const NetworkGraph: React.FC<NetworkGraphProps> = ({
         };
     }, []);
 
-    // Custom node canvas rendering - only draw the node circles
+    // Helper function to draw a hexagon on canvas
+    const drawHexagon = useCallback((ctx: CanvasRenderingContext2D, x: number, y: number, radius: number) => {
+        const angles = [0, 60, 120, 180, 240, 300].map(angle => (angle * Math.PI) / 180);
+        ctx.beginPath();
+        angles.forEach((angle, i) => {
+            const px = x + radius * Math.cos(angle);
+            const py = y + radius * Math.sin(angle);
+            if (i === 0) ctx.moveTo(px, py);
+            else ctx.lineTo(px, py);
+        });
+        ctx.closePath();
+    }, []);
+
+    // Custom node canvas rendering - only draw the node hexagons
     const paintNode = useCallback((node: GraphNode, ctx: CanvasRenderingContext2D, globalScale: number) => {
         // Use hover-based highlighting only (persistent click-based highlighting removed)
         const isHoverHighlighted = hoverHighlightNodes.size > 0 && hoverHighlightNodes.has(node.id);
         const isHighlighted = isHoverHighlighted;
         const isDimmed = hoverHighlightNodes.size > 0 && !isHighlighted;
         
-        // Draw node circle
-        ctx.beginPath();
-        ctx.arc(node.x!, node.y!, node.value / 2, 0, 2 * Math.PI, false);
+        // Draw node hexagon
+        drawHexagon(ctx, node.x!, node.y!, node.value / 2);
         
         // Apply dimming or highlighting (subtle)
         if (isDimmed) {
@@ -1122,7 +1323,7 @@ const NetworkGraph: React.FC<NetworkGraphProps> = ({
                 }
             }
         }
-    }, [hoverHighlightNodes, themeColors, flagImageCache, combinedDonors]);
+    }, [hoverHighlightNodes, themeColors, flagImageCache, combinedDonors, drawHexagon]);
 
     // Custom label rendering - drawn after all nodes to appear on top
     const paintNodeLabel = useCallback((node: GraphNode, ctx: CanvasRenderingContext2D, globalScale: number) => {
@@ -1155,12 +1356,11 @@ const NetworkGraph: React.FC<NetworkGraphProps> = ({
 
     // Define the clickable area for nodes (required when using custom nodeCanvasObject)
     const nodePointerAreaPaint = useCallback((node: GraphNode, color: string, ctx: CanvasRenderingContext2D) => {
-        // Draw a circle matching the node's size to define the clickable area
+        // Draw a hexagon matching the node's size to define the clickable area
         ctx.fillStyle = color;
-        ctx.beginPath();
-        ctx.arc(node.x!, node.y!, node.value / 2, 0, 2 * Math.PI, false);
+        drawHexagon(ctx, node.x!, node.y!, node.value / 2);
         ctx.fill();
-    }, []);
+    }, [drawHexagon]);
 
     // Memoize cluster data to avoid recalculating node groupings on every render
     const clusterData = useMemo(() => {
@@ -1306,7 +1506,7 @@ const NetworkGraph: React.FC<NetworkGraphProps> = ({
                             </svg>
                         </button>
                     ) : (
-                        <div className="bg-white backdrop-blur-lg rounded-lg border border-slate-200 shadow-sm w-44">
+                        <div className="bg-white backdrop-blur-lg rounded-lg border border-slate-200 shadow-sm w-30">
                             {/* Legend */}
                             <div className="p-2.5 border-b border-slate-200">
                                 <div className="flex items-center justify-between mb-2">
@@ -1324,20 +1524,28 @@ const NetworkGraph: React.FC<NetworkGraphProps> = ({
                                 <div className="space-y-1.5">
                                     {combinedDonors && combinedDonors.length > 0 && (
                                         <div className="flex items-center gap-2">
-                                            <div className="w-3.5 h-3.5 rounded-full shrink-0" style={{ backgroundColor: '#94a3b8', border: '1.5px solid #64748b' }}></div>
-                                            <span className="text-xs text-slate-600">Selected Donors</span>
+                                            <svg width="14" height="14" viewBox="0 0 14 14" className="shrink-0">
+                                                <polygon points="7,1 12,4 12,10 7,13 2,10 2,4" fill="#94a3b8" stroke="#64748b" strokeWidth="1.5"/>
+                                            </svg>
+                                            <span className="text-xs text-slate-600">Sel. Donors</span>
                                         </div>
                                     )}
                                     <div className="flex items-center gap-2">
-                                        <div className="w-3.5 h-3.5 rounded-full shrink-0" style={{ backgroundColor: '#cbd5e1', border: '1.5px solid var(--badge-slate-text)' }}></div>
+                                        <svg width="14" height="14" viewBox="0 0 14 14" className="shrink-0">
+                                            <polygon points="7,1 12,4 12,10 7,13 2,10 2,4" fill="#cbd5e1" stroke="var(--badge-slate-text)" strokeWidth="1.5"/>
+                                        </svg>
                                         <span className="text-xs text-slate-600">Donors</span>
                                     </div>
                                     <div className="flex items-center gap-2">
-                                        <div className="w-3.5 h-3.5 rounded-full shrink-0" style={{ backgroundColor: 'var(--brand-primary-light)', border: '1.5px solid var(--brand-primary-dark)' }}></div>
+                                        <svg width="14" height="14" viewBox="0 0 14 14" className="shrink-0">
+                                            <polygon points="7,1 12,4 12,10 7,13 2,10 2,4" fill="var(--brand-primary-light)" stroke="var(--brand-primary-dark)" strokeWidth="1.5"/>
+                                        </svg>
                                         <span className="text-xs text-slate-600">Organizations</span>
                                     </div>
                                     <div className="flex items-center gap-2">
-                                        <div className="w-3.5 h-3.5 rounded-full shrink-0" style={{ backgroundColor: 'var(--badge-other-bg)', border: '1.5px solid var(--badge-other-text)' }}></div>
+                                        <svg width="14" height="14" viewBox="0 0 14 14" className="shrink-0">
+                                            <polygon points="7,1 12,4 12,10 7,13 2,10 2,4" fill="var(--badge-other-bg)" stroke="var(--badge-other-text)" strokeWidth="1.5"/>
+                                        </svg>
                                         <span className="text-xs text-slate-600">Assets</span>
                                     </div>
                                 </div>
@@ -1384,6 +1592,57 @@ const NetworkGraph: React.FC<NetworkGraphProps> = ({
                                                 clusterByAssetType ? 'bg-[var(--badge-other-text)] border-[var(--badge-other-text)]' : 'border-slate-300'
                                             }`}>
                                                 {clusterByAssetType && (
+                                                    <svg className="w-2.5 h-2.5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={3} d="M5 13l4 4L19 7" />
+                                                    </svg>
+                                                )}
+                                            </div>
+                                        </div>
+                                    </button>
+                                </div>
+                            </div>
+
+                            {/* Scaling Controls */}
+                            <div className="hidden p-2.5 border-t border-slate-200">
+                                <div className="text-xs font-semibold text-slate-800/90 mb-2">Scaling</div>
+                                <div className="space-y-1.5">
+                                    <button
+                                        onClick={() => setScalingMode('connections')}
+                                        className={`w-full text-left px-2 py-1 rounded text-xs transition-colors ${
+                                            scalingMode === 'connections'
+                                                ? 'bg-slate-200 text-slate-800 border border-slate-400'
+                                                : 'bg-slate-50 text-slate-600 border border-slate-200 hover:bg-slate-100'
+                                        }`}
+                                        title="Size nodes by number of connections"
+                                    >
+                                        <div className="flex items-center justify-between">
+                                            <span className="text-[11px]">Connections</span>
+                                            <div className={`w-3 h-3 rounded-sm border shrink-0 flex items-center justify-center ${
+                                                scalingMode === 'connections' ? 'bg-slate-600 border-slate-600' : 'border-slate-300'
+                                            }`}>
+                                                {scalingMode === 'connections' && (
+                                                    <svg className="w-2.5 h-2.5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={3} d="M5 13l4 4L19 7" />
+                                                    </svg>
+                                                )}
+                                            </div>
+                                        </div>
+                                    </button>
+                                    <button
+                                        onClick={() => setScalingMode('funding')}
+                                        className={`w-full text-left px-2 py-1 rounded text-xs transition-colors ${
+                                            scalingMode === 'funding'
+                                                ? 'bg-[var(--brand-bg-light)] text-[var(--brand-primary)] border border-[var(--brand-primary)]'
+                                                : 'bg-slate-50 text-slate-600 border border-slate-200 hover:bg-slate-100'
+                                        }`}
+                                        title="Size organization nodes by estimated budget"
+                                    >
+                                        <div className="flex items-center justify-between">
+                                            <span className="text-[11px]">Funding</span>
+                                            <div className={`w-3 h-3 rounded-sm border shrink-0 flex items-center justify-center ${
+                                                scalingMode === 'funding' ? 'bg-[var(--brand-primary)] border-[var(--brand-primary)]' : 'border-slate-300'
+                                            }`}>
+                                                {scalingMode === 'funding' && (
                                                     <svg className="w-2.5 h-2.5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={3} d="M5 13l4 4L19 7" />
                                                     </svg>
@@ -1456,28 +1715,10 @@ const NetworkGraph: React.FC<NetworkGraphProps> = ({
                     const baseWidth = hoverHighlightLinks.size === 0 ? 1 : (isHoverHighlight ? 2 : 1);
                     return baseWidth * globalScaleRef.current * 1.1;
                 }}
-                linkDirectionalParticles={(link) => {
-                    // No particles for donor-project links (visual only)
-                    if (link.value === 0) return 0;
-                    
-                    const sourceId = typeof link.source === 'object' ? (link.source as any).id : link.source;
-                    const targetId = typeof link.target === 'object' ? (link.target as any).id : link.target;
-                    const linkId = `${sourceId}-${targetId}`;
-                    
-                    const isHoverHighlight = hoverHighlightLinks.size > 0 && hoverHighlightLinks.has(linkId);
-                    
-                    if (hoverHighlightLinks.size === 0) return 1;
-                    return isHoverHighlight ? 2 : 0;
-                }}
-                linkDirectionalParticleWidth={(link) => {
-                    // Scale particle width with zoom: larger when zoomed out, smaller when zoomed in
-                    return 2 * globalScaleRef.current * 1.1;
-                }}
-                linkDirectionalParticleSpeed={0.005}
-                d3VelocityDecay={0.5}
-                d3AlphaDecay={0.008}
-                cooldownTicks={500}
-                warmupTicks={0}
+                d3VelocityDecay={0.6}
+                d3AlphaDecay={0.02}
+                cooldownTicks={300}
+                warmupTicks={50}
                 enableNodeDrag={true}
                 enableZoomInteraction={true}
                 enablePanInteraction={true}
