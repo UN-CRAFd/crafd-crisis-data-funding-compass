@@ -29,6 +29,31 @@ export function getCountryAlpha2(input: string): string | null {
         const code = paren[1].trim();
         if (/^[A-Za-z]{2}$/.test(code)) return code.toLowerCase();
     }
+
+    // Check known aliases BEFORE normalization (to preserve apostrophes, etc.)
+    const aliasLower = s.toLowerCase();
+    const knownAliases: Record<string, string> = {
+        'usa': 'us',
+        'us': 'us',
+        'u.s.': 'us',
+        'u.s.a.': 'us',
+        'uk': 'gb',
+        'u.k.': 'gb',
+        'european union': 'eu',
+        "craf'd": 'crafd',  // Regular apostrophe
+        'african union': 'aun',
+        'eu': 'eu',
+        'turkiye': 'tr',
+        'united nations': 'un',
+        'un': 'un',
+        'u.n.': 'un',
+        'united nations (un)': 'un'
+    };
+    // Also check for curly quote variant (U+2019)
+    if (aliasLower.includes('\u2019') && aliasLower.startsWith('craf')) {
+        return 'crafd';
+    }
+    if (knownAliases[aliasLower]) return knownAliases[aliasLower];
     
     // Normalize (remove diacritics) and try direct lookup by name
     try { 
@@ -45,29 +70,10 @@ export function getCountryAlpha2(input: string): string | null {
     const commaLookup = countries.getAlpha2Code(commaFirst, 'en');
     if (commaLookup) return commaLookup.toLowerCase();
     
-    // Last-resort: try lowercased simple variants (e.g., 'usa' -> 'US')
-        const alias = s.toLowerCase();
-        const knownAliases: Record<string, string> = {
-            'usa': 'us',
-            'us': 'us',
-            'u.s.': 'us',
-            'u.s.a.': 'us',
-            'uk': 'gb',
-            'u.k.': 'gb',
-            'european union': 'eu',
-            'eu': 'eu',
-            'turkiye': 'tr',
-            'united nations': 'un',
-            'un': 'un',
-            'u.n.': 'un',
-            'united nations (un)': 'un'
-        };
-        if (knownAliases[alias]) return knownAliases[alias];
-        
-        // Check if the string starts with "United Nations" (for various UN agencies)
-        if (alias.startsWith('united nations ')) return 'un';
-        if (alias.startsWith('office of the united nations ')) return 'un';
-    
+    // Check if the string starts with "United Nations" (for various UN agencies)
+    if (aliasLower.startsWith('united nations ')) return 'un';
+    if (aliasLower.startsWith('office of the united nations ')) return 'un';
+
     return null;
 }
 
@@ -76,7 +82,16 @@ export function getCountryAlpha2(input: string): string | null {
  */
 export function getCountryFlagUrl(country: string): string | null {
     const iso = getCountryAlpha2(country);
-    if (!iso) return null; 
+    if (!iso) return null;
+    
+    // Use custom flag URLs for regional organizations
+    const customFlags: Record<string, string> = {
+        'aun': 'https://flagpedia.net/data/org/w1160/au.webp',
+        'crafd': '/logos/crafd.png'
+    };
+    
+    if (customFlags[iso]) return customFlags[iso];
+    
     return `https://flagcdn.com/${iso}.svg`;
 }
 

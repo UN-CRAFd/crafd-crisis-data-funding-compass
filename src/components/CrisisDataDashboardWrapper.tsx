@@ -62,14 +62,14 @@ const CrisisDataDashboardWrapper = ({ logoutButton }: { logoutButton?: React.Rea
     // Get sort parameters from URL (compact keys: sb -> sortBy, sd -> sortDirection)
     const sortBy = useMemo(() => {
         const raw = searchParams.get('sb') ?? searchParams.get('sortBy');
-        if (raw === 'donors' || raw === 'assets') return raw;
+        if (raw === 'donors' || raw === 'assets' || raw === 'funding') return raw;
         return 'name'; // default
     }, [searchParams]);
     
     const sortDirection = useMemo(() => {
         const raw = searchParams.get('sd') ?? searchParams.get('sortDirection');
-        if (raw === 'desc') return 'desc';
-        return 'asc'; // default
+        if (raw === 'asc') return 'asc';
+        return 'desc'; // default
     }, [searchParams]);
 
     // Track active view (table or network)
@@ -78,6 +78,7 @@ const CrisisDataDashboardWrapper = ({ logoutButton }: { logoutButton?: React.Rea
     // Modal state for network view (local state, no URL changes)
     const [localSelectedOrgKey, setLocalSelectedOrgKey] = useState('');
     const [localSelectedProjectKey, setLocalSelectedProjectKey] = useState('');
+    const [localSelectedDonorCountry, setLocalSelectedDonorCountry] = useState('');
 
     // Modal state from URL for table view
     const urlOrgKey = searchParams.get('org') ?? '';
@@ -86,6 +87,7 @@ const CrisisDataDashboardWrapper = ({ logoutButton }: { logoutButton?: React.Rea
     // Choose modal state based on active view
     const selectedOrgKey = activeView === 'table' ? urlOrgKey : localSelectedOrgKey;
     const selectedProjectKey = activeView === 'table' ? urlProjectKey : localSelectedProjectKey;
+    const selectedDonorCountry = localSelectedDonorCountry; // Donor modal is always local (network view only)
 
     // Local state for immediate search input (submitted on Enter key)
     const [localSearchQuery, setLocalSearchQuery] = useState(searchQuery);
@@ -154,7 +156,7 @@ const CrisisDataDashboardWrapper = ({ logoutButton }: { logoutButton?: React.Rea
         types?: string[]; 
         themes?: string[]; 
         search?: string;
-        sortBy?: 'name' | 'donors' | 'assets';
+        sortBy?: 'name' | 'donors' | 'assets' | 'funding';
         sortDirection?: 'asc' | 'desc';
     }) => {
         const newSearchParams = new URLSearchParams(searchParams.toString());
@@ -212,8 +214,8 @@ const CrisisDataDashboardWrapper = ({ logoutButton }: { logoutButton?: React.Rea
         }
         
         if (params.sortDirection !== undefined) {
-            // Only set in URL if non-default
-            if (params.sortDirection !== 'asc') {
+            // Only set in URL if non-default (default is now 'desc')
+            if (params.sortDirection === 'asc') {
                 newSearchParams.set('sd', params.sortDirection);
             } else {
                 newSearchParams.delete('sd');
@@ -282,15 +284,19 @@ const CrisisDataDashboardWrapper = ({ logoutButton }: { logoutButton?: React.Rea
         const allOrgs = dashboardData.allOrganizations;
 
         allOrgs.forEach(org => {
-            // Filter by donors (AND logic - all selected donors must be present)
-            if (combinedDonors.length > 0) {
-                const hasAllDonors = combinedDonors.every(selectedDonor => 
-                    org.donorCountries.includes(selectedDonor)
-                );
-                if (!hasAllDonors) return;
-            }
+            // Check if org meets donor requirements at org level
+            const orgMeetsDonorRequirement = combinedDonors.length === 0 ||
+                combinedDonors.every(selectedDonor => org.donorCountries.includes(selectedDonor));
 
             org.projects.forEach(project => {
+                // If org doesn't meet donor requirement, check project-level donors
+                if (!orgMeetsDonorRequirement) {
+                    const projectMeetsDonorRequirement = combinedDonors.every(selectedDonor =>
+                        Array.isArray(project.donorCountries) && project.donorCountries.includes(selectedDonor)
+                    );
+                    if (!projectMeetsDonorRequirement) return;
+                }
+
                 // Filter by search query
                 if (searchQuery) {
                     const searchLower = searchQuery.toLowerCase();
@@ -332,7 +338,7 @@ const CrisisDataDashboardWrapper = ({ logoutButton }: { logoutButton?: React.Rea
     // Handle reset filters
     const handleResetFilters = () => {
         setLocalSearchQuery(''); // Clear local search immediately
-        updateURLParams({ donors: [], types: [], themes: [], search: '', sortBy: 'name', sortDirection: 'asc' });
+        updateURLParams({ donors: [], types: [], themes: [], search: '', sortBy: 'name', sortDirection: 'desc' });
     };
 
     // Handle filter changes
@@ -348,7 +354,7 @@ const CrisisDataDashboardWrapper = ({ logoutButton }: { logoutButton?: React.Rea
         updateURLParams({ themes: values });
     };
 
-    const handleSortChange = (newSortBy: 'name' | 'donors' | 'assets', newSortDirection: 'asc' | 'desc') => {
+    const handleSortChange = (newSortBy: 'name' | 'donors' | 'assets' | 'funding', newSortDirection: 'asc' | 'desc') => {
         updateURLParams({ sortBy: newSortBy, sortDirection: newSortDirection });
     };
 
@@ -446,6 +452,32 @@ const CrisisDataDashboardWrapper = ({ logoutButton }: { logoutButton?: React.Rea
         }
     }, [activeView, searchParams, pathname, router]);
 
+    // Donor modal handlers (network view only - donors are not clickable in table view)
+    const handleOpenDonorModal = useCallback((donorCountry: string) => {
+        // Store page state
+        const stateToStore = {
+            searchQuery,
+            combinedDonors: [...combinedDonors],
+            investmentTypes: [...investmentTypes],
+            investmentThemes: [...investmentThemes]
+        };
+        
+        setUnderlyingPageState(stateToStore);
+        // Close other modals
+        setLocalSelectedOrgKey('');
+        setLocalSelectedProjectKey('');
+        setLocalSelectedDonorCountry(donorCountry);
+    }, [searchQuery, combinedDonors, investmentTypes, investmentThemes]);
+
+    const handleCloseDonorModal = useCallback(() => {
+        setLocalSelectedDonorCountry('');
+        
+        // Clear stored state after a short delay to prevent flash
+        setTimeout(() => {
+            setUnderlyingPageState(null);
+        }, 50);
+    }, []);
+
     // Handle view change
     const handleViewChange = useCallback((view: 'table' | 'network') => {
         setActiveView(view);
@@ -470,13 +502,14 @@ const CrisisDataDashboardWrapper = ({ logoutButton }: { logoutButton?: React.Rea
             }
         } else if (view === 'table') {
             // Switching to table - clear local modals if any
-            if (localSelectedOrgKey || localSelectedProjectKey) {
+            if (localSelectedOrgKey || localSelectedProjectKey || localSelectedDonorCountry) {
                 setLocalSelectedOrgKey('');
                 setLocalSelectedProjectKey('');
+                setLocalSelectedDonorCountry('');
                 setUnderlyingPageState(null);
             }
         }
-    }, [localSelectedOrgKey, localSelectedProjectKey, searchParams, pathname, router]);
+    }, [localSelectedOrgKey, localSelectedProjectKey, localSelectedDonorCountry, searchParams, pathname, router]);
 
     // Handle donor click from modal - add to filter and close modal
     const handleDonorClick = useCallback((country: string) => {
@@ -554,6 +587,7 @@ const CrisisDataDashboardWrapper = ({ logoutButton }: { logoutButton?: React.Rea
             appliedSearchQuery={effectiveSearchQuery}
             selectedOrgKey={selectedOrgKey}
             selectedProjectKey={selectedProjectKey}
+            selectedDonorCountry={selectedDonorCountry}
             sortBy={sortBy}
             sortDirection={sortDirection}
             onDonorsChange={handleDonorsChange}
@@ -565,8 +599,10 @@ const CrisisDataDashboardWrapper = ({ logoutButton }: { logoutButton?: React.Rea
             onSortChange={handleSortChange}
             onOpenOrganizationModal={handleOpenOrganizationModal}
             onOpenProjectModal={handleOpenProjectModal}
+            onOpenDonorModal={handleOpenDonorModal}
             onCloseOrganizationModal={handleCloseOrganizationModal}
             onCloseProjectModal={handleCloseProjectModal}
+            onCloseDonorModal={handleCloseDonorModal}
             onDonorClick={handleDonorClick}
             onTypeClick={handleTypeClick}
             onViewChange={handleViewChange}

@@ -1,21 +1,11 @@
 'use client';
 
-import { Building2, ChevronDown, ChevronUp, ExternalLink, Package, PackageOpen } from 'lucide-react';
+import { Building2, ChevronDown, ChevronUp, ExternalLink, Image, Info, Package, PackageOpen } from 'lucide-react';
 import { useState } from 'react';
 import ModalOrganizationFocus from './ModalOrganizationFocus';
-import BaseModal, { ModalHeader, CountryBadge } from './BaseModal';
-import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from '@/components/ui/tooltip';
+import BaseModal, { ModalHeader, CountryBadge, ModalTooltip } from './BaseModal';
 import { getIconForInvestmentType } from '@/config/investmentTypeIcons';
-
-// Investment type definitions for tooltips
-const INVESTMENT_TYPE_DESCRIPTIONS: Record<string, string> = {
-    'Data Sets & Commons': 'Shared data repositories and standardized datasets that enable analysis and decision-making across the humanitarian sector.',
-    'Infrastructure & Platforms': 'Technical systems, tools, and platforms that support data collection, storage, processing, and sharing.',
-    'Crisis Analytics & Insights': 'Analysis, modeling, and insights derived from data to inform humanitarian response and preparedness.',
-    'Human Capital & Know-how': 'Training, capacity building, and expertise development for humanitarian data practitioners.',
-    'Standards & Coordination': 'Common standards, protocols, and coordination mechanisms for humanitarian data management.',
-    'Learning & Exchange': 'Knowledge sharing, communities of practice, and collaborative learning initiatives.'
-};
+import labels from '@/config/labels.json';
 
 interface OrganizationModalProps {
     // Accept the full organization record coming from `public/data/organizations-table.json`
@@ -27,6 +17,7 @@ interface OrganizationModalProps {
     } | null;
     // Centralized data maps from data.ts for consistent data access
     projectNameMap?: Record<string, string>;
+    projectDescriptionMap?: Record<string, string>;
     orgProjectsMap?: Record<string, Array<{ investmentTypes: string[] }>>;
     orgDonorCountriesMap?: Record<string, string[]>;
     orgAgenciesMap?: Record<string, Record<string, string[]>>;
@@ -48,6 +39,7 @@ interface OrganizationModalProps {
 export default function OrganizationModal({
     organization,
     projectNameMap = {},
+    projectDescriptionMap = {},
     orgProjectsMap = {},
     orgDonorCountriesMap = {},
     orgAgenciesMap = {},
@@ -94,6 +86,14 @@ export default function OrganizationModal({
         </span>
     );
 
+    // Helper function to extract first sentence from text
+    const getFirstSentence = (text: string): string => {
+        if (!text || text.trim().length === 0) return '';
+        // Match text up to the first period, exclamation mark, or question mark
+        const match = text.match(/^[^.!?]*[.!?]/);
+        return match ? match[0].trim() : text.trim();
+    };
+
     // Hover state for project items to toggle the icon
     const [hoveredProjectId, setHoveredProjectId] = useState<string | null>(null);
 
@@ -102,7 +102,7 @@ export default function OrganizationModal({
             return (
                 <ModalHeader
                     icon={<Building2 className="h-6 w-6 sm:h-7 sm:w-7 text-[#333333] shrink-0" />}
-                    title="Organization Not Found"
+                    title={labels.modals.organizationNotFound}
                     showCopied={showCopied}
                     onShare={onShare}
                     onClose={onClose}
@@ -183,7 +183,7 @@ export default function OrganizationModal({
         if (!organization) {
             return (
                 <div className="p-4 sm:p-6">
-                    <p className="text-gray-600">The requested organization could not be found.</p>
+                    <p className="text-gray-600">{labels.modals.organizationNotFoundMessage}</p>
                 </div>
             );
         }
@@ -255,13 +255,7 @@ export default function OrganizationModal({
 
         return (
             <div className="px-6 sm:px-8 pt-4 sm:pt-5 pb-6 sm:pb-8 font-roboto flex flex-col h-full">
-                {/* Organization Type Badge */}
-                {orgType && (
-                    <span className="inline-flex items-center px-3 py-1.5 rounded-md text-sm font-medium bg-slate-100 text-slate-600 w-fit mb-4">
-                        {orgType}
-                    </span>
-                )}
-
+               
                 {/* Description with inline Learn more link */}
                 {typeof fields['Org Description'] === 'string' && String(fields['Org Description']).length > 0 && (
                     <p className="text-base font-normal text-gray-700 leading-relaxed font-roboto">
@@ -278,7 +272,7 @@ export default function OrganizationModal({
                                     onMouseEnter={(e) => e.currentTarget.style.color = 'var(--brand-primary-dark)'}
                                     onMouseLeave={(e) => e.currentTarget.style.color = 'var(--brand-primary)'}
                                 >
-                                    Learn more
+                                    {labels.modals.learnMore}
                                     <ExternalLink className="w-3.5 h-3.5 inline-block align-text-bottom ml-0.5" />
                                 </a>
                             </>
@@ -286,37 +280,34 @@ export default function OrganizationModal({
                     </p>
                 )}
 
- {/* HDX + IATI Buttons */}
-<div className="mt-3 flex items-center gap-3">
-    {/* HDX */}
-    {typeof fields['HDX Org Key'] === 'string' && fields['HDX Org Key'].trim() !== '' && (
-        <a
-            href={`https://data.humdata.org/organization/${fields['HDX Org Key'].trim()}`}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="inline-flex items-center gap-2 px-3 py-1.5 rounded-md text-sm font-medium bg-slate-100 text-slate-600 border border-slate-200 hover:border-slate-400 hover:bg-slate-200 transition-colors"
-        >
-            <img src="/hdx_logo.png" alt="HDX logo" className="w-5 h-5 rounded-none" />
-            <span className="font-normal">View on <strong className="font-bold">HDX</strong></span>
-        </a>
-    )}
+                    {/* HDX + IATI Buttons */}
+                    <div className="mt-3 flex items-center gap-3">
+                        {/* HDX */}
+                        {typeof fields['HDX Org Key'] === 'string' && fields['HDX Org Key'].trim() !== '' && (
+                            <a
+                                href={`https://data.humdata.org/organization/${fields['HDX Org Key'].trim()}`}
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="inline-flex items-center gap-2 px-3 py-1.5 rounded-md text-sm font-medium bg-slate-100 text-slate-600 border border-slate-200 hover:border-slate-400 hover:bg-slate-200 transition-colors"
+                            >
+                                <img src="/hdx_logo.png" alt="HDX logo" className="w-5 h-5 rounded-none" />
+                                <span className="font-normal">{labels.modals.viewOnHdx} <strong className="font-bold">{labels.modals.hdx}</strong></span>
+                            </a>
+                        )}
 
-    {/* IATI */}
-    {typeof fields['IATI Org Key'] === 'string' && fields['IATI Org Key'].trim() !== '' && (
-        <a
-            href={`https://d-portal.org/ctrack.html?publisher=${fields['IATI Org Key'].trim()}#view=main`}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="inline-flex items-center gap-2 px-3 py-1.5 rounded-md text-sm font-medium bg-slate-100 text-slate-600 border border-slate-200 hover:border-slate-400 hover:bg-slate-200 transition-colors"
-        >
-            <img src="/iati_logo.png" alt="IATI logo" className=" h-5 rounded-none" />
-            <span className="font-normal">View on <strong className="font-bold">IATI</strong></span>
-        </a>
-    )}
-</div>
-
-
-
+                        {/* IATI */}
+                        {typeof fields['IATI Org Key'] === 'string' && fields['IATI Org Key'].trim() !== '' && (
+                            <a
+                                href={`https://d-portal.org/ctrack.html?publisher=${fields['IATI Org Key'].trim()}#view=main`}
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="inline-flex items-center gap-2 px-3 py-1.5 rounded-md text-sm font-medium bg-slate-100 text-slate-600 border border-slate-200 hover:border-slate-400 hover:bg-slate-200 transition-colors"
+                            >
+                                <img src="/iati_logo.png" alt="IATI logo" className=" h-5 rounded-none" />
+                                <span className="font-normal">{labels.modals.viewOnIati} <strong className="font-bold">{labels.modals.iati}</strong></span>
+                            </a>
+                        )}
+                    </div>
                 {/* If website exists but description didn't show it, render a prominent Website button */}
                 {!fields['Org Description'] && websiteValue && websiteValue.trim() !== '' && (
                     <div>
@@ -330,60 +321,26 @@ export default function OrganizationModal({
                                 className="mt-1 inline-flex items-center justify-center gap-2 px-4 py-2 rounded-full bg-(--brand-primary) text-white text-sm font-medium shadow hover:bg-(--brand-primary-dark) transition-colors"
                             >
                                 <ExternalLink className="w-4 h-4" />
-                                <span className="flex items-center">Open Website</span>
+                                <span className="flex items-center">{labels.modals.openWebsite}</span>
                             </button>
                         </Field>
                     </div>
                 )}
-
-                {/* Separator line before metadata sections */}
-                <div className="border-t border-gray-200 mt-8 mb-4"></div>
+                <div className="flex items-center justify-between mt-4">
+                    <div className="flex-1 border-t border-gray-200 ml-4"></div>
+                    {orgType && (
+                        <span className="inline-flex items-center px-3 py-1.5 rounded-md text-sm font-small text-slate-600 w-fit">
+                            {orgType}
+                        </span>
+                    )}
+                    <div className="flex-1 border-t border-gray-200 ml-4"></div>
+                </div>
 
                 {/* Metadata - Single column layout */}
                 {/* Organization Funding*/}
-                    {(() => {
-                       
-                        return (
-                            <div>
-                                <div className="mb-3 flex items-center gap-2">
-                                    <h3 className="text-xl font-roboto font-black text-[#333333] uppercase tracking-wide leading-normal">
-                                        Organization Funding
-                                    </h3>
-                                    <span className="text-lg font-normal text-gray-500"></span>
-                                </div>
-                                <div className="rounded-lg border border-slate-200 bg-white p-6 shadow-sm">
-                                    <div className="mt-0 grid grid-cols-3 gap-4">
-                                        <div className="flex flex-col">
-                                            <span className="text-sm tracking-wide text-slate-400">Total Funding</span>
-                                            <span className="text-base font-medium text-slate-700">—</span>
-                                        </div>
-                                        
-                                        <div className="flex flex-col">
-                                            <span className="text-sm tracking-wide text-slate-400">Sources</span>
-                                            <span className="text-base font-medium text-slate-700">—</span>
-                                        </div>
 
-                                        <div className="flex flex-col">
-                                            <span className="text-sm tracking-wide text-slate-400">Last Updated</span>
-                                            <span className="text-base font-medium text-slate-700">—</span>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            
-                        );
-                    })()}
-
-                <div className="space-y-8">
-                    {/* Organization Focus - Investment Types from Projects */}
-                    {(() => {
-                        const orgProjects = orgProjectsMap[organization.id];
-                        if (!orgProjects || orgProjects.length === 0) return null;
-
-                        return <ModalOrganizationFocus projects={orgProjects} SubHeader={SubHeader} onTypeClick={onTypeClick} tooltipContainer={tooltipContainer} />;
-                    })()}
-
-                   
+                <div className="mt-2 space-y-4">
+                                     
 
                     {/* Provided Assets - Simple field access matching FIELDS_ORGANIZATIONS */}
                     {(() => {
@@ -419,47 +376,78 @@ export default function OrganizationModal({
                             <div>
                                 <div className="mb-3 flex items-center gap-2">
                                     <h3 className="text-xl font-roboto font-black text-[#333333] uppercase tracking-wide leading-normal">
-                                        Provided Assets
+                                        {labels.modals.providedAssets}
                                     </h3>
-                                    <span className="text-lg font-normal text-gray-500 tabular-nums">({projectsList.length})</span>
+                                    <span className="text-lg font-normal text-slate-600 tabular-nums">({projectsList.length})</span>
                                 </div>
-                                <div className="flex flex-col gap-2">
-                                    {displayedProjects.map((proj, i) => (
-                                        <button
-                                            key={proj.id || i}
-                                            onClick={() => onOpenProjectModal?.(proj.productKey)}
-                                            onMouseEnter={() => setHoveredProjectId(proj.id)}
-                                            onMouseLeave={() => setHoveredProjectId(null)}
-                                            className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-md text-base font-medium bg-slate-100 text-slate-600 hover:bg-slate-200 transition-colors cursor-pointer text-left"
-                                        >
-                                            {hoveredProjectId === proj.id ? (
-                                                <PackageOpen className="w-4 h-4 text-slate-500 shrink-0" />
-                                            ) : (
-                                                <Package className="w-4 h-4 text-slate-500 shrink-0" />
-                                            )}
-                                            <span className="truncate">{proj.name}</span>
-                                        </button>
-                                    ))}
+                                
+                                <div className="flex flex-col gap-2 mt-4">
+                                    {(() => {
+                                                        const orgProjects = orgProjectsMap[organization.id];
+                                                        if (!orgProjects || orgProjects.length === 0) return null;
+
+                                                        return <ModalOrganizationFocus projects={orgProjects} onTypeClick={onTypeClick} tooltipContainer={tooltipContainer} SubHeader={undefined} />;
+                                })()}
+                                    {displayedProjects.map((proj, i) => {
+                                        const description = projectDescriptionMap[proj.id] || '';
+                                        const firstSentence = getFirstSentence(description);
+                                        
+                                        const projectButton = (
+                                            <button
+                                                key={proj.id || i}
+                                                onClick={() => onOpenProjectModal?.(proj.productKey)}
+                                                onMouseEnter={() => setHoveredProjectId(proj.id)}
+                                                onMouseLeave={() => setHoveredProjectId(null)}
+                                                className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-md text-base font-medium bg-slate-100 text-slate-600 hover:bg-slate-200 transition-colors cursor-pointer text-left"
+                                            >
+                                                {hoveredProjectId === proj.id ? (
+                                                    <PackageOpen className="w-4 h-4 text-slate-600 shrink-0" />
+                                                ) : (
+                                                    <Package className="w-4 h-4 text-slate-600 shrink-0" />
+                                                )}
+                                                <span className="truncate">{proj.name}</span>
+                                            </button>
+                                        );
+
+                                        // Only wrap in tooltip if there's a description
+                                        if (firstSentence) {
+                                            return (
+                                                <ModalTooltip
+                                                    key={proj.id || i}
+                                                    content={firstSentence}
+                                                    side="top"
+                                                    tooltipContainer={tooltipContainer}
+                                                >
+                                                    {projectButton}
+                                                </ModalTooltip>
+                                            );
+                                        }
+
+                                        return projectButton;
+                                    })}
+                                    
                                 </div>
                                 {showCollapsible && (
                                     <button
                                         onClick={() => setIsExpanded(!isExpanded)}
-                                        className="mt-2 inline-flex items-center gap-1 text-sm font-medium text-gray-600 hover:text-gray-800 transition-colors"
+                                        className="mt-2 inline-flex items-center gap-1 text-sm font-medium text-slate-600 hover:text-slate-400 transition-colors"
                                     >
                                         {isExpanded ? (
                                             <>
                                                 <ChevronUp className="w-4 h-4" />
-                                                <span>Show less</span>
+                                                <span>{labels.ui.showLess}</span>
                                             </>
                                         ) : (
                                             <>
                                                 <ChevronDown className="w-4 h-4" />
-                                                <span>Show {projectsList.length - 5} more</span>
+                                                <span>{labels.ui.showMore.replace('{count}', String(projectsList.length - 5))}</span>
                                             </>
                                         )}
                                     </button>
                                 )}
+                                
                             </div>
+                            
                         );
                     })()}
 
@@ -467,18 +455,114 @@ export default function OrganizationModal({
                     {(() => {
                         // Get donor countries from the centralized map (computed from nested data)
                         const donorCountries = orgDonorCountriesMap[organization.id] || [];
+                        const estBudget = fields['Est. Org Budget'];
 
-                        if (donorCountries.length === 0) return null;
+                        // Narrow unknown typed fields to explicit string/null values for safe rendering
+                        const budgetSourceRaw = fields['Budget Source'];
+                        const budgetSourceStr = budgetSourceRaw != null ? String(budgetSourceRaw) : null;
+                        const linkRaw = fields['Link to Budget Source'];
+                        const linkToBudgetSource = typeof linkRaw === 'string' && linkRaw.trim() !== '' ? linkRaw.trim() : null;
+                        
+                        // Extract budget source screenshot URL
+                        const budgetScreenshotRaw = fields['Budget Source Screenshot'];
+                        const budgetScreenshotUrl = Array.isArray(budgetScreenshotRaw) && budgetScreenshotRaw.length > 0
+                            ? (budgetScreenshotRaw[0] as { url?: string; thumbnails?: { large?: { url?: string } } })?.thumbnails?.large?.url || (budgetScreenshotRaw[0] as { url?: string })?.url || null
+                            : null;
+
+                        // Only show if at least one field has a value
+                        if (!estBudget && !budgetSourceStr && donorCountries.length === 0) {
+                            return null;
+                        }
+
 
                         return (
                             <div>
                                 <div className="mb-3 flex items-center gap-2">
                                     <h3 className="text-xl font-roboto font-black text-[#333333] uppercase tracking-wide leading-normal">
-                                        Organization Donors
+                                        {labels.modals.organizationFunding}
                                     </h3>
                                     <span className="text-lg font-normal text-gray-500 tabular-nums">({donorCountries.length})</span>
                                 </div>
-                                <div className="flex flex-wrap gap-2">
+                                    <div className="hidden rounded-lg border border-slate-200 bg-slate-100 p-4 shadow-sm">
+                                        
+                                        <div className="mt-0 grid grid-cols-[3fr_3fr_3fr_0.2fr] gap-4">
+
+                                            <div className="flex flex-col">
+                                                <span className="text-sm tracking-wide text-slate-400">{labels.modals.estOrgBudget}</span>
+                                                <span className="text-base font-medium text-slate-600">
+                                                    {
+                                                        estBudget
+                                                            ? (() => {
+                                                                if (typeof estBudget !== 'number') return String(estBudget);
+                                                                if (estBudget >= 1_000_000_000) return `$${(estBudget / 1_000_000_000).toFixed(1)} B`;
+                                                                if (estBudget >= 1_000_000) return `$${(estBudget / 1_000_000).toFixed(1)} M`;
+                                                                return `$${estBudget}`;
+                                                            })()
+                                                            : '—'
+                                                        }
+                                                </span>
+                                            </div>
+                                            
+                                            <div className="flex flex-col">
+                                                <span className="text-sm tracking-wide text-slate-400">{labels.modals.budgetSource}</span>
+                                                <div className="flex items-center gap-2">
+                                                    {budgetScreenshotUrl ? (
+                                                        <ModalTooltip
+                                                            content={
+                                                                <div className="p-1">
+                                                                    <img 
+                                                                        src={budgetScreenshotUrl} 
+                                                                        alt="Budget Source Screenshot" 
+                                                                        className="max-w-[400px] max-h-[300px] rounded-md object-contain"
+                                                                    />
+                                                                </div>
+                                                            }
+                                                            side="bottom"
+                                                            tooltipContainer={tooltipContainer}
+                                                        >
+                                                            <span className="text-base font-medium text-slate-600 cursor-help underline decoration-dotted decoration-slate-400 underline-offset-2 inline-flex items-center gap-1">
+                                                                {budgetSourceStr ? budgetSourceStr : '—'}
+                                                                
+                                                            </span>
+                                                        </ModalTooltip>
+                                                    ) : (
+                                                        <span className="text-base font-medium text-slate-600">
+                                                            {budgetSourceStr ? budgetSourceStr : '—'}
+                                                        </span>
+                                                    )}
+                                                    {linkToBudgetSource && (
+                                                        <a
+                                                            href={linkToBudgetSource}
+                                                            target="_blank"
+                                                            rel="noopener noreferrer"
+                                                            className="text-slate-400 hover:text-slate-600 transition-colors cursor-pointer shrink-0"
+                                                            title={labels.modals.viewBudgetSource}
+                                                        >
+                                                            <ExternalLink className="w-4 h-4" />
+                                                        </a>
+                                                    )}
+                                                </div>
+                                            </div>
+
+                                            <div className="flex flex-col">
+                                                <span className="text-sm tracking-wide text-slate-400">{labels.modals.lastUpdated}</span>
+                                                <span className="text-base font-medium text-slate-600">
+                                                    {fields['Last Updated'] ? String(fields['Last Updated']) : '—'}
+                                                </span>
+                                            </div>
+                                            <div className="flex">
+                                                <div className="flex-1"></div>
+                                                <ModalTooltip 
+                                                    content={labels.modals.budgetInfoTooltip}
+                                                    side="left"
+                                                    tooltipContainer={tooltipContainer}
+                                                >
+                                                    <Info className="w-4 h-4 text-slate-400 hover:text-slate-600 transition-colors cursor-help shrink-0" />
+                                                </ModalTooltip>
+                                            </div>
+                                        </div>
+                                    </div>
+                                <div className="flex flex-wrap gap-2 mt-4">
                                     {donorCountries.map((country) => {
                                         const orgAgencies = orgAgenciesMap[organization.id] || {};
                                         return (
@@ -487,6 +571,7 @@ export default function OrganizationModal({
                                                 country={country} 
                                                 onClick={onDonorClick}
                                                 agencies={orgAgencies[country]}
+                                                tooltipContainer={tooltipContainer}
                                             />
                                         );
                                     })}
@@ -499,18 +584,28 @@ export default function OrganizationModal({
                 {/* Flexible spacer to push notes to bottom */}
                 <div className="grow min-h-8"></div>
 
-                <div className="border-t border-gray-200 pt-4 pb-4 mt-auto">
-                    <div className="text-xs text-gray-400 uppercase tracking-wider font-medium mb-2">NOTES</div>
-                    <div className="text-xs text-gray-500 leading-snug space-y-1">
+                <div className="border-t border-slate-200 pt-4 pb-4 mt-auto">
+                    <div className="text-xs text-slate-400 uppercase tracking-wider font-medium mb-2">{labels.modals.notes}</div>
+                    <div className="text-xs text-slate-500 leading-snug space-y-1">
                             <div className="flex items-start">
-                                <span className="text-gray-400 mr-2 shrink-0">•</span>
-                                <span>All insights are based on publicly accessible information and data.</span>
+                                <span className="text-slate-400 mr-2 shrink-0">•</span>
+                                <span>{labels.modals.notesInsights}</span>
                             </div>
                         {isUN && (
                             <div className="flex items-start">
-                                <span className="text-gray-400 mr-2 shrink-0">•</span>
-                                <span>For United Nations (UN) Organizations, donors were limited to the top 15 for simplification.</span>
+                                <span className="text-slate-400 mr-2 shrink-0">•</span>
+                                <span>{labels.modals.notesUn}</span>
+                                
                             </div>
+                            
+                        )}
+                        {isUN && (
+                            <div className="flex items-start">
+                                <span className="text-slate-400 mr-2 shrink-0">•</span>
+                                <span>{labels.modals.budgetlineUn}</span>
+                                
+                            </div>
+                            
                         )}
                     </div>
                 </div>

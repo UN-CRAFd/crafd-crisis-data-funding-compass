@@ -6,6 +6,8 @@ import { createPortal } from 'react-dom';
 import CloseButton from './CloseButton';
 import { CountryFlag } from './CountryFlag';
 import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from '@/components/ui/tooltip';
+import { useTips } from '@/contexts/TipsContext';
+import labels from '@/config/labels.json';
 
 interface BaseModalProps {
     isOpen: boolean;
@@ -177,7 +179,7 @@ export default function BaseModal({
                 </div>
 
                 {/* Body Content - scrollable if content exceeds viewport */}
-                <div className="overflow-y-auto flex-1">
+                <div className="overflow-y-auto flex-1 scrollbar-hide">
                     {renderBody({ tooltipContainer: portalContainer })}
                 </div>
             </div>
@@ -262,9 +264,10 @@ interface CountryBadgeProps {
     className?: string;
     onClick?: (country: string) => void;
     agencies?: string[];
+    tooltipContainer?: Element | null;
 }
 
-export function CountryBadge({ country, className = '', onClick, agencies }: CountryBadgeProps) {
+export function CountryBadge({ country, className = '', onClick, agencies, tooltipContainer }: CountryBadgeProps) {
     const isClickable = !!onClick;
     
     const badgeContent = (
@@ -280,36 +283,81 @@ export function CountryBadge({ country, className = '', onClick, agencies }: Cou
     );
     
     // If agencies are provided, wrap in tooltip
-    if (agencies && agencies.length > 0) {
+    // Filter out "Unspecified Agency"
+    const filteredAgencies = agencies ? agencies.filter(agency => agency !== 'Unspecified Agency') : [];
+    if (filteredAgencies && filteredAgencies.length > 0) {
         return (
-            <TooltipProvider delayDuration={200}>
-                <Tooltip>
-                    <TooltipTrigger asChild>
-                        {badgeContent}
-                    </TooltipTrigger>
-                    <TooltipContent 
-                        side="top" 
-                        className="max-w-xs p-3 text-xs bg-white !bg-opacity-100 border border-gray-300 !z-[9999]"
-                        sideOffset={8}
-                        style={{
-                            backgroundColor: 'rgb(255, 255, 255)',
-                            color: 'var(--tooltip-text)',
-                            border: '1px solid var(--tooltip-border)',
-                            opacity: 1,
-                            zIndex: 9999
-                        }}
-                    >
-                        <div className="font-semibold mb-1">Financing Agencies:</div>
+            <ModalTooltip
+                content={
+                    <div>
+                        <div className="font-semibold mb-1">{labels.modals.financingAgencies}</div>
                         <ul className="space-y-0.5">
-                            {agencies.map((agency, idx) => (
+                            {filteredAgencies.map((agency, idx) => (
                                 <li key={idx}>• {agency}</li>
                             ))}
                         </ul>
-                    </TooltipContent>
-                </Tooltip>
-            </TooltipProvider>
+                    </div>
+                }
+                side="top"
+                delayDuration={200}
+                tooltipContainer={tooltipContainer}
+            >
+                {badgeContent}
+            </ModalTooltip>
         );
     }
     
     return badgeContent;
+}
+
+/**
+ * Reusable ModalTooltip component for consistent tooltip styling across all modals
+ * Single unified style used everywhere for countries, types, themes, and info content
+ */
+interface ModalTooltipProps {
+    children: React.ReactNode; // The element that triggers the tooltip
+    content: React.ReactNode; // Tooltip content
+    side?: 'left' | 'right' | 'top' | 'bottom';
+    delayDuration?: number;
+    tooltipContainer?: Element | null;
+}
+
+export function ModalTooltip({ 
+    children, 
+    content,
+    side = 'top',
+    delayDuration = 200,
+    tooltipContainer 
+}: ModalTooltipProps) {
+    const { tipsEnabled } = useTips();
+    
+    // If tips are disabled or no content, just render children without tooltip
+    if (!tipsEnabled || !content) {
+        return children;
+    }
+    
+    return (
+        <TooltipProvider delayDuration={delayDuration}>
+            <Tooltip>
+                <TooltipTrigger asChild>
+                    {children}
+                </TooltipTrigger>
+                <TooltipContent 
+                    side={side} 
+                    className="max-w-xs p-2 text-xs bg-white border border-gray-300 !z-[9999]"
+                    sideOffset={5}
+                    container={tooltipContainer as HTMLElement | null}
+                    style={{
+                        backgroundColor: 'rgb(255, 255, 255)',
+                        color: 'var(--tooltip-text)',
+                        border: '1px solid var(--tooltip-border)',
+                        opacity: 1,
+                        zIndex: 9999
+                    }}
+                >
+                    {content}
+                </TooltipContent>
+            </Tooltip>
+        </TooltipProvider>
+    );
 }
