@@ -310,7 +310,7 @@ export default function MethodologyPage({ logoutButton }: MethodologyPageProps) 
                    
                         {/* Main Methodology Content */}
                         <Card className="!border-0 bg-white">
-                            <CardContent className="p-4 sm:p-6 mt-0 mb-0">
+                            <CardContent className="px-4 sm:px-6 pt-0 pb-0 sm:pb-0">
 
                                 {/* Data Collection Tab */}
                                 <TabsContent value="collection" className="mt-0 animate-tab-enter mb-0">
@@ -631,7 +631,7 @@ export default function MethodologyPage({ logoutButton }: MethodologyPageProps) 
                                                     Project and organization nodes are interactive and open a detail modal when clicked, providing in-depth information about entities and their relationships.
                                                 </InfoCard>
                                                 <InfoCard title="Spatial Interpretation">
-                                                    Spatial proximity in the graph has no geographic or ideological meaning. Node positions are determined by the force-directed layout algorithm to optimize visualization clarity.
+                                                    Spatial proximity in the graph has no geographic or ideological meaning. Nimportode positions are determined by the force-directed layout algorithm to optimize visualization clarity.
                                                 </InfoCard>
                                             </div>
                                         </div>
@@ -663,28 +663,28 @@ export default function MethodologyPage({ logoutButton }: MethodologyPageProps) 
                                                 <div>
                                                     
                                                     <CodeBlock code={`import pandas as pd
-                                                        import zipfile
-                                                        from pathlib import Path
+import zipfile
+from pathlib import Path
 
-                                                        # Extract CSV files from the downloaded ZIP
-                                                        with zipfile.ZipFile('export.zip', 'r') as zip_ref:
-                                                            zip_ref.extractall('./data')
+# Extract CSV files from the downloaded ZIP
+with zipfile.ZipFile('export.zip', 'r') as zip_ref:
+    zip_ref.extractall('./data')
 
-                                                        # Load the organizations and assets data
-                                                        orgs_df = pd.read_csv('./data/organizations.csv')
-                                                        assets_df = pd.read_csv('./data/assets.csv')
+# Load the organizations and assets data
+orgs_df = pd.read_csv('./data/organizations.csv')
+assets_df = pd.read_csv('./data/assets.csv')
 
-                                                        # Display basic info
-                                                        print(f"Organizations: {len(orgs_df)} records")
-                                                        print(f"Assets: {len(assets_df)} records")
+# Display basic info
+print(f"Organizations: {len(orgs_df)} records")
+print(f"Assets: {len(assets_df)} records")
 
-                                                        # Filter by donor country
-                                                        filtered = assets_df[assets_df['Donor Countries'].str.contains('[Example Country]', na=False)]
-                                                        print(f"\\nAssets from [Example Country] donors: {len(filtered)}")
+# Filter by donor country
+filtered = assets_df[assets_df['Donor Countries'].str.contains('[Example Country]', na=False)]
+print(f"\\nAssets from [Example Country] donors: {len(filtered)}")
 
-                                                        # Group assets by type
-                                                        by_type = assets_df.groupby('Investment Type').size()
-                                                        print(f"\\nAssets by type:\\n{by_type}")`} />
+# Group assets by type
+by_type = assets_df.groupby('Investment Type').size()
+print(f"\\nAssets by type:\\n{by_type}")`} />
                                                 </div>
                                             </div>
                                         </div>
