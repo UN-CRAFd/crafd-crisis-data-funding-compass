@@ -3,7 +3,8 @@
 import { Button } from '@/components/ui/button';
 import { TooltipContent, TooltipProvider, Tooltip as TooltipUI, TooltipTrigger } from '@/components/ui/tooltip';
 import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuTrigger } from '@/components/ui/dropdown-menu';
-import { ChevronDown, FileDown, Info, MessageCircle, Share2, Menu } from 'lucide-react';
+import { ChevronDown, FileDown, Info, MessageCircle, Share2, Menu, Lightbulb } from 'lucide-react';
+import { useTips } from '@/contexts/TipsContext';
 import labels from '@/config/labels.json';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
@@ -44,6 +45,7 @@ export default function PageHeader({
     onExportMenuChange,
 }: PageHeaderProps) {
     const pathname = usePathname();
+    const { tipsEnabled, setTipsEnabled } = useTips();
 
     return (
         <div className="fixed top-0 left-0 right-0 z-50 bg-white border-b border-slate-200">
@@ -82,6 +84,20 @@ export default function PageHeader({
                         <Button
                             variant="outline"
                             size="sm"
+                            onClick={() => setTipsEnabled(!tipsEnabled)}
+                            className={`bg-slate-50/50 border-slate-200 text-xs sm:text-sm transition-colors ${
+                                tipsEnabled
+                                    ? 'hover:var(--brand-bg-light) hover:border-[var(--brand-primary)] hover:text-[var(--brand-primary)] text-slate-600'
+                                    : 'border-slate-300 bg-slate-200 text-slate-500'
+                            }`}
+                            title={tipsEnabled ? labels.header.tipsOn : labels.header.tipsOff}
+                        >
+                            <Lightbulb className={`w-4 h-4 sm:mr-2 ${tipsEnabled ? '' : 'opacity-50'}`} />
+                            <span className="hidden sm:inline">{tipsEnabled ? labels.header.tipsOn : labels.header.tipsOff}</span>
+                        </Button>
+                        <Button
+                            variant="outline"
+                            size="sm"
                             onClick={() => window.open('https://airtable.com/apprObB2AsvMwfAAl/pagcre1SPjT0nJxa4/form', '_blank')}
                             className="bg-slate-50/50 border-slate-200 hover:var(--brand-bg-light) hover:border-[var(--brand-primary)] hover:text-[var(--brand-primary)] text-xs sm:text-sm"
                             title={labels.header.feedbackTooltip}
@@ -103,7 +119,7 @@ export default function PageHeader({
                                     >
                                         <FileDown className="w-4 h-4 sm:mr-2" />
                                         <span className="hidden sm:inline">
-                                            {csvExportLoading ? 'Exporting CSV...' : xlsxExportLoading ? 'Exporting Excel...' : pdfExportLoading ? 'Exporting PDF...' : 'Export View'}
+                                            {csvExportLoading ? labels.header.exportingCsv : xlsxExportLoading ? labels.header.exportingXlsx : pdfExportLoading ? labels.header.exportingPdf : labels.header.exportView}
                                         </span>
                                         <ChevronDown className={`ml-1.5 h-3 w-3 opacity-50 shrink-0 transform transition-transform ${
                                             exportMenuOpen ? 'rotate-180' : ''
@@ -122,7 +138,7 @@ export default function PageHeader({
                                         className="cursor-pointer text-[11px] py-2"
                                     >
                                         <FileDown className="w-3 h-3 mr-2" />
-                                        Export as CSV (ZIP)
+                                        {labels.header.exportMenuCsv}
                                     </DropdownMenuItem>
                                     <DropdownMenuItem
                                         onClick={onExportXLSX}
@@ -130,7 +146,7 @@ export default function PageHeader({
                                         className="cursor-pointer text-[11px] py-2"
                                     >
                                         <FileDown className="w-3 h-3 mr-2" />
-                                        Export as Excel (XLSX)
+                                        {labels.header.exportMenuXlsx}
                                     </DropdownMenuItem>
                                 </DropdownMenuContent>
                             </DropdownMenu>
@@ -162,7 +178,7 @@ export default function PageHeader({
                                 <Button
                                     variant="outline"
                                     size="sm"
-                                    className=" hidden bg-slate-50/50 border-slate-200 hover:var(--brand-bg-light) hover:border-[var(--brand-primary)] hover:text-[var(--brand-primary)] text-xs sm:text-sm"
+                                    className="bg-slate-50/50 border-slate-200 hover:var(--brand-bg-light) hover:border-[var(--brand-primary)] hover:text-[var(--brand-primary)] text-xs sm:text-sm hidden"
                                     title="Navigation"
                                 >
                                     <Menu className="w-4 h-4" />
@@ -175,13 +191,19 @@ export default function PageHeader({
                                 className="w-auto min-w-[180px] bg-white border border-slate-200 shadow-lg"
                             >
                                 <Link href="/">
-                                    <DropdownMenuItem className={`cursor-pointer text-sm py-2 ${pathname === '/' ? 'bg-slate-100 font-semibold' : ''}`}>
-                                        Dashboard
+                                    <DropdownMenuItem 
+                                        className={`cursor-pointer text-sm py-2 ${pathname === '/' ? 'font-bold' : ''}`}
+                                        style={pathname === '/' ? { backgroundColor: '#f1f5f9', color: '#0f172a' } : {}}
+                                    >
+                                        {labels.header.dashboard}
                                     </DropdownMenuItem>
                                 </Link>
                                 <Link href="/methodology">
-                                    <DropdownMenuItem className={`cursor-pointer text-sm py-2 ${pathname === '/methodology' ? 'bg-slate-100 font-semibold' : ''}`}>
-                                        Methodology
+                                    <DropdownMenuItem 
+                                        className={`cursor-pointer text-sm py-2 ${pathname === '/methodology' ? 'font-bold' : ''}`}
+                                        style={pathname === '/methodology' ? { backgroundColor: '#f1f5f9', color: '#0f172a' } : {}}
+                                    >
+                                        {labels.header.methodology}
                                     </DropdownMenuItem>
                                 </Link>
                             </DropdownMenuContent>

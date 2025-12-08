@@ -8,18 +8,16 @@ export default async function LoginPage({
     const hasError = params?.error === '1'
     
     return (
-        <main className="min-h-screen flex items-center justify-center bg-gradient-to-br from-[#fcf4e4] via-[#ffe8be] to-[#fcd34d] p-4">
+        <main className="min-h-screen flex items-center justify-center bg-gradient-to-br from-[#F1B434]/50 via-[#F1B434]/30 to-[#F1B434] p-4">
             <div className="w-full max-w-md">
                 <div className="bg-white/90 backdrop-blur-sm rounded-xl border border-[#d9b206]/20 p-8">
                     <div className="space-y-6">
                         {/* Header */}
                         <div className="space-y-2">
-                            <h1 className="text-3xl font-semibold text-slate-900">
-                                Crisis Data Funding Compass
-                            </h1>
-                            <p className="text-slate-600">
-                                Please enter your password to continue
-                            </p>
+                            <h1 className="text-lg sm:text-2xl bg-gradient-to-r from-slate-800 to-slate-600 bg-clip-text text-transparent truncate">
+                            <span className="qanelas-title">CRISIS DATA</span> <span className="font-roboto">Funding Compass</span>
+                        </h1>
+                           
                         </div>
 
                         {/* Error Message */}
@@ -37,12 +35,7 @@ export default async function LoginPage({
                             <input type="hidden" name="redirect" value={redirect} />
                             
                             <div className="space-y-2">
-                                <label 
-                                    htmlFor="password" 
-                                    className="block text-sm font-medium text-slate-700"
-                                >
-                                    Password
-                                </label>
+                                
                                 <input
                                     id="password"
                                     name="password"
