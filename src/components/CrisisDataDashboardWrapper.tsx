@@ -376,11 +376,13 @@ const CrisisDataDashboardWrapper = ({ logoutButton }: { logoutButton?: React.Rea
         if (activeView === 'table') {
             // Table view: update URL - replace any existing modal with org modal
             const newSearchParams = new URLSearchParams(searchParams.toString());
-            newSearchParams.set('org', orgKey);
-            // Close project and donor modals if open
             newSearchParams.delete('asset');
             newSearchParams.delete('donor');
-            router.push(`${pathname}?${newSearchParams.toString()}`, { scroll: false });
+            // Manually set org with + instead of %20 for spaces and dashes
+            const paramsStr = newSearchParams.toString();
+            const orgEncoded = orgKey.replace(/[\s-]/g, '+');
+            const separator = paramsStr ? '&' : '';
+            router.push(`${pathname}?${paramsStr}${separator}org=${orgEncoded}`, { scroll: false });
         } else {
             // Network view: use local state only, store page state
             const stateToStore = {
