@@ -32,7 +32,7 @@ async function loadNestedOrganizations(): Promise<NestedOrganization[]> {
 interface ThemesMappings {
     themeToType: Map<string, string>;
     themeToKey: Map<string, string>;
-    keyToTheme: Map<string, string>;
+    keyToThemes: Map<string, string[]>; // Changed from keyToTheme to handle multiple themes per key
 }
 
 let cachedThemesMappings: ThemesMappings | null = null;
@@ -60,7 +60,7 @@ async function loadThemesTable(): Promise<ThemesMappings> {
             const themesData = await response.json();
             const themeToType = new Map<string, string>();
             const themeToKey = new Map<string, string>();
-            const keyToTheme = new Map<string, string>();
+            const keyToThemes = new Map<string, string[]>();
             
             themesData?.forEach((theme: any) => {
                 const themeName = theme.fields?.['Investment Themes [Text Key]'];
@@ -74,15 +74,21 @@ async function loadThemesTable(): Promise<ThemesMappings> {
                         themeToType.set(themeName, investmentTypes[0]);
                     }
                     
-                    // Map theme to key and key to theme
+                    // Map theme to key and key to themes (multiple themes can have the same key)
                     if (themeKey && typeof themeKey === 'string') {
                         themeToKey.set(themeName, themeKey);
-                        keyToTheme.set(themeKey, themeName);
+                        
+                        // Add theme name to the array for this key
+                        const existingThemes = keyToThemes.get(themeKey) || [];
+                        if (!existingThemes.includes(themeName)) {
+                            existingThemes.push(themeName);
+                            keyToThemes.set(themeKey, existingThemes);
+                        }
                     }
                 }
             });
             
-            cachedThemesMappings = { themeToType, themeToKey, keyToTheme };
+            cachedThemesMappings = { themeToType, themeToKey, keyToThemes };
             return cachedThemesMappings;
         } catch (error) {
             console.error('Error loading themes table:', error);
@@ -107,11 +113,18 @@ export function themeNameToKey(themeName: string): string {
     return cachedThemesMappings.themeToKey.get(themeName) || themeName;
 }
 
-export function themeKeyToName(themeKey: string): string {
+// Get all theme names for a given key (since keys may not be unique)
+export function themeKeyToNames(themeKey: string): string[] {
     if (!cachedThemesMappings) {
-        return themeKey; // Fallback to theme key if not loaded yet
+        return [themeKey]; // Fallback to theme key if not loaded yet
     }
-    return cachedThemesMappings.keyToTheme.get(themeKey) || themeKey;
+    return cachedThemesMappings.keyToThemes.get(themeKey) || [themeKey];
+}
+
+// Get the first theme name for a key (for backwards compatibility)
+export function themeKeyToName(themeKey: string): string {
+    const names = themeKeyToNames(themeKey);
+    return names[0] || themeKey;
 }
 
 // Extract donor countries from agencies

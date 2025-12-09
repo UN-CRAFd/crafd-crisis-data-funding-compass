@@ -1510,7 +1510,7 @@
         "Crisis Analytics & Insights"
       ],
       "Investment Themes [Text Key]": "Water, Sanitation & Hygiene (WASH) Analytics",
-      "theme_key": "wash",
+      "theme_key": "wash-analytics",
       "theme_description": "WASH Analytics uses data-driven insights to assess and improve access to safe water, sanitation, and hygiene during crises."
     }
   },
