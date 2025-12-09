@@ -114,6 +114,7 @@ interface CrisisDataDashboardProps {
     selectedDonorCountry?: string;
     onDonorClick?: (country: string) => void;
     onTypeClick?: (type: string) => void;
+    onThemeClick?: (theme: string) => void;
     onViewChange?: (view: 'table' | 'network') => void;
     logoutButton?: React.ReactNode;
 }
@@ -253,6 +254,7 @@ const CrisisDataDashboard = ({
     onCloseDonorModal,
     onDonorClick,
     onTypeClick,
+    onThemeClick,
     onViewChange,
     logoutButton,
     sortBy,
@@ -1515,6 +1517,7 @@ const CrisisDataDashboard = ({
                     onOpenProjectModal={onOpenProjectModal}
                     onDonorClick={onDonorClick}
                     onTypeClick={onTypeClick}
+                    onThemeClick={onThemeClick}
                 />
             )}
             {/* Organization Modal */}
