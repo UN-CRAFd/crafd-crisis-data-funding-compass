@@ -13,6 +13,7 @@ import ProjectModal from '@/components/ProjectModal';
 import DonorModal from '@/components/DonorModal';
 import SurveyBanner from '@/components/SurveyBanner';
 import { Button } from '@/components/ui/button';
+import { matchesUrlSlug } from '@/lib/urlShortcuts';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { Collapsible, CollapsibleContent, CollapsibleTrigger } from '@/components/ui/collapsible';
 import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuTrigger } from '@/components/ui/dropdown-menu';
@@ -488,7 +489,9 @@ const CrisisDataDashboard = ({
         
         for (const org of nestedOrganizations) {
             for (const project of org.projects || []) {
-                if (project.fields?.product_key === selectedProjectKey) {
+                // Match product_key using URL slug format (lowercase with dashes)
+                const productKey = project.fields?.product_key;
+                if (productKey && matchesUrlSlug(selectedProjectKey, productKey)) {
                     // Extract donor countries from project's own agencies
                     const projectAgencies = project.agencies || [];
                     const projectDonorCountriesSet = new Set<string>();
@@ -531,10 +534,10 @@ const CrisisDataDashboard = ({
     const selectedOrganization = useMemo(() => {
         if (!selectedOrgKey || !nestedOrganizations.length) return null;
         
-        // Look up by Org Short Name (which is what the NetworkGraph passes)
+        // Look up by Org Short Name using URL slug matching (handles lowercase with dashes)
         const nestedOrg = nestedOrganizations.find((org: any) => {
             const orgShortName = org.fields?.['Org Short Name'];
-            return orgShortName && orgShortName.toLowerCase() === selectedOrgKey.toLowerCase();
+            return orgShortName && matchesUrlSlug(selectedOrgKey, orgShortName);
         });
         
         if (!nestedOrg) return null;
