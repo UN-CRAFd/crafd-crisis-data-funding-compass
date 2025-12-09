@@ -20,12 +20,14 @@
         "reclUJwIt0bxL2bO0",
         "recCDa9F6ntBxGGkm"
       ],
-      "Org HQ Country": "United States",
       "Has received CRAF'd Funding?": "NO",
       "org_key": "hhi",
       "Org Type": "Academia",
       "IATI Org Key": "US-EIN-45-4535664",
-      "Link to Budget Source": "none"
+      "Link to Budget Source": "none",
+      "Org HQ Country": [
+        "USA"
+      ]
     }
   },
   {
@@ -42,18 +44,20 @@
       "Org Donor Agencies": [
         "rec1YpvhkjwME6GOJ"
       ],
-      "Org HQ Country": "Germany",
       "Has received CRAF'd Funding?": "NO",
       "org_key": "heigit",
       "Org Type": "Academia",
       "HDX Org Key": "heidelberg-institute-for-geoinformation-technology",
-      "Last Updated": 2024
+      "Last Updated": 2024,
+      "Org HQ Country": [
+        "Germany"
+      ]
     }
   },
   {
     "id": "rec2BwDRFUPJJgINF",
     "fields": {
-      "Org Full Name": "Barcelona School of Economics (BSE)",
+      "Org Full Name": "BSE: Barcelona School of Economics",
       "Org Short Name": "BSE",
       "Org Website": "https://bse.eu",
       "Org Description": "The Barcelona School of Economics (BSE) was founded in 2006 by Andreu Mas-Colell as an institution for scientific cooperation between four academic units: two university departments and two research centers with a long tradition of collaboration and a history of leadership in the field of Economics.",
@@ -66,7 +70,6 @@
         "rec0sY1I5JZz6ZsUE"
       ],
       "Est. Org Budget": 9700000,
-      "Org HQ Country": "Spain",
       "org_key": "bse",
       "Org Type": "Academia",
       "Budget Source": "Website",
@@ -99,6 +102,9 @@
             }
           }
         }
+      ],
+      "Org HQ Country": [
+        "Spain"
       ]
     }
   },
@@ -130,7 +136,6 @@
       "Org MPTFO URL [Formula]": "https://mptf.undp.org/participating-organizations/UNICEF",
       "Org Transparency Portal": "https://open.unicef.org/?",
       "Est. Org Budget": 8099000000,
-      "Org HQ Country": "United States",
       "Has received CRAF'd Funding?": "NO",
       "org_key": "unicef",
       "Org Type": "United Nations System",
@@ -166,6 +171,9 @@
             }
           }
         }
+      ],
+      "Org HQ Country": [
+        "USA"
       ]
     }
   },
@@ -195,7 +203,6 @@
       "Org MPTFO Name": "WFP",
       "Org MPTFO URL [Formula]": "https://mptf.undp.org/participating-organizations/WFP",
       "Est. Org Budget": 9800000000,
-      "Org HQ Country": "Italy",
       "Has received CRAF'd Funding?": "NO",
       "org_key": "wfp",
       "Org Type": "United Nations System",
@@ -231,6 +238,9 @@
             }
           }
         }
+      ],
+      "Org HQ Country": [
+        "Italy"
       ]
     }
   },
@@ -249,13 +259,15 @@
       "Org Donor Agencies": [
         "recqSvUlZQjET4fCH"
       ],
-      "Org HQ Country": "Netherlands",
       "Has received CRAF'd Funding?": "YES",
       "org_key": "510-data-team",
       "Org Type": "Red Cross / Red Crescent Movement",
       "HDX Org Key": "netherlands-red-cross",
       "IATI Org Key": "NL-KVK-40409352",
-      "Last Updated": 2024
+      "Last Updated": 2024,
+      "Org HQ Country": [
+        "Netherlands"
+      ]
     }
   },
   {
@@ -306,18 +318,20 @@
       "Org MPTFO URL [Formula]": "https://mptf.undp.org/participating-organizations/OHCHR",
       "Org Programme Budget": "https://www.ohchr.org/en/about-us/funding-and-budget",
       "Est. Org Budget": 268935688,
-      "Org HQ Country": "Switzerland",
       "Has received CRAF'd Funding?": "YES",
       "org_key": "ohchr",
       "Org Type": "United Nations System",
       "Budget Source": "Annual Report",
-      "Last Updated": 2024
+      "Last Updated": 2024,
+      "Org HQ Country": [
+        "Switzerland"
+      ]
     }
   },
   {
     "id": "rec5DdxnhKg1na7o8",
     "fields": {
-      "Org Full Name": "University of Louvain Centre for Research on the Epidemiology of Disasters (CRED) ",
+      "Org Full Name": "CRED: University of Louvain Centre for Research on the Epidemiology of Disasters",
       "Org Short Name": "CRED",
       "Org Website": "https://www.uclouvain.be/en/research-institutes/irss/cred-epidemiology-of-disasters",
       "Org Description": "The Centre for Research on the Epidemiology of Disasters (CRED  has been active for over 50 years and is recognized as a reference institution in the field of disasters and emergency situations: CRED promotes research, training, and technical expertise in humanitarian emergencies, particularly in public health and epidemiology. Its main research topic is natural disasters. By providing a wealth of data related to health, the centre aims to improve disasters preparedness and response. CRED is managing the EM-DAT database, quantifying the occurrence, human and economic impacts associated with natural and technological disasters.",
@@ -333,11 +347,13 @@
         "recsrMWmoA037bW03"
       ],
       "Org IATI Name": "N/A",
-      "Org HQ Country": "Belgium",
       "Has received CRAF'd Funding?": "NO",
       "org_key": "uclouvain",
       "Org Type": "Academia",
-      "Last Updated": 2024
+      "Last Updated": 2024,
+      "Org HQ Country": [
+        "Belgium"
+      ]
     }
   },
   {
@@ -381,14 +397,16 @@
       "Org MPTFO Name": "UNFPA",
       "Org MPTFO URL [Formula]": "https://mptf.undp.org/participating-organizations/UNFPA",
       "Est. Org Budget": 1274700000,
-      "Org HQ Country": "United States",
       "Has received CRAF'd Funding?": "NO",
       "org_key": "unfpa",
       "Org Type": "United Nations System",
       "HDX Org Key": "unfpa",
       "IATI Org Key": "XM-DAC-41119",
       "Budget Source": "Annual Report",
-      "Last Updated": 2024
+      "Last Updated": 2024,
+      "Org HQ Country": [
+        "USA"
+      ]
     }
   },
   {
@@ -407,7 +425,6 @@
         "recVOTd76hfvjPbjZ",
         "recJl9XUd7rAiz6dR"
       ],
-      "Org HQ Country": "Global (distributed)",
       "Has received CRAF'd Funding?": "YES",
       "org_key": "fhn",
       "Org Type": "Network / Consortium",
@@ -445,13 +462,15 @@
       "Org Transparency Portal": "https://open.unwomen.org/en/global-results/resource-overview/2022-2025",
       "Org Programme Budget": "https://www.unwomen.org/sites/default/files/2023-05/UNW_Draft%20Integrated%20Budget%202024-25_updated.pdf",
       "Est. Org Budget": 515000000,
-      "Org HQ Country": "United States",
       "Has received CRAF'd Funding?": "YES",
       "org_key": "un-women",
       "Org Type": "United Nations System",
       "IATI Org Key": "XM-DAC-41146",
       "Budget Source": "Annual Report",
-      "Last Updated": 2024
+      "Last Updated": 2024,
+      "Org HQ Country": [
+        "USA"
+      ]
     }
   },
   {
@@ -469,12 +488,14 @@
         "reckIAhFXgj4XL29b"
       ],
       "Est. Org Budget": 1800000000,
-      "Org HQ Country": "United States",
       "Has received CRAF'd Funding?": "NO",
       "org_key": "usgs",
       "Org Type": "Government / Public Sector",
       "Budget Source": "Annual Report",
-      "Last Updated": 2024
+      "Last Updated": 2024,
+      "Org HQ Country": [
+        "USA"
+      ]
     }
   },
   {
@@ -492,12 +513,14 @@
       "Org Transparency Portal": "https://app.powerbi.com/view?r=eyJrIjoiZTcxZTYwZTgtODMyZC00MzQwLWFhM2ItMDdiODlkNjY4NmNlIiwidCI6IjBmOWUzNWRiLTU0NGYtNGY2MC1iZGNjLTVlYTQxNmU2ZGM3MCIsImMiOjh9",
       "Org Programme Budget": "https://open.un.org/un-secretariat-financials/expenses",
       "Est. Org Budget": 3967370,
-      "Org HQ Country": "United States",
       "Has received CRAF'd Funding?": "NO",
       "org_key": "unoda",
       "Org Type": "United Nations System",
       "Budget Source": "Annual Report",
-      "Last Updated": 2024
+      "Last Updated": 2024,
+      "Org HQ Country": [
+        "USA"
+      ]
     }
   },
   {
@@ -558,12 +581,14 @@
       ],
       "Org IATI Name": "Humanitarian Outcomes",
       "Est. Org Budget": 2904460,
-      "Org HQ Country": "United Kingdom",
       "Has received CRAF'd Funding?": "NO",
       "org_key": "humanitarian-outcomes",
       "Org Type": "Tech / Consulting Provider",
       "IATI Org Key": "XM-DAC-41122",
-      "Link to Budget Source": "none"
+      "Link to Budget Source": "none",
+      "Org HQ Country": [
+        "United Kingdom"
+      ]
     }
   },
   {
@@ -580,7 +605,6 @@
         "reco4Um0k7Tgw2UCK"
       ],
       "Est. Org Budget": 238351925,
-      "Org HQ Country": "United Kingdom",
       "org_key": "uos",
       "Org Type": "Academia",
       "Budget Source": "Website",
@@ -613,6 +637,9 @@
             }
           }
         }
+      ],
+      "Org HQ Country": [
+        "United Kingdom"
       ]
     }
   },
@@ -666,7 +693,6 @@
       "Org Transparency Portal": "https://open.undp.org/",
       "Org Programme Budget": "https://www.undp.org/funding",
       "Est. Org Budget": 6822200000,
-      "Org HQ Country": "United States",
       "Has received CRAF'd Funding?": "YES",
       "org_key": "undp",
       "Org Type": "United Nations System",
@@ -702,6 +728,9 @@
             }
           }
         }
+      ],
+      "Org HQ Country": [
+        "USA"
       ]
     }
   },
@@ -750,12 +779,14 @@
         "rec2KBp1IAA5TtnQl"
       ],
       "Org IATI Name": "N/A",
-      "Org HQ Country": "Kenya",
       "Has received CRAF'd Funding?": "NO",
       "org_key": "fsnwg",
       "Org Type": "Network / Consortium",
       "HDX Org Key": "fsnwg",
-      "Link to Budget Source": "none"
+      "Link to Budget Source": "none",
+      "Org HQ Country": [
+        "Kenya"
+      ]
     }
   },
   {
@@ -766,7 +797,8 @@
       "Org Website": "https://unosat.org/",
       "Org Description": "The United Nations Satellite Centre (UNOSAT), part of UNITAR, delivers satellite analysis, training, and capacity development to UN entities and Member States. We leverage geospatial technologies to support humanitarian response, sustainable development, and resilience building worldwide.",
       "Provided Data Ecosystem Projects": [
-        "recEwLy3FESOhLeNs"
+        "recEwLy3FESOhLeNs",
+        "recAeviz1XjLC8V6i"
       ],
       "org_key": "unosat",
       "Org Type": "United Nations System",
@@ -793,12 +825,14 @@
         "recAiCKdzASfJMVsG"
       ],
       "Org IATI Name": "N/A",
-      "Org HQ Country": "United States",
       "Has received CRAF'd Funding?": "NO",
       "org_key": "pacific-disaster-center",
       "Org Type": "Research / Think Tank",
       "HDX Org Key": "pdc",
-      "Last Updated": 2024
+      "Last Updated": 2024,
+      "Org HQ Country": [
+        "USA"
+      ]
     }
   },
   {
@@ -817,12 +851,14 @@
       ],
       "Org IATI Name": "N/A",
       "Est. Org Budget": 931408094.11,
-      "Org HQ Country": "Sweden",
       "Has received CRAF'd Funding?": "NO",
       "org_key": "uppsala-university",
       "Org Type": "Academia",
       "Budget Source": "Annual Report",
-      "Last Updated": 2024
+      "Last Updated": 2024,
+      "Org HQ Country": [
+        "Sweden"
+      ]
     }
   },
   {
@@ -859,12 +895,14 @@
       ],
       "Org IATI Name": "N/A",
       "Est. Org Budget": 11510461.58,
-      "Org HQ Country": "Sweden",
       "Has received CRAF'd Funding?": "NO",
       "org_key": "sipri",
       "Org Type": "Research / Think Tank",
       "Budget Source": "Annual Report",
-      "Last Updated": 2024
+      "Last Updated": 2024,
+      "Org HQ Country": [
+        "Sweden"
+      ]
     }
   },
   {
@@ -901,12 +939,14 @@
       "Org Transparency Portal": "https://www.unmas.org/sites/default/files/styles/full_width/public/unmas_2024_annual_report-images-58-updated.jpg?itok=QvJhQMeO",
       "Org Programme Budget": "https://open.un.org/un-secretariat-financials/expenses",
       "Est. Org Budget": 42018495,
-      "Org HQ Country": "Switzerland",
       "Has received CRAF'd Funding?": "NO",
       "org_key": "unmas",
       "Org Type": "United Nations System",
       "Budget Source": "Annual Report",
-      "Last Updated": 2024
+      "Last Updated": 2024,
+      "Org HQ Country": [
+        "Switzerland"
+      ]
     }
   },
   {
@@ -935,7 +975,6 @@
       ],
       "Org IATI Name": "Flowminder",
       "Est. Org Budget": 3400000,
-      "Org HQ Country": "United Kingdom",
       "Has received CRAF'd Funding?": "NO",
       "org_key": "flowminder",
       "Org Type": "Non-Governmental Organization",
@@ -970,6 +1009,9 @@
             }
           }
         }
+      ],
+      "Org HQ Country": [
+        "United Kingdom"
       ]
     }
   },
@@ -1019,14 +1061,16 @@
       "Org Transparency Portal": "https://www.unocha.org/our-funding",
       "Org Programme Budget": "https://open.un.org/un-secretariat-financials/expenses",
       "Est. Org Budget": 314000000,
-      "Org HQ Country": "United States",
       "Has received CRAF'd Funding?": "NO",
       "org_key": "ocha",
       "Org Type": "United Nations System",
       "HDX Org Key": "un-ocha",
       "IATI Org Key": "XM-DAC-41127",
       "Budget Source": "Annual Report",
-      "Last Updated": 2024
+      "Last Updated": 2024,
+      "Org HQ Country": [
+        "USA"
+      ]
     }
   },
   {
@@ -1058,18 +1102,20 @@
       "Org MPTFO Name": "PRIO",
       "Org MPTFO URL [Formula]": "https://mptf.undp.org/participating-organizations/PRIO",
       "Est. Org Budget": 15455407.5,
-      "Org HQ Country": "Norway",
       "Has received CRAF'd Funding?": "YES",
       "org_key": "prio",
       "Org Type": "Research / Think Tank",
       "Budget Source": "Annual Report",
-      "Last Updated": 2024
+      "Last Updated": 2024,
+      "Org HQ Country": [
+        "Norway"
+      ]
     }
   },
   {
     "id": "recHPSF1rhFJKTJJY",
     "fields": {
-      "Org Full Name": "Famine Early Warning Systems Network (FEWS NET)",
+      "Org Full Name": "FEWS NET: Famine Early Warning Systems Network",
       "Org Short Name": "FEWS",
       "Org Website": "https://fews.net/",
       "Org Description": "The Famine Early Warning Systems Network (FEWS NET) is a leading provider of early warning and analysis on acute food insecurity around the world.",
@@ -1105,7 +1151,6 @@
         "recFXEk93eiQlKjJU"
       ],
       "Est. Org Budget": 1460000,
-      "Org HQ Country": "United States",
       "org_key": "data-pop-alliance",
       "Org Type": "Non-Governmental Organization",
       "Budget Source": "Annual Report",
@@ -1138,6 +1183,9 @@
             }
           }
         }
+      ],
+      "Org HQ Country": [
+        "USA"
       ]
     }
   },
@@ -1169,7 +1217,6 @@
       ],
       "Org IATI Name": "International NGO Safety Orgnisation",
       "Est. Org Budget": 48551935.5,
-      "Org HQ Country": "United Kingdom",
       "Has received CRAF'd Funding?": "NO",
       "org_key": "inso",
       "Org Type": "Non-Governmental Organization",
@@ -1204,6 +1251,9 @@
             }
           }
         }
+      ],
+      "Org HQ Country": [
+        "United Kingdom"
       ]
     }
   },
@@ -1235,7 +1285,6 @@
       ],
       "Org IATI Name": "N/A",
       "Est. Org Budget": 3604651.17,
-      "Org HQ Country": "Switzerland",
       "Has received CRAF'd Funding?": "NO",
       "org_key": "gem",
       "Org Type": "Non-Governmental Organization",
@@ -1270,6 +1319,9 @@
             }
           }
         }
+      ],
+      "Org HQ Country": [
+        "Switzerland"
       ]
     }
   },
@@ -1288,12 +1340,14 @@
         "recrq5pa36yxwSE2c"
       ],
       "Org IATI Name": "Fields Data",
-      "Org HQ Country": "Netherlands",
       "Has received CRAF'd Funding?": "NO",
       "org_key": "fields-data",
       "Org Type": "Non-Governmental Organization",
       "HDX Org Key": "fieldsdata",
-      "Link to Budget Source": "none"
+      "Link to Budget Source": "none",
+      "Org HQ Country": [
+        "Netherlands"
+      ]
     }
   },
   {
@@ -1307,7 +1361,6 @@
         "recFnNCbi5RYJNchr",
         "recD0hG4x9w340oYA"
       ],
-      "Org HQ Country": "Global (distributed)",
       "Has received CRAF'd Funding?": "NO",
       "org_key": "mapswipe",
       "Org Type": "Non-Governmental Organization",
@@ -1329,12 +1382,14 @@
         "reckIAhFXgj4XL29b"
       ],
       "Est. Org Budget": 52,
-      "Org HQ Country": "United States",
       "Has received CRAF'd Funding?": "YES",
       "org_key": "korbel",
       "Org Type": "Academia",
       "Budget Source": "Annual Report",
-      "Last Updated": 2024
+      "Last Updated": 2024,
+      "Org HQ Country": [
+        "USA"
+      ]
     }
   },
   {
@@ -1373,7 +1428,6 @@
       "Org MPTFO Name": "DRC",
       "Org MPTFO URL [Formula]": "https://mptf.undp.org/participating-organizations/DRC",
       "Est. Org Budget": 520000000,
-      "Org HQ Country": "Denmark",
       "Has received CRAF'd Funding?": "NO",
       "org_key": "drc",
       "Org Type": "Non-Governmental Organization",
@@ -1409,6 +1463,9 @@
             }
           }
         }
+      ],
+      "Org HQ Country": [
+        "Denmark"
       ]
     }
   },
@@ -1443,7 +1500,6 @@
       ],
       "Org IATI Name": "IMPACT Initiatives",
       "Est. Org Budget": 43320889,
-      "Org HQ Country": "Switzerland",
       "Has received CRAF'd Funding?": "NO",
       "org_key": "reach",
       "Org Type": "Non-Governmental Organization",
@@ -1451,7 +1507,10 @@
       "IATI Org Key": "XM-OCHA-HPC9829",
       "Budget Source": "Annual Report",
       "Last Updated": 2024,
-      "Link to Budget Source": "test"
+      "Link to Budget Source": "test",
+      "Org HQ Country": [
+        "Switzerland"
+      ]
     }
   },
   {
@@ -1464,12 +1523,14 @@
       "Provided Data Ecosystem Projects": [
         "recxNVM0HeC0mSQyk"
       ],
-      "Org HQ Country": "United States",
       "Has received CRAF'd Funding?": "YES",
       "org_key": "un-dppa",
       "Org Type": "United Nations System",
       "HDX Org Key": "unpeacesecurity",
-      "Last Updated": 2024
+      "Last Updated": 2024,
+      "Org HQ Country": [
+        "USA"
+      ]
     }
   },
   {
@@ -1484,7 +1545,6 @@
       ],
       "Org IATI Name": "United States Agency for International Development (USAID)",
       "Est. Org Budget": 86961667024,
-      "Org HQ Country": "United States",
       "Has received CRAF'd Funding?": "NO",
       "org_key": "state-department",
       "Org Type": "Government / Public Sector",
@@ -1520,6 +1580,9 @@
             }
           }
         }
+      ],
+      "Org HQ Country": [
+        "USA"
       ]
     }
   },
@@ -1548,7 +1611,6 @@
       ],
       "Org IATI Name": "Humanitarian OpenStreetMap Team",
       "Est. Org Budget": 8387022,
-      "Org HQ Country": "United States",
       "Has received CRAF'd Funding?": "NO",
       "org_key": "hot",
       "Org Type": "Non-Governmental Organization",
@@ -1583,6 +1645,9 @@
             }
           }
         }
+      ],
+      "Org HQ Country": [
+        "USA"
       ]
     }
   },
@@ -1609,7 +1674,6 @@
       "Org MPTFO Name": "ACLED",
       "Org MPTFO URL [Formula]": "https://mptf.undp.org/participating-organizations/ACLED",
       "Est. Org Budget": 15656938,
-      "Org HQ Country": "United States",
       "Has received CRAF'd Funding?": "YES",
       "org_key": "acled",
       "Org Type": "Non-Governmental Organization",
@@ -1644,6 +1708,9 @@
             }
           }
         }
+      ],
+      "Org HQ Country": [
+        "USA"
       ]
     }
   },
@@ -1703,7 +1770,7 @@
   {
     "id": "recU1jAnjfLIhxtwj",
     "fields": {
-      "Org Full Name": "The Demographic and Health Survey (DHS Program)",
+      "Org Full Name": "DHS: The Demographic and Health Survey",
       "Org Short Name": "DHS",
       "Org Website": "https://dhsprogram.com/",
       "Org Description": "The DHS Program (Demographic and Health Surveys) is a primary source of data on health and population trends in developing countries, having provided technical assistance to over 300 surveys in more than 90 countries since 1984. They collect and disseminate nationally representative data on critical areas including fertility, family planning, maternal and child health, gender, HIV/AIDS, malaria, and nutrition. Funded by USAID and other donors, and implemented by ICF International, The DHS Program plays a vital role in advancing global understanding of health and population issues.",
@@ -1720,13 +1787,15 @@
         "recbtz43uuKKFVfvd"
       ],
       "Est. Org Budget": 47000000,
-      "Org HQ Country": "United States",
       "Has received CRAF'd Funding?": "NO",
       "org_key": "dhs",
       "Org Type": "Research / Think Tank",
       "HDX Org Key": "dhs",
       "Budget Source": "Annual Report",
-      "Last Updated": 2024
+      "Last Updated": 2024,
+      "Org HQ Country": [
+        "USA"
+      ]
     }
   },
   {
@@ -1746,7 +1815,6 @@
       ],
       "Org IATI Name": "N/A",
       "Est. Org Budget": 2008567,
-      "Org HQ Country": "Netherlands",
       "Has received CRAF'd Funding?": "NO",
       "org_key": "data-friendly-space",
       "Org Type": "Tech / Consulting Provider",
@@ -1780,6 +1848,9 @@
             }
           }
         }
+      ],
+      "Org HQ Country": [
+        "Netherlands"
       ]
     }
   },
@@ -1834,14 +1905,16 @@
       "Org Transparency Portal": "https://core.unesco.org/en/uses-of-funding",
       "Org Programme Budget": "https://core.unesco.org/en/sources-of-funding",
       "Est. Org Budget": 900000000,
-      "Org HQ Country": "France",
       "Has received CRAF'd Funding?": "NO",
       "org_key": "unesco",
       "Org Type": "United Nations System",
       "HDX Org Key": "unesco",
       "IATI Org Key": "XM-DAC-41304",
       "Budget Source": "Annual Report",
-      "Last Updated": 2024
+      "Last Updated": 2024,
+      "Org HQ Country": [
+        "France"
+      ]
     }
   },
   {
@@ -1860,14 +1933,16 @@
       ],
       "Org IATI Name": "MapAction",
       "Est. Org Budget": 8452390.87,
-      "Org HQ Country": "United Kingdom",
       "Has received CRAF'd Funding?": "NO",
       "org_key": "mapaction",
       "Org Type": "Non-Governmental Organization",
       "HDX Org Key": "mapaction",
       "IATI Org Key": "GB-CHC-1126727",
       "Budget Source": "Annual Report",
-      "Last Updated": 2024
+      "Last Updated": 2024,
+      "Org HQ Country": [
+        "United Kingdom"
+      ]
     }
   },
   {
@@ -1909,7 +1984,6 @@
       "Org MPTFO Name": "ICG",
       "Org MPTFO URL [Formula]": "https://mptf.undp.org/participating-organizations/ICG",
       "Est. Org Budget": 25737982,
-      "Org HQ Country": "Belgium",
       "Has received CRAF'd Funding?": "YES",
       "org_key": "icg",
       "Org Type": "Non-Governmental Organization",
@@ -1944,6 +2018,9 @@
             }
           }
         }
+      ],
+      "Org HQ Country": [
+        "Belgium"
       ]
     }
   },
@@ -1992,6 +2069,9 @@
             }
           }
         }
+      ],
+      "Org HQ Country": [
+        "United Kingdom"
       ]
     }
   },
@@ -2031,11 +2111,13 @@
       ],
       "Org IATI Name": "N/A",
       "Est. Org Budget": 2000000,
-      "Org HQ Country": "Lebanon",
       "Has received CRAF'd Funding?": "NO",
       "org_key": "arab-barometer",
       "Org Type": "Research / Think Tank",
-      "Link to Budget Source": "none"
+      "Link to Budget Source": "none",
+      "Org HQ Country": [
+        "Lebanon"
+      ]
     }
   },
   {
@@ -2066,14 +2148,16 @@
       ],
       "Org IATI Name": "International Federation of the Red Cross and Red Crescent (IFRC)",
       "Est. Org Budget": 64282064.2,
-      "Org HQ Country": "Switzerland",
       "Has received CRAF'd Funding?": "YES",
       "org_key": "ifrc",
       "Org Type": "Non-Governmental Organization",
       "HDX Org Key": "ifrc",
       "IATI Org Key": "XM-DAC-21018",
       "Budget Source": "Annual Report",
-      "Last Updated": 2024
+      "Last Updated": 2024,
+      "Org HQ Country": [
+        "Switzerland"
+      ]
     }
   },
   {
@@ -2096,7 +2180,6 @@
       ],
       "Org IATI Name": "N/A",
       "Est. Org Budget": 126137856.56,
-      "Org HQ Country": "Belgium",
       "Has received CRAF'd Funding?": "NO",
       "org_key": "ec-jrc",
       "Org Type": "Government / Public Sector",
@@ -2131,6 +2214,9 @@
             }
           }
         }
+      ],
+      "Org HQ Country": [
+        "Belgium"
       ]
     }
   },
@@ -2161,12 +2247,14 @@
       "Org IATI Name": "N/A",
       "Org Programme Budget": "https://www.unccd.int/sites/default/files/2024-11/2417493E.pdf",
       "Est. Org Budget": 9620000,
-      "Org HQ Country": "Germany",
       "Has received CRAF'd Funding?": "NO",
       "org_key": "unccd",
       "Org Type": "United Nations System",
       "Budget Source": "Annual Report",
-      "Last Updated": 2024
+      "Last Updated": 2024,
+      "Org HQ Country": [
+        "Germany"
+      ]
     }
   },
   {
@@ -2195,13 +2283,15 @@
         "rec5JfYP3fwrIALy9"
       ],
       "Est. Org Budget": 172992047.84,
-      "Org HQ Country": "Switzerland",
       "Has received CRAF'd Funding?": "NO",
       "org_key": "wmo",
       "Org Type": "United Nations System",
       "HDX Org Key": "world-meteorological-organization",
       "Budget Source": "Annual Report",
-      "Last Updated": 2024
+      "Last Updated": 2024,
+      "Org HQ Country": [
+        "Switzerland"
+      ]
     }
   },
   {
@@ -2245,13 +2335,15 @@
       "Org MPTFO URL [Formula]": "https://mptf.undp.org/participating-organizations/UNDRR",
       "Org Transparency Portal": "https://www.undrr.org/about-undrr/funding",
       "Est. Org Budget": 69430000,
-      "Org HQ Country": "Switzerland",
       "Has received CRAF'd Funding?": "NO",
       "org_key": "undrr",
       "Org Type": "United Nations System",
       "HDX Org Key": "united-nations-office-for-disaster-risk-reduction-unisdr",
       "Budget Source": "Annual Report",
-      "Last Updated": 2024
+      "Last Updated": 2024,
+      "Org HQ Country": [
+        "Switzerland"
+      ]
     }
   },
   {
@@ -2325,7 +2417,6 @@
       "Org MPTFO URL [Formula]": "https://mptf.undp.org/participating-organizations/UNHCR",
       "Org Transparency Portal": "https://d-portal.org/ctrack.html?search&publisher=XM-DAC-41121#view=main",
       "Est. Org Budget": 10800000000,
-      "Org HQ Country": "Switzerland",
       "Has received CRAF'd Funding?": "YES",
       "org_key": "unhcr",
       "Org Type": "United Nations System",
@@ -2361,6 +2452,9 @@
             }
           }
         }
+      ],
+      "Org HQ Country": [
+        "Switzerland"
       ]
     }
   },
@@ -2390,7 +2484,6 @@
       ],
       "Org IATI Name": "N/A",
       "Est. Org Budget": 3900000,
-      "Org HQ Country": "Netherlands",
       "Has received CRAF'd Funding?": "NO",
       "org_key": "3is",
       "Org Type": "Tech / Consulting Provider",
@@ -2425,6 +2518,9 @@
             }
           }
         }
+      ],
+      "Org HQ Country": [
+        "Netherlands"
       ]
     }
   },
@@ -2457,7 +2553,6 @@
       ],
       "Org IATI Name": "N/A",
       "Est. Org Budget": 8610000,
-      "Org HQ Country": "Ghana",
       "Has received CRAF'd Funding?": "NO",
       "org_key": "afrobarometer",
       "Org Type": "Research / Think Tank",
@@ -2491,6 +2586,9 @@
             }
           }
         }
+      ],
+      "Org HQ Country": [
+        "Ghana"
       ]
     }
   },
@@ -2515,12 +2613,14 @@
       "Org MPTFO Name": "ICPAC_IGAD",
       "Org MPTFO URL [Formula]": "https://mptf.undp.org/participating-organizations/ICPAC_IGAD",
       "Est. Org Budget": 9000000,
-      "Org HQ Country": "Kenya",
       "Has received CRAF'd Funding?": "YES",
       "org_key": "icpac",
       "Org Type": "International Organization",
       "HDX Org Key": "igad-climate-prediction-and-application-center",
-      "Link to Budget Source": "none"
+      "Link to Budget Source": "none",
+      "Org HQ Country": [
+        "Kenya"
+      ]
     }
   },
   {
@@ -2554,20 +2654,22 @@
       "Org Transparency Portal": "https://www.fao.org/transparency",
       "Org Programme Budget": "https://www.fao.org/transparency/dashboards/programme-budget-hr",
       "Est. Org Budget": 2000000000,
-      "Org HQ Country": "Italy",
       "Has received CRAF'd Funding?": "NO",
       "org_key": "fao",
       "Org Type": "United Nations System",
       "HDX Org Key": "fao",
       "IATI Org Key": "XM-DAC-41301",
       "Budget Source": "Annual Report",
-      "Last Updated": 2024
+      "Last Updated": 2024,
+      "Org HQ Country": [
+        "Italy"
+      ]
     }
   },
   {
     "id": "reckvvkhRKujyhOqD",
     "fields": {
-      "Org Full Name": "UC Irvine: University of California Irvine",
+      "Org Full Name": "University of California Irvine",
       "Org Short Name": "UC Irvine",
       "Org Website": "https://uci.edu/",
       "Org Description": "University of California, Irvine was founded with a mission to catalyze the community and enhance lives through rigorous academics, cutting-edge research, and dedicated public service. Today, we draw on the unyielding spirit of our pioneering faculty, staff and students who arrived on campus with a dream to inspire change and generate new ideas. We believe that true progress is made when different perspectives come together to advance our understanding of the world around us. And we enlighten our communities and point the way to a better future. At UCI, we shine brighter.",
@@ -2581,7 +2683,6 @@
       ],
       "Org IATI Name": "N/A",
       "Est. Org Budget": 6700000000,
-      "Org HQ Country": "United States",
       "Has received CRAF'd Funding?": "NO",
       "org_key": "uc-irvine",
       "Org Type": "Academia",
@@ -2615,6 +2716,9 @@
             }
           }
         }
+      ],
+      "Org HQ Country": [
+        "USA"
       ]
     }
   },
@@ -2631,10 +2735,12 @@
       "Org Donor Agencies": [
         "reco4Um0k7Tgw2UCK"
       ],
-      "Org HQ Country": "United Kingdom",
       "org_key": "uosa",
       "Org Type": "Academia",
-      "Last Updated": 2024
+      "Last Updated": 2024,
+      "Org HQ Country": [
+        "United Kingdom"
+      ]
     }
   },
   {
@@ -2659,7 +2765,6 @@
       "Org MPTFO Name": "IBRD",
       "Org MPTFO URL [Formula]": "https://mptf.undp.org/participating-organizations/IBRD",
       "Est. Org Budget": 117500000000,
-      "Org HQ Country": "United States",
       "Has received CRAF'd Funding?": "NO",
       "org_key": "world-bank",
       "Org Type": "International Organization",
@@ -2695,6 +2800,9 @@
             }
           }
         }
+      ],
+      "Org HQ Country": [
+        "USA"
       ]
     }
   },
@@ -2711,10 +2819,12 @@
       "Org Donor Agencies": [
         "reckIAhFXgj4XL29b"
       ],
-      "Org HQ Country": "United States",
       "org_key": "wpf",
       "Org Type": "Academia",
-      "Last Updated": 2024
+      "Last Updated": 2024,
+      "Org HQ Country": [
+        "USA"
+      ]
     }
   },
   {
@@ -2749,7 +2859,6 @@
       ],
       "Org IATI Name": "N/A",
       "Est. Org Budget": 6998718,
-      "Org HQ Country": "Norway",
       "Has received CRAF'd Funding?": "YES",
       "org_key": "idmc",
       "Org Type": "Non-Governmental Organization",
@@ -2784,6 +2893,9 @@
             }
           }
         }
+      ],
+      "Org HQ Country": [
+        "Norway"
       ]
     }
   },
@@ -2804,7 +2916,6 @@
       ],
       "Org IATI Name": "N/A",
       "Est. Org Budget": 2487100000,
-      "Org HQ Country": "Switzerland",
       "Has received CRAF'd Funding?": "NO",
       "org_key": "eth-zurich",
       "Org Type": "Academia",
@@ -2839,6 +2950,9 @@
             }
           }
         }
+      ],
+      "Org HQ Country": [
+        "Switzerland"
       ]
     }
   },
@@ -2857,12 +2971,14 @@
       "Org Donor Agencies": [
         "rec1VhOJv9U6QKBBs"
       ],
-      "Org HQ Country": "Denmark",
       "org_key": "world-bank-unhcr",
       "Org Type": "United Nations System",
       "HDX Org Key": "world-bank-group",
       "IATI Org Key": "XM-DAC-41121",
-      "Last Updated": 2024
+      "Last Updated": 2024,
+      "Org HQ Country": [
+        "Denmark"
+      ]
     }
   },
   {
@@ -2881,13 +2997,15 @@
       ],
       "Org IATI Name": "Start Network",
       "Est. Org Budget": 36483133.15,
-      "Org HQ Country": "United Kingdom",
       "Has received CRAF'd Funding?": "NO",
       "org_key": "start-network",
       "Org Type": "Network / Consortium",
       "IATI Org Key": "GB-CHC-1159483",
       "Budget Source": "Annual Report",
-      "Last Updated": 2024
+      "Last Updated": 2024,
+      "Org HQ Country": [
+        "United Kingdom"
+      ]
     }
   },
   {
@@ -2920,11 +3038,13 @@
       ],
       "Org IATI Name": "N/A",
       "Est. Org Budget": 1000000,
-      "Org HQ Country": "Chile",
       "Has received CRAF'd Funding?": "NO",
       "org_key": "latinobarometro",
       "Org Type": "Research / Think Tank",
-      "Link to Budget Source": "none"
+      "Link to Budget Source": "none",
+      "Org HQ Country": [
+        "Chile"
+      ]
     }
   },
   {
@@ -2974,13 +3094,15 @@
       ],
       "Org IATI Name": "N/A",
       "Est. Org Budget": 11810000,
-      "Org HQ Country": "United States",
       "Has received CRAF'd Funding?": "NO",
       "org_key": "ipc",
       "Org Type": "Network / Consortium",
       "HDX Org Key": "ipc",
       "Budget Source": "Annual Report",
-      "Last Updated": 2024
+      "Last Updated": 2024,
+      "Org HQ Country": [
+        "USA"
+      ]
     }
   },
   {
@@ -3012,12 +3134,14 @@
       "Org IATI Name": "N/A",
       "Org MPTFO Name": "SPC",
       "Org MPTFO URL [Formula]": "https://mptf.undp.org/participating-organizations/SPC",
-      "Org HQ Country": "New Caledonia",
       "Has received CRAF'd Funding?": "NO",
       "org_key": "pacific-community",
       "Org Type": "International Organization",
       "HDX Org Key": "pacific-community",
-      "Last Updated": 2024
+      "Last Updated": 2024,
+      "Org HQ Country": [
+        "New Caledonia"
+      ]
     }
   },
   {
@@ -3051,13 +3175,15 @@
       "Org MPTFO Name": "UNEP",
       "Org MPTFO URL [Formula]": "https://mptf.undp.org/participating-organizations/UNEP",
       "Est. Org Budget": 671300000,
-      "Org HQ Country": "Kenya",
       "Has received CRAF'd Funding?": "NO",
       "org_key": "unep",
       "Org Type": "United Nations System",
       "HDX Org Key": "unep-ocha-jeu",
       "Budget Source": "Annual Report",
-      "Last Updated": 2024
+      "Last Updated": 2024,
+      "Org HQ Country": [
+        "Kenya"
+      ]
     }
   },
   {
@@ -3099,7 +3225,6 @@
         "reclUJwIt0bxL2bO0"
       ],
       "Est. Org Budget": 4722424710,
-      "Org HQ Country": "United States",
       "Has received CRAF'd Funding?": "NO",
       "org_key": "university-of-minnesota",
       "Org Type": "Academia",
@@ -3133,6 +3258,9 @@
             }
           }
         }
+      ],
+      "Org HQ Country": [
+        "USA"
       ]
     }
   },
@@ -3145,18 +3273,19 @@
       "Org Description": "UNITAR focuses on building capacity in the use of data for evidence-based decision-making, particularly in developing countries. They organize workshops and develop toolkits on governance for data ecosystems, with a special emphasis on supporting the implementation of the Sustainable Development Goals (SDGs). UNITAR also helps strengthen statistical training at national and local levels, promotes access to statistical learning for data producers, enables the use of new data sources like citizen data, and enhances the effective use of data by policymakers and stakeholders through statistical literacy initiatives.",
       "Link to Data Products Overview": "\n",
       "Provided Data Ecosystem Projects": [
-        "recEwLy3FESOhLeNs",
-        "recAeviz1XjLC8V6i"
+        "recEwLy3FESOhLeNs"
       ],
       "Org Programme Budget": "https://unitar.org/sites/default/files/media/publication/doc/UNITAR-Programme-Budget-2024-2025_adopted-17November2023.pdf?utm_source=chatgpt.com",
       "Est. Org Budget": 48440000,
-      "Org HQ Country": "Switzerland",
       "Has received CRAF'd Funding?": "NO",
       "org_key": "unitar",
       "Org Type": "United Nations System",
       "HDX Org Key": "unosat",
       "Budget Source": "Annual Report",
-      "Last Updated": 2024
+      "Last Updated": 2024,
+      "Org HQ Country": [
+        "Switzerland"
+      ]
     }
   },
   {
@@ -3195,7 +3324,6 @@
       "Org MPTFO Name": "IOM",
       "Org MPTFO URL [Formula]": "https://mptf.undp.org/participating-organizations/IOM",
       "Est. Org Budget": 3733229338.55,
-      "Org HQ Country": "Switzerland",
       "Has received CRAF'd Funding?": "YES",
       "org_key": "iom",
       "Org Type": "International Organization",
@@ -3231,6 +3359,9 @@
             }
           }
         }
+      ],
+      "Org HQ Country": [
+        "Switzerland"
       ]
     }
   },
@@ -3245,12 +3376,14 @@
         "rec5JfYP3fwrIALy9"
       ],
       "Est. Org Budget": 56817100,
-      "Org HQ Country": "Thailand",
       "Has received CRAF'd Funding?": "NO",
       "org_key": "unescap",
       "Org Type": "United Nations System",
       "Budget Source": "Annual Report",
-      "Last Updated": 2024
+      "Last Updated": 2024,
+      "Org HQ Country": [
+        "Thailand"
+      ]
     }
   },
   {
@@ -3270,12 +3403,14 @@
         "rec5OM4ToDzt2ycHr"
       ],
       "Org IATI Name": "N/A",
-      "Org HQ Country": "United States",
       "Has received CRAF'd Funding?": "NO",
       "org_key": "wpdx",
       "Org Type": "Non-Governmental Organization",
       "HDX Org Key": "water-point-data-exchange",
-      "Last Updated": 2024
+      "Last Updated": 2024,
+      "Org HQ Country": [
+        "USA"
+      ]
     }
   },
   {
@@ -3306,12 +3441,14 @@
       ],
       "Org IATI Name": "PARIS21 Foundation",
       "Est. Org Budget": 5011472.38,
-      "Org HQ Country": "France",
       "Has received CRAF'd Funding?": "NO",
       "org_key": "paris21",
       "Org Type": "International Organization",
       "Budget Source": "Annual Report",
-      "Last Updated": 2024
+      "Last Updated": 2024,
+      "Org HQ Country": [
+        "France"
+      ]
     }
   },
   {
@@ -3328,7 +3465,6 @@
         "rec0sY1I5JZz6ZsUE"
       ],
       "Est. Org Budget": 3054300000,
-      "Org HQ Country": "United Kingdom",
       "Has received CRAF'd Funding?": "NO",
       "org_key": "oxford-university",
       "Org Type": "Academia",
@@ -3364,6 +3500,9 @@
             }
           }
         }
+      ],
+      "Org HQ Country": [
+        "United Kingdom"
       ]
     }
   },
@@ -3389,7 +3528,6 @@
       ],
       "Org IATI Name": "N/A",
       "Est. Org Budget": 27500000,
-      "Org HQ Country": "United States",
       "Has received CRAF'd Funding?": "NO",
       "org_key": "immap",
       "Org Type": "Non-Governmental Organization",
@@ -3424,6 +3562,9 @@
             }
           }
         }
+      ],
+      "Org HQ Country": [
+        "USA"
       ]
     }
   },
@@ -3461,7 +3602,6 @@
       "Org MPTFO URL [Formula]": "https://mptf.undp.org/participating-organizations/WHO",
       "Org Programme Budget": "https://www.who.int/about/accountability/budget?utm_source=chatgpt.com",
       "Est. Org Budget": 3417000000,
-      "Org HQ Country": "Switzerland",
       "Has received CRAF'd Funding?": "NO",
       "org_key": "who",
       "Org Type": "United Nations System",
@@ -3497,6 +3637,9 @@
             }
           }
         }
+      ],
+      "Org HQ Country": [
+        "Switzerland"
       ]
     }
   },
@@ -3515,13 +3658,15 @@
       ],
       "Org IATI Name": "Red Cross Red Crescent Climate Centre",
       "Est. Org Budget": 6264522.32,
-      "Org HQ Country": "Netherlands",
       "Has received CRAF'd Funding?": "YES",
       "org_key": "rccc",
       "Org Type": "Non-Governmental Organization",
       "HDX Org Key": "rccc",
       "Budget Source": "Annual Report",
-      "Last Updated": 2024
+      "Last Updated": 2024,
+      "Org HQ Country": [
+        "Netherlands"
+      ]
     }
   },
   {
@@ -3601,7 +3746,6 @@
       ],
       "Org Programme Budget": "https://peacekeeping.un.org/en/how-we-are-funded",
       "Est. Org Budget": 5600000000,
-      "Org HQ Country": "United States",
       "Has received CRAF'd Funding?": "NO",
       "org_key": "un-dpo",
       "Org Type": "United Nations System",
@@ -3636,6 +3780,9 @@
             }
           }
         }
+      ],
+      "Org HQ Country": [
+        "USA"
       ]
     }
   },
@@ -3662,12 +3809,14 @@
         "recsrMWmoA037bW03",
         "recHSsEaPuaG3h2PQ"
       ],
-      "Org HQ Country": "Belgium",
       "Has received CRAF'd Funding?": "YES",
       "org_key": "inform",
       "Org Type": "Network / Consortium",
       "HDX Org Key": "inform",
-      "Link to Budget Source": "none"
+      "Link to Budget Source": "none",
+      "Org HQ Country": [
+        "Belgium"
+      ]
     }
   },
   {
@@ -3683,12 +3832,14 @@
         "recqvGzOfmdkjYOHe"
       ],
       "Org IATI Name": "N/A",
-      "Org HQ Country": "United Kingdom",
       "Has received CRAF'd Funding?": "NO",
       "org_key": "hera",
       "Org Type": "Non-Governmental Organization",
       "HDX Org Key": "hera-humanitarian-emergency-response-africa",
-      "Link to Budget Source": "none"
+      "Link to Budget Source": "none",
+      "Org HQ Country": [
+        "United Kingdom"
+      ]
     }
   },
   {
@@ -3710,18 +3861,20 @@
         "recf10RuM7qHUnC33"
       ],
       "Org IATI Name": "Insecurity Insight",
-      "Org HQ Country": "Switzerland",
       "Has received CRAF'd Funding?": "NO",
       "org_key": "insecurity-insight",
       "Org Type": "Non-Governmental Organization",
       "HDX Org Key": "insecurity-insight",
-      "Link to Budget Source": "none"
+      "Link to Budget Source": "none",
+      "Org HQ Country": [
+        "Switzerland"
+      ]
     }
   },
   {
     "id": "reczfCOras69wN6CO",
     "fields": {
-      "Org Full Name": "London School of Economics and Political Science (LSE)",
+      "Org Full Name": "LSE: London School of Economics and Political Science",
       "Org Short Name": "LSE",
       "Org Website": "https://www.lse.ac.uk/",
       "Org Description": "The London School of Economics and Political Science concentrates on the study of societies, markets, and governance, producing research in economics, politics, sociology, and international relations, and shaping policy through empirical analysis, comparative institutional study, and global-facing intellectual networks.",
@@ -3765,6 +3918,9 @@
             }
           }
         }
+      ],
+      "Org HQ Country": [
+        "United Kingdom"
       ]
     }
   }
