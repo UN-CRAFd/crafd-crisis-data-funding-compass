@@ -39,18 +39,39 @@ const CrisisDataDashboardWrapper = ({ logoutButton }: { logoutButton?: React.Rea
     // Get filter values from URL (comma-separated for multi-select)
     // Using compact query keys: donors -> d, types -> t, search -> q
     // Read compact keys but fall back to legacy long keys for compatibility
-    const combinedDonors = useMemo(() => {
+    // Store raw URL slugs - will be resolved to actual names once data is loaded
+    const donorSlugsFromUrl = useMemo(() => {
         const raw = searchParams.get('d') ?? searchParams.get('donors');
-        // Convert from URL slugs (lowercase with dashes) to proper country names
-        const slugs = raw?.split(',').filter(Boolean) || [];
-        // Convert slugs to Title Case country names
-        return slugs.map(slug => 
-            slug.replace(/-/g, ' ')
-                .split(' ')
-                .map(word => word.charAt(0).toUpperCase() + word.slice(1))
-                .join(' ')
-        );
+        return raw?.split(',').filter(Boolean) || [];
     }, [searchParams]);
+    
+    // State for dashboard data (declared early so combinedDonors can depend on it)
+    const [dashboardData, setDashboardData] = useState<{
+        stats: DashboardStats;
+        projectTypes: ProjectTypeData[];
+        organizationTypes: OrganizationTypeData[];
+        organizationProjects: OrganizationProjectData[];
+        organizationsWithProjects: OrganizationWithProjects[];
+        allOrganizations: OrganizationWithProjects[];
+        donorCountries: string[];
+        investmentTypes: string[];
+        investmentThemes: string[];
+        investmentThemesByType: Record<string, string[]>;
+        topDonors: Array<{ name: string; value: number }>;
+    } | null>(null);
+    const [loading, setLoading] = useState(true);
+    const [error, setError] = useState<string | null>(null);
+    
+    // Resolve URL slugs to actual donor country names by matching against available donors
+    const combinedDonors = useMemo(() => {
+        if (!donorSlugsFromUrl.length) return [];
+        const availableDonors = dashboardData?.donorCountries || [];
+        // For each slug, find the matching donor country name
+        return donorSlugsFromUrl
+            .map(slug => availableDonors.find(donor => matchesUrlSlug(slug, donor)))
+            .filter((donor): donor is string => !!donor);
+    }, [donorSlugsFromUrl, dashboardData?.donorCountries]);
+    
     const investmentTypes = useMemo(() => {
         const raw = searchParams.get('t') ?? searchParams.get('types');
         // raw values are slugs in the URL; convert to display labels for app use
@@ -137,23 +158,6 @@ const CrisisDataDashboardWrapper = ({ logoutButton }: { logoutButton?: React.Rea
         shouldUseStoredState ? underlyingPageState.investmentThemes : investmentThemes,
         [shouldUseStoredState, underlyingPageState, investmentThemes]
     );
-
-    // State for dashboard data
-    const [dashboardData, setDashboardData] = useState<{
-        stats: DashboardStats;
-        projectTypes: ProjectTypeData[];
-        organizationTypes: OrganizationTypeData[];
-        organizationProjects: OrganizationProjectData[];
-        organizationsWithProjects: OrganizationWithProjects[];
-        allOrganizations: OrganizationWithProjects[]; // Add unfiltered organizations
-        donorCountries: string[];
-        investmentTypes: string[];
-        investmentThemes: string[];
-        investmentThemesByType: Record<string, string[]>; // Grouped themes by investment type
-        topDonors: Array<{ name: string; value: number }>; // Add top co-financing donors
-    } | null>(null);
-    const [loading, setLoading] = useState(true);
-    const [error, setError] = useState<string | null>(null);
 
     // Sync local search with URL when URL changes externally (e.g., browser back/forward)
     useEffect(() => {

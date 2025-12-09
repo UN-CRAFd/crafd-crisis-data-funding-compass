@@ -6,7 +6,7 @@ import BaseModal, { ModalHeader, ModalTooltip } from './BaseModal';
 import { Collapsible, CollapsibleContent, CollapsibleTrigger } from '@/components/ui/collapsible';
 import { CountryFlag } from './CountryFlag';
 import labels from '@/config/labels.json';
-import { matchesUrlSlug, fromUrlSlug } from '@/lib/urlShortcuts';
+import { matchesUrlSlug } from '@/lib/urlShortcuts';
 
 interface Agency {
     id: string;
@@ -97,15 +97,38 @@ export default function DonorModal({
         return match ? match[0].trim() : text.trim();
     };
 
-    // Convert URL slug to display name (capitalize words, replace dashes with spaces)
+    // Find the actual donor country name from the data by matching URL slug
     const donorDisplayName = useMemo(() => {
-        if (!donorCountry) return '';
-        // Convert from url-slug to Title Case
-        return fromUrlSlug(donorCountry)
-            .split(' ')
-            .map(word => word.charAt(0).toUpperCase() + word.slice(1))
-            .join(' ');
-    }, [donorCountry]);
+        if (!donorCountry || !nestedOrganizations) return donorCountry || '';
+        
+        // Collect all unique country names from the data
+        const countryNames = new Set<string>();
+        nestedOrganizations.forEach(org => {
+            // From agencies
+            (org.agencies || []).forEach(agency => {
+                const country = agency.fields?.['Country Name'];
+                if (country) countryNames.add(country);
+            });
+            // From projects' agencies
+            (org.projects || []).forEach(project => {
+                (project.agencies || []).forEach(agency => {
+                    const country = agency.fields?.['Country Name'];
+                    if (country) countryNames.add(country);
+                });
+            });
+            // From HQ country
+            const hqCountry = org.fields?.['Org HQ Country'];
+            if (Array.isArray(hqCountry)) {
+                hqCountry.forEach(c => countryNames.add(c));
+            } else if (hqCountry) {
+                countryNames.add(hqCountry);
+            }
+        });
+        
+        // Find the country that matches the URL slug
+        const match = Array.from(countryNames).find(name => matchesUrlSlug(donorCountry, name));
+        return match || donorCountry;
+    }, [donorCountry, nestedOrganizations]);
 
     // Handle opening organization modal (close donor modal first)
     const handleOpenOrganization = (orgKey: string) => {
