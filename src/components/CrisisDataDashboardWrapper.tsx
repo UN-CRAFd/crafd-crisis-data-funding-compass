@@ -578,6 +578,36 @@ const CrisisDataDashboardWrapper = ({ logoutButton }: { logoutButton?: React.Rea
         }
     }, [searchParams, pathname, router, activeView]);
 
+    // Handle investment theme click from modal - add to filter and close modal
+    const handleThemeClick = useCallback((theme: string) => {
+        // Add theme to current themes if not already present
+        const updatedThemes = investmentThemes.includes(theme) 
+            ? investmentThemes 
+            : [...investmentThemes, theme];
+        
+        // Apply theme filter AND close project modal in one update
+        const newSearchParams = new URLSearchParams(searchParams.toString());
+        newSearchParams.delete('asset'); // Close project modal
+        
+        // Convert themes to keys and set th parameter
+        const themeKeys = updatedThemes.map(themeName => themeNameToKey(themeName)).filter(Boolean);
+        if (themeKeys.length > 0) {
+            newSearchParams.set('th', themeKeys.join(','));
+        }
+        
+        router.push(`${pathname}?${newSearchParams.toString()}`, { scroll: false });
+        
+        // For network view, also clear local state
+        if (activeView === 'network') {
+            setLocalSelectedOrgKey('');
+            setLocalSelectedProjectKey('');
+            setLocalSelectedDonorCountry('');
+            setTimeout(() => {
+                setUnderlyingPageState(null);
+            }, 50);
+        }
+    }, [investmentThemes, searchParams, pathname, router, activeView]);
+
     return (
         <CrisisDataDashboard
             dashboardData={dashboardData}
@@ -608,6 +638,7 @@ const CrisisDataDashboardWrapper = ({ logoutButton }: { logoutButton?: React.Rea
             onCloseDonorModal={handleCloseDonorModal}
             onDonorClick={handleDonorClick}
             onTypeClick={handleTypeClick}
+            onThemeClick={handleThemeClick}
             onViewChange={handleViewChange}
             logoutButton={logoutButton}
         />
