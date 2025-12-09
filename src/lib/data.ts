@@ -721,8 +721,8 @@ export function buildProjectDescriptionMap(organizations: NestedOrganization[]):
  * Build a map from organization ID to its projects with investment types
  * Used by organization modal to display project investment types
  */
-export function buildOrgProjectsMap(organizations: NestedOrganization[]): Record<string, Array<{ investmentTypes: string[] }>> {
-    const map: Record<string, Array<{ investmentTypes: string[] }>> = {};
+export function buildOrgProjectsMap(organizations: NestedOrganization[]): Record<string, Array<{ id: string; investmentTypes: string[] }>> {
+    const map: Record<string, Array<{ id: string; investmentTypes: string[] }>> = {};
     
     organizations.forEach(org => {
         if (org && org.id) {
@@ -730,6 +730,7 @@ export function buildOrgProjectsMap(organizations: NestedOrganization[]): Record
                 const fields = project?.fields || {};
                 const investmentTypes = fields['Investment Type(s)'] || fields['Investment Types'] || [];
                 return {
+                    id: project.id,
                     investmentTypes: Array.isArray(investmentTypes) ? investmentTypes : []
                 };
             });
