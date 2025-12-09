@@ -318,7 +318,7 @@
       ],
       "CRAF’d-Funded Project?": "NO",
       "Investment Type(s)": [
-        "Learning & Exchange"
+        "Human Capital & Know-how"
       ],
       "Investment Theme(s)": [
         "Upskilling & Training"
@@ -598,6 +598,7 @@
       ],
       "CRAF’d-Funded Project?": "NO",
       "Investment Type(s)": [
+        "Data Sets & Commons",
         "Crisis Analytics & Insights"
       ],
       "Investment Theme(s)": [
@@ -950,7 +951,7 @@
     "id": "recCrLYQFMbrPxsId",
     "fields": {
       "Project/Product Name": "Observatory of Killed Journalists",
-      "Project Description": "This Observatory provides updated information on the killing of journalists since 1993 and on the [judicial status of condemned cases](https://www.unesco.org/en/safety-journalists/observatory/methodology?hub=72609) since 2006. It also provides [public access to country responses](https://unesdoc.unesco.org/permalink/P-3516a4e6-b69d-473a-8e85-b019735aa873) to UNESCO's requests for information into the judicial status of ongoing and unresolved cases. You may browse the [full list of killed journalists](https://www.unesco.org/safety-journalists/observatory/grid?hub=72609) and search for [visual statistics and data](https://www.unesco.org/safety-journalists/observatory/statistics?hub=72609).\n\n",
+      "Project Description": "This Observatory provides updated information on the killing of journalists since 1993 and on the judicial status of condemned cases since 2006. It also provides public access to country responses to UNESCO's requests for information into the judicial status of ongoing and unresolved cases. You may browse the full list of killed journalists and search for visual statistics and data.\n",
       "Project Website": "https://www.unesco.org/en/safety-journalists/observatory",
       "Provider Orgs Full Name": [
         "recWOW3N9BgLJiHl5"
@@ -1134,7 +1135,7 @@
   {
     "id": "recF4Js3Gn54EPxbP",
     "fields": {
-      "Project/Product Name": "Data systems and tools",
+      "Project/Product Name": "Data Systems and Tools",
       "Project Website": "https://www.jointdatacenter.org/data-activities/data-systems-and-tools/",
       "Provider Orgs Full Name": [
         "recn4JTdYK8g4Eqjk"
@@ -1370,7 +1371,6 @@
       "Project Donor Agencies": [
         "rec1VhOJv9U6QKBBs"
       ],
-      "Project Website": "Without website yet",
       "Provider Orgs Full Name": [
         "rec5SbkybILGgwGal"
       ],
@@ -1714,7 +1714,7 @@
     "id": "recN8yVJX7xphyQME",
     "fields": {
       "Project/Product Name": "3W & Connections",
-      "Project Description": "At the heart of every humanitarian mission lies the critical 3Ws - _Who is doing what and where._\n",
+      "Project Description": "At the heart of every humanitarian mission lies the critical 3Ws: identifying who is doing what and where. This approach ensures effective coordination, resource allocation, and response by providing a clear overview of the actors involved, their activities, and their locations. The 3W & Connections asset supports humanitarian efforts by mapping these essential elements, enabling organizations to collaborate efficiently and address needs on the ground.\n",
       "Project Website": "https://data.humdata.org/organization/fieldsdata",
       "Provider Orgs Full Name": [
         "recIeY5Kyx0oDYcLA"
@@ -1943,6 +1943,7 @@
       ],
       "CRAF’d-Funded Project?": "NO",
       "Investment Type(s)": [
+        "Data Sets & Commons",
         "Crisis Analytics & Insights"
       ],
       "Investment Theme(s)": [
@@ -2261,7 +2262,7 @@
     "id": "recUtgQxL73zHDTCF",
     "fields": {
       "Project/Product Name": "CLIMADA Platform",
-      "Project Description": "CLIMADA is an open-source risk assessment tool that models economic losses from natural hazards using hazard, exposure, and vulnerability data. It supports policy, research, and risk finance decision-making.\n",
+      "Project Description": "CLIMADA Platform is an open-source risk assessment tool designed to model economic losses resulting from natural hazards by utilizing hazard, exposure, and vulnerability data. It is intended to support decision-making in policy, research, and risk finance contexts.\n",
       "Project Donor Agencies": [
         "recGNTHL9SKZxLDcw",
         "recz1D3MdBg9w7tmt",
@@ -2847,6 +2848,7 @@
       ],
       "CRAF’d-Funded Project?": "NO",
       "Investment Type(s)": [
+        "Data Sets & Commons",
         "Crisis Analytics & Insights"
       ],
       "Investment Theme(s)": [
@@ -2891,8 +2893,8 @@
       ],
       "CRAF’d-Funded Project?": "NO",
       "Investment Type(s)": [
-        "Infrastructure & Platforms",
-        "Standards & Coordination"
+        "Data Sets & Commons",
+        "Crisis Analytics & Insights"
       ],
       "Investment Theme(s)": [
         "Needs Assessment Data",
@@ -2906,7 +2908,7 @@
     "id": "reccyJzv7bOpjmC4B",
     "fields": {
       "Project/Product Name": "SIPRI Multilateral Peace Operations Database",
-      "Project Description": "This database tracks country participation in UN and regional peace operations—including troop numbers, funding, and deployment dates.\n",
+      "Project Description": "This database tracks country participation in UN and regional peace operations, including details on troop numbers, funding, and deployment dates.\n",
       "Project Website": "https://www.sipri.org/databases/pko",
       "Provider Orgs Full Name": [
         "recDoZP6RL9A8FnDq"
@@ -3363,8 +3365,7 @@
     "id": "rechQ1azyTpypEDEy",
     "fields": {
       "Project/Product Name": "Women Within Armed Groups",
-      "Project Description": "No description yet (website not available)\n",
-      "Project Website": "not available in mptfo website yet",
+      "Project Description": "\n",
       "Provider Orgs Full Name": [
         "recJdh0jywpDa573r",
         "rec5yRG9Wnxu6XkrO"
@@ -4050,7 +4051,7 @@
     "id": "recq78QHoffIcjEmO",
     "fields": {
       "Project/Product Name": "WFP Innovation Forum 2025",
-      "Project Description": "The** **WFP Innovation** Forum** is a global platform that showcases groundbreaking solutions to address food insecurity and humanitarian challenges. Bringing together innovators, humanitarian actors, private sector leaders, and policymakers, the forum highlights cutting-edge technologies, from AI-powered disaster response to sustainable agriculture, that are transforming the way hunger and crises are tackled around the world.\n",
+      "Project Description": "The WFP Innovation Forum is a global platform that showcases groundbreaking solutions to address food insecurity and humanitarian challenges. Bringing together innovators, humanitarian actors, private sector leaders, and policymakers, the forum highlights cutting-edge technologies, from AI-powered disaster response to sustainable agriculture, that are transforming the way hunger and crises are tackled around the world.\n",
       "Project Website": "https://innovation.wfp.org/innovation-forum-2025",
       "Provider Orgs Full Name": [
         "rec3QdLIyrZ4dNiPh"
@@ -4421,7 +4422,7 @@
     "id": "recvaextZy2CbEkxr",
     "fields": {
       "Project/Product Name": "Population Registration and Identity Management EcoSystem (PRIMES)",
-      "Project Description": "At the center of UNHCR’s work with registration and identity management is PRIMES, the digital Population Registration and Identity Management Ecosystem developed by UNHCR. PRIMES integrates all of UNHCR’s digital registration, identity management, and case management tools into a single, internally connected and interoperable ecosystem.\n\nPRIMES consists of several repositories for personal data, including both biographic and biometric information, as well as supporting data. It incorporates multiple tools that securely utilize this information to deliver targeted protection, assistance, and solutions to refugees and other displaced populations. PRIMES enables a range of functions, including:\n\n\\- Identity management, encompassing registration, biometric enrolment, and documentation\n\\- Case management, covering key protection aspects such as Refugee Status Determination, Resettlement, Statelessness, Repatriation, Legal and Physical Protection, Child Protection, Sexual and Gender-Based Violence (SGBV), and others\n\\- Assistance, including both cash and in-kind support\n\\- Data management, which includes reporting and analysis to support evidence-informed action for quality protection outcomes\n\nPRIMES is designed with cooperation and interoperability as core principles, allowing governments and partners supporting refugees to utilize the data and technology developed by UNHCR. This enhances their capacity to deliver services, often in collaboration with UNHCR, in a safe and secure manner. PRIMES is fully aligned with the Policy on the Protection of Personal Data of Persons of Concern to UNHCR.\n",
+      "Project Description": "PRIMES is UNHCR’s integrated digital ecosystem for registration and identity management. It connects all major tools for biographic and biometric data, case management, and assistance delivery within a single interoperable system.\nIt stores personal and supporting data and applies it across core functions: identity management (registration, biometrics, documentation), case management (RSD, resettlement, statelessness, repatriation, legal and physical protection, child protection, SGBV, and related areas), assistance (cash and in-kind), and data management (reporting and analysis for evidence-based protection work).\nPRIMES is built for cooperation and interoperability, enabling governments and partners to use UNHCR’s systems and data securely to strengthen service delivery. It aligns fully with UNHCR’s Policy on the Protection of Personal Data of Persons of Concern.\n",
       "Project Website": "https://www.unhcr.org/us/what-we-do/protect-human-rights/protection/registration-and-identity-management",
       "Provider Orgs Full Name": [
         "recfLMsJLUS9toAjS"
@@ -4662,7 +4663,7 @@
     "id": "recyMSQo5lV032SER",
     "fields": {
       "Project/Product Name": "CLIFDEW-GRID",
-      "Project Description": "CLIFDEW-GRID, developed by UNHCR in collaboration with the University of California Irvine, is an ambitious initiative dedicated to addressing the complex challenge of climate-induced forced displacement, including through the creation of the first risk index of its kind. This project leverages advanced data analytics and innovative methodologies to enable CRAF’d ecosystem partners to anticipate and respond effectively to the escalating crisis of climate-induced displacement. By providing forecasts at a subnational level, CLIFDEW-GRID offers a more nuanced understanding of in-country heterogeneity compared to traditional country-level approaches. The system will be piloted in selected countries in Western and Eastern Africa.\n\nCLIFDEW-GRID functions as an early warning, grid-based modeling system designed to predict potential climate-induced forced displacement. It is a joint, innovative data project led by UNHCR and the University of California Irvine, with financial support from the Complex Risk Analytics Fund (CRAF’d).\n",
+      "Project Description": "CLIFDEW-GRID, developed by UNHCR in collaboration with the University of California Irvine, is an ambitious initiative dedicated to addressing the complex challenge of climate-induced forced displacement, including through the creation of the first risk index of its kind. This project leverages advanced data analytics and innovative methodologies to enable CRAF’d ecosystem partners to anticipate and respond effectively to the escalating crisis of climate-induced displacement. By providing forecasts at a subnational level, CLIFDEW-GRID offers a more nuanced understanding of in-country heterogeneity compared to traditional country-level approaches. The system will be piloted in selected countries in Western and Eastern Africa. CLIFDEW-GRID functions as an early warning, grid-based modeling system designed to predict potential climate-induced forced displacement. It is a joint, innovative data project led by UNHCR and the University of California Irvine, with financial support from the Complex Risk Analytics Fund (CRAF’d).\n",
       "Project Donor Agencies": [
         "rec1VhOJv9U6QKBBs"
       ],
@@ -4755,7 +4756,7 @@
   {
     "id": "reczPiGnmhBrolMGr",
     "fields": {
-      "Project/Product Name": " NYU + VIEWS: Data for Peace Conference",
+      "Project/Product Name": "NYU + VIEWS: Data for Peace Conference",
       "Provider Orgs Full Name": [
         "recHAqTQikIG8K4tD"
       ],
