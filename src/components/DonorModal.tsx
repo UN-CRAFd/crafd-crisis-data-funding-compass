@@ -6,6 +6,7 @@ import BaseModal, { ModalHeader, ModalTooltip } from './BaseModal';
 import { Collapsible, CollapsibleContent, CollapsibleTrigger } from '@/components/ui/collapsible';
 import { CountryFlag } from './CountryFlag';
 import labels from '@/config/labels.json';
+import { matchesUrlSlug, fromUrlSlug } from '@/lib/urlShortcuts';
 
 interface Agency {
     id: string;
@@ -96,6 +97,16 @@ export default function DonorModal({
         return match ? match[0].trim() : text.trim();
     };
 
+    // Convert URL slug to display name (capitalize words, replace dashes with spaces)
+    const donorDisplayName = useMemo(() => {
+        if (!donorCountry) return '';
+        // Convert from url-slug to Title Case
+        return fromUrlSlug(donorCountry)
+            .split(' ')
+            .map(word => word.charAt(0).toUpperCase() + word.slice(1))
+            .join(' ');
+    }, [donorCountry]);
+
     // Handle opening organization modal (close donor modal first)
     const handleOpenOrganization = (orgKey: string) => {
         window.dispatchEvent(new CustomEvent('closeDonorModal'));
@@ -129,7 +140,8 @@ export default function DonorModal({
                 const agencyFields = agency.fields || {};
                 const agencyCountry = agencyFields['Country Name'];
                 
-                if (agencyCountry === donorCountry) {
+                // Match donor country using URL slug format (handles lowercase with dashes)
+                if (agencyCountry && matchesUrlSlug(donorCountry, agencyCountry)) {
                     const agencyName = agencyFields['Agency/Department Name'] || 'Unspecified Agency';
                     const agencyId = agency.id;
                     const agencyPortal = agencyFields['Agency Data Portal'];
@@ -167,7 +179,8 @@ export default function DonorModal({
                     const agencyFields = agency.fields || {};
                     const agencyCountry = agencyFields['Country Name'];
                     
-                    if (agencyCountry === donorCountry) {
+                    // Match donor country using URL slug format (handles lowercase with dashes)
+                    if (agencyCountry && matchesUrlSlug(donorCountry, agencyCountry)) {
                         const agencyName = agencyFields['Agency/Department Name'] || 'Unspecified Agency';
                         const agencyId = agency.id;
                         const agencyPortal = agencyFields['Agency Data Portal'];
@@ -243,11 +256,11 @@ export default function DonorModal({
             .filter(org => {
                 const orgFields = org.fields || {};
                 const hqCountry = orgFields['Org HQ Country'];
-                // Handle both array and string format
+                // Handle both array and string format, using URL slug matching
                 if (Array.isArray(hqCountry)) {
-                    return hqCountry.includes(donorCountry);
+                    return hqCountry.some((c: string) => matchesUrlSlug(donorCountry, c));
                 }
-                return hqCountry === donorCountry;
+                return hqCountry && matchesUrlSlug(donorCountry, hqCountry);
             })
             .map(org => {
                 const orgFields = org.fields || {};
@@ -280,11 +293,11 @@ export default function DonorModal({
             <ModalHeader
                 icon={
                     <CountryFlag 
-                        country={donorCountry} 
+                        country={donorDisplayName} 
                         className="h-6 sm:h-8 w-auto shrink-0 rounded object-cover"
                     />
                 }
-                title={donorCountry}
+                title={donorDisplayName}
                 showCopied={showCopied}
                 onShare={onShare}
                 onClose={onClose}
@@ -478,7 +491,7 @@ export default function DonorModal({
                     <div className="border-t border-slate-200 pt-6">
                         <div className="mb-3 flex items-center gap-2">
                             <h3 className="text-xl font-roboto font-black text-[#333333] uppercase tracking-wide leading-normal">
-                                Headquartered in {donorCountry}
+                                Headquartered in {donorDisplayName}
                             </h3>
                             <span className="text-lg font-normal text-slate-600 tabular-nums">({headquarteredOrganizations.length})</span>
                         </div>
