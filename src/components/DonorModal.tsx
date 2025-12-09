@@ -499,12 +499,12 @@ export default function DonorModal({
                                     </div>
                                     <div className="flex items-center gap-2 shrink-0">
                                         {org.type && (
-                                            <span className="text-xs text-slate-400 bg-transparent px-2 py-0.5 rounded">
+                                            <span className="text-xs text-var(--brand-primary-dark) font-thin bg-transparent px-2 py-0.5 rounded">
                                                 {org.type}
                                             </span>
                                         )}
                                         {org.projectCount > 0 && (
-                                            <span className="text-xs text-slate-400">
+                                            <span className="text-xs text-var(--brand-primary-dark)">
                                                 {org.projectCount} {org.projectCount === 1 ? 'asset' : 'assets'}
                                             </span>
                                         )}
