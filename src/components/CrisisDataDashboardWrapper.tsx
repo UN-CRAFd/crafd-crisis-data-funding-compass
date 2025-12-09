@@ -1,7 +1,7 @@
 'use client';
 
 import { typeLabelToSlug, typeSlugToLabel, toUrlSlug, matchesUrlSlug } from '@/lib/urlShortcuts';
-import { themeKeyToName, themeNameToKey, ensureThemesMappingsLoaded } from '@/lib/data';
+import { themeKeyToNames, themeNameToKey, ensureThemesMappingsLoaded } from '@/lib/data';
 import { usePathname, useRouter, useSearchParams } from 'next/navigation';
 import { useCallback, useEffect, useMemo, useRef, useState } from 'react';
 import { processDashboardData } from '../lib/data';
@@ -31,7 +31,8 @@ const CrisisDataDashboardWrapper = ({ logoutButton }: { logoutButton?: React.Rea
             // Parse themes from URL
             const raw = searchParams.get('th') ?? searchParams.get('themes');
             const keys = raw?.split(',').filter(Boolean) || [];
-            const themeNames = keys.map(key => themeKeyToName(key));
+            // Flatten array since each key can map to multiple theme names
+            const themeNames = keys.flatMap(key => themeKeyToNames(key));
             setInvestmentThemes(themeNames);
         })();
     }, [searchParams]);
@@ -601,10 +602,11 @@ const CrisisDataDashboardWrapper = ({ logoutButton }: { logoutButton?: React.Rea
         const newSearchParams = new URLSearchParams(searchParams.toString());
         newSearchParams.delete('asset'); // Close project modal
         
-        // Convert themes to keys and set th parameter
+        // Convert themes to keys and set th parameter (deduplicate keys since multiple themes may share the same key)
         const themeKeys = updatedThemes.map(themeName => themeNameToKey(themeName)).filter(Boolean);
-        if (themeKeys.length > 0) {
-            newSearchParams.set('th', themeKeys.join(','));
+        const uniqueKeys = Array.from(new Set(themeKeys));
+        if (uniqueKeys.length > 0) {
+            newSearchParams.set('th', uniqueKeys.join(','));
         }
         
         router.push(`${pathname}?${newSearchParams.toString()}`, { scroll: false });
