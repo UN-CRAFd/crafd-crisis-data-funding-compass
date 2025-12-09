@@ -1,6 +1,6 @@
 'use client';
 
-import { typeLabelToSlug, typeSlugToLabel } from '@/lib/urlShortcuts';
+import { typeLabelToSlug, typeSlugToLabel, toUrlSlug, matchesUrlSlug } from '@/lib/urlShortcuts';
 import { themeKeyToName, themeNameToKey, ensureThemesMappingsLoaded } from '@/lib/data';
 import { usePathname, useRouter, useSearchParams } from 'next/navigation';
 import { useCallback, useEffect, useMemo, useRef, useState } from 'react';
@@ -41,7 +41,15 @@ const CrisisDataDashboardWrapper = ({ logoutButton }: { logoutButton?: React.Rea
     // Read compact keys but fall back to legacy long keys for compatibility
     const combinedDonors = useMemo(() => {
         const raw = searchParams.get('d') ?? searchParams.get('donors');
-        return raw?.split(',').filter(Boolean) || [];
+        // Convert from URL slugs (lowercase with dashes) to proper country names
+        const slugs = raw?.split(',').filter(Boolean) || [];
+        // Convert slugs to Title Case country names
+        return slugs.map(slug => 
+            slug.replace(/-/g, ' ')
+                .split(' ')
+                .map(word => word.charAt(0).toUpperCase() + word.slice(1))
+                .join(' ')
+        );
     }, [searchParams]);
     const investmentTypes = useMemo(() => {
         const raw = searchParams.get('t') ?? searchParams.get('types');
@@ -163,10 +171,11 @@ const CrisisDataDashboardWrapper = ({ logoutButton }: { logoutButton?: React.Rea
     }) => {
         const newSearchParams = new URLSearchParams(searchParams.toString());
 
-        // Update or remove donors param (compact 'd')
+        // Update or remove donors param (compact 'd') - write as lowercase with dashes
         if (params.donors !== undefined) {
             if (params.donors.length > 0) {
-                newSearchParams.set('d', params.donors.join(','));
+                const slugs = params.donors.map(d => toUrlSlug(d));
+                newSearchParams.set('d', slugs.join(','));
             } else {
                 newSearchParams.delete('d');
             }
@@ -376,13 +385,10 @@ const CrisisDataDashboardWrapper = ({ logoutButton }: { logoutButton?: React.Rea
         if (activeView === 'table') {
             // Table view: update URL - replace any existing modal with org modal
             const newSearchParams = new URLSearchParams(searchParams.toString());
+            newSearchParams.set('org', toUrlSlug(orgKey));
             newSearchParams.delete('asset');
             newSearchParams.delete('donor');
-            // Manually set org with + instead of %20 for spaces and dashes
-            const paramsStr = newSearchParams.toString();
-            const orgEncoded = orgKey.replace(/[\s-]/g, '+');
-            const separator = paramsStr ? '&' : '';
-            router.push(`${pathname}?${paramsStr}${separator}org=${orgEncoded}`, { scroll: false });
+            router.push(`${pathname}?${newSearchParams.toString()}`, { scroll: false });
         } else {
             // Network view: use local state only, store page state
             const stateToStore = {
@@ -404,7 +410,7 @@ const CrisisDataDashboardWrapper = ({ logoutButton }: { logoutButton?: React.Rea
         if (activeView === 'table') {
             // Table view: update URL - replace any existing modal with project modal
             const newSearchParams = new URLSearchParams(searchParams.toString());
-            newSearchParams.set('asset', projectKey);
+            newSearchParams.set('asset', toUrlSlug(projectKey));
             // Close organization and donor modals if open
             newSearchParams.delete('org');
             newSearchParams.delete('donor');
@@ -465,7 +471,7 @@ const CrisisDataDashboardWrapper = ({ logoutButton }: { logoutButton?: React.Rea
         if (activeView === 'table') {
             // Table view: use URL param and close other modals
             const newSearchParams = new URLSearchParams(searchParams.toString());
-            newSearchParams.set('donor', donorCountry);
+            newSearchParams.set('donor', toUrlSlug(donorCountry));
             // Close org and project modals
             newSearchParams.delete('org');
             newSearchParams.delete('asset');
