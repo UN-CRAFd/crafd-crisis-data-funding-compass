@@ -46,8 +46,8 @@
   {
     "id": "rec1In4CerWhTywiy",
     "fields": {
-      "Agency/Department Name": "Unspecified Agency",
-      "Country Name": "Stiftung Mercator"
+      "Agency/Department Name": "Stiftung Mercator",
+      "Country Name": "Foundation"
     }
   },
   {
@@ -346,8 +346,8 @@
   {
     "id": "recDY0ngiDePaQtm3",
     "fields": {
-      "Agency/Department Name": "Unspecified Agency",
-      "Country Name": "Klaus Tschira Stiftung"
+      "Agency/Department Name": "Klaus Tschira Stiftung",
+      "Country Name": "Foundation"
     }
   },
   {
@@ -1156,9 +1156,9 @@
   {
     "id": "recl0rZvHPzrC6Jwd",
     "fields": {
-      "Agency/Department Name": "Unspecified Agency",
+      "Agency/Department Name": "Wellcome Foundation",
       "Agency Data Portal": "https://wellcome.org/",
-      "Country Name": "Wellcome"
+      "Country Name": "Foundation"
     }
   },
   {
