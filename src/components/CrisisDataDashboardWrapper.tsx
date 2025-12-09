@@ -87,7 +87,9 @@ const CrisisDataDashboardWrapper = ({ logoutButton }: { logoutButton?: React.Rea
     // Choose modal state based on active view
     const selectedOrgKey = activeView === 'table' ? urlOrgKey : localSelectedOrgKey;
     const selectedProjectKey = activeView === 'table' ? urlProjectKey : localSelectedProjectKey;
-    const selectedDonorCountry = localSelectedDonorCountry; // Donor modal is always local (network view only)
+    const selectedDonorCountry = activeView === 'table' 
+        ? (searchParams.get('donor') || '') 
+        : localSelectedDonorCountry;
 
     // Local state for immediate search input (submitted on Enter key)
     const [localSearchQuery, setLocalSearchQuery] = useState(searchQuery);
@@ -375,8 +377,9 @@ const CrisisDataDashboardWrapper = ({ logoutButton }: { logoutButton?: React.Rea
             // Table view: update URL - replace any existing modal with org modal
             const newSearchParams = new URLSearchParams(searchParams.toString());
             newSearchParams.set('org', orgKey);
-            // Close project modal if open
+            // Close project and donor modals if open
             newSearchParams.delete('asset');
+            newSearchParams.delete('donor');
             router.push(`${pathname}?${newSearchParams.toString()}`, { scroll: false });
         } else {
             // Network view: use local state only, store page state
@@ -388,8 +391,9 @@ const CrisisDataDashboardWrapper = ({ logoutButton }: { logoutButton?: React.Rea
             };
             
             setUnderlyingPageState(stateToStore);
-            // Close project modal if open
+            // Close project and donor modals if open
             setLocalSelectedProjectKey('');
+            setLocalSelectedDonorCountry('');
             setLocalSelectedOrgKey(orgKey);
         }
     }, [activeView, searchParams, pathname, router, searchQuery, combinedDonors, investmentTypes, investmentThemes]);
@@ -399,8 +403,9 @@ const CrisisDataDashboardWrapper = ({ logoutButton }: { logoutButton?: React.Rea
             // Table view: update URL - replace any existing modal with project modal
             const newSearchParams = new URLSearchParams(searchParams.toString());
             newSearchParams.set('asset', projectKey);
-            // Close organization modal if open
+            // Close organization and donor modals if open
             newSearchParams.delete('org');
+            newSearchParams.delete('donor');
             router.push(`${pathname}?${newSearchParams.toString()}`, { scroll: false });
         } else {
             // Network view: use local state only, store page state
@@ -412,8 +417,9 @@ const CrisisDataDashboardWrapper = ({ logoutButton }: { logoutButton?: React.Rea
             };
             
             setUnderlyingPageState(stateToStore);
-            // Close organization modal if open
+            // Close organization and donor modals if open
             setLocalSelectedOrgKey('');
+            setLocalSelectedDonorCountry('');
             setLocalSelectedProjectKey(projectKey);
         }
     }, [activeView, searchParams, pathname, router, searchQuery, combinedDonors, investmentTypes, investmentThemes]);
@@ -452,31 +458,50 @@ const CrisisDataDashboardWrapper = ({ logoutButton }: { logoutButton?: React.Rea
         }
     }, [activeView, searchParams, pathname, router]);
 
-    // Donor modal handlers (network view only - donors are not clickable in table view)
+    // Donor modal handlers
     const handleOpenDonorModal = useCallback((donorCountry: string) => {
-        // Store page state
-        const stateToStore = {
-            searchQuery,
-            combinedDonors: [...combinedDonors],
-            investmentTypes: [...investmentTypes],
-            investmentThemes: [...investmentThemes]
-        };
-        
-        setUnderlyingPageState(stateToStore);
-        // Close other modals
-        setLocalSelectedOrgKey('');
-        setLocalSelectedProjectKey('');
-        setLocalSelectedDonorCountry(donorCountry);
-    }, [searchQuery, combinedDonors, investmentTypes, investmentThemes]);
+        if (activeView === 'table') {
+            // Table view: use URL param and close other modals
+            const newSearchParams = new URLSearchParams(searchParams.toString());
+            newSearchParams.set('donor', donorCountry);
+            // Close org and project modals
+            newSearchParams.delete('org');
+            newSearchParams.delete('asset');
+            router.push(`${pathname}?${newSearchParams.toString()}`, { scroll: false });
+        } else {
+            // Network view: use local state
+            // Store page state
+            const stateToStore = {
+                searchQuery,
+                combinedDonors: [...combinedDonors],
+                investmentTypes: [...investmentTypes],
+                investmentThemes: [...investmentThemes]
+            };
+            
+            setUnderlyingPageState(stateToStore);
+            // Close other modals
+            setLocalSelectedOrgKey('');
+            setLocalSelectedProjectKey('');
+            setLocalSelectedDonorCountry(donorCountry);
+        }
+    }, [activeView, searchParams, pathname, router, searchQuery, combinedDonors, investmentTypes, investmentThemes]);
 
     const handleCloseDonorModal = useCallback(() => {
-        setLocalSelectedDonorCountry('');
-        
-        // Clear stored state after a short delay to prevent flash
-        setTimeout(() => {
-            setUnderlyingPageState(null);
-        }, 50);
-    }, []);
+        if (activeView === 'table') {
+            // Table view: clear URL param
+            const newSearchParams = new URLSearchParams(searchParams.toString());
+            newSearchParams.delete('donor');
+            router.push(`${pathname}?${newSearchParams.toString()}`, { scroll: false });
+        } else {
+            // Network view: clear local state
+            setLocalSelectedDonorCountry('');
+            
+            // Clear stored state after a short delay to prevent flash
+            setTimeout(() => {
+                setUnderlyingPageState(null);
+            }, 50);
+        }
+    }, [activeView, searchParams, pathname, router]);
 
     // Handle view change
     const handleViewChange = useCallback((view: 'table' | 'network') => {
@@ -511,33 +536,11 @@ const CrisisDataDashboardWrapper = ({ logoutButton }: { logoutButton?: React.Rea
         }
     }, [localSelectedOrgKey, localSelectedProjectKey, localSelectedDonorCountry, searchParams, pathname, router]);
 
-    // Handle donor click from modal - add to filter and close modal
+    // Handle donor click from modal - open donor modal
     const handleDonorClick = useCallback((country: string) => {
-        const newSearchParams = new URLSearchParams(searchParams.toString());
-        
-        // Add donor to filter if not already present
-        const currentDonors = (newSearchParams.get('d') ?? newSearchParams.get('donors') ?? '').split(',').filter(Boolean);
-        if (!currentDonors.includes(country)) {
-            const updatedDonors = [...currentDonors, country];
-            newSearchParams.set('d', updatedDonors.join(','));
-        }
-        
-        // Close any open modal by removing org/asset params
-        newSearchParams.delete('org');
-        newSearchParams.delete('asset');
-        
-        // Update URL with both changes at once
-        router.push(`${pathname}?${newSearchParams.toString()}`, { scroll: false });
-        
-        // For network view, also clear local state
-        if (activeView === 'network') {
-            setLocalSelectedOrgKey('');
-            setLocalSelectedProjectKey('');
-            setTimeout(() => {
-                setUnderlyingPageState(null);
-            }, 50);
-        }
-    }, [searchParams, pathname, router, activeView]);
+        // Open the donor modal
+        handleOpenDonorModal(country);
+    }, [handleOpenDonorModal]);
 
     // Handle investment type click from modal - add to filter and close modal
     const handleTypeClick = useCallback((type: string) => {
