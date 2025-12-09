@@ -495,7 +495,7 @@ export default function OrganizationModal({
                                     </h3>
                                     <span className="text-lg font-normal text-gray-500 tabular-nums">({donorCountries.length})</span>
                                 </div>
-                                    <div className="hidden rounded-lg border border-slate-200 bg-slate-100 p-4 shadow-sm">
+                                    <div className="rounded-lg border border-slate-200 bg-slate-100 p-4 shadow-sm">
                                         
                                         <div className="mt-0 grid grid-cols-[3fr_3fr_3fr_0.2fr] gap-4">
 
@@ -525,11 +525,12 @@ export default function OrganizationModal({
                                                                     <img 
                                                                         src={budgetScreenshotUrl} 
                                                                         alt="Budget Source Screenshot" 
-                                                                        className="max-w-[400px] max-h-[300px] rounded-md object-contain"
+                                                                        className="max-w-[500px] max-h-[400px] rounded-md object-contain"
                                                                     />
                                                                 </div>
                                                             }
-                                                            side="bottom"
+                                                            side="top"
+                                                    
                                                             tooltipContainer={tooltipContainer}
                                                         >
                                                             <span className="text-base font-medium text-slate-600 cursor-help underline decoration-dotted decoration-slate-400 underline-offset-2 inline-flex items-center gap-1">
