@@ -18,9 +18,10 @@ interface ProjectModalProps {
     onOpenProjectModal?: (projectKey: string) => void;
     onDonorClick?: (country: string) => void;
     onTypeClick?: (type: string) => void;
+    onThemeClick?: (theme: string) => void;
 }
 
-export default function ProjectModal({ project, allOrganizations, loading, projectAgenciesMap = {}, onOpenOrganizationModal, onOpenProjectModal, onDonorClick, onTypeClick }: ProjectModalProps) {
+export default function ProjectModal({ project, allOrganizations, loading, projectAgenciesMap = {}, onOpenOrganizationModal, onOpenProjectModal, onDonorClick, onTypeClick, onThemeClick }: ProjectModalProps) {
 
     const [themeToTypeMapping, setThemeToTypeMapping] = useState<Record<string, string>>({});
     const [themeDescriptions, setThemeDescriptions] = useState<Record<string, string>>({});
@@ -283,16 +284,17 @@ export default function ProjectModal({ project, allOrganizations, loading, proje
                                                         const description = themeDescriptions[theme];
                                                         
                                                         const themeBadge = (
-                                                            <span
+                                                            <button
                                                                 key={themeIndex}
-                                                                className="inline-flex items-center px-2.5 py-1 rounded-md text-xs font-medium cursor-help"
+                                                                onClick={() => onThemeClick?.(theme)}
+                                                                className="inline-flex items-center px-2.5 py-1 rounded-md text-xs font-medium hover:opacity-80 transition-opacity cursor-pointer"
                                                                 style={{
                                                                     backgroundColor: '#e9eaf9',
                                                                     color: '#6b6da8'
                                                                 }}
                                                             >
                                                                 {theme}
-                                                            </span>
+                                                            </button>
                                                         );
                                                         
                                                         // Wrap in tooltip if description exists
