@@ -155,7 +155,8 @@
       "Investment Type": [
         "Learning & Exchange"
       ],
-      "Investment Themes [Text Key]": "Webinar"
+      "Investment Themes [Text Key]": "Webinar",
+      "theme_key": "webinar\n"
     }
   },
   {
@@ -1174,7 +1175,7 @@
         "Crisis Analytics & Insights"
       ],
       "Investment Themes [Text Key]": "Sentiment Analysis",
-      "theme_key": "sentiment",
+      "theme_key": "sentiment-analysis",
       "theme_description": "Analyzing public emotions and opinions during crises helps organizations understand community reactions and improve response strategies."
     }
   },
