@@ -131,7 +131,16 @@ interface StatCardProps {
 }
 
 const StatCard = React.memo(function StatCard({ icon, title, value, label, colorScheme, tooltip }: StatCardProps) {
-    const { tipsEnabled } = useTips();
+    // Get tips enabled state with fallback for SSR
+    let tipsEnabled = false;
+    try {
+        const tipsContext = useTips();
+        tipsEnabled = tipsContext.tipsEnabled;
+    } catch (e) {
+        // TipsProvider not available (e.g., during server-side rendering)
+        tipsEnabled = false;
+    }
+    
     const gradients = {
         amber: {
             bg: 'from-[var(--brand-bg-lighter)] to-[var(--brand-bg-light)]',
@@ -262,8 +271,15 @@ const CrisisDataDashboard = ({
     sortDirection,
     onSortChange
 }: CrisisDataDashboardProps) => {
-    // Get tips enabled state
-    const { tipsEnabled } = useTips();
+    // Get tips enabled state with fallback for SSR
+    let tipsEnabled = false;
+    try {
+        const tipsContext = useTips();
+        tipsEnabled = tipsContext.tipsEnabled;
+    } catch (e) {
+        // TipsProvider not available (e.g., during server-side rendering)
+        tipsEnabled = false;
+    }
     
     // UI state (not related to routing)
     const [expandedOrgs, setExpandedOrgs] = useState<Set<string>>(new Set());
