@@ -28,7 +28,7 @@ interface OrganizationModalProps {
     // Map from project ID to product_key for navigation
     projectIdToKeyMap?: Record<string, string>;
     // Callback when a donor is clicked
-    onDonorClick?: (country: string) => void;
+    onOpenDonorModal?: (country: string) => void;
     // Callback when an investment type is clicked
     onTypeClick?: (type: string) => void;
 }
@@ -46,7 +46,7 @@ export default function OrganizationModal({
     loading,
     onOpenProjectModal,
     projectIdToKeyMap = {},
-    onDonorClick,
+    onOpenDonorModal,
     onTypeClick
 }: OrganizationModalProps): React.ReactElement {
 
@@ -582,7 +582,7 @@ export default function OrganizationModal({
                                             <CountryBadge 
                                                 key={country} 
                                                 country={country} 
-                                                onClick={onDonorClick}
+                                                onClick={onOpenDonorModal}
                                                 agencies={orgAgencies[country]}
                                                 tooltipContainer={tooltipContainer}
                                             />
