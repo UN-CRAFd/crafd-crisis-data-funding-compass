@@ -550,10 +550,10 @@ const CrisisDataDashboard = ({
     const selectedOrganization = useMemo(() => {
         if (!selectedOrgKey || !nestedOrganizations.length) return null;
         
-        // Look up by Org Short Name using URL slug matching (handles lowercase with dashes)
+        // Look up by org_key using URL slug matching (handles lowercase with dashes)
         const nestedOrg = nestedOrganizations.find((org: any) => {
-            const orgShortName = org.fields?.['Org Short Name'];
-            return orgShortName && matchesUrlSlug(selectedOrgKey, orgShortName);
+            const orgKey = org.fields?.['org_key'];
+            return orgKey && matchesUrlSlug(selectedOrgKey, orgKey);
         });
         
         if (!nestedOrg) return null;
@@ -1177,11 +1177,11 @@ const CrisisDataDashboard = ({
                                                                                     className="font-medium text-slate-900 cursor-pointer transition-colors hover:text-[var(--brand-primary)] text-sm sm:text-base"
                                                                                     onClick={e => {
                                                                                         e.stopPropagation();
-                                                                                        // Get Org Short Name from nested organizations data (used for lookup in selectedOrganization)
+                                                                                        // Get org_key from nested organizations data
                                                                                         const nestedOrg = nestedOrganizations.find(n => n.id === org.id);
-                                                                                        const orgShortName = nestedOrg?.fields?.['Org Short Name'];
-                                                                                        if (orgShortName) {
-                                                                                            onOpenOrganizationModal(orgShortName.toLowerCase());
+                                                                                        const orgKey = nestedOrg?.fields?.['org_key'];
+                                                                                        if (orgKey) {
+                                                                                            onOpenOrganizationModal(orgKey);
                                                                                         }
                                                                                     }}
                                                                                 >
@@ -1297,9 +1297,9 @@ const CrisisDataDashboard = ({
                                                                             onClick={(e) => {
                                                                                 e.stopPropagation();
                                                                                 const nestedOrg = nestedOrganizations.find((n) => n.id === org.id);
-                                                                                const orgShortName = nestedOrg?.fields?.['Org Short Name'];
-                                                                                if (orgShortName) {
-                                                                                    onOpenOrganizationModal(orgShortName.toLowerCase());
+                                                                                const orgKey = nestedOrg?.fields?.['org_key'];
+                                                                                if (orgKey) {
+                                                                                    onOpenOrganizationModal(orgKey);
                                                                                 }
                                                                             }}
                                                                                 className="hidden sm:inline-flex items-center justify-center gap-1 text-[10px] h-6 px-2 rounded-md text-[var(--badge-slate-bg)] bg-[var(--badge-slate-text)] hover:bg-slate-400 duration-150"
