@@ -265,6 +265,12 @@ const CrisisDataDashboardWrapper = ({ logoutButton }: { logoutButton?: React.Rea
     // Validate selected themes against available themes based on current filters
     // Remove themes that no longer have matching projects
     useEffect(() => {
+        // Skip validation when modals are open - we don't want to trigger URL changes
+        // that might interfere with modal routing
+        if (selectedOrgKey || selectedProjectKey || selectedDonorCountry) {
+            return;
+        }
+
         if (!dashboardData?.allOrganizations || investmentThemes.length === 0 || !themesLoaded) {
             return; // Nothing to validate
         }
