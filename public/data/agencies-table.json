@@ -160,6 +160,13 @@
     }
   },
   {
+    "id": "rec5AWnxZMtYVg7Dq",
+    "fields": {
+      "Agency/Department Name": "Unspecified Agency",
+      "Country Name": "Chad"
+    }
+  },
+  {
     "id": "rec5JfYP3fwrIALy9",
     "fields": {
       "Agency/Department Name": "Unspecified Agency",
@@ -215,6 +222,13 @@
       "Agency/Department Name": "Unspecified Agency",
       "Agency Data Portal": "https://www.gsd.ngo/en",
       "Country Name": "Global Support and Development (GSD)"
+    }
+  },
+  {
+    "id": "rec83RjfHqSuJHYZE",
+    "fields": {
+      "Agency/Department Name": "Unspecified Agency",
+      "Country Name": "Honduras"
     }
   },
   {
@@ -422,6 +436,13 @@
     }
   },
   {
+    "id": "recFfYO2iK5F2tUHs",
+    "fields": {
+      "Agency/Department Name": "Unspecified Agency",
+      "Country Name": "Pakistan"
+    }
+  },
+  {
     "id": "recGMYeDQSV7jffjs",
     "fields": {
       "Agency/Department Name": "Unspecified Agency",
@@ -441,6 +462,13 @@
     "fields": {
       "Agency/Department Name": "Swiss Innovation Agency (Innosuisse)",
       "Country Name": "Switzerland"
+    }
+  },
+  {
+    "id": "recGjDWBWOTrWTWb8",
+    "fields": {
+      "Agency/Department Name": "The Global Fund",
+      "Country Name": "Foundation"
     }
   },
   {
@@ -584,6 +612,13 @@
     }
   },
   {
+    "id": "recMugchTfrW8Kcdk",
+    "fields": {
+      "Agency/Department Name": "Rotary International",
+      "Country Name": "Foundation"
+    }
+  },
+  {
     "id": "recNDhizkcgWACvB1",
     "fields": {
       "Agency/Department Name": "Unspecified Agency",
@@ -656,6 +691,13 @@
     "fields": {
       "Agency/Department Name": "Unspecified Agency",
       "Country Name": "Portugal"
+    }
+  },
+  {
+    "id": "recPTgqLkZfiwTmr1",
+    "fields": {
+      "Agency/Department Name": "Gavi",
+      "Country Name": "Foundation"
     }
   },
   {
@@ -749,6 +791,13 @@
     "fields": {
       "Agency/Department Name": "United Nations Foundation",
       "Country Name": "Foundation"
+    }
+  },
+  {
+    "id": "recUVvEfG2sQPMIL2",
+    "fields": {
+      "Agency/Department Name": "Unspecified Agency",
+      "Country Name": "Haiti"
     }
   },
   {
@@ -903,6 +952,13 @@
     }
   },
   {
+    "id": "recZhO6FWRpXwUZhs",
+    "fields": {
+      "Agency/Department Name": "Asian Development Bank",
+      "Country Name": "International Financial Institutions (IFIs)"
+    }
+  },
+  {
     "id": "reca3vbLWS2MqtmnV",
     "fields": {
       "Agency/Department Name": "Jain Family Institute",
@@ -938,6 +994,17 @@
     }
   },
   {
+    "id": "recaz0NmlDB9FDSFJ",
+    "fields": {}
+  },
+  {
+    "id": "recbb4utGyxOC63ir",
+    "fields": {
+      "Agency/Department Name": "Multi-Partner Trust Fund Office (MPTFO)",
+      "Country Name": "United Nations"
+    }
+  },
+  {
     "id": "recbbW0P8fxVtJBJP",
     "fields": {
       "Agency/Department Name": "French Development Agency (AFD) ",
@@ -966,6 +1033,13 @@
       "Agency/Department Name": "Norwegian Agency for Development Cooperation (Norad)",
       "Agency Data Portal": "https://resultater.norad.no/en",
       "Country Name": "Norway"
+    }
+  },
+  {
+    "id": "recbwIdbBpukye54E",
+    "fields": {
+      "Agency/Department Name": "Central Emergency Response Fund (CERF)",
+      "Country Name": "United Nations"
     }
   },
   {
@@ -1061,6 +1135,13 @@
     }
   },
   {
+    "id": "recfcRfSTQpgXOYdb",
+    "fields": {
+      "Agency/Department Name": "King Salman Humanitarian Aid and Relief FCentre (KSrelief)",
+      "Country Name": "Saudi Arabia"
+    }
+  },
+  {
     "id": "recgAR3TqI7vt3ypc",
     "fields": {
       "Agency/Department Name": "Ministry of Foreign and European Affairs, Defence, Development Cooperation and Foreign Trade ",
@@ -1139,6 +1220,20 @@
     }
   },
   {
+    "id": "reck6RBjyLywXFgaZ",
+    "fields": {
+      "Agency/Department Name": "Unspecified Agency",
+      "Country Name": "Somalia"
+    }
+  },
+  {
+    "id": "reck9tUEQ0lipjF53",
+    "fields": {
+      "Agency/Department Name": "Susan Thompson Buffett Foundation",
+      "Country Name": "Foundation"
+    }
+  },
+  {
     "id": "reckIAhFXgj4XL29b",
     "fields": {
       "Agency/Department Name": "Unspecified Agency",
@@ -1156,7 +1251,7 @@
   {
     "id": "recl0rZvHPzrC6Jwd",
     "fields": {
-      "Agency/Department Name": "Wellcome Foundation",
+      "Agency/Department Name": "Wellcome Trust",
       "Agency Data Portal": "https://wellcome.org/",
       "Country Name": "Foundation"
     }
@@ -1191,6 +1286,13 @@
     }
   },
   {
+    "id": "recmupKYrOU6hZbYx",
+    "fields": {
+      "Agency/Department Name": "Bloomberg Family Foundation",
+      "Country Name": "Foundation"
+    }
+  },
+  {
     "id": "recnBCITljZPzm4Ga",
     "fields": {
       "Agency/Department Name": "Department of Foreign Affairs (DFA)",
@@ -1221,6 +1323,13 @@
     }
   },
   {
+    "id": "recnzDLPx803fXQqf",
+    "fields": {
+      "Agency/Department Name": "Fund for Development",
+      "Country Name": "Qatar"
+    }
+  },
+  {
     "id": "reco4Um0k7Tgw2UCK",
     "fields": {
       "Agency/Department Name": "Unspecified Agency",
@@ -1247,6 +1356,13 @@
       "Agency/Department Name": "International Organization for Migration (IOM)",
       "Agency Data Portal": "https://www.iom.int/",
       "Country Name": "United Nations"
+    }
+  },
+  {
+    "id": "recpoSWjCWxlFL5FM",
+    "fields": {
+      "Agency/Department Name": "Unspecified Firm",
+      "Country Name": "Private Firm"
     }
   },
   {
@@ -1410,6 +1526,13 @@
     }
   },
   {
+    "id": "recve1nnty9A4OgDx",
+    "fields": {
+      "Agency/Department Name": "European Investment Bank",
+      "Country Name": "European Union"
+    }
+  },
+  {
     "id": "recvvJF6VEfKjphtY",
     "fields": {
       "Agency/Department Name": "Unspecified Agency",
@@ -1430,6 +1553,13 @@
       "Agency/Department Name": "Ministry of Foreign Affairs (MOFA)",
       "Agency Data Portal": "https://www.llv.li/en/national-administration/office-for-foreign-affairs",
       "Country Name": "Liechtenstein"
+    }
+  },
+  {
+    "id": "recy2raH0hPZUfK4U",
+    "fields": {
+      "Agency/Department Name": "Unspecified Agency",
+      "Country Name": "Nigeria"
     }
   },
   {
