@@ -531,7 +531,8 @@
       ],
       "Org HQ Country": [
         "USA"
-      ]
+      ],
+      "UN Funding Link": "https://www.unicef.org/media/173291/file/UNICEF_FundingCompendium2024.pdf"
     },
     "agencies": [
       {
@@ -903,7 +904,8 @@
       ],
       "Org HQ Country": [
         "Italy"
-      ]
+      ],
+      "UN Funding Link": "https://www.wfp.org/funding/2025"
     },
     "agencies": [
       {
@@ -4873,11 +4875,10 @@
       ],
       "Org Transparency Portal": "https://www.unmas.org/sites/default/files/styles/full_width/public/unmas_2024_annual_report-images-58-updated.jpg?itok=QvJhQMeO",
       "Org Programme Budget": "https://open.un.org/un-secretariat-financials/expenses",
-      "Est. Org Budget": 42018495,
       "Has received CRAF'd Funding?": "NO",
       "org_key": "unmas",
       "Org Type": "United Nations System",
-      "Last Updated": 2024,
+      "Link to Budget Source": "none",
       "Org HQ Country": [
         "Switzerland"
       ]
@@ -5426,7 +5427,8 @@
       ],
       "Org HQ Country": [
         "USA"
-      ]
+      ],
+      "UN Funding Link": "https://fts.unocha.org/global-funding/donors/2024?order=total_funding&sort=desc"
     },
     "agencies": [
       {
@@ -17038,7 +17040,8 @@
       ],
       "Org HQ Country": [
         "Switzerland"
-      ]
+      ],
+      "UN Funding Link": "https://open.who.int/2024-25/contributors/contributor"
     },
     "agencies": [
       {
