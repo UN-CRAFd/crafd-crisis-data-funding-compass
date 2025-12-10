@@ -239,7 +239,7 @@ const CrisisDataDashboardWrapper = ({ logoutButton }: { logoutButton?: React.Rea
                 }
 
                 lastFetchedFiltersRef.current = filterSignature;
-                setLoading(true);
+                setLoading(false);
 
                 const filters: DashboardFilters = {
                     donorCountries: combinedDonors.length > 0 ? combinedDonors : undefined,
