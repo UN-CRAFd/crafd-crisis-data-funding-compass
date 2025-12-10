@@ -189,7 +189,7 @@ export default function PageHeader({
                                 <Button
                                     variant="outline"
                                     size="sm"
-                                    className="bg-slate-50/50 border-slate-200 hover:var(--brand-bg-light) hover:border-[var(--brand-primary)] hover:text-[var(--brand-primary)] text-xs sm:text-sm hidden"
+                                    className="bg-slate-50/50 border-slate-200 hover:var(--brand-bg-light) hover:border-[var(--brand-primary)] hover:text-[var(--brand-primary)] text-xs sm:text-sm"
                                     title="Navigation"
                                 >
                                     <Menu className="w-4 h-4" />
