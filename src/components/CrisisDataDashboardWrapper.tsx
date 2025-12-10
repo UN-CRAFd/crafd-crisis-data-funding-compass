@@ -262,49 +262,14 @@ const CrisisDataDashboardWrapper = ({ logoutButton }: { logoutButton?: React.Rea
         fetchData();
     }, [combinedDonors, investmentTypes, investmentThemes, searchQuery]);
 
-    // Validate themes (only when no modals are open)
-    useEffect(() => {
-        if (modalParams.org || modalParams.asset || modalParams.donor) {
-            return;
-        }
-
-        if (!dashboardData?.allOrganizations || investmentThemes.length === 0 || !themesLoaded) {
-            return;
-        }
-
-        const availableThemes = new Set<string>();
-        const allOrgs = dashboardData.allOrganizations;
-
-        for (const org of allOrgs) {
-            const matchesDonors = combinedDonors.length === 0 || 
-                combinedDonors.every(selectedDonor => org.donorCountries.includes(selectedDonor));
-            
-            if (matchesDonors) {
-                for (const project of org.projects || []) {
-                    const projectMeetsDonorRequirement = combinedDonors.every(selectedDonor =>
-                        Array.isArray(project.donorCountries) && project.donorCountries.includes(selectedDonor)
-                    );
-                    const projectMeetsTypeRequirement = investmentTypes.length === 0 || 
-                        investmentTypes.some(t => project.investmentTypes?.includes(t));
-
-                    if (projectMeetsDonorRequirement && projectMeetsTypeRequirement) {
-                        project.investmentThemes?.forEach(theme => {
-                            if (theme) availableThemes.add(theme);
-                        });
-                    }
-                }
-            }
-        }
-
-        const validThemes = investmentThemes.filter(theme => 
-            availableThemes.has(theme) || theme === ''
-        );
-
-        // Only remove themes (validThemes < investmentThemes), never when adding
-        if (validThemes.length < investmentThemes.length) {
-            updateFilterParams({ themes: validThemes });
-        }
-    }, [dashboardData?.allOrganizations, combinedDonors, investmentTypes, searchQuery, investmentThemes, themesLoaded, modalParams, updateFilterParams]);
+    // NOTE: Theme validation is disabled because it creates a chicken-and-egg problem:
+    // - Themes are user-driven filters that should drive data fetching
+    // - Validating themes against current data (which was fetched without the new theme)
+    //   would immediately remove newly-added themes
+    // - This prevents users from selecting themes when other filters are active
+    // 
+    // If theme validation is needed in the future, it should only run AFTER data has been
+    // fetched with the new theme filter, not before.
 
     // ===========================================
     // FILTER HANDLERS
