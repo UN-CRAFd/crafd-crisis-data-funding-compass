@@ -300,7 +300,8 @@ const CrisisDataDashboardWrapper = ({ logoutButton }: { logoutButton?: React.Rea
             availableThemes.has(theme) || theme === ''
         );
 
-        if (validThemes.length !== investmentThemes.length) {
+        // Only remove themes (validThemes < investmentThemes), never when adding
+        if (validThemes.length < investmentThemes.length) {
             updateFilterParams({ themes: validThemes });
         }
     }, [dashboardData?.allOrganizations, combinedDonors, investmentTypes, searchQuery, investmentThemes, themesLoaded, modalParams, updateFilterParams]);
