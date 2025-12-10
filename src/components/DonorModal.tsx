@@ -156,7 +156,7 @@ export default function DonorModal({
         nestedOrganizations.forEach(org => {
             const orgFields = org.fields || {};
             const orgName = orgFields['Org Full Name'] || orgFields['Org Short Name'] || org.name;
-            const orgShortName = orgFields['org_key'] || orgFields['Org Short Name'] || '';
+            const orgShortName = orgFields['org_key'] || '';
 
             // Check organization-level agencies - organization is directly funded by this agency
             (org.agencies || []).forEach(agency => {

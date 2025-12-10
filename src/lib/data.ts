@@ -225,6 +225,7 @@ function convertToOrganizationWithProjects(org: NestedOrganization): Organizatio
         id: org.id,
         organizationName: org.name || 'Unnamed Organization',
         orgShortName: org.fields?.['Org Short Name'] || '',
+        orgKey: org.fields?.['org_key'] || '',
         type: orgType,
         description: org.fields?.['Org Description'] || '',
         donorCountries,

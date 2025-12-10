@@ -409,7 +409,7 @@ const NetworkGraph: React.FC<NetworkGraphProps> = ({
                 type: 'organization',
                 value: 22, // Medium nodes for organizations
                 color: brandBgLight, // Uses --brand-bg-light (amber/golden from organization badges)
-                orgKey: org.orgShortName, // Use orgShortName for modal/URL
+                orgKey: org.orgKey, // Use orgKey for modal/URL
                 orgShortName: org.orgShortName, // Store short name for label display
                 orgType: org.type, // Store org type for clustering
                 estimatedBudget: org.estimatedBudget, // Store budget for funding-based scaling
