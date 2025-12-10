@@ -128,6 +128,7 @@ const CrisisDataDashboardWrapper = ({ logoutButton }: { logoutButton?: React.Rea
     }, [searchQuery]);
 
     // Helper function to update URL search params
+    // NOTE: This function only updates filter params and preserves modal params (org, asset, donor)
     const updateURLParams = useCallback((params: { 
         donors?: string[]; 
         types?: string[]; 
@@ -137,6 +138,12 @@ const CrisisDataDashboardWrapper = ({ logoutButton }: { logoutButton?: React.Rea
         sortDirection?: 'asc' | 'desc';
     }) => {
         const newSearchParams = new URLSearchParams(searchParams.toString());
+
+        // IMPORTANT: Preserve modal params (org, asset, donor) - these are managed separately
+        // and should never be affected by filter updates
+        const modalOrg = searchParams.get('org');
+        const modalAsset = searchParams.get('asset');
+        const modalDonor = searchParams.get('donor');
 
         // Update or remove donors param (compact 'd') - write as lowercase with dashes
         if (params.donors !== undefined) {
@@ -199,6 +206,11 @@ const CrisisDataDashboardWrapper = ({ logoutButton }: { logoutButton?: React.Rea
                 newSearchParams.delete('sd');
             }
         }
+
+        // Restore modal params if they were present
+        if (modalOrg) newSearchParams.set('org', modalOrg);
+        if (modalAsset) newSearchParams.set('asset', modalAsset);
+        if (modalDonor) newSearchParams.set('donor', modalDonor);
 
         // Update URL without reloading the page
         const newURL = `${pathname}?${newSearchParams.toString()}`;

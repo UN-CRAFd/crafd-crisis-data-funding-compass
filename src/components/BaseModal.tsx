@@ -329,7 +329,15 @@ export function ModalTooltip({
     delayDuration = 200,
     tooltipContainer 
 }: ModalTooltipProps) {
-    const { tipsEnabled } = useTips();
+    // Get tips enabled state with fallback for SSR
+    let tipsEnabled = false;
+    try {
+        const tipsContext = useTips();
+        tipsEnabled = tipsContext.tipsEnabled;
+    } catch (e) {
+        // TipsProvider not available (e.g., during server-side rendering)
+        tipsEnabled = false;
+    }
     
     // If tips are disabled or no content, just render children without tooltip
     if (!tipsEnabled || !content) {
