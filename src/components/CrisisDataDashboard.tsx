@@ -1534,7 +1534,7 @@ const CrisisDataDashboard = ({
                     projectAgenciesMap={projectAgenciesMap}
                     onOpenOrganizationModal={onOpenOrganizationModal}
                     onOpenProjectModal={onOpenProjectModal}
-                    onDonorClick={onDonorClick}
+                    onOpenDonorModal={onOpenDonorModal}
                     onTypeClick={onTypeClick}
                     onThemeClick={onThemeClick}
                 />
@@ -1570,7 +1570,7 @@ const CrisisDataDashboard = ({
                             loading={false}
                             onOpenProjectModal={onOpenProjectModal}
                             projectIdToKeyMap={projectIdToKeyMap}
-                            onDonorClick={onDonorClick}
+                            onOpenDonorModal={onOpenDonorModal}
                             onTypeClick={onTypeClick}
                         />
                     );

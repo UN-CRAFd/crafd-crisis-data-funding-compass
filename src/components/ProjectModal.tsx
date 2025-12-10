@@ -16,12 +16,12 @@ interface ProjectModalProps {
     projectAgenciesMap?: Record<string, Record<string, string[]>>;
     onOpenOrganizationModal?: (orgKey: string) => void;
     onOpenProjectModal?: (projectKey: string) => void;
-    onDonorClick?: (country: string) => void;
+    onOpenDonorModal?: (country: string) => void;
     onTypeClick?: (type: string) => void;
     onThemeClick?: (theme: string) => void;
 }
 
-export default function ProjectModal({ project, allOrganizations, loading, projectAgenciesMap = {}, onOpenOrganizationModal, onOpenProjectModal, onDonorClick, onTypeClick, onThemeClick }: ProjectModalProps) {
+export default function ProjectModal({ project, allOrganizations, loading, projectAgenciesMap = {}, onOpenOrganizationModal, onOpenProjectModal, onOpenDonorModal, onTypeClick, onThemeClick }: ProjectModalProps) {
 
     const [themeToTypeMapping, setThemeToTypeMapping] = useState<Record<string, string>>({});
     const [themeDescriptions, setThemeDescriptions] = useState<Record<string, string>>({});
@@ -340,7 +340,7 @@ export default function ProjectModal({ project, allOrganizations, loading, proje
                                     <CountryBadge 
                                         key={index} 
                                         country={country} 
-                                        onClick={onDonorClick}
+                                        onClick={onOpenDonorModal}
                                         agencies={projAgencies[country]}
                                         tooltipContainer={tooltipContainer}
                                     />
