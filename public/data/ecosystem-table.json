@@ -82,6 +82,31 @@
     }
   },
   {
+    "id": "rec10m73t9Vv1XVFf",
+    "fields": {
+      "Project/Product Name": "Conflict Climate Displacement",
+      "Project Donor Agencies": [
+        "rec1VhOJv9U6QKBBs"
+      ],
+      "Project Website": "https://mptf.undp.org/project/00140919",
+      "Provider Orgs Full Name": [
+        "recwaewYY2WMRF9ZI",
+        "rec4rSsPP59Beed9i"
+      ],
+      "CRAF’d-Funded Project?": "YES",
+      "Investment Type(s)": [
+        "Data Sets & Commons"
+      ],
+      "Investment Theme(s)": [
+        "Displacement & Migration Data",
+        "Climate Data"
+      ],
+      "product_key": "ccc",
+      "HDX_SOHD": "None",
+      "Project Description": "A new generation risk data initiative is shining a light on where climate, conflict, and displacement risks collide across sub-Saharan Africa, North Africa, and the Middle East (MENA). By integrating these drivers into one analytical stream, it delivers actionable insights tailored to conflict-affected and climate-vulnerable populations, filling critical gaps and enabling anticipatory action. Led by the Red Cross Red Crescent Climate Centre, together with the Netherlands Red Cross’ 510 Initiative and the International Committee of the Red Cross (ICRC), the risk data supports more informed and anticipatory decision-making across the humanitarian system. "
+    }
+  },
+  {
     "id": "rec15YViTm12t9q9C",
     "fields": {
       "Project/Product Name": "Capacity Strenghtening",
@@ -498,6 +523,30 @@
     }
   },
   {
+    "id": "rec53YmQWK8HuckRh",
+    "fields": {
+      "Project/Product Name": "GUARD",
+      "Project Donor Agencies": [
+        "rec1VhOJv9U6QKBBs"
+      ],
+      "Project Website": "https://mptf.undp.org/project/00141337",
+      "Provider Orgs Full Name": [
+        "reccKH8GA8awjQEvp"
+      ],
+      "CRAF’d-Funded Project?": "YES",
+      "Investment Type(s)": [
+        "Data Sets & Commons"
+      ],
+      "Investment Theme(s)": [
+        "Geospatial Data",
+        "Gender Data"
+      ],
+      "product_key": "ifrc-guard",
+      "HDX_SOHD": "None",
+      "Project Description": "GUARD delivers rapid vulnerability analysis for at-risk populations in sudden-onset disasters through an automated web tool and open-source event dataset. This drives real-time insights, equitable resource allocation, and inclusive, evidence-based response plans. CRAF’d finances the tool and dataset development, rigorous validation, and integration into national disaster management frameworks f"
+    }
+  },
+  {
     "id": "rec5RfuXsmtGtPDP8",
     "fields": {
       "Project/Product Name": "DISHA",
@@ -835,6 +884,9 @@
     "id": "rec9tb7ISjeo7Sq78",
     "fields": {
       "Project/Product Name": " Rapid Assessment Data",
+      "Project Donor Agencies": [
+        "rec1VhOJv9U6QKBBs"
+      ],
       "Project Website": "https://mptf.undp.org/project/00141135",
       "Provider Orgs Full Name": [
         "rec4yuocwbzqCzBUd"
@@ -1756,6 +1808,9 @@
     "id": "recO3RZZ7IEA88GnQ",
     "fields": {
       "Project/Product Name": "Transformative Outcomes: Leveraging Crisis Data in conflict",
+      "Project Donor Agencies": [
+        "rec1VhOJv9U6QKBBs"
+      ],
       "Project Website": "https://mptf.undp.org/project/00141136",
       "Provider Orgs Full Name": [
         "rec5yRG9Wnxu6XkrO"
@@ -3363,6 +3418,9 @@
     "id": "rechQ1azyTpypEDEy",
     "fields": {
       "Project/Product Name": "Women Within Armed Groups",
+      "Project Donor Agencies": [
+        "rec1VhOJv9U6QKBBs"
+      ],
       "Provider Orgs Full Name": [
         "recJdh0jywpDa573r",
         "rec5yRG9Wnxu6XkrO"
@@ -3378,7 +3436,8 @@
         "Methodological Standards"
       ],
       "product_key": "wwag",
-      "HDX_SOHD": "None"
+      "HDX_SOHD": "None",
+      "Project Description": "A first-of-its-kind global dataset on women’s roles\nin non-state armed groups is set to enhance peacebuilding across 500 women’s wings of non-state\narmed groups. Led by the University of Denver in\ncollaboration with research partners, the project will\ninform programming in conflict-affected settings. "
     }
   },
   {
@@ -4290,7 +4349,7 @@
   {
     "id": "recueXHi1BfJrz30y",
     "fields": {
-      "Project/Product Name": "E4DRR: Hazard modeling, impact estimation, climate storylines for drought and flood disasters in Eastern Africa",
+      "Project/Product Name": "Enhancing Early Warning Systems for Disaster Risk Reduction (E4DRR)",
       "Project Website": "https://www.icpac.net/our-projects/e4drr/",
       "Provider Orgs Full Name": [
         "reci9Q8xAcus6YuKx"
@@ -4306,7 +4365,7 @@
       ],
       "product_key": "e4drr",
       "HDX_SOHD": "None",
-      "Project Description": "CPAC's project is poised to enhance disaster risk management in Eastern Africa by integrating advanced hazard modeling, impact estimation, and climate storylines into the East Africa Hazard Watch Portal. This approach aims to fill the critical data gaps for localized, actionable information."
+      "Project Description": "ICPAC and NORCAP are building hazard models, impact estimates, and climate storylines for drought and flood events in Eastern Africa. Using ensemble prediction systems, the project creates counterfactual, physically consistent event narratives and composite datasets to improve impact-based forecasting, anticipatory action, and loss-damage assessment. Integrated into the East Africa Hazard Watch Portal, this work fills data gaps, strengthens localized risk insights, and supports more effective disaster risk reduction across a region facing climate, conflict, and displacement pressures."
     }
   },
   {
