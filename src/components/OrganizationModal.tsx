@@ -607,10 +607,27 @@ export default function OrganizationModal({
                         {isUN && (
                             <div className="flex items-start">
                                 <span className="text-slate-400 mr-2 shrink-0">•</span>
-                                <span>{labels.modals.notesUn}</span>
-                                
+                                <span>
+                                    {labels.modals.notesUn}
+                                    {typeof fields['UN Funding Link'] === 'string' && fields['UN Funding Link'] && (
+                                        <>
+                                            {' '}
+                                            <a
+                                                href={String(fields['UN Funding Link']).replace(/^<|>$/g, '')}
+                                                target="_blank"
+                                                rel="noopener noreferrer"
+                                                className="font-semibold transition-colors underline underline-offset-2 whitespace-nowrap"
+                                                style={{ color: 'var(--brand-primary)' }}
+                                                onMouseEnter={(e) => e.currentTarget.style.color = 'var(--brand-primary-dark)'}
+                                                onMouseLeave={(e) => e.currentTarget.style.color = 'var(--brand-primary)'}
+                                            >
+                                                {labels.modals.learnMore}
+                                                <ExternalLink className="w-3 h-3 inline-block align-text-bottom ml-0.5" />
+                                            </a>
+                                        </>
+                                    )}
+                                </span>
                             </div>
-                            
                         )}
                         {isUN && (
                             <div className="flex items-start">
