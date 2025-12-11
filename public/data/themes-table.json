@@ -159,7 +159,8 @@
         "Learning & Exchange"
       ],
       "Investment Themes [Text Key]": "Webinar",
-      "theme_key": "webinar\n"
+      "theme_key": "webinar\n",
+      "theme_description": "Focused digital sessions where field practitioners, analysts, and researchers transfer operational knowledge in real time."
     }
   },
   {
@@ -1169,7 +1170,6 @@
         "reczxU9NrSDw2mJcN",
         "recXZCOUpEBDjWHOu",
         "rec7Gm0sUCCMECxFU",
-        "rec6S0tX5hnP9I5DG",
         "recpaU5vlkr1O5EVC"
       ],
       "theme_key": "baselinepop",
