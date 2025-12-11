@@ -1016,6 +1016,7 @@
         "Methodological Standards",
         "Data Quality & Validation"
       ],
+      "product_key": "ohsome",
       "HDX_SOHD": "None",
       "Project Description": "The ohsome dashboard enables users to analyze OSM’s full-history data without programming skills. It generates accurate statistics and plots them directly in the dashboard, allowing for customizable filtering and grouping of tags and types across any region or time period. The ohsome quality API (OQAPI) provides access to OSM data quality information for specific regions and use-cases which might benefit i.e. humanitarian organizations and public administration."
     }
