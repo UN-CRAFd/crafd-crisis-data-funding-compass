@@ -231,6 +231,7 @@
         "rec3Ado0Jrl799Q8A",
         "recNLQhceOCXSMemo"
       ],
+      "Project Website": "https://www.ipcinfo.org/ipc-country-analysis/ipc-mapping-tool/",
       "Provider Orgs Full Name": [
         "recoPRDBbxl0bVx7x"
       ],
@@ -553,6 +554,7 @@
       "Project Donor Agencies": [
         "recDY0ngiDePaQtm3"
       ],
+      "Project Website": "https://climate-action.heigit.org/",
       "Provider Orgs Full Name": [
         "rec1UYGdN0XUBCmDY"
       ],
@@ -1441,6 +1443,7 @@
       "Project Donor Agencies": [
         "rec1VhOJv9U6QKBBs"
       ],
+      "Project Website": "https://mptf.undp.org/project/00141356",
       "Provider Orgs Full Name": [
         "rec5SbkybILGgwGal"
       ],
@@ -1958,7 +1961,8 @@
         "Climate Analytics"
       ],
       "product_key": "cams",
-      "HDX_SOHD": "None"
+      "HDX_SOHD": "None",
+      "Project Description": "The Copernicus Atmosphere Monitoring Service (CAMS) provides global, quality-controlled information on air pollution, greenhouse gases, solar energy, and climate forcing. Implemented by ECMWF on behalf of the European Commission, the service integrates satellite and in-situ observations with advanced modelling to support environmental monitoring and public-facing applications across Europe and beyond."
     }
   },
   {
@@ -2122,6 +2126,7 @@
     "id": "recRwnFupko7hywEn",
     "fields": {
       "Project/Product Name": "Conflict Barometer",
+      "Project Website": "https://hiik.de/conflict-barometer/?lang=en",
       "Provider Orgs Full Name": [
         "recYDMArSj5a97Ibs"
       ],
@@ -2187,6 +2192,7 @@
     "id": "recSIp9VIy4uKdPH3",
     "fields": {
       "Project/Product Name": "Territory Seismic Risk Profiles",
+      "Project Website": "https://www.globalquakemodel.org/product/seismic-risk-profiles",
       "Provider Orgs Full Name": [
         "recIIg9jENlDRt2Oe"
       ],
@@ -2198,7 +2204,8 @@
         "Geospatial Analytics"
       ],
       "product_key": "territory-seismic",
-      "HDX_SOHD": "None"
+      "HDX_SOHD": "None",
+      "Project Description": "Territory Seismic Risk Profiles offer consolidated snapshots of seismic hazard and risk through social indicators, exposure and loss metrics, building class information, historical earthquake impacts, and mapped distributions of hazard and vulnerability. Based on 100,000-year simulated event models, they support risk management across residential, commercial, and industrial sectors."
     }
   },
   {
@@ -2386,7 +2393,7 @@
   {
     "id": "recVj2ULsOWhPFQ19",
     "fields": {
-      "Project/Product Name": "EM-DAT: The International Disaster Database",
+      "Project/Product Name": "International Disaster Database (EM-DAT)",
       "Project Website": "https://www.emdat.be/",
       "Provider Orgs Full Name": [
         "rec5DdxnhKg1na7o8"
@@ -2574,6 +2581,7 @@
     "id": "recYR5aZ0pWEFezdF",
     "fields": {
       "Project/Product Name": "FlowKit",
+      "Project Website": "https://www.flowminder.org/what-we-do/mobile-data-partnerships/flowkit",
       "Provider Orgs Full Name": [
         "recG3iaB3tMhPUTLg"
       ],
@@ -2721,13 +2729,15 @@
         "Food Security Analytics"
       ],
       "product_key": "ipc-infographics",
-      "HDX_SOHD": "None"
+      "HDX_SOHD": "None",
+      "Project Description": "IPC Infographics provide regularly updated visual summaries of acute food insecurity and malnutrition across crisis-affected countries. Drawing on IPC analytical processes, these snapshots translate complex assessments into accessible, country-specific insights used by policymakers, humanitarian actors, and early warning systems to monitor hunger trends and guide response planning."
     }
   },
   {
     "id": "recZxXY0AjXgSMXr7",
     "fields": {
       "Project/Product Name": "Global Vulnerability Model",
+      "Project Website": "https://www.globalquakemodel.org/product/global-vulnerability-model",
       "Provider Orgs Full Name": [
         "recIIg9jENlDRt2Oe"
       ],
@@ -2739,7 +2749,8 @@
         "Damage Assessments"
       ],
       "product_key": "global-vulnerability",
-      "HDX_SOHD": "None"
+      "HDX_SOHD": "None",
+      "Project Description": "The Global Vulnerability Model consists of a set of functions that estimate the consequences of earthquakes of a given intensity to different building typologies. The database is separated by region-country/territory and considers functions for over 3500 building typologies identified in the Global Exposure Model developed, curated and maintained by the GEM Foundation. The fragility functions are derived analytically, using non-linear time-history analyses on equivalent single-degree-of-freedom oscillators and a large set of ground motion records representing several tectonic environments."
     }
   },
   {
@@ -3079,6 +3090,7 @@
     "id": "recdr2wcQiX1Ch1ZF",
     "fields": {
       "Project/Product Name": "Global Seismic Risk Map",
+      "Project Website": "https://www.globalquakemodel.org/product/global-seismic-risk-map",
       "Provider Orgs Full Name": [
         "recIIg9jENlDRt2Oe"
       ],
@@ -3092,7 +3104,8 @@
         "Composite Indices"
       ],
       "product_key": "global-seismic-map",
-      "HDX_SOHD": "None"
+      "HDX_SOHD": "None",
+      "Project Description": "The Global Seismic Risk Map  poster comprises three global maps, and a ranking of the top 15 countries according to five risk metrics. The main map presents the geographic distribution of average annual loss (AAL) of the built-up area due to ground shaking in the residential, commercial and industrial building stock. It does not consider the effects of tsunamis, liquefaction, landslides, and fires following earthquakes."
     }
   },
   {
@@ -3557,7 +3570,8 @@
         "Food Security Analytics"
       ],
       "product_key": "fsnwg-special",
-      "HDX_SOHD": "None"
+      "HDX_SOHD": "None",
+      "Project Description": "The Global Seismic Risk Map  poster comprises three global maps, and a ranking of the top 15 countries according to five risk metrics. The main map presents the geographic distribution of average annual loss (AAL) of the built-up area due to ground shaking in the residential, commercial and industrial building stock. It does not consider the effects of tsunamis, liquefaction, landslides, and fires following earthquakes. "
     }
   },
   {
@@ -3741,6 +3755,7 @@
     "id": "reclLUvOxshjdhBUy",
     "fields": {
       "Project/Product Name": "Map Kit",
+      "Project Website": "https://hiik.de/data-and-maps/static-maps/?lang=en",
       "Provider Orgs Full Name": [
         "recYDMArSj5a97Ibs"
       ],
@@ -3956,7 +3971,8 @@
         "Data Management & Visualization"
       ],
       "product_key": "dti-services",
-      "HDX_SOHD": "None"
+      "HDX_SOHD": "None",
+      "Project Description": "The Data, Technology & Innovation (DTI) Initiative applies data science, AI, and scalable platform development to create ethical, sustainable digital tools for social impact. Combining dashboards, AI platforms, and applied ML research, it transforms complex datasets into actionable insights that strengthen decision-making for organizations and communities globally."
     }
   },
   {
@@ -4580,7 +4596,8 @@
         "Nutrition Analytics"
       ],
       "product_key": "fsn-update",
-      "HDX_SOHD": "None"
+      "HDX_SOHD": "None",
+      "Project Description": "The Food Security and Nutrition Working Group (FSNWG) is a regional platform, currently co-chaired by ICPAC and FAO. It’s goal is two-fold: to provide an up-to-date food security and nutrition situation analysis (early warning) and to offer a forum to build consensus on critical issues facing policy and interventions. The FNSWG has served regional governments, donors, and non-governmental agencies since the early 2000’s. Current membership includes approximately 80 organisations (IGAD, UN agencies, NGOs, donors, and research institutions) who contribute to the operation of the working group, and its nutrition, markets, food security information, livestock and pastoralist sub-groups."
     }
   },
   {
@@ -4879,6 +4896,7 @@
     "id": "reczPiGnmhBrolMGr",
     "fields": {
       "Project/Product Name": "NYU + VIEWS: Data for Peace Conference",
+      "Project Website": "https://cic.nyu.edu/events/data-for-peace-leveraging-data-to-foster-lasting-peace/",
       "Provider Orgs Full Name": [
         "recHAqTQikIG8K4tD"
       ],
@@ -4937,6 +4955,7 @@
     "id": "reczwfqv4kuJclB0U",
     "fields": {
       "Project/Product Name": "Capacity & Training Services",
+      "Project Website": "https://datapopalliance.org/dataliteracy/",
       "Provider Orgs Full Name": [
         "recHsNe20lr1CUAVu"
       ],
@@ -4948,7 +4967,8 @@
         "Capacity Building"
       ],
       "product_key": "capacity-training",
-      "HDX_SOHD": "None"
+      "HDX_SOHD": "None",
+      "Project Description": "Data-Pop Alliance Capacity & Training Services build data literacy at scale by integrating technical, policy, and ethical perspectives into a global learning ecosystem. Through workshops, technical courses, and the Open Learning Hub, the initiative enables professionals to navigate opportunities and challenges, apply data science methods to non-traditional data sources, and advance equitable, evidence-driven decision-making across development and humanitarian contexts."
     }
   },
   {
@@ -4962,6 +4982,9 @@
         "recAXDKxEbXsaHav4"
       ],
       "Project Website": "https://www.worldpop.org/",
+      "Provider Orgs Full Name": [
+        "recTRbZA2fpb5FEmd"
+      ],
       "CRAF’d-Funded Project?": "NO",
       "Investment Type(s)": [
         "Data Sets & Commons"
