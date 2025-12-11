@@ -55,7 +55,7 @@ async function loadThemesTable(): Promise<ThemesMappings> {
             const response = await fetch('/data/themes-table.json');
             if (!response.ok) {
                 console.warn(`Failed to load themes data: ${response.status}`);
-                return { themeToType: new Map(), themeToKey: new Map(), keyToTheme: new Map() };
+                return { themeToType: new Map(), themeToKey: new Map(), keyToThemes: new Map() };
             }
             const themesData = await response.json();
             const themeToType = new Map<string, string>();
@@ -92,7 +92,7 @@ async function loadThemesTable(): Promise<ThemesMappings> {
             return cachedThemesMappings;
         } catch (error) {
             console.error('Error loading themes table:', error);
-            cachedThemesMappings = { themeToType: new Map(), themeToKey: new Map(), keyToTheme: new Map() };
+            cachedThemesMappings = { themeToType: new Map(), themeToKey: new Map(), keyToThemes: new Map() };
             return cachedThemesMappings;
         }
     })();
@@ -558,7 +558,7 @@ async function getAvailableFilterOptions(organizations: OrganizationWithProjects
         themesMappings = await loadThemesTable();
     } catch (error) {
         console.warn('Failed to load themes table, using ungrouped themes:', error);
-        themesMappings = { themeToType: new Map(), themeToKey: new Map(), keyToTheme: new Map() };
+        themesMappings = { themeToType: new Map(), themeToKey: new Map(), keyToThemes: new Map() };
     }
 
     // Group themes by their investment type
