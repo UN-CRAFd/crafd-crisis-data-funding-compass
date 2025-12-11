@@ -69,6 +69,8 @@ export default function DonorModal({
     const [hoveredProjectId, setHoveredProjectId] = useState<string | null>(null);
     // Track expanded agencies (all expanded by default)
     const [expandedAgencies, setExpandedAgencies] = useState<Set<string>>(new Set());
+    // Track expanded headquartered organizations
+    const [isHeadquarteredExpanded, setIsHeadquarteredExpanded] = useState(false);
 
     // Reusable subheader component - Major sections - smaller than main title
     const SubHeader = ({ children }: { children: React.ReactNode }) => (
@@ -519,34 +521,63 @@ export default function DonorModal({
                             <span className="text-lg font-normal text-slate-600 tabular-nums">({headquarteredOrganizations.length})</span>
                         </div>
                         <div className="flex flex-col gap-2">
-                            {headquarteredOrganizations.map(org => (
-                                <button
-                                    key={org.id}
-                                    onClick={() => org.shortName && handleOpenOrganization(org.shortName)}
-                                    className="flex items-center justify-between gap-2 px-3 py-2 rounded-md text-sm font-medium transition-colors cursor-pointer text-left hover:opacity-80 w-full"
-                                    style={{
-                                        backgroundColor: 'var(--brand-bg-light)',
-                                        color: 'var(--brand-primary-dark)'
-                                    }}
-                                >
-                                    <div className="flex items-center gap-1.5 min-w-0">
-                                        <Building2 className="h-4 w-4 shrink-0" />
-                                        <span className="truncate">{org.name}</span>
-                                    </div>
-                                    <div className="flex items-center gap-2 shrink-0">
-                                        {org.type && (
-                                            <span className="text-xs text-var(--brand-primary-dark) font-thin bg-transparent px-2 py-0.5 rounded">
-                                                {org.type}
-                                            </span>
+                            {(() => {
+                                const showCollapsible = headquarteredOrganizations.length > 5;
+                                const displayedOrgs = showCollapsible && !isHeadquarteredExpanded 
+                                    ? headquarteredOrganizations.slice(0, 5) 
+                                    : headquarteredOrganizations;
+
+                                return (
+                                    <>
+                                        {displayedOrgs.map(org => (
+                                            <button
+                                                key={org.id}
+                                                onClick={() => org.shortName && handleOpenOrganization(org.shortName)}
+                                                className="flex items-center justify-between gap-2 px-3 py-2 rounded-md text-sm font-medium transition-colors cursor-pointer text-left hover:opacity-80 w-full"
+                                                style={{
+                                                    backgroundColor: 'var(--brand-bg-light)',
+                                                    color: 'var(--brand-primary-dark)'
+                                                }}
+                                            >
+                                                <div className="flex items-center gap-1.5 min-w-0">
+                                                    <Building2 className="h-4 w-4 shrink-0" />
+                                                    <span className="truncate">{org.name}</span>
+                                                </div>
+                                                <div className="flex items-center gap-2 shrink-0">
+                                                    {org.type && (
+                                                        <span className="text-xs text-var(--brand-primary-dark) font-thin bg-transparent px-2 py-0.5 rounded">
+                                                            {org.type}
+                                                        </span>
+                                                    )}
+                                                    {org.projectCount > 0 && (
+                                                        <span className="text-xs text-var(--brand-primary-dark)">
+                                                            {org.projectCount} {org.projectCount === 1 ? 'asset' : 'assets'}
+                                                        </span>
+                                                    )}
+                                                </div>
+                                            </button>
+                                        ))}
+                                        {showCollapsible && (
+                                            <button
+                                                onClick={() => setIsHeadquarteredExpanded(!isHeadquarteredExpanded)}
+                                                className="mt-2 inline-flex items-center gap-1 text-sm font-medium text-slate-600 hover:text-slate-400 transition-colors"
+                                            >
+                                                {isHeadquarteredExpanded ? (
+                                                    <>
+                                                        <ChevronDown className="w-4 h-4" />
+                                                        <span>{labels.ui.showLess}</span>
+                                                    </>
+                                                ) : (
+                                                    <>
+                                                        <ChevronDown className="w-4 h-4" />
+                                                        <span>{labels.ui.showMore.replace('{count}', String(headquarteredOrganizations.length - 5))}</span>
+                                                    </>
+                                                )}
+                                            </button>
                                         )}
-                                        {org.projectCount > 0 && (
-                                            <span className="text-xs text-var(--brand-primary-dark)">
-                                                {org.projectCount} {org.projectCount === 1 ? 'asset' : 'assets'}
-                                            </span>
-                                        )}
-                                    </div>
-                                </button>
-                            ))}
+                                    </>
+                                );
+                            })()}
                         </div>
                     </div>
                 )}
