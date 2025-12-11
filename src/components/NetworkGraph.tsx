@@ -1625,7 +1625,7 @@ const NetworkGraph: React.FC<NetworkGraphProps> = ({
                             </div>
 
                             {/* Scaling Controls */}
-                            <div className="hidden p-2.5 border-t border-slate-200">
+                            <div className="p-2.5 border-t border-slate-200">
                                 <div className="text-xs font-semibold text-slate-800/90 mb-2">Scaling</div>
                                 <div className="space-y-1.5">
                                     <button
