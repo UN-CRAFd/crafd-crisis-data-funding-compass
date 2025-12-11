@@ -446,7 +446,7 @@
   {
     "id": "rec5DdxnhKg1na7o8",
     "fields": {
-      "Org Full Name": "CRED: University of Louvain Centre for Research on the Epidemiology of Disasters",
+      "Org Full Name": "CRED: Centre for Research on the Epidemiology of Disasters",
       "Org Short Name": "CRED",
       "Org Website": "https://www.uclouvain.be/en/research-institutes/irss/cred-epidemiology-of-disasters",
       "Org Description": "The Centre for Research on the Epidemiology of Disasters (CRED  has been active for over 50 years and is recognized as a reference institution in the field of disasters and emergency situations: CRED promotes research, training, and technical expertise in humanitarian emergencies, particularly in public health and epidemiology. Its main research topic is natural disasters. By providing a wealth of data related to health, the centre aims to improve disasters preparedness and response. CRED is managing the EM-DAT database, quantifying the occurrence, human and economic impacts associated with natural and technological disasters.",
@@ -463,7 +463,7 @@
       ],
       "Org IATI Name": "N/A",
       "Has received CRAF'd Funding?": "NO",
-      "org_key": "uclouvain",
+      "org_key": "cred",
       "Org Type": "Academia",
       "Link to Budget Source": "none",
       "Org HQ Country": [
@@ -2222,7 +2222,8 @@
         "rec9ZvuALWuRRSN5P",
         "recbmA6Lmrr5AfAHJ",
         "recdIskWoUIv166ue",
-        "recJRVBtpTaiDVmoT"
+        "recJRVBtpTaiDVmoT",
+        "reczxU9NrSDw2mJcN"
       ],
       "Org Donor Agencies": [
         "reco4Um0k7Tgw2UCK",

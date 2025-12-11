@@ -268,6 +268,7 @@
           "Project Donor Agencies": [
             "recDY0ngiDePaQtm3"
           ],
+          "Project Website": "https://climate-action.heigit.org/",
           "Provider Orgs Full Name": [
             "rec1UYGdN0XUBCmDY"
           ],
@@ -2064,9 +2065,9 @@
   },
   {
     "id": "rec5DdxnhKg1na7o8",
-    "name": "CRED: University of Louvain Centre for Research on the Epidemiology of Disasters",
+    "name": "CRED: Centre for Research on the Epidemiology of Disasters",
     "fields": {
-      "Org Full Name": "CRED: University of Louvain Centre for Research on the Epidemiology of Disasters",
+      "Org Full Name": "CRED: Centre for Research on the Epidemiology of Disasters",
       "Org Short Name": "CRED",
       "Org Website": "https://www.uclouvain.be/en/research-institutes/irss/cred-epidemiology-of-disasters",
       "Org Description": "The Centre for Research on the Epidemiology of Disasters (CRED  has been active for over 50 years and is recognized as a reference institution in the field of disasters and emergency situations: CRED promotes research, training, and technical expertise in humanitarian emergencies, particularly in public health and epidemiology. Its main research topic is natural disasters. By providing a wealth of data related to health, the centre aims to improve disasters preparedness and response. CRED is managing the EM-DAT database, quantifying the occurrence, human and economic impacts associated with natural and technological disasters.",
@@ -2083,7 +2084,7 @@
       ],
       "Org IATI Name": "N/A",
       "Has received CRAF'd Funding?": "NO",
-      "org_key": "uclouvain",
+      "org_key": "cred",
       "Org Type": "Academia",
       "Link to Budget Source": "none",
       "Org HQ Country": [
@@ -2147,7 +2148,7 @@
       {
         "id": "recVj2ULsOWhPFQ19",
         "fields": {
-          "Project/Product Name": "EM-DAT: The International Disaster Database",
+          "Project/Product Name": "International Disaster Database (EM-DAT)",
           "Project Website": "https://www.emdat.be/",
           "Provider Orgs Full Name": [
             "rec5DdxnhKg1na7o8"
@@ -2736,6 +2737,7 @@
           "Project Donor Agencies": [
             "rec1VhOJv9U6QKBBs"
           ],
+          "Project Website": "https://mptf.undp.org/project/00141356",
           "Provider Orgs Full Name": [
             "rec5SbkybILGgwGal"
           ],
@@ -4864,7 +4866,8 @@
             "Food Security Analytics"
           ],
           "product_key": "fsnwg-special",
-          "HDX_SOHD": "None"
+          "HDX_SOHD": "None",
+          "Project Description": "The Global Seismic Risk Map  poster comprises three global maps, and a ranking of the top 15 countries according to five risk metrics. The main map presents the geographic distribution of average annual loss (AAL) of the built-up area due to ground shaking in the residential, commercial and industrial building stock. It does not consider the effects of tsunamis, liquefaction, landslides, and fires following earthquakes. "
         },
         "agencies": []
       },
@@ -4886,7 +4889,8 @@
             "Nutrition Analytics"
           ],
           "product_key": "fsn-update",
-          "HDX_SOHD": "None"
+          "HDX_SOHD": "None",
+          "Project Description": "The Food Security and Nutrition Working Group (FSNWG) is a regional platform, currently co-chaired by ICPAC and FAO. It’s goal is two-fold: to provide an up-to-date food security and nutrition situation analysis (early warning) and to offer a forum to build consensus on critical issues facing policy and interventions. The FNSWG has served regional governments, donors, and non-governmental agencies since the early 2000’s. Current membership includes approximately 80 organisations (IGAD, UN agencies, NGOs, donors, and research institutions) who contribute to the operation of the working group, and its nutrition, markets, food security information, livestock and pastoralist sub-groups."
         },
         "agencies": []
       }
@@ -6056,6 +6060,7 @@
         "id": "recYR5aZ0pWEFezdF",
         "fields": {
           "Project/Product Name": "FlowKit",
+          "Project Website": "https://www.flowminder.org/what-we-do/mobile-data-partnerships/flowkit",
           "Provider Orgs Full Name": [
             "recG3iaB3tMhPUTLg"
           ],
@@ -6894,6 +6899,7 @@
         "id": "reczPiGnmhBrolMGr",
         "fields": {
           "Project/Product Name": "NYU + VIEWS: Data for Peace Conference",
+          "Project Website": "https://cic.nyu.edu/events/data-for-peace-leveraging-data-to-foster-lasting-peace/",
           "Provider Orgs Full Name": [
             "recHAqTQikIG8K4tD"
           ],
@@ -7116,7 +7122,8 @@
             "Data Management & Visualization"
           ],
           "product_key": "dti-services",
-          "HDX_SOHD": "None"
+          "HDX_SOHD": "None",
+          "Project Description": "The Data, Technology & Innovation (DTI) Initiative applies data science, AI, and scalable platform development to create ethical, sustainable digital tools for social impact. Combining dashboards, AI platforms, and applied ML research, it transforms complex datasets into actionable insights that strengthen decision-making for organizations and communities globally."
         },
         "agencies": []
       },
@@ -7124,6 +7131,7 @@
         "id": "reczwfqv4kuJclB0U",
         "fields": {
           "Project/Product Name": "Capacity & Training Services",
+          "Project Website": "https://datapopalliance.org/dataliteracy/",
           "Provider Orgs Full Name": [
             "recHsNe20lr1CUAVu"
           ],
@@ -7135,7 +7143,8 @@
             "Capacity Building"
           ],
           "product_key": "capacity-training",
-          "HDX_SOHD": "None"
+          "HDX_SOHD": "None",
+          "Project Description": "Data-Pop Alliance Capacity & Training Services build data literacy at scale by integrating technical, policy, and ethical perspectives into a global learning ecosystem. Through workshops, technical courses, and the Open Learning Hub, the initiative enables professionals to navigate opportunities and challenges, apply data science methods to non-traditional data sources, and advance equitable, evidence-driven decision-making across development and humanitarian contexts."
         },
         "agencies": []
       }
@@ -7546,6 +7555,7 @@
         "id": "recSIp9VIy4uKdPH3",
         "fields": {
           "Project/Product Name": "Territory Seismic Risk Profiles",
+          "Project Website": "https://www.globalquakemodel.org/product/seismic-risk-profiles",
           "Provider Orgs Full Name": [
             "recIIg9jENlDRt2Oe"
           ],
@@ -7557,7 +7567,8 @@
             "Geospatial Analytics"
           ],
           "product_key": "territory-seismic",
-          "HDX_SOHD": "None"
+          "HDX_SOHD": "None",
+          "Project Description": "Territory Seismic Risk Profiles offer consolidated snapshots of seismic hazard and risk through social indicators, exposure and loss metrics, building class information, historical earthquake impacts, and mapped distributions of hazard and vulnerability. Based on 100,000-year simulated event models, they support risk management across residential, commercial, and industrial sectors."
         },
         "agencies": []
       },
@@ -7588,6 +7599,7 @@
         "id": "recZxXY0AjXgSMXr7",
         "fields": {
           "Project/Product Name": "Global Vulnerability Model",
+          "Project Website": "https://www.globalquakemodel.org/product/global-vulnerability-model",
           "Provider Orgs Full Name": [
             "recIIg9jENlDRt2Oe"
           ],
@@ -7599,7 +7611,8 @@
             "Damage Assessments"
           ],
           "product_key": "global-vulnerability",
-          "HDX_SOHD": "None"
+          "HDX_SOHD": "None",
+          "Project Description": "The Global Vulnerability Model consists of a set of functions that estimate the consequences of earthquakes of a given intensity to different building typologies. The database is separated by region-country/territory and considers functions for over 3500 building typologies identified in the Global Exposure Model developed, curated and maintained by the GEM Foundation. The fragility functions are derived analytically, using non-linear time-history analyses on equivalent single-degree-of-freedom oscillators and a large set of ground motion records representing several tectonic environments."
         },
         "agencies": []
       },
@@ -7607,6 +7620,7 @@
         "id": "recdr2wcQiX1Ch1ZF",
         "fields": {
           "Project/Product Name": "Global Seismic Risk Map",
+          "Project Website": "https://www.globalquakemodel.org/product/global-seismic-risk-map",
           "Provider Orgs Full Name": [
             "recIIg9jENlDRt2Oe"
           ],
@@ -7620,7 +7634,8 @@
             "Composite Indices"
           ],
           "product_key": "global-seismic-map",
-          "HDX_SOHD": "None"
+          "HDX_SOHD": "None",
+          "Project Description": "The Global Seismic Risk Map  poster comprises three global maps, and a ranking of the top 15 countries according to five risk metrics. The main map presents the geographic distribution of average annual loss (AAL) of the built-up area due to ground shaking in the residential, commercial and industrial building stock. It does not consider the effects of tsunamis, liquefaction, landslides, and fires following earthquakes."
         },
         "agencies": []
       },
@@ -9202,7 +9217,8 @@
         "rec9ZvuALWuRRSN5P",
         "recbmA6Lmrr5AfAHJ",
         "recdIskWoUIv166ue",
-        "recJRVBtpTaiDVmoT"
+        "recJRVBtpTaiDVmoT",
+        "reczxU9NrSDw2mJcN"
       ],
       "Org Donor Agencies": [
         "reco4Um0k7Tgw2UCK",
@@ -9439,6 +9455,71 @@
               "Agency Data Portal": "https://www.gatesfoundation.org/about/committed-grants",
               "Country Name": "Foundation",
               "Agency Website": "https://www.gatesfoundation.org"
+            }
+          }
+        ]
+      },
+      {
+        "id": "reczxU9NrSDw2mJcN",
+        "fields": {
+          "Project/Product Name": "Population Data",
+          "Project Donor Agencies": [
+            "recbtz43uuKKFVfvd",
+            "recbvrcYZZW7mBnCU",
+            "rec0sY1I5JZz6ZsUE",
+            "recAXDKxEbXsaHav4"
+          ],
+          "Project Website": "https://www.worldpop.org/",
+          "Provider Orgs Full Name": [
+            "recTRbZA2fpb5FEmd"
+          ],
+          "CRAF’d-Funded Project?": "NO",
+          "Investment Type(s)": [
+            "Data Sets & Commons"
+          ],
+          "Investment Theme(s)": [
+            "Geospatial Data",
+            "Baseline Population Data"
+          ],
+          "product_key": "popdata",
+          "HDX_SOHD": "None",
+          "Project Description": "WorldPop is an interdisciplinary applied research group that focuses on supporting the improvement of the spatial demographic evidence base and the use of these data for health and development applications, including addressing the Sustainable Development Goals. The group’s mission is to enable decision makers to harness the power of spatial demographic data through high quality applied research, with the vision of a world where everyone, everywhere is counted in decision making."
+        },
+        "agencies": [
+          {
+            "id": "recbtz43uuKKFVfvd",
+            "fields": {
+              "Agency/Department Name": "Bill and Melinda Gates Foundation",
+              "Agency Data Portal": "https://www.gatesfoundation.org/about/committed-grants",
+              "Country Name": "Foundation",
+              "Agency Website": "https://www.gatesfoundation.org"
+            }
+          },
+          {
+            "id": "recbvrcYZZW7mBnCU",
+            "fields": {
+              "Agency/Department Name": "Norwegian Agency for Development Cooperation (Norad)",
+              "Agency Data Portal": "https://resultater.norad.no/en",
+              "Country Name": "Norway",
+              "Agency Website": "https://www.norad.no"
+            }
+          },
+          {
+            "id": "rec0sY1I5JZz6ZsUE",
+            "fields": {
+              "Agency/Department Name": "Foreign, Commonwealth & Development Office (FCDO)",
+              "Agency Data Portal": "https://devtracker.fcdo.gov.uk/",
+              "Country Name": "United Kingdom",
+              "Agency Website": "https://www.gov.uk/government/organisations/foreign-commonwealth-development-office"
+            }
+          },
+          {
+            "id": "recAXDKxEbXsaHav4",
+            "fields": {
+              "Agency/Department Name": "Clinton Health Access Initiative",
+              "Agency Data Portal": "https://www.clintonhealthaccess.org/",
+              "Country Name": "Non-State Actor",
+              "Agency Website": "https://www.clintonhealthaccess.org/"
             }
           }
         ]
@@ -10730,6 +10811,7 @@
         "id": "recRwnFupko7hywEn",
         "fields": {
           "Project/Product Name": "Conflict Barometer",
+          "Project Website": "https://hiik.de/conflict-barometer/?lang=en",
           "Provider Orgs Full Name": [
             "recYDMArSj5a97Ibs"
           ],
@@ -10750,6 +10832,7 @@
         "id": "reclLUvOxshjdhBUy",
         "fields": {
           "Project/Product Name": "Map Kit",
+          "Project Website": "https://hiik.de/data-and-maps/static-maps/?lang=en",
           "Provider Orgs Full Name": [
             "recYDMArSj5a97Ibs"
           ],
@@ -13632,7 +13715,8 @@
             "Nutrition Analytics"
           ],
           "product_key": "fsn-update",
-          "HDX_SOHD": "None"
+          "HDX_SOHD": "None",
+          "Project Description": "The Food Security and Nutrition Working Group (FSNWG) is a regional platform, currently co-chaired by ICPAC and FAO. It’s goal is two-fold: to provide an up-to-date food security and nutrition situation analysis (early warning) and to offer a forum to build consensus on critical issues facing policy and interventions. The FNSWG has served regional governments, donors, and non-governmental agencies since the early 2000’s. Current membership includes approximately 80 organisations (IGAD, UN agencies, NGOs, donors, and research institutions) who contribute to the operation of the working group, and its nutrition, markets, food security information, livestock and pastoralist sub-groups."
         },
         "agencies": []
       }
@@ -14163,7 +14247,8 @@
             "Nutrition Analytics"
           ],
           "product_key": "fsn-update",
-          "HDX_SOHD": "None"
+          "HDX_SOHD": "None",
+          "Project Description": "The Food Security and Nutrition Working Group (FSNWG) is a regional platform, currently co-chaired by ICPAC and FAO. It’s goal is two-fold: to provide an up-to-date food security and nutrition situation analysis (early warning) and to offer a forum to build consensus on critical issues facing policy and interventions. The FNSWG has served regional governments, donors, and non-governmental agencies since the early 2000’s. Current membership includes approximately 80 organisations (IGAD, UN agencies, NGOs, donors, and research institutions) who contribute to the operation of the working group, and its nutrition, markets, food security information, livestock and pastoralist sub-groups."
         },
         "agencies": []
       }
@@ -16216,6 +16301,7 @@
             "rec3Ado0Jrl799Q8A",
             "recNLQhceOCXSMemo"
           ],
+          "Project Website": "https://www.ipcinfo.org/ipc-country-analysis/ipc-mapping-tool/",
           "Provider Orgs Full Name": [
             "recoPRDBbxl0bVx7x"
           ],
@@ -16454,7 +16540,8 @@
             "Food Security Analytics"
           ],
           "product_key": "ipc-infographics",
-          "HDX_SOHD": "None"
+          "HDX_SOHD": "None",
+          "Project Description": "IPC Infographics provide regularly updated visual summaries of acute food insecurity and malnutrition across crisis-affected countries. Drawing on IPC analytical processes, these snapshots translate complex assessments into accessible, country-specific insights used by policymakers, humanitarian actors, and early warning systems to monitor hunger trends and guide response planning."
         },
         "agencies": [
           {
@@ -19555,7 +19642,8 @@
             "Climate Analytics"
           ],
           "product_key": "cams",
-          "HDX_SOHD": "None"
+          "HDX_SOHD": "None",
+          "Project Description": "The Copernicus Atmosphere Monitoring Service (CAMS) provides global, quality-controlled information on air pollution, greenhouse gases, solar energy, and climate forcing. Implemented by ECMWF on behalf of the European Commission, the service integrates satellite and in-situ observations with advanced modelling to support environmental monitoring and public-facing applications across Europe and beyond."
         },
         "agencies": [
           {
