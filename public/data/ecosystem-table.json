@@ -2156,6 +2156,7 @@
       "Investment Theme(s)": [
         "Conflict & Violence Data"
       ],
+      "product_key": "conflict-barometer",
       "HDX_SOHD": "None",
       "Project Description": "Since 1992, the Conflict Barometer has qualitatively and quantitatively recorded the dynamics of political conflicts, both violent and non-violent, worldwide. In accordance with the HIIK methodology, violent conflicts are classified according to their intensity into violent crises (intensity 3), limited wars (intensity 4), and wars (intensity 5). Non-violent conflicts are divided into disputes (intensity 1) and non-violent crises (intensity 2). The annual report is supplemented by conflict maps, graphics, and datasets as well as Spotlight texts that shed light on the wider context of current conflict dynamics."
     }
@@ -3769,6 +3770,7 @@
       "Investment Theme(s)": [
         "Conflict & Violence Data"
       ],
+      "product_key": "map-kit",
       "HDX_SOHD": "None"
     }
   },
