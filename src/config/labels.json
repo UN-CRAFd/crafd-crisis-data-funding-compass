@@ -126,7 +126,7 @@
     "budgetInfoTooltip": "This Data was extracted from publicly available sources and collected by the Complex Risk Analytics Fund (CRAF'd). It may not reflect the most current information.",
     "notes": "NOTES",
     "notesInsights": "All insights are based on publicly accessible information and data.",
-    "notesUn": "For United Nations (UN) Organizations, donors were limited to the top 15 for simplification.",
+    "notesUn": "For simplification, donors were limited to the 30 highest contributors to UN organizations. Therefore, some donors may not be displayed.",
     "budgetlineUn": "Part of the general budget.",
     "providerOrganizations": "Provider Organizations",
     "assetTypeAndTheme": "Asset Type & Theme",
