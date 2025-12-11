@@ -364,7 +364,7 @@ const CrisisDataDashboardWrapper = ({ logoutButton }: { logoutButton?: React.Rea
 
     return (
         <CrisisDataDashboard
-            dashboardData={dashboardData}
+            dashboardData={dashboardData} // ignore
             loading={loading}
             error={error}
             combinedDonors={combinedDonors}
