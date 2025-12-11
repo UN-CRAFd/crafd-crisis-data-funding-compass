@@ -100,6 +100,9 @@
         "Standards & Coordination"
       ],
       "Investment Themes [Text Key]": "Common Indicators",
+      "Data Ecosystem Projects": [
+        "rec59LnTqL11pcRdG"
+      ],
       "theme_key": "indicator",
       "theme_description": "Common Indicators support consistent measurement and reporting practices across initiatives, enabling better coordination and comparability of results."
     }
@@ -118,9 +121,9 @@
       "Data Ecosystem Projects": [
         "rec04lJaB92fTs0JH",
         "recFnNCbi5RYJNchr",
-        "recEuWdBixgTpQKhR",
         "rec9HIhsIpPjx48rc",
-        "rec2Su6C7bHl4BC7h"
+        "rec2Su6C7bHl4BC7h",
+        "recE22sC1jhIuZnWn"
       ],
       "theme_key": "gis",
       "theme_description": "Tools and platforms that enable the collection, analysis, and visualization of spatial and geographic data to support infrastructure planning and management."
@@ -410,7 +413,8 @@
         "recZaSDcZgIUtalO5",
         "rec96xC14xTkyyKlP",
         "recJye4S746MWWmW6",
-        "recMOmPSS6OoIxqAM"
+        "recMOmPSS6OoIxqAM",
+        "recCMSnUjitsYc1XQ"
       ],
       "theme_key": "standards",
       "theme_description": "Establishes best practices to ensure consistency, reliability, and quality in how information is gathered and analyzed across projects."
@@ -498,7 +502,6 @@
         "recQubJTGSwZoqzix",
         "recQMdm14niuRSFQp",
         "recSvtWQnSvfNoXdt",
-        "recEuWdBixgTpQKhR",
         "recAeviz1XjLC8V6i",
         "recueXHi1BfJrz30y",
         "recyn1h3FptgV2ZAv",
@@ -540,7 +543,8 @@
       "Investment Themes [Text Key]": "Disaster Hazard & Risk Modelling",
       "Data Ecosystem Projects": [
         "recjbIls3C4riPk4C",
-        "recxNVM0HeC0mSQyk"
+        "recxNVM0HeC0mSQyk",
+        "recSZ5wPOqG3Pm9Ip"
       ],
       "theme_key": "risk",
       "theme_description": "This subfield uses data and analytical models to assess potential disaster impacts and inform risk reduction strategies."
@@ -740,7 +744,8 @@
         "recWiXtcwxhgmhgNY",
         "recFF8BskJRz2Lyjk",
         "recaApmxiLnw1JnZf",
-        "recTaCZEF36yEoMIT"
+        "reclLUvOxshjdhBUy",
+        "recRwnFupko7hywEn"
       ],
       "theme_key": "conflict-violence-data",
       "theme_description": "This data focuses on documenting and analyzing incidents, patterns, and impacts of conflict and violence to support research and informed decision-making."
@@ -858,7 +863,11 @@
         "recdr2wcQiX1Ch1ZF",
         "recxNVM0HeC0mSQyk",
         "rec5RfuXsmtGtPDP8",
-        "recAeviz1XjLC8V6i"
+        "recAeviz1XjLC8V6i",
+        "recSZ5wPOqG3Pm9Ip",
+        "recE22sC1jhIuZnWn",
+        "recCMSnUjitsYc1XQ",
+        "rec59LnTqL11pcRdG"
       ],
       "theme_key": "geoanalytics",
       "theme_description": "Geospatial Analytics leverages location-based data to help understand, predict, and respond to crises more effectively."
@@ -1225,7 +1234,8 @@
         "rec9ZvuALWuRRSN5P",
         "recF4Js3Gn54EPxbP",
         "recD0hG4x9w340oYA",
-        "rec53YmQWK8HuckRh"
+        "rec53YmQWK8HuckRh",
+        "recSZ5wPOqG3Pm9Ip"
       ],
       "theme_key": "geo",
       "theme_description": "This area focuses on the collection, sharing, and use of location-based information to support spatial analysis and decision-making."
@@ -1552,7 +1562,8 @@
       ],
       "Investment Themes [Text Key]": "Standard Geocodes",
       "Data Ecosystem Projects": [
-        "rec96xC14xTkyyKlP"
+        "rec96xC14xTkyyKlP",
+        "recCMSnUjitsYc1XQ"
       ],
       "theme_key": "stdgeo",
       "theme_description": "Standard Geocodes ensures consistent geographic data formats and interoperability across systems."
@@ -1902,7 +1913,8 @@
         "recNggnBqXIgii2hz",
         "recLn4QiWGniBsWoe",
         "recO7hHncZQGqy2vJ",
-        "recGG8gTf4t6l8Mue"
+        "recGG8gTf4t6l8Mue",
+        "recSZ5wPOqG3Pm9Ip"
       ],
       "theme_key": "aea",
       "theme_description": "Using data-driven analysis to predict and respond to crises before they escalate, enabling timely and effective crisis action."
@@ -1919,6 +1931,9 @@
         "Infrastructure & Platforms"
       ],
       "Investment Themes [Text Key]": "Data Quality & Validation",
+      "Data Ecosystem Projects": [
+        "recCMSnUjitsYc1XQ"
+      ],
       "theme_key": "dqv",
       "theme_description": "Ensures that data within infrastructure and platform solutions is accurate, consistent, and reliable for downstream use."
     }

@@ -547,6 +547,29 @@
     }
   },
   {
+    "id": "rec59LnTqL11pcRdG",
+    "fields": {
+      "Project/Product Name": "Climate Action Navigator",
+      "Project Donor Agencies": [
+        "recDY0ngiDePaQtm3"
+      ],
+      "Provider Orgs Full Name": [
+        "rec1UYGdN0XUBCmDY"
+      ],
+      "Investment Type(s)": [
+        "Crisis Analytics & Insights",
+        "Standards & Coordination"
+      ],
+      "Investment Theme(s)": [
+        "Geospatial Analytics",
+        "Common Indicators"
+      ],
+      "product_key": "climate-navigator",
+      "HDX_SOHD": "None",
+      "Project Description": "The Climate Action Navigator delivers climate action indicators tailored to specific cities. Using a framework of high-resolution spatial indicators, it provides actionable insights through data, maps, and reports co-developed with our partners. The dashboard integrates multiple data sources, including OpenStreetMap (OSM), openrouteservice (ORS), satellite imagery, and scientific research, ensuring comprehensive and reliable insights for decision-makers."
+    }
+  },
+  {
     "id": "rec5RfuXsmtGtPDP8",
     "fields": {
       "Project/Product Name": "DISHA",
@@ -998,6 +1021,32 @@
     }
   },
   {
+    "id": "recCMSnUjitsYc1XQ",
+    "fields": {
+      "Project/Product Name": "Ohsome Dashboard",
+      "Project Donor Agencies": [
+        "recDY0ngiDePaQtm3"
+      ],
+      "Project Website": "https://dashboard.ohsome.org/en/",
+      "Provider Orgs Full Name": [
+        "rec1UYGdN0XUBCmDY"
+      ],
+      "Investment Type(s)": [
+        "Infrastructure & Platforms",
+        "Crisis Analytics & Insights",
+        "Standards & Coordination"
+      ],
+      "Investment Theme(s)": [
+        "Geospatial Analytics",
+        "Standard Geocodes",
+        "Methodological Standards",
+        "Data Quality & Validation"
+      ],
+      "HDX_SOHD": "None",
+      "Project Description": "The ohsome dashboard enables users to analyze OSM’s full-history data without programming skills. It generates accurate statistics and plots them directly in the dashboard, allowing for customizable filtering and grouping of tags and types across any region or time period. The ohsome quality API (OQAPI) provides access to OSM data quality information for specific regions and use-cases which might benefit i.e. humanitarian organizations and public administration."
+    }
+  },
+  {
     "id": "recCrLYQFMbrPxsId",
     "fields": {
       "Project/Product Name": "Observatory of Killed Journalists",
@@ -1062,6 +1111,28 @@
     }
   },
   {
+    "id": "recE22sC1jhIuZnWn",
+    "fields": {
+      "Project/Product Name": "OpenRoute Service",
+      "Project Website": "https://maps.openrouteservice.org/#/place/@8.533887863159181,49.459003372452855,6",
+      "Provider Orgs Full Name": [
+        "rec1UYGdN0XUBCmDY"
+      ],
+      "CRAF’d-Funded Project?": "NO",
+      "Investment Type(s)": [
+        "Infrastructure & Platforms",
+        "Crisis Analytics & Insights"
+      ],
+      "Investment Theme(s)": [
+        "Geospatial Analytics",
+        "Geographic Information Systems (GIS)"
+      ],
+      "product_key": "openroute",
+      "HDX_SOHD": "None",
+      "Project Description": "Openrouteservice is an open-source platform leveraging OpenStreetMap data to provide advanced mobility and accessibility analysis. Surrounding the core engine is a vibrant ecosystem of services and tools, enabling seamless integration into diverse projects. We are committed to transparency, making our tools and research freely accessible. Our interactive map client highlights the platform’s capabilities and is available for anyone to explore."
+    }
+  },
+  {
     "id": "recEKzVdOqCJVhqrg",
     "fields": {
       "Project/Product Name": "PRIMARI",
@@ -1105,32 +1176,6 @@
       "product_key": "hhi-humgeo",
       "HDX_SOHD": "None",
       "Project Description": "Humanitarian Geoanalytics integrates spatial data analysis, mapping, and field-based research to support humanitarian operations. It focuses on conflict dynamics, displacement, and vulnerability assessments using geospatial methods."
-    }
-  },
-  {
-    "id": "recEuWdBixgTpQKhR",
-    "fields": {
-      "Project/Product Name": "Heidelberg Institute for Geoinformation Technology (HeiGIT)",
-      "Project Donor Agencies": [
-        "receDOQpfeb4YHc5p",
-        "recDY0ngiDePaQtm3"
-      ],
-      "Project Website": "https://heigit.org/",
-      "Provider Orgs Full Name": [
-        "rec1UYGdN0XUBCmDY"
-      ],
-      "CRAF’d-Funded Project?": "NO",
-      "Investment Type(s)": [
-        "Data Sets & Commons",
-        "Infrastructure & Platforms"
-      ],
-      "Investment Theme(s)": [
-        "Geographic Information Systems (GIS)",
-        "Climate Data"
-      ],
-      "product_key": "heigit",
-      "HDX_SOHD": "None",
-      "Project Description": "Heidelberg Institute for Geoinformation Technology (HeiGIT) advances geoinformation technology for the benefit of society and the environment. It develops open geospatial tools and APIs—such as OpenRouteService—to support disaster response, health logistics, and mobility mapping. Its platforms process global spatial data to enable routing, accessibility, and hazard analysis. Examples include customized geodata for humanitarian missions and intelligent routing for disaster response and climate action."
     }
   },
   {
@@ -2099,6 +2144,23 @@
     }
   },
   {
+    "id": "recRwnFupko7hywEn",
+    "fields": {
+      "Project/Product Name": "Conflict Barometer",
+      "Provider Orgs Full Name": [
+        "recYDMArSj5a97Ibs"
+      ],
+      "Investment Type(s)": [
+        "Data Sets & Commons"
+      ],
+      "Investment Theme(s)": [
+        "Conflict & Violence Data"
+      ],
+      "HDX_SOHD": "None",
+      "Project Description": "Since 1992, the Conflict Barometer has qualitatively and quantitatively recorded the dynamics of political conflicts, both violent and non-violent, worldwide. In accordance with the HIIK methodology, violent conflicts are classified according to their intensity into violent crises (intensity 3), limited wars (intensity 4), and wars (intensity 5). Non-violent conflicts are divided into disputes (intensity 1) and non-violent crises (intensity 2). The annual report is supplemented by conflict maps, graphics, and datasets as well as Spotlight texts that shed light on the wider context of current conflict dynamics."
+    }
+  },
+  {
     "id": "recS00J4wbHllEKXs",
     "fields": {
       "Project/Product Name": "Surveillance System for Attacks on Health Care (SSA)",
@@ -2204,6 +2266,32 @@
     }
   },
   {
+    "id": "recSZ5wPOqG3Pm9Ip",
+    "fields": {
+      "Project/Product Name": "Geoinformation for Humanitarian Aid",
+      "Project Donor Agencies": [
+        "recDY0ngiDePaQtm3"
+      ],
+      "Project Website": "https://heigit.org/geoinformation-for-humanitarian-aid/#overview",
+      "Provider Orgs Full Name": [
+        "rec1UYGdN0XUBCmDY"
+      ],
+      "Investment Type(s)": [
+        "Data Sets & Commons",
+        "Crisis Analytics & Insights"
+      ],
+      "Investment Theme(s)": [
+        "Anticipatory & Early Action Forecasts",
+        "Disaster Hazard & Risk Modelling",
+        "Geospatial Data",
+        "Geospatial Analytics"
+      ],
+      "product_key": "gifha",
+      "HDX_SOHD": "None",
+      "Project Description": "In the face of growing humanitarian challenges, HeiGIT positions geoinformation as a central tool for enhancing crisis response, supporting environmental sustainability, and strengthening community resilience. By leveraging data and digital technologies, it assists humanitarian organizations in identifying vulnerabilities and hazards through risk assessments, integrating local knowledge to ensure context-specific and inclusive solutions. Through its geospatial expertise, HeiGIT pursues faster, smarter, and more effective humanitarian responses."
+    }
+  },
+  {
     "id": "recSbniShY9V8cE4L",
     "fields": {
       "Project/Product Name": "Data Analytics Tool",
@@ -2245,26 +2333,6 @@
       "product_key": "unep-wcmc",
       "HDX_SOHD": "None",
       "Project Description": "UNEP-WCMC is a global science-policy interface that provides open-access datasets and tools on biodiversity, ecosystem services, and conservation strategies. Its data platforms support environmental reporting, climate resilience, and natural capital planning."
-    }
-  },
-  {
-    "id": "recTaCZEF36yEoMIT",
-    "fields": {
-      "Project/Product Name": "Heidelberg Institute for International Conflict Research",
-      "Project Website": "https://www.hiik.de",
-      "Provider Orgs Full Name": [
-        "rec1UYGdN0XUBCmDY"
-      ],
-      "CRAF’d-Funded Project?": "NO",
-      "Investment Type(s)": [
-        "Data Sets & Commons"
-      ],
-      "Investment Theme(s)": [
-        "Conflict & Violence Data"
-      ],
-      "product_key": "hiik",
-      "HDX_SOHD": "None",
-      "Project Description": "The Heidelberg Institute for International Conflict Research (HIIK) is an independent, non-profit, and interdisciplinary association. Established in 1991, the organization is dedicated to promoting, disseminating, and implementing knowledge regarding the emergence, progression, and resolution of both intra-state and inter-state political conflicts. In recent years, the HIIK has experienced significant growth and currently comprises over 200 volunteers."
     }
   },
   {
@@ -3686,6 +3754,22 @@
       "product_key": "mpi",
       "HDX_SOHD": "20",
       "Project Description": "The global Multidimensional Poverty Index (global MPI) is an annual international measure of acute multidimensional poverty that covers over 100 developing countries. It complements traditional monetary poverty measures by capturing the acute, overlapping deprivations in health, education, and living standards that people in poverty experience. The global MPI is computed by the Oxford Poverty and Human Development Initiative (OPHI) in partnership with the Human Development Report Office of the United Nations Development Programme."
+    }
+  },
+  {
+    "id": "reclLUvOxshjdhBUy",
+    "fields": {
+      "Project/Product Name": "Map Kit",
+      "Provider Orgs Full Name": [
+        "recYDMArSj5a97Ibs"
+      ],
+      "Investment Type(s)": [
+        "Data Sets & Commons"
+      ],
+      "Investment Theme(s)": [
+        "Conflict & Violence Data"
+      ],
+      "HDX_SOHD": "None"
     }
   },
   {

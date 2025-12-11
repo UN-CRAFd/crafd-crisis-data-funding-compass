@@ -200,55 +200,31 @@
   },
   {
     "id": "rec1UYGdN0XUBCmDY",
-    "name": "Heidelberg University",
+    "name": "HeiGIT: Heidelberg Institute for Geoinformation Technology",
     "fields": {
-      "Org Full Name": "Heidelberg University",
+      "Org Full Name": "HeiGIT: Heidelberg Institute for Geoinformation Technology",
       "Org Short Name": "HeiGIT",
-      "Org Website": "https://www.uni-heidelberg.de/en",
-      "Org Description": "Founded in 1386, Ruperto Carola is the oldest university in today's Germany and one of Europe’s leading research institutions. It defines itself as an internationally networked research university dedicated to research-oriented teaching. With over 160 fields of study, it offers the broad spectrum of subjects representative of a comprehensive university as well as abundant opportunities to acquire a singular and internationally competitive qualification profile.",
+      "Org Website": "https://heigit.org/",
+      "Org Description": "HeiGIT (Heidelberg Institute for Geoinformation Technology) advances geoinformation technology for societal and environmental benefit. It bridges the gap between fundamental research in geoinformatics and practical applications by developing innovative tools and methods. Its work includes customized geodata for humanitarian missions and intelligent routing for disaster response and climate action.\n\nUsing advances in spatial data processing and machine learning, it enriches and analyzes geodata such as OpenStreetMap, providing free tools and insights to researchers, public authorities, and non-profit organizations.",
       "Provided Data Ecosystem Projects": [
-        "recEuWdBixgTpQKhR",
-        "recTaCZEF36yEoMIT"
+        "recSZ5wPOqG3Pm9Ip",
+        "recE22sC1jhIuZnWn",
+        "recCMSnUjitsYc1XQ",
+        "rec59LnTqL11pcRdG"
       ],
       "Org Donor Agencies": [
-        "rec1YpvhkjwME6GOJ"
+        "rec1YpvhkjwME6GOJ",
+        "recDY0ngiDePaQtm3",
+        "receDOQpfeb4YHc5p"
       ],
-      "Est. Org Budget": 1159471782,
+      "Est. Org Budget": 3000000,
       "Has received CRAF'd Funding?": "NO",
       "org_key": "heigit",
       "Org Type": "Academia",
       "HDX Org Key": "heidelberg-institute-for-geoinformation-technology",
       "Budget Source": "Website",
-      "Last Updated": 2024,
-      "Link to Budget Source": "https://www.uni-heidelberg.de/en/university/facts-figures/funding",
-      "Budget Source Screenshot": [
-        {
-          "id": "attVGv7vwiDXcc7Wv",
-          "width": 1928,
-          "height": 678,
-          "url": "https://v5.airtableusercontent.com/v3/u/48/48/1765476000000/iVmK3zQTFXHul8d_Vxik5w/OJf4Y27RJ-bGbwPxfg8ZVb0xm-oCPpRCbvEMSX4LzYiDx6eZ8BaqHIEa9nx_N4HljpPx6sfVnzKUDnD2_5p1fBXxliacnOuUn45Zw8_6ZXNkLdpHgLRuuWwwnjblZoHvUdm6u-camlWoPlNS0zoNGS5ZSFZ6CfJBrEz56DIOamIPnnv1di3AHW43QKmQbaAP/nK0CdG7LgwpULC-yQIvEOHaCKuGsS7ZhgFx2LS6fRok",
-          "filename": "Screenshot 2025-12-10 at 12.06.22 PM.png",
-          "size": 75156,
-          "type": "image/png",
-          "thumbnails": {
-            "small": {
-              "url": "https://v5.airtableusercontent.com/v3/u/48/48/1765476000000/MXWstRaInTVziQ1S9K3L0w/2jWpqs7iBX5PEStgbm0a4mA28bKe9cuiumXONDib9pehjjcW7dD5AX-2Y5C6Dd9ORFIzgBKUGjXSzYQTAZ5ndxrjpRQ5xjqh6orGrSA3XF4iwcd1EBT2YFNaBqTZdcsyoRpXNiCFyGdnWCWYqFa7cg/yBEAiv9aWWwqL9dcjuO9Q3pNJ1GRtxClHjZmB-zYeWY",
-              "width": 102,
-              "height": 36
-            },
-            "large": {
-              "url": "https://v5.airtableusercontent.com/v3/u/48/48/1765476000000/uIsopn2HT4zyS37pSmEoHg/X60bBp4WeGecgsqftMbX-sZ3e4jTVg5Gowf6DOMYvEtCRlbfeo13HFr5Dw5TLCufksV5IpoTUxEl5Qk9HWEZifCBBh0xx0HSmnS2EterOaiN4flPUVnQEHJPkbdcJrNXK7VyPZZHeOwXmQL2kwHRzw/pgWcukD11qQ-r5ZpCJkCq8L6NVSW04Uw4gjLLufBZfU",
-              "width": 1456,
-              "height": 512
-            },
-            "full": {
-              "url": "https://v5.airtableusercontent.com/v3/u/48/48/1765476000000/aY_pWuV3QW9slcm5QBU5yQ/5rIMdb26sY3toZssyAjvlCyqbV06V2PYMvEKco0f6bk9zwNC-cg8gxLKljjQ1YUa7Ztp1BxLJCMiiBd5xlktTBWKUzVaVDoVV8XUFOhEIOmEanGtheF7aE3r0mczKoaNqsLn7rqsIEmwJvy2k8nD_Q/lyMkmcZcIaZuQ3rVgTlKc59pMi-DKoGnwIjoO-sD3yM",
-              "width": 1928,
-              "height": 678
-            }
-          }
-        }
-      ],
+      "Last Updated": 2016,
+      "Link to Budget Source": "https://www.uni-heidelberg.de/presse/meldungen/2016/m20160707_how-geodata-can-support-humanitarian-aid-in-catastrophes.html?utm_source=chatgpt.com",
       "Org HQ Country": [
         "Germany"
       ]
@@ -260,42 +236,46 @@
           "Agency/Department Name": "Unspecified Agency",
           "Country Name": "Germany"
         }
+      },
+      {
+        "id": "recDY0ngiDePaQtm3",
+        "fields": {
+          "Agency/Department Name": "Klaus Tschira Stiftung",
+          "Country Name": "Foundation"
+        }
+      },
+      {
+        "id": "receDOQpfeb4YHc5p",
+        "fields": {
+          "Agency/Department Name": "Federal Agency for Cartography and Geodesy (BKG)",
+          "Country Name": "Germany"
+        }
       }
     ],
     "projects": [
       {
-        "id": "recEuWdBixgTpQKhR",
+        "id": "rec59LnTqL11pcRdG",
         "fields": {
-          "Project/Product Name": "Heidelberg Institute for Geoinformation Technology (HeiGIT)",
+          "Project/Product Name": "Climate Action Navigator",
           "Project Donor Agencies": [
-            "receDOQpfeb4YHc5p",
             "recDY0ngiDePaQtm3"
           ],
-          "Project Website": "https://heigit.org/",
           "Provider Orgs Full Name": [
             "rec1UYGdN0XUBCmDY"
           ],
-          "CRAF’d-Funded Project?": "NO",
           "Investment Type(s)": [
-            "Data Sets & Commons",
-            "Infrastructure & Platforms"
+            "Crisis Analytics & Insights",
+            "Standards & Coordination"
           ],
           "Investment Theme(s)": [
-            "Geographic Information Systems (GIS)",
-            "Climate Data"
+            "Geospatial Analytics",
+            "Common Indicators"
           ],
-          "product_key": "heigit",
+          "product_key": "climate-navigator",
           "HDX_SOHD": "None",
-          "Project Description": "Heidelberg Institute for Geoinformation Technology (HeiGIT) advances geoinformation technology for the benefit of society and the environment. It develops open geospatial tools and APIs—such as OpenRouteService—to support disaster response, health logistics, and mobility mapping. Its platforms process global spatial data to enable routing, accessibility, and hazard analysis. Examples include customized geodata for humanitarian missions and intelligent routing for disaster response and climate action."
+          "Project Description": "The Climate Action Navigator delivers climate action indicators tailored to specific cities. Using a framework of high-resolution spatial indicators, it provides actionable insights through data, maps, and reports co-developed with our partners. The dashboard integrates multiple data sources, including OpenStreetMap (OSM), openrouteservice (ORS), satellite imagery, and scientific research, ensuring comprehensive and reliable insights for decision-makers."
         },
         "agencies": [
-          {
-            "id": "receDOQpfeb4YHc5p",
-            "fields": {
-              "Agency/Department Name": "Federal Agency for Cartography and Geodesy (BKG)",
-              "Country Name": "Germany"
-            }
-          },
           {
             "id": "recDY0ngiDePaQtm3",
             "fields": {
@@ -306,28 +286,101 @@
         ]
       },
       {
-        "id": "recTaCZEF36yEoMIT",
+        "id": "recCMSnUjitsYc1XQ",
         "fields": {
-          "Project/Product Name": "Heidelberg Institute for International Conflict Research",
-          "Project Website": "https://www.hiik.de",
+          "Project/Product Name": "Ohsome Dashboard",
+          "Project Donor Agencies": [
+            "recDY0ngiDePaQtm3"
+          ],
+          "Project Website": "https://dashboard.ohsome.org/en/",
+          "Provider Orgs Full Name": [
+            "rec1UYGdN0XUBCmDY"
+          ],
+          "Investment Type(s)": [
+            "Infrastructure & Platforms",
+            "Crisis Analytics & Insights",
+            "Standards & Coordination"
+          ],
+          "Investment Theme(s)": [
+            "Geospatial Analytics",
+            "Standard Geocodes",
+            "Methodological Standards",
+            "Data Quality & Validation"
+          ],
+          "HDX_SOHD": "None",
+          "Project Description": "The ohsome dashboard enables users to analyze OSM’s full-history data without programming skills. It generates accurate statistics and plots them directly in the dashboard, allowing for customizable filtering and grouping of tags and types across any region or time period. The ohsome quality API (OQAPI) provides access to OSM data quality information for specific regions and use-cases which might benefit i.e. humanitarian organizations and public administration."
+        },
+        "agencies": [
+          {
+            "id": "recDY0ngiDePaQtm3",
+            "fields": {
+              "Agency/Department Name": "Klaus Tschira Stiftung",
+              "Country Name": "Foundation"
+            }
+          }
+        ]
+      },
+      {
+        "id": "recE22sC1jhIuZnWn",
+        "fields": {
+          "Project/Product Name": "OpenRoute Service",
+          "Project Website": "https://maps.openrouteservice.org/#/place/@8.533887863159181,49.459003372452855,6",
           "Provider Orgs Full Name": [
             "rec1UYGdN0XUBCmDY"
           ],
           "CRAF’d-Funded Project?": "NO",
           "Investment Type(s)": [
-            "Data Sets & Commons"
+            "Infrastructure & Platforms",
+            "Crisis Analytics & Insights"
           ],
           "Investment Theme(s)": [
-            "Conflict & Violence Data"
+            "Geospatial Analytics",
+            "Geographic Information Systems (GIS)"
           ],
-          "product_key": "hiik",
+          "product_key": "openroute",
           "HDX_SOHD": "None",
-          "Project Description": "The Heidelberg Institute for International Conflict Research (HIIK) is an independent, non-profit, and interdisciplinary association. Established in 1991, the organization is dedicated to promoting, disseminating, and implementing knowledge regarding the emergence, progression, and resolution of both intra-state and inter-state political conflicts. In recent years, the HIIK has experienced significant growth and currently comprises over 200 volunteers."
+          "Project Description": "Openrouteservice is an open-source platform leveraging OpenStreetMap data to provide advanced mobility and accessibility analysis. Surrounding the core engine is a vibrant ecosystem of services and tools, enabling seamless integration into diverse projects. We are committed to transparency, making our tools and research freely accessible. Our interactive map client highlights the platform’s capabilities and is available for anyone to explore."
         },
         "agencies": []
+      },
+      {
+        "id": "recSZ5wPOqG3Pm9Ip",
+        "fields": {
+          "Project/Product Name": "Geoinformation for Humanitarian Aid",
+          "Project Donor Agencies": [
+            "recDY0ngiDePaQtm3"
+          ],
+          "Project Website": "https://heigit.org/geoinformation-for-humanitarian-aid/#overview",
+          "Provider Orgs Full Name": [
+            "rec1UYGdN0XUBCmDY"
+          ],
+          "Investment Type(s)": [
+            "Data Sets & Commons",
+            "Crisis Analytics & Insights"
+          ],
+          "Investment Theme(s)": [
+            "Anticipatory & Early Action Forecasts",
+            "Disaster Hazard & Risk Modelling",
+            "Geospatial Data",
+            "Geospatial Analytics"
+          ],
+          "product_key": "gifha",
+          "HDX_SOHD": "None",
+          "Project Description": "In the face of growing humanitarian challenges, HeiGIT positions geoinformation as a central tool for enhancing crisis response, supporting environmental sustainability, and strengthening community resilience. By leveraging data and digital technologies, it assists humanitarian organizations in identifying vulnerabilities and hazards through risk assessments, integrating local knowledge to ensure context-specific and inclusive solutions. Through its geospatial expertise, HeiGIT pursues faster, smarter, and more effective humanitarian responses."
+        },
+        "agencies": [
+          {
+            "id": "recDY0ngiDePaQtm3",
+            "fields": {
+              "Agency/Department Name": "Klaus Tschira Stiftung",
+              "Country Name": "Foundation"
+            }
+          }
+        ]
       }
     ],
     "donor_countries": [
+      "Foundation",
       "Germany"
     ]
   },
@@ -10106,6 +10159,78 @@
     ]
   },
   {
+    "id": "recYDMArSj5a97Ibs",
+    "name": "HIIK: Heidelberg Institute for International Conflict Research",
+    "fields": {
+      "Org Full Name": "HIIK: Heidelberg Institute for International Conflict Research",
+      "Org Short Name": "HIIK",
+      "Org Website": "https://hiik.de/?lang=en",
+      "Org Description": "The Heidelberg Institute for International Conflict Research (HIIK) is an independent and interdisciplinary registered association located at the Department of Political Science at the University of Heidelberg. Since 1991, the HIIK has been committed to the distribution of knowledge about the emergence, course and settlement of interstate and intrastate political conflicts. The Conflict Barometer is published annually and contains the current research results.",
+      "Provided Data Ecosystem Projects": [
+        "recRwnFupko7hywEn",
+        "reclLUvOxshjdhBUy"
+      ],
+      "Org Donor Agencies": [
+        "rec1YpvhkjwME6GOJ"
+      ],
+      "Has received CRAF'd Funding?": "NO",
+      "org_key": "hiik",
+      "Org Type": "Academia",
+      "Org HQ Country": [
+        "Germany"
+      ]
+    },
+    "agencies": [
+      {
+        "id": "rec1YpvhkjwME6GOJ",
+        "fields": {
+          "Agency/Department Name": "Unspecified Agency",
+          "Country Name": "Germany"
+        }
+      }
+    ],
+    "projects": [
+      {
+        "id": "recRwnFupko7hywEn",
+        "fields": {
+          "Project/Product Name": "Conflict Barometer",
+          "Provider Orgs Full Name": [
+            "recYDMArSj5a97Ibs"
+          ],
+          "Investment Type(s)": [
+            "Data Sets & Commons"
+          ],
+          "Investment Theme(s)": [
+            "Conflict & Violence Data"
+          ],
+          "HDX_SOHD": "None",
+          "Project Description": "Since 1992, the Conflict Barometer has qualitatively and quantitatively recorded the dynamics of political conflicts, both violent and non-violent, worldwide. In accordance with the HIIK methodology, violent conflicts are classified according to their intensity into violent crises (intensity 3), limited wars (intensity 4), and wars (intensity 5). Non-violent conflicts are divided into disputes (intensity 1) and non-violent crises (intensity 2). The annual report is supplemented by conflict maps, graphics, and datasets as well as Spotlight texts that shed light on the wider context of current conflict dynamics."
+        },
+        "agencies": []
+      },
+      {
+        "id": "reclLUvOxshjdhBUy",
+        "fields": {
+          "Project/Product Name": "Map Kit",
+          "Provider Orgs Full Name": [
+            "recYDMArSj5a97Ibs"
+          ],
+          "Investment Type(s)": [
+            "Data Sets & Commons"
+          ],
+          "Investment Theme(s)": [
+            "Conflict & Violence Data"
+          ],
+          "HDX_SOHD": "None"
+        },
+        "agencies": []
+      }
+    ],
+    "donor_countries": [
+      "Germany"
+    ]
+  },
+  {
     "id": "recZFA1GrNd8swlAz",
     "name": "Coventry University",
     "fields": {
@@ -11333,7 +11458,37 @@
       "org_key": "undrr",
       "Org Type": "United Nations System",
       "HDX Org Key": "united-nations-office-for-disaster-risk-reduction-unisdr",
+      "Budget Source": "Website",
       "Last Updated": 2024,
+      "Link to Budget Source": "https://www.undrr.org/about-undrr/funding",
+      "Budget Source Screenshot": [
+        {
+          "id": "att2mgSooXWJlKxxk",
+          "width": 1138,
+          "height": 868,
+          "url": "https://v5.airtableusercontent.com/v3/u/48/48/1765476000000/IeVfAUdQtUmjDv3RjJ2Piw/mCohJUIBRQqZS-ahzUyNsAwtCSAxlx4-pMO4ZfGmB60G6oWJ6joWZTAMdrYJzbhdjwZOjvjeiu8_NpxbQHPeTEq_jvYnShsDlJ0olpHA5WC7CF5UkXdA9KoZ9ykfDsM92pnAWPuTWlUPEluZKwis8WjdBVHmX9k20e5Iq6Hk4d1jfEIX_ytqooSY3r7Efhia/8Qy2RLVYIW1hGCEoLd7u_eYFKBDybj6H25krakQdO4s",
+          "filename": "Screenshot 2025-12-11 at 10.29.11 AM.png",
+          "size": 251029,
+          "type": "image/png",
+          "thumbnails": {
+            "small": {
+              "url": "https://v5.airtableusercontent.com/v3/u/48/48/1765476000000/8RR8_xWwUFqjVlUGY6C-YQ/B8Rh-iGfo8utQN-NPxa0Pe4CaNBafz0r0mWsRugM6XLoJPr-bGtHVPQwRnDOZ3cbRO_fvz1jbZcsAr6_nYh_RBnU4gC1vo03Ksxw8hKIb-EUh3_V3AXKG-R61N9V2Ruz20X0BO0CVlz7gbCrZrQs0w/77v4zlE9szE4xDQhWheBmRJM8AvNn2-YmjVDBJrnAck",
+              "width": 47,
+              "height": 36
+            },
+            "large": {
+              "url": "https://v5.airtableusercontent.com/v3/u/48/48/1765476000000/FhbVI2v6XdLhVOboJ2tqqw/4O_0DdsOj4_U3lpu_ZugCMdq5DrW-KnOWXepZZeTXpvcrkWuXgCnp2NhzGZB848g0Vhyd_njVJNDAuFjJAwK6KjxYzA453srxPfWdNSj8Ktg-icuToupDY3DviCowkNe9qiA9UmCQWqAqAC8xkFcMQ/dmeRecjP7PJJ9Ah8Q2KNOoQ77r-VKP4oFF_z_3ccZO0",
+              "width": 671,
+              "height": 512
+            },
+            "full": {
+              "url": "https://v5.airtableusercontent.com/v3/u/48/48/1765476000000/c-NvTmKwxGw3y1lIgBwenw/KM6Dnd0sO2QH6TyaF0wBdRTKchVe3eIE3gQJIlsRhbmwFhGVwGG1gc4ATjg_X66t2AGnAH3RJ2iMnHTfM8m_6jHKlJDjGAOW0cBc-QoE0ypCQm1J7E6Pr9LV6ULS_WWk0eET5TEONKlfN3VGn4Tr9g/m9jpJDq6Khjt3ppRLSgoNxqiffPt2p7lPPeGBXp2f60",
+              "width": 1138,
+              "height": 868
+            }
+          }
+        }
+      ],
       "Org HQ Country": [
         "Switzerland"
       ]
@@ -15775,12 +15930,42 @@
       "Org IATI Name": "United Nations Environment Programme (UNEP)",
       "Org MPTFO Name": "UNEP",
       "Org MPTFO URL [Formula]": "https://mptf.undp.org/participating-organizations/UNEP",
-      "Est. Org Budget": 671300000,
+      "Est. Org Budget": 419000000,
       "Has received CRAF'd Funding?": "NO",
       "org_key": "unep",
       "Org Type": "United Nations System",
       "HDX Org Key": "unep-ocha-jeu",
+      "Budget Source": "Annual Report",
       "Last Updated": 2024,
+      "Link to Budget Source": "https://www.unep.org/resources/annual-report-2024#:~:text=The%202024%20Annual%20Report%20details,States%20to%20deliver%20on%20commitments.",
+      "Budget Source Screenshot": [
+        {
+          "id": "att5waJvEaxfHjitj",
+          "width": 1202,
+          "height": 704,
+          "url": "https://v5.airtableusercontent.com/v3/u/48/48/1765476000000/4SQ56am4m8QX45ykg2I6NQ/mvnM_tC_sv_EPIGTus2fuHTw5EytmrtOvnFHsOpd5hZVptXgEy6m1TnvXIhuJKAAMVytsDNzLudBGzDzCzqxL6YA5bNUzQ3KpmvdgUzlcM-l0ocK-MuRIegmHppF3J3kHu8SRoA-0b49kDv1Csnpg73I2WpdEzy5QNxVw-6FfiSp_sRNQo4AsSdvLZzvgnB1/OVjQQYHRD_azziyyenlESaA8RIZSYWTKJwozQyPl-YE",
+          "filename": "Screenshot 2025-12-11 at 10.31.09 AM.png",
+          "size": 150900,
+          "type": "image/png",
+          "thumbnails": {
+            "small": {
+              "url": "https://v5.airtableusercontent.com/v3/u/48/48/1765476000000/oGn36XUZkOXz4HpNu_i5tQ/UqH_gzS_dpikn5aeQEhQkuY3kMRFN7l7eKgg-Tsg7neSgFoMkWVQSyA4u1WFTHovTBmETz20Yd5-Wct8ZfASYeaof9Gb9-uuwdTc59RFBjWsyahguPsIgJ0FamZ8LNYwxHR7NU0osOXyWfCAzrHPEg/sOzM8WKu0pnuTwLdhp4OSNBkuVQw1XqzUC4qqXrzu_Q",
+              "width": 61,
+              "height": 36
+            },
+            "large": {
+              "url": "https://v5.airtableusercontent.com/v3/u/48/48/1765476000000/h2pPxNRJ9IBJG6i_ml2x7A/0LC7sDSwB6Za1Kxts6LjHW5TBKdzZdLc4RTl3Zej7ztiRPN9VxfLpOsnKrb4U9SW9AjEWEltlreZOLeFOaFKRnT5vICDAPoC2_7Mu-T6RBCZgP_MAeRvjBDpDwFbfgLTdEIaXy4BDns7J9JlmLmrFg/azZ6WzVU9w7Pmy5JW2LsDaAhRqV6_DJm4GLgNvUGaXA",
+              "width": 874,
+              "height": 512
+            },
+            "full": {
+              "url": "https://v5.airtableusercontent.com/v3/u/48/48/1765476000000/IaUT4jHNFrA2Rh9sOlfpLg/j55UeWWS_hFPRI7IC92zuW1EWppxAIhUFxJRiypVqU-smz1dCTegmN2Y7wdPs7EKAtykOM1RGDg4fT6Xl1lEkrwTkGU7jzZT1WoLw5t1ulPgOttO_vtMrJQxNhvvt-N0Zcr9e5WjrBa6HszCjL4L7w/sK3akMKE87VSYHnFb3593ShDQfxFI2P9u8XtEClOJxk",
+              "width": 1202,
+              "height": 704
+            }
+          }
+        }
+      ],
       "Org HQ Country": [
         "Kenya"
       ]

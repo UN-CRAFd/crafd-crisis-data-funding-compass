@@ -33,53 +33,29 @@
   {
     "id": "rec1UYGdN0XUBCmDY",
     "fields": {
-      "Org Full Name": "Heidelberg University",
+      "Org Full Name": "HeiGIT: Heidelberg Institute for Geoinformation Technology",
       "Org Short Name": "HeiGIT",
-      "Org Website": "https://www.uni-heidelberg.de/en",
-      "Org Description": "Founded in 1386, Ruperto Carola is the oldest university in today's Germany and one of Europe’s leading research institutions. It defines itself as an internationally networked research university dedicated to research-oriented teaching. With over 160 fields of study, it offers the broad spectrum of subjects representative of a comprehensive university as well as abundant opportunities to acquire a singular and internationally competitive qualification profile.",
+      "Org Website": "https://heigit.org/",
+      "Org Description": "HeiGIT (Heidelberg Institute for Geoinformation Technology) advances geoinformation technology for societal and environmental benefit. It bridges the gap between fundamental research in geoinformatics and practical applications by developing innovative tools and methods. Its work includes customized geodata for humanitarian missions and intelligent routing for disaster response and climate action.\n\nUsing advances in spatial data processing and machine learning, it enriches and analyzes geodata such as OpenStreetMap, providing free tools and insights to researchers, public authorities, and non-profit organizations.",
       "Provided Data Ecosystem Projects": [
-        "recEuWdBixgTpQKhR",
-        "recTaCZEF36yEoMIT"
+        "recSZ5wPOqG3Pm9Ip",
+        "recE22sC1jhIuZnWn",
+        "recCMSnUjitsYc1XQ",
+        "rec59LnTqL11pcRdG"
       ],
       "Org Donor Agencies": [
-        "rec1YpvhkjwME6GOJ"
+        "rec1YpvhkjwME6GOJ",
+        "recDY0ngiDePaQtm3",
+        "receDOQpfeb4YHc5p"
       ],
-      "Est. Org Budget": 1159471782,
+      "Est. Org Budget": 3000000,
       "Has received CRAF'd Funding?": "NO",
       "org_key": "heigit",
       "Org Type": "Academia",
       "HDX Org Key": "heidelberg-institute-for-geoinformation-technology",
       "Budget Source": "Website",
-      "Last Updated": 2024,
-      "Link to Budget Source": "https://www.uni-heidelberg.de/en/university/facts-figures/funding",
-      "Budget Source Screenshot": [
-        {
-          "id": "attVGv7vwiDXcc7Wv",
-          "width": 1928,
-          "height": 678,
-          "url": "https://v5.airtableusercontent.com/v3/u/48/48/1765476000000/iVmK3zQTFXHul8d_Vxik5w/OJf4Y27RJ-bGbwPxfg8ZVb0xm-oCPpRCbvEMSX4LzYiDx6eZ8BaqHIEa9nx_N4HljpPx6sfVnzKUDnD2_5p1fBXxliacnOuUn45Zw8_6ZXNkLdpHgLRuuWwwnjblZoHvUdm6u-camlWoPlNS0zoNGS5ZSFZ6CfJBrEz56DIOamIPnnv1di3AHW43QKmQbaAP/nK0CdG7LgwpULC-yQIvEOHaCKuGsS7ZhgFx2LS6fRok",
-          "filename": "Screenshot 2025-12-10 at 12.06.22 PM.png",
-          "size": 75156,
-          "type": "image/png",
-          "thumbnails": {
-            "small": {
-              "url": "https://v5.airtableusercontent.com/v3/u/48/48/1765476000000/MXWstRaInTVziQ1S9K3L0w/2jWpqs7iBX5PEStgbm0a4mA28bKe9cuiumXONDib9pehjjcW7dD5AX-2Y5C6Dd9ORFIzgBKUGjXSzYQTAZ5ndxrjpRQ5xjqh6orGrSA3XF4iwcd1EBT2YFNaBqTZdcsyoRpXNiCFyGdnWCWYqFa7cg/yBEAiv9aWWwqL9dcjuO9Q3pNJ1GRtxClHjZmB-zYeWY",
-              "width": 102,
-              "height": 36
-            },
-            "large": {
-              "url": "https://v5.airtableusercontent.com/v3/u/48/48/1765476000000/uIsopn2HT4zyS37pSmEoHg/X60bBp4WeGecgsqftMbX-sZ3e4jTVg5Gowf6DOMYvEtCRlbfeo13HFr5Dw5TLCufksV5IpoTUxEl5Qk9HWEZifCBBh0xx0HSmnS2EterOaiN4flPUVnQEHJPkbdcJrNXK7VyPZZHeOwXmQL2kwHRzw/pgWcukD11qQ-r5ZpCJkCq8L6NVSW04Uw4gjLLufBZfU",
-              "width": 1456,
-              "height": 512
-            },
-            "full": {
-              "url": "https://v5.airtableusercontent.com/v3/u/48/48/1765476000000/aY_pWuV3QW9slcm5QBU5yQ/5rIMdb26sY3toZssyAjvlCyqbV06V2PYMvEKco0f6bk9zwNC-cg8gxLKljjQ1YUa7Ztp1BxLJCMiiBd5xlktTBWKUzVaVDoVV8XUFOhEIOmEanGtheF7aE3r0mczKoaNqsLn7rqsIEmwJvy2k8nD_Q/lyMkmcZcIaZuQ3rVgTlKc59pMi-DKoGnwIjoO-sD3yM",
-              "width": 1928,
-              "height": 678
-            }
-          }
-        }
-      ],
+      "Last Updated": 2016,
+      "Link to Budget Source": "https://www.uni-heidelberg.de/presse/meldungen/2016/m20160707_how-geodata-can-support-humanitarian-aid-in-catastrophes.html?utm_source=chatgpt.com",
       "Org HQ Country": [
         "Germany"
       ]
@@ -2477,6 +2453,28 @@
     }
   },
   {
+    "id": "recYDMArSj5a97Ibs",
+    "fields": {
+      "Org Full Name": "HIIK: Heidelberg Institute for International Conflict Research",
+      "Org Short Name": "HIIK",
+      "Org Website": "https://hiik.de/?lang=en",
+      "Org Description": "The Heidelberg Institute for International Conflict Research (HIIK) is an independent and interdisciplinary registered association located at the Department of Political Science at the University of Heidelberg. Since 1991, the HIIK has been committed to the distribution of knowledge about the emergence, course and settlement of interstate and intrastate political conflicts. The Conflict Barometer is published annually and contains the current research results.",
+      "Provided Data Ecosystem Projects": [
+        "recRwnFupko7hywEn",
+        "reclLUvOxshjdhBUy"
+      ],
+      "Org Donor Agencies": [
+        "rec1YpvhkjwME6GOJ"
+      ],
+      "Has received CRAF'd Funding?": "NO",
+      "org_key": "hiik",
+      "Org Type": "Academia",
+      "Org HQ Country": [
+        "Germany"
+      ]
+    }
+  },
+  {
     "id": "recZFA1GrNd8swlAz",
     "fields": {
       "Org Full Name": "Coventry University",
@@ -2883,7 +2881,37 @@
       "org_key": "undrr",
       "Org Type": "United Nations System",
       "HDX Org Key": "united-nations-office-for-disaster-risk-reduction-unisdr",
+      "Budget Source": "Website",
       "Last Updated": 2024,
+      "Link to Budget Source": "https://www.undrr.org/about-undrr/funding",
+      "Budget Source Screenshot": [
+        {
+          "id": "att2mgSooXWJlKxxk",
+          "width": 1138,
+          "height": 868,
+          "url": "https://v5.airtableusercontent.com/v3/u/48/48/1765476000000/IeVfAUdQtUmjDv3RjJ2Piw/mCohJUIBRQqZS-ahzUyNsAwtCSAxlx4-pMO4ZfGmB60G6oWJ6joWZTAMdrYJzbhdjwZOjvjeiu8_NpxbQHPeTEq_jvYnShsDlJ0olpHA5WC7CF5UkXdA9KoZ9ykfDsM92pnAWPuTWlUPEluZKwis8WjdBVHmX9k20e5Iq6Hk4d1jfEIX_ytqooSY3r7Efhia/8Qy2RLVYIW1hGCEoLd7u_eYFKBDybj6H25krakQdO4s",
+          "filename": "Screenshot 2025-12-11 at 10.29.11 AM.png",
+          "size": 251029,
+          "type": "image/png",
+          "thumbnails": {
+            "small": {
+              "url": "https://v5.airtableusercontent.com/v3/u/48/48/1765476000000/8RR8_xWwUFqjVlUGY6C-YQ/B8Rh-iGfo8utQN-NPxa0Pe4CaNBafz0r0mWsRugM6XLoJPr-bGtHVPQwRnDOZ3cbRO_fvz1jbZcsAr6_nYh_RBnU4gC1vo03Ksxw8hKIb-EUh3_V3AXKG-R61N9V2Ruz20X0BO0CVlz7gbCrZrQs0w/77v4zlE9szE4xDQhWheBmRJM8AvNn2-YmjVDBJrnAck",
+              "width": 47,
+              "height": 36
+            },
+            "large": {
+              "url": "https://v5.airtableusercontent.com/v3/u/48/48/1765476000000/FhbVI2v6XdLhVOboJ2tqqw/4O_0DdsOj4_U3lpu_ZugCMdq5DrW-KnOWXepZZeTXpvcrkWuXgCnp2NhzGZB848g0Vhyd_njVJNDAuFjJAwK6KjxYzA453srxPfWdNSj8Ktg-icuToupDY3DviCowkNe9qiA9UmCQWqAqAC8xkFcMQ/dmeRecjP7PJJ9Ah8Q2KNOoQ77r-VKP4oFF_z_3ccZO0",
+              "width": 671,
+              "height": 512
+            },
+            "full": {
+              "url": "https://v5.airtableusercontent.com/v3/u/48/48/1765476000000/c-NvTmKwxGw3y1lIgBwenw/KM6Dnd0sO2QH6TyaF0wBdRTKchVe3eIE3gQJIlsRhbmwFhGVwGG1gc4ATjg_X66t2AGnAH3RJ2iMnHTfM8m_6jHKlJDjGAOW0cBc-QoE0ypCQm1J7E6Pr9LV6ULS_WWk0eET5TEONKlfN3VGn4Tr9g/m9jpJDq6Khjt3ppRLSgoNxqiffPt2p7lPPeGBXp2f60",
+              "width": 1138,
+              "height": 868
+            }
+          }
+        }
+      ],
       "Org HQ Country": [
         "Switzerland"
       ]
@@ -3837,12 +3865,42 @@
       "Org IATI Name": "United Nations Environment Programme (UNEP)",
       "Org MPTFO Name": "UNEP",
       "Org MPTFO URL [Formula]": "https://mptf.undp.org/participating-organizations/UNEP",
-      "Est. Org Budget": 671300000,
+      "Est. Org Budget": 419000000,
       "Has received CRAF'd Funding?": "NO",
       "org_key": "unep",
       "Org Type": "United Nations System",
       "HDX Org Key": "unep-ocha-jeu",
+      "Budget Source": "Annual Report",
       "Last Updated": 2024,
+      "Link to Budget Source": "https://www.unep.org/resources/annual-report-2024#:~:text=The%202024%20Annual%20Report%20details,States%20to%20deliver%20on%20commitments.",
+      "Budget Source Screenshot": [
+        {
+          "id": "att5waJvEaxfHjitj",
+          "width": 1202,
+          "height": 704,
+          "url": "https://v5.airtableusercontent.com/v3/u/48/48/1765476000000/4SQ56am4m8QX45ykg2I6NQ/mvnM_tC_sv_EPIGTus2fuHTw5EytmrtOvnFHsOpd5hZVptXgEy6m1TnvXIhuJKAAMVytsDNzLudBGzDzCzqxL6YA5bNUzQ3KpmvdgUzlcM-l0ocK-MuRIegmHppF3J3kHu8SRoA-0b49kDv1Csnpg73I2WpdEzy5QNxVw-6FfiSp_sRNQo4AsSdvLZzvgnB1/OVjQQYHRD_azziyyenlESaA8RIZSYWTKJwozQyPl-YE",
+          "filename": "Screenshot 2025-12-11 at 10.31.09 AM.png",
+          "size": 150900,
+          "type": "image/png",
+          "thumbnails": {
+            "small": {
+              "url": "https://v5.airtableusercontent.com/v3/u/48/48/1765476000000/oGn36XUZkOXz4HpNu_i5tQ/UqH_gzS_dpikn5aeQEhQkuY3kMRFN7l7eKgg-Tsg7neSgFoMkWVQSyA4u1WFTHovTBmETz20Yd5-Wct8ZfASYeaof9Gb9-uuwdTc59RFBjWsyahguPsIgJ0FamZ8LNYwxHR7NU0osOXyWfCAzrHPEg/sOzM8WKu0pnuTwLdhp4OSNBkuVQw1XqzUC4qqXrzu_Q",
+              "width": 61,
+              "height": 36
+            },
+            "large": {
+              "url": "https://v5.airtableusercontent.com/v3/u/48/48/1765476000000/h2pPxNRJ9IBJG6i_ml2x7A/0LC7sDSwB6Za1Kxts6LjHW5TBKdzZdLc4RTl3Zej7ztiRPN9VxfLpOsnKrb4U9SW9AjEWEltlreZOLeFOaFKRnT5vICDAPoC2_7Mu-T6RBCZgP_MAeRvjBDpDwFbfgLTdEIaXy4BDns7J9JlmLmrFg/azZ6WzVU9w7Pmy5JW2LsDaAhRqV6_DJm4GLgNvUGaXA",
+              "width": 874,
+              "height": 512
+            },
+            "full": {
+              "url": "https://v5.airtableusercontent.com/v3/u/48/48/1765476000000/IaUT4jHNFrA2Rh9sOlfpLg/j55UeWWS_hFPRI7IC92zuW1EWppxAIhUFxJRiypVqU-smz1dCTegmN2Y7wdPs7EKAtykOM1RGDg4fT6Xl1lEkrwTkGU7jzZT1WoLw5t1ulPgOttO_vtMrJQxNhvvt-N0Zcr9e5WjrBa6HszCjL4L7w/sK3akMKE87VSYHnFb3593ShDQfxFI2P9u8XtEClOJxk",
+              "width": 1202,
+              "height": 704
+            }
+          }
+        }
+      ],
       "Org HQ Country": [
         "Kenya"
       ]
