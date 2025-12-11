@@ -191,6 +191,12 @@ export default function OrganizationModal({
         // If the caller provided a raw fields object (from organizations-table.json), render all keys
         const fields = organization.fields || {};
 
+        // Extract budget-related fields early so they're available for both the budget box and notes
+        const estBudget = fields['Est. Org Budget'];
+        const budgetSourceRaw = fields['Budget Source'];
+        const budgetSourceStr = budgetSourceRaw != null ? String(budgetSourceRaw) : null;
+        const lastUpdated = fields['Last Updated'];
+
         // Helper to render a single field value nicely
         const renderValue = (val: unknown): React.ReactNode => {
             if (val === null || val === undefined) return <span className="text-gray-500">—</span>;
@@ -467,11 +473,8 @@ export default function OrganizationModal({
                     {(() => {
                         // Get donor countries from the centralized map (computed from nested data)
                         const donorCountries = orgDonorCountriesMap[organization.id] || [];
-                        const estBudget = fields['Est. Org Budget'];
 
-                        // Narrow unknown typed fields to explicit string/null values for safe rendering
-                        const budgetSourceRaw = fields['Budget Source'];
-                        const budgetSourceStr = budgetSourceRaw != null ? String(budgetSourceRaw) : null;
+                        // Use the budget fields already extracted at the top
                         const linkRaw = fields['Link to Budget Source'];
                         const linkToBudgetSource = typeof linkRaw === 'string' && linkRaw.trim() !== '' ? linkRaw.trim() : null;
                         
@@ -481,8 +484,8 @@ export default function OrganizationModal({
                             ? (budgetScreenshotRaw[0] as { url?: string; thumbnails?: { large?: { url?: string } } })?.thumbnails?.large?.url || (budgetScreenshotRaw[0] as { url?: string })?.url || null
                             : null;
 
-                        // Only show if at least one field has a value
-                        if (!estBudget && !budgetSourceStr && donorCountries.length === 0) {
+                        // Only show the whole section if there are donors OR budget data
+                        if (donorCountries.length === 0 && !estBudget && !budgetSourceStr && !lastUpdated) {
                             return null;
                         }
 
@@ -495,6 +498,8 @@ export default function OrganizationModal({
                                     </h3>
                                     <span className="text-lg font-normal text-gray-500 tabular-nums">({donorCountries.length})</span>
                                 </div>
+                                    {/* Budget Box - only show if at least one budget field has data */}
+                                    {(estBudget || budgetSourceStr || lastUpdated) && (
                                     <div className="rounded-lg border border-slate-200 bg-slate-100 p-4 shadow-sm">
                                         
                                         <div className="mt-0 grid grid-cols-[3fr_3fr_3fr_0.2fr] gap-4">
@@ -575,6 +580,7 @@ export default function OrganizationModal({
                                             </div>
                                         </div>
                                     </div>
+                                    )}
                                 <div className="flex flex-wrap gap-2 mt-4">
                                     {donorCountries.map((country) => {
                                         const orgAgencies = orgAgenciesMap[organization.id] || {};
@@ -604,6 +610,12 @@ export default function OrganizationModal({
                                 <span className="text-slate-400 mr-2 shrink-0">•</span>
                                 <span>{labels.modals.notesInsights}</span>
                             </div>
+                            {!estBudget && !budgetSourceStr && !lastUpdated && (
+                                <div className="flex items-start">
+                                    <span className="text-slate-400 mr-2 shrink-0">•</span>
+                                    <span>No detailed budget amount is publicly disclosed.</span>
+                                </div>
+                            )}
                         {isUN && (
                             <div className="flex items-start">
                                 <span className="text-slate-400 mr-2 shrink-0">•</span>
