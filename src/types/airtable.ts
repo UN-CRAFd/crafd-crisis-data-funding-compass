@@ -90,6 +90,7 @@ export interface OrganizationTypeData {
 }
 
 export interface OrganizationProjectData {
+    donorCountries: any;
     organizationName: string;
     projectCount: number;
     type: string;
