@@ -370,7 +370,7 @@
       "Provider Orgs Full Name": [
         "reclJ2i9jD0TKjOJ8"
       ],
-      "CRAF’d-Funded Project?": "NO",
+      "CRAF’d-Funded Project?": "YES",
       "Investment Type(s)": [
         "Data Sets & Commons"
       ],
@@ -556,6 +556,7 @@
       "Provider Orgs Full Name": [
         "rec1UYGdN0XUBCmDY"
       ],
+      "CRAF’d-Funded Project?": "NO",
       "Investment Type(s)": [
         "Crisis Analytics & Insights",
         "Standards & Coordination"
@@ -629,34 +630,6 @@
       "product_key": "gannet-ai",
       "HDX_SOHD": "None",
       "Project Description": "GANNET is a real-time, end-to-end Generative AI platform that combines near real-time assistance, analytics, and monitoring features for humanitarian data collaboration and effective decision-making."
-    }
-  },
-  {
-    "id": "rec6S0tX5hnP9I5DG",
-    "fields": {
-      "Project/Product Name": "WorldPop",
-      "Project Donor Agencies": [
-        "recbtz43uuKKFVfvd",
-        "recbvrcYZZW7mBnCU",
-        "recCDa9F6ntBxGGkm",
-        "recqMZBMvN0vxYv9v",
-        "rec3Ado0Jrl799Q8A",
-        "recqhcKxTv71yMfeI",
-        "recAXDKxEbXsaHav4",
-        "recl0rZvHPzrC6Jwd",
-        "recq6gN9R1C4tGmIx"
-      ],
-      "Project Website": "https://www.worldpop.org/about/",
-      "CRAF’d-Funded Project?": "NO",
-      "Investment Type(s)": [
-        "Data Sets & Commons"
-      ],
-      "Investment Theme(s)": [
-        "Baseline Population Data"
-      ],
-      "product_key": "worldpop",
-      "HDX_SOHD": "None",
-      "Project Description": "WorldPop develops peer-reviewed research and methodologies for constructing open and high-resolution geospatial data on population distributions, demographics, and dynamics."
     }
   },
   {
@@ -1031,6 +1004,7 @@
       "Provider Orgs Full Name": [
         "rec1UYGdN0XUBCmDY"
       ],
+      "CRAF’d-Funded Project?": "NO",
       "Investment Type(s)": [
         "Infrastructure & Platforms",
         "Crisis Analytics & Insights",
@@ -1299,7 +1273,7 @@
       "Provider Orgs Full Name": [
         "recsrCWKAPu9dwkHb"
       ],
-      "CRAF’d-Funded Project?": "YES",
+      "CRAF’d-Funded Project?": "NO",
       "Investment Type(s)": [
         "Data Sets & Commons"
       ],
@@ -2150,6 +2124,7 @@
       "Provider Orgs Full Name": [
         "recYDMArSj5a97Ibs"
       ],
+      "CRAF’d-Funded Project?": "NO",
       "Investment Type(s)": [
         "Data Sets & Commons"
       ],
@@ -2277,6 +2252,7 @@
       "Provider Orgs Full Name": [
         "rec1UYGdN0XUBCmDY"
       ],
+      "CRAF’d-Funded Project?": "NO",
       "Investment Type(s)": [
         "Data Sets & Commons",
         "Crisis Analytics & Insights"
@@ -2877,6 +2853,7 @@
       "Provider Orgs Full Name": [
         "recCvRYx3gzUtg9cf"
       ],
+      "CRAF’d-Funded Project?": "NO",
       "Investment Type(s)": [
         "Crisis Analytics & Insights"
       ],
@@ -2896,6 +2873,7 @@
       "Provider Orgs Full Name": [
         "recU1jAnjfLIhxtwj"
       ],
+      "CRAF’d-Funded Project?": "NO",
       "Investment Type(s)": [
         "Data Sets & Commons"
       ],
@@ -3145,6 +3123,7 @@
       "Provider Orgs Full Name": [
         "recHAqTQikIG8K4tD"
       ],
+      "CRAF’d-Funded Project?": "NO",
       "Investment Type(s)": [
         "Data Sets & Commons"
       ],
@@ -3261,7 +3240,7 @@
       "Provider Orgs Full Name": [
         "rec4rSsPP59Beed9i"
       ],
-      "CRAF’d-Funded Project?": "YES",
+      "CRAF’d-Funded Project?": "NO",
       "Investment Type(s)": [
         "Human Capital & Know-how"
       ],
@@ -3764,6 +3743,7 @@
       "Provider Orgs Full Name": [
         "recYDMArSj5a97Ibs"
       ],
+      "CRAF’d-Funded Project?": "NO",
       "Investment Type(s)": [
         "Data Sets & Commons"
       ],
@@ -3782,6 +3762,7 @@
       "Provider Orgs Full Name": [
         "recvzWSlYgzs0mffd"
       ],
+      "CRAF’d-Funded Project?": "NO",
       "Investment Type(s)": [
         "Human Capital & Know-how"
       ],
@@ -4172,6 +4153,7 @@
       "Provider Orgs Full Name": [
         "recU1jAnjfLIhxtwj"
       ],
+      "CRAF’d-Funded Project?": "NO",
       "Investment Type(s)": [
         "Data Sets & Commons",
         "Crisis Analytics & Insights"
@@ -4340,7 +4322,7 @@
       "Provider Orgs Full Name": [
         "reclJ2i9jD0TKjOJ8"
       ],
-      "CRAF’d-Funded Project?": "NO",
+      "CRAF’d-Funded Project?": "YES",
       "Investment Type(s)": [
         "Crisis Analytics & Insights"
       ],
@@ -4440,7 +4422,7 @@
       "Provider Orgs Full Name": [
         "reci9Q8xAcus6YuKx"
       ],
-      "CRAF’d-Funded Project?": "YES",
+      "CRAF’d-Funded Project?": "NO",
       "Investment Type(s)": [
         "Data Sets & Commons",
         "Crisis Analytics & Insights"
@@ -4957,6 +4939,7 @@
       "Provider Orgs Full Name": [
         "recHsNe20lr1CUAVu"
       ],
+      "CRAF’d-Funded Project?": "NO",
       "Investment Type(s)": [
         "Human Capital & Know-how"
       ],
