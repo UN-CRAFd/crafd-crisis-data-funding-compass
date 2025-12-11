@@ -352,6 +352,13 @@
     }
   },
   {
+    "id": "recBCG38dUf5vJ235",
+    "fields": {
+      "Agency/Department Name": "Unspecified Agency",
+      "Country Name": "Kuwait"
+    }
+  },
+  {
     "id": "recBEtacusKEwpWho",
     "fields": {
       "Agency/Department Name": "Office of the United Nations High Commissioner for Refugees (UNHCR)",
@@ -637,6 +644,14 @@
     }
   },
   {
+    "id": "recLZVuV2acBHkXYp",
+    "fields": {
+      "Agency/Department Name": "Education Cannot Wait",
+      "Country Name": "Foundation",
+      "Agency Website": "https://www.educationcannotwait.org/"
+    }
+  },
+  {
     "id": "recLZauHkiDI0nwAy",
     "fields": {
       "Agency/Department Name": "Federal Agency for Technical Relief (THW)",
@@ -790,6 +805,13 @@
       "Agency Data Portal": "https://www.dutchdevelopmentresults.nl/",
       "Country Name": "Netherlands",
       "Agency Website": "https://www.government.nl/ministries/ministry-of-foreign-affairs"
+    }
+  },
+  {
+    "id": "recRorrcCX58qY4Vz",
+    "fields": {
+      "Agency/Department Name": "Special Trust Fund for Afghanistan",
+      "Country Name": "United Nations"
     }
   },
   {
@@ -1025,6 +1047,13 @@
     "fields": {
       "Agency/Department Name": "Unspecified Agency",
       "Country Name": "Denmark"
+    }
+  },
+  {
+    "id": "recZKv3PSLRBH6Lcn",
+    "fields": {
+      "Agency/Department Name": "Regular Budget",
+      "Country Name": "United Nations"
     }
   },
   {
