@@ -82,7 +82,7 @@ export default function PageHeader({
                                 <TooltipContent
                                     side="bottom"
                                     align="center"
-                                    className="max-w-105 p-3 bg-white text-slate-800 text-sm rounded-lg border border-slate-200"
+                                    className="max-w-115 p-1 bg-white text-slate-800 text-xs rounded-lg border border-slate-200"
                                     sideOffset={6}
                                     avoidCollisions={true}
                                     style={{ ...STYLES.chartTooltip }}
