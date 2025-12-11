@@ -7,7 +7,7 @@ import { ChevronDown, FileDown, Info, MessageCircle, Share2, Menu, Lightbulb } f
 import { useTips } from '@/contexts/TipsContext';
 import labels from '@/config/labels.json';
 import Link from 'next/link';
-import { usePathname } from 'next/navigation';
+import { usePathname, useRouter } from 'next/navigation';
 
 const STYLES = {
     chartTooltip: {
@@ -45,6 +45,7 @@ export default function PageHeader({
     onExportMenuChange,
 }: PageHeaderProps) {
     const pathname = usePathname();
+    const router = useRouter();
     
     // Safely use useTips with fallback defaults
     let tipsEnabled = false;
@@ -201,22 +202,18 @@ export default function PageHeader({
                                 sideOffset={4}
                                 className="w-auto min-w-[180px] bg-white border border-slate-200 shadow-lg"
                             >
-                                <Link href="/">
-                                    <DropdownMenuItem 
-                                        className={`cursor-pointer text-sm py-2 ${pathname === '/' ? 'font-bold' : ''}`}
-                                        style={pathname === '/' ? { backgroundColor: '#f1f5f9', color: '#0f172a' } : {}}
-                                    >
-                                        {labels.header.dashboard}
-                                    </DropdownMenuItem>
-                                </Link>
-                                <Link href="/methodology">
-                                    <DropdownMenuItem 
-                                        className={`cursor-pointer text-sm py-2 ${pathname === '/methodology' ? 'font-bold' : ''}`}
-                                        style={pathname === '/methodology' ? { backgroundColor: '#f1f5f9', color: '#0f172a' } : {}}
-                                    >
-                                        {labels.header.methodology}
-                                    </DropdownMenuItem>
-                                </Link>
+                                <DropdownMenuItem 
+                                    onClick={() => router.push('/')}
+                                    className={`cursor-pointer text-sm py-2 px-2 ${pathname === '/' ? 'bg-slate-100' : ''}`}
+                                >
+                                    <span className={pathname === '/' ? '!font-bold' : ''}>{labels.header.dashboard}</span>
+                                </DropdownMenuItem>
+                                <DropdownMenuItem 
+                                    onClick={() => router.push('/methodology/')}
+                                    className={`cursor-pointer text-sm py-2 px-2 ${pathname === '/methodology/' ? 'bg-slate-100' : ''}`}
+                                >
+                                    <span className={pathname === '/methodology/' ? '!font-bold' : ''}>{labels.header.methodology}</span>
+                                </DropdownMenuItem>
                             </DropdownMenuContent>
                         </DropdownMenu>
                     </div>
