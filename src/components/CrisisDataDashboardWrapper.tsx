@@ -76,7 +76,7 @@ const CrisisDataDashboardWrapper = ({ logoutButton }: { logoutButton?: React.Rea
         if (!dashboardData) return [];
         const allDonors = new Set<string>();
         dashboardData.allOrganizations.forEach(org => {
-            org.donorCountries?.forEach(d => allDonors.add(d));
+            org.donorCountries?.forEach((d: string) => allDonors.add(d));
         });
         return donorSlugsFromUrl
             .map(slug => Array.from(allDonors).find(d => matchesUrlSlug(slug, d)))
