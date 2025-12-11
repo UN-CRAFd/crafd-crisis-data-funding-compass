@@ -498,7 +498,6 @@ export default function OrganizationModal({
                                     </h3>
                                     <span className="text-lg font-normal text-gray-500 tabular-nums">({donorCountries.length})</span>
                                 </div>
-                                    {/* Budget Box - only show if at least one budget field has data */}
                                     {(estBudget || budgetSourceStr || lastUpdated) && (
                                     <div className="rounded-lg border border-slate-200 bg-slate-100 p-4 shadow-sm">
                                         
@@ -641,14 +640,7 @@ export default function OrganizationModal({
                                 </span>
                             </div>
                         )}
-                        {isUN && (
-                            <div className="flex items-start">
-                                <span className="text-slate-400 mr-2 shrink-0">•</span>
-                                <span>{labels.modals.budgetlineUn}</span>
-                                
-                            </div>
-                            
-                        )}
+                        
                     </div>
                 </div>
             </div>
