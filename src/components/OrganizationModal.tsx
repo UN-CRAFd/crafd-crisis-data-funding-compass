@@ -383,7 +383,7 @@ export default function OrganizationModal({
                                     <span className="text-lg font-normal text-slate-600 tabular-nums">({projectsList.length})</span>
                                 </div>
                                 
-                                <div className="flex flex-col gap-2 mt-4">
+                                <div className="flex flex-col gap-2 mt-4 mb-10">
                                     {(() => {
                                                         const orgProjects = orgProjectsMap[organization.id];
                                                         if (!orgProjects || orgProjects.length === 0) return null;
