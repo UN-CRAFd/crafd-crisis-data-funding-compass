@@ -67,6 +67,7 @@ export interface ProjectData {
 }
 
 export interface OrganizationWithProjects {
+    orgKey: any;
     id: string;
     organizationName: string;
     orgShortName: string;

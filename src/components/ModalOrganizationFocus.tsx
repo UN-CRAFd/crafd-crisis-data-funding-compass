@@ -44,7 +44,7 @@ const ModalOrganizationFocus: React.FC<ModalOrganizationFocusProps> = ({ project
                         const button = (
                             <button
                                 onClick={() => onTypeClick?.(type)}
-                                className="inline-flex items-center justify-between gap-1.5 px-3 py-1.5 rounded-md text-sm font-semibold hover:opacity-80 transition-opacity cursor-pointer w-full"
+                                className="inline-flex items-center justify-between gap-1.5 px-3 py-1.5 rounded-md text-sm font-semibold    hover:opacity-80 transition-opacity cursor-pointer w-full"
                                 style={{
                                     backgroundColor: 'var(--badge-other-bg)',
                                     color: 'var(--badge-other-text)'
