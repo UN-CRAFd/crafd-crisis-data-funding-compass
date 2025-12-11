@@ -13377,8 +13377,8 @@
       {
         "id": "recACsCLhhDutMpAv",
         "fields": {
-          "Agency/Department Name": "Unspecified Agency",
-          "Country Name": "Médecins Sans Frontières ",
+          "Agency/Department Name": "Médecins Sans Frontières",
+          "Country Name": "Non-State Actor",
           "Agency Website": "https://www.msf.org/"
         }
       }
@@ -13472,7 +13472,7 @@
     "donor_countries": [
       "European Union",
       "Germany",
-      "Médecins Sans Frontières",
+      "Non-State Actor",
       "Switzerland",
       "United Nations"
     ]
