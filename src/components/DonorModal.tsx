@@ -169,7 +169,7 @@ export default function DonorModal({
                 if (agencyCountry && matchesUrlSlug(donorCountry, agencyCountry)) {
                     const agencyName = agencyFields['Agency/Department Name'] || 'Unspecified Agency';
                     const agencyId = agency.id;
-                    const agencyPortal = agencyFields['Agency Data Portal'];
+                    const agencyPortal = agencyFields['Agency Website'];
 
                     if (!agencyMap.has(agencyId)) {
                         agencyMap.set(agencyId, {
@@ -409,7 +409,7 @@ export default function DonorModal({
                                                     target="_blank"
                                                     rel="noopener noreferrer"
                                                     className="text-slate-400 hover:text-slate-600 transition-colors"
-                                                    title="Agency Data Portal"
+                                                    title="Agency Website"
                                                 >
                                                     <ExternalLink className="h-4 w-4" />
                                                 </a>
