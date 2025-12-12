@@ -901,13 +901,41 @@ export default function AnalyticsPage({ logoutButton }: AnalyticsPageProps) {
                                                             ? `${getProjectColorIntensity(projectCount, maxValues.maxProjects)} ${projectCount > 0 ? 'text-slate-800' : 'text-slate-400'}`
                                                             : `${getOrgColorIntensity(orgCount, maxValues.maxOrgs)} ${orgCount > 0 ? 'text-slate-800' : 'text-slate-400'}`;
                                                     
-                                                    return (
+                                                    const tooltipText = isDiagonal 
+                                                        ? null
+                                                        : isAboveDiagonal
+                                                            ? `${donor1} and ${donor2} are co-financing ${projectCount} project${projectCount !== 1 ? 's' : ''}`
+                                                            : `${donor1} and ${donor2} are co-financing ${orgCount} organization${orgCount !== 1 ? 's' : ''}`;
+                                                    
+                                                    const cellContent = (
                                                         <td 
                                                             key={donor2}
                                                             className={`p-3 text-center text-sm font-semibold border border-slate-200 ${colorClass}`}
                                                         >
                                                             {isDiagonal ? '—' : count}
                                                         </td>
+                                                    );
+
+                                                    if (!tooltipText) return cellContent;
+
+                                                    return (
+                                                        <TooltipProvider key={donor2} delayDuration={0}>
+                                                            <TooltipUI>
+                                                                <TooltipTrigger asChild>
+                                                                    {cellContent}
+                                                                </TooltipTrigger>
+                                                                <TooltipContent
+                                                                    side="bottom"
+                                                                    align="center"
+                                                                    className="bg-white text-slate-800 text-sm rounded-lg border border-slate-200 px-3 py-2"
+                                                                    sideOffset={5}
+                                                                    avoidCollisions={true}
+                                                                    style={{ ...STYLES.chartTooltip }}
+                                                                >
+                                                                    {tooltipText}
+                                                                </TooltipContent>
+                                                            </TooltipUI>
+                                                        </TooltipProvider>
                                                     );
                                                 })}
                                             </tr>
@@ -919,25 +947,7 @@ export default function AnalyticsPage({ logoutButton }: AnalyticsPageProps) {
                     </Card>
 
                     {/* Legend */}
-                    <Card className="!border-0 bg-white">
-                        <CardContent className="p-6">
-                            <h3 className="text-sm font-semibold text-slate-700 mb-3">Color Scale Legend</h3>
-                            <div className="flex items-center gap-4">
-                                <span className="text-xs text-slate-600">Low</span>
-                                <div className="flex gap-1">
-                                    <div className="w-8 h-8 bg-amber-100 border border-slate-200"></div>
-                                    <div className="w-8 h-8 bg-amber-200 border border-slate-200"></div>
-                                    <div className="w-8 h-8 bg-amber-300 border border-slate-200"></div>
-                                    <div className="w-8 h-8 bg-amber-400 border border-slate-200"></div>
-                                    <div className="w-8 h-8 bg-amber-500 border border-slate-200"></div>
-                                </div>
-                                <span className="text-xs text-slate-600">High</span>
-                            </div>
-                            <p className="text-xs text-slate-500 mt-3">
-                                Darker colors indicate higher numbers of co-financed projects or organizations between donor pairs.
-                            </p>
-                        </CardContent>
-                    </Card>
+                 
                 </div>
             </div>
 
