@@ -131,11 +131,22 @@ const StatCard = ({ icon, title, value, label, colorScheme, tooltip }: StatCardP
     return cardContent;
 };
 
-// Helper to get color intensity based on count
-const getColorIntensity = (count: number, max: number): string => {
+// Helper to get color intensity for organizations (orange/amber)
+const getOrgColorIntensity = (count: number, max: number): string => {
     if (count === 0) return 'bg-slate-50';
     const intensity = Math.min(Math.ceil((count / max) * 5), 5);
     return `bg-amber-${intensity}00`;
+};
+
+// Helper to get color intensity for projects (purple/indigo)
+const getProjectColorIntensity = (count: number, max: number): string => {
+    if (count === 0) return 'bg-slate-50';
+    const ratio = count / max;
+    if (ratio <= 0.2) return 'bg-indigo-100';
+    if (ratio <= 0.4) return 'bg-indigo-200';
+    if (ratio <= 0.6) return 'bg-indigo-300';
+    if (ratio <= 0.8) return 'bg-indigo-400';
+    return 'bg-indigo-500';
 };
 
 export default function AnalyticsPage({ logoutButton }: AnalyticsPageProps) {
@@ -828,18 +839,29 @@ export default function AnalyticsPage({ logoutButton }: AnalyticsPageProps) {
                         />
                     </div>
 
-                    {/* Co-Financing Matrices - Side by Side */}
-                    <div className="grid grid-cols-1 lg:grid-cols-2 gap-4">
-                        <Card className="!border-0 bg-white">
-                            <CardHeader className="pb-0 h-6.5">
-                                <CardTitle>
-                                    <SectionHeader icon={<Network style={{ color: 'var(--brand-primary)' }} />} title="Projects Co-Financing Matrix" />
-                                </CardTitle>
-                            </CardHeader>
-                            <CardContent className="pt-0">
-                                <p className="text-sm text-slate-600 mb-0">
-                                    Number of projects co-financed between donor pairs
+                    {/* Unified Co-Financing Matrix */}
+                    <Card className="!border-0 bg-white">
+                        <CardHeader className="pb-0 h-6.5">
+                            <CardTitle>
+                                <SectionHeader icon={<Network style={{ color: 'var(--brand-primary)' }} />} title="Co-Financing Matrix" />
+                            </CardTitle>
+                        </CardHeader>
+                        <CardContent className="pt-0">
+                            <div className="flex items-center gap-4 mb-3">
+                                <p className="text-sm text-slate-600">
+                                    Co-financing relationships between donor pairs
                                 </p>
+                                <div className="flex items-center gap-3 ml-auto">
+                                    <div className="flex items-center gap-1.5">
+                                        <div className="w-4 h-4 bg-amber-300 border border-slate-300 rounded"></div>
+                                        <span className="text-xs text-slate-600">Organizations</span>
+                                    </div>
+                                    <div className="flex items-center gap-1.5">
+                                        <div className="w-4 h-4 bg-indigo-300 border border-slate-300 rounded"></div>
+                                        <span className="text-xs text-slate-600">Projects</span>
+                                    </div>
+                                </div>
+                            </div>
                             <div className="overflow-x-auto">
                                 <table className="w-full border-collapse">
                                     <thead>
@@ -859,23 +881,30 @@ export default function AnalyticsPage({ logoutButton }: AnalyticsPageProps) {
                                         </tr>
                                     </thead>
                                     <tbody>
-                                        {selectedDonors.map(donor1 => (
+                                        {selectedDonors.map((donor1, i) => (
                                             <tr key={donor1}>
                                                 <td className="p-2 text-xs font-semibold text-slate-600 border-r-2 border-slate-200">
                                                     {donor1}
                                                 </td>
-                                                {selectedDonors.map(donor2 => {
-                                                    const count = coFinancingMatrix[donor1]?.[donor2]?.projects.size || 0;
+                                                {selectedDonors.map((donor2, j) => {
                                                     const isDiagonal = donor1 === donor2;
+                                                    const isAboveDiagonal = i < j; // Above diagonal: projects (purple)
+                                                    const isBelowDiagonal = i > j; // Below diagonal: organizations (orange)
+                                                    
+                                                    const projectCount = coFinancingMatrix[donor1]?.[donor2]?.projects.size || 0;
+                                                    const orgCount = coFinancingMatrix[donor1]?.[donor2]?.orgs.size || 0;
+                                                    
+                                                    const count = isAboveDiagonal ? projectCount : orgCount;
+                                                    const colorClass = isDiagonal 
+                                                        ? 'bg-slate-200 text-slate-400'
+                                                        : isAboveDiagonal
+                                                            ? `${getProjectColorIntensity(projectCount, maxValues.maxProjects)} ${projectCount > 0 ? 'text-slate-800' : 'text-slate-400'}`
+                                                            : `${getOrgColorIntensity(orgCount, maxValues.maxOrgs)} ${orgCount > 0 ? 'text-slate-800' : 'text-slate-400'}`;
                                                     
                                                     return (
                                                         <td 
                                                             key={donor2}
-                                                            className={`p-3 text-center text-sm font-semibold border border-slate-200 ${
-                                                                isDiagonal 
-                                                                    ? 'bg-slate-200 text-slate-400' 
-                                                                    : `${getColorIntensity(count, maxValues.maxProjects)} ${count > 0 ? 'text-slate-800' : 'text-slate-400'}`
-                                                            }`}
+                                                            className={`p-3 text-center text-sm font-semibold border border-slate-200 ${colorClass}`}
                                                         >
                                                             {isDiagonal ? '—' : count}
                                                         </td>
@@ -888,66 +917,6 @@ export default function AnalyticsPage({ logoutButton }: AnalyticsPageProps) {
                             </div>
                         </CardContent>
                     </Card>
-
-                        <Card className="!border-0 bg-white">
-                            <CardHeader className="pb-0 h-6.5">
-                                <CardTitle>
-                                    <SectionHeader icon={<Network style={{ color: 'var(--brand-primary)' }} />} title="Organizations Co-Financing Matrix" />
-                                </CardTitle>
-                            </CardHeader>
-                            <CardContent className="pt-0">
-                                <p className="text-sm text-slate-600 mb-0">
-                                    Number of organizations co-financed between donor pairs
-                                </p>
-                            <div className="overflow-x-auto">
-                                <table className="w-full border-collapse">
-                                    <thead>
-                                        <tr>
-                                            <th className="p-2 text-left text-xs font-semibold text-slate-600 border-b-2 border-slate-200 min-w-[120px]">
-                                                Donor
-                                            </th>
-                                            {selectedDonors.map(donor => (
-                                                <th 
-                                                    key={donor} 
-                                                    className="p-2 text-center text-xs font-semibold text-slate-600 border-b-2 border-slate-200 w-16"
-                                                    style={{ writingMode: 'vertical-rl', transform: 'rotate(180deg)' }}
-                                                >
-                                                    {donor}
-                                                </th>
-                                            ))}
-                                        </tr>
-                                    </thead>
-                                    <tbody>
-                                        {selectedDonors.map(donor1 => (
-                                            <tr key={donor1}>
-                                                <td className="p-2 text-xs font-semibold text-slate-600 border-r-2 border-slate-200">
-                                                    {donor1}
-                                                </td>
-                                                {selectedDonors.map(donor2 => {
-                                                    const count = coFinancingMatrix[donor1]?.[donor2]?.orgs.size || 0;
-                                                    const isDiagonal = donor1 === donor2;
-                                                    
-                                                    return (
-                                                        <td 
-                                                            key={donor2}
-                                                            className={`p-3 text-center text-sm font-semibold border border-slate-200 ${
-                                                                isDiagonal 
-                                                                    ? 'bg-slate-200 text-slate-400' 
-                                                                    : `${getColorIntensity(count, maxValues.maxOrgs)} ${count > 0 ? 'text-slate-800' : 'text-slate-400'}`
-                                                            }`}
-                                                        >
-                                                            {isDiagonal ? '—' : count}
-                                                        </td>
-                                                    );
-                                                })}
-                                            </tr>
-                                        ))}
-                                    </tbody>
-                                </table>
-                            </div>
-                        </CardContent>
-                        </Card>
-                    </div>
 
                     {/* Legend */}
                     <Card className="!border-0 bg-white">
