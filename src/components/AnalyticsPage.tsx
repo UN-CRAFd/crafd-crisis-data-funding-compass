@@ -745,16 +745,22 @@ export default function AnalyticsPage({ logoutButton }: AnalyticsPageProps) {
         });
 
         // 2. Average number of donors per organization
-        let totalDonorCount = 0;
-        filteredOrganizationsData.forEach(org => {
-            const orgDonors = new Set<string>();
+        // Find all organizations funded by at least one selected donor, then count all their donors
+        const orgsWithTotalDonorCounts: Array<{ orgId: string; totalDonors: Set<string> }> = [];
+        
+        organizationsData.forEach(org => {
+            const selectedDonorsFunding = new Set<string>();
+            const allDonors = new Set<string>();
             
-            // Collect all donors (org + project level)
+            // Collect all donors and track if any are selected
             if (org.agencies && Array.isArray(org.agencies)) {
                 org.agencies.forEach(agency => {
                     const countryName = agency.fields?.['Country Name'];
-                    if (countryName && selectedDonors.includes(countryName)) {
-                        orgDonors.add(countryName);
+                    if (countryName) {
+                        allDonors.add(countryName);
+                        if (selectedDonors.includes(countryName)) {
+                            selectedDonorsFunding.add(countryName);
+                        }
                     }
                 });
             }
@@ -764,30 +770,39 @@ export default function AnalyticsPage({ logoutButton }: AnalyticsPageProps) {
                     if (project.agencies && Array.isArray(project.agencies)) {
                         project.agencies.forEach((agency: any) => {
                             const countryName = agency.fields?.['Country Name'];
-                            if (countryName && selectedDonors.includes(countryName)) {
-                                orgDonors.add(countryName);
+                            if (countryName) {
+                                allDonors.add(countryName);
+                                if (selectedDonors.includes(countryName)) {
+                                    selectedDonorsFunding.add(countryName);
+                                }
                             }
                         });
                     }
                 });
             }
             
-            totalDonorCount += orgDonors.size;
+            // Only include orgs that are funded by at least one selected donor
+            if (selectedDonorsFunding.size > 0) {
+                orgsWithTotalDonorCounts.push({
+                    orgId: org.id,
+                    totalDonors: allDonors
+                });
+            }
         });
-
-        const avgDonorsPerOrg = filteredOrganizationsData.length > 0 
-            ? Number((totalDonorCount / filteredOrganizationsData.length).toFixed(1))
+        
+        const avgDonorsPerOrg = orgsWithTotalDonorCounts.length > 0
+            ? Number((orgsWithTotalDonorCounts.reduce((sum, org) => sum + org.totalDonors.size, 0) / orgsWithTotalDonorCounts.length).toFixed(1))
             : 0;
 
-        // 3. Average funding overlap
-        // Calculate unique funding targets (orgs/projects) funded by only one selected donor
+        // 3. Funding overlap
+        // Create set of all orgs/assets funded by at least one selected donor
         const fundingTargets = new Map<string, Set<string>>(); // target -> set of donors
 
-        filteredOrganizationsData.forEach(org => {
+        organizationsData.forEach(org => {
             const orgName = org.name || org.fields?.['Organization Name'] || '';
             const orgKey = `org-${org.id}-${orgName}`;
             
-            // Track which donors fund this org
+            // Track which selected donors fund this org
             if (org.agencies && Array.isArray(org.agencies)) {
                 org.agencies.forEach(agency => {
                     const countryName = agency.fields?.['Country Name'];
@@ -821,17 +836,17 @@ export default function AnalyticsPage({ logoutButton }: AnalyticsPageProps) {
             }
         });
 
-        // Count targets funded by multiple donors (overlapping)
-        let overlappingTargets = 0;
+        // Count targets funded by exactly one donor
+        let uniqueFundingTargets = 0;
         fundingTargets.forEach((donors) => {
-            if (donors.size > 1) {
-                overlappingTargets++;
+            if (donors.size === 1) {
+                uniqueFundingTargets++;
             }
         });
 
         const totalTargets = fundingTargets.size;
         const avgFundingOverlap = totalTargets > 0 
-            ? Math.round((overlappingTargets / totalTargets) * 100)
+            ? Math.round((uniqueFundingTargets / totalTargets) * 100)
             : 0;
 
         return {
@@ -909,7 +924,7 @@ export default function AnalyticsPage({ logoutButton }: AnalyticsPageProps) {
                                             <StatCard
                                                 icon={<Target style={{ color: 'var(--brand-primary)' }} />}
                                                 title="Funding Overlap"
-                                                value={`${analyticsStats.avgFundingOverlap}%`}
+                                                value={analyticsStats.avgFundingOverlap}
                                                 label="shared"
                                                 colorScheme="amber"
                                                 tooltip="Percentage of organizations and projects that are co-financed by multiple selected donors. Higher values indicate more collaboration between donors."
