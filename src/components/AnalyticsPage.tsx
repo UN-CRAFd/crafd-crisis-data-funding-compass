@@ -1302,9 +1302,9 @@ export default function AnalyticsPage({ logoutButton }: AnalyticsPageProps) {
                             <div className="hidden sm:grid sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-[var(--spacing-section)]">
                                 <StatCard
                                     icon={<GitBranch style={{ color: 'var(--brand-primary)' }} />}
-                                    title="Funding Streams"
+                                    title="Bilateral Funding"
                                     value={analyticsStats.totalFundingStreams}
-                                    label="connections"
+                                    label="direct grants"
                                     colorScheme="amber"
                                     tooltip="Total number of connections from selected donors to organizations and projects. Each connection represents a direct funding relationship."
                                 />
@@ -1317,6 +1317,8 @@ export default function AnalyticsPage({ logoutButton }: AnalyticsPageProps) {
                                     colorScheme="amber"
                                     tooltip="Average number of selected donors funding each organization (counting both organization-level and project-level funding)."
                                 />
+
+                            
 
                                 <StatCard
                                     icon={<Target style={{ color: 'var(--brand-primary)' }} />}
@@ -1395,7 +1397,7 @@ export default function AnalyticsPage({ logoutButton }: AnalyticsPageProps) {
                     <Card className="!border-0 bg-white">
                         <CardHeader className="pb-0 h-6.5">
                             <CardTitle>
-                                <SectionHeader icon={<Network style={{ color: 'var(--brand-primary)' }} />} title="Co-Financing Matrix" />
+                                <SectionHeader icon={<Network style={{ color: 'var(--brand-primary)' }} />} title="Which donors are collaborating on Data Investment?" />
                             </CardTitle>
                         </CardHeader>
                         <CardContent className="pt-0">
