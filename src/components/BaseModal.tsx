@@ -265,10 +265,11 @@ interface CountryBadgeProps {
     onClick?: (country: string) => void;
     agencies?: string[];
     projectsForDonor?: string[];
+    projectAgenciesForDonor?: string[];
     tooltipContainer?: Element | null;
 }
 
-export function CountryBadge({ country, className = '', onClick, agencies, projectsForDonor, tooltipContainer }: CountryBadgeProps) {
+export function CountryBadge({ country, className = '', onClick, agencies, projectsForDonor, projectAgenciesForDonor, tooltipContainer }: CountryBadgeProps) {
     const isClickable = !!onClick;
     
     const badgeContent = (
@@ -287,8 +288,9 @@ export function CountryBadge({ country, className = '', onClick, agencies, proje
     const filteredAgencies = agencies ? agencies.filter(agency => agency !== 'Unspecified Agency') : [];
     const hasAgencies = filteredAgencies && filteredAgencies.length > 0;
     const hasProjects = projectsForDonor && projectsForDonor.length > 0;
+    const hasProjectAgencies = projectAgenciesForDonor && projectAgenciesForDonor.length > 0;
     
-    if (hasAgencies || hasProjects) {
+    if (hasAgencies || hasProjects || hasProjectAgencies) {
         const tooltipContent = (
             <div>
                 {hasAgencies && (
@@ -307,6 +309,16 @@ export function CountryBadge({ country, className = '', onClick, agencies, proje
                         <ul className="space-y-0.5">
                             {projectsForDonor.map((project, idx) => (
                                 <li key={idx}>• {project}</li>
+                            ))}
+                        </ul>
+                    </div>
+                )}
+                {hasProjectAgencies && (
+                    <div className={hasAgencies || hasProjects ? 'mt-2 pt-2 border-t border-slate-300' : ''}>
+                        <div className="font-semibold mb-1">{labels.modals.financingAgencies} (Project-level)</div>
+                        <ul className="space-y-0.5">
+                            {projectAgenciesForDonor.map((agency, idx) => (
+                                <li key={idx}>• {agency}</li>
                             ))}
                         </ul>
                     </div>

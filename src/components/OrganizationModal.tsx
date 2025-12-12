@@ -23,6 +23,7 @@ interface OrganizationModalProps {
     orgDonorInfoMap?: Record<string, import('@/types/airtable').DonorInfo[]>;
     orgAgenciesMap?: Record<string, Record<string, string[]>>;
     orgProjectDonorsMap?: Record<string, Record<string, string[]>>;
+    orgProjectDonorAgenciesMap?: Record<string, Record<string, Record<string, string[]>>>;
     // onClose removed for serializability; modal will dispatch a CustomEvent 'closeOrganizationModal'
     loading: boolean;
     // Callback to open project modal
@@ -47,6 +48,7 @@ export default function OrganizationModal({
     orgDonorInfoMap = {},
     orgAgenciesMap = {},
     orgProjectDonorsMap = {},
+    orgProjectDonorAgenciesMap = {},
     loading,
     onOpenProjectModal,
     projectIdToKeyMap = {},
@@ -65,6 +67,19 @@ export default function OrganizationModal({
     const FieldLabel = ({ children }: { children: React.ReactNode }) => (
         <span className="font-medium text-[#333333] text-xs leading-5 font-roboto uppercase tracking-wide">{children}</span>
     );
+
+    // Helper function to extract unique agencies from project-to-agencies map
+    const getUniqueAgenciesForProjects = (
+        projects: string[],
+        projectToAgencies: Record<string, string[]>
+    ): string[] => {
+        const uniqueAgencies = new Set<string>();
+        projects.forEach(project => {
+            const agencies = projectToAgencies[project] || [];
+            agencies.forEach(agency => uniqueAgencies.add(agency));
+        });
+        return Array.from(uniqueAgencies);
+    };
 
     // Reusable field value wrapper component
     const FieldValue = ({ children }: { children: React.ReactNode }) => <div className="mt-0.5">{children}</div>;
@@ -589,9 +604,13 @@ export default function OrganizationModal({
                                     {donorInfo.map((donor, idx) => {
                                         const orgAgencies = orgAgenciesMap[organization.id] || {};
                                         const orgProjectDonors = orgProjectDonorsMap[organization.id] || {};
+                                        const orgProjectDonorAgencies = orgProjectDonorAgenciesMap[organization.id] || {};
                                         
-                                        // For project-level donors, get the projects they fund from the map
+                                        // For project-level donors, get the projects they fund and corresponding agencies
                                         const projectsForDonor = !donor.isOrgLevel ? (orgProjectDonors[donor.country] || []) : undefined;
+                                        const projectAgenciesForDonor = !donor.isOrgLevel && projectsForDonor ? 
+                                            getUniqueAgenciesForProjects(projectsForDonor, orgProjectDonorAgencies[donor.country] || {}) 
+                                            : undefined;
                                         
                                         return (
                                             <div 
@@ -603,6 +622,7 @@ export default function OrganizationModal({
                                                     onClick={onOpenDonorModal}
                                                     agencies={orgAgencies[donor.country]}
                                                     projectsForDonor={projectsForDonor}
+                                                    projectAgenciesForDonor={projectAgenciesForDonor}
                                                     tooltipContainer={tooltipContainer}
                                                 />
                                             </div>
