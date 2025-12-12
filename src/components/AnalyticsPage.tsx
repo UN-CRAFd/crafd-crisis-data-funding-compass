@@ -782,11 +782,61 @@ export default function AnalyticsPage({ logoutButton }: AnalyticsPageProps) {
             }
             
             // Only include orgs that are funded by at least one selected donor
+            // AND passes the filters
             if (selectedDonorsFunding.size > 0) {
-                orgsWithTotalDonorCounts.push({
-                    orgId: org.id,
-                    totalDonors: allDonors
-                });
+                let passesFilters = true;
+                
+                // Check search filter
+                if (appliedSearchQuery) {
+                    const query = appliedSearchQuery.toLowerCase().trim();
+                    const orgName = (org.name || org.fields?.['Organization Name'] || '').toLowerCase();
+                    const orgType = (org.fields?.['Org Type'] || '').toString().toLowerCase();
+                    if (!orgName.includes(query) && !orgType.includes(query)) {
+                        passesFilters = false;
+                    }
+                }
+                
+                // Check if org has matching projects based on type/theme filters
+                if (passesFilters && (investmentTypes.length > 0 || investmentThemes.length > 0)) {
+                    const hasMatchingProject = org.projects?.some(project => {
+                        // Check investment type filter
+                        if (investmentTypes.length > 0) {
+                            const projectTypes = project.fields?.['Investment Type(s)'] || [];
+                            const matchesType = Array.isArray(projectTypes) && projectTypes.some(type =>
+                                investmentTypes.some(filterType =>
+                                    type.toLowerCase().includes(filterType.toLowerCase()) ||
+                                    filterType.toLowerCase().includes(type.toLowerCase())
+                                )
+                            );
+                            if (!matchesType) return false;
+                        }
+                        
+                        // Check investment theme filter
+                        if (investmentThemes.length > 0) {
+                            const projectThemes = project.fields?.['Investment Theme(s)'] || [];
+                            const matchesTheme = Array.isArray(projectThemes) && projectThemes.some(theme =>
+                                investmentThemes.some(filterTheme =>
+                                    typeof theme === 'string' &&
+                                    theme.toLowerCase().trim() === filterTheme.toLowerCase().trim()
+                                )
+                            );
+                            if (!matchesTheme) return false;
+                        }
+                        
+                        return true;
+                    });
+                    
+                    if (!hasMatchingProject) {
+                        passesFilters = false;
+                    }
+                }
+                
+                if (passesFilters) {
+                    orgsWithTotalDonorCounts.push({
+                        orgId: org.id,
+                        totalDonors: allDonors
+                    });
+                }
             }
         });
         
@@ -802,8 +852,50 @@ export default function AnalyticsPage({ logoutButton }: AnalyticsPageProps) {
             const orgName = org.name || org.fields?.['Organization Name'] || '';
             const orgKey = `org-${org.id}-${orgName}`;
             
+            // Check if org passes filters
+            let orgPassesFilters = true;
+            if (appliedSearchQuery) {
+                const query = appliedSearchQuery.toLowerCase().trim();
+                const orgNameLower = orgName.toLowerCase();
+                const orgType = (org.fields?.['Org Type'] || '').toString().toLowerCase();
+                if (!orgNameLower.includes(query) && !orgType.includes(query)) {
+                    orgPassesFilters = false;
+                }
+            }
+            
+            // Check if org has matching projects based on type/theme filters
+            if (orgPassesFilters && (investmentTypes.length > 0 || investmentThemes.length > 0)) {
+                const hasMatchingProject = org.projects?.some(project => {
+                    if (investmentTypes.length > 0) {
+                        const projectTypes = project.fields?.['Investment Type(s)'] || [];
+                        const matchesType = Array.isArray(projectTypes) && projectTypes.some(type =>
+                            investmentTypes.some(filterType =>
+                                type.toLowerCase().includes(filterType.toLowerCase()) ||
+                                filterType.toLowerCase().includes(type.toLowerCase())
+                            )
+                        );
+                        if (!matchesType) return false;
+                    }
+                    
+                    if (investmentThemes.length > 0) {
+                        const projectThemes = project.fields?.['Investment Theme(s)'] || [];
+                        const matchesTheme = Array.isArray(projectThemes) && projectThemes.some(theme =>
+                            investmentThemes.some(filterTheme =>
+                                typeof theme === 'string' &&
+                                theme.toLowerCase().trim() === filterTheme.toLowerCase().trim()
+                            )
+                        );
+                        if (!matchesTheme) return false;
+                    }
+                    
+                    return true;
+                });
+                
+                orgPassesFilters = hasMatchingProject || false;
+            }
+            
             // Track which selected donors fund this org
-            if (org.agencies && Array.isArray(org.agencies)) {
+            if (orgPassesFilters && org.agencies && Array.isArray(org.agencies)) {
                 org.agencies.forEach(agency => {
                     const countryName = agency.fields?.['Country Name'];
                     if (countryName && selectedDonors.includes(countryName)) {
@@ -821,7 +913,41 @@ export default function AnalyticsPage({ logoutButton }: AnalyticsPageProps) {
                     const projectName = project.fields?.['Project Name'] || project.name || '';
                     const projectKey = `project-${project.id}-${projectName}`;
                     
-                    if (project.agencies && Array.isArray(project.agencies)) {
+                    // Check if project passes filters
+                    let projectPassesFilters = true;
+                    
+                    if (appliedSearchQuery) {
+                        const query = appliedSearchQuery.toLowerCase().trim();
+                        const projectNameLower = projectName.toLowerCase();
+                        const parentOrgName = (org.name || org.fields?.['Organization Name'] || '').toLowerCase();
+                        if (!projectNameLower.includes(query) && !parentOrgName.includes(query)) {
+                            projectPassesFilters = false;
+                        }
+                    }
+                    
+                    if (projectPassesFilters && investmentTypes.length > 0) {
+                        const projectTypes = project.fields?.['Investment Type(s)'] || [];
+                        const matchesType = Array.isArray(projectTypes) && projectTypes.some(type =>
+                            investmentTypes.some(filterType =>
+                                type.toLowerCase().includes(filterType.toLowerCase()) ||
+                                filterType.toLowerCase().includes(type.toLowerCase())
+                            )
+                        );
+                        if (!matchesType) projectPassesFilters = false;
+                    }
+                    
+                    if (projectPassesFilters && investmentThemes.length > 0) {
+                        const projectThemes = project.fields?.['Investment Theme(s)'] || [];
+                        const matchesTheme = Array.isArray(projectThemes) && projectThemes.some(theme =>
+                            investmentThemes.some(filterTheme =>
+                                typeof theme === 'string' &&
+                                theme.toLowerCase().trim() === filterTheme.toLowerCase().trim()
+                            )
+                        );
+                        if (!matchesTheme) projectPassesFilters = false;
+                    }
+                    
+                    if (projectPassesFilters && project.agencies && Array.isArray(project.agencies)) {
                         project.agencies.forEach((agency: any) => {
                             const countryName = agency.fields?.['Country Name'];
                             if (countryName && selectedDonors.includes(countryName)) {
@@ -846,7 +972,7 @@ export default function AnalyticsPage({ logoutButton }: AnalyticsPageProps) {
 
         const totalTargets = fundingTargets.size;
         const avgFundingOverlap = totalTargets > 0 
-            ? 100 - Math.round((uniqueFundingTargets / totalTargets) * 100)
+            ? Math.round((uniqueFundingTargets / totalTargets) * 100)
             : 0;
 
         return {
@@ -994,29 +1120,7 @@ export default function AnalyticsPage({ logoutButton }: AnalyticsPageProps) {
                         </CardContent>
                     </Card>
 
-                    {/* Charts Row */}
-                    <div className="grid grid-cols-1 lg:grid-cols-3 gap-4">
-                        <ChartCard
-                            title="Co-Financing Donors"
-                            icon={<Globe style={{ color: 'var(--brand-primary)' }} />}
-                            data={donorCoFinancingData}
-                            barColor="var(--brand-primary-lighter)"
-                            footnote={`Showing donors with co-financed organizations based on ${selectedDonors.length} selected donor${selectedDonors.length === 1 ? '' : 's'}`}
-                        />
-                        <ChartCard
-                            title={labels.sections.organizationTypes}
-                            icon={<Building2 style={{ color: 'var(--brand-primary)' }} />}
-                            data={organizationTypesData}
-                            barColor="var(--brand-primary-lighter)"
-                        />
-                        <ChartCard
-                            title={labels.sections.projectCategories}
-                            icon={<Database style={{ color: 'var(--brand-primary)' }} />}
-                            data={projectTypesData}
-                            barColor="var(--brand-primary-lighter)"
-                        />
-                    </div>
-
+                 
                     {/* Unified Co-Financing Matrix */}
                     <Card className="!border-0 bg-white">
                         <CardHeader className="pb-0 h-6.5">
@@ -1134,6 +1238,30 @@ export default function AnalyticsPage({ logoutButton }: AnalyticsPageProps) {
                             </div>
                         </CardContent>
                     </Card>
+
+                       {/* Charts Row */}
+                    <div className="grid grid-cols-1 lg:grid-cols-3 gap-4">
+                        <ChartCard
+                            title="Co-Financing Donors"
+                            icon={<Globe style={{ color: 'var(--brand-primary)' }} />}
+                            data={donorCoFinancingData}
+                            barColor="var(--brand-primary-lighter)"
+                            footnote={`Showing donors with co-financed organizations based on ${selectedDonors.length} selected donor${selectedDonors.length === 1 ? '' : 's'}`}
+                        />
+                        <ChartCard
+                            title={labels.sections.organizationTypes}
+                            icon={<Building2 style={{ color: 'var(--brand-primary)' }} />}
+                            data={organizationTypesData}
+                            barColor="var(--brand-primary-lighter)"
+                        />
+                        <ChartCard
+                            title={labels.sections.projectCategories}
+                            icon={<Database style={{ color: 'var(--brand-primary)' }} />}
+                            data={projectTypesData}
+                            barColor="var(--brand-primary-lighter)"
+                        />
+                    </div>
+
 
                     {/* Legend */}
                  
