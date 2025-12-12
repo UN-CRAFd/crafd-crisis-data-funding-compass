@@ -1251,7 +1251,7 @@ export default function AnalyticsPage({ logoutButton }: AnalyticsPageProps) {
                                 
                                 <StatCard
                                     icon={<Users style={{ color: 'var(--brand-primary)' }} />}
-                                    title="Avg Donors/Org"
+                                    title="Donors per Org"
                                     value={analyticsStats.avgDonorsPerOrg}
                                     label="donors"
                                     colorScheme="amber"
@@ -1260,7 +1260,7 @@ export default function AnalyticsPage({ logoutButton }: AnalyticsPageProps) {
 
                                 <StatCard
                                     icon={<Building2 style={{ color: 'var(--brand-primary)' }} />}
-                                    title="Co-Funded Organizations"
+                                    title="Co-Funded Orgs"
                                     value={analyticsStats.sharedFundingTargets}
                                     label="donors"
                                     colorScheme="amber"
@@ -1279,7 +1279,7 @@ export default function AnalyticsPage({ logoutButton }: AnalyticsPageProps) {
                                             <table className="w-full text-sm border-collapse">
                                                 <tbody>
                                                     <tr>
-                                                        <td className="text-left pr-3 py-1">Total targets (orgs + projects):</td>
+                                                        <td className="text-left pr-3 py-1">Total organizations funded:</td>
                                                         <td className="text-right font-semibold">{analyticsStats.fundingOverlapDetails?.totalTargets || 0}</td>
                                                     </tr>
                                                     <tr>
@@ -1292,7 +1292,7 @@ export default function AnalyticsPage({ logoutButton }: AnalyticsPageProps) {
                                                     </tr>
                                                     <tr className="border-t border-gray-300 mt-1 pt-1">
                                                         <td className="text-left pr-3 py-1 font-medium">Calculation:</td>
-                                                        <td className="text-right text-xs">({analyticsStats.fundingOverlapDetails?.uniqueFundingTargets || 0} ÷ {analyticsStats.fundingOverlapDetails?.totalTargets || 0}) × 100</td>
+                                                        <td className="text-right text-xs">({analyticsStats.fundingOverlapDetails?.sharedFundingTargets || 0} ÷ {analyticsStats.fundingOverlapDetails?.totalTargets || 0}) × 100</td>
                                                     </tr>
                                                 </tbody>
                                             </table>
