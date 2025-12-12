@@ -920,6 +920,48 @@ export function buildOrgProjectDonorsMap(organizations: NestedOrganization[]): R
 }
 
 /**
+ * Build a map from organization ID to donor country to project name to agency names
+ * Used by organization modals to show which agencies fund each project at the project level
+ */
+export function buildOrgProjectDonorAgenciesMap(organizations: NestedOrganization[]): Record<string, Record<string, Record<string, string[]>>> {
+    const map: Record<string, Record<string, Record<string, string[]>>> = {};
+    
+    organizations.forEach(org => {
+        if (org && org.id && org.projects) {
+            const countryToProjectAgencies: Record<string, Record<string, string[]>> = {};
+            
+            org.projects.forEach((project: any) => {
+                const projectName = project.fields?.['Project/Product Name'] || project.fields?.['Project Name'] || project.name || `Project ${project.id}`;
+                
+                if (project.agencies && Array.isArray(project.agencies)) {
+                    project.agencies.forEach((agency: any) => {
+                        const fields = agency.fields || {};
+                        const countryName = fields['Country Name'];
+                        const agencyName = fields['Agency/Department Name'];
+                        
+                        if (countryName && projectName && agencyName) {
+                            if (!countryToProjectAgencies[countryName]) {
+                                countryToProjectAgencies[countryName] = {};
+                            }
+                            if (!countryToProjectAgencies[countryName][projectName]) {
+                                countryToProjectAgencies[countryName][projectName] = [];
+                            }
+                            if (!countryToProjectAgencies[countryName][projectName].includes(agencyName)) {
+                                countryToProjectAgencies[countryName][projectName].push(agencyName);
+                            }
+                        }
+                    });
+                }
+            });
+            
+            map[org.id] = countryToProjectAgencies;
+        }
+    });
+    
+    return map;
+}
+
+/**
  * Build a map from project ID to a map of country -> agency names
  * Used by project modals to show which agencies finance each project
  */
