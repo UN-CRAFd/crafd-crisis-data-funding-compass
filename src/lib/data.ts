@@ -893,7 +893,7 @@ export function buildOrgProjectDonorsMap(organizations: NestedOrganization[]): R
             const countryToProjects: Record<string, string[]> = {};
             
             org.projects.forEach((project: any) => {
-                const projectName = project.fields?.['Project Name'] || project.name || `Project ${project.id}`;
+                const projectName = project.fields?.['Project/Product Name'] || project.fields?.['Project Name'] || project.name || `Project ${project.id}`;
                 
                 if (project.agencies && Array.isArray(project.agencies)) {
                     project.agencies.forEach((agency: any) => {
