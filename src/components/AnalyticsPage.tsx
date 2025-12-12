@@ -1,6 +1,7 @@
 'use client';
 
 import React, { useEffect, useMemo, useState } from 'react';
+import { useRouter, useSearchParams } from 'next/navigation';
 import PageHeader from '@/components/PageHeader';
 import ChartCard from '@/components/ChartCard';
 import FilterBar from '@/components/FilterBar';
@@ -10,6 +11,7 @@ import { Tooltip as TooltipUI, TooltipContent, TooltipProvider, TooltipTrigger }
 import { Globe, Search, Filter, ChevronDown, Building2, Database, BarChart3, Network, GitBranch, Users, Target } from 'lucide-react';
 import { SectionHeader } from './SectionHeader';
 import { useTips } from '@/contexts/TipsContext';
+import { toUrlSlug, matchesUrlSlug } from '@/lib/urlShortcuts';
 import labels from '@/config/labels.json';
 
 interface AnalyticsPageProps {
@@ -150,6 +152,8 @@ const getProjectColorIntensity = (count: number, max: number): string => {
 };
 
 export default function AnalyticsPage({ logoutButton }: AnalyticsPageProps) {
+    const router = useRouter();
+    const searchParams = useSearchParams();
     const [organizationsData, setOrganizationsData] = useState<OrganizationData[]>([]);
     const [shareSuccess, setShareSuccess] = useState(false);
     const [selectedDonors, setSelectedDonors] = useState<string[]>([]);
@@ -157,6 +161,22 @@ export default function AnalyticsPage({ logoutButton }: AnalyticsPageProps) {
     const [investmentThemes, setInvestmentThemes] = useState<string[]>([]);
     const [searchQuery, setSearchQuery] = useState('');
     const [appliedSearchQuery, setAppliedSearchQuery] = useState('');
+    const [isInitialized, setIsInitialized] = useState(false);
+    
+    // Load filter state from URL on mount
+    useEffect(() => {
+        const urlDonors = searchParams.get('d')?.split(',').filter(Boolean) || [];
+        const urlTypes = searchParams.get('types')?.split(',').filter(Boolean) || [];
+        const urlThemes = searchParams.get('themes')?.split(',').filter(Boolean) || [];
+        const urlQuery = searchParams.get('q') || '';
+        
+        setSelectedDonors(urlDonors);
+        setInvestmentTypes(urlTypes);
+        setInvestmentThemes(urlThemes);
+        setAppliedSearchQuery(urlQuery);
+        setSearchQuery(urlQuery);
+        setIsInitialized(true);
+    }, [searchParams]);
     
     // Extract all available donor countries from data
     const availableDonorCountries = useMemo(() => {
@@ -208,6 +228,32 @@ export default function AnalyticsPage({ logoutButton }: AnalyticsPageProps) {
             })
             .catch(err => console.error('Failed to load organizations:', err));
     }, []);
+
+    // Update URL when filters change (but only after initialization to avoid overwriting URL params)
+    useEffect(() => {
+        if (!isInitialized) return;
+
+        const params = new URLSearchParams();
+        
+        if (selectedDonors.length > 0) {
+            params.set('d', selectedDonors.map(d => toUrlSlug(d)).join(','));
+        }
+        
+        if (investmentTypes.length > 0) {
+            params.set('types', investmentTypes.join(','));
+        }
+        
+        if (investmentThemes.length > 0) {
+            params.set('themes', investmentThemes.join(','));
+        }
+        
+        if (appliedSearchQuery) {
+            params.set('q', appliedSearchQuery);
+        }
+        
+        const newUrl = params.toString() ? `/analytics?${params.toString()}` : '/analytics';
+        router.push(newUrl);
+    }, [selectedDonors, investmentTypes, investmentThemes, appliedSearchQuery, isInitialized, router]);
 
     // Filter organizations using the SAME logic as the dashboard (including project-level donors)
     const filteredOrganizationsData = useMemo(() => {
@@ -907,10 +953,21 @@ export default function AnalyticsPage({ logoutButton }: AnalyticsPageProps) {
                                                             ? `${donor1} and ${donor2} are co-financing ${projectCount} project${projectCount !== 1 ? 's' : ''}`
                                                             : `${donor1} and ${donor2} are co-financing ${orgCount} organization${orgCount !== 1 ? 's' : ''}`;
                                                     
+                                                    const handleCellClick = () => {
+                                                        if (!isDiagonal && count > 0) {
+                                                            // Navigate to dashboard with the two donors as filters using URL slugs
+                                                            const donorSlugs = [donor1, donor2]
+                                                                .map(d => toUrlSlug(d))
+                                                                .join(',');
+                                                            router.push(`/?d=${donorSlugs}`);
+                                                        }
+                                                    };
+                                                    
                                                     const cellContent = (
                                                         <td 
                                                             key={donor2}
-                                                            className={`p-3 text-center text-sm font-semibold border border-slate-200 ${colorClass}`}
+                                                            onClick={handleCellClick}
+                                                            className={`p-3 text-center text-sm font-semibold border border-slate-200 ${colorClass} ${!isDiagonal && count > 0 ? 'cursor-pointer hover:opacity-75 transition-opacity' : ''}`}
                                                         >
                                                             {isDiagonal ? '—' : count}
                                                         </td>
