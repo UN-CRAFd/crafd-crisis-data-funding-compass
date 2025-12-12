@@ -55,7 +55,8 @@
         "Conferences"
       ],
       "product_key": "regional-ccc",
-      "HDX_SOHD": "None"
+      "HDX_SOHD": "None",
+      "Project Description": "The Regional Climate Change Conference (RCCC) convenes regional and global stakeholders in Bangkok and online to address resilience and climate change adaptation, with a focus on inclusive and sustainable communities. Through keynotes, panels, workshops, and capacity-building activities, it promotes knowledge exchange, climate finance and entrepreneurship, community-led adaptation, and inter-regional policy dialogue."
     }
   },
   {
@@ -286,7 +287,8 @@
         "Information Managment"
       ],
       "product_key": "panda-bc",
-      "HDX_SOHD": "None"
+      "HDX_SOHD": "None",
+      "Project Description": "IMPACT’s PANDA builds capacities of local and international actors to understand crisis dynamics through training and tools in information management, assessments, monitoring and evaluation, and GIS. The initiative enhances partners’ analytical capabilities to improve the effectiveness and responsiveness of humanitarian interventions."
     }
   },
   {
@@ -1221,7 +1223,8 @@
         "Geospatial Data"
       ],
       "product_key": "data-sys",
-      "HDX_SOHD": "None"
+      "HDX_SOHD": "None",
+      "Project Description": "Data Systems and Tools develop and strengthen innovative methods and platforms to improve the availability and quality of data on forcibly displaced populations. Activities include enhancing microdata access, advancing geospatial analytics, supporting global data platforms, and improving field data collection tools such as KoBoToolbox."
     }
   },
   {
@@ -1350,7 +1353,8 @@
         " Data Collection & Generation"
       ],
       "product_key": "hera-dc",
-      "HDX_SOHD": "None"
+      "HDX_SOHD": "None",
+      "Project Description": "HERA Data Collection provides detailed epidemiological datasets to support targeted health interventions, sharing comprehensive Covid-19 and Ebola data for Africa through the Humanitarian Data Exchange. By aggregating, validating, and updating reliable outbreak information, the initiative strengthens situational awareness for humanitarian and public health actors."
     }
   },
   {
@@ -1538,7 +1542,8 @@
         "Displacement & Migration Analytics"
       ],
       "product_key": "data-collec",
-      "HDX_SOHD": "None"
+      "HDX_SOHD": "None",
+      "Project Description": "Data Collection and Surveys support the production of high-quality socioeconomic data by integrating refugees, internally displaced persons, and other forcibly displaced or stateless populations into national household surveys and censuses, strengthening the evidence base for development policy and humanitarian response."
     }
   },
   {
@@ -1761,7 +1766,8 @@
         "Methodological Standards"
       ],
       "product_key": "data-governance",
-      "HDX_SOHD": "None"
+      "HDX_SOHD": "None",
+      "Project Description": "Data Standards and Governance strengthens national and international statistical practices related to forced displacement by supporting the development of data governance recommendations, standard definitions, and harmonized methods. Activities include advancing statistical inclusion, improving microdata access, and enhancing UNHCR’s global registration systems."
     }
   },
   {
@@ -2594,7 +2600,8 @@
         "Private Data Sharing"
       ],
       "product_key": "flow-kit",
-      "HDX_SOHD": "None"
+      "HDX_SOHD": "None",
+      "Project Description": "FlowKit is an open-source suite for the secure processing of de-identified mobile network data, designed to bridge the gap between mobile operators and humanitarian or development actors. By providing operator-controlled, audited access to mobility metrics via a dedicated API, FlowKit reduces technical barriers, safeguards privacy, and enables the scalable use of mobile data for crisis response, planning, and public-good analytics."
     }
   },
   {
@@ -3767,7 +3774,8 @@
         "Conflict & Violence Data"
       ],
       "product_key": "map-kit",
-      "HDX_SOHD": "None"
+      "HDX_SOHD": "None",
+      "Project Description": "Map Kit is an annual collection of global and regional conflict maps derived from the Conflict Barometer, presenting national and subnational conflict trends alongside downloadable underlying data where available. The series offers ready-to-use static maps covering all world regions, supporting comparative conflict analysis and situational awareness."
     }
   },
   {
@@ -3846,7 +3854,8 @@
         "Climate Analytics"
       ],
       "product_key": "desert-cp",
-      "HDX_SOHD": "None"
+      "HDX_SOHD": "None",
+      "Project Description": "Desertification Country Profiles provide standardized national overviews of land degradation, drought planning, and sustainable land management actions under the UNCCD. The platform offers quick access to country information, annex classifications, national and regional action plans, and voluntary Land Degradation Neutrality (LDN) targets to support coordinated, evidence-based land stewardship."
     }
   },
   {
@@ -4554,7 +4563,8 @@
         "Data Collection"
       ],
       "product_key": "swot",
-      "HDX_SOHD": "None"
+      "HDX_SOHD": "None",
+      "Project Description": "The Safe Water Optimization Tool (SWOT) provides actionable, site-specific chlorination guidance by analysing routine water quality measurements and modelling chlorine decay from tapstands to households. Designed for use in emergencies, the tool supports responders in maintaining safe drinking water throughout distribution systems."
     }
   },
   {
@@ -4908,7 +4918,8 @@
         "Conferences"
       ],
       "product_key": "nyu-views",
-      "HDX_SOHD": "None"
+      "HDX_SOHD": "None",
+      "Project Description": "The Data for Peace Conference gathers national and international stakeholders for a multi-day hybrid programme focused on leveraging data, analytics, and emerging technologies for peacebuilding and prevention. Through panels, workshops, pitches, and networking sessions, the event strengthens collaboration across the humanitarian–development–peace and climate sectors and promotes practical capacity building for the global data-for-peace community."
     }
   },
   {
