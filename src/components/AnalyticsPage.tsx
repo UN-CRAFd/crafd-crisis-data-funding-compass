@@ -841,7 +841,8 @@ export default function AnalyticsPage({ logoutButton }: AnalyticsPageProps) {
             return {
                 totalFundingStreams: 0,
                 avgDonorsPerOrg: 0,
-                avgFundingOverlap: 0
+                avgFundingOverlap: 0,
+                sharedFundingTargets: 0
             };
         }
 
@@ -1211,6 +1212,7 @@ export default function AnalyticsPage({ logoutButton }: AnalyticsPageProps) {
         return {
             totalFundingStreams,
             avgDonorsPerOrg,
+            sharedFundingTargets
             avgFundingOverlap,
             fundingOverlapDetails: {
                 totalTargets,
@@ -1277,13 +1279,25 @@ export default function AnalyticsPage({ logoutButton }: AnalyticsPageProps) {
                                         <div className="flex-shrink-0 w-[290px] snap-center">
                                             <StatCard
                                                 icon={<Users style={{ color: 'var(--brand-primary)' }} />}
-                                                title="Avg Donors/Org"
+                                                title="Average Donors/Org"
                                                 value={analyticsStats.avgDonorsPerOrg}
                                                 label="donors"
                                                 colorScheme="amber"
                                                 tooltip="Average number of selected donors funding each organization (counting both organization-level and project-level funding)."
                                             />
                                         </div>
+
+                                        <div className="flex-shrink-0 w-[290px] snap-center">
+                                            <StatCard
+                                                icon={<Users style={{ color: 'var(--brand-primary)' }} />}
+                                                title="Average Donors/Org"
+                                                value={analyticsStats.sharedFundingTargets}
+                                                label="donors"
+                                                colorScheme="amber"
+                                                tooltip="Average number of selected donors funding each organization (counting both organization-level and project-level funding)."
+                                            />
+                                        </div>
+
                                         <div className="flex-shrink-0 w-[280px] snap-center">
                                             <StatCard
                                                 icon={<Target style={{ color: 'var(--brand-primary)' }} />}
