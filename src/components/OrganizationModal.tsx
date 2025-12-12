@@ -22,6 +22,7 @@ interface OrganizationModalProps {
     orgDonorCountriesMap?: Record<string, string[]>;
     orgDonorInfoMap?: Record<string, import('@/types/airtable').DonorInfo[]>;
     orgAgenciesMap?: Record<string, Record<string, string[]>>;
+    orgProjectDonorsMap?: Record<string, Record<string, string[]>>;
     // onClose removed for serializability; modal will dispatch a CustomEvent 'closeOrganizationModal'
     loading: boolean;
     // Callback to open project modal
@@ -45,6 +46,7 @@ export default function OrganizationModal({
     orgDonorCountriesMap = {},
     orgDonorInfoMap = {},
     orgAgenciesMap = {},
+    orgProjectDonorsMap = {},
     loading,
     onOpenProjectModal,
     projectIdToKeyMap = {},
@@ -586,18 +588,21 @@ export default function OrganizationModal({
                                 <div className="flex flex-wrap gap-2 mt-4">
                                     {donorInfo.map((donor, idx) => {
                                         const orgAgencies = orgAgenciesMap[organization.id] || {};
+                                        const orgProjectDonors = orgProjectDonorsMap[organization.id] || {};
+                                        
+                                        // For project-level donors, get the projects they fund from the map
+                                        const projectsForDonor = !donor.isOrgLevel ? (orgProjectDonors[donor.country] || []) : undefined;
+                                        
                                         return (
                                             <div 
                                                 key={donor.country}
                                                 className={donor.isOrgLevel ? '' : 'opacity-50'}
-                                                title={donor.isOrgLevel 
-                                                    ? `${donor.country} (Organization Donor)` 
-                                                    : `${donor.country} (Project-Only Donor)`}
                                             >
                                                 <CountryBadge 
                                                     country={donor.country} 
                                                     onClick={onOpenDonorModal}
                                                     agencies={orgAgencies[donor.country]}
+                                                    projectsForDonor={projectsForDonor}
                                                     tooltipContainer={tooltipContainer}
                                                 />
                                             </div>
