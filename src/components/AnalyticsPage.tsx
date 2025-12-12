@@ -165,16 +165,20 @@ export default function AnalyticsPage({ logoutButton }: AnalyticsPageProps) {
     
     // Load filter state from URL on mount
     useEffect(() => {
-        const urlDonors = searchParams.get('d')?.split(',').filter(Boolean) || [];
+        const urlDonorSlugs = searchParams.get('d')?.split(',').filter(Boolean) || [];
         const urlTypes = searchParams.get('types')?.split(',').filter(Boolean) || [];
         const urlThemes = searchParams.get('themes')?.split(',').filter(Boolean) || [];
         const urlQuery = searchParams.get('q') || '';
         
-        setSelectedDonors(urlDonors);
+        // Decode donor slugs to actual donor names - will be done in a follow-up effect after data loads
         setInvestmentTypes(urlTypes);
         setInvestmentThemes(urlThemes);
         setAppliedSearchQuery(urlQuery);
         setSearchQuery(urlQuery);
+        
+        // Store URL donor slugs temporarily to decode them later
+        (window as any).__urlDonorSlugs = urlDonorSlugs;
+        
         setIsInitialized(true);
     }, [searchParams]);
     
@@ -228,6 +232,24 @@ export default function AnalyticsPage({ logoutButton }: AnalyticsPageProps) {
             })
             .catch(err => console.error('Failed to load organizations:', err));
     }, []);
+
+    // Decode URL donor slugs to actual names once available donors are loaded
+    useEffect(() => {
+        if (availableDonorCountries.length === 0 || selectedDonors.length > 0) return;
+        
+        const urlDonorSlugs = (window as any).__urlDonorSlugs;
+        if (urlDonorSlugs && urlDonorSlugs.length > 0) {
+            const decodedDonors = urlDonorSlugs
+                .map((slug: string) => availableDonorCountries.find(d => matchesUrlSlug(slug, d)))
+                .filter(Boolean);
+            
+            if (decodedDonors.length > 0) {
+                setSelectedDonors(decodedDonors);
+            }
+            
+            delete (window as any).__urlDonorSlugs;
+        }
+    }, [availableDonorCountries]);
 
     // Update URL when filters change (but only after initialization to avoid overwriting URL params)
     useEffect(() => {
@@ -591,41 +613,136 @@ export default function AnalyticsPage({ logoutButton }: AnalyticsPageProps) {
             };
         }
 
-        // 1. Total funding streams = total connections from donors to orgs/projects
+        // 1. Total funding streams = sum of direct funding from each selected country individually
+        // For each selected country: count orgs it funds directly + count projects it funds directly
         let totalFundingStreams = 0;
-        const orgDonorConnections = new Set<string>();
-        const projectDonorConnections = new Set<string>();
 
-        filteredOrganizationsData.forEach(org => {
-            const orgName = org.name || org.fields?.['Organization Name'] || '';
-            
-            // Count org-level donor connections
-            if (org.agencies && Array.isArray(org.agencies)) {
-                org.agencies.forEach(agency => {
-                    const countryName = agency.fields?.['Country Name'];
-                    if (countryName && selectedDonors.includes(countryName)) {
-                        orgDonorConnections.add(`${org.id}-${orgName}-${countryName}`);
-                    }
-                });
-            }
-            
-            // Count project-level donor connections
-            if (org.projects && Array.isArray(org.projects)) {
-                org.projects.forEach(project => {
-                    const projectName = project.fields?.['Project Name'] || project.name || '';
-                    if (project.agencies && Array.isArray(project.agencies)) {
-                        project.agencies.forEach((agency: any) => {
-                            const countryName = agency.fields?.['Country Name'];
-                            if (countryName && selectedDonors.includes(countryName)) {
-                                projectDonorConnections.add(`${project.id}-${projectName}-${countryName}`);
+        selectedDonors.forEach(country => {
+            // Count organizations directly funded by this country
+            const orgsDirectlyFunded = new Set<string>();
+            organizationsData.forEach(org => {
+                // Check if this country is an org-level donor
+                const hasCountryAsOrgDonor = org.agencies?.some(agency => 
+                    agency.fields?.['Country Name'] === country
+                );
+                
+                if (hasCountryAsOrgDonor) {
+                    // Check if org has matching projects (apply filters)
+                    let orgHasMatchingProject = true;
+                    
+                    if (investmentTypes.length > 0 || investmentThemes.length > 0 || appliedSearchQuery) {
+                        // Check org-level filters
+                        if (appliedSearchQuery) {
+                            const query = appliedSearchQuery.toLowerCase().trim();
+                            const orgName = (org.name || org.fields?.['Organization Name'] || '').toLowerCase();
+                            const orgType = (org.fields?.['Org Type'] || '').toString().toLowerCase();
+                            if (!orgName.includes(query) && !orgType.includes(query)) {
+                                orgHasMatchingProject = false;
                             }
-                        });
+                        }
+                        
+                        // Check if org has matching projects
+                        if (orgHasMatchingProject && (investmentTypes.length > 0 || investmentThemes.length > 0)) {
+                            const hasMatchingProject = org.projects?.some(project => {
+                                // Check investment type filter
+                                if (investmentTypes.length > 0) {
+                                    const projectTypes = project.fields?.['Investment Type(s)'] || [];
+                                    const matchesType = Array.isArray(projectTypes) && projectTypes.some(type =>
+                                        investmentTypes.some(filterType =>
+                                            type.toLowerCase().includes(filterType.toLowerCase()) ||
+                                            filterType.toLowerCase().includes(type.toLowerCase())
+                                        )
+                                    );
+                                    if (!matchesType) return false;
+                                }
+                                
+                                // Check investment theme filter
+                                if (investmentThemes.length > 0) {
+                                    const projectThemes = project.fields?.['Investment Theme(s)'] || [];
+                                    const matchesTheme = Array.isArray(projectThemes) && projectThemes.some(theme =>
+                                        investmentThemes.some(filterTheme =>
+                                            typeof theme === 'string' &&
+                                            theme.toLowerCase().trim() === filterTheme.toLowerCase().trim()
+                                        )
+                                    );
+                                    if (!matchesTheme) return false;
+                                }
+                                
+                                return true;
+                            });
+                            
+                            orgHasMatchingProject = hasMatchingProject || false;
+                        }
                     }
-                });
-            }
+                    
+                    if (orgHasMatchingProject) {
+                        const orgKey = `${org.id}-${org.name || org.fields?.['Organization Name'] || ''}`;
+                        orgsDirectlyFunded.add(orgKey);
+                    }
+                }
+            });
+            
+            totalFundingStreams += orgsDirectlyFunded.size;
+            
+            // Count projects directly funded by this country
+            const projectsDirectlyFunded = new Set<string>();
+            organizationsData.forEach(org => {
+                if (org.projects && Array.isArray(org.projects)) {
+                    org.projects.forEach(project => {
+                        // Check if this country is a project-level donor
+                        const hasCountryAsProjectDonor = project.agencies?.some((agency: any) =>
+                            agency.fields?.['Country Name'] === country
+                        );
+                        
+                        if (hasCountryAsProjectDonor) {
+                            // Apply filters to project
+                            let projectMatches = true;
+                            
+                            // Check search filter
+                            if (appliedSearchQuery) {
+                                const query = appliedSearchQuery.toLowerCase().trim();
+                                const projectName = (project.fields?.['Project Name'] || project.name || '').toLowerCase();
+                                const orgName = (org.name || org.fields?.['Organization Name'] || '').toLowerCase();
+                                if (!projectName.includes(query) && !orgName.includes(query)) {
+                                    projectMatches = false;
+                                }
+                            }
+                            
+                            // Check investment type filter
+                            if (projectMatches && investmentTypes.length > 0) {
+                                const projectTypes = project.fields?.['Investment Type(s)'] || [];
+                                const matchesType = Array.isArray(projectTypes) && projectTypes.some(type =>
+                                    investmentTypes.some(filterType =>
+                                        type.toLowerCase().includes(filterType.toLowerCase()) ||
+                                        filterType.toLowerCase().includes(type.toLowerCase())
+                                    )
+                                );
+                                if (!matchesType) projectMatches = false;
+                            }
+                            
+                            // Check investment theme filter
+                            if (projectMatches && investmentThemes.length > 0) {
+                                const projectThemes = project.fields?.['Investment Theme(s)'] || [];
+                                const matchesTheme = Array.isArray(projectThemes) && projectThemes.some(theme =>
+                                    investmentThemes.some(filterTheme =>
+                                        typeof theme === 'string' &&
+                                        theme.toLowerCase().trim() === filterTheme.toLowerCase().trim()
+                                    )
+                                );
+                                if (!matchesTheme) projectMatches = false;
+                            }
+                            
+                            if (projectMatches) {
+                                const projectKey = `${project.id}-${project.fields?.['Project Name'] || project.name || ''}`;
+                                projectsDirectlyFunded.add(projectKey);
+                            }
+                        }
+                    });
+                }
+            });
+            
+            totalFundingStreams += projectsDirectlyFunded.size;
         });
-
-        totalFundingStreams = orgDonorConnections.size + projectDonorConnections.size;
 
         // 2. Average number of donors per organization
         let totalDonorCount = 0;
