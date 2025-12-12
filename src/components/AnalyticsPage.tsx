@@ -1348,10 +1348,7 @@ export default function AnalyticsPage({ logoutButton }: AnalyticsPageProps) {
                             </CardTitle>
                         </CardHeader>
                         <CardContent className="pt-0">
-                            <div className="flex items-center gap-4 mb-3">
-                                <p className="text-sm text-slate-600">
-                                    Co-financing relationships between donor pairs
-                                </p>
+                            <div className="flex items-center gap-4 mb03">
                                 <div className="flex items-center gap-3 ml-auto">
                                     <div className="flex items-center gap-1.5">
                                         <div className="w-4 h-4 bg-amber-300 border border-slate-300 rounded"></div>
@@ -1363,11 +1360,11 @@ export default function AnalyticsPage({ logoutButton }: AnalyticsPageProps) {
                                     </div>
                                 </div>
                             </div>
-                            <div className="overflow-x-auto">
-                                <table className="w-full border-collapse">
+                            <div className="w-full overflow-x-hidden">
+                                <table className="w-full">
                                     <thead>
                                         <tr>
-                                            <th className="p-2 text-left text-sm font-semibold text-slate-600 border-b-2 border-slate-200 min-w-[120px]">
+                                            <th className="p-2 text-left text-sm font-semibold text-slate-600 border-b-2 border-slate-200 min-w-[90px]">
                                                 Donor
                                             </th>
                                             {selectedDonors.map(donor => (
