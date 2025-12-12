@@ -72,7 +72,7 @@ interface StatCardProps {
     value: number | string;
     label: string;
     colorScheme: 'amber';
-    tooltip?: string;
+    tooltip?: React.ReactNode;
 }
 
 const StatCard = ({ icon, title, value, label, colorScheme, tooltip }: StatCardProps) => {
@@ -123,7 +123,7 @@ const StatCard = ({ icon, title, value, label, colorScheme, tooltip }: StatCardP
                         avoidCollisions={true}
                         style={{ ...STYLES.chartTooltip }}
                     >
-                        <p className="leading-relaxed">{tooltip}</p>
+                        <div className="leading-relaxed">{tooltip}</div>
                     </TooltipContent>
                 </TooltipUI>
             </TooltipProvider>
@@ -971,6 +971,7 @@ export default function AnalyticsPage({ logoutButton }: AnalyticsPageProps) {
         });
 
         const totalTargets = fundingTargets.size;
+        const sharedFundingTargets = totalTargets - uniqueFundingTargets;
         const avgFundingOverlap = totalTargets > 0 
             ? Math.round((uniqueFundingTargets / totalTargets) * 100)
             : 0;
@@ -978,9 +979,14 @@ export default function AnalyticsPage({ logoutButton }: AnalyticsPageProps) {
         return {
             totalFundingStreams,
             avgDonorsPerOrg,
-            avgFundingOverlap
+            avgFundingOverlap,
+            fundingOverlapDetails: {
+                totalTargets,
+                uniqueFundingTargets,
+                sharedFundingTargets
+            }
         };
-    }, [filteredOrganizationsData, selectedDonors]);
+    }, [filteredOrganizationsData, selectedDonors, investmentTypes, investmentThemes, appliedSearchQuery, organizationsData]);
 
     const handleShare = () => {
         const url = window.location.href;
@@ -1086,7 +1092,31 @@ export default function AnalyticsPage({ logoutButton }: AnalyticsPageProps) {
                                     value={`${analyticsStats.avgFundingOverlap}%`}
                                     label="shared"
                                     colorScheme="amber"
-                                    tooltip="Percentage of organizations and projects that are co-financed by multiple selected donors. Higher values indicate more collaboration between donors."
+                                    tooltip={
+                                        <div className="space-y-2">
+                                            <p className="text-sm font-medium">Percentage of targets funded by exactly one selected donor:</p>
+                                            <table className="w-full text-sm border-collapse">
+                                                <tbody>
+                                                    <tr>
+                                                        <td className="text-left pr-3 py-1">Total targets (orgs + projects):</td>
+                                                        <td className="text-right font-semibold">{analyticsStats.fundingOverlapDetails?.totalTargets || 0}</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td className="text-left pr-3 py-1">Funded by exactly 1 donor:</td>
+                                                        <td className="text-right font-semibold">{analyticsStats.fundingOverlapDetails?.uniqueFundingTargets || 0}</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td className="text-left pr-3 py-1">Funded by 2+ donors:</td>
+                                                        <td className="text-right font-semibold">{analyticsStats.fundingOverlapDetails?.sharedFundingTargets || 0}</td>
+                                                    </tr>
+                                                    <tr className="border-t border-gray-300 mt-1 pt-1">
+                                                        <td className="text-left pr-3 py-1 font-medium">Calculation:</td>
+                                                        <td className="text-right text-xs">({analyticsStats.fundingOverlapDetails?.uniqueFundingTargets || 0} ÷ {analyticsStats.fundingOverlapDetails?.totalTargets || 0}) × 100</td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    }
                                 />
                             </div>
                         </>
