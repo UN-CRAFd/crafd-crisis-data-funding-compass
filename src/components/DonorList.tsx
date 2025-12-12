@@ -24,7 +24,7 @@ export function DonorList({ donorInfo, className = '', showFlags = true }: Donor
                         ? `${donor.country} (Organization Donor)` 
                         : `${donor.country} (Project-Only Donor)`}
                 >
-                    {showFlags && <CountryFlag countryName={donor.country} />}
+                    {showFlags && <CountryFlag country={donor.country} />}
                     <span className="text-sm">{donor.country}</span>
                 </div>
             ))}

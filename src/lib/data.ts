@@ -549,7 +549,8 @@ function calculateOrganizationProjects(organizations: OrganizationWithProjects[]
     return organizations.map(org => ({
         organizationName: org.organizationName,
         projectCount: org.projects.length,
-        type: org.type
+        type: org.type,
+        donorCountries: org.donorCountries
     }));
 }
 
