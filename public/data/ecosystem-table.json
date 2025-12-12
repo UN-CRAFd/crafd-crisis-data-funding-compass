@@ -55,7 +55,8 @@
         "Conferences"
       ],
       "product_key": "regional-ccc",
-      "HDX_SOHD": "None"
+      "HDX_SOHD": "None",
+      "Project Description": "The Regional Climate Change Conference (RCCC) convenes regional and global stakeholders in Bangkok and online to address resilience and climate change adaptation, with a focus on inclusive and sustainable communities. Through keynotes, panels, workshops, and capacity-building activities, it promotes knowledge exchange, climate finance and entrepreneurship, community-led adaptation, and inter-regional policy dialogue."
     }
   },
   {
@@ -231,6 +232,7 @@
         "rec3Ado0Jrl799Q8A",
         "recNLQhceOCXSMemo"
       ],
+      "Project Website": "https://www.ipcinfo.org/ipc-country-analysis/ipc-mapping-tool/",
       "Provider Orgs Full Name": [
         "recoPRDBbxl0bVx7x"
       ],
@@ -285,7 +287,8 @@
         "Information Managment"
       ],
       "product_key": "panda-bc",
-      "HDX_SOHD": "None"
+      "HDX_SOHD": "None",
+      "Project Description": "IMPACT’s PANDA builds capacities of local and international actors to understand crisis dynamics through training and tools in information management, assessments, monitoring and evaluation, and GIS. The initiative enhances partners’ analytical capabilities to improve the effectiveness and responsiveness of humanitarian interventions."
     }
   },
   {
@@ -370,7 +373,7 @@
       "Provider Orgs Full Name": [
         "reclJ2i9jD0TKjOJ8"
       ],
-      "CRAF’d-Funded Project?": "NO",
+      "CRAF’d-Funded Project?": "YES",
       "Investment Type(s)": [
         "Data Sets & Commons"
       ],
@@ -547,6 +550,31 @@
     }
   },
   {
+    "id": "rec59LnTqL11pcRdG",
+    "fields": {
+      "Project/Product Name": "Climate Action Navigator",
+      "Project Donor Agencies": [
+        "recDY0ngiDePaQtm3"
+      ],
+      "Project Website": "https://climate-action.heigit.org/",
+      "Provider Orgs Full Name": [
+        "rec1UYGdN0XUBCmDY"
+      ],
+      "CRAF’d-Funded Project?": "NO",
+      "Investment Type(s)": [
+        "Crisis Analytics & Insights",
+        "Standards & Coordination"
+      ],
+      "Investment Theme(s)": [
+        "Geospatial Analytics",
+        "Common Indicators"
+      ],
+      "product_key": "climate-navigator",
+      "HDX_SOHD": "None",
+      "Project Description": "The Climate Action Navigator delivers climate action indicators tailored to specific cities. Using a framework of high-resolution spatial indicators, it provides actionable insights through data, maps, and reports co-developed with our partners. The dashboard integrates multiple data sources, including OpenStreetMap (OSM), openrouteservice (ORS), satellite imagery, and scientific research, ensuring comprehensive and reliable insights for decision-makers."
+    }
+  },
+  {
     "id": "rec5RfuXsmtGtPDP8",
     "fields": {
       "Project/Product Name": "DISHA",
@@ -606,34 +634,6 @@
       "product_key": "gannet-ai",
       "HDX_SOHD": "None",
       "Project Description": "GANNET is a real-time, end-to-end Generative AI platform that combines near real-time assistance, analytics, and monitoring features for humanitarian data collaboration and effective decision-making."
-    }
-  },
-  {
-    "id": "rec6S0tX5hnP9I5DG",
-    "fields": {
-      "Project/Product Name": "WorldPop",
-      "Project Donor Agencies": [
-        "recbtz43uuKKFVfvd",
-        "recbvrcYZZW7mBnCU",
-        "recCDa9F6ntBxGGkm",
-        "recqMZBMvN0vxYv9v",
-        "rec3Ado0Jrl799Q8A",
-        "recqhcKxTv71yMfeI",
-        "recAXDKxEbXsaHav4",
-        "recl0rZvHPzrC6Jwd",
-        "recq6gN9R1C4tGmIx"
-      ],
-      "Project Website": "https://www.worldpop.org/about/",
-      "CRAF’d-Funded Project?": "NO",
-      "Investment Type(s)": [
-        "Data Sets & Commons"
-      ],
-      "Investment Theme(s)": [
-        "Baseline Population Data"
-      ],
-      "product_key": "worldpop",
-      "HDX_SOHD": "None",
-      "Project Description": "WorldPop develops peer-reviewed research and methodologies for constructing open and high-resolution geospatial data on population distributions, demographics, and dynamics."
     }
   },
   {
@@ -998,6 +998,34 @@
     }
   },
   {
+    "id": "recCMSnUjitsYc1XQ",
+    "fields": {
+      "Project/Product Name": "Ohsome Dashboard",
+      "Project Donor Agencies": [
+        "recDY0ngiDePaQtm3"
+      ],
+      "Project Website": "https://dashboard.ohsome.org/en/",
+      "Provider Orgs Full Name": [
+        "rec1UYGdN0XUBCmDY"
+      ],
+      "CRAF’d-Funded Project?": "NO",
+      "Investment Type(s)": [
+        "Infrastructure & Platforms",
+        "Crisis Analytics & Insights",
+        "Standards & Coordination"
+      ],
+      "Investment Theme(s)": [
+        "Geospatial Analytics",
+        "Standard Geocodes",
+        "Methodological Standards",
+        "Data Quality & Validation"
+      ],
+      "product_key": "ohsome",
+      "HDX_SOHD": "None",
+      "Project Description": "The ohsome dashboard enables users to analyze OSM’s full-history data without programming skills. It generates accurate statistics and plots them directly in the dashboard, allowing for customizable filtering and grouping of tags and types across any region or time period. The ohsome quality API (OQAPI) provides access to OSM data quality information for specific regions and use-cases which might benefit i.e. humanitarian organizations and public administration."
+    }
+  },
+  {
     "id": "recCrLYQFMbrPxsId",
     "fields": {
       "Project/Product Name": "Observatory of Killed Journalists",
@@ -1062,6 +1090,28 @@
     }
   },
   {
+    "id": "recE22sC1jhIuZnWn",
+    "fields": {
+      "Project/Product Name": "OpenRoute Service",
+      "Project Website": "https://maps.openrouteservice.org/#/place/@8.533887863159181,49.459003372452855,6",
+      "Provider Orgs Full Name": [
+        "rec1UYGdN0XUBCmDY"
+      ],
+      "CRAF’d-Funded Project?": "NO",
+      "Investment Type(s)": [
+        "Infrastructure & Platforms",
+        "Crisis Analytics & Insights"
+      ],
+      "Investment Theme(s)": [
+        "Geospatial Analytics",
+        "Geographic Information Systems (GIS)"
+      ],
+      "product_key": "openroute",
+      "HDX_SOHD": "None",
+      "Project Description": "Openrouteservice is an open-source platform leveraging OpenStreetMap data to provide advanced mobility and accessibility analysis. Surrounding the core engine is a vibrant ecosystem of services and tools, enabling seamless integration into diverse projects. We are committed to transparency, making our tools and research freely accessible. Our interactive map client highlights the platform’s capabilities and is available for anyone to explore."
+    }
+  },
+  {
     "id": "recEKzVdOqCJVhqrg",
     "fields": {
       "Project/Product Name": "PRIMARI",
@@ -1105,32 +1155,6 @@
       "product_key": "hhi-humgeo",
       "HDX_SOHD": "None",
       "Project Description": "Humanitarian Geoanalytics integrates spatial data analysis, mapping, and field-based research to support humanitarian operations. It focuses on conflict dynamics, displacement, and vulnerability assessments using geospatial methods."
-    }
-  },
-  {
-    "id": "recEuWdBixgTpQKhR",
-    "fields": {
-      "Project/Product Name": "Heidelberg Institute for Geoinformation Technology (HeiGIT)",
-      "Project Donor Agencies": [
-        "receDOQpfeb4YHc5p",
-        "recDY0ngiDePaQtm3"
-      ],
-      "Project Website": "https://heigit.org/",
-      "Provider Orgs Full Name": [
-        "rec1UYGdN0XUBCmDY"
-      ],
-      "CRAF’d-Funded Project?": "NO",
-      "Investment Type(s)": [
-        "Data Sets & Commons",
-        "Infrastructure & Platforms"
-      ],
-      "Investment Theme(s)": [
-        "Geographic Information Systems (GIS)",
-        "Climate Data"
-      ],
-      "product_key": "heigit",
-      "HDX_SOHD": "None",
-      "Project Description": "Heidelberg Institute for Geoinformation Technology (HeiGIT) advances geoinformation technology for the benefit of society and the environment. It develops open geospatial tools and APIs—such as OpenRouteService—to support disaster response, health logistics, and mobility mapping. Its platforms process global spatial data to enable routing, accessibility, and hazard analysis. Examples include customized geodata for humanitarian missions and intelligent routing for disaster response and climate action."
     }
   },
   {
@@ -1199,7 +1223,8 @@
         "Geospatial Data"
       ],
       "product_key": "data-sys",
-      "HDX_SOHD": "None"
+      "HDX_SOHD": "None",
+      "Project Description": "Data Systems and Tools develop and strengthen innovative methods and platforms to improve the availability and quality of data on forcibly displaced populations. Activities include enhancing microdata access, advancing geospatial analytics, supporting global data platforms, and improving field data collection tools such as KoBoToolbox."
     }
   },
   {
@@ -1254,7 +1279,7 @@
       "Provider Orgs Full Name": [
         "recsrCWKAPu9dwkHb"
       ],
-      "CRAF’d-Funded Project?": "YES",
+      "CRAF’d-Funded Project?": "NO",
       "Investment Type(s)": [
         "Data Sets & Commons"
       ],
@@ -1328,7 +1353,8 @@
         " Data Collection & Generation"
       ],
       "product_key": "hera-dc",
-      "HDX_SOHD": "None"
+      "HDX_SOHD": "None",
+      "Project Description": "HERA Data Collection provides detailed epidemiological datasets to support targeted health interventions, sharing comprehensive Covid-19 and Ebola data for Africa through the Humanitarian Data Exchange. By aggregating, validating, and updating reliable outbreak information, the initiative strengthens situational awareness for humanitarian and public health actors."
     }
   },
   {
@@ -1421,6 +1447,7 @@
       "Project Donor Agencies": [
         "rec1VhOJv9U6QKBBs"
       ],
+      "Project Website": "https://mptf.undp.org/project/00141356",
       "Provider Orgs Full Name": [
         "rec5SbkybILGgwGal"
       ],
@@ -1515,7 +1542,8 @@
         "Displacement & Migration Analytics"
       ],
       "product_key": "data-collec",
-      "HDX_SOHD": "None"
+      "HDX_SOHD": "None",
+      "Project Description": "Data Collection and Surveys support the production of high-quality socioeconomic data by integrating refugees, internally displaced persons, and other forcibly displaced or stateless populations into national household surveys and censuses, strengthening the evidence base for development policy and humanitarian response."
     }
   },
   {
@@ -1738,7 +1766,8 @@
         "Methodological Standards"
       ],
       "product_key": "data-governance",
-      "HDX_SOHD": "None"
+      "HDX_SOHD": "None",
+      "Project Description": "Data Standards and Governance strengthens national and international statistical practices related to forced displacement by supporting the development of data governance recommendations, standard definitions, and harmonized methods. Activities include advancing statistical inclusion, improving microdata access, and enhancing UNHCR’s global registration systems."
     }
   },
   {
@@ -1938,7 +1967,8 @@
         "Climate Analytics"
       ],
       "product_key": "cams",
-      "HDX_SOHD": "None"
+      "HDX_SOHD": "None",
+      "Project Description": "The Copernicus Atmosphere Monitoring Service (CAMS) provides global, quality-controlled information on air pollution, greenhouse gases, solar energy, and climate forcing. Implemented by ECMWF on behalf of the European Commission, the service integrates satellite and in-situ observations with advanced modelling to support environmental monitoring and public-facing applications across Europe and beyond."
     }
   },
   {
@@ -2099,6 +2129,26 @@
     }
   },
   {
+    "id": "recRwnFupko7hywEn",
+    "fields": {
+      "Project/Product Name": "Conflict Barometer",
+      "Project Website": "https://hiik.de/conflict-barometer/?lang=en",
+      "Provider Orgs Full Name": [
+        "recYDMArSj5a97Ibs"
+      ],
+      "CRAF’d-Funded Project?": "NO",
+      "Investment Type(s)": [
+        "Data Sets & Commons"
+      ],
+      "Investment Theme(s)": [
+        "Conflict & Violence Data"
+      ],
+      "product_key": "conflict-barometer",
+      "HDX_SOHD": "None",
+      "Project Description": "Since 1992, the Conflict Barometer has qualitatively and quantitatively recorded the dynamics of political conflicts, both violent and non-violent, worldwide. In accordance with the HIIK methodology, violent conflicts are classified according to their intensity into violent crises (intensity 3), limited wars (intensity 4), and wars (intensity 5). Non-violent conflicts are divided into disputes (intensity 1) and non-violent crises (intensity 2). The annual report is supplemented by conflict maps, graphics, and datasets as well as Spotlight texts that shed light on the wider context of current conflict dynamics."
+    }
+  },
+  {
     "id": "recS00J4wbHllEKXs",
     "fields": {
       "Project/Product Name": "Surveillance System for Attacks on Health Care (SSA)",
@@ -2148,6 +2198,7 @@
     "id": "recSIp9VIy4uKdPH3",
     "fields": {
       "Project/Product Name": "Territory Seismic Risk Profiles",
+      "Project Website": "https://www.globalquakemodel.org/product/seismic-risk-profiles",
       "Provider Orgs Full Name": [
         "recIIg9jENlDRt2Oe"
       ],
@@ -2159,7 +2210,8 @@
         "Geospatial Analytics"
       ],
       "product_key": "territory-seismic",
-      "HDX_SOHD": "None"
+      "HDX_SOHD": "None",
+      "Project Description": "Territory Seismic Risk Profiles offer consolidated snapshots of seismic hazard and risk through social indicators, exposure and loss metrics, building class information, historical earthquake impacts, and mapped distributions of hazard and vulnerability. Based on 100,000-year simulated event models, they support risk management across residential, commercial, and industrial sectors."
     }
   },
   {
@@ -2204,6 +2256,33 @@
     }
   },
   {
+    "id": "recSZ5wPOqG3Pm9Ip",
+    "fields": {
+      "Project/Product Name": "Geoinformation for Humanitarian Aid",
+      "Project Donor Agencies": [
+        "recDY0ngiDePaQtm3"
+      ],
+      "Project Website": "https://heigit.org/geoinformation-for-humanitarian-aid/#overview",
+      "Provider Orgs Full Name": [
+        "rec1UYGdN0XUBCmDY"
+      ],
+      "CRAF’d-Funded Project?": "NO",
+      "Investment Type(s)": [
+        "Data Sets & Commons",
+        "Crisis Analytics & Insights"
+      ],
+      "Investment Theme(s)": [
+        "Anticipatory & Early Action Forecasts",
+        "Disaster Hazard & Risk Modelling",
+        "Geospatial Data",
+        "Geospatial Analytics"
+      ],
+      "product_key": "gifha",
+      "HDX_SOHD": "None",
+      "Project Description": "In the face of growing humanitarian challenges, HeiGIT positions geoinformation as a central tool for enhancing crisis response, supporting environmental sustainability, and strengthening community resilience. By leveraging data and digital technologies, it assists humanitarian organizations in identifying vulnerabilities and hazards through risk assessments, integrating local knowledge to ensure context-specific and inclusive solutions. Through its geospatial expertise, HeiGIT pursues faster, smarter, and more effective humanitarian responses."
+    }
+  },
+  {
     "id": "recSbniShY9V8cE4L",
     "fields": {
       "Project/Product Name": "Data Analytics Tool",
@@ -2245,26 +2324,6 @@
       "product_key": "unep-wcmc",
       "HDX_SOHD": "None",
       "Project Description": "UNEP-WCMC is a global science-policy interface that provides open-access datasets and tools on biodiversity, ecosystem services, and conservation strategies. Its data platforms support environmental reporting, climate resilience, and natural capital planning."
-    }
-  },
-  {
-    "id": "recTaCZEF36yEoMIT",
-    "fields": {
-      "Project/Product Name": "Heidelberg Institute for International Conflict Research",
-      "Project Website": "https://www.hiik.de",
-      "Provider Orgs Full Name": [
-        "rec1UYGdN0XUBCmDY"
-      ],
-      "CRAF’d-Funded Project?": "NO",
-      "Investment Type(s)": [
-        "Data Sets & Commons"
-      ],
-      "Investment Theme(s)": [
-        "Conflict & Violence Data"
-      ],
-      "product_key": "hiik",
-      "HDX_SOHD": "None",
-      "Project Description": "The Heidelberg Institute for International Conflict Research (HIIK) is an independent, non-profit, and interdisciplinary association. Established in 1991, the organization is dedicated to promoting, disseminating, and implementing knowledge regarding the emergence, progression, and resolution of both intra-state and inter-state political conflicts. In recent years, the HIIK has experienced significant growth and currently comprises over 200 volunteers."
     }
   },
   {
@@ -2340,7 +2399,7 @@
   {
     "id": "recVj2ULsOWhPFQ19",
     "fields": {
-      "Project/Product Name": "EM-DAT: The International Disaster Database",
+      "Project/Product Name": "International Disaster Database (EM-DAT)",
       "Project Website": "https://www.emdat.be/",
       "Provider Orgs Full Name": [
         "rec5DdxnhKg1na7o8"
@@ -2528,6 +2587,7 @@
     "id": "recYR5aZ0pWEFezdF",
     "fields": {
       "Project/Product Name": "FlowKit",
+      "Project Website": "https://www.flowminder.org/what-we-do/mobile-data-partnerships/flowkit",
       "Provider Orgs Full Name": [
         "recG3iaB3tMhPUTLg"
       ],
@@ -2540,7 +2600,8 @@
         "Private Data Sharing"
       ],
       "product_key": "flow-kit",
-      "HDX_SOHD": "None"
+      "HDX_SOHD": "None",
+      "Project Description": "FlowKit is an open-source suite for the secure processing of de-identified mobile network data, designed to bridge the gap between mobile operators and humanitarian or development actors. By providing operator-controlled, audited access to mobility metrics via a dedicated API, FlowKit reduces technical barriers, safeguards privacy, and enables the scalable use of mobile data for crisis response, planning, and public-good analytics."
     }
   },
   {
@@ -2675,13 +2736,15 @@
         "Food Security Analytics"
       ],
       "product_key": "ipc-infographics",
-      "HDX_SOHD": "None"
+      "HDX_SOHD": "None",
+      "Project Description": "IPC Infographics provide regularly updated visual summaries of acute food insecurity and malnutrition across crisis-affected countries. Drawing on IPC analytical processes, these snapshots translate complex assessments into accessible, country-specific insights used by policymakers, humanitarian actors, and early warning systems to monitor hunger trends and guide response planning."
     }
   },
   {
     "id": "recZxXY0AjXgSMXr7",
     "fields": {
       "Project/Product Name": "Global Vulnerability Model",
+      "Project Website": "https://www.globalquakemodel.org/product/global-vulnerability-model",
       "Provider Orgs Full Name": [
         "recIIg9jENlDRt2Oe"
       ],
@@ -2693,7 +2756,8 @@
         "Damage Assessments"
       ],
       "product_key": "global-vulnerability",
-      "HDX_SOHD": "None"
+      "HDX_SOHD": "None",
+      "Project Description": "The Global Vulnerability Model consists of a set of functions that estimate the consequences of earthquakes of a given intensity to different building typologies. The database is separated by region-country/territory and considers functions for over 3500 building typologies identified in the Global Exposure Model developed, curated and maintained by the GEM Foundation. The fragility functions are derived analytically, using non-linear time-history analyses on equivalent single-degree-of-freedom oscillators and a large set of ground motion records representing several tectonic environments."
     }
   },
   {
@@ -2808,6 +2872,7 @@
       "Provider Orgs Full Name": [
         "recCvRYx3gzUtg9cf"
       ],
+      "CRAF’d-Funded Project?": "NO",
       "Investment Type(s)": [
         "Crisis Analytics & Insights"
       ],
@@ -2827,6 +2892,7 @@
       "Provider Orgs Full Name": [
         "recU1jAnjfLIhxtwj"
       ],
+      "CRAF’d-Funded Project?": "NO",
       "Investment Type(s)": [
         "Data Sets & Commons"
       ],
@@ -3031,6 +3097,7 @@
     "id": "recdr2wcQiX1Ch1ZF",
     "fields": {
       "Project/Product Name": "Global Seismic Risk Map",
+      "Project Website": "https://www.globalquakemodel.org/product/global-seismic-risk-map",
       "Provider Orgs Full Name": [
         "recIIg9jENlDRt2Oe"
       ],
@@ -3044,7 +3111,8 @@
         "Composite Indices"
       ],
       "product_key": "global-seismic-map",
-      "HDX_SOHD": "None"
+      "HDX_SOHD": "None",
+      "Project Description": "The Global Seismic Risk Map  poster comprises three global maps, and a ranking of the top 15 countries according to five risk metrics. The main map presents the geographic distribution of average annual loss (AAL) of the built-up area due to ground shaking in the residential, commercial and industrial building stock. It does not consider the effects of tsunamis, liquefaction, landslides, and fires following earthquakes."
     }
   },
   {
@@ -3076,6 +3144,7 @@
       "Provider Orgs Full Name": [
         "recHAqTQikIG8K4tD"
       ],
+      "CRAF’d-Funded Project?": "NO",
       "Investment Type(s)": [
         "Data Sets & Commons"
       ],
@@ -3192,7 +3261,7 @@
       "Provider Orgs Full Name": [
         "rec4rSsPP59Beed9i"
       ],
-      "CRAF’d-Funded Project?": "YES",
+      "CRAF’d-Funded Project?": "NO",
       "Investment Type(s)": [
         "Human Capital & Know-how"
       ],
@@ -3508,7 +3577,8 @@
         "Food Security Analytics"
       ],
       "product_key": "fsnwg-special",
-      "HDX_SOHD": "None"
+      "HDX_SOHD": "None",
+      "Project Description": "The Global Seismic Risk Map  poster comprises three global maps, and a ranking of the top 15 countries according to five risk metrics. The main map presents the geographic distribution of average annual loss (AAL) of the built-up area due to ground shaking in the residential, commercial and industrial building stock. It does not consider the effects of tsunamis, liquefaction, landslides, and fires following earthquakes. "
     }
   },
   {
@@ -3689,6 +3759,26 @@
     }
   },
   {
+    "id": "reclLUvOxshjdhBUy",
+    "fields": {
+      "Project/Product Name": "Map Kit",
+      "Project Website": "https://hiik.de/data-and-maps/static-maps/?lang=en",
+      "Provider Orgs Full Name": [
+        "recYDMArSj5a97Ibs"
+      ],
+      "CRAF’d-Funded Project?": "NO",
+      "Investment Type(s)": [
+        "Data Sets & Commons"
+      ],
+      "Investment Theme(s)": [
+        "Conflict & Violence Data"
+      ],
+      "product_key": "map-kit",
+      "HDX_SOHD": "None",
+      "Project Description": "Map Kit is an annual collection of global and regional conflict maps derived from the Conflict Barometer, presenting national and subnational conflict trends alongside downloadable underlying data where available. The series offers ready-to-use static maps covering all world regions, supporting comparative conflict analysis and situational awareness."
+    }
+  },
+  {
     "id": "reclcvFLzfAlhADFB",
     "fields": {
       "Project/Product Name": "Global Information Management Surge Capacity",
@@ -3696,6 +3786,7 @@
       "Provider Orgs Full Name": [
         "recvzWSlYgzs0mffd"
       ],
+      "CRAF’d-Funded Project?": "NO",
       "Investment Type(s)": [
         "Human Capital & Know-how"
       ],
@@ -3763,7 +3854,8 @@
         "Climate Analytics"
       ],
       "product_key": "desert-cp",
-      "HDX_SOHD": "None"
+      "HDX_SOHD": "None",
+      "Project Description": "Desertification Country Profiles provide standardized national overviews of land degradation, drought planning, and sustainable land management actions under the UNCCD. The platform offers quick access to country information, annex classifications, national and regional action plans, and voluntary Land Degradation Neutrality (LDN) targets to support coordinated, evidence-based land stewardship."
     }
   },
   {
@@ -3888,7 +3980,8 @@
         "Data Management & Visualization"
       ],
       "product_key": "dti-services",
-      "HDX_SOHD": "None"
+      "HDX_SOHD": "None",
+      "Project Description": "The Data, Technology & Innovation (DTI) Initiative applies data science, AI, and scalable platform development to create ethical, sustainable digital tools for social impact. Combining dashboards, AI platforms, and applied ML research, it transforms complex datasets into actionable insights that strengthen decision-making for organizations and communities globally."
     }
   },
   {
@@ -4086,6 +4179,7 @@
       "Provider Orgs Full Name": [
         "recU1jAnjfLIhxtwj"
       ],
+      "CRAF’d-Funded Project?": "NO",
       "Investment Type(s)": [
         "Data Sets & Commons",
         "Crisis Analytics & Insights"
@@ -4254,7 +4348,7 @@
       "Provider Orgs Full Name": [
         "reclJ2i9jD0TKjOJ8"
       ],
-      "CRAF’d-Funded Project?": "NO",
+      "CRAF’d-Funded Project?": "YES",
       "Investment Type(s)": [
         "Crisis Analytics & Insights"
       ],
@@ -4354,7 +4448,7 @@
       "Provider Orgs Full Name": [
         "reci9Q8xAcus6YuKx"
       ],
-      "CRAF’d-Funded Project?": "YES",
+      "CRAF’d-Funded Project?": "NO",
       "Investment Type(s)": [
         "Data Sets & Commons",
         "Crisis Analytics & Insights"
@@ -4469,7 +4563,8 @@
         "Data Collection"
       ],
       "product_key": "swot",
-      "HDX_SOHD": "None"
+      "HDX_SOHD": "None",
+      "Project Description": "The Safe Water Optimization Tool (SWOT) provides actionable, site-specific chlorination guidance by analysing routine water quality measurements and modelling chlorine decay from tapstands to households. Designed for use in emergencies, the tool supports responders in maintaining safe drinking water throughout distribution systems."
     }
   },
   {
@@ -4511,7 +4606,8 @@
         "Nutrition Analytics"
       ],
       "product_key": "fsn-update",
-      "HDX_SOHD": "None"
+      "HDX_SOHD": "None",
+      "Project Description": "The Food Security and Nutrition Working Group (FSNWG) is a regional platform, currently co-chaired by ICPAC and FAO. It’s goal is two-fold: to provide an up-to-date food security and nutrition situation analysis (early warning) and to offer a forum to build consensus on critical issues facing policy and interventions. The FNSWG has served regional governments, donors, and non-governmental agencies since the early 2000’s. Current membership includes approximately 80 organisations (IGAD, UN agencies, NGOs, donors, and research institutions) who contribute to the operation of the working group, and its nutrition, markets, food security information, livestock and pastoralist sub-groups."
     }
   },
   {
@@ -4810,6 +4906,7 @@
     "id": "reczPiGnmhBrolMGr",
     "fields": {
       "Project/Product Name": "NYU + VIEWS: Data for Peace Conference",
+      "Project Website": "https://cic.nyu.edu/events/data-for-peace-leveraging-data-to-foster-lasting-peace/",
       "Provider Orgs Full Name": [
         "recHAqTQikIG8K4tD"
       ],
@@ -4821,7 +4918,8 @@
         "Conferences"
       ],
       "product_key": "nyu-views",
-      "HDX_SOHD": "None"
+      "HDX_SOHD": "None",
+      "Project Description": "The Data for Peace Conference gathers national and international stakeholders for a multi-day hybrid programme focused on leveraging data, analytics, and emerging technologies for peacebuilding and prevention. Through panels, workshops, pitches, and networking sessions, the event strengthens collaboration across the humanitarian–development–peace and climate sectors and promotes practical capacity building for the global data-for-peace community."
     }
   },
   {
@@ -4868,9 +4966,11 @@
     "id": "reczwfqv4kuJclB0U",
     "fields": {
       "Project/Product Name": "Capacity & Training Services",
+      "Project Website": "https://datapopalliance.org/dataliteracy/",
       "Provider Orgs Full Name": [
         "recHsNe20lr1CUAVu"
       ],
+      "CRAF’d-Funded Project?": "NO",
       "Investment Type(s)": [
         "Human Capital & Know-how"
       ],
@@ -4878,7 +4978,8 @@
         "Capacity Building"
       ],
       "product_key": "capacity-training",
-      "HDX_SOHD": "None"
+      "HDX_SOHD": "None",
+      "Project Description": "Data-Pop Alliance Capacity & Training Services build data literacy at scale by integrating technical, policy, and ethical perspectives into a global learning ecosystem. Through workshops, technical courses, and the Open Learning Hub, the initiative enables professionals to navigate opportunities and challenges, apply data science methods to non-traditional data sources, and advance equitable, evidence-driven decision-making across development and humanitarian contexts."
     }
   },
   {
@@ -4892,6 +4993,9 @@
         "recAXDKxEbXsaHav4"
       ],
       "Project Website": "https://www.worldpop.org/",
+      "Provider Orgs Full Name": [
+        "recTRbZA2fpb5FEmd"
+      ],
       "CRAF’d-Funded Project?": "NO",
       "Investment Type(s)": [
         "Data Sets & Commons"
