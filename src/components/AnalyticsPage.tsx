@@ -8,7 +8,7 @@ import FilterBar from '@/components/FilterBar';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { Tooltip as TooltipUI, TooltipContent, TooltipProvider, TooltipTrigger } from '@/components/ui/tooltip';
-import { Globe, Search, Filter, ChevronDown, Building2, Database, BarChart3, Network, GitBranch, Users, Target } from 'lucide-react';
+import { Globe, Search, Filter, ChevronDown, Building2, Database, BarChart3, Network, GitBranch, Users, Target, SearchCheck } from 'lucide-react';
 import { SectionHeader } from './SectionHeader';
 import { useTips } from '@/contexts/TipsContext';
 import { toUrlSlug, matchesUrlSlug } from '@/lib/urlShortcuts';
@@ -1356,8 +1356,16 @@ export default function AnalyticsPage({ logoutButton }: AnalyticsPageProps) {
 
                     {/* Filter Bar */}
                     <Card className="!border-0 bg-white">
+                        <CardHeader className="pb-0 h-0">
+                            <CardTitle className="flex flex-row items-center justify-between w-full mb-0">
+                                <SectionHeader icon={<Filter style={{ color: 'var(--brand-primary)' }} />} title="SUBSET FILTER" />
+                            </CardTitle>
+                        </CardHeader>
+
+                    
                         <CardContent className="p-4 mt-0 mb-0">
-                            <FilterBar className='mt-0 mb-0'
+                            
+                            <FilterBar
                                 searchQuery={searchQuery}
                                 appliedSearchQuery={appliedSearchQuery}
                                 onSearchChange={setSearchQuery}
@@ -1487,11 +1495,30 @@ export default function AnalyticsPage({ logoutButton }: AnalyticsPageProps) {
                                                     
                                                     const handleCellClick = () => {
                                                         if (!isDiagonal && count > 0) {
-                                                            // Navigate to dashboard with the two donors as filters using URL slugs
+                                                            // Navigate to dashboard with the two donors and current filters
                                                             const donorSlugs = [donor1, donor2]
                                                                 .map(d => toUrlSlug(d))
                                                                 .join(',');
-                                                            router.push(`/?d=${donorSlugs}`);
+                                                            
+                                                            const params = new URLSearchParams();
+                                                            params.set('d', donorSlugs);
+                                                            
+                                                            // Add type filters if any
+                                                            if (investmentTypes.length > 0) {
+                                                                params.set('types', investmentTypes.join(','));
+                                                            }
+                                                            
+                                                            // Add theme filters if any
+                                                            if (investmentThemes.length > 0) {
+                                                                params.set('themes', investmentThemes.join(','));
+                                                            }
+                                                            
+                                                            // Add search query if any
+                                                            if (appliedSearchQuery) {
+                                                                params.set('q', appliedSearchQuery);
+                                                            }
+                                                            
+                                                            router.push(`/?${params.toString()}`);
                                                         }
                                                     };
                                                     
@@ -1548,7 +1575,7 @@ export default function AnalyticsPage({ logoutButton }: AnalyticsPageProps) {
                     </Card>
 
                        {/* Charts Row */}
-                    <div className="grid grid-cols-1 lg:grid-cols-3 gap-4">
+                    <div className="grid grid-cols-1 lg:grid-cols-2 gap-4">
                         <ChartCard
                             title="Co-Financing Donors"
                             icon={<Globe style={{ color: 'var(--brand-primary)' }} />}
@@ -1565,9 +1592,9 @@ export default function AnalyticsPage({ logoutButton }: AnalyticsPageProps) {
                             </CardTitle>
                             </CardHeader>
                             <CardContent className="pt-0">
-                                <div className="space-y-1 max-h-64 overflow-y-auto">
+                                <div className="space-y-1 max-h-70 overflow-y-auto">
                                     {organizationsWithDonorCounts.length === 0 ? (
-                                        <p className="text-sm text-slate-500 italic">No organizations found</p>
+                                        <p className="text-sm text-slate-500">No organizations found</p>
                                     ) : (
                                         organizationsWithDonorCounts.map((org, idx) => (
                                             <div 
@@ -1597,12 +1624,7 @@ export default function AnalyticsPage({ logoutButton }: AnalyticsPageProps) {
                             </CardContent>
                         </Card>
                         
-                        <ChartCard
-                            title={labels.sections.projectCategories}
-                            icon={<Database style={{ color: 'var(--brand-primary)' }} />}
-                            data={projectTypesData}
-                            barColor="var(--brand-primary-lighter)"
-                        />
+                    
                     </div>
 
 
