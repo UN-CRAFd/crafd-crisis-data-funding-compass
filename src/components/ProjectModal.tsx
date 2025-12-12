@@ -355,7 +355,7 @@ export default function ProjectModal({ project, allOrganizations, loading, proje
                 </div>
 
                 {similarProjects.length > 0 && (
-                    <div className="mb-6">
+                    <div className="hidden mb-6">
                         <div className="mb-3 flex items-center gap-2">
                             <h3 className="text-xl font-roboto font-black text-[#333333] uppercase tracking-wide leading-normal">
                                 {labels.modals.similarProjects}
