@@ -179,13 +179,17 @@ const FilterBar: React.FC<FilterBarProps> = ({
                                         checked={combinedDonors.includes(donor)}
                                         onCheckedChange={(checked) => {
                                             if (checked) {
-                                                onDonorsChange(Array.from(new Set([...combinedDonors, donor])));
+                                                // Limit to maximum 16 donors
+                                                if (combinedDonors.length < 16) {
+                                                    onDonorsChange(Array.from(new Set([...combinedDonors, donor])));
+                                                }
                                             } else {
                                                 onDonorsChange(combinedDonors.filter((d) => d !== donor));
                                             }
                                         }}
                                         onSelect={(e) => e.preventDefault()}
                                         className="cursor-pointer"
+                                        disabled={!combinedDonors.includes(donor) && combinedDonors.length >= 16}
                                     >
                                         {donor}
                                     </DropdownMenuCheckboxItem>
