@@ -162,6 +162,7 @@ export default function AnalyticsPage({ logoutButton }: AnalyticsPageProps) {
     const [searchQuery, setSearchQuery] = useState('');
     const [appliedSearchQuery, setAppliedSearchQuery] = useState('');
     const [isInitialized, setIsInitialized] = useState(false);
+    const [hoveredCell, setHoveredCell] = useState<{ donor1: string; donor2: string } | null>(null);
     
     // Load filter state from URL on mount
     useEffect(() => {
@@ -535,6 +536,135 @@ export default function AnalyticsPage({ logoutButton }: AnalyticsPageProps) {
         return { maxProjects, maxOrgs };
     }, [coFinancingMatrix, selectedDonors]);
 
+    // Calculate total orgs and projects per donor (for diagonal cells context)
+    const donorTotals = useMemo(() => {
+        const totals: Record<string, { orgs: Set<string>; projects: Set<string> }> = {};
+
+        selectedDonors.forEach(donor => {
+            totals[donor] = { orgs: new Set(), projects: new Set() };
+        });
+
+        // Process all organizations
+        organizationsData.forEach(org => {
+            // Check search filter
+            if (appliedSearchQuery) {
+                const query = appliedSearchQuery.toLowerCase().trim();
+                const orgName = (org.name || org.fields?.['Organization Name'] || '').toLowerCase();
+                const orgType = (org.fields?.['Org Type'] || '').toString().toLowerCase();
+                const matchesSearch = orgName.includes(query) || orgType.includes(query);
+                if (!matchesSearch) return;
+            }
+
+            // Get all donor countries from BOTH org-level and project-level
+            const allDonorsSet = new Set<string>();
+            
+            // Add org-level donors
+            if (org.agencies && Array.isArray(org.agencies)) {
+                org.agencies.forEach(agency => {
+                    const countryName = agency.fields?.['Country Name'];
+                    if (countryName && typeof countryName === 'string') {
+                        allDonorsSet.add(countryName);
+                    }
+                });
+            }
+            
+            // Add project-level donors
+            if (org.projects && Array.isArray(org.projects)) {
+                org.projects.forEach(project => {
+                    if (project.agencies && Array.isArray(project.agencies)) {
+                        project.agencies.forEach((agency: any) => {
+                            const countryName = agency.fields?.['Country Name'];
+                            if (countryName && typeof countryName === 'string') {
+                                allDonorsSet.add(countryName);
+                            }
+                        });
+                    }
+                });
+            }
+
+            const allOrgDonors = Array.from(allDonorsSet);
+            const orgName = org.name || org.fields?.['Organization Name'] || '';
+            const orgKey = `${org.id}-${orgName}`;
+
+            // For each selected donor, add this org if they fund it
+            selectedDonors.forEach(donor => {
+                if (allOrgDonors.includes(donor)) {
+                    // Check if org has any projects that match type/theme filters
+                    let hasMatchingProjects = true;
+                    if ((investmentTypes.length > 0 || investmentThemes.length > 0) && org.projects && Array.isArray(org.projects)) {
+                        hasMatchingProjects = org.projects.some(project => {
+                            // Check investment type filter
+                            if (investmentTypes.length > 0) {
+                                const projectTypes = project.fields?.['Investment Type(s)'] || [];
+                                const matchesType = Array.isArray(projectTypes) && projectTypes.some(type =>
+                                    investmentTypes.some(filterType =>
+                                        type.toLowerCase().includes(filterType.toLowerCase()) ||
+                                        filterType.toLowerCase().includes(type.toLowerCase())
+                                    )
+                                );
+                                if (!matchesType) return false;
+                            }
+
+                            // Check investment theme filter
+                            if (investmentThemes.length > 0) {
+                                const projectThemes = project.fields?.['Investment Theme(s)'] || [];
+                                const matchesTheme = Array.isArray(projectThemes) && projectThemes.some(theme =>
+                                    investmentThemes.some(filterTheme =>
+                                        typeof theme === 'string' &&
+                                        theme.toLowerCase().trim() === filterTheme.toLowerCase().trim()
+                                    )
+                                );
+                                if (!matchesTheme) return false;
+                            }
+
+                            return true;
+                        });
+                    }
+
+                    // Only add org if it has matching projects (or no filters applied)
+                    if (hasMatchingProjects) {
+                        totals[donor].orgs.add(orgKey);
+                    }
+
+                    // Add projects that match type/theme filters
+                    if (org.projects && Array.isArray(org.projects)) {
+                        org.projects.forEach(project => {
+                            // Check investment type filter
+                            if (investmentTypes.length > 0) {
+                                const projectTypes = project.fields?.['Investment Type(s)'] || [];
+                                const matchesType = Array.isArray(projectTypes) && projectTypes.some(type =>
+                                    investmentTypes.some(filterType =>
+                                        type.toLowerCase().includes(filterType.toLowerCase()) ||
+                                        filterType.toLowerCase().includes(type.toLowerCase())
+                                    )
+                                );
+                                if (!matchesType) return;
+                            }
+
+                            // Check investment theme filter
+                            if (investmentThemes.length > 0) {
+                                const projectThemes = project.fields?.['Investment Theme(s)'] || [];
+                                const matchesTheme = Array.isArray(projectThemes) && projectThemes.some(theme =>
+                                    investmentThemes.some(filterTheme =>
+                                        typeof theme === 'string' &&
+                                        theme.toLowerCase().trim() === filterTheme.toLowerCase().trim()
+                                    )
+                                );
+                                if (!matchesTheme) return;
+                            }
+
+                            const projectName = project.fields?.['Project Name'] || project.name || '';
+                            const projectKey = `${project.id}-${projectName}`;
+                            totals[donor].projects.add(projectKey);
+                        });
+                    }
+                }
+            });
+        });
+
+        return totals;
+    }, [organizationsData, selectedDonors, appliedSearchQuery, investmentTypes, investmentThemes]);
+
     // Calculate organization types chart data using filtered data
     const organizationTypesData = useMemo(() => {
         if (selectedDonors.length === 0 || !filteredOrganizationsData) return [];
@@ -554,6 +684,108 @@ export default function AnalyticsPage({ logoutButton }: AnalyticsPageProps) {
             .sort((a, b) => b.value - a.value)
             .slice(0, 10);
     }, [filteredOrganizationsData, selectedDonors]);
+
+    // Calculate organizations list with donor counts sorted by number of donors
+    const organizationsWithDonorCounts = useMemo(() => {
+        if (selectedDonors.length === 0) return [];
+
+        const orgDonorMap: Record<string, { name: string; donors: Set<string>; id: string }> = {};
+
+        // Get all organizations funded by at least one selected donor
+        organizationsData.forEach(org => {
+            // Check search filter
+            if (appliedSearchQuery) {
+                const query = appliedSearchQuery.toLowerCase().trim();
+                const orgName = (org.name || org.fields?.['Organization Name'] || '').toLowerCase();
+                const orgType = (org.fields?.['Org Type'] || '').toString().toLowerCase();
+                const matchesSearch = orgName.includes(query) || orgType.includes(query);
+                if (!matchesSearch) return;
+            }
+
+            // Get all donor countries from BOTH org-level and project-level
+            const allDonorsSet = new Set<string>();
+            
+            // Add org-level donors
+            if (org.agencies && Array.isArray(org.agencies)) {
+                org.agencies.forEach(agency => {
+                    const countryName = agency.fields?.['Country Name'];
+                    if (countryName && typeof countryName === 'string' && selectedDonors.includes(countryName)) {
+                        allDonorsSet.add(countryName);
+                    }
+                });
+            }
+            
+            // Add project-level donors
+            if (org.projects && Array.isArray(org.projects)) {
+                org.projects.forEach(project => {
+                    if (project.agencies && Array.isArray(project.agencies)) {
+                        project.agencies.forEach((agency: any) => {
+                            const countryName = agency.fields?.['Country Name'];
+                            if (countryName && typeof countryName === 'string' && selectedDonors.includes(countryName)) {
+                                allDonorsSet.add(countryName);
+                            }
+                        });
+                    }
+                });
+            }
+
+            const orgName = org.name || org.fields?.['Organization Name'] || '';
+            
+            // Only include if funded by at least one selected donor
+            if (allDonorsSet.size > 0) {
+                // Check if org has any projects that match type/theme filters
+                let hasMatchingProjects = true;
+                if ((investmentTypes.length > 0 || investmentThemes.length > 0) && org.projects && Array.isArray(org.projects)) {
+                    hasMatchingProjects = org.projects.some(project => {
+                        // Check investment type filter
+                        if (investmentTypes.length > 0) {
+                            const projectTypes = project.fields?.['Investment Type(s)'] || [];
+                            const matchesType = Array.isArray(projectTypes) && projectTypes.some(type =>
+                                investmentTypes.some(filterType =>
+                                    type.toLowerCase().includes(filterType.toLowerCase()) ||
+                                    filterType.toLowerCase().includes(type.toLowerCase())
+                                )
+                            );
+                            if (!matchesType) return false;
+                        }
+
+                        // Check investment theme filter
+                        if (investmentThemes.length > 0) {
+                            const projectThemes = project.fields?.['Investment Theme(s)'] || [];
+                            const matchesTheme = Array.isArray(projectThemes) && projectThemes.some(theme =>
+                                investmentThemes.some(filterTheme =>
+                                    typeof theme === 'string' &&
+                                    theme.toLowerCase().trim() === filterTheme.toLowerCase().trim()
+                                )
+                            );
+                            if (!matchesTheme) return false;
+                        }
+
+                        return true;
+                    });
+                }
+
+                // Only add org if it has matching projects (or no filters applied)
+                if (hasMatchingProjects) {
+                    const orgKey = `${org.id}-${orgName}`;
+                    orgDonorMap[orgKey] = {
+                        name: orgName,
+                        donors: allDonorsSet,
+                        id: org.id
+                    };
+                }
+            }
+        });
+
+        // Convert to array and sort by donor count (descending), then alphabetically
+        return Object.values(orgDonorMap)
+            .sort((a, b) => {
+                if (b.donors.size !== a.donors.size) {
+                    return b.donors.size - a.donors.size;
+                }
+                return a.name.localeCompare(b.name);
+            });
+    }, [organizationsData, selectedDonors, appliedSearchQuery, investmentTypes, investmentThemes]);
 
     // Calculate project types chart data using filtered data
     const projectTypesData = useMemo(() => {
@@ -973,7 +1205,7 @@ export default function AnalyticsPage({ logoutButton }: AnalyticsPageProps) {
         const totalTargets = fundingTargets.size;
         const sharedFundingTargets = totalTargets - uniqueFundingTargets;
         const avgFundingOverlap = totalTargets > 0 
-            ? Math.round((uniqueFundingTargets / totalTargets) * 100)
+            ? 100 - Math.round((uniqueFundingTargets / totalTargets) * 100)
             : 0;
 
         return {
@@ -1207,17 +1439,51 @@ export default function AnalyticsPage({ logoutButton }: AnalyticsPageProps) {
                                                     const orgCount = coFinancingMatrix[donor1]?.[donor2]?.orgs.size || 0;
                                                     
                                                     const count = isAboveDiagonal ? projectCount : orgCount;
-                                                    const colorClass = isDiagonal 
-                                                        ? 'bg-slate-200 text-slate-400'
-                                                        : isAboveDiagonal
-                                                            ? `${getProjectColorIntensity(projectCount, maxValues.maxProjects)} ${projectCount > 0 ? 'text-slate-800' : 'text-slate-400'}`
-                                                            : `${getOrgColorIntensity(orgCount, maxValues.maxOrgs)} ${orgCount > 0 ? 'text-slate-800' : 'text-slate-400'}`;
                                                     
-                                                    const tooltipText = isDiagonal 
-                                                        ? null
-                                                        : isAboveDiagonal
-                                                            ? `${donor1} and ${donor2} are co-financing ${projectCount} project${projectCount !== 1 ? 's' : ''}`
-                                                            : `${donor1} and ${donor2} are co-financing ${orgCount} organization${orgCount !== 1 ? 's' : ''}`;
+                                                    // For diagonal cells, show contextual data when another cell is hovered
+                                                    const showDiagonalContext = isDiagonal && hoveredCell && (hoveredCell.donor1 === donor1 || hoveredCell.donor2 === donor1);
+                                                    let diagonalCount = 0;
+                                                    let diagonalColorClass = 'bg-slate-200 text-slate-400';
+                                                    let diagonalTooltipText = '';
+                                                    
+                                                    if (showDiagonalContext) {
+                                                        // Determine if we should show orgs or projects based on which cell is hovered
+                                                        const isHoveredAboveDiagonal = (hoveredCell.donor1 === donor1 && hoveredCell.donor2 !== donor1) ? (selectedDonors.indexOf(hoveredCell.donor1) < selectedDonors.indexOf(hoveredCell.donor2)) : false;
+                                                        const isHoveredBelowDiagonal = (hoveredCell.donor1 === donor1 && hoveredCell.donor2 !== donor1) ? (selectedDonors.indexOf(hoveredCell.donor1) > selectedDonors.indexOf(hoveredCell.donor2)) : (hoveredCell.donor2 === donor1 && hoveredCell.donor1 !== donor1 && selectedDonors.indexOf(hoveredCell.donor1) > selectedDonors.indexOf(hoveredCell.donor2));
+                                                        
+                                                        // Simplify: check if hovered cell is a project cell or org cell
+                                                        const hoveredOrgIndex = selectedDonors.indexOf(hoveredCell.donor1);
+                                                        const hoveredColIndex = selectedDonors.indexOf(hoveredCell.donor2);
+                                                        const isHoveredCellProject = hoveredOrgIndex < hoveredColIndex;
+                                                        
+                                                        if (isHoveredCellProject) {
+                                                            // Show total projects for this donor
+                                                            diagonalCount = donorTotals[donor1]?.projects.size || 0;
+                                                            diagonalTooltipText = `Total projects funded by ${donor1}`;
+                                                            diagonalColorClass = `${getProjectColorIntensity(diagonalCount, maxValues.maxProjects)} ${diagonalCount > 0 ? 'text-slate-800' : 'text-slate-400'}`;
+                                                        } else {
+                                                            // Show total orgs for this donor
+                                                            diagonalCount = donorTotals[donor1]?.orgs.size || 0;
+                                                            diagonalTooltipText = `Total organizations funded by ${donor1}`;
+                                                            diagonalColorClass = `${getOrgColorIntensity(diagonalCount, maxValues.maxOrgs)} ${diagonalCount > 0 ? 'text-slate-800' : 'text-slate-400'}`;
+                                                        }
+                                                    }
+                                                    
+                                                    const colorClass = isDiagonal && !showDiagonalContext
+                                                        ? 'bg-slate-200 text-slate-400'
+                                                        : isDiagonal && showDiagonalContext
+                                                            ? diagonalColorClass
+                                                            : isAboveDiagonal
+                                                                ? `${getProjectColorIntensity(projectCount, maxValues.maxProjects)} ${projectCount > 0 ? 'text-slate-800' : 'text-slate-400'}`
+                                                                : `${getOrgColorIntensity(orgCount, maxValues.maxOrgs)} ${orgCount > 0 ? 'text-slate-800' : 'text-slate-400'}`;
+                                                    
+                                                    const tooltipText = isDiagonal && showDiagonalContext
+                                                        ? diagonalTooltipText
+                                                        : isDiagonal
+                                                            ? null
+                                                            : isAboveDiagonal
+                                                                ? `${donor1} and ${donor2} are co-financing ${projectCount} project${projectCount !== 1 ? 's' : ''}`
+                                                                : `${donor1} and ${donor2} are co-financing ${orgCount} organization${orgCount !== 1 ? 's' : ''}`;
                                                     
                                                     const handleCellClick = () => {
                                                         if (!isDiagonal && count > 0) {
@@ -1229,13 +1495,25 @@ export default function AnalyticsPage({ logoutButton }: AnalyticsPageProps) {
                                                         }
                                                     };
                                                     
+                                                    const handleMouseEnter = () => {
+                                                        if (!isDiagonal) {
+                                                            setHoveredCell({ donor1, donor2 });
+                                                        }
+                                                    };
+                                                    
+                                                    const handleMouseLeave = () => {
+                                                        setHoveredCell(null);
+                                                    };
+                                                    
                                                     const cellContent = (
                                                         <td 
                                                             key={donor2}
                                                             onClick={handleCellClick}
-                                                            className={`p-3 text-center text-sm font-semibold border border-slate-200 ${colorClass} ${!isDiagonal && count > 0 ? 'cursor-pointer hover:opacity-75 transition-opacity' : ''}`}
+                                                            onMouseEnter={handleMouseEnter}
+                                                            onMouseLeave={handleMouseLeave}
+                                                            className={`p-3 text-center text-sm font-semibold border border-slate-200 transition-all ${colorClass} ${!isDiagonal && count > 0 ? 'cursor-pointer hover:opacity-75' : ''}`}
                                                         >
-                                                            {isDiagonal ? '—' : count}
+                                                            {isDiagonal && showDiagonalContext ? diagonalCount : isDiagonal ? '—' : count}
                                                         </td>
                                                     );
 
@@ -1278,12 +1556,47 @@ export default function AnalyticsPage({ logoutButton }: AnalyticsPageProps) {
                             barColor="var(--brand-primary-lighter)"
                             footnote={`Showing donors with co-financed organizations based on ${selectedDonors.length} selected donor${selectedDonors.length === 1 ? '' : 's'}`}
                         />
-                        <ChartCard
-                            title={labels.sections.organizationTypes}
-                            icon={<Building2 style={{ color: 'var(--brand-primary)' }} />}
-                            data={organizationTypesData}
-                            barColor="var(--brand-primary-lighter)"
-                        />
+                        
+                        {/* Organizations List */}
+                        <Card className="!border-0 bg-white">
+                            <CardHeader className="pb-3">
+                                <CardTitle>
+                                <SectionHeader icon={<Building2 style={{ color: 'var(--brand-primary)' }} />} title="Co-Financed Organizations" />
+                            </CardTitle>
+                            </CardHeader>
+                            <CardContent className="pt-0">
+                                <div className="space-y-1 max-h-64 overflow-y-auto">
+                                    {organizationsWithDonorCounts.length === 0 ? (
+                                        <p className="text-sm text-slate-500 italic">No organizations found</p>
+                                    ) : (
+                                        organizationsWithDonorCounts.map((org, idx) => (
+                                            <div 
+                                                key={`${org.id}-${idx}`}
+                                                className="flex items-start justify-between gap-2 py-1.5 px-2 rounded text-xs transition-colors hover:bg-slate-50"
+                                            >
+                                                <div className="flex-1 min-w-0">
+                                                    <p className="font-medium text-slate-800 truncate">
+                                                        {org.name}
+                                                    </p>
+                                                    <p className="text-slate-500 text-xs truncate">
+                                                        {Array.from(org.donors).join(', ')}
+                                                    </p>
+                                                </div>
+                                                <div className="flex-shrink-0">
+                                                    <span className="inline-block font-semibold px-1.5 py-0.5 rounded text-xs" style={{ backgroundColor: 'var(--brand-primary-lighter)', color: 'var(--brand-primary)' }}>
+                                                        {org.donors.size}
+                                                    </span>
+                                                </div>
+                                            </div>
+                                        ))
+                                    )}
+                                </div>
+                                <p className="text-xs text-slate-500 mt-2 pt-2 border-t border-slate-100">
+                                    {organizationsWithDonorCounts.length} org{organizationsWithDonorCounts.length !== 1 ? 's' : ''}
+                                </p>
+                            </CardContent>
+                        </Card>
+                        
                         <ChartCard
                             title={labels.sections.projectCategories}
                             icon={<Database style={{ color: 'var(--brand-primary)' }} />}
