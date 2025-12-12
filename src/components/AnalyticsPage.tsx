@@ -86,7 +86,39 @@ export default function AnalyticsPage({ logoutButton }: AnalyticsPageProps) {
             .catch(err => console.error('Failed to load organizations:', err));
     }, []);
 
-    // Calculate co-financing matrix
+    // Filter organizations using the same logic as the dashboard
+    const filteredOrganizationsData = useMemo(() => {
+        if (selectedDonors.length === 0) return [];
+
+        return organizationsData.filter(org => {
+            if (!org.agencies || !Array.isArray(org.agencies)) return false;
+
+            // Get all donor countries for this organization
+            const orgDonorCountries = org.agencies
+                .map(agency => agency.fields?.['Country Name'])
+                .filter((name): name is string => typeof name === 'string');
+
+            // Organization must have ALL selected donors (AND logic like dashboard)
+            return selectedDonors.every(selectedDonor => 
+                orgDonorCountries.includes(selectedDonor)
+            );
+        });
+    }, [organizationsData, selectedDonors]);
+
+    // Get all projects from filtered organizations
+    const filteredProjectsData = useMemo(() => {
+        if (selectedDonors.length === 0) return [];
+
+        const projects: any[] = [];
+        filteredOrganizationsData.forEach(org => {
+            if (org.projects && Array.isArray(org.projects)) {
+                projects.push(...org.projects);
+            }
+        });
+        return projects;
+    }, [filteredOrganizationsData, selectedDonors]);
+
+    // Calculate co-financing matrix using the filtered data from dashboard logic
     const coFinancingMatrix = useMemo(() => {
         const matrix: Record<string, Record<string, { projects: Set<string>; orgs: Set<string> }>> = {};
 
@@ -98,35 +130,37 @@ export default function AnalyticsPage({ logoutButton }: AnalyticsPageProps) {
             });
         });
 
-        // Populate matrix with co-financing data
-        organizationsData.forEach(org => {
-            if (!org.agencies || !Array.isArray(org.agencies)) return;
+        // Populate matrix using filtered organizations
+        if (filteredOrganizationsData && Array.isArray(filteredOrganizationsData)) {
+            filteredOrganizationsData.forEach(org => {
+                if (!org.agencies || !Array.isArray(org.agencies)) return;
 
-            // Get all donor countries for this org
-            const donorCountries = org.agencies
-                .map(a => a.fields?.['Country Name'])
-                .filter((name): name is string => typeof name === 'string' && selectedDonors.includes(name));
+                // Get all donor countries for this org that are in selectedDonors
+                const donorCountries = org.agencies
+                    .map(a => a.fields?.['Country Name'])
+                    .filter((name): name is string => typeof name === 'string' && selectedDonors.includes(name));
 
-            // If org has multiple selected donors, it's co-financing
-            if (donorCountries.length > 1) {
-                const projectIds = org.fields?.['Provided Data Ecosystem Projects'] || [];
+                // If org has multiple selected donors, it's co-financing
+                if (donorCountries.length > 1) {
+                    const projectIds = org.fields?.['Provided Data Ecosystem Projects'] || [];
 
-                // For each pair of donors
-                donorCountries.forEach((donor1, i) => {
-                    donorCountries.forEach((donor2, j) => {
-                        if (i !== j) {
-                            projectIds.forEach(projectId => {
-                                matrix[donor1][donor2].projects.add(projectId);
-                            });
-                            matrix[donor1][donor2].orgs.add(org.id);
-                        }
+                    // For each pair of donors
+                    donorCountries.forEach((donor1, i) => {
+                        donorCountries.forEach((donor2, j) => {
+                            if (i !== j) {
+                                projectIds.forEach(projectId => {
+                                    matrix[donor1][donor2].projects.add(projectId);
+                                });
+                                matrix[donor1][donor2].orgs.add(org.id);
+                            }
+                        });
                     });
-                });
-            }
-        });
+                }
+            });
+        }
 
         return matrix;
-    }, [organizationsData, selectedDonors]);
+    }, [filteredOrganizationsData, selectedDonors]);
 
     // Calculate max values for color scaling
     const maxValues = useMemo(() => {
@@ -147,66 +181,82 @@ export default function AnalyticsPage({ logoutButton }: AnalyticsPageProps) {
         return { maxProjects, maxOrgs };
     }, [coFinancingMatrix, selectedDonors]);
 
-    // Calculate organization types chart data
+    // Calculate organization types chart data using filtered data
     const organizationTypesData = useMemo(() => {
+        if (selectedDonors.length === 0 || !filteredOrganizationsData) return [];
+        
         const typeCount: Record<string, number> = {};
         
-        organizationsData.forEach(org => {
-            if (!org.agencies || !Array.isArray(org.agencies)) return;
-            
-            const donorCountries = org.agencies
-                .map(a => a.fields?.['Country Name'])
-                .filter((name): name is string => typeof name === 'string' && selectedDonors.includes(name));
-            
-            if (donorCountries.length > 0) {
-                const orgType = org.fields?.['Organization Type'] || 'Unknown';
-                typeCount[orgType] = (typeCount[orgType] || 0) + 1;
-            }
+        // Use the filtered organizations
+        filteredOrganizationsData.forEach(org => {
+            const orgType = org.fields?.['Org Type'] || 'Unknown';
+            typeCount[orgType] = (typeCount[orgType] || 0) + 1;
         });
 
+        console.log('Organization types data:', typeCount, 'Total orgs:', filteredOrganizationsData.length);
+        
         return Object.entries(typeCount)
             .map(([name, value]) => ({ name, value }))
             .sort((a, b) => b.value - a.value)
             .slice(0, 10);
-    }, [organizationsData, selectedDonors]);
+    }, [filteredOrganizationsData, selectedDonors]);
 
-    // Calculate project types chart data
+    // Calculate project types chart data using filtered data
     const projectTypesData = useMemo(() => {
+        if (selectedDonors.length === 0 || !filteredProjectsData) return [];
+        
         const typeCount: Record<string, number> = {};
         
-        organizationsData.forEach(org => {
-            if (!org.agencies || !Array.isArray(org.agencies)) return;
-            
-            const donorCountries = org.agencies
-                .map(a => a.fields?.['Country Name'])
-                .filter((name): name is string => typeof name === 'string' && selectedDonors.includes(name));
-            
-            if (donorCountries.length > 0 && org.projects) {
-                org.projects.forEach(project => {
-                    const projectType = project.fields?.['Investment Type'] || 'Unknown';
-                    typeCount[projectType] = (typeCount[projectType] || 0) + 1;
+        // Use the filtered projects
+        filteredProjectsData.forEach(project => {
+            const investmentTypes = project.fields?.['Investment Type(s)'];
+            if (Array.isArray(investmentTypes)) {
+                investmentTypes.forEach(type => {
+                    typeCount[type] = (typeCount[type] || 0) + 1;
                 });
             }
         });
 
+        console.log('Project types data:', typeCount, 'Total projects:', filteredProjectsData.length);
+        
         return Object.entries(typeCount)
             .map(([name, value]) => ({ name, value }))
             .sort((a, b) => b.value - a.value);
-    }, [organizationsData, selectedDonors]);
+    }, [filteredProjectsData, selectedDonors]);
 
-    // Calculate donor co-financing chart data - show pairs of donors
+    // Calculate donor co-financing chart data using filtered data
     const donorCoFinancingData = useMemo(() => {
         const pairCounts: Array<{ name: string; value: number }> = [];
 
-        // Create pairs and count co-financed orgs
+        if (!filteredOrganizationsData) return pairCounts;
+
+        // Create pairs and count orgs that have BOTH donors
         selectedDonors.forEach((donor1, i) => {
             selectedDonors.forEach((donor2, j) => {
                 if (i < j) { // Only count each pair once
-                    const count = coFinancingMatrix[donor1]?.[donor2]?.orgs.size || 0;
-                    if (count > 0) {
+                    let orgCount = 0;
+                    
+                    // Use filtered organizations
+                    filteredOrganizationsData.forEach(org => {
+                        if (!org.agencies || !Array.isArray(org.agencies)) return;
+                        
+                        const orgDonorCountries = org.agencies
+                            .map(agency => agency.fields?.['Country Name'])
+                            .filter((name): name is string => typeof name === 'string');
+                        
+                        // Check if org has BOTH donors
+                        const hasBothDonors = orgDonorCountries.includes(donor1) && 
+                                             orgDonorCountries.includes(donor2);
+                        
+                        if (hasBothDonors) {
+                            orgCount++;
+                        }
+                    });
+                    
+                    if (orgCount > 0) {
                         pairCounts.push({
                             name: `${donor1} & ${donor2}`,
-                            value: count
+                            value: orgCount
                         });
                     }
                 }
@@ -215,8 +265,8 @@ export default function AnalyticsPage({ logoutButton }: AnalyticsPageProps) {
 
         return pairCounts
             .sort((a, b) => b.value - a.value)
-            .slice(0, 15);
-    }, [coFinancingMatrix, selectedDonors]);
+            .slice(0, 10);
+    }, [filteredOrganizationsData, selectedDonors]);
 
     const handleShare = () => {
         const url = window.location.href;
