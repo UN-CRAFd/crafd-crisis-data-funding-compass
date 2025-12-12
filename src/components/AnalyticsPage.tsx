@@ -1212,7 +1212,7 @@ export default function AnalyticsPage({ logoutButton }: AnalyticsPageProps) {
         return {
             totalFundingStreams,
             avgDonorsPerOrg,
-            sharedFundingTargets
+            sharedFundingTargets,
             avgFundingOverlap,
             fundingOverlapDetails: {
                 totalTargets,
@@ -1262,58 +1262,10 @@ export default function AnalyticsPage({ logoutButton }: AnalyticsPageProps) {
                     {/* Statistics Cards */}
                     {selectedDonors.length > 0 && (
                         <>
-                            {/* Mobile Carousel */}
-                            <div className="sm:hidden">
-                                <div className="relative overflow-hidden">
-                                    <div className="flex gap-4 overflow-x-auto scrollbar-hide snap-x snap-mandatory pb-2 px-1">
-                                        <div className="flex-shrink-0 w-[280px] snap-center">
-                                            <StatCard
-                                                icon={<GitBranch style={{ color: 'var(--brand-primary)' }} />}
-                                                title="Bilateral Funding"
-                                                value={analyticsStats.totalFundingStreams}
-                                                label="grants"
-                                                colorScheme="amber"
-                                                tooltip="Total number of connections from selected donors to organizations and projects. Each connection represents a direct funding relationship."
-                                            />
-                                        </div>
-                                        <div className="flex-shrink-0 w-[290px] snap-center">
-                                            <StatCard
-                                                icon={<Users style={{ color: 'var(--brand-primary)' }} />}
-                                                title="Average Donors/Org"
-                                                value={analyticsStats.avgDonorsPerOrg}
-                                                label="donors"
-                                                colorScheme="amber"
-                                                tooltip="Average number of selected donors funding each organization (counting both organization-level and project-level funding)."
-                                            />
-                                        </div>
-
-                                        <div className="flex-shrink-0 w-[290px] snap-center">
-                                            <StatCard
-                                                icon={<Users style={{ color: 'var(--brand-primary)' }} />}
-                                                title="Average Donors/Org"
-                                                value={analyticsStats.sharedFundingTargets}
-                                                label="donors"
-                                                colorScheme="amber"
-                                                tooltip="Average number of selected donors funding each organization (counting both organization-level and project-level funding)."
-                                            />
-                                        </div>
-
-                                        <div className="flex-shrink-0 w-[280px] snap-center">
-                                            <StatCard
-                                                icon={<Target style={{ color: 'var(--brand-primary)' }} />}
-                                                title="Funding Overlap"
-                                                value={analyticsStats.avgFundingOverlap}
-                                                label="shared"
-                                                colorScheme="amber"
-                                                tooltip="Percentage of organizations and projects that are co-financed by multiple selected donors. Higher values indicate more collaboration between donors."
-                                            />
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
+                        
                             
                             {/* Desktop Grid */}
-                            <div className="hidden sm:grid sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-[var(--spacing-section)]">
+                            <div className="hidden sm:grid sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-[var(--spacing-section)]">
                                 <StatCard
                                     icon={<GitBranch style={{ color: 'var(--brand-primary)' }} />}
                                     title="Bilateral Funding"
@@ -1332,7 +1284,14 @@ export default function AnalyticsPage({ logoutButton }: AnalyticsPageProps) {
                                     tooltip="Average number of selected donors funding each organization (counting both organization-level and project-level funding)."
                                 />
 
-                            
+                                <StatCard
+                                    icon={<Building2 style={{ color: 'var(--brand-primary)' }} />}
+                                    title="Co-Funded Organizations"
+                                    value={analyticsStats.sharedFundingTargets}
+                                    label="donors"
+                                    colorScheme="amber"
+                                    tooltip="Absolute number of organizations funded by at least 2 of the selected donors."
+                                />
 
                                 <StatCard
                                     icon={<Target style={{ color: 'var(--brand-primary)' }} />}
