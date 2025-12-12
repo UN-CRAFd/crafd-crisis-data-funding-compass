@@ -24,7 +24,7 @@ import { getIconForInvestmentType } from '@/config/investmentTypeIcons';
 import { Building2, ChevronDown, ChevronRight, Database, Table, DatabaseBackup, FileDown, Filter, FolderDot, FolderOpenDot, Globe, Info, MessageCircle, RotateCcw, Search, Share2, ArrowUpDown, ArrowUpWideNarrow, ArrowDownWideNarrow, Network } from 'lucide-react';
 import organizationsTableRaw from '../../public/data/organizations-table.json';
 import nestedOrganizationsRaw from '../../public/data/organizations-nested.json';
-import { buildOrgDonorCountriesMap, buildOrgProjectsMap, buildProjectNameMap, buildProjectIdToKeyMap, buildOrgAgenciesMap, buildProjectAgenciesMap, buildProjectDescriptionMap, calculateOrganizationTypesFromOrganizationsWithProjects, getNestedOrganizationsForModals } from '../lib/data';
+import { buildOrgDonorCountriesMap, buildOrgDonorInfoMap, buildOrgProjectsMap, buildProjectNameMap, buildProjectIdToKeyMap, buildOrgAgenciesMap, buildProjectAgenciesMap, buildProjectDescriptionMap, calculateOrganizationTypesFromOrganizationsWithProjects, getNestedOrganizationsForModals } from '../lib/data';
 import { exportDashboardToPDF } from '../lib/exportPDF';
 import { exportViewAsCSV, exportViewAsXLSX } from '../lib/exportCSV';
 import { useTips } from '@/contexts/TipsContext';
@@ -202,9 +202,11 @@ StatCard.displayName = 'StatCard';
 interface BadgeProps {
     text: string;
     variant: 'blue' | 'emerald' | 'violet' | 'slate' | 'highlighted' | 'beta' | 'types' | 'indigo';
+    className?: string;
+    title?: string;
 }
 
-const Badge = ({ text, variant }: BadgeProps) => {
+const Badge = ({ text, variant, className = '', title }: BadgeProps) => {
     const variants = {
         blue: 'bg-[var(--brand-bg-light)] text-[var(--brand-primary)]',
         emerald: 'bg-emerald-50 text-emerald-700',
@@ -220,11 +222,12 @@ const Badge = ({ text, variant }: BadgeProps) => {
     if (variant === 'beta') {
         return (
             <span
-                className="inline-flex items-center px-1.5 py-0.5 sm:px-2 sm:py-1 rounded text-[10px] sm:text-xs font-semibold break-words"
+                className={`inline-flex items-center px-1.5 py-0.5 sm:px-2 sm:py-1 rounded text-[10px] sm:text-xs font-semibold break-words ${className}`}
                 style={{
                     backgroundColor: 'var(--badge-beta-bg)',
                     color: 'var(--badge-beta-text)'
                 }}
+                title={title}
             >
                 {text}
             </span>
@@ -232,7 +235,10 @@ const Badge = ({ text, variant }: BadgeProps) => {
     }
 
     return (
-        <span className={`inline-flex items-center px-1.5 py-0.5 sm:px-2 sm:py-1 rounded text-[10px] sm:text-xs font-medium break-words ${variants[variant]}`}>
+        <span 
+            className={`inline-flex items-center px-1.5 py-0.5 sm:px-2 sm:py-1 rounded text-[10px] sm:text-xs font-medium break-words ${variants[variant]} ${className}`}
+            title={title}
+        >
             {text}
         </span>
     );
@@ -456,6 +462,7 @@ const CrisisDataDashboard = ({
     const [projectDescriptionMap, setProjectDescriptionMap] = useState<Record<string, string>>({});
     const [orgProjectsMap, setOrgProjectsMap] = useState<Record<string, Array<{ id: string; investmentTypes: string[] }>>>({});
     const [orgDonorCountriesMap, setOrgDonorCountriesMap] = useState<Record<string, string[]>>({});
+    const [orgDonorInfoMap, setOrgDonorInfoMap] = useState<Record<string, import('@/types/airtable').DonorInfo[]>>({});
     const [orgAgenciesMap, setOrgAgenciesMap] = useState<Record<string, Record<string, string[]>>>({});
     const [projectAgenciesMap, setProjectAgenciesMap] = useState<Record<string, Record<string, string[]>>>({});
 
@@ -470,6 +477,7 @@ const CrisisDataDashboard = ({
                 setProjectDescriptionMap(buildProjectDescriptionMap(nestedOrgs));
                 setOrgProjectsMap(buildOrgProjectsMap(nestedOrgs));
                 setOrgDonorCountriesMap(buildOrgDonorCountriesMap(nestedOrgs));
+                setOrgDonorInfoMap(buildOrgDonorInfoMap(nestedOrgs));
                 
                 // Build org and project-specific agencies maps
                 setOrgAgenciesMap(buildOrgAgenciesMap(nestedOrgs));
@@ -1209,16 +1217,26 @@ const CrisisDataDashboard = ({
                                                                                 {(() => {
                                                                                     const isCountriesExpanded = expandedCountries.has(org.id);
 
-                                                                                    // Deduplicate countries first
-                                                                                    const uniqueCountries = Array.from(new Set(org.donorCountries)) as string[];
-                                                                                    // Sort countries: selected donors first, then others alphabetically
-                                                                                    let sortedCountries = [...uniqueCountries];
-                                                                                    if (combinedDonors.length > 0) {
-                                                                                        sortedCountries = [
-                                                                                            ...uniqueCountries.filter((c: string) => combinedDonors.includes(c)),
-                                                                                            ...uniqueCountries.filter((c: string) => !combinedDonors.includes(c)).sort()
-                                                                                        ];
-                                                                                    }
+                                                                                    // Use donorInfo instead of donorCountries to include project-only donors
+                                                                                    const donorInfo = org.donorInfo || [];
+                                                                                    
+                                                                                    // Sort donors: selected + org-level first, then others
+                                                                                    const sortedDonors = [...donorInfo].sort((a, b) => {
+                                                                                        const aIsSelected = combinedDonors.includes(a.country);
+                                                                                        const bIsSelected = combinedDonors.includes(b.country);
+                                                                                        
+                                                                                        // Selected donors first
+                                                                                        if (aIsSelected && !bIsSelected) return -1;
+                                                                                        if (!aIsSelected && bIsSelected) return 1;
+                                                                                        
+                                                                                        // Then org-level donors before project-only
+                                                                                        if (a.isOrgLevel && !b.isOrgLevel) return -1;
+                                                                                        if (!a.isOrgLevel && b.isOrgLevel) return 1;
+                                                                                        
+                                                                                        // Finally alphabetically
+                                                                                        return a.country.localeCompare(b.country);
+                                                                                    });
+                                                                                    
                                                                                     // Dynamic country limit based on available space
                                                                                     const calculateCollapsedLimit = () => {
                                                                                         // Estimate available space (characters) - mobile vs desktop
@@ -1229,12 +1247,12 @@ const CrisisDataDashboard = ({
                                                                                         let totalChars = 0;
                                                                                         let countriesToShow = [];
                                                                                         
-                                                                                        for (const country of sortedCountries) {
+                                                                                        for (const donor of sortedDonors) {
                                                                                             // Estimate badge size: country name + padding/margins (roughly +8 chars)
-                                                                                            const estimatedSize = country.length + 8;
+                                                                                            const estimatedSize = donor.country.length + 8;
                                                                                             
                                                                                             if (totalChars + estimatedSize <= maxChars) {
-                                                                                                countriesToShow.push(country);
+                                                                                                countriesToShow.push(donor);
                                                                                                 totalChars += estimatedSize;
                                                                                             } else {
                                                                                                 break;
@@ -1246,18 +1264,22 @@ const CrisisDataDashboard = ({
                                                                                     };
                                                                                     
                                                                                     const maxCountriesToShowCollapsed = calculateCollapsedLimit();
-                                                                                    const countriesToShow = isCountriesExpanded ? sortedCountries : sortedCountries.slice(0, maxCountriesToShowCollapsed);
+                                                                                    const donorsToShow = isCountriesExpanded ? sortedDonors : sortedDonors.slice(0, maxCountriesToShowCollapsed);
 
                                                                                     return (
                                                                                         <>
-                                                                                            {countriesToShow.map((country: string, idx: number) => (
+                                                                                            {donorsToShow.map((donor, idx: number) => (
                                                                                                 <Badge
                                                                                                     key={idx}
-                                                                                                    text={country}
-                                                                                                    variant={combinedDonors.includes(country) ? 'blue' : 'slate'}
+                                                                                                    text={donor.country}
+                                                                                                    variant={combinedDonors.includes(donor.country) ? 'blue' : 'slate'}
+                                                                                                    className={donor.isOrgLevel ? '' : 'opacity-50'}
+                                                                                                    title={donor.isOrgLevel 
+                                                                                                        ? `${donor.country} (Organization Donor)` 
+                                                                                                        : `${donor.country} (Project-Only Donor)`}
                                                                                                 />
                                                                                             ))}
-                                                                                            {sortedCountries.length > maxCountriesToShowCollapsed && !isCountriesExpanded && (
+                                                                                            {sortedDonors.length > maxCountriesToShowCollapsed && !isCountriesExpanded && (
                                                                                                 <div
                                                                                                     onClick={(e) => {
                                                                                                         e.stopPropagation();
@@ -1267,10 +1289,10 @@ const CrisisDataDashboard = ({
                                                                                                     }}
                                                                                                     className="inline-flex items-center px-2 py-1 rounded-md text-xs font-medium bg-slate-000 text-slate-900 hover:bg-slate-100 transition-colors cursor-pointer"
                                                                                                 >
-                                                                                                    +{sortedCountries.length - maxCountriesToShowCollapsed} {labels.filters.showMore}
+                                                                                                    +{sortedDonors.length - maxCountriesToShowCollapsed} {labels.filters.showMore}
                                                                                                 </div>
                                                                                             )}
-                                                                                            {isCountriesExpanded && sortedCountries.length > maxCountriesToShowCollapsed && (
+                                                                                            {isCountriesExpanded && sortedDonors.length > maxCountriesToShowCollapsed && (
                                                                                                 <div
                                                                                                     onClick={(e) => {
                                                                                                         e.stopPropagation();
@@ -1566,6 +1588,7 @@ const CrisisDataDashboard = ({
                             projectDescriptionMap={projectDescriptionMap}
                             orgProjectsMap={orgProjectsMap}
                             orgDonorCountriesMap={orgDonorCountriesMap}
+                            orgDonorInfoMap={orgDonorInfoMap}
                             orgAgenciesMap={orgAgenciesMap}
                             loading={false}
                             onOpenProjectModal={onOpenProjectModal}
