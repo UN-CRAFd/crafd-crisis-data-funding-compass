@@ -18,8 +18,9 @@ interface OrganizationModalProps {
     // Centralized data maps from data.ts for consistent data access
     projectNameMap?: Record<string, string>;
     projectDescriptionMap?: Record<string, string>;
-    orgProjectsMap?: Record<string, Array<{ investmentTypes: string[] }>>;
+    orgProjectsMap?: Record<string, Array<{ id: string; investmentTypes: string[] }>>;
     orgDonorCountriesMap?: Record<string, string[]>;
+    orgDonorInfoMap?: Record<string, import('@/types/airtable').DonorInfo[]>;
     orgAgenciesMap?: Record<string, Record<string, string[]>>;
     // onClose removed for serializability; modal will dispatch a CustomEvent 'closeOrganizationModal'
     loading: boolean;
@@ -28,7 +29,7 @@ interface OrganizationModalProps {
     // Map from project ID to product_key for navigation
     projectIdToKeyMap?: Record<string, string>;
     // Callback when a donor is clicked
-    onDonorClick?: (country: string) => void;
+    onOpenDonorModal?: (country: string) => void;
     // Callback when an investment type is clicked
     onTypeClick?: (type: string) => void;
 }
@@ -42,11 +43,12 @@ export default function OrganizationModal({
     projectDescriptionMap = {},
     orgProjectsMap = {},
     orgDonorCountriesMap = {},
+    orgDonorInfoMap = {},
     orgAgenciesMap = {},
     loading,
     onOpenProjectModal,
     projectIdToKeyMap = {},
-    onDonorClick,
+    onOpenDonorModal,
     onTypeClick
 }: OrganizationModalProps): React.ReactElement {
 
@@ -191,6 +193,12 @@ export default function OrganizationModal({
         // If the caller provided a raw fields object (from organizations-table.json), render all keys
         const fields = organization.fields || {};
 
+        // Extract budget-related fields early so they're available for both the budget box and notes
+        const estBudget = fields['Est. Org Budget'];
+        const budgetSourceRaw = fields['Budget Source'];
+        const budgetSourceStr = budgetSourceRaw != null ? String(budgetSourceRaw) : null;
+        const lastUpdated = fields['Last Updated'];
+
         // Helper to render a single field value nicely
         const renderValue = (val: unknown): React.ReactNode => {
             if (val === null || val === undefined) return <span className="text-gray-500">—</span>;
@@ -254,8 +262,9 @@ export default function OrganizationModal({
             || /\bUN\b/.test(String(orgType));
 
         return (
+            
             <div className="px-6 sm:px-8 pt-4 sm:pt-5 pb-6 sm:pb-8 font-roboto flex flex-col h-full">
-               
+                    
                 {/* Description with inline Learn more link */}
                 {typeof fields['Org Description'] === 'string' && String(fields['Org Description']).length > 0 && (
                     <p className="text-base font-normal text-gray-700 leading-relaxed font-roboto">
@@ -326,20 +335,15 @@ export default function OrganizationModal({
                         </Field>
                     </div>
                 )}
-                <div className="flex items-center justify-between mt-4">
-                    <div className="flex-1 border-t border-gray-200 ml-4"></div>
-                    {orgType && (
-                        <span className="inline-flex items-center px-3 py-1.5 rounded-md text-sm font-small text-slate-600 w-fit">
-                            {orgType}
-                        </span>
-                    )}
+                <div className="flex items-center justify-between mt-4 mb-4">
+                    
                     <div className="flex-1 border-t border-gray-200 ml-4"></div>
                 </div>
 
                 {/* Metadata - Single column layout */}
                 {/* Organization Funding*/}
 
-                <div className="mt-2 space-y-4">
+                <div className="mt-2 space-y-8">
                                      
 
                     {/* Provided Assets - Simple field access matching FIELDS_ORGANIZATIONS */}
@@ -381,7 +385,7 @@ export default function OrganizationModal({
                                     <span className="text-lg font-normal text-slate-600 tabular-nums">({projectsList.length})</span>
                                 </div>
                                 
-                                <div className="flex flex-col gap-2 mt-4">
+                                <div className="flex flex-col gap-2 mt-4 mb-10">
                                     {(() => {
                                                         const orgProjects = orgProjectsMap[organization.id];
                                                         if (!orgProjects || orgProjects.length === 0) return null;
@@ -392,20 +396,36 @@ export default function OrganizationModal({
                                         const description = projectDescriptionMap[proj.id] || '';
                                         const firstSentence = getFirstSentence(description);
                                         
+                                        // Get investment types for this project
+                                        const projectData = orgProjectsMap?.[organization.id]?.find(p => p.id === proj.id);
+                                        const investmentTypes = projectData?.investmentTypes || [];
+                                        
                                         const projectButton = (
                                             <button
                                                 key={proj.id || i}
                                                 onClick={() => onOpenProjectModal?.(proj.productKey)}
                                                 onMouseEnter={() => setHoveredProjectId(proj.id)}
                                                 onMouseLeave={() => setHoveredProjectId(null)}
-                                                className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-md text-base font-medium bg-slate-100 text-slate-600 hover:bg-slate-200 transition-colors cursor-pointer text-left"
+                                                className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-md text-base font-medium bg-slate-100 text-slate-600 hover:bg-slate-200 transition-colors cursor-pointer text-left w-full justify-between"
                                             >
-                                                {hoveredProjectId === proj.id ? (
-                                                    <PackageOpen className="w-4 h-4 text-slate-600 shrink-0" />
-                                                ) : (
-                                                    <Package className="w-4 h-4 text-slate-600 shrink-0" />
+                                                <div className="inline-flex items-center gap-1.5 min-w-0">
+                                                    {hoveredProjectId === proj.id ? (
+                                                        <PackageOpen className="w-4 h-4 text-slate-600 shrink-0" />
+                                                    ) : (
+                                                        <Package className="w-4 h-4 text-slate-600 shrink-0" />
+                                                    )}
+                                                    <span className="truncate">{proj.name}</span>
+                                                </div>
+                                                {investmentTypes.length > 0 && (
+                                                    <div className="inline-flex items-center gap-1 shrink-0">
+                                                        {investmentTypes.map((type, idx) => {
+                                                            const TypeIcon = getIconForInvestmentType(type);
+                                                            return (
+                                                                <TypeIcon key={idx} className="w-4 h-4 text-slate-400" />
+                                                            );
+                                                        })}
+                                                    </div>
                                                 )}
-                                                <span className="truncate">{proj.name}</span>
                                             </button>
                                         );
 
@@ -453,13 +473,10 @@ export default function OrganizationModal({
 
                     {/* Organization Donors - Clean field access from centralized data */}
                     {(() => {
-                        // Get donor countries from the centralized map (computed from nested data)
-                        const donorCountries = orgDonorCountriesMap[organization.id] || [];
-                        const estBudget = fields['Est. Org Budget'];
+                        // Get donor info from the centralized map (includes both org-level and project-only donors)
+                        const donorInfo = orgDonorInfoMap[organization.id] || [];
 
-                        // Narrow unknown typed fields to explicit string/null values for safe rendering
-                        const budgetSourceRaw = fields['Budget Source'];
-                        const budgetSourceStr = budgetSourceRaw != null ? String(budgetSourceRaw) : null;
+                        // Use the budget fields already extracted at the top
                         const linkRaw = fields['Link to Budget Source'];
                         const linkToBudgetSource = typeof linkRaw === 'string' && linkRaw.trim() !== '' ? linkRaw.trim() : null;
                         
@@ -469,8 +486,8 @@ export default function OrganizationModal({
                             ? (budgetScreenshotRaw[0] as { url?: string; thumbnails?: { large?: { url?: string } } })?.thumbnails?.large?.url || (budgetScreenshotRaw[0] as { url?: string })?.url || null
                             : null;
 
-                        // Only show if at least one field has a value
-                        if (!estBudget && !budgetSourceStr && donorCountries.length === 0) {
+                        // Only show the whole section if there are donors OR budget data
+                        if (donorInfo.length === 0 && !estBudget && !budgetSourceStr && !lastUpdated) {
                             return null;
                         }
 
@@ -481,9 +498,10 @@ export default function OrganizationModal({
                                     <h3 className="text-xl font-roboto font-black text-[#333333] uppercase tracking-wide leading-normal">
                                         {labels.modals.organizationFunding}
                                     </h3>
-                                    <span className="text-lg font-normal text-gray-500 tabular-nums">({donorCountries.length})</span>
+                                    <span className="text-lg font-normal text-gray-500 tabular-nums">({donorInfo.length})</span>
                                 </div>
-                                    <div className="hidden rounded-lg border border-slate-200 bg-slate-100 p-4 shadow-sm">
+                                    {(estBudget || budgetSourceStr || lastUpdated) && (
+                                    <div className="rounded-lg border border-slate-200 bg-slate-100 p-4 shadow-sm">
                                         
                                         <div className="mt-0 grid grid-cols-[3fr_3fr_3fr_0.2fr] gap-4">
 
@@ -513,11 +531,12 @@ export default function OrganizationModal({
                                                                     <img 
                                                                         src={budgetScreenshotUrl} 
                                                                         alt="Budget Source Screenshot" 
-                                                                        className="max-w-[400px] max-h-[300px] rounded-md object-contain"
+                                                                        className="max-w-[500px] max-h-[400px] rounded-md object-contain"
                                                                     />
                                                                 </div>
                                                             }
-                                                            side="bottom"
+                                                            side="top"
+                                                    
                                                             tooltipContainer={tooltipContainer}
                                                         >
                                                             <span className="text-base font-medium text-slate-600 cursor-help underline decoration-dotted decoration-slate-400 underline-offset-2 inline-flex items-center gap-1">
@@ -562,17 +581,25 @@ export default function OrganizationModal({
                                             </div>
                                         </div>
                                     </div>
+                                    )}
                                 <div className="flex flex-wrap gap-2 mt-4">
-                                    {donorCountries.map((country) => {
+                                    {donorInfo.map((donor, idx) => {
                                         const orgAgencies = orgAgenciesMap[organization.id] || {};
                                         return (
-                                            <CountryBadge 
-                                                key={country} 
-                                                country={country} 
-                                                onClick={onDonorClick}
-                                                agencies={orgAgencies[country]}
-                                                tooltipContainer={tooltipContainer}
-                                            />
+                                            <div 
+                                                key={donor.country}
+                                                className={donor.isOrgLevel ? '' : 'opacity-50'}
+                                                title={donor.isOrgLevel 
+                                                    ? `${donor.country} (Organization Donor)` 
+                                                    : `${donor.country} (Project-Only Donor)`}
+                                            >
+                                                <CountryBadge 
+                                                    country={donor.country} 
+                                                    onClick={onOpenDonorModal}
+                                                    agencies={orgAgencies[donor.country]}
+                                                    tooltipContainer={tooltipContainer}
+                                                />
+                                            </div>
                                         );
                                     })}
                                 </div>
@@ -591,22 +618,38 @@ export default function OrganizationModal({
                                 <span className="text-slate-400 mr-2 shrink-0">•</span>
                                 <span>{labels.modals.notesInsights}</span>
                             </div>
+                            {!estBudget && !budgetSourceStr && !lastUpdated && (
+                                <div className="flex items-start">
+                                    <span className="text-slate-400 mr-2 shrink-0">•</span>
+                                    <span>No detailed budget amount is publicly disclosed.</span>
+                                </div>
+                            )}
                         {isUN && (
                             <div className="flex items-start">
                                 <span className="text-slate-400 mr-2 shrink-0">•</span>
-                                <span>{labels.modals.notesUn}</span>
-                                
+                                <span>
+                                    {labels.modals.notesUn}
+                                    {typeof fields['UN Funding Link'] === 'string' && fields['UN Funding Link'] && (
+                                        <>
+                                            {' '}
+                                            <a
+                                                href={String(fields['UN Funding Link']).replace(/^<|>$/g, '')}
+                                                target="_blank"
+                                                rel="noopener noreferrer"
+                                                className="font-semibold transition-colors underline underline-offset-2 whitespace-nowrap"
+                                                style={{ color: 'var(--brand-primary)' }}
+                                                onMouseEnter={(e) => e.currentTarget.style.color = 'var(--brand-primary-dark)'}
+                                                onMouseLeave={(e) => e.currentTarget.style.color = 'var(--brand-primary)'}
+                                            >
+                                                {labels.modals.learnMore}
+                                                <ExternalLink className="w-3 h-3 inline-block align-text-bottom ml-0.5" />
+                                            </a>
+                                        </>
+                                    )}
+                                </span>
                             </div>
-                            
                         )}
-                        {isUN && (
-                            <div className="flex items-start">
-                                <span className="text-slate-400 mr-2 shrink-0">•</span>
-                                <span>{labels.modals.budgetlineUn}</span>
-                                
-                            </div>
-                            
-                        )}
+                        
                     </div>
                 </div>
             </div>

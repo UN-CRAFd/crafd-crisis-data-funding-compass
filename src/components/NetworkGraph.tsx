@@ -45,6 +45,7 @@ interface GraphNode {
     value: number; // Size of the node
     color: string;
     orgKey?: string;
+    orgShortName?: string; // Short name for organizations
     projectKey?: string;
     orgType?: string; // For organization clustering
     assetTypes?: string[]; // For project/asset clustering
@@ -408,7 +409,8 @@ const NetworkGraph: React.FC<NetworkGraphProps> = ({
                 type: 'organization',
                 value: 22, // Medium nodes for organizations
                 color: brandBgLight, // Uses --brand-bg-light (amber/golden from organization badges)
-                orgKey: org.orgShortName, // Use orgShortName for modal/URL
+                orgKey: org.orgKey, // Use orgKey for modal/URL
+                orgShortName: org.orgShortName, // Store short name for label display
                 orgType: org.type, // Store org type for clustering
                 estimatedBudget: org.estimatedBudget, // Store budget for funding-based scaling
                 x,
@@ -1327,30 +1329,50 @@ const NetworkGraph: React.FC<NetworkGraphProps> = ({
 
     // Custom label rendering - drawn after all nodes to appear on top
     const paintNodeLabel = useCallback((node: GraphNode, ctx: CanvasRenderingContext2D, globalScale: number) => {
-        const fontSize = 12 / globalScale;
+        // Use consistent font size that scales properly
+        const baseFontSize = 12;
+        const fontSize = baseFontSize / globalScale;
         ctx.font = `${fontSize}px Sans-Serif`;
         
         const isHoverHighlighted = hoverHighlightNodes.size > 0 && hoverHighlightNodes.has(node.id);
+        const isDirectlyHovered = hoveredNode && hoveredNode.id === node.id;
         const isHighlighted = isHoverHighlighted;
 
         // Draw label if hovered or highlighted
-        if ((hoveredNode && hoveredNode.id === node.id) || isHighlighted) {
-            const label = node.name;
-            const textWidth = ctx.measureText(label).width;
-            const bckgDimensions = [textWidth, fontSize].map(n => n + fontSize * 0.2);
+        if (isDirectlyHovered || isHighlighted) {
+            // Show full name when directly hovering, short name when shown due to connected node hover
+            let label = node.name;
+            if (!isDirectlyHovered && isHighlighted && node.type === 'organization' && node.orgShortName) {
+                label = node.orgShortName;
+            }
             
+            // Measure text with current font settings
+            const textWidth = ctx.measureText(label).width;
+            
+            // Scale padding based on zoom level to maintain consistent visual appearance
+            const paddingX = (baseFontSize * 0.4) / globalScale;
+            const paddingY = (baseFontSize * 0.3) / globalScale;
+            const bgWidth = textWidth + paddingX * 2;
+            const bgHeight = fontSize + paddingY * 2;
+            
+            // Position label below the node
+            const offsetY = (node.value / 2) / (globalScale * 2) + 20;
+            const labelY = node.y! + offsetY;
+            
+            // Draw background
             ctx.fillStyle = 'rgba(255, 255, 255, 0.95)';
             ctx.fillRect(
-                node.x! - bckgDimensions[0] / 2,
-                node.y! + node.value / 2 + 2,
-                bckgDimensions[0],
-                bckgDimensions[1]
+                node.x! - bgWidth / 2,
+                labelY - bgHeight / 2,
+                bgWidth,
+                bgHeight
             );
 
+            // Draw text
             ctx.textAlign = 'center';
             ctx.textBaseline = 'middle';
             ctx.fillStyle = '#1e293b';
-            ctx.fillText(label, node.x!, node.y! + node.value / 2 + fontSize / 2 + 4);
+            ctx.fillText(label, node.x!, labelY);
         }
     }, [hoveredNode, hoverHighlightNodes]);
 
@@ -1603,7 +1625,7 @@ const NetworkGraph: React.FC<NetworkGraphProps> = ({
                             </div>
 
                             {/* Scaling Controls */}
-                            <div className="hidden p-2.5 border-t border-slate-200">
+                            <div className="p-2.5 border-t border-slate-200">
                                 <div className="text-xs font-semibold text-slate-800/90 mb-2">Scaling</div>
                                 <div className="space-y-1.5">
                                     <button

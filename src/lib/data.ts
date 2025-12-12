@@ -32,7 +32,7 @@ async function loadNestedOrganizations(): Promise<NestedOrganization[]> {
 interface ThemesMappings {
     themeToType: Map<string, string>;
     themeToKey: Map<string, string>;
-    keyToTheme: Map<string, string>;
+    keyToThemes: Map<string, string[]>; // Changed from keyToTheme to handle multiple themes per key
 }
 
 let cachedThemesMappings: ThemesMappings | null = null;
@@ -55,12 +55,12 @@ async function loadThemesTable(): Promise<ThemesMappings> {
             const response = await fetch('/data/themes-table.json');
             if (!response.ok) {
                 console.warn(`Failed to load themes data: ${response.status}`);
-                return { themeToType: new Map(), themeToKey: new Map(), keyToTheme: new Map() };
+                return { themeToType: new Map(), themeToKey: new Map(), keyToThemes: new Map() };
             }
             const themesData = await response.json();
             const themeToType = new Map<string, string>();
             const themeToKey = new Map<string, string>();
-            const keyToTheme = new Map<string, string>();
+            const keyToThemes = new Map<string, string[]>();
             
             themesData?.forEach((theme: any) => {
                 const themeName = theme.fields?.['Investment Themes [Text Key]'];
@@ -74,19 +74,25 @@ async function loadThemesTable(): Promise<ThemesMappings> {
                         themeToType.set(themeName, investmentTypes[0]);
                     }
                     
-                    // Map theme to key and key to theme
+                    // Map theme to key and key to themes (multiple themes can have the same key)
                     if (themeKey && typeof themeKey === 'string') {
                         themeToKey.set(themeName, themeKey);
-                        keyToTheme.set(themeKey, themeName);
+                        
+                        // Add theme name to the array for this key
+                        const existingThemes = keyToThemes.get(themeKey) || [];
+                        if (!existingThemes.includes(themeName)) {
+                            existingThemes.push(themeName);
+                            keyToThemes.set(themeKey, existingThemes);
+                        }
                     }
                 }
             });
             
-            cachedThemesMappings = { themeToType, themeToKey, keyToTheme };
+            cachedThemesMappings = { themeToType, themeToKey, keyToThemes };
             return cachedThemesMappings;
         } catch (error) {
             console.error('Error loading themes table:', error);
-            cachedThemesMappings = { themeToType: new Map(), themeToKey: new Map(), keyToTheme: new Map() };
+            cachedThemesMappings = { themeToType: new Map(), themeToKey: new Map(), keyToThemes: new Map() };
             return cachedThemesMappings;
         }
     })();
@@ -107,11 +113,18 @@ export function themeNameToKey(themeName: string): string {
     return cachedThemesMappings.themeToKey.get(themeName) || themeName;
 }
 
-export function themeKeyToName(themeKey: string): string {
+// Get all theme names for a given key (since keys may not be unique)
+export function themeKeyToNames(themeKey: string): string[] {
     if (!cachedThemesMappings) {
-        return themeKey; // Fallback to theme key if not loaded yet
+        return [themeKey]; // Fallback to theme key if not loaded yet
     }
-    return cachedThemesMappings.keyToTheme.get(themeKey) || themeKey;
+    return cachedThemesMappings.keyToThemes.get(themeKey) || [themeKey];
+}
+
+// Get the first theme name for a key (for backwards compatibility)
+export function themeKeyToName(themeKey: string): string {
+    const names = themeKeyToNames(themeKey);
+    return names[0] || themeKey;
 }
 
 // Extract donor countries from agencies
@@ -154,10 +167,12 @@ function extractInvestmentTypesFromProjects(projects: Array<{ fields?: Record<st
 function convertToOrganizationWithProjects(org: NestedOrganization): OrganizationWithProjects {
     const projects = org.projects || [];
 
-    // Get pre-computed donor countries
-    const donorCountries = getDonorCountries(org);
+    // Get pre-computed donor countries (org-level)
+    const orgLevelDonors = getDonorCountries(org);
 
-    // Convert projects to ProjectData format
+    // Convert projects to ProjectData format and collect project-level donors
+    const projectLevelDonorsSet = new Set<string>();
+    
     const projectsData: ProjectData[] = projects.map(project => {
         const fields = project.fields || {};
         // Extract donor countries only from the project's own agencies (if any)
@@ -169,9 +184,15 @@ function convertToOrganizationWithProjects(org: NestedOrganization): Organizatio
                 const aFields = (a && a.fields) || {};
                 const c = aFields['Country Name'] || aFields['Country'] || aFields['Agency Associated Country'];
                 if (Array.isArray(c)) {
-                    c.forEach((cc: unknown) => { if (typeof cc === 'string' && cc.trim()) projectDonorCountriesSet.add(cc.trim()); });
+                    c.forEach((cc: unknown) => { 
+                        if (typeof cc === 'string' && cc.trim()) {
+                            projectDonorCountriesSet.add(cc.trim());
+                            projectLevelDonorsSet.add(cc.trim());
+                        }
+                    });
                 } else if (typeof c === 'string' && c.trim()) {
                     projectDonorCountriesSet.add(c.trim());
+                    projectLevelDonorsSet.add(c.trim());
                 }
             });
         }
@@ -195,6 +216,18 @@ function convertToOrganizationWithProjects(org: NestedOrganization): Organizatio
         };
     });
 
+    // Create combined donor info
+    const allDonorsSet = new Set<string>([...orgLevelDonors, ...Array.from(projectLevelDonorsSet)]);
+    const donorInfo = Array.from(allDonorsSet).map(country => ({
+        country,
+        isOrgLevel: orgLevelDonors.includes(country)
+    })).sort((a, b) => {
+        // Sort org-level donors first, then project-only donors
+        if (a.isOrgLevel && !b.isOrgLevel) return -1;
+        if (!a.isOrgLevel && b.isOrgLevel) return 1;
+        return a.country.localeCompare(b.country);
+    });
+
     // Extract organization type, handling both string and array formats
     const orgTypeRaw = org.fields?.['Org Type'];
     let orgType = 'Unknown';
@@ -212,9 +245,11 @@ function convertToOrganizationWithProjects(org: NestedOrganization): Organizatio
         id: org.id,
         organizationName: org.name || 'Unnamed Organization',
         orgShortName: org.fields?.['Org Short Name'] || '',
+        orgKey: org.fields?.['org_key'] || '',
         type: orgType,
         description: org.fields?.['Org Description'] || '',
-        donorCountries,
+        donorCountries: orgLevelDonors, // Legacy field: org-level only
+        donorInfo, // New field: all donors with metadata
         projects: projectsData,
         projectCount: projectsData.length,
         estimatedBudget: budgetValue
@@ -292,9 +327,10 @@ function applyFilters(
             return true;
         };
 
-        // Check if organization meets donor requirements at org level
+        // Check if organization meets donor requirements (considering both org-level and project-level donors)
+        const allOrgDonors = org.donorInfo?.map(d => d.country) || org.donorCountries || [];
         const orgMeetsDonorRequirement = !hasDonorFilter ||
-            filters.donorCountries!.every(selectedDonor => org.donorCountries.includes(selectedDonor));
+            filters.donorCountries!.every(selectedDonor => allOrgDonors.includes(selectedDonor));
 
         if (orgMeetsDonorRequirement) {
             // Organization meets donor requirement - filter projects by other filters only
@@ -544,7 +580,7 @@ async function getAvailableFilterOptions(organizations: OrganizationWithProjects
         themesMappings = await loadThemesTable();
     } catch (error) {
         console.warn('Failed to load themes table, using ungrouped themes:', error);
-        themesMappings = { themeToType: new Map(), themeToKey: new Map(), keyToTheme: new Map() };
+        themesMappings = { themeToType: new Map(), themeToKey: new Map(), keyToThemes: new Map() };
     }
 
     // Group themes by their investment type
@@ -721,8 +757,8 @@ export function buildProjectDescriptionMap(organizations: NestedOrganization[]):
  * Build a map from organization ID to its projects with investment types
  * Used by organization modal to display project investment types
  */
-export function buildOrgProjectsMap(organizations: NestedOrganization[]): Record<string, Array<{ investmentTypes: string[] }>> {
-    const map: Record<string, Array<{ investmentTypes: string[] }>> = {};
+export function buildOrgProjectsMap(organizations: NestedOrganization[]): Record<string, Array<{ id: string; investmentTypes: string[] }>> {
+    const map: Record<string, Array<{ id: string; investmentTypes: string[] }>> = {};
     
     organizations.forEach(org => {
         if (org && org.id) {
@@ -730,6 +766,7 @@ export function buildOrgProjectsMap(organizations: NestedOrganization[]): Record
                 const fields = project?.fields || {};
                 const investmentTypes = fields['Investment Type(s)'] || fields['Investment Types'] || [];
                 return {
+                    id: project.id,
                     investmentTypes: Array.isArray(investmentTypes) ? investmentTypes : []
                 };
             });
@@ -759,6 +796,52 @@ export function buildOrgDonorCountriesMap(organizations: NestedOrganization[]): 
         if (org && org.id) {
             map[org.id] = getDonorCountries(org);
         }
+    });
+    
+    return map;
+}
+
+/**
+ * Build a map from organization ID to DonorInfo[] (includes both org-level and project-only donors)
+ */
+export function buildOrgDonorInfoMap(organizations: NestedOrganization[]): Record<string, import('@/types/airtable').DonorInfo[]> {
+    const map: Record<string, import('@/types/airtable').DonorInfo[]> = {};
+    
+    organizations.forEach(org => {
+        if (!org || !org.id) return;
+        
+        // Get org-level donors
+        const orgLevelDonors = getDonorCountries(org);
+        
+        // Get project-level donors
+        const projectLevelDonorsSet = new Set<string>();
+        if (org.projects && Array.isArray(org.projects)) {
+            org.projects.forEach(project => {
+                if (project.agencies && Array.isArray(project.agencies)) {
+                    project.agencies.forEach((agency: any) => {
+                        const fields = agency.fields || {};
+                        const countryName = fields['Country Name'];
+                        if (countryName && typeof countryName === 'string') {
+                            projectLevelDonorsSet.add(countryName);
+                        }
+                    });
+                }
+            });
+        }
+        
+        // Create combined donor info
+        const allDonorsSet = new Set<string>([...orgLevelDonors, ...Array.from(projectLevelDonorsSet)]);
+        const donorInfo = Array.from(allDonorsSet).map(country => ({
+            country,
+            isOrgLevel: orgLevelDonors.includes(country)
+        })).sort((a, b) => {
+            // Sort org-level donors first, then project-only donors
+            if (a.isOrgLevel && !b.isOrgLevel) return -1;
+            if (!a.isOrgLevel && b.isOrgLevel) return 1;
+            return a.country.localeCompare(b.country);
+        });
+        
+        map[org.id] = donorInfo;
     });
     
     return map;

@@ -531,6 +531,21 @@ const FilterBar: React.FC<FilterBarProps> = ({
                     )}
                 </div>
             )}
+
+            {/* Reset Button Only (when no filterDescription) */}
+            {!filterDescription && (combinedDonors.length > 0 || investmentTypes.length > 0 || investmentThemes.length > 0 || appliedSearchQuery) && (
+                <div className="flex justify-end mt-2">
+                    <Button
+                        variant="outline"
+                        size="sm"
+                        onClick={onResetFilters}
+                        className="h-7 px-3 text-xs border-slate-300 bg-slate-100 text-slate-700 hover:bg-slate-200 hover:border-slate-300"
+                    >
+                        <RotateCcw className="w-3 h-3 mr-1.5" />
+                        Reset
+                    </Button>
+                </div>
+            )}
         </div>
     );
 };
