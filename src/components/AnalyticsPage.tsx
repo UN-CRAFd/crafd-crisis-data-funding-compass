@@ -137,7 +137,14 @@ const StatCard = ({ icon, title, value, label, colorScheme, tooltip }: StatCardP
 const getOrgColorIntensity = (count: number, max: number): string => {
     if (count === 0) return 'bg-slate-50';
     const intensity = Math.min(Math.ceil((count / max) * 5), 5);
-    return `bg-amber-${intensity}00`;
+    const colorMap: Record<number, string> = {
+        1: 'bg-amber-100',
+        2: 'bg-amber-200',
+        3: 'bg-amber-300',
+        4: 'bg-amber-400',
+        5: 'bg-amber-500'
+    };
+    return colorMap[intensity] || 'bg-slate-50';
 };
 
 // Helper to get color intensity for projects (purple/indigo)
@@ -1077,8 +1084,8 @@ export default function AnalyticsPage({ logoutButton }: AnalyticsPageProps) {
             ? Number((orgsWithTotalDonorCounts.reduce((sum, org) => sum + org.totalDonors.size, 0) / orgsWithTotalDonorCounts.length).toFixed(1))
             : 0;
 
-        // 3. Funding overlap
-        // Create set of all orgs/assets funded by at least one selected donor
+        // 3. Funding overlap (organizations only)
+        // Create set of all orgs funded by at least one selected donor
         const fundingTargets = new Map<string, Set<string>>(); // target -> set of donors
 
         organizationsData.forEach(org => {
@@ -1127,75 +1134,42 @@ export default function AnalyticsPage({ logoutButton }: AnalyticsPageProps) {
                 orgPassesFilters = hasMatchingProject || false;
             }
             
-            // Track which selected donors fund this org
-            if (orgPassesFilters && org.agencies && Array.isArray(org.agencies)) {
-                org.agencies.forEach(agency => {
-                    const countryName = agency.fields?.['Country Name'];
-                    if (countryName && selectedDonors.includes(countryName)) {
-                        if (!fundingTargets.has(orgKey)) {
-                            fundingTargets.set(orgKey, new Set());
+            // Track which selected donors fund this org (organization-level only)
+            if (orgPassesFilters) {
+                const orgDonors = new Set<string>();
+                
+                // Check org-level agencies
+                if (org.agencies && Array.isArray(org.agencies)) {
+                    org.agencies.forEach(agency => {
+                        const countryName = agency.fields?.['Country Name'];
+                        if (countryName && selectedDonors.includes(countryName)) {
+                            orgDonors.add(countryName);
                         }
-                        fundingTargets.get(orgKey)!.add(countryName);
-                    }
-                });
-            }
-            
-            // Track project-level funding
-            if (org.projects && Array.isArray(org.projects)) {
-                org.projects.forEach(project => {
-                    const projectName = project.fields?.['Project Name'] || project.name || '';
-                    const projectKey = `project-${project.id}-${projectName}`;
-                    
-                    // Check if project passes filters
-                    let projectPassesFilters = true;
-                    
-                    if (appliedSearchQuery) {
-                        const query = appliedSearchQuery.toLowerCase().trim();
-                        const projectNameLower = projectName.toLowerCase();
-                        const parentOrgName = (org.name || org.fields?.['Organization Name'] || '').toLowerCase();
-                        if (!projectNameLower.includes(query) && !parentOrgName.includes(query)) {
-                            projectPassesFilters = false;
-                        }
-                    }
-                    
-                    if (projectPassesFilters && investmentTypes.length > 0) {
-                        const projectTypes = project.fields?.['Investment Type(s)'] || [];
-                        const matchesType = Array.isArray(projectTypes) && projectTypes.some(type =>
-                            investmentTypes.some(filterType =>
-                                type.toLowerCase().includes(filterType.toLowerCase()) ||
-                                filterType.toLowerCase().includes(type.toLowerCase())
-                            )
-                        );
-                        if (!matchesType) projectPassesFilters = false;
-                    }
-                    
-                    if (projectPassesFilters && investmentThemes.length > 0) {
-                        const projectThemes = project.fields?.['Investment Theme(s)'] || [];
-                        const matchesTheme = Array.isArray(projectThemes) && projectThemes.some(theme =>
-                            investmentThemes.some(filterTheme =>
-                                typeof theme === 'string' &&
-                                theme.toLowerCase().trim() === filterTheme.toLowerCase().trim()
-                            )
-                        );
-                        if (!matchesTheme) projectPassesFilters = false;
-                    }
-                    
-                    if (projectPassesFilters && project.agencies && Array.isArray(project.agencies)) {
-                        project.agencies.forEach((agency: any) => {
-                            const countryName = agency.fields?.['Country Name'];
-                            if (countryName && selectedDonors.includes(countryName)) {
-                                if (!fundingTargets.has(projectKey)) {
-                                    fundingTargets.set(projectKey, new Set());
+                    });
+                }
+                
+                // Check project-level agencies for this organization
+                if (org.projects && Array.isArray(org.projects)) {
+                    org.projects.forEach(project => {
+                        if (project.agencies && Array.isArray(project.agencies)) {
+                            project.agencies.forEach((agency: any) => {
+                                const countryName = agency.fields?.['Country Name'];
+                                if (countryName && selectedDonors.includes(countryName)) {
+                                    orgDonors.add(countryName);
                                 }
-                                fundingTargets.get(projectKey)!.add(countryName);
-                            }
-                        });
-                    }
-                });
+                            });
+                        }
+                    });
+                }
+                
+                // Only add org if it has at least one selected donor
+                if (orgDonors.size > 0) {
+                    fundingTargets.set(orgKey, orgDonors);
+                }
             }
         });
 
-        // Count targets funded by exactly one donor
+        // Count orgs funded by exactly one donor
         let uniqueFundingTargets = 0;
         fundingTargets.forEach((donors) => {
             if (donors.size === 1) {
