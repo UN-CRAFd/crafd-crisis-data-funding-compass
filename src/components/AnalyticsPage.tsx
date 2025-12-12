@@ -1367,14 +1367,14 @@ export default function AnalyticsPage({ logoutButton }: AnalyticsPageProps) {
                                 <table className="w-full border-collapse">
                                     <thead>
                                         <tr>
-                                            <th className="p-2 text-left text-xs font-semibold text-slate-600 border-b-2 border-slate-200 min-w-[120px]">
+                                            <th className="p-2 text-left text-sm font-semibold text-slate-600 border-b-2 border-slate-200 min-w-[120px]">
                                                 Donor
                                             </th>
                                             {selectedDonors.map(donor => (
                                                 <th 
                                                     key={donor} 
-                                                    className="p-2 text-center text-xs font-semibold text-slate-600 border-b-2 border-slate-200 w-16"
-                                                    style={{ writingMode: 'vertical-rl', transform: 'rotate(180deg)' }}
+                                                    className="p-2 text-left text-sm font-semibold text-slate-600 border-b-2 border-slate-200 w-16"
+                                                    style={{ writingMode: 'vertical-rl', transform: 'rotate(225deg)' }}
                                                 >
                                                     {donor}
                                                 </th>
@@ -1384,7 +1384,7 @@ export default function AnalyticsPage({ logoutButton }: AnalyticsPageProps) {
                                     <tbody>
                                         {selectedDonors.map((donor1, i) => (
                                             <tr key={donor1}>
-                                                <td className="p-2 text-xs font-semibold text-slate-600 border-r-2 border-slate-200">
+                                                <td className="p-2 text-sm font-semibold text-slate-600 border-r-2 border-slate-200">
                                                     {donor1}
                                                 </td>
                                                 {selectedDonors.map((donor2, j) => {
