@@ -882,6 +882,44 @@ export function buildOrgAgenciesMap(organizations: NestedOrganization[]): Record
 }
 
 /**
+ * Build a map from organization ID to donor country to project names
+ * Used by organization modals to show which projects are funded by project-level donors
+ */
+export function buildOrgProjectDonorsMap(organizations: NestedOrganization[]): Record<string, Record<string, string[]>> {
+    const map: Record<string, Record<string, string[]>> = {};
+    
+    organizations.forEach(org => {
+        if (org && org.id && org.projects) {
+            const countryToProjects: Record<string, string[]> = {};
+            
+            org.projects.forEach((project: any) => {
+                const projectName = project.fields?.['Project Name'] || project.name || `Project ${project.id}`;
+                
+                if (project.agencies && Array.isArray(project.agencies)) {
+                    project.agencies.forEach((agency: any) => {
+                        const fields = agency.fields || {};
+                        const countryName = fields['Country Name'];
+                        
+                        if (countryName && projectName) {
+                            if (!countryToProjects[countryName]) {
+                                countryToProjects[countryName] = [];
+                            }
+                            if (!countryToProjects[countryName].includes(projectName)) {
+                                countryToProjects[countryName].push(projectName);
+                            }
+                        }
+                    });
+                }
+            });
+            
+            map[org.id] = countryToProjects;
+        }
+    });
+    
+    return map;
+}
+
+/**
  * Build a map from project ID to a map of country -> agency names
  * Used by project modals to show which agencies finance each project
  */
