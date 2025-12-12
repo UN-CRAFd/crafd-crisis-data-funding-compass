@@ -1,7 +1,7 @@
 'use client';
 
-import { typeLabelToSlug, typeSlugToLabel } from '@/lib/urlShortcuts';
-import { themeKeyToName, themeNameToKey, ensureThemesMappingsLoaded } from '@/lib/data';
+import { typeLabelToSlug, typeSlugToLabel, toUrlSlug, matchesUrlSlug } from '@/lib/urlShortcuts';
+import { themeKeyToNames, themeNameToKey, ensureThemesMappingsLoaded } from '@/lib/data';
 import { usePathname, useRouter, useSearchParams } from 'next/navigation';
 import { useCallback, useEffect, useMemo, useRef, useState } from 'react';
 import { processDashboardData } from '../lib/data';
@@ -10,148 +10,125 @@ import CrisisDataDashboard from './CrisisDataDashboard';
 
 /**
  * Wrapper component that handles routing, URL params, and data fetching.
- * Passes data and callbacks down to the presentational CrisisDataDashboard component.
+ * 
+ * KEY ARCHITECTURE:
+ * - Modal params (org, asset, donor) are COMPLETELY SEPARATE from filter params
+ * - Filter changes never affect modal params
+ * - Modal changes never trigger filter validation or data refetching
+ * - All URL updates go through a single source of truth
  */
 const CrisisDataDashboardWrapper = ({ logoutButton }: { logoutButton?: React.ReactNode }) => {
-    // URL-based routing for filters
     const router = useRouter();
     const pathname = usePathname();
     const searchParams = useSearchParams();
     
-    // State for themes (needs async loading)
+    // ===========================================
+    // MODAL STATE (Read-only from URL)
+    // ===========================================
+    const modalParams = useMemo(() => ({
+        org: searchParams.get('org') ?? '',
+        asset: searchParams.get('asset') ?? '',
+        donor: searchParams.get('donor') ?? ''
+    }), [searchParams]);
+
+    // ===========================================
+    // FILTER STATE
+    // ===========================================
     const [themesLoaded, setThemesLoaded] = useState(false);
     const [investmentThemes, setInvestmentThemes] = useState<string[]>([]);
     
-    // Load themes mappings and parse URL themes
+    // Load themes on mount and when filter params change (NOT when modal params change)
+    const filterParamsString = useMemo(() => {
+        return searchParams.toString().split('&')
+            .filter(p => !p.startsWith('org=') && !p.startsWith('asset=') && !p.startsWith('donor='))
+            .join('&');
+    }, [searchParams]);
+
     useEffect(() => {
         (async () => {
             await ensureThemesMappingsLoaded();
             setThemesLoaded(true);
             
-            // Parse themes from URL
             const raw = searchParams.get('th') ?? searchParams.get('themes');
             const keys = raw?.split(',').filter(Boolean) || [];
-            const themeNames = keys.map(key => themeKeyToName(key));
+            const themeNames = keys.flatMap(key => themeKeyToNames(key));
             setInvestmentThemes(themeNames);
         })();
-    }, [searchParams]);
+    }, [filterParamsString]); // Only re-run when filter params change
 
-    // Get filter values from URL (comma-separated for multi-select)
-    // Using compact query keys: donors -> d, types -> t, search -> q
-    // Read compact keys but fall back to legacy long keys for compatibility
-    const combinedDonors = useMemo(() => {
+    // Read filter values from URL
+    const donorSlugsFromUrl = useMemo(() => {
         const raw = searchParams.get('d') ?? searchParams.get('donors');
         return raw?.split(',').filter(Boolean) || [];
     }, [searchParams]);
-    const investmentTypes = useMemo(() => {
-        const raw = searchParams.get('t') ?? searchParams.get('types');
-        // raw values are slugs in the URL; convert to display labels for app use
-        const items = raw?.split(',').filter(Boolean) || [];
-        const labels = items.map(item => typeSlugToLabel(item));
-        // Deduplicate case-insensitively
-        const seen = new Set<string>();
-        return labels.filter(label => {
-            const normalized = label.toLowerCase().trim();
-            if (seen.has(normalized)) return false;
-            seen.add(normalized);
-            return true;
-        });
-    }, [searchParams]);
-    const searchQuery = searchParams.get('q') ?? searchParams.get('search') ?? '';
     
-    // Get sort parameters from URL (compact keys: sb -> sortBy, sd -> sortDirection)
-    const sortBy = useMemo(() => {
-        const raw = searchParams.get('sb') ?? searchParams.get('sortBy');
-        if (raw === 'donors' || raw === 'assets' || raw === 'funding') return raw;
-        return 'name'; // default
-    }, [searchParams]);
-    
-    const sortDirection = useMemo(() => {
-        const raw = searchParams.get('sd') ?? searchParams.get('sortDirection');
-        if (raw === 'asc') return 'asc';
-        return 'desc'; // default
-    }, [searchParams]);
-
-    // Track active view (table or network)
-    const [activeView, setActiveView] = useState<'table' | 'network'>('table');
-
-    // Modal state for network view (local state, no URL changes)
-    const [localSelectedOrgKey, setLocalSelectedOrgKey] = useState('');
-    const [localSelectedProjectKey, setLocalSelectedProjectKey] = useState('');
-    const [localSelectedDonorCountry, setLocalSelectedDonorCountry] = useState('');
-
-    // Modal state from URL for table view
-    const urlOrgKey = searchParams.get('org') ?? '';
-    const urlProjectKey = searchParams.get('asset') ?? '';
-
-    // Choose modal state based on active view
-    const selectedOrgKey = activeView === 'table' ? urlOrgKey : localSelectedOrgKey;
-    const selectedProjectKey = activeView === 'table' ? urlProjectKey : localSelectedProjectKey;
-    const selectedDonorCountry = localSelectedDonorCountry; // Donor modal is always local (network view only)
-
-    // Local state for immediate search input (submitted on Enter key)
-    const [localSearchQuery, setLocalSearchQuery] = useState(searchQuery);
-
-    // Store the underlying page state when modals are opened
-    const [underlyingPageState, setUnderlyingPageState] = useState<{
-        searchQuery: string;
-        combinedDonors: string[];
-        investmentTypes: string[];
-        investmentThemes: string[];
-    } | null>(null);
-    
-    // Track the last fetched filter state to prevent unnecessary refetches
-    const lastFetchedFiltersRef = useRef<string>('');
-
-    // Determine if we're currently showing a modal
-    // Use underlying page state for dashboard data when modal is open
-    const shouldUseStoredState = (selectedOrgKey || selectedProjectKey) && underlyingPageState;
-    
-    // Memoize effective filters to prevent unnecessary recalculations
-    const effectiveSearchQuery = useMemo(() => 
-        shouldUseStoredState ? underlyingPageState.searchQuery : searchQuery,
-        [shouldUseStoredState, underlyingPageState, searchQuery]
-    );
-    
-    const effectiveDonors = useMemo(() => 
-        shouldUseStoredState ? underlyingPageState.combinedDonors : combinedDonors,
-        [shouldUseStoredState, underlyingPageState, combinedDonors]
-    );
-    
-    const effectiveInvestmentTypes = useMemo(() => 
-        shouldUseStoredState ? underlyingPageState.investmentTypes : investmentTypes,
-        [shouldUseStoredState, underlyingPageState, investmentTypes]
-    );
-    
-    const effectiveInvestmentThemes = useMemo(() => 
-        shouldUseStoredState ? underlyingPageState.investmentThemes : investmentThemes,
-        [shouldUseStoredState, underlyingPageState, investmentThemes]
-    );
-
-    // State for dashboard data
     const [dashboardData, setDashboardData] = useState<{
-        stats: DashboardStats;
-        projectTypes: ProjectTypeData[];
+        allOrganizations: OrganizationProjectData[];
         organizationTypes: OrganizationTypeData[];
-        organizationProjects: OrganizationProjectData[];
-        organizationsWithProjects: OrganizationWithProjects[];
-        allOrganizations: OrganizationWithProjects[]; // Add unfiltered organizations
-        donorCountries: string[];
-        investmentTypes: string[];
-        investmentThemes: string[];
-        investmentThemesByType: Record<string, string[]>; // Grouped themes by investment type
-        topDonors: Array<{ name: string; value: number }>; // Add top co-financing donors
+        projectTypes: ProjectTypeData[];
+        stats: DashboardStats;
     } | null>(null);
     const [loading, setLoading] = useState(true);
     const [error, setError] = useState<string | null>(null);
 
-    // Sync local search with URL when URL changes externally (e.g., browser back/forward)
+    // Parse donors from URL slugs once data is loaded
+    const combinedDonors = useMemo(() => {
+        if (!dashboardData) return [];
+        const allDonors = new Set<string>();
+        dashboardData.allOrganizations.forEach(org => {
+            org.donorCountries?.forEach((d: string) => allDonors.add(d));
+        });
+        return donorSlugsFromUrl
+            .map(slug => Array.from(allDonors).find(d => matchesUrlSlug(slug, d)))
+            .filter((d): d is string => d !== undefined);
+    }, [donorSlugsFromUrl, dashboardData]);
+
+    // Parse investment types from URL
+    const typeSlugsFromUrl = useMemo(() => {
+        const raw = searchParams.get('t') ?? searchParams.get('types');
+        return raw?.split(',').filter(Boolean) || [];
+    }, [searchParams]);
+
+    const investmentTypes = useMemo(() => {
+        return typeSlugsFromUrl.map(slug => typeSlugToLabel(slug));
+    }, [typeSlugsFromUrl]);
+
+    // Search query
+    const searchQuery = useMemo(() => {
+        return searchParams.get('q') ?? searchParams.get('search') ?? '';
+    }, [searchParams]);
+
+    // Sort params
+    const sortBy = useMemo(() => {
+        const raw = searchParams.get('sb') ?? searchParams.get('sortBy');
+        if (raw === 'donors' || raw === 'assets' || raw === 'funding') return raw;
+        return 'name' as const;
+    }, [searchParams]);
+
+    const sortDirection = useMemo(() => {
+        const raw = searchParams.get('sd') ?? searchParams.get('sortDirection');
+        if (raw === 'asc') return 'asc';
+        return 'desc' as const;
+    }, [searchParams]);
+
+    const [activeView, setActiveView] = useState<'table' | 'network'>('table');
+    const [localSearchQuery, setLocalSearchQuery] = useState(searchQuery);
+    
+    const lastFetchedFiltersRef = useRef<string>('');
+
+    // Sync local search with URL
     useEffect(() => {
         setLocalSearchQuery(searchQuery);
     }, [searchQuery]);
 
-    // Helper function to update URL search params
-    const updateURLParams = useCallback((params: { 
+    // ===========================================
+    // URL UPDATE FUNCTIONS
+    // ===========================================
+    
+    /**
+     * Update filter params while preserving modal params
+     */
+    const updateFilterParams = useCallback((params: { 
         donors?: string[]; 
         types?: string[]; 
         themes?: string[]; 
@@ -159,435 +136,245 @@ const CrisisDataDashboardWrapper = ({ logoutButton }: { logoutButton?: React.Rea
         sortBy?: 'name' | 'donors' | 'assets' | 'funding';
         sortDirection?: 'asc' | 'desc';
     }) => {
+        const newSearchParams = new URLSearchParams();
+
+        // Always preserve current modal params
+        if (modalParams.org) newSearchParams.set('org', modalParams.org);
+        if (modalParams.asset) newSearchParams.set('asset', modalParams.asset);
+        if (modalParams.donor) newSearchParams.set('donor', modalParams.donor);
+
+        // Set filter params
+        if (params.donors !== undefined && params.donors.length > 0) {
+            newSearchParams.set('d', params.donors.map(d => toUrlSlug(d)).join(','));
+        } else if (params.donors === undefined && combinedDonors.length > 0) {
+            newSearchParams.set('d', combinedDonors.map(d => toUrlSlug(d)).join(','));
+        }
+
+        if (params.types !== undefined && params.types.length > 0) {
+            const slugs = params.types.map(t => typeLabelToSlug(t));
+            const uniqueSlugs = Array.from(new Set(slugs.map(s => s.toLowerCase()))).map(s =>
+                slugs.find(slug => slug.toLowerCase() === s) || s
+            );
+            newSearchParams.set('t', uniqueSlugs.join(','));
+        } else if (params.types === undefined && investmentTypes.length > 0) {
+            const slugs = investmentTypes.map(t => typeLabelToSlug(t));
+            const uniqueSlugs = Array.from(new Set(slugs.map(s => s.toLowerCase()))).map(s =>
+                slugs.find(slug => slug.toLowerCase() === s) || s
+            );
+            newSearchParams.set('t', uniqueSlugs.join(','));
+        }
+
+        if (params.themes !== undefined && params.themes.length > 0) {
+            newSearchParams.set('th', params.themes.map(t => themeNameToKey(t)).join(','));
+        } else if (params.themes === undefined && investmentThemes.length > 0) {
+            newSearchParams.set('th', investmentThemes.map(t => themeNameToKey(t)).join(','));
+        }
+
+        if (params.search !== undefined && params.search) {
+            newSearchParams.set('q', params.search);
+        } else if (params.search === undefined && searchQuery) {
+            newSearchParams.set('q', searchQuery);
+        }
+
+        const finalSortBy = params.sortBy ?? sortBy;
+        if (finalSortBy !== 'name') {
+            newSearchParams.set('sb', finalSortBy);
+        }
+
+        const finalSortDirection = params.sortDirection ?? sortDirection;
+        if (finalSortDirection === 'asc') {
+            newSearchParams.set('sd', finalSortDirection);
+        }
+
+        router.push(`${pathname}?${newSearchParams.toString()}`, { scroll: false });
+    }, [modalParams, combinedDonors, investmentTypes, investmentThemes, searchQuery, sortBy, sortDirection, pathname, router]);
+
+    /**
+     * Update ONLY modal params, preserving all filter params
+     */
+    const updateModalParams = useCallback((modal: {
+        org?: string | null;
+        asset?: string | null;
+        donor?: string | null;
+    }) => {
         const newSearchParams = new URLSearchParams(searchParams.toString());
 
-        // Update or remove donors param (compact 'd')
-        if (params.donors !== undefined) {
-            if (params.donors.length > 0) {
-                newSearchParams.set('d', params.donors.join(','));
-            } else {
-                newSearchParams.delete('d');
-            }
+        // Update modal params
+        if (modal.org === null) {
+            newSearchParams.delete('org');
+        } else if (modal.org !== undefined) {
+            newSearchParams.set('org', toUrlSlug(modal.org));
         }
 
-        // Update or remove types param (compact 't') - write slugs
-        if (params.types !== undefined) {
-            if (params.types.length > 0) {
-                const slugs = params.types.map(t => typeLabelToSlug(t));
-                // Deduplicate slugs case-insensitively before writing to URL
-                const uniqueSlugs = Array.from(new Set(slugs.map(s => s.toLowerCase()))).map(s =>
-                    slugs.find(slug => slug.toLowerCase() === s) || s
-                );
-                newSearchParams.set('t', uniqueSlugs.join(','));
-            } else {
-                newSearchParams.delete('t');
-            }
+        if (modal.asset === null) {
+            newSearchParams.delete('asset');
+        } else if (modal.asset !== undefined) {
+            newSearchParams.set('asset', toUrlSlug(modal.asset));
         }
 
-        // Update or remove themes param (compact 'th') - write theme keys
-        if (params.themes !== undefined) {
-            if (params.themes.length > 0) {
-                const themeKeys = params.themes.map(t => themeNameToKey(t));
-                newSearchParams.set('th', themeKeys.join(','));
-            } else {
-                newSearchParams.delete('th');
-            }
+        if (modal.donor === null) {
+            newSearchParams.delete('donor');
+        } else if (modal.donor !== undefined) {
+            newSearchParams.set('donor', toUrlSlug(modal.donor));
         }
 
-        // Update or remove search param (compact 'q')
-        if (params.search !== undefined) {
-            if (params.search) {
-                newSearchParams.set('q', params.search);
-            } else {
-                newSearchParams.delete('q');
-            }
-        }
-
-        // Update or remove sort params (compact 'sb' and 'sd')
-        if (params.sortBy !== undefined) {
-            // Only set in URL if non-default
-            if (params.sortBy !== 'name') {
-                newSearchParams.set('sb', params.sortBy);
-            } else {
-                newSearchParams.delete('sb');
-            }
-        }
-        
-        if (params.sortDirection !== undefined) {
-            // Only set in URL if non-default (default is now 'desc')
-            if (params.sortDirection === 'asc') {
-                newSearchParams.set('sd', params.sortDirection);
-            } else {
-                newSearchParams.delete('sd');
-            }
-        }
-
-        // Update URL without reloading the page
-        const newURL = `${pathname}?${newSearchParams.toString()}`;
-        router.push(newURL, { scroll: false });
+        router.push(`${pathname}?${newSearchParams.toString()}`, { scroll: false });
     }, [searchParams, pathname, router]);
 
-    // Load and process ecosystem data
+    // ===========================================
+    // DATA FETCHING (Only triggered by filter changes)
+    // ===========================================
     useEffect(() => {
         async function fetchData() {
             try {
-                // Create a stable filter signature to detect actual changes
                 const filterSignature = JSON.stringify({
-                    donors: effectiveDonors.sort(),
-                    types: effectiveInvestmentTypes.sort(),
-                    themes: effectiveInvestmentThemes.sort(),
-                    search: effectiveSearchQuery
+                    donors: combinedDonors.sort(),
+                    types: investmentTypes.sort(),
+                    themes: investmentThemes.sort(),
+                    search: searchQuery
                 });
-                
-                // Skip fetch if filters haven't actually changed
-                if (lastFetchedFiltersRef.current === filterSignature) {
-                    // Ensure loading is false if we're skipping the fetch
-                    setLoading(false);
+
+                if (filterSignature === lastFetchedFiltersRef.current) {
                     return;
                 }
-                
+
                 lastFetchedFiltersRef.current = filterSignature;
-                
-                // Only show loading spinner if we don't have data yet (initial load)
-                if (!dashboardData) {
-                    setLoading(true);
-                }
-                setError(null);
+                setLoading(false);
 
                 const filters: DashboardFilters = {
-                    donorCountries: effectiveDonors.length > 0 ? effectiveDonors : undefined,
-                    investmentTypes: effectiveInvestmentTypes.length > 0 ? effectiveInvestmentTypes : undefined,
-                    investmentThemes: effectiveInvestmentThemes.length > 0 ? effectiveInvestmentThemes : undefined,
-                    searchQuery: effectiveSearchQuery || undefined
+                    donorCountries: combinedDonors.length > 0 ? combinedDonors : undefined,
+                    investmentTypes: investmentTypes.length > 0 ? investmentTypes : undefined,
+                    investmentThemes: investmentThemes.length > 0 ? investmentThemes : undefined,
+                    searchQuery: searchQuery || undefined
                 };
 
                 const data = await processDashboardData(filters);
-
                 setDashboardData(data);
+                setError(null);
+            } catch (err) {
+                console.error('Error fetching dashboard data:', err);
+                setError(err instanceof Error ? err.message : 'An error occurred');
             } finally {
                 setLoading(false);
             }
         }
 
         fetchData();
-    }, [effectiveDonors, effectiveInvestmentTypes, effectiveInvestmentThemes, effectiveSearchQuery]); // Re-run when effective filters change
+    }, [combinedDonors, investmentTypes, investmentThemes, searchQuery]);
 
-    // Validate selected themes against available themes based on current filters
-    // Remove themes that no longer have matching projects
-    useEffect(() => {
-        if (!dashboardData?.allOrganizations || investmentThemes.length === 0 || !themesLoaded) {
-            return; // Nothing to validate
-        }
+    // NOTE: Theme validation is disabled because it creates a chicken-and-egg problem:
+    // - Themes are user-driven filters that should drive data fetching
+    // - Validating themes against current data (which was fetched without the new theme)
+    //   would immediately remove newly-added themes
+    // - This prevents users from selecting themes when other filters are active
+    // 
+    // If theme validation is needed in the future, it should only run AFTER data has been
+    // fetched with the new theme filter, not before.
 
-        // Calculate which themes are available given current donors, types, and query
-        const availableThemes = new Set<string>();
-        const allOrgs = dashboardData.allOrganizations;
+    // ===========================================
+    // FILTER HANDLERS
+    // ===========================================
+    const handleDonorsChange = useCallback((newDonors: string[]) => {
+        updateFilterParams({ donors: newDonors });
+    }, [updateFilterParams]);
 
-        allOrgs.forEach(org => {
-            // Check if org meets donor requirements at org level
-            const orgMeetsDonorRequirement = combinedDonors.length === 0 ||
-                combinedDonors.every(selectedDonor => org.donorCountries.includes(selectedDonor));
+    const handleTypesChange = useCallback((newTypes: string[]) => {
+        updateFilterParams({ types: newTypes });
+    }, [updateFilterParams]);
 
-            org.projects.forEach(project => {
-                // If org doesn't meet donor requirement, check project-level donors
-                if (!orgMeetsDonorRequirement) {
-                    const projectMeetsDonorRequirement = combinedDonors.every(selectedDonor =>
-                        Array.isArray(project.donorCountries) && project.donorCountries.includes(selectedDonor)
-                    );
-                    if (!projectMeetsDonorRequirement) return;
-                }
+    const handleThemesChange = useCallback((newThemes: string[]) => {
+        updateFilterParams({ themes: newThemes });
+    }, [updateFilterParams]);
 
-                // Filter by search query
-                if (searchQuery) {
-                    const searchLower = searchQuery.toLowerCase();
-                    const matchesSearch = 
-                        project.projectName?.toLowerCase().includes(searchLower) ||
-                        project.description?.toLowerCase().includes(searchLower) ||
-                        org.organizationName?.toLowerCase().includes(searchLower);
-                    if (!matchesSearch) return;
-                }
-
-                // Filter by types
-                if (investmentTypes.length > 0) {
-                    const hasMatchingType = project.investmentTypes?.some(type =>
-                        investmentTypes.some(selectedType => 
-                            type.toLowerCase().trim() === selectedType.toLowerCase().trim()
-                        )
-                    );
-                    if (!hasMatchingType) return;
-                }
-
-                // This project matches all filters except themes - add its themes to available set
-                project.investmentThemes?.forEach(theme => {
-                    availableThemes.add(theme.toLowerCase().trim());
-                });
-            });
+    const handleResetFilters = useCallback(() => {
+        updateFilterParams({ 
+            donors: [], 
+            types: [], 
+            themes: [], 
+            search: '',
+            sortBy: 'name',
+            sortDirection: 'desc'
         });
-
-        // Check if any selected themes are no longer available
-        const validThemes = investmentThemes.filter(theme => 
-            availableThemes.has(theme.toLowerCase().trim())
-        );
-
-        // If some themes were removed, update the URL
-        if (validThemes.length !== investmentThemes.length) {
-            updateURLParams({ themes: validThemes });
-        }
-    }, [dashboardData?.allOrganizations, combinedDonors, investmentTypes, searchQuery, investmentThemes, themesLoaded, updateURLParams]);
-
-    // Handle reset filters
-    const handleResetFilters = () => {
-        setLocalSearchQuery(''); // Clear local search immediately
-        updateURLParams({ donors: [], types: [], themes: [], search: '', sortBy: 'name', sortDirection: 'desc' });
-    };
-
-    // Handle filter changes
-    const handleDonorsChange = (values: string[]) => {
-        updateURLParams({ donors: values });
-    };
-
-    const handleTypesChange = (values: string[]) => {
-        updateURLParams({ types: values });
-    };
-
-    const handleThemesChange = (values: string[]) => {
-        updateURLParams({ themes: values });
-    };
+    }, [updateFilterParams]);
 
     const handleSortChange = (newSortBy: 'name' | 'donors' | 'assets' | 'funding', newSortDirection: 'asc' | 'desc') => {
-        updateURLParams({ sortBy: newSortBy, sortDirection: newSortDirection });
+        updateFilterParams({ sortBy: newSortBy, sortDirection: newSortDirection });
     };
 
-    // Search handler - updates local state immediately, URL only on Enter key
     const handleSearchChange = useCallback((value: string) => {
-        // Update local state immediately for responsive UI
         setLocalSearchQuery(value);
     }, []);
 
-    // Handle Enter key press to apply search
     const handleSearchSubmit = useCallback(() => {
-        updateURLParams({ search: localSearchQuery });
-    }, [localSearchQuery, updateURLParams]);
+        updateFilterParams({ search: localSearchQuery });
+    }, [localSearchQuery, updateFilterParams]);
 
-    // Modal handlers - use URL for table view, local state for network view
+    // ===========================================
+    // MODAL HANDLERS
+    // ===========================================
     const handleOpenOrganizationModal = useCallback((orgKey: string) => {
-        if (activeView === 'table') {
-            // Table view: update URL - replace any existing modal with org modal
-            const newSearchParams = new URLSearchParams(searchParams.toString());
-            newSearchParams.set('org', orgKey);
-            // Close project modal if open
-            newSearchParams.delete('asset');
-            router.push(`${pathname}?${newSearchParams.toString()}`, { scroll: false });
-        } else {
-            // Network view: use local state only, store page state
-            const stateToStore = {
-                searchQuery,
-                combinedDonors: [...combinedDonors],
-                investmentTypes: [...investmentTypes],
-                investmentThemes: [...investmentThemes]
-            };
-            
-            setUnderlyingPageState(stateToStore);
-            // Close project modal if open
-            setLocalSelectedProjectKey('');
-            setLocalSelectedOrgKey(orgKey);
-        }
-    }, [activeView, searchParams, pathname, router, searchQuery, combinedDonors, investmentTypes, investmentThemes]);
+        updateModalParams({ org: orgKey, asset: null, donor: null });
+    }, [updateModalParams]);
 
     const handleOpenProjectModal = useCallback((projectKey: string) => {
-        if (activeView === 'table') {
-            // Table view: update URL - replace any existing modal with project modal
-            const newSearchParams = new URLSearchParams(searchParams.toString());
-            newSearchParams.set('asset', projectKey);
-            // Close organization modal if open
-            newSearchParams.delete('org');
-            router.push(`${pathname}?${newSearchParams.toString()}`, { scroll: false });
-        } else {
-            // Network view: use local state only, store page state
-            const stateToStore = {
-                searchQuery,
-                combinedDonors: [...combinedDonors],
-                investmentTypes: [...investmentTypes],
-                investmentThemes: [...investmentThemes]
-            };
-            
-            setUnderlyingPageState(stateToStore);
-            // Close organization modal if open
-            setLocalSelectedOrgKey('');
-            setLocalSelectedProjectKey(projectKey);
-        }
-    }, [activeView, searchParams, pathname, router, searchQuery, combinedDonors, investmentTypes, investmentThemes]);
+        updateModalParams({ org: null, asset: projectKey, donor: null });
+    }, [updateModalParams]);
+
+    const handleOpenDonorModal = useCallback((donorCountry: string) => {
+        updateModalParams({ org: null, asset: null, donor: donorCountry });
+    }, [updateModalParams]);
 
     const handleCloseOrganizationModal = useCallback(() => {
-        if (activeView === 'table') {
-            // Table view: clear URL param
-            const newSearchParams = new URLSearchParams(searchParams.toString());
-            newSearchParams.delete('org');
-            router.push(`${pathname}?${newSearchParams.toString()}`, { scroll: false });
-        } else {
-            // Network view: clear local state
-            setLocalSelectedOrgKey('');
-            
-            // Clear stored state after a short delay to prevent flash
-            setTimeout(() => {
-                setUnderlyingPageState(null);
-            }, 50);
-        }
-    }, [activeView, searchParams, pathname, router]);
+        updateModalParams({ org: null });
+    }, [updateModalParams]);
 
     const handleCloseProjectModal = useCallback(() => {
-        if (activeView === 'table') {
-            // Table view: clear URL param
-            const newSearchParams = new URLSearchParams(searchParams.toString());
-            newSearchParams.delete('asset');
-            router.push(`${pathname}?${newSearchParams.toString()}`, { scroll: false });
-        } else {
-            // Network view: clear local state
-            setLocalSelectedProjectKey('');
-            
-            // Clear stored state after a short delay to prevent flash
-            setTimeout(() => {
-                setUnderlyingPageState(null);
-            }, 50);
-        }
-    }, [activeView, searchParams, pathname, router]);
-
-    // Donor modal handlers (network view only - donors are not clickable in table view)
-    const handleOpenDonorModal = useCallback((donorCountry: string) => {
-        // Store page state
-        const stateToStore = {
-            searchQuery,
-            combinedDonors: [...combinedDonors],
-            investmentTypes: [...investmentTypes],
-            investmentThemes: [...investmentThemes]
-        };
-        
-        setUnderlyingPageState(stateToStore);
-        // Close other modals
-        setLocalSelectedOrgKey('');
-        setLocalSelectedProjectKey('');
-        setLocalSelectedDonorCountry(donorCountry);
-    }, [searchQuery, combinedDonors, investmentTypes, investmentThemes]);
+        updateModalParams({ asset: null });
+    }, [updateModalParams]);
 
     const handleCloseDonorModal = useCallback(() => {
-        setLocalSelectedDonorCountry('');
-        
-        // Clear stored state after a short delay to prevent flash
-        setTimeout(() => {
-            setUnderlyingPageState(null);
-        }, 50);
-    }, []);
+        updateModalParams({ donor: null });
+    }, [updateModalParams]);
 
-    // Handle view change
+    // Click handlers for badges/pills
+    const handleDonorClick = useCallback((donor: string) => {
+        const updatedDonors = combinedDonors.includes(donor) 
+            ? combinedDonors.filter(d => d !== donor)
+            : [...combinedDonors, donor];
+        updateFilterParams({ donors: updatedDonors });
+    }, [combinedDonors, updateFilterParams]);
+
+    const handleTypeClick = useCallback((type: string) => {
+        const updatedTypes = investmentTypes.includes(type)
+            ? investmentTypes.filter(t => t !== type)
+            : [...investmentTypes, type];
+        updateFilterParams({ types: updatedTypes });
+    }, [investmentTypes, updateFilterParams]);
+
+    const handleThemeClick = useCallback((theme: string) => {
+        const updatedThemes = investmentThemes.includes(theme) 
+            ? investmentThemes 
+            : [...investmentThemes, theme];
+        updateFilterParams({ themes: updatedThemes });
+    }, [investmentThemes, updateFilterParams]);
+
     const handleViewChange = useCallback((view: 'table' | 'network') => {
         setActiveView(view);
-        
-        // When switching views, close any open modals
-        if (view === 'network') {
-            // Switching to network - clear URL modals if any
-            const newSearchParams = new URLSearchParams(searchParams.toString());
-            let needsUpdate = false;
-            
-            if (newSearchParams.has('org')) {
-                newSearchParams.delete('org');
-                needsUpdate = true;
-            }
-            if (newSearchParams.has('asset')) {
-                newSearchParams.delete('asset');
-                needsUpdate = true;
-            }
-            
-            if (needsUpdate) {
-                router.push(`${pathname}?${newSearchParams.toString()}`, { scroll: false });
-            }
-        } else if (view === 'table') {
-            // Switching to table - clear local modals if any
-            if (localSelectedOrgKey || localSelectedProjectKey || localSelectedDonorCountry) {
-                setLocalSelectedOrgKey('');
-                setLocalSelectedProjectKey('');
-                setLocalSelectedDonorCountry('');
-                setUnderlyingPageState(null);
-            }
-        }
-    }, [localSelectedOrgKey, localSelectedProjectKey, localSelectedDonorCountry, searchParams, pathname, router]);
-
-    // Handle donor click from modal - add to filter and close modal
-    const handleDonorClick = useCallback((country: string) => {
-        const newSearchParams = new URLSearchParams(searchParams.toString());
-        
-        // Add donor to filter if not already present
-        const currentDonors = (newSearchParams.get('d') ?? newSearchParams.get('donors') ?? '').split(',').filter(Boolean);
-        if (!currentDonors.includes(country)) {
-            const updatedDonors = [...currentDonors, country];
-            newSearchParams.set('d', updatedDonors.join(','));
-        }
-        
-        // Close any open modal by removing org/asset params
-        newSearchParams.delete('org');
-        newSearchParams.delete('asset');
-        
-        // Update URL with both changes at once
-        router.push(`${pathname}?${newSearchParams.toString()}`, { scroll: false });
-        
-        // For network view, also clear local state
-        if (activeView === 'network') {
-            setLocalSelectedOrgKey('');
-            setLocalSelectedProjectKey('');
-            setTimeout(() => {
-                setUnderlyingPageState(null);
-            }, 50);
-        }
-    }, [searchParams, pathname, router, activeView]);
-
-    // Handle investment type click from modal - add to filter and close modal
-    const handleTypeClick = useCallback((type: string) => {
-        const newSearchParams = new URLSearchParams(searchParams.toString());
-        
-        // Add type to filter if not already present
-        const currentTypesRaw = (newSearchParams.get('t') ?? newSearchParams.get('types') ?? '').split(',').filter(Boolean);
-        // Convert slugs back to labels for comparison
-        const currentTypes = currentTypesRaw.map(slug => typeSlugToLabel(slug));
-        
-        if (!currentTypes.includes(type)) {
-            const updatedTypes = [...currentTypes, type];
-            // Convert to slugs for URL
-            const slugs = updatedTypes.map(t => typeLabelToSlug(t));
-            const uniqueSlugs = Array.from(new Set(slugs.map(s => s.toLowerCase()))).map(s =>
-                slugs.find(slug => slug.toLowerCase() === s) || s
-            );
-            newSearchParams.set('t', uniqueSlugs.join(','));
-        }
-        
-        // Close any open modal by removing org/asset params
-        newSearchParams.delete('org');
-        newSearchParams.delete('asset');
-        
-        // Update URL with both changes at once
-        router.push(`${pathname}?${newSearchParams.toString()}`, { scroll: false });
-        
-        // For network view, also clear local state
-        if (activeView === 'network') {
-            setLocalSelectedOrgKey('');
-            setLocalSelectedProjectKey('');
-            setTimeout(() => {
-                setUnderlyingPageState(null);
-            }, 50);
-        }
-    }, [searchParams, pathname, router, activeView]);
+    }, []);
 
     return (
         <CrisisDataDashboard
-            dashboardData={dashboardData}
+            dashboardData={dashboardData} // ignore
             loading={loading}
             error={error}
-            combinedDonors={effectiveDonors}
-            investmentTypes={effectiveInvestmentTypes}
-            investmentThemes={effectiveInvestmentThemes}
+            combinedDonors={combinedDonors}
+            investmentTypes={investmentTypes}
+            investmentThemes={investmentThemes}
             searchQuery={localSearchQuery}
-            appliedSearchQuery={effectiveSearchQuery}
-            selectedOrgKey={selectedOrgKey}
-            selectedProjectKey={selectedProjectKey}
-            selectedDonorCountry={selectedDonorCountry}
+            appliedSearchQuery={searchQuery}
+            selectedOrgKey={modalParams.org}
+            selectedProjectKey={modalParams.asset}
+            selectedDonorCountry={modalParams.donor}
             sortBy={sortBy}
             sortDirection={sortDirection}
             onDonorsChange={handleDonorsChange}
@@ -605,6 +392,7 @@ const CrisisDataDashboardWrapper = ({ logoutButton }: { logoutButton?: React.Rea
             onCloseDonorModal={handleCloseDonorModal}
             onDonorClick={handleDonorClick}
             onTypeClick={handleTypeClick}
+            onThemeClick={handleThemeClick}
             onViewChange={handleViewChange}
             logoutButton={logoutButton}
         />

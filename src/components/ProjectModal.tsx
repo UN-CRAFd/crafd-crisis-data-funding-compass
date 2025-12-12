@@ -16,11 +16,12 @@ interface ProjectModalProps {
     projectAgenciesMap?: Record<string, Record<string, string[]>>;
     onOpenOrganizationModal?: (orgKey: string) => void;
     onOpenProjectModal?: (projectKey: string) => void;
-    onDonorClick?: (country: string) => void;
+    onOpenDonorModal?: (country: string) => void;
     onTypeClick?: (type: string) => void;
+    onThemeClick?: (theme: string) => void;
 }
 
-export default function ProjectModal({ project, allOrganizations, loading, projectAgenciesMap = {}, onOpenOrganizationModal, onOpenProjectModal, onDonorClick, onTypeClick }: ProjectModalProps) {
+export default function ProjectModal({ project, allOrganizations, loading, projectAgenciesMap = {}, onOpenOrganizationModal, onOpenProjectModal, onOpenDonorModal, onTypeClick, onThemeClick }: ProjectModalProps) {
 
     const [themeToTypeMapping, setThemeToTypeMapping] = useState<Record<string, string>>({});
     const [themeDescriptions, setThemeDescriptions] = useState<Record<string, string>>({});
@@ -214,13 +215,13 @@ export default function ProjectModal({ project, allOrganizations, loading, proje
                         </div>
                         <div className="flex flex-wrap gap-2">
                             {supportingOrganizations.map(org => {
-                                // Use orgShortName if available, otherwise use organizationName
-                                const orgKey = org.orgShortName?.toLowerCase() || org.organizationName.toLowerCase();
+                                // Always use orgShortName (org_key field)
+                                const orgKey = org.orgKey;
                                 
                                 return (
                                     <button
                                         key={org.id}
-                                        onClick={() => onOpenOrganizationModal?.(orgKey)}
+                                        onClick={() => orgKey && onOpenOrganizationModal?.(orgKey)}
                                         className="inline-flex items-center w-full gap-1.5 px-3 py-1.5 rounded-md text-base font-medium transition-colors cursor-pointer text-left hover:opacity-80"
                                         style={{
                                             backgroundColor: 'var(--brand-bg-light)',
@@ -283,16 +284,17 @@ export default function ProjectModal({ project, allOrganizations, loading, proje
                                                         const description = themeDescriptions[theme];
                                                         
                                                         const themeBadge = (
-                                                            <span
+                                                            <button
                                                                 key={themeIndex}
-                                                                className="inline-flex items-center px-2.5 py-1 rounded-md text-xs font-medium cursor-help"
+                                                                onClick={() => onThemeClick?.(theme)}
+                                                                className="inline-flex items-center px-2.5 py-1 rounded-md text-xs font-medium hover:opacity-80 transition-opacity cursor-pointer"
                                                                 style={{
                                                                     backgroundColor: '#e9eaf9',
                                                                     color: '#6b6da8'
                                                                 }}
                                                             >
                                                                 {theme}
-                                                            </span>
+                                                            </button>
                                                         );
                                                         
                                                         // Wrap in tooltip if description exists
@@ -338,7 +340,7 @@ export default function ProjectModal({ project, allOrganizations, loading, proje
                                     <CountryBadge 
                                         key={index} 
                                         country={country} 
-                                        onClick={onDonorClick}
+                                        onClick={onOpenDonorModal}
                                         agencies={projAgencies[country]}
                                         tooltipContainer={tooltipContainer}
                                     />

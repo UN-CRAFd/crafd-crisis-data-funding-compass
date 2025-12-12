@@ -1,6 +1,6 @@
-# CRAF'd CRISIS DATA FUNDING COMPASS (Beta)
+# CRISIS DATA FUNDING COMPASS v1
 
-A Next.js data dashboard for displaying and analyzing Airtable ecosystem data. Built with React 19, TypeScript, Tailwind CSS v4, and shadcn/ui components.
+A Next.js data dashboard for displaying and analyzing Airtable ecosystem data. Built with React, TypeScript, Tailwind CSS v4, and shadcn/ui components.
 
 ## Features
 
@@ -40,7 +40,7 @@ A Next.js data dashboard for displaying and analyzing Airtable ecosystem data. B
 
 ## Getting Started
 
-1. **Clone this repository** and install dependencies
+1. **Clone repository** and install dependencies
 2. **Configure Airtable** by setting up your `.env.local` file with Airtable credentials
 3. **Fetch Data** using `node scripts/fetch-airtable.js` to populate `public/data/ecosystem-table.json`
 4. **Customize styling** in `src/app/globals.css` to match your brand colors
