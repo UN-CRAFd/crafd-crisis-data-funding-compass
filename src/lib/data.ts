@@ -167,10 +167,12 @@ function extractInvestmentTypesFromProjects(projects: Array<{ fields?: Record<st
 function convertToOrganizationWithProjects(org: NestedOrganization): OrganizationWithProjects {
     const projects = org.projects || [];
 
-    // Get pre-computed donor countries
-    const donorCountries = getDonorCountries(org);
+    // Get pre-computed donor countries (org-level)
+    const orgLevelDonors = getDonorCountries(org);
 
-    // Convert projects to ProjectData format
+    // Convert projects to ProjectData format and collect project-level donors
+    const projectLevelDonorsSet = new Set<string>();
+    
     const projectsData: ProjectData[] = projects.map(project => {
         const fields = project.fields || {};
         // Extract donor countries only from the project's own agencies (if any)
@@ -182,9 +184,15 @@ function convertToOrganizationWithProjects(org: NestedOrganization): Organizatio
                 const aFields = (a && a.fields) || {};
                 const c = aFields['Country Name'] || aFields['Country'] || aFields['Agency Associated Country'];
                 if (Array.isArray(c)) {
-                    c.forEach((cc: unknown) => { if (typeof cc === 'string' && cc.trim()) projectDonorCountriesSet.add(cc.trim()); });
+                    c.forEach((cc: unknown) => { 
+                        if (typeof cc === 'string' && cc.trim()) {
+                            projectDonorCountriesSet.add(cc.trim());
+                            projectLevelDonorsSet.add(cc.trim());
+                        }
+                    });
                 } else if (typeof c === 'string' && c.trim()) {
                     projectDonorCountriesSet.add(c.trim());
+                    projectLevelDonorsSet.add(c.trim());
                 }
             });
         }
@@ -208,6 +216,18 @@ function convertToOrganizationWithProjects(org: NestedOrganization): Organizatio
         };
     });
 
+    // Create combined donor info
+    const allDonorsSet = new Set<string>([...orgLevelDonors, ...Array.from(projectLevelDonorsSet)]);
+    const donorInfo = Array.from(allDonorsSet).map(country => ({
+        country,
+        isOrgLevel: orgLevelDonors.includes(country)
+    })).sort((a, b) => {
+        // Sort org-level donors first, then project-only donors
+        if (a.isOrgLevel && !b.isOrgLevel) return -1;
+        if (!a.isOrgLevel && b.isOrgLevel) return 1;
+        return a.country.localeCompare(b.country);
+    });
+
     // Extract organization type, handling both string and array formats
     const orgTypeRaw = org.fields?.['Org Type'];
     let orgType = 'Unknown';
@@ -228,7 +248,8 @@ function convertToOrganizationWithProjects(org: NestedOrganization): Organizatio
         orgKey: org.fields?.['org_key'] || '',
         type: orgType,
         description: org.fields?.['Org Description'] || '',
-        donorCountries,
+        donorCountries: orgLevelDonors, // Legacy field: org-level only
+        donorInfo, // New field: all donors with metadata
         projects: projectsData,
         projectCount: projectsData.length,
         estimatedBudget: budgetValue
@@ -306,9 +327,10 @@ function applyFilters(
             return true;
         };
 
-        // Check if organization meets donor requirements at org level
+        // Check if organization meets donor requirements (considering both org-level and project-level donors)
+        const allOrgDonors = org.donorInfo?.map(d => d.country) || org.donorCountries || [];
         const orgMeetsDonorRequirement = !hasDonorFilter ||
-            filters.donorCountries!.every(selectedDonor => org.donorCountries.includes(selectedDonor));
+            filters.donorCountries!.every(selectedDonor => allOrgDonors.includes(selectedDonor));
 
         if (orgMeetsDonorRequirement) {
             // Organization meets donor requirement - filter projects by other filters only
@@ -774,6 +796,52 @@ export function buildOrgDonorCountriesMap(organizations: NestedOrganization[]): 
         if (org && org.id) {
             map[org.id] = getDonorCountries(org);
         }
+    });
+    
+    return map;
+}
+
+/**
+ * Build a map from organization ID to DonorInfo[] (includes both org-level and project-only donors)
+ */
+export function buildOrgDonorInfoMap(organizations: NestedOrganization[]): Record<string, import('@/types/airtable').DonorInfo[]> {
+    const map: Record<string, import('@/types/airtable').DonorInfo[]> = {};
+    
+    organizations.forEach(org => {
+        if (!org || !org.id) return;
+        
+        // Get org-level donors
+        const orgLevelDonors = getDonorCountries(org);
+        
+        // Get project-level donors
+        const projectLevelDonorsSet = new Set<string>();
+        if (org.projects && Array.isArray(org.projects)) {
+            org.projects.forEach(project => {
+                if (project.agencies && Array.isArray(project.agencies)) {
+                    project.agencies.forEach((agency: any) => {
+                        const fields = agency.fields || {};
+                        const countryName = fields['Country Name'];
+                        if (countryName && typeof countryName === 'string') {
+                            projectLevelDonorsSet.add(countryName);
+                        }
+                    });
+                }
+            });
+        }
+        
+        // Create combined donor info
+        const allDonorsSet = new Set<string>([...orgLevelDonors, ...Array.from(projectLevelDonorsSet)]);
+        const donorInfo = Array.from(allDonorsSet).map(country => ({
+            country,
+            isOrgLevel: orgLevelDonors.includes(country)
+        })).sort((a, b) => {
+            // Sort org-level donors first, then project-only donors
+            if (a.isOrgLevel && !b.isOrgLevel) return -1;
+            if (!a.isOrgLevel && b.isOrgLevel) return 1;
+            return a.country.localeCompare(b.country);
+        });
+        
+        map[org.id] = donorInfo;
     });
     
     return map;

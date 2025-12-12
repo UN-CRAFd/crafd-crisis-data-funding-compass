@@ -20,6 +20,7 @@ interface OrganizationModalProps {
     projectDescriptionMap?: Record<string, string>;
     orgProjectsMap?: Record<string, Array<{ id: string; investmentTypes: string[] }>>;
     orgDonorCountriesMap?: Record<string, string[]>;
+    orgDonorInfoMap?: Record<string, import('@/types/airtable').DonorInfo[]>;
     orgAgenciesMap?: Record<string, Record<string, string[]>>;
     // onClose removed for serializability; modal will dispatch a CustomEvent 'closeOrganizationModal'
     loading: boolean;
@@ -42,6 +43,7 @@ export default function OrganizationModal({
     projectDescriptionMap = {},
     orgProjectsMap = {},
     orgDonorCountriesMap = {},
+    orgDonorInfoMap = {},
     orgAgenciesMap = {},
     loading,
     onOpenProjectModal,
@@ -471,8 +473,8 @@ export default function OrganizationModal({
 
                     {/* Organization Donors - Clean field access from centralized data */}
                     {(() => {
-                        // Get donor countries from the centralized map (computed from nested data)
-                        const donorCountries = orgDonorCountriesMap[organization.id] || [];
+                        // Get donor info from the centralized map (includes both org-level and project-only donors)
+                        const donorInfo = orgDonorInfoMap[organization.id] || [];
 
                         // Use the budget fields already extracted at the top
                         const linkRaw = fields['Link to Budget Source'];
@@ -485,7 +487,7 @@ export default function OrganizationModal({
                             : null;
 
                         // Only show the whole section if there are donors OR budget data
-                        if (donorCountries.length === 0 && !estBudget && !budgetSourceStr && !lastUpdated) {
+                        if (donorInfo.length === 0 && !estBudget && !budgetSourceStr && !lastUpdated) {
                             return null;
                         }
 
@@ -496,7 +498,7 @@ export default function OrganizationModal({
                                     <h3 className="text-xl font-roboto font-black text-[#333333] uppercase tracking-wide leading-normal">
                                         {labels.modals.organizationFunding}
                                     </h3>
-                                    <span className="text-lg font-normal text-gray-500 tabular-nums">({donorCountries.length})</span>
+                                    <span className="text-lg font-normal text-gray-500 tabular-nums">({donorInfo.length})</span>
                                 </div>
                                     {(estBudget || budgetSourceStr || lastUpdated) && (
                                     <div className="rounded-lg border border-slate-200 bg-slate-100 p-4 shadow-sm">
@@ -581,16 +583,23 @@ export default function OrganizationModal({
                                     </div>
                                     )}
                                 <div className="flex flex-wrap gap-2 mt-4">
-                                    {donorCountries.map((country) => {
+                                    {donorInfo.map((donor, idx) => {
                                         const orgAgencies = orgAgenciesMap[organization.id] || {};
                                         return (
-                                            <CountryBadge 
-                                                key={country} 
-                                                country={country} 
-                                                onClick={onOpenDonorModal}
-                                                agencies={orgAgencies[country]}
-                                                tooltipContainer={tooltipContainer}
-                                            />
+                                            <div 
+                                                key={donor.country}
+                                                className={donor.isOrgLevel ? '' : 'opacity-50'}
+                                                title={donor.isOrgLevel 
+                                                    ? `${donor.country} (Organization Donor)` 
+                                                    : `${donor.country} (Project-Only Donor)`}
+                                            >
+                                                <CountryBadge 
+                                                    country={donor.country} 
+                                                    onClick={onOpenDonorModal}
+                                                    agencies={orgAgencies[donor.country]}
+                                                    tooltipContainer={tooltipContainer}
+                                                />
+                                            </div>
                                         );
                                     })}
                                 </div>

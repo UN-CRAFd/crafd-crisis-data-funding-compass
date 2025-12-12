@@ -66,6 +66,11 @@ export interface ProjectData {
     hdxSohd?: string;
 }
 
+export interface DonorInfo {
+    country: string;
+    isOrgLevel: boolean; // true if donor funds org directly, false if only through projects
+}
+
 export interface OrganizationWithProjects {
     orgKey: any;
     id: string;
@@ -73,7 +78,8 @@ export interface OrganizationWithProjects {
     orgShortName: string;
     type: string;
     description?: string;
-    donorCountries: string[];
+    donorCountries: string[]; // Legacy: org-level donors only
+    donorInfo: DonorInfo[]; // New: all donors with metadata
     projects: ProjectData[];
     projectCount: number;
     estimatedBudget?: number;
