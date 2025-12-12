@@ -211,10 +211,10 @@ export default function OrganizationModal({
         const fields = organization.fields || {};
 
         // Extract budget-related fields early so they're available for both the budget box and notes
-        const estBudget = fields['Est. Org Budget'];
+        const estBudget = fields['Est. Org Budget'] as number | string | null | undefined;
         const budgetSourceRaw = fields['Budget Source'];
         const budgetSourceStr = budgetSourceRaw != null ? String(budgetSourceRaw) : null;
-        const lastUpdated = fields['Last Updated'];
+        const lastUpdated = fields['Last Updated'] as string | null | undefined;
 
         // Helper to render a single field value nicely
         const renderValue = (val: unknown): React.ReactNode => {

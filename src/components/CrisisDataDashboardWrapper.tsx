@@ -63,10 +63,17 @@ const CrisisDataDashboardWrapper = ({ logoutButton }: { logoutButton?: React.Rea
     }, [searchParams]);
     
     const [dashboardData, setDashboardData] = useState<{
-        allOrganizations: OrganizationProjectData[];
-        organizationTypes: OrganizationTypeData[];
-        projectTypes: ProjectTypeData[];
         stats: DashboardStats;
+        projectTypes: ProjectTypeData[];
+        organizationTypes: OrganizationTypeData[];
+        organizationProjects: OrganizationProjectData[];
+        organizationsWithProjects: OrganizationWithProjects[];
+        allOrganizations: OrganizationWithProjects[];
+        donorCountries: string[];
+        investmentTypes: string[];
+        investmentThemes: string[];
+        investmentThemesByType: Record<string, string[]>;
+        topDonors: { name: string; value: number }[];
     } | null>(null);
     const [loading, setLoading] = useState(true);
     const [error, setError] = useState<string | null>(null);
