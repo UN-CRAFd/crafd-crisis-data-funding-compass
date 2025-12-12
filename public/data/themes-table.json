@@ -100,6 +100,9 @@
         "Standards & Coordination"
       ],
       "Investment Themes [Text Key]": "Common Indicators",
+      "Data Ecosystem Projects": [
+        "rec59LnTqL11pcRdG"
+      ],
       "theme_key": "indicator",
       "theme_description": "Common Indicators support consistent measurement and reporting practices across initiatives, enabling better coordination and comparability of results."
     }
@@ -118,9 +121,9 @@
       "Data Ecosystem Projects": [
         "rec04lJaB92fTs0JH",
         "recFnNCbi5RYJNchr",
-        "recEuWdBixgTpQKhR",
         "rec9HIhsIpPjx48rc",
-        "rec2Su6C7bHl4BC7h"
+        "rec2Su6C7bHl4BC7h",
+        "recE22sC1jhIuZnWn"
       ],
       "theme_key": "gis",
       "theme_description": "Tools and platforms that enable the collection, analysis, and visualization of spatial and geographic data to support infrastructure planning and management."
@@ -139,7 +142,6 @@
       "Investment Themes [Text Key]": "Workshops",
       "Data Ecosystem Projects": [
         "rech8GCismNX3Bm8p",
-        "recqtLfrSvDFeeKb9",
         "recGFetocWutnDtYV"
       ],
       "theme_key": "workshops",
@@ -157,10 +159,8 @@
         "Learning & Exchange"
       ],
       "Investment Themes [Text Key]": "Webinar",
-      "Data Ecosystem Projects": [
-        "recqtLfrSvDFeeKb9",
-        "recCkgL7i4kRmP0PL"
-      ]
+      "theme_key": "webinar\n",
+      "theme_description": "Focused digital sessions where field practitioners, analysts, and researchers transfer operational knowledge in real time."
     }
   },
   {
@@ -233,7 +233,7 @@
         "reczIeSUeAdEWMKSk",
         "rec04YelpRCFjpBV8"
       ],
-      "theme_key": "needs-assessment",
+      "theme_key": "needs-analytics",
       "theme_description": "Analyzes data to identify and prioritize urgent needs during crises, supporting informed decision-making and resource allocation."
     }
   },
@@ -414,7 +414,8 @@
         "recZaSDcZgIUtalO5",
         "rec96xC14xTkyyKlP",
         "recJye4S746MWWmW6",
-        "recMOmPSS6OoIxqAM"
+        "recMOmPSS6OoIxqAM",
+        "recCMSnUjitsYc1XQ"
       ],
       "theme_key": "standards",
       "theme_description": "Establishes best practices to ensure consistency, reliability, and quality in how information is gathered and analyzed across projects."
@@ -496,18 +497,16 @@
       ],
       "Investment Themes [Text Key]": "Climate Data",
       "Data Ecosystem Projects": [
-        "recr5hGDgBiAH4xSm",
         "rec4SqufwyxLeeDM4",
         "recF1lTFIy27lMFwT",
         "recGMlI70iaqyTtMo",
         "recQubJTGSwZoqzix",
         "recQMdm14niuRSFQp",
         "recSvtWQnSvfNoXdt",
-        "rec5GA5F1UPlXATSj",
-        "recEuWdBixgTpQKhR",
         "recAeviz1XjLC8V6i",
         "recueXHi1BfJrz30y",
-        "recyn1h3FptgV2ZAv"
+        "recyn1h3FptgV2ZAv",
+        "rec10m73t9Vv1XVFf"
       ],
       "theme_key": "climate",
       "theme_description": "Provides access to collections of weather and environmental measurements for research and analysis."
@@ -545,7 +544,8 @@
       "Investment Themes [Text Key]": "Disaster Hazard & Risk Modelling",
       "Data Ecosystem Projects": [
         "recjbIls3C4riPk4C",
-        "recxNVM0HeC0mSQyk"
+        "recxNVM0HeC0mSQyk",
+        "recSZ5wPOqG3Pm9Ip"
       ],
       "theme_key": "risk",
       "theme_description": "This subfield uses data and analytical models to assess potential disaster impacts and inform risk reduction strategies."
@@ -745,7 +745,8 @@
         "recWiXtcwxhgmhgNY",
         "recFF8BskJRz2Lyjk",
         "recaApmxiLnw1JnZf",
-        "recTaCZEF36yEoMIT"
+        "reclLUvOxshjdhBUy",
+        "recRwnFupko7hywEn"
       ],
       "theme_key": "conflict-violence-data",
       "theme_description": "This data focuses on documenting and analyzing incidents, patterns, and impacts of conflict and violence to support research and informed decision-making."
@@ -862,7 +863,12 @@
         "recSIp9VIy4uKdPH3",
         "recdr2wcQiX1Ch1ZF",
         "recxNVM0HeC0mSQyk",
-        "rec5RfuXsmtGtPDP8"
+        "rec5RfuXsmtGtPDP8",
+        "recAeviz1XjLC8V6i",
+        "recSZ5wPOqG3Pm9Ip",
+        "recE22sC1jhIuZnWn",
+        "recCMSnUjitsYc1XQ",
+        "rec59LnTqL11pcRdG"
       ],
       "theme_key": "geoanalytics",
       "theme_description": "Geospatial Analytics leverages location-based data to help understand, predict, and respond to crises more effectively."
@@ -884,7 +890,8 @@
         "rec9tb7ISjeo7Sq78",
         "recGoW02CMXhVQ00S",
         "recp0YELy7eVj9FUs",
-        "recO3RZZ7IEA88GnQ"
+        "recO3RZZ7IEA88GnQ",
+        "rec53YmQWK8HuckRh"
       ],
       "theme_key": "genderdata",
       "theme_description": "This collection focuses on data related to gender, supporting research and analysis on gender-related topics."
@@ -1086,7 +1093,8 @@
         "recLN9L7RGRz4p1zM",
         "recGoW02CMXhVQ00S",
         "recF4Js3Gn54EPxbP",
-        "recD0hG4x9w340oYA"
+        "recD0hG4x9w340oYA",
+        "rec10m73t9Vv1XVFf"
       ],
       "theme_key": "displacement-migration",
       "theme_description": "This area focuses on collections of information related to population movements and migration patterns."
@@ -1162,7 +1170,6 @@
         "reczxU9NrSDw2mJcN",
         "recXZCOUpEBDjWHOu",
         "rec7Gm0sUCCMECxFU",
-        "rec6S0tX5hnP9I5DG",
         "recpaU5vlkr1O5EVC"
       ],
       "theme_key": "baselinepop",
@@ -1180,7 +1187,7 @@
         "Crisis Analytics & Insights"
       ],
       "Investment Themes [Text Key]": "Sentiment Analysis",
-      "theme_key": "sentiment",
+      "theme_key": "sentiment-analysis",
       "theme_description": "Analyzing public emotions and opinions during crises helps organizations understand community reactions and improve response strategies."
     }
   },
@@ -1226,7 +1233,9 @@
         "rec36dX7WTnSmv9Yo",
         "rec9ZvuALWuRRSN5P",
         "recF4Js3Gn54EPxbP",
-        "recD0hG4x9w340oYA"
+        "recD0hG4x9w340oYA",
+        "rec53YmQWK8HuckRh",
+        "recSZ5wPOqG3Pm9Ip"
       ],
       "theme_key": "geo",
       "theme_description": "This area focuses on the collection, sharing, and use of location-based information to support spatial analysis and decision-making."
@@ -1516,7 +1525,7 @@
         "Crisis Analytics & Insights"
       ],
       "Investment Themes [Text Key]": "Water, Sanitation & Hygiene (WASH) Analytics",
-      "theme_key": "wash",
+      "theme_key": "wash-analytics",
       "theme_description": "WASH Analytics uses data-driven insights to assess and improve access to safe water, sanitation, and hygiene during crises."
     }
   },
@@ -1553,7 +1562,8 @@
       ],
       "Investment Themes [Text Key]": "Standard Geocodes",
       "Data Ecosystem Projects": [
-        "rec96xC14xTkyyKlP"
+        "rec96xC14xTkyyKlP",
+        "recCMSnUjitsYc1XQ"
       ],
       "theme_key": "stdgeo",
       "theme_description": "Standard Geocodes ensures consistent geographic data formats and interoperability across systems."
@@ -1843,7 +1853,6 @@
       ],
       "Investment Themes [Text Key]": "Environmental Data",
       "Data Ecosystem Projects": [
-        "recr5hGDgBiAH4xSm",
         "rec4SqufwyxLeeDM4",
         "recVj2ULsOWhPFQ19",
         "recSvtWQnSvfNoXdt"
@@ -1889,7 +1898,6 @@
         "recLA3jRq3bbZRVzu",
         "rec28WeSKDEQ5wx45",
         "recpARdDyMReIUuDq",
-        "rec5GA5F1UPlXATSj",
         "recyn1h3FptgV2ZAv",
         "recgpnIj48zBCayHc",
         "recXaGjOLcrJQCuNn",
@@ -1905,7 +1913,8 @@
         "recNggnBqXIgii2hz",
         "recLn4QiWGniBsWoe",
         "recO7hHncZQGqy2vJ",
-        "recGG8gTf4t6l8Mue"
+        "recGG8gTf4t6l8Mue",
+        "recSZ5wPOqG3Pm9Ip"
       ],
       "theme_key": "aea",
       "theme_description": "Using data-driven analysis to predict and respond to crises before they escalate, enabling timely and effective crisis action."
@@ -1922,6 +1931,9 @@
         "Infrastructure & Platforms"
       ],
       "Investment Themes [Text Key]": "Data Quality & Validation",
+      "Data Ecosystem Projects": [
+        "recCMSnUjitsYc1XQ"
+      ],
       "theme_key": "dqv",
       "theme_description": "Ensures that data within infrastructure and platform solutions is accurate, consistent, and reliable for downstream use."
     }

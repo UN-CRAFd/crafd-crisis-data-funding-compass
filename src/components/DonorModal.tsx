@@ -6,6 +6,7 @@ import BaseModal, { ModalHeader, ModalTooltip } from './BaseModal';
 import { Collapsible, CollapsibleContent, CollapsibleTrigger } from '@/components/ui/collapsible';
 import { CountryFlag } from './CountryFlag';
 import labels from '@/config/labels.json';
+import { matchesUrlSlug } from '@/lib/urlShortcuts';
 
 interface Agency {
     id: string;
@@ -68,6 +69,8 @@ export default function DonorModal({
     const [hoveredProjectId, setHoveredProjectId] = useState<string | null>(null);
     // Track expanded agencies (all expanded by default)
     const [expandedAgencies, setExpandedAgencies] = useState<Set<string>>(new Set());
+    // Track expanded headquartered organizations
+    const [isHeadquarteredExpanded, setIsHeadquarteredExpanded] = useState(false);
 
     // Reusable subheader component - Major sections - smaller than main title
     const SubHeader = ({ children }: { children: React.ReactNode }) => (
@@ -96,6 +99,39 @@ export default function DonorModal({
         return match ? match[0].trim() : text.trim();
     };
 
+    // Find the actual donor country name from the data by matching URL slug
+    const donorDisplayName = useMemo(() => {
+        if (!donorCountry || !nestedOrganizations) return donorCountry || '';
+        
+        // Collect all unique country names from the data
+        const countryNames = new Set<string>();
+        nestedOrganizations.forEach(org => {
+            // From agencies
+            (org.agencies || []).forEach(agency => {
+                const country = agency.fields?.['Country Name'];
+                if (country) countryNames.add(country);
+            });
+            // From projects' agencies
+            (org.projects || []).forEach(project => {
+                (project.agencies || []).forEach(agency => {
+                    const country = agency.fields?.['Country Name'];
+                    if (country) countryNames.add(country);
+                });
+            });
+            // From HQ country
+            const hqCountry = org.fields?.['Org HQ Country'];
+            if (Array.isArray(hqCountry)) {
+                hqCountry.forEach(c => countryNames.add(c));
+            } else if (hqCountry) {
+                countryNames.add(hqCountry);
+            }
+        });
+        
+        // Find the country that matches the URL slug
+        const match = Array.from(countryNames).find(name => matchesUrlSlug(donorCountry, name));
+        return match || donorCountry;
+    }, [donorCountry, nestedOrganizations]);
+
     // Handle opening organization modal (close donor modal first)
     const handleOpenOrganization = (orgKey: string) => {
         window.dispatchEvent(new CustomEvent('closeDonorModal'));
@@ -122,17 +158,18 @@ export default function DonorModal({
         nestedOrganizations.forEach(org => {
             const orgFields = org.fields || {};
             const orgName = orgFields['Org Full Name'] || orgFields['Org Short Name'] || org.name;
-            const orgShortName = orgFields['org_key'] || orgFields['Org Short Name'] || '';
+            const orgShortName = orgFields['org_key'] || '';
 
             // Check organization-level agencies - organization is directly funded by this agency
             (org.agencies || []).forEach(agency => {
                 const agencyFields = agency.fields || {};
                 const agencyCountry = agencyFields['Country Name'];
                 
-                if (agencyCountry === donorCountry) {
+                // Match donor country using URL slug format (handles lowercase with dashes)
+                if (agencyCountry && matchesUrlSlug(donorCountry, agencyCountry)) {
                     const agencyName = agencyFields['Agency/Department Name'] || 'Unspecified Agency';
                     const agencyId = agency.id;
-                    const agencyPortal = agencyFields['Agency Data Portal'];
+                    const agencyPortal = agencyFields['Agency Website'];
 
                     if (!agencyMap.has(agencyId)) {
                         agencyMap.set(agencyId, {
@@ -167,10 +204,11 @@ export default function DonorModal({
                     const agencyFields = agency.fields || {};
                     const agencyCountry = agencyFields['Country Name'];
                     
-                    if (agencyCountry === donorCountry) {
+                    // Match donor country using URL slug format (handles lowercase with dashes)
+                    if (agencyCountry && matchesUrlSlug(donorCountry, agencyCountry)) {
                         const agencyName = agencyFields['Agency/Department Name'] || 'Unspecified Agency';
                         const agencyId = agency.id;
-                        const agencyPortal = agencyFields['Agency Data Portal'];
+                        const agencyPortal = agencyFields['Agency Website'];
 
                         if (!agencyMap.has(agencyId)) {
                             agencyMap.set(agencyId, {
@@ -243,7 +281,11 @@ export default function DonorModal({
             .filter(org => {
                 const orgFields = org.fields || {};
                 const hqCountry = orgFields['Org HQ Country'];
-                return hqCountry === donorCountry;
+                // Handle both array and string format, using URL slug matching
+                if (Array.isArray(hqCountry)) {
+                    return hqCountry.some((c: string) => matchesUrlSlug(donorCountry, c));
+                }
+                return hqCountry && matchesUrlSlug(donorCountry, hqCountry);
             })
             .map(org => {
                 const orgFields = org.fields || {};
@@ -276,11 +318,11 @@ export default function DonorModal({
             <ModalHeader
                 icon={
                     <CountryFlag 
-                        country={donorCountry} 
+                        country={donorDisplayName} 
                         className="h-6 sm:h-8 w-auto shrink-0 rounded object-cover"
                     />
                 }
-                title={donorCountry}
+                title={donorDisplayName}
                 showCopied={showCopied}
                 onShare={onShare}
                 onClose={onClose}
@@ -367,7 +409,7 @@ export default function DonorModal({
                                                     target="_blank"
                                                     rel="noopener noreferrer"
                                                     className="text-slate-400 hover:text-slate-600 transition-colors"
-                                                    title="Agency Data Portal"
+                                                    title="Agency Website"
                                                 >
                                                     <ExternalLink className="h-4 w-4" />
                                                 </a>
@@ -472,42 +514,70 @@ export default function DonorModal({
                 {/* Organizations headquartered in this country */}
                 {headquarteredOrganizations.length > 0 && (
                     <div className="border-t border-slate-200 pt-6">
-                        <div className="flex items-center gap-2 mb-4">
-                            <MapPin className="h-5 w-5 text-slate-500" />
-                            <h3 className="text-lg font-roboto font-bold text-[#333333]">
-                                Organizations Headquartered in {donorCountry}
+                        <div className="mb-3 flex items-center gap-2">
+                            <h3 className="text-xl font-roboto font-black text-[#333333] uppercase tracking-wide leading-normal">
+                                Headquartered in {donorDisplayName}
                             </h3>
-                            <span className="text-sm text-slate-400 tabular-nums">({headquarteredOrganizations.length})</span>
+                            <span className="text-lg font-normal text-slate-600 tabular-nums">({headquarteredOrganizations.length})</span>
                         </div>
                         <div className="flex flex-col gap-2">
-                            {headquarteredOrganizations.map(org => (
-                                <button
-                                    key={org.id}
-                                    onClick={() => org.shortName && handleOpenOrganization(org.shortName)}
-                                    className="flex items-center justify-between gap-2 px-3 py-2 rounded-md text-sm font-medium transition-colors cursor-pointer text-left hover:opacity-80 w-full"
-                                    style={{
-                                        backgroundColor: 'var(--brand-bg-light)',
-                                        color: 'var(--brand-primary-dark)'
-                                    }}
-                                >
-                                    <div className="flex items-center gap-1.5 min-w-0">
-                                        <Building2 className="h-4 w-4 shrink-0" />
-                                        <span className="truncate">{org.name}</span>
-                                    </div>
-                                    <div className="flex items-center gap-2 shrink-0">
-                                        {org.type && (
-                                            <span className="text-xs text-slate-400 bg-transparent px-2 py-0.5 rounded">
-                                                {org.type}
-                                            </span>
+                            {(() => {
+                                const showCollapsible = headquarteredOrganizations.length > 5;
+                                const displayedOrgs = showCollapsible && !isHeadquarteredExpanded 
+                                    ? headquarteredOrganizations.slice(0, 5) 
+                                    : headquarteredOrganizations;
+
+                                return (
+                                    <>
+                                        {displayedOrgs.map(org => (
+                                            <button
+                                                key={org.id}
+                                                onClick={() => org.shortName && handleOpenOrganization(org.shortName)}
+                                                className="flex items-center justify-between gap-2 px-3 py-2 rounded-md text-sm font-medium transition-colors cursor-pointer text-left hover:opacity-80 w-full"
+                                                style={{
+                                                    backgroundColor: 'var(--brand-bg-light)',
+                                                    color: 'var(--brand-primary-dark)'
+                                                }}
+                                            >
+                                                <div className="flex items-center gap-1.5 min-w-0">
+                                                    <Building2 className="h-4 w-4 shrink-0" />
+                                                    <span className="truncate">{org.name}</span>
+                                                </div>
+                                                <div className="flex items-center gap-2 shrink-0">
+                                                    {org.type && (
+                                                        <span className="text-xs text-var(--brand-primary-dark) font-thin bg-transparent px-2 py-0.5 rounded">
+                                                            {org.type}
+                                                        </span>
+                                                    )}
+                                                    {org.projectCount > 0 && (
+                                                        <span className="text-xs text-var(--brand-primary-dark)">
+                                                            {org.projectCount} {org.projectCount === 1 ? 'asset' : 'assets'}
+                                                        </span>
+                                                    )}
+                                                </div>
+                                            </button>
+                                        ))}
+                                        {showCollapsible && (
+                                            <button
+                                                onClick={() => setIsHeadquarteredExpanded(!isHeadquarteredExpanded)}
+                                                className="mt-2 inline-flex items-center gap-1 text-sm font-medium text-slate-600 hover:text-slate-400 transition-colors"
+                                            >
+                                                {isHeadquarteredExpanded ? (
+                                                    <>
+                                                        <ChevronDown className="w-4 h-4" />
+                                                        <span>{labels.ui.showLess}</span>
+                                                    </>
+                                                ) : (
+                                                    <>
+                                                        <ChevronDown className="w-4 h-4" />
+                                                        <span>{labels.ui.showMore.replace('{count}', String(headquarteredOrganizations.length - 5))}</span>
+                                                    </>
+                                                )}
+                                            </button>
                                         )}
-                                        {org.projectCount > 0 && (
-                                            <span className="text-xs text-slate-400">
-                                                {org.projectCount} {org.projectCount === 1 ? 'asset' : 'assets'}
-                                            </span>
-                                        )}
-                                    </div>
-                                </button>
-                            ))}
+                                    </>
+                                );
+                            })()}
                         </div>
                     </div>
                 )}

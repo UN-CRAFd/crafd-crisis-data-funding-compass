@@ -60,4 +60,23 @@ export const urlShortcuts = {
     typeLabelToSlug
 };
 
+// Generic URL slug helpers - lowercase with dashes
+// Used for org names, project keys, donor countries, etc.
+// Handles special characters like apostrophes, parentheses, etc.
+export const toUrlSlug = (str: string) => 
+    str.toLowerCase()
+        .replace(/['']/g, '') // Remove apostrophes
+        .replace(/[^a-z0-9\s-]/g, '') // Remove special chars except spaces and dashes
+        .replace(/\s+/g, '-') // Replace spaces with dashes
+        .replace(/-+/g, '-') // Collapse multiple dashes
+        .replace(/^-|-$/g, ''); // Remove leading/trailing dashes
+
+export const fromUrlSlug = (slug: string) => slug.replace(/-/g, ' ');
+
+// Compare a URL slug against an original value (case-insensitive, handles special chars)
+export const matchesUrlSlug = (urlSlug: string, original: string) => {
+    if (!urlSlug || !original) return false;
+    return toUrlSlug(original) === urlSlug.toLowerCase();
+};
+
 export default urlShortcuts;
