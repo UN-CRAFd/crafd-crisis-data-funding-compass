@@ -511,10 +511,11 @@ export default function OrganizationModal({
                                                     {
                                                         estBudget
                                                             ? (() => {
-                                                                if (typeof estBudget !== 'number') return String(estBudget);
-                                                                if (estBudget >= 1_000_000_000) return `$${(estBudget / 1_000_000_000).toFixed(1)} B`;
-                                                                if (estBudget >= 1_000_000) return `$${(estBudget / 1_000_000).toFixed(1)} M`;
-                                                                return `$${estBudget}`;
+                                                                const budget = estBudget as number | string;
+                                                                if (typeof budget !== 'number') return String(budget);
+                                                                if (budget >= 1_000_000_000) return `$${(budget / 1_000_000_000).toFixed(1)} B`;
+                                                                if (budget >= 1_000_000) return `$${(budget / 1_000_000).toFixed(1)} M`;
+                                                                return `$${budget}`;
                                                             })()
                                                             : '—'
                                                         }
