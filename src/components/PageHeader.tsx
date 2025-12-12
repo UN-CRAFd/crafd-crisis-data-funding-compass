@@ -210,9 +210,9 @@ export default function PageHeader({
                                 </DropdownMenuItem>
                                 <DropdownMenuItem 
                                     onClick={() => router.push('/analytics')}
-                                    className={`cursor-pointer text-sm py-2 px-2 ${pathname === '/analytics' ? 'bg-slate-100' : ''}`}
+                                    className={`cursor-pointer text-sm py-2 px-2 ${pathname === '/analytics' || pathname === '/analytics/' ? 'bg-slate-100' : ''}`}
                                 >
-                                    <span className={pathname === '/analytics' ? '!font-bold' : ''}>Analytics</span>
+                                    <span className={pathname === '/analytics' || pathname === '/analytics/' ? '!font-bold' : ''}>Analytics</span>
                                 </DropdownMenuItem>
                                 <DropdownMenuItem 
                                     onClick={() => router.push('/methodology/')}
