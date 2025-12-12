@@ -1267,9 +1267,9 @@ export default function AnalyticsPage({ logoutButton }: AnalyticsPageProps) {
                                         <div className="flex-shrink-0 w-[280px] snap-center">
                                             <StatCard
                                                 icon={<GitBranch style={{ color: 'var(--brand-primary)' }} />}
-                                                title="Funding Streams"
+                                                title="Bilateral Funding"
                                                 value={analyticsStats.totalFundingStreams}
-                                                label="connections"
+                                                label="grants"
                                                 colorScheme="amber"
                                                 tooltip="Total number of connections from selected donors to organizations and projects. Each connection represents a direct funding relationship."
                                             />
