@@ -305,7 +305,7 @@ export function CountryBadge({ country, className = '', onClick, agencies, proje
                 )}
                 {hasProjects && (
                     <div className={hasAgencies ? 'mt-2 pt-2 border-t border-slate-300' : ''}>
-                        <div className="font-semibold mb-1">Projects funded</div>
+                        <div className="font-semibold mb-1">Projects funded:</div>
                         <ul className="space-y-0.5">
                             {projectsForDonor.map((project, idx) => (
                                 <li key={idx}>• {project}</li>
@@ -315,7 +315,7 @@ export function CountryBadge({ country, className = '', onClick, agencies, proje
                 )}
                 {hasProjectAgencies && (
                     <div className={hasAgencies || hasProjects ? 'mt-2 pt-2 border-t border-slate-300' : ''}>
-                        <div className="font-semibold mb-1">{labels.modals.financingAgencies} (Project-level)</div>
+                        <div className="font-semibold mb-1">{labels.modals.financingAgencies}</div>
                         <ul className="space-y-0.5">
                             {projectAgenciesForDonor.map((agency, idx) => (
                                 <li key={idx}>• {agency}</li>
