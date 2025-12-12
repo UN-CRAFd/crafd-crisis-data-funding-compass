@@ -264,10 +264,11 @@ interface CountryBadgeProps {
     className?: string;
     onClick?: (country: string) => void;
     agencies?: string[];
+    projectsForDonor?: string[];
     tooltipContainer?: Element | null;
 }
 
-export function CountryBadge({ country, className = '', onClick, agencies, tooltipContainer }: CountryBadgeProps) {
+export function CountryBadge({ country, className = '', onClick, agencies, projectsForDonor, tooltipContainer }: CountryBadgeProps) {
     const isClickable = !!onClick;
     
     const badgeContent = (
@@ -282,13 +283,15 @@ export function CountryBadge({ country, className = '', onClick, agencies, toolt
         </span>
     );
     
-    // If agencies are provided, wrap in tooltip
     // Filter out "Unspecified Agency"
     const filteredAgencies = agencies ? agencies.filter(agency => agency !== 'Unspecified Agency') : [];
-    if (filteredAgencies && filteredAgencies.length > 0) {
-        return (
-            <ModalTooltip
-                content={
+    const hasAgencies = filteredAgencies && filteredAgencies.length > 0;
+    const hasProjects = projectsForDonor && projectsForDonor.length > 0;
+    
+    if (hasAgencies || hasProjects) {
+        const tooltipContent = (
+            <div>
+                {hasAgencies && (
                     <div>
                         <div className="font-semibold mb-1">{labels.modals.financingAgencies}</div>
                         <ul className="space-y-0.5">
@@ -297,7 +300,23 @@ export function CountryBadge({ country, className = '', onClick, agencies, toolt
                             ))}
                         </ul>
                     </div>
-                }
+                )}
+                {hasProjects && (
+                    <div className={hasAgencies ? 'mt-2 pt-2 border-t border-slate-300' : ''}>
+                        <div className="font-semibold mb-1">Projects funded</div>
+                        <ul className="space-y-0.5">
+                            {projectsForDonor.map((project, idx) => (
+                                <li key={idx}>• {project}</li>
+                            ))}
+                        </ul>
+                    </div>
+                )}
+            </div>
+        );
+
+        return (
+            <ModalTooltip
+                content={tooltipContent}
                 side="top"
                 delayDuration={200}
                 tooltipContainer={tooltipContainer}
