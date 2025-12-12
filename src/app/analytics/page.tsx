@@ -3,6 +3,7 @@ import { Button } from '@/components/ui/button';
 import { LogOut } from 'lucide-react';
 import { cookies } from 'next/headers';
 import { redirect } from 'next/navigation';
+import { Suspense } from 'react';
 
 export default async function Analytics() {
     async function logout() {
@@ -12,20 +13,22 @@ export default async function Analytics() {
     }
 
     return (
-        <AnalyticsPage
-            logoutButton={
-                <form action={logout}>
-                    <Button
-                        type="submit"
-                        variant="outline"
-                        size="sm"
-                        className="bg-slate-50/50 border-slate-200 hover:bg-red-50 hover:border-red-200 hover:text-red-600"
-                        title="Logout"
-                    >
-                        <LogOut className="w-4 h-4" />
-                    </Button>
-                </form>
-            }
-        />
+        <Suspense fallback={<div className="flex items-center justify-center h-screen">Loading...</div>}>
+            <AnalyticsPage
+                logoutButton={
+                    <form action={logout}>
+                        <Button
+                            type="submit"
+                            variant="outline"
+                            size="sm"
+                            className="bg-slate-50/50 border-slate-200 hover:bg-red-50 hover:border-red-200 hover:text-red-600"
+                            title="Logout"
+                        >
+                            <LogOut className="w-4 h-4" />
+                        </Button>
+                    </form>
+                }
+            />
+        </Suspense>
     );
 }
