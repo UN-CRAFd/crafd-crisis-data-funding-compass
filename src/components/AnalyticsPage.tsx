@@ -846,7 +846,7 @@ export default function AnalyticsPage({ logoutButton }: AnalyticsPageProps) {
 
         const totalTargets = fundingTargets.size;
         const avgFundingOverlap = totalTargets > 0 
-            ? Math.round((uniqueFundingTargets / totalTargets) * 100)
+            ? 100 - Math.round((uniqueFundingTargets / totalTargets) * 100)
             : 0;
 
         return {
