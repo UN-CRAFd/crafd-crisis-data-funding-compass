@@ -179,13 +179,17 @@ const FilterBar: React.FC<FilterBarProps> = ({
                                         checked={combinedDonors.includes(donor)}
                                         onCheckedChange={(checked) => {
                                             if (checked) {
-                                                onDonorsChange(Array.from(new Set([...combinedDonors, donor])));
+                                                // Limit to maximum 16 donors
+                                                if (combinedDonors.length < 16) {
+                                                    onDonorsChange(Array.from(new Set([...combinedDonors, donor])));
+                                                }
                                             } else {
                                                 onDonorsChange(combinedDonors.filter((d) => d !== donor));
                                             }
                                         }}
                                         onSelect={(e) => e.preventDefault()}
                                         className="cursor-pointer"
+                                        disabled={!combinedDonors.includes(donor) && combinedDonors.length >= 16}
                                     >
                                         {donor}
                                     </DropdownMenuCheckboxItem>
@@ -529,6 +533,21 @@ const FilterBar: React.FC<FilterBarProps> = ({
                             Reset
                         </Button>
                     )}
+                </div>
+            )}
+
+            {/* Reset Button Only (when no filterDescription) */}
+            {!filterDescription && (combinedDonors.length > 0 || investmentTypes.length > 0 || investmentThemes.length > 0 || appliedSearchQuery) && (
+                <div className="flex justify-end mt-2">
+                    <Button
+                        variant="outline"
+                        size="sm"
+                        onClick={onResetFilters}
+                        className="h-7 px-3 text-xs border-slate-300 bg-slate-100 text-slate-700 hover:bg-slate-200 hover:border-slate-300"
+                    >
+                        <RotateCcw className="w-3 h-3 mr-1.5" />
+                        Reset
+                    </Button>
                 </div>
             )}
         </div>

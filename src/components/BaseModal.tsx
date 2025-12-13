@@ -264,10 +264,12 @@ interface CountryBadgeProps {
     className?: string;
     onClick?: (country: string) => void;
     agencies?: string[];
+    projectsForDonor?: string[];
+    projectAgenciesForDonor?: string[];
     tooltipContainer?: Element | null;
 }
 
-export function CountryBadge({ country, className = '', onClick, agencies, tooltipContainer }: CountryBadgeProps) {
+export function CountryBadge({ country, className = '', onClick, agencies, projectsForDonor, projectAgenciesForDonor, tooltipContainer }: CountryBadgeProps) {
     const isClickable = !!onClick;
     
     const badgeContent = (
@@ -282,13 +284,16 @@ export function CountryBadge({ country, className = '', onClick, agencies, toolt
         </span>
     );
     
-    // If agencies are provided, wrap in tooltip
     // Filter out "Unspecified Agency"
     const filteredAgencies = agencies ? agencies.filter(agency => agency !== 'Unspecified Agency') : [];
-    if (filteredAgencies && filteredAgencies.length > 0) {
-        return (
-            <ModalTooltip
-                content={
+    const hasAgencies = filteredAgencies && filteredAgencies.length > 0;
+    const hasProjects = projectsForDonor && projectsForDonor.length > 0;
+    const hasProjectAgencies = projectAgenciesForDonor && projectAgenciesForDonor.length > 0;
+    
+    if (hasAgencies || hasProjects || hasProjectAgencies) {
+        const tooltipContent = (
+            <div>
+                {hasAgencies && (
                     <div>
                         <div className="font-semibold mb-1">{labels.modals.financingAgencies}</div>
                         <ul className="space-y-0.5">
@@ -297,7 +302,33 @@ export function CountryBadge({ country, className = '', onClick, agencies, toolt
                             ))}
                         </ul>
                     </div>
-                }
+                )}
+                {hasProjects && (
+                    <div className={hasAgencies ? 'mt-2 pt-2 border-t border-slate-300' : ''}>
+                        <div className="font-semibold mb-1">Projects funded:</div>
+                        <ul className="space-y-0.5">
+                            {projectsForDonor.map((project, idx) => (
+                                <li key={idx}>• {project}</li>
+                            ))}
+                        </ul>
+                    </div>
+                )}
+                {hasProjectAgencies && (
+                    <div className={hasAgencies || hasProjects ? 'mt-2 pt-2 border-t border-slate-300' : ''}>
+                        <div className="font-semibold mb-1">{labels.modals.financingAgencies}</div>
+                        <ul className="space-y-0.5">
+                            {projectAgenciesForDonor.map((agency, idx) => (
+                                <li key={idx}>• {agency}</li>
+                            ))}
+                        </ul>
+                    </div>
+                )}
+            </div>
+        );
+
+        return (
+            <ModalTooltip
+                content={tooltipContent}
                 side="top"
                 delayDuration={200}
                 tooltipContainer={tooltipContainer}
@@ -329,7 +360,15 @@ export function ModalTooltip({
     delayDuration = 200,
     tooltipContainer 
 }: ModalTooltipProps) {
-    const { tipsEnabled } = useTips();
+    // Get tips enabled state with fallback for SSR
+    let tipsEnabled = false;
+    try {
+        const tipsContext = useTips();
+        tipsEnabled = tipsContext.tipsEnabled;
+    } catch (e) {
+        // TipsProvider not available (e.g., during server-side rendering)
+        tipsEnabled = false;
+    }
     
     // If tips are disabled or no content, just render children without tooltip
     if (!tipsEnabled || !content) {

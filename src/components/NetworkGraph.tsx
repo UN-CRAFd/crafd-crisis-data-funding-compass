@@ -103,7 +103,7 @@ const NetworkGraph: React.FC<NetworkGraphProps> = ({
     const globalScaleRef = useRef<number>(1); // Track current zoom scale
     const [clusterByOrgType, setClusterByOrgType] = useState(false);
     const [clusterByAssetType, setClusterByAssetType] = useState(false);
-    const [scalingMode, setScalingMode] = useState<'connections' | 'funding'>('connections');
+    const [scalingMode, setScalingMode] = useState<'standard' | 'connections' | 'funding'>('standard');
     const [legendCollapsed, setLegendCollapsed] = useState(false);
     const lastClusterStateRef = useRef<string>(''); // Track last clustering state to prevent unnecessary updates
     const [filterBarContainer, setFilterBarContainer] = useState<HTMLElement | null>(null);
@@ -409,7 +409,7 @@ const NetworkGraph: React.FC<NetworkGraphProps> = ({
                 type: 'organization',
                 value: 22, // Medium nodes for organizations
                 color: brandBgLight, // Uses --brand-bg-light (amber/golden from organization badges)
-                orgKey: org.orgShortName, // Use orgShortName for modal/URL
+                orgKey: org.orgKey, // Use orgKey for modal/URL
                 orgShortName: org.orgShortName, // Store short name for label display
                 orgType: org.type, // Store org type for clustering
                 estimatedBudget: org.estimatedBudget, // Store budget for funding-based scaling
@@ -494,6 +494,7 @@ const NetworkGraph: React.FC<NetworkGraphProps> = ({
         const minBudget = orgBudgets.length > 0 ? Math.min(...orgBudgets) : 0;
 
         // Scale node visual size based on scalingMode
+        // 'standard' = fixed size by node type (donors biggest, orgs medium, assets smallest)
         // 'connections' = size by degree (number of links)
         // 'funding' = organizations sized by budget, others by connections
         const SIZE_SCALE = 6; // multiplier for the log-scaling term
@@ -503,7 +504,11 @@ const NetworkGraph: React.FC<NetworkGraphProps> = ({
             const base = n.type === 'donor' ? 28 : n.type === 'organization' ? 24 : 18;
             const minSize = n.type === 'donor' ? 28 : n.type === 'organization' ? 24 : 18;
             
-            if (scalingMode === 'funding' && n.type === 'organization') {
+            if (scalingMode === 'standard') {
+                // Standard mode: fixed sizes based on node type
+                // Donors: 40, Organizations: 30, Assets: 20
+                n.value = n.type === 'donor' ? 45 : n.type === 'organization' ? 40 : 30;
+            } else if (scalingMode === 'funding' && n.type === 'organization') {
                 // For funding mode: scale organizations by their budget
                 if (n.estimatedBudget && n.estimatedBudget > 0) {
                     // Use log scale for budget to handle large range
@@ -519,7 +524,7 @@ const NetworkGraph: React.FC<NetworkGraphProps> = ({
                     n.value = minSize;
                 }
             } else {
-                // Connection-based scaling (default)
+                // Connection-based scaling
                 const scaled = Math.round(base + Math.log1p(deg) * SIZE_SCALE);
                 // Clamp to reasonable bounds
                 n.value = Math.min(80, Math.max(minSize, scaled));
@@ -596,7 +601,10 @@ const NetworkGraph: React.FC<NetworkGraphProps> = ({
             const base = n.type === 'donor' ? 28 : n.type === 'organization' ? 24 : 18;
             const minSize = n.type === 'donor' ? 28 : n.type === 'organization' ? 24 : 18;
             
-            if (scalingMode === 'funding' && n.type === 'organization') {
+            if (scalingMode === 'standard') {
+                // Standard mode: fixed sizes based on node type
+                return n.type === 'donor' ? 40 : n.type === 'organization' ? 30 : 20;
+            } else if (scalingMode === 'funding' && n.type === 'organization') {
                 if (n.estimatedBudget && n.estimatedBudget > 0) {
                     const logBudget = Math.log10(n.estimatedBudget);
                     const logMin = minBudget > 0 ? Math.log10(minBudget) : 0;
@@ -1625,9 +1633,31 @@ const NetworkGraph: React.FC<NetworkGraphProps> = ({
                             </div>
 
                             {/* Scaling Controls */}
-                            <div className="hidden p-2.5 border-t border-slate-200">
+                            <div className="p-2.5 border-t border-slate-200">
                                 <div className="text-xs font-semibold text-slate-800/90 mb-2">Scaling</div>
                                 <div className="space-y-1.5">
+                                    <button
+                                        onClick={() => setScalingMode('standard')}
+                                        className={`w-full text-left px-2 py-1 rounded text-xs transition-colors ${
+                                            scalingMode === 'standard'
+                                                ? 'bg-slate-200 text-slate-800 border border-slate-400'
+                                                : 'bg-slate-50 text-slate-600 border border-slate-200 hover:bg-slate-100'
+                                        }`}
+                                        title="Standardized sizes by node type"
+                                    >
+                                        <div className="flex items-center justify-between">
+                                            <span className="text-[11px]">Standard</span>
+                                            <div className={`w-3 h-3 rounded-sm border shrink-0 flex items-center justify-center ${
+                                                scalingMode === 'standard' ? 'bg-slate-600 border-slate-600' : 'border-slate-300'
+                                            }`}>
+                                                {scalingMode === 'standard' && (
+                                                    <svg className="w-2.5 h-2.5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={3} d="M5 13l4 4L19 7" />
+                                                    </svg>
+                                                )}
+                                            </div>
+                                        </div>
+                                    </button>
                                     <button
                                         onClick={() => setScalingMode('connections')}
                                         className={`w-full text-left px-2 py-1 rounded text-xs transition-colors ${

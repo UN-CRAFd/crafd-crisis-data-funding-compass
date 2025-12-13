@@ -20,7 +20,10 @@ interface OrganizationModalProps {
     projectDescriptionMap?: Record<string, string>;
     orgProjectsMap?: Record<string, Array<{ id: string; investmentTypes: string[] }>>;
     orgDonorCountriesMap?: Record<string, string[]>;
+    orgDonorInfoMap?: Record<string, import('@/types/airtable').DonorInfo[]>;
     orgAgenciesMap?: Record<string, Record<string, string[]>>;
+    orgProjectDonorsMap?: Record<string, Record<string, string[]>>;
+    orgProjectDonorAgenciesMap?: Record<string, Record<string, Record<string, string[]>>>;
     // onClose removed for serializability; modal will dispatch a CustomEvent 'closeOrganizationModal'
     loading: boolean;
     // Callback to open project modal
@@ -28,7 +31,7 @@ interface OrganizationModalProps {
     // Map from project ID to product_key for navigation
     projectIdToKeyMap?: Record<string, string>;
     // Callback when a donor is clicked
-    onDonorClick?: (country: string) => void;
+    onOpenDonorModal?: (country: string) => void;
     // Callback when an investment type is clicked
     onTypeClick?: (type: string) => void;
 }
@@ -42,11 +45,14 @@ export default function OrganizationModal({
     projectDescriptionMap = {},
     orgProjectsMap = {},
     orgDonorCountriesMap = {},
+    orgDonorInfoMap = {},
     orgAgenciesMap = {},
+    orgProjectDonorsMap = {},
+    orgProjectDonorAgenciesMap = {},
     loading,
     onOpenProjectModal,
     projectIdToKeyMap = {},
-    onDonorClick,
+    onOpenDonorModal,
     onTypeClick
 }: OrganizationModalProps): React.ReactElement {
 
@@ -61,6 +67,19 @@ export default function OrganizationModal({
     const FieldLabel = ({ children }: { children: React.ReactNode }) => (
         <span className="font-medium text-[#333333] text-xs leading-5 font-roboto uppercase tracking-wide">{children}</span>
     );
+
+    // Helper function to extract unique agencies from project-to-agencies map
+    const getUniqueAgenciesForProjects = (
+        projects: string[],
+        projectToAgencies: Record<string, string[]>
+    ): string[] => {
+        const uniqueAgencies = new Set<string>();
+        projects.forEach(project => {
+            const agencies = projectToAgencies[project] || [];
+            agencies.forEach(agency => uniqueAgencies.add(agency));
+        });
+        return Array.from(uniqueAgencies);
+    };
 
     // Reusable field value wrapper component
     const FieldValue = ({ children }: { children: React.ReactNode }) => <div className="mt-0.5">{children}</div>;
@@ -190,6 +209,12 @@ export default function OrganizationModal({
 
         // If the caller provided a raw fields object (from organizations-table.json), render all keys
         const fields = organization.fields || {};
+
+        // Extract budget-related fields early so they're available for both the budget box and notes
+        const estBudget = fields['Est. Org Budget'] as number | string | null | undefined;
+        const budgetSourceRaw = fields['Budget Source'];
+        const budgetSourceStr = budgetSourceRaw != null ? String(budgetSourceRaw) : null;
+        const lastUpdated = fields['Last Updated'] as string | null | undefined;
 
         // Helper to render a single field value nicely
         const renderValue = (val: unknown): React.ReactNode => {
@@ -377,7 +402,7 @@ export default function OrganizationModal({
                                     <span className="text-lg font-normal text-slate-600 tabular-nums">({projectsList.length})</span>
                                 </div>
                                 
-                                <div className="flex flex-col gap-2 mt-4">
+                                <div className="flex flex-col gap-2 mt-4 mb-10">
                                     {(() => {
                                                         const orgProjects = orgProjectsMap[organization.id];
                                                         if (!orgProjects || orgProjects.length === 0) return null;
@@ -465,13 +490,10 @@ export default function OrganizationModal({
 
                     {/* Organization Donors - Clean field access from centralized data */}
                     {(() => {
-                        // Get donor countries from the centralized map (computed from nested data)
-                        const donorCountries = orgDonorCountriesMap[organization.id] || [];
-                        const estBudget = fields['Est. Org Budget'];
+                        // Get donor info from the centralized map (includes both org-level and project-only donors)
+                        const donorInfo = orgDonorInfoMap[organization.id] || [];
 
-                        // Narrow unknown typed fields to explicit string/null values for safe rendering
-                        const budgetSourceRaw = fields['Budget Source'];
-                        const budgetSourceStr = budgetSourceRaw != null ? String(budgetSourceRaw) : null;
+                        // Use the budget fields already extracted at the top
                         const linkRaw = fields['Link to Budget Source'];
                         const linkToBudgetSource = typeof linkRaw === 'string' && linkRaw.trim() !== '' ? linkRaw.trim() : null;
                         
@@ -481,8 +503,8 @@ export default function OrganizationModal({
                             ? (budgetScreenshotRaw[0] as { url?: string; thumbnails?: { large?: { url?: string } } })?.thumbnails?.large?.url || (budgetScreenshotRaw[0] as { url?: string })?.url || null
                             : null;
 
-                        // Only show if at least one field has a value
-                        if (!estBudget && !budgetSourceStr && donorCountries.length === 0) {
+                        // Only show the whole section if there are donors OR budget data
+                        if (donorInfo.length === 0 && !estBudget && !budgetSourceStr && !lastUpdated) {
                             return null;
                         }
 
@@ -493,8 +515,9 @@ export default function OrganizationModal({
                                     <h3 className="text-xl font-roboto font-black text-[#333333] uppercase tracking-wide leading-normal">
                                         {labels.modals.organizationFunding}
                                     </h3>
-                                    <span className="text-lg font-normal text-gray-500 tabular-nums">({donorCountries.length})</span>
+                                    <span className="text-lg font-normal text-gray-500 tabular-nums">({donorInfo.length})</span>
                                 </div>
+                                    {(estBudget || budgetSourceStr || lastUpdated) && (
                                     <div className="rounded-lg border border-slate-200 bg-slate-100 p-4 shadow-sm">
                                         
                                         <div className="mt-0 grid grid-cols-[3fr_3fr_3fr_0.2fr] gap-4">
@@ -505,10 +528,11 @@ export default function OrganizationModal({
                                                     {
                                                         estBudget
                                                             ? (() => {
-                                                                if (typeof estBudget !== 'number') return String(estBudget);
-                                                                if (estBudget >= 1_000_000_000) return `$${(estBudget / 1_000_000_000).toFixed(1)} B`;
-                                                                if (estBudget >= 1_000_000) return `$${(estBudget / 1_000_000).toFixed(1)} M`;
-                                                                return `$${estBudget}`;
+                                                                const budget = estBudget as number | string;
+                                                                if (typeof budget !== 'number') return String(budget);
+                                                                if (budget >= 1_000_000_000) return `$${(budget / 1_000_000_000).toFixed(1)} B`;
+                                                                if (budget >= 1_000_000) return `$${(budget / 1_000_000).toFixed(1)} M`;
+                                                                return `$${budget}`;
                                                             })()
                                                             : '—'
                                                         }
@@ -575,17 +599,33 @@ export default function OrganizationModal({
                                             </div>
                                         </div>
                                     </div>
+                                    )}
                                 <div className="flex flex-wrap gap-2 mt-4">
-                                    {donorCountries.map((country) => {
+                                    {donorInfo.map((donor, idx) => {
                                         const orgAgencies = orgAgenciesMap[organization.id] || {};
+                                        const orgProjectDonors = orgProjectDonorsMap[organization.id] || {};
+                                        const orgProjectDonorAgencies = orgProjectDonorAgenciesMap[organization.id] || {};
+                                        
+                                        // For project-level donors, get the projects they fund and corresponding agencies
+                                        const projectsForDonor = !donor.isOrgLevel ? (orgProjectDonors[donor.country] || []) : undefined;
+                                        const projectAgenciesForDonor = !donor.isOrgLevel && projectsForDonor ? 
+                                            getUniqueAgenciesForProjects(projectsForDonor, orgProjectDonorAgencies[donor.country] || {}) 
+                                            : undefined;
+                                        
                                         return (
-                                            <CountryBadge 
-                                                key={country} 
-                                                country={country} 
-                                                onClick={onDonorClick}
-                                                agencies={orgAgencies[country]}
-                                                tooltipContainer={tooltipContainer}
-                                            />
+                                            <div 
+                                                key={donor.country}
+                                                className={donor.isOrgLevel ? '' : 'opacity-50'}
+                                            >
+                                                <CountryBadge 
+                                                    country={donor.country} 
+                                                    onClick={onOpenDonorModal}
+                                                    agencies={orgAgencies[donor.country]}
+                                                    projectsForDonor={projectsForDonor}
+                                                    projectAgenciesForDonor={projectAgenciesForDonor}
+                                                    tooltipContainer={tooltipContainer}
+                                                />
+                                            </div>
                                         );
                                     })}
                                 </div>
@@ -604,22 +644,38 @@ export default function OrganizationModal({
                                 <span className="text-slate-400 mr-2 shrink-0">•</span>
                                 <span>{labels.modals.notesInsights}</span>
                             </div>
+                            {!estBudget && !budgetSourceStr && !lastUpdated && (
+                                <div className="flex items-start">
+                                    <span className="text-slate-400 mr-2 shrink-0">•</span>
+                                    <span>No detailed budget amount is publicly disclosed.</span>
+                                </div>
+                            )}
                         {isUN && (
                             <div className="flex items-start">
                                 <span className="text-slate-400 mr-2 shrink-0">•</span>
-                                <span>{labels.modals.notesUn}</span>
-                                
+                                <span>
+                                    {labels.modals.notesUn}
+                                    {typeof fields['UN Funding Link'] === 'string' && fields['UN Funding Link'] && (
+                                        <>
+                                            {' '}
+                                            <a
+                                                href={String(fields['UN Funding Link']).replace(/^<|>$/g, '')}
+                                                target="_blank"
+                                                rel="noopener noreferrer"
+                                                className="font-semibold transition-colors underline underline-offset-2 whitespace-nowrap"
+                                                style={{ color: 'var(--brand-primary)' }}
+                                                onMouseEnter={(e) => e.currentTarget.style.color = 'var(--brand-primary-dark)'}
+                                                onMouseLeave={(e) => e.currentTarget.style.color = 'var(--brand-primary)'}
+                                            >
+                                                {labels.modals.learnMore}
+                                                <ExternalLink className="w-3 h-3 inline-block align-text-bottom ml-0.5" />
+                                            </a>
+                                        </>
+                                    )}
+                                </span>
                             </div>
-                            
                         )}
-                        {isUN && (
-                            <div className="flex items-start">
-                                <span className="text-slate-400 mr-2 shrink-0">•</span>
-                                <span>{labels.modals.budgetlineUn}</span>
-                                
-                            </div>
-                            
-                        )}
+                        
                     </div>
                 </div>
             </div>

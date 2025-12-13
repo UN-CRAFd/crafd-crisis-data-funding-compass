@@ -4,14 +4,16 @@
     "fields": {
       "Agency/Department Name": "Ministry of Foreign Affairs (MOFA)",
       "Agency Data Portal": "https://www.gov.si/en/state-authorities/ministries/ministry-of-foreign-and-european-affairs/",
-      "Country Name": "Slovenia"
+      "Country Name": "Slovenia",
+      "Agency Website": "https://www.gov.si/en/state-authorities/ministries/ministry-of-foreign-affairs/"
     }
   },
   {
     "id": "rec0QlT9YlTVhHfEn",
     "fields": {
       "Agency/Department Name": "Federal Foreign Office (AA)",
-      "Country Name": "Germany"
+      "Country Name": "Germany",
+      "Agency Website": "https://www.auswaertiges-amt.de"
     }
   },
   {
@@ -19,21 +21,24 @@
     "fields": {
       "Agency/Department Name": "Foreign, Commonwealth & Development Office (FCDO)",
       "Agency Data Portal": "https://devtracker.fcdo.gov.uk/",
-      "Country Name": "United Kingdom"
+      "Country Name": "United Kingdom",
+      "Agency Website": "https://www.gov.uk/government/organisations/foreign-commonwealth-development-office"
     }
   },
   {
     "id": "rec15kH3AC5gKDeQu",
     "fields": {
       "Agency/Department Name": "Belgian Development Agency (Enabel)",
-      "Country Name": "Belgium"
+      "Country Name": "Belgium",
+      "Agency Website": "https://www.enabel.be/"
     }
   },
   {
     "id": "rec17xB7AKc3ojdV5",
     "fields": {
       "Agency/Department Name": "Federal Department of Foreign Affairs (FDFA)",
-      "Country Name": "Switzerland"
+      "Country Name": "Switzerland",
+      "Agency Website": "https://www.eda.admin.ch"
     }
   },
   {
@@ -47,14 +52,16 @@
     "id": "rec1In4CerWhTywiy",
     "fields": {
       "Agency/Department Name": "Stiftung Mercator",
-      "Country Name": "Foundation"
+      "Country Name": "Foundation",
+      "Agency Website": "https://www.stiftung-mercator.de"
     }
   },
   {
     "id": "rec1VhOJv9U6QKBBs",
     "fields": {
       "Agency/Department Name": "CRAF’d Funding",
-      "Country Name": "CRAF’d"
+      "Country Name": "CRAF’d",
+      "Agency Website": "https://www.crafd.in/"
     }
   },
   {
@@ -75,7 +82,8 @@
     "id": "rec1qQDNbg7E8mqD3",
     "fields": {
       "Agency/Department Name": "Italian National Institute of Statistics (ISTAT)",
-      "Country Name": "Italy"
+      "Country Name": "Italy",
+      "Agency Website": "https://www.istat.it"
     }
   },
   {
@@ -83,7 +91,8 @@
     "fields": {
       "Agency/Department Name": "Department of Civil Protection (DPC)",
       "Agency Data Portal": "https://www.protezionecivile.gov.it/it/",
-      "Country Name": "Italy"
+      "Country Name": "Italy",
+      "Agency Website": "https://www.protezionecivile.gov.it"
     }
   },
   {
@@ -91,7 +100,8 @@
     "fields": {
       "Agency/Department Name": "German Corporation for International Cooperation (GIZ)",
       "Agency Data Portal": "https://www.giz.de/projektdaten/index.action?request_locale=en_GB",
-      "Country Name": "Germany"
+      "Country Name": "Germany",
+      "Agency Website": "https://www.giz.de"
     }
   },
   {
@@ -99,35 +109,40 @@
     "fields": {
       "Agency/Department Name": "The World Bank",
       "Agency Data Portal": "https://www.worldbank.org/ext/en/home",
-      "Country Name": "International Financial Institutions (IFIs)"
+      "Country Name": "International Financial Institutions (IFIs)",
+      "Agency Website": "https://www.worldbank.org"
     }
   },
   {
     "id": "rec3PPFHGBmoRlRqM",
     "fields": {
       "Agency/Department Name": "National Research Institute for Earth Science and Disaster Resilience (NIED)",
-      "Country Name": "Japan"
+      "Country Name": "Japan",
+      "Agency Website": "https://www.bosai.go.jp/"
     }
   },
   {
     "id": "rec3UYaGR28sa4BCq",
     "fields": {
       "Agency/Department Name": "Department of Defence (DoD)",
-      "Country Name": "Australia"
+      "Country Name": "Australia",
+      "Agency Website": "https://www.defence.gov.au/"
     }
   },
   {
     "id": "rec3ZfAfkmBo4n8is",
     "fields": {
       "Agency/Department Name": "Open Society Foundations",
-      "Country Name": "Foundation"
+      "Country Name": "Foundation",
+      "Agency Website": "https://www.opensocietyfoundations.org"
     }
   },
   {
     "id": "rec3axdk63YGrJWUW",
     "fields": {
       "Agency/Department Name": "Ministry for Foreign Affairs (UD / MFA)",
-      "Country Name": "Sweden"
+      "Country Name": "Sweden",
+      "Agency Website": "https://www.government.se/government-of-sweden/ministry-for-foreign-affairs/"
     }
   },
   {
@@ -142,14 +157,16 @@
     "fields": {
       "Agency/Department Name": "Fund for Scientific Research (FNRS)",
       "Agency Data Portal": "https://www.frs-fnrs.be/fr/",
-      "Country Name": "Belgium"
+      "Country Name": "Belgium",
+      "Agency Website": "https://www.frs-fnrs.be/"
     }
   },
   {
     "id": "rec4XXzzXi0jHT1Fv",
     "fields": {
       "Agency/Department Name": "Global Nutrition Cluster",
-      "Country Name": "Non-State Actor"
+      "Country Name": "Non-State Actor",
+      "Agency Website": "https://www.nutritioncluster.net/"
     }
   },
   {
@@ -184,7 +201,8 @@
     "id": "rec5NKr3OLYmPMuOf",
     "fields": {
       "Agency/Department Name": "Global Challenges Foundation",
-      "Country Name": "Foundation"
+      "Country Name": "Foundation",
+      "Agency Website": "https://globalchallenges.org"
     }
   },
   {
@@ -192,14 +210,23 @@
     "fields": {
       "Agency/Department Name": "Conrad N. Hilton Foundation",
       "Agency Data Portal": "https://www.hiltonfoundation.org/",
-      "Country Name": "Foundation"
+      "Country Name": "Foundation",
+      "Agency Website": "https://www.hiltonfoundation.org/"
     }
   },
   {
     "id": "rec5dvlx8FiIfmXgw",
     "fields": {
       "Agency/Department Name": "Korea International Cooperation Agency (KOICA)",
-      "Country Name": "South Korea"
+      "Country Name": "South Korea",
+      "Agency Website": "https://www.koica.go.kr"
+    }
+  },
+  {
+    "id": "rec5rrPKmfp8lT1DU",
+    "fields": {
+      "Agency/Department Name": "Unspecified Agency",
+      "Country Name": "Peru"
     }
   },
   {
@@ -213,21 +240,24 @@
     "id": "rec665usRSgrGizMC",
     "fields": {
       "Agency/Department Name": "Skoll",
-      "Country Name": "Foundation"
+      "Country Name": "Foundation",
+      "Agency Website": "https://skoll.org"
     }
   },
   {
     "id": "rec6f6Th74eRAeRn4",
     "fields": {
       "Agency/Department Name": "Inter American Development Bank (IDB)",
-      "Country Name": "International Financial Institutions (IFIs)"
+      "Country Name": "International Financial Institutions (IFIs)",
+      "Agency Website": "https://www.iadb.org"
     }
   },
   {
     "id": "rec7AphhRvNQfntpA",
     "fields": {
       "Agency/Department Name": "United Nations Population Fund (UNFPA)",
-      "Country Name": "United Nations"
+      "Country Name": "United Nations",
+      "Agency Website": "https://www.unfpa.org/"
     }
   },
   {
@@ -257,7 +287,8 @@
     "fields": {
       "Agency/Department Name": "Federal Ministry for Economic Cooperation and Development (BMZ)",
       "Agency Data Portal": "https://www.transparenzportal.bund.de/en",
-      "Country Name": "Germany"
+      "Country Name": "Germany",
+      "Agency Website": "https://www.bmz.de"
     }
   },
   {
@@ -271,7 +302,8 @@
     "id": "rec9TITYUt2a5OaKT",
     "fields": {
       "Agency/Department Name": "Middle East Partnership Initiative (MEPI)",
-      "Country Name": "USA"
+      "Country Name": "USA",
+      "Agency Website": "https://mepi.state.gov/"
     }
   },
   {
@@ -279,7 +311,8 @@
     "fields": {
       "Agency/Department Name": "Defence Research Establishment (FFI)",
       "Agency Data Portal": "https://www.ffi.no/en",
-      "Country Name": "Norway"
+      "Country Name": "Norway",
+      "Agency Website": "https://www.ffi.no"
     }
   },
   {
@@ -287,14 +320,15 @@
     "fields": {
       "Agency/Department Name": "Ministry of Foreign Affairs (MOFA)",
       "Agency Data Portal": "https://mofa.gov.qa/en",
-      "Country Name": "Qatar"
+      "Country Name": "Qatar",
+      "Agency Website": "https://www.mofa.gov.qa"
     }
   },
   {
     "id": "recACsCLhhDutMpAv",
     "fields": {
-      "Agency/Department Name": "Médecins Sans Frontières",
-      "Country Name": "Non-State Actor"
+      "Agency/Department Name": "Unspecified Agency",
+      "Country Name": "Médecins Sans Frontières "
     }
   },
   {
@@ -302,7 +336,8 @@
     "fields": {
       "Agency/Department Name": "Clinton Health Access Initiative",
       "Agency Data Portal": "https://www.clintonhealthaccess.org/",
-      "Country Name": "Non-State Actor"
+      "Country Name": "Non-State Actor",
+      "Agency Website": "https://www.clintonhealthaccess.org/"
     }
   },
   {
@@ -316,7 +351,8 @@
     "id": "recAgX8zjyt6NFtcd",
     "fields": {
       "Agency/Department Name": "UN Women",
-      "Country Name": "United Nations"
+      "Country Name": "United Nations",
+      "Agency Website": "https://www.unwomen.org"
     }
   },
   {
@@ -324,7 +360,15 @@
     "fields": {
       "Agency/Department Name": "Department of Defense (DoD)",
       "Agency Data Portal": "https://www.defense.gov/",
-      "Country Name": "USA"
+      "Country Name": "USA",
+      "Agency Website": "https://www.defense.gov"
+    }
+  },
+  {
+    "id": "recBCG38dUf5vJ235",
+    "fields": {
+      "Agency/Department Name": "Unspecified Agency",
+      "Country Name": "Kuwait"
     }
   },
   {
@@ -339,14 +383,16 @@
     "fields": {
       "Agency/Department Name": "Office of the United Nations High Commissioner for Refugees (UNHCR)",
       "Agency Data Portal": "https://www.unhcr.org/",
-      "Country Name": "United Nations"
+      "Country Name": "United Nations",
+      "Agency Website": "https://www.unhcr.org"
     }
   },
   {
     "id": "recBcYLQeB7eoTpFZ",
     "fields": {
       "Agency/Department Name": "Ministry for Foreign Affairs (MFA)",
-      "Country Name": "Finland"
+      "Country Name": "Finland",
+      "Agency Website": "https://um.fi/"
     }
   },
   {
@@ -354,14 +400,16 @@
     "fields": {
       "Agency/Department Name": "National Institutes of Health (NIH)",
       "Agency Data Portal": "https://www.nih.gov/",
-      "Country Name": "USA"
+      "Country Name": "USA",
+      "Agency Website": "https://www.nih.gov/"
     }
   },
   {
     "id": "recCctxpcCNPhxoXS",
     "fields": {
       "Agency/Department Name": "Ministry of Infrastructure and Water Management (IenW) ",
-      "Country Name": "Netherlands"
+      "Country Name": "Netherlands",
+      "Agency Website": "https://www.government.nl/ministries/ministry-of-infrastructure-and-water-management"
     }
   },
   {
@@ -382,14 +430,16 @@
     "id": "recDY0ngiDePaQtm3",
     "fields": {
       "Agency/Department Name": "Klaus Tschira Stiftung",
-      "Country Name": "Foundation"
+      "Country Name": "Foundation",
+      "Agency Website": "https://www.klaus-tschira-stiftung.de/"
     }
   },
   {
     "id": "recDeOTSV3vQ7pXcx",
     "fields": {
       "Agency/Department Name": "Ford Foundation",
-      "Country Name": "Foundation"
+      "Country Name": "Foundation",
+      "Agency Website": "https://www.fordfoundation.org/"
     }
   },
   {
@@ -403,7 +453,15 @@
     "id": "recE3ZEHFRqbifGOn",
     "fields": {
       "Agency/Department Name": "Ministry for Europe and Foreign Affairs (MEAE)",
-      "Country Name": "France"
+      "Country Name": "France",
+      "Agency Website": "https://www.diplomatie.gouv.fr"
+    }
+  },
+  {
+    "id": "recED1yx6j058rmTe",
+    "fields": {
+      "Agency/Department Name": "Green Climate Fund",
+      "Country Name": "United Nations"
     }
   },
   {
@@ -424,7 +482,8 @@
     "id": "recEiThTK959bqvUH",
     "fields": {
       "Agency/Department Name": "iNNpulsa",
-      "Country Name": "Colombia"
+      "Country Name": "Colombia",
+      "Agency Website": "https://www.innpulsacolombia.com/"
     }
   },
   {
@@ -439,7 +498,8 @@
     "fields": {
       "Agency/Department Name": "United Nations Children's Fund (UNICEF)",
       "Agency Data Portal": "https://www.unicef.org/",
-      "Country Name": "United Nations"
+      "Country Name": "United Nations",
+      "Agency Website": "https://www.unicef.org"
     }
   },
   {
@@ -453,14 +513,23 @@
     "id": "recFSAJtcprNtdNt3",
     "fields": {
       "Agency/Department Name": "Ministry of Education, Culture, and Science (OCW)",
-      "Country Name": "Netherlands"
+      "Country Name": "Netherlands",
+      "Agency Website": "https://www.government.nl/ministries/ministry-of-education-culture-and-science"
     }
   },
   {
     "id": "recFXEk93eiQlKjJU",
     "fields": {
       "Agency/Department Name": "Brazilian Institute of Geography and Statistics (IBGE)",
-      "Country Name": "Brazil"
+      "Country Name": "Brazil",
+      "Agency Website": "https://www.ibge.gov.br/"
+    }
+  },
+  {
+    "id": "recFfYO2iK5F2tUHs",
+    "fields": {
+      "Agency/Department Name": "Unspecified Agency",
+      "Country Name": "Pakistan"
     }
   },
   {
@@ -482,14 +551,24 @@
     "fields": {
       "Agency/Department Name": "European Commission (EC)",
       "Agency Data Portal": "Maybe https://ec.europa.eu/info/funding-tenders/opportunities/portal/",
-      "Country Name": "European Union"
+      "Country Name": "European Union",
+      "Agency Website": "https://ec.europa.eu"
     }
   },
   {
     "id": "recGdX0X5tAVmnIdm",
     "fields": {
       "Agency/Department Name": "Swiss Innovation Agency (Innosuisse)",
-      "Country Name": "Switzerland"
+      "Country Name": "Switzerland",
+      "Agency Website": "https://www.innosuisse.ch"
+    }
+  },
+  {
+    "id": "recGjDWBWOTrWTWb8",
+    "fields": {
+      "Agency/Department Name": "The Global Fund",
+      "Country Name": "Foundation",
+      "Agency Website": "https://www.theglobalfund.org"
     }
   },
   {
@@ -510,7 +589,8 @@
     "id": "recGpymiMUVP7dfmL",
     "fields": {
       "Agency/Department Name": "GNS Science – Institute of Geological and Nuclear Sciences Limited (GNS)",
-      "Country Name": "New Zealand"
+      "Country Name": "New Zealand",
+      "Agency Website": "https://www.gns.cri.nz/"
     }
   },
   {
@@ -522,11 +602,19 @@
     }
   },
   {
+    "id": "recH2oUflHfwVCZRj",
+    "fields": {
+      "Agency/Department Name": "Unspecified Agency",
+      "Country Name": "Netherlands"
+    }
+  },
+  {
     "id": "recHSsEaPuaG3h2PQ",
     "fields": {
       "Agency/Department Name": "Directorate-General for European Civil Protection and Humanitarian Aid Operations (DG ECHO)",
       "Agency Data Portal": "funding overview, not portal https://civil-protection-humanitarian-aid.ec.europa.eu/funding-evaluations/funding-humanitarian-aid_en",
-      "Country Name": "European Union"
+      "Country Name": "European Union",
+      "Agency Website": "https://civil-protection-humanitarian-aid.ec.europa.eu/"
     }
   },
   {
@@ -534,7 +622,8 @@
     "fields": {
       "Agency/Department Name": "Department of Foreign Affairs and Trade (DFAT)",
       "Agency Data Portal": "https://adp.dfat.gov.au/",
-      "Country Name": "Australia"
+      "Country Name": "Australia",
+      "Agency Website": "https://www.dfat.gov.au"
     }
   },
   {
@@ -548,7 +637,8 @@
     "id": "recIUg3K9vtroebVE",
     "fields": {
       "Agency/Department Name": "Food and Agriculture Organization (FAO)",
-      "Country Name": "United Nations"
+      "Country Name": "United Nations",
+      "Agency Website": "https://www.fao.org"
     }
   },
   {
@@ -563,6 +653,14 @@
     "id": "recJl9XUd7rAiz6dR",
     "fields": {
       "Agency/Department Name": "The CS Fund",
+      "Country Name": "Non-State Actor",
+      "Agency Website": "https://www.csfund.org/"
+    }
+  },
+  {
+    "id": "recJwqOMpUSSv1hef",
+    "fields": {
+      "Agency/Department Name": "Global Environment Facility",
       "Country Name": "Non-State Actor"
     }
   },
@@ -578,14 +676,16 @@
     "fields": {
       "Agency/Department Name": "Development Bank of Latin America and the Caribbean (CAF)",
       "Agency Data Portal": "https://www.caf.com/en/projects/",
-      "Country Name": "International Financial Institutions (IFIs)"
+      "Country Name": "International Financial Institutions (IFIs)",
+      "Agency Website": "https://www.caf.com"
     }
   },
   {
     "id": "recKVILBOB3NBEJlE",
     "fields": {
       "Agency/Department Name": "Joint Research Centre ",
-      "Country Name": "European Union"
+      "Country Name": "European Union",
+      "Agency Website": "https://joint-research-centre.ec.europa.eu/"
     }
   },
   {
@@ -599,7 +699,15 @@
     "id": "recKqqMmG0fzm1WSr",
     "fields": {
       "Agency/Department Name": "Office of Public Works (OPW)",
-      "Country Name": "Ireland"
+      "Country Name": "Ireland",
+      "Agency Website": "https://www.opw.ie/"
+    }
+  },
+  {
+    "id": "recLVhyuA1hKzqQDY",
+    "fields": {
+      "Agency/Department Name": "Unspecified Agency",
+      "Country Name": "Egypt"
     }
   },
   {
@@ -618,17 +726,11 @@
     }
   },
   {
-    "id": "recLZVuV2acBHkXYp",
-    "fields": {
-      "Agency/Department Name": "Education Cannot Wait",
-      "Country Name": "Foundation"
-    }
-  },
-  {
     "id": "recLZauHkiDI0nwAy",
     "fields": {
       "Agency/Department Name": "Federal Agency for Technical Relief (THW)",
-      "Country Name": "Germany"
+      "Country Name": "Germany",
+      "Agency Website": "https://www.thw.de"
     }
   },
   {
@@ -636,14 +738,16 @@
     "fields": {
       "Agency/Department Name": "Flanders Department of Foreign Affairs (DFA)",
       "Agency Data Portal": "https://www.fdfa.be/en",
-      "Country Name": "Belgium"
+      "Country Name": "Belgium",
+      "Agency Website": "https://www.fdfa.be"
     }
   },
   {
     "id": "recMSfI5XCXoaFs9i",
     "fields": {
       "Agency/Department Name": "African Development Bank",
-      "Country Name": "International Financial Institutions (IFIs)"
+      "Country Name": "International Financial Institutions (IFIs)",
+      "Agency Website": "https://www.afdb.org"
     }
   },
   {
@@ -658,20 +762,6 @@
     }
   },
   {
-    "id": "recMugchTfrW8Kcdk",
-    "fields": {
-      "Agency/Department Name": "Rotary International",
-      "Country Name": "Foundation"
-    }
-  },
-  {
-    "id": "recNB2KtUgyvV8ktP",
-    "fields": {
-      "Agency/Department Name": "Unspecified Agency",
-      "Country Name": "Serbia"
-    }
-  },
-  {
     "id": "recNDhizkcgWACvB1",
     "fields": {
       "Agency/Department Name": "Unspecified Agency",
@@ -683,7 +773,8 @@
     "fields": {
       "Agency/Department Name": "World Food Programme (WFP)",
       "Agency Data Portal": "https://www.wfp.org/",
-      "Country Name": "United Nations"
+      "Country Name": "United Nations",
+      "Agency Website": "https://www.wfp.org/"
     }
   },
   {
@@ -705,7 +796,8 @@
     "fields": {
       "Agency/Department Name": "Danish International Development Agency (Danida)",
       "Agency Data Portal": "https://openaid.um.dk/",
-      "Country Name": "Denmark"
+      "Country Name": "Denmark",
+      "Agency Website": "https://um.dk/en/danida"
     }
   },
   {
@@ -713,7 +805,8 @@
     "fields": {
       "Agency/Department Name": "Immigration, Refugees and Citizenship Canada (IRCC)",
       "Agency Data Portal": "https://www.canada.ca/en/immigration-refugees-citizenship.html",
-      "Country Name": "Canada"
+      "Country Name": "Canada",
+      "Agency Website": "https://www.canada.ca/en/immigration-refugees-citizenship.html"
     }
   },
   {
@@ -721,7 +814,8 @@
     "fields": {
       "Agency/Department Name": "International Development Research Centre (IDRC)",
       "Agency Data Portal": "Link to IATI File https://open.canada.ca/data/organization/idrc-crdi",
-      "Country Name": "Canada"
+      "Country Name": "Canada",
+      "Agency Website": "https://idrc-crdi.ca"
     }
   },
   {
@@ -729,14 +823,16 @@
     "fields": {
       "Agency/Department Name": "Austrian Development Agency (ADA)",
       "Agency Data Portal": "https://www.entwicklung.at/en/",
-      "Country Name": "Austria"
+      "Country Name": "Austria",
+      "Agency Website": "https://www.entwicklung.at"
     }
   },
   {
     "id": "recP0CwfhMP34aWn0",
     "fields": {
       "Agency/Department Name": "Ministry of Education and Research / Swedish Research Council (VR)",
-      "Country Name": "Sweden"
+      "Country Name": "Sweden",
+      "Agency Website": "https://www.vr.se/"
     }
   },
   {
@@ -747,18 +843,12 @@
     }
   },
   {
-    "id": "recPTgqLkZfiwTmr1",
-    "fields": {
-      "Agency/Department Name": "Gavi",
-      "Country Name": "Foundation"
-    }
-  },
-  {
     "id": "recQUVhcVyxZlXJ3H",
     "fields": {
       "Agency/Department Name": "Department of State (DOS)",
       "Agency Data Portal": "https://www.foreignassistance.gov/",
-      "Country Name": "USA"
+      "Country Name": "USA",
+      "Agency Website": "https://www.state.gov/"
     }
   },
   {
@@ -766,7 +856,8 @@
     "fields": {
       "Agency/Department Name": "Ministry of Foreign Affairs (MFA)",
       "Agency Data Portal": "https://openaid.um.dk/",
-      "Country Name": "Denmark"
+      "Country Name": "Denmark",
+      "Agency Website": "https://um.dk"
     }
   },
   {
@@ -774,7 +865,15 @@
     "fields": {
       "Agency/Department Name": "Ministry of Foreign Affairs of the Netherlands (BZ / MFA)",
       "Agency Data Portal": "https://www.dutchdevelopmentresults.nl/",
-      "Country Name": "Netherlands"
+      "Country Name": "Netherlands",
+      "Agency Website": "https://www.government.nl/ministries/ministry-of-foreign-affairs"
+    }
+  },
+  {
+    "id": "recRorrcCX58qY4Vz",
+    "fields": {
+      "Agency/Department Name": "Special Trust Fund for Afghanistan",
+      "Country Name": "United Nations"
     }
   },
   {
@@ -796,14 +895,16 @@
     "fields": {
       "Agency/Department Name": "Swedish International Development Cooperation Agency (SIDA)",
       "Agency Data Portal": "https://openaid.se/en",
-      "Country Name": "Sweden"
+      "Country Name": "Sweden",
+      "Agency Website": "https://www.sida.se"
     }
   },
   {
     "id": "recSrpTHE0mGFNF65",
     "fields": {
       "Agency/Department Name": "Patrick J McGovern",
-      "Country Name": "Foundation"
+      "Country Name": "Foundation",
+      "Agency Website": "https://www.mcgovern.org/"
     }
   },
   {
@@ -824,14 +925,16 @@
     "id": "recTZoka2MXKUJae9",
     "fields": {
       "Agency/Department Name": "Mastercard Foundation",
-      "Country Name": "Foundation"
+      "Country Name": "Foundation",
+      "Agency Website": "https://mastercardfdn.org"
     }
   },
   {
     "id": "recUEOSvKGVMYEPqX",
     "fields": {
       "Agency/Department Name": "Alibaba Foundation",
-      "Country Name": "Foundation"
+      "Country Name": "Foundation",
+      "Agency Website": "https://foundation.alibaba.com/"
     }
   },
   {
@@ -839,14 +942,30 @@
     "fields": {
       "Agency/Department Name": "Research and Innovation",
       "Agency Data Portal": "https://www.ukri.org/",
-      "Country Name": "United Kingdom"
+      "Country Name": "United Kingdom",
+      "Agency Website": "https://www.ukri.org"
     }
   },
   {
     "id": "recULIEfSZxBrWWZb",
     "fields": {
       "Agency/Department Name": "United Nations Foundation",
-      "Country Name": "Foundation"
+      "Country Name": "Foundation",
+      "Agency Website": "https://unfoundation.org/"
+    }
+  },
+  {
+    "id": "recUVvEfG2sQPMIL2",
+    "fields": {
+      "Agency/Department Name": "Unspecified Agency",
+      "Country Name": "Haiti"
+    }
+  },
+  {
+    "id": "recV1ibMt85r3C1po",
+    "fields": {
+      "Agency/Department Name": "Unspecified Agency",
+      "Country Name": "Turkmenistan"
     }
   },
   {
@@ -867,7 +986,8 @@
     "id": "recV2AwepaAv4YAQ5",
     "fields": {
       "Agency/Department Name": "British Geological Survey / Natural Environment Research Council (BGS / NERC)",
-      "Country Name": "United Kingdom"
+      "Country Name": "United Kingdom",
+      "Agency Website": "https://www.bgs.ac.uk/"
     }
   },
   {
@@ -881,21 +1001,24 @@
     "id": "recVATdzFasrqxKp8",
     "fields": {
       "Agency/Department Name": "Geoscience Australia (GA)",
-      "Country Name": "Australia"
+      "Country Name": "Australia",
+      "Agency Website": "https://www.ga.gov.au/"
     }
   },
   {
     "id": "recVE024LgLeLUJPa",
     "fields": {
       "Agency/Department Name": "Research Council of Norway",
-      "Country Name": "Norway"
+      "Country Name": "Norway",
+      "Agency Website": "https://www.forskningsradet.no/"
     }
   },
   {
     "id": "recVOTd76hfvjPbjZ",
     "fields": {
       "Agency/Department Name": "The David and Lucile Packard Foundation",
-      "Country Name": "Foundation"
+      "Country Name": "Foundation",
+      "Agency Website": "https://www.packard.org"
     }
   },
   {
@@ -909,7 +1032,8 @@
     "id": "recW6C5J7pShpYbzy",
     "fields": {
       "Agency/Department Name": "Mo Ibrahim Foundation ",
-      "Country Name": "Foundation"
+      "Country Name": "Foundation",
+      "Agency Website": "https://mo.ibrahim.foundation/"
     }
   },
   {
@@ -923,7 +1047,8 @@
     "id": "recWYxrSapIaQ5C4r",
     "fields": {
       "Agency/Department Name": "Mackenzie Scott",
-      "Country Name": "Foundation"
+      "Country Name": "Foundation",
+      "Agency Website": "https://yieldgiving.com"
     }
   },
   {
@@ -942,6 +1067,13 @@
     }
   },
   {
+    "id": "recXLmyEQUasgoWQi",
+    "fields": {
+      "Agency/Department Name": "Unspecified Agency",
+      "Country Name": "Northern Ireland"
+    }
+  },
+  {
     "id": "recXfPKShGM1SGpOy",
     "fields": {
       "Agency/Department Name": "Unspecified Agency",
@@ -953,7 +1085,8 @@
     "fields": {
       "Agency/Department Name": "European Union Emergency Trust Fund for Africa (EUTF)",
       "Agency Data Portal": "https://trust-fund-for-africa.europa.eu/index_en",
-      "Country Name": "European Union"
+      "Country Name": "European Union",
+      "Agency Website": "https://ec.europa.eu/trustfundforafrica/"
     }
   },
   {
@@ -961,14 +1094,16 @@
     "fields": {
       "Agency/Department Name": "German Red Cross",
       "Agency Data Portal": "https://www.drk.de/en/home/",
-      "Country Name": "International Red Cross and Red Crescent Movement"
+      "Country Name": "International Red Cross and Red Crescent Movement",
+      "Agency Website": "https://www.drk.de"
     }
   },
   {
     "id": "recYN8kEljhzS3pU1",
     "fields": {
       "Agency/Department Name": "University of London (UoL)",
-      "Country Name": "United Kingdom"
+      "Country Name": "United Kingdom",
+      "Agency Website": "https://london.ac.uk"
     }
   },
   {
@@ -982,7 +1117,8 @@
     "id": "recYsM7K4yl3TSRdS",
     "fields": {
       "Agency/Department Name": "Islamic Development Bank",
-      "Country Name": "International Financial Institutions (IFIs)"
+      "Country Name": "International Financial Institutions (IFIs)",
+      "Agency Website": "https://www.isdb.org"
     }
   },
   {
@@ -990,14 +1126,16 @@
     "fields": {
       "Agency/Department Name": "Global Affairs Canada (GAC) / Department of Foreign Affairs, Trade and Development ",
       "Agency Data Portal": "Project Browser  International assistance projects funded by Global Affairs Canada https://w05.international.gc.ca/projectbrowser-banqueprojets/",
-      "Country Name": "Canada"
+      "Country Name": "Canada",
+      "Agency Website": "https://www.international.gc.ca"
     }
   },
   {
     "id": "recYzllcj9993Yqhj",
     "fields": {
       "Agency/Department Name": "Peruvian Agency for International Cooperation (APCI)",
-      "Country Name": "Peru"
+      "Country Name": "Peru",
+      "Agency Website": "https://www.apci.gob.pe/"
     }
   },
   {
@@ -1008,31 +1146,19 @@
     }
   },
   {
-    "id": "recZKv3PSLRBH6Lcn",
-    "fields": {
-      "Agency/Department Name": "Regular Budget",
-      "Country Name": "United Nations"
-    }
-  },
-  {
-    "id": "recZhO6FWRpXwUZhs",
-    "fields": {
-      "Agency/Department Name": "Asian Development Bank",
-      "Country Name": "International Financial Institutions (IFIs)"
-    }
-  },
-  {
     "id": "reca3vbLWS2MqtmnV",
     "fields": {
       "Agency/Department Name": "Jain Family Institute",
-      "Country Name": "Foundation"
+      "Country Name": "Foundation",
+      "Agency Website": "https://www.jainfamilyinstitute.org/"
     }
   },
   {
     "id": "reca4p0ohNjva2ein",
     "fields": {
       "Agency/Department Name": "International Development Cooperation Agency (CIDCA)",
-      "Country Name": "China"
+      "Country Name": "China",
+      "Agency Website": "http://en.cidca.gov.cn/"
     }
   },
   {
@@ -1053,7 +1179,23 @@
     "id": "recatUveyYdfEOdbu",
     "fields": {
       "Agency/Department Name": "INTPA: Directorate-General for International Partnerships",
-      "Country Name": "European Union"
+      "Country Name": "European Union",
+      "Agency Website": "https://international-partnerships.ec.europa.eu/"
+    }
+  },
+  {
+    "id": "recbNbkFaIuTW91WF",
+    "fields": {
+      "Agency/Department Name": "Unspecified Agency",
+      "Country Name": "Uruguay"
+    }
+  },
+  {
+    "id": "recbb4utGyxOC63ir",
+    "fields": {
+      "Agency/Department Name": "Multi-Partner Trust Fund Office (MPTFO)",
+      "Country Name": "United Nations",
+      "Agency Website": "https://mptf.undp.org/"
     }
   },
   {
@@ -1075,7 +1217,8 @@
     "fields": {
       "Agency/Department Name": "French Development Agency (AFD) ",
       "Agency Data Portal": "https://www.afd.fr/en/carte-des-projets-list",
-      "Country Name": "France"
+      "Country Name": "France",
+      "Agency Website": "https://www.afd.fr"
     }
   },
   {
@@ -1090,7 +1233,8 @@
     "fields": {
       "Agency/Department Name": "Bill and Melinda Gates Foundation",
       "Agency Data Portal": "https://www.gatesfoundation.org/about/committed-grants",
-      "Country Name": "Foundation"
+      "Country Name": "Foundation",
+      "Agency Website": "https://www.gatesfoundation.org"
     }
   },
   {
@@ -1098,7 +1242,16 @@
     "fields": {
       "Agency/Department Name": "Norwegian Agency for Development Cooperation (Norad)",
       "Agency Data Portal": "https://resultater.norad.no/en",
-      "Country Name": "Norway"
+      "Country Name": "Norway",
+      "Agency Website": "https://www.norad.no"
+    }
+  },
+  {
+    "id": "recbwIdbBpukye54E",
+    "fields": {
+      "Agency/Department Name": "Central Emergency Response Fund (CERF)",
+      "Country Name": "United Nations",
+      "Agency Website": "https://cerf.un.org/"
     }
   },
   {
@@ -1112,21 +1265,24 @@
     "id": "recdGZTDhjgGOhWJ5",
     "fields": {
       "Agency/Department Name": "Spanish Agency for International Development Cooperation (AECID)",
-      "Country Name": "Spain"
+      "Country Name": "Spain",
+      "Agency Website": "https://www.aecid.es/"
     }
   },
   {
     "id": "recdfJ8kc29BrRxi8",
     "fields": {
       "Agency/Department Name": "Tableau Foundation",
-      "Country Name": "Foundation"
+      "Country Name": "Foundation",
+      "Agency Website": "https://www.tableau.com/foundation"
     }
   },
   {
     "id": "recdtoV4UFwh3YJXi",
     "fields": {
       "Agency/Department Name": "Save the Children",
-      "Country Name": "Non-State Actor"
+      "Country Name": "Non-State Actor",
+      "Agency Website": "https://www.savethechildren.net/"
     }
   },
   {
@@ -1140,7 +1296,8 @@
     "id": "receDOQpfeb4YHc5p",
     "fields": {
       "Agency/Department Name": "Federal Agency for Cartography and Geodesy (BKG)",
-      "Country Name": "Germany"
+      "Country Name": "Germany",
+      "Agency Website": "https://www.bkg.bund.de"
     }
   },
   {
@@ -1148,7 +1305,15 @@
     "fields": {
       "Agency/Department Name": "Ministry of Foreign Affairs (MOFA)",
       "Agency Data Portal": "https://www.mofa.go.kr/eng/wpge/m_24811/contents.do",
-      "Country Name": "South Korea"
+      "Country Name": "South Korea",
+      "Agency Website": "https://www.mofa.go.kr"
+    }
+  },
+  {
+    "id": "recepqlLmGy61gFvB",
+    "fields": {
+      "Agency/Department Name": "Unspecified Agency",
+      "Country Name": "Argentina"
     }
   },
   {
@@ -1162,7 +1327,8 @@
     "id": "recf10RuM7qHUnC33",
     "fields": {
       "Agency/Department Name": "Ministry of Foreign Affairs (MFA)",
-      "Country Name": "Norway"
+      "Country Name": "Norway",
+      "Agency Website": "https://www.regjeringen.no/en/dep/ud/id833/"
     }
   },
   {
@@ -1183,14 +1349,16 @@
     "id": "recfP3UTNGJplFaiX",
     "fields": {
       "Agency/Department Name": "International Development Research Centre (IDRC)",
-      "Country Name": "Canada"
+      "Country Name": "Canada",
+      "Agency Website": "https://idrc-crdi.ca"
     }
   },
   {
     "id": "recfWcw0CdUs0STc3",
     "fields": {
       "Agency/Department Name": "Microsoft",
-      "Country Name": "Private Firm"
+      "Country Name": "Private Firm",
+      "Agency Website": "https://www.microsoft.com"
     }
   },
   {
@@ -1208,17 +1376,11 @@
     }
   },
   {
-    "id": "recfcRfSTQpgXOYdb",
-    "fields": {
-      "Agency/Department Name": "King Salman Humanitarian Aid and Relief FCentre (KSrelief)",
-      "Country Name": "Saudi Arabia"
-    }
-  },
-  {
     "id": "recgAR3TqI7vt3ypc",
     "fields": {
       "Agency/Department Name": "Ministry of Foreign and European Affairs, Defence, Development Cooperation and Foreign Trade ",
-      "Country Name": "Luxembourg"
+      "Country Name": "Luxembourg",
+      "Agency Website": "https://maee.gouvernement.lu"
     }
   },
   {
@@ -1229,35 +1391,40 @@
     "id": "rech10djtgHRF0JFS",
     "fields": {
       "Agency/Department Name": "Google.org",
-      "Country Name": "Foundation"
+      "Country Name": "Foundation",
+      "Agency Website": "https://www.google.org/"
     }
   },
   {
     "id": "reciQBMKhngwpZwbU",
     "fields": {
       "Agency/Department Name": "Action Against Hunger",
-      "Country Name": "Non-State Actor"
+      "Country Name": "Non-State Actor",
+      "Agency Website": "https://www.actionagainsthunger.org/"
     }
   },
   {
     "id": "reciWEHPYXviYoK02",
     "fields": {
       "Agency/Department Name": "Members States",
-      "Country Name": "European Union"
+      "Country Name": "European Union",
+      "Agency Website": "https://european-union.europa.eu/principles-countries-history/country-profiles_en"
     }
   },
   {
     "id": "recijkC90Oko1DOX7",
     "fields": {
       "Agency/Department Name": "Data Archive (UKDA)",
-      "Country Name": "United Kingdom"
+      "Country Name": "United Kingdom",
+      "Agency Website": "https://www.data-archive.ac.uk/"
     }
   },
   {
     "id": "recizeDfrqG6lA92A",
     "fields": {
       "Agency/Department Name": "European External Action Service (EEAS)",
-      "Country Name": "European Union"
+      "Country Name": "European Union",
+      "Agency Website": "https://eeas.europa.eu"
     }
   },
   {
@@ -1271,7 +1438,8 @@
     "id": "recjO2oFzfahtDqQf",
     "fields": {
       "Agency/Department Name": "Obama Foundation",
-      "Country Name": "Foundation"
+      "Country Name": "Foundation",
+      "Agency Website": "https://www.obama.org"
     }
   },
   {
@@ -1279,14 +1447,16 @@
     "fields": {
       "Agency/Department Name": "Ministry of Foreign Affairs and Trade (MFAT)",
       "Agency Data Portal": "https://www.mfat.govt.nz/",
-      "Country Name": "New Zealand"
+      "Country Name": "New Zealand",
+      "Agency Website": "https://www.mfat.govt.nz/"
     }
   },
   {
     "id": "recjiYJTFpNO2PDDl",
     "fields": {
       "Agency/Department Name": "National Aeronautics and Space Administration (NASA)",
-      "Country Name": "USA"
+      "Country Name": "USA",
+      "Agency Website": "https://www.nasa.gov/"
     }
   },
   {
@@ -1294,20 +1464,6 @@
     "fields": {
       "Agency/Department Name": "Unspecified Agency",
       "Country Name": "Ireland"
-    }
-  },
-  {
-    "id": "reck6RBjyLywXFgaZ",
-    "fields": {
-      "Agency/Department Name": "Unspecified Agency",
-      "Country Name": "Somalia"
-    }
-  },
-  {
-    "id": "reck9tUEQ0lipjF53",
-    "fields": {
-      "Agency/Department Name": "Susan Thompson Buffett Foundation",
-      "Country Name": "Foundation"
     }
   },
   {
@@ -1322,7 +1478,8 @@
     "fields": {
       "Agency/Department Name": "Inter-American Development Bank (IDB)",
       "Agency Data Portal": "https://www.iadb.org/en/projects",
-      "Country Name": "International Financial Institutions (IFIs)"
+      "Country Name": "International Financial Institutions (IFIs)",
+      "Agency Website": "https://www.iadb.org"
     }
   },
   {
@@ -1330,7 +1487,8 @@
     "fields": {
       "Agency/Department Name": "Wellcome Trust",
       "Agency Data Portal": "https://wellcome.org/",
-      "Country Name": "Foundation"
+      "Country Name": "Foundation",
+      "Agency Website": "https://wellcome.org"
     }
   },
   {
@@ -1338,14 +1496,23 @@
     "fields": {
       "Agency/Department Name": "National Science Foundation (NSF)",
       "Agency Data Portal": "https://www.nsf.gov/",
-      "Country Name": "USA"
+      "Country Name": "USA",
+      "Agency Website": "https://www.nsf.gov/"
     }
   },
   {
     "id": "recm5JztIHB9RUFLL",
     "fields": {
       "Agency/Department Name": "Japan International Cooperation Agency (JICA)",
-      "Country Name": "Japan"
+      "Country Name": "Japan",
+      "Agency Website": "https://www.jica.go.jp/"
+    }
+  },
+  {
+    "id": "recmMch0RxQrTSM1Z",
+    "fields": {
+      "Agency/Department Name": "Unspecified Agency",
+      "Country Name": "Greece"
     }
   },
   {
@@ -1359,14 +1526,24 @@
     "id": "recmfRjEvcAx7A1qT",
     "fields": {
       "Agency/Department Name": "Ministry of Defence of Norway (MoD)",
-      "Country Name": "Norway"
+      "Country Name": "Norway",
+      "Agency Website": "https://www.regjeringen.no/en/dep/fd/id380/"
     }
   },
   {
     "id": "recmiFKDpEY82nhw2",
     "fields": {
       "Agency/Department Name": "National Institute of Statistics and Information (INEI)",
-      "Country Name": "Peru"
+      "Country Name": "Peru",
+      "Agency Website": "https://www.inei.gob.pe/"
+    }
+  },
+  {
+    "id": "recmupKYrOU6hZbYx",
+    "fields": {
+      "Agency/Department Name": "Bloomberg Family Foundation",
+      "Country Name": "Foundation",
+      "Agency Website": "https://www.bloomberg.org/"
     }
   },
   {
@@ -1381,7 +1558,8 @@
     "fields": {
       "Agency/Department Name": "Department of Foreign Affairs (DFA)",
       "Agency Data Portal": "https://www.ireland.ie/en/dfa/",
-      "Country Name": "Ireland"
+      "Country Name": "Ireland",
+      "Agency Website": "https://www.dfa.ie/"
     }
   },
   {
@@ -1389,7 +1567,8 @@
     "fields": {
       "Agency/Department Name": "Italian Agency for Development Cooperation (AICS)",
       "Agency Data Portal": "https://www.aics.gov.it/",
-      "Country Name": "Italy"
+      "Country Name": "Italy",
+      "Agency Website": "https://www.aics.gov.it/"
     }
   },
   {
@@ -1407,13 +1586,6 @@
     }
   },
   {
-    "id": "recnzDLPx803fXQqf",
-    "fields": {
-      "Agency/Department Name": "Fund for Development",
-      "Country Name": "Qatar"
-    }
-  },
-  {
     "id": "reco4Um0k7Tgw2UCK",
     "fields": {
       "Agency/Department Name": "Unspecified Agency",
@@ -1424,14 +1596,16 @@
     "id": "recpBuvL2uHuENIu7",
     "fields": {
       "Agency/Department Name": "Silicon Valley Community Foundation",
-      "Country Name": "Foundation"
+      "Country Name": "Foundation",
+      "Agency Website": "https://www.siliconvalleycf.org/"
     }
   },
   {
     "id": "recpOiAVqOz4n7ROD",
     "fields": {
       "Agency/Department Name": "McKinsey & Company",
-      "Country Name": "Private Firm"
+      "Country Name": "Private Firm",
+      "Agency Website": "https://www.mckinsey.com/"
     }
   },
   {
@@ -1439,7 +1613,16 @@
     "fields": {
       "Agency/Department Name": "International Organization for Migration (IOM)",
       "Agency Data Portal": "https://www.iom.int/",
-      "Country Name": "United Nations"
+      "Country Name": "United Nations",
+      "Agency Website": "https://www.iom.int/"
+    }
+  },
+  {
+    "id": "recpoSWjCWxlFL5FM",
+    "fields": {
+      "Agency/Department Name": "Unspecified Firm",
+      "Country Name": "Private Firm",
+      "Agency Website": "https://thefirm.net/"
     }
   },
   {
@@ -1453,7 +1636,8 @@
     "id": "recq22wSlO1GrYUWb",
     "fields": {
       "Agency/Department Name": "Agencia Vasca de Cooperación para el Desarrollo / eLankidetza",
-      "Country Name": "Spain"
+      "Country Name": "Spain",
+      "Agency Website": "https://www.elankidetza.euskadi.eus/"
     }
   },
   {
@@ -1461,7 +1645,8 @@
     "fields": {
       "Agency/Department Name": "Economic and Social Research Council (ESRC)",
       "Agency Data Portal": "https://www.ukri.org/councils/esrc/",
-      "Country Name": "United Kingdom"
+      "Country Name": "United Kingdom",
+      "Agency Website": "https://esrc.ukri.org/"
     }
   },
   {
@@ -1476,7 +1661,8 @@
     "fields": {
       "Agency/Department Name": "Department of Homeland Security (DHS)",
       "Agency Data Portal": "https://www.dhs.gov/",
-      "Country Name": "USA"
+      "Country Name": "USA",
+      "Agency Website": "https://www.dhs.gov"
     }
   },
   {
@@ -1484,14 +1670,16 @@
     "fields": {
       "Agency/Department Name": "Howden Foundation",
       "Agency Data Portal": "https://www.howdengroupholdings.com/sustainability/howden-foundation",
-      "Country Name": "Foundation"
+      "Country Name": "Foundation",
+      "Agency Website": "https://www.howdenfoundation.com/"
     }
   },
   {
     "id": "recqR4fRvKwQsk54E",
     "fields": {
       "Agency/Department Name": "William and Flora Hewlett Foundation",
-      "Country Name": "Foundation"
+      "Country Name": "Foundation",
+      "Agency Website": "https://hewlett.org"
     }
   },
   {
@@ -1506,21 +1694,24 @@
     "fields": {
       "Agency/Department Name": "Rockefeller Foundation",
       "Agency Data Portal": "https://www.rockefellerfoundation.org/",
-      "Country Name": "Foundation"
+      "Country Name": "Foundation",
+      "Agency Website": "https://www.rockefellerfoundation.org/"
     }
   },
   {
     "id": "recr77XDSfR0O9Jen",
     "fields": {
       "Agency/Department Name": "World Health Organization (WHO)",
-      "Country Name": "United Nations"
+      "Country Name": "United Nations",
+      "Agency Website": "https://www.who.int/"
     }
   },
   {
     "id": "recrPlN870ayqI9dO",
     "fields": {
       "Agency/Department Name": "The Elma Relief Foundation",
-      "Country Name": "Foundation"
+      "Country Name": "Foundation",
+      "Agency Website": "https://www.elmaphilanthropies.org/relief"
     }
   },
   {
@@ -1534,7 +1725,8 @@
     "id": "recsjWjrgMK3lD6fw",
     "fields": {
       "Agency/Department Name": "Office for Project Services",
-      "Country Name": "United Nations"
+      "Country Name": "United Nations",
+      "Agency Website": "https://www.unops.org"
     }
   },
   {
@@ -1542,7 +1734,22 @@
     "fields": {
       "Agency/Department Name": "United Nations Development Programme (UNDP)",
       "Agency Data Portal": "https://open.undp.org/",
-      "Country Name": "United Nations"
+      "Country Name": "United Nations",
+      "Agency Website": "https://www.undp.org"
+    }
+  },
+  {
+    "id": "rectFh51oqrsA5MNt",
+    "fields": {
+      "Agency/Department Name": "Unspecified Agency",
+      "Country Name": "Panama"
+    }
+  },
+  {
+    "id": "rectSzxufPkXFlwvz",
+    "fields": {
+      "Agency/Department Name": "Unspecified Agency",
+      "Country Name": "Costa Rica"
     }
   },
   {
@@ -1592,6 +1799,21 @@
     "fields": {
       "Agency/Department Name": "United Nations Office for the Coordination of Humanitarian Affairs (OCHA)",
       "Agency Data Portal": "https://fts.unocha.org/",
+      "Country Name": "United Nations",
+      "Agency Website": "https://www.unocha.org"
+    }
+  },
+  {
+    "id": "recuO1xVySRT5V0No",
+    "fields": {
+      "Agency/Department Name": "Unspecified Agency",
+      "Country Name": "Dominica"
+    }
+  },
+  {
+    "id": "recuZhZb6X0EUx77m",
+    "fields": {
+      "Agency/Department Name": "Adaption Fund",
       "Country Name": "United Nations"
     }
   },
@@ -1613,14 +1835,16 @@
     "id": "recuh6VLNIOwuzoK4",
     "fields": {
       "Agency/Department Name": "Robert Bosch Foundation",
-      "Country Name": "Foundation"
+      "Country Name": "Foundation",
+      "Agency Website": "https://www.bosch-stiftung.de"
     }
   },
   {
     "id": "recut1KLw0povqx0k",
     "fields": {
       "Agency/Department Name": "National Administrative Department of Statistics",
-      "Country Name": "Colombia"
+      "Country Name": "Colombia",
+      "Agency Website": "https://www.dane.gov.co"
     }
   },
   {
@@ -1641,14 +1865,24 @@
     "id": "recvWXGo3NuHLKMUq",
     "fields": {
       "Agency/Department Name": "Oxfam",
-      "Country Name": "Non-State Actor"
+      "Country Name": "Non-State Actor",
+      "Agency Website": "https://www.oxfam.org"
     }
   },
   {
     "id": "recvapVp1Nk46rN3A",
     "fields": {
       "Agency/Department Name": "Service for Foreign Policy Instruments (FPI)",
-      "Country Name": "European Union"
+      "Country Name": "European Union",
+      "Agency Website": "https://fpi.ec.europa.eu"
+    }
+  },
+  {
+    "id": "recve1nnty9A4OgDx",
+    "fields": {
+      "Agency/Department Name": "European Investment Bank",
+      "Country Name": "European Union",
+      "Agency Website": "https://www.eib.org"
     }
   },
   {
@@ -1670,7 +1904,15 @@
     "id": "recwFMxuFEUJ4IK7S",
     "fields": {
       "Agency/Department Name": "Ministry of Foreign Affairs (MOFA)",
-      "Country Name": "Japan"
+      "Country Name": "Japan",
+      "Agency Website": "https://www.mofa.go.jp/"
+    }
+  },
+  {
+    "id": "recxgDm1Z8R7MHiTu",
+    "fields": {
+      "Agency/Department Name": "Unspecified Agency",
+      "Country Name": "Guatemala"
     }
   },
   {
@@ -1685,7 +1927,15 @@
     "fields": {
       "Agency/Department Name": "Ministry of Foreign Affairs (MOFA)",
       "Agency Data Portal": "https://www.llv.li/en/national-administration/office-for-foreign-affairs",
-      "Country Name": "Liechtenstein"
+      "Country Name": "Liechtenstein",
+      "Agency Website": "https://www.llv.li/"
+    }
+  },
+  {
+    "id": "recy2raH0hPZUfK4U",
+    "fields": {
+      "Agency/Department Name": "Unspecified Agency",
+      "Country Name": "Nigeria"
     }
   },
   {
@@ -1700,7 +1950,8 @@
     "fields": {
       "Agency/Department Name": "Swiss Agency for Development and Cooperation (SDC)",
       "Agency Data Portal": "https://www.eda.admin.ch/deza/en/home/projekte/projekte.html",
-      "Country Name": "Switzerland"
+      "Country Name": "Switzerland",
+      "Agency Website": "https://www.eda.admin.ch/deza/en/home.html"
     }
   },
   {
@@ -1708,7 +1959,8 @@
     "fields": {
       "Agency/Department Name": "Swiss National Science Foundation (SNSF)",
       "Agency Data Portal": "https://www.snf.ch/en",
-      "Country Name": "Switzerland"
+      "Country Name": "Switzerland",
+      "Agency Website": "https://www.snf.ch"
     }
   },
   {
@@ -1722,14 +1974,16 @@
     "id": "reczVinzR2nJZkVIG",
     "fields": {
       "Agency/Department Name": "State Secretariat for Education, Research and Innovation",
-      "Country Name": "Switzerland"
+      "Country Name": "Switzerland",
+      "Agency Website": "https://www.sbfi.admin.ch/"
     }
   },
   {
     "id": "recztWTqT6smaiZ3q",
     "fields": {
       "Agency/Department Name": "Centers for Disease Control and Prevention (CDC)",
-      "Country Name": "USA"
+      "Country Name": "USA",
+      "Agency Website": "https://www.cdc.gov"
     }
   }
 ]

@@ -16,12 +16,12 @@ interface ProjectModalProps {
     projectAgenciesMap?: Record<string, Record<string, string[]>>;
     onOpenOrganizationModal?: (orgKey: string) => void;
     onOpenProjectModal?: (projectKey: string) => void;
-    onDonorClick?: (country: string) => void;
+    onOpenDonorModal?: (country: string) => void;
     onTypeClick?: (type: string) => void;
     onThemeClick?: (theme: string) => void;
 }
 
-export default function ProjectModal({ project, allOrganizations, loading, projectAgenciesMap = {}, onOpenOrganizationModal, onOpenProjectModal, onDonorClick, onTypeClick, onThemeClick }: ProjectModalProps) {
+export default function ProjectModal({ project, allOrganizations, loading, projectAgenciesMap = {}, onOpenOrganizationModal, onOpenProjectModal, onOpenDonorModal, onTypeClick, onThemeClick }: ProjectModalProps) {
 
     const [themeToTypeMapping, setThemeToTypeMapping] = useState<Record<string, string>>({});
     const [themeDescriptions, setThemeDescriptions] = useState<Record<string, string>>({});
@@ -215,13 +215,13 @@ export default function ProjectModal({ project, allOrganizations, loading, proje
                         </div>
                         <div className="flex flex-wrap gap-2">
                             {supportingOrganizations.map(org => {
-                                // Use orgShortName if available, otherwise use organizationName
-                                const orgKey = org.orgShortName?.toLowerCase() || org.organizationName.toLowerCase();
+                                // Always use orgShortName (org_key field)
+                                const orgKey = org.orgKey;
                                 
                                 return (
                                     <button
                                         key={org.id}
-                                        onClick={() => onOpenOrganizationModal?.(orgKey)}
+                                        onClick={() => orgKey && onOpenOrganizationModal?.(orgKey)}
                                         className="inline-flex items-center w-full gap-1.5 px-3 py-1.5 rounded-md text-base font-medium transition-colors cursor-pointer text-left hover:opacity-80"
                                         style={{
                                             backgroundColor: 'var(--brand-bg-light)',
@@ -340,7 +340,7 @@ export default function ProjectModal({ project, allOrganizations, loading, proje
                                     <CountryBadge 
                                         key={index} 
                                         country={country} 
-                                        onClick={onDonorClick}
+                                        onClick={onOpenDonorModal}
                                         agencies={projAgencies[country]}
                                         tooltipContainer={tooltipContainer}
                                     />
@@ -355,7 +355,7 @@ export default function ProjectModal({ project, allOrganizations, loading, proje
                 </div>
 
                 {similarProjects.length > 0 && (
-                    <div className="mb-6">
+                    <div className="hidden mb-6">
                         <div className="mb-3 flex items-center gap-2">
                             <h3 className="text-xl font-roboto font-black text-[#333333] uppercase tracking-wide leading-normal">
                                 {labels.modals.similarProjects}
