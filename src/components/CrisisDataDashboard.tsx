@@ -24,7 +24,7 @@ import { getIconForInvestmentType } from '@/config/investmentTypeIcons';
 import { Building2, ChevronDown, ChevronRight, Database, Table, DatabaseBackup, FileDown, Filter, FolderDot, FolderOpenDot, Globe, Info, MessageCircle, RotateCcw, Search, Share2, ArrowUpDown, ArrowUpWideNarrow, ArrowDownWideNarrow, Network } from 'lucide-react';
 import organizationsTableRaw from '../../public/data/organizations-table.json';
 import nestedOrganizationsRaw from '../../public/data/organizations-nested.json';
-import { buildOrgDonorCountriesMap, buildOrgProjectsMap, buildProjectNameMap, buildProjectIdToKeyMap, buildOrgAgenciesMap, buildProjectAgenciesMap, buildProjectDescriptionMap, calculateOrganizationTypesFromOrganizationsWithProjects, getNestedOrganizationsForModals } from '../lib/data';
+import { buildOrgDonorCountriesMap, buildOrgDonorInfoMap, buildOrgProjectsMap, buildProjectNameMap, buildProjectIdToKeyMap, buildOrgAgenciesMap, buildOrgProjectDonorsMap, buildOrgProjectDonorAgenciesMap, buildProjectAgenciesMap, buildProjectDescriptionMap, calculateOrganizationTypesFromOrganizationsWithProjects, getNestedOrganizationsForModals } from '../lib/data';
 import { exportDashboardToPDF } from '../lib/exportPDF';
 import { exportViewAsCSV, exportViewAsXLSX } from '../lib/exportCSV';
 import { useTips } from '@/contexts/TipsContext';
@@ -131,7 +131,16 @@ interface StatCardProps {
 }
 
 const StatCard = React.memo(function StatCard({ icon, title, value, label, colorScheme, tooltip }: StatCardProps) {
-    const { tipsEnabled } = useTips();
+    // Get tips enabled state with fallback for SSR
+    let tipsEnabled = false;
+    try {
+        const tipsContext = useTips();
+        tipsEnabled = tipsContext.tipsEnabled;
+    } catch (e) {
+        // TipsProvider not available (e.g., during server-side rendering)
+        tipsEnabled = false;
+    }
+    
     const gradients = {
         amber: {
             bg: 'from-[var(--brand-bg-lighter)] to-[var(--brand-bg-light)]',
@@ -193,9 +202,11 @@ StatCard.displayName = 'StatCard';
 interface BadgeProps {
     text: string;
     variant: 'blue' | 'emerald' | 'violet' | 'slate' | 'highlighted' | 'beta' | 'types' | 'indigo';
+    className?: string;
+    title?: string;
 }
 
-const Badge = ({ text, variant }: BadgeProps) => {
+const Badge = ({ text, variant, className = '', title }: BadgeProps) => {
     const variants = {
         blue: 'bg-[var(--brand-bg-light)] text-[var(--brand-primary)]',
         emerald: 'bg-emerald-50 text-emerald-700',
@@ -211,11 +222,12 @@ const Badge = ({ text, variant }: BadgeProps) => {
     if (variant === 'beta') {
         return (
             <span
-                className="inline-flex items-center px-1.5 py-0.5 sm:px-2 sm:py-1 rounded text-[10px] sm:text-xs font-semibold break-words"
+                className={`inline-flex items-center px-1.5 py-0.5 sm:px-2 sm:py-1 rounded text-[10px] sm:text-xs font-semibold break-words ${className}`}
                 style={{
                     backgroundColor: 'var(--badge-beta-bg)',
                     color: 'var(--badge-beta-text)'
                 }}
+                title={title}
             >
                 {text}
             </span>
@@ -223,7 +235,10 @@ const Badge = ({ text, variant }: BadgeProps) => {
     }
 
     return (
-        <span className={`inline-flex items-center px-1.5 py-0.5 sm:px-2 sm:py-1 rounded text-[10px] sm:text-xs font-medium break-words ${variants[variant]}`}>
+        <span 
+            className={`inline-flex items-center px-1.5 py-0.5 sm:px-2 sm:py-1 rounded text-[10px] sm:text-xs font-medium break-words ${variants[variant]} ${className}`}
+            title={title}
+        >
             {text}
         </span>
     );
@@ -262,8 +277,15 @@ const CrisisDataDashboard = ({
     sortDirection,
     onSortChange
 }: CrisisDataDashboardProps) => {
-    // Get tips enabled state
-    const { tipsEnabled } = useTips();
+    // Get tips enabled state with fallback for SSR
+    let tipsEnabled = false;
+    try {
+        const tipsContext = useTips();
+        tipsEnabled = tipsContext.tipsEnabled;
+    } catch (e) {
+        // TipsProvider not available (e.g., during server-side rendering)
+        tipsEnabled = false;
+    }
     
     // UI state (not related to routing)
     const [expandedOrgs, setExpandedOrgs] = useState<Set<string>>(new Set());
@@ -440,7 +462,10 @@ const CrisisDataDashboard = ({
     const [projectDescriptionMap, setProjectDescriptionMap] = useState<Record<string, string>>({});
     const [orgProjectsMap, setOrgProjectsMap] = useState<Record<string, Array<{ id: string; investmentTypes: string[] }>>>({});
     const [orgDonorCountriesMap, setOrgDonorCountriesMap] = useState<Record<string, string[]>>({});
+    const [orgDonorInfoMap, setOrgDonorInfoMap] = useState<Record<string, import('@/types/airtable').DonorInfo[]>>({});
     const [orgAgenciesMap, setOrgAgenciesMap] = useState<Record<string, Record<string, string[]>>>({});
+    const [orgProjectDonorsMap, setOrgProjectDonorsMap] = useState<Record<string, Record<string, string[]>>>({});
+    const [orgProjectDonorAgenciesMap, setOrgProjectDonorAgenciesMap] = useState<Record<string, Record<string, Record<string, string[]>>>>({});
     const [projectAgenciesMap, setProjectAgenciesMap] = useState<Record<string, Record<string, string[]>>>({});
 
     // Load nested organization data for modal maps
@@ -454,9 +479,12 @@ const CrisisDataDashboard = ({
                 setProjectDescriptionMap(buildProjectDescriptionMap(nestedOrgs));
                 setOrgProjectsMap(buildOrgProjectsMap(nestedOrgs));
                 setOrgDonorCountriesMap(buildOrgDonorCountriesMap(nestedOrgs));
+                setOrgDonorInfoMap(buildOrgDonorInfoMap(nestedOrgs));
                 
                 // Build org and project-specific agencies maps
                 setOrgAgenciesMap(buildOrgAgenciesMap(nestedOrgs));
+                setOrgProjectDonorsMap(buildOrgProjectDonorsMap(nestedOrgs));
+                setOrgProjectDonorAgenciesMap(buildOrgProjectDonorAgenciesMap(nestedOrgs));
                 setProjectAgenciesMap(buildProjectAgenciesMap(nestedOrgs));
             } catch (error) {
                 console.error('Error loading modal data:', error);
@@ -534,10 +562,10 @@ const CrisisDataDashboard = ({
     const selectedOrganization = useMemo(() => {
         if (!selectedOrgKey || !nestedOrganizations.length) return null;
         
-        // Look up by Org Short Name using URL slug matching (handles lowercase with dashes)
+        // Look up by org_key using URL slug matching (handles lowercase with dashes)
         const nestedOrg = nestedOrganizations.find((org: any) => {
-            const orgShortName = org.fields?.['Org Short Name'];
-            return orgShortName && matchesUrlSlug(selectedOrgKey, orgShortName);
+            const orgKey = org.fields?.['org_key'];
+            return orgKey && matchesUrlSlug(selectedOrgKey, orgKey);
         });
         
         if (!nestedOrg) return null;
@@ -1161,11 +1189,11 @@ const CrisisDataDashboard = ({
                                                                                     className="font-medium text-slate-900 cursor-pointer transition-colors hover:text-[var(--brand-primary)] text-sm sm:text-base"
                                                                                     onClick={e => {
                                                                                         e.stopPropagation();
-                                                                                        // Get Org Short Name from nested organizations data (used for lookup in selectedOrganization)
+                                                                                        // Get org_key from nested organizations data
                                                                                         const nestedOrg = nestedOrganizations.find(n => n.id === org.id);
-                                                                                        const orgShortName = nestedOrg?.fields?.['Org Short Name'];
-                                                                                        if (orgShortName) {
-                                                                                            onOpenOrganizationModal(orgShortName.toLowerCase());
+                                                                                        const orgKey = nestedOrg?.fields?.['org_key'];
+                                                                                        if (orgKey) {
+                                                                                            onOpenOrganizationModal(orgKey);
                                                                                         }
                                                                                     }}
                                                                                 >
@@ -1193,16 +1221,26 @@ const CrisisDataDashboard = ({
                                                                                 {(() => {
                                                                                     const isCountriesExpanded = expandedCountries.has(org.id);
 
-                                                                                    // Deduplicate countries first
-                                                                                    const uniqueCountries = Array.from(new Set(org.donorCountries)) as string[];
-                                                                                    // Sort countries: selected donors first, then others alphabetically
-                                                                                    let sortedCountries = [...uniqueCountries];
-                                                                                    if (combinedDonors.length > 0) {
-                                                                                        sortedCountries = [
-                                                                                            ...uniqueCountries.filter((c: string) => combinedDonors.includes(c)),
-                                                                                            ...uniqueCountries.filter((c: string) => !combinedDonors.includes(c)).sort()
-                                                                                        ];
-                                                                                    }
+                                                                                    // Use donorInfo instead of donorCountries to include project-only donors
+                                                                                    const donorInfo = org.donorInfo || [];
+                                                                                    
+                                                                                    // Sort donors: selected + org-level first, then others
+                                                                                    const sortedDonors = [...donorInfo].sort((a, b) => {
+                                                                                        const aIsSelected = combinedDonors.includes(a.country);
+                                                                                        const bIsSelected = combinedDonors.includes(b.country);
+                                                                                        
+                                                                                        // Selected donors first
+                                                                                        if (aIsSelected && !bIsSelected) return -1;
+                                                                                        if (!aIsSelected && bIsSelected) return 1;
+                                                                                        
+                                                                                        // Then org-level donors before project-only
+                                                                                        if (a.isOrgLevel && !b.isOrgLevel) return -1;
+                                                                                        if (!a.isOrgLevel && b.isOrgLevel) return 1;
+                                                                                        
+                                                                                        // Finally alphabetically
+                                                                                        return a.country.localeCompare(b.country);
+                                                                                    });
+                                                                                    
                                                                                     // Dynamic country limit based on available space
                                                                                     const calculateCollapsedLimit = () => {
                                                                                         // Estimate available space (characters) - mobile vs desktop
@@ -1213,12 +1251,12 @@ const CrisisDataDashboard = ({
                                                                                         let totalChars = 0;
                                                                                         let countriesToShow = [];
                                                                                         
-                                                                                        for (const country of sortedCountries) {
+                                                                                        for (const donor of sortedDonors) {
                                                                                             // Estimate badge size: country name + padding/margins (roughly +8 chars)
-                                                                                            const estimatedSize = country.length + 8;
+                                                                                            const estimatedSize = donor.country.length + 8;
                                                                                             
                                                                                             if (totalChars + estimatedSize <= maxChars) {
-                                                                                                countriesToShow.push(country);
+                                                                                                countriesToShow.push(donor);
                                                                                                 totalChars += estimatedSize;
                                                                                             } else {
                                                                                                 break;
@@ -1230,18 +1268,22 @@ const CrisisDataDashboard = ({
                                                                                     };
                                                                                     
                                                                                     const maxCountriesToShowCollapsed = calculateCollapsedLimit();
-                                                                                    const countriesToShow = isCountriesExpanded ? sortedCountries : sortedCountries.slice(0, maxCountriesToShowCollapsed);
+                                                                                    const donorsToShow = isCountriesExpanded ? sortedDonors : sortedDonors.slice(0, maxCountriesToShowCollapsed);
 
                                                                                     return (
                                                                                         <>
-                                                                                            {countriesToShow.map((country: string, idx: number) => (
+                                                                                            {donorsToShow.map((donor, idx: number) => (
                                                                                                 <Badge
                                                                                                     key={idx}
-                                                                                                    text={country}
-                                                                                                    variant={combinedDonors.includes(country) ? 'blue' : 'slate'}
+                                                                                                    text={donor.country}
+                                                                                                    variant={combinedDonors.includes(donor.country) ? 'blue' : 'slate'}
+                                                                                                    className={donor.isOrgLevel ? '' : 'opacity-50'}
+                                                                                                    title={donor.isOrgLevel 
+                                                                                                        ? `${donor.country} (Organization Donor)` 
+                                                                                                        : `${donor.country} (Project-Only Donor)`}
                                                                                                 />
                                                                                             ))}
-                                                                                            {sortedCountries.length > maxCountriesToShowCollapsed && !isCountriesExpanded && (
+                                                                                            {sortedDonors.length > maxCountriesToShowCollapsed && !isCountriesExpanded && (
                                                                                                 <div
                                                                                                     onClick={(e) => {
                                                                                                         e.stopPropagation();
@@ -1251,10 +1293,10 @@ const CrisisDataDashboard = ({
                                                                                                     }}
                                                                                                     className="inline-flex items-center px-2 py-1 rounded-md text-xs font-medium bg-slate-000 text-slate-900 hover:bg-slate-100 transition-colors cursor-pointer"
                                                                                                 >
-                                                                                                    +{sortedCountries.length - maxCountriesToShowCollapsed} {labels.filters.showMore}
+                                                                                                    +{sortedDonors.length - maxCountriesToShowCollapsed} {labels.filters.showMore}
                                                                                                 </div>
                                                                                             )}
-                                                                                            {isCountriesExpanded && sortedCountries.length > maxCountriesToShowCollapsed && (
+                                                                                            {isCountriesExpanded && sortedDonors.length > maxCountriesToShowCollapsed && (
                                                                                                 <div
                                                                                                     onClick={(e) => {
                                                                                                         e.stopPropagation();
@@ -1281,9 +1323,9 @@ const CrisisDataDashboard = ({
                                                                             onClick={(e) => {
                                                                                 e.stopPropagation();
                                                                                 const nestedOrg = nestedOrganizations.find((n) => n.id === org.id);
-                                                                                const orgShortName = nestedOrg?.fields?.['Org Short Name'];
-                                                                                if (orgShortName) {
-                                                                                    onOpenOrganizationModal(orgShortName.toLowerCase());
+                                                                                const orgKey = nestedOrg?.fields?.['org_key'];
+                                                                                if (orgKey) {
+                                                                                    onOpenOrganizationModal(orgKey);
                                                                                 }
                                                                             }}
                                                                                 className="hidden sm:inline-flex items-center justify-center gap-1 text-[10px] h-6 px-2 rounded-md text-[var(--badge-slate-bg)] bg-[var(--badge-slate-text)] hover:bg-slate-400 duration-150"
@@ -1296,10 +1338,10 @@ const CrisisDataDashboard = ({
                                                                         <div className="text-xs sm:text-xs text-slate-400 whitespace-nowrap">
                                                                             {org.projects.length > 0 ? (
                                                                                 isExpanded ?
-                                                                                    `Showing ${org.projects.length} Asset${org.projects.length === 1 ? '' : 's'}` :
-                                                                                    `Show ${org.projects.length} Asset${org.projects.length === 1 ? '' : 's'}`
+                                                                                    `Showing ${org.projects.length} asset${org.projects.length === 1 ? '' : 's'}` :
+                                                                                    `Show ${org.projects.length} asset${org.projects.length === 1 ? '' : 's'}`
                                                                             ) : (
-                                                                                `${org.projects.length} Asset${org.projects.length === 1 ? '' : 's'}`
+                                                                                `${org.projects.length} asset${org.projects.length === 1 ? '' : 's'}`
                                                                             )}
                                                                         </div>
                                                                     </div>
@@ -1518,7 +1560,7 @@ const CrisisDataDashboard = ({
                     projectAgenciesMap={projectAgenciesMap}
                     onOpenOrganizationModal={onOpenOrganizationModal}
                     onOpenProjectModal={onOpenProjectModal}
-                    onDonorClick={onDonorClick}
+                    onOpenDonorModal={onOpenDonorModal}
                     onTypeClick={onTypeClick}
                     onThemeClick={onThemeClick}
                 />
@@ -1550,11 +1592,14 @@ const CrisisDataDashboard = ({
                             projectDescriptionMap={projectDescriptionMap}
                             orgProjectsMap={orgProjectsMap}
                             orgDonorCountriesMap={orgDonorCountriesMap}
+                            orgDonorInfoMap={orgDonorInfoMap}
                             orgAgenciesMap={orgAgenciesMap}
+                            orgProjectDonorsMap={orgProjectDonorsMap}
+                            orgProjectDonorAgenciesMap={orgProjectDonorAgenciesMap}
                             loading={false}
                             onOpenProjectModal={onOpenProjectModal}
                             projectIdToKeyMap={projectIdToKeyMap}
-                            onDonorClick={onDonorClick}
+                            onOpenDonorModal={onOpenDonorModal}
                             onTypeClick={onTypeClick}
                         />
                     );
