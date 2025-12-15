@@ -8,7 +8,8 @@ import FilterBar from '@/components/FilterBar';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { Tooltip as TooltipUI, TooltipContent, TooltipProvider, TooltipTrigger } from '@/components/ui/tooltip';
-import { Globe, Search, Filter, ChevronDown, Building2, Database, BarChart3, Network, GitBranch, Users, Target, SearchCheck, LayoutGrid, Columns } from 'lucide-react';
+import { Globe, Search, Filter, ChevronDown, Building2, Database, BarChart3, Network, GitBranch, Users, Target, SearchCheck, LayoutGrid, Columns, Radar as RadarIcon } from 'lucide-react';
+import { Radar, RadarChart, PolarGrid, PolarAngleAxis, PolarRadiusAxis, ResponsiveContainer, Legend } from 'recharts';
 import { SectionHeader } from './SectionHeader';
 import { useTips } from '@/contexts/TipsContext';
 import { toUrlSlug, matchesUrlSlug } from '@/lib/urlShortcuts';
@@ -178,7 +179,7 @@ export default function AnalyticsPage({ logoutButton }: AnalyticsPageProps) {
     const [appliedSearchQuery, setAppliedSearchQuery] = useState('');
     const [isInitialized, setIsInitialized] = useState(false);
     const [hoveredCell, setHoveredCell] = useState<{ donor1: string; donor2: string } | null>(null);
-    const [matrixViewMode, setMatrixViewMode] = useState<'unified' | 'split'>('unified');
+    const [matrixViewMode, setMatrixViewMode] = useState<'unified' | 'split'>('split');
     
     // Load filter state from URL on mount
     useEffect(() => {
@@ -1205,6 +1206,107 @@ export default function AnalyticsPage({ logoutButton }: AnalyticsPageProps) {
         };
     }, [filteredOrganizationsData, selectedDonors, investmentTypes, investmentThemes, appliedSearchQuery, organizationsData]);
 
+    // Calculate investment type distribution for each selected donor (for radar chart)
+    const donorInvestmentFocus = useMemo(() => {
+        if (selectedDonors.length === 0 || organizationsData.length === 0) return [];
+        
+        const investmentTypeCounts: { [donor: string]: { [type: string]: number } } = {};
+        
+        // Initialize donor investment tracking
+        selectedDonors.forEach(donor => {
+            investmentTypeCounts[donor] = {};
+        });
+        
+        // Traverse organizations and count investment types per donor
+        organizationsData.forEach(org => {
+            // Check if org passes filters
+            let orgPassesFilters = true;
+            if (appliedSearchQuery) {
+                const query = appliedSearchQuery.toLowerCase().trim();
+                const orgNameLower = (org.name || org.fields?.['Organization Name'] || '').toLowerCase();
+                const orgType = (org.fields?.['Org Type'] || '').toString().toLowerCase();
+                if (!orgNameLower.includes(query) && !orgType.includes(query)) {
+                    orgPassesFilters = false;
+                }
+            }
+            
+            if (orgPassesFilters && (investmentTypes.length > 0 || investmentThemes.length > 0)) {
+                const hasMatchingProject = org.projects?.some(project => {
+                    if (investmentTypes.length > 0) {
+                        const projectTypes = project.fields?.['Investment Type(s)'] || [];
+                        const matchesType = Array.isArray(projectTypes) && projectTypes.some(type =>
+                            investmentTypes.some(filterType =>
+                                type.toLowerCase().includes(filterType.toLowerCase()) ||
+                                filterType.toLowerCase().includes(type.toLowerCase())
+                            )
+                        );
+                        if (!matchesType) return false;
+                    }
+                    
+                    if (investmentThemes.length > 0) {
+                        const projectThemes = project.fields?.['Investment Theme(s)'] || [];
+                        const matchesTheme = Array.isArray(projectThemes) && projectThemes.some(theme =>
+                            investmentThemes.some(filterTheme =>
+                                typeof theme === 'string' &&
+                                theme.toLowerCase().trim() === filterTheme.toLowerCase().trim()
+                            )
+                        );
+                        if (!matchesTheme) return false;
+                    }
+                    
+                    return true;
+                });
+                
+                orgPassesFilters = hasMatchingProject || false;
+            }
+            
+            if (!orgPassesFilters) return;
+            
+            // Process projects and count investment types per selected donor
+            if (org.projects && Array.isArray(org.projects)) {
+                org.projects.forEach(project => {
+                    const projectTypes = project.fields?.['Investment Type(s)'] || [];
+                    const projectAgencies = project.agencies || [];
+                    
+                    if (Array.isArray(projectTypes) && projectAgencies.length > 0) {
+                        projectAgencies.forEach((agency: any) => {
+                            const donorCountry = agency.fields?.['Country Name'];
+                            if (donorCountry && selectedDonors.includes(donorCountry)) {
+                                projectTypes.forEach((type: any) => {
+                                    if (typeof type === 'string' && type.trim()) {
+                                        if (!investmentTypeCounts[donorCountry][type]) {
+                                            investmentTypeCounts[donorCountry][type] = 0;
+                                        }
+                                        investmentTypeCounts[donorCountry][type]++;
+                                    }
+                                });
+                            }
+                        });
+                    }
+                });
+            }
+        });
+        
+        // Get all unique investment types across selected donors
+        const allTypes = new Set<string>();
+        selectedDonors.forEach(donor => {
+            Object.keys(investmentTypeCounts[donor]).forEach(type => allTypes.add(type));
+        });
+        
+        const sortedTypes = Array.from(allTypes).sort();
+        
+        // Transform to radar chart format
+        const radarData = sortedTypes.map(type => {
+            const entry: any = { name: type };
+            selectedDonors.forEach(donor => {
+                entry[donor] = investmentTypeCounts[donor][type] || 0;
+            });
+            return entry;
+        });
+        
+        return radarData;
+    }, [selectedDonors, organizationsData, investmentTypes, investmentThemes, appliedSearchQuery]);
+
     const handleShare = () => {
         const url = window.location.href;
         navigator.clipboard.writeText(url).then(() => {
@@ -1669,6 +1771,79 @@ export default function AnalyticsPage({ logoutButton }: AnalyticsPageProps) {
                             )}
                         </CardContent>
                     </Card>
+
+                    {/* Investment Focus Radar Chart */}
+                    {selectedDonors.length > 0 && donorInvestmentFocus.length > 0 && (
+                        <Card className="!border-0 bg-white">
+                            <CardHeader>
+                                <CardTitle>
+                                    <SectionHeader 
+                                        icon={<RadarIcon style={{ color: 'var(--brand-primary)' }} />}
+                                        title="Investment Focus by Donor"
+                                    />
+                                </CardTitle>
+                                <CardDescription className="text-xs sm:text-sm">
+                                    Investment type distribution for selected donors
+                                </CardDescription>
+                            </CardHeader>
+                            <CardContent className="pt-2">
+                                <div className="w-full h-80 sm:h-96">
+                                    <ResponsiveContainer width="100%" height="100%">
+                                        <RadarChart data={donorInvestmentFocus}>
+                                            <PolarGrid 
+                                                stroke="var(--border-color)" 
+                                                strokeDasharray="3 3"
+                                                style={{ opacity: 0.3 }}
+                                            />
+                                            <PolarAngleAxis 
+                                                dataKey="name"
+                                                tick={{ fontSize: 12, fill: 'var(--text-secondary)' }}
+                                                angle={90}
+                                                type="category"
+                                            />
+                                            <PolarRadiusAxis 
+                                                angle={90}
+                                                domain={[0, 'auto']}
+                                                tick={{ fontSize: 11, fill: 'var(--text-secondary)' }}
+                                            />
+                                            {selectedDonors.map((donor, index) => {
+                                                const colors = [
+                                                    'var(--brand-primary)',
+                                                    'var(--brand-secondary)',
+                                                    '#8b5cf6',
+                                                    '#ec4899',
+                                                    '#f59e0b',
+                                                    '#10b981',
+                                                    '#06b6d4',
+                                                ];
+                                                const color = colors[index % colors.length];
+                                                return (
+                                                    <Radar
+                                                        key={donor}
+                                                        name={donor}
+                                                        dataKey={donor}
+                                                        stroke={color}
+                                                        fill={color}
+                                                        fillOpacity={0.25}
+                                                        isAnimationActive={false}
+                                                    />
+                                                );
+                                            })}
+                                            <Legend 
+                                                wrapperStyle={{ paddingTop: '20px' }}
+                                                verticalAlign="bottom"
+                                                height={36}
+                                                formatter={(value) => <span style={{ fontSize: '12px' }}>{value}</span>}
+                                            />
+                                        </RadarChart>
+                                    </ResponsiveContainer>
+                                </div>
+                                <p className="text-xs text-slate-500 mt-4 pt-2 border-t border-slate-100">
+                                    Each axis represents an investment type. The size of the shape indicates the number of projects financed by that donor in that type.
+                                </p>
+                            </CardContent>
+                        </Card>
+                    )}
                     
                     {/* Charts Row */}
                     <div className={`${selectedDonors.length === 0 ? 'hidden' : ''} grid grid-cols-1 lg:grid-cols-2 gap-4`}>
