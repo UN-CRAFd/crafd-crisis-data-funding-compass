@@ -3,7 +3,7 @@
 import { Button } from '@/components/ui/button';
 import { TooltipContent, TooltipProvider, Tooltip as TooltipUI, TooltipTrigger } from '@/components/ui/tooltip';
 import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuTrigger } from '@/components/ui/dropdown-menu';
-import { ChevronDown, FileDown, Info, MessageCircle, Share2, Menu, Lightbulb, LogOut } from 'lucide-react';
+import { ChevronDown, FileDown, Info, MessageCircle, Share2, Menu, Lightbulb, LogOut, Home, BarChart3, BookOpen } from 'lucide-react';
 import { useTips } from '@/contexts/TipsContext';
 import labels from '@/config/labels.json';
 import Link from 'next/link';
@@ -97,13 +97,14 @@ export default function PageHeader({
                             variant="outline"
                             size="sm"
                             onClick={() => window.open('https://airtable.com/apprObB2AsvMwfAAl/pagcre1SPjT0nJxa4/form', '_blank')}
-                            className="bg-slate-50/50 border-slate-200 hover:var(--brand-bg-light) hover:border-[var(--brand-primary)] hover:text-[var(--brand-primary)] text-xs sm:text-sm"
+                            className="bg-transparent border-b-2 border-transparent rounded-t-md text-xs sm:text-sm px-3 py-1 text-slate-700 hover:text-slate-900 transition"
                             title={labels.header.feedbackTooltip}
                         >
                             <MessageCircle className="w-4 h-4 sm:mr-2" />
                             <span className="hidden sm:inline">{labels.header.feedbackButton}</span>
                         </Button>
-                        
+                        <div className="hidden sm:block w-px h-8 bg-slate-200"></div>
+
                         {/* Export Dropdown - only show on dashboard */}
                         {pathname === '/' && onExportCSV && onExportXLSX && (
                             <DropdownMenu onOpenChange={onExportMenuChange}>
@@ -112,7 +113,7 @@ export default function PageHeader({
                                         variant="outline"
                                         size="sm"
                                         disabled={csvExportLoading || xlsxExportLoading || pdfExportLoading}
-                                        className="hidden sm:flex bg-slate-50/50 border-slate-200 hover:var(--brand-bg-light) hover:border-[var(--brand-primary)] hover:text-[var(--brand-primary)] text-xs sm:text-sm"
+                                        className="hidden sm:flex bg-transparent border-b-2 border-transparent rounded-t-md text-xs sm:text-sm px-3 py-1 text-slate-700 hover:text-slate-900 transition"
                                         title="Export current view"
                                     >
                                         <FileDown className="w-4 h-4 sm:mr-2" />
@@ -149,16 +150,16 @@ export default function PageHeader({
                                 </DropdownMenuContent>
                             </DropdownMenu>
                         )}
-                        
+                        <div className="hidden sm:block w-px h-8 bg-slate-200"></div>
                         {/* Share Button */}
                         {onShare && (
                             <Button
                                 variant="outline"
                                 size="sm"
                                 onClick={onShare}
-                                className={`bg-slate-50/50 border-slate-200 hover:var(--brand-bg-light) hover:border-[var(--brand-primary)] hover:text-[var(--brand-primary)] text-xs sm:text-sm ${shareSuccess
+                                className={`bg-transparent border-b-2 border-transparent rounded-t-md text-xs sm:text-sm px-3 py-1 text-slate-700 hover:text-slate-900 transition ${shareSuccess
                                     ? 'text-white border-[var(--color-success)] bg-[var(--color-success)] hover:bg-[var(--color-success-hover)] hover:text-slate-100 hover:border-[var(--color-success-hover)]'
-                                    : 'hover:var(--brand-bg-light)'
+                                    : ''
                                     }`}
                                 style={shareSuccess ? { backgroundColor: 'var(--color-success)' } : {}}
                                 title={labels.ui.copyToClipboard}
@@ -167,14 +168,17 @@ export default function PageHeader({
                                 <span className="hidden sm:inline">{shareSuccess ? labels.header.shareButtonSuccess : labels.header.shareButton}</span>
                             </Button>
                         )}
-
+                        
+                    {/* Vertical line separator */}
+                        <div className="hidden sm:block w-px h-8 bg-slate-200"></div>
+                        
                         {/* Page Navigation Menu - Rightmost */}
                         <DropdownMenu>
                             <DropdownMenuTrigger asChild>
                                 <Button
                                     variant="outline"
                                     size="sm"
-                                    className="bg-slate-50/50 border-slate-200 hover:var(--brand-bg-light) hover:border-[var(--brand-primary)] hover:text-[var(--brand-primary)] text-xs sm:text-sm"
+                                    className="bg-transparent border-b-2 border-transparent rounded-t-md text-xs sm:text-sm px-3 py-1 text-slate-700 hover:text-slate-900 transition"
                                     title="Navigation"
                                 >
                                     <Menu className="w-4 h-4" />
@@ -194,7 +198,10 @@ export default function PageHeader({
                                     }}
                                     className={`cursor-pointer text-sm py-2 px-2 ${pathname === '/' ? 'bg-slate-100' : ''}`}
                                 >
-                                    <span className={pathname === '/' ? '!font-bold' : ''}>{labels.header.dashboard}</span>
+                                    <div className="flex items-center">
+                                        <Home className="w-3 h-3 mr-2 text-slate-600" />
+                                        <span className={pathname === '/' ? '!font-bold' : ''}>{labels.header.dashboard}</span>
+                                    </div>
                                 </DropdownMenuItem>
                                 <DropdownMenuItem 
                                     onClick={() => {
@@ -204,13 +211,19 @@ export default function PageHeader({
                                     }}
                                     className={`cursor-pointer text-sm py-2 px-2 ${pathname === '/analytics' || pathname === '/analytics/' ? 'bg-slate-100' : ''}`}
                                 >
-                                    <span className={pathname === '/analytics' || pathname === '/analytics/' ? '!font-bold' : ''}>Analytics</span>
+                                    <div className="flex items-center">
+                                        <BarChart3 className="w-3 h-3 mr-2 text-slate-600" />
+                                        <span className={pathname === '/analytics' || pathname === '/analytics/' ? '!font-bold' : ''}>Analytics</span>
+                                    </div>
                                 </DropdownMenuItem>
                                 <DropdownMenuItem 
                                     onClick={() => router.push('/methodology/')}
                                     className={`cursor-pointer text-sm py-2 px-2 ${pathname === '/methodology/' ? 'bg-slate-100' : ''}`}
                                 >
-                                    <span className={pathname === '/methodology/' ? '!font-bold' : ''}>{labels.header.methodology}</span>
+                                    <div className="flex items-center">
+                                        <BookOpen className="w-3 h-3 mr-2 text-slate-600" />
+                                        <span className={pathname === '/methodology/' ? '!font-bold' : ''}>{labels.header.methodology}</span>
+                                    </div>
                                 </DropdownMenuItem>
 
                                 {/* Settings block: Tips toggle + placeholder action */}
