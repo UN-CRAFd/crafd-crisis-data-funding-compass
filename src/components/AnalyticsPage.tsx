@@ -1579,6 +1579,7 @@ export default function AnalyticsPage({ logoutButton }: AnalyticsPageProps) {
                                                                     key={donor2}
                                                                     onMouseEnter={() => !isDiagonal && setHoveredCell({ donor1, donor2 })}
                                                                     onMouseLeave={() => setHoveredCell(null)}
+                                                                    onClick={() => !isDiagonal && count > 0 && handleCellClick(donor1, donor2)}
                                                                     className={`p-3 text-center text-sm font-semibold border border-slate-200 transition-all ${colorClass} ${!isDiagonal && count > 0 ? 'cursor-pointer hover:opacity-75' : ''}`}
                                                                 >
                                                                     {isDiagonal && showDiagonalContext ? diagonalCount : isDiagonal ? '—' : count}
