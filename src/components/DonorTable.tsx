@@ -289,7 +289,7 @@ export const DonorTable: React.FC<DonorTableProps> = ({
                                             className="transition-all duration-500 ease-out"
                                         >
                                             <CollapsibleTrigger className="w-full">
-                                                <div className="flex flex-col sm:flex-row sm:justify-between p-3 sm:p-4 hover:bg-slate-100/70 rounded-lg border border-slate-100 bg-white/50 animate-in fade-in gap-3 sm:gap-0 cursor-pointer">
+                                                <div className="flex flex-col sm:flex-row sm:justify-between p-4 sm:p-5 hover:bg-slate-100/70 rounded-lg border border-slate-100 bg-white/50 animate-in fade-in gap-3 sm:gap-0 cursor-pointer">
                                                     <div className="flex items-center space-x-3 flex-1">
                                                         <div className="w-4 h-4 flex-shrink-0 flex items-center justify-center">
                                                             {hasProjects ? (
@@ -305,7 +305,7 @@ export const DonorTable: React.FC<DonorTableProps> = ({
                                                         <div className="text-left flex-1 min-w-0">
                                                             <div className="flex flex-col sm:flex-row sm:flex-wrap sm:items-baseline gap-1 sm:gap-2">
                                                                 <h4
-                                                                    className="font-medium text-slate-900 cursor-pointer transition-colors hover:text-[var(--brand-primary)] text-sm"
+                                                                    className="font-medium text-slate-900 cursor-pointer transition-colors hover:text-[var(--brand-primary)] text-base sm:text-lg"
                                                                     onClick={e => {
                                                                         e.stopPropagation();
                                                                         const nestedOrg = nestedOrganizations.find(n => n.id === org.id);
@@ -350,19 +350,47 @@ export const DonorTable: React.FC<DonorTableProps> = ({
                                                                     const nestedOrg = nestedOrganizations.find(n => n.id === org.id);
                                                                     const agencies = nestedOrg?.agencies || [];
                                                                     
-                                                                    // Extract unique agency names
+                                                                    // Extract unique agency names that belong to the current donor
                                                                     const agencyNames = new Set<string>();
                                                                     agencies.forEach((agency: any) => {
-                                                                        const agencyName = agency.fields?.['Agency Name'] || agency.fields?.['Funding Agency'];
-                                                                        if (agencyName) {
-                                                                            if (Array.isArray(agencyName)) {
-                                                                                agencyName.forEach(name => {
-                                                                                    if (name && name.trim() !== 'Unspecified Agency') {
-                                                                                        agencyNames.add(name);
-                                                                                    }
-                                                                                });
-                                                                            } else if (agencyName.trim() !== 'Unspecified Agency') {
-                                                                                agencyNames.add(agencyName);
+                                                                        // Check if this agency belongs to the current donor
+                                                                        // Look for donor field first, then fall back to country fields
+                                                                        const donorField = agency.fields?.['Donor'] || agency.fields?.['Funding Country'] || agency.fields?.['Organization Donor'];
+                                                                        const agencyCountry = agency.fields?.['Country Name'] || 
+                                                                                            agency.fields?.['Country'] || 
+                                                                                            agency.fields?.['Agency Associated Country'];
+                                                                        
+                                                                        // Check if agency belongs to current donor
+                                                                        let belongsToDonor = false;
+                                                                        
+                                                                        // Check donor field first
+                                                                        if (donorField) {
+                                                                            const donorValues = Array.isArray(donorField) ? donorField : [donorField];
+                                                                            belongsToDonor = donorValues.some((d: any) => 
+                                                                                (typeof d === 'string' ? d.trim() : d?.toString() || '').toLowerCase() === donor.toLowerCase()
+                                                                            );
+                                                                        }
+                                                                        
+                                                                        // Fall back to country field if no donor field match
+                                                                        if (!belongsToDonor && agencyCountry) {
+                                                                            const countryValues = Array.isArray(agencyCountry) ? agencyCountry : [agencyCountry];
+                                                                            belongsToDonor = countryValues.some((c: any) => 
+                                                                                (typeof c === 'string' ? c.trim() : c?.toString() || '').toLowerCase() === donor.toLowerCase()
+                                                                            );
+                                                                        }
+                                                                        
+                                                                        if (belongsToDonor) {
+                                                                            const agencyName = agency.fields?.['Agency Name'] || agency.fields?.['Funding Agency'];
+                                                                            if (agencyName) {
+                                                                                if (Array.isArray(agencyName)) {
+                                                                                    agencyName.forEach(name => {
+                                                                                        if (name && name.trim() !== 'Unspecified Agency') {
+                                                                                            agencyNames.add(name);
+                                                                                        }
+                                                                                    });
+                                                                                } else if (agencyName.trim() !== 'Unspecified Agency') {
+                                                                                    agencyNames.add(agencyName);
+                                                                                }
                                                                             }
                                                                         }
                                                                     });
@@ -452,7 +480,7 @@ export const DonorTable: React.FC<DonorTableProps> = ({
                                                     {projects.map((project: ProjectData) => (
                                                         <div
                                                             key={project.id}
-                                                            className="p-3 bg-slate-50/50 rounded-lg border border-slate-100 hover:bg-slate-50 cursor-pointer transition-colors duration-200 animate-in fade-in group"
+                                                            className="p-2 sm:p-2.5 bg-slate-50/50 rounded-lg border border-slate-100 hover:bg-slate-50 cursor-pointer transition-colors duration-200 animate-in fade-in group"
                                                             onClick={() => {
                                                                 const nestedOrg = nestedOrganizations.find((n: any) => n.id === org.id);
                                                                 const nestedProject = nestedOrg?.projects?.find((p: any) => p.id === project.id);
@@ -462,9 +490,9 @@ export const DonorTable: React.FC<DonorTableProps> = ({
                                                                 }
                                                             }}
                                                         >
-                                                            <div className="mb-2">
-                                                                <div className="flex flex-wrap items-center gap-2 gap-y-1">
-                                                                    <span className="font-medium text-slate-900 group-hover:text-[var(--badge-other-border)] transition-colors">
+                                                            <div className="mb-1">
+                                                                <div className="flex flex-wrap items-center gap-1.5 gap-y-0.5">
+                                                                    <span className="font-medium text-slate-900 group-hover:text-[var(--badge-other-border)] transition-colors text-xs sm:text-sm">
                                                                         {project.projectName}
                                                                     </span>
                                                                     {project.investmentTypes && project.investmentTypes.length > 0 && (
@@ -475,7 +503,7 @@ export const DonorTable: React.FC<DonorTableProps> = ({
                                                                                 const badge = (
                                                                                     <span 
                                                                                         key={idx} 
-                                                                                        className="inline-flex items-center gap-1 px-2 py-1 rounded-md text-xs font-semibold cursor-help"
+                                                                                        className="inline-flex items-center gap-1 px-1.5 py-0.5 rounded-md text-[10px] font-semibold cursor-help"
                                                                                         style={{
                                                                                             backgroundColor: 'var(--badge-other-bg)',
                                                                                             color: 'var(--badge-other-text)'
@@ -512,13 +540,14 @@ export const DonorTable: React.FC<DonorTableProps> = ({
                                                                 </div>
                                                             </div>
                                                             <div>
-                                                                <div className="flex flex-wrap gap-1">
+                                                                <div className="flex flex-wrap gap-0.5">
                                                                     {project.donorCountries && project.donorCountries.length > 0 ? (
                                                                         project.donorCountries.map((country, idx) => (
                                                                             <Badge 
                                                                                 key={idx} 
                                                                                 text={country} 
-                                                                                variant={combinedDonors.includes(country) ? 'blue' : 'slate'} 
+                                                                                variant={combinedDonors.includes(country) ? 'blue' : 'slate'}
+                                                                                className="text-[9px] sm:text-[10px]"
                                                                             />
                                                                         ))
                                                                     ) : (
@@ -535,19 +564,47 @@ export const DonorTable: React.FC<DonorTableProps> = ({
                                                                         const nestedProject = nestedOrg?.projects?.find((p: any) => p.id === project.id);
                                                                         const agencies = nestedProject?.agencies || [];
                                                                         
-                                                                        // Extract unique agency names
+                                                                        // Extract unique agency names that belong to the current donor
                                                                         const agencyNames = new Set<string>();
                                                                         agencies.forEach((agency: any) => {
-                                                                            const agencyName = agency.fields?.['Agency Name'] || agency.fields?.['Funding Agency'];
-                                                                            if (agencyName) {
-                                                                                if (Array.isArray(agencyName)) {
-                                                                                    agencyName.forEach(name => {
-                                                                                        if (name && name.trim() !== 'Unspecified Agency') {
-                                                                                            agencyNames.add(name);
-                                                                                        }
-                                                                                    });
-                                                                                } else if (agencyName.trim() !== 'Unspecified Agency') {
-                                                                                    agencyNames.add(agencyName);
+                                                                            // Check if this agency belongs to the current donor
+                                                                            // Look for donor field first, then fall back to country fields
+                                                                            const donorField = agency.fields?.['Donor'] || agency.fields?.['Funding Country'] || agency.fields?.['Organization Donor'];
+                                                                            const agencyCountry = agency.fields?.['Country Name'] || 
+                                                                                                agency.fields?.['Country'] || 
+                                                                                                agency.fields?.['Agency Associated Country'];
+                                                                            
+                                                                            // Check if agency belongs to current donor
+                                                                            let belongsToDonor = false;
+                                                                            
+                                                                            // Check donor field first
+                                                                            if (donorField) {
+                                                                                const donorValues = Array.isArray(donorField) ? donorField : [donorField];
+                                                                                belongsToDonor = donorValues.some((d: any) => 
+                                                                                    (typeof d === 'string' ? d.trim() : d?.toString() || '').toLowerCase() === donor.toLowerCase()
+                                                                                );
+                                                                            }
+                                                                            
+                                                                            // Fall back to country field if no donor field match
+                                                                            if (!belongsToDonor && agencyCountry) {
+                                                                                const countryValues = Array.isArray(agencyCountry) ? agencyCountry : [agencyCountry];
+                                                                                belongsToDonor = countryValues.some((c: any) => 
+                                                                                    (typeof c === 'string' ? c.trim() : c?.toString() || '').toLowerCase() === donor.toLowerCase()
+                                                                                );
+                                                                            }
+                                                                            
+                                                                            if (belongsToDonor) {
+                                                                                const agencyName = agency.fields?.['Agency Name'] || agency.fields?.['Funding Agency'];
+                                                                                if (agencyName) {
+                                                                                    if (Array.isArray(agencyName)) {
+                                                                                        agencyName.forEach(name => {
+                                                                                            if (name && name.trim() !== 'Unspecified Agency') {
+                                                                                                agencyNames.add(name);
+                                                                                            }
+                                                                                        });
+                                                                                    } else if (agencyName.trim() !== 'Unspecified Agency') {
+                                                                                        agencyNames.add(agencyName);
+                                                                                    }
                                                                                 }
                                                                             }
                                                                         });
