@@ -110,7 +110,7 @@ export default function DonorModal({
     // Find the actual donor country name from the data by matching URL slug
     const donorDisplayName = useMemo(() => {
         if (!donorCountry || !nestedOrganizations) return donorCountry || '';
-        
+
         // Collect all unique country names from the data
         const countryNames = new Set<string>();
         nestedOrganizations.forEach(org => {
@@ -134,7 +134,7 @@ export default function DonorModal({
                 countryNames.add(hqCountry);
             }
         });
-        
+
         // Find the country that matches the URL slug
         const match = Array.from(countryNames).find(name => matchesUrlSlug(donorCountry, name));
         return match || donorCountry;
@@ -172,7 +172,7 @@ export default function DonorModal({
             (org.agencies || []).forEach(agency => {
                 const agencyFields = agency.fields || {};
                 const agencyCountry = agencyFields['Country Name'];
-                
+
                 // Match donor country using URL slug format (handles lowercase with dashes)
                 if (agencyCountry && matchesUrlSlug(donorCountry, agencyCountry)) {
                     const agencyName = agencyFields['Agency/Department Name'] || 'Unspecified Agency';
@@ -192,7 +192,7 @@ export default function DonorModal({
                     }
 
                     const agencyEntry = agencyMap.get(agencyId)!;
-                    
+
                     // Add organization if not already added
                     if (!agencyEntry.organizations.some(o => o.id === org.id)) {
                         agencyEntry.organizations.push({
@@ -207,11 +207,11 @@ export default function DonorModal({
             // Check project-level agencies - project is directly funded by this agency
             (org.projects || []).forEach(project => {
                 const projectAgencies = project.agencies || [];
-                
+
                 projectAgencies.forEach(agency => {
                     const agencyFields = agency.fields || {};
                     const agencyCountry = agencyFields['Country Name'];
-                    
+
                     // Match donor country using URL slug format (handles lowercase with dashes)
                     if (agencyCountry && matchesUrlSlug(donorCountry, agencyCountry)) {
                         const agencyName = agencyFields['Agency/Department Name'] || 'Unspecified Agency';
@@ -231,7 +231,7 @@ export default function DonorModal({
                         }
 
                         const agencyEntry = agencyMap.get(agencyId)!;
-                        
+
                         // Add project if not already added
                         const projectFields = project.fields || {};
                         const projectName = projectFields['Project/Product Name'] || 'Unnamed Project';
@@ -254,7 +254,7 @@ export default function DonorModal({
         // Convert to array and sort by agency name
         const result = Array.from(agencyMap.values());
         result.sort((a, b) => a.agency.name.localeCompare(b.agency.name));
-        
+
         // Sort organizations and projects within each agency
         result.forEach(agencyData => {
             agencyData.organizations.sort((a, b) => a.name.localeCompare(b.name));
@@ -284,7 +284,7 @@ export default function DonorModal({
     // Find organizations headquartered in this country
     const headquarteredOrganizations = useMemo(() => {
         if (!donorCountry || !nestedOrganizations) return [];
-        
+
         return nestedOrganizations
             .filter(org => {
                 const orgFields = org.fields || {};
@@ -327,8 +327,8 @@ export default function DonorModal({
         return (
             <ModalHeader
                 icon={
-                    <CountryFlag 
-                        country={donorDisplayName} 
+                    <CountryFlag
+                        country={donorDisplayName}
                         className="h-6 sm:h-8 w-auto shrink-0 rounded object-cover"
                     />
                 }
@@ -369,20 +369,20 @@ export default function DonorModal({
             <div className="p-4 sm:p-6 space-y-6">
                 {/* Summary stat cards */}
                 <div className="grid grid-cols-3 gap-2">
-                    <CompactStatCard 
-                        icon={Building} 
-                        value={agencyData.length} 
-                        label={agencyData.length === 1 ? 'Agency' : 'Agencies'} 
+                    <CompactStatCard
+                        icon={Building}
+                        value={agencyData.length}
+                        label={agencyData.length === 1 ? 'Agency' : 'Agencies'}
                     />
-                    <CompactStatCard 
-                        icon={Building2} 
-                        value={totalOrganizations} 
-                        label={totalOrganizations === 1 ? 'Organization' : 'Organizations'} 
+                    <CompactStatCard
+                        icon={Building2}
+                        value={totalOrganizations}
+                        label={totalOrganizations === 1 ? 'Organization' : 'Organizations'}
                     />
-                    <CompactStatCard 
-                        icon={Package} 
-                        value={totalProjects} 
-                        label={totalProjects === 1 ? 'Asset' : 'Assets'} 
+                    <CompactStatCard
+                        icon={Package}
+                        value={totalProjects}
+                        label={totalProjects === 1 ? 'Asset' : 'Assets'}
                     />
                 </div>
 
@@ -438,86 +438,86 @@ export default function DonorModal({
                                     <CollapsibleContent className="mt-2 ml-0">
                                         <div className="ml-7 mt-3">
                                             {/* Directly funded organizations */}
-                                        {organizations.length > 0 && (
-                                            <div className="mb-4 pb-4 border-b border-slate-200">
-                                                <div className="mb-3 flex items-center gap-2">
-                                                    <span className="text-xs font-semibold text-slate-500 uppercase tracking-wider letter-spacing">
-                                                        {labels.modals.financedOrgs || 'Organizations'}
-                                                    </span>
-                                                    <span className="text-xs font-normal text-slate-400 tabular-nums">({organizations.length})</span>
-                                                </div>
-                                                <div className="flex flex-col gap-2">
-                                                    {organizations.map(org => (
-                                                        <button
-                                                            key={org.id}
-                                                            onClick={() => org.shortName && handleOpenOrganization(org.shortName)}
-                                                            className="flex items-center gap-1.5 px-3 py-2 rounded-md text-sm font-medium transition-colors cursor-pointer text-left hover:opacity-80 w-full"
-                                                            style={{
-                                                                backgroundColor: 'var(--brand-bg-light)',
-                                                                color: 'var(--brand-primary-dark)'
-                                                            }}
-                                                        >
-                                                            <Building2 className="h-4 w-4 shrink-0" />
-                                                            <span className="truncate">{org.name}</span>
-                                                        </button>
-                                                    ))}
-                                                </div>
-                                            </div>
-                                        )}
-
-                                        {/* Directly funded projects */}
-                                        {projects.length > 0 && (
-                                            <div>
-                                                <div className="mb-3 flex items-center gap-2">
-                                                    <span className="text-xs font-semibold text-slate-500 uppercase tracking-wider">
-                                                        {labels.modals.financedAssets || 'Assets'}
-                                                    </span>
-                                                    <span className="text-xs font-normal text-slate-400 tabular-nums">({projects.length})</span>
-                                                </div>
-                                                <div className="flex flex-col gap-2">
-                                                    {projects.map(project => {
-                                                        const firstSentence = getFirstSentence(project.description || '');
-                                                        
-                                                        const projectButton = (
+                                            {organizations.length > 0 && (
+                                                <div className="mb-4 pb-4 border-b border-slate-200">
+                                                    <div className="mb-3 flex items-center gap-2">
+                                                        <span className="text-xs font-semibold text-slate-500 uppercase tracking-wider letter-spacing">
+                                                            {labels.modals.financedOrgs || 'Organizations'}
+                                                        </span>
+                                                        <span className="text-xs font-normal text-slate-400 tabular-nums">({organizations.length})</span>
+                                                    </div>
+                                                    <div className="flex flex-col gap-2">
+                                                        {organizations.map(org => (
                                                             <button
-                                                                key={project.id}
-                                                                onClick={() => project.productKey && handleOpenProject(project.productKey)}
-                                                                onMouseEnter={() => setHoveredProjectId(project.id)}
-                                                                onMouseLeave={() => setHoveredProjectId(null)}
-                                                                className="flex items-center gap-1.5 px-3 py-2 rounded-md text-sm font-medium bg-slate-100 text-slate-600 hover:bg-slate-200 transition-colors cursor-pointer text-left w-full"
+                                                                key={org.id}
+                                                                onClick={() => org.shortName && handleOpenOrganization(org.shortName)}
+                                                                className="flex items-center gap-1.5 px-3 py-2 rounded-md text-sm font-medium transition-colors cursor-pointer text-left hover:opacity-80 w-full"
+                                                                style={{
+                                                                    backgroundColor: 'var(--brand-bg-light)',
+                                                                    color: 'var(--brand-primary-dark)'
+                                                                }}
                                                             >
-                                                                {hoveredProjectId === project.id ? (
-                                                                    <PackageOpen className="w-4 h-4 text-slate-600 shrink-0" />
-                                                                ) : (
-                                                                    <Package className="w-4 h-4 text-slate-600 shrink-0" />
-                                                                )}
-                                                                <span className="truncate">{project.name}</span>
+                                                                <Building2 className="h-4 w-4 shrink-0" />
+                                                                <span className="truncate">{org.name}</span>
                                                             </button>
-                                                        );
-
-                                                        // Only wrap in tooltip if there's a description
-                                                        if (firstSentence) {
-                                                            return (
-                                                                <ModalTooltip
-                                                                    key={project.id}
-                                                                    content={firstSentence}
-                                                                    side="top"
-                                                                    tooltipContainer={tooltipContainer}
-                                                                >
-                                                                    {projectButton}
-                                                                </ModalTooltip>
-                                                            );
-                                                        }
-
-                                                        return projectButton;
-                                                    })}
+                                                        ))}
+                                                    </div>
                                                 </div>
-                                            </div>
-                                        )}
-                                        {/* Show message if agency has no direct funding */}
-                                        {organizations.length === 0 && projects.length === 0 && (
-                                            <p className="text-sm text-slate-400 italic">No directly funded organizations or assets.</p>
-                                        )}
+                                            )}
+
+                                            {/* Directly funded projects */}
+                                            {projects.length > 0 && (
+                                                <div>
+                                                    <div className="mb-3 flex items-center gap-2">
+                                                        <span className="text-xs font-semibold text-slate-500 uppercase tracking-wider">
+                                                            {labels.modals.financedAssets || 'Assets'}
+                                                        </span>
+                                                        <span className="text-xs font-normal text-slate-400 tabular-nums">({projects.length})</span>
+                                                    </div>
+                                                    <div className="flex flex-col gap-2">
+                                                        {projects.map(project => {
+                                                            const firstSentence = getFirstSentence(project.description || '');
+
+                                                            const projectButton = (
+                                                                <button
+                                                                    key={project.id}
+                                                                    onClick={() => project.productKey && handleOpenProject(project.productKey)}
+                                                                    onMouseEnter={() => setHoveredProjectId(project.id)}
+                                                                    onMouseLeave={() => setHoveredProjectId(null)}
+                                                                    className="flex items-center gap-1.5 px-3 py-2 rounded-md text-sm font-medium bg-slate-100 text-slate-600 hover:bg-slate-200 transition-colors cursor-pointer text-left w-full"
+                                                                >
+                                                                    {hoveredProjectId === project.id ? (
+                                                                        <PackageOpen className="w-4 h-4 text-slate-600 shrink-0" />
+                                                                    ) : (
+                                                                        <Package className="w-4 h-4 text-slate-600 shrink-0" />
+                                                                    )}
+                                                                    <span className="truncate">{project.name}</span>
+                                                                </button>
+                                                            );
+
+                                                            // Only wrap in tooltip if there's a description
+                                                            if (firstSentence) {
+                                                                return (
+                                                                    <ModalTooltip
+                                                                        key={project.id}
+                                                                        content={firstSentence}
+                                                                        side="top"
+                                                                        tooltipContainer={tooltipContainer}
+                                                                    >
+                                                                        {projectButton}
+                                                                    </ModalTooltip>
+                                                                );
+                                                            }
+
+                                                            return projectButton;
+                                                        })}
+                                                    </div>
+                                                </div>
+                                            )}
+                                            {/* Show message if agency has no direct funding */}
+                                            {organizations.length === 0 && projects.length === 0 && (
+                                                <p className="text-sm text-slate-400 italic">No directly funded organizations or assets.</p>
+                                            )}
                                         </div>
                                     </CollapsibleContent>
                                 </Collapsible>
@@ -538,8 +538,8 @@ export default function DonorModal({
                         <div className="flex flex-col gap-2">
                             {(() => {
                                 const showCollapsible = headquarteredOrganizations.length > 5;
-                                const displayedOrgs = showCollapsible && !isHeadquarteredExpanded 
-                                    ? headquarteredOrganizations.slice(0, 5) 
+                                const displayedOrgs = showCollapsible && !isHeadquarteredExpanded
+                                    ? headquarteredOrganizations.slice(0, 5)
                                     : headquarteredOrganizations;
 
                                 return (
