@@ -1,6 +1,6 @@
 'use client';
 
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Button } from '@/components/ui/button';
 import {
     DropdownMenu,
@@ -14,6 +14,7 @@ import { Input } from '@/components/ui/input';
 import labels from '@/config/labels.json';
 import { getIconForInvestmentType } from '@/config/investmentTypeIcons';
 import { ChevronDown, DatabaseBackup, DatabaseZap, Filter, Globe, RotateCcw, Search } from 'lucide-react';
+import { getMemberStates } from '@/lib/data';
 
 interface FilterBarProps {
     // Search
@@ -86,6 +87,34 @@ const FilterBar: React.FC<FilterBarProps> = ({
     const [themesMenuOpen, setThemesMenuOpen] = useState(false);
     const [donorSearchQuery, setDonorSearchQuery] = useState<string>('');
     const [themeSearchQuery, setThemeSearchQuery] = useState<string>('');
+    const [memberStates, setMemberStates] = useState<string[]>([]);
+
+    // Load member states on mount
+    useEffect(() => {
+        getMemberStates().then(states => setMemberStates(states));
+    }, []);
+
+    // Combine available donors with selected member states to ensure they remain visible
+    const allAvailableDonors = [...new Set([
+        ...availableDonorCountries,
+        ...combinedDonors.filter(donor => memberStates.includes(donor))
+    ])];
+
+    // Filter donors based on search query
+    const filteredAvailableDonors = allAvailableDonors.filter((donor) =>
+        donor.toLowerCase().includes(donorSearchQuery.toLowerCase())
+    );
+
+    // Show member states only when searching and no results found in actual donors
+    const shouldShowMemberStates = donorSearchQuery.trim().length > 0 && filteredAvailableDonors.length === 0;
+    const filteredMemberStates = shouldShowMemberStates
+        ? memberStates.filter((state) => 
+            state.toLowerCase().includes(donorSearchQuery.toLowerCase()) &&
+            !allAvailableDonors.includes(state)
+        )
+        : [];
+
+    const allFilteredDonors = [...filteredAvailableDonors, ...filteredMemberStates];
 
     return (
         <div className={`flex flex-col gap-3 ${className}`}>
@@ -171,9 +200,12 @@ const FilterBar: React.FC<FilterBarProps> = ({
                         )}
 
                         <div className="max-h-[200px] overflow-y-auto">
-                            {availableDonorCountries
-                                .filter((donor) => donor.toLowerCase().includes(donorSearchQuery.toLowerCase()))
-                                .map((donor) => (
+                            {allFilteredDonors.length === 0 ? (
+                                <div className="p-4 text-center text-sm text-slate-500">
+                                    No matching donors found
+                                </div>
+                            ) : (
+                                allFilteredDonors.map((donor) => (
                                     <DropdownMenuCheckboxItem
                                         key={donor}
                                         checked={combinedDonors.includes(donor)}
@@ -193,7 +225,8 @@ const FilterBar: React.FC<FilterBarProps> = ({
                                     >
                                         {donor}
                                     </DropdownMenuCheckboxItem>
-                                ))}
+                                ))
+                            )}
                         </div>
                     </DropdownMenuContent>
                 </DropdownMenu>
