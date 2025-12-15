@@ -7,7 +7,7 @@ import { ChevronDown, FileDown, Info, MessageCircle, Share2, Menu, Lightbulb } f
 import { useTips } from '@/contexts/TipsContext';
 import labels from '@/config/labels.json';
 import Link from 'next/link';
-import { usePathname, useRouter } from 'next/navigation';
+import { usePathname, useRouter, useSearchParams } from 'next/navigation';
 
 const STYLES = {
     chartTooltip: {
@@ -46,6 +46,7 @@ export default function PageHeader({
 }: PageHeaderProps) {
     const pathname = usePathname();
     const router = useRouter();
+    const searchParams = useSearchParams();
     
     // Safely use useTips with fallback defaults
     let tipsEnabled = false;
@@ -209,8 +210,12 @@ export default function PageHeader({
                                     <span className={pathname === '/' ? '!font-bold' : ''}>{labels.header.dashboard}</span>
                                 </DropdownMenuItem>
                                 <DropdownMenuItem 
-                                    onClick={() => router.push('/analytics')}
-                                    className={`hidden cursor-pointer text-sm py-2 px-2 ${pathname === '/analytics' || pathname === '/analytics/' ? 'bg-slate-100' : ''}`}
+                                    onClick={() => {
+                                        const q = searchParams?.toString();
+                                        const target = q ? `/analytics?${q}` : '/analytics';
+                                        router.push(target);
+                                    }}
+                                    className={`cursor-pointer text-sm py-2 px-2 ${pathname === '/analytics' || pathname === '/analytics/' ? 'bg-slate-100' : ''}`}
                                 >
                                     <span className={pathname === '/analytics' || pathname === '/analytics/' ? '!font-bold' : ''}>Analytics</span>
                                 </DropdownMenuItem>
