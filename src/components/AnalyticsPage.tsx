@@ -9,7 +9,7 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/com
 import { Button } from '@/components/ui/button';
 import { Tooltip as TooltipUI, TooltipContent, TooltipProvider, TooltipTrigger } from '@/components/ui/tooltip';
 import { Globe, Search, Filter, ChevronDown, Building2, Database, BarChart3, Network, GitBranch, Users, Target, SearchCheck, LayoutGrid, Columns, Radar as RadarIcon } from 'lucide-react';
-import { Radar, RadarChart, PolarGrid, PolarAngleAxis, PolarRadiusAxis, ResponsiveContainer, Legend } from 'recharts';
+import { Radar, RadarChart, PolarGrid, PolarAngleAxis, PolarRadiusAxis, ResponsiveContainer, Legend, Label } from 'recharts';
 import { SectionHeader } from './SectionHeader';
 import { useTips } from '@/contexts/TipsContext';
 import { toUrlSlug, matchesUrlSlug } from '@/lib/urlShortcuts';
@@ -1773,77 +1773,91 @@ export default function AnalyticsPage({ logoutButton }: AnalyticsPageProps) {
                     </Card>
 
                     {/* Investment Focus Radar Chart */}
+                    { /* Hide entire card when no donors selected */ }
                     {selectedDonors.length > 0 && donorInvestmentFocus.length > 0 && (
-                        <Card className="!border-0 bg-white">
-                            <CardHeader>
-                                <CardTitle>
-                                    <SectionHeader 
-                                        icon={<RadarIcon style={{ color: 'var(--brand-primary)' }} />}
-                                        title="Investment Focus by Donor"
-                                    />
-                                </CardTitle>
-                                <CardDescription className="text-xs sm:text-sm">
-                                    Investment type distribution for selected donors
-                                </CardDescription>
-                            </CardHeader>
-                            <CardContent className="pt-2">
-                                <div className="w-full h-80 sm:h-96">
-                                    <ResponsiveContainer width="100%" height="100%">
-                                        <RadarChart data={donorInvestmentFocus}>
-                                            <PolarGrid 
-                                                stroke="var(--border-color)" 
-                                                strokeDasharray="3 3"
-                                                style={{ opacity: 0.3 }}
-                                            />
-                                            <PolarAngleAxis 
-                                                dataKey="name"
-                                                tick={{ fontSize: 12, fill: 'var(--text-secondary)' }}
-                                                angle={90}
-                                                type="category"
-                                            />
-                                            <PolarRadiusAxis 
-                                                angle={90}
-                                                domain={[0, 'auto']}
-                                                tick={{ fontSize: 11, fill: 'var(--text-secondary)' }}
-                                            />
-                                            {selectedDonors.map((donor, index) => {
-                                                const colors = [
-                                                    'var(--brand-primary)',
-                                                    'var(--brand-secondary)',
-                                                    '#8b5cf6',
-                                                    '#ec4899',
-                                                    '#f59e0b',
-                                                    '#10b981',
-                                                    '#06b6d4',
-                                                ];
-                                                const color = colors[index % colors.length];
-                                                return (
-                                                    <Radar
-                                                        key={donor}
-                                                        name={donor}
-                                                        dataKey={donor}
-                                                        stroke={color}
-                                                        fill={color}
-                                                        fillOpacity={0.25}
-                                                        isAnimationActive={false}
-                                                    />
-                                                );
-                                            })}
-                                            <Legend 
-                                                wrapperStyle={{ paddingTop: '20px' }}
-                                                verticalAlign="bottom"
-                                                height={36}
-                                                formatter={(value) => <span style={{ fontSize: '12px' }}>{value}</span>}
-                                            />
-                                        </RadarChart>
-                                    </ResponsiveContainer>
-                                </div>
-                                <p className="text-xs text-slate-500 mt-4 pt-2 border-t border-slate-100">
-                                    Each axis represents an investment type. The size of the shape indicates the number of projects financed by that donor in that type.
-                                </p>
-                            </CardContent>
-                        </Card>
+                    <Card className="hidden border-none bg-white">
+                        <CardHeader className="pb-2">
+                        <div className="flex flex-col gap-1">
+                            <SectionHeader
+                            icon={<BarChart3 style={{ color: 'var(--brand-primary)' }} />}
+                            title="Investment Focus by Donor"
+                            />
+                        </div>
+                        </CardHeader>
+
+                        <CardContent className="pt-2">
+                        <div className="w-full h-[300px]">
+                            <ResponsiveContainer width="100%" height="100%">
+                           <RadarChart
+  data={donorInvestmentFocus}
+  outerRadius="62%"
+  margin={{ top: 32, right: 32, bottom: 32, left: 32 }}
+>
+  <PolarGrid stroke="#e2e8f0" />
+
+  <PolarAngleAxis
+    dataKey="name"
+    tick={{
+      fontSize: 11,
+      fill: '#475569',
+      fontWeight: 500,
+    }}
+    tickLine={false}
+  />
+
+  <PolarRadiusAxis
+    domain={[0, 100]}
+    tickCount={3}
+    tick={{ fontSize: 10, fill: '#94a3b8' }}
+    axisLine={false}
+    angle={90}
+  />
+
+  {selectedDonors.map((donor, index) => {
+    const colors = [
+      'var(--brand-primary)',
+      '#6366f1',
+      '#06b6d4',
+      '#10b981',
+      '#f59e0b',
+      '#ec4899',
+    ];
+
+    const color = colors[index % colors.length];
+
+    return (
+      <Radar
+        key={donor}
+        name={donor}
+        dataKey={donor}
+        stroke={color}
+        fill={color}
+        fillOpacity={0.25}
+        dot={false}
+        isAnimationActive={false}
+      />
+    );
+  })}
+
+  <Legend
+    verticalAlign="top"
+    align="center"
+    iconType="line"
+    wrapperStyle={{ fontSize: 12, paddingBottom: 8 }}
+  />
+</RadarChart>
+ 
+                            </ResponsiveContainer>
+                        </div>
+
+                        <p className="mt-2 text-xs text-slate-500">
+                            Values are normalized per donor. Percentages represent relative focus, not absolute volume.
+                        </p>
+                        </CardContent>
+                    </Card>
                     )}
+
+
                     
                     {/* Charts Row */}
                     <div className={`${selectedDonors.length === 0 ? 'hidden' : ''} grid grid-cols-1 lg:grid-cols-2 gap-4`}>
