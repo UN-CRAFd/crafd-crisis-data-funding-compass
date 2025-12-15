@@ -3,7 +3,7 @@
 import { Button } from '@/components/ui/button';
 import { TooltipContent, TooltipProvider, Tooltip as TooltipUI, TooltipTrigger } from '@/components/ui/tooltip';
 import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuTrigger } from '@/components/ui/dropdown-menu';
-import { ChevronDown, FileDown, Info, MessageCircle, Share2, Menu, Lightbulb } from 'lucide-react';
+import { ChevronDown, FileDown, Info, MessageCircle, Share2, Menu, Lightbulb, LogOut } from 'lucide-react';
 import { useTips } from '@/contexts/TipsContext';
 import labels from '@/config/labels.json';
 import Link from 'next/link';
@@ -20,7 +20,6 @@ const STYLES = {
 };
 
 interface PageHeaderProps {
-    logoutButton?: React.ReactNode;
     onShare?: () => void;
     shareSuccess?: boolean;
     onExportCSV?: () => void;
@@ -33,7 +32,6 @@ interface PageHeaderProps {
 }
 
 export default function PageHeader({
-    logoutButton,
     onShare,
     shareSuccess = false,
     onExportCSV,
@@ -227,13 +225,16 @@ export default function PageHeader({
                                 >
                                     <span className={pathname === '/methodology/' ? '!font-bold' : ''}>{labels.header.methodology}</span>
                                 </DropdownMenuItem>
-                                {logoutButton && (
-                                    <div className="border-t border-slate-100 mt-1 pt-1">
-                                        <DropdownMenuItem asChild>
-                                            {logoutButton}
-                                        </DropdownMenuItem>
-                                    </div>
-                                )}
+                                        <div className="border-t border-slate-100 mt-1 pt-1">
+                                            <DropdownMenuItem>
+                                                <form action="/logout" method="post" className="w-full">
+                                                    <button type="submit" className="w-full text-left flex items-center gap-2 text-sm py-2 px-2 text-slate-700 hover:bg-slate-50">
+                                                        <LogOut className="w-4 h-4" />
+                                                        <span>Logout</span>
+                                                    </button>
+                                                </form>
+                                            </DropdownMenuItem>
+                                        </div>
                             </DropdownMenuContent>
                         </DropdownMenu>
                     </div>
