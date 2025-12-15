@@ -202,7 +202,7 @@ const FilterBar: React.FC<FilterBarProps> = ({
                         <div className="max-h-[200px] overflow-y-auto">
                             {allFilteredDonors.length === 0 ? (
                                 <div className="p-4 text-center text-sm text-slate-500">
-                                    No matching donors found
+                                    {labels.filters.noMatchingDonors}
                                 </div>
                             ) : (
                                 allFilteredDonors.map((donor) => (

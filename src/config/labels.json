@@ -48,7 +48,8 @@
     "donorSearchPlaceholder": "Search Donor...",
     "selected": "selected",
     "showMore": "more",
-    "showLess": "Show less"
+    "showLess": "Show less",
+    "noMatchingDonors": "No matching donors found"
   },
   "sections": {
     "organizationsAndProjects": "Funding Registry",
@@ -111,6 +112,8 @@
     "organizationNotFoundMessage": "The requested organization could not be found.",
     "projectNotFound": "Project Not Found",
     "projectNotFoundMessage": "The requested project could not be found.",
+    "donorNotFound": "Donor not found",
+    "memberState": "UN Member State",
     "learnMore": "Learn more",
     "viewOnHdx": "View Data on",
     "viewOnIati": "View Funding on",
@@ -128,10 +131,12 @@
     "notesInsights": "All insights are based on publicly accessible information and data.",
     "notesUn": "For simplification, donors were limited to the 30 highest contributors to UN organizations. Therefore, some donors may not be displayed. UN System Donors are added in the table and network view, but will not show up here unless there part of those 30 contributors.",
     "budgetlineUn": "Part of the general budget.",
+    "noBudgetDisclosed": "No detailed budget amount is publicly disclosed.",
     "providerOrganizations": "Provider Organizations",
     "assetTypeAndTheme": "Asset Type & Theme",
     "assetFunding": "Asset Funding",
     "noAssetDonorInfo": "No asset donor information available",
+    "assetDonorsNotSpecified": "Asset donors not specified",
     "notesProjectDonors": "Project donor countries may differ from organization-level donor countries.",
     "hdxDataGrid": "HDX Data Grid",
     "visitProjectWebsite": "Visit Project Website",
@@ -139,6 +144,8 @@
     "clickToFilterByType": "Click to filter by this investment type",
     "similarProjects": "Similar Projects",
     "financedOrgs": "Financed Organizations",
-    "financedAssets": "Financed Assets"
+    "financedAssets": "Financed Assets",
+    "noAgenciesFound": "No agencies found for this donor.",
+    "headquarteredIn": "Headquartered in"
   }
 }
