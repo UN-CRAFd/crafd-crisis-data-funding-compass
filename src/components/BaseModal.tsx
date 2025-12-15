@@ -275,21 +275,29 @@ interface CountryBadgeProps {
     projectsForDonor?: string[];
     projectAgenciesForDonor?: string[];
     tooltipContainer?: Element | null;
+    isMemberState?: boolean;
 }
 
-export function CountryBadge({ country, className = '', onClick, agencies, projectsForDonor, projectAgenciesForDonor, tooltipContainer }: CountryBadgeProps) {
+export function CountryBadge({ country, className = '', onClick, agencies, projectsForDonor, projectAgenciesForDonor, tooltipContainer, isMemberState = false }: CountryBadgeProps) {
     const isClickable = !!onClick;
     
     const badgeContent = (
-        <span
-            className={`inline-flex items-center gap-2 px-3 py-1.5 rounded-md text-sm font-medium bg-slate-100 text-slate-600 ${
-                isClickable ? 'cursor-pointer hover:bg-slate-200 transition-colors' : ''
-            } ${className}`}
-            onClick={isClickable ? () => onClick(country) : undefined}
-        >
-            <CountryFlag country={country} width={20} height={15} />
-            <span>{country}</span>
-        </span>
+        <div className="inline-flex items-center gap-2">
+            <span
+                className={`inline-flex items-center gap-2 px-3 py-1.5 rounded-md text-sm font-medium bg-slate-100 text-slate-600 ${
+                    isClickable ? 'cursor-pointer hover:bg-slate-200 transition-colors' : ''
+                } ${className}`}
+                onClick={isClickable ? () => onClick(country) : undefined}
+            >
+                <CountryFlag country={country} width={20} height={15} />
+                <span>{country}</span>
+            </span>
+            {isMemberState && (
+                <span className="inline-flex items-center px-2 py-1 rounded text-xs font-semibold bg-blue-100 text-blue-700">
+                    {labels.modals.memberState}
+                </span>
+            )}
+        </div>
     );
     
     // Filter out "Unspecified Agency"

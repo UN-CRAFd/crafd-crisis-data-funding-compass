@@ -1439,7 +1439,7 @@ const CrisisDataDashboard = ({
                                                                                             <Badge key={idx} text={country} variant={combinedDonors.includes(country) ? 'blue' : 'slate'} />
                                                                                         ))
                                                                                     ) : (
-                                                                                        <span className="text-xs text-slate-500">Asset donors not specified</span>
+                                                                                        <span className="text-xs text-slate-500">{labels.modals.assetDonorsNotSpecified}</span>
                                                                                     )}
                                                                                 </div>
                                                                             </div>
