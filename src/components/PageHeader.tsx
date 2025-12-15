@@ -94,10 +94,10 @@ export default function PageHeader({
                     <div className="flex gap-1 sm:gap-2 flex-shrink-0">
                         {/* Tips moved into Settings (see navigation menu) */}
                         <Button
-                            variant="outline"
+                            variant="ghost"
                             size="sm"
                             onClick={() => window.open('https://airtable.com/apprObB2AsvMwfAAl/pagcre1SPjT0nJxa4/form', '_blank')}
-                            className="bg-transparent border-b-2 border-transparent rounded-t-md text-xs sm:text-sm px-3 py-1 text-slate-700 hover:text-slate-900 transition"
+                            className="bg-transparent rounded-md text-xs sm:text-sm px-4 py-4 text-slate-700 hover:text-[var(--brand-primary)] focus:text-[var(--brand-primary)] active:text-[var(--brand-primary)] transition"
                             title={labels.header.feedbackTooltip}
                         >
                             <MessageCircle className="w-4 h-4 sm:mr-2" />
@@ -110,17 +110,17 @@ export default function PageHeader({
                             <DropdownMenu onOpenChange={onExportMenuChange}>
                                 <DropdownMenuTrigger asChild>
                                     <Button
-                                        variant="outline"
+                                        variant="ghost"
                                         size="sm"
                                         disabled={csvExportLoading || xlsxExportLoading || pdfExportLoading}
-                                        className="hidden sm:flex bg-transparent border-b-2 border-transparent rounded-t-md text-xs sm:text-sm px-3 py-1 text-slate-700 hover:text-slate-900 transition"
+                                        className="hidden sm:flex bg-transparent rounded-md text-xs sm:text-sm px-4 py-4 text-slate-700 hover:text-[var(--brand-primary)] focus:text-[var(--brand-primary)] transition"
                                         title="Export current view"
                                     >
                                         <FileDown className="w-4 h-4 sm:mr-2" />
                                         <span className="hidden sm:inline">
                                             {csvExportLoading ? labels.header.exportingCsv : xlsxExportLoading ? labels.header.exportingXlsx : pdfExportLoading ? labels.header.exportingPdf : labels.header.exportView}
                                         </span>
-                                        <ChevronDown className={`ml-1.5 h-3 w-3 opacity-50 shrink-0 transform transition-transform ${
+                                        <ChevronDown className={`ml-1.5 h-4 w-4 opacity-50 shrink-0 transform transition-transform ${
                                             exportMenuOpen ? 'rotate-180' : ''
                                         }`} />
                                     </Button>
@@ -154,13 +154,13 @@ export default function PageHeader({
                         {/* Share Button */}
                         {onShare && (
                             <Button
-                                variant="outline"
+                                variant="ghost"
                                 size="sm"
                                 onClick={onShare}
-                                className={`bg-transparent border-b-2 border-transparent rounded-t-md text-xs sm:text-sm px-3 py-1 text-slate-700 hover:text-slate-900 transition ${shareSuccess
-                                    ? 'text-white border-[var(--color-success)] bg-[var(--color-success)] hover:bg-[var(--color-success-hover)] hover:text-slate-100 hover:border-[var(--color-success-hover)]'
-                                    : ''
-                                    }`}
+                                    className={`bg-transparent rounded-md text-xs sm:text-sm px-4 py-4 text-slate-700 hover:text-[var(--brand-primary)] transition ${shareSuccess
+                                        ? 'text-white bg-[var(--color-success)] hover:bg-[var(--color-success-hover)] hover:text-slate-100'
+                                        : ''
+                                        }`}
                                 style={shareSuccess ? { backgroundColor: 'var(--color-success)' } : {}}
                                 title={labels.ui.copyToClipboard}
                             >
@@ -176,12 +176,12 @@ export default function PageHeader({
                         <DropdownMenu>
                             <DropdownMenuTrigger asChild>
                                 <Button
-                                    variant="outline"
+                                    variant="ghost"
                                     size="sm"
-                                    className="bg-transparent border-b-2 border-transparent rounded-t-md text-xs sm:text-sm px-3 py-1 text-slate-700 hover:text-slate-900 transition"
+                                    className="bg-transparent rounded-md text-xs sm:text-sm px-4 py-4 text-slate-700 hover:text-[var(--brand-primary)] transition"
                                     title="Navigation"
                                 >
-                                    <Menu className="w-4 h-4" />
+                                    <Menu className="w-6 h-6" />
                                 </Button>
                             </DropdownMenuTrigger>
                             <DropdownMenuContent 
