@@ -8,7 +8,7 @@ import FilterBar from '@/components/FilterBar';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { Tooltip as TooltipUI, TooltipContent, TooltipProvider, TooltipTrigger } from '@/components/ui/tooltip';
-import { Globe, Search, Filter, ChevronDown, Building2, Database, BarChart3, Network, GitBranch, Users, Target, SearchCheck } from 'lucide-react';
+import { Globe, Search, Filter, ChevronDown, Building2, Database, BarChart3, Network, GitBranch, Users, Target, SearchCheck, LayoutGrid, Columns } from 'lucide-react';
 import { SectionHeader } from './SectionHeader';
 import { useTips } from '@/contexts/TipsContext';
 import { toUrlSlug, matchesUrlSlug } from '@/lib/urlShortcuts';
@@ -74,6 +74,14 @@ interface StatCardProps {
     colorScheme: 'amber';
     tooltip?: React.ReactNode;
 }
+
+const MATRIX_BUTTON_CLASS =
+  "px-3 py-1 text-xs font-medium rounded-md transition-colors flex items-center gap-1.5";
+
+const MATRIX_MODES = [
+  { value: 'unified', label: 'Overview', Icon: LayoutGrid },
+  { value: 'split', label: 'Split Matrix', Icon: Columns },
+] as const;
 
 const StatCard = ({ icon, title, value, label, colorScheme, tooltip }: StatCardProps) => {
     const { tipsEnabled } = useTips();
@@ -1349,26 +1357,24 @@ export default function AnalyticsPage({ logoutButton }: AnalyticsPageProps) {
                                     <SectionHeader icon={<Network style={{ color: 'var(--brand-primary)' }} />} title="Which donors are collaborating on Data Investment?" />
                                 </CardTitle>
                                 <div className="flex items-center gap-2">
+                                {MATRIX_MODES.map(({ value, label, Icon }) => {
+                                    const active = matrixViewMode === value;
+
+                                    return (
                                     <Button
-                                        onClick={() => setMatrixViewMode('unified')}
-                                        className={`px-3 py-1 text-xs font-medium rounded-md transition-colors ${
-                                            matrixViewMode === 'unified'
-                                                ? 'bg-slate-300 text-slate-700'
-                                                : 'bg-slate-100 text-slate-600 hover:bg-slate-200'
+                                        key={value}
+                                        onClick={() => setMatrixViewMode(value)}
+                                        className={`${MATRIX_BUTTON_CLASS} ${
+                                        active
+                                            ? 'bg-slate-200 text-slate-700'
+                                            : 'bg-slate-100 text-slate-600 hover:bg-slate-200'
                                         }`}
                                     >
-                                        Overview
+                                        <Icon className="h-3 w-3" />
+                                        {label}
                                     </Button>
-                                    <Button
-                                        onClick={() => setMatrixViewMode('split')}
-                                        className={`px-3 py-1 text-xs font-medium rounded-md transition-colors ${
-                                            matrixViewMode === 'split'
-                                                ? 'bg-slate-300 text-slate-700'
-                                                : 'bg-slate-100 text-slate-600 hover:bg-slate-200'
-                                        }`}
-                                    >
-                                        Split Matrix
-                                    </Button>
+                                    );
+                                })}
                                 </div>
                             </div>
                         </CardHeader>
@@ -1676,23 +1682,7 @@ export default function AnalyticsPage({ logoutButton }: AnalyticsPageProps) {
                             />
 
                             {/* Force labels visible under the chart so users always see pair names & values */}
-                            <div className="mt-3 px-2">
-                                {donorCoFinancingData.length === 0 ? (
-                                    <p className="text-sm text-slate-500">No co-financed donor pairs to display</p>
-                                ) : (
-                                    <ul className="space-y-2 max-h-48 overflow-y-auto">
-                                        {donorCoFinancingData.map((d, idx) => (
-                                            <li key={`${d.name}-${idx}`} className="flex items-center justify-between text-sm">
-                                                <div className="flex items-center gap-2 min-w-0">
-                                                    <span className="w-3 h-3 rounded-sm" style={{ backgroundColor: 'var(--brand-primary-lighter)' }} />
-                                                    <span className="truncate text-slate-700">{d.name}</span>
-                                                </div>
-                                                <span className="font-semibold text-slate-800 ml-3">{d.value}</span>
-                                            </li>
-                                        ))}
-                                    </ul>
-                                )}
-                            </div>
+                            
                         </div>
                         
                         {/* Organizations List */}
