@@ -292,11 +292,6 @@ export function CountryBadge({ country, className = '', onClick, agencies, proje
                 <CountryFlag country={country} width={20} height={15} />
                 <span>{country}</span>
             </span>
-            {isMemberState && (
-                <span className="inline-flex items-center px-2 py-1 rounded text-xs font-semibold bg-blue-100 text-blue-700">
-                    {labels.modals.memberState}
-                </span>
-            )}
         </div>
     );
     
