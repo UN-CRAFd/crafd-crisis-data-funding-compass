@@ -1,7 +1,7 @@
 'use client';
 
 import { typeLabelToSlug, typeSlugToLabel, toUrlSlug, matchesUrlSlug } from '@/lib/urlShortcuts';
-import { themeKeyToNames, themeNameToKey, ensureThemesMappingsLoaded } from '@/lib/data';
+import { themeKeyToNames, themeNameToKey, ensureThemesMappingsLoaded, getMemberStates } from '@/lib/data';
 import { usePathname, useRouter, useSearchParams } from 'next/navigation';
 import { useCallback, useEffect, useMemo, useRef, useState } from 'react';
 import { processDashboardData } from '../lib/data';
@@ -36,6 +36,7 @@ const CrisisDataDashboardWrapper = ({ logoutButton }: { logoutButton?: React.Rea
     // ===========================================
     const [themesLoaded, setThemesLoaded] = useState(false);
     const [investmentThemes, setInvestmentThemes] = useState<string[]>([]);
+    const [memberStates, setMemberStates] = useState<string[]>([]);
     
     // Load themes on mount and when filter params change (NOT when modal params change)
     const filterParamsString = useMemo(() => {
@@ -46,6 +47,8 @@ const CrisisDataDashboardWrapper = ({ logoutButton }: { logoutButton?: React.Rea
 
     useEffect(() => {
         (async () => {
+            const loadedMemberStates = await getMemberStates();
+            setMemberStates(loadedMemberStates);
             await ensureThemesMappingsLoaded();
             setThemesLoaded(true);
             
@@ -85,10 +88,13 @@ const CrisisDataDashboardWrapper = ({ logoutButton }: { logoutButton?: React.Rea
         dashboardData.allOrganizations.forEach(org => {
             org.donorCountries?.forEach((d: string) => allDonors.add(d));
         });
+        // Also include member states as valid donors
+        memberStates.forEach(state => allDonors.add(state));
+        
         return donorSlugsFromUrl
             .map(slug => Array.from(allDonors).find(d => matchesUrlSlug(slug, d)))
             .filter((d): d is string => d !== undefined);
-    }, [donorSlugsFromUrl, dashboardData]);
+    }, [donorSlugsFromUrl, dashboardData, memberStates]);
 
     // Parse investment types from URL
     const typeSlugsFromUrl = useMemo(() => {

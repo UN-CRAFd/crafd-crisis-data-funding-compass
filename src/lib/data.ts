@@ -105,6 +105,117 @@ export async function ensureThemesMappingsLoaded(): Promise<void> {
     await loadThemesTable();
 }
 
+// Load current member states from CSV
+let cachedMemberStates: string[] | null = null;
+let memberStatesLoadPromise: Promise<string[]> | null = null;
+
+async function loadMemberStates(): Promise<string[]> {
+    // Return cached member states if available
+    if (cachedMemberStates) {
+        return cachedMemberStates;
+    }
+
+    // If already loading, return the existing promise
+    if (memberStatesLoadPromise) {
+        return memberStatesLoadPromise;
+    }
+
+    // Start loading
+    memberStatesLoadPromise = (async () => {
+        try {
+            const response = await fetch('/data/current_member_states.csv');
+            if (!response.ok) {
+                console.warn(`Failed to load member states CSV: ${response.status}`);
+                return [];
+            }
+            const csvText = await response.text();
+            
+            // Parse CSV (skip header row)
+            const lines = csvText.split('\n');
+            const memberStates = lines
+                .slice(1) // Skip header
+                .map(line => line.trim())
+                .filter(line => line.length > 0);
+            
+            cachedMemberStates = memberStates;
+            return cachedMemberStates;
+        } catch (error) {
+            console.error('Error loading member states:', error);
+            cachedMemberStates = [];
+            return cachedMemberStates;
+        }
+    })();
+
+    return memberStatesLoadPromise;
+}
+
+/**
+ * Get all member states (cached)
+ */
+export async function getMemberStates(): Promise<string[]> {
+    return loadMemberStates();
+}
+
+/**
+ * Check if a country is a member state
+ */
+export async function isMemberState(country: string): Promise<boolean> {
+    const memberStates = await loadMemberStates();
+    return memberStates.includes(country);
+}
+
+/**
+ * Inject member state donors into core-funded organizations
+ * This modifies the organizations array to add selected member states as donors
+ */
+export function injectMemberStateDonors(
+    organizations: OrganizationWithProjects[],
+    selectedMemberStates: string[]
+): OrganizationWithProjects[] {
+    if (selectedMemberStates.length === 0) {
+        return organizations;
+    }
+
+    return organizations.map(org => {
+        // Check if this organization has "Core" funding type
+        const fundingType = org.fields?.['Funding Type'];
+        const isCoreFunded = fundingType === 'Core';
+
+        if (!isCoreFunded) {
+            return org; // No modification for non-core organizations
+        }
+
+        // Add member states to donor lists
+        const newDonorCountries = [...new Set([...org.donorCountries, ...selectedMemberStates])];
+        
+        // Update donorInfo to include member states as org-level donors
+        const existingDonorCountries = new Set(org.donorInfo.map(d => d.country));
+        const newDonorInfo = [...org.donorInfo];
+        
+        selectedMemberStates.forEach(memberState => {
+            if (!existingDonorCountries.has(memberState)) {
+                newDonorInfo.push({
+                    country: memberState,
+                    isOrgLevel: true
+                });
+            }
+        });
+
+        // Sort donor info (org-level first, then alphabetically)
+        newDonorInfo.sort((a, b) => {
+            if (a.isOrgLevel && !b.isOrgLevel) return -1;
+            if (!a.isOrgLevel && b.isOrgLevel) return 1;
+            return a.country.localeCompare(b.country);
+        });
+
+        return {
+            ...org,
+            donorCountries: newDonorCountries,
+            donorInfo: newDonorInfo
+        };
+    });
+}
+
 // Helper functions for theme key conversion
 export function themeNameToKey(themeName: string): string {
     if (!cachedThemesMappings) {
@@ -252,7 +363,8 @@ function convertToOrganizationWithProjects(org: NestedOrganization): Organizatio
         donorInfo, // New field: all donors with metadata
         projects: projectsData,
         projectCount: projectsData.length,
-        estimatedBudget: budgetValue
+        estimatedBudget: budgetValue,
+        fields: org.fields // Include raw fields for accessing "Funding Type" and other metadata
     };
 }
 
@@ -575,6 +687,9 @@ async function getAvailableFilterOptions(organizations: OrganizationWithProjects
         });
     });
 
+    // Note: Member states are NOT added here - they will be shown only when searching
+    // and no other results are found (handled in FilterBar component)
+
     // Load theme mappings (non-blocking with fallback)
     let themesMappings: ThemesMappings;
     try {
@@ -628,11 +743,24 @@ export async function processDashboardData(filters: {
         // Load themes table first to ensure theme key mappings are available
         await loadThemesTable();
         
+        // Load member states
+        const memberStates = await loadMemberStates();
+        
         // Load nested organizations
         const nestedOrgs = await loadNestedOrganizations();
 
         // Convert to OrganizationWithProjects format
-        const allOrganizations = nestedOrgs.map(convertToOrganizationWithProjects);
+        let allOrganizations = nestedOrgs.map(convertToOrganizationWithProjects);
+
+        // Identify which selected donors are member states
+        const selectedMemberStates = (filters.donorCountries || [])
+            .filter(donor => memberStates.includes(donor));
+
+        // Inject member state donors into core-funded organizations BEFORE filtering
+        // This ensures they appear as donors in all views
+        if (selectedMemberStates.length > 0) {
+            allOrganizations = injectMemberStateDonors(allOrganizations, selectedMemberStates);
+        }
 
         // Apply filters
         const filteredOrganizations = applyFilters(allOrganizations, filters);

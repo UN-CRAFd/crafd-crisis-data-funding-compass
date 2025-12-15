@@ -50,9 +50,9 @@ FIELDS_ORGANIZATIONS = [
     "UN Funding Link",
     "Org Transparency Portal",
     "Org Programme Budget",
-    "Has received CRAF'd Funding?",
     "Org Donor Agencies",
     "Provided Data Ecosystem Projects",
+    "Funding Type",
 ]
 
 FIELDS_AGENCIES = [

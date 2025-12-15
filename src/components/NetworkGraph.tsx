@@ -36,6 +36,7 @@ interface NetworkGraphProps {
     onThemesChange?: (values: string[]) => void;
     onResetFilters?: () => void;
     filterDescription?: React.ReactNode;
+    orgAgenciesMap?: Record<string, Record<string, string[]>>; // Map of org ID -> country -> agencies
 }
 
 interface GraphNode {
@@ -50,6 +51,7 @@ interface GraphNode {
     orgType?: string; // For organization clustering
     assetTypes?: string[]; // For project/asset clustering
     estimatedBudget?: number; // For funding-based scaling
+    hasAgencies?: boolean; // For donors: whether they have any agencies
     x?: number;
     y?: number;
     fx?: number; // Fixed x position for clustering
@@ -92,6 +94,7 @@ const NetworkGraph: React.FC<NetworkGraphProps> = ({
     onThemesChange = () => {},
     onResetFilters = () => {},
     filterDescription,
+    orgAgenciesMap = {},
 }) => {
     const graphRef = useRef<any>(null);
     const [dimensions, setDimensions] = useState({ width: 800, height: 600 });
@@ -374,6 +377,18 @@ const NetworkGraph: React.FC<NetworkGraphProps> = ({
             // Use darker color if this donor is in the filter
             const isFiltered = combinedDonors && combinedDonors.length > 0 && combinedDonors.includes(donor);
             
+            // Check if this donor has any agencies across all organizations
+            let hasAgencies = false;
+            if (orgAgenciesMap) {
+                for (const orgId in orgAgenciesMap) {
+                    const agenciesForOrg = orgAgenciesMap[orgId];
+                    if (agenciesForOrg && agenciesForOrg[donor] && agenciesForOrg[donor].length > 0) {
+                        hasAgencies = true;
+                        break;
+                    }
+                }
+            }
+            
             // Calculate initial position in an arc at the top
             const angle = (index / donorArray.length) * Math.PI - Math.PI / 2; // Arc from left to right at top
             const x = centerX + Math.cos(angle) * spreadRadius * 0.8;
@@ -385,6 +400,7 @@ const NetworkGraph: React.FC<NetworkGraphProps> = ({
                 type: 'donor',
                 value: 25, // Larger nodes for donors
                 color: isFiltered ? selectedDonorColor : badgeSlateBg, // Medium gray for filtered donors
+                hasAgencies, // Flag whether this donor has agencies
                 x,
                 y,
             });
@@ -1198,12 +1214,14 @@ const NetworkGraph: React.FC<NetworkGraphProps> = ({
         const orgKey = node.orgKey;
         const projectKey = node.projectKey;
         const nodeName = node.name;
+        const hasAgencies = node.hasAgencies;
         
         if (nodeType === 'organization' && orgKey) {
             onOpenOrganizationModal(orgKey);
         } else if (nodeType === 'project' && projectKey) {
             onOpenProjectModal(projectKey);
-        } else if (nodeType === 'donor' && nodeName && onOpenDonorModal) {
+        } else if (nodeType === 'donor' && nodeName && onOpenDonorModal && hasAgencies) {
+            // Only allow opening donor modal if the donor has agencies
             onOpenDonorModal(nodeName);
         }
     }, [onOpenOrganizationModal, onOpenProjectModal, onOpenDonorModal]);
