@@ -14,7 +14,10 @@ interface DonorTableProps {
     organizationsTable: Array<{ id: string; createdTime?: string; fields: Record<string, unknown> }>;
     onOpenOrganizationModal: (orgKey: string) => void;
     onOpenProjectModal: (projectKey: string) => void;
+    onOpenDonorModal?: (donorCountry: string) => void;
     combinedDonors: string[];
+    sortBy: 'name' | 'orgs' | 'assets';
+    sortDirection: 'asc' | 'desc';
 }
 
 // Investment type descriptions for tooltips
@@ -78,10 +81,14 @@ export const DonorTable: React.FC<DonorTableProps> = ({
     organizationsTable,
     onOpenOrganizationModal,
     onOpenProjectModal,
-    combinedDonors
+    onOpenDonorModal,
+    combinedDonors,
+    sortBy,
+    sortDirection
 }) => {
     const [expandedDonors, setExpandedDonors] = useState<Set<string>>(new Set());
     const [expandedOrgs, setExpandedOrgs] = useState<Set<string>>(new Set());
+    const [expandedAgencies, setExpandedAgencies] = useState<Set<string>>(new Set());
 
     // Get tips enabled state
     let tipsEnabled = false;
@@ -163,16 +170,20 @@ export const DonorTable: React.FC<DonorTableProps> = ({
                 )
             }))
             .sort((a, b) => {
-                // Sort selected donors first
-                const aIsSelected = combinedDonors.includes(a.donor);
-                const bIsSelected = combinedDonors.includes(b.donor);
-                if (aIsSelected && !bIsSelected) return -1;
-                if (!aIsSelected && bIsSelected) return 1;
+                let comparison = 0;
                 
-                // Then by number of organizations (descending)
-                return b.totalOrgs - a.totalOrgs;
+                if (sortBy === 'name') {
+                    comparison = b.donor.localeCompare(a.donor);
+                } else if (sortBy === 'orgs') {
+                    comparison = a.totalOrgs - b.totalOrgs;
+                } else if (sortBy === 'assets') {
+                    comparison = a.totalProjects - b.totalProjects;
+                }
+                
+                // Apply sort direction
+                return sortDirection === 'asc' ? comparison : -comparison;
             });
-    }, [organizationsWithProjects, combinedDonors]);
+    }, [organizationsWithProjects, combinedDonors, sortBy, sortDirection]);
 
     return (
         <div className="space-y-2 transition-all duration-500">
@@ -196,11 +207,13 @@ export const DonorTable: React.FC<DonorTableProps> = ({
                         className="transition-all duration-500 ease-out"
                     >
                         <CollapsibleTrigger className="w-full">
-                            <div className={`flex flex-col sm:flex-row sm:justify-between p-3 sm:p-4 hover:bg-slate-50/70 rounded-lg border ${
-                                isSelected 
-                                    ? 'border-[var(--brand-primary)] bg-[var(--brand-bg-lighter)]' 
-                                    : 'border-slate-200 bg-slate-50/30'
-                            } animate-in fade-in gap-3 sm:gap-0 cursor-pointer min-h-[80px]`}>
+                            <div 
+                                className={`flex flex-col sm:flex-row sm:justify-between p-3 sm:p-4 hover:bg-slate-50/70 rounded-lg border ${
+                                    isSelected 
+                                        ? 'border-[var(--brand-primary)] bg-[var(--brand-bg-lighter)]' 
+                                        : 'border-slate-200 bg-slate-50/30'
+                                } animate-in fade-in gap-3 sm:gap-0 cursor-pointer min-h-[80px]`}
+                            >
                                 <div className="flex items-center space-x-3 flex-1">
                                     <div className="w-4 h-4 flex-shrink-0 flex items-center justify-center">
                                         {isDonorExpanded ? (
@@ -210,9 +223,17 @@ export const DonorTable: React.FC<DonorTableProps> = ({
                                         )}
                                     </div>
                                     <div className="text-left flex-1 min-w-0">
-                                        <h3 className={`font-medium text-sm sm:text-base ${
-                                            isSelected ? 'text-[var(--brand-primary)]' : 'text-slate-900'
-                                        }`}>
+                                        <h3 
+                                            className={`font-medium text-sm sm:text-base cursor-pointer transition-colors hover:text-[var(--brand-primary)] ${
+                                                isSelected ? 'text-[var(--brand-primary)]' : 'text-slate-900'
+                                            }`}
+                                            onClick={(e) => {
+                                                e.stopPropagation();
+                                                if (onOpenDonorModal) {
+                                                    onOpenDonorModal(donor);
+                                                }
+                                            }}
+                                        >
                                             {donor}
                                         </h3>
                                         <div className="text-xs sm:text-sm text-slate-500 mt-1">
@@ -221,6 +242,23 @@ export const DonorTable: React.FC<DonorTableProps> = ({
                                     </div>
                                 </div>
                                 <div className="flex flex-col justify-between items-end self-stretch flex-shrink-0 min-w-[100px]">
+                                    <Button
+                                        asChild
+                                        variant="outline"
+                                        size="sm"
+                                        onClick={(e) => {
+                                            e.stopPropagation();
+                                            if (onOpenDonorModal) {
+                                                onOpenDonorModal(donor);
+                                            }
+                                        }}
+                                        className="hidden sm:inline-flex items-center justify-center gap-1 text-[10px] h-6 px-2 rounded-md text-[var(--badge-slate-bg)] bg-[var(--badge-slate-text)] hover:bg-slate-400 duration-150"
+                                    >
+                                        <div className="hidden sm:inline-flex items-center justify-center gap-1 border-none">
+                                            <Info className="w-3 h-3" />
+                                            <span>Details</span>
+                                        </div>
+                                    </Button>
                                     <div className="text-xs sm:text-xs text-slate-400 whitespace-nowrap">
                                         {isDonorExpanded
                                             ? `Showing ${totalOrgs} org${totalOrgs === 1 ? '' : 's'}`
@@ -303,8 +341,79 @@ export const DonorTable: React.FC<DonorTableProps> = ({
                                                                         title="This donor only funds specific projects, not the organization as a whole"
                                                                     />
                                                                 )}
-                                                            </div>
-                                                        </div>
+                                                            </div>                                                            {/* Agency badges for organization */}
+                                                            <div className="flex flex-wrap gap-1 mt-2 max-w-full">
+                                                                {(() => {
+                                                                    const isAgenciesExpanded = expandedAgencies.has(`org-${org.id}`);
+                                                                    
+                                                                    // Get agencies for this org from nestedOrganizations
+                                                                    const nestedOrg = nestedOrganizations.find(n => n.id === org.id);
+                                                                    const agencies = nestedOrg?.agencies || [];
+                                                                    
+                                                                    // Extract unique agency names
+                                                                    const agencyNames = new Set<string>();
+                                                                    agencies.forEach((agency: any) => {
+                                                                        const agencyName = agency.fields?.['Agency Name'] || agency.fields?.['Funding Agency'];
+                                                                        if (agencyName) {
+                                                                            if (Array.isArray(agencyName)) {
+                                                                                agencyName.forEach(name => {
+                                                                                    if (name && name.trim() !== 'Unspecified Agency') {
+                                                                                        agencyNames.add(name);
+                                                                                    }
+                                                                                });
+                                                                            } else if (agencyName.trim() !== 'Unspecified Agency') {
+                                                                                agencyNames.add(agencyName);
+                                                                            }
+                                                                        }
+                                                                    });
+                                                                    
+                                                                    const agencyArray = Array.from(agencyNames).sort();
+                                                                    const maxAgenciesToShow = 3;
+                                                                    const agenciesToShow = isAgenciesExpanded ? agencyArray : agencyArray.slice(0, maxAgenciesToShow);
+                                                                    
+                                                                    if (agencyArray.length === 0) return null;
+                                                                    
+                                                                    return (
+                                                                        <>
+                                                                            {agenciesToShow.map((agency, idx) => (
+                                                                                <Badge
+                                                                                    key={idx}
+                                                                                    text={agency}
+                                                                                    variant="indigo"
+                                                                                    className="text-[9px] sm:text-[10px]"
+                                                                                    title={`Funding Agency: ${agency}`}
+                                                                                />
+                                                                            ))}
+                                                                            {agencyArray.length > maxAgenciesToShow && !isAgenciesExpanded && (
+                                                                                <div
+                                                                                    onClick={(e) => {
+                                                                                        e.stopPropagation();
+                                                                                        const newExpanded = new Set(expandedAgencies);
+                                                                                        newExpanded.add(`org-${org.id}`);
+                                                                                        setExpandedAgencies(newExpanded);
+                                                                                    }}
+                                                                                    className="inline-flex items-center px-2 py-1 rounded-md text-xs font-medium bg-slate-000 text-slate-900 hover:bg-slate-100 transition-colors cursor-pointer"
+                                                                                >
+                                                                                    +{agencyArray.length - maxAgenciesToShow} more
+                                                                                </div>
+                                                                            )}
+                                                                            {isAgenciesExpanded && agencyArray.length > maxAgenciesToShow && (
+                                                                                <div
+                                                                                    onClick={(e) => {
+                                                                                        e.stopPropagation();
+                                                                                        const newExpanded = new Set(expandedAgencies);
+                                                                                        newExpanded.delete(`org-${org.id}`);
+                                                                                        setExpandedAgencies(newExpanded);
+                                                                                    }}
+                                                                                    className="inline-flex items-center px-2 py-1 rounded-md text-xs font-medium bg-slate-000 text-slate-900 hover:bg-slate-100 transition-colors cursor-pointer"
+                                                                                >
+                                                                                    Show less
+                                                                                </div>
+                                                                            )}
+                                                                        </>
+                                                                    );
+                                                                })()}
+                                                            </div>                                                        </div>
                                                     </div>
                                                     <div className="flex flex-col justify-between items-end self-stretch flex-shrink-0 min-w-[100px]">
                                                         <Button
@@ -415,6 +524,80 @@ export const DonorTable: React.FC<DonorTableProps> = ({
                                                                     ) : (
                                                                         <span className="text-xs text-slate-500">{labels.modals.assetDonorsNotSpecified}</span>
                                                                     )}
+                                                                </div>
+                                                                {/* Agency badges for project */}
+                                                                <div className="flex flex-wrap gap-1 mt-1">
+                                                                    {(() => {
+                                                                        const isAgenciesExpanded = expandedAgencies.has(`project-${project.id}`);
+                                                                        
+                                                                        // Get agencies for this project from nestedOrganizations
+                                                                        const nestedOrg = nestedOrganizations.find((n: any) => n.id === org.id);
+                                                                        const nestedProject = nestedOrg?.projects?.find((p: any) => p.id === project.id);
+                                                                        const agencies = nestedProject?.agencies || [];
+                                                                        
+                                                                        // Extract unique agency names
+                                                                        const agencyNames = new Set<string>();
+                                                                        agencies.forEach((agency: any) => {
+                                                                            const agencyName = agency.fields?.['Agency Name'] || agency.fields?.['Funding Agency'];
+                                                                            if (agencyName) {
+                                                                                if (Array.isArray(agencyName)) {
+                                                                                    agencyName.forEach(name => {
+                                                                                        if (name && name.trim() !== 'Unspecified Agency') {
+                                                                                            agencyNames.add(name);
+                                                                                        }
+                                                                                    });
+                                                                                } else if (agencyName.trim() !== 'Unspecified Agency') {
+                                                                                    agencyNames.add(agencyName);
+                                                                                }
+                                                                            }
+                                                                        });
+                                                                        
+                                                                        const agencyArray = Array.from(agencyNames).sort();
+                                                                        const maxAgenciesToShow = 3;
+                                                                        const agenciesToShow = isAgenciesExpanded ? agencyArray : agencyArray.slice(0, maxAgenciesToShow);
+                                                                        
+                                                                        if (agencyArray.length === 0) return null;
+                                                                        
+                                                                        return (
+                                                                            <>
+                                                                                {agenciesToShow.map((agency, idx) => (
+                                                                                    <Badge
+                                                                                        key={idx}
+                                                                                        text={agency}
+                                                                                        variant="indigo"
+                                                                                        className="text-[9px] sm:text-[10px]"
+                                                                                        title={`Funding Agency: ${agency}`}
+                                                                                    />
+                                                                                ))}
+                                                                                {agencyArray.length > maxAgenciesToShow && !isAgenciesExpanded && (
+                                                                                    <div
+                                                                                        onClick={(e) => {
+                                                                                            e.stopPropagation();
+                                                                                            const newExpanded = new Set(expandedAgencies);
+                                                                                            newExpanded.add(`project-${project.id}`);
+                                                                                            setExpandedAgencies(newExpanded);
+                                                                                        }}
+                                                                                        className="inline-flex items-center px-2 py-1 rounded-md text-xs font-medium bg-slate-000 text-slate-900 hover:bg-slate-100 transition-colors cursor-pointer"
+                                                                                    >
+                                                                                        +{agencyArray.length - maxAgenciesToShow} more
+                                                                                    </div>
+                                                                                )}
+                                                                                {isAgenciesExpanded && agencyArray.length > maxAgenciesToShow && (
+                                                                                    <div
+                                                                                        onClick={(e) => {
+                                                                                            e.stopPropagation();
+                                                                                            const newExpanded = new Set(expandedAgencies);
+                                                                                            newExpanded.delete(`project-${project.id}`);
+                                                                                            setExpandedAgencies(newExpanded);
+                                                                                        }}
+                                                                                        className="inline-flex items-center px-2 py-1 rounded-md text-xs font-medium bg-slate-000 text-slate-900 hover:bg-slate-100 transition-colors cursor-pointer"
+                                                                                    >
+                                                                                        Show less
+                                                                                    </div>
+                                                                                )}
+                                                                            </>
+                                                                        );
+                                                                    })()}
                                                                 </div>
                                                             </div>
                                                         </div>
