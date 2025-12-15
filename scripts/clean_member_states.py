@@ -18,10 +18,14 @@ def main():
 	# Select rows where 'End date' is NaN/empty and extract Member State names
 	df_current = df[df['End date'].isna()]
 	member_list = df_current['Member State'].tolist()
+	member_list.append("USA")
 
 	# Write a simple CSV with the current member states
 	out_df = pd.DataFrame({'Member State': member_list})
+
 	out_df.to_csv(output_csv, index=False)
+	
+    # Add USA to the list of current member states
 
 
 if __name__ == '__main__':
