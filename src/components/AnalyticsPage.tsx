@@ -1349,26 +1349,26 @@ export default function AnalyticsPage({ logoutButton }: AnalyticsPageProps) {
                                     <SectionHeader icon={<Network style={{ color: 'var(--brand-primary)' }} />} title="Which donors are collaborating on Data Investment?" />
                                 </CardTitle>
                                 <div className="flex items-center gap-2">
-                                    <button
+                                    <Button
                                         onClick={() => setMatrixViewMode('unified')}
-                                        className={`px-3 py-1.5 text-xs font-medium rounded-md transition-colors ${
+                                        className={`px-3 py-1 text-xs font-medium rounded-md transition-colors ${
                                             matrixViewMode === 'unified'
-                                                ? 'bg-[var(--brand-primary)] text-white'
+                                                ? 'bg-slate-300 text-slate-700'
                                                 : 'bg-slate-100 text-slate-600 hover:bg-slate-200'
                                         }`}
                                     >
-                                        1 Matrix
-                                    </button>
-                                    <button
+                                        Overview
+                                    </Button>
+                                    <Button
                                         onClick={() => setMatrixViewMode('split')}
-                                        className={`px-3 py-1.5 text-xs font-medium rounded-md transition-colors ${
+                                        className={`px-3 py-1 text-xs font-medium rounded-md transition-colors ${
                                             matrixViewMode === 'split'
-                                                ? 'bg-[var(--brand-primary)] text-white'
+                                                ? 'bg-slate-300 text-slate-700'
                                                 : 'bg-slate-100 text-slate-600 hover:bg-slate-200'
                                         }`}
                                     >
-                                        2 Matrices
-                                    </button>
+                                        Split Matrix
+                                    </Button>
                                 </div>
                             </div>
                         </CardHeader>
