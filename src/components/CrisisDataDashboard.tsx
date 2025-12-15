@@ -997,17 +997,17 @@ const CrisisDataDashboard = ({
                             <div>
                                 <Card className={STYLES.cardGlass}>
                                     <CardHeader className="pb-0 h-0">
-                                        <CardTitle className="flex flex-row items-center gap-3 w-full mb-2">
-                                            <SectionHeader
-                                                icon={
-                                                    organizationsWithProjects && organizationsWithProjects.some(org => org.projects && org.projects.length > 0)
-                                                        ? <FolderOpenDot style={{ color: 'var(--brand-primary)' }} />
-                                                        : <FolderDot style={{ color: 'var(--brand-primary)' }} />
-                                                }
-                                                title={labels.sections.organizationsAndProjects}
-                                            />
-
+                                        <CardTitle className="flex items-center w-full mb-2">
                                             <div className="flex items-center gap-3">
+                                                <SectionHeader
+                                                    icon={
+                                                        organizationsWithProjects && organizationsWithProjects.some(org => org.projects && org.projects.length > 0)
+                                                            ? <FolderOpenDot style={{ color: 'var(--brand-primary)' }} />
+                                                            : <FolderDot style={{ color: 'var(--brand-primary)' }} />
+                                                    }
+                                                    title={labels.sections.organizationsAndProjects}
+                                                />
+
                                                 {/* View Toggle Switch Tabs on left */}
                                                 <Tabs value={activeView} onValueChange={(value) => setActiveView(value as 'table' | 'network' | 'donors')} className="hidden sm:flex">
                                                     <TabsList className="h-7 p-0.5 bg-slate-50 border border-slate-200 rounded-md">
@@ -1034,6 +1034,7 @@ const CrisisDataDashboard = ({
                                                         </TabsTrigger>
                                                     </TabsList>
                                                 </Tabs>
+                                            </div>
                                                 {/* Sort Dropdown right-aligned */}
                                                 {(activeView === 'table' || activeView === 'donors') && (
                                                     <div className="ml-auto animate-in slide-in-from-right-5 fade-in duration-300">
@@ -1118,7 +1119,6 @@ const CrisisDataDashboard = ({
                                                     </div>
                                                 )}
 
-                                            </div>
                                         </CardTitle>
 
 
