@@ -170,6 +170,7 @@ export default function AnalyticsPage({ logoutButton }: AnalyticsPageProps) {
     const [appliedSearchQuery, setAppliedSearchQuery] = useState('');
     const [isInitialized, setIsInitialized] = useState(false);
     const [hoveredCell, setHoveredCell] = useState<{ donor1: string; donor2: string } | null>(null);
+    const [matrixViewMode, setMatrixViewMode] = useState<'unified' | 'split'>('unified');
     
     // Load filter state from URL on mount
     useEffect(() => {
@@ -1262,7 +1263,7 @@ export default function AnalyticsPage({ logoutButton }: AnalyticsPageProps) {
                                     icon={<Building2 style={{ color: 'var(--brand-primary)' }} />}
                                     title="Co-Funded Orgs"
                                     value={analyticsStats.sharedFundingTargets}
-                                    label="donors"
+                                    label="orgs"
                                     colorScheme="amber"
                                     tooltip="Absolute number of organizations funded by at least 2 of the selected donors."
                                 />
@@ -1338,197 +1339,361 @@ export default function AnalyticsPage({ logoutButton }: AnalyticsPageProps) {
                             />
                         </CardContent>
                     </Card>
-
-                 
-                    {/* Unified Co-Financing Matrix */}
-                    <Card className="!border-0 bg-white">
-                        <CardHeader className="pb-0 h-6.5">
-                            <CardTitle>
-                                <SectionHeader icon={<Network style={{ color: 'var(--brand-primary)' }} />} title="Which donors are collaborating on Data Investment?" />
-                            </CardTitle>
-                        </CardHeader>
-                        <CardContent className="pt-0">
-                            <div className="flex items-center gap-4 mb03">
-                                <div className="flex items-center gap-3 ml-auto">
-                                    <div className="flex items-center gap-1.5">
-                                        <div className="w-4 h-4 bg-amber-300 border border-slate-300 rounded"></div>
-                                        <span className="text-xs text-slate-600">Organizations</span>
-                                    </div>
-                                    <div className="flex items-center gap-1.5">
-                                        <div className="w-4 h-4 bg-indigo-300 border border-slate-300 rounded"></div>
-                                        <span className="text-xs text-slate-600">Projects</span>
-                                    </div>
+                    
+                    {/* Co-Financing Matrix with View Toggle */}
+                    { /* Hide entire card when no donors selected */ }
+                    <Card className={`${selectedDonors.length === 0 ? 'hidden' : ''} !border-0 bg-white`}>
+                        <CardHeader className="pb-0">
+                            <div className="flex items-center justify-between gap-4">
+                                <CardTitle>
+                                    <SectionHeader icon={<Network style={{ color: 'var(--brand-primary)' }} />} title="Which donors are collaborating on Data Investment?" />
+                                </CardTitle>
+                                <div className="flex items-center gap-2">
+                                    <button
+                                        onClick={() => setMatrixViewMode('unified')}
+                                        className={`px-3 py-1.5 text-xs font-medium rounded-md transition-colors ${
+                                            matrixViewMode === 'unified'
+                                                ? 'bg-[var(--brand-primary)] text-white'
+                                                : 'bg-slate-100 text-slate-600 hover:bg-slate-200'
+                                        }`}
+                                    >
+                                        1 Matrix
+                                    </button>
+                                    <button
+                                        onClick={() => setMatrixViewMode('split')}
+                                        className={`px-3 py-1.5 text-xs font-medium rounded-md transition-colors ${
+                                            matrixViewMode === 'split'
+                                                ? 'bg-[var(--brand-primary)] text-white'
+                                                : 'bg-slate-100 text-slate-600 hover:bg-slate-200'
+                                        }`}
+                                    >
+                                        2 Matrices
+                                    </button>
                                 </div>
                             </div>
-                            <div className="w-full overflow-x-hidden">
-                                <table className="w-full">
-                                    <thead>
-                                        <tr>
-                                            <th className="p-2 text-left text-sm font-semibold text-slate-600 border-b-2 border-slate-200 min-w-[90px]">
-                                                Donor
-                                            </th>
-                                            {selectedDonors.map(donor => (
-                                                <th 
-                                                    key={donor} 
-                                                    className="p-2 text-left text-sm font-semibold text-slate-600 border-b-2 border-slate-200 w-16"
-                                                    style={{ writingMode: 'vertical-rl', transform: 'rotate(225deg)' }}
-                                                >
-                                                    {donor}
-                                                </th>
-                                            ))}
-                                        </tr>
-                                    </thead>
-                                    <tbody>
-                                        {selectedDonors.map((donor1, i) => (
-                                            <tr key={donor1}>
-                                                <td className="p-2 text-sm font-semibold text-slate-600 border-r-2 border-slate-200">
-                                                    {donor1}
-                                                </td>
-                                                {selectedDonors.map((donor2, j) => {
-                                                    const isDiagonal = donor1 === donor2;
-                                                    const isAboveDiagonal = i < j; // Above diagonal: projects (purple)
-                                                    const isBelowDiagonal = i > j; // Below diagonal: organizations (orange)
-                                                    
-                                                    const projectCount = coFinancingMatrix[donor1]?.[donor2]?.projects.size || 0;
-                                                    const orgCount = coFinancingMatrix[donor1]?.[donor2]?.orgs.size || 0;
-                                                    
-                                                    const count = isAboveDiagonal ? projectCount : orgCount;
-                                                    
-                                                    // For diagonal cells, show contextual data when another cell is hovered
-                                                    const showDiagonalContext = isDiagonal && hoveredCell && (hoveredCell.donor1 === donor1 || hoveredCell.donor2 === donor1);
-                                                    let diagonalCount = 0;
-                                                    let diagonalColorClass = 'bg-slate-200 text-slate-400';
-                                                    let diagonalTooltipText = '';
-                                                    
-                                                    if (showDiagonalContext) {
-                                                        // Determine if we should show orgs or projects based on which cell is hovered
-                                                        const isHoveredAboveDiagonal = (hoveredCell.donor1 === donor1 && hoveredCell.donor2 !== donor1) ? (selectedDonors.indexOf(hoveredCell.donor1) < selectedDonors.indexOf(hoveredCell.donor2)) : false;
-                                                        const isHoveredBelowDiagonal = (hoveredCell.donor1 === donor1 && hoveredCell.donor2 !== donor1) ? (selectedDonors.indexOf(hoveredCell.donor1) > selectedDonors.indexOf(hoveredCell.donor2)) : (hoveredCell.donor2 === donor1 && hoveredCell.donor1 !== donor1 && selectedDonors.indexOf(hoveredCell.donor1) > selectedDonors.indexOf(hoveredCell.donor2));
-                                                        
-                                                        // Simplify: check if hovered cell is a project cell or org cell
-                                                        const hoveredOrgIndex = selectedDonors.indexOf(hoveredCell.donor1);
-                                                        const hoveredColIndex = selectedDonors.indexOf(hoveredCell.donor2);
-                                                        const isHoveredCellProject = hoveredOrgIndex < hoveredColIndex;
-                                                        
-                                                        if (isHoveredCellProject) {
-                                                            // Show total projects for this donor
-                                                            diagonalCount = donorTotals[donor1]?.projects.size || 0;
-                                                            diagonalTooltipText = `Total projects funded by ${donor1}`;
-                                                            diagonalColorClass = `${getProjectColorIntensity(diagonalCount, maxValues.maxProjects)} ${diagonalCount > 0 ? 'text-slate-800' : 'text-slate-400'}`;
-                                                        } else {
-                                                            // Show total orgs for this donor
-                                                            diagonalCount = donorTotals[donor1]?.orgs.size || 0;
-                                                            diagonalTooltipText = `Total organizations funded by ${donor1}`;
-                                                            diagonalColorClass = `${getOrgColorIntensity(diagonalCount, maxValues.maxOrgs)} ${diagonalCount > 0 ? 'text-slate-800' : 'text-slate-400'}`;
-                                                        }
-                                                    }
-                                                    
-                                                    const colorClass = isDiagonal && !showDiagonalContext
-                                                        ? 'bg-slate-200 text-slate-400'
-                                                        : isDiagonal && showDiagonalContext
-                                                            ? diagonalColorClass
-                                                            : isAboveDiagonal
-                                                                ? `${getProjectColorIntensity(projectCount, maxValues.maxProjects)} ${projectCount > 0 ? 'text-slate-800' : 'text-slate-400'}`
-                                                                : `${getOrgColorIntensity(orgCount, maxValues.maxOrgs)} ${orgCount > 0 ? 'text-slate-800' : 'text-slate-400'}`;
-                                                    
-                                                    const tooltipText = isDiagonal && showDiagonalContext
-                                                        ? diagonalTooltipText
-                                                        : isDiagonal
-                                                            ? null
-                                                            : isAboveDiagonal
-                                                                ? `${donor1} and ${donor2} are co-financing ${projectCount} project${projectCount !== 1 ? 's' : ''}`
-                                                                : `${donor1} and ${donor2} are co-financing ${orgCount} organization${orgCount !== 1 ? 's' : ''}`;
-                                                    
-                                                    const handleCellClick = () => {
-                                                        if (!isDiagonal && count > 0) {
-                                                            // Navigate to dashboard with the two donors and current filters
-                                                            const donorSlugs = [donor1, donor2]
-                                                                .map(d => toUrlSlug(d))
-                                                                .join(',');
-                                                            
-                                                            const params = new URLSearchParams();
-                                                            params.set('d', donorSlugs);
-                                                            
-                                                            // Add type filters if any
-                                                            if (investmentTypes.length > 0) {
-                                                                params.set('types', investmentTypes.join(','));
-                                                            }
-                                                            
-                                                            // Add theme filters if any
-                                                            if (investmentThemes.length > 0) {
-                                                                params.set('themes', investmentThemes.join(','));
-                                                            }
-                                                            
-                                                            // Add search query if any
-                                                            if (appliedSearchQuery) {
-                                                                params.set('q', appliedSearchQuery);
-                                                            }
-                                                            
-                                                            router.push(`/?${params.toString()}`);
-                                                        }
-                                                    };
-                                                    
-                                                    const handleMouseEnter = () => {
-                                                        if (!isDiagonal) {
-                                                            setHoveredCell({ donor1, donor2 });
-                                                        }
-                                                    };
-                                                    
-                                                    const handleMouseLeave = () => {
-                                                        setHoveredCell(null);
-                                                    };
-                                                    
-                                                    const cellContent = (
-                                                        <td 
-                                                            key={donor2}
-                                                            onClick={handleCellClick}
-                                                            onMouseEnter={handleMouseEnter}
-                                                            onMouseLeave={handleMouseLeave}
-                                                            className={`p-3 text-center text-sm font-semibold border border-slate-200 transition-all ${colorClass} ${!isDiagonal && count > 0 ? 'cursor-pointer hover:opacity-75' : ''}`}
+                        </CardHeader>
+                        <CardContent className="pt-4">
+                            {matrixViewMode === 'unified' ? (
+                                // Unified Matrix View
+                                <>
+                                    <div className="flex items-center gap-4 mb-3">
+                                        <div className="flex items-center gap-3 ml-auto">
+                                            <div className="flex items-center gap-1.5">
+                                                <div className="w-4 h-4 bg-amber-300 border border-slate-300 rounded"></div>
+                                                <span className="text-xs text-slate-600">Organizations</span>
+                                            </div>
+                                            <div className="flex items-center gap-1.5">
+                                                <div className="w-4 h-4 bg-indigo-300 border border-slate-300 rounded"></div>
+                                                <span className="text-xs text-slate-600">Projects</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div className="w-full overflow-x-hidden">
+                                        <table className="w-full">
+                                            <thead>
+                                                <tr>
+                                                    <th className="p-2 text-left text-sm font-semibold text-slate-600 border-b-2 border-slate-200 min-w-[90px]">
+                                                        Donor
+                                                    </th>
+                                                    {selectedDonors.map(donor => (
+                                                        <th 
+                                                            key={donor} 
+                                                            className="p-2 text-left text-sm font-semibold text-slate-600 border-b-2 border-slate-200 w-16"
+                                                            style={{ writingMode: 'vertical-rl', transform: 'rotate(225deg)' }}
                                                         >
-                                                            {isDiagonal && showDiagonalContext ? diagonalCount : isDiagonal ? '—' : count}
+                                                            {donor}
+                                                        </th>
+                                                    ))}
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                {selectedDonors.map((donor1, i) => (
+                                                    <tr key={donor1}>
+                                                        <td className="p-2 text-sm font-semibold text-slate-600 border-r-2 border-slate-200">
+                                                            {donor1}
                                                         </td>
-                                                    );
+                                                        {selectedDonors.map((donor2, j) => {
+                                                            const isDiagonal = donor1 === donor2;
+                                                            const isAboveDiagonal = i < j;
+                                                            
+                                                            const projectCount = coFinancingMatrix[donor1]?.[donor2]?.projects.size || 0;
+                                                            const orgCount = coFinancingMatrix[donor1]?.[donor2]?.orgs.size || 0;
+                                                            
+                                                            const count = isAboveDiagonal ? projectCount : orgCount;
+                                                            
+                                                            const showDiagonalContext = isDiagonal && hoveredCell && (hoveredCell.donor1 === donor1 || hoveredCell.donor2 === donor1);
+                                                            let diagonalCount = 0;
+                                                            let diagonalColorClass = 'bg-slate-200 text-slate-400';
+                                                            let diagonalTooltipText = '';
+                                                            
+                                                            if (showDiagonalContext) {
+                                                                const hoveredOrgIndex = selectedDonors.indexOf(hoveredCell.donor1);
+                                                                const hoveredColIndex = selectedDonors.indexOf(hoveredCell.donor2);
+                                                                const isHoveredCellProject = hoveredOrgIndex < hoveredColIndex;
+                                                                
+                                                                if (isHoveredCellProject) {
+                                                                    diagonalCount = donorTotals[donor1]?.projects.size || 0;
+                                                                    diagonalTooltipText = `Total projects funded by ${donor1}`;
+                                                                    diagonalColorClass = `${getProjectColorIntensity(diagonalCount, maxValues.maxProjects)} ${diagonalCount > 0 ? 'text-slate-800' : 'text-slate-400'}`;
+                                                                } else {
+                                                                    diagonalCount = donorTotals[donor1]?.orgs.size || 0;
+                                                                    diagonalTooltipText = `Total organizations funded by ${donor1}`;
+                                                                    diagonalColorClass = `${getOrgColorIntensity(diagonalCount, maxValues.maxOrgs)} ${diagonalCount > 0 ? 'text-slate-800' : 'text-slate-400'}`;
+                                                                }
+                                                            }
+                                                            
+                                                            const colorClass = isDiagonal && !showDiagonalContext
+                                                                ? 'bg-slate-200 text-slate-400'
+                                                                : isDiagonal && showDiagonalContext
+                                                                    ? diagonalColorClass
+                                                                    : isAboveDiagonal
+                                                                        ? `${getProjectColorIntensity(projectCount, maxValues.maxProjects)} ${projectCount > 0 ? 'text-slate-800' : 'text-slate-400'}`
+                                                                        : `${getOrgColorIntensity(orgCount, maxValues.maxOrgs)} ${orgCount > 0 ? 'text-slate-800' : 'text-slate-400'}`;
+                                                            
 
-                                                    if (!tooltipText) return cellContent;
+                                                            const tooltipText = isDiagonal && showDiagonalContext
+                                                                ? diagonalTooltipText
+                                                                : isDiagonal
+                                                                    ? null
+                                                                    : isAboveDiagonal
+                                                                        ? `${donor1} and ${donor2} are co-financing ${projectCount} project${projectCount !== 1 ? 's' : ''}`
+                                                                        : `${donor1} and ${donor2} are co-financing ${orgCount} organization${orgCount !== 1 ? 's' : ''}`;
+                                                            
 
-                                                    return (
-                                                        <TooltipProvider key={donor2} delayDuration={0}>
-                                                            <TooltipUI>
-                                                                <TooltipTrigger asChild>
-                                                                    {cellContent}
-                                                                </TooltipTrigger>
-                                                                <TooltipContent
-                                                                    side="bottom"
-                                                                    align="center"
-                                                                    className="bg-white text-slate-800 text-sm rounded-lg border border-slate-200 px-3 py-2"
-                                                                    sideOffset={5}
-                                                                    avoidCollisions={true}
-                                                                    style={{ ...STYLES.chartTooltip }}
+                                                            const cellContent = (
+                                                                <td 
+                                                                    key={donor2}
+                                                                    onMouseEnter={() => !isDiagonal && setHoveredCell({ donor1, donor2 })}
+                                                                    onMouseLeave={() => setHoveredCell(null)}
+                                                                    className={`p-3 text-center text-sm font-semibold border border-slate-200 transition-all ${colorClass} ${!isDiagonal && count > 0 ? 'cursor-pointer hover:opacity-75' : ''}`}
                                                                 >
-                                                                    {tooltipText}
-                                                                </TooltipContent>
-                                                            </TooltipUI>
-                                                        </TooltipProvider>
-                                                    );
-                                                })}
-                                            </tr>
-                                        ))}
-                                    </tbody>
-                                </table>
-                            </div>
+                                                                    {isDiagonal && showDiagonalContext ? diagonalCount : isDiagonal ? '—' : count}
+                                                                </td>
+                                                            );
+
+                                                            if (!tooltipText) return cellContent;
+
+                                                            return (
+                                                                <TooltipProvider key={donor2} delayDuration={0}>
+                                                                    <TooltipUI>
+                                                                        <TooltipTrigger asChild>
+                                                                            {cellContent}
+                                                                        </TooltipTrigger>
+                                                                        <TooltipContent
+                                                                            side="bottom"
+                                                                            align="center"
+                                                                            className="bg-white text-slate-800 text-sm rounded-lg border border-slate-200 px-3 py-2"
+                                                                            sideOffset={5}
+                                                                            avoidCollisions={true}
+                                                                            style={{ ...STYLES.chartTooltip }}
+                                                                        >
+                                                                            {tooltipText}
+                                                                        </TooltipContent>
+                                                                    </TooltipUI>
+                                                                </TooltipProvider>
+                                                            );
+                                                        })}
+                                                    </tr>
+                                                ))}
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </>
+                            ) : (
+                                // Split Matrices View (Organizations and Projects)
+                                <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+                                    {/* Organizations Matrix */}
+                                    <div>
+                                        <h3 className="text-sm font-semibold text-slate-700 mb-3 flex items-center gap-2">
+                                            <div className="w-4 h-4 bg-amber-300 border border-slate-300 rounded"></div>
+                                            Organizations
+                                        </h3>
+                                        <div className="w-full overflow-x-hidden">
+                                            <table className="w-full">
+                                                <thead>
+                                                    <tr>
+                                                        <th className="p-2 text-left text-sm font-semibold text-slate-600 border-b-2 border-slate-200 min-w-[90px]">
+                                                            Donor
+                                                        </th>
+                                                        {selectedDonors.map(donor => (
+                                                            <th 
+                                                                key={donor} 
+                                                                className="p-2 text-left text-sm font-semibold text-slate-600 border-b-2 border-slate-200 w-16"
+                                                                style={{ writingMode: 'vertical-rl', transform: 'rotate(225deg)' }}
+                                                            >
+                                                                {donor}
+                                                            </th>
+                                                        ))}
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    {selectedDonors.map((donor1, i) => (
+                                                        <tr key={donor1}>
+                                                            <td className="p-2 text-sm font-semibold text-slate-600 border-r-2 border-slate-200">
+                                                                {donor1}
+                                                            </td>
+                                                            {selectedDonors.map((donor2, j) => {
+                                                                const isDiagonal = donor1 === donor2;
+                                                                const orgCount = coFinancingMatrix[donor1]?.[donor2]?.orgs.size || 0;
+                                                                const colorClass = isDiagonal
+                                                                    ? 'bg-slate-200 text-slate-400'
+                                                                    : `${getOrgColorIntensity(orgCount, maxValues.maxOrgs)} ${orgCount > 0 ? 'text-slate-800' : 'text-slate-400'}`;
+                                                                
+                                                                const tooltipText = !isDiagonal && orgCount > 0
+                                                                    ? `${donor1} and ${donor2} are co-financing ${orgCount} organization${orgCount !== 1 ? 's' : ''}`
+                                                                    : null;
+                                                                
+                                                                const cellContent = (
+                                                                    <td 
+                                                                        key={donor2}
+                                                                        className={`p-3 text-center text-sm font-semibold border border-slate-200 transition-all ${colorClass} ${!isDiagonal && orgCount > 0 ? 'cursor-pointer hover:opacity-75' : ''}`}
+                                                                    >
+                                                                        {isDiagonal ? '—' : orgCount}
+                                                                    </td>
+                                                                );
+
+                                                                if (!tooltipText) return cellContent;
+
+                                                                return (
+                                                                    <TooltipProvider key={donor2} delayDuration={0}>
+                                                                        <TooltipUI>
+                                                                            <TooltipTrigger asChild>
+                                                                                {cellContent}
+                                                                            </TooltipTrigger>
+                                                                            <TooltipContent
+                                                                                side="bottom"
+                                                                                align="center"
+                                                                                className="bg-white text-slate-800 text-sm rounded-lg border border-slate-200 px-3 py-2"
+                                                                                sideOffset={5}
+                                                                                avoidCollisions={true}
+                                                                                style={{ ...STYLES.chartTooltip }}
+                                                                            >
+                                                                                {tooltipText}
+                                                                            </TooltipContent>
+                                                                        </TooltipUI>
+                                                                    </TooltipProvider>
+                                                                );
+                                                            })}
+                                                        </tr>
+                                                    ))}
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    </div>
+
+                                    {/* Projects Matrix */}
+                                    <div>
+                                        <h3 className="text-sm font-semibold text-slate-700 mb-3 flex items-center gap-2">
+                                            <div className="w-4 h-4 bg-indigo-300 border border-slate-300 rounded"></div>
+                                            Projects
+                                        </h3>
+                                        <div className="w-full overflow-x-hidden">
+                                            <table className="w-full">
+                                                <thead>
+                                                    <tr>
+                                                        <th className="p-2 text-left text-sm font-semibold text-slate-600 border-b-2 border-slate-200 min-w-[90px]">
+                                                            Donor
+                                                        </th>
+                                                        {selectedDonors.map(donor => (
+                                                            <th 
+                                                                key={donor} 
+                                                                className="p-2 text-left text-sm font-semibold text-slate-600 border-b-2 border-slate-200 w-16"
+                                                                style={{ writingMode: 'vertical-rl', transform: 'rotate(225deg)' }}
+                                                            >
+                                                                {donor}
+                                                            </th>
+                                                        ))}
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    {selectedDonors.map((donor1, i) => (
+                                                        <tr key={donor1}>
+                                                            <td className="p-2 text-sm font-semibold text-slate-600 border-r-2 border-slate-200">
+                                                                {donor1}
+                                                            </td>
+                                                            {selectedDonors.map((donor2, j) => {
+                                                                const isDiagonal = donor1 === donor2;
+                                                                const projectCount = coFinancingMatrix[donor1]?.[donor2]?.projects.size || 0;
+                                                                const colorClass = isDiagonal
+                                                                    ? 'bg-slate-200 text-slate-400'
+                                                                    : `${getProjectColorIntensity(projectCount, maxValues.maxProjects)} ${projectCount > 0 ? 'text-slate-800' : 'text-slate-400'}`;
+                                                                
+                                                                const tooltipText = !isDiagonal && projectCount > 0
+                                                                    ? `${donor1} and ${donor2} are co-financing ${projectCount} project${projectCount !== 1 ? 's' : ''}`
+                                                                    : null;
+                                                                
+                                                                const cellContent = (
+                                                                    <td 
+                                                                        key={donor2}
+                                                                        className={`p-3 text-center text-sm font-semibold border border-slate-200 transition-all ${colorClass} ${!isDiagonal && projectCount > 0 ? 'cursor-pointer hover:opacity-75' : ''}`}
+                                                                    >
+                                                                        {isDiagonal ? '—' : projectCount}
+                                                                    </td>
+                                                                );
+
+                                                                if (!tooltipText) return cellContent;
+
+                                                                return (
+                                                                    <TooltipProvider key={donor2} delayDuration={0}>
+                                                                        <TooltipUI>
+                                                                            <TooltipTrigger asChild>
+                                                                                {cellContent}
+                                                                            </TooltipTrigger>
+                                                                            <TooltipContent
+                                                                                side="bottom"
+                                                                                align="center"
+                                                                                className="bg-white text-slate-800 text-sm rounded-lg border border-slate-200 px-3 py-2"
+                                                                                sideOffset={5}
+                                                                                avoidCollisions={true}
+                                                                                style={{ ...STYLES.chartTooltip }}
+                                                                            >
+                                                                                {tooltipText}
+                                                                            </TooltipContent>
+                                                                        </TooltipUI>
+                                                                    </TooltipProvider>
+                                                                );
+                                                            })}
+                                                        </tr>
+                                                    ))}
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    </div>
+                                </div>
+                            )}
                         </CardContent>
                     </Card>
+                    
+                    {/* Charts Row */}
+                    <div className={`${selectedDonors.length === 0 ? 'hidden' : ''} grid grid-cols-1 lg:grid-cols-2 gap-4`}>
+                        <div>
+                            <ChartCard
+                                title="Co-Financing Donors"
+                                icon={<Globe style={{ color: 'var(--brand-primary)' }} />}
+                                data={donorCoFinancingData}
+                                barColor="var(--brand-primary-lighter)"
+                                footnote={`Showing donors with co-financed organizations based on ${selectedDonors.length} selected donor${selectedDonors.length === 1 ? '' : 's'}`}
+                            />
 
-                       {/* Charts Row */}
-                    <div className="grid grid-cols-1 lg:grid-cols-2 gap-4">
-                        <ChartCard
-                            title="Co-Financing Donors"
-                            icon={<Globe style={{ color: 'var(--brand-primary)' }} />}
-                            data={donorCoFinancingData}
-                            barColor="var(--brand-primary-lighter)"
-                            footnote={`Showing donors with co-financed organizations based on ${selectedDonors.length} selected donor${selectedDonors.length === 1 ? '' : 's'}`}
-                        />
+                            {/* Force labels visible under the chart so users always see pair names & values */}
+                            <div className="mt-3 px-2">
+                                {donorCoFinancingData.length === 0 ? (
+                                    <p className="text-sm text-slate-500">No co-financed donor pairs to display</p>
+                                ) : (
+                                    <ul className="space-y-2 max-h-48 overflow-y-auto">
+                                        {donorCoFinancingData.map((d, idx) => (
+                                            <li key={`${d.name}-${idx}`} className="flex items-center justify-between text-sm">
+                                                <div className="flex items-center gap-2 min-w-0">
+                                                    <span className="w-3 h-3 rounded-sm" style={{ backgroundColor: 'var(--brand-primary-lighter)' }} />
+                                                    <span className="truncate text-slate-700">{d.name}</span>
+                                                </div>
+                                                <span className="font-semibold text-slate-800 ml-3">{d.value}</span>
+                                            </li>
+                                        ))}
+                                    </ul>
+                                )}
+                            </div>
+                        </div>
                         
                         {/* Organizations List */}
                         <Card className="!border-0 bg-white">
