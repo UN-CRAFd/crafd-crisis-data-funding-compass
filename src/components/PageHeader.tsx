@@ -183,8 +183,6 @@ export default function PageHeader({
                             </Button>
                         )}
 
-                        {logoutButton}
-
                         {/* Page Navigation Menu - Rightmost */}
                         <DropdownMenu>
                             <DropdownMenuTrigger asChild>
@@ -229,6 +227,13 @@ export default function PageHeader({
                                 >
                                     <span className={pathname === '/methodology/' ? '!font-bold' : ''}>{labels.header.methodology}</span>
                                 </DropdownMenuItem>
+                                {logoutButton && (
+                                    <div className="border-t border-slate-100 mt-1 pt-1">
+                                        <DropdownMenuItem asChild>
+                                            {logoutButton}
+                                        </DropdownMenuItem>
+                                    </div>
+                                )}
                             </DropdownMenuContent>
                         </DropdownMenu>
                     </div>
