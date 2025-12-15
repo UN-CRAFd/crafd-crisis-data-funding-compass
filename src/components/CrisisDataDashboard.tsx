@@ -560,9 +560,24 @@ const CrisisDataDashboard = ({
     }, [selectedProjectKey, nestedOrganizations]);
 
     const selectedOrganization = useMemo(() => {
-        if (!selectedOrgKey || !nestedOrganizations.length) return null;
+        if (!selectedOrgKey) return null;
         
-        // Look up by org_key using URL slug matching (handles lowercase with dashes)
+        // First, try to find in processed organizations (which have injected member states)
+        if (dashboardData?.allOrganizations) {
+            const processedOrg = dashboardData.allOrganizations.find(org => {
+                const nestedOrg = nestedOrganizations.find(n => n.id === org.id);
+                const orgKey = nestedOrg?.fields?.['org_key'];
+                return orgKey && matchesUrlSlug(selectedOrgKey, orgKey);
+            });
+            
+            if (processedOrg) {
+                return processedOrg;
+            }
+        }
+        
+        // Fallback: build from nested organizations if processed data not available
+        if (!nestedOrganizations.length) return null;
+        
         const nestedOrg = nestedOrganizations.find((org: any) => {
             const orgKey = org.fields?.['org_key'];
             return orgKey && matchesUrlSlug(selectedOrgKey, orgKey);
@@ -588,10 +603,14 @@ const CrisisDataDashboard = ({
                 ? nestedOrg.fields['Org Type'][0] 
                 : (nestedOrg.fields?.['Org Type'] || 'Unknown'),
             donorCountries: nestedOrg.donor_countries || [],
+            donorInfo: (nestedOrg.donor_countries || []).map(country => ({
+                country,
+                isOrgLevel: true
+            })),
             projects: projectsData,
             projectCount: projectsData.length
         } as OrganizationWithProjects;
-    }, [selectedOrgKey, nestedOrganizations]);
+    }, [selectedOrgKey, nestedOrganizations, dashboardData?.allOrganizations]);
 
     // Share functionality
     const handleShare = async () => {
@@ -1420,7 +1439,7 @@ const CrisisDataDashboard = ({
                                                                                             <Badge key={idx} text={country} variant={combinedDonors.includes(country) ? 'blue' : 'slate'} />
                                                                                         ))
                                                                                     ) : (
-                                                                                        <span className="text-xs text-slate-500">Asset donors not specified</span>
+                                                                                        <span className="text-xs text-slate-500">{labels.modals.assetDonorsNotSpecified}</span>
                                                                                     )}
                                                                                 </div>
                                                                             </div>
@@ -1463,6 +1482,7 @@ const CrisisDataDashboard = ({
                                                         onThemesChange={onThemesChange}
                                                         onResetFilters={onResetFilters}
                                                         filterDescription={getFilterDescription()}
+                                                        orgAgenciesMap={orgAgenciesMap}
                                                     />
                                                 </div>
                                             </TabsContent>
