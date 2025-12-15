@@ -36,6 +36,18 @@ const NetworkGraph = dynamic(() => import('@/components/NetworkGraph'), {
     ssr: false,
 });
 
+const TAB_TRIGGER_CLASS =
+  "h-6 px-2.5 text-[11px] font-medium rounded-md transition-all " +
+  "data-[state=active]:bg-white data-[state=active]:shadow-sm " +
+  "data-[state=active]:border data-[state=active]:border-slate-200 " +
+  "data-[state=active]:text-slate-800 text-slate-600 bg-slate-50 border-none";
+
+const TABS = [
+  { value: 'table', label: 'Organizations', Icon: Table },
+  { value: 'donors', label: 'Donors', Icon: Globe },
+  { value: 'network', label: 'Network', Icon: Network },
+] as const;
+
 // Investment type definitions for tooltips
 const INVESTMENT_TYPE_DESCRIPTIONS: Record<string, string> = {
     'Data Sets & Commons': 'Shared data repositories and standardized datasets that enable analysis and decision-making across the humanitarian sector.',
@@ -1009,30 +1021,19 @@ const CrisisDataDashboard = ({
                                                 />
 
                                                 {/* View Toggle Switch Tabs on left */}
-                                                <Tabs value={activeView} onValueChange={(value) => setActiveView(value as 'table' | 'network' | 'donors')} className="hidden sm:flex">
-                                                    <TabsList className="h-7 p-0.5 bg-slate-50 border border-slate-200 rounded-md">
-                                                        <TabsTrigger
-                                                            value="table"
-                                                            className="h-6 px-2.5 text-[11px] font-medium rounded-md transition-all data-[state=active]:bg-white data-[state=active]:shadow-sm data-[state=active]:border data-[state=active]:border-slate-200 data-[state=active]:text-slate-800 text-slate-600 bg-slate-50 border-none"
-                                                        >
-                                                            <Table className="h-3 w-3 mr-1.5" />
-                                                            Table
-                                                        </TabsTrigger>
-                                                        <TabsTrigger
-                                                            value="donors"
-                                                            className="h-6 px-2.5 text-[11px] font-medium rounded-md transition-all data-[state=active]:bg-white data-[state=active]:shadow-sm data-[state=active]:border data-[state=active]:border-slate-200 data-[state=active]:text-slate-800 text-slate-600 bg-slate-50 border-none"
-                                                        >
-                                                            <Globe className="h-3 w-3 mr-1.5" />
-                                                            Donors
-                                                        </TabsTrigger>
-                                                        <TabsTrigger
-                                                            value="network"
-                                                            className="h-6 px-2.5 text-[11px] font-medium rounded-md transition-all data-[state=active]:bg-white data-[state=active]:shadow-sm data-[state=active]:border data-[state=active]:border-slate-200 data-[state=active]:text-slate-800 text-slate-600 bg-slate-50 border-none"
-                                                        >
-                                                            <Network className="h-3 w-3 mr-1.5" />
-                                                            Network
-                                                        </TabsTrigger>
-                                                    </TabsList>
+                                                <Tabs
+                                                value={activeView}
+                                                onValueChange={v => setActiveView(v as 'table' | 'donors' | 'network')}
+                                                className="hidden sm:flex"
+                                                >
+                                                <TabsList className="h-7 p-0.5 bg-slate-50 border border-slate-200 rounded-md">
+                                                    {TABS.map(({ value, label, Icon }) => (
+                                                    <TabsTrigger key={value} value={value} className={TAB_TRIGGER_CLASS}>
+                                                        <Icon className="h-3 w-3 mr-1.5" />
+                                                        {label}
+                                                    </TabsTrigger>
+                                                    ))}
+                                                </TabsList>
                                                 </Tabs>
                                             </div>
                                                 {/* Sort Dropdown right-aligned */}
