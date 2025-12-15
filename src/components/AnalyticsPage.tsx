@@ -1307,6 +1307,12 @@ export default function AnalyticsPage({ logoutButton }: AnalyticsPageProps) {
         return radarData;
     }, [selectedDonors, organizationsData, investmentTypes, investmentThemes, appliedSearchQuery]);
 
+    const handleCellClick = (donor1: string, donor2: string) => {
+        // Navigate to dashboard with both donors as filters
+        const donorSlugs = [toUrlSlug(donor1), toUrlSlug(donor2)].join(',');
+        router.push(`/?d=${donorSlugs}`);
+    };
+
     const handleShare = () => {
         const url = window.location.href;
         navigator.clipboard.writeText(url).then(() => {
@@ -1655,6 +1661,7 @@ export default function AnalyticsPage({ logoutButton }: AnalyticsPageProps) {
                                                                     <td 
                                                                         key={donor2}
                                                                         className={`p-3 text-center text-sm font-semibold border border-slate-200 transition-all ${colorClass} ${!isDiagonal && orgCount > 0 ? 'cursor-pointer hover:opacity-75' : ''}`}
+                                                                        onClick={() => !isDiagonal && orgCount > 0 && handleCellClick(donor1, donor2)}
                                                                     >
                                                                         {isDiagonal ? '—' : orgCount}
                                                                     </td>
@@ -1734,6 +1741,7 @@ export default function AnalyticsPage({ logoutButton }: AnalyticsPageProps) {
                                                                     <td 
                                                                         key={donor2}
                                                                         className={`p-3 text-center text-sm font-semibold border border-slate-200 transition-all ${colorClass} ${!isDiagonal && projectCount > 0 ? 'cursor-pointer hover:opacity-75' : ''}`}
+                                                                        onClick={() => !isDiagonal && projectCount > 0 && handleCellClick(donor1, donor2)}
                                                                     >
                                                                         {isDiagonal ? '—' : projectCount}
                                                                     </td>
