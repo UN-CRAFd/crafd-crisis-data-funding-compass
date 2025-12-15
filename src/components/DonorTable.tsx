@@ -353,26 +353,14 @@ export const DonorTable: React.FC<DonorTableProps> = ({
                                                                     // Extract unique agency names that belong to the current donor
                                                                     const agencyNames = new Set<string>();
                                                                     agencies.forEach((agency: any) => {
-                                                                        // Check if this agency belongs to the current donor
-                                                                        // Look for donor field first, then fall back to country fields
-                                                                        const donorField = agency.fields?.['Donor'] || agency.fields?.['Funding Country'] || agency.fields?.['Organization Donor'];
+                                                                        // Get the country/donor from this agency
                                                                         const agencyCountry = agency.fields?.['Country Name'] || 
                                                                                             agency.fields?.['Country'] || 
                                                                                             agency.fields?.['Agency Associated Country'];
                                                                         
-                                                                        // Check if agency belongs to current donor
+                                                                        // Check if this agency's country matches the current donor we're iterating
                                                                         let belongsToDonor = false;
-                                                                        
-                                                                        // Check donor field first
-                                                                        if (donorField) {
-                                                                            const donorValues = Array.isArray(donorField) ? donorField : [donorField];
-                                                                            belongsToDonor = donorValues.some((d: any) => 
-                                                                                (typeof d === 'string' ? d.trim() : d?.toString() || '').toLowerCase() === donor.toLowerCase()
-                                                                            );
-                                                                        }
-                                                                        
-                                                                        // Fall back to country field if no donor field match
-                                                                        if (!belongsToDonor && agencyCountry) {
+                                                                        if (agencyCountry) {
                                                                             const countryValues = Array.isArray(agencyCountry) ? agencyCountry : [agencyCountry];
                                                                             belongsToDonor = countryValues.some((c: any) => 
                                                                                 (typeof c === 'string' ? c.trim() : c?.toString() || '').toLowerCase() === donor.toLowerCase()

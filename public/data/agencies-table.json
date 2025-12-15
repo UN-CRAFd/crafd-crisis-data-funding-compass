@@ -72,13 +72,6 @@
     }
   },
   {
-    "id": "rec1mxEgEXBohkCjo",
-    "fields": {
-      "Agency/Department Name": "Unspecified Agency",
-      "Country Name": "Colombia"
-    }
-  },
-  {
     "id": "rec1qQDNbg7E8mqD3",
     "fields": {
       "Agency/Department Name": "Italian National Institute of Statistics (ISTAT)",
@@ -148,8 +141,8 @@
   {
     "id": "rec44UV2liT4wu1tg",
     "fields": {
-      "Agency/Department Name": "Unspecified Agency",
-      "Country Name": "Alwaleed Philanthropies"
+      "Agency/Department Name": "Alwaleed Philanthropies",
+      "Country Name": "Foundation"
     }
   },
   {
@@ -485,8 +478,8 @@
   {
     "id": "recFNcILze2MwJxUN",
     "fields": {
-      "Agency/Department Name": "Unspecified Agency",
-      "Country Name": "Organization of American States "
+      "Agency/Department Name": "Organization of American States",
+      "Country Name": "Non-State Actor"
     }
   },
   {
@@ -547,8 +540,8 @@
   {
     "id": "recGlx8p4y1yzES7T",
     "fields": {
-      "Agency/Department Name": "Unspecified Agency",
-      "Country Name": "Rippleworks"
+      "Agency/Department Name": "Rippleworks",
+      "Country Name": "Foundation"
     }
   },
   {
