@@ -1,7 +1,8 @@
 'use client';
 
 import { Building2, ChevronDown, ChevronRight, ExternalLink, Package, PackageOpen, Building, MapPin } from 'lucide-react';
-import { useState, useMemo } from 'react';
+import { useState, useMemo, useEffect } from 'react';
+import { getMemberStates } from '@/lib/data';
 import BaseModal, { ModalHeader, ModalTooltip } from './BaseModal';
 import { Collapsible, CollapsibleContent, CollapsibleTrigger } from '@/components/ui/collapsible';
 import { CountryFlag } from './CountryFlag';
@@ -71,6 +72,13 @@ export default function DonorModal({
     const [expandedAgencies, setExpandedAgencies] = useState<Set<string>>(new Set());
     // Track expanded headquartered organizations
     const [isHeadquarteredExpanded, setIsHeadquarteredExpanded] = useState(false);
+    // Member states state
+    const [memberStates, setMemberStates] = useState<string[]>([]);
+
+    // Load member states on mount
+    useEffect(() => {
+        getMemberStates().then(states => setMemberStates(states));
+    }, []);
 
     // Reusable subheader component - Major sections - smaller than main title
     const SubHeader = ({ children }: { children: React.ReactNode }) => (
@@ -314,6 +322,8 @@ export default function DonorModal({
             );
         }
 
+        const isMemberState = memberStates.includes(donorDisplayName);
+
         return (
             <ModalHeader
                 icon={
@@ -323,6 +333,11 @@ export default function DonorModal({
                     />
                 }
                 title={donorDisplayName}
+                subtitle={isMemberState ? (
+                    <span className="inline-flex items-center px-2 py-1 rounded text-xs font-semibold bg-slate-200 text-slate-700">
+                        UN Member State
+                    </span>
+                ) : null}
                 showCopied={showCopied}
                 onShare={onShare}
                 onClose={onClose}
