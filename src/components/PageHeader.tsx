@@ -92,20 +92,7 @@ export default function PageHeader({
                         </TooltipProvider>
                     </div>
                     <div className="flex gap-1 sm:gap-2 flex-shrink-0">
-                        <Button
-                            variant="outline"
-                            size="sm"
-                            onClick={() => setTipsEnabled(!tipsEnabled)}
-                            className={`bg-slate-50/50 border-slate-200 text-xs sm:text-sm transition-colors ${
-                                tipsEnabled
-                                    ? 'hover:var(--brand-bg-light) hover:border-[var(--brand-primary)] hover:text-[var(--brand-primary)] text-slate-600'
-                                    : 'border-slate-300 bg-slate-200 text-slate-500'
-                            }`}
-                            title={tipsEnabled ? labels.header.tipsOn : labels.header.tipsOff}
-                        >
-                            <Lightbulb className={`w-4 h-4 sm:mr-2 ${tipsEnabled ? '' : 'opacity-50'}`} />
-                            <span className="hidden sm:inline">{tipsEnabled ? labels.header.tipsOn : labels.header.tipsOff}</span>
-                        </Button>
+                        {/* Tips moved into Settings (see navigation menu) */}
                         <Button
                             variant="outline"
                             size="sm"
@@ -225,16 +212,40 @@ export default function PageHeader({
                                 >
                                     <span className={pathname === '/methodology/' ? '!font-bold' : ''}>{labels.header.methodology}</span>
                                 </DropdownMenuItem>
-                                        <div className="border-t border-slate-100 mt-1 pt-1">
-                                            <DropdownMenuItem>
-                                                <form action="/logout" method="post" className="w-full">
-                                                    <button type="submit" className="w-full text-left flex items-center gap-2 text-sm py-2 px-2 text-slate-700 hover:bg-slate-50">
-                                                        <LogOut className="w-4 h-4" />
-                                                        <span>Logout</span>
-                                                    </button>
-                                                </form>
-                                            </DropdownMenuItem>
-                                        </div>
+
+                                {/* Settings block: Tips toggle + placeholder action */}
+                                <div className="border-t border-slate-100 mt-1 pt-2 px-2">
+                                    <div className="text-xs font-semibold text-slate-600 mb-1">Settings</div>
+                                    <div className="flex flex-col">
+                                        <button
+                                            type="button"
+                                            onClick={() => setTipsEnabled(!tipsEnabled)}
+                                            className="w-full text-left flex items-center gap-2 text-sm py-2 px-2 text-slate-700 hover:bg-slate-50"
+                                        >
+                                            <Lightbulb className={`w-4 h-4 ${tipsEnabled ? '' : 'opacity-50'}`} />
+                                            <span>{tipsEnabled ? labels.header.tipsOn : labels.header.tipsOff}</span>
+                                        </button>
+                                        <button
+                                            type="button"
+                                            onClick={() => {}}
+                                            className="w-full text-left flex items-center gap-2 text-sm py-2 px-2 text-slate-700 hover:bg-slate-50"
+                                        >
+                                            <Info className="w-4 h-4" />
+                                            <span>Turn off General Contributions</span>
+                                        </button>
+                                    </div>
+                                </div>
+
+                                <div className="border-t border-slate-100 mt-1 pt-1">
+                                    <DropdownMenuItem>
+                                        <form action="/logout" method="post" className="w-full">
+                                            <button type="submit" className="w-full text-left flex items-center gap-2 text-sm py-2 px-2 text-slate-700 hover:bg-slate-50">
+                                                <LogOut className="w-4 h-4" />
+                                                <span>Logout</span>
+                                            </button>
+                                        </form>
+                                    </DropdownMenuItem>
+                                </div>
                             </DropdownMenuContent>
                         </DropdownMenu>
                     </div>
