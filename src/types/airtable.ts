@@ -83,6 +83,7 @@ export interface OrganizationWithProjects {
     projects: ProjectData[];
     projectCount: number;
     estimatedBudget?: number;
+    fields?: Record<string, any>; // Raw fields from nested organization (includes "Funding Type")
 }
 
 export interface ProjectTypeData {
