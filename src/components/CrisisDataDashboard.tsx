@@ -1008,8 +1008,8 @@ const CrisisDataDashboard = ({
                             />
 
                             <div className="flex items-center gap-1">
-                                {/* Sort Dropdown only for Table view */}
-                                {activeView === 'table' && (
+                                {/* Sort Dropdown for Table and Donors view */}
+                                {(activeView === 'table' || activeView === 'donors') && (
                                     <div className="animate-in slide-in-from-right-5 fade-in duration-300">
                                         <div className="hidden sm:flex h-7 px-2 font-medium transition-all bg-slate-50/50 border border-slate-200 hover:bg-white hover:border-slate-300 text-[11px] rounded-md items-center gap-1">
                                            <Button
@@ -1042,7 +1042,7 @@ const CrisisDataDashboard = ({
                                                                 {sortBy === 'name' 
                                                                     ? 'Alphabetically' 
                                                                     : sortBy === 'donors' 
-                                                                    ? 'Donors' 
+                                                                    ? (activeView === 'donors' ? 'Organizations' : 'Donors')
                                                                     : sortBy === 'assets'
                                                                     ? 'Assets'
                                                                     : 'Funding'}
@@ -1071,7 +1071,7 @@ const CrisisDataDashboard = ({
                                                         onClick={() => onSortChange('donors', sortDirection)}
                                                         className="cursor-pointer text-[11px] py-1"
                                                     >
-                                                        No. of Donors
+                                                        {activeView === 'donors' ? 'No. of Organizations' : 'No. of Donors'}
                                                     </DropdownMenuItem>
                                                     <DropdownMenuItem
                                                         onClick={() => onSortChange('assets', sortDirection)}
@@ -1079,12 +1079,14 @@ const CrisisDataDashboard = ({
                                                     >
                                                         No. of Assets
                                                     </DropdownMenuItem>
-                                                    <DropdownMenuItem
-                                                        onClick={() => onSortChange('funding', sortDirection)}
-                                                        className="cursor-pointer text-[11px] py-1"
-                                                    >
-                                                        Funding
-                                                    </DropdownMenuItem>
+                                                    {activeView === 'table' && (
+                                                        <DropdownMenuItem
+                                                            onClick={() => onSortChange('funding', sortDirection)}
+                                                            className="cursor-pointer text-[11px] py-1"
+                                                        >
+                                                            Funding
+                                                        </DropdownMenuItem>
+                                                    )}
                                                 </DropdownMenuContent>
                                             </DropdownMenu>                                         
                                         </div>
@@ -1471,7 +1473,10 @@ const CrisisDataDashboard = ({
                                                     organizationsTable={organizationsTable}
                                                     onOpenOrganizationModal={onOpenOrganizationModal}
                                                     onOpenProjectModal={onOpenProjectModal}
+                                                    onOpenDonorModal={onOpenDonorModal}
                                                     combinedDonors={combinedDonors}
+                                                    sortBy={sortBy === 'funding' ? 'assets' : sortBy === 'donors' ? 'orgs' : sortBy}
+                                                    sortDirection={sortDirection}
                                                 />
                                                 {organizationsWithProjects.length === 0 && activeView === 'donors' && (
                                                     <NoResultsPopup onResetFilters={onResetFilters} />
