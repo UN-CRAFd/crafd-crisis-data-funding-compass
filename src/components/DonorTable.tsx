@@ -212,7 +212,7 @@ export const DonorTable: React.FC<DonorTableProps> = ({
                                     isSelected 
                                         ? 'border-[var(--brand-primary)] bg-[var(--brand-bg-lighter)]' 
                                         : 'border-slate-200 bg-slate-50/30'
-                                } animate-in fade-in gap-3 sm:gap-0 cursor-pointer min-h-[80px]`}
+                                } animate-in fade-in gap-3 sm:gap-0 cursor-pointer min-h-[60px]`}
                             >
                                 <div className="flex items-center space-x-3 flex-1">
                                     <div className="w-4 h-4 flex-shrink-0 flex items-center justify-center">
@@ -222,7 +222,7 @@ export const DonorTable: React.FC<DonorTableProps> = ({
                                             <ChevronRight className="h-4 w-4 text-slate-500" />
                                         )}
                                     </div>
-                                    <div className="text-left flex-1 min-w-0">
+                                    <div className="text-left space-y-0 mb-0 mt-0 flex-1 min-w-0">
                                         <h3 
                                             className={`font-medium text-sm sm:text-base cursor-pointer transition-colors hover:text-[var(--brand-primary)] ${
                                                 isSelected ? 'text-[var(--brand-primary)]' : 'text-slate-900'
@@ -236,7 +236,7 @@ export const DonorTable: React.FC<DonorTableProps> = ({
                                         >
                                             {donor}
                                         </h3>
-                                        <div className="text-xs sm:text-sm text-slate-500 mt-1">
+                                        <div className="text-xs sm:text-sm text-slate-500 mt-0">
                                             {totalOrgs} organization{totalOrgs !== 1 ? 's' : ''} · {totalProjects} asset{totalProjects !== 1 ? 's' : ''}
                                         </div>
                                     </div>
@@ -261,8 +261,8 @@ export const DonorTable: React.FC<DonorTableProps> = ({
                                     </Button>
                                     <div className="text-xs sm:text-xs text-slate-400 whitespace-nowrap">
                                         {isDonorExpanded
-                                            ? `Showing ${totalOrgs} org${totalOrgs === 1 ? '' : 's'}`
-                                            : `Show ${totalOrgs} org${totalOrgs === 1 ? '' : 's'}`}
+                                            ? `Showing ${totalOrgs} organization${totalOrgs === 1 ? '' : 's'}`
+                                            : `Show ${totalOrgs} organization${totalOrgs === 1 ? '' : 's'}`}
                                     </div>
                                 </div>
                             </div>
@@ -305,7 +305,7 @@ export const DonorTable: React.FC<DonorTableProps> = ({
                                                         <div className="text-left flex-1 min-w-0">
                                                             <div className="flex flex-col sm:flex-row sm:flex-wrap sm:items-baseline gap-1 sm:gap-2">
                                                                 <h4
-                                                                    className="font-medium text-slate-900 cursor-pointer transition-colors hover:text-[var(--brand-primary)] text-base sm:text-lg"
+                                                                    className="font-medium text-slate-900 cursor-pointer transition-colors hover:text-[var(--brand-primary)] text-base sm:text-md"
                                                                     onClick={e => {
                                                                         e.stopPropagation();
                                                                         const nestedOrg = nestedOrganizations.find(n => n.id === org.id);
@@ -337,7 +337,7 @@ export const DonorTable: React.FC<DonorTableProps> = ({
                                                                     <Badge
                                                                         text="Project-only"
                                                                         variant="slate"
-                                                                        className="opacity-70"
+                                                                        className="opacity-70 text-sm"
                                                                         title="This donor only funds specific projects, not the organization as a whole"
                                                                     />
                                                                 )}
@@ -444,25 +444,7 @@ export const DonorTable: React.FC<DonorTableProps> = ({
                                                             </div>                                                        </div>
                                                     </div>
                                                     <div className="flex flex-col justify-between items-end self-stretch flex-shrink-0 min-w-[100px]">
-                                                        <Button
-                                                            asChild
-                                                            variant="outline"
-                                                            size="sm"
-                                                            onClick={(e) => {
-                                                                e.stopPropagation();
-                                                                const nestedOrg = nestedOrganizations.find((n) => n.id === org.id);
-                                                                const orgKey = nestedOrg?.fields?.['org_key'];
-                                                                if (orgKey) {
-                                                                    onOpenOrganizationModal(orgKey);
-                                                                }
-                                                            }}
-                                                            className="hidden sm:inline-flex items-center justify-center gap-1 text-[10px] h-6 px-2 rounded-md text-[var(--badge-slate-bg)] bg-[var(--badge-slate-text)] hover:bg-slate-400 duration-150"
-                                                        >
-                                                            <div className="hidden sm:inline-flex items-center justify-center gap-1 border-none">
-                                                                <Info className="w-3 h-3" />
-                                                                <span>Details</span>
-                                                            </div>
-                                                        </Button>
+                                                        
                                                         <div className="text-xs sm:text-xs text-slate-400 whitespace-nowrap">
                                                             {projects.length > 0 ? (
                                                                 isOrgExpanded
