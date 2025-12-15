@@ -603,7 +603,7 @@ const CrisisDataDashboard = ({
                 ? nestedOrg.fields['Org Type'][0] 
                 : (nestedOrg.fields?.['Org Type'] || 'Unknown'),
             donorCountries: nestedOrg.donor_countries || [],
-            donorInfo: (nestedOrg.donor_countries || []).map(country => ({
+            donorInfo: (nestedOrg.donor_countries || []).map((country: string) => ({
                 country,
                 isOrgLevel: true
             })),
