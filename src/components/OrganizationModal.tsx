@@ -656,7 +656,7 @@ export default function OrganizationModal({
                             {!estBudget && !budgetSourceStr && !lastUpdated && (
                                 <div className="flex items-start">
                                     <span className="text-slate-400 mr-2 shrink-0">•</span>
-                                    <span>No detailed budget amount is publicly disclosed.</span>
+                                    <span>{labels.modals.noBudgetDisclosed}</span>
                                 </div>
                             )}
                         {isUN && (

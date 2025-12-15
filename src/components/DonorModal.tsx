@@ -313,7 +313,7 @@ export default function DonorModal({
             return (
                 <ModalHeader
                     icon={<Building2 className="h-6 w-6 sm:h-7 sm:w-7 text-[#333333] shrink-0" />}
-                    title="Donor not found"
+                    title={labels.modals.donorNotFound}
                     showCopied={showCopied}
                     onShare={onShare}
                     onClose={onClose}
@@ -335,7 +335,7 @@ export default function DonorModal({
                 title={donorDisplayName}
                 subtitle={isMemberState ? (
                     <span className="inline-flex items-center px-2 py-1 rounded text-xs font-semibold bg-slate-200 text-slate-700">
-                        UN Member State
+                        {labels.modals.memberState}
                     </span>
                 ) : null}
                 showCopied={showCopied}
@@ -388,7 +388,7 @@ export default function DonorModal({
 
                 {/* Agencies list */}
                 {agencyData.length === 0 ? (
-                    <p className="text-gray-600">No agencies found for this donor.</p>
+                    <p className="text-gray-600">{labels.modals.noAgenciesFound}</p>
                 ) : (
                     <div className="space-y-4">
                         {agencyData.map(({ agency, organizations, projects }) => {
@@ -531,7 +531,7 @@ export default function DonorModal({
                     <div className="border-t border-slate-200 pt-6">
                         <div className="mb-3 flex items-center gap-2">
                             <h3 className="text-xl font-roboto font-black text-[#333333] uppercase tracking-wide leading-normal">
-                                Headquartered in {donorDisplayName}
+                                {labels.modals.headquarteredIn} {donorDisplayName}
                             </h3>
                             <span className="text-lg font-normal text-slate-600 tabular-nums">({headquarteredOrganizations.length})</span>
                         </div>
