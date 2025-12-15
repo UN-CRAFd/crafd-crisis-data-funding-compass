@@ -206,9 +206,10 @@ interface ModalHeaderProps {
     onShare: () => void;
     onClose: () => void;
     loading?: boolean;
+    subtitle?: React.ReactNode;
 }
 
-export function ModalHeader({ icon, title, showCopied, onShare, onClose, loading }: ModalHeaderProps) {
+export function ModalHeader({ icon, title, showCopied, onShare, onClose, loading, subtitle }: ModalHeaderProps) {
     if (loading) {
         return (
             <div className="flex items-center justify-between gap-4">
@@ -226,9 +227,16 @@ export function ModalHeader({ icon, title, showCopied, onShare, onClose, loading
             {/* Main title with icon - Responsive sizing */}
             <div className="flex items-center gap-3 flex-1 min-w-0">
                 {icon}
-                <h2 className="text-lg sm:text-xl md:text-xl lg:text-2xl font-bold text-[#333333] leading-tight font-roboto">
-                    {title}
-                </h2>
+                <div className="flex-1 min-w-0">
+                    <h2 className="text-lg sm:text-xl md:text-xl lg:text-2xl font-bold text-[#333333] leading-tight font-roboto">
+                        {title}
+                    </h2>
+                    {subtitle && (
+                        <div className="mt-1">
+                            {subtitle}
+                        </div>
+                    )}
+                </div>
             </div>
             {/* Buttons container */}
             <div className="flex items-center gap-2 shrink-0">
