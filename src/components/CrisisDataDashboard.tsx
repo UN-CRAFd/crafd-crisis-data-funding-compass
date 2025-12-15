@@ -37,10 +37,7 @@ const NetworkGraph = dynamic(() => import('@/components/NetworkGraph'), {
 });
 
 const TAB_TRIGGER_CLASS =
-  "h-6 px-2.5 text-[11px] font-medium rounded-md transition-all " +
-  "data-[state=active]:bg-white data-[state=active]:shadow-sm " +
-  "data-[state=active]:border data-[state=active]:border-slate-200 " +
-  "data-[state=active]:text-slate-800 text-slate-600 bg-slate-50 border-none";
+  "h-6 px-2.5 text-[11px] font-medium rounded-md transition-all data-[state=active]:bg-white data-[state=active]:shadow-sm data-[state=active]:border data-[state=active]:border-slate-200 data-[state=active]:text-slate-800 text-slate-600 bg-slate-50 border-none";
 
 const TABS = [
   { value: 'table', label: 'Organizations', Icon: Table },
