@@ -1,0 +1,436 @@
+import React, { useState, useMemo } from 'react';
+import { ChevronDown, ChevronRight, Info } from 'lucide-react';
+import { Collapsible, CollapsibleContent, CollapsibleTrigger } from '@/components/ui/collapsible';
+import { Button } from '@/components/ui/button';
+import { getIconForInvestmentType } from '@/config/investmentTypeIcons';
+import { useTips } from '@/contexts/TipsContext';
+import { TooltipContent, TooltipProvider, TooltipTrigger, Tooltip as TooltipUI } from '@/components/ui/tooltip';
+import labels from '@/config/labels.json';
+import type { OrganizationWithProjects, ProjectData } from '@/types/airtable';
+
+interface DonorTableProps {
+    organizationsWithProjects: OrganizationWithProjects[];
+    nestedOrganizations: any[];
+    organizationsTable: Array<{ id: string; createdTime?: string; fields: Record<string, unknown> }>;
+    onOpenOrganizationModal: (orgKey: string) => void;
+    onOpenProjectModal: (projectKey: string) => void;
+    combinedDonors: string[];
+}
+
+// Investment type descriptions for tooltips
+const INVESTMENT_TYPE_DESCRIPTIONS: Record<string, string> = {
+    'Data Sets & Commons': 'Shared data repositories and standardized datasets that enable analysis and decision-making across the humanitarian sector.',
+    'Infrastructure & Platforms': 'Technical systems, tools, and platforms that support data collection, storage, processing, and sharing.',
+    'Crisis Analytics & Insights': 'Analysis, modeling, and insights derived from data to inform humanitarian response and preparedness.',
+    'Human Capital & Know-how': 'Training, capacity building, and expertise development for humanitarian data practitioners.',
+    'Standards & Coordination': 'Common standards, protocols, and coordination mechanisms for humanitarian data management.',
+    'Learning & Exchange': 'Knowledge sharing, communities of practice, and collaborative learning initiatives.'
+};
+
+// Badge component (reused from CrisisDataDashboard)
+interface BadgeProps {
+    text: string;
+    variant: 'blue' | 'emerald' | 'violet' | 'slate' | 'highlighted' | 'beta' | 'types' | 'indigo';
+    className?: string;
+    title?: string;
+}
+
+const Badge = ({ text, variant, className = '', title }: BadgeProps) => {
+    const variants = {
+        blue: 'bg-[var(--brand-bg-light)] text-[var(--brand-primary)]',
+        emerald: 'bg-emerald-50 text-emerald-700',
+        violet: 'bg-violet-50 text-violet-700',
+        indigo: 'bg-[var(--badge-other-bg)] text-[var(--badge-other-text)] font-semibold',
+        types: 'bg-green-50 text-green-700',
+        slate: 'bg-[var(--badge-slate-bg)] text-[var(--badge-slate-text)]',
+        highlighted: 'bg-[var(--brand-primary)]/20 text-[var(--brand-primary)] border border-[var(--brand-border)] font-semibold',
+        beta: ''
+    };
+
+    if (variant === 'beta') {
+        return (
+            <span
+                className={`inline-flex items-center px-1.5 py-0.5 sm:px-2 sm:py-1 rounded text-[10px] sm:text-xs font-semibold break-words ${className}`}
+                style={{
+                    backgroundColor: 'var(--badge-beta-bg)',
+                    color: 'var(--badge-beta-text)'
+                }}
+                title={title}
+            >
+                {text}
+            </span>
+        );
+    }
+
+    return (
+        <span 
+            className={`inline-flex items-center px-1.5 py-0.5 sm:px-2 sm:py-1 rounded text-[10px] sm:text-xs font-medium break-words ${variants[variant]} ${className}`}
+            title={title}
+        >
+            {text}
+        </span>
+    );
+};
+
+export const DonorTable: React.FC<DonorTableProps> = ({
+    organizationsWithProjects,
+    nestedOrganizations,
+    organizationsTable,
+    onOpenOrganizationModal,
+    onOpenProjectModal,
+    combinedDonors
+}) => {
+    const [expandedDonors, setExpandedDonors] = useState<Set<string>>(new Set());
+    const [expandedOrgs, setExpandedOrgs] = useState<Set<string>>(new Set());
+
+    // Get tips enabled state
+    let tipsEnabled = false;
+    try {
+        const tipsContext = useTips();
+        tipsEnabled = tipsContext.tipsEnabled;
+    } catch (e) {
+        tipsEnabled = false;
+    }
+
+    // Group organizations and projects by donor
+    const donorData = useMemo(() => {
+        const donorMap = new Map<string, {
+            organizations: Map<string, {
+                org: OrganizationWithProjects;
+                projects: ProjectData[];
+                isOrgLevel: boolean;
+            }>;
+        }>();
+
+        organizationsWithProjects.forEach(org => {
+            // Get org-level donors
+            const orgLevelDonors = org.donorCountries || [];
+            
+            // Add org to each org-level donor
+            orgLevelDonors.forEach(donor => {
+                if (!donorMap.has(donor)) {
+                    donorMap.set(donor, { organizations: new Map() });
+                }
+                const donorEntry = donorMap.get(donor)!;
+                
+                if (!donorEntry.organizations.has(org.id)) {
+                    donorEntry.organizations.set(org.id, {
+                        org,
+                        projects: [],
+                        isOrgLevel: true
+                    });
+                }
+                // Add all org projects to this donor
+                donorEntry.organizations.get(org.id)!.projects = [...org.projects];
+            });
+
+            // Also check project-level donors
+            org.projects.forEach(project => {
+                const projectDonors = project.donorCountries || [];
+                projectDonors.forEach(donor => {
+                    if (!donorMap.has(donor)) {
+                        donorMap.set(donor, { organizations: new Map() });
+                    }
+                    const donorEntry = donorMap.get(donor)!;
+                    
+                    if (!donorEntry.organizations.has(org.id)) {
+                        // Org not yet added to this donor (project-only relationship)
+                        donorEntry.organizations.set(org.id, {
+                            org,
+                            projects: [project],
+                            isOrgLevel: false
+                        });
+                    } else {
+                        // Org already exists, ensure this project is included
+                        const orgEntry = donorEntry.organizations.get(org.id)!;
+                        if (!orgEntry.projects.find(p => p.id === project.id)) {
+                            orgEntry.projects.push(project);
+                        }
+                    }
+                });
+            });
+        });
+
+        // Convert to array and sort
+        return Array.from(donorMap.entries())
+            .map(([donor, data]) => ({
+                donor,
+                organizations: Array.from(data.organizations.values()),
+                totalOrgs: data.organizations.size,
+                totalProjects: Array.from(data.organizations.values()).reduce(
+                    (sum, orgData) => sum + orgData.projects.length, 
+                    0
+                )
+            }))
+            .sort((a, b) => {
+                // Sort selected donors first
+                const aIsSelected = combinedDonors.includes(a.donor);
+                const bIsSelected = combinedDonors.includes(b.donor);
+                if (aIsSelected && !bIsSelected) return -1;
+                if (!aIsSelected && bIsSelected) return 1;
+                
+                // Then by number of organizations (descending)
+                return b.totalOrgs - a.totalOrgs;
+            });
+    }, [organizationsWithProjects, combinedDonors]);
+
+    return (
+        <div className="space-y-2 transition-all duration-500">
+            {donorData.map(({ donor, organizations, totalOrgs, totalProjects }) => {
+                const isDonorExpanded = expandedDonors.has(donor);
+                const isSelected = combinedDonors.includes(donor);
+
+                return (
+                    <Collapsible
+                        key={donor}
+                        open={isDonorExpanded}
+                        onOpenChange={() => {
+                            const newExpanded = new Set(expandedDonors);
+                            if (isDonorExpanded) {
+                                newExpanded.delete(donor);
+                            } else {
+                                newExpanded.add(donor);
+                            }
+                            setExpandedDonors(newExpanded);
+                        }}
+                        className="transition-all duration-500 ease-out"
+                    >
+                        <CollapsibleTrigger className="w-full">
+                            <div className={`flex flex-col sm:flex-row sm:justify-between p-3 sm:p-4 hover:bg-slate-50/70 rounded-lg border ${
+                                isSelected 
+                                    ? 'border-[var(--brand-primary)] bg-[var(--brand-bg-lighter)]' 
+                                    : 'border-slate-200 bg-slate-50/30'
+                            } animate-in fade-in gap-3 sm:gap-0 cursor-pointer min-h-[80px]`}>
+                                <div className="flex items-center space-x-3 flex-1">
+                                    <div className="w-4 h-4 flex-shrink-0 flex items-center justify-center">
+                                        {isDonorExpanded ? (
+                                            <ChevronDown className="h-4 w-4 text-slate-500" />
+                                        ) : (
+                                            <ChevronRight className="h-4 w-4 text-slate-500" />
+                                        )}
+                                    </div>
+                                    <div className="text-left flex-1 min-w-0">
+                                        <h3 className={`font-medium text-sm sm:text-base ${
+                                            isSelected ? 'text-[var(--brand-primary)]' : 'text-slate-900'
+                                        }`}>
+                                            {donor}
+                                        </h3>
+                                        <div className="text-xs sm:text-sm text-slate-500 mt-1">
+                                            {totalOrgs} organization{totalOrgs !== 1 ? 's' : ''} · {totalProjects} asset{totalProjects !== 1 ? 's' : ''}
+                                        </div>
+                                    </div>
+                                </div>
+                                <div className="flex flex-col justify-between items-end self-stretch flex-shrink-0 min-w-[100px]">
+                                    <div className="text-xs sm:text-xs text-slate-400 whitespace-nowrap">
+                                        {isDonorExpanded
+                                            ? `Showing ${totalOrgs} org${totalOrgs === 1 ? '' : 's'}`
+                                            : `Show ${totalOrgs} org${totalOrgs === 1 ? '' : 's'}`}
+                                    </div>
+                                </div>
+                            </div>
+                        </CollapsibleTrigger>
+                        <CollapsibleContent>
+                            <div className="mt-2 ml-4 sm:ml-7 space-y-2">
+                                {organizations.map(({ org, projects, isOrgLevel }) => {
+                                    const isOrgExpanded = expandedOrgs.has(org.id);
+                                    const hasProjects = projects.length > 0;
+
+                                    return (
+                                        <Collapsible
+                                            key={org.id}
+                                            open={isOrgExpanded}
+                                            onOpenChange={() => {
+                                                const newExpanded = new Set(expandedOrgs);
+                                                if (isOrgExpanded) {
+                                                    newExpanded.delete(org.id);
+                                                } else {
+                                                    newExpanded.add(org.id);
+                                                }
+                                                setExpandedOrgs(newExpanded);
+                                            }}
+                                            className="transition-all duration-500 ease-out"
+                                        >
+                                            <CollapsibleTrigger className="w-full">
+                                                <div className="flex flex-col sm:flex-row sm:justify-between p-3 sm:p-4 hover:bg-slate-100/70 rounded-lg border border-slate-100 bg-white/50 animate-in fade-in gap-3 sm:gap-0 cursor-pointer">
+                                                    <div className="flex items-center space-x-3 flex-1">
+                                                        <div className="w-4 h-4 flex-shrink-0 flex items-center justify-center">
+                                                            {hasProjects ? (
+                                                                isOrgExpanded ? (
+                                                                    <ChevronDown className="h-4 w-4 text-slate-500" />
+                                                                ) : (
+                                                                    <ChevronRight className="h-4 w-4 text-slate-500" />
+                                                                )
+                                                            ) : (
+                                                                <div className="h-4 w-4 invisible" aria-hidden="true" />
+                                                            )}
+                                                        </div>
+                                                        <div className="text-left flex-1 min-w-0">
+                                                            <div className="flex flex-col sm:flex-row sm:flex-wrap sm:items-baseline gap-1 sm:gap-2">
+                                                                <h4
+                                                                    className="font-medium text-slate-900 cursor-pointer transition-colors hover:text-[var(--brand-primary)] text-sm"
+                                                                    onClick={e => {
+                                                                        e.stopPropagation();
+                                                                        const nestedOrg = nestedOrganizations.find(n => n.id === org.id);
+                                                                        const orgKey = nestedOrg?.fields?.['org_key'];
+                                                                        if (orgKey) {
+                                                                            onOpenOrganizationModal(orgKey);
+                                                                        }
+                                                                    }}
+                                                                >
+                                                                    {org.organizationName}
+                                                                </h4>
+                                                                {(() => {
+                                                                    const orgTableMatch = organizationsTable.find(rec => {
+                                                                        const full = (rec.fields['Org Full Name'] as string) || '';
+                                                                        const short = (rec.fields['Org Short Name'] as string) || '';
+                                                                        const altFull = (rec.fields['Org Fullname'] as string) || '';
+                                                                        const normalized = (name: string) => name.replace(/\s+/g, ' ').trim().toLowerCase();
+                                                                        const target = normalized(org.organizationName || org.id);
+                                                                        return [full, short, altFull].some(s => normalized(String(s || '')) === target);
+                                                                    });
+                                                                    const orgType = orgTableMatch?.fields['Org Type'] as string | undefined;
+                                                                    return orgType ? (
+                                                                        <div className="sm:inline-flex items-center px-0.5 py-0 rounded text-[10px] font-sm text-slate-400 bg-transparent whitespace-nowrap flex-shrink-0">
+                                                                            {orgType}
+                                                                        </div>
+                                                                    ) : null;
+                                                                })()}
+                                                                {!isOrgLevel && (
+                                                                    <Badge
+                                                                        text="Project-only"
+                                                                        variant="slate"
+                                                                        className="opacity-70"
+                                                                        title="This donor only funds specific projects, not the organization as a whole"
+                                                                    />
+                                                                )}
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div className="flex flex-col justify-between items-end self-stretch flex-shrink-0 min-w-[100px]">
+                                                        <Button
+                                                            asChild
+                                                            variant="outline"
+                                                            size="sm"
+                                                            onClick={(e) => {
+                                                                e.stopPropagation();
+                                                                const nestedOrg = nestedOrganizations.find((n) => n.id === org.id);
+                                                                const orgKey = nestedOrg?.fields?.['org_key'];
+                                                                if (orgKey) {
+                                                                    onOpenOrganizationModal(orgKey);
+                                                                }
+                                                            }}
+                                                            className="hidden sm:inline-flex items-center justify-center gap-1 text-[10px] h-6 px-2 rounded-md text-[var(--badge-slate-bg)] bg-[var(--badge-slate-text)] hover:bg-slate-400 duration-150"
+                                                        >
+                                                            <div className="hidden sm:inline-flex items-center justify-center gap-1 border-none">
+                                                                <Info className="w-3 h-3" />
+                                                                <span>Details</span>
+                                                            </div>
+                                                        </Button>
+                                                        <div className="text-xs sm:text-xs text-slate-400 whitespace-nowrap">
+                                                            {projects.length > 0 ? (
+                                                                isOrgExpanded
+                                                                    ? `Showing ${projects.length} asset${projects.length === 1 ? '' : 's'}`
+                                                                    : `Show ${projects.length} asset${projects.length === 1 ? '' : 's'}`
+                                                            ) : (
+                                                                `${projects.length} asset${projects.length === 1 ? '' : 's'}`
+                                                            )}
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </CollapsibleTrigger>
+                                            <CollapsibleContent>
+                                                <div className="mt-2 ml-4 sm:ml-7 space-y-2">
+                                                    {projects.map((project: ProjectData) => (
+                                                        <div
+                                                            key={project.id}
+                                                            className="p-3 bg-slate-50/50 rounded-lg border border-slate-100 hover:bg-slate-50 cursor-pointer transition-colors duration-200 animate-in fade-in group"
+                                                            onClick={() => {
+                                                                const nestedOrg = nestedOrganizations.find((n: any) => n.id === org.id);
+                                                                const nestedProject = nestedOrg?.projects?.find((p: any) => p.id === project.id);
+                                                                const projectKey = nestedProject?.fields?.product_key;
+                                                                if (projectKey) {
+                                                                    onOpenProjectModal(projectKey);
+                                                                }
+                                                            }}
+                                                        >
+                                                            <div className="mb-2">
+                                                                <div className="flex flex-wrap items-center gap-2 gap-y-1">
+                                                                    <span className="font-medium text-slate-900 group-hover:text-[var(--badge-other-border)] transition-colors">
+                                                                        {project.projectName}
+                                                                    </span>
+                                                                    {project.investmentTypes && project.investmentTypes.length > 0 && (
+                                                                        <div className="flex flex-wrap gap-1 items-center">
+                                                                            {project.investmentTypes.map((type, idx) => {
+                                                                                const IconComponent = getIconForInvestmentType(type);
+                                                                                const description = INVESTMENT_TYPE_DESCRIPTIONS[type];
+                                                                                const badge = (
+                                                                                    <span 
+                                                                                        key={idx} 
+                                                                                        className="inline-flex items-center gap-1 px-2 py-1 rounded-md text-xs font-semibold cursor-help"
+                                                                                        style={{
+                                                                                            backgroundColor: 'var(--badge-other-bg)',
+                                                                                            color: 'var(--badge-other-text)'
+                                                                                        }}
+                                                                                    >
+                                                                                        <IconComponent className="w-3.5 h-3.5" />
+                                                                                        {type}
+                                                                                    </span>
+                                                                                );
+                                                                                
+                                                                                if (description && tipsEnabled) {
+                                                                                    return (
+                                                                                        <TooltipProvider key={idx}>
+                                                                                            <TooltipUI delayDuration={200}>
+                                                                                                <TooltipTrigger asChild>
+                                                                                                    {badge}
+                                                                                                </TooltipTrigger>
+                                                                                                <TooltipContent 
+                                                                                                    side="top" 
+                                                                                                    className="max-w-xs text-xs bg-white/70 backdrop-blur-md border border-gray-200 !z-[300]"
+                                                                                                    sideOffset={5}
+                                                                                                >
+                                                                                                    {description}
+                                                                                                </TooltipContent>
+                                                                                            </TooltipUI>
+                                                                                        </TooltipProvider>
+                                                                                    );
+                                                                                }
+                                                                                
+                                                                                return badge;
+                                                                            })}
+                                                                        </div>
+                                                                    )}
+                                                                </div>
+                                                            </div>
+                                                            <div>
+                                                                <div className="flex flex-wrap gap-1">
+                                                                    {project.donorCountries && project.donorCountries.length > 0 ? (
+                                                                        project.donorCountries.map((country, idx) => (
+                                                                            <Badge 
+                                                                                key={idx} 
+                                                                                text={country} 
+                                                                                variant={combinedDonors.includes(country) ? 'blue' : 'slate'} 
+                                                                            />
+                                                                        ))
+                                                                    ) : (
+                                                                        <span className="text-xs text-slate-500">{labels.modals.assetDonorsNotSpecified}</span>
+                                                                    )}
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    ))}
+                                                </div>
+                                            </CollapsibleContent>
+                                        </Collapsible>
+                                    );
+                                })}
+                            </div>
+                        </CollapsibleContent>
+                    </Collapsible>
+                );
+            })}
+        </div>
+    );
+};
+
+export default DonorTable;
