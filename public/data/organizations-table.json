@@ -20,11 +20,9 @@
         "reclUJwIt0bxL2bO0",
         "recCDa9F6ntBxGGkm"
       ],
-      "Has received CRAF'd Funding?": "NO",
       "org_key": "hhi",
       "Org Type": "Academia",
       "IATI Org Key": "US-EIN-45-4535664",
-      "Link to Budget Source": "none",
       "Org HQ Country": [
         "USA"
       ]
@@ -49,7 +47,6 @@
         "receDOQpfeb4YHc5p"
       ],
       "Est. Org Budget": 3000000,
-      "Has received CRAF'd Funding?": "NO",
       "org_key": "heigit",
       "Org Type": "Academia",
       "HDX Org Key": "heidelberg-institute-for-geoinformation-technology",
@@ -87,23 +84,23 @@
           "id": "attPRRLTI2RQLiWfq",
           "width": 1514,
           "height": 454,
-          "url": "https://v5.airtableusercontent.com/v3/u/48/48/1765332000000/OzDYXiYHnTgfVC3iu4HfZQ/XjP9BfvsAudAaP3BK1F9cDVd7bMspwS_jQeaJcjGEyVh5cdb1fFBpAZXO8u6ghcjt_ieyMryUGi96gWWCWqxa4fLGwsAhjjoxLJ1yVvNn-79CPmUhV9TsVgno76QrtiMZSKnYfA6uG8hcEwt4dF4fHtUblXVEdyWSuWzdvz0WYEMe3poCMjCd1WfORptHNFI/B2CG0N1I_zASmqk6LEqSa3f6BnGmliWjUqcsDUxtgeM",
+          "url": "https://v5.airtableusercontent.com/v3/u/48/48/1765821600000/EueZPnNuvs476CaOWsYc1w/vWbICONIrnQ3rUPuCzE_3iI5bXcStLS7cZ7bKq-BVxvtF7tdKT5JDhHcgUe4oUL_z-JBHxh941VuiTNWhq0FwG0BauJpwqRdkGSPe92TWu_BrkyRF2S8d6-0sggakck2vezZ3Tjgni3xrvSAG8KsQhJoqE3d6X1vQWKN3EFfDDqBvvbhKUvi_BruwS9fB6AO/u2o7NDeeqJxKDZGJUauzB0MFRj3lV4hH7ZvHMMGMTXQ",
           "filename": "Screenshot 2025-12-04 at 12.25.42 PM.png",
           "size": 142454,
           "type": "image/png",
           "thumbnails": {
             "small": {
-              "url": "https://v5.airtableusercontent.com/v3/u/48/48/1765332000000/jT0UqhPZcFZd8LwYMRfdRg/YlkujgaLlROT2feWpxjHWfuZGFbdFkAfuONNF6AWlOVPfEZxqLRzBhbKXScsW5IM4_nVQLnE3MV5LBnaxM8nztKUCdxrZkvnHpqeqipgb5DDeSkaknzuVJhj0Sb2GYdocM0_21IhnLC8heR3-FvTjg/esqOzOTvbPqudUL2TY4Wte864HHMbutmv0cnjUd1yjo",
+              "url": "https://v5.airtableusercontent.com/v3/u/48/48/1765821600000/FVMkszDVqRJEiQoNqltpCg/3M1YUStFc9i-Er2sjT8yc0HAY4IMBqzvqfIm_eLVP8rsS2oTnqirOyuvACFXluHbaiNPQmyBZgBBWUe_ESvrBPukPKijoDH0Is0giF6CPngJMd_Nf4mgBPHWDYWZqM8jPeZiNZOHOVfQpcd-X7twUw/3-2Y4d3hFEiGTNWc6K2jeg7R6MHvhFZ5c94-3Pq_aTs",
               "width": 120,
               "height": 36
             },
             "large": {
-              "url": "https://v5.airtableusercontent.com/v3/u/48/48/1765332000000/KrjtgwrEuaCEqPeDaR3LQQ/1NxFQzxVOSMyventuAvxfTRWUV3D7CRG2Ub2EPEHdlwCX-83UTG_kFD-TlpO-Xbii71WxAheXFv2_wQSp-7yujhfrrk7n0vuBm1iQRbX6n9CJn0X9rPPDVsGFQV3s9ayo-9mHj4DZNQtCNrQZmmQhw/f0PNxQNDMPxnGWJGtzIBecZqgbpI333sQm2iJEPDA8s",
+              "url": "https://v5.airtableusercontent.com/v3/u/48/48/1765821600000/WQlJr0awIn1FIkfulqTj0w/GW9Wro4xAcW3bl2jgJLf0eOj3BiF_skdtU9whPsK6Ar2csnFxcwXyZ7juB8O-KzM1hT0OOVph4y21UY005pzID6fjWwFPFWQwbHeJKAfVM_wRg0YPjoFAnTZc2u0lwxTPY3x0BbeQC9pRRD4tZpMIg/SY0rEXyloMYJEsR6r_Zcsu81XYTUBvUnpj8uxR62nhM",
               "width": 1514,
               "height": 454
             },
             "full": {
-              "url": "https://v5.airtableusercontent.com/v3/u/48/48/1765332000000/H5eDyNCyyN1VKQP_M4tyjw/oYq3D2o-BNjWJ_u1pveRSAJ4ReJoJxJsUQm-QqJDgxjS3BsYJyc1NHtodyD9j5WjmY99q1j3lKc5Oh3yOQCpwfnGsn-dp1kueCqh17E7ulvzFrOd4JnFGp6D_Scj8BTlJ1thqTDkyqwB1jaqzEIE9A/1L9r84uDyR4PYq0mDoEVjiKkxifnjpKNAQ2RyGQgIqM",
+              "url": "https://v5.airtableusercontent.com/v3/u/48/48/1765821600000/hPpRvU9lG-riqecZ6DkGVQ/IfN4zVK9LcXuf2v5xtzeYXAwEu-yvt00kAGU2JUMLCxXRMUuHOXSyITGf1Z6MOZVaTRgECubAzndv4YChzXmrlqxh0Ytv69VfH52CdY5PnkpgAQ46sWauJHdBTISmyfJem8bTVS7p8ZTff66_TmuWg/Xr9fGfL66A4apmwR3mNGdqD_fp7I05b5BCexRIz9dsU",
               "width": 1514,
               "height": 454
             }
@@ -156,7 +153,6 @@
       "Org MPTFO URL [Formula]": "https://mptf.undp.org/participating-organizations/UNICEF",
       "Org Transparency Portal": "https://open.unicef.org/?",
       "Est. Org Budget": 8099000000,
-      "Has received CRAF'd Funding?": "NO",
       "org_key": "unicef",
       "Org Type": "United Nations System",
       "HDX Org Key": "unicef-data",
@@ -169,23 +165,23 @@
           "id": "att96JYsnSM6ss9hs",
           "width": 1802,
           "height": 1306,
-          "url": "https://v5.airtableusercontent.com/v3/u/48/48/1765332000000/maByAE_mPY6oTes8Hy7ECg/Rz7ffp09FIAdf_vz6oUzc-O-LPPj-nL5iyiBTjmu_-8y7QGUKTDgAzc2OOm-YKhXOmZEwBtrR1GIcU4V5F6702YHVZoRQEVqYhGegXU2wL_RBVbjCvG93oRr-UJl9H2s3Xuvjowe_LSDfGxQIjRr1Kex6X66q9ENduN0izovz6BTVripkSRUDgARCKzk4Eze/YQittj3zYJ50ykarSChQ9EhjY2pF4CCzkjwtK5bBFmo",
+          "url": "https://v5.airtableusercontent.com/v3/u/48/48/1765821600000/KpFGyGu6zdABfNIcX4Xc5A/aOPRne_cSmCtYTK9KjLT1kDW4n4tWRV3kbcFV37NREseTZgrFf5_JFrrZS9aGfS3I44jdxJjgdTz6FddL7xV7VCApnvB1Rjo2Sgmua20DmHwSgqzY2qGWQhpCJs-FrvPBkdECy1wnV3G2mwvuPF83X_8IgWI_F0Ndeg49coCchfZWci1s5oLEtcIpA8fSmBY/DqnEqfT0MIAbDPMRbm9cYRaY3juHb2JpQFXAm-f_7zY",
           "filename": "Screenshot 2025-12-09 at 11.11.08 AM.png",
           "size": 155069,
           "type": "image/png",
           "thumbnails": {
             "small": {
-              "url": "https://v5.airtableusercontent.com/v3/u/48/48/1765332000000/OoXh63fui4xF1rBxZ1JzSg/EWHvuOqDtwFO99D650iWkPVO6KU0ElNwZoF1Me82Ma6SU7g_id2kAkw08k8y7rpc7NiFp7xKL9CsooFetj35XV9ImV63rl3_t5IJdu1yfHFpO3gM96MVlkm8Scftf9s2KVeCVW4bmIyircyiMvQRoA/ELaLyGlHC1C_WRJGCI7Q-EDzfm_f_KPNMK6LnshDb2s",
+              "url": "https://v5.airtableusercontent.com/v3/u/48/48/1765821600000/7NZPRvCmkxIE_Ba1N4xNfQ/OUE5PPpEEW8FnU9SU923IQEpnUvE33Xz0nPgW35e-chCq73Qrj33ezPXVtGKnDkD4WFmeu7469OIhxiUb-hXB04I-13Gq7fxhm5xl95ynyiqHcNwv0w1u2Tz0kZqyInYKHEd1RZIE76ThruwAaf4qA/Ke2me0zCN-s5SbPedXZnr-F9l6JbIYmjxCJuXfEHLiE",
               "width": 50,
               "height": 36
             },
             "large": {
-              "url": "https://v5.airtableusercontent.com/v3/u/48/48/1765332000000/xZY8AvJztCUfRsDbVXM7PQ/OySoqL9qX5djzFp_gNAYj13yjWGsL33FXNuIvPBHTqFpYQDyz8Ox9KmIrZ_8ITQ0U7t83r2RsQlA0MAeyU3yH_vpkLFDL6iqMJIY4lPTxjdjj_GhlB-Da9zeFUSYl-jCxeVtzANUgi4bKRtiX8-xHA/gSfBx22T6QdX9DiEVGYQjTbY6-JHkhiqTk2n3r8CBKc",
+              "url": "https://v5.airtableusercontent.com/v3/u/48/48/1765821600000/LDpn7vyLT7Ef-vJJuiVbeQ/hLB3sSuQLWqthQuPo1HooEJeteQIGGUnWBHjkGEyojaILln78JTG-qzszN7QoTTHUq0NNYmXpQnVCdOXyrSbxj7cVUiHBIeKu9c0iJ9LIL_cA0SlxkS4ml6au1mGh2_ckEl9AL_WS3-a4sj5pL2m5w/ixAjM8aUB9PBw5_ZvTlvaGZNWF0UQbYPf4w79UE2-lo",
               "width": 706,
               "height": 512
             },
             "full": {
-              "url": "https://v5.airtableusercontent.com/v3/u/48/48/1765332000000/00sGHTinGKYDYgRNDoh3Hg/lCilDNanENwbWSQ9fVeDrmoA1-448UgPqshnr8rkZ9uWV2dMuabyPM6z8Bbx-rPIhFvupLRRRbVA1D4qAl21wNiA6praj6D19EkRblRmgOpj-eATXxSiE_xM0L9olknPwlU7OEnJrQ_Vki6zMkzw9Q/MLFZ5ZNNwEIRVz6JTH5jy6gemvAoIDiQOePhuEhlfpc",
+              "url": "https://v5.airtableusercontent.com/v3/u/48/48/1765821600000/sKl7ayVVPy9dWXG-9AD53w/DPTAHX9R3iMyduzzkoJ68nH4idwY7T9DGbcGEsuDEZYkGZc-nIb45fcJNj3je9LHET9ekcZe3fASa22pqMB5O8iQtSFcbY7XpSW7fDAcmZpCCsdNsamnnX5BOz3MBrrSCKIR9P7PKYi60tDyK9brUA/WQYfGqa_3sKViGv8QHKDsb_FpNizmAs9Mm6sbCScVnc",
               "width": 1802,
               "height": 1306
             }
@@ -195,7 +191,8 @@
       "Org HQ Country": [
         "USA"
       ],
-      "UN Funding Link": "https://www.unicef.org/media/173291/file/UNICEF_FundingCompendium2024.pdf"
+      "UN Funding Link": "https://www.unicef.org/media/173291/file/UNICEF_FundingCompendium2024.pdf",
+      "Funding Type": "Voluntary"
     }
   },
   {
@@ -256,7 +253,6 @@
       "Org MPTFO Name": "WFP",
       "Org MPTFO URL [Formula]": "https://mptf.undp.org/participating-organizations/WFP",
       "Est. Org Budget": 9800000000,
-      "Has received CRAF'd Funding?": "NO",
       "org_key": "wfp",
       "Org Type": "United Nations System",
       "HDX Org Key": "wfp",
@@ -269,23 +265,23 @@
           "id": "attzPH9pgVJ7iBOLB",
           "width": 684,
           "height": 566,
-          "url": "https://v5.airtableusercontent.com/v3/u/48/48/1765332000000/ECC_SgkfkVpExRlrgNF1QA/MyPsmxudZgZBNPpP7BgfSW31SyxKRfiso86uu4veCf3aYeIadO0thoxAXqyYGgnVLHtFHHW6w8JQcZI_VuLSueWHp_Gvf0glKWyXy_SSbrW6iaOD8g1bstg4IHOO10UGzmrH7yF2KsRUA6ToX_dtW2-jGFnxlO2hdM85cDSK4UaXVi0wybf5L_G0pmtQjvWy/_puM634P_mJVRwBt2mW4hzcV58_hnrFWTnoNq4P7lmc",
+          "url": "https://v5.airtableusercontent.com/v3/u/48/48/1765821600000/e5vPl0vj5-79rnsyiUdScg/LKByG-m_Dnqs4yyR9KKyeR1KsTEGBVt38gpSASKt1vwxM2Q_DXW_uX77yhFf8sW7vjVJKQOAp62owoWstBch0_q-zRa2ClwChSqoKdn54G8lBPXjotchuv4Qn5NPvRwxn2qpYvoFauOU2m116sSdy7Tg0Vhnu7geyc-96TRSn-umG8inhMmtelcwp4-gnnHM/Z78uYrhOj71Zl9vZ_bK4VSWN_LSHJeMVF-V29GZKL1o",
           "filename": "Screenshot 2025-12-09 at 11.09.10 AM.png",
           "size": 122063,
           "type": "image/png",
           "thumbnails": {
             "small": {
-              "url": "https://v5.airtableusercontent.com/v3/u/48/48/1765332000000/CDwZcuLqko__RwJGtnhe3g/wKut8exdxqA2J2OHShPQQear3w0wh9RjNym8SaKy_ZC9bu31e0VMsuUnBKfkWy424Lk71Z7Vv8zkF0EHOr2mWdZUEM8Tdn97wHVNp9afjWfMy2XO6zakOvF9e0dTd90_2BFSDmX6_M1swX6BV17yvQ/rdLncmtvZ34xqseJ8Ku_stS2kT8TuPR5MujlKvRVBEY",
+              "url": "https://v5.airtableusercontent.com/v3/u/48/48/1765821600000/MsAdE16cva5lfR3Qbi2sOA/-50Sv6llSFfe9M125B1yViIbte2pEzk6iVz4U64l4eC1FSht6pKyv2YX9AuxgCk3E36iZCB1kx6DJa9z0CthW5rwxDdj2AUIi0nRInwj9tP1XWX-dolZC9emktoDkOTpew1KdWLR95yvXBpt1XdDaA/dlN1UVv367r3NzzwtoB-laVIPTvSpgZ2GtT9xf9Qt0k",
               "width": 44,
               "height": 36
             },
             "large": {
-              "url": "https://v5.airtableusercontent.com/v3/u/48/48/1765332000000/DsQrIkfVGCbeF_ETRtAvIw/uVRcZwJc0y3WpRjWVf3BZwe2kwx0YIb5-x4EzGVX-0wtzDDvA8IUMET1nOam9X8KbBL0j-9YL_sHIEyXEdMJcUuAYudeMTAZv8h6fhcxHPNI9-p8d2Vl6CqOT4TY0pMmW5-RR9QW40LrKHXJDgALJA/IKN4fGg5Y-4vo8PLp-_rB-1JTP7AKRR5LOQvfRN6954",
+              "url": "https://v5.airtableusercontent.com/v3/u/48/48/1765821600000/wWDjpJS5pzauNLADcm3Zqg/ruZoYJQt9QbYa67TZDIV68F6Kqwbgi5RLrVi5xz2wKqiTBAqy6tqc22ZBSHsPgp6MLaYyypyZ3LoyqqIvFkuSj03JXE1i5jFxjzqx8AZvajHRaDjcQUV8xDGg07siVoKyjrdNyw7FgFVx1wKA5jvGA/5--KUxOiyUrKCWjTuXBrxBmt_bErEFmWhUqMjzDvqCk",
               "width": 619,
               "height": 512
             },
             "full": {
-              "url": "https://v5.airtableusercontent.com/v3/u/48/48/1765332000000/fyKaAfyHFzuf_9bvfcQYig/stC_TQRVJtw9U77CGiZvWbRlQEkNFoRqOYMiT0RCqcr-xnuX7tjvrk1WHGpajcvU7pPLzB_MOmW1ruhLFJLjg_NQ5yRuVuv97uKIcchn_3ZlNakvuCcTDe6MTCafqEYLCJ_N6CtBVx0-LATZ3cjZkQ/z63vOjsP5Eb6hdwebMf9tes0pGkd6Zyru7apPLOwK_o",
+              "url": "https://v5.airtableusercontent.com/v3/u/48/48/1765821600000/bSgTEx4io7bJNDO6p106Gw/y9XJWFYF3bwg4CJZu9X8J21-0rmhv2byWvuWxa1Tx-hOeDyVpFoTsGJQsQ027nJUL--VLxBjAVsMkYN7v7GTveD7tlr3fVpWisKmyDZJCQmhXV9utAYjZ-evOEP5gjXToxNnQfyNydt86ZKlDxhpOg/mJiWTtWfFe_7Ymf0vwU4YtHJPuID96RW3JpmIpMT1NM",
               "width": 684,
               "height": 566
             }
@@ -295,7 +291,8 @@
       "Org HQ Country": [
         "Italy"
       ],
-      "UN Funding Link": "https://www.wfp.org/funding/2025"
+      "UN Funding Link": "https://www.wfp.org/funding/2025",
+      "Funding Type": "Voluntary"
     }
   },
   {
@@ -315,12 +312,41 @@
         "recqSvUlZQjET4fCH"
       ],
       "Est. Org Budget": 198137583,
-      "Has received CRAF'd Funding?": "YES",
       "org_key": "510-data-team",
       "Org Type": "Red Cross / Red Crescent Movement",
       "HDX Org Key": "netherlands-red-cross",
       "IATI Org Key": "NL-KVK-40409352",
-      "Last Updated": 2024,
+      "Budget Source": "Annual Report",
+      "Last Updated": 2022,
+      "Link to Budget Source": "https://www.rodekruis.nl/wp-content/uploads/2023/11/Summury-annual-report-2022-Netherlands-Red-Cross.pdf",
+      "Budget Source Screenshot": [
+        {
+          "id": "attaquzEqGCw2pg5B",
+          "width": 1586,
+          "height": 1032,
+          "url": "https://v5.airtableusercontent.com/v3/u/48/48/1765821600000/6zs-2REMHlGiwVdh5ESHfw/yGq_K8VfrFYuZnuRCKwzrTkZn0ZuZQ9imCHcllRheNrea1veP4kdKqtFerLYBvXvQs7RnfaB0KG-gJgLuPbEY72LArW2g6iK0Jf9sQvF_ZfIydJrY5gcl-ZSP-CFvAWbGCqbHia0Y4ILujeq2NCPxnmQADCXUmyKWs8v9sbSbYzdX0YWH3ms2cHSPC69d9Fv/Znvfqcry_Zj8qJylRCEjaD9YdjVsq29kqGcEDfDLbcE",
+          "filename": "Screenshot 2025-12-10 at 11.59.28 AM.png",
+          "size": 176793,
+          "type": "image/png",
+          "thumbnails": {
+            "small": {
+              "url": "https://v5.airtableusercontent.com/v3/u/48/48/1765821600000/IBKBm1bcMYVhSp6VB14HqQ/OFZzpAqak7RmY2znqg2nz6LdNc6uowDuzf6gtRcD972REcDJyzlgZg4KnX8_AZ6aKcU0gERXZIuwVrg8PplXJcmFCopM0tqmH5cDzAN8V1uYf-xZSvLYl7coZroRjCu6thzmUsXJhL8UCnscvH7IdA/g9gEWuk5QTsjSmkfizeWXO1HUKiEi0_h7PNSvKLvMPA",
+              "width": 55,
+              "height": 36
+            },
+            "large": {
+              "url": "https://v5.airtableusercontent.com/v3/u/48/48/1765821600000/p2B7yQbbMf5O5vS9o-KQBA/TCrxQIR54Gdj0OmNkdxss6omfceyya2HBljowxq0zJEgnzWk6Kpov0KHBBWDVXiroMef4v2LISxa_ATh83FuBZTeC3YhWZPdzQoRPYIdhiYfJ3fVnk0Gb3iQbVEeuHE6rD8H7e_gvl9U0SqmlY68fg/WuR4dUVythep5YtKiB67tufpVd54ecNMf30baz-kTjk",
+              "width": 787,
+              "height": 512
+            },
+            "full": {
+              "url": "https://v5.airtableusercontent.com/v3/u/48/48/1765821600000/zBum8Fb50v_sT5phJVZoXA/qNa5uHLwNCLa12E7uC-WZtzBf9ki05YbSqf8AOQf2HVe0ZS6tFJtroYIpDUQsPuAbxB0M9z2azmimD6HHnXeAnsWjtzVkhZDsN1HqGNkXpkdNT8F6jrn6qYvU8mtbwfAeIJTLa-8ULU6LLliv1nJeA/btCaxd79ZoDr6zF6Ma4WD1NSn6PWzklQDFVIAQ6feSY",
+              "width": 1586,
+              "height": 1032
+            }
+          }
+        }
+      ],
       "Org HQ Country": [
         "Netherlands"
       ]
@@ -374,14 +400,43 @@
       "Org MPTFO URL [Formula]": "https://mptf.undp.org/participating-organizations/OHCHR",
       "Org Programme Budget": "https://www.ohchr.org/en/about-us/funding-and-budget",
       "Est. Org Budget": 438900000,
-      "Has received CRAF'd Funding?": "YES",
       "org_key": "ohchr",
       "Org Type": "United Nations System",
       "Budget Source": "Website",
       "Last Updated": 2024,
+      "Link to Budget Source": "https://www.ohchr.org/en/about-us/funding-and-budget",
+      "Budget Source Screenshot": [
+        {
+          "id": "attRt4o8p3pnJ16eR",
+          "width": 1406,
+          "height": 702,
+          "url": "https://v5.airtableusercontent.com/v3/u/48/48/1765821600000/M0npFuShMOy33eo1VoZPzA/iaSLyd24znfXCLA9IELoWShNKf3FkkYQr16R6qG_geWSFdZsqYKTDFB2mBD-KkFzNTAA3hnV8WxHi3v5up3VwBymGQdGSFgt3ZoJP47E2ZbtofNrjUWbsBKmbT_o_4_Pt-sWY_tIV0w-Cfe5eTMdWwQtCVxsDO2mmTIiG2FAQRx6qgEPMUN8JeJKYR3qnpZ2/eHwIjUs3TKCwLJsUUXk8x4MuA6kNbs8QCDMaXeUV83I",
+          "filename": "Screenshot 2025-12-10 at 4.02.13 PM.png",
+          "size": 135836,
+          "type": "image/png",
+          "thumbnails": {
+            "small": {
+              "url": "https://v5.airtableusercontent.com/v3/u/48/48/1765821600000/qg2vdWCPHAv2XvXQngsUhw/SYYWjexrhLNMhxAQ_kxnkJlos3ZdxgNMr62klh0-gOQX7G0ESPfzI2_0HiB1dJpS8n-JgxmELwmI7KpPXzgWXIqyp2gYX4i7FOh1aMw2dZkIRoJsgyHeGjosm-9TqhaKaROGmhTSSZOa7LWuReYzBw/VOWiEInClINXTph4mmL0jdlSaZ-QWmul9paWw04Ib4Q",
+              "width": 72,
+              "height": 36
+            },
+            "large": {
+              "url": "https://v5.airtableusercontent.com/v3/u/48/48/1765821600000/OOWLklMd-ILAR3p-GohtKA/9vjX0LEOLuXSAJTY89IpuJYEozyVV5EvKZNxlrD8oa1ThJrdZhLRoTCU3sOhZ1x6jVh6uFlMRy75UVrqu0x9v2H8l94qBCUnhnxYFRy9b4T828pgEmPWBa-7hHxYhPQyN4gOVqdvbsBUcI2Bf2xvEA/zpND_aVfVeOdKrR1PhHA2Yk1EOqddNfu6m5sxJneaew",
+              "width": 1025,
+              "height": 512
+            },
+            "full": {
+              "url": "https://v5.airtableusercontent.com/v3/u/48/48/1765821600000/NtPWPFKhePU0xVqlTv_uAw/TSf3CHxsFT9yx91tw_HvF00fk3sDe0diZunwInwByy1Y5YsO3-0zibhPBYCE5LFMWM5Ld4_4mc7giXs2HYD51XWj6T90rtNdDznUK8gx5XPwMEm8-TYATb3egqZJo7JEfJgIl1dVZuHK2sGLNg8v_g/NQhVOSIbvGeMDbMPq-y2I5fDJMawiqbzq-fxMSH5M68",
+              "width": 1406,
+              "height": 702
+            }
+          }
+        }
+      ],
       "Org HQ Country": [
         "Switzerland"
-      ]
+      ],
+      "Funding Type": "Core"
     }
   },
   {
@@ -403,10 +458,8 @@
         "recsrMWmoA037bW03"
       ],
       "Org IATI Name": "N/A",
-      "Has received CRAF'd Funding?": "NO",
       "org_key": "cred",
       "Org Type": "Academia",
-      "Link to Budget Source": "none",
       "Org HQ Country": [
         "Belgium"
       ]
@@ -465,17 +518,46 @@
       "Org MPTFO Name": "UNFPA",
       "Org MPTFO URL [Formula]": "https://mptf.undp.org/participating-organizations/UNFPA",
       "Est. Org Budget": 1528000000,
-      "Has received CRAF'd Funding?": "NO",
       "org_key": "unfpa",
       "Org Type": "United Nations System",
       "HDX Org Key": "unfpa",
       "IATI Org Key": "XM-DAC-41119",
       "Budget Source": "Annual Report",
       "Last Updated": 2024,
+      "Link to Budget Source": "https://www.unfpa.org/annual-report",
+      "Budget Source Screenshot": [
+        {
+          "id": "attdicvqVKqvkJHc3",
+          "width": 1632,
+          "height": 1042,
+          "url": "https://v5.airtableusercontent.com/v3/u/48/48/1765821600000/g9wFRwUPnZpvC-2_OJswiA/LdbHpECs9FSRfZo69Buliiwv71gY0ewIh07i2_bqtQXK-e4N0RgpNslnjSancZngGOptQ_lJia_y0Z6vlqOMCbifwKCMeDIHvfFhl59tB1iuuYIzOLgVIQYoJnyylLqmOnzwPGBvt_mqB6_WGta5DpgrOmIABV-umW4G42DauUYh6xlXS0ra8H_9yQXtOqdv/QVpwBAoev_NnsStpM1ZEUfgPJugKZQ3GdAUbyPFyz6g",
+          "filename": "Screenshot 2025-12-10 at 3.26.30 PM.png",
+          "size": 147600,
+          "type": "image/png",
+          "thumbnails": {
+            "small": {
+              "url": "https://v5.airtableusercontent.com/v3/u/48/48/1765821600000/1YjoNQAqS0ibcEMecBqp8g/EP2aUMypmQD_bc_7lSJQU91XnH6M5hgpwOk5EHeoOIKJEIbORb4XdAov8QIBLAYH3BkhzEcKqKKT75ZooylkdXxZVz74HQv-WmKqBt9ocaY2mxHe9iV-do9Z5T8tdAx4bBYCuYBnzdvzvvQpVFyHww/5CWncqyj2Gtz41cKVGptUvkVCoyx6anO2SrSqquobgA",
+              "width": 56,
+              "height": 36
+            },
+            "large": {
+              "url": "https://v5.airtableusercontent.com/v3/u/48/48/1765821600000/b1LUDUpcc522SVTRXnT9wA/tM4mo6w_85I9RiDaMu3KKjJEMMxP9GW4QRsPABmfAXQBMYFUYphtUDM0aBCzIKCPHrXxlJEBZfVmMZjHsE7tBpuClMYPRWN78GKeATiCtywgVKmKsHMWQyk4BtEGem7EQNdeQae2_MjIhYKAiUjsjw/UmC5fxiaq7jS83GKR60OQk9qQyz5x3DGVYdBAXNi-7s",
+              "width": 802,
+              "height": 512
+            },
+            "full": {
+              "url": "https://v5.airtableusercontent.com/v3/u/48/48/1765821600000/RaQY9ZdO8_lf-diiAwCigg/TLDRWI74btZxS80-Dwz5sA5GLs1man7mDuZutxLr-pzvMx_GiHtAVLYvqopV57oYHbaRn_5eTMbc0yGzIQScGdkDsldEAiwkgmt5aZH6020F6oaceFVNRM5XVhSTdpJwUanciDrnbxBSkpqQIO0fuQ/-BFLi9qaDakdKTqEDjO306m1g9JzPXwyttbmdbN-XiM",
+              "width": 1632,
+              "height": 1042
+            }
+          }
+        }
+      ],
       "Org HQ Country": [
         "USA"
       ],
-      "UN Funding Link": "https://www.unfpa.org/annual-report"
+      "UN Funding Link": "https://www.unfpa.org/annual-report",
+      "Funding Type": "Voluntary"
     }
   },
   {
@@ -494,10 +576,8 @@
         "recVOTd76hfvjPbjZ",
         "recJl9XUd7rAiz6dR"
       ],
-      "Has received CRAF'd Funding?": "YES",
       "org_key": "fhn",
-      "Org Type": "Network / Consortium",
-      "Link to Budget Source": "none"
+      "Org Type": "Network / Consortium"
     }
   },
   {
@@ -531,15 +611,44 @@
       "Org Transparency Portal": "https://open.unwomen.org/en/global-results/resource-overview/2022-2025",
       "Org Programme Budget": "https://www.unwomen.org/sites/default/files/2023-05/UNW_Draft%20Integrated%20Budget%202024-25_updated.pdf",
       "Est. Org Budget": 520494000,
-      "Has received CRAF'd Funding?": "YES",
       "org_key": "un-women",
       "Org Type": "United Nations System",
       "IATI Org Key": "XM-DAC-41146",
       "Budget Source": "Annual Report",
       "Last Updated": 2024,
+      "Link to Budget Source": "https://www.unwomen.org/sites/default/files/2025-06/brochure-un-women-highlights-2024-2025-en.pdf",
+      "Budget Source Screenshot": [
+        {
+          "id": "attOBexDZOZSBwv31",
+          "width": 778,
+          "height": 550,
+          "url": "https://v5.airtableusercontent.com/v3/u/48/48/1765821600000/0HiSb7he-n3yK9sM-cfdLg/a-YMdBQ4GCVh52Avw4P1Abp5LRIplschvT6FPaAJB1nwQOmSkIWYVm6urqt1Xh4T_NU1ercJi1DLc0d-x-TJ3Hqc2eu2xxJtHyBGdx-Dbpf-yJakGZA1eOFDp4-YisRQzY5wASsiZWjWmEd9M2Ce8Sx3bAT1WdK-KhNnV4APsd6Rhyq7xQvcHdeF1FEZqryb/B4IcwGAqHCBq7rkckZUAuSICwoKJy56mCsBJqu5hLhc",
+          "filename": "Screenshot 2025-12-11 at 10.48.37 AM.png",
+          "size": 75641,
+          "type": "image/png",
+          "thumbnails": {
+            "small": {
+              "url": "https://v5.airtableusercontent.com/v3/u/48/48/1765821600000/vQAoT3hSde23Ff4I_JCVHw/t8Vt1Kwylna6eitPsZOMpO4-Odwn6uBOvHAeQl0mnj68Vc1mLwzhN4P24MNU9BiPhZjvVh1XEivs87edsXeHICIWuD5Cqd2LLIaCxKts_Ws3PlvIE1gq8eLXFCKZllIHCYaLynC_vwyrmLLLlkOgMw/x5MS4sPe5Kw_DySLYxiQ3lWonOnwuC9C8rAn3Y7_IvM",
+              "width": 51,
+              "height": 36
+            },
+            "large": {
+              "url": "https://v5.airtableusercontent.com/v3/u/48/48/1765821600000/wGo_XH-QPnruZylFRvxMpQ/PebS5lTruS7LCmb3u0m7naXtmKHSMjHIix3_xqD3nsvn4LgUdC8EMgcXXW6O-LVsuWkhCLmAe8xnFkYLwdyVX-Rpjf21EFybhzoPeTyPg25akoON_El5-P7o_uyxkbMQXOy9IK1YwnBaa5567DvywA/5nMz_L5z_exNPeVlG4CmlNK_zk9gV_-D4XWJSNNH97o",
+              "width": 724,
+              "height": 512
+            },
+            "full": {
+              "url": "https://v5.airtableusercontent.com/v3/u/48/48/1765821600000/TnhB5rDnnA2881AdC3qV6A/CiDegX44TbUhfOY25SHta3vGXYr7qnCNsDGDV16IwkKO2dwJL4tf-n7ibst77437RZ50ukfGatlxKRYxIXPNHjasTk_RaEIiq_27O8TtFTO7RBTQKOB-m4fij3iTkpEo7gOSMCiAARPGVs1XQKWQPA/nbaLTrAnPb71tAZ26-mXaPG3-OjscwNGX9qDaZeKsYs",
+              "width": 778,
+              "height": 550
+            }
+          }
+        }
+      ],
       "Org HQ Country": [
         "USA"
-      ]
+      ],
+      "Funding Type": "Voluntary"
     }
   },
   {
@@ -557,11 +666,39 @@
         "reckIAhFXgj4XL29b"
       ],
       "Est. Org Budget": 1567000000,
-      "Has received CRAF'd Funding?": "NO",
       "org_key": "usgs",
       "Org Type": "Government / Public Sector",
       "Budget Source": "Website",
       "Last Updated": 2024,
+      "Link to Budget Source": "https://www.doi.gov/media/document/fy2025-us-geological-survey-bureau-highlights",
+      "Budget Source Screenshot": [
+        {
+          "id": "attf63HrsPYqWAwNQ",
+          "width": 638,
+          "height": 760,
+          "url": "https://v5.airtableusercontent.com/v3/u/48/48/1765821600000/3QhQbL59qF-0AqlcPPEurw/L60i9HB9R8ZgkfZmQAQXAz2ksSopJMH1RH8hEfpLsRvOKbyv3j_fm66wP4Ekf_gTu7G76jbMt8Rfoc1qAgoqQa8bygKlv-pAUYdTWf8IutsY3yn05CBdBqCh_-Y5eXGqSmsm_TzxS9Y1La07ebzmbKdBLtT0GrXkHJjyn6MmnmFWZPiv-ctPfhETDqjqXw9T/1QMqvAbVOUIpeGEIx95W4f_Ql_OAzFU3WGchnY45_-k",
+          "filename": "Screenshot 2025-12-10 at 12.21.41 PM.png",
+          "size": 181810,
+          "type": "image/png",
+          "thumbnails": {
+            "small": {
+              "url": "https://v5.airtableusercontent.com/v3/u/48/48/1765821600000/JQCbXsv1rXE0bdQ_WfeIbg/89foICUbEt-sDl9FXVLNcCxXWigitxN1xuEKUWtglAdGbU0zMxLLR6PkoWeCKmgmRloqQYdKKM2TV4mP83FLk1ySwG9rQMHGivXkAOnJzWB3JRSB9KGmaiYXntcrjaaLhUjHu5wum09470vUua26yw/MSGSvwxmb0lO7ZBMS1coK91VQDypMopDdoEXGPQCGrE",
+              "width": 30,
+              "height": 36
+            },
+            "large": {
+              "url": "https://v5.airtableusercontent.com/v3/u/48/48/1765821600000/LJf708Do_OYVRu1S2l115Q/fMWKekW1sj7hWv31A1YG8AaKiZvToTVpBCZbgmxVkrecvK3ntuwbBooSlqGrwUdCcfCn6Vcn8i182JsWQDB8aLqOKxMx2_JuD2QoHgm5lT8OWK95Gmr9qUQ0YG5BJKdsyEkaMAOwgSO8enC_LQw0zA/-UNtB9_36RjTs9RmZLgfAbCLwLv4jBukfYaaSLLdTxM",
+              "width": 512,
+              "height": 610
+            },
+            "full": {
+              "url": "https://v5.airtableusercontent.com/v3/u/48/48/1765821600000/Jap5BtQJTviJbRx25tz8pA/pplA7SpMtmIy9dG9YysT089zOR656aYGx3l_AT9Gx1NJnAY3NzXqLnlzQ5DcWDWQDwqQfJpuEpMZpZakrUSPijRt8zvm1r0oRFbNzgwIJXgEOpyw-4yb99ZAF6ZrBffoGslsKOu6ZPm11BzajroYfQ/5KSQApbfkFDIknF8FfDK3S4f1XHHQb3SK6ysLwz7DX8",
+              "width": 638,
+              "height": 760
+            }
+          }
+        }
+      ],
       "Org HQ Country": [
         "USA"
       ]
@@ -613,14 +750,13 @@
       "Org IATI Name": "N/A",
       "Org Transparency Portal": "https://app.powerbi.com/view?r=eyJrIjoiZTcxZTYwZTgtODMyZC00MzQwLWFhM2ItMDdiODlkNjY4NmNlIiwidCI6IjBmOWUzNWRiLTU0NGYtNGY2MC1iZGNjLTVlYTQxNmU2ZGM3MCIsImMiOjh9",
       "Org Programme Budget": "https://open.un.org/un-secretariat-financials/expenses",
-      "Has received CRAF'd Funding?": "NO",
       "org_key": "unoda",
       "Org Type": "United Nations System",
-      "Link to Budget Source": "none",
       "Org HQ Country": [
         "USA"
       ],
-      "UN Funding Link": "https://app.powerbi.com/view?r=eyJrIjoiZTcxZTYwZTgtODMyZC00MzQwLWFhM2ItMDdiODlkNjY4NmNlIiwidCI6IjBmOWUzNWRiLTU0NGYtNGY2MC1iZGNjLTVlYTQxNmU2ZGM3MCIsImMiOjh9"
+      "UN Funding Link": "https://app.powerbi.com/view?r=eyJrIjoiZTcxZTYwZTgtODMyZC00MzQwLWFhM2ItMDdiODlkNjY4NmNlIiwidCI6IjBmOWUzNWRiLTU0NGYtNGY2MC1iZGNjLTVlYTQxNmU2ZGM3MCIsImMiOjh9",
+      "Funding Type": "Core"
     }
   },
   {
@@ -644,7 +780,42 @@
       "Est. Org Budget": 6100000,
       "org_key": "global-pulse",
       "Org Type": "United Nations System",
-      "Last Updated": 2024
+      "Budget Source": "Website",
+      "Last Updated": 2024,
+      "Link to Budget Source": "https://mptf.undp.org/fund/gpn00",
+      "Budget Source Screenshot": [
+        {
+          "id": "att2oEgVj0xPD1lhp",
+          "width": 1400,
+          "height": 580,
+          "url": "https://v5.airtableusercontent.com/v3/u/48/48/1765821600000/36HI9Z3WUR7gZI65WXkbpw/ljEjp8PNnOBrBqoSsOLJakm1Md4IOE-pcFk8gUbAJwoKZ68v7dEV1DlF07X17PXgymGqQSZx7U3AVnvzbAKA2u4td20y5qpQDuMLh0vn9Ll8mce_oEfxiPSLh0XbIWSIyE0BpFh_vyJ78wVBd-UqPatppfzH1FK_wJrlprLGF4_YvHdWM7L_mHIkgp_QcLDW/dVFn1N_wsQmVLVWlq0H27uOjQ2nz2xDWarupbnoMLFI",
+          "filename": "Screenshot 2025-12-10 at 11.30.31 AM.png",
+          "size": 198255,
+          "type": "image/png",
+          "thumbnails": {
+            "small": {
+              "url": "https://v5.airtableusercontent.com/v3/u/48/48/1765821600000/jpRKUcRJJDJVv_oVepsu8Q/B4xdNz5fb7BP-HG9iqsRJedWNSNUb8IOecS3M0hxShyP0EHrpw8rVjBU0TFgD7kmR0RZLYaqcqY3K4pF_HPUjnqPPcZqN5k3-M70lBmLseEx49niLrd0527nQRgKxqnCiBj4gWgexh9SfSXwDjIawQ/0zKFI_jwX8qEx_GhCnecZIfwir8cTq7VGExIV1akAPU",
+              "width": 87,
+              "height": 36
+            },
+            "large": {
+              "url": "https://v5.airtableusercontent.com/v3/u/48/48/1765821600000/080M-Owh-Sz9zxSyviX9Iw/SqlMa7J-nX8_x-oMcbrNODSTNW6yeXrb-vcpa-HbS1TPh57eLZtArIU7mzUL0wgW4KFBFx3V6ACI7cxobCZmm6jl0oZqecrJnA6jdoxoXrbiY8hNowbO7Ckl3MnqXcDCmuDkHKSHNH-knmoJrZI5tQ/0Jk7NMrGuq4xnz5O3v3reHvmK4XoQYgdCNA3XGOlPak",
+              "width": 1236,
+              "height": 512
+            },
+            "full": {
+              "url": "https://v5.airtableusercontent.com/v3/u/48/48/1765821600000/RwtTWEE_x0fosUctpauslQ/6eBQabVJgWORVcJq9zFP76qpdYkQcQ90rGSkXvK-w2d7wa2bwaRskkEyxLn2qFBxyZgdyQtD0JOxsqsCL79GURQlMNjZcYcVx0p4kDw27GxENvRMC1KkHXyknxdbhFC3CSE5xGbft412pYRZ6doD3A/kdcKc2ucMB8xvLASRDr_nkZ825C-tAVHKVcCk7CcPAA",
+              "width": 1400,
+              "height": 580
+            }
+          }
+        }
+      ],
+      "Org HQ Country": [
+        "USA"
+      ],
+      "UN Funding Link": "https://mptf.undp.org/fund/gpn00",
+      "Funding Type": "Voluntary"
     }
   },
   {
@@ -663,7 +834,40 @@
       "Est. Org Budget": 1847548560,
       "org_key": "uoe",
       "Org Type": "Academia",
-      "Last Updated": 2024
+      "Budget Source": "Website",
+      "Last Updated": 2024,
+      "Link to Budget Source": "https://uoe-finance.ed.ac.uk/accounts",
+      "Budget Source Screenshot": [
+        {
+          "id": "attp8YJVz50jinSjN",
+          "width": 1454,
+          "height": 644,
+          "url": "https://v5.airtableusercontent.com/v3/u/48/48/1765821600000/NbYXCCESS_yF3NwN1rK25g/mxgkL_vRlHg-KGfnmgUa3NvlSQijHlx4nG9L0Q11NCoqNjMJi1IM1uH3mXPQDqABXQBhuPjmojrfMfyctjOOeDvGyZYpeWGs3ogqBmXzl1BrcsnjYAIKOgIWOvDaV0dF5BWmHxH1_vWw1suoy3EuI_hKDeJUW5xZjQPvwzscwTu2RdSH4LvNaDOns5j01Iwj/0Tr3wXKH0SIxA-EXdVvgp-69_XXG6jq_bCtwajNA8uM",
+          "filename": "Screenshot 2025-12-10 at 11.38.54 AM.png",
+          "size": 151134,
+          "type": "image/png",
+          "thumbnails": {
+            "small": {
+              "url": "https://v5.airtableusercontent.com/v3/u/48/48/1765821600000/xxnuyN_irwZ9ibihRFb-Fw/PAmfkzpuGr_Bsb7lLDMBeYLwjZYXIEaXgZIdCNPcT0Ku_xXcVvUMQuJdvIcYyrZ8x_hTapsjla0pTyDXseTSMeg0JCKqjF05oBPEG3OKH0I09XTyIDMrDUdAyf2k8Rv78ydB9wVdz9ujGX4-NQjp2A/F8yZiaX0KM9H28l4csuH39KqxdpARYMlr-0hUNwub8M",
+              "width": 81,
+              "height": 36
+            },
+            "large": {
+              "url": "https://v5.airtableusercontent.com/v3/u/48/48/1765821600000/eHWe58x3EpKbNgezq1dIiA/SohbIdDxHu8BeyyFYAgrZ9jOt2cZQoxeAQH0Rh0bfGbdJAPykODH2zYm63C9207NMjGnBWQN12QdHL5AQWSl1_fJkrNa2Y4Eikbkopg_jE6HdC_RyFmoMSgiH12afIR5Sg2z2HZoOiFaaZ2WIHJsPg/7ckJSIgDT64FKz8-2GKJuuJDgzSL6mO2Yowv2N7Mn3c",
+              "width": 1156,
+              "height": 512
+            },
+            "full": {
+              "url": "https://v5.airtableusercontent.com/v3/u/48/48/1765821600000/1NYMEuSiGEuCG_eeFNfnDw/AtVDoOfBCW6aOmgUSmYc_cme3CzlydQ_0SpVwKdymPDL8XVgD0vaYUrqPBEOl--MmrcR86cKGxS5MPDcxccqZv_NEo22GbQ1DdbEFZAbC_GAsgF7xKldE2s9drttk8pa15KHT1wxg1IcWLXyGFIJcA/4EBTcxgepFnOrymYvNHJfer5Tlq7knAAMEqi7VWp_pg",
+              "width": 1454,
+              "height": 644
+            }
+          }
+        }
+      ],
+      "Org HQ Country": [
+        "United Kingdom"
+      ]
     }
   },
   {
@@ -684,11 +888,9 @@
         "recjyWTotWvaTYTI4"
       ],
       "Org IATI Name": "Humanitarian Outcomes",
-      "Has received CRAF'd Funding?": "NO",
       "org_key": "humanitarian-outcomes",
       "Org Type": "Tech / Consulting Provider",
       "IATI Org Key": "XM-DAC-41122",
-      "Link to Budget Source": "none",
       "Org HQ Country": [
         "United Kingdom"
       ]
@@ -718,23 +920,23 @@
           "id": "attIwr2uikA5IgrZm",
           "width": 1274,
           "height": 592,
-          "url": "https://v5.airtableusercontent.com/v3/u/48/48/1765332000000/a2OMTtJ8WF8SonnVEu2OaA/2KqpTvZCkXi99c6ezNUTL9ectoOCbLYorhPfjViGIofpBrLKJhZiesITjmNX0BEmfRo5sQMdkufs8Hs9R9lSWNXf73E6UiuvBs4x_aLxo3B8r9y8OSxOVg-pJ9EyTuWrLaZ8CLUJX9DbCBlipDihIlqyc1MqqOwCQ81iaKviWwGRUmX4uZw8WuHFCQamq5Vs/ItnssuZijJZ5icM7qBPS3W2OhThmpb4HK2YLA8V55xw",
+          "url": "https://v5.airtableusercontent.com/v3/u/48/48/1765821600000/iFEfMhs3spkMT1qPTuNJEQ/l9QvEvsktOObw813GFrJfNmotjH8xS8E_iSrbvQYrsEBPDaWCCWD7et8YtUBsVYVQ3zNbmjy9w3uAmFUe3XJ6lEr7yXz_KpWIMiRZKg1MrQnSxdkFDIZ1_NC3l5xVLSDObVp8RgZrzQzqkWu-dGSVrxKIW6QIOFKHWh14x4U8g4OvuG3UHGfqlz_ScKRiZ4K/h0Fw8SlpnDfSJ07CxPFTjHuVi_o5n8bebe-dBf52kfA",
           "filename": "Screenshot 2025-12-09 at 11.52.38 AM.png",
           "size": 120930,
           "type": "image/png",
           "thumbnails": {
             "small": {
-              "url": "https://v5.airtableusercontent.com/v3/u/48/48/1765332000000/o1p7yWYOt_0bnAjD-fs3yg/P7C5q5h4AeMDtb9NgZt-pXku05e5hFLqQ7H9LqyvIEqe1j32OToVJbPohTS4Cr9GlkhrW20WlFqnq_-aFmHFfIa1TYCQNOicsw2R4j6LeoknSJwI1gBEtBX452UYWU4cYobzFE9O3anlZtm46tDVcg/WC_dqvDPIuhny1eUZEvw2DKGtKJ4Zw6Y09LZW5LO6Ro",
+              "url": "https://v5.airtableusercontent.com/v3/u/48/48/1765821600000/eG9ww4W3GBbiqQPvcderFg/BCLFB9EZyjqEiPSzIebh0YHvYVmRkcv39fh7FNGz30TtpAZmeQwuiF3uQEryecRE9dW6XWA8Qm0nexXtFeDjNTne2wrfG54ufw4DMhsGilCEvjnukdPZ9sfMU47vqFjVjJDHAw6aqBjIE7OasIdu5w/rRP7xUcrqlzlAFNn9LLMC3_GYsUKOJ9rzKxu3pUC-5M",
               "width": 77,
               "height": 36
             },
             "large": {
-              "url": "https://v5.airtableusercontent.com/v3/u/48/48/1765332000000/JcmewkyYfjQGjBcd0Ygcvw/jcuq1G9UMz3HIckieWKqmqgmMb1w5gzzcWOnmIEueT5kxaTgZsV8rWPdwWmR_oQAHTfBVysB53tZoQi0rkOM6Ix59PgPTw_8FZ8-h_Ih8CIdcAV59MZoOdhuWUTx2yKa4W8QS6Ro_uCxVpOFZ1F-ug/J2k9GXaJ4iMtPCa9Bcpz5fmp_yRqUi2HdPgcF_PO0lA",
+              "url": "https://v5.airtableusercontent.com/v3/u/48/48/1765821600000/fDeHqH3VtWB_-H8BpBhDtw/U_rxSljmIuzbkCQaePsCd2RLW8H1zEfFI-ClHOD8jQtm8ncxKHqXetCaMZm7Jxufiv7zBv7HanBHpWM84HQqrd4UcrSL_ju_QC0onPiCuaK28qNYnD66I2fvDKEBxYsRj9wXErU4GVMA1s1oC0I_yg/BctFNYXiuWNn0K7Awmx_BcZpYlbZG8i6OOR5DGAOVn4",
               "width": 1102,
               "height": 512
             },
             "full": {
-              "url": "https://v5.airtableusercontent.com/v3/u/48/48/1765332000000/kHvCbW5VUXfyZ7GqUb676w/xNKFGEMIr0OP0uPvjK5dGXevW_R_9SjLzCQlmcxqrdNuI7d10FOgpuAZTMBelIrdaVMpr9XlYDP_skKqktjZRMPmzxrusVZ61soq583H2jRcTt74VoM55DQET-viyQBGQ66XtnFYsalvOFGsM-K06Q/IKF61XVsoMAAspwg7_NHvE7nRJDPVNYwtBpV_cb18Vs",
+              "url": "https://v5.airtableusercontent.com/v3/u/48/48/1765821600000/kHGTLZHkW-QPekLaTmlldg/eht5685ajbWbtl4U4kYp6pioF-EAgm_8ZvMKGR5gG2xG04N964DGsSvfcxyLG3HZhZg8kkzrSuZn9OXDE8bTg14dj0fFccrtbrvN2VLw2sd4tzFI1hnhYRP8La8gMiW9YBpKnV5utOJqcmeiO80dmA/uEczQ4-l7sY7bANGSMpbZQbVUyBkoaOs61WDEO07gM0",
               "width": 1274,
               "height": 592
             }
@@ -800,7 +1002,6 @@
       "Org Transparency Portal": "https://open.undp.org/",
       "Org Programme Budget": "https://www.undp.org/funding",
       "Est. Org Budget": 6822200000,
-      "Has received CRAF'd Funding?": "YES",
       "org_key": "undp",
       "Org Type": "United Nations System",
       "HDX Org Key": "undp-human-development-reports-office",
@@ -813,23 +1014,23 @@
           "id": "atthIwIglVaDDgYIn",
           "width": 1274,
           "height": 604,
-          "url": "https://v5.airtableusercontent.com/v3/u/48/48/1765332000000/kZ5E2v5YifQ5xEGRIxk9jQ/PEA4OHsJu70y3pKorOy1k4wAjrhUTK9QUKzGF2955h1N9XyTM_Ghsy250aZbiH48o9J51zvMt8C73YyDzbxfq7vkpSbokJsP9JYAlznLx0Q60klZ_JiEU3f7dKg2mL5_RCrKkeO9OE50LEoQr3uPhx-nXhIiK202NGhiJIm_PSwPzsARqg9dI-EB-kCrfErQ/lOhKvm79-3ZbO2OzgmPTqOvO1gBFspMWhM2EG2K6aog",
+          "url": "https://v5.airtableusercontent.com/v3/u/48/48/1765821600000/z9DjVUdUVzGHfTbiNqJsIQ/rAH4YLRxJqZa8cu23UVC0DmM1n0ubjOGkycLKi0cekxx5z_pMw1Z_rwbR0YBPkVch3vGWaP_uiPQA-UYZKJQwzZ3KWByekvxGK2dxZKT6JE_PW6zoXtHcmIMwEPzcGtr3fEG_wLrfA26zvrEzoTskylejpXSXkmjHyiUEWm9azvjWLL95qxFdf2P7PJeAziF/vu8Dwzq_OXkyKoEk_vSDj4eDYDuK76oo1nqm7XfERKU",
           "filename": "Screenshot 2025-12-09 at 11.29.17 AM.png",
           "size": 680869,
           "type": "image/png",
           "thumbnails": {
             "small": {
-              "url": "https://v5.airtableusercontent.com/v3/u/48/48/1765332000000/Gg4-6pT_ekk4XlNZKLMSOw/a7TMU7EHpUxDY1Vl2TX7miRNKDRshUCkUnBHs4a5I04EvAkAl2WLyUkhgoseLELIV6WsF763qUO6GDZzDjuISVBDh-SWNBg5GlNcKNMkCP2xr5PSmkhxSiYjWJKWhmXy7TRyrXlWJSCQexvUnlv1rw/4VYI2EjoqEQSwAPJ6RDNSRgv0T9cN-ssdG52RWH878E",
+              "url": "https://v5.airtableusercontent.com/v3/u/48/48/1765821600000/c0aZDA9pXUHOs0o6cIQMXA/7QIJgYA5lmfm63tVmZLyEYg_jR9hnY9PnrzS3VHiFH3qYovO2BNNJaD2xkUQmLycJ1adeXfUPcBCwfbYfhT36sZaYUyQ-ZOlinGHNJQQgPd9O69AOGtJy-9uB2CaIVXtpf0ksHc9QNb1or0pwX2z3w/gHfYTcuUG2Dr_7DnnuJzVQC8Hgi_JoZFk4qGGkDs6VM",
               "width": 76,
               "height": 36
             },
             "large": {
-              "url": "https://v5.airtableusercontent.com/v3/u/48/48/1765332000000/xglnhC172P5j-eKY7RElwQ/zJkyQ_fWK0Pc-I21JOguGRlNl5q3cluJfYInS25xFcxIhpCnR7Q4Y2ps-GaE3-QAk8G3Spu_bnH3zDKbrjIs2ZaaTNDiiO059up_TFStxCLuEh1rS1dxw_vBPn59T0uESaZuDsFmXUiqRBu9HqAMFg/OO_TDDNK-519zEQzlxFZVJwAQVV_7hKRauCGZYiuE64",
+              "url": "https://v5.airtableusercontent.com/v3/u/48/48/1765821600000/GK9hjbmVxb7IHjJ_QAscyA/EKTqDFzr6cL_M477zLlThDj_Tc_n5WpdHGTGm0G3nl7qZUA5TfDHE7fVGYQ7tz0B6HOmrbl3f42kEazqN4uUd4_QHcD_dTZE_ckYVdFG2QCoq7Ho6vPDyElYZDRKeHZhpIcWBEAUJmAYDdGhGgSvAw/bXeuz5KALucCfDO4XgMyoHeO148jmMFXF3i8mR_dmyI",
               "width": 1080,
               "height": 512
             },
             "full": {
-              "url": "https://v5.airtableusercontent.com/v3/u/48/48/1765332000000/FJoBTqAHpZ7myuuDl8QZOw/ZVCefG3AU5owCUGeeT1OuJANDSLKJLfvBUnNU-oAJdt6vwlvOZ39KKGCUQxbHEW18KJ7VIqJ-ZJJi8SkIqHlC7VI8bpSRu3TikCR1nAY3-C3vdxgQEh6qYf1h8ERxELmmGCMRVjMwfLo_G-tWycG4g/E9CQ2dMpIMB4Bnvk6y7MFyVYtJs8kVru8XFnoz3Q8bg",
+              "url": "https://v5.airtableusercontent.com/v3/u/48/48/1765821600000/ihmDGsOUfQl97FpDMq_BYw/dcFKyhDc3RzZcDYvXCf7ilNMs0Efvb5ZISJsye6vrdOWQntVXN81d-ma94BHHtV3wxw2m_WOm0PyyQNzLgC6vidtojA20y3E1JGsB2E-Xh7TQHJEY3o5JxqdRIFEdyU2vjoP_bskOIGUaxQvJLBrSg/2-c4hlbsNKuytsVw1g42cbflXYkEFJYOroC2gN6VKZI",
               "width": 1274,
               "height": 604
             }
@@ -839,7 +1040,8 @@
       "Org HQ Country": [
         "USA"
       ],
-      "UN Funding Link": "https://annualreport.undp.org/performing-with-undp/funding/"
+      "UN Funding Link": "https://annualreport.undp.org/performing-with-undp/funding/",
+      "Funding Type": "Voluntary"
     }
   },
   {
@@ -867,7 +1069,8 @@
       "IATI Org Key": "XM-DAC-41127",
       "Org HQ Country": [
         "Netherlands"
-      ]
+      ],
+      "Funding Type": "Voluntary"
     }
   },
   {
@@ -889,11 +1092,9 @@
         "rec2KBp1IAA5TtnQl"
       ],
       "Org IATI Name": "N/A",
-      "Has received CRAF'd Funding?": "NO",
       "org_key": "fsnwg",
       "Org Type": "Network / Consortium",
       "HDX Org Key": "fsnwg",
-      "Link to Budget Source": "none",
       "Org HQ Country": [
         "Kenya"
       ]
@@ -915,7 +1116,8 @@
       "HDX Org Key": "unosat",
       "Org HQ Country": [
         "Switzerland"
-      ]
+      ],
+      "Funding Type": "Core"
     }
   },
   {
@@ -937,11 +1139,9 @@
         "recAiCKdzASfJMVsG"
       ],
       "Org IATI Name": "N/A",
-      "Has received CRAF'd Funding?": "NO",
       "org_key": "pacific-disaster-center",
       "Org Type": "Research / Think Tank",
       "HDX Org Key": "pdc",
-      "Link to Budget Source": "none",
       "Org HQ Country": [
         "USA"
       ]
@@ -963,11 +1163,39 @@
       ],
       "Org IATI Name": "N/A",
       "Est. Org Budget": 931408094.11,
-      "Has received CRAF'd Funding?": "NO",
       "org_key": "uppsala-university",
       "Org Type": "Academia",
       "Budget Source": "Annual Report",
       "Last Updated": 2024,
+      "Link to Budget Source": "https://www.uu.se/download/18.3288bb5019545edaf253427f/1741334461499/%C3%85rsredovisning%202024%20Uppsala%20universitet.pdf",
+      "Budget Source Screenshot": [
+        {
+          "id": "attxK3rY42om1g9BV",
+          "width": 1108,
+          "height": 370,
+          "url": "https://v5.airtableusercontent.com/v3/u/48/48/1765821600000/xsbjEdBVYlvQwIqKEoBIoQ/ManC8huECBgF2-T66Mcsf_fT3s6WIvH-U8FR7CfJpGsWCzs-zgGD8KsB7Oib8sRLPsY2UCHZXCDrFZC7ygAGZ2_4L8MDy36hVzQx8C89l366xJOJ1EjFgM7R3Txh7x67zQYqKwZtp7svd_kl6pXf2casmIGuyzViUWmy8jp4VgKvKibHRTn3Sfe-pvuLNXEk/cWNN1CMg5aytkhwJqlRHSSJQgEXxmunUUgJurbQan5Y",
+          "filename": "Screenshot 2025-12-10 at 4.17.23 PM.png",
+          "size": 58814,
+          "type": "image/png",
+          "thumbnails": {
+            "small": {
+              "url": "https://v5.airtableusercontent.com/v3/u/48/48/1765821600000/Ac7RpV29tAp09cHbwaY8mw/zW_iPTO9_9kG6Dm4cdvHLEu0cKoGiRoONHJRFp_pksuoAw45IeXX1ouKCRAIgui2igBHFn61oMZHeHtw00bvOK_WLAcs-oXsaz2HK4XW1v8Xud9Rg_KQQasz_oWu2VqY8Sz9RI3-GfC3YQKQZnZmOw/ay99m3DmGuytQ7VAxiW_jlvMI72lK3A4hdGK5fe2LDA",
+              "width": 108,
+              "height": 36
+            },
+            "large": {
+              "url": "https://v5.airtableusercontent.com/v3/u/48/48/1765821600000/FsxiQzGOKcwtwz-8EGVnwQ/QE1hnHpshEYWFwEnLLYs2TpNrSZ9LA3RU_nddH8a0l9ahoLtQ20Iis6da8-mNtucu-CV5QnsZkcMNGdf--upbK12dG07_T6X9vtwBRbojyg7PVCYc3yT_gZZHqVlXAHkeb8IBcbVIeO-ow0yKJb9BA/cZeQJCGAg7QxhCjN3ofknSmGCn1jGnnG4vSENFBPuog",
+              "width": 1108,
+              "height": 370
+            },
+            "full": {
+              "url": "https://v5.airtableusercontent.com/v3/u/48/48/1765821600000/30TsErQP0tqmvHKB8IsYBA/AeevvnfoN7VNVEF8Knxc3apbnYdCz_30l_eexgbKDjl_qWLv1urd-Lkf77P-eM85BTuCzG5wVOuDfvhu3xJws9tIggVeMHetgJk30t-SJFoS6usIDbJXNihkyzByNwUmco1a9_8i6QQXSgbNqiL-4g/RVI_TxKnSmZX1aKQ65JEUAqisLHjHwhvC28UF7Z1CXo",
+              "width": 1108,
+              "height": 370
+            }
+          }
+        }
+      ],
       "Org HQ Country": [
         "Sweden"
       ]
@@ -1007,11 +1235,39 @@
       ],
       "Org IATI Name": "N/A",
       "Est. Org Budget": 11510461.58,
-      "Has received CRAF'd Funding?": "NO",
       "org_key": "sipri",
       "Org Type": "Research / Think Tank",
       "Budget Source": "Annual Report",
       "Last Updated": 2024,
+      "Link to Budget Source": "https://www.sipri.org/sites/default/files/Annual%20Review%202024Compressed.pdf",
+      "Budget Source Screenshot": [
+        {
+          "id": "attOXvOil543jSXb5",
+          "width": 1082,
+          "height": 1134,
+          "url": "https://v5.airtableusercontent.com/v3/u/48/48/1765821600000/GFdql-gwAPy0jBcIf9GoBw/AHdVfNSXfi46tTkWmB_zlstIXKR5E347c9hYk6GGL7lKhq13RyDCgS1xtKpWqhQKvOALKT0iFmKBqLVs2ki3ft7rGYOOrBQFkkq5kUF3pzj5ZWTiNvWdtk4VJJmjzdcHoVPn6m8VTI4T9UgvIx8yrXaahgtliX7bh5fDZmE0zggBgiEJWmD5JCe-cs5oiSOa/1IdEpPSJIflsggVXCt4peaLn4wJWlnk6o4Wk4hTUjnU",
+          "filename": "Screenshot 2025-12-11 at 11.12.04 AM.png",
+          "size": 180057,
+          "type": "image/png",
+          "thumbnails": {
+            "small": {
+              "url": "https://v5.airtableusercontent.com/v3/u/48/48/1765821600000/Q2HDr47ZsgT_cY92dwS3vQ/cqjtlMSeEIT5x8TWG91sqbUSwww-mxL0-XptSCAluj00qXccrAGVxPAgMHHjIJnhKXFTYYQIjCk_AaKD93qyHzMQvx3psbJhyw-WX9bjDDXzZ5jFduSdvvbZ0eO4C8OV6n0fss9EddShUN7TnBCQHA/Pkzh7YtNglIW6QXYiQGJmzU_-vYe0IQBsxY8wEZC9co",
+              "width": 34,
+              "height": 36
+            },
+            "large": {
+              "url": "https://v5.airtableusercontent.com/v3/u/48/48/1765821600000/1vHfvZCdbKd-MDCfcvR4Fg/aDAdv2GgwW8M3JTzi6pYQfrj_iRazH5mekKTd8WgtokrTVQ7Y67W8AMhDdPQi00PPqPCwKrcRYoturUqmr-SWq1OoxzY5bWOJQPCyLnEmmUAdVEB17ZIwQ-FbgrSPoAApuh4RKR_ikqphQE8ejsQeQ/2b_H1QsBb_J5yFK0Aq6spco-ptD4ReDLl7O8b5PK44w",
+              "width": 512,
+              "height": 537
+            },
+            "full": {
+              "url": "https://v5.airtableusercontent.com/v3/u/48/48/1765821600000/ljfuP7nf-IZ4kJ_na_07dA/17ypIxK-CTVDNvAxPgcp2KYaLi2cIhGXPaVsy7P2Iv24DRnGYUWBdaxz4gUZxEqCI6dDLtesOzQuz2XaeCAbO5Ss9uFXGxxMQFvFV6liw0P15c7CazBGw70dhyLSk177EKeSqS7OW5tK4OLqHxEMAA/yBjZPfEfAuMvzhVDoRAoCCpTNgMaeNSFX01a5PgvBQ0",
+              "width": 1082,
+              "height": 1134
+            }
+          }
+        }
+      ],
       "Org HQ Country": [
         "Sweden"
       ]
@@ -1050,12 +1306,12 @@
       ],
       "Org Transparency Portal": "https://www.unmas.org/sites/default/files/styles/full_width/public/unmas_2024_annual_report-images-58-updated.jpg?itok=QvJhQMeO",
       "Org Programme Budget": "https://open.un.org/un-secretariat-financials/expenses",
-      "Has received CRAF'd Funding?": "NO",
       "org_key": "unmas",
       "Org Type": "United Nations System",
       "Org HQ Country": [
         "Switzerland"
-      ]
+      ],
+      "Funding Type": "Voluntary"
     }
   },
   {
@@ -1084,7 +1340,6 @@
       ],
       "Org IATI Name": "Flowminder",
       "Est. Org Budget": 3400000,
-      "Has received CRAF'd Funding?": "NO",
       "org_key": "flowminder",
       "Org Type": "Non-Governmental Organization",
       "HDX Org Key": "flowminder",
@@ -1096,23 +1351,23 @@
           "id": "attakhUw9nKZriQFe",
           "width": 714,
           "height": 227,
-          "url": "https://v5.airtableusercontent.com/v3/u/48/48/1765332000000/kqup8DPKqqTN_kjtd7c66Q/-M3OsI6qvTN4K2nPWE7d00a9AsCBiMQZeAy-Kw6VPslgUjXedhS8dD7KosjOEGlSYaPhbmqy_M1udnrB4H12IlAb-ZNk-HhhwzSqaQOb7cp862GH1gUMjKiW_J5SMHWhyv3ALP00hP0C6mTi3784jnrTQp5R8FiqLZBOX4PmRNPP5CW6eLtK8DSOANN4XyUj/ENwKcWIoGM6ZoB1CeW2klFWpTsr3Z2WI1TLn0m8ZOr0",
+          "url": "https://v5.airtableusercontent.com/v3/u/48/48/1765821600000/R5agqOJ-vavdn36pVtKahA/LPT-8bKUdEv_eK21fCPi0rWmdo3As0YsK7-l6YJjNr3rZj7iSipBfwzOiT1Rv4plXrHthUwAZA-vgyG-Wd83v1sYeo317izeV6KgpbbGeo2Rm77nBF8sDqaOFQBrSBabvhR10WkhqZEryB1T80eDQ4G6db2fxYNOi5UTCQtNyXyEdCNh2CdVPOFwMoOQL47d/HJsjP8Ne30kPw-lhoQByE1oBkQzsVFDVsg6Xp-tyWAo",
           "filename": "Screenshot 2025-12-05 at 12.12.11 PM.png",
           "size": 70232,
           "type": "image/png",
           "thumbnails": {
             "small": {
-              "url": "https://v5.airtableusercontent.com/v3/u/48/48/1765332000000/nvmCJUhus0iIPeoyJZ6VWA/7DURJa2rIvVZ38uWl0VY1faoJkjP1Oj4ZOSfsFPePhqH7XFQ9ycdXZ__Av-hNNZsHTHAoACZeLVTReNQwsXt6TkPJwGUoeg5Ves_pvPHGEWvSjUxn1uD0vVnVTjKEkJYRAmh7AYJRVbiYqhJzPOcIQ/YZoGgFpOFPE6HyqcMYHtYRw0RtOrZOLxvtko_bT29vY",
+              "url": "https://v5.airtableusercontent.com/v3/u/48/48/1765821600000/5XzWf7Z09YGRRNZoYXy4yg/5AfN6ZXQzXBtUmuXpkMbFEKTRrW4J1niqoLJteoRXdnMU5-owg5GE6Vz160uNoOmoltIXhgAI8HXsepkaKWgb56mjGhKaP3y-AQ49RfYTI0c7vPWmmZgadMohcEqSPam0vBgHiCZGw-nm4kblUADgw/2m7WmcnTumj6MTtTqIj3ef4liwB68H-_Z1daPa09JV0",
               "width": 113,
               "height": 36
             },
             "large": {
-              "url": "https://v5.airtableusercontent.com/v3/u/48/48/1765332000000/9rqe3sVheyFLJdwMMpSwog/XsZN_65Xf7W1hbGj2VCtfzy_4MQAVhdpvWzEwA0hR2R8XeitvyplNFI31JlgBhatJU59t_tv9mML5boveKeUiGzzYfN0bgVvf4EzjaKROdD0Ij44XsDDF6Voi3P9vv6FCuLELfFKNq3XAImh5VrfNA/Oxv8qlJ9lbz4GAgjuMg4-PLVLNAO4f6Nl82gtSBJNRU",
+              "url": "https://v5.airtableusercontent.com/v3/u/48/48/1765821600000/qP7ZlvGZusjoEB1IG1RxzA/xqKg2iZzdUK4HMmuZawjC77wGoX-3ZNwWuLChD-YO9umiYiXZufvo3I1p6So1gafh7jS4Sb380rKDxZ8xnZtv7va3B9wdB4RWb4EDzT4YRybkfqWC6cKINu7UNTS7-sfw66UN_VH-IzT2NHc0BC9Hw/pNQYPuhwLJCWSNrMlB-_yt42mgnbpD5wpWTwj34QYFA",
               "width": 714,
               "height": 227
             },
             "full": {
-              "url": "https://v5.airtableusercontent.com/v3/u/48/48/1765332000000/CL8fEdwc9R7YAHV9EAoU7Q/Hg6w1vKJr5KdCG8kvF0jFIxJJfCQZtcdYxHRcAqDBTLTPNXNSuTS91I_5C4jIwX91rcBUY36k8r-lvtqp6OgUnFxHW267e5fWzoRkAi-7AU8GihsLjOZGnIgzpBhXwSNI5UhgAi5185HFSLckbSzBg/PKbJOeNjE4KML3e0tQcy7rncI1rFRrlCJqWFWk2vkTY",
+              "url": "https://v5.airtableusercontent.com/v3/u/48/48/1765821600000/v03Y7rMXIe_6IcsozCYC_A/f1HqBthGNX6qjHkR3CZAmQQ6c2S0j7pU9DduxOIdGeRDw7PsN890Ce2b50Oy7Obd35BKdH8gCtup5MilDXEW82SoEO1rPN-1TQNnKUGeA0uYitQNkQN9LuXQRREJ42u3TjMGUD3U1Ulgn1SYivc_Ug/vUZmZd5kG1uXsBkIqsgANPntxBLmemorR1SUDs3rK6c",
               "width": 714,
               "height": 227
             }
@@ -1179,17 +1434,46 @@
       "Org Transparency Portal": "https://www.unocha.org/our-funding",
       "Org Programme Budget": "https://open.un.org/un-secretariat-financials/expenses",
       "Est. Org Budget": 364400233,
-      "Has received CRAF'd Funding?": "NO",
       "org_key": "ocha",
       "Org Type": "United Nations System",
       "HDX Org Key": "un-ocha",
       "IATI Org Key": "XM-DAC-41127",
       "Budget Source": "Annual Report",
       "Last Updated": 2024,
+      "Link to Budget Source": "file:///Users/katierandall/Downloads/OCHA_Annual_Report_2024%20(1).pdf",
+      "Budget Source Screenshot": [
+        {
+          "id": "attw7PtbkPSvu17zg",
+          "width": 1432,
+          "height": 320,
+          "url": "https://v5.airtableusercontent.com/v3/u/48/48/1765821600000/4jYsNvjxAz3prXwXfFUSEQ/Z_jrg2CyvGTIvsPbjaPGVVS0yTPF0YAaxAnv4h7DSh3CyAXUf29SB-HoYQ-q1nAx_U6DM4IwmkoOHPUam_up0sEExBMf2EU3Sx05FubWDAhuWz_uJQxicdvgtPFsS4cT-clXbXCeKBkrTuPf12ukjOK0AF2YVg8da6ujtPX9gpGAbjInnO810iLdc7W-Zsg0/QkplCMYh0QPFB5YX3Cn9EFpnuysEy0BocyefcgoSnzM",
+          "filename": "Screenshot 2025-12-10 at 2.31.38 PM.png",
+          "size": 77875,
+          "type": "image/png",
+          "thumbnails": {
+            "small": {
+              "url": "https://v5.airtableusercontent.com/v3/u/48/48/1765821600000/xyHMuLBycTPiohe0WTJ-BA/qHT-fu4QCLwdIOrI6RXP-s5JDKD5VupDUz1VaIU_XprGzpVMzO8WmfP93a9swDkq5MUHzOl7s_h5F9uDxMAyjZfGZfKPSfH5dN9htQ_aoervlZHdIUW0_KJl8OwhrROan3sASNBLl0viXLJznINOnA/x45JycLdEnJtlVksnoncHu_YK6pH9Zq8tdfow23ck2g",
+              "width": 161,
+              "height": 36
+            },
+            "large": {
+              "url": "https://v5.airtableusercontent.com/v3/u/48/48/1765821600000/UBgjT32xK7Tbm_81erU4Uw/hKuCygL6cchtoSBL8LXz1Kxnagi36ryYbNj4EUWgSw4oEMWRdv0N7ozstWOIzHcHzqZv_1iorRzBLbwDWVnOnG7NFYCmC_EfxqXiXVRY84WnwCLVc_BwxvDvrZutK664rz3L0AV9TwTGxkAe2Cythg/tqHAs6pZZ_zNLEsZAtPyVVARc1knNGDldkpVbhNWHdI",
+              "width": 1432,
+              "height": 320
+            },
+            "full": {
+              "url": "https://v5.airtableusercontent.com/v3/u/48/48/1765821600000/8IqMQcGRf3w1k9d21SadsQ/AdBCJ4e4DFcyW8JPeEPE6k7xk303pJI5SZFBro9tJzxgWTdDz5xThMUGEfVlHysND2lVBxnCMItHnWqhsGGg8uf0BKXNUgVkrKCA7u5Bks3MSHd6zCYVoIbqgbKmBg4HN6aY4d9Xn33KQUtGG9YHxQ/nqxx-4qaKzExvpiiqlkTWE4JClCNpuVA-H8c-MwlHgw",
+              "width": 1432,
+              "height": 320
+            }
+          }
+        }
+      ],
       "Org HQ Country": [
         "USA"
       ],
-      "UN Funding Link": "https://fts.unocha.org/global-funding/donors/2024?order=total_funding&sort=desc"
+      "UN Funding Link": "https://fts.unocha.org/global-funding/donors/2024?order=total_funding&sort=desc",
+      "Funding Type": "Core"
     }
   },
   {
@@ -1221,11 +1505,39 @@
       "Org MPTFO Name": "PRIO",
       "Org MPTFO URL [Formula]": "https://mptf.undp.org/participating-organizations/PRIO",
       "Est. Org Budget": 15331695.38,
-      "Has received CRAF'd Funding?": "YES",
       "org_key": "prio",
       "Org Type": "Research / Think Tank",
       "Budget Source": "Annual Report",
       "Last Updated": 2024,
+      "Link to Budget Source": "https://cdn.cloud.prio.org/files/bbb6d187-78ad-4776-95c5-4f84fd075b83/PRIO%20Annual%20Report%202024.pdf?inline=true",
+      "Budget Source Screenshot": [
+        {
+          "id": "attx7YZyY8gpX7Ec2",
+          "width": 1518,
+          "height": 402,
+          "url": "https://v5.airtableusercontent.com/v3/u/48/48/1765821600000/eoaDAKfRBun5d3Vk1_0ZoA/he4SV9G4rs90Gj2ZKvLUwg6TSDCKMOejgTxhWWwNe5yWYzMVGX5qJ2Z_EkxWj-O8GxpIAKVxgYExija1pv2QAtYLu2amlArGMjb7y44dRVbgWE4UdEwfkHA-3e4xh45PWcv6oWSrTu5J3J-mCZO1Mlnyw_LjjOxazWU_eESJlb4aSZZHEhobtK4sOT7-wdRC/9dq63EADCibnqt5wd9yIstmh8-tIV4IKInEoq2_Nhhw",
+          "filename": "Screenshot 2025-12-11 at 11.10.27 AM.png",
+          "size": 55465,
+          "type": "image/png",
+          "thumbnails": {
+            "small": {
+              "url": "https://v5.airtableusercontent.com/v3/u/48/48/1765821600000/D78ngM5jAxiMcyTXHhkPyQ/jzOTuwLf8bjYuspdi7G6cREzTAgrv6muAKWNpcT3Ze5fQaqLrVCVtbK9o_Tf0q4fhj06nRTVb9DpiiTdOG1BBlw-3er5FK_At_U-p5JH2EZGYAlfgk65yXrJu8r7thQqOtsoi4Lrc-T4NaCJjuWopA/ep6PDu5BuJ32nTW78qw3n9T9DkYZPIpJzCRUALsbCgw",
+              "width": 136,
+              "height": 36
+            },
+            "large": {
+              "url": "https://v5.airtableusercontent.com/v3/u/48/48/1765821600000/5gkqDf3JQuVXX08USMqbbA/z0YdkVmDCeTgNT28RI_ggaPvpDnB4tXWzC3hHeWVAsfohItCnhkLM7mwvY1kzjeK-ZfnjVzJbm2GQA11RiwPDOGzeUVxJ2ok_oBsKYzv6_6B66tC4GjA0Lgw8NCE6Wk-aGVnVkRy_OnPd6n8HvW4lQ/pPJtKz7sgHC6AjVJJerebSL-gvZKgvqvoCBTBVCShCE",
+              "width": 1518,
+              "height": 402
+            },
+            "full": {
+              "url": "https://v5.airtableusercontent.com/v3/u/48/48/1765821600000/rzJFROXhUqyvO0rOqVe8sA/of3FjPlqdmUaJO6TxgMbzcobUntkm9mS0mlD9KVe2GXm9SJdajFzJIawCn4gkiwYx6iDZEYJlraRWdB5vmDG8pW_EBcPezlDy1kKVeYrZOhC-ZNTBzDuaM-tM8ExDintUcRfE5RD7Fr7Tn7XOjer6A/YDaTbdSrb781Hfjl9wimzf1dyVFRIx4s8J9Az9X4YWQ",
+              "width": 1518,
+              "height": 402
+            }
+          }
+        }
+      ],
       "Org HQ Country": [
         "Norway"
       ]
@@ -1245,7 +1557,6 @@
       ],
       "org_key": "fews-net",
       "Org Type": "Government / Public Sector",
-      "Link to Budget Source": "none",
       "Org HQ Country": [
         "USA"
       ]
@@ -1283,23 +1594,23 @@
           "id": "attWT8KG25GELXO0k",
           "width": 2108,
           "height": 930,
-          "url": "https://v5.airtableusercontent.com/v3/u/48/48/1765332000000/HqtFu2PIe0c5xoqrYZgHNg/x_xwVB5d8rQBgp42h3tVDrjAt09Grlg49i2qxbZD6cp4wiNQl8I3tmPvqxvWUXPp3xzL6aYp3CwFN5_nO69XQVvTwl6Q3S9IZ8HbiASxyt0fM53TuCj9qSI6iMlRRi16XNrpGNvM1qtuSQE6Ynxt6r94lGZiwXd3KodlDZzNJfqZeSGyKtnm9gXTHLJYHc_h/oTGNkhLBWuGIIThPcZ67yuHLHlM74gVMScN2M3OEmVA",
+          "url": "https://v5.airtableusercontent.com/v3/u/48/48/1765821600000/CiUd21aIBtrs4OUMN6_EWg/5XByX6Hn_LKM-HQNZcd8JLx0iOID6DkexK8fLobAoeUxLUyxz1ao4G-0uFd5zLz_jYr9Fk7LavVeUXQPOOUm037yZZ09klete_FKPfJI2x-94SEosDbCJee5WYjAG7-1Lqt1CgSC7KjeKqs0X6tEaDinTgyz6hTIOzperkPtAZLaIYZqTFz4PD3ftpou-Lmt/LJqeS0NkvJTOLg4wni8Z15M6oTyeBrQ6FUytPZ7jlbc",
           "filename": "Screenshot 2025-12-04 at 2.51.46 PM.png",
           "size": 164427,
           "type": "image/png",
           "thumbnails": {
             "small": {
-              "url": "https://v5.airtableusercontent.com/v3/u/48/48/1765332000000/l2EKL0gXr-wvCcgBsukmow/f0pCXJh_eoU3Fi0FQlP9iJUQ7EtGegppImLl2AcNwoCrMBwF9OIZZKASH21RwomRMHUZp2Y5JCZzZkO9yrblnwKMjAekpFy2pctZcR4Y8oTeHP88zCf9zQXnuY_rABp5uyMNevzaIXWNf3l3c84rMQ/2-oZT0aq8d7qLTPwmMwEYsSirUQYYT78iQmN8QcK_Ig",
+              "url": "https://v5.airtableusercontent.com/v3/u/48/48/1765821600000/2QY4AbMygCVwRFW01VeErQ/vHx9YJZ79RC6H33-J7HNz0sX8ac-jZaoD-5yLC8Er5CChms9pyCiMhqLEcjs2iOT21xcJQxSpuckX9yUdZK705F9iQjHeqgny6uAlVWM3HobcUo5e-z3MnsrVk_uJdh7Xyqc9KHsoLCGPtcYu7BCfg/YPzJlobe-C4_jcaopni3Akaq6rWaCBce_NTlxN2lgKw",
               "width": 82,
               "height": 36
             },
             "large": {
-              "url": "https://v5.airtableusercontent.com/v3/u/48/48/1765332000000/17s-XHYiOryvvuR7GQdA4w/o9n6yYizupY6CjLnkfbJ0WPbSJT4N_O3ZlY3DQTJ9_B1985h20GJV0l476ju0-h000m4HJNAmOygHke5EMJaf2TnyvI2eah2t3cdFybEXhsb5rPQ9YtV_45Y-bP6CHTiCqPPJShQfShA7rLSPY5QKQ/dDx96A3na0s-5kJKWY2IfetZMEYDTkuB3fiEtlukk6s",
+              "url": "https://v5.airtableusercontent.com/v3/u/48/48/1765821600000/7p2xGHPE_Bx_0MB5ksL9cw/9DzLwyMFcKcfoA9vmY6Ct1-AH_szjupQmref4n3ilr9Ndb0Dri9ggdFbo2QGvMsudZ7GOgbEGDDJaQXrEiv8vQi6C-jknmS4XZ-xLLR6r_DzuMI-TYQESvlzjBXZ-4L1uuQ-GybI2V7SAxkOk4y61g/yvgy55Cq1XdloFZJONyoOOgpDUNvjQm9Aki6e49kPcE",
               "width": 1161,
               "height": 512
             },
             "full": {
-              "url": "https://v5.airtableusercontent.com/v3/u/48/48/1765332000000/856jIkHcss33x5UGbhEy8Q/9RPqys-F5aevx_lvzIGN4KtsoSomZpz-l8GFdqKVgQPF5I453dCeYbkvSR8upIRYlKnHlkJE5sh3oUNHr3D1uOzwQ27Wt5K-3W-r7k8iZCZMOGSHxPn9SK2Q3KEiZoI8OhjwjOsCB8lG_7ZFQ-X4fg/O6GNWoO8h_XjR83rJad1caeJaCwZ5s9vsWgQQIjC7CY",
+              "url": "https://v5.airtableusercontent.com/v3/u/48/48/1765821600000/x8FC5aLGzJ57IjWPdNHhIQ/idOCKx4visVSIRJOs8lwCVLzBhQqeDJig5nKnNbSmdoKSeu5NgsQWgkBxVoTVUeFYkRmHoWA_4DIUSVkooKVEcUKncvJ7m9cyfqJpepnMUd5fryboDdpr7EoNRYC9q2iOiiW1_vmzYJsDIV4aJ20Lw/uXWRv3kCahuV0X5FnptSaIBkfotWMxEnBKnanrtPV5g",
               "width": 2108,
               "height": 930
             }
@@ -1339,7 +1650,6 @@
       ],
       "Org IATI Name": "International NGO Safety Orgnisation",
       "Est. Org Budget": 48551935.5,
-      "Has received CRAF'd Funding?": "NO",
       "org_key": "inso",
       "Org Type": "Non-Governmental Organization",
       "IATI Org Key": "NL-KVK-73728489",
@@ -1351,23 +1661,23 @@
           "id": "attm8I5iT827OvQKx",
           "width": 1420,
           "height": 840,
-          "url": "https://v5.airtableusercontent.com/v3/u/48/48/1765332000000/R4pkKgVANtkAkDVJb-zU5g/xTBMFJpcfjBMuntYIvsaaVawumyhwG5NyCBr4EOmZk4fazu-mXrbUBTuZU47UTju_S0DkK3WPwYvUN2qg67RJpeRO4nnH5Bn9hTwzA9EHZwnQzKGhY-Evl40fuQi63VbpQHxy32nazdQQCG4KgG-U8geSYY9EeSoxNESCvjVpPQPMbcd2lWktiKLYM2RM6lf/8fbgm6LTWszemDPAZB-9N80JgL08V3I5prlY0mK8kcc",
+          "url": "https://v5.airtableusercontent.com/v3/u/48/48/1765821600000/FQKFXCmoAJJ5dt5ptAoPfQ/F4PEwzAFS8JT1tqiT8JvQrruyxx1ZvHEpdsSjnCKNgNiCoP6IQRadT2v1pWO9qBvJpXiL1yixWlenxGZGB3rlRa9aSkZgDJa030jHqpzv4eutkrBKsbxx8KSuZZhowNOzcpZY_QgCwamdH_A6zAqxaB_SaNKpsY23ZyKhMKCLMeGjPUPIBZVx907GlgUAdAC/XS2wIWzN0iybeJUIiUeCBkt7pfYFXkKfzvn-0Xq8_L4",
           "filename": "Screenshot 2025-12-05 at 2.55.33 PM.png",
           "size": 161805,
           "type": "image/png",
           "thumbnails": {
             "small": {
-              "url": "https://v5.airtableusercontent.com/v3/u/48/48/1765332000000/OhipyTajwABWTaUwrJgHsQ/933eIYcLk2e49MfJ-4iyEgcOETlY9QCygb6YVaBCgJTEzCRVStnNX8hPwzmuF_0ddqhlvqRb2HnA9KqikiEqiU-4hXKm0PjKciCKX-ZFkAMtWU4ZF5f1afuqfWMHiEUhInqCLfQfBa_hq4ezzU0Wrg/40it018BgxVsevzEI8oPqRYeMsD3t_kMs-fu4Qhd3no",
+              "url": "https://v5.airtableusercontent.com/v3/u/48/48/1765821600000/DbuQS3pv6iVylr84Irzx5A/d7Hsb3S_zdsagJvd-2weEH2Rc5VqidSlccmmBZUZYxqxoIgvDffD48xGPnwejJ34goeYAZyH8xHP-wYw1Ne0kJJBvqTtR9Aaxj7Opbo1Cxh6wqhgVhTWer1xwg-wVW9CIclkvsDGlEVDjJyZmK4riw/QCmIyPmGHoIfXUAUxh7eEl1fMX7arf4StqoOH5tgoCE",
               "width": 61,
               "height": 36
             },
             "large": {
-              "url": "https://v5.airtableusercontent.com/v3/u/48/48/1765332000000/iKmz8Pl9X3ayTAiPbfDMYw/u3foDk4vNJXTgiUXW5DJZ17K3yk-8BsoTktjFpARWIIYvN-ZYQ9K5D-cgKel5RqVBqQJCVuQPaExUHuFBHa8cU689ZjKjRjVEygehVWC914sVT_IlRE-b4dlFezKsOA0RfoWhp2BBBTvFhJ8KSHuoA/gz7lYvlaWRGRMwqj46whqgYl-cTUN-ldgK4TAS6IybU",
+              "url": "https://v5.airtableusercontent.com/v3/u/48/48/1765821600000/hLJFWSBb4v58d0vDRUk0sw/4pXhDLvyehFqCvYHs0zmyj5Ma-sgf89kPJq1lWw3SbVorYXenCipgJ_ulBYcckBC9zQo8QLM0y_t15CgPP2MWb-h4Lh9OeapS_3TWa21_gidFKuh1ESelZhHnOPK5zJukYQio8zoP57Qm7gzaJo-6A/3-ypHuFUURomGzQPYbQbkyUuHrl1Q1cpg8tomkV4q8o",
               "width": 866,
               "height": 512
             },
             "full": {
-              "url": "https://v5.airtableusercontent.com/v3/u/48/48/1765332000000/qzG-KZw_G5PmbrDoHy_yGg/QPAQNxGWJTZdf4N_I6llOCiPThdgBIV8OeYbZ5aH_hkRFu_gUhYEFLvJDU_RxizXwsq44X17q7u9Bm6MspvgxS1VLjrFMVEqzwpIHY398ZxKOA4fJe2iCU6cNeN9BDOgs60BnvqwpOo_K68pj8M82Q/G-H8aeThbWoqfsY72ChUJkpaiv53zDcP037ic1PgpMk",
+              "url": "https://v5.airtableusercontent.com/v3/u/48/48/1765821600000/WaD-bZp49Ep6JPdhIgPGUg/ofP3JEzrhedQPNWBiUnjJI5YW32Tc3b-Sijzruauxo6kypQda_hT9uVikGXoQLHaGMoXV3Nd4_yMQHQKzAFFxdks2qAqtJkg2D-Bnb8E_oaRUpPgsLmS5TinNuePL3Y7_byL_XIyO7vzEFWSdcEbtg/ClvhQl9XWOhjG9mgux8_K-qblyjCPTJrnV9sdsycYJM",
               "width": 1420,
               "height": 840
             }
@@ -1407,7 +1717,6 @@
       ],
       "Org IATI Name": "N/A",
       "Est. Org Budget": 3604651.17,
-      "Has received CRAF'd Funding?": "NO",
       "org_key": "gem",
       "Org Type": "Non-Governmental Organization",
       "HDX Org Key": "gem-foundation",
@@ -1419,23 +1728,23 @@
           "id": "atti4g7nPcC7sAlij",
           "width": 1402,
           "height": 776,
-          "url": "https://v5.airtableusercontent.com/v3/u/48/48/1765332000000/im2BdmHNOyMMj7CbU_UJGg/WTm20-xAKzFm-2X69CEJ7yq87PvVgERmdW9LzZD4uNa_GQCaUOLsIMc4OBIWDy1E6x2spoejkPUSfMgGXmRnQ_J_ok4p_zEOg2fwW3JzV2EVmXJ0eAl7EPfLcd8o10O4j__f34ntrdYPLDGWJsFRj8mRp4HPTK3tFAACNaNAvpm8fa8UgR3MtvnSFUFxwQ3w/tHF_87tJapYTAMPpW540IEdISD_lpp2zw_C-YVd4ZHI",
+          "url": "https://v5.airtableusercontent.com/v3/u/48/48/1765821600000/0rMGO2AVIEND8RXSdgEjAg/hncuisnmfbQdVlBrAQcwUiOEkxzzfF-ngGwHpEOIrFtboMyLbpOykVaa9vrgnrzins03FehLZSJtlcFoilxIBS5BMB3_YQ9JCHhxGOvf0okZknQpZ3ehUIpziPHWuA5mQJAkDKBGYh9KS4lnsTCHGXmmjChRx2-CT4t23FbWV0dRBEuF7fIMr5U3NuS_RQOc/4BZi1dnOCsNkqnRc_bkZs8rT6p-EeUpvAY3N3mu9iNI",
           "filename": "Screenshot 2025-12-09 at 12.02.19 PM.png",
           "size": 213040,
           "type": "image/png",
           "thumbnails": {
             "small": {
-              "url": "https://v5.airtableusercontent.com/v3/u/48/48/1765332000000/wBwxcxZCBAAwoSpCm0idBA/VE8HAQjwR9ocP1ePlq-1B-2qHyDaEci6i7lqTEiYXGrbSAJHF81TDFnKxG64rVfxc5tOj8boo0HRmKzKynMfOQLGU6ZnSZfimmO9P4A-NwnUeoYuwCOvdEsQI8FlyvlgYB3WDge1RvBm6f72C9gmXA/rVGHnufZxTn-D9qdB9R2jFOBuRbzqoPL9uAcadrYuKA",
+              "url": "https://v5.airtableusercontent.com/v3/u/48/48/1765821600000/w5R-hFhE8orvPS12DiFjQQ/G8A73CqgBtXrAI-jLP41ZO2BaYWm0NitBrhjcFjmExDfNaAp6Z3-__6nMjVdbc68YOtW4ldIfAUBGqsCJQKLm8AolP2d9cdj2q8g27J1-fAvVzy33QkSmO9G6H34epEZD0JfZLQ_Uwr4oS7xc9Sy-Q/ICno6gY5lQ70jJK6H1psW8LGcfsb7U4ua_Js20ThFxs",
               "width": 65,
               "height": 36
             },
             "large": {
-              "url": "https://v5.airtableusercontent.com/v3/u/48/48/1765332000000/EUgzOAVEEwN0G_rLA6F8UA/fJyqBtb_tGiZHicYaNKc7mgkrWlNsXycgI00qRalo82DLshqh70W33vjRw_GDDj1uBj0pTwiesRYrbxRNXGDrJh7G4BNNNA36r3gXnq3Ez4BaZnNwxjCmUs1ZSxPEXLSEGpJQ4sgUwj4KV6FkCxOKw/9yfrBW_zMsc30zmU6O9Tt7v5iz2llGlglYHu497NkLo",
+              "url": "https://v5.airtableusercontent.com/v3/u/48/48/1765821600000/DUiDAN2AyCGLHDlftAvWnA/2DAy1hwUd14ekV1peY1SGdU2ROubV9KyhOI3TEZ0twzu4u9cPDvTcwEetGTD3Uafusl4DBWbKyXJmExGarzDYAfuVNSHBp0gWY777dJN6GPw-ZahGpw3fxKeh6fgaRmqrTYidF5yKtseggSEazBSBw/k4drKzvhtOTN-8K0YLEo9ZcluGVDsAB0OyPZdY_Ek9w",
               "width": 925,
               "height": 512
             },
             "full": {
-              "url": "https://v5.airtableusercontent.com/v3/u/48/48/1765332000000/nw9lqI7K8w-icEr-PxFJag/DexB--hdWA8TfxFE4wgY6cUtK8_Qawed-4glM3GzKaQRbpHh1EmQnhWlPn03qk76ufltq7BDlZi80xvWiP8eKDQbBmHIcH_1nTGznFcIcqncoo6XWbAVwaePbqBd1_p1_X6oHrDYUGcQ-od3AXnTNw/Eg61EfZz2OjtBoN1R5sIlnzY94xaqCA4S8ReqSlfv6Y",
+              "url": "https://v5.airtableusercontent.com/v3/u/48/48/1765821600000/0WH4O0CDmf8VxYtxQU2A0A/0H-mJx9kAvp4fg8yAY_Y99L0AvA75TPMPaI1ecIIRXBhpLhoLn3u6uQKKcRJb7nxPjNo6H94VxEQBrYZk8VorlGMpKVIQbJQuzD6JX_ZUxwPufepjWD56y-4wBZImQ43gRgnLqsMGTQ9GtG7PBxdcw/e99Ro_UdWBAOZvhRYV2f9RXtQmAMieHCe5nwNOXtPUs",
               "width": 1402,
               "height": 776
             }
@@ -1462,11 +1771,9 @@
         "recrq5pa36yxwSE2c"
       ],
       "Org IATI Name": "Fields Data",
-      "Has received CRAF'd Funding?": "NO",
       "org_key": "fields-data",
       "Org Type": "Non-Governmental Organization",
       "HDX Org Key": "fieldsdata",
-      "Link to Budget Source": "none",
       "Org HQ Country": [
         "Netherlands"
       ]
@@ -1483,11 +1790,9 @@
         "recFnNCbi5RYJNchr",
         "recD0hG4x9w340oYA"
       ],
-      "Has received CRAF'd Funding?": "NO",
       "org_key": "mapswipe",
       "Org Type": "Non-Governmental Organization",
-      "HDX Org Key": "hot",
-      "Link to Budget Source": "none"
+      "HDX Org Key": "hot"
     }
   },
   {
@@ -1503,10 +1808,8 @@
       "Org Donor Agencies": [
         "reckIAhFXgj4XL29b"
       ],
-      "Has received CRAF'd Funding?": "YES",
       "org_key": "korbel",
       "Org Type": "Academia",
-      "Link to Budget Source": "none",
       "Org HQ Country": [
         "USA"
       ]
@@ -1548,7 +1851,6 @@
       "Org MPTFO Name": "DRC",
       "Org MPTFO URL [Formula]": "https://mptf.undp.org/participating-organizations/DRC",
       "Est. Org Budget": 520000000,
-      "Has received CRAF'd Funding?": "NO",
       "org_key": "drc",
       "Org Type": "Non-Governmental Organization",
       "HDX Org Key": "danish-refugee-council",
@@ -1561,23 +1863,23 @@
           "id": "attvG0OdQ5Nz5vQ2T",
           "width": 703,
           "height": 301,
-          "url": "https://v5.airtableusercontent.com/v3/u/48/48/1765332000000/SUeQ2TUAWIgXH-cNRV9sxQ/b6BzVEro5-Ip5kJ3NXGLextfFfFQc4-WxQfDjrKOM7P1aKDKFuTwbdsmy4645QrqXioCo1D7jEkXhO_y_EOUd2-AkwEsexbUr6Tgw5SKdbN11t0hiurYYqoqvoDxug7Jk4DWV_RoOBQCjgYQDflqzp_MZwDpF1mCuNkZuvQAdhGl_vuzCrB1EsCbGBMwCZS5/qb0aGoqV8tsSSdOv16NT3ohXXS0IyLD6jqGfhdGPmc4",
+          "url": "https://v5.airtableusercontent.com/v3/u/48/48/1765821600000/dzp4I5RTdFquo3qQj1EHTQ/vvt1H513f9xbAtm-uZzA5u_o_nEyZSn6ZSPDjyvHnk7wAzmReFZpj1UdvpBNoisCLlLE9c8QH2fDdvnA51ZuWpvGcm9kOdnWfmC0Wvm64jmT0E986fBeEi7O1NMW62Fv1n99G2JNNl4rxCaxdt6U7hIB3U-AG-I25lT2iVlERS-1FwmJNs19aO31CqQfwYZj/bsorT-sylzEXSXlmyhTKB6CLH1juLNqxUWCQPEC7P-c",
           "filename": "Screenshot 2025-12-04 at 4.22.54 PM.png",
           "size": 40205,
           "type": "image/png",
           "thumbnails": {
             "small": {
-              "url": "https://v5.airtableusercontent.com/v3/u/48/48/1765332000000/Y4esMQ0GK7luY6hXwjlWxA/6FhRY7gCST38SkmG7BuCU67_aj0SNAqF_agq0kqXHaWvK6Wy-r1gmIV7p0bOhJ1cmJiAnE4MMWGmfJZkM86rGeM6qz6m_jOKGlbzV-0GRI3DMWGUdy_otGh_1tB41LQPRA9pFh5rQR_DMX9w5FtTkw/dp2OmK-WhUbmFAPjAj-EP65asG14taRGrnBLc0cYJWk",
+              "url": "https://v5.airtableusercontent.com/v3/u/48/48/1765821600000/whTQg9m56aHowOR2eiOPnw/Fe_7OxamTg2Glw8uQSDgPaCvuLbrX3zrZ7H5oyUyxfnnOZnWvXfFsP_7tQvfve4v4OVkbkn7x65GWi-gQM-5iZ9Raal27yFakA84M5nb78q0l0CQpuneAisieZ2uWmWieTAZg3vs3z705WCjYVb9-Q/tcxLf7vnC7xv487TXSSVltMex3Moy71ySAnROdDkbQ0",
               "width": 84,
               "height": 36
             },
             "large": {
-              "url": "https://v5.airtableusercontent.com/v3/u/48/48/1765332000000/8FGNorrb7KgCkiB4MpbhFg/oK3LjErJpXervpfAOhNIRpI7xwa-adMdo3NrWorLa9jFpEGPb21DetsY14LxRDPewwEw2PDY47NCX12Cnc49EDGPfiry9AHaiFeh527xQbBw0TGzEYExhosQbFioCfDkzJeODtOOxWCeu8iCOitRuA/v3Rs8w6tTm2uAcEYKpymY6VB5ebaANDzFDfF0HF02mo",
+              "url": "https://v5.airtableusercontent.com/v3/u/48/48/1765821600000/NYsDFgyzHixWbFCxhZNv2A/7WDMBynkvrp9UyvKH7F2RPhQrAjvLlBti-Er-GDSU7umTJ3QawjeQdOhNRHbsdcMZejTKcRl9bi0mHZchUz40zSxwEwVq5tch85vuh4gbGebuefA21bsbbXvRpQzCFiWXX_StgATlnJM0k4Eesg3ig/TM0r0UjYjbhFZfzu73zgzctLT0ctjoC_frhUd8Br8eY",
               "width": 703,
               "height": 301
             },
             "full": {
-              "url": "https://v5.airtableusercontent.com/v3/u/48/48/1765332000000/hvYsVPVsQd8wFMLiRlgqgw/O-txfGfdj5-zJ4yrOgHDT5ln2CXGACepUovj86d1i6kMXHy-W40NzntwEfnTcl1c1TUyifU-aGYuHS3qeJFGW4Pvusamlp8kamXfIPkvVC6TyqzGrR0OnV-aF762pAujy0sPMLbzVP78PxiWbjjpbQ/SANtyv3JQ-3Vzmar47tI0EN5fiSkvlUe0bHzp8AXr8k",
+              "url": "https://v5.airtableusercontent.com/v3/u/48/48/1765821600000/D8id8bsSIsYLgfGX-QuVsg/TjZb6Tr9hC211vF-aIqhxu4abyKZFfh6ga42ky46NHx11iBHV5-E0m-6WYBcwkvUxETAbJmbY1H95ciKOXclraGFKk5y2HarNjNIPcojDGmqaVB3_8bXXdGGG_2PYJFJUsR1rtprDX7NjNkBbnBGqw/q8k80Jrpk5Spw1L31GT7-pmHPlULcx2gPeuPw_kCshc",
               "width": 703,
               "height": 301
             }
@@ -1619,12 +1921,10 @@
         "rec2KBp1IAA5TtnQl"
       ],
       "Org IATI Name": "IMPACT Initiatives",
-      "Has received CRAF'd Funding?": "NO",
       "org_key": "reach",
       "Org Type": "Non-Governmental Organization",
       "HDX Org Key": "reach-initiative",
       "IATI Org Key": "XM-OCHA-HPC9829",
-      "Link to Budget Source": "none",
       "Org HQ Country": [
         "Switzerland"
       ]
@@ -1641,15 +1941,44 @@
         "recxNVM0HeC0mSQyk"
       ],
       "Est. Org Budget": 28900000,
-      "Has received CRAF'd Funding?": "YES",
       "org_key": "un-dppa",
       "Org Type": "United Nations System",
       "HDX Org Key": "unpeacesecurity",
       "Budget Source": "Annual Report",
       "Last Updated": 2024,
+      "Link to Budget Source": "https://dppa.un.org/en/dppa-annual-report-2024",
+      "Budget Source Screenshot": [
+        {
+          "id": "att1BRqnEg0kWCWUc",
+          "width": 1444,
+          "height": 1192,
+          "url": "https://v5.airtableusercontent.com/v3/u/48/48/1765821600000/HFNnQMmZdUg95xDnIvl4tg/EwEVrcdzZEZyFEWd0IVmha4vljxqdRZ9NCaUCeE4rvct-Uovu8yW-mf6nnsMazm2mNF7RKfv18X_as266m5P45YqiBuI7doFQmtsKT2GlhVyFpLTHkumhtvlNTan_Hoa_NeZACagtYtM_5N1bhe3oDzlT4OLgF79eHIZM0aEju9xPyYZRk78lbnsG_yHTaNE/BiCVJnjrmROgNklu1WVpEf8gjj9qwIYNOitvGtDucyY",
+          "filename": "Screenshot 2025-12-10 at 12.12.06 PM.png",
+          "size": 214278,
+          "type": "image/png",
+          "thumbnails": {
+            "small": {
+              "url": "https://v5.airtableusercontent.com/v3/u/48/48/1765821600000/S34dItcnDoU2TVYHhr1U4A/J7YIrwJ1Fs7VUSXzXCAzD3EBXsnHaGEEAce8o7u_eH7CM3rIlBay39GDD8FAEfFmJzPY0WbblWA-mdq9avRFUyrhTN2o1_uSBIs3BLaoodtSHqH_cMizbLRVIlo8FykRz2_N5zj5H70vhtuI3fRFYw/lLtkJ9YTLubcss3ZUYVs00vRDkiMVEF2Y6L9L_Vv8YM",
+              "width": 44,
+              "height": 36
+            },
+            "large": {
+              "url": "https://v5.airtableusercontent.com/v3/u/48/48/1765821600000/FyumJWZ-z8AkTzKLsP8mnA/IkpVnJQfKf0RAc3O5RVdvdqQvY2JxYuUDZZSmSORVeP35gbpi5Adxje71JmZUwSyEXwAL2beiywFJz23vaMeLhJdfj0OW31wxvnT2rOAzv1n3CHiofOBw3lJ2iWxvDb_iwQNCTVCQonLEpP5RJMAMQ/x9RDfo9LosUh3ghiC43UfCiFqDW_k421FsPy1a4JZNQ",
+              "width": 620,
+              "height": 512
+            },
+            "full": {
+              "url": "https://v5.airtableusercontent.com/v3/u/48/48/1765821600000/oAzROgCxppx-9TCTEZrIvA/SzMvUReVHlkqb69LLAI5ICfQQvDmCyZ8SiGWVyj5db2UiWp8IIlO4c6AW9_81E8k98z7L7Lu0Dgbtgh5NggxO4dddUor8XckLushRYL9giYALd0qz3-gG_ya25cPvydoejcjo44qPy78oT8fzvSWgg/CsNtFRAjz82gpiZTRcNOPDJooMo_tvql0aVclzA8txI",
+              "width": 1444,
+              "height": 1192
+            }
+          }
+        }
+      ],
       "Org HQ Country": [
         "USA"
-      ]
+      ],
+      "Funding Type": "Core"
     }
   },
   {
@@ -1664,7 +1993,6 @@
       ],
       "Org IATI Name": "United States Agency for International Development (USAID)",
       "Est. Org Budget": 86961667024,
-      "Has received CRAF'd Funding?": "NO",
       "org_key": "state-department",
       "Org Type": "Government / Public Sector",
       "HDX Org Key": "us-state-hiu",
@@ -1677,23 +2005,23 @@
           "id": "att1EZPodDZNCliYj",
           "width": 553,
           "height": 509,
-          "url": "https://v5.airtableusercontent.com/v3/u/48/48/1765332000000/cxUuIHQurfXdBMvADFWrag/Dusa_RK2ejLYKienQEi2HqQG7Bdb5Xpq2sF7sR09u6pfgEVvNblBGlizKmxkfVUb_q4dI3BbgiCOo2gF8ZtM4dj7A33mepFCrdNjHBhnzblfzONVNodEpfaps0wIfkBLW3yo9lw_xeLMCKT_4g9wN4tYflxsh71_iap17aw0RrUt17z0A5316MzJTooy3vg1/FRthuPu0bWzz3adUyDa8afgjXS-T8sZ-WW3-cBRG1JY",
+          "url": "https://v5.airtableusercontent.com/v3/u/48/48/1765821600000/y5q5M07Fdcb7pSg5tAIpBQ/mwjGPE7vICrAXxAZ3HI2BiZ2trDMcnp2PNPaN-65pmKyQ0ArleWqPBBwSQk7mLwakG_TA41kafPmUoTH9FHF-X3RZc0SI3gT-snEvtTRATMTISZzLesBB1DR8Bw1ON8tvX2fHb6PrmBQdOIGnyHlyKtiEeJqfZOPfeimY7fcRQwNOMEzM4UbClE3uV9JAlfb/7VcRnjwp9GTfBSKmH7RqkFCmz-EoTf1QMBN5phFU-AU",
           "filename": "Screenshot 2025-12-09 at 11.03.15 AM.png",
           "size": 35478,
           "type": "image/png",
           "thumbnails": {
             "small": {
-              "url": "https://v5.airtableusercontent.com/v3/u/48/48/1765332000000/mygHCfCzkYjc_Aryz6AKZQ/LjzDLByHjQh_t8Q6-oPpfkglWfQqaJoqSjgdLIBwKYLe4WWMA6F41p_dqta1JmmPOtDTrEXR4mLGqn8ChPdbgzRl7KKXazZM8hDVgzQGNTmSYkqvFyuBRcsBiFLBBE1b5WZpyZ_Y2j4qvKKOiDcyaA/z8E6Vk29UsxoMd9qNtPCOaa_B8y-FwE1kBWtvYzII2k",
+              "url": "https://v5.airtableusercontent.com/v3/u/48/48/1765821600000/XzEYFTqFYYcDUkcD3GTmug/K98mMKcd9G4HgjXzIb0KYujeU80JubVfmtiPnDRjm4JlDZ_epkHDD4BfnKZoTbDMBBCJCQwy-Hv4Oer3f62qZ4TdWNKXbiQ4Ksz1MvSg7jAwyXW0BbeyVeJnjOa3egV19YjB6TvjO1E4AnFU5xy42Q/kZEZtRO5ke_5uQep1YXalq2Rx2-PWJduIjjiv5S34o8",
               "width": 39,
               "height": 36
             },
             "large": {
-              "url": "https://v5.airtableusercontent.com/v3/u/48/48/1765332000000/Uwvc9kEUG9PvBSfFw70OJg/7DtfeABRBYL66Bp187xyLXzbUN1fhTn7DWdsAxbUq3rZaFPwpRFfEG1zWLUSAKfeoD4gW0KlZyouAmBiMMgb2nUS_5gq-3GRJhvvjM8iBAAQ9jjh7T-vJXTYKuXfevV8DWyie62FM8Gyj4xE8iKNNg/eAnXHVw-m0Z3dnTcgtSIShoWBvW8wZEFHi_5ETa2bJ4",
+              "url": "https://v5.airtableusercontent.com/v3/u/48/48/1765821600000/qGbAOH9HAnUOzoqHUFQzDA/-UD3-POzNQNop22tGRthqXwOcProqgB2QxVI9wVSzxAPODabXlyHQz3vAli2OoznD7OrLy2WDiHEZH9X_8vnSh1SjmeT4AYa8ByUKZPYkF96tMV1Qkt1n6k3SlyytZeH0GUWJhOw-p39s2s7dck2ZA/VQ1Ut5hlBXZimvnZOOu-e-H8vZ8fVu1M9nFEMigtoM4",
               "width": 553,
               "height": 509
             },
             "full": {
-              "url": "https://v5.airtableusercontent.com/v3/u/48/48/1765332000000/pShGgG-jJ5Vu8UwFgGIgbA/B_uz6H2kWPTgQnrWEiI5WLqtjlLltbj5gnuXs53i5J9E-CcmVHP2oKWKPIrTEJuhJk3du04YB51hJlaSnFOUrcEBxBV8FMzibKJoznAOj4FXfIu9XQoguH4CTFLrltdz7CcylJuYVmVJwObFnOmEPw/H04CEfqqD-0q_9qAUsY8Ywbm6oHpOnqMliaB4oJDF74",
+              "url": "https://v5.airtableusercontent.com/v3/u/48/48/1765821600000/Z4nKAwlQc-MOmfWIlKZ02Q/AW_rHXZVZfsW8Pgm9_B57s0-Kzjk4h5nW4XXhQSJQFX1APcmVkqcy3-kfR1D8kuDm97PvgwAUd_LDAwnYRvkif7v7u-OXEieFgEt3XGqzHGbme3cjinsP_6zUBpnJnu6UzkNXrHJ2pMtNvjm8Kbubg/-arKRgyx2RWenDRXLEUBC-YJRknY-wmJtxBhaPpykFU",
               "width": 553,
               "height": 509
             }
@@ -1730,7 +2058,6 @@
       ],
       "Org IATI Name": "Humanitarian OpenStreetMap Team",
       "Est. Org Budget": 8387022,
-      "Has received CRAF'd Funding?": "NO",
       "org_key": "hot",
       "Org Type": "Non-Governmental Organization",
       "HDX Org Key": "hot",
@@ -1742,23 +2069,23 @@
           "id": "attrDMmgNwFsTBUPV",
           "width": 1120,
           "height": 1146,
-          "url": "https://v5.airtableusercontent.com/v3/u/48/48/1765332000000/ZUwE_zMJevjha-KmHbdXew/qxaqYewurY2dSR67xn-W0uXL__RcMd2xber4y_UBucZyuIJPl6Isw5n4B0aYcXdGpF_fXTVVGaIoSsb1WDuKpKPco1urt8hOagked3xl5O81Cw44kIwKjvD3kJ3WVfyMX22bv2aCAkftAbDqmeGVkCYx14dxXlD4KORKmQo2TPf85ELejGWu8_rTdmyoEjHn/zbsH1gpEksBGpECtDdBOZn7VpoBEfUj0hbYVLVqZ45Q",
+          "url": "https://v5.airtableusercontent.com/v3/u/48/48/1765821600000/1ag9-jGxkbazyj_20dIUow/xLPbLFXKfkUq1cB1nDFlZnrYMLeV74KUXTrgOIpYmit5TjfIAZiayAHFGJ-P56b4zYCLVUZu2X7jBwfGYnXkO1OShv4CRYs0pPAou5_Jsc-4G2EtRdv1megPveI7-tqrwaG3ZffHBFA7ernm-j-76YiPo-9H5Ef8odo008KA8mTdqjxhPP9XSIuNhWWH0H0c/5lDgQROeWOBnp_8-xXDpnD3CMragv2kntagNW-3U_hw",
           "filename": "Screenshot 2025-12-05 at 2.19.25 PM.png",
           "size": 172155,
           "type": "image/png",
           "thumbnails": {
             "small": {
-              "url": "https://v5.airtableusercontent.com/v3/u/48/48/1765332000000/M96256Grrq4Vpy_RUl5s-A/-uKp3Ex5gx0TGNCS18YuLqEd49JLXMYIJpYRrz77v54AQFPFpuBZPcRigI5G-RMllrskA2E06a9afFOpHLb2wAWstXuB90hQhCgDf0RilpJuQhcIulsVH5h3VZDuFmcZ_wvxfYWgx0oN9GV5fgAk4A/S6QfKrp8vugW54itma3ChcHYdwyAY2CpGpGQP2Xhm_8",
+              "url": "https://v5.airtableusercontent.com/v3/u/48/48/1765821600000/nUR9s8FMp8XIHI9x0YWunQ/u1bZV62LTYRlgm3XeHWTxQ_b-LF5ghSkacaUrZJRk_L4jLLdTZ3o3H9AuE88jIhD0ntNYS2wCligJfMWkbBTz0RBX2PcrwOJ8HD2u9cduI64KzLUupDGdmEjKxx7Dr432QGf-YirgdPSazm9fhBMkA/zdx18LDAlgQpPhO56BG59azRpHimu9u0sBrpzbdq9jk",
               "width": 35,
               "height": 36
             },
             "large": {
-              "url": "https://v5.airtableusercontent.com/v3/u/48/48/1765332000000/nD0K10b1ktNDgtqQC-yEPg/Q8OfkWlGNLWnnxtGmUePgk_TQVGx1_eaRFOX7YINrwDbSSjCdtVA3jJfhwUBYb6QlCo3nvY6H2t2g8x5EgOmhe6SbZy6MsEQnRlYqeUSkXAxA11AMRAguBp2PK8KYaszgdtw15MrvIj32w5KebcbAA/IUj__yaU3ES3WU7C066U1xUiIoa817wyn8ONPqkNWmE",
+              "url": "https://v5.airtableusercontent.com/v3/u/48/48/1765821600000/3z1b3vqy9D7SngDZbkGRDw/T67J7Of2HY0Wh3lsI1ZVihn7fufHte8HA5reHyY_QG794R--OMnQxawam3tk4G5PBMGtLeGnZdKMAwTN2ZGcfM-xyRjAuTuBHLeyPnbnB4UqDoPxiAwMJtNt49ssfeU4ieUX5kQEikkoieDuGbyzfA/VecexlwIiFMgTt8ZiLWD9CDkSo_8stMXYyIIYJPRFYY",
               "width": 512,
               "height": 524
             },
             "full": {
-              "url": "https://v5.airtableusercontent.com/v3/u/48/48/1765332000000/T3uEkAFJXzm655YUpoYWBw/xVDaMY7S8nm5kZ0lB4twtAyGiu31ij63DGFvV4Z_v9Qu0NqBY77Vk7x-UGLeoh8vpjaskUjzaH61oDfAEbs0cNyUEIPpmmLAoGwLVSj3KQ2W18BXGNc164LV6ukbHT6IwHohhSzW9BMFTqfkkKJTkw/pGTknf8u03OUq3X8qBFIpsG2OEBd-anobA-749pt_qk",
+              "url": "https://v5.airtableusercontent.com/v3/u/48/48/1765821600000/gwB9eyoozpnO6QVpRlf6Vw/F9VFL1GG1em6-gngzuzpGY2sKl6f0AvjX1Fm_6lfmUpPm10vtkLHZu0cMCbDNaUKgl1ZL9arSpb9d6eOXWEqKMVYeuGITeZObuD7UZYHQWawHSwm1d0naqn-ogS8eO6F3MT7TeBj4SnOKVPuPUu9Ow/pg382ZWSsK6Md-oBJN924k8Ip-4R8Dnl4XvDIhe6n6s",
               "width": 1120,
               "height": 1146
             }
@@ -1793,7 +2120,6 @@
       "Org MPTFO Name": "ACLED",
       "Org MPTFO URL [Formula]": "https://mptf.undp.org/participating-organizations/ACLED",
       "Est. Org Budget": 15656938,
-      "Has received CRAF'd Funding?": "YES",
       "org_key": "acled",
       "Org Type": "Non-Governmental Organization",
       "HDX Org Key": "acled",
@@ -1805,23 +2131,23 @@
           "id": "attE8sVd2sfRXSiVA",
           "width": 1040,
           "height": 474,
-          "url": "https://v5.airtableusercontent.com/v3/u/48/48/1765332000000/RT2D1kr4VqKLcmp96TCihA/hXwhtcyD1e-YT3ppvMkECbzFvAQYVXX72ADSNhNtCFwk6PeNKbYNj1NRX2HEFk1dgWpxAr_3O_UJiI0Z_ZFQlHsvX32eMJbo3DZWcrLuss7HMESYdMUgis8vY3lyZ2mXbVWFwRYtYvfXlsThKJaB2UhmuCi0-LfG3T__UtEj4iewLmWIiVTFQg1P9EFK2ZXa/p_xsvTNbDoFx1ZKMTg41lKHy1nsTCAtmeTX3oL3gA8U",
+          "url": "https://v5.airtableusercontent.com/v3/u/48/48/1765821600000/vauxPUzSOghAtq_QycGQgA/yOfzLRGrrgjsFXaJJmGm5tvxw24PkGsEoFGICPVgOv6docp7eMANlIEpZitI8RLzsMCWGD-QYcUrJFz9J2-aQ_fkkM8rPm7aPwR6x9E9c1oacjE_0oRLp4k_0ipXUKVxdDhp0Sb91_tcEI8SGtvRH0GsYKqJiQ5kzil49CKfsb6mtrsLA71MTMOrjNLIvbxH/StmUtlgpprL2QUKFRZyGDitrVlZxue7St7tsbwewHCw",
           "filename": "Screenshot 2025-12-04 at 11.18.59 AM.png",
           "size": 86889,
           "type": "image/png",
           "thumbnails": {
             "small": {
-              "url": "https://v5.airtableusercontent.com/v3/u/48/48/1765332000000/Yt_EmqOR7PiZSfiHLyuSKQ/OjFhf-PY_MMg9Wn_nByLEb9dJkG6TEZ2PH44FVmqRwrV2QQhobeQr0NC4igXX5y5y915jTCMXACNZ1As8dFLaAtm0e_JYl_jNR4ILesSHMo15I9D_zH7Z6F1Jb9-phHzYiOcO4IVSFobOyaruWMWtQ/F_GHw0_xRgX4lieNi8gfiqmv-kb_FfNTLMyCN3WebwM",
+              "url": "https://v5.airtableusercontent.com/v3/u/48/48/1765821600000/AHRnVgO_3MfD3JFoustDVw/EzC0ucAlqumuKHu2uPrOZmvq85Q-r3-JDcY5tm0bShwizG49_MnvxhDeruv1x5hG-JODd7ibT69NKDtcPgP5q3XMh-yLNGcgQflhFkahzIkg1kwNW-WKDeyrabjEcdPT-f8ytwoo9x_gBSRADm0ApQ/zD815FFdr-pqhIldm7PyN69jrbr1DVF8g2Dqv1zD_Vc",
               "width": 79,
               "height": 36
             },
             "large": {
-              "url": "https://v5.airtableusercontent.com/v3/u/48/48/1765332000000/nVPzuid4qJ-QD_EhuLet3Q/GDMklB8u6s4aCNghuE-JrH4t0mc0Wd6dT-5u3C9VKioeZhQP2dOr6BO-OCCrtYziWk7IFi0WZs8M0vYZt2LfCtlBJttCIbABBCODX8Sh819AhIblsaREv0bhvois06D1kY7Otrwd0UQnjJ0FjTetNQ/Ze-w7vYNvtk1DDR8_mtLJYFGZ8ZxFZiI1AQ-Hzdj0_M",
+              "url": "https://v5.airtableusercontent.com/v3/u/48/48/1765821600000/u_wp2aywYzHyjSgLLgfmwA/vudijslehNVt2XMtaFwuy1OqOzDY5EfKLgZHF-3vpxVlNzO61KH7LSM5ej_wDYqdTO0I06o9-QNq2I8SMoZzFu1ftK0fW-YSBj6xEjqjkf_pLSqFHWmF8mjaxqxP-MFivi1JD6M083NIDUuQIQJ9Xw/RKoqbVK8vONgZpeyKuDaKHGv4LBaBtc-iJ4I3UxdmVM",
               "width": 1040,
               "height": 474
             },
             "full": {
-              "url": "https://v5.airtableusercontent.com/v3/u/48/48/1765332000000/VRycaZsYx8dViRcdAAubfg/bg3KoiYAwnZo-6zBSfflwU9_7_KnB0s2WfsZtdQEj74XdPIzIorWTOaXtrJwhoZ-blA1PJz-Ya1MeGjmMcKbQzp_Y4PhmZ9mhmDRb3I6BndgQJ1GLUP_h8Dle3jiWjrK44HaxmKcEDLLw3FuX2FpaA/TiRj9-bBEwvVzOiPglJ9Q36Rtv32MxB9eEU8G4apiMc",
+              "url": "https://v5.airtableusercontent.com/v3/u/48/48/1765821600000/N6XgXrf-_HKvBcieWO1J4A/qRfhEo7qxCPp494kTro2tFKXYAVh_uFOE7S0OyR2GLCW8oPgC_b9oSC_5taSo3tlIVhL8uBKHQE85_iMgD4EKORoR7cccgyVefGwSDyK0KBobE2NesxUm7HAOoCPUHTGV181-jBbkaL-f-X2oR5Jug/xmjntqo1unh-fhDL8M8V1UApyv9YEtxEM_2HvxzDW10",
               "width": 1040,
               "height": 474
             }
@@ -1880,7 +2206,6 @@
       "org_key": "worldpop",
       "Org Type": "Research / Think Tank",
       "HDX Org Key": "worldpop",
-      "Link to Budget Source": "none",
       "Org HQ Country": [
         "United Kingdom"
       ]
@@ -1905,11 +2230,9 @@
         "recr77XDSfR0O9Jen",
         "recbtz43uuKKFVfvd"
       ],
-      "Has received CRAF'd Funding?": "NO",
       "org_key": "dhs",
       "Org Type": "Research / Think Tank",
       "HDX Org Key": "dhs",
-      "Link to Budget Source": "none",
       "Org HQ Country": [
         "USA"
       ]
@@ -1932,7 +2255,6 @@
       ],
       "Org IATI Name": "N/A",
       "Est. Org Budget": 2008567,
-      "Has received CRAF'd Funding?": "NO",
       "org_key": "data-friendly-space",
       "Org Type": "Tech / Consulting Provider",
       "Budget Source": "Tax Filing",
@@ -1943,23 +2265,23 @@
           "id": "attlaRIeVMTUPueRN",
           "width": 1644,
           "height": 974,
-          "url": "https://v5.airtableusercontent.com/v3/u/48/48/1765332000000/XYbP9B8U8OV2TdecDAhmew/euJoo8YGH2Gd0HZc1_kyid7aU6xHWVEhBDg2e5uc_L8f4hkHL0-m2zOWZkbDTd4prBXoYPRyCe7p-NfPNFPdpcwCcbAwJLvP_10r4mw_C2MU7QBC-yreQ-EEhZSsjEH_uzSAoWfI5iIN3GX44w-ma_557XrPIC6c_WJofGdIgluQBgRNfpZJ9w6z6lfBVXQr/rTBKQqlSJNmAZErGBIhbty8gcMQhHXRKd0IBJ3XWxGw",
+          "url": "https://v5.airtableusercontent.com/v3/u/48/48/1765821600000/GRpxT_1mnhcTQgfR5Z7srg/8ucx79ADg9DCEcOkXbHlHiMXoX2Dw_s0kkPvtB1n0zfKUgqY1-Rt8MWx-KhBDh5KIozY-ulGb73hd8xHxQSHcflV8OmNtvbfuSwI8yYGxd54vOg7m2R2WAdftB-OI9kZG1tNYp1HmrFeQVVb38s_6JwhzHZLujm-x0eTlq5mmoSAfaRs9s0M8KA1a6LnxAR6/RIxqNGf_7-3uS3NvkaXawiD8AQHkd1Y5REe75zywcnI",
           "filename": "Screenshot 2025-12-04 at 4.07.46 PM.png",
           "size": 221269,
           "type": "image/png",
           "thumbnails": {
             "small": {
-              "url": "https://v5.airtableusercontent.com/v3/u/48/48/1765332000000/O-ukEUBaBSWFDYn-SYrIKg/fA5SiRL3MO4CQVBxaiqOfZ7UdBXBfVICZkUTZfdgyXlVbCibt492HFdn2y1yZyWNWfOcBeiLlE65pQ_cg2ULiif5hvZom_uonbDZJNhmP3ayiUXRh4MYdNdXfuOFayHqoRdV0RWmEIAwmkgLvnDfRQ/jlHdpaqoIkBB48y_kA2FM6skLCAwcbb6SKSCyRcbhQs",
+              "url": "https://v5.airtableusercontent.com/v3/u/48/48/1765821600000/8Om8nYa4AMr4IY-aVJ0ruQ/Pr5EHvIGCBY5QkrTfHg9joMDZS650gpBw5qLAyljoU_HqQAsplFK1_AAk-3W94QHHgVSsGvWcMEN-iPcKIC2xrOWUQCoZtq6GX1s8hWEV-PryjOoxSiGqiMfkiIehEJja7Xt4IwLTHiuZuY6J_FOLQ/78OcJjZJzp8mDJdCs1zh-4oCUTVxkynjjnSr60FGonE",
               "width": 61,
               "height": 36
             },
             "large": {
-              "url": "https://v5.airtableusercontent.com/v3/u/48/48/1765332000000/uxu4vYX4rdDV-xJ0-vKoVw/B2cXBDoPg513aS3vLi0poXYrHXWv1NiORS3fTtJY-HRJB4UAJs9uNWx-bzjH8RHnuDp1fIZWF3O6IXCB3Oxf0pLJ-oVC3ro_1i7uFIXk4wT5teulkdr5_WVF34-QYdL8ZRAe3tIRWyr0XKpbBQ5f7Q/-58gdmY_0EJn3x5-ydGx_lfwmwjT-dzuCtAxGQrYYV8",
+              "url": "https://v5.airtableusercontent.com/v3/u/48/48/1765821600000/V3eLqUttY8o0PvP2K7YE2w/eofE7Ya9LLk7LYA2eXKz9Iuao2Xh6QrDtOrx1we7aicTrggTY6YQFz1EdEO2faeWfbox7pe5Mi8wHyeBeH32omX-Hm4bfUJnmdEWxDWQpjGD6DBboaAwPaetyup7njHGku9qGRSKGeTHoS60hlUK5A/8AzN4GOIo5TjmrncfhIQZ4v75nsSZhDuP0oTb24rM3M",
               "width": 864,
               "height": 512
             },
             "full": {
-              "url": "https://v5.airtableusercontent.com/v3/u/48/48/1765332000000/yu2B5m1QFEnlnBRjj9LWmg/ppLh5o8wLUG4YZhylPEV9xIW84WF1sSpMik7GBtaWCvhm2MeaQ413fi6ihnJqEB72lmc8CvIgW2N_Xkad-7YZhlqpAyTg3x_jHdIYoywWFWd7pDouQ_o8RiMpp8kNgWQz_N9ClrWztPvbXVTKNmJSQ/a3CFWZE4f2xaNErFmnuYLjUU0xfjqRHsTMpXwkXgTSg",
+              "url": "https://v5.airtableusercontent.com/v3/u/48/48/1765821600000/z556ZcEO9dAbuVdjJEi3yw/5bIuS0f2r-2XuFoAC1twoaG6j76Gs5iD04SqVews2wGpV443-MkEQ4VQOlEiZ_WGL5Tb8itTba211gR9CYpzw--7U4sqpUKKV06fOmgIfy8aZjpJDvI7g34urWlb18rxdTRlhtLvmmuY5JHCdpRflQ/w2K4im3A-B_gaa5Gidq26Qe-iPJWwKePgTPhbdSQVMg",
               "width": 1644,
               "height": 974
             }
@@ -2020,17 +2342,46 @@
       "Org Transparency Portal": "https://core.unesco.org/en/uses-of-funding",
       "Org Programme Budget": "https://core.unesco.org/en/sources-of-funding",
       "Est. Org Budget": 944000000,
-      "Has received CRAF'd Funding?": "NO",
       "org_key": "unesco",
       "Org Type": "United Nations System",
       "HDX Org Key": "unesco",
       "IATI Org Key": "XM-DAC-41304",
       "Budget Source": "Website",
       "Last Updated": 2024,
+      "Link to Budget Source": "https://core.unesco.org/en/home",
+      "Budget Source Screenshot": [
+        {
+          "id": "attO0i8Q6YrX9J5GY",
+          "width": 986,
+          "height": 684,
+          "url": "https://v5.airtableusercontent.com/v3/u/48/48/1765821600000/nfzxW6YDuKmrPBXSLoKc4g/bPaqC3lkUO8xOmpZs0aJ7KggbHqxUOTvetfDFQHS6bzJ7QPhLqdBlkcao6CioxE-0A5HpeXfULygJj9Cqv0CUbj6q2S_e62AcOC2neeZ_oappOXLXDdbzQCn8CYo4n9sloG4LaVcRpMdOKOoYldfg3at9sGsp8XUgCD23eLHVu33UO2pPK0khgd3i3MquR6K/yd7qOl8Jmm2r8DuVMZlC8PWao4SeFygOETgO6uPFf6U",
+          "filename": "Screenshot 2025-12-10 at 3.34.37 PM.png",
+          "size": 68150,
+          "type": "image/png",
+          "thumbnails": {
+            "small": {
+              "url": "https://v5.airtableusercontent.com/v3/u/48/48/1765821600000/_cQlicy3KHzFB2ORJzxYvA/Qz9QAH8g-GYxVuzKeuQOl2UmGzG8OuU6VJPjoh5gYZS7L_IQXN2Vxy9uHDylzcV-a7KrgdAQrdTSybdn3plOBkf8mfugENV1Nsx98w7toPDHJ9jYAuMb4oCHtvQEh3iTn1sJe6jiX2X1TDYBPJjn6g/kC_VseFEAIEz0PBKlLxjrWKWDM91ZWuS0eIiV40xJl0",
+              "width": 52,
+              "height": 36
+            },
+            "large": {
+              "url": "https://v5.airtableusercontent.com/v3/u/48/48/1765821600000/Ahzh4kaxVbrVvVtuL5tHZw/07F1qKF2VJCbYjQS9FtvaSnMfK3XrJai5RQUbZw8bqOzlGmWXIZLnFy3u0Dk8EzVG1f1IC4t7ubwz7z7tden-i98wK2vLBn3roZs7v9IfBpURWEpNG1vHhCtDO0TuNqxBoJWU67SyKruag1RE1wcSg/3W-fPQ2qsCAj_i0g21oObCogimv9_9Tl8TQJoZixDCM",
+              "width": 738,
+              "height": 512
+            },
+            "full": {
+              "url": "https://v5.airtableusercontent.com/v3/u/48/48/1765821600000/t0FB8u6qxFvvtT7QeBci8Q/dzX4BVUTTkyHou3xscF8vQCEzv9merS-IlHqT2ZnZcQj5juMkAu1tCtJRDWsFWCD5FdZJzvHdK7KG9FE8E7MW-NJROixsB9tuzpV2ThAzxS6R4cHwkHRcWUnfYAUPhlu4GLIJSXR72LZliDFY_F7QQ/QtPzxNl-AHP60SAyEby5w9HlYgOhEFQ4JykyWstLchk",
+              "width": 986,
+              "height": 684
+            }
+          }
+        }
+      ],
       "Org HQ Country": [
         "France"
       ],
-      "UN Funding Link": "https://core.unesco.org/en/sources-of-funding"
+      "UN Funding Link": "https://core.unesco.org/en/sources-of-funding",
+      "Funding Type": "Voluntary"
     }
   },
   {
@@ -2049,13 +2400,41 @@
       ],
       "Org IATI Name": "MapAction",
       "Est. Org Budget": 2591326.63,
-      "Has received CRAF'd Funding?": "NO",
       "org_key": "mapaction",
       "Org Type": "Non-Governmental Organization",
       "HDX Org Key": "mapaction",
       "IATI Org Key": "GB-CHC-1126727",
       "Budget Source": "Annual Report",
-      "Last Updated": 2024,
+      "Last Updated": 2023,
+      "Link to Budget Source": "https://mapaction.org/about-us/2021-annual-report/",
+      "Budget Source Screenshot": [
+        {
+          "id": "attx7QEE9TBSN7i2V",
+          "width": 1172,
+          "height": 442,
+          "url": "https://v5.airtableusercontent.com/v3/u/48/48/1765821600000/cx0WAIkh4UaAMxipFd0RAw/mFnCN2PKz9a1oYXzo81W0FjD1rTL21Ew6FtGI3Sft9u6A39ZwcE0PiVxUSJsbqm0x_3Y7J9tzCg32AQTZs2tddlauenkm1tgavxqeixkKzpmSTSfsR69V2p_QLjqmpETyPPRsRJerHIWSyl6-34vgYmN7su2jUhyHTydjKTndaTCB6bKs6UzOKLfmRhIXi3E/HfCd7CQIEItrvB2IoTZAUbRqoYkSMdICvrPGDJ8e0Gg",
+          "filename": "Screenshot 2025-12-10 at 3.40.20 PM.png",
+          "size": 98178,
+          "type": "image/png",
+          "thumbnails": {
+            "small": {
+              "url": "https://v5.airtableusercontent.com/v3/u/48/48/1765821600000/rXWS_qGa2_OX4F0HFWUNgQ/YdGoBxDlUP3D_ls3QODh8iP2ELqZCb7pdkHSOYuAVslCy050lzqamIqGDG3AwDKtbSYjU3f0iexTeq3e_Aq9rDdXDJ07gwrA55ZIxiZZYP_5LoTR7IKASceVbJ4qFzdUqn4b6OHYaiom3T6-l91ZPA/TEV4V2J9JyZ-RZWwAJhMOJveVBQ49zUgYl70eSzyHPg",
+              "width": 95,
+              "height": 36
+            },
+            "large": {
+              "url": "https://v5.airtableusercontent.com/v3/u/48/48/1765821600000/Kab1AkYFJ02NbjvWI7ccIw/SR4g5AgmTRKylNp0txEDch6zisPJrz6OFBq1DqW0xhc5XIZ94YsIu-GsjLQKG8W6KxCywpgRlXEpj5bG1-15T6NDHAu86hui3wVNLuYjChMn1IxCQ5Lzyyum3SxzjpdwX8h7XE5hO6iJt0xHpK9dxA/CAthr1hkW8GrBt-xV7zQY0iHG5kZyBSmR48tA54J9WA",
+              "width": 1172,
+              "height": 442
+            },
+            "full": {
+              "url": "https://v5.airtableusercontent.com/v3/u/48/48/1765821600000/3Ct8PSUNyHNgu_nE0-SdUw/x9RJ80eBMyRT4glqCKGW2YSSzu2q6NKZ7budb5lLh6WloV5lP2JdGb12s_zoIqm1PMYcBSWnmlhQSGtGHVcqP1eTHkNw7Ismi5JvC4YqJ-5TZcXh00ahZ4r8E1RFMbRkgh7dSD8tXWNUVpREluletA/aGhWQk10dbKnJP0n5F31zJUSZq-dXDirOJbOf_pcjcg",
+              "width": 1172,
+              "height": 442
+            }
+          }
+        }
+      ],
       "Org HQ Country": [
         "United Kingdom"
       ]
@@ -2100,7 +2479,6 @@
       "Org MPTFO Name": "ICG",
       "Org MPTFO URL [Formula]": "https://mptf.undp.org/participating-organizations/ICG",
       "Est. Org Budget": 25737982,
-      "Has received CRAF'd Funding?": "YES",
       "org_key": "icg",
       "Org Type": "Non-Governmental Organization",
       "IATI Org Key": "US-EIN-52-5170039",
@@ -2112,23 +2490,23 @@
           "id": "attZ0ypWd0HGlWtrW",
           "width": 743,
           "height": 365,
-          "url": "https://v5.airtableusercontent.com/v3/u/48/48/1765332000000/Ps9waWoR0QhxLec05N3EWw/CQQWyvWytP1jZbwkgi8CEqQIhrwTZm5eEr38LEJeFx02kXPTADexpmpwF1XokQS0w-b4huD0SjUAbLD0FUkwdvMMyy9SEXQbf94r376ZhvG1d8plK9ycSHPIhKqdjwuxLBoq6jfdae7T-B4y3rGbFf_YvcVoDU9WL_QM8ge6daA1W5A3YuQ7J38Ouc9QmAPf/SMUEka7c5XO42lAqAWocCDt3m4UYwqFs1TZzVbzCv-k",
+          "url": "https://v5.airtableusercontent.com/v3/u/48/48/1765821600000/HvkwQ_0n_G8A7MZJunHH1Q/JMdxIRbo_X84nzkThksG1JhRX4antEG19o3LdqR_p8r_jfonRwD53oAOeFwCkifXXsQhlAgNKt3hLLUvIY072vMxj3J5QqweHsdY6UMTnp_yE-nrrdCgGiOIZ7WcZPPDH699qtUCB6kbpf9HbHZKhehtuKDi33jTBVf6suMyFhxkjAsumBAlVUUUX8GJZcxY/6M3uN6utMQT8zfwGxLk1CRS3-H_T8IQcoXgUhK4Vyiw",
           "filename": "Screenshot 2025-12-05 at 2.25.36 PM.png",
           "size": 77882,
           "type": "image/png",
           "thumbnails": {
             "small": {
-              "url": "https://v5.airtableusercontent.com/v3/u/48/48/1765332000000/pyvIxEu5gkU20cpP2al6Jw/zoMtS3DMGH1DyHtqm9OOPbVKuq5dofaGTgfbIFlXMAIFxRnL6ZmBVulbKkGJcW870J-rPYLTTguKDjpDDTzMKpHsONQuc3MpniQUj-xhmPaA_f6D2_ttfBvU2nhwRUOGwWIcrHTmasD5j6m4JkuItw/pK_Nt7kcwzLeayiDVJH_qrzXNhf86IufJHVjPvMpplg",
+              "url": "https://v5.airtableusercontent.com/v3/u/48/48/1765821600000/qkLX39FO3X0mYDylbcD6Vg/PfmmE5DqZH-CzUjloJDhvMjzUJ5H3TQb2M5mkQkK0CQehaHeJeN8fmrMFVD0FTW7ZGptk957IKwVYVriYmDJjPBAoDc1J39lx0ir3e6uM_R13WpGK_YPwWqWf-9EKB4EmtwSMpYMqxk913yIUENTfQ/_Yrge8jKwxcew5lFiBjxNX-4bIlg-7HGcMKtF2bQgfI",
               "width": 73,
               "height": 36
             },
             "large": {
-              "url": "https://v5.airtableusercontent.com/v3/u/48/48/1765332000000/Tx1Tzw0KgUzw_jqXQ-8lzQ/FIbvc9cRXCa2IWYcsr6KAeRQyvl11pJM3O12FEeLNa8IsQl8kefrm_RX0V8trCiu22Ekj2_M4D8FYDnt6b5vviQg5RnrqJcUMmQY93Z2kj39k5Vp3Q621S_eM9Ptze6cMMwh1grqyOjjz7Sme9CS5Q/Dt9x9U4XwTYhTcvjFzLX4XxRZvTwGwwUG2JWclzZPR4",
+              "url": "https://v5.airtableusercontent.com/v3/u/48/48/1765821600000/Ggm44P_CB_Q_iotpiikiOg/wLT6KF9Ld4kexluohF0k--FOe3gc2Xl4E3FU9-8w9BtMnoWtTVsG2640qD2KsWcTR4CRDEqKYXs4LAe7zI3H6U4lT_H6wAq5SiPC62UraXXzWaUx8-uQITXW8zvS_5RtdgVAuosWHZ2POEjqUX_sTA/P1yj9Ktyj2aQnb7WXFouGCJ14Yg9mlpGOphL-5E8F_w",
               "width": 743,
               "height": 365
             },
             "full": {
-              "url": "https://v5.airtableusercontent.com/v3/u/48/48/1765332000000/WMTY0eVvB-Kkxe2WvhiS6w/FqMGGHLXvEjgwSb41gQ4KcJ6ly6PzBmcYo3_iBvL5BS9z33XW2hHXYIBjme712xWPpMLx4vVnh2TSLTxngdnKXStp3fubJMECTx15xk5Y-E0cULqqBduBSf3p3gpbZ_0pY8jlq2GMdzYCkN9H-4M7A/DNud4oxxSP7-hF5sSdv7pGRq0EbT9KiryYe3vHZhgh0",
+              "url": "https://v5.airtableusercontent.com/v3/u/48/48/1765821600000/RPsbR7rk-ZwkYfbv4VlEjg/UApVkH47mCrvRd-3nphyBr3_baqOyFGAlFJN2XnD5It5P6FTtLzwZ60OrvRyEHsZv0XAzCeKM_Vw6f-rthSasIW1wnQza5-mr3_Qo_hRWLR32TUUaPVObIX1egHc4FrTTaFxaXFLS4GNb22HcSFwRw/MpcASsIn2V-oilpA2JVU_FF-_ami-xFAAY63eVil38w",
               "width": 743,
               "height": 365
             }
@@ -2154,10 +2532,8 @@
       "Org Donor Agencies": [
         "rec1YpvhkjwME6GOJ"
       ],
-      "Has received CRAF'd Funding?": "NO",
       "org_key": "hiik",
       "Org Type": "Academia",
-      "Link to Budget Source": "none",
       "Org HQ Country": [
         "Germany"
       ]
@@ -2187,23 +2563,23 @@
           "id": "attw9tC9ch9kC4mHq",
           "width": 710,
           "height": 522,
-          "url": "https://v5.airtableusercontent.com/v3/u/48/48/1765332000000/uaQQQDkVfB4ck4343CGUCA/SxSCxBmfLXvfJJEzW6lD58OqS0J_zy-qcgcQmlZ6fIhGNut5c8QVBnBW2ziO53k-KoVpzawFy6TWIxkXWn3uFCLxiujKPpFCYgTl4XhP33ToYZpopjAC34PbPoc3gxLEj32XvNaA3oSQInmMOZHhFUWdpSKJ33A4Qa7NG2cc0nKm6CHNlWodpVVkMAVjR6wO/l4RDsMtnvKIP-puERqzi2QxNtYglDpEXxPuPeBgqU_s",
+          "url": "https://v5.airtableusercontent.com/v3/u/48/48/1765821600000/UK-6wUhAbX9cgfHX6RC5Nw/K9b1yBnCWicmOHhlWhYC7qT1x6j7Nfr4SKrpzhag2lzUfPKfBR4zBa7qfcS4cDjhK52JOPRo4Pw43ZV6EKj7uz4ldatta8R2mXLHWvLdE-WrNRdztl0w9U1JvxhFeiFKoLSB4LKf-7EPEkd8fVOGO4dCjJsZb6hJvK7RPMxpR2ilUCMrz91ee1PZmPJGxRCM/g8AHncEeQqwgAh3lQcAyBUI4IgjwS7-aQI5dmIcxp_E",
           "filename": "Screenshot 2025-12-04 at 2.42.24 PM.png",
           "size": 92671,
           "type": "image/png",
           "thumbnails": {
             "small": {
-              "url": "https://v5.airtableusercontent.com/v3/u/48/48/1765332000000/UIqCXVpKfQ2cU780cO2WzA/5bst-cc7ID6id-Db5_tYubfx5YaZrw3tTmJUpHFCHxgRKmvDJXbL66jR4An6kgILMuwDnqUuNVt7nfIebssu6Yy8tqqkJPDUe0rvTDy0os0afYabNU6SMxUlzmTFiOWYJ9AYZ1UYjMTwg7qoq8LRlQ/UCk2-zukbq6NlM1QZizLXYL8jlMqbqqMpxT6Y6DvVDQ",
+              "url": "https://v5.airtableusercontent.com/v3/u/48/48/1765821600000/vKy_Ulye4B1GsdK56Dqxlw/YUYgPRVSMcRZMkjJm5cFzwETv_JKwgWssnSHzQs1W7Jf-3MQ-BwbHM7yNE8X5sfBusliuFlxlYORySGSHbU7lcrekowPsu_EnNd3dp_sIXHwECHfBrnERSMvY_8dOGkW6yauU3xxt7OrelDXf8ux8g/MmaGsTs-_gA16kkOJsYBc3erG3OtbRG3ScLQkwmwV6k",
               "width": 49,
               "height": 36
             },
             "large": {
-              "url": "https://v5.airtableusercontent.com/v3/u/48/48/1765332000000/miY1TqBrkxNakgP714LivA/GggJIGUEZCzHcYGAhGcWOdiHdggQePNbf9MR-KOlJgr9xwLsmxH_8wAdLHGVsRdOkzT77W3XI84hfOO9Ehc8QWZhdIk7oB1L8SabxsfFLa8ceP-wnvn8FIfcgbbWOqPK9cLF7jDDRb4pxWOwtA7KZQ/gi556r19daJav8bFMbA5k5WNKKiiupsdVIpbuz1QaK0",
+              "url": "https://v5.airtableusercontent.com/v3/u/48/48/1765821600000/5Eba4MyY9TbBOrsEox1lkw/9OXZwsM--kss3ebAej2L45Zw7CrSc-DXiB5Op50U_ZlMTWc5z27Xl44Mz2zIHnC4Sv81-mjm6J_DTTo2IBBVZBQQocVzVsOch5vLyxLtE4gICXHRqGOcOJDXnNjQMqyjMXTV_49G1-GfaP1bD2CVDg/fR9AXoh2TURrNkaRD-jNpGFXktdn3hGMpkGYyURAtLY",
               "width": 696,
               "height": 512
             },
             "full": {
-              "url": "https://v5.airtableusercontent.com/v3/u/48/48/1765332000000/usZ3suFsWB8k2fstuXxElA/1VcsqoqZSb73JI0wCGxIOqTb8G1Hm9AYk153kQGIhKu_7c7ch3n7-dy9HOxHqK9QRZjR_gKCKFeGW9YqoFq_pr9JIrKRBkAqLdl0oLujHiBYdVrtAGZSgAcSY-6gEf9M_m6t0u2kg1wZ667WIjDdHA/zg-yZYooc9SZpoYdP8zd3cuSNVVSG-ud9-jEw4SaRVQ",
+              "url": "https://v5.airtableusercontent.com/v3/u/48/48/1765821600000/Z5OXAqpd4pWABMkcEQlN9A/KYOxnIP08GX93hPDxrxImdp5-dcQCRt3ex02AAN80Nb6lbrqFJG74bcD1menu8sdAzc0mj_njk0VQiPjKlwIgXCz6YudElJQPoRSzxDASd9vRnr2zV8aJ8MArdMlLQAPmCXgUQBhI9NMg1LafvbJ8g/SwMVD78tPUuJ9t-gTWFRjQ-7sIS0yp44OA2IBketyZM",
               "width": 710,
               "height": 522
             }
@@ -2231,7 +2607,40 @@
       "Est. Org Budget": 629183843.77,
       "org_key": "qub",
       "Org Type": "Academia",
-      "Last Updated": 2024
+      "Budget Source": "Annual Report",
+      "Last Updated": 2024,
+      "Link to Budget Source": "https://www.qub.ac.uk/directorates/FinanceDirectorate/visitors/financial-statements/",
+      "Budget Source Screenshot": [
+        {
+          "id": "atty3IsoENRluYqsA",
+          "width": 516,
+          "height": 1068,
+          "url": "https://v5.airtableusercontent.com/v3/u/48/48/1765821600000/nupcRxovH4PM84xeovMmFw/CdHKLLRP0vHphg6lOsZ3Z2cQAiu4AqDN_Ccbcf1j4pimoDaHcQOBz1LqFJEhg3tQUk8Za7Xg3UoFmB9z0a8bpkjjiTP-XczU_xAAQ9wKnlChGJC8sFlbus3-BNs3zWkTlvTTDiSIK8YCzswMgMhurETJg_dhpWSOKLZ7H7aRZllqzDjt6aOgVQtHPmGETALc/7GaJRHFTjhRDQuR3hhkwZXNqrOBPu5xXjV1aFJ5acpI",
+          "filename": "Screenshot 2025-12-10 at 11.12.56 AM.png",
+          "size": 142427,
+          "type": "image/png",
+          "thumbnails": {
+            "small": {
+              "url": "https://v5.airtableusercontent.com/v3/u/48/48/1765821600000/hLL3_VOUkjEKGvJgH1Ivyw/t97CmhvY4iqNdIU-3hGhGjC85ha_9Jm8jwGco_UF9gpna2xbr6V2Ohcd5q4ej8c5R_uZDEIdboBWzjhxBZ65I4_lMR4-8QnTlotBY_DNVLdl_SLV3oz4HsX8Q_xwQv11xT-HccvnFF2g0_1xtSqDuQ/15xm0Ia2mqX1CuREYQHFxeusBs4A5PiL0eo-A7v2rXQ",
+              "width": 17,
+              "height": 35
+            },
+            "large": {
+              "url": "https://v5.airtableusercontent.com/v3/u/48/48/1765821600000/Adcp4hKW9rGGiX5RgSPrZw/OJKzgPS6TbJlSXIOxC8iRD-Oo4BhqrPLTxjWjYS-R3aBoUOQiQHbQ9f9-XWXD8Oa5OKGOpNHXT-0TQZOpRyk78cz4AI_z6-ywgkTM-70GrKvWTZ5Jx9bkd4LrgtPpdUVXy7yG5Fv4A1GDxggVSK-Dg/3ypid_ykkRXrG3Z2rzbBbP57WVs3Lazs2AshfQf6SSo",
+              "width": 512,
+              "height": 1060
+            },
+            "full": {
+              "url": "https://v5.airtableusercontent.com/v3/u/48/48/1765821600000/b5_EWHAIiA0QaigxGSNkJw/20HxdCt7duGgArywxnZnPrufcT36Z4jgYaLq88RnfQZvt4rR89mpo4WtTxa020vIax40R_dLZTvvvJv-x9HXUBcXxJyyLWZDJG_yoItg5k1SfDK2w_hoTlGd2dYDDYce6P8gxfZQ2yXtBwjupyFBhA/caUzeuyoJvjipx9aEzM78MUpMItQmiySRZ8HOtN-qOc",
+              "width": 516,
+              "height": 1068
+            }
+          }
+        }
+      ],
+      "Org HQ Country": [
+        "United Kingdom"
+      ]
     }
   },
   {
@@ -2252,10 +2661,8 @@
       ],
       "Org IATI Name": "N/A",
       "Est. Org Budget": 2000000,
-      "Has received CRAF'd Funding?": "NO",
       "org_key": "arab-barometer",
       "Org Type": "Research / Think Tank",
-      "Link to Budget Source": "none",
       "Org HQ Country": [
         "Lebanon"
       ]
@@ -2290,13 +2697,41 @@
       ],
       "Org IATI Name": "International Federation of the Red Cross and Red Crescent (IFRC)",
       "Est. Org Budget": 843016078.58,
-      "Has received CRAF'd Funding?": "YES",
       "org_key": "ifrc",
       "Org Type": "Non-Governmental Organization",
       "HDX Org Key": "ifrc",
       "IATI Org Key": "XM-DAC-21018",
       "Budget Source": "Annual Report",
       "Last Updated": 2024,
+      "Link to Budget Source": "https://www.ifrc.org/document/ifrc-annual-report-2024",
+      "Budget Source Screenshot": [
+        {
+          "id": "attXtCRjUZi160Ug8",
+          "width": 1274,
+          "height": 1008,
+          "url": "https://v5.airtableusercontent.com/v3/u/48/48/1765821600000/Qq3OMTTSmj-lnp8ywVYFaA/mb-gK_YHEfCUCV3rIaoWQCqy7e4xh_KqIIihOI4jOwWNBN1VA7kBq_LmE7du7frdftNfs42TNQqOkH4buA422rrbo3ZuH_WuWt8TZmSj9so92UR6QuzP_mz2HORXyk0VmCnPMhqdwllj9rzWhphEn0oAkVHH2X6_pZ5mS3U4eOp5rdTJmKW4G8QENbFjwxtU/-__BKjFzhKm87NdbvONqE4Ves1eaRdDAuS8aIYLC74o",
+          "filename": "Screenshot 2025-12-10 at 2.43.09 PM.png",
+          "size": 189927,
+          "type": "image/png",
+          "thumbnails": {
+            "small": {
+              "url": "https://v5.airtableusercontent.com/v3/u/48/48/1765821600000/P6X-aLHCSwAshiiHZ8c_nw/JhdpMNkqu8NKdOtolFZ7ZorJegCiL3fcqq720QIJlR92q0jWKVaFj77N97uQX--FtdPJFGRCRcv1yrQ7ax31AppnLtKGWDVedtg36QQWIgOntxFADoi5vp-vPDOuXJkU3jU7UlqEqBYjxucTUaXlog/gjGtsCUBGRv_w8mxQ_MQBaU6AuZbqKRJ2zQ3a1XCIuM",
+              "width": 46,
+              "height": 36
+            },
+            "large": {
+              "url": "https://v5.airtableusercontent.com/v3/u/48/48/1765821600000/3fe5UsObeyvL5484xFoACQ/ztpm9u5z_5e9WUQ7bTZLeW-M_tqp0A5pFiFu5-S1Z5k8-K5vKD-XVtnO9bWPGtML7GGJsyCQBaTTNHgGgKfUhKKbKrtpCwqWBLapIduwyHZevSnSW5ZXH-KmtqU0bcXr4L8Gbl6Stl9y97FPttsCuA/hanehLaXy4ZTCBBfrteW-gevHIcUAMgDhTjMGK-tG_A",
+              "width": 647,
+              "height": 512
+            },
+            "full": {
+              "url": "https://v5.airtableusercontent.com/v3/u/48/48/1765821600000/Djokw1yv03DIZZycfmO1Lw/OYRpfyreqERa5KDm13T_2rfg1Tt3kw-OND-at7s4hFdo_VPk9FJVTPExSCdz_FQBQDdsVrSePy7RJ_6aYpQhu_eGHRONsHSPxUa3z8-LI14N6pw5gTRTmRMoPLlUhqn4HrA5q7VtqbrcwlsSrpRnDg/dzCHI3U3AvXhW5hFRZ_5gpRhbMgTJys2CCw2UJ9OgsQ",
+              "width": 1274,
+              "height": 1008
+            }
+          }
+        }
+      ],
       "Org HQ Country": [
         "Switzerland"
       ]
@@ -2322,7 +2757,6 @@
       ],
       "Org IATI Name": "N/A",
       "Est. Org Budget": 126137856.56,
-      "Has received CRAF'd Funding?": "NO",
       "org_key": "ec-jrc",
       "Org Type": "Government / Public Sector",
       "HDX Org Key": "joint-research-centre-of-the-european-commission",
@@ -2334,23 +2768,23 @@
           "id": "atttR7W9qMYP2ATuz",
           "width": 1028,
           "height": 542,
-          "url": "https://v5.airtableusercontent.com/v3/u/48/48/1765332000000/oDGuf1vmEBhrYCh_HzL91Q/eNbzo7UXWdy7s02Qn7nJ2gSGDErULpOWV_SusjdikOhZUoNvVOgvJ8qiLPcPmFiyCD5PfkvzJxfs_fYdLEiV7ds6crY3bYQtmoxcYDPO1LJouKF3C6jVQWvim8TbH7jdpOIuHdjttD3gujA9NVbgxu-PgicbUorfAPoFKimCsXXz9WVldyUgoJOsWUGovela/dEgMkDyEHyd3mXAEnSAiUMiJW42yP5eIPf5RILl1ks8",
+          "url": "https://v5.airtableusercontent.com/v3/u/48/48/1765821600000/ZfRpEbGvL_hhI6UiUc2O_A/Pm0l3OGlN8-DbptNLYyLSct7egPbQUExSDPrXXoB2rQ3Nx7RpXc93Gx79OtC3Z01CMW7tUNyOvkJG19bmgmOCQlqH2zyryH02Hd-B9ov1r5SB0YtHOjsBcBoheBc2uR75D95o4d1UJ6aXecvOc6fBhfplzli_GjUhi4bTmKBxIMSuyuG5F8xv5XU06zDopkJ/kmXV_bWk8eIpbEe8GKxJpncC8LoPq-rkbZFR-G_Up6U",
           "filename": "Screenshot 2025-12-04 at 4.35.46 PM.png",
           "size": 111970,
           "type": "image/png",
           "thumbnails": {
             "small": {
-              "url": "https://v5.airtableusercontent.com/v3/u/48/48/1765332000000/BDqX1rDAcH2LjKqx7oI_XQ/kgF94ifa23uK97QKRvzQKi3Bly_Ye4S3fNWuSZAic8sJqRH9ndTLpdowFYP2MUbCQHmRPm_6H-whjzkuSpJkf1eDOGE6yg78E9X4QuHLS7oAyOjyrznLExkDov2xhwM1v1uHb2XrMJm5cevtE77d-Q/55baL5wzLO7NQqBj7Lm6RqPdmJP_MvBy-9baN9bTZRQ",
+              "url": "https://v5.airtableusercontent.com/v3/u/48/48/1765821600000/BOyM17SDCbU-g09YuAblpg/YQgPlQufGbn_sxE51O6IL7uDRmNGtgrR7AS7GmJswxoOCsbpa9A2sYRJ42XIHVML13F6FFGnGE49p2RJg24PYQ8SjtqOFOdstDPYynuCJD2mdsC6iX-aAmLhKq1_jsNRXKEh8YewTsCYBq31XOmfqw/JV5gRAgMn1HKC5BOeW0BgtOQ-zXu9VXQQyyKduWU2mk",
               "width": 68,
               "height": 36
             },
             "large": {
-              "url": "https://v5.airtableusercontent.com/v3/u/48/48/1765332000000/VQskVtOqsBUHbUcSz_tOjg/rSeSyoNzlZl9Q133q-sDXojzIEjLkQDJOJiRbqVVrbCXD9G3qQkkne-aSA6iX_ZxHTYp6TNOihfBZaRu9cEBfEeegkGQLahatCj9b_zQDFHWVkmu3rR_HR8LHMQXrNaksqb-JWxqrVlGz4i5jaScqA/SDQmCRxDHlKiWmkGcb8gvEiHNB55GGvHzfHjKiQqHK0",
+              "url": "https://v5.airtableusercontent.com/v3/u/48/48/1765821600000/uDTLtDkSTZ5xyz8TGf0NaQ/8S_-_MGOrpmNTb7fNGHf9uKhw8H33cy2J1bjtpBm-dp40niXhykyao4Mo_EfcyAdswnEd5G5DhkILBmGmwjTK5MiQwr8VRO1RR_zGm17NmgRfvu4p2KAo5fLvpuFoUyrTdXKBw_b510WbXKq1vL4vw/E8gBbtqlH3iCOPjP1uNbb75L8c9otuwROD5tF6IaXdo",
               "width": 971,
               "height": 512
             },
             "full": {
-              "url": "https://v5.airtableusercontent.com/v3/u/48/48/1765332000000/LAltgsYsbb5BORdrN-pEuA/3DXOAopvfuIzHf8EfJv4MHdUyfe13wzIzrvq_tfkPAZDj_Q42RS4qfMJ8CN1dSk6bPC6dg9B1SI4yhxZsp-n3qpXkHYwMIsFnscPjrMLF7LNJKSRK08VX9fT6L0N_YNBEJFFlN7WrKjPg3mM6aPwXg/ycEiBK8dT2C6fwRMlM8joLUGqKBrPewiLar-ilr_PG8",
+              "url": "https://v5.airtableusercontent.com/v3/u/48/48/1765821600000/IcJQA9W1XOz_v1FXR_hfpw/bs6hw6O3FeVxRAqT-26jGftxAB9m3up-GV0NYrWmFsyS5HaBI-daQjnx1H03YO1eNpGxaGw0AL-o7eXGCI73nulB85DkixAxW2YirqrKtjAbvVoUly93QBf8bNfYqzdFG1Yp48CpFAK1EFksKf2hmQ/9ctkoxpQJuj1Vr-7uZd4gjmDlCJUghblJGtWokvBXUc",
               "width": 1028,
               "height": 542
             }
@@ -2389,14 +2823,43 @@
       "Org IATI Name": "N/A",
       "Org Programme Budget": "https://www.unccd.int/sites/default/files/2024-11/2417493E.pdf",
       "Est. Org Budget": 40100000,
-      "Has received CRAF'd Funding?": "NO",
       "org_key": "unccd",
       "Org Type": "United Nations System",
       "Budget Source": "Website",
       "Last Updated": 2024,
+      "Link to Budget Source": "https://www.unccd.int/sites/default/files/inline-files/2025-07-23%20BoA%20Report%20on%20UNCCD%20FY%202024%20-%20Signed.pdf",
+      "Budget Source Screenshot": [
+        {
+          "id": "attSxD2fF3vFdcGUy",
+          "width": 1170,
+          "height": 434,
+          "url": "https://v5.airtableusercontent.com/v3/u/48/48/1765821600000/N2DhxkGQJrVfN6oCCBtVvw/yL5BnCa1zKIS05Gc0nUjSm16wfpsiMkyrhcYLJSMbdWVJO2by-oGiFzAMZyOdwrVMT_OrGiUSfUMFoc0U30DY8hiU786fNU2tvdKi0Gv0CTYlH_YCoOqK5FBELVWGa7Lw7RiaiaOYr_gMHkyMDybxptHEk_BqyIWXP1WLOM56p09jJwiP6T82hqlP4Uktu4G/A-P7yBAfYJhIzgZMwM44YdbfUn8rFsD9Tlt6hQgtZqA",
+          "filename": "Screenshot 2025-12-11 at 10.54.12 AM.png",
+          "size": 122531,
+          "type": "image/png",
+          "thumbnails": {
+            "small": {
+              "url": "https://v5.airtableusercontent.com/v3/u/48/48/1765821600000/b2zvoKx9dub7Vp9O3IA0fg/4cqC1DrqkYYSIHOdYdRS9iasQQbwR8v82-G1ba6YUj6jxctmz5u4eMNC-B5lZMnNiPp7wJl_ZJOgScH7NhjB951XvExS0klVWVOOCmSjwor1lIOQ0W8DHA1VWvPJKlo3U_k2G5P2gYa6W7qDfJPxtg/mxn8ty_j5M4w0J7HaFVdLDgJAXVIHGUpi3n6nlDaIWs",
+              "width": 97,
+              "height": 36
+            },
+            "large": {
+              "url": "https://v5.airtableusercontent.com/v3/u/48/48/1765821600000/NVQpBkqqPPpxR4b2FacDuw/J2OHliBW2Qi-C9GHWNeteuqxgO2S-VALcXQqsL1S6KkaKD7eIF3G75aON32wQNK_QRZ4cL7MxwRuZhMagrvfj-U0njshRJsSridV19tqpRPYo1uzbe2_FaD3UQ4wDXl9dz_p8KuKkrNwmpns2_4MUg/jAhxJnEUfVmXCCdPrF_9Da0VuY45YVuMdQFB4CaFnqg",
+              "width": 1170,
+              "height": 434
+            },
+            "full": {
+              "url": "https://v5.airtableusercontent.com/v3/u/48/48/1765821600000/eY1NH3HKrCGZyQ25SYrT2g/UvKTm4oATkCkI05--jRUsNqMoMSx5-0wLsfP4Ln65FkDNqCsrkWyJ-fyombXo1_EEaHAdkzHWswxF9VolN1cGBBS_8JMYBQcrpyQwF2JHOIvWMAMZCEtcifXDYcz3derQnkhUqt8Ej9r80BKv5w5hg/pP2C_VDcnS7r14fntQyBzuWWmE6jquZkaCmY87RtsDE",
+              "width": 1170,
+              "height": 434
+            }
+          }
+        }
+      ],
       "Org HQ Country": [
         "Germany"
-      ]
+      ],
+      "Funding Type": "Voluntary"
     }
   },
   {
@@ -2425,15 +2888,44 @@
         "rec5JfYP3fwrIALy9"
       ],
       "Est. Org Budget": 135607558.4,
-      "Has received CRAF'd Funding?": "NO",
       "org_key": "wmo",
       "Org Type": "United Nations System",
       "HDX Org Key": "world-meteorological-organization",
       "Budget Source": "Website",
       "Last Updated": 2024,
+      "Link to Budget Source": "https://wmo.int/about-wmo/finance-and-accountability",
+      "Budget Source Screenshot": [
+        {
+          "id": "attYbdlIL0Ez4UfoG",
+          "width": 1344,
+          "height": 580,
+          "url": "https://v5.airtableusercontent.com/v3/u/48/48/1765821600000/-1QXavW-NbqVsf9uAlFNaA/9i1UpevzXKYp8YqAiILFMtNnt-S744aF0D3tzgyNpnJ4oQ7fSyJMOj2XW2Fcmd8QaWpa8IGXR6yeRCLKyxW50F3ws9gpE3rnpofeWYIdDi-Qww4WsCq44mFIRZNkjFkxjHEnUTWKsY3goh_0T5HtVZUugaRZVhbr5V5eZX6o3qZP1tG4Zhzpf8eMcWS_bNXV/TcHbiCArUhQq_p-oBOWKZ25vqG22_IuI1d6lqRdKOFE",
+          "filename": "Screenshot 2025-12-10 at 12.48.46 PM.png",
+          "size": 78436,
+          "type": "image/png",
+          "thumbnails": {
+            "small": {
+              "url": "https://v5.airtableusercontent.com/v3/u/48/48/1765821600000/yfmW1fdSjU4yLxt-Ky5iUQ/vI_fVRWbNf_LezsROvFKcnlom8LQaQKS6xmS9TmwQQ_1aQ95mGKMfTLfTnDmiVNzMrKlBuGXlP4rvVkZ2W5b3Nv_sa-hKg_WCPX-rFi5eZCPyoNjxKbQnXEe4YQSsaRloa7JY2BOQNBm4zKSYv97Bw/-ZR0fQV_2sBV4A7KijxdpfekCOp7hHHsFb5xIfMBlQo",
+              "width": 83,
+              "height": 36
+            },
+            "large": {
+              "url": "https://v5.airtableusercontent.com/v3/u/48/48/1765821600000/4lLXiFAewmkBOoegC0XqEQ/35Ulqy7TgaXE-VEP81e7GYcksNdiJ4Fml_I-iXjEFh7I4zvGIz5vx7i7zzcXxT6XquwvOkDIGfpE5IO_Rpq49fbEqzDdDsZBZoEYGW0cAiGvExzXx79uCdn7s8MfhrHEf4BbES3qg-djj_Y6kvxbKQ/QB3W8O67UFH_RTqDuP7KftfOtIHChuu9GqUvNErsPtY",
+              "width": 1186,
+              "height": 512
+            },
+            "full": {
+              "url": "https://v5.airtableusercontent.com/v3/u/48/48/1765821600000/n_fv8FzmIP8Yw4Zi6z3dgA/ik-0zWoJy6cPnkveKtXvSDabrxhnIk9JXQtWgAW1EDwxnLcVMguQiGGSGaBGOBoujDzfbOclPBC0rc8mFvLgSISspElndBG6itISP_sHr61vqPAQlmc1dhxbHxfVGyrtndoX9O4kt7PQcEeZSTRvSg/LDwn-rUuivlBhgjdcnLFRD3ZSXKZZoIXygdx9ogc-VY",
+              "width": 1344,
+              "height": 580
+            }
+          }
+        }
+      ],
       "Org HQ Country": [
         "Switzerland"
-      ]
+      ],
+      "Funding Type": "Voluntary"
     }
   },
   {
@@ -2477,15 +2969,44 @@
       "Org MPTFO URL [Formula]": "https://mptf.undp.org/participating-organizations/UNDRR",
       "Org Transparency Portal": "https://www.undrr.org/about-undrr/funding",
       "Est. Org Budget": 69430000,
-      "Has received CRAF'd Funding?": "NO",
       "org_key": "undrr",
       "Org Type": "United Nations System",
       "HDX Org Key": "united-nations-office-for-disaster-risk-reduction-unisdr",
       "Budget Source": "Website",
       "Last Updated": 2024,
+      "Link to Budget Source": "https://www.undrr.org/about-undrr/funding",
+      "Budget Source Screenshot": [
+        {
+          "id": "att2mgSooXWJlKxxk",
+          "width": 1138,
+          "height": 868,
+          "url": "https://v5.airtableusercontent.com/v3/u/48/48/1765821600000/wW34trCFwv0On_38AFL6Wg/MYHo8IFv7RVDFKJA6K7eVyYsOtpWOVAKpZK8Vib60Mv-ttjKLXpDGmsv1qER9N4Jjds_RzZ5iKCVrpx_HVBt989hrZMlJ7wTPS71FD0xMzq-HfX-wz2DjrVSVEQ-1anEI_ZjVWm7xeiMvxGQ1UR30JKoVl0wF7k_I3gokf-I0oQb4VWbgNvXIh4Pyn_riMjr/veegRPJTRKHgm2SFpnhCK3xbPYimfM22HR-XJZTu9mU",
+          "filename": "Screenshot 2025-12-11 at 10.29.11 AM.png",
+          "size": 251029,
+          "type": "image/png",
+          "thumbnails": {
+            "small": {
+              "url": "https://v5.airtableusercontent.com/v3/u/48/48/1765821600000/RMeuRT2Oo1dNkCVfb2J0qA/IswoNkSeNloDYjojWbeN_iJU0qjImfI6F_s0XNdFQrrjXFzAnA-hSgdraaAdZ3qX-CxWC3upg1v1Hhb5fZB_RH3P7uf067zTx3aoZCOAl3Ahyy2sWc2DznkiZoJ2lWXAALLK_VcS3m5iGIb4mypcuA/HHmQC3j3QEHV4F3bKAArQ6YDft53ERzm_rSnB2lJBlw",
+              "width": 47,
+              "height": 36
+            },
+            "large": {
+              "url": "https://v5.airtableusercontent.com/v3/u/48/48/1765821600000/U-kOGu2hEN2iLfx7pY-TYQ/vn99UchJADUnf0AospmaadlGir_vo6COvbZXEb7oKsIoGahjOI564Xr7XC5RfUzG69XVDzksNTo2S2yw7IaoOeouKt5Gx1AI4T6Ytr3iOkW1HDCLmVFgWGgTG0K9M5cl_Q1pqhxIrt4Ru0KIU5iNlA/Ge6kFGKp81MRfyx3WnWWEP1oCxUb83Q8iAnVvOMelZg",
+              "width": 671,
+              "height": 512
+            },
+            "full": {
+              "url": "https://v5.airtableusercontent.com/v3/u/48/48/1765821600000/_yUrxnAdq07YP2qrv6Fi0g/nKvPHecrDETvuYdSj1v8btIjH9Bf9zIJfZWrsWFVi65GaTzJQQe0pydtkRYYY_-der_FQAzZ-gKGtQLnNci_7iI0hGVscpBgIJ5jwhjolIJWr6tOwUfulC7faAt3qT01fVPXzHbedkUohENcCicrAQ/bq35GiRDHH7OlA5J87eS1XljlA91FHZx-s0YkFu4dTQ",
+              "width": 1138,
+              "height": 868
+            }
+          }
+        }
+      ],
       "Org HQ Country": [
         "Switzerland"
-      ]
+      ],
+      "Funding Type": "Core"
     }
   },
   {
@@ -2557,7 +3078,6 @@
       "Org MPTFO URL [Formula]": "https://mptf.undp.org/participating-organizations/UNHCR",
       "Org Transparency Portal": "https://d-portal.org/ctrack.html?search&publisher=XM-DAC-41121#view=main",
       "Est. Org Budget": 10800000000,
-      "Has received CRAF'd Funding?": "YES",
       "org_key": "unhcr",
       "Org Type": "United Nations System",
       "HDX Org Key": "unhcr",
@@ -2570,23 +3090,23 @@
           "id": "attLd9g8YCr31BghU",
           "width": 1423,
           "height": 890,
-          "url": "https://v5.airtableusercontent.com/v3/u/48/48/1765332000000/gqjOhmw4Dgn9L4PIWi0avA/6qC0aXq2xhjYigT13EATqDnLuyEoRAYF9OjC2uDUcrUMEC9R4h8qjR4yTUdooX1IgpWxIKbap6YSAjIXJJbpfz2OG0MaclcS3ACtht7ShDak0gX5xs2uID8Tv9IhydHVlqcJqL-ugLB7Wo4-CEG5SLjqfLORDSbNNjWSZhC5Nc2dGTeYc3uI1QMvaqeGI8oW/_T6RccICtm0Io3ewRXvWu7dQpfpZFA7ZB8UNjQAQHk4",
+          "url": "https://v5.airtableusercontent.com/v3/u/48/48/1765821600000/AeCZSoJeGuVStSCT-mCcvw/IPsjZ54o0z3rIX34cIh6H62YLaBddz39JKxZJdwWHqVL5UceRBFNnW7TUWFmg12ae31QYmAenyyWIMReaW2b3jr4MOOXH6GhJVWEugramejbNusmJ1Z0x5Z4i38OhlXFemHjDTsBeDMnjEIGYpwQMI8aKTacw13FiPKRHNmvwCMSFPnk1k6A52bQ00LH8aWo/AiTwezGhmRfR7bDel5c8gftRDMb7A3F4TtVWkRmqG2w",
           "filename": "Screenshot 2025-12-09 at 11.21.19 AM.png",
           "size": 57947,
           "type": "image/png",
           "thumbnails": {
             "small": {
-              "url": "https://v5.airtableusercontent.com/v3/u/48/48/1765332000000/u3iMYCWyvARmqExY3A1PBw/ya2jECkcLjBhvWEWJfCu4q9VztmdUL66pvgUtdVqWN5KUSXmJOE2swYRxnPYuY-2a9KslC7KfeGdk7gc5yDM6aq2AcEb5f2t59Pqwy9BeqSd1nc3UXdpcWtyMPD6MGaWqyHZG9lZ1B127ZPPtDDqKQ/fQjBuEnjFwhoP1dG_2iULusZykUq_1xcuWyR9no-HBg",
+              "url": "https://v5.airtableusercontent.com/v3/u/48/48/1765821600000/oHu-pDFymEKsFT2Xpo_VgQ/RS3WHLEgUfU8afCtytBgivWvFkUTzyeP8-AQabbc6EqRd5SEUMK0aYjH9WR9XABfUgW5KDk3iN30xQ3jgx_53V0Sl2RLN-lthIS0jKIBW05xV_-JwRpFHm5cFihsHLiVxK6QVSxQQ-UI1Evk3oq6wg/EtvmHUMEylLVPPCkENLcblHhdgIZJJI1Lx5CfmkG8RM",
               "width": 58,
               "height": 36
             },
             "large": {
-              "url": "https://v5.airtableusercontent.com/v3/u/48/48/1765332000000/DluT5IGHsrRwVUQVRlPs5A/Au-LVnmsAwBP79iQtWbOIkew3OwGXJm1OsAmSwQS2b1FUYN5IamvYYQ49oWL-1BTBNiRYV3kHeszl4t5Iv-iyjhjr2VWN8waWjwzwPJkZkeA_v2gvoKAyiQVzQ7Es_XvOvK6zQr0NWKwD5H0_m9f1A/jw-Y1TOeshSQ-UGUxeJddVSoOO7ufI1SxqhMOSmRG7A",
+              "url": "https://v5.airtableusercontent.com/v3/u/48/48/1765821600000/eRh8Fa2n6YWrqOwj-1tUzQ/-bdO4N0PoQsmRF2EtjyrJTNb79aDUOr9dgx2H835rF4LjlkEw47APnw6sTsSvAVUL8XweaJX6bmq53hLu31bE2crRkGkfOQFGzLn_YXBZ39nHfwxRpXlew0PjnsYmoiZdobM9xee7iOvWLLg2P_r4g/a3BbN4-q80CXW2HbyoYCLGzBieMBoRYNBuzoqsWKRHo",
               "width": 819,
               "height": 512
             },
             "full": {
-              "url": "https://v5.airtableusercontent.com/v3/u/48/48/1765332000000/SAjfUEGe2ljScexCLI2bDw/9n_KrQ-tRq_4L_TLTRcrBnMdw-iWkTDSTzpIb2fg8bREUURdkk1IqSLjnLtEbXpttmEbHEWIpi5QJu1fvH_08ZElYZ0KM6SxWXPrUQMiREulk7YLzTeCwLPF040iRSMERzDDoEnP34x5YJbk81EKEQ/OP2-H4iEtV02v_HxfJLKhcBH6Je2J2TYd5AepDaKlDA",
+              "url": "https://v5.airtableusercontent.com/v3/u/48/48/1765821600000/_OWC4gakc9kc4d6WjU8-mw/Y0vC9urkPareUSKzYJVkiB-9p09AOHOAW-P3kzmBtqCB4fGs01vMD-UIkPISfZPOs58Hp1aU1chdGyQ7IyouO1rlhzbfuoR5pQ-ubgiSlb2Al0qI9DrkfRHRo-qd5eKlZn1xThYNYCbZ49x_HMWzZg/8eGkC15U5aMzjGMMU4bky1nExhf8wjaWvVbvWe-BTq8",
               "width": 1423,
               "height": 890
             }
@@ -2596,7 +3116,8 @@
       "Org HQ Country": [
         "Switzerland"
       ],
-      "UN Funding Link": "https://www.unhcr.org/about-unhcr/planning-funding-and-results/donors"
+      "UN Funding Link": "https://www.unhcr.org/about-unhcr/planning-funding-and-results/donors",
+      "Funding Type": "Voluntary"
     }
   },
   {
@@ -2625,7 +3146,6 @@
       ],
       "Org IATI Name": "N/A",
       "Est. Org Budget": 3900000,
-      "Has received CRAF'd Funding?": "NO",
       "org_key": "3is",
       "Org Type": "Tech / Consulting Provider",
       "HDX Org Key": "3is",
@@ -2637,23 +3157,23 @@
           "id": "attbB4bohaqFdexzC",
           "width": 639,
           "height": 155,
-          "url": "https://v5.airtableusercontent.com/v3/u/48/48/1765332000000/sHU0G4pZx27S-zdjaVHpMw/ACbaGGH4Toaf0xy0ckwoOyhHoWbOc-yuC1MuzZYNh7wsIWLedk1nlhDIH_Qdafw4R8NDZ_upvb-lL19BbaWKsrvY2MMWhFm5KGHXzSedpFp0Nm2a5HQQ9LM7AHdZt8MJ_ADmlwiaqcy3WGbLyv4NIkN8BZWb6ISIdADh1VhQws6yOq9JGcBdR_33_s_eBhE3/SZoR_Q_oIFnr270zN-RDJ5rOi3B1bwN8aYVyVf3E0oY",
+          "url": "https://v5.airtableusercontent.com/v3/u/48/48/1765821600000/7V2v0qOrVLABdI4IN5hW_A/c0rw0pejBfsPYF-qNnhcUNzc-vI7xP5hqNvGV5edJWeWK6yLktQRCRDx0weBqxUJg667VA-twuXKS2lHNe61pja317A5VOmOFqYwkxjhcA77cjXDAh8kE32CLi4hwh89DL9vjNPMjr5tS6Lddxe86kFfwoDbdah66qyENMQLq1E27LIx6iwt-tzk4TkH5Pkl/376-NA_WjxjyqYW7GwJ6UMMDw-YqiykGht8Q_nyIaZw",
           "filename": "Screenshot 2025-12-04 at 11.07.31 AM.png",
           "size": 26847,
           "type": "image/png",
           "thumbnails": {
             "small": {
-              "url": "https://v5.airtableusercontent.com/v3/u/48/48/1765332000000/48fYsyipchrIob-LkaITrg/gORGG3NEntJvR2FiKcArNFPVyauwEl7Nezr4eaGiT1y-yGQGUpdezClzjMKX_twfYrOhOS_eRH11KpSg2H1gXkXjDhC0pupdYUWy4qUHuqu03NGwyS02PdigNBq7mpy5Lfz5t709elGy52579tL09g/kZX3V43gz94WlhOp2Sg1Aui0Rt83DoHK8HaoCDfUfss",
+              "url": "https://v5.airtableusercontent.com/v3/u/48/48/1765821600000/w6qpClXGcf7HFl9iKdazlQ/S_iYEnBc4NM9lhZGA18YRe4af6-utddN0v-QBXRC12ofnOFsPbVGPk8DxvBmrns-DzZNgDSzdKJJeMbS1mY9X0wVZUnEu_Zmt-zJvHK_CkTVnrb-cUdD-xXDvx_gtHrpuUAyUgpTr1iD1ZO9YUnlFg/0GpUIT7i2iW7gSHfDEG8a03DZfJ1oOQAGosv5tCfZ0I",
               "width": 148,
               "height": 36
             },
             "large": {
-              "url": "https://v5.airtableusercontent.com/v3/u/48/48/1765332000000/qj5rt-Zo5F1Guht7edsq0Q/uRhTlyq7eAZjpwDsVxtSm_t-Ku7AISXYeDWtSWWo_uuVQQ1I4kO5fBvBrqRJ3Re4JJdgL1SKCc0gZn97vTx1GMRJmzt53B5hqvOY7bBcgUEnT-UKQ-qj_wnuf46lChJ4a0Ty6rpTYtywfUK0QNv3kA/KoIO5H5nTindZauTHp67KJzXJKn35KQE7_nMsHtzJdg",
+              "url": "https://v5.airtableusercontent.com/v3/u/48/48/1765821600000/R9aXLDaiCd-S8PNPP02DEA/WhQvF-nwN0fAPPLgY6vWEufEhgl2ep4wS1ybiUKhTHzWrWggWgXjNc3QXHpfKnQZnoUpfRGLoSEL_xPeZhcN4e4qB_6C05ikJOMu36Q6DAIC8p2Z8bl0U3x2VIssUEKUpbObnQjZTmrh46xhILaY8A/ZqBZ8oSFcG1VNVmo_b0LOp8DOO8Llzj5z3_MVtveUfE",
               "width": 639,
               "height": 155
             },
             "full": {
-              "url": "https://v5.airtableusercontent.com/v3/u/48/48/1765332000000/ry1PboKACYVoWtke9nBgNA/rylL64Koabgy9wE05L-3m1eiH3eBZcoyRBRLnrE1Z22LTCUcx6bsopYxjAksG7cT_fBnFyTU9igGVqZPNgYI29VH149v4bfjtyt6SoKzfU4EkZJvwuYq8oh_j6mtYL-R1aj_KRe6gU56CmzOu--fdA/5fNACf_OCf3-UnxYTL1RfnbEq7DUGW0VwA8rkzlYj-o",
+              "url": "https://v5.airtableusercontent.com/v3/u/48/48/1765821600000/Mu4A94TllOIchpurjVJMPg/1bdXkXo3vnRGAYs0dXpIwh8Ef91aTVSJX2vHQ_avlMnLQBaeh8kesp3Pzvwv_N7JLF7smVtl9BTp3GrYMaBAWu-WL-xL0RTxSiV0EeklP7ZNzmOx46h1x2l-nsyQ4AaMqxXmVkRU2v3KK6m14yRz4w/uMTDxTTtomf9EA5nQTlG7yN7Wztn6AsgNLVQWCkZmmc",
               "width": 639,
               "height": 155
             }
@@ -2694,7 +3214,6 @@
       ],
       "Org IATI Name": "N/A",
       "Est. Org Budget": 8610000,
-      "Has received CRAF'd Funding?": "NO",
       "org_key": "afrobarometer",
       "Org Type": "Research / Think Tank",
       "Budget Source": "Annual Report",
@@ -2705,23 +3224,23 @@
           "id": "attIwowOUzdqIbwdk",
           "width": 811,
           "height": 854,
-          "url": "https://v5.airtableusercontent.com/v3/u/48/48/1765332000000/QQ56bbWZURdAkrrLgr_IFw/ESfKiPAOcUY4CO3p7AyvoJ7qU2SWUz9YJEXK1RumGkLV8ymbklS9-eDBt6Typ829EzQnP__LQviUJXKNqto9DK2a_5hW7gVrWiXH-ZWY6g1yOMNSICGQvmi1vhX8qsoPa9JHJgdqdhkffQMaMBKdhyz7J9JVqa4Hn0sG_4u6gnediGZhHoImA-Mg852CUrCO/nGLo1xM8rNMdD3AgqtNKqt5bDyH9yxG6C_7wX97qq3o",
+          "url": "https://v5.airtableusercontent.com/v3/u/48/48/1765821600000/MTnGv3IaXdF-WzdGn_nBHw/FAcXVDVTCla_jAesoqA8UMabDX1Z0Hm612BAdR2SBDx5OAcMmpSOpbpJN5TF-PBVBjIfrGq0VZaiS9xbyv70tlNUHOw0EaVZUtQAhs8lPGk7HuEbOcUP8CrydGDzgp_TFLVW3Qxg2B6IGEBc_b5V1av6J_6BDLx_PI1u_ihzhw8IXMckgK2mM_LZSb8t7iii/WdlismWI6ZP2t_JagH3WGoD_5xMZOg9gXVzmAw6bECc",
           "filename": "Screenshot 2025-12-04 at 11.28.08 AM.png",
           "size": 164830,
           "type": "image/png",
           "thumbnails": {
             "small": {
-              "url": "https://v5.airtableusercontent.com/v3/u/48/48/1765332000000/HRlw_P0eRaoJJef3WDvGEQ/GS1ijCu-SEsxmD3e0ZyBWV4BNcH74gMpFZieHCg4erNZ2b-ORUQgOeMLQlJK3y0-utMpFKoe7DsKEn1SnoC077mYeDg0CYcJamLq-ExmVPNvAmrgej9_tHaS9pw4MYmpmA_vaIvdAEtLCfwxEONh0g/rh2FULnlxviNDZ-y4s55UPARsQuW-35wVNz1uuCvkPQ",
+              "url": "https://v5.airtableusercontent.com/v3/u/48/48/1765821600000/PYHwTHQRF08BqQ0iyzXfzA/78ust_PO7bFzVXCAnUB-PI3vyzeUiB9spom8PK2NjJrO_3FtFGWfPOEPi0FohhVNlveR5mCFtU5Y9ck5ZeM6-mnj4sC0xXxnNznp-5JzVwbZhgVeFmDr7xwIVgO6ThraoL4XRQB78TwHLcrHUXOlEg/AeJflyKH6MXo2zaDySSrD7JqeriGYfXCogpM7ZqvKsU",
               "width": 34,
               "height": 36
             },
             "large": {
-              "url": "https://v5.airtableusercontent.com/v3/u/48/48/1765332000000/b7WVqODSEVIgDgR6OxuClA/K_eCTDomUrqkpgSjNSz28x2mLK9N5PhECY1uA7hrWPQhlI7XChvarE0YHS4PUbt2Jlfk6pWnuP5V8dkKwF65k4ykZtlXqE93iLC3Tm-GotnSV0YgOSUQBbVvmpmPXbfVbgkLlUdIqCip1f32TqmOYA/2rGXfzO5KNW89W9naQtDPv5tESjTNaC2We2CNSYxpy0",
+              "url": "https://v5.airtableusercontent.com/v3/u/48/48/1765821600000/YLNfqWFZ9y33ALYq2635WQ/i8ZshVtgANVfEACKmLD1EvPfr1KU2Rhp56O_Hz8-CcU0LSH9tSt4_gRgAl9kyjpd7yeACwA9lY1jEsi3ts0m0ErKU2-NyAg6akIxcPFX3dtp5NclUGZDvpgm5VeoNPnsn0eiO2biGAoOIjW6U7qSww/4foO9Dv8Y5hQ2_oZu-3IOo7e8YoOLRW6cqZN57IF7Jg",
               "width": 512,
               "height": 539
             },
             "full": {
-              "url": "https://v5.airtableusercontent.com/v3/u/48/48/1765332000000/M6Alyo5Bc9lFHRsQ_UzuPg/u4BgJnCVtQvsVtI2gqq-Dw2_ibEEw-ZCwPhf5BBh4jck2_1gOZXMmzOYu6FRvFX9cn3jq7pu5R2PkZRTGw1Xb5gJXRywujY149sWin8sJB4uTVs7ONaMzo3NR_Zd2DGKvXzF5R3ZT9iUcNrDCA143g/qmviP1kedajP_-fFLIrV2oQs85KE8rczhJBFi_xHZKc",
+              "url": "https://v5.airtableusercontent.com/v3/u/48/48/1765821600000/8jHpQXN_0yXsEAO_MJjS2g/FfsjOGesMGAhuwS-IWEOTeuD7M1Jp5mu0iY2Daak25IUDMaCdvw0_l2KQp_5L10bftBG7fdMxGdaR61mwkxjSxGc0qN1P9sWK8_L9Bk3eWVbJvaODQSaTvxoRMhIpazdznirXNAPckOp1Ap62FJHmg/almalLLL4V99vPgzqK6wSJk4FNz1f-lGxv_4pbeDyUQ",
               "width": 811,
               "height": 854
             }
@@ -2753,11 +3272,9 @@
       "Org IATI Name": "N/A",
       "Org MPTFO Name": "ICPAC_IGAD",
       "Org MPTFO URL [Formula]": "https://mptf.undp.org/participating-organizations/ICPAC_IGAD",
-      "Has received CRAF'd Funding?": "YES",
       "org_key": "icpac",
       "Org Type": "International Organization",
       "HDX Org Key": "igad-climate-prediction-and-application-center",
-      "Link to Budget Source": "none",
       "Org HQ Country": [
         "Kenya"
       ]
@@ -2818,17 +3335,46 @@
       "Org Transparency Portal": "https://www.fao.org/transparency",
       "Org Programme Budget": "https://www.fao.org/transparency/dashboards/programme-budget-hr",
       "Est. Org Budget": 2000000000,
-      "Has received CRAF'd Funding?": "NO",
       "org_key": "fao",
       "Org Type": "United Nations System",
       "HDX Org Key": "fao",
       "IATI Org Key": "XM-DAC-41301",
       "Budget Source": "Website",
       "Last Updated": 2024,
+      "Link to Budget Source": "https://www.fao.org/about/strategy-programme-budget/fao-budget/en",
+      "Budget Source Screenshot": [
+        {
+          "id": "attVvTzWf5bAiLtXc",
+          "width": 2086,
+          "height": 206,
+          "url": "https://v5.airtableusercontent.com/v3/u/48/48/1765821600000/6cI6fbWzdrHIBvva43H4VQ/-Fu33TkTGftUVvUu95lmyD6LnafFXnXgCqQJDA1G3sUzzk37vAAArM7994VSGS6LDBk-i5AHTsQKWy9wXVw_zMKuDGwOF69sCxsSAxRl1MW6zPcWZ5ZgE8aGPa23wC0s_LAlCDJTcrRf1Y58C0xKdZl_p-Tm9H5lZ78MVl5xolgTS3kW6DzGm1iCUbQQxTzr/ZY7HB7b5E1VLe9x6DuKGrBq6ixOAD2V99RWSO_s91FQ",
+          "filename": "Screenshot 2025-12-10 at 2.35.59 PM.png",
+          "size": 91001,
+          "type": "image/png",
+          "thumbnails": {
+            "small": {
+              "url": "https://v5.airtableusercontent.com/v3/u/48/48/1765821600000/FyLa__HG8lIm3VTf9AKa7A/ocojKTCZzUpExfEVvpJwg2O-D8kDt02tvsPRStEwTYkCyQjZrRb5gFHEoMYdk2M1JhTxoTLZ1HDWdua64RelDS0J8Z7Rda0ZXCmg7ww-jA70dhz821Kb-umA3i6xKb4MAPIa_wB1Am_ImOkNvGQJdg/K0XXdDKGOQFTo-vEEx42FnMejTkxpkMHB28vEH22lg4",
+              "width": 365,
+              "height": 36
+            },
+            "large": {
+              "url": "https://v5.airtableusercontent.com/v3/u/48/48/1765821600000/AIfqbWNf3He0jp5ChCj8SA/IIBsLsBb0ku57D-e99aGyoNpd0HM95-qpw3W_3fQG-Zyn_BJrqXtDISTuJo9xIJ7k_sWrcQbNASrp9TBsXx-SeutiUM9YsCaMpF5xOu3OIAGrBfHy6__hwY5lVEpNEU7jmYgK0WU31dO_eYyddoTIQ/h0QO-h61CmiKImDZ0pwTWavcM8ufGPO2GQCZZ4ZGQlY",
+              "width": 2086,
+              "height": 206
+            },
+            "full": {
+              "url": "https://v5.airtableusercontent.com/v3/u/48/48/1765821600000/kcfJvexZN0bccGBRuEsAmg/W1X2JonK1s8dZdfmGEj-e8wB7lLMarm6hsJhCd3uTFgA3sbgWpzgZkBJxqwct2n6Gy0TB_lVto-K1r_zANXkWN2OVoFf7eSm-k-vKO_6EnZyLH3T6cs8lzE10V78CD5j11LdZTz4SQnD0AN0wJFmsQ/AYIbV03Ax2E_2hx49V_e6492RYHGmJNfD3B1v_XCqhg",
+              "width": 2086,
+              "height": 206
+            }
+          }
+        }
+      ],
       "Org HQ Country": [
         "Italy"
       ],
-      "UN Funding Link": "https://www.fao.org/fileadmin/user_upload/about-fao/docs/2024_FEB_LINK_3_AR202A-25_Major_Member_Nation_Contributors_Top_25_20240229.pdf"
+      "UN Funding Link": "https://www.fao.org/fileadmin/user_upload/about-fao/docs/2024_FEB_LINK_3_AR202A-25_Major_Member_Nation_Contributors_Top_25_20240229.pdf",
+      "Funding Type": "Voluntary"
     }
   },
   {
@@ -2848,7 +3394,6 @@
       ],
       "Org IATI Name": "N/A",
       "Est. Org Budget": 6700000000,
-      "Has received CRAF'd Funding?": "NO",
       "org_key": "uc-irvine",
       "Org Type": "Academia",
       "Budget Source": "Website",
@@ -2859,23 +3404,23 @@
           "id": "attRVp52xRNhI263h",
           "width": 579,
           "height": 237,
-          "url": "https://v5.airtableusercontent.com/v3/u/48/48/1765332000000/r7uf1ovi9rocL2o1m5wnLA/PB8UclsiIIo9zJKf2sXKmhScJMkjg5Oco3ViCXsowgutTyAsk0pQ_q0tE_cErnrM3M5mWFTb7l_KsLq_kc6qqcsrka4Lj0vndYp9Ar1BkShwQAON6wVrh7TdzQGuk3BCMsoK2T5KYuTlyAXrnthfu59As_iVCR2KZz-JCl1XdBThESvjxIMAIQ4PN8FIamfh/EusmBfKc7OWb-3Nj1xj7ltJM0a8_5rxi2wp0RQJ8kMg",
+          "url": "https://v5.airtableusercontent.com/v3/u/48/48/1765821600000/9yfJ7FZlGRj9BWnTLGgVEA/ur0esqfDr6TzYwtHVVMSOgqYVjZGRQzHvxSCzybt6bRQ_bFpyuOzO8WuglDTwK9DRhuryiQblHd3jhUEqfqlvjLtgwzM9lRFNRQGDVbWDmqa971wK9haLeq4sZSAVYRYusNpCbTfdOSdr39eVzgK32BmCCs7Hks80fZX0CPwmeSbNT_jnD6Q8O0vD5ICi7o3/i_D1HkfeW9KaPWhxVGhHYc4-ezo1R6RCKW9Zaye-9_g",
           "filename": "Screenshot 2025-12-09 at 11.12.44 AM.png",
           "size": 58452,
           "type": "image/png",
           "thumbnails": {
             "small": {
-              "url": "https://v5.airtableusercontent.com/v3/u/48/48/1765332000000/hfDkTY6LS4Kqgso1ywQ3KA/T0DTKb94jgVemcyZdyEPrU_zu-rUuv5aOYaGbNDaPH6N4quqzG84qoeCkNs6wUFXthwnk5Bp9Lh6xb4YIw0Wy2Xm20EAbAgbfcRZpQb0sv6NBiS674nHSLTBTo_Z3L0VQQIHtppkXyECjg3NMv7rbA/1P1sY5kzp4JOqaSJTl2khzreb8eA9QWOwNLj77kVF2I",
+              "url": "https://v5.airtableusercontent.com/v3/u/48/48/1765821600000/Nnx0G91OPpcECpA7qC5T-Q/0bVp89fDG-Di_osssuVWUg8CCchCM1b8eAIhKY7-fC-_ThXK4R_xE8iwAKVz-r-5zUzPWd2jqZTQ-Rf7HF3fOmsN8Hsjt2kdtMyot16sZiJwdDOIppGAUkeix0ZtvAiKasc_JAvkeVjo_-DiSAYGyg/JEeiXmMqrIt7f0WIDKT8mFfGd0P_Fn8aBs27_IwvHN0",
               "width": 88,
               "height": 36
             },
             "large": {
-              "url": "https://v5.airtableusercontent.com/v3/u/48/48/1765332000000/BGp-Cly9jabMYyTo8DjKvg/BpkIMgFEhYrDq-Kih3hAHapsZHC09W1wCNuLu8AzpTXo8L5RHrNiaEoL6f2QMI5B22EpuGQC-WKhYF1E1uzOFeT-U0dGo0c7a_Syqc_0a1qO6Na0yURhJVVCOecwRkDObhVisW22VAIyXz4yyPM1Pg/jYTdzz2hdGXZPpGZmTsZjwxmXMmqnjishZiXVuy5mcA",
+              "url": "https://v5.airtableusercontent.com/v3/u/48/48/1765821600000/w_oPrz2UicIqg16uhv9WEg/_nT7vEEYbBC6Jefl54Qgjvzh3FMXkNVGOKnz3v0I0kBo55fudYuj-_p7RE63_LQdhDpLfVyDyFvVNi1oIUxCxA5n_OT198bFqwswTg0g_7urgXhPNTB_15G_G6nN0KGj87Xr4CXBKd8XwurbxfyOxg/Z361ec9cWvZ4VT09NqyUuyVCLJxwqc1xogj1vh-SMmA",
               "width": 579,
               "height": 237
             },
             "full": {
-              "url": "https://v5.airtableusercontent.com/v3/u/48/48/1765332000000/AkNCFSnvj_d0U_IdwpEGDQ/pku3nFANx7U0LL-vqqLAg1pTxARchEQWEOpng9GoRgrilWkzz3jssbvL5Vp-6dc8TY49AOHLegS71wqE9o1Omd9X6NnQUAHNhkvG124ZwO6V3YyOUCpZzONR1ySjCPuUfelcsdyJrotpWFeAK3cSPA/Q-HpoyupbxiU8KJ5ymTsy2GbP2yQuHatSM2WsZJcrp4",
+              "url": "https://v5.airtableusercontent.com/v3/u/48/48/1765821600000/XIAiOiWLmvdPhRwHBM2NZQ/WDXSsZSlQ0rbnr-Hf32BnaWuQDRp00nSqnU_BtduwNbcW5USe-8MTaJK9MzqAqJKlkn9mBEuNkWrmhc0qnFqTsjK5WnuO0rsCgiBY9QQUj_WlRSRCnvp16cElRg0FgzhFJDDl1hsmVhSmNTIx6xPjQ/HcBE0Px9DxHr5zJZSBIEGulAp5o1oz9OIIWcU2CrGg4",
               "width": 579,
               "height": 237
             }
@@ -2905,6 +3450,35 @@
       "Org Type": "Academia",
       "Budget Source": "Annual Report",
       "Last Updated": 2024,
+      "Link to Budget Source": "https://www.st-andrews.ac.uk/about/annual-reviews/2024/",
+      "Budget Source Screenshot": [
+        {
+          "id": "attZJTQuA9uEyP4a8",
+          "width": 2368,
+          "height": 1000,
+          "url": "https://v5.airtableusercontent.com/v3/u/48/48/1765821600000/msCp6PqVbvb-0Vz__v4nfA/2hHWw7psacj6c-HwI66DmsVEOqp0K3krQrQDWbWZmwJ27UFdH3a9Lm5qxsjuyaMHb8u6Nb4MBBmhWZdWJnJyyC5FvJiQtT7gr58RRWlPH9F5ECtLthya_Cie5XIwy710PQb9ubXICArvNRuK_UTH81aLB0FHecCD4iYzW-DNy2QXnv9SlcPFW3AMssf8_t7V/HKMpqynjmpovyia6qlzwbEH_d0tmaXqVlJ4YtZjldvw",
+          "filename": "Screenshot 2025-12-10 at 11.25.28 AM.png",
+          "size": 260003,
+          "type": "image/png",
+          "thumbnails": {
+            "small": {
+              "url": "https://v5.airtableusercontent.com/v3/u/48/48/1765821600000/5xg8pKL7OFruj-zhsETfcQ/fkjJYXApe5u-EWl18KvVR39DmhKMqULu9BYOhek3aTvZJddkmvPHUkM43kDJ1vJn2gXQ_jjuRh6wydMAwz5uZqRiInWzh6rfi63SiCweU-GJmzGB1FfDKp7acJCCPDxLZwXVzfhJhe3aLVwHn1NZeA/aAIIulQO8NyWdZ-SFN70Oc8gbjiGaWZaBFgeoyUxDb4",
+              "width": 85,
+              "height": 36
+            },
+            "large": {
+              "url": "https://v5.airtableusercontent.com/v3/u/48/48/1765821600000/I67lUYM2XS2-XvgmEofiig/OVf6THpa9RAQlWxoFLYubXhO1QFHrnFaSXEn7GWFrp-QxvzgII--aCb80HMSYv4EOccmuYhc-6xrfGqwaGCKI-RGqyN7SCJYiIi6hWBOV-xpwoXuJNVO-00CEeOLOO8UclVJuDFklmaW6hlvfmaeRw/5yem539Bjw8jXphk_Iywm91VPJQeVXZJTTv-kvPGnJk",
+              "width": 1212,
+              "height": 512
+            },
+            "full": {
+              "url": "https://v5.airtableusercontent.com/v3/u/48/48/1765821600000/DZ7o9J8J1dH0d1L_ejctAg/TZZ_J5VrWLcCmwBVZ_qSYaCpclwPrDcPHE5mbnCqgXsPNgocd0ireSoe6vYtfYNcjwwDQVOZjlOhHkkIvBMz2oUMiiAMzW__PX6TF-jvHRoTFk29a3lO2WIhFv3vHRzRLB7q-VuDMhcKxMTPuEoRYA/nHsHsyGPTMIm71MpscyUMcVuWhIahGG_b7I0WJG3oc4",
+              "width": 2368,
+              "height": 1000
+            }
+          }
+        }
+      ],
       "Org HQ Country": [
         "United Kingdom"
       ]
@@ -2932,7 +3506,6 @@
       "Org MPTFO Name": "IBRD",
       "Org MPTFO URL [Formula]": "https://mptf.undp.org/participating-organizations/IBRD",
       "Est. Org Budget": 117500000000,
-      "Has received CRAF'd Funding?": "NO",
       "org_key": "world-bank",
       "Org Type": "International Organization",
       "HDX Org Key": "world-bank-group",
@@ -2945,23 +3518,23 @@
           "id": "attaFef3ywrMPfDSy",
           "width": 602,
           "height": 478,
-          "url": "https://v5.airtableusercontent.com/v3/u/48/48/1765332000000/tvLUNt_jVhMcJ_2XBSX_Tg/4S2jhCH5ycKpS8XurjiOfTeyihpbsqWn8y2p69MZ3sgvrMdY1Z_tgVu02nRfQnDUIgXa4bshnaQWp70XcYh6H7peD_MYmVT4EzERN3xqWi9LkRqnzgJA-BZDdI9FwOuoAEJnGzwEHrAvs-rxEJo5mwnJ9Jegv18S_tLvBLdWzTv_Pfg16MtryoyhqG6Of97r/CseiSzVCaZrx5nJu3HVHDezVLjXhvlq_cgmdCdFwJNo",
+          "url": "https://v5.airtableusercontent.com/v3/u/48/48/1765821600000/XiFFIauh3C2kfObQ88Zlow/nEM603kwCvCW6oJ3pdQV48qcDWIk7Uw0JxYRZIbNsBgZy4we8kzGUU1NDpv9jyUbEUhVLKDKeKG09qtYXjyt8ZTczjfp26JZ5nl3B95T6w0Ft6ACuMImBoUsELJ4k4r2Qj1kvfjLKgy2jWZFbFJtomzpcN-N2G8ZK6eYvsxphMFe0nHUga8BRWmAt1WL2oXu/C8KcSPn3gk9wLX1yl4rQiMdKKUzyHUBlhbGG0wthwx4",
           "filename": "Screenshot 2025-12-09 at 10.58.30 AM.png",
           "size": 59061,
           "type": "image/png",
           "thumbnails": {
             "small": {
-              "url": "https://v5.airtableusercontent.com/v3/u/48/48/1765332000000/UmbIM0QfVOIh8b_hkdJGvg/rcub_zQgUUm5XdzdfM7yOavLPAYCFpVbSpKPKYLYjGaj8ZOXWrxk01b7El22_A1KS4SK1poXgFmFKEUOOtbl4m9yfuEMnLey7pL-QRBTyfda9quBtx1C0rm_cVqrN0TuuiB3elcsMNmJmLP6_6ZHZQ/RSINTpTyZ7gpSUXqruYzB-IQdhR_dkqNodYgoiZVTCk",
+              "url": "https://v5.airtableusercontent.com/v3/u/48/48/1765821600000/9kCVjCJMZUTUGw_ZIBhx4w/JlQbj502Bzj09NnJbjjB1FOfMpc4xeAUxmYTeyFg3rNeTkOKiGtLzpMWOLla0D93aJrZ-tpCN9c_Oj5bn1EAv1zpZV473ds5og1x4c7xtk0Oa2Dc1HBhnCw3Gq_Wct9kh4riQ6UxWHp0c51y6mCsEg/rXKgBc9wW8961bW62g54OYTohLm-H6eMnvP9aO1p9gs",
               "width": 45,
               "height": 36
             },
             "large": {
-              "url": "https://v5.airtableusercontent.com/v3/u/48/48/1765332000000/SsB4LqsOn2C52BcFAjsFhQ/RFkEn5B361cjSNB5gPTI_Y3lsgaDQnyOKiIvsmJr38tsV3NQQOKiP2zfsK3dQ6qtAY-kBA48sc_OiEuW19TGwia8EqzKlpmgm2t5eL_N9lVuDTGUjXEHwO5siK_6O9RyV-WBUtssmioerAxaqeRwdg/PGLFSb1zkXSpnhz7rXH250Rdtf6Bhk8tNYkb-QR5XNs",
+              "url": "https://v5.airtableusercontent.com/v3/u/48/48/1765821600000/dQQ4uJKcICDzCwmhrk0UqA/8ZPf-7LB_KIoyZh-I51JyEE5_7zxAUDjsHzzWIWa4EpJYLeTo90-0t0QFMcPN-yMu_viLOOQzjkkpU-YiVtX4pXZ1dluBnQzuX7EzzbSM-NZWVFO8XgLxzsCxYQCxn7h-B7rab40rB9LxbQL1QszKQ/Kz4kIaAm8mZIxkwJB31TZ7Z_74MoTH-zVbwTVepqrBI",
               "width": 602,
               "height": 478
             },
             "full": {
-              "url": "https://v5.airtableusercontent.com/v3/u/48/48/1765332000000/sdI-uJvsnvhoAOJsfi7PIg/Ef_jQjreXg1SErDA0R3ew4ftZIQehMuK9b_J6inYdXdFCwO1wH3YA2ScscOoeo71kw-XPiTMg4C6aW2alvTGltY3sXnN0GRmAPT_8kR_QGM23U_aTYIDnP0-41BU2kXlLIldusOF3UgNAYfID9tMYw/NioC6BvCYLTDYn-8sqTgUTHZ2HE9nnNYg330K8zAkzE",
+              "url": "https://v5.airtableusercontent.com/v3/u/48/48/1765821600000/aiMLipBWl0vvH0JX5h0R5g/oS1KEmkQUi46q4nbnP_8VTWPUU7WY1xjpC5f7uCJwW7qxlAW7BXLhR88m0cak_88JEbNl6XE3rtwq1gYzLNANioPgWvlvn9Gt6nGfn6BLvTVQYBs3LTBC7m4_cSFxFg4Oa9lv3HSydhLEJTWeeS0Kw/epJRuVdf3sgVVCawxhghrNnOFxALA96RZkdc_X1Jaes",
               "width": 602,
               "height": 478
             }
@@ -2991,6 +3564,35 @@
       "Org Type": "Academia",
       "Budget Source": "Tax Filing",
       "Last Updated": 2024,
+      "Link to Budget Source": "https://projects.propublica.org/nonprofits/organizations/42105854",
+      "Budget Source Screenshot": [
+        {
+          "id": "attlld7GuW8rS3mRi",
+          "width": 1600,
+          "height": 1014,
+          "url": "https://v5.airtableusercontent.com/v3/u/48/48/1765821600000/HCoXUiGXuRoOB6uq7ypfbQ/PIKycU0Rk8asEhzQ3En2dQXc6lVWpUrgSdA1ttuei67o54Bc5obSYcnDa8sF6ALtqw-_wApzMdv-LshQgununoFxKPIfShuomuru9m6efvsciO5gV4zlFnjgwRGQHsUNys-uXcFpCtqN1AjHeDMQO_r0dVzR4uM-t86YhDtgautjiuFE3BJNL6IapRaBMyp9/NXUm3x5rsvTE5CWNDPgDV1rc3bbgDucJD_u1t1EeLFc",
+          "filename": "Screenshot 2025-12-10 at 11.18.42 AM.png",
+          "size": 205521,
+          "type": "image/png",
+          "thumbnails": {
+            "small": {
+              "url": "https://v5.airtableusercontent.com/v3/u/48/48/1765821600000/wT0jSVnwt_M6ndgoXVrNPQ/vjAXuDQs3Qzok3BK-t6whKdOxvC_aq9cF_OpaZZacOtXmugqdsgUEJeYE7KrZmuRTZaESHM_y2aoSjbZ0BidYGPsB_CiH_9zLdeRscxd4xNc7xPtxA8ZHZbeI7eWfNIS6xb6GxF_QqDUWVTrpxIRQw/1reogJBYqVq0xptF338FW0csjJ-mWgslt7ofhxtci-I",
+              "width": 57,
+              "height": 36
+            },
+            "large": {
+              "url": "https://v5.airtableusercontent.com/v3/u/48/48/1765821600000/BDNWFAFHM6NUf-prjr2cOA/RBzCMkXVmjVoCiWDMM4bqEUPNCFDzTYEcTbSYIeDtRS4BcELEz3jivQjts72DK3PIffMRrZlDRRPylmj-hINuuTDk68ZMfQrveihvfGJMMB_k2DEZFFlTVd7iRfX6VOv3CNB1lzcDIXbvL8KEQZnrA/jZKSccWbD6eWw8THwE27V2YxVvLG8zSvPyaMMY_w9tQ",
+              "width": 808,
+              "height": 512
+            },
+            "full": {
+              "url": "https://v5.airtableusercontent.com/v3/u/48/48/1765821600000/YS7kvGZ365g7eD0tloSbyQ/kQDtUQ8JbRtM6Q6ms1-zBwJ756JFMtYx5bOm_nfOnVYbF7HjR5IJBpqDM2YWwfs3O8yB_dI5guGuQ2iLprIosMlKK_FxP6hFUJlwIvoaj5N_jGv4ygNlAgiSQgpkqUkuKRPJKhsDlNAD4mW5NOAvTg/iNJi-DE6mdiBK-ou9ZTv-WHwZrxXze5ZHVi-nAeLJmc",
+              "width": 1600,
+              "height": 1014
+            }
+          }
+        }
+      ],
       "Org HQ Country": [
         "USA"
       ]
@@ -3028,7 +3630,6 @@
       ],
       "Org IATI Name": "N/A",
       "Est. Org Budget": 6998718,
-      "Has received CRAF'd Funding?": "YES",
       "org_key": "idmc",
       "Org Type": "Non-Governmental Organization",
       "HDX Org Key": "international-displacement-monitoring-centre-idmc",
@@ -3040,23 +3641,23 @@
           "id": "att6Lg3iFZ139wRzb",
           "width": 697,
           "height": 688,
-          "url": "https://v5.airtableusercontent.com/v3/u/48/48/1765332000000/kqy3ghpO0PyoE8hQ89lHDQ/azKBgHYyL1lQt6XG4cE3oFCmhtjtl_B_lFSVmNE5wVRYAFlzSG9lxCdk7xZ515NagvWNoAzBoOZv986ZMKCb4fa6d2sprbvyE6k82cWjAmIfyOMdLQ2a_sH9McTWpEiMQjJA6VYsYb-rDTUexZkrmg64ESGgsxWmJUBvdoVvdFJtl5dyRS4870l7g5hub2n_/cakHmHC_7kFFSgpdZJ6nO7YpqFtc9dGaXOfx2FJhSKI",
+          "url": "https://v5.airtableusercontent.com/v3/u/48/48/1765821600000/sS1cicrANSO27iJ_B2Z6zQ/7CIIq3SMH3s4KXz0WVOBoZDX-XQbAbapOYnK9x_MvvfizwlC8Q8V5mNGrEcuY2fi_dYd3VMv1QOWN20FDsNzQivN4pkq_8m7vdhqOVp-MUmif5drEu3wMT2dkwO-wWl070sxm74_fxQw6_UpbkftjV4wgqu_NCPSj9CjxAPVjod-eJAZ10GQ9vsPJMNo6xRO/kNl-58MbXjCcBkc6kz5ZaBwAO42WDnTnqV2au8udET4",
           "filename": "Screenshot 2025-12-05 at 2.34.02 PM.png",
           "size": 90579,
           "type": "image/png",
           "thumbnails": {
             "small": {
-              "url": "https://v5.airtableusercontent.com/v3/u/48/48/1765332000000/7GgRbB2JDcCrOlm9LEAm6g/Wo9NdxtVkRt_jh-qzTRT7M4Y95Z1WwE-tSUuuCqQZUhSBHm2U0uGDexISAumBbh_k0A8FIIWaUcTzGgqhTblwfiHeegTf5noJvOdUSpcp7RvIaCdBjP8ojTBCuIegHJAHz99WXHxkFXtGnyCCbvgyA/X8xz8M0_FpUMhVymS3Wz1vvtmayhh8D4YYjnSrEwOZY",
+              "url": "https://v5.airtableusercontent.com/v3/u/48/48/1765821600000/Mz_Qfdyl-7QXStbJ4FH8ag/-zPgAg8n5qlDj29t1Qr97WEAFGryZ0Rni5m5eXJvDIk624JeMAiuRmOIJPXqgGHmb8zv5CoYpZzd9Nbandsg9FXzBeaSBvtO2DQK6DOj2nHuAfv8MPeXp-NR3AM7IfQNrpKWALLhZxrovp46lkcmNg/qtT-vV_15gZLx2irRv-f2Sh3l9iP1rQB9c1G8jfZ88E",
               "width": 36,
               "height": 36
             },
             "large": {
-              "url": "https://v5.airtableusercontent.com/v3/u/48/48/1765332000000/VKuBHKAEJF56D2i7ZEelsg/shhDl5Kp0Uu3pHlpv5tWLdHwM0WHlNONletCfjxLuLSOvS1hlbA44ESAJgWXToYh4_5YIz7oMzNUeSMVUHJHTkLpnh-2xeWp5s9jQT42aXXFT0zYux00MG3qWC8zbOMP5UKH4fG8WUbiYVNqVbU4YA/nDI4Tt7_rPYffr4EveSwjBh5dHertsbxBlQ5R_Jtm8c",
+              "url": "https://v5.airtableusercontent.com/v3/u/48/48/1765821600000/b7FdSLbfu09xRpJy1hl8pg/kTPsknm0xzcwR_vyHUh8Mct5ZNIeH-5T7DL8K7pxpRlWqDL2ah-kSEwQqZJ07vGF2mKByMyEtBeUqjwUTCxHksvYtZd-REzeqGvZCpEOpLOmmuOYOfIY22zaHbkI6ieTYVaChOrTNHG1VseIOkvULg/b0eUIWLOBWlwW2P0G3Fd3x2IQvL6rQ1SIeABKGMrAN8",
               "width": 519,
               "height": 512
             },
             "full": {
-              "url": "https://v5.airtableusercontent.com/v3/u/48/48/1765332000000/hyAujFOs11ITtvwE5Hh9ng/-_SQV4hTfEBH9HTjUJF1o6h6NfpDInyWgwIWeBE5EdDzEmO53tZDRDxh0gX_IA9AgtFOoXLI6VXAu-f08PLQXG8SwRJEiAtXoOitjeGAz547BB1wkTlfTCGu6VmzUCQmwtdpVHoEJyzWTFOFVWGpIg/hPI96DXS3L-ZWWFiqy68_zcu8eT_QIy39AMMCTYMiwk",
+              "url": "https://v5.airtableusercontent.com/v3/u/48/48/1765821600000/qd3vUr74_myThmoEkl1_6A/GdPwtGLLxLKL8wzWx3Vha12_0IGvMqMdl4uCPGvcLiMl8L7tCkZrG7p5rlSIpdlN3sq7e5Zzp8Xi-AnaQbKhEQEwmI_NRnXSN0bDBj5E1hUi4lKzVGE41yeIIe_PXs69g-bpnAhWIySO28zn0Zp3wQ/mET0AVtkKLc-dnujt_s0MEzDVpTu8XoBZIsRuMtSJf4",
               "width": 697,
               "height": 688
             }
@@ -3085,7 +3686,6 @@
       ],
       "Org IATI Name": "N/A",
       "Est. Org Budget": 2487100000,
-      "Has received CRAF'd Funding?": "NO",
       "org_key": "eth-zurich",
       "Org Type": "Academia",
       "HDX Org Key": "eth-zurich-weather-and-climate-risks",
@@ -3097,23 +3697,23 @@
           "id": "attLR23suES85MBMM",
           "width": 524,
           "height": 268,
-          "url": "https://v5.airtableusercontent.com/v3/u/48/48/1765332000000/UDBZ-_89CllPzFlZwuu3Cg/seSnC5-75CJxysCx8M-uCgpVzQVv6bV8WZK18-dYrtoSspT1gE9ZWJjpMORpuN7tk4rwEzUK89ERjezXkIouF_9c0k9zlkfbcsTty9qgz0-44fgdMKG-XtOfxif0BffS0McrILkeYm6Un2jMyP3nquWf1hCesGRfdvEHveeLX1NlVf-7WptZN_U3wdePC8NS/lcHN_kB4TpJk8wRVRPWBp_4heiDpnngF0lLY_9x5llE",
+          "url": "https://v5.airtableusercontent.com/v3/u/48/48/1765821600000/Q9TDbng_u26jWLyH3NYLOQ/kSFQc99C_euCdcbN8_lz0hj24UkaEbA3b26Ry-R6eEZFg8yHeKBPx6EhktVTN0wLaafJ-XqMeGYTGF7oOa0qGWCAcaS3cCJ-uQFzAAwWND5qa-Heq9D23NlukGDDOD9lOGKxkv6y1u1nYT2dfxsQK9q1HZsOXZqGQCCulI2DiqZBHCdauIOK-EHn6NwYUViF/4wrY0BhsfDXQBZsRuoIHqQlPo8ojC1LmSGTVI7W08u8",
           "filename": "Screenshot 2025-12-05 at 12.07.38 PM.png",
           "size": 68065,
           "type": "image/png",
           "thumbnails": {
             "small": {
-              "url": "https://v5.airtableusercontent.com/v3/u/48/48/1765332000000/mXIPI6mk3XBckOJtERnm6w/ZMD3iGWrWV7XIg86YinAgv654pdQW4rvv75HhMDOSHk2Tdn5ou6Utww8Zhz4xtkD2oA0GQDhbqZrJICZjLb1wU0Bm1VbAyBgmOJyOVEqkTnMYYrO_dphySjU9iVqlginPgALRLRePTfFdK2bcojAlw/sybJWZtYX7UL8JA9UqIVECmzDD2qce2nPTHyh1zt-Cg",
+              "url": "https://v5.airtableusercontent.com/v3/u/48/48/1765821600000/dhPAY2BzwX0vj3P6JhTJoA/x_qPf8BB_ms7Jw3M4-oqEod-od8lnfVFOu1FxP68D-lZzhlJLnWbSGNzm4MnNO97T255Pxmmucu2iKehvK2uusryKGYvWe6uYNoPC8Ahkd5mKyzw_ArMIeNHum2Lq31xcpK2LiQQJGBp5fT6EE1e8w/va008xNi3LZlfliyyKbvBDGvjb7cnNMCVp_sEGww8_M",
               "width": 70,
               "height": 36
             },
             "large": {
-              "url": "https://v5.airtableusercontent.com/v3/u/48/48/1765332000000/tVy5wxjr7bUug5_YIbc9EQ/2y6Dr0JOFQuXT50acSxzpeW6nWFNy0TnyrQyrHmv6_dPzZk4WKOac97B9zeI-Qb2PxoAyKcoaP9fvdwOLRr1B66vteuqFkC3DV0aQ3YqdwHWAAhEa5HDdy41haYDgnAKy0TGCeCpZK2tpFJTP_cpsg/-YaI3QBOgUlAmrr9ZFyvhJiBqNMmup5SLbb3m3lIexs",
+              "url": "https://v5.airtableusercontent.com/v3/u/48/48/1765821600000/-hqn8gzXjbiHnQt0-sJfAw/CtxNmoU21elPvxthx4Qm7ZN1QAkkKzvz5Z8RpcsgEzK2AtKYl9LyY8JijXo5rFpFQJ1OWDbm0G5yzLqu8rZwf20NrflUuN06TJbzfA-x0nlPd3hO3SPfqm1gIcz6FNx5iHaIvq4Gx6CUzKUuAeoa1Q/4j-Jh9JlRKGjzz7OXm5VZ8lsmF2xeFJ9OCJpoCb-1Zg",
               "width": 524,
               "height": 268
             },
             "full": {
-              "url": "https://v5.airtableusercontent.com/v3/u/48/48/1765332000000/xp4_pM2Gj88Tyn6B0EQotw/iIrdgNe46qJwFjXybD6vY6s4ehem9QPJnOsMmrLOxuEAe5WdiMgqwJpa0-bpH_5x-TDudJugLmvfAZ1LSKPcNa8Yg5_h46sRAEWYPSSGd96ENWyqSFdi_kKF8HML4f5PzwNDzXrGlgIu-N10JQBnSA/FiolBbYFTsHKjEmw98Cw0U3_MQxIztQXH3qkr9_RRXw",
+              "url": "https://v5.airtableusercontent.com/v3/u/48/48/1765821600000/Omgd8mvHKBtJKBbd1rL-1A/gVKa_Rpp-4CI5ifGJeX5GJ4_OIGwQIe53uAaFizK1L8znSzYprMDOMaX_SyVwo5WxSodYIz7rAZm7b2y-JzRwu1gP0cN5YSm6eaK_eRLD0MPvAyVS77BJthCqLZPaK7q0v_a5PN_5efR_sPzulPKEA/X3VRivxPDv3NcTAMQMiM3AxqR8QURF9QQexcVmOA2-g",
               "width": 524,
               "height": 268
             }
@@ -3147,7 +3747,8 @@
       "IATI Org Key": "XM-DAC-41121",
       "Org HQ Country": [
         "Denmark"
-      ]
+      ],
+      "Funding Type": "Voluntary"
     }
   },
   {
@@ -3165,11 +3766,9 @@
         "recqNfbmfHwWpPdYJ"
       ],
       "Org IATI Name": "Start Network",
-      "Has received CRAF'd Funding?": "NO",
       "org_key": "start-network",
       "Org Type": "Network / Consortium",
       "IATI Org Key": "GB-CHC-1159483",
-      "Link to Budget Source": "none",
       "Org HQ Country": [
         "United Kingdom"
       ]
@@ -3205,10 +3804,8 @@
       ],
       "Org IATI Name": "N/A",
       "Est. Org Budget": 1000000,
-      "Has received CRAF'd Funding?": "NO",
       "org_key": "latinobarometro",
       "Org Type": "Research / Think Tank",
-      "Link to Budget Source": "none",
       "Org HQ Country": [
         "Chile"
       ]
@@ -3231,7 +3828,6 @@
       ],
       "org_key": "data2x",
       "Org Type": "Non-Governmental Organization",
-      "Link to Budget Source": "none",
       "Org HQ Country": [
         "USA"
       ]
@@ -3264,12 +3860,40 @@
       ],
       "Org IATI Name": "N/A",
       "Est. Org Budget": 8600000,
-      "Has received CRAF'd Funding?": "NO",
       "org_key": "ipc",
       "Org Type": "Network / Consortium",
       "HDX Org Key": "ipc",
       "Budget Source": "Website",
       "Last Updated": 2024,
+      "Link to Budget Source": "https://www.ipcinfo.org/ipcinfo-website/ipc-global-partnership-and-programme/ipc-funding-and-priority-areas",
+      "Budget Source Screenshot": [
+        {
+          "id": "att46C6mZ6Qv1fw0I",
+          "width": 2316,
+          "height": 1174,
+          "url": "https://v5.airtableusercontent.com/v3/u/48/48/1765821600000/uLhsz58n2YlWn_WIFwooUA/4cekgQRDwbZXEqTvwtnK3whY-9TAg75u1We2NWLIwR52wZJs63eO3wD5fncoc_LSwyRGkoFB2qID5dAFJW2vWGiY8jGpefPi6_6ziZhGKDdXBSseSnMJVnSUubwTdCp_43YlcnRAB98aklaXZqKwk9FB8S9CyoEvGKrRC_louP2HRTngrtIAN426TXNBB7l4/-OnFN-0ACSV7diAA4-68RPNHIE8VuJQaRw-8Q4u6Nbs",
+          "filename": "Screenshot 2025-12-10 at 3.21.36 PM.png",
+          "size": 212659,
+          "type": "image/png",
+          "thumbnails": {
+            "small": {
+              "url": "https://v5.airtableusercontent.com/v3/u/48/48/1765821600000/0LdarbRb7_rfAAYjtRmbiA/TNFVGvxFM4JPVtjazWr7AL_V4kNcC6BMvc18ZMyY2yAc6Japidp87cjCcPx4aGdPRMOVp24YK3W6GijR4NFvkHxX2VwWf2GAkZpw-Xdyhishll5RV6pHksR9nJkZrmGdyyBIpDsJDWXrtHox9ywjog/KLfuiyRpkYzlxjT33IDEl9ldcliGJmJUu_Da49GecrE",
+              "width": 71,
+              "height": 36
+            },
+            "large": {
+              "url": "https://v5.airtableusercontent.com/v3/u/48/48/1765821600000/RVQ4qz7a4a42osNuN6rk-Q/VMe-Xl8AfN8zMHjrNL-VWRJbXdVos5pRMqSbA4hMUBKhXOTKi4u7xBK3s7Olt1c-frZHWz8lhVvQFWX1UWRVylvgx_wdarIvhLxOP1rSI_20sDqXo21EH6bHoq1InrUth-QWdrJnbwKGKhM05lgH_g/hjjJD54IIMGNOvlwdIQqeYRgJFO7L-ZTmNdU_tSqjpM",
+              "width": 1010,
+              "height": 512
+            },
+            "full": {
+              "url": "https://v5.airtableusercontent.com/v3/u/48/48/1765821600000/ZdawNJzxkLD8zpQ_ZduSwg/aJJqtioKcdxMH6HgWNXbW3VeIo6jkUQ2L6-fEQIk8Q2R0xbXZnYxA2PdbhlWdBZhadi8D6vXuCLtCp-qJYQ10Wq1ELTpAUcpY_lUxT9ssdMP2ttK5_pz6EUTspt_sQ4EOQEPlB0ut-_sQ4xoJSdsjQ/NITeYy4zb1kTLii3U1QIEvwfva4YgwvJPK-O6eoiqX0",
+              "width": 2316,
+              "height": 1174
+            }
+          }
+        }
+      ],
       "Org HQ Country": [
         "USA"
       ]
@@ -3304,11 +3928,9 @@
       "Org IATI Name": "N/A",
       "Org MPTFO Name": "SPC",
       "Org MPTFO URL [Formula]": "https://mptf.undp.org/participating-organizations/SPC",
-      "Has received CRAF'd Funding?": "NO",
       "org_key": "pacific-community",
       "Org Type": "International Organization",
       "HDX Org Key": "pacific-community",
-      "Link to Budget Source": "none",
       "Org HQ Country": [
         "New Caledonia"
       ]
@@ -3345,15 +3967,44 @@
       "Org MPTFO Name": "UNEP",
       "Org MPTFO URL [Formula]": "https://mptf.undp.org/participating-organizations/UNEP",
       "Est. Org Budget": 419000000,
-      "Has received CRAF'd Funding?": "NO",
       "org_key": "unep",
       "Org Type": "United Nations System",
       "HDX Org Key": "unep-ocha-jeu",
       "Budget Source": "Annual Report",
       "Last Updated": 2024,
+      "Link to Budget Source": "https://www.unep.org/resources/annual-report-2024#:~:text=The%202024%20Annual%20Report%20details,States%20to%20deliver%20on%20commitments.",
+      "Budget Source Screenshot": [
+        {
+          "id": "att5waJvEaxfHjitj",
+          "width": 1202,
+          "height": 704,
+          "url": "https://v5.airtableusercontent.com/v3/u/48/48/1765821600000/2v7BucQPJzWZ0K-yYilpIw/jQSXCE7GOTnyjrXcZtLfej1eWEcrMhDCgeTka212y0JVZOARx0ZRxeo1prrn7fzMjuhlsStsiLCDrQjY4nSUWEPkLsdM3U-nAYpCX4rSIsD-t39AS1UKGcyzlYfbVjda0kXCzNXX80DUrliqSGxYpr5RN2zddEf9PJXwxmusytEpvSAaPpgM7AwSq72ikKDM/QBj-Rq_wzrIcYLMm4wJZ3pXxA2hPc7gOWiv4WyPBRJQ",
+          "filename": "Screenshot 2025-12-11 at 10.31.09 AM.png",
+          "size": 150900,
+          "type": "image/png",
+          "thumbnails": {
+            "small": {
+              "url": "https://v5.airtableusercontent.com/v3/u/48/48/1765821600000/2uwieSIrZ_mXwtSToKaFUw/eCUxfV-5OlD7yt6FJZPbvFW8JJ7nnpoYha-xR_Szl2BNZnrv1aaGQoCZ4QIBnNRDUocihs6C1WXuSXLA1ERnea_thctoti77HH6f8aSD74fxKCxjcImvTKLx-YhozYMaNUPlhZsJ52nTzx80Kl33MQ/sbah12YzOFgvIBiRTE1csg7XTZ1wNc3EEkBH7nDXnBA",
+              "width": 61,
+              "height": 36
+            },
+            "large": {
+              "url": "https://v5.airtableusercontent.com/v3/u/48/48/1765821600000/HJtaEVHuCcPIAubSDgB2ew/fwoEaED1pj4INrtcW17rX970O3EoIzdBVLPykoDTeQgX4gwfU2OAZH_V1szYs7lfkTAytMrGf95nCS8NfmzfZn0iy-u2SxcBHQ70wD6H1Y1RrRprPpeoWIO093_94tU6A5aI1oujzlXzXFna8OjC5g/EadR_CgW9j-3DzxfqOCLURsspNzM2ZBXyiwTV_JFuOI",
+              "width": 874,
+              "height": 512
+            },
+            "full": {
+              "url": "https://v5.airtableusercontent.com/v3/u/48/48/1765821600000/tH4Oz-nnHh_bZ_3GlucggA/s6yMhqfsr8HX4d8TzJGnnO3mAOSCbgNgivkZYmEOozJ95fhClmlRk4GVTmKMqsmSJKTNKhtME1MjYH6AcDlbLoyFyFhlhn6n7Dl4-sJDLgvYRYfd2FE-Kb99-4QwUWqbpH1mQ5Lwno3dkE3J8Y4bDw/niEHmHj54z-x3J06F_6NK1W4FOA9t7h_P45iOrxzPEo",
+              "width": 1202,
+              "height": 704
+            }
+          }
+        }
+      ],
       "Org HQ Country": [
         "Kenya"
-      ]
+      ],
+      "Funding Type": "Voluntary"
     }
   },
   {
@@ -3397,7 +4048,6 @@
         "reclUJwIt0bxL2bO0"
       ],
       "Est. Org Budget": 4722424710,
-      "Has received CRAF'd Funding?": "NO",
       "org_key": "university-of-minnesota",
       "Org Type": "Academia",
       "Budget Source": "Website",
@@ -3408,23 +4058,23 @@
           "id": "attEm47ZClIXXRKBv",
           "width": 442,
           "height": 456,
-          "url": "https://v5.airtableusercontent.com/v3/u/48/48/1765332000000/wxVAwtRnDdnGJBNmLts_lQ/gcA3oa8CJ0iEUImwAcmE-Ytdw0PK8oo1YPnOC7zDknKaqOX9U33fJxyT0pV8LOJF5QvABoLU0pjo7L0zT0P56pQ8z9-NGxCm5lbaB3EuBxpZdZf3062jLZMZhRarYp2gLXV2NKqPiyoM8Q8U8YpR0ArD1FEcHWXpVhtqDqU4SVOUVjpeApwg5VevEgk_sSOs/e7IZemZyAA89pJyDz8nTXKIMMOyHSMaA_4U9I8wqloA",
+          "url": "https://v5.airtableusercontent.com/v3/u/48/48/1765821600000/Uf7ML20AElV9SPB3JehqbQ/k2ewZM0DA7a_SUbc60OuXFjO40UY5eSR3e22j6o6_iu4lm33yyxQMvCAbkVZ525leRD7j9ImB7kkyMWUf9jLueJxuqe6wTJ2Py6-t8UcKM_2Vw9qvKTOJWvUFeXOzuS1z3BCf9aDyuouqgMHUkL2H6_H1CoT4FNTqNGVNpyBe0Uu1FBSpTBwL4wdWzAx0Dh_/77BIIr3vHGA7hrXjFaO0Pn2l5sf-73J9dQhuGcj9bQM",
           "filename": "Screenshot 2025-12-09 at 11.30.11 AM.png",
           "size": 71218,
           "type": "image/png",
           "thumbnails": {
             "small": {
-              "url": "https://v5.airtableusercontent.com/v3/u/48/48/1765332000000/UDW8UaboA_UTdqHiDElfWw/_aAMVmU3QcM-pE6gNxODM5RfqGrhJmpQbnUg6BZb6DmhJ4Jne2dOtsfh6MZAJ8BWfFrtPjvsw42amKiOkxFYyN8vN-eK7CCCgypCp_btQCtW56TDvrlezl1nwK_b0Lou7LrCSgGXFAHk3D3LAJJeIQ/i3v6xp9erS9bWkBqQyWL0JCCZkQHVdZTdJ7y3XsffKw",
+              "url": "https://v5.airtableusercontent.com/v3/u/48/48/1765821600000/jJSX5LJsgrJIgytW9WTwmg/2Rum6ap9ILkHR8ulCgGm-bQMnP3fvyWNZ1Xo9Js8b8zz0AXjwHac-EZLbTAR1JB_4hDjVjHPmlHqVDv59fQLPur3JjNisXTO4TyPJI9U5QhwSvcqvNEjC4C03FPRk074RO3Wo5t8y4VxtDlagytoBw/gk0uJfBp7nkPwsRolS4v5lDEWskP0yEtbS_6XAjeVzk",
               "width": 35,
               "height": 36
             },
             "large": {
-              "url": "https://v5.airtableusercontent.com/v3/u/48/48/1765332000000/XZa21rQKRVcF7KUtZTzIUg/s1jwjrLl0nh9OnlovUU5bGqDbcTqQbTfSZufIbIAptmSk3QbULhlYZp9f_mXHGx6WqWu2VrKisq1FAwaRZYx96WmhUDeImFa50Dc7SjbFf39TDZxQDTu4rbYKAbC4bpzpjR07xWkkZD6_Ea60Zk-kg/1aE4n9EjuzziWmPAS5-epQIMk-h3OUMZWPV4e7Xxw6c",
+              "url": "https://v5.airtableusercontent.com/v3/u/48/48/1765821600000/pXvm4KSQMG12z7o-p2_kbg/-WKDZXUYRe0Y6zLj23d50KMEPmbLv_9BL_f1cIPa2TsmA6RaSshbu8TDQnKkc8KBSe2LvXUqmCd-1e3MDZMRJSMQDwWwy_luNCgshW2Z0RNkvRlykhLc7hfUYpIF1gBixBm397sNvECmMWCUcHi_SA/PKCbvddnhRSmFLeK8eKJy96zxb771hNbON8rvCF_UdQ",
               "width": 442,
               "height": 456
             },
             "full": {
-              "url": "https://v5.airtableusercontent.com/v3/u/48/48/1765332000000/oEFHU62Nv0G32Foern7j9Q/Arb-bKSsSqdr4d8gmJPeKcmuJBj3CfgyRvPlZMh2xp2T3HAFVejCOLczLUltKpbrNAsb5iYNm-BPXcQwGh8smactIt5MynsBvmoRtyMkhxOkPh_Eng7UEpHKKffXO0Wi2YLr5O22av7D5dqkr4o9-w/CKRJhYvDVsh4gjuHwtaaREVy1XEabVDq9OJ2kKBt9QE",
+              "url": "https://v5.airtableusercontent.com/v3/u/48/48/1765821600000/qkcOAAhHmIP0Kl-WAlNUIw/oJBSWT4QR2twXzKbKPz2Op7B8pSoE0BWgKLGxV8XcVchvyKdKT1k53UF1qjQeG4woutq7Z7DiR8lWQKhgIPyN52_ygP9N9WxXcJzo5Q89PxPbVAVFWyPKl-pJETGbrFCAuc7hjpNiLjzwyq1KBP_vw/4j2b_K3zmQR3uOWzpMb4hjvhX1zbgxpmEIyQkwK8Mx4",
               "width": 442,
               "height": 456
             }
@@ -3449,15 +4099,44 @@
       ],
       "Org Programme Budget": "https://unitar.org/sites/default/files/media/publication/doc/UNITAR-Programme-Budget-2024-2025_adopted-17November2023.pdf?utm_source=chatgpt.com",
       "Est. Org Budget": 48440000,
-      "Has received CRAF'd Funding?": "NO",
       "org_key": "unitar",
       "Org Type": "United Nations System",
       "HDX Org Key": "unosat",
       "Budget Source": "Website",
       "Last Updated": 2024,
+      "Link to Budget Source": "https://unitar.org/about/programme-budget",
+      "Budget Source Screenshot": [
+        {
+          "id": "attq7ClJwtHaiLlRN",
+          "width": 1430,
+          "height": 330,
+          "url": "https://v5.airtableusercontent.com/v3/u/48/48/1765821600000/EgnvFSCXlxS92nFrzRSk1g/W-CWkCBLHCoTZsmjPgdP_z-LlJl7Lrr0vdd0Q7uVKg30KAQijKzm26f0MRIyGEi0q2GqZONI3WJvrUSUNXNlSNO8kYxb8s2MmVMISEHcwQe9b8t2yqKl3S7621se8o2v9E0NjrMKlyj5bjvnMdtqru2dLhJSrNzDXhDQZR9vYmZ3TuGBQ2yinw73T8_wFMnH/_Px59lihY3-37dv84A3Q1Jsucn0GvPZFLAFTPSPtXd4",
+          "filename": "Screenshot 2025-12-10 at 4.30.03 PM.png",
+          "size": 97481,
+          "type": "image/png",
+          "thumbnails": {
+            "small": {
+              "url": "https://v5.airtableusercontent.com/v3/u/48/48/1765821600000/H_Dxuaa-RMAffocq6KtraA/PEmKfRneA-yqA-Gnx6cM55MjWpqLPlOB4rUK5sgbv0iPMuhifHyxdWZhC0l2Q2sZ9MBDp10zsFFbGtmixC0gVqTrdQ2vMNZNRhSXHD_CafSq04A6B8PoSkAIGEJuwwS8PPv6Kpc30g0nK9E1bV7glw/m4EUd1iDL7qzoa5tX-Que-A9NH6vPM3Yht1O2asBtu4",
+              "width": 156,
+              "height": 36
+            },
+            "large": {
+              "url": "https://v5.airtableusercontent.com/v3/u/48/48/1765821600000/qKYw99R6cAYbsRYOSQHA0w/_WFgMlL_pbA1TJgIGWAObKzJtOyO9E9GLo1ak8oA24U38r7RfBnQ7X4vJ9vBroPlR0yH-gwL6DokW3BYdDCKE_S3ET7pNLQH6S5IhWl3cA8xHKuOM2wG-sziM_aB9G1U4ne5chjzKk4PqsXVVvJg3g/zP9f69vtqi7LDT8W8M9MQC6QUXNRPxaXMWH4whi_TeI",
+              "width": 1430,
+              "height": 330
+            },
+            "full": {
+              "url": "https://v5.airtableusercontent.com/v3/u/48/48/1765821600000/lu9cu5MiAW3bsC5B8Ss6qw/W5fmBO6mRrvfSThFuMWP-QYBpbom4hIon0GIR2cTBW1PDO_HTmx_IIXvDpvmVBa9oFEB1GnLHpfRCZp3g0pZ7qHvEl89kWDOwTn_eL6VEHKQperXu-7h6tokqDot_0wMq4NKyA_mVBmpsF-BcgoXpA/o18HMcGP20bsLrPMvh0a2mwzCgQ-99CJC5JfvWKKNlI",
+              "width": 1430,
+              "height": 330
+            }
+          }
+        }
+      ],
       "Org HQ Country": [
         "Switzerland"
-      ]
+      ],
+      "Funding Type": "Core"
     }
   },
   {
@@ -3496,7 +4175,6 @@
       "Org MPTFO Name": "IOM",
       "Org MPTFO URL [Formula]": "https://mptf.undp.org/participating-organizations/IOM",
       "Est. Org Budget": 3733229338.55,
-      "Has received CRAF'd Funding?": "YES",
       "org_key": "iom",
       "Org Type": "International Organization",
       "HDX Org Key": "international-organization-for-migration",
@@ -3509,23 +4187,23 @@
           "id": "att9AA0lud8plEN6H",
           "width": 985,
           "height": 423,
-          "url": "https://v5.airtableusercontent.com/v3/u/48/48/1765332000000/LdmVYZgNZIxvRmGs04Iw6Q/fM_j4rU9_b_DDn09AHlIaS8SbAeitZ4EJ43AIV8MQ2OoAM5dvCUILPhCU9x1aFIQnZ3pZ8emfcV7dVGy5IjNQ5fihEOpX8v5Kd89V8BzfME-1vjTDrCZ27faH4is45hBhtiNhnoDnU5WmY41QU87Z_GKLZNLzJLZ28VBdrMHqvYhOgurzLkC8VVvc9HFHWLx/MiUgiE5Ii6h_lCVU-bHX3jepKS8nJWZy6QOgSwXrcBE",
+          "url": "https://v5.airtableusercontent.com/v3/u/48/48/1765821600000/M3gwUBUOurCgPNvyXUWKVg/lhUuWPQP4U49hFhC9oMhjGk6R5I9UPr-N8f8cp_22jrq8DW3k6IfI1LB2ppGt9CBmeq3bx3-nqKeoffvdXYRyUBmcHVoeZiUFhhrRO-mT2XBl5oXCEMe68GM6i0lX4oCkLWiXNSXbWNdhqbKtdFrUBihj-TNfhS4TP7tExCEcNXpbaIRHac3TjwxLOs4nno-/U8xvdGGoROgshDbZzE60EagTYTS3WTmefn02zV719Go",
           "filename": "Screenshot 2025-12-09 at 11.40.06 AM.png",
           "size": 40237,
           "type": "image/png",
           "thumbnails": {
             "small": {
-              "url": "https://v5.airtableusercontent.com/v3/u/48/48/1765332000000/C2LGtuqAgfLmF7GMNeWP4g/Gcl-rvIiqbww1s4z5rdmsJaaG8dgdOP_REByPdrhTNE5h-bBp-mB6x4-uBHqHL9JaD4Jk9rbFSh3GTDq5Bi_LQ4uGqpWV6W3NEJEZtfSUGjBsiuivwgBtz6OdX3shDeeusWPVd4Mp4VcQtGFz_2GFA/Xiy2i00M60zmJSKEcbDzbG5Wc6BPnNWPwk0sUkud1cI",
+              "url": "https://v5.airtableusercontent.com/v3/u/48/48/1765821600000/Nhh-OMu0OY3u47yH0KJkjQ/WmFGBB_RaZdC5AHHfWCY5zHhsOg8DCxboe3RWmLTsi5c11E0jr3XfrqELK4-1fY-iv89U-MfzA3cAsEudrXcnvTTDNuxSrCPjEL3DgEVgk5BtQDfCW2z__r7eXWTogrWUGA3U44YTFJuy5CE6kQfHA/60ed82Vh6Z2btzBI8nPc5BNuXBoFa3H3y7n6ulKzGSo",
               "width": 84,
               "height": 36
             },
             "large": {
-              "url": "https://v5.airtableusercontent.com/v3/u/48/48/1765332000000/Jhcg6N-lQFf4PN7bZBy5tg/GsA6Lvu2kQA1sRFSDX_OwIf_rhabRnG4BmAgkF5-egDeA70gY476Lcrjgg7Hj8qWlvImFIR_TP-3cEnz1Ask-FJPt-7ABt2C8PnLCcZsXyVJnfK7opThVapA4J-koJrHFPGLeQE9A17BoNugobtiAw/CjkUnFeLGl-7zUcGDANREem2xY5b201TqJvnz0gmDkU",
+              "url": "https://v5.airtableusercontent.com/v3/u/48/48/1765821600000/rrcyO7keozfNfD3vsEkKNQ/v89kRB6-qslaanxOUqb6XyukZa1m979b3NGYLgod5H1gbLoU2FFvy-PRcIB-09xdRyTVbcvAlboHcm84MBhQClSse6Lh7nmDlpu6RtKsNuxgKXUsmon8Hjhsq1-ClOzUTTfn_1H9q2kjijf-iE5oMA/0ZKJWbK7E27najQLr8mSsuLWWdw9vVbIEEk8JERPQtU",
               "width": 985,
               "height": 423
             },
             "full": {
-              "url": "https://v5.airtableusercontent.com/v3/u/48/48/1765332000000/82ExLz-p9lkhyHBbpCnIRg/XoiJJ64SutC5kXXFP8eQWQGEJOgwT7plxFsUUcPunelUvYsmCjHC4R4o0wQmdzLEvtLpJGKXRNSaPIGiS_3lkoivJNy_VDXxXqqFDqnUPmJNJYbEMhHU8Dhxb44NDIZ9O3UGqLGO4hK_Y7C78Bimvw/uMGYjkoa9wbyMNG2bYqxZQB7UorqUdke5IkEvn8qZlI",
+              "url": "https://v5.airtableusercontent.com/v3/u/48/48/1765821600000/RrcCVaJ__BB4xm7CSaJ0pw/j1DqoEzI_9NA6jkuX1UiK6cq-SgWimCCysGJz7sI2kKRLHz7aSgt9FRhRhdN1YveAg7sfOuzODxWUivXCfbHNzlerecW_z2oVAbPsF0Z3GHamRUBpiF2_hNizI8vaoFILxZDiilXMfc8-3apdh861Q/P93ZtfFPkDthr0E-99WBaFo1njGH9SLPiYV1fZhZA0k",
               "width": 985,
               "height": 423
             }
@@ -3547,13 +4225,12 @@
       "Org Donor Agencies": [
         "rec5JfYP3fwrIALy9"
       ],
-      "Has received CRAF'd Funding?": "NO",
       "org_key": "unescap",
       "Org Type": "United Nations System",
-      "Link to Budget Source": "none",
       "Org HQ Country": [
         "Thailand"
-      ]
+      ],
+      "Funding Type": "Core"
     }
   },
   {
@@ -3573,11 +4250,9 @@
         "rec5OM4ToDzt2ycHr"
       ],
       "Org IATI Name": "N/A",
-      "Has received CRAF'd Funding?": "NO",
       "org_key": "wpdx",
       "Org Type": "Non-Governmental Organization",
       "HDX Org Key": "water-point-data-exchange",
-      "Link to Budget Source": "none",
       "Org HQ Country": [
         "USA"
       ]
@@ -3611,11 +4286,39 @@
       ],
       "Org IATI Name": "PARIS21 Foundation",
       "Est. Org Budget": 5011472.38,
-      "Has received CRAF'd Funding?": "NO",
       "org_key": "paris21",
       "Org Type": "International Organization",
       "Budget Source": "Annual Report",
       "Last Updated": 2024,
+      "Link to Budget Source": "https://www.paris21.org/sites/default/files/media/document/2025-03/progress-report-2025.pdf",
+      "Budget Source Screenshot": [
+        {
+          "id": "att1pkPBowIOK7ES5",
+          "width": 1402,
+          "height": 1068,
+          "url": "https://v5.airtableusercontent.com/v3/u/48/48/1765821600000/yk8Yg1YNMQxgob6InzfuMg/Df5nMCU1w6fO9nMKpTmnDomDxV2ndpgepvSKHot0lnjDYHbsLaFAzYogQYaJuOMmmS11XZd6i467_WLkLYBHxLMh_N3pbu_H1ra54Hw_maIasckaIg1xJ4xpfAblRaUZwuwaq2ZkFr2FvWeLuTf6kGLxAblK67G2JVKqQKva65rzU0prqY_A6IATGCCBMWB6/zmff-07xHFX6cYGXpnKuaJpiAVeXffSWAYMSu7xJknI",
+          "filename": "Screenshot 2025-12-11 at 10.59.31 AM.png",
+          "size": 199656,
+          "type": "image/png",
+          "thumbnails": {
+            "small": {
+              "url": "https://v5.airtableusercontent.com/v3/u/48/48/1765821600000/EUmNj3dtTMXSTyBiXutLGw/fegUI780SrHXA6FgPVVsM36nT8qwH6skzTuX2a1pTjuSh_sAPjVMb3W-il1Lutp7G1oTf0jUf1hBlvNwfml0_v877_OOw1GNJOdfBUvh18qJrGnRP0hljlLCqhRxcj-RxzHgOkgPAjb1cpGG2rZSkQ/V2COtKYqWcHeTXTph3JyOlR9ut5_FksWl56uOA5q4Jw",
+              "width": 47,
+              "height": 36
+            },
+            "large": {
+              "url": "https://v5.airtableusercontent.com/v3/u/48/48/1765821600000/p0lEcowQX6siIsuWSI9b3w/Xx7ixuryIfWuE45aINnWQ9cLLelVa2besff8y2V_qFSEWZQbSJh1sGzJsIVI_8Z0mcDw4wMqCQBTGP2rqvFRsISgzUNJd1uPvzAz-Qd7kYEB2teY8H_7PyKIWUW4aXEfhPMs1kWCRX-zsyDFce6miA/qwjlC3mMgTP2l2qOS5r7EjUMwCDQQiU_I1FE1OhP3oI",
+              "width": 672,
+              "height": 512
+            },
+            "full": {
+              "url": "https://v5.airtableusercontent.com/v3/u/48/48/1765821600000/-6TNStz1rNfxVtMULFxvVg/trb1DQDaTY3rzB4TYvn_8EQZI--gLUxzF7XTBTT8STPTZ8uCdnrF4PMJXKfYJnhPn-u0TdeKWR-Jicsjw-hCCli9-lMcBO2AjyT-lkotwKE-Tj5aN4Zo4zVMFk52vEvj04yJUzRP7LsVZ1ltCE9wxQ/zyv29YsyEMf16UjDdSR9EGUNnwcF1isycXOputfXXTU",
+              "width": 1402,
+              "height": 1068
+            }
+          }
+        }
+      ],
       "Org HQ Country": [
         "France"
       ]
@@ -3635,7 +4338,6 @@
         "rec0sY1I5JZz6ZsUE"
       ],
       "Est. Org Budget": 3054300000,
-      "Has received CRAF'd Funding?": "NO",
       "org_key": "oxford-university",
       "Org Type": "Academia",
       "HDX Org Key": "blavatnik-school-of-government-university-of-oxford",
@@ -3648,23 +4350,23 @@
           "id": "attgvtjO0MapNf6e4",
           "width": 1652,
           "height": 1060,
-          "url": "https://v5.airtableusercontent.com/v3/u/48/48/1765332000000/1NIfLKF548s_Mx8R68Wf1w/_5TAGQbJYz4bxhNchfhvnwhHIKMQGM37-hC0wf99iPodY2Bu5ajNpj6DJqnRN56J-gO6Ou799vExMSqWlS_5BaUpq0ZCn2tYfDPShZKIiinuAB3klpX59Q7OsXQ6RnSIbDIaJJp1cynBtGjDnbk3kYGQnPKYcFedWJ_AV7xwGOpKvKhQ_a655LWtJ--6ESwd/mJueDAGiPxoxyObJNl_USnfW28iW5DAY-dDb6B4oOGw",
+          "url": "https://v5.airtableusercontent.com/v3/u/48/48/1765821600000/597zilqFck3TBqoDfpZF1g/Y9z0mC0gG0_j6g2sOQSW2b34gI1PEf_iisNYJ7iXdyWzm7ZqBW53nDxCLoE9ePGmqQALUOYzuN__jY-_Q78lcCx_tpCpiFhye0xd_9JQnfe4-_Q43GiHTiYqRnsDmK8kAZfcQce8BuVAbBOmFQDSmviNhu6IWDziFrDjNvOj4IKjPJuN1-eI4cZz7YtG19So/0z7YJCOyIiSpLEr4YjUOs6sMOXErdeINRwIit1Q9Nw4",
           "filename": "Screenshot 2025-12-09 at 11.42.48 AM.png",
           "size": 196487,
           "type": "image/png",
           "thumbnails": {
             "small": {
-              "url": "https://v5.airtableusercontent.com/v3/u/48/48/1765332000000/ELWvAda_NMWdwJhAxHCgGg/i6suUDiySLX1W2NDLQw14ChLOk3j05VjXPNRPE0-2JnWSQGQGEgtBlGtaiwdADhoI4ci8FMcK2QekZARTBkoUheB8cHQc8h2GQcf2KUPJdwOKJZg8OFJlxEQlTy1xUSl09xfqHtmFscbJqKnI_24VA/Qn8fnbvL60nIIebT97sW8IV4cjdzKNdhjF7tBdJbYJI",
+              "url": "https://v5.airtableusercontent.com/v3/u/48/48/1765821600000/KxCP6WhETRVxVTDUToETxA/zNFK3FI7fjCB-OSHvAf386j8MQBIFY5ukIpOwYDUzumBkWgFpOtTREL8ymlyMTAdadjXvoPkeZMzDDT5Xb0Qz5JpcSxtDRg__f6E3nk6d0vgVfB7Tdw5dErIhWNUSz8Qmc6OzwoAZXX1yjJfnbkACQ/Q4vGUaVWwbbJRrYkSucAFcssBy9-v1YTlfhQIIBR8us",
               "width": 56,
               "height": 36
             },
             "large": {
-              "url": "https://v5.airtableusercontent.com/v3/u/48/48/1765332000000/eF6RYTlIrhn2XOC3RTLYKA/QwTe0h3KLtW_k0oQmUJ7vksdbfzM1ZdEHf_tH3zbBBzTM5Uny3Cgkh7430NbQzP07m2LCKH9kKvj6x--143-zRGLGWJposee0h43nlh3segPGDtKHIm6kBYfajZM8i4BE9GodKJBfhm_gzYC5wFBCw/FgDRBZKHK3Jg8Qa3SixowW4_3ubTXl2bwME0tjhTw_Y",
+              "url": "https://v5.airtableusercontent.com/v3/u/48/48/1765821600000/iVq5hVnyhXtIUHCnOy2jSA/g-d6rn5i_wz2-Qx-u3ZIsLBmDQMsM7ll9KJ8t4a1bO21f8GZCYxJHHBqOtCCAUKfgrotASt2fle_qFYthVmd_Df8ge4q8RBn1Lz-yOtP7FdU-d1xQMbKwmRf26MnHj3wRLUmPt__9hHP90gAX9UCoA/NjMHp9xWRu0mOUcG99pz2yVGe8emW4MUeVYlpFOgmpY",
               "width": 798,
               "height": 512
             },
             "full": {
-              "url": "https://v5.airtableusercontent.com/v3/u/48/48/1765332000000/O6NydbUo-bvW7iOGIuW_FQ/B3_QxJFZ9k9SjlbOnn0Rw7z4_YSTRY-aNflNk2yn7misw5zkA69LTVlKB6ZOTO93aXvPGZwcDqwG0f2-rYJnjFwAMAf18xiv_z_qwR2mR5zrs4vzKLAmJjZ9P8OG19kHyQ5mLmhx0YK7eS9pbofnIw/SlCfkEHzzWNPBiNAaaidBFC0HrVCi-BmTJU9YJ9CrUc",
+              "url": "https://v5.airtableusercontent.com/v3/u/48/48/1765821600000/Z9xCqU_Tx6tnEKZLst5vWg/l4qLF6dUYptCcYHur6Zga5JtRIbW9c9Z7c1BrJCZ3SgZKmeoH56WHaWqrEcIBjN6j5ZXj7LipHX24Fz9aIKjwuk3kqAv2zXyGvxuARw-c4UATMjIvAY6uoND20W0leMh6wW-lI2-hpzk2rDYsIbPeA/xFHYRZjtZCVQf7AzsrRQHYVHYHRu98A7sSNZoigr4-Q",
               "width": 1652,
               "height": 1060
             }
@@ -3698,7 +4400,6 @@
       ],
       "Org IATI Name": "N/A",
       "Est. Org Budget": 27500000,
-      "Has received CRAF'd Funding?": "NO",
       "org_key": "immap",
       "Org Type": "Non-Governmental Organization",
       "HDX Org Key": "immap",
@@ -3710,23 +4411,23 @@
           "id": "attXkVns3LtyOjFwp",
           "width": 1006,
           "height": 449,
-          "url": "https://v5.airtableusercontent.com/v3/u/48/48/1765332000000/97_c4iFaJIiKxjE6bnJXLA/O3vJeUWfDrjVqgldYndn0PxZ3mdUepsn0HzlbL2IejVgc5FkCPnEIEJ6ZJpRjE7xdeMmZWX6NJBSb-CLCsZ6CM-BaiHk9WwOs1BLQal9dkOBMlT-VRfXkDbbBDOXmSyrlNuDoQlwuW3BWWIkJlhhj2owneO-MrO_QqR11-7ZibZq6OkrbqK0wntChfuajb68/NsDu8o4phGW8w7QdxuFi22K-9NzLmOpycIINwAchNmU",
+          "url": "https://v5.airtableusercontent.com/v3/u/48/48/1765821600000/ye7MCgGRJIisyFfXBkYCnA/QQ3g3TzSgB-tCCpGVpoQob23BxzkNy3nEeW8gOWvDgU6KkA2A2YRX5GP5MgKu43A1NVhSFYJSyrzdIoeRqI_tJv2muvinPotoRe5SFh_sI44ZwNZ-Abn5_pgb76XKM8tA5P_Yp8cPttnrW0dojg-cKYm3aQmz0ncjzzo4fVhWosLX5BoBrhIBRmNp3C73wEC/eH_6qZpGCzta8LrEIbveosT3y3vUmVV6J2W4QLz3dPU",
           "filename": "Screenshot 2025-12-05 at 2.35.19 PM.png",
           "size": 85402,
           "type": "image/png",
           "thumbnails": {
             "small": {
-              "url": "https://v5.airtableusercontent.com/v3/u/48/48/1765332000000/fxdTDae6cEy0SM0yjRCTOw/KebyLAU-ajnxV-c8vnOUxMPSdjMSy99DiSFpjxCn2TpNO1NspPouQrrLJY7qXHQW-lXB_6HWH5QEKRUygXTLzU0fLzt5XiEe9hyDqDoqlvh1XINnQhu8TMtuYdrnCiz6T5mxjsNigYVFaV7LHjHjPQ/4BitqdjHENwkNL8gszGuWg9YxGrz9MSVCmezpjNw5Rk",
+              "url": "https://v5.airtableusercontent.com/v3/u/48/48/1765821600000/yYebjVaBrkNszAMib_Lnig/1sCBWBT0BNMMDEBnTHT12mhppV_uV_gJr58mjvb19k0oyh4Abso-poUKVjWcMk1omVOj4rUCHPAleItWMzlDUo_Mv8mlNkxFUgWN-CnN_yVJuuIDO_rycyZZdvuprCtzMhz2H8aa3CXDLLpzP-5tjg/i0qP_H5KZ8QH-DvKTtTUlmgcOtBRHD9KjCpy_mK4hHM",
               "width": 81,
               "height": 36
             },
             "large": {
-              "url": "https://v5.airtableusercontent.com/v3/u/48/48/1765332000000/_h211GxCZ_BvgN5vlL_fMg/SZwctFMaKVmx3Thu0fRltvo9DCteI6wuo30Rm7iYjuMrafjEsrlWC2uTyNYpCgKKfx_py_JyNSv4XdJI7OkBUg-U8DhIQi8zIdkxTlTL8Hvlv4sGdCipneQvMgYv7UP6LEFYuOzf_f5cRiFFFemMYw/l-ENlSuEkbMTfmY7-FIr3VZ9gvPVK4nhN-Y6CGlg0wg",
+              "url": "https://v5.airtableusercontent.com/v3/u/48/48/1765821600000/gCTyZVMUm3NWJ0lnEYBaCg/NKdxUSNttslCHAUt29UnFwDEZ_96ldzcOgzz0eTSbv49MjjjRPFo7x4so7evAdQo2xc9h5CWYT3-yhjeWrXsbwj6PK-mlSSw1SSt--kErv84WSyZUTT_zz-rYGpkU5SvlZkyhPRpR0wp0bA6o5HEHw/wuDadKNDaXw1Mwf0ywI5qrDVhImapGyLl1Z3NIAdrfg",
               "width": 1006,
               "height": 449
             },
             "full": {
-              "url": "https://v5.airtableusercontent.com/v3/u/48/48/1765332000000/MZSx6y3AAEQ9zAgAgqenig/Eug2G9u5jKKAJlXH56WUMUEnxQkEGQsCKR5dGTE6PxY98SIeN2cBdMKtQG-bTEc6Wy0DKwXcbEprJY2E9Ic0cjisUQaHOdhftYCRgXFyfGNbdFOk5RVjTENLr9SHk_X07rA_glzDFO719s7dy5sBeg/Htpj1vUdQ18zwQrfELI95ZZrzHWv9xPpF2SH8Xm_ALE",
+              "url": "https://v5.airtableusercontent.com/v3/u/48/48/1765821600000/jpmWJ6xoSi9idMY8t5CpUQ/Md3v5_xY8S_950kk4UXqQO_kCuj8P97LM1OxOBNlSL4ZDbnhIPNxIsPrL7mD0J2n_r05X2q4B0ietWXGF2sPT8fBnQZs28PekYfjK59HToDWwyWtNyraU1fSAZKDwZ-TV_UxvHY0F9cpl7FwiMjyPg/L8aG4_aE345cSB4nNpQt_9CKZdYSSlSSwtR11vW9Itw",
               "width": 1006,
               "height": 449
             }
@@ -3798,7 +4499,6 @@
       "Org MPTFO URL [Formula]": "https://mptf.undp.org/participating-organizations/WHO",
       "Org Programme Budget": "https://www.who.int/about/accountability/budget?utm_source=chatgpt.com",
       "Est. Org Budget": 3417000000,
-      "Has received CRAF'd Funding?": "NO",
       "org_key": "who",
       "Org Type": "United Nations System",
       "HDX Org Key": "world-health-organization",
@@ -3811,23 +4511,23 @@
           "id": "atteXxQqVW6XvovnG",
           "width": 436,
           "height": 309,
-          "url": "https://v5.airtableusercontent.com/v3/u/48/48/1765332000000/3eEe6tF4d0MbcuTAtnLg0g/XEjl4KUfpVCzQB78SvdfDC-3jfk59EipahzyFNzPTYL5TQqPWx5JzMv3KQpXL_cvGV4rqO-jgxmBjsk7M_7QHW4tsLuQh2UQoSqm4HwpSsX2oqdkWAkgyYYaR9JNFBxbLTa4P3VgwITsUFjs76LZUfmu9IdrONp3Am483-6wqn3ZGoe-ISTyJE84HXmZQSW7/O7bYtlb9Tu51REvNu1aUEpBTSSMNiSg3WELhW-7jxXA",
+          "url": "https://v5.airtableusercontent.com/v3/u/48/48/1765821600000/yhkcrmTaF4w8QfUQl0h0dA/lPU3l-Vxy69UqmYV8urkpjH70GXR5CqBVpKKmB8FhzmRMO7R7TjN0lYsGPxVfhtwRmHc-mr4vACKI4fthCLN0zlYYgJGDsrvJH8fERzdN07W9MHB35ufrrftQ956eUaIxlS6Mgn2IZqYlWKae58_hbEhyl7z-mgjsOJOo1DcuslGf2yEX4P92h59IeEO1cKl/XOxkFl0nlxbVQBWfiAZ6TbrpXdQpZv_D5-xO0k1kvwA",
           "filename": "Screenshot 2025-12-09 at 11.37.04 AM.png",
           "size": 34779,
           "type": "image/png",
           "thumbnails": {
             "small": {
-              "url": "https://v5.airtableusercontent.com/v3/u/48/48/1765332000000/VrLSCH1bXAkFw5pBVNkHQQ/7xPBMk9qs02gKjH6Vne1rzB0HwhdlFQL_yI0YgB4xROCSvC6crT2QTgh45ksXRNyfDPzAuKLxAS_-uJ2QcLpYEb4Mqn861ejVATXklDvfdpNybSssztTXRCrNG9UUV7506dgke84Q5ALFMZhhzusdA/FqJL8z_A5y6pOT1X04MFBfw3qDfXHTRFHXggWzvRSOk",
+              "url": "https://v5.airtableusercontent.com/v3/u/48/48/1765821600000/4iwRmrl8F6EynvTZdzFAeQ/CfuiOo8ewy30Sf02WImxM4Gjqm_78Vd5kgD5-nBgfc3Kckp-F_iaqqW-XYtYVIHNAuSo9r_8JtAlkF5w_PDqOVNaFIASrolPHXT2rg-erV5MYUj3Iufjp2XxMpIdhFqXMZBWxEAEzLeLDKz7eBxuug/W3OAx-0bHzR67JYZoskVncomBWKB7XRaPQKpMq0ujO0",
               "width": 51,
               "height": 36
             },
             "large": {
-              "url": "https://v5.airtableusercontent.com/v3/u/48/48/1765332000000/SYK2aYgx3tNlUTEKDMGj3g/yS9OkFI-yQNjyMlgqoz8SJx6lmrUkOtKKFZvFeeJf-06Hzc7nTSSI3jVdC8f6lPLCSbe8BHSD8pQYCTOe0jHKDXe1u43Jt68zto-nNCIoC-TmpbN9DKCH795S_JPA1cETgdUtYfQ9ldmu6-KmBbqfg/wBM2dJwODpqzmXMnFH56CiT1dts-84m24E8HYEWAtII",
+              "url": "https://v5.airtableusercontent.com/v3/u/48/48/1765821600000/Rh7aW6Rv4CFlItofzIF5Yw/DaIgb2SHm39wmjlaVriAF45RIbmDbFBaTwfI520o0R96pshc-ZUjxNmTTfnfkI3L97aB2PNKnt7oLOVfubyudUxnScl5mkFtI4PnEGGXeQrqvRT08GP-dl-l7xcohl_4OqrDuAoI94fzsXjiyShUeQ/AfaTBJ1qcMdgNl-pE3ZPYgloko0p3f3XZtBR2oxM3kE",
               "width": 436,
               "height": 309
             },
             "full": {
-              "url": "https://v5.airtableusercontent.com/v3/u/48/48/1765332000000/G86NDtmzT3TiiIaPHb35hg/y2kizaZ_GzVIygmabswD9CwR8ZiFGyXIZOe278vATJFuMuGyg7dbOsBRASAP_eVdodrM4tWKPm2ahWYJnY--uVB3hlFGi4S-eirP_xaFBHJ28NNDIF7OJfIUesUC8cEKCE9IehwMfGi7TGK38Q0KNg/RcxiHyrKgb3FzA2nCVSyI4ToT0joEp1VI09dWMpIEc0",
+              "url": "https://v5.airtableusercontent.com/v3/u/48/48/1765821600000/bBBPA6WiAk3aZ8dlIarxkA/2cjZYLLZLrUzOpeYRMEfTvC8_qQmqhpeXkzBIfEFBl0UcDPhtPKh1gFM3PLQR8eGjVrKcbF44mbzNWgQfYf6nimj94jg2OnPhJehfF33h_OsPdckevlUG-wMD3VhFUtjpnAQplqhhNYUq2ROtWuYJw/xh0YCLm8L-eodl1QIVIcZSD0WvQKa7J_PIukFez6-8g",
               "width": 436,
               "height": 309
             }
@@ -3837,7 +4537,8 @@
       "Org HQ Country": [
         "Switzerland"
       ],
-      "UN Funding Link": "https://open.who.int/2024-25/contributors/contributor"
+      "UN Funding Link": "https://open.who.int/2024-25/contributors/contributor",
+      "Funding Type": "Voluntary"
     }
   },
   {
@@ -3856,12 +4557,40 @@
       ],
       "Org IATI Name": "Red Cross Red Crescent Climate Centre",
       "Est. Org Budget": 7003555.54,
-      "Has received CRAF'd Funding?": "YES",
       "org_key": "rccc",
       "Org Type": "Non-Governmental Organization",
       "HDX Org Key": "rccc",
       "Budget Source": "Annual Report",
       "Last Updated": 2024,
+      "Link to Budget Source": "https://www.climatecentre.org/wp-content/uploads/Annual-report-2024.pdf",
+      "Budget Source Screenshot": [
+        {
+          "id": "attmA9zAoeG5HhhVJ",
+          "width": 1368,
+          "height": 1128,
+          "url": "https://v5.airtableusercontent.com/v3/u/48/48/1765821600000/bKMd_xElPXykB_u40GzaLg/HogSKJeLDrMuX2VZnSDnbf8BL9I7a0fcU49TP-3CgVs8BqtJTeiMuzLHseTOX_Cp3TsPP2z98iNZMCr-5qkOcnbMNTR0zEJOHwTl0IgMzeKrS54E66dN0FNBu2ZSu48R-Ba-0YZmypuBHByWqk4GK08Ulc4SMj_voYCwqaUxUKjXR9GHIu6cub9AgVAgKuJ7/Gq2b2sdvvFLXzTJKlQczjgsusKd36dc48QOlvv9wHnU",
+          "filename": "Screenshot 2025-12-11 at 11.02.42 AM.png",
+          "size": 163935,
+          "type": "image/png",
+          "thumbnails": {
+            "small": {
+              "url": "https://v5.airtableusercontent.com/v3/u/48/48/1765821600000/xVrq-vuHRT2Jy7tAflpcRQ/HwYqe-f52MjhhfqBEG_hnIKwjkn84eXFkFRafELWi_Xxx7g6ZzAoBgc5XLUt6dqTVxnpaeNgbqHT1bnvyW5oTfk0DtU98RwF9dHM3khhcSwbOTr8IGXUFn7H_xS6lR2bhFUnjcWOmfp2wDIPbEwCrg/3sTuy1lkwILnXwKU-SxHY9AWfHTXUhK9yRU_Rndy0og",
+              "width": 44,
+              "height": 36
+            },
+            "large": {
+              "url": "https://v5.airtableusercontent.com/v3/u/48/48/1765821600000/EaaWVdQbETq1fBrFr0-3cw/AyC_dvr-KV7JmznW_9dEozH4MGUzCMUVE28-dSATtwJcN3VP7fo2vkyRknJkvYll_8xY0vuwrbUfQeQh43eisR9tQpidS_x5jR-xusRRY1tobXkv-Y325YvjxtileTXmAzJc_KEQMa47XJbcCsYRSg/TtPxOQtx-NZNrw2y7DpaRNDLuZZRPxQaIjGAgr53ZCQ",
+              "width": 621,
+              "height": 512
+            },
+            "full": {
+              "url": "https://v5.airtableusercontent.com/v3/u/48/48/1765821600000/Kljc9QbCRJwA5CF9utpzDg/lnpQEQTEDoVNhc_ehAYAVA9RbcULsDDPb4RhN1lJnaGzpGZU6BIZDPJj8i74sLu42NhBWXcIGMHLVI9O3RiOGu931s4paU_xkUKqxAZ7gfo5eaDfJMQXzAoqM8ZXEq2wezR2yRp52khzB3KGfjc3Lg/UzKamQ2lcFm1U9Nt_Tqj7mYyxaLWxKo9xyom8l0nRJI",
+              "width": 1368,
+              "height": 1128
+            }
+          }
+        }
+      ],
       "Org HQ Country": [
         "Netherlands"
       ]
@@ -3893,23 +4622,23 @@
           "id": "attmCDvbu94o2dLV0",
           "width": 1232,
           "height": 804,
-          "url": "https://v5.airtableusercontent.com/v3/u/48/48/1765332000000/TrHOKg0idX7JqD_p5KgWDw/8itwbjnO1CVRHnYFAqV18H-Tz2Tf-IZYFlVEIMMDFN48DOSgp1nHaROiDatXN2dxnclYhaehKcdft6vR3pNug--A97Sqz9j9T1mu9_FJCfk6PeZLFa8IrBXDbwkYALlZ8hH9NcT2zNNLobn13qIyQGtCSE5mz8QcFeEVEepFhqe8TKniliYxXyMut977YH26/A4Ciu5NYS9goej5F6jmjEawNTy5NNul3IH8zapXkqVY",
+          "url": "https://v5.airtableusercontent.com/v3/u/48/48/1765821600000/5GSAYsWvJPdCx0XEtKJXLg/KLkn_aheMT18y7j654gDjuiV6-7b2HEgXQQLYB69DFHO5SJFFXZv1hmqE7BG3w9ID0j_6uRw4GwlzZlaiz7TllqWcLA2LDNuBiKhhbDt3aJaq0srXBSfb3uXHZeFNa5tebktGuWAGABAqZj_2LLkhOd_JbyZLsaw0OsUbf0lWkoJ-5tgknuGQ7uULkAk5P6_/kqreGTv8cPHE-NcUj4Lk_uMYDZW3FKqMAVXlfYUI4No",
           "filename": "Screenshot 2025-12-04 at 4.46.40 PM.png",
           "size": 301556,
           "type": "image/png",
           "thumbnails": {
             "small": {
-              "url": "https://v5.airtableusercontent.com/v3/u/48/48/1765332000000/3TNBmV5ue5Fz-bIUMYLnEg/FhtnZFFizUmdnGnGIHhSrgc-m5_YQwE9fjn62m1aluhcky06x6vyPD8CF1BFUyTRPphgPhPdLn2bNJENgXs2nMjb1yQLDZbb7NAD8Yz3B1LjdIXXArmluJMt-ATgxnyVXtqZiCeERk-qraxbTvVDvw/kDDuoOXGDY0YkLprEVq9k1nIchEmsZWia67KZFw4hGc",
+              "url": "https://v5.airtableusercontent.com/v3/u/48/48/1765821600000/uG9LQ0ikR9EO8xHYT70opA/4bPj3V3E3MJ03-4QFIhpDCCDxAkSBl6Ql0V6_dBPMpREnkqERIhXlNeg5BpREjIBZ4AdhRuP0suGblgeltU0qIHyg5sraZtgCN1WIQl0CJTHWgjpGCB7HI-9VN8_xgqsBRBHe_lxmCBfcve_9t3tEQ/35_td8Iy4pziuMDLrsKYfNJWSZQU8_biyyRD2Fww3E8",
               "width": 55,
               "height": 36
             },
             "large": {
-              "url": "https://v5.airtableusercontent.com/v3/u/48/48/1765332000000/YzeToNtwphkgURP57WGafQ/8TxbzbhqH-Xk_O4mplT-YfXHI1l_cG-OV-GCgrU-WJsYNBaicfebU40VCOJAbyfRmuuWykqZOtZPy6h--F9GCohKjmTSAcZdvYo3MCiRipwNn2kvHgkByhtzhSfFmdFIPO9CFKpGKp7QNcAwwdVIow/Vbko-_RZ0Xe3gS2ZQai9ZitX9RQpZ-y9xYJScdyWZL0",
+              "url": "https://v5.airtableusercontent.com/v3/u/48/48/1765821600000/faMMRR8cHHTY6vcVCbihtQ/EbT06KDQyz02XBTMmr-uWHXt82SqApAb_xKYXpsI7Tbndcc4p9evn-saNvvOG460cYxHLQ8cKpippoYAPalf2ckOW3Gc5_o-B7nrgAGn8YIpcqjLgnyWQXj3PK6gE7YUemwY2iI_MQsxvThg6eop-g/OLrsbnpX_CtjMAa8uUdaxru8jdfGcqTUPBBYsTjlavM",
               "width": 785,
               "height": 512
             },
             "full": {
-              "url": "https://v5.airtableusercontent.com/v3/u/48/48/1765332000000/ouOsGPJIKzJc1WIjPGjn2w/9ZmadjmiPx28JGbQ5QdZ2ALQbRs4O-aLrMGJ1d9r4qo_GZygLt7NsJ_t3jj1_CPcMPmPA3agblwVAd5R4bibmg9ZO-izOvbp8teuxiBUQL_Tpd6zMmDSOPqlhIWghApq833gyhCnv28eE8PLsxm2Uw/BMlSlLn4EEzyFxoA8-hCjyPp_2FoNWB1sKgkyehEi8w",
+              "url": "https://v5.airtableusercontent.com/v3/u/48/48/1765821600000/s4tBiKKiivAuqJbUvrhnpQ/3wc1CBI8JKh8hDuNoLCgco8Lpp3rmBspMQvFLKJMHemZpYVIQj47TvtU2faRreYjbafABvD50doy1DtKx2iOZ30wn_QL18k5spSjQ6J7NrVEX3Xe4n8YpUah7vQt2CQcbpirh6bMGdcQflNeWCl9iA/bzV85TIAnB5stXM7Q8_TbSadmZfUcxm_l6Ba9_m4x-g",
               "width": 1232,
               "height": 804
             }
@@ -3947,7 +4676,6 @@
       ],
       "Org Programme Budget": "https://peacekeeping.un.org/en/how-we-are-funded",
       "Est. Org Budget": 5600000000,
-      "Has received CRAF'd Funding?": "NO",
       "org_key": "un-dpo",
       "Org Type": "United Nations System",
       "HDX Org Key": "unpeacesecurity",
@@ -3959,23 +4687,23 @@
           "id": "att5ZCrhCP5A6h8hg",
           "width": 784,
           "height": 92,
-          "url": "https://v5.airtableusercontent.com/v3/u/48/48/1765332000000/PwjaQUNH93D2nDxQpsnpmw/r00JHCGofNUwb3QnC2iEedlHGjWMbxv3iQ5FPdPbM4mH8wh-QVMTXCV1zJiT2AIkLP-Zo5MFgqPnmtCT2_sq9u8eSi7-1aLyjib1w7CAIT9_hPntO5EF3UzS3lmnr-Lggh9H30vCYIbGpkuQPR6uNYttnmWmsUXnqyH-UMFPw5YwYH4ulcapGXj49gByYpPh/JXFUsenaB0RkKDp7-KjOFstd0L8bV5jawOuE2pomiH8",
+          "url": "https://v5.airtableusercontent.com/v3/u/48/48/1765821600000/o9lZ3cIMpQlmTyBykQRV0A/QTK0oO0di8uFVg08oDMG0Vd0794Cr3USvOdfkHBfQZ993Fvgb-8JaAq7X9QVIWssp880161yNGIw73Sdw-Iipy_DkHgUrakF4E9eYRX0oY2_hFyRo43RvqFxfdpWjP1s6pBPKzAacbgAN7nCIC3be3sNKH4WvwJJHp16JGiBmcONfui4ANUwWKZMbdTBEUts/gc4vRDAws7srHKo6radC8EldDGDLxrXkWitucUVa1jY",
           "filename": "Screenshot 2025-12-04 at 4.19.30 PM.png",
           "size": 18485,
           "type": "image/png",
           "thumbnails": {
             "small": {
-              "url": "https://v5.airtableusercontent.com/v3/u/48/48/1765332000000/WgBRUKkhuYLsTQLRcn-DGw/yp7VhoKn0qKEIFMaxAydjWoN_wOR70ROOTygGJyiiPbZ1BGiAyXdb9fpQNld28Lr134ccrfzd93JM8Lf9eRLEBbnhg0qi4dIGTv_c2lYujWkB2kaCNgxiHWMcLnikL8-YvsbBZ15ayGRZAF-aD6VuQ/6P40As1xwhJBdBder8KHKQrSTIR5l0ANcwcjz53j4io",
+              "url": "https://v5.airtableusercontent.com/v3/u/48/48/1765821600000/1SDnrBRUYl6u_tWAvtAvrw/MovdRRwH1_CXCCo4nxIJ5NaSlONlf4qybH690OOWT6Jor_1VfSiliOnbPejEcxvLaUYd6aBbDu0z2wJF3RXWVyyUSFNUKdLaq-QcfpGaQXI0u_CyHIs5ZhhdzC7cJUAjG2DEEUHX3E2hMkN21Cvj7w/Pin46eOOlgUBZ_m1XXAbZGJ96DN6ypwmLcdqFN_F8Oc",
               "width": 307,
               "height": 36
             },
             "large": {
-              "url": "https://v5.airtableusercontent.com/v3/u/48/48/1765332000000/enVRl63fMasuOzo3njUKHA/1SWvWbpwv4a1o7sw_uuH5bnITOeA2DiDBYuqoq6MlxparCFEBU29lZ-aOImHtfN8TWi6QGYdtbja2e1lK61mah93-RaKl6bjpqwH6HhsEePeF9yhQQ4vTnUcQi7MfOoqNiVZFSDZtYEAJs4GFh7ncQ/PsBl9QrQ2YjctiNOig1hfmaxUwCK4se86qClkEpoIzM",
+              "url": "https://v5.airtableusercontent.com/v3/u/48/48/1765821600000/dMl99EVYKIO-OlBMX9TN5A/qyUbhPngV4OAboB8GPeH1nd_ztNOcAFiPD5KeopBDsW5UV0DZJKTbkiOyZOKSjS4uQptIBA9kXYGpCRTNzr_ytpJ7tVu0rzije6Zh3AvrTiqqGmVV-3LPFYsafEoH2lEs3i1HuZyk0X_nP1XkggrVg/8dOKyuWEBSbWuZF8gPNbJlteNomIYha_tx8LhiCsQfc",
               "width": 784,
               "height": 92
             },
             "full": {
-              "url": "https://v5.airtableusercontent.com/v3/u/48/48/1765332000000/q9hjFZovn8NqgG9R8L89PA/zznpN1np2vTNWbW92ODGrWDdzfLs3cV0rn3SWfKZhwQo8JKqpqN0ydfUZyHRCu_BmIBItLV0Mv5ExjzY5ghmI8HynmNfdKbRU9cA2bw2W7plKs9amuWJ3B5Xk0epTu2wf6FT0ZYzCa0RxbwSjEpzbA/WuAzHJ0eB9TieQ_kW4--7B0aue8e9McomVZyBzu9soM",
+              "url": "https://v5.airtableusercontent.com/v3/u/48/48/1765821600000/aRhpbSnHGla0AoCIaU-AdA/exVPCsW7V1A156K_I-iV3Df72UjzvgLMfEbTlPG-eYLID8mKORIvBLyClXnIbVwK53OyiaFoV8d3UjULyfPkWp3hV9vn5rKAUqETd3Xnwb4cd1SG-t4YN6MiIcfFDSovm-_KiK7bL0YZfO98K3BUzg/-5hg9K-hQYr5QrDxdz0dnEp8Y4DBkPpNTrydWYaaex8",
               "width": 784,
               "height": 92
             }
@@ -3984,7 +4712,8 @@
       ],
       "Org HQ Country": [
         "USA"
-      ]
+      ],
+      "Funding Type": "Core"
     }
   },
   {
@@ -4010,11 +4739,9 @@
         "recsrMWmoA037bW03",
         "recHSsEaPuaG3h2PQ"
       ],
-      "Has received CRAF'd Funding?": "YES",
       "org_key": "inform",
       "Org Type": "Network / Consortium",
       "HDX Org Key": "inform",
-      "Link to Budget Source": "none",
       "Org HQ Country": [
         "Belgium"
       ]
@@ -4033,11 +4760,9 @@
         "recqvGzOfmdkjYOHe"
       ],
       "Org IATI Name": "N/A",
-      "Has received CRAF'd Funding?": "NO",
       "org_key": "hera",
       "Org Type": "Non-Governmental Organization",
       "HDX Org Key": "hera-humanitarian-emergency-response-africa",
-      "Link to Budget Source": "none",
       "Org HQ Country": [
         "United Kingdom"
       ]
@@ -4062,11 +4787,9 @@
         "recf10RuM7qHUnC33"
       ],
       "Org IATI Name": "Insecurity Insight",
-      "Has received CRAF'd Funding?": "NO",
       "org_key": "insecurity-insight",
       "Org Type": "Non-Governmental Organization",
       "HDX Org Key": "insecurity-insight",
-      "Link to Budget Source": "none",
       "Org HQ Country": [
         "Switzerland"
       ]
@@ -4097,23 +4820,23 @@
           "id": "attMxCI8bZGwdNv8F",
           "width": 801,
           "height": 320,
-          "url": "https://v5.airtableusercontent.com/v3/u/48/48/1765332000000/GK-9iChbg3kG_-eFdPb_Rg/F-HgTZpDT1j7vcGFGVShQWq_7ZPtX7jK6prku7rxo3fR_Uitna5mgF0NjpbbgmBMvdZlNvwI9u2JFj374BZAoRVaHcBvGVNASQwtyf092a9IVyQ4MBHZnLi7cMRxTOr8a9_4-TiJiZmmG719N4pf_A/kACnm2iA3-w44VZyQOJ-JIrmU62UU6No2AZarJ0sjK8",
+          "url": "https://v5.airtableusercontent.com/v3/u/48/48/1765821600000/DR4N_kvUwCd4q_q7QQKLQw/s65D2AXCnVhFDFir7cTkKFQ5M7WymxL5bQZOgX58gx88N5ieMmkVpGdEjYUlsF4cdKFqMCuIsHJ_LKkcn59jFPxhghL5Drg3ABnopuv0c0-AlRUGt-ORooPaFOSaIUD1Rik_0dqc9QEWEh_ClvAg2w/l7frZ8_FHolso8-Ly-eeV4iqBG_uhnfX8HubbHkWIrA",
           "filename": "image.png",
           "size": 59677,
           "type": "image/png",
           "thumbnails": {
             "small": {
-              "url": "https://v5.airtableusercontent.com/v3/u/48/48/1765332000000/0fozeUNZ5WJfu8l2BvUyHw/19mTmZkGiRYCgYsg-TpG4bz8tkIgqojPy__qBEbWKyouI85fGBTeNyapZpM4dOkpBr4KnhnCTXSAHCJ-7oz2m8CN9T4Ft7GG_dwnwsr2XRcYNGiGA1Tq7NTNWpSWrAMcvAxJDkDxoB9P52dR630yow/hIoTZ0UDkwIRW2mwsLL_hqbg2E7f5nfsUmzMxuj35z8",
+              "url": "https://v5.airtableusercontent.com/v3/u/48/48/1765821600000/aZy8BxGcs-ZvfX6QQ-t_SA/nYaJMXTfs8_xjIw6oNBZ7FxpUjl8MIF2Rbaqr0GWKZzzkCAunf_4cslNUyUU7RMMO3W9EpDC8IFNnpN_BhA-QYvEj382Aa6d82qT9NNo9LKUQyjA6UC-Sv9CjXFb3c8vwr6IgaGvUMHiPoif7sCq1A/zCLUYYx0xJQbQF8W2Q01wlB-I5Oxc-6xxCRcehZxwFw",
               "width": 90,
               "height": 36
             },
             "large": {
-              "url": "https://v5.airtableusercontent.com/v3/u/48/48/1765332000000/9Z6TOVr9Qk9rcwerMc2VQQ/ZWCCQG2Gx62G3RVaGAQxd4uAnYmLXf9zczxDTf-o7RUmK6TKcqSoXxW4hVsVrhhFN7bg8AfZt8JGKCQpI-nli7dtmb6gKGQOctiz7Kh6iuNzhCO_UmFhyCFjkKFX5UEnsXqbCMcR95c07kvXjUoJVw/VfCsJDirsXn9Ex-KHqMu0rqvnJUbVsxRBrkHFe-BTKQ",
+              "url": "https://v5.airtableusercontent.com/v3/u/48/48/1765821600000/BHSi4w-e0xj_GBXU2I_76Q/CsDVn2_ISqlfrPxNICLXcV-UAoowlvYgl8FryzLa0_veAEVuQymoT6x7Bt6hQyrP1oZSpMkE-IaKDXAj75NcneQ8Y9Onp2MM-08Ap4pCwRLf-gmuwodV3HMmExoYuq6KkO2e94dKVOVzhb9ACPkzNw/T1jIzlTzGmIUcAPGtfi2bRZbS7CFFGEE3j4XCFuz_sY",
               "width": 801,
               "height": 320
             },
             "full": {
-              "url": "https://v5.airtableusercontent.com/v3/u/48/48/1765332000000/YXBMRJuy2wplqvyU6xltTQ/8l63bs4_f5flIKWeS--ZUMJSYBUtYKwXY-XFjG8lNXyqmVsRQgJSK3eCMB9QjOySmU9ZFQvhPyqeB7Os0ZbHy2ElTZtt_1VIzhXoxgBI5buX2qTwEgNprO_VlsDUCj1Iai5tOjc7mylqe0HHtIHuuA/vVds_CErvxYiT5RiraH8qdrH05WRXtMpTmPC9teXkYs",
+              "url": "https://v5.airtableusercontent.com/v3/u/48/48/1765821600000/6gnZGrXx9DWNtrEikOOvLA/EgmR5T3pzTrChEiODDQKaWGJ3Nu6GGBOQ1I1ZRyTJx3NVeJGzc7fm2DoWrvaIf707BWy6vIlT3c8Z6n7ECbM_S4sU6u3URFaWdiU7ZNxtS8uWWoJuxtGRhPrUUROIDzXDoIUYIE-aMzrFXqKxJjWVg/Fgj-cP2qXJCu50aST6pjvySe4PAPw4TpYYvf2kt8Bfg",
               "width": 801,
               "height": 320
             }
