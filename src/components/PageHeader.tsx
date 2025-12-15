@@ -204,7 +204,11 @@ export default function PageHeader({
                                 className="w-auto min-w-[180px] bg-white border border-slate-200 shadow-lg"
                             >
                                 <DropdownMenuItem 
-                                    onClick={() => router.push('/')}
+                                    onClick={() => {
+                                        const q = searchParams?.toString();
+                                        const target = q ? `/?${q}` : '/';
+                                        router.push(target);
+                                    }}
                                     className={`cursor-pointer text-sm py-2 px-2 ${pathname === '/' ? 'bg-slate-100' : ''}`}
                                 >
                                     <span className={pathname === '/' ? '!font-bold' : ''}>{labels.header.dashboard}</span>
