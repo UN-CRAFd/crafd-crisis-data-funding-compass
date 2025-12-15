@@ -1,7 +1,8 @@
 'use client';
 
 import { Building2, ChevronDown, ChevronUp, ExternalLink, Image, Info, Package, PackageOpen } from 'lucide-react';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
+import { getMemberStates } from '@/lib/data';
 import ModalOrganizationFocus from './ModalOrganizationFocus';
 import BaseModal, { ModalHeader, CountryBadge, ModalTooltip } from './BaseModal';
 import { getIconForInvestmentType } from '@/config/investmentTypeIcons';
@@ -55,6 +56,12 @@ export default function OrganizationModal({
     onOpenDonorModal,
     onTypeClick
 }: OrganizationModalProps): React.ReactElement {
+    const [memberStates, setMemberStates] = useState<string[]>([]);
+
+    // Load member states on mount
+    useEffect(() => {
+        getMemberStates().then(states => setMemberStates(states));
+    }, []);
 
     // Reusable subheader component - Major sections (Assets, Funding) - smaller than main title
     const SubHeader = ({ children }: { children: React.ReactNode }) => (
@@ -611,6 +618,7 @@ export default function OrganizationModal({
                                         const projectAgenciesForDonor = !donor.isOrgLevel && projectsForDonor ? 
                                             getUniqueAgenciesForProjects(projectsForDonor, orgProjectDonorAgencies[donor.country] || {}) 
                                             : undefined;
+                                        const isMemberState = memberStates.includes(donor.country);
                                         
                                         return (
                                             <div 
@@ -624,6 +632,7 @@ export default function OrganizationModal({
                                                     projectsForDonor={projectsForDonor}
                                                     projectAgenciesForDonor={projectAgenciesForDonor}
                                                     tooltipContainer={tooltipContainer}
+                                                    isMemberState={isMemberState}
                                                 />
                                             </div>
                                         );
