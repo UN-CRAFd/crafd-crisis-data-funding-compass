@@ -11,6 +11,7 @@ import dynamic from 'next/dynamic';
 import OrganizationModal from '@/components/OrganizationModal';
 import ProjectModal from '@/components/ProjectModal';
 import DonorModal from '@/components/DonorModal';
+import DonorTable from '@/components/DonorTable';
 import SurveyBanner from '@/components/SurveyBanner';
 import { Button } from '@/components/ui/button';
 import { matchesUrlSlug } from '@/lib/urlShortcuts';
@@ -116,7 +117,7 @@ interface CrisisDataDashboardProps {
     onDonorClick?: (country: string) => void;
     onTypeClick?: (type: string) => void;
     onThemeClick?: (theme: string) => void;
-    onViewChange?: (view: 'table' | 'network') => void;
+    onViewChange?: (view: 'table' | 'network' | 'donors') => void;
     logoutButton?: React.ReactNode;
 }
 
@@ -291,7 +292,7 @@ const CrisisDataDashboard = ({
     const [expandedOrgs, setExpandedOrgs] = useState<Set<string>>(new Set());
     const [expandedCountries, setExpandedCountries] = useState<Set<string>>(new Set());
     const [sortMenuOpen, setSortMenuOpen] = useState(false);
-    const [activeView, setActiveView] = useState<'table' | 'network'>('table'); // Add view state
+    const [activeView, setActiveView] = useState<'table' | 'network' | 'donors'>('table'); // Add view state
 
     // Enforce table-only on small screens (mobile). Hide view switcher on mobile via responsive classes.
     useEffect(() => {
@@ -1090,7 +1091,7 @@ const CrisisDataDashboard = ({
                                     </div>
                                 )}
                                 {/* View Toggle Switch Tabs */}
-                                <Tabs value={activeView} onValueChange={(value) => setActiveView(value as 'table' | 'network')} className="w-auto hidden sm:flex">
+                                <Tabs value={activeView} onValueChange={(value) => setActiveView(value as 'table' | 'network' | 'donors')} className="w-auto hidden sm:flex">
                                     <TabsList className="h-7 p-0.5 bg-slate-50 border border-slate-200 rounded-md">
                                         <TabsTrigger
                                             value="table"
@@ -1098,6 +1099,13 @@ const CrisisDataDashboard = ({
                                         >
                                             <Table className="h-3 w-3 mr-1.5" />
                                             Table
+                                        </TabsTrigger>
+                                        <TabsTrigger
+                                            value="donors"
+                                            className="h-6 px-2.5 text-[11px] font-medium rounded-md transition-all data-[state=active]:bg-white data-[state=active]:shadow-sm data-[state=active]:border data-[state=active]:border-slate-200 data-[state=active]:text-slate-800 text-slate-600 bg-slate-50 border-none"
+                                        >
+                                            <Globe className="h-3 w-3 mr-1.5" />
+                                            Donors
                                         </TabsTrigger>
                                         <TabsTrigger
                                             value="network"
@@ -1454,6 +1462,20 @@ const CrisisDataDashboard = ({
                                         {organizationsWithProjects.length === 0 && activeView === 'table' && (
                                             <NoResultsPopup onResetFilters={onResetFilters} />
                                         )}
+                                            </TabsContent>
+
+                                            <TabsContent value="donors" className="mt-0">
+                                                <DonorTable
+                                                    organizationsWithProjects={organizationsWithProjects}
+                                                    nestedOrganizations={nestedOrganizations}
+                                                    organizationsTable={organizationsTable}
+                                                    onOpenOrganizationModal={onOpenOrganizationModal}
+                                                    onOpenProjectModal={onOpenProjectModal}
+                                                    combinedDonors={combinedDonors}
+                                                />
+                                                {organizationsWithProjects.length === 0 && activeView === 'donors' && (
+                                                    <NoResultsPopup onResetFilters={onResetFilters} />
+                                                )}
                                             </TabsContent>
 
                                             <TabsContent value="network" className="mt-0">
