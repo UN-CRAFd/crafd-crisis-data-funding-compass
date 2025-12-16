@@ -92,6 +92,19 @@ export const DonorTable: React.FC<DonorTableProps> = ({
     const [expandedOrgs, setExpandedOrgs] = useState<Set<string>>(new Set());
     const [expandedAgencies, setExpandedAgencies] = useState<Set<string>>(new Set());
 
+    // Helper to sanitize names for matching (remove parentheses and extra punctuation)
+    const sanitizeForMatch = (input?: any) => {
+        if (input === null || input === undefined) return '';
+        try {
+            const s = String(input);
+            // Remove parenthetical content e.g. "Norway (Ministry)" -> "Norway"
+            const noParens = s.replace(/\s*\([^)]*\)\s*/g, ' ');
+            // Collapse whitespace and trim
+            return noParens.replace(/\s+/g, ' ').trim();
+        } catch (e) {
+            return String(input || '');
+        }
+    };
     // Get tips enabled state
     let tipsEnabled = false;
     try {
@@ -385,9 +398,9 @@ export const DonorTable: React.FC<DonorTableProps> = ({
                                                                             const countryValues = Array.isArray(agencyCountry) ? agencyCountry : [agencyCountry];
                                                                             belongsToDonor = countryValues.some((c: any) => {
                                                                                 try {
-                                                                                    return matchesUrlSlug(donor, String(c));
+                                                                                    return matchesUrlSlug(sanitizeForMatch(donor), sanitizeForMatch(String(c)));
                                                                                 } catch {
-                                                                                    return (typeof c === 'string' ? c.trim() : c?.toString() || '').toLowerCase() === donor.toLowerCase();
+                                                                                    return sanitizeForMatch(typeof c === 'string' ? c.trim() : c?.toString() || '').toLowerCase() === sanitizeForMatch(donor).toLowerCase();
                                                                                 }
                                                                             });
                                                                         }
@@ -568,9 +581,9 @@ export const DonorTable: React.FC<DonorTableProps> = ({
                                                                                 const donorValues = Array.isArray(donorField) ? donorField : [donorField];
                                                                                 belongsToDonor = donorValues.some((d: any) => {
                                                                                     try {
-                                                                                        return matchesUrlSlug(donor, String(d));
+                                                                                        return matchesUrlSlug(sanitizeForMatch(donor), sanitizeForMatch(String(d)));
                                                                                     } catch {
-                                                                                        return (typeof d === 'string' ? d.trim() : d?.toString() || '').toLowerCase() === donor.toLowerCase();
+                                                                                        return sanitizeForMatch(typeof d === 'string' ? d.trim() : d?.toString() || '').toLowerCase() === sanitizeForMatch(donor).toLowerCase();
                                                                                     }
                                                                                 });
                                                                             }
@@ -580,9 +593,9 @@ export const DonorTable: React.FC<DonorTableProps> = ({
                                                                                 const countryValues = Array.isArray(agencyCountry) ? agencyCountry : [agencyCountry];
                                                                                 belongsToDonor = countryValues.some((c: any) => {
                                                                                     try {
-                                                                                        return matchesUrlSlug(donor, String(c));
+                                                                                        return matchesUrlSlug(sanitizeForMatch(donor), sanitizeForMatch(String(c)));
                                                                                     } catch {
-                                                                                        return (typeof c === 'string' ? c.trim() : c?.toString() || '').toLowerCase() === donor.toLowerCase();
+                                                                                        return sanitizeForMatch(typeof c === 'string' ? c.trim() : c?.toString() || '').toLowerCase() === sanitizeForMatch(donor).toLowerCase();
                                                                                     }
                                                                                 });
                                                                             }
