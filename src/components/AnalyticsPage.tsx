@@ -182,6 +182,7 @@ export default function AnalyticsPage({ logoutButton }: AnalyticsPageProps) {
     const [appliedSearchQuery, setAppliedSearchQuery] = useState('');
     const [isInitialized, setIsInitialized] = useState(false);
     const [hoveredCell, setHoveredCell] = useState<{ donor1: string; donor2: string } | null>(null);
+    const [hoveredDonor, setHoveredDonor] = useState<string | null>(null);
     const [matrixViewMode, setMatrixViewMode] = useState<'unified' | 'split'>('split');
     
     // Load filter state from URL on mount — accept both long and short param keys
@@ -1848,80 +1849,115 @@ export default function AnalyticsPage({ logoutButton }: AnalyticsPageProps) {
                         </CardHeader>
 
                         <CardContent className="pt-2">
-                        <div className="w-full h-[340px]">
-                            {/* Type legend with icons */}
-                            <div className="flex flex-wrap gap-3 items-center mb-3">
-                                {Object.values(labels.investmentTypes).map((t) => {
-                                    const Icon = getIconForInvestmentType(t);
-                                    return (
-                                        <div key={t} className="flex items-center gap-2 px-2 py-1 rounded text-sm bg-[var(--badge-other-bg)] border border-[var(--badge-other-border)] text-[var(--badge-other-text)]">
-                                            <Icon className="w-4 h-4 text-[var(--badge-other-icon)]" />
-                                            <span className="text-xs font-medium">{t}</span>
-                                        </div>
-                                    );
-                                })}
+                        <div className="w-full">
+                            <div className="flex flex-col lg:flex-row items-start gap-6">
+                                {/* Left: Much larger Radar Chart */}
+                                <div className="flex-1 min-w-0 h-[640px] lg:h-[720px]">
+                                    <ResponsiveContainer width="100%" height="100%">
+                                        <RadarChart
+                                            data={donorInvestmentFocus}
+                                            outerRadius="86%"
+                                            margin={{ top: 24, right: 8, bottom: 56, left: 8 }}
+                                        >
+                                            <PolarGrid stroke="#e2e8f0" />
+
+                                            <PolarAngleAxis
+                                                dataKey="name"
+                                                tick={({ x, y, payload }) => {
+                                                    const Icon = getIconForInvestmentType(payload.value);
+                                                    // Use up to two words for clearer labels
+                                                    const labelText = (payload.value || '').split(' ').slice(0, 2).join(' ');
+                                                    return (
+                                                        <g key={payload.value} transform={`translate(${x},${y})`}>
+                                                            <foreignObject x="-40" y="-40" width="80" height="80">
+                                                                <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', gap: '6px', color: '#334155', fontWeight: 600, lineHeight: 1 }}>
+                                                                    <div style={{ width: 28, height: 28, display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+                                                                        <Icon style={{ width: '22px', height: '22px', color: 'var(--badge-other-icon)' }} />
+                                                                    </div>
+                                                                    <div style={{ maxWidth: '68px', textAlign: 'center', wordBreak: 'break-word', fontSize: '13px' }}>
+                                                                        {labelText}
+                                                                    </div>
+                                                                </div>
+                                                            </foreignObject>
+                                                        </g>
+                                                    );
+                                                }}
+                                                tickLine={false}
+                                            />
+
+                                            <PolarRadiusAxis
+                                                domain={[0, 100]}
+                                                tickCount={4}
+                                                tick={{ fontSize: 12, fill: '#94a3b8' }}
+                                                axisLine={false}
+                                                angle={90}
+                                            />
+
+                                            {selectedDonors.map((donor, index) => {
+                                                const purplePalette = [
+                                                    '#8b5cf6',
+                                                    '#7c3aed',
+                                                    '#6d28d9',
+                                                    '#5b21b6',
+                                                    '#4c1d95',
+                                                ];
+
+                                                const color = purplePalette[index % purplePalette.length];
+                                                const seriesOpacity = hoveredDonor === null ? 1 : (hoveredDonor === donor ? 1 : 0.12);
+                                                const fillOp = hoveredDonor === null ? 0.28 : (hoveredDonor === donor ? 0.5 : 0.06);
+
+                                                return (
+                                                    <Radar
+                                                        key={donor}
+                                                        name={donor}
+                                                        dataKey={donor}
+                                                        stroke={color}
+                                                        fill={color}
+                                                        fillOpacity={fillOp}
+                                                        dot={false}
+                                                        isAnimationActive={false}
+                                                        style={{ opacity: seriesOpacity }}
+                                                    />
+                                                );
+                                            })}
+
+                                            <Legend
+                                                verticalAlign="bottom"
+                                                align="center"
+                                                iconType="line"
+                                                wrapperStyle={{ fontSize: 13, paddingTop: 12 }}
+                                                height={40}
+                                            />
+                                        </RadarChart>
+                                    </ResponsiveContainer>
+                                </div>
+
+                                {/* Right: Donor hover boxes */}
+                                <div className="w-full lg:w-56 flex-shrink-0">
+                                    <div className="flex flex-col gap-2 sticky top-8">
+                                        {selectedDonors.map((donor, idx) => {
+                                            const isActive = hoveredDonor === null || hoveredDonor === donor;
+                                            const baseColor = ['#8b5cf6', '#7c3aed', '#6d28d9', '#5b21b6'][idx % 4];
+                                            return (
+                                                <div
+                                                    key={donor}
+                                                    onMouseEnter={() => setHoveredDonor(donor)}
+                                                    onMouseLeave={() => setHoveredDonor(null)}
+                                                    className={`flex items-center gap-3 p-2 rounded-md border transition-all cursor-pointer ${isActive ? 'bg-white shadow-sm' : 'bg-slate-50 opacity-60'}`}
+                                                >
+                                                    <div className="flex-shrink-0 h-8 w-8 rounded-full flex items-center justify-center" style={{ background: baseColor }}>
+                                                        <span className="text-white text-xs font-semibold">{donor.charAt(0)}</span>
+                                                    </div>
+                                                    <div className="min-w-0">
+                                                        <div className="text-sm font-medium text-slate-800 truncate">{donor}</div>
+                                                        <div className="text-xs text-slate-500 truncate">{(donorTotals[donor]?.projects.size || 0)} projects</div>
+                                                    </div>
+                                                </div>
+                                            );
+                                        })}
+                                    </div>
+                                </div>
                             </div>
-                            <ResponsiveContainer width="100%" height="100%">
-                           <RadarChart
-  data={donorInvestmentFocus}
-  outerRadius="62%"
-  margin={{ top: 32, right: 32, bottom: 32, left: 32 }}
->
-  <PolarGrid stroke="#e2e8f0" />
-
-  <PolarAngleAxis
-    dataKey="name"
-    tick={{
-      fontSize: 11,
-      fill: '#475569',
-      fontWeight: 500,
-    }}
-    tickLine={false}
-  />
-
-  <PolarRadiusAxis
-    domain={[0, 100]}
-    tickCount={3}
-    tick={{ fontSize: 10, fill: '#94a3b8' }}
-    axisLine={false}
-    angle={90}
-  />
-
-    {selectedDonors.map((donor, index) => {
-        const purplePalette = [
-            'var(--badge-other-icon)',
-            'var(--badge-other-border)',
-            '#8b5cf6',
-            '#7c3aed',
-            '#6d28d9',
-            '#5b21b6',
-        ];
-
-        const color = purplePalette[index % purplePalette.length];
-
-        return (
-            <Radar
-                key={donor}
-                name={donor}
-                dataKey={donor}
-                stroke={color}
-                fill={color}
-                fillOpacity={0.18}
-                dot={false}
-                isAnimationActive={false}
-            />
-        );
-    })}
-
-  <Legend
-    verticalAlign="top"
-    align="center"
-    iconType="line"
-    wrapperStyle={{ fontSize: 12, paddingBottom: 8 }}
-  />
-</RadarChart>
- 
-                            </ResponsiveContainer>
                         </div>
 
                         <p className="mt-2 text-xs text-slate-500">
