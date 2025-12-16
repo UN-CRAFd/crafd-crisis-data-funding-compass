@@ -1838,7 +1838,7 @@ export default function AnalyticsPage({ logoutButton }: AnalyticsPageProps) {
                     {/* Investment Focus Radar Chart */}
                     { /* Hide entire card when no donors selected */ }
                     {selectedDonors.length > 0 && donorInvestmentFocus.length > 0 && (
-                    <Card className="!border-0 bg-white">
+                    <Card className="hidden !border-0 bg-white">
                         <CardHeader className="pb-2">
                         <div className="flex flex-col gap-1">
                             <SectionHeader
@@ -1970,7 +1970,7 @@ export default function AnalyticsPage({ logoutButton }: AnalyticsPageProps) {
 
                     
                     {/* Charts Row */}
-                    <div className={`${selectedDonors.length === 0 ? 'hidden' : ''} grid grid-cols-1 lg:grid-cols-2 gap-4`}>
+                    <div className={`${selectedDonors.length === 0 ? 'hidden' : 'hidden'} grid grid-cols-1 lg:grid-cols-2 gap-4`}>
                         <div>
                             <ChartCard
                                 title="Co-Financing Donors"
