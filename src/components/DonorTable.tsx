@@ -6,6 +6,7 @@ import { getIconForInvestmentType } from '@/config/investmentTypeIcons';
 import { useTips } from '@/contexts/TipsContext';
 import { TooltipContent, TooltipProvider, TooltipTrigger, Tooltip as TooltipUI } from '@/components/ui/tooltip';
 import labels from '@/config/labels.json';
+import { matchesUrlSlug } from '@/lib/urlShortcuts';
 import type { OrganizationWithProjects, ProjectData } from '@/types/airtable';
 
 interface DonorTableProps {
@@ -44,6 +45,7 @@ const Badge = ({ text, variant, className = '', title }: BadgeProps) => {
         emerald: 'bg-emerald-50 text-emerald-700',
         violet: 'bg-violet-50 text-violet-700',
         indigo: 'bg-[var(--badge-other-bg)] text-[var(--badge-other-text)] font-semibold',
+        agency: 'bg-[var(--badge-agency-bg)] text-[var(--badge-agency-text)]',
         types: 'bg-green-50 text-green-700',
         slate: 'bg-[var(--badge-slate-bg)] text-[var(--badge-slate-text)]',
         highlighted: 'bg-[var(--brand-primary)]/20 text-[var(--brand-primary)] border border-[var(--brand-border)] font-semibold',
@@ -354,21 +356,26 @@ export const DonorTable: React.FC<DonorTableProps> = ({
                                                                     const agencyNames = new Set<string>();
                                                                     agencies.forEach((agency: any) => {
                                                                         // Get the country/donor from this agency
-                                                                        const agencyCountry = agency.fields?.['Country Name'] || 
-                                                                                            agency.fields?.['Country'] || 
-                                                                                            agency.fields?.['Agency Associated Country'];
-                                                                        
+                                                                        const agencyCountry = agency.fields?.['Country Name'] ||
+                                                                                            agency.fields?.['Country'] ||
+                                                                                            agency.fields?.['Agency Associated Country'] ||
+                                                                                            agency.fields?.['Agency/Department Country'];
+
                                                                         // Check if this agency's country matches the current donor we're iterating
                                                                         let belongsToDonor = false;
                                                                         if (agencyCountry) {
                                                                             const countryValues = Array.isArray(agencyCountry) ? agencyCountry : [agencyCountry];
-                                                                            belongsToDonor = countryValues.some((c: any) => 
-                                                                                (typeof c === 'string' ? c.trim() : c?.toString() || '').toLowerCase() === donor.toLowerCase()
-                                                                            );
+                                                                            belongsToDonor = countryValues.some((c: any) => {
+                                                                                try {
+                                                                                    return matchesUrlSlug(donor, String(c));
+                                                                                } catch {
+                                                                                    return (typeof c === 'string' ? c.trim() : c?.toString() || '').toLowerCase() === donor.toLowerCase();
+                                                                                }
+                                                                            });
                                                                         }
-                                                                        
+
                                                                         if (belongsToDonor) {
-                                                                            const agencyName = agency.fields?.['Agency Name'] || agency.fields?.['Funding Agency'];
+                                                                            const agencyName = agency.fields?.['Agency Name'] || agency.fields?.['Funding Agency'] || agency.fields?.['Agency/Department Name'];
                                                                             if (agencyName) {
                                                                                 if (Array.isArray(agencyName)) {
                                                                                     agencyName.forEach(name => {
@@ -395,7 +402,7 @@ export const DonorTable: React.FC<DonorTableProps> = ({
                                                                                 <Badge
                                                                                     key={idx}
                                                                                     text={agency}
-                                                                                    variant="indigo"
+                                                                                    variant="agency"
                                                                                     className="text-[9px] sm:text-[10px]"
                                                                                     title={`Funding Agency: ${agency}`}
                                                                                 />
@@ -511,18 +518,7 @@ export const DonorTable: React.FC<DonorTableProps> = ({
                                                             </div>
                                                             <div>
                                                                 <div className="flex flex-wrap gap-0.5">
-                                                                    {project.donorCountries && project.donorCountries.length > 0 ? (
-                                                                        project.donorCountries.map((country, idx) => (
-                                                                            <Badge 
-                                                                                key={idx} 
-                                                                                text={country} 
-                                                                                variant={combinedDonors.includes(country) ? 'blue' : 'slate'}
-                                                                                className="text-[9px] sm:text-[10px]"
-                                                                            />
-                                                                        ))
-                                                                    ) : (
-                                                                        <span className="text-xs text-slate-500">{labels.modals.assetDonorsNotSpecified}</span>
-                                                                    )}
+                                                                    
                                                                 </div>
                                                                 {/* Agency badges for project */}
                                                                 <div className="flex flex-wrap gap-1 mt-1">
@@ -540,31 +536,40 @@ export const DonorTable: React.FC<DonorTableProps> = ({
                                                                             // Check if this agency belongs to the current donor
                                                                             // Look for donor field first, then fall back to country fields
                                                                             const donorField = agency.fields?.['Donor'] || agency.fields?.['Funding Country'] || agency.fields?.['Organization Donor'];
-                                                                            const agencyCountry = agency.fields?.['Country Name'] || 
-                                                                                                agency.fields?.['Country'] || 
-                                                                                                agency.fields?.['Agency Associated Country'];
-                                                                            
+                                                                            const agencyCountry = agency.fields?.['Country Name'] ||
+                                                                                                agency.fields?.['Country'] ||
+                                                                                                agency.fields?.['Agency Associated Country'] ||
+                                                                                                agency.fields?.['Agency/Department Country'];
+
                                                                             // Check if agency belongs to current donor
                                                                             let belongsToDonor = false;
-                                                                            
+
                                                                             // Check donor field first
                                                                             if (donorField) {
                                                                                 const donorValues = Array.isArray(donorField) ? donorField : [donorField];
-                                                                                belongsToDonor = donorValues.some((d: any) => 
-                                                                                    (typeof d === 'string' ? d.trim() : d?.toString() || '').toLowerCase() === donor.toLowerCase()
-                                                                                );
+                                                                                belongsToDonor = donorValues.some((d: any) => {
+                                                                                    try {
+                                                                                        return matchesUrlSlug(donor, String(d));
+                                                                                    } catch {
+                                                                                        return (typeof d === 'string' ? d.trim() : d?.toString() || '').toLowerCase() === donor.toLowerCase();
+                                                                                    }
+                                                                                });
                                                                             }
-                                                                            
+
                                                                             // Fall back to country field if no donor field match
                                                                             if (!belongsToDonor && agencyCountry) {
                                                                                 const countryValues = Array.isArray(agencyCountry) ? agencyCountry : [agencyCountry];
-                                                                                belongsToDonor = countryValues.some((c: any) => 
-                                                                                    (typeof c === 'string' ? c.trim() : c?.toString() || '').toLowerCase() === donor.toLowerCase()
-                                                                                );
+                                                                                belongsToDonor = countryValues.some((c: any) => {
+                                                                                    try {
+                                                                                        return matchesUrlSlug(donor, String(c));
+                                                                                    } catch {
+                                                                                        return (typeof c === 'string' ? c.trim() : c?.toString() || '').toLowerCase() === donor.toLowerCase();
+                                                                                    }
+                                                                                });
                                                                             }
-                                                                            
+
                                                                             if (belongsToDonor) {
-                                                                                const agencyName = agency.fields?.['Agency Name'] || agency.fields?.['Funding Agency'];
+                                                                                const agencyName = agency.fields?.['Agency Name'] || agency.fields?.['Funding Agency'] || agency.fields?.['Agency/Department Name'];
                                                                                 if (agencyName) {
                                                                                     if (Array.isArray(agencyName)) {
                                                                                         agencyName.forEach(name => {
