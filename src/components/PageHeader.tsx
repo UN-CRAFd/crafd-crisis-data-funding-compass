@@ -5,6 +5,8 @@ import { TooltipContent, TooltipProvider, Tooltip as TooltipUI, TooltipTrigger }
 import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuTrigger } from '@/components/ui/dropdown-menu';
 import { ChevronDown, FileDown, Info, MessageCircle, Share2, Menu, Lightbulb, LogOut, Home, BarChart3, BookOpen } from 'lucide-react';
 import { useTips } from '@/contexts/TipsContext';
+import { useGeneralContributions } from '@/contexts/GeneralContributionsContext';
+import { setGeneralContributionsEnabled } from '@/lib/data';
 import labels from '@/config/labels.json';
 import Link from 'next/link';
 import { usePathname, useRouter, useSearchParams } from 'next/navigation';
@@ -57,6 +59,24 @@ export default function PageHeader({
         // TipsProvider not available (e.g., during prerendering)
         // Use default values
     }
+
+    // Use General Contributions context - will render without provider as fallback
+    let showGeneralContributions = true;
+    let setShowGeneralContributionsLocal: (enabled: boolean) => void = () => {};
+    
+    try {
+        const genContContext = useGeneralContributions();
+        showGeneralContributions = genContContext.showGeneralContributions;
+        setShowGeneralContributionsLocal = genContContext.setShowGeneralContributions;
+    } catch (e) {
+        // GeneralContributionsProvider not available - use defaults
+    }
+
+    const handleGeneralContributionsToggle = () => {
+        const newValue = !showGeneralContributions;
+        setShowGeneralContributionsLocal(newValue);
+        setGeneralContributionsEnabled(newValue);
+    };
 
     return (
         <div className="fixed top-0 left-0 right-0 z-50 bg-white border-b border-slate-200">
@@ -257,7 +277,7 @@ export default function PageHeader({
                                     </div>
                                 </DropdownMenuItem>
 
-                                {/* Settings block: Tips toggle + placeholder action */}
+                                {/* Settings block: Tips toggle + General Contributions toggle */}
                                 <div className="border-t border-slate-100 mt-1 pt-2 px-2">
                                     <div className="text-xs font-semibold text-slate-600 mb-1">Settings</div>
                                     <div className="flex flex-col">
@@ -271,11 +291,11 @@ export default function PageHeader({
                                         </button>
                                         <button
                                             type="button"
-                                            onClick={() => {}}
+                                            onClick={handleGeneralContributionsToggle}
                                             className="w-full text-left flex items-center gap-2 text-sm py-2 px-2 text-slate-700 hover:bg-slate-50"
                                         >
                                             <Info className="w-4 h-4" />
-                                            <span>Turn off General Contributions</span>
+                                            <span>{showGeneralContributions ? 'Turn off' : 'Turn on'} General Contributions</span>
                                         </button>
                                     </div>
                                 </div>
