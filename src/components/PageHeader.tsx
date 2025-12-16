@@ -76,6 +76,8 @@ export default function PageHeader({
         const newValue = !showGeneralContributions;
         setShowGeneralContributionsLocal(newValue);
         setGeneralContributionsEnabled(newValue);
+        // Reload the page to update data with new setting
+        window.location.reload();
     };
 
     return (
@@ -294,8 +296,8 @@ export default function PageHeader({
                                             onClick={handleGeneralContributionsToggle}
                                             className="w-full text-left flex items-center gap-2 text-sm py-2 px-2 text-slate-700 hover:bg-slate-50"
                                         >
-                                            <Info className="w-4 h-4" />
-                                            <span>{showGeneralContributions ? 'Turn off' : 'Turn on'} General Contributions</span>
+                                            <Lightbulb className={`w-4 h-4 ${showGeneralContributions ? '' : 'opacity-50'}`} />
+                                            <span>{showGeneralContributions ? 'General Contributions on' : 'General Contributions off'}</span>
                                         </button>
                                     </div>
                                 </div>

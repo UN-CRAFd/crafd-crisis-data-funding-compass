@@ -1,6 +1,6 @@
 'use client';
 
-import React, { createContext, useContext, useState } from 'react';
+import React, { createContext, useContext, useState, useEffect } from 'react';
 
 interface GeneralContributionsContextType {
     showGeneralContributions: boolean;
@@ -11,6 +11,30 @@ const GeneralContributionsContext = createContext<GeneralContributionsContextTyp
 
 export const GeneralContributionsProvider: React.FC<{ children: React.ReactNode }> = ({ children }) => {
     const [showGeneralContributions, setShowGeneralContributions] = useState(true);
+    const [isLoaded, setIsLoaded] = useState(false);
+
+    // Load from localStorage on mount
+    useEffect(() => {
+        try {
+            const stored = localStorage.getItem('showGeneralContributions');
+            if (stored !== null) {
+                setShowGeneralContributions(stored === 'true');
+            }
+        } catch (error) {
+            console.warn('Failed to load General Contributions state from localStorage:', error);
+        }
+        setIsLoaded(true);
+    }, []);
+
+    // Save to localStorage whenever state changes (only after initial load)
+    useEffect(() => {
+        if (!isLoaded) return;
+        try {
+            localStorage.setItem('showGeneralContributions', String(showGeneralContributions));
+        } catch (error) {
+            console.warn('Failed to save General Contributions state to localStorage:', error);
+        }
+    }, [showGeneralContributions, isLoaded]);
 
     return (
         <GeneralContributionsContext.Provider value={{ showGeneralContributions, setShowGeneralContributions }}>
