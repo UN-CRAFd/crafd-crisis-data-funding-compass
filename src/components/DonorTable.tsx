@@ -172,8 +172,14 @@ export const DonorTable: React.FC<DonorTableProps> = ({
                 )
             }))
             .sort((a, b) => {
+                // Always prefer selected/filtered donors (combinedDonors) to the top
+                const aSelected = combinedDonors.includes(a.donor);
+                const bSelected = combinedDonors.includes(b.donor);
+                if (aSelected && !bSelected) return -1;
+                if (!aSelected && bSelected) return 1;
+
                 let comparison = 0;
-                
+
                 if (sortBy === 'name') {
                     comparison = b.donor.localeCompare(a.donor);
                 } else if (sortBy === 'orgs') {
@@ -181,7 +187,7 @@ export const DonorTable: React.FC<DonorTableProps> = ({
                 } else if (sortBy === 'assets') {
                     comparison = a.totalProjects - b.totalProjects;
                 }
-                
+
                 // Apply sort direction
                 return sortDirection === 'asc' ? comparison : -comparison;
             });
