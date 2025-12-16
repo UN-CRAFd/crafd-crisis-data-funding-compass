@@ -2,6 +2,7 @@
 
 import { typeLabelToSlug, typeSlugToLabel, toUrlSlug, matchesUrlSlug } from '@/lib/urlShortcuts';
 import { themeKeyToNames, themeNameToKey, ensureThemesMappingsLoaded, getMemberStates } from '@/lib/data';
+import { useGeneralContributions } from '@/contexts/GeneralContributionsContext';
 import { usePathname, useRouter, useSearchParams } from 'next/navigation';
 import { useCallback, useEffect, useMemo, useRef, useState } from 'react';
 import { processDashboardData } from '../lib/data';
@@ -21,6 +22,15 @@ const CrisisDataDashboardWrapper = ({ logoutButton }: { logoutButton?: React.Rea
     const router = useRouter();
     const pathname = usePathname();
     const searchParams = useSearchParams();
+    
+    // Get General Contributions state to trigger refetch when it changes
+    let showGeneralContributions = true;
+    try {
+        const { showGeneralContributions: value } = useGeneralContributions();
+        showGeneralContributions = value;
+    } catch (e) {
+        // Provider not available
+    }
 
     // ===========================================
     // MODAL STATE (Read-only from URL)
@@ -57,7 +67,7 @@ const CrisisDataDashboardWrapper = ({ logoutButton }: { logoutButton?: React.Rea
             const themeNames = keys.flatMap(key => themeKeyToNames(key));
             setInvestmentThemes(themeNames);
         })();
-    }, [filterParamsString]); // Only re-run when filter params change
+    }, [filterParamsString, showGeneralContributions]); // Re-run when general contributions setting changes
 
     // Read filter values from URL
     const donorSlugsFromUrl = useMemo(() => {

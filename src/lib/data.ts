@@ -173,8 +173,12 @@ export async function getMemberStates(): Promise<string[]> {
 }
 /**
  * Check if a country is a member state
+ * Only returns true if general contributions are enabled
  */
 export async function isMemberState(country: string): Promise<boolean> {
+    if (!showGeneralContributions) {
+        return false;
+    }
     const memberStates = await loadMemberStates();
     return memberStates.includes(country);
 }
@@ -182,12 +186,14 @@ export async function isMemberState(country: string): Promise<boolean> {
 /**
  * Inject member state donors into core-funded organizations
  * This modifies the organizations array to add selected member states as donors
+ * Only injects if general contributions are enabled
  */
 export function injectMemberStateDonors(
     organizations: OrganizationWithProjects[],
     selectedMemberStates: string[]
 ): OrganizationWithProjects[] {
-    if (selectedMemberStates.length === 0) {
+    // Do not inject member states if general contributions are disabled
+    if (!showGeneralContributions || selectedMemberStates.length === 0) {
         return organizations;
     }
 
@@ -758,8 +764,8 @@ export async function processDashboardData(filters: {
         // Load themes table first to ensure theme key mappings are available
         await loadThemesTable();
         
-        // Load member states
-        const memberStates = await loadMemberStates();
+        // Load member states only if general contributions are enabled
+        const memberStates = showGeneralContributions ? await loadMemberStates() : [];
         
         // Load nested organizations
         const nestedOrgs = await loadNestedOrganizations();
@@ -767,13 +773,14 @@ export async function processDashboardData(filters: {
         // Convert to OrganizationWithProjects format
         let allOrganizations = nestedOrgs.map(convertToOrganizationWithProjects);
 
-        // Identify which selected donors are member states
-        const selectedMemberStates = (filters.donorCountries || [])
-            .filter(donor => memberStates.includes(donor));
+        // Identify which selected donors are member states (only if general contributions enabled)
+        const selectedMemberStates = showGeneralContributions 
+            ? (filters.donorCountries || []).filter(donor => memberStates.includes(donor))
+            : [];
 
         // Inject member state donors into core-funded organizations BEFORE filtering
-        // This ensures they appear as donors in all views
-        if (selectedMemberStates.length > 0) {
+        // This ensures they appear as donors in all views (only if general contributions enabled)
+        if (selectedMemberStates.length > 0 && showGeneralContributions) {
             allOrganizations = injectMemberStateDonors(allOrganizations, selectedMemberStates);
         }
 
