@@ -254,7 +254,8 @@ const CrisisDataDashboardWrapper = ({ logoutButton }: { logoutButton?: React.Rea
                     donors: combinedDonors.sort(),
                     types: investmentTypes.sort(),
                     themes: investmentThemes.sort(),
-                    search: searchQuery
+                    search: searchQuery,
+                    showGeneralContributions
                 });
 
                 if (filterSignature === lastFetchedFiltersRef.current) {
@@ -283,7 +284,7 @@ const CrisisDataDashboardWrapper = ({ logoutButton }: { logoutButton?: React.Rea
         }
 
         fetchData();
-    }, [combinedDonors, investmentTypes, investmentThemes, searchQuery]);
+    }, [combinedDonors, investmentTypes, investmentThemes, searchQuery, showGeneralContributions]);
 
     // NOTE: Theme validation is disabled because it creates a chicken-and-egg problem:
     // - Themes are user-driven filters that should drive data fetching
