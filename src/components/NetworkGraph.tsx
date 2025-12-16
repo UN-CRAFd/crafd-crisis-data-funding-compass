@@ -1665,15 +1665,7 @@ const NetworkGraph: React.FC<NetworkGraphProps> = ({
                                     >
                                         <div className="flex items-center justify-between">
                                             <span className="text-[11px]">Standard</span>
-                                            <div className={`w-3 h-3 rounded-sm border shrink-0 flex items-center justify-center ${
-                                                scalingMode === 'standard' ? 'bg-slate-600 border-slate-600' : 'border-slate-300'
-                                            }`}>
-                                                {scalingMode === 'standard' && (
-                                                    <svg className="w-2.5 h-2.5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={3} d="M5 13l4 4L19 7" />
-                                                    </svg>
-                                                )}
-                                            </div>
+                                            {/* selection highlighted by button background; no dot indicator */}
                                         </div>
                                     </button>
                                     <button
@@ -1687,15 +1679,7 @@ const NetworkGraph: React.FC<NetworkGraphProps> = ({
                                     >
                                         <div className="flex items-center justify-between">
                                             <span className="text-[11px]">Connections</span>
-                                            <div className={`w-3 h-3 rounded-sm border shrink-0 flex items-center justify-center ${
-                                                scalingMode === 'connections' ? 'bg-slate-600 border-slate-600' : 'border-slate-300'
-                                            }`}>
-                                                {scalingMode === 'connections' && (
-                                                    <svg className="w-2.5 h-2.5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={3} d="M5 13l4 4L19 7" />
-                                                    </svg>
-                                                )}
-                                            </div>
+                                            {/* selection highlighted by button background; no dot indicator */}
                                         </div>
                                     </button>
                                     <button
@@ -1709,15 +1693,7 @@ const NetworkGraph: React.FC<NetworkGraphProps> = ({
                                     >
                                         <div className="flex items-center justify-between">
                                             <span className="text-[11px]">Funding</span>
-                                            <div className={`w-3 h-3 rounded-sm border shrink-0 flex items-center justify-center ${
-                                                scalingMode === 'funding' ? 'bg-[var(--brand-primary)] border-[var(--brand-primary)]' : 'border-slate-300'
-                                            }`}>
-                                                {scalingMode === 'funding' && (
-                                                    <svg className="w-2.5 h-2.5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={3} d="M5 13l4 4L19 7" />
-                                                    </svg>
-                                                )}
-                                            </div>
+                                            {/* selection highlighted by button background; no dot indicator */}
                                         </div>
                                     </button>
                                 </div>
