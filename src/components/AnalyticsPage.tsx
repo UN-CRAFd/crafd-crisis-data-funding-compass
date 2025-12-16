@@ -8,11 +8,12 @@ import FilterBar from '@/components/FilterBar';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { Tooltip as TooltipUI, TooltipContent, TooltipProvider, TooltipTrigger } from '@/components/ui/tooltip';
-import { Globe, Search, Filter, ChevronDown, Building2, Database, BarChart3, Network, GitBranch, Users, Target, SearchCheck, LayoutGrid, Columns, Radar as RadarIcon } from 'lucide-react';
+import { Globe, Search, Filter, ChevronDown, Building2, Database, BarChart3, Network, GitBranch, Users, Target, SearchCheck, LayoutGrid, Columns, Radar as RadarIcon, AlertCircle } from 'lucide-react';
 import { Radar, RadarChart, PolarGrid, PolarAngleAxis, PolarRadiusAxis, ResponsiveContainer, Legend, Label } from 'recharts';
 import { getIconForInvestmentType } from '@/config/investmentTypeIcons';
 import { SectionHeader } from './SectionHeader';
 import { useTips } from '@/contexts/TipsContext';
+import { useGeneralContributions } from '@/contexts/GeneralContributionsContext';
 import { toUrlSlug, matchesUrlSlug } from '@/lib/urlShortcuts';
 import labels from '@/config/labels.json';
 
@@ -1341,6 +1342,15 @@ export default function AnalyticsPage({ logoutButton }: AnalyticsPageProps) {
         });
     };
 
+    // Get General Contributions state
+    let showGeneralContributions = true;
+    try {
+        const genContContext = useGeneralContributions();
+        showGeneralContributions = genContContext.showGeneralContributions;
+    } catch (e) {
+        // GeneralContributionsProvider not available
+    }
+
     return (
         <div className="min-h-screen bg-slate-50">
             <PageHeader 
@@ -1365,6 +1375,15 @@ export default function AnalyticsPage({ logoutButton }: AnalyticsPageProps) {
                             <p className="text-base sm:text-lg text-slate-700 max-w-3xl leading-relaxed">
                                 Explore co-financing relationships and funding patterns across the crisis data ecosystem
                             </p>
+                            {/* Warning note if General Contributions enabled */}
+                            {showGeneralContributions && (
+                                <div className="mt-4 p-4 bg-white/60 backdrop-blur-sm border border-amber-200 rounded-lg flex gap-3">
+                                    <AlertCircle className="w-5 h-5 text-amber-600 flex-shrink-0 mt-0.5" />
+                                    <p className="text-sm text-amber-900">
+                                        <span className="font-semibold">Note:</span> General Contributions beyond the highest voluntary donors are excluded from the analytics page. Therefore, numbers might deviate from the dashboard page if General Contributions are turned on.
+                                    </p>
+                                </div>
+                            )}
                         </div>
                     </div>
 
