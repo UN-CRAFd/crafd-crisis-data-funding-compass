@@ -162,15 +162,26 @@ export const DonorTable: React.FC<DonorTableProps> = ({
 
         // Convert to array and sort
         return Array.from(donorMap.entries())
-            .map(([donor, data]) => ({
-                donor,
-                organizations: Array.from(data.organizations.values()),
-                totalOrgs: data.organizations.size,
-                totalProjects: Array.from(data.organizations.values()).reduce(
-                    (sum, orgData) => sum + orgData.projects.length, 
-                    0
-                )
-            }))
+            .map(([donor, data]) => {
+                const orgsArray = Array.from(data.organizations.values());
+
+                // Deduplicate projects across all organizations for this donor
+                const projectIdSet = new Set<string>();
+                orgsArray.forEach(orgData => {
+                    (orgData.projects || []).forEach((p: any) => {
+                        // Prefer `id` as canonical project id, fallback to other identifiers
+                        const pid = p?.id ?? p?.projectId ?? p?.productKey ?? p?.name ?? null;
+                        if (pid) projectIdSet.add(String(pid));
+                    });
+                });
+
+                return {
+                    donor,
+                    organizations: orgsArray,
+                    totalOrgs: data.organizations.size,
+                    totalProjects: projectIdSet.size,
+                };
+            })
             .sort((a, b) => {
                 // Always prefer selected/filtered donors (combinedDonors) to the top
                 const aSelected = combinedDonors.includes(a.donor);
