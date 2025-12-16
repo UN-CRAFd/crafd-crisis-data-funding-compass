@@ -6,7 +6,7 @@ import { getIconForInvestmentType } from '@/config/investmentTypeIcons';
 import { useTips } from '@/contexts/TipsContext';
 import { TooltipContent, TooltipProvider, TooltipTrigger, Tooltip as TooltipUI } from '@/components/ui/tooltip';
 import labels from '@/config/labels.json';
-import { matchesUrlSlug } from '@/lib/urlShortcuts';
+import { matchesUrlSlug, toUrlSlug } from '@/lib/urlShortcuts';
 import type { OrganizationWithProjects, ProjectData } from '@/types/airtable';
 
 interface DonorTableProps {
@@ -104,6 +104,27 @@ export const DonorTable: React.FC<DonorTableProps> = ({
         } catch (e) {
             return String(input || '');
         }
+    };
+
+    // Generate possible donor aliases to match against agency fields.
+    // For example: "International Financial Institutions (IFIs)" -> ["International Financial Institutions (IFIs)", "International Financial Institutions", "IFIs"]
+    const donorAliasesFor = (d?: string) => {
+        if (!d) return [] as string[];
+        const original = String(d).trim();
+        const aliases = new Set<string>();
+        aliases.add(original);
+
+        // Remove parenthetical content
+        const noParens = original.replace(/\s*\([^)]*\)\s*/g, ' ').replace(/\s+/g, ' ').trim();
+        if (noParens) aliases.add(noParens);
+
+        // Extract parenthetical content if present
+        const parenMatch = original.match(/\(([^)]+)\)/);
+        if (parenMatch && parenMatch[1]) {
+            aliases.add(parenMatch[1].trim());
+        }
+
+        return Array.from(aliases);
     };
     // Get tips enabled state
     let tipsEnabled = false;
@@ -396,12 +417,17 @@ export const DonorTable: React.FC<DonorTableProps> = ({
                                                                         let belongsToDonor = false;
                                                                         if (agencyCountry) {
                                                                             const countryValues = Array.isArray(agencyCountry) ? agencyCountry : [agencyCountry];
+                                                                            const aliases = donorAliasesFor(donor);
                                                                             belongsToDonor = countryValues.some((c: any) => {
-                                                                                try {
-                                                                                    return matchesUrlSlug(sanitizeForMatch(donor), sanitizeForMatch(String(c)));
-                                                                                } catch {
-                                                                                    return sanitizeForMatch(typeof c === 'string' ? c.trim() : c?.toString() || '').toLowerCase() === sanitizeForMatch(donor).toLowerCase();
-                                                                                }
+                                                                                const candidate = String(c || '');
+                                                                                // Try matching against any alias (slug compare preferred)
+                                                                                return aliases.some(alias => {
+                                                                                    try {
+                                                                                        return matchesUrlSlug(toUrlSlug(alias), candidate);
+                                                                                    } catch {
+                                                                                        return sanitizeForMatch(candidate).toLowerCase() === sanitizeForMatch(alias).toLowerCase();
+                                                                                    }
+                                                                                });
                                                                             });
                                                                         }
 
@@ -579,24 +605,32 @@ export const DonorTable: React.FC<DonorTableProps> = ({
                                                                             // Check donor field first
                                                                             if (donorField) {
                                                                                 const donorValues = Array.isArray(donorField) ? donorField : [donorField];
+                                                                                const aliases = donorAliasesFor(donor);
                                                                                 belongsToDonor = donorValues.some((d: any) => {
-                                                                                    try {
-                                                                                        return matchesUrlSlug(sanitizeForMatch(donor), sanitizeForMatch(String(d)));
-                                                                                    } catch {
-                                                                                        return sanitizeForMatch(typeof d === 'string' ? d.trim() : d?.toString() || '').toLowerCase() === sanitizeForMatch(donor).toLowerCase();
-                                                                                    }
+                                                                                    const candidate = String(d || '');
+                                                                                    return aliases.some(alias => {
+                                                                                        try {
+                                                                                            return matchesUrlSlug(toUrlSlug(alias), candidate);
+                                                                                        } catch {
+                                                                                            return sanitizeForMatch(candidate).toLowerCase() === sanitizeForMatch(alias).toLowerCase();
+                                                                                        }
+                                                                                    });
                                                                                 });
                                                                             }
 
                                                                             // Fall back to country field if no donor field match
                                                                             if (!belongsToDonor && agencyCountry) {
                                                                                 const countryValues = Array.isArray(agencyCountry) ? agencyCountry : [agencyCountry];
+                                                                                const aliases = donorAliasesFor(donor);
                                                                                 belongsToDonor = countryValues.some((c: any) => {
-                                                                                    try {
-                                                                                        return matchesUrlSlug(sanitizeForMatch(donor), sanitizeForMatch(String(c)));
-                                                                                    } catch {
-                                                                                        return sanitizeForMatch(typeof c === 'string' ? c.trim() : c?.toString() || '').toLowerCase() === sanitizeForMatch(donor).toLowerCase();
-                                                                                    }
+                                                                                    const candidate = String(c || '');
+                                                                                    return aliases.some(alias => {
+                                                                                        try {
+                                                                                            return matchesUrlSlug(toUrlSlug(alias), candidate);
+                                                                                        } catch {
+                                                                                            return sanitizeForMatch(candidate).toLowerCase() === sanitizeForMatch(alias).toLowerCase();
+                                                                                        }
+                                                                                    });
                                                                                 });
                                                                             }
 
