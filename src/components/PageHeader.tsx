@@ -192,8 +192,24 @@ export default function PageHeader({
                             >
                                 <DropdownMenuItem 
                                     onClick={() => {
-                                        const q = searchParams?.toString();
-                                        const target = q ? `/?${q}` : '/';
+                                        const raw = searchParams?.toString() || '';
+                                        const params = new URLSearchParams(raw);
+
+                                        // Ensure dashboard uses short keys expected by the dashboard wrapper
+                                        // Map long keys to short ones if present
+                                        if (params.has('types') && !params.has('t')) {
+                                            params.set('t', params.get('types') || '');
+                                            params.delete('types');
+                                        }
+                                        if (params.has('themes') && !params.has('th')) {
+                                            params.set('th', params.get('themes') || '');
+                                            params.delete('themes');
+                                        }
+                                        if (params.has('q') && !params.has('search')) {
+                                            params.set('search', params.get('q') || '');
+                                        }
+
+                                        const target = params.toString() ? `/?${params.toString()}` : '/';
                                         router.push(target);
                                     }}
                                     className={`cursor-pointer text-sm py-2 px-2 ${pathname === '/' ? 'bg-slate-100' : ''}`}
@@ -205,8 +221,23 @@ export default function PageHeader({
                                 </DropdownMenuItem>
                                 <DropdownMenuItem 
                                     onClick={() => {
-                                        const q = searchParams?.toString();
-                                        const target = q ? `/analytics?${q}` : '/analytics';
+                                        const raw = searchParams?.toString() || '';
+                                        const params = new URLSearchParams(raw);
+
+                                        // Analytics expects 'types' and 'themes' and 'q'
+                                        if (params.has('t') && !params.has('types')) {
+                                            params.set('types', params.get('t') || '');
+                                            // keep 't' for backwards compatibility
+                                        }
+                                        if (params.has('th') && !params.has('themes')) {
+                                            params.set('themes', params.get('th') || '');
+                                            // keep 'th' as well
+                                        }
+                                        if (params.has('search') && !params.has('q')) {
+                                            params.set('q', params.get('search') || '');
+                                        }
+
+                                        const target = params.toString() ? `/analytics?${params.toString()}` : '/analytics';
                                         router.push(target);
                                     }}
                                     className={`cursor-pointer text-sm py-2 px-2 ${pathname === '/analytics' || pathname === '/analytics/' ? 'bg-slate-100' : ''}`}
