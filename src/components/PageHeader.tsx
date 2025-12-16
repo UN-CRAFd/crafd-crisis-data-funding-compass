@@ -3,7 +3,7 @@
 import { Button } from '@/components/ui/button';
 import { TooltipContent, TooltipProvider, Tooltip as TooltipUI, TooltipTrigger } from '@/components/ui/tooltip';
 import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuTrigger } from '@/components/ui/dropdown-menu';
-import { ChevronDown, FileDown, Info, MessageCircle, Share2, Menu, Lightbulb, LogOut, Home, BarChart3, BookOpen } from 'lucide-react';
+import { ChevronDown, FileDown, Info, MessageCircle, Share2, Menu, Lightbulb, LogOut, Home, BarChart3, BookOpen, Landmark } from 'lucide-react';
 import { useTips } from '@/contexts/TipsContext';
 import { useGeneralContributions } from '@/contexts/GeneralContributionsContext';
 import { setGeneralContributionsEnabled } from '@/lib/data';
@@ -76,8 +76,13 @@ export default function PageHeader({
         const newValue = !showGeneralContributions;
         setShowGeneralContributionsLocal(newValue);
         setGeneralContributionsEnabled(newValue);
-        // Reload the page to update data with new setting
-        window.location.reload();
+        // Refresh current route so views update without full page reload
+        try {
+            router.refresh();
+        } catch (e) {
+            // Fallback: full reload if router.refresh isn't available
+            window.location.reload();
+        }
     };
 
     return (
@@ -296,7 +301,7 @@ export default function PageHeader({
                                             onClick={handleGeneralContributionsToggle}
                                             className="w-full text-left flex items-center gap-2 text-sm py-2 px-2 text-slate-700 hover:bg-slate-50"
                                         >
-                                            <Lightbulb className={`w-4 h-4 ${showGeneralContributions ? '' : 'opacity-50'}`} />
+                                            <Landmark className={`w-4 h-4 ${showGeneralContributions ? '' : 'opacity-50'}`} />
                                             <span>{showGeneralContributions ? 'General Contributions on' : 'General Contributions off'}</span>
                                         </button>
                                     </div>
