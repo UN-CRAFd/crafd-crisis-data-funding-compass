@@ -7,6 +7,17 @@ import type { NestedOrganization, OrganizationProjectData, OrganizationTypeData,
 // Re-export types for backward compatibility
 export type { OrganizationProjectData, OrganizationTypeData, OrganizationWithProjects, ProjectData, ProjectTypeData } from '@/types/airtable';
 
+// Global state for general contributions (member states) visibility
+let showGeneralContributions = true;
+
+export function setGeneralContributionsEnabled(enabled: boolean) {
+    showGeneralContributions = enabled;
+}
+
+export function isGeneralContributionsEnabled(): boolean {
+    return showGeneralContributions;
+}
+
 // Load nested organizations data
 let cachedNestedData: NestedOrganization[] | null = null;
 
@@ -110,6 +121,7 @@ let cachedMemberStates: string[] | null = null;
 let memberStatesLoadPromise: Promise<string[]> | null = null;
 
 async function loadMemberStates(): Promise<string[]> {
+    
     // Return cached member states if available
     if (cachedMemberStates) {
         return cachedMemberStates;
@@ -129,6 +141,7 @@ async function loadMemberStates(): Promise<string[]> {
                 return [];
             }
             const csvText = await response.text();
+            
             
             // Parse CSV (skip header row)
             const lines = csvText.split('\n');
@@ -153,9 +166,11 @@ async function loadMemberStates(): Promise<string[]> {
  * Get all member states (cached)
  */
 export async function getMemberStates(): Promise<string[]> {
+    if (showGeneralContributions) {    
     return loadMemberStates();
+} else {
+    return [];}
 }
-
 /**
  * Check if a country is a member state
  */
