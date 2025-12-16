@@ -183,22 +183,28 @@ export default function AnalyticsPage({ logoutButton }: AnalyticsPageProps) {
     const [hoveredCell, setHoveredCell] = useState<{ donor1: string; donor2: string } | null>(null);
     const [matrixViewMode, setMatrixViewMode] = useState<'unified' | 'split'>('split');
     
-    // Load filter state from URL on mount
+    // Load filter state from URL on mount — accept both long and short param keys
     useEffect(() => {
-        const urlDonorSlugs = searchParams.get('d')?.split(',').filter(Boolean) || [];
-        const urlTypes = searchParams.get('types')?.split(',').filter(Boolean) || [];
-        const urlThemes = searchParams.get('themes')?.split(',').filter(Boolean) || [];
-        const urlQuery = searchParams.get('q') || '';
-        
-        // Decode donor slugs to actual donor names - will be done in a follow-up effect after data loads
+        const rawDonors = searchParams.get('d') ?? searchParams.get('donors') ?? '';
+        const urlDonorSlugs = rawDonors.split(',').filter(Boolean);
+
+        const rawTypes = searchParams.get('types') ?? searchParams.get('t') ?? '';
+        const urlTypes = rawTypes.split(',').map(s => decodeURIComponent(s)).filter(Boolean);
+
+        const rawThemes = searchParams.get('themes') ?? searchParams.get('th') ?? '';
+        const urlThemes = rawThemes.split(',').map(s => decodeURIComponent(s)).filter(Boolean);
+
+        const urlQuery = searchParams.get('q') ?? searchParams.get('search') ?? '';
+
+        // Apply decoded values to state
         setInvestmentTypes(urlTypes);
         setInvestmentThemes(urlThemes);
         setAppliedSearchQuery(urlQuery);
         setSearchQuery(urlQuery);
-        
+
         // Store URL donor slugs temporarily to decode them later
         (window as any).__urlDonorSlugs = urlDonorSlugs;
-        
+
         setIsInitialized(true);
     }, [searchParams]);
     
