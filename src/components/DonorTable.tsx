@@ -341,16 +341,17 @@ export const DonorTable: React.FC<DonorTableProps> = ({
                                                                         </div>
                                                                     ) : null;
                                                                 })()}
+                                                                
+                                                            </div>                                                            {/* Agency badges for organization */}
+                                                            <div className="flex flex-wrap gap-1 mt-2 max-w-full">
                                                                 {!isOrgLevel && (
                                                                     <Badge
-                                                                        text="Project-only"
+                                                                        text="Project-Level Funding"
                                                                         variant="slate"
-                                                                        className="opacity-70 text-sm"
+                                                                        className="opacity-70 text-xs text-[9px] sm:text-[10px]"
                                                                         title="This donor only funds specific projects, not the organization as a whole"
                                                                     />
                                                                 )}
-                                                            </div>                                                            {/* Agency badges for organization */}
-                                                            <div className="flex flex-wrap gap-1 mt-2 max-w-full">
                                                                 {(() => {
                                                                     const isAgenciesExpanded = expandedAgencies.has(`org-${org.id}`);
                                                                     
@@ -399,6 +400,7 @@ export const DonorTable: React.FC<DonorTableProps> = ({
                                                                     const agencyArray = Array.from(agencyNames).sort();
                                                                     const maxAgenciesToShow = 3;
                                                                     const agenciesToShow = isAgenciesExpanded ? agencyArray : agencyArray.slice(0, maxAgenciesToShow);
+                                                                    
                                                                     
                                                                     if (agencyArray.length === 0) return null;
                                                                     
