@@ -103,7 +103,7 @@ export default function PageHeader({
                             <MessageCircle className="w-4 h-4 sm:mr-2" />
                             <span className="hidden sm:inline">{labels.header.feedbackButton}</span>
                         </Button>
-                        <div className="hidden sm:block w-px h-8 bg-slate-200"></div>
+                        {pathname === '/' && (<div className="hidden sm:block w-px h-8 bg-slate-200"></div>)}
 
                         {/* Export Dropdown - only show on dashboard */}
                         {pathname === '/' && onExportCSV && onExportXLSX && (
