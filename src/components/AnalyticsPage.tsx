@@ -836,6 +836,86 @@ export default function AnalyticsPage({ logoutButton }: AnalyticsPageProps) {
             .sort((a, b) => b.value - a.value);
     }, [filteredProjectsData, selectedDonors]);
 
+    // Calculate per-donor investment focus (projects per investment type)
+    const donorProfiles = useMemo(() => {
+        if (selectedDonors.length === 0) return [];
+
+        // Helper to check if a project matches current type/theme/search filters
+        const projectMatchesFilters = (project: any) => {
+            // Search filter applies to project name or organization handled elsewhere; keep simple: allow all
+            // Investment type filter - if set, only count projects matching selected investmentTypes
+            if (investmentTypes.length > 0) {
+                const projectTypes = project.fields?.['Investment Type(s)'] || [];
+                if (!Array.isArray(projectTypes) || !projectTypes.some((pt: string) =>
+                    investmentTypes.some(it => it.toLowerCase().trim() === (pt || '').toLowerCase().trim())
+                )) {
+                    return false;
+                }
+            }
+
+            // Investment themes filter
+            if (investmentThemes.length > 0) {
+                const projectThemes = project.fields?.['Investment Theme(s)'] || [];
+                if (!Array.isArray(projectThemes) || !projectThemes.some((th: string) =>
+                    investmentThemes.some(it => it.toLowerCase().trim() === (th || '').toLowerCase().trim())
+                )) {
+                    return false;
+                }
+            }
+
+            return true;
+        };
+
+        return selectedDonors.map(donor => {
+            // Initialize counts for all known investment types
+            const counts: Record<string, number> = {};
+            allKnownInvestmentTypes.forEach(t => counts[t] = 0);
+
+            // Iterate all organizations and accumulate projects for which this donor appears
+            organizationsData.forEach(org => {
+                // Determine if donor funds this org (org-level) or its projects (project-level)
+                const orgDonors = new Set<string>();
+                if (org.agencies && Array.isArray(org.agencies)) {
+                    org.agencies.forEach((a: any) => {
+                        const countryName = a.fields?.['Country Name'];
+                        if (countryName) orgDonors.add(countryName);
+                    });
+                }
+
+                // For each project, check project-level agencies
+                if (org.projects && Array.isArray(org.projects)) {
+                    org.projects.forEach(project => {
+                        const projectDonors = new Set<string>(orgDonors);
+                        if (project.agencies && Array.isArray(project.agencies)) {
+                            project.agencies.forEach((pa: any) => {
+                                const countryName = pa.fields?.['Country Name'];
+                                if (countryName) projectDonors.add(countryName);
+                            });
+                        }
+
+                        if (projectDonors.has(donor) && projectMatchesFilters(project)) {
+                            const projectTypes = project.fields?.['Investment Type(s)'] || [];
+                            if (Array.isArray(projectTypes) && projectTypes.length > 0) {
+                                projectTypes.forEach((pt: string) => {
+                                    const match = allKnownInvestmentTypes.find(k =>
+                                        k.toLowerCase().trim() === (pt || '').toLowerCase().trim()
+                                    );
+                                    if (match) counts[match] = (counts[match] || 0) + 1;
+                                });
+                            } else {
+                                // If no explicit project types, increment 'Other' bucket if exists
+                                if (counts['Other'] !== undefined) counts['Other']++;
+                            }
+                        }
+                    });
+                }
+            });
+
+            const data = allKnownInvestmentTypes.map(t => ({ type: t, value: counts[t] || 0 }));
+            return { donor, data };
+        });
+    }, [selectedDonors, organizationsData, investmentTypes, investmentThemes, allKnownInvestmentTypes]);
+
     // Calculate donor co-financing chart data using coFinancingMatrix (ensures same deduplication)
     const donorCoFinancingData = useMemo(() => {
         const pairCounts: Array<{ name: string; value: number }> = [];
@@ -1215,108 +1295,42 @@ export default function AnalyticsPage({ logoutButton }: AnalyticsPageProps) {
         };
     }, [filteredOrganizationsData, selectedDonors, investmentTypes, investmentThemes, appliedSearchQuery, organizationsData]);
 
-    // Calculate investment type distribution for each selected donor (for radar chart)
+    // Calculate investment focus by donor using computed donorProfiles (normalize per-donor)
     const donorInvestmentFocus = useMemo(() => {
-        if (selectedDonors.length === 0 || organizationsData.length === 0) return [];
+        if (selectedDonors.length === 0) return [];
 
-        const investmentTypeCounts: { [donor: string]: { [type: string]: number } } = {};
-
-        // Initialize donor investment tracking
-        selectedDonors.forEach(donor => {
-            investmentTypeCounts[donor] = {};
-        });
-
-        // Traverse organizations and count investment types per donor
-        organizationsData.forEach(org => {
-            // Check if org passes filters
-            let orgPassesFilters = true;
-            if (appliedSearchQuery) {
-                const query = appliedSearchQuery.toLowerCase().trim();
-                const orgNameLower = (org.name || org.fields?.['Organization Name'] || '').toLowerCase();
-                const orgType = (org.fields?.['Org Type'] || '').toString().toLowerCase();
-                if (!orgNameLower.includes(query) && !orgType.includes(query)) {
-                    orgPassesFilters = false;
-                }
-            }
-
-            if (orgPassesFilters && (investmentTypes.length > 0 || investmentThemes.length > 0)) {
-                const hasMatchingProject = org.projects?.some(project => {
-                    if (investmentTypes.length > 0) {
-                        const projectTypes = project.fields?.['Investment Type(s)'] || [];
-                        const matchesType = Array.isArray(projectTypes) && projectTypes.some(type =>
-                            investmentTypes.some(filterType =>
-                                type.toLowerCase().includes(filterType.toLowerCase()) ||
-                                filterType.toLowerCase().includes(type.toLowerCase())
-                            )
-                        );
-                        if (!matchesType) return false;
-                    }
-
-                    if (investmentThemes.length > 0) {
-                        const projectThemes = project.fields?.['Investment Theme(s)'] || [];
-                        const matchesTheme = Array.isArray(projectThemes) && projectThemes.some(theme =>
-                            investmentThemes.some(filterTheme =>
-                                typeof theme === 'string' &&
-                                theme.toLowerCase().trim() === filterTheme.toLowerCase().trim()
-                            )
-                        );
-                        if (!matchesTheme) return false;
-                    }
-
-                    return true;
-                });
-
-                orgPassesFilters = hasMatchingProject || false;
-            }
-
-            if (!orgPassesFilters) return;
-
-            // Process projects and count investment types per selected donor
-            if (org.projects && Array.isArray(org.projects)) {
-                org.projects.forEach(project => {
-                    const projectTypes = project.fields?.['Investment Type(s)'] || [];
-                    const projectAgencies = project.agencies || [];
-
-                    if (Array.isArray(projectTypes) && projectAgencies.length > 0) {
-                        projectAgencies.forEach((agency: any) => {
-                            const donorCountry = agency.fields?.['Country Name'];
-                            if (donorCountry && selectedDonors.includes(donorCountry)) {
-                                projectTypes.forEach((type: any) => {
-                                    if (typeof type === 'string' && type.trim()) {
-                                        if (!investmentTypeCounts[donorCountry][type]) {
-                                            investmentTypeCounts[donorCountry][type] = 0;
-                                        }
-                                        investmentTypeCounts[donorCountry][type]++;
-                                    }
-                                });
-                            }
-                        });
-                    }
-                });
-            }
-        });
-
-        // Use the canonical list of 6 investment types from labels to ensure consistent axes
         const canonicalTypes = Object.values(labels.investmentTypes);
 
-        // Ensure every donor has an entry for each canonical type (fill zeros)
+        // Build a map donor -> type -> count from donorProfiles
+        const countsByDonor: Record<string, Record<string, number>> = {};
+        donorProfiles.forEach((p: any) => {
+            const map: Record<string, number> = {};
+            p.data.forEach((d: any) => {
+                map[d.type] = d.value || 0;
+            });
+            countsByDonor[p.donor] = map;
+        });
+
+        // Ensure zeros for missing types
         selectedDonors.forEach(donor => {
+            if (!countsByDonor[donor]) countsByDonor[donor] = {};
             canonicalTypes.forEach(t => {
-                if (!investmentTypeCounts[donor][t]) investmentTypeCounts[donor][t] = 0;
+                if (!countsByDonor[donor][t]) countsByDonor[donor][t] = 0;
             });
         });
 
-        // For each donor, compute their max across types to scale to 100%
-        const donorMax: { [donor: string]: number } = {};
+        // Compute max per donor to normalize
+        const donorMax: Record<string, number> = {};
         selectedDonors.forEach(donor => {
-            donorMax[donor] = Math.max(...Object.values(investmentTypeCounts[donor]));
+            const vals = Object.values(countsByDonor[donor] || {});
+            donorMax[donor] = vals.length > 0 ? Math.max(...vals) : 0;
         });
 
-        // Transform to radar chart format where for each donor the max becomes 100
+        // Build radar data: one entry per type with a value per donor (0-100 normalized)
         const radarData = canonicalTypes.map(type => {
             const entry: any = { name: type };
             selectedDonors.forEach(donor => {
-                const count = investmentTypeCounts[donor][type] || 0;
+                const count = countsByDonor[donor][type] || 0;
                 const max = donorMax[donor] || 0;
                 entry[donor] = max > 0 ? Math.round((count / max) * 100) : 0;
             });
@@ -1324,7 +1338,7 @@ export default function AnalyticsPage({ logoutButton }: AnalyticsPageProps) {
         });
 
         return radarData;
-    }, [selectedDonors, organizationsData, investmentTypes, investmentThemes, appliedSearchQuery]);
+    }, [selectedDonors, donorProfiles]);
 
     const handleCellClick = (donor1: string, donor2: string) => {
         // Navigate to dashboard with both donors as filters
@@ -1456,6 +1470,8 @@ export default function AnalyticsPage({ logoutButton }: AnalyticsPageProps) {
                             </div>
                         </>
                     )}
+
+                    {/* Per-donor profiles removed — use `donorInvestmentFocus` chart below */}
 
                     {/* Filter Bar */}
                     <Card className="!border-0 bg-white">
