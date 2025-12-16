@@ -662,7 +662,7 @@ export const DonorTable: React.FC<DonorTableProps> = ({
                                                                                     <Badge
                                                                                         key={idx}
                                                                                         text={agency}
-                                                                                        variant="indigo"
+                                                                                        variant="agency"
                                                                                         className="text-[9px] sm:text-[10px]"
                                                                                         title={`Funding Agency: ${agency}`}
                                                                                     />
