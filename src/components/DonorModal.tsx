@@ -494,22 +494,40 @@ export default function DonorModal({
                                                                     <span className="truncate">{project.name}</span>
                                                                 </button>
                                                             );
-
-                                                            // Only wrap in tooltip if there's a description
-                                                            if (firstSentence) {
-                                                                return (
-                                                                    <ModalTooltip
-                                                                        key={project.id}
-                                                                        content={firstSentence}
-                                                                        side="top"
-                                                                        tooltipContainer={tooltipContainer}
-                                                                    >
+                                                                // Only wrap in tooltip if there's a description
+                                                                const content = (
+                                                                    <>
                                                                         {projectButton}
-                                                                    </ModalTooltip>
+                                                                        {/* Show agency badge indicating this project's funding agency within this donor's agency section */}
+                                                                    <div className="mt-1">
+                                                                        <span
+                                                                            className="inline-block px-2 py-0.5 rounded text-xs font-medium"
+                                                                            style={{ backgroundColor: 'var(--badge-agency-bg)', color: 'var(--badge-agency-text)', borderColor: 'var(--badge-agency-border)' }}
+                                                                        >
+                                                                            {agency.name}
+                                                                        </span>
+                                                                    </div>
+                                                                    </>
                                                                 );
-                                                            }
 
-                                                            return projectButton;
+                                                                if (firstSentence) {
+                                                                    return (
+                                                                        <ModalTooltip
+                                                                            key={project.id}
+                                                                            content={firstSentence}
+                                                                            side="top"
+                                                                            tooltipContainer={tooltipContainer}
+                                                                        >
+                                                                            {content}
+                                                                        </ModalTooltip>
+                                                                    );
+                                                                }
+
+                                                                return (
+                                                                    <div key={project.id}>
+                                                                        {content}
+                                                                    </div>
+                                                                );
                                                         })}
                                                     </div>
                                                 </div>
