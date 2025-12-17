@@ -261,10 +261,10 @@ export const DonorTable: React.FC<DonorTableProps> = ({
                     >
                         <CollapsibleTrigger className="w-full">
                             <div 
-                                className={`flex flex-col sm:flex-row sm:justify-between p-3 sm:p-4 hover:bg-slate-50/70 rounded-lg border ${
+                                className={`flex flex-col sm:flex-row sm:justify-between p-3 sm:p-4  rounded-lg border ${
                                     isSelected 
-                                        ? 'border-[var(--brand-primary)] bg-[var(--brand-bg-lighter)]' 
-                                        : 'border-slate-200 bg-slate-50/30'
+                                        ? 'border-[var(--brand-primary)] bg-[var(--brand-bg-lighter)] hover:bg-[var(--brand-bg-light)]/90' 
+                                        : 'border-slate-200 bg-slate-50/30 hover:bg-slate-50/70'
                                 } animate-in fade-in gap-3 sm:gap-0 cursor-pointer min-h-[60px]`}
                             >
                                 <div className="flex items-center space-x-3 flex-1">
@@ -511,7 +511,7 @@ export const DonorTable: React.FC<DonorTableProps> = ({
                                                 </div>
                                             </CollapsibleTrigger>
                                             <CollapsibleContent>
-                                                <div className="mt-2 ml-4 sm:ml-7 space-y-2">
+                                                <div className="mt-2 ml-7 sm:ml-12 space-y-2">
                                                     {projects.map((project: ProjectData) => (
                                                         <div
                                                             key={project.id}
@@ -525,9 +525,9 @@ export const DonorTable: React.FC<DonorTableProps> = ({
                                                                 }
                                                             }}
                                                         >
-                                                            <div className="mb-1">
+                                                            <div className="mb-0 mt-1">
                                                                 <div className="flex flex-wrap items-center gap-1.5 gap-y-0.5">
-                                                                    <span className="font-medium text-slate-900 group-hover:text-[var(--badge-other-border)] transition-colors text-xs sm:text-sm">
+                                                                    <span className="font-medium text-slate-900 ml-2group-hover:text-[var(--badge-other-border)] transition-colors text-md sm:text-md">
                                                                         {project.projectName}
                                                                     </span>
                                                                     {project.investmentTypes && project.investmentTypes.length > 0 && (
