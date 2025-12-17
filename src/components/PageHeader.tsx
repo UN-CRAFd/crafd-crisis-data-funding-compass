@@ -304,19 +304,19 @@ export default function PageHeader({
                                             <Landmark className={`w-4 h-4 ${showGeneralContributions ? '' : 'opacity-50'}`} />
                                             <span>{showGeneralContributions ? 'General Contributions on' : 'General Contributions off'}</span>
                                         </button>
+                                        <form action="/logout" method="post" className="w-full">
+                                            <button
+                                                type="submit"
+                                                className="w-full text-left flex items-center gap-2 text-sm py-2 px-2 text-slate-700 hover:bg-slate-50"
+                                            >
+                                                <LogOut className={`w-4 h-4 ${showGeneralContributions ? '' : 'opacity-50'}`} />
+                                                <span>Logout</span>
+                                            </button>
+                                        </form>                                   
                                     </div>
                                 </div>
 
-                                <div className="border-t border-slate-100 mt-1 pt-1">
-                                    <DropdownMenuItem>
-                                        <form action="/logout" method="post" className="w-full">
-                                            <button type="submit" className="w-full text-left flex items-center gap-2 text-sm py-2 px-2 text-slate-700 hover:bg-slate-50">
-                                                <LogOut className="w-4 h-4" />
-                                                <span>Logout</span>
-                                            </button>
-                                        </form>
-                                    </DropdownMenuItem>
-                                </div>
+                            
                             </DropdownMenuContent>
                         </DropdownMenu>
                     </div>
