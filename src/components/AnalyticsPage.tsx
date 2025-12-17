@@ -1430,7 +1430,7 @@ export default function AnalyticsPage({ logoutButton }: AnalyticsPageProps) {
                                 <StatCard
                                     icon={<Building2 style={{ color: 'var(--brand-primary)' }} />}
                                     title="Co-Funded Orgs"
-                                    value={analyticsStats.sharedFundingTargets}
+                                    value={selectedDonors.length === 1 ? 'N/A' : analyticsStats.sharedFundingTargets}
                                     label="orgs"
                                     colorScheme="amber"
                                     tooltip="Absolute number of organizations funded by at least 2 of the selected donors."
@@ -1439,7 +1439,7 @@ export default function AnalyticsPage({ logoutButton }: AnalyticsPageProps) {
                                 <StatCard
                                     icon={<Target style={{ color: 'var(--brand-primary)' }} />}
                                     title="Funding Overlap"
-                                    value={`${analyticsStats.avgFundingOverlap}%`}
+                                    value={selectedDonors.length === 1 ? 'N/A' : `${analyticsStats.avgFundingOverlap}%`}
                                     label="shared"
                                     colorScheme="amber"
                                     tooltip={
