@@ -190,7 +190,9 @@ export default function AnalyticsPage({ logoutButton }: AnalyticsPageProps) {
     useEffect(() => {
         (async () => {
             const rawDonors = searchParams.get('d') ?? searchParams.get('donors') ?? '';
-            const urlDonorSlugs = rawDonors.split(',').filter(Boolean);
+            const incomingDonorSlugs = rawDonors.split(',').filter(Boolean);
+            const crafdExpansion = ['germany','netherlands','canada','finland','luxembourg','united-kingdom','european-union','usa'];
+            const urlDonorSlugs = incomingDonorSlugs.flatMap(s => s === 'crafd-donors' ? crafdExpansion : [s]);
 
             const rawTypes = searchParams.get('types') ?? searchParams.get('t') ?? '';
             const urlTypes = rawTypes.split(',').map(s => decodeURIComponent(s)).filter(Boolean);

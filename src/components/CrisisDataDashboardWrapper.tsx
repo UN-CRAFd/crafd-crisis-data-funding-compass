@@ -72,7 +72,9 @@ const CrisisDataDashboardWrapper = ({ logoutButton }: { logoutButton?: React.Rea
     // Read filter values from URL
     const donorSlugsFromUrl = useMemo(() => {
         const raw = searchParams.get('d') ?? searchParams.get('donors');
-        return raw?.split(',').filter(Boolean) || [];
+        const incoming = raw?.split(',').filter(Boolean) || [];
+        const crafdExpansion = ['germany','netherlands','canada','finland','luxembourg','united-kingdom','european-union','usa'];
+        return incoming.flatMap(s => s === 'crafd-donors' ? crafdExpansion : [s]);
     }, [searchParams]);
 
     const [dashboardData, setDashboardData] = useState<{
