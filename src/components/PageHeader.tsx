@@ -3,7 +3,7 @@
 import { Button } from '@/components/ui/button';
 import { TooltipContent, TooltipProvider, Tooltip as TooltipUI, TooltipTrigger } from '@/components/ui/tooltip';
 import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuTrigger } from '@/components/ui/dropdown-menu';
-import { ChevronDown, FileDown, Info, MessageCircle, Share2, Menu, Lightbulb, LogOut, Home, BarChart3, BookOpen, Landmark } from 'lucide-react';
+import { ChevronDown, FileDown, Info, MessageCircle, Share2, Menu, Lightbulb, LogOut, Home, BarChart3, BookOpen, Landmark, LayoutDashboard } from 'lucide-react';
 import { useTips } from '@/contexts/TipsContext';
 import { useGeneralContributions } from '@/contexts/GeneralContributionsContext';
 import { setGeneralContributionsEnabled } from '@/lib/data';
@@ -242,7 +242,7 @@ export default function PageHeader({
                                     className={`cursor-pointer text-sm py-2 px-2 ${pathname === '/' ? 'bg-slate-100' : ''}`}
                                 >
                                     <div className="flex items-center">
-                                        <Home className="w-3 h-3 mr-2 text-slate-600" />
+                                        <LayoutDashboard className="w-3 h-3 mr-2 text-slate-600" />
                                         <span className={pathname === '/' ? '!font-bold' : ''}>{labels.header.dashboard}</span>
                                     </div>
                                 </DropdownMenuItem>
