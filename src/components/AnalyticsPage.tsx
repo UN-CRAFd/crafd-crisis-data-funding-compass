@@ -11,6 +11,7 @@ import { Tooltip as TooltipUI, TooltipContent, TooltipProvider, TooltipTrigger }
 import { Globe, Search, Filter, ChevronDown, Building2, Database, BarChart3, Network, GitBranch, Users, Target, SearchCheck, LayoutGrid, Columns, Radar as RadarIcon, AlertCircle } from 'lucide-react';
 import { Radar, RadarChart, PolarGrid, PolarAngleAxis, PolarRadiusAxis, ResponsiveContainer, Legend, Label } from 'recharts';
 import { getIconForInvestmentType } from '@/config/investmentTypeIcons';
+import { ensureThemesMappingsLoaded, themeKeyToNames, themeNameToKey } from '@/lib/data';
 import { SectionHeader } from './SectionHeader';
 import { useTips } from '@/contexts/TipsContext';
 import { useGeneralContributions } from '@/contexts/GeneralContributionsContext';
@@ -187,27 +188,33 @@ export default function AnalyticsPage({ logoutButton }: AnalyticsPageProps) {
     
     // Load filter state from URL on mount — accept both long and short param keys
     useEffect(() => {
-        const rawDonors = searchParams.get('d') ?? searchParams.get('donors') ?? '';
-        const urlDonorSlugs = rawDonors.split(',').filter(Boolean);
+        (async () => {
+            const rawDonors = searchParams.get('d') ?? searchParams.get('donors') ?? '';
+            const urlDonorSlugs = rawDonors.split(',').filter(Boolean);
 
-        const rawTypes = searchParams.get('types') ?? searchParams.get('t') ?? '';
-        const urlTypes = rawTypes.split(',').map(s => decodeURIComponent(s)).filter(Boolean);
+            const rawTypes = searchParams.get('types') ?? searchParams.get('t') ?? '';
+            const urlTypes = rawTypes.split(',').map(s => decodeURIComponent(s)).filter(Boolean);
 
-        const rawThemes = searchParams.get('themes') ?? searchParams.get('th') ?? '';
-        const urlThemes = rawThemes.split(',').map(s => decodeURIComponent(s)).filter(Boolean);
+            const rawThemes = searchParams.get('th') ?? searchParams.get('themes') ?? '';
+            const themeKeys = rawThemes.split(',').map(s => decodeURIComponent(s)).filter(Boolean);
 
-        const urlQuery = searchParams.get('q') ?? searchParams.get('search') ?? '';
+            // Ensure theme mappings are loaded then convert keys to names
+            await ensureThemesMappingsLoaded();
+            const urlThemes = themeKeys.flatMap(k => themeKeyToNames(k));
 
-        // Apply decoded values to state
-        setInvestmentTypes(urlTypes);
-        setInvestmentThemes(urlThemes);
-        setAppliedSearchQuery(urlQuery);
-        setSearchQuery(urlQuery);
+            const urlQuery = searchParams.get('q') ?? searchParams.get('search') ?? '';
 
-        // Store URL donor slugs temporarily to decode them later
-        (window as any).__urlDonorSlugs = urlDonorSlugs;
+            // Apply decoded values to state
+            setInvestmentTypes(urlTypes);
+            setInvestmentThemes(urlThemes);
+            setAppliedSearchQuery(urlQuery);
+            setSearchQuery(urlQuery);
 
-        setIsInitialized(true);
+            // Store URL donor slugs temporarily to decode them later
+            (window as any).__urlDonorSlugs = urlDonorSlugs;
+
+            setIsInitialized(true);
+        })();
     }, [searchParams]);
     
     // Extract all available donor countries from data
@@ -294,7 +301,9 @@ export default function AnalyticsPage({ logoutButton }: AnalyticsPageProps) {
         }
         
         if (investmentThemes.length > 0) {
-            params.set('themes', investmentThemes.join(','));
+            // Convert human-readable theme names back to keys for URL encoding
+            const keys = Array.from(new Set(investmentThemes.map(t => themeNameToKey(t))));
+            params.set('th', keys.join(','));
         }
         
         if (appliedSearchQuery) {
