@@ -3,7 +3,7 @@
 import { Button } from '@/components/ui/button';
 import { TooltipContent, TooltipProvider, Tooltip as TooltipUI, TooltipTrigger } from '@/components/ui/tooltip';
 import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuTrigger } from '@/components/ui/dropdown-menu';
-import { ChevronDown, FileDown, Info, MessageCircle, Share2, Menu, Lightbulb, LogOut, Home, BarChart3, BookOpen, Landmark, LayoutDashboard } from 'lucide-react';
+import { ChevronDown, FileDown, Info, MessageCircle, Share2, Menu, Lightbulb, LogOut, Home, BarChart3, BookOpen, Landmark, UserRoundPlus, LayoutDashboard } from 'lucide-react';
 import { useTips } from '@/contexts/TipsContext';
 import { useGeneralContributions } from '@/contexts/GeneralContributionsContext';
 import { setGeneralContributionsEnabled } from '@/lib/data';
@@ -296,6 +296,7 @@ export default function PageHeader({
                                             <Lightbulb className={`w-4 h-4 ${tipsEnabled ? '' : 'opacity-50'}`} />
                                             <span>{tipsEnabled ? labels.header.tipsOn : labels.header.tipsOff}</span>
                                         </button>
+                                        
                                         <button
                                             type="button"
                                             onClick={handleGeneralContributionsToggle}
@@ -304,6 +305,40 @@ export default function PageHeader({
                                             <Landmark className={`w-4 h-4 ${showGeneralContributions ? '' : 'opacity-50'}`} />
                                             <span>{showGeneralContributions ? 'General Contributions on' : 'General Contributions off'}</span>
                                         </button>
+
+                                        <button
+                                            type="button"
+                                            onClick={() => {
+                                                const raw = searchParams?.toString() || '';
+                                                const params = new URLSearchParams(raw);
+                                                const incoming = (params.get('d') ?? params.get('donors') ?? '').split(',').filter(Boolean);
+                                                const crafdKey = 'crafd-donors';
+                                                const crafdExpansion = ['germany','netherlands','canada','finland','luxembourg','united-kingdom','european-union','usa'];
+
+                                                const hasCrafd = incoming.includes(crafdKey) || (incoming.length === crafdExpansion.length && crafdExpansion.every(s => incoming.includes(s)));
+
+                                                if (hasCrafd) {
+                                                    // Remove donor filter entirely
+                                                    params.delete('d');
+                                                    params.delete('donors');
+                                                } else {
+                                                    // Set the short key so expansion logic handles it downstream
+                                                    params.set('d', crafdKey);
+                                                    // keep 'donors' cleared to avoid duplicates
+                                                    params.delete('donors');
+                                                }
+
+                                                const target = params.toString() ? `${pathname}?${params.toString()}` : pathname || '/';
+                                                router.push(target);
+                                            }}
+                                            className="w-full text-left flex items-center gap-2 text-sm py-2 px-2 text-slate-700 hover:bg-slate-50"
+                                        >
+                                            <UserRoundPlus className="w-4 h-4" />
+                                            <span>Select CRAF'd Donors</span>
+                                        </button>
+
+
+
                                         <form action="/logout" method="post" className="w-full">
                                             <button
                                                 type="submit"
