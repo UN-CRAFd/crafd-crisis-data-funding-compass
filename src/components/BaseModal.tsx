@@ -58,7 +58,7 @@ export default function BaseModal({
         };
 
         updatePortalContainer();
-        
+
         // Listen for fullscreen changes
         document.addEventListener('fullscreenchange', updatePortalContainer);
         return () => document.removeEventListener('fullscreenchange', updatePortalContainer);
@@ -159,16 +159,14 @@ export default function BaseModal({
 
     const modalContent = (
         <div
-            className={`fixed inset-0 bg-black/50 flex items-center justify-end z-[200] transition-all duration-300 ease-out ${
-                isVisible && !isClosing ? 'opacity-100' : 'opacity-0'
-            }`}
+            className={`fixed inset-0 bg-black/50 flex items-center justify-end z-[200] transition-all duration-300 ease-out ${isVisible && !isClosing ? 'opacity-100' : 'opacity-0'
+                }`}
             onClick={handleBackdropClick}
         >
             <div
                 ref={modalRef}
-                className={`relative w-full sm:w-3/5 md:w-[45%] lg:w-[37%] xl:w-[29%] sm:min-w-[435px] lg:min-w-[500px] xl:min-w-[550px] h-full bg-white shadow-2xl transition-transform duration-300 ease-out flex flex-col ${
-                    isVisible && !isClosing ? 'translate-x-0' : 'translate-x-full'
-                }`}
+                className={`relative w-full sm:w-3/5 md:w-[45%] lg:w-[37%] xl:w-[29%] sm:min-w-[435px] lg:min-w-[500px] xl:min-w-[550px] h-full bg-white shadow-2xl transition-transform duration-300 ease-out flex flex-col ${isVisible && !isClosing ? 'translate-x-0' : 'translate-x-full'
+                    }`}
                 onTouchStart={onTouchStart}
                 onTouchMove={onTouchMove}
                 onTouchEnd={onTouchEnd}
@@ -191,7 +189,7 @@ export default function BaseModal({
     if (!portalContainer) {
         return <></>;
     }
-    
+
     return createPortal(modalContent, portalContainer);
 }
 
@@ -242,11 +240,10 @@ export function ModalHeader({ icon, title, showCopied, onShare, onClose, loading
             <div className="flex items-center gap-2 shrink-0">
                 <button
                     onClick={onShare}
-                    className={`flex items-center justify-center h-12 w-12 sm:h-10 sm:w-10 rounded-full sm:rounded-lg transition-all duration-200 ease-out touch-manipulation cursor-pointer focus:outline-none shrink-0 shadow-lg sm:shadow-none ${
-                        showCopied
+                    className={`flex items-center justify-center h-12 w-12 sm:h-10 sm:w-10 rounded-full sm:rounded-lg transition-all duration-200 ease-out touch-manipulation cursor-pointer focus:outline-none shrink-0 shadow-lg sm:shadow-none ${showCopied
                             ? 'text-white'
                             : 'text-white bg-slate-600 hover:bg-slate-700 sm:text-gray-600 sm:bg-gray-200 sm:hover:bg-gray-400 sm:hover:text-gray-100 focus:bg-slate-700 sm:focus:bg-gray-400 sm:focus:text-gray-100'
-                    }`}
+                        }`}
                     style={showCopied ? { backgroundColor: 'var(--color-success)' } : {}}
                     aria-label="Share"
                     title="Share"
@@ -280,13 +277,12 @@ interface CountryBadgeProps {
 
 export function CountryBadge({ country, className = '', onClick, agencies, projectsForDonor, projectAgenciesForDonor, tooltipContainer, isMemberState = false }: CountryBadgeProps) {
     const isClickable = !!onClick;
-    
+
     const badgeContent = (
         <div className="inline-flex items-center gap-2">
             <span
-                className={`inline-flex items-center gap-2 px-3 py-1.5 rounded-md text-sm font-medium bg-slate-100 text-slate-600 ${
-                    isClickable ? 'cursor-pointer hover:bg-slate-200 transition-colors' : ''
-                } ${className}`}
+                className={`inline-flex items-center gap-2 px-3 py-1.5 rounded-md text-sm font-medium bg-slate-100 text-slate-600 ${isClickable ? 'cursor-pointer hover:bg-slate-200 transition-colors' : ''
+                    } ${className}`}
                 onClick={isClickable ? () => onClick(country) : undefined}
             >
                 <CountryFlag country={country} width={20} height={15} />
@@ -294,13 +290,13 @@ export function CountryBadge({ country, className = '', onClick, agencies, proje
             </span>
         </div>
     );
-    
+
     // Filter out "Unspecified Agency"
     const filteredAgencies = agencies ? agencies.filter(agency => agency !== 'Unspecified Agency') : [];
     const hasAgencies = filteredAgencies && filteredAgencies.length > 0;
     const hasProjects = projectsForDonor && projectsForDonor.length > 0;
     const hasProjectAgencies = projectAgenciesForDonor && projectAgenciesForDonor.length > 0;
-    
+
     if (hasAgencies || hasProjects || hasProjectAgencies) {
         const tooltipContent = (
             <div>
@@ -348,7 +344,7 @@ export function CountryBadge({ country, className = '', onClick, agencies, proje
             </ModalTooltip>
         );
     }
-    
+
     return badgeContent;
 }
 
@@ -364,12 +360,12 @@ interface ModalTooltipProps {
     tooltipContainer?: Element | null;
 }
 
-export function ModalTooltip({ 
-    children, 
+export function ModalTooltip({
+    children,
     content,
     side = 'top',
     delayDuration = 200,
-    tooltipContainer 
+    tooltipContainer
 }: ModalTooltipProps) {
     // Get tips enabled state with fallback for SSR
     let tipsEnabled = false;
@@ -380,20 +376,20 @@ export function ModalTooltip({
         // TipsProvider not available (e.g., during server-side rendering)
         tipsEnabled = false;
     }
-    
+
     // If tips are disabled or no content, just render children without tooltip
     if (!tipsEnabled || !content) {
         return children;
     }
-    
+
     return (
         <TooltipProvider delayDuration={delayDuration}>
             <Tooltip>
                 <TooltipTrigger asChild>
                     {children}
                 </TooltipTrigger>
-                <TooltipContent 
-                    side={side} 
+                <TooltipContent
+                    side={side}
                     className="max-w-xs p-2 text-xs bg-white border border-gray-300 !z-[9999]"
                     sideOffset={5}
                     container={tooltipContainer as HTMLElement | null}

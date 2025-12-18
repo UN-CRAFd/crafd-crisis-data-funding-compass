@@ -8,9 +8,13 @@ import FilterBar from '@/components/FilterBar';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { Tooltip as TooltipUI, TooltipContent, TooltipProvider, TooltipTrigger } from '@/components/ui/tooltip';
-import { Globe, Search, Filter, ChevronDown, Building2, Database, BarChart3, Network, GitBranch, Users, Target, SearchCheck } from 'lucide-react';
+import { Globe, Search, Filter, ChevronDown, Building2, Database, BarChart3, Network, GitBranch, Users, Target, SearchCheck, LayoutGrid, Columns, Radar as RadarIcon, AlertCircle } from 'lucide-react';
+import { Radar, RadarChart, PolarGrid, PolarAngleAxis, PolarRadiusAxis, ResponsiveContainer, Legend, Label } from 'recharts';
+import { getIconForInvestmentType } from '@/config/investmentTypeIcons';
+import { ensureThemesMappingsLoaded, themeKeyToNames, themeNameToKey } from '@/lib/data';
 import { SectionHeader } from './SectionHeader';
 import { useTips } from '@/contexts/TipsContext';
+import { useGeneralContributions } from '@/contexts/GeneralContributionsContext';
 import { toUrlSlug, matchesUrlSlug } from '@/lib/urlShortcuts';
 import labels from '@/config/labels.json';
 
@@ -74,6 +78,15 @@ interface StatCardProps {
     colorScheme: 'amber';
     tooltip?: React.ReactNode;
 }
+
+const MATRIX_BUTTON_CLASS =
+  "px-3 py-1 text-xs font-medium rounded-md transition-colors flex items-center gap-1.5";
+
+const MATRIX_MODES = [
+    { value: 'split', label: 'Split Matrix', Icon: LayoutGrid },
+  { value: 'unified', label: 'Overview', Icon: Columns },
+
+] as const;
 
 const StatCard = ({ icon, title, value, label, colorScheme, tooltip }: StatCardProps) => {
     const { tipsEnabled } = useTips();
@@ -170,24 +183,40 @@ export default function AnalyticsPage({ logoutButton }: AnalyticsPageProps) {
     const [appliedSearchQuery, setAppliedSearchQuery] = useState('');
     const [isInitialized, setIsInitialized] = useState(false);
     const [hoveredCell, setHoveredCell] = useState<{ donor1: string; donor2: string } | null>(null);
+    const [hoveredDonor, setHoveredDonor] = useState<string | null>(null);
+    const [matrixViewMode, setMatrixViewMode] = useState<'unified' | 'split'>('split');
     
-    // Load filter state from URL on mount
+    // Load filter state from URL on mount — accept both long and short param keys
     useEffect(() => {
-        const urlDonorSlugs = searchParams.get('d')?.split(',').filter(Boolean) || [];
-        const urlTypes = searchParams.get('types')?.split(',').filter(Boolean) || [];
-        const urlThemes = searchParams.get('themes')?.split(',').filter(Boolean) || [];
-        const urlQuery = searchParams.get('q') || '';
-        
-        // Decode donor slugs to actual donor names - will be done in a follow-up effect after data loads
-        setInvestmentTypes(urlTypes);
-        setInvestmentThemes(urlThemes);
-        setAppliedSearchQuery(urlQuery);
-        setSearchQuery(urlQuery);
-        
-        // Store URL donor slugs temporarily to decode them later
-        (window as any).__urlDonorSlugs = urlDonorSlugs;
-        
-        setIsInitialized(true);
+        (async () => {
+            const rawDonors = searchParams.get('d') ?? searchParams.get('donors') ?? '';
+            const incomingDonorSlugs = rawDonors.split(',').filter(Boolean);
+            const crafdExpansion = ['germany','netherlands','canada','finland','luxembourg','united-kingdom','european-union','usa'];
+            const urlDonorSlugs = incomingDonorSlugs.flatMap(s => s === 'crafd-donors' ? crafdExpansion : [s]);
+
+            const rawTypes = searchParams.get('types') ?? searchParams.get('t') ?? '';
+            const urlTypes = rawTypes.split(',').map(s => decodeURIComponent(s)).filter(Boolean);
+
+            const rawThemes = searchParams.get('th') ?? searchParams.get('themes') ?? '';
+            const themeKeys = rawThemes.split(',').map(s => decodeURIComponent(s)).filter(Boolean);
+
+            // Ensure theme mappings are loaded then convert keys to names
+            await ensureThemesMappingsLoaded();
+            const urlThemes = themeKeys.flatMap(k => themeKeyToNames(k));
+
+            const urlQuery = searchParams.get('q') ?? searchParams.get('search') ?? '';
+
+            // Apply decoded values to state
+            setInvestmentTypes(urlTypes);
+            setInvestmentThemes(urlThemes);
+            setAppliedSearchQuery(urlQuery);
+            setSearchQuery(urlQuery);
+
+            // Store URL donor slugs temporarily to decode them later
+            (window as any).__urlDonorSlugs = urlDonorSlugs;
+
+            setIsInitialized(true);
+        })();
     }, [searchParams]);
     
     // Extract all available donor countries from data
@@ -274,7 +303,9 @@ export default function AnalyticsPage({ logoutButton }: AnalyticsPageProps) {
         }
         
         if (investmentThemes.length > 0) {
-            params.set('themes', investmentThemes.join(','));
+            // Convert human-readable theme names back to keys for URL encoding
+            const keys = Array.from(new Set(investmentThemes.map(t => themeNameToKey(t))));
+            params.set('th', keys.join(','));
         }
         
         if (appliedSearchQuery) {
@@ -817,6 +848,86 @@ export default function AnalyticsPage({ logoutButton }: AnalyticsPageProps) {
             .sort((a, b) => b.value - a.value);
     }, [filteredProjectsData, selectedDonors]);
 
+    // Calculate per-donor investment focus (projects per investment type)
+    const donorProfiles = useMemo(() => {
+        if (selectedDonors.length === 0) return [];
+
+        // Helper to check if a project matches current type/theme/search filters
+        const projectMatchesFilters = (project: any) => {
+            // Search filter applies to project name or organization handled elsewhere; keep simple: allow all
+            // Investment type filter - if set, only count projects matching selected investmentTypes
+            if (investmentTypes.length > 0) {
+                const projectTypes = project.fields?.['Investment Type(s)'] || [];
+                if (!Array.isArray(projectTypes) || !projectTypes.some((pt: string) =>
+                    investmentTypes.some(it => it.toLowerCase().trim() === (pt || '').toLowerCase().trim())
+                )) {
+                    return false;
+                }
+            }
+
+            // Investment themes filter
+            if (investmentThemes.length > 0) {
+                const projectThemes = project.fields?.['Investment Theme(s)'] || [];
+                if (!Array.isArray(projectThemes) || !projectThemes.some((th: string) =>
+                    investmentThemes.some(it => it.toLowerCase().trim() === (th || '').toLowerCase().trim())
+                )) {
+                    return false;
+                }
+            }
+
+            return true;
+        };
+
+        return selectedDonors.map(donor => {
+            // Initialize counts for all known investment types
+            const counts: Record<string, number> = {};
+            allKnownInvestmentTypes.forEach(t => counts[t] = 0);
+
+            // Iterate all organizations and accumulate projects for which this donor appears
+            organizationsData.forEach(org => {
+                // Determine if donor funds this org (org-level) or its projects (project-level)
+                const orgDonors = new Set<string>();
+                if (org.agencies && Array.isArray(org.agencies)) {
+                    org.agencies.forEach((a: any) => {
+                        const countryName = a.fields?.['Country Name'];
+                        if (countryName) orgDonors.add(countryName);
+                    });
+                }
+
+                // For each project, check project-level agencies
+                if (org.projects && Array.isArray(org.projects)) {
+                    org.projects.forEach(project => {
+                        const projectDonors = new Set<string>(orgDonors);
+                        if (project.agencies && Array.isArray(project.agencies)) {
+                            project.agencies.forEach((pa: any) => {
+                                const countryName = pa.fields?.['Country Name'];
+                                if (countryName) projectDonors.add(countryName);
+                            });
+                        }
+
+                        if (projectDonors.has(donor) && projectMatchesFilters(project)) {
+                            const projectTypes = project.fields?.['Investment Type(s)'] || [];
+                            if (Array.isArray(projectTypes) && projectTypes.length > 0) {
+                                projectTypes.forEach((pt: string) => {
+                                    const match = allKnownInvestmentTypes.find(k =>
+                                        k.toLowerCase().trim() === (pt || '').toLowerCase().trim()
+                                    );
+                                    if (match) counts[match] = (counts[match] || 0) + 1;
+                                });
+                            } else {
+                                // If no explicit project types, increment 'Other' bucket if exists
+                                if (counts['Other'] !== undefined) counts['Other']++;
+                            }
+                        }
+                    });
+                }
+            });
+
+            const data = allKnownInvestmentTypes.map(t => ({ type: t, value: counts[t] || 0 }));
+            return { donor, data };
+        });
+    }, [selectedDonors, organizationsData, investmentTypes, investmentThemes, allKnownInvestmentTypes]);
+
     // Calculate donor co-financing chart data using coFinancingMatrix (ensures same deduplication)
     const donorCoFinancingData = useMemo(() => {
         const pairCounts: Array<{ name: string; value: number }> = [];
@@ -1196,6 +1307,57 @@ export default function AnalyticsPage({ logoutButton }: AnalyticsPageProps) {
         };
     }, [filteredOrganizationsData, selectedDonors, investmentTypes, investmentThemes, appliedSearchQuery, organizationsData]);
 
+    // Calculate investment focus by donor using computed donorProfiles (normalize per-donor)
+    const donorInvestmentFocus = useMemo(() => {
+        if (selectedDonors.length === 0) return [];
+
+        const canonicalTypes = Object.values(labels.investmentTypes);
+
+        // Build a map donor -> type -> count from donorProfiles
+        const countsByDonor: Record<string, Record<string, number>> = {};
+        donorProfiles.forEach((p: any) => {
+            const map: Record<string, number> = {};
+            p.data.forEach((d: any) => {
+                map[d.type] = d.value || 0;
+            });
+            countsByDonor[p.donor] = map;
+        });
+
+        // Ensure zeros for missing types
+        selectedDonors.forEach(donor => {
+            if (!countsByDonor[donor]) countsByDonor[donor] = {};
+            canonicalTypes.forEach(t => {
+                if (!countsByDonor[donor][t]) countsByDonor[donor][t] = 0;
+            });
+        });
+
+        // Compute max per donor to normalize
+        const donorMax: Record<string, number> = {};
+        selectedDonors.forEach(donor => {
+            const vals = Object.values(countsByDonor[donor] || {});
+            donorMax[donor] = vals.length > 0 ? Math.max(...vals) : 0;
+        });
+
+        // Build radar data: one entry per type with a value per donor (0-100 normalized)
+        const radarData = canonicalTypes.map(type => {
+            const entry: any = { name: type };
+            selectedDonors.forEach(donor => {
+                const count = countsByDonor[donor][type] || 0;
+                const max = donorMax[donor] || 0;
+                entry[donor] = max > 0 ? Math.round((count / max) * 100) : 0;
+            });
+            return entry;
+        });
+
+        return radarData;
+    }, [selectedDonors, donorProfiles]);
+
+    const handleCellClick = (donor1: string, donor2: string) => {
+        // Navigate to dashboard with both donors as filters
+        const donorSlugs = [toUrlSlug(donor1), toUrlSlug(donor2)].join(',');
+        router.push(`/?d=${donorSlugs}`);
+    };
+
     const handleShare = () => {
         const url = window.location.href;
         navigator.clipboard.writeText(url).then(() => {
@@ -1205,6 +1367,15 @@ export default function AnalyticsPage({ logoutButton }: AnalyticsPageProps) {
             }, 2000);
         });
     };
+
+    // Get General Contributions state
+    let showGeneralContributions = true;
+    try {
+        const genContContext = useGeneralContributions();
+        showGeneralContributions = genContContext.showGeneralContributions;
+    } catch (e) {
+        // GeneralContributionsProvider not available
+    }
 
     return (
         <div className="min-h-screen bg-slate-50">
@@ -1230,6 +1401,15 @@ export default function AnalyticsPage({ logoutButton }: AnalyticsPageProps) {
                             <p className="text-base sm:text-lg text-slate-700 max-w-3xl leading-relaxed">
                                 Explore co-financing relationships and funding patterns across the crisis data ecosystem
                             </p>
+                            {/* Warning note if General Contributions enabled */}
+                            {showGeneralContributions && (
+                                <div className="mt-4 p-4 bg-white/60 backdrop-blur-sm border border-amber-200 rounded-lg flex gap-3">
+                                    <AlertCircle className="w-5 h-5 text-amber-600 flex-shrink-0 mt-0.5" />
+                                    <p className="text-sm text-amber-900">
+                                        <span className="font-semibold">Note:</span> General Contributions beyond the highest voluntary donors are excluded from the analytics page. Therefore, numbers might deviate from the dashboard page if General Contributions are turned on.
+                                    </p>
+                                </div>
+                            )}
                         </div>
                     </div>
 
@@ -1261,8 +1441,8 @@ export default function AnalyticsPage({ logoutButton }: AnalyticsPageProps) {
                                 <StatCard
                                     icon={<Building2 style={{ color: 'var(--brand-primary)' }} />}
                                     title="Co-Funded Orgs"
-                                    value={analyticsStats.sharedFundingTargets}
-                                    label="donors"
+                                    value={selectedDonors.length === 1 ? 'N/A' : analyticsStats.sharedFundingTargets}
+                                    label="orgs"
                                     colorScheme="amber"
                                     tooltip="Absolute number of organizations funded by at least 2 of the selected donors."
                                 />
@@ -1270,7 +1450,7 @@ export default function AnalyticsPage({ logoutButton }: AnalyticsPageProps) {
                                 <StatCard
                                     icon={<Target style={{ color: 'var(--brand-primary)' }} />}
                                     title="Funding Overlap"
-                                    value={`${analyticsStats.avgFundingOverlap}%`}
+                                    value={selectedDonors.length === 1 ? 'N/A' : `${analyticsStats.avgFundingOverlap}%`}
                                     label="shared"
                                     colorScheme="amber"
                                     tooltip={
@@ -1302,6 +1482,8 @@ export default function AnalyticsPage({ logoutButton }: AnalyticsPageProps) {
                             </div>
                         </>
                     )}
+
+                    {/* Per-donor profiles removed — use `donorInvestmentFocus` chart below */}
 
                     {/* Filter Bar */}
                     <Card className="!border-0 bg-white">
@@ -1338,197 +1520,480 @@ export default function AnalyticsPage({ logoutButton }: AnalyticsPageProps) {
                             />
                         </CardContent>
                     </Card>
+                    
+                    {/* Co-Financing Matrix with View Toggle */}
+                    { /* Hide entire card when no donors selected */ }
+                    <Card className={`${selectedDonors.length === 0 ? 'hidden' : ''} !border-0 bg-white`}>
+                        <CardHeader className="pb-0">
+                            <div className="flex items-center justify-between gap-4">
+                                <CardTitle>
+                                    <SectionHeader icon={<Network style={{ color: 'var(--brand-primary)' }} />} title="Which donors are collaborating on Data Investment?" />
+                                </CardTitle>
+                                <div className="flex items-center gap-2">
+                                {MATRIX_MODES.map(({ value, label, Icon }) => {
+                                    const active = matrixViewMode === value;
 
-                 
-                    {/* Unified Co-Financing Matrix */}
-                    <Card className="!border-0 bg-white">
-                        <CardHeader className="pb-0 h-6.5">
-                            <CardTitle>
-                                <SectionHeader icon={<Network style={{ color: 'var(--brand-primary)' }} />} title="Which donors are collaborating on Data Investment?" />
-                            </CardTitle>
-                        </CardHeader>
-                        <CardContent className="pt-0">
-                            <div className="flex items-center gap-4 mb03">
-                                <div className="flex items-center gap-3 ml-auto">
-                                    <div className="flex items-center gap-1.5">
-                                        <div className="w-4 h-4 bg-amber-300 border border-slate-300 rounded"></div>
-                                        <span className="text-xs text-slate-600">Organizations</span>
-                                    </div>
-                                    <div className="flex items-center gap-1.5">
-                                        <div className="w-4 h-4 bg-indigo-300 border border-slate-300 rounded"></div>
-                                        <span className="text-xs text-slate-600">Projects</span>
-                                    </div>
+                                    return (
+                                    <Button
+                                        key={value}
+                                        onClick={() => setMatrixViewMode(value)}
+                                        className={`${MATRIX_BUTTON_CLASS} ${
+                                        active
+                                            ? 'bg-slate-200 text-slate-700'
+                                            : 'bg-slate-100 text-slate-600 hover:bg-slate-200'
+                                        }`}
+                                    >
+                                        <Icon className="h-3 w-3" />
+                                        {label}
+                                    </Button>
+                                    );
+                                })}
                                 </div>
                             </div>
-                            <div className="w-full overflow-x-hidden">
-                                <table className="w-full">
-                                    <thead>
-                                        <tr>
-                                            <th className="p-2 text-left text-sm font-semibold text-slate-600 border-b-2 border-slate-200 min-w-[90px]">
-                                                Donor
-                                            </th>
-                                            {selectedDonors.map(donor => (
-                                                <th 
-                                                    key={donor} 
-                                                    className="p-2 text-left text-sm font-semibold text-slate-600 border-b-2 border-slate-200 w-16"
-                                                    style={{ writingMode: 'vertical-rl', transform: 'rotate(225deg)' }}
-                                                >
-                                                    {donor}
-                                                </th>
-                                            ))}
-                                        </tr>
-                                    </thead>
-                                    <tbody>
-                                        {selectedDonors.map((donor1, i) => (
-                                            <tr key={donor1}>
-                                                <td className="p-2 text-sm font-semibold text-slate-600 border-r-2 border-slate-200">
-                                                    {donor1}
-                                                </td>
-                                                {selectedDonors.map((donor2, j) => {
-                                                    const isDiagonal = donor1 === donor2;
-                                                    const isAboveDiagonal = i < j; // Above diagonal: projects (purple)
-                                                    const isBelowDiagonal = i > j; // Below diagonal: organizations (orange)
-                                                    
-                                                    const projectCount = coFinancingMatrix[donor1]?.[donor2]?.projects.size || 0;
-                                                    const orgCount = coFinancingMatrix[donor1]?.[donor2]?.orgs.size || 0;
-                                                    
-                                                    const count = isAboveDiagonal ? projectCount : orgCount;
-                                                    
-                                                    // For diagonal cells, show contextual data when another cell is hovered
-                                                    const showDiagonalContext = isDiagonal && hoveredCell && (hoveredCell.donor1 === donor1 || hoveredCell.donor2 === donor1);
-                                                    let diagonalCount = 0;
-                                                    let diagonalColorClass = 'bg-slate-200 text-slate-400';
-                                                    let diagonalTooltipText = '';
-                                                    
-                                                    if (showDiagonalContext) {
-                                                        // Determine if we should show orgs or projects based on which cell is hovered
-                                                        const isHoveredAboveDiagonal = (hoveredCell.donor1 === donor1 && hoveredCell.donor2 !== donor1) ? (selectedDonors.indexOf(hoveredCell.donor1) < selectedDonors.indexOf(hoveredCell.donor2)) : false;
-                                                        const isHoveredBelowDiagonal = (hoveredCell.donor1 === donor1 && hoveredCell.donor2 !== donor1) ? (selectedDonors.indexOf(hoveredCell.donor1) > selectedDonors.indexOf(hoveredCell.donor2)) : (hoveredCell.donor2 === donor1 && hoveredCell.donor1 !== donor1 && selectedDonors.indexOf(hoveredCell.donor1) > selectedDonors.indexOf(hoveredCell.donor2));
-                                                        
-                                                        // Simplify: check if hovered cell is a project cell or org cell
-                                                        const hoveredOrgIndex = selectedDonors.indexOf(hoveredCell.donor1);
-                                                        const hoveredColIndex = selectedDonors.indexOf(hoveredCell.donor2);
-                                                        const isHoveredCellProject = hoveredOrgIndex < hoveredColIndex;
-                                                        
-                                                        if (isHoveredCellProject) {
-                                                            // Show total projects for this donor
-                                                            diagonalCount = donorTotals[donor1]?.projects.size || 0;
-                                                            diagonalTooltipText = `Total projects funded by ${donor1}`;
-                                                            diagonalColorClass = `${getProjectColorIntensity(diagonalCount, maxValues.maxProjects)} ${diagonalCount > 0 ? 'text-slate-800' : 'text-slate-400'}`;
-                                                        } else {
-                                                            // Show total orgs for this donor
-                                                            diagonalCount = donorTotals[donor1]?.orgs.size || 0;
-                                                            diagonalTooltipText = `Total organizations funded by ${donor1}`;
-                                                            diagonalColorClass = `${getOrgColorIntensity(diagonalCount, maxValues.maxOrgs)} ${diagonalCount > 0 ? 'text-slate-800' : 'text-slate-400'}`;
-                                                        }
-                                                    }
-                                                    
-                                                    const colorClass = isDiagonal && !showDiagonalContext
-                                                        ? 'bg-slate-200 text-slate-400'
-                                                        : isDiagonal && showDiagonalContext
-                                                            ? diagonalColorClass
-                                                            : isAboveDiagonal
-                                                                ? `${getProjectColorIntensity(projectCount, maxValues.maxProjects)} ${projectCount > 0 ? 'text-slate-800' : 'text-slate-400'}`
-                                                                : `${getOrgColorIntensity(orgCount, maxValues.maxOrgs)} ${orgCount > 0 ? 'text-slate-800' : 'text-slate-400'}`;
-                                                    
-                                                    const tooltipText = isDiagonal && showDiagonalContext
-                                                        ? diagonalTooltipText
-                                                        : isDiagonal
-                                                            ? null
-                                                            : isAboveDiagonal
-                                                                ? `${donor1} and ${donor2} are co-financing ${projectCount} project${projectCount !== 1 ? 's' : ''}`
-                                                                : `${donor1} and ${donor2} are co-financing ${orgCount} organization${orgCount !== 1 ? 's' : ''}`;
-                                                    
-                                                    const handleCellClick = () => {
-                                                        if (!isDiagonal && count > 0) {
-                                                            // Navigate to dashboard with the two donors and current filters
-                                                            const donorSlugs = [donor1, donor2]
-                                                                .map(d => toUrlSlug(d))
-                                                                .join(',');
-                                                            
-                                                            const params = new URLSearchParams();
-                                                            params.set('d', donorSlugs);
-                                                            
-                                                            // Add type filters if any
-                                                            if (investmentTypes.length > 0) {
-                                                                params.set('types', investmentTypes.join(','));
-                                                            }
-                                                            
-                                                            // Add theme filters if any
-                                                            if (investmentThemes.length > 0) {
-                                                                params.set('themes', investmentThemes.join(','));
-                                                            }
-                                                            
-                                                            // Add search query if any
-                                                            if (appliedSearchQuery) {
-                                                                params.set('q', appliedSearchQuery);
-                                                            }
-                                                            
-                                                            router.push(`/?${params.toString()}`);
-                                                        }
-                                                    };
-                                                    
-                                                    const handleMouseEnter = () => {
-                                                        if (!isDiagonal) {
-                                                            setHoveredCell({ donor1, donor2 });
-                                                        }
-                                                    };
-                                                    
-                                                    const handleMouseLeave = () => {
-                                                        setHoveredCell(null);
-                                                    };
-                                                    
-                                                    const cellContent = (
-                                                        <td 
-                                                            key={donor2}
-                                                            onClick={handleCellClick}
-                                                            onMouseEnter={handleMouseEnter}
-                                                            onMouseLeave={handleMouseLeave}
-                                                            className={`p-3 text-center text-sm font-semibold border border-slate-200 transition-all ${colorClass} ${!isDiagonal && count > 0 ? 'cursor-pointer hover:opacity-75' : ''}`}
+                        </CardHeader>
+                        <CardContent className="pt-4">
+                            {matrixViewMode === 'unified' ? (
+                                // Unified Matrix View
+                                <>
+                                    <div className="flex items-center gap-4 mb-3">
+                                        <div className="flex items-center gap-3 ml-auto">
+                                            <div className="flex items-center gap-1.5">
+                                                <div className="w-4 h-4 bg-amber-300 border border-slate-300 rounded"></div>
+                                                <span className="text-xs text-slate-600">Organizations</span>
+                                            </div>
+                                            <div className="flex items-center gap-1.5">
+                                                <div className="w-4 h-4 bg-indigo-300 border border-slate-300 rounded"></div>
+                                                <span className="text-xs text-slate-600">Projects</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div className="w-full overflow-x-hidden">
+                                        <table className="w-full">
+                                            <thead>
+                                                <tr>
+                                                    <th className="p-2 text-left text-sm font-semibold text-slate-600 border-b-2 border-slate-200 min-w-[90px]">
+                                                        Donor
+                                                    </th>
+                                                    {selectedDonors.map(donor => (
+                                                        <th 
+                                                            key={donor} 
+                                                            className="p-2 text-left text-sm font-semibold text-slate-600 border-b-2 border-slate-200 w-16"
+                                                            style={{ writingMode: 'vertical-rl', transform: 'rotate(225deg)' }}
                                                         >
-                                                            {isDiagonal && showDiagonalContext ? diagonalCount : isDiagonal ? '—' : count}
+                                                            {donor}
+                                                        </th>
+                                                    ))}
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                {selectedDonors.map((donor1, i) => (
+                                                    <tr key={donor1}>
+                                                        <td className="p-2 text-sm font-semibold text-slate-600 border-r-2 border-slate-200">
+                                                            {donor1}
                                                         </td>
-                                                    );
+                                                        {selectedDonors.map((donor2, j) => {
+                                                            const isDiagonal = donor1 === donor2;
+                                                            const isAboveDiagonal = i < j;
+                                                            
+                                                            const projectCount = coFinancingMatrix[donor1]?.[donor2]?.projects.size || 0;
+                                                            const orgCount = coFinancingMatrix[donor1]?.[donor2]?.orgs.size || 0;
+                                                            
+                                                            const count = isAboveDiagonal ? projectCount : orgCount;
+                                                            
+                                                            const showDiagonalContext = isDiagonal && hoveredCell && (hoveredCell.donor1 === donor1 || hoveredCell.donor2 === donor1);
+                                                            let diagonalCount = 0;
+                                                            let diagonalColorClass = 'bg-slate-200 text-slate-400';
+                                                            let diagonalTooltipText = '';
+                                                            
+                                                            if (showDiagonalContext) {
+                                                                const hoveredOrgIndex = selectedDonors.indexOf(hoveredCell.donor1);
+                                                                const hoveredColIndex = selectedDonors.indexOf(hoveredCell.donor2);
+                                                                const isHoveredCellProject = hoveredOrgIndex < hoveredColIndex;
+                                                                
+                                                                if (isHoveredCellProject) {
+                                                                    diagonalCount = donorTotals[donor1]?.projects.size || 0;
+                                                                    diagonalTooltipText = `Total projects funded by ${donor1}`;
+                                                                    diagonalColorClass = `${getProjectColorIntensity(diagonalCount, maxValues.maxProjects)} ${diagonalCount > 0 ? 'text-slate-800' : 'text-slate-400'}`;
+                                                                } else {
+                                                                    diagonalCount = donorTotals[donor1]?.orgs.size || 0;
+                                                                    diagonalTooltipText = `Total organizations funded by ${donor1}`;
+                                                                    diagonalColorClass = `${getOrgColorIntensity(diagonalCount, maxValues.maxOrgs)} ${diagonalCount > 0 ? 'text-slate-800' : 'text-slate-400'}`;
+                                                                }
+                                                            }
+                                                            
+                                                            const colorClass = isDiagonal && !showDiagonalContext
+                                                                ? 'bg-slate-200 text-slate-400'
+                                                                : isDiagonal && showDiagonalContext
+                                                                    ? diagonalColorClass
+                                                                    : isAboveDiagonal
+                                                                        ? `${getProjectColorIntensity(projectCount, maxValues.maxProjects)} ${projectCount > 0 ? 'text-slate-800' : 'text-slate-400'}`
+                                                                        : `${getOrgColorIntensity(orgCount, maxValues.maxOrgs)} ${orgCount > 0 ? 'text-slate-800' : 'text-slate-400'}`;
+                                                            
 
-                                                    if (!tooltipText) return cellContent;
+                                                            const tooltipText = isDiagonal && showDiagonalContext
+                                                                ? diagonalTooltipText
+                                                                : isDiagonal
+                                                                    ? null
+                                                                    : isAboveDiagonal
+                                                                        ? `${donor1} and ${donor2} are co-financing ${projectCount} project${projectCount !== 1 ? 's' : ''}`
+                                                                        : `${donor1} and ${donor2} are co-financing ${orgCount} organization${orgCount !== 1 ? 's' : ''}`;
+                                                            
 
-                                                    return (
-                                                        <TooltipProvider key={donor2} delayDuration={0}>
-                                                            <TooltipUI>
-                                                                <TooltipTrigger asChild>
-                                                                    {cellContent}
-                                                                </TooltipTrigger>
-                                                                <TooltipContent
-                                                                    side="bottom"
-                                                                    align="center"
-                                                                    className="bg-white text-slate-800 text-sm rounded-lg border border-slate-200 px-3 py-2"
-                                                                    sideOffset={5}
-                                                                    avoidCollisions={true}
-                                                                    style={{ ...STYLES.chartTooltip }}
+                                                            const cellContent = (
+                                                                <td 
+                                                                    key={donor2}
+                                                                    onMouseEnter={() => !isDiagonal && setHoveredCell({ donor1, donor2 })}
+                                                                    onMouseLeave={() => setHoveredCell(null)}
+                                                                    onClick={() => !isDiagonal && count > 0 && handleCellClick(donor1, donor2)}
+                                                                    className={`p-3 text-center text-sm font-semibold border border-slate-200 transition-all ${colorClass} ${!isDiagonal && count > 0 ? 'cursor-pointer hover:opacity-75' : ''}`}
                                                                 >
-                                                                    {tooltipText}
-                                                                </TooltipContent>
-                                                            </TooltipUI>
-                                                        </TooltipProvider>
-                                                    );
-                                                })}
-                                            </tr>
-                                        ))}
-                                    </tbody>
-                                </table>
-                            </div>
+                                                                    {isDiagonal && showDiagonalContext ? diagonalCount : isDiagonal ? '—' : count}
+                                                                </td>
+                                                            );
+
+                                                            if (!tooltipText) return cellContent;
+
+                                                            return (
+                                                                <TooltipProvider key={donor2} delayDuration={0}>
+                                                                    <TooltipUI>
+                                                                        <TooltipTrigger asChild>
+                                                                            {cellContent}
+                                                                        </TooltipTrigger>
+                                                                        <TooltipContent
+                                                                            side="bottom"
+                                                                            align="center"
+                                                                            className="bg-white text-slate-800 text-sm rounded-lg border border-slate-200 px-3 py-2"
+                                                                            sideOffset={5}
+                                                                            avoidCollisions={true}
+                                                                            style={{ ...STYLES.chartTooltip }}
+                                                                        >
+                                                                            {tooltipText}
+                                                                        </TooltipContent>
+                                                                    </TooltipUI>
+                                                                </TooltipProvider>
+                                                            );
+                                                        })}
+                                                    </tr>
+                                                ))}
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </>
+                            ) : (
+                                // Split Matrices View (Organizations and Projects)
+                                <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+                                    {/* Organizations Matrix */}
+                                    <div>
+                                        <h3 className="text-sm font-semibold text-slate-700 mb-3 flex items-center gap-2">
+                                            <div className="w-4 h-4 bg-amber-300 border border-slate-300 rounded"></div>
+                                            Organizations
+                                        </h3>
+                                        <div className="w-full overflow-x-hidden">
+                                            <table className="w-full">
+                                                <thead>
+                                                    <tr>
+                                                        <th className="p-2 text-left text-sm font-semibold text-slate-600 border-b-2 border-slate-200 min-w-[90px]">
+                                                            Donor
+                                                        </th>
+                                                        {selectedDonors.map(donor => (
+                                                            <th 
+                                                                key={donor} 
+                                                                className="p-2 text-left text-sm font-semibold text-slate-600 border-b-2 border-slate-200 w-16"
+                                                                style={{ writingMode: 'vertical-rl', transform: 'rotate(225deg)' }}
+                                                            >
+                                                                {donor}
+                                                            </th>
+                                                        ))}
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    {selectedDonors.map((donor1, i) => (
+                                                        <tr key={donor1}>
+                                                            <td className="p-2 text-sm font-semibold text-slate-600 border-r-2 border-slate-200">
+                                                                {donor1}
+                                                            </td>
+                                                            {selectedDonors.map((donor2, j) => {
+                                                                const isDiagonal = donor1 === donor2;
+                                                                const orgCount = coFinancingMatrix[donor1]?.[donor2]?.orgs.size || 0;
+                                                                const colorClass = isDiagonal
+                                                                    ? 'bg-slate-200 text-slate-400'
+                                                                    : `${getOrgColorIntensity(orgCount, maxValues.maxOrgs)} ${orgCount > 0 ? 'text-slate-800' : 'text-slate-400'}`;
+                                                                
+                                                                const tooltipText = !isDiagonal && orgCount > 0
+                                                                    ? `${donor1} and ${donor2} are co-financing ${orgCount} organization${orgCount !== 1 ? 's' : ''}`
+                                                                    : null;
+                                                                
+                                                                const cellContent = (
+                                                                    <td 
+                                                                        key={donor2}
+                                                                        className={`p-3 text-center text-sm font-semibold border border-slate-200 transition-all ${colorClass} ${!isDiagonal && orgCount > 0 ? 'cursor-pointer hover:opacity-75' : ''}`}
+                                                                        onClick={() => !isDiagonal && orgCount > 0 && handleCellClick(donor1, donor2)}
+                                                                    >
+                                                                        {isDiagonal ? '—' : orgCount}
+                                                                    </td>
+                                                                );
+
+                                                                if (!tooltipText) return cellContent;
+
+                                                                return (
+                                                                    <TooltipProvider key={donor2} delayDuration={0}>
+                                                                        <TooltipUI>
+                                                                            <TooltipTrigger asChild>
+                                                                                {cellContent}
+                                                                            </TooltipTrigger>
+                                                                            <TooltipContent
+                                                                                side="bottom"
+                                                                                align="center"
+                                                                                className="bg-white text-slate-800 text-sm rounded-lg border border-slate-200 px-3 py-2"
+                                                                                sideOffset={5}
+                                                                                avoidCollisions={true}
+                                                                                style={{ ...STYLES.chartTooltip }}
+                                                                            >
+                                                                                {tooltipText}
+                                                                            </TooltipContent>
+                                                                        </TooltipUI>
+                                                                    </TooltipProvider>
+                                                                );
+                                                            })}
+                                                        </tr>
+                                                    ))}
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    </div>
+
+                                    {/* Projects Matrix */}
+                                    <div>
+                                        <h3 className="text-sm font-semibold text-slate-700 mb-3 flex items-center gap-2">
+                                            <div className="w-4 h-4 bg-indigo-300 border border-slate-300 rounded"></div>
+                                            Projects
+                                        </h3>
+                                        <div className="w-full overflow-x-hidden">
+                                            <table className="w-full">
+                                                <thead>
+                                                    <tr>
+                                                        <th className="p-2 text-left text-sm font-semibold text-slate-600 border-b-2 border-slate-200 min-w-[90px]">
+                                                            Donor
+                                                        </th>
+                                                        {selectedDonors.map(donor => (
+                                                            <th 
+                                                                key={donor} 
+                                                                className="p-2 text-left text-sm font-semibold text-slate-600 border-b-2 border-slate-200 w-16"
+                                                                style={{ writingMode: 'vertical-rl', transform: 'rotate(225deg)' }}
+                                                            >
+                                                                {donor}
+                                                            </th>
+                                                        ))}
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    {selectedDonors.map((donor1, i) => (
+                                                        <tr key={donor1}>
+                                                            <td className="p-2 text-sm font-semibold text-slate-600 border-r-2 border-slate-200">
+                                                                {donor1}
+                                                            </td>
+                                                            {selectedDonors.map((donor2, j) => {
+                                                                const isDiagonal = donor1 === donor2;
+                                                                const projectCount = coFinancingMatrix[donor1]?.[donor2]?.projects.size || 0;
+                                                                const colorClass = isDiagonal
+                                                                    ? 'bg-slate-200 text-slate-400'
+                                                                    : `${getProjectColorIntensity(projectCount, maxValues.maxProjects)} ${projectCount > 0 ? 'text-slate-800' : 'text-slate-400'}`;
+                                                                
+                                                                const tooltipText = !isDiagonal && projectCount > 0
+                                                                    ? `${donor1} and ${donor2} are co-financing ${projectCount} project${projectCount !== 1 ? 's' : ''}`
+                                                                    : null;
+                                                                
+                                                                const cellContent = (
+                                                                    <td 
+                                                                        key={donor2}
+                                                                        className={`p-3 text-center text-sm font-semibold border border-slate-200 transition-all ${colorClass} ${!isDiagonal && projectCount > 0 ? 'cursor-pointer hover:opacity-75' : ''}`}
+                                                                        onClick={() => !isDiagonal && projectCount > 0 && handleCellClick(donor1, donor2)}
+                                                                    >
+                                                                        {isDiagonal ? '—' : projectCount}
+                                                                    </td>
+                                                                );
+
+                                                                if (!tooltipText) return cellContent;
+
+                                                                return (
+                                                                    <TooltipProvider key={donor2} delayDuration={0}>
+                                                                        <TooltipUI>
+                                                                            <TooltipTrigger asChild>
+                                                                                {cellContent}
+                                                                            </TooltipTrigger>
+                                                                            <TooltipContent
+                                                                                side="bottom"
+                                                                                align="center"
+                                                                                className="bg-white text-slate-800 text-sm rounded-lg border border-slate-200 px-3 py-2"
+                                                                                sideOffset={5}
+                                                                                avoidCollisions={true}
+                                                                                style={{ ...STYLES.chartTooltip }}
+                                                                            >
+                                                                                {tooltipText}
+                                                                            </TooltipContent>
+                                                                        </TooltipUI>
+                                                                    </TooltipProvider>
+                                                                );
+                                                            })}
+                                                        </tr>
+                                                    ))}
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    </div>
+                                </div>
+                            )}
                         </CardContent>
                     </Card>
 
-                       {/* Charts Row */}
-                    <div className="grid grid-cols-1 lg:grid-cols-2 gap-4">
-                        <ChartCard
-                            title="Co-Financing Donors"
-                            icon={<Globe style={{ color: 'var(--brand-primary)' }} />}
-                            data={donorCoFinancingData}
-                            barColor="var(--brand-primary-lighter)"
-                            footnote={`Showing donors with co-financed organizations based on ${selectedDonors.length} selected donor${selectedDonors.length === 1 ? '' : 's'}`}
-                        />
+                    {/* Investment Focus Radar Chart */}
+                    { /* Hide entire card when no donors selected */ }
+                    {selectedDonors.length > 0 && donorInvestmentFocus.length > 0 && (
+                    <Card className="hidden !border-0 bg-white">
+                        <CardHeader className="pb-2">
+                        <div className="flex flex-col gap-1">
+                            <SectionHeader
+                            icon={<BarChart3 style={{ color: 'var(--badge-other-icon)' }} />}
+                            title="Investment Focus by Donor"
+                            />
+                        </div>
+                        </CardHeader>
+
+                        <CardContent className="pt-2">
+                        <div className="w-full">
+                            <div className="flex flex-col lg:flex-row items-start gap-6">
+                                {/* Left: Much larger Radar Chart */}
+                                <div className="flex-1 min-w-0 h-[640px] lg:h-[720px]">
+                                    <ResponsiveContainer width="100%" height="100%">
+                                        <RadarChart
+                                            data={donorInvestmentFocus}
+                                            outerRadius="86%"
+                                            margin={{ top: 24, right: 8, bottom: 56, left: 8 }}
+                                        >
+                                            <PolarGrid stroke="#e2e8f0" />
+
+                                            <PolarAngleAxis
+                                                dataKey="name"
+                                                tick={({ x, y, payload }) => {
+                                                    const Icon = getIconForInvestmentType(payload.value);
+                                                    // Use up to two words for clearer labels
+                                                    const labelText = (payload.value || '').split(' ').slice(0, 2).join(' ');
+                                                    return (
+                                                        <g key={payload.value} transform={`translate(${x},${y})`}>
+                                                            <foreignObject x="-40" y="-40" width="80" height="80">
+                                                                <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', gap: '6px', color: '#334155', fontWeight: 600, lineHeight: 1 }}>
+                                                                    <div style={{ width: 28, height: 28, display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+                                                                        <Icon style={{ width: '22px', height: '22px', color: 'var(--badge-other-icon)' }} />
+                                                                    </div>
+                                                                    <div style={{ maxWidth: '68px', textAlign: 'center', wordBreak: 'break-word', fontSize: '13px' }}>
+                                                                        {labelText}
+                                                                    </div>
+                                                                </div>
+                                                            </foreignObject>
+                                                        </g>
+                                                    );
+                                                }}
+                                                tickLine={false}
+                                            />
+
+                                            <PolarRadiusAxis
+                                                domain={[0, 100]}
+                                                tickCount={4}
+                                                tick={{ fontSize: 12, fill: '#94a3b8' }}
+                                                axisLine={false}
+                                                angle={90}
+                                            />
+
+                                            {selectedDonors.map((donor, index) => {
+                                                const purplePalette = [
+                                                    '#8b5cf6',
+                                                    '#7c3aed',
+                                                    '#6d28d9',
+                                                    '#5b21b6',
+                                                    '#4c1d95',
+                                                ];
+
+                                                const color = purplePalette[index % purplePalette.length];
+                                                const seriesOpacity = hoveredDonor === null ? 1 : (hoveredDonor === donor ? 1 : 0.12);
+                                                const fillOp = hoveredDonor === null ? 0.28 : (hoveredDonor === donor ? 0.5 : 0.06);
+
+                                                return (
+                                                    <Radar
+                                                        key={donor}
+                                                        name={donor}
+                                                        dataKey={donor}
+                                                        stroke={color}
+                                                        fill={color}
+                                                        fillOpacity={fillOp}
+                                                        dot={false}
+                                                        isAnimationActive={false}
+                                                        style={{ opacity: seriesOpacity }}
+                                                    />
+                                                );
+                                            })}
+
+                                            <Legend
+                                                verticalAlign="bottom"
+                                                align="center"
+                                                iconType="line"
+                                                wrapperStyle={{ fontSize: 13, paddingTop: 12 }}
+                                                height={40}
+                                            />
+                                        </RadarChart>
+                                    </ResponsiveContainer>
+                                </div>
+
+                                {/* Right: Donor hover boxes */}
+                                <div className="w-full lg:w-56 flex-shrink-0">
+                                    <div className="flex flex-col gap-2 sticky top-8">
+                                        {selectedDonors.map((donor, idx) => {
+                                            const isActive = hoveredDonor === null || hoveredDonor === donor;
+                                            const baseColor = ['#8b5cf6', '#7c3aed', '#6d28d9', '#5b21b6'][idx % 4];
+                                            return (
+                                                <div
+                                                    key={donor}
+                                                    onMouseEnter={() => setHoveredDonor(donor)}
+                                                    onMouseLeave={() => setHoveredDonor(null)}
+                                                    className={`flex items-center gap-3 p-2 rounded-md border transition-all cursor-pointer ${isActive ? 'bg-white shadow-sm' : 'bg-slate-50 opacity-60'}`}
+                                                >
+                                                    <div className="flex-shrink-0 h-8 w-8 rounded-full flex items-center justify-center" style={{ background: baseColor }}>
+                                                        <span className="text-white text-xs font-semibold">{donor.charAt(0)}</span>
+                                                    </div>
+                                                    <div className="min-w-0">
+                                                        <div className="text-sm font-medium text-slate-800 truncate">{donor}</div>
+                                                        <div className="text-xs text-slate-500 truncate">{(donorTotals[donor]?.projects.size || 0)} projects</div>
+                                                    </div>
+                                                </div>
+                                            );
+                                        })}
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <p className="mt-2 text-xs text-slate-500">
+                            Values are normalized per donor. Percentages represent relative focus, not absolute volume.
+                        </p>
+                        </CardContent>
+                    </Card>
+                    )}
+
+
+                    
+                    {/* Charts Row */}
+                    <div className={`${selectedDonors.length === 0 ? 'hidden' : 'hidden'} grid grid-cols-1 lg:grid-cols-2 gap-4`}>
+                        <div>
+                            <ChartCard
+                                title="Co-Financing Donors"
+                                icon={<Globe style={{ color: 'var(--brand-primary)' }} />}
+                                data={donorCoFinancingData}
+                                barColor="var(--brand-primary-lighter)"
+                                footnote={`Showing donors with co-financed organizations based on ${selectedDonors.length} selected donor${selectedDonors.length === 1 ? '' : 's'}`}
+                            />
+
+                            {/* Force labels visible under the chart so users always see pair names & values */}
+                            
+                        </div>
                         
                         {/* Organizations List */}
                         <Card className="!border-0 bg-white">
