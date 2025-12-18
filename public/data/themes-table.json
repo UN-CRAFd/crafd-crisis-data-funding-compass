@@ -101,7 +101,8 @@
       ],
       "Investment Themes [Text Key]": "Common Indicators",
       "Data Ecosystem Projects": [
-        "rec59LnTqL11pcRdG"
+        "rec59LnTqL11pcRdG",
+        "recAFGzPycPBSyGN6"
       ],
       "theme_key": "indicator",
       "theme_description": "Common Indicators support consistent measurement and reporting practices across initiatives, enabling better coordination and comparability of results."
@@ -415,7 +416,8 @@
         "rec96xC14xTkyyKlP",
         "recJye4S746MWWmW6",
         "recMOmPSS6OoIxqAM",
-        "recCMSnUjitsYc1XQ"
+        "recCMSnUjitsYc1XQ",
+        "recAFGzPycPBSyGN6"
       ],
       "theme_key": "standards",
       "theme_description": "Establishes best practices to ensure consistency, reliability, and quality in how information is gathered and analyzed across projects."
@@ -464,7 +466,8 @@
         "recO7hHncZQGqy2vJ",
         "reczpMP2LZqBg7Cnd",
         "recXaGjOLcrJQCuNn",
-        "recpaU5vlkr1O5EVC"
+        "recpaU5vlkr1O5EVC",
+        "recnAqlQzKLLxYjmu"
       ],
       "theme_key": "monitoring",
       "theme_description": "Provides real-time detection and notification of emerging crises to support timely decision-making and response."
@@ -816,7 +819,8 @@
       "Data Ecosystem Projects": [
         "recAmBwUrrYDMtXtH",
         "recN8yVJX7xphyQME",
-        "recek6dy0wTNEQ64L"
+        "recek6dy0wTNEQ64L",
+        "recwPD7u5u8AVpubn"
       ],
       "theme_key": "3w",
       "theme_description": "Information about which organizations are carrying out specific activities in particular locations."
@@ -1093,7 +1097,11 @@
         "recGoW02CMXhVQ00S",
         "recF4Js3Gn54EPxbP",
         "recD0hG4x9w340oYA",
-        "rec10m73t9Vv1XVFf"
+        "rec10m73t9Vv1XVFf",
+        "recDspvgWdxP3wwfX",
+        "recAp3cCQIwKimsDg",
+        "recN9QYgUhQVlDGL7",
+        "recPxueDUiZ9ZJGwz"
       ],
       "theme_key": "displacement-migration",
       "theme_description": "This area focuses on collections of information related to population movements and migration patterns."
@@ -1234,7 +1242,8 @@
         "recF4Js3Gn54EPxbP",
         "recD0hG4x9w340oYA",
         "rec53YmQWK8HuckRh",
-        "recSZ5wPOqG3Pm9Ip"
+        "recSZ5wPOqG3Pm9Ip",
+        "recDspvgWdxP3wwfX"
       ],
       "theme_key": "geo",
       "theme_description": "This area focuses on the collection, sharing, and use of location-based information to support spatial analysis and decision-making."
@@ -1544,7 +1553,8 @@
         "rec8taCKOmbZu5s4Z",
         "rec28WeSKDEQ5wx45",
         "recJ1uv7EMf5HbXfr",
-        "recEf0pdKsN1Gbvo8"
+        "recEf0pdKsN1Gbvo8",
+        "recnAqlQzKLLxYjmu"
       ],
       "theme_key": "displacement",
       "theme_description": "Analyzes patterns and impacts of population displacement during crises to inform response strategies."

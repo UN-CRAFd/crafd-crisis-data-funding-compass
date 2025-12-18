@@ -926,6 +926,28 @@
     }
   },
   {
+    "id": "recAFGzPycPBSyGN6",
+    "fields": {
+      "Project/Product Name": "Humanitarian Needs Assessment",
+      "Project Website": "https://www.ochaopt.org/",
+      "Provider Orgs Full Name": [
+        "recsrCWKAPu9dwkHb",
+        "recGCltHLsYiDo59B"
+      ],
+      "CRAF’d-Funded Project?": "NO",
+      "Investment Type(s)": [
+        "Standards & Coordination"
+      ],
+      "Investment Theme(s)": [
+        "Common Indicators",
+        "Methodological Standards"
+      ],
+      "product_key": "hna",
+      "HDX_SOHD": "None",
+      "Project Description": "Humanitarian Needs Assessments (HNAs) are multi-sectoral analyses led by humanitarian coordination mechanisms to assess severity and scale of needs specific to the target population. They complement DTM population data by informing Humanitarian Needs Overviews (HNOs) and Humanitarian Response Plans (HRPs)."
+    }
+  },
+  {
     "id": "recAeviz1XjLC8V6i",
     "fields": {
       "Project/Product Name": "Emergency Mapping",
@@ -966,6 +988,26 @@
       "product_key": "ocha-3w",
       "HDX_SOHD": "None",
       "Project Description": "The 3W data is sourced from OCHA country and regional offices around the world and compiled by the Field Information Services (FIS) Section of OCHA. The data are as provided, and organization names and acronyms are not standardized. The frequency of 3W data collection varies across offices, and the compiled database includes what is available up to the date of publishing. This information supports the asset Global Humanitarian Operational Presence Who, What, Where (3W) Portal."
+    }
+  },
+  {
+    "id": "recAp3cCQIwKimsDg",
+    "fields": {
+      "Project/Product Name": "IDP Baseline",
+      "Project Website": "https://dtm.iom.int/",
+      "Provider Orgs Full Name": [
+        "recsrCWKAPu9dwkHb"
+      ],
+      "CRAF’d-Funded Project?": "NO",
+      "Investment Type(s)": [
+        "Data Sets & Commons"
+      ],
+      "Investment Theme(s)": [
+        "Displacement & Migration Data"
+      ],
+      "product_key": "idp-baseline",
+      "HDX_SOHD": "None",
+      "Project Description": "The DTM IDP Baseline Assessment provides a census-style snapshot of displaced populations, documenting where IDPs, returnees, and migrants are located at administrative levels, along with population counts and basic demographic characteristics. It establishes the authoritative “who and where” baseline for displacement contexts."
     }
   },
   {
@@ -1087,6 +1129,27 @@
       "product_key": "unfpa-popdata-portal",
       "HDX_SOHD": "21",
       "Project Description": "The Population Data Portal serves as UNFPA’s comprehensive data source and tracker for population and development statistics. It brings together the latest data on topics such as sexual and reproductive health and rights, family planning, maternal health, and gender-based violence, collected from a variety of sources. The portal provides users with reliable, up-to-date information to support research, policy-making, and program development in the field of population and development."
+    }
+  },
+  {
+    "id": "recDspvgWdxP3wwfX",
+    "fields": {
+      "Project/Product Name": "Site Assessment",
+      "Project Website": "https://dtm.iom.int/",
+      "Provider Orgs Full Name": [
+        "recsrCWKAPu9dwkHb"
+      ],
+      "CRAF’d-Funded Project?": "NO",
+      "Investment Type(s)": [
+        "Data Sets & Commons"
+      ],
+      "Investment Theme(s)": [
+        "Displacement & Migration Data",
+        "Geospatial Data"
+      ],
+      "product_key": "site-assessment",
+      "HDX_SOHD": "None",
+      "Project Description": "DTM Site and Settlement Assessments provide granular, site-level data on displacement locations such as camps and informal settlements, including population figures, shelter conditions, service availability, and protection risks to guide operational responses."
     }
   },
   {
@@ -1811,6 +1874,26 @@
     }
   },
   {
+    "id": "recN9QYgUhQVlDGL7",
+    "fields": {
+      "Project/Product Name": "Flow Data",
+      "Project Website": "https://dtm.iom.int/",
+      "Provider Orgs Full Name": [
+        "recsrCWKAPu9dwkHb"
+      ],
+      "CRAF’d-Funded Project?": "NO",
+      "Investment Type(s)": [
+        "Data Sets & Commons"
+      ],
+      "Investment Theme(s)": [
+        "Displacement & Migration Data"
+      ],
+      "product_key": "flow-data",
+      "HDX_SOHD": "None",
+      "Project Description": "DTM Flow Monitoring captures near-real-time data on population movements through key transit, entry, and exit points. It tracks volumes, directions, traveler profiles, reasons for movement, and intended destinations to understand mobility dynamics and emerging displacement routes."
+    }
+  },
+  {
     "id": "recNggnBqXIgii2hz",
     "fields": {
       "Project/Product Name": "Epidemic Intelligence from Open Sources (EIOS)",
@@ -1924,6 +2007,26 @@
       "product_key": "immap-information-management-support",
       "HDX_SOHD": "None",
       "Project Description": "The humanitarian crisis in Nigeria’s northeast states of Borno, Adamawa and Yobe (BAY) continues to severely affect millions of people who remain vulnerable to displacement, impoverishment, and threat of violence. What started as a localized insurgency more than eleven years ago has turned into a regional armed conflict with civilians, mostly women and children bearing the brunt of brutal clashes and attacks."
+    }
+  },
+  {
+    "id": "recPxueDUiZ9ZJGwz",
+    "fields": {
+      "Project/Product Name": "IDP Returnees",
+      "Project Website": "https://dtm.iom.int/",
+      "Provider Orgs Full Name": [
+        "recsrCWKAPu9dwkHb"
+      ],
+      "CRAF’d-Funded Project?": "NO",
+      "Investment Type(s)": [
+        "Data Sets & Commons"
+      ],
+      "Investment Theme(s)": [
+        "Displacement & Migration Data"
+      ],
+      "product_key": "idp-returnees",
+      "HDX_SOHD": "None",
+      "Project Description": "DTM Returnee Monitoring documents the locations, numbers, and basic characteristics of populations returning to areas of origin after displacement. It supports analysis of return trends, reintegration conditions, and risks of secondary displacement."
     }
   },
   {
@@ -3859,6 +3962,27 @@
     }
   },
   {
+    "id": "recnAqlQzKLLxYjmu",
+    "fields": {
+      "Project/Product Name": "Emergency Event Tracking (ETT)",
+      "Project Website": "https://dtm.iom.int/",
+      "Provider Orgs Full Name": [
+        "recsrCWKAPu9dwkHb"
+      ],
+      "CRAF’d-Funded Project?": "NO",
+      "Investment Type(s)": [
+        "Crisis Analytics & Insights"
+      ],
+      "Investment Theme(s)": [
+        "Monitoring & Alerts",
+        "Displacement & Migration Analytics"
+      ],
+      "product_key": "ett",
+      "HDX_SOHD": "None",
+      "Project Description": "The Emergency Tracking Tool (ETT) is a rapid, event-triggered DTM mechanism that delivers near-real-time updates on sudden displacement caused by conflict or disasters, enabling immediate situational awareness during the first hours and days of a crisis."
+    }
+  },
+  {
     "id": "recnU6ZioVzUVRKZo",
     "fields": {
       "Project/Product Name": "Operational Data Portal (ODP)",
@@ -4632,6 +4756,26 @@
       "product_key": "conflict-exposure-calculator",
       "HDX_SOHD": "None",
       "Project Description": "The Conflict Exposure Calculator integrates data from ACLED with population size estimates from WorldPop to estimate the civilian impact based on proximity to an event, event type, type of violent actor or specific armed group, location, and time."
+    }
+  },
+  {
+    "id": "recwPD7u5u8AVpubn",
+    "fields": {
+      "Project/Product Name": "Service Mapping",
+      "Project Website": "https://dtm.iom.int/",
+      "Provider Orgs Full Name": [
+        "recsrCWKAPu9dwkHb"
+      ],
+      "CRAF’d-Funded Project?": "NO",
+      "Investment Type(s)": [
+        "Data Sets & Commons"
+      ],
+      "Investment Theme(s)": [
+        "3W (Who does What & Where) Data"
+      ],
+      "product_key": "service-mapping",
+      "HDX_SOHD": "None",
+      "Project Description": "DTM Service Mapping systematically maps the location, functionality, and accessibility of services and facilities—such as health, WASH, education, and humanitarian services—within displacement-affected areas to identify coverage gaps and support referrals."
     }
   },
   {
