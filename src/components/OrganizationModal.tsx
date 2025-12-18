@@ -509,7 +509,7 @@ export default function OrganizationModal({
                         
                         // Try to load downloaded screenshots from public/screenshots/ directory
                         // For now, we'll try the first screenshot (index 0)
-                        const budgetScreenshotUrl = orgKey ? `/screenshots/${orgKey}_screenshot_0.png` : null;
+                        const budgetScreenshotUrl = orgKey ? `/screenshots/${orgKey}.png` : null;
 
                         // Only show the whole section if there are donors OR budget data
                         if (donorInfo.length === 0 && !estBudget && !budgetSourceStr && !lastUpdated) {

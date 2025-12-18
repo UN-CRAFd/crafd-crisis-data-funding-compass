@@ -167,7 +167,7 @@ def download_screenshot(screenshot_url: str, org_key: str, index: int) -> Option
             ext = '.png'
         
         # Create filename from org_key and index (since multiple screenshots per org)
-        filename = f"{org_key}_screenshot_{index}{ext}"
+        filename = f"{org_key}{ext}"
         filepath = OUTPUT_DIR / filename
         
         # Save the file
@@ -209,7 +209,7 @@ def main():
             continue
         
         # Get screenshot attachments
-        screenshot_attachments = fields.get("Funding Screenshots", [])
+        screenshot_attachments = fields.get("Budget Source Screenshot", [])
         
         if not screenshot_attachments or not isinstance(screenshot_attachments, list) or len(screenshot_attachments) == 0:
             log(f"No screenshots found for: {org_key}")
