@@ -26,10 +26,6 @@
     }
   },
   {
-    "id": "rec12Pvn6jtsVitsT",
-    "fields": {}
-  },
-  {
     "id": "rec15kH3AC5gKDeQu",
     "fields": {
       "Agency/Department Name": "Belgian Development Agency (Enabel)",
@@ -262,7 +258,7 @@
     "fields": {
       "Agency/Department Name": "Global Support and Development (GSD)",
       "Agency Data Portal": "https://www.gsd.ngo/en",
-      "Country Name": "Global Support and Development (GSD)"
+      "Country Name": "Non-Governmental Organizations"
     }
   },
   {
@@ -443,8 +439,8 @@
   {
     "id": "recDtKjptlPgZaEVI",
     "fields": {
-      "Agency/Department Name": "Unspecified Agency",
-      "Country Name": "Fund for Peace (FFP)"
+      "Agency/Department Name": "Fund for Peace (FFP)",
+      "Country Name": "Research / Think Tank"
     }
   },
   {
@@ -503,8 +499,8 @@
   {
     "id": "recFNcILze2MwJxUN",
     "fields": {
-      "Agency/Department Name": "Unspecified Agency",
-      "Country Name": "Organization of American States "
+      "Agency/Department Name": "Organization of American States",
+      "Country Name": "International Organizations"
     }
   },
   {
@@ -686,7 +682,7 @@
     "fields": {
       "Agency/Department Name": "Geneva International Centre for Humanitarian Demining",
       "Agency Data Portal": "https://www.gichd.org/",
-      "Country Name": "Geneva International Centre for Humanitarian Demining"
+      "Country Name": "International Organizations"
     }
   },
   {
@@ -728,10 +724,6 @@
       "Country Name": "International Financial Institutions (IFIs)",
       "Agency Website": "https://www.afdb.org"
     }
-  },
-  {
-    "id": "recMVsfBSAcGD8bAj",
-    "fields": {}
   },
   {
     "id": "recMrXxdeLa7ThLf8",
@@ -905,8 +897,8 @@
   {
     "id": "recT2C2l3Ua0qmnR3",
     "fields": {
-      "Agency/Department Name": "Unspecified Agency",
-      "Country Name": "Institute for Economics and Peace (IEP)"
+      "Agency/Department Name": "Institute for Economics and Peace (IEP)",
+      "Country Name": "Research / Think Tank"
     }
   },
   {
@@ -923,10 +915,6 @@
       "Country Name": "Foundations",
       "Agency Website": "https://mastercardfdn.org"
     }
-  },
-  {
-    "id": "recU93UBWPTkyN1WR",
-    "fields": {}
   },
   {
     "id": "recUEOSvKGVMYEPqX",
@@ -1330,8 +1318,8 @@
   {
     "id": "recfY9SzUx3XdEb4s",
     "fields": {
-      "Agency/Department Name": "Unspecified Agency",
-      "Country Name": "International Institute for Democracy and Electoral Assistance (IDEA)"
+      "Agency/Department Name": "International Institute for Democracy and Electoral Assistance (IDEA)",
+      "Country Name": "International Organizations"
     }
   },
   {
@@ -1356,10 +1344,6 @@
       "Country Name": "Luxembourg",
       "Agency Website": "https://maee.gouvernement.lu"
     }
-  },
-  {
-    "id": "recguj2U4PN7bZLC3",
-    "fields": {}
   },
   {
     "id": "rech10djtgHRF0JFS",
@@ -1845,7 +1829,7 @@
     "fields": {
       "Agency/Department Name": "International Fund for Agricultural Development (IFAD)",
       "Agency Data Portal": "https://www.ifad.org/en/",
-      "Country Name": "International Fund for Agricultural Development (IFAD)"
+      "Country Name": "International Organizations"
     }
   },
   {
@@ -1855,10 +1839,6 @@
       "Country Name": "Japan",
       "Agency Website": "https://www.mofa.go.jp/"
     }
-  },
-  {
-    "id": "recxDiAZCbiwBAf7e",
-    "fields": {}
   },
   {
     "id": "recxgDm1Z8R7MHiTu",
