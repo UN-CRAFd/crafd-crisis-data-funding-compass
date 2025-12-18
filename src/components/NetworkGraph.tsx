@@ -10,6 +10,8 @@ import FilterBar from './FilterBar';
 import NoResultsModal from './NoResultsModal';
 import { Button } from './ui/button';
 import { getCountryFlagUrl } from './CountryFlag';
+import { getBrandColor, getBrandColors } from '@/lib/colorUtils';
+import { useProjectCounts } from '@/hooks/useProjectCounts';
 
 interface NetworkGraphProps {
     organizationsWithProjects: OrganizationWithProjects[];
@@ -142,198 +144,14 @@ const NetworkGraph: React.FC<NetworkGraphProps> = ({
         lastOrgCountRef.current = currentOrgCount;
     }, [combinedDonors, investmentTypes, investmentThemes, appliedSearchQuery, organizationsWithProjects]);
 
-    // Calculate project counts for each investment type based on current donors, query, and themes
-    // (but not filtered by types themselves)
-    const projectCountsByType = useMemo(() => {
-        const projectsByType: Record<string, Set<string>> = {};
-        const allOrgs = allOrganizations || organizationsWithProjects;
-        
-        allOrgs.forEach(org => {
-            // Filter by donors (AND logic - all selected donors must be present)
-            if (combinedDonors.length > 0) {
-                const hasAllDonors = combinedDonors.every(selectedDonor => 
-                    org.donorCountries.includes(selectedDonor)
-                );
-                if (!hasAllDonors) return;
-            }
-
-            org.projects.forEach(project => {
-                // Filter by search query
-                if (appliedSearchQuery) {
-                    const searchLower = appliedSearchQuery.toLowerCase();
-                    const matchesSearch = 
-                        project.projectName?.toLowerCase().includes(searchLower) ||
-                        project.description?.toLowerCase().includes(searchLower) ||
-                        org.organizationName?.toLowerCase().includes(searchLower);
-                    if (!matchesSearch) return;
-                }
-                
-                // Filter by themes
-                if (investmentThemes.length > 0) {
-                    const hasMatchingTheme = project.investmentThemes?.some(theme =>
-                        investmentThemes.some(selectedTheme => 
-                            theme.toLowerCase().trim() === selectedTheme.toLowerCase().trim()
-                        )
-                    );
-                    if (!hasMatchingTheme) return;
-                }
-                
-                // Count this project for each of its types
-                project.investmentTypes?.forEach(type => {
-                    const normalizedType = type.toLowerCase().trim();
-                    if (!projectsByType[normalizedType]) {
-                        projectsByType[normalizedType] = new Set();
-                    }
-                    projectsByType[normalizedType].add(project.id);
-                });
-            });
-        });
-        
-        // Convert Sets to counts
-        const counts: Record<string, number> = {};
-        Object.keys(projectsByType).forEach(type => {
-            counts[type] = projectsByType[type].size;
-        });
-        return counts;
-    }, [allOrganizations, organizationsWithProjects, combinedDonors, appliedSearchQuery, investmentThemes]);
-
-    // Calculate project counts for each theme based on current donors, query, and types
-    // (but not filtered by themes themselves)
-    const projectCountsByTheme = useMemo(() => {
-        const projectsByTheme: Record<string, Set<string>> = {};
-        const allOrgs = allOrganizations || organizationsWithProjects;
-        
-        allOrgs.forEach(org => {
-            // Filter by donors (AND logic - all selected donors must be present)
-            if (combinedDonors.length > 0) {
-                const hasAllDonors = combinedDonors.every(selectedDonor => 
-                    org.donorCountries.includes(selectedDonor)
-                );
-                if (!hasAllDonors) return;
-            }
-            
-            org.projects.forEach(project => {
-                // Filter by search query
-                if (appliedSearchQuery) {
-                    const searchLower = appliedSearchQuery.toLowerCase();
-                    const matchesSearch = 
-                        project.projectName?.toLowerCase().includes(searchLower) ||
-                        project.description?.toLowerCase().includes(searchLower) ||
-                        org.organizationName?.toLowerCase().includes(searchLower);
-                    if (!matchesSearch) return;
-                }
-                
-                // Filter by types
-                if (investmentTypes.length > 0) {
-                    const hasMatchingType = project.investmentTypes?.some(type =>
-                        investmentTypes.some(selectedType => 
-                            type.toLowerCase().trim() === selectedType.toLowerCase().trim()
-                        )
-                    );
-                    if (!hasMatchingType) return;
-                }
-                
-                // Count this project for each of its themes
-                project.investmentThemes?.forEach(theme => {
-                    const normalizedTheme = theme.toLowerCase().trim();
-                    if (!projectsByTheme[normalizedTheme]) {
-                        projectsByTheme[normalizedTheme] = new Set();
-                    }
-                    projectsByTheme[normalizedTheme].add(project.id);
-                });
-            });
-        });
-        
-        // Convert Sets to counts
-        const counts: Record<string, number> = {};
-        Object.keys(projectsByTheme).forEach(theme => {
-            counts[theme] = projectsByTheme[theme].size;
-        });
-        return counts;
-    }, [allOrganizations, organizationsWithProjects, combinedDonors, appliedSearchQuery, investmentTypes]);
-
-    // Handle fullscreen toggle
-    const toggleFullscreen = useCallback(() => {
-        if (!containerRef.current) return;
-
-        if (!document.fullscreenElement) {
-            containerRef.current.requestFullscreen().then(() => {
-                setIsFullscreen(true);
-            }).catch((err) => {
-                console.error('Error attempting to enable fullscreen:', err);
-            });
-        } else {
-            document.exitFullscreen().then(() => {
-                setIsFullscreen(false);
-            });
-        }
-    }, []);
-
-    // Center the graph view
-    const centerView = useCallback(() => {
-        if (graphRef.current) {
-            graphRef.current.zoomToFit(400, 50); // 400ms animation, 50px padding
-        }
-    }, []);
-
-    // Listen for fullscreen changes (e.g., user presses ESC) and update portal container
-    useEffect(() => {
-        const handleFullscreenChange = () => {
-            const inFullscreen = !!document.fullscreenElement;
-            setIsFullscreen(inFullscreen);
-            // Update portal container to fullscreen element or body
-            setFilterBarContainer(inFullscreen ? (document.fullscreenElement as HTMLElement) : document.body);
-        };
-
-        document.addEventListener('fullscreenchange', handleFullscreenChange);
-        return () => document.removeEventListener('fullscreenchange', handleFullscreenChange);
-    }, []);
-
-    // Measure FilterBar height in fullscreen mode
-    useEffect(() => {
-        if (isFullscreen && filterBarRef.current) {
-            const updateHeight = () => {
-                if (filterBarRef.current) {
-                    const height = filterBarRef.current.offsetHeight;
-                    setFilterBarHeight(height);
-                }
-            };
-
-            // Initial measurement
-            updateHeight();
-
-            // Use ResizeObserver to track height changes
-            const resizeObserver = new ResizeObserver(updateHeight);
-            resizeObserver.observe(filterBarRef.current);
-
-            return () => resizeObserver.disconnect();
-        } else {
-            setFilterBarHeight(0);
-        }
-    }, [isFullscreen, filterBarContainer, combinedDonors, investmentTypes, investmentThemes, appliedSearchQuery]);
-
-    // Update dimensions on resize
-    useEffect(() => {
-        const updateDimensions = () => {
-            if (containerRef.current) {
-                const width = containerRef.current.offsetWidth;
-                // In fullscreen mode, use full viewport height; otherwise subtract header/nav space
-                const height = document.fullscreenElement 
-                    ? window.innerHeight 
-                    : Math.max(600, window.innerHeight - 400);
-                setDimensions({ width, height });
-            }
-        };
-
-        updateDimensions();
-        window.addEventListener('resize', updateDimensions);
-        // Also listen for fullscreen changes to update dimensions
-        document.addEventListener('fullscreenchange', updateDimensions);
-        return () => {
-            window.removeEventListener('resize', updateDimensions);
-            document.removeEventListener('fullscreenchange', updateDimensions);
-        };
-    }, []);
+    // Calculate project counts using shared hook
+    const { projectCountsByType, projectCountsByTheme } = useProjectCounts({
+        organizations: allOrganizations || organizationsWithProjects,
+        combinedDonors: combinedDonors || [],
+        appliedSearchQuery: appliedSearchQuery || '',
+        investmentTypes: investmentTypes || [],
+        investmentThemes: investmentThemes || []
+    });
 
     // Transform data into graph format - memoized with stable reference
     const graphData = React.useMemo<GraphData>(() => {
@@ -355,20 +173,11 @@ const NetworkGraph: React.FC<NetworkGraphProps> = ({
         });
 
         // Get brand colors from CSS variables (cached)
-        const getBrandColor = (varName: string): string => {
-            if (typeof window !== 'undefined') {
-                const color = getComputedStyle(document.documentElement)
-                    .getPropertyValue(varName)
-                    .trim();
-                return color || '#e6af26'; // Fallback to amber
-            }
-            return '#e6af26';
-        };
-
-        const brandPrimary = getBrandColor('--brand-primary');
-        const brandBgLight = getBrandColor('--brand-primary-light');
-        const badgeOtherBg = getBrandColor('--badge-other-bg');
-        const badgeSlateBg = getBrandColor('--badge-slate-bg');
+        const brandColors = getBrandColors();
+        const brandPrimary = brandColors.brandPrimary;
+        const brandBgLight = brandColors.brandPrimaryLight;
+        const badgeOtherBg = brandColors.badgeOtherBg;
+        const badgeSlateBg = brandColors.badgeSlateBg;
         const selectedDonorColor = '#94a3b8'; // Medium gray for filtered donors (slate-400)
 
         // Add donor nodes - largest, using slate colors (like in tables)
@@ -1240,24 +1049,7 @@ const NetworkGraph: React.FC<NetworkGraphProps> = ({
 
     // Get brand colors once on mount - memoized to avoid repeated CSS variable lookups
     const themeColors = useMemo(() => {
-        const getBrandColor = (varName: string): string => {
-            if (typeof window !== 'undefined') {
-                const color = getComputedStyle(document.documentElement)
-                    .getPropertyValue(varName)
-                    .trim();
-                return color || '#e6af26';
-            }
-            return '#e6af26';
-        };
-
-        return {
-            brandPrimary: getBrandColor('--brand-primary'),
-            brandPrimaryDark: getBrandColor('--brand-primary-dark'),
-            brandBgLight: getBrandColor('--brand-bg-light'),
-            badgeOtherText: getBrandColor('--badge-other-text'),
-            badgeSlateBg: getBrandColor('--badge-slate-bg'),
-            badgeSlateText: getBrandColor('--badge-slate-text')
-        };
+        return getBrandColors();
     }, []);
 
     // Helper function to draw a hexagon on canvas
@@ -1271,6 +1063,89 @@ const NetworkGraph: React.FC<NetworkGraphProps> = ({
             else ctx.lineTo(px, py);
         });
         ctx.closePath();
+    }, []);
+
+    // Handle fullscreen toggle
+    const toggleFullscreen = useCallback(() => {
+        if (!containerRef.current) return;
+
+        if (!document.fullscreenElement) {
+            containerRef.current.requestFullscreen().then(() => {
+                setIsFullscreen(true);
+            }).catch((err) => {
+                console.error('Error attempting to enable fullscreen:', err);
+            });
+        } else {
+            document.exitFullscreen().then(() => {
+                setIsFullscreen(false);
+            });
+        }
+    }, []);
+
+    // Center the graph view
+    const centerView = useCallback(() => {
+        if (graphRef.current) {
+            graphRef.current.zoomToFit(400, 50); // 400ms animation, 50px padding
+        }
+    }, []);
+
+    // Listen for fullscreen changes (e.g., user presses ESC) and update portal container
+    useEffect(() => {
+        const handleFullscreenChange = () => {
+            const inFullscreen = !!document.fullscreenElement;
+            setIsFullscreen(inFullscreen);
+            // Update portal container to fullscreen element or body
+            setFilterBarContainer(inFullscreen ? (document.fullscreenElement as HTMLElement) : document.body);
+        };
+
+        document.addEventListener('fullscreenchange', handleFullscreenChange);
+        return () => document.removeEventListener('fullscreenchange', handleFullscreenChange);
+    }, []);
+
+    // Measure FilterBar height in fullscreen mode
+    useEffect(() => {
+        if (isFullscreen && filterBarRef.current) {
+            const updateHeight = () => {
+                if (filterBarRef.current) {
+                    const height = filterBarRef.current.offsetHeight;
+                    setFilterBarHeight(height);
+                }
+            };
+
+            // Initial measurement
+            updateHeight();
+
+            // Use ResizeObserver to track height changes
+            const resizeObserver = new ResizeObserver(updateHeight);
+            resizeObserver.observe(filterBarRef.current);
+
+            return () => resizeObserver.disconnect();
+        } else {
+            setFilterBarHeight(0);
+        }
+    }, [isFullscreen, filterBarContainer, combinedDonors, investmentTypes, investmentThemes, appliedSearchQuery]);
+
+    // Update dimensions on resize
+    useEffect(() => {
+        const updateDimensions = () => {
+            if (containerRef.current) {
+                const width = containerRef.current.offsetWidth;
+                // In fullscreen mode, use full viewport height; otherwise subtract header/nav space
+                const height = document.fullscreenElement 
+                    ? window.innerHeight 
+                    : Math.max(600, window.innerHeight - 400);
+                setDimensions({ width, height });
+            }
+        };
+
+        updateDimensions();
+        window.addEventListener('resize', updateDimensions);
+        // Also listen for fullscreen changes to update dimensions
+        document.addEventListener('fullscreenchange', updateDimensions);
+        return () => {
+            window.removeEventListener('resize', updateDimensions);
+            document.removeEventListener('fullscreenchange', updateDimensions);
+        };
     }, []);
 
     // Custom node canvas rendering - only draw the node hexagons

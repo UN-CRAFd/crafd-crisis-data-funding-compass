@@ -17,6 +17,8 @@ import { useTips } from '@/contexts/TipsContext';
 import { useGeneralContributions } from '@/contexts/GeneralContributionsContext';
 import { toUrlSlug, matchesUrlSlug } from '@/lib/urlShortcuts';
 import labels from '@/config/labels.json';
+import { StatCard } from '@/components/shared/StatCard';
+import { getOrgColorIntensity, getProjectColorIntensity } from '@/lib/colorUtils';
 
 interface AnalyticsPageProps {
     logoutButton?: React.ReactNode;
@@ -69,16 +71,6 @@ const STYLES = {
     }
 } as const;
 
-// Reusable StatCard component
-interface StatCardProps {
-    icon: React.ReactNode;
-    title: string;
-    value: number | string;
-    label: string;
-    colorScheme: 'amber';
-    tooltip?: React.ReactNode;
-}
-
 const MATRIX_BUTTON_CLASS =
   "px-3 py-1 text-xs font-medium rounded-md transition-colors flex items-center gap-1.5";
 
@@ -87,89 +79,6 @@ const MATRIX_MODES = [
   { value: 'unified', label: 'Overview', Icon: Columns },
 
 ] as const;
-
-const StatCard = ({ icon, title, value, label, colorScheme, tooltip }: StatCardProps) => {
-    const { tipsEnabled } = useTips();
-    
-    const gradients = {
-        amber: {
-            bg: 'from-[var(--brand-bg-lighter)] to-[var(--brand-bg-light)]',
-            value: 'text-[var(--brand-primary)]',
-            label: 'text-[var(--brand-primary)]'
-        }
-    };
-
-    const colors = gradients[colorScheme];
-
-    const cardContent = (
-        <Card className={`${STYLES.statCard} bg-gradient-to-br ${colors.bg}`}>
-            <CardHeader className="pb-0 h-5">
-                <CardDescription>
-                    <SectionHeader icon={icon} title={title} />
-                </CardDescription>
-            </CardHeader>
-            <CardContent className="pt-0">
-                <div className="flex items-baseline gap-2">
-                    <div className={`text-4xl sm:text-5xl font-bold font-mono leading-none tabular-nums ${colors.value}`}>
-                        {value}
-                    </div>
-                    <div className={`leading-none text-sm sm:text-lg font-medium ${colors.label}`}>
-                        {label}
-                    </div>
-                </div>
-            </CardContent>
-        </Card>
-    );
-
-    if (tooltip && tipsEnabled) {
-        return (
-            <TooltipProvider delayDuration={0}>
-                <TooltipUI>
-                    <TooltipTrigger asChild>
-                        {cardContent}
-                    </TooltipTrigger>
-                    <TooltipContent
-                        side="bottom"
-                        align="center"
-                        className="max-w-100 p-3 bg-white text-slate-800 text-sm rounded-lg border border-slate-200"
-                        sideOffset={5}
-                        avoidCollisions={true}
-                        style={{ ...STYLES.chartTooltip }}
-                    >
-                        <div className="leading-relaxed">{tooltip}</div>
-                    </TooltipContent>
-                </TooltipUI>
-            </TooltipProvider>
-        );
-    }
-
-    return cardContent;
-};
-
-// Helper to get color intensity for organizations (orange/amber)
-const getOrgColorIntensity = (count: number, max: number): string => {
-    if (count === 0) return 'bg-slate-50';
-    const intensity = Math.min(Math.ceil((count / max) * 5), 5);
-    const colorMap: Record<number, string> = {
-        1: 'bg-amber-100',
-        2: 'bg-amber-200',
-        3: 'bg-amber-300',
-        4: 'bg-amber-400',
-        5: 'bg-amber-500'
-    };
-    return colorMap[intensity] || 'bg-slate-50';
-};
-
-// Helper to get color intensity for projects (purple/indigo)
-const getProjectColorIntensity = (count: number, max: number): string => {
-    if (count === 0) return 'bg-slate-50';
-    const ratio = count / max;
-    if (ratio <= 0.2) return 'bg-indigo-100';
-    if (ratio <= 0.4) return 'bg-indigo-200';
-    if (ratio <= 0.6) return 'bg-indigo-300';
-    if (ratio <= 0.8) return 'bg-indigo-400';
-    return 'bg-indigo-500';
-};
 
 export default function AnalyticsPage({ logoutButton }: AnalyticsPageProps) {
     const router = useRouter();
@@ -1401,7 +1310,6 @@ export default function AnalyticsPage({ logoutButton }: AnalyticsPageProps) {
     return (
         <div className="min-h-screen bg-slate-50">
             <PageHeader 
-                logoutButton={logoutButton}
                 onShare={handleShare}
                 shareSuccess={shareSuccess}
             />
