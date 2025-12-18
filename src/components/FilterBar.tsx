@@ -94,6 +94,11 @@ const FilterBar: React.FC<FilterBarProps> = ({
         getMemberStates().then(states => setMemberStates(states));
     }, []);
 
+    // Clear donor search when the selected donors change (so dropdown search resets)
+    useEffect(() => {
+        setDonorSearchQuery('');
+    }, [combinedDonors]);
+
     // Combine available donors with selected member states to ensure they remain visible
     const allAvailableDonors = [...new Set([
         ...availableDonorCountries,
