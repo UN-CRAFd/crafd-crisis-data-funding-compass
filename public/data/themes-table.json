@@ -102,7 +102,7 @@
       "Investment Themes [Text Key]": "Common Indicators",
       "Data Ecosystem Projects": [
         "rec59LnTqL11pcRdG",
-        "recAFGzPycPBSyGN6"
+        "reczIeSUeAdEWMKSk"
       ],
       "theme_key": "indicator",
       "theme_description": "Common Indicators support consistent measurement and reporting practices across initiatives, enabling better coordination and comparability of results."
@@ -231,7 +231,6 @@
       ],
       "Investment Themes [Text Key]": "Needs Assessment Analytics",
       "Data Ecosystem Projects": [
-        "reczIeSUeAdEWMKSk",
         "rec04YelpRCFjpBV8"
       ],
       "theme_key": "needs-analytics",
@@ -417,7 +416,7 @@
         "recJye4S746MWWmW6",
         "recMOmPSS6OoIxqAM",
         "recCMSnUjitsYc1XQ",
-        "recAFGzPycPBSyGN6"
+        "reczIeSUeAdEWMKSk"
       ],
       "theme_key": "standards",
       "theme_description": "Establishes best practices to ensure consistency, reliability, and quality in how information is gathered and analyzed across projects."
@@ -1150,8 +1149,7 @@
       "Data Ecosystem Projects": [
         "recIUSUS3NNXaMHCQ",
         "recu82l0uk7d3IHeU",
-        "recUotlR1ZJwVMAIS",
-        "reczIeSUeAdEWMKSk"
+        "recUotlR1ZJwVMAIS"
       ],
       "theme_key": "impact",
       "theme_description": "It measures the effectiveness of crisis response efforts by analyzing data to determine what interventions work and why."
@@ -1324,13 +1322,12 @@
       "Investment Themes [Text Key]": "Needs Assessment Data",
       "Data Ecosystem Projects": [
         "recST6hz3bs6MKakU",
-        "rec4V0tKy9KP8Gw4h",
-        "recxZmQWr8fIn8d1G",
         "recz2ZsyM0B05BdFP",
         "recxuOxX8VxssdS6k",
         "recUotlR1ZJwVMAIS",
         "reccYy5JWKJEASskp",
-        "recni7Cfecz6SBQ8S"
+        "recni7Cfecz6SBQ8S",
+        "reczIeSUeAdEWMKSk"
       ],
       "theme_key": "needs-assessment",
       "theme_description": "Data focused on identifying and analyzing gaps, priorities, and requirements to inform decision-making and resource allocation."
@@ -1408,8 +1405,7 @@
       "Investment Themes [Text Key]": "Humanitarian Access Analytics",
       "Data Ecosystem Projects": [
         "rec4XuZsotMgaVbAm",
-        "rec2eT5BuCp87chHm",
-        "reczIeSUeAdEWMKSk"
+        "rec2eT5BuCp87chHm"
       ],
       "theme_key": "humanitarian-access",
       "theme_description": "Humanitarian Access Analytics uses data-driven insights to assess and improve the ability of aid organizations to reach people in need during crises."

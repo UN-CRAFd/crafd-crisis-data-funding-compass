@@ -1477,20 +1477,23 @@
           "Provider Orgs Full Name": [
             "recGCltHLsYiDo59B",
             "rec3QdLIyrZ4dNiPh",
-            "recNVePWbU6GAxsIP"
+            "recNVePWbU6GAxsIP",
+            "recvzWSlYgzs0mffd",
+            "recfLMsJLUS9toAjS"
           ],
           "CRAF’d-Funded Project?": "NO",
           "Investment Type(s)": [
-            "Crisis Analytics & Insights"
+            "Data Sets & Commons",
+            "Standards & Coordination"
           ],
           "Investment Theme(s)": [
-            "Needs Assessment",
-            "Impact Evaluation",
-            "Humanitarian Access Analytics"
+            "Common Indicators",
+            "Needs Assessment Data",
+            "Methodological Standards"
           ],
           "product_key": "msna",
           "HDX_SOHD": "None",
-          "Project Description": "The Multi-Sectoral Needs Assessment (MSNA) is a standardized, country-level data collection initiative designed to capture multi-sectoral needs among crisis-affected populations. The data collected through this assessment informs strategic planning, prioritization, and humanitarian response efforts."
+          "Project Description": "The Multi-Sectoral Needs Assessment (MSNA) is a standardized, country-level data collection initiative designed to capture comprehensive multi-sectoral needs among crisis-affected populations. Implemented by IMPACT Initiatives through its REACH Initiative, the MSNA collects statistically representative, household-level data on sectors such as food security, health, shelter, WASH, education, and protection. While the initiative is closely coordinated with OCHA and humanitarian clusters in country-led responses, the technical design, survey implementation, and analysis are primarily led by REACH/IMPACT, with operational support from agencies like IOM , WFP or IMMAP."
         },
         "agencies": []
       }
@@ -6625,8 +6628,7 @@
         "recEwLy3FESOhLeNs",
         "recAmBwUrrYDMtXtH",
         "reczIeSUeAdEWMKSk",
-        "recXcSKhSy2s7tunj",
-        "recAFGzPycPBSyGN6"
+        "recXcSKhSy2s7tunj"
       ],
       "Org Donor Agencies": [
         "recRgmk6Ew3NBvxGV",
@@ -6980,29 +6982,6 @@
         "agencies": []
       },
       {
-        "id": "recAFGzPycPBSyGN6",
-        "fields": {
-          "Project/Product Name": "Humanitarian Needs Assessment",
-          "Project Website": "https://www.ochaopt.org/",
-          "Provider Orgs Full Name": [
-            "recsrCWKAPu9dwkHb",
-            "recGCltHLsYiDo59B"
-          ],
-          "CRAF’d-Funded Project?": "NO",
-          "Investment Type(s)": [
-            "Standards & Coordination"
-          ],
-          "Investment Theme(s)": [
-            "Common Indicators",
-            "Methodological Standards"
-          ],
-          "product_key": "hna",
-          "HDX_SOHD": "None",
-          "Project Description": "Humanitarian Needs Assessments (HNAs) are multi-sectoral analyses led by humanitarian coordination mechanisms to assess severity and scale of needs specific to the target population. They complement DTM population data by informing Humanitarian Needs Overviews (HNOs) and Humanitarian Response Plans (HRPs)."
-        },
-        "agencies": []
-      },
-      {
         "id": "recAmBwUrrYDMtXtH",
         "fields": {
           "Project/Product Name": "Global Humanitarian Operational Presence Who, What, Where (3W) Portal",
@@ -7078,20 +7057,23 @@
           "Provider Orgs Full Name": [
             "recGCltHLsYiDo59B",
             "rec3QdLIyrZ4dNiPh",
-            "recNVePWbU6GAxsIP"
+            "recNVePWbU6GAxsIP",
+            "recvzWSlYgzs0mffd",
+            "recfLMsJLUS9toAjS"
           ],
           "CRAF’d-Funded Project?": "NO",
           "Investment Type(s)": [
-            "Crisis Analytics & Insights"
+            "Data Sets & Commons",
+            "Standards & Coordination"
           ],
           "Investment Theme(s)": [
-            "Needs Assessment",
-            "Impact Evaluation",
-            "Humanitarian Access Analytics"
+            "Common Indicators",
+            "Needs Assessment Data",
+            "Methodological Standards"
           ],
           "product_key": "msna",
           "HDX_SOHD": "None",
-          "Project Description": "The Multi-Sectoral Needs Assessment (MSNA) is a standardized, country-level data collection initiative designed to capture multi-sectoral needs among crisis-affected populations. The data collected through this assessment informs strategic planning, prioritization, and humanitarian response efforts."
+          "Project Description": "The Multi-Sectoral Needs Assessment (MSNA) is a standardized, country-level data collection initiative designed to capture comprehensive multi-sectoral needs among crisis-affected populations. Implemented by IMPACT Initiatives through its REACH Initiative, the MSNA collects statistically representative, household-level data on sectors such as food security, health, shelter, WASH, education, and protection. While the initiative is closely coordinated with OCHA and humanitarian clusters in country-led responses, the technical design, survey implementation, and analysis are primarily led by REACH/IMPACT, with operational support from agencies like IOM , WFP or IMMAP."
         },
         "agencies": []
       }
@@ -8947,20 +8929,23 @@
           "Provider Orgs Full Name": [
             "recGCltHLsYiDo59B",
             "rec3QdLIyrZ4dNiPh",
-            "recNVePWbU6GAxsIP"
+            "recNVePWbU6GAxsIP",
+            "recvzWSlYgzs0mffd",
+            "recfLMsJLUS9toAjS"
           ],
           "CRAF’d-Funded Project?": "NO",
           "Investment Type(s)": [
-            "Crisis Analytics & Insights"
+            "Data Sets & Commons",
+            "Standards & Coordination"
           ],
           "Investment Theme(s)": [
-            "Needs Assessment",
-            "Impact Evaluation",
-            "Humanitarian Access Analytics"
+            "Common Indicators",
+            "Needs Assessment Data",
+            "Methodological Standards"
           ],
           "product_key": "msna",
           "HDX_SOHD": "None",
-          "Project Description": "The Multi-Sectoral Needs Assessment (MSNA) is a standardized, country-level data collection initiative designed to capture multi-sectoral needs among crisis-affected populations. The data collected through this assessment informs strategic planning, prioritization, and humanitarian response efforts."
+          "Project Description": "The Multi-Sectoral Needs Assessment (MSNA) is a standardized, country-level data collection initiative designed to capture comprehensive multi-sectoral needs among crisis-affected populations. Implemented by IMPACT Initiatives through its REACH Initiative, the MSNA collects statistically representative, household-level data on sectors such as food security, health, shelter, WASH, education, and protection. While the initiative is closely coordinated with OCHA and humanitarian clusters in country-led responses, the technical design, survey implementation, and analysis are primarily led by REACH/IMPACT, with operational support from agencies like IOM , WFP or IMMAP."
         },
         "agencies": []
       }
@@ -13313,7 +13298,6 @@
       "Org Description": "UNHCR, the UN Refugee Agency, is a global organization dedicated to saving lives, protecting rights and building a better future for people forced to flee their homes because of conflict and persecution. We lead international action to protect refugees, forcibly displaced communities and stateless people. \n\t",
       "Link to Data Products Overview": "<https://www.unhcr.org/what-we-do/data-and-publications/unhcr-data>\n",
       "Provided Data Ecosystem Projects": [
-        "rec4V0tKy9KP8Gw4h",
         "rec4x8zaZtHkZpdrK",
         "recxuOxX8VxssdS6k",
         "recnU6ZioVzUVRKZo",
@@ -13327,7 +13311,8 @@
         "recuqvvqKg7D86DIm",
         "recopmKKe6HZ5qWWw",
         "recHVA5VejuaVSohF",
-        "recz2ZsyM0B05BdFP"
+        "recz2ZsyM0B05BdFP",
+        "reczIeSUeAdEWMKSk"
       ],
       "Org Donor Agencies": [
         "reca4p0ohNjva2ein",
@@ -13686,27 +13671,6 @@
     ],
     "projects": [
       {
-        "id": "rec4V0tKy9KP8Gw4h",
-        "fields": {
-          "Project/Product Name": "Multi-Sector Needs Assessment (MSNA)",
-          "Project Website": "https://www.unocha.org/publications/report/lebanon/multi-sector-needs-assessment-msna-key-findings-wash-december-2023",
-          "Provider Orgs Full Name": [
-            "recfLMsJLUS9toAjS"
-          ],
-          "CRAF’d-Funded Project?": "NO",
-          "Investment Type(s)": [
-            "Data Sets & Commons"
-          ],
-          "Investment Theme(s)": [
-            "Needs Assessment Data"
-          ],
-          "product_key": "unhcr-msna",
-          "HDX_SOHD": "None",
-          "Project Description": "UNHCR’s MSNA platform collects standardized multi-sector needs data in refugee settings, covering shelter, protection, livelihood, and health metrics to guide program planning and coordination."
-        },
-        "agencies": []
-      },
-      {
         "id": "rec4x8zaZtHkZpdrK",
         "fields": {
           "Project/Product Name": "WASH Knowledge, Attitudes and Practices (KAP) Survey",
@@ -14023,6 +13987,34 @@
           "product_key": "asr-survey",
           "HDX_SOHD": "None",
           "Project Description": "ASR monitors the demographic and socioeconomic profiles of refugee populations worldwide. Its standardized surveys and data visualizations support evidence-based protection, education, and livelihood programming."
+        },
+        "agencies": []
+      },
+      {
+        "id": "reczIeSUeAdEWMKSk",
+        "fields": {
+          "Project/Product Name": "Multi-Sectoral Needs Assessment (MSNA)",
+          "Project Website": "https://dtm.iom.int/data-product-series/multi-sectoral-needs-assessment",
+          "Provider Orgs Full Name": [
+            "recGCltHLsYiDo59B",
+            "rec3QdLIyrZ4dNiPh",
+            "recNVePWbU6GAxsIP",
+            "recvzWSlYgzs0mffd",
+            "recfLMsJLUS9toAjS"
+          ],
+          "CRAF’d-Funded Project?": "NO",
+          "Investment Type(s)": [
+            "Data Sets & Commons",
+            "Standards & Coordination"
+          ],
+          "Investment Theme(s)": [
+            "Common Indicators",
+            "Needs Assessment Data",
+            "Methodological Standards"
+          ],
+          "product_key": "msna",
+          "HDX_SOHD": "None",
+          "Project Description": "The Multi-Sectoral Needs Assessment (MSNA) is a standardized, country-level data collection initiative designed to capture comprehensive multi-sectoral needs among crisis-affected populations. Implemented by IMPACT Initiatives through its REACH Initiative, the MSNA collects statistically representative, household-level data on sectors such as food security, health, shelter, WASH, education, and protection. While the initiative is closely coordinated with OCHA and humanitarian clusters in country-led responses, the technical design, survey implementation, and analysis are primarily led by REACH/IMPACT, with operational support from agencies like IOM , WFP or IMMAP."
         },
         "agencies": []
       }
@@ -18884,7 +18876,6 @@
         "recAp3cCQIwKimsDg",
         "recN9QYgUhQVlDGL7",
         "recPxueDUiZ9ZJGwz",
-        "recAFGzPycPBSyGN6",
         "recnAqlQzKLLxYjmu",
         "recwPD7u5u8AVpubn",
         "recDspvgWdxP3wwfX"
@@ -19084,33 +19075,10 @@
     ],
     "projects": [
       {
-        "id": "recAFGzPycPBSyGN6",
-        "fields": {
-          "Project/Product Name": "Humanitarian Needs Assessment",
-          "Project Website": "https://www.ochaopt.org/",
-          "Provider Orgs Full Name": [
-            "recsrCWKAPu9dwkHb",
-            "recGCltHLsYiDo59B"
-          ],
-          "CRAF’d-Funded Project?": "NO",
-          "Investment Type(s)": [
-            "Standards & Coordination"
-          ],
-          "Investment Theme(s)": [
-            "Common Indicators",
-            "Methodological Standards"
-          ],
-          "product_key": "hna",
-          "HDX_SOHD": "None",
-          "Project Description": "Humanitarian Needs Assessments (HNAs) are multi-sectoral analyses led by humanitarian coordination mechanisms to assess severity and scale of needs specific to the target population. They complement DTM population data by informing Humanitarian Needs Overviews (HNOs) and Humanitarian Response Plans (HRPs)."
-        },
-        "agencies": []
-      },
-      {
         "id": "recAp3cCQIwKimsDg",
         "fields": {
           "Project/Product Name": "IDP Baseline",
-          "Project Website": "https://dtm.iom.int/",
+          "Project Website": "https://dtm.iom.int/data-product-series/idps-or-migrants-baseline-assessment",
           "Provider Orgs Full Name": [
             "recsrCWKAPu9dwkHb"
           ],
@@ -19308,7 +19276,7 @@
         "id": "recnAqlQzKLLxYjmu",
         "fields": {
           "Project/Product Name": "Emergency Event Tracking (ETT)",
-          "Project Website": "https://dtm.iom.int/",
+          "Project Website": "https://dtm.iom.int/data-product-series/emergency-event-tracking",
           "Provider Orgs Full Name": [
             "recsrCWKAPu9dwkHb"
           ],
@@ -20010,9 +19978,9 @@
       "Org Mission": "iMMAP Inc.'s mission is to harness the power of information to facilitate evidence-based decisions to improve people’s lives.\n\niMMAP Inc. turns data into information and creates knowledge for decision-makers operating in development contexts, situations of violence, post-disaster, and conflict recovery.\n",
       "Link to Data Products Overview": "<https://immap.org/products/>\n",
       "Provided Data Ecosystem Projects": [
-        "recxZmQWr8fIn8d1G",
         "recPMQlg07QkflL3i",
-        "reclcvFLzfAlhADFB"
+        "reclcvFLzfAlhADFB",
+        "reczIeSUeAdEWMKSk"
       ],
       "Org Donor Agencies": [
         "rec3Ado0Jrl799Q8A",
@@ -20141,22 +20109,30 @@
         "agencies": []
       },
       {
-        "id": "recxZmQWr8fIn8d1G",
+        "id": "reczIeSUeAdEWMKSk",
         "fields": {
-          "Project/Product Name": "Multi-Sector Needs Assessments (MSNA)",
+          "Project/Product Name": "Multi-Sectoral Needs Assessment (MSNA)",
+          "Project Website": "https://dtm.iom.int/data-product-series/multi-sectoral-needs-assessment",
           "Provider Orgs Full Name": [
-            "recvzWSlYgzs0mffd"
+            "recGCltHLsYiDo59B",
+            "rec3QdLIyrZ4dNiPh",
+            "recNVePWbU6GAxsIP",
+            "recvzWSlYgzs0mffd",
+            "recfLMsJLUS9toAjS"
           ],
           "CRAF’d-Funded Project?": "NO",
           "Investment Type(s)": [
-            "Data Sets & Commons"
+            "Data Sets & Commons",
+            "Standards & Coordination"
           ],
           "Investment Theme(s)": [
-            "Needs Assessment Data"
+            "Common Indicators",
+            "Needs Assessment Data",
+            "Methodological Standards"
           ],
-          "product_key": "immap-msna",
+          "product_key": "msna",
           "HDX_SOHD": "None",
-          "Project Description": "iMMAP delivers assessment tools, training, and data services to support MSNA-led humanitarian coordination across emergencies, streamlining data aggregation across sectors."
+          "Project Description": "The Multi-Sectoral Needs Assessment (MSNA) is a standardized, country-level data collection initiative designed to capture comprehensive multi-sectoral needs among crisis-affected populations. Implemented by IMPACT Initiatives through its REACH Initiative, the MSNA collects statistically representative, household-level data on sectors such as food security, health, shelter, WASH, education, and protection. While the initiative is closely coordinated with OCHA and humanitarian clusters in country-led responses, the technical design, survey implementation, and analysis are primarily led by REACH/IMPACT, with operational support from agencies like IOM , WFP or IMMAP."
         },
         "agencies": []
       }
