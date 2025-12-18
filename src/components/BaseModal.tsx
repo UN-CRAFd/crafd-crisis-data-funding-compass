@@ -390,7 +390,7 @@ export function ModalTooltip({
                 </TooltipTrigger>
                 <TooltipContent
                     side={side}
-                    className="max-w-xs p-2 text-xs bg-white border border-gray-300 !z-[9999]"
+                    className="max-w-[90vw] max-h-[80vh] p-2 text-xs bg-white border border-gray-300 !z-[9999] overflow-auto"
                     sideOffset={5}
                     container={tooltipContainer as HTMLElement | null}
                     style={{
@@ -398,7 +398,11 @@ export function ModalTooltip({
                         color: 'var(--tooltip-text)',
                         border: '1px solid var(--tooltip-border)',
                         opacity: 1,
-                        zIndex: 9999
+                        zIndex: 9999,
+                        overflow: 'auto',
+                        maxWidth: '90vw',
+                        maxHeight: '80vh',
+                        boxSizing: 'border-box'
                     }}
                 >
                     {content}

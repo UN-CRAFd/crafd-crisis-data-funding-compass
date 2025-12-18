@@ -557,7 +557,8 @@ export default function OrganizationModal({
                                                                     <img 
                                                                         src={budgetScreenshotUrl} 
                                                                         alt="Budget Source Screenshot" 
-                                                                        className="max-w-[500px] max-h-[400px] rounded-md object-contain"
+                                                                        className="rounded-md object-contain"
+                                                                        style={{ maxWidth: '80vw', maxHeight: '70vh' }}
                                                                     />
                                                                 </div>
                                                             }
