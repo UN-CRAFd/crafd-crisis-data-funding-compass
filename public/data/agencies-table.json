@@ -165,8 +165,8 @@
   {
     "id": "rec4fIAt1DD6Vprw7",
     "fields": {
-      "Agency/Department Name": "Unspecified Agency",
-      "Country Name": "Danish Refugee Council (DRC)"
+      "Agency/Department Name": "Danish Refugee Council (DRC)",
+      "Country Name": "Non-Governmental Organizations"
     }
   },
   {
@@ -618,9 +618,9 @@
   {
     "id": "recImK5HfYUoDfAgk",
     "fields": {
-      "Agency/Department Name": "Unspecified Agency",
+      "Agency/Department Name": "Norwegian Refugee Council (NRC / NORCAP)",
       "Agency Data Portal": "https://www.nrc.no/where-we-work",
-      "Country Name": "Norwegian Refugee Council (NRC / NORCAP)"
+      "Country Name": "Non-Governmental Organizations"
     }
   },
   {

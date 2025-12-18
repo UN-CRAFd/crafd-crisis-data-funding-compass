@@ -103,9 +103,14 @@ const CrisisDataDashboardWrapper = ({ logoutButton }: { logoutButton?: React.Rea
         // Also include member states as valid donors
         memberStates.forEach(state => allDonors.add(state));
 
+        // If the special shortcut `all` is present, select every donor available
+        if (donorSlugsFromUrl.some(s => s === 'all')) {
+            return Array.from(allDonors).sort();
+        }
+
         return donorSlugsFromUrl
-            .map(slug => Array.from(allDonors).find(d => matchesUrlSlug(slug, d)))
-            .filter((d): d is string => d !== undefined);
+                .map(slug => Array.from(allDonors).find(d => matchesUrlSlug(slug, d)))
+                .filter((d): d is string => d !== undefined);
     }, [donorSlugsFromUrl, dashboardData, memberStates]);
 
     // Parse investment types from URL
