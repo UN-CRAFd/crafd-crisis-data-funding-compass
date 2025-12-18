@@ -26,6 +26,10 @@
     }
   },
   {
+    "id": "rec12Pvn6jtsVitsT",
+    "fields": {}
+  },
+  {
     "id": "rec15kH3AC5gKDeQu",
     "fields": {
       "Agency/Department Name": "Belgian Development Agency (Enabel)",
@@ -52,7 +56,7 @@
     "id": "rec1In4CerWhTywiy",
     "fields": {
       "Agency/Department Name": "Stiftung Mercator",
-      "Country Name": "Foundation",
+      "Country Name": "Foundations",
       "Agency Website": "https://www.stiftung-mercator.de"
     }
   },
@@ -69,13 +73,6 @@
     "fields": {
       "Agency/Department Name": "Unspecified Agency",
       "Country Name": "Germany"
-    }
-  },
-  {
-    "id": "rec1mxEgEXBohkCjo",
-    "fields": {
-      "Agency/Department Name": "Unspecified Agency",
-      "Country Name": "Colombia"
     }
   },
   {
@@ -133,7 +130,7 @@
     "id": "rec3ZfAfkmBo4n8is",
     "fields": {
       "Agency/Department Name": "Open Society Foundations",
-      "Country Name": "Foundation",
+      "Country Name": "Foundations",
       "Agency Website": "https://www.opensocietyfoundations.org"
     }
   },
@@ -148,8 +145,8 @@
   {
     "id": "rec44UV2liT4wu1tg",
     "fields": {
-      "Agency/Department Name": "Unspecified Agency",
-      "Country Name": "Alwaleed Philanthropies"
+      "Agency/Department Name": "Alwaleed Philanthropies",
+      "Country Name": "Foundations"
     }
   },
   {
@@ -165,7 +162,7 @@
     "id": "rec4XXzzXi0jHT1Fv",
     "fields": {
       "Agency/Department Name": "Global Nutrition Cluster",
-      "Country Name": "Non-State Actor",
+      "Country Name": "Non-Governmental Organizations",
       "Agency Website": "https://www.nutritioncluster.net/"
     }
   },
@@ -201,7 +198,7 @@
     "id": "rec5NKr3OLYmPMuOf",
     "fields": {
       "Agency/Department Name": "Global Challenges Foundation",
-      "Country Name": "Foundation",
+      "Country Name": "Foundations",
       "Agency Website": "https://globalchallenges.org"
     }
   },
@@ -210,7 +207,7 @@
     "fields": {
       "Agency/Department Name": "Conrad N. Hilton Foundation",
       "Agency Data Portal": "https://www.hiltonfoundation.org/",
-      "Country Name": "Foundation",
+      "Country Name": "Foundations",
       "Agency Website": "https://www.hiltonfoundation.org/"
     }
   },
@@ -233,8 +230,15 @@
     "id": "rec665usRSgrGizMC",
     "fields": {
       "Agency/Department Name": "Skoll",
-      "Country Name": "Foundation",
+      "Country Name": "Foundations",
       "Agency Website": "https://skoll.org"
+    }
+  },
+  {
+    "id": "rec6Iw3vODf5WcqmB",
+    "fields": {
+      "Agency/Department Name": "Unspecified Agency",
+      "Country Name": "South Sudan"
     }
   },
   {
@@ -256,9 +260,9 @@
   {
     "id": "rec7IwGp05Iby61ry",
     "fields": {
-      "Agency/Department Name": "Unspecified Agency",
+      "Agency/Department Name": "Global Support and Development (GSD)",
       "Agency Data Portal": "https://www.gsd.ngo/en",
-      "Country Name": "Global Support and Development (GSD)"
+      "Country Name": "Non-Governmental Organizations"
     }
   },
   {
@@ -321,7 +325,7 @@
     "id": "recACsCLhhDutMpAv",
     "fields": {
       "Agency/Department Name": "Médecins Sans Frontières",
-      "Country Name": "Non-State Actor",
+      "Country Name": "Non-Governmental Organizations",
       "Agency Website": "https://www.msf.org/"
     }
   },
@@ -330,7 +334,7 @@
     "fields": {
       "Agency/Department Name": "Clinton Health Access Initiative",
       "Agency Data Portal": "https://www.clintonhealthaccess.org/",
-      "Country Name": "Non-State Actor",
+      "Country Name": "Non-Governmental Organizations",
       "Agency Website": "https://www.clintonhealthaccess.org/"
     }
   },
@@ -352,7 +356,7 @@
   {
     "id": "recAiCKdzASfJMVsG",
     "fields": {
-      "Agency/Department Name": "Department of Defense (DoD)",
+      "Agency/Department Name": "Department of War",
       "Agency Data Portal": "https://www.defense.gov/",
       "Country Name": "USA",
       "Agency Website": "https://www.defense.gov"
@@ -392,6 +396,13 @@
     }
   },
   {
+    "id": "recCMb08rDnV6LNsD",
+    "fields": {
+      "Agency/Department Name": "Unspecified Agency",
+      "Country Name": "Israel"
+    }
+  },
+  {
     "id": "recCctxpcCNPhxoXS",
     "fields": {
       "Agency/Department Name": "Ministry of Infrastructure and Water Management (IenW) ",
@@ -417,7 +428,7 @@
     "id": "recDY0ngiDePaQtm3",
     "fields": {
       "Agency/Department Name": "Klaus Tschira Stiftung",
-      "Country Name": "Foundation",
+      "Country Name": "Foundations",
       "Agency Website": "https://www.klaus-tschira-stiftung.de/"
     }
   },
@@ -425,15 +436,15 @@
     "id": "recDeOTSV3vQ7pXcx",
     "fields": {
       "Agency/Department Name": "Ford Foundation",
-      "Country Name": "Foundation",
+      "Country Name": "Foundations",
       "Agency Website": "https://www.fordfoundation.org/"
     }
   },
   {
     "id": "recDtKjptlPgZaEVI",
     "fields": {
-      "Agency/Department Name": "Unspecified Agency",
-      "Country Name": "Fund for Peace (FFP)"
+      "Agency/Department Name": "Fund for Peace (FFP)",
+      "Country Name": "Research / Think Tank"
     }
   },
   {
@@ -449,6 +460,13 @@
     "fields": {
       "Agency/Department Name": "Green Climate Fund",
       "Country Name": "United Nations"
+    }
+  },
+  {
+    "id": "recEMiR8J5shI8chk",
+    "fields": {
+      "Agency/Department Name": "Unspecified Agency",
+      "Country Name": "Kazakhstan"
     }
   },
   {
@@ -485,8 +503,8 @@
   {
     "id": "recFNcILze2MwJxUN",
     "fields": {
-      "Agency/Department Name": "Unspecified Agency",
-      "Country Name": "Organization of American States "
+      "Agency/Department Name": "Organization of American States",
+      "Country Name": "International Organizations"
     }
   },
   {
@@ -540,15 +558,15 @@
     "id": "recGjDWBWOTrWTWb8",
     "fields": {
       "Agency/Department Name": "The Global Fund",
-      "Country Name": "Foundation",
+      "Country Name": "Foundations",
       "Agency Website": "https://www.theglobalfund.org"
     }
   },
   {
     "id": "recGlx8p4y1yzES7T",
     "fields": {
-      "Agency/Department Name": "Unspecified Agency",
-      "Country Name": "Rippleworks"
+      "Agency/Department Name": "Rippleworks",
+      "Country Name": "Foundations"
     }
   },
   {
@@ -613,7 +631,7 @@
     "id": "recJl9XUd7rAiz6dR",
     "fields": {
       "Agency/Department Name": "The CS Fund",
-      "Country Name": "Non-State Actor",
+      "Country Name": "Non-Governmental Organizations",
       "Agency Website": "https://www.csfund.org/"
     }
   },
@@ -621,7 +639,7 @@
     "id": "recJwqOMpUSSv1hef",
     "fields": {
       "Agency/Department Name": "Global Environment Facility",
-      "Country Name": "Non-State Actor"
+      "Country Name": "International Organizations"
     }
   },
   {
@@ -666,16 +684,16 @@
   {
     "id": "recLWqEZrThg4Drwo",
     "fields": {
-      "Agency/Department Name": "Unspecified Agency",
+      "Agency/Department Name": "Geneva International Centre for Humanitarian Demining",
       "Agency Data Portal": "https://www.gichd.org/",
-      "Country Name": "Geneva International Centre for Humanitarian Demining"
+      "Country Name": "International Organizations"
     }
   },
   {
     "id": "recLZVuV2acBHkXYp",
     "fields": {
       "Agency/Department Name": "Education Cannot Wait",
-      "Country Name": "Foundation",
+      "Country Name": "Foundations",
       "Agency Website": "https://www.educationcannotwait.org/"
     }
   },
@@ -685,6 +703,13 @@
       "Agency/Department Name": "Federal Agency for Technical Relief (THW)",
       "Country Name": "Germany",
       "Agency Website": "https://www.thw.de"
+    }
+  },
+  {
+    "id": "recLxLPhgHBggmAR2",
+    "fields": {
+      "Agency/Department Name": "Unspecified Agency",
+      "Country Name": "Albania"
     }
   },
   {
@@ -719,7 +744,7 @@
     "id": "recMugchTfrW8Kcdk",
     "fields": {
       "Agency/Department Name": "Rotary International",
-      "Country Name": "Foundation",
+      "Country Name": "Foundations",
       "Agency Website": "https://www.rotary.org/en/about-rotary/rotary-foundation"
     }
   },
@@ -815,7 +840,7 @@
     "id": "recPTgqLkZfiwTmr1",
     "fields": {
       "Agency/Department Name": "Gavi",
-      "Country Name": "Foundation",
+      "Country Name": "Foundations",
       "Agency Website": "https://www.gavi.org"
     }
   },
@@ -873,15 +898,15 @@
     "id": "recSrpTHE0mGFNF65",
     "fields": {
       "Agency/Department Name": "Patrick J McGovern",
-      "Country Name": "Foundation",
+      "Country Name": "Foundations",
       "Agency Website": "https://www.mcgovern.org/"
     }
   },
   {
     "id": "recT2C2l3Ua0qmnR3",
     "fields": {
-      "Agency/Department Name": "Unspecified Agency",
-      "Country Name": "Institute for Economics and Peace (IEP)"
+      "Agency/Department Name": "Institute for Economics and Peace (IEP)",
+      "Country Name": "Research / Think Tank"
     }
   },
   {
@@ -895,15 +920,19 @@
     "id": "recTZoka2MXKUJae9",
     "fields": {
       "Agency/Department Name": "Mastercard Foundation",
-      "Country Name": "Foundation",
+      "Country Name": "Foundations",
       "Agency Website": "https://mastercardfdn.org"
     }
+  },
+  {
+    "id": "recU93UBWPTkyN1WR",
+    "fields": {}
   },
   {
     "id": "recUEOSvKGVMYEPqX",
     "fields": {
       "Agency/Department Name": "Alibaba Foundation",
-      "Country Name": "Foundation",
+      "Country Name": "Foundations",
       "Agency Website": "https://foundation.alibaba.com/"
     }
   },
@@ -920,7 +949,7 @@
     "id": "recULIEfSZxBrWWZb",
     "fields": {
       "Agency/Department Name": "United Nations Foundation",
-      "Country Name": "Foundation",
+      "Country Name": "Foundations",
       "Agency Website": "https://unfoundation.org/"
     }
   },
@@ -973,7 +1002,7 @@
     "id": "recVOTd76hfvjPbjZ",
     "fields": {
       "Agency/Department Name": "The David and Lucile Packard Foundation",
-      "Country Name": "Foundation",
+      "Country Name": "Foundations",
       "Agency Website": "https://www.packard.org"
     }
   },
@@ -988,7 +1017,7 @@
     "id": "recW6C5J7pShpYbzy",
     "fields": {
       "Agency/Department Name": "Mo Ibrahim Foundation ",
-      "Country Name": "Foundation",
+      "Country Name": "Foundations",
       "Agency Website": "https://mo.ibrahim.foundation/"
     }
   },
@@ -1003,7 +1032,7 @@
     "id": "recWYxrSapIaQ5C4r",
     "fields": {
       "Agency/Department Name": "Mackenzie Scott",
-      "Country Name": "Foundation",
+      "Country Name": "Foundations",
       "Agency Website": "https://yieldgiving.com"
     }
   },
@@ -1114,7 +1143,7 @@
     "id": "reca3vbLWS2MqtmnV",
     "fields": {
       "Agency/Department Name": "Jain Family Institute",
-      "Country Name": "Foundation",
+      "Country Name": "Foundations",
       "Agency Website": "https://www.jainfamilyinstitute.org/"
     }
   },
@@ -1184,7 +1213,7 @@
     "fields": {
       "Agency/Department Name": "Bill and Melinda Gates Foundation",
       "Agency Data Portal": "https://www.gatesfoundation.org/about/committed-grants",
-      "Country Name": "Foundation",
+      "Country Name": "Foundations",
       "Agency Website": "https://www.gatesfoundation.org"
     }
   },
@@ -1217,7 +1246,7 @@
     "id": "recdfJ8kc29BrRxi8",
     "fields": {
       "Agency/Department Name": "Tableau Foundation",
-      "Country Name": "Foundation",
+      "Country Name": "Foundations",
       "Agency Website": "https://www.tableau.com/foundation"
     }
   },
@@ -1225,7 +1254,7 @@
     "id": "recdtoV4UFwh3YJXi",
     "fields": {
       "Agency/Department Name": "Save the Children",
-      "Country Name": "Non-State Actor",
+      "Country Name": "Non-Governmental Organizations",
       "Agency Website": "https://www.savethechildren.net/"
     }
   },
@@ -1294,15 +1323,15 @@
     "id": "recfWcw0CdUs0STc3",
     "fields": {
       "Agency/Department Name": "Microsoft",
-      "Country Name": "Private Firm",
+      "Country Name": "Private Firms",
       "Agency Website": "https://www.microsoft.com"
     }
   },
   {
     "id": "recfY9SzUx3XdEb4s",
     "fields": {
-      "Agency/Department Name": "Unspecified Agency",
-      "Country Name": "International Institute for Democracy and Electoral Assistance (IDEA)"
+      "Agency/Department Name": "International Institute for Democracy and Electoral Assistance (IDEA)",
+      "Country Name": "International Organizations"
     }
   },
   {
@@ -1336,15 +1365,22 @@
     "id": "rech10djtgHRF0JFS",
     "fields": {
       "Agency/Department Name": "Google.org",
-      "Country Name": "Foundation",
+      "Country Name": "Foundations",
       "Agency Website": "https://www.google.org/"
+    }
+  },
+  {
+    "id": "rechhKgLoadz3ZE7I",
+    "fields": {
+      "Agency/Department Name": "Unspecified Agency",
+      "Country Name": "Romania"
     }
   },
   {
     "id": "reciQBMKhngwpZwbU",
     "fields": {
       "Agency/Department Name": "Action Against Hunger",
-      "Country Name": "Non-State Actor",
+      "Country Name": "Non-Governmental Organizations",
       "Agency Website": "https://www.actionagainsthunger.org/"
     }
   },
@@ -1376,14 +1412,14 @@
     "id": "recjAQGJeJQbasrLl",
     "fields": {
       "Agency/Department Name": "Unspecified Agency",
-      "Country Name": "Foundation"
+      "Country Name": "Foundations"
     }
   },
   {
     "id": "recjO2oFzfahtDqQf",
     "fields": {
       "Agency/Department Name": "Obama Foundation",
-      "Country Name": "Foundation",
+      "Country Name": "Foundations",
       "Agency Website": "https://www.obama.org"
     }
   },
@@ -1422,7 +1458,7 @@
     "id": "reck9tUEQ0lipjF53",
     "fields": {
       "Agency/Department Name": "Susan Thompson Buffett Foundation",
-      "Country Name": "Foundation",
+      "Country Name": "Foundations",
       "Agency Website": "https://www.stbfoundation.org/"
     }
   },
@@ -1447,7 +1483,7 @@
     "fields": {
       "Agency/Department Name": "Wellcome Trust",
       "Agency Data Portal": "https://wellcome.org/",
-      "Country Name": "Foundation",
+      "Country Name": "Foundations",
       "Agency Website": "https://wellcome.org"
     }
   },
@@ -1495,7 +1531,7 @@
     "id": "recmupKYrOU6hZbYx",
     "fields": {
       "Agency/Department Name": "Bloomberg Family Foundation",
-      "Country Name": "Foundation",
+      "Country Name": "Foundations",
       "Agency Website": "https://www.bloomberg.org/"
     }
   },
@@ -1550,7 +1586,7 @@
     "id": "recpBuvL2uHuENIu7",
     "fields": {
       "Agency/Department Name": "Silicon Valley Community Foundation",
-      "Country Name": "Foundation",
+      "Country Name": "Foundations",
       "Agency Website": "https://www.siliconvalleycf.org/"
     }
   },
@@ -1558,7 +1594,7 @@
     "id": "recpOiAVqOz4n7ROD",
     "fields": {
       "Agency/Department Name": "McKinsey & Company",
-      "Country Name": "Private Firm",
+      "Country Name": "Private Firms",
       "Agency Website": "https://www.mckinsey.com/"
     }
   },
@@ -1574,8 +1610,8 @@
   {
     "id": "recpoSWjCWxlFL5FM",
     "fields": {
-      "Agency/Department Name": "Unspecified Firm",
-      "Country Name": "Private Firm",
+      "Agency/Department Name": "Unspecified Agency",
+      "Country Name": "Private Firms",
       "Agency Website": "https://thefirm.net/"
     }
   },
@@ -1617,7 +1653,7 @@
     "fields": {
       "Agency/Department Name": "Howden Foundation",
       "Agency Data Portal": "https://www.howdengroupholdings.com/sustainability/howden-foundation",
-      "Country Name": "Foundation",
+      "Country Name": "Foundations",
       "Agency Website": "https://www.howdenfoundation.com/"
     }
   },
@@ -1625,7 +1661,7 @@
     "id": "recqR4fRvKwQsk54E",
     "fields": {
       "Agency/Department Name": "William and Flora Hewlett Foundation",
-      "Country Name": "Foundation",
+      "Country Name": "Foundations",
       "Agency Website": "https://hewlett.org"
     }
   },
@@ -1641,7 +1677,7 @@
     "fields": {
       "Agency/Department Name": "Rockefeller Foundation",
       "Agency Data Portal": "https://www.rockefellerfoundation.org/",
-      "Country Name": "Foundation",
+      "Country Name": "Foundations",
       "Agency Website": "https://www.rockefellerfoundation.org/"
     }
   },
@@ -1657,7 +1693,7 @@
     "id": "recrPlN870ayqI9dO",
     "fields": {
       "Agency/Department Name": "The Elma Relief Foundation",
-      "Country Name": "Foundation",
+      "Country Name": "Foundations",
       "Agency Website": "https://www.elmaphilanthropies.org/relief"
     }
   },
@@ -1754,7 +1790,7 @@
     "id": "recuh6VLNIOwuzoK4",
     "fields": {
       "Agency/Department Name": "Robert Bosch Foundation",
-      "Country Name": "Foundation",
+      "Country Name": "Foundations",
       "Agency Website": "https://www.bosch-stiftung.de"
     }
   },
@@ -1784,7 +1820,7 @@
     "id": "recvWXGo3NuHLKMUq",
     "fields": {
       "Agency/Department Name": "Oxfam",
-      "Country Name": "Non-State Actor",
+      "Country Name": "Non-Governmental Organizations",
       "Agency Website": "https://www.oxfam.org"
     }
   },
@@ -1807,9 +1843,9 @@
   {
     "id": "recvvJF6VEfKjphtY",
     "fields": {
-      "Agency/Department Name": "Unspecified Agency",
+      "Agency/Department Name": "International Fund for Agricultural Development (IFAD)",
       "Agency Data Portal": "https://www.ifad.org/en/",
-      "Country Name": "International Fund for Agricultural Development (IFAD)"
+      "Country Name": "International Organizations"
     }
   },
   {
@@ -1819,6 +1855,10 @@
       "Country Name": "Japan",
       "Agency Website": "https://www.mofa.go.jp/"
     }
+  },
+  {
+    "id": "recxDiAZCbiwBAf7e",
+    "fields": {}
   },
   {
     "id": "recxgDm1Z8R7MHiTu",

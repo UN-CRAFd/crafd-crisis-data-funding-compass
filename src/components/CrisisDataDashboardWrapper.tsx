@@ -2,6 +2,7 @@
 
 import { typeLabelToSlug, typeSlugToLabel, toUrlSlug, matchesUrlSlug } from '@/lib/urlShortcuts';
 import { themeKeyToNames, themeNameToKey, ensureThemesMappingsLoaded, getMemberStates } from '@/lib/data';
+import { useGeneralContributions } from '@/contexts/GeneralContributionsContext';
 import { usePathname, useRouter, useSearchParams } from 'next/navigation';
 import { useCallback, useEffect, useMemo, useRef, useState } from 'react';
 import { processDashboardData } from '../lib/data';
@@ -22,6 +23,15 @@ const CrisisDataDashboardWrapper = ({ logoutButton }: { logoutButton?: React.Rea
     const pathname = usePathname();
     const searchParams = useSearchParams();
     
+    // Get General Contributions state to trigger refetch when it changes
+    let showGeneralContributions = true;
+    try {
+        const { showGeneralContributions: value } = useGeneralContributions();
+        showGeneralContributions = value;
+    } catch (e) {
+        // Provider not available
+    }
+
     // ===========================================
     // MODAL STATE (Read-only from URL)
     // ===========================================
@@ -37,7 +47,7 @@ const CrisisDataDashboardWrapper = ({ logoutButton }: { logoutButton?: React.Rea
     const [themesLoaded, setThemesLoaded] = useState(false);
     const [investmentThemes, setInvestmentThemes] = useState<string[]>([]);
     const [memberStates, setMemberStates] = useState<string[]>([]);
-    
+
     // Load themes on mount and when filter params change (NOT when modal params change)
     const filterParamsString = useMemo(() => {
         return searchParams.toString().split('&')
@@ -51,20 +61,22 @@ const CrisisDataDashboardWrapper = ({ logoutButton }: { logoutButton?: React.Rea
             setMemberStates(loadedMemberStates);
             await ensureThemesMappingsLoaded();
             setThemesLoaded(true);
-            
+
             const raw = searchParams.get('th') ?? searchParams.get('themes');
             const keys = raw?.split(',').filter(Boolean) || [];
             const themeNames = keys.flatMap(key => themeKeyToNames(key));
             setInvestmentThemes(themeNames);
         })();
-    }, [filterParamsString]); // Only re-run when filter params change
+    }, [filterParamsString, showGeneralContributions]); // Re-run when general contributions setting changes
 
     // Read filter values from URL
     const donorSlugsFromUrl = useMemo(() => {
         const raw = searchParams.get('d') ?? searchParams.get('donors');
-        return raw?.split(',').filter(Boolean) || [];
+        const incoming = raw?.split(',').filter(Boolean) || [];
+        const crafdExpansion = ['germany','netherlands','canada','finland','luxembourg','united-kingdom','european-union','usa'];
+        return incoming.flatMap(s => s === 'crafd-donors' ? crafdExpansion : [s]);
     }, [searchParams]);
-    
+
     const [dashboardData, setDashboardData] = useState<{
         stats: DashboardStats;
         projectTypes: ProjectTypeData[];
@@ -90,7 +102,7 @@ const CrisisDataDashboardWrapper = ({ logoutButton }: { logoutButton?: React.Rea
         });
         // Also include member states as valid donors
         memberStates.forEach(state => allDonors.add(state));
-        
+
         return donorSlugsFromUrl
             .map(slug => Array.from(allDonors).find(d => matchesUrlSlug(slug, d)))
             .filter((d): d is string => d !== undefined);
@@ -126,7 +138,7 @@ const CrisisDataDashboardWrapper = ({ logoutButton }: { logoutButton?: React.Rea
 
     const [activeView, setActiveView] = useState<'table' | 'network'>('table');
     const [localSearchQuery, setLocalSearchQuery] = useState(searchQuery);
-    
+
     const lastFetchedFiltersRef = useRef<string>('');
 
     // Sync local search with URL
@@ -137,14 +149,14 @@ const CrisisDataDashboardWrapper = ({ logoutButton }: { logoutButton?: React.Rea
     // ===========================================
     // URL UPDATE FUNCTIONS
     // ===========================================
-    
+
     /**
      * Update filter params while preserving modal params
      */
-    const updateFilterParams = useCallback((params: { 
-        donors?: string[]; 
-        types?: string[]; 
-        themes?: string[]; 
+    const updateFilterParams = useCallback((params: {
+        donors?: string[];
+        types?: string[];
+        themes?: string[];
         search?: string;
         sortBy?: 'name' | 'donors' | 'assets' | 'funding';
         sortDirection?: 'asc' | 'desc';
@@ -244,7 +256,8 @@ const CrisisDataDashboardWrapper = ({ logoutButton }: { logoutButton?: React.Rea
                     donors: combinedDonors.sort(),
                     types: investmentTypes.sort(),
                     themes: investmentThemes.sort(),
-                    search: searchQuery
+                    search: searchQuery,
+                    showGeneralContributions
                 });
 
                 if (filterSignature === lastFetchedFiltersRef.current) {
@@ -273,7 +286,7 @@ const CrisisDataDashboardWrapper = ({ logoutButton }: { logoutButton?: React.Rea
         }
 
         fetchData();
-    }, [combinedDonors, investmentTypes, investmentThemes, searchQuery]);
+    }, [combinedDonors, investmentTypes, investmentThemes, searchQuery, showGeneralContributions]);
 
     // NOTE: Theme validation is disabled because it creates a chicken-and-egg problem:
     // - Themes are user-driven filters that should drive data fetching
@@ -300,10 +313,10 @@ const CrisisDataDashboardWrapper = ({ logoutButton }: { logoutButton?: React.Rea
     }, [updateFilterParams]);
 
     const handleResetFilters = useCallback(() => {
-        updateFilterParams({ 
-            donors: [], 
-            types: [], 
-            themes: [], 
+        updateFilterParams({
+            donors: [],
+            types: [],
+            themes: [],
             search: '',
             sortBy: 'name',
             sortDirection: 'desc'
@@ -351,7 +364,7 @@ const CrisisDataDashboardWrapper = ({ logoutButton }: { logoutButton?: React.Rea
 
     // Click handlers for badges/pills
     const handleDonorClick = useCallback((donor: string) => {
-        const updatedDonors = combinedDonors.includes(donor) 
+        const updatedDonors = combinedDonors.includes(donor)
             ? combinedDonors.filter(d => d !== donor)
             : [...combinedDonors, donor];
         updateFilterParams({ donors: updatedDonors });
@@ -365,8 +378,8 @@ const CrisisDataDashboardWrapper = ({ logoutButton }: { logoutButton?: React.Rea
     }, [investmentTypes, updateFilterParams]);
 
     const handleThemeClick = useCallback((theme: string) => {
-        const updatedThemes = investmentThemes.includes(theme) 
-            ? investmentThemes 
+        const updatedThemes = investmentThemes.includes(theme)
+            ? investmentThemes
             : [...investmentThemes, theme];
         updateFilterParams({ themes: updatedThemes });
     }, [investmentThemes, updateFilterParams]);
