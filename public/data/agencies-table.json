@@ -162,7 +162,7 @@
     "id": "rec4XXzzXi0jHT1Fv",
     "fields": {
       "Agency/Department Name": "Global Nutrition Cluster",
-      "Country Name": "Non-State Actor",
+      "Country Name": "Non-Governmental Organizations",
       "Agency Website": "https://www.nutritioncluster.net/"
     }
   },
@@ -262,7 +262,7 @@
     "fields": {
       "Agency/Department Name": "Global Support and Development (GSD)",
       "Agency Data Portal": "https://www.gsd.ngo/en",
-      "Country Name": "Non-State Actor"
+      "Country Name": "Non-Governmental Organizations"
     }
   },
   {
@@ -325,7 +325,7 @@
     "id": "recACsCLhhDutMpAv",
     "fields": {
       "Agency/Department Name": "Médecins Sans Frontières",
-      "Country Name": "Non-State Actor",
+      "Country Name": "Non-Governmental Organizations",
       "Agency Website": "https://www.msf.org/"
     }
   },
@@ -334,7 +334,7 @@
     "fields": {
       "Agency/Department Name": "Clinton Health Access Initiative",
       "Agency Data Portal": "https://www.clintonhealthaccess.org/",
-      "Country Name": "Non-State Actor",
+      "Country Name": "Non-Governmental Organizations",
       "Agency Website": "https://www.clintonhealthaccess.org/"
     }
   },
@@ -444,7 +444,7 @@
     "id": "recDtKjptlPgZaEVI",
     "fields": {
       "Agency/Department Name": "Fund for Peace (FFP)",
-      "Country Name": "Non-State Actor"
+      "Country Name": "Research / Think Tank"
     }
   },
   {
@@ -504,7 +504,7 @@
     "id": "recFNcILze2MwJxUN",
     "fields": {
       "Agency/Department Name": "Organization of American States",
-      "Country Name": "Non-State Actor"
+      "Country Name": "International Organizations"
     }
   },
   {
@@ -631,7 +631,7 @@
     "id": "recJl9XUd7rAiz6dR",
     "fields": {
       "Agency/Department Name": "The CS Fund",
-      "Country Name": "Non-State Actor",
+      "Country Name": "Non-Governmental Organizations",
       "Agency Website": "https://www.csfund.org/"
     }
   },
@@ -639,7 +639,7 @@
     "id": "recJwqOMpUSSv1hef",
     "fields": {
       "Agency/Department Name": "Global Environment Facility",
-      "Country Name": "Non-State Actor"
+      "Country Name": "International Organizations"
     }
   },
   {
@@ -686,7 +686,7 @@
     "fields": {
       "Agency/Department Name": "Geneva International Centre for Humanitarian Demining",
       "Agency Data Portal": "https://www.gichd.org/",
-      "Country Name": "Non-State Actor"
+      "Country Name": "International Organizations"
     }
   },
   {
@@ -906,7 +906,7 @@
     "id": "recT2C2l3Ua0qmnR3",
     "fields": {
       "Agency/Department Name": "Institute for Economics and Peace (IEP)",
-      "Country Name": "Non-State Actor"
+      "Country Name": "Research / Think Tank"
     }
   },
   {
@@ -1254,7 +1254,7 @@
     "id": "recdtoV4UFwh3YJXi",
     "fields": {
       "Agency/Department Name": "Save the Children",
-      "Country Name": "Non-State Actor",
+      "Country Name": "Non-Governmental Organizations",
       "Agency Website": "https://www.savethechildren.net/"
     }
   },
@@ -1323,7 +1323,7 @@
     "id": "recfWcw0CdUs0STc3",
     "fields": {
       "Agency/Department Name": "Microsoft",
-      "Country Name": "Private Firm",
+      "Country Name": "Private Firms",
       "Agency Website": "https://www.microsoft.com"
     }
   },
@@ -1331,7 +1331,7 @@
     "id": "recfY9SzUx3XdEb4s",
     "fields": {
       "Agency/Department Name": "International Institute for Democracy and Electoral Assistance (IDEA)",
-      "Country Name": "Non-State Actor"
+      "Country Name": "International Organizations"
     }
   },
   {
@@ -1380,7 +1380,7 @@
     "id": "reciQBMKhngwpZwbU",
     "fields": {
       "Agency/Department Name": "Action Against Hunger",
-      "Country Name": "Non-State Actor",
+      "Country Name": "Non-Governmental Organizations",
       "Agency Website": "https://www.actionagainsthunger.org/"
     }
   },
@@ -1594,7 +1594,7 @@
     "id": "recpOiAVqOz4n7ROD",
     "fields": {
       "Agency/Department Name": "McKinsey & Company",
-      "Country Name": "Private Firm",
+      "Country Name": "Private Firms",
       "Agency Website": "https://www.mckinsey.com/"
     }
   },
@@ -1610,8 +1610,8 @@
   {
     "id": "recpoSWjCWxlFL5FM",
     "fields": {
-      "Agency/Department Name": "Unspecified Firm",
-      "Country Name": "Private Firm",
+      "Agency/Department Name": "Unspecified Agency",
+      "Country Name": "Private Firms",
       "Agency Website": "https://thefirm.net/"
     }
   },
@@ -1820,7 +1820,7 @@
     "id": "recvWXGo3NuHLKMUq",
     "fields": {
       "Agency/Department Name": "Oxfam",
-      "Country Name": "Non-State Actor",
+      "Country Name": "Non-Governmental Organizations",
       "Agency Website": "https://www.oxfam.org"
     }
   },
@@ -1845,7 +1845,7 @@
     "fields": {
       "Agency/Department Name": "International Fund for Agricultural Development (IFAD)",
       "Agency Data Portal": "https://www.ifad.org/en/",
-      "Country Name": "Non-State Actor"
+      "Country Name": "International Organizations"
     }
   },
   {
