@@ -504,11 +504,12 @@ export default function OrganizationModal({
                         const linkRaw = fields['Link to Budget Source'];
                         const linkToBudgetSource = typeof linkRaw === 'string' && linkRaw.trim() !== '' ? linkRaw.trim() : null;
                         
-                        // Extract budget source screenshot URL
-                        const budgetScreenshotRaw = fields['Budget Source Screenshot'];
-                        const budgetScreenshotUrl = Array.isArray(budgetScreenshotRaw) && budgetScreenshotRaw.length > 0
-                            ? (budgetScreenshotRaw[0] as { url?: string; thumbnails?: { large?: { url?: string } } })?.thumbnails?.large?.url || (budgetScreenshotRaw[0] as { url?: string })?.url || null
-                            : null;
+                        // Get org_key to find local screenshots
+                        const orgKey = fields['org_key'] as string | undefined;
+                        
+                        // Try to load downloaded screenshots from public/screenshots/ directory
+                        // For now, we'll try the first screenshot (index 0)
+                        const budgetScreenshotUrl = orgKey ? `/screenshots/${orgKey}_screenshot_0.png` : null;
 
                         // Only show the whole section if there are donors OR budget data
                         if (donorInfo.length === 0 && !estBudget && !budgetSourceStr && !lastUpdated) {
