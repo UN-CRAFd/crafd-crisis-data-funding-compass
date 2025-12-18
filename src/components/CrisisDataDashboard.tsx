@@ -30,6 +30,10 @@ import { exportDashboardToPDF } from '../lib/exportPDF';
 import { exportViewAsCSV, exportViewAsXLSX } from '../lib/exportCSV';
 import { useTips } from '@/contexts/TipsContext';
 import type { DashboardStats, OrganizationProjectData, OrganizationTypeData, OrganizationWithProjects, ProjectData, ProjectTypeData } from '../types/airtable';
+import { Badge } from '@/components/shared/Badge';
+import { StatCard } from '@/components/shared/StatCard';
+import { INVESTMENT_TYPE_DESCRIPTIONS } from '@/config/investmentDescriptions';
+import { useProjectCounts } from '@/hooks/useProjectCounts';
 
 // Eagerly load NetworkGraph on client side to avoid lazy loading delay
 const NetworkGraph = dynamic(() => import('@/components/NetworkGraph'), {
@@ -44,16 +48,6 @@ const TABS = [
   { value: 'donors', label: 'Donors', Icon: Globe },
   { value: 'network', label: 'Network', Icon: Network },
 ] as const;
-
-// Investment type definitions for tooltips
-const INVESTMENT_TYPE_DESCRIPTIONS: Record<string, string> = {
-    'Data Sets & Commons': 'Shared data repositories and standardized datasets that enable analysis and decision-making across the humanitarian sector.',
-    'Infrastructure & Platforms': 'Technical systems, tools, and platforms that support data collection, storage, processing, and sharing.',
-    'Crisis Analytics & Insights': 'Analysis, modeling, and insights derived from data to inform humanitarian response and preparedness.',
-    'Human Capital & Know-how': 'Training, capacity building, and expertise development for humanitarian data practitioners.',
-    'Standards & Coordination': 'Common standards, protocols, and coordination mechanisms for humanitarian data management.',
-    'Learning & Exchange': 'Knowledge sharing, communities of practice, and collaborative learning initiatives.'
-};
 
 // Consolidated style constants
 const STYLES = {
@@ -129,130 +123,6 @@ interface CrisisDataDashboardProps {
     onViewChange?: (view: 'table' | 'network' | 'donors') => void;
     logoutButton?: React.ReactNode;
 }
-
-// Reusable StatCard component
-interface StatCardProps {
-    icon: React.ReactNode;
-    title: string;
-    value: number;
-    label: string;
-    colorScheme: 'amber';
-    tooltip?: string;
-}
-
-const StatCard = React.memo(function StatCard({ icon, title, value, label, colorScheme, tooltip }: StatCardProps) {
-    // Get tips enabled state with fallback for SSR
-    let tipsEnabled = false;
-    try {
-        const tipsContext = useTips();
-        tipsEnabled = tipsContext.tipsEnabled;
-    } catch (e) {
-        // TipsProvider not available (e.g., during server-side rendering)
-        tipsEnabled = false;
-    }
-
-    const gradients = {
-        amber: {
-            bg: 'from-[var(--brand-bg-lighter)] to-[var(--brand-bg-light)]',
-            // Use a solid text color for the stat value instead of a gradient
-            value: 'text-[var(--brand-primary)]',
-            label: 'text-[var(--brand-primary)]'
-        }
-    };
-
-    const colors = gradients[colorScheme];
-
-    const cardContent = (
-        <Card className={`${STYLES.statCard} bg-gradient-to-br ${colors.bg}`}>
-            <CardHeader className="pb-0 h-5">
-                <CardDescription>
-                    <SectionHeader icon={icon} title={title} />
-                </CardDescription>
-            </CardHeader>
-            <CardContent className="pt-0">
-                <div className="flex items-baseline gap-2">
-                    <div className={`text-4xl sm:text-5xl font-bold font-mono leading-none tabular-nums ${colors.value}`}>
-                        {value}
-                    </div>
-                    <div className={`leading-none text-sm sm:text-lg font-medium ${colors.label}`}>
-                        {label}
-                    </div>
-                </div>
-            </CardContent>
-        </Card>
-    );
-
-    if (tooltip && tipsEnabled) {
-        return (
-            <TooltipProvider delayDuration={0}>
-                <TooltipUI>
-                    <TooltipTrigger asChild>
-                        {cardContent}
-                    </TooltipTrigger>
-                    <TooltipContent
-                        side="bottom"
-                        align="center"
-                        className="max-w-100 p-3 bg-white text-slate-800 text-sm rounded-lg border border-slate-200"
-                        sideOffset={5}
-                        avoidCollisions={true}
-                        style={{ ...STYLES.chartTooltip }}
-                    >
-                        <p className="leading-relaxed">{tooltip}</p>
-                    </TooltipContent>
-                </TooltipUI>
-            </TooltipProvider>
-        );
-    }
-
-    return cardContent;
-});
-StatCard.displayName = 'StatCard';
-
-// Reusable Badge component
-interface BadgeProps {
-    text: string;
-    variant: 'blue' | 'emerald' | 'violet' | 'slate' | 'highlighted' | 'beta' | 'types' | 'indigo';
-    className?: string;
-    title?: string;
-}
-
-const Badge = ({ text, variant, className = '', title }: BadgeProps) => {
-    const variants = {
-        blue: 'bg-[var(--brand-bg-light)] text-[var(--brand-primary)]',
-        emerald: 'bg-emerald-50 text-emerald-700',
-        violet: 'bg-violet-50 text-violet-700',
-        indigo: 'bg-[var(--badge-other-bg)] text-[var(--badge-other-text)] font-semibold',
-        types: 'bg-green-50 text-green-700',
-        slate: 'bg-[var(--badge-slate-bg)] text-[var(--badge-slate-text)]',
-        highlighted: 'bg-[var(--brand-primary)]/20 text-[var(--brand-primary)] border border-[var(--brand-border)] font-semibold',
-        beta: '' // Will use inline styles
-    };
-
-    // Beta variant uses inline styles for CSS variables
-    if (variant === 'beta') {
-        return (
-            <span
-                className={`inline-flex items-center px-1.5 py-0.5 sm:px-2 sm:py-1 rounded text-[10px] sm:text-xs font-semibold break-words ${className}`}
-                style={{
-                    backgroundColor: 'var(--badge-beta-bg)',
-                    color: 'var(--badge-beta-text)'
-                }}
-                title={title}
-            >
-                {text}
-            </span>
-        );
-    }
-
-    return (
-        <span
-            className={`inline-flex items-center px-1.5 py-0.5 sm:px-2 sm:py-1 rounded text-[10px] sm:text-xs font-medium break-words ${variants[variant]} ${className}`}
-            title={title}
-        >
-            {text}
-        </span>
-    );
-};
 
 const CrisisDataDashboard = ({
     dashboardData,
@@ -345,123 +215,14 @@ const CrisisDataDashboard = ({
         [dashboardData?.investmentThemesByType]
     );
 
-    // Calculate project counts for each investment type based on current donors, query, and themes
-    // (but not filtered by types themselves)
-    const projectCountsByType = useMemo(() => {
-        const projectsByType: Record<string, Set<string>> = {};
-        const allOrgs = dashboardData?.allOrganizations || [];
-
-        allOrgs.forEach(org => {
-            // Check if org meets donor requirements at org level
-            const orgMeetsDonorRequirement = combinedDonors.length === 0 ||
-                combinedDonors.every(selectedDonor => org.donorCountries.includes(selectedDonor));
-
-            org.projects.forEach(project => {
-                // If org doesn't meet donor requirement, check project-level donors
-                if (!orgMeetsDonorRequirement) {
-                    const projectMeetsDonorRequirement = combinedDonors.every(selectedDonor =>
-                        Array.isArray(project.donorCountries) && project.donorCountries.includes(selectedDonor)
-                    );
-                    if (!projectMeetsDonorRequirement) return;
-                }
-
-                // Filter by search query
-                if (appliedSearchQuery) {
-                    const searchLower = appliedSearchQuery.toLowerCase();
-                    const matchesSearch =
-                        project.projectName?.toLowerCase().includes(searchLower) ||
-                        project.description?.toLowerCase().includes(searchLower) ||
-                        org.organizationName?.toLowerCase().includes(searchLower);
-                    if (!matchesSearch) return;
-                }
-
-                // Filter by themes
-                if (investmentThemes.length > 0) {
-                    const hasMatchingTheme = project.investmentThemes?.some(theme =>
-                        investmentThemes.some(selectedTheme =>
-                            theme.toLowerCase().trim() === selectedTheme.toLowerCase().trim()
-                        )
-                    );
-                    if (!hasMatchingTheme) return;
-                }
-
-                // Count this project for each of its types
-                project.investmentTypes?.forEach(type => {
-                    const normalizedType = type.toLowerCase().trim();
-                    if (!projectsByType[normalizedType]) {
-                        projectsByType[normalizedType] = new Set();
-                    }
-                    projectsByType[normalizedType].add(project.id);
-                });
-            });
-        });
-
-        // Convert Sets to counts
-        const counts: Record<string, number> = {};
-        Object.keys(projectsByType).forEach(type => {
-            counts[type] = projectsByType[type].size;
-        });
-        return counts;
-    }, [dashboardData?.allOrganizations, combinedDonors, appliedSearchQuery, investmentThemes]);
-
-    // Calculate project counts for each theme based on current donors, query, and types
-    // (but not filtered by themes themselves)
-    const projectCountsByTheme = useMemo(() => {
-        const projectsByTheme: Record<string, Set<string>> = {};
-        const allOrgs = dashboardData?.allOrganizations || [];
-
-        allOrgs.forEach(org => {
-            // Check if org meets donor requirements at org level
-            const orgMeetsDonorRequirement = combinedDonors.length === 0 ||
-                combinedDonors.every(selectedDonor => org.donorCountries.includes(selectedDonor));
-
-            org.projects.forEach(project => {
-                // If org doesn't meet donor requirement, check project-level donors
-                if (!orgMeetsDonorRequirement) {
-                    const projectMeetsDonorRequirement = combinedDonors.every(selectedDonor =>
-                        Array.isArray(project.donorCountries) && project.donorCountries.includes(selectedDonor)
-                    );
-                    if (!projectMeetsDonorRequirement) return;
-                }
-
-                // Filter by search query
-                if (appliedSearchQuery) {
-                    const searchLower = appliedSearchQuery.toLowerCase();
-                    const matchesSearch =
-                        project.projectName?.toLowerCase().includes(searchLower) ||
-                        project.description?.toLowerCase().includes(searchLower) ||
-                        org.organizationName?.toLowerCase().includes(searchLower);
-                    if (!matchesSearch) return;
-                }
-
-                // Filter by types
-                if (investmentTypes.length > 0) {
-                    const hasMatchingType = project.investmentTypes?.some(type =>
-                        investmentTypes.some(selectedType =>
-                            type.toLowerCase().trim() === selectedType.toLowerCase().trim()
-                        )
-                    );
-                    if (!hasMatchingType) return;
-                }
-
-                // Count this project for each of its themes
-                project.investmentThemes?.forEach(theme => {
-                    const normalizedTheme = theme.toLowerCase().trim();
-                    if (!projectsByTheme[normalizedTheme]) {
-                        projectsByTheme[normalizedTheme] = new Set();
-                    }
-                    projectsByTheme[normalizedTheme].add(project.id);
-                });
-            });
-        });
-
-        // Convert Sets to counts
-        const counts: Record<string, number> = {};
-        Object.keys(projectsByTheme).forEach(theme => {
-            counts[theme] = projectsByTheme[theme].size;
-        });
-        return counts;
-    }, [dashboardData?.allOrganizations, combinedDonors, appliedSearchQuery, investmentTypes]);
+    // Calculate project counts using shared hook
+    const { projectCountsByType, projectCountsByTheme } = useProjectCounts({
+        organizations: dashboardData?.allOrganizations || [],
+        combinedDonors,
+        appliedSearchQuery,
+        investmentTypes,
+        investmentThemes
+    });
 
     // Load nested data for modals
     const [nestedOrganizations, setNestedOrganizations] = useState<any[]>([]);
@@ -916,7 +677,6 @@ const CrisisDataDashboard = ({
                 pdfExportLoading={pdfExportLoading}
                 exportMenuOpen={exportMenuOpen}
                 onExportMenuChange={setExportMenuOpen}
-                logoutButton={logoutButton}
             />
 
             {/* Main Content - Add top padding to account for fixed header */}

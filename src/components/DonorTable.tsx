@@ -8,6 +8,8 @@ import { TooltipContent, TooltipProvider, TooltipTrigger, Tooltip as TooltipUI }
 import labels from '@/config/labels.json';
 import { matchesUrlSlug, toUrlSlug } from '@/lib/urlShortcuts';
 import type { OrganizationWithProjects, ProjectData } from '@/types/airtable';
+import { Badge } from '@/components/shared/Badge';
+import { INVESTMENT_TYPE_DESCRIPTIONS } from '@/config/investmentDescriptions';
 
 interface DonorTableProps {
     organizationsWithProjects: OrganizationWithProjects[];
@@ -20,62 +22,6 @@ interface DonorTableProps {
     sortBy: 'name' | 'orgs' | 'assets';
     sortDirection: 'asc' | 'desc';
 }
-
-// Investment type descriptions for tooltips
-const INVESTMENT_TYPE_DESCRIPTIONS: Record<string, string> = {
-    'Data Sets & Commons': 'Shared data repositories and standardized datasets that enable analysis and decision-making across the humanitarian sector.',
-    'Infrastructure & Platforms': 'Technical systems, tools, and platforms that support data collection, storage, processing, and sharing.',
-    'Crisis Analytics & Insights': 'Analysis, modeling, and insights derived from data to inform humanitarian response and preparedness.',
-    'Human Capital & Know-how': 'Training, capacity building, and expertise development for humanitarian data practitioners.',
-    'Standards & Coordination': 'Common standards, protocols, and coordination mechanisms for humanitarian data management.',
-    'Learning & Exchange': 'Knowledge sharing, communities of practice, and collaborative learning initiatives.'
-};
-
-// Badge component (reused from CrisisDataDashboard)
-interface BadgeProps {
-    text: string;
-    variant: 'blue' | 'emerald' | 'violet' | 'slate' | 'highlighted' | 'beta' | 'types' | 'indigo';
-    className?: string;
-    title?: string;
-}
-
-const Badge = ({ text, variant, className = '', title }: BadgeProps) => {
-    const variants = {
-        blue: 'bg-[var(--brand-bg-light)] text-[var(--brand-primary)]',
-        emerald: 'bg-emerald-50 text-emerald-700',
-        violet: 'bg-violet-50 text-violet-700',
-        indigo: 'bg-[var(--badge-other-bg)] text-[var(--badge-other-text)] font-semibold',
-        agency: 'bg-[var(--badge-agency-bg)] text-[var(--badge-agency-text)]',
-        types: 'bg-green-50 text-green-700',
-        slate: 'bg-[var(--badge-slate-bg)] text-[var(--badge-slate-text)]',
-        highlighted: 'bg-[var(--brand-primary)]/20 text-[var(--brand-primary)] border border-[var(--brand-border)] font-semibold',
-        beta: ''
-    };
-
-    if (variant === 'beta') {
-        return (
-            <span
-                className={`inline-flex items-center px-1.5 py-0.5 sm:px-2 sm:py-1 rounded text-[10px] sm:text-xs font-semibold break-words ${className}`}
-                style={{
-                    backgroundColor: 'var(--badge-beta-bg)',
-                    color: 'var(--badge-beta-text)'
-                }}
-                title={title}
-            >
-                {text}
-            </span>
-        );
-    }
-
-    return (
-        <span 
-            className={`inline-flex items-center px-1.5 py-0.5 sm:px-2 sm:py-1 rounded text-[10px] sm:text-xs font-medium break-words ${variants[variant]} ${className}`}
-            title={title}
-        >
-            {text}
-        </span>
-    );
-};
 
 export const DonorTable: React.FC<DonorTableProps> = ({
     organizationsWithProjects,
