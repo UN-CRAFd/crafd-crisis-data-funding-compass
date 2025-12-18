@@ -262,7 +262,7 @@
     "fields": {
       "Agency/Department Name": "Global Support and Development (GSD)",
       "Agency Data Portal": "https://www.gsd.ngo/en",
-      "Country Name": "Non-Governmental Organizations"
+      "Country Name": "Global Support and Development (GSD)"
     }
   },
   {
@@ -443,8 +443,8 @@
   {
     "id": "recDtKjptlPgZaEVI",
     "fields": {
-      "Agency/Department Name": "Fund for Peace (FFP)",
-      "Country Name": "Research / Think Tank"
+      "Agency/Department Name": "Unspecified Agency",
+      "Country Name": "Fund for Peace (FFP)"
     }
   },
   {
@@ -503,8 +503,8 @@
   {
     "id": "recFNcILze2MwJxUN",
     "fields": {
-      "Agency/Department Name": "Organization of American States",
-      "Country Name": "International Organizations"
+      "Agency/Department Name": "Unspecified Agency",
+      "Country Name": "Organization of American States "
     }
   },
   {
@@ -686,7 +686,7 @@
     "fields": {
       "Agency/Department Name": "Geneva International Centre for Humanitarian Demining",
       "Agency Data Portal": "https://www.gichd.org/",
-      "Country Name": "International Organizations"
+      "Country Name": "Geneva International Centre for Humanitarian Demining"
     }
   },
   {
@@ -905,8 +905,8 @@
   {
     "id": "recT2C2l3Ua0qmnR3",
     "fields": {
-      "Agency/Department Name": "Institute for Economics and Peace (IEP)",
-      "Country Name": "Research / Think Tank"
+      "Agency/Department Name": "Unspecified Agency",
+      "Country Name": "Institute for Economics and Peace (IEP)"
     }
   },
   {
@@ -1330,8 +1330,8 @@
   {
     "id": "recfY9SzUx3XdEb4s",
     "fields": {
-      "Agency/Department Name": "International Institute for Democracy and Electoral Assistance (IDEA)",
-      "Country Name": "International Organizations"
+      "Agency/Department Name": "Unspecified Agency",
+      "Country Name": "International Institute for Democracy and Electoral Assistance (IDEA)"
     }
   },
   {
@@ -1845,7 +1845,7 @@
     "fields": {
       "Agency/Department Name": "International Fund for Agricultural Development (IFAD)",
       "Agency Data Portal": "https://www.ifad.org/en/",
-      "Country Name": "International Organizations"
+      "Country Name": "International Fund for Agricultural Development (IFAD)"
     }
   },
   {
