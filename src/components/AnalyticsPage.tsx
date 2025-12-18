@@ -276,6 +276,13 @@ export default function AnalyticsPage({ logoutButton }: AnalyticsPageProps) {
         
         const urlDonorSlugs = (window as any).__urlDonorSlugs;
         if (urlDonorSlugs && urlDonorSlugs.length > 0) {
+            // Special-case: `all` should select every available donor regardless of the 16-item UI limit
+            if (urlDonorSlugs.includes('all')) {
+                setSelectedDonors(availableDonorCountries.slice().sort());
+                delete (window as any).__urlDonorSlugs;
+                return;
+            }
+
             const decodedDonors = urlDonorSlugs
                 .map((slug: string) => availableDonorCountries.find(d => matchesUrlSlug(slug, d)))
                 .filter(Boolean);
