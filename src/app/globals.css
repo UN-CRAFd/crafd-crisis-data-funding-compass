@@ -127,6 +127,11 @@
   /* indigo-800: dark readable text */
   --badge-other-icon: #4338ca;
 
+  /* Agency badge (light blue) */
+  --badge-agency-bg: #e6f7ff;
+  --badge-agency-text: #0b63a7;
+  --badge-agency-border: #9fcff6;
+
   --detail: #cccccc;
   /* main amber (vibrant golden tone) */
   --detail-text: #ffffff;

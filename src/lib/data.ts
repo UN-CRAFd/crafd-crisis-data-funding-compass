@@ -7,6 +7,17 @@ import type { NestedOrganization, OrganizationProjectData, OrganizationTypeData,
 // Re-export types for backward compatibility
 export type { OrganizationProjectData, OrganizationTypeData, OrganizationWithProjects, ProjectData, ProjectTypeData } from '@/types/airtable';
 
+// Global state for general contributions (member states) visibility
+let showGeneralContributions = true;
+
+export function setGeneralContributionsEnabled(enabled: boolean) {
+    showGeneralContributions = enabled;
+}
+
+export function isGeneralContributionsEnabled(): boolean {
+    return showGeneralContributions;
+}
+
 // Load nested organizations data
 let cachedNestedData: NestedOrganization[] | null = null;
 
@@ -110,6 +121,7 @@ let cachedMemberStates: string[] | null = null;
 let memberStatesLoadPromise: Promise<string[]> | null = null;
 
 async function loadMemberStates(): Promise<string[]> {
+    
     // Return cached member states if available
     if (cachedMemberStates) {
         return cachedMemberStates;
@@ -129,6 +141,7 @@ async function loadMemberStates(): Promise<string[]> {
                 return [];
             }
             const csvText = await response.text();
+            
             
             // Parse CSV (skip header row)
             const lines = csvText.split('\n');
@@ -153,13 +166,19 @@ async function loadMemberStates(): Promise<string[]> {
  * Get all member states (cached)
  */
 export async function getMemberStates(): Promise<string[]> {
+    if (showGeneralContributions) {    
     return loadMemberStates();
+} else {
+    return [];}
 }
-
 /**
  * Check if a country is a member state
+ * Only returns true if general contributions are enabled
  */
 export async function isMemberState(country: string): Promise<boolean> {
+    if (!showGeneralContributions) {
+        return false;
+    }
     const memberStates = await loadMemberStates();
     return memberStates.includes(country);
 }
@@ -167,12 +186,14 @@ export async function isMemberState(country: string): Promise<boolean> {
 /**
  * Inject member state donors into core-funded organizations
  * This modifies the organizations array to add selected member states as donors
+ * Only injects if general contributions are enabled
  */
 export function injectMemberStateDonors(
     organizations: OrganizationWithProjects[],
     selectedMemberStates: string[]
 ): OrganizationWithProjects[] {
-    if (selectedMemberStates.length === 0) {
+    // Do not inject member states if general contributions are disabled
+    if (!showGeneralContributions || selectedMemberStates.length === 0) {
         return organizations;
     }
 
@@ -743,8 +764,8 @@ export async function processDashboardData(filters: {
         // Load themes table first to ensure theme key mappings are available
         await loadThemesTable();
         
-        // Load member states
-        const memberStates = await loadMemberStates();
+        // Load member states only if general contributions are enabled
+        const memberStates = showGeneralContributions ? await loadMemberStates() : [];
         
         // Load nested organizations
         const nestedOrgs = await loadNestedOrganizations();
@@ -752,13 +773,14 @@ export async function processDashboardData(filters: {
         // Convert to OrganizationWithProjects format
         let allOrganizations = nestedOrgs.map(convertToOrganizationWithProjects);
 
-        // Identify which selected donors are member states
-        const selectedMemberStates = (filters.donorCountries || [])
-            .filter(donor => memberStates.includes(donor));
+        // Identify which selected donors are member states (only if general contributions enabled)
+        const selectedMemberStates = showGeneralContributions 
+            ? (filters.donorCountries || []).filter(donor => memberStates.includes(donor))
+            : [];
 
         // Inject member state donors into core-funded organizations BEFORE filtering
-        // This ensures they appear as donors in all views
-        if (selectedMemberStates.length > 0) {
+        // This ensures they appear as donors in all views (only if general contributions enabled)
+        if (selectedMemberStates.length > 0 && showGeneralContributions) {
             allOrganizations = injectMemberStateDonors(allOrganizations, selectedMemberStates);
         }
 
