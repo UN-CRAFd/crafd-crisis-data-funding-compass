@@ -1353,9 +1353,23 @@ export default function AnalyticsPage({ logoutButton }: AnalyticsPageProps) {
     }, [selectedDonors, donorProfiles]);
 
     const handleCellClick = (donor1: string, donor2: string) => {
-        // Navigate to dashboard with both donors as filters
+        // Navigate to dashboard with both donors and filters as params
         const donorSlugs = [toUrlSlug(donor1), toUrlSlug(donor2)].join(',');
-        router.push(`/?d=${donorSlugs}`);
+        const params = new URLSearchParams();
+        params.set('d', donorSlugs);
+        
+        if (investmentTypes.length > 0) {
+            params.set('t', investmentTypes.join(','));
+        }
+        
+        if (investmentThemes.length > 0) {
+            // Convert theme names back to keys for URL encoding
+            const keys = Array.from(new Set(investmentThemes.map(t => themeNameToKey(t))));
+            params.set('th', keys.join(','));
+        }
+        
+        const url = params.toString() ? `/?${params.toString()}` : '/';
+        router.push(url);
     };
 
     const handleShare = () => {
