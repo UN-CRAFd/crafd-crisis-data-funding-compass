@@ -107,6 +107,7 @@ const NetworkGraph: React.FC<NetworkGraphProps> = ({
     const [clusterByOrgType, setClusterByOrgType] = useState(false);
     const [clusterByAssetType, setClusterByAssetType] = useState(false);
     const [scalingMode, setScalingMode] = useState<'standard' | 'connections' | 'funding'>('standard');
+    const [showAllNames, setShowAllNames] = useState(false);
     const [legendCollapsed, setLegendCollapsed] = useState(false);
     const lastClusterStateRef = useRef<string>(''); // Track last clustering state to prevent unnecessary updates
     const [filterBarContainer, setFilterBarContainer] = useState<HTMLElement | null>(null);
@@ -1364,11 +1365,12 @@ const NetworkGraph: React.FC<NetworkGraphProps> = ({
         const isDirectlyHovered = hoveredNode && hoveredNode.id === node.id;
         const isHighlighted = isHoverHighlighted;
 
-        // Draw label if hovered or highlighted
-        if (isDirectlyHovered || isHighlighted) {
-            // Show full name when directly hovering, short name when shown due to connected node hover
+        // Draw label if hovered, highlighted, or all names are shown
+        if (isDirectlyHovered || isHighlighted || showAllNames) {
+            // Use short org names when the "show all names" view is active,
+            // otherwise show full name when directly hovered and short when highlighted via connections.
             let label = node.name;
-            if (!isDirectlyHovered && isHighlighted && node.type === 'organization' && node.orgShortName) {
+            if (node.type === 'organization' && node.orgShortName && (showAllNames || (!isDirectlyHovered && isHighlighted))) {
                 label = node.orgShortName;
             }
             
@@ -1400,7 +1402,7 @@ const NetworkGraph: React.FC<NetworkGraphProps> = ({
             ctx.fillStyle = '#1e293b';
             ctx.fillText(label, node.x!, labelY);
         }
-    }, [hoveredNode, hoverHighlightNodes]);
+    }, [hoveredNode, hoverHighlightNodes, showAllNames]);
 
     // Define the clickable area for nodes (required when using custom nodeCanvasObject)
     const nodePointerAreaPaint = useCallback((node: GraphNode, color: string, ctx: CanvasRenderingContext2D) => {
@@ -1650,6 +1652,8 @@ const NetworkGraph: React.FC<NetworkGraphProps> = ({
                                 </div>
                             </div>
 
+
+
                             {/* Scaling Controls */}
                             <div className="p-2.5 border-t border-slate-200">
                                 <div className="text-xs font-semibold text-slate-800/90 mb-2">Scaling</div>
@@ -1665,15 +1669,7 @@ const NetworkGraph: React.FC<NetworkGraphProps> = ({
                                     >
                                         <div className="flex items-center justify-between">
                                             <span className="text-[11px]">Standard</span>
-                                            <div className={`w-3 h-3 rounded-sm border shrink-0 flex items-center justify-center ${
-                                                scalingMode === 'standard' ? 'bg-slate-600 border-slate-600' : 'border-slate-300'
-                                            }`}>
-                                                {scalingMode === 'standard' && (
-                                                    <svg className="w-2.5 h-2.5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={3} d="M5 13l4 4L19 7" />
-                                                    </svg>
-                                                )}
-                                            </div>
+                                            {/* selection highlighted by button background; no dot indicator */}
                                         </div>
                                     </button>
                                     <button
@@ -1687,43 +1683,55 @@ const NetworkGraph: React.FC<NetworkGraphProps> = ({
                                     >
                                         <div className="flex items-center justify-between">
                                             <span className="text-[11px]">Connections</span>
-                                            <div className={`w-3 h-3 rounded-sm border shrink-0 flex items-center justify-center ${
-                                                scalingMode === 'connections' ? 'bg-slate-600 border-slate-600' : 'border-slate-300'
-                                            }`}>
-                                                {scalingMode === 'connections' && (
-                                                    <svg className="w-2.5 h-2.5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={3} d="M5 13l4 4L19 7" />
-                                                    </svg>
-                                                )}
-                                            </div>
+                                            {/* selection highlighted by button background; no dot indicator */}
                                         </div>
                                     </button>
                                     <button
                                         onClick={() => setScalingMode('funding')}
                                         className={`w-full text-left px-2 py-1 rounded text-xs transition-colors ${
                                             scalingMode === 'funding'
-                                                ? 'bg-[var(--brand-bg-light)] text-[var(--brand-primary)] border border-[var(--brand-primary)]'
+                                                ? 'bg-slate-200 text-slate-800 border border-slate-400'
                                                 : 'bg-slate-50 text-slate-600 border border-slate-200 hover:bg-slate-100'
                                         }`}
                                         title="Size organization nodes by estimated budget"
                                     >
                                         <div className="flex items-center justify-between">
                                             <span className="text-[11px]">Funding</span>
-                                            <div className={`w-3 h-3 rounded-sm border shrink-0 flex items-center justify-center ${
-                                                scalingMode === 'funding' ? 'bg-[var(--brand-primary)] border-[var(--brand-primary)]' : 'border-slate-300'
-                                            }`}>
-                                                {scalingMode === 'funding' && (
-                                                    <svg className="w-2.5 h-2.5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={3} d="M5 13l4 4L19 7" />
-                                                    </svg>
-                                                )}
-                                            </div>
+                                            {/* selection highlighted by button background; no dot indicator */}
                                         </div>
                                     </button>
                                 </div>
                             </div>
+
+                            {/* Entity Names Toggle */}
+                            <div className="p-2.5 border-t border-slate-200">
+                                <button
+                                    onClick={() => setShowAllNames(!showAllNames)}
+                                    className={`w-full text-left px-2 py-1 rounded text-xs transition-colors ${
+                                        showAllNames
+                                            ? 'bg-slate-200 text-slate-800 border border-slate-400'
+                                            : 'bg-slate-50 text-slate-600 border border-slate-200 hover:bg-slate-100'
+                                    }`}
+                                    title="Toggle display of entity names on all nodes"
+                                >
+                                    <div className="flex items-center justify-between">
+                                        <span className="text-[11px]">Show Names</span>
+                                        <div className={`w-3 h-3 rounded-sm border shrink-0 flex items-center justify-center ${
+                                            showAllNames ? 'bg-slate-600 border-slate-600' : 'border-slate-300'
+                                        }`}>
+                                            {showAllNames && (
+                                                <svg className="w-2.5 h-2.5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={3} d="M5 13l4 4L19 7" />
+                                                </svg>
+                                            )}
+                                        </div>
+                                    </div>
+                                </button>
+                            </div>
                         </div>
                     )}
+
+                    
                 </div>
 
             <ForceGraph2D
