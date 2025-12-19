@@ -267,7 +267,6 @@ export default function MethodologyPage({ logoutButton }: MethodologyPageProps) 
     return (
         <div className="min-h-screen bg-slate-50">
             <PageHeader 
-                logoutButton={logoutButton}
                 onShare={handleShare}
                 shareSuccess={shareSuccess}
             />
