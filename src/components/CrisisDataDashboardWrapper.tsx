@@ -141,7 +141,7 @@ const CrisisDataDashboardWrapper = ({ logoutButton }: { logoutButton?: React.Rea
         return 'desc' as const;
     }, [searchParams]);
 
-    const [activeView, setActiveView] = useState<'table' | 'network'>('table');
+    const [activeView, setActiveView] = useState<'table' | 'network' | 'donors'>('table');
     const [localSearchQuery, setLocalSearchQuery] = useState(searchQuery);
 
     const lastFetchedFiltersRef = useRef<string>('');
@@ -389,7 +389,7 @@ const CrisisDataDashboardWrapper = ({ logoutButton }: { logoutButton?: React.Rea
         updateFilterParams({ themes: updatedThemes });
     }, [investmentThemes, updateFilterParams]);
 
-    const handleViewChange = useCallback((view: 'table' | 'network') => {
+    const handleViewChange = useCallback((view: 'table' | 'network' | 'donors') => {
         setActiveView(view);
     }, []);
 
