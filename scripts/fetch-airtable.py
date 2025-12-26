@@ -1,10 +1,8 @@
 # Run: python scripts/fetch_airtable.py
 
 import json
-import math
 import os
 import sys
-import time
 from pathlib import Path
 from typing import Any, Dict, List, Optional
 
