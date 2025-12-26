@@ -347,7 +347,8 @@ body::-webkit-scrollbar {
 
 /* Blob animation for survey banner background */
 @keyframes blob {
-  0%, 100% {
+  0%,
+  100% {
     transform: translate(0, 0) scale(1);
   }
   33% {
@@ -394,4 +395,3 @@ body::-webkit-scrollbar {
 .animate-tab-enter {
   animation: fade-in-slide-up 300ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-
