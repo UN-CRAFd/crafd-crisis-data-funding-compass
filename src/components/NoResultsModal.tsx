@@ -1,55 +1,58 @@
-'use client';
+"use client";
 
-import { AlertCircle, RotateCcw, MessageSquare } from 'lucide-react';
-import { Button } from '@/components/ui/button';
+import { AlertCircle, RotateCcw, MessageSquare } from "lucide-react";
+import { Button } from "@/components/ui/button";
 
 interface NoResultsModalProps {
-    onResetFilters?: () => void;
-    message?: string;
+  onResetFilters?: () => void;
+  message?: string;
 }
 
-export default function NoResultsModal({ 
-    onResetFilters, 
-    message = 'No data matches your current filters. Try adjusting your criteria or reset all filters.'
+export default function NoResultsModal({
+  onResetFilters,
+  message = "No data matches your current filters. Try adjusting your criteria or reset all filters.",
 }: NoResultsModalProps) {
-    return (
-        <div className="absolute inset-0 flex items-center justify-center bg-slate-50/95 backdrop-blur-sm z-[100]">
-            <div className="bg-white rounded-lg shadow-xl max-w-sm w-full mx-4 border border-slate-200 animate-in fade-in zoom-in-95 duration-200">
-                <div className="flex flex-col items-center text-center p-6">
-                    <div className="w-12 h-12 rounded-full bg-slate-100 flex items-center justify-center mb-3">
-                        <AlertCircle className="w-6 h-6 text-slate-400" />
-                    </div>
-                    <h3 className="text-base font-semibold text-slate-900 mb-2">
-                        No Results Found
-                    </h3>
-                    <p className="text-sm text-slate-600 mb-4">
-                        {message}
-                    </p>
-                    <div className="flex flex-col gap-2 w-full">
-                        <Button
-                            variant="outline"
-                            size="sm"
-                            onClick={() => {
-                                if (onResetFilters) {
-                                    onResetFilters();
-                                }
-                            }}
-                            className="flex items-center justify-center gap-2 w-full"
-                        >
-                            <RotateCcw className="w-4 h-4" />
-                            Reset Filters
-                        </Button>
-                        <Button
-                            size="sm"
-                            onClick={() => window.open('https://airtable.com/apprObB2AsvMwfAAl/pagcre1SPjT0nJxa4/form', '_blank')}
-                            className="flex items-center justify-center gap-2 bg-[var(--brand-primary)] hover:bg-[var(--brand-primary-dark)] text-white w-full"
-                        >
-                            <MessageSquare className="w-4 h-4" />
-                            Send Feedback
-                        </Button>
-                    </div>
-                </div>
-            </div>
+  return (
+    <div className="absolute inset-0 z-[100] flex items-center justify-center bg-slate-50/95 backdrop-blur-sm">
+      <div className="mx-4 w-full max-w-sm animate-in rounded-lg border border-slate-200 bg-white shadow-xl duration-200 zoom-in-95 fade-in">
+        <div className="flex flex-col items-center p-6 text-center">
+          <div className="mb-3 flex h-12 w-12 items-center justify-center rounded-full bg-slate-100">
+            <AlertCircle className="h-6 w-6 text-slate-400" />
+          </div>
+          <h3 className="mb-2 text-base font-semibold text-slate-900">
+            No Results Found
+          </h3>
+          <p className="mb-4 text-sm text-slate-600">{message}</p>
+          <div className="flex w-full flex-col gap-2">
+            <Button
+              variant="outline"
+              size="sm"
+              onClick={() => {
+                if (onResetFilters) {
+                  onResetFilters();
+                }
+              }}
+              className="flex w-full items-center justify-center gap-2"
+            >
+              <RotateCcw className="h-4 w-4" />
+              Reset Filters
+            </Button>
+            <Button
+              size="sm"
+              onClick={() =>
+                window.open(
+                  "https://airtable.com/apprObB2AsvMwfAAl/pagcre1SPjT0nJxa4/form",
+                  "_blank",
+                )
+              }
+              className="flex w-full items-center justify-center gap-2 bg-[var(--brand-primary)] text-white hover:bg-[var(--brand-primary-dark)]"
+            >
+              <MessageSquare className="h-4 w-4" />
+              Send Feedback
+            </Button>
+          </div>
         </div>
-    );
+      </div>
+    </div>
+  );
 }
