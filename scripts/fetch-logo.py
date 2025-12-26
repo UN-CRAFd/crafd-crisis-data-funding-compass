@@ -86,7 +86,7 @@ def build_table_url(
                 params[k] = v
             else:
                 params[k] = str(v)
-    
+
     # Build query string allowing repeated keys
     parts = []
     for k, v in params.items():
@@ -97,7 +97,7 @@ def build_table_url(
                 )
         else:
             parts.append(f"{requests.utils.quote(k)}={requests.utils.quote(str(v))}")
-    
+
     if parts:
         return base + "?" + "&".join(parts)
     else:
@@ -136,11 +136,11 @@ def sanitize_filename(name: str) -> str:
     # Remove or replace characters that are invalid in filenames
     invalid_chars = '<>:"/\\|?*'
     for char in invalid_chars:
-        name = name.replace(char, '_')
+        name = name.replace(char, "_")
     # Remove leading/trailing spaces and dots
-    name = name.strip('. ')
+    name = name.strip(". ")
     # Replace multiple spaces with single underscore
-    name = '_'.join(name.split())
+    name = "_".join(name.split())
     return name
 
 
@@ -151,32 +151,36 @@ def download_logo(logo_url: str, org_key: str) -> Optional[Path]:
         if not response.ok:
             log(f"Failed to download logo for {org_key}: {response.status_code}")
             return None
-        
+
         # Detect file extension from Content-Type or URL
-        content_type = response.headers.get('content-type', '')
-        if 'png' in content_type or logo_url.lower().endswith('.png'):
-            ext = '.png'
-        elif 'jpeg' in content_type or 'jpg' in content_type or logo_url.lower().endswith(('.jpg', '.jpeg')):
-            ext = '.jpg'
-        elif 'svg' in content_type or logo_url.lower().endswith('.svg'):
-            ext = '.svg'
-        elif 'webp' in content_type or logo_url.lower().endswith('.webp'):
-            ext = '.webp'
+        content_type = response.headers.get("content-type", "")
+        if "png" in content_type or logo_url.lower().endswith(".png"):
+            ext = ".png"
+        elif (
+            "jpeg" in content_type
+            or "jpg" in content_type
+            or logo_url.lower().endswith((".jpg", ".jpeg"))
+        ):
+            ext = ".jpg"
+        elif "svg" in content_type or logo_url.lower().endswith(".svg"):
+            ext = ".svg"
+        elif "webp" in content_type or logo_url.lower().endswith(".webp"):
+            ext = ".webp"
         else:
             # Default to png
-            ext = '.png'
-        
+            ext = ".png"
+
         # Create filename from org_key
         filename = f"{org_key}{ext}"
         filepath = OUTPUT_DIR / filename
-        
+
         # Save the file
-        with open(filepath, 'wb') as f:
+        with open(filepath, "wb") as f:
             f.write(response.content)
-        
+
         log(f"Downloaded logo for {org_key} -> {filename}")
         return filepath
-        
+
     except Exception as e:
         log(f"Error downloading logo for {org_key}: {e}")
         return None
@@ -185,55 +189,59 @@ def download_logo(logo_url: str, org_key: str) -> Optional[Path]:
 def main():
     log("Starting logo fetch from Airtable...")
     log(f"Output directory: {OUTPUT_DIR}")
-    
+
     # Fetch organizations with Logo field
     extra_params = {
         "fields[]": FIELDS_LOGOS,
     }
-    
+
     organizations = fetch_airtable_table(ORGANIZATIONS_TABLE_IDENTIFIER, extra_params)
-    
+
     log(f"Found {len(organizations)} organizations")
-    
+
     downloaded_count = 0
     skipped_count = 0
-    
+
     for org in organizations:
         fields = org.get("fields", {})
-        
+
         # Get org_key
         org_key = fields.get("org_key")
         if not org_key:
             log(f"Skipping organization with no org_key: {org.get('id')}")
             skipped_count += 1
             continue
-        
+
         # Get logo attachments
         logo_attachments = fields.get("Logo", [])
-        
-        if not logo_attachments or not isinstance(logo_attachments, list) or len(logo_attachments) == 0:
+
+        if (
+            not logo_attachments
+            or not isinstance(logo_attachments, list)
+            or len(logo_attachments) == 0
+        ):
             log(f"No logo found for: {org_key}")
             skipped_count += 1
             continue
-        
+
         # Download the first logo attachment
         first_logo = logo_attachments[0]
         logo_url = first_logo.get("url")
-        
+
         if not logo_url:
             log(f"No URL in logo attachment for: {org_key}")
             skipped_count += 1
             continue
-        
+
         result = download_logo(logo_url, org_key)
         if result:
             downloaded_count += 1
         else:
             skipped_count += 1
-        
+
         # Small delay to be nice to servers
         time.sleep(0.1)
-    
+
     log(f"Logo download complete!")
     log(f"Downloaded: {downloaded_count} logos")
     log(f"Skipped: {skipped_count} organizations")

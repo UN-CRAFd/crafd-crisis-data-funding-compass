@@ -22,12 +22,10 @@ FIELDS_PROJECTS = [
     "Project Website",
     "Project Description",
     "Project Donor Agencies",
-    "HDX_SOHD"
-    
+    "HDX_SOHD",
 ]
 
 FIELDS_ORGANIZATIONS = [
-
     "org_key",
     "Org Full Name",
     "HDX Org Key",
@@ -69,7 +67,7 @@ FIELDS_THEMES = [
     "Investment Themes [Text Key]",
     "Data Ecosystem Projects",
     "theme_description",
-    "theme_key"
+    "theme_key",
 ]
 
 # Load .env.local from project root (one level up from scripts/)
@@ -247,9 +245,7 @@ def main():
                 org_records = fetch_airtable_table(
                     ORGANIZATIONS_TABLE_IDENTIFIER, extra_params=org_extra_params
                 )
-                save_to_json(
-                    org_records, "organizations-table.json"
-                )
+                save_to_json(org_records, "organizations-table.json")
                 org_count = len(org_records)
             except Exception as e:
                 log(
@@ -268,9 +264,7 @@ def main():
                 agencies_records = fetch_airtable_table(
                     AGENCIES_TABLE_IDENTIFIER, extra_params=agencies_extra_params
                 )
-                save_to_json(
-                    agencies_records, "agencies-table.json"
-                )
+                save_to_json(agencies_records, "agencies-table.json")
                 agencies_count = len(agencies_records)
             except Exception as e:
                 log(f"Failed to fetch agencies table {AGENCIES_TABLE_IDENTIFIER}: {e}")
@@ -287,9 +281,7 @@ def main():
                 themes_records = fetch_airtable_table(
                     THEMES_TABLE_IDENTIFIER, extra_params=themes_extra_params
                 )
-                save_to_json(
-                    themes_records, "themes-table.json"
-                )
+                save_to_json(themes_records, "themes-table.json")
                 themes_count = len(themes_records)
             except Exception as e:
                 log(f"Failed to fetch themes table {THEMES_TABLE_IDENTIFIER}: {e}")
@@ -322,24 +314,28 @@ def main():
         # Data validation before proceeding
         log("Performing data validation...")
         validation_errors = []
-        
+
         # Check minimum record counts
         if len(main_records) < 100:
-            validation_errors.append(f"Insufficient projects: {len(main_records)} (minimum 100 required)")
-        
+            validation_errors.append(
+                f"Insufficient projects: {len(main_records)} (minimum 100 required)"
+            )
+
         if org_count < 50:
-            validation_errors.append(f"Insufficient organizations: {org_count} (minimum 50 required)")
-        
+            validation_errors.append(
+                f"Insufficient organizations: {org_count} (minimum 50 required)"
+            )
+
         # Check that required fields exist in the data
         log("Validating field presence...")
         missing_project_fields = []
         missing_org_fields = []
-        
+
         # Define required vs optional fields (optional fields may be empty/sparse in Airtable)
         OPTIONAL_ORG_FIELDS = {
             "Link to Budget Source",  # May not be populated for all orgs
             "Org Description",
-            "Org Mission", 
+            "Org Mission",
             "Link to Data Products Overview",
             "Org IATI Name",
             "Org MPTFO Name",
@@ -347,40 +343,52 @@ def main():
             "Org Transparency Portal",
             "Org Programme Budget",
         }
-        
+
         # Validate project fields
         if main_records:
             sample_project = main_records[0].get("fields", {})
             for field in FIELDS_PROJECTS:
-                found_in_any = any(field in record.get("fields", {}) for record in main_records[:10])  # Check first 10
+                found_in_any = any(
+                    field in record.get("fields", {}) for record in main_records[:10]
+                )  # Check first 10
                 if not found_in_any:
                     missing_project_fields.append(field)
-        
+
         # Validate organization fields (if organizations table was fetched)
         if ORGANIZATIONS_TABLE_IDENTIFIER and org_count > 0:
             try:
                 # Re-read the saved organizations to validate
                 import json
-                with open(OUTPUT_DIR / "organizations-table.json", "r", encoding="utf-8") as f:
+
+                with open(
+                    OUTPUT_DIR / "organizations-table.json", "r", encoding="utf-8"
+                ) as f:
                     saved_orgs = json.load(f)
                 if saved_orgs:
                     for field in FIELDS_ORGANIZATIONS:
                         # Skip validation for optional fields (they may be empty/sparse)
                         if field in OPTIONAL_ORG_FIELDS:
                             continue
-                        found_in_any = any(field in record.get("fields", {}) for record in saved_orgs[:10])  # Check first 10
+                        found_in_any = any(
+                            field in record.get("fields", {})
+                            for record in saved_orgs[:10]
+                        )  # Check first 10
                         if not found_in_any:
                             missing_org_fields.append(field)
             except Exception as e:
                 validation_errors.append(f"Could not validate organization fields: {e}")
-        
+
         # Report validation results
         if missing_project_fields:
-            validation_errors.append(f"Missing project fields: {', '.join(missing_project_fields)}")
-        
+            validation_errors.append(
+                f"Missing project fields: {', '.join(missing_project_fields)}"
+            )
+
         if missing_org_fields:
-            validation_errors.append(f"Missing organization fields: {', '.join(missing_org_fields)}")
-        
+            validation_errors.append(
+                f"Missing organization fields: {', '.join(missing_org_fields)}"
+            )
+
         # Exit with error code if validation fails
         if validation_errors:
             log("VALIDATION FAILED:")
@@ -388,7 +396,7 @@ def main():
                 log(f"  ERROR: {error}")
             log("Aborting - data quality requirements not met")
             sys.exit(1)
-        
+
         log("Data validation passed - proceeding with nesting")
 
         # Run nesting to merge agencies and projects into organizations
