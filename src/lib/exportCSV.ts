@@ -1,6 +1,5 @@
 // exportCSV.ts - CSV export functionality for Crisis Data Dashboard
 import JSZip from 'jszip';
-import * as XLSX from 'xlsx';
 import ExcelJS from 'exceljs';
 import type { OrganizationWithProjects, ProjectData } from '@/types/airtable';
 
