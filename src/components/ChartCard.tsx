@@ -21,7 +21,7 @@ interface LabelProps {
     y?: string | number;
     width?: string | number;
     height?: string | number;
-    value?: string | number;
+    value?: string | number | boolean | null | undefined;
     index?: number;
 }
 
