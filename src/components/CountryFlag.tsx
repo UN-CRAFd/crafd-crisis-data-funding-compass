@@ -5,7 +5,7 @@ import * as countries from "i18n-iso-countries";
 // Load JSON locale using require to avoid needing `resolveJsonModule` in tsconfig
 let enLocale: any = null;
 try {
-  // eslint-disable-next-line @typescript-eslint/no-var-requires
+   
   enLocale = require("i18n-iso-countries/langs/en.json");
   countries.registerLocale(
     enLocale as unknown as import("i18n-iso-countries").LocaleData,

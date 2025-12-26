@@ -1332,7 +1332,7 @@ const CrisisDataDashboard = ({
                                                       : maxCharsDesktop;
 
                                                   let totalChars = 0;
-                                                  let countriesToShow = [];
+                                                  const countriesToShow = [];
 
                                                   for (const donor of sortedDonors) {
                                                     // Estimate badge size: country name + padding/margins (roughly +8 chars)
