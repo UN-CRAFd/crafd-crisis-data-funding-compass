@@ -3,6 +3,7 @@
 import React, { useEffect, useState } from "react";
 import { X, ExternalLink, Megaphone } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import labels from "@/config/labels.json";
 
 interface SurveyBannerProps {
   surveyUrl?: string;
@@ -72,10 +73,10 @@ const SurveyBanner: React.FC<SurveyBannerProps> = ({
                   className="font-roboto mb-1 text-base font-bold sm:text-lg"
                   style={{ color: "var(--brand-primary-dark)" }}
                 >
-                  Share Your Insights!
+                  {labels.survey.title}
                 </h3>
                 <p className="text-xs font-medium text-slate-600 sm:text-sm">
-                  Help shape the crisis data ecosystem
+                  {labels.survey.subtitle}
                 </p>
               </div>
 
@@ -85,7 +86,7 @@ const SurveyBanner: React.FC<SurveyBannerProps> = ({
                 className="hover:bg-var(--brand-primary-dark) flex items-center gap-2 rounded-md px-4 py-2 text-sm font-normal whitespace-nowrap text-white transition-colors sm:text-base"
                 style={{ backgroundColor: "var(--brand-primary)" }}
               >
-                <span className="hidden sm:inline">Take Survey</span>
+                <span className="hidden sm:inline">{labels.survey.title}</span>
                 <span className="sm:hidden">Survey</span>
                 <ExternalLink className="h-4 w-4" />
               </Button>

@@ -1,3 +1,5 @@
+import labels from "@/config/labels.json";
+
 export default async function LoginPage({
   searchParams,
 }: {
@@ -15,17 +17,17 @@ export default async function LoginPage({
             {/* Header */}
             <div className="space-y-2">
               <h1 className="truncate bg-gradient-to-r from-slate-800 to-slate-600 bg-clip-text text-lg text-transparent sm:text-2xl">
-                <span className="qanelas-title">CRISIS DATA</span>{" "}
-                <span className="font-roboto">Funding Compass</span>
+                <span className="qanelas-title">{labels.header.title}</span>{" "}
+                <span className="font-roboto">{labels.header.subtitle}</span>
               </h1>
             </div>
 
             {/* Error Message */}
             {hasError && (
               <div className="rounded-lg border border-red-200 bg-red-50 px-4 py-3 text-red-800">
-                <p className="font-medium">Incorrect password</p>
+                <p className="font-medium">{labels.login.errorTitle}</p>
                 <p className="mt-1 text-sm">
-                  Please try again or contact us for assistance.
+                  {labels.login.errorMessage}
                 </p>
               </div>
             )}
@@ -39,7 +41,7 @@ export default async function LoginPage({
                   id="password"
                   name="password"
                   type="password"
-                  placeholder="Enter password"
+                  placeholder={labels.login.passwordPlaceholder}
                   autoFocus
                   className="w-full rounded-lg border border-slate-300 bg-white px-4 py-3 text-slate-900 transition-all placeholder:text-slate-400 focus:border-transparent focus:ring-2 focus:ring-[#e6af26] focus:outline-none"
                   required
@@ -50,7 +52,7 @@ export default async function LoginPage({
                 type="submit"
                 className="w-full rounded-lg bg-[#e6af26] px-4 py-3 font-medium text-white transition-colors hover:bg-[#a78003]"
               >
-                Enter
+                {labels.login.submitButton}
               </button>
             </form>
 
