@@ -263,7 +263,7 @@ const CodeBlock = ({ code }: { code: string }) => {
     <div className="overflow-hidden rounded-lg border border-slate-800 bg-slate-950 shadow-lg">
       <div className="flex items-center justify-between border-b border-slate-800 bg-slate-900 px-4 py-2">
         <span className="text-xs font-semibold tracking-wider text-slate-400 uppercase">
-          Python
+          {labels.codeBlock.language}
         </span>
         <button
           onClick={handleCopy}
@@ -274,13 +274,13 @@ const CodeBlock = ({ code }: { code: string }) => {
             <>
               <Check className="h-3.5 w-3.5 text-emerald-400" />
               <span className="text-xs font-medium text-emerald-400">
-                Copied
+                {labels.codeBlock.copyButtonSuccess}
               </span>
             </>
           ) : (
             <>
               <Copy className="h-3.5 w-3.5 text-slate-400" />
-              <span className="text-xs text-slate-400">Copy</span>
+              <span className="text-xs text-slate-400">{labels.codeBlock.copyButton}</span>
             </>
           )}
         </button>
@@ -514,29 +514,28 @@ export default function MethodologyPage({
                     className="font-qanelas-subtitle text-3xl font-bold sm:text-4xl"
                     style={{ color: "black" }}
                   >
-                    Methodology
+                    {labels.methodology.title}
                   </h1>
                 </div>
                 <p className="mb-6 max-w-3xl text-base leading-relaxed text-slate-700 sm:text-lg">
-                  Understand how our data was collected and how to use it best
-                  for your research
+                  {labels.methodology.subtitle}
                 </p>
                 <TabsList className="grid h-auto w-full grid-cols-2 gap-2 bg-white/60 p-2 lg:grid-cols-6">
                   {[
-                    { value: "collection", icon: Search, label: "Collection" },
+                    { value: "collection", icon: Search, label: labels.methodology.tabs.collection },
                     {
                       value: "classification",
                       icon: FileText,
-                      label: "Classification",
+                      label: labels.methodology.tabs.classification,
                     },
                     {
                       value: "limitations",
                       icon: AlertTriangle,
-                      label: "Limitations",
+                      label: labels.methodology.tabs.limitations,
                     },
-                    { value: "filtering", icon: Layers, label: "Filtering" },
-                    { value: "network", icon: TrendingUp, label: "Network" },
-                    { value: "export", icon: Download, label: "Export" },
+                    { value: "filtering", icon: Layers, label: labels.methodology.tabs.filtering },
+                    { value: "network", icon: TrendingUp, label: labels.methodology.tabs.network },
+                    { value: "export", icon: Download, label: labels.methodology.tabs.export },
                   ].map(({ value, icon: Icon, label }) => (
                     <TabsTrigger
                       key={value}
@@ -563,38 +562,31 @@ export default function MethodologyPage({
                 >
                   <div className="grid grid-cols-1 gap-6 lg:grid-cols-2">
                     <div>
-                      <SectionTitle icon={Search}>Data Collection</SectionTitle>
+                      <SectionTitle icon={Search}>{labels.methodology.dataCollection}</SectionTitle>
                       <div className="space-y-4">
                         <IconInfoCard
                           icon={BookCheck}
-                          title="Source Identification"
+                          title={labels.methodology.sourceIdentification}
                         >
-                          We aggregate data from a curated set of public and
-                          partner sources, including international
-                          organizations, government portals, and open data
-                          repositories relevant to crisis funding and
-                          humanitarian response.
+                          {labels.methodology.sourceIdentificationDescription}
                         </IconInfoCard>
                         <IconInfoCard
                           icon={Workflow}
-                          title="Automated & Manual Gathering"
+                          title={labels.methodology.automatedManualGathering}
                         >
-                          Data is collected through a combination of automated
-                          pipelines (APIs, web scraping) and manual curation to
-                          ensure completeness and accuracy.
+                          {labels.methodology.automatedManualGatheringDescription}
                         </IconInfoCard>
                         <IconInfoCard
                           icon={CalendarSync}
-                          title="Regular Updates"
+                          title={labels.methodology.regularUpdates}
                         >
-                          The dataset is refreshed periodically to capture new
-                          funding flows, projects, and organizational changes.
+                          {labels.methodology.regularUpdatesDescription}
                         </IconInfoCard>
                       </div>
                     </div>
                     <Screenshot
                       src="/screenshots/collection.png"
-                      alt="Data Collection Process"
+                      alt={labels.methodology.dataCollectionProcess}
                     />
                   </div>
                 </TabsContent>
@@ -607,22 +599,18 @@ export default function MethodologyPage({
                   <div className="space-y-6">
                     <div>
                       <SectionTitle icon={FileText}>
-                        Data Classification
+                        {labels.methodology.dataClassification}
                       </SectionTitle>
                       <div className="space-y-4">
-                        <InfoCard title="Entity Mapping">
-                          Organizations, donors, and projects are mapped to
-                          unique identifiers to avoid duplication and enable
-                          cross-referencing.
+                        <InfoCard title={labels.methodology.entityMapping}>
+                          {labels.methodology.entityMappingDescription}
                         </InfoCard>
                         <div className="rounded-lg border border-slate-200 bg-slate-50 p-4">
                           <h4 className="mb-2 font-semibold text-slate-800">
-                            Investment Typing
+                            {labels.methodology.investmentTyping}
                           </h4>
                           <p className="mb-3 text-sm leading-relaxed text-slate-600">
-                            Each project is classified into one or more
-                            investment types based on project descriptions and
-                            metadata:
+                            {labels.methodology.investmentTypingDescription}
                           </p>
                           <ul className="space-y-2 text-sm text-slate-600">
                             {INVESTMENT_TYPES.map((type) => (
@@ -630,10 +618,8 @@ export default function MethodologyPage({
                             ))}
                           </ul>
                         </div>
-                        <InfoCard title="Theme Tagging">
-                          Projects are tagged with thematic areas (e.g., health,
-                          displacement, food security) using keyword analysis
-                          and expert review.
+                        <InfoCard title={labels.methodology.themeTagging}>
+                          {labels.methodology.themeTaggingDescription}
                         </InfoCard>
                       </div>
                     </div>
@@ -646,10 +632,10 @@ export default function MethodologyPage({
                             className="h-4 w-4"
                             style={{ color: "var(--brand-primary)" }}
                           />
-                          Asset Type Explorer
+                          {labels.methodology.assetTypeExplorer}
                         </h4>
                         <p className="mt-1 text-xs text-slate-500">
-                          Click on an investment type to explore
+                          {labels.methodology.clickOnInvestmentType}
                         </p>
                       </div>
 
@@ -728,7 +714,7 @@ export default function MethodologyPage({
                               </p>
                               <div>
                                 <h6 className="mb-2 text-xs font-semibold tracking-wide text-slate-700 uppercase">
-                                  Related Themes
+                                  {labels.methodology.relatedThemes}
                                 </h6>
                                 <div className="flex flex-wrap gap-1.5">
                                   {themes.map((theme, idx) => (
@@ -763,21 +749,17 @@ export default function MethodologyPage({
                   <div className="space-y-6">
                     <div>
                       <SectionTitle icon={AlertTriangle}>
-                        Limitations
+                        {labels.methodology.limitations}
                       </SectionTitle>
                       <div className="space-y-4">
-                        <InfoCard title="Data Gaps">
-                          Not all funding flows or projects are publicly
-                          reported; some data may be incomplete or delayed.
+                        <InfoCard title={labels.methodology.dataGaps}>
+                          {labels.methodology.dataGapsDescription}
                         </InfoCard>
-                        <InfoCard title="Classification Subjectivity">
-                          Investment type and theme assignments may involve
-                          interpretation, especially for multi-sector projects.
+                        <InfoCard title={labels.methodology.classificationSubjectivity}>
+                          {labels.methodology.classificationSubjectivityDescription}
                         </InfoCard>
-                        <InfoCard title="Simplification">
-                          For clarity, some visualizations (e.g., UN donor
-                          lists) are simplified and do not reflect the full
-                          complexity of funding relationships.
+                        <InfoCard title={labels.methodology.simplification}>
+                          {labels.methodology.simplificationDescription}
                         </InfoCard>
                       </div>
                     </div>
@@ -792,38 +774,29 @@ export default function MethodologyPage({
                   <div className="space-y-6">
                     <div>
                       <SectionTitle icon={Layers}>
-                        Filtering & Query
+                        {labels.methodology.filteringQuery}
                       </SectionTitle>
                       <div className="space-y-4">
-                        <InfoCard title="Search Logic">
-                          Search operates on project titles and organization
-                          names.
+                        <InfoCard title={labels.methodology.searchLogic}>
+                          {labels.methodology.searchLogicDescription}
                         </InfoCard>
-                        <InfoCard title="Donor Filter">
-                          Multiple donors trigger a conjunction. Returned
-                          projects must be co-financed by every selected donor.
+                        <InfoCard title={labels.methodology.donorFilter}>
+                          {labels.methodology.donorFilterDescription}
                         </InfoCard>
-                        <InfoCard title="Type Filter">
-                          Multiple types trigger a disjunction. Organizations
-                          appear if any of their projects match at least one
-                          selected type.
+                        <InfoCard title={labels.methodology.typeFilter}>
+                          {labels.methodology.typeFilterDescription}
                         </InfoCard>
-                        <InfoCard title="Theme Filter">
-                          Multiple themes trigger a disjunction. Projects appear
-                          if they match at least one of the selected themes.
+                        <InfoCard title={labels.methodology.themeFilter}>
+                          {labels.methodology.themeFilterDescription}
                         </InfoCard>
-                        <InfoCard title="Type–Theme Relationship">
-                          Themes are nested under types. Selecting a type
-                          restricts theme options to those linked to that type.
-                          Themes from other types can still surface when
-                          projects span multiple types and carry overlapping
-                          themes.
+                        <InfoCard title={labels.methodology.typeThemeRelationship}>
+                          {labels.methodology.typeThemeRelationshipDescription}
                         </InfoCard>
                       </div>
                     </div>
 
                     {/* Interactive Filter Logic Flow */}
-                    <SectionTitle icon={Search}>Filtering Process</SectionTitle>
+                    <SectionTitle icon={Search}>{labels.methodology.filteringProcess}</SectionTitle>
 
                     <div className="rounded-lg border-2 border-none bg-white p-6 shadow-sm">
                       {/* Flow Diagram */}
@@ -834,22 +807,21 @@ export default function MethodologyPage({
                             <span className="flex h-5 w-5 items-center justify-center rounded-full bg-slate-700 text-xs text-white">
                               1
                             </span>
-                            Donor Filter (Gatekeeper)
+                            {labels.methodology.donorFilterGatekeeper}
                           </div>
                           <div className="space-y-1 pl-7 text-slate-700">
                             <div>
-                              🔍 Check: Does org have <strong>ALL</strong>{" "}
-                              selected donors?
+                              🔍 {labels.methodology.donorFilterQuestion}
                             </div>
                             <div className="rounded border-2 border-slate-200 bg-white px-2 py-1 font-mono text-[10px]">
                               donors.every(d → org.donors.includes(d))
                             </div>
                             <div className="mt-2 flex gap-2">
                               <div className="flex-1 rounded border-2 border-slate-300 bg-slate-50 px-2 py-1 text-slate-700">
-                                ✓ YES → Continue to Step 2
+                                ✓ {labels.methodology.donorFilterYes}
                               </div>
                               <div className="flex-1 rounded border-2 border-slate-400 bg-slate-200 px-2 py-1 text-slate-800">
-                                ✗ NO → Hide org entirely
+                                ✗ {labels.methodology.donorFilterNo}
                               </div>
                             </div>
                           </div>
@@ -865,28 +837,28 @@ export default function MethodologyPage({
                             <span className="flex h-5 w-5 items-center justify-center rounded-full bg-slate-700 text-xs text-white">
                               2
                             </span>
-                            Search Filter Check
+                            {labels.methodology.searchFilterCheck}
                           </div>
                           <div className="space-y-1 pl-7 text-slate-700">
-                            <div>🔍 Check: Does org name match search?</div>
+                            <div>🔍 {labels.methodology.searchFilterQuestion}</div>
                             <div className="rounded border-2 border-slate-200 bg-white px-2 py-1 font-mono text-[10px]">
                               org.name.includes(searchQuery)
                             </div>
                             <div className="mt-2 space-y-2">
                               <div className="rounded border-2 border-slate-300 bg-slate-50 px-2 py-1.5 text-slate-700">
                                 <div className="mb-1 font-semibold">
-                                  ✓ YES → Show ALL org projects
+                                  ✓ {labels.methodology.searchFilterYes}
                                 </div>
                                 <div className="pl-4 text-[10px]">
-                                  Then filter by Type/Theme if selected
+                                  {labels.methodology.searchFilterYesHint}
                                 </div>
                               </div>
                               <div className="rounded border-2 border-slate-400 bg-slate-200 px-2 py-1.5 text-slate-800">
                                 <div className="mb-1 font-semibold">
-                                  ✗ NO → Check each project
+                                  ✗ {labels.methodology.searchFilterNo}
                                 </div>
                                 <div className="pl-4 text-[10px]">
-                                  Go to Step 3 for project-level filtering
+                                  {labels.methodology.searchFilterNoHint}
                                 </div>
                               </div>
                             </div>
@@ -903,29 +875,29 @@ export default function MethodologyPage({
                             <span className="flex h-5 w-5 items-center justify-center rounded-full bg-slate-700 text-xs text-white">
                               3
                             </span>
-                            Project-Level Filters
+                            {labels.methodology.projectLevelFilters}
                           </div>
                           <div className="space-y-2 pl-7 text-slate-700">
                             <div className="rounded border-2 border-slate-200 bg-white px-3 py-2">
                               <div className="mb-1 font-semibold">
-                                A. Search (if org didn't match)
+                                {labels.methodology.searchIfOrgDidntMatch}
                               </div>
                               <div className="rounded bg-slate-50 px-2 py-1 font-mono text-[10px]">
                                 project.name.includes(searchQuery)
                               </div>
                               <div className="mt-1 text-[10px]">
-                                Must match for project to be visible
+                                {labels.methodology.mustMatchForProjectVisible}
                               </div>
                             </div>
 
                             <div className="rounded border-2 border-slate-200 bg-white px-3 py-2">
                               <div className="mb-1 flex items-center gap-1 font-semibold">
-                                B. Type Filter{" "}
+                                {labels.methodology.typeFilterLabel}{" "}
                                 <span
                                   style={{ color: "var(--brand-primary-dark)" }}
                                   className="font-bold"
                                 >
-                                  (OR logic)
+                                  {labels.methodology.typeFilterLogic}
                                 </span>
                               </div>
                               <div className="rounded bg-slate-50 px-2 py-1 font-mono text-[10px]">
@@ -933,18 +905,18 @@ export default function MethodologyPage({
                                 selectedTypes.includes(t))
                               </div>
                               <div className="mt-1 text-[10px]">
-                                Project needs ≥1 matching type
+                                {labels.methodology.projectNeedsMatchingType}
                               </div>
                             </div>
 
                             <div className="rounded border-2 border-slate-200 bg-white px-3 py-2">
                               <div className="mb-1 flex items-center gap-1 font-semibold">
-                                C. Theme Filter{" "}
+                                {labels.methodology.themeFilterLabel}{" "}
                                 <span
                                   style={{ color: "var(--brand-primary-dark)" }}
                                   className="font-bold"
                                 >
-                                  (OR logic)
+                                  {labels.methodology.themeFilterLogic}
                                 </span>
                               </div>
                               <div className="rounded bg-slate-50 px-2 py-1 font-mono text-[10px]">
@@ -952,7 +924,7 @@ export default function MethodologyPage({
                                 selectedThemes.includes(th))
                               </div>
                               <div className="mt-1 text-[10px]">
-                                Project needs ≥1 matching theme
+                                {labels.methodology.projectNeedsMatchingTheme}
                               </div>
                             </div>
                           </div>
@@ -968,32 +940,31 @@ export default function MethodologyPage({
                             <span className="flex h-5 w-5 items-center justify-center rounded-full bg-slate-700 text-xs text-white">
                               4
                             </span>
-                            Final Decision
+                            {labels.methodology.finalDecision}
                           </div>
                           <div className="space-y-2 pl-7 text-slate-700">
                             <div className="rounded border-2 border-slate-300 bg-slate-50 px-2 py-1.5">
                               <div className="font-semibold text-slate-800">
-                                Show Organization IF:
+                                {labels.methodology.showOrganizationIf}
                               </div>
                               <ul className="mt-1 space-y-0.5 text-[10px] text-slate-700">
-                                <li>• Passes donor check (Step 1)</li>
+                                <li>• {labels.methodology.passesDonorCheck}</li>
                                 <li>
-                                  • AND has ≥1 visible project after filtering
+                                  • {labels.methodology.hasVisibleProject}
                                 </li>
                                 <li>
-                                  • OR org name matches search (shows all
-                                  projects)
+                                  • {labels.methodology.orgNameMatches}
                                 </li>
                               </ul>
                             </div>
                             <div className="rounded border-2 border-slate-400 bg-slate-200 px-2 py-1.5">
                               <div className="font-semibold text-slate-800">
-                                Hide Organization IF:
+                                {labels.methodology.hideOrganizationIf}
                               </div>
                               <ul className="mt-1 space-y-0.5 text-[10px] text-slate-700">
-                                <li>• Fails donor check</li>
+                                <li>• {labels.methodology.failsDonorCheck}</li>
                                 <li>
-                                  • OR has 0 visible projects after filtering
+                                  • {labels.methodology.hasZeroVisibleProjects}
                                 </li>
                               </ul>
                             </div>
@@ -1057,36 +1028,26 @@ export default function MethodologyPage({
                   <div className="grid grid-cols-1 gap-6 lg:grid-cols-2">
                     <div>
                       <SectionTitle icon={TrendingUp}>
-                        Network Analysis
+                        {labels.methodology.networkAnalysis}
                       </SectionTitle>
                       <div className="space-y-4">
-                        <InfoCard title="Graph Structure">
-                          The network view displays the filtered dataset as an
-                          undirected graph, showing relationships between
-                          donors, organizations, and projects.
+                        <InfoCard title={labels.methodology.graphStructure}>
+                          {labels.methodology.graphStructureDescription}
                         </InfoCard>
-                        <InfoCard title="Clustering Options">
-                          Clustering options aggregate projects and
-                          organizations by type, making it easier to identify
-                          patterns and connections within specific investment
-                          categories.
+                        <InfoCard title={labels.methodology.clusteringOptions}>
+                          {labels.methodology.clusteringOptionsDescription}
                         </InfoCard>
-                        <InfoCard title="Interactive Nodes">
-                          Project and organization nodes are interactive and
-                          open a detail modal when clicked, providing in-depth
-                          information about entities and their relationships.
+                        <InfoCard title={labels.methodology.interactiveNodes}>
+                          {labels.methodology.interactiveNodesDescription}
                         </InfoCard>
-                        <InfoCard title="Spatial Interpretation">
-                          Spatial proximity in the graph has no geographic or
-                          ideological meaning. Nimportode positions are
-                          determined by the force-directed layout algorithm to
-                          optimize visualization clarity.
+                        <InfoCard title={labels.methodology.spatialInterpretation}>
+                          {labels.methodology.spatialInterpretationDescription}
                         </InfoCard>
                       </div>
                     </div>
                     <Screenshot
                       src="/screenshots/network.png"
-                      alt="Network Graph Visualization"
+                      alt={labels.methodology.networkGraphVisualization}
                     />
                   </div>
                 </TabsContent>
@@ -1096,37 +1057,23 @@ export default function MethodologyPage({
                   <div className="space-y-8">
                     <div>
                       <SectionTitle icon={Download}>
-                        Export Functionality
+                        {labels.methodology.exportFunctionality}
                       </SectionTitle>
                       <div className="space-y-4">
-                        <InfoCard title="CSV Export">
-                          Exports two CSV files (organization table and asset
-                          table) in a ZIP archive. Organizations CSV includes
-                          names, types, descriptions, and funding sources.
-                          Assets CSV includes names, associated organizations,
-                          types, themes, donors, descriptions, and website.
+                        <InfoCard title={labels.methodology.csvExport}>
+                          {labels.methodology.csvExportDescription}
                         </InfoCard>
-                        <InfoCard title="Excel Export">
-                          Export the same data as a professionally formatted
-                          Excel workbook. Includes organizations and assets
-                          sheets with styling and optimized column widths.
-                          Includes a README file with export metadata and
-                          current filter details.
+                        <InfoCard title={labels.methodology.excelExport}>
+                          {labels.methodology.excelExportDescription}
                         </InfoCard>
-                        <InfoCard title="Sharing & Reproducibility">
-                          All exports respect your current filters (donors,
-                          investment types, themes, search query). The metadata
-                          and README file includes information about which
-                          filters were applied. Also, when sharing a link to the
-                          app, the same filters will be pre-applied for
-                          recipients, as the filter criteria are denoted in the
-                          URL.
+                        <InfoCard title={labels.methodology.sharingAndReproducibility}>
+                          {labels.methodology.sharingAndReproducibilityDescription}
                         </InfoCard>
                       </div>
                     </div>
                     <div>
                       <SectionTitle icon={FileText}>
-                        Working with the Data
+                        {labels.methodology.workingWithTheData}
                       </SectionTitle>
                       <div className="space-y-4">
                         <div>
@@ -1174,11 +1121,10 @@ print(f"\\nAssets by type:\\n{by_type}")`}
                     />
                     <div>
                       <h3 className="text-lg font-semibold text-slate-800">
-                        Questions or Feedback?
+                        {labels.methodology.feedbackTitle}
                       </h3>
                       <p className="text-sm text-slate-600">
-                        We welcome your input to improve our methodology and
-                        data quality.
+                        {labels.methodology.feedbackSubtitle}
                       </p>
                     </div>
                   </div>
@@ -1190,7 +1136,7 @@ print(f"\\nAssets by type:\\n{by_type}")`}
                     style={{ backgroundColor: "var(--brand-primary)" }}
                   >
                     <MessageCircle className="h-4 w-4" />
-                    Provide Feedback
+                    {labels.methodology.feedbackButton}
                   </a>
                 </div>
               </CardContent>

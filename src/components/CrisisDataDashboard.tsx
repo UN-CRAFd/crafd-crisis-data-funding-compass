@@ -582,7 +582,7 @@ const CrisisDataDashboard = ({
       });
     } catch (error) {
       console.error("Failed to export PDF:", error);
-      alert("Failed to export PDF. Please try again.");
+      alert(labels.errors.exportPdfFailed);
     } finally {
       setPDFExportLoading(false);
     }
@@ -600,7 +600,7 @@ const CrisisDataDashboard = ({
       });
     } catch (error) {
       console.error("Failed to export CSV:", error);
-      alert("Failed to export CSV. Please try again.");
+      alert(labels.errors.exportCsvFailed);
     } finally {
       setCSVExportLoading(false);
     }
@@ -618,7 +618,7 @@ const CrisisDataDashboard = ({
       });
     } catch (error) {
       console.error("Failed to export XLSX:", error);
-      alert("Failed to export XLSX. Please try again.");
+      alert(labels.errors.exportXlsxFailed);
     } finally {
       setXLSXExportLoading(false);
     }

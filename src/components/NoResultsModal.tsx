@@ -2,6 +2,7 @@
 
 import { AlertCircle, RotateCcw, MessageSquare } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import labels from "@/config/labels.json";
 
 interface NoResultsModalProps {
   onResetFilters?: () => void;
@@ -10,7 +11,7 @@ interface NoResultsModalProps {
 
 export default function NoResultsModal({
   onResetFilters,
-  message = "No data matches your current filters. Try adjusting your criteria or reset all filters.",
+  message = labels.noResults.message,
 }: NoResultsModalProps) {
   return (
     <div className="absolute inset-0 z-[100] flex items-center justify-center bg-slate-50/95 backdrop-blur-sm">
@@ -20,7 +21,7 @@ export default function NoResultsModal({
             <AlertCircle className="h-6 w-6 text-slate-400" />
           </div>
           <h3 className="mb-2 text-base font-semibold text-slate-900">
-            No Results Found
+            {labels.noResults.title}
           </h3>
           <p className="mb-4 text-sm text-slate-600">{message}</p>
           <div className="flex w-full flex-col gap-2">
@@ -35,7 +36,7 @@ export default function NoResultsModal({
               className="flex w-full items-center justify-center gap-2"
             >
               <RotateCcw className="h-4 w-4" />
-              Reset Filters
+              {labels.noResults.resetButton}
             </Button>
             <Button
               size="sm"
@@ -48,7 +49,7 @@ export default function NoResultsModal({
               className="flex w-full items-center justify-center gap-2 bg-[var(--brand-primary)] text-white hover:bg-[var(--brand-primary-dark)]"
             >
               <MessageSquare className="h-4 w-4" />
-              Send Feedback
+              {labels.noResults.feedbackButton}
             </Button>
           </div>
         </div>

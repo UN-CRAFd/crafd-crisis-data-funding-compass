@@ -2,6 +2,7 @@
 
 import Link from "next/link";
 import React from "react";
+import labels from "@/config/labels.json";
 
 interface ErrorBoundaryState {
   hasError: boolean;
@@ -53,24 +54,23 @@ class ErrorBoundary extends React.Component<
         <div className="flex min-h-screen items-center justify-center p-4">
           <div className="text-center">
             <h2 className="mb-4 text-2xl font-bold text-gray-900">
-              Something went wrong
+              {labels.errors.somethingWentWrong}
             </h2>
             <p className="mb-4 text-gray-600">
-              There was an error loading this page. Please try refreshing or go
-              back to the home page.
+              {labels.errors.thereWasAnError}
             </p>
             <div className="space-x-4">
               <button
                 onClick={this.resetError}
                 className="rounded bg-blue-500 px-4 py-2 text-white transition-colors hover:bg-blue-600"
               >
-                Try Again
+                {labels.errors.tryAgain}
               </button>
               <Link
                 href="/"
                 className="inline-block rounded bg-gray-500 px-4 py-2 text-white transition-colors hover:bg-gray-600"
               >
-                Go Home
+                {labels.notFound.button}
               </Link>
             </div>
             {process.env.NODE_ENV === "development" && this.state.error && (
