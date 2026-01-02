@@ -58,7 +58,8 @@
     "prettier-plugin-tailwindcss": "^0.7.2",
     "tailwindcss": "^4",
     "tw-animate-css": "^1.3.5",
-    "typescript": "5.9.3"
+    "typescript": "5.9.3",
+    "typescript-eslint": "^8.51.0"
   },
   "overrides": {
     "@types/react": "19.2.7",

@@ -520,12 +520,14 @@ const NetworkGraph: React.FC<NetworkGraphProps> = ({
       if (graphRef.current) {
         // Tickle the simulation very gently to force a repaint
         // This doesn't restart the simulation, just triggers a render
-        (graphRef.current as any).refresh?.() ||
+        const refresh = (graphRef.current as any).refresh?.();
+        if (!refresh) {
           graphRef.current.centerAt(
             graphRef.current.centerAt().x,
             graphRef.current.centerAt().y,
             0,
           );
+        }
       }
 
       if (progress < 1) {
