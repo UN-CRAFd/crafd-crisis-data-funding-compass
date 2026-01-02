@@ -1,4 +1,5 @@
 import labels from "@/config/labels.json";
+import Link from "next/link";
 
 export default function NotFound() {
   return (
@@ -8,12 +9,12 @@ export default function NotFound() {
           {labels.notFound.title}
         </h1>
         <p className="mb-8 text-slate-600">{labels.notFound.subtitle}</p>
-        <a
+        <Link
           href="/"
           className="inline-block rounded-lg bg-blue-600 px-6 py-2 text-white hover:bg-blue-700"
         >
           {labels.notFound.button}
-        </a>
+        </Link>
       </div>
     </div>
   );
