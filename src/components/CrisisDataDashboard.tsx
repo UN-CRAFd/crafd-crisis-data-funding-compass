@@ -105,7 +105,7 @@ const NetworkGraph = dynamic(() => import("@/components/NetworkGraph"), {
 });
 
 const TAB_TRIGGER_CLASS =
-  "h-6 px-2.5 text-[11px] font-medium rounded-md transition-all data-[state=active]:bg-white data-[state=active]:shadow-sm data-[state=active]:border data-[state=active]:border-slate-200 data-[state=active]:text-slate-800 text-slate-600 bg-slate-50 border-none";
+  "h-6 px-2.5 text-[14px] font-medium rounded-md transition-all data-[state=active]:bg-[var(--brand-bg-light)] data-[state=active]:shadow-sm data-[state=active]:border data-[state=active]:border-[var(--brand-border)] data-[state=active]:text-[var(--brand-primary-dark)] text-slate-600 bg-slate-50 border-none";
 
 const TABS = [
   { value: "table", label: "Organizations", Icon: Table },
@@ -1002,7 +1002,7 @@ const CrisisDataDashboard = ({
                       {/* Sort Dropdown right-aligned */}
                       {(activeView === "table" || activeView === "donors") && (
                         <div className="ml-auto animate-in duration-300 slide-in-from-right-5 fade-in">
-                          <div className="hidden h-7 items-center gap-1 rounded-md border border-slate-200 bg-slate-50/50 px-2 text-[11px] font-medium transition-all hover:border-slate-300 hover:bg-white sm:flex">
+                          <div className="hidden h-7 items-center gap-1 rounded-md border border-slate-200 bg-slate-50/50 px-2 text-[14px] font-medium transition-all hover:border-slate-300 hover:bg-white sm:flex">
                             <Button
                               variant="ghost"
                               size="sm"
@@ -1031,7 +1031,7 @@ const CrisisDataDashboard = ({
                               <DropdownMenuTrigger asChild>
                                 <Button
                                   variant="ghost"
-                                  className="m-0 h-auto p-0 text-[11px] font-medium text-slate-700 hover:bg-transparent"
+                                  className="m-0 h-auto p-0 text-[14px] font-medium text-slate-700 hover:bg-transparent"
                                 >
                                   <div className="flex min-w-0 items-center gap-1.5">
                                     <span className="truncate">
@@ -1063,7 +1063,7 @@ const CrisisDataDashboard = ({
                                   onClick={() =>
                                     onSortChange("name", sortDirection)
                                   }
-                                  className="cursor-pointer py-1 text-[11px]"
+                                  className="cursor-pointer py-1 text-[14px]"
                                 >
                                   Alphabetically
                                 </DropdownMenuItem>
@@ -1071,7 +1071,7 @@ const CrisisDataDashboard = ({
                                   onClick={() =>
                                     onSortChange("donors", sortDirection)
                                   }
-                                  className="cursor-pointer py-1 text-[11px]"
+                                  className="cursor-pointer py-1 text-[14px]"
                                 >
                                   {activeView === "donors"
                                     ? "No. of Organizations"
@@ -1081,7 +1081,7 @@ const CrisisDataDashboard = ({
                                   onClick={() =>
                                     onSortChange("assets", sortDirection)
                                   }
-                                  className="cursor-pointer py-1 text-[11px]"
+                                  className="cursor-pointer py-1 text-[14px]"
                                 >
                                   No. of Assets
                                 </DropdownMenuItem>
@@ -1090,7 +1090,7 @@ const CrisisDataDashboard = ({
                                     onClick={() =>
                                       onSortChange("funding", sortDirection)
                                     }
-                                    className="cursor-pointer py-1 text-[11px]"
+                                    className="cursor-pointer py-1 text-[14px]"
                                   >
                                     Funding
                                   </DropdownMenuItem>
