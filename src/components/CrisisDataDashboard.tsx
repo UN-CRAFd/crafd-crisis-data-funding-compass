@@ -1500,7 +1500,7 @@ const CrisisDataDashboard = ({
                                         (project: ProjectData) => (
                                           <div
                                             key={project.id}
-                                            className="group animate-in cursor-pointer rounded-lg border border-slate-100 bg-slate-50/50 p-3 transition-colors duration-200 fade-in hover:bg-slate-50"
+                                            className="group animate-in cursor-pointer rounded-lg border border-slate-200 bg-white p-3 transition-colors duration-200 fade-in hover:bg-slate-50"
                                             onClick={() => {
                                               // Get product_key from nested data
                                               const nestedOrg =
