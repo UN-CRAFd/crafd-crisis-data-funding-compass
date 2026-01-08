@@ -105,7 +105,7 @@ const NetworkGraph = dynamic(() => import("@/components/NetworkGraph"), {
 });
 
 const TAB_TRIGGER_CLASS =
-  "h-6 px-2.5 text-[14px] font-medium rounded-md transition-all data-[state=active]:bg-[var(--brand-bg-light)] data-[state=active]:shadow-sm data-[state=active]:border data-[state=active]:border-[var(--brand-border)] data-[state=active]:text-[var(--brand-primary-dark)] text-slate-600 bg-slate-50 border-none";
+  "h-6 px-2.5 text-[14px] font-medium rounded-md transition-all duration-200 ease-out hover:bg-slate-100 hover:text-slate-700 data-[state=active]:bg-[var(--brand-bg-light)] data-[state=active]:shadow-sm data-[state=active]:border data-[state=active]:border-[var(--brand-border)] data-[state=active]:text-[var(--brand-primary-dark)] data-[state=active]:hover:bg-[var(--brand-bg-light)] text-slate-600 bg-slate-50 border-none";
 
 const TABS = [
   { value: "table", label: "Organizations", Icon: Table, tooltip: "View organizations and their projects in a table format" },
@@ -985,7 +985,7 @@ const CrisisDataDashboard = ({
                           }
                           className="hidden sm:flex"
                         >
-                          <TabsList className="h-7 rounded-md border border-slate-200 bg-slate-50 p-0.5">
+                          <TabsList className="h-7 rounded-md border border-slate-200 bg-slate-50 p-0.5 gap-0.5">
                             <TooltipProvider delayDuration={0}>
                               {TABS.map(({ value, label, Icon, tooltip }) => (
                                 tipsEnabled ? (
