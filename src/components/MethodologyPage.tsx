@@ -503,7 +503,7 @@ export default function MethodologyPage({
         <Tabs defaultValue="collection" className="w-full">
           <div className="space-y-4 sm:space-y-4">
             {/* Hero Section */}
-            <div className="relative overflow-hidden rounded-xl border-none bg-gradient-to-br from-[var(--brand-bg-lighter)] to-[var(--brand-bg-light)] p-6 sm:p-8">
+            <div className="relative overflow-hidden rounded-xl border border-[var(--brand-primary-light)]/40 bg-gradient-to-br from-[var(--brand-bg-lighter)] to-[var(--brand-bg-light)] p-6 sm:p-8">
               <div className="relative z-10">
                 <div className="mb-4 flex items-center gap-3">
                   <BookOpen
