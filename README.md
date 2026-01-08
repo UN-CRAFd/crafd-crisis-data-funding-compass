@@ -42,7 +42,7 @@ A Next.js data dashboard for displaying and analyzing Airtable ecosystem data. B
 
 1. **Clone repository** and install dependencies
 2. **Configure Airtable** by setting up your `.env.local` file with Airtable credentials
-3. **Fetch Data** using `node scripts/fetch-airtable.js` to populate `public/data/ecosystem-table.json`
+3. **Fetch Data** using `python scripts/01_fetch_airtable.py` to populate data files in `public/data/`
 4. **Customize styling** in `src/app/globals.css` to match your brand colors
 5. **Deploy** to GitHub Pages or any static hosting service
 
