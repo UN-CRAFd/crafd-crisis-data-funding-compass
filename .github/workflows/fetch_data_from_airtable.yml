@@ -34,7 +34,7 @@ jobs:
           AIRTABLE_TABLE_ID_PROJECTS: ${{ secrets.AIRTABLE_TABLE_ID_PROJECTS }}
         run: |
           echo "Starting data fetch with validation..."
-          uv run python scripts/fetch-airtable.py
+          uv run python scripts/01_fetch_airtable.py
           echo "✅ Data validation passed - ready to commit"
 
       - name: Commit and push validated changes
