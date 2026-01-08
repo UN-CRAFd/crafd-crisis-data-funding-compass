@@ -1666,7 +1666,7 @@ export default function AnalyticsPage({ logoutButton }: AnalyticsPageProps) {
       <div className="mx-auto max-w-[82rem] px-4 py-0 pt-20 sm:px-6 sm:py-0 sm:pt-24 lg:px-8">
         <div className="space-y-4 sm:space-y-4">
           {/* Hero Section - Title Box */}
-          <div className="relative overflow-hidden rounded-xl border-none bg-gradient-to-br from-[var(--brand-bg-lighter)] to-[var(--brand-bg-light)] p-6 sm:p-8">
+          <div className="relative overflow-hidden rounded-xl border border-[var(--brand-primary-light)]/40 bg-gradient-to-br from-[var(--brand-bg-lighter)] to-[var(--brand-bg-light)] p-6 sm:p-8">
             <div className="relative z-10">
               <div className="mb-4 flex items-center gap-3">
                 <BarChart3
@@ -1686,7 +1686,7 @@ export default function AnalyticsPage({ logoutButton }: AnalyticsPageProps) {
               </p>
               {/* Warning note if General Contributions enabled */}
               {showGeneralContributions && (
-                <div className="mt-4 flex gap-3 rounded-lg border border-amber-200 bg-white/60 p-4 backdrop-blur-sm">
+                <div className="mt-4 flex gap-3 rounded-lg border border-[var(--brand-primary-light)]/40 bg-white/60 p-4 backdrop-blur-sm">
                   <AlertCircle className="mt-0.5 h-5 w-5 flex-shrink-0 text-amber-600" />
                   <p className="text-sm text-amber-900">
                     <span className="font-semibold">Note:</span> General
