@@ -30,7 +30,7 @@ interface StatCardProps {
 
 const STYLES = {
   statCard:
-    "!border-0 transition-all duration-300 hover:ring-2 hover:ring-slate-300/50",
+    "border border-[var(--brand-primary-light)]/40 transition-all duration-300 hover:ring-2 hover:ring-slate-300/50",
   chartTooltip: {
     backgroundColor: "var(--tooltip-bg)",
     backdropFilter: "blur(12px)",
@@ -61,6 +61,7 @@ export const StatCard = React.memo(function StatCard({
   const gradients = {
     amber: {
       bg: "from-[var(--brand-bg-lighter)] to-[var(--brand-bg-light)]",
+      border: "border-slate-500",
       value: "text-[var(--brand-primary)]",
       label: "text-[var(--brand-primary)]",
     },

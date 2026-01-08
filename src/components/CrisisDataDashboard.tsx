@@ -988,22 +988,34 @@ const CrisisDataDashboard = ({
                           <TabsList className="h-7 rounded-md border border-slate-200 bg-slate-50 p-0.5">
                             <TooltipProvider delayDuration={0}>
                               {TABS.map(({ value, label, Icon, tooltip }) => (
-                                <TooltipUI key={value}>
-                                  <TooltipTrigger asChild>
-                                    <div>
-                                      <TabsTrigger
-                                        value={value}
-                                        className={TAB_TRIGGER_CLASS}
-                                      >
-                                        <Icon className="mr-1.5 h-3 w-3" />
-                                        {label}
-                                      </TabsTrigger>
-                                    </div>
-                                  </TooltipTrigger>
-                                  <TooltipContent side="bottom" align="center" className="max-w-100 rounded-lg border border-slate-200 bg-white p-3 text-xs text-slate-800" sideOffset={5} avoidCollisions={true} style={{ backgroundColor: "var(--tooltip-bg)", backdropFilter: "blur(12px)", border: "1px solid var(--tooltip-border)", borderRadius: "10px" }}>
-                                    {tooltip}
-                                  </TooltipContent>
-                                </TooltipUI>
+                                tipsEnabled ? (
+                                  <TooltipUI key={value}>
+                                    <TooltipTrigger asChild>
+                                      <div>
+                                        <TabsTrigger
+                                          value={value}
+                                          className={TAB_TRIGGER_CLASS}
+                                        >
+                                          <Icon className="mr-1.5 h-3 w-3" />
+                                          {label}
+                                        </TabsTrigger>
+                                      </div>
+                                    </TooltipTrigger>
+                                    <TooltipContent side="bottom" align="center" className="max-w-100 rounded-lg border border-slate-200 bg-white p-3 text-xs text-slate-800" sideOffset={5} avoidCollisions={true} style={{ backgroundColor: "var(--tooltip-bg)", backdropFilter: "blur(12px)", border: "1px solid var(--tooltip-border)", borderRadius: "10px" }}>
+                                      {tooltip}
+                                    </TooltipContent>
+                                  </TooltipUI>
+                                ) : (
+                                  <div key={value}>
+                                    <TabsTrigger
+                                      value={value}
+                                      className={TAB_TRIGGER_CLASS}
+                                    >
+                                      <Icon className="mr-1.5 h-3 w-3" />
+                                      {label}
+                                    </TabsTrigger>
+                                  </div>
+                                )
                               ))}
                             </TooltipProvider>
                           </TabsList>

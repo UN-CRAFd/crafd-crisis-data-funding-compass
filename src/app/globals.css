@@ -149,6 +149,7 @@
   /* slate-200: darker than slate-100 */
   --badge-slate-text: #475569;
   /* slate-600: darker than current slate-600 */
+  --background-color: #D7DBDF
 
   /* Success/confirmation colors - vibrant green for share/copy success states */
   --color-success: #10b981;
@@ -162,6 +163,7 @@
 
   /* Disable all shadows completely */
   --shadow: none !important;
+  --shadow-xs: none !important;
   --shadow-sm: none !important;
   --shadow-md: none !important;
   --shadow-lg: none !important;
@@ -174,9 +176,6 @@
   --drop-shadow-lg: none !important;
   --drop-shadow-xl: none !important;
   --drop-shadow-2xl: none !important;
-
-  /* Override any shadow utilities */
-  --shadow-xs: none !important;
 }
 
 /* Force Roboto font globally, but allow explicit font overrides */
