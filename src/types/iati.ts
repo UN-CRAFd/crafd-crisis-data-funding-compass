@@ -2,56 +2,69 @@
 
 export interface IATIActivity {
   iati_identifier: string;
-  title_narrative?: string[];
-  description_narrative?: string[];
+  title_narrative?: string | string[];
+  description_narrative?: string | string[];
   reporting_org_ref?: string;
-  reporting_org_narrative?: string[];
-  participating_org_ref?: string[];
-  participating_org_narrative?: string[];
-  activity_date_iso_date?: string[];
-  sector_code?: string[];
-  sector_narrative?: string[];
-  recipient_country_code?: string[];
-  recipient_country_narrative?: string[];
-  budget_value?: number[];
-  transaction_value?: number[];
+  reporting_org_narrative?: string | string[];
+  activity_date_iso_date?: string | string[];
+  activity_date_type?: string | string[];
+  sector_code?: string | string[];
+  sector_narrative?: string | string[];
+  recipient_country_code?: string | string[];
+  recipient_country_narrative?: string | string[];
+  budget_value?: number | number[];
+  transaction_value?: number | number[];
   activity_status_code?: string;
-  [key: string]: any; // Allow other IATI fields
 }
 
 export interface IATITransaction {
   iati_identifier: string;
-  transaction_ref?: string;
   transaction_type_code?: string;
   transaction_date_iso_date?: string;
   transaction_value?: number;
   transaction_value_currency?: string;
-  transaction_provider_org_ref?: string;
-  transaction_provider_org_narrative?: string[];
-  transaction_receiver_org_ref?: string;
-  transaction_receiver_org_narrative?: string[];
-  transaction_description_narrative?: string[];
-  [key: string]: any;
 }
 
-export interface IATIBudget {
-  iati_identifier: string;
-  budget_type?: string;
-  budget_status?: string;
-  budget_period_start_iso_date?: string;
-  budget_period_end_iso_date?: string;
-  budget_value?: number;
-  budget_value_currency?: string;
-  [key: string]: any;
+export interface IATITransactionSummary {
+  total_value: number;
+  by_type: {
+    [typeCode: string]: {
+      count: number;
+      total_value: number;
+    };
+  };
+  by_currency: {
+    [currency: string]: number;
+  };
+  by_year: {
+    [year: string]: number;
+  };
+  count: number;
+}
+
+export interface IATIActivitySummary {
+  total_budget: number;
+  by_status: {
+    [status: string]: number;
+  };
+  by_sector: {
+    [sector: string]: number;
+  };
+  by_country: {
+    [country: string]: number;
+  };
+  count: number;
 }
 
 export interface IATIOrganizationData {
   org_ref: string;
   org_name: string;
-  activities: IATIActivity[];
-  transactions: IATITransaction[];
+  activities: IATIActivity[];  // Limited to 50 most relevant
+  transaction_summary: IATITransactionSummary;  // Aggregated data
+  activity_summary: IATIActivitySummary;  // Aggregated data
   stats: {
-    total_activities: number;
+    total_activities: number;  // Total found in IATI
+    stored_activities: number;  // Actually stored (limited)
     total_transactions: number;
   };
 }

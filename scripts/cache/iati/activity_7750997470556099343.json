@@ -1,0 +1,697 @@
+[
+  {
+    "sector_code": [
+      "74020"
+    ],
+    "budget_value": [
+      628533.0,
+      658692.0,
+      691240.0
+    ],
+    "iati_identifier": "GB-CHC-1126727-720BHA21CA00032",
+    "title_narrative": [
+      "Building sector wide capacity for geospatial analysis and other technologies to deepen the impact and effectiveness of humanitarian information management in humanitarian action"
+    ],
+    "reporting_org_ref": "GB-CHC-1126727",
+    "transaction_value": [
+      34029.81,
+      35925.59,
+      38113.26,
+      29963.99,
+      37067.96
+    ],
+    "activity_date_type": [
+      "2",
+      "3"
+    ],
+    "activity_status_code": "2",
+    "description_narrative": [
+      "To deepen the impact and effectiveness of humanitarian information management in humanitarian action.",
+      "The overall purpose of this programme is to enable local, regional and international organisations to apply GIS and Information Management good practice through preparedness, anticipatory action and emergency response activities."
+    ],
+    "activity_date_iso_date": [
+      "2021-10-01T00:00:00Z",
+      "2024-09-30T00:00:00Z"
+    ],
+    "reporting_org_narrative": [
+      "MapAction"
+    ]
+  },
+  {
+    "sector_code": [
+      "74020",
+      "72050"
+    ],
+    "budget_value": [
+      328750.0,
+      337209.0,
+      328750.0,
+      357830.0
+    ],
+    "iati_identifier": "GB-CHC-1126727-USAID OFDA- A-17-00062",
+    "title_narrative": [
+      "“More than Words – Improving the impact of GIS products in humanitarian response”"
+    ],
+    "reporting_org_ref": "GB-CHC-1126727",
+    "transaction_value": [
+      413959.01,
+      21234.2,
+      34799.8,
+      35383.4,
+      70446.6,
+      27395.83,
+      27395.83,
+      27395.83,
+      55387.6,
+      21476.77,
+      21476.77,
+      25371.49,
+      19125.42,
+      38137.39,
+      20571.79,
+      77291.59,
+      18638.17,
+      50742.05,
+      23368.69,
+      29147.79,
+      23585.0,
+      39424.52,
+      23057.26,
+      18691.7,
+      21056.03,
+      26868.52,
+      18575.38,
+      19625.88,
+      26781.05,
+      19007.43,
+      17340.72,
+      379235.21,
+      282041.93,
+      277302.85,
+      34651.32,
+      22149.89,
+      36913.24,
+      26730.7,
+      40714.2,
+      34002.9,
+      38172.3,
+      18760.5
+    ],
+    "activity_date_type": [
+      "2",
+      "3"
+    ],
+    "activity_status_code": "4",
+    "description_narrative": [
+      "To improve the effectiveness of decision making in humanitarian response through increased take-up and better use of GIS products by humanitarian decision makers",
+      "The overall goal of the program is to improve the use of GIS (including maps) and spatial analysis across the entire humanitarian response sector",
+      "For the purpose of this proposal, we aim for direct delivery of training elements on GIS and mapping to at least 200 humanitarian response personnel each year (800 over the course of the project) and to engage with 50+ humanitarian, disaster management or coordination organisations."
+    ],
+    "activity_date_iso_date": [
+      "2017-10-01T00:00:00Z",
+      "2021-09-30T00:00:00Z"
+    ],
+    "reporting_org_narrative": [
+      "MapAction"
+    ]
+  },
+  {
+    "sector_code": [
+      "74020",
+      "72050"
+    ],
+    "budget_value": [
+      160000.0,
+      190000.0,
+      195000.0,
+      200000.0
+    ],
+    "iati_identifier": "GB-CHC-1126727-MFA_4000001937",
+    "title_narrative": [
+      "To improve the efficiency and effectiveness of humanitarian emergency response through better use of maps and other geospatial services."
+    ],
+    "reporting_org_ref": "GB-CHC-1126727",
+    "transaction_value": [
+      160000.0,
+      200000.0,
+      190000.0,
+      195000.0,
+      195000.0,
+      190000.0,
+      160000.0,
+      162750.0
+    ],
+    "activity_date_type": [
+      "2",
+      "3"
+    ],
+    "activity_status_code": "3",
+    "description_narrative": [
+      "To improve the efficiency and effectiveness of humanitarian emergency response through better use of maps and other geospatial services.",
+      "1) Improved understanding of mapping techniques and data availability, and adoption across the humanitarian sector. 2) Supporting humanitarian response through provision of GIS/IM support to responders and assessment organisations. 3)Continual Development of MapAction services and offer."
+    ],
+    "activity_date_iso_date": [
+      "2018-09-01T00:00:00Z",
+      "2021-12-31T00:00:00Z"
+    ],
+    "reporting_org_narrative": [
+      "MapAction"
+    ]
+  },
+  {
+    "sector_code": [
+      "72050"
+    ],
+    "budget_value": [
+      118099.38
+    ],
+    "iati_identifier": "GB-CHC-1126727-H2H_2020_CV2_1_Mapaction",
+    "title_narrative": [
+      "COVID-19 Global Hub Support Centre"
+    ],
+    "reporting_org_ref": "GB-CHC-1126727",
+    "transaction_value": [
+      50339.0,
+      30006.38,
+      37754.0,
+      118099.38
+    ],
+    "activity_date_type": [
+      "2",
+      "1",
+      "3",
+      "4"
+    ],
+    "activity_status_code": "4",
+    "description_narrative": [
+      "To provide easy access to services MapAction has established a triage, prioritisation and management system, The Covid-19 Hub, within our Global Help Centre. This will enable efficient assessment of the likely impact, urgency and technical challenge of each task request. We will prioritise the requests likely to have the greatest impact on the most vulnerable populations. In particular these will be: a) Global analysis and coordination through established structures, b) Country level scale up of response, c) Support to chronic emergencies secondarily impacted by the Covid-19 storm (e.g. Current MapAction support to Camp Coordination Cluster Management in NW Syria) d) Thematic areas such as accountability. \r\nWe have already started promoting the Covid-19 Service to priority countries and responding organisations.",
+      "Informing effective humanitarian planning and response through the \r\nprovision of geospatial and data products/services to key coordination and response organisations from global through to local levels for Covid-19 measures and secondary impacts of Covid-19",
+      "Our support is via a wide range of partner organisations and we will reach affected people through these partners. Some are large scale INGO/NGOSs and UN agencies delivering direct services. Others are H2H partners including CartONG, HOT, ACAPS, Ground Truth Solutions, Translators without Borders involved in communicating with affected communities and promoting accountability."
+    ],
+    "activity_date_iso_date": [
+      "2020-05-21T00:00:00Z",
+      "2020-05-21T00:00:00Z",
+      "2021-01-20T00:00:00Z",
+      "2021-01-20T00:00:00Z"
+    ],
+    "reporting_org_narrative": [
+      "MapAction"
+    ]
+  },
+  {
+    "sector_code": [
+      "72050",
+      "16062"
+    ],
+    "budget_value": [
+      572128.27,
+      640289.0
+    ],
+    "iati_identifier": "GB-CHC-1126727-S08-80321.50ALL18/20",
+    "title_narrative": [
+      "Enhancing timely and effective application of geospatial data and technologies to improve the effectiveness of humanitarian response"
+    ],
+    "reporting_org_ref": "GB-CHC-1126727",
+    "transaction_value": [
+      79500.0,
+      91000.0,
+      12578.73,
+      572128.27,
+      75000.0,
+      215500.0,
+      214707.0
+    ],
+    "activity_date_type": [
+      "2",
+      "3"
+    ],
+    "activity_status_code": "2",
+    "description_narrative": [
+      "Key decision makers will make more effective decisions in humanitarian emergencies\r\nbecause they will base them on information which is more reliable and presented in more\r\neasily interpreted formats, at earlier points in emergencies. This will result in better outcomes\r\nfor affected populations as critical needs and the most vulnerable populations are prioritised."
+    ],
+    "activity_date_iso_date": [
+      "2021-01-01T00:00:00Z",
+      "2022-12-31T00:00:00Z"
+    ],
+    "reporting_org_narrative": [
+      "MapAction"
+    ]
+  },
+  {
+    "sector_code": [
+      "72050",
+      "16062"
+    ],
+    "budget_value": [
+      148127.87,
+      409563.49
+    ],
+    "iati_identifier": "GB-CHC-1126727-GFFO-S08-70-321.50 ALL 32/19",
+    "title_narrative": [
+      "Improving Mapping and Geospatial Analysis for First Phase Emergency Response, Preparedness and Local Capacity Building."
+    ],
+    "reporting_org_ref": "GB-CHC-1126727",
+    "transaction_value": [
+      148127.87,
+      94929.34,
+      74208.45,
+      123626.36,
+      80871.19,
+      148127.87,
+      409563.49
+    ],
+    "activity_date_type": [
+      "2",
+      "3"
+    ],
+    "activity_status_code": "4",
+    "description_narrative": [
+      "Key humanitarian decision makers will be able to make better decisions based on more reliable and/or relevant information, presented in appropriate visual formats, at the earliest opportunities in humanitarian emergencies, resulting in better outcomes for affected populations.",
+      "MapAction has two target groups: direct service users and indirect or ultimate service users. \r\n\r\nDirect service users are those agencies for whom we provide direct geospatial services; \r\n\r\nIndirect service users are the operational agencies, both governmental and NGOs who use many of our products, and ultimately, disaster affected populations.\r\n\r\nUltimate services users are the affected people, but whilst they will benefit from faster and better targeted aid, they will obviously not directly require or want specialist analytical mapping and disaster IM products as much as tangible effective assistance arising from aid well directed by analytical mapping."
+    ],
+    "activity_date_iso_date": [
+      "2019-07-31T00:00:00Z",
+      "2020-12-31T00:00:00Z"
+    ],
+    "reporting_org_narrative": [
+      "MapAction"
+    ]
+  },
+  {
+    "sector_code": [
+      "72050"
+    ],
+    "budget_value": [
+      149794.0,
+      173429.64,
+      205000.0,
+      86570.36,
+      160000.0
+    ],
+    "iati_identifier": "GB-CHC-1126727-EDTProgramme-Project No: 202878-104",
+    "title_narrative": [
+      "Improving efficiency and effectiveness of response in humanitarian emergencies through provision of expert Mapping and GIS services in the first response phases."
+    ],
+    "reporting_org_ref": "GB-CHC-1126727",
+    "transaction_value": [
+      45852.52,
+      21615.67,
+      160000.0,
+      51262.92,
+      37500.0,
+      36506.09,
+      52678.56,
+      56707.19,
+      42716.0,
+      48378.97,
+      61523.06,
+      51013.19,
+      24160.57,
+      22982.57,
+      19924.21,
+      22816.79,
+      25354.8,
+      149794.0,
+      173429.64,
+      86570.36,
+      205000.0,
+      70055.15,
+      39782.18,
+      28547.0
+    ],
+    "activity_date_type": [
+      "2",
+      "3"
+    ],
+    "activity_status_code": "4",
+    "description_narrative": [
+      "Decisions made when decision makers are equipped with the tools to gain a better understanding of available information should lead to better targeting of humanitarian assistance to where it is needed most and can be effectively delivered. They should lead to reduced impacts of disasters on affected communities and faster recovery. Of course there are many factors that influence the making of decisions, but the IASC and WHS identified access to good information as a priority need to humanitarian decision makers.",
+      "Key humanitarian decision makers will be able to make decisions based on reliable information and analysis, presented in easily interpreted visual formats, at the earliest possible opportunity in at least five emergencies each year in which DFID wishes to intervene.",
+      "Key humanitarian decision makers (UN OCHA/UNDAC, national and regional disaster management agencies,  UN and other bodies and I/NGOs)"
+    ],
+    "activity_date_iso_date": [
+      "2017-04-01T00:00:00Z",
+      "2021-12-31T00:00:00Z"
+    ],
+    "reporting_org_narrative": [
+      "MapAction"
+    ]
+  },
+  {
+    "sector_code": [
+      "72050"
+    ],
+    "budget_value": [
+      682729.0
+    ],
+    "iati_identifier": "GB-CHC-1126727-9-2015-CORE",
+    "title_narrative": [
+      "MapAction Operating 2015"
+    ],
+    "sector_narrative": [
+      "Core funding relating to implementation of our strategy:- 1. Leading provider of mapping services at the front end of many of the worlds major emergencies, doubling current capacity to deploy where humanitarian need requires. 2. Build more collaborative operating environments, facilitating collective standards for information management, data sharing and technical development. 3. Lead the transfer of mapping and information management know how to humanitarian responders at national and regional level."
+    ],
+    "reporting_org_ref": "GB-CHC-1126727",
+    "transaction_value": [
+      37789.0,
+      37789.5,
+      37789.5,
+      37789.5,
+      142000.0,
+      237043.0,
+      35228.0,
+      28846.0,
+      8158.0,
+      302956.0,
+      119191.0,
+      2833.0,
+      5096.0,
+      526079.0,
+      384562.0
+    ],
+    "activity_date_type": [
+      "2",
+      "4"
+    ],
+    "activity_status_code": "4",
+    "description_narrative": [
+      "Core Operating Expenditure 2015"
+    ],
+    "activity_date_iso_date": [
+      "2015-01-01T00:00:00Z",
+      "2015-12-31T00:00:00Z"
+    ],
+    "recipient_country_code": [
+      "GB"
+    ],
+    "reporting_org_narrative": [
+      "MapAction"
+    ]
+  },
+  {
+    "sector_code": [
+      "72050"
+    ],
+    "budget_value": [
+      11563.0
+    ],
+    "iati_identifier": "GB-CHC-1126727-1-0054-DMFA",
+    "title_narrative": [
+      "Malawi flood Jan 15"
+    ],
+    "reporting_org_ref": "GB-CHC-1126727",
+    "transaction_value": [
+      11563.0,
+      5976.0,
+      4714.0,
+      873.0
+    ],
+    "activity_date_type": [
+      "2",
+      "4"
+    ],
+    "activity_status_code": "4",
+    "description_narrative": [
+      "Rapid response"
+    ],
+    "activity_date_iso_date": [
+      "2015-01-15T00:00:00Z",
+      "2015-02-20T00:00:00Z"
+    ],
+    "recipient_country_code": [
+      "MW"
+    ],
+    "reporting_org_narrative": [
+      "MapAction"
+    ]
+  },
+  {
+    "sector_code": [
+      "SSOP",
+      "8",
+      "72010"
+    ],
+    "budget_value": [
+      720044.8,
+      180011.2
+    ],
+    "iati_identifier": "XI-IATI-EC_ECHO-ECHO/ERC/BUD/2015/91009",
+    "title_narrative": [
+      "Strengthening effective, evidence-based humanitarian decision-making through information products and innovative development of the humanitarian system."
+    ],
+    "sector_narrative": [
+      "Support to special operations"
+    ],
+    "reporting_org_ref": "XI-IATI-EC_ECHO",
+    "transaction_value": [
+      900056.0,
+      900056.0,
+      720044.8,
+      176029.08
+    ],
+    "activity_date_type": [
+      "1",
+      "2",
+      "3",
+      "4"
+    ],
+    "activity_status_code": "3",
+    "description_narrative": [
+      "Strengthening effective, evidence-based humanitarian decision-making through information products and innovative development of the humanitarian system.",
+      "Transport/comp. act"
+    ],
+    "activity_date_iso_date": [
+      "2015-03-15T00:00:00Z",
+      "2015-03-15T00:00:00Z",
+      "2016-03-14T00:00:00Z",
+      "2016-07-14T00:00:00Z"
+    ],
+    "reporting_org_narrative": [
+      "Directorate-General for European Civil Protection and Humanitarian Aid Operations (ECHO)",
+      "Direction g�n�rale de la protection civile et des op�rations d'aide humanitaire europ�ennes (ECHO)"
+    ]
+  },
+  {
+    "sector_code": [
+      "8",
+      "72010"
+    ],
+    "budget_value": [
+      880000.0,
+      0.0,
+      220000.0
+    ],
+    "iati_identifier": "XI-IATI-EC_ECHO-ECHO/ERC/BUD/2016/91029",
+    "title_narrative": [
+      "Strengthening effective, evidence-based humanitarian decision-making through innovative products and capacity building in GIS services and needs analysis."
+    ],
+    "reporting_org_ref": "XI-IATI-EC_ECHO",
+    "transaction_value": [
+      1100000.0,
+      1100000.0,
+      550000.0,
+      330000.0,
+      214440.0
+    ],
+    "activity_date_type": [
+      "1",
+      "2",
+      "3",
+      "4"
+    ],
+    "activity_status_code": "3",
+    "description_narrative": [
+      "Strengthening effective, evidence-based humanitarian decision-making through innovative products and capacity building in GIS services and needs analysis.",
+      "Transport/comp. act"
+    ],
+    "activity_date_iso_date": [
+      "2017-06-13T00:00:00Z",
+      "2017-06-13T00:00:00Z",
+      "2019-03-12T00:00:00Z",
+      "2019-03-12T00:00:00Z"
+    ],
+    "reporting_org_narrative": [
+      "Directorate-General for European Civil Protection and Humanitarian Aid Operations (ECHO)",
+      "Direction g�n�rale de la protection civile et des op�rations d'aide humanitaire europ�ennes (ECHO)"
+    ]
+  },
+  {
+    "sector_code": [
+      "74020"
+    ],
+    "budget_value": [
+      172800.0,
+      0.0,
+      209000.0,
+      0.0,
+      0.0,
+      216450.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      182280.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      43583.0
+    ],
+    "iati_identifier": "XM-DAC-7-PPR-4000001937",
+    "title_narrative": [
+      "MapAction 2018-2021"
+    ],
+    "sector_narrative": [
+      "Multi-hazard response preparedness"
+    ],
+    "reporting_org_ref": "XM-DAC-7",
+    "transaction_value": [
+      182280.0,
+      43582.0,
+      172800.0,
+      209000.0,
+      216450.0,
+      1862.0,
+      804600.0,
+      11700.0,
+      3950.0,
+      1950.0,
+      2000.0,
+      -3950.0,
+      2000.0
+    ],
+    "activity_date_type": [
+      "1",
+      "2",
+      "3",
+      "4"
+    ],
+    "activity_status_code": "4",
+    "description_narrative": [
+      "Contribution to MapAction for 2018 – 2021 to contribute to the improvement of the use of mapping and geospatial analysis in humanitarian disaster response"
+    ],
+    "activity_date_iso_date": [
+      "2018-09-30T00:00:00Z",
+      "2018-11-15T00:00:00Z",
+      "2021-12-31T00:00:00Z",
+      "2022-10-28T00:00:00Z"
+    ],
+    "reporting_org_narrative": [
+      "Ministry of Foreign Affairs of the Netherlands"
+    ]
+  },
+  {
+    "sector_code": [
+      "74020"
+    ],
+    "budget_value": [
+      178920.0,
+      242490.0,
+      177840.0,
+      0.0,
+      0.0,
+      105300.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      27500.0
+    ],
+    "iati_identifier": "NL-1-PPR-27883",
+    "title_narrative": [
+      "MAP action"
+    ],
+    "sector_narrative": [
+      "Disaster prevention and preparedness"
+    ],
+    "reporting_org_ref": "XM-DAC-7",
+    "transaction_value": [
+      178920.0,
+      242490.0,
+      177840.0,
+      105300.0,
+      27500.0,
+      624960.0,
+      38940.0,
+      -35400.0,
+      105300.0,
+      -2250.0,
+      500.0
+    ],
+    "activity_date_type": [
+      "1",
+      "2",
+      "3",
+      "4"
+    ],
+    "activity_status_code": "4",
+    "description_narrative": [
+      "MAP action"
+    ],
+    "activity_date_iso_date": [
+      "2015-04-10T00:00:00Z",
+      "2015-01-01T00:00:00Z",
+      "2018-06-30T00:00:00Z",
+      "2019-12-10T00:00:00Z"
+    ],
+    "reporting_org_narrative": [
+      "Ministry of Foreign Affairs of the Netherlands"
+    ]
+  },
+  {
+    "sector_code": [
+      "12250"
+    ],
+    "budget_value": [
+      2000000.0
+    ],
+    "iati_identifier": "DK-CVR-20699310-DF212197",
+    "title_narrative": [
+      "H2H COVID-19 Response"
+    ],
+    "reporting_org_ref": "DK-CVR-20699310",
+    "transaction_value": [
+      71708.0,
+      78233.0,
+      54675.0,
+      80817.0,
+      210000.0,
+      79119.0,
+      50339.0,
+      400000.0,
+      20157.0,
+      37754.0,
+      6010.12,
+      16198.84,
+      2458.32,
+      30006.38,
+      65226.96,
+      10845.08,
+      17038.0,
+      31194.46,
+      600000.0,
+      600000.0,
+      400000.0
+    ],
+    "activity_date_type": [
+      "1",
+      "3"
+    ],
+    "activity_status_code": "3",
+    "description_narrative": [
+      "This activity <b> (Supporting the Humanitarian to Humanitarian network in tackling disinformation related to Covid-19 in Africa and Asia) </b> is a component of <i> Coronavirus Outbreak - UK Response reported by DFID </i>, with a funding type of 'Not for profit organisation' and a budget of £2,000,000. <br> This component benefits Developing countries, unspecified, and works in the following sector(s): Infectious disease control."
+    ],
+    "activity_date_iso_date": [
+      "2020-05-21T00:00:00Z",
+      "2021-06-30T00:00:00Z"
+    ],
+    "reporting_org_narrative": [
+      "Danish Refugee Council",
+      "Dansk Flygtningehjaelp"
+    ]
+  }
+]

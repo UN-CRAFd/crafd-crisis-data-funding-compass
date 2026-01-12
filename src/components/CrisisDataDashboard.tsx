@@ -1828,12 +1828,34 @@ const CrisisDataDashboard = ({
           });
 
           // Use the matched record directly, or create a minimal fallback
-          const orgRecord = match || {
+          let orgRecord: {
+            id: string;
+            createdTime?: string;
+            fields: Record<string, unknown>;
+            iati_data?: any;
+          } = match || {
             id: selectedOrganization.id,
             fields: {
               "Org Full Name": selectedOrganization.organizationName,
             },
           };
+
+          // Find matching organization in nested data to get IATI data
+          const nestedMatch = nestedOrganizationsRaw.find((nestedOrg: any) => {
+            const nestedName = (nestedOrg.name || "").replace(/\s+/g, " ").trim().toLowerCase();
+            const nestedFull = (nestedOrg.fields?.["Org Full Name"] || "").replace(/\s+/g, " ").trim().toLowerCase();
+            const nestedShort = (nestedOrg.fields?.["Org Short Name"] || "").replace(/\s+/g, " ").trim().toLowerCase();
+            const target = (selectedOrganization.organizationName || selectedOrganization.id).replace(/\s+/g, " ").trim().toLowerCase();
+            return nestedName === target || nestedFull === target || nestedShort === target || nestedOrg.id === orgRecord.id;
+          });
+
+          // Add IATI data if available from nested organization
+          if (nestedMatch?.iati_data) {
+            orgRecord = {
+              ...orgRecord,
+              iati_data: nestedMatch.iati_data,
+            };
+          }
 
           return (
             <OrganizationModal

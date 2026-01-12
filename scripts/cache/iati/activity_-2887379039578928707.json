@@ -1,0 +1,3595 @@
+[
+  {
+    "sector_code": [
+      "15110",
+      "15144",
+      "16050",
+      "1.2",
+      "17.16",
+      "17.18",
+      "5.1",
+      "8.3"
+    ],
+    "iati_identifier": "XM-DAC-41114-PROJECT-00144825",
+    "title_narrative": [
+      "Sambodhan Addressing Socioeconomic Vulnerabilities"
+    ],
+    "reporting_org_ref": "XM-DAC-41114",
+    "activity_date_type": [
+      "1",
+      "2",
+      "3"
+    ],
+    "activity_status_code": "2",
+    "description_narrative": [
+      "Sambodhan: Addressing Socio-economic Vulnerabilities through Temporary Basic Income in Nepal. This will provide support to local government by strengthening capacity to address socio economic vulnerability."
+    ],
+    "activity_date_iso_date": [
+      "2022-07-01T00:00:00Z",
+      "2022-07-01T00:00:00Z",
+      "2026-06-30T00:00:00Z"
+    ],
+    "recipient_country_code": [
+      "NP"
+    ],
+    "reporting_org_narrative": [
+      "United Nations Development Programme"
+    ],
+    "recipient_country_narrative": [
+      "Nepal"
+    ]
+  },
+  {
+    "sector_code": [
+      "25010",
+      "5.4"
+    ],
+    "iati_identifier": "XM-DAC-41114-PROJECT-01000462",
+    "title_narrative": [
+      "Machine Learning - PIP"
+    ],
+    "reporting_org_ref": "XM-DAC-41114",
+    "activity_date_type": [
+      "1",
+      "2",
+      "3",
+      "4"
+    ],
+    "activity_status_code": "3",
+    "description_narrative": [
+      "Machine Learning PIP (Prediction of Multidimensional Vulnerability Levels across Afghanistan Using Machine Learning)"
+    ],
+    "activity_date_iso_date": [
+      "2023-01-01T00:00:00Z",
+      "2023-01-01T00:00:00Z",
+      "2025-05-20T00:00:00Z",
+      "2024-01-01T00:00:00Z"
+    ],
+    "recipient_country_code": [
+      "AF"
+    ],
+    "reporting_org_narrative": [
+      "United Nations Development Programme"
+    ],
+    "recipient_country_narrative": [
+      "Afghanistan"
+    ]
+  },
+  {
+    "sector_code": [
+      "51010",
+      "10.3",
+      "16.3"
+    ],
+    "iati_identifier": "XM-DAC-41114-PROJECT-00134927",
+    "title_narrative": [
+      "JP Disability Fund UNPRPD"
+    ],
+    "reporting_org_ref": "XM-DAC-41114",
+    "activity_date_type": [
+      "1",
+      "2",
+      "3"
+    ],
+    "activity_status_code": "2",
+    "description_narrative": [
+      "Facilitate an enabling environment for the implementation of CRPD and Law of Georgia on Rights of Persons with Disabilities through effective, sustainable and coordinated mechanisms, policy, regulatory framework and programmes"
+    ],
+    "activity_date_iso_date": [
+      "2021-03-01T00:00:00Z",
+      "2021-03-01T00:00:00Z",
+      "2026-01-31T00:00:00Z"
+    ],
+    "recipient_country_code": [
+      "GE"
+    ],
+    "reporting_org_narrative": [
+      "United Nations Development Programme"
+    ],
+    "recipient_country_narrative": [
+      "Georgia"
+    ]
+  },
+  {
+    "sector_code": [
+      "15112",
+      "10.2",
+      "11.3",
+      "11.a",
+      "16.6",
+      "16.7",
+      "17.1"
+    ],
+    "iati_identifier": "XM-DAC-41114-PROJECT-01001985",
+    "title_narrative": [
+      "Promoting Local Development in Cabo Verde"
+    ],
+    "reporting_org_ref": "XM-DAC-41114",
+    "activity_date_type": [
+      "1",
+      "2",
+      "3"
+    ],
+    "activity_status_code": "2",
+    "description_narrative": [
+      "This project strengthens local development in Cabo Verde by addressing gaps in social and financial service delivery and leveraging local and regional potential. It focuses on three key outcomes:1. Increased local revenue to support development agendas;2. Enhanced capacity of local and national actors to improve development outcomes and impact;3. Reinforced local development through improved planning and targeted projects across all 22 municipalities."
+    ],
+    "activity_date_iso_date": [
+      "2024-01-01T00:00:00Z",
+      "2024-01-01T00:00:00Z",
+      "2027-08-31T00:00:00Z"
+    ],
+    "recipient_country_code": [
+      "CV"
+    ],
+    "reporting_org_narrative": [
+      "United Nations Development Programme"
+    ],
+    "recipient_country_narrative": [
+      "Cape Verde"
+    ]
+  },
+  {
+    "sector_code": [
+      "72050",
+      "17.9"
+    ],
+    "iati_identifier": "XM-DAC-41114-PROJECT-01000212",
+    "title_narrative": [
+      "Appui à la Direction Générale de la Veille Stratégique, de l’Anticipation et Gestion des Crises"
+    ],
+    "reporting_org_ref": "XM-DAC-41114",
+    "activity_date_type": [
+      "1",
+      "2",
+      "3"
+    ],
+    "activity_status_code": "2",
+    "description_narrative": [
+      "Le projet consiste dans un appui à: 1-   la création des POS et des outils relatifs à l’anticipation, la préparation et la réponse aux crises extérieures potentielles ;2-  le développement de la plateforme d’alerte précoce ;3-   la mise en place d’un plan de renforcement des capacités du personnel du MAECNE, qui inclurait une visite d’immersion dans un centre opérationnel spécialisé en gestion de crises au profit de cadres, en fonction des nécessités pédagogiques et techniques du module."
+    ],
+    "activity_date_iso_date": [
+      "2023-01-01T00:00:00Z",
+      "2023-01-01T00:00:00Z",
+      "2025-12-31T00:00:00Z"
+    ],
+    "recipient_country_code": [
+      "DZ"
+    ],
+    "reporting_org_narrative": [
+      "United Nations Development Programme"
+    ],
+    "recipient_country_narrative": [
+      "Algeria"
+    ]
+  },
+  {
+    "sector_code": [
+      "16050",
+      "1.2"
+    ],
+    "iati_identifier": "XM-DAC-41114-PROJECT-00127704",
+    "title_narrative": [
+      "FONDS DAPPUI AU PROCESSUS DE DECENTRALISATION AU CABO V"
+    ],
+    "reporting_org_ref": "XM-DAC-41114",
+    "activity_date_type": [
+      "1",
+      "2",
+      "3"
+    ],
+    "activity_status_code": "2",
+    "description_narrative": [
+      "Le project vise à mettre à disposition des municipalités et des associations locales des ressources financières pour développer des projets ayant comme objectif la lutte contre la pauvreté et l’appui au processus de décentralisation du pays."
+    ],
+    "activity_date_iso_date": [
+      "2020-05-16T00:00:00Z",
+      "2020-05-16T00:00:00Z",
+      "2025-12-31T00:00:00Z"
+    ],
+    "recipient_country_code": [
+      "CV"
+    ],
+    "reporting_org_narrative": [
+      "United Nations Development Programme"
+    ],
+    "recipient_country_narrative": [
+      "Cape Verde"
+    ]
+  },
+  {
+    "sector_code": [
+      "15160",
+      "10.1"
+    ],
+    "iati_identifier": "XM-DAC-41114-PROJECT-01001923",
+    "title_narrative": [
+      "AZ_UNDP_Disability Fund"
+    ],
+    "reporting_org_ref": "XM-DAC-41114",
+    "activity_date_type": [
+      "1",
+      "2",
+      "3",
+      "4"
+    ],
+    "activity_status_code": "3",
+    "description_narrative": [
+      "The Inception Phase will involve a multi-stakeholder process for a period of 8/10 months to carry out a capacity building workshop on disability inclusion and a situational analysis on the rights of persons with disabilities in the country."
+    ],
+    "activity_date_iso_date": [
+      "2024-01-01T00:00:00Z",
+      "2024-01-01T00:00:00Z",
+      "2025-12-11T00:00:00Z",
+      "2025-12-01T00:00:00Z"
+    ],
+    "recipient_country_code": [
+      "AZ"
+    ],
+    "reporting_org_narrative": [
+      "United Nations Development Programme"
+    ],
+    "recipient_country_narrative": [
+      "Azerbaijan"
+    ]
+  },
+  {
+    "sector_code": [
+      "16011",
+      "1.3"
+    ],
+    "iati_identifier": "XM-DAC-41114-PROJECT-00136660",
+    "title_narrative": [
+      "Accelerating Disability Inclusion"
+    ],
+    "reporting_org_ref": "XM-DAC-41114",
+    "activity_date_type": [
+      "1",
+      "2",
+      "3"
+    ],
+    "activity_status_code": "2",
+    "description_narrative": [
+      "Accelerating Disability Inclusion for Adults and Children with Disabilities by addressing the gaps in CRPD implementation and capacity building of national stakeholders"
+    ],
+    "activity_date_iso_date": [
+      "2021-12-01T00:00:00Z",
+      "2021-12-01T00:00:00Z",
+      "2026-07-31T00:00:00Z"
+    ],
+    "recipient_country_code": [
+      "ME"
+    ],
+    "reporting_org_narrative": [
+      "United Nations Development Programme"
+    ],
+    "recipient_country_narrative": [
+      "Montenegro"
+    ]
+  },
+  {
+    "sector_code": [
+      "15144",
+      "1.4",
+      "1.5",
+      "17.9"
+    ],
+    "iati_identifier": "XM-DAC-41114-PROJECT-00126026",
+    "title_narrative": [
+      "Support to strategic interventions"
+    ],
+    "reporting_org_ref": "XM-DAC-41114",
+    "activity_date_type": [
+      "1",
+      "2",
+      "3",
+      "4"
+    ],
+    "activity_status_code": "3",
+    "description_narrative": [
+      "Support to strategic interventions in developing new proposals anddDraft country programme document for Turkmenistan, 2021 - 2025"
+    ],
+    "activity_date_iso_date": [
+      "2020-02-18T00:00:00Z",
+      "2020-02-18T00:00:00Z",
+      "2025-07-29T00:00:00Z",
+      "2024-09-01T00:00:00Z"
+    ],
+    "recipient_country_code": [
+      "TM"
+    ],
+    "reporting_org_narrative": [
+      "United Nations Development Programme"
+    ],
+    "recipient_country_narrative": [
+      "Turkmenistan"
+    ]
+  },
+  {
+    "sector_code": [
+      "16062",
+      "5.1",
+      "5.b",
+      "8.3"
+    ],
+    "iati_identifier": "XM-DAC-41114-PROJECT-00133053",
+    "title_narrative": [
+      "Development of digital gender smart public services"
+    ],
+    "reporting_org_ref": "XM-DAC-41114",
+    "activity_date_type": [
+      "1",
+      "2",
+      "3",
+      "4"
+    ],
+    "activity_status_code": "3",
+    "description_narrative": [
+      "Development of digital gender smart public services. The project aims build on the existing experience and develop and automate digital public services for population and businesses."
+    ],
+    "activity_date_iso_date": [
+      "2020-11-01T00:00:00Z",
+      "2020-11-01T00:00:00Z",
+      "2024-02-20T00:00:00Z",
+      "2023-02-01T00:00:00Z"
+    ],
+    "recipient_country_code": [
+      "TM"
+    ],
+    "reporting_org_narrative": [
+      "United Nations Development Programme"
+    ],
+    "recipient_country_narrative": [
+      "Turkmenistan"
+    ]
+  },
+  {
+    "sector_code": [
+      "74020",
+      "13.1"
+    ],
+    "iati_identifier": "XM-DAC-41114-PROJECT-01000566",
+    "title_narrative": [
+      "Multi-hazard Early Warning System"
+    ],
+    "reporting_org_ref": "XM-DAC-41114",
+    "activity_date_type": [
+      "1",
+      "2",
+      "3",
+      "4"
+    ],
+    "activity_status_code": "3",
+    "description_narrative": [
+      "The overall purpose of the proposal is to respond to the Governments need for a technical assistance in preparation for and development of a viable and large-scale intervention on creation of multi-hazard early warning system (MHEWS). The MHEWS will integrate risks from natural disasters and climate change induced risks, including droughts, sand and salty dust storms, floods, mudslides, gusty winds, heatwaves, extreme cold and ice phenomena, among others to inform the population and key sectors of national economy for timely prevention, adaptation and decision-making process."
+    ],
+    "activity_date_iso_date": [
+      "2023-04-24T00:00:00Z",
+      "2023-04-24T00:00:00Z",
+      "2024-12-30T00:00:00Z",
+      "2023-12-01T00:00:00Z"
+    ],
+    "recipient_country_code": [
+      "TM"
+    ],
+    "reporting_org_narrative": [
+      "United Nations Development Programme"
+    ],
+    "recipient_country_narrative": [
+      "Turkmenistan"
+    ]
+  },
+  {
+    "sector_code": [
+      "33120",
+      "17.1",
+      "8.2"
+    ],
+    "iati_identifier": "XM-DAC-41114-PROJECT-01002584",
+    "title_narrative": [
+      "WTO Accession Support"
+    ],
+    "reporting_org_ref": "XM-DAC-41114",
+    "activity_date_type": [
+      "1",
+      "2",
+      "3",
+      "4"
+    ],
+    "activity_status_code": "3",
+    "description_narrative": [
+      "The proposed initiative will allow build capacities of the Ministry of Finance and Economy as the coordinating body for the accession process and beyond to form negotiation position vis-à-vis other members of the organization with mid- to long-term planning perspective based on the results of UNDP work in previous years with respective developed roadmap"
+    ],
+    "activity_date_iso_date": [
+      "2024-05-23T00:00:00Z",
+      "2024-05-23T00:00:00Z",
+      "2025-08-25T00:00:00Z",
+      "2025-04-01T00:00:00Z"
+    ],
+    "recipient_country_code": [
+      "TM"
+    ],
+    "reporting_org_narrative": [
+      "United Nations Development Programme"
+    ],
+    "recipient_country_narrative": [
+      "Turkmenistan"
+    ]
+  },
+  {
+    "sector_code": [
+      "22040",
+      "8.3"
+    ],
+    "iati_identifier": "XM-DAC-41114-PROJECT-01002609",
+    "title_narrative": [
+      "Supporting IT Competence Centre"
+    ],
+    "reporting_org_ref": "XM-DAC-41114",
+    "activity_date_type": [
+      "1",
+      "2",
+      "3",
+      "4"
+    ],
+    "activity_status_code": "3",
+    "description_narrative": [
+      "The initiative will support building capacities of the current “Digital Solution IT Platform” Center under the Agency Turkmenaragatnashyk to transform to IT Competence Center to fully cater capacity building needs of the national IT sector. T"
+    ],
+    "activity_date_iso_date": [
+      "2024-05-27T00:00:00Z",
+      "2024-05-27T00:00:00Z",
+      "2025-09-18T00:00:00Z",
+      "2025-03-01T00:00:00Z"
+    ],
+    "recipient_country_code": [
+      "TM"
+    ],
+    "reporting_org_narrative": [
+      "United Nations Development Programme"
+    ],
+    "recipient_country_narrative": [
+      "Turkmenistan"
+    ]
+  },
+  {
+    "sector_code": [
+      "22040",
+      "9.b"
+    ],
+    "iati_identifier": "XM-DAC-41114-PROJECT-01004357",
+    "title_narrative": [
+      "Acceleration of digital transformation in Turkmenistan"
+    ],
+    "reporting_org_ref": "XM-DAC-41114",
+    "activity_date_type": [
+      "1",
+      "2",
+      "3"
+    ],
+    "activity_status_code": "2",
+    "description_narrative": [
+      "Turkmenistan stands at a critical juncture in its digital transformation, with the Government demonstrating a clear strategic commitment to economic diversification and digital innovation through its key policy frameworks. However, unlocking the full potential of digital technologies requires overcoming persistent structural challenges. These include gaps in digital infrastructure, an evolving policy environment, limited investments in systemic reforms, and the need for stronger institutional capacity to integrate advanced technologies such as Artificial Intelligence (AI) and digital platforms. Addressing these constraints is essential to accelerating inclusive growth, enhancing global competitiveness, and positioning Turkmenistan as a regional leader in the digital economy. Gender-specific challenges and leveraging opportunities for women and marginalized groups is critical to ensuring an inclusive and equitable digital transformation."
+    ],
+    "activity_date_iso_date": [
+      "2025-04-04T00:00:00Z",
+      "2025-04-04T00:00:00Z",
+      "2026-01-20T00:00:00Z"
+    ],
+    "recipient_country_code": [
+      "TM"
+    ],
+    "reporting_org_narrative": [
+      "United Nations Development Programme"
+    ],
+    "recipient_country_narrative": [
+      "Turkmenistan"
+    ]
+  },
+  {
+    "sector_code": [
+      "15144",
+      "1.1",
+      "1.2",
+      "17.18"
+    ],
+    "iati_identifier": "XM-DAC-41114-PROJECT-00145166",
+    "title_narrative": [
+      "ENGMT HDR Evidencebased insight to support SDG in B"
+    ],
+    "reporting_org_ref": "XM-DAC-41114",
+    "activity_date_type": [
+      "1",
+      "2",
+      "3"
+    ],
+    "activity_status_code": "2",
+    "description_narrative": [
+      "Develop evidence-based subsidies (data platform, methodologies/tools, educational activities and studies /research, making use of advanced technologies and innovation) to enhance PNUD – CO in support to national and subnational governments capacity to formulate, monitor and evaluate public policies ,programmes and projects (including the ones developed in partnership with UNDP), as well as provide relevant inputs and tools for enhanced analytical capacity and decision-making by academia/think tanks, private sector and other national players and stakeholders, supporting national, regional and local development towards the SDGs."
+    ],
+    "activity_date_iso_date": [
+      "2022-07-18T00:00:00Z",
+      "2022-07-18T00:00:00Z",
+      "2026-07-31T00:00:00Z"
+    ],
+    "recipient_country_code": [
+      "BR"
+    ],
+    "reporting_org_narrative": [
+      "United Nations Development Programme"
+    ],
+    "recipient_country_narrative": [
+      "Brazil"
+    ]
+  },
+  {
+    "sector_code": [
+      "15110",
+      "10.5"
+    ],
+    "iati_identifier": "XM-DAC-41114-PROJECT-01001355",
+    "title_narrative": [
+      "Brazil’s G20 Finance Track readiness support"
+    ],
+    "reporting_org_ref": "XM-DAC-41114",
+    "activity_date_type": [
+      "1",
+      "2",
+      "3",
+      "4"
+    ],
+    "activity_status_code": "3",
+    "description_narrative": [
+      "Founded in 1999 after the Asian crisis, the G20 brings together finance ministers and central bank governors to discuss global economic and financial issues. It is recognized as the leading forum for international economic cooperation with a focus on shaping and strengthening global architecture and governance on all major international economic issues. Composed of Argentina, Australia, Brazil, Canada, China, France, Germany, India, Indonesia, Italy, Japan, the Republic of Korea, Mexico, Russia, Saudi Arabia, South Africa, Turkey, the United Kingdom, the United States and the European Union, the group will have Brazil as the hostess country in 2024 (from December 1, 2023 to November 30, 2024). One of the characteristics of the G20 is the existence of the so-called Sherpa and Finance tracks, with thematic sub-groups that meet regularly throughout the year, in dozens of face-to-face meetings in the country hosting the presidency.In particular, the Finance track is made up of the finance ministers or their equivalent and the presidents of the central banks of the member countries. These representatives discuss global economic and financial issues, such as fiscal policies, international trade, financial stability, and international financial architecture. Considering the urgency of time - the presidency begins in December 2023 - and the need to carry out short-term preparatory activities until the project is signed, it is considered opportune for UNDP to provide support in this preparatory phase."
+    ],
+    "activity_date_iso_date": [
+      "2023-10-06T00:00:00Z",
+      "2023-10-06T00:00:00Z",
+      "2025-05-29T00:00:00Z",
+      "2024-01-01T00:00:00Z"
+    ],
+    "recipient_country_code": [
+      "BR"
+    ],
+    "reporting_org_narrative": [
+      "United Nations Development Programme"
+    ],
+    "recipient_country_narrative": [
+      "Brazil"
+    ]
+  },
+  {
+    "sector_code": [
+      "15110",
+      "10.5"
+    ],
+    "iati_identifier": "XM-DAC-41114-PROJECT-01001415",
+    "title_narrative": [
+      "UNDP's readiness support to Brazil's presidency G20"
+    ],
+    "reporting_org_ref": "XM-DAC-41114",
+    "activity_date_type": [
+      "1",
+      "2",
+      "3"
+    ],
+    "activity_status_code": "2",
+    "description_narrative": [
+      "The purpose of this project is to provide support to Brazilian Ministry of Foreign Affairs in the preparatory activities for the G20 track."
+    ],
+    "activity_date_iso_date": [
+      "2023-10-18T00:00:00Z",
+      "2023-10-18T00:00:00Z",
+      "2025-06-30T00:00:00Z"
+    ],
+    "recipient_country_code": [
+      "BR"
+    ],
+    "reporting_org_narrative": [
+      "United Nations Development Programme"
+    ],
+    "recipient_country_narrative": [
+      "Brazil"
+    ]
+  },
+  {
+    "sector_code": [
+      "99810",
+      "6.4"
+    ],
+    "iati_identifier": "XM-DAC-41114-PROJECT-01005159",
+    "title_narrative": [
+      "Accelerating clean energy access to reduce inequality"
+    ],
+    "reporting_org_ref": "XM-DAC-41114",
+    "activity_date_type": [
+      "1",
+      "2",
+      "3"
+    ],
+    "activity_status_code": "2",
+    "description_narrative": [
+      "The solar-powered water system for Atauro Island is being rehabilitated to deliver clean, reliable water to its 1,259 residents in Suco Beloi and Suco Biqueli. The original system failed because it couldn’t handle the island’s steep terrain and hydrology, which ranges from 8 meters at Adara Aldea to 328 meters at the main water source"
+    ],
+    "activity_date_iso_date": [
+      "2025-12-01T00:00:00Z",
+      "2025-12-01T00:00:00Z",
+      "2026-12-31T00:00:00Z"
+    ],
+    "recipient_country_code": [
+      "TL"
+    ],
+    "reporting_org_narrative": [
+      "United Nations Development Programme"
+    ],
+    "recipient_country_narrative": [
+      "Timor-Leste"
+    ]
+  },
+  {
+    "sector_code": [
+      "16050",
+      "25030",
+      "1.a",
+      "8.3"
+    ],
+    "iati_identifier": "XM-DAC-41114-PROJECT-00109211",
+    "title_narrative": [
+      "National MSMEs support"
+    ],
+    "reporting_org_ref": "XM-DAC-41114",
+    "activity_date_type": [
+      "1",
+      "2",
+      "3"
+    ],
+    "activity_status_code": "2",
+    "description_narrative": [
+      "In the UNDP’s portfolio of value-based economic models, UNDP is adopting an exploratory and experimental approach to introduce, test schemes toward value-based economy in the State of Palestine."
+    ],
+    "activity_date_iso_date": [
+      "2022-01-01T00:00:00Z",
+      "2022-01-01T00:00:00Z",
+      "2024-12-31T00:00:00Z"
+    ],
+    "recipient_country_code": [
+      "PS"
+    ],
+    "reporting_org_narrative": [
+      "United Nations Development Programme"
+    ],
+    "recipient_country_narrative": [
+      "Prog for Palestinian People"
+    ]
+  },
+  {
+    "sector_code": [
+      "14015"
+    ],
+    "iati_identifier": "XM-DAC-41114-PROJECT-00116170",
+    "title_narrative": [
+      "PAPP Engagement Facility"
+    ],
+    "reporting_org_ref": "XM-DAC-41114",
+    "activity_date_type": [
+      "1",
+      "2",
+      "3",
+      "4"
+    ],
+    "activity_status_code": "3",
+    "description_narrative": [
+      "PAPP’s engagement facility provides a rapid and flexible response mechanism to support upstream policy results, crisis responses and the testing of innovations with scale-up potential."
+    ],
+    "activity_date_iso_date": [
+      "2022-07-01T00:00:00Z",
+      "2022-07-01T00:00:00Z",
+      "2025-03-03T00:00:00Z",
+      "2025-03-03T00:00:00Z"
+    ],
+    "recipient_country_code": [
+      "PS"
+    ],
+    "reporting_org_narrative": [
+      "United Nations Development Programme"
+    ],
+    "recipient_country_narrative": [
+      "Prog for Palestinian People"
+    ]
+  },
+  {
+    "sector_code": [
+      "91010"
+    ],
+    "iati_identifier": "XM-DAC-41114-PROJECT-00042633",
+    "title_narrative": [
+      "Management Plan"
+    ],
+    "reporting_org_ref": "XM-DAC-41114",
+    "activity_date_type": [
+      "1",
+      "2",
+      "3"
+    ],
+    "activity_status_code": "2",
+    "description_narrative": [
+      "Management Plan project the project is created to manage in ATLAS the UNDP PAPP operational activities including cost of staffing and operational costs."
+    ],
+    "activity_date_iso_date": [
+      "2006-01-01T00:00:00Z",
+      "2006-01-01T00:00:00Z",
+      "2030-12-31T00:00:00Z"
+    ],
+    "recipient_country_code": [
+      "PS"
+    ],
+    "reporting_org_narrative": [
+      "United Nations Development Programme"
+    ],
+    "recipient_country_narrative": [
+      "Prog for Palestinian People"
+    ]
+  },
+  {
+    "sector_code": [
+      "16011",
+      "16020",
+      "25030",
+      "91010",
+      "1.b",
+      "10.2",
+      "17.14",
+      "5.5",
+      "5.c",
+      "8.2",
+      "8.3"
+    ],
+    "iati_identifier": "XM-DAC-41114-PROJECT-01002410",
+    "title_narrative": [
+      "Strengthening Capacities for Green, Inclusive Economic Growth"
+    ],
+    "reporting_org_ref": "XM-DAC-41114",
+    "activity_date_type": [
+      "1",
+      "2",
+      "3"
+    ],
+    "activity_status_code": "2",
+    "description_narrative": [
+      "This one-year project initiation plan aims to prepare the foundation for a NIM project to be implemented from 2025-2028 that with the goal to strengthen capacities of institutions to develop and implement gender responsive national and local development plans, which are linked to budgets and supported by data for enhanced productivity and improved local economic development; It also aims to enhance capacities of Micro, Small and Medium Enterprises (MSMEs) to access finance, digital and business development services, and leverage Africa Continental Free Trade Area (AfCFTA) opportunities, in order to create sustainable livelihoods and employment. Furthermore, the project will enable national and sub-national institutions to provide access to inclusive and sustainable social protection services for the poor especially women, youth, and persons with disabilities particularly those in the rural and marginalised communities."
+    ],
+    "activity_date_iso_date": [
+      "2024-01-01T00:00:00Z",
+      "2024-01-01T00:00:00Z",
+      "2026-12-31T00:00:00Z"
+    ],
+    "recipient_country_code": [
+      "GM"
+    ],
+    "reporting_org_narrative": [
+      "United Nations Development Programme"
+    ],
+    "recipient_country_narrative": [
+      "Gambia"
+    ]
+  },
+  {
+    "sector_code": [
+      "99810",
+      "12.4"
+    ],
+    "iati_identifier": "XM-DAC-41114-PROJECT-01003020",
+    "title_narrative": [
+      "Capacity Building for UPoPS and PCBs THE GAMBIA (TRAC)"
+    ],
+    "reporting_org_ref": "XM-DAC-41114",
+    "activity_date_type": [
+      "1",
+      "2",
+      "3"
+    ],
+    "activity_status_code": "2",
+    "description_narrative": [
+      "The project intends to support the Gambia with the necessary technical and financial assistance to reduce the risks posed by PCBs and uPOPs to the environment and human health. The project will include the identification and disposal of 75 t of PCB-contaminated equipment and waste, and the reduction of 35 g I-TEQ/year of uPOPs through improved waste management practices and reduction of open burning of waste.The project will be implemented in partnership with the relevant institutional and industrial stakeholders, i.e. National Environment Agency (NEA), Ministry of Environment, Climate Change & Natural Resources (MECCNAR), National Water and Electricity Co. Ltd (NAWEC), Kanifing Municipal Council (KMC), and others. The project will ensure that an adequate level of sustained capacity for the sound management of PCBs and waste management/uPOPs reduction will be built for the management of any further hazardous waste identified (such as PCBs) after the project’s closure and for scaling-up improved waste management practices."
+    ],
+    "activity_date_iso_date": [
+      "2024-01-01T00:00:00Z",
+      "2024-01-01T00:00:00Z",
+      "2026-12-31T00:00:00Z"
+    ],
+    "recipient_country_code": [
+      "GM"
+    ],
+    "reporting_org_narrative": [
+      "United Nations Development Programme"
+    ],
+    "recipient_country_narrative": [
+      "Gambia"
+    ]
+  },
+  {
+    "sector_code": [
+      "15110",
+      "15112",
+      "10.2",
+      "16.6",
+      "16.7",
+      "5.1"
+    ],
+    "iati_identifier": "XM-DAC-41114-PROJECT-01004125",
+    "title_narrative": [
+      "Responsive, Accountable Governance and Peacebuilding Project 2.0"
+    ],
+    "reporting_org_ref": "XM-DAC-41114",
+    "activity_date_type": [
+      "1",
+      "2",
+      "3"
+    ],
+    "activity_status_code": "2",
+    "description_narrative": [
+      "The “Responsive, Accountable Governance and Peacebuilding (RAGP) Project Initiation Plan 2.0” is designed to build on the gains from the implementation of its predecessor PIP 1.0 (Jan-Dec 2024) and capitalizes on the recent democratic consolida-tion in the country while addressing critical development gaps in The Gambia’s governance, peacebuilding, and socio-eco-nomic transformation. It seeks to contribute towards achieving the UNSDCF (2024-2028) Outcome 2.1, which states: “By 2028, marginalized and vulnerable people in The Gambia participate in functional, accountable, and transparent institutions for the efficient delivery of public services and good governance.”"
+    ],
+    "activity_date_iso_date": [
+      "2025-01-01T00:00:00Z",
+      "2025-01-01T00:00:00Z",
+      "2026-12-31T00:00:00Z"
+    ],
+    "recipient_country_code": [
+      "GM"
+    ],
+    "reporting_org_narrative": [
+      "United Nations Development Programme"
+    ],
+    "recipient_country_narrative": [
+      "Gambia"
+    ]
+  },
+  {
+    "sector_code": [
+      "23210",
+      "31220",
+      "74020",
+      "91010",
+      "99810",
+      "12.4",
+      "12.5",
+      "13.1",
+      "13.2",
+      "13.3",
+      "15.1",
+      "15.2",
+      "15.5",
+      "15.a",
+      "5.5",
+      "7.1",
+      "7.2",
+      "7.b"
+    ],
+    "iati_identifier": "XM-DAC-41114-PROJECT-01004134",
+    "title_narrative": [
+      "Integrated Environmental Management and Climate Resilience Project (IEMCRP) 2025"
+    ],
+    "reporting_org_ref": "XM-DAC-41114",
+    "activity_date_type": [
+      "1",
+      "2",
+      "3"
+    ],
+    "activity_status_code": "2",
+    "description_narrative": [
+      "The Gambia is characterized by increasing deforestation, land degradation, loss of biodiversity linked to loss of habitat, and coastal degradation. Environmental vulnerabilities range from fragility of the land coupled with adverse impacts of natural hazards worsened by the emerging impacts of climate change. Climate change affects the country’s agriculture, tourism, fisheries, forestry, health sectors, threatens the livelihoods of people, reduces the resilience of ecosystems, adaptative capacities of communities, and contributes to unsustainable economic growth. The upland watershed ecosystem has been disturbed and degraded largely due to high population pressure on limited natural resources, increased erosion caused by high water runoff rates, drying of inland valleys and river tributaries, and water stress for crops and livestock. Over the years rapid growth in population as well as urbanization has contributed to deterioration of the environment. The natural forest continues to disappear or at least deteriorate due to high demand for fuel wood, charcoal and timber which has led to increase felling of trees. Despite its progressive development, The Gambia is still characterized by pervasive and limited chemicals and waste management infrastructure and services. It is estimated that the nation generates over 438 tons/day (over 159, 670 tons/year) of municipal solid waste (MSW), which is projected to increase to over 1,000 tons/day by 2030 (KMC 2023).Aligned with the strategic vision and targets of The Gambias Nationally Determined Contributions (NDCs), theproject will contribute to sustainable natural resource management through the promotion of adaptive management approaches as well as enhancing resilience of vulnerable communities and systems to climate and disaster risksthrough the provision of integrated and mutually reinforcing upstream and downstream livelihood support mechanisms and facilitating access to affordable and sustainable clean e"
+    ],
+    "activity_date_iso_date": [
+      "2024-09-01T00:00:00Z",
+      "2024-09-01T00:00:00Z",
+      "2026-12-31T00:00:00Z"
+    ],
+    "recipient_country_code": [
+      "GM"
+    ],
+    "reporting_org_narrative": [
+      "United Nations Development Programme"
+    ],
+    "recipient_country_narrative": [
+      "Gambia"
+    ]
+  },
+  {
+    "sector_code": [
+      "15127",
+      "16011",
+      "16020",
+      "32110",
+      "51010",
+      "72050",
+      "91010",
+      "1.1",
+      "1.3",
+      "1.b",
+      "17.11",
+      "17.14",
+      "17.16",
+      "8.3",
+      "9.b"
+    ],
+    "iati_identifier": "XM-DAC-41114-PROJECT-01004321",
+    "title_narrative": [
+      "Strengthening Capacities for Green, Inclusive Economic Growth 2.0"
+    ],
+    "reporting_org_ref": "XM-DAC-41114",
+    "activity_date_type": [
+      "1",
+      "2",
+      "3"
+    ],
+    "activity_status_code": "2",
+    "description_narrative": [
+      "This one-year project initiation plan aims to prepare the foundation for a National Implementation Modality (NIM) project to be implemented from 2025-2028 with the goal of strengthening capacities of institutions to develop and implement gender responsive national and local development plans, which are linked to budgets and supported by data for enhanced productivity and improved local economic development. It also aims to enhance capacities of Micro, Small and Medium Enterprises (MSMEs) to access finance, digital and business development services, and leverage Africa Continental Free Trade Area (AfCFTA) opportunities, to create sustainable livelihoods and employment. Furthermore, the project will enable national and sub-national institutions to provide access to inclusive and sustainable social protection services for the poor especially women, youth and persons with disabilities particularly those in the rural and marginalized communities. Finally, the project will continue to support the enhancement of conducive environments such that government, development partners, private sector Docusign Envelope ID: 78A0BE00-ECE8-4835-963F-210189F46C07and the diaspora are better coordinated to contribute to sustained development financing, and effective partnership for integrated implementation of the NDP, SDGs and AU Agenda 2063."
+    ],
+    "activity_date_iso_date": [
+      "2025-01-01T00:00:00Z",
+      "2025-01-01T00:00:00Z",
+      "2026-12-31T00:00:00Z"
+    ],
+    "recipient_country_code": [
+      "GM"
+    ],
+    "reporting_org_narrative": [
+      "United Nations Development Programme"
+    ],
+    "recipient_country_narrative": [
+      "Gambia"
+    ]
+  },
+  {
+    "sector_code": [
+      "51010",
+      "1.3"
+    ],
+    "iati_identifier": "XM-DAC-41114-PROJECT-00133764",
+    "title_narrative": [
+      "Economic and Social Vulnerability Project"
+    ],
+    "reporting_org_ref": "XM-DAC-41114",
+    "activity_date_type": [
+      "1",
+      "2",
+      "3"
+    ],
+    "activity_status_code": "2",
+    "description_narrative": [
+      "Reduction of Economic and Social Vulnerability of the Poor and Marginalized populations in Protected Areas affected by COVID-19"
+    ],
+    "activity_date_iso_date": [
+      "2021-01-01T00:00:00Z",
+      "2021-01-01T00:00:00Z",
+      "2025-12-31T00:00:00Z"
+    ],
+    "recipient_country_code": [
+      "GM"
+    ],
+    "reporting_org_narrative": [
+      "United Nations Development Programme"
+    ],
+    "recipient_country_narrative": [
+      "Gambia"
+    ]
+  },
+  {
+    "sector_code": [
+      "72010"
+    ],
+    "iati_identifier": "XM-DAC-41114-PROJECT-01004316",
+    "title_narrative": [
+      "Coordinación Emergencia Oscar y Rafael"
+    ],
+    "reporting_org_ref": "XM-DAC-41114",
+    "activity_date_type": [
+      "1",
+      "2",
+      "3"
+    ],
+    "activity_status_code": "2",
+    "description_narrative": [
+      "Fortalecer las capacidades de la CO para garantizar la movilización de fondos y la implementación de las acciones inmediatas e impulsar la Recuperación Temprana, bajo el principio Reconstruyendo Mejor y la integración de dimensiones clave desde los enfoques género- responsivo y género-transformativo; así como la gestión del Plan de Acción como líder del sector Manejo de Albergues, Vivienda y Recuperación Temprana."
+    ],
+    "activity_date_iso_date": [
+      "2025-03-24T00:00:00Z",
+      "2025-03-24T00:00:00Z",
+      "2025-12-31T00:00:00Z"
+    ],
+    "recipient_country_code": [
+      "CU"
+    ],
+    "reporting_org_narrative": [
+      "United Nations Development Programme"
+    ],
+    "recipient_country_narrative": [
+      "Cuba"
+    ]
+  },
+  {
+    "sector_code": [
+      "72010"
+    ],
+    "iati_identifier": "XM-DAC-41114-PROJECT-01005211",
+    "title_narrative": [
+      "RESPUESTA INMEDIATA MELISSA BC"
+    ],
+    "reporting_org_ref": "XM-DAC-41114",
+    "activity_date_type": [
+      "1",
+      "2",
+      "3"
+    ],
+    "activity_status_code": "2",
+    "description_narrative": [
+      "Este proyecto tiene como objetivo apoyar la respuesta inmediata para el restablecimiento de la habitabilidad básica de familias afectadas por el impacto del huracán Melissa en las provincias orientales de Cuba. Tiene un enfoque de derechos, equidad de género e inclusión y promueve la corresponsabilidad en los cuidados."
+    ],
+    "activity_date_iso_date": [
+      "2025-11-21T00:00:00Z",
+      "2025-11-21T00:00:00Z",
+      "2026-12-31T00:00:00Z"
+    ],
+    "recipient_country_code": [
+      "CU"
+    ],
+    "reporting_org_narrative": [
+      "United Nations Development Programme"
+    ],
+    "recipient_country_narrative": [
+      "Cuba"
+    ]
+  },
+  {
+    "sector_code": [
+      "72010"
+    ],
+    "iati_identifier": "XM-DAC-41114-PROJECT-01005212",
+    "title_narrative": [
+      "RESPUESTA INMEDIATA MELISSA RBLAC"
+    ],
+    "reporting_org_ref": "XM-DAC-41114",
+    "activity_date_type": [
+      "1",
+      "2",
+      "3"
+    ],
+    "activity_status_code": "2",
+    "description_narrative": [
+      "Este proyecto tiene como objetivo apoyar la respuesta inmediata para el restablecimiento de la habitabilidad básica de familias afectadas por el impacto del huracán Melissa en las provincias orientales de Cuba. Tiene un enfoque de derechos, equidad de género e inclusión y promueve la corresponsabilidad en los cuidados."
+    ],
+    "activity_date_iso_date": [
+      "2025-11-17T00:00:00Z",
+      "2025-11-17T00:00:00Z",
+      "2026-12-31T00:00:00Z"
+    ],
+    "recipient_country_code": [
+      "CU"
+    ],
+    "reporting_org_narrative": [
+      "United Nations Development Programme"
+    ],
+    "recipient_country_narrative": [
+      "Cuba"
+    ]
+  },
+  {
+    "sector_code": [
+      "99810"
+    ],
+    "iati_identifier": "XM-DAC-41114-PROJECT-00046380",
+    "title_narrative": [
+      "UN COMMON PREMISES  SERVICES IN THE GAMBIA"
+    ],
+    "reporting_org_ref": "XM-DAC-41114",
+    "activity_date_type": [
+      "1",
+      "2",
+      "3"
+    ],
+    "activity_status_code": "2",
+    "description_narrative": [
+      "Common services for premises and facilities related harmonized management among United Nations agencies"
+    ],
+    "activity_date_iso_date": [
+      "2011-01-01T00:00:00Z",
+      "2011-01-01T00:00:00Z",
+      "2031-12-31T00:00:00Z"
+    ],
+    "recipient_country_code": [
+      "GM"
+    ],
+    "reporting_org_narrative": [
+      "United Nations Development Programme"
+    ],
+    "recipient_country_narrative": [
+      "Gambia"
+    ]
+  },
+  {
+    "sector_code": [
+      "15142",
+      "1.2"
+    ],
+    "iati_identifier": "XM-DAC-41114-PROJECT-01002998",
+    "title_narrative": [
+      "Support to CPD Implementation - Angola"
+    ],
+    "reporting_org_ref": "XM-DAC-41114",
+    "activity_date_type": [
+      "1",
+      "2",
+      "3"
+    ],
+    "activity_status_code": "2",
+    "description_narrative": [
+      "The country programme is firmly anchored in NDP priorities and aligned with the 2022-2025 UNDP Strategic Plan, 2022-2025 UNDP Gender Equality Strategy and UNDP Renewed Strategic Offer for Africa. It contributes to four outcomes of the 2024-2028 UNSDCF where, by 2028, more people, especially women, youth and the most vulnerable will: (a) use and have equitable access to quality social and productive services delivered by effective institutions; (b) participate in, and benefit from, more effective and inclusive democratic governance anchored on human rights, strengthening prevention capacities and promoting peace and security in the region; (c) participate in and benefit from more inclusive, diversified and sustainable economic growth, and (d) benefit from sustainable management of the environment and natural resources and are resilient to disasters and climate change"
+    ],
+    "activity_date_iso_date": [
+      "2024-01-01T00:00:00Z",
+      "2024-01-01T00:00:00Z",
+      "2028-12-31T00:00:00Z"
+    ],
+    "recipient_country_code": [
+      "AO"
+    ],
+    "reporting_org_narrative": [
+      "United Nations Development Programme"
+    ],
+    "recipient_country_narrative": [
+      "Angola"
+    ]
+  },
+  {
+    "sector_code": [
+      "33210",
+      "1.5",
+      "11.b",
+      "13.1",
+      "14.2",
+      "17.14",
+      "9.b"
+    ],
+    "iati_identifier": "XM-DAC-41114-PROJECT-00133226",
+    "title_narrative": [
+      "Reimagining Tourism in the Maldives"
+    ],
+    "reporting_org_ref": "XM-DAC-41114",
+    "activity_date_type": [
+      "1",
+      "2",
+      "3",
+      "4"
+    ],
+    "activity_status_code": "3",
+    "description_narrative": [
+      "Reimagining Tourism in the Maldives - Developing Sustainable and Inclusive Pathways for Enhancing Resiliency"
+    ],
+    "activity_date_iso_date": [
+      "2020-12-28T00:00:00Z",
+      "2020-12-28T00:00:00Z",
+      "2023-11-15T00:00:00Z",
+      "2023-03-01T00:00:00Z"
+    ],
+    "recipient_country_code": [
+      "MV"
+    ],
+    "reporting_org_narrative": [
+      "United Nations Development Programme"
+    ],
+    "recipient_country_narrative": [
+      "Maldives"
+    ]
+  },
+  {
+    "sector_code": [
+      "91010"
+    ],
+    "iati_identifier": "XM-DAC-41114-PROJECT-00064919",
+    "title_narrative": [
+      "DEVELOPMENT EFFECTIVNESSDRC"
+    ],
+    "reporting_org_ref": "XM-DAC-41114",
+    "activity_date_type": [
+      "1",
+      "2",
+      "3"
+    ],
+    "activity_status_code": "2",
+    "description_narrative": [
+      "DEVELOPMENT EFFECTIVNESS en République Démocratique du Congo est un projet de gestion opérationnelle qui a été crée pour loger les fonds permettant dappuyer le fonctionnement du Bureau."
+    ],
+    "activity_date_iso_date": [
+      "2012-01-01T00:00:00Z",
+      "2012-01-01T00:00:00Z",
+      "2024-12-31T00:00:00Z"
+    ],
+    "recipient_country_code": [
+      "CD"
+    ],
+    "reporting_org_narrative": [
+      "United Nations Development Programme"
+    ],
+    "recipient_country_narrative": [
+      "Democratic Republic of Congo"
+    ]
+  },
+  {
+    "sector_code": [
+      "12281",
+      "3.c"
+    ],
+    "iati_identifier": "XM-DAC-41114-PROJECT-01000329",
+    "title_narrative": [
+      "Maldives Health Services - MHS"
+    ],
+    "reporting_org_ref": "XM-DAC-41114",
+    "activity_date_type": [
+      "1",
+      "2",
+      "3",
+      "4"
+    ],
+    "activity_status_code": "3",
+    "description_narrative": [
+      "The project aims to assist the Ministry of Health reach SDG Goal 3 on Good Health and Wellbeing. Building on lessons learned during the Covid-19 pandemic and its impact on healthcare services and wellbeing of society, the Government of Maldives is accelerating its focus on reviving the Primary Health Care (PHC) system that is outlined in the Maldives’s National Resilience and Recovery Plan. To support the implementation of the PHC model, a separate institution entitled the Maldives Health Services (MHS) will be established. Key components of this initiation plan will be to design the strategy, structure and systems needed to operationalize the PHC system, including required investments into human capital and “future of work,” training and capacity building needs of island level community health workers, health care professionals and other relevant stakeholders in primary healthcare. The PIP will contribute to the development of the programme document that will support the Ministry of Health, Maldives in its"
+    ],
+    "activity_date_iso_date": [
+      "2023-03-01T00:00:00Z",
+      "2023-03-01T00:00:00Z",
+      "2024-08-12T00:00:00Z",
+      "2024-03-01T00:00:00Z"
+    ],
+    "recipient_country_code": [
+      "MV"
+    ],
+    "reporting_org_narrative": [
+      "United Nations Development Programme"
+    ],
+    "recipient_country_narrative": [
+      "Maldives"
+    ]
+  },
+  {
+    "sector_code": [
+      "99810"
+    ],
+    "iati_identifier": "XM-DAC-41114-PROJECT-01000069",
+    "title_narrative": [
+      "BUREAU DE BUKAVU -UNDP-COD-Fonctionnement"
+    ],
+    "reporting_org_ref": "XM-DAC-41114",
+    "activity_date_type": [
+      "1",
+      "2",
+      "3"
+    ],
+    "activity_status_code": "2",
+    "description_narrative": [
+      "Bureau de Bukavu. il sagit dun projet qui consiste a appuyer le fonctionnement global du bureau de Bukavu"
+    ],
+    "activity_date_iso_date": [
+      "2023-01-01T00:00:00Z",
+      "2023-01-01T00:00:00Z",
+      "2025-12-31T00:00:00Z"
+    ],
+    "recipient_country_code": [
+      "CD"
+    ],
+    "reporting_org_narrative": [
+      "United Nations Development Programme"
+    ],
+    "recipient_country_narrative": [
+      "Democratic Republic of Congo"
+    ]
+  },
+  {
+    "sector_code": [
+      "99810"
+    ],
+    "iati_identifier": "XM-DAC-41114-PROJECT-01000693",
+    "title_narrative": [
+      "Services Communs Kananga"
+    ],
+    "reporting_org_ref": "XM-DAC-41114",
+    "activity_date_type": [
+      "1",
+      "2",
+      "3"
+    ],
+    "activity_status_code": "2",
+    "description_narrative": [
+      "Il sagit dun projet dédié au fonctionnement du Bureau Pays RDC plus précisément de la représentation de Kananga."
+    ],
+    "activity_date_iso_date": [
+      "2023-01-01T00:00:00Z",
+      "2023-01-01T00:00:00Z",
+      "2026-12-31T00:00:00Z"
+    ],
+    "recipient_country_code": [
+      "CD"
+    ],
+    "reporting_org_narrative": [
+      "United Nations Development Programme"
+    ],
+    "recipient_country_narrative": [
+      "Democratic Republic of Congo"
+    ]
+  },
+  {
+    "sector_code": [
+      "74020",
+      "11.5",
+      "11.b",
+      "13.1"
+    ],
+    "iati_identifier": "XM-DAC-41114-PROJECT-01000815",
+    "title_narrative": [
+      "Plan d’initiation - Résilience aux crises et catastrophes"
+    ],
+    "reporting_org_ref": "XM-DAC-41114",
+    "activity_date_type": [
+      "1",
+      "2",
+      "3"
+    ],
+    "activity_status_code": "2",
+    "description_narrative": [
+      "Ce plan d’initiation s’inscrit dans l’engagement du PNUD à appuyer le Gouvernement de la RDC dans la mise en œuvre du CDP 2020 – 2024 notamment en matière de renforcement des capacités des institutions et des communautés pour faire face aux crises et catastrophes naturelles et climatiques."
+    ],
+    "activity_date_iso_date": [
+      "2023-01-01T00:00:00Z",
+      "2023-01-01T00:00:00Z",
+      "2030-12-31T00:00:00Z"
+    ],
+    "recipient_country_code": [
+      "CD"
+    ],
+    "reporting_org_narrative": [
+      "United Nations Development Programme"
+    ],
+    "recipient_country_narrative": [
+      "Democratic Republic of Congo"
+    ]
+  },
+  {
+    "sector_code": [
+      "15220",
+      "16.a"
+    ],
+    "iati_identifier": "XM-DAC-41114-PROJECT-01000816",
+    "title_narrative": [
+      "Plan Initiation-Prévention et transformation des conflits pour la stabilisation de la RDC"
+    ],
+    "reporting_org_ref": "XM-DAC-41114",
+    "activity_date_type": [
+      "1",
+      "2",
+      "3"
+    ],
+    "activity_status_code": "2",
+    "description_narrative": [
+      "Le présent plan d’initiation vise à consolider les initiatives en matière de « prévention et gestion des conflits » en partant de (i) leçons apprises lors de la mise en œuvre des programmes et stratégies expérimentées à l’Est du Pays depuis 2008 (STAREC, ISSSS,…) ainsi que (ii) des conclusions des études menées par le PNUD au courant de l’année 2022 dans les provinces du Kasai, Kasai central et Tanganyika sur les dynamiques de conflits et les priorités identifiées pour la consolidation de la paix et la stabilisation."
+    ],
+    "activity_date_iso_date": [
+      "2023-01-01T00:00:00Z",
+      "2023-01-01T00:00:00Z",
+      "2025-12-31T00:00:00Z"
+    ],
+    "recipient_country_code": [
+      "CD"
+    ],
+    "reporting_org_narrative": [
+      "United Nations Development Programme"
+    ],
+    "recipient_country_narrative": [
+      "Democratic Republic of Congo"
+    ]
+  },
+  {
+    "sector_code": [
+      "15110",
+      "15111",
+      "15112",
+      "10.3"
+    ],
+    "iati_identifier": "XM-DAC-41114-PROJECT-01000817",
+    "title_narrative": [
+      "Plan Initiation - Promotion du Leadership féminin, égalité des sexes, prévention et lutte contre les violences basées sur le genre"
+    ],
+    "reporting_org_ref": "XM-DAC-41114",
+    "activity_date_type": [
+      "1",
+      "2",
+      "3"
+    ],
+    "activity_status_code": "2",
+    "description_narrative": [
+      "Promotion du Leadership féminin, égalité des sexes, prévention et lutte contre les violences basées sur le genre/Plan dinitiation"
+    ],
+    "activity_date_iso_date": [
+      "2023-01-01T00:00:00Z",
+      "2023-01-01T00:00:00Z",
+      "2026-12-31T00:00:00Z"
+    ],
+    "recipient_country_code": [
+      "CD"
+    ],
+    "reporting_org_narrative": [
+      "United Nations Development Programme"
+    ],
+    "recipient_country_narrative": [
+      "Democratic Republic of Congo"
+    ]
+  },
+  {
+    "sector_code": [
+      "23210",
+      "7.1",
+      "7.2"
+    ],
+    "iati_identifier": "XM-DAC-41114-PROJECT-01001072",
+    "title_narrative": [
+      "DRC Scaling solar applications for agricultural uses"
+    ],
+    "reporting_org_ref": "XM-DAC-41114",
+    "activity_date_type": [
+      "1",
+      "2",
+      "3"
+    ],
+    "activity_status_code": "2",
+    "description_narrative": [
+      "Ce projet vise l’optimisation et l’intégration dun écosystème de marché qui soutienne un marché de lénergie solaire axé sur la demande, y compris la démonstration de la technologie ; le renforcement des capacités qualifiées locales ainsi que le développement des politiques et réglementations nationales."
+    ],
+    "activity_date_iso_date": [
+      "2023-04-01T00:00:00Z",
+      "2023-04-01T00:00:00Z",
+      "2025-12-31T00:00:00Z"
+    ],
+    "recipient_country_code": [
+      "CD"
+    ],
+    "reporting_org_narrative": [
+      "United Nations Development Programme"
+    ],
+    "recipient_country_narrative": [
+      "Democratic Republic of Congo"
+    ]
+  },
+  {
+    "sector_code": [
+      "11231",
+      "25030",
+      "31110",
+      "31120",
+      "31150",
+      "31181",
+      "31182",
+      "31193",
+      "32110",
+      "32210",
+      "1.1",
+      "1.4",
+      "1.5",
+      "12.2",
+      "2.3",
+      "2.4",
+      "2.5",
+      "2.a",
+      "2.b",
+      "2.c",
+      "8.2",
+      "8.3",
+      "8.5",
+      "8.6"
+    ],
+    "iati_identifier": "XM-DAC-41114-PROJECT-01001244",
+    "title_narrative": [
+      "Projet d’appui aux chaînes des valeurs - PAC"
+    ],
+    "reporting_org_ref": "XM-DAC-41114",
+    "activity_date_type": [
+      "1",
+      "2",
+      "3"
+    ],
+    "activity_status_code": "2",
+    "description_narrative": [
+      "la RDC dispose d’importants atouts dans le domaine agricole et minier. Mais malheureusement, l’impact de ces avantages peine à se refléter dans le vécu quotidien de la population dont l’indice de Développement humain est l’un des plus faibles en Afrique. Le projet d’appui aux chaînes des valeurs (PAC) se propose de contribuer non seulement à la sécurité alimentaire de la population, mais également la création des emplois et des revenus en milieu rural et renforcer ainsi la participation du pays au commerce continental."
+    ],
+    "activity_date_iso_date": [
+      "2022-04-30T00:00:00Z",
+      "2022-04-30T00:00:00Z",
+      "2026-04-30T00:00:00Z"
+    ],
+    "recipient_country_code": [
+      "CD"
+    ],
+    "reporting_org_narrative": [
+      "United Nations Development Programme"
+    ],
+    "recipient_country_narrative": [
+      "Democratic Republic of Congo"
+    ]
+  },
+  {
+    "sector_code": [
+      "12191",
+      "3.3"
+    ],
+    "iati_identifier": "XM-DAC-41114-PROJECT-01002943",
+    "title_narrative": [
+      "Assistance à la preparation et au démarrage d’activités prioritaires du Projet d’appui a la mise en œuvre de la subvention VIH-TB du GC7-Fond Mondial"
+    ],
+    "reporting_org_ref": "XM-DAC-41114",
+    "activity_date_type": [
+      "1",
+      "2",
+      "3"
+    ],
+    "activity_status_code": "2",
+    "description_narrative": [
+      "Assistance à la préparation et au démarrage d’activités prioritaires du Projet d’appui a la mise en œuvre de la subvention VIH-TB du GC7-Fond Mondial"
+    ],
+    "activity_date_iso_date": [
+      "2024-07-28T00:00:00Z",
+      "2024-07-28T00:00:00Z",
+      "2025-12-31T00:00:00Z"
+    ],
+    "recipient_country_code": [
+      "CD"
+    ],
+    "reporting_org_narrative": [
+      "United Nations Development Programme"
+    ],
+    "recipient_country_narrative": [
+      "Democratic Republic of Congo"
+    ]
+  },
+  {
+    "sector_code": [
+      "15112",
+      "15117",
+      "15127",
+      "99810",
+      "1.4",
+      "16.6"
+    ],
+    "iati_identifier": "XM-DAC-41114-PROJECT-01003160",
+    "title_narrative": [
+      "Appui à la mise en place d'une delivery Unit à la Primature de la RDC"
+    ],
+    "reporting_org_ref": "XM-DAC-41114",
+    "activity_date_type": [
+      "1",
+      "2",
+      "3"
+    ],
+    "activity_status_code": "2",
+    "description_narrative": [
+      "Le Gouvernement de la République démocratique du Congo compte mettre en place une Delivery Unit à la primature et a sollicité l’appui du Programme des Nations Unies pour le Développement (PNUD) et de la Banque Mondiale (BM) pour l’aider à concevoir, à développer et à mettre en route une Delivery Unit fonctionnelle répondant aux standards internationaux , ainsi qu’à formuler un document de projet (Prodoc) d’appui institutionnel à la Delivery Unit (pouvant être appelée « Bureau Central de Suivi du PAG 2024-2028, en sigle BCS-PAG)."
+    ],
+    "activity_date_iso_date": [
+      "2024-10-01T00:00:00Z",
+      "2024-10-01T00:00:00Z",
+      "2026-12-31T00:00:00Z"
+    ],
+    "recipient_country_code": [
+      "CD"
+    ],
+    "reporting_org_narrative": [
+      "United Nations Development Programme"
+    ],
+    "recipient_country_narrative": [
+      "Democratic Republic of Congo"
+    ]
+  },
+  {
+    "sector_code": [
+      "15210",
+      "16.a"
+    ],
+    "iati_identifier": "XM-DAC-41114-PROJECT-01004333",
+    "title_narrative": [
+      "Support for the early recovery and resilience internally displaced & forcibly returned people I crisis pronvinces in easten DRC"
+    ],
+    "reporting_org_ref": "XM-DAC-41114",
+    "activity_date_type": [
+      "1",
+      "2",
+      "3"
+    ],
+    "activity_status_code": "2",
+    "description_narrative": [
+      "The security situation in eastern DRC remains volatile. The dynamics of armed conflict seem to drag on over the years, fueled by factors linked to access to power, the management of refugees and displaced persons, control of land and access to natural resources, as well as complex regional dynamics. These conflicts divide communities and fuel armed groups, of which there are more than 120 operational in the 3 eastern provinces of the DRC alone: North Kivu, South Kivu and Ituri."
+    ],
+    "activity_date_iso_date": [
+      "2025-02-01T00:00:00Z",
+      "2025-02-01T00:00:00Z",
+      "2026-12-31T00:00:00Z"
+    ],
+    "recipient_country_code": [
+      "CD"
+    ],
+    "reporting_org_narrative": [
+      "United Nations Development Programme"
+    ],
+    "recipient_country_narrative": [
+      "Democratic Republic of Congo"
+    ]
+  },
+  {
+    "sector_code": [
+      "15210",
+      "15220",
+      "15230",
+      "16.10",
+      "16.6",
+      "16.7",
+      "16.a",
+      "5.1",
+      "5.2",
+      "5.a"
+    ],
+    "iati_identifier": "XM-DAC-41114-PROJECT-01004618",
+    "title_narrative": [
+      "Appui à la mise en œuvre du Plan de Réponse à la Crise dans les provinces du Nord et Sud Kivu en RDC (CRP)"
+    ],
+    "reporting_org_ref": "XM-DAC-41114",
+    "activity_date_type": [
+      "1",
+      "2",
+      "3"
+    ],
+    "activity_status_code": "2",
+    "description_narrative": [
+      "Depuis le début de lannée 2025, les affrontements armés entre les Forces armées de la République démocratique du Congo (FARDC) et le Mouvement du 23 mars (M23) se sont intensifiés, aggravant le conflit et la situation humanitaire dans les provinces du Nord-Kivu et du Sud-Kivu. La prise de Goma et de Bukavu, ainsi que de vastes portions de territoire dans ces provinces, a non seulement intensifié le conflit, mais a également modifié le contexte opérationnel des projets de développement, de laction humanitaire et de la gestion des mouvements de population forcés."
+    ],
+    "activity_date_iso_date": [
+      "2025-05-15T00:00:00Z",
+      "2025-05-15T00:00:00Z",
+      "2025-12-31T00:00:00Z"
+    ],
+    "recipient_country_code": [
+      "CD"
+    ],
+    "reporting_org_narrative": [
+      "United Nations Development Programme"
+    ],
+    "recipient_country_narrative": [
+      "Democratic Republic of Congo"
+    ]
+  },
+  {
+    "sector_code": [
+      "15220",
+      "16.6",
+      "16.7",
+      "16.a"
+    ],
+    "iati_identifier": "XM-DAC-41114-PROJECT-01004697",
+    "title_narrative": [
+      "Programme national de prévention et réponse à la  montée de l’extrémisme violent en RDC"
+    ],
+    "reporting_org_ref": "XM-DAC-41114",
+    "activity_date_type": [
+      "1",
+      "2",
+      "3"
+    ],
+    "activity_status_code": "2",
+    "description_narrative": [
+      "La présente offre programmatique du PNUD est le résultat de plusieurs analyses contextuelles, d’une recherche-action participative, de divers entretiens, des recommandations des missions de la CTED (Direction exécutive du Comité contre le terrorisme), etc. Cette offre est axée sur des réponses de gouvernance et de développement. Elle a pour objectif principal d’identifier et évaluer les menaces dans chaque contexte spécifique afin d’éliminer toutes les conditions propices au développement de l’extrémisme violent dans le respect des droits de l’homme et conformément aux lois nationales et aux dispositions internationales. L’objectif du PNUD à travers cette offre de service consiste à passer progressivement d’une culture de réaction à une culture de prévention qui repose sur quatre grands axes intégrés (Comprendre, Assister, Prévenir, Répondre)."
+    ],
+    "activity_date_iso_date": [
+      "2025-06-01T00:00:00Z",
+      "2025-06-01T00:00:00Z",
+      "2026-03-01T00:00:00Z"
+    ],
+    "recipient_country_code": [
+      "CD"
+    ],
+    "reporting_org_narrative": [
+      "United Nations Development Programme"
+    ],
+    "recipient_country_narrative": [
+      "Democratic Republic of Congo"
+    ]
+  },
+  {
+    "sector_code": [
+      "16062",
+      "16.7"
+    ],
+    "iati_identifier": "XM-DAC-41114-PROJECT-00129161",
+    "title_narrative": [
+      "Enhancing Capacities for Digital Economic Diplomacy in U"
+    ],
+    "reporting_org_ref": "XM-DAC-41114",
+    "activity_date_type": [
+      "1",
+      "2",
+      "3",
+      "4"
+    ],
+    "activity_status_code": "3",
+    "description_narrative": [
+      "main goal is to support the Ministry of Foreign Affairs of Uzbekistan in successful implementation of its digital transformation agenda"
+    ],
+    "activity_date_iso_date": [
+      "2021-01-20T00:00:00Z",
+      "2021-01-20T00:00:00Z",
+      "2024-02-15T00:00:00Z",
+      "2024-02-01T00:00:00Z"
+    ],
+    "recipient_country_code": [
+      "UZ"
+    ],
+    "reporting_org_narrative": [
+      "United Nations Development Programme"
+    ],
+    "recipient_country_narrative": [
+      "Uzbekistan"
+    ]
+  },
+  {
+    "sector_code": [
+      "73010",
+      "9.1"
+    ],
+    "iati_identifier": "XM-DAC-41114-PROJECT-01000612",
+    "title_narrative": [
+      "Quality assurance for UNITED24, DREAM and Kyiv Oblast Recovery initiatives"
+    ],
+    "reporting_org_ref": "XM-DAC-41114",
+    "activity_date_type": [
+      "1",
+      "2",
+      "3"
+    ],
+    "activity_status_code": "2",
+    "description_narrative": [
+      "The Project, launched on April 1, 2023, supports Ukraines recovery efforts through three key initiatives. The UNITED24 initiative focuses on restoring 18 housing projects in the Kyiv region, including in Irpin, Borodyanka, Hostomel, and the villages of Buzova and Myla. The Kyiv Oblast Recovery Initiative, coordinated by the Kyiv Regional State (Military) Administration (Kyiv RMA), focuses on restoration an additional 48 facilities in war-affected areas of the region. The DREAM initiative provides quality control for 420 infrastructure recovery projects through the Digital Restoration Ecosystem for Accountable Management (DREAM) platform.The Project is being implemented within the framework of a Memorandum of Understanding (MoU) between UNDP, the Ministry for Development, and the Kyiv RMA, signed on March 2, 2023. This MoU formalises cooperation among the parties in support of recovery efforts.The UNDP team provides technical assistance and quality assurance to the Project’s final beneficiaries, prioritising"
+    ],
+    "activity_date_iso_date": [
+      "2023-04-01T00:00:00Z",
+      "2023-04-01T00:00:00Z",
+      "2025-02-10T00:00:00Z"
+    ],
+    "recipient_country_code": [
+      "UA"
+    ],
+    "reporting_org_narrative": [
+      "United Nations Development Programme"
+    ],
+    "recipient_country_narrative": [
+      "Ukraine"
+    ]
+  },
+  {
+    "sector_code": [
+      "15126",
+      "16.6"
+    ],
+    "iati_identifier": "XM-DAC-41114-PROJECT-01000709",
+    "title_narrative": [
+      "Digitalization for Efficiency and Resilience in Civil Registration"
+    ],
+    "reporting_org_ref": "XM-DAC-41114",
+    "activity_date_type": [
+      "1",
+      "2",
+      "3",
+      "4"
+    ],
+    "activity_status_code": "3",
+    "description_narrative": [
+      "The Initiation Phase Digitalization for Efficiency and Resiliency in Civil Registration Project is a response to challenges in the digital sphere caused by Russia’s large-scale aggression against Ukraine with the view of general improvement of stability and efficiency of functioning of the system of state registration of civil status acts.The project strategy is aligned with the priorities of the Government of Ukraine, UNDP Strategic Plan (2022-2025), and the UNDP Country Programme Document. Digitalization of state civil status records from the areas ?ndangered by ongoing warfare will be in a focus of project activities ?ontributing to the efficiency of public services, the resilience of state registers and personal data protection.UNDP CO will complete the initiation phase and will convert the project into a development project scaling up the achievements to the whole territory of Ukraine."
+    ],
+    "activity_date_iso_date": [
+      "2023-05-10T00:00:00Z",
+      "2023-05-10T00:00:00Z",
+      "2025-08-06T00:00:00Z",
+      "2024-07-01T00:00:00Z"
+    ],
+    "recipient_country_code": [
+      "UA"
+    ],
+    "reporting_org_narrative": [
+      "United Nations Development Programme"
+    ],
+    "recipient_country_narrative": [
+      "Ukraine"
+    ]
+  },
+  {
+    "sector_code": [
+      "31282",
+      "13.1"
+    ],
+    "iati_identifier": "XM-DAC-41114-PROJECT-01004602",
+    "title_narrative": [
+      "Diagnostico de precision basado en el genoma del declive del algarrobo en los bosques ecuatoriales de América del Sur"
+    ],
+    "reporting_org_ref": "XM-DAC-41114",
+    "activity_date_type": [
+      "1",
+      "2",
+      "3"
+    ],
+    "activity_status_code": "2",
+    "description_narrative": [
+      "Este proyecto abordará el deterioro de los bosques de Neltuma y aportará evidencia para su conservación. El ecosistema del Bosque Seco es importante para controlar el avance de los desiertos y las dunas, así como para regular la temperatura ambiental del clima tropical local. También contribuye al control de la erosión, la regulación del ciclo hidrológico de las cuencas hidrográficas, la calidad del agua y la economía de las pequeñas familias campesinas"
+    ],
+    "activity_date_iso_date": [
+      "2025-06-01T00:00:00Z",
+      "2025-06-01T00:00:00Z",
+      "2026-11-30T00:00:00Z"
+    ],
+    "recipient_country_code": [
+      "PE"
+    ],
+    "reporting_org_narrative": [
+      "United Nations Development Programme"
+    ],
+    "recipient_country_narrative": [
+      "Peru"
+    ]
+  },
+  {
+    "sector_code": [
+      "15196",
+      "16.6"
+    ],
+    "iati_identifier": "XM-DAC-41114-PROJECT-01000775",
+    "title_narrative": [
+      "Enhancing Transparency and Accountability of the Recovery and Reconstruction Process in Ukraine"
+    ],
+    "reporting_org_ref": "XM-DAC-41114",
+    "activity_date_type": [
+      "1",
+      "2",
+      "3",
+      "4"
+    ],
+    "activity_status_code": "3",
+    "description_narrative": [
+      "The project will provide necessary support to the Government to enhance the transparency andaccountability of the recovery and reconstruction process in Ukraine, with focus on ensuring thatthe recovery process is efficient, effective, and sustainable."
+    ],
+    "activity_date_iso_date": [
+      "2023-05-18T00:00:00Z",
+      "2023-05-18T00:00:00Z",
+      "2025-01-31T00:00:00Z",
+      "2023-12-01T00:00:00Z"
+    ],
+    "recipient_country_code": [
+      "UA"
+    ],
+    "reporting_org_narrative": [
+      "United Nations Development Programme"
+    ],
+    "recipient_country_narrative": [
+      "Ukraine"
+    ]
+  },
+  {
+    "sector_code": [
+      "91010",
+      "99810"
+    ],
+    "iati_identifier": "XM-DAC-41114-PROJECT-00042510",
+    "title_narrative": [
+      "Management Plan"
+    ],
+    "reporting_org_ref": "XM-DAC-41114",
+    "activity_date_type": [
+      "1",
+      "2",
+      "3"
+    ],
+    "activity_status_code": "2",
+    "description_narrative": [
+      "Management Plan de la oficina PNUD Perú para financiamiento de viajes, salarios, alquiler y mantenimiento, equipamiento audiovisual y demás."
+    ],
+    "activity_date_iso_date": [
+      "2006-01-01T00:00:00Z",
+      "2006-01-01T00:00:00Z",
+      "2030-12-31T00:00:00Z"
+    ],
+    "recipient_country_code": [
+      "PE"
+    ],
+    "reporting_org_narrative": [
+      "United Nations Development Programme"
+    ],
+    "recipient_country_narrative": [
+      "Peru"
+    ]
+  },
+  {
+    "sector_code": [
+      "99810"
+    ],
+    "iati_identifier": "XM-DAC-41114-PROJECT-00044381",
+    "title_narrative": [
+      "Multi Country Office  Development Support"
+    ],
+    "reporting_org_ref": "XM-DAC-41114",
+    "activity_date_type": [
+      "1",
+      "2",
+      "3"
+    ],
+    "activity_status_code": "2",
+    "description_narrative": [
+      "Multi Country Office - Development Support"
+    ],
+    "activity_date_iso_date": [
+      "2006-01-15T00:00:00Z",
+      "2006-01-15T00:00:00Z",
+      "2031-12-31T00:00:00Z"
+    ],
+    "recipient_country_code": [
+      "FJ"
+    ],
+    "reporting_org_narrative": [
+      "United Nations Development Programme"
+    ],
+    "recipient_country_narrative": [
+      "Fiji"
+    ]
+  },
+  {
+    "sector_code": [
+      "99810"
+    ],
+    "iati_identifier": "XM-DAC-41114-PROJECT-00044439",
+    "title_narrative": [
+      "SOI SubOffice Administrative Support Project"
+    ],
+    "reporting_org_ref": "XM-DAC-41114",
+    "activity_date_type": [
+      "1",
+      "2",
+      "3"
+    ],
+    "activity_status_code": "2",
+    "description_narrative": [
+      "SOI Sub-Office Administrative Support Project. Operational costs and implementation support arrangements are identified, fully costed in the budget."
+    ],
+    "activity_date_iso_date": [
+      "2006-06-01T00:00:00Z",
+      "2006-06-01T00:00:00Z",
+      "2031-12-31T00:00:00Z"
+    ],
+    "recipient_country_code": [
+      "FJ"
+    ],
+    "reporting_org_narrative": [
+      "United Nations Development Programme"
+    ],
+    "recipient_country_narrative": [
+      "Fiji"
+    ]
+  },
+  {
+    "sector_code": [
+      "15144",
+      "15160",
+      "10.3",
+      "16.6",
+      "16.7",
+      "3.d"
+    ],
+    "iati_identifier": "XM-DAC-41114-PROJECT-00126042",
+    "title_narrative": [
+      "Strengthening policy for PwD"
+    ],
+    "reporting_org_ref": "XM-DAC-41114",
+    "activity_date_type": [
+      "1",
+      "2",
+      "3",
+      "4"
+    ],
+    "activity_status_code": "3",
+    "description_narrative": [
+      "Strengthening policy framework on removing the accessibility barriers for Persons with Disabilities / UN PRPD"
+    ],
+    "activity_date_iso_date": [
+      "2021-02-26T00:00:00Z",
+      "2021-02-26T00:00:00Z",
+      "2025-11-11T00:00:00Z",
+      "2024-10-01T00:00:00Z"
+    ],
+    "recipient_country_code": [
+      "MD"
+    ],
+    "reporting_org_narrative": [
+      "United Nations Development Programme"
+    ],
+    "recipient_country_narrative": [
+      "Moldova, Republic of"
+    ]
+  },
+  {
+    "sector_code": [
+      "15110",
+      "16011",
+      "1.3",
+      "16.5",
+      "16.6",
+      "16.7",
+      "17.1"
+    ],
+    "iati_identifier": "XM-DAC-41114-PROJECT-01000554",
+    "title_narrative": [
+      "Strengthening institutional capacities of the Ministry of Labour and Social Protection  to address reforms of social protection system and accelerating social inclusion"
+    ],
+    "reporting_org_ref": "XM-DAC-41114",
+    "activity_date_type": [
+      "1",
+      "2",
+      "3",
+      "4"
+    ],
+    "activity_status_code": "3",
+    "description_narrative": [
+      "The current Initiation Plan intends to support the Ministry of Labour and Social Protection in a fewcritical areas, to include policy analysis and formulation support in areas of informality and tacklinginformal work, reform of the social protection system and modernization of it in line with EUstandards and having in focus the LNOB principle, provide support on the digitalization front withparticular focus on mainstreaming new digital solutions for improved services and proper datagovernance and use of data. Also, the focus is on supporting the building of the capacities of theMinistry to accelerate decent work and employability, through the reform and modernization of theEmployment Agency and its value proposition, but also reform and regionalization of the socialassistance services. Building new programs for tackling new emerging forms of poverty is also infocus, with specific attention to the further development and improvement of the EnergyVulnerability Reduction Fund."
+    ],
+    "activity_date_iso_date": [
+      "2023-03-14T00:00:00Z",
+      "2023-03-14T00:00:00Z",
+      "2025-01-28T00:00:00Z",
+      "2024-01-01T00:00:00Z"
+    ],
+    "recipient_country_code": [
+      "MD"
+    ],
+    "reporting_org_narrative": [
+      "United Nations Development Programme"
+    ],
+    "recipient_country_narrative": [
+      "Moldova, Republic of"
+    ]
+  },
+  {
+    "sector_code": [
+      "15110",
+      "16.6"
+    ],
+    "iati_identifier": "XM-DAC-41114-PROJECT-01002165",
+    "title_narrative": [
+      "Advisory Services MDA 2024-2027"
+    ],
+    "reporting_org_ref": "XM-DAC-41114",
+    "activity_date_type": [
+      "1",
+      "2",
+      "3"
+    ],
+    "activity_status_code": "2",
+    "description_narrative": [
+      "Advisory Services for Programme Development. UNDP Moldova CO has established an Engagement Facility Project which is a technical assistance facility to provide a rapid and flexible response mechanism to generate solutions to complex challenges."
+    ],
+    "activity_date_iso_date": [
+      "2024-01-01T00:00:00Z",
+      "2024-01-01T00:00:00Z",
+      "2027-12-31T00:00:00Z"
+    ],
+    "recipient_country_code": [
+      "MD"
+    ],
+    "reporting_org_narrative": [
+      "United Nations Development Programme"
+    ],
+    "recipient_country_narrative": [
+      "Moldova, Republic of"
+    ]
+  },
+  {
+    "sector_code": [
+      "15185",
+      "16.6"
+    ],
+    "iati_identifier": "XM-DAC-41114-PROJECT-01002953",
+    "title_narrative": [
+      "Support for the implementation of the Local Public Administration Reform in Moldova"
+    ],
+    "reporting_org_ref": "XM-DAC-41114",
+    "activity_date_type": [
+      "1",
+      "2",
+      "3"
+    ],
+    "activity_status_code": "2",
+    "description_narrative": [
+      "The Republic of Moldova was granted candidate status for the European Union (EU) in June 2022 and started accession negotiations in June 2024. The Public Administration Reform Strategy (PARS), approved in 2023, outlines a clear path to advance the objectives related to EU integration- effective governance through capable central and local authorities, professional civil servants, transparent and modern processes - with a significant emphasis on local governance, dedicating an entire chapter to this topic. The purpose of this Initiation Plan is to provide support the Government of the Republic of Moldova (the State Chancellery, as well as the Ministry of Finance) in implementing the PARS 2023-2030, particularly Objective V: Local public administration. A key aspect of this effort is to support launching and implementing the voluntary amalgamation process, demonstrating better and more equitable service provision and sustainable local development in the amalgamated communities. Additionally, UNDP’s Local Public Administration Reform Advisory Team (LPAR Advisory Team) will develop a comprehensive project proposal for further PARS support. This will ensure continuous progress, adaptability to new challenges, and the strengthening of local public authorities capacity for sustainable development and EU integration. The LPAR Advisory Team will also assist with other related policies, such as fiscal decentralization, and conduct regular monitoring and evaluation of the LPAR implementation."
+    ],
+    "activity_date_iso_date": [
+      "2024-08-01T00:00:00Z",
+      "2024-08-01T00:00:00Z",
+      "2026-01-31T00:00:00Z"
+    ],
+    "recipient_country_code": [
+      "MD"
+    ],
+    "reporting_org_narrative": [
+      "United Nations Development Programme"
+    ],
+    "recipient_country_narrative": [
+      "Moldova, Republic of"
+    ]
+  },
+  {
+    "sector_code": [
+      "15110",
+      "13.2"
+    ],
+    "iati_identifier": "XM-DAC-41114-PROJECT-01000788",
+    "title_narrative": [
+      "Enhancing Climate Security in Solomon Islands Project (Engagement Facility - TRAC 2)"
+    ],
+    "reporting_org_ref": "XM-DAC-41114",
+    "activity_date_type": [
+      "1",
+      "2",
+      "3",
+      "4"
+    ],
+    "activity_status_code": "3",
+    "description_narrative": [
+      "The aim of this project to develop a climate security programme for the UNDP Solomon Islands through conducting a gap analysis of the climate risks and security needs of the country and finding out potential entry points for climate security in Solomon Islands. In this way, the project will tackle climate security at a strategic manner and then further resource mobilize to develop a programme of its own."
+    ],
+    "activity_date_iso_date": [
+      "2023-01-01T00:00:00Z",
+      "2023-01-01T00:00:00Z",
+      "2025-07-10T00:00:00Z",
+      "2025-07-01T00:00:00Z"
+    ],
+    "recipient_country_code": [
+      "FJ"
+    ],
+    "reporting_org_narrative": [
+      "United Nations Development Programme"
+    ],
+    "recipient_country_narrative": [
+      "Fiji"
+    ]
+  },
+  {
+    "sector_code": [
+      "43010",
+      "13.3"
+    ],
+    "iati_identifier": "XM-DAC-41114-PROJECT-01001198",
+    "title_narrative": [
+      "FSM SECURITY FUNDING"
+    ],
+    "reporting_org_ref": "XM-DAC-41114",
+    "activity_date_type": [
+      "1",
+      "2",
+      "3"
+    ],
+    "activity_status_code": "2",
+    "description_narrative": [
+      "The United Nations Development Programmes Fund for the North Pacific such as the Federated States of Micronesia and others"
+    ],
+    "activity_date_iso_date": [
+      "2023-08-24T00:00:00Z",
+      "2023-08-24T00:00:00Z",
+      "2026-12-31T00:00:00Z"
+    ],
+    "recipient_country_code": [
+      "FJ"
+    ],
+    "reporting_org_narrative": [
+      "United Nations Development Programme"
+    ],
+    "recipient_country_narrative": [
+      "Fiji"
+    ]
+  },
+  {
+    "sector_code": [
+      "25010",
+      "17.9"
+    ],
+    "iati_identifier": "XM-DAC-41114-PROJECT-01002636",
+    "title_narrative": [
+      "Capacity Investment Plan (CIP)"
+    ],
+    "reporting_org_ref": "XM-DAC-41114",
+    "activity_date_type": [
+      "1",
+      "2",
+      "3",
+      "4"
+    ],
+    "activity_status_code": "3",
+    "description_narrative": [
+      "Strengthening development funds management capabilities in national/subnational governments in Pacific Island Countries & Territories has been a key priority among development partners including UNDP where the aim is to make local service delivery and utilization of funds / investments more transparent, efficient, and effective. UNDP has been working with various institutions under Government of Kiribati while operationalizing robust risk assessment and monitoring framework under UNDP Harmonised Approach to Cash Transfer (HACT) framework.The financial management areas will be considered as a priority for institutional capacity strengthening such as Project Management; Financial Management; Assets & Inventory Management; and Procurement & Contract Management."
+    ],
+    "activity_date_iso_date": [
+      "2024-06-01T00:00:00Z",
+      "2024-06-01T00:00:00Z",
+      "2025-12-16T00:00:00Z",
+      "2025-03-01T00:00:00Z"
+    ],
+    "recipient_country_code": [
+      "FJ"
+    ],
+    "reporting_org_narrative": [
+      "United Nations Development Programme"
+    ],
+    "recipient_country_narrative": [
+      "Fiji"
+    ]
+  },
+  {
+    "sector_code": [
+      "74020",
+      "11.1",
+      "13.1",
+      "13.3"
+    ],
+    "iati_identifier": "XM-DAC-41114-PROJECT-01004032",
+    "title_narrative": [
+      "REBUILD Vanuatu (Resilient Earthquake Building Assessment and Infrastructure Linkage Development)"
+    ],
+    "reporting_org_ref": "XM-DAC-41114",
+    "activity_date_type": [
+      "1",
+      "2",
+      "3"
+    ],
+    "activity_status_code": "2",
+    "description_narrative": [
+      "On December 17, 2024, a powerful 7.3 magnitude earthquake struck near Port Vila, Vanuatu’s capital. Within 24 hours, a second 5.5 magnitude quake followed, triggering landslides and devastating infrastructure. Over 80,000 people have been affected, with many losing their homes and essential services. This disaster comes as communities are still recovering from twin cyclones in 2023, compounding the nation’s vulnerability.Vanuatu, home to over 300,000 people across 83 islands, faces frequent earthquakes, volcanic eruptions, and extreme weather due to its location on the Pacific Ring of Fire. With limited infrastructure and economic resilience, disaster recovery remains a challenge.In response, UNDP has mobilized early recovery efforts since January, engaging in high-level coordination with government and humanitarian partners. As the Cluster Chair for Early Recovery under the Pacific Humanitarian Team, UNDP is spearheading a Housing and Building Damage Assessment initiative. This project aims to systematize reconstruction, strengthen local capacity, and enhance resilience, ensuring Vanuatu can better withstand future disasters."
+    ],
+    "activity_date_iso_date": [
+      "2025-02-01T00:00:00Z",
+      "2025-02-01T00:00:00Z",
+      "2026-06-30T00:00:00Z"
+    ],
+    "recipient_country_code": [
+      "FJ"
+    ],
+    "reporting_org_narrative": [
+      "United Nations Development Programme"
+    ],
+    "recipient_country_narrative": [
+      "Fiji"
+    ]
+  },
+  {
+    "sector_code": [
+      "99810",
+      "1.a"
+    ],
+    "iati_identifier": "XM-DAC-41114-PROJECT-00096467",
+    "title_narrative": [
+      "Engagement Facility CO Myanmar"
+    ],
+    "reporting_org_ref": "XM-DAC-41114",
+    "activity_date_type": [
+      "1",
+      "2",
+      "3"
+    ],
+    "activity_status_code": "2",
+    "description_narrative": [
+      "Implementation of Engagement Facility in Myanmar to support upstream policy results, to test innovations with scaling-up potential and to respond immediately to crisis"
+    ],
+    "activity_date_iso_date": [
+      "2016-01-01T00:00:00Z",
+      "2016-01-01T00:00:00Z",
+      "2026-12-31T00:00:00Z"
+    ],
+    "recipient_country_code": [
+      "MM"
+    ],
+    "reporting_org_narrative": [
+      "United Nations Development Programme"
+    ],
+    "recipient_country_narrative": [
+      "Myanmar"
+    ]
+  },
+  {
+    "sector_code": [
+      "16011",
+      "10.2",
+      "8.5"
+    ],
+    "iati_identifier": "XM-DAC-41114-PROJECT-00141101",
+    "title_narrative": [
+      "Empowerment and Participation of OPDs"
+    ],
+    "reporting_org_ref": "XM-DAC-41114",
+    "activity_date_type": [
+      "1",
+      "2",
+      "3",
+      "4"
+    ],
+    "activity_status_code": "3",
+    "description_narrative": [
+      "Reducing inequality and exclusion for all persons with disabilities, through multi-stakeholder capacity building; recommendations to improve existing legislation and policies; and facilitating contribution of OPDs to national planning and development"
+    ],
+    "activity_date_iso_date": [
+      "2022-01-01T00:00:00Z",
+      "2022-01-01T00:00:00Z",
+      "2025-11-20T00:00:00Z",
+      "2025-09-01T00:00:00Z"
+    ],
+    "recipient_country_code": [
+      "MK"
+    ],
+    "reporting_org_narrative": [
+      "United Nations Development Programme"
+    ],
+    "recipient_country_narrative": [
+      "North Macedonia"
+    ]
+  },
+  {
+    "sector_code": [
+      "15150",
+      "16.6",
+      "16.7"
+    ],
+    "iati_identifier": "XM-DAC-41114-PROJECT-01004075",
+    "title_narrative": [
+      "MKD_Regional Programme on Local Democracy in the Western Balkans 3 (ReLOaD3)"
+    ],
+    "reporting_org_ref": "XM-DAC-41114",
+    "activity_date_type": [
+      "1",
+      "2",
+      "3"
+    ],
+    "activity_status_code": "2",
+    "description_narrative": [
+      "The overall objective of the Action is, therefore, to strengthen participatory democracies and the EU integration process in the Western Balkans, contributing to accelerated sustainable development of the region. It aims to empower civil society to actively engage in decision-making and citizen oversight, while stimulating governments to create a supportive policy, legal and financial environment for civil society.The specific objective of the Action: Strengthened coordination between governments and CSOs in the Western Balkans contributes to a more conducive environment for CSOs, upheld by transparent public financing, a supportive legal framework, and increased civic engagement in policy design, delivery, and monitoring. Being in its final phase, the Action ultimately aims at capitalizing and scaling up the results and ensuring the sustainability of good practices introduced throughout its implementation."
+    ],
+    "activity_date_iso_date": [
+      "2025-02-01T00:00:00Z",
+      "2025-02-01T00:00:00Z",
+      "2029-01-31T00:00:00Z"
+    ],
+    "recipient_country_code": [
+      "MK"
+    ],
+    "reporting_org_narrative": [
+      "United Nations Development Programme"
+    ],
+    "recipient_country_narrative": [
+      "North Macedonia"
+    ]
+  },
+  {
+    "sector_code": [
+      "99810"
+    ],
+    "iati_identifier": "XM-DAC-41114-PROJECT-00020314",
+    "title_narrative": [
+      "Security"
+    ],
+    "reporting_org_ref": "XM-DAC-41114",
+    "activity_date_type": [
+      "1",
+      "2",
+      "3"
+    ],
+    "activity_status_code": "2",
+    "description_narrative": [
+      "Security"
+    ],
+    "activity_date_iso_date": [
+      "2007-01-01T00:00:00Z",
+      "2007-01-01T00:00:00Z",
+      "2031-12-31T00:00:00Z"
+    ],
+    "recipient_country_code": [
+      "EG"
+    ],
+    "reporting_org_narrative": [
+      "United Nations Development Programme"
+    ],
+    "recipient_country_narrative": [
+      "Egypt"
+    ]
+  },
+  {
+    "sector_code": [
+      "15196",
+      "9.b"
+    ],
+    "iati_identifier": "XM-DAC-41114-PROJECT-01001024",
+    "title_narrative": [
+      "Open Data for Open Societies"
+    ],
+    "reporting_org_ref": "XM-DAC-41114",
+    "activity_date_type": [
+      "1",
+      "2",
+      "3",
+      "4"
+    ],
+    "activity_status_code": "3",
+    "description_narrative": [
+      "This plan envisions three key objectives a) to ensure capacity building on open data release and reuse for different stakeholders b) to foster development of Open Data Hub (ODH) as a national centre for data innovation, c) to stimulate reuse of open data and development of new data driven services. In addition, the Initiation Plan foresees support in ensuring and maintaining proactive communication with relevant counterparts in Serbia and abroad. Finally, during the implementation period of the IP, project document for the new open data project will be developed, expected to be funded with a donor support"
+    ],
+    "activity_date_iso_date": [
+      "2023-07-14T00:00:00Z",
+      "2023-07-14T00:00:00Z",
+      "2025-07-29T00:00:00Z",
+      "2024-12-01T00:00:00Z"
+    ],
+    "recipient_country_code": [
+      "RS"
+    ],
+    "reporting_org_narrative": [
+      "United Nations Development Programme"
+    ],
+    "recipient_country_narrative": [
+      "Serbia"
+    ]
+  },
+  {
+    "sector_code": [
+      "15160",
+      "10.2",
+      "8.5"
+    ],
+    "iati_identifier": "XM-DAC-41114-PROJECT-01001766",
+    "title_narrative": [
+      "Strengthening Equality & Rights, Bolstering Inclusive Action"
+    ],
+    "reporting_org_ref": "XM-DAC-41114",
+    "activity_date_type": [
+      "1",
+      "2",
+      "3"
+    ],
+    "activity_status_code": "2",
+    "description_narrative": [
+      "The programme aims to address the absence of fully inclusive policies and systems that cater to the rights and needs of persons with disabilities. That hinders the effective realization of disability rights but also compromises Serbia’s compliance with the Convention on the Rights of Persons with Disabilities (CRPD) and Sustainable Development Goals (SDGs). To rectify this, programme adopts a three-pronged approach."
+    ],
+    "activity_date_iso_date": [
+      "2023-11-30T00:00:00Z",
+      "2023-11-30T00:00:00Z",
+      "2025-12-31T00:00:00Z"
+    ],
+    "recipient_country_code": [
+      "RS"
+    ],
+    "reporting_org_narrative": [
+      "United Nations Development Programme"
+    ],
+    "recipient_country_narrative": [
+      "Serbia"
+    ]
+  },
+  {
+    "sector_code": [
+      "25010",
+      "11.a",
+      "9.3"
+    ],
+    "iati_identifier": "XM-DAC-41114-PROJECT-01004437",
+    "title_narrative": [
+      "SME Innovation & Technology Financing Initiative (SITFI)"
+    ],
+    "reporting_org_ref": "XM-DAC-41114",
+    "activity_date_type": [
+      "1",
+      "2",
+      "3"
+    ],
+    "activity_status_code": "2",
+    "description_narrative": [
+      "The goal of this project is to identify the needs of local self-governments (LSGs) for enhancing public service delivery through innovative solutions from innovative entities -small and medium enterprises (SMEs) and research institutes - that are eligible for the Innovation Funds financing program. The overarching objective is to create a sustainable innovative financing (Gov-Tech) mechanism that aligns municipal needs with technology-driven solutions, while creating new opportunities for deploying and financing innovative entities’ solutions. To achieve this, the project will (1) assess LSG requirements through consultations with key stakeholders, (2) identify and refine priority challenges suitable for innovative financing, and (3) design and institutionalize the Gov-Tech Mechanism. The result will be a sustainable platform that accelerates improvements of local services, mobilizes private-sector innovation, and fosters enduring partnerships for inclusive, technology-driven development that contributes to the achievement of Sustainable Development Goals (SDGs) in Serbia."
+    ],
+    "activity_date_iso_date": [
+      "2025-04-24T00:00:00Z",
+      "2025-04-24T00:00:00Z",
+      "2026-02-24T00:00:00Z"
+    ],
+    "recipient_country_code": [
+      "RS"
+    ],
+    "reporting_org_narrative": [
+      "United Nations Development Programme"
+    ],
+    "recipient_country_narrative": [
+      "Serbia"
+    ]
+  },
+  {
+    "sector_code": [
+      "72050",
+      "13.1"
+    ],
+    "iati_identifier": "XM-DAC-41114-PROJECT-01000384",
+    "title_narrative": [
+      "Vanuatu crisis response to cyclone kevin"
+    ],
+    "reporting_org_ref": "XM-DAC-41114",
+    "activity_date_type": [
+      "1",
+      "2",
+      "3",
+      "4"
+    ],
+    "activity_status_code": "3",
+    "description_narrative": [
+      "Support early response to natural disasters cyclones like cyclone kevin in Vanuatu"
+    ],
+    "activity_date_iso_date": [
+      "2023-03-16T00:00:00Z",
+      "2023-03-16T00:00:00Z",
+      "2025-12-18T00:00:00Z",
+      "2025-12-01T00:00:00Z"
+    ],
+    "recipient_country_code": [
+      "FJ"
+    ],
+    "reporting_org_narrative": [
+      "United Nations Development Programme"
+    ],
+    "recipient_country_narrative": [
+      "Fiji"
+    ]
+  },
+  {
+    "sector_code": [
+      "16015"
+    ],
+    "iati_identifier": "XM-DAC-41114-PROJECT-01002938",
+    "title_narrative": [
+      "Support to Humanitarian Aid Flow in Afghanistan (ASYCUDA)"
+    ],
+    "reporting_org_ref": "XM-DAC-41114",
+    "activity_date_type": [
+      "1",
+      "2",
+      "3"
+    ],
+    "activity_status_code": "2",
+    "description_narrative": [
+      "The Recipient UN Entity will be fully responsible for administering the Contribution in accordance with its financial regulations, rules, policies, procedures and administrative instructions, and for undertaking the Activities efficiently and effectively."
+    ],
+    "activity_date_iso_date": [
+      "2024-07-01T00:00:00Z",
+      "2024-07-01T00:00:00Z",
+      "2025-03-31T00:00:00Z"
+    ],
+    "recipient_country_code": [
+      "AF"
+    ],
+    "reporting_org_narrative": [
+      "United Nations Development Programme"
+    ],
+    "recipient_country_narrative": [
+      "Afghanistan"
+    ]
+  },
+  {
+    "sector_code": [
+      "91010"
+    ],
+    "iati_identifier": "XM-DAC-41114-PROJECT-00057100",
+    "title_narrative": [
+      "Org Effectiveness towards Development Outputs"
+    ],
+    "reporting_org_ref": "XM-DAC-41114",
+    "activity_date_type": [
+      "1",
+      "2",
+      "3"
+    ],
+    "activity_status_code": "2",
+    "description_narrative": [
+      "Previous project 00042693-Org. Effectiveness towards development outputs SUR"
+    ],
+    "activity_date_iso_date": [
+      "2009-03-24T00:00:00Z",
+      "2009-03-24T00:00:00Z",
+      "2030-12-31T00:00:00Z"
+    ],
+    "recipient_country_code": [
+      "SR"
+    ],
+    "reporting_org_narrative": [
+      "United Nations Development Programme"
+    ],
+    "recipient_country_narrative": [
+      "Suriname"
+    ]
+  },
+  {
+    "sector_code": [
+      "99810",
+      "1.3",
+      "1.4",
+      "10.2"
+    ],
+    "iati_identifier": "XM-DAC-41114-PROJECT-00064386",
+    "title_narrative": [
+      "Development Effectiveness Project"
+    ],
+    "reporting_org_ref": "XM-DAC-41114",
+    "activity_date_type": [
+      "1",
+      "2",
+      "3"
+    ],
+    "activity_status_code": "2",
+    "description_narrative": [
+      "Development Effectiveness Project CO Suriname supporting the implementation of development projects"
+    ],
+    "activity_date_iso_date": [
+      "2012-01-01T00:00:00Z",
+      "2012-01-01T00:00:00Z",
+      "2031-12-31T00:00:00Z"
+    ],
+    "recipient_country_code": [
+      "SR"
+    ],
+    "reporting_org_narrative": [
+      "United Nations Development Programme"
+    ],
+    "recipient_country_narrative": [
+      "Suriname"
+    ]
+  },
+  {
+    "sector_code": [
+      "91010"
+    ],
+    "iati_identifier": "XM-DAC-41114-PROJECT-00124156",
+    "title_narrative": [
+      "Management Budget Belize"
+    ],
+    "reporting_org_ref": "XM-DAC-41114",
+    "activity_date_type": [
+      "1",
+      "2",
+      "3"
+    ],
+    "activity_status_code": "2",
+    "description_narrative": [
+      "Budget associated for Office management. Ensure that all anticipated operational costs and implementation support arrangements are identified, fully costed in the budget."
+    ],
+    "activity_date_iso_date": [
+      "2020-01-01T00:00:00Z",
+      "2020-01-01T00:00:00Z",
+      "2040-12-31T00:00:00Z"
+    ],
+    "recipient_country_code": [
+      "BZ"
+    ],
+    "reporting_org_narrative": [
+      "United Nations Development Programme"
+    ],
+    "recipient_country_narrative": [
+      "Belize"
+    ]
+  },
+  {
+    "sector_code": [
+      "99810",
+      "1.1",
+      "1.5",
+      "5.5",
+      "8.3"
+    ],
+    "iati_identifier": "XM-DAC-41114-PROJECT-00134281",
+    "title_narrative": [
+      "Building Resilient MSMEs  Accelerating Digitization"
+    ],
+    "reporting_org_ref": "XM-DAC-41114",
+    "activity_date_type": [
+      "1",
+      "2",
+      "3",
+      "4"
+    ],
+    "activity_status_code": "3",
+    "description_narrative": [
+      "Supports the establishment of national structures for MSME capacity building and provides services related to MSME recovery and resilient development, including support for accelerated digitization of MSMEs that facilitate supply chain and market access."
+    ],
+    "activity_date_iso_date": [
+      "2021-03-01T00:00:00Z",
+      "2021-03-01T00:00:00Z",
+      "2025-02-10T00:00:00Z",
+      "2023-02-01T00:00:00Z"
+    ],
+    "recipient_country_code": [
+      "BZ"
+    ],
+    "reporting_org_narrative": [
+      "United Nations Development Programme"
+    ],
+    "recipient_country_narrative": [
+      "Belize"
+    ]
+  },
+  {
+    "sector_code": [
+      "72010",
+      "13.1",
+      "13.2",
+      "13.b"
+    ],
+    "iati_identifier": "XM-DAC-41114-PROJECT-00147621",
+    "title_narrative": [
+      "Postdisaster Needs Assessment Hurricane Lisa"
+    ],
+    "reporting_org_ref": "XM-DAC-41114",
+    "activity_date_type": [
+      "1",
+      "2",
+      "3"
+    ],
+    "activity_status_code": "2",
+    "description_narrative": [
+      "A PDNA will be conducted to estimate the impact of Hurricane Lisa in the country including the financial costs for restoration of basic services, repair and reconstruction of infrastructure and assets."
+    ],
+    "activity_date_iso_date": [
+      "2022-12-05T00:00:00Z",
+      "2022-12-05T00:00:00Z",
+      "2023-12-31T00:00:00Z"
+    ],
+    "recipient_country_code": [
+      "BZ"
+    ],
+    "reporting_org_narrative": [
+      "United Nations Development Programme"
+    ],
+    "recipient_country_narrative": [
+      "Belize"
+    ]
+  },
+  {
+    "sector_code": [
+      "99810"
+    ],
+    "iati_identifier": "XM-DAC-41114-PROJECT-01003110",
+    "title_narrative": [
+      "Deepening Access via Rural Electrification (DARE): Providing energy services to underserved communities in Belize"
+    ],
+    "reporting_org_ref": "XM-DAC-41114",
+    "activity_date_type": [
+      "1",
+      "2",
+      "3"
+    ],
+    "activity_status_code": "2",
+    "description_narrative": [
+      "There is a strong correlation between poverty and access to basic services and amenities. As part of Belize’s National Energy Policy (2023-2040), the country aims to provide “Universal access to basic services and improved access to modern services.’ Although 90% of Belize’s population has access to a reliable source of electricity many persons within rural communities across the country do not have access to modern forms of energy. In fact, of the 27 registered villages without access to electricity, 24 are found within the Toledo District alone. The “Rural Electrification using Microgrids in Southern Belize” project proposal was approved by the Board of Directors of India, Brazil and South Africa Facility for Poverty and Hunger Alleviation (IBSA Fund), and aims to address the critical needs of the marginalized communities within the 3 villages of Mabil-Ha, Otoxha, and Na Luum Caj in the Toledo District in Belize, for access to electricity. These communities face significant socioeconomic challenges, including a lack of access to electricity. Through this project, the Ministry of Rural Transformation, Community Development, Labour & Local Government of Belize (MRTCDLLG) seeks to improve the quality of life in these communities by providing solar panels, with charge controllers, battery banks and inverters, for electricity generation. This project will also contribute to, and build on, the work of the Ministry of Public Utilities, Energy, Logistics & E-Governance (MPUELE) as it relates to their “Rural Electrification Project” and will utilize female solar engineers who were trained by the Government of India via a South-South exchange programme. The main objective of this project is to promote rural electrification through isolated solar photovoltaic systems as a low-carbon and resilient development strategy for rural communities in Toledo, Belize."
+    ],
+    "activity_date_iso_date": [
+      "2024-10-07T00:00:00Z",
+      "2024-10-07T00:00:00Z",
+      "2027-12-31T00:00:00Z"
+    ],
+    "recipient_country_code": [
+      "BZ"
+    ],
+    "reporting_org_narrative": [
+      "United Nations Development Programme"
+    ],
+    "recipient_country_narrative": [
+      "Belize"
+    ]
+  },
+  {
+    "sector_code": [
+      "51010",
+      "10.1",
+      "8.6",
+      "9.3"
+    ],
+    "iati_identifier": "XM-DAC-41114-PROJECT-00127244",
+    "title_narrative": [
+      "COVID19 KCO PREP RESPONSE  RECOVERY PROJECT"
+    ],
+    "reporting_org_ref": "XM-DAC-41114",
+    "activity_date_type": [
+      "1",
+      "2",
+      "3",
+      "4"
+    ],
+    "activity_status_code": "3",
+    "description_narrative": [
+      "The project aims to rapidly engage and contribute to the national response in Kenya drawing on UNDP’s comparative advantage and history in working with countries and communities in crisis preparedness, prevention, mitigation and recovery"
+    ],
+    "activity_date_iso_date": [
+      "2020-02-24T00:00:00Z",
+      "2020-02-24T00:00:00Z",
+      "2024-12-06T00:00:00Z",
+      "2023-12-01T00:00:00Z"
+    ],
+    "recipient_country_code": [
+      "KE"
+    ],
+    "reporting_org_narrative": [
+      "United Nations Development Programme"
+    ],
+    "recipient_country_narrative": [
+      "Kenya"
+    ]
+  },
+  {
+    "sector_code": [
+      "23231",
+      "7.1"
+    ],
+    "iati_identifier": "XM-DAC-41114-PROJECT-01001046",
+    "title_narrative": [
+      "NER-Scaling Solar Applications for Agricultural Use (SSAAU)"
+    ],
+    "reporting_org_ref": "XM-DAC-41114",
+    "activity_date_type": [
+      "1",
+      "2",
+      "3"
+    ],
+    "activity_status_code": "2",
+    "description_narrative": [
+      "Des pompes à eau solaires (SWP) propres, bon marché et fiables peuvent aider à développer la production agriculture de manière durable, tout en contribuant simultanément à la mitigation du changement climatique et à la résilience des communautés. . La facilité de lInde, du Brésil et de lAfrique du Sud (IBSA) pour la réduction de la pauvreté et de la faim a accepté de financer la phase pilote du SSAAU pour aider 10 pays en développement/les moins développés à adopter des pratiques dirrigation durables et propres.Le projet capitalisera et mettra en évidence les avantages de la coopération Sud-Sud et triangulaire (TrC), tout en testant simultanément des modèles de déploiement nouveaux et innovants qui peuvent être étendus à la fois dans le pays et dans la région Afin dassurer un fonctionnement continu et une maintenance efficace des systèmes déployés, le projet comprendra des éléments saillants pour former une main-dœuvre qualifiée et développer un marché local pour les pompes à eau solaires. Le projet sera"
+    ],
+    "activity_date_iso_date": [
+      "2023-02-27T00:00:00Z",
+      "2023-02-27T00:00:00Z",
+      "2026-02-28T00:00:00Z"
+    ],
+    "recipient_country_code": [
+      "NE"
+    ],
+    "reporting_org_narrative": [
+      "United Nations Development Programme"
+    ],
+    "recipient_country_narrative": [
+      "Niger"
+    ]
+  },
+  {
+    "sector_code": [
+      "16015",
+      "1.2",
+      "2.3",
+      "7.1"
+    ],
+    "iati_identifier": "XM-DAC-41114-PROJECT-00142847",
+    "title_narrative": [
+      "Autonomisation femmes et jeunes Tondikiwindi"
+    ],
+    "reporting_org_ref": "XM-DAC-41114",
+    "activity_date_type": [
+      "1",
+      "2",
+      "3"
+    ],
+    "activity_status_code": "2",
+    "description_narrative": [
+      "Autonomisation des femmes et des jeunes de la Commune de Tondikiwindi dans le cadre dune démonstration pilote du Programme dUrgence de Développement Communautaire."
+    ],
+    "activity_date_iso_date": [
+      "2022-04-04T00:00:00Z",
+      "2022-04-04T00:00:00Z",
+      "2031-12-31T00:00:00Z"
+    ],
+    "recipient_country_code": [
+      "NE"
+    ],
+    "reporting_org_narrative": [
+      "United Nations Development Programme"
+    ],
+    "recipient_country_narrative": [
+      "Niger"
+    ]
+  },
+  {
+    "sector_code": [
+      "15110",
+      "15117",
+      "16070",
+      "5.4",
+      "5.5"
+    ],
+    "iati_identifier": "XM-DAC-41114-PROJECT-01004774",
+    "title_narrative": [
+      "Institutional Transformation for Gender Equality (ITGE)"
+    ],
+    "reporting_org_ref": "XM-DAC-41114",
+    "activity_date_type": [
+      "1",
+      "2",
+      "3"
+    ],
+    "activity_status_code": "2",
+    "description_narrative": [
+      "While significant progress has been made towards achieving gender equality in Cambodia, there exist economic, cultural, social and other factors that continue to challenge the inclusion and empowerment of people of all genders in Cambodia. This project seeks to transform institutions to address the barriers to achieving gender equality, supported by tools, processes, research, evidence and the capacity required to support achieve long-term and sustainable progress. To reduce the institutional, economic, cultural and mental barriers holding back the achievement of gender equality, a holistic approach is required, bringing the right partners, including government, civil society and the private sector together to make a maximum impact. The result is an institutional ecosystem that is more gender-transformative, empowered by capacity and knowledge, and better able to mainstream gender to achieve real result for women and men in Cambodia."
+    ],
+    "activity_date_iso_date": [
+      "2025-06-01T00:00:00Z",
+      "2025-06-01T00:00:00Z",
+      "2029-12-31T00:00:00Z"
+    ],
+    "recipient_country_code": [
+      "KH"
+    ],
+    "reporting_org_narrative": [
+      "United Nations Development Programme"
+    ],
+    "recipient_country_narrative": [
+      "Cambodia"
+    ]
+  },
+  {
+    "sector_code": [
+      "43010",
+      "1.a"
+    ],
+    "iati_identifier": "XM-DAC-41114-PROJECT-00033759",
+    "title_narrative": [
+      "Senior Economist  Ethiopia"
+    ],
+    "reporting_org_ref": "XM-DAC-41114",
+    "activity_date_type": [
+      "1",
+      "2",
+      "3"
+    ],
+    "activity_status_code": "2",
+    "description_narrative": [
+      "Senior Economist Ethiopia"
+    ],
+    "activity_date_iso_date": [
+      "2004-01-01T00:00:00Z",
+      "2004-01-01T00:00:00Z",
+      "2031-12-31T00:00:00Z"
+    ],
+    "recipient_country_code": [
+      "ET"
+    ],
+    "reporting_org_narrative": [
+      "United Nations Development Programme"
+    ],
+    "recipient_country_narrative": [
+      "Ethiopia"
+    ]
+  },
+  {
+    "sector_code": [
+      "15127",
+      "1.a"
+    ],
+    "iati_identifier": "XM-DAC-41114-PROJECT-00042546",
+    "title_narrative": [
+      "Management Plan"
+    ],
+    "reporting_org_ref": "XM-DAC-41114",
+    "activity_date_type": [
+      "1",
+      "2",
+      "3"
+    ],
+    "activity_status_code": "2",
+    "description_narrative": [
+      "Management plan. Ensure that all anticipated programmatic and operational costs, including development effectiveness and implementation support arrangements are identified, fully costed in the budget."
+    ],
+    "activity_date_iso_date": [
+      "2006-01-01T00:00:00Z",
+      "2006-01-01T00:00:00Z",
+      "2024-07-01T00:00:00Z"
+    ],
+    "recipient_country_code": [
+      "ET"
+    ],
+    "reporting_org_narrative": [
+      "United Nations Development Programme"
+    ],
+    "recipient_country_narrative": [
+      "Ethiopia"
+    ]
+  },
+  {
+    "sector_code": [
+      "74020",
+      "13.1"
+    ],
+    "iati_identifier": "XM-DAC-41114-PROJECT-00132970",
+    "title_narrative": [
+      "Promotion of Green Economy and Recovery from the impact"
+    ],
+    "reporting_org_ref": "XM-DAC-41114",
+    "activity_date_type": [
+      "1",
+      "2",
+      "3",
+      "4"
+    ],
+    "activity_status_code": "3",
+    "description_narrative": [
+      "this porject aims at supporting a greener and more inclusive recovery in Comoros facing COVID-19 crisis"
+    ],
+    "activity_date_iso_date": [
+      "2020-12-17T00:00:00Z",
+      "2020-12-17T00:00:00Z",
+      "2024-09-06T00:00:00Z",
+      "2020-12-17T00:00:00Z"
+    ],
+    "recipient_country_code": [
+      "KM"
+    ],
+    "reporting_org_narrative": [
+      "United Nations Development Programme"
+    ],
+    "recipient_country_narrative": [
+      "Comoros"
+    ]
+  },
+  {
+    "sector_code": [
+      "13081",
+      "3.8"
+    ],
+    "iati_identifier": "XM-DAC-41114-PROJECT-00144006",
+    "title_narrative": [
+      "LENTREPRENARIAT JEUNE ET FEMININ en UDC"
+    ],
+    "reporting_org_ref": "XM-DAC-41114",
+    "activity_date_type": [
+      "1",
+      "2",
+      "3",
+      "4"
+    ],
+    "activity_status_code": "3",
+    "description_narrative": [
+      "La Zone de libre-échange continentale africaine (ZLECAf), lancée depuis le 1er janvier 2018, est présentée comme une opportunité de transformation économique et de croissance inclusive pour les pays africains."
+    ],
+    "activity_date_iso_date": [
+      "2022-05-18T00:00:00Z",
+      "2022-05-18T00:00:00Z",
+      "2025-07-24T00:00:00Z",
+      "2023-12-01T00:00:00Z"
+    ],
+    "recipient_country_code": [
+      "KM"
+    ],
+    "reporting_org_narrative": [
+      "United Nations Development Programme"
+    ],
+    "recipient_country_narrative": [
+      "Comoros"
+    ]
+  },
+  {
+    "sector_code": [
+      "51010"
+    ],
+    "iati_identifier": "XM-DAC-41114-PROJECT-00148231",
+    "title_narrative": [
+      "COMDirect Project Costs DPC"
+    ],
+    "reporting_org_ref": "XM-DAC-41114",
+    "activity_date_type": [
+      "1",
+      "2",
+      "3"
+    ],
+    "activity_status_code": "2",
+    "description_narrative": [
+      "COMDirect Project Costs DPC"
+    ],
+    "activity_date_iso_date": [
+      "2023-01-01T00:00:00Z",
+      "2023-01-01T00:00:00Z",
+      "2032-12-31T00:00:00Z"
+    ],
+    "recipient_country_code": [
+      "KM"
+    ],
+    "reporting_org_narrative": [
+      "United Nations Development Programme"
+    ],
+    "recipient_country_narrative": [
+      "Comoros"
+    ]
+  },
+  {
+    "sector_code": [
+      "25010",
+      "25030",
+      "17.1",
+      "17.2"
+    ],
+    "iati_identifier": "XM-DAC-41114-PROJECT-01000762",
+    "title_narrative": [
+      "Accéleration de la mise en oeuvre de la ZELECAf favorable à l'entreuneriat jeune et féminin en Union des Comores"
+    ],
+    "reporting_org_ref": "XM-DAC-41114",
+    "activity_date_type": [
+      "1",
+      "2",
+      "3",
+      "4"
+    ],
+    "activity_status_code": "3",
+    "description_narrative": [
+      "L’objectif de ce projet vise à accompagner l’Union des Comores à mener à bien ses responsabilités de Président de l’Union Africaine pour le mandat 2023. Plus spécifiquement, la présente requête vise à fournir à l’Union des Comores l’appui nécessaire pour accompagner la transition vers la mise en œuvre nationale de la Zone de libre-échange continentale africaine (ZLECAf) récemment ratifié par l’Union des Comores et renforcer les capacités de l’équipe nationale de négociations dans le cadre de la COP 28, pour lequel l’Union des Comores assumera de facto, le leadership des négociateurs des pays du groupe Afrique."
+    ],
+    "activity_date_iso_date": [
+      "2023-03-01T00:00:00Z",
+      "2023-03-01T00:00:00Z",
+      "2024-08-28T00:00:00Z",
+      "2023-08-01T00:00:00Z"
+    ],
+    "recipient_country_code": [
+      "KM"
+    ],
+    "reporting_org_narrative": [
+      "United Nations Development Programme"
+    ],
+    "recipient_country_narrative": [
+      "Comoros"
+    ]
+  },
+  {
+    "sector_code": [
+      "25010",
+      "17.9"
+    ],
+    "iati_identifier": "XM-DAC-41114-PROJECT-01001087",
+    "title_narrative": [
+      "Accélération de la mise en oeuvre Zelecaf"
+    ],
+    "reporting_org_ref": "XM-DAC-41114",
+    "activity_date_type": [
+      "1",
+      "2",
+      "3",
+      "4"
+    ],
+    "activity_status_code": "3",
+    "description_narrative": [
+      "L’objectif de ce projet vise à accompagner l’Union des Comores à mener à bien ses responsabilités de Président de l’Union Africaine pour le mandat 2023. Plus spécifiquement, la présente requête vise à fournir à l’Union des Comores l’appui nécessaire pour accompagner la transition vers la mise en œuvre nationale de la Zone de libre-échange continentale africaine (ZLECAf) récemment ratifié par l’Union des Comores et renforcer les capacités de l’équipe nationale de négociations dans le cadre de la COP 28, pour lequel l’Union des Comores assumera de facto, le leadership des négociateurs des pays du groupe Afrique.3 résultats sont attendus dans le cadre de cette intervention :RESULTAT 1 : Les capacités nationales de coordination et de suivi de la mise en œuvre de l’Accord ZLECAf seront renforcées pour utiliser la ZLECAf comme levier d’intégration au commerce interafricain. RESULTAT 2 : Leadership efficace et effectif pour une position partagée a travers l’adoption d’une déclaration commune des pays du grou"
+    ],
+    "activity_date_iso_date": [
+      "2023-01-01T00:00:00Z",
+      "2023-01-01T00:00:00Z",
+      "2025-08-04T00:00:00Z",
+      "2024-07-01T00:00:00Z"
+    ],
+    "recipient_country_code": [
+      "KM"
+    ],
+    "reporting_org_narrative": [
+      "United Nations Development Programme"
+    ],
+    "recipient_country_narrative": [
+      "Comoros"
+    ]
+  },
+  {
+    "sector_code": [
+      "72010",
+      "74020",
+      "11.1",
+      "11.2",
+      "11.3",
+      "11.4",
+      "11.5",
+      "11.6"
+    ],
+    "iati_identifier": "XM-DAC-41114-PROJECT-01004350",
+    "title_narrative": [
+      "Renforcement des systèmes d’alerte précoce pour renforcer la résilience des communautés vulnérables"
+    ],
+    "reporting_org_ref": "XM-DAC-41114",
+    "activity_date_type": [
+      "1",
+      "2",
+      "3"
+    ],
+    "activity_status_code": "2",
+    "description_narrative": [
+      "Objectifs global : Améliorer les capacités à gérer les risques et les impacts liés aux changements climatiques et aux catastrophes, et réduire les pertes et les dommages associés, gr ce i) à des connaissances et des capacités systémiques, techniques et opérationnelles accrues pour la préparation, la prévention et la réponse, ii) à des solutions souveraines et inclusives d’assurance et de financement des urgences, et iii) à des systèmes d’alerte précoce soutenus par un système dinformation spatiale, améliorant ainsi les compétences du pays à anticiper et à répondre aux sécheresses, aux inondations, aux fortes pluies et à dautres catastrophes et chocs."
+    ],
+    "activity_date_iso_date": [
+      "2025-01-01T00:00:00Z",
+      "2025-01-01T00:00:00Z",
+      "2026-05-31T00:00:00Z"
+    ],
+    "recipient_country_code": [
+      "KM"
+    ],
+    "reporting_org_narrative": [
+      "United Nations Development Programme"
+    ],
+    "recipient_country_narrative": [
+      "Comoros"
+    ]
+  },
+  {
+    "sector_code": [
+      "41010",
+      "15.2"
+    ],
+    "iati_identifier": "XM-DAC-41114-PROJECT-00120804",
+    "title_narrative": [
+      "Towards SI Riverside Devt AA"
+    ],
+    "reporting_org_ref": "XM-DAC-41114",
+    "activity_date_type": [
+      "1",
+      "2",
+      "3"
+    ],
+    "activity_status_code": "2",
+    "description_narrative": [
+      "PMO has launched a project titled Sheger Project. UNDP support this project within a wider framework of sustainable urban devt and encompassing resilience-building, sustainability & improved livelihoods for the urban poor."
+    ],
+    "activity_date_iso_date": [
+      "2019-07-01T00:00:00Z",
+      "2019-07-01T00:00:00Z",
+      "2025-12-31T00:00:00Z"
+    ],
+    "recipient_country_code": [
+      "ET"
+    ],
+    "reporting_org_narrative": [
+      "United Nations Development Programme"
+    ],
+    "recipient_country_narrative": [
+      "Ethiopia"
+    ]
+  },
+  {
+    "sector_code": [
+      "24010",
+      "1.2",
+      "10.1"
+    ],
+    "iati_identifier": "XM-DAC-41114-PROJECT-00128001",
+    "title_narrative": [
+      "Inclusive and Innovation Finance and Development"
+    ],
+    "reporting_org_ref": "XM-DAC-41114",
+    "activity_date_type": [
+      "1",
+      "2",
+      "3"
+    ],
+    "activity_status_code": "2",
+    "description_narrative": [
+      "The overarching goal is to design a sector-wide approach (SWAP) to development of SMEs through innovation and digital finance."
+    ],
+    "activity_date_iso_date": [
+      "2020-06-01T00:00:00Z",
+      "2020-06-01T00:00:00Z",
+      "2026-06-30T00:00:00Z"
+    ],
+    "recipient_country_code": [
+      "ET"
+    ],
+    "reporting_org_narrative": [
+      "United Nations Development Programme"
+    ],
+    "recipient_country_narrative": [
+      "Ethiopia"
+    ]
+  },
+  {
+    "sector_code": [
+      "15180",
+      "15220",
+      "5.1"
+    ],
+    "iati_identifier": "XM-DAC-41114-PROJECT-01000264",
+    "title_narrative": [
+      "Gender Mainstreaming and Women Empowerment Project"
+    ],
+    "reporting_org_ref": "XM-DAC-41114",
+    "activity_date_type": [
+      "1",
+      "2",
+      "3"
+    ],
+    "activity_status_code": "2",
+    "description_narrative": [
+      "The purpose of this Initiation Plan for the Gender Equality and women empowerment (GEWE) is to strengthen the Country office Gender mainstreaming efforts by developing and implementing of a New Gender Equality Strategy (2022-2025) and the implementation of the CO gender seal workplan besides strengthening partnership."
+    ],
+    "activity_date_iso_date": [
+      "2023-01-01T00:00:00Z",
+      "2023-01-01T00:00:00Z",
+      "2025-12-31T00:00:00Z"
+    ],
+    "recipient_country_code": [
+      "SS"
+    ],
+    "reporting_org_narrative": [
+      "United Nations Development Programme"
+    ],
+    "recipient_country_narrative": [
+      "South Sudan, Republic of"
+    ]
+  },
+  {
+    "sector_code": [
+      "11330",
+      "8.3"
+    ],
+    "iati_identifier": "XM-DAC-41114-PROJECT-01000594",
+    "title_narrative": [
+      "Skills, Employment, and Empowerment for the Development of Youth"
+    ],
+    "reporting_org_ref": "XM-DAC-41114",
+    "activity_date_type": [
+      "1",
+      "2",
+      "3"
+    ],
+    "activity_status_code": "2",
+    "description_narrative": [
+      "UNDP South Sudan will use TRAC 2 funds to consolidate peace, stabilize the economy, and build resilience through the adoption and scaling-up of transformative technologies and approaches to transition and recover local economies and improve the well-being of vulnerable youth and women. The initiative will foster employability and livelihood of at least 1,300 youth and women-headed households by matching industry needs with the available skills, transforming key productive value chains to exploit market opportunities in the African Continental Free Trade Area (AfCFTA), and generate income, employment, and livelihood for vulnerable population. The project will pursue the realization of the following key results;"
+    ],
+    "activity_date_iso_date": [
+      "2023-01-01T00:00:00Z",
+      "2023-01-01T00:00:00Z",
+      "2028-12-31T00:00:00Z"
+    ],
+    "recipient_country_code": [
+      "SS"
+    ],
+    "reporting_org_narrative": [
+      "United Nations Development Programme"
+    ],
+    "recipient_country_narrative": [
+      "South Sudan, Republic of"
+    ]
+  },
+  {
+    "sector_code": [
+      "15220",
+      "16.7"
+    ],
+    "iati_identifier": "XM-DAC-41114-PROJECT-01000668",
+    "title_narrative": [
+      "Truc1 Support to Peace and Community Cohesion Project (PaCC)"
+    ],
+    "reporting_org_ref": "XM-DAC-41114",
+    "activity_date_type": [
+      "1",
+      "2",
+      "3"
+    ],
+    "activity_status_code": "2",
+    "description_narrative": [
+      "The project focuses on building inter-dependency and social cohesion among disputed communities in the target areas of operation. Women and youth are the primary targets in the project."
+    ],
+    "activity_date_iso_date": [
+      "2023-05-01T00:00:00Z",
+      "2023-05-01T00:00:00Z",
+      "2024-12-31T00:00:00Z"
+    ],
+    "recipient_country_code": [
+      "SS"
+    ],
+    "reporting_org_narrative": [
+      "United Nations Development Programme"
+    ],
+    "recipient_country_narrative": [
+      "South Sudan, Republic of"
+    ]
+  },
+  {
+    "sector_code": [
+      "23111",
+      "23231",
+      "7.1"
+    ],
+    "iati_identifier": "XM-DAC-41114-PROJECT-01001925",
+    "title_narrative": [
+      "Scaling Solar Applications for Agricultural Use (SSAAU) in South Sudan"
+    ],
+    "reporting_org_ref": "XM-DAC-41114",
+    "activity_date_type": [
+      "1",
+      "2",
+      "3"
+    ],
+    "activity_status_code": "2",
+    "description_narrative": [
+      "The Project Objective is to test new and innovative deployment models for Solar Water Pumps, that can be replicated and scaled, to support national plans for sustainable development."
+    ],
+    "activity_date_iso_date": [
+      "2024-01-01T00:00:00Z",
+      "2024-01-01T00:00:00Z",
+      "2026-12-31T00:00:00Z"
+    ],
+    "recipient_country_code": [
+      "SS"
+    ],
+    "reporting_org_narrative": [
+      "United Nations Development Programme"
+    ],
+    "recipient_country_narrative": [
+      "South Sudan, Republic of"
+    ]
+  },
+  {
+    "sector_code": [
+      "15220",
+      "5.5",
+      "8.3",
+      "8.6"
+    ],
+    "iati_identifier": "XM-DAC-41114-PROJECT-01002496",
+    "title_narrative": [
+      "South Sudan National Youth Empowerment Initiative"
+    ],
+    "reporting_org_ref": "XM-DAC-41114",
+    "activity_date_type": [
+      "1",
+      "2",
+      "3"
+    ],
+    "activity_status_code": "2",
+    "description_narrative": [
+      "The Project Initiation Plan (PIP) aims to lay the foundational building blocks for the NYEI, including operationalization of the NYEI framework, youth policy frameworks and required legal instruments. It recognizes young people as key agents of change and will serve as a platform through which they will be engaged in developing innovative solutions to the challenges faced."
+    ],
+    "activity_date_iso_date": [
+      "2024-01-01T00:00:00Z",
+      "2024-01-01T00:00:00Z",
+      "2025-12-31T00:00:00Z"
+    ],
+    "recipient_country_code": [
+      "SS"
+    ],
+    "reporting_org_narrative": [
+      "United Nations Development Programme"
+    ],
+    "recipient_country_narrative": [
+      "South Sudan, Republic of"
+    ]
+  },
+  {
+    "sector_code": [
+      "15220",
+      "16.6",
+      "16.a"
+    ],
+    "iati_identifier": "XM-DAC-41114-PROJECT-01000409",
+    "title_narrative": [
+      "Supporting Peacebuilding, Social Cohesion, and Diversity Management In Ethiopia"
+    ],
+    "reporting_org_ref": "XM-DAC-41114",
+    "activity_date_type": [
+      "1",
+      "2",
+      "3"
+    ],
+    "activity_status_code": "2",
+    "description_narrative": [
+      "Support implementation of carefully selected quick wins to catalyze implementations and follow-up of strategic initiatives by the beneficiaries (MoP and MoF). Strategic level support for the MoP to address the policy and strategic gaps of the Ethiopian National voluntary Community Service programme (ENVCSP."
+    ],
+    "activity_date_iso_date": [
+      "2023-03-16T00:00:00Z",
+      "2023-03-16T00:00:00Z",
+      "2025-12-31T00:00:00Z"
+    ],
+    "recipient_country_code": [
+      "ET"
+    ],
+    "reporting_org_narrative": [
+      "United Nations Development Programme"
+    ],
+    "recipient_country_narrative": [
+      "Ethiopia"
+    ]
+  },
+  {
+    "sector_code": [
+      "31120",
+      "31130",
+      "31150",
+      "31161",
+      "5.1",
+      "5.5"
+    ],
+    "iati_identifier": "XM-DAC-41114-PROJECT-01003682",
+    "title_narrative": [
+      "2024_IBSA_Empowering Women and Youth"
+    ],
+    "reporting_org_ref": "XM-DAC-41114",
+    "activity_date_type": [
+      "1",
+      "2",
+      "3"
+    ],
+    "activity_status_code": "2",
+    "description_narrative": [
+      "The project aims to increase the scale of vegetable production for smallholder · farmers. It is a follow-up to the past implemented project targeting women in Juba, and this will enable women-led vegetable producer groups to increase production, improve the quality of produce, and market the produce, thus stabilizing the food and nutrition security and income of the smallholder farmers."
+    ],
+    "activity_date_iso_date": [
+      "2024-11-05T00:00:00Z",
+      "2024-11-05T00:00:00Z",
+      "2026-12-31T00:00:00Z"
+    ],
+    "recipient_country_code": [
+      "SS"
+    ],
+    "reporting_org_narrative": [
+      "United Nations Development Programme"
+    ],
+    "recipient_country_narrative": [
+      "South Sudan, Republic of"
+    ]
+  },
+  {
+    "sector_code": [
+      "15110",
+      "17.14"
+    ],
+    "iati_identifier": "XM-DAC-41114-PROJECT-01000716",
+    "title_narrative": [
+      "Strengthening Institutional Capacity of the Ministry of Planning and Development"
+    ],
+    "reporting_org_ref": "XM-DAC-41114",
+    "activity_date_type": [
+      "1",
+      "2",
+      "3"
+    ],
+    "activity_status_code": "2",
+    "description_narrative": [
+      "Finalization of the comprehensive capacity needs assessment and formulation of a full-fledged multi-year programme, undertaking development finance Analysis (DFA) and Integrated National financing framework (INFF) including Green Finance for Ethiopia, and providing technical advisory (TA) Support to the Ministry."
+    ],
+    "activity_date_iso_date": [
+      "2023-05-18T00:00:00Z",
+      "2023-05-18T00:00:00Z",
+      "2026-03-31T00:00:00Z"
+    ],
+    "recipient_country_code": [
+      "ET"
+    ],
+    "reporting_org_narrative": [
+      "United Nations Development Programme"
+    ],
+    "recipient_country_narrative": [
+      "Ethiopia"
+    ]
+  }
+]

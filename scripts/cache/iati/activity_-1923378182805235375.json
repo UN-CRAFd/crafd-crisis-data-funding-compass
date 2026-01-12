@@ -1,0 +1,7145 @@
+[
+  {
+    "sector_code": [
+      "91010"
+    ],
+    "budget_value": [
+      443383177.38001,
+      517654949.73,
+      576194182.67,
+      527785826.5,
+      479972646.0
+    ],
+    "iati_identifier": "XM-DAC-41140-PSA",
+    "title_narrative": [
+      "Programme Support and Administration"
+    ],
+    "sector_narrative": [
+      "Administrative costs"
+    ],
+    "reporting_org_ref": "XM-DAC-41140",
+    "transaction_value": [
+      419454887.5,
+      470066044.9,
+      527777309.4,
+      452195798.9,
+      279087801.5,
+      419454887.5,
+      470066044.9,
+      527777309.4,
+      452195798.9,
+      279087801.5
+    ],
+    "activity_date_type": [
+      "1",
+      "2",
+      "3"
+    ],
+    "activity_status_code": "2",
+    "description_narrative": [
+      "The Programme Support and Administrative Budget (PSA) is used to cover corporate overhead costs that cannot be linked directly with a particular project’s implementation."
+    ],
+    "activity_date_iso_date": [
+      "2021-01-01T00:00:00Z",
+      "2021-01-01T00:00:00Z",
+      "2025-12-31T00:00:00Z"
+    ],
+    "recipient_country_code": [
+      "IT"
+    ],
+    "reporting_org_narrative": [
+      "World Food Programme"
+    ]
+  },
+  {
+    "sector_code": [
+      "91010"
+    ],
+    "budget_value": [
+      142384566.7,
+      211272531.06,
+      115003647.86,
+      64185131.05,
+      -20246014.02
+    ],
+    "iati_identifier": "XM-DAC-41140-TF",
+    "title_narrative": [
+      "Trust Funds"
+    ],
+    "sector_narrative": [
+      "Administrative costs"
+    ],
+    "reporting_org_ref": "XM-DAC-41140",
+    "transaction_value": [
+      191682312.7,
+      95266314.52,
+      87369646.87,
+      85603740.48,
+      58329288.84,
+      191682312.7,
+      95266314.52,
+      87369646.87,
+      85603740.48,
+      58329288.84
+    ],
+    "activity_date_type": [
+      "1",
+      "2",
+      "3"
+    ],
+    "activity_status_code": "2",
+    "description_narrative": [
+      "Contributions whose purpose, scope and reporting requirements fall outside WFP’s regular operational programmes but are consistent with its policies, aims and activities."
+    ],
+    "activity_date_iso_date": [
+      "2021-01-01T00:00:00Z",
+      "2021-01-01T00:00:00Z",
+      "2025-12-31T00:00:00Z"
+    ],
+    "recipient_country_code": [
+      "IT"
+    ],
+    "reporting_org_narrative": [
+      "World Food Programme"
+    ]
+  },
+  {
+    "sector_code": [
+      "72040",
+      "2",
+      "2.1"
+    ],
+    "budget_value": [
+      23546803.58,
+      23546803.55,
+      23546803.57,
+      23546803.54,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "iati_identifier": "XM-DAC-41140-PS02.01.011.SMP1",
+    "title_narrative": [
+      "09 School based Activity"
+    ],
+    "sector_narrative": [
+      "Emergency food aid",
+      "Zero hunger",
+      "By 2030, end hunger and ensure access by all people, in particular the poor and people in vulnerable situations, including infants, to safe, nutritious and sufficient food all year round"
+    ],
+    "reporting_org_ref": "XM-DAC-41140",
+    "transaction_value": [
+      0.0,
+      0.0,
+      80470.86,
+      22240.55,
+      19360.88,
+      47234.75,
+      -80470.86,
+      -22240.55,
+      -19360.88,
+      -47234.75
+    ],
+    "activity_date_type": [
+      "1",
+      "2",
+      "3"
+    ],
+    "activity_status_code": "2",
+    "description_narrative": [
+      "Country portfolio budget - CPB Palestine, State of 2023-2028 Provide food assistance to crisis-affected school-aged children."
+    ],
+    "activity_date_iso_date": [
+      "2023-03-01T00:00:00Z",
+      "2023-03-01T00:00:00Z",
+      "2028-02-29T00:00:00Z"
+    ],
+    "recipient_country_code": [
+      "PS"
+    ],
+    "reporting_org_narrative": [
+      "World Food Programme"
+    ]
+  },
+  {
+    "sector_code": [
+      "74020",
+      "17",
+      "17.9"
+    ],
+    "budget_value": [
+      130595.84,
+      130595.85,
+      130595.81,
+      130595.84,
+      141490.0,
+      141490.0,
+      141490.0,
+      141490.0,
+      142907.5,
+      142907.5,
+      142907.5,
+      142907.5,
+      144367.52,
+      144367.54,
+      144367.52,
+      144367.52,
+      145871.35,
+      145871.36,
+      145871.35,
+      145871.35,
+      23456.05,
+      23456.06,
+      23456.03,
+      23456.04
+    ],
+    "iati_identifier": "XM-DAC-41140-PS02.05.034.SPS1",
+    "title_narrative": [
+      "03 Institutional Capacity Strengthening"
+    ],
+    "sector_narrative": [
+      "Multi-hazard response preparedness",
+      "Partnerships for the goals",
+      "Enhance international support for implementing effective and targeted capacity-building in developing countries to support national plans to implement all the Sustainable Development Goals, including through North-South, South-South and triangular cooperation"
+    ],
+    "reporting_org_ref": "XM-DAC-41140",
+    "transaction_value": [
+      0.0,
+      0.0,
+      366027.0,
+      -366027.0,
+      87777.04
+    ],
+    "activity_date_type": [
+      "1",
+      "2",
+      "3"
+    ],
+    "activity_status_code": "2",
+    "description_narrative": [
+      "Country portfolio budget - CPB Palestine, State of 2023-2028 Provide technical expertise, capacity strengthening and support to national institutions to facilitate the implementation of national strategies and plans"
+    ],
+    "activity_date_iso_date": [
+      "2023-03-01T00:00:00Z",
+      "2023-03-01T00:00:00Z",
+      "2028-02-29T00:00:00Z"
+    ],
+    "recipient_country_code": [
+      "PS"
+    ],
+    "reporting_org_narrative": [
+      "World Food Programme"
+    ]
+  },
+  {
+    "sector_code": [
+      "72050",
+      "17",
+      "17.9"
+    ],
+    "budget_value": [
+      288297.53,
+      288297.52,
+      288297.53,
+      288297.52,
+      288717.09,
+      288717.09,
+      288717.08,
+      288717.09,
+      289157.63,
+      289157.63,
+      289157.63,
+      289157.63,
+      289620.2,
+      289620.2,
+      289620.19,
+      289620.2,
+      290105.9,
+      290105.89,
+      290105.9,
+      290105.89
+    ],
+    "iati_identifier": "XM-DAC-41140-HT03.05.055.ETC1",
+    "title_narrative": [
+      "Assurer la coordination et l’encadrement du secteur des télécommunications d’urgence en Haïti"
+    ],
+    "sector_narrative": [
+      "Relief co-ordination; protection and support services",
+      "Partnerships for the goals",
+      "Enhance international support for implementing effective and targeted capacity-building in developing countries to support national plans to implement all the Sustainable Development Goals, including through North-South, South-South and triangular cooperation"
+    ],
+    "reporting_org_ref": "XM-DAC-41140",
+    "transaction_value": [
+      0.0,
+      0.0,
+      0.0
+    ],
+    "activity_date_type": [
+      "1",
+      "2",
+      "3"
+    ],
+    "activity_status_code": "2",
+    "description_narrative": [
+      "Budget de Portefeuille de Pays - CPB Haiti (2024-2028) - Assurer la coordination et l’encadrement du secteur des télécommunications d’urgence en Haïti"
+    ],
+    "activity_date_iso_date": [
+      "2024-01-01T00:00:00Z",
+      "2024-01-01T00:00:00Z",
+      "2028-12-31T00:00:00Z"
+    ],
+    "recipient_country_code": [
+      "HT"
+    ],
+    "reporting_org_narrative": [
+      "World Food Programme"
+    ]
+  },
+  {
+    "sector_code": [
+      "72050",
+      "17",
+      "17.16"
+    ],
+    "budget_value": [
+      3780000.0,
+      3780000.0,
+      3780000.0,
+      3780000.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "iati_identifier": "XM-DAC-41140-SY02.08.041.CPA5",
+    "title_narrative": [
+      "10 CBT Platform Service"
+    ],
+    "sector_narrative": [
+      "Relief co-ordination; protection and support services",
+      "Partnerships for the goals",
+      "Enhance the Global Partnership for Sustainable Development, complemented by multi-stakeholder partnerships that mobilize and share knowledge, expertise, technology and financial resources, to support the achievement of the Sustainable Development Goals in all countries, in particular developing countries"
+    ],
+    "reporting_org_ref": "XM-DAC-41140",
+    "transaction_value": [
+      418603.01,
+      418712.93,
+      513312.43,
+      454821.36,
+      598087.62,
+      440866.57,
+      5748.48,
+      533494.52,
+      313507.91,
+      418603.01,
+      418712.93,
+      513312.43,
+      454821.36,
+      598087.62,
+      440866.57,
+      5748.48,
+      533494.52,
+      313507.91
+    ],
+    "activity_date_type": [
+      "1",
+      "2",
+      "3",
+      "4"
+    ],
+    "activity_status_code": "3",
+    "description_narrative": [
+      "Country portfolio budget - CPB Syria 2019-2021 Provide on-demand cash-based transfer services to humanitarian partners."
+    ],
+    "activity_date_iso_date": [
+      "2019-01-01T00:00:00Z",
+      "2019-01-01T00:00:00Z",
+      "2021-12-31T00:00:00Z",
+      "2021-12-31T00:00:00Z"
+    ],
+    "recipient_country_code": [
+      "SY"
+    ],
+    "reporting_org_narrative": [
+      "World Food Programme"
+    ]
+  },
+  {
+    "sector_code": [
+      "72050",
+      "17",
+      "17.16"
+    ],
+    "budget_value": [
+      31386.97,
+      31386.96,
+      31386.97,
+      31386.95,
+      34552.58,
+      34552.57,
+      34552.58,
+      34552.57,
+      33254.39,
+      33254.4,
+      33254.38,
+      33254.39,
+      36160.0,
+      36160.01,
+      36159.99,
+      36160.0,
+      39356.17,
+      39356.17,
+      39356.17,
+      39356.16,
+      23535.13,
+      23535.12,
+      23535.12,
+      23535.12
+    ],
+    "iati_identifier": "XM-DAC-41140-NI03.08.045.ODS1",
+    "title_narrative": [
+      "Prestar los servicios que soliciten las instituciones nacionales y las entidades de las Naciones Unidas para facilitar una asistencia oportuna a las personas afectadas o expuestas a crisis."
+    ],
+    "sector_narrative": [
+      "Relief co-ordination; protection and support services",
+      "Partnerships for the goals",
+      "Enhance the Global Partnership for Sustainable Development, complemented by multi-stakeholder partnerships that mobilize and share knowledge, expertise, technology and financial resources, to support the achievement of the Sustainable Development Goals in all countries, in particular developing countries"
+    ],
+    "reporting_org_ref": "XM-DAC-41140",
+    "transaction_value": [
+      663.6,
+      16655.19,
+      31069.98,
+      24112.85,
+      14455.4,
+      32172.55,
+      37725.08,
+      663.6,
+      16655.19,
+      31069.98,
+      24112.85,
+      14455.4,
+      32172.55,
+      37725.08,
+      10253.4,
+      183329.55,
+      -16749.55,
+      1755.6,
+      351.15,
+      -22085.5
+    ],
+    "activity_date_type": [
+      "1",
+      "2",
+      "3"
+    ],
+    "activity_status_code": "2",
+    "description_narrative": [
+      "Carteras de actividades en los paíse- Nicaragua 2024-2029 - Prestar los servicios que soliciten las instituciones nacionales y las entidades de las Naciones Unidas para facilitar una asistencia oportuna a las personas afectadas o expuestas a crisis."
+    ],
+    "activity_date_iso_date": [
+      "2024-07-01T00:00:00Z",
+      "2024-07-01T00:00:00Z",
+      "2029-06-30T00:00:00Z"
+    ],
+    "recipient_country_code": [
+      "NI"
+    ],
+    "reporting_org_narrative": [
+      "World Food Programme"
+    ]
+  },
+  {
+    "sector_code": [
+      "72050",
+      "17",
+      "17.16"
+    ],
+    "budget_value": [
+      2453722.13,
+      2453722.13,
+      2453722.1,
+      2453722.13,
+      458904.06,
+      458904.05,
+      458904.05,
+      458904.05,
+      25250.0,
+      25250.0,
+      25250.0,
+      25250.0
+    ],
+    "iati_identifier": "XM-DAC-41140-MM01.08.041.CPA2",
+    "title_narrative": [
+      "11 On-demand cash transfer services"
+    ],
+    "sector_narrative": [
+      "Relief co-ordination; protection and support services",
+      "Partnerships for the goals",
+      "Enhance the Global Partnership for Sustainable Development, complemented by multi-stakeholder partnerships that mobilize and share knowledge, expertise, technology and financial resources, to support the achievement of the Sustainable Development Goals in all countries, in particular developing countries"
+    ],
+    "reporting_org_ref": "XM-DAC-41140",
+    "transaction_value": [
+      1697202.85,
+      -7838.95,
+      386.6,
+      134571.95,
+      -2833.86,
+      14483.86,
+      -356.24,
+      1697202.85,
+      -7838.95,
+      386.6,
+      134571.95,
+      -2833.86,
+      14483.86,
+      -356.24
+    ],
+    "activity_date_type": [
+      "1",
+      "2",
+      "3",
+      "4"
+    ],
+    "activity_status_code": "3",
+    "description_narrative": [
+      "Country portfolio budget - CPB Myanmar 2018-2023 Provide on-demand cash transfer services on behalf of  UN and other partners  to help affected populations meet their essential needs"
+    ],
+    "activity_date_iso_date": [
+      "2018-01-01T00:00:00Z",
+      "2018-01-01T00:00:00Z",
+      "2023-12-31T00:00:00Z",
+      "2023-12-31T00:00:00Z"
+    ],
+    "recipient_country_code": [
+      "MM"
+    ],
+    "reporting_org_narrative": [
+      "World Food Programme"
+    ]
+  },
+  {
+    "sector_code": [
+      "72050",
+      "17",
+      "17.16"
+    ],
+    "budget_value": [
+      92382.38,
+      92382.36,
+      92382.37,
+      92382.35,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "iati_identifier": "XM-DAC-41140-MM02.08.045.LCS1",
+    "title_narrative": [
+      "07 Provide mandated services"
+    ],
+    "sector_narrative": [
+      "Relief co-ordination; protection and support services",
+      "Partnerships for the goals",
+      "Enhance the Global Partnership for Sustainable Development, complemented by multi-stakeholder partnerships that mobilize and share knowledge, expertise, technology and financial resources, to support the achievement of the Sustainable Development Goals in all countries, in particular developing countries"
+    ],
+    "reporting_org_ref": "XM-DAC-41140",
+    "transaction_value": [
+      0.0,
+      0.0,
+      0.0
+    ],
+    "activity_date_type": [
+      "1",
+      "2",
+      "3"
+    ],
+    "activity_status_code": "2",
+    "description_narrative": [
+      "Country portfolio budget - CPB Myanmar 2024-2026 Provide mandated logistic services to humanitarian partners."
+    ],
+    "activity_date_iso_date": [
+      "2024-01-01T00:00:00Z",
+      "2024-01-01T00:00:00Z",
+      "2026-12-31T00:00:00Z"
+    ],
+    "recipient_country_code": [
+      "MM"
+    ],
+    "reporting_org_narrative": [
+      "World Food Programme"
+    ]
+  },
+  {
+    "sector_code": [
+      "52010",
+      "17",
+      "17.14"
+    ],
+    "budget_value": [
+      192311.25,
+      192311.25,
+      192311.25,
+      192311.25,
+      194479.81,
+      194479.82,
+      194479.81,
+      194479.81,
+      201793.4,
+      201793.39,
+      201793.39,
+      201793.39,
+      204256.6,
+      204256.59,
+      204256.58,
+      204256.59,
+      211874.16,
+      211874.15,
+      211874.15,
+      211874.15,
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "iati_identifier": "XM-DAC-41140-NP02.06.051.CSI1",
+    "title_narrative": [
+      "08 Enhance food security plans"
+    ],
+    "sector_narrative": [
+      "Food assistance",
+      "Partnerships for the goals",
+      "Enhance policy coherence for sustainable development"
+    ],
+    "reporting_org_ref": "XM-DAC-41140",
+    "transaction_value": [
+      19921.27,
+      34324.61,
+      3290.57,
+      4282.49,
+      680.84,
+      320.09,
+      3567.09,
+      602.25,
+      4205.09,
+      2048.29,
+      2978.55,
+      4132.51,
+      2261.15,
+      19921.27,
+      34324.61,
+      3290.57,
+      4282.49,
+      680.84,
+      320.09,
+      3567.09,
+      602.25,
+      4205.09,
+      2048.29,
+      2978.55,
+      4132.51,
+      2261.15
+    ],
+    "activity_date_type": [
+      "1",
+      "2",
+      "3",
+      "4"
+    ],
+    "activity_status_code": "3",
+    "description_narrative": [
+      "Country portfolio budget - CPB Nepal 2019-2023 Provide technical assistance and support evidence generation for government and multi-sector partners to enhance rights-based food security and nutrition plans, policies, regulatory frameworks and service delivery."
+    ],
+    "activity_date_iso_date": [
+      "2019-01-01T00:00:00Z",
+      "2019-01-01T00:00:00Z",
+      "2023-12-31T00:00:00Z",
+      "2023-12-31T00:00:00Z"
+    ],
+    "recipient_country_code": [
+      "NP"
+    ],
+    "reporting_org_narrative": [
+      "World Food Programme"
+    ]
+  },
+  {
+    "sector_code": [
+      "72050",
+      "17",
+      "17.16"
+    ],
+    "budget_value": [
+      25432.71,
+      25432.72,
+      25432.68,
+      25432.7,
+      211315.81,
+      211315.79,
+      211315.78,
+      211315.79,
+      370113.26,
+      370113.24,
+      370113.25,
+      370113.23
+    ],
+    "iati_identifier": "XM-DAC-41140-NP02.08.061.CPA2",
+    "title_narrative": [
+      "10 On-demand cash transfer service"
+    ],
+    "sector_narrative": [
+      "Relief co-ordination; protection and support services",
+      "Partnerships for the goals",
+      "Enhance the Global Partnership for Sustainable Development, complemented by multi-stakeholder partnerships that mobilize and share knowledge, expertise, technology and financial resources, to support the achievement of the Sustainable Development Goals in all countries, in particular developing countries"
+    ],
+    "reporting_org_ref": "XM-DAC-41140",
+    "transaction_value": [
+      510.91,
+      45291.43,
+      71.89,
+      3961.06,
+      2651.26,
+      510.91,
+      45291.43,
+      71.89,
+      3961.06,
+      2651.26
+    ],
+    "activity_date_type": [
+      "1",
+      "2",
+      "3",
+      "4"
+    ],
+    "activity_status_code": "3",
+    "description_narrative": [
+      "Country portfolio budget - CPB Nepal 2019-2023 Provide on-demand cash-based transfer management support to all humanitarian and development partners to enable them to provide efficient cash transfer services to the affected population in order to meet their essential needs"
+    ],
+    "activity_date_iso_date": [
+      "2019-01-01T00:00:00Z",
+      "2019-01-01T00:00:00Z",
+      "2023-12-31T00:00:00Z",
+      "2023-12-31T00:00:00Z"
+    ],
+    "recipient_country_code": [
+      "NP"
+    ],
+    "reporting_org_narrative": [
+      "World Food Programme"
+    ]
+  },
+  {
+    "sector_code": [
+      "72050",
+      "17",
+      "17.16"
+    ],
+    "budget_value": [
+      13551.5,
+      13551.51,
+      13551.49,
+      13551.5,
+      90815.33,
+      90815.32,
+      90815.3,
+      90815.32,
+      90875.18,
+      90875.17,
+      90875.15,
+      90875.17,
+      135386.26,
+      135386.26,
+      135386.25,
+      135386.24,
+      226348.92,
+      226348.91,
+      226348.9,
+      226348.91
+    ],
+    "iati_identifier": "XM-DAC-41140-PH03.08.035.ODS1",
+    "title_narrative": [
+      "05 Development actions"
+    ],
+    "sector_narrative": [
+      "Relief co-ordination; protection and support services",
+      "Partnerships for the goals",
+      "Enhance the Global Partnership for Sustainable Development, complemented by multi-stakeholder partnerships that mobilize and share knowledge, expertise, technology and financial resources, to support the achievement of the Sustainable Development Goals in all countries, in particular developing countries"
+    ],
+    "reporting_org_ref": "XM-DAC-41140",
+    "transaction_value": [
+      0.0,
+      0.0,
+      0.0
+    ],
+    "activity_date_type": [
+      "1",
+      "2",
+      "3"
+    ],
+    "activity_status_code": "2",
+    "description_narrative": [
+      "Country portfolio budget - CPB Philippines 2024-2028 Provide government and other partners with on-demand services aimed at improving development action, including with regard to food security, nutrition and supply chains."
+    ],
+    "activity_date_iso_date": [
+      "2024-03-01T00:00:00Z",
+      "2024-03-01T00:00:00Z",
+      "2028-12-31T00:00:00Z"
+    ],
+    "recipient_country_code": [
+      "PH"
+    ],
+    "reporting_org_narrative": [
+      "World Food Programme"
+    ]
+  },
+  {
+    "sector_code": [
+      "72050",
+      "17",
+      "17.16"
+    ],
+    "budget_value": [
+      13392.08,
+      13392.08,
+      13392.08,
+      13392.08,
+      14939.35,
+      14939.34,
+      14939.35,
+      14939.34,
+      15018.62,
+      15018.62,
+      15018.62,
+      15018.62
+    ],
+    "iati_identifier": "XM-DAC-41140-KG02.08.055.ODS1",
+    "title_narrative": [
+      "05 On-demand services"
+    ],
+    "sector_narrative": [
+      "Relief co-ordination; protection and support services",
+      "Partnerships for the goals",
+      "Enhance the Global Partnership for Sustainable Development, complemented by multi-stakeholder partnerships that mobilize and share knowledge, expertise, technology and financial resources, to support the achievement of the Sustainable Development Goals in all countries, in particular developing countries"
+    ],
+    "reporting_org_ref": "XM-DAC-41140",
+    "transaction_value": [
+      0.0,
+      0.0,
+      0.0
+    ],
+    "activity_date_type": [
+      "1",
+      "2",
+      "3"
+    ],
+    "activity_status_code": "2",
+    "description_narrative": [
+      "Country portfolio budget - CPB Kyrgyzstan 2023-2027 Provide on-demand services including payment services, food and non-food procurement, and logistics supply chain capacity to the government and humanitarian and development partners."
+    ],
+    "activity_date_iso_date": [
+      "2023-01-01T00:00:00Z",
+      "2023-01-01T00:00:00Z",
+      "2027-12-31T00:00:00Z"
+    ],
+    "recipient_country_code": [
+      "KG"
+    ],
+    "reporting_org_narrative": [
+      "World Food Programme"
+    ]
+  },
+  {
+    "sector_code": [
+      "72040",
+      "2",
+      "2.1"
+    ],
+    "budget_value": [
+      142314.67,
+      142314.66,
+      142314.65,
+      142314.64,
+      141718.51,
+      141718.5,
+      141718.48,
+      141718.48,
+      141893.95,
+      141893.95,
+      141893.92,
+      141893.93,
+      49103.59,
+      49103.62,
+      49103.58,
+      49103.57,
+      153299.2,
+      153299.2,
+      153299.18,
+      153299.2,
+      147212.38,
+      147212.39,
+      147212.36,
+      147212.38,
+      180271.69,
+      180271.69,
+      180271.68,
+      180271.68,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "iati_identifier": "XM-DAC-41140-KP02.01.031.URT1",
+    "title_narrative": [
+      "03 Emergency Response"
+    ],
+    "sector_narrative": [
+      "Emergency food assistance",
+      "Zero hunger",
+      "By 2030, end hunger and ensure access by all people, in particular the poor and people in vulnerable situations, including infants, to safe, nutritious and sufficient food all year round"
+    ],
+    "reporting_org_ref": "XM-DAC-41140",
+    "transaction_value": [
+      0.0,
+      0.0,
+      0.0
+    ],
+    "activity_date_type": [
+      "1",
+      "2",
+      "3"
+    ],
+    "activity_status_code": "2",
+    "description_narrative": [
+      "Country portfolio budget - CPB Korea, Democratic Republic 2019-2025 Provide unconditional in-kind food assistance to crisis-affected people."
+    ],
+    "activity_date_iso_date": [
+      "2019-01-01T00:00:00Z",
+      "2019-01-01T00:00:00Z",
+      "2025-12-31T00:00:00Z"
+    ],
+    "recipient_country_code": [
+      "KP"
+    ],
+    "reporting_org_narrative": [
+      "World Food Programme"
+    ]
+  },
+  {
+    "sector_code": [
+      "52010",
+      "17",
+      "17.9"
+    ],
+    "budget_value": [
+      201939.13,
+      201939.12,
+      201939.13,
+      201939.12,
+      31809.5,
+      31809.5,
+      31809.5,
+      31809.5,
+      17053.13,
+      17053.13,
+      17053.13,
+      17053.13,
+      31322.59,
+      31322.6,
+      31322.59,
+      31322.59,
+      24497.5,
+      24497.51,
+      24497.5,
+      24497.5,
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "iati_identifier": "XM-DAC-41140-LA01.05.041.CSI1",
+    "title_narrative": [
+      "08 Invest in capacity food nutr. securit"
+    ],
+    "sector_narrative": [
+      "Food assistance",
+      "Partnerships for the goals",
+      "Enhance international support for implementing effective and targeted capacity-building in developing countries to support national plans to implement all the Sustainable Development Goals, including through North-South, South-South and triangular cooperation"
+    ],
+    "reporting_org_ref": "XM-DAC-41140",
+    "transaction_value": [
+      66.28,
+      3542.96,
+      2000.0,
+      2000.0,
+      2000.0,
+      2000.0,
+      2000.0,
+      733.33,
+      66.28,
+      3542.96,
+      2000.0,
+      2000.0,
+      2000.0,
+      2000.0,
+      2000.0,
+      733.33
+    ],
+    "activity_date_type": [
+      "1",
+      "2",
+      "3",
+      "4"
+    ],
+    "activity_status_code": "3",
+    "description_narrative": [
+      "Country portfolio budget - CPB Laos 2017-2021 Invest in national capacity for food and nutrition security governance"
+    ],
+    "activity_date_iso_date": [
+      "2017-03-01T00:00:00Z",
+      "2017-04-01T00:00:00Z",
+      "2021-12-31T00:00:00Z",
+      "2021-12-31T00:00:00Z"
+    ],
+    "recipient_country_code": [
+      "LA"
+    ],
+    "reporting_org_narrative": [
+      "World Food Programme"
+    ]
+  },
+  {
+    "sector_code": [
+      "52010",
+      "17",
+      "17.9"
+    ],
+    "budget_value": [
+      82052.13,
+      82052.12,
+      82052.13,
+      82052.12,
+      128566.0,
+      128566.0,
+      128566.0,
+      128566.0,
+      191500.29,
+      191500.28,
+      191500.29,
+      191500.28,
+      205907.82,
+      205907.81,
+      205907.81,
+      205907.81,
+      199352.85,
+      199352.84,
+      199352.85,
+      199352.84,
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "iati_identifier": "XM-DAC-41140-LA01.05.041.CSI2",
+    "title_narrative": [
+      "09 Enable communities to lead"
+    ],
+    "sector_narrative": [
+      "Food assistance",
+      "Partnerships for the goals",
+      "Enhance international support for implementing effective and targeted capacity-building in developing countries to support national plans to implement all the Sustainable Development Goals, including through North-South, South-South and triangular cooperation"
+    ],
+    "reporting_org_ref": "XM-DAC-41140",
+    "transaction_value": [
+      36690.42,
+      39691.93,
+      21798.72,
+      23874.15,
+      28679.33,
+      22223.75,
+      25754.85,
+      26993.68,
+      48991.45,
+      27810.94,
+      32392.95,
+      19991.19,
+      12979.92,
+      36690.42,
+      39691.93,
+      21798.72,
+      23874.15,
+      28679.33,
+      22223.75,
+      25754.85,
+      26993.68,
+      48991.45,
+      27810.94,
+      32392.95,
+      19991.19,
+      12979.92
+    ],
+    "activity_date_type": [
+      "1",
+      "2",
+      "3",
+      "4"
+    ],
+    "activity_status_code": "3",
+    "description_narrative": [
+      "Country portfolio budget - CPB Laos 2017-2021 Enable communities to lead and own their food and nutrition security solutions"
+    ],
+    "activity_date_iso_date": [
+      "2017-03-01T00:00:00Z",
+      "2017-04-01T00:00:00Z",
+      "2021-12-31T00:00:00Z",
+      "2021-12-31T00:00:00Z"
+    ],
+    "recipient_country_code": [
+      "LA"
+    ],
+    "reporting_org_narrative": [
+      "World Food Programme"
+    ]
+  },
+  {
+    "sector_code": [
+      "72050",
+      "17",
+      "17.16"
+    ],
+    "budget_value": [
+      14717.75,
+      14717.75,
+      14717.75,
+      14717.75,
+      117463.86,
+      117463.85,
+      117463.85,
+      117463.85,
+      146615.18,
+      146615.18,
+      146615.17,
+      146615.18,
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "iati_identifier": "XM-DAC-41140-LA02.08.051.CPA1",
+    "title_narrative": [
+      "05 5. Service Provision"
+    ],
+    "sector_narrative": [
+      "Relief co-ordination; protection and support services",
+      "Partnerships for the goals",
+      "Enhance the Global Partnership for Sustainable Development, complemented by multi-stakeholder partnerships that mobilize and share knowledge, expertise, technology and financial resources, to support the achievement of the Sustainable Development Goals in all countries, in particular developing countries"
+    ],
+    "reporting_org_ref": "XM-DAC-41140",
+    "transaction_value": [
+      116916.4,
+      118177.24,
+      1997.11,
+      -1998.16,
+      2236.25,
+      1837.88,
+      36068.2,
+      25881.0,
+      6516.34,
+      116916.4,
+      118177.24,
+      1997.11,
+      -1998.16,
+      2236.25,
+      1837.88,
+      36068.2,
+      25881.0,
+      6516.34,
+      264145.18,
+      26849.3,
+      26291.08,
+      311990.29,
+      19810.34
+    ],
+    "activity_date_type": [
+      "1",
+      "2",
+      "3"
+    ],
+    "activity_status_code": "2",
+    "description_narrative": [
+      "Country portfolio budget - CPB Laos 2022-2026 Provide coordination and on-demand services to the Government of Lao People's Democratic Republic, humanitarian and development partners."
+    ],
+    "activity_date_iso_date": [
+      "2022-01-01T00:00:00Z",
+      "2022-01-01T00:00:00Z",
+      "2026-12-31T00:00:00Z"
+    ],
+    "recipient_country_code": [
+      "LA"
+    ],
+    "reporting_org_narrative": [
+      "World Food Programme"
+    ]
+  },
+  {
+    "sector_code": [
+      "52010",
+      "2",
+      "2.2"
+    ],
+    "budget_value": [
+      74261.75,
+      74261.75,
+      74261.75,
+      74261.75,
+      46524.99,
+      46524.98,
+      46524.98,
+      46524.98,
+      54301.72,
+      54301.72,
+      54301.71,
+      54301.72,
+      55919.75,
+      55919.74,
+      55919.75,
+      55919.74,
+      40217.57,
+      40217.57,
+      40217.56,
+      40217.57
+    ],
+    "iati_identifier": "XM-DAC-41140-LK01.02.033.CSI2",
+    "title_narrative": [
+      "05 TA & advocacy for nutritious foods"
+    ],
+    "sector_narrative": [
+      "Food assistance",
+      "Zero hunger",
+      "By 2030, end all forms of malnutrition, including achieving, by 2025, the internationally agreed targets on stunting and wasting in children under 5 years of age, and address the nutritional needs of adolescent girls, pregnant and lactating women and older persons"
+    ],
+    "reporting_org_ref": "XM-DAC-41140",
+    "transaction_value": [
+      20.69,
+      53.0,
+      20631.98,
+      20.69,
+      53.0,
+      20631.98
+    ],
+    "activity_date_type": [
+      "1",
+      "2",
+      "3",
+      "4"
+    ],
+    "activity_status_code": "3",
+    "description_narrative": [
+      "Country portfolio budget - CPB Sri Lanka 2018-2022 Provide technical assistance and advocate for scaling up fortification of staple food and specialized nutritious foods to government and other stakeholders, including private sector"
+    ],
+    "activity_date_iso_date": [
+      "2018-01-01T00:00:00Z",
+      "2018-01-01T00:00:00Z",
+      "2022-12-31T00:00:00Z",
+      "2022-12-31T00:00:00Z"
+    ],
+    "recipient_country_code": [
+      "LK"
+    ],
+    "reporting_org_narrative": [
+      "World Food Programme"
+    ]
+  },
+  {
+    "sector_code": [
+      "74020",
+      "2",
+      "2.4"
+    ],
+    "budget_value": [
+      269406.34,
+      269406.32,
+      269406.31,
+      269406.32,
+      319087.6,
+      319087.59,
+      319087.58,
+      319087.59,
+      353087.6,
+      353087.59,
+      353087.58,
+      353087.59,
+      289087.6,
+      289087.59,
+      289087.58,
+      289087.59,
+      45712.6,
+      45712.59,
+      45712.58,
+      45712.59
+    ],
+    "iati_identifier": "XM-DAC-41140-BT03.04.013.CAR1",
+    "title_narrative": [
+      "01 Climate resilient food production"
+    ],
+    "sector_narrative": [
+      "Multi-hazard response preparedness",
+      "Zero hunger",
+      "By 2030, ensure sustainable food production systems and implement resilient agricultural practices that increase productivity and production, that help maintain ecosystems, that strengthen capacity for adaptation to climate change, extreme weather, drought, flooding and other disasters and that progressively improve land and soil quality"
+    ],
+    "reporting_org_ref": "XM-DAC-41140",
+    "transaction_value": [
+      2983.51,
+      1322.2,
+      14440.58,
+      3436.24,
+      3380.18,
+      699.19,
+      6692.0,
+      3385.71,
+      2983.51,
+      1322.2,
+      14440.58,
+      3436.24,
+      3380.18,
+      699.19,
+      6692.0,
+      3385.71,
+      4679564.32,
+      -6393.85,
+      -80431.01
+    ],
+    "activity_date_type": [
+      "1",
+      "2",
+      "3"
+    ],
+    "activity_status_code": "2",
+    "description_narrative": [
+      "Country portfolio budget - CPB Bhutan 2024-2028 Provide technical assistance to national and local government institutions with the aim of strengthening the capacity of farmer-based organizations to manage climate shocks and introduce innovative risk management solutions for climate resilient and nutritious food production."
+    ],
+    "activity_date_iso_date": [
+      "2024-03-01T00:00:00Z",
+      "2024-03-01T00:00:00Z",
+      "2028-12-31T00:00:00Z"
+    ],
+    "recipient_country_code": [
+      "BT"
+    ],
+    "reporting_org_narrative": [
+      "World Food Programme"
+    ]
+  },
+  {
+    "sector_code": [
+      "74020",
+      "17",
+      "17.9"
+    ],
+    "budget_value": [
+      83457.6,
+      83457.59,
+      83457.59,
+      83457.59,
+      107699.11,
+      107699.11,
+      107699.11,
+      107699.11,
+      57074.11,
+      57074.11,
+      57074.11,
+      57074.11,
+      48949.11,
+      48949.11,
+      48949.11,
+      48949.11,
+      46449.11,
+      46449.11,
+      46449.11,
+      46449.11
+    ],
+    "iati_identifier": "XM-DAC-41140-BT03.05.024.EPA1",
+    "title_narrative": [
+      "05 Disaster risk management"
+    ],
+    "sector_narrative": [
+      "Multi-hazard response preparedness",
+      "Partnerships for the goals",
+      "Enhance international support for implementing effective and targeted capacity-building in developing countries to support national plans to implement all the Sustainable Development Goals, including through North-South, South-South and triangular cooperation"
+    ],
+    "reporting_org_ref": "XM-DAC-41140",
+    "transaction_value": [
+      4249.83,
+      8447.67,
+      10321.61,
+      3321.26,
+      2940.29,
+      2926.89,
+      11334.96,
+      11924.05,
+      5478.14,
+      9549.89,
+      5778.78,
+      5761.31,
+      5132.54,
+      11049.31,
+      5557.69,
+      5634.99,
+      5619.21,
+      5525.54,
+      10937.0,
+      5464.84,
+      4249.83,
+      8447.67,
+      10321.61,
+      3321.26,
+      2940.29,
+      2926.89,
+      11334.96,
+      11924.05,
+      5478.14,
+      9549.89,
+      5778.78,
+      5761.31,
+      5132.54,
+      11049.31,
+      5557.69,
+      5634.99,
+      5619.21,
+      5525.54,
+      10937.0,
+      5464.84,
+      480767.57,
+      -290689.56,
+      50650.0,
+      121560.0,
+      50650.0
+    ],
+    "activity_date_type": [
+      "1",
+      "2",
+      "3"
+    ],
+    "activity_status_code": "2",
+    "description_narrative": [
+      "Country portfolio budget - CPB Bhutan 2024-2028 Provide technical assistance and innovative solutions to government institutions for the expansion of people-centred disaster risk reduction programmes that integrate nutrition considerations and foster preparedness for and effective response to shocks and stressors."
+    ],
+    "activity_date_iso_date": [
+      "2024-03-01T00:00:00Z",
+      "2024-03-01T00:00:00Z",
+      "2028-12-31T00:00:00Z"
+    ],
+    "recipient_country_code": [
+      "BT"
+    ],
+    "reporting_org_narrative": [
+      "World Food Programme"
+    ]
+  },
+  {
+    "sector_code": [
+      "72040",
+      "17",
+      "17.9"
+    ],
+    "budget_value": [
+      35456.26,
+      35456.26,
+      35456.25,
+      35456.25,
+      35322.51,
+      35322.5,
+      35322.5,
+      35322.5,
+      34572.51,
+      34572.5,
+      34572.5,
+      34572.5,
+      32447.51,
+      32447.5,
+      32447.5,
+      32447.5,
+      21572.51,
+      21572.5,
+      21572.5,
+      21572.5
+    ],
+    "iati_identifier": "XM-DAC-41140-BT03.05.024.NPA1",
+    "title_narrative": [
+      "04 SBC interventions provided"
+    ],
+    "sector_narrative": [
+      "Emergency food aid",
+      "Partnerships for the goals",
+      "Enhance international support for implementing effective and targeted capacity-building in developing countries to support national plans to implement all the Sustainable Development Goals, including through North-South, South-South and triangular cooperation"
+    ],
+    "reporting_org_ref": "XM-DAC-41140",
+    "transaction_value": [
+      0.0,
+      0.0,
+      0.0
+    ],
+    "activity_date_type": [
+      "1",
+      "2",
+      "3"
+    ],
+    "activity_status_code": "2",
+    "description_narrative": [
+      "Country portfolio budget - CPB Bhutan 2024-2028 Provide technical assistance, including in relation to social behaviour change, in support of government and private sector efforts to promote fortified food products, and ensure that all school feeding programme beneficiaries and the public consume safe, healthy, and nutrient-dense diets."
+    ],
+    "activity_date_iso_date": [
+      "2024-03-01T00:00:00Z",
+      "2024-03-01T00:00:00Z",
+      "2028-12-31T00:00:00Z"
+    ],
+    "recipient_country_code": [
+      "BT"
+    ],
+    "reporting_org_narrative": [
+      "World Food Programme"
+    ]
+  },
+  {
+    "sector_code": [
+      "74020",
+      "2",
+      "2.2"
+    ],
+    "budget_value": [
+      205250.6,
+      205250.62,
+      205250.6,
+      205250.58,
+      241561.01,
+      241561.05,
+      241560.99,
+      241560.98,
+      142034.63,
+      142034.62,
+      142034.6,
+      142034.6,
+      92053.68,
+      92053.69,
+      92053.69,
+      92053.66,
+      60999.21,
+      60999.21,
+      60999.19,
+      60999.21
+    ],
+    "iati_identifier": "XM-DAC-41140-ID03.02.012.CAR1",
+    "title_narrative": [
+      "02 Anticipatory Action and Early Warning"
+    ],
+    "sector_narrative": [
+      "Multi-hazard response preparedness",
+      "Zero hunger",
+      "By 2030, end all forms of malnutrition, including achieving, by 2025, the internationally agreed targets on stunting and wasting in children under 5 years of age, and address the nutritional needs of adolescent girls, pregnant and lactating women and older persons"
+    ],
+    "reporting_org_ref": "XM-DAC-41140",
+    "transaction_value": [
+      0.0,
+      0.0
+    ],
+    "activity_date_type": [
+      "1",
+      "3"
+    ],
+    "activity_status_code": "2",
+    "description_narrative": [
+      "Country portfolio budget - CPB Indonesia 2026-2030 Provide capacity strengthening to national and sub-national stakeholders for the coordination, joint design, implementation, and monitoring and evaluation of policies, programmes and scalable models, especially for anticipatory action, emergency preparedness and response, early warning systems, and disaster risk management."
+    ],
+    "activity_date_iso_date": [
+      "2026-01-01T00:00:00Z",
+      "2030-12-31T00:00:00Z"
+    ],
+    "recipient_country_code": [
+      "ID"
+    ],
+    "reporting_org_narrative": [
+      "World Food Programme"
+    ]
+  },
+  {
+    "sector_code": [
+      "72040",
+      "2",
+      "2.2"
+    ],
+    "budget_value": [
+      312642.41,
+      312642.42,
+      312642.39,
+      312642.39,
+      315449.97,
+      315449.97,
+      315449.95,
+      315449.94,
+      193948.77,
+      193948.74,
+      193948.73,
+      193948.75,
+      230240.57,
+      230240.57,
+      230240.57,
+      230240.55,
+      119861.87,
+      119861.87,
+      119861.85,
+      119861.87
+    ],
+    "iati_identifier": "XM-DAC-41140-ID03.02.012.SMP1",
+    "title_narrative": [
+      "01 FNMP - Provide capacity strengthening to national and sub-national stakeholders for the convening, coordination, joint design, implementation, and monitoring and evaluation of policies, programmes and scalable models (inclusive of large-scale food fortification) for the Government’s Free Nutritious Meals Programme."
+    ],
+    "sector_narrative": [
+      "Emergency food aid",
+      "Zero hunger",
+      "By 2030, end all forms of malnutrition, including achieving, by 2025, the internationally agreed targets on stunting and wasting in children under 5 years of age, and address the nutritional needs of adolescent girls, pregnant and lactating women and older persons"
+    ],
+    "reporting_org_ref": "XM-DAC-41140",
+    "transaction_value": [
+      0.0,
+      0.0
+    ],
+    "activity_date_type": [
+      "1",
+      "3"
+    ],
+    "activity_status_code": "2",
+    "description_narrative": [
+      "Country portfolio budget - CPB Indonesia 2026-2030 Provide capacity strengthening to national and sub-national stakeholders for the convening, coordination, joint design, implementation, and monitoring and evaluation of policies, programmes and scalable models (inclusive of large-scale food fortification) for the Government’s Free Nutritious Meals Programme."
+    ],
+    "activity_date_iso_date": [
+      "2026-01-01T00:00:00Z",
+      "2030-12-31T00:00:00Z"
+    ],
+    "recipient_country_code": [
+      "ID"
+    ],
+    "reporting_org_narrative": [
+      "World Food Programme"
+    ]
+  },
+  {
+    "sector_code": [
+      "91010",
+      "2",
+      "2.2"
+    ],
+    "budget_value": [
+      117000.31,
+      117000.33,
+      117000.29,
+      117000.31,
+      118543.06,
+      118543.05,
+      118543.04,
+      118543.05,
+      74224.57,
+      74224.57,
+      74224.55,
+      74224.56,
+      108788.79,
+      108788.79,
+      108788.77,
+      108788.79,
+      54941.05,
+      54941.05,
+      54941.05,
+      54941.05
+    ],
+    "iati_identifier": "XM-DAC-41140-ID03-DSC",
+    "title_narrative": [
+      "Non Activity Specific"
+    ],
+    "sector_narrative": [
+      "Administrative costs",
+      "Zero hunger",
+      "By 2030, end all forms of malnutrition, including achieving, by 2025, the internationally agreed targets on stunting and wasting in children under 5 years of age, and address the nutritional needs of adolescent girls, pregnant and lactating women and older persons"
+    ],
+    "reporting_org_ref": "XM-DAC-41140",
+    "transaction_value": [
+      0.0,
+      0.0
+    ],
+    "activity_date_type": [
+      "1",
+      "3"
+    ],
+    "activity_status_code": "2",
+    "description_narrative": [
+      "CPB Indonesia 2026-2030 - Direct Support Cost that correspond to country level expenditures that are directly linked to the execution of the programme but cannot be attributed to a specific activity within it."
+    ],
+    "activity_date_iso_date": [
+      "2026-01-01T00:00:00Z",
+      "2030-12-31T00:00:00Z"
+    ],
+    "recipient_country_code": [
+      "ID"
+    ],
+    "reporting_org_narrative": [
+      "World Food Programme"
+    ]
+  },
+  {
+    "sector_code": [
+      "72040",
+      "2",
+      "2.1"
+    ],
+    "budget_value": [
+      0.0,
+      1335727.05,
+      1335726.95,
+      1335727.01,
+      1335726.91,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "iati_identifier": "XM-DAC-41140-KG02.01.021.URT1",
+    "title_narrative": [
+      "02 Crisis response"
+    ],
+    "sector_narrative": [
+      "Emergency food aid",
+      "Zero hunger",
+      "By 2030, end hunger and ensure access by all people, in particular the poor and people in vulnerable situations, including infants, to safe, nutritious and sufficient food all year round"
+    ],
+    "reporting_org_ref": "XM-DAC-41140",
+    "transaction_value": [
+      111143.02,
+      23758.0,
+      12933.45,
+      40.65,
+      3591.5,
+      14675.21,
+      10922.07,
+      825.0,
+      425.94,
+      3948.92,
+      5292.96,
+      111143.02,
+      23758.0,
+      12933.45,
+      40.65,
+      3591.5,
+      14675.21,
+      10922.07,
+      825.0,
+      425.94,
+      3948.92,
+      5292.96,
+      185400.0,
+      10000.0,
+      -3575.34,
+      -1186.84,
+      -3081.1
+    ],
+    "activity_date_type": [
+      "1",
+      "2",
+      "3"
+    ],
+    "activity_status_code": "2",
+    "description_narrative": [
+      "Country portfolio budget - CPB Kyrgyzstan 2023-2027 Provide emergency food assistance to shock-affected vulnerable populations"
+    ],
+    "activity_date_iso_date": [
+      "2023-01-01T00:00:00Z",
+      "2023-01-01T00:00:00Z",
+      "2027-12-31T00:00:00Z"
+    ],
+    "recipient_country_code": [
+      "KG"
+    ],
+    "reporting_org_narrative": [
+      "World Food Programme"
+    ]
+  },
+  {
+    "sector_code": [
+      "99810",
+      "2",
+      "2.2"
+    ],
+    "budget_value": [
+      3255740.21,
+      3255740.2,
+      3255740.19,
+      3255740.18,
+      20427778.17,
+      20427778.15,
+      20427778.09,
+      20427778.08,
+      32060745.13,
+      32060745.12,
+      32060745.01,
+      32060745.03,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "iati_identifier": "XM-DAC-41140-AF01.02.031.URT1",
+    "title_narrative": [
+      "10 safety net to women, CH, PwD, elderly"
+    ],
+    "sector_narrative": [
+      "Sectors not specified",
+      "Zero hunger",
+      "By 2030, end all forms of malnutrition, including achieving, by 2025, the internationally agreed targets on stunting and wasting in children under 5 years of age, and address the nutritional needs of adolescent girls, pregnant and lactating women and older persons"
+    ],
+    "reporting_org_ref": "XM-DAC-41140",
+    "transaction_value": [
+      23600.0,
+      64989.5,
+      4025.21,
+      17770.86,
+      179522.03,
+      112586.33,
+      97404.5,
+      106720.61,
+      481636.33,
+      1466578.98,
+      83177.61,
+      2530915.35,
+      99839.53,
+      689196.13,
+      416817.9,
+      2304650.24,
+      1452048.59,
+      770658.53,
+      1890808.64,
+      1503972.27,
+      1921013.34,
+      2989630.18,
+      1875811.68,
+      1044731.99,
+      23600.0,
+      64989.5,
+      4025.21,
+      17770.86,
+      179522.03,
+      112586.33,
+      97404.5,
+      106720.61,
+      481636.33,
+      1466578.98,
+      83177.61,
+      2530915.35,
+      99839.53,
+      689196.13,
+      416817.9,
+      2304650.24,
+      1452048.59,
+      770658.53,
+      1890808.64,
+      1503972.27,
+      1921013.34,
+      2989630.18,
+      1875811.68,
+      1044731.99,
+      1628094.0,
+      27386455.77,
+      -1628094.0,
+      -9031722.87,
+      32721412.5,
+      -1950853.44,
+      9378119.45
+    ],
+    "activity_date_type": [
+      "1",
+      "2",
+      "3"
+    ],
+    "activity_status_code": "2",
+    "description_narrative": [
+      "Country portfolio budget - CPB Afghanistan 2018-2027 Provide nutrition-sensitive food or cash transfer to nutritionally vulnerable women, children, and their families, people with disabilities, and the elderly through a transitional safety net framework."
+    ],
+    "activity_date_iso_date": [
+      "2018-07-01T00:00:00Z",
+      "2018-07-01T00:00:00Z",
+      "2027-12-31T00:00:00Z"
+    ],
+    "recipient_country_code": [
+      "AF"
+    ],
+    "reporting_org_narrative": [
+      "World Food Programme"
+    ]
+  },
+  {
+    "sector_code": [
+      "72040",
+      "2",
+      "2.1"
+    ],
+    "budget_value": [
+      34672.87,
+      34672.89,
+      34672.87,
+      34672.85,
+      31165.14,
+      31165.17,
+      31165.13,
+      31165.13,
+      31361.15,
+      31361.17,
+      31361.14,
+      31361.13,
+      31564.97,
+      31564.99,
+      31564.96,
+      31564.96,
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "iati_identifier": "XM-DAC-41140-TJ03.01.031.NTA1",
+    "title_narrative": [
+      "06 nutrition treatment for children PLWG"
+    ],
+    "sector_narrative": [
+      "Emergency food aid",
+      "Zero hunger",
+      "By 2030, end hunger and ensure access by all people, in particular the poor and people in vulnerable situations, including infants, to safe, nutritious and sufficient food all year round"
+    ],
+    "reporting_org_ref": "XM-DAC-41140",
+    "transaction_value": [
+      0.0,
+      0.0,
+      0.0
+    ],
+    "activity_date_type": [
+      "1",
+      "2",
+      "3"
+    ],
+    "activity_status_code": "2",
+    "description_narrative": [
+      "Country portfolio budget - CPB Tajikistan 2023-2026 Provide nutrition-treatment packages for malnourished children age 6–59 months, pregnant and lactating women and girls and other nutritionally vulnerable populations and individuals."
+    ],
+    "activity_date_iso_date": [
+      "2023-01-01T00:00:00Z",
+      "2023-01-01T00:00:00Z",
+      "2026-12-31T00:00:00Z"
+    ],
+    "recipient_country_code": [
+      "TJ"
+    ],
+    "reporting_org_narrative": [
+      "World Food Programme"
+    ]
+  },
+  {
+    "sector_code": [
+      "72050",
+      "2",
+      "2.1"
+    ],
+    "budget_value": [
+      12500.0,
+      12500.01,
+      12499.99,
+      12500.0,
+      12500.0,
+      12500.01,
+      12499.99,
+      12500.0,
+      12500.0,
+      12500.01,
+      12499.99,
+      12500.0,
+      12500.0,
+      12500.01,
+      12499.99,
+      12500.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "iati_identifier": "XM-DAC-41140-TJ03.01.031.ODS1",
+    "title_narrative": [
+      "07 On demand services for stakeholders"
+    ],
+    "sector_narrative": [
+      "Relief co-ordination; protection and support services",
+      "Zero hunger",
+      "By 2030, end hunger and ensure access by all people, in particular the poor and people in vulnerable situations, including infants, to safe, nutritious and sufficient food all year round"
+    ],
+    "reporting_org_ref": "XM-DAC-41140",
+    "transaction_value": [
+      216.0,
+      1200.0,
+      2998.79,
+      12387.43,
+      949.8,
+      1680.34,
+      4539.76,
+      216.0,
+      1200.0,
+      2998.79,
+      12387.43,
+      949.8,
+      1680.34,
+      4539.76,
+      6502.75,
+      4710.0,
+      641.07,
+      4737.46,
+      -21.67,
+      2881.96,
+      4520.55,
+      319.72,
+      1998.79,
+      11615.4,
+      14725.01
+    ],
+    "activity_date_type": [
+      "1",
+      "2",
+      "3"
+    ],
+    "activity_status_code": "2",
+    "description_narrative": [
+      "Country portfolio budget - CPB Tajikistan 2023-2026 Provide on-demand services for governmental institutions, development actors and other partners, including private sector partners."
+    ],
+    "activity_date_iso_date": [
+      "2023-01-01T00:00:00Z",
+      "2023-01-01T00:00:00Z",
+      "2026-12-31T00:00:00Z"
+    ],
+    "recipient_country_code": [
+      "TJ"
+    ],
+    "reporting_org_narrative": [
+      "World Food Programme"
+    ]
+  },
+  {
+    "sector_code": [
+      "12240",
+      "2",
+      "2.2"
+    ],
+    "budget_value": [
+      0.0,
+      269336.5,
+      269336.43,
+      269336.46,
+      269336.42,
+      274005.61,
+      274005.61,
+      274005.58,
+      274005.56,
+      237153.58,
+      237153.54,
+      237153.52,
+      237153.51,
+      242726.05,
+      242726.04,
+      242726.01,
+      242725.98,
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "iati_identifier": "XM-DAC-41140-TJ03.02.022.NTA1",
+    "title_narrative": [
+      "03 Malnutrition treatment"
+    ],
+    "sector_narrative": [
+      "Basic nutrition",
+      "Zero hunger",
+      "By 2030, end all forms of malnutrition, including achieving, by 2025, the internationally agreed targets on stunting and wasting in children under 5 years of age, and address the nutritional needs of adolescent girls, pregnant and lactating women and older persons"
+    ],
+    "reporting_org_ref": "XM-DAC-41140",
+    "transaction_value": [
+      1111.64,
+      196.6,
+      90323.11,
+      5383.51,
+      3465.41,
+      1810.36,
+      2391.94,
+      3396.73,
+      2852.77,
+      3117.85,
+      3724.59,
+      2890.29,
+      3077.35,
+      5694.32,
+      4541.53,
+      5260.45,
+      92512.58,
+      7117.79,
+      14058.06,
+      9674.94,
+      10405.22,
+      11164.26,
+      6663.08,
+      2888.94,
+      1124.88,
+      579.14,
+      4578.55,
+      5254.92,
+      3432.63,
+      98029.68,
+      5698.92,
+      7530.19,
+      1111.64,
+      196.6,
+      90323.11,
+      5383.51,
+      3465.41,
+      1810.36,
+      2391.94,
+      3396.73,
+      2852.77,
+      3117.85,
+      3724.59,
+      2890.29,
+      3077.35,
+      5694.32,
+      4541.53,
+      5260.45,
+      92512.58,
+      7117.79,
+      14058.06,
+      9674.94,
+      10405.22,
+      11164.26,
+      6663.08,
+      2888.94,
+      1124.88,
+      579.14,
+      4578.55,
+      5254.92,
+      3432.63,
+      98029.68,
+      5698.92,
+      7530.19,
+      118073.96,
+      72601.25,
+      121160.23,
+      152215.0,
+      -16167.08,
+      27.5
+    ],
+    "activity_date_type": [
+      "1",
+      "2",
+      "3"
+    ],
+    "activity_status_code": "2",
+    "description_narrative": [
+      "Country portfolio budget - CPB Tajikistan 2023-2026 Treat moderate acute malnutrition in children age 6-59 months and strengthen local capacity to manage nutrition programmes."
+    ],
+    "activity_date_iso_date": [
+      "2023-01-01T00:00:00Z",
+      "2023-01-01T00:00:00Z",
+      "2026-12-31T00:00:00Z"
+    ],
+    "recipient_country_code": [
+      "TJ"
+    ],
+    "reporting_org_narrative": [
+      "World Food Programme"
+    ]
+  },
+  {
+    "sector_code": [
+      "72050",
+      "17",
+      "17.16"
+    ],
+    "budget_value": [
+      45530.15,
+      45530.13,
+      45530.11,
+      45530.11,
+      21532.24,
+      21532.22,
+      21532.24,
+      21532.22
+    ],
+    "iati_identifier": "XM-DAC-41140-TL01.08.031.CPA1",
+    "title_narrative": [
+      "05 Service provision"
+    ],
+    "sector_narrative": [
+      "Relief co-ordination; protection and support services",
+      "Partnerships for the goals",
+      "Enhance the Global Partnership for Sustainable Development, complemented by multi-stakeholder partnerships that mobilize and share knowledge, expertise, technology and financial resources, to support the achievement of the Sustainable Development Goals in all countries, in particular developing countries"
+    ],
+    "reporting_org_ref": "XM-DAC-41140",
+    "transaction_value": [
+      62453.43,
+      63906.08,
+      965.42,
+      5987.68,
+      34611.2,
+      7055.37,
+      62453.43,
+      63906.08,
+      965.42,
+      5987.68,
+      34611.2,
+      7055.37
+    ],
+    "activity_date_type": [
+      "1",
+      "2",
+      "3",
+      "4"
+    ],
+    "activity_status_code": "3",
+    "description_narrative": [
+      "Country portfolio budget - CPB Timor-Leste 2018-2022 Provide on-demand food procurement services to the Government of Timor-Leste"
+    ],
+    "activity_date_iso_date": [
+      "2018-01-01T00:00:00Z",
+      "2018-01-01T00:00:00Z",
+      "2022-12-31T00:00:00Z",
+      "2022-12-31T00:00:00Z"
+    ],
+    "recipient_country_code": [
+      "TL"
+    ],
+    "reporting_org_narrative": [
+      "World Food Programme"
+    ]
+  },
+  {
+    "sector_code": [
+      "72050",
+      "17",
+      "17.16"
+    ],
+    "budget_value": [
+      264145.83,
+      264145.76,
+      264145.83,
+      264145.76,
+      283400.04,
+      283400.03,
+      283400.0,
+      283400.03,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "iati_identifier": "XM-DAC-41140-TL02.08.045.ODS1",
+    "title_narrative": [
+      "04 On-demand services"
+    ],
+    "sector_narrative": [
+      "Relief co-ordination; protection and support services",
+      "Partnerships for the goals",
+      "Enhance the Global Partnership for Sustainable Development, complemented by multi-stakeholder partnerships that mobilize and share knowledge, expertise, technology and financial resources, to support the achievement of the Sustainable Development Goals in all countries, in particular developing countries"
+    ],
+    "reporting_org_ref": "XM-DAC-41140",
+    "transaction_value": [
+      1500.0,
+      381473.43,
+      147941.97,
+      20552.5,
+      8110.39,
+      32068.2,
+      1380.93,
+      62.14,
+      19.19,
+      1500.0,
+      381473.43,
+      147941.97,
+      20552.5,
+      8110.39,
+      32068.2,
+      1380.93,
+      62.14,
+      19.19,
+      600000.0,
+      -6892.0
+    ],
+    "activity_date_type": [
+      "1",
+      "2",
+      "3"
+    ],
+    "activity_status_code": "2",
+    "description_narrative": [
+      "Country portfolio budget - CPB Timor-Leste 2023-2025 Provide on-demand services including food and non-food procurement, and logistics supply chain capacity to the government and humanitarian and development partners."
+    ],
+    "activity_date_iso_date": [
+      "2023-01-01T00:00:00Z",
+      "2023-01-01T00:00:00Z",
+      "2025-12-31T00:00:00Z"
+    ],
+    "recipient_country_code": [
+      "TL"
+    ],
+    "reporting_org_narrative": [
+      "World Food Programme"
+    ]
+  },
+  {
+    "sector_code": [
+      "74020",
+      "2",
+      "2.1"
+    ],
+    "budget_value": [
+      106539.68,
+      106539.69,
+      106539.67,
+      106539.65,
+      146601.4,
+      146601.39,
+      146601.38,
+      146601.37,
+      125537.55,
+      125537.51,
+      125537.54,
+      125537.5,
+      117698.16,
+      117698.16,
+      117698.11,
+      117698.15,
+      99320.19,
+      99320.19,
+      99320.17,
+      99320.16
+    ],
+    "iati_identifier": "XM-DAC-41140-TL03.01.011.EPA1",
+    "title_narrative": [
+      "01 Emergency preparedness"
+    ],
+    "sector_narrative": [
+      "Multi-hazard response preparedness",
+      "Zero hunger",
+      "By 2030, end hunger and ensure access by all people, in particular the poor and people in vulnerable situations, including infants, to safe, nutritious and sufficient food all year round"
+    ],
+    "reporting_org_ref": "XM-DAC-41140",
+    "transaction_value": [
+      0.0,
+      0.0
+    ],
+    "activity_date_type": [
+      "1",
+      "3"
+    ],
+    "activity_status_code": "2",
+    "description_narrative": [
+      "Country portfolio budget - CPB Timor-Leste 2026-2030 Provide technical assistance in emergency preparedness and response to the Government and partners."
+    ],
+    "activity_date_iso_date": [
+      "2026-01-01T00:00:00Z",
+      "2030-12-31T00:00:00Z"
+    ],
+    "recipient_country_code": [
+      "TL"
+    ],
+    "reporting_org_narrative": [
+      "World Food Programme"
+    ]
+  },
+  {
+    "sector_code": [
+      "72040",
+      "2",
+      "2.1"
+    ],
+    "budget_value": [
+      249261.64,
+      249261.61,
+      249261.59,
+      249261.55,
+      254667.53,
+      254667.5,
+      254667.47,
+      254667.45,
+      263086.32,
+      263086.33,
+      263086.25,
+      263086.25,
+      261663.39,
+      261663.39,
+      261663.32,
+      261663.33,
+      260066.22,
+      260066.19,
+      260066.18,
+      260066.11
+    ],
+    "iati_identifier": "XM-DAC-41140-TL03.01.011.URT1",
+    "title_narrative": [
+      "02 Food assistance"
+    ],
+    "sector_narrative": [
+      "Emergency food aid",
+      "Zero hunger",
+      "By 2030, end hunger and ensure access by all people, in particular the poor and people in vulnerable situations, including infants, to safe, nutritious and sufficient food all year round"
+    ],
+    "reporting_org_ref": "XM-DAC-41140",
+    "transaction_value": [
+      0.0,
+      0.0
+    ],
+    "activity_date_type": [
+      "1",
+      "3"
+    ],
+    "activity_status_code": "2",
+    "description_narrative": [
+      "Country portfolio budget - CPB Timor-Leste 2026-2030 Provide food and nutrition assistance to vulnerable and shock-affected people."
+    ],
+    "activity_date_iso_date": [
+      "2026-01-01T00:00:00Z",
+      "2030-12-31T00:00:00Z"
+    ],
+    "recipient_country_code": [
+      "TL"
+    ],
+    "reporting_org_narrative": [
+      "World Food Programme"
+    ]
+  },
+  {
+    "sector_code": [
+      "12240",
+      "2",
+      "2.2"
+    ],
+    "budget_value": [
+      441010.12,
+      441010.06,
+      441010.07,
+      441010.01,
+      378643.78,
+      378643.81,
+      378643.79,
+      378643.7,
+      653225.7,
+      653225.64,
+      653225.65,
+      653225.63,
+      656972.46,
+      656972.45,
+      656972.37,
+      656972.43,
+      674091.88,
+      674091.82,
+      674091.84,
+      674091.79
+    ],
+    "iati_identifier": "XM-DAC-41140-TL03.02.022.NPA1",
+    "title_narrative": [
+      "04 Malnutrition prevention programme"
+    ],
+    "sector_narrative": [
+      "Basic nutrition",
+      "Zero hunger",
+      "By 2030, end all forms of malnutrition, including achieving, by 2025, the internationally agreed targets on stunting and wasting in children under 5 years of age, and address the nutritional needs of adolescent girls, pregnant and lactating women and older persons"
+    ],
+    "reporting_org_ref": "XM-DAC-41140",
+    "transaction_value": [
+      0.0,
+      0.0
+    ],
+    "activity_date_type": [
+      "1",
+      "3"
+    ],
+    "activity_status_code": "2",
+    "description_narrative": [
+      "Country portfolio budget - CPB Timor-Leste 2026-2030 Provide safety net system strengthening, capacity development, and programme implementation support for government institutions at the national and sub-national levels."
+    ],
+    "activity_date_iso_date": [
+      "2026-01-01T00:00:00Z",
+      "2030-12-31T00:00:00Z"
+    ],
+    "recipient_country_code": [
+      "TL"
+    ],
+    "reporting_org_narrative": [
+      "World Food Programme"
+    ]
+  },
+  {
+    "sector_code": [
+      "52010",
+      "2",
+      "2.2"
+    ],
+    "budget_value": [
+      646148.26,
+      646148.31,
+      646148.19,
+      646148.22,
+      568977.45,
+      568977.42,
+      568977.38,
+      568977.35,
+      504875.14,
+      504875.17,
+      504874.99,
+      504875.09,
+      452950.56,
+      452950.58,
+      452950.41,
+      452950.53,
+      312408.55,
+      312408.57,
+      312408.43,
+      312408.5
+    ],
+    "iati_identifier": "XM-DAC-41140-TL03.02.022.SMP1",
+    "title_narrative": [
+      "03 School Based Programme"
+    ],
+    "sector_narrative": [
+      "Food aid/Food security programmes",
+      "Zero hunger",
+      "By 2030, end all forms of malnutrition, including achieving, by 2025, the internationally agreed targets on stunting and wasting in children under 5 years of age, and address the nutritional needs of adolescent girls, pregnant and lactating women and older persons"
+    ],
+    "reporting_org_ref": "XM-DAC-41140",
+    "transaction_value": [
+      0.0,
+      0.0
+    ],
+    "activity_date_type": [
+      "1",
+      "3"
+    ],
+    "activity_status_code": "2",
+    "description_narrative": [
+      "Country portfolio budget - CPB Timor-Leste 2026-2030 Provide capacity strengthening to national and local governments, schools, communities and other actors along the food value chain of the home-grown school feeding programme."
+    ],
+    "activity_date_iso_date": [
+      "2026-01-01T00:00:00Z",
+      "2030-12-31T00:00:00Z"
+    ],
+    "recipient_country_code": [
+      "TL"
+    ],
+    "reporting_org_narrative": [
+      "World Food Programme"
+    ]
+  },
+  {
+    "sector_code": [
+      "72050",
+      "17",
+      "17.16"
+    ],
+    "budget_value": [
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      72695.27,
+      72695.28,
+      72695.26,
+      72695.27,
+      72695.27,
+      72695.28,
+      72695.26,
+      72695.27,
+      72695.27,
+      72695.28,
+      72695.26,
+      72695.27,
+      72695.27,
+      72695.28,
+      72695.26,
+      72695.27,
+      72695.27,
+      72695.28,
+      72695.26,
+      72695.27
+    ],
+    "iati_identifier": "XM-DAC-41140-TL03.08.035.ODS1",
+    "title_narrative": [
+      "05 On-demand services"
+    ],
+    "sector_narrative": [
+      "Relief co-ordination; protection and support services",
+      "Partnerships for the goals",
+      "Enhance the Global Partnership for Sustainable Development, complemented by multi-stakeholder partnerships that mobilize and share knowledge, expertise, technology and financial resources, to support the achievement of the Sustainable Development Goals in all countries, in particular developing countries"
+    ],
+    "reporting_org_ref": "XM-DAC-41140",
+    "transaction_value": [
+      0.0,
+      0.0
+    ],
+    "activity_date_type": [
+      "1",
+      "3"
+    ],
+    "activity_status_code": "2",
+    "description_narrative": [
+      "Country portfolio budget - CPB Timor-Leste 2026-2030 Provide on-demand services including food and non-food procurement and logistics to the Government and humanitarian and development partners."
+    ],
+    "activity_date_iso_date": [
+      "2026-01-01T00:00:00Z",
+      "2030-12-31T00:00:00Z"
+    ],
+    "recipient_country_code": [
+      "TL"
+    ],
+    "reporting_org_narrative": [
+      "World Food Programme"
+    ]
+  },
+  {
+    "sector_code": [
+      "91010",
+      "17",
+      "2",
+      "2.1",
+      "2.2",
+      "17.16"
+    ],
+    "budget_value": [
+      396201.05,
+      396201.05,
+      396201.02,
+      396201.05,
+      446564.9,
+      446564.9,
+      446564.88,
+      446564.89,
+      397647.33,
+      397647.29,
+      397647.33,
+      397647.29,
+      519080.36,
+      519080.36,
+      519080.33,
+      519080.35,
+      416231.49,
+      416231.48,
+      416231.48,
+      416231.47
+    ],
+    "iati_identifier": "XM-DAC-41140-TL03-DSC",
+    "title_narrative": [
+      "Non Activity Specific"
+    ],
+    "sector_narrative": [
+      "Administrative costs",
+      "Partnerships for the goals",
+      "Zero hunger",
+      "By 2030, end hunger and ensure access by all people, in particular the poor and people in vulnerable situations, including infants, to safe, nutritious and sufficient food all year round",
+      "By 2030, end all forms of malnutrition, including achieving, by 2025, the internationally agreed targets on stunting and wasting in children under 5 years of age, and address the nutritional needs of adolescent girls, pregnant and lactating women and older persons",
+      "Enhance the Global Partnership for Sustainable Development, complemented by multi-stakeholder partnerships that mobilize and share knowledge, expertise, technology and financial resources, to support the achievement of the Sustainable Development Goals in all countries, in particular developing countries"
+    ],
+    "reporting_org_ref": "XM-DAC-41140",
+    "transaction_value": [
+      0.0,
+      0.0
+    ],
+    "activity_date_type": [
+      "1",
+      "3"
+    ],
+    "activity_status_code": "2",
+    "description_narrative": [
+      "CPB Timor-Leste 2026-2030 - Direct Support Cost that correspond to country level expenditures that are directly linked to the execution of the programme but cannot be attributed to a specific activity within it."
+    ],
+    "activity_date_iso_date": [
+      "2026-01-01T00:00:00Z",
+      "2030-12-31T00:00:00Z"
+    ],
+    "recipient_country_code": [
+      "TL"
+    ],
+    "reporting_org_narrative": [
+      "World Food Programme"
+    ]
+  },
+  {
+    "sector_code": [
+      "74020",
+      "17",
+      "17.9"
+    ],
+    "budget_value": [
+      82662.5,
+      82662.5,
+      82662.5,
+      82662.5,
+      183415.0,
+      183415.0,
+      183415.0,
+      183415.0,
+      130915.0,
+      130915.0,
+      130915.0,
+      130915.0,
+      125457.5,
+      125457.5,
+      125457.5,
+      125457.5,
+      60478.75,
+      60478.75,
+      60478.75,
+      60478.75
+    ],
+    "iati_identifier": "XM-DAC-41140-XP01.05.011.CSI4",
+    "title_narrative": [
+      "04 Innovative tools for climate change"
+    ],
+    "sector_narrative": [
+      "Multi-hazard response preparedness",
+      "Partnerships for the goals",
+      "Enhance international support for implementing effective and targeted capacity-building in developing countries to support national plans to implement all the Sustainable Development Goals, including through North-South, South-South and triangular cooperation"
+    ],
+    "reporting_org_ref": "XM-DAC-41140",
+    "transaction_value": [
+      11309.44,
+      11309.44
+    ],
+    "activity_date_type": [
+      "1",
+      "2",
+      "3",
+      "4"
+    ],
+    "activity_status_code": "3",
+    "description_narrative": [
+      "Country portfolio budget - CPB Pacific Isld COs 2019-2023 Provide support to national, provincial and regional institutions and other partners for the development of innovative tools and procedures that address climate-related disasters and their impact on people."
+    ],
+    "activity_date_iso_date": [
+      "2019-07-01T00:00:00Z",
+      "2019-07-01T00:00:00Z",
+      "2023-06-30T00:00:00Z",
+      "2023-06-30T00:00:00Z"
+    ],
+    "recipient_country_code": [
+      "TH"
+    ],
+    "reporting_org_narrative": [
+      "World Food Programme"
+    ]
+  },
+  {
+    "sector_code": [
+      "72050",
+      "17",
+      "17.16"
+    ],
+    "budget_value": [
+      97503.75,
+      97503.75,
+      97503.75,
+      97503.75,
+      123723.14,
+      123723.11,
+      123723.14,
+      123723.11,
+      126617.47,
+      126617.51,
+      126617.48,
+      126617.47,
+      129519.56,
+      129519.54,
+      129519.52,
+      129519.55,
+      122493.42,
+      122493.45,
+      122493.43,
+      122493.41
+    ],
+    "iati_identifier": "XM-DAC-41140-XP02.08.025.ODS1",
+    "title_narrative": [
+      "05 Provide on-demand services"
+    ],
+    "sector_narrative": [
+      "Relief co-ordination; protection and support services",
+      "Partnerships for the goals",
+      "Enhance the Global Partnership for Sustainable Development, complemented by multi-stakeholder partnerships that mobilize and share knowledge, expertise, technology and financial resources, to support the achievement of the Sustainable Development Goals in all countries, in particular developing countries"
+    ],
+    "reporting_org_ref": "XM-DAC-41140",
+    "transaction_value": [
+      56365.0,
+      56365.0,
+      95776.68
+    ],
+    "activity_date_type": [
+      "1",
+      "2",
+      "3"
+    ],
+    "activity_status_code": "2",
+    "description_narrative": [
+      "Country portfolio budget - CPB Pacific Isld COs 2023-2027 Provide on-demand services to nationally- and regionally-led emergency responses."
+    ],
+    "activity_date_iso_date": [
+      "2023-07-01T00:00:00Z",
+      "2023-07-01T00:00:00Z",
+      "2027-12-31T00:00:00Z"
+    ],
+    "recipient_country_code": [
+      "TH"
+    ],
+    "reporting_org_narrative": [
+      "World Food Programme"
+    ]
+  },
+  {
+    "sector_code": [
+      "72050",
+      "2",
+      "2.4"
+    ],
+    "budget_value": [
+      265924.9,
+      265924.86,
+      265924.88,
+      265924.86,
+      573397.2,
+      573397.2,
+      573397.17,
+      573397.19,
+      357330.33,
+      357330.4,
+      357330.08,
+      357330.3,
+      74731.82,
+      74731.85,
+      74731.75,
+      74731.81,
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "iati_identifier": "XM-DAC-41140-IQ02.04.021.CPA1",
+    "title_narrative": [
+      "05 Resilience activities."
+    ],
+    "sector_narrative": [
+      "Relief co-ordination; protection and support services",
+      "Zero hunger",
+      "By 2030, ensure sustainable food production systems and implement resilient agricultural practices that increase productivity and production, that help maintain ecosystems, that strengthen capacity for adaptation to climate change, extreme weather, drought, flooding and other disasters and that progressively improve land and soil quality"
+    ],
+    "reporting_org_ref": "XM-DAC-41140",
+    "transaction_value": [
+      9975.14,
+      6776.06,
+      333874.61,
+      6139.38,
+      9975.14,
+      6776.06,
+      333874.61,
+      6139.38,
+      571428.57
+    ],
+    "activity_date_type": [
+      "1",
+      "2",
+      "3"
+    ],
+    "activity_status_code": "2",
+    "description_narrative": [
+      "Country portfolio budget - CPB Iraq 2020-2026 Implement climate resilience projects for targeted individuals and communities for and on behalf of the Government and other actors."
+    ],
+    "activity_date_iso_date": [
+      "2020-01-01T00:00:00Z",
+      "2020-01-01T00:00:00Z",
+      "2026-02-28T00:00:00Z"
+    ],
+    "recipient_country_code": [
+      "IQ"
+    ],
+    "reporting_org_narrative": [
+      "World Food Programme"
+    ]
+  },
+  {
+    "sector_code": [
+      "72040",
+      "2",
+      "2.1"
+    ],
+    "budget_value": [
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      980030.88,
+      980030.87,
+      980030.83,
+      980030.86,
+      392443.4,
+      392443.36,
+      392443.35,
+      392443.36
+    ],
+    "iati_identifier": "XM-DAC-41140-IQ03.01.011.URT1",
+    "title_narrative": [
+      "01 GFD to crisis-affected populations."
+    ],
+    "sector_narrative": [
+      "Emergency food aid",
+      "Zero hunger",
+      "By 2030, end hunger and ensure access by all people, in particular the poor and people in vulnerable situations, including infants, to safe, nutritious and sufficient food all year round"
+    ],
+    "reporting_org_ref": "XM-DAC-41140",
+    "transaction_value": [
+      0.0,
+      0.0,
+      0.0
+    ],
+    "activity_date_type": [
+      "1",
+      "2",
+      "3"
+    ],
+    "activity_status_code": "2",
+    "description_narrative": [
+      "Country portfolio budget - CPB Iraq 2026-2029 Provide unconditional assistance to internally displaced persons, returnees, and other crisis-affected populations."
+    ],
+    "activity_date_iso_date": [
+      "2025-07-01T00:00:00Z",
+      "2025-07-01T00:00:00Z",
+      "2029-12-31T00:00:00Z"
+    ],
+    "recipient_country_code": [
+      "IQ"
+    ],
+    "reporting_org_narrative": [
+      "World Food Programme"
+    ]
+  },
+  {
+    "sector_code": [
+      "74020",
+      "2",
+      "2.4"
+    ],
+    "budget_value": [
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      3454012.24,
+      3454012.23,
+      3454012.18,
+      3454012.22,
+      3512845.21,
+      3512845.19,
+      3512845.17,
+      3512845.18,
+      3078231.46,
+      3078231.49,
+      3078231.41,
+      3078231.45,
+      2972538.26,
+      2972538.29,
+      2972538.23,
+      2972538.24
+    ],
+    "iati_identifier": "XM-DAC-41140-IQ03.04.023.CAR1",
+    "title_narrative": [
+      "02 RESILIENCE BUILDING"
+    ],
+    "sector_narrative": [
+      "Multi-hazard response preparedness",
+      "Zero hunger",
+      "By 2030, ensure sustainable food production systems and implement resilient agricultural practices that increase productivity and production, that help maintain ecosystems, that strengthen capacity for adaptation to climate change, extreme weather, drought, flooding and other disasters and that progressively improve land and soil quality"
+    ],
+    "reporting_org_ref": "XM-DAC-41140",
+    "transaction_value": [
+      0.0,
+      0.0,
+      484455.98,
+      -484455.98,
+      246163.82,
+      -246163.82
+    ],
+    "activity_date_type": [
+      "1",
+      "2",
+      "3"
+    ],
+    "activity_status_code": "2",
+    "description_narrative": [
+      "Country portfolio budget - CPB Iraq 2026-2029 Provide targeted communities with adaptive solutions for asset creation and improved food systems while strengthening community capacities to manage shocks and stressors."
+    ],
+    "activity_date_iso_date": [
+      "2025-07-01T00:00:00Z",
+      "2025-07-01T00:00:00Z",
+      "2029-12-31T00:00:00Z"
+    ],
+    "recipient_country_code": [
+      "IQ"
+    ],
+    "reporting_org_narrative": [
+      "World Food Programme"
+    ]
+  },
+  {
+    "sector_code": [
+      "72050",
+      "2",
+      "2.4"
+    ],
+    "budget_value": [
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      464501.72,
+      464501.71,
+      464501.69,
+      464501.71,
+      470528.59,
+      470528.59,
+      470528.58,
+      470528.58
+    ],
+    "iati_identifier": "XM-DAC-41140-IQ03.04.023.ODS1",
+    "title_narrative": [
+      "03 Resilience activities."
+    ],
+    "sector_narrative": [
+      "Relief co-ordination; protection and support services",
+      "Zero hunger",
+      "By 2030, ensure sustainable food production systems and implement resilient agricultural practices that increase productivity and production, that help maintain ecosystems, that strengthen capacity for adaptation to climate change, extreme weather, drought, flooding and other disasters and that progressively improve land and soil quality"
+    ],
+    "reporting_org_ref": "XM-DAC-41140",
+    "transaction_value": [
+      0.0,
+      0.0,
+      0.0
+    ],
+    "activity_date_type": [
+      "1",
+      "2",
+      "3"
+    ],
+    "activity_status_code": "2",
+    "description_narrative": [
+      "Country portfolio budget - CPB Iraq 2026-2029 Implement resilience projects for targeted individuals and communities for and on behalf of the Government and other actors."
+    ],
+    "activity_date_iso_date": [
+      "2025-07-01T00:00:00Z",
+      "2025-07-01T00:00:00Z",
+      "2029-12-31T00:00:00Z"
+    ],
+    "recipient_country_code": [
+      "IQ"
+    ],
+    "reporting_org_narrative": [
+      "World Food Programme"
+    ]
+  },
+  {
+    "sector_code": [
+      "74020",
+      "17",
+      "17.9"
+    ],
+    "budget_value": [
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      1557900.53,
+      1557900.53,
+      1557900.51,
+      1557900.51,
+      1232908.7,
+      1232908.66,
+      1232908.69,
+      1232908.65,
+      884262.56,
+      884262.58,
+      884262.53,
+      884262.55,
+      844308.69,
+      844308.68,
+      844308.68,
+      844308.66
+    ],
+    "iati_identifier": "XM-DAC-41140-IQ03.05.034.SPS1",
+    "title_narrative": [
+      "04 Capacity Strengthening"
+    ],
+    "sector_narrative": [
+      "Multi-hazard response preparedness",
+      "Partnerships for the goals",
+      "Enhance international support for implementing effective and targeted capacity-building in developing countries to support national plans to implement all the Sustainable Development Goals, including through North-South, South-South and triangular cooperation"
+    ],
+    "reporting_org_ref": "XM-DAC-41140",
+    "transaction_value": [
+      0.0,
+      0.0,
+      1220916.54,
+      -1220916.54
+    ],
+    "activity_date_type": [
+      "1",
+      "2",
+      "3"
+    ],
+    "activity_status_code": "2",
+    "description_narrative": [
+      "Country portfolio budget - CPB Iraq 2026-2029 Provide technical, analytical, and operational support to strengthen national social and food assistance schemes and improve food security and nutrition at scale."
+    ],
+    "activity_date_iso_date": [
+      "2025-07-01T00:00:00Z",
+      "2025-07-01T00:00:00Z",
+      "2029-12-31T00:00:00Z"
+    ],
+    "recipient_country_code": [
+      "IQ"
+    ],
+    "reporting_org_narrative": [
+      "World Food Programme"
+    ]
+  },
+  {
+    "sector_code": [
+      "91010",
+      "17",
+      "2",
+      "2.1",
+      "2.4",
+      "17.9"
+    ],
+    "budget_value": [
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      1058423.16,
+      1058423.16,
+      1058423.14,
+      1058423.15,
+      944131.76,
+      944131.73,
+      944131.76,
+      944131.72,
+      786047.44,
+      786047.45,
+      786047.43,
+      786047.43,
+      687960.14,
+      687960.13,
+      687960.13,
+      687960.11
+    ],
+    "iati_identifier": "XM-DAC-41140-IQ03-DSC",
+    "title_narrative": [
+      "Non Activity Specific"
+    ],
+    "sector_narrative": [
+      "Administrative costs",
+      "Partnerships for the goals",
+      "Zero hunger",
+      "By 2030, end hunger and ensure access by all people, in particular the poor and people in vulnerable situations, including infants, to safe, nutritious and sufficient food all year round",
+      "By 2030, ensure sustainable food production systems and implement resilient agricultural practices that increase productivity and production, that help maintain ecosystems, that strengthen capacity for adaptation to climate change, extreme weather, drought, flooding and other disasters and that progressively improve land and soil quality",
+      "Enhance international support for implementing effective and targeted capacity-building in developing countries to support national plans to implement all the Sustainable Development Goals, including through North-South, South-South and triangular cooperation"
+    ],
+    "reporting_org_ref": "XM-DAC-41140",
+    "transaction_value": [
+      0.0,
+      0.0,
+      0.0
+    ],
+    "activity_date_type": [
+      "1",
+      "2",
+      "3"
+    ],
+    "activity_status_code": "2",
+    "description_narrative": [
+      "CPB Iraq 2026-2029 - Direct Support Cost that correspond to country level expenditures that are directly linked to the execution of the programme but cannot be attributed to a specific activity within it."
+    ],
+    "activity_date_iso_date": [
+      "2025-07-01T00:00:00Z",
+      "2025-07-01T00:00:00Z",
+      "2029-12-31T00:00:00Z"
+    ],
+    "recipient_country_code": [
+      "IQ"
+    ],
+    "reporting_org_narrative": [
+      "World Food Programme"
+    ]
+  },
+  {
+    "sector_code": [
+      "72050",
+      "17",
+      "17.9"
+    ],
+    "budget_value": [
+      593780.37,
+      593780.36,
+      593780.37,
+      593780.36,
+      453312.95,
+      453312.96,
+      453312.93,
+      453312.95,
+      339131.54,
+      339131.54,
+      339131.53,
+      339131.53,
+      342681.69,
+      342681.68,
+      342681.66,
+      342681.68,
+      346409.33,
+      346409.34,
+      346409.31,
+      346409.32
+    ],
+    "iati_identifier": "XM-DAC-41140-DO03.05.055.ODS1",
+    "title_narrative": [
+      "Facilitar servicios relacionados con la cadena de suministro y de otra índole a las instituciones gubernamentales y a los agentes humanitarios y de desarrollo para ayudarles a responder a las necesidades de las poblaciones destinatarias."
+    ],
+    "sector_narrative": [
+      "Relief co-ordination; protection and support services",
+      "Partnerships for the goals",
+      "Enhance international support for implementing effective and targeted capacity-building in developing countries to support national plans to implement all the Sustainable Development Goals, including through North-South, South-South and triangular cooperation"
+    ],
+    "reporting_org_ref": "XM-DAC-41140",
+    "transaction_value": [
+      952.06,
+      952.06,
+      4740.88,
+      -4740.88,
+      9165.7,
+      -9165.7,
+      1157.55,
+      -100.7
+    ],
+    "activity_date_type": [
+      "1",
+      "2",
+      "3"
+    ],
+    "activity_status_code": "2",
+    "description_narrative": [
+      "carteras de actividades en los países - CPB Dominican Republic (2024-2028) - Facilitar servicios relacionados con la cadena de suministro y de otra índole a las instituciones gubernamentales y a los agentes humanitarios y de desarrollo para ayudarles a responder a las necesidades de las poblaciones destinatarias."
+    ],
+    "activity_date_iso_date": [
+      "2024-01-01T00:00:00Z",
+      "2024-01-01T00:00:00Z",
+      "2028-12-31T00:00:00Z"
+    ],
+    "recipient_country_code": [
+      "DO"
+    ],
+    "reporting_org_narrative": [
+      "World Food Programme"
+    ]
+  },
+  {
+    "sector_code": [
+      "72050",
+      "17",
+      "17.16"
+    ],
+    "budget_value": [
+      154500.02,
+      154500.03,
+      154500.02,
+      154500.02,
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "iati_identifier": "XM-DAC-41140-IR01.08.021.CPA1",
+    "title_narrative": [
+      "04 Cash Transfer Service"
+    ],
+    "sector_narrative": [
+      "Relief co-ordination; protection and support services",
+      "Partnerships for the goals",
+      "Enhance the Global Partnership for Sustainable Development, complemented by multi-stakeholder partnerships that mobilize and share knowledge, expertise, technology and financial resources, to support the achievement of the Sustainable Development Goals in all countries, in particular developing countries"
+    ],
+    "reporting_org_ref": "XM-DAC-41140",
+    "transaction_value": [
+      600211.28,
+      1000.0,
+      600211.28,
+      1000.0
+    ],
+    "activity_date_type": [
+      "1",
+      "2",
+      "3",
+      "4"
+    ],
+    "activity_status_code": "3",
+    "description_narrative": [
+      "Country portfolio budget - CPB Iran 2018-2023 Provide cash transfer and other services to Government and other partners."
+    ],
+    "activity_date_iso_date": [
+      "2018-01-01T00:00:00Z",
+      "2018-01-01T00:00:00Z",
+      "2023-03-31T00:00:00Z",
+      "2023-03-31T00:00:00Z"
+    ],
+    "recipient_country_code": [
+      "IR"
+    ],
+    "reporting_org_narrative": [
+      "World Food Programme"
+    ]
+  },
+  {
+    "sector_code": [
+      "72040",
+      "2",
+      "2.1"
+    ],
+    "budget_value": [
+      15374.44,
+      15374.44,
+      15374.44,
+      15374.43,
+      18867.81,
+      18867.82,
+      18867.81,
+      18867.81,
+      19728.52,
+      19728.51,
+      19728.52,
+      19728.5,
+      20630.68,
+      20630.68,
+      20630.68,
+      20630.67,
+      21579.52,
+      21579.53,
+      21579.51,
+      21579.52
+    ],
+    "iati_identifier": "XM-DAC-41140-IR02.01.011.URT2",
+    "title_narrative": [
+      "03 Food Assistance - crisis affected"
+    ],
+    "sector_narrative": [
+      "Emergency food aid",
+      "Zero hunger",
+      "By 2030, end hunger and ensure access by all people, in particular the poor and people in vulnerable situations, including infants, to safe, nutritious and sufficient food all year round"
+    ],
+    "reporting_org_ref": "XM-DAC-41140",
+    "transaction_value": [
+      0.0,
+      0.0,
+      0.0
+    ],
+    "activity_date_type": [
+      "1",
+      "2",
+      "3"
+    ],
+    "activity_status_code": "2",
+    "description_narrative": [
+      "Country portfolio budget - CPB Iran 2023-2027 Support national disaster response, especially through the provision of emergency food assistance to crisis-affected population in Iran."
+    ],
+    "activity_date_iso_date": [
+      "2023-04-01T00:00:00Z",
+      "2023-04-01T00:00:00Z",
+      "2027-12-31T00:00:00Z"
+    ],
+    "recipient_country_code": [
+      "IR"
+    ],
+    "reporting_org_narrative": [
+      "World Food Programme"
+    ]
+  },
+  {
+    "sector_code": [
+      "72050",
+      "17",
+      "17.16"
+    ],
+    "budget_value": [
+      126250.0,
+      126250.0,
+      126250.0,
+      126250.0,
+      12625.0,
+      12625.0,
+      12625.0,
+      12625.0,
+      12625.0,
+      12625.0,
+      12625.0,
+      12625.0,
+      12625.0,
+      12625.0,
+      12625.0,
+      12625.0,
+      12625.0,
+      12625.0,
+      12625.0,
+      12625.0
+    ],
+    "iati_identifier": "XM-DAC-41140-IR02.08.025.ODS1",
+    "title_narrative": [
+      "04 On Demand Service Provision"
+    ],
+    "sector_narrative": [
+      "Relief co-ordination; protection and support services",
+      "Partnerships for the goals",
+      "Enhance the Global Partnership for Sustainable Development, complemented by multi-stakeholder partnerships that mobilize and share knowledge, expertise, technology and financial resources, to support the achievement of the Sustainable Development Goals in all countries, in particular developing countries"
+    ],
+    "reporting_org_ref": "XM-DAC-41140",
+    "transaction_value": [
+      0.0,
+      0.0,
+      0.0
+    ],
+    "activity_date_type": [
+      "1",
+      "2",
+      "3"
+    ],
+    "activity_status_code": "2",
+    "description_narrative": [
+      "Country portfolio budget - CPB Iran 2023-2027 Provide cash transfer, coordination or other services to partners"
+    ],
+    "activity_date_iso_date": [
+      "2023-04-01T00:00:00Z",
+      "2023-04-01T00:00:00Z",
+      "2027-12-31T00:00:00Z"
+    ],
+    "recipient_country_code": [
+      "IR"
+    ],
+    "reporting_org_narrative": [
+      "World Food Programme"
+    ]
+  },
+  {
+    "sector_code": [
+      "72050",
+      "17",
+      "17.16"
+    ],
+    "budget_value": [
+      272123.75,
+      272123.75,
+      272123.75,
+      272123.75,
+      189246.5,
+      189246.5,
+      189246.5,
+      189246.5,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "iati_identifier": "XM-DAC-41140-CF02.08.055.ETC1",
+    "title_narrative": [
+      "Fournir à la demande des services de transmission de données et de télécommunications au Gouvernement, aux partenaires de l’action humanitaire et du développement et aux populations bénéficiant d’une assistance"
+    ],
+    "sector_narrative": [
+      "Relief co-ordination; protection and support services",
+      "Partnerships for the goals",
+      "Enhance the Global Partnership for Sustainable Development, complemented by multi-stakeholder partnerships that mobilize and share knowledge, expertise, technology and financial resources, to support the achievement of the Sustainable Development Goals in all countries, in particular developing countries"
+    ],
+    "reporting_org_ref": "XM-DAC-41140",
+    "transaction_value": [
+      0.0,
+      0.0,
+      93708.92,
+      2793.02,
+      -93708.92,
+      -2793.02
+    ],
+    "activity_date_type": [
+      "1",
+      "2",
+      "3"
+    ],
+    "activity_status_code": "2",
+    "description_narrative": [
+      "Budget de Portefeuille de Pays - CPB Central African Republic (2023-2027) - Fournir à la demande des services de transmission de données et de télécommunications au Gouvernement, aux partenaires de l’action humanitaire et du développement et aux populations bénéficiant d’une assistance"
+    ],
+    "activity_date_iso_date": [
+      "2023-03-01T00:00:00Z",
+      "2023-03-01T00:00:00Z",
+      "2027-12-31T00:00:00Z"
+    ],
+    "recipient_country_code": [
+      "CF"
+    ],
+    "reporting_org_narrative": [
+      "World Food Programme"
+    ]
+  },
+  {
+    "sector_code": [
+      "73010",
+      "2",
+      "2.3"
+    ],
+    "budget_value": [
+      67744.48,
+      67744.5,
+      67744.48,
+      67744.48,
+      67744.48,
+      67744.5,
+      67744.48,
+      67744.48,
+      137324.94,
+      137324.95,
+      137324.94,
+      137324.94,
+      72275.0,
+      72275.0,
+      72275.0,
+      72275.0,
+      12045.85,
+      12045.85,
+      12045.8,
+      12045.85
+    ],
+    "iati_identifier": "XM-DAC-41140-CM01.03.041.CSB1",
+    "title_narrative": [
+      "Fournir une assistance technique aux petits exploitants et aux coopératives agricoles – en privilégiant la représentation des femmes et l’encadrement des activités par celles-ci – en matière de gestion après récolte et d’intégration dans des filières, en collaboration avec le FIDA et la FAO"
+    ],
+    "sector_narrative": [
+      "Immediate post-emergency reconstruction and rehabilitation",
+      "Zero hunger",
+      "By 2030, double the agricultural productivity and incomes of small-scale food producers, in particular women, indigenous peoples, family farmers, pastoralists and fishers, including through secure and equal access to land, other productive resources and inputs, knowledge, financial services, markets and opportunities for value addition and non-farm employment"
+    ],
+    "reporting_org_ref": "XM-DAC-41140",
+    "transaction_value": [
+      254.0,
+      -2912.02,
+      12075.22,
+      36025.93,
+      758.31,
+      1778.0,
+      46874.98,
+      17047.41,
+      4619.58,
+      66610.6,
+      737.7,
+      74352.59,
+      9554.04,
+      254.0,
+      -2912.02,
+      12075.22,
+      36025.93,
+      758.31,
+      1778.0,
+      46874.98,
+      17047.41,
+      4619.58,
+      66610.6,
+      737.7,
+      74352.59,
+      9554.04
+    ],
+    "activity_date_type": [
+      "1",
+      "2",
+      "3",
+      "4"
+    ],
+    "activity_status_code": "3",
+    "description_narrative": [
+      "Budget de Portefeuille de Pays - CPB Cameroon (2018-2022) - Fournir une assistance technique aux petits exploitants et aux coopératives agricoles – en privilégiant la représentation des femmes et l’encadrement des activités par celles-ci – en matière de gestion après récolte et d’intégration dans des filières, en collaboration avec le FIDA et la FAO"
+    ],
+    "activity_date_iso_date": [
+      "2018-01-01T00:00:00Z",
+      "2018-01-01T00:00:00Z",
+      "2022-02-28T00:00:00Z",
+      "2022-02-28T00:00:00Z"
+    ],
+    "recipient_country_code": [
+      "CM"
+    ],
+    "reporting_org_narrative": [
+      "World Food Programme"
+    ]
+  },
+  {
+    "sector_code": [
+      "52010",
+      "17",
+      "17.9"
+    ],
+    "budget_value": [
+      340956.38,
+      340956.37,
+      340956.38,
+      340956.37,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "iati_identifier": "XM-DAC-41140-CM01.05.052.CPA1",
+    "title_narrative": [
+      "Fournir un appui technique spécialisé aux partenaires et aux parties prenantes pour appuyer la mise en place d’un système de filet de sécurité national qui tienne compte des questions de nutrition et de la problématique hommes-femmes et soit réactif en cas de choc et assurer une gestion commune des systèmes informatiques, des entrepôts et des couloirs d’acheminement"
+    ],
+    "sector_narrative": [
+      "Food assistance",
+      "Partnerships for the goals",
+      "Enhance international support for implementing effective and targeted capacity-building in developing countries to support national plans to implement all the Sustainable Development Goals, including through North-South, South-South and triangular cooperation"
+    ],
+    "reporting_org_ref": "XM-DAC-41140",
+    "transaction_value": [
+      0.0,
+      0.0
+    ],
+    "activity_date_type": [
+      "1",
+      "2",
+      "3",
+      "4"
+    ],
+    "activity_status_code": "3",
+    "description_narrative": [
+      "Budget de Portefeuille de Pays - CPB Cameroon (2018-2022) - Fournir un appui technique spécialisé aux partenaires et aux parties prenantes pour appuyer la mise en place d’un système de filet de sécurité national qui tienne compte des questions de nutrition et de la problématique hommes-femmes et soit réactif en cas de choc et assurer une gestion commune des systèmes informatiques, des entrepôts et des couloirs d’acheminement"
+    ],
+    "activity_date_iso_date": [
+      "2018-01-01T00:00:00Z",
+      "2018-01-01T00:00:00Z",
+      "2022-02-28T00:00:00Z",
+      "2022-02-28T00:00:00Z"
+    ],
+    "recipient_country_code": [
+      "CM"
+    ],
+    "reporting_org_narrative": [
+      "World Food Programme"
+    ]
+  },
+  {
+    "sector_code": [
+      "52010",
+      "17",
+      "17.9"
+    ],
+    "budget_value": [
+      24404.75,
+      24404.75,
+      24404.75,
+      24404.75,
+      476805.23,
+      476805.21,
+      476805.22,
+      476805.21,
+      378723.37,
+      378723.36,
+      378723.37,
+      378723.34,
+      22500.0,
+      22500.0,
+      22500.0,
+      22500.0,
+      3750.0,
+      3750.04,
+      3749.96,
+      3750.0
+    ],
+    "iati_identifier": "XM-DAC-41140-CM01.05.052.CSI1",
+    "title_narrative": [
+      "Fournir un appui technique spécialisé aux partenaires et aux parties prenantes pour appuyer la mise en place d’un système de filet de sécurité national qui tienne compte des questions de nutrition et de la problématique hommes-femmes et soit réactif en cas de choc, en collaboration avec la Banque mondiale, l’Organisation internationale du Travail (OIT) et le Ministère de l’administration territoriale et de la décentralisation, et assurer une gestion commune des systèmes informatiques, des entrepôts et des couloirs d’acheminement."
+    ],
+    "sector_narrative": [
+      "Food assistance",
+      "Partnerships for the goals",
+      "Enhance international support for implementing effective and targeted capacity-building in developing countries to support national plans to implement all the Sustainable Development Goals, including through North-South, South-South and triangular cooperation"
+    ],
+    "reporting_org_ref": "XM-DAC-41140",
+    "transaction_value": [
+      7168.43,
+      23327.27,
+      18455.41,
+      57543.12,
+      34547.36,
+      21824.72,
+      29376.28,
+      55811.04,
+      63910.95,
+      7168.43,
+      23327.27,
+      18455.41,
+      57543.12,
+      34547.36,
+      21824.72,
+      29376.28,
+      55811.04,
+      63910.95
+    ],
+    "activity_date_type": [
+      "1",
+      "2",
+      "3",
+      "4"
+    ],
+    "activity_status_code": "3",
+    "description_narrative": [
+      "Budget de Portefeuille de Pays - CPB Cameroon (2018-2022) - Fournir un appui technique spécialisé aux partenaires et aux parties prenantes pour appuyer la mise en place d’un système de filet de sécurité national qui tienne compte des questions de nutrition et de la problématique hommes-femmes et soit réactif en cas de choc, en collaboration avec la Banque mondiale, l’Organisation internationale du Travail (OIT) et le Ministère de l’administration territoriale et de la décentralisation, et assurer une gestion commune des systèmes informatiques, des entrepôts et des couloirs d’acheminement."
+    ],
+    "activity_date_iso_date": [
+      "2018-01-01T00:00:00Z",
+      "2018-01-01T00:00:00Z",
+      "2022-02-28T00:00:00Z",
+      "2022-02-28T00:00:00Z"
+    ],
+    "recipient_country_code": [
+      "CM"
+    ],
+    "reporting_org_narrative": [
+      "World Food Programme"
+    ]
+  },
+  {
+    "sector_code": [
+      "74020",
+      "2",
+      "2.1"
+    ],
+    "budget_value": [
+      453438.55,
+      453438.55,
+      453438.55,
+      453438.55,
+      418349.55,
+      418349.57,
+      418349.55,
+      418349.54,
+      326382.37,
+      326382.35,
+      326382.36,
+      326382.34,
+      325285.42,
+      325285.43,
+      325285.42,
+      325285.42,
+      326889.9,
+      326889.9,
+      326889.89,
+      326889.89
+    ],
+    "iati_identifier": "XM-DAC-41140-GH03.01.011.EPA1",
+    "title_narrative": [
+      "01 ACT1_EPR_CCS Support"
+    ],
+    "sector_narrative": [
+      "Multi-hazard response preparedness",
+      "Zero hunger",
+      "By 2030, end hunger and ensure access by all people, in particular the poor and people in vulnerable situations, including infants, to safe, nutritious and sufficient food all year round"
+    ],
+    "reporting_org_ref": "XM-DAC-41140",
+    "transaction_value": [
+      614.32,
+      204.0,
+      4913.4,
+      43337.17,
+      24461.47,
+      9429.3,
+      27163.4,
+      2391.4,
+      -81.6,
+      3998.74,
+      2419.8,
+      8017.02,
+      204.0,
+      5551.43,
+      1283.8,
+      614.32,
+      204.0,
+      4913.4,
+      43337.17,
+      24461.47,
+      9429.3,
+      27163.4,
+      2391.4,
+      -81.6,
+      3998.74,
+      2419.8,
+      8017.02,
+      204.0,
+      5551.43,
+      1283.8,
+      138882.0
+    ],
+    "activity_date_type": [
+      "1",
+      "2",
+      "3"
+    ],
+    "activity_status_code": "2",
+    "description_narrative": [
+      "Country portfolio budget - CPB Ghana 2024-2028 Work with actors at the national, institutional, community and individual levels to strengthen their capacity to enhance gender sensitive, evidence-based early warning analysis for informed anticipatory action, preparedness, disaster risk reduction and response, including disaster risk financing mechanisms like climate insurance."
+    ],
+    "activity_date_iso_date": [
+      "2024-01-01T00:00:00Z",
+      "2024-01-01T00:00:00Z",
+      "2028-12-31T00:00:00Z"
+    ],
+    "recipient_country_code": [
+      "GH"
+    ],
+    "reporting_org_narrative": [
+      "World Food Programme"
+    ]
+  },
+  {
+    "sector_code": [
+      "72050",
+      "17",
+      "17.3"
+    ],
+    "budget_value": [
+      519041.08,
+      519041.07,
+      519041.08,
+      519041.07,
+      518806.31,
+      518806.3,
+      518806.31,
+      518806.3,
+      514721.73,
+      514721.74,
+      514721.73,
+      514721.73,
+      514797.78,
+      514797.78,
+      514797.78,
+      514797.78,
+      514877.63,
+      514877.64,
+      514877.63,
+      514877.63
+    ],
+    "iati_identifier": "XM-DAC-41140-GH03.07.055.ODS1",
+    "title_narrative": [
+      "06 Act_6_On_demand_serv"
+    ],
+    "sector_narrative": [
+      "Relief co-ordination; protection and support services",
+      "Partnerships for the goals",
+      "Mobilize additional financial resources for developing countries from multiple sources"
+    ],
+    "reporting_org_ref": "XM-DAC-41140",
+    "transaction_value": [
+      0.0,
+      0.0,
+      0.0
+    ],
+    "activity_date_type": [
+      "1",
+      "2",
+      "3"
+    ],
+    "activity_status_code": "2",
+    "description_narrative": [
+      "Country portfolio budget - CPB Ghana 2024-2028 Provide on-demand services to government and other actors to enhance efficiency, effectiveness, and coordination in the implementation of interventions."
+    ],
+    "activity_date_iso_date": [
+      "2024-01-01T00:00:00Z",
+      "2024-01-01T00:00:00Z",
+      "2028-12-31T00:00:00Z"
+    ],
+    "recipient_country_code": [
+      "GH"
+    ],
+    "reporting_org_narrative": [
+      "World Food Programme"
+    ]
+  },
+  {
+    "sector_code": [
+      "72050",
+      "17",
+      "17.16"
+    ],
+    "budget_value": [
+      12500.0,
+      12500.0,
+      12500.0,
+      12500.0,
+      25000.0,
+      25000.0,
+      25000.0,
+      25000.0,
+      25000.0,
+      25000.0,
+      25000.0,
+      25000.0,
+      25000.0,
+      25000.0,
+      25000.0,
+      25000.0,
+      25000.0,
+      25000.0,
+      25000.0,
+      25000.0,
+      12500.0,
+      12500.0,
+      12500.0,
+      12500.0
+    ],
+    "iati_identifier": "XM-DAC-41140-GN03.08.055.ODS1",
+    "title_narrative": [
+      "Fournir des services à la demande et une assistance technique aux partenaires gouvernementaux ainsi qu’aux partenaires de l’aide humanitaire et du développement"
+    ],
+    "sector_narrative": [
+      "Relief co-ordination; protection and support services",
+      "Partnerships for the goals",
+      "Enhance the Global Partnership for Sustainable Development, complemented by multi-stakeholder partnerships that mobilize and share knowledge, expertise, technology and financial resources, to support the achievement of the Sustainable Development Goals in all countries, in particular developing countries"
+    ],
+    "reporting_org_ref": "XM-DAC-41140",
+    "transaction_value": [
+      0.0,
+      0.0,
+      0.0
+    ],
+    "activity_date_type": [
+      "1",
+      "2",
+      "3"
+    ],
+    "activity_status_code": "2",
+    "description_narrative": [
+      "Budget de Portefeuille de Pay- CPB Guinea 2024-2029 - Fournir des services à la demande et une assistance technique aux partenaires gouvernementaux ainsi qu’aux partenaires de l’aide humanitaire et du développement"
+    ],
+    "activity_date_iso_date": [
+      "2024-07-01T00:00:00Z",
+      "2024-07-01T00:00:00Z",
+      "2029-06-30T00:00:00Z"
+    ],
+    "recipient_country_code": [
+      "GN"
+    ],
+    "reporting_org_narrative": [
+      "World Food Programme"
+    ]
+  },
+  {
+    "sector_code": [
+      "72040",
+      "2",
+      "2.1"
+    ],
+    "budget_value": [
+      1744287.55,
+      1744287.56,
+      1744287.55,
+      1744287.55,
+      1650074.71,
+      1650074.69,
+      1650074.67,
+      1650074.67,
+      1569671.4,
+      1569671.37,
+      1569671.33,
+      1569671.35,
+      1503372.2,
+      1503372.17,
+      1503372.18,
+      1503372.12,
+      1408765.23,
+      1408765.24,
+      1408765.19,
+      1408765.19
+    ],
+    "iati_identifier": "XM-DAC-41140-SN03.01.011.URT1",
+    "title_narrative": [
+      "Fournir une assistance alimentaire et nutritionnelle aux populations touchées par une crise et aux groupes à risque, notamment par l’intermédiaire de dispositifs nationaux de protection sociale réactifs face aux chocs lorsque c’est possible"
+    ],
+    "sector_narrative": [
+      "Emergency food aid",
+      "Zero hunger",
+      "By 2030, end hunger and ensure access by all people, in particular the poor and people in vulnerable situations, including infants, to safe, nutritious and sufficient food all year round"
+    ],
+    "reporting_org_ref": "XM-DAC-41140",
+    "transaction_value": [
+      0.0,
+      0.0,
+      0.0
+    ],
+    "activity_date_type": [
+      "1",
+      "2",
+      "3"
+    ],
+    "activity_status_code": "2",
+    "description_narrative": [
+      "Carteras de actividades en los países - CPB Senegal (2025-2029) - Fournir une assistance alimentaire et nutritionnelle aux populations touchées par une crise et aux groupes à risque, notamment par l’intermédiaire de dispositifs nationaux de protection sociale réactifs face aux chocs lorsque c’est possible"
+    ],
+    "activity_date_iso_date": [
+      "2025-01-01T00:00:00Z",
+      "2025-01-01T00:00:00Z",
+      "2029-12-31T00:00:00Z"
+    ],
+    "recipient_country_code": [
+      "SN"
+    ],
+    "reporting_org_narrative": [
+      "World Food Programme"
+    ]
+  },
+  {
+    "sector_code": [
+      "74020",
+      "17",
+      "17.9"
+    ],
+    "budget_value": [
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      76269.25,
+      76269.25,
+      76269.25,
+      76269.25,
+      72830.5,
+      72830.5,
+      72830.5,
+      72830.5,
+      78571.09,
+      78571.09,
+      78571.09,
+      78571.08,
+      75992.64,
+      75992.66,
+      75992.63,
+      75992.64,
+      83721.84,
+      83721.86,
+      83721.83,
+      83721.84
+    ],
+    "iati_identifier": "XM-DAC-41140-SN03.05.044.SPS1",
+    "title_narrative": [
+      "Fournir aux partenaires et autres acteurs institutionnels une assistance technique, des services de renforcement des capacités et un appui aux politiques et aux programmes fondés sur des éléments factuels, dans les domaines de la protection sociale à dimension nutritionnelle ainsi que de la préparation aux situations d’urgence et de l’intervention en cas de crise"
+    ],
+    "sector_narrative": [
+      "Multi-hazard response preparedness",
+      "Partnerships for the goals",
+      "Enhance international support for implementing effective and targeted capacity-building in developing countries to support national plans to implement all the Sustainable Development Goals, including through North-South, South-South and triangular cooperation"
+    ],
+    "reporting_org_ref": "XM-DAC-41140",
+    "transaction_value": [
+      2912.14,
+      4983.09,
+      7726.29,
+      16493.98,
+      3282.0,
+      728.0,
+      2912.14,
+      4983.09,
+      7726.29,
+      16493.98,
+      3282.0,
+      728.0,
+      36949.0
+    ],
+    "activity_date_type": [
+      "1",
+      "2",
+      "3"
+    ],
+    "activity_status_code": "2",
+    "description_narrative": [
+      "Carteras de actividades en los países - CPB Senegal (2025-2029) - Fournir aux partenaires et autres acteurs institutionnels une assistance technique, des services de renforcement des capacités et un appui aux politiques et aux programmes fondés sur des éléments factuels, dans les domaines de la protection sociale à dimension nutritionnelle ainsi que de la préparation aux situations d’urgence et de l’intervention en cas de crise"
+    ],
+    "activity_date_iso_date": [
+      "2025-01-01T00:00:00Z",
+      "2025-01-01T00:00:00Z",
+      "2029-12-31T00:00:00Z"
+    ],
+    "recipient_country_code": [
+      "SN"
+    ],
+    "reporting_org_narrative": [
+      "World Food Programme"
+    ]
+  },
+  {
+    "sector_code": [
+      "72040",
+      "2",
+      "2.1"
+    ],
+    "budget_value": [
+      430128.22,
+      430128.18,
+      430128.18,
+      430128.16,
+      465103.98,
+      465103.96,
+      465103.96,
+      465103.92,
+      489223.21,
+      489223.17,
+      489223.19,
+      489223.15,
+      525010.2,
+      525010.22,
+      525010.18,
+      525010.17,
+      563171.02,
+      563171.02,
+      563170.99,
+      563170.97
+    ],
+    "iati_identifier": "XM-DAC-41140-ST03.01.011.URT1",
+    "title_narrative": [
+      "01 ST03 - Provide assistance to affected populations before, during and after crises to meet their essential needs."
+    ],
+    "sector_narrative": [
+      "Emergency food aid",
+      "Zero hunger",
+      "By 2030, end hunger and ensure access by all people, in particular the poor and people in vulnerable situations, including infants, to safe, nutritious and sufficient food all year round"
+    ],
+    "reporting_org_ref": "XM-DAC-41140",
+    "transaction_value": [
+      0.0,
+      0.0,
+      0.0
+    ],
+    "activity_date_type": [
+      "1",
+      "2",
+      "3"
+    ],
+    "activity_status_code": "2",
+    "description_narrative": [
+      "Country portfolio budget - CPB Sao Tome and Principe 2024-2028 Provide assistance to affected populations before, during and after crises to meet their essential needs."
+    ],
+    "activity_date_iso_date": [
+      "2024-01-01T00:00:00Z",
+      "2024-01-01T00:00:00Z",
+      "2028-12-31T00:00:00Z"
+    ],
+    "recipient_country_code": [
+      "ST"
+    ],
+    "reporting_org_narrative": [
+      "World Food Programme"
+    ]
+  },
+  {
+    "sector_code": [
+      "74020",
+      "17",
+      "17.9"
+    ],
+    "budget_value": [
+      18992.0,
+      18992.0,
+      18992.0,
+      18992.0,
+      20492.0,
+      20492.0,
+      20492.0,
+      20492.0,
+      21742.0,
+      21742.0,
+      21742.0,
+      21742.0,
+      17992.0,
+      17992.0,
+      17992.0,
+      17992.0,
+      16742.0,
+      16742.0,
+      16742.0,
+      16742.0
+    ],
+    "iati_identifier": "XM-DAC-41140-ST03.05.024.EPA1",
+    "title_narrative": [
+      "04 ST03 - Provide capacity strengthening to the Government and stakeholders with the aim of enabling them to improve emergency preparedness and response, anticipatory action, early warning and shock responsive social protection systems with a climate resilient and environmentally sustainable approach."
+    ],
+    "sector_narrative": [
+      "Multi-hazard response preparedness",
+      "Partnerships for the goals",
+      "Enhance international support for implementing effective and targeted capacity-building in developing countries to support national plans to implement all the Sustainable Development Goals, including through North-South, South-South and triangular cooperation"
+    ],
+    "reporting_org_ref": "XM-DAC-41140",
+    "transaction_value": [
+      0.0,
+      0.0,
+      0.0
+    ],
+    "activity_date_type": [
+      "1",
+      "2",
+      "3"
+    ],
+    "activity_status_code": "2",
+    "description_narrative": [
+      "Country portfolio budget - CPB Sao Tome and Principe 2024-2028 Provide capacity strengthening to the Government and stakeholders with the aim of enabling them to improve emergency preparedness and response, anticipatory action, early warning and shock responsive social protection systems with a climate resilient and environmentally sustainable approach."
+    ],
+    "activity_date_iso_date": [
+      "2024-01-01T00:00:00Z",
+      "2024-01-01T00:00:00Z",
+      "2028-12-31T00:00:00Z"
+    ],
+    "recipient_country_code": [
+      "ST"
+    ],
+    "reporting_org_narrative": [
+      "World Food Programme"
+    ]
+  },
+  {
+    "sector_code": [
+      "74020",
+      "2",
+      "2.4"
+    ],
+    "budget_value": [
+      79366.5,
+      79366.5,
+      79366.5,
+      79366.5,
+      170972.5,
+      170972.5,
+      170972.5,
+      170972.5
+    ],
+    "iati_identifier": "XM-DAC-41140-TG03.04.021.CSI1",
+    "title_narrative": [
+      "Faciliter un accès équitable aux marchés et fournir un appui technique concernant les chaînes d’approvisionnement, les normes de qualité, la sécurité sanitaire et l’enrichissement des aliments, ainsi que les informations relatives au suivi des marchés, au bénéfice de certains transformateurs de produits alimentaires et petits exploitants"
+    ],
+    "sector_narrative": [
+      "Multi-hazard response preparedness",
+      "Zero hunger",
+      "By 2030, ensure sustainable food production systems and implement resilient agricultural practices that increase productivity and production, that help maintain ecosystems, that strengthen capacity for adaptation to climate change, extreme weather, drought, flooding and other disasters and that progressively improve land and soil quality"
+    ],
+    "reporting_org_ref": "XM-DAC-41140",
+    "transaction_value": [
+      3573.91,
+      -252.0,
+      28179.65,
+      7778.51,
+      225521.27,
+      79757.93,
+      3573.91,
+      -252.0,
+      28179.65,
+      7778.51,
+      225521.27,
+      79757.93
+    ],
+    "activity_date_type": [
+      "1",
+      "2",
+      "3",
+      "4"
+    ],
+    "activity_status_code": "3",
+    "description_narrative": [
+      "Budget de Portefeuille de Pays - CPB Togo (2021-2022) - Faciliter un accès équitable aux marchés et fournir un appui technique concernant les chaînes d’approvisionnement, les normes de qualité, la sécurité sanitaire et l’enrichissement des aliments, ainsi que les informations relatives au suivi des marchés, au bénéfice de certains transformateurs de produits alimentaires et petits exploitants"
+    ],
+    "activity_date_iso_date": [
+      "2021-01-01T00:00:00Z",
+      "2021-01-01T00:00:00Z",
+      "2022-06-30T00:00:00Z",
+      "2022-06-30T00:00:00Z"
+    ],
+    "recipient_country_code": [
+      "TG"
+    ],
+    "reporting_org_narrative": [
+      "World Food Programme"
+    ]
+  },
+  {
+    "sector_code": [
+      "72050",
+      "17",
+      "17.16"
+    ],
+    "budget_value": [
+      342825.0,
+      342825.0,
+      342825.0,
+      342825.0,
+      400913.5,
+      400913.5,
+      400913.5,
+      400913.5,
+      398707.34,
+      398707.34,
+      398707.34,
+      398707.34,
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "iati_identifier": "XM-DAC-41140-TG05.08.032.CPA1",
+    "title_narrative": [
+      "06 UNHAS - Provide aviation and air operation services to government and humanitarian partners."
+    ],
+    "sector_narrative": [
+      "Relief co-ordination; protection and support services",
+      "Partnerships for the goals",
+      "Enhance the Global Partnership for Sustainable Development, complemented by multi-stakeholder partnerships that mobilize and share knowledge, expertise, technology and financial resources, to support the achievement of the Sustainable Development Goals in all countries, in particular developing countries"
+    ],
+    "reporting_org_ref": "XM-DAC-41140",
+    "transaction_value": [
+      0.0,
+      0.0,
+      0.0
+    ],
+    "activity_date_type": [
+      "1",
+      "2",
+      "3"
+    ],
+    "activity_status_code": "2",
+    "description_narrative": [
+      "Country portfolio budget - CPB Togo 2022-2026 Provide aviation and air operation services to government and humanitarian partners."
+    ],
+    "activity_date_iso_date": [
+      "2022-07-01T00:00:00Z",
+      "2022-07-01T00:00:00Z",
+      "2026-12-31T00:00:00Z"
+    ],
+    "recipient_country_code": [
+      "TG"
+    ],
+    "reporting_org_narrative": [
+      "World Food Programme"
+    ]
+  },
+  {
+    "sector_code": [
+      "12240",
+      "2",
+      "2.1"
+    ],
+    "budget_value": [
+      484984.24,
+      484984.28,
+      484984.18,
+      484984.23,
+      1554049.62,
+      1554049.64,
+      1554049.54,
+      1554049.6,
+      1652467.25,
+      1652467.22,
+      1652467.19,
+      1652467.19
+    ],
+    "iati_identifier": "XM-DAC-41140-BJ03.01.022.NPA1",
+    "title_narrative": [
+      "05 MAM Prevention"
+    ],
+    "sector_narrative": [
+      "Basic nutrition",
+      "Zero hunger",
+      "By 2030, end hunger and ensure access by all people, in particular the poor and people in vulnerable situations, including infants, to safe, nutritious and sufficient food all year round"
+    ],
+    "reporting_org_ref": "XM-DAC-41140",
+    "transaction_value": [
+      0.0,
+      0.0,
+      8741.74,
+      505814.56
+    ],
+    "activity_date_type": [
+      "1",
+      "2",
+      "3"
+    ],
+    "activity_status_code": "2",
+    "description_narrative": [
+      "Country portfolio budget - CPB Benin 2024-2027 Provide an integrated  package for the prevention of malnutrition to targeted people, while  strengthening national capacities to reduce malnutrition."
+    ],
+    "activity_date_iso_date": [
+      "2024-01-01T00:00:00Z",
+      "2024-01-01T00:00:00Z",
+      "2027-12-31T00:00:00Z"
+    ],
+    "recipient_country_code": [
+      "BJ"
+    ],
+    "reporting_org_narrative": [
+      "World Food Programme"
+    ]
+  },
+  {
+    "sector_code": [
+      "72050",
+      "17",
+      "17.16"
+    ],
+    "budget_value": [
+      3046.53,
+      3046.52,
+      3046.53,
+      3046.52,
+      4340.28,
+      4340.27,
+      4340.28,
+      4340.27,
+      4340.28,
+      4340.27,
+      4340.28,
+      4340.27
+    ],
+    "iati_identifier": "XM-DAC-41140-BJ03.08.055.ODS1",
+    "title_narrative": [
+      "07 service on demand"
+    ],
+    "sector_narrative": [
+      "Relief co-ordination; protection and support services",
+      "Partnerships for the goals",
+      "Enhance the Global Partnership for Sustainable Development, complemented by multi-stakeholder partnerships that mobilize and share knowledge, expertise, technology and financial resources, to support the achievement of the Sustainable Development Goals in all countries, in particular developing countries"
+    ],
+    "reporting_org_ref": "XM-DAC-41140",
+    "transaction_value": [
+      0.0,
+      0.0,
+      46908.03
+    ],
+    "activity_date_type": [
+      "1",
+      "2",
+      "3"
+    ],
+    "activity_status_code": "2",
+    "description_narrative": [
+      "Country portfolio budget - CPB Benin 2024-2027 Provide on-demand services to the Government, humanitarian and development partners including logistics coordination as well as other service"
+    ],
+    "activity_date_iso_date": [
+      "2024-01-01T00:00:00Z",
+      "2024-01-01T00:00:00Z",
+      "2027-12-31T00:00:00Z"
+    ],
+    "recipient_country_code": [
+      "BJ"
+    ],
+    "reporting_org_narrative": [
+      "World Food Programme"
+    ]
+  },
+  {
+    "sector_code": [
+      "72050",
+      "17",
+      "17.16"
+    ],
+    "budget_value": [
+      146607.31,
+      146607.31,
+      146607.31,
+      146607.31,
+      132951.59,
+      132951.59,
+      132951.58,
+      132951.59,
+      419836.32,
+      419836.31,
+      419836.32,
+      419836.31,
+      133891.16,
+      133891.16,
+      133891.14,
+      133891.16,
+      134396.46,
+      134396.46,
+      134396.45,
+      134396.46
+    ],
+    "iati_identifier": "XM-DAC-41140-MR03.08.045.ODS1",
+    "title_narrative": [
+      "Fournir des services à la demande au Gouvernement et à d’autres partenaires en complément de l’assistance technique"
+    ],
+    "sector_narrative": [
+      "Relief co-ordination; protection and support services",
+      "Partnerships for the goals",
+      "Enhance the Global Partnership for Sustainable Development, complemented by multi-stakeholder partnerships that mobilize and share knowledge, expertise, technology and financial resources, to support the achievement of the Sustainable Development Goals in all countries, in particular developing countries"
+    ],
+    "reporting_org_ref": "XM-DAC-41140",
+    "transaction_value": [
+      227.45,
+      7619.4,
+      29.3,
+      37.19,
+      682.85,
+      -275.91,
+      227.45,
+      7619.4,
+      29.3,
+      37.19,
+      682.85,
+      -275.91,
+      85269.46
+    ],
+    "activity_date_type": [
+      "1",
+      "2",
+      "3"
+    ],
+    "activity_status_code": "2",
+    "description_narrative": [
+      "Budget de Portefeuille de Pays - CPB Mauritania (2024-2028) - Fournir des services à la demande au Gouvernement et à d’autres partenaires en complément de l’assistance technique"
+    ],
+    "activity_date_iso_date": [
+      "2024-03-01T00:00:00Z",
+      "2024-03-01T00:00:00Z",
+      "2028-12-31T00:00:00Z"
+    ],
+    "recipient_country_code": [
+      "MR"
+    ],
+    "reporting_org_narrative": [
+      "World Food Programme"
+    ]
+  },
+  {
+    "sector_code": [
+      "52010",
+      "17",
+      "17.14"
+    ],
+    "budget_value": [
+      12500.0,
+      12500.0,
+      12500.0,
+      12500.0,
+      99855.21,
+      99855.2,
+      99855.21,
+      99855.2,
+      299848.82,
+      299848.82,
+      299848.82,
+      299848.82,
+      82591.42,
+      82591.42,
+      82591.42,
+      82591.42,
+      4779.7,
+      4779.71,
+      4779.7,
+      4779.68,
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "iati_identifier": "XM-DAC-41140-NG01.06.052.CSI1",
+    "title_narrative": [
+      "06 Support Zero Hunger Forum & coord'tn"
+    ],
+    "sector_narrative": [
+      "Food assistance",
+      "Partnerships for the goals",
+      "Enhance policy coherence for sustainable development"
+    ],
+    "reporting_org_ref": "XM-DAC-41140",
+    "transaction_value": [
+      5231.4,
+      90000.0,
+      540.0,
+      186.82,
+      181.69,
+      250.0,
+      10171.9,
+      9715.0,
+      13076.11,
+      10385.0,
+      11475.0,
+      11475.0,
+      11475.0,
+      5231.4,
+      90000.0,
+      540.0,
+      186.82,
+      181.69,
+      250.0,
+      10171.9,
+      9715.0,
+      13076.11,
+      10385.0,
+      11475.0,
+      11475.0,
+      11475.0
+    ],
+    "activity_date_type": [
+      "1",
+      "2",
+      "3",
+      "4"
+    ],
+    "activity_status_code": "3",
+    "description_narrative": [
+      "Country portfolio budget - CPB Nigeria 2019-2023 Support the Zero Hunger Forum and food and nutrition security coordination and advocacy in line with the recommendations of the zero hunger strategic review"
+    ],
+    "activity_date_iso_date": [
+      "2019-01-01T00:00:00Z",
+      "2019-01-01T00:00:00Z",
+      "2023-02-28T00:00:00Z",
+      "2023-02-28T00:00:00Z"
+    ],
+    "recipient_country_code": [
+      "NG"
+    ],
+    "reporting_org_narrative": [
+      "World Food Programme"
+    ]
+  },
+  {
+    "sector_code": [
+      "72050",
+      "2",
+      "2.1"
+    ],
+    "budget_value": [
+      25790.78,
+      25790.76,
+      25790.75,
+      25790.73,
+      0.1,
+      0.09,
+      0.1,
+      0.09,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "iati_identifier": "XM-DAC-41140-SL02.01.021.CPA1",
+    "title_narrative": [
+      "03 Govt School Feeding"
+    ],
+    "sector_narrative": [
+      "Relief co-ordination and support services",
+      "Zero hunger",
+      "By 2030, end hunger and ensure access by all people, in particular the poor and people in vulnerable situations, including infants, to safe, nutritious and sufficient food all year round"
+    ],
+    "reporting_org_ref": "XM-DAC-41140",
+    "transaction_value": [
+      0.0,
+      0.0,
+      0.0
+    ],
+    "activity_date_type": [
+      "1",
+      "2",
+      "3"
+    ],
+    "activity_status_code": "2",
+    "description_narrative": [
+      "Country portfolio budget - CPB Sierra Leone 2020-2025 Provide assistance to the Government-led national school feeding programme"
+    ],
+    "activity_date_iso_date": [
+      "2020-01-01T00:00:00Z",
+      "2020-01-01T00:00:00Z",
+      "2025-12-31T00:00:00Z"
+    ],
+    "recipient_country_code": [
+      "SL"
+    ],
+    "reporting_org_narrative": [
+      "World Food Programme"
+    ]
+  },
+  {
+    "sector_code": [
+      "72050",
+      "17",
+      "17.16"
+    ],
+    "budget_value": [
+      17420.45,
+      17420.46,
+      17420.45,
+      17420.45,
+      29863.64,
+      29863.64,
+      29863.63,
+      29863.64,
+      29863.64,
+      29863.64,
+      29863.63,
+      29863.64,
+      29863.64,
+      29863.64,
+      29863.63,
+      29863.64,
+      29863.64,
+      29863.64,
+      29863.63,
+      29863.64,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "iati_identifier": "XM-DAC-41140-SL02.08.061.CPA1",
+    "title_narrative": [
+      "07 Supply chain & ICT support to partner"
+    ],
+    "sector_narrative": [
+      "Relief co-ordination; protection and support services",
+      "Partnerships for the goals",
+      "Enhance the Global Partnership for Sustainable Development, complemented by multi-stakeholder partnerships that mobilize and share knowledge, expertise, technology and financial resources, to support the achievement of the Sustainable Development Goals in all countries, in particular developing countries"
+    ],
+    "reporting_org_ref": "XM-DAC-41140",
+    "transaction_value": [
+      -8.52,
+      43513.41,
+      31569.76,
+      508.0,
+      -3573.28,
+      6369.95,
+      7485.78,
+      14255.45,
+      17811.84,
+      1715.0,
+      160.04,
+      17975.46,
+      11631.77,
+      3725.74,
+      12833.6,
+      60536.13,
+      2673.55,
+      9013.3,
+      3681.36,
+      41.35,
+      5377.27,
+      1720.54,
+      1189.62,
+      361.65,
+      954.51,
+      -8.52,
+      43513.41,
+      31569.76,
+      508.0,
+      -3573.28,
+      6369.95,
+      7485.78,
+      14255.45,
+      17811.84,
+      1715.0,
+      160.04,
+      17975.46,
+      11631.77,
+      3725.74,
+      12833.6,
+      60536.13,
+      2673.55,
+      9013.3,
+      3681.36,
+      41.35,
+      5377.27,
+      1720.54,
+      1189.62,
+      361.65,
+      954.51,
+      782.56,
+      8973.99,
+      516.0,
+      24711.14,
+      14255.45,
+      -38966.58,
+      14255.45,
+      4053.34,
+      3844.55,
+      18056.57,
+      604.0,
+      2621.09,
+      16465.37,
+      -253.75,
+      11631.77,
+      24924.0,
+      59852.21,
+      24152.44
+    ],
+    "activity_date_type": [
+      "1",
+      "2",
+      "3"
+    ],
+    "activity_status_code": "2",
+    "description_narrative": [
+      "Country portfolio budget - CPB Sierra Leone 2020-2025 07: Provide supply chain and ICT services to humanitarian and development partners"
+    ],
+    "activity_date_iso_date": [
+      "2020-01-01T00:00:00Z",
+      "2020-01-01T00:00:00Z",
+      "2025-12-31T00:00:00Z"
+    ],
+    "recipient_country_code": [
+      "SL"
+    ],
+    "reporting_org_narrative": [
+      "World Food Programme"
+    ]
+  },
+  {
+    "sector_code": [
+      "74020",
+      "2",
+      "2.1"
+    ],
+    "budget_value": [
+      569139.58,
+      569139.6,
+      569139.55,
+      569139.55,
+      535404.34,
+      535404.36,
+      535404.3,
+      535404.29,
+      469877.51,
+      469877.54,
+      469877.48,
+      469877.47,
+      499209.52,
+      499209.48,
+      499209.48,
+      499209.45,
+      481314.91,
+      481314.94,
+      481314.86,
+      481314.88
+    ],
+    "iati_identifier": "XM-DAC-41140-SL03.01.011.EPA1",
+    "title_narrative": [
+      "01 Assistance to crisis-affected people"
+    ],
+    "sector_narrative": [
+      "Multi-hazard response preparedness",
+      "Zero hunger",
+      "By 2030, end hunger and ensure access by all people, in particular the poor and people in vulnerable situations, including infants, to safe, nutritious and sufficient food all year round"
+    ],
+    "reporting_org_ref": "XM-DAC-41140",
+    "transaction_value": [
+      0.0,
+      0.0
+    ],
+    "activity_date_type": [
+      "1",
+      "3"
+    ],
+    "activity_status_code": "2",
+    "description_narrative": [
+      "Country portfolio budget - CPB Sierra Leone 2026-2030 Provide food and nutrition assistance package to crisis-affected people and strengthen national capacities in evidence generation, emergency preparedness and early response, and shock-responsive government-led assistance."
+    ],
+    "activity_date_iso_date": [
+      "2026-01-01T00:00:00Z",
+      "2030-12-31T00:00:00Z"
+    ],
+    "recipient_country_code": [
+      "SL"
+    ],
+    "reporting_org_narrative": [
+      "World Food Programme"
+    ]
+  },
+  {
+    "sector_code": [
+      "91010",
+      "2",
+      "2.1",
+      "2.2",
+      "2.4"
+    ],
+    "budget_value": [
+      957980.98,
+      957980.96,
+      957980.95,
+      957980.96,
+      728838.05,
+      728838.03,
+      728838.02,
+      728838.01,
+      759570.03,
+      759570.01,
+      759569.99,
+      759570.0,
+      818875.47,
+      818875.45,
+      818875.41,
+      818875.44,
+      760362.51,
+      760362.5,
+      760362.47,
+      760362.46
+    ],
+    "iati_identifier": "XM-DAC-41140-SL03-DSC",
+    "title_narrative": [
+      "Non Activity Specific"
+    ],
+    "sector_narrative": [
+      "Administrative costs",
+      "Zero hunger",
+      "By 2030, end hunger and ensure access by all people, in particular the poor and people in vulnerable situations, including infants, to safe, nutritious and sufficient food all year round",
+      "By 2030, end all forms of malnutrition, including achieving, by 2025, the internationally agreed targets on stunting and wasting in children under 5 years of age, and address the nutritional needs of adolescent girls, pregnant and lactating women and older persons",
+      "By 2030, ensure sustainable food production systems and implement resilient agricultural practices that increase productivity and production, that help maintain ecosystems, that strengthen capacity for adaptation to climate change, extreme weather, drought, flooding and other disasters and that progressively improve land and soil quality"
+    ],
+    "reporting_org_ref": "XM-DAC-41140",
+    "transaction_value": [
+      0.0,
+      0.0
+    ],
+    "activity_date_type": [
+      "1",
+      "3"
+    ],
+    "activity_status_code": "2",
+    "description_narrative": [
+      "CPB Sierra Leone 2026-2030 - Direct Support Cost that correspond to country level expenditures that are directly linked to the execution of the programme but cannot be attributed to a specific activity within it."
+    ],
+    "activity_date_iso_date": [
+      "2026-01-01T00:00:00Z",
+      "2030-12-31T00:00:00Z"
+    ],
+    "recipient_country_code": [
+      "SL"
+    ],
+    "reporting_org_narrative": [
+      "World Food Programme"
+    ]
+  },
+  {
+    "sector_code": [
+      "72040",
+      "2",
+      "2.1"
+    ],
+    "budget_value": [
+      1699838.0,
+      1699837.99,
+      1699837.93,
+      1699837.97,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "iati_identifier": "XM-DAC-41140-MR02.01.011.URT2",
+    "title_narrative": [
+      "08 Pandemic-affected households"
+    ],
+    "sector_narrative": [
+      "Emergency food aid",
+      "Zero hunger",
+      "By 2030, end hunger and ensure access by all people, in particular the poor and people in vulnerable situations, including infants, to safe, nutritious and sufficient food all year round"
+    ],
+    "reporting_org_ref": "XM-DAC-41140",
+    "transaction_value": [
+      -500.0,
+      500.0,
+      -500.0,
+      500.0,
+      740877.94,
+      -740877.94
+    ],
+    "activity_date_type": [
+      "1",
+      "2",
+      "3",
+      "4"
+    ],
+    "activity_status_code": "3",
+    "description_narrative": [
+      "Country portfolio budget - CPB Mauritania 2019-2024 Provide food assistance and supplementary feeding to pandemic affected populations/households"
+    ],
+    "activity_date_iso_date": [
+      "2019-01-01T00:00:00Z",
+      "2019-01-01T00:00:00Z",
+      "2024-02-29T00:00:00Z",
+      "2024-02-29T00:00:00Z"
+    ],
+    "recipient_country_code": [
+      "MR"
+    ],
+    "reporting_org_narrative": [
+      "World Food Programme"
+    ]
+  },
+  {
+    "sector_code": [
+      "72040",
+      "2",
+      "2.1"
+    ],
+    "budget_value": [
+      298182.81,
+      298182.83,
+      298182.79,
+      298182.81,
+      521698.31,
+      521698.3,
+      521698.31,
+      521698.29,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      258500.0,
+      258500.0,
+      258500.0,
+      258500.0,
+      140500.0,
+      140500.0,
+      140500.0,
+      140500.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "iati_identifier": "XM-DAC-41140-AO02.01.011.SMP1",
+    "title_narrative": [
+      "06 Emergency School Feeding"
+    ],
+    "sector_narrative": [
+      "Emergency food aid",
+      "Zero hunger",
+      "By 2030, end hunger and ensure access by all people, in particular the poor and people in vulnerable situations, including infants, to safe, nutritious and sufficient food all year round"
+    ],
+    "reporting_org_ref": "XM-DAC-41140",
+    "transaction_value": [
+      37046.3,
+      45532.42,
+      96155.19,
+      240701.7,
+      391870.18,
+      51562.79,
+      37046.3,
+      45532.42,
+      96155.19,
+      240701.7,
+      391870.18,
+      51562.79,
+      862868.58
+    ],
+    "activity_date_type": [
+      "1",
+      "2",
+      "3"
+    ],
+    "activity_status_code": "2",
+    "description_narrative": [
+      "Country portfolio budget - CPB Angola 2020-2026 Provide school meals to children during and in the aftermath of crises"
+    ],
+    "activity_date_iso_date": [
+      "2020-01-01T00:00:00Z",
+      "2020-01-01T00:00:00Z",
+      "2026-06-30T00:00:00Z"
+    ],
+    "recipient_country_code": [
+      "AO"
+    ],
+    "reporting_org_narrative": [
+      "World Food Programme"
+    ]
+  },
+  {
+    "sector_code": [
+      "72050",
+      "17",
+      "17.16"
+    ],
+    "budget_value": [
+      30324956.47,
+      30324956.47,
+      30324956.47,
+      30324956.46,
+      90503318.55,
+      90503318.55,
+      90503318.55,
+      90503318.55,
+      112893338.3,
+      112893338.32,
+      112893338.3,
+      112893338.3,
+      97839.08,
+      97839.09,
+      97839.07,
+      97839.07,
+      18314.72,
+      18314.74,
+      18314.72,
+      18314.72,
+      8607.48,
+      8607.49,
+      8607.48,
+      8607.48,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "iati_identifier": "XM-DAC-41140-ET02.08.052.CPA4",
+    "title_narrative": [
+      "11 ACT11_Procurement Services"
+    ],
+    "sector_narrative": [
+      "Relief co-ordination; protection and support services",
+      "Partnerships for the goals",
+      "Enhance the Global Partnership for Sustainable Development, complemented by multi-stakeholder partnerships that mobilize and share knowledge, expertise, technology and financial resources, to support the achievement of the Sustainable Development Goals in all countries, in particular developing countries"
+    ],
+    "reporting_org_ref": "XM-DAC-41140",
+    "transaction_value": [
+      3864667.44,
+      1691387.16,
+      32251603.89,
+      32835007.92,
+      15300446.41,
+      39155844.15,
+      2181325.46,
+      16220169.44,
+      31531212.4,
+      31517769.7,
+      18043317.12,
+      62822866.4,
+      16414787.17,
+      14219865.34,
+      7142720.01,
+      939756.82,
+      1019431.98,
+      2639444.4,
+      348399.37,
+      20871677.13,
+      222493.41,
+      19203588.53,
+      2808269.84,
+      2413792.13,
+      346583.2,
+      169774.08,
+      1693334.2,
+      23807.98,
+      17977931.81,
+      7785194.07,
+      124061.21,
+      416708.75,
+      543036.42,
+      845861.17,
+      225873.88,
+      1556690.92,
+      214138.43,
+      1260164.33,
+      921056.49,
+      743.1,
+      3864667.44,
+      1691387.16,
+      32251603.89,
+      32835007.92,
+      15300446.41,
+      39155844.15,
+      2181325.46,
+      16220169.44,
+      31531212.4,
+      31517769.7,
+      18043317.12,
+      62822866.4,
+      16414787.17,
+      14219865.34,
+      7142720.01,
+      939756.82,
+      1019431.98,
+      2639444.4,
+      348399.37,
+      20871677.13,
+      222493.41,
+      19203588.53,
+      2808269.84,
+      2413792.13,
+      346583.2,
+      169774.08,
+      1693334.2,
+      23807.98,
+      17977931.81,
+      7785194.07,
+      124061.21,
+      416708.75,
+      543036.42,
+      845861.17,
+      225873.88,
+      1556690.92,
+      214138.43,
+      1260164.33,
+      921056.49,
+      743.1,
+      551680.91,
+      -551680.91,
+      42860200.0,
+      42353498.6,
+      16561200.0,
+      -11374600.0,
+      17671210.0,
+      32486576.53,
+      6900000.0,
+      -6900000.0,
+      44711600.0,
+      39381000.0,
+      -180000.0,
+      73069288.92,
+      -859257.13,
+      -3223907.98,
+      25189022.98,
+      14699338.28,
+      -14699338.28,
+      20439875.0,
+      -22376459.61,
+      180000.0,
+      3423319.09,
+      -1486734.48,
+      23965785.0,
+      23965785.0,
+      146794410.0,
+      -146794410.0,
+      35463120.0,
+      -3591659.42
+    ],
+    "activity_date_type": [
+      "1",
+      "2",
+      "3"
+    ],
+    "activity_status_code": "2",
+    "description_narrative": [
+      "Country portfolio budget - CPB Ethiopia 2020-2025 Provide on demand food procurement services to government and humanitarian partners"
+    ],
+    "activity_date_iso_date": [
+      "2020-07-01T00:00:00Z",
+      "2020-07-01T00:00:00Z",
+      "2025-12-31T00:00:00Z"
+    ],
+    "recipient_country_code": [
+      "ET"
+    ],
+    "reporting_org_narrative": [
+      "World Food Programme"
+    ]
+  },
+  {
+    "sector_code": [
+      "72040",
+      "2",
+      "2.1"
+    ],
+    "budget_value": [
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      48552245.14,
+      48552245.07,
+      48552245.04,
+      48552244.98,
+      49364287.82,
+      49364287.75,
+      49364287.7,
+      49364287.65,
+      49947912.22,
+      49947912.21,
+      49947912.03,
+      49947912.09,
+      49633521.96,
+      49633521.99,
+      49633521.79,
+      49633521.86,
+      50676454.11,
+      50676454.05,
+      50676453.77,
+      50676453.75
+    ],
+    "iati_identifier": "XM-DAC-41140-ET03.01.011.URT1",
+    "title_narrative": [
+      "01 ACT1_Relief"
+    ],
+    "sector_narrative": [
+      "Emergency food aid",
+      "Zero hunger",
+      "By 2030, end hunger and ensure access by all people, in particular the poor and people in vulnerable situations, including infants, to safe, nutritious and sufficient food all year round"
+    ],
+    "reporting_org_ref": "XM-DAC-41140",
+    "transaction_value": [
+      8646973.35,
+      -6308971.5,
+      -2338001.85,
+      8646973.35,
+      -6308971.5,
+      -2338001.85,
+      27658311.74,
+      -10602433.7,
+      1072814.73,
+      -18128692.77
+    ],
+    "activity_date_type": [
+      "1",
+      "2",
+      "3"
+    ],
+    "activity_status_code": "2",
+    "description_narrative": [
+      "Country portfolio budget - CPB Ethiopia 2026-2030 (Activity 1, Relief) Provide safe and nutritionally adequate food assistance to food-insecure individuals affected by crisis, while fostering pathways to self-reliance."
+    ],
+    "activity_date_iso_date": [
+      "2025-09-01T00:00:00Z",
+      "2025-09-01T00:00:00Z",
+      "2030-06-30T00:00:00Z"
+    ],
+    "recipient_country_code": [
+      "ET"
+    ],
+    "reporting_org_narrative": [
+      "World Food Programme"
+    ]
+  },
+  {
+    "sector_code": [
+      "72040",
+      "2",
+      "2.4"
+    ],
+    "budget_value": [
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      3824314.12,
+      3824314.12,
+      3824314.11,
+      3824314.1,
+      4058178.68,
+      4058178.68,
+      4058178.64,
+      4058178.65,
+      4380997.54,
+      4380997.55,
+      4380997.51,
+      4380997.52,
+      4602943.64,
+      4602943.67,
+      4602943.64,
+      4602943.62,
+      4848017.26,
+      4848017.27,
+      4848017.28,
+      4848017.18
+    ],
+    "iati_identifier": "XM-DAC-41140-ET03.04.022.NPA1",
+    "title_narrative": [
+      "04 Act4_Nutrition prevention"
+    ],
+    "sector_narrative": [
+      "Emergency food aid",
+      "Zero hunger",
+      "By 2030, ensure sustainable food production systems and implement resilient agricultural practices that increase productivity and production, that help maintain ecosystems, that strengthen capacity for adaptation to climate change, extreme weather, drought, flooding and other disasters and that progressively improve land and soil quality"
+    ],
+    "reporting_org_ref": "XM-DAC-41140",
+    "transaction_value": [
+      0.0,
+      0.0,
+      302872.39,
+      1968245.89,
+      -1968245.89,
+      -302872.39
+    ],
+    "activity_date_type": [
+      "1",
+      "2",
+      "3"
+    ],
+    "activity_status_code": "2",
+    "description_narrative": [
+      "Country portfolio budget - CPB Ethiopia 2026-2030 (Activity 4, Nutrition Prevention) Support the government, national, and local actors in delivering multi-sectoral approaches and a cohesive package of interventions that promote healthy diets and prevent and manage malnutrition"
+    ],
+    "activity_date_iso_date": [
+      "2025-09-01T00:00:00Z",
+      "2025-09-01T00:00:00Z",
+      "2030-06-30T00:00:00Z"
+    ],
+    "recipient_country_code": [
+      "ET"
+    ],
+    "reporting_org_narrative": [
+      "World Food Programme"
+    ]
+  },
+  {
+    "sector_code": [
+      "73010",
+      "2",
+      "2.4"
+    ],
+    "budget_value": [
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      4955453.62,
+      4955453.59,
+      4955453.57,
+      4955453.55,
+      5930481.11,
+      5930481.04,
+      5930481.08,
+      5930481.02,
+      7035580.0,
+      7035580.0,
+      7035579.93,
+      7035579.96,
+      7375181.74,
+      7375181.69,
+      7375181.69,
+      7375181.66,
+      6606837.74,
+      6606837.67,
+      6606837.61,
+      6606837.57
+    ],
+    "iati_identifier": "XM-DAC-41140-ET03.04.033.SMS1",
+    "title_narrative": [
+      "06 ACT6_Climate adaptive livelihoods"
+    ],
+    "sector_narrative": [
+      "Reconstruction relief and rehabilitation",
+      "Zero hunger",
+      "By 2030, ensure sustainable food production systems and implement resilient agricultural practices that increase productivity and production, that help maintain ecosystems, that strengthen capacity for adaptation to climate change, extreme weather, drought, flooding and other disasters and that progressively improve land and soil quality"
+    ],
+    "reporting_org_ref": "XM-DAC-41140",
+    "transaction_value": [
+      0.0,
+      0.0,
+      1126760.56,
+      491931.2,
+      995723.38,
+      -29111.37,
+      1751587.79,
+      -58924.64,
+      -66679.12,
+      29111.37,
+      -1751587.79,
+      -936798.74,
+      -1060081.44
+    ],
+    "activity_date_type": [
+      "1",
+      "2",
+      "3"
+    ],
+    "activity_status_code": "2",
+    "description_narrative": [
+      "Country portfolio budget - CPB Ethiopia 2026-2030 (Activity 6, Resilience) Provide an integrated package of  livelihood support, anticipatory action and  services for at-risk communities, particularly small-scale producers,  other value chain actors, women and young people."
+    ],
+    "activity_date_iso_date": [
+      "2025-09-01T00:00:00Z",
+      "2025-09-01T00:00:00Z",
+      "2030-06-30T00:00:00Z"
+    ],
+    "recipient_country_code": [
+      "ET"
+    ],
+    "reporting_org_narrative": [
+      "World Food Programme"
+    ]
+  },
+  {
+    "sector_code": [
+      "74020",
+      "17",
+      "17.9"
+    ],
+    "budget_value": [
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      908015.05,
+      908015.03,
+      908015.04,
+      908015.03,
+      969933.2,
+      969933.19,
+      969933.16,
+      969933.19,
+      658638.75,
+      658638.74,
+      658638.75,
+      658638.73,
+      521947.91,
+      521947.9,
+      521947.9,
+      521947.89,
+      857133.33,
+      857133.29,
+      857133.31,
+      857133.27
+    ],
+    "iati_identifier": "XM-DAC-41140-ET03.05.044.SPS1",
+    "title_narrative": [
+      "07 ACT 07_ Capacity Strengthening"
+    ],
+    "sector_narrative": [
+      "Multi-hazard response preparedness",
+      "Partnerships for the goals",
+      "Enhance international support for implementing effective and targeted capacity-building in developing countries to support national plans to implement all the Sustainable Development Goals, including through North-South, South-South and triangular cooperation"
+    ],
+    "reporting_org_ref": "XM-DAC-41140",
+    "transaction_value": [
+      0.0,
+      0.0,
+      0.0
+    ],
+    "activity_date_type": [
+      "1",
+      "2",
+      "3"
+    ],
+    "activity_status_code": "2",
+    "description_narrative": [
+      "Country portfolio budget - CPB Ethiopia 2026-2030 (Activity 7, Capacity Strengthening) Provide government institutions at the national and sub-national levels, private sector entities and other stakeholders with capacity strengthening, and technical assistance and support in anticipating, preparing for, responding to, and recovering from shocks."
+    ],
+    "activity_date_iso_date": [
+      "2025-09-01T00:00:00Z",
+      "2025-09-01T00:00:00Z",
+      "2030-06-30T00:00:00Z"
+    ],
+    "recipient_country_code": [
+      "ET"
+    ],
+    "reporting_org_narrative": [
+      "World Food Programme"
+    ]
+  },
+  {
+    "sector_code": [
+      "72050",
+      "17",
+      "17.16"
+    ],
+    "budget_value": [
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      1044726.63,
+      1044726.63,
+      1044726.63,
+      1044726.63,
+      1049801.93,
+      1049801.94,
+      1049801.92,
+      1049801.93,
+      1055029.49,
+      1055029.49,
+      1055029.49,
+      1055029.48,
+      1060413.87,
+      1060413.89,
+      1060413.86,
+      1060413.87,
+      1065959.81,
+      1065959.79,
+      1065959.77,
+      1065959.79
+    ],
+    "iati_identifier": "XM-DAC-41140-ET03.08.055.HAS1",
+    "title_narrative": [
+      "09 ACT9_Aviation services"
+    ],
+    "sector_narrative": [
+      "Relief co-ordination; protection and support services",
+      "Partnerships for the goals",
+      "Enhance the Global Partnership for Sustainable Development, complemented by multi-stakeholder partnerships that mobilize and share knowledge, expertise, technology and financial resources, to support the achievement of the Sustainable Development Goals in all countries, in particular developing countries"
+    ],
+    "reporting_org_ref": "XM-DAC-41140",
+    "transaction_value": [
+      0.0,
+      0.0,
+      72173.31,
+      -72173.31
+    ],
+    "activity_date_type": [
+      "1",
+      "2",
+      "3"
+    ],
+    "activity_status_code": "2",
+    "description_narrative": [
+      "Country portfolio budget - CPB Ethiopia 2026-2030 (Activity 9, Aviation Services) Provide aviation services for humanitarian and development partners."
+    ],
+    "activity_date_iso_date": [
+      "2025-09-01T00:00:00Z",
+      "2025-09-01T00:00:00Z",
+      "2030-06-30T00:00:00Z"
+    ],
+    "recipient_country_code": [
+      "ET"
+    ],
+    "reporting_org_narrative": [
+      "World Food Programme"
+    ]
+  },
+  {
+    "sector_code": [
+      "72050",
+      "17",
+      "17.16"
+    ],
+    "budget_value": [
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      681658.5,
+      681658.5,
+      681658.5,
+      681658.5,
+      327943.75,
+      327943.75,
+      327943.75,
+      327943.75,
+      168089.44,
+      168089.43,
+      168089.44,
+      168089.43,
+      37862.99,
+      37862.99,
+      37862.99,
+      37862.99,
+      38998.89,
+      38998.9,
+      38998.84,
+      38998.89
+    ],
+    "iati_identifier": "XM-DAC-41140-ET03.08.055.LCS1",
+    "title_narrative": [
+      "10 ACT10_ Logistic cluster"
+    ],
+    "sector_narrative": [
+      "Relief co-ordination; protection and support services",
+      "Partnerships for the goals",
+      "Enhance the Global Partnership for Sustainable Development, complemented by multi-stakeholder partnerships that mobilize and share knowledge, expertise, technology and financial resources, to support the achievement of the Sustainable Development Goals in all countries, in particular developing countries"
+    ],
+    "reporting_org_ref": "XM-DAC-41140",
+    "transaction_value": [
+      0.0,
+      0.0,
+      0.0
+    ],
+    "activity_date_type": [
+      "1",
+      "2",
+      "3"
+    ],
+    "activity_status_code": "2",
+    "description_narrative": [
+      "Country portfolio budget - CPB Ethiopia 2026-2030 (Activity 10, Logistics Cluster) Provide services for  information management, coordination, capacity strengthening, and logistics humanitarian actors."
+    ],
+    "activity_date_iso_date": [
+      "2025-09-01T00:00:00Z",
+      "2025-09-01T00:00:00Z",
+      "2030-06-30T00:00:00Z"
+    ],
+    "recipient_country_code": [
+      "ET"
+    ],
+    "reporting_org_narrative": [
+      "World Food Programme"
+    ]
+  },
+  {
+    "sector_code": [
+      "72050",
+      "17",
+      "17.16"
+    ],
+    "budget_value": [
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      7326961.8,
+      7326961.82,
+      7326961.8,
+      7326961.8,
+      7328664.79,
+      7328664.8,
+      7328664.79,
+      7328664.78,
+      7333906.56,
+      7333906.55,
+      7333906.55,
+      7333906.55,
+      7335713.25,
+      7335713.26,
+      7335713.24,
+      7335713.25,
+      7337574.15,
+      7337574.18,
+      7337574.11,
+      7337574.15
+    ],
+    "iati_identifier": "XM-DAC-41140-ET03.08.055.ODS2",
+    "title_narrative": [
+      "08 ACT8_On-demand services"
+    ],
+    "sector_narrative": [
+      "Relief co-ordination; protection and support services",
+      "Partnerships for the goals",
+      "Enhance the Global Partnership for Sustainable Development, complemented by multi-stakeholder partnerships that mobilize and share knowledge, expertise, technology and financial resources, to support the achievement of the Sustainable Development Goals in all countries, in particular developing countries"
+    ],
+    "reporting_org_ref": "XM-DAC-41140",
+    "transaction_value": [
+      0.0,
+      0.0,
+      0.0
+    ],
+    "activity_date_type": [
+      "1",
+      "2",
+      "3"
+    ],
+    "activity_status_code": "2",
+    "description_narrative": [
+      "Country portfolio budget - CPB Ethiopia 2026-2030 (Activity 8, On-demand Services) Provide on-demand supply chain, engineering, and administrative services for the Government, development, and humanitarian actors."
+    ],
+    "activity_date_iso_date": [
+      "2025-09-01T00:00:00Z",
+      "2025-09-01T00:00:00Z",
+      "2030-06-30T00:00:00Z"
+    ],
+    "recipient_country_code": [
+      "ET"
+    ],
+    "reporting_org_narrative": [
+      "World Food Programme"
+    ]
+  },
+  {
+    "sector_code": [
+      "73010",
+      "2",
+      "2.1"
+    ],
+    "budget_value": [
+      3122407.82,
+      3122407.83,
+      3122407.81,
+      3122407.81,
+      12489631.27,
+      12489631.27,
+      12489631.27,
+      12489631.27,
+      12297078.96,
+      12297078.96,
+      12297078.94,
+      12297078.95,
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "iati_identifier": "XM-DAC-41140-SO01.01.021.ACL2",
+    "title_narrative": [
+      "07 Safety nets (SR1)"
+    ],
+    "sector_narrative": [
+      "Reconstruction relief and rehabilitation",
+      "Zero hunger",
+      "By 2030, end hunger and ensure access by all people, in particular the poor and people in vulnerable situations, including infants, to safe, nutritious and sufficient food all year round"
+    ],
+    "reporting_org_ref": "XM-DAC-41140",
+    "transaction_value": [
+      36979.58,
+      345099.24,
+      3190297.36,
+      10385915.08,
+      80471.33,
+      5454042.96,
+      3909328.02,
+      2284584.16,
+      3228188.08,
+      3003233.95,
+      1704215.45,
+      305248.76,
+      6413.18,
+      8953.16,
+      36979.58,
+      345099.24,
+      3190297.36,
+      10385915.08,
+      80471.33,
+      5454042.96,
+      3909328.02,
+      2284584.16,
+      3228188.08,
+      3003233.95,
+      1704215.45,
+      305248.76,
+      6413.18,
+      8953.16
+    ],
+    "activity_date_type": [
+      "1",
+      "2",
+      "3",
+      "4"
+    ],
+    "activity_status_code": "3",
+    "description_narrative": [
+      "Country portfolio budget - CPB Somalia 2019-2021 Provision of unconditional cash transfers in rural areas to targeted poor and vulnerable households"
+    ],
+    "activity_date_iso_date": [
+      "2019-01-01T00:00:00Z",
+      "2019-01-01T00:00:00Z",
+      "2021-12-31T00:00:00Z",
+      "2021-12-31T00:00:00Z"
+    ],
+    "recipient_country_code": [
+      "SO"
+    ],
+    "reporting_org_narrative": [
+      "World Food Programme"
+    ]
+  },
+  {
+    "sector_code": [
+      "72050",
+      "17",
+      "17.16"
+    ],
+    "budget_value": [
+      394461.88,
+      394461.87,
+      394461.88,
+      394461.87,
+      283656.51,
+      283656.49,
+      283656.5,
+      283656.49,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "iati_identifier": "XM-DAC-41140-SO02.08.051.CPA4",
+    "title_narrative": [
+      "09 Emergency Telecommunication (ETC)"
+    ],
+    "sector_narrative": [
+      "Relief co-ordination; protection and support services",
+      "Partnerships for the goals",
+      "Enhance the Global Partnership for Sustainable Development, complemented by multi-stakeholder partnerships that mobilize and share knowledge, expertise, technology and financial resources, to support the achievement of the Sustainable Development Goals in all countries, in particular developing countries"
+    ],
+    "reporting_org_ref": "XM-DAC-41140",
+    "transaction_value": [
+      0.0,
+      0.0,
+      0.0
+    ],
+    "activity_date_type": [
+      "1",
+      "2",
+      "3"
+    ],
+    "activity_status_code": "2",
+    "description_narrative": [
+      "Country portfolio budget - CPB Somalia 2022-2026 Provide mandated emergency telecommunications services to the humanitarian community through the coordination mechanism of the Emergency Telecommunications Cluster"
+    ],
+    "activity_date_iso_date": [
+      "2022-01-01T00:00:00Z",
+      "2022-01-01T00:00:00Z",
+      "2026-02-28T00:00:00Z"
+    ],
+    "recipient_country_code": [
+      "SO"
+    ],
+    "reporting_org_narrative": [
+      "World Food Programme"
+    ]
+  },
+  {
+    "sector_code": [
+      "72050",
+      "17",
+      "17.16"
+    ],
+    "budget_value": [
+      0.0,
+      104500.0,
+      104500.0,
+      104500.0,
+      104500.0,
+      104500.0,
+      104500.0,
+      104500.0,
+      104500.0,
+      52250.0,
+      52250.0,
+      52250.0,
+      52250.0
+    ],
+    "iati_identifier": "XM-DAC-41140-KE01.08.041.CPA4",
+    "title_narrative": [
+      "09 Supply chain services for partners"
+    ],
+    "sector_narrative": [
+      "Relief co-ordination; protection and support services",
+      "Partnerships for the goals",
+      "Enhance the Global Partnership for Sustainable Development, complemented by multi-stakeholder partnerships that mobilize and share knowledge, expertise, technology and financial resources, to support the achievement of the Sustainable Development Goals in all countries, in particular developing countries"
+    ],
+    "reporting_org_ref": "XM-DAC-41140",
+    "transaction_value": [
+      48884.76,
+      3169.08,
+      18092.62,
+      9003.31,
+      6640.08,
+      3860.54,
+      1083.93,
+      10147.05,
+      88.17,
+      27832.0,
+      2789.0,
+      1932.5,
+      12949.7,
+      -11939.14,
+      48884.76,
+      3169.08,
+      18092.62,
+      9003.31,
+      6640.08,
+      3860.54,
+      1083.93,
+      10147.05,
+      88.17,
+      27832.0,
+      2789.0,
+      1932.5,
+      12949.7,
+      -11939.14
+    ],
+    "activity_date_type": [
+      "1",
+      "2",
+      "3",
+      "4"
+    ],
+    "activity_status_code": "3",
+    "description_narrative": [
+      "Country portfolio budget - CPB Kenya 2018-2023 Provide supply chain services for Kenyan Government and partners"
+    ],
+    "activity_date_iso_date": [
+      "2018-07-01T00:00:00Z",
+      "2018-07-01T00:00:00Z",
+      "2023-06-30T00:00:00Z",
+      "2023-06-30T00:00:00Z"
+    ],
+    "recipient_country_code": [
+      "KE"
+    ],
+    "reporting_org_narrative": [
+      "World Food Programme"
+    ]
+  },
+  {
+    "sector_code": [
+      "72050",
+      "17",
+      "17.16"
+    ],
+    "budget_value": [
+      266988.35,
+      266988.36,
+      266988.34,
+      266988.35,
+      536229.49,
+      536229.47,
+      536229.48,
+      536229.47,
+      538560.83,
+      538560.83,
+      538560.83,
+      538560.82,
+      540973.55,
+      540973.54,
+      540973.55,
+      540973.53,
+      271735.26,
+      271735.28,
+      271735.25,
+      271735.26
+    ],
+    "iati_identifier": "XM-DAC-41140-KE02.08.045.ODS1",
+    "title_narrative": [
+      "08 DG-ECHO - Provide humanitarian air services in support of DG-ECHO Funded projects"
+    ],
+    "sector_narrative": [
+      "Relief co-ordination; protection and support services",
+      "Partnerships for the goals",
+      "Enhance the Global Partnership for Sustainable Development, complemented by multi-stakeholder partnerships that mobilize and share knowledge, expertise, technology and financial resources, to support the achievement of the Sustainable Development Goals in all countries, in particular developing countries"
+    ],
+    "reporting_org_ref": "XM-DAC-41140",
+    "transaction_value": [
+      0.0,
+      0.0,
+      0.0
+    ],
+    "activity_date_type": [
+      "1",
+      "2",
+      "3"
+    ],
+    "activity_status_code": "2",
+    "description_narrative": [
+      "Country portfolio budget - CPB Kenya 2023-2027 Provide humanitarian air services in support of DG-ECHO Funded projects"
+    ],
+    "activity_date_iso_date": [
+      "2023-07-01T00:00:00Z",
+      "2023-07-01T00:00:00Z",
+      "2027-06-30T00:00:00Z"
+    ],
+    "recipient_country_code": [
+      "KE"
+    ],
+    "reporting_org_narrative": [
+      "World Food Programme"
+    ]
+  },
+  {
+    "sector_code": [
+      "74020",
+      "2",
+      "2.1"
+    ],
+    "budget_value": [
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      200046.89,
+      200046.88,
+      200046.85,
+      200046.86,
+      133761.46,
+      133761.48,
+      133761.43,
+      133761.45,
+      123867.22,
+      123867.21,
+      123867.21,
+      123867.17,
+      135701.51,
+      135701.47,
+      135701.5,
+      135701.45
+    ],
+    "iati_identifier": "XM-DAC-41140-RW02.01.011.EPA1",
+    "title_narrative": [
+      "03 CCS for disaster risk management & AA"
+    ],
+    "sector_narrative": [
+      "Multi-hazard response preparedness",
+      "Zero hunger",
+      "By 2030, end hunger and ensure access by all people, in particular the poor and people in vulnerable situations, including infants, to safe, nutritious and sufficient food all year round"
+    ],
+    "reporting_org_ref": "XM-DAC-41140",
+    "transaction_value": [
+      0.0,
+      0.0
+    ],
+    "activity_date_type": [
+      "1",
+      "3"
+    ],
+    "activity_status_code": "2",
+    "description_narrative": [
+      "Country portfolio budget - CPB Rwanda 2026-2029 Provide capacity strengthening support and technical assistance to national and sub-national institutions and partners to strengthen Rwanda's capacity to anticipate, prepare for and better respond to shocks and disasters."
+    ],
+    "activity_date_iso_date": [
+      "2026-01-01T00:00:00Z",
+      "2029-12-31T00:00:00Z"
+    ],
+    "recipient_country_code": [
+      "RW"
+    ],
+    "reporting_org_narrative": [
+      "World Food Programme"
+    ]
+  },
+  {
+    "sector_code": [
+      "72040",
+      "2",
+      "2.1"
+    ],
+    "budget_value": [
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      342951.99,
+      342951.93,
+      342951.91,
+      342951.87,
+      357331.66,
+      357331.56,
+      357331.53,
+      357331.52,
+      354194.89,
+      354194.9,
+      354194.74,
+      354194.78,
+      369438.35,
+      369438.36,
+      369438.25,
+      369438.25
+    ],
+    "iati_identifier": "XM-DAC-41140-RW02.01.011.URT2",
+    "title_narrative": [
+      "02 Emergency response to Rwandans"
+    ],
+    "sector_narrative": [
+      "Emergency food aid",
+      "Zero hunger",
+      "By 2030, end hunger and ensure access by all people, in particular the poor and people in vulnerable situations, including infants, to safe, nutritious and sufficient food all year round"
+    ],
+    "reporting_org_ref": "XM-DAC-41140",
+    "transaction_value": [
+      0.0,
+      0.0
+    ],
+    "activity_date_type": [
+      "1",
+      "3"
+    ],
+    "activity_status_code": "2",
+    "description_narrative": [
+      "Country portfolio budget - CPB Rwanda 2026-2029 Provide food and nutrition assistance to Rwandans at risk of disasters leveraging anticipatory action frameworks and the national disaster risk management and shock-responsive systems where possible."
+    ],
+    "activity_date_iso_date": [
+      "2026-01-01T00:00:00Z",
+      "2029-12-31T00:00:00Z"
+    ],
+    "recipient_country_code": [
+      "RW"
+    ],
+    "reporting_org_narrative": [
+      "World Food Programme"
+    ]
+  },
+  {
+    "sector_code": [
+      "72040",
+      "2",
+      "2.2"
+    ],
+    "budget_value": [
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      272254.36,
+      272254.38,
+      272254.34,
+      272254.35,
+      266254.11,
+      266254.1,
+      266254.06,
+      266254.09,
+      275782.4,
+      275782.42,
+      275782.36,
+      275782.38,
+      285807.97,
+      285807.98,
+      285807.93,
+      285807.95
+    ],
+    "iati_identifier": "XM-DAC-41140-RW02.02.022.NPA1",
+    "title_narrative": [
+      "05 CCS for malnutrition prevention"
+    ],
+    "sector_narrative": [
+      "Emergency food aid",
+      "Zero hunger",
+      "By 2030, end all forms of malnutrition, including achieving, by 2025, the internationally agreed targets on stunting and wasting in children under 5 years of age, and address the nutritional needs of adolescent girls, pregnant and lactating women and older persons"
+    ],
+    "reporting_org_ref": "XM-DAC-41140",
+    "transaction_value": [
+      0.0,
+      0.0
+    ],
+    "activity_date_type": [
+      "1",
+      "3"
+    ],
+    "activity_status_code": "2",
+    "description_narrative": [
+      "Country portfolio budget - CPB Rwanda 2026-2029 Provide capacity strengthening to nutrition actors for improved national nutrition systems, programmes and interventions."
+    ],
+    "activity_date_iso_date": [
+      "2026-01-01T00:00:00Z",
+      "2029-12-31T00:00:00Z"
+    ],
+    "recipient_country_code": [
+      "RW"
+    ],
+    "reporting_org_narrative": [
+      "World Food Programme"
+    ]
+  },
+  {
+    "sector_code": [
+      "72040",
+      "2",
+      "2.2"
+    ],
+    "budget_value": [
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      2038151.69,
+      2038151.68,
+      2038151.67,
+      2038151.64,
+      2053684.97,
+      2053685.01,
+      2053684.91,
+      2053684.93,
+      1732167.24,
+      1732167.24,
+      1732167.17,
+      1732167.16,
+      1337767.65,
+      1337767.69,
+      1337767.58,
+      1337767.61
+    ],
+    "iati_identifier": "XM-DAC-41140-RW02.02.022.SMP1",
+    "title_narrative": [
+      "04 School Feeding"
+    ],
+    "sector_narrative": [
+      "Emergency food aid",
+      "Zero hunger",
+      "By 2030, end all forms of malnutrition, including achieving, by 2025, the internationally agreed targets on stunting and wasting in children under 5 years of age, and address the nutritional needs of adolescent girls, pregnant and lactating women and older persons"
+    ],
+    "reporting_org_ref": "XM-DAC-41140",
+    "transaction_value": [
+      331481.88,
+      293342.3,
+      71.51,
+      -35310.87,
+      331481.88,
+      293342.3,
+      71.51,
+      -35310.87
+    ],
+    "activity_date_type": [
+      "1",
+      "3"
+    ],
+    "activity_status_code": "2",
+    "description_narrative": [
+      "Country portfolio budget - CPB Rwanda 2026-2029 Provide, and strengthen national capacities to deliver, nutritious and diverse school meals, and school health and nutrition services, to school-aged children in Rwanda."
+    ],
+    "activity_date_iso_date": [
+      "2026-01-01T00:00:00Z",
+      "2029-12-31T00:00:00Z"
+    ],
+    "recipient_country_code": [
+      "RW"
+    ],
+    "reporting_org_narrative": [
+      "World Food Programme"
+    ]
+  },
+  {
+    "sector_code": [
+      "74020",
+      "2",
+      "2.2"
+    ],
+    "budget_value": [
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      272230.99,
+      272231.0,
+      272230.97,
+      272230.97,
+      215831.1,
+      215831.08,
+      215831.07,
+      215831.07,
+      238574.74,
+      238574.73,
+      238574.71,
+      238574.7,
+      188164.01,
+      188164.02,
+      188163.99,
+      188163.98
+    ],
+    "iati_identifier": "XM-DAC-41140-RW02.02.022.SPS1",
+    "title_narrative": [
+      "06 Social protection"
+    ],
+    "sector_narrative": [
+      "Multi-hazard response preparedness",
+      "Zero hunger",
+      "By 2030, end all forms of malnutrition, including achieving, by 2025, the internationally agreed targets on stunting and wasting in children under 5 years of age, and address the nutritional needs of adolescent girls, pregnant and lactating women and older persons"
+    ],
+    "reporting_org_ref": "XM-DAC-41140",
+    "transaction_value": [
+      0.0,
+      0.0
+    ],
+    "activity_date_type": [
+      "1",
+      "3"
+    ],
+    "activity_status_code": "2",
+    "description_narrative": [
+      "Country portfolio budget - CPB Rwanda 2026-2029 Provide technical assistance and capacity strengthening to national and sub-national institutions to finance, design and implement shock-responsive programmes and systems."
+    ],
+    "activity_date_iso_date": [
+      "2026-01-01T00:00:00Z",
+      "2029-12-31T00:00:00Z"
+    ],
+    "recipient_country_code": [
+      "RW"
+    ],
+    "reporting_org_narrative": [
+      "World Food Programme"
+    ]
+  },
+  {
+    "sector_code": [
+      "72050",
+      "17",
+      "17.16"
+    ],
+    "budget_value": [
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      17453.5,
+      17453.5,
+      17453.5,
+      17453.5,
+      17955.25,
+      17955.25,
+      17955.25,
+      17955.25,
+      18067.0,
+      18067.0,
+      18067.0,
+      18067.0,
+      18184.75,
+      18184.75,
+      18184.75,
+      18184.75
+    ],
+    "iati_identifier": "XM-DAC-41140-RW02.08.045.ODS1",
+    "title_narrative": [
+      "08 Deliver Supply Chain Services"
+    ],
+    "sector_narrative": [
+      "Relief co-ordination; protection and support services",
+      "Partnerships for the goals",
+      "Enhance the Global Partnership for Sustainable Development, complemented by multi-stakeholder partnerships that mobilize and share knowledge, expertise, technology and financial resources, to support the achievement of the Sustainable Development Goals in all countries, in particular developing countries"
+    ],
+    "reporting_org_ref": "XM-DAC-41140",
+    "transaction_value": [
+      0.0,
+      0.0
+    ],
+    "activity_date_type": [
+      "1",
+      "3"
+    ],
+    "activity_status_code": "2",
+    "description_narrative": [
+      "Country portfolio budget - CPB Rwanda 2026-2029 Deliver Supply Chain Services and expertise that enable the Government and partners to provide timely emergency assistance to affected populations."
+    ],
+    "activity_date_iso_date": [
+      "2026-01-01T00:00:00Z",
+      "2029-12-31T00:00:00Z"
+    ],
+    "recipient_country_code": [
+      "RW"
+    ],
+    "reporting_org_narrative": [
+      "World Food Programme"
+    ]
+  },
+  {
+    "sector_code": [
+      "72040",
+      "2",
+      "2.1"
+    ],
+    "budget_value": [
+      1299621.55,
+      1299621.54,
+      1299621.48,
+      1299621.5,
+      1314839.28,
+      1314839.28,
+      1314839.2,
+      1314839.2,
+      1348851.22,
+      1348851.21,
+      1348851.13,
+      1348851.13,
+      1391989.15,
+      1391989.12,
+      1391989.05,
+      1391989.07,
+      1425286.63,
+      1425286.61,
+      1425286.55,
+      1425286.53
+    ],
+    "iati_identifier": "XM-DAC-41140-UG02.01.011.NPA1",
+    "title_narrative": [
+      "03 National Malnutrition Prevention"
+    ],
+    "sector_narrative": [
+      "Emergency food aid",
+      "Zero hunger",
+      "By 2030, end hunger and ensure access by all people, in particular the poor and people in vulnerable situations, including infants, to safe, nutritious and sufficient food all year round"
+    ],
+    "reporting_org_ref": "XM-DAC-41140",
+    "transaction_value": [
+      0.0,
+      0.0
+    ],
+    "activity_date_type": [
+      "1",
+      "3"
+    ],
+    "activity_status_code": "2",
+    "description_narrative": [
+      "Country portfolio budget - CPB Uganda 2026-2030 Provide integrated nutrition support to nutritionally vulnerable Ugandans to prevent and manage malnutrition."
+    ],
+    "activity_date_iso_date": [
+      "2026-01-01T00:00:00Z",
+      "2030-12-31T00:00:00Z"
+    ],
+    "recipient_country_code": [
+      "UG"
+    ],
+    "reporting_org_narrative": [
+      "World Food Programme"
+    ]
+  },
+  {
+    "sector_code": [
+      "72040",
+      "2",
+      "2.1"
+    ],
+    "budget_value": [
+      26542786.18,
+      26542786.17,
+      26542786.11,
+      26542786.04,
+      24563424.56,
+      24563424.58,
+      24563424.38,
+      24563424.47,
+      22530095.09,
+      22530095.14,
+      22530094.96,
+      22530095.0,
+      22676173.5,
+      22676173.56,
+      22676173.35,
+      22676173.4,
+      22411282.49,
+      22411282.49,
+      22411282.33,
+      22411282.35
+    ],
+    "iati_identifier": "XM-DAC-41140-UG02.01.011.URT1",
+    "title_narrative": [
+      "01 Refugee - GFA & Nutrition"
+    ],
+    "sector_narrative": [
+      "Emergency food aid",
+      "Zero hunger",
+      "By 2030, end hunger and ensure access by all people, in particular the poor and people in vulnerable situations, including infants, to safe, nutritious and sufficient food all year round"
+    ],
+    "reporting_org_ref": "XM-DAC-41140",
+    "transaction_value": [
+      0.0,
+      0.0
+    ],
+    "activity_date_type": [
+      "1",
+      "3"
+    ],
+    "activity_status_code": "2",
+    "description_narrative": [
+      "Country portfolio budget - CPB Uganda 2026-2030 Provide integrated food and nutrition assistance and promote financial inclusion to targeted refugees, while strengthening systems of national and sub-national actors."
+    ],
+    "activity_date_iso_date": [
+      "2026-01-01T00:00:00Z",
+      "2030-12-31T00:00:00Z"
+    ],
+    "recipient_country_code": [
+      "UG"
+    ],
+    "reporting_org_narrative": [
+      "World Food Programme"
+    ]
+  },
+  {
+    "sector_code": [
+      "72040",
+      "2",
+      "2.1"
+    ],
+    "budget_value": [
+      898877.71,
+      898877.72,
+      898877.66,
+      898877.68,
+      878868.81,
+      878868.8,
+      878868.71,
+      878868.72,
+      895834.49,
+      895834.49,
+      895834.37,
+      895834.42,
+      913338.77,
+      913338.74,
+      913338.64,
+      913338.7,
+      935784.03,
+      935784.12,
+      935783.9,
+      935784.0
+    ],
+    "iati_identifier": "XM-DAC-41140-UG02.01.011.URT2",
+    "title_narrative": [
+      "02 National Emergency Response"
+    ],
+    "sector_narrative": [
+      "Emergency food aid",
+      "Zero hunger",
+      "By 2030, end hunger and ensure access by all people, in particular the poor and people in vulnerable situations, including infants, to safe, nutritious and sufficient food all year round"
+    ],
+    "reporting_org_ref": "XM-DAC-41140",
+    "transaction_value": [
+      0.0,
+      0.0
+    ],
+    "activity_date_type": [
+      "1",
+      "3"
+    ],
+    "activity_status_code": "2",
+    "description_narrative": [
+      "Country portfolio budget - CPB Uganda 2026-2030 Provide food and nutrition assistance to crisis affected Ugandans while supporting communities to anticipate, prepare for and respond to shocks."
+    ],
+    "activity_date_iso_date": [
+      "2026-01-01T00:00:00Z",
+      "2030-12-31T00:00:00Z"
+    ],
+    "recipient_country_code": [
+      "UG"
+    ],
+    "reporting_org_narrative": [
+      "World Food Programme"
+    ]
+  },
+  {
+    "sector_code": [
+      "73010",
+      "2",
+      "2.4"
+    ],
+    "budget_value": [
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      2139763.71,
+      2139763.69,
+      2139763.69,
+      2139763.67,
+      2162443.13,
+      2162443.15,
+      2162443.1,
+      2162443.09,
+      2144176.48,
+      2144176.48,
+      2144176.44,
+      2144176.44,
+      2164063.25,
+      2164063.25,
+      2164063.2,
+      2164063.21,
+      2146623.53,
+      2146623.58,
+      2146623.48,
+      2146623.52
+    ],
+    "iati_identifier": "XM-DAC-41140-UG02.04.023.HIS1",
+    "title_narrative": [
+      "04 Livelihood support - incl SRM AMS"
+    ],
+    "sector_narrative": [
+      "Reconstruction relief and rehabilitation",
+      "Zero hunger",
+      "By 2030, ensure sustainable food production systems and implement resilient agricultural practices that increase productivity and production, that help maintain ecosystems, that strengthen capacity for adaptation to climate change, extreme weather, drought, flooding and other disasters and that progressively improve land and soil quality"
+    ],
+    "reporting_org_ref": "XM-DAC-41140",
+    "transaction_value": [
+      0.0,
+      0.0
+    ],
+    "activity_date_type": [
+      "1",
+      "3"
+    ],
+    "activity_status_code": "2",
+    "description_narrative": [
+      "Country portfolio budget - CPB Uganda 2026-2030 Provide capacity-strengthening support to government, and integrated nutrition-sensitive and people-centred livelihood support to targeted Ugandans and refugees, especially women and young people, to enhance their livelihoods and increase the availability of affordable, safe and nutritious foods."
+    ],
+    "activity_date_iso_date": [
+      "2026-01-01T00:00:00Z",
+      "2030-12-31T00:00:00Z"
+    ],
+    "recipient_country_code": [
+      "UG"
+    ],
+    "reporting_org_narrative": [
+      "World Food Programme"
+    ]
+  },
+  {
+    "sector_code": [
+      "52010",
+      "17",
+      "17.9"
+    ],
+    "budget_value": [
+      312097.01,
+      312097.01,
+      312097.01,
+      312096.99,
+      313668.32,
+      313668.32,
+      313668.3,
+      313668.31,
+      306688.27,
+      306688.26,
+      306688.26,
+      306688.25,
+      301046.7,
+      301046.73,
+      301046.69,
+      301046.7,
+      297998.08,
+      297998.08,
+      297998.06,
+      297998.07
+    ],
+    "iati_identifier": "XM-DAC-41140-UG02.05.034.ODS1",
+    "title_narrative": [
+      "07 On-Demand services"
+    ],
+    "sector_narrative": [
+      "Food aid/Food security programmes",
+      "Partnerships for the goals",
+      "Enhance international support for implementing effective and targeted capacity-building in developing countries to support national plans to implement all the Sustainable Development Goals, including through North-South, South-South and triangular cooperation"
+    ],
+    "reporting_org_ref": "XM-DAC-41140",
+    "transaction_value": [
+      0.0,
+      0.0
+    ],
+    "activity_date_type": [
+      "1",
+      "3"
+    ],
+    "activity_status_code": "2",
+    "description_narrative": [
+      "Country portfolio budget - CPB Uganda 2026-2030 Provide administrative and supply chain related on-demand services to the humanitarian and development community."
+    ],
+    "activity_date_iso_date": [
+      "2026-01-01T00:00:00Z",
+      "2030-12-31T00:00:00Z"
+    ],
+    "recipient_country_code": [
+      "UG"
+    ],
+    "reporting_org_narrative": [
+      "World Food Programme"
+    ]
+  },
+  {
+    "sector_code": [
+      "52010",
+      "17",
+      "17.9"
+    ],
+    "budget_value": [
+      2352419.25,
+      2352419.25,
+      2352419.21,
+      2352419.19,
+      2487252.56,
+      2487252.53,
+      2487252.51,
+      2487252.46,
+      2477465.76,
+      2477465.76,
+      2477465.65,
+      2477465.72,
+      2542310.94,
+      2542310.94,
+      2542310.88,
+      2542310.87,
+      2606824.02,
+      2606823.99,
+      2606823.96,
+      2606823.94
+    ],
+    "iati_identifier": "XM-DAC-41140-UG02.05.034.SMP1",
+    "title_narrative": [
+      "05 School Feeding"
+    ],
+    "sector_narrative": [
+      "Food aid/Food security programmes",
+      "Partnerships for the goals",
+      "Enhance international support for implementing effective and targeted capacity-building in developing countries to support national plans to implement all the Sustainable Development Goals, including through North-South, South-South and triangular cooperation"
+    ],
+    "reporting_org_ref": "XM-DAC-41140",
+    "transaction_value": [
+      0.0,
+      0.0
+    ],
+    "activity_date_type": [
+      "1",
+      "3"
+    ],
+    "activity_status_code": "2",
+    "description_narrative": [
+      "Country portfolio budget - CPB Uganda 2026-2030 Strengthen national and sub-national capacities to deliver nutrition-sensitive, environmentally and financially sustainable school feeding programmes, while supporting implementation through the provision of nutritious hot meals to school children in food-insecure areas."
+    ],
+    "activity_date_iso_date": [
+      "2026-01-01T00:00:00Z",
+      "2030-12-31T00:00:00Z"
+    ],
+    "recipient_country_code": [
+      "UG"
+    ],
+    "reporting_org_narrative": [
+      "World Food Programme"
+    ]
+  },
+  {
+    "sector_code": [
+      "52010",
+      "17",
+      "17.9"
+    ],
+    "budget_value": [
+      2115561.22,
+      2115561.24,
+      2115561.22,
+      2115561.2,
+      2134754.13,
+      2134754.12,
+      2134754.11,
+      2134754.09,
+      2197073.07,
+      2197073.07,
+      2197073.02,
+      2197073.04,
+      2968789.18,
+      2968789.14,
+      2968789.15,
+      2968789.11,
+      2990120.5,
+      2990120.54,
+      2990120.48,
+      2990120.48
+    ],
+    "iati_identifier": "XM-DAC-41140-UG02.05.034.SPS1",
+    "title_narrative": [
+      "06 CS - Social protection - DRM - SC"
+    ],
+    "sector_narrative": [
+      "Food aid/Food security programmes",
+      "Partnerships for the goals",
+      "Enhance international support for implementing effective and targeted capacity-building in developing countries to support national plans to implement all the Sustainable Development Goals, including through North-South, South-South and triangular cooperation"
+    ],
+    "reporting_org_ref": "XM-DAC-41140",
+    "transaction_value": [
+      0.0,
+      0.0
+    ],
+    "activity_date_type": [
+      "1",
+      "3"
+    ],
+    "activity_status_code": "2",
+    "description_narrative": [
+      "Country portfolio budget - CPB Uganda 2026-2030 Advocate for and provide technical assistance and complementary programming to government and other stakeholders at national and subnational levels in nutrition, social protection, disaster risk management and efficient supply chains."
+    ],
+    "activity_date_iso_date": [
+      "2026-01-01T00:00:00Z",
+      "2030-12-31T00:00:00Z"
+    ],
+    "recipient_country_code": [
+      "UG"
+    ],
+    "reporting_org_narrative": [
+      "World Food Programme"
+    ]
+  },
+  {
+    "sector_code": [
+      "91010",
+      "17",
+      "2",
+      "2.1",
+      "2.4",
+      "17.9"
+    ],
+    "budget_value": [
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      3243913.64,
+      3243913.63,
+      3243913.63,
+      3243913.63,
+      3348277.39,
+      3348277.38,
+      3348277.36,
+      3348277.37,
+      3403630.14,
+      3403630.12,
+      3403630.11,
+      3403630.1,
+      3501073.72,
+      3501073.7,
+      3501073.67,
+      3501073.7,
+      3630500.24,
+      3630500.23,
+      3630500.21,
+      3630500.22
+    ],
+    "iati_identifier": "XM-DAC-41140-UG02-DSC",
+    "title_narrative": [
+      "Non Activity Specific"
+    ],
+    "sector_narrative": [
+      "Administrative costs",
+      "Partnerships for the goals",
+      "Zero hunger",
+      "By 2030, end hunger and ensure access by all people, in particular the poor and people in vulnerable situations, including infants, to safe, nutritious and sufficient food all year round",
+      "By 2030, ensure sustainable food production systems and implement resilient agricultural practices that increase productivity and production, that help maintain ecosystems, that strengthen capacity for adaptation to climate change, extreme weather, drought, flooding and other disasters and that progressively improve land and soil quality",
+      "Enhance international support for implementing effective and targeted capacity-building in developing countries to support national plans to implement all the Sustainable Development Goals, including through North-South, South-South and triangular cooperation"
+    ],
+    "reporting_org_ref": "XM-DAC-41140",
+    "transaction_value": [
+      0.0,
+      0.0
+    ],
+    "activity_date_type": [
+      "1",
+      "3"
+    ],
+    "activity_status_code": "2",
+    "description_narrative": [
+      "CPB Uganda 2026-2030 - Direct Support Cost that correspond to country level expenditures that are directly linked to the execution of the programme but cannot be attributed to a specific activity within it."
+    ],
+    "activity_date_iso_date": [
+      "2026-01-01T00:00:00Z",
+      "2030-12-31T00:00:00Z"
+    ],
+    "recipient_country_code": [
+      "UG"
+    ],
+    "reporting_org_narrative": [
+      "World Food Programme"
+    ]
+  },
+  {
+    "sector_code": [
+      "52010",
+      "2",
+      "2.2"
+    ],
+    "budget_value": [
+      1840362.06,
+      1840362.02,
+      1840362.05,
+      1840362.02,
+      3819536.8,
+      3819536.78,
+      3819536.76,
+      3819536.78,
+      2358538.24,
+      2358538.28,
+      2358538.24,
+      2358538.23,
+      1608172.13,
+      1608172.09,
+      1608172.09,
+      1608172.09,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "iati_identifier": "XM-DAC-41140-CO01.02.031.SMP1",
+    "title_narrative": [
+      "Proporcionar asistencia técnica y apoyo para la implementación del programa de alimentación escolar, su política e instituciones conexas, como complemento a los esfuerzos del Gobierno colombiano"
+    ],
+    "sector_narrative": [
+      "Food assistance",
+      "Zero hunger",
+      "By 2030, end all forms of malnutrition, including achieving, by 2025, the internationally agreed targets on stunting and wasting in children under 5 years of age, and address the nutritional needs of adolescent girls, pregnant and lactating women and older persons"
+    ],
+    "reporting_org_ref": "XM-DAC-41140",
+    "transaction_value": [
+      19468.04,
+      927313.65,
+      -9710.52,
+      35942.63,
+      -283.51,
+      19468.04,
+      927313.65,
+      -9710.52,
+      35942.63,
+      -283.51
+    ],
+    "activity_date_type": [
+      "1",
+      "2",
+      "3",
+      "4"
+    ],
+    "activity_status_code": "3",
+    "description_narrative": [
+      "Carteras de actividades en los países - CPB Colombia (2017-2021) - Proporcionar asistencia técnica y apoyo para la implementación del programa de alimentación escolar, su política e instituciones conexas, como complemento a los esfuerzos del Gobierno colombiano"
+    ],
+    "activity_date_iso_date": [
+      "2017-04-01T00:00:00Z",
+      "2017-04-01T00:00:00Z",
+      "2021-02-28T00:00:00Z",
+      "2021-02-28T00:00:00Z"
+    ],
+    "recipient_country_code": [
+      "CO"
+    ],
+    "reporting_org_narrative": [
+      "World Food Programme"
+    ]
+  },
+  {
+    "sector_code": [
+      "72050",
+      "2",
+      "2.1"
+    ],
+    "budget_value": [
+      31741.88,
+      31741.87,
+      31741.88,
+      31741.87,
+      5290.31,
+      5290.33,
+      5290.3,
+      5290.31,
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "iati_identifier": "XM-DAC-41140-DZ02.01.011.CPA1",
+    "title_narrative": [
+      "05 On demand services"
+    ],
+    "sector_narrative": [
+      "Relief co-ordination; protection and support services",
+      "Zero hunger",
+      "By 2030, end hunger and ensure access by all people, in particular the poor and people in vulnerable situations, including infants, to safe, nutritious and sufficient food all year round"
+    ],
+    "reporting_org_ref": "XM-DAC-41140",
+    "transaction_value": [
+      0.0,
+      0.0,
+      71829.2,
+      -71829.2
+    ],
+    "activity_date_type": [
+      "1",
+      "2",
+      "3"
+    ],
+    "activity_status_code": "2",
+    "description_narrative": [
+      "Country portfolio budget - CPB Algeria 2019-2027 Provide on-demand services to humanitarian actors to efficiently support their assistance interventions"
+    ],
+    "activity_date_iso_date": [
+      "2019-07-01T00:00:00Z",
+      "2019-07-01T00:00:00Z",
+      "2026-02-28T00:00:00Z"
+    ],
+    "recipient_country_code": [
+      "DZ"
+    ],
+    "reporting_org_narrative": [
+      "World Food Programme"
+    ]
+  }
+]

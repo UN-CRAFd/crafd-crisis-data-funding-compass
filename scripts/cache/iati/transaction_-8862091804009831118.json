@@ -1,0 +1,8888 @@
+[
+  {
+    "iati_identifier": "XM-DAC-21016-2022-EURASIA-UA",
+    "transaction_value": [
+      93166.43
+    ],
+    "transaction_value_currency": [
+      "CHF"
+    ]
+  },
+  {
+    "iati_identifier": "XM-DAC-21016-2021-AMERICAS-PAN",
+    "transaction_value": [
+      123400.0
+    ],
+    "transaction_value_currency": [
+      "CHF"
+    ]
+  },
+  {
+    "iati_identifier": "XM-DAC-21016-2021-AFRICA-SO",
+    "transaction_value": [
+      400000.0
+    ],
+    "transaction_value_currency": [
+      "CHF"
+    ]
+  },
+  {
+    "iati_identifier": "XM-DAC-21016-2021-AFRICA-SO",
+    "transaction_value": [
+      50000.0
+    ],
+    "transaction_value_currency": [
+      "CHF"
+    ]
+  },
+  {
+    "iati_identifier": "XM-DAC-21016-2020-AMERICAS-PAN",
+    "transaction_value": [
+      43147.0
+    ],
+    "transaction_value_currency": [
+      "CHF"
+    ]
+  },
+  {
+    "iati_identifier": "XM-DAC-21016-2020-AMERICAS-PAN",
+    "transaction_value": [
+      27561.0
+    ],
+    "transaction_value_currency": [
+      "CHF"
+    ]
+  },
+  {
+    "iati_identifier": "XM-DAC-21016-2020-AMERICAS-BRA",
+    "transaction_value": [
+      50000.0
+    ],
+    "transaction_value_currency": [
+      "CHF"
+    ]
+  },
+  {
+    "iati_identifier": "XM-DAC-21016-2020-AMERICAS-BRA",
+    "transaction_value": [
+      -551.0
+    ],
+    "transaction_value_currency": [
+      "CHF"
+    ]
+  },
+  {
+    "iati_identifier": "XM-DAC-21016-2019-AMERICAS-PAN",
+    "transaction_value": [
+      85000.0
+    ],
+    "transaction_value_currency": [
+      "CHF"
+    ]
+  },
+  {
+    "iati_identifier": "XM-DAC-21016-2018-AFRICA-SO",
+    "transaction_value": [
+      349556.1
+    ],
+    "transaction_value_currency": [
+      "CHF"
+    ]
+  },
+  {
+    "iati_identifier": "XM-DAC-21016-2019-AMERICAS-BRA",
+    "transaction_value": [
+      99100.0
+    ],
+    "transaction_value_currency": [
+      "CHF"
+    ]
+  },
+  {
+    "iati_identifier": "XM-DAC-21016-2024-AFRICA-DAK",
+    "transaction_value": [
+      121685.64
+    ],
+    "transaction_value_currency": [
+      "CHF"
+    ]
+  },
+  {
+    "iati_identifier": "NL-KVK-40409352-PRJ13-165",
+    "transaction_value": [
+      -3805135.0
+    ],
+    "transaction_value_currency": [
+      "EUR"
+    ]
+  },
+  {
+    "iati_identifier": "NL-KVK-40409352-PRJ13-165",
+    "transaction_value": [
+      2361640.0
+    ],
+    "transaction_value_currency": [
+      "EUR"
+    ]
+  },
+  {
+    "iati_identifier": "NL-KVK-40409352-PRJ13-165",
+    "transaction_value": [
+      1443495.0
+    ],
+    "transaction_value_currency": [
+      "EUR"
+    ]
+  },
+  {
+    "iati_identifier": "NL-KVK-40409352-PRJ08-231",
+    "transaction_value": [
+      -3574.0
+    ],
+    "transaction_value_currency": [
+      "EUR"
+    ]
+  },
+  {
+    "iati_identifier": "NL-KVK-40409352-PRJ08-231",
+    "transaction_value": [
+      -188271.0
+    ],
+    "transaction_value_currency": [
+      "EUR"
+    ]
+  },
+  {
+    "iati_identifier": "NL-KVK-40409352-PRJ08-231",
+    "transaction_value": [
+      297872.0
+    ],
+    "transaction_value_currency": [
+      "EUR"
+    ]
+  },
+  {
+    "iati_identifier": "NL-KVK-40409352-PRJ08-171-0010",
+    "transaction_value": [
+      -4176.0
+    ],
+    "transaction_value_currency": [
+      "EUR"
+    ]
+  },
+  {
+    "iati_identifier": "NL-KVK-40409352-PRJ08-171-0010",
+    "transaction_value": [
+      65288.0
+    ],
+    "transaction_value_currency": [
+      "EUR"
+    ]
+  },
+  {
+    "iati_identifier": "NL-KVK-40409352-PRJ13-132-0001",
+    "transaction_value": [
+      1183.0
+    ],
+    "transaction_value_currency": [
+      "EUR"
+    ]
+  },
+  {
+    "iati_identifier": "NL-KVK-40409352-PRJ12-022-0006",
+    "transaction_value": [
+      16426.0
+    ],
+    "transaction_value_currency": [
+      "EUR"
+    ]
+  },
+  {
+    "iati_identifier": "NL-KVK-40409352-PRJ13-150-0003",
+    "transaction_value": [
+      -41009.0
+    ],
+    "transaction_value_currency": [
+      "EUR"
+    ]
+  },
+  {
+    "iati_identifier": "NL-KVK-40409352-PRJ13-150-0003",
+    "transaction_value": [
+      285291.0
+    ],
+    "transaction_value_currency": [
+      "EUR"
+    ]
+  },
+  {
+    "iati_identifier": "NL-KVK-40409352-PRJ13-150-0003",
+    "transaction_value": [
+      300548.0
+    ],
+    "transaction_value_currency": [
+      "EUR"
+    ]
+  },
+  {
+    "iati_identifier": "NL-KVK-40409352-PRJ13-150-0003",
+    "transaction_value": [
+      -41009.0
+    ],
+    "transaction_value_currency": [
+      "EUR"
+    ]
+  },
+  {
+    "iati_identifier": "NL-KVK-40409352-PRJ13-150-0003",
+    "transaction_value": [
+      285291.0
+    ],
+    "transaction_value_currency": [
+      "EUR"
+    ]
+  },
+  {
+    "iati_identifier": "NL-KVK-40409352-PRJ13-150-0003",
+    "transaction_value": [
+      300548.0
+    ],
+    "transaction_value_currency": [
+      "EUR"
+    ]
+  },
+  {
+    "iati_identifier": "XM-DAC-47066-SN.0139",
+    "transaction_value": [
+      177228.1
+    ],
+    "transaction_value_currency": [
+      "CHF"
+    ]
+  },
+  {
+    "iati_identifier": "XM-DAC-47066-SN.0139",
+    "transaction_value": [
+      82290.0
+    ],
+    "transaction_value_currency": [
+      "CHF"
+    ]
+  },
+  {
+    "iati_identifier": "XM-DAC-47066-SN.0139",
+    "transaction_value": [
+      94938.0
+    ],
+    "transaction_value_currency": [
+      "CHF"
+    ]
+  },
+  {
+    "iati_identifier": "XM-DAC-47066-SN.0139",
+    "transaction_value": [
+      16.81
+    ],
+    "transaction_value_currency": [
+      "CHF"
+    ]
+  },
+  {
+    "iati_identifier": "NL-KVK-40409352-PRJ12-021-0020",
+    "transaction_value": [
+      -57510.0
+    ],
+    "transaction_value_currency": [
+      "EUR"
+    ]
+  },
+  {
+    "iati_identifier": "NL-KVK-40409352-PRJ12-021-0020",
+    "transaction_value": [
+      57510.0
+    ],
+    "transaction_value_currency": [
+      "EUR"
+    ]
+  },
+  {
+    "iati_identifier": "NL-KVK-40409352-PRJ12-021-0020",
+    "transaction_value": [
+      57510.0
+    ],
+    "transaction_value_currency": [
+      "EUR"
+    ]
+  },
+  {
+    "iati_identifier": "NL-KVK-40409352-PRJ08-171-0010",
+    "transaction_value": [
+      -4176.0
+    ],
+    "transaction_value_currency": [
+      "EUR"
+    ]
+  },
+  {
+    "iati_identifier": "NL-KVK-40409352-PRJ08-171-0010",
+    "transaction_value": [
+      65288.0
+    ],
+    "transaction_value_currency": [
+      "EUR"
+    ]
+  },
+  {
+    "iati_identifier": "NL-KVK-40409352-PRJ13-132-0001",
+    "transaction_value": [
+      1183.0
+    ],
+    "transaction_value_currency": [
+      "EUR"
+    ]
+  },
+  {
+    "iati_identifier": "NL-KVK-40409352-PRJ13-165",
+    "transaction_value": [
+      -3805135.0
+    ],
+    "transaction_value_currency": [
+      "EUR"
+    ]
+  },
+  {
+    "iati_identifier": "NL-KVK-40409352-PRJ13-165",
+    "transaction_value": [
+      2361640.0
+    ],
+    "transaction_value_currency": [
+      "EUR"
+    ]
+  },
+  {
+    "iati_identifier": "NL-KVK-40409352-PRJ13-165",
+    "transaction_value": [
+      1443495.0
+    ],
+    "transaction_value_currency": [
+      "EUR"
+    ]
+  },
+  {
+    "iati_identifier": "NL-KVK-40409352-PRJ08-231",
+    "transaction_value": [
+      -3574.0
+    ],
+    "transaction_value_currency": [
+      "EUR"
+    ]
+  },
+  {
+    "iati_identifier": "NL-KVK-40409352-PRJ08-231",
+    "transaction_value": [
+      -188271.0
+    ],
+    "transaction_value_currency": [
+      "EUR"
+    ]
+  },
+  {
+    "iati_identifier": "NL-KVK-40409352-PRJ08-231",
+    "transaction_value": [
+      297872.0
+    ],
+    "transaction_value_currency": [
+      "EUR"
+    ]
+  },
+  {
+    "iati_identifier": "NL-KVK-40409352-PRJ12-021-0020",
+    "transaction_value": [
+      -57510.0
+    ],
+    "transaction_value_currency": [
+      "EUR"
+    ]
+  },
+  {
+    "iati_identifier": "NL-KVK-40409352-PRJ12-021-0020",
+    "transaction_value": [
+      57510.0
+    ],
+    "transaction_value_currency": [
+      "EUR"
+    ]
+  },
+  {
+    "iati_identifier": "NL-KVK-40409352-PRJ12-021-0020",
+    "transaction_value": [
+      57510.0
+    ],
+    "transaction_value_currency": [
+      "EUR"
+    ]
+  },
+  {
+    "iati_identifier": "NL-KVK-40409352-PRJ12-022-0006",
+    "transaction_value": [
+      16426.0
+    ],
+    "transaction_value_currency": [
+      "EUR"
+    ]
+  },
+  {
+    "iati_identifier": "XM-DAC-21-1-2022000304B1RSAPADM-B1RSAOB2EMN",
+    "transaction_value": [
+      10000.0
+    ]
+  },
+  {
+    "iati_identifier": "XM-DAC-21-1-2020990062B4AFRICA-COVID19",
+    "transaction_value": [
+      200000.0
+    ]
+  },
+  {
+    "iati_identifier": "XM-DAC-21-1-2020990076B6RESCH-COVID19",
+    "transaction_value": [
+      350000.0
+    ]
+  },
+  {
+    "iati_identifier": "XM-DAC-21-1-2020990010B1VNMOB1-COVID19",
+    "transaction_value": [
+      350000.0
+    ]
+  },
+  {
+    "iati_identifier": "XM-DAC-21-1-2020990022B3HUMCORE-EME1HQ001",
+    "transaction_value": [
+      1000000.0
+    ]
+  },
+  {
+    "iati_identifier": "XM-DAC-21-1-2020990023B3HUMCORE-EME1HQ001",
+    "transaction_value": [
+      600000.0
+    ]
+  },
+  {
+    "iati_identifier": "XM-DAC-21-1-2020990477B3HUMRRI-EME1HQ001",
+    "transaction_value": [
+      300000.0
+    ]
+  },
+  {
+    "iati_identifier": "XM-DAC-21-1-2022001853B3HUMCERF-EME1HQ001",
+    "transaction_value": [
+      350000.0
+    ]
+  },
+  {
+    "iati_identifier": "XM-DAC-21-1-2022001839B3HUMCERF-EME1HQ001",
+    "transaction_value": [
+      250000.0
+    ]
+  },
+  {
+    "iati_identifier": "XM-DAC-21-1-2022001841B3HUMCERF-EME1HQ001",
+    "transaction_value": [
+      1000000.0
+    ]
+  },
+  {
+    "iati_identifier": "XM-DAC-21-1-2022001883B3HUMCORE-EME1HQ001",
+    "transaction_value": [
+      1200000.0
+    ]
+  },
+  {
+    "iati_identifier": "XM-DAC-21-1-2022001884B3HUMCORE-EME1HQ001",
+    "transaction_value": [
+      600000.0
+    ]
+  },
+  {
+    "iati_identifier": "XM-DAC-21-1-2019001913B3HUMCERF-EME1HQ001",
+    "transaction_value": [
+      300000.0
+    ]
+  },
+  {
+    "iati_identifier": "XM-DAC-21-1-2019001918B3HUMCORE-EME1HQ001",
+    "transaction_value": [
+      500000.0
+    ]
+  },
+  {
+    "iati_identifier": "XM-DAC-21-1-2019001919B3HUMCORE-EME1HQ001",
+    "transaction_value": [
+      1000000.0
+    ]
+  },
+  {
+    "iati_identifier": "XM-DAC-21-1-2019001950B3HUMCRISAPP-EME1HQ001",
+    "transaction_value": [
+      100000.0
+    ]
+  },
+  {
+    "iati_identifier": "XM-DAC-21-1-2019001912B3HUMCERF-EME1HQ001",
+    "transaction_value": [
+      500000.0
+    ]
+  },
+  {
+    "iati_identifier": "47122-AFG-COVAX",
+    "transaction_value": [
+      595124.57
+    ]
+  },
+  {
+    "iati_identifier": "47122-AFG-COVAX",
+    "transaction_value": [
+      946885.0
+    ]
+  },
+  {
+    "iati_identifier": "47122-AFG-COVAX",
+    "transaction_value": [
+      946885.0
+    ]
+  },
+  {
+    "iati_identifier": "47122-AFG-COVAX",
+    "transaction_value": [
+      595124.57
+    ]
+  },
+  {
+    "iati_identifier": "47122-PSE-COVAX",
+    "transaction_value": [
+      7393205.0
+    ]
+  },
+  {
+    "iati_identifier": "47122-PSE-COVAX",
+    "transaction_value": [
+      3501602.5
+    ]
+  },
+  {
+    "iati_identifier": "47122-PSE-COVAX",
+    "transaction_value": [
+      2915456.5
+    ]
+  },
+  {
+    "iati_identifier": "47122-MLI-COVAX",
+    "transaction_value": [
+      1780185.0
+    ]
+  },
+  {
+    "iati_identifier": "47122-MLI-COVAX",
+    "transaction_value": [
+      811201.2
+    ]
+  },
+  {
+    "iati_identifier": "47122-MLI-COVAX",
+    "transaction_value": [
+      540800.8
+    ]
+  },
+  {
+    "iati_identifier": "47122-MLI-COVAX",
+    "transaction_value": [
+      428183.0
+    ]
+  },
+  {
+    "iati_identifier": "47122-AFG-HSS",
+    "transaction_value": [
+      1304506.0
+    ]
+  },
+  {
+    "iati_identifier": "47122-AFG-HSS",
+    "transaction_value": [
+      1282505.0
+    ]
+  },
+  {
+    "iati_identifier": "47122-AFG-HSS",
+    "transaction_value": [
+      930989.1
+    ]
+  },
+  {
+    "iati_identifier": "47122-AFG-HSS",
+    "transaction_value": [
+      1304506.0
+    ]
+  },
+  {
+    "iati_identifier": "47122-AFG-HSS",
+    "transaction_value": [
+      782703.0
+    ]
+  },
+  {
+    "iati_identifier": "47122-AFG-HSS",
+    "transaction_value": [
+      930989.1
+    ]
+  },
+  {
+    "iati_identifier": "47122-AFG-HSS",
+    "transaction_value": [
+      498152.2
+    ]
+  },
+  {
+    "iati_identifier": "NL-KVK-40409352-PRJ13-191-0001",
+    "transaction_value": [
+      250000.0
+    ],
+    "transaction_value_currency": [
+      "EUR"
+    ]
+  },
+  {
+    "iati_identifier": "NL-KVK-40409352-PRJ13-191-0001",
+    "transaction_value": [
+      16250.0
+    ],
+    "transaction_value_currency": [
+      "EUR"
+    ]
+  },
+  {
+    "iati_identifier": "NL-KVK-40409352-PRJ13-149-0036",
+    "transaction_value": [
+      280000.0
+    ],
+    "transaction_value_currency": [
+      "EUR"
+    ]
+  },
+  {
+    "iati_identifier": "NL-KVK-40409352-PRJ13-149-0036",
+    "transaction_value": [
+      18200.0
+    ],
+    "transaction_value_currency": [
+      "EUR"
+    ]
+  },
+  {
+    "iati_identifier": "NL-KVK-40409352-PRJ13-149-0007",
+    "transaction_value": [
+      150000.0
+    ],
+    "transaction_value_currency": [
+      "EUR"
+    ]
+  },
+  {
+    "iati_identifier": "NL-KVK-40409352-PRJ13-149-0007",
+    "transaction_value": [
+      9750.0
+    ],
+    "transaction_value_currency": [
+      "EUR"
+    ]
+  },
+  {
+    "iati_identifier": "NL-KVK-40409352-PRJ13-149-0032",
+    "transaction_value": [
+      500000.0
+    ],
+    "transaction_value_currency": [
+      "EUR"
+    ]
+  },
+  {
+    "iati_identifier": "NL-KVK-40409352-PRJ13-149-0032",
+    "transaction_value": [
+      32500.0
+    ],
+    "transaction_value_currency": [
+      "EUR"
+    ]
+  },
+  {
+    "iati_identifier": "NL-KVK-40409352-PRJ13-149-0027",
+    "transaction_value": [
+      300000.0
+    ],
+    "transaction_value_currency": [
+      "EUR"
+    ]
+  },
+  {
+    "iati_identifier": "NL-KVK-40409352-PRJ13-149-0027",
+    "transaction_value": [
+      19500.0
+    ],
+    "transaction_value_currency": [
+      "EUR"
+    ]
+  },
+  {
+    "iati_identifier": "NL-KVK-40409352-PRJ13-149-0020",
+    "transaction_value": [
+      281690.0
+    ],
+    "transaction_value_currency": [
+      "EUR"
+    ]
+  },
+  {
+    "iati_identifier": "NL-KVK-40409352-PRJ13-149-0020",
+    "transaction_value": [
+      18310.0
+    ],
+    "transaction_value_currency": [
+      "EUR"
+    ]
+  },
+  {
+    "iati_identifier": "NL-KVK-40409352-PRJ13-149-0004",
+    "transaction_value": [
+      250000.0
+    ],
+    "transaction_value_currency": [
+      "EUR"
+    ]
+  },
+  {
+    "iati_identifier": "NL-KVK-40409352-PRJ13-149-0004",
+    "transaction_value": [
+      16250.0
+    ],
+    "transaction_value_currency": [
+      "EUR"
+    ]
+  },
+  {
+    "iati_identifier": "NL-KVK-40409352-PRJ13-149-0019",
+    "transaction_value": [
+      93897.0
+    ],
+    "transaction_value_currency": [
+      "EUR"
+    ]
+  },
+  {
+    "iati_identifier": "NL-KVK-40409352-PRJ13-149-0019",
+    "transaction_value": [
+      6103.0
+    ],
+    "transaction_value_currency": [
+      "EUR"
+    ]
+  },
+  {
+    "iati_identifier": "NL-KVK-40409352-PRJ13-149-0017",
+    "transaction_value": [
+      938967.0
+    ],
+    "transaction_value_currency": [
+      "EUR"
+    ]
+  },
+  {
+    "iati_identifier": "NL-KVK-40409352-PRJ13-149-0017",
+    "transaction_value": [
+      61033.0
+    ],
+    "transaction_value_currency": [
+      "EUR"
+    ]
+  },
+  {
+    "iati_identifier": "NL-KVK-40409352-PRJ13-149-0016",
+    "transaction_value": [
+      930233.0
+    ],
+    "transaction_value_currency": [
+      "EUR"
+    ]
+  },
+  {
+    "iati_identifier": "NL-KVK-40409352-PRJ13-149-0016",
+    "transaction_value": [
+      69767.0
+    ],
+    "transaction_value_currency": [
+      "EUR"
+    ]
+  },
+  {
+    "iati_identifier": "NL-KVK-40409352-PRJ13-149-0035",
+    "transaction_value": [
+      350000.0
+    ],
+    "transaction_value_currency": [
+      "EUR"
+    ]
+  },
+  {
+    "iati_identifier": "NL-KVK-40409352-PRJ13-149-0035",
+    "transaction_value": [
+      22750.0
+    ],
+    "transaction_value_currency": [
+      "EUR"
+    ]
+  },
+  {
+    "iati_identifier": "NL-KVK-40409352-PRJ13-149-0034",
+    "transaction_value": [
+      350000.0
+    ],
+    "transaction_value_currency": [
+      "EUR"
+    ]
+  },
+  {
+    "iati_identifier": "NL-KVK-40409352-PRJ13-149-0034",
+    "transaction_value": [
+      22750.0
+    ],
+    "transaction_value_currency": [
+      "EUR"
+    ]
+  },
+  {
+    "iati_identifier": "NL-KVK-40409352-PRJ13-149-0005",
+    "transaction_value": [
+      150000.0
+    ],
+    "transaction_value_currency": [
+      "EUR"
+    ]
+  },
+  {
+    "iati_identifier": "NL-KVK-40409352-PRJ13-149-0005",
+    "transaction_value": [
+      9750.0
+    ],
+    "transaction_value_currency": [
+      "EUR"
+    ]
+  },
+  {
+    "iati_identifier": "NL-KVK-40409352-PRJ13-149-0033",
+    "transaction_value": [
+      250000.0
+    ],
+    "transaction_value_currency": [
+      "EUR"
+    ]
+  },
+  {
+    "iati_identifier": "NL-KVK-40409352-PRJ13-149-0033",
+    "transaction_value": [
+      16250.0
+    ],
+    "transaction_value_currency": [
+      "EUR"
+    ]
+  },
+  {
+    "iati_identifier": "NL-KVK-40409352-PRJ13-149-0029",
+    "transaction_value": [
+      300000.0
+    ],
+    "transaction_value_currency": [
+      "EUR"
+    ]
+  },
+  {
+    "iati_identifier": "NL-KVK-40409352-PRJ13-149-0029",
+    "transaction_value": [
+      19500.0
+    ],
+    "transaction_value_currency": [
+      "EUR"
+    ]
+  },
+  {
+    "iati_identifier": "NL-KVK-40409352-PRJ13-149-0031",
+    "transaction_value": [
+      280000.0
+    ],
+    "transaction_value_currency": [
+      "EUR"
+    ]
+  },
+  {
+    "iati_identifier": "NL-KVK-40409352-PRJ13-149-0031",
+    "transaction_value": [
+      18200.0
+    ],
+    "transaction_value_currency": [
+      "EUR"
+    ]
+  },
+  {
+    "iati_identifier": "NL-KVK-40409352-PRJ13-149-0015",
+    "transaction_value": [
+      930233.0
+    ],
+    "transaction_value_currency": [
+      "EUR"
+    ]
+  },
+  {
+    "iati_identifier": "NL-KVK-40409352-PRJ13-149-0015",
+    "transaction_value": [
+      66977.0
+    ],
+    "transaction_value_currency": [
+      "EUR"
+    ]
+  },
+  {
+    "iati_identifier": "NL-KVK-40409352-PRJ13-149-0003",
+    "transaction_value": [
+      99252.0
+    ],
+    "transaction_value_currency": [
+      "EUR"
+    ]
+  },
+  {
+    "iati_identifier": "NL-KVK-40409352-PRJ13-149-0003",
+    "transaction_value": [
+      6451.0
+    ],
+    "transaction_value_currency": [
+      "EUR"
+    ]
+  },
+  {
+    "iati_identifier": "NL-KVK-40409352-PRJ13-149-0001",
+    "transaction_value": [
+      250000.0
+    ],
+    "transaction_value_currency": [
+      "EUR"
+    ]
+  },
+  {
+    "iati_identifier": "NL-KVK-40409352-PRJ13-149-0001",
+    "transaction_value": [
+      16250.0
+    ],
+    "transaction_value_currency": [
+      "EUR"
+    ]
+  },
+  {
+    "iati_identifier": "NL-KVK-40409352-PRJ13-149-0002",
+    "transaction_value": [
+      250000.0
+    ],
+    "transaction_value_currency": [
+      "EUR"
+    ]
+  },
+  {
+    "iati_identifier": "NL-KVK-40409352-PRJ13-149-0002",
+    "transaction_value": [
+      16250.0
+    ],
+    "transaction_value_currency": [
+      "EUR"
+    ]
+  },
+  {
+    "iati_identifier": "NL-KVK-40409352-PRJ13-149-0012",
+    "transaction_value": [
+      750000.0
+    ],
+    "transaction_value_currency": [
+      "EUR"
+    ]
+  },
+  {
+    "iati_identifier": "NL-KVK-40409352-PRJ13-149-0012",
+    "transaction_value": [
+      48750.0
+    ],
+    "transaction_value_currency": [
+      "EUR"
+    ]
+  },
+  {
+    "iati_identifier": "NL-KVK-40409352-PRJ13-149-0037",
+    "transaction_value": [
+      350000.0
+    ],
+    "transaction_value_currency": [
+      "EUR"
+    ]
+  },
+  {
+    "iati_identifier": "NL-KVK-40409352-PRJ13-149-0037",
+    "transaction_value": [
+      22750.0
+    ],
+    "transaction_value_currency": [
+      "EUR"
+    ]
+  },
+  {
+    "iati_identifier": "NL-KVK-40409352-PRJ13-149-0006",
+    "transaction_value": [
+      150000.0
+    ],
+    "transaction_value_currency": [
+      "EUR"
+    ]
+  },
+  {
+    "iati_identifier": "NL-KVK-40409352-PRJ13-149-0006",
+    "transaction_value": [
+      9750.0
+    ],
+    "transaction_value_currency": [
+      "EUR"
+    ]
+  },
+  {
+    "iati_identifier": "NL-KVK-40409352-PRJ13-149-0030",
+    "transaction_value": [
+      247674.0
+    ],
+    "transaction_value_currency": [
+      "EUR"
+    ]
+  },
+  {
+    "iati_identifier": "NL-KVK-40409352-PRJ13-149-0030",
+    "transaction_value": [
+      18576.0
+    ],
+    "transaction_value_currency": [
+      "EUR"
+    ]
+  },
+  {
+    "iati_identifier": "NL-KVK-40409352-PRJ13-149-0038",
+    "transaction_value": [
+      350000.0
+    ],
+    "transaction_value_currency": [
+      "EUR"
+    ]
+  },
+  {
+    "iati_identifier": "NL-KVK-40409352-PRJ13-149-0038",
+    "transaction_value": [
+      22750.0
+    ],
+    "transaction_value_currency": [
+      "EUR"
+    ]
+  },
+  {
+    "iati_identifier": "NL-KVK-40409352-PRJ13-149-0011",
+    "transaction_value": [
+      750000.0
+    ],
+    "transaction_value_currency": [
+      "EUR"
+    ]
+  },
+  {
+    "iati_identifier": "NL-KVK-40409352-PRJ13-149-0011",
+    "transaction_value": [
+      48750.0
+    ],
+    "transaction_value_currency": [
+      "EUR"
+    ]
+  },
+  {
+    "iati_identifier": "NL-KVK-40409352-PRJ13-149-0018",
+    "transaction_value": [
+      187793.0
+    ],
+    "transaction_value_currency": [
+      "EUR"
+    ]
+  },
+  {
+    "iati_identifier": "NL-KVK-40409352-PRJ13-149-0018",
+    "transaction_value": [
+      12207.0
+    ],
+    "transaction_value_currency": [
+      "EUR"
+    ]
+  },
+  {
+    "iati_identifier": "NL-KVK-40409352-PRJ13-210-0001",
+    "transaction_value": [
+      350000.0
+    ],
+    "transaction_value_currency": [
+      "EUR"
+    ]
+  },
+  {
+    "iati_identifier": "NL-KVK-40409352-PRJ13-210-0001",
+    "transaction_value": [
+      26250.0
+    ],
+    "transaction_value_currency": [
+      "EUR"
+    ]
+  },
+  {
+    "iati_identifier": "NL-KVK-40409352-PRJ13-210-0002",
+    "transaction_value": [
+      350000.0
+    ],
+    "transaction_value_currency": [
+      "EUR"
+    ]
+  },
+  {
+    "iati_identifier": "NL-KVK-40409352-PRJ13-210-0002",
+    "transaction_value": [
+      26250.0
+    ],
+    "transaction_value_currency": [
+      "EUR"
+    ]
+  },
+  {
+    "iati_identifier": "NL-KVK-40409352-PRJ13-179-0001",
+    "transaction_value": [
+      300000.0
+    ],
+    "transaction_value_currency": [
+      "EUR"
+    ]
+  },
+  {
+    "iati_identifier": "NL-KVK-40409352-PRJ13-179-0001",
+    "transaction_value": [
+      19500.0
+    ],
+    "transaction_value_currency": [
+      "EUR"
+    ]
+  },
+  {
+    "iati_identifier": "NL-KVK-40409352-PRJ13-179-0008",
+    "transaction_value": [
+      93897.0
+    ],
+    "transaction_value_currency": [
+      "EUR"
+    ]
+  },
+  {
+    "iati_identifier": "NL-KVK-40409352-PRJ13-179-0008",
+    "transaction_value": [
+      6103.0
+    ],
+    "transaction_value_currency": [
+      "EUR"
+    ]
+  },
+  {
+    "iati_identifier": "NL-KVK-40409352-PRJ13-179-0011",
+    "transaction_value": [
+      300000.0
+    ],
+    "transaction_value_currency": [
+      "EUR"
+    ]
+  },
+  {
+    "iati_identifier": "NL-KVK-40409352-PRJ13-179-0011",
+    "transaction_value": [
+      19500.0
+    ],
+    "transaction_value_currency": [
+      "EUR"
+    ]
+  },
+  {
+    "iati_identifier": "NL-KVK-40409352-PRJ13-179-0016",
+    "transaction_value": [
+      38281.0
+    ],
+    "transaction_value_currency": [
+      "EUR"
+    ]
+  },
+  {
+    "iati_identifier": "NL-KVK-40409352-PRJ13-179-0016",
+    "transaction_value": [
+      2488.0
+    ],
+    "transaction_value_currency": [
+      "EUR"
+    ]
+  },
+  {
+    "iati_identifier": "NL-KVK-40409352-PRJ13-179-0014",
+    "transaction_value": [
+      277395.0
+    ],
+    "transaction_value_currency": [
+      "EUR"
+    ]
+  },
+  {
+    "iati_identifier": "NL-KVK-40409352-PRJ13-179-0014",
+    "transaction_value": [
+      20805.0
+    ],
+    "transaction_value_currency": [
+      "EUR"
+    ]
+  },
+  {
+    "iati_identifier": "NL-KVK-40409352-PRJ13-179-0006",
+    "transaction_value": [
+      281690.0
+    ],
+    "transaction_value_currency": [
+      "EUR"
+    ]
+  },
+  {
+    "iati_identifier": "NL-KVK-40409352-PRJ13-179-0006",
+    "transaction_value": [
+      18310.0
+    ],
+    "transaction_value_currency": [
+      "EUR"
+    ]
+  },
+  {
+    "iati_identifier": "NL-KVK-40409352-PRJ13-179-0010",
+    "transaction_value": [
+      500000.0
+    ],
+    "transaction_value_currency": [
+      "EUR"
+    ]
+  },
+  {
+    "iati_identifier": "NL-KVK-40409352-PRJ13-179-0010",
+    "transaction_value": [
+      32500.0
+    ],
+    "transaction_value_currency": [
+      "EUR"
+    ]
+  },
+  {
+    "iati_identifier": "NL-KVK-40409352-PRJ13-179-0007",
+    "transaction_value": [
+      187793.0
+    ],
+    "transaction_value_currency": [
+      "EUR"
+    ]
+  },
+  {
+    "iati_identifier": "NL-KVK-40409352-PRJ13-179-0007",
+    "transaction_value": [
+      12207.0
+    ],
+    "transaction_value_currency": [
+      "EUR"
+    ]
+  },
+  {
+    "iati_identifier": "NL-KVK-40409352-PRJ13-179-0012",
+    "transaction_value": [
+      445814.0
+    ],
+    "transaction_value_currency": [
+      "EUR"
+    ]
+  },
+  {
+    "iati_identifier": "NL-KVK-40409352-PRJ13-179-0012",
+    "transaction_value": [
+      33436.0
+    ],
+    "transaction_value_currency": [
+      "EUR"
+    ]
+  },
+  {
+    "iati_identifier": "NL-KVK-40409352-PRJ13-179-0015",
+    "transaction_value": [
+      550000.0
+    ],
+    "transaction_value_currency": [
+      "EUR"
+    ]
+  },
+  {
+    "iati_identifier": "NL-KVK-40409352-PRJ13-179-0015",
+    "transaction_value": [
+      35750.0
+    ],
+    "transaction_value_currency": [
+      "EUR"
+    ]
+  },
+  {
+    "iati_identifier": "NL-KVK-40409352-PRJ13-179-0005",
+    "transaction_value": [
+      300000.0
+    ],
+    "transaction_value_currency": [
+      "EUR"
+    ]
+  },
+  {
+    "iati_identifier": "NL-KVK-40409352-PRJ13-179-0005",
+    "transaction_value": [
+      19500.0
+    ],
+    "transaction_value_currency": [
+      "EUR"
+    ]
+  },
+  {
+    "iati_identifier": "NL-KVK-40409352-PRJ13-179-0002",
+    "transaction_value": [
+      200000.0
+    ],
+    "transaction_value_currency": [
+      "EUR"
+    ]
+  },
+  {
+    "iati_identifier": "NL-KVK-40409352-PRJ13-179-0002",
+    "transaction_value": [
+      13000.0
+    ],
+    "transaction_value_currency": [
+      "EUR"
+    ]
+  },
+  {
+    "iati_identifier": "NL-KVK-40409352-PRJ13-179-0009",
+    "transaction_value": [
+      400000.0
+    ],
+    "transaction_value_currency": [
+      "EUR"
+    ]
+  },
+  {
+    "iati_identifier": "NL-KVK-40409352-PRJ13-179-0009",
+    "transaction_value": [
+      26000.0
+    ],
+    "transaction_value_currency": [
+      "EUR"
+    ]
+  },
+  {
+    "iati_identifier": "NL-KVK-40409352-PRJ13-179-0013",
+    "transaction_value": [
+      -277395.0
+    ],
+    "transaction_value_currency": [
+      "EUR"
+    ]
+  },
+  {
+    "iati_identifier": "NL-KVK-40409352-PRJ13-179-0013",
+    "transaction_value": [
+      -20805.0
+    ],
+    "transaction_value_currency": [
+      "EUR"
+    ]
+  },
+  {
+    "iati_identifier": "NL-KVK-40409352-PRJ13-179-0013",
+    "transaction_value": [
+      277395.0
+    ],
+    "transaction_value_currency": [
+      "EUR"
+    ]
+  },
+  {
+    "iati_identifier": "NL-KVK-40409352-PRJ13-179-0013",
+    "transaction_value": [
+      20805.0
+    ],
+    "transaction_value_currency": [
+      "EUR"
+    ]
+  },
+  {
+    "iati_identifier": "NL-KVK-40409352-PRJ13-179-0013",
+    "transaction_value": [
+      173372.0
+    ],
+    "transaction_value_currency": [
+      "EUR"
+    ]
+  },
+  {
+    "iati_identifier": "NL-KVK-40409352-PRJ13-179-0013",
+    "transaction_value": [
+      13003.0
+    ],
+    "transaction_value_currency": [
+      "EUR"
+    ]
+  },
+  {
+    "iati_identifier": "NL-KVK-40409352-PRJ13-179-0003",
+    "transaction_value": [
+      500000.0
+    ],
+    "transaction_value_currency": [
+      "EUR"
+    ]
+  },
+  {
+    "iati_identifier": "NL-KVK-40409352-PRJ13-179-0003",
+    "transaction_value": [
+      32500.0
+    ],
+    "transaction_value_currency": [
+      "EUR"
+    ]
+  },
+  {
+    "iati_identifier": "NL-KVK-40409352-PRJ13-217-0005",
+    "transaction_value": [
+      -197222.0
+    ],
+    "transaction_value_currency": [
+      "EUR"
+    ]
+  },
+  {
+    "iati_identifier": "NL-KVK-40409352-PRJ13-217-0005",
+    "transaction_value": [
+      -15778.0
+    ],
+    "transaction_value_currency": [
+      "EUR"
+    ]
+  },
+  {
+    "iati_identifier": "NL-KVK-40409352-PRJ13-217-0005",
+    "transaction_value": [
+      200000.0
+    ],
+    "transaction_value_currency": [
+      "EUR"
+    ]
+  },
+  {
+    "iati_identifier": "NL-KVK-40409352-PRJ13-217-0005",
+    "transaction_value": [
+      13000.0
+    ],
+    "transaction_value_currency": [
+      "EUR"
+    ]
+  },
+  {
+    "iati_identifier": "NL-KVK-40409352-PRJ13-217-0005",
+    "transaction_value": [
+      197222.0
+    ],
+    "transaction_value_currency": [
+      "EUR"
+    ]
+  },
+  {
+    "iati_identifier": "NL-KVK-40409352-PRJ13-217-0005",
+    "transaction_value": [
+      15778.0
+    ],
+    "transaction_value_currency": [
+      "EUR"
+    ]
+  },
+  {
+    "iati_identifier": "NL-KVK-40409352-PRJ13-217-0005",
+    "transaction_value": [
+      281690.0
+    ],
+    "transaction_value_currency": [
+      "EUR"
+    ]
+  },
+  {
+    "iati_identifier": "NL-KVK-40409352-PRJ13-217-0005",
+    "transaction_value": [
+      18310.0
+    ],
+    "transaction_value_currency": [
+      "EUR"
+    ]
+  },
+  {
+    "iati_identifier": "NL-KVK-40409352-PRJ13-217-0005",
+    "transaction_value": [
+      -281690.0
+    ],
+    "transaction_value_currency": [
+      "EUR"
+    ]
+  },
+  {
+    "iati_identifier": "NL-KVK-40409352-PRJ13-217-0005",
+    "transaction_value": [
+      -18310.0
+    ],
+    "transaction_value_currency": [
+      "EUR"
+    ]
+  },
+  {
+    "iati_identifier": "NL-KVK-40409352-PRJ13-217-0005",
+    "transaction_value": [
+      281690.0
+    ],
+    "transaction_value_currency": [
+      "EUR"
+    ]
+  },
+  {
+    "iati_identifier": "NL-KVK-40409352-PRJ13-217-0005",
+    "transaction_value": [
+      18310.0
+    ],
+    "transaction_value_currency": [
+      "EUR"
+    ]
+  },
+  {
+    "iati_identifier": "NL-KVK-40409352-PRJ13-172-0001",
+    "transaction_value": [
+      5571.0
+    ],
+    "transaction_value_currency": [
+      "EUR"
+    ]
+  },
+  {
+    "iati_identifier": "NL-KVK-40409352-PRJ13-172-0001",
+    "transaction_value": [
+      418.0
+    ],
+    "transaction_value_currency": [
+      "EUR"
+    ]
+  },
+  {
+    "iati_identifier": "NL-KVK-40409352-PRJ13-172-0001",
+    "transaction_value": [
+      145392.0
+    ],
+    "transaction_value_currency": [
+      "EUR"
+    ]
+  },
+  {
+    "iati_identifier": "NL-KVK-40409352-PRJ13-172-0001",
+    "transaction_value": [
+      10904.0
+    ],
+    "transaction_value_currency": [
+      "EUR"
+    ]
+  },
+  {
+    "iati_identifier": "NL-KVK-40409352-PRJ13-172-0001",
+    "transaction_value": [
+      152029.0
+    ],
+    "transaction_value_currency": [
+      "EUR"
+    ]
+  },
+  {
+    "iati_identifier": "NL-KVK-40409352-PRJ13-172-0001",
+    "transaction_value": [
+      11402.0
+    ],
+    "transaction_value_currency": [
+      "EUR"
+    ]
+  },
+  {
+    "iati_identifier": "NL-KVK-40409352-PRJ13-123-0016",
+    "transaction_value": [
+      930233.0
+    ],
+    "transaction_value_currency": [
+      "EUR"
+    ]
+  },
+  {
+    "iati_identifier": "NL-KVK-40409352-PRJ13-123-0016",
+    "transaction_value": [
+      69767.0
+    ],
+    "transaction_value_currency": [
+      "EUR"
+    ]
+  },
+  {
+    "iati_identifier": "NL-KVK-40409352-PRJ13-158-0002",
+    "transaction_value": [
+      150000.0
+    ],
+    "transaction_value_currency": [
+      "EUR"
+    ]
+  },
+  {
+    "iati_identifier": "NL-KVK-40409352-PRJ13-158-0002",
+    "transaction_value": [
+      9750.0
+    ],
+    "transaction_value_currency": [
+      "EUR"
+    ]
+  },
+  {
+    "iati_identifier": "NL-KVK-40409352-PRJ13-158-0004",
+    "transaction_value": [
+      150000.0
+    ],
+    "transaction_value_currency": [
+      "EUR"
+    ]
+  },
+  {
+    "iati_identifier": "NL-KVK-40409352-PRJ13-158-0004",
+    "transaction_value": [
+      9750.0
+    ],
+    "transaction_value_currency": [
+      "EUR"
+    ]
+  },
+  {
+    "iati_identifier": "NL-KVK-40409352-PRJ13-131-0001",
+    "transaction_value": [
+      328638.0
+    ],
+    "transaction_value_currency": [
+      "EUR"
+    ]
+  },
+  {
+    "iati_identifier": "NL-KVK-40409352-PRJ13-131-0001",
+    "transaction_value": [
+      21362.0
+    ],
+    "transaction_value_currency": [
+      "EUR"
+    ]
+  },
+  {
+    "iati_identifier": "NL-KVK-40409352-PRJ13-190-0004",
+    "transaction_value": [
+      402000.0
+    ],
+    "transaction_value_currency": [
+      "EUR"
+    ]
+  },
+  {
+    "iati_identifier": "NL-KVK-40409352-PRJ13-190-0004",
+    "transaction_value": [
+      30150.0
+    ],
+    "transaction_value_currency": [
+      "EUR"
+    ]
+  },
+  {
+    "iati_identifier": "NL-KVK-40409352-PRJ13-190-0005",
+    "transaction_value": [
+      550000.0
+    ],
+    "transaction_value_currency": [
+      "EUR"
+    ]
+  },
+  {
+    "iati_identifier": "NL-KVK-40409352-PRJ13-190-0005",
+    "transaction_value": [
+      41250.0
+    ],
+    "transaction_value_currency": [
+      "EUR"
+    ]
+  },
+  {
+    "iati_identifier": "NL-KVK-40409352-PRJ13-190-0010",
+    "transaction_value": [
+      100000.0
+    ],
+    "transaction_value_currency": [
+      "EUR"
+    ]
+  },
+  {
+    "iati_identifier": "NL-KVK-40409352-PRJ13-190-0010",
+    "transaction_value": [
+      7500.0
+    ],
+    "transaction_value_currency": [
+      "EUR"
+    ]
+  },
+  {
+    "iati_identifier": "NL-KVK-40409352-PRJ13-190-0002",
+    "transaction_value": [
+      30000.0
+    ],
+    "transaction_value_currency": [
+      "EUR"
+    ]
+  },
+  {
+    "iati_identifier": "NL-KVK-40409352-PRJ13-190-0002",
+    "transaction_value": [
+      1950.0
+    ],
+    "transaction_value_currency": [
+      "EUR"
+    ]
+  },
+  {
+    "iati_identifier": "NL-KVK-40409352-PRJ13-190-0006",
+    "transaction_value": [
+      -16250.0
+    ],
+    "transaction_value_currency": [
+      "EUR"
+    ]
+  },
+  {
+    "iati_identifier": "NL-KVK-40409352-PRJ13-190-0006",
+    "transaction_value": [
+      16250.0
+    ],
+    "transaction_value_currency": [
+      "EUR"
+    ]
+  },
+  {
+    "iati_identifier": "NL-KVK-40409352-PRJ13-190-0006",
+    "transaction_value": [
+      250000.0
+    ],
+    "transaction_value_currency": [
+      "EUR"
+    ]
+  },
+  {
+    "iati_identifier": "NL-KVK-40409352-PRJ13-190-0006",
+    "transaction_value": [
+      16250.0
+    ],
+    "transaction_value_currency": [
+      "EUR"
+    ]
+  },
+  {
+    "iati_identifier": "NL-KVK-40409352-PRJ13-157-0008",
+    "transaction_value": [
+      418605.0
+    ],
+    "transaction_value_currency": [
+      "EUR"
+    ]
+  },
+  {
+    "iati_identifier": "NL-KVK-40409352-PRJ13-157-0008",
+    "transaction_value": [
+      31395.0
+    ],
+    "transaction_value_currency": [
+      "EUR"
+    ]
+  },
+  {
+    "iati_identifier": "NL-KVK-40409352-PRJ13-157-0008",
+    "transaction_value": [
+      46512.0
+    ],
+    "transaction_value_currency": [
+      "EUR"
+    ]
+  },
+  {
+    "iati_identifier": "NL-KVK-40409352-PRJ13-157-0008",
+    "transaction_value": [
+      3488.0
+    ],
+    "transaction_value_currency": [
+      "EUR"
+    ]
+  },
+  {
+    "iati_identifier": "NL-KVK-40409352-PRJ13-157-0008",
+    "transaction_value": [
+      695814.0
+    ],
+    "transaction_value_currency": [
+      "EUR"
+    ]
+  },
+  {
+    "iati_identifier": "NL-KVK-40409352-PRJ13-157-0008",
+    "transaction_value": [
+      52186.0
+    ],
+    "transaction_value_currency": [
+      "EUR"
+    ]
+  },
+  {
+    "iati_identifier": "NL-KVK-40409352-PRJ13-022-0001",
+    "transaction_value": [
+      27465.0
+    ],
+    "transaction_value_currency": [
+      "EUR"
+    ]
+  },
+  {
+    "iati_identifier": "NL-KVK-40409352-PRJ08-256-0008",
+    "transaction_value": [
+      50195.0
+    ],
+    "transaction_value_currency": [
+      "EUR"
+    ]
+  },
+  {
+    "iati_identifier": "NL-KVK-40409352-PRJ08-256-0008",
+    "transaction_value": [
+      3765.0
+    ],
+    "transaction_value_currency": [
+      "EUR"
+    ]
+  },
+  {
+    "iati_identifier": "NL-KVK-40409352-PRJ08-256-0006",
+    "transaction_value": [
+      2488.0
+    ],
+    "transaction_value_currency": [
+      "EUR"
+    ]
+  },
+  {
+    "iati_identifier": "NL-KVK-40409352-PRJ08-288-0007",
+    "transaction_value": [
+      56338.0
+    ],
+    "transaction_value_currency": [
+      "EUR"
+    ]
+  },
+  {
+    "iati_identifier": "NL-KVK-40409352-PRJ08-288-0007",
+    "transaction_value": [
+      3662.0
+    ],
+    "transaction_value_currency": [
+      "EUR"
+    ]
+  },
+  {
+    "iati_identifier": "NL-KVK-40409352-PRJ08-288-0003",
+    "transaction_value": [
+      -84582.0
+    ],
+    "transaction_value_currency": [
+      "EUR"
+    ]
+  },
+  {
+    "iati_identifier": "NL-KVK-40409352-PRJ08-288-0003",
+    "transaction_value": [
+      281690.0
+    ],
+    "transaction_value_currency": [
+      "EUR"
+    ]
+  },
+  {
+    "iati_identifier": "NL-KVK-40409352-PRJ08-288-0003",
+    "transaction_value": [
+      18310.0
+    ],
+    "transaction_value_currency": [
+      "EUR"
+    ]
+  },
+  {
+    "iati_identifier": "NL-KVK-40409352-PRJ08-285-0005",
+    "transaction_value": [
+      9767.0
+    ],
+    "transaction_value_currency": [
+      "EUR"
+    ]
+  },
+  {
+    "iati_identifier": "NL-KVK-40409352-PRJ08-285-0012",
+    "transaction_value": [
+      8450.0
+    ],
+    "transaction_value_currency": [
+      "EUR"
+    ]
+  },
+  {
+    "iati_identifier": "NL-KVK-40409352-PRJ08-285-0010",
+    "transaction_value": [
+      20930.0
+    ],
+    "transaction_value_currency": [
+      "EUR"
+    ]
+  },
+  {
+    "iati_identifier": "NL-KVK-40409352-PRJ08-285-0007",
+    "transaction_value": [
+      62865.0
+    ],
+    "transaction_value_currency": [
+      "EUR"
+    ]
+  },
+  {
+    "iati_identifier": "NL-KVK-40409352-PRJ08-285-0007",
+    "transaction_value": [
+      4715.0
+    ],
+    "transaction_value_currency": [
+      "EUR"
+    ]
+  },
+  {
+    "iati_identifier": "NL-KVK-40409352-PRJ08-218-0002",
+    "transaction_value": [
+      21890.0
+    ],
+    "transaction_value_currency": [
+      "EUR"
+    ]
+  },
+  {
+    "iati_identifier": "NL-KVK-40409352-PRJ08-218-0003",
+    "transaction_value": [
+      -21890.0
+    ],
+    "transaction_value_currency": [
+      "EUR"
+    ]
+  },
+  {
+    "iati_identifier": "NL-KVK-40409352-PRJ08-221-0003",
+    "transaction_value": [
+      -56338.0
+    ],
+    "transaction_value_currency": [
+      "EUR"
+    ]
+  },
+  {
+    "iati_identifier": "NL-KVK-40409352-PRJ08-221-0003",
+    "transaction_value": [
+      -3662.0
+    ],
+    "transaction_value_currency": [
+      "EUR"
+    ]
+  },
+  {
+    "iati_identifier": "NL-KVK-40409352-PRJ08-221-0003",
+    "transaction_value": [
+      36944.0
+    ],
+    "transaction_value_currency": [
+      "EUR"
+    ]
+  },
+  {
+    "iati_identifier": "NL-KVK-40409352-PRJ08-221-0003",
+    "transaction_value": [
+      2401.0
+    ],
+    "transaction_value_currency": [
+      "EUR"
+    ]
+  },
+  {
+    "iati_identifier": "NL-KVK-40409352-PRJ08-221-0003",
+    "transaction_value": [
+      28169.0
+    ],
+    "transaction_value_currency": [
+      "EUR"
+    ]
+  },
+  {
+    "iati_identifier": "NL-KVK-40409352-PRJ08-221-0003",
+    "transaction_value": [
+      1831.0
+    ],
+    "transaction_value_currency": [
+      "EUR"
+    ]
+  },
+  {
+    "iati_identifier": "NL-KVK-40409352-PRJ08-221-0003",
+    "transaction_value": [
+      46948.0
+    ],
+    "transaction_value_currency": [
+      "EUR"
+    ]
+  },
+  {
+    "iati_identifier": "NL-KVK-40409352-PRJ08-221-0003",
+    "transaction_value": [
+      3052.0
+    ],
+    "transaction_value_currency": [
+      "EUR"
+    ]
+  },
+  {
+    "iati_identifier": "NL-KVK-40409352-PRJ08-221-0003",
+    "transaction_value": [
+      56338.0
+    ],
+    "transaction_value_currency": [
+      "EUR"
+    ]
+  },
+  {
+    "iati_identifier": "NL-KVK-40409352-PRJ08-221-0003",
+    "transaction_value": [
+      3662.0
+    ],
+    "transaction_value_currency": [
+      "EUR"
+    ]
+  },
+  {
+    "iati_identifier": "NL-KVK-40409352-PRJ08-221-0003",
+    "transaction_value": [
+      56338.0
+    ],
+    "transaction_value_currency": [
+      "EUR"
+    ]
+  },
+  {
+    "iati_identifier": "NL-KVK-40409352-PRJ08-221-0003",
+    "transaction_value": [
+      3662.0
+    ],
+    "transaction_value_currency": [
+      "EUR"
+    ]
+  },
+  {
+    "iati_identifier": "NL-KVK-40409352-PRJ08-221-0003",
+    "transaction_value": [
+      18779.0
+    ],
+    "transaction_value_currency": [
+      "EUR"
+    ]
+  },
+  {
+    "iati_identifier": "NL-KVK-40409352-PRJ08-221-0003",
+    "transaction_value": [
+      1221.0
+    ],
+    "transaction_value_currency": [
+      "EUR"
+    ]
+  },
+  {
+    "iati_identifier": "NL-KVK-40409352-PRJ08-221-0003",
+    "transaction_value": [
+      53521.0
+    ],
+    "transaction_value_currency": [
+      "EUR"
+    ]
+  },
+  {
+    "iati_identifier": "NL-KVK-40409352-PRJ08-221-0003",
+    "transaction_value": [
+      3479.0
+    ],
+    "transaction_value_currency": [
+      "EUR"
+    ]
+  },
+  {
+    "iati_identifier": "NL-KVK-40409352-PRJ08-221-0003",
+    "transaction_value": [
+      56338.0
+    ],
+    "transaction_value_currency": [
+      "EUR"
+    ]
+  },
+  {
+    "iati_identifier": "NL-KVK-40409352-PRJ08-221-0003",
+    "transaction_value": [
+      3662.0
+    ],
+    "transaction_value_currency": [
+      "EUR"
+    ]
+  },
+  {
+    "iati_identifier": "NL-KVK-40409352-PRJ08-221-0003",
+    "transaction_value": [
+      56338.0
+    ],
+    "transaction_value_currency": [
+      "EUR"
+    ]
+  },
+  {
+    "iati_identifier": "NL-KVK-40409352-PRJ08-221-0003",
+    "transaction_value": [
+      3662.0
+    ],
+    "transaction_value_currency": [
+      "EUR"
+    ]
+  },
+  {
+    "iati_identifier": "NL-KVK-40409352-PRJ08-221-0003",
+    "transaction_value": [
+      46948.0
+    ],
+    "transaction_value_currency": [
+      "EUR"
+    ]
+  },
+  {
+    "iati_identifier": "NL-KVK-40409352-PRJ08-221-0003",
+    "transaction_value": [
+      3052.0
+    ],
+    "transaction_value_currency": [
+      "EUR"
+    ]
+  },
+  {
+    "iati_identifier": "NL-KVK-40409352-PRJ08-221-0003",
+    "transaction_value": [
+      37559.0
+    ],
+    "transaction_value_currency": [
+      "EUR"
+    ]
+  },
+  {
+    "iati_identifier": "NL-KVK-40409352-PRJ08-221-0003",
+    "transaction_value": [
+      2441.0
+    ],
+    "transaction_value_currency": [
+      "EUR"
+    ]
+  },
+  {
+    "iati_identifier": "NL-KVK-40409352-PRJ08-221-0003",
+    "transaction_value": [
+      56338.0
+    ],
+    "transaction_value_currency": [
+      "EUR"
+    ]
+  },
+  {
+    "iati_identifier": "NL-KVK-40409352-PRJ08-221-0003",
+    "transaction_value": [
+      3662.0
+    ],
+    "transaction_value_currency": [
+      "EUR"
+    ]
+  },
+  {
+    "iati_identifier": "NL-KVK-40409352-PRJ08-221-0003",
+    "transaction_value": [
+      47170.0
+    ],
+    "transaction_value_currency": [
+      "EUR"
+    ]
+  },
+  {
+    "iati_identifier": "NL-KVK-40409352-PRJ08-221-0003",
+    "transaction_value": [
+      3066.0
+    ],
+    "transaction_value_currency": [
+      "EUR"
+    ]
+  },
+  {
+    "iati_identifier": "NL-KVK-40409352-PRJ08-221-0003",
+    "transaction_value": [
+      75117.0
+    ],
+    "transaction_value_currency": [
+      "EUR"
+    ]
+  },
+  {
+    "iati_identifier": "NL-KVK-40409352-PRJ08-221-0003",
+    "transaction_value": [
+      4883.0
+    ],
+    "transaction_value_currency": [
+      "EUR"
+    ]
+  },
+  {
+    "iati_identifier": "NL-KVK-40409352-PRJ08-221-0003",
+    "transaction_value": [
+      75117.0
+    ],
+    "transaction_value_currency": [
+      "EUR"
+    ]
+  },
+  {
+    "iati_identifier": "NL-KVK-40409352-PRJ08-221-0003",
+    "transaction_value": [
+      4883.0
+    ],
+    "transaction_value_currency": [
+      "EUR"
+    ]
+  },
+  {
+    "iati_identifier": "NL-KVK-40409352-PRJ08-232-0007",
+    "transaction_value": [
+      61033.0
+    ],
+    "transaction_value_currency": [
+      "EUR"
+    ]
+  },
+  {
+    "iati_identifier": "NL-KVK-40409352-PRJ08-232-0007",
+    "transaction_value": [
+      1000000.0
+    ],
+    "transaction_value_currency": [
+      "EUR"
+    ]
+  },
+  {
+    "iati_identifier": "NL-KVK-40409352-PRJ08-234-0009",
+    "transaction_value": [
+      17089.0
+    ],
+    "transaction_value_currency": [
+      "EUR"
+    ]
+  },
+  {
+    "iati_identifier": "NL-KVK-40409352-PRJ08-234-0010",
+    "transaction_value": [
+      9070.0
+    ],
+    "transaction_value_currency": [
+      "EUR"
+    ]
+  },
+  {
+    "iati_identifier": "NL-KVK-40409352-PRJ08-234-0011",
+    "transaction_value": [
+      22600.0
+    ],
+    "transaction_value_currency": [
+      "EUR"
+    ]
+  },
+  {
+    "iati_identifier": "NL-KVK-40409352-PRJ08-234-0011",
+    "transaction_value": [
+      1695.0
+    ],
+    "transaction_value_currency": [
+      "EUR"
+    ]
+  },
+  {
+    "iati_identifier": "NL-KVK-40409352-PRJ08-234-0011",
+    "transaction_value": [
+      130000.0
+    ],
+    "transaction_value_currency": [
+      "EUR"
+    ]
+  },
+  {
+    "iati_identifier": "NL-KVK-40409352-PRJ08-234-0011",
+    "transaction_value": [
+      9750.0
+    ],
+    "transaction_value_currency": [
+      "EUR"
+    ]
+  },
+  {
+    "iati_identifier": "NL-KVK-40409352-PRJ08-234-0016",
+    "transaction_value": [
+      12441.0
+    ],
+    "transaction_value_currency": [
+      "EUR"
+    ]
+  },
+  {
+    "iati_identifier": "NL-KVK-40409352-PRJ08-234-0012",
+    "transaction_value": [
+      1000000.0
+    ],
+    "transaction_value_currency": [
+      "EUR"
+    ]
+  },
+  {
+    "iati_identifier": "NL-KVK-40409352-PRJ08-234-0012",
+    "transaction_value": [
+      75000.0
+    ],
+    "transaction_value_currency": [
+      "EUR"
+    ]
+  },
+  {
+    "iati_identifier": "NL-KVK-40409352-PRJ08-234-0015",
+    "transaction_value": [
+      80000.0
+    ],
+    "transaction_value_currency": [
+      "EUR"
+    ]
+  },
+  {
+    "iati_identifier": "NL-KVK-40409352-PRJ08-234-0015",
+    "transaction_value": [
+      6000.0
+    ],
+    "transaction_value_currency": [
+      "EUR"
+    ]
+  },
+  {
+    "iati_identifier": "NL-KVK-40409352-PRJ08-234-0002",
+    "transaction_value": [
+      1000000.0
+    ],
+    "transaction_value_currency": [
+      "EUR"
+    ]
+  },
+  {
+    "iati_identifier": "NL-KVK-40409352-PRJ08-234-0004",
+    "transaction_value": [
+      244131.0
+    ],
+    "transaction_value_currency": [
+      "EUR"
+    ]
+  },
+  {
+    "iati_identifier": "NL-KVK-40409352-PRJ08-234-0006",
+    "transaction_value": [
+      90349.0
+    ],
+    "transaction_value_currency": [
+      "EUR"
+    ]
+  },
+  {
+    "iati_identifier": "NL-KVK-40409352-PRJ08-234-0007",
+    "transaction_value": [
+      130000.0
+    ],
+    "transaction_value_currency": [
+      "EUR"
+    ]
+  },
+  {
+    "iati_identifier": "NL-KVK-40409352-PRJ08-234-0005",
+    "transaction_value": [
+      3430.0
+    ],
+    "transaction_value_currency": [
+      "EUR"
+    ]
+  },
+  {
+    "iati_identifier": "NL-KVK-40409352-PRJ08-234-0017",
+    "transaction_value": [
+      15313.0
+    ],
+    "transaction_value_currency": [
+      "EUR"
+    ]
+  },
+  {
+    "iati_identifier": "NL-KVK-40409352-PRJ08-234-0017",
+    "transaction_value": [
+      995.0
+    ],
+    "transaction_value_currency": [
+      "EUR"
+    ]
+  },
+  {
+    "iati_identifier": "NL-KVK-40409352-PRJ08-282-0003",
+    "transaction_value": [
+      152113.0
+    ],
+    "transaction_value_currency": [
+      "EUR"
+    ]
+  },
+  {
+    "iati_identifier": "NL-KVK-40409352-PRJ08-282-0003",
+    "transaction_value": [
+      9887.0
+    ],
+    "transaction_value_currency": [
+      "EUR"
+    ]
+  },
+  {
+    "iati_identifier": "NL-KVK-40409352-PRJ08-192-0008",
+    "transaction_value": [
+      11163.0
+    ],
+    "transaction_value_currency": [
+      "EUR"
+    ]
+  },
+  {
+    "iati_identifier": "NL-KVK-40409352-PRJ08-193-0012",
+    "transaction_value": [
+      234742.0
+    ],
+    "transaction_value_currency": [
+      "EUR"
+    ]
+  },
+  {
+    "iati_identifier": "NL-KVK-40409352-PRJ08-193-0012",
+    "transaction_value": [
+      15258.0
+    ],
+    "transaction_value_currency": [
+      "EUR"
+    ]
+  },
+  {
+    "iati_identifier": "NL-KVK-40409352-PRJ08-274-0005",
+    "transaction_value": [
+      56338.0
+    ],
+    "transaction_value_currency": [
+      "EUR"
+    ]
+  },
+  {
+    "iati_identifier": "NL-KVK-40409352-PRJ08-274-0005",
+    "transaction_value": [
+      3662.0
+    ],
+    "transaction_value_currency": [
+      "EUR"
+    ]
+  },
+  {
+    "iati_identifier": "NL-KVK-40409352-PRJ08-260-0006",
+    "transaction_value": [
+      -20968.0
+    ],
+    "transaction_value_currency": [
+      "EUR"
+    ]
+  },
+  {
+    "iati_identifier": "NL-KVK-40409352-PRJ08-260-0006",
+    "transaction_value": [
+      -36822.0
+    ],
+    "transaction_value_currency": [
+      "EUR"
+    ]
+  },
+  {
+    "iati_identifier": "NL-KVK-40409352-PRJ08-260-0006",
+    "transaction_value": [
+      20968.0
+    ],
+    "transaction_value_currency": [
+      "EUR"
+    ]
+  },
+  {
+    "iati_identifier": "NL-KVK-40409352-PRJ08-260-0006",
+    "transaction_value": [
+      54900.0
+    ],
+    "transaction_value_currency": [
+      "EUR"
+    ]
+  },
+  {
+    "iati_identifier": "NL-KVK-40409352-PRJ08-260-0007",
+    "transaction_value": [
+      -41474.0
+    ],
+    "transaction_value_currency": [
+      "EUR"
+    ]
+  },
+  {
+    "iati_identifier": "NL-KVK-40409352-PRJ08-260-0007",
+    "transaction_value": [
+      -105657.0
+    ],
+    "transaction_value_currency": [
+      "EUR"
+    ]
+  },
+  {
+    "iati_identifier": "NL-KVK-40409352-PRJ08-260-0007",
+    "transaction_value": [
+      105657.0
+    ],
+    "transaction_value_currency": [
+      "EUR"
+    ]
+  },
+  {
+    "iati_identifier": "NL-KVK-40409352-PRJ08-260-0007",
+    "transaction_value": [
+      -7396.0
+    ],
+    "transaction_value_currency": [
+      "EUR"
+    ]
+  },
+  {
+    "iati_identifier": "NL-KVK-40409352-PRJ08-260-0007",
+    "transaction_value": [
+      7396.0
+    ],
+    "transaction_value_currency": [
+      "EUR"
+    ]
+  },
+  {
+    "iati_identifier": "NL-KVK-40409352-PRJ08-260-0007",
+    "transaction_value": [
+      264152.0
+    ],
+    "transaction_value_currency": [
+      "EUR"
+    ]
+  },
+  {
+    "iati_identifier": "NL-KVK-40409352-PRJ08-260-0007",
+    "transaction_value": [
+      19811.0
+    ],
+    "transaction_value_currency": [
+      "EUR"
+    ]
+  },
+  {
+    "iati_identifier": "NL-KVK-40409352-PRJ08-260-0007",
+    "transaction_value": [
+      105657.0
+    ],
+    "transaction_value_currency": [
+      "EUR"
+    ]
+  },
+  {
+    "iati_identifier": "NL-KVK-40409352-PRJ08-260-0007",
+    "transaction_value": [
+      7396.0
+    ],
+    "transaction_value_currency": [
+      "EUR"
+    ]
+  },
+  {
+    "iati_identifier": "NL-KVK-40409352-PRJ08-260-0007",
+    "transaction_value": [
+      5459.0
+    ],
+    "transaction_value_currency": [
+      "EUR"
+    ]
+  },
+  {
+    "iati_identifier": "NL-KVK-40409352-PRJ08-260-0007",
+    "transaction_value": [
+      4232.0
+    ],
+    "transaction_value_currency": [
+      "EUR"
+    ]
+  },
+  {
+    "iati_identifier": "NL-KVK-40409352-PRJ08-260-0007",
+    "transaction_value": [
+      56433.0
+    ],
+    "transaction_value_currency": [
+      "EUR"
+    ]
+  },
+  {
+    "iati_identifier": "NL-KVK-40409352-PRJ08-173-0017",
+    "transaction_value": [
+      2502.0
+    ],
+    "transaction_value_currency": [
+      "EUR"
+    ]
+  },
+  {
+    "iati_identifier": "NL-KVK-40409352-PRJ08-173-0017",
+    "transaction_value": [
+      2441.0
+    ],
+    "transaction_value_currency": [
+      "EUR"
+    ]
+  },
+  {
+    "iati_identifier": "NL-KVK-40409352-PRJ08-173-0016",
+    "transaction_value": [
+      1125.0
+    ],
+    "transaction_value_currency": [
+      "EUR"
+    ]
+  },
+  {
+    "iati_identifier": "NL-KVK-40409352-PRJ08-173-0018",
+    "transaction_value": [
+      7115.0
+    ],
+    "transaction_value_currency": [
+      "EUR"
+    ]
+  },
+  {
+    "iati_identifier": "NL-KVK-40409352-PRJ08-173-0018",
+    "transaction_value": [
+      -915.0
+    ],
+    "transaction_value_currency": [
+      "EUR"
+    ]
+  },
+  {
+    "iati_identifier": "NL-KVK-40409352-PRJ08-173-0018",
+    "transaction_value": [
+      915.0
+    ],
+    "transaction_value_currency": [
+      "EUR"
+    ]
+  },
+  {
+    "iati_identifier": "NL-KVK-40409352-PRJ08-173-0018",
+    "transaction_value": [
+      3967.0
+    ],
+    "transaction_value_currency": [
+      "EUR"
+    ]
+  },
+  {
+    "iati_identifier": "NL-KVK-40409352-PRJ08-173-0012",
+    "transaction_value": [
+      84507.0
+    ],
+    "transaction_value_currency": [
+      "EUR"
+    ]
+  },
+  {
+    "iati_identifier": "NL-KVK-40409352-PRJ08-173-0012",
+    "transaction_value": [
+      5493.0
+    ],
+    "transaction_value_currency": [
+      "EUR"
+    ]
+  },
+  {
+    "iati_identifier": "NL-KVK-40409352-PRJ08-173-0013",
+    "transaction_value": [
+      46948.0
+    ],
+    "transaction_value_currency": [
+      "EUR"
+    ]
+  },
+  {
+    "iati_identifier": "NL-KVK-40409352-PRJ08-173-0013",
+    "transaction_value": [
+      3052.0
+    ],
+    "transaction_value_currency": [
+      "EUR"
+    ]
+  },
+  {
+    "iati_identifier": "NL-KVK-40409352-PRJ08-242-0003",
+    "transaction_value": [
+      915.0
+    ],
+    "transaction_value_currency": [
+      "EUR"
+    ]
+  },
+  {
+    "iati_identifier": "NL-KVK-40409352-PRJ08-245-0002",
+    "transaction_value": [
+      -60097.0
+    ],
+    "transaction_value_currency": [
+      "EUR"
+    ]
+  },
+  {
+    "iati_identifier": "NL-KVK-40409352-PRJ08-245-0002",
+    "transaction_value": [
+      -3906.0
+    ],
+    "transaction_value_currency": [
+      "EUR"
+    ]
+  },
+  {
+    "iati_identifier": "NL-KVK-40409352-PRJ08-249-0003",
+    "transaction_value": [
+      56338.0
+    ],
+    "transaction_value_currency": [
+      "EUR"
+    ]
+  },
+  {
+    "iati_identifier": "NL-KVK-40409352-PRJ08-249-0003",
+    "transaction_value": [
+      3662.0
+    ],
+    "transaction_value_currency": [
+      "EUR"
+    ]
+  },
+  {
+    "iati_identifier": "NL-KVK-40409352-PRJ08-251-0009",
+    "transaction_value": [
+      6488.0
+    ],
+    "transaction_value_currency": [
+      "EUR"
+    ]
+  },
+  {
+    "iati_identifier": "NL-KVK-40409352-PRJ08-251-0009",
+    "transaction_value": [
+      -287.0
+    ],
+    "transaction_value_currency": [
+      "EUR"
+    ]
+  },
+  {
+    "iati_identifier": "NL-KVK-40409352-PRJ08-251-0009",
+    "transaction_value": [
+      -3511.0
+    ],
+    "transaction_value_currency": [
+      "EUR"
+    ]
+  },
+  {
+    "iati_identifier": "NL-KVK-40409352-PRJ08-251-0009",
+    "transaction_value": [
+      3511.0
+    ],
+    "transaction_value_currency": [
+      "EUR"
+    ]
+  },
+  {
+    "iati_identifier": "NL-KVK-40409352-PRJ08-251-0009",
+    "transaction_value": [
+      3511.0
+    ],
+    "transaction_value_currency": [
+      "EUR"
+    ]
+  },
+  {
+    "iati_identifier": "NL-KVK-40409352-PRJ08-251-0009",
+    "transaction_value": [
+      46512.0
+    ],
+    "transaction_value_currency": [
+      "EUR"
+    ]
+  },
+  {
+    "iati_identifier": "NL-KVK-40409352-PRJ08-251-0009",
+    "transaction_value": [
+      3488.0
+    ],
+    "transaction_value_currency": [
+      "EUR"
+    ]
+  },
+  {
+    "iati_identifier": "NL-KVK-40409352-PRJ08-251-0009",
+    "transaction_value": [
+      46512.0
+    ],
+    "transaction_value_currency": [
+      "EUR"
+    ]
+  },
+  {
+    "iati_identifier": "NL-KVK-40409352-PRJ08-251-0009",
+    "transaction_value": [
+      3488.0
+    ],
+    "transaction_value_currency": [
+      "EUR"
+    ]
+  },
+  {
+    "iati_identifier": "NL-KVK-40409352-PRJ08-251-0006",
+    "transaction_value": [
+      46948.0
+    ],
+    "transaction_value_currency": [
+      "EUR"
+    ]
+  },
+  {
+    "iati_identifier": "NL-KVK-40409352-PRJ08-251-0006",
+    "transaction_value": [
+      3052.0
+    ],
+    "transaction_value_currency": [
+      "EUR"
+    ]
+  },
+  {
+    "iati_identifier": "NL-KVK-40409352-PRJ08-251-0006",
+    "transaction_value": [
+      234742.0
+    ],
+    "transaction_value_currency": [
+      "EUR"
+    ]
+  },
+  {
+    "iati_identifier": "NL-KVK-40409352-PRJ08-251-0006",
+    "transaction_value": [
+      15258.0
+    ],
+    "transaction_value_currency": [
+      "EUR"
+    ]
+  },
+  {
+    "iati_identifier": "NL-KVK-40409352-PRJ08-251-0007",
+    "transaction_value": [
+      112676.0
+    ],
+    "transaction_value_currency": [
+      "EUR"
+    ]
+  },
+  {
+    "iati_identifier": "NL-KVK-40409352-PRJ08-251-0007",
+    "transaction_value": [
+      7324.0
+    ],
+    "transaction_value_currency": [
+      "EUR"
+    ]
+  },
+  {
+    "iati_identifier": "NL-KVK-40409352-PRJ08-251-0003",
+    "transaction_value": [
+      -8195.0
+    ],
+    "transaction_value_currency": [
+      "EUR"
+    ]
+  },
+  {
+    "iati_identifier": "NL-KVK-40409352-PRJ08-251-0003",
+    "transaction_value": [
+      -533.0
+    ],
+    "transaction_value_currency": [
+      "EUR"
+    ]
+  },
+  {
+    "iati_identifier": "NL-KVK-40409352-PRJ08-251-0004",
+    "transaction_value": [
+      -40779.0
+    ],
+    "transaction_value_currency": [
+      "EUR"
+    ]
+  },
+  {
+    "iati_identifier": "NL-KVK-40409352-PRJ08-251-0004",
+    "transaction_value": [
+      -2651.0
+    ],
+    "transaction_value_currency": [
+      "EUR"
+    ]
+  },
+  {
+    "iati_identifier": "NL-KVK-40409352-PRJ08-251-0013",
+    "transaction_value": [
+      307790.0
+    ],
+    "transaction_value_currency": [
+      "EUR"
+    ]
+  },
+  {
+    "iati_identifier": "NL-KVK-40409352-PRJ08-251-0013",
+    "transaction_value": [
+      23084.0
+    ],
+    "transaction_value_currency": [
+      "EUR"
+    ]
+  },
+  {
+    "iati_identifier": "NL-KVK-40409352-PRJ08-251-0010",
+    "transaction_value": [
+      61033.0
+    ],
+    "transaction_value_currency": [
+      "EUR"
+    ]
+  },
+  {
+    "iati_identifier": "NL-KVK-40409352-PRJ08-251-0010",
+    "transaction_value": [
+      3967.0
+    ],
+    "transaction_value_currency": [
+      "EUR"
+    ]
+  },
+  {
+    "iati_identifier": "NL-KVK-40409352-PRJ08-251-0016",
+    "transaction_value": [
+      14948.0
+    ],
+    "transaction_value_currency": [
+      "EUR"
+    ]
+  },
+  {
+    "iati_identifier": "NL-KVK-40409352-PRJ08-251-0016",
+    "transaction_value": [
+      27907.0
+    ],
+    "transaction_value_currency": [
+      "EUR"
+    ]
+  },
+  {
+    "iati_identifier": "NL-KVK-40409352-PRJ08-251-0017",
+    "transaction_value": [
+      465116.0
+    ],
+    "transaction_value_currency": [
+      "EUR"
+    ]
+  },
+  {
+    "iati_identifier": "NL-KVK-40409352-PRJ08-251-0017",
+    "transaction_value": [
+      34884.0
+    ],
+    "transaction_value_currency": [
+      "EUR"
+    ]
+  },
+  {
+    "iati_identifier": "NL-KVK-40409352-PRJ08-251-0015",
+    "transaction_value": [
+      525000.0
+    ],
+    "transaction_value_currency": [
+      "EUR"
+    ]
+  },
+  {
+    "iati_identifier": "NL-KVK-40409352-PRJ08-251-0015",
+    "transaction_value": [
+      34125.0
+    ],
+    "transaction_value_currency": [
+      "EUR"
+    ]
+  },
+  {
+    "iati_identifier": "NL-KVK-40409352-PRJ08-251-0014",
+    "transaction_value": [
+      12207.0
+    ],
+    "transaction_value_currency": [
+      "EUR"
+    ]
+  },
+  {
+    "iati_identifier": "NL-KVK-40409352-PRJ08-251-0011",
+    "transaction_value": [
+      45775.0
+    ],
+    "transaction_value_currency": [
+      "EUR"
+    ]
+  },
+  {
+    "iati_identifier": "NL-KVK-40409352-PRJ08-251-0011",
+    "transaction_value": [
+      751174.0
+    ],
+    "transaction_value_currency": [
+      "EUR"
+    ]
+  },
+  {
+    "iati_identifier": "NL-KVK-40409352-PRJ08-251-0011",
+    "transaction_value": [
+      48826.0
+    ],
+    "transaction_value_currency": [
+      "EUR"
+    ]
+  },
+  {
+    "iati_identifier": "NL-KVK-40409352-PRJ08-251-0024",
+    "transaction_value": [
+      32500.0
+    ],
+    "transaction_value_currency": [
+      "EUR"
+    ]
+  },
+  {
+    "iati_identifier": "NL-KVK-40409352-PRJ08-251-0023",
+    "transaction_value": [
+      24108.0
+    ],
+    "transaction_value_currency": [
+      "EUR"
+    ]
+  },
+  {
+    "iati_identifier": "NL-KVK-40409352-PRJ08-251-0019",
+    "transaction_value": [
+      328638.0
+    ],
+    "transaction_value_currency": [
+      "EUR"
+    ]
+  },
+  {
+    "iati_identifier": "NL-KVK-40409352-PRJ08-251-0019",
+    "transaction_value": [
+      21362.0
+    ],
+    "transaction_value_currency": [
+      "EUR"
+    ]
+  },
+  {
+    "iati_identifier": "NL-KVK-40409352-PRJ13-171-0001",
+    "transaction_value": [
+      16024.0
+    ],
+    "transaction_value_currency": [
+      "EUR"
+    ]
+  },
+  {
+    "iati_identifier": "NL-KVK-40409352-PRJ13-171-0001",
+    "transaction_value": [
+      1042.0
+    ],
+    "transaction_value_currency": [
+      "EUR"
+    ]
+  },
+  {
+    "iati_identifier": "NL-KVK-40409352-PRJ13-171-0001",
+    "transaction_value": [
+      213663.0
+    ],
+    "transaction_value_currency": [
+      "EUR"
+    ]
+  },
+  {
+    "iati_identifier": "NL-KVK-40409352-PRJ13-171-0001",
+    "transaction_value": [
+      16025.0
+    ],
+    "transaction_value_currency": [
+      "EUR"
+    ]
+  },
+  {
+    "iati_identifier": "NL-KVK-40409352-PRJ13-154-0010",
+    "transaction_value": [
+      -28169.0
+    ],
+    "transaction_value_currency": [
+      "EUR"
+    ]
+  },
+  {
+    "iati_identifier": "NL-KVK-40409352-PRJ13-154-0010",
+    "transaction_value": [
+      -1831.0
+    ],
+    "transaction_value_currency": [
+      "EUR"
+    ]
+  },
+  {
+    "iati_identifier": "NL-KVK-40409352-PRJ13-154-0010",
+    "transaction_value": [
+      28169.0
+    ],
+    "transaction_value_currency": [
+      "EUR"
+    ]
+  },
+  {
+    "iati_identifier": "NL-KVK-40409352-PRJ13-154-0010",
+    "transaction_value": [
+      1831.0
+    ],
+    "transaction_value_currency": [
+      "EUR"
+    ]
+  },
+  {
+    "iati_identifier": "NL-KVK-40409352-PRJ13-154-0013",
+    "transaction_value": [
+      99540.0
+    ],
+    "transaction_value_currency": [
+      "EUR"
+    ]
+  },
+  {
+    "iati_identifier": "NL-KVK-40409352-PRJ13-154-0013",
+    "transaction_value": [
+      7466.0
+    ],
+    "transaction_value_currency": [
+      "EUR"
+    ]
+  },
+  {
+    "iati_identifier": "NL-KVK-40409352-PRJ13-209-0001",
+    "transaction_value": [
+      500000.0
+    ],
+    "transaction_value_currency": [
+      "EUR"
+    ]
+  },
+  {
+    "iati_identifier": "NL-KVK-40409352-PRJ13-209-0001",
+    "transaction_value": [
+      37500.0
+    ],
+    "transaction_value_currency": [
+      "EUR"
+    ]
+  },
+  {
+    "iati_identifier": "NL-KVK-40409352-PRJ13-125-0001",
+    "transaction_value": [
+      24074.0
+    ],
+    "transaction_value_currency": [
+      "EUR"
+    ]
+  },
+  {
+    "iati_identifier": "NL-KVK-40409352-PRJ13-220-0001",
+    "transaction_value": [
+      205700.0
+    ],
+    "transaction_value_currency": [
+      "EUR"
+    ]
+  },
+  {
+    "iati_identifier": "NL-KVK-40409352-PRJ13-220-0001",
+    "transaction_value": [
+      13370.0
+    ],
+    "transaction_value_currency": [
+      "EUR"
+    ]
+  },
+  {
+    "iati_identifier": "NL-KVK-40409352-PRJ13-220-0003",
+    "transaction_value": [
+      300000.0
+    ],
+    "transaction_value_currency": [
+      "EUR"
+    ]
+  },
+  {
+    "iati_identifier": "NL-KVK-40409352-PRJ13-220-0003",
+    "transaction_value": [
+      19500.0
+    ],
+    "transaction_value_currency": [
+      "EUR"
+    ]
+  },
+  {
+    "iati_identifier": "NL-KVK-40409352-PRJ13-220-0014",
+    "transaction_value": [
+      4651.0
+    ],
+    "transaction_value_currency": [
+      "EUR"
+    ]
+  },
+  {
+    "iati_identifier": "NL-KVK-40409352-PRJ13-220-0014",
+    "transaction_value": [
+      349.0
+    ],
+    "transaction_value_currency": [
+      "EUR"
+    ]
+  },
+  {
+    "iati_identifier": "NL-KVK-40409352-PRJ13-220-0014",
+    "transaction_value": [
+      181446.0
+    ],
+    "transaction_value_currency": [
+      "EUR"
+    ]
+  },
+  {
+    "iati_identifier": "NL-KVK-40409352-PRJ13-220-0014",
+    "transaction_value": [
+      13608.0
+    ],
+    "transaction_value_currency": [
+      "EUR"
+    ]
+  },
+  {
+    "iati_identifier": "NL-KVK-40409352-PRJ13-220-0014",
+    "transaction_value": [
+      186044.0
+    ],
+    "transaction_value_currency": [
+      "EUR"
+    ]
+  },
+  {
+    "iati_identifier": "NL-KVK-40409352-PRJ13-220-0014",
+    "transaction_value": [
+      13956.0
+    ],
+    "transaction_value_currency": [
+      "EUR"
+    ]
+  },
+  {
+    "iati_identifier": "NL-KVK-40409352-PRJ13-220-0005",
+    "transaction_value": [
+      209300.0
+    ],
+    "transaction_value_currency": [
+      "EUR"
+    ]
+  },
+  {
+    "iati_identifier": "NL-KVK-40409352-PRJ13-220-0005",
+    "transaction_value": [
+      15698.0
+    ],
+    "transaction_value_currency": [
+      "EUR"
+    ]
+  },
+  {
+    "iati_identifier": "NL-KVK-40409352-PRJ13-220-0006",
+    "transaction_value": [
+      288500.0
+    ],
+    "transaction_value_currency": [
+      "EUR"
+    ]
+  },
+  {
+    "iati_identifier": "NL-KVK-40409352-PRJ13-220-0006",
+    "transaction_value": [
+      21638.0
+    ],
+    "transaction_value_currency": [
+      "EUR"
+    ]
+  },
+  {
+    "iati_identifier": "NL-KVK-40409352-PRJ13-220-0007",
+    "transaction_value": [
+      284164.0
+    ],
+    "transaction_value_currency": [
+      "EUR"
+    ]
+  },
+  {
+    "iati_identifier": "NL-KVK-40409352-PRJ13-220-0007",
+    "transaction_value": [
+      21312.0
+    ],
+    "transaction_value_currency": [
+      "EUR"
+    ]
+  },
+  {
+    "iati_identifier": "NL-KVK-40409352-PRJ13-220-0010",
+    "transaction_value": [
+      341500.0
+    ],
+    "transaction_value_currency": [
+      "EUR"
+    ]
+  },
+  {
+    "iati_identifier": "NL-KVK-40409352-PRJ13-220-0010",
+    "transaction_value": [
+      25612.0
+    ],
+    "transaction_value_currency": [
+      "EUR"
+    ]
+  },
+  {
+    "iati_identifier": "NL-KVK-40409352-PRJ13-130-0001",
+    "transaction_value": [
+      234742.0
+    ],
+    "transaction_value_currency": [
+      "EUR"
+    ]
+  },
+  {
+    "iati_identifier": "NL-KVK-40409352-PRJ13-130-0001",
+    "transaction_value": [
+      15258.0
+    ],
+    "transaction_value_currency": [
+      "EUR"
+    ]
+  },
+  {
+    "iati_identifier": "NL-KVK-40409352-PRJ13-140-0001",
+    "transaction_value": [
+      187793.0
+    ],
+    "transaction_value_currency": [
+      "EUR"
+    ]
+  },
+  {
+    "iati_identifier": "NL-KVK-40409352-PRJ13-140-0001",
+    "transaction_value": [
+      12207.0
+    ],
+    "transaction_value_currency": [
+      "EUR"
+    ]
+  },
+  {
+    "iati_identifier": "NL-KVK-40409352-PRJ13-177-0002",
+    "transaction_value": [
+      160246.0
+    ],
+    "transaction_value_currency": [
+      "EUR"
+    ]
+  },
+  {
+    "iati_identifier": "NL-KVK-40409352-PRJ13-177-0002",
+    "transaction_value": [
+      10416.0
+    ],
+    "transaction_value_currency": [
+      "EUR"
+    ]
+  },
+  {
+    "iati_identifier": "NL-KVK-40409352-PRJ13-177-0002",
+    "transaction_value": [
+      690428.0
+    ],
+    "transaction_value_currency": [
+      "EUR"
+    ]
+  },
+  {
+    "iati_identifier": "NL-KVK-40409352-PRJ13-177-0002",
+    "transaction_value": [
+      44878.0
+    ],
+    "transaction_value_currency": [
+      "EUR"
+    ]
+  },
+  {
+    "iati_identifier": "NL-KVK-40409352-PRJ13-177-0003",
+    "transaction_value": [
+      970093.0
+    ],
+    "transaction_value_currency": [
+      "EUR"
+    ]
+  },
+  {
+    "iati_identifier": "NL-KVK-40409352-PRJ13-177-0003",
+    "transaction_value": [
+      63056.0
+    ],
+    "transaction_value_currency": [
+      "EUR"
+    ]
+  },
+  {
+    "iati_identifier": "NL-KVK-40409352-PRJ13-177-0001",
+    "transaction_value": [
+      690428.0
+    ],
+    "transaction_value_currency": [
+      "EUR"
+    ]
+  },
+  {
+    "iati_identifier": "NL-KVK-40409352-PRJ13-177-0001",
+    "transaction_value": [
+      44878.0
+    ],
+    "transaction_value_currency": [
+      "EUR"
+    ]
+  },
+  {
+    "iati_identifier": "NL-KVK-40409352-PRJ13-141-0001",
+    "transaction_value": [
+      281690.0
+    ],
+    "transaction_value_currency": [
+      "EUR"
+    ]
+  },
+  {
+    "iati_identifier": "NL-KVK-40409352-PRJ13-141-0001",
+    "transaction_value": [
+      18310.0
+    ],
+    "transaction_value_currency": [
+      "EUR"
+    ]
+  },
+  {
+    "iati_identifier": "NL-KVK-40409352-PRJ13-141-0003",
+    "transaction_value": [
+      700000.0
+    ],
+    "transaction_value_currency": [
+      "EUR"
+    ]
+  },
+  {
+    "iati_identifier": "NL-KVK-40409352-PRJ13-141-0003",
+    "transaction_value": [
+      45500.0
+    ],
+    "transaction_value_currency": [
+      "EUR"
+    ]
+  },
+  {
+    "iati_identifier": "NL-KVK-40409352-PRJ13-141-0002",
+    "transaction_value": [
+      400000.0
+    ],
+    "transaction_value_currency": [
+      "EUR"
+    ]
+  },
+  {
+    "iati_identifier": "NL-KVK-40409352-PRJ13-141-0002",
+    "transaction_value": [
+      30000.0
+    ],
+    "transaction_value_currency": [
+      "EUR"
+    ]
+  },
+  {
+    "iati_identifier": "NL-KVK-40409352-PRJ13-132-0011",
+    "transaction_value": [
+      500000.0
+    ],
+    "transaction_value_currency": [
+      "EUR"
+    ]
+  },
+  {
+    "iati_identifier": "NL-KVK-40409352-PRJ13-132-0011",
+    "transaction_value": [
+      32500.0
+    ],
+    "transaction_value_currency": [
+      "EUR"
+    ]
+  },
+  {
+    "iati_identifier": "NL-KVK-40409352-PRJ13-051-0001",
+    "transaction_value": [
+      9155.0
+    ],
+    "transaction_value_currency": [
+      "EUR"
+    ]
+  },
+  {
+    "iati_identifier": "NL-KVK-40409352-PRJ13-042-0001",
+    "transaction_value": [
+      15258.0
+    ],
+    "transaction_value_currency": [
+      "EUR"
+    ]
+  },
+  {
+    "iati_identifier": "NL-KVK-40409352-PRJ13-045-0005",
+    "transaction_value": [
+      -7324.0
+    ],
+    "transaction_value_currency": [
+      "EUR"
+    ]
+  },
+  {
+    "iati_identifier": "NL-KVK-40409352-PRJ13-045-0005",
+    "transaction_value": [
+      7324.0
+    ],
+    "transaction_value_currency": [
+      "EUR"
+    ]
+  },
+  {
+    "iati_identifier": "NL-KVK-40409352-PRJ13-045-0005",
+    "transaction_value": [
+      106541.0
+    ],
+    "transaction_value_currency": [
+      "EUR"
+    ]
+  },
+  {
+    "iati_identifier": "NL-KVK-40409352-PRJ13-045-0003",
+    "transaction_value": [
+      61033.0
+    ],
+    "transaction_value_currency": [
+      "EUR"
+    ]
+  },
+  {
+    "iati_identifier": "NL-KVK-40409352-PRJ13-045-0001",
+    "transaction_value": [
+      30516.0
+    ],
+    "transaction_value_currency": [
+      "EUR"
+    ]
+  },
+  {
+    "iati_identifier": "NL-KVK-40409352-PRJ13-045-0004",
+    "transaction_value": [
+      41860.0
+    ],
+    "transaction_value_currency": [
+      "EUR"
+    ]
+  },
+  {
+    "iati_identifier": "NL-KVK-40409352-PRJ13-045-0004",
+    "transaction_value": [
+      69767.0
+    ],
+    "transaction_value_currency": [
+      "EUR"
+    ]
+  },
+  {
+    "iati_identifier": "NL-KVK-40409352-PRJ13-030-0003",
+    "transaction_value": [
+      -27545.0
+    ],
+    "transaction_value_currency": [
+      "EUR"
+    ]
+  },
+  {
+    "iati_identifier": "NL-KVK-40409352-PRJ13-030-0003",
+    "transaction_value": [
+      37570.0
+    ],
+    "transaction_value_currency": [
+      "EUR"
+    ]
+  },
+  {
+    "iati_identifier": "NL-KVK-40409352-PRJ13-030-0003",
+    "transaction_value": [
+      18666.0
+    ],
+    "transaction_value_currency": [
+      "EUR"
+    ]
+  },
+  {
+    "iati_identifier": "NL-KVK-40409352-PRJ13-037-0003",
+    "transaction_value": [
+      200000.0
+    ],
+    "transaction_value_currency": [
+      "EUR"
+    ]
+  },
+  {
+    "iati_identifier": "NL-KVK-40409352-PRJ13-037-0003",
+    "transaction_value": [
+      13000.0
+    ],
+    "transaction_value_currency": [
+      "EUR"
+    ]
+  },
+  {
+    "iati_identifier": "NL-KVK-40409352-PRJ13-037-0011",
+    "transaction_value": [
+      -167442.0
+    ],
+    "transaction_value_currency": [
+      "EUR"
+    ]
+  },
+  {
+    "iati_identifier": "NL-KVK-40409352-PRJ13-037-0011",
+    "transaction_value": [
+      -1877934.0
+    ],
+    "transaction_value_currency": [
+      "EUR"
+    ]
+  },
+  {
+    "iati_identifier": "NL-KVK-40409352-PRJ13-037-0011",
+    "transaction_value": [
+      -12558.0
+    ],
+    "transaction_value_currency": [
+      "EUR"
+    ]
+  },
+  {
+    "iati_identifier": "NL-KVK-40409352-PRJ13-037-0011",
+    "transaction_value": [
+      -122066.0
+    ],
+    "transaction_value_currency": [
+      "EUR"
+    ]
+  },
+  {
+    "iati_identifier": "NL-KVK-40409352-PRJ13-037-0011",
+    "transaction_value": [
+      1877934.0
+    ],
+    "transaction_value_currency": [
+      "EUR"
+    ]
+  },
+  {
+    "iati_identifier": "NL-KVK-40409352-PRJ13-037-0011",
+    "transaction_value": [
+      122066.0
+    ],
+    "transaction_value_currency": [
+      "EUR"
+    ]
+  },
+  {
+    "iati_identifier": "NL-KVK-40409352-PRJ13-037-0011",
+    "transaction_value": [
+      167442.0
+    ],
+    "transaction_value_currency": [
+      "EUR"
+    ]
+  },
+  {
+    "iati_identifier": "NL-KVK-40409352-PRJ13-037-0011",
+    "transaction_value": [
+      12558.0
+    ],
+    "transaction_value_currency": [
+      "EUR"
+    ]
+  },
+  {
+    "iati_identifier": "NL-KVK-40409352-PRJ13-037-0011",
+    "transaction_value": [
+      167442.0
+    ],
+    "transaction_value_currency": [
+      "EUR"
+    ]
+  },
+  {
+    "iati_identifier": "NL-KVK-40409352-PRJ13-037-0011",
+    "transaction_value": [
+      1877934.0
+    ],
+    "transaction_value_currency": [
+      "EUR"
+    ]
+  },
+  {
+    "iati_identifier": "NL-KVK-40409352-PRJ13-037-0011",
+    "transaction_value": [
+      12558.0
+    ],
+    "transaction_value_currency": [
+      "EUR"
+    ]
+  },
+  {
+    "iati_identifier": "NL-KVK-40409352-PRJ13-037-0011",
+    "transaction_value": [
+      122066.0
+    ],
+    "transaction_value_currency": [
+      "EUR"
+    ]
+  },
+  {
+    "iati_identifier": "NL-KVK-40409352-PRJ13-037-0011",
+    "transaction_value": [
+      -167442.0
+    ],
+    "transaction_value_currency": [
+      "EUR"
+    ]
+  },
+  {
+    "iati_identifier": "NL-KVK-40409352-PRJ13-037-0011",
+    "transaction_value": [
+      -1877934.0
+    ],
+    "transaction_value_currency": [
+      "EUR"
+    ]
+  },
+  {
+    "iati_identifier": "NL-KVK-40409352-PRJ13-037-0011",
+    "transaction_value": [
+      -12558.0
+    ],
+    "transaction_value_currency": [
+      "EUR"
+    ]
+  },
+  {
+    "iati_identifier": "NL-KVK-40409352-PRJ13-037-0011",
+    "transaction_value": [
+      -122066.0
+    ],
+    "transaction_value_currency": [
+      "EUR"
+    ]
+  },
+  {
+    "iati_identifier": "NL-KVK-40409352-PRJ13-037-0011",
+    "transaction_value": [
+      167442.0
+    ],
+    "transaction_value_currency": [
+      "EUR"
+    ]
+  },
+  {
+    "iati_identifier": "NL-KVK-40409352-PRJ13-037-0011",
+    "transaction_value": [
+      1877934.0
+    ],
+    "transaction_value_currency": [
+      "EUR"
+    ]
+  },
+  {
+    "iati_identifier": "NL-KVK-40409352-PRJ13-037-0011",
+    "transaction_value": [
+      12558.0
+    ],
+    "transaction_value_currency": [
+      "EUR"
+    ]
+  },
+  {
+    "iati_identifier": "NL-KVK-40409352-PRJ13-037-0011",
+    "transaction_value": [
+      122066.0
+    ],
+    "transaction_value_currency": [
+      "EUR"
+    ]
+  },
+  {
+    "iati_identifier": "NL-KVK-40409352-PRJ13-037-0018",
+    "transaction_value": [
+      691292.0
+    ],
+    "transaction_value_currency": [
+      "EUR"
+    ]
+  },
+  {
+    "iati_identifier": "NL-KVK-40409352-PRJ13-037-0018",
+    "transaction_value": [
+      51847.0
+    ],
+    "transaction_value_currency": [
+      "EUR"
+    ]
+  },
+  {
+    "iati_identifier": "NL-KVK-40409352-PRJ13-037-0025",
+    "transaction_value": [
+      16901.0
+    ],
+    "transaction_value_currency": [
+      "EUR"
+    ]
+  },
+  {
+    "iati_identifier": "NL-KVK-40409352-PRJ13-037-0025",
+    "transaction_value": [
+      1099.0
+    ],
+    "transaction_value_currency": [
+      "EUR"
+    ]
+  },
+  {
+    "iati_identifier": "NL-KVK-40409352-PRJ13-037-0025",
+    "transaction_value": [
+      2317867.0
+    ],
+    "transaction_value_currency": [
+      "EUR"
+    ]
+  },
+  {
+    "iati_identifier": "NL-KVK-40409352-PRJ13-037-0025",
+    "transaction_value": [
+      150661.0
+    ],
+    "transaction_value_currency": [
+      "EUR"
+    ]
+  },
+  {
+    "iati_identifier": "NL-KVK-40409352-PRJ13-037-0016",
+    "transaction_value": [
+      -172395.0
+    ],
+    "transaction_value_currency": [
+      "EUR"
+    ]
+  },
+  {
+    "iati_identifier": "NL-KVK-40409352-PRJ13-037-0016",
+    "transaction_value": [
+      -12930.0
+    ],
+    "transaction_value_currency": [
+      "EUR"
+    ]
+  },
+  {
+    "iati_identifier": "NL-KVK-40409352-PRJ13-037-0016",
+    "transaction_value": [
+      172395.0
+    ],
+    "transaction_value_currency": [
+      "EUR"
+    ]
+  },
+  {
+    "iati_identifier": "NL-KVK-40409352-PRJ13-037-0016",
+    "transaction_value": [
+      12930.0
+    ],
+    "transaction_value_currency": [
+      "EUR"
+    ]
+  },
+  {
+    "iati_identifier": "NL-KVK-40409352-PRJ13-037-0016",
+    "transaction_value": [
+      172395.0
+    ],
+    "transaction_value_currency": [
+      "EUR"
+    ]
+  },
+  {
+    "iati_identifier": "NL-KVK-40409352-PRJ13-037-0016",
+    "transaction_value": [
+      12930.0
+    ],
+    "transaction_value_currency": [
+      "EUR"
+    ]
+  },
+  {
+    "iati_identifier": "NL-KVK-40409352-PRJ13-039-0001",
+    "transaction_value": [
+      8545.0
+    ],
+    "transaction_value_currency": [
+      "EUR"
+    ]
+  },
+  {
+    "iati_identifier": "NL-KVK-40409352-PRJ13-043-0001",
+    "transaction_value": [
+      1706.0
+    ],
+    "transaction_value_currency": [
+      "EUR"
+    ]
+  },
+  {
+    "iati_identifier": "NL-KVK-40409352-PRJ13-043-0001",
+    "transaction_value": [
+      11818.0
+    ],
+    "transaction_value_currency": [
+      "EUR"
+    ]
+  },
+  {
+    "iati_identifier": "NL-KVK-40409352-PRJ13-150-0001",
+    "transaction_value": [
+      375587.0
+    ],
+    "transaction_value_currency": [
+      "EUR"
+    ]
+  },
+  {
+    "iati_identifier": "NL-KVK-40409352-PRJ13-150-0001",
+    "transaction_value": [
+      24413.0
+    ],
+    "transaction_value_currency": [
+      "EUR"
+    ]
+  },
+  {
+    "iati_identifier": "NL-KVK-40409352-PRJ13-122-0004",
+    "transaction_value": [
+      234742.0
+    ],
+    "transaction_value_currency": [
+      "EUR"
+    ]
+  },
+  {
+    "iati_identifier": "NL-KVK-40409352-PRJ13-122-0004",
+    "transaction_value": [
+      15258.0
+    ],
+    "transaction_value_currency": [
+      "EUR"
+    ]
+  },
+  {
+    "iati_identifier": "NL-KVK-40409352-PRJ13-218-0001",
+    "transaction_value": [
+      1812728.0
+    ],
+    "transaction_value_currency": [
+      "EUR"
+    ]
+  },
+  {
+    "iati_identifier": "NL-KVK-40409352-PRJ13-218-0001",
+    "transaction_value": [
+      117827.0
+    ],
+    "transaction_value_currency": [
+      "EUR"
+    ]
+  },
+  {
+    "iati_identifier": "NL-KVK-40409352-PRJ13-218-0001",
+    "transaction_value": [
+      2816901.0
+    ],
+    "transaction_value_currency": [
+      "EUR"
+    ]
+  },
+  {
+    "iati_identifier": "NL-KVK-40409352-PRJ13-218-0001",
+    "transaction_value": [
+      183099.0
+    ],
+    "transaction_value_currency": [
+      "EUR"
+    ]
+  },
+  {
+    "iati_identifier": "NL-KVK-40409352-PRJ13-218-0002",
+    "transaction_value": [
+      167.0
+    ],
+    "transaction_value_currency": [
+      "EUR"
+    ]
+  },
+  {
+    "iati_identifier": "NL-KVK-40409352-PRJ13-218-0002",
+    "transaction_value": [
+      11.0
+    ],
+    "transaction_value_currency": [
+      "EUR"
+    ]
+  },
+  {
+    "iati_identifier": "NL-KVK-40409352-PRJ13-218-0002",
+    "transaction_value": [
+      11918.0
+    ],
+    "transaction_value_currency": [
+      "EUR"
+    ]
+  },
+  {
+    "iati_identifier": "NL-KVK-40409352-PRJ13-218-0002",
+    "transaction_value": [
+      775.0
+    ],
+    "transaction_value_currency": [
+      "EUR"
+    ]
+  },
+  {
+    "iati_identifier": "NL-KVK-40409352-PRJ13-020-0001",
+    "transaction_value": [
+      375587.0
+    ],
+    "transaction_value_currency": [
+      "EUR"
+    ]
+  },
+  {
+    "iati_identifier": "NL-KVK-40409352-PRJ13-020-0001",
+    "transaction_value": [
+      24413.0
+    ],
+    "transaction_value_currency": [
+      "EUR"
+    ]
+  },
+  {
+    "iati_identifier": "NL-KVK-40409352-PRJ13-020-0003",
+    "transaction_value": [
+      234742.0
+    ],
+    "transaction_value_currency": [
+      "EUR"
+    ]
+  },
+  {
+    "iati_identifier": "NL-KVK-40409352-PRJ13-020-0003",
+    "transaction_value": [
+      15258.0
+    ],
+    "transaction_value_currency": [
+      "EUR"
+    ]
+  },
+  {
+    "iati_identifier": "NL-KVK-40409352-PRJ13-020-0002",
+    "transaction_value": [
+      46948.0
+    ],
+    "transaction_value_currency": [
+      "EUR"
+    ]
+  },
+  {
+    "iati_identifier": "NL-KVK-40409352-PRJ13-020-0002",
+    "transaction_value": [
+      3052.0
+    ],
+    "transaction_value_currency": [
+      "EUR"
+    ]
+  },
+  {
+    "iati_identifier": "NL-KVK-40409352-PRJ13-020-0006",
+    "transaction_value": [
+      14930.0
+    ],
+    "transaction_value_currency": [
+      "EUR"
+    ]
+  },
+  {
+    "iati_identifier": "NL-KVK-40409352-PRJ13-020-0005",
+    "transaction_value": [
+      6408.0
+    ],
+    "transaction_value_currency": [
+      "EUR"
+    ]
+  },
+  {
+    "iati_identifier": "NL-KVK-40409352-PRJ13-020-0007",
+    "transaction_value": [
+      3370.0
+    ],
+    "transaction_value_currency": [
+      "EUR"
+    ]
+  },
+  {
+    "iati_identifier": "NL-KVK-40409352-PRJ13-020-0007",
+    "transaction_value": [
+      17700.0
+    ],
+    "transaction_value_currency": [
+      "EUR"
+    ]
+  },
+  {
+    "iati_identifier": "NL-KVK-40409352-PRJ13-020-0008",
+    "transaction_value": [
+      3357.0
+    ],
+    "transaction_value_currency": [
+      "EUR"
+    ]
+  },
+  {
+    "iati_identifier": "NL-KVK-40409352-PRJ13-026-0001",
+    "transaction_value": [
+      2285.0
+    ],
+    "transaction_value_currency": [
+      "EUR"
+    ]
+  },
+  {
+    "iati_identifier": "NL-KVK-40409352-PRJ13-029-0001",
+    "transaction_value": [
+      14648.0
+    ],
+    "transaction_value_currency": [
+      "EUR"
+    ]
+  },
+  {
+    "iati_identifier": "NL-KVK-40409352-PRJ13-152-0005",
+    "transaction_value": [
+      50000.0
+    ],
+    "transaction_value_currency": [
+      "EUR"
+    ]
+  },
+  {
+    "iati_identifier": "NL-KVK-40409352-PRJ13-152-0005",
+    "transaction_value": [
+      3250.0
+    ],
+    "transaction_value_currency": [
+      "EUR"
+    ]
+  },
+  {
+    "iati_identifier": "NL-KVK-40409352-PRJ13-192-0011",
+    "transaction_value": [
+      750000.0
+    ],
+    "transaction_value_currency": [
+      "EUR"
+    ]
+  },
+  {
+    "iati_identifier": "NL-KVK-40409352-PRJ13-192-0011",
+    "transaction_value": [
+      48750.0
+    ],
+    "transaction_value_currency": [
+      "EUR"
+    ]
+  },
+  {
+    "iati_identifier": "NL-KVK-40409352-PRJ13-192-0009",
+    "transaction_value": [
+      750000.0
+    ],
+    "transaction_value_currency": [
+      "EUR"
+    ]
+  },
+  {
+    "iati_identifier": "NL-KVK-40409352-PRJ13-192-0009",
+    "transaction_value": [
+      48750.0
+    ],
+    "transaction_value_currency": [
+      "EUR"
+    ]
+  },
+  {
+    "iati_identifier": "NL-KVK-40409352-PRJ13-192-0005",
+    "transaction_value": [
+      428837.0
+    ],
+    "transaction_value_currency": [
+      "EUR"
+    ]
+  },
+  {
+    "iati_identifier": "NL-KVK-40409352-PRJ13-192-0005",
+    "transaction_value": [
+      32163.0
+    ],
+    "transaction_value_currency": [
+      "EUR"
+    ]
+  },
+  {
+    "iati_identifier": "NL-KVK-40409352-PRJ13-192-0005",
+    "transaction_value": [
+      32163.0
+    ],
+    "transaction_value_currency": [
+      "EUR"
+    ]
+  },
+  {
+    "iati_identifier": "NL-KVK-40409352-PRJ13-192-0005",
+    "transaction_value": [
+      2412.0
+    ],
+    "transaction_value_currency": [
+      "EUR"
+    ]
+  },
+  {
+    "iati_identifier": "NL-KVK-40409352-PRJ13-192-0010",
+    "transaction_value": [
+      -251168.0
+    ],
+    "transaction_value_currency": [
+      "EUR"
+    ]
+  },
+  {
+    "iati_identifier": "NL-KVK-40409352-PRJ13-192-0010",
+    "transaction_value": [
+      -18838.0
+    ],
+    "transaction_value_currency": [
+      "EUR"
+    ]
+  },
+  {
+    "iati_identifier": "NL-KVK-40409352-PRJ13-192-0010",
+    "transaction_value": [
+      251168.0
+    ],
+    "transaction_value_currency": [
+      "EUR"
+    ]
+  },
+  {
+    "iati_identifier": "NL-KVK-40409352-PRJ13-192-0010",
+    "transaction_value": [
+      18838.0
+    ],
+    "transaction_value_currency": [
+      "EUR"
+    ]
+  },
+  {
+    "iati_identifier": "NL-KVK-40409352-PRJ13-192-0010",
+    "transaction_value": [
+      251168.0
+    ],
+    "transaction_value_currency": [
+      "EUR"
+    ]
+  },
+  {
+    "iati_identifier": "NL-KVK-40409352-PRJ13-192-0010",
+    "transaction_value": [
+      18838.0
+    ],
+    "transaction_value_currency": [
+      "EUR"
+    ]
+  },
+  {
+    "iati_identifier": "NL-KVK-40409352-PRJ13-192-0003",
+    "transaction_value": [
+      -1170.0
+    ],
+    "transaction_value_currency": [
+      "EUR"
+    ]
+  },
+  {
+    "iati_identifier": "NL-KVK-40409352-PRJ13-192-0003",
+    "transaction_value": [
+      1170.0
+    ],
+    "transaction_value_currency": [
+      "EUR"
+    ]
+  },
+  {
+    "iati_identifier": "NL-KVK-40409352-PRJ13-192-0003",
+    "transaction_value": [
+      18000.0
+    ],
+    "transaction_value_currency": [
+      "EUR"
+    ]
+  },
+  {
+    "iati_identifier": "NL-KVK-40409352-PRJ13-192-0003",
+    "transaction_value": [
+      1170.0
+    ],
+    "transaction_value_currency": [
+      "EUR"
+    ]
+  },
+  {
+    "iati_identifier": "NL-KVK-40409352-PRJ13-161-0026",
+    "transaction_value": [
+      246000.0
+    ],
+    "transaction_value_currency": [
+      "EUR"
+    ]
+  },
+  {
+    "iati_identifier": "NL-KVK-40409352-PRJ13-161-0026",
+    "transaction_value": [
+      18450.0
+    ],
+    "transaction_value_currency": [
+      "EUR"
+    ]
+  },
+  {
+    "iati_identifier": "NL-KVK-40409352-PRJ13-161-0015",
+    "transaction_value": [
+      1577451.0
+    ],
+    "transaction_value_currency": [
+      "EUR"
+    ]
+  },
+  {
+    "iati_identifier": "NL-KVK-40409352-PRJ13-161-0015",
+    "transaction_value": [
+      118309.0
+    ],
+    "transaction_value_currency": [
+      "EUR"
+    ]
+  },
+  {
+    "iati_identifier": "NL-KVK-40409352-PRJ13-161-0018",
+    "transaction_value": [
+      175000.0
+    ],
+    "transaction_value_currency": [
+      "EUR"
+    ]
+  },
+  {
+    "iati_identifier": "NL-KVK-40409352-PRJ13-161-0018",
+    "transaction_value": [
+      13125.0
+    ],
+    "transaction_value_currency": [
+      "EUR"
+    ]
+  },
+  {
+    "iati_identifier": "NL-KVK-40409352-PRJ13-161-0009",
+    "transaction_value": [
+      282796.0
+    ],
+    "transaction_value_currency": [
+      "EUR"
+    ]
+  },
+  {
+    "iati_identifier": "NL-KVK-40409352-PRJ13-161-0009",
+    "transaction_value": [
+      18382.0
+    ],
+    "transaction_value_currency": [
+      "EUR"
+    ]
+  },
+  {
+    "iati_identifier": "NL-KVK-40409352-PRJ13-161-0012",
+    "transaction_value": [
+      52700.0
+    ],
+    "transaction_value_currency": [
+      "EUR"
+    ]
+  },
+  {
+    "iati_identifier": "NL-KVK-40409352-PRJ13-161-0012",
+    "transaction_value": [
+      3953.0
+    ],
+    "transaction_value_currency": [
+      "EUR"
+    ]
+  },
+  {
+    "iati_identifier": "NL-KVK-40409352-PRJ13-161-0012",
+    "transaction_value": [
+      500000.0
+    ],
+    "transaction_value_currency": [
+      "EUR"
+    ]
+  },
+  {
+    "iati_identifier": "NL-KVK-40409352-PRJ13-161-0012",
+    "transaction_value": [
+      37500.0
+    ],
+    "transaction_value_currency": [
+      "EUR"
+    ]
+  },
+  {
+    "iati_identifier": "NL-KVK-40409352-PRJ13-161-0012",
+    "transaction_value": [
+      5022821.0
+    ],
+    "transaction_value_currency": [
+      "EUR"
+    ]
+  },
+  {
+    "iati_identifier": "NL-KVK-40409352-PRJ13-161-0012",
+    "transaction_value": [
+      376712.0
+    ],
+    "transaction_value_currency": [
+      "EUR"
+    ]
+  },
+  {
+    "iati_identifier": "NL-KVK-40409352-PRJ13-161-0012",
+    "transaction_value": [
+      1944.0
+    ],
+    "transaction_value_currency": [
+      "EUR"
+    ]
+  },
+  {
+    "iati_identifier": "NL-KVK-40409352-PRJ13-161-0016",
+    "transaction_value": [
+      1577451.0
+    ],
+    "transaction_value_currency": [
+      "EUR"
+    ]
+  },
+  {
+    "iati_identifier": "NL-KVK-40409352-PRJ13-161-0016",
+    "transaction_value": [
+      118309.0
+    ],
+    "transaction_value_currency": [
+      "EUR"
+    ]
+  },
+  {
+    "iati_identifier": "NL-KVK-40409352-PRJ13-161-0019",
+    "transaction_value": [
+      50000.0
+    ],
+    "transaction_value_currency": [
+      "EUR"
+    ]
+  },
+  {
+    "iati_identifier": "NL-KVK-40409352-PRJ13-161-0019",
+    "transaction_value": [
+      3250.0
+    ],
+    "transaction_value_currency": [
+      "EUR"
+    ]
+  },
+  {
+    "iati_identifier": "NL-KVK-40409352-PRJ13-161-0007",
+    "transaction_value": [
+      6944444.0
+    ],
+    "transaction_value_currency": [
+      "EUR"
+    ]
+  },
+  {
+    "iati_identifier": "NL-KVK-40409352-PRJ13-161-0007",
+    "transaction_value": [
+      520833.0
+    ],
+    "transaction_value_currency": [
+      "EUR"
+    ]
+  },
+  {
+    "iati_identifier": "NL-KVK-40409352-PRJ13-161-0007",
+    "transaction_value": [
+      389.0
+    ],
+    "transaction_value_currency": [
+      "EUR"
+    ]
+  },
+  {
+    "iati_identifier": "NL-KVK-40409352-PRJ13-161-0010",
+    "transaction_value": [
+      2511410.0
+    ],
+    "transaction_value_currency": [
+      "EUR"
+    ]
+  },
+  {
+    "iati_identifier": "NL-KVK-40409352-PRJ13-161-0010",
+    "transaction_value": [
+      188356.0
+    ],
+    "transaction_value_currency": [
+      "EUR"
+    ]
+  },
+  {
+    "iati_identifier": "NL-KVK-40409352-PRJ13-161-0010",
+    "transaction_value": [
+      972.0
+    ],
+    "transaction_value_currency": [
+      "EUR"
+    ]
+  },
+  {
+    "iati_identifier": "NL-KVK-40409352-PRJ13-161-0006",
+    "transaction_value": [
+      3472222.0
+    ],
+    "transaction_value_currency": [
+      "EUR"
+    ]
+  },
+  {
+    "iati_identifier": "NL-KVK-40409352-PRJ13-161-0006",
+    "transaction_value": [
+      260417.0
+    ],
+    "transaction_value_currency": [
+      "EUR"
+    ]
+  },
+  {
+    "iati_identifier": "NL-KVK-40409352-PRJ13-161-0006",
+    "transaction_value": [
+      389.0
+    ],
+    "transaction_value_currency": [
+      "EUR"
+    ]
+  },
+  {
+    "iati_identifier": "NL-KVK-40409352-PRJ13-161-0002",
+    "transaction_value": [
+      1500000.0
+    ],
+    "transaction_value_currency": [
+      "EUR"
+    ]
+  },
+  {
+    "iati_identifier": "NL-KVK-40409352-PRJ13-161-0002",
+    "transaction_value": [
+      97500.0
+    ],
+    "transaction_value_currency": [
+      "EUR"
+    ]
+  },
+  {
+    "iati_identifier": "NL-KVK-40409352-PRJ13-161-0011",
+    "transaction_value": [
+      2511410.0
+    ],
+    "transaction_value_currency": [
+      "EUR"
+    ]
+  },
+  {
+    "iati_identifier": "NL-KVK-40409352-PRJ13-161-0011",
+    "transaction_value": [
+      188356.0
+    ],
+    "transaction_value_currency": [
+      "EUR"
+    ]
+  },
+  {
+    "iati_identifier": "NL-KVK-40409352-PRJ13-161-0011",
+    "transaction_value": [
+      1944.0
+    ],
+    "transaction_value_currency": [
+      "EUR"
+    ]
+  },
+  {
+    "iati_identifier": "NL-KVK-40409352-PRJ13-161-0027",
+    "transaction_value": [
+      1000000.0
+    ],
+    "transaction_value_currency": [
+      "EUR"
+    ]
+  },
+  {
+    "iati_identifier": "NL-KVK-40409352-PRJ13-161-0027",
+    "transaction_value": [
+      75000.0
+    ],
+    "transaction_value_currency": [
+      "EUR"
+    ]
+  },
+  {
+    "iati_identifier": "NL-KVK-40409352-PRJ13-161-0028",
+    "transaction_value": [
+      396279.0
+    ],
+    "transaction_value_currency": [
+      "EUR"
+    ]
+  },
+  {
+    "iati_identifier": "NL-KVK-40409352-PRJ13-161-0028",
+    "transaction_value": [
+      29721.0
+    ],
+    "transaction_value_currency": [
+      "EUR"
+    ]
+  },
+  {
+    "iati_identifier": "NL-KVK-40409352-PRJ13-161-0025",
+    "transaction_value": [
+      75117.0
+    ],
+    "transaction_value_currency": [
+      "EUR"
+    ]
+  },
+  {
+    "iati_identifier": "NL-KVK-40409352-PRJ13-161-0025",
+    "transaction_value": [
+      4883.0
+    ],
+    "transaction_value_currency": [
+      "EUR"
+    ]
+  },
+  {
+    "iati_identifier": "NL-KVK-40409352-PRJ13-161-0005",
+    "transaction_value": [
+      3472222.0
+    ],
+    "transaction_value_currency": [
+      "EUR"
+    ]
+  },
+  {
+    "iati_identifier": "NL-KVK-40409352-PRJ13-161-0005",
+    "transaction_value": [
+      194.0
+    ],
+    "transaction_value_currency": [
+      "EUR"
+    ]
+  },
+  {
+    "iati_identifier": "NL-KVK-40409352-PRJ13-161-0005",
+    "transaction_value": [
+      260417.0
+    ],
+    "transaction_value_currency": [
+      "EUR"
+    ]
+  },
+  {
+    "iati_identifier": "NL-KVK-40409352-PRJ13-155-0001",
+    "transaction_value": [
+      100000.0
+    ],
+    "transaction_value_currency": [
+      "EUR"
+    ]
+  },
+  {
+    "iati_identifier": "NL-KVK-40409352-PRJ13-155-0001",
+    "transaction_value": [
+      7500.0
+    ],
+    "transaction_value_currency": [
+      "EUR"
+    ]
+  },
+  {
+    "iati_identifier": "NL-KVK-40409352-PRJ13-129-0001",
+    "transaction_value": [
+      500000.0
+    ],
+    "transaction_value_currency": [
+      "EUR"
+    ]
+  },
+  {
+    "iati_identifier": "NL-KVK-40409352-PRJ13-129-0001",
+    "transaction_value": [
+      32500.0
+    ],
+    "transaction_value_currency": [
+      "EUR"
+    ]
+  },
+  {
+    "iati_identifier": "NL-KVK-40409352-PRJ13-129-0002",
+    "transaction_value": [
+      1500000.0
+    ],
+    "transaction_value_currency": [
+      "EUR"
+    ]
+  },
+  {
+    "iati_identifier": "NL-KVK-40409352-PRJ13-129-0002",
+    "transaction_value": [
+      97500.0
+    ],
+    "transaction_value_currency": [
+      "EUR"
+    ]
+  },
+  {
+    "iati_identifier": "NL-KVK-40409352-PRJ13-061-0001",
+    "transaction_value": [
+      61033.0
+    ],
+    "transaction_value_currency": [
+      "EUR"
+    ]
+  },
+  {
+    "iati_identifier": "NL-KVK-40409352-PRJ13-061-0001",
+    "transaction_value": [
+      42723.0
+    ],
+    "transaction_value_currency": [
+      "EUR"
+    ]
+  },
+  {
+    "iati_identifier": "NL-KVK-40409352-PRJ13-061-0005",
+    "transaction_value": [
+      21362.0
+    ],
+    "transaction_value_currency": [
+      "EUR"
+    ]
+  },
+  {
+    "iati_identifier": "NL-KVK-40409352-PRJ13-061-0003",
+    "transaction_value": [
+      14930.0
+    ],
+    "transaction_value_currency": [
+      "EUR"
+    ]
+  },
+  {
+    "iati_identifier": "NL-KVK-40409352-PRJ13-061-0008",
+    "transaction_value": [
+      8631.0
+    ],
+    "transaction_value_currency": [
+      "EUR"
+    ]
+  },
+  {
+    "iati_identifier": "NL-KVK-40409352-PRJ13-061-0008",
+    "transaction_value": [
+      647.0
+    ],
+    "transaction_value_currency": [
+      "EUR"
+    ]
+  },
+  {
+    "iati_identifier": "NL-KVK-40409352-PRJ13-061-0008",
+    "transaction_value": [
+      192705.0
+    ],
+    "transaction_value_currency": [
+      "EUR"
+    ]
+  },
+  {
+    "iati_identifier": "NL-KVK-40409352-PRJ13-061-0008",
+    "transaction_value": [
+      14453.0
+    ],
+    "transaction_value_currency": [
+      "EUR"
+    ]
+  },
+  {
+    "iati_identifier": "NL-KVK-40409352-PRJ13-061-0011",
+    "transaction_value": [
+      290000.0
+    ],
+    "transaction_value_currency": [
+      "EUR"
+    ]
+  },
+  {
+    "iati_identifier": "NL-KVK-40409352-PRJ13-061-0011",
+    "transaction_value": [
+      18850.0
+    ],
+    "transaction_value_currency": [
+      "EUR"
+    ]
+  },
+  {
+    "iati_identifier": "NL-KVK-40409352-PRJ13-068-0001",
+    "transaction_value": [
+      18310.0
+    ],
+    "transaction_value_currency": [
+      "EUR"
+    ]
+  },
+  {
+    "iati_identifier": "NL-KVK-40409352-PRJ13-060-0001",
+    "transaction_value": [
+      11901.0
+    ],
+    "transaction_value_currency": [
+      "EUR"
+    ]
+  },
+  {
+    "iati_identifier": "NL-KVK-40409352-PRJ13-083-0005",
+    "transaction_value": [
+      9950.0
+    ],
+    "transaction_value_currency": [
+      "EUR"
+    ]
+  },
+  {
+    "iati_identifier": "NL-KVK-40409352-PRJ13-083-0005",
+    "transaction_value": [
+      99595.0
+    ],
+    "transaction_value_currency": [
+      "EUR"
+    ]
+  },
+  {
+    "iati_identifier": "NL-KVK-40409352-PRJ13-083-0005",
+    "transaction_value": [
+      7470.0
+    ],
+    "transaction_value_currency": [
+      "EUR"
+    ]
+  },
+  {
+    "iati_identifier": "NL-KVK-40409352-PRJ13-083-0005",
+    "transaction_value": [
+      65000.0
+    ],
+    "transaction_value_currency": [
+      "EUR"
+    ]
+  },
+  {
+    "iati_identifier": "NL-KVK-40409352-PRJ13-063-0001",
+    "transaction_value": [
+      36620.0
+    ],
+    "transaction_value_currency": [
+      "EUR"
+    ]
+  },
+  {
+    "iati_identifier": "NL-KVK-40409352-PRJ13-063-0005",
+    "transaction_value": [
+      120000.0
+    ],
+    "transaction_value_currency": [
+      "EUR"
+    ]
+  },
+  {
+    "iati_identifier": "NL-KVK-40409352-PRJ13-063-0005",
+    "transaction_value": [
+      7800.0
+    ],
+    "transaction_value_currency": [
+      "EUR"
+    ]
+  },
+  {
+    "iati_identifier": "NL-KVK-40409352-PRJ13-063-0004",
+    "transaction_value": [
+      150000.0
+    ],
+    "transaction_value_currency": [
+      "EUR"
+    ]
+  },
+  {
+    "iati_identifier": "NL-KVK-40409352-PRJ13-063-0004",
+    "transaction_value": [
+      9750.0
+    ],
+    "transaction_value_currency": [
+      "EUR"
+    ]
+  },
+  {
+    "iati_identifier": "NL-KVK-40409352-PRJ13-063-0010",
+    "transaction_value": [
+      200000.0
+    ],
+    "transaction_value_currency": [
+      "EUR"
+    ]
+  },
+  {
+    "iati_identifier": "NL-KVK-40409352-PRJ13-063-0010",
+    "transaction_value": [
+      13000.0
+    ],
+    "transaction_value_currency": [
+      "EUR"
+    ]
+  },
+  {
+    "iati_identifier": "NL-KVK-40409352-prj13-063-0008",
+    "transaction_value": [
+      75107.0
+    ],
+    "transaction_value_currency": [
+      "EUR"
+    ]
+  },
+  {
+    "iati_identifier": "NL-KVK-40409352-prj13-063-0008",
+    "transaction_value": [
+      4882.0
+    ],
+    "transaction_value_currency": [
+      "EUR"
+    ]
+  },
+  {
+    "iati_identifier": "NL-KVK-40409352-PRJ13-063-0003",
+    "transaction_value": [
+      117015.0
+    ],
+    "transaction_value_currency": [
+      "EUR"
+    ]
+  },
+  {
+    "iati_identifier": "NL-KVK-40409352-PRJ13-063-0003",
+    "transaction_value": [
+      7606.0
+    ],
+    "transaction_value_currency": [
+      "EUR"
+    ]
+  },
+  {
+    "iati_identifier": "NL-KVK-40409352-PRJ13-063-0006",
+    "transaction_value": [
+      350000.0
+    ],
+    "transaction_value_currency": [
+      "EUR"
+    ]
+  },
+  {
+    "iati_identifier": "NL-KVK-40409352-PRJ13-063-0006",
+    "transaction_value": [
+      22750.0
+    ],
+    "transaction_value_currency": [
+      "EUR"
+    ]
+  },
+  {
+    "iati_identifier": "NL-KVK-40409352-PRJ13-063-0007",
+    "transaction_value": [
+      500000.0
+    ],
+    "transaction_value_currency": [
+      "EUR"
+    ]
+  },
+  {
+    "iati_identifier": "NL-KVK-40409352-PRJ13-063-0007",
+    "transaction_value": [
+      32500.0
+    ],
+    "transaction_value_currency": [
+      "EUR"
+    ]
+  },
+  {
+    "iati_identifier": "NL-KVK-40409352-PRJ13-063-0002",
+    "transaction_value": [
+      350000.0
+    ],
+    "transaction_value_currency": [
+      "EUR"
+    ]
+  },
+  {
+    "iati_identifier": "NL-KVK-40409352-PRJ13-063-0002",
+    "transaction_value": [
+      22750.0
+    ],
+    "transaction_value_currency": [
+      "EUR"
+    ]
+  },
+  {
+    "iati_identifier": "NL-KVK-40409352-PRJ13-079-0001",
+    "transaction_value": [
+      18310.0
+    ],
+    "transaction_value_currency": [
+      "EUR"
+    ]
+  },
+  {
+    "iati_identifier": "NL-KVK-40409352-PRJ13-085-0003",
+    "transaction_value": [
+      2441.0
+    ],
+    "transaction_value_currency": [
+      "EUR"
+    ]
+  },
+  {
+    "iati_identifier": "NL-KVK-40409352-PRJ13-067-0001",
+    "transaction_value": [
+      6103.0
+    ],
+    "transaction_value_currency": [
+      "EUR"
+    ]
+  },
+  {
+    "iati_identifier": "NL-KVK-40409352-PRJ13-071-0001",
+    "transaction_value": [
+      6103.0
+    ],
+    "transaction_value_currency": [
+      "EUR"
+    ]
+  },
+  {
+    "iati_identifier": "NL-KVK-40409352-PRJ13-084-0001",
+    "transaction_value": [
+      9155.0
+    ],
+    "transaction_value_currency": [
+      "EUR"
+    ]
+  },
+  {
+    "iati_identifier": "NL-KVK-40409352-PRJ13-066-0001",
+    "transaction_value": [
+      12207.0
+    ],
+    "transaction_value_currency": [
+      "EUR"
+    ]
+  },
+  {
+    "iati_identifier": "NL-KVK-40409352-PRJ13-076-0001",
+    "transaction_value": [
+      500000.0
+    ],
+    "transaction_value_currency": [
+      "EUR"
+    ]
+  },
+  {
+    "iati_identifier": "NL-KVK-40409352-PRJ13-076-0001",
+    "transaction_value": [
+      32500.0
+    ],
+    "transaction_value_currency": [
+      "EUR"
+    ]
+  },
+  {
+    "iati_identifier": "NL-KVK-40409352-PRJ13-094-0001",
+    "transaction_value": [
+      2434.0
+    ],
+    "transaction_value_currency": [
+      "EUR"
+    ]
+  },
+  {
+    "iati_identifier": "NL-KVK-40409352-PRJ13-094-0001",
+    "transaction_value": [
+      1465.0
+    ],
+    "transaction_value_currency": [
+      "EUR"
+    ]
+  },
+  {
+    "iati_identifier": "NL-KVK-40409352-PRJ13-094-0001",
+    "transaction_value": [
+      3215.0
+    ],
+    "transaction_value_currency": [
+      "EUR"
+    ]
+  },
+  {
+    "iati_identifier": "NL-KVK-40409352-PRJ13-094-0003",
+    "transaction_value": [
+      1456.0
+    ],
+    "transaction_value_currency": [
+      "EUR"
+    ]
+  },
+  {
+    "iati_identifier": "NL-KVK-40409352-PRJ13-094-0002",
+    "transaction_value": [
+      897.0
+    ],
+    "transaction_value_currency": [
+      "EUR"
+    ]
+  },
+  {
+    "iati_identifier": "NL-KVK-40409352-PRJ13-095-0001",
+    "transaction_value": [
+      3967.0
+    ],
+    "transaction_value_currency": [
+      "EUR"
+    ]
+  },
+  {
+    "iati_identifier": "NL-KVK-40409352-PRJ13-095-0001",
+    "transaction_value": [
+      -3967.0
+    ],
+    "transaction_value_currency": [
+      "EUR"
+    ]
+  },
+  {
+    "iati_identifier": "NL-KVK-40409352-PRJ13-095-0001",
+    "transaction_value": [
+      3967.0
+    ],
+    "transaction_value_currency": [
+      "EUR"
+    ]
+  },
+  {
+    "iati_identifier": "NL-KVK-40409352-PRJ13-095-0002",
+    "transaction_value": [
+      1602.0
+    ],
+    "transaction_value_currency": [
+      "EUR"
+    ]
+  },
+  {
+    "iati_identifier": "NL-KVK-40409352-PRJ13-093-0007",
+    "transaction_value": [
+      3662.0
+    ],
+    "transaction_value_currency": [
+      "EUR"
+    ]
+  },
+  {
+    "iati_identifier": "NL-KVK-40409352-PRJ13-093-0001",
+    "transaction_value": [
+      4883.0
+    ],
+    "transaction_value_currency": [
+      "EUR"
+    ]
+  },
+  {
+    "iati_identifier": "NL-KVK-40409352-PRJ13-093-0002",
+    "transaction_value": [
+      3052.0
+    ],
+    "transaction_value_currency": [
+      "EUR"
+    ]
+  },
+  {
+    "iati_identifier": "NL-KVK-40409352-PRJ13-093-0003",
+    "transaction_value": [
+      2441.0
+    ],
+    "transaction_value_currency": [
+      "EUR"
+    ]
+  },
+  {
+    "iati_identifier": "NL-KVK-40409352-PRJ13-093-0004",
+    "transaction_value": [
+      1831.0
+    ],
+    "transaction_value_currency": [
+      "EUR"
+    ]
+  },
+  {
+    "iati_identifier": "NL-KVK-40409352-PRJ13-093-0005",
+    "transaction_value": [
+      3662.0
+    ],
+    "transaction_value_currency": [
+      "EUR"
+    ]
+  },
+  {
+    "iati_identifier": "NL-KVK-40409352-PRJ13-093-0006",
+    "transaction_value": [
+      1831.0
+    ],
+    "transaction_value_currency": [
+      "EUR"
+    ]
+  },
+  {
+    "iati_identifier": "NL-KVK-40409352-PRJ13-093-0010",
+    "transaction_value": [
+      3662.0
+    ],
+    "transaction_value_currency": [
+      "EUR"
+    ]
+  },
+  {
+    "iati_identifier": "NL-KVK-40409352-PRJ13-093-0015",
+    "transaction_value": [
+      3052.0
+    ],
+    "transaction_value_currency": [
+      "EUR"
+    ]
+  },
+  {
+    "iati_identifier": "NL-KVK-40409352-PRJ13-093-0016",
+    "transaction_value": [
+      3662.0
+    ],
+    "transaction_value_currency": [
+      "EUR"
+    ]
+  },
+  {
+    "iati_identifier": "NL-KVK-40409352-PRJ13-093-0017",
+    "transaction_value": [
+      3662.0
+    ],
+    "transaction_value_currency": [
+      "EUR"
+    ]
+  },
+  {
+    "iati_identifier": "NL-KVK-40409352-PRJ13-093-0019",
+    "transaction_value": [
+      3662.0
+    ],
+    "transaction_value_currency": [
+      "EUR"
+    ]
+  },
+  {
+    "iati_identifier": "NL-KVK-40409352-PRJ13-093-0008",
+    "transaction_value": [
+      3662.0
+    ],
+    "transaction_value_currency": [
+      "EUR"
+    ]
+  },
+  {
+    "iati_identifier": "NL-KVK-40409352-PRJ13-093-0009",
+    "transaction_value": [
+      2441.0
+    ],
+    "transaction_value_currency": [
+      "EUR"
+    ]
+  },
+  {
+    "iati_identifier": "NL-KVK-40409352-PRJ13-093-0012",
+    "transaction_value": [
+      3662.0
+    ],
+    "transaction_value_currency": [
+      "EUR"
+    ]
+  },
+  {
+    "iati_identifier": "NL-KVK-40409352-PRJ13-093-0011",
+    "transaction_value": [
+      2441.0
+    ],
+    "transaction_value_currency": [
+      "EUR"
+    ]
+  },
+  {
+    "iati_identifier": "NL-KVK-40409352-PRJ13-093-0013",
+    "transaction_value": [
+      2441.0
+    ],
+    "transaction_value_currency": [
+      "EUR"
+    ]
+  },
+  {
+    "iati_identifier": "NL-KVK-40409352-PRJ13-093-0014",
+    "transaction_value": [
+      3662.0
+    ],
+    "transaction_value_currency": [
+      "EUR"
+    ]
+  },
+  {
+    "iati_identifier": "NL-KVK-40409352-PRJ13-093-0020",
+    "transaction_value": [
+      3662.0
+    ],
+    "transaction_value_currency": [
+      "EUR"
+    ]
+  },
+  {
+    "iati_identifier": "NL-KVK-40409352-PRJ13-093-0021",
+    "transaction_value": [
+      26000.0
+    ],
+    "transaction_value_currency": [
+      "EUR"
+    ]
+  },
+  {
+    "iati_identifier": "NL-KVK-40409352-PRJ13-093-0022",
+    "transaction_value": [
+      36467.0
+    ],
+    "transaction_value_currency": [
+      "EUR"
+    ]
+  },
+  {
+    "iati_identifier": "NL-KVK-40409352-PRJ13-105-0001",
+    "transaction_value": [
+      469484.0
+    ],
+    "transaction_value_currency": [
+      "EUR"
+    ]
+  },
+  {
+    "iati_identifier": "NL-KVK-40409352-PRJ13-105-0001",
+    "transaction_value": [
+      30516.0
+    ],
+    "transaction_value_currency": [
+      "EUR"
+    ]
+  },
+  {
+    "iati_identifier": "NL-KVK-40409352-PRJ13-105-0003",
+    "transaction_value": [
+      254.0
+    ],
+    "transaction_value_currency": [
+      "EUR"
+    ]
+  },
+  {
+    "iati_identifier": "NL-KVK-40409352-PRJ13-105-0003",
+    "transaction_value": [
+      16.0
+    ],
+    "transaction_value_currency": [
+      "EUR"
+    ]
+  },
+  {
+    "iati_identifier": "NL-KVK-40409352-PRJ13-105-0003",
+    "transaction_value": [
+      231228.0
+    ],
+    "transaction_value_currency": [
+      "EUR"
+    ]
+  },
+  {
+    "iati_identifier": "NL-KVK-40409352-PRJ13-105-0003",
+    "transaction_value": [
+      15030.0
+    ],
+    "transaction_value_currency": [
+      "EUR"
+    ]
+  },
+  {
+    "iati_identifier": "NL-KVK-40409352-PRJ13-108-0001",
+    "transaction_value": [
+      5200.0
+    ],
+    "transaction_value_currency": [
+      "EUR"
+    ]
+  },
+  {
+    "iati_identifier": "NL-KVK-40409352-PRJ13-108-0004",
+    "transaction_value": [
+      150000.0
+    ],
+    "transaction_value_currency": [
+      "EUR"
+    ]
+  },
+  {
+    "iati_identifier": "NL-KVK-40409352-PRJ13-108-0004",
+    "transaction_value": [
+      9750.0
+    ],
+    "transaction_value_currency": [
+      "EUR"
+    ]
+  },
+  {
+    "iati_identifier": "NL-KVK-40409352-PRJ13-108-0003",
+    "transaction_value": [
+      300000.0
+    ],
+    "transaction_value_currency": [
+      "EUR"
+    ]
+  },
+  {
+    "iati_identifier": "NL-KVK-40409352-PRJ13-108-0003",
+    "transaction_value": [
+      19500.0
+    ],
+    "transaction_value_currency": [
+      "EUR"
+    ]
+  },
+  {
+    "iati_identifier": "NL-KVK-40409352-PRJ13-087-0002",
+    "transaction_value": [
+      18310.0
+    ],
+    "transaction_value_currency": [
+      "EUR"
+    ]
+  },
+  {
+    "iati_identifier": "NL-KVK-40409352-PRJ13-087-0002",
+    "transaction_value": [
+      -18310.0
+    ],
+    "transaction_value_currency": [
+      "EUR"
+    ]
+  },
+  {
+    "iati_identifier": "NL-KVK-40409352-PRJ13-087-0002",
+    "transaction_value": [
+      18310.0
+    ],
+    "transaction_value_currency": [
+      "EUR"
+    ]
+  },
+  {
+    "iati_identifier": "NL-KVK-40409352-PRJ13-087-0003",
+    "transaction_value": [
+      11250.0
+    ],
+    "transaction_value_currency": [
+      "EUR"
+    ]
+  },
+  {
+    "iati_identifier": "NL-KVK-40409352-PRJ13-087-0001",
+    "transaction_value": [
+      5493.0
+    ],
+    "transaction_value_currency": [
+      "EUR"
+    ]
+  },
+  {
+    "iati_identifier": "NL-KVK-40409352-PRJ13-087-0001",
+    "transaction_value": [
+      -5493.0
+    ],
+    "transaction_value_currency": [
+      "EUR"
+    ]
+  },
+  {
+    "iati_identifier": "NL-KVK-40409352-PRJ13-087-0001",
+    "transaction_value": [
+      5493.0
+    ],
+    "transaction_value_currency": [
+      "EUR"
+    ]
+  },
+  {
+    "iati_identifier": "NL-KVK-40409352-PRJ13-087-0001",
+    "transaction_value": [
+      14038.0
+    ],
+    "transaction_value_currency": [
+      "EUR"
+    ]
+  },
+  {
+    "iati_identifier": "NL-KVK-40409352-PRJ13-087-0004",
+    "transaction_value": [
+      6520.0
+    ],
+    "transaction_value_currency": [
+      "EUR"
+    ]
+  },
+  {
+    "iati_identifier": "NL-KVK-40409352-PRJ13-054-0012",
+    "transaction_value": [
+      4883.0
+    ],
+    "transaction_value_currency": [
+      "EUR"
+    ]
+  },
+  {
+    "iati_identifier": "NL-KVK-40409352-PRJ13-054-0011",
+    "transaction_value": [
+      19500.0
+    ],
+    "transaction_value_currency": [
+      "EUR"
+    ]
+  },
+  {
+    "iati_identifier": "NL-KVK-40409352-PRJ13-054-0016",
+    "transaction_value": [
+      3662.0
+    ],
+    "transaction_value_currency": [
+      "EUR"
+    ]
+  },
+  {
+    "iati_identifier": "NL-KVK-40409352-PRJ13-054-0015",
+    "transaction_value": [
+      1831.0
+    ],
+    "transaction_value_currency": [
+      "EUR"
+    ]
+  },
+  {
+    "iati_identifier": "NL-KVK-40409352-PRJ13-054-0018",
+    "transaction_value": [
+      4883.0
+    ],
+    "transaction_value_currency": [
+      "EUR"
+    ]
+  },
+  {
+    "iati_identifier": "NL-KVK-40409352-PRJ13-054-0028",
+    "transaction_value": [
+      2441.0
+    ],
+    "transaction_value_currency": [
+      "EUR"
+    ]
+  },
+  {
+    "iati_identifier": "NL-KVK-40409352-PRJ13-054-0026",
+    "transaction_value": [
+      3662.0
+    ],
+    "transaction_value_currency": [
+      "EUR"
+    ]
+  },
+  {
+    "iati_identifier": "NL-KVK-40409352-PRJ13-054-0027",
+    "transaction_value": [
+      2441.0
+    ],
+    "transaction_value_currency": [
+      "EUR"
+    ]
+  },
+  {
+    "iati_identifier": "NL-KVK-40409352-PRJ13-054-0005",
+    "transaction_value": [
+      3662.0
+    ],
+    "transaction_value_currency": [
+      "EUR"
+    ]
+  },
+  {
+    "iati_identifier": "NL-KVK-40409352-PRJ13-054-0010",
+    "transaction_value": [
+      2441.0
+    ],
+    "transaction_value_currency": [
+      "EUR"
+    ]
+  },
+  {
+    "iati_identifier": "NL-KVK-40409352-PRJ13-054-0020",
+    "transaction_value": [
+      1831.0
+    ],
+    "transaction_value_currency": [
+      "EUR"
+    ]
+  },
+  {
+    "iati_identifier": "NL-KVK-40409352-PRJ13-054-0021",
+    "transaction_value": [
+      3662.0
+    ],
+    "transaction_value_currency": [
+      "EUR"
+    ]
+  },
+  {
+    "iati_identifier": "NL-KVK-40409352-PRJ13-054-0006",
+    "transaction_value": [
+      3662.0
+    ],
+    "transaction_value_currency": [
+      "EUR"
+    ]
+  },
+  {
+    "iati_identifier": "NL-KVK-40409352-PRJ13-054-0009",
+    "transaction_value": [
+      2441.0
+    ],
+    "transaction_value_currency": [
+      "EUR"
+    ]
+  },
+  {
+    "iati_identifier": "NL-KVK-40409352-PRJ13-054-0013",
+    "transaction_value": [
+      3662.0
+    ],
+    "transaction_value_currency": [
+      "EUR"
+    ]
+  },
+  {
+    "iati_identifier": "NL-KVK-40409352-PRJ13-054-0014",
+    "transaction_value": [
+      3662.0
+    ],
+    "transaction_value_currency": [
+      "EUR"
+    ]
+  },
+  {
+    "iati_identifier": "NL-KVK-40409352-PRJ13-054-0023",
+    "transaction_value": [
+      3662.0
+    ],
+    "transaction_value_currency": [
+      "EUR"
+    ]
+  },
+  {
+    "iati_identifier": "NL-KVK-40409352-PRJ13-054-0025",
+    "transaction_value": [
+      4883.0
+    ],
+    "transaction_value_currency": [
+      "EUR"
+    ]
+  },
+  {
+    "iati_identifier": "NL-KVK-40409352-PRJ13-054-0024",
+    "transaction_value": [
+      2441.0
+    ],
+    "transaction_value_currency": [
+      "EUR"
+    ]
+  },
+  {
+    "iati_identifier": "NL-KVK-40409352-PRJ13-054-0008",
+    "transaction_value": [
+      3662.0
+    ],
+    "transaction_value_currency": [
+      "EUR"
+    ]
+  },
+  {
+    "iati_identifier": "NL-KVK-40409352-PRJ13-054-0019",
+    "transaction_value": [
+      1831.0
+    ],
+    "transaction_value_currency": [
+      "EUR"
+    ]
+  },
+  {
+    "iati_identifier": "NL-KVK-40409352-PRJ13-054-0035",
+    "transaction_value": [
+      3052.0
+    ],
+    "transaction_value_currency": [
+      "EUR"
+    ]
+  },
+  {
+    "iati_identifier": "NL-KVK-40409352-PRJ13-054-0034",
+    "transaction_value": [
+      1526.0
+    ],
+    "transaction_value_currency": [
+      "EUR"
+    ]
+  },
+  {
+    "iati_identifier": "NL-KVK-40409352-PRJ13-054-0033",
+    "transaction_value": [
+      2441.0
+    ],
+    "transaction_value_currency": [
+      "EUR"
+    ]
+  },
+  {
+    "iati_identifier": "NL-KVK-40409352-PRJ13-054-0032",
+    "transaction_value": [
+      1831.0
+    ],
+    "transaction_value_currency": [
+      "EUR"
+    ]
+  },
+  {
+    "iati_identifier": "NL-KVK-40409352-PRJ13-054-0003",
+    "transaction_value": [
+      3662.0
+    ],
+    "transaction_value_currency": [
+      "EUR"
+    ]
+  },
+  {
+    "iati_identifier": "NL-KVK-40409352-PRJ13-054-0002",
+    "transaction_value": [
+      2441.0
+    ],
+    "transaction_value_currency": [
+      "EUR"
+    ]
+  },
+  {
+    "iati_identifier": "NL-KVK-40409352-PRJ13-054-0001",
+    "transaction_value": [
+      3662.0
+    ],
+    "transaction_value_currency": [
+      "EUR"
+    ]
+  },
+  {
+    "iati_identifier": "NL-KVK-40409352-PRJ13-054-0037",
+    "transaction_value": [
+      1831.0
+    ],
+    "transaction_value_currency": [
+      "EUR"
+    ]
+  },
+  {
+    "iati_identifier": "NL-KVK-40409352-PRJ13-054-0030",
+    "transaction_value": [
+      2441.0
+    ],
+    "transaction_value_currency": [
+      "EUR"
+    ]
+  },
+  {
+    "iati_identifier": "NL-KVK-40409352-PRJ13-054-0040",
+    "transaction_value": [
+      1831.0
+    ],
+    "transaction_value_currency": [
+      "EUR"
+    ]
+  },
+  {
+    "iati_identifier": "NL-KVK-40409352-PRJ13-054-0036",
+    "transaction_value": [
+      1221.0
+    ],
+    "transaction_value_currency": [
+      "EUR"
+    ]
+  },
+  {
+    "iati_identifier": "NL-KVK-40409352-PRJ13-054-0038",
+    "transaction_value": [
+      1221.0
+    ],
+    "transaction_value_currency": [
+      "EUR"
+    ]
+  },
+  {
+    "iati_identifier": "NL-KVK-40409352-PRJ13-054-0031",
+    "transaction_value": [
+      1831.0
+    ],
+    "transaction_value_currency": [
+      "EUR"
+    ]
+  },
+  {
+    "iati_identifier": "NL-KVK-40409352-PRJ13-054-0042",
+    "transaction_value": [
+      2441.0
+    ],
+    "transaction_value_currency": [
+      "EUR"
+    ]
+  },
+  {
+    "iati_identifier": "NL-KVK-40409352-PRJ13-054-0039",
+    "transaction_value": [
+      1221.0
+    ],
+    "transaction_value_currency": [
+      "EUR"
+    ]
+  },
+  {
+    "iati_identifier": "NL-KVK-40409352-PRJ13-090-0001",
+    "transaction_value": [
+      6714.0
+    ],
+    "transaction_value_currency": [
+      "EUR"
+    ]
+  },
+  {
+    "iati_identifier": "NL-KVK-40409352-PRJ13-092-0001",
+    "transaction_value": [
+      14038.0
+    ],
+    "transaction_value_currency": [
+      "EUR"
+    ]
+  },
+  {
+    "iati_identifier": "NL-KVK-40409352-PRJ13-089-0001",
+    "transaction_value": [
+      13427.0
+    ],
+    "transaction_value_currency": [
+      "EUR"
+    ]
+  },
+  {
+    "iati_identifier": "NL-KVK-40409352-PRJ13-089-0001",
+    "transaction_value": [
+      -13427.0
+    ],
+    "transaction_value_currency": [
+      "EUR"
+    ]
+  },
+  {
+    "iati_identifier": "NL-KVK-40409352-PRJ13-089-0001",
+    "transaction_value": [
+      13427.0
+    ],
+    "transaction_value_currency": [
+      "EUR"
+    ]
+  },
+  {
+    "iati_identifier": "NL-KVK-40409352-PRJ13-088-0001",
+    "transaction_value": [
+      8239.0
+    ],
+    "transaction_value_currency": [
+      "EUR"
+    ]
+  },
+  {
+    "iati_identifier": "NL-KVK-40409352-PRJ13-100-0011",
+    "transaction_value": [
+      15000000.0
+    ],
+    "transaction_value_currency": [
+      "EUR"
+    ]
+  },
+  {
+    "iati_identifier": "NL-KVK-40409352-PRJ13-100-0001",
+    "transaction_value": [
+      751174.0
+    ],
+    "transaction_value_currency": [
+      "EUR"
+    ]
+  },
+  {
+    "iati_identifier": "NL-KVK-40409352-PRJ13-100-0001",
+    "transaction_value": [
+      48826.0
+    ],
+    "transaction_value_currency": [
+      "EUR"
+    ]
+  },
+  {
+    "iati_identifier": "NL-KVK-40409352-PRJ13-100-0021",
+    "transaction_value": [
+      3004695.0
+    ],
+    "transaction_value_currency": [
+      "EUR"
+    ]
+  },
+  {
+    "iati_identifier": "NL-KVK-40409352-PRJ13-100-0021",
+    "transaction_value": [
+      195305.0
+    ],
+    "transaction_value_currency": [
+      "EUR"
+    ]
+  },
+  {
+    "iati_identifier": "NL-KVK-40409352-PRJ13-100-0033",
+    "transaction_value": [
+      71000.0
+    ],
+    "transaction_value_currency": [
+      "EUR"
+    ]
+  },
+  {
+    "iati_identifier": "NL-KVK-40409352-PRJ13-100-0033",
+    "transaction_value": [
+      4615.0
+    ],
+    "transaction_value_currency": [
+      "EUR"
+    ]
+  },
+  {
+    "iati_identifier": "NL-KVK-40409352-PRJ13-100-0033",
+    "transaction_value": [
+      28000.0
+    ],
+    "transaction_value_currency": [
+      "EUR"
+    ]
+  },
+  {
+    "iati_identifier": "NL-KVK-40409352-PRJ13-100-0033",
+    "transaction_value": [
+      1820.0
+    ],
+    "transaction_value_currency": [
+      "EUR"
+    ]
+  },
+  {
+    "iati_identifier": "NL-KVK-40409352-PRJ13-100-0033",
+    "transaction_value": [
+      2279074.0
+    ],
+    "transaction_value_currency": [
+      "EUR"
+    ]
+  },
+  {
+    "iati_identifier": "NL-KVK-40409352-PRJ13-100-0033",
+    "transaction_value": [
+      148140.0
+    ],
+    "transaction_value_currency": [
+      "EUR"
+    ]
+  },
+  {
+    "iati_identifier": "NL-KVK-40409352-PRJ13-100-0034",
+    "transaction_value": [
+      186047.0
+    ],
+    "transaction_value_currency": [
+      "EUR"
+    ]
+  },
+  {
+    "iati_identifier": "NL-KVK-40409352-PRJ13-100-0034",
+    "transaction_value": [
+      13953.0
+    ],
+    "transaction_value_currency": [
+      "EUR"
+    ]
+  },
+  {
+    "iati_identifier": "NL-KVK-40409352-PRJ13-100-0036",
+    "transaction_value": [
+      2000000.0
+    ],
+    "transaction_value_currency": [
+      "EUR"
+    ]
+  },
+  {
+    "iati_identifier": "NL-KVK-40409352-PRJ13-100-0046",
+    "transaction_value": [
+      418605.0
+    ],
+    "transaction_value_currency": [
+      "EUR"
+    ]
+  },
+  {
+    "iati_identifier": "NL-KVK-40409352-PRJ13-100-0046",
+    "transaction_value": [
+      31395.0
+    ],
+    "transaction_value_currency": [
+      "EUR"
+    ]
+  },
+  {
+    "iati_identifier": "NL-KVK-40409352-PRJ13-100-0055",
+    "transaction_value": [
+      54366.0
+    ],
+    "transaction_value_currency": [
+      "EUR"
+    ]
+  },
+  {
+    "iati_identifier": "NL-KVK-40409352-PRJ13-100-0055",
+    "transaction_value": [
+      3534.0
+    ],
+    "transaction_value_currency": [
+      "EUR"
+    ]
+  },
+  {
+    "iati_identifier": "NL-KVK-40409352-PRJ13-100-0040",
+    "transaction_value": [
+      8602.0
+    ],
+    "transaction_value_currency": [
+      "EUR"
+    ]
+  },
+  {
+    "iati_identifier": "NL-KVK-40409352-PRJ13-100-0040",
+    "transaction_value": [
+      559.0
+    ],
+    "transaction_value_currency": [
+      "EUR"
+    ]
+  },
+  {
+    "iati_identifier": "NL-KVK-40409352-PRJ13-100-0041",
+    "transaction_value": [
+      1408451.0
+    ],
+    "transaction_value_currency": [
+      "EUR"
+    ]
+  },
+  {
+    "iati_identifier": "NL-KVK-40409352-PRJ13-100-0041",
+    "transaction_value": [
+      91549.0
+    ],
+    "transaction_value_currency": [
+      "EUR"
+    ]
+  },
+  {
+    "iati_identifier": "NL-KVK-40409352-PRJ13-100-0039",
+    "transaction_value": [
+      925926.0
+    ],
+    "transaction_value_currency": [
+      "EUR"
+    ]
+  },
+  {
+    "iati_identifier": "NL-KVK-40409352-PRJ13-100-0039",
+    "transaction_value": [
+      60185.0
+    ],
+    "transaction_value_currency": [
+      "EUR"
+    ]
+  },
+  {
+    "iati_identifier": "NL-KVK-40409352-PRJ13-100-0047",
+    "transaction_value": [
+      698244.0
+    ],
+    "transaction_value_currency": [
+      "EUR"
+    ]
+  },
+  {
+    "iati_identifier": "NL-KVK-40409352-PRJ13-100-0047",
+    "transaction_value": [
+      52368.0
+    ],
+    "transaction_value_currency": [
+      "EUR"
+    ]
+  },
+  {
+    "iati_identifier": "NL-KVK-40409352-PRJ13-091-0001",
+    "transaction_value": [
+      12817.0
+    ],
+    "transaction_value_currency": [
+      "EUR"
+    ]
+  },
+  {
+    "iati_identifier": "NL-KVK-40409352-PRJ13-035-0007",
+    "transaction_value": [
+      14930.0
+    ],
+    "transaction_value_currency": [
+      "EUR"
+    ]
+  },
+  {
+    "iati_identifier": "NL-KVK-40409352-PRJ13-035-0005",
+    "transaction_value": [
+      6103.0
+    ],
+    "transaction_value_currency": [
+      "EUR"
+    ]
+  },
+  {
+    "iati_identifier": "NL-KVK-40409352-PRJ13-035-0006",
+    "transaction_value": [
+      30516.0
+    ],
+    "transaction_value_currency": [
+      "EUR"
+    ]
+  },
+  {
+    "iati_identifier": "NL-KVK-40409352-PRJ13-035-0003",
+    "transaction_value": [
+      21362.0
+    ],
+    "transaction_value_currency": [
+      "EUR"
+    ]
+  },
+  {
+    "iati_identifier": "NL-KVK-40409352-PRJ13-035-0001",
+    "transaction_value": [
+      7934.0
+    ],
+    "transaction_value_currency": [
+      "EUR"
+    ]
+  },
+  {
+    "iati_identifier": "NL-KVK-40409352-PRJ13-050-0001",
+    "transaction_value": [
+      14343.0
+    ],
+    "transaction_value_currency": [
+      "EUR"
+    ]
+  },
+  {
+    "iati_identifier": "NL-KVK-40409352-PRJ13-122-0004",
+    "transaction_value": [
+      234742.0
+    ],
+    "transaction_value_currency": [
+      "EUR"
+    ]
+  },
+  {
+    "iati_identifier": "NL-KVK-40409352-PRJ13-122-0004",
+    "transaction_value": [
+      15258.0
+    ],
+    "transaction_value_currency": [
+      "EUR"
+    ]
+  },
+  {
+    "iati_identifier": "NL-KVK-40409352-PRJ13-218-0001",
+    "transaction_value": [
+      1812728.0
+    ],
+    "transaction_value_currency": [
+      "EUR"
+    ]
+  },
+  {
+    "iati_identifier": "NL-KVK-40409352-PRJ13-218-0001",
+    "transaction_value": [
+      117827.0
+    ],
+    "transaction_value_currency": [
+      "EUR"
+    ]
+  },
+  {
+    "iati_identifier": "NL-KVK-40409352-PRJ13-218-0001",
+    "transaction_value": [
+      2816901.0
+    ],
+    "transaction_value_currency": [
+      "EUR"
+    ]
+  },
+  {
+    "iati_identifier": "NL-KVK-40409352-PRJ13-218-0001",
+    "transaction_value": [
+      183099.0
+    ],
+    "transaction_value_currency": [
+      "EUR"
+    ]
+  },
+  {
+    "iati_identifier": "NL-KVK-40409352-PRJ13-218-0002",
+    "transaction_value": [
+      167.0
+    ],
+    "transaction_value_currency": [
+      "EUR"
+    ]
+  },
+  {
+    "iati_identifier": "NL-KVK-40409352-PRJ13-218-0002",
+    "transaction_value": [
+      11.0
+    ],
+    "transaction_value_currency": [
+      "EUR"
+    ]
+  },
+  {
+    "iati_identifier": "NL-KVK-40409352-PRJ13-218-0002",
+    "transaction_value": [
+      11918.0
+    ],
+    "transaction_value_currency": [
+      "EUR"
+    ]
+  },
+  {
+    "iati_identifier": "NL-KVK-40409352-PRJ13-218-0002",
+    "transaction_value": [
+      775.0
+    ],
+    "transaction_value_currency": [
+      "EUR"
+    ]
+  },
+  {
+    "iati_identifier": "NL-KVK-40409352-PRJ13-020-0001",
+    "transaction_value": [
+      375587.0
+    ],
+    "transaction_value_currency": [
+      "EUR"
+    ]
+  },
+  {
+    "iati_identifier": "NL-KVK-40409352-PRJ13-020-0001",
+    "transaction_value": [
+      24413.0
+    ],
+    "transaction_value_currency": [
+      "EUR"
+    ]
+  },
+  {
+    "iati_identifier": "NL-KVK-40409352-PRJ13-020-0003",
+    "transaction_value": [
+      234742.0
+    ],
+    "transaction_value_currency": [
+      "EUR"
+    ]
+  },
+  {
+    "iati_identifier": "NL-KVK-40409352-PRJ13-020-0003",
+    "transaction_value": [
+      15258.0
+    ],
+    "transaction_value_currency": [
+      "EUR"
+    ]
+  },
+  {
+    "iati_identifier": "NL-KVK-40409352-PRJ13-020-0002",
+    "transaction_value": [
+      46948.0
+    ],
+    "transaction_value_currency": [
+      "EUR"
+    ]
+  },
+  {
+    "iati_identifier": "NL-KVK-40409352-PRJ13-020-0002",
+    "transaction_value": [
+      3052.0
+    ],
+    "transaction_value_currency": [
+      "EUR"
+    ]
+  },
+  {
+    "iati_identifier": "NL-KVK-40409352-PRJ13-020-0006",
+    "transaction_value": [
+      14930.0
+    ],
+    "transaction_value_currency": [
+      "EUR"
+    ]
+  },
+  {
+    "iati_identifier": "NL-KVK-40409352-PRJ13-020-0005",
+    "transaction_value": [
+      6408.0
+    ],
+    "transaction_value_currency": [
+      "EUR"
+    ]
+  },
+  {
+    "iati_identifier": "NL-KVK-40409352-PRJ13-020-0007",
+    "transaction_value": [
+      3370.0
+    ],
+    "transaction_value_currency": [
+      "EUR"
+    ]
+  },
+  {
+    "iati_identifier": "NL-KVK-40409352-PRJ13-020-0007",
+    "transaction_value": [
+      17700.0
+    ],
+    "transaction_value_currency": [
+      "EUR"
+    ]
+  },
+  {
+    "iati_identifier": "NL-KVK-40409352-PRJ13-020-0008",
+    "transaction_value": [
+      3357.0
+    ],
+    "transaction_value_currency": [
+      "EUR"
+    ]
+  },
+  {
+    "iati_identifier": "NL-KVK-40409352-PRJ13-026-0001",
+    "transaction_value": [
+      2285.0
+    ],
+    "transaction_value_currency": [
+      "EUR"
+    ]
+  },
+  {
+    "iati_identifier": "NL-KVK-40409352-PRJ13-029-0001",
+    "transaction_value": [
+      14648.0
+    ],
+    "transaction_value_currency": [
+      "EUR"
+    ]
+  },
+  {
+    "iati_identifier": "NL-KVK-40409352-PRJ13-152-0005",
+    "transaction_value": [
+      50000.0
+    ],
+    "transaction_value_currency": [
+      "EUR"
+    ]
+  },
+  {
+    "iati_identifier": "NL-KVK-40409352-PRJ13-152-0005",
+    "transaction_value": [
+      3250.0
+    ],
+    "transaction_value_currency": [
+      "EUR"
+    ]
+  },
+  {
+    "iati_identifier": "NL-KVK-40409352-PRJ13-192-0011",
+    "transaction_value": [
+      750000.0
+    ],
+    "transaction_value_currency": [
+      "EUR"
+    ]
+  },
+  {
+    "iati_identifier": "NL-KVK-40409352-PRJ13-192-0011",
+    "transaction_value": [
+      48750.0
+    ],
+    "transaction_value_currency": [
+      "EUR"
+    ]
+  },
+  {
+    "iati_identifier": "NL-KVK-40409352-PRJ13-192-0009",
+    "transaction_value": [
+      750000.0
+    ],
+    "transaction_value_currency": [
+      "EUR"
+    ]
+  },
+  {
+    "iati_identifier": "NL-KVK-40409352-PRJ13-192-0009",
+    "transaction_value": [
+      48750.0
+    ],
+    "transaction_value_currency": [
+      "EUR"
+    ]
+  },
+  {
+    "iati_identifier": "NL-KVK-40409352-PRJ13-192-0005",
+    "transaction_value": [
+      428837.0
+    ],
+    "transaction_value_currency": [
+      "EUR"
+    ]
+  },
+  {
+    "iati_identifier": "NL-KVK-40409352-PRJ13-192-0005",
+    "transaction_value": [
+      32163.0
+    ],
+    "transaction_value_currency": [
+      "EUR"
+    ]
+  },
+  {
+    "iati_identifier": "NL-KVK-40409352-PRJ13-192-0005",
+    "transaction_value": [
+      32163.0
+    ],
+    "transaction_value_currency": [
+      "EUR"
+    ]
+  },
+  {
+    "iati_identifier": "NL-KVK-40409352-PRJ13-192-0005",
+    "transaction_value": [
+      2412.0
+    ],
+    "transaction_value_currency": [
+      "EUR"
+    ]
+  },
+  {
+    "iati_identifier": "NL-KVK-40409352-PRJ13-192-0010",
+    "transaction_value": [
+      -251168.0
+    ],
+    "transaction_value_currency": [
+      "EUR"
+    ]
+  },
+  {
+    "iati_identifier": "NL-KVK-40409352-PRJ13-192-0010",
+    "transaction_value": [
+      -18838.0
+    ],
+    "transaction_value_currency": [
+      "EUR"
+    ]
+  },
+  {
+    "iati_identifier": "NL-KVK-40409352-PRJ13-192-0010",
+    "transaction_value": [
+      251168.0
+    ],
+    "transaction_value_currency": [
+      "EUR"
+    ]
+  },
+  {
+    "iati_identifier": "NL-KVK-40409352-PRJ13-192-0010",
+    "transaction_value": [
+      18838.0
+    ],
+    "transaction_value_currency": [
+      "EUR"
+    ]
+  },
+  {
+    "iati_identifier": "NL-KVK-40409352-PRJ13-192-0010",
+    "transaction_value": [
+      251168.0
+    ],
+    "transaction_value_currency": [
+      "EUR"
+    ]
+  },
+  {
+    "iati_identifier": "NL-KVK-40409352-PRJ13-192-0010",
+    "transaction_value": [
+      18838.0
+    ],
+    "transaction_value_currency": [
+      "EUR"
+    ]
+  },
+  {
+    "iati_identifier": "NL-KVK-40409352-PRJ13-192-0003",
+    "transaction_value": [
+      -1170.0
+    ],
+    "transaction_value_currency": [
+      "EUR"
+    ]
+  },
+  {
+    "iati_identifier": "NL-KVK-40409352-PRJ13-192-0003",
+    "transaction_value": [
+      1170.0
+    ],
+    "transaction_value_currency": [
+      "EUR"
+    ]
+  },
+  {
+    "iati_identifier": "NL-KVK-40409352-PRJ13-192-0003",
+    "transaction_value": [
+      18000.0
+    ],
+    "transaction_value_currency": [
+      "EUR"
+    ]
+  },
+  {
+    "iati_identifier": "NL-KVK-40409352-PRJ13-192-0003",
+    "transaction_value": [
+      1170.0
+    ],
+    "transaction_value_currency": [
+      "EUR"
+    ]
+  },
+  {
+    "iati_identifier": "NL-KVK-40409352-PRJ13-161-0026",
+    "transaction_value": [
+      246000.0
+    ],
+    "transaction_value_currency": [
+      "EUR"
+    ]
+  },
+  {
+    "iati_identifier": "NL-KVK-40409352-PRJ13-161-0026",
+    "transaction_value": [
+      18450.0
+    ],
+    "transaction_value_currency": [
+      "EUR"
+    ]
+  },
+  {
+    "iati_identifier": "NL-KVK-40409352-PRJ13-161-0015",
+    "transaction_value": [
+      1577451.0
+    ],
+    "transaction_value_currency": [
+      "EUR"
+    ]
+  },
+  {
+    "iati_identifier": "NL-KVK-40409352-PRJ13-161-0015",
+    "transaction_value": [
+      118309.0
+    ],
+    "transaction_value_currency": [
+      "EUR"
+    ]
+  },
+  {
+    "iati_identifier": "NL-KVK-40409352-PRJ13-161-0018",
+    "transaction_value": [
+      175000.0
+    ],
+    "transaction_value_currency": [
+      "EUR"
+    ]
+  },
+  {
+    "iati_identifier": "NL-KVK-40409352-PRJ13-161-0018",
+    "transaction_value": [
+      13125.0
+    ],
+    "transaction_value_currency": [
+      "EUR"
+    ]
+  },
+  {
+    "iati_identifier": "NL-KVK-40409352-PRJ13-161-0009",
+    "transaction_value": [
+      282796.0
+    ],
+    "transaction_value_currency": [
+      "EUR"
+    ]
+  },
+  {
+    "iati_identifier": "NL-KVK-40409352-PRJ13-161-0009",
+    "transaction_value": [
+      18382.0
+    ],
+    "transaction_value_currency": [
+      "EUR"
+    ]
+  },
+  {
+    "iati_identifier": "NL-KVK-40409352-PRJ13-161-0012",
+    "transaction_value": [
+      52700.0
+    ],
+    "transaction_value_currency": [
+      "EUR"
+    ]
+  },
+  {
+    "iati_identifier": "NL-KVK-40409352-PRJ13-161-0012",
+    "transaction_value": [
+      3953.0
+    ],
+    "transaction_value_currency": [
+      "EUR"
+    ]
+  },
+  {
+    "iati_identifier": "NL-KVK-40409352-PRJ13-161-0012",
+    "transaction_value": [
+      500000.0
+    ],
+    "transaction_value_currency": [
+      "EUR"
+    ]
+  },
+  {
+    "iati_identifier": "NL-KVK-40409352-PRJ13-161-0012",
+    "transaction_value": [
+      37500.0
+    ],
+    "transaction_value_currency": [
+      "EUR"
+    ]
+  },
+  {
+    "iati_identifier": "NL-KVK-40409352-PRJ13-161-0012",
+    "transaction_value": [
+      5022821.0
+    ],
+    "transaction_value_currency": [
+      "EUR"
+    ]
+  },
+  {
+    "iati_identifier": "NL-KVK-40409352-PRJ13-161-0012",
+    "transaction_value": [
+      376712.0
+    ],
+    "transaction_value_currency": [
+      "EUR"
+    ]
+  },
+  {
+    "iati_identifier": "NL-KVK-40409352-PRJ13-161-0012",
+    "transaction_value": [
+      1944.0
+    ],
+    "transaction_value_currency": [
+      "EUR"
+    ]
+  },
+  {
+    "iati_identifier": "NL-KVK-40409352-PRJ13-161-0016",
+    "transaction_value": [
+      1577451.0
+    ],
+    "transaction_value_currency": [
+      "EUR"
+    ]
+  },
+  {
+    "iati_identifier": "NL-KVK-40409352-PRJ13-161-0016",
+    "transaction_value": [
+      118309.0
+    ],
+    "transaction_value_currency": [
+      "EUR"
+    ]
+  },
+  {
+    "iati_identifier": "NL-KVK-40409352-PRJ13-161-0019",
+    "transaction_value": [
+      50000.0
+    ],
+    "transaction_value_currency": [
+      "EUR"
+    ]
+  },
+  {
+    "iati_identifier": "NL-KVK-40409352-PRJ13-161-0019",
+    "transaction_value": [
+      3250.0
+    ],
+    "transaction_value_currency": [
+      "EUR"
+    ]
+  },
+  {
+    "iati_identifier": "NL-KVK-40409352-PRJ13-161-0007",
+    "transaction_value": [
+      6944444.0
+    ],
+    "transaction_value_currency": [
+      "EUR"
+    ]
+  },
+  {
+    "iati_identifier": "NL-KVK-40409352-PRJ13-161-0007",
+    "transaction_value": [
+      520833.0
+    ],
+    "transaction_value_currency": [
+      "EUR"
+    ]
+  },
+  {
+    "iati_identifier": "NL-KVK-40409352-PRJ13-161-0007",
+    "transaction_value": [
+      389.0
+    ],
+    "transaction_value_currency": [
+      "EUR"
+    ]
+  },
+  {
+    "iati_identifier": "NL-KVK-40409352-PRJ13-161-0010",
+    "transaction_value": [
+      2511410.0
+    ],
+    "transaction_value_currency": [
+      "EUR"
+    ]
+  },
+  {
+    "iati_identifier": "NL-KVK-40409352-PRJ13-161-0010",
+    "transaction_value": [
+      188356.0
+    ],
+    "transaction_value_currency": [
+      "EUR"
+    ]
+  },
+  {
+    "iati_identifier": "NL-KVK-40409352-PRJ13-161-0010",
+    "transaction_value": [
+      972.0
+    ],
+    "transaction_value_currency": [
+      "EUR"
+    ]
+  },
+  {
+    "iati_identifier": "NL-KVK-40409352-PRJ13-161-0006",
+    "transaction_value": [
+      3472222.0
+    ],
+    "transaction_value_currency": [
+      "EUR"
+    ]
+  },
+  {
+    "iati_identifier": "NL-KVK-40409352-PRJ13-161-0006",
+    "transaction_value": [
+      260417.0
+    ],
+    "transaction_value_currency": [
+      "EUR"
+    ]
+  },
+  {
+    "iati_identifier": "NL-KVK-40409352-PRJ13-161-0006",
+    "transaction_value": [
+      389.0
+    ],
+    "transaction_value_currency": [
+      "EUR"
+    ]
+  },
+  {
+    "iati_identifier": "NL-KVK-40409352-PRJ13-161-0002",
+    "transaction_value": [
+      1500000.0
+    ],
+    "transaction_value_currency": [
+      "EUR"
+    ]
+  },
+  {
+    "iati_identifier": "NL-KVK-40409352-PRJ13-161-0002",
+    "transaction_value": [
+      97500.0
+    ],
+    "transaction_value_currency": [
+      "EUR"
+    ]
+  },
+  {
+    "iati_identifier": "NL-KVK-40409352-PRJ13-161-0011",
+    "transaction_value": [
+      2511410.0
+    ],
+    "transaction_value_currency": [
+      "EUR"
+    ]
+  },
+  {
+    "iati_identifier": "NL-KVK-40409352-PRJ13-161-0011",
+    "transaction_value": [
+      188356.0
+    ],
+    "transaction_value_currency": [
+      "EUR"
+    ]
+  },
+  {
+    "iati_identifier": "NL-KVK-40409352-PRJ13-161-0011",
+    "transaction_value": [
+      1944.0
+    ],
+    "transaction_value_currency": [
+      "EUR"
+    ]
+  },
+  {
+    "iati_identifier": "NL-KVK-40409352-PRJ13-161-0027",
+    "transaction_value": [
+      1000000.0
+    ],
+    "transaction_value_currency": [
+      "EUR"
+    ]
+  },
+  {
+    "iati_identifier": "NL-KVK-40409352-PRJ13-161-0027",
+    "transaction_value": [
+      75000.0
+    ],
+    "transaction_value_currency": [
+      "EUR"
+    ]
+  },
+  {
+    "iati_identifier": "NL-KVK-40409352-PRJ13-161-0028",
+    "transaction_value": [
+      396279.0
+    ],
+    "transaction_value_currency": [
+      "EUR"
+    ]
+  },
+  {
+    "iati_identifier": "NL-KVK-40409352-PRJ13-161-0028",
+    "transaction_value": [
+      29721.0
+    ],
+    "transaction_value_currency": [
+      "EUR"
+    ]
+  },
+  {
+    "iati_identifier": "NL-KVK-40409352-PRJ13-161-0025",
+    "transaction_value": [
+      75117.0
+    ],
+    "transaction_value_currency": [
+      "EUR"
+    ]
+  },
+  {
+    "iati_identifier": "NL-KVK-40409352-PRJ13-161-0025",
+    "transaction_value": [
+      4883.0
+    ],
+    "transaction_value_currency": [
+      "EUR"
+    ]
+  },
+  {
+    "iati_identifier": "NL-KVK-40409352-PRJ13-161-0005",
+    "transaction_value": [
+      3472222.0
+    ],
+    "transaction_value_currency": [
+      "EUR"
+    ]
+  },
+  {
+    "iati_identifier": "NL-KVK-40409352-PRJ13-161-0005",
+    "transaction_value": [
+      194.0
+    ],
+    "transaction_value_currency": [
+      "EUR"
+    ]
+  },
+  {
+    "iati_identifier": "NL-KVK-40409352-PRJ13-161-0005",
+    "transaction_value": [
+      260417.0
+    ],
+    "transaction_value_currency": [
+      "EUR"
+    ]
+  },
+  {
+    "iati_identifier": "NL-KVK-40409352-PRJ13-155-0001",
+    "transaction_value": [
+      100000.0
+    ],
+    "transaction_value_currency": [
+      "EUR"
+    ]
+  },
+  {
+    "iati_identifier": "NL-KVK-40409352-PRJ13-155-0001",
+    "transaction_value": [
+      7500.0
+    ],
+    "transaction_value_currency": [
+      "EUR"
+    ]
+  },
+  {
+    "iati_identifier": "NL-KVK-40409352-PRJ13-129-0001",
+    "transaction_value": [
+      500000.0
+    ],
+    "transaction_value_currency": [
+      "EUR"
+    ]
+  },
+  {
+    "iati_identifier": "NL-KVK-40409352-PRJ13-129-0001",
+    "transaction_value": [
+      32500.0
+    ],
+    "transaction_value_currency": [
+      "EUR"
+    ]
+  },
+  {
+    "iati_identifier": "NL-KVK-40409352-PRJ13-129-0002",
+    "transaction_value": [
+      1500000.0
+    ],
+    "transaction_value_currency": [
+      "EUR"
+    ]
+  },
+  {
+    "iati_identifier": "NL-KVK-40409352-PRJ13-129-0002",
+    "transaction_value": [
+      97500.0
+    ],
+    "transaction_value_currency": [
+      "EUR"
+    ]
+  },
+  {
+    "iati_identifier": "NL-KVK-40409352-PRJ13-219-0007",
+    "transaction_value": [
+      264322.0
+    ],
+    "transaction_value_currency": [
+      "EUR"
+    ]
+  },
+  {
+    "iati_identifier": "NL-KVK-40409352-PRJ13-219-0007",
+    "transaction_value": [
+      19824.0
+    ],
+    "transaction_value_currency": [
+      "EUR"
+    ]
+  },
+  {
+    "iati_identifier": "NL-KVK-40409352-PRJ13-219-0007",
+    "transaction_value": [
+      237381.0
+    ],
+    "transaction_value_currency": [
+      "EUR"
+    ]
+  },
+  {
+    "iati_identifier": "NL-KVK-40409352-PRJ13-219-0007",
+    "transaction_value": [
+      17804.0
+    ],
+    "transaction_value_currency": [
+      "EUR"
+    ]
+  },
+  {
+    "iati_identifier": "NL-KVK-40409352-PRJ13-219-0007",
+    "transaction_value": [
+      224744.0
+    ],
+    "transaction_value_currency": [
+      "EUR"
+    ]
+  },
+  {
+    "iati_identifier": "NL-KVK-40409352-PRJ13-219-0007",
+    "transaction_value": [
+      16856.0
+    ],
+    "transaction_value_currency": [
+      "EUR"
+    ]
+  },
+  {
+    "iati_identifier": "NL-KVK-40409352-PRJ13-191-0001",
+    "transaction_value": [
+      250000.0
+    ],
+    "transaction_value_currency": [
+      "EUR"
+    ]
+  },
+  {
+    "iati_identifier": "NL-KVK-40409352-PRJ13-191-0001",
+    "transaction_value": [
+      16250.0
+    ],
+    "transaction_value_currency": [
+      "EUR"
+    ]
+  },
+  {
+    "iati_identifier": "NL-KVK-40409352-PRJ13-149-0036",
+    "transaction_value": [
+      280000.0
+    ],
+    "transaction_value_currency": [
+      "EUR"
+    ]
+  },
+  {
+    "iati_identifier": "NL-KVK-40409352-PRJ13-149-0036",
+    "transaction_value": [
+      18200.0
+    ],
+    "transaction_value_currency": [
+      "EUR"
+    ]
+  },
+  {
+    "iati_identifier": "NL-KVK-40409352-PRJ13-149-0007",
+    "transaction_value": [
+      150000.0
+    ],
+    "transaction_value_currency": [
+      "EUR"
+    ]
+  },
+  {
+    "iati_identifier": "NL-KVK-40409352-PRJ13-149-0007",
+    "transaction_value": [
+      9750.0
+    ],
+    "transaction_value_currency": [
+      "EUR"
+    ]
+  },
+  {
+    "iati_identifier": "NL-KVK-40409352-PRJ13-149-0032",
+    "transaction_value": [
+      500000.0
+    ],
+    "transaction_value_currency": [
+      "EUR"
+    ]
+  },
+  {
+    "iati_identifier": "NL-KVK-40409352-PRJ13-149-0032",
+    "transaction_value": [
+      32500.0
+    ],
+    "transaction_value_currency": [
+      "EUR"
+    ]
+  },
+  {
+    "iati_identifier": "NL-KVK-40409352-PRJ13-149-0027",
+    "transaction_value": [
+      300000.0
+    ],
+    "transaction_value_currency": [
+      "EUR"
+    ]
+  },
+  {
+    "iati_identifier": "NL-KVK-40409352-PRJ13-149-0027",
+    "transaction_value": [
+      19500.0
+    ],
+    "transaction_value_currency": [
+      "EUR"
+    ]
+  },
+  {
+    "iati_identifier": "NL-KVK-40409352-PRJ13-149-0049",
+    "transaction_value": [
+      100000.0
+    ],
+    "transaction_value_currency": [
+      "EUR"
+    ]
+  },
+  {
+    "iati_identifier": "NL-KVK-40409352-PRJ13-149-0049",
+    "transaction_value": [
+      6500.0
+    ],
+    "transaction_value_currency": [
+      "EUR"
+    ]
+  },
+  {
+    "iati_identifier": "NL-KVK-40409352-PRJ13-149-0051",
+    "transaction_value": [
+      19141.0
+    ],
+    "transaction_value_currency": [
+      "EUR"
+    ]
+  },
+  {
+    "iati_identifier": "NL-KVK-40409352-PRJ13-149-0051",
+    "transaction_value": [
+      1244.0
+    ],
+    "transaction_value_currency": [
+      "EUR"
+    ]
+  },
+  {
+    "iati_identifier": "NL-KVK-40409352-PRJ13-149-0020",
+    "transaction_value": [
+      281690.0
+    ],
+    "transaction_value_currency": [
+      "EUR"
+    ]
+  },
+  {
+    "iati_identifier": "NL-KVK-40409352-PRJ13-149-0020",
+    "transaction_value": [
+      18310.0
+    ],
+    "transaction_value_currency": [
+      "EUR"
+    ]
+  },
+  {
+    "iati_identifier": "NL-KVK-40409352-PRJ13-149-0042",
+    "transaction_value": [
+      400000.0
+    ],
+    "transaction_value_currency": [
+      "EUR"
+    ]
+  },
+  {
+    "iati_identifier": "NL-KVK-40409352-PRJ13-149-0042",
+    "transaction_value": [
+      26000.0
+    ],
+    "transaction_value_currency": [
+      "EUR"
+    ]
+  },
+  {
+    "iati_identifier": "NL-KVK-40409352-PRJ13-149-0004",
+    "transaction_value": [
+      250000.0
+    ],
+    "transaction_value_currency": [
+      "EUR"
+    ]
+  },
+  {
+    "iati_identifier": "NL-KVK-40409352-PRJ13-149-0004",
+    "transaction_value": [
+      16250.0
+    ],
+    "transaction_value_currency": [
+      "EUR"
+    ]
+  },
+  {
+    "iati_identifier": "NL-KVK-40409352-PRJ13-149-0019",
+    "transaction_value": [
+      93897.0
+    ],
+    "transaction_value_currency": [
+      "EUR"
+    ]
+  },
+  {
+    "iati_identifier": "NL-KVK-40409352-PRJ13-149-0019",
+    "transaction_value": [
+      6103.0
+    ],
+    "transaction_value_currency": [
+      "EUR"
+    ]
+  },
+  {
+    "iati_identifier": "NL-KVK-40409352-PRJ13-149-0043",
+    "transaction_value": [
+      800000.0
+    ],
+    "transaction_value_currency": [
+      "EUR"
+    ]
+  },
+  {
+    "iati_identifier": "NL-KVK-40409352-PRJ13-149-0043",
+    "transaction_value": [
+      52000.0
+    ],
+    "transaction_value_currency": [
+      "EUR"
+    ]
+  },
+  {
+    "iati_identifier": "NL-KVK-40409352-PRJ13-149-0017",
+    "transaction_value": [
+      938967.0
+    ],
+    "transaction_value_currency": [
+      "EUR"
+    ]
+  },
+  {
+    "iati_identifier": "NL-KVK-40409352-PRJ13-149-0017",
+    "transaction_value": [
+      61033.0
+    ],
+    "transaction_value_currency": [
+      "EUR"
+    ]
+  },
+  {
+    "iati_identifier": "NL-KVK-40409352-PRJ13-149-0040",
+    "transaction_value": [
+      250000.0
+    ],
+    "transaction_value_currency": [
+      "EUR"
+    ]
+  },
+  {
+    "iati_identifier": "NL-KVK-40409352-PRJ13-149-0040",
+    "transaction_value": [
+      16250.0
+    ],
+    "transaction_value_currency": [
+      "EUR"
+    ]
+  },
+  {
+    "iati_identifier": "NL-KVK-40409352-PRJ13-149-0016",
+    "transaction_value": [
+      930233.0
+    ],
+    "transaction_value_currency": [
+      "EUR"
+    ]
+  },
+  {
+    "iati_identifier": "NL-KVK-40409352-PRJ13-149-0016",
+    "transaction_value": [
+      69767.0
+    ],
+    "transaction_value_currency": [
+      "EUR"
+    ]
+  },
+  {
+    "iati_identifier": "NL-KVK-40409352-PRJ13-149-0035",
+    "transaction_value": [
+      350000.0
+    ],
+    "transaction_value_currency": [
+      "EUR"
+    ]
+  },
+  {
+    "iati_identifier": "NL-KVK-40409352-PRJ13-149-0035",
+    "transaction_value": [
+      22750.0
+    ],
+    "transaction_value_currency": [
+      "EUR"
+    ]
+  },
+  {
+    "iati_identifier": "NL-KVK-40409352-PRJ13-149-0047",
+    "transaction_value": [
+      100000.0
+    ],
+    "transaction_value_currency": [
+      "EUR"
+    ]
+  },
+  {
+    "iati_identifier": "NL-KVK-40409352-PRJ13-149-0047",
+    "transaction_value": [
+      6500.0
+    ],
+    "transaction_value_currency": [
+      "EUR"
+    ]
+  },
+  {
+    "iati_identifier": "NL-KVK-40409352-PRJ13-149-0034",
+    "transaction_value": [
+      350000.0
+    ],
+    "transaction_value_currency": [
+      "EUR"
+    ]
+  },
+  {
+    "iati_identifier": "NL-KVK-40409352-PRJ13-149-0034",
+    "transaction_value": [
+      22750.0
+    ],
+    "transaction_value_currency": [
+      "EUR"
+    ]
+  },
+  {
+    "iati_identifier": "NL-KVK-40409352-PRJ13-149-0045",
+    "transaction_value": [
+      500000.0
+    ],
+    "transaction_value_currency": [
+      "EUR"
+    ]
+  },
+  {
+    "iati_identifier": "NL-KVK-40409352-PRJ13-149-0045",
+    "transaction_value": [
+      32500.0
+    ],
+    "transaction_value_currency": [
+      "EUR"
+    ]
+  },
+  {
+    "iati_identifier": "NL-KVK-40409352-PRJ13-149-0005",
+    "transaction_value": [
+      150000.0
+    ],
+    "transaction_value_currency": [
+      "EUR"
+    ]
+  },
+  {
+    "iati_identifier": "NL-KVK-40409352-PRJ13-149-0005",
+    "transaction_value": [
+      9750.0
+    ],
+    "transaction_value_currency": [
+      "EUR"
+    ]
+  },
+  {
+    "iati_identifier": "NL-KVK-40409352-PRJ13-149-0033",
+    "transaction_value": [
+      250000.0
+    ],
+    "transaction_value_currency": [
+      "EUR"
+    ]
+  },
+  {
+    "iati_identifier": "NL-KVK-40409352-PRJ13-149-0033",
+    "transaction_value": [
+      16250.0
+    ],
+    "transaction_value_currency": [
+      "EUR"
+    ]
+  },
+  {
+    "iati_identifier": "NL-KVK-40409352-PRJ13-149-0029",
+    "transaction_value": [
+      300000.0
+    ],
+    "transaction_value_currency": [
+      "EUR"
+    ]
+  },
+  {
+    "iati_identifier": "NL-KVK-40409352-PRJ13-149-0029",
+    "transaction_value": [
+      19500.0
+    ],
+    "transaction_value_currency": [
+      "EUR"
+    ]
+  },
+  {
+    "iati_identifier": "NL-KVK-40409352-PRJ13-149-0031",
+    "transaction_value": [
+      280000.0
+    ],
+    "transaction_value_currency": [
+      "EUR"
+    ]
+  },
+  {
+    "iati_identifier": "NL-KVK-40409352-PRJ13-149-0031",
+    "transaction_value": [
+      18200.0
+    ],
+    "transaction_value_currency": [
+      "EUR"
+    ]
+  },
+  {
+    "iati_identifier": "NL-KVK-40409352-PRJ13-149-0044",
+    "transaction_value": [
+      500000.0
+    ],
+    "transaction_value_currency": [
+      "EUR"
+    ]
+  },
+  {
+    "iati_identifier": "NL-KVK-40409352-PRJ13-149-0044",
+    "transaction_value": [
+      32500.0
+    ],
+    "transaction_value_currency": [
+      "EUR"
+    ]
+  },
+  {
+    "iati_identifier": "NL-KVK-40409352-PRJ13-149-0015",
+    "transaction_value": [
+      930233.0
+    ],
+    "transaction_value_currency": [
+      "EUR"
+    ]
+  },
+  {
+    "iati_identifier": "NL-KVK-40409352-PRJ13-149-0015",
+    "transaction_value": [
+      66977.0
+    ],
+    "transaction_value_currency": [
+      "EUR"
+    ]
+  },
+  {
+    "iati_identifier": "NL-KVK-40409352-PRJ13-149-0003",
+    "transaction_value": [
+      99252.0
+    ],
+    "transaction_value_currency": [
+      "EUR"
+    ]
+  },
+  {
+    "iati_identifier": "NL-KVK-40409352-PRJ13-149-0003",
+    "transaction_value": [
+      6451.0
+    ],
+    "transaction_value_currency": [
+      "EUR"
+    ]
+  },
+  {
+    "iati_identifier": "NL-KVK-40409352-PRJ13-149-0001",
+    "transaction_value": [
+      250000.0
+    ],
+    "transaction_value_currency": [
+      "EUR"
+    ]
+  },
+  {
+    "iati_identifier": "NL-KVK-40409352-PRJ13-149-0001",
+    "transaction_value": [
+      16250.0
+    ],
+    "transaction_value_currency": [
+      "EUR"
+    ]
+  },
+  {
+    "iati_identifier": "NL-KVK-40409352-PRJ13-149-0002",
+    "transaction_value": [
+      250000.0
+    ],
+    "transaction_value_currency": [
+      "EUR"
+    ]
+  },
+  {
+    "iati_identifier": "NL-KVK-40409352-PRJ13-149-0002",
+    "transaction_value": [
+      16250.0
+    ],
+    "transaction_value_currency": [
+      "EUR"
+    ]
+  },
+  {
+    "iati_identifier": "NL-KVK-40409352-PRJ13-149-0012",
+    "transaction_value": [
+      750000.0
+    ],
+    "transaction_value_currency": [
+      "EUR"
+    ]
+  },
+  {
+    "iati_identifier": "NL-KVK-40409352-PRJ13-149-0012",
+    "transaction_value": [
+      48750.0
+    ],
+    "transaction_value_currency": [
+      "EUR"
+    ]
+  },
+  {
+    "iati_identifier": "NL-KVK-40409352-PRJ13-149-0037",
+    "transaction_value": [
+      350000.0
+    ],
+    "transaction_value_currency": [
+      "EUR"
+    ]
+  },
+  {
+    "iati_identifier": "NL-KVK-40409352-PRJ13-149-0037",
+    "transaction_value": [
+      22750.0
+    ],
+    "transaction_value_currency": [
+      "EUR"
+    ]
+  },
+  {
+    "iati_identifier": "NL-KVK-40409352-PRJ13-149-0006",
+    "transaction_value": [
+      150000.0
+    ],
+    "transaction_value_currency": [
+      "EUR"
+    ]
+  },
+  {
+    "iati_identifier": "NL-KVK-40409352-PRJ13-149-0006",
+    "transaction_value": [
+      9750.0
+    ],
+    "transaction_value_currency": [
+      "EUR"
+    ]
+  },
+  {
+    "iati_identifier": "NL-KVK-40409352-PRJ13-149-0030",
+    "transaction_value": [
+      -247674.0
+    ],
+    "transaction_value_currency": [
+      "EUR"
+    ]
+  },
+  {
+    "iati_identifier": "NL-KVK-40409352-PRJ13-149-0030",
+    "transaction_value": [
+      -18576.0
+    ],
+    "transaction_value_currency": [
+      "EUR"
+    ]
+  },
+  {
+    "iati_identifier": "NL-KVK-40409352-PRJ13-149-0030",
+    "transaction_value": [
+      250000.0
+    ],
+    "transaction_value_currency": [
+      "EUR"
+    ]
+  },
+  {
+    "iati_identifier": "NL-KVK-40409352-PRJ13-149-0030",
+    "transaction_value": [
+      16250.0
+    ],
+    "transaction_value_currency": [
+      "EUR"
+    ]
+  },
+  {
+    "iati_identifier": "NL-KVK-40409352-PRJ13-149-0030",
+    "transaction_value": [
+      247674.0
+    ],
+    "transaction_value_currency": [
+      "EUR"
+    ]
+  },
+  {
+    "iati_identifier": "NL-KVK-40409352-PRJ13-149-0030",
+    "transaction_value": [
+      18576.0
+    ],
+    "transaction_value_currency": [
+      "EUR"
+    ]
+  },
+  {
+    "iati_identifier": "NL-KVK-40409352-PRJ13-037-0016",
+    "transaction_value": [
+      -172395.0
+    ],
+    "transaction_value_currency": [
+      "EUR"
+    ]
+  },
+  {
+    "iati_identifier": "NL-KVK-40409352-PRJ13-037-0016",
+    "transaction_value": [
+      -12930.0
+    ],
+    "transaction_value_currency": [
+      "EUR"
+    ]
+  },
+  {
+    "iati_identifier": "NL-KVK-40409352-PRJ13-037-0016",
+    "transaction_value": [
+      172395.0
+    ],
+    "transaction_value_currency": [
+      "EUR"
+    ]
+  },
+  {
+    "iati_identifier": "NL-KVK-40409352-PRJ13-037-0016",
+    "transaction_value": [
+      12930.0
+    ],
+    "transaction_value_currency": [
+      "EUR"
+    ]
+  },
+  {
+    "iati_identifier": "NL-KVK-40409352-PRJ13-037-0016",
+    "transaction_value": [
+      172395.0
+    ],
+    "transaction_value_currency": [
+      "EUR"
+    ]
+  },
+  {
+    "iati_identifier": "NL-KVK-40409352-PRJ13-037-0016",
+    "transaction_value": [
+      12930.0
+    ],
+    "transaction_value_currency": [
+      "EUR"
+    ]
+  },
+  {
+    "iati_identifier": "NL-KVK-40409352-PRJ13-039-0001",
+    "transaction_value": [
+      8545.0
+    ],
+    "transaction_value_currency": [
+      "EUR"
+    ]
+  },
+  {
+    "iati_identifier": "NL-KVK-40409352-PRJ13-043-0001",
+    "transaction_value": [
+      1706.0
+    ],
+    "transaction_value_currency": [
+      "EUR"
+    ]
+  },
+  {
+    "iati_identifier": "NL-KVK-40409352-PRJ13-043-0001",
+    "transaction_value": [
+      11818.0
+    ],
+    "transaction_value_currency": [
+      "EUR"
+    ]
+  },
+  {
+    "iati_identifier": "NL-KVK-40409352-PRJ13-150-0001",
+    "transaction_value": [
+      375587.0
+    ],
+    "transaction_value_currency": [
+      "EUR"
+    ]
+  },
+  {
+    "iati_identifier": "NL-KVK-40409352-PRJ13-150-0001",
+    "transaction_value": [
+      24413.0
+    ],
+    "transaction_value_currency": [
+      "EUR"
+    ]
+  },
+  {
+    "iati_identifier": "NL-KVK-40409352-PRJ13-149-0038",
+    "transaction_value": [
+      350000.0
+    ],
+    "transaction_value_currency": [
+      "EUR"
+    ]
+  },
+  {
+    "iati_identifier": "NL-KVK-40409352-PRJ13-149-0038",
+    "transaction_value": [
+      22750.0
+    ],
+    "transaction_value_currency": [
+      "EUR"
+    ]
+  },
+  {
+    "iati_identifier": "NL-KVK-40409352-PRJ13-149-0011",
+    "transaction_value": [
+      750000.0
+    ],
+    "transaction_value_currency": [
+      "EUR"
+    ]
+  },
+  {
+    "iati_identifier": "NL-KVK-40409352-PRJ13-149-0011",
+    "transaction_value": [
+      48750.0
+    ],
+    "transaction_value_currency": [
+      "EUR"
+    ]
+  },
+  {
+    "iati_identifier": "NL-KVK-40409352-PRJ13-149-0018",
+    "transaction_value": [
+      187793.0
+    ],
+    "transaction_value_currency": [
+      "EUR"
+    ]
+  },
+  {
+    "iati_identifier": "NL-KVK-40409352-PRJ13-149-0018",
+    "transaction_value": [
+      12207.0
+    ],
+    "transaction_value_currency": [
+      "EUR"
+    ]
+  },
+  {
+    "iati_identifier": "NL-KVK-40409352-PRJ08-256-0008",
+    "transaction_value": [
+      50195.0
+    ],
+    "transaction_value_currency": [
+      "EUR"
+    ]
+  },
+  {
+    "iati_identifier": "NL-KVK-40409352-PRJ08-256-0008",
+    "transaction_value": [
+      3765.0
+    ],
+    "transaction_value_currency": [
+      "EUR"
+    ]
+  },
+  {
+    "iati_identifier": "NL-KVK-40409352-PRJ13-103-0003",
+    "transaction_value": [
+      28169.0
+    ],
+    "transaction_value_currency": [
+      "EUR"
+    ]
+  },
+  {
+    "iati_identifier": "NL-KVK-40409352-PRJ13-103-0003",
+    "transaction_value": [
+      1831.0
+    ],
+    "transaction_value_currency": [
+      "EUR"
+    ]
+  },
+  {
+    "iati_identifier": "NL-KVK-40409352-PRJ13-031-0005",
+    "transaction_value": [
+      4883.0
+    ],
+    "transaction_value_currency": [
+      "EUR"
+    ]
+  },
+  {
+    "iati_identifier": "NL-KVK-40409352-PRJ13-031-0006",
+    "transaction_value": [
+      3662.0
+    ],
+    "transaction_value_currency": [
+      "EUR"
+    ]
+  },
+  {
+    "iati_identifier": "NL-KVK-40409352-PRJ13-031-0007",
+    "transaction_value": [
+      3662.0
+    ],
+    "transaction_value_currency": [
+      "EUR"
+    ]
+  },
+  {
+    "iati_identifier": "NL-KVK-40409352-PRJ13-031-0016",
+    "transaction_value": [
+      3662.0
+    ],
+    "transaction_value_currency": [
+      "EUR"
+    ]
+  },
+  {
+    "iati_identifier": "NL-KVK-40409352-PRJ13-031-0014",
+    "transaction_value": [
+      4883.0
+    ],
+    "transaction_value_currency": [
+      "EUR"
+    ]
+  },
+  {
+    "iati_identifier": "NL-KVK-40409352-PRJ13-031-0017",
+    "transaction_value": [
+      3662.0
+    ],
+    "transaction_value_currency": [
+      "EUR"
+    ]
+  },
+  {
+    "iati_identifier": "NL-KVK-40409352-PRJ13-031-0015",
+    "transaction_value": [
+      4883.0
+    ],
+    "transaction_value_currency": [
+      "EUR"
+    ]
+  },
+  {
+    "iati_identifier": "NL-KVK-40409352-PRJ13-031-0018",
+    "transaction_value": [
+      4883.0
+    ],
+    "transaction_value_currency": [
+      "EUR"
+    ]
+  },
+  {
+    "iati_identifier": "NL-KVK-40409352-PRJ13-031-0023",
+    "transaction_value": [
+      19500.0
+    ],
+    "transaction_value_currency": [
+      "EUR"
+    ]
+  },
+  {
+    "iati_identifier": "NL-KVK-40409352-PRJ13-031-0025",
+    "transaction_value": [
+      3662.0
+    ],
+    "transaction_value_currency": [
+      "EUR"
+    ]
+  },
+  {
+    "iati_identifier": "NL-KVK-40409352-PRJ13-031-0026",
+    "transaction_value": [
+      3662.0
+    ],
+    "transaction_value_currency": [
+      "EUR"
+    ]
+  },
+  {
+    "iati_identifier": "NL-KVK-40409352-PRJ13-031-0020",
+    "transaction_value": [
+      4883.0
+    ],
+    "transaction_value_currency": [
+      "EUR"
+    ]
+  },
+  {
+    "iati_identifier": "NL-KVK-40409352-PRJ13-011-0034",
+    "transaction_value": [
+      4883.0
+    ],
+    "transaction_value_currency": [
+      "EUR"
+    ]
+  },
+  {
+    "iati_identifier": "NL-KVK-40409352-PRJ13-011-0039",
+    "transaction_value": [
+      1587.0
+    ],
+    "transaction_value_currency": [
+      "EUR"
+    ]
+  },
+  {
+    "iati_identifier": "NL-KVK-40409352-PRJ13-011-0023",
+    "transaction_value": [
+      4883.0
+    ],
+    "transaction_value_currency": [
+      "EUR"
+    ]
+  },
+  {
+    "iati_identifier": "NL-KVK-40409352-PRJ13-011-0024",
+    "transaction_value": [
+      3662.0
+    ],
+    "transaction_value_currency": [
+      "EUR"
+    ]
+  },
+  {
+    "iati_identifier": "NL-KVK-40409352-PRJ13-011-0025",
+    "transaction_value": [
+      3662.0
+    ],
+    "transaction_value_currency": [
+      "EUR"
+    ]
+  },
+  {
+    "iati_identifier": "NL-KVK-40409352-PRJ13-011-0026",
+    "transaction_value": [
+      3662.0
+    ],
+    "transaction_value_currency": [
+      "EUR"
+    ]
+  },
+  {
+    "iati_identifier": "NL-KVK-40409352-PRJ13-011-0027",
+    "transaction_value": [
+      3662.0
+    ],
+    "transaction_value_currency": [
+      "EUR"
+    ]
+  },
+  {
+    "iati_identifier": "NL-KVK-40409352-PRJ13-011-0029",
+    "transaction_value": [
+      4883.0
+    ],
+    "transaction_value_currency": [
+      "EUR"
+    ]
+  },
+  {
+    "iati_identifier": "NL-KVK-40409352-PRJ13-011-0037",
+    "transaction_value": [
+      1831.0
+    ],
+    "transaction_value_currency": [
+      "EUR"
+    ]
+  },
+  {
+    "iati_identifier": "NL-KVK-40409352-PRJ13-011-0040",
+    "transaction_value": [
+      3662.0
+    ],
+    "transaction_value_currency": [
+      "EUR"
+    ]
+  },
+  {
+    "iati_identifier": "XI-IATI-EC_NEAR-2021-PCC-428039",
+    "transaction_value": [
+      3000000.0
+    ]
+  },
+  {
+    "iati_identifier": "XI-IATI-EC_NEAR-2021-PCC-428039",
+    "transaction_value": [
+      1187722.89
+    ]
+  },
+  {
+    "iati_identifier": "XI-IATI-EC_NEAR-2021-PCC-428039",
+    "transaction_value": [
+      1201922.16
+    ]
+  },
+  {
+    "iati_identifier": "NL-KVK-40409352-PRJ13-193-0001",
+    "transaction_value": [
+      200000.0
+    ],
+    "transaction_value_currency": [
+      "EUR"
+    ]
+  },
+  {
+    "iati_identifier": "NL-KVK-40409352-PRJ13-193-0001",
+    "transaction_value": [
+      15000.0
+    ],
+    "transaction_value_currency": [
+      "EUR"
+    ]
+  },
+  {
+    "iati_identifier": "NL-KVK-40409352-PRJ13-193-0002",
+    "transaction_value": [
+      200000.0
+    ],
+    "transaction_value_currency": [
+      "EUR"
+    ]
+  },
+  {
+    "iati_identifier": "NL-KVK-40409352-PRJ13-193-0002",
+    "transaction_value": [
+      15000.0
+    ],
+    "transaction_value_currency": [
+      "EUR"
+    ]
+  },
+  {
+    "iati_identifier": "NL-KVK-40409352-PRJ13-167-0002",
+    "transaction_value": [
+      18779.0
+    ],
+    "transaction_value_currency": [
+      "EUR"
+    ]
+  },
+  {
+    "iati_identifier": "NL-KVK-40409352-PRJ13-167-0002",
+    "transaction_value": [
+      1221.0
+    ],
+    "transaction_value_currency": [
+      "EUR"
+    ]
+  },
+  {
+    "iati_identifier": "NL-KVK-40409352-PRJ13-167-0002",
+    "transaction_value": [
+      -1221.0
+    ],
+    "transaction_value_currency": [
+      "EUR"
+    ]
+  },
+  {
+    "iati_identifier": "NL-KVK-40409352-PRJ13-167-0002",
+    "transaction_value": [
+      -18779.0
+    ],
+    "transaction_value_currency": [
+      "EUR"
+    ]
+  },
+  {
+    "iati_identifier": "NL-KVK-40409352-PRJ13-167-0002",
+    "transaction_value": [
+      1221.0
+    ],
+    "transaction_value_currency": [
+      "EUR"
+    ]
+  },
+  {
+    "iati_identifier": "NL-KVK-40409352-PRJ13-167-0002",
+    "transaction_value": [
+      18779.0
+    ],
+    "transaction_value_currency": [
+      "EUR"
+    ]
+  },
+  {
+    "iati_identifier": "NL-KVK-40409352-PRJ13-167-0002",
+    "transaction_value": [
+      66977.0
+    ],
+    "transaction_value_currency": [
+      "EUR"
+    ]
+  },
+  {
+    "iati_identifier": "NL-KVK-40409352-PRJ13-167-0002",
+    "transaction_value": [
+      5023.0
+    ],
+    "transaction_value_currency": [
+      "EUR"
+    ]
+  },
+  {
+    "iati_identifier": "NL-KVK-40409352-PRJ13-167-0002",
+    "transaction_value": [
+      153488.0
+    ],
+    "transaction_value_currency": [
+      "EUR"
+    ]
+  },
+  {
+    "iati_identifier": "NL-KVK-40409352-PRJ13-167-0002",
+    "transaction_value": [
+      11512.0
+    ],
+    "transaction_value_currency": [
+      "EUR"
+    ]
+  },
+  {
+    "iati_identifier": "NL-KVK-40409352-PRJ13-012-0005",
+    "transaction_value": [
+      3967.0
+    ],
+    "transaction_value_currency": [
+      "EUR"
+    ]
+  },
+  {
+    "iati_identifier": "NL-KVK-40409352-PRJ13-012-0001",
+    "transaction_value": [
+      187793.0
+    ],
+    "transaction_value_currency": [
+      "EUR"
+    ]
+  },
+  {
+    "iati_identifier": "NL-KVK-40409352-PRJ13-012-0001",
+    "transaction_value": [
+      12207.0
+    ],
+    "transaction_value_currency": [
+      "EUR"
+    ]
+  },
+  {
+    "iati_identifier": "NL-KVK-40409352-PRJ13-012-0003",
+    "transaction_value": [
+      -46948.0
+    ],
+    "transaction_value_currency": [
+      "EUR"
+    ]
+  },
+  {
+    "iati_identifier": "NL-KVK-40409352-PRJ13-012-0003",
+    "transaction_value": [
+      -3052.0
+    ],
+    "transaction_value_currency": [
+      "EUR"
+    ]
+  },
+  {
+    "iati_identifier": "NL-KVK-40409352-PRJ13-012-0003",
+    "transaction_value": [
+      46948.0
+    ],
+    "transaction_value_currency": [
+      "EUR"
+    ]
+  },
+  {
+    "iati_identifier": "NL-KVK-40409352-PRJ13-012-0003",
+    "transaction_value": [
+      3052.0
+    ],
+    "transaction_value_currency": [
+      "EUR"
+    ]
+  },
+  {
+    "iati_identifier": "NL-KVK-40409352-PRJ13-012-0003",
+    "transaction_value": [
+      112676.0
+    ],
+    "transaction_value_currency": [
+      "EUR"
+    ]
+  },
+  {
+    "iati_identifier": "NL-KVK-40409352-PRJ13-012-0003",
+    "transaction_value": [
+      7324.0
+    ],
+    "transaction_value_currency": [
+      "EUR"
+    ]
+  },
+  {
+    "iati_identifier": "NL-KVK-40409352-PRJ13-012-0002",
+    "transaction_value": [
+      60465.0
+    ],
+    "transaction_value_currency": [
+      "EUR"
+    ]
+  },
+  {
+    "iati_identifier": "NL-KVK-40409352-PRJ13-012-0002",
+    "transaction_value": [
+      4535.0
+    ],
+    "transaction_value_currency": [
+      "EUR"
+    ]
+  },
+  {
+    "iati_identifier": "NL-KVK-40409352-PRJ13-012-0004",
+    "transaction_value": [
+      3662.0
+    ],
+    "transaction_value_currency": [
+      "EUR"
+    ]
+  },
+  {
+    "iati_identifier": "NL-KVK-40409352-PRJ13-008-0007",
+    "transaction_value": [
+      -75000.0
+    ],
+    "transaction_value_currency": [
+      "EUR"
+    ]
+  },
+  {
+    "iati_identifier": "NL-KVK-40409352-PRJ13-008-0007",
+    "transaction_value": [
+      1000000.0
+    ],
+    "transaction_value_currency": [
+      "EUR"
+    ]
+  },
+  {
+    "iati_identifier": "NL-KVK-40409352-PRJ13-008-0007",
+    "transaction_value": [
+      75000.0
+    ],
+    "transaction_value_currency": [
+      "EUR"
+    ]
+  },
+  {
+    "iati_identifier": "NL-KVK-40409352-PRJ13-008-0007",
+    "transaction_value": [
+      75000.0
+    ],
+    "transaction_value_currency": [
+      "EUR"
+    ]
+  },
+  {
+    "iati_identifier": "NL-KVK-40409352-PRJ13-008-0001",
+    "transaction_value": [
+      30516.0
+    ],
+    "transaction_value_currency": [
+      "EUR"
+    ]
+  },
+  {
+    "iati_identifier": "NL-KVK-40409352-PRJ13-008-0001",
+    "transaction_value": [
+      15258.0
+    ],
+    "transaction_value_currency": [
+      "EUR"
+    ]
+  },
+  {
+    "iati_identifier": "NL-KVK-40409352-PRJ13-008-0004",
+    "transaction_value": [
+      1399.0
+    ],
+    "transaction_value_currency": [
+      "EUR"
+    ]
+  },
+  {
+    "iati_identifier": "NL-KVK-40409352-PRJ13-008-0004",
+    "transaction_value": [
+      2480.0
+    ],
+    "transaction_value_currency": [
+      "EUR"
+    ]
+  },
+  {
+    "iati_identifier": "NL-KVK-40409352-PRJ13-008-0004",
+    "transaction_value": [
+      -948.0
+    ],
+    "transaction_value_currency": [
+      "EUR"
+    ]
+  },
+  {
+    "iati_identifier": "NL-KVK-40409352-PRJ13-008-0004",
+    "transaction_value": [
+      -1813.0
+    ],
+    "transaction_value_currency": [
+      "EUR"
+    ]
+  },
+  {
+    "iati_identifier": "NL-KVK-40409352-PRJ13-008-0004",
+    "transaction_value": [
+      3265.0
+    ],
+    "transaction_value_currency": [
+      "EUR"
+    ]
+  },
+  {
+    "iati_identifier": "NL-KVK-40409352-PRJ13-008-0004",
+    "transaction_value": [
+      948.0
+    ],
+    "transaction_value_currency": [
+      "EUR"
+    ]
+  },
+  {
+    "iati_identifier": "NL-KVK-40409352-PRJ13-008-0004",
+    "transaction_value": [
+      1813.0
+    ],
+    "transaction_value_currency": [
+      "EUR"
+    ]
+  },
+  {
+    "iati_identifier": "NL-KVK-40409352-PRJ13-008-0005",
+    "transaction_value": [
+      32500.0
+    ],
+    "transaction_value_currency": [
+      "EUR"
+    ]
+  },
+  {
+    "iati_identifier": "NL-KVK-40409352-PRJ13-008-0008",
+    "transaction_value": [
+      234742.0
+    ],
+    "transaction_value_currency": [
+      "EUR"
+    ]
+  },
+  {
+    "iati_identifier": "NL-KVK-40409352-PRJ13-008-0008",
+    "transaction_value": [
+      15258.0
+    ],
+    "transaction_value_currency": [
+      "EUR"
+    ]
+  },
+  {
+    "iati_identifier": "NL-KVK-40409352-PRJ13-008-0003",
+    "transaction_value": [
+      -3265.0
+    ],
+    "transaction_value_currency": [
+      "EUR"
+    ]
+  },
+  {
+    "iati_identifier": "NL-KVK-40409352-PRJ13-008-0003",
+    "transaction_value": [
+      3357.0
+    ],
+    "transaction_value_currency": [
+      "EUR"
+    ]
+  },
+  {
+    "iati_identifier": "NL-KVK-40409352-PRJ13-008-0003",
+    "transaction_value": [
+      3265.0
+    ],
+    "transaction_value_currency": [
+      "EUR"
+    ]
+  },
+  {
+    "iati_identifier": "NL-KVK-40409352-PRJ13-008-0003",
+    "transaction_value": [
+      22887.0
+    ],
+    "transaction_value_currency": [
+      "EUR"
+    ]
+  },
+  {
+    "iati_identifier": "NL-KVK-40409352-PRJ13-008-0002",
+    "transaction_value": [
+      -61033.0
+    ],
+    "transaction_value_currency": [
+      "EUR"
+    ]
+  },
+  {
+    "iati_identifier": "NL-KVK-40409352-PRJ13-008-0002",
+    "transaction_value": [
+      61033.0
+    ],
+    "transaction_value_currency": [
+      "EUR"
+    ]
+  },
+  {
+    "iati_identifier": "NL-KVK-40409352-PRJ13-008-0002",
+    "transaction_value": [
+      61033.0
+    ],
+    "transaction_value_currency": [
+      "EUR"
+    ]
+  },
+  {
+    "iati_identifier": "NL-KVK-40409352-PRJ13-008-0002",
+    "transaction_value": [
+      -61033.0
+    ],
+    "transaction_value_currency": [
+      "EUR"
+    ]
+  },
+  {
+    "iati_identifier": "NL-KVK-40409352-PRJ13-008-0002",
+    "transaction_value": [
+      61033.0
+    ],
+    "transaction_value_currency": [
+      "EUR"
+    ]
+  },
+  {
+    "iati_identifier": "NL-KVK-40409352-PRJ13-011-0007",
+    "transaction_value": [
+      4883.0
+    ],
+    "transaction_value_currency": [
+      "EUR"
+    ]
+  },
+  {
+    "iati_identifier": "NL-KVK-40409352-PRJ13-011-0008",
+    "transaction_value": [
+      1351.0
+    ],
+    "transaction_value_currency": [
+      "EUR"
+    ]
+  },
+  {
+    "iati_identifier": "NL-KVK-40409352-PRJ13-011-0001",
+    "transaction_value": [
+      3662.0
+    ],
+    "transaction_value_currency": [
+      "EUR"
+    ]
+  },
+  {
+    "iati_identifier": "NL-KVK-40409352-PRJ13-011-0002",
+    "transaction_value": [
+      3662.0
+    ],
+    "transaction_value_currency": [
+      "EUR"
+    ]
+  },
+  {
+    "iati_identifier": "NL-KVK-40409352-PRJ13-011-0003",
+    "transaction_value": [
+      3662.0
+    ],
+    "transaction_value_currency": [
+      "EUR"
+    ]
+  },
+  {
+    "iati_identifier": "NL-KVK-40409352-PRJ13-011-0004",
+    "transaction_value": [
+      3662.0
+    ],
+    "transaction_value_currency": [
+      "EUR"
+    ]
+  },
+  {
+    "iati_identifier": "NL-KVK-40409352-PRJ13-011-0005",
+    "transaction_value": [
+      3662.0
+    ],
+    "transaction_value_currency": [
+      "EUR"
+    ]
+  },
+  {
+    "iati_identifier": "NL-KVK-40409352-PRJ13-011-0006",
+    "transaction_value": [
+      3662.0
+    ],
+    "transaction_value_currency": [
+      "EUR"
+    ]
+  },
+  {
+    "iati_identifier": "NL-KVK-40409352-PRJ13-011-0009",
+    "transaction_value": [
+      3662.0
+    ],
+    "transaction_value_currency": [
+      "EUR"
+    ]
+  },
+  {
+    "iati_identifier": "NL-KVK-40409352-PRJ13-011-0010",
+    "transaction_value": [
+      4883.0
+    ],
+    "transaction_value_currency": [
+      "EUR"
+    ]
+  },
+  {
+    "iati_identifier": "NL-KVK-40409352-PRJ13-011-0011",
+    "transaction_value": [
+      1831.0
+    ],
+    "transaction_value_currency": [
+      "EUR"
+    ]
+  },
+  {
+    "iati_identifier": "NL-KVK-40409352-PRJ13-011-0028",
+    "transaction_value": [
+      3662.0
+    ],
+    "transaction_value_currency": [
+      "EUR"
+    ]
+  },
+  {
+    "iati_identifier": "NL-KVK-40409352-PRJ13-011-0030",
+    "transaction_value": [
+      3662.0
+    ],
+    "transaction_value_currency": [
+      "EUR"
+    ]
+  },
+  {
+    "iati_identifier": "NL-KVK-40409352-PRJ13-011-0031",
+    "transaction_value": [
+      3662.0
+    ],
+    "transaction_value_currency": [
+      "EUR"
+    ]
+  },
+  {
+    "iati_identifier": "NL-KVK-40409352-PRJ13-011-0032",
+    "transaction_value": [
+      4883.0
+    ],
+    "transaction_value_currency": [
+      "EUR"
+    ]
+  },
+  {
+    "iati_identifier": "NL-KVK-40409352-PRJ13-011-0033",
+    "transaction_value": [
+      4883.0
+    ],
+    "transaction_value_currency": [
+      "EUR"
+    ]
+  }
+]

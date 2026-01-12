@@ -1,0 +1,4292 @@
+[
+  {
+    "sector_code": [
+      "13010",
+      "13020",
+      "13030",
+      "13081"
+    ],
+    "budget_value": [
+      0.0
+    ],
+    "iati_identifier": "XM-DAC-41119-ER-S3-RT",
+    "title_narrative": [
+      "UNFPA Eritrea Gender and social norms activities"
+    ],
+    "reporting_org_ref": "XM-DAC-41119",
+    "transaction_value": [
+      0.0,
+      39700.91
+    ],
+    "activity_date_type": [
+      "1",
+      "2",
+      "3"
+    ],
+    "activity_status_code": "2",
+    "description_narrative": [
+      "UNFPA Eritrea Gender and social norms activities",
+      "UNFPA Eritrea Gender and social norms activities"
+    ],
+    "activity_date_iso_date": [
+      "2024-01-01T00:00:00Z",
+      "2024-01-01T00:00:00Z",
+      "2024-12-31T00:00:00Z"
+    ],
+    "recipient_country_code": [
+      "ER"
+    ],
+    "reporting_org_narrative": [
+      "United Nations Population Fund"
+    ]
+  },
+  {
+    "sector_code": [
+      "13010",
+      "13020",
+      "13030",
+      "13081",
+      "15160",
+      "15170",
+      "15180",
+      "72050"
+    ],
+    "budget_value": [
+      0.0
+    ],
+    "iati_identifier": "XM-DAC-41119-GE-S3-RT",
+    "title_narrative": [
+      "UNFPA Georgia Gender and social norms activities"
+    ],
+    "reporting_org_ref": "XM-DAC-41119",
+    "transaction_value": [
+      0.0,
+      898683.04
+    ],
+    "activity_date_type": [
+      "1",
+      "2",
+      "3"
+    ],
+    "activity_status_code": "2",
+    "description_narrative": [
+      "UNFPA Georgia Gender and social norms activities",
+      "UNFPA Georgia Gender and social norms activities"
+    ],
+    "activity_date_iso_date": [
+      "2024-01-01T00:00:00Z",
+      "2024-01-01T00:00:00Z",
+      "2024-12-31T00:00:00Z"
+    ],
+    "recipient_country_code": [
+      "GE"
+    ],
+    "reporting_org_narrative": [
+      "United Nations Population Fund"
+    ]
+  },
+  {
+    "sector_code": [
+      "13096",
+      "16062"
+    ],
+    "budget_value": [
+      0.0
+    ],
+    "iati_identifier": "XM-DAC-41119-GE-S4-RT",
+    "title_narrative": [
+      "UNFPA Georgia Population change and data activities"
+    ],
+    "reporting_org_ref": "XM-DAC-41119",
+    "transaction_value": [
+      0.0,
+      364134.67
+    ],
+    "activity_date_type": [
+      "1",
+      "2",
+      "3"
+    ],
+    "activity_status_code": "2",
+    "description_narrative": [
+      "UNFPA Georgia Population change and data activities",
+      "UNFPA Georgia Population change and data activities"
+    ],
+    "activity_date_iso_date": [
+      "2024-01-01T00:00:00Z",
+      "2024-01-01T00:00:00Z",
+      "2024-12-31T00:00:00Z"
+    ],
+    "recipient_country_code": [
+      "GE"
+    ],
+    "reporting_org_narrative": [
+      "United Nations Population Fund"
+    ]
+  },
+  {
+    "sector_code": [
+      "11231",
+      "13010",
+      "13020",
+      "13030",
+      "13081",
+      "13096",
+      "15160",
+      "15170",
+      "15180",
+      "16062",
+      "72050",
+      "74020"
+    ],
+    "budget_value": [
+      0.0
+    ],
+    "iati_identifier": "XM-DAC-41119-GE-O1-RT",
+    "title_narrative": [
+      "UNFPA Georgia Improved programming for results activities"
+    ],
+    "reporting_org_ref": "XM-DAC-41119",
+    "transaction_value": [
+      0.0,
+      125610.19
+    ],
+    "activity_date_type": [
+      "1",
+      "2",
+      "3"
+    ],
+    "activity_status_code": "2",
+    "description_narrative": [
+      "UNFPA Georgia Improved programming for results activities",
+      "UNFPA Georgia Improved programming for results activities"
+    ],
+    "activity_date_iso_date": [
+      "2024-01-01T00:00:00Z",
+      "2024-01-01T00:00:00Z",
+      "2024-12-31T00:00:00Z"
+    ],
+    "recipient_country_code": [
+      "GE"
+    ],
+    "reporting_org_narrative": [
+      "United Nations Population Fund"
+    ]
+  },
+  {
+    "sector_code": [
+      "11231",
+      "13010",
+      "13020",
+      "13030",
+      "13081",
+      "13096",
+      "15160",
+      "15170",
+      "15180",
+      "16062",
+      "72050",
+      "74020"
+    ],
+    "budget_value": [
+      0.0
+    ],
+    "iati_identifier": "XM-DAC-41119-ER-O1-RT",
+    "title_narrative": [
+      "UNFPA Eritrea Improved programming for results activities"
+    ],
+    "reporting_org_ref": "XM-DAC-41119",
+    "transaction_value": [
+      0.0,
+      71167.91
+    ],
+    "activity_date_type": [
+      "1",
+      "2",
+      "3"
+    ],
+    "activity_status_code": "2",
+    "description_narrative": [
+      "UNFPA Eritrea Improved programming for results activities",
+      "UNFPA Eritrea Improved programming for results activities"
+    ],
+    "activity_date_iso_date": [
+      "2024-01-01T00:00:00Z",
+      "2024-01-01T00:00:00Z",
+      "2024-12-31T00:00:00Z"
+    ],
+    "recipient_country_code": [
+      "ER"
+    ],
+    "reporting_org_narrative": [
+      "United Nations Population Fund"
+    ]
+  },
+  {
+    "sector_code": [
+      "11231",
+      "13010",
+      "13020",
+      "13030",
+      "13081",
+      "13096",
+      "15160",
+      "15170",
+      "15180",
+      "16062",
+      "72050",
+      "74020"
+    ],
+    "budget_value": [
+      0.0
+    ],
+    "iati_identifier": "XM-DAC-41119-GE-O2-RT",
+    "title_narrative": [
+      "UNFPA Georgia Optimized management of resources activities"
+    ],
+    "reporting_org_ref": "XM-DAC-41119",
+    "transaction_value": [
+      0.0,
+      117836.01
+    ],
+    "activity_date_type": [
+      "1",
+      "2",
+      "3"
+    ],
+    "activity_status_code": "2",
+    "description_narrative": [
+      "UNFPA Georgia Optimized management of resources activities",
+      "UNFPA Georgia Optimized management of resources activities"
+    ],
+    "activity_date_iso_date": [
+      "2024-01-01T00:00:00Z",
+      "2024-01-01T00:00:00Z",
+      "2024-12-31T00:00:00Z"
+    ],
+    "recipient_country_code": [
+      "GE"
+    ],
+    "reporting_org_narrative": [
+      "United Nations Population Fund"
+    ]
+  },
+  {
+    "sector_code": [
+      "11231",
+      "13010",
+      "13020",
+      "13030",
+      "13081",
+      "13096",
+      "15160",
+      "15170",
+      "15180",
+      "16062",
+      "72050",
+      "74020"
+    ],
+    "budget_value": [
+      0.0
+    ],
+    "iati_identifier": "XM-DAC-41119-ER-O2-RT",
+    "title_narrative": [
+      "UNFPA Eritrea Optimized management of resources activities"
+    ],
+    "reporting_org_ref": "XM-DAC-41119",
+    "transaction_value": [
+      0.0,
+      580504.2
+    ],
+    "activity_date_type": [
+      "1",
+      "2",
+      "3"
+    ],
+    "activity_status_code": "2",
+    "description_narrative": [
+      "UNFPA Eritrea Optimized management of resources activities",
+      "UNFPA Eritrea Optimized management of resources activities"
+    ],
+    "activity_date_iso_date": [
+      "2024-01-01T00:00:00Z",
+      "2024-01-01T00:00:00Z",
+      "2024-12-31T00:00:00Z"
+    ],
+    "recipient_country_code": [
+      "ER"
+    ],
+    "reporting_org_narrative": [
+      "United Nations Population Fund"
+    ]
+  },
+  {
+    "sector_code": [
+      "11231"
+    ],
+    "budget_value": [
+      0.0
+    ],
+    "iati_identifier": "XM-DAC-41119-GE-S6-RT",
+    "title_narrative": [
+      "UNFPA Georgia Adolescents and youth activities"
+    ],
+    "reporting_org_ref": "XM-DAC-41119",
+    "transaction_value": [
+      0.0,
+      35816.73
+    ],
+    "activity_date_type": [
+      "1",
+      "2",
+      "3"
+    ],
+    "activity_status_code": "2",
+    "description_narrative": [
+      "UNFPA Georgia Adolescents and youth activities",
+      "UNFPA Georgia Adolescents and youth activities"
+    ],
+    "activity_date_iso_date": [
+      "2024-01-01T00:00:00Z",
+      "2024-01-01T00:00:00Z",
+      "2024-12-31T00:00:00Z"
+    ],
+    "recipient_country_code": [
+      "GE"
+    ],
+    "reporting_org_narrative": [
+      "United Nations Population Fund"
+    ]
+  },
+  {
+    "sector_code": [
+      "11231"
+    ],
+    "budget_value": [
+      0.0
+    ],
+    "iati_identifier": "XM-DAC-41119-ER-S6-RT",
+    "title_narrative": [
+      "UNFPA Eritrea Adolescents and youth activities"
+    ],
+    "reporting_org_ref": "XM-DAC-41119",
+    "transaction_value": [
+      0.0,
+      46447.4
+    ],
+    "activity_date_type": [
+      "1",
+      "2",
+      "3"
+    ],
+    "activity_status_code": "2",
+    "description_narrative": [
+      "UNFPA Eritrea Adolescents and youth activities",
+      "UNFPA Eritrea Adolescents and youth activities"
+    ],
+    "activity_date_iso_date": [
+      "2024-01-01T00:00:00Z",
+      "2024-01-01T00:00:00Z",
+      "2024-12-31T00:00:00Z"
+    ],
+    "recipient_country_code": [
+      "ER"
+    ],
+    "reporting_org_narrative": [
+      "United Nations Population Fund"
+    ]
+  },
+  {
+    "sector_code": [
+      "13010",
+      "13020",
+      "15160"
+    ],
+    "budget_value": [
+      0.0
+    ],
+    "iati_identifier": "XM-DAC-41119-GE-S1-RT",
+    "title_narrative": [
+      "UNFPA Georgia Policy and accountability activities"
+    ],
+    "reporting_org_ref": "XM-DAC-41119",
+    "transaction_value": [
+      0.0,
+      249307.99
+    ],
+    "activity_date_type": [
+      "1",
+      "2",
+      "3"
+    ],
+    "activity_status_code": "2",
+    "description_narrative": [
+      "UNFPA Georgia Policy and accountability activities",
+      "UNFPA Georgia Policy and accountability activities"
+    ],
+    "activity_date_iso_date": [
+      "2024-01-01T00:00:00Z",
+      "2024-01-01T00:00:00Z",
+      "2024-12-31T00:00:00Z"
+    ],
+    "recipient_country_code": [
+      "GE"
+    ],
+    "reporting_org_narrative": [
+      "United Nations Population Fund"
+    ]
+  },
+  {
+    "sector_code": [
+      "13020",
+      "13030"
+    ],
+    "budget_value": [
+      0.0
+    ],
+    "iati_identifier": "XM-DAC-41119-ER-S1-RT",
+    "title_narrative": [
+      "UNFPA Eritrea Policy and accountability activities"
+    ],
+    "reporting_org_ref": "XM-DAC-41119",
+    "transaction_value": [
+      0.0,
+      80579.62
+    ],
+    "activity_date_type": [
+      "1",
+      "2",
+      "3"
+    ],
+    "activity_status_code": "2",
+    "description_narrative": [
+      "UNFPA Eritrea Policy and accountability activities",
+      "UNFPA Eritrea Policy and accountability activities"
+    ],
+    "activity_date_iso_date": [
+      "2024-01-01T00:00:00Z",
+      "2024-01-01T00:00:00Z",
+      "2024-12-31T00:00:00Z"
+    ],
+    "recipient_country_code": [
+      "ER"
+    ],
+    "reporting_org_narrative": [
+      "United Nations Population Fund"
+    ]
+  },
+  {
+    "sector_code": [
+      "13010",
+      "13020",
+      "13081",
+      "15160",
+      "15180",
+      "72050"
+    ],
+    "budget_value": [
+      0.0
+    ],
+    "iati_identifier": "XM-DAC-41119-GE-S2-RT",
+    "title_narrative": [
+      "UNFPA Georgia Quality of care and services activities"
+    ],
+    "reporting_org_ref": "XM-DAC-41119",
+    "transaction_value": [
+      0.0,
+      429245.03
+    ],
+    "activity_date_type": [
+      "1",
+      "2",
+      "3"
+    ],
+    "activity_status_code": "2",
+    "description_narrative": [
+      "UNFPA Georgia Quality of care and services activities",
+      "UNFPA Georgia Quality of care and services activities"
+    ],
+    "activity_date_iso_date": [
+      "2024-01-01T00:00:00Z",
+      "2024-01-01T00:00:00Z",
+      "2024-12-31T00:00:00Z"
+    ],
+    "recipient_country_code": [
+      "GE"
+    ],
+    "reporting_org_narrative": [
+      "United Nations Population Fund"
+    ]
+  },
+  {
+    "sector_code": [
+      "13010",
+      "13020",
+      "13030",
+      "13081"
+    ],
+    "budget_value": [
+      0.0
+    ],
+    "iati_identifier": "XM-DAC-41119-ER-S2-RT",
+    "title_narrative": [
+      "UNFPA Eritrea Quality of care and services activities"
+    ],
+    "reporting_org_ref": "XM-DAC-41119",
+    "transaction_value": [
+      0.0,
+      783592.29
+    ],
+    "activity_date_type": [
+      "1",
+      "2",
+      "3"
+    ],
+    "activity_status_code": "2",
+    "description_narrative": [
+      "UNFPA Eritrea Quality of care and services activities",
+      "UNFPA Eritrea Quality of care and services activities"
+    ],
+    "activity_date_iso_date": [
+      "2024-01-01T00:00:00Z",
+      "2024-01-01T00:00:00Z",
+      "2024-12-31T00:00:00Z"
+    ],
+    "recipient_country_code": [
+      "ER"
+    ],
+    "reporting_org_narrative": [
+      "United Nations Population Fund"
+    ]
+  },
+  {
+    "sector_code": [
+      "15160",
+      "15170"
+    ],
+    "budget_value": [
+      0.0
+    ],
+    "iati_identifier": "XM-DAC-41119-BW-S3-RT",
+    "title_narrative": [
+      "UNFPA Botswana Gender and social norms activities"
+    ],
+    "reporting_org_ref": "XM-DAC-41119",
+    "transaction_value": [
+      0.0,
+      112859.11
+    ],
+    "activity_date_type": [
+      "1",
+      "2",
+      "3"
+    ],
+    "activity_status_code": "2",
+    "description_narrative": [
+      "UNFPA Botswana Gender and social norms activities",
+      "UNFPA Botswana Gender and social norms activities"
+    ],
+    "activity_date_iso_date": [
+      "2024-01-01T00:00:00Z",
+      "2024-01-01T00:00:00Z",
+      "2024-12-31T00:00:00Z"
+    ],
+    "recipient_country_code": [
+      "BW"
+    ],
+    "reporting_org_narrative": [
+      "United Nations Population Fund"
+    ]
+  },
+  {
+    "sector_code": [
+      "13010",
+      "13020",
+      "15160",
+      "15170",
+      "15180"
+    ],
+    "budget_value": [
+      0.0
+    ],
+    "iati_identifier": "XM-DAC-41119-TH-S3-RT",
+    "title_narrative": [
+      "UNFPA Thailand Gender and social norms activities"
+    ],
+    "reporting_org_ref": "XM-DAC-41119",
+    "transaction_value": [
+      0.0,
+      233212.64
+    ],
+    "activity_date_type": [
+      "1",
+      "2",
+      "3"
+    ],
+    "activity_status_code": "2",
+    "description_narrative": [
+      "UNFPA Thailand Gender and social norms activities",
+      "UNFPA Thailand Gender and social norms activities"
+    ],
+    "activity_date_iso_date": [
+      "2024-01-01T00:00:00Z",
+      "2024-01-01T00:00:00Z",
+      "2024-12-31T00:00:00Z"
+    ],
+    "recipient_country_code": [
+      "TH"
+    ],
+    "reporting_org_narrative": [
+      "United Nations Population Fund"
+    ]
+  },
+  {
+    "sector_code": [
+      "13020",
+      "13030",
+      "13081",
+      "15160",
+      "15180"
+    ],
+    "budget_value": [
+      0.0
+    ],
+    "iati_identifier": "XM-DAC-41119-MA-S3-RT",
+    "title_narrative": [
+      "UNFPA Morocco Gender and social norms activities"
+    ],
+    "reporting_org_ref": "XM-DAC-41119",
+    "transaction_value": [
+      0.0,
+      887146.05
+    ],
+    "activity_date_type": [
+      "1",
+      "2",
+      "3"
+    ],
+    "activity_status_code": "2",
+    "description_narrative": [
+      "UNFPA Morocco Gender and social norms activities",
+      "UNFPA Morocco Gender and social norms activities"
+    ],
+    "activity_date_iso_date": [
+      "2024-01-01T00:00:00Z",
+      "2024-01-01T00:00:00Z",
+      "2024-12-31T00:00:00Z"
+    ],
+    "recipient_country_code": [
+      "MA"
+    ],
+    "reporting_org_narrative": [
+      "United Nations Population Fund"
+    ]
+  },
+  {
+    "sector_code": [
+      "13096",
+      "16062"
+    ],
+    "budget_value": [
+      0.0
+    ],
+    "iati_identifier": "XM-DAC-41119-BW-S4-RT",
+    "title_narrative": [
+      "UNFPA Botswana Population change and data activities"
+    ],
+    "reporting_org_ref": "XM-DAC-41119",
+    "transaction_value": [
+      0.0,
+      273087.1
+    ],
+    "activity_date_type": [
+      "1",
+      "2",
+      "3"
+    ],
+    "activity_status_code": "2",
+    "description_narrative": [
+      "UNFPA Botswana Population change and data activities",
+      "UNFPA Botswana Population change and data activities"
+    ],
+    "activity_date_iso_date": [
+      "2024-01-01T00:00:00Z",
+      "2024-01-01T00:00:00Z",
+      "2024-12-31T00:00:00Z"
+    ],
+    "recipient_country_code": [
+      "BW"
+    ],
+    "reporting_org_narrative": [
+      "United Nations Population Fund"
+    ]
+  },
+  {
+    "sector_code": [
+      "13096",
+      "16062"
+    ],
+    "budget_value": [
+      0.0
+    ],
+    "iati_identifier": "XM-DAC-41119-TH-S4-RT",
+    "title_narrative": [
+      "UNFPA Thailand Population change and data activities"
+    ],
+    "reporting_org_ref": "XM-DAC-41119",
+    "transaction_value": [
+      0.0,
+      492764.09
+    ],
+    "activity_date_type": [
+      "1",
+      "2",
+      "3"
+    ],
+    "activity_status_code": "2",
+    "description_narrative": [
+      "UNFPA Thailand Population change and data activities",
+      "UNFPA Thailand Population change and data activities"
+    ],
+    "activity_date_iso_date": [
+      "2024-01-01T00:00:00Z",
+      "2024-01-01T00:00:00Z",
+      "2024-12-31T00:00:00Z"
+    ],
+    "recipient_country_code": [
+      "TH"
+    ],
+    "reporting_org_narrative": [
+      "United Nations Population Fund"
+    ]
+  },
+  {
+    "sector_code": [
+      "13096",
+      "16062"
+    ],
+    "budget_value": [
+      0.0
+    ],
+    "iati_identifier": "XM-DAC-41119-MA-S4-RT",
+    "title_narrative": [
+      "UNFPA Morocco Population change and data activities"
+    ],
+    "reporting_org_ref": "XM-DAC-41119",
+    "transaction_value": [
+      0.0,
+      402147.94
+    ],
+    "activity_date_type": [
+      "1",
+      "2",
+      "3"
+    ],
+    "activity_status_code": "2",
+    "description_narrative": [
+      "UNFPA Morocco Population change and data activities",
+      "UNFPA Morocco Population change and data activities"
+    ],
+    "activity_date_iso_date": [
+      "2024-01-01T00:00:00Z",
+      "2024-01-01T00:00:00Z",
+      "2024-12-31T00:00:00Z"
+    ],
+    "recipient_country_code": [
+      "MA"
+    ],
+    "reporting_org_narrative": [
+      "United Nations Population Fund"
+    ]
+  },
+  {
+    "sector_code": [
+      "11231",
+      "13010",
+      "13020",
+      "13030",
+      "13081",
+      "13096",
+      "15160",
+      "15170",
+      "15180",
+      "16062",
+      "72050",
+      "74020"
+    ],
+    "budget_value": [
+      0.0
+    ],
+    "iati_identifier": "XM-DAC-41119-BW-O2-RT",
+    "title_narrative": [
+      "UNFPA Botswana Optimized management of resources activities"
+    ],
+    "reporting_org_ref": "XM-DAC-41119",
+    "transaction_value": [
+      0.0,
+      365053.34
+    ],
+    "activity_date_type": [
+      "1",
+      "2",
+      "3"
+    ],
+    "activity_status_code": "2",
+    "description_narrative": [
+      "UNFPA Botswana Optimized management of resources activities",
+      "UNFPA Botswana Optimized management of resources activities"
+    ],
+    "activity_date_iso_date": [
+      "2024-01-01T00:00:00Z",
+      "2024-01-01T00:00:00Z",
+      "2024-12-31T00:00:00Z"
+    ],
+    "recipient_country_code": [
+      "BW"
+    ],
+    "reporting_org_narrative": [
+      "United Nations Population Fund"
+    ]
+  },
+  {
+    "sector_code": [
+      "11231",
+      "13010",
+      "13020",
+      "13030",
+      "13081",
+      "13096",
+      "15160",
+      "15170",
+      "15180",
+      "16062",
+      "72050",
+      "74020"
+    ],
+    "budget_value": [
+      0.0
+    ],
+    "iati_identifier": "XM-DAC-41119-TH-O1-RT",
+    "title_narrative": [
+      "UNFPA Thailand Improved programming for results activities"
+    ],
+    "reporting_org_ref": "XM-DAC-41119",
+    "transaction_value": [
+      0.0,
+      164735.93
+    ],
+    "activity_date_type": [
+      "1",
+      "2",
+      "3"
+    ],
+    "activity_status_code": "2",
+    "description_narrative": [
+      "UNFPA Thailand Improved programming for results activities",
+      "UNFPA Thailand Improved programming for results activities"
+    ],
+    "activity_date_iso_date": [
+      "2024-01-01T00:00:00Z",
+      "2024-01-01T00:00:00Z",
+      "2024-12-31T00:00:00Z"
+    ],
+    "recipient_country_code": [
+      "TH"
+    ],
+    "reporting_org_narrative": [
+      "United Nations Population Fund"
+    ]
+  },
+  {
+    "sector_code": [
+      "11231"
+    ],
+    "budget_value": [
+      0.0
+    ],
+    "iati_identifier": "XM-DAC-41119-BW-S6-RT",
+    "title_narrative": [
+      "UNFPA Botswana Adolescents and youth activities"
+    ],
+    "reporting_org_ref": "XM-DAC-41119",
+    "transaction_value": [
+      0.0,
+      62060.49
+    ],
+    "activity_date_type": [
+      "1",
+      "2",
+      "3"
+    ],
+    "activity_status_code": "2",
+    "description_narrative": [
+      "UNFPA Botswana Adolescents and youth activities",
+      "UNFPA Botswana Adolescents and youth activities"
+    ],
+    "activity_date_iso_date": [
+      "2024-01-01T00:00:00Z",
+      "2024-01-01T00:00:00Z",
+      "2024-12-31T00:00:00Z"
+    ],
+    "recipient_country_code": [
+      "BW"
+    ],
+    "reporting_org_narrative": [
+      "United Nations Population Fund"
+    ]
+  },
+  {
+    "sector_code": [
+      "11231",
+      "13010",
+      "13020",
+      "13030",
+      "13081",
+      "13096",
+      "15160",
+      "15170",
+      "15180",
+      "16062",
+      "72050",
+      "74020"
+    ],
+    "budget_value": [
+      0.0
+    ],
+    "iati_identifier": "XM-DAC-41119-MA-O1-RT",
+    "title_narrative": [
+      "UNFPA Morocco Improved programming for results activities"
+    ],
+    "reporting_org_ref": "XM-DAC-41119",
+    "transaction_value": [
+      0.0,
+      147118.66
+    ],
+    "activity_date_type": [
+      "1",
+      "2",
+      "3"
+    ],
+    "activity_status_code": "2",
+    "description_narrative": [
+      "UNFPA Morocco Improved programming for results activities",
+      "UNFPA Morocco Improved programming for results activities"
+    ],
+    "activity_date_iso_date": [
+      "2024-01-01T00:00:00Z",
+      "2024-01-01T00:00:00Z",
+      "2024-12-31T00:00:00Z"
+    ],
+    "recipient_country_code": [
+      "MA"
+    ],
+    "reporting_org_narrative": [
+      "United Nations Population Fund"
+    ]
+  },
+  {
+    "sector_code": [
+      "11231",
+      "13010",
+      "13020",
+      "13030",
+      "13081",
+      "13096",
+      "15160",
+      "15170",
+      "15180",
+      "16062",
+      "72050",
+      "74020"
+    ],
+    "budget_value": [
+      0.0
+    ],
+    "iati_identifier": "XM-DAC-41119-TH-O2-RT",
+    "title_narrative": [
+      "UNFPA Thailand Optimized management of resources activities"
+    ],
+    "reporting_org_ref": "XM-DAC-41119",
+    "transaction_value": [
+      0.0,
+      182228.19
+    ],
+    "activity_date_type": [
+      "1",
+      "2",
+      "3"
+    ],
+    "activity_status_code": "2",
+    "description_narrative": [
+      "UNFPA Thailand Optimized management of resources activities",
+      "UNFPA Thailand Optimized management of resources activities"
+    ],
+    "activity_date_iso_date": [
+      "2024-01-01T00:00:00Z",
+      "2024-01-01T00:00:00Z",
+      "2024-12-31T00:00:00Z"
+    ],
+    "recipient_country_code": [
+      "TH"
+    ],
+    "reporting_org_narrative": [
+      "United Nations Population Fund"
+    ]
+  },
+  {
+    "sector_code": [
+      "13020",
+      "13030",
+      "15180"
+    ],
+    "budget_value": [
+      0.0
+    ],
+    "iati_identifier": "XM-DAC-41119-MA-S5-RT",
+    "title_narrative": [
+      "UNFPA Morocco Humanitarian action activities"
+    ],
+    "reporting_org_ref": "XM-DAC-41119",
+    "transaction_value": [
+      0.0,
+      1455.33
+    ],
+    "activity_date_type": [
+      "1",
+      "2",
+      "3"
+    ],
+    "activity_status_code": "2",
+    "description_narrative": [
+      "UNFPA Morocco Humanitarian action activities",
+      "UNFPA Morocco Humanitarian action activities"
+    ],
+    "activity_date_iso_date": [
+      "2024-01-01T00:00:00Z",
+      "2024-01-01T00:00:00Z",
+      "2024-12-31T00:00:00Z"
+    ],
+    "recipient_country_code": [
+      "MA"
+    ],
+    "reporting_org_narrative": [
+      "United Nations Population Fund"
+    ]
+  },
+  {
+    "sector_code": [
+      "11231"
+    ],
+    "budget_value": [
+      0.0
+    ],
+    "iati_identifier": "XM-DAC-41119-TH-S6-RT",
+    "title_narrative": [
+      "UNFPA Thailand Adolescents and youth activities"
+    ],
+    "reporting_org_ref": "XM-DAC-41119",
+    "transaction_value": [
+      0.0,
+      355130.58
+    ],
+    "activity_date_type": [
+      "1",
+      "2",
+      "3"
+    ],
+    "activity_status_code": "2",
+    "description_narrative": [
+      "UNFPA Thailand Adolescents and youth activities",
+      "UNFPA Thailand Adolescents and youth activities"
+    ],
+    "activity_date_iso_date": [
+      "2024-01-01T00:00:00Z",
+      "2024-01-01T00:00:00Z",
+      "2024-12-31T00:00:00Z"
+    ],
+    "recipient_country_code": [
+      "TH"
+    ],
+    "reporting_org_narrative": [
+      "United Nations Population Fund"
+    ]
+  },
+  {
+    "sector_code": [
+      "13010",
+      "13020",
+      "13030",
+      "13081",
+      "15180"
+    ],
+    "budget_value": [
+      0.0
+    ],
+    "iati_identifier": "XM-DAC-41119-BW-S2-RT",
+    "title_narrative": [
+      "UNFPA Botswana Quality of care and services activities"
+    ],
+    "reporting_org_ref": "XM-DAC-41119",
+    "transaction_value": [
+      0.0,
+      388431.12
+    ],
+    "activity_date_type": [
+      "1",
+      "2",
+      "3"
+    ],
+    "activity_status_code": "2",
+    "description_narrative": [
+      "UNFPA Botswana Quality of care and services activities",
+      "UNFPA Botswana Quality of care and services activities"
+    ],
+    "activity_date_iso_date": [
+      "2024-01-01T00:00:00Z",
+      "2024-01-01T00:00:00Z",
+      "2024-12-31T00:00:00Z"
+    ],
+    "recipient_country_code": [
+      "BW"
+    ],
+    "reporting_org_narrative": [
+      "United Nations Population Fund"
+    ]
+  },
+  {
+    "sector_code": [
+      "11231",
+      "13010",
+      "13020",
+      "13030",
+      "13081",
+      "13096",
+      "15160",
+      "15170",
+      "15180",
+      "16062",
+      "72050",
+      "74020"
+    ],
+    "budget_value": [
+      0.0
+    ],
+    "iati_identifier": "XM-DAC-41119-MA-O2-RT",
+    "title_narrative": [
+      "UNFPA Morocco Optimized management of resources activities"
+    ],
+    "reporting_org_ref": "XM-DAC-41119",
+    "transaction_value": [
+      0.0,
+      522201.7
+    ],
+    "activity_date_type": [
+      "1",
+      "2",
+      "3"
+    ],
+    "activity_status_code": "2",
+    "description_narrative": [
+      "UNFPA Morocco Optimized management of resources activities",
+      "UNFPA Morocco Optimized management of resources activities"
+    ],
+    "activity_date_iso_date": [
+      "2024-01-01T00:00:00Z",
+      "2024-01-01T00:00:00Z",
+      "2024-12-31T00:00:00Z"
+    ],
+    "recipient_country_code": [
+      "MA"
+    ],
+    "reporting_org_narrative": [
+      "United Nations Population Fund"
+    ]
+  },
+  {
+    "sector_code": [
+      "13010",
+      "13020",
+      "15160"
+    ],
+    "budget_value": [
+      0.0
+    ],
+    "iati_identifier": "XM-DAC-41119-TH-S1-RT",
+    "title_narrative": [
+      "UNFPA Thailand Policy and accountability activities"
+    ],
+    "reporting_org_ref": "XM-DAC-41119",
+    "transaction_value": [
+      0.0,
+      418935.22
+    ],
+    "activity_date_type": [
+      "1",
+      "2",
+      "3"
+    ],
+    "activity_status_code": "2",
+    "description_narrative": [
+      "UNFPA Thailand Policy and accountability activities",
+      "UNFPA Thailand Policy and accountability activities"
+    ],
+    "activity_date_iso_date": [
+      "2024-01-01T00:00:00Z",
+      "2024-01-01T00:00:00Z",
+      "2024-12-31T00:00:00Z"
+    ],
+    "recipient_country_code": [
+      "TH"
+    ],
+    "reporting_org_narrative": [
+      "United Nations Population Fund"
+    ]
+  },
+  {
+    "sector_code": [
+      "11231"
+    ],
+    "budget_value": [
+      0.0
+    ],
+    "iati_identifier": "XM-DAC-41119-MA-S6-RT",
+    "title_narrative": [
+      "UNFPA Morocco Adolescents and youth activities"
+    ],
+    "reporting_org_ref": "XM-DAC-41119",
+    "transaction_value": [
+      0.0,
+      185768.37
+    ],
+    "activity_date_type": [
+      "1",
+      "2",
+      "3"
+    ],
+    "activity_status_code": "2",
+    "description_narrative": [
+      "UNFPA Morocco Adolescents and youth activities",
+      "UNFPA Morocco Adolescents and youth activities"
+    ],
+    "activity_date_iso_date": [
+      "2024-01-01T00:00:00Z",
+      "2024-01-01T00:00:00Z",
+      "2024-12-31T00:00:00Z"
+    ],
+    "recipient_country_code": [
+      "MA"
+    ],
+    "reporting_org_narrative": [
+      "United Nations Population Fund"
+    ]
+  },
+  {
+    "sector_code": [
+      "13010",
+      "13020",
+      "13030"
+    ],
+    "budget_value": [
+      0.0
+    ],
+    "iati_identifier": "XM-DAC-41119-TH-S2-RT",
+    "title_narrative": [
+      "UNFPA Thailand Quality of care and services activities"
+    ],
+    "reporting_org_ref": "XM-DAC-41119",
+    "transaction_value": [
+      0.0,
+      2910.49
+    ],
+    "activity_date_type": [
+      "1",
+      "2",
+      "3"
+    ],
+    "activity_status_code": "2",
+    "description_narrative": [
+      "UNFPA Thailand Quality of care and services activities",
+      "UNFPA Thailand Quality of care and services activities"
+    ],
+    "activity_date_iso_date": [
+      "2024-01-01T00:00:00Z",
+      "2024-01-01T00:00:00Z",
+      "2024-12-31T00:00:00Z"
+    ],
+    "recipient_country_code": [
+      "TH"
+    ],
+    "reporting_org_narrative": [
+      "United Nations Population Fund"
+    ]
+  },
+  {
+    "sector_code": [
+      "13010",
+      "13020",
+      "13081",
+      "15160",
+      "15180"
+    ],
+    "budget_value": [
+      0.0
+    ],
+    "iati_identifier": "XM-DAC-41119-MA-S1-RT",
+    "title_narrative": [
+      "UNFPA Morocco Policy and accountability activities"
+    ],
+    "reporting_org_ref": "XM-DAC-41119",
+    "transaction_value": [
+      0.0,
+      303638.66
+    ],
+    "activity_date_type": [
+      "1",
+      "2",
+      "3"
+    ],
+    "activity_status_code": "2",
+    "description_narrative": [
+      "UNFPA Morocco Policy and accountability activities",
+      "UNFPA Morocco Policy and accountability activities"
+    ],
+    "activity_date_iso_date": [
+      "2024-01-01T00:00:00Z",
+      "2024-01-01T00:00:00Z",
+      "2024-12-31T00:00:00Z"
+    ],
+    "recipient_country_code": [
+      "MA"
+    ],
+    "reporting_org_narrative": [
+      "United Nations Population Fund"
+    ]
+  },
+  {
+    "sector_code": [
+      "13010",
+      "13020",
+      "13030",
+      "13081",
+      "15160",
+      "15180"
+    ],
+    "budget_value": [
+      0.0
+    ],
+    "iati_identifier": "XM-DAC-41119-MA-S2-RT",
+    "title_narrative": [
+      "UNFPA Morocco Quality of care and services activities"
+    ],
+    "reporting_org_ref": "XM-DAC-41119",
+    "transaction_value": [
+      0.0,
+      1342521.84
+    ],
+    "activity_date_type": [
+      "1",
+      "2",
+      "3"
+    ],
+    "activity_status_code": "2",
+    "description_narrative": [
+      "UNFPA Morocco Quality of care and services activities",
+      "UNFPA Morocco Quality of care and services activities"
+    ],
+    "activity_date_iso_date": [
+      "2024-01-01T00:00:00Z",
+      "2024-01-01T00:00:00Z",
+      "2024-12-31T00:00:00Z"
+    ],
+    "recipient_country_code": [
+      "MA"
+    ],
+    "reporting_org_narrative": [
+      "United Nations Population Fund"
+    ]
+  },
+  {
+    "sector_code": [
+      "13030",
+      "15160",
+      "15170",
+      "15180"
+    ],
+    "budget_value": [
+      0.0
+    ],
+    "iati_identifier": "XM-DAC-41119-SN-S3-RT",
+    "title_narrative": [
+      "UNFPA Senegal Gender and social norms activities"
+    ],
+    "reporting_org_ref": "XM-DAC-41119",
+    "transaction_value": [
+      0.0,
+      380615.04
+    ],
+    "activity_date_type": [
+      "1",
+      "2",
+      "3"
+    ],
+    "activity_status_code": "2",
+    "description_narrative": [
+      "UNFPA Senegal Gender and social norms activities",
+      "UNFPA Senegal Gender and social norms activities"
+    ],
+    "activity_date_iso_date": [
+      "2024-01-01T00:00:00Z",
+      "2024-01-01T00:00:00Z",
+      "2024-12-31T00:00:00Z"
+    ],
+    "recipient_country_code": [
+      "SN"
+    ],
+    "reporting_org_narrative": [
+      "United Nations Population Fund"
+    ]
+  },
+  {
+    "sector_code": [
+      "13010",
+      "13030",
+      "15160",
+      "15180"
+    ],
+    "budget_value": [
+      0.0
+    ],
+    "iati_identifier": "XM-DAC-41119-OM-S3-RT",
+    "title_narrative": [
+      "UNFPA Oman Gender and social norms activities"
+    ],
+    "reporting_org_ref": "XM-DAC-41119",
+    "transaction_value": [
+      0.0,
+      147943.76
+    ],
+    "activity_date_type": [
+      "1",
+      "2",
+      "3"
+    ],
+    "activity_status_code": "2",
+    "description_narrative": [
+      "UNFPA Oman Gender and social norms activities",
+      "UNFPA Oman Gender and social norms activities"
+    ],
+    "activity_date_iso_date": [
+      "2024-01-01T00:00:00Z",
+      "2024-01-01T00:00:00Z",
+      "2024-12-31T00:00:00Z"
+    ],
+    "recipient_country_code": [
+      "OM"
+    ],
+    "reporting_org_narrative": [
+      "United Nations Population Fund"
+    ]
+  },
+  {
+    "sector_code": [
+      "13096",
+      "16062"
+    ],
+    "budget_value": [
+      0.0
+    ],
+    "iati_identifier": "XM-DAC-41119-SN-S4-RT",
+    "title_narrative": [
+      "UNFPA Senegal Population change and data activities"
+    ],
+    "reporting_org_ref": "XM-DAC-41119",
+    "transaction_value": [
+      0.0,
+      413632.25
+    ],
+    "activity_date_type": [
+      "1",
+      "2",
+      "3"
+    ],
+    "activity_status_code": "2",
+    "description_narrative": [
+      "UNFPA Senegal Population change and data activities",
+      "UNFPA Senegal Population change and data activities"
+    ],
+    "activity_date_iso_date": [
+      "2024-01-01T00:00:00Z",
+      "2024-01-01T00:00:00Z",
+      "2024-12-31T00:00:00Z"
+    ],
+    "recipient_country_code": [
+      "SN"
+    ],
+    "reporting_org_narrative": [
+      "United Nations Population Fund"
+    ]
+  },
+  {
+    "sector_code": [
+      "13096",
+      "16062"
+    ],
+    "budget_value": [
+      0.0
+    ],
+    "iati_identifier": "XM-DAC-41119-OM-S4-RT",
+    "title_narrative": [
+      "UNFPA Oman Population change and data activities"
+    ],
+    "reporting_org_ref": "XM-DAC-41119",
+    "transaction_value": [
+      0.0,
+      43990.25
+    ],
+    "activity_date_type": [
+      "1",
+      "2",
+      "3"
+    ],
+    "activity_status_code": "2",
+    "description_narrative": [
+      "UNFPA Oman Population change and data activities",
+      "UNFPA Oman Population change and data activities"
+    ],
+    "activity_date_iso_date": [
+      "2024-01-01T00:00:00Z",
+      "2024-01-01T00:00:00Z",
+      "2024-12-31T00:00:00Z"
+    ],
+    "recipient_country_code": [
+      "OM"
+    ],
+    "reporting_org_narrative": [
+      "United Nations Population Fund"
+    ]
+  },
+  {
+    "sector_code": [
+      "11231",
+      "13010",
+      "13020",
+      "13030",
+      "13081",
+      "13096",
+      "15160",
+      "15170",
+      "15180",
+      "16062",
+      "72050",
+      "74020"
+    ],
+    "budget_value": [
+      0.0
+    ],
+    "iati_identifier": "XM-DAC-41119-SN-O1-RT",
+    "title_narrative": [
+      "UNFPA Senegal Improved programming for results activities"
+    ],
+    "reporting_org_ref": "XM-DAC-41119",
+    "transaction_value": [
+      0.0,
+      178151.54
+    ],
+    "activity_date_type": [
+      "1",
+      "2",
+      "3"
+    ],
+    "activity_status_code": "2",
+    "description_narrative": [
+      "UNFPA Senegal Improved programming for results activities",
+      "UNFPA Senegal Improved programming for results activities"
+    ],
+    "activity_date_iso_date": [
+      "2024-01-01T00:00:00Z",
+      "2024-01-01T00:00:00Z",
+      "2024-12-31T00:00:00Z"
+    ],
+    "recipient_country_code": [
+      "SN"
+    ],
+    "reporting_org_narrative": [
+      "United Nations Population Fund"
+    ]
+  },
+  {
+    "sector_code": [
+      "13030",
+      "15180"
+    ],
+    "budget_value": [
+      0.0
+    ],
+    "iati_identifier": "XM-DAC-41119-OM-S5-RT",
+    "title_narrative": [
+      "UNFPA Oman Humanitarian action activities"
+    ],
+    "reporting_org_ref": "XM-DAC-41119",
+    "transaction_value": [
+      0.0,
+      124361.77
+    ],
+    "activity_date_type": [
+      "1",
+      "2",
+      "3"
+    ],
+    "activity_status_code": "2",
+    "description_narrative": [
+      "UNFPA Oman Humanitarian action activities",
+      "UNFPA Oman Humanitarian action activities"
+    ],
+    "activity_date_iso_date": [
+      "2024-01-01T00:00:00Z",
+      "2024-01-01T00:00:00Z",
+      "2024-12-31T00:00:00Z"
+    ],
+    "recipient_country_code": [
+      "OM"
+    ],
+    "reporting_org_narrative": [
+      "United Nations Population Fund"
+    ]
+  },
+  {
+    "sector_code": [
+      "15180",
+      "74020"
+    ],
+    "budget_value": [
+      0.0
+    ],
+    "iati_identifier": "XM-DAC-41119-SN-S5-RT",
+    "title_narrative": [
+      "UNFPA Senegal Humanitarian action activities"
+    ],
+    "reporting_org_ref": "XM-DAC-41119",
+    "transaction_value": [
+      0.0,
+      4255.73
+    ],
+    "activity_date_type": [
+      "1",
+      "2",
+      "3"
+    ],
+    "activity_status_code": "2",
+    "description_narrative": [
+      "UNFPA Senegal Humanitarian action activities",
+      "UNFPA Senegal Humanitarian action activities"
+    ],
+    "activity_date_iso_date": [
+      "2024-01-01T00:00:00Z",
+      "2024-01-01T00:00:00Z",
+      "2024-12-31T00:00:00Z"
+    ],
+    "recipient_country_code": [
+      "SN"
+    ],
+    "reporting_org_narrative": [
+      "United Nations Population Fund"
+    ]
+  },
+  {
+    "sector_code": [
+      "11231",
+      "13010",
+      "13020",
+      "13030",
+      "13081",
+      "13096",
+      "15160",
+      "15170",
+      "15180",
+      "16062",
+      "72050",
+      "74020"
+    ],
+    "budget_value": [
+      0.0
+    ],
+    "iati_identifier": "XM-DAC-41119-OM-O2-RT",
+    "title_narrative": [
+      "UNFPA Oman Optimized management of resources activities"
+    ],
+    "reporting_org_ref": "XM-DAC-41119",
+    "transaction_value": [
+      0.0,
+      271618.16
+    ],
+    "activity_date_type": [
+      "1",
+      "2",
+      "3"
+    ],
+    "activity_status_code": "2",
+    "description_narrative": [
+      "UNFPA Oman Optimized management of resources activities",
+      "UNFPA Oman Optimized management of resources activities"
+    ],
+    "activity_date_iso_date": [
+      "2024-01-01T00:00:00Z",
+      "2024-01-01T00:00:00Z",
+      "2024-12-31T00:00:00Z"
+    ],
+    "recipient_country_code": [
+      "OM"
+    ],
+    "reporting_org_narrative": [
+      "United Nations Population Fund"
+    ]
+  },
+  {
+    "sector_code": [
+      "11231",
+      "13010",
+      "13020",
+      "13030",
+      "13081",
+      "13096",
+      "15160",
+      "15170",
+      "15180",
+      "16062",
+      "72050",
+      "74020"
+    ],
+    "budget_value": [
+      0.0
+    ],
+    "iati_identifier": "XM-DAC-41119-SN-O2-RT",
+    "title_narrative": [
+      "UNFPA Senegal Optimized management of resources activities"
+    ],
+    "reporting_org_ref": "XM-DAC-41119",
+    "transaction_value": [
+      0.0,
+      478828.04
+    ],
+    "activity_date_type": [
+      "1",
+      "2",
+      "3"
+    ],
+    "activity_status_code": "2",
+    "description_narrative": [
+      "UNFPA Senegal Optimized management of resources activities",
+      "UNFPA Senegal Optimized management of resources activities"
+    ],
+    "activity_date_iso_date": [
+      "2024-01-01T00:00:00Z",
+      "2024-01-01T00:00:00Z",
+      "2024-12-31T00:00:00Z"
+    ],
+    "recipient_country_code": [
+      "SN"
+    ],
+    "reporting_org_narrative": [
+      "United Nations Population Fund"
+    ]
+  },
+  {
+    "sector_code": [
+      "13010",
+      "13020",
+      "13081",
+      "15160",
+      "15180"
+    ],
+    "budget_value": [
+      0.0
+    ],
+    "iati_identifier": "XM-DAC-41119-OM-S1-RT",
+    "title_narrative": [
+      "UNFPA Oman Policy and accountability activities"
+    ],
+    "reporting_org_ref": "XM-DAC-41119",
+    "transaction_value": [
+      0.0,
+      1561864.41
+    ],
+    "activity_date_type": [
+      "1",
+      "2",
+      "3"
+    ],
+    "activity_status_code": "2",
+    "description_narrative": [
+      "UNFPA Oman Policy and accountability activities",
+      "UNFPA Oman Policy and accountability activities"
+    ],
+    "activity_date_iso_date": [
+      "2024-01-01T00:00:00Z",
+      "2024-01-01T00:00:00Z",
+      "2024-12-31T00:00:00Z"
+    ],
+    "recipient_country_code": [
+      "OM"
+    ],
+    "reporting_org_narrative": [
+      "United Nations Population Fund"
+    ]
+  },
+  {
+    "sector_code": [
+      "11231"
+    ],
+    "budget_value": [
+      0.0
+    ],
+    "iati_identifier": "XM-DAC-41119-SN-S6-RT",
+    "title_narrative": [
+      "UNFPA Senegal Adolescents and youth activities"
+    ],
+    "reporting_org_ref": "XM-DAC-41119",
+    "transaction_value": [
+      0.0,
+      281231.45
+    ],
+    "activity_date_type": [
+      "1",
+      "2",
+      "3"
+    ],
+    "activity_status_code": "2",
+    "description_narrative": [
+      "UNFPA Senegal Adolescents and youth activities",
+      "UNFPA Senegal Adolescents and youth activities"
+    ],
+    "activity_date_iso_date": [
+      "2024-01-01T00:00:00Z",
+      "2024-01-01T00:00:00Z",
+      "2024-12-31T00:00:00Z"
+    ],
+    "recipient_country_code": [
+      "SN"
+    ],
+    "reporting_org_narrative": [
+      "United Nations Population Fund"
+    ]
+  },
+  {
+    "sector_code": [
+      "13030",
+      "13081",
+      "15180"
+    ],
+    "budget_value": [
+      0.0
+    ],
+    "iati_identifier": "XM-DAC-41119-OM-S2-RT",
+    "title_narrative": [
+      "UNFPA Oman Quality of care and services activities"
+    ],
+    "reporting_org_ref": "XM-DAC-41119",
+    "transaction_value": [
+      0.0,
+      18661.48
+    ],
+    "activity_date_type": [
+      "1",
+      "2",
+      "3"
+    ],
+    "activity_status_code": "2",
+    "description_narrative": [
+      "UNFPA Oman Quality of care and services activities",
+      "UNFPA Oman Quality of care and services activities"
+    ],
+    "activity_date_iso_date": [
+      "2024-01-01T00:00:00Z",
+      "2024-01-01T00:00:00Z",
+      "2024-12-31T00:00:00Z"
+    ],
+    "recipient_country_code": [
+      "OM"
+    ],
+    "reporting_org_narrative": [
+      "United Nations Population Fund"
+    ]
+  },
+  {
+    "sector_code": [
+      "13010",
+      "13020",
+      "13030",
+      "15170"
+    ],
+    "budget_value": [
+      0.0
+    ],
+    "iati_identifier": "XM-DAC-41119-SN-S1-RT",
+    "title_narrative": [
+      "UNFPA Senegal Policy and accountability activities"
+    ],
+    "reporting_org_ref": "XM-DAC-41119",
+    "transaction_value": [
+      0.0,
+      33822.23
+    ],
+    "activity_date_type": [
+      "1",
+      "2",
+      "3"
+    ],
+    "activity_status_code": "2",
+    "description_narrative": [
+      "UNFPA Senegal Policy and accountability activities",
+      "UNFPA Senegal Policy and accountability activities"
+    ],
+    "activity_date_iso_date": [
+      "2024-01-01T00:00:00Z",
+      "2024-01-01T00:00:00Z",
+      "2024-12-31T00:00:00Z"
+    ],
+    "recipient_country_code": [
+      "SN"
+    ],
+    "reporting_org_narrative": [
+      "United Nations Population Fund"
+    ]
+  },
+  {
+    "sector_code": [
+      "13010",
+      "13020",
+      "13030",
+      "13081",
+      "15170",
+      "15180"
+    ],
+    "budget_value": [
+      0.0
+    ],
+    "iati_identifier": "XM-DAC-41119-SN-S2-RT",
+    "title_narrative": [
+      "UNFPA Senegal Quality of care and services activities"
+    ],
+    "reporting_org_ref": "XM-DAC-41119",
+    "transaction_value": [
+      0.0,
+      3907516.82
+    ],
+    "activity_date_type": [
+      "1",
+      "2",
+      "3"
+    ],
+    "activity_status_code": "2",
+    "description_narrative": [
+      "UNFPA Senegal Quality of care and services activities",
+      "UNFPA Senegal Quality of care and services activities"
+    ],
+    "activity_date_iso_date": [
+      "2024-01-01T00:00:00Z",
+      "2024-01-01T00:00:00Z",
+      "2024-12-31T00:00:00Z"
+    ],
+    "recipient_country_code": [
+      "SN"
+    ],
+    "reporting_org_narrative": [
+      "United Nations Population Fund"
+    ]
+  },
+  {
+    "sector_code": [
+      "13010",
+      "13020",
+      "13030",
+      "13081",
+      "15160",
+      "15170",
+      "15180"
+    ],
+    "budget_value": [
+      0.0
+    ],
+    "iati_identifier": "XM-DAC-41119-NA-S3-RT",
+    "title_narrative": [
+      "UNFPA Namibia Gender and social norms activities"
+    ],
+    "reporting_org_ref": "XM-DAC-41119",
+    "transaction_value": [
+      0.0,
+      498578.14
+    ],
+    "activity_date_type": [
+      "1",
+      "2",
+      "3"
+    ],
+    "activity_status_code": "2",
+    "description_narrative": [
+      "UNFPA Namibia Gender and social norms activities",
+      "UNFPA Namibia Gender and social norms activities"
+    ],
+    "activity_date_iso_date": [
+      "2024-01-01T00:00:00Z",
+      "2024-01-01T00:00:00Z",
+      "2024-12-31T00:00:00Z"
+    ],
+    "recipient_country_code": [
+      "NA"
+    ],
+    "reporting_org_narrative": [
+      "United Nations Population Fund"
+    ]
+  },
+  {
+    "sector_code": [
+      "13096",
+      "16062"
+    ],
+    "budget_value": [
+      0.0
+    ],
+    "iati_identifier": "XM-DAC-41119-NA-S4-RT",
+    "title_narrative": [
+      "UNFPA Namibia Population change and data activities"
+    ],
+    "reporting_org_ref": "XM-DAC-41119",
+    "transaction_value": [
+      0.0,
+      152432.18
+    ],
+    "activity_date_type": [
+      "1",
+      "2",
+      "3"
+    ],
+    "activity_status_code": "2",
+    "description_narrative": [
+      "UNFPA Namibia Population change and data activities",
+      "UNFPA Namibia Population change and data activities"
+    ],
+    "activity_date_iso_date": [
+      "2024-01-01T00:00:00Z",
+      "2024-01-01T00:00:00Z",
+      "2024-12-31T00:00:00Z"
+    ],
+    "recipient_country_code": [
+      "NA"
+    ],
+    "reporting_org_narrative": [
+      "United Nations Population Fund"
+    ]
+  },
+  {
+    "sector_code": [
+      "11231",
+      "13010",
+      "13020",
+      "13030",
+      "13081",
+      "13096",
+      "15160",
+      "15170",
+      "15180",
+      "16062",
+      "72050",
+      "74020"
+    ],
+    "budget_value": [
+      0.0
+    ],
+    "iati_identifier": "XM-DAC-41119-NA-O1-RT",
+    "title_narrative": [
+      "UNFPA Namibia Improved programming for results activities"
+    ],
+    "reporting_org_ref": "XM-DAC-41119",
+    "transaction_value": [
+      0.0,
+      117991.01
+    ],
+    "activity_date_type": [
+      "1",
+      "2",
+      "3"
+    ],
+    "activity_status_code": "2",
+    "description_narrative": [
+      "UNFPA Namibia Improved programming for results activities",
+      "UNFPA Namibia Improved programming for results activities"
+    ],
+    "activity_date_iso_date": [
+      "2024-01-01T00:00:00Z",
+      "2024-01-01T00:00:00Z",
+      "2024-12-31T00:00:00Z"
+    ],
+    "recipient_country_code": [
+      "NA"
+    ],
+    "reporting_org_narrative": [
+      "United Nations Population Fund"
+    ]
+  },
+  {
+    "sector_code": [
+      "13081",
+      "15180",
+      "72050",
+      "74020"
+    ],
+    "budget_value": [
+      0.0
+    ],
+    "iati_identifier": "XM-DAC-41119-NA-S5-RT",
+    "title_narrative": [
+      "UNFPA Namibia Humanitarian action activities"
+    ],
+    "reporting_org_ref": "XM-DAC-41119",
+    "transaction_value": [
+      0.0,
+      39136.19
+    ],
+    "activity_date_type": [
+      "1",
+      "2",
+      "3"
+    ],
+    "activity_status_code": "2",
+    "description_narrative": [
+      "UNFPA Namibia Humanitarian action activities",
+      "UNFPA Namibia Humanitarian action activities"
+    ],
+    "activity_date_iso_date": [
+      "2024-01-01T00:00:00Z",
+      "2024-01-01T00:00:00Z",
+      "2024-12-31T00:00:00Z"
+    ],
+    "recipient_country_code": [
+      "NA"
+    ],
+    "reporting_org_narrative": [
+      "United Nations Population Fund"
+    ]
+  },
+  {
+    "sector_code": [
+      "11231",
+      "13010",
+      "13020",
+      "13030",
+      "13081",
+      "13096",
+      "15160",
+      "15170",
+      "15180",
+      "16062",
+      "72050",
+      "74020"
+    ],
+    "budget_value": [
+      0.0
+    ],
+    "iati_identifier": "XM-DAC-41119-NA-O2-RT",
+    "title_narrative": [
+      "UNFPA Namibia Optimized management of resources activities"
+    ],
+    "reporting_org_ref": "XM-DAC-41119",
+    "transaction_value": [
+      0.0,
+      431028.85
+    ],
+    "activity_date_type": [
+      "1",
+      "2",
+      "3"
+    ],
+    "activity_status_code": "2",
+    "description_narrative": [
+      "UNFPA Namibia Optimized management of resources activities",
+      "UNFPA Namibia Optimized management of resources activities"
+    ],
+    "activity_date_iso_date": [
+      "2024-01-01T00:00:00Z",
+      "2024-01-01T00:00:00Z",
+      "2024-12-31T00:00:00Z"
+    ],
+    "recipient_country_code": [
+      "NA"
+    ],
+    "reporting_org_narrative": [
+      "United Nations Population Fund"
+    ]
+  },
+  {
+    "sector_code": [
+      "11231"
+    ],
+    "budget_value": [
+      0.0
+    ],
+    "iati_identifier": "XM-DAC-41119-NA-S6-RT",
+    "title_narrative": [
+      "UNFPA Namibia Adolescents and youth activities"
+    ],
+    "reporting_org_ref": "XM-DAC-41119",
+    "transaction_value": [
+      0.0,
+      373652.21
+    ],
+    "activity_date_type": [
+      "1",
+      "2",
+      "3"
+    ],
+    "activity_status_code": "2",
+    "description_narrative": [
+      "UNFPA Namibia Adolescents and youth activities",
+      "UNFPA Namibia Adolescents and youth activities"
+    ],
+    "activity_date_iso_date": [
+      "2024-01-01T00:00:00Z",
+      "2024-01-01T00:00:00Z",
+      "2024-12-31T00:00:00Z"
+    ],
+    "recipient_country_code": [
+      "NA"
+    ],
+    "reporting_org_narrative": [
+      "United Nations Population Fund"
+    ]
+  },
+  {
+    "sector_code": [
+      "13010",
+      "13020",
+      "13030",
+      "15160",
+      "15170"
+    ],
+    "budget_value": [
+      0.0
+    ],
+    "iati_identifier": "XM-DAC-41119-NA-S1-RT",
+    "title_narrative": [
+      "UNFPA Namibia Policy and accountability activities"
+    ],
+    "reporting_org_ref": "XM-DAC-41119",
+    "transaction_value": [
+      0.0,
+      27593.02
+    ],
+    "activity_date_type": [
+      "1",
+      "2",
+      "3"
+    ],
+    "activity_status_code": "2",
+    "description_narrative": [
+      "UNFPA Namibia Policy and accountability activities",
+      "UNFPA Namibia Policy and accountability activities"
+    ],
+    "activity_date_iso_date": [
+      "2024-01-01T00:00:00Z",
+      "2024-01-01T00:00:00Z",
+      "2024-12-31T00:00:00Z"
+    ],
+    "recipient_country_code": [
+      "NA"
+    ],
+    "reporting_org_narrative": [
+      "United Nations Population Fund"
+    ]
+  },
+  {
+    "sector_code": [
+      "13010",
+      "13020",
+      "13030",
+      "13081",
+      "15160",
+      "15170",
+      "15180"
+    ],
+    "budget_value": [
+      0.0
+    ],
+    "iati_identifier": "XM-DAC-41119-NA-S2-RT",
+    "title_narrative": [
+      "UNFPA Namibia Quality of care and services activities"
+    ],
+    "reporting_org_ref": "XM-DAC-41119",
+    "transaction_value": [
+      0.0,
+      812559.66
+    ],
+    "activity_date_type": [
+      "1",
+      "2",
+      "3"
+    ],
+    "activity_status_code": "2",
+    "description_narrative": [
+      "UNFPA Namibia Quality of care and services activities",
+      "UNFPA Namibia Quality of care and services activities"
+    ],
+    "activity_date_iso_date": [
+      "2024-01-01T00:00:00Z",
+      "2024-01-01T00:00:00Z",
+      "2024-12-31T00:00:00Z"
+    ],
+    "recipient_country_code": [
+      "NA"
+    ],
+    "reporting_org_narrative": [
+      "United Nations Population Fund"
+    ]
+  },
+  {
+    "sector_code": [
+      "13010",
+      "13020",
+      "13030"
+    ],
+    "budget_value": [
+      0.0
+    ],
+    "iati_identifier": "XM-DAC-41119-BW-S1-RT",
+    "title_narrative": [
+      "UNFPA Botswana Policy and accountability activities"
+    ],
+    "reporting_org_ref": "XM-DAC-41119",
+    "transaction_value": [
+      0.0,
+      87386.78
+    ],
+    "activity_date_type": [
+      "1",
+      "2",
+      "3"
+    ],
+    "activity_status_code": "2",
+    "description_narrative": [
+      "UNFPA Botswana Policy and accountability activities",
+      "UNFPA Botswana Policy and accountability activities"
+    ],
+    "activity_date_iso_date": [
+      "2024-01-01T00:00:00Z",
+      "2024-01-01T00:00:00Z",
+      "2024-12-31T00:00:00Z"
+    ],
+    "recipient_country_code": [
+      "BW"
+    ],
+    "reporting_org_narrative": [
+      "United Nations Population Fund"
+    ]
+  },
+  {
+    "sector_code": [
+      "13096",
+      "16062"
+    ],
+    "budget_value": [
+      0.0
+    ],
+    "iati_identifier": "XM-DAC-41119-ER-S4-RT",
+    "title_narrative": [
+      "UNFPA Eritrea Population change and data activities"
+    ],
+    "reporting_org_ref": "XM-DAC-41119",
+    "transaction_value": [
+      0.0,
+      141119.36
+    ],
+    "activity_date_type": [
+      "1",
+      "2",
+      "3"
+    ],
+    "activity_status_code": "2",
+    "description_narrative": [
+      "UNFPA Eritrea Population change and data activities",
+      "UNFPA Eritrea Population change and data activities"
+    ],
+    "activity_date_iso_date": [
+      "2024-01-01T00:00:00Z",
+      "2024-01-01T00:00:00Z",
+      "2024-12-31T00:00:00Z"
+    ],
+    "recipient_country_code": [
+      "ER"
+    ],
+    "reporting_org_narrative": [
+      "United Nations Population Fund"
+    ]
+  },
+  {
+    "sector_code": [
+      "13010",
+      "13020",
+      "13030",
+      "13081",
+      "15160",
+      "15170",
+      "15180",
+      "72050"
+    ],
+    "budget_value": [
+      0.0
+    ],
+    "iati_identifier": "XM-DAC-41119-GN-S3-RT",
+    "title_narrative": [
+      "UNFPA Guinea Gender and social norms activities"
+    ],
+    "reporting_org_ref": "XM-DAC-41119",
+    "transaction_value": [
+      0.0,
+      876749.76
+    ],
+    "activity_date_type": [
+      "1",
+      "2",
+      "3"
+    ],
+    "activity_status_code": "2",
+    "description_narrative": [
+      "UNFPA Guinea Gender and social norms activities",
+      "UNFPA Guinea Gender and social norms activities"
+    ],
+    "activity_date_iso_date": [
+      "2024-01-01T00:00:00Z",
+      "2024-01-01T00:00:00Z",
+      "2024-12-31T00:00:00Z"
+    ],
+    "recipient_country_code": [
+      "GN"
+    ],
+    "reporting_org_narrative": [
+      "United Nations Population Fund"
+    ]
+  },
+  {
+    "sector_code": [
+      "13096",
+      "72050"
+    ],
+    "budget_value": [
+      0.0
+    ],
+    "iati_identifier": "XM-DAC-41119-GN-S4-RT",
+    "title_narrative": [
+      "UNFPA Guinea Population change and data activities"
+    ],
+    "reporting_org_ref": "XM-DAC-41119",
+    "transaction_value": [
+      0.0,
+      4274767.99
+    ],
+    "activity_date_type": [
+      "1",
+      "2",
+      "3"
+    ],
+    "activity_status_code": "2",
+    "description_narrative": [
+      "UNFPA Guinea Population change and data activities",
+      "UNFPA Guinea Population change and data activities"
+    ],
+    "activity_date_iso_date": [
+      "2024-01-01T00:00:00Z",
+      "2024-01-01T00:00:00Z",
+      "2024-12-31T00:00:00Z"
+    ],
+    "recipient_country_code": [
+      "GN"
+    ],
+    "reporting_org_narrative": [
+      "United Nations Population Fund"
+    ]
+  },
+  {
+    "sector_code": [
+      "11231",
+      "13010",
+      "13020",
+      "13030",
+      "13081",
+      "13096",
+      "15160",
+      "15170",
+      "15180",
+      "16062",
+      "72050",
+      "74020"
+    ],
+    "budget_value": [
+      0.0
+    ],
+    "iati_identifier": "XM-DAC-41119-GN-O1-RT",
+    "title_narrative": [
+      "UNFPA Guinea Improved programming for results activities"
+    ],
+    "reporting_org_ref": "XM-DAC-41119",
+    "transaction_value": [
+      0.0,
+      231490.86
+    ],
+    "activity_date_type": [
+      "1",
+      "2",
+      "3"
+    ],
+    "activity_status_code": "2",
+    "description_narrative": [
+      "UNFPA Guinea Improved programming for results activities",
+      "UNFPA Guinea Improved programming for results activities"
+    ],
+    "activity_date_iso_date": [
+      "2024-01-01T00:00:00Z",
+      "2024-01-01T00:00:00Z",
+      "2024-12-31T00:00:00Z"
+    ],
+    "recipient_country_code": [
+      "GN"
+    ],
+    "reporting_org_narrative": [
+      "United Nations Population Fund"
+    ]
+  },
+  {
+    "sector_code": [
+      "13020",
+      "15180",
+      "72050"
+    ],
+    "budget_value": [
+      0.0
+    ],
+    "iati_identifier": "XM-DAC-41119-GN-S5-RT",
+    "title_narrative": [
+      "UNFPA Guinea Humanitarian action activities"
+    ],
+    "reporting_org_ref": "XM-DAC-41119",
+    "transaction_value": [
+      0.0,
+      33679.45
+    ],
+    "activity_date_type": [
+      "1",
+      "2",
+      "3"
+    ],
+    "activity_status_code": "2",
+    "description_narrative": [
+      "UNFPA Guinea Humanitarian action activities",
+      "UNFPA Guinea Humanitarian action activities"
+    ],
+    "activity_date_iso_date": [
+      "2024-01-01T00:00:00Z",
+      "2024-01-01T00:00:00Z",
+      "2024-12-31T00:00:00Z"
+    ],
+    "recipient_country_code": [
+      "GN"
+    ],
+    "reporting_org_narrative": [
+      "United Nations Population Fund"
+    ]
+  },
+  {
+    "sector_code": [
+      "11231",
+      "13010",
+      "13020",
+      "13030",
+      "13081",
+      "13096",
+      "15160",
+      "15170",
+      "15180",
+      "16062",
+      "72050",
+      "74020"
+    ],
+    "budget_value": [
+      0.0
+    ],
+    "iati_identifier": "XM-DAC-41119-GN-O2-RT",
+    "title_narrative": [
+      "UNFPA Guinea Optimized management of resources activities"
+    ],
+    "reporting_org_ref": "XM-DAC-41119",
+    "transaction_value": [
+      0.0,
+      859709.31
+    ],
+    "activity_date_type": [
+      "1",
+      "2",
+      "3"
+    ],
+    "activity_status_code": "2",
+    "description_narrative": [
+      "UNFPA Guinea Optimized management of resources activities",
+      "UNFPA Guinea Optimized management of resources activities"
+    ],
+    "activity_date_iso_date": [
+      "2024-01-01T00:00:00Z",
+      "2024-01-01T00:00:00Z",
+      "2024-12-31T00:00:00Z"
+    ],
+    "recipient_country_code": [
+      "GN"
+    ],
+    "reporting_org_narrative": [
+      "United Nations Population Fund"
+    ]
+  },
+  {
+    "sector_code": [
+      "11231"
+    ],
+    "budget_value": [
+      0.0
+    ],
+    "iati_identifier": "XM-DAC-41119-GN-S6-RT",
+    "title_narrative": [
+      "UNFPA Guinea Adolescents and youth activities"
+    ],
+    "reporting_org_ref": "XM-DAC-41119",
+    "transaction_value": [
+      0.0,
+      1280808.52
+    ],
+    "activity_date_type": [
+      "1",
+      "2",
+      "3"
+    ],
+    "activity_status_code": "2",
+    "description_narrative": [
+      "UNFPA Guinea Adolescents and youth activities",
+      "UNFPA Guinea Adolescents and youth activities"
+    ],
+    "activity_date_iso_date": [
+      "2024-01-01T00:00:00Z",
+      "2024-01-01T00:00:00Z",
+      "2024-12-31T00:00:00Z"
+    ],
+    "recipient_country_code": [
+      "GN"
+    ],
+    "reporting_org_narrative": [
+      "United Nations Population Fund"
+    ]
+  },
+  {
+    "sector_code": [
+      "13010",
+      "13020",
+      "13030",
+      "13081",
+      "15160",
+      "15170",
+      "15180"
+    ],
+    "budget_value": [
+      0.0
+    ],
+    "iati_identifier": "XM-DAC-41119-GN-S1-RT",
+    "title_narrative": [
+      "UNFPA Guinea Policy and accountability activities"
+    ],
+    "reporting_org_ref": "XM-DAC-41119",
+    "transaction_value": [
+      0.0,
+      356758.11
+    ],
+    "activity_date_type": [
+      "1",
+      "2",
+      "3"
+    ],
+    "activity_status_code": "2",
+    "description_narrative": [
+      "UNFPA Guinea Policy and accountability activities",
+      "UNFPA Guinea Policy and accountability activities"
+    ],
+    "activity_date_iso_date": [
+      "2024-01-01T00:00:00Z",
+      "2024-01-01T00:00:00Z",
+      "2024-12-31T00:00:00Z"
+    ],
+    "recipient_country_code": [
+      "GN"
+    ],
+    "reporting_org_narrative": [
+      "United Nations Population Fund"
+    ]
+  },
+  {
+    "sector_code": [
+      "13010",
+      "13020",
+      "13030",
+      "13081",
+      "15160",
+      "15180",
+      "72050"
+    ],
+    "budget_value": [
+      0.0
+    ],
+    "iati_identifier": "XM-DAC-41119-MW-S3-RT",
+    "title_narrative": [
+      "UNFPA Malawi Gender and social norms activities"
+    ],
+    "reporting_org_ref": "XM-DAC-41119",
+    "transaction_value": [
+      0.0,
+      1150547.09
+    ],
+    "activity_date_type": [
+      "1",
+      "2",
+      "3"
+    ],
+    "activity_status_code": "2",
+    "description_narrative": [
+      "UNFPA Malawi Gender and social norms activities",
+      "UNFPA Malawi Gender and social norms activities"
+    ],
+    "activity_date_iso_date": [
+      "2024-01-01T00:00:00Z",
+      "2024-01-01T00:00:00Z",
+      "2024-12-31T00:00:00Z"
+    ],
+    "recipient_country_code": [
+      "MW"
+    ],
+    "reporting_org_narrative": [
+      "United Nations Population Fund"
+    ]
+  },
+  {
+    "sector_code": [
+      "11231",
+      "13010",
+      "13020",
+      "13030",
+      "13081",
+      "13096",
+      "15160",
+      "15170",
+      "15180",
+      "16062",
+      "72050",
+      "74020"
+    ],
+    "budget_value": [
+      0.0
+    ],
+    "iati_identifier": "XM-DAC-41119-MW-S4-RT",
+    "title_narrative": [
+      "UNFPA Malawi Population change and data activities"
+    ],
+    "reporting_org_ref": "XM-DAC-41119",
+    "transaction_value": [
+      0.0,
+      271375.39
+    ],
+    "activity_date_type": [
+      "1",
+      "2",
+      "3"
+    ],
+    "activity_status_code": "2",
+    "description_narrative": [
+      "UNFPA Malawi Population change and data activities",
+      "UNFPA Malawi Population change and data activities"
+    ],
+    "activity_date_iso_date": [
+      "2024-01-01T00:00:00Z",
+      "2024-01-01T00:00:00Z",
+      "2024-12-31T00:00:00Z"
+    ],
+    "recipient_country_code": [
+      "MW"
+    ],
+    "reporting_org_narrative": [
+      "United Nations Population Fund"
+    ]
+  },
+  {
+    "sector_code": [
+      "11231",
+      "13010",
+      "13020",
+      "13030",
+      "13081",
+      "13096",
+      "15160",
+      "15170",
+      "15180",
+      "16062",
+      "72050",
+      "74020"
+    ],
+    "budget_value": [
+      0.0
+    ],
+    "iati_identifier": "XM-DAC-41119-MW-O1-RT",
+    "title_narrative": [
+      "UNFPA Malawi Improved programming for results activities"
+    ],
+    "reporting_org_ref": "XM-DAC-41119",
+    "transaction_value": [
+      0.0,
+      291302.51
+    ],
+    "activity_date_type": [
+      "1",
+      "2",
+      "3"
+    ],
+    "activity_status_code": "2",
+    "description_narrative": [
+      "UNFPA Malawi Improved programming for results activities",
+      "UNFPA Malawi Improved programming for results activities"
+    ],
+    "activity_date_iso_date": [
+      "2024-01-01T00:00:00Z",
+      "2024-01-01T00:00:00Z",
+      "2024-12-31T00:00:00Z"
+    ],
+    "recipient_country_code": [
+      "MW"
+    ],
+    "reporting_org_narrative": [
+      "United Nations Population Fund"
+    ]
+  },
+  {
+    "sector_code": [
+      "13020",
+      "13030",
+      "15170",
+      "15180",
+      "72050"
+    ],
+    "budget_value": [
+      0.0
+    ],
+    "iati_identifier": "XM-DAC-41119-MW-S5-RT",
+    "title_narrative": [
+      "UNFPA Malawi Humanitarian action activities"
+    ],
+    "reporting_org_ref": "XM-DAC-41119",
+    "transaction_value": [
+      0.0,
+      228.18
+    ],
+    "activity_date_type": [
+      "1",
+      "2",
+      "3"
+    ],
+    "activity_status_code": "2",
+    "description_narrative": [
+      "UNFPA Malawi Humanitarian action activities",
+      "UNFPA Malawi Humanitarian action activities"
+    ],
+    "activity_date_iso_date": [
+      "2024-01-01T00:00:00Z",
+      "2024-01-01T00:00:00Z",
+      "2024-12-31T00:00:00Z"
+    ],
+    "recipient_country_code": [
+      "MW"
+    ],
+    "reporting_org_narrative": [
+      "United Nations Population Fund"
+    ]
+  },
+  {
+    "sector_code": [
+      "11231",
+      "13010",
+      "13020",
+      "13030",
+      "13081",
+      "13096",
+      "15160",
+      "15170",
+      "15180",
+      "16062",
+      "72050",
+      "74020"
+    ],
+    "budget_value": [
+      0.0
+    ],
+    "iati_identifier": "XM-DAC-41119-MW-O2-RT",
+    "title_narrative": [
+      "UNFPA Malawi Optimized management of resources activities"
+    ],
+    "reporting_org_ref": "XM-DAC-41119",
+    "transaction_value": [
+      0.0,
+      573513.46
+    ],
+    "activity_date_type": [
+      "1",
+      "2",
+      "3"
+    ],
+    "activity_status_code": "2",
+    "description_narrative": [
+      "UNFPA Malawi Optimized management of resources activities",
+      "UNFPA Malawi Optimized management of resources activities"
+    ],
+    "activity_date_iso_date": [
+      "2024-01-01T00:00:00Z",
+      "2024-01-01T00:00:00Z",
+      "2024-12-31T00:00:00Z"
+    ],
+    "recipient_country_code": [
+      "MW"
+    ],
+    "reporting_org_narrative": [
+      "United Nations Population Fund"
+    ]
+  },
+  {
+    "sector_code": [
+      "11231",
+      "72050"
+    ],
+    "budget_value": [
+      0.0
+    ],
+    "iati_identifier": "XM-DAC-41119-MW-S6-RT",
+    "title_narrative": [
+      "UNFPA Malawi Adolescents and youth activities"
+    ],
+    "reporting_org_ref": "XM-DAC-41119",
+    "transaction_value": [
+      0.0,
+      2490832.4
+    ],
+    "activity_date_type": [
+      "1",
+      "2",
+      "3"
+    ],
+    "activity_status_code": "2",
+    "description_narrative": [
+      "UNFPA Malawi Adolescents and youth activities",
+      "UNFPA Malawi Adolescents and youth activities"
+    ],
+    "activity_date_iso_date": [
+      "2024-01-01T00:00:00Z",
+      "2024-01-01T00:00:00Z",
+      "2024-12-31T00:00:00Z"
+    ],
+    "recipient_country_code": [
+      "MW"
+    ],
+    "reporting_org_narrative": [
+      "United Nations Population Fund"
+    ]
+  },
+  {
+    "sector_code": [
+      "13010",
+      "13020",
+      "13030",
+      "13081",
+      "15160",
+      "15180",
+      "72050"
+    ],
+    "budget_value": [
+      0.0
+    ],
+    "iati_identifier": "XM-DAC-41119-MW-S1-RT",
+    "title_narrative": [
+      "UNFPA Malawi Policy and accountability activities"
+    ],
+    "reporting_org_ref": "XM-DAC-41119",
+    "transaction_value": [
+      0.0,
+      1064410.82
+    ],
+    "activity_date_type": [
+      "1",
+      "2",
+      "3"
+    ],
+    "activity_status_code": "2",
+    "description_narrative": [
+      "UNFPA Malawi Policy and accountability activities",
+      "UNFPA Malawi Policy and accountability activities"
+    ],
+    "activity_date_iso_date": [
+      "2024-01-01T00:00:00Z",
+      "2024-01-01T00:00:00Z",
+      "2024-12-31T00:00:00Z"
+    ],
+    "recipient_country_code": [
+      "MW"
+    ],
+    "reporting_org_narrative": [
+      "United Nations Population Fund"
+    ]
+  },
+  {
+    "sector_code": [
+      "11231",
+      "13010",
+      "13020",
+      "13030",
+      "13081",
+      "13096",
+      "15160",
+      "15170",
+      "15180",
+      "16062",
+      "72050",
+      "74020"
+    ],
+    "budget_value": [
+      0.0
+    ],
+    "iati_identifier": "XM-DAC-41119-MW-S2-RT",
+    "title_narrative": [
+      "UNFPA Malawi Quality of care and services activities"
+    ],
+    "reporting_org_ref": "XM-DAC-41119",
+    "transaction_value": [
+      0.0,
+      5755835.49
+    ],
+    "activity_date_type": [
+      "1",
+      "2",
+      "3"
+    ],
+    "activity_status_code": "2",
+    "description_narrative": [
+      "UNFPA Malawi Quality of care and services activities",
+      "UNFPA Malawi Quality of care and services activities"
+    ],
+    "activity_date_iso_date": [
+      "2024-01-01T00:00:00Z",
+      "2024-01-01T00:00:00Z",
+      "2024-12-31T00:00:00Z"
+    ],
+    "recipient_country_code": [
+      "MW"
+    ],
+    "reporting_org_narrative": [
+      "United Nations Population Fund"
+    ]
+  },
+  {
+    "sector_code": [
+      "15160",
+      "15180"
+    ],
+    "budget_value": [
+      0.0
+    ],
+    "iati_identifier": "XM-DAC-41119-AZ-S3-RT",
+    "title_narrative": [
+      "UNFPA Azerbaijan Gender and social norms activities"
+    ],
+    "reporting_org_ref": "XM-DAC-41119",
+    "transaction_value": [
+      0.0,
+      286212.7
+    ],
+    "activity_date_type": [
+      "1",
+      "2",
+      "3"
+    ],
+    "activity_status_code": "2",
+    "description_narrative": [
+      "UNFPA Azerbaijan Gender and social norms activities",
+      "UNFPA Azerbaijan Gender and social norms activities"
+    ],
+    "activity_date_iso_date": [
+      "2024-01-01T00:00:00Z",
+      "2024-01-01T00:00:00Z",
+      "2024-12-31T00:00:00Z"
+    ],
+    "recipient_country_code": [
+      "AZ"
+    ],
+    "reporting_org_narrative": [
+      "United Nations Population Fund"
+    ]
+  },
+  {
+    "sector_code": [
+      "13096",
+      "16062"
+    ],
+    "budget_value": [
+      0.0
+    ],
+    "iati_identifier": "XM-DAC-41119-AZ-S4-RT",
+    "title_narrative": [
+      "UNFPA Azerbaijan Population change and data activities"
+    ],
+    "reporting_org_ref": "XM-DAC-41119",
+    "transaction_value": [
+      0.0,
+      140549.97
+    ],
+    "activity_date_type": [
+      "1",
+      "2",
+      "3"
+    ],
+    "activity_status_code": "2",
+    "description_narrative": [
+      "UNFPA Azerbaijan Population change and data activities",
+      "UNFPA Azerbaijan Population change and data activities"
+    ],
+    "activity_date_iso_date": [
+      "2024-01-01T00:00:00Z",
+      "2024-01-01T00:00:00Z",
+      "2024-12-31T00:00:00Z"
+    ],
+    "recipient_country_code": [
+      "AZ"
+    ],
+    "reporting_org_narrative": [
+      "United Nations Population Fund"
+    ]
+  },
+  {
+    "sector_code": [
+      "11231",
+      "13010",
+      "13020",
+      "13030",
+      "13081",
+      "13096",
+      "15160",
+      "15170",
+      "15180",
+      "16062",
+      "72050",
+      "74020"
+    ],
+    "budget_value": [
+      0.0
+    ],
+    "iati_identifier": "XM-DAC-41119-AZ-O1-RT",
+    "title_narrative": [
+      "UNFPA Azerbaijan Improved programming for results activities"
+    ],
+    "reporting_org_ref": "XM-DAC-41119",
+    "transaction_value": [
+      0.0,
+      138473.03
+    ],
+    "activity_date_type": [
+      "1",
+      "2",
+      "3"
+    ],
+    "activity_status_code": "2",
+    "description_narrative": [
+      "UNFPA Azerbaijan Improved programming for results activities",
+      "UNFPA Azerbaijan Improved programming for results activities"
+    ],
+    "activity_date_iso_date": [
+      "2024-01-01T00:00:00Z",
+      "2024-01-01T00:00:00Z",
+      "2024-12-31T00:00:00Z"
+    ],
+    "recipient_country_code": [
+      "AZ"
+    ],
+    "reporting_org_narrative": [
+      "United Nations Population Fund"
+    ]
+  },
+  {
+    "sector_code": [
+      "11231",
+      "13010",
+      "13020",
+      "13030",
+      "13081",
+      "13096",
+      "15160",
+      "15170",
+      "15180",
+      "16062",
+      "72050",
+      "74020"
+    ],
+    "budget_value": [
+      0.0
+    ],
+    "iati_identifier": "XM-DAC-41119-AZ-O2-RT",
+    "title_narrative": [
+      "UNFPA Azerbaijan Optimized management of resources activities"
+    ],
+    "reporting_org_ref": "XM-DAC-41119",
+    "transaction_value": [
+      0.0,
+      122700.43
+    ],
+    "activity_date_type": [
+      "1",
+      "2",
+      "3"
+    ],
+    "activity_status_code": "2",
+    "description_narrative": [
+      "UNFPA Azerbaijan Optimized management of resources activities",
+      "UNFPA Azerbaijan Optimized management of resources activities"
+    ],
+    "activity_date_iso_date": [
+      "2024-01-01T00:00:00Z",
+      "2024-01-01T00:00:00Z",
+      "2024-12-31T00:00:00Z"
+    ],
+    "recipient_country_code": [
+      "AZ"
+    ],
+    "reporting_org_narrative": [
+      "United Nations Population Fund"
+    ]
+  },
+  {
+    "sector_code": [
+      "11231"
+    ],
+    "budget_value": [
+      0.0
+    ],
+    "iati_identifier": "XM-DAC-41119-AZ-S6-RT",
+    "title_narrative": [
+      "UNFPA Azerbaijan Adolescents and youth activities"
+    ],
+    "reporting_org_ref": "XM-DAC-41119",
+    "transaction_value": [
+      0.0,
+      47729.53
+    ],
+    "activity_date_type": [
+      "1",
+      "2",
+      "3"
+    ],
+    "activity_status_code": "2",
+    "description_narrative": [
+      "UNFPA Azerbaijan Adolescents and youth activities",
+      "UNFPA Azerbaijan Adolescents and youth activities"
+    ],
+    "activity_date_iso_date": [
+      "2024-01-01T00:00:00Z",
+      "2024-01-01T00:00:00Z",
+      "2024-12-31T00:00:00Z"
+    ],
+    "recipient_country_code": [
+      "AZ"
+    ],
+    "reporting_org_narrative": [
+      "United Nations Population Fund"
+    ]
+  },
+  {
+    "sector_code": [
+      "13010",
+      "13020",
+      "13030",
+      "13081",
+      "15160",
+      "15180"
+    ],
+    "budget_value": [
+      0.0
+    ],
+    "iati_identifier": "XM-DAC-41119-AZ-S1-RT",
+    "title_narrative": [
+      "UNFPA Azerbaijan Policy and accountability activities"
+    ],
+    "reporting_org_ref": "XM-DAC-41119",
+    "transaction_value": [
+      0.0,
+      210934.25
+    ],
+    "activity_date_type": [
+      "1",
+      "2",
+      "3"
+    ],
+    "activity_status_code": "2",
+    "description_narrative": [
+      "UNFPA Azerbaijan Policy and accountability activities",
+      "UNFPA Azerbaijan Policy and accountability activities"
+    ],
+    "activity_date_iso_date": [
+      "2024-01-01T00:00:00Z",
+      "2024-01-01T00:00:00Z",
+      "2024-12-31T00:00:00Z"
+    ],
+    "recipient_country_code": [
+      "AZ"
+    ],
+    "reporting_org_narrative": [
+      "United Nations Population Fund"
+    ]
+  },
+  {
+    "sector_code": [
+      "13010",
+      "13020",
+      "13081",
+      "15180",
+      "72050"
+    ],
+    "budget_value": [
+      0.0
+    ],
+    "iati_identifier": "XM-DAC-41119-AZ-S2-RT",
+    "title_narrative": [
+      "UNFPA Azerbaijan Quality of care and services activities"
+    ],
+    "reporting_org_ref": "XM-DAC-41119",
+    "transaction_value": [
+      0.0,
+      339476.97
+    ],
+    "activity_date_type": [
+      "1",
+      "2",
+      "3"
+    ],
+    "activity_status_code": "2",
+    "description_narrative": [
+      "UNFPA Azerbaijan Quality of care and services activities",
+      "UNFPA Azerbaijan Quality of care and services activities"
+    ],
+    "activity_date_iso_date": [
+      "2024-01-01T00:00:00Z",
+      "2024-01-01T00:00:00Z",
+      "2024-12-31T00:00:00Z"
+    ],
+    "recipient_country_code": [
+      "AZ"
+    ],
+    "reporting_org_narrative": [
+      "United Nations Population Fund"
+    ]
+  },
+  {
+    "sector_code": [
+      "13010",
+      "13020",
+      "13030",
+      "13081",
+      "15160",
+      "15180"
+    ],
+    "budget_value": [
+      0.0
+    ],
+    "iati_identifier": "XM-DAC-41119-GN-S2-RT",
+    "title_narrative": [
+      "UNFPA Guinea Quality of care and services activities"
+    ],
+    "reporting_org_ref": "XM-DAC-41119",
+    "transaction_value": [
+      0.0,
+      2714438.4
+    ],
+    "activity_date_type": [
+      "1",
+      "2",
+      "3"
+    ],
+    "activity_status_code": "2",
+    "description_narrative": [
+      "UNFPA Guinea Quality of care and services activities",
+      "UNFPA Guinea Quality of care and services activities"
+    ],
+    "activity_date_iso_date": [
+      "2024-01-01T00:00:00Z",
+      "2024-01-01T00:00:00Z",
+      "2024-12-31T00:00:00Z"
+    ],
+    "recipient_country_code": [
+      "GN"
+    ],
+    "reporting_org_narrative": [
+      "United Nations Population Fund"
+    ]
+  },
+  {
+    "sector_code": [
+      "13020",
+      "13081",
+      "15170",
+      "15180"
+    ],
+    "budget_value": [
+      0.0
+    ],
+    "iati_identifier": "XM-DAC-41119-LY-S3-RT",
+    "title_narrative": [
+      "UNFPA Libya Gender and social norms activities"
+    ],
+    "reporting_org_ref": "XM-DAC-41119",
+    "transaction_value": [
+      0.0,
+      130419.41
+    ],
+    "activity_date_type": [
+      "1",
+      "2",
+      "3"
+    ],
+    "activity_status_code": "2",
+    "description_narrative": [
+      "UNFPA Libya Gender and social norms activities",
+      "UNFPA Libya Gender and social norms activities"
+    ],
+    "activity_date_iso_date": [
+      "2024-01-01T00:00:00Z",
+      "2024-01-01T00:00:00Z",
+      "2024-12-31T00:00:00Z"
+    ],
+    "recipient_country_code": [
+      "LY"
+    ],
+    "reporting_org_narrative": [
+      "United Nations Population Fund"
+    ]
+  },
+  {
+    "sector_code": [
+      "13010",
+      "13020",
+      "13081",
+      "15160",
+      "15170",
+      "15180",
+      "72050"
+    ],
+    "budget_value": [
+      0.0
+    ],
+    "iati_identifier": "XM-DAC-41119-PG-S3-RT",
+    "title_narrative": [
+      "UNFPA Papua New Guinea Gender and social norms activities"
+    ],
+    "reporting_org_ref": "XM-DAC-41119",
+    "transaction_value": [
+      0.0,
+      2156194.24
+    ],
+    "activity_date_type": [
+      "1",
+      "2",
+      "3"
+    ],
+    "activity_status_code": "2",
+    "description_narrative": [
+      "UNFPA Papua New Guinea Gender and social norms activities",
+      "UNFPA Papua New Guinea Gender and social norms activities"
+    ],
+    "activity_date_iso_date": [
+      "2024-01-01T00:00:00Z",
+      "2024-01-01T00:00:00Z",
+      "2024-12-31T00:00:00Z"
+    ],
+    "recipient_country_code": [
+      "PG"
+    ],
+    "reporting_org_narrative": [
+      "United Nations Population Fund"
+    ]
+  },
+  {
+    "sector_code": [
+      "13010",
+      "13020",
+      "13030",
+      "13081",
+      "15160",
+      "15180"
+    ],
+    "budget_value": [
+      0.0
+    ],
+    "iati_identifier": "XM-DAC-41119-TZ-S3-RT",
+    "title_narrative": [
+      "UNFPA Tanzania, United Republic of Gender and social norms activities"
+    ],
+    "reporting_org_ref": "XM-DAC-41119",
+    "transaction_value": [
+      0.0,
+      2268453.58
+    ],
+    "activity_date_type": [
+      "1",
+      "2",
+      "3"
+    ],
+    "activity_status_code": "2",
+    "description_narrative": [
+      "UNFPA Tanzania, United Republic of Gender and social norms activities",
+      "UNFPA Tanzania, United Republic of Gender and social norms activities"
+    ],
+    "activity_date_iso_date": [
+      "2024-01-01T00:00:00Z",
+      "2024-01-01T00:00:00Z",
+      "2024-12-31T00:00:00Z"
+    ],
+    "recipient_country_code": [
+      "TZ"
+    ],
+    "reporting_org_narrative": [
+      "United Nations Population Fund"
+    ]
+  },
+  {
+    "sector_code": [
+      "16062",
+      "72050"
+    ],
+    "budget_value": [
+      0.0
+    ],
+    "iati_identifier": "XM-DAC-41119-LY-S4-RT",
+    "title_narrative": [
+      "UNFPA Libya Population change and data activities"
+    ],
+    "reporting_org_ref": "XM-DAC-41119",
+    "transaction_value": [
+      0.0,
+      7424.66
+    ],
+    "activity_date_type": [
+      "1",
+      "2",
+      "3"
+    ],
+    "activity_status_code": "2",
+    "description_narrative": [
+      "UNFPA Libya Population change and data activities",
+      "UNFPA Libya Population change and data activities"
+    ],
+    "activity_date_iso_date": [
+      "2024-01-01T00:00:00Z",
+      "2024-01-01T00:00:00Z",
+      "2024-12-31T00:00:00Z"
+    ],
+    "recipient_country_code": [
+      "LY"
+    ],
+    "reporting_org_narrative": [
+      "United Nations Population Fund"
+    ]
+  },
+  {
+    "sector_code": [
+      "13096"
+    ],
+    "budget_value": [
+      0.0
+    ],
+    "iati_identifier": "XM-DAC-41119-PG-S4-RT",
+    "title_narrative": [
+      "UNFPA Papua New Guinea Population change and data activities"
+    ],
+    "reporting_org_ref": "XM-DAC-41119",
+    "transaction_value": [
+      0.0,
+      -20432.16
+    ],
+    "activity_date_type": [
+      "1",
+      "2",
+      "3"
+    ],
+    "activity_status_code": "2",
+    "description_narrative": [
+      "UNFPA Papua New Guinea Population change and data activities",
+      "UNFPA Papua New Guinea Population change and data activities"
+    ],
+    "activity_date_iso_date": [
+      "2024-01-01T00:00:00Z",
+      "2024-01-01T00:00:00Z",
+      "2024-12-31T00:00:00Z"
+    ],
+    "recipient_country_code": [
+      "PG"
+    ],
+    "reporting_org_narrative": [
+      "United Nations Population Fund"
+    ]
+  },
+  {
+    "sector_code": [
+      "13096",
+      "16062",
+      "72050"
+    ],
+    "budget_value": [
+      0.0
+    ],
+    "iati_identifier": "XM-DAC-41119-TZ-S4-RT",
+    "title_narrative": [
+      "UNFPA Tanzania, United Republic of Population change and data activities"
+    ],
+    "reporting_org_ref": "XM-DAC-41119",
+    "transaction_value": [
+      0.0,
+      1656556.99
+    ],
+    "activity_date_type": [
+      "1",
+      "2",
+      "3"
+    ],
+    "activity_status_code": "2",
+    "description_narrative": [
+      "UNFPA Tanzania, United Republic of Population change and data activities",
+      "UNFPA Tanzania, United Republic of Population change and data activities"
+    ],
+    "activity_date_iso_date": [
+      "2024-01-01T00:00:00Z",
+      "2024-01-01T00:00:00Z",
+      "2024-12-31T00:00:00Z"
+    ],
+    "recipient_country_code": [
+      "TZ"
+    ],
+    "reporting_org_narrative": [
+      "United Nations Population Fund"
+    ]
+  },
+  {
+    "sector_code": [
+      "13020",
+      "13081",
+      "15180",
+      "72050"
+    ],
+    "budget_value": [
+      0.0
+    ],
+    "iati_identifier": "XM-DAC-41119-LY-S5-RT",
+    "title_narrative": [
+      "UNFPA Libya Humanitarian action activities"
+    ],
+    "reporting_org_ref": "XM-DAC-41119",
+    "transaction_value": [
+      0.0,
+      1702001.96
+    ],
+    "activity_date_type": [
+      "1",
+      "2",
+      "3"
+    ],
+    "activity_status_code": "2",
+    "description_narrative": [
+      "UNFPA Libya Humanitarian action activities",
+      "UNFPA Libya Humanitarian action activities"
+    ],
+    "activity_date_iso_date": [
+      "2024-01-01T00:00:00Z",
+      "2024-01-01T00:00:00Z",
+      "2024-12-31T00:00:00Z"
+    ],
+    "recipient_country_code": [
+      "LY"
+    ],
+    "reporting_org_narrative": [
+      "United Nations Population Fund"
+    ]
+  },
+  {
+    "sector_code": [
+      "11231",
+      "13010",
+      "13020",
+      "13030",
+      "13081",
+      "13096",
+      "15160",
+      "15170",
+      "15180",
+      "16062",
+      "72050",
+      "74020"
+    ],
+    "budget_value": [
+      0.0
+    ],
+    "iati_identifier": "XM-DAC-41119-PG-O1-RT",
+    "title_narrative": [
+      "UNFPA Papua New Guinea Improved programming for results activities"
+    ],
+    "reporting_org_ref": "XM-DAC-41119",
+    "transaction_value": [
+      0.0,
+      293285.54
+    ],
+    "activity_date_type": [
+      "1",
+      "2",
+      "3"
+    ],
+    "activity_status_code": "2",
+    "description_narrative": [
+      "UNFPA Papua New Guinea Improved programming for results activities",
+      "UNFPA Papua New Guinea Improved programming for results activities"
+    ],
+    "activity_date_iso_date": [
+      "2024-01-01T00:00:00Z",
+      "2024-01-01T00:00:00Z",
+      "2024-12-31T00:00:00Z"
+    ],
+    "recipient_country_code": [
+      "PG"
+    ],
+    "reporting_org_narrative": [
+      "United Nations Population Fund"
+    ]
+  },
+  {
+    "sector_code": [
+      "11231",
+      "13010",
+      "13020",
+      "13030",
+      "13081",
+      "13096",
+      "15160",
+      "15170",
+      "15180",
+      "16062",
+      "72050",
+      "74020"
+    ],
+    "budget_value": [
+      0.0
+    ],
+    "iati_identifier": "XM-DAC-41119-TZ-O1-RT",
+    "title_narrative": [
+      "UNFPA Tanzania, United Republic of Improved programming for results activities"
+    ],
+    "reporting_org_ref": "XM-DAC-41119",
+    "transaction_value": [
+      0.0,
+      643484.25
+    ],
+    "activity_date_type": [
+      "1",
+      "2",
+      "3"
+    ],
+    "activity_status_code": "2",
+    "description_narrative": [
+      "UNFPA Tanzania, United Republic of Improved programming for results activities",
+      "UNFPA Tanzania, United Republic of Improved programming for results activities"
+    ],
+    "activity_date_iso_date": [
+      "2024-01-01T00:00:00Z",
+      "2024-01-01T00:00:00Z",
+      "2024-12-31T00:00:00Z"
+    ],
+    "recipient_country_code": [
+      "TZ"
+    ],
+    "reporting_org_narrative": [
+      "United Nations Population Fund"
+    ]
+  },
+  {
+    "sector_code": [
+      "11231",
+      "13010",
+      "13020",
+      "13030",
+      "13081",
+      "13096",
+      "15160",
+      "15170",
+      "15180",
+      "16062",
+      "72050",
+      "74020"
+    ],
+    "budget_value": [
+      0.0
+    ],
+    "iati_identifier": "XM-DAC-41119-LY-O2-RT",
+    "title_narrative": [
+      "UNFPA Libya Optimized management of resources activities"
+    ],
+    "reporting_org_ref": "XM-DAC-41119",
+    "transaction_value": [
+      0.0,
+      602467.33
+    ],
+    "activity_date_type": [
+      "1",
+      "2",
+      "3"
+    ],
+    "activity_status_code": "2",
+    "description_narrative": [
+      "UNFPA Libya Optimized management of resources activities",
+      "UNFPA Libya Optimized management of resources activities"
+    ],
+    "activity_date_iso_date": [
+      "2024-01-01T00:00:00Z",
+      "2024-01-01T00:00:00Z",
+      "2024-12-31T00:00:00Z"
+    ],
+    "recipient_country_code": [
+      "LY"
+    ],
+    "reporting_org_narrative": [
+      "United Nations Population Fund"
+    ]
+  },
+  {
+    "sector_code": [
+      "13081",
+      "15180"
+    ],
+    "budget_value": [
+      0.0
+    ],
+    "iati_identifier": "XM-DAC-41119-TZ-S5-RT",
+    "title_narrative": [
+      "UNFPA Tanzania, United Republic of Humanitarian action activities"
+    ],
+    "reporting_org_ref": "XM-DAC-41119",
+    "transaction_value": [
+      0.0,
+      44492.44
+    ],
+    "activity_date_type": [
+      "1",
+      "2",
+      "3"
+    ],
+    "activity_status_code": "2",
+    "description_narrative": [
+      "UNFPA Tanzania, United Republic of Humanitarian action activities",
+      "UNFPA Tanzania, United Republic of Humanitarian action activities"
+    ],
+    "activity_date_iso_date": [
+      "2024-01-01T00:00:00Z",
+      "2024-01-01T00:00:00Z",
+      "2024-12-31T00:00:00Z"
+    ],
+    "recipient_country_code": [
+      "TZ"
+    ],
+    "reporting_org_narrative": [
+      "United Nations Population Fund"
+    ]
+  },
+  {
+    "sector_code": [
+      "11231"
+    ],
+    "budget_value": [
+      0.0
+    ],
+    "iati_identifier": "XM-DAC-41119-LY-S6-RT",
+    "title_narrative": [
+      "UNFPA Libya Adolescents and youth activities"
+    ],
+    "reporting_org_ref": "XM-DAC-41119",
+    "transaction_value": [
+      0.0,
+      144590.66
+    ],
+    "activity_date_type": [
+      "1",
+      "2",
+      "3"
+    ],
+    "activity_status_code": "2",
+    "description_narrative": [
+      "UNFPA Libya Adolescents and youth activities",
+      "UNFPA Libya Adolescents and youth activities"
+    ],
+    "activity_date_iso_date": [
+      "2024-01-01T00:00:00Z",
+      "2024-01-01T00:00:00Z",
+      "2024-12-31T00:00:00Z"
+    ],
+    "recipient_country_code": [
+      "LY"
+    ],
+    "reporting_org_narrative": [
+      "United Nations Population Fund"
+    ]
+  },
+  {
+    "sector_code": [
+      "11231",
+      "13010",
+      "13020",
+      "13030",
+      "13081",
+      "13096",
+      "15160",
+      "15170",
+      "15180",
+      "16062",
+      "72050",
+      "74020"
+    ],
+    "budget_value": [
+      0.0
+    ],
+    "iati_identifier": "XM-DAC-41119-PG-O2-RT",
+    "title_narrative": [
+      "UNFPA Papua New Guinea Optimized management of resources activities"
+    ],
+    "reporting_org_ref": "XM-DAC-41119",
+    "transaction_value": [
+      0.0,
+      786359.91
+    ],
+    "activity_date_type": [
+      "1",
+      "2",
+      "3"
+    ],
+    "activity_status_code": "2",
+    "description_narrative": [
+      "UNFPA Papua New Guinea Optimized management of resources activities",
+      "UNFPA Papua New Guinea Optimized management of resources activities"
+    ],
+    "activity_date_iso_date": [
+      "2024-01-01T00:00:00Z",
+      "2024-01-01T00:00:00Z",
+      "2024-12-31T00:00:00Z"
+    ],
+    "recipient_country_code": [
+      "PG"
+    ],
+    "reporting_org_narrative": [
+      "United Nations Population Fund"
+    ]
+  },
+  {
+    "sector_code": [
+      "11231",
+      "13010",
+      "13020",
+      "13030",
+      "13081",
+      "13096",
+      "15160",
+      "15170",
+      "15180",
+      "16062",
+      "72050",
+      "74020"
+    ],
+    "budget_value": [
+      0.0
+    ],
+    "iati_identifier": "XM-DAC-41119-TZ-O2-RT",
+    "title_narrative": [
+      "UNFPA Tanzania, United Republic of Optimized management of resources activities"
+    ],
+    "reporting_org_ref": "XM-DAC-41119",
+    "transaction_value": [
+      0.0,
+      750995.01
+    ],
+    "activity_date_type": [
+      "1",
+      "2",
+      "3"
+    ],
+    "activity_status_code": "2",
+    "description_narrative": [
+      "UNFPA Tanzania, United Republic of Optimized management of resources activities",
+      "UNFPA Tanzania, United Republic of Optimized management of resources activities"
+    ],
+    "activity_date_iso_date": [
+      "2024-01-01T00:00:00Z",
+      "2024-01-01T00:00:00Z",
+      "2024-12-31T00:00:00Z"
+    ],
+    "recipient_country_code": [
+      "TZ"
+    ],
+    "reporting_org_narrative": [
+      "United Nations Population Fund"
+    ]
+  },
+  {
+    "sector_code": [
+      "13020",
+      "15160",
+      "15180",
+      "72050"
+    ],
+    "budget_value": [
+      0.0
+    ],
+    "iati_identifier": "XM-DAC-41119-LY-S1-RT",
+    "title_narrative": [
+      "UNFPA Libya Policy and accountability activities"
+    ],
+    "reporting_org_ref": "XM-DAC-41119",
+    "transaction_value": [
+      0.0,
+      240431.5
+    ],
+    "activity_date_type": [
+      "1",
+      "2",
+      "3"
+    ],
+    "activity_status_code": "2",
+    "description_narrative": [
+      "UNFPA Libya Policy and accountability activities",
+      "UNFPA Libya Policy and accountability activities"
+    ],
+    "activity_date_iso_date": [
+      "2024-01-01T00:00:00Z",
+      "2024-01-01T00:00:00Z",
+      "2024-12-31T00:00:00Z"
+    ],
+    "recipient_country_code": [
+      "LY"
+    ],
+    "reporting_org_narrative": [
+      "United Nations Population Fund"
+    ]
+  },
+  {
+    "sector_code": [
+      "11231"
+    ],
+    "budget_value": [
+      0.0
+    ],
+    "iati_identifier": "XM-DAC-41119-PG-S6-RT",
+    "title_narrative": [
+      "UNFPA Papua New Guinea Adolescents and youth activities"
+    ],
+    "reporting_org_ref": "XM-DAC-41119",
+    "transaction_value": [
+      0.0,
+      109911.59
+    ],
+    "activity_date_type": [
+      "1",
+      "2",
+      "3"
+    ],
+    "activity_status_code": "2",
+    "description_narrative": [
+      "UNFPA Papua New Guinea Adolescents and youth activities",
+      "UNFPA Papua New Guinea Adolescents and youth activities"
+    ],
+    "activity_date_iso_date": [
+      "2024-01-01T00:00:00Z",
+      "2024-01-01T00:00:00Z",
+      "2024-12-31T00:00:00Z"
+    ],
+    "recipient_country_code": [
+      "PG"
+    ],
+    "reporting_org_narrative": [
+      "United Nations Population Fund"
+    ]
+  },
+  {
+    "sector_code": [
+      "11231"
+    ],
+    "budget_value": [
+      0.0
+    ],
+    "iati_identifier": "XM-DAC-41119-TZ-S6-RT",
+    "title_narrative": [
+      "UNFPA Tanzania, United Republic of Adolescents and youth activities"
+    ],
+    "reporting_org_ref": "XM-DAC-41119",
+    "transaction_value": [
+      0.0,
+      1388615.79
+    ],
+    "activity_date_type": [
+      "1",
+      "2",
+      "3"
+    ],
+    "activity_status_code": "2",
+    "description_narrative": [
+      "UNFPA Tanzania, United Republic of Adolescents and youth activities",
+      "UNFPA Tanzania, United Republic of Adolescents and youth activities"
+    ],
+    "activity_date_iso_date": [
+      "2024-01-01T00:00:00Z",
+      "2024-01-01T00:00:00Z",
+      "2024-12-31T00:00:00Z"
+    ],
+    "recipient_country_code": [
+      "TZ"
+    ],
+    "reporting_org_narrative": [
+      "United Nations Population Fund"
+    ]
+  },
+  {
+    "sector_code": [
+      "13020",
+      "13030",
+      "13081",
+      "15180"
+    ],
+    "budget_value": [
+      0.0
+    ],
+    "iati_identifier": "XM-DAC-41119-LY-S2-RT",
+    "title_narrative": [
+      "UNFPA Libya Quality of care and services activities"
+    ],
+    "reporting_org_ref": "XM-DAC-41119",
+    "transaction_value": [
+      0.0,
+      1462754.76
+    ],
+    "activity_date_type": [
+      "1",
+      "2",
+      "3"
+    ],
+    "activity_status_code": "2",
+    "description_narrative": [
+      "UNFPA Libya Quality of care and services activities",
+      "UNFPA Libya Quality of care and services activities"
+    ],
+    "activity_date_iso_date": [
+      "2024-01-01T00:00:00Z",
+      "2024-01-01T00:00:00Z",
+      "2024-12-31T00:00:00Z"
+    ],
+    "recipient_country_code": [
+      "LY"
+    ],
+    "reporting_org_narrative": [
+      "United Nations Population Fund"
+    ]
+  },
+  {
+    "sector_code": [
+      "11231",
+      "13010",
+      "13020",
+      "13030",
+      "13081",
+      "13096",
+      "15160",
+      "15170",
+      "15180",
+      "16062",
+      "72050",
+      "74020"
+    ],
+    "budget_value": [
+      0.0
+    ],
+    "iati_identifier": "XM-DAC-41119-TZ-O3-RT",
+    "title_narrative": [
+      "UNFPA Tanzania, United Republic of Expanded partnerships for impact activities"
+    ],
+    "reporting_org_ref": "XM-DAC-41119",
+    "transaction_value": [
+      0.0,
+      48.9
+    ],
+    "activity_date_type": [
+      "1",
+      "2",
+      "3"
+    ],
+    "activity_status_code": "2",
+    "description_narrative": [
+      "UNFPA Tanzania, United Republic of Expanded partnerships for impact activities",
+      "UNFPA Tanzania, United Republic of Expanded partnerships for impact activities"
+    ],
+    "activity_date_iso_date": [
+      "2024-01-01T00:00:00Z",
+      "2024-01-01T00:00:00Z",
+      "2024-12-31T00:00:00Z"
+    ],
+    "recipient_country_code": [
+      "TZ"
+    ],
+    "reporting_org_narrative": [
+      "United Nations Population Fund"
+    ]
+  },
+  {
+    "sector_code": [
+      "13010",
+      "13020",
+      "13030",
+      "13081",
+      "15160",
+      "15170",
+      "15180"
+    ],
+    "budget_value": [
+      0.0
+    ],
+    "iati_identifier": "XM-DAC-41119-PG-S2-RT",
+    "title_narrative": [
+      "UNFPA Papua New Guinea Quality of care and services activities"
+    ],
+    "reporting_org_ref": "XM-DAC-41119",
+    "transaction_value": [
+      0.0,
+      2234890.69
+    ],
+    "activity_date_type": [
+      "1",
+      "2",
+      "3"
+    ],
+    "activity_status_code": "2",
+    "description_narrative": [
+      "UNFPA Papua New Guinea Quality of care and services activities",
+      "UNFPA Papua New Guinea Quality of care and services activities"
+    ],
+    "activity_date_iso_date": [
+      "2024-01-01T00:00:00Z",
+      "2024-01-01T00:00:00Z",
+      "2024-12-31T00:00:00Z"
+    ],
+    "recipient_country_code": [
+      "PG"
+    ],
+    "reporting_org_narrative": [
+      "United Nations Population Fund"
+    ]
+  }
+]

@@ -1,0 +1,425 @@
+[
+  {
+    "iati_identifier": "CH-FDJP-CHE109994012-60123",
+    "transaction_value": [
+      19686.44
+    ],
+    "transaction_value_currency": [
+      "USD"
+    ]
+  },
+  {
+    "iati_identifier": "XM-DAC-21-1-2022002052B3STAB-RECHQ025",
+    "transaction_value": [
+      50000.0
+    ]
+  },
+  {
+    "iati_identifier": "XM-DAC-21-1-2022002059B3STAB-RECHQ025",
+    "transaction_value": [
+      300000.0
+    ]
+  },
+  {
+    "iati_identifier": "XM-DAC-21-1-2022002051B3STAB-RECHQ025",
+    "transaction_value": [
+      50000.0
+    ]
+  },
+  {
+    "iati_identifier": "XM-DAC-21-1-2016001961B3STABRECHQ022",
+    "transaction_value": [
+      250000.0
+    ]
+  },
+  {
+    "iati_identifier": "XM-DAC-21-1-2021002003B3STAB-RECHQ025SF022",
+    "transaction_value": [
+      400000.0
+    ]
+  },
+  {
+    "iati_identifier": "XM-DAC-21-1-2020990521B3STAB-RECHQ025",
+    "transaction_value": [
+      400000.0
+    ]
+  },
+  {
+    "iati_identifier": "XM-DAC-21-1-2023990396B3STAB-RECHQ025",
+    "transaction_value": [
+      300.0
+    ]
+  },
+  {
+    "iati_identifier": "XM-DAC-21-1-2023990398B3STAB-RECHQ025",
+    "transaction_value": [
+      50.0
+    ]
+  },
+  {
+    "iati_identifier": "XM-DAC-21-1-2023990397B3STAB-RECHQ025",
+    "transaction_value": [
+      50.0
+    ]
+  },
+  {
+    "iati_identifier": "XM-DAC-21-1-2023990396B3STAB-RECHQ025",
+    "transaction_value": [
+      300.0
+    ]
+  },
+  {
+    "iati_identifier": "XM-DAC-21-1-2023990397B3STAB-RECHQ025",
+    "transaction_value": [
+      50.0
+    ]
+  },
+  {
+    "iati_identifier": "XM-DAC-21-1-2023990398B3STAB-RECHQ025",
+    "transaction_value": [
+      50.0
+    ]
+  },
+  {
+    "iati_identifier": "US-EIN-52-5170039-DFID-SPE",
+    "transaction_value": [
+      90446.31
+    ],
+    "transaction_value_currency": [
+      "GBP"
+    ]
+  },
+  {
+    "iati_identifier": "US-EIN-52-5170039-DFID-SPE",
+    "transaction_value": [
+      114728.29
+    ],
+    "transaction_value_currency": [
+      "GBP"
+    ]
+  },
+  {
+    "iati_identifier": "US-EIN-52-5170039-DFID-SPE",
+    "transaction_value": [
+      70465.52
+    ],
+    "transaction_value_currency": [
+      "GBP"
+    ]
+  },
+  {
+    "iati_identifier": "US-EIN-52-5170039-DFID-SPE",
+    "transaction_value": [
+      92623.49
+    ],
+    "transaction_value_currency": [
+      "GBP"
+    ]
+  },
+  {
+    "iati_identifier": "US-EIN-52-5170039-DFID-SPE",
+    "transaction_value": [
+      46588.58
+    ],
+    "transaction_value_currency": [
+      "GBP"
+    ]
+  },
+  {
+    "iati_identifier": "US-EIN-52-5170039-DFID-SPE",
+    "transaction_value": [
+      61171.1
+    ],
+    "transaction_value_currency": [
+      "GBP"
+    ]
+  },
+  {
+    "iati_identifier": "US-EIN-52-5170039-DFID-SPE",
+    "transaction_value": [
+      13378.53
+    ],
+    "transaction_value_currency": [
+      "GBP"
+    ]
+  },
+  {
+    "iati_identifier": "US-EIN-52-5170039-DFID-SPE",
+    "transaction_value": [
+      60710.0
+    ],
+    "transaction_value_currency": [
+      "GBP"
+    ]
+  },
+  {
+    "iati_identifier": "US-EIN-52-5170039-DFID-SPE",
+    "transaction_value": [
+      99361.0
+    ],
+    "transaction_value_currency": [
+      "GBP"
+    ]
+  },
+  {
+    "iati_identifier": "US-EIN-52-5170039-DFID-SPE",
+    "transaction_value": [
+      106560.61
+    ],
+    "transaction_value_currency": [
+      "GBP"
+    ]
+  },
+  {
+    "iati_identifier": "US-EIN-52-5170039-DFID-SPE",
+    "transaction_value": [
+      87275.61
+    ],
+    "transaction_value_currency": [
+      "GBP"
+    ]
+  },
+  {
+    "iati_identifier": "US-EIN-52-5170039-DFID-SPE",
+    "transaction_value": [
+      76060.51
+    ],
+    "transaction_value_currency": [
+      "GBP"
+    ]
+  },
+  {
+    "iati_identifier": "XM-DAC-3-1-190789-31822",
+    "transaction_value": [
+      431858.0
+    ],
+    "transaction_value_currency": [
+      "DKK"
+    ]
+  },
+  {
+    "iati_identifier": "XM-DAC-3-1-190789-31822",
+    "transaction_value": [
+      260000.0
+    ],
+    "transaction_value_currency": [
+      "DKK"
+    ]
+  },
+  {
+    "iati_identifier": "XM-DAC-3-1-190789-31822",
+    "transaction_value": [
+      171858.0
+    ],
+    "transaction_value_currency": [
+      "DKK"
+    ]
+  },
+  {
+    "iati_identifier": "XM-DAC-3-1-285862-34296",
+    "transaction_value": [
+      7000000.0
+    ],
+    "transaction_value_currency": [
+      "DKK"
+    ]
+  },
+  {
+    "iati_identifier": "XM-DAC-3-1-285862-34296",
+    "transaction_value": [
+      1750000.0
+    ],
+    "transaction_value_currency": [
+      "DKK"
+    ]
+  },
+  {
+    "iati_identifier": "XM-DAC-3-1-285862-34296",
+    "transaction_value": [
+      2625000.0
+    ],
+    "transaction_value_currency": [
+      "DKK"
+    ]
+  },
+  {
+    "iati_identifier": "XM-DAC-3-1-285862-34296",
+    "transaction_value": [
+      -2625000.0
+    ],
+    "transaction_value_currency": [
+      "DKK"
+    ]
+  },
+  {
+    "iati_identifier": "XM-DAC-3-1-285862-34296",
+    "transaction_value": [
+      2625000.0
+    ],
+    "transaction_value_currency": [
+      "DKK"
+    ]
+  },
+  {
+    "iati_identifier": "XM-DAC-3-1-285862-34296",
+    "transaction_value": [
+      2625000.0
+    ],
+    "transaction_value_currency": [
+      "DKK"
+    ]
+  },
+  {
+    "iati_identifier": "XM-DAC-3-1-285862-36210",
+    "transaction_value": [
+      7000000.0
+    ],
+    "transaction_value_currency": [
+      "DKK"
+    ]
+  },
+  {
+    "iati_identifier": "XM-DAC-3-1-285862-36210",
+    "transaction_value": [
+      3500000.0
+    ],
+    "transaction_value_currency": [
+      "DKK"
+    ]
+  },
+  {
+    "iati_identifier": "XM-DAC-3-1-285862-36210",
+    "transaction_value": [
+      3500000.0
+    ],
+    "transaction_value_currency": [
+      "DKK"
+    ]
+  },
+  {
+    "iati_identifier": "XM-DAC-3-1-285862-37706",
+    "transaction_value": [
+      5000000.0
+    ],
+    "transaction_value_currency": [
+      "DKK"
+    ]
+  },
+  {
+    "iati_identifier": "XM-DAC-3-1-285862-37706",
+    "transaction_value": [
+      3500000.0
+    ],
+    "transaction_value_currency": [
+      "DKK"
+    ]
+  },
+  {
+    "iati_identifier": "XM-DAC-3-1-158693-21838",
+    "transaction_value": [
+      1160000.0
+    ],
+    "transaction_value_currency": [
+      "DKK"
+    ]
+  },
+  {
+    "iati_identifier": "XM-DAC-3-1-158693-21838",
+    "transaction_value": [
+      -688000.0
+    ],
+    "transaction_value_currency": [
+      "DKK"
+    ]
+  },
+  {
+    "iati_identifier": "XM-DAC-3-1-158693-21838",
+    "transaction_value": [
+      -4900.0
+    ],
+    "transaction_value_currency": [
+      "DKK"
+    ]
+  },
+  {
+    "iati_identifier": "XM-DAC-3-1-158693-21838",
+    "transaction_value": [
+      232000.0
+    ],
+    "transaction_value_currency": [
+      "DKK"
+    ]
+  },
+  {
+    "iati_identifier": "XM-DAC-3-1-158693-21838",
+    "transaction_value": [
+      232540.0
+    ],
+    "transaction_value_currency": [
+      "DKK"
+    ]
+  },
+  {
+    "iati_identifier": "XM-DAC-3-1-158693-21838",
+    "transaction_value": [
+      -68322.0
+    ],
+    "transaction_value_currency": [
+      "DKK"
+    ]
+  },
+  {
+    "iati_identifier": "XM-DAC-3-1-214259-27461",
+    "transaction_value": [
+      10500000.0
+    ],
+    "transaction_value_currency": [
+      "DKK"
+    ]
+  },
+  {
+    "iati_identifier": "XM-DAC-3-1-214259-27461",
+    "transaction_value": [
+      3500000.0
+    ],
+    "transaction_value_currency": [
+      "DKK"
+    ]
+  },
+  {
+    "iati_identifier": "XM-DAC-3-1-214259-27461",
+    "transaction_value": [
+      3500000.0
+    ],
+    "transaction_value_currency": [
+      "DKK"
+    ]
+  },
+  {
+    "iati_identifier": "XM-DAC-3-1-214259-27461",
+    "transaction_value": [
+      3500000.0
+    ],
+    "transaction_value_currency": [
+      "DKK"
+    ]
+  },
+  {
+    "iati_identifier": "XM-DAC-3-1-264356-31754",
+    "transaction_value": [
+      7000000.0
+    ],
+    "transaction_value_currency": [
+      "DKK"
+    ]
+  },
+  {
+    "iati_identifier": "XM-DAC-3-1-264356-31754",
+    "transaction_value": [
+      7000000.0
+    ],
+    "transaction_value_currency": [
+      "DKK"
+    ]
+  }
+]

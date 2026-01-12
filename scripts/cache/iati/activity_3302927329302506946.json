@@ -1,0 +1,1267 @@
+[
+  {
+    "sector_code": [
+      "72050"
+    ],
+    "budget_value": [
+      300000.0,
+      200000.0,
+      200000.0,
+      200000.0,
+      300000.0
+    ],
+    "iati_identifier": "NL-KVK-73728489-HEP-INSO-FCDO",
+    "title_narrative": [
+      "Humanitarian Enablers Programme"
+    ],
+    "reporting_org_ref": "NL-KVK-73728489",
+    "transaction_value": [
+      300000.0,
+      300000.0,
+      700000.0
+    ],
+    "activity_date_type": [
+      "2"
+    ],
+    "activity_status_code": "2",
+    "description_narrative": [
+      "INSO is a unique global humanitarian NGO established in 2011 and solely dedicated to enabling \r\nhumanitarian safety and access in high-risk contexts. INSO was born from a need to establish a \r\ncommunity resource and to promote good practice in the sector. The need for INSO field \r\noperations is self-identified by NGOs operating in each context. INSO makes its data and \r\nevidence-based findings available to registered partners and also uses them directly within its \r\nown public engagement to influence global discourse, systems and policies."
+    ],
+    "activity_date_iso_date": [
+      "2024-01-26T00:00:00Z"
+    ],
+    "reporting_org_narrative": [
+      "International NGO Safety Organisation"
+    ]
+  },
+  {
+    "sector_code": [
+      "72050"
+    ],
+    "budget_value": [
+      575000.0,
+      575000.0,
+      575000.0,
+      575000.0,
+      300000.0,
+      300000.0,
+      300000.0,
+      300000.0,
+      80000.0,
+      240000.0,
+      240000.0,
+      240000.0,
+      286666.0,
+      286666.0,
+      286666.0,
+      300000.0,
+      375000.0,
+      375000.0,
+      375000.0,
+      375000.0
+    ],
+    "iati_identifier": "NL-KVK-73728489-FCDO-INSO-SHL",
+    "title_narrative": [
+      "Delivery of safety cooperation and services to NGOs in Mali, Burkina Faso and Niger"
+    ],
+    "reporting_org_ref": "NL-KVK-73728489",
+    "transaction_value": [
+      220000.0,
+      800000.0,
+      300000.0,
+      300000.0,
+      300000.0,
+      100000.0,
+      200000.0,
+      290000.0,
+      330000.0,
+      950000.0,
+      3500000.0,
+      1000000.0,
+      1220000.0,
+      900000.0
+    ],
+    "activity_date_type": [
+      "2",
+      "3"
+    ],
+    "activity_status_code": "2",
+    "description_narrative": [
+      "Support to NGO safety coordination platforms in the Sahel region, to provide essential services and training to Sahel based NGOs, including high-quality, real time information and analyses on the security context in the Sahel, and sharing and coordinating this information with the NGO community to improve collective security and access."
+    ],
+    "activity_date_iso_date": [
+      "2021-05-20T00:00:00Z",
+      "2028-03-30T00:00:00Z"
+    ],
+    "reporting_org_narrative": [
+      "International NGO Safety Organisation"
+    ]
+  },
+  {
+    "sector_code": [
+      "72050"
+    ],
+    "budget_value": [
+      36000.0,
+      108000.0,
+      106000.0,
+      78000.0,
+      78000.0,
+      78000.0,
+      76000.0,
+      305232.0,
+      423256.0,
+      333721.0,
+      309301.0,
+      141825.0,
+      137472.0,
+      137860.0,
+      157842.0
+    ],
+    "iati_identifier": "NL-KVK-73728489-INSO-FCDO-MOZ-2024",
+    "title_narrative": [
+      "Improved protection of relief personnel and improved  effectiveness of humanitarian action Mozambique"
+    ],
+    "reporting_org_ref": "NL-KVK-73728489",
+    "transaction_value": [
+      62460.0,
+      60000.0,
+      127540.0,
+      77500.0,
+      77500.0,
+      79916.0,
+      75084.0,
+      186213.0,
+      103519.0,
+      235267.0,
+      141825.0,
+      133977.0,
+      870000.0,
+      500000.0,
+      289732.8,
+      810267.0
+    ],
+    "activity_date_type": [
+      "2"
+    ],
+    "activity_status_code": "2",
+    "description_narrative": [
+      "Humanitarian organisations in Mozambique have access to timely, \nreliable, and high-quality safety services that help them plan, operate, \nand deliver aid more safely. \nResult 1: Information, Analysis and Advice – NGOs are provided with \nobjective, credible, reliable, and high-quality security information \nanalysis, and advice in a timely and appropriate manner.\nResult 2: Security Management, Preparedness and Capacity \nDevelopment – NGOs are supported in developing their security and \ncrisis management preparedness and capacity through direct support \nand training.",
+      "Humanitarian organisations in Mozambique have access to timely, \nreliable, and high-quality safety services that help them plan, operate, \nand deliver aid more safely. \nResult 1: Information, Analysis and Advice – NGOs are provided with \nobjective, credible, reliable, and high-quality security information \nanalysis, and advice in a timely and appropriate manner.\nResult 2: Security Management, Preparedness and Capacity \nDevelopment – NGOs are supported in developing their security and \ncrisis management preparedness and capacity through direct support \nand training."
+    ],
+    "activity_date_iso_date": [
+      "2022-08-08T00:00:00Z"
+    ],
+    "recipient_country_code": [
+      "MZ"
+    ],
+    "reporting_org_narrative": [
+      "International NGO Safety Organisation"
+    ]
+  },
+  {
+    "sector_code": [
+      "72050"
+    ],
+    "budget_value": [
+      1000000.0
+    ],
+    "iati_identifier": "NL-KVK-73728489-INSO-HQ-MBZ-2024-2027",
+    "title_narrative": [
+      "Strengthening Humanitarian Safety III"
+    ],
+    "sector_narrative": [
+      "INSO provides a range of support services to non-profit humanitarian organisations including crisis support and coordination, capacity building, training information management, analysis advice, etc."
+    ],
+    "reporting_org_ref": "NL-KVK-73728489",
+    "transaction_value": [
+      888888.67,
+      1000000.0
+    ],
+    "activity_date_type": [
+      "2"
+    ],
+    "activity_status_code": "2",
+    "description_narrative": [
+      "A 45-month project with a budget of 5.000.000 EUR from the Ministry of Foreign Affairs of the Netherlands for the project titled 'Supporting Humanitarian Safety III' under Policy Objective 1 of the programme grant 'Strengthening the Humanitarian Sector 2024-2027': More effective application of humanitarian principles and international humanitarian law, enabling more humanitarian responders to do their work safely and access populations in need. To contribute to this policy objective, INSO will i) provide access to adaptive NGO safety and access platforms via field-based, remote and mobile interventions, ii) establish a common operating picture by expanding the Conflict and Humanitarian Data Centre's coverage and its application, iii) develop operational advocacy, research and coordination."
+    ],
+    "activity_date_iso_date": [
+      "2024-01-01T00:00:00Z"
+    ],
+    "reporting_org_narrative": [
+      "International NGO Safety Organisation"
+    ]
+  },
+  {
+    "sector_code": [
+      "72050"
+    ],
+    "budget_value": [
+      150000.0,
+      442499.0,
+      57500.0,
+      57500.0,
+      57903.0,
+      255404.0,
+      174999.0,
+      125000.0,
+      125000.0,
+      225000.0,
+      125000.0
+    ],
+    "iati_identifier": "NL-KVK-73728489-INSO-FCDO-NGA",
+    "title_narrative": [
+      "INSO - Provision of security information and management to NGOs - II"
+    ],
+    "reporting_org_ref": "NL-KVK-73728489",
+    "transaction_value": [
+      75000.0,
+      75000.0,
+      150000.0,
+      119596.0,
+      255404.0,
+      175000.0,
+      125000.0,
+      150000.0,
+      75000.0,
+      825000.0,
+      375000.0
+    ],
+    "activity_date_type": [
+      "2",
+      "3"
+    ],
+    "activity_status_code": "2",
+    "description_narrative": [
+      "INSO provides safety, coordination, information, analysis, and training services to humanitarian NGOs in Nigeria."
+    ],
+    "activity_date_iso_date": [
+      "2022-07-13T00:00:00Z",
+      "2025-03-31T00:00:00Z"
+    ],
+    "recipient_country_code": [
+      "NG"
+    ],
+    "reporting_org_narrative": [
+      "International NGO Safety Organisation"
+    ]
+  },
+  {
+    "sector_code": [
+      "72050"
+    ],
+    "budget_value": [
+      5000000.0
+    ],
+    "iati_identifier": "NL-KVK-73728489-INSO-SIDA-SHS-2024",
+    "title_narrative": [
+      "Supporting Humanitarian Safety INSO-SIDA"
+    ],
+    "sector_narrative": [
+      "INSO provides free safety and security services to NGOs working for the benefit of the world’s most vulnerable people. This includes analysis and reporting, training, crisis coordination, safety and security alerts."
+    ],
+    "reporting_org_ref": "NL-KVK-73728489",
+    "transaction_value": [
+      5000000.0,
+      5000000.0
+    ],
+    "activity_date_type": [
+      "2"
+    ],
+    "activity_status_code": "2",
+    "description_narrative": [
+      "The overall objectives of the Core Activities are:  \r\n\r\na) the relief and development of people in need anywhere in the world who are the victims of conflict, natural disaster, insecurity or crisis. \r\n\r\nb) the welfare and safety of people involved in the provision of humanitarian and development aid anywhere in the world.  \r\n\r\nThese objectives will be accomplished by:  a) providing dedicated safety & security services to organisations working to achieve the relief and development of people in need. b) promoting and facilitating a wider understanding of conflict and its impact on humanitarian and development safety. This mandates supporting activities such as policy support, advocacy, research and communications."
+    ],
+    "activity_date_iso_date": [
+      "2024-09-15T00:00:00Z"
+    ],
+    "reporting_org_narrative": [
+      "International NGO Safety Organisation"
+    ]
+  },
+  {
+    "sector_code": [
+      "15210",
+      "152",
+      "17.16"
+    ],
+    "budget_value": [
+      3000000.0,
+      2000000.0
+    ],
+    "iati_identifier": "XM-DAC-3-1-289393-37577",
+    "title_narrative": [
+      "International NGO Safety Organisation - Improving NGOs’ Security Management Practices and Supporting Humanitarian Access Coordination in the DRC"
+    ],
+    "sector_narrative": [
+      "Security system management and reform",
+      "Conflict, Peace & Security",
+      "17.16"
+    ],
+    "reporting_org_ref": "XM-DAC-3-1",
+    "transaction_value": [
+      5000000.0,
+      3000000.0,
+      2000000.0
+    ],
+    "activity_date_type": [
+      "2",
+      "1",
+      "3"
+    ],
+    "activity_status_code": "2",
+    "description_narrative": [
+      "Humanitarian and development aid organisations are assisted in fulfilling their own mandates through the provision of essential safety cooperation, information, and support services."
+    ],
+    "activity_date_iso_date": [
+      "2025-09-02T00:00:00Z",
+      "2025-04-01T00:00:00Z",
+      "2026-12-31T00:00:00Z"
+    ],
+    "recipient_country_code": [
+      "CD"
+    ],
+    "reporting_org_narrative": [
+      "Ministry of Foreign Affairs, Denmark"
+    ]
+  },
+  {
+    "sector_code": [
+      "72050"
+    ],
+    "budget_value": [
+      280263.0,
+      538363.0,
+      559999.0,
+      594999.0,
+      460003.0
+    ],
+    "iati_identifier": "GB-GOV-1-300719-110",
+    "title_narrative": [
+      "Delivery of safety cooperation and services to NGOs in Mali, Burkina Faso and Niger"
+    ],
+    "sector_narrative": [
+      "Relief co-ordination and support services"
+    ],
+    "reporting_org_ref": "GB-GOV-1",
+    "transaction_value": [
+      2433628.0,
+      280263.53,
+      558090.29,
+      524422.69,
+      433714.76,
+      637136.73
+    ],
+    "activity_date_type": [
+      "1",
+      "2",
+      "3",
+      "4"
+    ],
+    "activity_status_code": "4",
+    "description_narrative": [
+      "This activity Delivery of safety cooperation and services to NGOs in Mali, Burkina Faso and Niger is a component of Sahel Humanitarian Emergency Response Programme  reported by FCDO with a funding type of 111 - Not for profit organisation and a budget of £2,433,627. This project benefits South of Sahara, regional. It works in the following sector(s): Relief co-ordination and support services."
+    ],
+    "activity_date_iso_date": [
+      "2020-07-29T00:00:00Z",
+      "2020-07-29T00:00:00Z",
+      "2022-06-30T00:00:00Z",
+      "2024-12-31T00:00:00Z"
+    ],
+    "reporting_org_narrative": [
+      "UK - Foreign, Commonwealth Development Office (FCDO)"
+    ]
+  },
+  {
+    "sector_code": [
+      "72010"
+    ],
+    "budget_value": [
+      100000.0,
+      0.0,
+      0.0,
+      0.0,
+      400000.0,
+      0.0,
+      200000.0,
+      0.0,
+      275000.0,
+      150163.0,
+      0.0,
+      0.0,
+      0.0,
+      -163.0
+    ],
+    "iati_identifier": "GB-1-205255-103",
+    "title_narrative": [
+      "Humanitarian Global Services (HGS) - support to International NGO Safety Organisation (INSO)"
+    ],
+    "sector_narrative": [
+      "Material relief assistance and services"
+    ],
+    "reporting_org_ref": "GB-GOV-1",
+    "transaction_value": [
+      1125000.0,
+      100000.0,
+      200000.0,
+      200000.0,
+      136416.0,
+      338584.0,
+      85227.75,
+      64772.25
+    ],
+    "activity_date_type": [
+      "1",
+      "2",
+      "3",
+      "4"
+    ],
+    "activity_status_code": "4",
+    "description_narrative": [
+      "This activity Humanitarian Global Services (HGS) - support to International NGO Safety Organisation (INSO) is a component of Humanitarian Global Services reported by FCDO with a funding type of 111 - Not for profit organisation and a budget of £1,125,000. This project benefits Developing countries, unspecified. It works in the following sector(s): Material relief assistance and services."
+    ],
+    "activity_date_iso_date": [
+      "2018-10-11T00:00:00Z",
+      "2018-10-11T00:00:00Z",
+      "2021-11-02T00:00:00Z",
+      "2024-07-31T00:00:00Z"
+    ],
+    "reporting_org_narrative": [
+      "UK - Foreign, Commonwealth Development Office (FCDO)"
+    ]
+  },
+  {
+    "sector_code": [
+      "72050"
+    ],
+    "budget_value": [
+      575000.0,
+      575000.0,
+      575000.0,
+      575000.0,
+      300000.0,
+      300000.0,
+      300000.0,
+      300000.0,
+      90000.0,
+      270000.0,
+      270000.0,
+      270000.0,
+      286666.0,
+      286666.0,
+      286666.0,
+      300000.0,
+      350000.0,
+      350000.0,
+      350000.0,
+      350000.0
+    ],
+    "iati_identifier": "GB-GOV-1-300943-102",
+    "title_narrative": [
+      "Delivery of safety cooperation and services to NGOs in Mali, Burkina Faso and Niger"
+    ],
+    "sector_narrative": [
+      "Relief co-ordination and support services"
+    ],
+    "reporting_org_ref": "GB-GOV-1",
+    "transaction_value": [
+      3500000.0,
+      330000.0,
+      950000.0,
+      1000000.0,
+      1220000.0,
+      220000.0,
+      800000.0,
+      300000.0,
+      300000.0,
+      300000.0,
+      200000.0,
+      100000.0,
+      900000.0,
+      290000.0
+    ],
+    "activity_date_type": [
+      "1",
+      "2",
+      "3"
+    ],
+    "activity_status_code": "2",
+    "description_narrative": [
+      "Support to NGO safety coordination platforms in the Sahel region, to provide essential services and training to Sahel based NGOs, including high-quality, real time information and analyses on the security context in the Sahel, and sharing and coordinating this information with the NGO community to improve collective security and access."
+    ],
+    "activity_date_iso_date": [
+      "2021-11-01T00:00:00Z",
+      "2021-05-20T00:00:00Z",
+      "2028-03-30T00:00:00Z"
+    ],
+    "reporting_org_narrative": [
+      "UK - Foreign, Commonwealth Development Office (FCDO)"
+    ]
+  },
+  {
+    "sector_code": [
+      "72050",
+      "74010"
+    ],
+    "budget_value": [
+      77228.0,
+      47772.0,
+      62500.0,
+      93750.0,
+      93750.0,
+      93750.0,
+      153969.0,
+      33531.0,
+      93750.0,
+      293750.0,
+      93750.0,
+      50000.0,
+      250000.0,
+      62500.0
+    ],
+    "iati_identifier": "GB-GOV-1-300978-403",
+    "title_narrative": [
+      "International NGO Safety Organization"
+    ],
+    "sector_narrative": [
+      "Relief co-ordination and support services",
+      "Disaster prevention and preparedness"
+    ],
+    "reporting_org_ref": "GB-GOV-1",
+    "transaction_value": [
+      1500000.0,
+      77228.0,
+      47772.0,
+      62500.0,
+      93750.0,
+      93750.0,
+      93750.0,
+      153969.0,
+      33531.0,
+      93750.0
+    ],
+    "activity_date_type": [
+      "1",
+      "2",
+      "3"
+    ],
+    "activity_status_code": "2",
+    "description_narrative": [
+      "To assist humanitarian and non-profit organizations in fulfilling their mandates though the provision of essential security coordination and information services that help to understand the operating environment and reduce the risks confronting their staff and operations."
+    ],
+    "activity_date_iso_date": [
+      "2023-05-22T00:00:00Z",
+      "2023-05-22T00:00:00Z",
+      "2028-05-31T00:00:00Z"
+    ],
+    "recipient_country_code": [
+      "SO"
+    ],
+    "reporting_org_narrative": [
+      "UK - Foreign, Commonwealth Development Office (FCDO)"
+    ]
+  },
+  {
+    "sector_code": [
+      "72050"
+    ],
+    "budget_value": [
+      150000.0,
+      0.0,
+      442499.0,
+      -57500.0,
+      -57500.0,
+      -57903.0,
+      0.0,
+      255404.0,
+      0.0,
+      174999.0,
+      125000.0,
+      68000.0,
+      125000.0,
+      125000.0
+    ],
+    "iati_identifier": "GB-GOV-1-301362-106",
+    "title_narrative": [
+      "INSO - Provision of security information and management to NGOs - II"
+    ],
+    "sector_narrative": [
+      "Relief co-ordination and support services"
+    ],
+    "reporting_org_ref": "GB-GOV-1",
+    "transaction_value": [
+      150000.0,
+      75000.0,
+      75000.0,
+      75000.0,
+      825000.0,
+      150000.0,
+      119596.0,
+      255404.0,
+      175000.0,
+      125000.0,
+      375000.0,
+      68000.0
+    ],
+    "activity_date_type": [
+      "1",
+      "2",
+      "3"
+    ],
+    "activity_status_code": "2",
+    "description_narrative": [
+      "This activity INSO - Provision of security information and management to NGOs - II\n is a component of Humanitarian Assistance and Resilience Programme ( HARP) reported by FCDO with a funding type of 111 - Not for profit organisation and a budget of £1,292,999. It works in the following sector(s): Relief co-ordination and support services."
+    ],
+    "activity_date_iso_date": [
+      "2022-10-01T00:00:00Z",
+      "2022-07-13T00:00:00Z",
+      "2025-03-31T00:00:00Z"
+    ],
+    "recipient_country_code": [
+      "NG"
+    ],
+    "reporting_org_narrative": [
+      "UK - Foreign, Commonwealth Development Office (FCDO)"
+    ]
+  },
+  {
+    "sector_code": [
+      "15190"
+    ],
+    "budget_value": [
+      36000.0,
+      108000.0,
+      106000.0,
+      78000.0,
+      78000.0,
+      78000.0,
+      76000.0,
+      305232.0,
+      -423256.0,
+      333721.0,
+      309301.0,
+      141825.0,
+      137472.0,
+      137860.0,
+      157842.0
+    ],
+    "iati_identifier": "GB-GOV-1-301363-104",
+    "title_narrative": [
+      "INSO - Improvement of Protection of Relief Personnel and Improved Effectiveness of Humanitarian Action"
+    ],
+    "sector_narrative": [
+      "Facilitation of orderly, safe, regular and responsible migration and mobility"
+    ],
+    "reporting_org_ref": "GB-GOV-1",
+    "transaction_value": [
+      870000.0,
+      60000.0,
+      500000.0,
+      62460.0,
+      127540.0,
+      77500.0,
+      77500.0,
+      79916.0,
+      75084.0,
+      289732.8,
+      186213.0,
+      103519.0,
+      511069.2,
+      235267.0,
+      141825.0,
+      133977.0,
+      299198.0
+    ],
+    "activity_date_type": [
+      "1",
+      "2",
+      "3"
+    ],
+    "activity_status_code": "2",
+    "description_narrative": [
+      "INSO provide Humanitarian organisations in Mozambique access to timely, reliable, and high-quality safety services that help them plan, operate, and deliver aid more safely. This includes (1) information, analysis and advice; and (2) security management, preparedness and capacity development."
+    ],
+    "activity_date_iso_date": [
+      "2022-08-09T00:00:00Z",
+      "2022-06-28T00:00:00Z",
+      "2027-03-31T00:00:00Z"
+    ],
+    "recipient_country_code": [
+      "MZ"
+    ],
+    "reporting_org_narrative": [
+      "UK - Foreign, Commonwealth Development Office (FCDO)"
+    ]
+  },
+  {
+    "sector_code": [
+      "72050"
+    ],
+    "budget_value": [
+      200000.0,
+      -50000.0,
+      -75000.0,
+      -75000.0,
+      525000.0,
+      -75000.0,
+      -75000.0,
+      -75000.0,
+      99999.0,
+      99999.0,
+      99999.0,
+      699999.0,
+      400000.0,
+      0.0,
+      400000.0,
+      0.0
+    ],
+    "iati_identifier": "GB-GOV-1-301072-102",
+    "title_narrative": [
+      "Support to INSO (Protect workstream)"
+    ],
+    "sector_narrative": [
+      "Relief co-ordination and support services"
+    ],
+    "reporting_org_ref": "GB-GOV-1",
+    "transaction_value": [
+      1300000.0,
+      300000.0,
+      300000.0,
+      700000.0,
+      800000.0
+    ],
+    "activity_date_type": [
+      "1",
+      "2",
+      "3"
+    ],
+    "activity_status_code": "2",
+    "description_narrative": [
+      "A civil society organisation will be selected through a call for proposals, to deliver against the \"Protect\" Pillar of the Humanitarian Strategic Framework, under the HEP programme. The aim will be to enable the protection of the people most at risk in conflict and crises, including women and girls."
+    ],
+    "activity_date_iso_date": [
+      "2022-08-24T00:00:00Z",
+      "2022-08-24T00:00:00Z",
+      "2025-07-31T00:00:00Z"
+    ],
+    "reporting_org_narrative": [
+      "UK - Foreign, Commonwealth Development Office (FCDO)"
+    ]
+  },
+  {
+    "sector_code": [
+      "15210"
+    ],
+    "budget_value": [
+      90000.0,
+      90000.0,
+      70000.0,
+      62500.0,
+      93750.0,
+      93750.0,
+      183457.0,
+      181500.0,
+      0.0,
+      179542.0,
+      0.0,
+      181500.0,
+      181500.0,
+      0.0,
+      181500.0,
+      0.0
+    ],
+    "iati_identifier": "GB-GOV-1-300432-108",
+    "title_narrative": [
+      "INSO - Provision of security information and management to NGOs"
+    ],
+    "sector_narrative": [
+      "Security system management and reform"
+    ],
+    "reporting_org_ref": "GB-GOV-1",
+    "transaction_value": [
+      500000.0,
+      131303.0,
+      118697.0,
+      62500.0,
+      187500.0,
+      0.0,
+      1089000.0,
+      181500.0,
+      181500.0,
+      181500.0,
+      -1957.13,
+      181500.0,
+      181500.0,
+      181500.0
+    ],
+    "activity_date_type": [
+      "1",
+      "2",
+      "3",
+      "4"
+    ],
+    "activity_status_code": "4",
+    "description_narrative": [
+      "This activity INSO - Provision of security information and management to NGOs is a component of North East Nigeria Transition to Development Programme reported by FCDO with a funding type of 111 - Not for profit organisation and a budget of £1,588,999. It works in the following sector(s): Security system management and reform."
+    ],
+    "activity_date_iso_date": [
+      "2017-05-12T00:00:00Z",
+      "2017-05-12T00:00:00Z",
+      "2022-04-30T00:00:00Z",
+      "2024-01-29T00:00:00Z"
+    ],
+    "recipient_country_code": [
+      "NG"
+    ],
+    "reporting_org_narrative": [
+      "UK - Foreign, Commonwealth Development Office (FCDO)"
+    ]
+  },
+  {
+    "sector_code": [
+      "72050",
+      "74010"
+    ],
+    "budget_value": [
+      90000.0,
+      80000.0,
+      80000.0,
+      0.0,
+      125000.0,
+      125000.0,
+      0.0,
+      62500.0,
+      62500.0,
+      62500.0,
+      62500.0,
+      125000.0,
+      62500.0,
+      62500.0,
+      62499.0,
+      62501.0
+    ],
+    "iati_identifier": "GB-1-205128-106",
+    "title_narrative": [
+      "NGO Safety Programme- Provision of Security Information to NGO's"
+    ],
+    "sector_narrative": [
+      "Relief co-ordination and support services",
+      "Disaster prevention and preparedness"
+    ],
+    "reporting_org_ref": "GB-GOV-1",
+    "transaction_value": [
+      250000.0,
+      108000.0,
+      79500.0,
+      62500.0,
+      875000.0,
+      125000.0,
+      62500.0,
+      62500.0,
+      62500.0,
+      62500.0,
+      62500.0,
+      62500.0,
+      125000.0,
+      62500.0,
+      62500.0,
+      62500.0,
+      62500.0
+    ],
+    "activity_date_type": [
+      "1",
+      "2",
+      "3",
+      "4"
+    ],
+    "activity_status_code": "4",
+    "description_narrative": [
+      "This activity NGO Safety Programme- Provision of Security Information to NGO's  is a component of Somalia Humanitarian and Resilience Programme (SHARP) 2018-2022 reported by FCDO with a funding type of 111 - Not for profit organisation and a budget of £1,125,000. It works in the following sector(s): Relief co-ordination and support services, Disaster prevention and preparedness."
+    ],
+    "activity_date_iso_date": [
+      "2018-01-01T00:00:00Z",
+      "2017-08-16T00:00:00Z",
+      "2022-09-30T00:00:00Z",
+      "2025-06-30T00:00:00Z"
+    ],
+    "recipient_country_code": [
+      "SO"
+    ],
+    "reporting_org_narrative": [
+      "UK - Foreign, Commonwealth Development Office (FCDO)"
+    ]
+  },
+  {
+    "sector_code": [
+      "72050",
+      "72010"
+    ],
+    "iati_identifier": "GB-GOV-1-301072",
+    "title_narrative": [
+      "Humanitarian Enablers Programme (HEP)"
+    ],
+    "sector_narrative": [
+      "Relief co-ordination and support services",
+      "Material relief assistance and services"
+    ],
+    "reporting_org_ref": "GB-GOV-1",
+    "activity_date_type": [
+      "1",
+      "2",
+      "3"
+    ],
+    "activity_status_code": "2",
+    "description_narrative": [
+      "The programme will contribute to making humanitarian responses by FCDO and the international humanitarian system more effective as a core priority of the UK Government’s International Development Strategy (IDS). It will support specialised enabling services which are aligned to the three priorities of the Humanitarian Framework: independent data collection and analysis (prioritise); contributing to improved access and inclusion of vulnerable groups (protect); and strengthening early warning and risk management (prevent). The programme will deploy enabling services in rapid onset and protracted crises; complementing and informing the FCDO’s response and providing “global public goods” that multiply the impact of others."
+    ],
+    "activity_date_iso_date": [
+      "2022-08-01T00:00:00Z",
+      "2022-08-05T00:00:00Z",
+      "2026-07-31T00:00:00Z"
+    ],
+    "reporting_org_narrative": [
+      "UK - Foreign, Commonwealth Development Office (FCDO)"
+    ]
+  },
+  {
+    "sector_code": [
+      "72010",
+      "72050",
+      "72040",
+      "43082"
+    ],
+    "iati_identifier": "GB-GOV-1-300719",
+    "title_narrative": [
+      "Sahel Humanitarian Emergency Response Programme"
+    ],
+    "sector_narrative": [
+      "Material relief assistance and services",
+      "Relief co-ordination and support services",
+      "Emergency food assistance",
+      "Research/scientific institutions"
+    ],
+    "reporting_org_ref": "GB-GOV-1",
+    "activity_date_type": [
+      "1",
+      "2",
+      "3",
+      "4"
+    ],
+    "activity_status_code": "4",
+    "description_narrative": [
+      "To provide life-saving assistance to around six million crisis-affected and vulnerable people across five Sahelian countries, Mali, Niger, Chad, Mauritania and Burkina Faso. This support includes food and cash assistance for those suffering from food insecurity, therapeutic food and early detection of severe acute malnutrition, basic support to livelihoods through the provision of seeds and tools, animal food and animal vaccinations, improved access to safe water and hygiene, and emergency health and medicine. Research will be commissioned to build the evidence base for integrated nutrition assistance and to improve the understanding of required nutritional interventions in the Sahel."
+    ],
+    "activity_date_iso_date": [
+      "2018-11-12T00:00:00Z",
+      "2018-12-10T00:00:00Z",
+      "2023-03-31T00:00:00Z",
+      "2023-06-28T00:00:00Z"
+    ],
+    "recipient_country_code": [
+      "TD"
+    ],
+    "reporting_org_narrative": [
+      "UK - Foreign, Commonwealth Development Office (FCDO)"
+    ]
+  },
+  {
+    "sector_code": [
+      "72010"
+    ],
+    "iati_identifier": "GB-1-205255",
+    "title_narrative": [
+      "Humanitarian Global Services"
+    ],
+    "sector_narrative": [
+      "Material relief assistance and services"
+    ],
+    "reporting_org_ref": "GB-GOV-1",
+    "activity_date_type": [
+      "1",
+      "2",
+      "3",
+      "4"
+    ],
+    "activity_status_code": "4",
+    "description_narrative": [
+      "This programme will provide funding to a small number of leading international response organisations in the fields of safety, security, early warning, advice and risk analysis. This network of specialists provide global public goods which improve the overall effectiveness of humanitarian response to both rapid and slow onset humanitarian crises."
+    ],
+    "activity_date_iso_date": [
+      "2016-09-01T00:00:00Z",
+      "2018-06-05T00:00:00Z",
+      "2022-07-31T00:00:00Z",
+      "2023-01-17T00:00:00Z"
+    ],
+    "reporting_org_narrative": [
+      "UK - Foreign, Commonwealth Development Office (FCDO)"
+    ]
+  },
+  {
+    "sector_code": [
+      "15190",
+      "72010",
+      "72040",
+      "74010"
+    ],
+    "iati_identifier": "GB-GOV-1-301363",
+    "title_narrative": [
+      "Mozambique Humanitarian Response Programme  2022-2027"
+    ],
+    "sector_narrative": [
+      "Facilitation of orderly, safe, regular and responsible migration and mobility",
+      "Material relief assistance and services",
+      "Emergency food assistance",
+      "Disaster prevention and preparedness"
+    ],
+    "reporting_org_ref": "GB-GOV-1",
+    "activity_date_type": [
+      "1",
+      "2",
+      "3"
+    ],
+    "activity_status_code": "2",
+    "description_narrative": [
+      "To provide lifesaving assistance to people in Mozambique affected by conflict and by climate disasters.  MHRP is based on evidence of need and gaps across the humanitarian sector.  It will reach 350,000 people with interventions in food security, nutrition, and protection.  Additionally, MHRP will reach 100,000 people each year with prepositioning of emergency stocks to respond to climatic events."
+    ],
+    "activity_date_iso_date": [
+      "2022-03-01T00:00:00Z",
+      "2022-02-25T00:00:00Z",
+      "2027-05-31T00:00:00Z"
+    ],
+    "recipient_country_code": [
+      "MZ"
+    ],
+    "reporting_org_narrative": [
+      "UK - Foreign, Commonwealth Development Office (FCDO)"
+    ]
+  },
+  {
+    "sector_code": [
+      "72050",
+      "43082",
+      "52010",
+      "16010",
+      "12240",
+      "15180",
+      "13020",
+      "15190",
+      "15170"
+    ],
+    "iati_identifier": "GB-GOV-1-301362",
+    "title_narrative": [
+      "Humanitarian Assistance and Resilience Programme ( HARP)"
+    ],
+    "sector_narrative": [
+      "Relief co-ordination and support services",
+      "Research/scientific institutions",
+      "Food assistance",
+      "Social Protection",
+      "Basic nutrition",
+      "Ending violence against women and girls",
+      "Reproductive health care",
+      "Facilitation of orderly, safe, regular and responsible migration and mobility",
+      "Women's rights organisations and movements, and government institutions"
+    ],
+    "reporting_org_ref": "GB-GOV-1",
+    "activity_date_type": [
+      "1",
+      "2",
+      "3"
+    ],
+    "activity_status_code": "2",
+    "description_narrative": [
+      "In line with the G7 Famine Prevention Compact, Nigeria’s Humanitarian and Resilience Programme (HARP) will provide life-saving support to the most vulnerable and strengthen resilience, opening pathways to livelihoods. HARP will enhance overall effectiveness of the UN-led humanitarian response, including a focus on building Nigerian ownership."
+    ],
+    "activity_date_iso_date": [
+      "2022-04-01T00:00:00Z",
+      "2022-09-26T00:00:00Z",
+      "2027-09-30T00:00:00Z"
+    ],
+    "recipient_country_code": [
+      "NG"
+    ],
+    "reporting_org_narrative": [
+      "UK - Foreign, Commonwealth Development Office (FCDO)"
+    ]
+  },
+  {
+    "sector_code": [
+      "72050",
+      "72010"
+    ],
+    "iati_identifier": "GB-GOV-1-300943",
+    "title_narrative": [
+      "Sahel Humanitarian Assistance and Protection Programme 2021-2028"
+    ],
+    "sector_narrative": [
+      "Relief co-ordination and support services",
+      "Material relief assistance and services"
+    ],
+    "reporting_org_ref": "GB-GOV-1",
+    "activity_date_type": [
+      "1",
+      "2",
+      "3"
+    ],
+    "activity_status_code": "2",
+    "description_narrative": [
+      "The SHAPP will provide assistance and protection for the most vulnerable in geographic hotspots of most acute need in the Sahel. Hotspots are found across the region where consequences of conflict, including violations of international humanitarian and human rights law, are making pre-existing food insecurity and malnutrition worse. The SHAPP will address as many basic needs as possible of the most vulnerable including child protection, support to victims or survivors of gender based violence, food, nutrition, water and sanitation. Human rights and international humanitarian law will remain at the centre of the new programme by informing and driving SHAPP design and priorities."
+    ],
+    "activity_date_iso_date": [
+      "2021-11-25T00:00:00Z",
+      "2021-12-15T00:00:00Z",
+      "2028-09-30T00:00:00Z"
+    ],
+    "recipient_country_code": [
+      "TD"
+    ],
+    "reporting_org_narrative": [
+      "UK - Foreign, Commonwealth Development Office (FCDO)"
+    ]
+  },
+  {
+    "sector_code": [
+      "72010",
+      "43082",
+      "15210",
+      "72040",
+      "72050",
+      "73010",
+      "74010",
+      "15220"
+    ],
+    "iati_identifier": "GB-GOV-1-300432",
+    "title_narrative": [
+      "North East Nigeria Transition to Development Programme"
+    ],
+    "sector_narrative": [
+      "Material relief assistance and services",
+      "Research/scientific institutions",
+      "Security system management and reform",
+      "Emergency food assistance",
+      "Relief co-ordination and support services",
+      "Immediate post-emergency reconstruction and rehabilitation",
+      "Disaster prevention and preparedness",
+      "Civilian peace-building, conflict prevention and resolution"
+    ],
+    "reporting_org_ref": "GB-GOV-1",
+    "activity_date_type": [
+      "1",
+      "2",
+      "3",
+      "4"
+    ],
+    "activity_status_code": "4",
+    "description_narrative": [
+      "To deliver an effective response to the basic needs of vulnerable people impacted by the crisis in the North East of Nigeria. The programme will deliver humanitarian assistance in nutrition and food security; protection and Education in Emergencies; multi-sector support including health, water, shelter and livelihoods interventions; as well as enabling a more efficient response to the crisis, including strengthened government planning, budgeting and coordination; and risk management."
+    ],
+    "activity_date_iso_date": [
+      "2017-05-01T00:00:00Z",
+      "2017-04-27T00:00:00Z",
+      "2022-04-30T00:00:00Z",
+      "2022-07-29T00:00:00Z"
+    ],
+    "recipient_country_code": [
+      "NG"
+    ],
+    "reporting_org_narrative": [
+      "UK - Foreign, Commonwealth Development Office (FCDO)"
+    ]
+  },
+  {
+    "sector_code": [
+      "72010",
+      "72050",
+      "72040",
+      "73010",
+      "74010",
+      "41050",
+      "16010",
+      "12250",
+      "12110",
+      "52010"
+    ],
+    "iati_identifier": "GB-GOV-1-300978",
+    "title_narrative": [
+      "Humanitarian Assistance and Resilience Building in Somalia (HARBS) 2022-2028"
+    ],
+    "sector_narrative": [
+      "Material relief assistance and services",
+      "Relief co-ordination and support services",
+      "Emergency food assistance",
+      "Immediate post-emergency reconstruction and rehabilitation",
+      "Disaster prevention and preparedness",
+      "Flood prevention/control",
+      "Social Protection",
+      "Infectious disease control",
+      "Health policy and administrative management",
+      "Food assistance"
+    ],
+    "reporting_org_ref": "GB-GOV-1",
+    "activity_date_type": [
+      "1",
+      "2",
+      "3"
+    ],
+    "activity_status_code": "2",
+    "description_narrative": [
+      "To meet the most urgent humanitarian needs of conflict and disaster affected populations through provision of life-saving assistance and contribute to resilience building of benefitting households to withstand shocks."
+    ],
+    "activity_date_iso_date": [
+      "2022-08-01T00:00:00Z",
+      "2022-08-07T00:00:00Z",
+      "2028-07-31T00:00:00Z"
+    ],
+    "recipient_country_code": [
+      "SO"
+    ],
+    "reporting_org_narrative": [
+      "UK - Foreign, Commonwealth Development Office (FCDO)"
+    ]
+  },
+  {
+    "sector_code": [
+      "73010",
+      "72050",
+      "74010",
+      "72010",
+      "72040",
+      "99810"
+    ],
+    "iati_identifier": "GB-1-205128",
+    "title_narrative": [
+      "Somalia Humanitarian and Resilience Programme (SHARP) 2018-2022"
+    ],
+    "sector_narrative": [
+      "Immediate post-emergency reconstruction and rehabilitation",
+      "Relief co-ordination and support services",
+      "Disaster prevention and preparedness",
+      "Material relief assistance and services",
+      "Emergency food assistance",
+      "Sectors not specified"
+    ],
+    "reporting_org_ref": "GB-GOV-1",
+    "activity_date_type": [
+      "1",
+      "2",
+      "3",
+      "4"
+    ],
+    "activity_status_code": "4",
+    "description_narrative": [
+      "To meet the most urgent humanitarian needs of conflict and disaster affected populations through provision of life-saving assistance and contribute to resilience building of benefitting households to withstand shocks."
+    ],
+    "activity_date_iso_date": [
+      "2018-01-01T00:00:00Z",
+      "2017-08-18T00:00:00Z",
+      "2022-09-30T00:00:00Z",
+      "2023-12-20T00:00:00Z"
+    ],
+    "recipient_country_code": [
+      "SO"
+    ],
+    "reporting_org_narrative": [
+      "UK - Foreign, Commonwealth Development Office (FCDO)"
+    ]
+  }
+]

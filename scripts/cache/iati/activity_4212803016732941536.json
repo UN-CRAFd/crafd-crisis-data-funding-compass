@@ -1,0 +1,3374 @@
+[
+  {
+    "iati_identifier": "US-GOV-11-N/A ADMIN-101429",
+    "title_narrative": [
+      "DOS Advisory and Assistance Services"
+    ],
+    "reporting_org_ref": "US-GOV-11",
+    "transaction_value": [
+      2252667.0,
+      4099753.0
+    ],
+    "activity_date_type": [
+      "1",
+      "2",
+      "3",
+      "4"
+    ],
+    "activity_status_code": "3",
+    "description_narrative": [
+      "Administrative costs and operating expenses of DOS contributing to Advisory and Assistance Services."
+    ],
+    "activity_date_iso_date": [
+      "2023-10-01T00:00:00Z",
+      "2023-10-01T00:00:00Z",
+      "2024-09-30T00:00:00Z",
+      "2024-09-30T00:00:00Z"
+    ],
+    "reporting_org_narrative": [
+      "Department of State"
+    ]
+  },
+  {
+    "iati_identifier": "US-GOV-11-N/A ADMIN-296345",
+    "title_narrative": [
+      "DOS Miscellaneous Goods, Services, and Operations Maintenance"
+    ],
+    "reporting_org_ref": "US-GOV-11",
+    "transaction_value": [
+      5042.0,
+      1900.0,
+      3200.0,
+      1450.0,
+      2700.0,
+      9008.0
+    ],
+    "activity_date_type": [
+      "1",
+      "2",
+      "3",
+      "4"
+    ],
+    "activity_status_code": "3",
+    "description_narrative": [
+      "Administrative costs and operating expenses of DOS contributing to Miscellaneous Goods, Services, and Operations Maintenance."
+    ],
+    "activity_date_iso_date": [
+      "2020-10-01T00:00:00Z",
+      "2020-10-01T00:00:00Z",
+      "2021-09-30T00:00:00Z",
+      "2021-09-30T00:00:00Z"
+    ],
+    "reporting_org_narrative": [
+      "Department of State"
+    ]
+  },
+  {
+    "iati_identifier": "US-GOV-11-Information Redacted-123228",
+    "title_narrative": [
+      "Information Redacted"
+    ],
+    "reporting_org_ref": "US-GOV-11",
+    "transaction_value": [
+      148175.0,
+      46382.0
+    ],
+    "activity_date_type": [
+      "1",
+      "2",
+      "3",
+      "4"
+    ],
+    "activity_status_code": "3",
+    "description_narrative": [
+      "Information Redacted"
+    ],
+    "activity_date_iso_date": [
+      "2022-10-01T00:00:00Z",
+      "2022-10-01T00:00:00Z",
+      "2023-06-05T00:00:00Z",
+      "2023-06-05T00:00:00Z"
+    ],
+    "reporting_org_narrative": [
+      "Department of State"
+    ]
+  },
+  {
+    "iati_identifier": "US-GOV-11-SINLEC21LA3337",
+    "title_narrative": [
+      "Fighting Trafficking in Persons in Liberia III"
+    ],
+    "reporting_org_ref": "US-GOV-11",
+    "transaction_value": [
+      400000.0,
+      400000.0
+    ],
+    "activity_date_type": [
+      "1",
+      "2",
+      "3",
+      "4"
+    ],
+    "activity_status_code": "3",
+    "description_narrative": [
+      "To enhance the identification, investigation, prosecution, and adjudication of tip cases by law enforcement officers and judicial officials."
+    ],
+    "activity_date_iso_date": [
+      "2020-10-01T00:00:00Z",
+      "2020-10-01T00:00:00Z",
+      "2021-09-30T00:00:00Z",
+      "2021-09-30T00:00:00Z"
+    ],
+    "reporting_org_narrative": [
+      "Department of State"
+    ]
+  },
+  {
+    "iati_identifier": "US-GOV-11-Information Redacted-123382",
+    "title_narrative": [
+      "Information Redacted"
+    ],
+    "reporting_org_ref": "US-GOV-11",
+    "transaction_value": [
+      34443.0,
+      307692.0
+    ],
+    "activity_date_type": [
+      "1",
+      "2",
+      "3",
+      "4"
+    ],
+    "activity_status_code": "3",
+    "description_narrative": [
+      "Information Redacted"
+    ],
+    "activity_date_iso_date": [
+      "2024-10-01T00:00:00Z",
+      "2024-10-01T00:00:00Z",
+      "2024-11-19T00:00:00Z",
+      "2024-11-19T00:00:00Z"
+    ],
+    "reporting_org_narrative": [
+      "Department of State"
+    ]
+  },
+  {
+    "iati_identifier": "US-GOV-11-SLI60024IN0009",
+    "title_narrative": [
+      "IAWP Applicant Information Redacted"
+    ],
+    "reporting_org_ref": "US-GOV-11",
+    "transaction_value": [
+      783.0,
+      783.0
+    ],
+    "activity_date_type": [
+      "1",
+      "2",
+      "3",
+      "4"
+    ],
+    "activity_status_code": "3",
+    "description_narrative": [
+      "DESCRIPTION MASKED FOR PII PURPOSES"
+    ],
+    "activity_date_iso_date": [
+      "2023-10-01T00:00:00Z",
+      "2023-10-01T00:00:00Z",
+      "2024-08-29T00:00:00Z",
+      "2024-08-29T00:00:00Z"
+    ],
+    "reporting_org_narrative": [
+      "Department of State"
+    ]
+  },
+  {
+    "iati_identifier": "US-GOV-11-SPMECO20GR0010",
+    "title_narrative": [
+      "UNODC CCP Libya Azerbaijan Kazak"
+    ],
+    "reporting_org_ref": "US-GOV-11",
+    "transaction_value": [
+      -282945.0,
+      1571000.0
+    ],
+    "activity_date_type": [
+      "1",
+      "2",
+      "3",
+      "4"
+    ],
+    "activity_status_code": "3",
+    "description_narrative": [
+      "Conduct Container Control Program (CCP) activities in Azerbaijan, Kazakhstan, Turkmenistan and Libya."
+    ],
+    "activity_date_iso_date": [
+      "2020-10-01T00:00:00Z",
+      "2020-10-01T00:00:00Z",
+      "2022-12-30T00:00:00Z",
+      "2022-12-30T00:00:00Z"
+    ],
+    "reporting_org_narrative": [
+      "Department of State"
+    ]
+  },
+  {
+    "iati_identifier": "US-GOV-11-SLI60024GR0019",
+    "title_narrative": [
+      "Center for Peace Building and Democracy in Liberia"
+    ],
+    "reporting_org_ref": "US-GOV-11",
+    "transaction_value": [
+      6150.0,
+      4613.0
+    ],
+    "activity_date_type": [
+      "1",
+      "2",
+      "3",
+      "4"
+    ],
+    "activity_status_code": "3",
+    "description_narrative": [
+      "MINI-RICE MILLING MACHINE: PURCHASE OF A RICE MILL IN LOFA TO INCREASE PRODUCTION, LINKING TO MICROFINANCE AND MARKETS WHILE MENTORING SMALL FARMERS AND CREATING JOBS"
+    ],
+    "activity_date_iso_date": [
+      "2023-10-01T00:00:00Z",
+      "2023-10-01T00:00:00Z",
+      "2024-11-06T00:00:00Z",
+      "2024-11-06T00:00:00Z"
+    ],
+    "reporting_org_narrative": [
+      "Department of State"
+    ]
+  },
+  {
+    "iati_identifier": "US-GOV-11-N/A ADMIN-87406",
+    "title_narrative": [
+      "DOS Equipment, Lands, and Structures"
+    ],
+    "reporting_org_ref": "US-GOV-11",
+    "transaction_value": [
+      4356.0,
+      4356.0,
+      14104.0,
+      14104.0,
+      150121.0,
+      55135.0,
+      131250.0,
+      131250.0,
+      6789.0,
+      6789.0,
+      50.0,
+      50.0,
+      314612.0,
+      16376.0,
+      16376.0,
+      60834.0,
+      69348.0,
+      8514.0,
+      66700.0,
+      78900.0,
+      12200.0,
+      168555.0,
+      168555.0,
+      25191.0,
+      25191.0,
+      67899.0,
+      67899.0,
+      21210.0,
+      21210.0,
+      6039.0,
+      6039.0,
+      51839.0,
+      51839.0,
+      6039.0,
+      6039.0
+    ],
+    "activity_date_type": [
+      "1",
+      "2",
+      "3",
+      "4"
+    ],
+    "activity_status_code": "3",
+    "description_narrative": [
+      "Administrative costs and operating expenses of DOS contributing to Equipment, Lands, and Structures."
+    ],
+    "activity_date_iso_date": [
+      "2020-10-01T00:00:00Z",
+      "2020-10-01T00:00:00Z",
+      "2021-09-30T00:00:00Z",
+      "2021-09-30T00:00:00Z"
+    ],
+    "reporting_org_narrative": [
+      "Department of State"
+    ]
+  },
+  {
+    "iati_identifier": "US-GOV-11-1.8163E+17-269248",
+    "title_narrative": [
+      "Grants, Subsidies and Contributions - Cooperative Agreements"
+    ],
+    "reporting_org_ref": "US-GOV-11",
+    "transaction_value": [
+      120149.0
+    ],
+    "activity_date_type": [
+      "1",
+      "2",
+      "3",
+      "4"
+    ],
+    "activity_status_code": "3",
+    "description_narrative": [
+      "Grants, Subsidies and Contributions - Cooperative Agreements"
+    ],
+    "activity_date_iso_date": [
+      "2017-10-01T00:00:00Z",
+      "2017-10-01T00:00:00Z",
+      "2018-09-30T00:00:00Z",
+      "2018-09-30T00:00:00Z"
+    ],
+    "reporting_org_narrative": [
+      "Department of State"
+    ]
+  },
+  {
+    "iati_identifier": "US-GOV-11-N/A ADMIN-264439",
+    "title_narrative": [
+      "DOS Miscellaneous Goods, Services, and Operations Maintenance"
+    ],
+    "reporting_org_ref": "US-GOV-11",
+    "transaction_value": [
+      -546295.0,
+      -20679.0,
+      -69514.0
+    ],
+    "activity_date_type": [
+      "1",
+      "2",
+      "3",
+      "4"
+    ],
+    "activity_status_code": "3",
+    "description_narrative": [
+      "Administrative costs and operating expenses of DOS contributing to Miscellaneous Goods, Services, and Operations Maintenance."
+    ],
+    "activity_date_iso_date": [
+      "2018-10-01T00:00:00Z",
+      "2018-10-01T00:00:00Z",
+      "2019-09-30T00:00:00Z",
+      "2019-09-30T00:00:00Z"
+    ],
+    "reporting_org_narrative": [
+      "Department of State"
+    ]
+  },
+  {
+    "iati_identifier": "US-GOV-11-SLI60020GR0020-270004",
+    "title_narrative": [
+      "HELPMATE ACADEMY"
+    ],
+    "reporting_org_ref": "US-GOV-11",
+    "transaction_value": [
+      9175.0
+    ],
+    "activity_date_type": [
+      "1",
+      "2",
+      "3",
+      "4"
+    ],
+    "activity_status_code": "3",
+    "description_narrative": [
+      "HELPMATE ACADEMY"
+    ],
+    "activity_date_iso_date": [
+      "2019-10-01T00:00:00Z",
+      "2019-10-01T00:00:00Z",
+      "2020-09-28T00:00:00Z",
+      "2020-09-28T00:00:00Z"
+    ],
+    "reporting_org_narrative": [
+      "Department of State"
+    ]
+  },
+  {
+    "iati_identifier": "US-GOV-11-Information Redacted-97935",
+    "title_narrative": [
+      "Information Redacted"
+    ],
+    "reporting_org_ref": "US-GOV-11",
+    "transaction_value": [
+      224542.0,
+      48170.0,
+      -64138.0,
+      9025.0
+    ],
+    "activity_date_type": [
+      "1",
+      "2",
+      "3",
+      "4"
+    ],
+    "activity_status_code": "3",
+    "description_narrative": [
+      "Information Redacted"
+    ],
+    "activity_date_iso_date": [
+      "2021-10-01T00:00:00Z",
+      "2021-10-01T00:00:00Z",
+      "2022-03-31T00:00:00Z",
+      "2022-03-31T00:00:00Z"
+    ],
+    "reporting_org_narrative": [
+      "Department of State"
+    ]
+  },
+  {
+    "iati_identifier": "US-GOV-11-SAQMMA17F4867-274405",
+    "title_narrative": [
+      "Liberia SSR Advisor"
+    ],
+    "reporting_org_ref": "US-GOV-11",
+    "transaction_value": [
+      468486.0
+    ],
+    "activity_date_type": [
+      "1",
+      "2",
+      "3",
+      "4"
+    ],
+    "activity_status_code": "3",
+    "description_narrative": [
+      "Information Redacted. Information has been redacted in accordance with the two principled exceptions defined in the Foreign Aid Transparency and Accountability Act (FATAA) of 2016: the health and secu"
+    ],
+    "activity_date_iso_date": [
+      "2017-09-30T00:00:00Z",
+      "2017-09-30T00:00:00Z",
+      "2021-09-29T00:00:00Z",
+      "2021-09-29T00:00:00Z"
+    ],
+    "reporting_org_narrative": [
+      "Department of State"
+    ]
+  },
+  {
+    "iati_identifier": "US-GOV-11-Information Redacted-298094",
+    "title_narrative": [
+      "Information Redacted"
+    ],
+    "reporting_org_ref": "US-GOV-11",
+    "transaction_value": [
+      48875.0,
+      25000.0
+    ],
+    "activity_date_type": [
+      "1",
+      "2",
+      "3",
+      "4"
+    ],
+    "activity_status_code": "3",
+    "description_narrative": [
+      "Information Redacted"
+    ],
+    "activity_date_iso_date": [
+      "2022-10-01T00:00:00Z",
+      "2022-10-01T00:00:00Z",
+      "2023-03-02T00:00:00Z",
+      "2023-03-02T00:00:00Z"
+    ],
+    "reporting_org_narrative": [
+      "Department of State"
+    ]
+  },
+  {
+    "iati_identifier": "US-GOV-11-SLI60020GR0027-270050",
+    "title_narrative": [
+      "HOPE ALLIANCE LIBERIA"
+    ],
+    "reporting_org_ref": "US-GOV-11",
+    "transaction_value": [
+      10000.0
+    ],
+    "activity_date_type": [
+      "1",
+      "2",
+      "3",
+      "4"
+    ],
+    "activity_status_code": "3",
+    "description_narrative": [
+      "HOPE ALLIANCE LIBERIA"
+    ],
+    "activity_date_iso_date": [
+      "2019-10-01T00:00:00Z",
+      "2019-10-01T00:00:00Z",
+      "2020-09-28T00:00:00Z",
+      "2020-09-28T00:00:00Z"
+    ],
+    "reporting_org_narrative": [
+      "Department of State"
+    ]
+  },
+  {
+    "iati_identifier": "US-GOV-11-Information Redacted-302357",
+    "title_narrative": [
+      "Information Redacted"
+    ],
+    "reporting_org_ref": "US-GOV-11",
+    "transaction_value": [
+      513150.0,
+      111883.0
+    ],
+    "activity_date_type": [
+      "1",
+      "2",
+      "3",
+      "4"
+    ],
+    "activity_status_code": "3",
+    "description_narrative": [
+      "Information Redacted"
+    ],
+    "activity_date_iso_date": [
+      "2020-10-01T00:00:00Z",
+      "2020-10-01T00:00:00Z",
+      "2021-08-24T00:00:00Z",
+      "2021-08-24T00:00:00Z"
+    ],
+    "reporting_org_narrative": [
+      "Department of State"
+    ]
+  },
+  {
+    "iati_identifier": "US-GOV-11-SLI60019GR0013-279015",
+    "title_narrative": [
+      "REFUGE PLACE INTERNATIONAL"
+    ],
+    "reporting_org_ref": "US-GOV-11",
+    "transaction_value": [
+      2000.0
+    ],
+    "activity_date_type": [
+      "1",
+      "2",
+      "3",
+      "4"
+    ],
+    "activity_status_code": "3",
+    "description_narrative": [
+      "AMBASSADOR'S SPECIAL SELF HELP FUND update the documents and amount per latest developments with regard to additional funds. AMBASSADOR'S SPECIAL SELF HELP FUND AMBASSADOR'S SPECIAL SELF HELP FIND"
+    ],
+    "activity_date_iso_date": [
+      "2019-10-01T00:00:00Z",
+      "2019-10-01T00:00:00Z",
+      "2020-08-12T00:00:00Z",
+      "2020-08-12T00:00:00Z"
+    ],
+    "reporting_org_narrative": [
+      "Department of State"
+    ]
+  },
+  {
+    "iati_identifier": "US-GOV-11-N/A ADMIN-97406",
+    "title_narrative": [
+      "DOS Miscellaneous Goods, Services, and Operations Maintenance"
+    ],
+    "reporting_org_ref": "US-GOV-11",
+    "transaction_value": [
+      9342.0,
+      -1122.0,
+      49955.0,
+      52352.0,
+      2398.0,
+      997052.0,
+      1044910.0,
+      47858.0,
+      -3780.0,
+      1243633.0,
+      1143455.0,
+      526551.0,
+      4325.0,
+      1663.0,
+      1743.0,
+      420580.0,
+      420501.0,
+      155456.0,
+      386802.0,
+      1737690.0,
+      448544.0,
+      61632.0,
+      194023.0,
+      222705.0,
+      791223.0,
+      -32388.0,
+      604049.0,
+      -10446.0,
+      562557.0
+    ],
+    "activity_date_type": [
+      "1",
+      "2",
+      "3",
+      "4"
+    ],
+    "activity_status_code": "3",
+    "description_narrative": [
+      "Administrative costs and operating expenses of DOS contributing to Miscellaneous Goods, Services, and Operations Maintenance."
+    ],
+    "activity_date_iso_date": [
+      "2020-10-01T00:00:00Z",
+      "2020-10-01T00:00:00Z",
+      "2021-09-30T00:00:00Z",
+      "2021-09-30T00:00:00Z"
+    ],
+    "reporting_org_narrative": [
+      "Department of State"
+    ]
+  },
+  {
+    "iati_identifier": "US-GOV-11-SLI60024GR0023",
+    "title_narrative": [
+      "Leenean Sustainable Farmers Groups of Companies"
+    ],
+    "reporting_org_ref": "US-GOV-11",
+    "transaction_value": [
+      4865.0,
+      3649.0
+    ],
+    "activity_date_type": [
+      "1",
+      "2",
+      "3",
+      "4"
+    ],
+    "activity_status_code": "3",
+    "description_narrative": [
+      "INCREASING AGRICULTURAL PRODUCTION: PURCHASE OF MATERIALS TO CULTIVATE 250 ACRES OF LAND TO PROMOTE FOOD SECURITY."
+    ],
+    "activity_date_iso_date": [
+      "2023-10-01T00:00:00Z",
+      "2023-10-01T00:00:00Z",
+      "2024-11-07T00:00:00Z",
+      "2024-11-07T00:00:00Z"
+    ],
+    "reporting_org_narrative": [
+      "Department of State"
+    ]
+  },
+  {
+    "iati_identifier": "US-GOV-11-SINLEC20GR3316",
+    "title_narrative": [
+      "Disrupting Money Laundering through Gambling Obj."
+    ],
+    "reporting_org_ref": "US-GOV-11",
+    "transaction_value": [
+      2012.0,
+      6534.0,
+      10670.0,
+      6918.0,
+      14377.0,
+      29678.0,
+      23939.0,
+      12014.0,
+      17702.0,
+      16214.0,
+      19738.0,
+      22959.0,
+      19547.0,
+      24634.0,
+      38472.0,
+      15248.0,
+      17878.0,
+      19506.0,
+      19256.0,
+      30548.0,
+      22425.0,
+      25552.0,
+      38546.0,
+      33897.0,
+      56848.0,
+      91168.0,
+      67449.0,
+      46659.0,
+      43544.0,
+      55520.0,
+      35711.0,
+      10877.0,
+      500000.0,
+      35269.0,
+      20203.0,
+      94693.0,
+      84268.0,
+      67694.0,
+      64567.0,
+      63058.0,
+      18059.0,
+      9972.0,
+      11633.0,
+      16093.0,
+      2686.0,
+      4398.0,
+      4944.0,
+      250000.0,
+      52082.0,
+      48671.0,
+      34572.0,
+      49338.0,
+      48408.0,
+      16930.0
+    ],
+    "activity_date_type": [
+      "1",
+      "2",
+      "3",
+      "4"
+    ],
+    "activity_status_code": "3",
+    "description_narrative": [
+      "Generate multi-jurisdictional support for a common vision for enhancing the AML regime in the casino sector."
+    ],
+    "activity_date_iso_date": [
+      "2020-10-01T00:00:00Z",
+      "2020-10-01T00:00:00Z",
+      "2024-12-12T00:00:00Z",
+      "2024-12-12T00:00:00Z"
+    ],
+    "reporting_org_narrative": [
+      "Department of State"
+    ]
+  },
+  {
+    "iati_identifier": "US-GOV-11-S-SJTIP-12-GR-1032",
+    "title_narrative": [
+      "Law Enforcement Tools For More Effective Prosecution (LET 4 MEP)"
+    ],
+    "reporting_org_ref": "US-GOV-11",
+    "transaction_value": [
+      300000.0,
+      300000.0
+    ],
+    "activity_date_type": [
+      "1",
+      "2",
+      "3",
+      "4"
+    ],
+    "activity_status_code": "3",
+    "description_narrative": [
+      "LWOB will deliver TIP training to Liberian judges, lawyers, magistrates, and law enforcement personnel. It will produce and distribute illustrated graphic novels designed to convey complex legal concepts to potential victims of trafficking and to members of the legal community that are tailored to a Liberian context. These will be accompanied by trainer manuals that guide trainers through two (2) previously distributed graphic novels on the subject of TIPS and two newly created graphic novels under this grant. Law enforcement personnel will be provided with law enforcement \"toolkits\" that will provide law enforcement with critical practice tools in clear-cut and durable materials. The trainings are designed to promote the rule of law and will strengthen Liberia's overall capacity to identify, investigate, and successfully prosecute trafficking in persons cases. The trainings will be dual purposed to enable Liberians to practice in a non-TIPS context those skills that will be necessary to try a TIPS case, when it does present itself to prosecutors and the court. Focus will be on the discernible areas where stakeholders are misconstruing what are clearly human trafficking crimes and failing to prosecute (or successfully prosecute) TIPS scenarios under Liberia's 2005 Act to Ban Trafficking in Persons."
+    ],
+    "activity_date_iso_date": [
+      "2012-10-01T00:00:00Z",
+      "2012-10-01T00:00:00Z",
+      "2015-09-30T00:00:00Z",
+      "2015-09-30T00:00:00Z"
+    ],
+    "reporting_org_narrative": [
+      "Department of State"
+    ]
+  },
+  {
+    "iati_identifier": "US-GOV-11-SINLEC22CA0028-86588",
+    "title_narrative": [
+      "Advancing Liberian Security Sector Accountability"
+    ],
+    "reporting_org_ref": "US-GOV-11",
+    "transaction_value": [
+      39805.0,
+      63266.0,
+      82305.0,
+      98654.0,
+      95115.0,
+      224332.0,
+      343925.0
+    ],
+    "activity_date_type": [
+      "1",
+      "2",
+      "3",
+      "4"
+    ],
+    "activity_status_code": "3",
+    "description_narrative": [
+      "The purpose of this award is to improve security sector (including lnp, ldea, lis) mechanisms for accountability, with a specific focus on complaints and commendations systems and processes, in order to increase citizen trust in these agencies."
+    ],
+    "activity_date_iso_date": [
+      "2021-10-01T00:00:00Z",
+      "2021-10-01T00:00:00Z",
+      "2024-05-13T00:00:00Z",
+      "2024-05-13T00:00:00Z"
+    ],
+    "reporting_org_narrative": [
+      "Department of State"
+    ]
+  },
+  {
+    "iati_identifier": "US-GOV-11-4301572527",
+    "title_narrative": [
+      "Laos ASEAN Chairmanship Laos ASEAN Chairmanship"
+    ],
+    "reporting_org_ref": "US-GOV-11",
+    "transaction_value": [
+      -57.0,
+      6284.0,
+      15443.0,
+      1552.0,
+      1705.0,
+      -3379.0,
+      2857.0
+    ],
+    "activity_date_type": [
+      "1",
+      "2",
+      "3",
+      "4"
+    ],
+    "activity_status_code": "3",
+    "description_narrative": [
+      "This amendment is to extend the period of performance and revise the budget. All other terms and conditions remain unchanged."
+    ],
+    "activity_date_iso_date": [
+      "2016-10-01T00:00:00Z",
+      "2016-10-01T00:00:00Z",
+      "2017-09-30T00:00:00Z",
+      "2017-09-30T00:00:00Z"
+    ],
+    "reporting_org_narrative": [
+      "Department of State"
+    ]
+  },
+  {
+    "iati_identifier": "US-GOV-11-SLI60020GR0019-283983",
+    "title_narrative": [
+      "WOMEN OF ADDED VALUE"
+    ],
+    "reporting_org_ref": "US-GOV-11",
+    "transaction_value": [
+      9930.0
+    ],
+    "activity_date_type": [
+      "1",
+      "2",
+      "3",
+      "4"
+    ],
+    "activity_status_code": "3",
+    "description_narrative": [
+      "WOMEN OF ADDED VALUE"
+    ],
+    "activity_date_iso_date": [
+      "2019-10-01T00:00:00Z",
+      "2019-10-01T00:00:00Z",
+      "2020-09-28T00:00:00Z",
+      "2020-09-28T00:00:00Z"
+    ],
+    "reporting_org_narrative": [
+      "Department of State"
+    ]
+  },
+  {
+    "iati_identifier": "US-GOV-11-Information Redacted-298217",
+    "title_narrative": [
+      "Information Redacted"
+    ],
+    "reporting_org_ref": "US-GOV-11",
+    "transaction_value": [
+      16000.0,
+      20000.0
+    ],
+    "activity_date_type": [
+      "1",
+      "2",
+      "3",
+      "4"
+    ],
+    "activity_status_code": "3",
+    "description_narrative": [
+      "Information Redacted"
+    ],
+    "activity_date_iso_date": [
+      "2022-10-01T00:00:00Z",
+      "2022-10-01T00:00:00Z",
+      "2023-06-02T00:00:00Z",
+      "2023-06-02T00:00:00Z"
+    ],
+    "reporting_org_narrative": [
+      "Department of State"
+    ]
+  },
+  {
+    "iati_identifier": "US-GOV-11-SLI60019GR0011-274081",
+    "title_narrative": [
+      "KPALI BLI DEVELOPMENT ORGANIZATION"
+    ],
+    "reporting_org_ref": "US-GOV-11",
+    "transaction_value": [
+      1080.0
+    ],
+    "activity_date_type": [
+      "1",
+      "2",
+      "3",
+      "4"
+    ],
+    "activity_status_code": "3",
+    "description_narrative": [
+      "KPALI BLI DEVELOPMENT ORGANIZATION"
+    ],
+    "activity_date_iso_date": [
+      "2019-10-01T00:00:00Z",
+      "2019-10-01T00:00:00Z",
+      "2020-05-27T00:00:00Z",
+      "2020-05-27T00:00:00Z"
+    ],
+    "reporting_org_narrative": [
+      "Department of State"
+    ]
+  },
+  {
+    "iati_identifier": "US-GOV-11-Information Redacted-300940",
+    "title_narrative": [
+      "Information Redacted"
+    ],
+    "reporting_org_ref": "US-GOV-11",
+    "transaction_value": [
+      527102.0,
+      86500.0,
+      286104.0
+    ],
+    "activity_date_type": [
+      "1",
+      "2",
+      "3",
+      "4"
+    ],
+    "activity_status_code": "3",
+    "description_narrative": [
+      "Information Redacted"
+    ],
+    "activity_date_iso_date": [
+      "2023-10-01T00:00:00Z",
+      "2023-10-01T00:00:00Z",
+      "2024-08-01T00:00:00Z",
+      "2024-08-01T00:00:00Z"
+    ],
+    "reporting_org_narrative": [
+      "Department of State"
+    ]
+  },
+  {
+    "iati_identifier": "US-GOV-11-SLI60024GR0015",
+    "title_narrative": [
+      "Providence Preservation Foundation"
+    ],
+    "reporting_org_ref": "US-GOV-11",
+    "transaction_value": [
+      6998.0,
+      5249.0
+    ],
+    "activity_date_type": [
+      "1",
+      "2",
+      "3",
+      "4"
+    ],
+    "activity_status_code": "3",
+    "description_narrative": [
+      "SOLAR-POWERED WELL: INSTALLATION OF A SOLAR-POWERED WELL TO PROVIDE SAFE DRINKING WATER, INTRODUCING INNOVATIVE TECHNOLOGY FOR WATER ACCESS."
+    ],
+    "activity_date_iso_date": [
+      "2023-10-01T00:00:00Z",
+      "2023-10-01T00:00:00Z",
+      "2024-11-07T00:00:00Z",
+      "2024-11-07T00:00:00Z"
+    ],
+    "reporting_org_narrative": [
+      "Department of State"
+    ]
+  },
+  {
+    "iati_identifier": "US-GOV-11-85899",
+    "title_narrative": [
+      "English Language Teaching"
+    ],
+    "reporting_org_ref": "US-GOV-11",
+    "transaction_value": [
+      100000.0,
+      100000.0,
+      180000.0,
+      180000.0
+    ],
+    "activity_date_type": [
+      "1",
+      "2",
+      "3",
+      "4"
+    ],
+    "activity_status_code": "3",
+    "description_narrative": [
+      "English Language Teaching: This funding will support English-language instruction programs and outreach activities. Such activities may be used as a means of teaching about ethnic tolerance and civics, particularly at American Corners, American Windows, and other suitable venues."
+    ],
+    "activity_date_iso_date": [
+      "2013-10-01T00:00:00Z",
+      "2013-10-01T00:00:00Z",
+      "2014-09-30T00:00:00Z",
+      "2014-09-30T00:00:00Z"
+    ],
+    "reporting_org_narrative": [
+      "Department of State"
+    ]
+  },
+  {
+    "iati_identifier": "US-GOV-11-SINLEC24LA0202",
+    "title_narrative": [
+      "FY24 AME UNODC Drug Use Prevention Treatment and Care"
+    ],
+    "reporting_org_ref": "US-GOV-11",
+    "transaction_value": [
+      1399253.0,
+      1399253.0
+    ],
+    "activity_date_type": [
+      "1",
+      "2",
+      "3",
+      "4"
+    ],
+    "activity_status_code": "3",
+    "description_narrative": [
+      "FY24 AME UNODC Drug Use Prevention Treatment and Care"
+    ],
+    "activity_date_iso_date": [
+      "2023-10-01T00:00:00Z",
+      "2023-10-01T00:00:00Z",
+      "2024-09-20T00:00:00Z",
+      "2024-09-20T00:00:00Z"
+    ],
+    "reporting_org_narrative": [
+      "Department of State"
+    ]
+  },
+  {
+    "iati_identifier": "US-GOV-11-Information Redacted-118601",
+    "title_narrative": [
+      "Information Redacted"
+    ],
+    "reporting_org_ref": "US-GOV-11",
+    "transaction_value": [
+      90862.0,
+      263145.0
+    ],
+    "activity_date_type": [
+      "1",
+      "2",
+      "3",
+      "4"
+    ],
+    "activity_status_code": "3",
+    "description_narrative": [
+      "Information Redacted"
+    ],
+    "activity_date_iso_date": [
+      "2020-10-01T00:00:00Z",
+      "2020-10-01T00:00:00Z",
+      "2021-09-01T00:00:00Z",
+      "2021-09-01T00:00:00Z"
+    ],
+    "reporting_org_narrative": [
+      "Department of State"
+    ]
+  },
+  {
+    "iati_identifier": "US-GOV-11-SAQMMA17F4867-274409",
+    "title_narrative": [
+      "Liberia SSR Advisor"
+    ],
+    "reporting_org_ref": "US-GOV-11",
+    "transaction_value": [
+      34874.0
+    ],
+    "activity_date_type": [
+      "1",
+      "2",
+      "3",
+      "4"
+    ],
+    "activity_status_code": "3",
+    "description_narrative": [
+      "Information Redacted. Information has been redacted in accordance with the two principled exceptions defined in the Foreign Aid Transparency and Accountability Act (FATAA) of 2016: the health and secu"
+    ],
+    "activity_date_iso_date": [
+      "2019-10-01T00:00:00Z",
+      "2019-10-01T00:00:00Z",
+      "2020-06-19T00:00:00Z",
+      "2020-06-19T00:00:00Z"
+    ],
+    "reporting_org_narrative": [
+      "Department of State"
+    ]
+  },
+  {
+    "iati_identifier": "US-GOV-11-85876",
+    "title_narrative": [
+      "Alumni Programs"
+    ],
+    "reporting_org_ref": "US-GOV-11",
+    "transaction_value": [
+      87000.0,
+      87000.0,
+      50000.0,
+      50000.0,
+      100000.0,
+      100000.0,
+      90000.0,
+      90000.0,
+      100000.0,
+      100000.0,
+      210000.0,
+      210000.0
+    ],
+    "activity_date_type": [
+      "1",
+      "2",
+      "3",
+      "4"
+    ],
+    "activity_status_code": "3",
+    "description_narrative": [
+      "Alumni Programs: This funding will support the networking of alumni of U.S. Government-funded programs, and their colleagues, in fields that promote democratic advancement and economic reform. Grants to individuals and organizations will promote democracy-related activities, such as association-building, community action projects, civic education and participation, promotion of interethnic tolerance and understanding, and youth programs."
+    ],
+    "activity_date_iso_date": [
+      "2013-10-01T00:00:00Z",
+      "2013-10-01T00:00:00Z",
+      "2014-09-30T00:00:00Z",
+      "2014-09-30T00:00:00Z"
+    ],
+    "reporting_org_narrative": [
+      "Department of State"
+    ]
+  },
+  {
+    "iati_identifier": "US-GOV-11-19820200025",
+    "title_narrative": [
+      "Liberia SSR Advisor"
+    ],
+    "reporting_org_ref": "US-GOV-11",
+    "transaction_value": [
+      34874.0
+    ],
+    "activity_date_type": [
+      "1",
+      "2",
+      "3",
+      "4"
+    ],
+    "activity_status_code": "3",
+    "description_narrative": [
+      "Information Redacted. Information has been redacted in accordance with the two principled exceptions defined in the Foreign Aid Transparency and Accountability Act (FATAA) of 2016: the health and secu"
+    ],
+    "activity_date_iso_date": [
+      "2019-10-01T00:00:00Z",
+      "2019-10-01T00:00:00Z",
+      "2020-08-06T00:00:00Z",
+      "2020-08-06T00:00:00Z"
+    ],
+    "reporting_org_narrative": [
+      "Department of State"
+    ]
+  },
+  {
+    "iati_identifier": "US-GOV-11-SLI60019GR0009-283670",
+    "title_narrative": [
+      "UNITED WOMEN RESCUE AND DEVELOPMENT"
+    ],
+    "reporting_org_ref": "US-GOV-11",
+    "transaction_value": [
+      1030.0
+    ],
+    "activity_date_type": [
+      "1",
+      "2",
+      "3",
+      "4"
+    ],
+    "activity_status_code": "3",
+    "description_narrative": [
+      "UNITED WOMEN RESCUE AND DEVELOPMENT"
+    ],
+    "activity_date_iso_date": [
+      "2019-10-01T00:00:00Z",
+      "2019-10-01T00:00:00Z",
+      "2020-04-09T00:00:00Z",
+      "2020-04-09T00:00:00Z"
+    ],
+    "reporting_org_narrative": [
+      "Department of State"
+    ]
+  },
+  {
+    "iati_identifier": "US-GOV-11-SLMAQM21GR3351",
+    "title_narrative": [
+      "South Asia Leadership in Entrepreneurship"
+    ],
+    "reporting_org_ref": "US-GOV-11",
+    "transaction_value": [
+      986600.0,
+      20251.0,
+      1975249.0,
+      10000.0,
+      10500.0,
+      -20500.0,
+      -1975249.0,
+      1975249.0,
+      20500.0,
+      25000.0,
+      35000.0,
+      50000.0,
+      57500.0,
+      60000.0,
+      50000.0,
+      6500.0,
+      40000.0,
+      50000.0,
+      65000.0,
+      60000.0,
+      28000.0,
+      41000.0,
+      50000.0,
+      35000.0,
+      45000.0,
+      100000.0,
+      40000.0,
+      70000.0,
+      60000.0,
+      65000.0,
+      70000.0,
+      40000.0,
+      40000.0,
+      110000.0,
+      100000.0,
+      50000.0,
+      40000.0,
+      50000.0,
+      140000.0,
+      55000.0,
+      30000.0,
+      30000.0,
+      95000.0,
+      30000.0,
+      41749.0
+    ],
+    "activity_date_type": [
+      "1",
+      "2",
+      "3",
+      "4"
+    ],
+    "activity_status_code": "3",
+    "description_narrative": [
+      "To promote a culture of entrepreneurism in South Asia through training of young entrepreneurs and facilitating a policy dialogue."
+    ],
+    "activity_date_iso_date": [
+      "2020-10-01T00:00:00Z",
+      "2020-10-01T00:00:00Z",
+      "2024-12-04T00:00:00Z",
+      "2024-12-04T00:00:00Z"
+    ],
+    "reporting_org_narrative": [
+      "Department of State"
+    ]
+  },
+  {
+    "iati_identifier": "US-GOV-11-SINLEC18CA2028-89804",
+    "title_narrative": [
+      "INL Liberia Justice Public Awareness Campaign"
+    ],
+    "reporting_org_ref": "US-GOV-11",
+    "transaction_value": [
+      98654.0,
+      400000.0
+    ],
+    "activity_date_type": [
+      "1",
+      "2",
+      "3",
+      "4"
+    ],
+    "activity_status_code": "3",
+    "description_narrative": [
+      "INL Liberia Justice Public Awareness Campaign Covers awards where the principle purpose of the relationship is the transfer of money, property, services, or anything of value to the state, local government, or other recipient to accomplish a public purpose of support or stimulation authorized by the Federal statute."
+    ],
+    "activity_date_iso_date": [
+      "2021-10-01T00:00:00Z",
+      "2021-10-01T00:00:00Z",
+      "2023-08-17T00:00:00Z",
+      "2023-08-17T00:00:00Z"
+    ],
+    "reporting_org_narrative": [
+      "Department of State"
+    ]
+  },
+  {
+    "iati_identifier": "US-GOV-11-SLI60020GR0027-74010",
+    "title_narrative": [
+      "HOPE ALLIANCE LIBERIA"
+    ],
+    "reporting_org_ref": "US-GOV-11",
+    "transaction_value": [
+      7500.0,
+      2500.0
+    ],
+    "activity_date_type": [
+      "1",
+      "2",
+      "3",
+      "4"
+    ],
+    "activity_status_code": "3",
+    "description_narrative": [
+      "HOPE ALLIANCE LIBERIA"
+    ],
+    "activity_date_iso_date": [
+      "2020-10-01T00:00:00Z",
+      "2020-10-01T00:00:00Z",
+      "2021-04-08T00:00:00Z",
+      "2021-04-08T00:00:00Z"
+    ],
+    "reporting_org_narrative": [
+      "Department of State"
+    ]
+  },
+  {
+    "iati_identifier": "US-GOV-11-N/A ADMIN-88435",
+    "title_narrative": [
+      "Fee Charges"
+    ],
+    "reporting_org_ref": "US-GOV-11",
+    "transaction_value": [
+      4167.0,
+      13891.0,
+      1875.0,
+      7912.0,
+      1081.0
+    ],
+    "activity_date_type": [
+      "1",
+      "2",
+      "3",
+      "4"
+    ],
+    "activity_status_code": "3",
+    "description_narrative": [
+      "Administrative costs and operating expenses of DOS contributing to Fee Charges."
+    ],
+    "activity_date_iso_date": [
+      "2020-10-01T00:00:00Z",
+      "2020-10-01T00:00:00Z",
+      "2021-09-30T00:00:00Z",
+      "2021-09-30T00:00:00Z"
+    ],
+    "reporting_org_narrative": [
+      "Department of State"
+    ]
+  },
+  {
+    "iati_identifier": "US-GOV-11-SINLEC21CA3195-93196",
+    "title_narrative": [
+      "Strengthening Corrections Institutions in Liberia (SCIL) Project"
+    ],
+    "reporting_org_ref": "US-GOV-11",
+    "transaction_value": [
+      325432.0,
+      278802.0,
+      264976.0,
+      250000.0,
+      296294.0
+    ],
+    "activity_date_type": [
+      "1",
+      "2",
+      "3",
+      "4"
+    ],
+    "activity_status_code": "3",
+    "description_narrative": [
+      "The goal of the Strengthening Corrections Institutions in Liberia (SCIL) project is to have improved adherence to standardized procedures, best practices, and human rights methods in targeted corrections facilities in Liberia."
+    ],
+    "activity_date_iso_date": [
+      "2023-10-01T00:00:00Z",
+      "2023-10-01T00:00:00Z",
+      "2024-09-13T00:00:00Z",
+      "2024-09-13T00:00:00Z"
+    ],
+    "reporting_org_narrative": [
+      "Department of State"
+    ]
+  },
+  {
+    "iati_identifier": "US-GOV-11-S-LMAQM-12-GR-1026-99607",
+    "title_narrative": [
+      "Heart of Borneo"
+    ],
+    "reporting_org_ref": "US-GOV-11",
+    "transaction_value": [
+      3510.0,
+      99000.0
+    ],
+    "activity_date_type": [
+      "1",
+      "2",
+      "3",
+      "4"
+    ],
+    "activity_status_code": "3",
+    "description_narrative": [
+      "This project will improve conservation of the Heart of Borneo through the strengthening of the boundaries and management of the Kayan Mentarang National Park through collaborative management and in building capacities and political will to establish effective wildlife enforcement networking within.the Heart of Borneo to counter wildlife and timber crime and trafficking."
+    ],
+    "activity_date_iso_date": [
+      "2012-03-23T00:00:00Z",
+      "2012-03-23T00:00:00Z",
+      "2017-06-30T00:00:00Z",
+      "2017-06-30T00:00:00Z"
+    ],
+    "reporting_org_narrative": [
+      "Department of State"
+    ]
+  },
+  {
+    "iati_identifier": "US-GOV-11-SLI60023GR0032",
+    "title_narrative": [
+      "U.S. Ambassador's Special Self-Help Program: UNECO Mission School"
+    ],
+    "reporting_org_ref": "US-GOV-11",
+    "transaction_value": [
+      6606.0,
+      4955.0,
+      1652.0,
+      2300.0,
+      2300.0
+    ],
+    "activity_date_type": [
+      "1",
+      "2",
+      "3",
+      "4"
+    ],
+    "activity_status_code": "3",
+    "description_narrative": [
+      "PURCHASE OF CONSTRUCTION MATERIALS TO RENOVATE A 12-ROOM COMMUNITY SCHOOL AND DORMITORY FOR ORPHANS."
+    ],
+    "activity_date_iso_date": [
+      "2022-10-01T00:00:00Z",
+      "2022-10-01T00:00:00Z",
+      "2024-05-10T00:00:00Z",
+      "2024-05-10T00:00:00Z"
+    ],
+    "reporting_org_narrative": [
+      "Department of State"
+    ]
+  },
+  {
+    "iati_identifier": "US-GOV-11-288890",
+    "title_narrative": [
+      "Export Control and Related Border Security Assistance, UGA/CITS Export Control Academy (Fall 2011)"
+    ],
+    "reporting_org_ref": "US-GOV-11",
+    "transaction_value": [
+      10240.0,
+      10240.0,
+      5400.0,
+      5400.0
+    ],
+    "activity_date_type": [
+      "1",
+      "2",
+      "3",
+      "4"
+    ],
+    "activity_status_code": "3",
+    "description_narrative": [
+      "UGA/CITS Export Control Academy (Fall 2011)"
+    ],
+    "activity_date_iso_date": [
+      "2011-10-01T00:00:00Z",
+      "2011-10-01T00:00:00Z",
+      "2012-09-30T00:00:00Z",
+      "2012-09-30T00:00:00Z"
+    ],
+    "reporting_org_narrative": [
+      "Department of State"
+    ]
+  },
+  {
+    "iati_identifier": "US-GOV-11-SLI60022GR0021",
+    "title_narrative": [
+      "U.S. Ambassador's Special Self-Help Program: Feed Liberia"
+    ],
+    "reporting_org_ref": "US-GOV-11",
+    "transaction_value": [
+      6000.0,
+      1300.0,
+      4700.0
+    ],
+    "activity_date_type": [
+      "1",
+      "2",
+      "3",
+      "4"
+    ],
+    "activity_status_code": "3",
+    "description_narrative": [
+      "Construction of a 10-room pigpen, purchase of a kernel-grinding machine, and training of farmers."
+    ],
+    "activity_date_iso_date": [
+      "2021-10-01T00:00:00Z",
+      "2021-10-01T00:00:00Z",
+      "2023-04-14T00:00:00Z",
+      "2023-04-14T00:00:00Z"
+    ],
+    "reporting_org_narrative": [
+      "Department of State"
+    ]
+  },
+  {
+    "iati_identifier": "US-GOV-11-N/A ADMIN-87514",
+    "title_narrative": [
+      "DOS Miscellaneous Goods, Services, and Operations Maintenance"
+    ],
+    "reporting_org_ref": "US-GOV-11",
+    "transaction_value": [
+      15757.0,
+      9116.0,
+      6601.0,
+      4583.0,
+      2444.0,
+      29397.0,
+      7729.0,
+      14855.0,
+      6445.0,
+      16319.0,
+      16319.0,
+      13078.0,
+      13078.0
+    ],
+    "activity_date_type": [
+      "1",
+      "2",
+      "3",
+      "4"
+    ],
+    "activity_status_code": "3",
+    "description_narrative": [
+      "Administrative costs and operating expenses of DOS contributing to Miscellaneous Goods, Services, and Operations Maintenance."
+    ],
+    "activity_date_iso_date": [
+      "2021-10-01T00:00:00Z",
+      "2021-10-01T00:00:00Z",
+      "2022-09-30T00:00:00Z",
+      "2022-09-30T00:00:00Z"
+    ],
+    "reporting_org_narrative": [
+      "Department of State"
+    ]
+  },
+  {
+    "iati_identifier": "US-GOV-11-SLI60019GR0008-283984",
+    "title_narrative": [
+      "WOMEN OF PROGRESS"
+    ],
+    "reporting_org_ref": "US-GOV-11",
+    "transaction_value": [
+      5038.0,
+      3978.0
+    ],
+    "activity_date_type": [
+      "1",
+      "2",
+      "3",
+      "4"
+    ],
+    "activity_status_code": "3",
+    "description_narrative": [
+      "WOMEN OF PROGRESS"
+    ],
+    "activity_date_iso_date": [
+      "2018-10-01T00:00:00Z",
+      "2018-10-01T00:00:00Z",
+      "2019-09-30T00:00:00Z",
+      "2019-09-30T00:00:00Z"
+    ],
+    "reporting_org_narrative": [
+      "Department of State"
+    ]
+  },
+  {
+    "iati_identifier": "US-GOV-11-SPRMCO22VC0044",
+    "title_narrative": [
+      "2022 UNICEF Contribution for the Near East Humanitarian Action for Children (HAC) Appeal"
+    ],
+    "reporting_org_ref": "US-GOV-11",
+    "transaction_value": [
+      15600000.0,
+      13200000.0,
+      4637856.0,
+      9600000.0,
+      7259350.0,
+      12554121.0,
+      10238074.0,
+      3476866.0,
+      233734.0,
+      36200000.0,
+      40000000.0,
+      19206178.0,
+      25400000.0,
+      1300000.0,
+      28751354.0,
+      31877966.0,
+      20655478.0,
+      1236778.0,
+      609184.0,
+      215191.0,
+      345038.0,
+      19600000.0,
+      16500000.0,
+      864785.0,
+      12000000.0,
+      6923955.0,
+      8598880.0,
+      15640707.0,
+      14989131.0,
+      966757.0,
+      42223.0,
+      72542.0,
+      1.0,
+      900000.0,
+      800000.0,
+      6136.0,
+      328699.0,
+      1253436.0,
+      102164.0,
+      1.0,
+      4360.0,
+      5203.0,
+      2000000.0,
+      1700000.0,
+      308860.0,
+      994004.0,
+      1792274.0,
+      164591.0,
+      437333.0
+    ],
+    "activity_date_type": [
+      "1",
+      "2",
+      "3",
+      "4"
+    ],
+    "activity_status_code": "3",
+    "description_narrative": [
+      "To support the 2022 UNICEF Humanitarian Action for Children (HAC) Appeal in Egypt, Iraq, Jordan, Lebanon, and Turkey to reach refugees, Internally Displaced Persons and vulnerable host communities in camps, urban environments, and informal tented settlements with humanitarian assistance."
+    ],
+    "activity_date_iso_date": [
+      "2021-10-01T00:00:00Z",
+      "2021-10-01T00:00:00Z",
+      "2024-09-20T00:00:00Z",
+      "2024-09-20T00:00:00Z"
+    ],
+    "reporting_org_narrative": [
+      "Department of State"
+    ]
+  },
+  {
+    "iati_identifier": "US-GOV-11-SAQMIP22GR0301",
+    "title_narrative": [
+      "Preservation of Providence Island, the Birthplace of Modern Liberia, Phase 2"
+    ],
+    "reporting_org_ref": "US-GOV-11",
+    "transaction_value": [
+      350000.0,
+      350000.0
+    ],
+    "activity_date_type": [
+      "1",
+      "2",
+      "3",
+      "4"
+    ],
+    "activity_status_code": "3",
+    "description_narrative": [
+      "Situated in the center of the capital city of Monrovia, Providence Island is the birthplace of the modern nation of Liberia. Very little of the original early 19th-century settlement survives on the island, which is itself vulnerable to urban encroachment and other threats. This project continues work begun under a previous Ambassadors Fund grant and involves landscape restoration, a shoreline erosion study, and a field archaeology program for Liberian and American students."
+    ],
+    "activity_date_iso_date": [
+      "2021-10-01T00:00:00Z",
+      "2021-10-01T00:00:00Z",
+      "2024-09-30T00:00:00Z",
+      "2024-09-30T00:00:00Z"
+    ],
+    "reporting_org_narrative": [
+      "Department of State"
+    ]
+  },
+  {
+    "iati_identifier": "US-GOV-11-SLI60022GR0020",
+    "title_narrative": [
+      "U.S. Ambassador's Special Self-Help Program: Boway Development Association"
+    ],
+    "reporting_org_ref": "US-GOV-11",
+    "transaction_value": [
+      5000.0,
+      3750.0,
+      1250.0
+    ],
+    "activity_date_type": [
+      "1",
+      "2",
+      "3",
+      "4"
+    ],
+    "activity_status_code": "3",
+    "description_narrative": [
+      "Construction of a small bridge to connect three communities."
+    ],
+    "activity_date_iso_date": [
+      "2021-10-01T00:00:00Z",
+      "2021-10-01T00:00:00Z",
+      "2023-04-14T00:00:00Z",
+      "2023-04-14T00:00:00Z"
+    ],
+    "reporting_org_narrative": [
+      "Department of State"
+    ]
+  },
+  {
+    "iati_identifier": "US-GOV-11-SINLEC21GR3305",
+    "title_narrative": [
+      "Countering Wildlife Trafficking in"
+    ],
+    "reporting_org_ref": "US-GOV-11",
+    "transaction_value": [
+      2008503.0,
+      125258.0,
+      226330.0,
+      376507.0,
+      153219.0,
+      12831.0,
+      61677.0,
+      132747.0,
+      3805.0,
+      118726.0,
+      66405.0,
+      128870.0
+    ],
+    "activity_date_type": [
+      "1",
+      "2",
+      "3",
+      "4"
+    ],
+    "activity_status_code": "3",
+    "description_narrative": [
+      "To build forensics capacity, increase prosecutions of wildlife trafficking cases, and improve coordination within Namibia and countries within KAZA"
+    ],
+    "activity_date_iso_date": [
+      "2021-10-01T00:00:00Z",
+      "2021-10-01T00:00:00Z",
+      "2024-11-21T00:00:00Z",
+      "2024-11-21T00:00:00Z"
+    ],
+    "reporting_org_narrative": [
+      "Department of State"
+    ]
+  },
+  {
+    "iati_identifier": "US-GOV-11-Information Redacted-298885",
+    "title_narrative": [
+      "Information Redacted"
+    ],
+    "reporting_org_ref": "US-GOV-11",
+    "transaction_value": [
+      60000.0,
+      -2500.0
+    ],
+    "activity_date_type": [
+      "1",
+      "2",
+      "3",
+      "4"
+    ],
+    "activity_status_code": "3",
+    "description_narrative": [
+      "Information Redacted"
+    ],
+    "activity_date_iso_date": [
+      "2024-10-01T00:00:00Z",
+      "2024-10-01T00:00:00Z",
+      "2024-12-16T00:00:00Z",
+      "2024-12-16T00:00:00Z"
+    ],
+    "reporting_org_narrative": [
+      "Department of State"
+    ]
+  },
+  {
+    "iati_identifier": "US-GOV-11-SAQMMA15L1871",
+    "title_narrative": [
+      "Advisory Support to Petroleum Reg Auth in Liberia"
+    ],
+    "reporting_org_ref": "US-GOV-11",
+    "transaction_value": [
+      -155424.0
+    ],
+    "activity_date_type": [
+      "1",
+      "2",
+      "3",
+      "4"
+    ],
+    "activity_status_code": "3",
+    "description_narrative": [
+      "Information Redacted. Information has been redacted in accordance with the two principled exceptions defined in the Foreign Aid Transparency and Accountability Act (FATAA) of 2016: the health and secu"
+    ],
+    "activity_date_iso_date": [
+      "2015-09-15T00:00:00Z",
+      "2015-09-15T00:00:00Z",
+      "2017-06-30T00:00:00Z",
+      "2017-06-30T00:00:00Z"
+    ],
+    "reporting_org_narrative": [
+      "Department of State"
+    ]
+  },
+  {
+    "iati_identifier": "US-GOV-11-86077",
+    "title_narrative": [
+      "International Narcotics Control and Law Enforcement: Relief and Recovery Funds"
+    ],
+    "reporting_org_ref": "US-GOV-11",
+    "transaction_value": [
+      13500000.0,
+      1500000.0,
+      519316.0,
+      593245.0,
+      5000000.0
+    ],
+    "activity_date_type": [
+      "1",
+      "2",
+      "3",
+      "4"
+    ],
+    "activity_status_code": "3",
+    "description_narrative": [
+      "International Narcotics Control and Law Enforcement (INCLE) advances U.S. national security interests by supporting bilateral, regional, and global programs that enable partners and allies to manage and address transnational threats at their source. INCLE programs mitigate security threats posed by all forms of transnational crime, including production and trafficking of narcotics, and strengthen partner countries' criminal justice systems. These programs improve the ability of partner countries to cooperate effectively with U.S. law enforcement, and address the underlying conditions, such as corruption and weak rule of law, that foster state fragility."
+    ],
+    "activity_date_iso_date": [
+      "2017-10-01T00:00:00Z",
+      "2017-10-01T00:00:00Z",
+      "2018-09-30T00:00:00Z",
+      "2018-09-30T00:00:00Z"
+    ],
+    "reporting_org_narrative": [
+      "Department of State"
+    ]
+  },
+  {
+    "iati_identifier": "US-GOV-11-1.8177E+17-269267",
+    "title_narrative": [
+      "Grants, Subsidies and Contributions - Cooperative Agreements"
+    ],
+    "reporting_org_ref": "US-GOV-11",
+    "transaction_value": [
+      36424.0
+    ],
+    "activity_date_type": [
+      "1",
+      "2",
+      "3",
+      "4"
+    ],
+    "activity_status_code": "3",
+    "description_narrative": [
+      "Grants, Subsidies and Contributions - Cooperative Agreements"
+    ],
+    "activity_date_iso_date": [
+      "2017-10-01T00:00:00Z",
+      "2017-10-01T00:00:00Z",
+      "2018-09-30T00:00:00Z",
+      "2018-09-30T00:00:00Z"
+    ],
+    "reporting_org_narrative": [
+      "Department of State"
+    ]
+  },
+  {
+    "iati_identifier": "US-GOV-11-N/A ADMIN-97451",
+    "title_narrative": [
+      "DOS Miscellaneous Goods, Services, and Operations Maintenance"
+    ],
+    "reporting_org_ref": "US-GOV-11",
+    "transaction_value": [
+      40400.0,
+      23760.0,
+      5760.0,
+      9000.0,
+      9000.0
+    ],
+    "activity_date_type": [
+      "1",
+      "2",
+      "3",
+      "4"
+    ],
+    "activity_status_code": "3",
+    "description_narrative": [
+      "Administrative costs and operating expenses of DOS contributing to Miscellaneous Goods, Services, and Operations Maintenance."
+    ],
+    "activity_date_iso_date": [
+      "2022-10-01T00:00:00Z",
+      "2022-10-01T00:00:00Z",
+      "2023-09-30T00:00:00Z",
+      "2023-09-30T00:00:00Z"
+    ],
+    "reporting_org_narrative": [
+      "Department of State"
+    ]
+  },
+  {
+    "iati_identifier": "US-GOV-11-SINLEC18CA2028-89805",
+    "title_narrative": [
+      "INL Liberia Justice Public Awareness Campaign"
+    ],
+    "reporting_org_ref": "US-GOV-11",
+    "transaction_value": [
+      155967.0,
+      146305.0,
+      349335.0,
+      349335.0,
+      245320.0,
+      245320.0,
+      -245320.0,
+      60556.0,
+      326242.0
+    ],
+    "activity_date_type": [
+      "1",
+      "2",
+      "3",
+      "4"
+    ],
+    "activity_status_code": "3",
+    "description_narrative": [
+      "INL Liberia Justice Public Awareness Campaign Covers awards where the principle purpose of the relationship is the transfer of money, property, services, or anything of value to the state, local government, or other recipient to accomplish a public purpose of support or stimulation authorized by the Federal statute."
+    ],
+    "activity_date_iso_date": [
+      "2020-10-01T00:00:00Z",
+      "2020-10-01T00:00:00Z",
+      "2023-08-17T00:00:00Z",
+      "2023-08-17T00:00:00Z"
+    ],
+    "reporting_org_narrative": [
+      "Department of State"
+    ]
+  },
+  {
+    "iati_identifier": "US-GOV-11-Information Redacted-298539",
+    "title_narrative": [
+      "Information Redacted"
+    ],
+    "reporting_org_ref": "US-GOV-11",
+    "transaction_value": [
+      36960.0,
+      9200.0
+    ],
+    "activity_date_type": [
+      "1",
+      "2",
+      "3",
+      "4"
+    ],
+    "activity_status_code": "3",
+    "description_narrative": [
+      "Information Redacted"
+    ],
+    "activity_date_iso_date": [
+      "2023-10-01T00:00:00Z",
+      "2023-10-01T00:00:00Z",
+      "2024-03-20T00:00:00Z",
+      "2024-03-20T00:00:00Z"
+    ],
+    "reporting_org_narrative": [
+      "Department of State"
+    ]
+  },
+  {
+    "iati_identifier": "US-GOV-11-SLI60020GR0026-74686",
+    "title_narrative": [
+      "LOOK TO JESUS MEDICAL LABORATORY CLINIC"
+    ],
+    "reporting_org_ref": "US-GOV-11",
+    "transaction_value": [
+      6425.0,
+      2540.0
+    ],
+    "activity_date_type": [
+      "1",
+      "2",
+      "3",
+      "4"
+    ],
+    "activity_status_code": "3",
+    "description_narrative": [
+      "LOOK TO JESUS MEDICAL LABORATORY CLINIC"
+    ],
+    "activity_date_iso_date": [
+      "2020-10-01T00:00:00Z",
+      "2020-10-01T00:00:00Z",
+      "2021-04-08T00:00:00Z",
+      "2021-04-08T00:00:00Z"
+    ],
+    "reporting_org_narrative": [
+      "Department of State"
+    ]
+  },
+  {
+    "iati_identifier": "US-GOV-11-105408597 19AQMM20P2241",
+    "title_narrative": [
+      "Export Control and Related Border Security Assistance, 20-007 Hacking for ISN Initiative BMNT Sole Source"
+    ],
+    "reporting_org_ref": "US-GOV-11",
+    "transaction_value": [
+      500.0,
+      1250.0
+    ],
+    "activity_date_type": [
+      "1",
+      "2",
+      "3",
+      "4"
+    ],
+    "activity_status_code": "3",
+    "description_narrative": [
+      "20-007 Hacking for ISN Initiative BMNT Sole Source"
+    ],
+    "activity_date_iso_date": [
+      "2019-10-01T00:00:00Z",
+      "2019-10-01T00:00:00Z",
+      "2020-09-30T00:00:00Z",
+      "2020-09-30T00:00:00Z"
+    ],
+    "reporting_org_narrative": [
+      "Department of State"
+    ]
+  },
+  {
+    "iati_identifier": "US-GOV-11-SLI60024IN0012",
+    "title_narrative": [
+      "Information Redacted"
+    ],
+    "reporting_org_ref": "US-GOV-11",
+    "transaction_value": [
+      1190.0,
+      1190.0
+    ],
+    "activity_date_type": [
+      "1",
+      "2",
+      "3",
+      "4"
+    ],
+    "activity_status_code": "3",
+    "description_narrative": [
+      "DESCRIPTION MASKED FOR PII PURPOSES"
+    ],
+    "activity_date_iso_date": [
+      "2023-10-01T00:00:00Z",
+      "2023-10-01T00:00:00Z",
+      "2024-09-25T00:00:00Z",
+      "2024-09-25T00:00:00Z"
+    ],
+    "reporting_org_narrative": [
+      "Department of State"
+    ]
+  },
+  {
+    "iati_identifier": "US-GOV-11-Information Redacted-298169",
+    "title_narrative": [
+      "Information Redacted"
+    ],
+    "reporting_org_ref": "US-GOV-11",
+    "transaction_value": [
+      37772.0,
+      25000.0
+    ],
+    "activity_date_type": [
+      "1",
+      "2",
+      "3",
+      "4"
+    ],
+    "activity_status_code": "3",
+    "description_narrative": [
+      "Information Redacted"
+    ],
+    "activity_date_iso_date": [
+      "2022-10-01T00:00:00Z",
+      "2022-10-01T00:00:00Z",
+      "2023-05-02T00:00:00Z",
+      "2023-05-02T00:00:00Z"
+    ],
+    "reporting_org_narrative": [
+      "Department of State"
+    ]
+  },
+  {
+    "iati_identifier": "US-GOV-11-S-SJTIP-14-GR-1008",
+    "title_narrative": [
+      "Enhancing TIP Victim Services Program: Liberia"
+    ],
+    "reporting_org_ref": "US-GOV-11",
+    "transaction_value": [
+      500000.0,
+      500000.0
+    ],
+    "activity_date_type": [
+      "1",
+      "2",
+      "3",
+      "4"
+    ],
+    "activity_status_code": "3",
+    "description_narrative": [
+      "WHI is supporting the establishment and institutionalization of a national referral mechanism in Liberia through educational roundtables that bring together key officials to develop and promote standard operating procedures for victim identification and referral. Additionally, WHI is enhancing victim protection efforts in Liberia by providing short-term emergency shelter and holistic case management and reintegration assistance for up to 50 victims of trafficking, and developing a national anti-trafficking hotline."
+    ],
+    "activity_date_iso_date": [
+      "2014-10-01T00:00:00Z",
+      "2014-10-01T00:00:00Z",
+      "2016-09-30T00:00:00Z",
+      "2016-09-30T00:00:00Z"
+    ],
+    "reporting_org_narrative": [
+      "Department of State"
+    ]
+  },
+  {
+    "iati_identifier": "US-GOV-11-SPRMCO17VC2004-112276",
+    "title_narrative": [
+      "Contribution to International Committee of the Red Cross (ICRC)'s Lake Chad Region Budget Extension Appeal"
+    ],
+    "reporting_org_ref": "US-GOV-11",
+    "transaction_value": [
+      520000.0,
+      150000.0,
+      330000.0,
+      5800000.0
+    ],
+    "activity_date_type": [
+      "1",
+      "2",
+      "3",
+      "4"
+    ],
+    "activity_status_code": "3",
+    "description_narrative": [
+      "United States Population Migration and Refugee Assistance, Appropriation 1143. Protection and assistance needs of refugees, migrants and conflict victims worldwide. [International Committee of the Red Cross]"
+    ],
+    "activity_date_iso_date": [
+      "2016-10-01T00:00:00Z",
+      "2016-10-01T00:00:00Z",
+      "2017-09-30T00:00:00Z",
+      "2017-09-30T00:00:00Z"
+    ],
+    "reporting_org_narrative": [
+      "Department of State"
+    ]
+  },
+  {
+    "iati_identifier": "US-GOV-11-SLI60025IN0001",
+    "title_narrative": [
+      "Information Redacted"
+    ],
+    "reporting_org_ref": "US-GOV-11",
+    "transaction_value": [
+      459.0,
+      459.0
+    ],
+    "activity_date_type": [
+      "1",
+      "2",
+      "3",
+      "4"
+    ],
+    "activity_status_code": "3",
+    "description_narrative": [
+      "DESCRIPTION MASKED FOR PII PURPOSES"
+    ],
+    "activity_date_iso_date": [
+      "2024-10-01T00:00:00Z",
+      "2024-10-01T00:00:00Z",
+      "2024-12-04T00:00:00Z",
+      "2024-12-04T00:00:00Z"
+    ],
+    "reporting_org_narrative": [
+      "Department of State"
+    ]
+  },
+  {
+    "iati_identifier": "US-GOV-11-Information Redacted-118969",
+    "title_narrative": [
+      "Information Redacted"
+    ],
+    "reporting_org_ref": "US-GOV-11",
+    "transaction_value": [
+      754113.0,
+      97067.0
+    ],
+    "activity_date_type": [
+      "1",
+      "2",
+      "3",
+      "4"
+    ],
+    "activity_status_code": "3",
+    "description_narrative": [
+      "Information Redacted"
+    ],
+    "activity_date_iso_date": [
+      "2023-10-01T00:00:00Z",
+      "2023-10-01T00:00:00Z",
+      "2024-03-06T00:00:00Z",
+      "2024-03-06T00:00:00Z"
+    ],
+    "reporting_org_narrative": [
+      "Department of State"
+    ]
+  },
+  {
+    "iati_identifier": "US-GOV-11-SAQMMA17F4867-274408",
+    "title_narrative": [
+      "Liberia SSR Advisor"
+    ],
+    "reporting_org_ref": "US-GOV-11",
+    "transaction_value": [
+      34874.0
+    ],
+    "activity_date_type": [
+      "1",
+      "2",
+      "3",
+      "4"
+    ],
+    "activity_status_code": "3",
+    "description_narrative": [
+      "Information Redacted. Information has been redacted in accordance with the two principled exceptions defined in the Foreign Aid Transparency and Accountability Act (FATAA) of 2016: the health and secu"
+    ],
+    "activity_date_iso_date": [
+      "2019-10-01T00:00:00Z",
+      "2019-10-01T00:00:00Z",
+      "2020-05-20T00:00:00Z",
+      "2020-05-20T00:00:00Z"
+    ],
+    "reporting_org_narrative": [
+      "Department of State"
+    ]
+  },
+  {
+    "iati_identifier": "US-GOV-11-Information Redacted-98117",
+    "title_narrative": [
+      "Information Redacted"
+    ],
+    "reporting_org_ref": "US-GOV-11",
+    "transaction_value": [
+      59355.0,
+      65967.0,
+      5.0
+    ],
+    "activity_date_type": [
+      "1",
+      "2",
+      "3",
+      "4"
+    ],
+    "activity_status_code": "3",
+    "description_narrative": [
+      "Information Redacted"
+    ],
+    "activity_date_iso_date": [
+      "2022-10-01T00:00:00Z",
+      "2022-10-01T00:00:00Z",
+      "2023-01-24T00:00:00Z",
+      "2023-01-24T00:00:00Z"
+    ],
+    "reporting_org_narrative": [
+      "Department of State"
+    ]
+  },
+  {
+    "iati_identifier": "US-GOV-11-SLI60019GR0004-255600",
+    "title_narrative": [
+      "AFRICAN YOUTH WITH DISABILITIES NETWORK LIBERIA A"
+    ],
+    "reporting_org_ref": "US-GOV-11",
+    "transaction_value": [
+      3150.0
+    ],
+    "activity_date_type": [
+      "1",
+      "2",
+      "3",
+      "4"
+    ],
+    "activity_status_code": "3",
+    "description_narrative": [
+      "AFRICAN YOUTH WITH DISABILITIES NETWORK LIBERIA A"
+    ],
+    "activity_date_iso_date": [
+      "2019-10-01T00:00:00Z",
+      "2019-10-01T00:00:00Z",
+      "2020-05-19T00:00:00Z",
+      "2020-05-19T00:00:00Z"
+    ],
+    "reporting_org_narrative": [
+      "Department of State"
+    ]
+  },
+  {
+    "iati_identifier": "US-GOV-11-N/A ADMIN-97328",
+    "title_narrative": [
+      "DOS Advisory and Assistance Services"
+    ],
+    "reporting_org_ref": "US-GOV-11",
+    "transaction_value": [
+      894344.0,
+      576871.0,
+      -1810332.0,
+      1065280.0,
+      -1163664.0,
+      60313.0,
+      60313.0
+    ],
+    "activity_date_type": [
+      "1",
+      "2",
+      "3",
+      "4"
+    ],
+    "activity_status_code": "3",
+    "description_narrative": [
+      "Administrative costs and operating expenses of DOS contributing to Advisory and Assistance Services."
+    ],
+    "activity_date_iso_date": [
+      "2021-10-01T00:00:00Z",
+      "2021-10-01T00:00:00Z",
+      "2022-09-30T00:00:00Z",
+      "2022-09-30T00:00:00Z"
+    ],
+    "reporting_org_narrative": [
+      "Department of State"
+    ]
+  },
+  {
+    "iati_identifier": "US-GOV-11-SLI60024GR0014",
+    "title_narrative": [
+      "V.D.W.O. for Peace Dev. Multipurpose Farmers s Coop. Socie"
+    ],
+    "reporting_org_ref": "US-GOV-11",
+    "transaction_value": [
+      6640.0,
+      4980.0
+    ],
+    "activity_date_type": [
+      "1",
+      "2",
+      "3",
+      "4"
+    ],
+    "activity_status_code": "3",
+    "description_narrative": [
+      "IMPROVED SANITATION AND INCOME PRODUCTION: PRODUCTION OF AFFORDABLE LATRINES FOR SALE IN SURROUNDING COMMUNITIES"
+    ],
+    "activity_date_iso_date": [
+      "2023-10-01T00:00:00Z",
+      "2023-10-01T00:00:00Z",
+      "2024-11-08T00:00:00Z",
+      "2024-11-08T00:00:00Z"
+    ],
+    "reporting_org_narrative": [
+      "Department of State"
+    ]
+  },
+  {
+    "iati_identifier": "US-GOV-11-291977",
+    "title_narrative": [
+      "Export Control and Related Border Security Assistance, Unspecified"
+    ],
+    "reporting_org_ref": "US-GOV-11",
+    "transaction_value": [
+      950.0,
+      950.0,
+      5838.0,
+      5838.0
+    ],
+    "activity_date_type": [
+      "1",
+      "2",
+      "3",
+      "4"
+    ],
+    "activity_status_code": "3",
+    "description_narrative": [
+      "18-007 ICP Deployment (AQM Fee)"
+    ],
+    "activity_date_iso_date": [
+      "2017-10-01T00:00:00Z",
+      "2017-10-01T00:00:00Z",
+      "2018-09-30T00:00:00Z",
+      "2018-09-30T00:00:00Z"
+    ],
+    "reporting_org_narrative": [
+      "Department of State"
+    ]
+  },
+  {
+    "iati_identifier": "US-GOV-11-SLI60019GR0011-274080",
+    "title_narrative": [
+      "KPALI BLI DEVELOPMENT ORGANIZATION"
+    ],
+    "reporting_org_ref": "US-GOV-11",
+    "transaction_value": [
+      5280.0,
+      4200.0
+    ],
+    "activity_date_type": [
+      "1",
+      "2",
+      "3",
+      "4"
+    ],
+    "activity_status_code": "3",
+    "description_narrative": [
+      "KPALI BLI DEVELOPMENT ORGANIZATION"
+    ],
+    "activity_date_iso_date": [
+      "2018-10-01T00:00:00Z",
+      "2018-10-01T00:00:00Z",
+      "2019-09-30T00:00:00Z",
+      "2019-09-30T00:00:00Z"
+    ],
+    "reporting_org_narrative": [
+      "Department of State"
+    ]
+  },
+  {
+    "iati_identifier": "US-GOV-11-Information Redacted-123013",
+    "title_narrative": [
+      "Information Redacted"
+    ],
+    "reporting_org_ref": "US-GOV-11",
+    "transaction_value": [
+      273549.0,
+      117130.0
+    ],
+    "activity_date_type": [
+      "1",
+      "2",
+      "3",
+      "4"
+    ],
+    "activity_status_code": "3",
+    "description_narrative": [
+      "Information Redacted"
+    ],
+    "activity_date_iso_date": [
+      "2020-10-01T00:00:00Z",
+      "2020-10-01T00:00:00Z",
+      "2021-05-06T00:00:00Z",
+      "2021-05-06T00:00:00Z"
+    ],
+    "reporting_org_narrative": [
+      "Department of State"
+    ]
+  },
+  {
+    "iati_identifier": "US-GOV-11-SLI60019GR0005",
+    "title_narrative": [
+      "BEHWEIN WOMEN EMPOWERMENT INITIATIVE"
+    ],
+    "reporting_org_ref": "US-GOV-11",
+    "transaction_value": [
+      6960.0,
+      5560.0,
+      1400.0
+    ],
+    "activity_date_type": [
+      "1",
+      "2",
+      "3",
+      "4"
+    ],
+    "activity_status_code": "3",
+    "description_narrative": [
+      "BEHWEIN WOMEN EMPOWERMENT INITIATIVE"
+    ],
+    "activity_date_iso_date": [
+      "2018-10-01T00:00:00Z",
+      "2018-10-01T00:00:00Z",
+      "2019-09-30T00:00:00Z",
+      "2019-09-30T00:00:00Z"
+    ],
+    "reporting_org_narrative": [
+      "Department of State"
+    ]
+  },
+  {
+    "iati_identifier": "US-GOV-11-SMO55519GR0012-94071",
+    "title_narrative": [
+      "Enhancing Youth and Women Engagement in the Political Life in Tunisia"
+    ],
+    "reporting_org_ref": "US-GOV-11",
+    "transaction_value": [
+      39263.0,
+      65646.0,
+      -81530.0
+    ],
+    "activity_date_type": [
+      "1",
+      "2",
+      "3",
+      "4"
+    ],
+    "activity_status_code": "3",
+    "description_narrative": [
+      "Raise awareness among youth and women voters and empower active women and youth candidates in the upcoming legislative elections to run for office."
+    ],
+    "activity_date_iso_date": [
+      "2020-10-01T00:00:00Z",
+      "2020-10-01T00:00:00Z",
+      "2022-08-23T00:00:00Z",
+      "2022-08-23T00:00:00Z"
+    ],
+    "reporting_org_narrative": [
+      "Department of State"
+    ]
+  },
+  {
+    "iati_identifier": "US-GOV-11-SLI60019GR0006-284203",
+    "title_narrative": [
+      "YAPUGEANMA WOMEN Inc"
+    ],
+    "reporting_org_ref": "US-GOV-11",
+    "transaction_value": [
+      5000.0,
+      4000.0
+    ],
+    "activity_date_type": [
+      "1",
+      "2",
+      "3",
+      "4"
+    ],
+    "activity_status_code": "3",
+    "description_narrative": [
+      "YAPUGEANMA WOMEN Inc"
+    ],
+    "activity_date_iso_date": [
+      "2018-10-01T00:00:00Z",
+      "2018-10-01T00:00:00Z",
+      "2019-09-30T00:00:00Z",
+      "2019-09-30T00:00:00Z"
+    ],
+    "reporting_org_narrative": [
+      "Department of State"
+    ]
+  },
+  {
+    "iati_identifier": "US-GOV-11-SINLEC19GR0387",
+    "title_narrative": [
+      "Organized Crime Index"
+    ],
+    "reporting_org_ref": "US-GOV-11",
+    "transaction_value": [
+      256532.0,
+      358461.0,
+      252861.0,
+      230626.0,
+      -230626.0,
+      230626.0,
+      750000.0,
+      202007.0,
+      110855.0,
+      1200000.0,
+      257916.0,
+      198653.0,
+      234121.0,
+      323496.0,
+      621627.0,
+      -1325.0
+    ],
+    "activity_date_type": [
+      "1",
+      "2",
+      "3",
+      "4"
+    ],
+    "activity_status_code": "3",
+    "description_narrative": [
+      "This grant will support the continued production of the Global Index of Organized Crime"
+    ],
+    "activity_date_iso_date": [
+      "2020-10-01T00:00:00Z",
+      "2020-10-01T00:00:00Z",
+      "2023-11-07T00:00:00Z",
+      "2023-11-07T00:00:00Z"
+    ],
+    "reporting_org_narrative": [
+      "Department of State"
+    ]
+  },
+  {
+    "iati_identifier": "US-GOV-11-SINLEC22LA0283",
+    "title_narrative": [
+      "FY22 AME UNODC Reinforce the Effectiveness of the"
+    ],
+    "reporting_org_ref": "US-GOV-11",
+    "transaction_value": [
+      1228115.0,
+      1271885.0,
+      1271885.0,
+      1228115.0
+    ],
+    "activity_date_type": [
+      "1",
+      "2",
+      "3",
+      "4"
+    ],
+    "activity_status_code": "3",
+    "description_narrative": [
+      "FY22 AME UNODC Reinforce the Effectiveness of the Liberia La Assistance awards made through Bilateral Agreements, Letters of Agreement, including those established under C-175 authority, and Fulbright Commission agreements. The obligation of funds does not constitute a bulk obligation where funds will later be sub-obligated through other instruments."
+    ],
+    "activity_date_iso_date": [
+      "2021-10-01T00:00:00Z",
+      "2021-10-01T00:00:00Z",
+      "2022-09-27T00:00:00Z",
+      "2022-09-27T00:00:00Z"
+    ],
+    "reporting_org_narrative": [
+      "Department of State"
+    ]
+  },
+  {
+    "iati_identifier": "US-GOV-11-N/A ADMIN-87328",
+    "title_narrative": [
+      "DOS Advisory and Assistance Services"
+    ],
+    "reporting_org_ref": "US-GOV-11",
+    "transaction_value": [
+      35576.0,
+      11362.0,
+      9288.0,
+      1315.0,
+      11926.0,
+      -1729.0,
+      3501.0,
+      2694.0,
+      815.0,
+      58568.0,
+      43323.0,
+      10962.0,
+      93266.0,
+      53431.0,
+      24720.0,
+      -4418.0,
+      8664.0,
+      127474.0,
+      483629.0,
+      145757.0,
+      -35576.0,
+      374963.0,
+      -89481.0,
+      321140.0,
+      370114.0,
+      5284.0,
+      2497209.0,
+      32765.0,
+      147423.0,
+      919866.0,
+      8175.0,
+      372625.0,
+      -415911.0,
+      761175.0,
+      2485794.0,
+      576097.0,
+      303743.0,
+      355939.0,
+      909017.0,
+      13255.0,
+      5144.0,
+      8116.0,
+      -1.0
+    ],
+    "activity_date_type": [
+      "1",
+      "2",
+      "3",
+      "4"
+    ],
+    "activity_status_code": "3",
+    "description_narrative": [
+      "Administrative costs and operating expenses of DOS contributing to Advisory and Assistance Services."
+    ],
+    "activity_date_iso_date": [
+      "2020-10-01T00:00:00Z",
+      "2020-10-01T00:00:00Z",
+      "2021-09-30T00:00:00Z",
+      "2021-09-30T00:00:00Z"
+    ],
+    "reporting_org_narrative": [
+      "Department of State"
+    ]
+  },
+  {
+    "iati_identifier": "US-GOV-11-Information Redacted-123156",
+    "title_narrative": [
+      "Information Redacted"
+    ],
+    "reporting_org_ref": "US-GOV-11",
+    "transaction_value": [
+      120142.0,
+      156985.0
+    ],
+    "activity_date_type": [
+      "1",
+      "2",
+      "3",
+      "4"
+    ],
+    "activity_status_code": "3",
+    "description_narrative": [
+      "Information Redacted"
+    ],
+    "activity_date_iso_date": [
+      "2022-10-01T00:00:00Z",
+      "2022-10-01T00:00:00Z",
+      "2022-10-11T00:00:00Z",
+      "2022-10-11T00:00:00Z"
+    ],
+    "reporting_org_narrative": [
+      "Department of State"
+    ]
+  },
+  {
+    "iati_identifier": "US-GOV-11-SLI60023GR0029",
+    "title_narrative": [
+      "U.S. Ambassador's Special Self-Help Program: Liberia Renaissance Education Complex"
+    ],
+    "reporting_org_ref": "US-GOV-11",
+    "transaction_value": [
+      4590.0,
+      3446.0,
+      1145.0
+    ],
+    "activity_date_type": [
+      "1",
+      "2",
+      "3",
+      "4"
+    ],
+    "activity_status_code": "3",
+    "description_narrative": [
+      "PURCHASE MATERIALS FOR THE CONSTRUCTION OF A 12-ROOM PIGPEN TO PROMOTE LIVESTOCK PRODUCTION"
+    ],
+    "activity_date_iso_date": [
+      "2022-10-01T00:00:00Z",
+      "2022-10-01T00:00:00Z",
+      "2024-04-03T00:00:00Z",
+      "2024-04-03T00:00:00Z"
+    ],
+    "reporting_org_narrative": [
+      "Department of State"
+    ]
+  },
+  {
+    "iati_identifier": "US-GOV-11-INFORMATION REDACTED-81623",
+    "title_narrative": [
+      "Information Redacted"
+    ],
+    "reporting_org_ref": "US-GOV-11",
+    "transaction_value": [
+      144335.0,
+      225000.0,
+      2348.0,
+      57774.0,
+      496279.0,
+      230876.0,
+      18399.0
+    ],
+    "activity_date_type": [
+      "1",
+      "2",
+      "3",
+      "4"
+    ],
+    "activity_status_code": "3",
+    "description_narrative": [
+      "Information Redacted"
+    ],
+    "activity_date_iso_date": [
+      "2023-10-01T00:00:00Z",
+      "2023-10-01T00:00:00Z",
+      "2024-05-13T00:00:00Z",
+      "2024-05-13T00:00:00Z"
+    ],
+    "reporting_org_narrative": [
+      "Department of State"
+    ]
+  },
+  {
+    "iati_identifier": "US-GOV-11-SLI60024GR0022",
+    "title_narrative": [
+      "A.B. Dennis Foundation School of Dignity"
+    ],
+    "reporting_org_ref": "US-GOV-11",
+    "transaction_value": [
+      6947.0,
+      5210.0
+    ],
+    "activity_date_type": [
+      "1",
+      "2",
+      "3",
+      "4"
+    ],
+    "activity_status_code": "3",
+    "description_narrative": [
+      "SCHOOL RENOVATION: PURCHASE MATERIALS TO RENOVATE A COMMUNITY SCHOOL, TO PROMOTE EARLY CHILDHOOD ENROLLMENT."
+    ],
+    "activity_date_iso_date": [
+      "2023-10-01T00:00:00Z",
+      "2023-10-01T00:00:00Z",
+      "2024-11-07T00:00:00Z",
+      "2024-11-07T00:00:00Z"
+    ],
+    "reporting_org_narrative": [
+      "Department of State"
+    ]
+  },
+  {
+    "iati_identifier": "US-GOV-11-SSJTIP19GR0009-87891",
+    "title_narrative": [
+      "Enhancing Criminal Justice Response"
+    ],
+    "reporting_org_ref": "US-GOV-11",
+    "transaction_value": [
+      102000.0,
+      208000.0,
+      46000.0,
+      13000.0,
+      219000.0,
+      69000.0,
+      500000.0
+    ],
+    "activity_date_type": [
+      "1",
+      "2",
+      "3",
+      "4"
+    ],
+    "activity_status_code": "3",
+    "description_narrative": [
+      "Enhancing Effective and Victim-Centered Criminal Justice Responses to Trafficking in Persons in Eastern Africa"
+    ],
+    "activity_date_iso_date": [
+      "2020-10-01T00:00:00Z",
+      "2020-10-01T00:00:00Z",
+      "2024-07-17T00:00:00Z",
+      "2024-07-17T00:00:00Z"
+    ],
+    "reporting_org_narrative": [
+      "Department of State"
+    ]
+  },
+  {
+    "iati_identifier": "US-GOV-11-SAQMMA17F4867-274404",
+    "title_narrative": [
+      "Liberia SSR Advisor"
+    ],
+    "reporting_org_ref": "US-GOV-11",
+    "transaction_value": [
+      443827.0
+    ],
+    "activity_date_type": [
+      "1",
+      "2",
+      "3",
+      "4"
+    ],
+    "activity_status_code": "3",
+    "description_narrative": [
+      "Information Redacted. Information has been redacted in accordance with the two principled exceptions defined in the Foreign Aid Transparency and Accountability Act (FATAA) of 2016: the health and secu"
+    ],
+    "activity_date_iso_date": [
+      "2017-09-30T00:00:00Z",
+      "2017-09-30T00:00:00Z",
+      "2020-09-29T00:00:00Z",
+      "2020-09-29T00:00:00Z"
+    ],
+    "reporting_org_narrative": [
+      "Department of State"
+    ]
+  },
+  {
+    "iati_identifier": "US-GOV-11-N/A ADMIN-117729",
+    "title_narrative": [
+      "DOS Communications, Utilities, and Rental Payments"
+    ],
+    "reporting_org_ref": "US-GOV-11",
+    "transaction_value": [
+      75710.0,
+      39560.0,
+      74199.0
+    ],
+    "activity_date_type": [
+      "1",
+      "2",
+      "3",
+      "4"
+    ],
+    "activity_status_code": "3",
+    "description_narrative": [
+      "Administrative costs and operating expenses of DOS contributing to Communications, Utilities, and Rental Payments."
+    ],
+    "activity_date_iso_date": [
+      "2022-10-01T00:00:00Z",
+      "2022-10-01T00:00:00Z",
+      "2023-09-30T00:00:00Z",
+      "2023-09-30T00:00:00Z"
+    ],
+    "reporting_org_narrative": [
+      "Department of State"
+    ]
+  },
+  {
+    "iati_identifier": "US-GOV-11-SLI60022GR0016",
+    "title_narrative": [
+      "U.S. Ambassador's Special Self-Help Program: Disabled Movement for Progress"
+    ],
+    "reporting_org_ref": "US-GOV-11",
+    "transaction_value": [
+      4000.0,
+      3000.0,
+      -1000.0
+    ],
+    "activity_date_type": [
+      "1",
+      "2",
+      "3",
+      "4"
+    ],
+    "activity_status_code": "3",
+    "description_narrative": [
+      "Construction of a mini shed to shelter and breed 65 animals, including goats, sheep, and ducks, for income generation."
+    ],
+    "activity_date_iso_date": [
+      "2021-10-01T00:00:00Z",
+      "2021-10-01T00:00:00Z",
+      "2023-09-13T00:00:00Z",
+      "2023-09-13T00:00:00Z"
+    ],
+    "reporting_org_narrative": [
+      "Department of State"
+    ]
+  },
+  {
+    "iati_identifier": "US-GOV-11-N/A ADMIN-296304",
+    "title_narrative": [
+      "DOS Acquisition Management Charges and Fees"
+    ],
+    "reporting_org_ref": "US-GOV-11",
+    "transaction_value": [
+      20.0,
+      239.0,
+      1817.0,
+      7314.0,
+      1609.0,
+      1042.0,
+      275.0,
+      165.0,
+      1834.0
+    ],
+    "activity_date_type": [
+      "1",
+      "2",
+      "3",
+      "4"
+    ],
+    "activity_status_code": "3",
+    "description_narrative": [
+      "Administrative costs and operating expenses of DOS covering Aquisition Management Charges and Fees."
+    ],
+    "activity_date_iso_date": [
+      "2020-10-01T00:00:00Z",
+      "2020-10-01T00:00:00Z",
+      "2021-09-30T00:00:00Z",
+      "2021-09-30T00:00:00Z"
+    ],
+    "reporting_org_narrative": [
+      "Department of State"
+    ]
+  },
+  {
+    "iati_identifier": "US-GOV-11-SLI60024GR0018",
+    "title_narrative": [
+      "Action for Girls Empowerment"
+    ],
+    "reporting_org_ref": "US-GOV-11",
+    "transaction_value": [
+      4778.0,
+      3584.0
+    ],
+    "activity_date_type": [
+      "1",
+      "2",
+      "3",
+      "4"
+    ],
+    "activity_status_code": "3",
+    "description_narrative": [
+      "COMMUNITY LATRINE IN MARGIBI: CONSTRUCTION OF COMMUNITY LATRINE AND HANDWASHING STATIONS IN SCHOOL INCLUDING HEALTH EDUCATION AND GIRL-FRIENDLY SPACES WITH SANITARY SUPPLIES"
+    ],
+    "activity_date_iso_date": [
+      "2023-10-01T00:00:00Z",
+      "2023-10-01T00:00:00Z",
+      "2024-11-08T00:00:00Z",
+      "2024-11-08T00:00:00Z"
+    ],
+    "reporting_org_narrative": [
+      "Department of State"
+    ]
+  },
+  {
+    "iati_identifier": "US-GOV-11-N/A ADMIN-264497",
+    "title_narrative": [
+      "DOS Miscellaneous Goods, Services, and Operations Maintenance"
+    ],
+    "reporting_org_ref": "US-GOV-11",
+    "transaction_value": [
+      3704.0,
+      11.0
+    ],
+    "activity_date_type": [
+      "1",
+      "2",
+      "3",
+      "4"
+    ],
+    "activity_status_code": "3",
+    "description_narrative": [
+      "Administrative costs and operating expenses of DOS contributing to Miscellaneous Goods, Services, and Operations Maintenance."
+    ],
+    "activity_date_iso_date": [
+      "2016-10-01T00:00:00Z",
+      "2016-10-01T00:00:00Z",
+      "2017-09-30T00:00:00Z",
+      "2017-09-30T00:00:00Z"
+    ],
+    "reporting_org_narrative": [
+      "Department of State"
+    ]
+  },
+  {
+    "iati_identifier": "US-GOV-11-SPRMCO13VC1001-113665",
+    "title_narrative": [
+      "Initial Contribution Towards United Nations High Commissioner for Refugees (UNHCR)s Africa Annual Budget Activities Liberia"
+    ],
+    "reporting_org_ref": "US-GOV-11",
+    "transaction_value": [
+      5100000.0
+    ],
+    "activity_date_type": [
+      "1",
+      "2",
+      "3",
+      "4"
+    ],
+    "activity_status_code": "3",
+    "description_narrative": [
+      "United States Population Migration and Refugee Assistance, Appropriation 1143. Protection and assistance needs of refugees, migrants and conflict victims worldwide. [United Nations Office of the United Nations High Commissioner for Refugees]"
+    ],
+    "activity_date_iso_date": [
+      "2012-10-01T00:00:00Z",
+      "2012-10-01T00:00:00Z",
+      "2013-09-30T00:00:00Z",
+      "2013-09-30T00:00:00Z"
+    ],
+    "reporting_org_narrative": [
+      "Department of State"
+    ]
+  },
+  {
+    "iati_identifier": "US-GOV-11-SPRMCO17VC1029-116832",
+    "title_narrative": [
+      "United Nations High Commissioner for Refugees (UNHCR) Second Tranche Contribution - 2017 Global Appeal Update - Four Famines"
+    ],
+    "reporting_org_ref": "US-GOV-11",
+    "transaction_value": [
+      2100000.0,
+      13400000.0,
+      3400000.0,
+      2900000.0,
+      5300000.0,
+      10800000.0,
+      9400000.0,
+      18700000.0,
+      6100000.0
+    ],
+    "activity_date_type": [
+      "1",
+      "2",
+      "3",
+      "4"
+    ],
+    "activity_status_code": "3",
+    "description_narrative": [
+      "United States Population Migration and Refugee Assistance, Appropriation 1143. Protection and assistance needs of refugees, migrants and conflict victims worldwide. [United Nations Office of the United Nations High Commissioner for Refugees]"
+    ],
+    "activity_date_iso_date": [
+      "2016-10-01T00:00:00Z",
+      "2016-10-01T00:00:00Z",
+      "2017-09-30T00:00:00Z",
+      "2017-09-30T00:00:00Z"
+    ],
+    "reporting_org_narrative": [
+      "Department of State"
+    ]
+  },
+  {
+    "iati_identifier": "US-GOV-11-SLI60024GR0013",
+    "title_narrative": [
+      "Mother of Light Oum el Nour Liberia"
+    ],
+    "reporting_org_ref": "US-GOV-11",
+    "transaction_value": [
+      6895.0,
+      5170.0
+    ],
+    "activity_date_type": [
+      "1",
+      "2",
+      "3",
+      "4"
+    ],
+    "activity_status_code": "3",
+    "description_narrative": [
+      "SUBSTANCE ABUSE TREATMENT: AGRICULTURAL PROJECT SUPPORTING YOUTH REHABILITATION FROM SUBSTANCE USE DISORDERS, UTILIZING LOCAL EXPERTISE AND SOLAR TECHNOLOGY"
+    ],
+    "activity_date_iso_date": [
+      "2023-10-01T00:00:00Z",
+      "2023-10-01T00:00:00Z",
+      "2024-11-07T00:00:00Z",
+      "2024-11-07T00:00:00Z"
+    ],
+    "reporting_org_narrative": [
+      "Department of State"
+    ]
+  },
+  {
+    "iati_identifier": "US-GOV-11-Information Redacted-118990",
+    "title_narrative": [
+      "Information Redacted"
+    ],
+    "reporting_org_ref": "US-GOV-11",
+    "transaction_value": [
+      22693.0,
+      -42786.0,
+      6796.0,
+      304000.0
+    ],
+    "activity_date_type": [
+      "1",
+      "2",
+      "3",
+      "4"
+    ],
+    "activity_status_code": "3",
+    "description_narrative": [
+      "Information Redacted"
+    ],
+    "activity_date_iso_date": [
+      "2023-10-01T00:00:00Z",
+      "2023-10-01T00:00:00Z",
+      "2024-04-09T00:00:00Z",
+      "2024-04-09T00:00:00Z"
+    ],
+    "reporting_org_narrative": [
+      "Department of State"
+    ]
+  },
+  {
+    "iati_identifier": "US-GOV-11-SLI60025IN0006",
+    "title_narrative": [
+      "Liberia BCR Robertsport Water Project Information Redacted"
+    ],
+    "reporting_org_ref": "US-GOV-11",
+    "transaction_value": [
+      3792.0,
+      3792.0
+    ],
+    "activity_date_type": [
+      "1",
+      "2",
+      "3",
+      "4"
+    ],
+    "activity_status_code": "3",
+    "description_narrative": [
+      "Liberia BCR Robertsport Water Project Isaac Kpehe Rogers"
+    ],
+    "activity_date_iso_date": [
+      "2024-10-01T00:00:00Z",
+      "2024-10-01T00:00:00Z",
+      "2024-12-17T00:00:00Z",
+      "2024-12-17T00:00:00Z"
+    ],
+    "reporting_org_narrative": [
+      "Department of State"
+    ]
+  },
+  {
+    "iati_identifier": "US-GOV-11-Information Redacted-302316",
+    "title_narrative": [
+      "Information Redacted"
+    ],
+    "reporting_org_ref": "US-GOV-11",
+    "transaction_value": [
+      195858.0,
+      541628.0
+    ],
+    "activity_date_type": [
+      "1",
+      "2",
+      "3",
+      "4"
+    ],
+    "activity_status_code": "3",
+    "description_narrative": [
+      "Information Redacted"
+    ],
+    "activity_date_iso_date": [
+      "2020-10-01T00:00:00Z",
+      "2020-10-01T00:00:00Z",
+      "2021-03-30T00:00:00Z",
+      "2021-03-30T00:00:00Z"
+    ],
+    "reporting_org_narrative": [
+      "Department of State"
+    ]
+  },
+  {
+    "iati_identifier": "US-GOV-11-N/A ADMIN-93957",
+    "title_narrative": [
+      "DOS Miscellaneous Goods, Services, and Operations Maintenance"
+    ],
+    "reporting_org_ref": "US-GOV-11",
+    "transaction_value": [
+      89122.0,
+      16414.0,
+      8454.0,
+      13165.0,
+      11489.0,
+      12345.0,
+      15697.0,
+      1640.0,
+      -89122.0,
+      6270.0,
+      28364.0
+    ],
+    "activity_date_type": [
+      "1",
+      "2",
+      "3",
+      "4"
+    ],
+    "activity_status_code": "3",
+    "description_narrative": [
+      "Administrative costs and operating expenses of DOS contributing to Miscellaneous Goods, Services, and Operations Maintenance."
+    ],
+    "activity_date_iso_date": [
+      "2020-10-01T00:00:00Z",
+      "2020-10-01T00:00:00Z",
+      "2021-09-30T00:00:00Z",
+      "2021-09-30T00:00:00Z"
+    ],
+    "reporting_org_narrative": [
+      "Department of State"
+    ]
+  },
+  {
+    "iati_identifier": "US-GOV-11-SINLEC24LA0183",
+    "title_narrative": [
+      "FY24 AME IDLO Improving the Justice Chain for Information Redacted Case Prog"
+    ],
+    "reporting_org_ref": "US-GOV-11",
+    "transaction_value": [
+      1000000.0,
+      1000000.0
+    ],
+    "activity_date_type": [
+      "1",
+      "2",
+      "3",
+      "4"
+    ],
+    "activity_status_code": "3",
+    "description_narrative": [
+      "FY24 AME IDLO Improving the Justice Chain for Information Redacted Case Prog"
+    ],
+    "activity_date_iso_date": [
+      "2023-10-01T00:00:00Z",
+      "2023-10-01T00:00:00Z",
+      "2024-09-16T00:00:00Z",
+      "2024-09-16T00:00:00Z"
+    ],
+    "reporting_org_narrative": [
+      "Department of State"
+    ]
+  },
+  {
+    "iati_identifier": "US-GOV-11-SINLEC18CA2004",
+    "title_narrative": [
+      "INL Liberia Police Strategic Communications"
+    ],
+    "reporting_org_ref": "US-GOV-11",
+    "transaction_value": [
+      112626.0,
+      133826.0,
+      108916.0,
+      178458.0
+    ],
+    "activity_date_type": [
+      "1",
+      "2",
+      "3",
+      "4"
+    ],
+    "activity_status_code": "3",
+    "description_narrative": [
+      "Build Liberian National Police capacity for effective public and media engagement"
+    ],
+    "activity_date_iso_date": [
+      "2020-10-01T00:00:00Z",
+      "2020-10-01T00:00:00Z",
+      "2021-06-10T00:00:00Z",
+      "2021-06-10T00:00:00Z"
+    ],
+    "reporting_org_narrative": [
+      "Department of State"
+    ]
+  }
+]
