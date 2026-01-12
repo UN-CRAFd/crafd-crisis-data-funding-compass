@@ -304,6 +304,25 @@ def nest_project_agencies(
     return enhanced
 
 
+def load_iati_data() -> Dict[str, Dict[str, Any]]:
+    """Load IATI data if available.
+    
+    Returns:
+        Dictionary mapping org_key to IATI data, or empty dict if not available
+    """
+    iati_path = DATA_DIR / "iati-data.json"
+    if not iati_path.exists():
+        print("Note: IATI data not found (run 05_fetch_iati.py to fetch)")
+        return {}
+    
+    try:
+        with open(iati_path, "r", encoding="utf-8") as f:
+            return json.load(f)
+    except Exception as e:
+        print(f"Warning: Could not load IATI data: {e}")
+        return {}
+
+
 def main():
     """Main execution function."""
     script_name = "02_build_nested_data"
@@ -314,10 +333,13 @@ def main():
     organizations = load_json_file("organizations-table.json")
     agencies = load_json_file("agencies-table.json")
     projects = load_json_file("ecosystem-table.json")
+    iati_data = load_iati_data()
     
     log(script_name, f"Loaded {len(organizations)} organizations")
     log(script_name, f"Loaded {len(agencies)} agencies")
     log(script_name, f"Loaded {len(projects)} projects")
+    if iati_data:
+        log(script_name, f"Loaded IATI data for {len(iati_data)} organizations")
     
     # Build indices
     agencies_by_id, agencies_by_name = build_agency_indices(agencies)
@@ -344,6 +366,10 @@ def main():
         matched_projects = match_projects(str(org_name or ""), str(org_id or ""), projects_by_org)
         enhanced_projects = nest_project_agencies(matched_projects, agencies_by_id)
         
+        # Get IATI data if available
+        org_key = org_fields.get("org_key", org_id)
+        org_iati_data = iati_data.get(str(org_key))
+        
         # Build nested entry
         entry = {
             "id": org_id,
@@ -353,6 +379,10 @@ def main():
             "projects": enhanced_projects,
             "donor_countries": sorted(list(donor_countries)),
         }
+        
+        # Add IATI data if available
+        if org_iati_data:
+            entry["iati_data"] = org_iati_data
         
         nested.append(entry)
     
