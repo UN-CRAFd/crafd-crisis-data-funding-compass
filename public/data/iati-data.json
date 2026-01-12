@@ -1,0 +1,282 @@
+{
+  "hhi": {
+    "org_ref": "US-EIN-45-4535664",
+    "org_name": "Harvard Humanitarian Initiative",
+    "activities": [],
+    "transactions": [],
+    "stats": {
+      "total_activities": 0,
+      "total_transactions": 0
+    }
+  },
+  "unicef": {
+    "org_ref": "XM-DAC-41122",
+    "org_name": "UNICEF: United Nations Children's Fund",
+    "activities": [],
+    "transactions": [],
+    "stats": {
+      "total_activities": 0,
+      "total_transactions": 0
+    }
+  },
+  "wfp": {
+    "org_ref": "XM-DAC-41140",
+    "org_name": "WFP: United Nations World Food Programme",
+    "activities": [],
+    "transactions": [],
+    "stats": {
+      "total_activities": 0,
+      "total_transactions": 0
+    }
+  },
+  "510-data-team": {
+    "org_ref": "NL-KVK-40409352",
+    "org_name": "Netherlands Red Cross",
+    "activities": [],
+    "transactions": [],
+    "stats": {
+      "total_activities": 0,
+      "total_transactions": 0
+    }
+  },
+  "unfpa": {
+    "org_ref": "XM-DAC-41119",
+    "org_name": "UNFPA: United Nations Population Fund",
+    "activities": [],
+    "transactions": [],
+    "stats": {
+      "total_activities": 0,
+      "total_transactions": 0
+    }
+  },
+  "un-women": {
+    "org_ref": "XM-DAC-41146",
+    "org_name": "UN Women",
+    "activities": [],
+    "transactions": [],
+    "stats": {
+      "total_activities": 0,
+      "total_transactions": 0
+    }
+  },
+  "humanitarian-outcomes": {
+    "org_ref": "XM-DAC-41122",
+    "org_name": "Humanitarian Outcomes",
+    "activities": [],
+    "transactions": [],
+    "stats": {
+      "total_activities": 0,
+      "total_transactions": 0
+    }
+  },
+  "undp": {
+    "org_ref": "XM-DAC-41114",
+    "org_name": "UNDP: United Nations Development Programme",
+    "activities": [],
+    "transactions": [],
+    "stats": {
+      "total_activities": 0,
+      "total_transactions": 0
+    }
+  },
+  "ocha-hum-data-centre": {
+    "org_ref": "XM-DAC-41127",
+    "org_name": "OCHA: Centre for Humanitarian Data",
+    "activities": [],
+    "transactions": [],
+    "stats": {
+      "total_activities": 0,
+      "total_transactions": 0
+    }
+  },
+  "ocha": {
+    "org_ref": "XM-DAC-41127",
+    "org_name": "OCHA: United Nations Office for the Coordination of Humanitarian Affairs",
+    "activities": [],
+    "transactions": [],
+    "stats": {
+      "total_activities": 0,
+      "total_transactions": 0
+    }
+  },
+  "inso": {
+    "org_ref": "NL-KVK-73728489",
+    "org_name": "INSO: International NGO Safety Organization",
+    "activities": [],
+    "transactions": [],
+    "stats": {
+      "total_activities": 0,
+      "total_transactions": 0
+    }
+  },
+  "drc": {
+    "org_ref": "DK-CVR-20699310",
+    "org_name": "DRC: Danish Refugee Council",
+    "activities": [],
+    "transactions": [],
+    "stats": {
+      "total_activities": 0,
+      "total_transactions": 0
+    }
+  },
+  "reach": {
+    "org_ref": "XM-OCHA-HPC9829",
+    "org_name": "REACH",
+    "activities": [],
+    "transactions": [],
+    "stats": {
+      "total_activities": 0,
+      "total_transactions": 0
+    }
+  },
+  "state-department": {
+    "org_ref": "US-GOV-11",
+    "org_name": "U.S. Department of State",
+    "activities": [],
+    "transactions": [],
+    "stats": {
+      "total_activities": 0,
+      "total_transactions": 0
+    }
+  },
+  "panda": {
+    "org_ref": "XM-OCHA-HPC9829",
+    "org_name": "PANDA",
+    "activities": [],
+    "transactions": [],
+    "stats": {
+      "total_activities": 0,
+      "total_transactions": 0
+    }
+  },
+  "unesco": {
+    "org_ref": "XM-DAC-41304",
+    "org_name": "UNESCO: United Nations Educational, Scientific and Cultural Organization",
+    "activities": [],
+    "transactions": [],
+    "stats": {
+      "total_activities": 0,
+      "total_transactions": 0
+    }
+  },
+  "mapaction": {
+    "org_ref": "GB-CHC-1126727",
+    "org_name": "MapAction",
+    "activities": [],
+    "transactions": [],
+    "stats": {
+      "total_activities": 0,
+      "total_transactions": 0
+    }
+  },
+  "icg": {
+    "org_ref": "US-EIN-52-5170039",
+    "org_name": "ICG: International Crisis Group",
+    "activities": [],
+    "transactions": [],
+    "stats": {
+      "total_activities": 0,
+      "total_transactions": 0
+    }
+  },
+  "ifrc": {
+    "org_ref": "XM-DAC-21018",
+    "org_name": "IFRC: International Federation of the Red Cross and Red Crescent",
+    "activities": [],
+    "transactions": [],
+    "stats": {
+      "total_activities": 0,
+      "total_transactions": 0
+    }
+  },
+  "unhcr": {
+    "org_ref": "XM-DAC-41121",
+    "org_name": "UNHCR: United Nations High Commissioner for Refugees",
+    "activities": [],
+    "transactions": [],
+    "stats": {
+      "total_activities": 0,
+      "total_transactions": 0
+    }
+  },
+  "fao": {
+    "org_ref": "XM-DAC-41301",
+    "org_name": "FAO: Food and Agriculture Organization of the United Nations ",
+    "activities": [],
+    "transactions": [],
+    "stats": {
+      "total_activities": 0,
+      "total_transactions": 0
+    }
+  },
+  "world-bank": {
+    "org_ref": "44000",
+    "org_name": "World Bank Group ",
+    "activities": [],
+    "transactions": [],
+    "stats": {
+      "total_activities": 0,
+      "total_transactions": 0
+    }
+  },
+  "world-bank-unhcr": {
+    "org_ref": "XM-DAC-41121",
+    "org_name": "World Bank-UNHCR Joint Data Center on Forced Displacement ",
+    "activities": [],
+    "transactions": [],
+    "stats": {
+      "total_activities": 0,
+      "total_transactions": 0
+    }
+  },
+  "start-network": {
+    "org_ref": "GB-CHC-1159483",
+    "org_name": "START Network",
+    "activities": [],
+    "transactions": [],
+    "stats": {
+      "total_activities": 0,
+      "total_transactions": 0
+    }
+  },
+  "iom": {
+    "org_ref": "XM-DAC-47066",
+    "org_name": "IOM: International Organization for Migration",
+    "activities": [],
+    "transactions": [],
+    "stats": {
+      "total_activities": 0,
+      "total_transactions": 0
+    }
+  },
+  "oxford-university": {
+    "org_ref": "GB-UKPRN-10007774",
+    "org_name": "University of Oxford",
+    "activities": [],
+    "transactions": [],
+    "stats": {
+      "total_activities": 0,
+      "total_transactions": 0
+    }
+  },
+  "who": {
+    "org_ref": "XM-DAC-928",
+    "org_name": "WHO: World Health Organization ",
+    "activities": [],
+    "transactions": [],
+    "stats": {
+      "total_activities": 0,
+      "total_transactions": 0
+    }
+  },
+  "lse": {
+    "org_ref": "GB-COH-00070527",
+    "org_name": "LSE: London School of Economics and Political Science",
+    "activities": [],
+    "transactions": [],
+    "stats": {
+      "total_activities": 0,
+      "total_transactions": 0
+    }
+  }
+}
