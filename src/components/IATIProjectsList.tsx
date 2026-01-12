@@ -1,15 +1,8 @@
 "use client";
 
-import { IATIActivity, IATITransaction } from "@/types/iati";
-import { Card } from "@/components/ui/card";
-import { Badge } from "@/components/ui/badge";
-import { Separator } from "@/components/ui/separator";
-import {
-  Collapsible,
-  CollapsibleContent,
-  CollapsibleTrigger,
-} from "@/components/ui/collapsible";
-import { ChevronDown, ExternalLink, Calendar, DollarSign } from "lucide-react";
+import { IATIActivity } from "@/types/iati";
+import { DollarSign, ChevronUp, ChevronDown } from "lucide-react";
+import { useState } from "react";
 
 interface IATIProjectsListProps {
   activities: IATIActivity[];
@@ -20,12 +13,15 @@ export function IATIProjectsList({
   activities,
   orgName,
 }: IATIProjectsListProps) {
+  const [isExpanded, setIsExpanded] = useState(false);
+  const [hoveredActivityId, setHoveredActivityId] = useState<string | null>(null);
+
   if (!activities || activities.length === 0) {
     return null;
   }
 
   const formatCurrency = (value: number | number[] | undefined) => {
-    if (!value) return "N/A";
+    if (!value) return "—";
     const amount = Array.isArray(value) ? value[0] : value;
     return new Intl.NumberFormat("en-US", {
       style: "currency",
@@ -42,132 +38,61 @@ export function IATIProjectsList({
     return activity.title_narrative || activity.iati_identifier;
   };
 
-  const getDescription = (activity: IATIActivity) => {
-    if (Array.isArray(activity.description_narrative)) {
-      return activity.description_narrative[0];
-    }
-    return activity.description_narrative;
-  };
-
-  const getStatusBadge = (code: string | undefined) => {
-    if (!code) return null;
-    const statusMap: Record<string, { label: string; variant: any }> = {
-      "1": { label: "Pipeline", variant: "outline" },
-      "2": { label: "Active", variant: "default" },
-      "3": { label: "Completed", variant: "secondary" },
-      "4": { label: "Suspended", variant: "destructive" },
-      "5": { label: "Cancelled", variant: "destructive" },
-    };
-    const status = statusMap[code] || { label: code, variant: "outline" };
-    return <Badge variant={status.variant}>{status.label}</Badge>;
-  };
+  const showCollapsible = activities.length > 5;
+  const displayedActivities = showCollapsible && !isExpanded
+    ? activities.slice(0, 5)
+    : activities;
 
   return (
-    <div className="space-y-4">
-      <div className="flex items-center justify-between">
-        <h3 className="text-lg font-semibold">
-          IATI Projects ({activities.length})
-        </h3>
-        <Badge variant="outline" className="text-xs">
-          from iatistandard.org
-        </Badge>
-      </div>
+    <div className="space-y-2">
+      {displayedActivities.map((activity) => (
+        <button
+          key={activity.iati_identifier}
+          onClick={() => {
+            window.open(
+              `https://d-portal.org/q.html?aid=${activity.iati_identifier}`,
+              "_blank",
+              "noopener,noreferrer"
+            );
+          }}
+          onMouseEnter={() => setHoveredActivityId(activity.iati_identifier)}
+          onMouseLeave={() => setHoveredActivityId(null)}
+          className="inline-flex w-full cursor-pointer items-center justify-between gap-1.5 rounded-md bg-slate-100 px-3 py-1.5 text-left text-base font-medium text-slate-600 transition-colors hover:bg-slate-200"
+        >
+          <div className="inline-flex min-w-0 items-center gap-1.5">
+            {hoveredActivityId === activity.iati_identifier ? (
+              <DollarSign className="h-4 w-4 shrink-0 text-slate-600" />
+            ) : (
+              <DollarSign className="h-4 w-4 shrink-0 text-slate-600" />
+            )}
+            <span className="truncate">{getTitle(activity)}</span>
+          </div>
+          {activity.budget_value && (
+            <span className="shrink-0 text-sm font-semibold text-slate-900">
+              {formatCurrency(activity.budget_value)}
+            </span>
+          )}
+        </button>
+      ))}
 
-      <div className="space-y-3">
-        {activities.slice(0, 20).map((activity, index) => (
-          <Collapsible key={activity.iati_identifier || index}>
-            <Card className="p-4">
-              <CollapsibleTrigger className="w-full">
-                <div className="flex items-start justify-between gap-4">
-                  <div className="flex-1 text-left">
-                    <div className="flex items-start gap-2">
-                      <h4 className="font-medium leading-tight">
-                        {getTitle(activity)}
-                      </h4>
-                      <ChevronDown className="h-4 w-4 shrink-0 transition-transform duration-200 [[data-state=open]>&]:rotate-180" />
-                    </div>
-                    <div className="mt-1 flex items-center gap-2 text-sm text-muted-foreground">
-                      {activity.budget_value && (
-                        <span className="flex items-center gap-1">
-                          <DollarSign className="h-3 w-3" />
-                          {formatCurrency(activity.budget_value)}
-                        </span>
-                      )}
-                      {activity.activity_status_code &&
-                        getStatusBadge(activity.activity_status_code)}
-                    </div>
-                  </div>
-                </div>
-              </CollapsibleTrigger>
-
-              <CollapsibleContent>
-                <div className="mt-4 space-y-3">
-                  <Separator />
-
-                  {getDescription(activity) && (
-                    <p className="text-sm text-muted-foreground">
-                      {getDescription(activity)}
-                    </p>
-                  )}
-
-                  <div className="grid gap-2 text-sm">
-                    {activity.sector_narrative && (
-                      <div>
-                        <span className="font-medium">Sectors: </span>
-                        <span className="text-muted-foreground">
-                          {Array.isArray(activity.sector_narrative)
-                            ? activity.sector_narrative.join(", ")
-                            : activity.sector_narrative}
-                        </span>
-                      </div>
-                    )}
-
-                    {activity.recipient_country_code && (
-                      <div>
-                        <span className="font-medium">Countries: </span>
-                        <span className="text-muted-foreground">
-                          {Array.isArray(activity.recipient_country_code)
-                            ? activity.recipient_country_code.join(", ")
-                            : activity.recipient_country_code}
-                        </span>
-                      </div>
-                    )}
-
-                    {activity.activity_date_iso_date && (
-                      <div className="flex items-center gap-1">
-                        <Calendar className="h-3 w-3" />
-                        <span className="text-muted-foreground">
-                          {Array.isArray(activity.activity_date_iso_date)
-                            ? activity.activity_date_iso_date[0]
-                            : activity.activity_date_iso_date}
-                        </span>
-                      </div>
-                    )}
-
-                    <div className="mt-2">
-                      <a
-                        href={`https://d-portal.org/q.html?aid=${activity.iati_identifier}`}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="inline-flex items-center gap-1 text-xs text-primary hover:underline"
-                      >
-                        View on D-Portal
-                        <ExternalLink className="h-3 w-3" />
-                      </a>
-                    </div>
-                  </div>
-                </div>
-              </CollapsibleContent>
-            </Card>
-          </Collapsible>
-        ))}
-
-        {activities.length > 20 && (
-          <p className="text-center text-sm text-muted-foreground">
-            Showing 20 of {activities.length} projects
-          </p>
-        )}
-      </div>
+      {showCollapsible && (
+        <button
+          onClick={() => setIsExpanded(!isExpanded)}
+          className="mt-2 inline-flex items-center gap-1 text-sm font-medium text-slate-600 transition-colors hover:text-slate-400"
+        >
+          {isExpanded ? (
+            <>
+              <ChevronUp className="h-4 w-4" />
+              <span>Show less</span>
+            </>
+          ) : (
+            <>
+              <ChevronDown className="h-4 w-4" />
+              <span>Show more ({activities.length - 5} more)</span>
+            </>
+          )}
+        </button>
+      )}
     </div>
   );
 }
