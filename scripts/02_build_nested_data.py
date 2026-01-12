@@ -127,18 +127,21 @@ def build_project_index(projects: List[Dict[str, Any]]) -> Dict[str, List[Dict[s
 
 def match_agencies(
     org_fields: Dict[str, Any],
+    agencies_by_id: Dict[str, Dict[str, Any]],
     agencies_by_name: Dict[str, List[Dict[str, Any]]]
 ) -> List[Dict[str, Any]]:
     """Match agencies to an organization.
     
     Args:
         org_fields: Organization field data
+        agencies_by_id: Agency lookup by ID
         agencies_by_name: Agency lookup by name
         
     Returns:
         List of matched agency records
     """
     matched = []
+    seen_ids = set()
     
     # Get donor agencies field (various possible names)
     donor_field = org_fields.get("Org Donor Agencies") or \
@@ -148,20 +151,46 @@ def match_agencies(
     if not donor_field:
         return matched
     
-    # Parse donor names
-    donor_tokens = []
-    if isinstance(donor_field, str) and donor_field.strip():
-        donor_tokens = split_respecting_parentheses(donor_field)
-    elif isinstance(donor_field, list):
+    # First, try matching by ID (most common case - Airtable linked records)
+    if isinstance(donor_field, list):
         for item in donor_field:
             if isinstance(item, str) and item.strip():
-                donor_tokens.extend(split_respecting_parentheses(item))
+                item_stripped = item.strip()
+                # Check if it's an Airtable record ID (starts with "rec")
+                if item_stripped.startswith("rec") and item_stripped in agencies_by_id:
+                    agency = agencies_by_id[item_stripped]
+                    agency_id = agency.get("id")
+                    if agency_id not in seen_ids:
+                        seen_ids.add(agency_id)
+                        matched.append(agency)
+    elif isinstance(donor_field, str) and donor_field.strip():
+        item_stripped = donor_field.strip()
+        if item_stripped.startswith("rec") and item_stripped in agencies_by_id:
+            agency = agencies_by_id[item_stripped]
+            agency_id = agency.get("id")
+            if agency_id not in seen_ids:
+                seen_ids.add(agency_id)
+                matched.append(agency)
     
-    # Match tokens to agencies
-    for token in donor_tokens:
-        normalized = token.strip().lower()
-        if normalized in agencies_by_name:
-            matched.extend(agencies_by_name[normalized])
+    # Fallback: try matching by name (for text-based references)
+    if not matched:
+        donor_tokens = []
+        if isinstance(donor_field, str) and donor_field.strip():
+            donor_tokens = split_respecting_parentheses(donor_field)
+        elif isinstance(donor_field, list):
+            for item in donor_field:
+                if isinstance(item, str) and item.strip():
+                    donor_tokens.extend(split_respecting_parentheses(item))
+        
+        # Match tokens to agencies by name
+        for token in donor_tokens:
+            normalized = token.strip().lower()
+            if normalized in agencies_by_name:
+                for agency in agencies_by_name[normalized]:
+                    agency_id = agency.get("id")
+                    if agency_id not in seen_ids:
+                        seen_ids.add(agency_id)
+                        matched.append(agency)
     
     return matched
 
@@ -306,7 +335,7 @@ def main():
                    org_id
         
         # Match agencies
-        matched_agencies = match_agencies(org_fields, agencies_by_name)
+        matched_agencies = match_agencies(org_fields, agencies_by_id, agencies_by_name)
         
         # Extract donor countries
         donor_countries = extract_donor_countries(matched_agencies)
