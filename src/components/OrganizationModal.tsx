@@ -20,6 +20,9 @@ import BaseModal, {
 } from "./BaseModal";
 import { getIconForInvestmentType } from "@/config/investmentTypeIcons";
 import labels from "@/config/labels.json";
+import { IATIProjectsList } from "./IATIProjectsList";
+import { IATITransactionsSummary } from "./IATITransactionsSummary";
+import type { IATIOrganizationData } from "@/types/iati";
 
 interface OrganizationModalProps {
   // Accept the full organization record coming from `public/data/organizations-table.json`
@@ -28,6 +31,7 @@ interface OrganizationModalProps {
     id: string;
     createdTime?: string;
     fields: Record<string, unknown>;
+    iati_data?: IATIOrganizationData;
   } | null;
   // Centralized data maps from data.ts for consistent data access
   projectNameMap?: Record<string, string>;
@@ -804,6 +808,31 @@ export default function OrganizationModal({
             );
           })()}
         </div>
+
+        {/* IATI Data Section */}
+        {organization.iati_data && (
+          <div className="mt-6 space-y-6">
+            {/* IATI Projects */}
+            {organization.iati_data.activities && 
+             organization.iati_data.activities.length > 0 && (
+              <IATIProjectsList
+                activities={organization.iati_data.activities}
+                orgName={displayName}
+              />
+            )}
+
+            {/* IATI Transactions */}
+            {organization.iati_data.transactions && 
+             organization.iati_data.transactions.length > 0 && (
+              <div className="mt-6">
+                <IATITransactionsSummary
+                  transactions={organization.iati_data.transactions}
+                  orgName={displayName}
+                />
+              </div>
+            )}
+          </div>
+        )}
 
         {/* Flexible spacer to push notes to bottom */}
         <div className="min-h-8 grow"></div>

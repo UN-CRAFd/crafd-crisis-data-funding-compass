@@ -10,6 +10,7 @@ The scripts should be executed in the following order:
 2. **`02_build_nested_data.py`** - Build nested organization structure with projects and agencies
 3. **`03_fetch_assets.py`** - Download logos and screenshots for organizations
 4. **`04_clean_member_states.py`** - Process member states CSV data
+5. **`05_fetch_iati.py`** (Optional) - Fetch IATI data for organizations with IATI Org Keys
 
 ## Script Descriptions
 
@@ -57,6 +58,21 @@ Data cleaning script that:
 **Output files:**
 - `current_member_states.csv` - Filtered list of current member states
 
+### 05_fetch_iati.py
+IATI data fetching script that:
+- Reads organizations with IATI Org Keys
+- Queries IATI API for activities and transactions
+- Uses caching to avoid redundant API calls
+- Respects IATI API rate limits (5 requests/second)
+
+**Output files:**
+- `iati-data.json` - IATI activities and transactions for organizations
+- Cache files stored in `scripts/cache/iati/`
+
+**Requirements:**
+- IATI_PRIMARY_KEY in .env.local
+- Get your key from: https://developer.iatistandard.org/
+
 ## Shared Utilities
 
 All scripts use common utilities from `_utils.py`:
@@ -75,6 +91,9 @@ AIRTABLE_TABLE_ID_PROJECTS=table_id
 AIRTABLE_TABLE_ID_ORGANIZATIONS=table_id
 AIRTABLE_TABLE_ID_AGENCIES=table_id
 AIRTABLE_TABLE_ID_THEMES=table_id
+
+# Optional: For IATI data fetching
+IATI_PRIMARY_KEY=your_iati_api_key
 ```
 
 ## Running Scripts
@@ -85,6 +104,11 @@ python scripts/01_fetch_airtable.py  # Automatically runs 02_build_nested_data.p
 
 # Download assets separately
 python scripts/03_fetch_assets.py
+
+# Fetch IATI data (optional)
+python scripts/05_fetch_iati.py
+# After fetching IATI data, re-run the nesting script to integrate it:
+python scripts/02_build_nested_data.py
 
 # Clean member states
 python scripts/04_clean_member_states.py
