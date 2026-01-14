@@ -81,12 +81,12 @@ export function IATIProjectsList({
                 <div className="flex items-start justify-between gap-4">
                   <div className="flex-1 text-left">
                     <div className="flex items-start gap-2">
-                      <h4 className="font-medium leading-tight">
+                      <h4 className="leading-tight font-medium">
                         {getTitle(activity)}
                       </h4>
                       <ChevronDown className="h-4 w-4 shrink-0 transition-transform duration-200 [[data-state=open]>&]:rotate-180" />
                     </div>
-                    <div className="mt-1 flex items-center gap-2 text-sm text-muted-foreground">
+                    <div className="text-muted-foreground mt-1 flex items-center gap-2 text-sm">
                       {activity.budget_value && (
                         <span className="flex items-center gap-1">
                           <DollarSign className="h-3 w-3" />
@@ -105,7 +105,7 @@ export function IATIProjectsList({
                   <Separator />
 
                   {getDescription(activity) && (
-                    <p className="text-sm text-muted-foreground">
+                    <p className="text-muted-foreground text-sm">
                       {getDescription(activity)}
                     </p>
                   )}
@@ -149,7 +149,7 @@ export function IATIProjectsList({
                         href={`https://d-portal.org/q.html?aid=${activity.iati_identifier}`}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="inline-flex items-center gap-1 text-xs text-primary hover:underline"
+                        className="text-primary inline-flex items-center gap-1 text-xs hover:underline"
                       >
                         View on D-Portal
                         <ExternalLink className="h-3 w-3" />
@@ -163,7 +163,7 @@ export function IATIProjectsList({
         ))}
 
         {activities.length > 20 && (
-          <p className="text-center text-sm text-muted-foreground">
+          <p className="text-muted-foreground text-center text-sm">
             Showing 20 of {activities.length} projects
           </p>
         )}
