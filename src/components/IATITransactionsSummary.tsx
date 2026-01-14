@@ -27,7 +27,7 @@ export function IATITransactionsSummary({
       acc[typeCode].push(t);
       return acc;
     },
-    {} as Record<string, IATITransaction[]>
+    {} as Record<string, IATITransaction[]>,
   );
 
   // Calculate totals
@@ -62,25 +62,32 @@ export function IATITransactionsSummary({
           IATI Transactions ({transactions.length})
         </h3>
         <div className="text-right">
-          <div className="text-xs text-muted-foreground">Total Value</div>
-          <div className="text-lg font-semibold">{formatCurrency(totalValue)}</div>
+          <div className="text-muted-foreground text-xs">Total Value</div>
+          <div className="text-lg font-semibold">
+            {formatCurrency(totalValue)}
+          </div>
         </div>
       </div>
 
       <div className="grid gap-3 md:grid-cols-2 lg:grid-cols-3">
         {Object.entries(transactionsByType).map(([typeCode, txns]) => {
-          const typeTotal = txns.reduce((sum, t) => sum + (t.transaction_value || 0), 0);
-          
+          const typeTotal = txns.reduce(
+            (sum, t) => sum + (t.transaction_value || 0),
+            0,
+          );
+
           return (
             <Card key={typeCode} className="p-4">
               <div className="space-y-2">
                 <div className="flex items-center justify-between">
                   <Badge variant="outline">{getTypeName(typeCode)}</Badge>
-                  <span className="text-xs text-muted-foreground">
+                  <span className="text-muted-foreground text-xs">
                     {txns.length} txns
                   </span>
                 </div>
-                <div className="text-2xl font-bold">{formatCurrency(typeTotal)}</div>
+                <div className="text-2xl font-bold">
+                  {formatCurrency(typeTotal)}
+                </div>
               </div>
             </Card>
           );
@@ -89,7 +96,7 @@ export function IATITransactionsSummary({
 
       {/* Recent transactions preview */}
       <div className="space-y-2">
-        <h4 className="text-sm font-medium text-muted-foreground">
+        <h4 className="text-muted-foreground text-sm font-medium">
           Recent Transactions
         </h4>
         <div className="space-y-2">
@@ -102,7 +109,7 @@ export function IATITransactionsSummary({
                 <div className="font-medium">
                   {getTypeName(txn.transaction_type_code || "")}
                 </div>
-                <div className="text-xs text-muted-foreground">
+                <div className="text-muted-foreground text-xs">
                   {txn.transaction_date_iso_date || "Date not specified"}
                 </div>
               </div>
@@ -112,7 +119,7 @@ export function IATITransactionsSummary({
                 </div>
                 {txn.transaction_value_currency &&
                   txn.transaction_value_currency !== "USD" && (
-                    <div className="text-xs text-muted-foreground">
+                    <div className="text-muted-foreground text-xs">
                       {txn.transaction_value_currency}
                     </div>
                   )}
@@ -121,7 +128,7 @@ export function IATITransactionsSummary({
           ))}
         </div>
         {transactions.length > 5 && (
-          <p className="text-center text-xs text-muted-foreground">
+          <p className="text-muted-foreground text-center text-xs">
             Showing 5 of {transactions.length} transactions
           </p>
         )}

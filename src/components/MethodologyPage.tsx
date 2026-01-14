@@ -280,7 +280,9 @@ const CodeBlock = ({ code }: { code: string }) => {
           ) : (
             <>
               <Copy className="h-3.5 w-3.5 text-slate-400" />
-              <span className="text-xs text-slate-400">{labels.codeBlock.copyButton}</span>
+              <span className="text-xs text-slate-400">
+                {labels.codeBlock.copyButton}
+              </span>
             </>
           )}
         </button>
@@ -522,7 +524,11 @@ export default function MethodologyPage({
                 </p>
                 <TabsList className="grid h-auto w-full grid-cols-2 gap-2 bg-white/60 p-2 lg:grid-cols-6">
                   {[
-                    { value: "collection", icon: Search, label: labels.methodology.tabs.collection },
+                    {
+                      value: "collection",
+                      icon: Search,
+                      label: labels.methodology.tabs.collection,
+                    },
                     {
                       value: "classification",
                       icon: FileText,
@@ -533,9 +539,21 @@ export default function MethodologyPage({
                       icon: AlertTriangle,
                       label: labels.methodology.tabs.limitations,
                     },
-                    { value: "filtering", icon: Layers, label: labels.methodology.tabs.filtering },
-                    { value: "network", icon: TrendingUp, label: labels.methodology.tabs.network },
-                    { value: "export", icon: Download, label: labels.methodology.tabs.export },
+                    {
+                      value: "filtering",
+                      icon: Layers,
+                      label: labels.methodology.tabs.filtering,
+                    },
+                    {
+                      value: "network",
+                      icon: TrendingUp,
+                      label: labels.methodology.tabs.network,
+                    },
+                    {
+                      value: "export",
+                      icon: Download,
+                      label: labels.methodology.tabs.export,
+                    },
                   ].map(({ value, icon: Icon, label }) => (
                     <TabsTrigger
                       key={value}
@@ -562,7 +580,9 @@ export default function MethodologyPage({
                 >
                   <div className="grid grid-cols-1 gap-6 lg:grid-cols-2">
                     <div>
-                      <SectionTitle icon={Search}>{labels.methodology.dataCollection}</SectionTitle>
+                      <SectionTitle icon={Search}>
+                        {labels.methodology.dataCollection}
+                      </SectionTitle>
                       <div className="space-y-4">
                         <IconInfoCard
                           icon={BookCheck}
@@ -574,7 +594,10 @@ export default function MethodologyPage({
                           icon={Workflow}
                           title={labels.methodology.automatedManualGathering}
                         >
-                          {labels.methodology.automatedManualGatheringDescription}
+                          {
+                            labels.methodology
+                              .automatedManualGatheringDescription
+                          }
                         </IconInfoCard>
                         <IconInfoCard
                           icon={CalendarSync}
@@ -755,8 +778,13 @@ export default function MethodologyPage({
                         <InfoCard title={labels.methodology.dataGaps}>
                           {labels.methodology.dataGapsDescription}
                         </InfoCard>
-                        <InfoCard title={labels.methodology.classificationSubjectivity}>
-                          {labels.methodology.classificationSubjectivityDescription}
+                        <InfoCard
+                          title={labels.methodology.classificationSubjectivity}
+                        >
+                          {
+                            labels.methodology
+                              .classificationSubjectivityDescription
+                          }
                         </InfoCard>
                         <InfoCard title={labels.methodology.simplification}>
                           {labels.methodology.simplificationDescription}
@@ -789,14 +817,18 @@ export default function MethodologyPage({
                         <InfoCard title={labels.methodology.themeFilter}>
                           {labels.methodology.themeFilterDescription}
                         </InfoCard>
-                        <InfoCard title={labels.methodology.typeThemeRelationship}>
+                        <InfoCard
+                          title={labels.methodology.typeThemeRelationship}
+                        >
                           {labels.methodology.typeThemeRelationshipDescription}
                         </InfoCard>
                       </div>
                     </div>
 
                     {/* Interactive Filter Logic Flow */}
-                    <SectionTitle icon={Search}>{labels.methodology.filteringProcess}</SectionTitle>
+                    <SectionTitle icon={Search}>
+                      {labels.methodology.filteringProcess}
+                    </SectionTitle>
 
                     <div className="rounded-lg border-2 border-none bg-white p-6 shadow-sm">
                       {/* Flow Diagram */}
@@ -840,7 +872,9 @@ export default function MethodologyPage({
                             {labels.methodology.searchFilterCheck}
                           </div>
                           <div className="space-y-1 pl-7 text-slate-700">
-                            <div>🔍 {labels.methodology.searchFilterQuestion}</div>
+                            <div>
+                              🔍 {labels.methodology.searchFilterQuestion}
+                            </div>
                             <div className="rounded border-2 border-slate-200 bg-white px-2 py-1 font-mono text-[10px]">
                               org.name.includes(searchQuery)
                             </div>
@@ -952,9 +986,7 @@ export default function MethodologyPage({
                                 <li>
                                   • {labels.methodology.hasVisibleProject}
                                 </li>
-                                <li>
-                                  • {labels.methodology.orgNameMatches}
-                                </li>
+                                <li>• {labels.methodology.orgNameMatches}</li>
                               </ul>
                             </div>
                             <div className="rounded border-2 border-slate-400 bg-slate-200 px-2 py-1.5">
@@ -1040,7 +1072,9 @@ export default function MethodologyPage({
                         <InfoCard title={labels.methodology.interactiveNodes}>
                           {labels.methodology.interactiveNodesDescription}
                         </InfoCard>
-                        <InfoCard title={labels.methodology.spatialInterpretation}>
+                        <InfoCard
+                          title={labels.methodology.spatialInterpretation}
+                        >
                           {labels.methodology.spatialInterpretationDescription}
                         </InfoCard>
                       </div>
@@ -1066,8 +1100,13 @@ export default function MethodologyPage({
                         <InfoCard title={labels.methodology.excelExport}>
                           {labels.methodology.excelExportDescription}
                         </InfoCard>
-                        <InfoCard title={labels.methodology.sharingAndReproducibility}>
-                          {labels.methodology.sharingAndReproducibilityDescription}
+                        <InfoCard
+                          title={labels.methodology.sharingAndReproducibility}
+                        >
+                          {
+                            labels.methodology
+                              .sharingAndReproducibilityDescription
+                          }
                         </InfoCard>
                       </div>
                     </div>

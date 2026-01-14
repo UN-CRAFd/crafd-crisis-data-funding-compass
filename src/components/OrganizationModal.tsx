@@ -813,24 +813,24 @@ export default function OrganizationModal({
         {organization.iati_data && (
           <div className="mt-6 space-y-6">
             {/* IATI Projects */}
-            {organization.iati_data.activities && 
-             organization.iati_data.activities.length > 0 && (
-              <IATIProjectsList
-                activities={organization.iati_data.activities}
-                orgName={displayName}
-              />
-            )}
-
-            {/* IATI Transactions */}
-            {organization.iati_data.transactions && 
-             organization.iati_data.transactions.length > 0 && (
-              <div className="mt-6">
-                <IATITransactionsSummary
-                  transactions={organization.iati_data.transactions}
+            {organization.iati_data.activities &&
+              organization.iati_data.activities.length > 0 && (
+                <IATIProjectsList
+                  activities={organization.iati_data.activities}
                   orgName={displayName}
                 />
-              </div>
-            )}
+              )}
+
+            {/* IATI Transactions */}
+            {organization.iati_data.transactions &&
+              organization.iati_data.transactions.length > 0 && (
+                <div className="mt-6">
+                  <IATITransactionsSummary
+                    transactions={organization.iati_data.transactions}
+                    orgName={displayName}
+                  />
+                </div>
+              )}
           </div>
         )}
 

@@ -66,4 +66,4 @@ export interface OrganizationWithIATI extends NestedOrganization {
 }
 
 // Import the base type
-import { NestedOrganization } from './airtable';
+import { NestedOrganization } from "./airtable";
