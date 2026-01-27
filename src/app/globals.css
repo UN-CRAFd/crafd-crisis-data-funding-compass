@@ -409,7 +409,7 @@ body::-webkit-scrollbar {
   color: #64748b;
   font-family: Qanelas, ui-sans-serif, system-ui, sans-serif !important;
   font-weight: 900;
-  font-size: 0.9375rem;
+  font-size: 1rem;
   text-transform: uppercase;
   letter-spacing: 0.03em;
   transition: all 0.15s ease;
