@@ -905,7 +905,25 @@ const CrisisDataDashboard = ({
                     label={labels.stats.donorCountries.label}
                     colorScheme="amber"
                     tooltip={labels.stats.donorCountries.tooltip}
-                  />
+                  >
+                    <ChartCard
+                      title={labels.sections.donorCount}
+                      icon={<Globe style={{ color: "var(--brand-primary)" }} />}
+                      data={donorChartData}
+                      barColor="var(--brand-primary-lighter)"
+                      footnote={
+                        combinedDonors.length > 0
+                          ? `Showing ${topDonors.length} donor${topDonors.length === 1 ? "" : "s"} co-financing the most organizations together with ${
+                              combinedDonors.length === 1
+                                ? combinedDonors[0]
+                                : combinedDonors.length === 2
+                                  ? `${combinedDonors[0]} & ${combinedDonors[1]}`
+                                  : `${combinedDonors.slice(0, -1).join(", ")} & ${combinedDonors[combinedDonors.length - 1]}`
+                            }`
+                          : `Showing ${topDonors.length} donor${topDonors.length === 1 ? "" : "s"} funding the most organizations in the current view`
+                      }
+                    />
+                  </StatCard>
                 </div>
                 <div className="w-[290px] flex-shrink-0 snap-center">
                   <StatCard
@@ -917,7 +935,14 @@ const CrisisDataDashboard = ({
                     label={labels.stats.dataProviders.label}
                     colorScheme="amber"
                     tooltip={labels.stats.dataProviders.tooltip}
-                  />
+                  >
+                    <ChartCard
+                      title={labels.sections.organizationTypes}
+                      icon={<Building2 style={{ color: "var(--brand-primary)" }} />}
+                      data={organizationTypesChartData}
+                      barColor="var(--brand-primary-lighter)"
+                    />
+                  </StatCard>
                 </div>
                 <div className="w-[280px] flex-shrink-0 snap-center">
                   <StatCard
@@ -929,7 +954,15 @@ const CrisisDataDashboard = ({
                     label={labels.stats.dataProjects.label}
                     colorScheme="amber"
                     tooltip={labels.stats.dataProjects.tooltip}
-                  />
+                  >
+                    <ChartCard
+                      title={labels.sections.projectCategories}
+                      icon={<Database style={{ color: "var(--brand-primary)" }} />}
+                      data={projectTypesChartData}
+                      barColor="var(--brand-primary-lighter)"
+                      footnote={labels.ui.chartFootnote}
+                    />
+                  </StatCard>
                 </div>
               </div>
             </div>
@@ -944,7 +977,25 @@ const CrisisDataDashboard = ({
               label={labels.stats.donorCountries.label}
               colorScheme="amber"
               tooltip={labels.stats.donorCountries.tooltip}
-            />
+            >
+              <ChartCard
+                title={labels.sections.donorCount}
+                icon={<Globe style={{ color: "var(--brand-primary)" }} />}
+                data={donorChartData}
+                barColor="var(--brand-primary-lighter)"
+                footnote={
+                  combinedDonors.length > 0
+                    ? `Showing ${topDonors.length} donor${topDonors.length === 1 ? "" : "s"} co-financing the most organizations together with ${
+                        combinedDonors.length === 1
+                          ? combinedDonors[0]
+                          : combinedDonors.length === 2
+                            ? `${combinedDonors[0]} & ${combinedDonors[1]}`
+                            : `${combinedDonors.slice(0, -1).join(", ")} & ${combinedDonors[combinedDonors.length - 1]}`
+                      }`
+                    : `Showing ${topDonors.length} donor${topDonors.length === 1 ? "" : "s"} funding the most organizations in the current view`
+                }
+              />
+            </StatCard>
 
             <StatCard
               icon={<Building2 style={{ color: "var(--brand-primary)" }} />}
@@ -953,7 +1004,14 @@ const CrisisDataDashboard = ({
               label={labels.stats.dataProviders.label}
               colorScheme="amber"
               tooltip={labels.stats.dataProviders.tooltip}
-            />
+            >
+              <ChartCard
+                title={labels.sections.organizationTypes}
+                icon={<Building2 style={{ color: "var(--brand-primary)" }} />}
+                data={organizationTypesChartData}
+                barColor="var(--brand-primary-lighter)"
+              />
+            </StatCard>
 
             <StatCard
               icon={<Database style={{ color: "var(--brand-primary)" }} />}
@@ -962,13 +1020,19 @@ const CrisisDataDashboard = ({
               label={labels.stats.dataProjects.label}
               colorScheme="amber"
               tooltip={labels.stats.dataProjects.tooltip}
-            />
+            >
+              <ChartCard
+                title={labels.sections.projectCategories}
+                icon={<Database style={{ color: "var(--brand-primary)" }} />}
+                data={projectTypesChartData}
+                barColor="var(--brand-primary-lighter)"
+                footnote={labels.ui.chartFootnote}
+              />
+            </StatCard>
           </div>
 
-          {/* Main Layout - Two Columns */}
-          <div className="grid grid-cols-1 gap-4 sm:gap-[var(--spacing-section)] xl:grid-cols-3">
-            {/* Left Column - Filters and Table */}
-            <div className="space-y-4 sm:space-y-[var(--spacing-section)] xl:col-span-2">
+          {/* Main Layout - Full Width */}
+          <div className="space-y-4 sm:space-y-[var(--spacing-section)]">
               {/* Organizations Table Section */}
               <div>
                 <Card className={STYLES.cardGlass}>
@@ -1747,51 +1811,6 @@ const CrisisDataDashboard = ({
                   </CardContent>
                 </Card>
               </div>
-            </div>
-
-            {/* Right Column - Charts */}
-            <div className="space-y-4 sm:space-y-[var(--spacing-section)]">
-              {/* Co-financing donors chart - only show when donors are selected */}
-              <div
-                className={`transition-all duration-1200 ease-in-out ${
-                  combinedDonors.length > 0
-                    ? "mb-6 max-h-[1000px]"
-                    : "mb-0 max-h-0 overflow-hidden"
-                }`}
-              >
-                <ChartCard
-                  title={labels.sections.donorCount}
-                  icon={<Globe style={{ color: "var(--brand-primary)" }} />}
-                  data={donorChartData}
-                  barColor="var(--brand-primary-lighter)"
-                  footnote={
-                    combinedDonors.length > 0
-                      ? `Showing ${topDonors.length} donor${topDonors.length === 1 ? "" : "s"} co-financing the most organizations together with ${
-                          combinedDonors.length === 1
-                            ? combinedDonors[0]
-                            : combinedDonors.length === 2
-                              ? `${combinedDonors[0]} & ${combinedDonors[1]}`
-                              : `${combinedDonors.slice(0, -1).join(", ")} & ${combinedDonors[combinedDonors.length - 1]}`
-                        }`
-                      : `Showing ${topDonors.length} donor${topDonors.length === 1 ? "" : "s"} funding the most organizations in the current view`
-                  }
-                />
-              </div>
-
-              <ChartCard
-                title={labels.sections.organizationTypes}
-                icon={<Building2 style={{ color: "var(--brand-primary)" }} />}
-                data={organizationTypesChartData}
-                barColor="var(--brand-primary-lighter)"
-              />
-              <ChartCard
-                title={labels.sections.projectCategories}
-                icon={<Database style={{ color: "var(--brand-primary)" }} />}
-                data={projectTypesChartData}
-                barColor="var(--brand-primary-lighter)"
-                footnote={labels.ui.chartFootnote}
-              />
-            </div>
           </div>
         </div>
       </div>
