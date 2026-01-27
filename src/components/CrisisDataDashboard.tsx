@@ -66,6 +66,10 @@ import {
   ArrowUpWideNarrow,
   ArrowDownWideNarrow,
   Network,
+  Settings,
+  Lightbulb,
+  Landmark,
+  UserRoundPlus,
 } from "lucide-react";
 import organizationsTableRaw from "../../public/data/organizations-table.json";
 import nestedOrganizationsRaw from "../../public/data/organizations-nested.json";
@@ -86,6 +90,9 @@ import {
 import { exportDashboardToPDF } from "../lib/exportPDF";
 import { exportViewAsCSV, exportViewAsXLSX } from "../lib/exportCSV";
 import { useTips } from "@/contexts/TipsContext";
+import { useGeneralContributions } from "@/contexts/GeneralContributionsContext";
+import { setGeneralContributionsEnabled } from "@/lib/data";
+import { useRouter, useSearchParams } from "next/navigation";
 import type {
   DashboardStats,
   OrganizationProjectData,
@@ -106,6 +113,9 @@ const NetworkGraph = dynamic(() => import("@/components/NetworkGraph"), {
 
 const TAB_TRIGGER_CLASS =
   "h-6 px-2.5 text-[14px] font-medium rounded-md transition-all duration-200 ease-out hover:bg-slate-100 hover:text-slate-700 data-[state=active]:bg-[var(--brand-bg-light)] data-[state=active]:shadow-sm data-[state=active]:border data-[state=active]:border-[var(--brand-border)] data-[state=active]:text-[var(--brand-primary-dark)] data-[state=active]:hover:bg-[var(--brand-bg-light)] text-slate-600 bg-slate-50 border-none";
+
+const TAB_TRIGGER_HEADER_CLASS =
+  "h-auto px-3 py-1.5 text-base sm:text-lg font-qanelas-subtitle font-black uppercase rounded-none transition-all duration-200 ease-out hover:bg-slate-200 data-[state=active]:bg-transparent data-[state=active]:shadow-none data-[state=active]:border-b-2 data-[state=active]:border-[var(--brand-primary)] data-[state=active]:text-[var(--brand-primary)] data-[state=active]:hover:bg-transparent text-slate-700 bg-slate-100 border-none";
 
 const TABS = [
   {
@@ -247,13 +257,30 @@ const CrisisDataDashboard = ({
 }: CrisisDataDashboardProps) => {
   // Get tips enabled state with fallback for SSR
   let tipsEnabled = false;
+  let setTipsEnabled: (enabled: boolean) => void = () => {};
   try {
     const tipsContext = useTips();
     tipsEnabled = tipsContext.tipsEnabled;
+    setTipsEnabled = tipsContext.setTipsEnabled;
   } catch (e) {
     // TipsProvider not available (e.g., during server-side rendering)
     tipsEnabled = false;
   }
+
+  // Get general contributions state with fallback for SSR
+  let showGeneralContributions = true;
+  let setShowGeneralContributions: (enabled: boolean) => void = () => {};
+  try {
+    const genContContext = useGeneralContributions();
+    showGeneralContributions = genContContext.showGeneralContributions;
+    setShowGeneralContributions =
+      genContContext.setShowGeneralContributions;
+  } catch (e) {
+    // GeneralContributionsProvider not available - use defaults
+  }
+
+  const router = useRouter();
+  const searchParams = useSearchParams();
 
   // UI state (not related to routing)
   const [expandedOrgs, setExpandedOrgs] = useState<Set<string>>(new Set());
@@ -1038,85 +1065,66 @@ const CrisisDataDashboard = ({
                 <Card className={STYLES.cardGlass}>
                   <CardHeader className="h-0 pb-0">
                     <CardTitle className="mb-2 flex w-full items-center">
-                      <div className="flex items-center gap-3">
-                        <SectionHeader
-                          icon={
-                            organizationsWithProjects &&
-                            organizationsWithProjects.some(
-                              (org) => org.projects && org.projects.length > 0,
-                            ) ? (
-                              <FolderOpenDot
-                                style={{ color: "var(--brand-primary)" }}
-                              />
-                            ) : (
-                              <FolderDot
-                                style={{ color: "var(--brand-primary)" }}
-                              />
-                            )
-                          }
-                          title={labels.sections.organizationsAndProjects}
-                        />
-
-                        {/* View Toggle Switch Tabs on left */}
-                        <Tabs
-                          value={activeView}
-                          onValueChange={(v) =>
-                            setActiveView(v as "table" | "donors" | "network")
-                          }
-                          className="hidden sm:flex"
-                        >
-                          <TabsList className="h-7 gap-0.5 rounded-md border border-slate-200 bg-slate-50 p-0.5">
-                            <TooltipProvider delayDuration={0}>
-                              {TABS.map(({ value, label, Icon, tooltip }) =>
-                                tipsEnabled ? (
-                                  <TooltipUI key={value}>
-                                    <TooltipTrigger asChild>
-                                      <div>
-                                        <TabsTrigger
-                                          value={value}
-                                          className={TAB_TRIGGER_CLASS}
-                                        >
-                                          <Icon className="mr-1.5 h-3 w-3" />
-                                          {label}
-                                        </TabsTrigger>
-                                      </div>
-                                    </TooltipTrigger>
-                                    <TooltipContent
-                                      side="bottom"
-                                      align="center"
-                                      className="max-w-100 rounded-lg border border-slate-200 bg-white p-3 text-xs text-slate-800"
-                                      sideOffset={5}
-                                      avoidCollisions={true}
-                                      style={{
-                                        backgroundColor: "var(--tooltip-bg)",
-                                        backdropFilter: "blur(12px)",
-                                        border:
-                                          "1px solid var(--tooltip-border)",
-                                        borderRadius: "10px",
-                                      }}
-                                    >
-                                      {tooltip}
-                                    </TooltipContent>
-                                  </TooltipUI>
-                                ) : (
-                                  <div key={value}>
-                                    <TabsTrigger
-                                      value={value}
-                                      className={TAB_TRIGGER_CLASS}
-                                    >
-                                      <Icon className="mr-1.5 h-3 w-3" />
-                                      {label}
-                                    </TabsTrigger>
-                                  </div>
-                                ),
-                              )}
-                            </TooltipProvider>
-                          </TabsList>
-                        </Tabs>
-                      </div>
-                      {/* Sort Dropdown right-aligned */}
+                      {/* View Tabs styled as section header */}
+                      <Tabs
+                        value={activeView}
+                        onValueChange={(v) =>
+                          setActiveView(v as "table" | "donors" | "network")
+                        }
+                        className="flex"
+                      >
+                        <TabsList className="h-auto gap-0 rounded-none border-0 bg-transparent p-0">
+                          <TooltipProvider delayDuration={0}>
+                            {TABS.map(({ value, label, Icon, tooltip }) =>
+                              tipsEnabled ? (
+                                <TooltipUI key={value}>
+                                  <TooltipTrigger asChild>
+                                    <div>
+                                      <TabsTrigger
+                                        value={value}
+                                        className={TAB_TRIGGER_HEADER_CLASS}
+                                      >
+                                        <Icon className="mr-2 h-5 w-5 sm:h-6 sm:w-6" />
+                                        {label}
+                                      </TabsTrigger>
+                                    </div>
+                                  </TooltipTrigger>
+                                  <TooltipContent
+                                    side="bottom"
+                                    align="center"
+                                    className="max-w-100 rounded-lg border border-slate-200 bg-white p-3 text-xs text-slate-800"
+                                    sideOffset={5}
+                                    avoidCollisions={true}
+                                    style={{
+                                      backgroundColor: "var(--tooltip-bg)",
+                                      backdropFilter: "blur(12px)",
+                                      border:
+                                        "1px solid var(--tooltip-border)",
+                                      borderRadius: "10px",
+                                    }}
+                                  >
+                                    {tooltip}
+                                  </TooltipContent>
+                                </TooltipUI>
+                              ) : (
+                                <div key={value}>
+                                  <TabsTrigger
+                                    value={value}
+                                    className={TAB_TRIGGER_HEADER_CLASS}
+                                  >
+                                    <Icon className="mr-2 h-5 w-5 sm:h-6 sm:w-6" />
+                                    {label}
+                                  </TabsTrigger>
+                                </div>
+                              ),
+                            )}
+                          </TooltipProvider>
+                        </TabsList>
+                      </Tabs>
+                      {/* Sort Dropdown and Settings right-aligned */}
                       {(activeView === "table" || activeView === "donors") && (
-                        <div className="ml-auto animate-in duration-300 slide-in-from-right-5 fade-in">
+                        <div className="ml-auto flex animate-in duration-300 slide-in-from-right-5 fade-in gap-2 items-center">
+                          {/* Sort Dropdown Box */}
                           <div className="hidden h-7 items-center gap-1 rounded-md border border-slate-200 bg-slate-50/50 px-2 text-[14px] font-medium transition-all hover:border-slate-300 hover:bg-white sm:flex">
                             <Button
                               variant="ghost"
@@ -1213,6 +1221,102 @@ const CrisisDataDashboard = ({
                               </DropdownMenuContent>
                             </DropdownMenu>
                           </div>
+
+                          {/* Settings Gear Icon - Separate Button */}
+                          <DropdownMenu>
+                            <DropdownMenuTrigger asChild>
+                              <Button
+                                variant="ghost"
+                                size="sm"
+                                className="m-0 h-7 p-2 text-slate-600 hover:text-slate-700"
+                                title="Settings"
+                              >
+                                <Settings className="h-4 w-4" />
+                              </Button>
+                            </DropdownMenuTrigger>
+                            <DropdownMenuContent
+                              align="end"
+                              side="bottom"
+                              sideOffset={4}
+                              className="w-auto min-w-[200px] border border-slate-200 bg-white shadow-lg"
+                            >
+                              <DropdownMenuItem
+                                onClick={() =>
+                                  setTipsEnabled(!tipsEnabled)
+                                }
+                                className="cursor-pointer py-2 text-sm"
+                              >
+                                <Lightbulb className="mr-2 h-4 w-4" />
+                                <span>Tips on</span>
+                              </DropdownMenuItem>
+
+                              <DropdownMenuItem
+                                onClick={() => {
+                                  const newValue =
+                                    !showGeneralContributions;
+                                  setShowGeneralContributions(newValue);
+                                  setGeneralContributionsEnabled(newValue);
+                                }}
+                                className="cursor-pointer py-2 text-sm"
+                              >
+                                <Landmark className="mr-2 h-4 w-4" />
+                                <span>General Contributions on</span>
+                              </DropdownMenuItem>
+
+                              <DropdownMenuItem
+                                onClick={() => {
+                                  const raw = searchParams?.toString() || "";
+                                  const params = new URLSearchParams(raw);
+                                  const incoming = (
+                                    params.get("d") ??
+                                    params.get("donors") ??
+                                    ""
+                                  )
+                                    .split(",")
+                                    .filter(Boolean);
+                                  const crafdKey = "crafd-donors";
+                                  const crafdExpansion = [
+                                    "germany",
+                                    "netherlands",
+                                    "canada",
+                                    "finland",
+                                    "luxembourg",
+                                    "united-kingdom",
+                                    "european-union",
+                                    "usa",
+                                  ];
+
+                                  const hasCrafd =
+                                    incoming.includes(crafdKey) ||
+                                    (incoming.length ===
+                                      crafdExpansion.length &&
+                                      crafdExpansion.every((s) =>
+                                        incoming.includes(s)
+                                      ));
+
+                                  if (hasCrafd) {
+                                    // Remove donor filter entirely
+                                    params.delete("d");
+                                    params.delete("donors");
+                                  } else {
+                                    // Set the short key so expansion logic handles it downstream
+                                    params.set("d", crafdKey);
+                                    // keep 'donors' cleared to avoid duplicates
+                                    params.delete("donors");
+                                  }
+
+                                  const target = params.toString()
+                                    ? `?${params.toString()}`
+                                    : "/";
+                                  router.push(target);
+                                }}
+                                className="cursor-pointer py-2 text-sm"
+                              >
+                                <UserRoundPlus className="mr-2 h-4 w-4" />
+                                <span>Select CRAF'd Donors</span>
+                              </DropdownMenuItem>
+                            </DropdownMenuContent>
+                          </DropdownMenu>
                         </div>
                       )}
                     </CardTitle>
