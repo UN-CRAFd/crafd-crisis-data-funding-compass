@@ -6,10 +6,7 @@ import ChartCard from "@/components/ChartCard";
 import FilterBar from "@/components/FilterBar";
 import NoResultsPopup from "@/components/NoResultsPopup";
 import PageHeader from "@/components/PageHeader";
-import {
-  SectionHeader,
-  type SectionHeaderProps,
-} from "@/components/SectionHeader";
+import { SectionHeader } from "@/components/SectionHeader";
 import dynamic from "next/dynamic";
 import OrganizationModal from "@/components/OrganizationModal";
 import ProjectModal from "@/components/ProjectModal";
@@ -18,13 +15,7 @@ import DonorTable from "@/components/DonorTable";
 import SurveyBanner from "@/components/SurveyBanner";
 import { Button } from "@/components/ui/button";
 import { matchesUrlSlug } from "@/lib/urlShortcuts";
-import {
-  Card,
-  CardContent,
-  CardDescription,
-  CardHeader,
-  CardTitle,
-} from "@/components/ui/card";
+import { Card, CardContent } from "@/components/ui/card";
 import {
   Collapsible,
   CollapsibleContent,
@@ -101,10 +92,6 @@ const NetworkGraph = dynamic(() => import("@/components/NetworkGraph"), {
   ssr: false,
 });
 
-const TAB_TRIGGER_CLASS =
-  "h-6 px-2.5 text-[14px] font-medium rounded-md transition-all duration-200 ease-out hover:bg-slate-100 hover:text-slate-700 data-[state=active]:bg-[var(--brand-bg-light)] data-[state=active]:shadow-sm data-[state=active]:border data-[state=active]:border-[var(--brand-border)] data-[state=active]:text-[var(--brand-primary-dark)] data-[state=active]:hover:bg-[var(--brand-bg-light)] text-slate-600 bg-slate-50 border-none";
-
-
 const TABS = [
   {
     value: "table",
@@ -129,37 +116,52 @@ const TABS = [
 
 // Consolidated style constants
 const STYLES = {
-  // Card styles
-  statCard:
-    "!border-0 transition-all duration-300 hover:ring-2 hover:ring-slate-300/50",
   cardGlass: "!border-0 bg-white",
-  cardGlassLight: "!border-0 bg-white p-1 rounded-md shadow-none",
-
-  // Typography
-  sectionHeader:
-    "flex items-center gap-2 text-lg font-qanelas-subtitle font-black text-slate-800 mb-0 mt-0 uppercase",
-
-  // Badges
-  badgeBase:
-    "inline-flex items-center px-2 py-1 rounded-md text-xs font-medium",
-
-  // Interactive elements
-  projectItem:
-    "p-3 bg-white rounded-lg border border-slate-100 hover:bg-slate-200 cursor-pointer transition-colors duration-200 group",
-  orgRow:
-    "flex items-center justify-between p-4 hover:bg-slate-200 rounded-lg border border-slate-200 bg-white",
-
-  // Chart config
-  chartTooltip: {
-    backgroundColor: "var(--tooltip-bg)",
-    backdropFilter: "blur(12px)",
-    border: "1px solid var(--tooltip-border)",
-    borderRadius: "10px",
-    fontSize: "12px",
-    padding: "8px",
-    lineHeight: "0.8",
-  },
 } as const;
+
+// Tooltip style for reuse
+const TOOLTIP_STYLE = {
+  backgroundColor: "var(--tooltip-bg)",
+  backdropFilter: "blur(12px)",
+  border: "1px solid var(--tooltip-border)",
+  borderRadius: "10px",
+} as const;
+
+// Utility to normalize organization names for matching
+const normalizeOrgName = (name: string) =>
+  name.replace(/\s+/g, " ").trim().toLowerCase();
+
+// Helper to format donor list for display
+const formatDonorList = (donors: string[]): string => {
+  if (donors.length === 1) return donors[0];
+  if (donors.length === 2) return `${donors[0]} & ${donors[1]}`;
+  return `${donors.slice(0, -1).join(", ")} & ${donors[donors.length - 1]}`;
+};
+
+// Sorting comparator for organizations
+const sortOrganizations = (
+  a: OrganizationWithProjects,
+  b: OrganizationWithProjects,
+  sortBy: "name" | "donors" | "assets" | "funding",
+  sortDirection: "asc" | "desc"
+): number => {
+  let comparison = 0;
+  switch (sortBy) {
+    case "name":
+      comparison = b.organizationName.localeCompare(a.organizationName);
+      break;
+    case "donors":
+      comparison = a.donorCountries.length - b.donorCountries.length;
+      break;
+    case "assets":
+      comparison = a.projects.length - b.projects.length;
+      break;
+    case "funding":
+      comparison = (a.estimatedBudget || 0) - (b.estimatedBudget || 0);
+      break;
+  }
+  return sortDirection === "asc" ? comparison : -comparison;
+};
 
 interface CrisisDataDashboardProps {
   dashboardData: {
@@ -619,41 +621,42 @@ const CrisisDataDashboard = ({
     }
   };
 
-  // Export to CSV functionality
-  const handleExportCSV = async () => {
+  // Shared export options for CSV/XLSX
+  const getExportOptions = () => ({
+    searchQuery: appliedSearchQuery || undefined,
+    donorCountries: combinedDonors,
+    investmentTypes: investmentTypes,
+    investmentThemes: investmentThemes,
+  });
+
+  // Generic export handler factory
+  const createExportHandler = (
+    exportFn: typeof exportViewAsCSV | typeof exportViewAsXLSX,
+    setLoading: (loading: boolean) => void,
+    errorMessage: string,
+  ) => async () => {
     try {
-      setCSVExportLoading(true);
-      await exportViewAsCSV(organizationsWithProjects, {
-        searchQuery: appliedSearchQuery || undefined,
-        donorCountries: combinedDonors,
-        investmentTypes: investmentTypes,
-        investmentThemes: investmentThemes,
-      });
+      setLoading(true);
+      await exportFn(organizationsWithProjects, getExportOptions());
     } catch (error) {
-      console.error("Failed to export CSV:", error);
-      alert(labels.errors.exportCsvFailed);
+      console.error(`Export failed:`, error);
+      alert(errorMessage);
     } finally {
-      setCSVExportLoading(false);
+      setLoading(false);
     }
   };
 
-  // Export to XLSX functionality
-  const handleExportXLSX = async () => {
-    try {
-      setXLSXExportLoading(true);
-      await exportViewAsXLSX(organizationsWithProjects, {
-        searchQuery: appliedSearchQuery || undefined,
-        donorCountries: combinedDonors,
-        investmentTypes: investmentTypes,
-        investmentThemes: investmentThemes,
-      });
-    } catch (error) {
-      console.error("Failed to export XLSX:", error);
-      alert(labels.errors.exportXlsxFailed);
-    } finally {
-      setXLSXExportLoading(false);
-    }
-  };
+  const handleExportCSV = createExportHandler(
+    exportViewAsCSV,
+    setCSVExportLoading,
+    labels.errors.exportCsvFailed,
+  );
+
+  const handleExportXLSX = createExportHandler(
+    exportViewAsXLSX,
+    setXLSXExportLoading,
+    labels.errors.exportXlsxFailed,
+  );
 
   // Loading state
   if (loading) {
@@ -907,144 +910,89 @@ const CrisisDataDashboard = ({
           {/* Survey Banner */}
           <SurveyBanner />
 
-          {/* Statistics Cards */}
-          <div className="sm:hidden">
-            {/* Mobile Carousel */}
-            <div className="relative overflow-hidden">
-              <div className="scrollbar-hide flex snap-x snap-mandatory gap-4 overflow-x-auto px-1 pb-2">
-                <div className="w-[280px] flex-shrink-0 snap-center">
-                  <StatCard
-                    icon={<Globe style={{ color: "var(--brand-primary)" }} />}
-                    title={labels.stats.donorCountries.title}
-                    value={stats.donorCountries}
-                    label={labels.stats.donorCountries.label}
-                    colorScheme="amber"
-                    tooltip={labels.stats.donorCountries.tooltip}
-                  >
-                    <ChartCard
-                      title={labels.sections.donorCount}
-                      icon={<Globe style={{ color: "var(--brand-primary)" }} />}
-                      data={donorChartData}
-                      barColor="var(--brand-primary-lighter)"
-                      footnote={
-                        combinedDonors.length > 0
-                          ? `Showing ${topDonors.length} donor${topDonors.length === 1 ? "" : "s"} co-financing the most organizations together with ${
-                              combinedDonors.length === 1
-                                ? combinedDonors[0]
-                                : combinedDonors.length === 2
-                                  ? `${combinedDonors[0]} & ${combinedDonors[1]}`
-                                  : `${combinedDonors.slice(0, -1).join(", ")} & ${combinedDonors[combinedDonors.length - 1]}`
-                            }`
-                          : `Showing ${topDonors.length} donor${topDonors.length === 1 ? "" : "s"} funding the most organizations in the current view`
-                      }
-                    />
-                  </StatCard>
-                </div>
-                <div className="w-[290px] flex-shrink-0 snap-center">
-                  <StatCard
-                    icon={
-                      <Building2 style={{ color: "var(--brand-primary)" }} />
-                    }
-                    title={labels.stats.dataProviders.title}
-                    value={stats.dataProviders}
-                    label={labels.stats.dataProviders.label}
-                    colorScheme="amber"
-                    tooltip={labels.stats.dataProviders.tooltip}
-                  >
-                    <ChartCard
-                      title={labels.sections.organizationTypes}
-                      icon={<Building2 style={{ color: "var(--brand-primary)" }} />}
-                      data={organizationTypesChartData}
-                      barColor="var(--brand-primary-lighter)"
-                    />
-                  </StatCard>
-                </div>
-                <div className="w-[280px] flex-shrink-0 snap-center">
-                  <StatCard
-                    icon={
-                      <Database style={{ color: "var(--brand-primary)" }} />
-                    }
-                    title={labels.stats.dataProjects.title}
-                    value={stats.dataProjects}
-                    label={labels.stats.dataProjects.label}
-                    colorScheme="amber"
-                    tooltip={labels.stats.dataProjects.tooltip}
-                  >
-                    <ChartCard
-                      title={labels.sections.projectCategories}
-                      icon={<Database style={{ color: "var(--brand-primary)" }} />}
-                      data={projectTypesChartData}
-                      barColor="var(--brand-primary-lighter)"
-                      footnote={labels.ui.chartFootnote}
-                    />
-                  </StatCard>
-                </div>
-              </div>
-            </div>
-          </div>
+          {/* Statistics Cards - Configuration-driven rendering */}
+          {(() => {
+            const donorChartFootnote = combinedDonors.length > 0
+              ? `Showing ${topDonors.length} donor${topDonors.length === 1 ? "" : "s"} co-financing the most organizations together with ${formatDonorList(combinedDonors)}`
+              : `Showing ${topDonors.length} donor${topDonors.length === 1 ? "" : "s"} funding the most organizations in the current view`;
 
-          {/* Desktop Grid */}
-          <div className="hidden gap-4 sm:grid sm:grid-cols-2 sm:gap-[var(--spacing-section)] lg:grid-cols-3">
-            <StatCard
-              icon={<Globe style={{ color: "var(--brand-primary)" }} />}
-              title={labels.stats.donorCountries.title}
-              value={stats.donorCountries}
-              label={labels.stats.donorCountries.label}
-              colorScheme="amber"
-              tooltip={labels.stats.donorCountries.tooltip}
-            >
-              <ChartCard
-                title={labels.sections.donorCount}
-                icon={<Globe style={{ color: "var(--brand-primary)" }} />}
-                data={donorChartData}
-                barColor="var(--brand-primary-lighter)"
-                footnote={
-                  combinedDonors.length > 0
-                    ? `Showing ${topDonors.length} donor${topDonors.length === 1 ? "" : "s"} co-financing the most organizations together with ${
-                        combinedDonors.length === 1
-                          ? combinedDonors[0]
-                          : combinedDonors.length === 2
-                            ? `${combinedDonors[0]} & ${combinedDonors[1]}`
-                            : `${combinedDonors.slice(0, -1).join(", ")} & ${combinedDonors[combinedDonors.length - 1]}`
-                      }`
-                    : `Showing ${topDonors.length} donor${topDonors.length === 1 ? "" : "s"} funding the most organizations in the current view`
-                }
-              />
-            </StatCard>
+            const statCardsConfig = [
+              {
+                icon: <Globe style={{ color: "var(--brand-primary)" }} />,
+                title: labels.stats.donorCountries.title,
+                value: stats.donorCountries,
+                label: labels.stats.donorCountries.label,
+                tooltip: labels.stats.donorCountries.tooltip,
+                chartTitle: labels.sections.donorCount,
+                chartData: donorChartData,
+                chartFootnote: donorChartFootnote,
+                mobileWidth: "w-[280px]",
+              },
+              {
+                icon: <Building2 style={{ color: "var(--brand-primary)" }} />,
+                title: labels.stats.dataProviders.title,
+                value: stats.dataProviders,
+                label: labels.stats.dataProviders.label,
+                tooltip: labels.stats.dataProviders.tooltip,
+                chartTitle: labels.sections.organizationTypes,
+                chartData: organizationTypesChartData,
+                mobileWidth: "w-[290px]",
+              },
+              {
+                icon: <Database style={{ color: "var(--brand-primary)" }} />,
+                title: labels.stats.dataProjects.title,
+                value: stats.dataProjects,
+                label: labels.stats.dataProjects.label,
+                tooltip: labels.stats.dataProjects.tooltip,
+                chartTitle: labels.sections.projectCategories,
+                chartData: projectTypesChartData,
+                chartFootnote: labels.ui.chartFootnote,
+                mobileWidth: "w-[280px]",
+              },
+            ];
 
-            <StatCard
-              icon={<Building2 style={{ color: "var(--brand-primary)" }} />}
-              title={labels.stats.dataProviders.title}
-              value={stats.dataProviders}
-              label={labels.stats.dataProviders.label}
-              colorScheme="amber"
-              tooltip={labels.stats.dataProviders.tooltip}
-            >
-              <ChartCard
-                title={labels.sections.organizationTypes}
-                icon={<Building2 style={{ color: "var(--brand-primary)" }} />}
-                data={organizationTypesChartData}
-                barColor="var(--brand-primary-lighter)"
-              />
-            </StatCard>
+            const renderStatCard = (config: typeof statCardsConfig[0], key: number) => (
+              <StatCard
+                key={key}
+                icon={config.icon}
+                title={config.title}
+                value={config.value}
+                label={config.label}
+                colorScheme="amber"
+                tooltip={config.tooltip}
+              >
+                <ChartCard
+                  title={config.chartTitle}
+                  icon={config.icon}
+                  data={config.chartData}
+                  barColor="var(--brand-primary-lighter)"
+                  footnote={config.chartFootnote}
+                />
+              </StatCard>
+            );
 
-            <StatCard
-              icon={<Database style={{ color: "var(--brand-primary)" }} />}
-              title={labels.stats.dataProjects.title}
-              value={stats.dataProjects}
-              label={labels.stats.dataProjects.label}
-              colorScheme="amber"
-              tooltip={labels.stats.dataProjects.tooltip}
-            >
-              <ChartCard
-                title={labels.sections.projectCategories}
-                icon={<Database style={{ color: "var(--brand-primary)" }} />}
-                data={projectTypesChartData}
-                barColor="var(--brand-primary-lighter)"
-                footnote={labels.ui.chartFootnote}
-              />
-            </StatCard>
-          </div>
+            return (
+              <>
+                {/* Mobile Carousel */}
+                <div className="sm:hidden">
+                  <div className="relative overflow-hidden">
+                    <div className="scrollbar-hide flex snap-x snap-mandatory gap-4 overflow-x-auto px-1 pb-2">
+                      {statCardsConfig.map((config, idx) => (
+                        <div key={idx} className={`${config.mobileWidth} flex-shrink-0 snap-center`}>
+                          {renderStatCard(config, idx)}
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+                </div>
+
+                {/* Desktop Grid */}
+                <div className="hidden gap-4 sm:grid sm:grid-cols-2 sm:gap-[var(--spacing-section)] lg:grid-cols-3">
+                  {statCardsConfig.map((config, idx) => renderStatCard(config, idx))}
+                </div>
+              </>
+            );
+          })()}
 
           {/* Main Layout - Full Width */}
           <div>
@@ -1081,13 +1029,7 @@ const CrisisDataDashboard = ({
                               className="max-w-100 rounded-lg border border-slate-200 bg-white p-3 text-xs text-slate-800"
                               sideOffset={5}
                               avoidCollisions={true}
-                              style={{
-                                backgroundColor: "var(--tooltip-bg)",
-                                backdropFilter: "blur(12px)",
-                                border:
-                                  "1px solid var(--tooltip-border)",
-                                borderRadius: "10px",
-                              }}
+                              style={TOOLTIP_STYLE}
                             >
                               {tooltip}
                             </TooltipContent>
@@ -1336,34 +1278,7 @@ const CrisisDataDashboard = ({
                     <TabsContent value="table" className="mt-0">
                         <div className="space-y-2 transition-all duration-500">
                           {organizationsWithProjects
-                            .sort((a, b) => {
-                              let comparison = 0;
-
-                              if (sortBy === "name") {
-                                comparison = b.organizationName.localeCompare(
-                                  a.organizationName,
-                                );
-                              } else if (sortBy === "donors") {
-                                // Sort by number of unique donors
-                                comparison =
-                                  a.donorCountries.length -
-                                  b.donorCountries.length;
-                              } else if (sortBy === "assets") {
-                                // Sort by number of projects/assets
-                                comparison =
-                                  a.projects.length - b.projects.length;
-                              } else if (sortBy === "funding") {
-                                // Sort by estimated budget (handle undefined/null values)
-                                const aBudget = a.estimatedBudget || 0;
-                                const bBudget = b.estimatedBudget || 0;
-                                comparison = aBudget - bBudget;
-                              }
-
-                              // Apply sort direction
-                              return sortDirection === "asc"
-                                ? comparison
-                                : -comparison;
-                            })
+                            .sort((a, b) => sortOrganizations(a, b, sortBy, sortDirection))
                             .map((org) => {
                               const isExpanded = expandedOrgs.has(org.id);
                               const hasProjects = org.projects.length > 0;
@@ -1429,44 +1344,16 @@ const CrisisDataDashboard = ({
                                             </h3>
                                             {(() => {
                                               // Find matching record in organizations-table.json
+                                              const orgTarget = normalizeOrgName(org.organizationName || org.id);
                                               const orgTableMatch =
-                                                organizationsTable.find(
-                                                  (rec) => {
-                                                    const full =
-                                                      (rec.fields[
-                                                        "Org Full Name"
-                                                      ] as string) || "";
-                                                    const short =
-                                                      (rec.fields[
-                                                        "Org Short Name"
-                                                      ] as string) || "";
-                                                    const altFull =
-                                                      (rec.fields[
-                                                        "Org Fullname"
-                                                      ] as string) || "";
-                                                    const normalized = (
-                                                      name: string,
-                                                    ) =>
-                                                      name
-                                                        .replace(/\s+/g, " ")
-                                                        .trim()
-                                                        .toLowerCase();
-                                                    const target = normalized(
-                                                      org.organizationName ||
-                                                        org.id,
-                                                    );
-                                                    return [
-                                                      full,
-                                                      short,
-                                                      altFull,
-                                                    ].some(
-                                                      (s) =>
-                                                        normalized(
-                                                          String(s || ""),
-                                                        ) === target,
-                                                    );
-                                                  },
-                                                );
+                                                organizationsTable.find((rec) => {
+                                                  const full = (rec.fields["Org Full Name"] as string) || "";
+                                                  const short = (rec.fields["Org Short Name"] as string) || "";
+                                                  const altFull = (rec.fields["Org Fullname"] as string) || "";
+                                                  return [full, short, altFull].some(
+                                                    (s) => normalizeOrgName(String(s || "")) === orgTarget,
+                                                  );
+                                                });
                                               const orgType = orgTableMatch
                                                 ?.fields["Org Type"] as
                                                 | string
@@ -1950,17 +1837,11 @@ const CrisisDataDashboard = ({
       {selectedOrganization &&
         (() => {
           // Find matching record in organizations table using clean field names
+          const target = normalizeOrgName(selectedOrganization.organizationName || selectedOrganization.id);
           const match = organizationsTable.find((rec) => {
             const full = (rec.fields["Org Full Name"] as string) || "";
             const short = (rec.fields["Org Short Name"] as string) || "";
-            const normalized = (name: string) =>
-              name.replace(/\s+/g, " ").trim().toLowerCase();
-            const target = normalized(
-              selectedOrganization.organizationName || selectedOrganization.id,
-            );
-            return [full, short].some(
-              (s) => normalized(String(s || "")) === target,
-            );
+            return [full, short].some((s) => normalizeOrgName(String(s || "")) === target);
           });
 
           // Use the matched record directly, or create a minimal fallback
@@ -1978,10 +1859,9 @@ const CrisisDataDashboard = ({
 
           // Find matching organization in nested data to get IATI data
           const nestedMatch = nestedOrganizationsRaw.find((nestedOrg: any) => {
-            const nestedName = (nestedOrg.name || "").replace(/\s+/g, " ").trim().toLowerCase();
-            const nestedFull = (nestedOrg.fields?.["Org Full Name"] || "").replace(/\s+/g, " ").trim().toLowerCase();
-            const nestedShort = (nestedOrg.fields?.["Org Short Name"] || "").replace(/\s+/g, " ").trim().toLowerCase();
-            const target = (selectedOrganization.organizationName || selectedOrganization.id).replace(/\s+/g, " ").trim().toLowerCase();
+            const nestedName = normalizeOrgName(nestedOrg.name || "");
+            const nestedFull = normalizeOrgName(nestedOrg.fields?.["Org Full Name"] || "");
+            const nestedShort = normalizeOrgName(nestedOrg.fields?.["Org Short Name"] || "");
             return nestedName === target || nestedFull === target || nestedShort === target || nestedOrg.id === orgRecord.id;
           });
 
