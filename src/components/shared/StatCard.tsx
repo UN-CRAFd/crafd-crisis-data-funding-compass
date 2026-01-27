@@ -91,7 +91,7 @@ export const StatCard = React.memo(function StatCard({
                   <div className="flex items-center justify-between">
                     <SectionHeader icon={icon} title={title} />
                     <ChevronDown
-                      className={`h-4 w-4 text-slate-500 transition-transform duration-200 ${
+                      className={`h-6 w-6 text-slate-500 transition-transform duration-200 ${
                         isExpanded ? "rotate-180" : ""
                       }`}
                     />
