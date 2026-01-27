@@ -833,7 +833,7 @@ export default function OrganizationModal({
 
             {/* Activities list */}
             {organization.iati_data.activities && organization.iati_data.activities.length > 0 && (
-              <div className="mt-4 flex flex-col gap-2">
+              <div className="mt-4 hidden flex flex-col gap-2">
                 <IATIProjectsList
                   activities={organization.iati_data.activities}
                   orgName={displayName}
