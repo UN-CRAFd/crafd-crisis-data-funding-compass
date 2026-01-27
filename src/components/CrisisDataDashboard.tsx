@@ -887,7 +887,7 @@ const CrisisDataDashboard = ({
   };
 
   return (
-    <div className="min-h-screen bg-slate-50">
+    <div className="min-h-screen bg-slate-500">
       {/* Header Section - Fixed */}
       <PageHeader
         onShare={handleShare}
@@ -1054,11 +1054,12 @@ const CrisisDataDashboard = ({
                 onValueChange={(v) =>
                   setActiveView(v as "table" | "donors" | "network")
                 }
-                className="flex w-full flex-col"
+                className="flex w-full flex-col gap-0 -mb-px"
               >
-                {/* Tab List with Controls */}
-                <div className="flex w-full items-center gap-0">
-                  <TabsList className="trapezoid-tabs-container h-auto gap-0 p-0 rounded-none border-0 bg-transparent p-0">
+                {/* Tab List with Controls - Unified */}
+                <TabsList className="trapezoid-tabs-container h-auto gap-0 p-0 rounded-none border-0 bg-transparent p-0 w-full justify-between">
+                  {/* Left Side Tabs */}
+                  <div className="flex items-center gap-0">
                     <TooltipProvider delayDuration={0}>
                       {TABS.map(({ value, label, Icon, tooltip }) =>
                         tipsEnabled ? (
@@ -1104,14 +1105,12 @@ const CrisisDataDashboard = ({
                         ),
                       )}
                     </TooltipProvider>
-                  </TabsList>
+                  </div>
 
                   {/* Sort and Settings Trapezoid - Right-aligned */}
-                  {(
-                    <div className="ml-auto animate-in duration-300 slide-in-from-right-5 fade-in">
-                      <div className="relative z-1 flex items-center gap-0">
-                        {/* Trapezoid Container with Sort and Settings */}
-                        {((activeView === "table" || activeView === "donors") && <div className="trapezoid-settings-container hidden sm:flex items-center gap-0">
+                  <div className="animate-in duration-300 slide-in-from-right-5 fade-in flex items-center gap-0">
+                    {/* Trapezoid Container with Sort and Settings */}
+                    {((activeView === "table" || activeView === "donors") && <div className="trapezoid-settings-container hidden sm:flex items-center gap-0">
                           <Button
                             variant="ghost"
                             size="sm"
@@ -1212,9 +1211,12 @@ const CrisisDataDashboard = ({
 
                           <DropdownMenu>
                             <DropdownMenuTrigger asChild>
-                              <button className="p-0 bg-transparent border-none m-0">
+                              <Button
+                                variant="ghost"
+                                className="m-0 font-medium transition-all hover:bg-transparent"
+                              >
                                 <Settings className="h-4 w-4" />
-                              </button>
+                              </Button>
                             </DropdownMenuTrigger>
                             <DropdownMenuContent
                               align="end"
@@ -1309,15 +1311,12 @@ const CrisisDataDashboard = ({
                               </DropdownMenuItem>
                             </DropdownMenuContent>
                           </DropdownMenu>
-                        </div>
-                      </div>
                     </div>
-                  )}
-
-                </div>
+                  </div>
+                </TabsList>
 
                 {/* Card with Content and Tab Views */}
-                <Card className={`${STYLES.cardGlass} !mt-0 !border-t-0`}>
+                <Card className={`${STYLES.cardGlass} card-bottom-rounded !border-t-0`}>
                   {/* Filters */}
                   <CardContent className="px-4 pt-0 pb-4 sm:px-6 sm:pb-6">
                     <FilterBar
