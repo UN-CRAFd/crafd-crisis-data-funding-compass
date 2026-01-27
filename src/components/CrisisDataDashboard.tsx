@@ -1238,16 +1238,21 @@ const CrisisDataDashboard = ({
                               align="end"
                               side="bottom"
                               sideOffset={4}
-                              className="w-auto min-w-[200px] border border-slate-200 bg-white shadow-lg"
+                              className="w-auto min-w-[250px] border border-slate-200 bg-white shadow-lg"
                             >
                               <DropdownMenuItem
                                 onClick={() =>
                                   setTipsEnabled(!tipsEnabled)
                                 }
-                                className="cursor-pointer py-2 text-sm"
+                                className="cursor-pointer flex items-center justify-between py-2 px-2 text-sm hover:bg-slate-100"
                               >
-                                <Lightbulb className="mr-2 h-4 w-4" />
-                                <span>Tips on</span>
+                                <div className="flex items-center">
+                                  <Lightbulb className="mr-2 h-4 w-4" />
+                                  <span>Tips</span>
+                                </div>
+                                <div className={`h-4 w-7 rounded-full transition-colors ${tipsEnabled ? "bg-green-500" : "bg-slate-300"}`}>
+                                  <div className={`h-4 w-4 rounded-full bg-white transition-transform ${tipsEnabled ? "translate-x-3" : "translate-x-0"}`} />
+                                </div>
                               </DropdownMenuItem>
 
                               <DropdownMenuItem
@@ -1257,10 +1262,15 @@ const CrisisDataDashboard = ({
                                   setShowGeneralContributions(newValue);
                                   setGeneralContributionsEnabled(newValue);
                                 }}
-                                className="cursor-pointer py-2 text-sm"
+                                className="cursor-pointer flex items-center justify-between py-2 px-2 text-sm hover:bg-slate-100"
                               >
-                                <Landmark className="mr-2 h-4 w-4" />
-                                <span>General Contributions on</span>
+                                <div className="flex items-center">
+                                  <Landmark className="mr-2 h-4 w-4" />
+                                  <span>General Contributions</span>
+                                </div>
+                                <div className={`h-4 w-7 rounded-full transition-colors ${showGeneralContributions ? "bg-green-500" : "bg-slate-300"}`}>
+                                  <div className={`h-4 w-4 rounded-full bg-white transition-transform ${showGeneralContributions ? "translate-x-3" : "translate-x-0"}`} />
+                                </div>
                               </DropdownMenuItem>
 
                               <DropdownMenuItem
