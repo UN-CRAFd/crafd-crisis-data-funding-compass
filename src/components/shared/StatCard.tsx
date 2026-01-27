@@ -80,39 +80,41 @@ export const StatCard = React.memo(function StatCard({
 
   const cardContent = children ? (
     <Collapsible open={isExpanded} onOpenChange={setIsExpanded}>
-      <Card className={`${STYLES.statCard} bg-gradient-to-br ${colors.bg}`}>
-        <CollapsibleTrigger className="w-full">
-          <CardHeader className="h-5 pb-0 mb-5">
-            <CardDescription>
-              <div className="flex items-center justify-between">
-                <SectionHeader icon={icon} title={title} />
-                <ChevronDown
-                  className={`h-4 w-4 text-slate-500 transition-transform duration-200 ${
-                    isExpanded ? "rotate-180" : ""
-                  }`}
-                />
+      <div className="relative">
+        <Card className={`${STYLES.statCard} bg-gradient-to-br ${colors.bg}`}>
+          <CollapsibleTrigger className="w-full">
+            <CardHeader className="h-5 pb-0 mb-5">
+              <CardDescription>
+                <div className="flex items-center justify-between">
+                  <SectionHeader icon={icon} title={title} />
+                  <ChevronDown
+                    className={`h-4 w-4 text-slate-500 transition-transform duration-200 ${
+                      isExpanded ? "rotate-180" : ""
+                    }`}
+                  />
+                </div>
+              </CardDescription>
+            </CardHeader>
+            <CardContent className="pt-0">
+              <div className="flex items-baseline gap-2">
+                <div
+                  className={`font-mono text-4xl leading-none font-bold tabular-nums sm:text-5xl ${colors.value}`}
+                >
+                  {value}
+                </div>
+                <div
+                  className={`text-sm leading-none font-medium sm:text-lg ${colors.label}`}
+                >
+                  {label}
+                </div>
               </div>
-            </CardDescription>
-          </CardHeader>
-          <CardContent className="pt-0">
-            <div className="flex items-baseline gap-2">
-              <div
-                className={`font-mono text-4xl leading-none font-bold tabular-nums sm:text-5xl ${colors.value}`}
-              >
-                {value}
-              </div>
-              <div
-                className={`text-sm leading-none font-medium sm:text-lg ${colors.label}`}
-              >
-                {label}
-              </div>
-            </div>
-          </CardContent>
-        </CollapsibleTrigger>
-        <CollapsibleContent>
-          <CardContent className="pt-4">{children}</CardContent>
+            </CardContent>
+          </CollapsibleTrigger>
+        </Card>
+        <CollapsibleContent className="absolute left-0 right-0 top-full z-50 mt-2 bg-white border border-[var(--brand-primary-light)]/40 rounded-lg overflow-hidden">
+          <CardContent className="p-4">{children}</CardContent>
         </CollapsibleContent>
-      </Card>
+      </div>
     </Collapsible>
   ) : (
     <Card className={`${STYLES.statCard} bg-gradient-to-br ${colors.bg}`}>
