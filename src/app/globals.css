@@ -394,12 +394,17 @@ body::-webkit-scrollbar {
   animation: fade-in-slide-up 300ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
+/* Card with bottom-only rounding */
+.card-bottom-rounded {
+  @apply rounded-b-lg rounded-t-none;
+}
+
 /* Trapezoid Tab Styles */
 .trapezoid-tab {
   position: relative;
   z-index: 1;
   margin-right: -16px;
-  padding: 0.625rem 1rem 0.625rem 1rem;
+  padding: 0.625rem 2rem 0.625rem 1.5rem;
   background: transparent;
   color: #64748b;
   font-family: Qanelas, ui-sans-serif, system-ui, sans-serif !important;
@@ -411,6 +416,10 @@ body::-webkit-scrollbar {
   cursor: pointer;
   border: none !important;
   outline: none !important;
+  height: auto;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
 }
 
 /* First tab aligns with card left edge */
@@ -455,12 +464,25 @@ body::-webkit-scrollbar {
 
 /* Container for trapezoid tabs */
 .trapezoid-tabs-container {
+  display: flex !important;
+  align-items: flex-end;
+  border-bottom: none;
+  padding-bottom: 0;
+  margin-bottom: 0;
+  position: relative;
+  gap: 0;
+  flex-wrap: nowrap;
+}
+
+/* Container for right-aligned trapezoid tabs (sort + settings) */
+.trapezoid-tabs-container-right {
   display: flex;
   align-items: flex-end;
   border-bottom: none;
   padding-bottom: 0;
-  margin-bottom: -1px;
+  margin-bottom: -6px;
   position: relative;
+  gap: 0;
 }
 
 /* Trapezoid Settings Button */
@@ -505,10 +527,15 @@ body::-webkit-scrollbar {
 .trapezoid-settings-container {
   position: relative;
   z-index: 1;
-  padding: 0.625rem 1.5rem;
+  margin-left: -16px;
+  padding: 0.625rem 2rem 0.625rem 1.5rem;
   background: transparent;
   color: #64748b;
   transition: all 0.15s ease;
+  min-height: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .trapezoid-settings-container::before {
