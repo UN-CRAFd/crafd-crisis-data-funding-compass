@@ -3,13 +3,18 @@
  * Unified statistics card used for displaying metrics across Analytics and Dashboard
  */
 
-import React from "react";
+import React, { useState } from "react";
 import {
   Card,
   CardContent,
   CardDescription,
   CardHeader,
 } from "@/components/ui/card";
+import {
+  Collapsible,
+  CollapsibleContent,
+  CollapsibleTrigger,
+} from "@/components/ui/collapsible";
 import {
   Tooltip as TooltipUI,
   TooltipContent,
@@ -18,6 +23,7 @@ import {
 } from "@/components/ui/tooltip";
 import { SectionHeader } from "../SectionHeader";
 import { useTips } from "@/contexts/TipsContext";
+import { ChevronDown } from "lucide-react";
 
 interface StatCardProps {
   icon: React.ReactNode;
@@ -26,6 +32,7 @@ interface StatCardProps {
   label: string;
   colorScheme: "amber";
   tooltip?: React.ReactNode | string;
+  children?: React.ReactNode;
 }
 
 const STYLES = {
@@ -49,7 +56,9 @@ export const StatCard = React.memo(function StatCard({
   label,
   colorScheme,
   tooltip,
+  children,
 }: StatCardProps) {
+  const [isExpanded, setIsExpanded] = useState(false);
   let tipsEnabled = false;
   try {
     const tipsContext = useTips();
@@ -69,7 +78,43 @@ export const StatCard = React.memo(function StatCard({
 
   const colors = gradients[colorScheme];
 
-  const cardContent = (
+  const cardContent = children ? (
+    <Collapsible open={isExpanded} onOpenChange={setIsExpanded}>
+      <Card className={`${STYLES.statCard} bg-gradient-to-br ${colors.bg}`}>
+        <CollapsibleTrigger className="w-full">
+          <CardHeader className="h-5 pb-0 mb-5">
+            <CardDescription>
+              <div className="flex items-center justify-between">
+                <SectionHeader icon={icon} title={title} />
+                <ChevronDown
+                  className={`h-4 w-4 text-slate-500 transition-transform duration-200 ${
+                    isExpanded ? "rotate-180" : ""
+                  }`}
+                />
+              </div>
+            </CardDescription>
+          </CardHeader>
+          <CardContent className="pt-0">
+            <div className="flex items-baseline gap-2">
+              <div
+                className={`font-mono text-4xl leading-none font-bold tabular-nums sm:text-5xl ${colors.value}`}
+              >
+                {value}
+              </div>
+              <div
+                className={`text-sm leading-none font-medium sm:text-lg ${colors.label}`}
+              >
+                {label}
+              </div>
+            </div>
+          </CardContent>
+        </CollapsibleTrigger>
+        <CollapsibleContent>
+          <CardContent className="pt-4">{children}</CardContent>
+        </CollapsibleContent>
+      </Card>
+    </Collapsible>
+  ) : (
     <Card className={`${STYLES.statCard} bg-gradient-to-br ${colors.bg}`}>
       <CardHeader className="h-5 pb-0">
         <CardDescription>
