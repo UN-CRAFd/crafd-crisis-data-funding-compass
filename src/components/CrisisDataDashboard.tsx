@@ -114,8 +114,7 @@ const NetworkGraph = dynamic(() => import("@/components/NetworkGraph"), {
 const TAB_TRIGGER_CLASS =
   "h-6 px-2.5 text-[14px] font-medium rounded-md transition-all duration-200 ease-out hover:bg-slate-100 hover:text-slate-700 data-[state=active]:bg-[var(--brand-bg-light)] data-[state=active]:shadow-sm data-[state=active]:border data-[state=active]:border-[var(--brand-border)] data-[state=active]:text-[var(--brand-primary-dark)] data-[state=active]:hover:bg-[var(--brand-bg-light)] text-slate-600 bg-slate-50 border-none";
 
-const TAB_TRIGGER_HEADER_CLASS =
-  "h-auto px-3 py-1.5 text-base sm:text-lg font-qanelas-subtitle font-black uppercase rounded-none transition-all duration-200 ease-out hover:bg-slate-200 data-[state=active]:bg-transparent data-[state=active]:shadow-none data-[state=active]:border-b-2 data-[state=active]:border-[var(--brand-primary)] data-[state=active]:text-[var(--brand-primary)] data-[state=active]:hover:bg-transparent text-slate-700 bg-slate-100 border-none";
+const TAB_TRIGGER_HEADER_CLASS = "trapezoid-tab";
 
 const TABS = [
   {
@@ -1059,73 +1058,70 @@ const CrisisDataDashboard = ({
           </div>
 
           {/* Main Layout - Full Width */}
-          <div className="space-y-4 sm:space-y-[var(--spacing-section)]">
-              {/* Organizations Table Section */}
-              <div>
-                <Card className={STYLES.cardGlass}>
-                  <CardHeader className="h-0 pb-0">
-                    <CardTitle className="mb-2 flex w-full items-center">
-                      {/* View Tabs styled as section header */}
-                      <Tabs
-                        value={activeView}
-                        onValueChange={(v) =>
-                          setActiveView(v as "table" | "donors" | "network")
-                        }
-                        className="flex"
-                      >
-                        <TabsList className="h-auto gap-0 rounded-none border-0 bg-transparent p-0">
-                          <TooltipProvider delayDuration={0}>
-                            {TABS.map(({ value, label, Icon, tooltip }) =>
-                              tipsEnabled ? (
-                                <TooltipUI key={value}>
-                                  <TooltipTrigger asChild>
-                                    <div>
-                                      <TabsTrigger
-                                        value={value}
-                                        className={TAB_TRIGGER_HEADER_CLASS}
-                                      >
-                                        <Icon className="mr-2 h-5 w-5 sm:h-6 sm:w-6" />
-                                        {label}
-                                      </TabsTrigger>
-                                    </div>
-                                  </TooltipTrigger>
-                                  <TooltipContent
-                                    side="bottom"
-                                    align="center"
-                                    className="max-w-100 rounded-lg border border-slate-200 bg-white p-3 text-xs text-slate-800"
-                                    sideOffset={5}
-                                    avoidCollisions={true}
-                                    style={{
-                                      backgroundColor: "var(--tooltip-bg)",
-                                      backdropFilter: "blur(12px)",
-                                      border:
-                                        "1px solid var(--tooltip-border)",
-                                      borderRadius: "10px",
-                                    }}
-                                  >
-                                    {tooltip}
-                                  </TooltipContent>
-                                </TooltipUI>
-                              ) : (
-                                <div key={value}>
-                                  <TabsTrigger
-                                    value={value}
-                                    className={TAB_TRIGGER_HEADER_CLASS}
-                                  >
-                                    <Icon className="mr-2 h-5 w-5 sm:h-6 sm:w-6" />
-                                    {label}
-                                  </TabsTrigger>
-                                </div>
-                              ),
-                            )}
-                          </TooltipProvider>
-                        </TabsList>
-                      </Tabs>
-                      {/* Sort Dropdown and Settings right-aligned */}
-                      {(activeView === "table" || activeView === "donors") && (
-                        <div className="ml-auto flex animate-in duration-300 slide-in-from-right-5 fade-in gap-2 items-center">
-                          {/* Sort Dropdown Box */}
-                          <div className="hidden h-7 items-center gap-1 rounded-md border border-slate-200 bg-slate-50/50 px-2 text-[14px] font-medium transition-all hover:border-slate-300 hover:bg-white sm:flex">
+          <div>
+              {/* View Tabs - Outside Card */}
+              <Tabs
+                value={activeView}
+                onValueChange={(v) =>
+                  setActiveView(v as "table" | "donors" | "network")
+                }
+                className="flex w-full flex-col"
+              >
+                {/* Tab List with Controls */}
+                <div className="flex w-full items-center">
+                  <TabsList className="trapezoid-tabs-container h-auto gap-0 rounded-none border-0 bg-transparent p-0">
+                    <TooltipProvider delayDuration={0}>
+                      {TABS.map(({ value, label, Icon, tooltip }) =>
+                        tipsEnabled ? (
+                          <TooltipUI key={value}>
+                            <TooltipTrigger asChild>
+                              <div>
+                                <TabsTrigger
+                                  value={value}
+                                  className={TAB_TRIGGER_HEADER_CLASS}
+                                >
+                                  <Icon className="mr-2 h-5 w-5 sm:h-6 sm:w-6" />
+                                  {label}
+                                </TabsTrigger>
+                              </div>
+                            </TooltipTrigger>
+                            <TooltipContent
+                              side="bottom"
+                              align="center"
+                              className="max-w-100 rounded-lg border border-slate-200 bg-white p-3 text-xs text-slate-800"
+                              sideOffset={5}
+                              avoidCollisions={true}
+                              style={{
+                                backgroundColor: "var(--tooltip-bg)",
+                                backdropFilter: "blur(12px)",
+                                border:
+                                  "1px solid var(--tooltip-border)",
+                                borderRadius: "10px",
+                              }}
+                            >
+                              {tooltip}
+                            </TooltipContent>
+                          </TooltipUI>
+                        ) : (
+                          <div key={value}>
+                            <TabsTrigger
+                              value={value}
+                              className={TAB_TRIGGER_HEADER_CLASS}
+                            >
+                              <Icon className="mr-2 h-5 w-5 sm:h-6 sm:w-6" />
+                              {label}
+                            </TabsTrigger>
+                          </div>
+                        ),
+                      )}
+                    </TooltipProvider>
+                  </TabsList>
+
+                  {/* Sort Dropdown and Settings right-aligned */}
+                  <div className="flex animate-in duration-300 slide-in-from-right-5 fade-in gap-0 items-center">
+                    {/* Sort Dropdown Box - Only for table/donors */}
+                    {(activeView === "table" || activeView === "donors") && (
+                      <div className="hidden h-7 items-center gap-1 rounded-md border border-slate-200 bg-slate-50/50 px-2 text-[14px] font-medium transition-all hover:border-slate-300 hover:bg-white sm:flex">
                             <Button
                               variant="ghost"
                               size="sm"
@@ -1220,20 +1216,16 @@ const CrisisDataDashboard = ({
                                 )}
                               </DropdownMenuContent>
                             </DropdownMenu>
-                          </div>
+                      </div>
+                    )}
 
-                          {/* Settings Gear Icon - Separate Button */}
-                          <DropdownMenu>
-                            <DropdownMenuTrigger asChild>
-                              <Button
-                                variant="ghost"
-                                size="sm"
-                                className="m-0 h-7 p-2 text-slate-600 hover:text-slate-700"
-                                title="Settings"
-                              >
-                                <Settings className="h-4 w-4" />
-                              </Button>
-                            </DropdownMenuTrigger>
+                    {/* Settings Gear Icon - Trapezoid Button (always visible) */}
+                    <DropdownMenu>
+                      <DropdownMenuTrigger asChild>
+                        <button className="trapezoid-settings">
+                          <Settings className="h-4 w-4" />
+                        </button>
+                      </DropdownMenuTrigger>
                             <DropdownMenuContent
                               align="end"
                               side="bottom"
@@ -1326,13 +1318,14 @@ const CrisisDataDashboard = ({
                                 <span>Select CRAF'd Donors</span>
                               </DropdownMenuItem>
                             </DropdownMenuContent>
-                          </DropdownMenu>
-                        </div>
-                      )}
-                    </CardTitle>
-                  </CardHeader>{" "}
+                    </DropdownMenu>
+                  </div>
+                </div>
+
+                {/* Card with Content and Tab Views */}
+                <Card className={STYLES.cardGlass}>
                   {/* Filters */}
-                  <CardContent className="p-4 sm:p-6">
+                  <CardContent className="px-4 pt-0 pb-4 sm:px-6 sm:pb-6">
                     <FilterBar
                       searchQuery={searchQuery}
                       appliedSearchQuery={appliedSearchQuery}
@@ -1355,10 +1348,9 @@ const CrisisDataDashboard = ({
                       className="-mb-6 sm:-mb-7"
                     />
                   </CardContent>
-                  {/* Tabs for Table and Network View */}
+                  {/* Tab Content Views */}
                   <CardContent className="px-4 pt-2 sm:px-6 sm:pt-0">
-                    <Tabs value={activeView} className="w-full">
-                      <TabsContent value="table" className="mt-0">
+                    <TabsContent value="table" className="mt-0">
                         <div className="space-y-2 transition-all duration-500">
                           {organizationsWithProjects
                             .sort((a, b) => {
@@ -1921,10 +1913,9 @@ const CrisisDataDashboard = ({
                           />
                         </div>
                       </TabsContent>
-                    </Tabs>
                   </CardContent>
                 </Card>
-              </div>
+              </Tabs>
           </div>
         </div>
       </div>
