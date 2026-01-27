@@ -149,10 +149,9 @@
   /* slate-200: darker than slate-100 */
   --badge-slate-text: #475569;
   /* slate-600: darker than current slate-600 */
-  --background-color: #D7DBDF
-
-  /* Success/confirmation colors - vibrant green for share/copy success states */
-  --color-success: #10b981;
+  --background-color: #d7dbdf
+    /* Success/confirmation colors - vibrant green for share/copy success states */
+    --color-success: #10b981;
   /* emerald-500: vibrant green for success states */
   --color-success-hover: #059669;
   /* emerald-600: slightly darker green for hover */
