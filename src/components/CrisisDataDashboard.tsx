@@ -1112,32 +1112,54 @@ const CrisisDataDashboard = ({
                     {/* Sort Dropdown Tab */}
                     {(activeView === "table" || activeView === "donors") && (
                       <div className="hidden sm:block">
-                        <DropdownMenu onOpenChange={(open) => setSortMenuOpen(open)}>
-                          <DropdownMenuTrigger asChild>
-                            <button className="trapezoid-tab trapezoid-tab-white">
-                              {sortDirection === "asc" ? (
-                                <ArrowUpWideNarrow className="mr-2 h-4 w-4" />
-                              ) : (
-                                <ArrowDownWideNarrow className="mr-2 h-4 w-4" />
-                              )}
-                              <span className="text-[14px]">
-                                {sortBy === "name"
-                                  ? "Alphabetically"
-                                  : sortBy === "donors"
-                                    ? activeView === "donors"
-                                      ? "Organizations"
-                                      : "Donors"
-                                    : sortBy === "assets"
-                                      ? "Assets"
-                                      : "Funding"}
-                              </span>
-                              <ChevronDown
-                                className={`ml-2 h-3 w-3 shrink-0 transform opacity-50 transition-transform ${
-                                  sortMenuOpen ? "rotate-180" : ""
-                                }`}
-                              />
-                            </button>
-                          </DropdownMenuTrigger>
+                        {/* Trapezoid Container */}
+                        <div className="trapezoid-tab trapezoid-tab-white flex items-center">
+                          {/* Sort Direction Button */}
+                          <button
+                            onClick={() => {
+                              const newDirection =
+                                sortDirection === "asc" ? "desc" : "asc";
+                              onSortChange(sortBy, newDirection);
+                            }}
+                            title={
+                              sortDirection === "asc"
+                                ? "Sort ascending"
+                                : "Sort descending"
+                            }
+                            className="p-0 hover:opacity-70 transition-opacity"
+                          >
+                            {sortDirection === "asc" ? (
+                              <ArrowUpWideNarrow className="h-4 w-4" />
+                            ) : (
+                              <ArrowDownWideNarrow className="h-4 w-4" />
+                            )}
+                          </button>
+
+                          {/* Sort Field Dropdown */}
+                          <DropdownMenu onOpenChange={(open) => setSortMenuOpen(open)}>
+                            <DropdownMenuTrigger asChild>
+                              <button className="flex items-center gap-0 border-none bg-transparent p-0 hover:opacity-70 transition-opacity">
+                                {/* Sort Field Text */}
+                                 <span className="ml-2 text-sm font-semibold font-roboto">
+                                  {sortBy === "name"
+                                    ? "Alphabetically"
+                                    : sortBy === "donors"
+                                      ? activeView === "donors"
+                                        ? "Organizations"
+                                        : "Donors"
+                                      : sortBy === "assets"
+                                        ? "Assets"
+                                        : "Funding"}
+                                </span>
+
+                                {/* Dropdown Chevron */}
+                                <ChevronDown
+                                  className={`ml-2 h-3 w-3 shrink-0 transform opacity-50 transition-transform ${
+                                    sortMenuOpen ? "rotate-180" : ""
+                                  }`}
+                                />
+                              </button>
+                            </DropdownMenuTrigger>
                           <DropdownMenuContent
                             align="end"
                             side="bottom"
@@ -1174,6 +1196,7 @@ const CrisisDataDashboard = ({
                             )}
                           </DropdownMenuContent>
                         </DropdownMenu>
+                        </div>
                       </div>
                     )}
 
