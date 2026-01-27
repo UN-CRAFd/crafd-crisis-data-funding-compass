@@ -416,7 +416,7 @@ body::-webkit-scrollbar {
   cursor: pointer;
   border: none !important;
   outline: none !important;
-  height: auto;
+  height: 40px;
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -460,6 +460,28 @@ body::-webkit-scrollbar {
 
 .trapezoid-tab:last-child {
   margin-right: 0;
+}
+
+/* White trapezoid tabs (for settings and sort) */
+.trapezoid-tab-white::before {
+  background: white !important;
+}
+
+.trapezoid-tab-white:hover::before {
+  background: #f5f5f5 !important;
+}
+
+/* Settings button - symmetric padding and no right margin */
+.trapezoid-tab-white.mr-0 {
+  padding: 0.625rem 1.5rem !important;
+  margin-right: 0 !important;
+}
+
+/* Settings button clip-path */
+.trapezoid-tab-white.mr-0::before {
+  left: 0 !important;
+  right: 0 !important;
+  clip-path: polygon(12px 0, calc(100% - 12px) 0, 100% 100%, 0 100%) !important;
 }
 
 /* Container for trapezoid tabs */
