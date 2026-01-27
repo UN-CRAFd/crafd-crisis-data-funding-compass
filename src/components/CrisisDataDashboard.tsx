@@ -1109,115 +1109,82 @@ const CrisisDataDashboard = ({
 
                   {/* Sort and Settings Trapezoid - Right-aligned */}
                   <div className="animate-in duration-300 slide-in-from-right-5 fade-in flex items-center gap-0">
-                    {/* Trapezoid Container with Sort and Settings */}
-                    {((activeView === "table" || activeView === "donors") && <div className="trapezoid-settings-container hidden sm:flex items-center gap-0">
-                          <Button
-                            variant="ghost"
-                            size="sm"
-                            className="m-0 h-auto p-0 font-medium transition-all hover:bg-transparent"
-                            onClick={() => {
-                              const newDirection =
-                                sortDirection === "asc" ? "desc" : "asc";
-                              onSortChange(sortBy, newDirection);
-                            }}
-                            title={
-                              sortDirection === "asc"
-                                ? "Sort ascending"
-                                : "Sort descending"
-                            }
-                          >
-                            {sortDirection === "asc" ? (
-                              <ArrowUpWideNarrow className="h-3 w-3" />
-                            ) : (
-                              <ArrowDownWideNarrow className="h-3 w-3" />
-                            )}
-                          </Button>
-                          <div className="h-4 w-px bg-slate-400/50"></div>
-                          <DropdownMenu
-                            onOpenChange={(open) => setSortMenuOpen(open)}
-                          >
-                            <DropdownMenuTrigger asChild>
-                              <Button
-                                variant="ghost"
-                                className="m-0 h-auto p-0 text-[14px] font-medium text-slate-700 hover:bg-transparent"
-                              >
-                                <div className="flex min-w-0 items-center gap-1.5">
-                                  <span className="truncate">
-                                    {sortBy === "name"
-                                      ? "Alphabetically"
-                                      : sortBy === "donors"
-                                        ? activeView === "donors"
-                                          ? "Organizations"
-                                          : "Donors"
-                                        : sortBy === "assets"
-                                          ? "Assets"
-                                          : "Funding"}
-                                  </span>
-                                </div>
-                                <ChevronDown
-                                  className={`h-3 w-3 shrink-0 transform opacity-50 transition-transform ${
-                                    sortMenuOpen ? "rotate-180" : ""
-                                  }`}
-                                />
-                              </Button>
-                            </DropdownMenuTrigger>
-                            <DropdownMenuContent
-                              align="end"
-                              side="bottom"
-                              sideOffset={4}
-                              className="w-auto min-w-[140px] border border-slate-200 bg-white shadow-lg"
-                            >
-                              <DropdownMenuItem
-                                onClick={() =>
-                                  onSortChange("name", sortDirection)
-                                }
-                                className="cursor-pointer py-1 text-[14px]"
-                              >
-                                Alphabetically
-                              </DropdownMenuItem>
-                              <DropdownMenuItem
-                                onClick={() =>
-                                  onSortChange("donors", sortDirection)
-                                }
-                                className="cursor-pointer py-1 text-[14px]"
-                              >
-                                {activeView === "donors"
-                                  ? "No. of Organizations"
-                                  : "No. of Donors"}
-                              </DropdownMenuItem>
-                              <DropdownMenuItem
-                                onClick={() =>
-                                  onSortChange("assets", sortDirection)
-                                }
-                                className="cursor-pointer py-1 text-[14px]"
-                              >
-                                No. of Assets
-                              </DropdownMenuItem>
-                              {activeView === "table" && (
-                                <DropdownMenuItem
-                                  onClick={() =>
-                                    onSortChange("funding", sortDirection)
-                                  }
-                                  className="cursor-pointer py-1 text-[14px]"
-                                >
-                                  Funding
-                                </DropdownMenuItem>
+                    {/* Sort Dropdown Tab */}
+                    {(activeView === "table" || activeView === "donors") && (
+                      <div className="hidden sm:block">
+                        <DropdownMenu onOpenChange={(open) => setSortMenuOpen(open)}>
+                          <DropdownMenuTrigger asChild>
+                            <button className="trapezoid-tab trapezoid-tab-white">
+                              {sortDirection === "asc" ? (
+                                <ArrowUpWideNarrow className="mr-2 h-4 w-4" />
+                              ) : (
+                                <ArrowDownWideNarrow className="mr-2 h-4 w-4" />
                               )}
-                            </DropdownMenuContent>
-                          </DropdownMenu>
-                          <div className="h-4 w-px bg-slate-400/50"></div>
-                        </div>)}
-                        <div className="trapezoid-settings-container gap-0">
-
-                          <DropdownMenu>
-                            <DropdownMenuTrigger asChild>
-                              <Button
-                                variant="ghost"
-                                className="m-0 font-medium transition-all hover:bg-transparent"
+                              <span className="text-[14px]">
+                                {sortBy === "name"
+                                  ? "Alphabetically"
+                                  : sortBy === "donors"
+                                    ? activeView === "donors"
+                                      ? "Organizations"
+                                      : "Donors"
+                                    : sortBy === "assets"
+                                      ? "Assets"
+                                      : "Funding"}
+                              </span>
+                              <ChevronDown
+                                className={`ml-2 h-3 w-3 shrink-0 transform opacity-50 transition-transform ${
+                                  sortMenuOpen ? "rotate-180" : ""
+                                }`}
+                              />
+                            </button>
+                          </DropdownMenuTrigger>
+                          <DropdownMenuContent
+                            align="end"
+                            side="bottom"
+                            sideOffset={4}
+                            className="w-auto min-w-[140px] border border-slate-200 bg-white shadow-lg"
+                          >
+                            <DropdownMenuItem
+                              onClick={() => onSortChange("name", sortDirection)}
+                              className="cursor-pointer py-1 text-[14px]"
+                            >
+                              Alphabetically
+                            </DropdownMenuItem>
+                            <DropdownMenuItem
+                              onClick={() => onSortChange("donors", sortDirection)}
+                              className="cursor-pointer py-1 text-[14px]"
+                            >
+                              {activeView === "donors"
+                                ? "No. of Organizations"
+                                : "No. of Donors"}
+                            </DropdownMenuItem>
+                            <DropdownMenuItem
+                              onClick={() => onSortChange("assets", sortDirection)}
+                              className="cursor-pointer py-1 text-[14px]"
+                            >
+                              No. of Assets
+                            </DropdownMenuItem>
+                            {activeView === "table" && (
+                              <DropdownMenuItem
+                                onClick={() => onSortChange("funding", sortDirection)}
+                                className="cursor-pointer py-1 text-[14px]"
                               >
-                                <Settings className="h-4 w-4" />
-                              </Button>
-                            </DropdownMenuTrigger>
+                                Funding
+                              </DropdownMenuItem>
+                            )}
+                          </DropdownMenuContent>
+                        </DropdownMenu>
+                      </div>
+                    )}
+
+                    {/* Settings Tab */}
+                    <div>
+                      <DropdownMenu>
+                        <DropdownMenuTrigger asChild>
+                          <button className="trapezoid-tab trapezoid-tab-white mr-0">
+                            <Settings className="h-4 w-4" />
+                          </button>
+                        </DropdownMenuTrigger>
                             <DropdownMenuContent
                               align="end"
                               side="bottom"
