@@ -1,0 +1,6331 @@
+[
+  {
+    "sector_code": [
+      "EP",
+      "FL",
+      "ST",
+      "IA",
+      "VW",
+      "EQ",
+      "1",
+      "74020"
+    ],
+    "budget_value": [
+      967005.0
+    ],
+    "iati_identifier": "NL-KVK-40409352-PRJ13-062-0001",
+    "title_narrative": [
+      "Regional RP development Caribbean."
+    ],
+    "sector_narrative": [
+      "Epidemic",
+      "Flood",
+      "Storm Surge",
+      "Other",
+      "Civil unrest",
+      "Earthquake",
+      "Preparedness",
+      "Disaster prevention and preparedness"
+    ],
+    "reporting_org_ref": "NL-KVK-40409352",
+    "transaction_value": [
+      5018.0,
+      -36925.0,
+      4643.0,
+      410.0,
+      1647.0,
+      5093.0,
+      1241.0,
+      787.0,
+      1575.0,
+      -7239.0,
+      298.0,
+      412.0,
+      198.0,
+      787.0,
+      2161.0,
+      198.0,
+      1612.0,
+      200000.0,
+      -21403.0,
+      2805.0,
+      198.0,
+      6304.0,
+      3536.0,
+      192.0,
+      441.0,
+      5048.0,
+      1345.0,
+      165089.0,
+      4765.0,
+      1647.0,
+      419.0,
+      11145.0,
+      4769.0,
+      12346.0,
+      6866.0,
+      7388.0,
+      4768.0,
+      8754.0,
+      4767.0,
+      8494.0,
+      4766.0,
+      7315.0,
+      2557.0,
+      196.0,
+      25093.0,
+      2557.0,
+      8568.0,
+      2756.0,
+      9342.0,
+      10425.0,
+      873.0,
+      8140.0,
+      196.0,
+      7330.0,
+      207.0,
+      730.0,
+      5782.0,
+      20453.0,
+      5910.0,
+      214581.0,
+      10874.0,
+      1254.0,
+      2013.0,
+      2560.0,
+      12888.0,
+      13921.0,
+      539.0,
+      1231.0,
+      987.0,
+      1158.0,
+      5495.0,
+      22782.0,
+      19523.0,
+      18243.0,
+      1116.0,
+      4740.0,
+      478.0,
+      2092.0,
+      8412.0,
+      16603.0,
+      100000.0,
+      13240.0,
+      22437.0,
+      11544.0,
+      11988.0,
+      10014.0,
+      7998.0,
+      6395.0,
+      16521.0,
+      8742.0,
+      14911.0
+    ],
+    "activity_date_type": [
+      "2",
+      "3"
+    ],
+    "activity_status_code": "4",
+    "description_narrative": [
+      "Regional activities & delegate and office costs Response Preparedness",
+      "To strengthen response preparedness in the Caribbean.",
+      "Through training, strategic vision, planning and logistical stock",
+      "RP delegate.",
+      "Caribbean."
+    ],
+    "activity_date_iso_date": [
+      "2019-03-14T00:00:00Z",
+      "2021-06-29T00:00:00Z"
+    ],
+    "recipient_country_code": [
+      "SX"
+    ],
+    "reporting_org_narrative": [
+      "The Netherlands Red Cross"
+    ]
+  },
+  {
+    "sector_code": [
+      "EP",
+      "FL",
+      "ST",
+      "IA",
+      "VW",
+      "EQ",
+      "1",
+      "74020"
+    ],
+    "budget_value": [
+      250000.0
+    ],
+    "iati_identifier": "NL-KVK-40409352-PRJ13-062-0002",
+    "title_narrative": [
+      "Developing capacity RP St. Maarten."
+    ],
+    "sector_narrative": [
+      "Epidemic",
+      "Flood",
+      "Storm Surge",
+      "Other",
+      "Civil unrest",
+      "Earthquake",
+      "Preparedness",
+      "Disaster prevention and preparedness"
+    ],
+    "reporting_org_ref": "NL-KVK-40409352",
+    "transaction_value": [
+      55.0,
+      -55.0
+    ],
+    "activity_date_type": [
+      "2",
+      "3"
+    ],
+    "activity_status_code": "4",
+    "description_narrative": [
+      "Capacity building in Response Preparedness Sint Maarten branch",
+      "To strengthen response preparedness on St. Maarten.",
+      "Through training, strategic vision, planning and logistical stock.",
+      "Red Cross St. Maarten, RP delegate.",
+      "St. Maarten."
+    ],
+    "activity_date_iso_date": [
+      "2019-03-14T00:00:00Z",
+      "2021-06-29T00:00:00Z"
+    ],
+    "recipient_country_code": [
+      "SX"
+    ],
+    "reporting_org_narrative": [
+      "The Netherlands Red Cross"
+    ]
+  },
+  {
+    "sector_code": [
+      "EP",
+      "FL",
+      "ST",
+      "IA",
+      "VW",
+      "EQ",
+      "1",
+      "74020"
+    ],
+    "budget_value": [
+      250000.0
+    ],
+    "iati_identifier": "NL-KVK-40409352-PRJ13-062-0003",
+    "title_narrative": [
+      "Developing capacity RP aruba."
+    ],
+    "sector_narrative": [
+      "Epidemic",
+      "Flood",
+      "Storm Surge",
+      "Other",
+      "Civil unrest",
+      "Earthquake",
+      "Preparedness",
+      "Disaster prevention and preparedness"
+    ],
+    "reporting_org_ref": "NL-KVK-40409352",
+    "transaction_value": [
+      55.0,
+      -55.0
+    ],
+    "activity_date_type": [
+      "2",
+      "3"
+    ],
+    "activity_status_code": "4",
+    "description_narrative": [
+      "Capacity building in Response Preparedness Aruba branch",
+      "To strengthen response preparedness on Aruba.",
+      "Through training, strategic vision, planning and logistical stock",
+      "Red Cross Aruba, RP delegate",
+      "Aruba"
+    ],
+    "activity_date_iso_date": [
+      "2019-03-14T00:00:00Z",
+      "2021-06-29T00:00:00Z"
+    ],
+    "recipient_country_code": [
+      "AW"
+    ],
+    "reporting_org_narrative": [
+      "The Netherlands Red Cross"
+    ]
+  },
+  {
+    "sector_code": [
+      "EP",
+      "FL",
+      "ST",
+      "IA",
+      "VW",
+      "EQ",
+      "1",
+      "74020"
+    ],
+    "budget_value": [
+      250000.0
+    ],
+    "iati_identifier": "NL-KVK-40409352-PRJ13-062-0004",
+    "title_narrative": [
+      "Developing capacity RP Curacao."
+    ],
+    "sector_narrative": [
+      "Epidemic",
+      "Flood",
+      "Storm Surge",
+      "Other",
+      "Civil unrest",
+      "Earthquake",
+      "Preparedness",
+      "Disaster prevention and preparedness"
+    ],
+    "reporting_org_ref": "NL-KVK-40409352",
+    "transaction_value": [
+      55.0,
+      -55.0
+    ],
+    "activity_date_type": [
+      "2",
+      "3"
+    ],
+    "activity_status_code": "4",
+    "description_narrative": [
+      "Capacity building in Response Preparedness Curacao branch",
+      "To strengthen response preparedness on Curacao.",
+      "Through training, strategic vision, planning and logistical stock",
+      "Red Cross Curacao, RP delegate",
+      "Curacao"
+    ],
+    "activity_date_iso_date": [
+      "2019-03-14T00:00:00Z",
+      "2021-06-29T00:00:00Z"
+    ],
+    "recipient_country_code": [
+      "CW"
+    ],
+    "reporting_org_narrative": [
+      "The Netherlands Red Cross"
+    ]
+  },
+  {
+    "sector_code": [
+      "EP",
+      "FL",
+      "ST",
+      "IA",
+      "VW",
+      "EQ",
+      "1",
+      "74020"
+    ],
+    "budget_value": [
+      100000.0
+    ],
+    "iati_identifier": "NL-KVK-40409352-PRJ13-062-0005",
+    "title_narrative": [
+      "Developing capacity RP Bonaire."
+    ],
+    "sector_narrative": [
+      "Epidemic",
+      "Flood",
+      "Storm Surge",
+      "Other",
+      "Civil unrest",
+      "Earthquake",
+      "Preparedness",
+      "Disaster prevention and preparedness"
+    ],
+    "reporting_org_ref": "NL-KVK-40409352",
+    "transaction_value": [
+      55.0,
+      -55.0
+    ],
+    "activity_date_type": [
+      "2",
+      "3"
+    ],
+    "activity_status_code": "4",
+    "description_narrative": [
+      "Capacity building in Response Preparedness Bonaire branch",
+      "To strengthen response preparedness on Bonaire.",
+      "Through training, strategic vision, planning and logistical stock",
+      "Red Cross Bonaire, RP delegate",
+      "Bonaire"
+    ],
+    "activity_date_iso_date": [
+      "2019-03-14T00:00:00Z",
+      "2021-06-29T00:00:00Z"
+    ],
+    "recipient_country_code": [
+      "BQ"
+    ],
+    "reporting_org_narrative": [
+      "The Netherlands Red Cross"
+    ]
+  },
+  {
+    "sector_code": [
+      "LS",
+      "ST",
+      "IA",
+      "VO",
+      "VW",
+      "EQ",
+      "EP",
+      "FL",
+      "1",
+      "74020"
+    ],
+    "budget_value": [
+      50000.0
+    ],
+    "iati_identifier": "NL-KVK-40409352-PRJ13-062-0006",
+    "title_narrative": [
+      "Developing capacity RP Saba."
+    ],
+    "sector_narrative": [
+      "Landslide",
+      "Storm Surge",
+      "Other",
+      "Volcanic eruption",
+      "Civil unrest",
+      "Earthquake",
+      "Epidemic",
+      "Flood",
+      "Preparedness",
+      "Disaster prevention and preparedness"
+    ],
+    "reporting_org_ref": "NL-KVK-40409352",
+    "activity_date_type": [
+      "2",
+      "3"
+    ],
+    "activity_status_code": "4",
+    "description_narrative": [
+      "Capacity building in Response Preparedness Saba branch",
+      "To strengthen response preparedness on Saba.",
+      "Through training, strategic vision, planning and logistical stock.",
+      "Red Cross Saba, RP delegate.",
+      "Saba"
+    ],
+    "activity_date_iso_date": [
+      "2019-03-14T00:00:00Z",
+      "2021-06-29T00:00:00Z"
+    ],
+    "recipient_country_code": [
+      "BQ"
+    ],
+    "reporting_org_narrative": [
+      "The Netherlands Red Cross"
+    ]
+  },
+  {
+    "sector_code": [
+      "LS",
+      "ST",
+      "IA",
+      "VO",
+      "VW",
+      "EQ",
+      "EP",
+      "FL",
+      "1",
+      "74020"
+    ],
+    "budget_value": [
+      50000.0
+    ],
+    "iati_identifier": "NL-KVK-40409352-PRJ13-062-0007",
+    "title_narrative": [
+      "Developing capacity RP St. Eustatius."
+    ],
+    "sector_narrative": [
+      "Landslide",
+      "Storm Surge",
+      "Other",
+      "Volcanic eruption",
+      "Civil unrest",
+      "Earthquake",
+      "Epidemic",
+      "Flood",
+      "Preparedness",
+      "Disaster prevention and preparedness"
+    ],
+    "reporting_org_ref": "NL-KVK-40409352",
+    "transaction_value": [
+      55.0,
+      -55.0
+    ],
+    "activity_date_type": [
+      "2",
+      "3"
+    ],
+    "activity_status_code": "4",
+    "description_narrative": [
+      "Capacity building in Response Preparedness Sint Eustatius branch.",
+      "To strengthen response preparedness on St. Eustatius.",
+      "Through training, strategic vision, planning and logistical stock.",
+      "Red Cross St. Eustatius, RP delegate.",
+      "St. Eustatius."
+    ],
+    "activity_date_iso_date": [
+      "2019-03-14T00:00:00Z",
+      "2021-06-29T00:00:00Z"
+    ],
+    "recipient_country_code": [
+      "BQ"
+    ],
+    "reporting_org_narrative": [
+      "The Netherlands Red Cross"
+    ]
+  },
+  {
+    "sector_code": [
+      "4"
+    ],
+    "budget_value": [
+      260000.0
+    ],
+    "iati_identifier": "NL-KVK-40409352-PRJ13-083-0006",
+    "title_narrative": [
+      "3FM SR 2019: Human Trafficking - Netherlands"
+    ],
+    "sector_narrative": [
+      "Prevention / Mitigation"
+    ],
+    "reporting_org_ref": "NL-KVK-40409352",
+    "transaction_value": [
+      270168.0,
+      2250.0,
+      2607.0,
+      2709.0,
+      -8645.0,
+      5671.0,
+      6595.0,
+      6327.0,
+      35025.0,
+      5425.0,
+      2234.0,
+      1519.0,
+      3574.0,
+      12914.0,
+      5017.0,
+      -1598.0,
+      7650.0,
+      7647.0,
+      7589.0,
+      7290.0,
+      -8572.0,
+      7529.0,
+      31490.0,
+      8477.0,
+      7420.0,
+      7246.0,
+      24752.0,
+      10043.0,
+      30206.0,
+      11371.0,
+      20933.0,
+      7476.0
+    ],
+    "activity_date_type": [
+      "2",
+      "3"
+    ],
+    "activity_status_code": "4",
+    "description_narrative": [
+      "Contribution to NLRC Tracing department for Human Trafficking activities in the Netherlands."
+    ],
+    "activity_date_iso_date": [
+      "2019-12-31T00:00:00Z",
+      "2023-06-29T00:00:00Z"
+    ],
+    "recipient_country_code": [
+      "NL"
+    ],
+    "reporting_org_narrative": [
+      "The Netherlands Red Cross"
+    ]
+  },
+  {
+    "sector_code": [
+      "4"
+    ],
+    "budget_value": [
+      108163.0
+    ],
+    "iati_identifier": "NL-KVK-40409352-PRJ13-083-0007",
+    "title_narrative": [
+      "3FM SR 2019: Human Trafficking Aruba"
+    ],
+    "sector_narrative": [
+      "Prevention / Mitigation"
+    ],
+    "reporting_org_ref": "NL-KVK-40409352",
+    "transaction_value": [
+      98163.0,
+      368.0,
+      3924.0,
+      -3976.0,
+      1281.0,
+      -9927.0,
+      9927.0,
+      2695.0,
+      5092.0,
+      4043.0,
+      5960.0,
+      5931.0,
+      5910.0,
+      5754.0,
+      -4977.0,
+      1480.0,
+      7186.0,
+      3752.0,
+      8165.0,
+      4198.0,
+      -6660.0,
+      15517.0,
+      1918.0,
+      1918.0,
+      7672.0,
+      58500.0,
+      10000.0
+    ],
+    "activity_date_type": [
+      "2",
+      "3"
+    ],
+    "activity_status_code": "4",
+    "description_narrative": [
+      "Prevention of exploitation and human trafficking through a number of interventions",
+      "To raise the awareness on human trafficking and to Improve protection, (emergency) assistance and support mechanisms for (potential) victims on Aruba",
+      "Awareness campaign , capacity building through training of management in HT, assistance to households with utilities, accommodation, food and health care",
+      "Migrants detained and Sex workers",
+      "in Aruba"
+    ],
+    "activity_date_iso_date": [
+      "2020-03-31T00:00:00Z",
+      "2022-05-30T00:00:00Z"
+    ],
+    "recipient_country_code": [
+      "AW"
+    ],
+    "reporting_org_narrative": [
+      "The Netherlands Red Cross"
+    ]
+  },
+  {
+    "sector_code": [
+      "74020",
+      "VW"
+    ],
+    "budget_value": [
+      78253.0
+    ],
+    "iati_identifier": "NL-KVK-40409352-PRJ13-077",
+    "title_narrative": [
+      "Disaster risk reduction in Nabatieh, Lebanon"
+    ],
+    "sector_narrative": [
+      "Disaster prevention and preparedness",
+      "Civil unrest"
+    ],
+    "reporting_org_ref": "NL-KVK-40409352",
+    "transaction_value": [
+      13000.0
+    ],
+    "activity_date_type": [
+      "2",
+      "3"
+    ],
+    "activity_status_code": "4",
+    "description_narrative": [
+      "Disaster risk reduction in Nabatieh, Lebanon"
+    ],
+    "activity_date_iso_date": [
+      "2019-07-14T00:00:00Z",
+      "2022-12-30T00:00:00Z"
+    ],
+    "recipient_country_code": [
+      "LB"
+    ],
+    "reporting_org_narrative": [
+      "The Netherlands Red Cross"
+    ]
+  },
+  {
+    "sector_code": [
+      "ST",
+      "2",
+      "72010"
+    ],
+    "budget_value": [
+      4493.0
+    ],
+    "iati_identifier": "NL-KVK-40409352-PRJ13-085-0001",
+    "title_narrative": [
+      "Hurricane Dorian - Bahama's - SIMS remote coordination"
+    ],
+    "sector_narrative": [
+      "Storm Surge",
+      "Response",
+      "Material relief assistance and services"
+    ],
+    "reporting_org_ref": "NL-KVK-40409352",
+    "transaction_value": [
+      -3507.0,
+      -3643.0,
+      3643.0,
+      691.0,
+      3801.0,
+      8000.0
+    ],
+    "activity_date_type": [
+      "2",
+      "3"
+    ],
+    "activity_status_code": "4",
+    "description_narrative": [
+      "Coordination of the remote IM support for the Dorian Hurricane response. Coordinate tasks coming from the field and distribute them amongst volunteers to be worked on."
+    ],
+    "activity_date_iso_date": [
+      "2019-09-30T00:00:00Z",
+      "2019-11-29T00:00:00Z"
+    ],
+    "recipient_country_code": [
+      "BS"
+    ],
+    "reporting_org_narrative": [
+      "The Netherlands Red Cross"
+    ]
+  },
+  {
+    "sector_code": [
+      "VW",
+      "2",
+      "72010"
+    ],
+    "budget_value": [
+      394.0
+    ],
+    "iati_identifier": "NL-KVK-40409352-PRJ13-081-0003",
+    "title_narrative": [
+      "BLNX Relief ERU Training 2019"
+    ],
+    "sector_narrative": [
+      "Civil unrest",
+      "Response",
+      "Material relief assistance and services"
+    ],
+    "reporting_org_ref": "NL-KVK-40409352",
+    "transaction_value": [
+      -7606.0,
+      198.0,
+      -108.0,
+      108.0,
+      196.0,
+      2000.0,
+      -1231.0,
+      1231.0,
+      6000.0
+    ],
+    "activity_date_type": [
+      "2",
+      "3"
+    ],
+    "activity_status_code": "4",
+    "description_narrative": [
+      "Trainingen in 2019 voor personen op Surge Roster"
+    ],
+    "activity_date_iso_date": [
+      "2019-06-30T00:00:00Z",
+      "2020-02-27T00:00:00Z"
+    ],
+    "recipient_country_code": [
+      "NL"
+    ],
+    "reporting_org_narrative": [
+      "The Netherlands Red Cross"
+    ]
+  },
+  {
+    "sector_code": [
+      "2",
+      "72010"
+    ],
+    "budget_value": [
+      53403.0
+    ],
+    "iati_identifier": "NL-KVK-40409352-PRJ13-105-0002",
+    "title_narrative": [
+      "2020-2021 Information Management Support for Cash and Mobile Clinics projects in Greece"
+    ],
+    "sector_narrative": [
+      "Response",
+      "Material relief assistance and services"
+    ],
+    "reporting_org_ref": "NL-KVK-40409352",
+    "transaction_value": [
+      1440.0,
+      2618.0,
+      1906.0,
+      1440.0,
+      -23125.0,
+      11472.0,
+      11232.0,
+      -7559.0,
+      4786.0,
+      16761.0,
+      31648.0,
+      3527.0,
+      1763.0,
+      168.0,
+      1070.0,
+      603.0,
+      1488.0,
+      3471.0,
+      2671.0,
+      3834.0,
+      2326.0,
+      4926.0,
+      5086.0,
+      1439.0,
+      307.0,
+      7013.0,
+      212.0,
+      3318.0,
+      3116.0,
+      312.0,
+      265.0,
+      1510.0,
+      100.0,
+      764.0,
+      31331.0,
+      3868.0,
+      -31331.0,
+      510.0,
+      2422.0,
+      -764.0,
+      1296.0,
+      6125.0,
+      7312.0,
+      1307.0,
+      53403.0
+    ],
+    "activity_date_type": [
+      "2",
+      "3"
+    ],
+    "activity_status_code": "4",
+    "description_narrative": [
+      "As part of the Population Movement Appeal, to support the Hellenic Red Cross with optimizing the consolidation of reports from the Mobile Clinics to HQ; and to support HRC with setup of procedures and tools for a Cash program to support refugees on Lesbos."
+    ],
+    "activity_date_iso_date": [
+      "2020-10-31T00:00:00Z",
+      "2023-03-30T00:00:00Z"
+    ],
+    "recipient_country_code": [
+      "GR"
+    ],
+    "reporting_org_narrative": [
+      "The Netherlands Red Cross"
+    ]
+  },
+  {
+    "sector_code": [
+      "EP",
+      "2",
+      "72010"
+    ],
+    "budget_value": [
+      57354.0
+    ],
+    "iati_identifier": "NL-KVK-40409352-PRJ13-100-0003",
+    "title_narrative": [
+      "2020 COVID-19 HR Caribean"
+    ],
+    "sector_narrative": [
+      "Epidemic",
+      "Response",
+      "Material relief assistance and services"
+    ],
+    "reporting_org_ref": "NL-KVK-40409352",
+    "transaction_value": [
+      -54000.0,
+      34854.0,
+      54000.0,
+      -34854.0,
+      34854.0,
+      2812.0,
+      7041.0,
+      1803.0,
+      14382.0,
+      15000.0,
+      6220.0,
+      12656.0,
+      12436.0,
+      7500.0
+    ],
+    "activity_date_type": [
+      "2",
+      "3"
+    ],
+    "activity_status_code": "4",
+    "description_narrative": [
+      "HR Support Caribean"
+    ],
+    "activity_date_iso_date": [
+      "2020-03-15T00:00:00Z",
+      "2021-12-30T00:00:00Z"
+    ],
+    "reporting_org_narrative": [
+      "The Netherlands Red Cross"
+    ]
+  },
+  {
+    "sector_code": [
+      "EP",
+      "2",
+      "72010"
+    ],
+    "budget_value": [
+      150000.0
+    ],
+    "iati_identifier": "NL-KVK-40409352-PRJ13-100-0005",
+    "title_narrative": [
+      "COVID-19: Preventive measures in Pneumonia programme"
+    ],
+    "sector_narrative": [
+      "Epidemic",
+      "Response",
+      "Material relief assistance and services"
+    ],
+    "reporting_org_ref": "NL-KVK-40409352",
+    "transaction_value": [
+      58973.0,
+      -58973.0,
+      -58973.0,
+      -85.0,
+      15.0,
+      70.0,
+      -15.0,
+      -124.0,
+      -10000.0,
+      -110.0,
+      1622.0,
+      10000.0,
+      10000.0,
+      10000.0,
+      10000.0,
+      9994.0,
+      9535.0,
+      -140000.0,
+      140000.0,
+      5976.0,
+      10000.0,
+      10000.0,
+      1647.0,
+      140000.0
+    ],
+    "activity_date_type": [
+      "2",
+      "3"
+    ],
+    "activity_status_code": "4",
+    "description_narrative": [
+      "Contribution from 3FM Pneumonia Campaign to support national societies to take prevention measures."
+    ],
+    "activity_date_iso_date": [
+      "2020-03-18T00:00:00Z",
+      "2020-09-30T00:00:00Z"
+    ],
+    "reporting_org_narrative": [
+      "The Netherlands Red Cross"
+    ]
+  },
+  {
+    "sector_code": [
+      "EP",
+      "2",
+      "72010"
+    ],
+    "budget_value": [
+      136454.0
+    ],
+    "iati_identifier": "NL-KVK-40409352-PRJ13-100-0037",
+    "title_narrative": [
+      "Personal Protection Equipment supplies to the Caribbean during Covid-19"
+    ],
+    "sector_narrative": [
+      "Epidemic",
+      "Response",
+      "Material relief assistance and services"
+    ],
+    "reporting_org_ref": "NL-KVK-40409352",
+    "transaction_value": [
+      3413.0,
+      3413.0,
+      34347.0,
+      34347.0,
+      -87306.0,
+      1046.0,
+      984.0,
+      -4000.0,
+      2117.0,
+      15092.0,
+      254.0,
+      190000.0,
+      50.0,
+      20334.0,
+      19704.0,
+      38049.0,
+      417.0,
+      650.0
+    ],
+    "activity_date_type": [
+      "2",
+      "3"
+    ],
+    "activity_status_code": "4",
+    "description_narrative": [
+      "PPE's supply to the Caribbean during Covid-19"
+    ],
+    "activity_date_iso_date": [
+      "2020-03-31T00:00:00Z",
+      "2022-06-29T00:00:00Z"
+    ],
+    "reporting_org_narrative": [
+      "The Netherlands Red Cross"
+    ]
+  },
+  {
+    "sector_code": [
+      "1"
+    ],
+    "budget_value": [
+      320401.0
+    ],
+    "iati_identifier": "NL-KVK-40409352-PRJ13-100-0050",
+    "title_narrative": [
+      "NAP Caribbean regional NAP"
+    ],
+    "sector_narrative": [
+      "Preparedness"
+    ],
+    "reporting_org_ref": "NL-KVK-40409352",
+    "transaction_value": [
+      15019.0,
+      116751.0,
+      4180.0,
+      113.0,
+      115.0,
+      1672.0,
+      11348.0,
+      56017.0,
+      54.0,
+      6830.0,
+      93.0,
+      33317.0,
+      258.0,
+      290.0,
+      24.0,
+      383.0,
+      4242.0,
+      4167.0,
+      694.0,
+      2951.0,
+      28645.0,
+      657.0,
+      937.0,
+      8071.0,
+      3639.0,
+      13.0,
+      3397.0,
+      2958.0,
+      4274.0,
+      13808.0,
+      1807.0,
+      65.0,
+      290.0,
+      14694.0,
+      1770.0,
+      2046.0,
+      2118.0,
+      6749.0,
+      6656.0,
+      2101.0,
+      5295.0,
+      6656.0,
+      203650.0,
+      -58.0,
+      171.0,
+      84.0,
+      1068.0,
+      9356.0,
+      6656.0,
+      6699.0,
+      -38019.0,
+      38019.0,
+      284.0,
+      4791.0,
+      -21460.0,
+      12639.0,
+      904.0,
+      31986.0,
+      158.0,
+      1847.0,
+      5221.0,
+      1648.0
+    ],
+    "activity_date_type": [
+      "2",
+      "3"
+    ],
+    "activity_status_code": "4",
+    "description_narrative": [
+      "Regional support to the entire NAP program in the Caribbean including regional activities.",
+      "The NAP program takes place on six islands in the Caribbean and requires a regional support structure.",
+      "Posting a regional program manager on one of the Caribbean islands supported by a PO and PA ad HQ.",
+      "The six overseas branches",
+      "Caribbean region"
+    ],
+    "activity_date_iso_date": [
+      "2021-06-30T00:00:00Z",
+      "2022-06-30T00:00:00Z"
+    ],
+    "reporting_org_narrative": [
+      "The Netherlands Red Cross"
+    ]
+  },
+  {
+    "sector_code": [
+      "3"
+    ],
+    "budget_value": [
+      276993.0
+    ],
+    "iati_identifier": "NL-KVK-40409352-PRJ13-106-0004",
+    "title_narrative": [
+      "DATA SUPPORT MENA 2021"
+    ],
+    "sector_narrative": [
+      "Recovery"
+    ],
+    "reporting_org_ref": "NL-KVK-40409352",
+    "transaction_value": [
+      -92993.0,
+      40469.0,
+      5808.0,
+      7389.0,
+      6457.0,
+      20370.0,
+      92549.0,
+      15194.0,
+      -92549.0,
+      4433.0,
+      7493.0,
+      666.0,
+      848.0,
+      660.0,
+      722.0,
+      3717.0,
+      11646.0,
+      769.0,
+      9078.0,
+      8381.0,
+      667.0,
+      1980.0,
+      3498.0,
+      60.0,
+      -60.0,
+      3629.0,
+      6477.0,
+      1992.0,
+      4539.0,
+      857.0,
+      4.0,
+      179794.0,
+      60466.0,
+      92993.0,
+      4206.0,
+      572.0,
+      3478.0,
+      2994.0,
+      1057.0,
+      2994.0,
+      2994.0,
+      13662.0,
+      2994.0,
+      2994.0,
+      2994.0
+    ],
+    "activity_date_type": [
+      "2",
+      "3"
+    ],
+    "activity_status_code": "4",
+    "description_narrative": [
+      "The support provided is flexible and demand driven. It also follows a human centered process, ensuring that client needs and the local context drive the definition of NLRC's support. The identified needs must be realistic in scope, must be within the ability of the NLRC to answer and finally, there must be a clear commitment from the recipient NS to engage proactively with NLRC throughout the project. The countries that will ultimately receive support through this project have not yet been determined but are expected to primarily be in the MENA (Middle East and Northern Africa) regions. Based on the knowledge collected and the changing dynamic of the pandemic, we anticipate that recipient national societies will request data and digital support in the following (generic) areas:\n1.\tContinuation of crucial data & digital support for NS for emergency support products\n2.\tSupport NS data and digital support for Covid vaccination campaign. \n3.\tCompounding disasters:  disaster response complicated by to the Covid pandemic\n4.\tCash IM support",
+      "Through the 510 Data & Digital Team NLRC assists 19 RCRC National Societies in their short-term preparedness and response to COVID-19 and supported their operational continuity, through data and digital. This support was made possible through a 12-month block funded project that started implementation on 1 April 2020. At the time of writing (2 months before the end of the project) several countries are encountering a renewed increase of infections. New uncertainties are introduced by the virus mutations, underlining that the Covid response phase is far from over. With the approval of several vaccines and the start of vaccination campaigns in countries around the world, the focus is beginning to shift from response to recovery. The road however remains long and based on the achievements of the 2020 global COVID program and the feedback received the added value of continued data and digital support beyond the current project's end date, 31 March 2021, is clear.",
+      "NLRC, through its 510 initiative provides remote technical assistance to RCRC national societies. IFRC will be involved to coordinate the support provided to countries in the MENA region and will itself also receive data & digital support from NLRC/510.",
+      "NLRC/510\nIFRC MENA region\nRCRC NS in the MENA region",
+      "MENA region"
+    ],
+    "activity_date_iso_date": [
+      "2021-03-31T00:00:00Z",
+      "2023-02-27T00:00:00Z"
+    ],
+    "reporting_org_narrative": [
+      "The Netherlands Red Cross"
+    ]
+  },
+  {
+    "sector_code": [
+      "1",
+      "74020"
+    ],
+    "budget_value": [
+      33099.0
+    ],
+    "iati_identifier": "NL-KVK-40409352-PRJ13-103-0004",
+    "title_narrative": [
+      "Surge Trainings in 2021 and 2022"
+    ],
+    "sector_narrative": [
+      "Preparedness",
+      "Disaster prevention and preparedness"
+    ],
+    "reporting_org_ref": "NL-KVK-40409352",
+    "transaction_value": [
+      -56357.0,
+      28122.0,
+      108.0,
+      2550.0,
+      2966.0,
+      1500.0,
+      3256.0,
+      405.0,
+      3477.0,
+      140.0,
+      320.0,
+      2558.0,
+      69.0,
+      138.0,
+      2450.0,
+      6000.0,
+      1619.0,
+      507.0,
+      4931.0,
+      2087.0,
+      2998.0
+    ],
+    "activity_date_type": [
+      "2",
+      "3"
+    ],
+    "activity_status_code": "4",
+    "description_narrative": [
+      "Surge trainings for Rapid Response personnel and ERU roster members"
+    ],
+    "activity_date_iso_date": [
+      "2020-12-31T00:00:00Z",
+      "2022-12-30T00:00:00Z"
+    ],
+    "reporting_org_narrative": [
+      "The Netherlands Red Cross"
+    ]
+  },
+  {
+    "sector_code": [
+      "1"
+    ],
+    "budget_value": [
+      4060.0
+    ],
+    "iati_identifier": "NL-KVK-40409352-PRJ13-103-0005",
+    "title_narrative": [
+      "2022 Regional Surge Capacity support"
+    ],
+    "sector_narrative": [
+      "Preparedness"
+    ],
+    "reporting_org_ref": "NL-KVK-40409352",
+    "transaction_value": [
+      4060.0,
+      3010.0,
+      63.0,
+      987.0
+    ],
+    "activity_date_type": [
+      "2",
+      "3"
+    ],
+    "activity_status_code": "4",
+    "description_narrative": [
+      "This project is to support the facilitation costs of NLRC for the PECT training for region America’s. It will include: Flight ticket, accommodation and DSA."
+    ],
+    "activity_date_iso_date": [
+      "2022-10-19T00:00:00Z",
+      "2022-12-30T00:00:00Z"
+    ],
+    "reporting_org_narrative": [
+      "The Netherlands Red Cross"
+    ]
+  },
+  {
+    "sector_code": [
+      "1",
+      "74020"
+    ],
+    "budget_value": [
+      665.0
+    ],
+    "iati_identifier": "NL-KVK-40409352-PRJ13-103-0002",
+    "title_narrative": [
+      "Training costs ERU Relief"
+    ],
+    "sector_narrative": [
+      "Preparedness",
+      "Disaster prevention and preparedness"
+    ],
+    "reporting_org_ref": "NL-KVK-40409352",
+    "transaction_value": [
+      -1835.0,
+      -1596.0,
+      665.0,
+      2500.0,
+      1596.0
+    ],
+    "activity_date_type": [
+      "2",
+      "3"
+    ],
+    "activity_status_code": "4",
+    "description_narrative": [
+      "Training costs ERU Relief"
+    ],
+    "activity_date_iso_date": [
+      "2019-12-31T00:00:00Z",
+      "2020-12-30T00:00:00Z"
+    ],
+    "recipient_country_code": [
+      "NL"
+    ],
+    "reporting_org_narrative": [
+      "The Netherlands Red Cross"
+    ]
+  },
+  {
+    "sector_code": [
+      "72010",
+      "EP"
+    ],
+    "budget_value": [
+      24840102.0
+    ],
+    "iati_identifier": "NL-KVK-40409352-PRJ13-115",
+    "title_narrative": [
+      "Covid-19 pandemic support in Aruba, Curaçao and St. Maarten - phase II"
+    ],
+    "sector_narrative": [
+      "Material relief assistance and services",
+      "Epidemic"
+    ],
+    "reporting_org_ref": "NL-KVK-40409352",
+    "transaction_value": [
+      -31402.0,
+      16420.0,
+      -898477.0,
+      881724.0,
+      -881724.0,
+      3689.0,
+      390.0,
+      25490.0,
+      25020.0,
+      -103664.0,
+      9125.0,
+      119696.0,
+      18102.0,
+      25749.0,
+      152500.0,
+      82128.0,
+      333692.0,
+      24822000.0,
+      312017.0,
+      312017.0
+    ],
+    "activity_date_type": [
+      "2",
+      "3"
+    ],
+    "activity_status_code": "4",
+    "description_narrative": [
+      "Covid-19 pandemic support in Aruba, Curaçao and St. Maarten - food and e-vouchers"
+    ],
+    "activity_date_iso_date": [
+      "2020-09-14T00:00:00Z",
+      "2021-09-29T00:00:00Z"
+    ],
+    "recipient_country_code": [
+      "CW",
+      "AW",
+      "SX"
+    ],
+    "reporting_org_narrative": [
+      "The Netherlands Red Cross"
+    ]
+  },
+  {
+    "sector_code": [
+      "EP",
+      "2",
+      "72010"
+    ],
+    "budget_value": [
+      1541839.0
+    ],
+    "iati_identifier": "NL-KVK-40409352-PRJ13-110-0002",
+    "title_narrative": [
+      "Covid-19 support Sint Maarten"
+    ],
+    "sector_narrative": [
+      "Epidemic",
+      "Response",
+      "Material relief assistance and services"
+    ],
+    "reporting_org_ref": "NL-KVK-40409352",
+    "transaction_value": [
+      1559403.0,
+      -69889.0,
+      -29726.0,
+      271704.0,
+      1650.0,
+      2444.0,
+      347957.0,
+      499403.0,
+      60415.0,
+      924.0,
+      63706.0,
+      25977.0,
+      4460.0,
+      12297.0,
+      249684.0,
+      118230.0,
+      169.0
+    ],
+    "activity_date_type": [
+      "2",
+      "3"
+    ],
+    "activity_status_code": "4",
+    "description_narrative": [
+      "Covid-19 project implemented on St. Maarten BZK"
+    ],
+    "activity_date_iso_date": [
+      "2020-05-10T00:00:00Z",
+      "2020-10-30T00:00:00Z"
+    ],
+    "recipient_country_code": [
+      "SX"
+    ],
+    "reporting_org_narrative": [
+      "The Netherlands Red Cross"
+    ]
+  },
+  {
+    "sector_code": [
+      "72010",
+      "VW"
+    ],
+    "budget_value": [
+      25000.0
+    ],
+    "iati_identifier": "NL-KVK-40409352-PRJ08-294",
+    "title_narrative": [
+      "Improve patient administration systems in Palestinian hospitals in Lebanon"
+    ],
+    "sector_narrative": [
+      "Material relief assistance and services",
+      "Civil unrest"
+    ],
+    "reporting_org_ref": "NL-KVK-40409352",
+    "transaction_value": [
+      25000.0
+    ],
+    "activity_date_type": [
+      "2",
+      "3"
+    ],
+    "activity_status_code": "4",
+    "description_narrative": [
+      "This programme aims to maintain and improve the quality of patient’s administration systems of hospitals that are run by the Palestine Red Crescent Society in Lebanon"
+    ],
+    "activity_date_iso_date": [
+      "2016-10-31T00:00:00Z",
+      "2017-10-30T00:00:00Z"
+    ],
+    "recipient_country_code": [
+      "LB"
+    ],
+    "reporting_org_narrative": [
+      "The Netherlands Red Cross"
+    ]
+  },
+  {
+    "sector_code": [
+      "1",
+      "74020"
+    ],
+    "budget_value": [
+      185855.0
+    ],
+    "iati_identifier": "NL-KVK-40409352-PRJ08-143-0002",
+    "title_narrative": [
+      "Shelter Innovation Speedkits"
+    ],
+    "sector_narrative": [
+      "Preparedness",
+      "Disaster prevention and preparedness"
+    ],
+    "reporting_org_ref": "NL-KVK-40409352",
+    "transaction_value": [
+      -44.0,
+      44.0,
+      11000.0,
+      44.0,
+      13346.0,
+      807.0,
+      842.0,
+      44304.0,
+      6613.0,
+      -33363.0,
+      7199.0,
+      38686.0,
+      51406.0,
+      12176.0,
+      5509.0,
+      22752.0,
+      4434.0,
+      101.0
+    ],
+    "activity_date_type": [
+      "2",
+      "3"
+    ],
+    "activity_status_code": "4",
+    "description_narrative": [
+      "The goal is to plan and implement demonstration of the concepts developed within S(P)EEDKITS. The project develops concepts for e.g. health care and sanitation solutions, infrastructural solutions, and shelter units.",
+      "The S(P)EEDKIT concept offers rapid humanitarian solutions – rapid deployment of shelters, facilities and medical care resources following major disasters - for self-recovery of communities. Currently, several developments have resulted in early field testing and deployment. The Netherlands Red Cross (NLRC), Médecins sans Frontières (MSF) and the Norwegian Refugee Council (NRC), all partners within S(P)EEDKITS, have on-going field operations. Selected solutions can be tested in these humanitarian operations, usually in situations where infrastructure is poor and skilled labour scarce.",
+      "The focus will be on different levels of demonstration, focusing on key developments of S(P)EEDKITS at the different packaging levels (container, pallet, and bag), demonstration of rapid deployment, field testing of selected kits. The selected kits are shelter units, wash solutions (sanitation-, water -, and add-on kits), and infrastructural solutions. The aim is to demonstrate transportability and rapid deployment of the kits in an operational field context.",
+      "Partners in the S(p)eedkit project are: Médecins sans Frontières (MSF), The Netherlands Red Cross (NLRC), the International Federation of Red Cross and Red Crescent Societies Shelter Research Unit (IFRC-SRU) and the Norwegian Refugee Council (NRC).",
+      "Globally: the conditions for actual field deployment can vary rapidly."
+    ],
+    "activity_date_iso_date": [
+      "2012-02-29T00:00:00Z",
+      "2016-02-27T00:00:00Z"
+    ],
+    "reporting_org_narrative": [
+      "The Netherlands Red Cross"
+    ]
+  },
+  {
+    "sector_code": [
+      "1"
+    ],
+    "budget_value": [
+      29118.0
+    ],
+    "iati_identifier": "NL-KVK-40409352-PRJ08-147-0002",
+    "title_narrative": [
+      "Well prepared Red Cross/Red Crescent societies for disaster response: Global"
+    ],
+    "sector_narrative": [
+      "Preparedness"
+    ],
+    "reporting_org_ref": "NL-KVK-40409352",
+    "transaction_value": [
+      79.0,
+      -3408.0,
+      3765.0,
+      12670.0,
+      226.0,
+      3408.0,
+      498.0,
+      652.0,
+      3568.0,
+      6696.0,
+      964.0
+    ],
+    "activity_date_type": [
+      "2",
+      "3"
+    ],
+    "activity_status_code": "4",
+    "description_narrative": [
+      "The goal of the programme is to reduce the impact of disasters through improving the response preparedness and capacities of six national Red Cross and Red Crescent societies and the International Federation of Red Cross and Red Crescent Societies: improving the functioning of national and international response mechanisms, strengthening (human) disaster-management capacity and contingency plans. This subactivity provides for general support from NLRC."
+    ],
+    "activity_date_iso_date": [
+      "2012-07-31T00:00:00Z",
+      "2016-07-30T00:00:00Z"
+    ],
+    "reporting_org_narrative": [
+      "The Netherlands Red Cross"
+    ]
+  },
+  {
+    "sector_code": [
+      "1"
+    ],
+    "budget_value": [
+      90717.0
+    ],
+    "iati_identifier": "NL-KVK-40409352-PRJ08-147-0011",
+    "title_narrative": [
+      "Well prepared Red Cross/Red Crescent societies for disaster response: Global"
+    ],
+    "sector_narrative": [
+      "Preparedness"
+    ],
+    "reporting_org_ref": "NL-KVK-40409352",
+    "transaction_value": [
+      14901.0,
+      44241.0,
+      10761.0,
+      433.0,
+      129.0,
+      2522.0,
+      12354.0,
+      5375.0
+    ],
+    "activity_date_type": [
+      "2",
+      "3"
+    ],
+    "activity_status_code": "4",
+    "description_narrative": [
+      "The goal of the programme is to reduce the impact of disasters through improving the response preparedness and capacities of six national Red Cross and Red Crescent societies and the International Federation of Red Cross and Red Crescent Societies: improving the functioning of national and international response mechanisms, strengthening (human) disaster-management capacity and contingency plans. This subactivity provides for (technical support for) monitoring & evaluation."
+    ],
+    "activity_date_iso_date": [
+      "2012-07-31T00:00:00Z",
+      "2016-07-30T00:00:00Z"
+    ],
+    "reporting_org_narrative": [
+      "The Netherlands Red Cross"
+    ]
+  },
+  {
+    "sector_code": [
+      "1",
+      "74020"
+    ],
+    "budget_value": [
+      11672.0
+    ],
+    "iati_identifier": "NL-KVK-40409352-PRJ08-147-0013",
+    "title_narrative": [
+      "Well prepared Red Cross/Red Crescent societies for disaster response: Global"
+    ],
+    "sector_narrative": [
+      "Preparedness",
+      "Disaster prevention and preparedness"
+    ],
+    "reporting_org_ref": "NL-KVK-40409352",
+    "transaction_value": [
+      242.0,
+      9743.0,
+      1686.0,
+      -673.0,
+      673.0
+    ],
+    "activity_date_type": [
+      "2",
+      "3"
+    ],
+    "activity_status_code": "4",
+    "description_narrative": [
+      "The goal of the programme is to reduce the impact of disasters through improving the response preparedness and capacities of six national Red Cross and Red Crescent societies and the International Federation of Red Cross and Red Crescent Societies: improving the functioning of national and international response mechanisms, strengthening (human) disaster-management capacity and contingency plans. This subactivity provides funding for the annual meeting 2014."
+    ],
+    "activity_date_iso_date": [
+      "2012-07-31T00:00:00Z",
+      "2016-07-30T00:00:00Z"
+    ],
+    "reporting_org_narrative": [
+      "The Netherlands Red Cross"
+    ]
+  },
+  {
+    "sector_code": [
+      "4",
+      "74020"
+    ],
+    "budget_value": [
+      649264.0
+    ],
+    "iati_identifier": "NL-KVK-40409352-PRJ08-153-0011",
+    "title_narrative": [
+      "3FM Serious Request 2012: Reducing infant mortality, provision of technical assistance"
+    ],
+    "sector_narrative": [
+      "Prevention / Mitigation",
+      "Disaster prevention and preparedness"
+    ],
+    "reporting_org_ref": "NL-KVK-40409352",
+    "transaction_value": [
+      11722.0,
+      3125.0,
+      5797.0,
+      1180.0,
+      248.0,
+      1992.0,
+      -13964.0,
+      42495.0,
+      426.0,
+      42495.0,
+      422.0,
+      6024.0,
+      25000.0,
+      400.0,
+      104795.0,
+      37202.0,
+      -2465.0,
+      61675.0,
+      1493.0,
+      5100.0,
+      47725.0,
+      15697.0,
+      2839.0,
+      25000.0,
+      39546.0,
+      452.0,
+      28440.0,
+      1767.0,
+      16444.0,
+      871.0
+    ],
+    "activity_date_type": [
+      "2",
+      "3"
+    ],
+    "activity_status_code": "4",
+    "description_narrative": [
+      "This project provides technical support for the programme Serious Request 2012: Reducing infant mortality."
+    ],
+    "activity_date_iso_date": [
+      "2012-12-31T00:00:00Z",
+      "2015-12-30T00:00:00Z"
+    ],
+    "reporting_org_narrative": [
+      "The Netherlands Red Cross"
+    ]
+  },
+  {
+    "sector_code": [
+      "1",
+      "74020"
+    ],
+    "budget_value": [
+      421063.0
+    ],
+    "iati_identifier": "NL-KVK-40409352-PRJ08-237-0007",
+    "title_narrative": [
+      "Component 1: The Netherlands Red Cross"
+    ],
+    "sector_narrative": [
+      "Preparedness",
+      "Disaster prevention and preparedness"
+    ],
+    "reporting_org_ref": "NL-KVK-40409352",
+    "transaction_value": [
+      443115.0,
+      -30250.0,
+      27830.0,
+      988.0,
+      35059.0,
+      13098.0,
+      4067.0,
+      11908.0,
+      575.0,
+      1150.0,
+      575.0,
+      -10765.0,
+      30674.0,
+      4712.0,
+      8134.0,
+      16268.0,
+      5358.0,
+      800.0,
+      2034.0,
+      2033.0,
+      244.0,
+      6100.0,
+      -1710.0,
+      2030.0,
+      2030.0,
+      2030.0,
+      2030.0,
+      2030.0,
+      5808.0,
+      8119.0,
+      4059.0,
+      3516.0,
+      -819.0,
+      3516.0,
+      50.0,
+      3516.0,
+      871.0,
+      61.0,
+      327.0,
+      38889.0,
+      3516.0,
+      708.0,
+      1573.0,
+      7032.0,
+      135.0,
+      2089.0,
+      1564.0,
+      2413.0,
+      77.0,
+      21096.0,
+      869.0,
+      7.0,
+      457.0,
+      26922.0,
+      1847.0,
+      1626.0,
+      -546.0,
+      9.0,
+      2220.0,
+      10681.0,
+      1207.0,
+      232.0,
+      46.0,
+      200.0,
+      1398.0,
+      -5517.0,
+      3242.0,
+      6484.0,
+      9726.0,
+      360.0,
+      -415.0,
+      9.0,
+      2281.0,
+      1738.0,
+      522.0,
+      1727.0,
+      2069.0,
+      -3689.0,
+      3689.0,
+      4665.0,
+      850.0,
+      412.0,
+      270.0,
+      1751.0,
+      849.0,
+      81.0,
+      546.0,
+      1701.0,
+      1220.0,
+      1483.0,
+      9725.0,
+      1079.0,
+      9725.0,
+      -6798.0,
+      -295.0,
+      258.0,
+      50.0,
+      295.0,
+      229.0,
+      6483.0,
+      -1110.0,
+      3689.0,
+      5793.0,
+      -132.0,
+      388.0,
+      771.0,
+      1261.0,
+      198.0,
+      2976.0,
+      5733.0,
+      6048.0,
+      3000.0,
+      13596.0,
+      16643.0,
+      1106.0,
+      122.0,
+      91.0,
+      391.0,
+      13975.0,
+      2305.0,
+      550.0,
+      2955.0,
+      374.0,
+      1328.0,
+      2305.0,
+      5222.0,
+      2417.0
+    ],
+    "activity_date_type": [
+      "2",
+      "3"
+    ],
+    "activity_status_code": "4",
+    "description_narrative": [
+      "interconnected and reinforced projects",
+      "-",
+      "Activities are annual meetings, exchange visits, end evaluation, program manager and visibility",
+      "projects within RPII",
+      "global"
+    ],
+    "activity_date_iso_date": [
+      "2016-04-30T00:00:00Z",
+      "2021-12-30T00:00:00Z"
+    ],
+    "recipient_country_code": [
+      "NL"
+    ],
+    "reporting_org_narrative": [
+      "The Netherlands Red Cross"
+    ]
+  },
+  {
+    "sector_code": [
+      "1",
+      "74020"
+    ],
+    "budget_value": [
+      174095.0
+    ],
+    "iati_identifier": "NL-KVK-40409352-PRJ08-237-0014",
+    "title_narrative": [
+      "Component 2: Netherlands Red Cross"
+    ],
+    "sector_narrative": [
+      "Preparedness",
+      "Disaster prevention and preparedness"
+    ],
+    "reporting_org_ref": "NL-KVK-40409352",
+    "transaction_value": [
+      174095.0,
+      139535.0,
+      10465.0,
+      -970.0,
+      -81.0,
+      81.0,
+      -1590.0,
+      236.0,
+      1238.0,
+      167.0,
+      216.0,
+      14309.0,
+      930.0,
+      565.0,
+      297.0,
+      288.0,
+      1013.0,
+      1607.0,
+      786.0,
+      5000.0
+    ],
+    "activity_date_type": [
+      "2",
+      "3"
+    ],
+    "activity_status_code": "4",
+    "description_narrative": [
+      "NLRC technical support on National Society data preparedness, linking concepts frameworks and toolkits developed by technical partners to country level activities, and piloting and rolling out innovative sanitation solutions (desludging facilities and raised latrines)"
+    ],
+    "activity_date_iso_date": [
+      "2016-04-30T00:00:00Z",
+      "2021-12-30T00:00:00Z"
+    ],
+    "reporting_org_narrative": [
+      "The Netherlands Red Cross"
+    ]
+  },
+  {
+    "sector_code": [
+      "1",
+      "74020"
+    ],
+    "budget_value": [
+      200000.0
+    ],
+    "iati_identifier": "NL-KVK-40409352-PRJ08-237-0013",
+    "title_narrative": [
+      "Component 2: Netherlands Red Cross, Early Action Fund"
+    ],
+    "sector_narrative": [
+      "Preparedness",
+      "Disaster prevention and preparedness"
+    ],
+    "reporting_org_ref": "NL-KVK-40409352",
+    "transaction_value": [
+      200000.0,
+      187793.0,
+      12207.0
+    ],
+    "activity_date_type": [
+      "2",
+      "3"
+    ],
+    "activity_status_code": "4",
+    "description_narrative": [
+      "Fund for rapid financing of early actions by National Societies as identified in pre-approved early action protocols as part of Forecast based Financing. An early action takes place after a (climate) trigger goes off and before the predicted disaster hits in order to reduce the impact of the forecasted natural disaster."
+    ],
+    "activity_date_iso_date": [
+      "2016-04-30T00:00:00Z",
+      "2021-12-30T00:00:00Z"
+    ],
+    "reporting_org_narrative": [
+      "The Netherlands Red Cross"
+    ]
+  },
+  {
+    "sector_code": [
+      "1",
+      "74020"
+    ],
+    "budget_value": [
+      591089.0
+    ],
+    "iati_identifier": "NL-KVK-40409352-PRJ08-237-0015",
+    "title_narrative": [
+      "Component 2: Netherlands Red Cross, technical advisor"
+    ],
+    "sector_narrative": [
+      "Preparedness",
+      "Disaster prevention and preparedness"
+    ],
+    "reporting_org_ref": "NL-KVK-40409352",
+    "transaction_value": [
+      574953.0,
+      35330.0,
+      4125.0,
+      6750.0,
+      7125.0,
+      4500.0,
+      5167.0,
+      8250.0,
+      -11901.0,
+      194.0,
+      247.0,
+      34340.0,
+      10121.0,
+      5832.0,
+      8662.0,
+      8577.0,
+      6444.0,
+      9958.0,
+      6930.0,
+      11518.0,
+      2865.0,
+      22682.0,
+      5167.0,
+      6233.0,
+      9522.0,
+      8422.0,
+      9683.0,
+      5047.0,
+      11289.0,
+      4920.0,
+      7574.0,
+      10493.0,
+      7735.0,
+      18896.0,
+      21869.0,
+      2467.0,
+      1706.0,
+      163.0,
+      7701.0,
+      48742.0,
+      3166.0,
+      11686.0,
+      5250.0,
+      2580.0,
+      4413.0,
+      6799.0,
+      4907.0,
+      2631.0,
+      4737.0,
+      19721.0,
+      25237.0,
+      51883.0,
+      -51883.0,
+      -51823.0,
+      51823.0,
+      20533.0,
+      51883.0,
+      -51883.0,
+      51823.0,
+      3887.0,
+      32229.0
+    ],
+    "activity_date_type": [
+      "2",
+      "3"
+    ],
+    "activity_status_code": "4",
+    "description_narrative": [
+      "Technical support to National Societies on RPII activities by NLRC advisor"
+    ],
+    "activity_date_iso_date": [
+      "2016-04-30T00:00:00Z",
+      "2021-12-30T00:00:00Z"
+    ],
+    "reporting_org_narrative": [
+      "The Netherlands Red Cross"
+    ]
+  },
+  {
+    "sector_code": [
+      "1",
+      "74020"
+    ],
+    "budget_value": [
+      586271.0
+    ],
+    "iati_identifier": "NL-KVK-40409352-PRJ08-239-0002",
+    "title_narrative": [
+      "Dutch Coalition for Humanitarian Innovation"
+    ],
+    "sector_narrative": [
+      "Preparedness",
+      "Disaster prevention and preparedness"
+    ],
+    "reporting_org_ref": "NL-KVK-40409352",
+    "transaction_value": [
+      1936.0,
+      228.0,
+      250.0,
+      79779.0,
+      24071.0,
+      54603.0,
+      77886.0,
+      71723.0,
+      -56899.0,
+      329905.0,
+      2788.0
+    ],
+    "activity_date_type": [
+      "2",
+      "3"
+    ],
+    "activity_status_code": "4",
+    "description_narrative": [
+      "The Humanitarian Innovation Coalition (HIC) provides an ecosystem for principled humanitarian innovation, by bundling strengths and combining efforts of committed public and private organizations in the Netherlands. Its primary goal is to contribute to increasing the impact of humanitarian service delivery to the vulnerable people most affected by a\nhumanitarian disaster or crisis.",
+      "The humanitarian sector worldwide is confronted with an increasing demand for humanitarian aid and emergency response services. In the last 10 years the number of people affected by crises has almost doubled and the cost of international humanitarian aid has tripled. The needs and conditions of people affected by these crises have also changed. Over the recent years, there is a growing recognition that, in many cases, traditional humanitarian assistance tools, services and models would\nneed to better reflect these changing emergency contexts.",
+      "These innovations span a wide range, including for instance new technologies such as innovative shelter solutions; smarter use of information, employing mobile technology and big data analysis; to systems changes, for instance related to the channelling of finance to affected areas.",
+      "The Coalition will comprise of governmental actors, non-governmental organizations (NGO’s), knowledge institutes, academia, businesses (incl. small and medium sized enterprises (SME’s)) and humanitarian organisations in the Netherlands.",
+      "Global"
+    ],
+    "activity_date_iso_date": [
+      "2015-04-30T00:00:00Z",
+      "2016-12-30T00:00:00Z"
+    ],
+    "reporting_org_narrative": [
+      "The Netherlands Red Cross"
+    ]
+  },
+  {
+    "sector_code": [
+      "FL",
+      "ST",
+      "2",
+      "72010"
+    ],
+    "budget_value": [
+      427690.0
+    ],
+    "iati_identifier": "NL-KVK-40409352-PRJ08-200-0002",
+    "title_narrative": [
+      "3FM Serious Request 2014: Sexual violence against women and girls in conflict area's, technical support"
+    ],
+    "sector_narrative": [
+      "Flood",
+      "Storm Surge",
+      "Response",
+      "Material relief assistance and services"
+    ],
+    "reporting_org_ref": "NL-KVK-40409352",
+    "transaction_value": [
+      1990.0,
+      4160.0,
+      -14588.0,
+      4448.0,
+      4448.0,
+      4448.0,
+      8895.0,
+      44475.0,
+      1251.0,
+      -1319.0,
+      1319.0,
+      8266.0,
+      3684.0,
+      25003.0,
+      -247.0,
+      44927.0,
+      4688.0,
+      758.0,
+      186.0,
+      214.0,
+      47.0,
+      969.0,
+      -711.0,
+      386.0,
+      51.0,
+      325.0,
+      39022.0,
+      2135.0,
+      7924.0,
+      260.0,
+      8772.0,
+      720.0,
+      10382.0,
+      32588.0,
+      1290.0,
+      12078.0,
+      1081.0,
+      89773.0,
+      1081.0,
+      1081.0,
+      3094.0,
+      7564.0,
+      1441.0,
+      1441.0,
+      1441.0,
+      1441.0,
+      1441.0,
+      1441.0,
+      8647.0,
+      40000.0,
+      3476.0
+    ],
+    "activity_date_type": [
+      "2",
+      "3"
+    ],
+    "activity_status_code": "4",
+    "description_narrative": [
+      "General expenses for HQ (advisors, workshops)"
+    ],
+    "activity_date_iso_date": [
+      "2014-08-31T00:00:00Z",
+      "2020-06-29T00:00:00Z"
+    ],
+    "reporting_org_narrative": [
+      "The Netherlands Red Cross"
+    ]
+  },
+  {
+    "sector_code": [
+      "4",
+      "74020"
+    ],
+    "budget_value": [
+      233600.0
+    ],
+    "iati_identifier": "NL-KVK-40409352-PRJ08-260-0019",
+    "title_narrative": [
+      "Partners for Resilience Asia regional"
+    ],
+    "sector_narrative": [
+      "Prevention / Mitigation",
+      "Disaster prevention and preparedness"
+    ],
+    "reporting_org_ref": "NL-KVK-40409352",
+    "transaction_value": [
+      14886.0,
+      71153.0,
+      241343.0,
+      14886.0,
+      -14886.0,
+      -14880.0,
+      15200.0,
+      9120.0,
+      2380.0,
+      6080.0,
+      -1013.0,
+      1079.0,
+      117110.0,
+      50000.0
+    ],
+    "activity_date_type": [
+      "2",
+      "3"
+    ],
+    "activity_status_code": "4",
+    "description_narrative": [
+      "PfR activities at regional scale"
+    ],
+    "activity_date_iso_date": [
+      "2015-12-31T00:00:00Z",
+      "2020-12-30T00:00:00Z"
+    ],
+    "reporting_org_narrative": [
+      "The Netherlands Red Cross"
+    ]
+  },
+  {
+    "sector_code": [
+      "4",
+      "74020"
+    ],
+    "budget_value": [
+      156895.0
+    ],
+    "iati_identifier": "NL-KVK-40409352-PRJ08-260-0020",
+    "title_narrative": [
+      "Partners for Resilience Horn of Africa"
+    ],
+    "sector_narrative": [
+      "Prevention / Mitigation",
+      "Disaster prevention and preparedness"
+    ],
+    "reporting_org_ref": "NL-KVK-40409352",
+    "transaction_value": [
+      53971.0,
+      -120000.0,
+      4055.0,
+      1835.0,
+      120000.0,
+      2195.0,
+      1851.0,
+      1843.0,
+      1477.0,
+      9982.0,
+      1799.0,
+      1986.0,
+      1790.0,
+      1671.0,
+      976.0,
+      2968.0,
+      1437.0,
+      1028.0,
+      1055.0,
+      1166.0,
+      1064.0,
+      974.0,
+      1180.0,
+      1001.0,
+      381.0,
+      1028.0,
+      683.0,
+      468.0,
+      974.0,
+      2576.0,
+      1001.0,
+      865.0,
+      916.0,
+      513.0,
+      934.0,
+      289.0
+    ],
+    "activity_date_type": [
+      "2",
+      "3"
+    ],
+    "activity_status_code": "4",
+    "description_narrative": [
+      "PfR activities in Horn of Africa"
+    ],
+    "activity_date_iso_date": [
+      "2015-12-31T00:00:00Z",
+      "2020-12-30T00:00:00Z"
+    ],
+    "reporting_org_narrative": [
+      "The Netherlands Red Cross"
+    ]
+  },
+  {
+    "sector_code": [
+      "DR",
+      "FL",
+      "4",
+      "74020"
+    ],
+    "budget_value": [
+      155285.0
+    ],
+    "iati_identifier": "NL-KVK-40409352-PRJ08-260-0021",
+    "title_narrative": [
+      "Partners for Resilience Inner Niger Delta region"
+    ],
+    "sector_narrative": [
+      "Drought",
+      "Flood",
+      "Prevention / Mitigation",
+      "Disaster prevention and preparedness"
+    ],
+    "reporting_org_ref": "NL-KVK-40409352",
+    "transaction_value": [
+      155285.0,
+      -6058.0,
+      9262.0,
+      6061.0,
+      15539.0,
+      258.0,
+      388.0,
+      528.0,
+      546.0,
+      257.0,
+      1196.0,
+      5588.0,
+      4692.0,
+      2210.0,
+      1834.0,
+      1903.0,
+      1581.0,
+      437.0,
+      290.0,
+      106943.0,
+      369.0,
+      639.0,
+      230.0,
+      272.0,
+      316.0
+    ],
+    "activity_date_type": [
+      "2",
+      "3"
+    ],
+    "activity_status_code": "4",
+    "description_narrative": [
+      "PfR regional activities in Westerm Africa, along the Inner Delta of the river Niger.  Promote the rational and equitable management of water resources that make vulnerable groups, particularly migrants (fishermen and herders), safe from the risks of natural disasters and the effects of hydro-agricultural development by maintaining the ecosystem services of wetlands in river basins.",
+      "The subregion is characterized by recurring natural disasters increasingly linked to climate change, with the consequence of increasing fragility of livelihoods and the vulnerability of communities to these hazards and related environmental challenges. These disasters have increased in frequency and intensity and their impact is increasingly significant in rural communities, especially the most vulnerable, especially those whose livelihoods depend on the primary sector (fishing, agriculture, livestock). Indeed, these recurring climatic risks lead to production deficits, livestock losses and reduced availability of fish and forest stocks.",
+      "Capacity development becomes a major focus for securing the livelihoods of vulnerable communities at the 3 targeted countries in the subregion namely Mali, Burkina Faso and Guinea, which share the Niger Basin. \n Advocacy & Lobbying targeting decision-makers / strategic players based on power mapping\n\n- Establishment and / or strengthening of coalitions at the sub-regional level for citizen control and monitoring by water resource user groups (local organizations, umbrella organizations) for better accountability of decision-makers.",
+      "Authorities in Mali, Burkina Faco and Guinee Conakre. \nFishermen, farmers, women groups",
+      "Mali, Burkina Faso and Guinea Conakry"
+    ],
+    "activity_date_iso_date": [
+      "2015-12-31T00:00:00Z",
+      "2020-12-30T00:00:00Z"
+    ],
+    "recipient_country_code": [
+      "ML"
+    ],
+    "reporting_org_narrative": [
+      "The Netherlands Red Cross"
+    ]
+  },
+  {
+    "sector_code": [
+      "4",
+      "74020"
+    ],
+    "budget_value": [
+      115171.0
+    ],
+    "iati_identifier": "NL-KVK-40409352-PRJ08-260-0022",
+    "title_narrative": [
+      "Partners for Resilience Central America region"
+    ],
+    "sector_narrative": [
+      "Prevention / Mitigation",
+      "Disaster prevention and preparedness"
+    ],
+    "reporting_org_ref": "NL-KVK-40409352",
+    "transaction_value": [
+      105483.0,
+      -9689.0,
+      -1152.0,
+      1152.0,
+      1152.0,
+      -1151.0,
+      -57010.0,
+      -57010.0,
+      114020.0,
+      57010.0,
+      -57010.0,
+      57010.0,
+      57010.0,
+      115171.0
+    ],
+    "activity_date_type": [
+      "2",
+      "3"
+    ],
+    "activity_status_code": "4",
+    "description_narrative": [
+      "PfR activities in Central America and the Caribbean"
+    ],
+    "activity_date_iso_date": [
+      "2015-12-31T00:00:00Z",
+      "2020-12-30T00:00:00Z"
+    ],
+    "reporting_org_narrative": [
+      "The Netherlands Red Cross"
+    ]
+  },
+  {
+    "sector_code": [
+      "4",
+      "74020"
+    ],
+    "budget_value": [
+      675000.0
+    ],
+    "iati_identifier": "NL-KVK-40409352-PRJ08-260-0024",
+    "title_narrative": [
+      "Humanitarian diplomacy for Partners for Resilience"
+    ],
+    "sector_narrative": [
+      "Prevention / Mitigation",
+      "Disaster prevention and preparedness"
+    ],
+    "reporting_org_ref": "NL-KVK-40409352",
+    "transaction_value": [
+      -179.0,
+      542035.0,
+      39997.0,
+      -675000.0,
+      11783.0,
+      6000.0,
+      5110.0,
+      6601.0,
+      5000.0,
+      5000.0,
+      5293.0,
+      6967.0,
+      7885.0,
+      5000.0,
+      4084.0,
+      5175.0,
+      6848.0,
+      5500.0,
+      6773.0,
+      7149.0,
+      7677.0,
+      9177.0,
+      5050.0,
+      18116.0,
+      1686.0,
+      11957.0,
+      7293.0,
+      7261.0,
+      9361.0,
+      7047.0,
+      6693.0,
+      12778.0,
+      8020.0,
+      675000.0,
+      7352.0,
+      7733.0,
+      6301.0,
+      -8918.0,
+      4952.0,
+      11268.0,
+      8407.0,
+      8962.0,
+      4995.0,
+      7470.0,
+      6691.0,
+      7218.0,
+      9176.0,
+      121236.0,
+      4638.0,
+      5178.0,
+      6696.0,
+      7127.0,
+      63103.0
+    ],
+    "activity_date_type": [
+      "2",
+      "3"
+    ],
+    "activity_status_code": "4",
+    "description_narrative": [
+      "All related costs for the position of Global Diplomacy Officer under PfRII"
+    ],
+    "activity_date_iso_date": [
+      "2015-12-31T00:00:00Z",
+      "2020-12-30T00:00:00Z"
+    ],
+    "reporting_org_narrative": [
+      "The Netherlands Red Cross"
+    ]
+  },
+  {
+    "sector_code": [
+      "4",
+      "74020"
+    ],
+    "budget_value": [
+      809651.0
+    ],
+    "iati_identifier": "NL-KVK-40409352-PRJ08-171-0002",
+    "title_narrative": [
+      "3FM Serious Request 2013: reducing child mortality due to diarrhoea, provision of technical assistance"
+    ],
+    "sector_narrative": [
+      "Prevention / Mitigation",
+      "Disaster prevention and preparedness"
+    ],
+    "reporting_org_ref": "NL-KVK-40409352",
+    "transaction_value": [
+      69755.0,
+      739895.0,
+      1869.0,
+      -1190.0,
+      1190.0,
+      1190.0,
+      740.0,
+      336.0,
+      666.0,
+      2453.0,
+      266.0,
+      299.0,
+      1151.0,
+      13661.0,
+      4679.0,
+      720.0,
+      720.0,
+      33095.0,
+      229.0,
+      9164.0,
+      9020.0,
+      34698.0,
+      1150.0,
+      136052.0,
+      -52924.0,
+      120400.0,
+      21641.0,
+      47103.0,
+      1050.0,
+      7191.0,
+      26.0,
+      7296.0,
+      6142.0,
+      18056.0,
+      15806.0,
+      16341.0,
+      44429.0,
+      119406.0,
+      5838.0,
+      1317.0,
+      14269.0,
+      1803.0,
+      45640.0,
+      10465.0,
+      13623.0,
+      41054.0,
+      28997.0,
+      22524.0
+    ],
+    "activity_date_type": [
+      "2",
+      "3"
+    ],
+    "activity_status_code": "4",
+    "description_narrative": [
+      "This project provides technical support for the programme Serious Request 2013: Reducing child mortality due to diarrhoea"
+    ],
+    "activity_date_iso_date": [
+      "2013-04-30T00:00:00Z",
+      "2018-08-30T00:00:00Z"
+    ],
+    "recipient_country_code": [
+      "NL"
+    ],
+    "reporting_org_narrative": [
+      "The Netherlands Red Cross"
+    ]
+  },
+  {
+    "sector_code": [
+      "72010",
+      "74020"
+    ],
+    "budget_value": [
+      3098976.0
+    ],
+    "iati_identifier": "NL-KVK-40409352-PRJ08-173",
+    "title_narrative": [
+      "Noodhulp projecten 2012-2015 (own funds)"
+    ],
+    "sector_narrative": [
+      "Material relief assistance and services",
+      "Disaster prevention and preparedness"
+    ],
+    "reporting_org_ref": "NL-KVK-40409352",
+    "transaction_value": [
+      170720.0,
+      -6402.0,
+      -27620.0,
+      28169.0,
+      46948.0,
+      10000.0,
+      22500.0,
+      1380000.0,
+      80845.0,
+      155240.0,
+      -2400.0,
+      20000.0,
+      8750.0,
+      40000.0
+    ],
+    "activity_date_type": [
+      "2",
+      "3"
+    ],
+    "activity_status_code": "4",
+    "description_narrative": [
+      "This emergency assistance programme is funded by various fundraising campaigns by the Netherlands Red Cross. Funds are distributed to various emergency assistance projects around the world, including in Iraq, Namibia, and Ukraine."
+    ],
+    "activity_date_iso_date": [
+      "2011-12-31T00:00:00Z",
+      "2020-12-30T00:00:00Z"
+    ],
+    "recipient_country_code": [
+      "IQ",
+      "SY",
+      "UA",
+      "KE",
+      "UG",
+      "FJ"
+    ],
+    "reporting_org_narrative": [
+      "The Netherlands Red Cross"
+    ]
+  },
+  {
+    "sector_code": [
+      "2",
+      "72010"
+    ],
+    "budget_value": [
+      240184.0
+    ],
+    "iati_identifier": "NL-KVK-40409352-PRJ08-242-0002",
+    "title_narrative": [
+      "Dutch Surge support for Emergency water, sanitation and hygiene"
+    ],
+    "sector_narrative": [
+      "Response",
+      "Material relief assistance and services"
+    ],
+    "reporting_org_ref": "NL-KVK-40409352",
+    "transaction_value": [
+      6591.0,
+      -22.0,
+      230117.0,
+      697.0,
+      6050.0,
+      -181.0,
+      1135.0,
+      45.0,
+      185.0,
+      -271.0,
+      -271.0,
+      -185.0,
+      542.0,
+      3647.0,
+      4347.0,
+      2594.0,
+      93.0,
+      14594.0,
+      2074.0,
+      2594.0,
+      353.0,
+      6273.0,
+      23342.0,
+      -265.0,
+      185.0,
+      4965.0,
+      7248.0,
+      42.0,
+      3011.0,
+      29766.0,
+      30158.0,
+      45362.0,
+      -9285.0,
+      57892.0
+    ],
+    "activity_date_type": [
+      "2",
+      "3"
+    ],
+    "activity_status_code": "4",
+    "description_narrative": [
+      "The Dutch Surge Support (DSS) sends Dutch water and sanitation experts to water-related disasters around the world to contribute to better international response and increased knowledge management in water-related disasters.",
+      "A growing number of countries face severe water related issues caused by climate change, enveronmental degradation causing water stress, water scarcity and pollution. This has an impact on drinking water, food supplies, infrastucture and economic development, and on vulnerable ecosystems and the stability of societies. Safe drinking water is one of the most urgent needs in emergency situations and lack of clean water and sanitation leads to disease and child mortality and increase of the workload of vulnerability of women and girls in developing countries. Water scarcity is a potential source of conflict, while floods often cause serious damage and claim many victims.",
+      "This project aims to create a Dutch facility for surge support related to water to support humanitian organisations working in water related emergency response by identification and secondment of specialist staff that can be deployed during humanitarian response to crisis. The facility will cover emergency water related fields when appropiate. Besides WASH and water management there will also be a particular focus on thos capacity gaps identified within the United Nations clusters, such as expertise in urban WASH, (complex) sanitation or hydrogeology.",
+      "The DSS is an initiative started by the Dutch government, the Netherlands Red Cross, and the Dutch water sector.",
+      "The facility shall draw upon expertise available in the Netherlands. It will also contribute to raise interest among Netherlands water sector partners. Experts will be deployed aroud the world in emergency situations."
+    ],
+    "activity_date_iso_date": [
+      "2014-12-31T00:00:00Z",
+      "2018-01-30T00:00:00Z"
+    ],
+    "reporting_org_narrative": [
+      "The Netherlands Red Cross"
+    ]
+  },
+  {
+    "sector_code": [
+      "1"
+    ],
+    "budget_value": [
+      59012.0
+    ],
+    "iati_identifier": "NL-KVK-40409352-PRJ13-132-0007",
+    "title_narrative": [
+      "Water data portfolio development"
+    ],
+    "sector_narrative": [
+      "Preparedness"
+    ],
+    "reporting_org_ref": "NL-KVK-40409352",
+    "transaction_value": [
+      2645.0,
+      3035.0,
+      181.0,
+      812.0,
+      166.0,
+      1414.0,
+      1937.0,
+      2894.0,
+      3073.0,
+      619.0,
+      1429.0,
+      1141.0,
+      971.0,
+      539.0,
+      3612.0,
+      1738.0,
+      19012.0,
+      600.0,
+      361.0,
+      1002.0,
+      420.0,
+      886.0,
+      236.0,
+      3765.0,
+      2242.0,
+      17035.0,
+      -17035.0,
+      676.0,
+      2760.0,
+      649.0,
+      2041.0,
+      145.0,
+      176.0,
+      3571.0,
+      102.0,
+      27153.0,
+      1508.0,
+      12847.0,
+      5981.0,
+      1943.0,
+      3417.0
+    ],
+    "activity_date_type": [
+      "2",
+      "3"
+    ],
+    "activity_status_code": "2",
+    "description_narrative": [
+      "Tbd"
+    ],
+    "activity_date_iso_date": [
+      "2021-02-28T00:00:00Z",
+      "2025-12-30T00:00:00Z"
+    ],
+    "reporting_org_narrative": [
+      "The Netherlands Red Cross"
+    ]
+  },
+  {
+    "sector_code": [
+      "1"
+    ],
+    "budget_value": [
+      410559.0
+    ],
+    "iati_identifier": "NL-KVK-40409352-PRJ13-132-0009",
+    "title_narrative": [
+      "Paratus"
+    ],
+    "sector_narrative": [
+      "Preparedness"
+    ],
+    "reporting_org_ref": "NL-KVK-40409352",
+    "transaction_value": [
+      3734.0,
+      12653.0,
+      1090.0,
+      1261.0,
+      339.0,
+      25124.0,
+      512.0,
+      212.0,
+      6371.0,
+      169.0,
+      11464.0,
+      10684.0,
+      9660.0,
+      2965.0,
+      5353.0,
+      76946.0,
+      -76946.0,
+      2327.0,
+      1631.0,
+      85.0,
+      8953.0,
+      113.0,
+      52.0,
+      4672.0,
+      7484.0,
+      169.0,
+      78735.0,
+      5826.0,
+      6908.0,
+      3914.0,
+      169.0,
+      5876.0,
+      85.0,
+      9.0,
+      7618.0,
+      39.0,
+      296.0,
+      3523.0,
+      974.0,
+      424.0,
+      9912.0,
+      381.0,
+      10610.0,
+      1779.0,
+      15754.0,
+      7006.0,
+      113090.0,
+      590.0,
+      -113090.0,
+      4063.0,
+      145677.0,
+      7471.0,
+      302.0,
+      3143.0,
+      6840.0,
+      145.0,
+      436.0,
+      3046.0,
+      290.0,
+      310.0,
+      4985.0,
+      3513.0,
+      4008.0,
+      3214.0,
+      1783.0,
+      7873.0,
+      4504.0,
+      3184.0,
+      2903.0,
+      134180.0
+    ],
+    "activity_date_type": [
+      "2",
+      "3"
+    ],
+    "activity_status_code": "2",
+    "description_narrative": [
+      "The   PARATUS   project   aims   to   develop a   service   for   multi-hazard   systemic   vulnerability  and  dynamic  risk  scenarios  that  considers  the  uncertainties  of  the  risk  components,  and  supports    the  evaluation  of  adaptation  measures  with  and  for  first  and  second  responders,  and  other  stakeholders.",
+      "The Covid-19 pandemic and climate crisis have taught us hard lessons about the systemic impact of compounding disasters. Stakeholders in disaster risk management are faced with the challenge to adapt their risk reduction policies and emergency plans but lack the tools to account for the cross-sectoral impacts and dynamic nature of the risks involved.",
+      "Based on a thorough analysis of  the  current  risk situation,  and  ongoing  trends,  scenarios  of  multi-hazard  impacts  are  co-designed  with  stakeholders,  and developed in four case study areas (Alpine transportation corridors, Romanian civil protection, earthquake threats  to  the  megacity  of  Istanbul,  and  impact-based  forecasting  related  to  tropical  cyclone  threats  and other compounding events to preparedness planning in the Caribbean).  The project aims to develop a cloud-based  simulation  and  information  service  building  on  results  from  previous  EU  projects  with guidelines on approaches,  best  practices,  data  sources  and  analysis  tools  for  risk  assessment,  simulation  of  possible  scenarios  and  decision  support  tools  for  the  evaluation  of  optimal  risk  mitigation/adaptation  measures. Through the use of participatory planning tools, and serious games, stakeholder will evaluate the options for risk reduction to support technical policy improvements and implementation of actions,  considering possible scenarios of   changing   hazards, exposure and vulnerability.",
+      "Caribbean region, Alps mountain region, Romania,, Turkey/Istanbul."
+    ],
+    "activity_date_iso_date": [
+      "2022-09-30T00:00:00Z",
+      "2026-09-29T00:00:00Z"
+    ],
+    "reporting_org_narrative": [
+      "The Netherlands Red Cross"
+    ]
+  },
+  {
+    "sector_code": [
+      "1",
+      "74020"
+    ],
+    "budget_value": [
+      300000.0
+    ],
+    "iati_identifier": "NL-KVK-40409352-PRJ13-132-0002",
+    "title_narrative": [
+      "Cash Information Management Service Development"
+    ],
+    "sector_narrative": [
+      "Preparedness",
+      "Disaster prevention and preparedness"
+    ],
+    "reporting_org_ref": "NL-KVK-40409352",
+    "transaction_value": [
+      1346.0,
+      127.0,
+      11695.0,
+      85.0,
+      11453.0,
+      16658.0,
+      2368.0,
+      353.0,
+      1202.0,
+      17512.0,
+      1720.0,
+      1720.0,
+      1525.0,
+      1090.0,
+      2511.0,
+      2354.0,
+      190216.0,
+      -190216.0,
+      130.0,
+      1027.0,
+      257.0,
+      220.0,
+      524.0,
+      801.0,
+      193177.0,
+      -193177.0,
+      3487.0,
+      548.0,
+      1042.0,
+      657.0,
+      3350.0,
+      229.0,
+      3000.0,
+      419.0,
+      2169.0,
+      2986.0,
+      1143.0,
+      865.0,
+      929.0,
+      6611.0,
+      6990.0,
+      1463.0,
+      229064.0,
+      -13770.0,
+      -229064.0,
+      6300.0,
+      1007.0,
+      1890.0,
+      5305.0,
+      53.0,
+      20456.0,
+      3156.0,
+      54.0,
+      1530.0,
+      255045.0,
+      3149.0,
+      -255045.0,
+      450.0,
+      2647.0,
+      4037.0,
+      5359.0,
+      1692.0,
+      300000.0,
+      5293.0,
+      22327.0
+    ],
+    "activity_date_type": [
+      "2",
+      "3"
+    ],
+    "activity_status_code": "2",
+    "description_narrative": [
+      "The objective of this project is to change the 510 development team to a rapid prototyping team with a clear global service offering to the IFRC Network, and to initiate a first set of support projects to national societies. When the service is initiated and national societies are requesting the services, the cost-recovery model of 510 will ensure the sustainability of the initial investment from the IH extra projects fund.",
+      "Within the IFRC Network more cash programs are planned and conducted than ever before. The current COVID appeal has already highlighted 22 national societies in the Africa region that will do cash programs for livelihoods. Many of those national societies have limited to no experience with cash programming. They find programmatic cash expertise through online courses and IFRC delegates. There however remains a gap in the IFRC Network on Cash Information Management experts. This gap is critical because the information management component in cash programming is significant. Additionally there is a big gap in training opportunities and standard toolkits for national societies to implement cash information management.",
+      "NLRC-510 will develop a Cash IM service and products, which will help national societies to implement cash programs supported by information management systems, digital technology and use data analytics to get good insights and reports. We will create a scale up and future plan for 121. The most feasible route to take with the system is to productize validated key components of it.",
+      "NLRC-510 & 121 team\nBritish Red Cross Cash Hub\nIFRC Cash IM team\nNational Societies",
+      "Tbd"
+    ],
+    "activity_date_iso_date": [
+      "2020-12-31T00:00:00Z",
+      "2025-12-30T00:00:00Z"
+    ],
+    "reporting_org_narrative": [
+      "The Netherlands Red Cross"
+    ]
+  },
+  {
+    "sector_code": [
+      "1"
+    ],
+    "budget_value": [
+      241003.0
+    ],
+    "iati_identifier": "NL-KVK-40409352-PRJ13-132-0003",
+    "title_narrative": [
+      "Data literacy in the IFRC Network"
+    ],
+    "sector_narrative": [
+      "Preparedness"
+    ],
+    "reporting_org_ref": "NL-KVK-40409352",
+    "transaction_value": [
+      1347.0,
+      1143.0,
+      4844.0,
+      3.0,
+      1018.0,
+      3891.0,
+      8713.0,
+      6132.0,
+      1083.0,
+      12788.0,
+      497.0,
+      11953.0,
+      3278.0,
+      4730.0,
+      1108.0,
+      7693.0,
+      4477.0,
+      762.0,
+      4531.0,
+      3442.0,
+      3928.0,
+      936.0,
+      2633.0,
+      1887.0,
+      1168.0,
+      3259.0,
+      1320.0,
+      6481.0,
+      66003.0,
+      5826.0,
+      5827.0,
+      3766.0,
+      6971.0,
+      5778.0,
+      4492.0,
+      6512.0,
+      7088.0,
+      13875.0,
+      8459.0,
+      5353.0,
+      114782.0,
+      -114782.0,
+      12184.0,
+      11063.0,
+      2938.0,
+      140968.0,
+      15404.0,
+      -140968.0,
+      6551.0,
+      175000.0,
+      12077.0
+    ],
+    "activity_date_type": [
+      "2",
+      "3"
+    ],
+    "activity_status_code": "2",
+    "description_narrative": [
+      "One of the key activities in the new IFRC Digital Strategy is to close the digital divide in the network, and to build the data literacy of all national societies. Together with the IFRC Intervention team we want to develop a training curriculum that helps national societies to move along the levels of maturity in the IFRC Digital Maturity model (levels 1-5).",
+      "The current training package is aimed at national societies in level 1 of the digital maturity (basic). 510 however is frequently requested to provide trainings to people in the national societies who already have good basic data skills, but need to improve their skills to deliver more advance data and digital support to their national society.",
+      "Currently a basic data playbook for national societies exists, and an e-learning on data for volunteers. Both have been developed in a collaboration between IFRC, NLRC-510 and American Red Cross. The current training package is however aimed at national societies in level 1 of the digital maturity (basic). Many of these training materials have been produced over the last years. 510 has trained over 20 national societies on various subjects related to data & digital, including strategic trainings on how to establish data teams. However, these materials need to be combined in a good curriculum that matches the maturity levels. Additionally, the content has to be agreed with IFRC, and translated in several languages.",
+      "NLRC-510\nIFCR Intervention Team\nIFCR data literacy team\nAmerican Red Cross",
+      "Global"
+    ],
+    "activity_date_iso_date": [
+      "2021-04-30T00:00:00Z",
+      "2025-12-30T00:00:00Z"
+    ],
+    "reporting_org_narrative": [
+      "The Netherlands Red Cross"
+    ]
+  },
+  {
+    "sector_code": [
+      "1",
+      "74020"
+    ],
+    "budget_value": [
+      300000.0
+    ],
+    "iati_identifier": "NL-KVK-40409352-PRJ13-132-0004",
+    "title_narrative": [
+      "Rapid Prototyping Service"
+    ],
+    "sector_narrative": [
+      "Preparedness",
+      "Disaster prevention and preparedness"
+    ],
+    "reporting_org_ref": "NL-KVK-40409352",
+    "transaction_value": [
+      -308284.0,
+      2541.0,
+      436.0,
+      432.0,
+      3854.0,
+      1670.0,
+      4137.0,
+      820.0,
+      3340.0,
+      2626.0,
+      4063.0,
+      1546.0,
+      916.0,
+      1525.0,
+      11739.0,
+      6691.0,
+      4089.0,
+      4018.0,
+      5421.0,
+      11306.0,
+      379451.0,
+      6443.0,
+      -379451.0,
+      240000.0,
+      5408.0,
+      3993.0,
+      18987.0,
+      2783.0,
+      14084.0,
+      18589.0,
+      15112.0,
+      3660.0,
+      1573.0,
+      8640.0,
+      1573.0,
+      4266.0,
+      2325.0,
+      995.0,
+      396.0,
+      2866.0,
+      448.0,
+      251597.0,
+      515.0,
+      -251597.0,
+      201.0,
+      3174.0,
+      2642.0,
+      4565.0,
+      56.0,
+      135.0,
+      50.0,
+      262936.0,
+      1433.0,
+      -262936.0,
+      2410.0,
+      4020.0,
+      5767.0,
+      4574.0,
+      1842.0,
+      300000.0,
+      17017.0
+    ],
+    "activity_date_type": [
+      "2",
+      "3"
+    ],
+    "activity_status_code": "4",
+    "description_narrative": [
+      "The objective of this project is to change the 510 development team to a rapid prototyping team with a clear global service offering to the IFRC Network, and to initiate a first set of support projects to national societies. When the service is initiated and national societies are requesting the services, the cost-recovery model of 510 will ensure the sustainability of the initial investment from the IH extra projects fund.",
+      "The IFRC Digital Strategy will bring an increasing amount of data and digital work in the humanitarian programs of national societies. However, embedding digital technology in humanitarian operations is a real challenge.",
+      "NLRC-510 can help national societies identify their biggest opportunities to use data and digital (business value case mapping), to use a human centered design approach to collect user insights and use the development team technical knowledge to create a set of requirements for a solution. Based on the requirements our team can develop with the national society a rapid prototype that can be field tested and use on a small scale with aid workers and beneficiaries. With this user tested prototype the national society can work with 510 to implement the solution with one of their local or global IT and digital service providers and start a development or procurement of an operational platform. The handholding during this phase will increase the likelihood of national societies getting value out of their investments in data and digital technology. This service will help national societies to fast track their digital maturity, to prioritize the most valuable investments, and to do research and development properly, before using scarce resources to develop software or data science solutions.",
+      "The NLRC-510 development team/rapid prototyping team\nIFRC and the Movement\nNational Societies",
+      "Tbd"
+    ],
+    "activity_date_iso_date": [
+      "2020-12-31T00:00:00Z",
+      "2025-12-30T00:00:00Z"
+    ],
+    "reporting_org_narrative": [
+      "The Netherlands Red Cross"
+    ]
+  },
+  {
+    "sector_code": [
+      "2"
+    ],
+    "budget_value": [
+      340000.0
+    ],
+    "iati_identifier": "NL-KVK-40409352-PRJ13-132-0006",
+    "title_narrative": [
+      "Data and Digital Support to NS"
+    ],
+    "sector_narrative": [
+      "Response"
+    ],
+    "reporting_org_ref": "NL-KVK-40409352",
+    "transaction_value": [
+      -11232.0,
+      182.0,
+      441.0,
+      2656.0,
+      74855.0,
+      1036.0,
+      -74855.0,
+      2980.0,
+      17728.0,
+      999.0,
+      990.0,
+      8960.0,
+      1168.0,
+      10157.0,
+      6.0,
+      990.0,
+      1309.0,
+      673.0,
+      3777.0,
+      242.0,
+      4014.0,
+      3213.0,
+      1590.0,
+      74333.0,
+      9523.0,
+      25667.0,
+      1497.0,
+      990.0,
+      13655.0
+    ],
+    "activity_date_type": [
+      "2",
+      "3"
+    ],
+    "activity_status_code": "4",
+    "description_narrative": [
+      "Through this project the Netherlands Red Cross supports RCRC NS in developing and integrating data products or digital services in their regular activities and processes.",
+      "Data and digital technology are becoming increasingly important and offer great potential for improving the speed, quality and cost effectiveness of humanitarian aid. The IFRC has emphasized this by making \"digital transformation\" a pillar in their current strategy. NS need to build the requisite capacity to successfully utilise data products and/or digital technology in their regular work. This project assists these NS in this process and makes available to them the skills and competencies of 510, the data initiative of the Netherlands Red Cross, enabling all to accelerate the digital transformation of the beneficiary NS.",
+      "Through this project remote technical assistance can be provided and in some instances complementary salary and/or equipment support is also provided.",
+      "RCRC NS anywhere in the world.\nIFRC\nNLRC",
+      "This project has global coverage."
+    ],
+    "activity_date_iso_date": [
+      "2021-07-11T00:00:00Z",
+      "2023-12-30T00:00:00Z"
+    ],
+    "reporting_org_narrative": [
+      "The Netherlands Red Cross"
+    ]
+  },
+  {
+    "sector_code": [
+      "1"
+    ],
+    "budget_value": [
+      441053.0
+    ],
+    "iati_identifier": "NL-KVK-40409352-PRJ13-132-0008",
+    "title_narrative": [
+      "Innovating Climate services through Integrating Scientific and local Knowledge"
+    ],
+    "sector_narrative": [
+      "Preparedness"
+    ],
+    "reporting_org_ref": "NL-KVK-40409352",
+    "transaction_value": [
+      178.0,
+      1437.0,
+      900.0,
+      169.0,
+      3328.0,
+      133.0,
+      1186.0,
+      329.0,
+      250.0,
+      1118.0,
+      974.0,
+      13047.0,
+      376.0,
+      25199.0,
+      3382.0,
+      339.0,
+      24677.0,
+      169.0,
+      20338.0,
+      58592.0,
+      18519.0,
+      2644.0,
+      -58592.0,
+      -18519.0,
+      315.0,
+      104.0,
+      381.0,
+      479.0,
+      3565.0,
+      293.0,
+      367.0,
+      466.0,
+      6166.0,
+      678.0,
+      212.0,
+      13242.0,
+      215.0,
+      524.0,
+      768.0,
+      355.0,
+      9146.0,
+      824.0,
+      1779.0,
+      1225.0,
+      8541.0,
+      889.0,
+      160.0,
+      21219.0,
+      3784.0,
+      -230.0,
+      508.0,
+      17843.0,
+      53.0,
+      254.0,
+      2.0,
+      14680.0,
+      45.0,
+      198.0,
+      254.0,
+      17683.0,
+      460.0,
+      198.0,
+      22722.0,
+      10269.0,
+      645.0,
+      807.0,
+      19042.0,
+      205840.0,
+      55040.0,
+      1169.0,
+      -205840.0,
+      -55040.0,
+      5820.0,
+      635.0,
+      154841.0,
+      8186.0,
+      463.0,
+      1999.0,
+      10646.0,
+      5591.0,
+      809.0,
+      300.0,
+      4482.0,
+      257.0,
+      1149.0,
+      5044.0,
+      5517.0,
+      2324.0,
+      1436.0,
+      1727.0,
+      8044.0,
+      4251.0,
+      4428.0,
+      180315.0,
+      -377.0,
+      -180315.0,
+      13185.0,
+      402.0,
+      9449.0,
+      25200.0,
+      6953.0,
+      8485.0,
+      1160.0,
+      485.0,
+      5394.0,
+      250650.0,
+      3538.0,
+      -250650.0,
+      254314.0,
+      127.0
+    ],
+    "activity_date_type": [
+      "2",
+      "3"
+    ],
+    "activity_status_code": "2",
+    "description_narrative": [
+      "The NLRC/510 is part of a consortium that implements the overall project. The main objective of the I-CISK project is to develop next-generation CS that follow a social and behaviourally informed approach for co-producing CS that meet the climate information needs of citizens, decision makers and stakeholders at the spatial and temporal scale relevant to them.\n\nNLRC/510 is responsible for the following tasks in this programme:\nWP1: Lead the Living Lab in Namibia, supported by the Namibia Red Cross Society. \nWP2: Lead task 2.2 on identifying local knowledge and contribute to the other tasks. \nWP3: contribute to tasks 3.2 up to and including 3.5. \nWP5: contribute to task 5.5 business development bringing in also the perspective of public services versus private sector services. \nWP6: contribute to several dissemination and capacity building activities. \nWP7: Contribute to the evaluation of the impact of the Living Labs.",
+      "European and international collaborative research efforts have established a solid scientific foundation for an effective CS value chain. This includes advanced scientific knowledge, monitoring and modelling of climate change and the impacts of climate extremes; and services for the provision of new and relevant climate data through open access data platforms such as Copernicus and GEOSS, citizen science, through open data exchange standards and interoperability (e.g. INSPIRE, OGC). There are, however, several barriers that impede the current generation of CS achieving the full opportunity of their value-proposition. These challenges include the failure to incorporate the social and behavioural factors and the local knowledge and customs of their users. Additional challenges are in; (i) the understanding of the multi-temporal and multi-scalar dimension of climate-related impacts and actions; (ii) the translation of CS-provided data into actionable information; (iii) the consideration of reinforcing or balancing feedback loops associated to users’ decisions based on CS; and (iv) the lack of trans-disciplinary \napproaches across the full CS value chain. There are also challenges in delivering tailor-made and robust services at the scale relevant to users; and an as yet maturing European climate services sector7. The I-CISK project aims to seize these untaken opportunities.",
+      "In seven geographically and sectorally diverse living labs (LL), I-CISK showcases its human-centred co-design, co-creation, co-implementation, and co-evaluation approach across key sectors vulnerable to climate change in Europe and beyond. This I-CISK co-production framework builds on the wealth of existing and expanding data and services from Copernicus and GEOSS to provide locally relevant CS. The framework will innovate existing CS frameworks by integrating the local data and knowledge, perceptions and preferences of users with research \nbased scientific knowledge. I-CISK will seamlessly link climate and impact and adaptation information at different temporal scales from sub-seasonal to seasonal forecasts to decadal predictions and climate scale projections by including in the decision-making process the effects of adaptation options in a multi-timescale, multi-sector, multi-hazard setting. This human-centred approach realises the full potential of the CS value proposition through bridging the current gap at the downstream end of the CS value chain.",
+      "Users of Climate Services"
+    ],
+    "activity_date_iso_date": [
+      "2021-10-31T00:00:00Z",
+      "2025-10-30T00:00:00Z"
+    ],
+    "reporting_org_narrative": [
+      "The Netherlands Red Cross"
+    ]
+  },
+  {
+    "sector_code": [
+      "72010"
+    ],
+    "budget_value": [
+      580317.0
+    ],
+    "iati_identifier": "NL-KVK-40409352-PRJ08-183",
+    "title_narrative": [
+      "Syria crisis - support to residents and displaced persons"
+    ],
+    "sector_narrative": [
+      "Material relief assistance and services"
+    ],
+    "reporting_org_ref": "NL-KVK-40409352",
+    "transaction_value": [
+      18779.0,
+      90000.0,
+      400000.0,
+      50000.0,
+      47596.0,
+      127588.0
+    ],
+    "activity_date_type": [
+      "2",
+      "3"
+    ],
+    "activity_status_code": "4",
+    "description_narrative": [
+      "Syria is suffering since 2011 from a (protracted) crisis and residents and displaced populations in conflict and or besieged areas are hard to reach with medical aid and supplies"
+    ],
+    "activity_date_iso_date": [
+      "2013-12-30T00:00:00Z",
+      "2020-12-30T00:00:00Z"
+    ],
+    "recipient_country_code": [
+      "SY"
+    ],
+    "reporting_org_narrative": [
+      "The Netherlands Red Cross"
+    ]
+  },
+  {
+    "sector_code": [
+      "74020",
+      "FL",
+      "ST"
+    ],
+    "budget_value": [
+      187366.0
+    ],
+    "iati_identifier": "NL-KVK-40409352-PRJ08-181",
+    "title_narrative": [
+      "Preparing for disasters in the Philippines: training communities and local government"
+    ],
+    "sector_narrative": [
+      "Disaster prevention and preparedness",
+      "Flood",
+      "Storm Surge"
+    ],
+    "reporting_org_ref": "NL-KVK-40409352",
+    "transaction_value": [
+      -14901.0,
+      35000.0,
+      20000.0,
+      8300.0
+    ],
+    "activity_date_type": [
+      "2",
+      "3"
+    ],
+    "activity_status_code": "4",
+    "description_narrative": [
+      "The programme aims to contribute to a common local development agenda for building disaster resilient communities in the Philippines. It hopes to improve the responsiveness and transparency of Local Government Units (LGU) by ensuring participatory and transparent processes for disaster risk reduction and development."
+    ],
+    "activity_date_iso_date": [
+      "2013-11-30T00:00:00Z",
+      "2016-11-29T00:00:00Z"
+    ],
+    "recipient_country_code": [
+      "PH"
+    ],
+    "reporting_org_narrative": [
+      "The Netherlands Red Cross"
+    ]
+  },
+  {
+    "sector_code": [
+      "2",
+      "72010"
+    ],
+    "budget_value": [
+      21335.0
+    ],
+    "iati_identifier": "NL-KVK-40409352-PRJ08-288-0006",
+    "title_narrative": [
+      "Hurricane Matthew 2016: Aruba RC support to Haiti"
+    ],
+    "sector_narrative": [
+      "Response",
+      "Material relief assistance and services"
+    ],
+    "reporting_org_ref": "NL-KVK-40409352",
+    "transaction_value": [
+      17000.0,
+      -17515.0,
+      17515.0,
+      17000.0,
+      -17000.0,
+      17000.0
+    ],
+    "activity_date_type": [
+      "2",
+      "3"
+    ],
+    "activity_status_code": "4",
+    "description_narrative": [
+      "Directly after Hurricane Matthew hit Haiti an early response came from the Aruba Red Cross. Aruba Red Cross sent two trained volunteers with emergency supplies to Haiti.",
+      "Hurricane Matthew, the strongest storm of the 2016 Atlantic Hurricane season, crossed Jamaica, Haiti, the Dominican Republic, Cuba and The Bahamas. It hit Haiti on October 4th 2016. An early response was undertaken from Aruba because of its relatively close situated.",
+      "Logistics to transport volunteers and supplies were offered by Dutch Marine. Tarps, tents, medical supplies and bottled water were transported to Haiti.",
+      "Those affected by Hurricane Matthew",
+      "Haiti"
+    ],
+    "activity_date_iso_date": [
+      "2016-10-10T00:00:00Z",
+      "2016-12-30T00:00:00Z"
+    ],
+    "recipient_country_code": [
+      "HT"
+    ],
+    "reporting_org_narrative": [
+      "The Netherlands Red Cross"
+    ]
+  },
+  {
+    "sector_code": [
+      "ST",
+      "2",
+      "72010"
+    ],
+    "budget_value": [
+      147500.0
+    ],
+    "iati_identifier": "NL-KVK-40409352-PRJ08-288-0002",
+    "title_narrative": [
+      "Hurricane Matthew 2016, Haiti HR"
+    ],
+    "sector_narrative": [
+      "Storm Surge",
+      "Response",
+      "Material relief assistance and services"
+    ],
+    "reporting_org_ref": "NL-KVK-40409352",
+    "transaction_value": [
+      99096.0,
+      61619.0,
+      -39144.0,
+      29730.0,
+      46892.0
+    ],
+    "activity_date_type": [
+      "2",
+      "3"
+    ],
+    "activity_status_code": "4",
+    "description_narrative": [
+      "The objective of this operation is to ensure that people affected by Hurricane Matthew in the Sud, Grand’Anse, Nippes, Sud-Est, Ouest and Nord-Ouest departments receive appropriate assistance in a timely, effective, and efficient manner; and that they are provided with the necessary support in order to recover with increased disaster resilience."
+    ],
+    "activity_date_iso_date": [
+      "2016-10-10T00:00:00Z",
+      "2017-10-10T00:00:00Z"
+    ],
+    "recipient_country_code": [
+      "HT"
+    ],
+    "reporting_org_narrative": [
+      "The Netherlands Red Cross"
+    ]
+  },
+  {
+    "budget_value": [
+      100000.0
+    ],
+    "iati_identifier": "NL-KVK-40409352-PRJ08-291",
+    "title_narrative": [
+      "Drought Support Operation"
+    ],
+    "reporting_org_ref": "NL-KVK-40409352",
+    "transaction_value": [
+      1765.0,
+      100000.0
+    ],
+    "activity_date_type": [
+      "2",
+      "3"
+    ],
+    "activity_status_code": "4",
+    "description_narrative": [
+      "The programme assists areas with high potential impact of El Nino with possible flood occurrences leading to loss of lives; displacement of population; destruction of properties and infrastructure; and interrupt access to basic social services such as schools, health facilities and markets. Additionally, these areas are also likely to experience outbreak of secondary hazards associated with flooding such as water and vector borne diseases."
+    ],
+    "activity_date_iso_date": [
+      "2016-08-31T00:00:00Z",
+      "2016-12-30T00:00:00Z"
+    ],
+    "reporting_org_narrative": [
+      "The Netherlands Red Cross"
+    ]
+  },
+  {
+    "sector_code": [
+      "2",
+      "72010"
+    ],
+    "budget_value": [
+      1000000.0
+    ],
+    "iati_identifier": "NL-KVK-40409352-PRJ08-223-0002",
+    "title_narrative": [
+      "Delegates programme 2016"
+    ],
+    "sector_narrative": [
+      "Response",
+      "Material relief assistance and services"
+    ],
+    "reporting_org_ref": "NL-KVK-40409352",
+    "transaction_value": [
+      -30.0,
+      -641.0,
+      671.0,
+      671.0,
+      -39054.0,
+      18945.0
+    ],
+    "activity_date_type": [
+      "2",
+      "3"
+    ],
+    "activity_status_code": "4",
+    "description_narrative": [
+      "This project makes funds available to send delegates to meet the humanitarian assistance needs of the International Federation of Red Cross and Red Crescent Societies and the International Committee of the Red Cross.",
+      "Delegate are often university-educated trainers, advisors, management- and/or information specialists able to analyse complex situations and make sound recommendations on how to proceed, whilst reconciling the needs of victims with increasingly complex donor requirements.",
+      "Within this programme NLRC supports IFRC and ICRC with delegates, but also works bilaterally by teaming up with a Partner NS without mediation by the ICRC or IFRC.",
+      "Specialists on Shelter, Health, WASH, Food, Contingency and Mitigation",
+      "Delegates are assigned in Afghanistan, Democratic Republic of Congo, Ethiopia, Kenya, Lebanon, Malawi, Palestine, South Sudan, Sudan and Tanzania."
+    ],
+    "activity_date_iso_date": [
+      "2015-12-31T00:00:00Z",
+      "2016-12-30T00:00:00Z"
+    ],
+    "reporting_org_narrative": [
+      "The Netherlands Red Cross"
+    ]
+  },
+  {
+    "sector_code": [
+      "2",
+      "72010"
+    ],
+    "budget_value": [
+      1000000.0
+    ],
+    "iati_identifier": "NL-KVK-40409352-PRJ08-223-0003",
+    "title_narrative": [
+      "Delegates programme 2017"
+    ],
+    "sector_narrative": [
+      "Response",
+      "Material relief assistance and services"
+    ],
+    "reporting_org_ref": "NL-KVK-40409352",
+    "transaction_value": [
+      -1792.0,
+      -23888.0,
+      500.0,
+      -192.0,
+      -764.0,
+      192.0,
+      80846.0,
+      15642.0,
+      2687.0,
+      4884.0,
+      100949.0,
+      122539.0,
+      764.0,
+      51322.0,
+      30058.0,
+      41294.0,
+      41048.0,
+      7108.0,
+      3913.0,
+      72012.0,
+      24152.0,
+      31834.0,
+      23996.0,
+      64444.0,
+      4833.0,
+      5413.0,
+      38282.0,
+      5979.0,
+      85762.0,
+      23219.0,
+      16285.0,
+      21526.0,
+      10567.0,
+      93841.0,
+      11337.0,
+      13461.0
+    ],
+    "activity_date_type": [
+      "2",
+      "3"
+    ],
+    "activity_status_code": "4",
+    "description_narrative": [
+      "This project makes funds available to send delegates to meet the humanitarian assistance needs of the International Federation of Red Cross and Red Crescent Societies and the International Committee of the Red Cross.",
+      "Delegate are often university-educated trainers, advisors, management- and/or information specialists able to analyse complex situations and make sound recommendations on how to proceed, whilst reconciling the needs of victims with increasingly complex donor requirements.",
+      "Within this programme NLRC supports IFRC and ICRC with delegates, but also works bilaterally by teaming up with a Partner NS without mediation by the ICRC or IFRC.",
+      "Specialists on Shelter, Health, WASH, Food, Contingency and Mitigation",
+      "-"
+    ],
+    "activity_date_iso_date": [
+      "2016-12-31T00:00:00Z",
+      "2017-12-30T00:00:00Z"
+    ],
+    "reporting_org_narrative": [
+      "The Netherlands Red Cross"
+    ]
+  },
+  {
+    "sector_code": [
+      "2",
+      "72010"
+    ],
+    "budget_value": [
+      433879.0
+    ],
+    "iati_identifier": "NL-KVK-40409352-PRJ08-232-0010",
+    "title_narrative": [
+      "3FM Serious Request 2015: The Next Generation, technical assistance"
+    ],
+    "sector_narrative": [
+      "Response",
+      "Material relief assistance and services"
+    ],
+    "reporting_org_ref": "NL-KVK-40409352",
+    "transaction_value": [
+      433879.0,
+      6671.0,
+      2224.0,
+      4448.0,
+      22480.0,
+      79.0,
+      1322.0,
+      6092.0,
+      1404.0,
+      18732.0,
+      5000.0,
+      4688.0,
+      4688.0,
+      37197.0,
+      99502.0,
+      31696.0,
+      32207.0,
+      10933.0,
+      10933.0,
+      10933.0,
+      14407.0,
+      -462.0,
+      7628.0,
+      73.0,
+      3547.0,
+      723.0,
+      1697.0,
+      54485.0,
+      -1292.0,
+      195.0,
+      1174.0,
+      937.0,
+      761.0,
+      360.0,
+      85.0,
+      3796.0,
+      2205.0,
+      1654.0,
+      3602.0,
+      6907.0,
+      20170.0
+    ],
+    "activity_date_type": [
+      "2",
+      "3"
+    ],
+    "activity_status_code": "4",
+    "description_narrative": [
+      "The programme This Next Generation, Supporting the development of young people in war and conflict. The theme focusses on children and young adults who live in the most extreme circumstances and therefore have little chance on schooling and development. They are the silent victims of war. The funding of this programme is made possible by 3FM fundraising activity.",
+      "The aim of the programme is to make young people who have to cope with conflict and that are part of ‘this next generation’ more resilient to the consequences of conflict.",
+      "The Red Cross supports the development of young people in war and conflict by focussing on four different area's: education and personal development, psychosocial support, food and income for families, and emergency assistance.",
+      "This project contains the technical support and advisors for implementing the programme.",
+      "Technical support is offered from NLRC HQ in The Hague."
+    ],
+    "activity_date_iso_date": [
+      "2015-03-31T00:00:00Z",
+      "2020-12-30T00:00:00Z"
+    ],
+    "reporting_org_narrative": [
+      "The Netherlands Red Cross"
+    ]
+  },
+  {
+    "sector_code": [
+      "2",
+      "72010"
+    ],
+    "budget_value": [
+      3880.0
+    ],
+    "iati_identifier": "NL-KVK-40409352-PRJ08-232-0009",
+    "title_narrative": [
+      "3FM Serious Request 2015: The Next Generation, evaluation, learning"
+    ],
+    "sector_narrative": [
+      "Response",
+      "Material relief assistance and services"
+    ],
+    "reporting_org_ref": "NL-KVK-40409352",
+    "transaction_value": [
+      3880.0,
+      1565.0,
+      1591.0,
+      723.0
+    ],
+    "activity_date_type": [
+      "2",
+      "3"
+    ],
+    "activity_status_code": "4",
+    "description_narrative": [
+      "The programme This Next Generation, Supporting the development of young people in war and conflict. The theme focusses on children and young adults who live in the most extreme circumstances and therefore have little chance on schooling and development. They are the silent victims of war. The funding of this programme is made possible by 3FM fundraising activity.",
+      "The aim of the programme is to make young people who have to cope with conflict and that are part of ‘this next generation’ more resilient to the consequences of conflict.",
+      "The Red Cross supports the development of young people in war and conflict by focussing on four different area's: education and personal development, psychosocial support, food and income for families, and emergency assistance.",
+      "This project contains the general costs of HQ for implementing the programme.",
+      "NLRC HQ, The Hague."
+    ],
+    "activity_date_iso_date": [
+      "2015-03-31T00:00:00Z",
+      "2018-12-30T00:00:00Z"
+    ],
+    "reporting_org_narrative": [
+      "The Netherlands Red Cross"
+    ]
+  },
+  {
+    "sector_code": [
+      "74020",
+      "73010",
+      "VW"
+    ],
+    "budget_value": [
+      8385818.0
+    ],
+    "iati_identifier": "NL-KVK-40409352-PRJ08-233",
+    "title_narrative": [
+      "Addressing vulnerabilities of refugees and host communities in Lebanon affected by the Syria Crisis"
+    ],
+    "sector_narrative": [
+      "Disaster prevention and preparedness",
+      "Reconstruction relief and rehabilitation",
+      "Civil unrest"
+    ],
+    "reporting_org_ref": "NL-KVK-40409352",
+    "transaction_value": [
+      4341484.0,
+      679421.0,
+      -679421.0,
+      146692.0,
+      -206334.0,
+      -5018467.0,
+      19855.0,
+      69996.0,
+      242128.0,
+      233328.0,
+      126664.0,
+      1130905.0,
+      -1275445.0,
+      47626.0,
+      390580.0,
+      385440.0,
+      92680.0,
+      -75265.0,
+      -925.0,
+      -50532.0,
+      63074.0,
+      2978.0,
+      394123.0,
+      215575.0,
+      295347.0,
+      75265.0,
+      925.0,
+      50532.0,
+      -63074.0,
+      50000.0,
+      8241128.0,
+      41875.0,
+      210640.0,
+      519777.0,
+      422959.0,
+      352209.0
+    ],
+    "activity_date_type": [
+      "2",
+      "3"
+    ],
+    "activity_status_code": "4",
+    "description_narrative": [
+      "This programme will provide a coherent and coordinated response to the crisis following the Syria conflict. The Madad-funded initiative is implemented in multiple contexts with various institutional challenges and varying needs of vulnerable persons from Syria as well as in the host communities, as is also evident in the Response Plans of Lebanon and Jordan and the 3RP country chapters of Turkey, Egypt and Iraq."
+    ],
+    "activity_date_iso_date": [
+      "2015-04-30T00:00:00Z",
+      "2020-12-30T00:00:00Z"
+    ],
+    "recipient_country_code": [
+      "LB"
+    ],
+    "reporting_org_narrative": [
+      "The Netherlands Red Cross"
+    ]
+  },
+  {
+    "sector_code": [
+      "4",
+      "74020"
+    ],
+    "budget_value": [
+      13442.0
+    ],
+    "iati_identifier": "NL-KVK-40409352-PRJ08-234-0013",
+    "title_narrative": [
+      "Case Study Syrian Refugees in Lebanon"
+    ],
+    "sector_narrative": [
+      "Prevention / Mitigation",
+      "Disaster prevention and preparedness"
+    ],
+    "reporting_org_ref": "NL-KVK-40409352",
+    "transaction_value": [
+      8000.0,
+      5442.0,
+      13441.0
+    ],
+    "activity_date_type": [
+      "2",
+      "3"
+    ],
+    "activity_status_code": "4",
+    "description_narrative": [
+      "Case study on support for Syrian refugees in Lebanon."
+    ],
+    "activity_date_iso_date": [
+      "2019-04-30T00:00:00Z",
+      "2020-01-29T00:00:00Z"
+    ],
+    "recipient_country_code": [
+      "LB"
+    ],
+    "reporting_org_narrative": [
+      "The Netherlands Red Cross"
+    ]
+  },
+  {
+    "sector_code": [
+      "EP",
+      "4",
+      "74020"
+    ],
+    "budget_value": [
+      246857.0
+    ],
+    "iati_identifier": "NL-KVK-40409352-PRJ08-116-0008",
+    "title_narrative": [
+      "HIV prevention and support of vulnerable groups: Technical support to the six different Red Cross and Red Crescent societies"
+    ],
+    "sector_narrative": [
+      "Epidemic",
+      "Prevention / Mitigation",
+      "Disaster prevention and preparedness"
+    ],
+    "reporting_org_ref": "NL-KVK-40409352",
+    "transaction_value": [
+      371.0,
+      2706.0,
+      6000.0,
+      -985.0,
+      80261.0,
+      23287.0,
+      8107.0,
+      3990.0,
+      3139.0,
+      6279.0,
+      -890873.0,
+      890873.0,
+      48979.0,
+      2585.0,
+      34731.0,
+      -25073.0,
+      33756.0,
+      6563.0,
+      10161.0,
+      6.0,
+      4086.0,
+      3918.0
+    ],
+    "activity_date_type": [
+      "2",
+      "3"
+    ],
+    "activity_status_code": "4",
+    "description_narrative": [
+      "The overall goal is HIV prevention and provide support to vulnerable groups affected by HIV and Aids. This specific sub activity provides technical support to the six different Red Cross and Red Crescent societies"
+    ],
+    "activity_date_iso_date": [
+      "2010-12-31T00:00:00Z",
+      "2016-12-30T00:00:00Z"
+    ],
+    "reporting_org_narrative": [
+      "The Netherlands Red Cross"
+    ]
+  },
+  {
+    "sector_code": [
+      "EP",
+      "4",
+      "74020"
+    ],
+    "budget_value": [
+      89442.0
+    ],
+    "iati_identifier": "NL-KVK-40409352-PRJ08-116-0010",
+    "title_narrative": [
+      "HIV prevention and support of vulnerable groups: execution of the evaluation through collective evaluation of NL MFS facility"
+    ],
+    "sector_narrative": [
+      "Epidemic",
+      "Prevention / Mitigation",
+      "Disaster prevention and preparedness"
+    ],
+    "reporting_org_ref": "NL-KVK-40409352",
+    "transaction_value": [
+      11788.0,
+      26694.0
+    ],
+    "activity_date_type": [
+      "2",
+      "3"
+    ],
+    "activity_status_code": "4",
+    "description_narrative": [
+      "The overall goal is HIV prevention and provide support to vulnerable groups affected by HIV and Aids. This specific sub activity consists of the evaluation through collective evaluation of NL MFS facility"
+    ],
+    "activity_date_iso_date": [
+      "2010-12-31T00:00:00Z",
+      "2016-12-30T00:00:00Z"
+    ],
+    "reporting_org_narrative": [
+      "The Netherlands Red Cross"
+    ]
+  },
+  {
+    "sector_code": [
+      "EP",
+      "4",
+      "74020"
+    ],
+    "budget_value": [
+      85221.0
+    ],
+    "iati_identifier": "NL-KVK-40409352-PRJ08-116-0011",
+    "title_narrative": [
+      "HIV prevention and support of vulnerable groups: execution of midterm review to develop and implement learnings within the programme implemented by six national Red Cross and Red Crescent societies"
+    ],
+    "sector_narrative": [
+      "Epidemic",
+      "Prevention / Mitigation",
+      "Disaster prevention and preparedness"
+    ],
+    "reporting_org_ref": "NL-KVK-40409352",
+    "transaction_value": [
+      -5535.0,
+      12518.0,
+      4085.0,
+      12393.0,
+      7512.0,
+      21419.0
+    ],
+    "activity_date_type": [
+      "2",
+      "3"
+    ],
+    "activity_status_code": "4",
+    "description_narrative": [
+      "The overall goal is HIV prevention and provide support to vulnerable groups affected by HIV and Aids. This specific sub activity consists of the execution of a midterm review to develop and implement learnings within the programme implemented by six national Red Cross and Red Crescent societies",
+      "Midterm review to extract lessons learned from the specific projects and activities within the MSF II program."
+    ],
+    "activity_date_iso_date": [
+      "2010-12-31T00:00:00Z",
+      "2016-12-30T00:00:00Z"
+    ],
+    "reporting_org_narrative": [
+      "The Netherlands Red Cross"
+    ]
+  },
+  {
+    "sector_code": [
+      "EP",
+      "4",
+      "74020"
+    ],
+    "budget_value": [
+      173860.0
+    ],
+    "iati_identifier": "NL-KVK-40409352-PRJ08-091-0002",
+    "title_narrative": [
+      "3FM Serious Request 2010: HIV prevention & treatment General cost OVC"
+    ],
+    "sector_narrative": [
+      "Epidemic",
+      "Prevention / Mitigation",
+      "Disaster prevention and preparedness"
+    ],
+    "reporting_org_ref": "NL-KVK-40409352",
+    "transaction_value": [
+      -1089.0,
+      100.0,
+      851.0,
+      110.0,
+      28.0
+    ],
+    "activity_date_type": [
+      "2",
+      "3"
+    ],
+    "activity_status_code": "4",
+    "description_narrative": [
+      "The programme aims to reduce the impact of HIV in a number of countries with high prevalence rates. The programme combines prevention, care and support activities with special attention for orphans and vulnerable children (OVC). Activities that are being organized include among others peer education, home visits and test sessions. Furthermore, OVC are enabled to go to school and receive psychosocial support."
+    ],
+    "activity_date_iso_date": [
+      "2010-03-16T00:00:00Z",
+      "2013-01-30T00:00:00Z"
+    ],
+    "reporting_org_narrative": [
+      "The Netherlands Red Cross"
+    ]
+  },
+  {
+    "sector_code": [
+      "73010",
+      "DR"
+    ],
+    "budget_value": [
+      242842.0
+    ],
+    "iati_identifier": "NL-KVK-40409352-PRJ08-280",
+    "title_narrative": [
+      "Nutrition Emergency Intervention in Ethiopia"
+    ],
+    "sector_narrative": [
+      "Reconstruction relief and rehabilitation",
+      "Drought"
+    ],
+    "reporting_org_ref": "NL-KVK-40409352",
+    "transaction_value": [
+      20842.0,
+      22000.0,
+      200000.0
+    ],
+    "activity_date_type": [
+      "2",
+      "3"
+    ],
+    "activity_status_code": "4",
+    "description_narrative": [
+      "EI Nino caused serious drought in Ethiopia, which brought more than 10 million people dependable of emergency food support. Of this population 1,2 million reside in the Tigray region. Especially children and lactating mothers are physically weak and underweight, making them more vulnerable."
+    ],
+    "activity_date_iso_date": [
+      "2016-05-31T00:00:00Z",
+      "2020-10-30T00:00:00Z"
+    ],
+    "recipient_country_code": [
+      "ET"
+    ],
+    "reporting_org_narrative": [
+      "The Netherlands Red Cross"
+    ]
+  },
+  {
+    "sector_code": [
+      "4",
+      "74020"
+    ],
+    "budget_value": [
+      840887.0
+    ],
+    "iati_identifier": "NL-KVK-40409352-PRJ08-272-0002",
+    "title_narrative": [
+      "3FM Serious Request 2016: Pneumonia NLRC HQ"
+    ],
+    "sector_narrative": [
+      "Prevention / Mitigation",
+      "Disaster prevention and preparedness"
+    ],
+    "reporting_org_ref": "NL-KVK-40409352",
+    "transaction_value": [
+      2543.0,
+      2481.0,
+      13694.0,
+      15000.0,
+      1892.0,
+      886.0,
+      1647.0,
+      8196.0,
+      2596.0,
+      14531.0,
+      26826.0,
+      1962.0,
+      896.0,
+      561.0,
+      23887.0,
+      8895.0,
+      8895.0,
+      11119.0,
+      13343.0,
+      8895.0,
+      31375.0,
+      2376.0,
+      8895.0,
+      3443.0,
+      35580.0,
+      2283.0,
+      -2575.0,
+      1473.0,
+      2292.0,
+      888.0,
+      17782.0,
+      8406.0,
+      51427.0,
+      5000.0,
+      9376.0,
+      827.0,
+      21005.0,
+      9376.0,
+      21005.0,
+      -969.0,
+      10496.0,
+      109.0,
+      2325.0,
+      447.0,
+      9978.0,
+      220.0,
+      1720.0,
+      125.0,
+      10021.0,
+      541.0,
+      47.0,
+      10885.0,
+      381.0,
+      10141.0,
+      305.0,
+      66170.0,
+      133.0,
+      185.0,
+      70.0,
+      31696.0,
+      18012.0,
+      392.0,
+      670.0,
+      2200.0,
+      18554.0,
+      741169.0,
+      1322.0,
+      9918.0,
+      10661.0,
+      18552.0,
+      20.0,
+      40635.0,
+      2881.0,
+      16185.0,
+      25.0,
+      50640.0,
+      1318.0,
+      28.0,
+      227.0
+    ],
+    "activity_date_type": [
+      "2",
+      "3"
+    ],
+    "activity_status_code": "4",
+    "description_narrative": [
+      "In this project costs of NLRC Headquarter are booked."
+    ],
+    "activity_date_iso_date": [
+      "2016-12-31T00:00:00Z",
+      "2023-07-30T00:00:00Z"
+    ],
+    "recipient_country_code": [
+      "NL"
+    ],
+    "reporting_org_narrative": [
+      "The Netherlands Red Cross"
+    ]
+  },
+  {
+    "budget_value": [
+      43574.0
+    ],
+    "iati_identifier": "NL-KVK-40409352-PRJ13-126",
+    "title_narrative": [
+      "PRCS Total Communication School"
+    ],
+    "reporting_org_ref": "NL-KVK-40409352",
+    "activity_date_type": [
+      "2",
+      "3"
+    ],
+    "activity_status_code": "4",
+    "description_narrative": [
+      "Total communication school, is one of the four PRCS schools for deaf children and adolescents in Palestine. The school implements the national curriculum assigned by the Ministry of Education while adapting the total communication Project in teaching the deaf. When started in 1993, it was the only school that implemented this inclusive program combining all means of communication with the deaf (sign language, lip reading, auditory training, speech training, reading and writing) in addition to facial expressions and body language. The current place of the school is located in the 4th floor of PRCS headquarters in  Al-Bireh City with a space of about 1100 square meters."
+    ],
+    "activity_date_iso_date": [
+      "2021-03-14T00:00:00Z",
+      "2021-11-14T00:00:00Z"
+    ],
+    "recipient_country_code": [
+      "PS"
+    ],
+    "reporting_org_narrative": [
+      "The Netherlands Red Cross"
+    ]
+  },
+  {
+    "sector_code": [
+      "4"
+    ],
+    "budget_value": [
+      8334.0
+    ],
+    "iati_identifier": "NL-KVK-40409352-PRJ13-167-0014",
+    "title_narrative": [
+      "Mozambique Water Action Design"
+    ],
+    "sector_narrative": [
+      "Prevention / Mitigation"
+    ],
+    "reporting_org_ref": "NL-KVK-40409352",
+    "transaction_value": [
+      8334.0,
+      8334.0
+    ],
+    "activity_date_type": [
+      "2",
+      "3"
+    ],
+    "activity_status_code": "4",
+    "description_narrative": [
+      "Mozambique Water Action Design"
+    ],
+    "activity_date_iso_date": [
+      "2023-01-21T00:00:00Z",
+      "2023-04-29T00:00:00Z"
+    ],
+    "recipient_country_code": [
+      "MZ"
+    ],
+    "reporting_org_narrative": [
+      "The Netherlands Red Cross"
+    ]
+  },
+  {
+    "sector_code": [
+      "2"
+    ],
+    "budget_value": [
+      600000.0
+    ],
+    "iati_identifier": "NL-KVK-40409352-PRJ13-017-0004",
+    "title_narrative": [
+      "3FM SR 2017: Restoring Family Links - Tracing department Netherlands Red Cross"
+    ],
+    "sector_narrative": [
+      "Response"
+    ],
+    "reporting_org_ref": "NL-KVK-40409352",
+    "transaction_value": [
+      600000.0,
+      200000.0,
+      9249.0,
+      190751.0,
+      200000.0
+    ],
+    "activity_date_type": [
+      "2",
+      "3"
+    ],
+    "activity_status_code": "4",
+    "description_narrative": [
+      "The programme component in the Netherlands will be implemented by the Tracing department within the Netherlands Red Cross."
+    ],
+    "activity_date_iso_date": [
+      "2017-12-31T00:00:00Z",
+      "2021-06-29T00:00:00Z"
+    ],
+    "recipient_country_code": [
+      "NL"
+    ],
+    "reporting_org_narrative": [
+      "The Netherlands Red Cross"
+    ]
+  },
+  {
+    "sector_code": [
+      "74020",
+      "FL",
+      "LS",
+      "ST"
+    ],
+    "budget_value": [
+      827813.0
+    ],
+    "iati_identifier": "NL-KVK-40409352-PRJ13-010",
+    "title_narrative": [
+      "Resilience Haiti 2017"
+    ],
+    "sector_narrative": [
+      "Disaster prevention and preparedness",
+      "Flood",
+      "Landslide",
+      "Storm Surge"
+    ],
+    "reporting_org_ref": "NL-KVK-40409352",
+    "transaction_value": [
+      60000.0,
+      118750.0
+    ],
+    "activity_date_type": [
+      "2",
+      "3"
+    ],
+    "activity_status_code": "4",
+    "description_narrative": [
+      "This programme seeks to strengthen community resilience in Cotes de Fer by protecting, improving and diversifying livelihoods, providing access to productive water and enhancing local DRR capacity in the natural, combined and economic zone. These communes are frequently affected by hazards like hurricanes, landslides, flash floods and drought."
+    ],
+    "activity_date_iso_date": [
+      "2017-04-30T00:00:00Z",
+      "2018-05-31T00:00:00Z"
+    ],
+    "recipient_country_code": [
+      "HT"
+    ],
+    "reporting_org_narrative": [
+      "The Netherlands Red Cross"
+    ]
+  },
+  {
+    "sector_code": [
+      "1",
+      "74020"
+    ],
+    "budget_value": [
+      16973.0
+    ],
+    "iati_identifier": "NL-KVK-40409352-PRJ13-007-0021",
+    "title_narrative": [
+      "Feacal sludge management coordinator"
+    ],
+    "sector_narrative": [
+      "Preparedness",
+      "Disaster prevention and preparedness"
+    ],
+    "reporting_org_ref": "NL-KVK-40409352",
+    "transaction_value": [
+      -135.0,
+      4598.0,
+      2262.0,
+      2292.0,
+      9286.0,
+      -9286.0,
+      7000.0,
+      10000.0,
+      7714.0
+    ],
+    "activity_date_type": [
+      "2",
+      "3"
+    ],
+    "activity_status_code": "4",
+    "description_narrative": [
+      "This project funds the support to the Global WASH cluster by NLRC, who offers an advisor to lead the technical working group (TWIG) on Fecal Sludge Management",
+      "FSM is a gap in the movement response and gives occasions to HNS to rpofile themselves in this niche of WASH/Water management. NLRC supports and is connected to the global response within the cluster mechanism."
+    ],
+    "activity_date_iso_date": [
+      "2020-05-31T00:00:00Z",
+      "2023-03-30T00:00:00Z"
+    ],
+    "reporting_org_narrative": [
+      "The Netherlands Red Cross"
+    ]
+  },
+  {
+    "budget_value": [
+      2303.0
+    ],
+    "iati_identifier": "NL-KVK-40409352-PRJ13-007-0039",
+    "title_narrative": [
+      "Cash Peer Working Group - Workshop"
+    ],
+    "reporting_org_ref": "NL-KVK-40409352",
+    "transaction_value": [
+      -329.0,
+      2303.0,
+      529.0,
+      65.0,
+      214.0,
+      1495.0
+    ],
+    "activity_date_type": [
+      "2",
+      "3"
+    ],
+    "activity_status_code": "4",
+    "description_narrative": [
+      "A 3-day workshop was organized for the Cash Peer Working Group in the Netherlands by Rodolphe Visser."
+    ],
+    "activity_date_iso_date": [
+      "2023-03-21T00:00:00Z",
+      "2023-03-23T00:00:00Z"
+    ],
+    "recipient_country_code": [
+      "NL"
+    ],
+    "reporting_org_narrative": [
+      "The Netherlands Red Cross"
+    ]
+  },
+  {
+    "sector_code": [
+      "3"
+    ],
+    "budget_value": [
+      65184.0
+    ],
+    "iati_identifier": "NL-KVK-40409352-PRJ13-207-0018",
+    "title_narrative": [
+      "2023 - Automated Damage Assesment and Social Media Monitoring"
+    ],
+    "sector_narrative": [
+      "Recovery"
+    ],
+    "reporting_org_ref": "NL-KVK-40409352",
+    "transaction_value": [
+      -298.0,
+      -39215.0,
+      35947.0,
+      -35947.0,
+      64184.0,
+      2331.0,
+      424.0,
+      388.0,
+      426.0,
+      1594.0,
+      2514.0,
+      1821.0,
+      3608.0,
+      15136.0
+    ],
+    "activity_date_type": [
+      "2",
+      "3"
+    ],
+    "activity_status_code": "4",
+    "description_narrative": [
+      "Automated Damage Assessment for Turkiye and Syria earthquake"
+    ],
+    "activity_date_iso_date": [
+      "2023-02-05T00:00:00Z",
+      "2023-12-30T00:00:00Z"
+    ],
+    "recipient_country_code": [
+      "TR"
+    ],
+    "reporting_org_narrative": [
+      "The Netherlands Red Cross"
+    ]
+  },
+  {
+    "sector_code": [
+      "1",
+      "74020"
+    ],
+    "budget_value": [
+      2581.0
+    ],
+    "iati_identifier": "NL-KVK-40409352-PRJ13-207-0023",
+    "title_narrative": [
+      "2023  2023 Turkiye - Syria Earthquake - Communications"
+    ],
+    "sector_narrative": [
+      "Preparedness",
+      "Disaster prevention and preparedness"
+    ],
+    "reporting_org_ref": "NL-KVK-40409352",
+    "transaction_value": [
+      -369.0,
+      377.0,
+      -9.0,
+      9.0,
+      -9.0,
+      9.0,
+      2581.0,
+      224.0,
+      2082.0,
+      653.0
+    ],
+    "activity_date_type": [
+      "2",
+      "3"
+    ],
+    "activity_status_code": "4",
+    "description_narrative": [
+      "Communications NLRC team visit Türkiye for comms purposes."
+    ],
+    "activity_date_iso_date": [
+      "2023-09-30T00:00:00Z",
+      "2023-12-30T00:00:00Z"
+    ],
+    "recipient_country_code": [
+      "TR"
+    ],
+    "reporting_org_narrative": [
+      "The Netherlands Red Cross"
+    ]
+  },
+  {
+    "sector_code": [
+      "2",
+      "72010"
+    ],
+    "budget_value": [
+      82838.0
+    ],
+    "iati_identifier": "NL-KVK-40409352-PRJ13-207-0017",
+    "title_narrative": [
+      "2023 Turkiye - Syria Earthquake - HR support"
+    ],
+    "sector_narrative": [
+      "Response",
+      "Material relief assistance and services"
+    ],
+    "reporting_org_ref": "NL-KVK-40409352",
+    "transaction_value": [
+      -2961.0,
+      2253.0,
+      3574.0,
+      11214.0,
+      -6372.0,
+      925.0,
+      1394.0,
+      1398.0,
+      1386.0,
+      5156.0,
+      781.0,
+      3865.0,
+      2498.0,
+      720.0,
+      24131.0,
+      -24131.0,
+      75158.0,
+      1509.0,
+      2211.0,
+      2206.0,
+      3896.0,
+      3149.0,
+      8019.0,
+      24851.0,
+      9819.0,
+      2637.0,
+      -1613.0
+    ],
+    "activity_date_type": [
+      "2",
+      "3"
+    ],
+    "activity_status_code": "2",
+    "description_narrative": [
+      "HQ coordination costs to support Türkiye and Syria earthquake response."
+    ],
+    "activity_date_iso_date": [
+      "2023-02-05T00:00:00Z",
+      "2025-02-27T00:00:00Z"
+    ],
+    "recipient_country_code": [
+      "NL"
+    ],
+    "reporting_org_narrative": [
+      "The Netherlands Red Cross"
+    ]
+  },
+  {
+    "sector_code": [
+      "FL",
+      "2",
+      "72010"
+    ],
+    "budget_value": [
+      17386.0
+    ],
+    "iati_identifier": "NL-KVK-40409352-PRJ13-222-0003",
+    "title_narrative": [
+      "2023 - Libya Floods - HR support"
+    ],
+    "sector_narrative": [
+      "Flood",
+      "Response",
+      "Material relief assistance and services"
+    ],
+    "reporting_org_ref": "NL-KVK-40409352",
+    "transaction_value": [
+      10186.0,
+      -10186.0,
+      10186.0,
+      -10186.0,
+      15341.0,
+      1471.0,
+      2927.0,
+      2947.0
+    ],
+    "activity_date_type": [
+      "2",
+      "3"
+    ],
+    "activity_status_code": "2",
+    "description_narrative": [
+      "NLRC HQ internal coordination costs for Libya Floods response."
+    ],
+    "activity_date_iso_date": [
+      "2023-09-09T00:00:00Z",
+      "2024-12-30T00:00:00Z"
+    ],
+    "recipient_country_code": [
+      "NL"
+    ],
+    "reporting_org_narrative": [
+      "The Netherlands Red Cross"
+    ]
+  },
+  {
+    "sector_code": [
+      "74020"
+    ],
+    "budget_value": [
+      2568962.0
+    ],
+    "iati_identifier": "NL-KVK-40409352-PRJ13-162",
+    "title_narrative": [
+      "Nature-based Solutions in Nile Basin"
+    ],
+    "sector_narrative": [
+      "Disaster prevention and preparedness"
+    ],
+    "reporting_org_ref": "NL-KVK-40409352",
+    "transaction_value": [
+      -300000.0,
+      -200000.0,
+      97354.0,
+      145845.0,
+      -97354.0,
+      -145845.0,
+      300000.0,
+      200000.0
+    ],
+    "activity_date_type": [
+      "2",
+      "3"
+    ],
+    "activity_status_code": "2",
+    "description_narrative": [
+      "Unlocking the humanitarian potential of Nature-based Solutions\nReducing disaster risk by cultivating healthy ecosystems, safe communities, and thriving businesses. This project is part of the Nile Basin Initiative, a Red Cross program aiming to use the power of nature to reduce disaster risks with communities across the Nile River Basin. Over the course of 20 years, it seeks to test and then scale nature-based solutions together with communities in four countries: Sudan, South-Sudan, Ethiopia, and Uganda. The program explicitly shifts from sectoral projects, limited in time and space, to locally-initiated experimentation that addresses underlying causes of vulnerability together with expert partners.\nIntegrating nature in humanitarian efforts is quite a paradigm shift for the Red Cross, but one that is already well underway. By experimenting and scaling nature-based solutions in the Nile River Basin, we contribute to this paradigm shift."
+    ],
+    "activity_date_iso_date": [
+      "2022-03-08T00:00:00Z",
+      "2026-12-30T00:00:00Z"
+    ],
+    "recipient_country_code": [
+      "ET",
+      "NL",
+      "EG",
+      "SD"
+    ],
+    "reporting_org_narrative": [
+      "The Netherlands Red Cross"
+    ]
+  },
+  {
+    "sector_code": [
+      "4"
+    ],
+    "budget_value": [
+      285548.0
+    ],
+    "iati_identifier": "NL-KVK-40409352-PRJ13-162-0009",
+    "title_narrative": [
+      "STREAM programme - coordination"
+    ],
+    "sector_narrative": [
+      "Prevention / Mitigation"
+    ],
+    "reporting_org_ref": "NL-KVK-40409352",
+    "transaction_value": [
+      8016.0,
+      7953.0,
+      9408.0,
+      -18816.0,
+      1014603.0,
+      9408.0,
+      7971.0,
+      -668352.0,
+      -173126.0,
+      7953.0,
+      7957.0,
+      7978.0,
+      8905.0,
+      7513.0,
+      7508.0,
+      7843.0,
+      71117.0,
+      9408.0,
+      7806.0,
+      606.0,
+      6826.0,
+      7779.0,
+      7803.0,
+      7018.0,
+      6411.0,
+      5852.0,
+      5692.0,
+      7854.0,
+      8419.0,
+      7288.0,
+      2677.0,
+      3009.0
+    ],
+    "activity_date_type": [
+      "2",
+      "3"
+    ],
+    "activity_status_code": "2",
+    "description_narrative": [
+      "HQ coordination (overall STREAM programme)"
+    ],
+    "activity_date_iso_date": [
+      "2023-08-31T00:00:00Z",
+      "2026-12-30T00:00:00Z"
+    ],
+    "recipient_country_code": [
+      "NL"
+    ],
+    "reporting_org_narrative": [
+      "The Netherlands Red Cross"
+    ]
+  },
+  {
+    "sector_code": [
+      "4"
+    ],
+    "budget_value": [
+      374715.0
+    ],
+    "iati_identifier": "NL-KVK-40409352-PRJ13-162-0008",
+    "title_narrative": [
+      "Nature-based Solutions Nile Basin - coordination"
+    ],
+    "sector_narrative": [
+      "Prevention / Mitigation"
+    ],
+    "reporting_org_ref": "NL-KVK-40409352",
+    "transaction_value": [
+      -21667.0,
+      8333.0,
+      7953.0,
+      7971.0,
+      46.0,
+      8130.0,
+      9738.0,
+      5000.0,
+      8179.0,
+      9732.0,
+      8238.0,
+      7508.0,
+      7843.0,
+      -42792.0,
+      7806.0,
+      6235.0,
+      16667.0,
+      320000.0,
+      7779.0,
+      7800.0,
+      42792.0,
+      7797.0,
+      6411.0,
+      5852.0,
+      5692.0,
+      7854.0,
+      8419.0,
+      7288.0,
+      2499.0,
+      1003.0,
+      2206.0
+    ],
+    "activity_date_type": [
+      "2",
+      "3"
+    ],
+    "activity_status_code": "2",
+    "description_narrative": [
+      "HQ Coordination (NPL)"
+    ],
+    "activity_date_iso_date": [
+      "2023-08-31T00:00:00Z",
+      "2027-03-30T00:00:00Z"
+    ],
+    "recipient_country_code": [
+      "NL"
+    ],
+    "reporting_org_narrative": [
+      "The Netherlands Red Cross"
+    ]
+  },
+  {
+    "sector_code": [
+      "4",
+      "74020"
+    ],
+    "budget_value": [
+      96680.0
+    ],
+    "iati_identifier": "NL-KVK-40409352-PRJ13-162-0005",
+    "title_narrative": [
+      "Nile Basin programme - coordination"
+    ],
+    "sector_narrative": [
+      "Prevention / Mitigation",
+      "Disaster prevention and preparedness"
+    ],
+    "reporting_org_ref": "NL-KVK-40409352",
+    "transaction_value": [
+      -5493.0,
+      117050.0,
+      777.0,
+      762.0,
+      762.0,
+      1292.0,
+      1650.0,
+      14771.0,
+      21582.0,
+      8308.0,
+      6322.0,
+      8741.0,
+      1979.0,
+      1992.0,
+      17020.0,
+      1022.0,
+      1656.0,
+      2930.0,
+      -983.0,
+      1191.0,
+      3250.0,
+      7125.0,
+      5628.0,
+      2546.0,
+      2534.0,
+      1238.0,
+      3093.0,
+      2640.0,
+      3182.0,
+      2711.0,
+      2555.0
+    ],
+    "activity_date_type": [
+      "2",
+      "3"
+    ],
+    "activity_status_code": "4",
+    "description_narrative": [
+      "HQ Coordination costs Nile Basin programme"
+    ],
+    "activity_date_iso_date": [
+      "2023-06-01T00:00:00Z",
+      "2023-12-30T00:00:00Z"
+    ],
+    "reporting_org_narrative": [
+      "The Netherlands Red Cross"
+    ]
+  },
+  {
+    "budget_value": [
+      18000.0
+    ],
+    "iati_identifier": "NL-KVK-40409352-PRJ12-021-0021",
+    "title_narrative": [
+      "Africa Regional First Aid Meeting Support"
+    ],
+    "reporting_org_ref": "NL-KVK-40409352",
+    "transaction_value": [
+      14118.0,
+      908.0,
+      116.0,
+      -1167.0,
+      939.0,
+      872.0,
+      681.0,
+      871.0,
+      10899.0
+    ],
+    "activity_date_type": [
+      "2",
+      "3"
+    ],
+    "activity_status_code": "4",
+    "description_narrative": [
+      "This is to finance the 7 National societies attending the Africa Regional First Aid Meeting in September 2023, in Senegal. The costs include accomodation, flights, meeting package, dinners etc."
+    ],
+    "activity_date_iso_date": [
+      "2023-09-01T00:00:00Z",
+      "2023-11-30T00:00:00Z"
+    ],
+    "recipient_country_code": [
+      "SN"
+    ],
+    "reporting_org_narrative": [
+      "The Netherlands Red Cross"
+    ]
+  },
+  {
+    "sector_code": [
+      "74020",
+      "VW"
+    ],
+    "budget_value": [
+      619761.0
+    ],
+    "iati_identifier": "NL-KVK-40409352-PRJ13-052",
+    "title_narrative": [
+      "Water, sanitation and hygiene & Solar in Lebanon"
+    ],
+    "sector_narrative": [
+      "Disaster prevention and preparedness",
+      "Civil unrest"
+    ],
+    "reporting_org_ref": "NL-KVK-40409352",
+    "transaction_value": [
+      15222.0,
+      -15222.0,
+      -27363.0,
+      27363.0,
+      7656.0,
+      10474.0,
+      15312.0,
+      7962.0,
+      26797.0
+    ],
+    "activity_date_type": [
+      "2",
+      "3"
+    ],
+    "activity_status_code": "2",
+    "description_narrative": [
+      "Projects focussing on water & sanitation facilities and hygiëne promotion in schools in Lebanon \nProjects focussing on solarization of WASH Infrastructure and solar trailers"
+    ],
+    "activity_date_iso_date": [
+      "2018-11-30T00:00:00Z",
+      "2023-12-30T00:00:00Z"
+    ],
+    "recipient_country_code": [
+      "LB"
+    ],
+    "reporting_org_narrative": [
+      "The Netherlands Red Cross"
+    ]
+  },
+  {
+    "budget_value": [
+      21901.0
+    ],
+    "iati_identifier": "NL-KVK-40409352-PRJ13-208-0001",
+    "title_narrative": [
+      "Evaluation of partnership programme"
+    ],
+    "reporting_org_ref": "NL-KVK-40409352",
+    "transaction_value": [
+      21901.0,
+      726.0,
+      1174.0,
+      20000.0
+    ],
+    "activity_date_type": [
+      "2",
+      "3"
+    ],
+    "activity_status_code": "4",
+    "description_narrative": [
+      "MoFA Partnership 2018-2021 Evaluation Costs"
+    ],
+    "activity_date_iso_date": [
+      "2022-12-31T00:00:00Z",
+      "2023-12-30T00:00:00Z"
+    ],
+    "recipient_country_code": [
+      "NL"
+    ],
+    "reporting_org_narrative": [
+      "The Netherlands Red Cross"
+    ]
+  },
+  {
+    "sector_code": [
+      "2"
+    ],
+    "budget_value": [
+      5255.0
+    ],
+    "iati_identifier": "NL-KVK-40409352-PRJ13-212-0001",
+    "title_narrative": [
+      "XXII Inter-American Conference"
+    ],
+    "sector_narrative": [
+      "Response"
+    ],
+    "reporting_org_ref": "NL-KVK-40409352",
+    "transaction_value": [
+      -751.0,
+      5255.0,
+      3844.0,
+      1410.0
+    ],
+    "activity_date_type": [
+      "2",
+      "3"
+    ],
+    "activity_status_code": "4",
+    "description_narrative": [
+      "Participating as Observer in the XXII Inter-American Conference in The Bahamas from the 5 to 8 June. Combining the travel to visit Panama IFRC regional office and probably Venezuela programme."
+    ],
+    "activity_date_iso_date": [
+      "2023-04-30T00:00:00Z",
+      "2023-08-21T00:00:00Z"
+    ],
+    "reporting_org_narrative": [
+      "The Netherlands Red Cross"
+    ]
+  },
+  {
+    "sector_code": [
+      "74020"
+    ],
+    "budget_value": [
+      1340882.0
+    ],
+    "iati_identifier": "NL-KVK-40409352-PRJ14-002",
+    "title_narrative": [
+      "Organisational Development Caribbean Red Cross branches"
+    ],
+    "sector_narrative": [
+      "Disaster prevention and preparedness"
+    ],
+    "reporting_org_ref": "NL-KVK-40409352",
+    "transaction_value": [
+      -200000.0,
+      -25000.0,
+      -315000.0,
+      571694.0,
+      -571694.0,
+      25000.0,
+      200000.0,
+      315000.0
+    ],
+    "activity_date_type": [
+      "2",
+      "3"
+    ],
+    "activity_status_code": "2",
+    "description_narrative": [
+      "The Orgaisational Development Programme for the Caribbean aims to built capacity for the 6 Overseas Branches."
+    ],
+    "activity_date_iso_date": [
+      "2021-08-31T00:00:00Z",
+      "2025-12-30T00:00:00Z"
+    ],
+    "recipient_country_code": [
+      "CW",
+      "SX",
+      "BQ"
+    ],
+    "reporting_org_narrative": [
+      "The Netherlands Red Cross"
+    ]
+  },
+  {
+    "sector_code": [
+      "1",
+      "74020"
+    ],
+    "budget_value": [
+      291118.0
+    ],
+    "iati_identifier": "NL-KVK-40409352-PRJ14-002-0001",
+    "title_narrative": [
+      "OD governance overseas branches"
+    ],
+    "sector_narrative": [
+      "Preparedness",
+      "Disaster prevention and preparedness"
+    ],
+    "reporting_org_ref": "NL-KVK-40409352",
+    "transaction_value": [
+      -7009.0,
+      -2556.0,
+      -23755.0,
+      5681.0,
+      105.0,
+      1223.0,
+      51.0,
+      1831.0,
+      37919.0,
+      16240.0,
+      15304.0,
+      14611.0,
+      -25000.0,
+      17867.0,
+      3214.0,
+      263.0,
+      15721.0,
+      13559.0,
+      279510.0,
+      14103.0,
+      13869.0,
+      3018.0,
+      28493.0,
+      13827.0,
+      1617.0,
+      403.0,
+      17600.0,
+      25000.0,
+      7563.0,
+      7606.0,
+      6993.0,
+      -1150.0,
+      1190.0,
+      3443.0,
+      7530.0,
+      3861.0,
+      1442.0,
+      1588.0,
+      7530.0,
+      348.0,
+      11616.0,
+      -2743.0,
+      853.0,
+      1020.0,
+      -286.0,
+      7530.0,
+      224.0,
+      556.0,
+      1780.0,
+      6805.0,
+      271.0,
+      21213.0,
+      2515.0,
+      229.0
+    ],
+    "activity_date_type": [
+      "2",
+      "3"
+    ],
+    "activity_status_code": "4",
+    "description_narrative": [
+      "Working with the boards of the six overseas branches on several crucial elements of a strong, durable and healthy branch.",
+      "To strenghten the structure, functioning and positioning of the overseas branches.",
+      "Overseas branches",
+      "OSBs in the Caribbean region"
+    ],
+    "activity_date_iso_date": [
+      "2021-08-31T00:00:00Z",
+      "2024-12-30T00:00:00Z"
+    ],
+    "recipient_country_code": [
+      "SX"
+    ],
+    "reporting_org_narrative": [
+      "The Netherlands Red Cross"
+    ]
+  },
+  {
+    "sector_code": [
+      "1",
+      "74020"
+    ],
+    "budget_value": [
+      144841.0
+    ],
+    "iati_identifier": "NL-KVK-40409352-PRJ14-002-0006",
+    "title_narrative": [
+      "Financial sustainability OSB"
+    ],
+    "sector_narrative": [
+      "Preparedness",
+      "Disaster prevention and preparedness"
+    ],
+    "reporting_org_ref": "NL-KVK-40409352",
+    "transaction_value": [
+      1514.0,
+      1638.0,
+      60.0,
+      5677.0,
+      1014.0,
+      2887.0,
+      675.0,
+      5370.0,
+      2210.0,
+      4600.0,
+      2621.0,
+      3208.0,
+      1845.0,
+      2234.0,
+      6341.0,
+      3082.0,
+      2008.0,
+      3286.0,
+      63642.0,
+      3558.0,
+      6843.0,
+      5.0,
+      625.0,
+      275.0,
+      1877.0,
+      -1617.0,
+      993.0,
+      -118.0,
+      1563.0,
+      4932.0,
+      20.0,
+      11109.0,
+      3416.0,
+      1761.0,
+      2426.0,
+      23956.0,
+      7000.0,
+      2411.0,
+      472.0,
+      1990.0,
+      918.0,
+      1070.0,
+      2498.0,
+      44918.0
+    ],
+    "activity_date_type": [
+      "2",
+      "3"
+    ],
+    "activity_status_code": "2",
+    "description_narrative": [
+      "Collaboration with the financial sustainability unit to provide coaching per Caribbean branch.",
+      "Sustainability challenges on the different branches.",
+      "Use of the SF roadmap.",
+      "Caribbean branches",
+      "Caribbean region"
+    ],
+    "activity_date_iso_date": [
+      "2022-05-31T00:00:00Z",
+      "2025-12-30T00:00:00Z"
+    ],
+    "recipient_country_code": [
+      "CW"
+    ],
+    "reporting_org_narrative": [
+      "The Netherlands Red Cross"
+    ]
+  },
+  {
+    "sector_code": [
+      "1",
+      "74020"
+    ],
+    "budget_value": [
+      380239.0
+    ],
+    "iati_identifier": "NL-KVK-40409352-PRJ14-002-0002",
+    "title_narrative": [
+      "Direct support organizational development of the overseas branches"
+    ],
+    "sector_narrative": [
+      "Preparedness",
+      "Disaster prevention and preparedness"
+    ],
+    "reporting_org_ref": "NL-KVK-40409352",
+    "transaction_value": [
+      246.0,
+      439.0,
+      772.0,
+      16.0,
+      928.0,
+      -21.0,
+      966.0,
+      7.0,
+      966.0,
+      435.0,
+      -158.0,
+      2101.0,
+      -10236.0,
+      25040.0,
+      23746.0,
+      494.0,
+      1064.0,
+      7009.0,
+      232.0,
+      -180.0,
+      46.0,
+      1006.0,
+      1077.0,
+      57.0,
+      1046.0,
+      1021.0,
+      -73540.0,
+      -12739.0,
+      9876.0,
+      8471.0,
+      1782.0,
+      8696.0,
+      25000.0,
+      -25000.0,
+      10615.0,
+      9041.0,
+      9011.0,
+      -5867.0,
+      167659.0,
+      260490.0,
+      8878.0,
+      8807.0,
+      2893.0,
+      991.0,
+      7225.0,
+      11090.0,
+      403.0,
+      8301.0,
+      767.0,
+      813.0,
+      7232.0,
+      1542.0,
+      11331.0,
+      -200.0,
+      11471.0,
+      8436.0,
+      9467.0,
+      8360.0,
+      8750.0,
+      3803.0,
+      4046.0,
+      3452.0,
+      -25000.0,
+      1744.0,
+      5698.0,
+      4886.0,
+      19.0,
+      389.0,
+      4165.0,
+      4046.0,
+      665.0,
+      1310.0,
+      33453.0,
+      5484.0,
+      205.0,
+      2962.0,
+      2799.0,
+      1637.0,
+      1917.0,
+      2277.0,
+      1044.0,
+      6182.0,
+      5493.0,
+      3619.0,
+      11163.0,
+      -1647.0,
+      -1695.0,
+      3502.0,
+      1695.0,
+      1269.0,
+      1695.0,
+      5844.0,
+      8829.0,
+      3893.0
+    ],
+    "activity_date_type": [
+      "2",
+      "3"
+    ],
+    "activity_status_code": "2",
+    "description_narrative": [
+      "Strengthening the organizational development of the six overseas branches.",
+      "Ensuring they can function in a durable manner and withstand sudden or prolonged periods of stress.",
+      "Providing direct support in the region to each of the branches to strenghten the crucial structural components of the Red Cross branches.",
+      "The six overseas branches in the Caribbean.",
+      "Caribbean region"
+    ],
+    "activity_date_iso_date": [
+      "2021-09-30T00:00:00Z",
+      "2025-12-30T00:00:00Z"
+    ],
+    "recipient_country_code": [
+      "CW"
+    ],
+    "reporting_org_narrative": [
+      "The Netherlands Red Cross"
+    ]
+  },
+  {
+    "sector_code": [
+      "4",
+      "74020"
+    ],
+    "budget_value": [
+      63150.0
+    ],
+    "iati_identifier": "NL-KVK-40409352-PRJ14-002-0004",
+    "title_narrative": [
+      "Support funding OSB"
+    ],
+    "sector_narrative": [
+      "Prevention / Mitigation",
+      "Disaster prevention and preparedness"
+    ],
+    "reporting_org_ref": "NL-KVK-40409352",
+    "transaction_value": [
+      270.0,
+      -270.0,
+      -62880.0,
+      63150.0,
+      900.0,
+      -900.0,
+      62880.0,
+      960.0,
+      301.0,
+      11849.0,
+      31.0,
+      11849.0,
+      2880.0,
+      264.0,
+      11522.0,
+      182.0,
+      11522.0,
+      2522.0,
+      9000.0
+    ],
+    "activity_date_type": [
+      "2",
+      "3"
+    ],
+    "activity_status_code": "4",
+    "description_narrative": [
+      "Support funding for some of the core costs of the OSBs such as office rent and salaries.",
+      "Some OSBs lack the core funding to ensure the basic functioning of the branch. This was previously part of the capacity component of the Irma program but following the closure of this program this now moved to the OD program.",
+      "Using left over funds from Irma",
+      "The smaller branches such as Saba and Statia",
+      "Saba and Statia"
+    ],
+    "activity_date_iso_date": [
+      "2021-09-30T00:00:00Z",
+      "2022-12-30T00:00:00Z"
+    ],
+    "recipient_country_code": [
+      "BQ"
+    ],
+    "reporting_org_narrative": [
+      "The Netherlands Red Cross"
+    ]
+  },
+  {
+    "budget_value": [
+      41137.0
+    ],
+    "iati_identifier": "NL-KVK-40409352-PRJ13-149-0024",
+    "title_narrative": [
+      "Support to SUDAN WASH delegate position"
+    ],
+    "reporting_org_ref": "NL-KVK-40409352",
+    "transaction_value": [
+      -3892.0,
+      3892.0,
+      389.0,
+      6047.0,
+      9146.0,
+      37295.0,
+      4918.0,
+      6271.0,
+      4812.0,
+      7209.0,
+      7719.0
+    ],
+    "activity_date_type": [
+      "2",
+      "3"
+    ],
+    "activity_status_code": "2",
+    "description_narrative": [
+      "To support financing of SUDAN WASH delegate who works onthe crisis response project but no funidng allocated for Q1 2024",
+      "not sufficent funds allocated for WASH delegate",
+      "making use of campaign funds"
+    ],
+    "activity_date_iso_date": [
+      "2024-02-06T00:00:00Z",
+      "2024-08-07T00:00:00Z"
+    ],
+    "recipient_country_code": [
+      "SD"
+    ],
+    "reporting_org_narrative": [
+      "The Netherlands Red Cross"
+    ]
+  },
+  {
+    "sector_code": [
+      "2"
+    ],
+    "budget_value": [
+      26285.0
+    ],
+    "iati_identifier": "NL-KVK-40409352-PRJ13-179-0004",
+    "title_narrative": [
+      "2022 Pakistan Emergency response unit deployment"
+    ],
+    "sector_narrative": [
+      "Response"
+    ],
+    "reporting_org_ref": "NL-KVK-40409352",
+    "transaction_value": [
+      -3773.0,
+      -19.0,
+      206.0,
+      252.0,
+      330.0,
+      1243.0,
+      -10.0,
+      -20.0,
+      252.0,
+      974.0,
+      -252.0,
+      6879.0,
+      252.0,
+      -6879.0,
+      151.0,
+      13090.0,
+      -18.0,
+      756.0,
+      31240.0,
+      10280.0
+    ],
+    "activity_date_type": [
+      "2",
+      "3"
+    ],
+    "activity_status_code": "4",
+    "description_narrative": [
+      "Deployment ERUs"
+    ],
+    "activity_date_iso_date": [
+      "2022-11-01T00:00:00Z",
+      "2023-04-29T00:00:00Z"
+    ],
+    "recipient_country_code": [
+      "PK"
+    ],
+    "reporting_org_narrative": [
+      "The Netherlands Red Cross"
+    ]
+  },
+  {
+    "sector_code": [
+      "2",
+      "72010"
+    ],
+    "budget_value": [
+      5706.0
+    ],
+    "iati_identifier": "NL-KVK-40409352-PRJ13-217-0004",
+    "title_narrative": [
+      "HSP@Sea Ocean Viking"
+    ],
+    "sector_narrative": [
+      "Response",
+      "Material relief assistance and services"
+    ],
+    "reporting_org_ref": "NL-KVK-40409352",
+    "transaction_value": [
+      -146.0,
+      146.0,
+      1651.0,
+      582.0,
+      425.0,
+      462.0,
+      410.0,
+      362.0,
+      430.0,
+      898.0,
+      241.0,
+      398.0,
+      5714.0,
+      -5714.0,
+      5000.0
+    ],
+    "activity_date_type": [
+      "2",
+      "3"
+    ],
+    "activity_status_code": "2",
+    "description_narrative": [
+      "Migration and refugee flows from sub-Saharan and North Africa, the Middle East and into Europe are among the most complex in the world, with acute humanitarian needs for many people on the move.",
+      "Technical support to IFRC in response to the Ocean Viking operations"
+    ],
+    "activity_date_iso_date": [
+      "2023-07-31T00:00:00Z",
+      "2025-12-30T00:00:00Z"
+    ],
+    "reporting_org_narrative": [
+      "The Netherlands Red Cross"
+    ]
+  },
+  {
+    "sector_code": [
+      "2"
+    ],
+    "budget_value": [
+      149525.0
+    ],
+    "iati_identifier": "NL-KVK-40409352-PRJ13-217-0002",
+    "title_narrative": [
+      "Ukraine crisis - cash voucher assistance"
+    ],
+    "sector_narrative": [
+      "Response"
+    ],
+    "reporting_org_ref": "NL-KVK-40409352",
+    "transaction_value": [
+      -1715.0,
+      1715.0,
+      219.0,
+      1445.0,
+      6089.0,
+      69.0,
+      6749.0,
+      220.0,
+      4972.0,
+      2890.0,
+      8199.0,
+      10950.0,
+      8544.0,
+      10361.0,
+      2613.0,
+      9866.0,
+      5960.0,
+      84175.0,
+      3489.0,
+      -84175.0,
+      -17695.0,
+      12154.0,
+      3669.0,
+      21261.0,
+      23958.0,
+      2498.0,
+      150000.0
+    ],
+    "activity_date_type": [
+      "2",
+      "3"
+    ],
+    "activity_status_code": "2",
+    "description_narrative": [
+      "The IFRC Regional Office and NLRC aim to support URCS (in Ukraine) in developing and implementing a suitable digital solution to support their CVA programmes in the long term. The Netherlands Red Cross, 510 team, has been specialising in information management within CVA programs since 2019 and is playing an active role in the existing information management landscape for this Emergency Appeal.\nThis project falls under the Long-Term approach/strategy of the NLRC to the URCS support."
+    ],
+    "activity_date_iso_date": [
+      "2023-06-30T00:00:00Z",
+      "2024-12-30T00:00:00Z"
+    ],
+    "recipient_country_code": [
+      "UA"
+    ],
+    "reporting_org_narrative": [
+      "The Netherlands Red Cross"
+    ]
+  },
+  {
+    "sector_code": [
+      "2"
+    ],
+    "budget_value": [
+      32550.0
+    ],
+    "iati_identifier": "NL-KVK-40409352-PRJ13-217-0001",
+    "title_narrative": [
+      "Humanitarian protection and safeguarding - Ukraine and Neighboring Countries"
+    ],
+    "sector_narrative": [
+      "Response"
+    ],
+    "reporting_org_ref": "NL-KVK-40409352",
+    "transaction_value": [
+      -6896.0,
+      490.0,
+      7386.0,
+      -7386.0,
+      5227.0,
+      3630.0,
+      4709.0,
+      4547.0,
+      3124.0,
+      29426.0,
+      2430.0,
+      -2430.0,
+      2430.0,
+      9270.0
+    ],
+    "activity_date_type": [
+      "2",
+      "3"
+    ],
+    "activity_status_code": "4",
+    "description_narrative": [
+      "NLRC through the PGI advisor expert (Antonietta Romano) provide technical support and coordination to IFRC, PGI Working Group, and HNS in Hungary, Georgia and Poland.",
+      "request from the PGI team in Budapest and coordination with the WASH team to raise better protection in WASH and other relevant field",
+      "1. Institutional capacity, composition, and commitment to address violence, discrimination, and exclusion (Safeguarding focus).\n2. National Societies and the IFRC adopt a comprehensive Protection, Gender, and Inclusion approach across all operations, programmes, and services (PGI focus). \n3. Develop and improve advocacy, partnerships, and learning within the Red Cross Red Crescent Movement and externally to support better protection, gender, and inclusion actions.",
+      "Hungary, Georgia and Poland."
+    ],
+    "activity_date_iso_date": [
+      "2022-12-31T00:00:00Z",
+      "2024-12-30T00:00:00Z"
+    ],
+    "reporting_org_narrative": [
+      "The Netherlands Red Cross"
+    ]
+  },
+  {
+    "sector_code": [
+      "4",
+      "74020"
+    ],
+    "budget_value": [
+      922361.0
+    ],
+    "iati_identifier": "NL-KVK-40409352-PRJ14-003-0001",
+    "title_narrative": [
+      "Regional response preparedness Curacao"
+    ],
+    "sector_narrative": [
+      "Prevention / Mitigation",
+      "Disaster prevention and preparedness"
+    ],
+    "reporting_org_ref": "NL-KVK-40409352",
+    "transaction_value": [
+      -7868.0,
+      2561.0,
+      305.0,
+      2204.0,
+      -2883.0,
+      1225.0,
+      633.0,
+      83.0,
+      -23.0,
+      9330.0,
+      3000.0,
+      -123.0,
+      2204.0,
+      1958.0,
+      299.0,
+      307.0,
+      820.0,
+      25154.0,
+      1228.0,
+      -8.0,
+      6627.0,
+      4401.0,
+      669.0,
+      1848.0,
+      1027.0,
+      297.0,
+      2392.0,
+      17.0,
+      2091.0,
+      1424.0,
+      2189.0,
+      1027.0,
+      311.0,
+      4408.0,
+      1027.0,
+      325.0,
+      1185.0,
+      324.0,
+      2204.0,
+      947.0,
+      323.0,
+      21.0,
+      370.0,
+      948.0,
+      381.0,
+      5739.0,
+      -10282.0,
+      1789.0,
+      611.0,
+      1456.0,
+      315.0,
+      4408.0,
+      17.0,
+      1800.0,
+      305.0,
+      2570.0,
+      1800.0,
+      305.0,
+      1800.0,
+      312.0,
+      1800.0,
+      315.0,
+      1800.0,
+      313.0,
+      1800.0,
+      318.0,
+      302.0,
+      1793.0,
+      312.0,
+      10295.0,
+      1800.0,
+      313.0,
+      540.0,
+      311.0,
+      1698.0,
+      310.0,
+      9.0,
+      622.0,
+      -384.0,
+      310.0,
+      1158.0,
+      321.0,
+      2457.0,
+      317.0,
+      467.0,
+      314.0,
+      -266.0,
+      302.0,
+      606.0,
+      -859.0,
+      -535.0,
+      4809.0,
+      552.0,
+      19945.0,
+      314.0,
+      2962.0,
+      1167.0,
+      1067.0,
+      9801.0,
+      2417.0,
+      38393.0,
+      21552.0,
+      310.0,
+      1263.0,
+      -48660.0,
+      8330.0,
+      304.0,
+      9393.0,
+      314.0,
+      15225.0,
+      7539.0,
+      1891.0,
+      9924.0,
+      317.0,
+      11218.0,
+      48660.0,
+      20133.0,
+      313.0,
+      8854.0,
+      318.0,
+      -1108.0,
+      1331.0,
+      2000.0,
+      277.0,
+      9315.0,
+      4723.0,
+      1125.0,
+      14.0,
+      14459.0,
+      308.0,
+      270.0,
+      256.0,
+      6657.0,
+      215.0,
+      2342.0,
+      2959.0,
+      5166.0,
+      2604.0,
+      485.0,
+      9659.0,
+      1103.0,
+      210.0,
+      741.0,
+      5913.0,
+      2531.0,
+      73.0,
+      10885.0,
+      221.0,
+      1898.0,
+      466.0,
+      80.0,
+      8974.0,
+      8852.0,
+      8506.0,
+      1785.0,
+      28658.0,
+      7090.0,
+      21.0,
+      459.0,
+      3423.0,
+      1140.0,
+      10475.0,
+      4819.0,
+      7089.0,
+      -89.0,
+      4798.0,
+      2196.0,
+      5509.0,
+      12674.0,
+      2195.0,
+      7724.0,
+      2197.0,
+      7416.0,
+      206.0,
+      746.0,
+      -22716.0,
+      8015.0,
+      402.0,
+      17998.0,
+      844.0,
+      20334.0,
+      584.0,
+      -7539.0,
+      2451.0,
+      196.0,
+      1572.0
+    ],
+    "activity_date_type": [
+      "2",
+      "3"
+    ],
+    "activity_status_code": "2",
+    "description_narrative": [
+      "Follow-up project of the RP regional project PRJ13-062-0001 which was part of the Response Preparedness programme OSBs funded by the Irma fund",
+      "To strengthen response preparedness in the Caribbean.",
+      "Through training, strategic vision, planning and logistical stock",
+      "The six Caribbean branches of the NLRC",
+      "Caribbean region"
+    ],
+    "activity_date_iso_date": [
+      "2021-07-31T00:00:00Z",
+      "2025-12-30T00:00:00Z"
+    ],
+    "recipient_country_code": [
+      "CW"
+    ],
+    "reporting_org_narrative": [
+      "The Netherlands Red Cross"
+    ]
+  },
+  {
+    "sector_code": [
+      "1",
+      "74020"
+    ],
+    "budget_value": [
+      118200.0
+    ],
+    "iati_identifier": "NL-KVK-40409352-PRJ14-003-0002",
+    "title_narrative": [
+      "IDL Caribbean branches"
+    ],
+    "sector_narrative": [
+      "Preparedness",
+      "Disaster prevention and preparedness"
+    ],
+    "reporting_org_ref": "NL-KVK-40409352",
+    "transaction_value": [
+      20000.0,
+      1300.0,
+      20000.0,
+      1300.0,
+      40000.0,
+      2600.0
+    ],
+    "activity_date_type": [
+      "2",
+      "3"
+    ],
+    "activity_status_code": "2",
+    "description_narrative": [
+      "Looking into the improvement of the international disaster laws of each of the Caribbean islands in cooperation with IFRC.",
+      "Facilitating rapid disaster response.",
+      "Desk review by IFRC and advocacy plan for change per island",
+      "Caribbean branches",
+      "Six Caribbean branches"
+    ],
+    "activity_date_iso_date": [
+      "2022-05-31T00:00:00Z",
+      "2025-12-30T00:00:00Z"
+    ],
+    "recipient_country_code": [
+      "SX"
+    ],
+    "reporting_org_narrative": [
+      "The Netherlands Red Cross"
+    ]
+  },
+  {
+    "sector_code": [
+      "2"
+    ],
+    "budget_value": [
+      284960.0
+    ],
+    "iati_identifier": "NL-KVK-40409352-PRJ13-137-0001",
+    "title_narrative": [
+      "Covid-19 Food assistance Caribbean"
+    ],
+    "sector_narrative": [
+      "Response"
+    ],
+    "reporting_org_ref": "NL-KVK-40409352",
+    "transaction_value": [
+      163090.0,
+      16910.0,
+      983.0,
+      222.0,
+      1321.0,
+      54095.0,
+      6039.0,
+      8628.0,
+      17958.0,
+      1229.0,
+      24393.0,
+      8690.0,
+      20896.0,
+      566.0,
+      264.0,
+      258.0,
+      216.0,
+      198.0,
+      216.0
+    ],
+    "activity_date_type": [
+      "2",
+      "3"
+    ],
+    "activity_status_code": "4",
+    "description_narrative": [
+      "Food assistance during Covid-19"
+    ],
+    "activity_date_iso_date": [
+      "2021-04-30T00:00:00Z",
+      "2021-09-29T00:00:00Z"
+    ],
+    "recipient_country_code": [
+      "NL"
+    ],
+    "reporting_org_narrative": [
+      "The Netherlands Red Cross"
+    ]
+  },
+  {
+    "sector_code": [
+      "2"
+    ],
+    "budget_value": [
+      24869.0
+    ],
+    "iati_identifier": "NL-KVK-40409352-PRJ14-007-0001",
+    "title_narrative": [
+      "Restoring family links in Caribbean"
+    ],
+    "sector_narrative": [
+      "Response"
+    ],
+    "reporting_org_ref": "NL-KVK-40409352",
+    "transaction_value": [
+      -11531.0,
+      142.0,
+      1620.0,
+      7650.0,
+      562.0,
+      679.0,
+      2052.0,
+      278.0,
+      -36782.0,
+      2403.0,
+      1639.0,
+      212.0,
+      172.0,
+      627.0,
+      434.0,
+      1408.0,
+      350.0,
+      2372.0,
+      2270.0,
+      73182.0
+    ],
+    "activity_date_type": [
+      "2",
+      "3"
+    ],
+    "activity_status_code": "4",
+    "description_narrative": [
+      "Restoring family links in Caribbean"
+    ],
+    "activity_date_iso_date": [
+      "2022-04-30T00:00:00Z",
+      "2023-12-30T00:00:00Z"
+    ],
+    "recipient_country_code": [
+      "CW"
+    ],
+    "reporting_org_narrative": [
+      "The Netherlands Red Cross"
+    ]
+  },
+  {
+    "sector_code": [
+      "2",
+      "72010"
+    ],
+    "budget_value": [
+      10650.0
+    ],
+    "iati_identifier": "NL-KVK-40409352-PRJ13-190-0009",
+    "title_narrative": [
+      "NLRC media mission KRC and SRCS June 2023- - Iris van Enthoven"
+    ],
+    "sector_narrative": [
+      "Response",
+      "Material relief assistance and services"
+    ],
+    "reporting_org_ref": "NL-KVK-40409352",
+    "transaction_value": [
+      -829.0,
+      -4195.0,
+      730.0,
+      5575.0,
+      -5575.0,
+      2145.0,
+      10000.0,
+      528.0,
+      2400.0
+    ],
+    "activity_date_type": [
+      "2",
+      "3"
+    ],
+    "activity_status_code": "4",
+    "description_narrative": [
+      "The Netherlands Red Cross wants to create awareness in The Netherlands about the impact of climate \nchange (as for example the ongoing drought and hunger in the Horn of Africa) and also to show the \nhope and solutions such as the nature based ones and the role of the Red Cross, the PNS, HNS and \nwider Movement Partners in this."
+    ],
+    "activity_date_iso_date": [
+      "2023-06-11T00:00:00Z",
+      "2023-06-30T00:00:00Z"
+    ],
+    "recipient_country_code": [
+      "KE"
+    ],
+    "reporting_org_narrative": [
+      "The Netherlands Red Cross"
+    ]
+  }
+]

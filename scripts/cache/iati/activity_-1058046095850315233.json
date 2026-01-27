@@ -1,0 +1,4056 @@
+[
+  {
+    "sector_code": [
+      "43010",
+      "15250",
+      "15160"
+    ],
+    "budget_value": [
+      8000000.05
+    ],
+    "iati_identifier": "DK-CVR-20699310-DK223536",
+    "title_narrative": [
+      "DANIDA SPA 2022 Myanmar"
+    ],
+    "reporting_org_ref": "DK-CVR-20699310",
+    "transaction_value": [
+      683593.0,
+      8000812.85
+    ],
+    "activity_date_type": [
+      "1",
+      "2",
+      "3",
+      "4"
+    ],
+    "activity_status_code": "3",
+    "description_narrative": [
+      "Improving the protective environment for and self-reliance of affected populations across the Myanmar displacement axis\r\rPlease refer to DRC's Open Information Policy regarding publication of financial and project level data for this programme",
+      "- In Myanmar, displaced, marginalized, and conflict-affected people have the capacity and support to claim respect for, protection of, and fulfillment of their rights\r- At-risk communities in Myanmar have access to safe and comprehensive protection services\r- The basic needs of people in Myanmar are met\r-  People in Myanmar have more decent and sustainable livelihoods\r- In Myanmar and Bangladesh, local civil society organisations are more sustainable and able to support partners’ capacity, agency, and ability to leverage change and respond to needs"
+    ],
+    "activity_date_iso_date": [
+      "2022-01-01T00:00:00Z",
+      "2022-01-01T00:00:00Z",
+      "2022-12-31T00:00:00Z",
+      "2022-12-31T00:00:00Z"
+    ],
+    "recipient_country_code": [
+      "MM"
+    ],
+    "reporting_org_narrative": [
+      "Danish Refugee Council",
+      "Dansk Flygtningehjaelp"
+    ]
+  },
+  {
+    "sector_code": [
+      "72010"
+    ],
+    "budget_value": [
+      9000000.0
+    ],
+    "iati_identifier": "DK-CVR-20699310-DK223511",
+    "title_narrative": [
+      "DANIDA SPA 2022 HQ Emergency"
+    ],
+    "reporting_org_ref": "DK-CVR-20699310",
+    "transaction_value": [
+      8523750.17
+    ],
+    "activity_date_type": [
+      "1",
+      "2",
+      "3",
+      "4"
+    ],
+    "activity_status_code": "3",
+    "description_narrative": [
+      "DRC allocated flexible funding to 4 countries in 2022 for a total of DKK 6,227,500, reaching 22,553 individuals. Countries supported were Burkina Faso, Mexico, Libya and Ethiopia. In addition to the allocation of flexible funding, DRC operations were supported by the deployment of roving emergency staff (EMPACT) and through the delivery of emergency training (EMCAP)."
+    ],
+    "activity_date_iso_date": [
+      "2022-01-01T00:00:00Z",
+      "2022-01-01T00:00:00Z",
+      "2022-12-31T00:00:00Z",
+      "2022-12-31T00:00:00Z"
+    ],
+    "recipient_country_code": [
+      "DK"
+    ],
+    "reporting_org_narrative": [
+      "Danish Refugee Council",
+      "Dansk Flygtningehjaelp"
+    ]
+  },
+  {
+    "sector_code": [
+      "72010"
+    ],
+    "budget_value": [
+      4000000.0,
+      658241.0
+    ],
+    "iati_identifier": "DK-CVR-20699310-DK223733",
+    "title_narrative": [
+      "DANIDA SPA 2022 Top-up Ukraine I"
+    ],
+    "reporting_org_ref": "DK-CVR-20699310",
+    "transaction_value": [
+      3295682.65,
+      648616.0
+    ],
+    "activity_date_type": [
+      "2",
+      "1",
+      "3",
+      "4"
+    ],
+    "activity_status_code": "3",
+    "description_narrative": [
+      "This grant is a top-up to the Danida SPA 2022-25. 20 month implementation period, this grant only covers 2022.\rfully flexible, can be reallocated to the current humanitarian situation and a Ukraine crisis"
+    ],
+    "activity_date_iso_date": [
+      "2022-03-07T00:00:00Z",
+      "2022-03-01T00:00:00Z",
+      "2022-12-31T00:00:00Z",
+      "2022-12-31T00:00:00Z"
+    ],
+    "recipient_country_code": [
+      "UA"
+    ],
+    "reporting_org_narrative": [
+      "Danish Refugee Council",
+      "Dansk Flygtningehjaelp"
+    ]
+  },
+  {
+    "sector_code": [
+      "72010"
+    ],
+    "budget_value": [
+      13750000.0,
+      436711.0
+    ],
+    "iati_identifier": "DK-CVR-20699310-DK223783",
+    "title_narrative": [
+      "DANIDA SPA Top up Ukraine II"
+    ],
+    "reporting_org_ref": "DK-CVR-20699310",
+    "transaction_value": [
+      13273891.59,
+      436711.0
+    ],
+    "activity_date_type": [
+      "2",
+      "1",
+      "3",
+      "4"
+    ],
+    "activity_status_code": "3",
+    "description_narrative": [
+      "This grant is a top-up to the Danida SPA 2022-25."
+    ],
+    "activity_date_iso_date": [
+      "2022-03-07T00:00:00Z",
+      "2022-03-01T00:00:00Z",
+      "2022-12-31T00:00:00Z",
+      "2022-12-31T00:00:00Z"
+    ],
+    "recipient_country_code": [
+      "DK",
+      "PL",
+      "UA"
+    ],
+    "reporting_org_narrative": [
+      "Danish Refugee Council",
+      "Dansk Flygtningehjaelp"
+    ]
+  },
+  {
+    "sector_code": [
+      "72010"
+    ],
+    "budget_value": [
+      10000000.0,
+      4733341.0
+    ],
+    "iati_identifier": "DK-CVR-20699310-DK223915",
+    "title_narrative": [
+      "DANIDA SPA 2022 Ukraine Top up III"
+    ],
+    "reporting_org_ref": "DK-CVR-20699310",
+    "transaction_value": [
+      4927152.86,
+      4727229.0
+    ],
+    "activity_date_type": [
+      "2",
+      "1",
+      "3"
+    ],
+    "activity_status_code": "3",
+    "description_narrative": [
+      "A top-up to the Danida SPA 2022 - focus on humanitarian demining"
+    ],
+    "activity_date_iso_date": [
+      "2022-04-28T00:00:00Z",
+      "2022-05-02T00:00:00Z",
+      "2023-04-30T00:00:00Z"
+    ],
+    "recipient_country_code": [
+      "UA"
+    ],
+    "reporting_org_narrative": [
+      "Danish Refugee Council",
+      "Dansk Flygtningehjaelp"
+    ]
+  },
+  {
+    "sector_code": [
+      "16050"
+    ],
+    "budget_value": [
+      9030117.0
+    ],
+    "iati_identifier": "DK-CVR-20699310-DK224284",
+    "title_narrative": [
+      "DANIDA SPA 2022 Top-up Syria Crisis Lebanon"
+    ],
+    "reporting_org_ref": "DK-CVR-20699310",
+    "transaction_value": [
+      328145.25,
+      1700374.0,
+      7310323.0
+    ],
+    "activity_date_type": [
+      "2",
+      "1",
+      "3"
+    ],
+    "activity_status_code": "3",
+    "description_narrative": [
+      "Top-up grant on the Syria Crisis for Lebanon as part of the Danida SPA 2022-25"
+    ],
+    "activity_date_iso_date": [
+      "2022-11-01T00:00:00Z",
+      "2022-11-01T00:00:00Z",
+      "2023-11-01T00:00:00Z"
+    ],
+    "recipient_country_code": [
+      "LB"
+    ],
+    "reporting_org_narrative": [
+      "Danish Refugee Council",
+      "Dansk Flygtningehjaelp"
+    ]
+  },
+  {
+    "sector_code": [
+      "72010"
+    ],
+    "budget_value": [
+      3490673.0
+    ],
+    "iati_identifier": "DK-CVR-20699310-DK224293",
+    "title_narrative": [
+      "DANIDA SPA 2022 Top up South Sudan"
+    ],
+    "reporting_org_ref": "DK-CVR-20699310",
+    "transaction_value": [
+      232445.0,
+      3139115.0
+    ],
+    "activity_date_type": [
+      "1",
+      "2",
+      "3"
+    ],
+    "activity_status_code": "3",
+    "description_narrative": [
+      "This grant is for the Danida SPA 2022 for Climate Induced Loss & Damage - with a country focus on South Sudan"
+    ],
+    "activity_date_iso_date": [
+      "2023-01-01T00:00:00Z",
+      "2023-01-01T00:00:00Z",
+      "2023-12-31T00:00:00Z"
+    ],
+    "recipient_country_code": [
+      "SS"
+    ],
+    "reporting_org_narrative": [
+      "Danish Refugee Council",
+      "Dansk Flygtningehjaelp"
+    ]
+  },
+  {
+    "sector_code": [
+      "43010"
+    ],
+    "budget_value": [
+      3300000.0
+    ],
+    "iati_identifier": "DK-CVR-20699310-DK224161",
+    "title_narrative": [
+      "DANIDA SPA 2022 Mali Top up"
+    ],
+    "reporting_org_ref": "DK-CVR-20699310",
+    "transaction_value": [
+      222267.78
+    ],
+    "activity_date_type": [
+      "2",
+      "4",
+      "1",
+      "3"
+    ],
+    "activity_status_code": "3",
+    "description_narrative": [
+      "Danida SPA Top-up: ’Strengthening the Danish Emergency response to people affected by food crisis in Mali’ part of the Danida SPA"
+    ],
+    "activity_date_iso_date": [
+      "2022-09-27T00:00:00Z",
+      "2022-12-31T00:00:00Z",
+      "2022-09-15T00:00:00Z",
+      "2023-06-15T00:00:00Z"
+    ],
+    "recipient_country_code": [
+      "ML"
+    ],
+    "reporting_org_narrative": [
+      "Danish Refugee Council",
+      "Dansk Flygtningehjaelp"
+    ]
+  },
+  {
+    "sector_code": [
+      "14020"
+    ],
+    "budget_value": [
+      5060000.0
+    ],
+    "iati_identifier": "DK-CVR-20699310-DK223986",
+    "title_narrative": [
+      "DANIDA SPA 2022 EA Somalia Top up"
+    ],
+    "reporting_org_ref": "DK-CVR-20699310",
+    "transaction_value": [
+      5678642.2
+    ],
+    "activity_date_type": [
+      "2",
+      "4",
+      "1",
+      "3"
+    ],
+    "activity_status_code": "3",
+    "description_narrative": [
+      "Danida SPA 2022 Top-up - Drought in the Horn of Africa - Somalia. Part of the Danida SPA 2022-25"
+    ],
+    "activity_date_iso_date": [
+      "2022-06-10T00:00:00Z",
+      "2022-12-31T00:00:00Z",
+      "2022-06-10T00:00:00Z",
+      "2022-12-31T00:00:00Z"
+    ],
+    "recipient_country_code": [
+      "SO"
+    ],
+    "reporting_org_narrative": [
+      "Danish Refugee Council",
+      "Dansk Flygtningehjaelp"
+    ]
+  },
+  {
+    "sector_code": [
+      "72010"
+    ],
+    "budget_value": [
+      3834000.0
+    ],
+    "iati_identifier": "DK-CVR-20699310-DK223541",
+    "title_narrative": [
+      "DANIDA SPA 2022 Central African Republic"
+    ],
+    "reporting_org_ref": "DK-CVR-20699310",
+    "transaction_value": [
+      3834856.55,
+      193479.0
+    ],
+    "activity_date_type": [
+      "2",
+      "4",
+      "1",
+      "3"
+    ],
+    "activity_status_code": "3",
+    "description_narrative": [
+      "Strengthen the protection of displaced populations on the Cameroon/CAR axis",
+      "- People in CAR and Cameroon have access to timely, safe and dignified assistance and services to reduce risk\r-People in CAR have the capacity to fulfil their rights and can access more decent and resilient livelihoods\r-People in CAR and Cameroon live in safer, more resilient and more functional communities where their rights are protected"
+    ],
+    "activity_date_iso_date": [
+      "2022-01-01T00:00:00Z",
+      "2022-12-31T00:00:00Z",
+      "2022-01-01T00:00:00Z",
+      "2022-12-31T00:00:00Z"
+    ],
+    "recipient_country_code": [
+      "CF"
+    ],
+    "reporting_org_narrative": [
+      "Danish Refugee Council",
+      "Dansk Flygtningehjaelp"
+    ]
+  },
+  {
+    "sector_code": [
+      "72010"
+    ],
+    "budget_value": [
+      6300844.0
+    ],
+    "iati_identifier": "DK-CVR-20699310-DK223540",
+    "title_narrative": [
+      "DANIDA SPA 2022 Cameroon"
+    ],
+    "reporting_org_ref": "DK-CVR-20699310",
+    "transaction_value": [
+      538985.0,
+      4216844.05
+    ],
+    "activity_date_type": [
+      "1",
+      "2",
+      "3",
+      "4"
+    ],
+    "activity_status_code": "3",
+    "description_narrative": [
+      "Strengthen the protection of displaced populations on the Cameroon/CAR axis",
+      "- People in CAR and Cameroon have access to timely, safe and dignified assistance and services to reduce risk -People in CAR have the capacity to fulfil their rights and can access more decent and resilient livelihoods -People in CAR and Cameroon live in safer, more resilient and more functional communities where their rights are protected (Language: English)"
+    ],
+    "activity_date_iso_date": [
+      "2022-01-01T00:00:00Z",
+      "2022-01-01T00:00:00Z",
+      "2022-12-31T00:00:00Z",
+      "2022-12-31T00:00:00Z"
+    ],
+    "recipient_country_code": [
+      "CM"
+    ],
+    "reporting_org_narrative": [
+      "Danish Refugee Council",
+      "Dansk Flygtningehjaelp"
+    ]
+  },
+  {
+    "sector_code": [
+      "43010",
+      "15160"
+    ],
+    "budget_value": [
+      5148000.0
+    ],
+    "iati_identifier": "DK-CVR-20699310-DK223537",
+    "title_narrative": [
+      "DANIDA SPA 2022 Bangladesh"
+    ],
+    "reporting_org_ref": "DK-CVR-20699310",
+    "transaction_value": [
+      47050.0,
+      4000000.0
+    ],
+    "activity_date_type": [
+      "1",
+      "2",
+      "3",
+      "4"
+    ],
+    "activity_status_code": "3",
+    "description_narrative": [
+      "Improving the protective environment for and self-reliance of affected populations across the Myanmar displacement axis",
+      "- At-risk communities in Myanmar and Bangladesh have access to safe and comprehensive protection services\r- People in Myanmar and Bangladesh have more decent and sustainable livelihoods \r-"
+    ],
+    "activity_date_iso_date": [
+      "2022-01-01T00:00:00Z",
+      "2022-01-01T00:00:00Z",
+      "2022-12-31T00:00:00Z",
+      "2022-12-31T00:00:00Z"
+    ],
+    "recipient_country_code": [
+      "BD"
+    ],
+    "reporting_org_narrative": [
+      "Danish Refugee Council",
+      "Dansk Flygtningehjaelp"
+    ]
+  },
+  {
+    "sector_code": [
+      "43010"
+    ],
+    "budget_value": [
+      3843000.0
+    ],
+    "iati_identifier": "DK-CVR-20699310-DK223538",
+    "title_narrative": [
+      "DANIDA SPA 2022 Niger"
+    ],
+    "reporting_org_ref": "DK-CVR-20699310",
+    "transaction_value": [
+      373377.0,
+      3612095.17
+    ],
+    "activity_date_type": [
+      "1",
+      "2",
+      "3",
+      "4"
+    ],
+    "activity_status_code": "3",
+    "description_narrative": [
+      "Enhancing protection, social cohesion and addressing basic needs in response to the rise in displacement across Central Sahel",
+      "- People in Central Sahel have access to timely, safe, and dignified assistance and services to reduce risk. \r- People in Central Sahel have the capacity to fulfil their rights and can access more decent and resilient livelihoods \r- People in Central Sahel live in safer, more resilient, and more functional communities where their rights are protected"
+    ],
+    "activity_date_iso_date": [
+      "2022-01-01T00:00:00Z",
+      "2022-01-01T00:00:00Z",
+      "2022-12-31T00:00:00Z",
+      "2022-12-31T00:00:00Z"
+    ],
+    "recipient_country_code": [
+      "NE"
+    ],
+    "reporting_org_narrative": [
+      "Danish Refugee Council",
+      "Dansk Flygtningehjaelp"
+    ]
+  },
+  {
+    "sector_code": [
+      "43010",
+      "15160"
+    ],
+    "budget_value": [
+      3800000.0
+    ],
+    "iati_identifier": "DK-CVR-20699310-DK223515",
+    "title_narrative": [
+      "DANIDA SPA 2022 Turkey"
+    ],
+    "reporting_org_ref": "DK-CVR-20699310",
+    "transaction_value": [
+      3800890.48,
+      117876.0
+    ],
+    "activity_date_type": [
+      "1",
+      "2",
+      "3",
+      "4"
+    ],
+    "activity_status_code": "3",
+    "description_narrative": [
+      "- Vulnerable populations linked to the Syrian crisis have improved access to rights and entitlements through legal aid and specialised protection services   \rProtection and legal information dissemination; Specialised Protection Services; Partnerships and Capacity Building \r- Improved self-reliance and resilience for host and Syrian refugee populations in the Middle East region through enhanced access to markets, and decent sustainable livelihoods in both urban and rural settings\rSupport to home-based businesses and MSMEs to provide decent and resilient livelihoods\r- In the Middle East, local civil society have stronger capacity to coordinate, articulate, and advocate for durable solutions for those displaced by the Syrian crisis\r- People in the Middle East benefit from programmes more aligned with existing institutions, markets and state support systems, including safety nets and social protection systems, based on evidence for more effective sustainable solutions across the humanitarian development nexus"
+    ],
+    "activity_date_iso_date": [
+      "2022-01-01T00:00:00Z",
+      "2022-01-01T00:00:00Z",
+      "2022-12-31T00:00:00Z",
+      "2022-12-31T00:00:00Z"
+    ],
+    "recipient_country_code": [
+      "TR"
+    ],
+    "reporting_org_narrative": [
+      "Danish Refugee Council",
+      "Dansk Flygtningehjaelp"
+    ]
+  },
+  {
+    "sector_code": [
+      "43010",
+      "15160"
+    ],
+    "budget_value": [
+      4500000.0
+    ],
+    "iati_identifier": "DK-CVR-20699310-DK223514",
+    "title_narrative": [
+      "DANIDA SPA 2022 Libya"
+    ],
+    "reporting_org_ref": "DK-CVR-20699310",
+    "transaction_value": [
+      4047668.7
+    ],
+    "activity_date_type": [
+      "1",
+      "2",
+      "3",
+      "4"
+    ],
+    "activity_status_code": "3",
+    "description_narrative": [
+      "- Displaced and conflict affected people have their basic needs covered and are protected from violence, coercion and deprivation.  \r- DRC Libya, drawing upon internal resources such as the protection monitoring reports, will specifically work on strengthening people’s access to information on their rights and entitlements and reducing their vulnerabilities, support individuals to obtain documentation and legal aid, and provide opportunities for increased capacity and awareness to claim rights and to enable and support their social participation.\r- Displaced and conflict-affected people have access to goods, services, and income generating opportunities."
+    ],
+    "activity_date_iso_date": [
+      "2022-01-01T00:00:00Z",
+      "2022-01-01T00:00:00Z",
+      "2022-12-31T00:00:00Z",
+      "2022-12-31T00:00:00Z"
+    ],
+    "recipient_country_code": [
+      "LY"
+    ],
+    "reporting_org_narrative": [
+      "Danish Refugee Council",
+      "Dansk Flygtningehjaelp"
+    ]
+  },
+  {
+    "sector_code": [
+      "72010"
+    ],
+    "budget_value": [
+      2254892.0
+    ],
+    "iati_identifier": "DK-CVR-20699310-DK223534",
+    "title_narrative": [
+      "DANIDA SPA 2022 Djibouti"
+    ],
+    "reporting_org_ref": "DK-CVR-20699310",
+    "transaction_value": [
+      2255743.11,
+      334768.0
+    ],
+    "activity_date_type": [
+      "1",
+      "2",
+      "3",
+      "4"
+    ],
+    "activity_status_code": "3",
+    "description_narrative": [
+      "- Safer communities have the capacity and systems to reduce all forms of violence. \r- Refugees, returnees, IDPs and host communities have increased access to more decent and sustainable livelihoods."
+    ],
+    "activity_date_iso_date": [
+      "2022-01-01T00:00:00Z",
+      "2022-01-01T00:00:00Z",
+      "2022-12-31T00:00:00Z",
+      "2022-12-31T00:00:00Z"
+    ],
+    "recipient_country_code": [
+      "DJ"
+    ],
+    "reporting_org_narrative": [
+      "Danish Refugee Council",
+      "Dansk Flygtningehjaelp"
+    ]
+  },
+  {
+    "sector_code": [
+      "72010"
+    ],
+    "budget_value": [
+      2554892.0
+    ],
+    "iati_identifier": "DK-CVR-20699310-DK223532",
+    "title_narrative": [
+      "DANIDA SPA 2022 Ethiopia"
+    ],
+    "reporting_org_ref": "DK-CVR-20699310",
+    "transaction_value": [
+      2288334.84
+    ],
+    "activity_date_type": [
+      "1",
+      "2",
+      "3",
+      "4"
+    ],
+    "activity_status_code": "3",
+    "description_narrative": [
+      "Integrated humanitarian assistance for conflict and displacement affected communities in Gambella through comprehensive livelihood, social cohesion and legal aid assistance",
+      "- Increased knowledge of refugees and vulnerable host Communities and ability to exercise and enjoy their rights\r- Refugee and host community experience improved social integration through dialogue, training, and social cohesion activities.\r- Refugees and host communities have increased access to more decent and resilient livelihoods"
+    ],
+    "activity_date_iso_date": [
+      "2022-01-01T00:00:00Z",
+      "2022-01-01T00:00:00Z",
+      "2022-12-31T00:00:00Z",
+      "2022-12-31T00:00:00Z"
+    ],
+    "recipient_country_code": [
+      "ET"
+    ],
+    "reporting_org_narrative": [
+      "Danish Refugee Council",
+      "Dansk Flygtningehjaelp"
+    ]
+  },
+  {
+    "sector_code": [
+      "43010",
+      "15160"
+    ],
+    "budget_value": [
+      4072446.02
+    ],
+    "iati_identifier": "DK-CVR-20699310-DK223530",
+    "title_narrative": [
+      "DANIDA SPA 2022 Somalia"
+    ],
+    "reporting_org_ref": "DK-CVR-20699310",
+    "transaction_value": [
+      3177209.85
+    ],
+    "activity_date_type": [
+      "1",
+      "2",
+      "3",
+      "4"
+    ],
+    "activity_status_code": "3",
+    "description_narrative": [
+      "- Safer communities have the capacity and systems to reduce all forms of violence.\r- People can claim respect for, protection of, and fulfilment of their rights.\r- Refugees, returnees, IDPs and host communities have increased access to more decent and sustainable livelihoods."
+    ],
+    "activity_date_iso_date": [
+      "2022-01-01T00:00:00Z",
+      "2022-01-01T00:00:00Z",
+      "2022-12-31T00:00:00Z",
+      "2022-12-31T00:00:00Z"
+    ],
+    "recipient_country_code": [
+      "SO"
+    ],
+    "reporting_org_narrative": [
+      "Danish Refugee Council",
+      "Dansk Flygtningehjaelp"
+    ]
+  },
+  {
+    "sector_code": [
+      "72010"
+    ],
+    "budget_value": [
+      5141151.0
+    ],
+    "iati_identifier": "DK-CVR-20699310-DK223528",
+    "title_narrative": [
+      "DANIDA SPA 2022 Uganda"
+    ],
+    "reporting_org_ref": "DK-CVR-20699310",
+    "transaction_value": [
+      264974.0,
+      5182723.62
+    ],
+    "activity_date_type": [
+      "1",
+      "2",
+      "3",
+      "4"
+    ],
+    "activity_status_code": "3",
+    "description_narrative": [
+      "Integrated Emergency & Solutions Intervention on the Regional Axis of the South Sudan Crisis and Displacement",
+      "- Safer Communities in East Africa Have Capacity and Systems to Reduce all Forms of Violence\rTo contribute to the achievement of this outcome area, Danida funds supported DRC Uganda to engage two protection teams with expertise in the prevention and response to gender-based violence (GBV), two protection teams with expertise in legal aid, as well as the local partner the Uganda Law Society (ULS) to provide services across all zones of Imvepi and Rhino Camp settlements in the West Nile region of the country."
+    ],
+    "activity_date_iso_date": [
+      "2022-01-01T00:00:00Z",
+      "2022-01-01T00:00:00Z",
+      "2022-12-31T00:00:00Z",
+      "2022-12-31T00:00:00Z"
+    ],
+    "recipient_country_code": [
+      "UG"
+    ],
+    "reporting_org_narrative": [
+      "Danish Refugee Council",
+      "Dansk Flygtningehjaelp"
+    ]
+  },
+  {
+    "sector_code": [
+      "72010"
+    ],
+    "budget_value": [
+      8569149.04
+    ],
+    "iati_identifier": "DK-CVR-20699310-DK223529",
+    "title_narrative": [
+      "DANIDA SPA 2022 South Sudan"
+    ],
+    "reporting_org_ref": "DK-CVR-20699310",
+    "transaction_value": [
+      8587630.25
+    ],
+    "activity_date_type": [
+      "1",
+      "2",
+      "3",
+      "4"
+    ],
+    "activity_status_code": "3",
+    "description_narrative": [
+      "Multi-sectoral humanitarian and resilience assistance across South Sudan",
+      "- Safer communities in East Africa have the capacity and systems to reduce all forms of violence\r- Refugees, returnees, IDPs, and host communities in East Africa have increased access to more decent and resilient livelihoods."
+    ],
+    "activity_date_iso_date": [
+      "2022-01-01T00:00:00Z",
+      "2022-01-01T00:00:00Z",
+      "2022-12-31T00:00:00Z",
+      "2022-12-31T00:00:00Z"
+    ],
+    "recipient_country_code": [
+      "SS"
+    ],
+    "reporting_org_narrative": [
+      "Danish Refugee Council",
+      "Dansk Flygtningehjaelp"
+    ]
+  },
+  {
+    "sector_code": [
+      "43010"
+    ],
+    "budget_value": [
+      7563789.0
+    ],
+    "iati_identifier": "DK-CVR-20699310-DK223531",
+    "title_narrative": [
+      "DANIDA SPA 2022 Kenya"
+    ],
+    "reporting_org_ref": "DK-CVR-20699310",
+    "transaction_value": [
+      6722296.01
+    ],
+    "activity_date_type": [
+      "1",
+      "2",
+      "3",
+      "4"
+    ],
+    "activity_status_code": "3",
+    "description_narrative": [
+      "- Safer communities in East Africa have the capacity and systems to reduce all forms of violence\r- Refugees, returnees, IDPs and host communities in East Africa have increased access to more decent and resilient livelihoods\r- Social cohesion in communities / societies is enhanced"
+    ],
+    "activity_date_iso_date": [
+      "2022-01-01T00:00:00Z",
+      "2022-01-01T00:00:00Z",
+      "2022-12-31T00:00:00Z",
+      "2022-12-31T00:00:00Z"
+    ],
+    "recipient_country_code": [
+      "KE"
+    ],
+    "reporting_org_narrative": [
+      "Danish Refugee Council",
+      "Dansk Flygtningehjaelp"
+    ]
+  },
+  {
+    "sector_code": [
+      "72010"
+    ],
+    "budget_value": [
+      4430000.0
+    ],
+    "iati_identifier": "DK-CVR-20699310-DK223611",
+    "title_narrative": [
+      "DANIDA SPA 2022 Burkina Faso"
+    ],
+    "reporting_org_ref": "DK-CVR-20699310",
+    "transaction_value": [
+      4430744.41
+    ],
+    "activity_date_type": [
+      "1",
+      "2",
+      "3",
+      "4"
+    ],
+    "activity_status_code": "3",
+    "description_narrative": [
+      "Enhancing protection, social cohesion and addressing basic needs in response to the rise in displacement across Central Sahel \r- People in Central Sahel have access to timely, safe, and dignified assistance and services to reduce risk. \r- People in Central Sahel have the capacity to fulfil their rights and can access more decent and resilient livelihoods \r- People in Central Sahel live in safer, more resilient, and more functional communities where their rights are protected"
+    ],
+    "activity_date_iso_date": [
+      "2022-01-01T00:00:00Z",
+      "2022-01-01T00:00:00Z",
+      "2022-12-31T00:00:00Z",
+      "2022-12-31T00:00:00Z"
+    ],
+    "recipient_country_code": [
+      "BF"
+    ],
+    "reporting_org_narrative": [
+      "Danish Refugee Council",
+      "Dansk Flygtningehjaelp"
+    ]
+  },
+  {
+    "sector_code": [
+      "72010"
+    ],
+    "budget_value": [
+      5300000.0
+    ],
+    "iati_identifier": "DK-CVR-20699310-DK223510",
+    "title_narrative": [
+      "DANIDA SPA 2022 HQ Diaspora"
+    ],
+    "reporting_org_ref": "DK-CVR-20699310",
+    "transaction_value": [
+      58631.0,
+      2673963.81
+    ],
+    "activity_date_type": [
+      "1",
+      "2",
+      "3",
+      "4"
+    ],
+    "activity_status_code": "3",
+    "description_narrative": [
+      "DANIDA SPA 2022 HQ Diaspora Programme"
+    ],
+    "activity_date_iso_date": [
+      "2022-01-01T00:00:00Z",
+      "2022-01-01T00:00:00Z",
+      "2022-12-31T00:00:00Z",
+      "2022-12-31T00:00:00Z"
+    ],
+    "recipient_country_code": [
+      "DK",
+      "SO"
+    ],
+    "reporting_org_narrative": [
+      "Danish Refugee Council",
+      "Dansk Flygtningehjaelp"
+    ]
+  },
+  {
+    "sector_code": [
+      "43010",
+      "15160"
+    ],
+    "budget_value": [
+      9800206.0
+    ],
+    "iati_identifier": "DK-CVR-20699310-DK223436",
+    "title_narrative": [
+      "DANIDA SPA 2022 Flex Innovation"
+    ],
+    "reporting_org_ref": "DK-CVR-20699310",
+    "transaction_value": [
+      4348458.31
+    ],
+    "activity_date_type": [
+      "1",
+      "2",
+      "3",
+      "4"
+    ],
+    "activity_status_code": "3",
+    "description_narrative": [
+      "Part of the Danida SPA 2022-25 for 2022\r\rUnderspend from 2022 has been deducted and carry over to the 2023 grant"
+    ],
+    "activity_date_iso_date": [
+      "2022-01-01T00:00:00Z",
+      "2022-01-01T00:00:00Z",
+      "2022-12-31T00:00:00Z",
+      "2022-12-31T00:00:00Z"
+    ],
+    "recipient_country_code": [
+      "BD",
+      "CO",
+      "DK",
+      "IQ",
+      "KE",
+      "TN",
+      "UG",
+      "SN"
+    ],
+    "reporting_org_narrative": [
+      "Danish Refugee Council",
+      "Dansk Flygtningehjaelp"
+    ]
+  },
+  {
+    "sector_code": [
+      "43010",
+      "15160",
+      "72010"
+    ],
+    "budget_value": [
+      5000000.0,
+      465357.0
+    ],
+    "iati_identifier": "DK-CVR-20699310-DK234735",
+    "title_narrative": [
+      "DANIDA SPA 2023 Top-up Turkey Earthquake II"
+    ],
+    "reporting_org_ref": "DK-CVR-20699310",
+    "transaction_value": [
+      4659147.0
+    ],
+    "activity_date_type": [
+      "2",
+      "1",
+      "3",
+      "4"
+    ],
+    "activity_status_code": "3",
+    "description_narrative": [
+      "A massive earthquake (magnitude 7.8) with its epicentre near Gaziantep affected southern Turkey and northern Syria in the early hours of 6th February 2023. A series of aftershocks and subsequent earthquakes continue to cause large scale damage, loss of life and severe damage to infrastructure in the area. The areas in southern Türkiye host some of the largest populations of Syrian refugees – estimated to be approximately 3.7million in total across the country.\rEmergency services are still carrying out search and rescue operations (6th February, 1530h) in the affected areas, but initial reports indicate massive damage to housing stock, coming in the midst of extreme winter conditions in the area, and compounding existing severe economic and protection challenges being faced by both refugee and host populations.\rDRC’s Türkiye operation is headquartered in the city of Hatay – one of the worst affected areas, with its own field offices and bases, and partner presence across some of the areas most impacted by the earthquake – Kilis, Kahramanmarash, Sanliurfa and Antakya.\rWhile damage and need assessments are yet to be carried out, DRC has initiated response measures aimed at responding to what are likely to be most high priority needs. This is based on initial reports from the area and past experiences of responses to earthquakes. These include:"
+    ],
+    "activity_date_iso_date": [
+      "2023-04-01T00:00:00Z",
+      "2023-04-01T00:00:00Z",
+      "2023-12-31T00:00:00Z",
+      "2023-12-31T00:00:00Z"
+    ],
+    "recipient_country_code": [
+      "TR"
+    ],
+    "reporting_org_narrative": [
+      "Danish Refugee Council",
+      "Dansk Flygtningehjaelp"
+    ]
+  },
+  {
+    "sector_code": [
+      "43010",
+      "15160"
+    ],
+    "budget_value": [
+      2040000.0
+    ],
+    "iati_identifier": "DK-CVR-20699310-DK223517",
+    "title_narrative": [
+      "DANIDA SPA 2022 Syria"
+    ],
+    "reporting_org_ref": "DK-CVR-20699310",
+    "transaction_value": [
+      974264.75
+    ],
+    "activity_date_type": [
+      "1",
+      "2",
+      "3",
+      "4"
+    ],
+    "activity_status_code": "3",
+    "description_narrative": [
+      "Syrian Regional Response\r- Vulnerable populations linked to the Syrian crisis have improved access to rights and entitlements through legal aid and specialised protection services   \rPsychosocial Support (PSS) and case management services provided to conflict- and displacement-affected children and their caregivers\r- Improved self-reliance and resilience for host and Syrian refugee populations in the Middle East region through enhanced access to markets, and decent sustainable livelihoods in both urban and rural settings\r- In the Middle East, local civil society have stronger capacity to coordinate, articulate, and advocate for durable solutions for those displaced by the Syrian crisis\r- People in the Middle East benefit from programmes more aligned with existing institutions, markets and state support systems, including safety nets and social protection systems, based on evidence for more effective sustainable solutions across the humanitarian development nexus"
+    ],
+    "activity_date_iso_date": [
+      "2022-01-01T00:00:00Z",
+      "2022-01-01T00:00:00Z",
+      "2022-12-31T00:00:00Z",
+      "2022-12-31T00:00:00Z"
+    ],
+    "recipient_country_code": [
+      "SY"
+    ],
+    "reporting_org_narrative": [
+      "Danish Refugee Council",
+      "Dansk Flygtningehjaelp"
+    ]
+  },
+  {
+    "sector_code": [
+      "43010",
+      "15160"
+    ],
+    "budget_value": [
+      2500000.0
+    ],
+    "iati_identifier": "DK-CVR-20699310-DK223215",
+    "title_narrative": [
+      "DANIDA SPA 2022 Lebanon"
+    ],
+    "reporting_org_ref": "DK-CVR-20699310",
+    "transaction_value": [
+      2499938.73
+    ],
+    "activity_date_type": [
+      "1",
+      "2",
+      "3",
+      "4"
+    ],
+    "activity_status_code": "3",
+    "description_narrative": [
+      "Emerging Shocks and Stresses in Lebanon\r- Children, women at risk and PWSNs are empowered to prevent risk factors related to their health and protection, while promoting positive health and protection outcomes\r- Children, women at risk and PWSN’s protection have been enhanced through access to specialized quality protection and economic recovery services"
+    ],
+    "activity_date_iso_date": [
+      "2022-01-01T00:00:00Z",
+      "2022-01-01T00:00:00Z",
+      "2022-12-31T00:00:00Z",
+      "2022-12-31T00:00:00Z"
+    ],
+    "recipient_country_code": [
+      "LB"
+    ],
+    "reporting_org_narrative": [
+      "Danish Refugee Council",
+      "Dansk Flygtningehjaelp"
+    ]
+  },
+  {
+    "sector_code": [
+      "43010"
+    ],
+    "budget_value": [
+      8720000.0
+    ],
+    "iati_identifier": "DK-CVR-20699310-DK223523",
+    "title_narrative": [
+      "DANIDA SPA 2022 Jordan"
+    ],
+    "reporting_org_ref": "DK-CVR-20699310",
+    "transaction_value": [
+      4824287.42,
+      393682.0
+    ],
+    "activity_date_type": [
+      "1",
+      "2",
+      "3",
+      "4"
+    ],
+    "activity_status_code": "3",
+    "description_narrative": [
+      "Syrian Regional Response\r- Vulnerable populations linked to the Syrian crisis have improved access to rights and entitlements through legal aid and specialised protection services   \rDecent and resilient livelihoods for refugees\r- Improved self-reliance and resilience for host and Syrian refugee populations in the Middle East region through enhanced access to markets, and decent sustainable livelihoods in both urban and rural settings\rDecent and resilient livelihoods for refugees\r- In the Middle East, local civil society have stronger capacity to coordinate, articulate, and advocate for durable solutions for those displaced by the Syrian crisis\r- People in the Middle East benefit from programmes more aligned with existing institutions, markets and state support systems, including safety nets and social protection systems, based on evidence for more effective sustainable solutions across the humanitarian development nexus"
+    ],
+    "activity_date_iso_date": [
+      "2022-01-01T00:00:00Z",
+      "2022-01-01T00:00:00Z",
+      "2022-12-31T00:00:00Z",
+      "2022-12-31T00:00:00Z"
+    ],
+    "recipient_country_code": [
+      "JO"
+    ],
+    "reporting_org_narrative": [
+      "Danish Refugee Council",
+      "Dansk Flygtningehjaelp"
+    ]
+  },
+  {
+    "sector_code": [
+      "43010"
+    ],
+    "budget_value": [
+      5100000.0
+    ],
+    "iati_identifier": "DK-CVR-20699310-DK223524",
+    "title_narrative": [
+      "DANIDA SPA 2022 Iraq"
+    ],
+    "reporting_org_ref": "DK-CVR-20699310",
+    "transaction_value": [
+      2766609.54
+    ],
+    "activity_date_type": [
+      "1",
+      "2",
+      "3",
+      "4"
+    ],
+    "activity_status_code": "3",
+    "description_narrative": [
+      "Enhanced economic and social inclusion of vulnerable Iraqi people through equitable and sustainable agriculture and food market systems’ growth",
+      "- Increased adaptive capacities of agriculture and food market system actors through public-private cooperation, improved business models and best practices, results in improved productivity, growth, and sustainability of livelihoods in target conflict-affected communities in Iraq.\r- Vulnerable small-scale producers and small scale agro-enterprises in selected agriculture market systems have increased productivity and market competitiveness"
+    ],
+    "activity_date_iso_date": [
+      "2022-01-01T00:00:00Z",
+      "2022-01-01T00:00:00Z",
+      "2022-12-31T00:00:00Z",
+      "2022-12-31T00:00:00Z"
+    ],
+    "recipient_country_code": [
+      "IQ"
+    ],
+    "reporting_org_narrative": [
+      "Danish Refugee Council",
+      "Dansk Flygtningehjaelp"
+    ]
+  },
+  {
+    "sector_code": [
+      "43010"
+    ],
+    "budget_value": [
+      4440000.0
+    ],
+    "iati_identifier": "DK-CVR-20699310-DK223525",
+    "title_narrative": [
+      "DANIDA SPA 2022 Yemen"
+    ],
+    "reporting_org_ref": "DK-CVR-20699310",
+    "transaction_value": [
+      4297588.39,
+      403994.0
+    ],
+    "activity_date_type": [
+      "1",
+      "2",
+      "3",
+      "4"
+    ],
+    "activity_status_code": "3",
+    "description_narrative": [
+      "Promote self-reliance for people affected by conflict and displacement",
+      "- People can claim respect for, protection of, and fulfilment of their rights\r- People have more decent and resilient livelihoods. \r- Exposure and vulnerability to disasters and shocks is reduced."
+    ],
+    "activity_date_iso_date": [
+      "2022-01-01T00:00:00Z",
+      "2022-01-01T00:00:00Z",
+      "2022-12-31T00:00:00Z",
+      "2022-12-31T00:00:00Z"
+    ],
+    "recipient_country_code": [
+      "YE"
+    ],
+    "reporting_org_narrative": [
+      "Danish Refugee Council",
+      "Dansk Flygtningehjaelp"
+    ]
+  },
+  {
+    "sector_code": [
+      "43010",
+      "15160"
+    ],
+    "budget_value": [
+      2254892.0
+    ],
+    "iati_identifier": "DK-CVR-20699310-DK223526",
+    "title_narrative": [
+      "DANIDA SPA 2022 Tanzania"
+    ],
+    "reporting_org_ref": "DK-CVR-20699310",
+    "transaction_value": [
+      103853.0,
+      2252405.38
+    ],
+    "activity_date_type": [
+      "1",
+      "2",
+      "3",
+      "4"
+    ],
+    "activity_status_code": "3",
+    "description_narrative": [
+      "Integrated Programming Economic Recovery and Protection",
+      "- People can claim respect for, protection of, and fulfilment of, their rights \r- People have more decent and resilient livelihoods"
+    ],
+    "activity_date_iso_date": [
+      "2022-01-01T00:00:00Z",
+      "2022-01-01T00:00:00Z",
+      "2022-12-31T00:00:00Z",
+      "2022-12-31T00:00:00Z"
+    ],
+    "recipient_country_code": [
+      "TZ"
+    ],
+    "reporting_org_narrative": [
+      "Danish Refugee Council",
+      "Dansk Flygtningehjaelp"
+    ]
+  },
+  {
+    "sector_code": [
+      "72010"
+    ],
+    "budget_value": [
+      16000000.0
+    ],
+    "iati_identifier": "DK-CVR-20699310-DK223512",
+    "title_narrative": [
+      "DANIDA SPA 2022 HQ Stand by Roster"
+    ],
+    "reporting_org_ref": "DK-CVR-20699310",
+    "transaction_value": [
+      14567766.87
+    ],
+    "activity_date_type": [
+      "1",
+      "2",
+      "3",
+      "4"
+    ],
+    "activity_status_code": "2",
+    "description_narrative": [
+      "Part of the Danida SPA 2022 Flex Emergency TOC\r- People’s basic needs are met\rDRC allocated flexible funding to 4 countries in 2022 for a total of DKK 6,227,500, reaching 22,553 individuals. Countries supported were Burkina Faso, Mexico, Libya and Ethiopia. In addition to the allocation of flexible funding, DRC operations were supported by the deployment of roving emergency staff (EMPACT) and through the delivery of emergency training (EMCAP)."
+    ],
+    "activity_date_iso_date": [
+      "2022-01-01T00:00:00Z",
+      "2022-01-01T00:00:00Z",
+      "2022-12-31T00:00:00Z",
+      "2022-12-31T00:00:00Z"
+    ],
+    "recipient_country_code": [
+      "DK",
+      "ET",
+      "MX",
+      "ML",
+      "TN",
+      "VE",
+      "BD",
+      "SN"
+    ],
+    "reporting_org_narrative": [
+      "Danish Refugee Council",
+      "Dansk Flygtningehjaelp"
+    ]
+  },
+  {
+    "sector_code": [
+      "72010"
+    ],
+    "budget_value": [
+      3363346.0
+    ],
+    "iati_identifier": "DK-CVR-20699310-DK223527",
+    "title_narrative": [
+      "DANIDA SPA 2022 Burundi"
+    ],
+    "reporting_org_ref": "DK-CVR-20699310",
+    "transaction_value": [
+      3284089.87,
+      66189.0
+    ],
+    "activity_date_type": [
+      "1",
+      "2",
+      "3",
+      "4"
+    ],
+    "activity_status_code": "3",
+    "description_narrative": [
+      "Integrated Programming Economic Recovery and Protection",
+      "1) People can claim respect for, protection of, and fulfilment of, their rights \rThe protective environment of Burundian and Congolese refugee communities, and Burundian returnees has improved with better capacity to access, claim and fulfil their rights.\rCommunity-based protection groups are supported, and existing networks are strengthened\r- Protection risks and trends faced by refugees, IDPs, and returnees are identified through protection monitoring and advocacy tailored to programming is conducted\r- Case Management & one-off cash assistance are conducted\r\r2) People have more decent and resilient livelihoods \rBurundian and Congolese refugees, IDPs and host communities have increased resilience as a result of greater access to livelihoods and live more independently. \r- Community members have the livelihood skills and benefited vocational training\r- Right holders have benefited the advantages of permagarden\r- Right holders (Men and women) are economically empowered by cash for work assistance.\r- Right holders have received IGA and Start-up Kits"
+    ],
+    "activity_date_iso_date": [
+      "2022-01-01T00:00:00Z",
+      "2022-01-01T00:00:00Z",
+      "2022-12-31T00:00:00Z",
+      "2022-12-31T00:00:00Z"
+    ],
+    "recipient_country_code": [
+      "BI"
+    ],
+    "reporting_org_narrative": [
+      "Danish Refugee Council",
+      "Dansk Flygtningehjaelp"
+    ]
+  },
+  {
+    "sector_code": [
+      "72010"
+    ],
+    "budget_value": [
+      16200000.0
+    ],
+    "iati_identifier": "DK-CVR-20699310-DK223508",
+    "title_narrative": [
+      "DANIDA SPA 2022 HQ"
+    ],
+    "reporting_org_ref": "DK-CVR-20699310",
+    "transaction_value": [
+      4958864.72
+    ],
+    "activity_date_type": [
+      "1",
+      "2",
+      "3",
+      "4"
+    ],
+    "activity_status_code": "3",
+    "description_narrative": [
+      "Policy, Programme and Strategy Support"
+    ],
+    "activity_date_iso_date": [
+      "2022-01-01T00:00:00Z",
+      "2022-01-01T00:00:00Z",
+      "2022-12-31T00:00:00Z",
+      "2022-12-31T00:00:00Z"
+    ],
+    "recipient_country_code": [
+      "DK"
+    ],
+    "reporting_org_narrative": [
+      "Danish Refugee Council",
+      "Dansk Flygtningehjaelp"
+    ]
+  },
+  {
+    "sector_code": [
+      "15160",
+      "72010"
+    ],
+    "budget_value": [
+      5650000.0
+    ],
+    "iati_identifier": "DK-CVR-20699310-DK254895",
+    "title_narrative": [
+      "DANIDA SPA 2023 Top-up Sahel"
+    ],
+    "reporting_org_ref": "DK-CVR-20699310",
+    "activity_date_type": [
+      "1",
+      "3"
+    ],
+    "activity_status_code": "2",
+    "description_narrative": [
+      "The protection crisis in the Sahel is rooted in long term grievances of communities, weakened resilience systems due to insecurity and insufficient responses to the change in the ecosystems, fuelled by climate change, conflict, and changes in agro-pastoral practices.The response will strengthen local capacities on disaster preparedness and response, local rapid emergency responses and support locally grounded and climate adapted solutions (micro-projects) to prevent and mitigate negative impact of climate shocks and respond to humanitarian needs with a conflict sensitive approach."
+    ],
+    "activity_date_iso_date": [
+      "2023-07-01T00:00:00Z",
+      "2025-01-01T00:00:00Z"
+    ],
+    "recipient_country_code": [
+      "ML",
+      "NE"
+    ],
+    "reporting_org_narrative": [
+      "Danish Refugee Council",
+      "Dansk Flygtningehjaelp"
+    ]
+  },
+  {
+    "sector_code": [
+      "15220"
+    ],
+    "budget_value": [
+      500000.0
+    ],
+    "iati_identifier": "DK-CVR-20699310-DK256185",
+    "title_narrative": [
+      "DANIDA SPA 2025 Sudan"
+    ],
+    "reporting_org_ref": "DK-CVR-20699310",
+    "activity_date_type": [
+      "2",
+      "3"
+    ],
+    "activity_status_code": "2",
+    "description_narrative": [
+      "DANIDA SPA 2025 EAGL Sudan"
+    ],
+    "activity_date_iso_date": [
+      "2025-01-01T00:00:00Z",
+      "2025-12-31T00:00:00Z"
+    ],
+    "recipient_country_code": [
+      "SD"
+    ],
+    "reporting_org_narrative": [
+      "Danish Refugee Council",
+      "Dansk Flygtningehjaelp"
+    ]
+  },
+  {
+    "sector_code": [
+      "15160"
+    ],
+    "budget_value": [
+      500000.0
+    ],
+    "iati_identifier": "DK-CVR-20699310-DK256068",
+    "title_narrative": [
+      "DANIDA SPA 2025 Democratic Republic of Congo"
+    ],
+    "reporting_org_ref": "DK-CVR-20699310",
+    "activity_date_type": [
+      "1",
+      "3"
+    ],
+    "activity_status_code": "2",
+    "description_narrative": [
+      "DANIDA SPA 2025"
+    ],
+    "activity_date_iso_date": [
+      "2025-01-01T00:00:00Z",
+      "2025-12-31T00:00:00Z"
+    ],
+    "recipient_country_code": [
+      "CD"
+    ],
+    "reporting_org_narrative": [
+      "Danish Refugee Council",
+      "Dansk Flygtningehjaelp"
+    ]
+  },
+  {
+    "sector_code": [
+      "43010"
+    ],
+    "budget_value": [
+      630000.0
+    ],
+    "iati_identifier": "DK-CVR-20699310-DK255993",
+    "title_narrative": [
+      "DANIDA SPA 2025 Chad"
+    ],
+    "reporting_org_ref": "DK-CVR-20699310",
+    "activity_date_type": [
+      "2",
+      "3"
+    ],
+    "activity_status_code": "2",
+    "description_narrative": [
+      "DRC aims to build refugee-led groups capacities to cope effeciently with dire situations in East Chad, particularly in Adré."
+    ],
+    "activity_date_iso_date": [
+      "2025-01-01T00:00:00Z",
+      "2025-12-31T00:00:00Z"
+    ],
+    "recipient_country_code": [
+      "TD"
+    ],
+    "reporting_org_narrative": [
+      "Danish Refugee Council",
+      "Dansk Flygtningehjaelp"
+    ]
+  },
+  {
+    "sector_code": [
+      "14020"
+    ],
+    "budget_value": [
+      1696515.96
+    ],
+    "iati_identifier": "DK-CVR-20699310-DK256430",
+    "title_narrative": [
+      "DANIDA Top Up Mali 2025"
+    ],
+    "reporting_org_ref": "DK-CVR-20699310",
+    "activity_date_type": [
+      "2",
+      "3"
+    ],
+    "activity_status_code": "2",
+    "description_narrative": [
+      "DANIDA Top Up Sahel Mali"
+    ],
+    "activity_date_iso_date": [
+      "2025-01-01T00:00:00Z",
+      "2025-12-31T00:00:00Z"
+    ],
+    "recipient_country_code": [
+      "ML"
+    ],
+    "reporting_org_narrative": [
+      "Danish Refugee Council",
+      "Dansk Flygtningehjaelp"
+    ]
+  },
+  {
+    "sector_code": [
+      "43010"
+    ],
+    "budget_value": [
+      11100000.0
+    ],
+    "iati_identifier": "DK-CVR-20699310-DK266601",
+    "title_narrative": [
+      "DANIDA SPA Afghanistan Top Up 2025 to 2026"
+    ],
+    "reporting_org_ref": "DK-CVR-20699310",
+    "transaction_value": [
+      11100000.0
+    ],
+    "activity_date_type": [
+      "1",
+      "3"
+    ],
+    "activity_status_code": "1",
+    "description_narrative": [
+      "Danida SPA Afghanistan Top Up 2025 to 2026"
+    ],
+    "activity_date_iso_date": [
+      "2025-05-01T00:00:00Z",
+      "2026-05-30T00:00:00Z"
+    ],
+    "recipient_country_code": [
+      "AF"
+    ],
+    "reporting_org_narrative": [
+      "Danish Refugee Council",
+      "Dansk Flygtningehjaelp"
+    ]
+  },
+  {
+    "sector_code": [
+      "43010",
+      "15160"
+    ],
+    "budget_value": [
+      3900000.0
+    ],
+    "iati_identifier": "DK-CVR-20699310-DK256612",
+    "title_narrative": [
+      "DANIDA Top Up 2025 Jordan"
+    ],
+    "reporting_org_ref": "DK-CVR-20699310",
+    "transaction_value": [
+      3900000.0
+    ],
+    "activity_date_type": [
+      "1",
+      "3"
+    ],
+    "activity_status_code": "2",
+    "description_narrative": [
+      "DANIDA Top Up 2025 Jordan"
+    ],
+    "activity_date_iso_date": [
+      "2025-04-15T00:00:00Z",
+      "2026-06-30T00:00:00Z"
+    ],
+    "recipient_country_code": [
+      "JO"
+    ],
+    "reporting_org_narrative": [
+      "Danish Refugee Council",
+      "Dansk Flygtningehjaelp"
+    ]
+  },
+  {
+    "sector_code": [
+      "15160",
+      "43010"
+    ],
+    "budget_value": [
+      5400000.0
+    ],
+    "iati_identifier": "DK-CVR-20699310-DK256546",
+    "title_narrative": [
+      "DANIDA SPA 2025 Top Up Syria"
+    ],
+    "reporting_org_ref": "DK-CVR-20699310",
+    "transaction_value": [
+      5400000.0
+    ],
+    "activity_date_type": [
+      "1",
+      "3"
+    ],
+    "activity_status_code": "2",
+    "description_narrative": [
+      "DANIDA SPA 2025 Top Up Syria"
+    ],
+    "activity_date_iso_date": [
+      "2025-04-01T00:00:00Z",
+      "2026-03-31T00:00:00Z"
+    ],
+    "recipient_country_code": [
+      "SY"
+    ],
+    "reporting_org_narrative": [
+      "Danish Refugee Council",
+      "Dansk Flygtningehjaelp"
+    ]
+  },
+  {
+    "sector_code": [
+      "15220",
+      "15160"
+    ],
+    "budget_value": [
+      15900000.0
+    ],
+    "iati_identifier": "DK-CVR-20699310-DK265198",
+    "title_narrative": [
+      "Ukraine DANIDA SPA Top Up 2025"
+    ],
+    "reporting_org_ref": "DK-CVR-20699310",
+    "transaction_value": [
+      15900000.0
+    ],
+    "activity_date_type": [
+      "1",
+      "3"
+    ],
+    "activity_status_code": "1",
+    "description_narrative": [
+      "Integrated, localized humanitarian action assistance for the most vulnerable conflict-affected populations in Ukraine"
+    ],
+    "activity_date_iso_date": [
+      "2025-05-01T00:00:00Z",
+      "2026-04-30T00:00:00Z"
+    ],
+    "recipient_country_code": [
+      "UA"
+    ],
+    "reporting_org_narrative": [
+      "Danish Refugee Council",
+      "Dansk Flygtningehjaelp"
+    ]
+  },
+  {
+    "sector_code": [
+      "16050"
+    ],
+    "budget_value": [
+      2200000.0
+    ],
+    "iati_identifier": "DK-CVR-20699310-DK266624",
+    "title_narrative": [
+      "DANIDA 2025 Sudan Top Up"
+    ],
+    "reporting_org_ref": "DK-CVR-20699310",
+    "activity_date_type": [
+      "2",
+      "3"
+    ],
+    "activity_status_code": "2",
+    "description_narrative": [
+      "DANIDA 2025 Top Up"
+    ],
+    "activity_date_iso_date": [
+      "2025-05-01T00:00:00Z",
+      "2026-12-31T00:00:00Z"
+    ],
+    "recipient_country_code": [
+      "SD"
+    ],
+    "reporting_org_narrative": [
+      "Danish Refugee Council",
+      "Dansk Flygtningehjaelp"
+    ]
+  },
+  {
+    "sector_code": [
+      "16050"
+    ],
+    "budget_value": [
+      11100000.0
+    ],
+    "iati_identifier": "DK-CVR-20699310-DK266651",
+    "title_narrative": [
+      "Top Up DANIDA SPA DR Congo 2025"
+    ],
+    "reporting_org_ref": "DK-CVR-20699310",
+    "activity_date_type": [
+      "2",
+      "3"
+    ],
+    "activity_status_code": "2",
+    "description_narrative": [
+      "DANIDA Top Up 2025"
+    ],
+    "activity_date_iso_date": [
+      "2025-05-01T00:00:00Z",
+      "2026-02-28T00:00:00Z"
+    ],
+    "recipient_country_code": [
+      "CD"
+    ],
+    "reporting_org_narrative": [
+      "Danish Refugee Council",
+      "Dansk Flygtningehjaelp"
+    ]
+  },
+  {
+    "sector_code": [
+      "43010"
+    ],
+    "budget_value": [
+      2200000.0
+    ],
+    "iati_identifier": "DK-CVR-20699310-DK265343",
+    "title_narrative": [
+      "DANIDA 2025 Top Up South Sudan"
+    ],
+    "reporting_org_ref": "DK-CVR-20699310",
+    "activity_date_type": [
+      "2",
+      "3"
+    ],
+    "activity_status_code": "2",
+    "description_narrative": [
+      "DANIDA SPA 2025 Top Up"
+    ],
+    "activity_date_iso_date": [
+      "2025-05-01T00:00:00Z",
+      "2026-12-31T00:00:00Z"
+    ],
+    "recipient_country_code": [
+      "SS"
+    ],
+    "reporting_org_narrative": [
+      "Danish Refugee Council",
+      "Dansk Flygtningehjaelp"
+    ]
+  },
+  {
+    "sector_code": [
+      "72010",
+      "15160",
+      "14020",
+      "43010"
+    ],
+    "budget_value": [
+      16922885.7
+    ],
+    "iati_identifier": "DK-CVR-20699310-DK245114",
+    "title_narrative": [
+      "DANIDA SPA 2024 Stand by Roster"
+    ],
+    "reporting_org_ref": "DK-CVR-20699310",
+    "transaction_value": [
+      15238279.64
+    ],
+    "activity_date_type": [
+      "2",
+      "4"
+    ],
+    "activity_status_code": "3",
+    "description_narrative": [
+      "DANIDA SPA 2024 SBR"
+    ],
+    "activity_date_iso_date": [
+      "2024-01-01T00:00:00Z",
+      "2024-12-31T00:00:00Z"
+    ],
+    "reporting_org_narrative": [
+      "Danish Refugee Council",
+      "Dansk Flygtningehjaelp"
+    ]
+  },
+  {
+    "sector_code": [
+      "14020"
+    ],
+    "budget_value": [
+      876859.0
+    ],
+    "iati_identifier": "DK-CVR-20699310-DK256476",
+    "title_narrative": [
+      "DANIDA SPA 2025 Top Up Niger"
+    ],
+    "reporting_org_ref": "DK-CVR-20699310",
+    "activity_date_type": [
+      "2",
+      "3"
+    ],
+    "activity_status_code": "2",
+    "description_narrative": [
+      "Support for strengthening resilience and improving the adaptative capacities of vulnerable local communities and systems to climate change and climate-related risks in the Sahel"
+    ],
+    "activity_date_iso_date": [
+      "2025-01-01T00:00:00Z",
+      "2025-12-31T00:00:00Z"
+    ],
+    "recipient_country_code": [
+      "NE"
+    ],
+    "reporting_org_narrative": [
+      "Danish Refugee Council",
+      "Dansk Flygtningehjaelp"
+    ]
+  },
+  {
+    "sector_code": [
+      "43010"
+    ],
+    "budget_value": [
+      155000.0,
+      245704.0,
+      215674.0
+    ],
+    "iati_identifier": "DK-CVR-20699310-DK245460",
+    "title_narrative": [
+      "DANIDA SPA 2024 HQ Flex Innovation"
+    ],
+    "reporting_org_ref": "DK-CVR-20699310",
+    "transaction_value": [
+      155238.0,
+      245701.0,
+      215674.0
+    ],
+    "activity_date_type": [
+      "2",
+      "4"
+    ],
+    "activity_status_code": "3",
+    "description_narrative": [
+      "DANIDA SPA 2024 HQ"
+    ],
+    "activity_date_iso_date": [
+      "2024-01-01T00:00:00Z",
+      "2024-12-31T00:00:00Z"
+    ],
+    "reporting_org_narrative": [
+      "Danish Refugee Council",
+      "Dansk Flygtningehjaelp"
+    ]
+  },
+  {
+    "sector_code": [
+      "15160"
+    ],
+    "budget_value": [
+      1217973.0
+    ],
+    "iati_identifier": "DK-CVR-20699310-DK245116",
+    "title_narrative": [
+      "DANIDA SPA 2024 HQ Colombia Advisor"
+    ],
+    "reporting_org_ref": "DK-CVR-20699310",
+    "transaction_value": [
+      1094300.0
+    ],
+    "activity_date_type": [
+      "2",
+      "4"
+    ],
+    "activity_status_code": "3",
+    "description_narrative": [
+      "DANIDA SPA 2024 FTE PSEAH Advisor based in Colombia"
+    ],
+    "activity_date_iso_date": [
+      "2024-01-01T00:00:00Z",
+      "2024-12-31T00:00:00Z"
+    ],
+    "reporting_org_narrative": [
+      "Danish Refugee Council",
+      "Dansk Flygtningehjaelp"
+    ]
+  },
+  {
+    "sector_code": [
+      "15160",
+      "43010"
+    ],
+    "budget_value": [
+      335000.0,
+      1626683.0
+    ],
+    "iati_identifier": "DK-CVR-20699310-DK245131",
+    "title_narrative": [
+      "DANIDA SPA 2024 EAGL Regional Office"
+    ],
+    "reporting_org_ref": "DK-CVR-20699310",
+    "transaction_value": [
+      127488.0,
+      339870.0,
+      283965.0
+    ],
+    "activity_date_type": [
+      "2",
+      "4"
+    ],
+    "activity_status_code": "3",
+    "description_narrative": [
+      "DANIDA SPA 2024 EAGL Regional Office Kenya"
+    ],
+    "activity_date_iso_date": [
+      "2024-01-01T00:00:00Z",
+      "2024-12-31T00:00:00Z"
+    ],
+    "recipient_country_code": [
+      "CD",
+      "SD"
+    ],
+    "reporting_org_narrative": [
+      "Danish Refugee Council",
+      "Dansk Flygtningehjaelp"
+    ]
+  },
+  {
+    "sector_code": [
+      "72010"
+    ],
+    "budget_value": [
+      2344766.0,
+      2104568.0
+    ],
+    "iati_identifier": "DK-CVR-20699310-DK234946",
+    "title_narrative": [
+      "Danida SPA 2023 Top-up East Africa"
+    ],
+    "reporting_org_ref": "DK-CVR-20699310",
+    "transaction_value": [
+      220199.0,
+      2500000.0,
+      2094875.0
+    ],
+    "activity_date_type": [
+      "2",
+      "1",
+      "3"
+    ],
+    "activity_status_code": "2",
+    "description_narrative": [
+      "Danida SPA top-up focused on East Africa (Kenya - Tanzania and Uganda) and LGBT+"
+    ],
+    "activity_date_iso_date": [
+      "2023-08-01T00:00:00Z",
+      "2023-08-01T00:00:00Z",
+      "2025-01-31T00:00:00Z"
+    ],
+    "recipient_country_code": [
+      "KE"
+    ],
+    "reporting_org_narrative": [
+      "Danish Refugee Council",
+      "Dansk Flygtningehjaelp"
+    ]
+  },
+  {
+    "sector_code": [
+      "43010",
+      "15220"
+    ],
+    "budget_value": [
+      4658648.0
+    ],
+    "iati_identifier": "DK-CVR-20699310-DK255031",
+    "title_narrative": [
+      "Danida SPA 2023 Top-up - Afghanistan"
+    ],
+    "reporting_org_ref": "DK-CVR-20699310",
+    "transaction_value": [
+      4610897.0
+    ],
+    "activity_date_type": [
+      "2",
+      "1",
+      "3"
+    ],
+    "activity_status_code": "2",
+    "description_narrative": [
+      "N/a"
+    ],
+    "activity_date_iso_date": [
+      "2024-01-01T00:00:00Z",
+      "2024-01-01T00:00:00Z",
+      "2024-12-31T00:00:00Z"
+    ],
+    "recipient_country_code": [
+      "AF",
+      "DK"
+    ],
+    "reporting_org_narrative": [
+      "Danish Refugee Council",
+      "Dansk Flygtningehjaelp"
+    ]
+  },
+  {
+    "sector_code": [
+      "15160"
+    ],
+    "budget_value": [
+      4412473.0
+    ],
+    "iati_identifier": "DK-CVR-20699310-DK245133",
+    "title_narrative": [
+      "DANIDA SPA 2024 EAGL Ethiopia"
+    ],
+    "reporting_org_ref": "DK-CVR-20699310",
+    "transaction_value": [
+      444770.0,
+      3939987.0
+    ],
+    "activity_date_type": [
+      "2",
+      "4"
+    ],
+    "activity_status_code": "3",
+    "description_narrative": [
+      "DANIDA SPA 2024 EAGL Ethiopia"
+    ],
+    "activity_date_iso_date": [
+      "2024-01-01T00:00:00Z",
+      "2024-12-31T00:00:00Z"
+    ],
+    "recipient_country_code": [
+      "ET"
+    ],
+    "reporting_org_narrative": [
+      "Danish Refugee Council",
+      "Dansk Flygtningehjaelp"
+    ]
+  },
+  {
+    "sector_code": [
+      "72010",
+      "43010"
+    ],
+    "budget_value": [
+      5418489.0
+    ],
+    "iati_identifier": "DK-CVR-20699310-DK245144",
+    "title_narrative": [
+      "DANIDA SPA 2024 Rohinghya Bangladesh"
+    ],
+    "reporting_org_ref": "DK-CVR-20699310",
+    "transaction_value": [
+      781397.0,
+      4636967.0
+    ],
+    "activity_date_type": [
+      "2",
+      "4"
+    ],
+    "activity_status_code": "3",
+    "description_narrative": [
+      "Danida SPA 2024 for Bangladesh and Myanmar Axis"
+    ],
+    "activity_date_iso_date": [
+      "2024-01-01T00:00:00Z",
+      "2024-12-31T00:00:00Z"
+    ],
+    "recipient_country_code": [
+      "BD"
+    ],
+    "reporting_org_narrative": [
+      "Danish Refugee Council",
+      "Dansk Flygtningehjaelp"
+    ]
+  },
+  {
+    "sector_code": [
+      "15220",
+      "43010"
+    ],
+    "budget_value": [
+      2940712.0
+    ],
+    "iati_identifier": "DK-CVR-20699310-DK245725",
+    "title_narrative": [
+      "DANIDA Flex Gaza Emergency Response 2024"
+    ],
+    "reporting_org_ref": "DK-CVR-20699310",
+    "transaction_value": [
+      1733701.0
+    ],
+    "activity_date_type": [
+      "2",
+      "4"
+    ],
+    "activity_status_code": "3",
+    "description_narrative": [
+      "Life-saving assistance to conflict-affected girls, boys, women, and men in Gaza through the delivery of food items and EORE in partnership with Palestinian and Jordanian civil society actors"
+    ],
+    "activity_date_iso_date": [
+      "2024-01-01T00:00:00Z",
+      "2024-12-31T00:00:00Z"
+    ],
+    "recipient_country_code": [
+      "PS"
+    ],
+    "reporting_org_narrative": [
+      "Danish Refugee Council",
+      "Dansk Flygtningehjaelp"
+    ]
+  },
+  {
+    "sector_code": [
+      "43010",
+      "15160"
+    ],
+    "budget_value": [
+      3147269.0
+    ],
+    "iati_identifier": "DK-CVR-20699310-DK245146",
+    "title_narrative": [
+      "DANIDA SPA 2024 Sahel Crisis Niger"
+    ],
+    "reporting_org_ref": "DK-CVR-20699310",
+    "transaction_value": [
+      622828.0,
+      2484000.0
+    ],
+    "activity_date_type": [
+      "2",
+      "4"
+    ],
+    "activity_status_code": "3",
+    "description_narrative": [
+      "Enhancing protection, social cohesion and addressing basic needs in response to the rise in displacement across Central Sahel"
+    ],
+    "activity_date_iso_date": [
+      "2024-01-01T00:00:00Z",
+      "2024-12-31T00:00:00Z"
+    ],
+    "recipient_country_code": [
+      "NE"
+    ],
+    "reporting_org_narrative": [
+      "Danish Refugee Council",
+      "Dansk Flygtningehjaelp"
+    ]
+  },
+  {
+    "sector_code": [
+      "15160",
+      "43010"
+    ],
+    "budget_value": [
+      6131210.0
+    ],
+    "iati_identifier": "DK-CVR-20699310-DK245121",
+    "title_narrative": [
+      "DANIDA SPA 2024 Syria"
+    ],
+    "reporting_org_ref": "DK-CVR-20699310",
+    "transaction_value": [
+      5970285.0
+    ],
+    "activity_date_type": [
+      "2",
+      "4"
+    ],
+    "activity_status_code": "3",
+    "description_narrative": [
+      "DANIDA SPA 2024 Syria"
+    ],
+    "activity_date_iso_date": [
+      "2024-01-01T00:00:00Z",
+      "2024-12-20T00:00:00Z"
+    ],
+    "recipient_country_code": [
+      "SY"
+    ],
+    "reporting_org_narrative": [
+      "Danish Refugee Council",
+      "Dansk Flygtningehjaelp"
+    ]
+  },
+  {
+    "sector_code": [
+      "43010"
+    ],
+    "budget_value": [
+      4878112.0
+    ],
+    "iati_identifier": "DK-CVR-20699310-DK245126",
+    "title_narrative": [
+      "DANIDA SPA 2024 Yemen"
+    ],
+    "reporting_org_ref": "DK-CVR-20699310",
+    "transaction_value": [
+      1202185.0,
+      3460190.0
+    ],
+    "activity_date_type": [
+      "2",
+      "4"
+    ],
+    "activity_status_code": "3",
+    "description_narrative": [
+      "DANIDA SPA 2024 Yemen"
+    ],
+    "activity_date_iso_date": [
+      "2024-01-01T00:00:00Z",
+      "2024-12-31T00:00:00Z"
+    ],
+    "recipient_country_code": [
+      "YE"
+    ],
+    "reporting_org_narrative": [
+      "Danish Refugee Council",
+      "Dansk Flygtningehjaelp"
+    ]
+  },
+  {
+    "sector_code": [
+      "15160",
+      "15220",
+      "43010"
+    ],
+    "budget_value": [
+      4028372.0
+    ],
+    "iati_identifier": "DK-CVR-20699310-DK245130",
+    "title_narrative": [
+      "DANIDA SPA 2024 EAGL Somalia"
+    ],
+    "reporting_org_ref": "DK-CVR-20699310",
+    "transaction_value": [
+      779327.0,
+      3241228.0
+    ],
+    "activity_date_type": [
+      "2",
+      "4"
+    ],
+    "activity_status_code": "3",
+    "description_narrative": [
+      "DANIDA SPA 2024 EAGL"
+    ],
+    "activity_date_iso_date": [
+      "2024-01-01T00:00:00Z",
+      "2024-12-31T00:00:00Z"
+    ],
+    "recipient_country_code": [
+      "SO"
+    ],
+    "reporting_org_narrative": [
+      "Danish Refugee Council",
+      "Dansk Flygtningehjaelp"
+    ]
+  },
+  {
+    "sector_code": [
+      "15160",
+      "15220",
+      "43010"
+    ],
+    "budget_value": [
+      5055221.0
+    ],
+    "iati_identifier": "DK-CVR-20699310-DK256001",
+    "title_narrative": [
+      "DANIDA SPA 2024 Sahel Crisis Burkina Faso"
+    ],
+    "reporting_org_ref": "DK-CVR-20699310",
+    "transaction_value": [
+      1335562.0,
+      3723407.0
+    ],
+    "activity_date_type": [
+      "2",
+      "4"
+    ],
+    "activity_status_code": "3",
+    "description_narrative": [
+      "DANIDA SPA 2025 Sahel Crisis"
+    ],
+    "activity_date_iso_date": [
+      "2024-01-01T00:00:00Z",
+      "2024-12-31T00:00:00Z"
+    ],
+    "recipient_country_code": [
+      "BF"
+    ],
+    "reporting_org_narrative": [
+      "Danish Refugee Council",
+      "Dansk Flygtningehjaelp"
+    ]
+  },
+  {
+    "sector_code": [
+      "15160"
+    ],
+    "budget_value": [
+      7146208.0
+    ],
+    "iati_identifier": "DK-CVR-20699310-DK245151",
+    "title_narrative": [
+      "DANIDA SPA 2024 CAR Crisis Cameroon"
+    ],
+    "reporting_org_ref": "DK-CVR-20699310",
+    "transaction_value": [
+      798461.0,
+      5463542.0
+    ],
+    "activity_date_type": [
+      "2",
+      "3"
+    ],
+    "activity_status_code": "3",
+    "description_narrative": [
+      "DANIDA SPA 2024 CAR Crisis"
+    ],
+    "activity_date_iso_date": [
+      "2024-01-01T00:00:00Z",
+      "2024-12-31T00:00:00Z"
+    ],
+    "recipient_country_code": [
+      "CM"
+    ],
+    "reporting_org_narrative": [
+      "Danish Refugee Council",
+      "Dansk Flygtningehjaelp"
+    ]
+  },
+  {
+    "sector_code": [
+      "72050"
+    ],
+    "budget_value": [
+      28283949.0
+    ],
+    "iati_identifier": "DK-CVR-20699310-DK19953",
+    "title_narrative": [
+      "Danida HUM 2019: Emergency Pool/Flexible Funds"
+    ],
+    "reporting_org_ref": "DK-CVR-20699310",
+    "transaction_value": [
+      13000000.0,
+      2102.0,
+      3188365.0,
+      4944946.0,
+      3852009.0,
+      4342519.0,
+      1333631.0,
+      13000000.0,
+      6955.0
+    ],
+    "activity_date_type": [
+      "2",
+      "4",
+      "1",
+      "3"
+    ],
+    "activity_status_code": "3",
+    "description_narrative": [
+      "This grant supports DRC's Emergency pool and provides flexible funds to respond efficiently to rapidly changing contexts.",
+      "There has been a transfer of unspent funds from 2018 to supplement the 2019 budget, and subject to the level of expenditure for 2019, the unspent funds will be transferred to the 2020 grant."
+    ],
+    "activity_date_iso_date": [
+      "2019-01-01T00:00:00Z",
+      "2019-12-31T00:00:00Z",
+      "2019-01-01T00:00:00Z",
+      "2019-12-31T00:00:00Z"
+    ],
+    "recipient_country_code": [
+      "AF",
+      "BF",
+      "CM",
+      "DK",
+      "SS"
+    ],
+    "reporting_org_narrative": [
+      "Danish Refugee Council",
+      "Dansk Flygtningehjaelp"
+    ]
+  },
+  {
+    "sector_code": [
+      "43071",
+      "74010",
+      "15160"
+    ],
+    "budget_value": [
+      17925000.0
+    ],
+    "iati_identifier": "DK-CVR-20699310-DK1925",
+    "title_narrative": [
+      "Danida HUM 2019: Afghanistan"
+    ],
+    "reporting_org_ref": "DK-CVR-20699310",
+    "transaction_value": [
+      16500000.0,
+      1173876.0,
+      2001912.0,
+      2950619.0,
+      3933725.0,
+      7421507.0,
+      2167393.0
+    ],
+    "activity_date_type": [
+      "2",
+      "1",
+      "3",
+      "4"
+    ],
+    "activity_status_code": "4",
+    "description_narrative": [
+      "DRC's Danida supported programme in Afghanistan for 2019"
+    ],
+    "activity_date_iso_date": [
+      "2019-01-01T00:00:00Z",
+      "2019-01-01T00:00:00Z",
+      "2019-12-31T00:00:00Z",
+      "2019-12-31T00:00:00Z"
+    ],
+    "recipient_country_code": [
+      "AF",
+      "MM"
+    ],
+    "reporting_org_narrative": [
+      "Danish Refugee Council",
+      "Dansk Flygtningehjaelp"
+    ]
+  },
+  {
+    "sector_code": [
+      "15160"
+    ],
+    "budget_value": [
+      6000000.0
+    ],
+    "iati_identifier": "DK-CVR-20699310-DK19524",
+    "title_narrative": [
+      "Danida HUM 2019: Asia Regional Office"
+    ],
+    "reporting_org_ref": "DK-CVR-20699310",
+    "transaction_value": [
+      3000000.0,
+      631300.0,
+      3000000.0,
+      819846.0,
+      1390541.0,
+      1763794.0,
+      746676.0
+    ],
+    "activity_date_type": [
+      "2",
+      "4",
+      "1",
+      "3"
+    ],
+    "activity_status_code": "2",
+    "description_narrative": [
+      "Supporting the Transition from Relief through Rehabilitation to Development for the Afghan Displacement Axis."
+    ],
+    "activity_date_iso_date": [
+      "2019-01-01T00:00:00Z",
+      "2019-12-31T00:00:00Z",
+      "2019-01-01T00:00:00Z",
+      "2019-12-31T00:00:00Z"
+    ],
+    "recipient_country_code": [
+      "AF",
+      "MM",
+      "DK"
+    ],
+    "reporting_org_narrative": [
+      "Danish Refugee Council",
+      "Dansk Flygtningehjaelp"
+    ]
+  },
+  {
+    "sector_code": [
+      "15250",
+      "72010"
+    ],
+    "budget_value": [
+      2912350.0
+    ],
+    "iati_identifier": "DK-CVR-20699310-DK19649",
+    "title_narrative": [
+      "Danida HUM 2019: Iraq"
+    ],
+    "reporting_org_ref": "DK-CVR-20699310",
+    "transaction_value": [
+      1400000.0,
+      1400000.0,
+      279525.0,
+      462781.0,
+      711907.0,
+      1265060.0,
+      118774.0
+    ],
+    "activity_date_type": [
+      "2",
+      "4",
+      "1",
+      "3"
+    ],
+    "activity_status_code": "4",
+    "description_narrative": [
+      "Community-driven recovery and safety in conflict- and displacement-affected areas in Iraq.",
+      "There has been a transfer of unspent funds from 2018 to supplement the 2019 budget, and subject to 2019 expenditure the unspent funds will be transferred to the 2020 grant."
+    ],
+    "activity_date_iso_date": [
+      "2019-01-01T00:00:00Z",
+      "2019-12-31T00:00:00Z",
+      "2019-01-01T00:00:00Z",
+      "2019-12-31T00:00:00Z"
+    ],
+    "recipient_country_code": [
+      "IQ"
+    ],
+    "reporting_org_narrative": [
+      "Danish Refugee Council",
+      "Dansk Flygtningehjaelp"
+    ]
+  },
+  {
+    "sector_code": [
+      "15160"
+    ],
+    "budget_value": [
+      3500000.0
+    ],
+    "iati_identifier": "DK-CVR-20699310-DK19720",
+    "title_narrative": [
+      "Danida 2019: Policy Engagement"
+    ],
+    "reporting_org_ref": "DK-CVR-20699310",
+    "transaction_value": [
+      1750000.0,
+      544449.0,
+      700545.0,
+      651482.0,
+      1750000.0,
+      1140108.0,
+      13910.0
+    ],
+    "activity_date_type": [
+      "2",
+      "4",
+      "1",
+      "3"
+    ],
+    "activity_status_code": "4",
+    "description_narrative": [
+      "Policy engagement areas led by DRC HQ across operations."
+    ],
+    "activity_date_iso_date": [
+      "2019-01-01T00:00:00Z",
+      "2019-12-31T00:00:00Z",
+      "2019-01-01T00:00:00Z",
+      "2019-12-31T00:00:00Z"
+    ],
+    "recipient_country_code": [
+      "DK"
+    ],
+    "reporting_org_narrative": [
+      "Danish Refugee Council",
+      "Dansk Flygtningehjaelp"
+    ]
+  },
+  {
+    "sector_code": [
+      "72010",
+      "16020",
+      "15160"
+    ],
+    "budget_value": [
+      8000000.0
+    ],
+    "iati_identifier": "DK-CVR-20699310-DK191239",
+    "title_narrative": [
+      "Danida 2019: Innovation Framework"
+    ],
+    "reporting_org_ref": "DK-CVR-20699310",
+    "transaction_value": [
+      18650.0,
+      221677.0,
+      228298.0,
+      1031509.0,
+      4000000.0,
+      634555.0,
+      119574.0,
+      4000000.0
+    ],
+    "activity_date_type": [
+      "2",
+      "4",
+      "1",
+      "3"
+    ],
+    "activity_status_code": "4",
+    "description_narrative": [
+      "Supporting the work of DRC's Innovation framework.",
+      "Subject to 2019 expenditure, any unspent funds may be transferred to the 2020-2021 iteration of this grant."
+    ],
+    "activity_date_iso_date": [
+      "2019-10-01T00:00:00Z",
+      "2019-12-31T00:00:00Z",
+      "2019-10-01T00:00:00Z",
+      "2019-12-31T00:00:00Z"
+    ],
+    "recipient_country_code": [
+      "BI",
+      "DK",
+      "KE",
+      "JO",
+      "SN"
+    ],
+    "reporting_org_narrative": [
+      "Danish Refugee Council",
+      "Dansk Flygtningehjaelp"
+    ]
+  },
+  {
+    "sector_code": [
+      "72050"
+    ],
+    "budget_value": [
+      1707654.0
+    ],
+    "iati_identifier": "DK-CVR-20699310-DK191790",
+    "title_narrative": [
+      "Danida HUM 2019: HQ Technical Support"
+    ],
+    "reporting_org_ref": "DK-CVR-20699310",
+    "transaction_value": [
+      241067.0,
+      182414.0,
+      197060.0,
+      1087113.0,
+      9875.0
+    ],
+    "activity_date_type": [
+      "2",
+      "4",
+      "1",
+      "3"
+    ],
+    "activity_status_code": "4",
+    "description_narrative": [
+      "Fund reallocation from 2018"
+    ],
+    "activity_date_iso_date": [
+      "2019-01-01T00:00:00Z",
+      "2019-12-31T00:00:00Z",
+      "2019-01-01T00:00:00Z",
+      "2019-12-31T00:00:00Z"
+    ],
+    "recipient_country_code": [
+      "DK"
+    ],
+    "reporting_org_narrative": [
+      "Danish Refugee Council",
+      "Dansk Flygtningehjaelp"
+    ]
+  },
+  {
+    "sector_code": [
+      "72010"
+    ],
+    "budget_value": [
+      20579858.0
+    ],
+    "iati_identifier": "DK-CVR-20699310-DK1940",
+    "title_narrative": [
+      "DANIDA HUM 2019: Multi-sectoral humanitarian and resilience assistance across South Sudan"
+    ],
+    "reporting_org_ref": "DK-CVR-20699310",
+    "transaction_value": [
+      3258049.0,
+      4991605.0,
+      5613132.0,
+      6445421.0,
+      10250000.0,
+      10250000.0,
+      462077.0
+    ],
+    "activity_date_type": [
+      "2",
+      "1",
+      "3",
+      "4"
+    ],
+    "activity_status_code": "4",
+    "description_narrative": [
+      "Multi-sectoral humanitarian and resilience assistance across South Sudan"
+    ],
+    "activity_date_iso_date": [
+      "2019-01-01T00:00:00Z",
+      "2019-01-01T00:00:00Z",
+      "2019-12-31T00:00:00Z",
+      "2019-12-31T00:00:00Z"
+    ],
+    "recipient_country_code": [
+      "KE",
+      "SS"
+    ],
+    "reporting_org_narrative": [
+      "Danish Refugee Council",
+      "Dansk Flygtningehjaelp"
+    ]
+  },
+  {
+    "sector_code": [
+      "15160"
+    ],
+    "budget_value": [
+      19550000.0
+    ],
+    "iati_identifier": "DK-CVR-20699310-DK201715",
+    "title_narrative": [
+      "Danida HUM 2020: Emergency pool"
+    ],
+    "reporting_org_ref": "DK-CVR-20699310",
+    "transaction_value": [
+      19790.0,
+      3092671.0,
+      3967527.0,
+      5065404.0,
+      13000000.0,
+      -11155.0,
+      4398210.0,
+      -9827.0,
+      13000000.0
+    ],
+    "activity_date_type": [
+      "2",
+      "1",
+      "4"
+    ],
+    "activity_status_code": "4",
+    "description_narrative": [
+      "Funding for Emergency Response and Emergency Roster funds",
+      "This grant has now been divided into two as of 2021, and can be accessed via the related activity section."
+    ],
+    "activity_date_iso_date": [
+      "2020-01-01T00:00:00Z",
+      "2020-01-01T00:00:00Z",
+      "2020-12-31T00:00:00Z"
+    ],
+    "recipient_country_code": [
+      "BI",
+      "DK",
+      "MM",
+      "UG"
+    ],
+    "reporting_org_narrative": [
+      "Danish Refugee Council",
+      "Dansk Flygtningehjaelp"
+    ]
+  },
+  {
+    "sector_code": [
+      "43010"
+    ],
+    "budget_value": [
+      11610000.0
+    ],
+    "iati_identifier": "DK-CVR-20699310-DK234236",
+    "title_narrative": [
+      "DANIDA SPA 2023 Jordan"
+    ],
+    "reporting_org_ref": "DK-CVR-20699310",
+    "transaction_value": [
+      378288.0,
+      6588355.0
+    ],
+    "activity_date_type": [
+      "1",
+      "2",
+      "3",
+      "4"
+    ],
+    "activity_status_code": "3",
+    "description_narrative": [
+      "Both ME RO allocation and Jordan CO allocation part of the SPA Syria Crisis multi-country programme"
+    ],
+    "activity_date_iso_date": [
+      "2023-01-01T00:00:00Z",
+      "2023-01-01T00:00:00Z",
+      "2023-12-31T00:00:00Z",
+      "2023-12-31T00:00:00Z"
+    ],
+    "recipient_country_code": [
+      "JO"
+    ],
+    "reporting_org_narrative": [
+      "Danish Refugee Council",
+      "Dansk Flygtningehjaelp"
+    ]
+  },
+  {
+    "sector_code": [
+      "43010",
+      "15160"
+    ],
+    "budget_value": [
+      5024769.0
+    ],
+    "iati_identifier": "DK-CVR-20699310-DK234234",
+    "title_narrative": [
+      "DANIDA SPA 2023 Turkey"
+    ],
+    "reporting_org_ref": "DK-CVR-20699310",
+    "transaction_value": [
+      4301124.0,
+      550994.0
+    ],
+    "activity_date_type": [
+      "1",
+      "2",
+      "3",
+      "4"
+    ],
+    "activity_status_code": "3",
+    "description_narrative": [
+      "DANIDA SPA 2023 ME Turkey"
+    ],
+    "activity_date_iso_date": [
+      "2023-01-01T00:00:00Z",
+      "2023-01-01T00:00:00Z",
+      "2023-12-31T00:00:00Z",
+      "2023-12-31T00:00:00Z"
+    ],
+    "recipient_country_code": [
+      "TR"
+    ],
+    "reporting_org_narrative": [
+      "Danish Refugee Council",
+      "Dansk Flygtningehjaelp"
+    ]
+  },
+  {
+    "sector_code": [
+      "43010",
+      "15160"
+    ],
+    "budget_value": [
+      4766736.0
+    ],
+    "iati_identifier": "DK-CVR-20699310-DK234282",
+    "title_narrative": [
+      "DANIDA SPA 2023 Rohingya Bangladesh"
+    ],
+    "reporting_org_ref": "DK-CVR-20699310",
+    "transaction_value": [
+      4056880.0,
+      387808.0
+    ],
+    "activity_date_type": [
+      "1",
+      "2",
+      "3",
+      "4"
+    ],
+    "activity_status_code": "3",
+    "description_narrative": [
+      "Part of the Rohingya Crisis concept note for the Danida SPA 2022-25"
+    ],
+    "activity_date_iso_date": [
+      "2023-01-01T00:00:00Z",
+      "2023-01-01T00:00:00Z",
+      "2023-12-31T00:00:00Z",
+      "2023-12-31T00:00:00Z"
+    ],
+    "recipient_country_code": [
+      "BD"
+    ],
+    "reporting_org_narrative": [
+      "Danish Refugee Council",
+      "Dansk Flygtningehjaelp"
+    ]
+  },
+  {
+    "sector_code": [
+      "15220",
+      "15160"
+    ],
+    "budget_value": [
+      795817.0
+    ],
+    "iati_identifier": "DK-CVR-20699310-DK234604",
+    "title_narrative": [
+      "DANIDA SPA 2023 Mandera Triangle Kenya"
+    ],
+    "reporting_org_ref": "DK-CVR-20699310",
+    "transaction_value": [
+      795817.08
+    ],
+    "activity_date_type": [
+      "1",
+      "2",
+      "3",
+      "4"
+    ],
+    "activity_status_code": "3",
+    "description_narrative": [
+      "Kenya grant of the Danida SPA 2023 Mandera Triangle programme covering Ethiopia, Kenya and Somalia"
+    ],
+    "activity_date_iso_date": [
+      "2023-01-01T00:00:00Z",
+      "2023-01-01T00:00:00Z",
+      "2023-12-31T00:00:00Z",
+      "2023-12-31T00:00:00Z"
+    ],
+    "recipient_country_code": [
+      "KE"
+    ],
+    "reporting_org_narrative": [
+      "Danish Refugee Council",
+      "Dansk Flygtningehjaelp"
+    ]
+  },
+  {
+    "sector_code": [
+      "43010",
+      "15160",
+      "15220"
+    ],
+    "budget_value": [
+      1050894.07
+    ],
+    "iati_identifier": "DK-CVR-20699310-DK234601",
+    "title_narrative": [
+      "DANIDA SPA 2023 Gambella Jonglei South Sudan"
+    ],
+    "reporting_org_ref": "DK-CVR-20699310",
+    "transaction_value": [
+      1018505.0
+    ],
+    "activity_date_type": [
+      "1",
+      "2",
+      "3",
+      "4"
+    ],
+    "activity_status_code": "4",
+    "description_narrative": [
+      "This is part of the Gambella-Jonglei Borderlands project of the Danida SPA 2023 covering South Sudan and Ethiopia."
+    ],
+    "activity_date_iso_date": [
+      "2023-01-01T00:00:00Z",
+      "2023-01-01T00:00:00Z",
+      "2023-12-31T00:00:00Z",
+      "2023-12-31T00:00:00Z"
+    ],
+    "recipient_country_code": [
+      "SS"
+    ],
+    "reporting_org_narrative": [
+      "Danish Refugee Council",
+      "Dansk Flygtningehjaelp"
+    ]
+  },
+  {
+    "sector_code": [
+      "43010",
+      "15160",
+      "72010"
+    ],
+    "budget_value": [
+      2324261.0
+    ],
+    "iati_identifier": "DK-CVR-20699310-DK234632",
+    "title_narrative": [
+      "DANIDA SPA 2023 Top Up Syria Earthquake"
+    ],
+    "reporting_org_ref": "DK-CVR-20699310",
+    "transaction_value": [
+      2323941.0
+    ],
+    "activity_date_type": [
+      "1",
+      "2",
+      "3",
+      "4"
+    ],
+    "activity_status_code": "4",
+    "description_narrative": [
+      "Syria Earthquake response - Danida SPA top-up 2023 / 6 month NCE has been granted"
+    ],
+    "activity_date_iso_date": [
+      "2023-03-01T00:00:00Z",
+      "2023-03-01T00:00:00Z",
+      "2023-05-09T00:00:00Z",
+      "2023-11-09T00:00:00Z"
+    ],
+    "recipient_country_code": [
+      "SY"
+    ],
+    "reporting_org_narrative": [
+      "Danish Refugee Council",
+      "Dansk Flygtningehjaelp"
+    ]
+  },
+  {
+    "sector_code": [
+      "72010"
+    ],
+    "budget_value": [
+      4659147.0
+    ],
+    "iati_identifier": "DK-CVR-20699310-DK234629",
+    "title_narrative": [
+      "DANIDA SPA 2023 Top Up Turkey Earthquake Response"
+    ],
+    "reporting_org_ref": "DK-CVR-20699310",
+    "transaction_value": [
+      4659147.0
+    ],
+    "activity_date_type": [
+      "1",
+      "2",
+      "3",
+      "4"
+    ],
+    "activity_status_code": "4",
+    "description_narrative": [
+      "Danida SPA 2023 top-up towards the Turkey Earthquake Response"
+    ],
+    "activity_date_iso_date": [
+      "2023-02-01T00:00:00Z",
+      "2023-02-01T00:00:00Z",
+      "2023-12-31T00:00:00Z",
+      "2023-12-31T00:00:00Z"
+    ],
+    "recipient_country_code": [
+      "TR"
+    ],
+    "reporting_org_narrative": [
+      "Danish Refugee Council",
+      "Dansk Flygtningehjaelp"
+    ]
+  },
+  {
+    "sector_code": [
+      "72010",
+      "15160"
+    ],
+    "budget_value": [
+      2329517.12
+    ],
+    "iati_identifier": "DK-CVR-20699310-DK1926",
+    "title_narrative": [
+      "Danida CIV 2019: Afghanistan"
+    ],
+    "reporting_org_ref": "DK-CVR-20699310",
+    "transaction_value": [
+      85272.0,
+      1250000.0,
+      142102.0,
+      427138.0,
+      1546130.0,
+      642032.0,
+      1279517.12
+    ],
+    "activity_date_type": [
+      "2",
+      "4",
+      "1",
+      "3"
+    ],
+    "activity_status_code": "4",
+    "description_narrative": [
+      "Supporting capacity to participate in the solutions for Afghans affected by displacement",
+      "Subject to 2019 expenditure, any unspent funds may be transferred to the 2020-2021 iteration of this grant."
+    ],
+    "activity_date_iso_date": [
+      "2019-01-01T00:00:00Z",
+      "2019-12-31T00:00:00Z",
+      "2019-01-01T00:00:00Z",
+      "2019-12-31T00:00:00Z"
+    ],
+    "recipient_country_code": [
+      "AF",
+      "DK",
+      "MM"
+    ],
+    "reporting_org_narrative": [
+      "Danish Refugee Council",
+      "Dansk Flygtningehjaelp"
+    ]
+  },
+  {
+    "sector_code": [
+      "15160"
+    ],
+    "budget_value": [
+      1553515.0,
+      1553515.0
+    ],
+    "iati_identifier": "DK-CVR-20699310-DK211709",
+    "title_narrative": [
+      "Danida CIV 2020-2021: Middle East Regional Office"
+    ],
+    "reporting_org_ref": "DK-CVR-20699310",
+    "transaction_value": [
+      762500.0,
+      116256.0,
+      310603.0,
+      148568.0,
+      762500.0,
+      337542.0,
+      178509.0,
+      712500.0,
+      363051.0,
+      474951.0,
+      712500.0,
+      1166538.0,
+      11226.0
+    ],
+    "activity_date_type": [
+      "2",
+      "4",
+      "1",
+      "3"
+    ],
+    "activity_status_code": "4",
+    "description_narrative": [
+      "Regional overview of the Middle East"
+    ],
+    "activity_date_iso_date": [
+      "2020-01-01T00:00:00Z",
+      "2021-12-31T00:00:00Z",
+      "2020-01-01T00:00:00Z",
+      "2020-12-31T00:00:00Z"
+    ],
+    "recipient_country_code": [
+      "DK",
+      "JO"
+    ],
+    "reporting_org_narrative": [
+      "Danish Refugee Council",
+      "Dansk Flygtningehjaelp"
+    ]
+  },
+  {
+    "sector_code": [
+      "72010"
+    ],
+    "budget_value": [
+      3164890.0,
+      3164890.0
+    ],
+    "iati_identifier": "DK-CVR-20699310-DK211705",
+    "title_narrative": [
+      "Danida CIV 2020-2021: Iraq"
+    ],
+    "reporting_org_ref": "DK-CVR-20699310",
+    "transaction_value": [
+      190697.0,
+      1500000.0,
+      463542.0,
+      591585.0,
+      34086.0,
+      371740.0,
+      1500000.0,
+      691523.0,
+      1500000.0,
+      865988.0,
+      1178196.0,
+      1500000.0,
+      1647860.0,
+      256150.0
+    ],
+    "activity_date_type": [
+      "2",
+      "4",
+      "1",
+      "3"
+    ],
+    "activity_status_code": "4",
+    "description_narrative": [
+      "Supporting a strong and diversified civil society to vocally advocate for more equitable decision-making and service delivery in Baiji and Tel Afar"
+    ],
+    "activity_date_iso_date": [
+      "2020-01-01T00:00:00Z",
+      "2021-12-31T00:00:00Z",
+      "2020-01-01T00:00:00Z",
+      "2021-12-31T00:00:00Z"
+    ],
+    "recipient_country_code": [
+      "IQ",
+      "JO"
+    ],
+    "reporting_org_narrative": [
+      "Danish Refugee Council",
+      "Dansk Flygtningehjaelp"
+    ]
+  },
+  {
+    "sector_code": [
+      "43010",
+      "15160",
+      "72010"
+    ],
+    "budget_value": [
+      2400000.0,
+      2400000.0
+    ],
+    "iati_identifier": "DK-CVR-20699310-DK211704",
+    "title_narrative": [
+      "Danida CIV 2020-2021: Afghanistan"
+    ],
+    "reporting_org_ref": "DK-CVR-20699310",
+    "transaction_value": [
+      184748.0,
+      1300000.0,
+      628298.0,
+      1300000.0,
+      984451.0,
+      1250000.0,
+      657221.0,
+      684114.0,
+      1250000.0,
+      546974.0,
+      114458.0
+    ],
+    "activity_date_type": [
+      "2",
+      "4",
+      "1",
+      "3"
+    ],
+    "activity_status_code": "3",
+    "description_narrative": [
+      "Please refer to DRC's Open Information Policy regarding publication of financial and project level data for this programme."
+    ],
+    "activity_date_iso_date": [
+      "2020-01-01T00:00:00Z",
+      "2021-12-31T00:00:00Z",
+      "2020-01-01T00:00:00Z",
+      "2020-12-31T00:00:00Z"
+    ],
+    "recipient_country_code": [
+      "AF"
+    ],
+    "reporting_org_narrative": [
+      "Danish Refugee Council",
+      "Dansk Flygtningehjaelp"
+    ]
+  },
+  {
+    "sector_code": [
+      "15160"
+    ],
+    "budget_value": [
+      1428965.0,
+      1428965.0
+    ],
+    "iati_identifier": "DK-CVR-20699310-DK211708",
+    "title_narrative": [
+      "Danida CIV 2020-2021: Turkey"
+    ],
+    "reporting_org_ref": "DK-CVR-20699310",
+    "transaction_value": [
+      395470.0,
+      12960.0,
+      837500.0,
+      136818.0,
+      227648.0,
+      837500.0,
+      384673.0,
+      787500.0,
+      129839.0,
+      495650.0,
+      787500.0,
+      1073865.0,
+      1232.0
+    ],
+    "activity_date_type": [
+      "2",
+      "4",
+      "1",
+      "3"
+    ],
+    "activity_status_code": "4",
+    "description_narrative": [
+      "Promoting social and economic self-reliance and physical safety of conflict-affected populations in Jordan - Lebanon - Syria and Turkey"
+    ],
+    "activity_date_iso_date": [
+      "2020-01-01T00:00:00Z",
+      "2021-12-31T00:00:00Z",
+      "2020-01-01T00:00:00Z",
+      "2021-12-31T00:00:00Z"
+    ],
+    "recipient_country_code": [
+      "TR"
+    ],
+    "reporting_org_narrative": [
+      "Danish Refugee Council",
+      "Dansk Flygtningehjaelp"
+    ]
+  },
+  {
+    "sector_code": [
+      "72010"
+    ],
+    "budget_value": [
+      5550000.0,
+      5550000.0
+    ],
+    "iati_identifier": "DK-CVR-20699310-DK211706",
+    "title_narrative": [
+      "Danida CIV 2020-2021: Diaspora Programme"
+    ],
+    "reporting_org_ref": "DK-CVR-20699310",
+    "transaction_value": [
+      1249109.0,
+      2800000.0,
+      894169.0,
+      1665395.0,
+      2800000.0,
+      2120185.0,
+      592009.0,
+      2750000.0,
+      3465359.0,
+      346970.0,
+      2750000.0
+    ],
+    "activity_date_type": [
+      "2",
+      "1",
+      "3"
+    ],
+    "activity_status_code": "4",
+    "description_narrative": [
+      "Funding for the HQ Diaspora Programme"
+    ],
+    "activity_date_iso_date": [
+      "2020-01-01T00:00:00Z",
+      "2020-01-01T00:00:00Z",
+      "2021-12-31T00:00:00Z"
+    ],
+    "recipient_country_code": [
+      "DK",
+      "SO"
+    ],
+    "reporting_org_narrative": [
+      "Danish Refugee Council",
+      "Dansk Flygtningehjaelp"
+    ]
+  },
+  {
+    "sector_code": [
+      "72010"
+    ],
+    "budget_value": [
+      800000.0,
+      800000.0
+    ],
+    "iati_identifier": "DK-CVR-20699310-DK211707",
+    "title_narrative": [
+      "Danida Learning and Analysis"
+    ],
+    "reporting_org_ref": "DK-CVR-20699310",
+    "transaction_value": [
+      300000.0,
+      48831.0,
+      300000.0,
+      165107.0,
+      182630.0,
+      500000.0,
+      591889.0,
+      232592.0,
+      500000.0,
+      649639.0,
+      892041.0,
+      300000.0,
+      48831.0,
+      300000.0,
+      165107.0,
+      182630.0,
+      500000.0,
+      548425.0,
+      143150.0,
+      500000.0
+    ],
+    "activity_date_type": [
+      "2",
+      "4",
+      "1",
+      "3"
+    ],
+    "activity_status_code": "4",
+    "description_narrative": [
+      "HQ Learning and Analysis Pool of Funds"
+    ],
+    "activity_date_iso_date": [
+      "2020-01-01T00:00:00Z",
+      "2021-12-31T00:00:00Z",
+      "2020-01-01T00:00:00Z",
+      "2020-12-31T00:00:00Z"
+    ],
+    "recipient_country_code": [
+      "DK",
+      "KE",
+      "SN",
+      "TN"
+    ],
+    "reporting_org_narrative": [
+      "Danish Refugee Council",
+      "Dansk Flygtningehjaelp"
+    ]
+  },
+  {
+    "sector_code": [
+      "43010"
+    ],
+    "budget_value": [
+      1572597.0,
+      3145194.0,
+      3145194.0,
+      1834696.0
+    ],
+    "iati_identifier": "DK-CVR-20699310-DK242326",
+    "title_narrative": [
+      "Fair Recycling: an inclusive and formalised plastic recycling ecosystem in Kenya"
+    ],
+    "reporting_org_ref": "DK-CVR-20699310",
+    "transaction_value": [
+      405534.0,
+      84372.0,
+      1481562.0
+    ],
+    "activity_date_type": [
+      "2",
+      "1",
+      "3"
+    ],
+    "activity_status_code": "2",
+    "description_narrative": [
+      "The goal of the project is to integrate informal and marginalised waste pickers and refugee communities.in a formalised plastics recycling value chain - resulting in increased income -.decent jobs and safer work conditions. The project leverages the work of DRC and commercial.partners to implement innovative and financially sustainable impact-interventions in the value.chain - facilitating inclusive socio-economic growth opportunities and access to the formal.economy for waste pickers and refugee-communities..The project enables Unilever to access locally and fair recycled plastics of the highest quality -.driving the transition to a localized circular plastics economy Kenya (SDG 12). Formalisation.and growth of the Kenyan plastic recycling ecosystem supports Mr Green Africa’s work with.waste pickers to create sustainable and decent jobs (SDG 8) and do a way that effectively.reduces poverty (SDG 1) in a climate and environment-friendly manner (SDG 13)."
+    ],
+    "activity_date_iso_date": [
+      "2021-07-01T00:00:00Z",
+      "2021-01-01T00:00:00Z",
+      "2024-12-31T00:00:00Z"
+    ],
+    "recipient_country_code": [
+      "KE"
+    ],
+    "reporting_org_narrative": [
+      "Danish Refugee Council",
+      "Dansk Flygtningehjaelp"
+    ]
+  },
+  {
+    "sector_code": [
+      "73010",
+      "72010",
+      "16010"
+    ],
+    "budget_value": [
+      1953242.0
+    ],
+    "iati_identifier": "DK-CVR-20699310-FC224107",
+    "title_narrative": [
+      "Integrated Emergency Support for Afghanistan"
+    ],
+    "reporting_org_ref": "DK-CVR-20699310",
+    "activity_date_type": [
+      "1",
+      "3",
+      "2"
+    ],
+    "activity_status_code": "6",
+    "description_narrative": [
+      "The primary objective of this project is to provide comprehensive protection monitoring, mitigation and implementation services and interventions in complementary and integrated approach to address protection issues and mitigate negative coping mechanisms."
+    ],
+    "activity_date_iso_date": [
+      "2022-09-01T00:00:00Z",
+      "2023-03-31T00:00:00Z",
+      "2022-09-26T00:00:00Z"
+    ],
+    "recipient_country_code": [
+      "AF"
+    ],
+    "reporting_org_narrative": [
+      "Danish Refugee Council",
+      "Dansk Flygtningehjaelp"
+    ]
+  },
+  {
+    "sector_code": [
+      "72010"
+    ],
+    "budget_value": [
+      77025.0
+    ],
+    "iati_identifier": "DK-CVR-20699310-IO234668",
+    "title_narrative": [
+      "IOM Somalia"
+    ],
+    "reporting_org_ref": "DK-CVR-20699310",
+    "transaction_value": [
+      14990.0,
+      46000.0
+    ],
+    "activity_date_type": [
+      "2",
+      "4",
+      "1",
+      "3"
+    ],
+    "activity_status_code": "2",
+    "description_narrative": [
+      "First line response to affected population in Las Canood"
+    ],
+    "activity_date_iso_date": [
+      "2023-03-01T00:00:00Z",
+      "2023-04-30T00:00:00Z",
+      "2023-03-01T00:00:00Z",
+      "2023-04-30T00:00:00Z"
+    ],
+    "recipient_country_code": [
+      "SO"
+    ],
+    "reporting_org_narrative": [
+      "Danish Refugee Council",
+      "Dansk Flygtningehjaelp"
+    ]
+  },
+  {
+    "sector_code": [
+      "72010",
+      "72050"
+    ],
+    "budget_value": [
+      2894535.0
+    ],
+    "iati_identifier": "DK-CVR-20699310-FC264037",
+    "title_narrative": [
+      "SRF Rapid Response Mechanism"
+    ],
+    "reporting_org_ref": "DK-CVR-20699310",
+    "transaction_value": [
+      2894535.0,
+      20869.82,
+      60000000.0,
+      70602.25,
+      348540.25,
+      319269.14,
+      69089108.0,
+      85826881.0,
+      15691998.0,
+      15691998.0,
+      60000000.0,
+      22278179.0,
+      44985531.0,
+      22492766.0,
+      40486978.0,
+      26991318.0,
+      22492765.0
+    ],
+    "activity_date_type": [
+      "1",
+      "3"
+    ],
+    "activity_status_code": "2",
+    "description_narrative": [
+      "The project intends to pilot a local RRM led by national and/or local actors to respond to small and multi ple displacements. This project will focus on strengthening capacities of well-established and reputed lo cal responders to deliver life-saving assistance when and where crises strike, filling capacity gaps in emer gency preparedness and response while providing learning and good practices. The inclusive approach to partnership and coordination of the DRC localisation project in hard-to-reach Sahel hot spots will directly contribute to SRF strategy to deliver high quality VfM in Sahel hot spots. \rThe project will contribute to the implementation of the localisation agenda in Sahel. Additionally, the \rlearning of this project will inform the revision of the SRF strategy and framework to ensure national and local actors can play a more powerful role in the SRF governance structure and can directly access funds"
+    ],
+    "activity_date_iso_date": [
+      "2022-06-01T00:00:00Z",
+      "2025-03-31T00:00:00Z"
+    ],
+    "reporting_org_narrative": [
+      "Danish Refugee Council",
+      "Dansk Flygtningehjaelp"
+    ]
+  },
+  {
+    "sector_code": [
+      "72010"
+    ],
+    "budget_value": [
+      3842156.0
+    ],
+    "iati_identifier": "DK-CVR-20699310-DK223539",
+    "title_narrative": [
+      "DANIDA SPA 2022 Mali"
+    ],
+    "reporting_org_ref": "DK-CVR-20699310",
+    "transaction_value": [
+      3829381.73,
+      634335.0
+    ],
+    "activity_date_type": [
+      "1",
+      "2",
+      "3",
+      "4"
+    ],
+    "activity_status_code": "3",
+    "description_narrative": [
+      "Enhancing protection, social cohesion and addressing basic needs in response to the rise in displacement across Central Sahel",
+      "- People in Central Sahel have access to timely, safe, and dignified assistance and services to reduce risk\r- People in Central Sahel have the capacity to fulfil their rights and can access more decent and resilient livelihoods \r- People in Central Sahel live in safer, more resilient, and more functional communities where their rights are protected"
+    ],
+    "activity_date_iso_date": [
+      "2022-01-01T00:00:00Z",
+      "2022-01-01T00:00:00Z",
+      "2022-12-31T00:00:00Z",
+      "2022-12-31T00:00:00Z"
+    ],
+    "recipient_country_code": [
+      "ML"
+    ],
+    "reporting_org_narrative": [
+      "Danish Refugee Council",
+      "Dansk Flygtningehjaelp"
+    ]
+  },
+  {
+    "sector_code": [
+      "72010"
+    ],
+    "budget_value": [
+      3500000.0
+    ],
+    "iati_identifier": "DK-CVR-20699310-FC4742",
+    "title_narrative": [
+      "H2H Humanitarian Enablers Programme - Parent Grant"
+    ],
+    "reporting_org_ref": "DK-CVR-20699310",
+    "activity_date_type": [
+      "2",
+      "1",
+      "3"
+    ],
+    "activity_status_code": "2",
+    "description_narrative": [
+      "Humanitarian Enablers Program to support Turkey/Syria, Pakistan and Sudan"
+    ],
+    "activity_date_iso_date": [
+      "2022-09-01T00:00:00Z",
+      "2022-09-01T00:00:00Z",
+      "2024-07-31T00:00:00Z"
+    ],
+    "reporting_org_narrative": [
+      "Danish Refugee Council",
+      "Dansk Flygtningehjaelp"
+    ]
+  },
+  {
+    "sector_code": [
+      "72010"
+    ],
+    "budget_value": [
+      13001.0
+    ],
+    "iati_identifier": "DK-CVR-20699310-FC4868",
+    "title_narrative": [
+      "H2H DEMAC Sudan 2023"
+    ],
+    "reporting_org_ref": "DK-CVR-20699310",
+    "activity_date_type": [
+      "1",
+      "2",
+      "3"
+    ],
+    "activity_status_code": "2",
+    "description_narrative": [
+      "DEMAC Sudan 2023"
+    ],
+    "activity_date_iso_date": [
+      "2023-06-01T00:00:00Z",
+      "2023-06-01T00:00:00Z",
+      "2023-10-31T00:00:00Z"
+    ],
+    "recipient_country_code": [
+      "SD"
+    ],
+    "reporting_org_narrative": [
+      "Danish Refugee Council",
+      "Dansk Flygtningehjaelp"
+    ]
+  },
+  {
+    "sector_code": [
+      "11110",
+      "15160"
+    ],
+    "budget_value": [
+      400000.0
+    ],
+    "iati_identifier": "DK-CVR-20699310-GF244763",
+    "title_narrative": [
+      "Globalt Fokus IATI Learning Platform"
+    ],
+    "reporting_org_ref": "DK-CVR-20699310",
+    "transaction_value": [
+      120000.0,
+      280000.0
+    ],
+    "activity_date_type": [
+      "1",
+      "2",
+      "3"
+    ],
+    "activity_status_code": "2",
+    "description_narrative": [
+      "Follow up grant from Gr00004454 which developed the prototype for the learning platform"
+    ],
+    "activity_date_iso_date": [
+      "2023-08-01T00:00:00Z",
+      "2023-08-01T00:00:00Z",
+      "2024-04-30T00:00:00Z"
+    ],
+    "recipient_country_code": [
+      "DK"
+    ],
+    "reporting_org_narrative": [
+      "Danish Refugee Council",
+      "Dansk Flygtningehjaelp"
+    ]
+  },
+  {
+    "sector_code": [
+      "72010",
+      "15160"
+    ],
+    "budget_value": [
+      3568939.0
+    ],
+    "iati_identifier": "DK-CVR-20699310-DK234303",
+    "title_narrative": [
+      "DANIDA SPA 2023 Central African Republic"
+    ],
+    "reporting_org_ref": "DK-CVR-20699310",
+    "transaction_value": [
+      3093359.0,
+      462729.0
+    ],
+    "activity_date_type": [
+      "1",
+      "2",
+      "3",
+      "4"
+    ],
+    "activity_status_code": "3",
+    "description_narrative": [
+      "Part of the SPA grant on the CAR crisis consisting of CAR and Cameroon"
+    ],
+    "activity_date_iso_date": [
+      "2023-01-01T00:00:00Z",
+      "2023-01-01T00:00:00Z",
+      "2023-12-31T00:00:00Z",
+      "2023-12-31T00:00:00Z"
+    ],
+    "recipient_country_code": [
+      "CF"
+    ],
+    "reporting_org_narrative": [
+      "Danish Refugee Council",
+      "Dansk Flygtningehjaelp"
+    ]
+  },
+  {
+    "sector_code": [
+      "15160"
+    ],
+    "budget_value": [
+      6994009.0
+    ],
+    "iati_identifier": "DK-CVR-20699310-DK234304",
+    "title_narrative": [
+      "DANIDA SPA 2023 Cameroon"
+    ],
+    "reporting_org_ref": "DK-CVR-20699310",
+    "transaction_value": [
+      341246.0,
+      4565650.0
+    ],
+    "activity_date_type": [
+      "1",
+      "2",
+      "3",
+      "4"
+    ],
+    "activity_status_code": "3",
+    "description_narrative": [
+      "Part of the SPA grant on the CAR crisis consisting of CAR and Cameroon"
+    ],
+    "activity_date_iso_date": [
+      "2023-01-01T00:00:00Z",
+      "2023-01-01T00:00:00Z",
+      "2023-12-31T00:00:00Z",
+      "2023-12-31T00:00:00Z"
+    ],
+    "recipient_country_code": [
+      "CM"
+    ],
+    "reporting_org_narrative": [
+      "Danish Refugee Council",
+      "Dansk Flygtningehjaelp"
+    ]
+  },
+  {
+    "sector_code": [
+      "43010",
+      "15160",
+      "14020",
+      "15220"
+    ],
+    "budget_value": [
+      4998835.0
+    ],
+    "iati_identifier": "DK-CVR-20699310-DK234301",
+    "title_narrative": [
+      "DANIDA SPA 2023 Libya"
+    ],
+    "reporting_org_ref": "DK-CVR-20699310",
+    "transaction_value": [
+      73354.0,
+      5224041.0
+    ],
+    "activity_date_type": [
+      "1",
+      "2",
+      "3",
+      "4"
+    ],
+    "activity_status_code": "3",
+    "description_narrative": [
+      "Part of the Danida SPA 2022-2025 West Africa TOC"
+    ],
+    "activity_date_iso_date": [
+      "2023-01-01T00:00:00Z",
+      "2023-01-01T00:00:00Z",
+      "2023-12-31T00:00:00Z",
+      "2023-12-31T00:00:00Z"
+    ],
+    "recipient_country_code": [
+      "LY"
+    ],
+    "reporting_org_narrative": [
+      "Danish Refugee Council",
+      "Dansk Flygtningehjaelp"
+    ]
+  },
+  {
+    "sector_code": [
+      "15160",
+      "43010",
+      "15220"
+    ],
+    "budget_value": [
+      4251824.0
+    ],
+    "iati_identifier": "DK-CVR-20699310-DK234298",
+    "title_narrative": [
+      "DANIDA SPA 2023 Burkina Faso"
+    ],
+    "reporting_org_ref": "DK-CVR-20699310",
+    "transaction_value": [
+      660051.0,
+      3591460.0
+    ],
+    "activity_date_type": [
+      "1",
+      "2",
+      "3",
+      "4"
+    ],
+    "activity_status_code": "3",
+    "description_narrative": [
+      "Part of a multi-country grant under the SPA covering Burkina Faso, Mali and Niger"
+    ],
+    "activity_date_iso_date": [
+      "2023-01-01T00:00:00Z",
+      "2023-01-01T00:00:00Z",
+      "2023-12-31T00:00:00Z",
+      "2023-12-31T00:00:00Z"
+    ],
+    "recipient_country_code": [
+      "BF"
+    ],
+    "reporting_org_narrative": [
+      "Danish Refugee Council",
+      "Dansk Flygtningehjaelp"
+    ]
+  },
+  {
+    "sector_code": [
+      "15160",
+      "43010"
+    ],
+    "budget_value": [
+      4087669.0
+    ],
+    "iati_identifier": "DK-CVR-20699310-DK234299",
+    "title_narrative": [
+      "DANIDA SPA 2023 Mali"
+    ],
+    "reporting_org_ref": "DK-CVR-20699310",
+    "transaction_value": [
+      3567709.0,
+      514258.0
+    ],
+    "activity_date_type": [
+      "2",
+      "1",
+      "3",
+      "4"
+    ],
+    "activity_status_code": "3",
+    "description_narrative": [
+      "Part of a multi-country grant under the SPA covering Burkina Faso, Mali and Niger"
+    ],
+    "activity_date_iso_date": [
+      "2023-01-01T00:00:00Z",
+      "2023-01-01T00:00:00Z",
+      "2023-12-31T00:00:00Z",
+      "2023-12-31T00:00:00Z"
+    ],
+    "recipient_country_code": [
+      "ML"
+    ],
+    "reporting_org_narrative": [
+      "Danish Refugee Council",
+      "Dansk Flygtningehjaelp"
+    ]
+  },
+  {
+    "sector_code": [
+      "15160",
+      "43010"
+    ],
+    "budget_value": [
+      3792297.0
+    ],
+    "iati_identifier": "DK-CVR-20699310-DK234300",
+    "title_narrative": [
+      "DANIDA SPA 2023 Niger"
+    ],
+    "reporting_org_ref": "DK-CVR-20699310",
+    "transaction_value": [
+      1427498.0,
+      2325613.0
+    ],
+    "activity_date_type": [
+      "1",
+      "2",
+      "3",
+      "4"
+    ],
+    "activity_status_code": "3",
+    "description_narrative": [
+      "Part of a multi-country grant under the SPA covering Burkina Faso, Mali and Niger"
+    ],
+    "activity_date_iso_date": [
+      "2023-01-01T00:00:00Z",
+      "2023-01-01T00:00:00Z",
+      "2023-12-31T00:00:00Z",
+      "2023-12-31T00:00:00Z"
+    ],
+    "recipient_country_code": [
+      "NE"
+    ],
+    "reporting_org_narrative": [
+      "Danish Refugee Council",
+      "Dansk Flygtningehjaelp"
+    ]
+  },
+  {
+    "sector_code": [
+      "43010",
+      "15160"
+    ],
+    "budget_value": [
+      4519228.0
+    ],
+    "iati_identifier": "DK-CVR-20699310-DK234238",
+    "title_narrative": [
+      "DANIDA SPA 2023 Yemen"
+    ],
+    "reporting_org_ref": "DK-CVR-20699310",
+    "transaction_value": [
+      420491.0,
+      3541760.0
+    ],
+    "activity_date_type": [
+      "1",
+      "2",
+      "3",
+      "4"
+    ],
+    "activity_status_code": "3",
+    "description_narrative": [
+      "Increasing self-reliance and the resilience of vulnerable populations including Internally Displaced populations (IDPs) and Host communities (HCs)"
+    ],
+    "activity_date_iso_date": [
+      "2023-01-01T00:00:00Z",
+      "2023-01-01T00:00:00Z",
+      "2023-12-31T00:00:00Z",
+      "2023-12-31T00:00:00Z"
+    ],
+    "recipient_country_code": [
+      "YE"
+    ],
+    "reporting_org_narrative": [
+      "Danish Refugee Council",
+      "Dansk Flygtningehjaelp"
+    ]
+  }
+]

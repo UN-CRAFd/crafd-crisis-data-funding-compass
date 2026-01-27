@@ -1,0 +1,6380 @@
+[
+  {
+    "sector_code": [
+      "31164"
+    ],
+    "budget_value": [
+      200000.0
+    ],
+    "iati_identifier": "XM-DAC-41301-679321",
+    "title_narrative": [
+      "Reactivaci n productiva ante la crisis provocada por la pandemia del COVID-19."
+    ],
+    "reporting_org_ref": "XM-DAC-41301",
+    "transaction_value": [
+      200000.0,
+      200000.0,
+      200000.0,
+      -170001.53,
+      29998.47,
+      170001.53,
+      -21400.0,
+      125.24,
+      12126.5,
+      11021.7,
+      4102.35,
+      6658.47,
+      7890.33,
+      3765.77,
+      9174.46,
+      6308.81,
+      6356.53,
+      -97913.0,
+      25958.37,
+      97913.0,
+      -13651.15,
+      3208.82,
+      4360.45,
+      4329.41,
+      4832.24,
+      22889.72,
+      4324.94,
+      4670.24,
+      4482.72,
+      4923.41,
+      4486.49,
+      -39455.94,
+      9599.77,
+      39455.94,
+      -129.12,
+      2921.27,
+      10102.14,
+      5305.74,
+      4480.38,
+      4641.47,
+      4469.82,
+      719.19,
+      1.74,
+      11.62,
+      4133.05,
+      -2798.64
+    ],
+    "activity_date_type": [
+      "2",
+      "4"
+    ],
+    "activity_status_code": "3",
+    "description_narrative": [
+      "El Proyecto responde a una solicitud del MAG para apoyar a personas productoras de alimentos en condici n de vulnerabilidad a mitigar el impacto socioecon mico causado por el Covid-19, mediante su inclusi n productiva y el fortalecimiento de la producci n, distribuci n y comercializaci n"
+    ],
+    "activity_date_iso_date": [
+      "2021-03-01T00:00:00Z",
+      "2023-11-30T00:00:00Z"
+    ],
+    "recipient_country_code": [
+      "CR"
+    ],
+    "reporting_org_narrative": [
+      "Food and Agriculture Organization (FAO)"
+    ]
+  },
+  {
+    "sector_code": [
+      "43071"
+    ],
+    "budget_value": [
+      240000.0
+    ],
+    "iati_identifier": "XM-DAC-41301-679521",
+    "title_narrative": [
+      "Pol ticas intersectoriales de SAN y promoci n de la alimentaci n saludable en Ecuador, COVID-19"
+    ],
+    "reporting_org_ref": "XM-DAC-41301",
+    "transaction_value": [
+      239955.42,
+      240000.0,
+      240000.0,
+      78.75,
+      1682.86,
+      8158.84,
+      16456.42,
+      -173077.29,
+      40545.84,
+      173077.29,
+      -5272.96,
+      15181.73,
+      14587.2,
+      18886.69,
+      13460.71,
+      13110.38,
+      17416.53,
+      11140.94,
+      9896.3,
+      9212.45,
+      6976.89,
+      -38806.4,
+      9674.03,
+      38806.4,
+      2998.7,
+      3377.33,
+      4209.41,
+      3621.63,
+      1052.55,
+      5935.6,
+      5009.09,
+      406.08,
+      898.2,
+      5169.89,
+      -2246.64,
+      3881.28,
+      2246.64,
+      -1816.18,
+      4277.18,
+      -44.58,
+      -258.94
+    ],
+    "activity_date_type": [
+      "2",
+      "4"
+    ],
+    "activity_status_code": "3",
+    "description_narrative": [
+      "Gobierno de la Rep blica del Ecuador adopta e implementa pol ticas, programas y estrategias que propician la articulaci n intersectorial e interinstitucional para la mejora del estado nutricional de la poblaci n durante y despues de la crisis por COVID-19."
+    ],
+    "activity_date_iso_date": [
+      "2020-08-01T00:00:00Z",
+      "2022-12-31T00:00:00Z"
+    ],
+    "recipient_country_code": [
+      "EC"
+    ],
+    "reporting_org_narrative": [
+      "Food and Agriculture Organization (FAO)"
+    ]
+  },
+  {
+    "sector_code": [
+      "31161"
+    ],
+    "budget_value": [
+      500000.0
+    ],
+    "iati_identifier": "XM-DAC-41301-679541",
+    "title_narrative": [
+      "Innovative Protected Cultivation Systems in the Caribbean"
+    ],
+    "reporting_org_ref": "XM-DAC-41301",
+    "transaction_value": [
+      500000.0,
+      500000.0,
+      500000.0,
+      -500000.0,
+      500000.0,
+      437.91,
+      760.99,
+      973.11,
+      2324.66,
+      6250.16,
+      12916.08,
+      -476112.99,
+      224.1,
+      476112.99,
+      -224.1,
+      2072.38,
+      4712.65,
+      11065.53,
+      1297.48,
+      9257.19,
+      8269.57,
+      13420.83,
+      -383982.29,
+      42259.17,
+      383982.29,
+      -21348.44,
+      26646.31,
+      3181.37,
+      43584.38,
+      1610.76,
+      25890.68,
+      8291.54,
+      1724.51,
+      6175.24,
+      4209.35,
+      114579.52,
+      -4043.95,
+      165393.12,
+      -66993.88,
+      7632.66,
+      7469.06,
+      -60.03,
+      5938.56,
+      17850.72,
+      26194.84,
+      1968.05
+    ],
+    "activity_date_type": [
+      "2",
+      "4"
+    ],
+    "activity_status_code": "3",
+    "description_narrative": [
+      "To improved livelihoods through higher incomes, increased business and employment opportunities.\nTo improve and provide diversified diets through affordable and safe food available  all year round."
+    ],
+    "activity_date_iso_date": [
+      "2021-02-01T00:00:00Z",
+      "2023-11-30T00:00:00Z"
+    ],
+    "reporting_org_narrative": [
+      "Food and Agriculture Organization (FAO)"
+    ]
+  },
+  {
+    "sector_code": [
+      "74020"
+    ],
+    "budget_value": [
+      300000.0
+    ],
+    "iati_identifier": "XM-DAC-41301-679622",
+    "title_narrative": [
+      "Articulando acciones tempranas ante alertas clim ticas, de desastres y crisis con la protecci n social desde un enfoque de genero."
+    ],
+    "reporting_org_ref": "XM-DAC-41301",
+    "transaction_value": [
+      300000.0,
+      300000.0,
+      300000.0,
+      -283892.16,
+      16107.84,
+      283892.16,
+      -16107.84,
+      6956.91,
+      9265.43,
+      9709.32,
+      -13935.67,
+      6374.11,
+      4342.59,
+      4822.93,
+      -679.34,
+      11565.45,
+      16986.21,
+      -221340.48,
+      23251.58,
+      221340.48,
+      -27312.67,
+      18626.0,
+      11279.88,
+      11973.36,
+      -4864.02,
+      9286.78,
+      4323.54,
+      5012.0,
+      13394.75,
+      -2886.19,
+      20858.09,
+      -167298.33,
+      -5649.37,
+      167298.33,
+      -233.15,
+      8930.64,
+      9096.7,
+      8185.35,
+      8929.36,
+      16617.77,
+      4784.14,
+      7446.12,
+      25595.79,
+      15277.02,
+      12260.2,
+      -5346.75,
+      45061.64,
+      2166.75,
+      -2166.75
+    ],
+    "activity_date_type": [
+      "2",
+      "4"
+    ],
+    "activity_status_code": "3",
+    "description_narrative": [
+      "Los gobiernos ampl an la escala de las acciones tempranas propuestas por el proyecto ante alertas clim ticas, de desastres y crisis en medios de vida agr colas y seguridad alimentaria, vinculando las alertas tempranas con mecanismos de protecci n social desde un enfoque de genero."
+    ],
+    "activity_date_iso_date": [
+      "2021-01-01T00:00:00Z",
+      "2023-12-31T00:00:00Z"
+    ],
+    "reporting_org_narrative": [
+      "Food and Agriculture Organization (FAO)"
+    ]
+  },
+  {
+    "sector_code": [
+      "43073"
+    ],
+    "budget_value": [
+      240000.0
+    ],
+    "iati_identifier": "XM-DAC-41301-679721",
+    "title_narrative": [
+      "Sistemas alimentarios sostenibles y resilientes en Per , en un contexto COVID-19"
+    ],
+    "reporting_org_ref": "XM-DAC-41301",
+    "transaction_value": [
+      240052.08,
+      240000.0,
+      240000.0,
+      131.61,
+      1655.94,
+      1798.1,
+      -230846.19,
+      5568.16,
+      230846.19,
+      -42.15,
+      7414.04,
+      7166.8,
+      20576.39,
+      24155.3,
+      23553.72,
+      36536.93,
+      31346.27,
+      22553.22,
+      20215.34,
+      16175.69,
+      -534.21,
+      20660.43,
+      534.21,
+      -98.12,
+      211.77,
+      52.08,
+      472.64
+    ],
+    "activity_date_type": [
+      "2",
+      "4"
+    ],
+    "activity_status_code": "3",
+    "description_narrative": [
+      "Al 2024, el gobierno nacional y cuatro (04) gobiernos regionales y gobiernos locales aplican instrumentos tecnicos y normativos, a fin de desarrollar la resiliencia y sostenibilidad de los sistemas alimentarios, en un contexto de emergencia sanitaria por Covid-19."
+    ],
+    "activity_date_iso_date": [
+      "2020-08-01T00:00:00Z",
+      "2021-12-31T00:00:00Z"
+    ],
+    "recipient_country_code": [
+      "PE"
+    ],
+    "reporting_org_narrative": [
+      "Food and Agriculture Organization (FAO)"
+    ]
+  },
+  {
+    "sector_code": [
+      "43071"
+    ],
+    "budget_value": [
+      200000.0
+    ],
+    "iati_identifier": "XM-DAC-41301-680121",
+    "title_narrative": [
+      "Enhancing Food Security in Response to COVID-19 by Improving Access to Locally Grown Food"
+    ],
+    "reporting_org_ref": "XM-DAC-41301",
+    "transaction_value": [
+      200000.0,
+      200000.0,
+      200000.0,
+      -196663.39,
+      3336.61,
+      196663.39,
+      12366.94,
+      4053.71,
+      3271.13,
+      1214.75,
+      1182.82,
+      643.86,
+      13471.37,
+      7594.41,
+      489.17,
+      -142876.17,
+      9499.06,
+      142876.17,
+      -1216.39,
+      1813.58,
+      3022.62,
+      3476.01,
+      1360.18,
+      1216.39,
+      10212.4,
+      6897.22,
+      -14332.33,
+      101761.83,
+      -17159.62,
+      4588.51,
+      6845.58,
+      24284.08,
+      -18260.05,
+      -5316.08,
+      5017.32,
+      0.27
+    ],
+    "activity_date_type": [
+      "2",
+      "4"
+    ],
+    "activity_status_code": "3",
+    "description_narrative": [
+      "Increased Resilience of Vegetable Farmers and Processors to Market Shocks (SDG 1 and 2)"
+    ],
+    "activity_date_iso_date": [
+      "2022-03-01T00:00:00Z",
+      "2023-11-30T00:00:00Z"
+    ],
+    "recipient_country_code": [
+      "SR"
+    ],
+    "reporting_org_narrative": [
+      "Food and Agriculture Organization (FAO)"
+    ]
+  },
+  {
+    "sector_code": [
+      "31120"
+    ],
+    "budget_value": [
+      400000.0
+    ],
+    "iati_identifier": "XM-DAC-41301-680161",
+    "title_narrative": [
+      "Sustainable Development of Resilient VCs - Implementation of CARICOM COVID-19 Agri-Food Recovery Plan"
+    ],
+    "reporting_org_ref": "XM-DAC-41301",
+    "transaction_value": [
+      400000.0,
+      400000.0,
+      400000.0,
+      -400000.0,
+      400000.0,
+      7912.16,
+      8793.69,
+      8466.97,
+      7305.08,
+      7949.89,
+      -343456.6,
+      16115.61,
+      343456.6,
+      -1648.59,
+      7177.97,
+      7835.9,
+      11759.04,
+      13611.52,
+      4087.6,
+      6235.97,
+      5282.59,
+      9757.68,
+      8288.53,
+      5592.78,
+      -227347.84,
+      38127.77,
+      227347.84,
+      235.98,
+      13284.95,
+      45712.52,
+      30426.55,
+      31402.33,
+      23925.74,
+      8890.57,
+      11208.99,
+      11187.94,
+      6643.0,
+      -866.55,
+      -7409.53,
+      37886.29
+    ],
+    "activity_date_type": [
+      "2",
+      "4"
+    ],
+    "activity_status_code": "3",
+    "description_narrative": [
+      "Public-Private Partnerships operational to strengthen priority value chains, increase investment and enhance market access for farmers"
+    ],
+    "activity_date_iso_date": [
+      "2021-08-02T00:00:00Z",
+      "2023-11-30T00:00:00Z"
+    ],
+    "reporting_org_narrative": [
+      "Food and Agriculture Organization (FAO)"
+    ]
+  },
+  {
+    "sector_code": [
+      "31163"
+    ],
+    "budget_value": [
+      500000.0
+    ],
+    "iati_identifier": "XM-DAC-41301-680181",
+    "title_narrative": [
+      "Multipurpose Animal recording platform for improving national and sub-regional identification and traceability of livestock in the Caribbean Region"
+    ],
+    "reporting_org_ref": "XM-DAC-41301",
+    "transaction_value": [
+      500000.0,
+      500000.0,
+      500000.0,
+      -500000.0,
+      500000.0,
+      5514.3,
+      6487.41,
+      8204.41,
+      8547.1,
+      -458237.36,
+      13009.42,
+      458237.36,
+      2594.96,
+      7460.52,
+      13212.43,
+      6811.78,
+      6811.78,
+      5838.67,
+      7136.15,
+      11028.6,
+      8368.47,
+      -375999.18,
+      12974.82,
+      375999.18,
+      7901.1,
+      40504.99,
+      12977.51,
+      18480.24,
+      7837.7,
+      10990.59,
+      9846.87,
+      34925.37,
+      157970.12,
+      -9619.55,
+      64945.14,
+      -7230.95,
+      4373.14,
+      6177.43,
+      1978.43,
+      -5298.05
+    ],
+    "activity_date_type": [
+      "2",
+      "4"
+    ],
+    "activity_status_code": "3",
+    "description_narrative": [
+      "To improve legal frameworks for developing and implementing standardized animal identification and traceability systems in the Caribbean sub region for a more efficient value chain of animal products and by-products.\nTo make evidence-based decisions regarding livestock production, genetic resources and animal health management to develop more sustainable and inclusive value chains for livestock and livestock products"
+    ],
+    "activity_date_iso_date": [
+      "2021-08-01T00:00:00Z",
+      "2023-11-30T00:00:00Z"
+    ],
+    "reporting_org_narrative": [
+      "Food and Agriculture Organization (FAO)"
+    ]
+  },
+  {
+    "sector_code": [
+      "74020"
+    ],
+    "budget_value": [
+      197000.0
+    ],
+    "iati_identifier": "XM-DAC-41301-680241",
+    "title_narrative": [
+      "Reducci n del riesgo en agricultura ante amenazas fito-zoosanitarias y clim ticas en la Regi n SICA, en un contexto COVID-19."
+    ],
+    "reporting_org_ref": "XM-DAC-41301",
+    "transaction_value": [
+      196559.84,
+      200000.0,
+      200000.0,
+      194.14,
+      376.16,
+      2447.09,
+      4397.55,
+      4454.51,
+      6585.08,
+      29170.62,
+      20280.11,
+      6306.07,
+      6078.97,
+      -113268.93,
+      6440.77,
+      113268.93,
+      5590.41,
+      11785.46,
+      26707.68,
+      14126.17,
+      1916.95,
+      1466.41,
+      774.51,
+      808.94,
+      3637.09,
+      1498.5,
+      -15439.14,
+      29517.67,
+      15439.14,
+      -4017.85,
+      9607.53,
+      3359.8,
+      -3440.16,
+      -3000.0,
+      3049.5
+    ],
+    "activity_date_type": [
+      "2",
+      "4"
+    ],
+    "activity_status_code": "3",
+    "description_narrative": [
+      "Los hogares rurales son menos vulnerables ante las amenazas fito-zoosanitarias y clim ticas que afectan la agricultura, sus medios de vida y su seguridad alimentaria y nutricional en el contexto COVID-19 (SDG 1, SDG 2, SDG5, SDG 12)."
+    ],
+    "activity_date_iso_date": [
+      "2021-01-01T00:00:00Z",
+      "2022-12-31T00:00:00Z"
+    ],
+    "reporting_org_narrative": [
+      "Food and Agriculture Organization (FAO)"
+    ]
+  },
+  {
+    "sector_code": [
+      "31110"
+    ],
+    "budget_value": [
+      300000.0
+    ],
+    "iati_identifier": "XM-DAC-41301-680361",
+    "title_narrative": [
+      "Assessing trade-offs and business opportunities for poultry import substitution, and small ruminant value chain development in CARICOM."
+    ],
+    "reporting_org_ref": "XM-DAC-41301",
+    "transaction_value": [
+      300000.0,
+      300000.0,
+      300000.0,
+      805.41,
+      5255.12,
+      3124.6,
+      6867.44,
+      -273027.37,
+      10920.06,
+      273027.37,
+      9191.34,
+      2492.55,
+      7134.26,
+      13251.54,
+      16120.26,
+      8530.75,
+      7017.63,
+      11276.32,
+      8613.94,
+      11739.0,
+      -155379.96,
+      22279.82,
+      155379.96,
+      -2557.24,
+      8622.7,
+      5307.38,
+      7139.43,
+      17915.76,
+      2079.4,
+      1844.77,
+      8656.36,
+      2858.84,
+      41572.8,
+      29652.7,
+      -27686.06,
+      4601.0,
+      10930.59,
+      119.84,
+      -11050.43
+    ],
+    "activity_date_type": [
+      "2",
+      "4"
+    ],
+    "activity_status_code": "3",
+    "description_narrative": [
+      "Public-Private Partnerships are operational to strengthen the small ruminants? value chain, thereby reducing the risk for agribusiness investors (Output 4. 5 and 6). CARICOM adopts and implements the regional poultry sector strategy (Outputs 1, 2  3). CARICOM countries implement Industry business models for the small ruminant sector (Output 4, 5 and 6). A funding proposal is approved in support of  CARICOM countries in the implementation of their national small ruminant upgrading strategies and plans (Output 7)"
+    ],
+    "activity_date_iso_date": [
+      "2021-09-15T00:00:00Z",
+      "2023-11-30T00:00:00Z"
+    ],
+    "reporting_org_narrative": [
+      "Food and Agriculture Organization (FAO)"
+    ]
+  },
+  {
+    "sector_code": [
+      "31191"
+    ],
+    "budget_value": [
+      250000.0
+    ],
+    "iati_identifier": "XM-DAC-41301-680362",
+    "title_narrative": [
+      "Regional e-agriculture for the Caribbean ? A post COVID ? 19 Mechanism to promote resilient agri-food"
+    ],
+    "reporting_org_ref": "XM-DAC-41301",
+    "transaction_value": [
+      250000.0,
+      250000.0,
+      250000.0,
+      -250000.0,
+      250000.0,
+      2825.12,
+      3119.14,
+      68.3,
+      273.45,
+      1596.37,
+      -239092.53,
+      3025.09,
+      239092.53,
+      475.14,
+      1494.57,
+      2809.53,
+      1593.16,
+      2161.62,
+      3021.29,
+      10873.18,
+      27715.24,
+      5070.77,
+      1210.51,
+      17501.28,
+      -58058.43,
+      107107.81,
+      -30433.05,
+      6552.41,
+      25345.15,
+      38751.18,
+      23044.52,
+      -7089.7,
+      -1162.59,
+      -18264.12,
+      -36743.8
+    ],
+    "activity_date_type": [
+      "2",
+      "4"
+    ],
+    "activity_status_code": "3",
+    "description_narrative": [
+      "To build the capacities of CARICOM governments to create an enabling environment for the adoption of e-agriculture solutions at the national level"
+    ],
+    "activity_date_iso_date": [
+      "2022-05-02T00:00:00Z",
+      "2023-11-30T00:00:00Z"
+    ],
+    "reporting_org_narrative": [
+      "Food and Agriculture Organization (FAO)"
+    ]
+  },
+  {
+    "sector_code": [
+      "43073"
+    ],
+    "budget_value": [
+      300000.0
+    ],
+    "iati_identifier": "XM-DAC-41301-680363",
+    "title_narrative": [
+      "Assessing National Food Control Systems to enable enhanced food safety in the sub-region"
+    ],
+    "reporting_org_ref": "XM-DAC-41301",
+    "transaction_value": [
+      300000.0,
+      300000.0,
+      300000.0,
+      1492.09,
+      1492.09,
+      3178.61,
+      2984.21,
+      195.97,
+      1191.97,
+      -269306.23,
+      20158.83,
+      269306.23,
+      -11371.35,
+      11906.71,
+      813.44,
+      12471.8,
+      22320.14,
+      8979.55,
+      41708.58,
+      12063.98,
+      20054.27,
+      6431.48,
+      24305.92,
+      -97677.82,
+      21943.89,
+      97677.82,
+      2877.74,
+      487.52,
+      8460.22,
+      49.22,
+      1054.5,
+      -65232.03,
+      539.55,
+      9345.05,
+      36031.16,
+      23144.27,
+      9116.41,
+      -59181.89,
+      12622.32
+    ],
+    "activity_date_type": [
+      "2",
+      "4"
+    ],
+    "activity_status_code": "3",
+    "description_narrative": [
+      "To enable rational planning for the strengthening of national food control systems in the two focus countries based on a rigorous evidence-based assessment\nTo build understanding within the CARICOM member countries of the internationally recognized good practice in the design and management of national food control systems\nTo strengthen the role of the Caribbean Agricultural Health and Food Safety Agency\nTo act as a catalyst to achieve increased south-south cooperation among CARICOM member countries in relation to food control\nTo bolster regional food safety and consumer protection, thus impacting positively on food security"
+    ],
+    "activity_date_iso_date": [
+      "2021-06-01T00:00:00Z",
+      "2023-11-30T00:00:00Z"
+    ],
+    "reporting_org_narrative": [
+      "Food and Agriculture Organization (FAO)"
+    ]
+  },
+  {
+    "sector_code": [
+      "73010"
+    ],
+    "budget_value": [
+      60000.0
+    ],
+    "iati_identifier": "XM-DAC-41301-680421",
+    "title_narrative": [
+      "TCPF:Fortaleciendo la informaci n y educaci n ambiental de Guatemala"
+    ],
+    "reporting_org_ref": "XM-DAC-41301",
+    "transaction_value": [
+      59727.43,
+      60000.0,
+      2017.04,
+      1079.18,
+      565.79,
+      139.06,
+      3108.94,
+      7847.65,
+      937.64,
+      52152.35,
+      255.38,
+      645.56,
+      5617.35,
+      4060.07,
+      8903.26,
+      12107.92,
+      2625.53,
+      3111.61,
+      7319.54,
+      4338.54,
+      1122.07,
+      -272.57,
+      1772.95
+    ],
+    "activity_date_type": [
+      "2",
+      "4"
+    ],
+    "activity_status_code": "3",
+    "description_narrative": [
+      "El Gobierno implementa programas de  educaci n ambiental de manera virtual dirigida a diferentes niveles educativos, no formal e informal, basado en evidencia cient fica proveniente del Informe Ambiental del Estado."
+    ],
+    "activity_date_iso_date": [
+      "2021-04-01T00:00:00Z",
+      "2022-09-30T00:00:00Z"
+    ],
+    "recipient_country_code": [
+      "GT"
+    ],
+    "reporting_org_narrative": [
+      "Food and Agriculture Organization (FAO)"
+    ]
+  },
+  {
+    "sector_code": [
+      "16062"
+    ],
+    "budget_value": [
+      150000.0
+    ],
+    "iati_identifier": "XM-DAC-41301-680441",
+    "title_narrative": [
+      "Technical Support to Prepare the Upcoming Agricultural Census in Saint Lucia in 2022"
+    ],
+    "reporting_org_ref": "XM-DAC-41301",
+    "transaction_value": [
+      150000.0,
+      150000.0,
+      150000.0,
+      -150000.0,
+      150000.0,
+      503.34,
+      2854.46,
+      2724.71,
+      5233.18,
+      5665.67,
+      5341.3,
+      1297.48,
+      2726.81,
+      -121058.08,
+      2594.97,
+      121058.08,
+      2270.59,
+      432.49,
+      6141.41,
+      2724.71,
+      5990.04,
+      4399.13,
+      9954.0,
+      30662.65,
+      17193.8,
+      2054.25,
+      -36623.97,
+      2611.04,
+      36623.97,
+      -145.82,
+      1560.06,
+      1040.04,
+      127.4,
+      4112.47,
+      5197.3,
+      5222.67,
+      8976.05,
+      -3945.92,
+      1198.37,
+      1758.66,
+      -5580.93,
+      5941.76,
+      191.11,
+      63.71,
+      -254.82
+    ],
+    "activity_date_type": [
+      "2",
+      "4"
+    ],
+    "activity_status_code": "3",
+    "description_narrative": [
+      "To provide data for a better understanding of the current state of agriculture and the structural changes that have occurred in recent years.\nTo update the sampling frames for the agricultural surveys that were also identified as priorities in the SPARS.\nTo support the preparations for the agricultural census 2022 in order to ensure it is methodologically sound and in line with FAO recommendations for the Programme for the World Census of Agriculture 2020 (WCA 2020)"
+    ],
+    "activity_date_iso_date": [
+      "2021-05-01T00:00:00Z",
+      "2023-11-30T00:00:00Z"
+    ],
+    "recipient_country_code": [
+      "LC"
+    ],
+    "reporting_org_narrative": [
+      "Food and Agriculture Organization (FAO)"
+    ]
+  },
+  {
+    "sector_code": [
+      "31120"
+    ],
+    "budget_value": [
+      250000.0
+    ],
+    "iati_identifier": "XM-DAC-41301-680481",
+    "title_narrative": [
+      "Strengthening the Building Blocks of Transformative and Resilient Agriculture in Dominica"
+    ],
+    "reporting_org_ref": "XM-DAC-41301",
+    "transaction_value": [
+      250000.0,
+      250000.0,
+      250000.0,
+      -250000.0,
+      250000.0,
+      -250000.0,
+      250000.0,
+      4541.19,
+      864.99,
+      7909.29,
+      7206.44,
+      10976.62,
+      13102.44,
+      10607.46,
+      17911.98,
+      6322.18,
+      -7605.27,
+      -172252.27,
+      5910.41,
+      172252.27,
+      2962.21,
+      10747.76,
+      12069.22,
+      14397.72,
+      5608.51,
+      23470.72,
+      12831.46,
+      10357.61,
+      27869.31,
+      10028.79,
+      -22656.29,
+      19252.67,
+      -17111.36,
+      1326.53,
+      9077.32,
+      202.98,
+      6504.52
+    ],
+    "activity_date_type": [
+      "2",
+      "4"
+    ],
+    "activity_status_code": "3",
+    "description_narrative": [
+      "The 2022 Census of Agriculture is carried out in line with International standards and FAO recommendations (WCA 2020), the Ministry of Agriculture uses an Agriculture Geo Informatics System, and Guidelines, tools and other relevant instruments for the management of systemic risk are adopted within the country."
+    ],
+    "activity_date_iso_date": [
+      "2021-12-01T00:00:00Z",
+      "2023-11-30T00:00:00Z"
+    ],
+    "recipient_country_code": [
+      "DM"
+    ],
+    "reporting_org_narrative": [
+      "Food and Agriculture Organization (FAO)"
+    ]
+  },
+  {
+    "sector_code": [
+      "16062"
+    ],
+    "budget_value": [
+      160000.0
+    ],
+    "iati_identifier": "XM-DAC-41301-680482",
+    "title_narrative": [
+      "Technical Assistance for Planning of Agricultural Census 2022 of Saint Vincent and the Grenadines."
+    ],
+    "reporting_org_ref": "XM-DAC-41301",
+    "transaction_value": [
+      160000.0,
+      160000.0,
+      160000.0,
+      -160000.0,
+      160000.0,
+      2854.46,
+      2724.71,
+      2854.46,
+      3935.7,
+      4131.92,
+      1297.48,
+      4784.32,
+      -132724.39,
+      4692.56,
+      132724.39,
+      3459.95,
+      432.49,
+      3546.45,
+      15460.12,
+      5665.67,
+      2824.77,
+      9701.09,
+      13054.91,
+      17572.92,
+      16557.45,
+      -38327.12,
+      6121.45,
+      38327.12,
+      -1669.99,
+      -3456.1,
+      1040.04,
+      127.4,
+      3420.45,
+      2701.56,
+      6122.75,
+      7522.32,
+      -7035.72,
+      13731.98,
+      1758.66,
+      -4620.97,
+      9442.8,
+      191.11,
+      63.71,
+      -254.82
+    ],
+    "activity_date_type": [
+      "2",
+      "4"
+    ],
+    "activity_status_code": "3",
+    "description_narrative": [
+      "To establish a flow of reliable and timely data and information on agriculture to link national supply of agricultural products to the demand of local and international markets."
+    ],
+    "activity_date_iso_date": [
+      "2021-05-01T00:00:00Z",
+      "2023-11-30T00:00:00Z"
+    ],
+    "recipient_country_code": [
+      "VC"
+    ],
+    "reporting_org_narrative": [
+      "Food and Agriculture Organization (FAO)"
+    ]
+  },
+  {
+    "sector_code": [
+      "31110"
+    ],
+    "budget_value": [
+      320000.0
+    ],
+    "iati_identifier": "XM-DAC-41301-680682",
+    "title_narrative": [
+      "Support MoA to prepare National Strategy integrating the SDGs in its National Agricultural Planning"
+    ],
+    "reporting_org_ref": "XM-DAC-41301",
+    "transaction_value": [
+      320000.0,
+      300000.0,
+      300000.0,
+      20000.0,
+      20000.0,
+      12037.5,
+      36112.5,
+      -175777.73,
+      96072.27,
+      175777.73,
+      -85600.0,
+      -48150.0,
+      3710.76,
+      3788.88,
+      11022.11,
+      2490.1,
+      3092.3,
+      3092.3,
+      -269005.74,
+      13325.54,
+      269005.74,
+      -2564.3,
+      1018.23,
+      4576.23,
+      2073.27,
+      2870.68,
+      214.14,
+      1513.73,
+      19823.95,
+      9505.76,
+      -174719.17,
+      55254.88,
+      174719.17,
+      -11377.88,
+      7277.36,
+      13285.62,
+      1888.66,
+      25211.13,
+      7242.46,
+      1043.45,
+      3916.16,
+      8371.27,
+      8203.39,
+      31902.56,
+      -31152.41,
+      46602.58,
+      -1361.04,
+      40.76,
+      36.98,
+      35.18,
+      37.18,
+      -150.1,
+      1361.04
+    ],
+    "activity_date_type": [
+      "2",
+      "4"
+    ],
+    "activity_status_code": "3",
+    "description_narrative": [
+      "The adoption and implementation of the Updated National Strategy for Agriculture, new Action Plan (2020-2023), new management structure and institutional strengthening action plan by the Ministry of Agriculture (MoA); The submission for approval of the Full Funding Proposal (FFP) by the GCF; The implementation of agricultural statistics related technical and policy instruments to integrate SDGs in the national agricultural planning."
+    ],
+    "activity_date_iso_date": [
+      "2021-03-01T00:00:00Z",
+      "2023-11-30T00:00:00Z"
+    ],
+    "recipient_country_code": [
+      "GY"
+    ],
+    "reporting_org_narrative": [
+      "Food and Agriculture Organization (FAO)"
+    ]
+  },
+  {
+    "sector_code": [
+      "31110"
+    ],
+    "budget_value": [
+      100000.0
+    ],
+    "iati_identifier": "XM-DAC-41301-680842",
+    "title_narrative": [
+      "Resilience in Agriculture and Market Systems for COVID-19 Response Project [RAMS]"
+    ],
+    "reporting_org_ref": "XM-DAC-41301",
+    "transaction_value": [
+      100000.0,
+      100000.0,
+      100000.0,
+      -98156.22,
+      1843.78,
+      98156.22,
+      3128.24,
+      2548.07,
+      3145.73,
+      823.91,
+      707.06,
+      718.44,
+      490.05,
+      -79327.49,
+      7267.23,
+      79327.49,
+      3502.72,
+      3347.03,
+      7103.54,
+      941.67,
+      4352.19,
+      3432.88,
+      4584.28,
+      3064.7,
+      6105.07,
+      -17236.45,
+      25656.96,
+      17236.45,
+      -14018.61,
+      13445.47,
+      505.68,
+      -14855.18,
+      2448.73
+    ],
+    "activity_date_type": [
+      "2",
+      "4"
+    ],
+    "activity_status_code": "3",
+    "description_narrative": [
+      "The Government of Jamaica has implemented public purchasing mechanisms, upgraded the cold chain for agriculture, used technical tools to strengthen the resilience of Agro-food system to COVID-19, economic vulnerability and natural disasters"
+    ],
+    "activity_date_iso_date": [
+      "2021-01-01T00:00:00Z",
+      "2022-12-31T00:00:00Z"
+    ],
+    "recipient_country_code": [
+      "JM"
+    ],
+    "reporting_org_narrative": [
+      "Food and Agriculture Organization (FAO)"
+    ]
+  },
+  {
+    "sector_code": [
+      "43071"
+    ],
+    "budget_value": [
+      180000.0
+    ],
+    "iati_identifier": "XM-DAC-41301-680881",
+    "title_narrative": [
+      "Apoyo institucional al Ministerio de Agricultura, Ganader a y Alimentaci n (MAGA) en el marco de la iniciativa Mano de la Mano."
+    ],
+    "reporting_org_ref": "XM-DAC-41301",
+    "transaction_value": [
+      180000.0,
+      180000.0,
+      180000.0,
+      123.88,
+      -177208.67,
+      2667.45,
+      177208.67,
+      90.33,
+      1325.21,
+      2959.52,
+      10901.7,
+      5987.54,
+      14185.86,
+      6559.05,
+      10028.0,
+      22614.79,
+      19541.23,
+      26106.47,
+      -38419.26,
+      18489.71,
+      38419.26,
+      -2123.25,
+      3511.33,
+      2886.35,
+      4394.33,
+      2243.62,
+      7562.6,
+      1129.91,
+      8096.43,
+      1586.75,
+      2999.19,
+      -5599.12,
+      532.88
+    ],
+    "activity_date_type": [
+      "2",
+      "4"
+    ],
+    "activity_status_code": "3",
+    "description_narrative": [
+      "El MAGA, en colaboraci n con otros actores p blicos, implementa efectivamente planes, estrategias y modelos territoriales, bajo los principios de sostenibilidad."
+    ],
+    "activity_date_iso_date": [
+      "2021-09-14T00:00:00Z",
+      "2023-06-30T00:00:00Z"
+    ],
+    "recipient_country_code": [
+      "GT"
+    ],
+    "reporting_org_narrative": [
+      "Food and Agriculture Organization (FAO)"
+    ]
+  },
+  {
+    "sector_code": [
+      "43060"
+    ],
+    "budget_value": [
+      150000.0
+    ],
+    "iati_identifier": "XM-DAC-41301-680941",
+    "title_narrative": [
+      "Fortalecer la Gesti n Territorial Ind gena Comunitaria como mecanismo de reactivaci n productiva en un contexto de COVID-19 y adaptaci n al Cambio Clim tico"
+    ],
+    "reporting_org_ref": "XM-DAC-41301",
+    "transaction_value": [
+      150000.0,
+      150000.0,
+      150000.0,
+      -150000.0,
+      150000.0,
+      4684.61,
+      20.43,
+      -143354.91,
+      1940.05,
+      143354.91,
+      1.48,
+      1295.98,
+      2809.88,
+      1243.22,
+      11108.41,
+      2570.18,
+      13122.73,
+      17607.59,
+      15792.4,
+      11264.57,
+      9596.18,
+      -50327.88,
+      6614.41,
+      50327.88,
+      -19.58,
+      473.2,
+      7327.99,
+      4744.04,
+      5013.3,
+      5438.96,
+      14082.86,
+      11856.67,
+      2.61,
+      284.66,
+      1070.03,
+      -28.9,
+      24.24,
+      2.0,
+      -24.24,
+      -2.0,
+      24.24
+    ],
+    "activity_date_type": [
+      "2",
+      "4"
+    ],
+    "activity_status_code": "3",
+    "description_narrative": [
+      "Gobierno Nacional de Bolivia y pueblos ind genas originarias priorizados han implementado un Plan de Asistencia y Promoci n Productiva y de Desarrollo Sostenible para los Pueblos Ind genas Post Covid-19 y planes de vida y/o de gesti n territorial integral, dise ados con enfoque de genero, para la reactivaci n socioecon mica, productiva y garantizar la seguridad alimentaria durante la emergencia sanitaria y el post COVID-19."
+    ],
+    "activity_date_iso_date": [
+      "2021-03-01T00:00:00Z",
+      "2023-06-30T00:00:00Z"
+    ],
+    "recipient_country_code": [
+      "BO"
+    ],
+    "reporting_org_narrative": [
+      "Food and Agriculture Organization (FAO)"
+    ]
+  },
+  {
+    "sector_code": [
+      "31110"
+    ],
+    "budget_value": [
+      500000.0
+    ],
+    "iati_identifier": "XM-DAC-41301-681001",
+    "title_narrative": [
+      "Alianzas, procesos asociativos y vinculaci n comercial de la Agricultura Familiar en tiempos de COVID-19 en America del Sur"
+    ],
+    "reporting_org_ref": "XM-DAC-41301",
+    "transaction_value": [
+      500000.0,
+      500000.0,
+      500000.0,
+      -499279.64,
+      720.36,
+      499279.64,
+      10284.78,
+      5197.08,
+      13935.67,
+      14579.49,
+      13438.45,
+      14040.81,
+      14088.9,
+      10333.55,
+      16933.48,
+      13151.22,
+      -350638.78,
+      22657.43,
+      350638.78,
+      -8427.1,
+      12808.03,
+      22961.97,
+      20326.0,
+      -6780.69,
+      19016.27,
+      19199.4,
+      19034.0,
+      37031.28,
+      14239.28,
+      15894.14,
+      -146722.25,
+      38613.95,
+      146722.25,
+      -2753.44,
+      10357.26,
+      5606.71,
+      16514.58,
+      14207.21,
+      15243.61,
+      14474.06,
+      12912.72,
+      16619.39,
+      11867.37,
+      6401.44,
+      -5623.94,
+      19647.4
+    ],
+    "activity_date_type": [
+      "2",
+      "4"
+    ],
+    "activity_status_code": "3",
+    "description_narrative": [
+      "Los pa ses de America del Sur adoptan estrategias que promueven alianzas, procesos asociativos y vinculaci n comercial de la AF y pesca a peque a escala enfocados al abastecimiento local, mitigando los efectos del COVID-19 en la pobreza y la alimentaci n."
+    ],
+    "activity_date_iso_date": [
+      "2020-12-01T00:00:00Z",
+      "2023-11-30T00:00:00Z"
+    ],
+    "reporting_org_narrative": [
+      "Food and Agriculture Organization (FAO)"
+    ]
+  },
+  {
+    "sector_code": [
+      "31320"
+    ],
+    "budget_value": [
+      150000.0
+    ],
+    "iati_identifier": "XM-DAC-41301-681221",
+    "title_narrative": [
+      "Feasibility studies for GCF Saint Lucia proposal in support of the Fisheries Sectoral Adaptation Strategy Action Plan (SASAP)"
+    ],
+    "reporting_org_ref": "XM-DAC-41301",
+    "transaction_value": [
+      150000.0,
+      150000.0,
+      150000.0,
+      -150000.0,
+      150000.0,
+      370.71,
+      1631.12,
+      1556.98,
+      11722.27,
+      1776.36,
+      -81380.64,
+      51561.92,
+      81380.64,
+      -21085.2,
+      392.91,
+      173.06,
+      201.37,
+      175.66,
+      222.4,
+      190.13,
+      98.18,
+      171.97,
+      20720.55,
+      -80119.61,
+      80119.61,
+      -6005.48,
+      10646.5,
+      2508.08,
+      -3367.01,
+      69603.5,
+      -18725.0,
+      18725.0
+    ],
+    "activity_date_type": [
+      "2",
+      "4"
+    ],
+    "activity_status_code": "3",
+    "description_narrative": [
+      "To upgrade and improve methodologies and processes used to manage data, and integrate climate change adaptation into the fisheries sector, including early warning communication tools and disaster planning.  \nTo strengthen adaptation planning and governance, along with improving institutional coordination.\nTo obtain baseline data which will be used to design and implement adaptation solutions."
+    ],
+    "activity_date_iso_date": [
+      "2021-05-01T00:00:00Z",
+      "2023-11-30T00:00:00Z"
+    ],
+    "recipient_country_code": [
+      "LC"
+    ],
+    "reporting_org_narrative": [
+      "Food and Agriculture Organization (FAO)"
+    ]
+  },
+  {
+    "sector_code": [
+      "31130"
+    ],
+    "budget_value": [
+      500000.0
+    ],
+    "iati_identifier": "XM-DAC-41301-680302",
+    "title_narrative": [
+      "Catalysing investments and actions to enhance resilience against sand and dust storms in agriculture"
+    ],
+    "reporting_org_ref": "XM-DAC-41301",
+    "transaction_value": [
+      500000.0,
+      500000.0,
+      500000.0,
+      12317.04,
+      21409.84,
+      -406406.67,
+      59866.45,
+      406406.67,
+      -44913.25,
+      6156.66,
+      25169.17,
+      41586.02,
+      6967.44,
+      12800.4,
+      7005.45,
+      -33.26,
+      12215.26,
+      6278.14,
+      11159.91,
+      -219477.0,
+      102537.73,
+      219477.0,
+      -63947.18,
+      7574.32,
+      7469.31,
+      15471.6,
+      17212.33,
+      11681.41,
+      13144.29,
+      9244.2,
+      18467.4,
+      53386.16,
+      17297.49,
+      3654.08,
+      116129.75,
+      -3654.08,
+      -25325.93,
+      3328.44,
+      7423.66,
+      -10919.75
+    ],
+    "activity_date_type": [
+      "2",
+      "4"
+    ],
+    "activity_status_code": "3",
+    "description_narrative": [
+      "Enhanced resilience of agriculture-dependent communities to SDS"
+    ],
+    "activity_date_iso_date": [
+      "2020-09-15T00:00:00Z",
+      "2022-12-15T00:00:00Z"
+    ],
+    "reporting_org_narrative": [
+      "Food and Agriculture Organization (FAO)"
+    ]
+  },
+  {
+    "sector_code": [
+      "43071"
+    ],
+    "budget_value": [
+      165000.0
+    ],
+    "iati_identifier": "XM-DAC-41301-682321",
+    "title_narrative": [
+      "Apoyo en la respuesta a la COVID-19 para mantener el funcionamiento de los sistemas alimentarios en Cuba"
+    ],
+    "reporting_org_ref": "XM-DAC-41301",
+    "transaction_value": [
+      165000.0,
+      165000.0,
+      165000.0,
+      1181.96,
+      2353.94,
+      761.96,
+      181.27,
+      -160055.93,
+      464.94,
+      160055.93,
+      232.47,
+      232.47,
+      442.62,
+      232.47,
+      232.47,
+      1320.31,
+      988.07,
+      715.83,
+      1265.42,
+      7.21,
+      -141618.52,
+      12768.07,
+      141618.52,
+      -11783.67,
+      3210.0,
+      5643.18,
+      20753.2,
+      4233.59,
+      33028.06,
+      1478.8,
+      1619.65,
+      6413.02,
+      25181.38,
+      -9721.73,
+      42119.58,
+      -10151.51,
+      4075.9,
+      2089.71,
+      3895.28,
+      90.62
+    ],
+    "activity_date_type": [
+      "2",
+      "4"
+    ],
+    "activity_status_code": "3",
+    "description_narrative": [
+      "Ampliaci n del Programa de la Agricultura Urbana y Periurbana y el Plan de Autoabastecimiento Municipal, gracias a la disponibilidad de nuevos recursos para su implementaci n.MINAG adopta e implementa una nueva estrategia de asistencia tecnica a los peque os productores para responder a la COVID-19 y eventos extremos.\nMINAG recibi  apoyo en el dise o y la implementaci n un sistema de alerta temprana de riesgos para la salud p blica, basado en la vigilancia integrada de indicadores del estado sanitario de las poblaciones con enfoque a UNA SALUD"
+    ],
+    "activity_date_iso_date": [
+      "2021-10-01T00:00:00Z",
+      "2023-11-30T00:00:00Z"
+    ],
+    "recipient_country_code": [
+      "CU"
+    ],
+    "reporting_org_narrative": [
+      "Food and Agriculture Organization (FAO)"
+    ]
+  },
+  {
+    "sector_code": [
+      "31120"
+    ],
+    "budget_value": [
+      150000.0
+    ],
+    "iati_identifier": "XM-DAC-41301-683221",
+    "title_narrative": [
+      "Asistencia Tecnica para la producci n de alimentos y acceso al Credito de Reactivaci n Econ mica para la Emergencia Sanitaria"
+    ],
+    "reporting_org_ref": "XM-DAC-41301",
+    "transaction_value": [
+      149965.01,
+      150000.0,
+      150000.0,
+      1273.15,
+      1235.04,
+      2712.1,
+      8680.11,
+      9210.86,
+      9407.71,
+      -96405.43,
+      21075.6,
+      96405.43,
+      714.26,
+      8731.39,
+      13288.55,
+      15708.48,
+      11307.24,
+      16281.68,
+      8509.16,
+      11175.3,
+      5076.66,
+      690.5,
+      469.57,
+      -8450.6,
+      -3997.96,
+      8450.6,
+      173.43,
+      15.29,
+      1478.0,
+      3752.89,
+      -34.99,
+      2996.0
+    ],
+    "activity_date_type": [
+      "2",
+      "4"
+    ],
+    "activity_status_code": "3",
+    "description_narrative": [
+      "Contribuir a la mejora del abastecimiento alimentario, producci n sostenible a traves de la transformaci n de los sistemas de producci n (de tecnolog a, credito y mercados) adaptados a un contexto post COVID-19 para la generaci n de ingresos de productoras y productores"
+    ],
+    "activity_date_iso_date": [
+      "2021-06-01T00:00:00Z",
+      "2023-03-31T00:00:00Z"
+    ],
+    "recipient_country_code": [
+      "BO"
+    ],
+    "reporting_org_narrative": [
+      "Food and Agriculture Organization (FAO)"
+    ]
+  },
+  {
+    "sector_code": [
+      "41010"
+    ],
+    "budget_value": [
+      375000.0
+    ],
+    "iati_identifier": "XM-DAC-41301-684201",
+    "title_narrative": [
+      "Apoyo a la cooperaci n regional para la gesti n clim tica de los ecosistemas agr colas con enfasis en agua y suelo"
+    ],
+    "reporting_org_ref": "XM-DAC-41301",
+    "transaction_value": [
+      375000.0,
+      375000.0,
+      375000.0,
+      -372065.75,
+      2934.25,
+      372065.75,
+      3320.47,
+      3042.66,
+      4284.79,
+      10766.17,
+      10163.73,
+      8509.18,
+      6295.37,
+      17138.65,
+      7975.16,
+      6734.76,
+      -322910.9,
+      -29076.09,
+      322910.9,
+      -10760.74,
+      3505.51,
+      14737.37,
+      41570.62,
+      25821.46,
+      22140.57,
+      32033.22,
+      23477.65,
+      18849.18,
+      20180.35,
+      24867.7,
+      -71660.5,
+      34827.51,
+      71660.5,
+      -28315.59,
+      12156.86,
+      7422.0,
+      451.27,
+      442.25,
+      1543.71,
+      442.15,
+      695.29,
+      9565.0,
+      502.28,
+      50253.91,
+      -5044.2,
+      11457.17,
+      -3182.8,
+      507.8,
+      2675.0
+    ],
+    "activity_date_type": [
+      "2",
+      "4"
+    ],
+    "activity_status_code": "3",
+    "description_narrative": [
+      "Los pa ses involucrados implementan pol ticas y/o estrategias y buenas pr cticas alineadas con la agricultura baja en carbono, sostenible y resiliente al cambio clim tico"
+    ],
+    "activity_date_iso_date": [
+      "2020-12-01T00:00:00Z",
+      "2023-11-30T00:00:00Z"
+    ],
+    "reporting_org_narrative": [
+      "Food and Agriculture Organization (FAO)"
+    ]
+  },
+  {
+    "sector_code": [
+      "43040"
+    ],
+    "budget_value": [
+      150000.0
+    ],
+    "iati_identifier": "XM-DAC-41301-684561",
+    "title_narrative": [
+      "Mano de la Mano. Apoyo de Cuba a Hait  (HiH)"
+    ],
+    "reporting_org_ref": "XM-DAC-41301",
+    "transaction_value": [
+      150000.0,
+      150000.0,
+      150000.0,
+      9669.63,
+      1934.42,
+      -87392.31,
+      51003.64,
+      87392.31,
+      -7951.44,
+      1598.24,
+      800.33,
+      985.66,
+      9586.12,
+      1026.76,
+      937.54,
+      3721.58,
+      737.29,
+      -47241.78,
+      28708.45,
+      -27401.49,
+      3585.1,
+      23825.68,
+      -9.29
+    ],
+    "activity_date_type": [
+      "2",
+      "4"
+    ],
+    "activity_status_code": "3",
+    "description_narrative": [
+      "Los Ministerios de Agricultura  de Cuba y Hait  implementan programas para promover la adopci n de nuevas tecnolog as e innovaciones agr colas de alimento animal y humano (moringa), basados en producci n local, que mejoran la eficiencia, competitividad y resiliencia de la agricultura."
+    ],
+    "activity_date_iso_date": [
+      "2022-06-01T00:00:00Z",
+      "2023-11-30T00:00:00Z"
+    ],
+    "reporting_org_narrative": [
+      "Food and Agriculture Organization (FAO)"
+    ]
+  },
+  {
+    "sector_code": [
+      "43071"
+    ],
+    "budget_value": [
+      450000.0
+    ],
+    "iati_identifier": "XM-DAC-41301-685901",
+    "title_narrative": [
+      "Fortalecimiento de las pol ticas de seguridad alimentaria y nutricional y de protecci n social ampliada para avanzar en los ODS 1 y 2 en el post COVID-19"
+    ],
+    "reporting_org_ref": "XM-DAC-41301",
+    "transaction_value": [
+      450000.0,
+      450000.0,
+      450000.0,
+      -450000.0,
+      450000.0,
+      217.98,
+      227.82,
+      222.76,
+      1274.77,
+      2674.2,
+      4086.83,
+      6692.67,
+      5711.18,
+      24078.05,
+      13644.96,
+      -369508.9,
+      21659.88,
+      369508.9,
+      14331.38,
+      12611.62,
+      21597.31,
+      6686.94,
+      22234.24,
+      23706.95,
+      15745.16,
+      47003.66,
+      17704.08,
+      16738.95,
+      -143733.28,
+      27415.33,
+      143733.28,
+      13674.46,
+      4953.28,
+      27019.83,
+      6206.21,
+      7127.17,
+      23891.75,
+      2932.05,
+      28808.04,
+      4620.17,
+      1682.67,
+      -5321.1,
+      17496.55,
+      -0.01,
+      0.01
+    ],
+    "activity_date_type": [
+      "2",
+      "4"
+    ],
+    "activity_status_code": "3",
+    "description_narrative": [
+      "Al menos tres (3) pa ses de la regi n implementan pol ticas de Estado innovadoras fortalecidas y adecuadas para la superaci n del hambre y la pobreza en el post COVID-19, gracias a la asistencia tecnica del proyecto, y utilizan instrumentos y recursos tecnicos y financieros, productos de un mayor compromiso pol tico internacional, regional y nacional, y privado y social."
+    ],
+    "activity_date_iso_date": [
+      "2021-05-17T00:00:00Z",
+      "2023-10-31T00:00:00Z"
+    ],
+    "reporting_org_narrative": [
+      "Food and Agriculture Organization (FAO)"
+    ]
+  },
+  {
+    "sector_code": [
+      "43040"
+    ],
+    "budget_value": [
+      100000.0
+    ],
+    "iati_identifier": "XM-DAC-41301-686721",
+    "title_narrative": [
+      "Inclusi n econ mica de la juventud rural en Honduras, en el marco de la Estrategia Hand in Hand."
+    ],
+    "reporting_org_ref": "XM-DAC-41301",
+    "transaction_value": [
+      99427.68,
+      100000.0,
+      100000.0,
+      2846.78,
+      2834.47,
+      2882.36,
+      2854.64,
+      2873.87,
+      2869.43,
+      2909.26,
+      23702.29,
+      6237.59,
+      4129.73,
+      -48216.8,
+      -2357.22,
+      48216.8,
+      -708.73,
+      3777.12,
+      3781.63,
+      2811.0,
+      4694.94,
+      3305.35,
+      2806.7,
+      4161.65,
+      18.87,
+      207.33,
+      -95.84,
+      23265.1,
+      95.84,
+      -22735.02,
+      713.33,
+      -572.32,
+      21545.21
+    ],
+    "activity_date_type": [
+      "2",
+      "4"
+    ],
+    "activity_status_code": "3",
+    "description_narrative": [
+      "El Instituto Nacional de la Juventud (INJ), el Servicio Nacional de Emprendimiento y Peque os Negocios (SENPRENDE) y los gobiernos locales implementan herramientas e incentivos para la inclusi n econ mica de la juventud rural."
+    ],
+    "activity_date_iso_date": [
+      "2021-01-01T00:00:00Z",
+      "2022-12-31T00:00:00Z"
+    ],
+    "recipient_country_code": [
+      "HN"
+    ],
+    "reporting_org_narrative": [
+      "Food and Agriculture Organization (FAO)"
+    ]
+  },
+  {
+    "sector_code": [
+      "31110"
+    ],
+    "budget_value": [
+      45000.0
+    ],
+    "iati_identifier": "XM-DAC-41301-688101",
+    "title_narrative": [
+      "Managing Belizean Agriculture Resilience [M-BAR]"
+    ],
+    "reporting_org_ref": "XM-DAC-41301",
+    "transaction_value": [
+      45000.0,
+      45000.0,
+      45000.0,
+      2162.47,
+      810.93,
+      1892.17,
+      3135.1,
+      2432.78,
+      -33431.25,
+      1135.3,
+      33431.25,
+      2759.4,
+      2437.6,
+      3250.13,
+      21984.58,
+      1792.13,
+      -1207.41
+    ],
+    "activity_date_type": [
+      "2",
+      "4"
+    ],
+    "activity_status_code": "3",
+    "description_narrative": [
+      "The Government of Belize has applied technical instruments developed by the project to strengthen risk management, transportation, storage and distribution arrangements in the Agro-food system to protect farmers from economic shocks and natural disasters."
+    ],
+    "activity_date_iso_date": [
+      "2021-10-01T00:00:00Z",
+      "2023-06-30T00:00:00Z"
+    ],
+    "recipient_country_code": [
+      "BZ"
+    ],
+    "reporting_org_narrative": [
+      "Food and Agriculture Organization (FAO)"
+    ]
+  },
+  {
+    "sector_code": [
+      "31120"
+    ],
+    "budget_value": [
+      30000.0
+    ],
+    "iati_identifier": "XM-DAC-41301-690783",
+    "title_narrative": [
+      "Support to the formulation of project proposal ADAPT-JAMAICA for the Green Climate Fund (GCF)"
+    ],
+    "reporting_org_ref": "XM-DAC-41301",
+    "transaction_value": [
+      30000.0,
+      30000.0,
+      30000.0,
+      6653.23,
+      2426.54,
+      821.88,
+      2515.97,
+      1117.1,
+      -12567.83,
+      3897.45,
+      12567.83,
+      1216.39,
+      4601.12,
+      1014.56,
+      1639.89,
+      3.03,
+      -4092.84,
+      4092.84,
+      -4092.84
+    ],
+    "activity_date_type": [
+      "2",
+      "4"
+    ],
+    "activity_status_code": "3",
+    "description_narrative": [
+      "(1) Project Preparation Facility (PPF) application is approved by the Green Climate Fund.\n(2) The Government of Jamaica has implemented and completed all planned project preparation activities targeted in its PPF.\n(3) A full Funding Proposal supported by the PPF application has been approved by the GCF Board within two years after the approval of PPF application"
+    ],
+    "activity_date_iso_date": [
+      "2021-07-01T00:00:00Z",
+      "2022-07-31T00:00:00Z"
+    ],
+    "recipient_country_code": [
+      "JM"
+    ],
+    "reporting_org_narrative": [
+      "Food and Agriculture Organization (FAO)"
+    ]
+  },
+  {
+    "sector_code": [
+      "31120"
+    ],
+    "budget_value": [
+      220000.0
+    ],
+    "iati_identifier": "XM-DAC-41301-691583",
+    "title_narrative": [
+      "Identificaci n y fomento de inversiones para la recuperaci n econ mica post COVID-19 y transformaci n agr cola en territorios Hand in Hand."
+    ],
+    "reporting_org_ref": "XM-DAC-41301",
+    "transaction_value": [
+      220000.0,
+      220000.0,
+      220000.0,
+      128.4,
+      852.24,
+      1753.59,
+      1616.48,
+      1611.81,
+      10129.39,
+      49468.59,
+      -137524.46,
+      16915.04,
+      137524.46,
+      796.94,
+      3060.98,
+      2811.39,
+      9262.42,
+      7344.53,
+      7374.76,
+      5709.69,
+      5012.76,
+      6773.09,
+      13661.67,
+      5475.67,
+      -52260.23,
+      17980.33,
+      52260.23,
+      4495.02,
+      711.9,
+      -3372.34,
+      2771.69,
+      4074.34,
+      3226.07,
+      3220.39,
+      6686.07,
+      15033.0,
+      6555.93,
+      -2794.59,
+      6063.57
+    ],
+    "activity_date_type": [
+      "2",
+      "4"
+    ],
+    "activity_status_code": "3",
+    "description_narrative": [
+      "Instituciones de Gobierno, a nivel nacional y subnacional, y socios de la cooperaci n implementan planes de inversi n orientados a la recuperaci n socioecon mica de la poblaci n rural pobre y afectada por la pandemia."
+    ],
+    "activity_date_iso_date": [
+      "2021-05-10T00:00:00Z",
+      "2023-11-30T00:00:00Z"
+    ],
+    "recipient_country_code": [
+      "EC"
+    ],
+    "reporting_org_narrative": [
+      "Food and Agriculture Organization (FAO)"
+    ]
+  },
+  {
+    "sector_code": [
+      "31165"
+    ],
+    "budget_value": [
+      226000.0
+    ],
+    "iati_identifier": "XM-DAC-41301-694103",
+    "title_narrative": [
+      "Transformaci n y Resiliencia post Covid-19 de comunidades rurales del Corredor Seco"
+    ],
+    "reporting_org_ref": "XM-DAC-41301",
+    "transaction_value": [
+      230000.0,
+      230000.0,
+      230000.0,
+      1796.16,
+      825.38,
+      1518.58,
+      2464.23,
+      2458.39,
+      2930.95,
+      2607.83,
+      -210442.31,
+      4956.17,
+      210442.31,
+      -9.1,
+      3937.93,
+      4060.14,
+      3936.34,
+      6328.44,
+      7064.41,
+      5742.29,
+      5159.64,
+      32148.83,
+      12412.65,
+      -5559.01,
+      -84133.27,
+      51086.48,
+      84133.27,
+      -34228.49,
+      15104.21,
+      20770.4,
+      6796.68,
+      6501.52,
+      30895.98,
+      13894.59,
+      15907.95,
+      395.43,
+      -168.38,
+      3926.62,
+      -4000.0,
+      -4000.0
+    ],
+    "activity_date_type": [
+      "2",
+      "4"
+    ],
+    "activity_status_code": "3",
+    "description_narrative": [
+      "Gobierno de Nicaragua implementa un proyecto del Fondo de Adaptaci n e impulsa la adopci n de innovaci n digital y tecnolog as de agricultura clim ticamente inteligente en el Corredor Seco"
+    ],
+    "activity_date_iso_date": [
+      "2021-10-01T00:00:00Z",
+      "2023-07-31T00:00:00Z"
+    ],
+    "recipient_country_code": [
+      "NI"
+    ],
+    "reporting_org_narrative": [
+      "Food and Agriculture Organization (FAO)"
+    ]
+  },
+  {
+    "sector_code": [
+      "43071"
+    ],
+    "budget_value": [
+      220000.0
+    ],
+    "iati_identifier": "XM-DAC-41301-694162",
+    "title_narrative": [
+      "Food Loss and Waste Reduction through a value chain development approach to transform food systems - COVID-19 Response and Recovery"
+    ],
+    "reporting_org_ref": "XM-DAC-41301",
+    "transaction_value": [
+      220000.0,
+      220000.0,
+      220000.0,
+      1922.47,
+      1649.77,
+      16220.81,
+      3868.14,
+      3642.28,
+      -198016.21,
+      -5319.68,
+      198016.21,
+      186.37,
+      1370.69,
+      2540.36,
+      5990.01,
+      5838.58,
+      4800.41,
+      3280.26,
+      8650.49,
+      8541.42,
+      9088.14,
+      -135728.08,
+      12001.4,
+      135728.08,
+      -160.24,
+      5474.9,
+      3841.31,
+      2502.45,
+      3249.37,
+      5265.45,
+      7670.05,
+      6053.94,
+      6273.15,
+      8274.16,
+      6770.35,
+      -4819.93,
+      75693.26,
+      -50355.61,
+      642.31,
+      49713.3
+    ],
+    "activity_date_type": [
+      "2",
+      "4"
+    ],
+    "activity_status_code": "3",
+    "description_narrative": [
+      "Actors in food value chains use digital data, have implemented improved production and post-harvest management practices, mobile storage and processing of soft fruits and leafy vegetables, alternative marketing arrangements and increased investments."
+    ],
+    "activity_date_iso_date": [
+      "2021-07-01T00:00:00Z",
+      "2023-11-30T00:00:00Z"
+    ],
+    "recipient_country_code": [
+      "JM"
+    ],
+    "reporting_org_narrative": [
+      "Food and Agriculture Organization (FAO)"
+    ]
+  },
+  {
+    "sector_code": [
+      "43040"
+    ],
+    "budget_value": [
+      220000.0
+    ],
+    "iati_identifier": "XM-DAC-41301-694163",
+    "title_narrative": [
+      "Strengthening rural populations? livelihoods resilience through the promotion of nonagricultural short circuits in the post COVID-19 pandemic."
+    ],
+    "reporting_org_ref": "XM-DAC-41301",
+    "transaction_value": [
+      220000.0,
+      220000.0,
+      220000.0,
+      -220000.0,
+      220000.0,
+      2032.57,
+      2663.05,
+      2073.77,
+      2453.2,
+      3133.92,
+      2106.62,
+      2512.42,
+      2852.3,
+      2755.81,
+      -190716.43,
+      6699.91,
+      190716.43,
+      874.82,
+      2129.32,
+      647.91,
+      596.41,
+      3828.2,
+      8275.06,
+      15851.84,
+      558.95,
+      12246.47,
+      22710.79,
+      -2670.24,
+      120326.42,
+      8536.58,
+      -8536.58
+    ],
+    "activity_date_type": [
+      "2",
+      "4"
+    ],
+    "activity_status_code": "3",
+    "description_narrative": [
+      "The adoption of a short circuits approach in non-agricultural sectors by local governments  in seven targeted territories aiming to its replication across the country"
+    ],
+    "activity_date_iso_date": [
+      "2022-03-01T00:00:00Z",
+      "2023-12-15T00:00:00Z"
+    ],
+    "recipient_country_code": [
+      "BR"
+    ],
+    "reporting_org_narrative": [
+      "Food and Agriculture Organization (FAO)"
+    ]
+  },
+  {
+    "sector_code": [
+      "43040"
+    ],
+    "budget_value": [
+      220000.0
+    ],
+    "iati_identifier": "XM-DAC-41301-694164",
+    "title_narrative": [
+      "Inclusi n de mujeres y j venes rurales en la cadena de valor del sector tur stico"
+    ],
+    "reporting_org_ref": "XM-DAC-41301",
+    "transaction_value": [
+      220000.0,
+      220000.0,
+      220000.0,
+      153.31,
+      1091.97,
+      -217101.29,
+      1653.43,
+      217101.29,
+      -133.42,
+      2620.62,
+      3061.77,
+      3978.12,
+      3235.19,
+      5024.01,
+      9017.45,
+      13990.32,
+      1845.58,
+      1864.21,
+      9503.83,
+      -139180.59,
+      23913.02,
+      139180.59,
+      -357.72,
+      10864.16,
+      10274.65,
+      11348.4,
+      11490.72,
+      8183.46,
+      161.46,
+      11428.66,
+      20080.5,
+      20419.23,
+      17708.71,
+      -578.89,
+      16999.47,
+      -273.13,
+      273.13
+    ],
+    "activity_date_type": [
+      "2",
+      "4"
+    ],
+    "activity_status_code": "3",
+    "description_narrative": [
+      "Mujeres y j venes rurales fortalecen y transforman sus medios de vida frente a los efectos de la pandemia de COVID-19, a fin de garantizar su seguridad alimentaria y mejores condiciones de vida (1, 2, 5 y 8)."
+    ],
+    "activity_date_iso_date": [
+      "2022-05-02T00:00:00Z",
+      "2023-11-30T00:00:00Z"
+    ],
+    "recipient_country_code": [
+      "DO"
+    ],
+    "reporting_org_narrative": [
+      "Food and Agriculture Organization (FAO)"
+    ]
+  },
+  {
+    "sector_code": [
+      "43040"
+    ],
+    "budget_value": [
+      220000.0
+    ],
+    "iati_identifier": "XM-DAC-41301-694202",
+    "title_narrative": [
+      "Innovaciones para una mayor inclusi n y resiliencia de las Organizaciones de la Agricultura Familiar"
+    ],
+    "reporting_org_ref": "XM-DAC-41301",
+    "transaction_value": [
+      220000.0,
+      220000.0,
+      220000.0,
+      266.26,
+      605.0,
+      182.26,
+      26790.66,
+      -129644.28,
+      62511.54,
+      129644.28,
+      -62511.54,
+      5016.16,
+      574.4,
+      2506.38,
+      10671.53,
+      1276.49,
+      2244.47,
+      13988.16,
+      30472.65,
+      -41302.51,
+      84103.07,
+      41302.51,
+      -44416.61,
+      16482.82,
+      209.48,
+      1393.24,
+      5285.35,
+      747.62,
+      52457.2,
+      6236.32,
+      385.14,
+      -1366.74,
+      770.27,
+      385.14
+    ],
+    "activity_date_type": [
+      "2",
+      "4"
+    ],
+    "activity_status_code": "3",
+    "description_narrative": [
+      "Las personas de las zonas rurales, en especial j venes, mujeres y pueblos ind genas, mejoran sus ingresos y sus condiciones de vida para mitigar los efectos de la Pandemia del COVID-19"
+    ],
+    "activity_date_iso_date": [
+      "2021-05-08T00:00:00Z",
+      "2023-11-30T00:00:00Z"
+    ],
+    "reporting_org_narrative": [
+      "Food and Agriculture Organization (FAO)"
+    ]
+  },
+  {
+    "sector_code": [
+      "43071"
+    ],
+    "budget_value": [
+      315000.08
+    ],
+    "iati_identifier": "XM-DAC-41301-694462",
+    "title_narrative": [
+      "Estrategias p blico-privadas para modernizaci n de actores del canal tradicional responsables de la comercializaci n y distribuci n de alimentos"
+    ],
+    "reporting_org_ref": "XM-DAC-41301",
+    "transaction_value": [
+      315000.08,
+      315000.0,
+      3602.09,
+      6388.21,
+      18835.61,
+      6614.23,
+      3940.89,
+      6809.21,
+      11135.71,
+      33833.67,
+      102679.79,
+      11520.17,
+      212320.21,
+      -7809.93,
+      14777.01,
+      22585.08,
+      16333.55,
+      14812.67,
+      9308.55,
+      8590.36,
+      11947.43,
+      12913.78,
+      11052.1,
+      0.08,
+      0.08,
+      13476.09,
+      -56175.68,
+      28157.92,
+      56175.68,
+      -961.1,
+      5588.97,
+      4331.93,
+      9162.72,
+      11781.27,
+      15343.27,
+      4228.37,
+      353.91,
+      3338.52,
+      323.17,
+      322.07,
+      -1790.19,
+      572.39
+    ],
+    "activity_date_type": [
+      "2",
+      "4"
+    ],
+    "activity_status_code": "3",
+    "description_narrative": [
+      "Siete pa ses utilizan las alianzas p blico ? privadas, nuevos instrumentos tecnicos y metodolog as para modernizar y mejorar la eficiencia del abastecimiento de alimentos provenientes del canal tradicional (ferias, mercados mayoristas y centros de abasto minorista)."
+    ],
+    "activity_date_iso_date": [
+      "2021-03-01T00:00:00Z",
+      "2023-05-31T00:00:00Z"
+    ],
+    "reporting_org_narrative": [
+      "Food and Agriculture Organization (FAO)"
+    ]
+  },
+  {
+    "sector_code": [
+      "43040"
+    ],
+    "budget_value": [
+      150000.0
+    ],
+    "iati_identifier": "XM-DAC-41301-695002",
+    "title_narrative": [
+      "Alianzas para la innovaci n tecnol gica en el Corredor Seco Centroamericano mediante la zonificaci n agropecuaria de riesgo clim tico"
+    ],
+    "reporting_org_ref": "XM-DAC-41301",
+    "transaction_value": [
+      150000.0,
+      150000.0,
+      150000.0,
+      -150000.0,
+      150000.0,
+      522.89,
+      27550.31,
+      575.98,
+      1221.0,
+      1306.47,
+      575.18,
+      38144.68,
+      7386.84,
+      11434.19,
+      214.29,
+      -25495.85,
+      35572.32,
+      25495.85,
+      -35572.32,
+      432.46,
+      389.22,
+      479.35,
+      718.8,
+      1372.86,
+      20182.29,
+      15323.25,
+      1.71,
+      3281.46,
+      25449.69,
+      -19179.49,
+      19179.49
+    ],
+    "activity_date_type": [
+      "2",
+      "4"
+    ],
+    "activity_status_code": "3",
+    "description_narrative": [
+      "Los pa ses de CSCA utilizan las nuevas herramientas de zonificaci n agropecuaria desarrolladas por el proyecto para mejorar la planificaci n especial de la agricultura en el contexto del cambio clim tico."
+    ],
+    "activity_date_iso_date": [
+      "2021-12-01T00:00:00Z",
+      "2023-10-31T00:00:00Z"
+    ],
+    "reporting_org_narrative": [
+      "Food and Agriculture Organization (FAO)"
+    ]
+  },
+  {
+    "sector_code": [
+      "43040"
+    ],
+    "budget_value": [
+      230000.0
+    ],
+    "iati_identifier": "XM-DAC-41301-695083",
+    "title_narrative": [
+      "Aldeas Digitales LAC"
+    ],
+    "reporting_org_ref": "XM-DAC-41301",
+    "transaction_value": [
+      230000.0,
+      230000.0,
+      230000.0,
+      1890.78,
+      3163.59,
+      633.32,
+      -225245.58,
+      -933.27,
+      225245.58,
+      1737.99,
+      4550.57,
+      16954.98,
+      16869.86,
+      -1170.06,
+      11707.66,
+      9628.32,
+      9035.29,
+      18710.68,
+      15065.88,
+      -70576.65,
+      51577.76,
+      70576.65,
+      -1819.19,
+      15266.63,
+      1038.35,
+      11211.76,
+      2557.96,
+      3601.01,
+      1788.22,
+      11339.35,
+      1965.71,
+      2268.24,
+      -15569.03,
+      5789.58,
+      -1414.54,
+      1414.54
+    ],
+    "activity_date_type": [
+      "2",
+      "4"
+    ],
+    "activity_status_code": "3",
+    "description_narrative": [
+      "Gobiernos de la regi n, actores privados, entidades financieras internacionales, organismos de cooperaci n, y FAO, implementan estrategias que promueven el uso y manejo de tecnolog as digitales en los sistemas agroalimentarios y territorios rurales, con base a iniciativas de Turismo Rural en curso"
+    ],
+    "activity_date_iso_date": [
+      "2021-09-01T00:00:00Z",
+      "2023-08-31T00:00:00Z"
+    ],
+    "reporting_org_narrative": [
+      "Food and Agriculture Organization (FAO)"
+    ]
+  },
+  {
+    "sector_code": [
+      "31310"
+    ],
+    "budget_value": [
+      60000.0
+    ],
+    "iati_identifier": "XM-DAC-41301-695242",
+    "title_narrative": [
+      "Inclusi n del Pescado en la Alimentaci n Escolar en Honduras."
+    ],
+    "reporting_org_ref": "XM-DAC-41301",
+    "transaction_value": [
+      60000.0,
+      60000.0,
+      60000.0,
+      -57188.04,
+      2811.96,
+      57188.04,
+      4656.02,
+      10207.36,
+      10884.47,
+      9411.09,
+      10306.18,
+      4403.24,
+      2208.75,
+      1700.72,
+      291.69,
+      -1707.12,
+      1411.4,
+      1707.12,
+      246.38,
+      1137.91,
+      321.0,
+      -1.83
+    ],
+    "activity_date_type": [
+      "2",
+      "4"
+    ],
+    "activity_status_code": "3",
+    "description_narrative": [
+      "El Programa Nacional de Alimentaci n Escolar implementa una Estrategia Nacional para la inclusi n del pescado en la alimentaci n escolar, fundamentada en evidencias."
+    ],
+    "activity_date_iso_date": [
+      "2021-12-01T00:00:00Z",
+      "2023-11-30T00:00:00Z"
+    ],
+    "recipient_country_code": [
+      "HN"
+    ],
+    "reporting_org_narrative": [
+      "Food and Agriculture Organization (FAO)"
+    ]
+  },
+  {
+    "sector_code": [
+      "73010"
+    ],
+    "budget_value": [
+      500000.0
+    ],
+    "iati_identifier": "XM-DAC-41301-696042",
+    "title_narrative": [
+      "Asistencia de emergencia para rehabilitar los sistemas productivos de familias afectadas por los huracanes ETA e IOTA en la regi n del Polochic del Departamento Alta Verapaz."
+    ],
+    "reporting_org_ref": "XM-DAC-41301",
+    "transaction_value": [
+      499967.5,
+      300000.0,
+      941.6,
+      2834.53,
+      13131.19,
+      3410.42,
+      92961.91,
+      35240.3,
+      15552.61,
+      14939.84,
+      200000.0,
+      200000.0,
+      14421.03,
+      83326.25,
+      89892.82,
+      216673.75,
+      -12086.07,
+      8403.07,
+      20497.39,
+      19357.54,
+      19428.61,
+      41706.66,
+      33952.58,
+      8541.33,
+      16523.71,
+      12888.39,
+      2952.64,
+      -3504.54,
+      41003.36,
+      3504.54,
+      -10106.61,
+      3602.72,
+      633.13,
+      -32.5,
+      9342.8
+    ],
+    "activity_date_type": [
+      "2",
+      "4"
+    ],
+    "activity_status_code": "3",
+    "description_narrative": [
+      "Rehabilitados los sistemas alimentarios de 1000 familias afectadas por los huracanes ETA e IOTA en la regi n del Polochic en el Departamento Alta Verapaz."
+    ],
+    "activity_date_iso_date": [
+      "2021-01-28T00:00:00Z",
+      "2022-12-31T00:00:00Z"
+    ],
+    "recipient_country_code": [
+      "GT"
+    ],
+    "reporting_org_narrative": [
+      "Food and Agriculture Organization (FAO)"
+    ]
+  },
+  {
+    "sector_code": [
+      "43060"
+    ],
+    "budget_value": [
+      500000.0
+    ],
+    "iati_identifier": "XM-DAC-41301-696542",
+    "title_narrative": [
+      "Assistance d?urgence   la protection et la restauration des moyens d?existence des populations vulnerables en phase d?urgence du departement du Nord-Ouest."
+    ],
+    "reporting_org_ref": "XM-DAC-41301",
+    "transaction_value": [
+      462972.74,
+      500000.0,
+      500000.0,
+      339.4,
+      3802.52,
+      361.27,
+      14361.97,
+      9360.14,
+      133640.34,
+      28906.26,
+      9333.57,
+      -246671.37,
+      53223.16,
+      246671.37,
+      -25933.29,
+      4614.89,
+      5480.82,
+      11726.14,
+      15919.05,
+      13464.13,
+      10378.13,
+      2862.34,
+      69361.07,
+      3971.97,
+      4960.3,
+      -41158.43,
+      88707.39,
+      41158.43,
+      -2313.93,
+      716.32,
+      851.72,
+      1881.06,
+      2996.0,
+      -37027.26
+    ],
+    "activity_date_type": [
+      "2",
+      "4"
+    ],
+    "activity_status_code": "3",
+    "description_narrative": [
+      "L'acc s aux aliments de 3 500 menages vulnerables dans le Nord-Ouest est ameliore par la protection ou la relance de leurs moyens d'existence axes sur la production agricole ou l'elevage."
+    ],
+    "activity_date_iso_date": [
+      "2021-03-29T00:00:00Z",
+      "2022-12-31T00:00:00Z"
+    ],
+    "recipient_country_code": [
+      "HT"
+    ],
+    "reporting_org_narrative": [
+      "Food and Agriculture Organization (FAO)"
+    ]
+  },
+  {
+    "sector_code": [
+      "72010"
+    ],
+    "budget_value": [
+      500000.0
+    ],
+    "iati_identifier": "XM-DAC-41301-696664",
+    "title_narrative": [
+      "Recuperaci n de medios de vida de las poblaciones pesqueras de la costa Caribe de Nicaragua afectadas por los Huracanes Iota y Eta."
+    ],
+    "reporting_org_ref": "XM-DAC-41301",
+    "transaction_value": [
+      499989.74,
+      350000.0,
+      416.14,
+      1455.37,
+      2961.4,
+      10675.18,
+      5201.71,
+      5183.18,
+      150000.0,
+      150000.0,
+      5051.18,
+      -55501.22,
+      63554.62,
+      405501.22,
+      -33692.59,
+      1375.37,
+      272.46,
+      3195.69,
+      1729.39,
+      12125.64,
+      18322.48,
+      38517.57,
+      43392.0,
+      121297.33,
+      35169.58,
+      -375.73,
+      163420.57,
+      375.73,
+      -15241.79,
+      7970.76,
+      7794.06,
+      -10.26,
+      -157.56
+    ],
+    "activity_date_type": [
+      "2",
+      "4"
+    ],
+    "activity_status_code": "3",
+    "description_narrative": [
+      "Mejorar la seguridad alimentaria y fortalecer la resiliencia de hogares dedicados a las actividades de pesca artesanal en la Costa Caribe de Nicaragua que fueron directamente afectados por el impacto de los Huracanes Iota y Eta, con enfoque de genero y pueblos ind genas."
+    ],
+    "activity_date_iso_date": [
+      "2021-02-15T00:00:00Z",
+      "2022-12-31T00:00:00Z"
+    ],
+    "recipient_country_code": [
+      "NI"
+    ],
+    "reporting_org_narrative": [
+      "Food and Agriculture Organization (FAO)"
+    ]
+  },
+  {
+    "sector_code": [
+      "72010"
+    ],
+    "budget_value": [
+      500000.0
+    ],
+    "iati_identifier": "XM-DAC-41301-696682",
+    "title_narrative": [
+      "Emergency response and livelihoods early recovery for smallholder farmers affected by Tropical Storms ETA and IOTA"
+    ],
+    "reporting_org_ref": "XM-DAC-41301",
+    "transaction_value": [
+      500000.0,
+      250000.0,
+      11847.85,
+      12963.05,
+      21392.66,
+      45133.07,
+      4177.7,
+      23665.28,
+      37774.3,
+      19357.73,
+      250000.0,
+      250000.0,
+      6034.24,
+      -32168.93,
+      35485.19,
+      282168.93,
+      -25652.2,
+      5218.54,
+      7981.27,
+      6147.71,
+      48278.33,
+      7252.13,
+      10733.87,
+      8971.09,
+      23081.49,
+      20965.53,
+      32209.2,
+      -51877.3,
+      85104.67,
+      51877.3,
+      -48929.18,
+      8246.45,
+      32740.25,
+      -2532.58,
+      21160.41,
+      162.64,
+      2927.24,
+      30737.74,
+      -7364.33
+    ],
+    "activity_date_type": [
+      "2",
+      "4"
+    ],
+    "activity_status_code": "3",
+    "description_narrative": [
+      "Local communities, Government institutions (SAG, DICTA), Municipal Technical Units and Mancomunidades effectively and integrally implement needs-based and demand-driven approaches for emergency response and livelihoods? early recovery of smallholder farmers and vulnerable rural population affected by Tropical Storms ETA and IOTA"
+    ],
+    "activity_date_iso_date": [
+      "2021-01-12T00:00:00Z",
+      "2023-03-30T00:00:00Z"
+    ],
+    "recipient_country_code": [
+      "HN"
+    ],
+    "reporting_org_narrative": [
+      "Food and Agriculture Organization (FAO)"
+    ]
+  },
+  {
+    "sector_code": [
+      "31120"
+    ],
+    "budget_value": [
+      297000.0
+    ],
+    "iati_identifier": "XM-DAC-41301-697522",
+    "title_narrative": [
+      "Inversiones Estrategicas para la Recuperaci n y Transformaci n en Nicaragua"
+    ],
+    "reporting_org_ref": "XM-DAC-41301",
+    "transaction_value": [
+      297000.0,
+      300000.0,
+      300000.0,
+      3431.08,
+      4800.15,
+      17302.09,
+      4773.63,
+      -241268.09,
+      28424.96,
+      241268.09,
+      -3103.52,
+      2907.82,
+      1107.45,
+      903.34,
+      2338.82,
+      6243.38,
+      9660.46,
+      13292.62,
+      18464.82,
+      -129702.3,
+      59750.6,
+      129702.3,
+      -29353.43,
+      9977.13,
+      29832.18,
+      11566.88,
+      31026.03,
+      46218.72,
+      10811.03,
+      16319.29,
+      -3273.26,
+      -3000.0,
+      31.21
+    ],
+    "activity_date_type": [
+      "2",
+      "4"
+    ],
+    "activity_status_code": "3",
+    "description_narrative": [
+      "Apoyar al gobierno de Nicaragua en su plan de inversiones estrategicas al 2030 en ganader a baja en carbono y frijol, orientadas a la recuperaci n de productoras/productores frente a los impactos socio econ micos de la pandemia del COVID-19 y del cambio clim tico."
+    ],
+    "activity_date_iso_date": [
+      "2021-06-01T00:00:00Z",
+      "2023-05-31T00:00:00Z"
+    ],
+    "recipient_country_code": [
+      "NI"
+    ],
+    "reporting_org_narrative": [
+      "Food and Agriculture Organization (FAO)"
+    ]
+  },
+  {
+    "sector_code": [
+      "43040"
+    ],
+    "budget_value": [
+      150000.0
+    ],
+    "iati_identifier": "XM-DAC-41301-699182",
+    "title_narrative": [
+      "Asistencia Tecnica para el dise o y la implementaci n de instrumentos de Pol tica P blica a traves del Plan de Desarrollo Econ mico Social 2021?2025 y de los planes sectoriales del MMAyA y MDRyT"
+    ],
+    "reporting_org_ref": "XM-DAC-41301",
+    "transaction_value": [
+      150000.0,
+      150000.0,
+      150000.0,
+      7461.56,
+      -138711.44,
+      3827.0,
+      138711.44,
+      23.53,
+      3475.72,
+      1282.99,
+      1363.17,
+      2154.56,
+      7617.89,
+      10980.18,
+      10799.82,
+      11241.24,
+      5606.09,
+      7313.21,
+      -59057.99,
+      17795.05,
+      59057.99,
+      252.01,
+      12670.79,
+      11090.83,
+      6321.87,
+      5221.2,
+      4795.57,
+      4417.89,
+      6892.51,
+      237.75,
+      1001.06,
+      2812.15,
+      -2834.5,
+      509.86
+    ],
+    "activity_date_type": [
+      "2",
+      "4"
+    ],
+    "activity_status_code": "3",
+    "description_narrative": [
+      "El Gobierno de Bolivia aprueba e implementa de forma articulada, multisectorial, participativa e inclusiva en cuanto a genero, el Plan de Desarrollo Econ mico Social (PDES) 2021  2025, y de las diferentes pol ticas, planes y programas que lo integran, a nivel nacional, subnacional y local; y genera condiciones para la reactivaci n y diversificaci n de la agricultura urbana y periurbana y emprendimientos derivados de la agricultura familiar y el desarrollo de cadenas de valor sensibles al genero y a la pertenencia cultural."
+    ],
+    "activity_date_iso_date": [
+      "2021-10-01T00:00:00Z",
+      "2023-08-31T00:00:00Z"
+    ],
+    "recipient_country_code": [
+      "BO"
+    ],
+    "reporting_org_narrative": [
+      "Food and Agriculture Organization (FAO)"
+    ]
+  },
+  {
+    "sector_code": [
+      "33110"
+    ],
+    "budget_value": [
+      230000.0
+    ],
+    "iati_identifier": "XM-DAC-41301-699382",
+    "title_narrative": [
+      "Desarrollo de sistemas alimentarios resilientes impulsando y fortaleciendo del comercio intrarregional y global"
+    ],
+    "reporting_org_ref": "XM-DAC-41301",
+    "transaction_value": [
+      230000.0,
+      230000.0,
+      230000.0,
+      7956.22,
+      4953.98,
+      38194.44,
+      6228.1,
+      1825.12,
+      10601.2,
+      12250.34,
+      -120410.34,
+      27580.26,
+      120410.34,
+      8355.8,
+      6032.65,
+      2453.87,
+      3384.89,
+      8374.44,
+      9732.97,
+      14459.93,
+      16253.5,
+      10059.98,
+      19759.29,
+      -4886.98,
+      16656.04
+    ],
+    "activity_date_type": [
+      "2",
+      "4"
+    ],
+    "activity_status_code": "3",
+    "description_narrative": [
+      "Fortalecer e impulsar el comercio intrarregional en la regi n y pa ses beneficiarios"
+    ],
+    "activity_date_iso_date": [
+      "2022-01-01T00:00:00Z",
+      "2023-11-30T00:00:00Z"
+    ],
+    "reporting_org_narrative": [
+      "Food and Agriculture Organization (FAO)"
+    ]
+  },
+  {
+    "sector_code": [
+      "31120"
+    ],
+    "budget_value": [
+      100000.0
+    ],
+    "iati_identifier": "XM-DAC-41301-699482",
+    "title_narrative": [
+      "Advancing food security and reducing food imports, through improving technical practices in 3 selected value chains"
+    ],
+    "reporting_org_ref": "XM-DAC-41301",
+    "transaction_value": [
+      100000.0,
+      100000.0,
+      100000.0,
+      2156.75,
+      2206.56,
+      2156.39,
+      -89210.38,
+      4269.92,
+      89210.38,
+      2153.17,
+      9669.52,
+      2090.61,
+      2508.08,
+      0.09,
+      2508.08,
+      -69172.8,
+      1108.03,
+      69172.8,
+      9978.68,
+      2146.33,
+      3940.97,
+      2309.96,
+      2258.98,
+      -16444.98,
+      32092.9,
+      2243.15,
+      4604.27,
+      34.09,
+      -6881.51
+    ],
+    "activity_date_type": [
+      "2",
+      "4"
+    ],
+    "activity_status_code": "3",
+    "description_narrative": [
+      "MALF and the THA will implement a national programme to increase production in five selected value chains by increasing efficiency through promoting innovation and technology and building the capacity of Extension services."
+    ],
+    "activity_date_iso_date": [
+      "2021-09-15T00:00:00Z",
+      "2023-11-30T00:00:00Z"
+    ],
+    "recipient_country_code": [
+      "TT"
+    ],
+    "reporting_org_narrative": [
+      "Food and Agriculture Organization (FAO)"
+    ]
+  },
+  {
+    "sector_code": [
+      "31210"
+    ],
+    "budget_value": [
+      60000.0
+    ],
+    "iati_identifier": "XM-DAC-41301-700302",
+    "title_narrative": [
+      "Apoyo a la implementaci n  del marco regulatorio en los sistemas agroforestales y silvopastoriles de Honduras"
+    ],
+    "reporting_org_ref": "XM-DAC-41301",
+    "transaction_value": [
+      60000.0,
+      60000.0,
+      60000.0,
+      4323.31,
+      4392.22,
+      4350.11,
+      4298.51,
+      4760.72,
+      -26755.22,
+      11119.91,
+      26755.22,
+      169.73,
+      10021.56,
+      10091.01,
+      10.3,
+      616.49,
+      970.58,
+      2816.26,
+      1667.1,
+      0.26,
+      392.45,
+      -0.26,
+      0.26
+    ],
+    "activity_date_type": [
+      "2",
+      "4"
+    ],
+    "activity_status_code": "3",
+    "description_narrative": [
+      "Apoyar  al  Instituto de Conservaci n Forestal,  reas Protegidas y Vida Silvestre (ICF)  en implementar metodolog as y marcos regulatorios, actualizados por el proyecto, para el aprovechamiento de la regeneraci n natural en sistemas agroforestales."
+    ],
+    "activity_date_iso_date": [
+      "2021-06-01T00:00:00Z",
+      "2022-12-31T00:00:00Z"
+    ],
+    "recipient_country_code": [
+      "HN"
+    ],
+    "reporting_org_narrative": [
+      "Food and Agriculture Organization (FAO)"
+    ]
+  },
+  {
+    "sector_code": [
+      "12240"
+    ],
+    "budget_value": [
+      180000.0
+    ],
+    "iati_identifier": "XM-DAC-41301-700342",
+    "title_narrative": [
+      "Programa de apoyo en incidencia pol tica y abordaje descentralizado de la seguridad alimentaria y nutricional (P-SAN)"
+    ],
+    "reporting_org_ref": "XM-DAC-41301",
+    "transaction_value": [
+      180000.0,
+      180000.0,
+      180000.0,
+      4155.14,
+      7411.92,
+      5878.85,
+      6097.08,
+      -150032.47,
+      6424.54,
+      150032.47,
+      5797.85,
+      5852.07,
+      8107.67,
+      8096.49,
+      7432.06,
+      6750.18,
+      7418.74,
+      6889.77,
+      8824.17,
+      11376.19,
+      -57074.07,
+      16413.21,
+      57074.07,
+      -657.46,
+      10496.72,
+      7923.03,
+      6525.44,
+      2459.23,
+      7573.12,
+      2265.52,
+      14882.92,
+      498.51,
+      573.89,
+      -1530.78,
+      3002.37,
+      -1334.51,
+      1334.51
+    ],
+    "activity_date_type": [
+      "2",
+      "4"
+    ],
+    "activity_status_code": "3",
+    "description_narrative": [
+      "El Gobierno de Honduras adopta e implementa herramientas efectivas y validadas para la gesti n descentralizada y desconcentrada de la Seguridad Alimentaria y Nutricional."
+    ],
+    "activity_date_iso_date": [
+      "2021-08-15T00:00:00Z",
+      "2023-08-14T00:00:00Z"
+    ],
+    "recipient_country_code": [
+      "HN"
+    ],
+    "reporting_org_narrative": [
+      "Food and Agriculture Organization (FAO)"
+    ]
+  },
+  {
+    "sector_code": [
+      "43040"
+    ],
+    "budget_value": [
+      98000.0
+    ],
+    "iati_identifier": "XM-DAC-41301-700343",
+    "title_narrative": [
+      "Emprendimiento de Mujeres y J venes Rurales en Agroturismo"
+    ],
+    "reporting_org_ref": "XM-DAC-41301",
+    "transaction_value": [
+      97036.72,
+      100000.0,
+      100000.0,
+      -76460.0,
+      23540.0,
+      76460.0,
+      -23540.0,
+      5933.45,
+      4218.13,
+      7806.51,
+      3815.18,
+      13289.74,
+      7390.56,
+      11765.35,
+      6358.6,
+      15171.26,
+      9617.94,
+      -1825.31,
+      12807.97,
+      862.03,
+      -1137.97,
+      -2000.0,
+      -2000.0
+    ],
+    "activity_date_type": [
+      "2",
+      "4"
+    ],
+    "activity_status_code": "3",
+    "description_narrative": [
+      "INTUR y el MEFCCA implementan el Programa de Fincas Agro tur sticas con m s eficiencia, cobertura e impacto, como medio para reactivar las econom as rurales post COVID 19"
+    ],
+    "activity_date_iso_date": [
+      "2021-06-01T00:00:00Z",
+      "2022-12-31T00:00:00Z"
+    ],
+    "recipient_country_code": [
+      "NI"
+    ],
+    "reporting_org_narrative": [
+      "Food and Agriculture Organization (FAO)"
+    ]
+  },
+  {
+    "sector_code": [
+      "31120"
+    ],
+    "budget_value": [
+      50000.0
+    ],
+    "iati_identifier": "XM-DAC-41301-700542",
+    "title_narrative": [
+      "Apoyo a la formulaci n de la propuesta ?Iniciativa Corredor Resiliente al Clima (I-CRC)? para el Fondo Verde del Clima (FVC)"
+    ],
+    "reporting_org_ref": "XM-DAC-41301",
+    "transaction_value": [
+      49906.51,
+      50000.0,
+      50000.0,
+      1881.62,
+      4781.57,
+      2806.52,
+      -11014.4,
+      29515.89,
+      11014.4,
+      302.75,
+      2724.07,
+      6978.29,
+      2272.86,
+      -93.49,
+      -1357.06
+    ],
+    "activity_date_type": [
+      "2",
+      "4"
+    ],
+    "activity_status_code": "3",
+    "description_narrative": [
+      "La aprobaci n por parte del Fondo Verde del Clima (FVC) de la propuesta de financiamiento presentada por el Gobierno de Honduras que est  dirigida al aumento de la resiliencia al cambio clim tico de la poblaci n rural del corredor seco y la reducci n de las brechas de genero."
+    ],
+    "activity_date_iso_date": [
+      "2021-06-01T00:00:00Z",
+      "2022-05-31T00:00:00Z"
+    ],
+    "recipient_country_code": [
+      "HN"
+    ],
+    "reporting_org_narrative": [
+      "Food and Agriculture Organization (FAO)"
+    ]
+  },
+  {
+    "sector_code": [
+      "43040"
+    ],
+    "budget_value": [
+      110000.0
+    ],
+    "iati_identifier": "XM-DAC-41301-701146",
+    "title_narrative": [
+      "Perspectives on Policy Interventions for the agrifood sector in Suriname: Focus on the Indigenous and Tribal Communities"
+    ],
+    "reporting_org_ref": "XM-DAC-41301",
+    "transaction_value": [
+      110000.0,
+      110000.0,
+      110000.0,
+      -110000.0,
+      110000.0,
+      5168.26,
+      223.63,
+      14227.74,
+      5693.63,
+      15989.37,
+      10062.85,
+      -6931.63,
+      51702.89,
+      391.81,
+      -391.81
+    ],
+    "activity_date_type": [
+      "2",
+      "4"
+    ],
+    "activity_status_code": "3",
+    "description_narrative": [
+      "A Comprehensive Food and Nutrition Security Policy that informs policy decisions for the Indigenous and Tribal Communities  has been approved and is  under implementation"
+    ],
+    "activity_date_iso_date": [
+      "2022-11-15T00:00:00Z",
+      "2023-11-30T00:00:00Z"
+    ],
+    "recipient_country_code": [
+      "SR"
+    ],
+    "reporting_org_narrative": [
+      "Food and Agriculture Organization (FAO)"
+    ]
+  },
+  {
+    "sector_code": [
+      "31120"
+    ],
+    "budget_value": [
+      120000.0
+    ],
+    "iati_identifier": "XM-DAC-41301-701223",
+    "title_narrative": [
+      "Youth Agri-entrepreneurship for Rural Development"
+    ],
+    "reporting_org_ref": "XM-DAC-41301",
+    "transaction_value": [
+      120000.0,
+      120000.0,
+      120000.0,
+      140.75,
+      433.68,
+      581.19,
+      -116856.48,
+      1987.9,
+      116856.48,
+      1378.34,
+      1513.22,
+      1640.7,
+      4614.36,
+      564.8,
+      2168.27,
+      2816.36,
+      328.44,
+      2672.83,
+      11576.48,
+      -73150.31,
+      14432.37,
+      73150.31,
+      -3863.88,
+      4191.6,
+      10868.33,
+      627.02,
+      3879.32,
+      65206.56,
+      -37835.87,
+      18016.66,
+      10485.84,
+      7143.32,
+      2190.05
+    ],
+    "activity_date_type": [
+      "2",
+      "4"
+    ],
+    "activity_status_code": "3",
+    "description_narrative": [
+      "To improved the production capacity of young agri-entrepreneurs through access to lands, facilities, equipment, skills development and seed capital.  To strengthened youth agribusiness environment through mechanisms to improve access to land, facilities and business tools. To provided technical assistance to the staff of implementation agencies to facilitate upgrading of youth-based farms and agro-processing ventures to meet basic market standards"
+    ],
+    "activity_date_iso_date": [
+      "2021-11-01T00:00:00Z",
+      "2023-11-30T00:00:00Z"
+    ],
+    "recipient_country_code": [
+      "VC"
+    ],
+    "reporting_org_narrative": [
+      "Food and Agriculture Organization (FAO)"
+    ]
+  },
+  {
+    "sector_code": [
+      "15110"
+    ],
+    "budget_value": [
+      35000.0
+    ],
+    "iati_identifier": "XM-DAC-41301-701262",
+    "title_narrative": [
+      "Asistencia tecnica para la formulaci n e implementaci n de pol ticas, programas y proyectos para la Agenda 2030"
+    ],
+    "reporting_org_ref": "XM-DAC-41301",
+    "transaction_value": [
+      34733.57,
+      35000.0,
+      35000.0,
+      2305.54,
+      2332.7,
+      -21448.65,
+      8913.11,
+      21448.65,
+      3291.06,
+      3345.67,
+      3453.54,
+      3332.65,
+      228.93,
+      112.34,
+      2304.76,
+      2405.14,
+      2386.58,
+      -266.43,
+      321.55
+    ],
+    "activity_date_type": [
+      "2",
+      "4"
+    ],
+    "activity_status_code": "3",
+    "description_narrative": [
+      "El estado mexicano ha actualizado disposiciones jur dicas y normativas para garantizar el derecho a la alimentaci n e implementa pol ticas p blicas fortalecidas para alcanzar los objetivos del Plan Nacional de Desarrollo 2019-2025."
+    ],
+    "activity_date_iso_date": [
+      "2021-08-01T00:00:00Z",
+      "2022-09-30T00:00:00Z"
+    ],
+    "recipient_country_code": [
+      "MX"
+    ],
+    "reporting_org_narrative": [
+      "Food and Agriculture Organization (FAO)"
+    ]
+  },
+  {
+    "sector_code": [
+      "31110"
+    ],
+    "budget_value": [
+      50000.0
+    ],
+    "iati_identifier": "XM-DAC-41301-701503",
+    "title_narrative": [
+      "St Kitts and Nevis: Agricultural Transformation and Growth Strategy (2022-2031)"
+    ],
+    "reporting_org_ref": "XM-DAC-41301",
+    "transaction_value": [
+      50334.46,
+      50000.0,
+      50000.0,
+      4226.03,
+      4427.26,
+      7401.61,
+      -35180.16,
+      -1235.06,
+      35180.16,
+      9731.12,
+      9244.56,
+      3759.12,
+      5016.16,
+      334.46,
+      7763.66
+    ],
+    "activity_date_type": [
+      "2",
+      "4"
+    ],
+    "activity_status_code": "3",
+    "description_narrative": [
+      "The preparation of a long-term agricultural transformation and growth strategic plan to enable St. Kitts and Nevis to meet national objectives, SDG targets and other regional and international commitments."
+    ],
+    "activity_date_iso_date": [
+      "2021-07-01T00:00:00Z",
+      "2022-06-30T00:00:00Z"
+    ],
+    "recipient_country_code": [
+      "KN"
+    ],
+    "reporting_org_narrative": [
+      "Food and Agriculture Organization (FAO)"
+    ]
+  },
+  {
+    "sector_code": [
+      "51010"
+    ],
+    "budget_value": [
+      296000.0
+    ],
+    "iati_identifier": "XM-DAC-41301-701702",
+    "title_narrative": [
+      "Fortalecimiento de las capacidades gubernamentales en innovaci n tecnol gica, digitalizaci n y monitoreo y evaluaci n de pol ticas p blicas"
+    ],
+    "reporting_org_ref": "XM-DAC-41301",
+    "transaction_value": [
+      250000.0,
+      250000.0,
+      250000.0,
+      -246073.08,
+      3926.92,
+      246073.08,
+      24.91,
+      15213.02,
+      7904.58,
+      15514.78,
+      19461.51,
+      15048.07,
+      34878.71,
+      12008.06,
+      7346.19,
+      5712.31,
+      18205.19,
+      -65196.07,
+      29559.68,
+      65196.07,
+      -1515.12,
+      8086.44,
+      1934.59,
+      28.74,
+      23.27,
+      2825.92,
+      11673.85,
+      6891.09,
+      5542.34,
+      46000.0,
+      46000.0,
+      12221.31,
+      10952.88,
+      -3682.12,
+      48848.64
+    ],
+    "activity_date_type": [
+      "2",
+      "4"
+    ],
+    "activity_status_code": "3",
+    "description_narrative": [
+      "Los gobiernos de los pa ses miembros de la FAO en la regi n, toman mejores y m s efectivas acciones a favor de la reducci n de la pobreza, el hambre y la desigualdad en concordancia con las estrategias corporativas de la FAO"
+    ],
+    "activity_date_iso_date": [
+      "2021-11-01T00:00:00Z",
+      "2023-12-15T00:00:00Z"
+    ],
+    "reporting_org_narrative": [
+      "Food and Agriculture Organization (FAO)"
+    ]
+  },
+  {
+    "sector_code": [
+      "31110"
+    ],
+    "budget_value": [
+      100000.0
+    ],
+    "iati_identifier": "XM-DAC-41301-702562",
+    "title_narrative": [
+      "Public policy reform for food and agriculture sector recovery and transformation in selected OECS countries."
+    ],
+    "reporting_org_ref": "XM-DAC-41301",
+    "transaction_value": [
+      100000.0,
+      100000.0,
+      100000.0,
+      -100000.0,
+      100000.0,
+      2825.12,
+      3239.64,
+      4541.19,
+      2270.59,
+      4865.56,
+      -74473.01,
+      7784.89,
+      74473.01,
+      4875.19,
+      6447.39,
+      5850.23,
+      16962.43,
+      8051.51,
+      9605.96,
+      7312.79,
+      4766.85,
+      -4994.52,
+      5606.14
+    ],
+    "activity_date_type": [
+      "2",
+      "4"
+    ],
+    "activity_status_code": "3",
+    "description_narrative": [
+      "Ministries of Agriculture implemented evidence-based policies that will transform their agri-food systems to be inclusive and gender-sensitive. to public private collaboration."
+    ],
+    "activity_date_iso_date": [
+      "2022-04-01T00:00:00Z",
+      "2023-11-30T00:00:00Z"
+    ],
+    "reporting_org_narrative": [
+      "Food and Agriculture Organization (FAO)"
+    ]
+  },
+  {
+    "sector_code": [
+      "74020"
+    ],
+    "budget_value": [
+      115000.0
+    ],
+    "iati_identifier": "XM-DAC-41301-702862",
+    "title_narrative": [
+      "Asistencia tecnica para la gesti n y coordinaci n de la emergencia fito-sanitaria por Fusarium raza 4 tropical en los Pa ses Miembros de la Comunidad Andina"
+    ],
+    "reporting_org_ref": "XM-DAC-41301",
+    "transaction_value": [
+      115000.0,
+      120000.0,
+      120000.0,
+      4865.56,
+      -2140.85,
+      -114193.78,
+      3081.51,
+      114193.78,
+      3556.21,
+      316.69,
+      322.73,
+      295.37,
+      -161.92,
+      15063.73,
+      31101.37,
+      11189.8,
+      4401.06,
+      5240.79,
+      -36688.81,
+      6179.14,
+      36688.81,
+      -1026.32,
+      16157.76,
+      10819.86,
+      14.05,
+      5610.52,
+      -5000.0,
+      -5000.0,
+      -1.78,
+      111.16
+    ],
+    "activity_date_type": [
+      "2",
+      "4"
+    ],
+    "activity_status_code": "3",
+    "description_narrative": [
+      "Los Pa ses Miembros de la Comunidad Andina, promovidos por el proyecto,  implementan a nivel nacional las medidas fitosanitarias para la prevenci n, vigilancia, diagn stico y respuesta a la emergencia fitosanitaria por Fusarium raza 4 tropical"
+    ],
+    "activity_date_iso_date": [
+      "2021-10-01T00:00:00Z",
+      "2023-02-28T00:00:00Z"
+    ],
+    "reporting_org_narrative": [
+      "Food and Agriculture Organization (FAO)"
+    ]
+  },
+  {
+    "sector_code": [
+      "31120"
+    ],
+    "budget_value": [
+      85000.0
+    ],
+    "iati_identifier": "XM-DAC-41301-705282",
+    "title_narrative": [
+      "COVID-19 Agrifood response for sustainable development of competitive and resilient value chains in support of the HIH Initiative (HiH)"
+    ],
+    "reporting_org_ref": "XM-DAC-41301",
+    "transaction_value": [
+      85000.0,
+      85000.0,
+      85000.0,
+      -85000.0,
+      85000.0,
+      568.47,
+      1473.57,
+      -78677.46,
+      4280.5,
+      78677.46,
+      1379.6,
+      1334.1,
+      10413.94,
+      18540.19,
+      1425.1,
+      6787.8,
+      4792.75,
+      -4514.78,
+      29489.2,
+      -2554.09,
+      -10216.36,
+      10216.36,
+      2554.09
+    ],
+    "activity_date_type": [
+      "2",
+      "4"
+    ],
+    "activity_status_code": "3",
+    "description_narrative": [
+      "To improved food security and climate resilience of vulnerable communities through evidence-based inclusive strategies to access markets.\n\nto improve food system capacities to deliver nutritious and healthy diets for everyone and improving household livelihoods and reducing poverty"
+    ],
+    "activity_date_iso_date": [
+      "2022-05-01T00:00:00Z",
+      "2023-11-30T00:00:00Z"
+    ],
+    "recipient_country_code": [
+      "DM"
+    ],
+    "reporting_org_narrative": [
+      "Food and Agriculture Organization (FAO)"
+    ]
+  },
+  {
+    "sector_code": [
+      "31120"
+    ],
+    "budget_value": [
+      160000.0
+    ],
+    "iati_identifier": "XM-DAC-41301-707902",
+    "title_narrative": [
+      "Promoting Livelihoods Recovery and Resilience Through Youth and Women-led Resilient Value Chain Development and Entrepreneurship in St. Vincent and the Grenadines."
+    ],
+    "reporting_org_ref": "XM-DAC-41301",
+    "transaction_value": [
+      160000.0,
+      160000.0,
+      160000.0,
+      425.5,
+      464.18,
+      494.54,
+      12588.67,
+      515.75,
+      22419.22,
+      569.21,
+      13519.89,
+      -99475.16,
+      9527.88,
+      99475.16,
+      -8031.42,
+      503.85,
+      218.19,
+      196.02,
+      3764.22,
+      241.61,
+      5568.47,
+      2610.52,
+      1708.98,
+      38874.36,
+      -10795.52,
+      43024.84,
+      -29959.59,
+      13861.71,
+      10695.72,
+      978.29,
+      4613.36,
+      -189.49
+    ],
+    "activity_date_type": [
+      "2",
+      "4"
+    ],
+    "activity_status_code": "3",
+    "description_narrative": [
+      "To facilitate livelihoods recovery and increase the resilience of food systems through the involvement of youth and women in resilient value chain development and entrepreneurship"
+    ],
+    "activity_date_iso_date": [
+      "2022-04-01T00:00:00Z",
+      "2023-11-30T00:00:00Z"
+    ],
+    "recipient_country_code": [
+      "VC"
+    ],
+    "reporting_org_narrative": [
+      "Food and Agriculture Organization (FAO)"
+    ]
+  },
+  {
+    "sector_code": [
+      "31165"
+    ],
+    "budget_value": [
+      125000.0
+    ],
+    "iati_identifier": "XM-DAC-41301-707922",
+    "title_narrative": [
+      "Promoci n del comercio para productos con identidad de marca y origen"
+    ],
+    "reporting_org_ref": "XM-DAC-41301",
+    "transaction_value": [
+      125000.0,
+      125000.0,
+      3.93,
+      15.15,
+      23.53,
+      3594.47,
+      7946.91,
+      11328.97,
+      12766.69,
+      22334.81,
+      -13344.84,
+      102665.19,
+      256.71,
+      5774.47,
+      6945.05,
+      7583.28,
+      9137.98,
+      10520.43,
+      7825.46,
+      6878.3,
+      6244.27,
+      11507.32,
+      12002.55,
+      -2769.39,
+      15219.98,
+      0.66,
+      -0.66
+    ],
+    "activity_date_type": [
+      "2",
+      "4"
+    ],
+    "activity_status_code": "3",
+    "description_narrative": [
+      "El Ministerio de Relaciones Exteriores, en coordinaci n con el Ministerio de Medio Ambiente y Agua (MMAyA), el Ministerio de Desarrollo Rural y Tierras (MDRyT) y el Ministerio de Desarrollo Productivo y Econom a Plural, implementan una estrategia de imagen pa s diferenciada para el comercio local, nacional e internacional, articulando pol ticas p blicas para promover el consumo y la exportaci n de productos estrategicos de la agrobiodiversidad con identidad y enfoque de igualdad de genero."
+    ],
+    "activity_date_iso_date": [
+      "2022-02-01T00:00:00Z",
+      "2023-11-30T00:00:00Z"
+    ],
+    "recipient_country_code": [
+      "BO"
+    ],
+    "reporting_org_narrative": [
+      "Food and Agriculture Organization (FAO)"
+    ]
+  },
+  {
+    "sector_code": [
+      "31120"
+    ],
+    "budget_value": [
+      500000.0
+    ],
+    "iati_identifier": "XM-DAC-41301-708502",
+    "title_narrative": [
+      "Emergency  Recovery Support to Farmers affected by the 2021 floods in Guyana  Suriname"
+    ],
+    "reporting_org_ref": "XM-DAC-41301",
+    "transaction_value": [
+      500000.0,
+      250000.0,
+      250000.0,
+      250000.0,
+      250000.0,
+      -432298.86,
+      67701.14,
+      432298.86,
+      -53084.11,
+      5364.33,
+      22822.11,
+      41302.71,
+      13109.43,
+      15007.17,
+      48615.82,
+      8283.63,
+      12471.91,
+      49825.66,
+      4306.31,
+      -246995.02,
+      17278.87,
+      246995.02,
+      -8410.1,
+      2730.11,
+      44736.7,
+      2990.12,
+      11151.35,
+      37476.64,
+      4564.91,
+      3510.14,
+      46696.05,
+      9653.75,
+      -66302.35,
+      25593.0,
+      -25877.33,
+      5347.86,
+      3473.2,
+      33939.89,
+      14802.4,
+      -31686.02
+    ],
+    "activity_date_type": [
+      "2",
+      "4"
+    ],
+    "activity_status_code": "3",
+    "description_narrative": [
+      "1. Provide the most vulnerable households in Guyana and Suriname with the agriculture inputs, skills and capacities to reactivate their productive activities and increase their resilience to future flood events and shocks;\n\n2. Enhance the technical and institutional capacities of the Guyana and Suriname Ministries of Agriculture, local governments and NGOs, and local implementing partners to provide emergency and recovery assistance, and prepare for future emergencies."
+    ],
+    "activity_date_iso_date": [
+      "2022-09-21T00:00:00Z",
+      "2023-12-31T00:00:00Z"
+    ],
+    "reporting_org_narrative": [
+      "Food and Agriculture Organization (FAO)"
+    ]
+  },
+  {
+    "sector_code": [
+      "16062"
+    ],
+    "budget_value": [
+      470000.0
+    ],
+    "iati_identifier": "XM-DAC-41301-711662",
+    "title_narrative": [
+      "Technical Assistance to Support the Suriname 6th Agricultural Census Program and Policy Development"
+    ],
+    "reporting_org_ref": "XM-DAC-41301",
+    "transaction_value": [
+      470000.0,
+      470000.0,
+      6391.81,
+      6955.63,
+      9801.68,
+      2185.48,
+      11012.47,
+      9924.99,
+      6203.24,
+      16534.93,
+      17499.21,
+      10564.26,
+      68234.1,
+      -28839.6,
+      401765.9,
+      407.49,
+      13640.47,
+      3829.41,
+      28778.21,
+      22147.16,
+      24743.8,
+      22490.63,
+      11198.66,
+      5966.35,
+      5486.87,
+      -256644.27,
+      6432.58,
+      256644.27,
+      7618.36,
+      6584.45,
+      12150.0,
+      14626.65,
+      9368.47,
+      49350.25,
+      40746.78,
+      6775.41,
+      5910.84,
+      21685.46,
+      14968.69
+    ],
+    "activity_date_type": [
+      "2",
+      "3"
+    ],
+    "activity_status_code": "2",
+    "description_narrative": [
+      "Support Government institutions staff capable of implementing, supervising and analyzing the census of agriculture are trained in census methodology, data collection using CAPI and data analysis using modern statistical packages.  Support the 6th Agriculture Census completed that followed international standards and FAO recommendations (WCA2020): Accurate primary data on crops and livestock systematically generated from a system of regular surveys of crops and livestock."
+    ],
+    "activity_date_iso_date": [
+      "2023-02-01T00:00:00Z",
+      "2025-11-30T00:00:00Z"
+    ],
+    "recipient_country_code": [
+      "SR"
+    ],
+    "reporting_org_narrative": [
+      "Food and Agriculture Organization (FAO)"
+    ]
+  },
+  {
+    "sector_code": [
+      "31120"
+    ],
+    "budget_value": [
+      245000.0
+    ],
+    "iati_identifier": "XM-DAC-41301-711902",
+    "title_narrative": [
+      "Apoyo a la Estrategia del Sector Agroalimentario frente al COVID-19 y cambio clim tico en Honduras"
+    ],
+    "reporting_org_ref": "XM-DAC-41301",
+    "transaction_value": [
+      245000.0,
+      245000.0,
+      245000.0,
+      500.49,
+      2502.74,
+      2496.1,
+      4563.95,
+      4447.18,
+      7688.98,
+      15535.39,
+      -190399.16,
+      16866.01,
+      190399.16,
+      -619.12,
+      9634.27,
+      6089.28,
+      13647.41,
+      10121.74,
+      11757.63,
+      11106.7,
+      8677.58,
+      9009.54,
+      7919.95,
+      53246.12,
+      -7017.78,
+      42790.28,
+      -12087.35,
+      3143.03,
+      6477.17,
+      2467.15
+    ],
+    "activity_date_type": [
+      "2",
+      "4"
+    ],
+    "activity_status_code": "3",
+    "description_narrative": [
+      "El Gobierno de Honduras (UACCGR y la UAF) implementa programas y servicios que promueven la transferencia de tecnolog as clim ticamente inteligente a agricultores familiares."
+    ],
+    "activity_date_iso_date": [
+      "2022-04-01T00:00:00Z",
+      "2023-11-30T00:00:00Z"
+    ],
+    "recipient_country_code": [
+      "HN"
+    ],
+    "reporting_org_narrative": [
+      "Food and Agriculture Organization (FAO)"
+    ]
+  },
+  {
+    "sector_code": [
+      "43040"
+    ],
+    "budget_value": [
+      69000.0
+    ],
+    "iati_identifier": "XM-DAC-41301-711922",
+    "title_narrative": [
+      "Conformando una Red de Ciudades Intermedias para la transformaci n de los sistemas agroalimentarios"
+    ],
+    "reporting_org_ref": "XM-DAC-41301",
+    "transaction_value": [
+      69000.0,
+      75000.0,
+      75000.0,
+      3713.25,
+      3837.68,
+      6641.15,
+      5670.98,
+      2990.28,
+      8115.24,
+      5461.77,
+      -20567.03,
+      18002.62,
+      20567.03,
+      -2861.06,
+      2342.36,
+      6834.92,
+      4119.8,
+      3620.84,
+      -6000.0,
+      -6000.0,
+      -510.17
+    ],
+    "activity_date_type": [
+      "2",
+      "4"
+    ],
+    "activity_status_code": "3",
+    "description_narrative": [
+      "Gobiernos nacionales y subnacionales de la regi n, actores privados, academia, sociedad civil, y FAO, implementan estrategias de gobernanza multiactor para la implementaci n de la agenda alimentaria urbana, y la integraci n de los sistemas agroalimentarios en los procesos de planificaci n e inversi n urbana y territorial."
+    ],
+    "activity_date_iso_date": [
+      "2022-05-16T00:00:00Z",
+      "2023-05-15T00:00:00Z"
+    ],
+    "reporting_org_narrative": [
+      "Food and Agriculture Organization (FAO)"
+    ]
+  },
+  {
+    "sector_code": [
+      "31163"
+    ],
+    "budget_value": [
+      100000.0
+    ],
+    "iati_identifier": "XM-DAC-41301-712763",
+    "title_narrative": [
+      "Fortalecimiento de capacidades para incrementar la sostenibilidad, competitividad y resiliencia del sector pecuario en los pa ses de ALC"
+    ],
+    "reporting_org_ref": "XM-DAC-41301",
+    "transaction_value": [
+      100000.0,
+      100000.0,
+      100000.0,
+      4462.45,
+      8506.0,
+      18139.22,
+      -6737.47,
+      5455.07,
+      11955.62,
+      7072.08,
+      6202.61,
+      5886.37,
+      4380.45,
+      -10874.39,
+      23803.21,
+      10874.39,
+      -7490.0,
+      2349.35,
+      41.13,
+      2204.87,
+      4719.75,
+      7490.0,
+      348.99,
+      2.32,
+      1212.62
+    ],
+    "activity_date_type": [
+      "2",
+      "4"
+    ],
+    "activity_status_code": "3",
+    "description_narrative": [
+      "Los Gobiernos de la regi n promueven, adoptan e implementan pol ticas para incentivar innovaciones tecnol gicas e institucionales y movilizan recursos, que favorezcan una producci n pecuaria m s resiliente, sostenible, inclusiva y competitiva"
+    ],
+    "activity_date_iso_date": [
+      "2022-01-01T00:00:00Z",
+      "2023-03-31T00:00:00Z"
+    ],
+    "reporting_org_narrative": [
+      "Food and Agriculture Organization (FAO)"
+    ]
+  },
+  {
+    "sector_code": [
+      "43071"
+    ],
+    "budget_value": [
+      199000.0
+    ],
+    "iati_identifier": "XM-DAC-41301-712982",
+    "title_narrative": [
+      "Apoyo a la agenda pol tica nacional de Sistemas Alimentarios Sostenibles, para la mejora de la Seguridad Alimentaria y Nutricional  de las familias de El Salvador."
+    ],
+    "reporting_org_ref": "XM-DAC-41301",
+    "transaction_value": [
+      200000.0,
+      200000.0,
+      200000.0,
+      802.5,
+      956.01,
+      -190885.95,
+      7355.54,
+      190885.95,
+      -463.85,
+      11899.37,
+      11897.98,
+      14726.62,
+      16417.56,
+      14542.04,
+      13489.39,
+      11891.1,
+      5734.26,
+      12256.18,
+      7202.08,
+      -51113.1,
+      20180.12,
+      51113.1,
+      -827.43,
+      18541.29,
+      12490.31,
+      16719.22,
+      -37.37,
+      3152.34,
+      -1000.0,
+      -1000.0
+    ],
+    "activity_date_type": [
+      "2",
+      "4"
+    ],
+    "activity_status_code": "3",
+    "description_narrative": [
+      "Apoyar al CONASAN en  fortalecer su capacidad rectora, adoptar y promover  un marco normativo legal a favor de la Seguridad Alimentaria y Nutricional con enfoque de Sistemas Alimentarios Sostenibles e Inclusivos."
+    ],
+    "activity_date_iso_date": [
+      "2022-08-01T00:00:00Z",
+      "2024-03-31T00:00:00Z"
+    ],
+    "recipient_country_code": [
+      "SV"
+    ],
+    "reporting_org_narrative": [
+      "Food and Agriculture Organization (FAO)"
+    ]
+  },
+  {
+    "sector_code": [
+      "31163"
+    ],
+    "budget_value": [
+      500000.0
+    ],
+    "iati_identifier": "XM-DAC-41301-713482",
+    "title_narrative": [
+      "Strengthen national and sub-regional capacities to control African Swine Fever outbreaks in Dominican Republic and Haiti"
+    ],
+    "reporting_org_ref": "XM-DAC-41301",
+    "transaction_value": [
+      500000.0,
+      500000.0,
+      500000.0,
+      1167.82,
+      8019.73,
+      27379.43,
+      12849.54,
+      8547.84,
+      9958.14,
+      13546.79,
+      19405.35,
+      26912.93,
+      -284635.02,
+      87577.41,
+      284635.02,
+      -5873.23,
+      11200.55,
+      14671.44,
+      31680.41,
+      6704.96,
+      7485.09,
+      -54.83,
+      25101.43,
+      10193.06,
+      5440.29,
+      20313.37,
+      4223.79,
+      161996.27,
+      -96221.24,
+      9464.4,
+      10831.54,
+      12191.84,
+      63733.46
+    ],
+    "activity_date_type": [
+      "2",
+      "4"
+    ],
+    "activity_status_code": "3",
+    "description_narrative": [
+      "Strengthen National Veterinary Services in Dominican Republic and Haiti to control and manage African Swine Fever"
+    ],
+    "activity_date_iso_date": [
+      "2021-12-08T00:00:00Z",
+      "2023-12-07T00:00:00Z"
+    ],
+    "reporting_org_narrative": [
+      "Food and Agriculture Organization (FAO)"
+    ]
+  },
+  {
+    "sector_code": [
+      "31130"
+    ],
+    "budget_value": [
+      260000.0
+    ],
+    "iati_identifier": "XM-DAC-41301-716024",
+    "title_narrative": [
+      "Asistencia tecnica al gobierno de Mexico en la formulaci n de pol ticas y programas de desarrollo territorial, bienes p blicos y pr cticas agropecuarias y pesqueras sostenibles para la transformaci n de los sistemas agroalimentarios"
+    ],
+    "reporting_org_ref": "XM-DAC-41301",
+    "transaction_value": [
+      260000.0,
+      200000.0,
+      200000.0,
+      3994.58,
+      -3994.58,
+      -200000.0,
+      200000.0,
+      60000.0,
+      60000.0,
+      -260000.0,
+      260000.0,
+      3707.94,
+      -246459.99,
+      9832.07,
+      246459.99,
+      36217.05,
+      10606.12,
+      7365.27,
+      27721.63,
+      43233.7,
+      30313.05,
+      7495.99,
+      20436.48,
+      52979.11,
+      2985.68,
+      3148.65
+    ],
+    "activity_date_type": [
+      "2",
+      "3"
+    ],
+    "activity_status_code": "2",
+    "description_narrative": [
+      "Fortalecer el acceso y an lisis de la informaci n, el dise o, la programaci n e implementaci n de pol ticas p blicas que contribuyen a la mejora del Sistema Alimentario en Mexico"
+    ],
+    "activity_date_iso_date": [
+      "2024-11-01T00:00:00Z",
+      "2025-11-30T00:00:00Z"
+    ],
+    "recipient_country_code": [
+      "MX"
+    ],
+    "reporting_org_narrative": [
+      "Food and Agriculture Organization (FAO)"
+    ]
+  },
+  {
+    "sector_code": [
+      "15110"
+    ],
+    "budget_value": [
+      490000.0
+    ],
+    "iati_identifier": "XM-DAC-41301-716026",
+    "title_narrative": [
+      "Fortalecimiento de las capacidades gubernamentales de los pa ses de America Latina y el Caribe en movilizaci n de recursos (MR), en innovaci n y digitalizaci n,  y en gesti n de conocimiento (KM)"
+    ],
+    "reporting_org_ref": "XM-DAC-41301",
+    "transaction_value": [
+      500000.0,
+      500000.0,
+      500000.0,
+      10899.32,
+      7367.16,
+      7701.05,
+      7069.5,
+      6351.91,
+      8695.57,
+      10743.15,
+      14076.25,
+      -383218.16,
+      43877.93,
+      383218.16,
+      -5013.85,
+      9251.78,
+      12174.97,
+      25874.16,
+      5785.48,
+      33074.1,
+      15757.88,
+      26891.54,
+      27716.7,
+      13647.86,
+      15626.68,
+      -167657.39,
+      34773.47,
+      167657.39,
+      -4271.44,
+      12693.41,
+      13007.88,
+      10123.48,
+      7841.16,
+      7990.95,
+      7173.33,
+      7974.64,
+      6346.94,
+      32525.9,
+      16650.05,
+      -42700.62,
+      6900.47,
+      42700.62,
+      18814.27,
+      8126.57,
+      4086.91,
+      1442.51,
+      -228.95,
+      1.41,
+      -10000.0,
+      -10000.0
+    ],
+    "activity_date_type": [
+      "2",
+      "4"
+    ],
+    "activity_status_code": "3",
+    "description_narrative": [
+      "Los gobiernos de la regi n, junto a sus socios estrategicos y al sector privado, disponen de m s recursos, han implementado pol ticas que aceleran la adopci n de innovaciones y digitalizaci n, y utilizan evidencia para mejorar la calidad, eficiencia, y eficacia de sus pol ticas, proyectos y programas que contribuyan a la inclusi n social (de j venes rurales, mujeres, pueblos ind genas y afrodescendientes)."
+    ],
+    "activity_date_iso_date": [
+      "2022-04-01T00:00:00Z",
+      "2025-03-31T00:00:00Z"
+    ],
+    "reporting_org_narrative": [
+      "Food and Agriculture Organization (FAO)"
+    ]
+  },
+  {
+    "sector_code": [
+      "43040"
+    ],
+    "budget_value": [
+      498000.0
+    ],
+    "iati_identifier": "XM-DAC-41301-716042",
+    "title_narrative": [
+      "+Resiliencia para una mejor vida con generaci n de ingresos y  acceso a dietas saludables (REVIDA)."
+    ],
+    "reporting_org_ref": "XM-DAC-41301",
+    "transaction_value": [
+      500000.0,
+      500000.0,
+      500000.0,
+      4088.57,
+      4524.45,
+      8958.8,
+      18769.16,
+      -401231.57,
+      62427.45,
+      401231.57,
+      -41149.02,
+      8152.09,
+      9139.41,
+      9494.01,
+      13709.41,
+      21006.21,
+      27194.0,
+      29839.23,
+      23438.98,
+      31975.01,
+      34269.95,
+      -171960.84,
+      62201.45,
+      171960.84,
+      -13404.84,
+      16107.54,
+      23718.7,
+      30797.21,
+      45403.18,
+      34117.36,
+      28357.3,
+      3398.6,
+      -130.64,
+      1335.15,
+      -2000.0,
+      -2000.0
+    ],
+    "activity_date_type": [
+      "2",
+      "4"
+    ],
+    "activity_status_code": "3",
+    "description_narrative": [
+      "Apoyar al Ministerio de Hacienda y Credito P blico, Instituciones del Sistema Nacional de Producci n, Consumo y Comercio (SNPCC), en implementar pol ticas, e instrumentos que contribuyen a la resiliencia agroclim tica de los sistemas de producci n sostenibles de mujeres y hombres ind genas; afrodescendientes  y no ind genas, en el marco del Plan Nacional de Lucha Contra la Pobreza de Nicaragua 2022 - 2026."
+    ],
+    "activity_date_iso_date": [
+      "2022-11-01T00:00:00Z",
+      "2024-05-31T00:00:00Z"
+    ],
+    "recipient_country_code": [
+      "NI"
+    ],
+    "reporting_org_narrative": [
+      "Food and Agriculture Organization (FAO)"
+    ]
+  },
+  {
+    "sector_code": [
+      "31110"
+    ],
+    "budget_value": [
+      500000.0
+    ],
+    "iati_identifier": "XM-DAC-41301-715482",
+    "title_narrative": [
+      "Prevention of potential pandemics through strengthening the implementation of biosecurity improvement for emerging transboundary threats on food and agriculture sectors"
+    ],
+    "reporting_org_ref": "XM-DAC-41301",
+    "transaction_value": [
+      500000.0,
+      500000.0,
+      20199.84,
+      20199.84,
+      479800.16,
+      8083.7,
+      6968.27,
+      12618.94,
+      5207.68,
+      11801.52,
+      10710.46,
+      4436.42,
+      433.35,
+      8824.09,
+      53343.23,
+      -357425.97,
+      -53.47,
+      357425.97,
+      1312.46,
+      5893.56,
+      18164.6,
+      42495.01,
+      8096.67,
+      28548.99,
+      19027.3,
+      9237.05,
+      3951.24,
+      72063.25,
+      17230.96,
+      -104283.57,
+      27121.31,
+      104283.57,
+      34353.64,
+      42025.29,
+      -42.27,
+      13205.56,
+      120.64,
+      61.0,
+      10804.86,
+      340.61,
+      -311.24,
+      3103.0
+    ],
+    "activity_date_type": [
+      "2",
+      "4"
+    ],
+    "activity_status_code": "3",
+    "description_narrative": [
+      "Strengthened national capacities for identifying and mitigating risks through the related pathways and improved coordination with stakeholders, as well as improved collaboration among the participating countries on biosecurity and good practices along food and agriculture supply chains"
+    ],
+    "activity_date_iso_date": [
+      "2022-09-20T00:00:00Z",
+      "2025-03-20T00:00:00Z"
+    ],
+    "reporting_org_narrative": [
+      "Food and Agriculture Organization (FAO)"
+    ]
+  },
+  {
+    "sector_code": [
+      "31120"
+    ],
+    "budget_value": [
+      499000.0
+    ],
+    "iati_identifier": "XM-DAC-41301-716822",
+    "title_narrative": [
+      "Impulsar la transformaci n agroclim tica de la matriz productiva de Nicaragua, basada en ecosistemas."
+    ],
+    "reporting_org_ref": "XM-DAC-41301",
+    "transaction_value": [
+      500000.0,
+      500000.0,
+      500000.0,
+      6083.7,
+      6115.51,
+      7611.73,
+      16228.13,
+      -440304.74,
+      23656.19,
+      440304.74,
+      2026.62,
+      14333.81,
+      11572.33,
+      16490.95,
+      13842.75,
+      6131.34,
+      3336.88,
+      13017.28,
+      18166.09,
+      27762.68,
+      34331.08,
+      -260597.3,
+      18695.63,
+      260597.3,
+      -2874.41,
+      40274.73,
+      22293.93,
+      58349.4,
+      19298.28,
+      20058.7,
+      46700.95,
+      33626.46,
+      13161.33,
+      8303.41,
+      -1404.52,
+      1404.52,
+      -1000.0,
+      -1000.0,
+      -404.52
+    ],
+    "activity_date_type": [
+      "2",
+      "4"
+    ],
+    "activity_status_code": "3",
+    "description_narrative": [
+      "Apoyar al Gobierno de Nicaragua, actores de la cooperaci n al desarrollo y sector privado  en la implementaci n de una estrategia de transformaci n de la matriz de producci n agr cola, pesquera y ganadera vacuna al 2030, orientada a esquemas m s sostenibles, bajos en emisiones, inclusivos y resilientes frente a los impactos socio econ micos de la pandemia del COVID-19, con enfoque de genero y pertinencia cultural y del cambio clim tico"
+    ],
+    "activity_date_iso_date": [
+      "2022-08-01T00:00:00Z",
+      "2024-07-31T00:00:00Z"
+    ],
+    "recipient_country_code": [
+      "NI"
+    ],
+    "reporting_org_narrative": [
+      "Food and Agriculture Organization (FAO)"
+    ]
+  },
+  {
+    "sector_code": [
+      "43071"
+    ],
+    "budget_value": [
+      250000.0
+    ],
+    "iati_identifier": "XM-DAC-41301-656261",
+    "title_narrative": [
+      "Innovaciones de la sociedad civil y sector privado para promover consumo de alimentos saludables"
+    ],
+    "reporting_org_ref": "XM-DAC-41301",
+    "transaction_value": [
+      246553.88,
+      250000.0,
+      -250000.0,
+      250000.0,
+      250000.0,
+      2354.62,
+      2299.79,
+      2996.78,
+      6798.16,
+      6170.87,
+      5041.68,
+      23303.7,
+      8077.55,
+      7692.76,
+      8785.05,
+      -118076.21,
+      58402.83,
+      118076.21,
+      -29154.29,
+      28167.91,
+      14137.01,
+      16961.43,
+      2007.95,
+      17000.63,
+      4998.03,
+      7048.54,
+      4101.28,
+      2670.51,
+      23540.0,
+      -3446.12,
+      23151.09
+    ],
+    "activity_date_type": [
+      "2",
+      "4"
+    ],
+    "activity_status_code": "3",
+    "description_narrative": [
+      "Siete pa ses de America del Sur desarrollan y/o implementan nuevas pol ticas p blicas y/o iniciativas privadas que contribuyen al aumento en el consumo de alimentos saludables."
+    ],
+    "activity_date_iso_date": [
+      "2020-01-01T00:00:00Z",
+      "2021-12-15T00:00:00Z"
+    ],
+    "reporting_org_narrative": [
+      "Food and Agriculture Organization (FAO)"
+    ]
+  },
+  {
+    "sector_code": [
+      "31165"
+    ],
+    "budget_value": [
+      150000.0
+    ],
+    "iati_identifier": "XM-DAC-41301-656281",
+    "title_narrative": [
+      "Resiliencia de los sistemas de abastecimiento de El Salvador, Panam , Ecuador, Bolivia, Hait  y Honduras frente a escenarios de desastres y crisis."
+    ],
+    "reporting_org_ref": "XM-DAC-41301",
+    "transaction_value": [
+      147034.24,
+      150000.0,
+      150000.0,
+      -150000.0,
+      150000.0,
+      544.49,
+      531.81,
+      512.35,
+      4174.08,
+      4833.04,
+      5047.34,
+      2364.59,
+      1338.97,
+      4729.19,
+      3761.85,
+      -114627.09,
+      7535.2,
+      114627.09,
+      4081.74,
+      287.38,
+      8132.51,
+      16257.87,
+      17502.33,
+      23003.36,
+      19592.84,
+      12495.35,
+      9902.08,
+      795.78,
+      -2965.76,
+      -389.91
+    ],
+    "activity_date_type": [
+      "2",
+      "4"
+    ],
+    "activity_status_code": "3",
+    "description_narrative": [
+      "Seis pa ses de la regi n mejoran el manejo de sus reservas estrategicas de alimentos y la gesti n de escenarios de desastres y crisis tomando en consideraci n la experiencia regional y la cooperaci n Sur ? Sur."
+    ],
+    "activity_date_iso_date": [
+      "2019-10-01T00:00:00Z",
+      "2021-09-30T00:00:00Z"
+    ],
+    "reporting_org_narrative": [
+      "Food and Agriculture Organization (FAO)"
+    ]
+  },
+  {
+    "sector_code": [
+      "31120"
+    ],
+    "budget_value": [
+      275000.0
+    ],
+    "iati_identifier": "XM-DAC-41301-656282",
+    "title_narrative": [
+      "Decenio de la Agricultura Familiar (DAF): continuidad y cambios de la agenda"
+    ],
+    "reporting_org_ref": "XM-DAC-41301",
+    "transaction_value": [
+      271196.73,
+      275000.0,
+      24045.03,
+      275000.0,
+      22237.9,
+      9601.4,
+      2852.38,
+      -216238.25,
+      25.04,
+      216238.25,
+      1341.0,
+      3634.08,
+      1850.7,
+      1791.95,
+      1752.8,
+      1838.19,
+      2159.13,
+      2587.63,
+      3441.47,
+      14133.02,
+      -133398.51,
+      48309.77,
+      133398.51,
+      -14505.23,
+      16277.03,
+      18494.56,
+      21964.59,
+      15793.26,
+      16254.1,
+      16543.42,
+      11625.75,
+      10911.4,
+      8827.56,
+      3210.43,
+      -3803.27,
+      4198.37
+    ],
+    "activity_date_type": [
+      "2",
+      "4"
+    ],
+    "activity_status_code": "3",
+    "description_narrative": [
+      "Apoyar a los  pa ses de la regi n rn  implementar planes de acci n a nivel nacional para llevar adelante el DAF, aplicando instrumentos de pol tica p blica y las adecuaciones institucionales, dise ados por el proyecto."
+    ],
+    "activity_date_iso_date": [
+      "2019-08-01T00:00:00Z",
+      "2021-11-30T00:00:00Z"
+    ],
+    "reporting_org_narrative": [
+      "Food and Agriculture Organization (FAO)"
+    ]
+  },
+  {
+    "sector_code": [
+      "41010"
+    ],
+    "budget_value": [
+      200000.0
+    ],
+    "iati_identifier": "XM-DAC-41301-656283",
+    "title_narrative": [
+      "Apoyo a la realizaci n de la pre-COP en Costa Rica y la COP25 en Chile"
+    ],
+    "reporting_org_ref": "XM-DAC-41301",
+    "transaction_value": [
+      196404.77,
+      200000.0,
+      200000.0,
+      321.16,
+      5183.95,
+      6536.43,
+      25997.85,
+      22039.44,
+      -100438.19,
+      39482.98,
+      100438.19,
+      -588.4,
+      2593.93,
+      3322.96,
+      361.65,
+      366.86,
+      376.78,
+      376.32,
+      549.8,
+      -93046.85,
+      31.44,
+      93046.85,
+      -23.32,
+      83.61,
+      552.06,
+      725.8,
+      1857.21,
+      1799.47,
+      22651.27,
+      1759.74,
+      1256.11,
+      21373.89,
+      4145.18,
+      -3595.23,
+      33270.6
+    ],
+    "activity_date_type": [
+      "2",
+      "4"
+    ],
+    "activity_status_code": "3",
+    "description_narrative": [
+      "Los pa ses participantes de la regi n LAC en la COP25 incrementan sus compromisos con la acci n clim tica en torno a la agricultura, con enfasis en tem ticas de oceanos y bosques promovidos por la regi n"
+    ],
+    "activity_date_iso_date": [
+      "2019-07-15T00:00:00Z",
+      "2021-12-18T00:00:00Z"
+    ],
+    "reporting_org_narrative": [
+      "Food and Agriculture Organization (FAO)"
+    ]
+  },
+  {
+    "sector_code": [
+      "31110"
+    ],
+    "budget_value": [
+      200000.0
+    ],
+    "iati_identifier": "XM-DAC-41301-656284",
+    "title_narrative": [
+      "Agricultura sostenible y resiliente en ALC: implementaci n de instrumentos de monitoreo y evaluaci n"
+    ],
+    "reporting_org_ref": "XM-DAC-41301",
+    "transaction_value": [
+      198769.91,
+      200000.0,
+      -200000.0,
+      200000.0,
+      200000.0,
+      3606.01,
+      5913.26,
+      5635.47,
+      5505.39,
+      5559.79,
+      6480.7,
+      6474.46,
+      6475.86,
+      7099.95,
+      -162732.1,
+      -15482.99,
+      162732.1,
+      3695.49,
+      3678.3,
+      2336.11,
+      10531.24,
+      3595.25,
+      5256.14,
+      8082.96,
+      20596.22,
+      18923.31,
+      11061.22,
+      -1230.09,
+      73745.77,
+      -2510.39,
+      2510.29,
+      0.11
+    ],
+    "activity_date_type": [
+      "2",
+      "4"
+    ],
+    "activity_status_code": "3",
+    "description_narrative": [
+      "Los gobiernos adoptan medidas e instrumentos para la implementaci n, monitoreo, evaluaci n y mejoramiento de polticas y programas que promueven la sostenibilidad y resiliencia en la agricultura y el desarrollo rural."
+    ],
+    "activity_date_iso_date": [
+      "2020-02-01T00:00:00Z",
+      "2021-11-30T00:00:00Z"
+    ],
+    "reporting_org_narrative": [
+      "Food and Agriculture Organization (FAO)"
+    ]
+  },
+  {
+    "sector_code": [
+      "43041"
+    ],
+    "budget_value": [
+      40000.0
+    ],
+    "iati_identifier": "XM-DAC-41301-656366",
+    "title_narrative": [
+      "TCPF: Dise o de nuevo modelo de intervenci n de FDT, que responda a la necesidad de la poblaci n campesina"
+    ],
+    "reporting_org_ref": "XM-DAC-41301",
+    "transaction_value": [
+      39912.41,
+      40000.0,
+      40000.0,
+      201.16,
+      15.23,
+      -39783.61,
+      39783.61,
+      65.89,
+      110.54,
+      1262.57,
+      1729.34,
+      3492.18,
+      1141.75,
+      -26856.83,
+      5124.51,
+      26856.83,
+      1338.16,
+      1024.02,
+      3109.25,
+      2770.88,
+      2185.1,
+      9071.24,
+      -87.59,
+      7270.59,
+      -580.74,
+      582.71,
+      3.11,
+      -3.11,
+      -1.97
+    ],
+    "activity_date_type": [
+      "2",
+      "4"
+    ],
+    "activity_status_code": "3",
+    "description_narrative": [
+      "El Consejo Directivo del Fondo de Tierras aprueba  una propuesta de modelo de acceso a la tierra que responda a las necesidades de la poblaci n rural sin Tierra"
+    ],
+    "activity_date_iso_date": [
+      "2019-10-01T00:00:00Z",
+      "2021-11-30T00:00:00Z"
+    ],
+    "recipient_country_code": [
+      "GT"
+    ],
+    "reporting_org_narrative": [
+      "Food and Agriculture Organization (FAO)"
+    ]
+  },
+  {
+    "sector_code": [
+      "43040"
+    ],
+    "budget_value": [
+      40000.0
+    ],
+    "iati_identifier": "XM-DAC-41301-656367",
+    "title_narrative": [
+      "TCPF: Nuevas estrategias de revitalizaci n de territorios rezagados en Guatemala"
+    ],
+    "reporting_org_ref": "XM-DAC-41301",
+    "transaction_value": [
+      39872.15,
+      40000.0,
+      40000.0,
+      104.96,
+      558.37,
+      382.13,
+      93.96,
+      116.28,
+      372.87,
+      -29798.1,
+      8573.33,
+      29798.1,
+      286.0,
+      3042.1,
+      152.58,
+      1556.11,
+      2183.21,
+      3850.87,
+      2394.97,
+      4015.1,
+      887.08,
+      -7536.48,
+      3893.6,
+      7536.48,
+      1339.0,
+      1099.75,
+      -127.85,
+      4969.88
+    ],
+    "activity_date_type": [
+      "2",
+      "4"
+    ],
+    "activity_status_code": "3",
+    "description_narrative": [
+      "El Gobierno de Guatemala cuenta con  dise a e implementa Estrategias Territoriales de Intervenci n"
+    ],
+    "activity_date_iso_date": [
+      "2019-06-01T00:00:00Z",
+      "2021-05-31T00:00:00Z"
+    ],
+    "recipient_country_code": [
+      "GT"
+    ],
+    "reporting_org_narrative": [
+      "Food and Agriculture Organization (FAO)"
+    ]
+  },
+  {
+    "sector_code": [
+      "15110"
+    ],
+    "budget_value": [
+      58000.0
+    ],
+    "iati_identifier": "XM-DAC-41301-656368",
+    "title_narrative": [
+      "TCPF: Apoyo tecnico para la generaci n de instrumentos que promuevan el acceso f sico y econ mico a alimentos saludables"
+    ],
+    "reporting_org_ref": "XM-DAC-41301",
+    "transaction_value": [
+      57319.44,
+      60000.0,
+      60000.0,
+      1547.73,
+      1960.46,
+      -53912.25,
+      2579.56,
+      53912.25,
+      2373.2,
+      2063.64,
+      2270.01,
+      2270.01,
+      6423.09,
+      2270.01,
+      5963.08,
+      5309.59,
+      9172.47,
+      5841.62,
+      -6054.66,
+      3900.87,
+      6054.66,
+      1518.72,
+      -2680.56,
+      -2000.0,
+      1855.38
+    ],
+    "activity_date_type": [
+      "2",
+      "4"
+    ],
+    "activity_status_code": "3",
+    "description_narrative": [
+      "El Ministerio de Salud, el Ministerio de Agricultura y Ganader a, el Ministerio de Hacienda y dem s integrantes de la Mesa Interdisciplinaria, implementan marcos pol ticos y legales para incrementar el consumo de productos frescos y saludables, especialmente en aquellas poblaciones m s vulnerables."
+    ],
+    "activity_date_iso_date": [
+      "2019-09-01T00:00:00Z",
+      "2020-12-15T00:00:00Z"
+    ],
+    "recipient_country_code": [
+      "CR"
+    ],
+    "reporting_org_narrative": [
+      "Food and Agriculture Organization (FAO)"
+    ]
+  },
+  {
+    "sector_code": [
+      "43040"
+    ],
+    "budget_value": [
+      60000.0
+    ],
+    "iati_identifier": "XM-DAC-41301-656420",
+    "title_narrative": [
+      "TCPF: Construcci n de la metodolog a de gobernanza de las pol ticas territoriales"
+    ],
+    "reporting_org_ref": "XM-DAC-41301",
+    "transaction_value": [
+      59701.02,
+      60000.0,
+      60000.0,
+      -60000.0,
+      60000.0,
+      -60000.0,
+      60000.0,
+      7991.44,
+      4345.15,
+      5318.94,
+      5148.65,
+      2460.86,
+      8309.37,
+      8860.99,
+      5578.49,
+      5573.95,
+      5432.68,
+      -298.98,
+      680.5
+    ],
+    "activity_date_type": [
+      "2",
+      "4"
+    ],
+    "activity_status_code": "3",
+    "description_narrative": [
+      "Apoyar el dise o e implementaci n de  estrategias innovadores de desarrollo para los territorios rurales vulnerables, integrando nuevas herramientas de pol tica y articulando el esfuerzo de diversos actores (p blicos y privados; cooperaci n internacional, sociedad civil y academia)."
+    ],
+    "activity_date_iso_date": [
+      "2020-09-01T00:00:00Z",
+      "2021-11-30T00:00:00Z"
+    ],
+    "recipient_country_code": [
+      "BR"
+    ],
+    "reporting_org_narrative": [
+      "Food and Agriculture Organization (FAO)"
+    ]
+  },
+  {
+    "sector_code": [
+      "43040"
+    ],
+    "budget_value": [
+      100000.0
+    ],
+    "iati_identifier": "XM-DAC-41301-656421",
+    "title_narrative": [
+      "TCPF: Nuevas estrategias de revitalizaci n de territorios rezagados en Honduras"
+    ],
+    "reporting_org_ref": "XM-DAC-41301",
+    "transaction_value": [
+      99943.53,
+      100000.0,
+      163.23,
+      100000.0,
+      -95279.65,
+      4557.12,
+      95279.65,
+      -153.1,
+      5053.85,
+      5004.53,
+      6478.22,
+      5911.25,
+      5197.75,
+      23673.3,
+      3574.43,
+      3318.17,
+      3321.56,
+      4472.32,
+      -10611.35,
+      18816.02,
+      10611.35,
+      -118.9,
+      1268.05,
+      2044.83,
+      248.24,
+      2167.41,
+      1191.19,
+      1081.42,
+      1078.45,
+      -56.47,
+      1594.19
+    ],
+    "activity_date_type": [
+      "2",
+      "4"
+    ],
+    "activity_status_code": "3",
+    "description_narrative": [
+      "Fortalecer gobernanza, la innovaci n productiva y la diversificaci n de los medios de vida."
+    ],
+    "activity_date_iso_date": [
+      "2019-07-15T00:00:00Z",
+      "2021-07-15T00:00:00Z"
+    ],
+    "recipient_country_code": [
+      "HN"
+    ],
+    "reporting_org_narrative": [
+      "Food and Agriculture Organization (FAO)"
+    ]
+  },
+  {
+    "sector_code": [
+      "31381"
+    ],
+    "budget_value": [
+      50000.0
+    ],
+    "iati_identifier": "XM-DAC-41301-656460",
+    "title_narrative": [
+      "TCPF: Mejoramiento de la Seguridad  Ocupacional y el Empleo Decente en la Pesca con buceo"
+    ],
+    "reporting_org_ref": "XM-DAC-41301",
+    "transaction_value": [
+      49818.28,
+      50000.0,
+      8828.4,
+      50000.0,
+      4107.73,
+      14416.78,
+      4936.7,
+      3857.09,
+      2885.65,
+      3095.62,
+      -5300.65,
+      2571.38,
+      5300.65,
+      -1929.38,
+      -4589.86,
+      2640.17,
+      4589.86,
+      1328.74,
+      1322.98,
+      1360.43,
+      -181.72,
+      395.99
+    ],
+    "activity_date_type": [
+      "2",
+      "4"
+    ],
+    "activity_status_code": "3",
+    "description_narrative": [
+      "Las instituciones estatales que son parte de la CIAPEB de Honduras adoptan y aplican un marco de gobernanza inclusiva y de pol ticas, que les permiten garantizar condiciones de seguridad ocupacional en l nea con el marco del trabajo decente de los pescadores que emplean el buceo/pesca submarina (Resultado 4 y 7 Target Setting)."
+    ],
+    "activity_date_iso_date": [
+      "2019-05-25T00:00:00Z",
+      "2021-05-24T00:00:00Z"
+    ],
+    "recipient_country_code": [
+      "HN"
+    ],
+    "reporting_org_narrative": [
+      "Food and Agriculture Organization (FAO)"
+    ]
+  },
+  {
+    "sector_code": [
+      "16062"
+    ],
+    "budget_value": [
+      100000.0
+    ],
+    "iati_identifier": "XM-DAC-41301-656461",
+    "title_narrative": [
+      "TCPF: Preparatory Assistance to Saint Kitts and Nevis - Census of Agriculture in 2021"
+    ],
+    "reporting_org_ref": "XM-DAC-41301",
+    "transaction_value": [
+      71583.01,
+      100000.0,
+      100000.0,
+      -100000.0,
+      100000.0,
+      2473.84,
+      1855.38,
+      -87609.67,
+      8061.11,
+      87609.67,
+      13435.2,
+      3805.95,
+      3632.95,
+      3805.95,
+      5773.79,
+      3805.95,
+      3514.02,
+      5044.69,
+      -28416.99,
+      16374.18
+    ],
+    "activity_date_type": [
+      "2",
+      "4"
+    ],
+    "activity_status_code": "3",
+    "description_narrative": [
+      "To support the preparation for the 2021 Census of Agriculture"
+    ],
+    "activity_date_iso_date": [
+      "2020-09-01T00:00:00Z",
+      "2021-11-30T00:00:00Z"
+    ],
+    "recipient_country_code": [
+      "KN"
+    ],
+    "reporting_org_narrative": [
+      "Food and Agriculture Organization (FAO)"
+    ]
+  },
+  {
+    "sector_code": [
+      "31130"
+    ],
+    "budget_value": [
+      50000.0
+    ],
+    "iati_identifier": "XM-DAC-41301-656462",
+    "title_narrative": [
+      "TCPF: From pilot to nationwide: support to the upscaling of the National Land Commission Secretariat"
+    ],
+    "reporting_org_ref": "XM-DAC-41301",
+    "transaction_value": [
+      45214.73,
+      50000.0,
+      50000.0,
+      -50000.0,
+      50000.0,
+      2432.78,
+      6336.01,
+      6055.28,
+      3243.71,
+      22332.76,
+      -4785.27,
+      4814.19,
+      -1246.11,
+      1246.11
+    ],
+    "activity_date_type": [
+      "2",
+      "4"
+    ],
+    "activity_status_code": "3",
+    "description_narrative": [
+      "The government consolidates a national land bank  on crown and private lands"
+    ],
+    "activity_date_iso_date": [
+      "2021-05-21T00:00:00Z",
+      "2021-11-30T00:00:00Z"
+    ],
+    "recipient_country_code": [
+      "VC"
+    ],
+    "reporting_org_narrative": [
+      "Food and Agriculture Organization (FAO)"
+    ]
+  },
+  {
+    "sector_code": [
+      "43060"
+    ],
+    "budget_value": [
+      200000.0
+    ],
+    "iati_identifier": "XM-DAC-41301-656480",
+    "title_narrative": [
+      "Improving Agriculture Resilience and Adaptive Capacity to Secure Food and Rural Livelihoods in the Commonwealth of Dominica"
+    ],
+    "reporting_org_ref": "XM-DAC-41301",
+    "transaction_value": [
+      161933.95,
+      200000.0,
+      200000.0,
+      -200000.0,
+      200000.0,
+      2902.0,
+      7255.01,
+      5804.0,
+      4353.01,
+      -172914.65,
+      6771.33,
+      172914.65,
+      4865.56,
+      5348.95,
+      11050.16,
+      5838.67,
+      13939.54,
+      1611.33,
+      1611.33,
+      12176.25,
+      6276.96,
+      9445.8,
+      -38066.05,
+      62684.05,
+      -34668.0,
+      6933.6,
+      9095.0,
+      4258.6,
+      27734.4,
+      -13353.6
+    ],
+    "activity_date_type": [
+      "2",
+      "4"
+    ],
+    "activity_status_code": "3",
+    "description_narrative": [
+      "Improved agriculture resilience and adaptive capacity to secure food and rural livelihoods in the face of climate and disaster risk in Dominica"
+    ],
+    "activity_date_iso_date": [
+      "2020-06-01T00:00:00Z",
+      "2021-11-30T00:00:00Z"
+    ],
+    "recipient_country_code": [
+      "DM"
+    ],
+    "reporting_org_narrative": [
+      "Food and Agriculture Organization (FAO)"
+    ]
+  },
+  {
+    "sector_code": [
+      "31110"
+    ],
+    "budget_value": [
+      75000.0
+    ],
+    "iati_identifier": "XM-DAC-41301-656482",
+    "title_narrative": [
+      "Fortalecimiento de las capacidades para la  implementaci n y monitoreo de los ODS en Cuba"
+    ],
+    "reporting_org_ref": "XM-DAC-41301",
+    "transaction_value": [
+      70137.07,
+      75000.0,
+      3598.82,
+      6828.72,
+      3229.9,
+      68171.28,
+      9918.86,
+      -4862.93,
+      53389.49,
+      202.71,
+      202.71,
+      -405.42
+    ],
+    "activity_date_type": [
+      "2",
+      "4"
+    ],
+    "activity_status_code": "3",
+    "description_narrative": [
+      "El Sistema Estad stico Nacional (SEN) mide y monitorea la implementaci n de los ODS"
+    ],
+    "activity_date_iso_date": [
+      "2020-10-01T00:00:00Z",
+      "2021-12-30T00:00:00Z"
+    ],
+    "recipient_country_code": [
+      "CU"
+    ],
+    "reporting_org_narrative": [
+      "Food and Agriculture Organization (FAO)"
+    ]
+  },
+  {
+    "sector_code": [
+      "33110"
+    ],
+    "budget_value": [
+      2000.0
+    ],
+    "iati_identifier": "XM-DAC-41301-656503",
+    "title_narrative": [
+      "TCPF: A Tariff Rate Study for the Commonwealth of the Bahamas to facilitate Accession to the WTO"
+    ],
+    "reporting_org_ref": "XM-DAC-41301",
+    "transaction_value": [
+      1144.23,
+      50000.0,
+      50000.0,
+      -49622.5,
+      377.5,
+      49622.5,
+      583.3,
+      183.43,
+      -48000.0,
+      -48000.0,
+      -855.77,
+      855.77,
+      -855.77
+    ],
+    "activity_date_type": [
+      "2",
+      "4"
+    ],
+    "activity_status_code": "3",
+    "description_narrative": [
+      "To improve livelihood options for the rural poor by undertaking an assessment of issues as part of the national development agenda for the reduction of rural poverty\nTo improve capacities for the revision and promotion or trade agreements that promote healthy foods, contributing to eliminating hunger and all forms of malnutrition."
+    ],
+    "activity_date_iso_date": [
+      "2019-12-01T00:00:00Z",
+      "2020-10-31T00:00:00Z"
+    ],
+    "recipient_country_code": [
+      "BS"
+    ],
+    "reporting_org_narrative": [
+      "Food and Agriculture Organization (FAO)"
+    ]
+  },
+  {
+    "sector_code": [
+      "43040"
+    ],
+    "budget_value": [
+      45000.0
+    ],
+    "iati_identifier": "XM-DAC-41301-656506",
+    "title_narrative": [
+      "TCPF: Promoting a youth led sustainable territorial development"
+    ],
+    "reporting_org_ref": "XM-DAC-41301",
+    "transaction_value": [
+      41725.6,
+      45000.0,
+      45000.0,
+      -45000.0,
+      45000.0,
+      -45000.0,
+      45000.0,
+      2594.96,
+      6254.91,
+      7081.73,
+      14608.59,
+      -3274.4,
+      11185.41,
+      -2176.38,
+      2176.38
+    ],
+    "activity_date_type": [
+      "2",
+      "4"
+    ],
+    "activity_status_code": "3",
+    "description_narrative": [
+      "Rural youth benefit from country wide articulate programmes facilitating access to land and means of production"
+    ],
+    "activity_date_iso_date": [
+      "2021-05-10T00:00:00Z",
+      "2021-11-30T00:00:00Z"
+    ],
+    "recipient_country_code": [
+      "GD"
+    ],
+    "reporting_org_narrative": [
+      "Food and Agriculture Organization (FAO)"
+    ]
+  },
+  {
+    "sector_code": [
+      "43071"
+    ],
+    "budget_value": [
+      77000.0
+    ],
+    "iati_identifier": "XM-DAC-41301-656521",
+    "title_narrative": [
+      "TCPF: Apoyo al fortalecimiento del Plan Nacional de Reducci n de Perdidas y Desperdicio de Alimentos en Argentina (Ley Nacional 27.454)."
+    ],
+    "reporting_org_ref": "XM-DAC-41301",
+    "transaction_value": [
+      71022.2,
+      77000.0,
+      195.44,
+      77000.0,
+      39.56,
+      1256.2,
+      270.96,
+      -74520.11,
+      717.73,
+      74520.11,
+      333.5,
+      322.36,
+      5629.84,
+      268.83,
+      8505.84,
+      3471.55,
+      731.05,
+      -45309.97,
+      9947.17,
+      45309.97,
+      5213.32,
+      6543.08,
+      4886.9,
+      -3672.75,
+      1141.79,
+      1147.82,
+      1115.91,
+      4792.81,
+      1034.68,
+      2263.69,
+      3275.31,
+      -5977.8,
+      11589.61,
+      -2308.38,
+      2117.8,
+      3849.03,
+      119.29,
+      -3777.74
+    ],
+    "activity_date_type": [
+      "2",
+      "4"
+    ],
+    "activity_status_code": "3",
+    "description_narrative": [
+      "La Secretar a de Gobierno de Agroindustria, con el apoyo de FAO y otros aliados de los sectores p blico y privado, implementa el Plan Nacional de Reducci n de Perdidas y Desperdicio de Alimentos 2030"
+    ],
+    "activity_date_iso_date": [
+      "2019-08-15T00:00:00Z",
+      "2021-11-30T00:00:00Z"
+    ],
+    "recipient_country_code": [
+      "AR"
+    ],
+    "reporting_org_narrative": [
+      "Food and Agriculture Organization (FAO)"
+    ]
+  },
+  {
+    "sector_code": [
+      "31150"
+    ],
+    "budget_value": [
+      500000.0
+    ],
+    "iati_identifier": "XM-DAC-41301-656541",
+    "title_narrative": [
+      "Assistance d`urgence   la rehabilitation des moyens d`existence des populations rurales affectees par la secheresse dans le Nord-est"
+    ],
+    "reporting_org_ref": "XM-DAC-41301",
+    "transaction_value": [
+      517772.49,
+      500000.0,
+      2140.0,
+      4645.59,
+      500000.0,
+      49408.12,
+      23311.67,
+      25840.41,
+      15503.84,
+      25654.33,
+      30732.19,
+      -291977.18,
+      30786.67,
+      291977.18,
+      -4727.37,
+      22294.84,
+      16097.59,
+      52427.84,
+      5071.06,
+      4023.41,
+      8906.13,
+      48038.93,
+      17197.18,
+      9862.87,
+      6513.48,
+      49996.77,
+      156267.99,
+      -49996.77,
+      -19068.17,
+      15326.37,
+      493.75,
+      6.52,
+      1786.22,
+      17772.49,
+      -30768.97
+    ],
+    "activity_date_type": [
+      "2",
+      "4"
+    ],
+    "activity_status_code": "3",
+    "description_narrative": [
+      "Ameliorer la resilience des moyens d'existence des menages ruraux vulnerables du Nord?Est et leur acc s   une alimentation saine, nutritive et suffisante."
+    ],
+    "activity_date_iso_date": [
+      "2019-03-28T00:00:00Z",
+      "2020-07-27T00:00:00Z"
+    ],
+    "recipient_country_code": [
+      "HT"
+    ],
+    "reporting_org_narrative": [
+      "Food and Agriculture Organization (FAO)"
+    ]
+  },
+  {
+    "sector_code": [
+      "43040"
+    ],
+    "budget_value": [
+      45000.0
+    ],
+    "iati_identifier": "XM-DAC-41301-656562",
+    "title_narrative": [
+      "TCPF: Apoyo al Programa  de Fortalecimiento del Cooperativismo de la Agricultura Familiar en Paran"
+    ],
+    "reporting_org_ref": "XM-DAC-41301",
+    "transaction_value": [
+      42311.83,
+      40000.0,
+      40000.0,
+      -37372.8,
+      2627.2,
+      37372.8,
+      253.64,
+      6021.57,
+      420.34,
+      -30656.37,
+      20.88,
+      30656.37,
+      5546.38,
+      1175.52,
+      2633.21,
+      2060.8,
+      141.18,
+      10499.2,
+      7307.81,
+      5000.0,
+      5000.0,
+      -2688.17,
+      3604.1,
+      -1130.79,
+      1130.79
+    ],
+    "activity_date_type": [
+      "2",
+      "4"
+    ],
+    "activity_status_code": "3",
+    "description_narrative": [
+      "Apoyar la adaptaci n del nuevo modelo de servicio de asistencia tecnica, investigaci n e innovaci n agropecuaria por parte de la Secretaria de Agricultura y Abastecimiento del Estado de Paran  (SEAB), bien como adopci n de nuevos servicios por las cooperativas asistidas por el \"Mais Gest o\", por el Programa Estadual de Cooperativismo y por las cooperativas afiliadas a Unicafes."
+    ],
+    "activity_date_iso_date": [
+      "2019-12-01T00:00:00Z",
+      "2021-12-15T00:00:00Z"
+    ],
+    "recipient_country_code": [
+      "BR"
+    ],
+    "reporting_org_narrative": [
+      "Food and Agriculture Organization (FAO)"
+    ]
+  },
+  {
+    "sector_code": [
+      "43040"
+    ],
+    "budget_value": [
+      89000.0
+    ],
+    "iati_identifier": "XM-DAC-41301-656680",
+    "title_narrative": [
+      "TCPF: Nueva estrategia de revitalizaci n de territorios rezagados en El Salvador"
+    ],
+    "reporting_org_ref": "XM-DAC-41301",
+    "transaction_value": [
+      88640.91,
+      100000.0,
+      100000.0,
+      1793.6,
+      3875.83,
+      4482.12,
+      5889.26,
+      -70894.78,
+      13064.41,
+      70894.78,
+      479.88,
+      9759.69,
+      12744.21,
+      14219.1,
+      5185.98,
+      6475.76,
+      9381.29,
+      -359.09,
+      1289.78,
+      -11000.0,
+      -11000.0
+    ],
+    "activity_date_type": [
+      "2",
+      "4"
+    ],
+    "activity_status_code": "3",
+    "description_narrative": [
+      "El Gobierno de El Salvador implementa una estrategia de Desarrollo Rural Territorial, en territorios focalizados que permiten enfrentar la condici n de vulnerabilidad econ mica, social y ambiental."
+    ],
+    "activity_date_iso_date": [
+      "2019-07-01T00:00:00Z",
+      "2020-06-30T00:00:00Z"
+    ],
+    "recipient_country_code": [
+      "SV"
+    ],
+    "reporting_org_narrative": [
+      "Food and Agriculture Organization (FAO)"
+    ]
+  },
+  {
+    "sector_code": [
+      "43071"
+    ],
+    "budget_value": [
+      443000.0
+    ],
+    "iati_identifier": "XM-DAC-41301-656702",
+    "title_narrative": [
+      "Fortalecimiento de estrategias de movilizaci n de recursos para la erradicaci n del hambre y la malnutrici n, el desarrollo rural sostenible y una agricultura resiliente al cambio clim tico"
+    ],
+    "reporting_org_ref": "XM-DAC-41301",
+    "transaction_value": [
+      443189.52,
+      250000.0,
+      250000.0,
+      3171.14,
+      7357.34,
+      3088.66,
+      8727.07,
+      -215446.74,
+      12209.05,
+      347446.74,
+      577.19,
+      7533.49,
+      3346.89,
+      18156.55,
+      10512.14,
+      8418.9,
+      4447.88,
+      10739.89,
+      7571.0,
+      11000.0,
+      11000.0,
+      20820.11,
+      26881.02,
+      -157874.74,
+      81566.94,
+      157874.74,
+      17531.48,
+      13594.58,
+      50000.0,
+      50000.0,
+      34437.47,
+      14571.36,
+      13367.06,
+      15635.91,
+      15132.81,
+      17242.63,
+      11159.39,
+      13158.21,
+      189.52,
+      42233.36
+    ],
+    "activity_date_type": [
+      "2",
+      "4"
+    ],
+    "activity_status_code": "3",
+    "description_narrative": [
+      "Apoyo a los Gobiernos, junto a socios estrategicos y sector privado,  para disponer de m s recursos para financiar proyectos para la erradicaci n del hambre y la malnutrici n, el desarrollo rural sostenible y una agricultura resiliente al cambio clim tico"
+    ],
+    "activity_date_iso_date": [
+      "2019-07-10T00:00:00Z",
+      "2021-11-30T00:00:00Z"
+    ],
+    "reporting_org_narrative": [
+      "Food and Agriculture Organization (FAO)"
+    ]
+  },
+  {
+    "sector_code": [
+      "16062"
+    ],
+    "budget_value": [
+      120000.0
+    ],
+    "iati_identifier": "XM-DAC-41301-657140",
+    "title_narrative": [
+      "Assistance to Caribbean Countries for the implementation of the Food Insecurity Experience Scales (FIES) for monitoring progress towards Zero Hunger"
+    ],
+    "reporting_org_ref": "XM-DAC-41301",
+    "transaction_value": [
+      80920.38,
+      120000.0,
+      120000.0,
+      -94547.91,
+      25452.09,
+      94547.91,
+      -25452.09,
+      20475.52,
+      -52926.38,
+      46598.1,
+      52926.38,
+      -41621.53,
+      18610.51,
+      3962.96,
+      18057.32,
+      14920.36,
+      525.7,
+      238.95,
+      -1838.26,
+      -39079.62,
+      990.75,
+      -990.75,
+      990.75
+    ],
+    "activity_date_type": [
+      "2",
+      "4"
+    ],
+    "activity_status_code": "3",
+    "description_narrative": [
+      "To ensure that the National statistical Services (NSS) of participating Caribbean countries use the FIES, a new and internationally accepted approach, for evidence-based policy-making on food and agriculture and for monitoring of the SDG target 2.1."
+    ],
+    "activity_date_iso_date": [
+      "2019-09-01T00:00:00Z",
+      "2021-10-31T00:00:00Z"
+    ],
+    "reporting_org_narrative": [
+      "Food and Agriculture Organization (FAO)"
+    ]
+  },
+  {
+    "sector_code": [
+      "43042"
+    ],
+    "budget_value": [
+      90000.0
+    ],
+    "iati_identifier": "XM-DAC-41301-657680",
+    "title_narrative": [
+      "TCPF: Movilizaci n recursos Mesoamerica y Hait  para 100 Territorios"
+    ],
+    "reporting_org_ref": "XM-DAC-41301",
+    "transaction_value": [
+      86752.94,
+      90000.0,
+      90000.0,
+      2155.35,
+      1236.03,
+      -78442.28,
+      8166.34,
+      78442.28,
+      786.78,
+      3711.63,
+      3009.48,
+      4246.56,
+      6534.88,
+      6233.93,
+      6534.88,
+      3460.9,
+      206.94,
+      -43670.67,
+      45.63,
+      43670.67,
+      3960.12,
+      4561.1,
+      8996.21,
+      -3247.06,
+      22906.18
+    ],
+    "activity_date_type": [
+      "2",
+      "4"
+    ],
+    "activity_status_code": "3",
+    "description_narrative": [
+      "Recursos y cooperaci n sur-sur triangular movilizados en favor de Hait  y Mesoamerica en el marco de la Estrategia de 100T y Programa de Desarrollo Integral (PDI)."
+    ],
+    "activity_date_iso_date": [
+      "2019-08-15T00:00:00Z",
+      "2021-11-30T00:00:00Z"
+    ],
+    "reporting_org_narrative": [
+      "Food and Agriculture Organization (FAO)"
+    ]
+  },
+  {
+    "sector_code": [
+      "16062"
+    ],
+    "budget_value": [
+      150000.0
+    ],
+    "iati_identifier": "XM-DAC-41301-657841",
+    "title_narrative": [
+      "Mejoramiento de los censos y encuestas agropecuarias para el c lculo de los indicadores de ODS"
+    ],
+    "reporting_org_ref": "XM-DAC-41301",
+    "transaction_value": [
+      143235.15,
+      150000.0,
+      5647.26,
+      3608.13,
+      3664.35,
+      20582.05,
+      7662.31,
+      129417.95,
+      4645.39,
+      7592.09,
+      20568.05,
+      16606.56,
+      25467.99,
+      10623.91,
+      5293.56,
+      5138.46,
+      4695.87,
+      11758.55,
+      -6764.85,
+      10262.67,
+      -2079.5,
+      2195.9,
+      -116.39,
+      -0.01
+    ],
+    "activity_date_type": [
+      "2",
+      "4"
+    ],
+    "activity_status_code": "3",
+    "description_narrative": [
+      "Al menos 6 pa ses de America del Sur implementan medidas recomendadas por el proyecto para mejorar sus sistemas de censos y encuestas agropecuarios para que dispongan de data de calidad para calcular los indicadores de ODS."
+    ],
+    "activity_date_iso_date": [
+      "2020-08-01T00:00:00Z",
+      "2021-12-31T00:00:00Z"
+    ],
+    "reporting_org_narrative": [
+      "Food and Agriculture Organization (FAO)"
+    ]
+  }
+]

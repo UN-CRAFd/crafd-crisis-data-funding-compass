@@ -1,0 +1,7793 @@
+[
+  {
+    "iati_identifier": "XM-DAC-47066-DP.2832",
+    "transaction_value": [
+      1531728.27
+    ],
+    "transaction_value_currency": [
+      "USD"
+    ]
+  },
+  {
+    "iati_identifier": "XM-DAC-47066-DP.2832",
+    "transaction_value": [
+      1225382.4
+    ],
+    "transaction_value_currency": [
+      "USD"
+    ]
+  },
+  {
+    "iati_identifier": "XM-DAC-47066-DP.2832",
+    "transaction_value": [
+      -0.4
+    ],
+    "transaction_value_currency": [
+      "USD"
+    ]
+  },
+  {
+    "iati_identifier": "XM-DAC-928-AF-2024-25-02.003.EM01.AFG02",
+    "transaction_value": [
+      21343.0
+    ],
+    "transaction_value_currency": [
+      "USD"
+    ]
+  },
+  {
+    "iati_identifier": "XM-DAC-928-AF-2024-25-13.003.EM01.AFG02",
+    "transaction_value": [
+      1341413.0
+    ],
+    "transaction_value_currency": [
+      "USD"
+    ]
+  },
+  {
+    "iati_identifier": "XM-DAC-928-AF-2024-25-02.003.EM01.AFG03",
+    "transaction_value": [
+      39113.0
+    ],
+    "transaction_value_currency": [
+      "USD"
+    ]
+  },
+  {
+    "iati_identifier": "GB-CHC-000391-Second Chance Education and Vocational Learning (SCE) Programme",
+    "transaction_value": [
+      38500.0
+    ],
+    "transaction_value_currency": [
+      "GBP"
+    ]
+  },
+  {
+    "iati_identifier": "GB-CHC-000391-Second Chance Education and Vocational Learning (SCE) Programme",
+    "transaction_value": [
+      154000.0
+    ],
+    "transaction_value_currency": [
+      "GBP"
+    ]
+  },
+  {
+    "iati_identifier": "GB-CHC-000391-Second Chance Education and Vocational Learning (SCE) Programme",
+    "transaction_value": [
+      196516.0
+    ],
+    "transaction_value_currency": [
+      "GBP"
+    ]
+  },
+  {
+    "iati_identifier": "XM-DAC-41114-OUTPUT-01003552",
+    "transaction_value": [
+      164406.0
+    ],
+    "transaction_value_currency": [
+      "USD"
+    ]
+  },
+  {
+    "iati_identifier": "XM-DAC-41114-OUTPUT-01003552",
+    "transaction_value": [
+      31784.0
+    ],
+    "transaction_value_currency": [
+      "USD"
+    ]
+  },
+  {
+    "iati_identifier": "XM-DAC-41114-OUTPUT-00115592",
+    "transaction_value": [
+      69962.0
+    ],
+    "transaction_value_currency": [
+      "USD"
+    ]
+  },
+  {
+    "iati_identifier": "XM-DAC-41114-OUTPUT-00115592",
+    "transaction_value": [
+      45000.0
+    ],
+    "transaction_value_currency": [
+      "USD"
+    ]
+  },
+  {
+    "iati_identifier": "XM-DAC-41114-OUTPUT-00093878",
+    "transaction_value": [
+      16200.0
+    ],
+    "transaction_value_currency": [
+      "USD"
+    ]
+  },
+  {
+    "iati_identifier": "XM-DAC-41114-OUTPUT-00093878",
+    "transaction_value": [
+      180000.0
+    ],
+    "transaction_value_currency": [
+      "USD"
+    ]
+  },
+  {
+    "iati_identifier": "XM-DAC-41114-OUTPUT-00119416",
+    "transaction_value": [
+      33940.0
+    ],
+    "transaction_value_currency": [
+      "USD"
+    ]
+  },
+  {
+    "iati_identifier": "XM-DAC-41114-OUTPUT-01000250",
+    "transaction_value": [
+      33359.0
+    ],
+    "transaction_value_currency": [
+      "USD"
+    ]
+  },
+  {
+    "iati_identifier": "XM-DAC-41114-OUTPUT-00049927",
+    "transaction_value": [
+      -30000.0
+    ],
+    "transaction_value_currency": [
+      "USD"
+    ]
+  },
+  {
+    "iati_identifier": "XM-DAC-41114-OUTPUT-01000165",
+    "transaction_value": [
+      80000.0
+    ],
+    "transaction_value_currency": [
+      "USD"
+    ]
+  },
+  {
+    "iati_identifier": "XM-DAC-41114-OUTPUT-01000984",
+    "transaction_value": [
+      88268.0
+    ],
+    "transaction_value_currency": [
+      "USD"
+    ]
+  },
+  {
+    "iati_identifier": "XM-DAC-928-VN-2022-23-03.001.WP01.VNM01",
+    "transaction_value": [
+      21500.0
+    ],
+    "transaction_value_currency": [
+      "USD"
+    ]
+  },
+  {
+    "iati_identifier": "XM-DAC-928-PK-2020-21-03.001.EM01.PAK01",
+    "transaction_value": [
+      18267.0
+    ],
+    "transaction_value_currency": [
+      "USD"
+    ]
+  },
+  {
+    "iati_identifier": "XM-DAC-928-PK-2022-23-03.001.EM01.PAK01",
+    "transaction_value": [
+      54326.0
+    ],
+    "transaction_value_currency": [
+      "USD"
+    ]
+  },
+  {
+    "iati_identifier": "XM-DAC-928-PK-2018-19-03.006.EM01.PAK01",
+    "transaction_value": [
+      74074.0
+    ],
+    "transaction_value_currency": [
+      "USD"
+    ]
+  },
+  {
+    "iati_identifier": "XM-DAC-928-PK-2020-21-03.003.EM01.PAK02",
+    "transaction_value": [
+      20000.0
+    ],
+    "transaction_value_currency": [
+      "USD"
+    ]
+  },
+  {
+    "iati_identifier": "XM-DAC-928-VN-2018-19-03.006.WP01.VNM01",
+    "transaction_value": [
+      44306.0
+    ],
+    "transaction_value_currency": [
+      "USD"
+    ]
+  },
+  {
+    "iati_identifier": "XM-DAC-928-VN-2022-23-01.001.WP01.VNM01",
+    "transaction_value": [
+      8900.0
+    ],
+    "transaction_value_currency": [
+      "USD"
+    ]
+  },
+  {
+    "iati_identifier": "XM-DAC-41121-2018-AFR-LBR",
+    "transaction_value": [
+      10000.0
+    ],
+    "transaction_value_currency": [
+      "USD"
+    ]
+  },
+  {
+    "iati_identifier": "XM-DAC-41121-2019-AFR-LBR",
+    "transaction_value": [
+      9173.0
+    ],
+    "transaction_value_currency": [
+      "USD"
+    ]
+  },
+  {
+    "iati_identifier": "XM-DAC-41121-2018-AME-BRA",
+    "transaction_value": [
+      100000.0
+    ],
+    "transaction_value_currency": [
+      "EUR"
+    ]
+  },
+  {
+    "iati_identifier": "XM-DAC-41121-2021-AME-BRA",
+    "transaction_value": [
+      48223.0
+    ],
+    "transaction_value_currency": [
+      "EUR"
+    ]
+  },
+  {
+    "iati_identifier": "XM-DAC-41121-2020-AME-BRA",
+    "transaction_value": [
+      75000.0
+    ],
+    "transaction_value_currency": [
+      "EUR"
+    ]
+  },
+  {
+    "iati_identifier": "XM-DAC-41302-IP22-AFG105",
+    "transaction_value": [
+      253797.45
+    ]
+  },
+  {
+    "iati_identifier": "XM-DAC-41302-IP22-PSE128",
+    "transaction_value": [
+      808329.42
+    ]
+  },
+  {
+    "iati_identifier": "XM-DAC-41302-IP22-PSE128",
+    "transaction_value": [
+      1.0
+    ]
+  },
+  {
+    "iati_identifier": "XM-DAC-41302-IP22-EGY828",
+    "transaction_value": [
+      660774.57
+    ]
+  },
+  {
+    "iati_identifier": "XM-DAC-41302-IP22-ZAF101",
+    "transaction_value": [
+      23540.0
+    ]
+  },
+  {
+    "iati_identifier": "XM-DAC-41302-106241-399560-2018-TUR159",
+    "transaction_value": [
+      208177.39
+    ],
+    "transaction_value_currency": [
+      "USD"
+    ]
+  },
+  {
+    "iati_identifier": "XM-DAC-41302-106636-399560-2018-TUR152",
+    "transaction_value": [
+      373495.26
+    ],
+    "transaction_value_currency": [
+      "USD"
+    ]
+  },
+  {
+    "iati_identifier": "XM-DAC-41302-106558-399560-2018-PSE128",
+    "transaction_value": [
+      119696.4
+    ],
+    "transaction_value_currency": [
+      "USD"
+    ]
+  },
+  {
+    "iati_identifier": "XM-DAC-41302-106654-399560-2018-GLO286",
+    "transaction_value": [
+      17000.0
+    ],
+    "transaction_value_currency": [
+      "USD"
+    ]
+  },
+  {
+    "iati_identifier": "XM-DAC-41302-IP22-JOR152",
+    "transaction_value": [
+      1409257.28
+    ]
+  },
+  {
+    "iati_identifier": "XM-DAC-41302-IP22-JOR152",
+    "transaction_value": [
+      9324.55
+    ]
+  },
+  {
+    "iati_identifier": "XM-DAC-41302-IP22-PSE152",
+    "transaction_value": [
+      121579.03
+    ]
+  },
+  {
+    "iati_identifier": "XM-DAC-41302-IP22-AFG826",
+    "transaction_value": [
+      11000.0
+    ]
+  },
+  {
+    "iati_identifier": "XM-DAC-41121-2022-ASO-IND",
+    "transaction_value": [
+      64738.0
+    ],
+    "transaction_value_currency": [
+      "USD"
+    ]
+  },
+  {
+    "iati_identifier": "XM-DAC-41121-2023-AME-BRA",
+    "transaction_value": [
+      126329.0
+    ],
+    "transaction_value_currency": [
+      "EUR"
+    ]
+  },
+  {
+    "iati_identifier": "XM-DAC-41121-2022-AME-BRA",
+    "transaction_value": [
+      134448.0
+    ],
+    "transaction_value_currency": [
+      "EUR"
+    ]
+  },
+  {
+    "iati_identifier": "XM-DAC-41121-2021-ASO-IND",
+    "transaction_value": [
+      53693.0
+    ],
+    "transaction_value_currency": [
+      "USD"
+    ]
+  },
+  {
+    "iati_identifier": "XM-DAC-41140-RW01.03.041.SMS1",
+    "transaction_value": [
+      1029316.69
+    ]
+  },
+  {
+    "iati_identifier": "XM-DAC-41140-RW01.03.041.SMS1",
+    "transaction_value": [
+      -32235.55
+    ]
+  },
+  {
+    "iati_identifier": "XM-DAC-41140-RW01.03.041.SMS1",
+    "transaction_value": [
+      -22140.56
+    ]
+  },
+  {
+    "iati_identifier": "XM-DAC-41140-RW01.03.041.SMS1",
+    "transaction_value": [
+      -20914.54
+    ]
+  },
+  {
+    "iati_identifier": "XM-DAC-41140-RW01-DSC",
+    "transaction_value": [
+      32235.55
+    ]
+  },
+  {
+    "iati_identifier": "XM-DAC-41140-RW01-DSC",
+    "transaction_value": [
+      22140.56
+    ]
+  },
+  {
+    "iati_identifier": "XM-DAC-41140-RW01-DSC",
+    "transaction_value": [
+      20914.54
+    ]
+  },
+  {
+    "iati_identifier": "XM-DAC-41140-BO03.01.011.URT1",
+    "transaction_value": [
+      22600.0
+    ]
+  },
+  {
+    "iati_identifier": "XM-DAC-41140-PS02.01.011.URT1",
+    "transaction_value": [
+      911993.82
+    ]
+  },
+  {
+    "iati_identifier": "XM-DAC-41140-PS02.01.011.URT1",
+    "transaction_value": [
+      1023.53
+    ]
+  },
+  {
+    "iati_identifier": "XM-DAC-41140-PS02-DSC",
+    "transaction_value": [
+      24614.16
+    ]
+  },
+  {
+    "iati_identifier": "XM-DAC-41140-PS02-DSC",
+    "transaction_value": [
+      1335.63
+    ]
+  },
+  {
+    "iati_identifier": "XM-DAC-41301-700424",
+    "transaction_value": [
+      100000.0
+    ]
+  },
+  {
+    "iati_identifier": "XM-DAC-41301-700424",
+    "transaction_value": [
+      -5759.34
+    ]
+  },
+  {
+    "iati_identifier": "XM-DAC-41301-640751",
+    "transaction_value": [
+      423731.0
+    ]
+  },
+  {
+    "iati_identifier": "XM-DAC-41301-640751",
+    "transaction_value": [
+      177036.76
+    ]
+  },
+  {
+    "iati_identifier": "XM-DAC-41301-640751",
+    "transaction_value": [
+      -1670.67
+    ]
+  },
+  {
+    "iati_identifier": "XM-DAC-41302-IP24-AFG133",
+    "transaction_value": [
+      77759.0
+    ]
+  },
+  {
+    "iati_identifier": "XM-DAC-41302-IP24-AFG133",
+    "transaction_value": [
+      -380.0
+    ]
+  },
+  {
+    "iati_identifier": "XM-DAC-41114-OUTPUT-01003906",
+    "transaction_value": [
+      111386.0
+    ],
+    "transaction_value_currency": [
+      "USD"
+    ]
+  },
+  {
+    "iati_identifier": "XM-DAC-41114-OUTPUT-00126070",
+    "transaction_value": [
+      1504859.0
+    ],
+    "transaction_value_currency": [
+      "USD"
+    ]
+  },
+  {
+    "iati_identifier": "XM-DAC-41114-OUTPUT-01003779",
+    "transaction_value": [
+      204573.0
+    ],
+    "transaction_value_currency": [
+      "USD"
+    ]
+  },
+  {
+    "iati_identifier": "XM-DAC-41114-OUTPUT-00115524",
+    "transaction_value": [
+      873809.0
+    ],
+    "transaction_value_currency": [
+      "USD"
+    ]
+  },
+  {
+    "iati_identifier": "XM-DAC-41114-OUTPUT-00092218",
+    "transaction_value": [
+      15002.0
+    ],
+    "transaction_value_currency": [
+      "USD"
+    ]
+  },
+  {
+    "iati_identifier": "XM-DAC-41114-OUTPUT-00092218",
+    "transaction_value": [
+      7000.0
+    ],
+    "transaction_value_currency": [
+      "USD"
+    ]
+  },
+  {
+    "iati_identifier": "XM-DAC-41114-OUTPUT-01001329",
+    "transaction_value": [
+      30000.0
+    ],
+    "transaction_value_currency": [
+      "USD"
+    ]
+  },
+  {
+    "iati_identifier": "XM-DAC-41114-OUTPUT-00126765",
+    "transaction_value": [
+      258947.0
+    ],
+    "transaction_value_currency": [
+      "USD"
+    ]
+  },
+  {
+    "iati_identifier": "XM-DAC-41114-OUTPUT-00119953",
+    "transaction_value": [
+      -18156.0
+    ],
+    "transaction_value_currency": [
+      "USD"
+    ]
+  },
+  {
+    "iati_identifier": "XM-DAC-41114-OUTPUT-00119953",
+    "transaction_value": [
+      401801.0
+    ],
+    "transaction_value_currency": [
+      "USD"
+    ]
+  },
+  {
+    "iati_identifier": "XM-DAC-41114-OUTPUT-00119953",
+    "transaction_value": [
+      236670.0
+    ],
+    "transaction_value_currency": [
+      "USD"
+    ]
+  },
+  {
+    "iati_identifier": "XM-DAC-41114-OUTPUT-00122195",
+    "transaction_value": [
+      48150.0
+    ],
+    "transaction_value_currency": [
+      "USD"
+    ]
+  },
+  {
+    "iati_identifier": "XM-DAC-41302-IP24-PSE152",
+    "transaction_value": [
+      104315.96
+    ]
+  },
+  {
+    "iati_identifier": "XM-DAC-41302-IP24-JOR152",
+    "transaction_value": [
+      275913.25
+    ]
+  },
+  {
+    "iati_identifier": "XM-DAC-41302-IP24-EGY828",
+    "transaction_value": [
+      154087.93
+    ]
+  },
+  {
+    "iati_identifier": "XM-DAC-41302-IP24-AFG105",
+    "transaction_value": [
+      409620.55
+    ]
+  },
+  {
+    "iati_identifier": "XM-DAC-41302-IP24-AFG105",
+    "transaction_value": [
+      226399.94
+    ]
+  },
+  {
+    "iati_identifier": "XM-DAC-41302-IP24-AFG826",
+    "transaction_value": [
+      10520.0
+    ]
+  },
+  {
+    "iati_identifier": "XM-DAC-41302-IP24-PSE128",
+    "transaction_value": [
+      223362.42
+    ]
+  },
+  {
+    "iati_identifier": "XM-DAC-41114-OUTPUT-00083041",
+    "transaction_value": [
+      20200.0
+    ],
+    "transaction_value_currency": [
+      "USD"
+    ]
+  },
+  {
+    "iati_identifier": "XM-DAC-41114-OUTPUT-00060672",
+    "transaction_value": [
+      49637.0
+    ],
+    "transaction_value_currency": [
+      "USD"
+    ]
+  },
+  {
+    "iati_identifier": "XM-DAC-41114-OUTPUT-00090867",
+    "transaction_value": [
+      428777.0
+    ],
+    "transaction_value_currency": [
+      "USD"
+    ]
+  },
+  {
+    "iati_identifier": "XM-DAC-41114-OUTPUT-00090867",
+    "transaction_value": [
+      90026.0
+    ],
+    "transaction_value_currency": [
+      "USD"
+    ]
+  },
+  {
+    "iati_identifier": "XM-DAC-41114-OUTPUT-00090867",
+    "transaction_value": [
+      55813.0
+    ],
+    "transaction_value_currency": [
+      "USD"
+    ]
+  },
+  {
+    "iati_identifier": "XM-DAC-41114-OUTPUT-00090867",
+    "transaction_value": [
+      174933.0
+    ],
+    "transaction_value_currency": [
+      "USD"
+    ]
+  },
+  {
+    "iati_identifier": "XM-DAC-41114-OUTPUT-00090867",
+    "transaction_value": [
+      169214.0
+    ],
+    "transaction_value_currency": [
+      "USD"
+    ]
+  },
+  {
+    "iati_identifier": "XM-DAC-41114-OUTPUT-00090867",
+    "transaction_value": [
+      146534.0
+    ],
+    "transaction_value_currency": [
+      "USD"
+    ]
+  },
+  {
+    "iati_identifier": "XM-DAC-41114-OUTPUT-00091094",
+    "transaction_value": [
+      415765.0
+    ],
+    "transaction_value_currency": [
+      "USD"
+    ]
+  },
+  {
+    "iati_identifier": "XM-DAC-41114-OUTPUT-00091094",
+    "transaction_value": [
+      18748.0
+    ],
+    "transaction_value_currency": [
+      "USD"
+    ]
+  },
+  {
+    "iati_identifier": "XM-DAC-41114-OUTPUT-00091094",
+    "transaction_value": [
+      55466.0
+    ],
+    "transaction_value_currency": [
+      "USD"
+    ]
+  },
+  {
+    "iati_identifier": "XM-DAC-41114-OUTPUT-00091094",
+    "transaction_value": [
+      75253.0
+    ],
+    "transaction_value_currency": [
+      "USD"
+    ]
+  },
+  {
+    "iati_identifier": "XM-DAC-41114-OUTPUT-00091106",
+    "transaction_value": [
+      355458.0
+    ],
+    "transaction_value_currency": [
+      "USD"
+    ]
+  },
+  {
+    "iati_identifier": "XM-DAC-41114-OUTPUT-00091106",
+    "transaction_value": [
+      31360.0
+    ],
+    "transaction_value_currency": [
+      "USD"
+    ]
+  },
+  {
+    "iati_identifier": "XM-DAC-41114-OUTPUT-00091106",
+    "transaction_value": [
+      67694.0
+    ],
+    "transaction_value_currency": [
+      "USD"
+    ]
+  },
+  {
+    "iati_identifier": "XM-DAC-41114-OUTPUT-00091106",
+    "transaction_value": [
+      110893.0
+    ],
+    "transaction_value_currency": [
+      "USD"
+    ]
+  },
+  {
+    "iati_identifier": "XM-DAC-41114-OUTPUT-00091106",
+    "transaction_value": [
+      56894.0
+    ],
+    "transaction_value_currency": [
+      "USD"
+    ]
+  },
+  {
+    "iati_identifier": "XM-DAC-41114-OUTPUT-00109032",
+    "transaction_value": [
+      7500.0
+    ],
+    "transaction_value_currency": [
+      "USD"
+    ]
+  },
+  {
+    "iati_identifier": "XM-DAC-41114-OUTPUT-00107246",
+    "transaction_value": [
+      3896.0
+    ],
+    "transaction_value_currency": [
+      "USD"
+    ]
+  },
+  {
+    "iati_identifier": "XM-DAC-41114-OUTPUT-00114475",
+    "transaction_value": [
+      20000.0
+    ],
+    "transaction_value_currency": [
+      "USD"
+    ]
+  },
+  {
+    "iati_identifier": "XM-DAC-41114-OUTPUT-01000109",
+    "transaction_value": [
+      57995.0
+    ],
+    "transaction_value_currency": [
+      "USD"
+    ]
+  },
+  {
+    "iati_identifier": "XM-DAC-41114-OUTPUT-00130178",
+    "transaction_value": [
+      1187226.0
+    ],
+    "transaction_value_currency": [
+      "USD"
+    ]
+  },
+  {
+    "iati_identifier": "XM-DAC-41114-OUTPUT-00095670",
+    "transaction_value": [
+      1500.0
+    ],
+    "transaction_value_currency": [
+      "USD"
+    ]
+  },
+  {
+    "iati_identifier": "XM-DAC-41114-OUTPUT-00091094",
+    "transaction_value": [
+      56894.0
+    ],
+    "transaction_value_currency": [
+      "USD"
+    ]
+  },
+  {
+    "iati_identifier": "XM-DAC-41114-OUTPUT-00125988",
+    "transaction_value": [
+      49950.0
+    ],
+    "transaction_value_currency": [
+      "USD"
+    ]
+  },
+  {
+    "iati_identifier": "XM-DAC-41114-OUTPUT-01001973",
+    "transaction_value": [
+      -12391.0
+    ],
+    "transaction_value_currency": [
+      "USD"
+    ]
+  },
+  {
+    "iati_identifier": "XM-DAC-41114-OUTPUT-00125031",
+    "transaction_value": [
+      238187.0
+    ],
+    "transaction_value_currency": [
+      "USD"
+    ]
+  },
+  {
+    "iati_identifier": "XM-DAC-41114-OUTPUT-00090040",
+    "transaction_value": [
+      20000.0
+    ],
+    "transaction_value_currency": [
+      "USD"
+    ]
+  },
+  {
+    "iati_identifier": "XM-DAC-41114-OUTPUT-00079012",
+    "transaction_value": [
+      25000.0
+    ],
+    "transaction_value_currency": [
+      "USD"
+    ]
+  },
+  {
+    "iati_identifier": "XM-DAC-41114-OUTPUT-01001441",
+    "transaction_value": [
+      124000.0
+    ],
+    "transaction_value_currency": [
+      "USD"
+    ]
+  },
+  {
+    "iati_identifier": "XM-DAC-41114-OUTPUT-00123136",
+    "transaction_value": [
+      23158.0
+    ],
+    "transaction_value_currency": [
+      "USD"
+    ]
+  },
+  {
+    "iati_identifier": "XM-DAC-41114-OUTPUT-00084422",
+    "transaction_value": [
+      25000.0
+    ],
+    "transaction_value_currency": [
+      "USD"
+    ]
+  },
+  {
+    "iati_identifier": "XM-DAC-41114-OUTPUT-00049460",
+    "transaction_value": [
+      51540.0
+    ],
+    "transaction_value_currency": [
+      "USD"
+    ]
+  },
+  {
+    "iati_identifier": "XM-DAC-41114-OUTPUT-00110841",
+    "transaction_value": [
+      279997.0
+    ],
+    "transaction_value_currency": [
+      "USD"
+    ]
+  },
+  {
+    "iati_identifier": "XM-DAC-41114-OUTPUT-00115065",
+    "transaction_value": [
+      97244.0
+    ],
+    "transaction_value_currency": [
+      "USD"
+    ]
+  },
+  {
+    "iati_identifier": "XM-DAC-41114-OUTPUT-00126763",
+    "transaction_value": [
+      257807.0
+    ],
+    "transaction_value_currency": [
+      "USD"
+    ]
+  },
+  {
+    "iati_identifier": "XM-DAC-41114-OUTPUT-00090040",
+    "transaction_value": [
+      -708.0
+    ],
+    "transaction_value_currency": [
+      "USD"
+    ]
+  },
+  {
+    "iati_identifier": "XM-DAC-41114-OUTPUT-00129162",
+    "transaction_value": [
+      15000.0
+    ],
+    "transaction_value_currency": [
+      "USD"
+    ]
+  },
+  {
+    "iati_identifier": "XM-DAC-41114-OUTPUT-00104298",
+    "transaction_value": [
+      150000.0
+    ],
+    "transaction_value_currency": [
+      "USD"
+    ]
+  },
+  {
+    "iati_identifier": "XM-DAC-41114-OUTPUT-00104298",
+    "transaction_value": [
+      150000.0
+    ],
+    "transaction_value_currency": [
+      "USD"
+    ]
+  },
+  {
+    "iati_identifier": "XM-DAC-41114-OUTPUT-00104298",
+    "transaction_value": [
+      150000.0
+    ],
+    "transaction_value_currency": [
+      "USD"
+    ]
+  },
+  {
+    "iati_identifier": "XM-DAC-41114-OUTPUT-01002613",
+    "transaction_value": [
+      60000.0
+    ],
+    "transaction_value_currency": [
+      "USD"
+    ]
+  },
+  {
+    "iati_identifier": "XM-DAC-41114-OUTPUT-01002613",
+    "transaction_value": [
+      30000.0
+    ],
+    "transaction_value_currency": [
+      "USD"
+    ]
+  },
+  {
+    "iati_identifier": "XM-DAC-41114-OUTPUT-00130293",
+    "transaction_value": [
+      20000.0
+    ],
+    "transaction_value_currency": [
+      "USD"
+    ]
+  },
+  {
+    "iati_identifier": "XM-DAC-41114-OUTPUT-01002132",
+    "transaction_value": [
+      71064.0
+    ],
+    "transaction_value_currency": [
+      "USD"
+    ]
+  },
+  {
+    "iati_identifier": "XM-DAC-41114-OUTPUT-01001716",
+    "transaction_value": [
+      17857.0
+    ],
+    "transaction_value_currency": [
+      "USD"
+    ]
+  },
+  {
+    "iati_identifier": "XM-DAC-41114-OUTPUT-00090233",
+    "transaction_value": [
+      60000.0
+    ],
+    "transaction_value_currency": [
+      "USD"
+    ]
+  },
+  {
+    "iati_identifier": "XM-DAC-41114-OUTPUT-00072811",
+    "transaction_value": [
+      80000.0
+    ],
+    "transaction_value_currency": [
+      "USD"
+    ]
+  },
+  {
+    "iati_identifier": "XM-DAC-41301-649818",
+    "transaction_value": [
+      225972.86
+    ]
+  },
+  {
+    "iati_identifier": "XM-DAC-41301-649818",
+    "transaction_value": [
+      225973.0
+    ]
+  },
+  {
+    "iati_identifier": "XM-DAC-41301-649818",
+    "transaction_value": [
+      225973.0
+    ]
+  },
+  {
+    "iati_identifier": "XM-DAC-41301-649818",
+    "transaction_value": [
+      15000.0
+    ]
+  },
+  {
+    "iati_identifier": "XM-DAC-41301-705642",
+    "transaction_value": [
+      206159.0
+    ]
+  },
+  {
+    "iati_identifier": "XM-DAC-41301-705642",
+    "transaction_value": [
+      240048.0
+    ]
+  },
+  {
+    "iati_identifier": "XM-DAC-41301-705642",
+    "transaction_value": [
+      224793.0
+    ]
+  },
+  {
+    "iati_identifier": "XM-DAC-41301-712742",
+    "transaction_value": [
+      30000.0
+    ]
+  },
+  {
+    "iati_identifier": "XM-DAC-41301-712742",
+    "transaction_value": [
+      -834.84
+    ]
+  },
+  {
+    "iati_identifier": "XM-DAC-41301-642853",
+    "transaction_value": [
+      200000.0
+    ]
+  },
+  {
+    "iati_identifier": "XM-DAC-41301-642853",
+    "transaction_value": [
+      -25048.37
+    ]
+  },
+  {
+    "iati_identifier": "XM-DAC-41301-637472",
+    "transaction_value": [
+      800000.0
+    ]
+  },
+  {
+    "iati_identifier": "XM-DAC-41301-637472",
+    "transaction_value": [
+      -38556.14
+    ]
+  },
+  {
+    "iati_identifier": "XM-DAC-41121-2025-AME-USAMCO",
+    "transaction_value": [
+      18945.0
+    ],
+    "transaction_value_currency": [
+      "USD"
+    ]
+  },
+  {
+    "iati_identifier": "XM-DAC-41301-668581",
+    "transaction_value": [
+      239821.0
+    ]
+  },
+  {
+    "iati_identifier": "XM-DAC-41301-668581",
+    "transaction_value": [
+      819829.0
+    ]
+  },
+  {
+    "iati_identifier": "XM-DAC-41301-668581",
+    "transaction_value": [
+      585804.0
+    ]
+  },
+  {
+    "iati_identifier": "XM-DAC-41301-668581",
+    "transaction_value": [
+      394938.0
+    ]
+  },
+  {
+    "iati_identifier": "XM-DAC-41301-668581",
+    "transaction_value": [
+      -117838.57
+    ]
+  },
+  {
+    "iati_identifier": "XM-DAC-41301-662222",
+    "transaction_value": [
+      148010.0
+    ]
+  },
+  {
+    "iati_identifier": "XM-DAC-41301-662222",
+    "transaction_value": [
+      101990.0
+    ]
+  },
+  {
+    "iati_identifier": "XM-DAC-41301-662222",
+    "transaction_value": [
+      -22690.15
+    ]
+  },
+  {
+    "iati_identifier": "XM-DAC-41301-742604",
+    "transaction_value": [
+      211646.0
+    ]
+  },
+  {
+    "iati_identifier": "XM-DAC-41301-742604",
+    "transaction_value": [
+      215030.0
+    ]
+  },
+  {
+    "iati_identifier": "XM-DAC-41301-742604",
+    "transaction_value": [
+      198750.0
+    ]
+  },
+  {
+    "iati_identifier": "XM-DAC-41301-723043",
+    "transaction_value": [
+      92283.0
+    ]
+  },
+  {
+    "iati_identifier": "XM-DAC-41301-723043",
+    "transaction_value": [
+      10584.0
+    ]
+  },
+  {
+    "iati_identifier": "XM-DAC-41301-723043",
+    "transaction_value": [
+      7200.69
+    ]
+  },
+  {
+    "iati_identifier": "XM-DAC-41301-723043",
+    "transaction_value": [
+      -1132.75
+    ]
+  },
+  {
+    "iati_identifier": "XM-DAC-21-1-20179902075B3STAB-UNHQ052",
+    "transaction_value": [
+      200000.0
+    ]
+  },
+  {
+    "iati_identifier": "XM-DAC-21-1-20179902114B4GEN-GEN2HQ001",
+    "transaction_value": [
+      250000.0
+    ]
+  },
+  {
+    "iati_identifier": "XM-DAC-21-1-20179902116B4GEN-GEN3HQ001",
+    "transaction_value": [
+      250000.0
+    ]
+  },
+  {
+    "iati_identifier": "XM-DAC-21-1-20179900081E1UNVOL-UNHQ052",
+    "transaction_value": [
+      1500000.0
+    ]
+  },
+  {
+    "iati_identifier": "XM-DAC-21-1-20179900091B1ETHOB3CPA-ETHOB3GENLA",
+    "transaction_value": [
+      500000.0
+    ]
+  },
+  {
+    "iati_identifier": "XM-DAC-21-1-20179900687B1VNMOB3-VNMOB3PP",
+    "transaction_value": [
+      100000.0
+    ]
+  },
+  {
+    "iati_identifier": "XM-DAC-21-1-2019000027B1ETHOB3CPA-ETHOB3CSOSP",
+    "transaction_value": [
+      500000.0
+    ]
+  },
+  {
+    "iati_identifier": "XM-DAC-21-1-2019000035B1ETHOB6REGIN-ETHOB6ALLAF",
+    "transaction_value": [
+      125000.0
+    ]
+  },
+  {
+    "iati_identifier": "XM-DAC-21-1-2019000036B1ETHOB6REGIN-ETHOB6ALLAF",
+    "transaction_value": [
+      50000.0
+    ]
+  },
+  {
+    "iati_identifier": "XM-DAC-21-1-2019000315B1TANOP3DGHG-TANOP3CRWG",
+    "transaction_value": [
+      200000.0
+    ]
+  },
+  {
+    "iati_identifier": "XM-DAC-21-1-2019000456B1VNMOB3-VNMOB3PP",
+    "transaction_value": [
+      100000.0
+    ]
+  },
+  {
+    "iati_identifier": "XM-DAC-21-1-2018007239B1MOZOB2BHE-MOZOB2EDUS",
+    "transaction_value": [
+      50000.0
+    ]
+  },
+  {
+    "iati_identifier": "XM-DAC-21-1-2022000297B1RSAOB3GENDER-GENRSUNWOMEN",
+    "transaction_value": [
+      200000.0
+    ]
+  },
+  {
+    "iati_identifier": "XM-DAC-21-1-2022000309B1SAREGOB3GENDE-GENRSUNWOMEN",
+    "transaction_value": [
+      100000.0
+    ]
+  },
+  {
+    "iati_identifier": "XM-DAC-21-1-2022000037B1ETHOP4GHLN-ETHOP4GEN",
+    "transaction_value": [
+      700000.0
+    ]
+  },
+  {
+    "iati_identifier": "XM-DAC-21-1-2020990098E1UNVOL-UNHQ052",
+    "transaction_value": [
+      1500000.0
+    ]
+  },
+  {
+    "iati_identifier": "XM-DAC-21-1-2020990012B1ZIMOB2GBV-GENZIAUNWOMEN",
+    "transaction_value": [
+      150000.0
+    ]
+  },
+  {
+    "iati_identifier": "XM-DAC-21-1-2020990220B1SIERRAOB3GOV-SLOB3GBV",
+    "transaction_value": [
+      299592.0
+    ]
+  },
+  {
+    "iati_identifier": "XI-IATI-EC_NEAR-2022-PC-20313",
+    "transaction_value": [
+      1500000.0
+    ]
+  },
+  {
+    "iati_identifier": "XI-IATI-EC_NEAR-2022-PC-20313",
+    "transaction_value": [
+      468415.45
+    ]
+  },
+  {
+    "iati_identifier": "XI-IATI-EC_NEAR-2023-PC-25349",
+    "transaction_value": [
+      837825.0
+    ]
+  },
+  {
+    "iati_identifier": "XI-IATI-EC_NEAR-2023-PC-25349",
+    "transaction_value": [
+      3400000.0
+    ]
+  },
+  {
+    "iati_identifier": "XI-IATI-EC_NEAR-2022-PC-20313",
+    "transaction_value": [
+      981360.89
+    ]
+  },
+  {
+    "iati_identifier": "XM-DAC-21-1-2018008084E1UNVOL-UNHQ052",
+    "transaction_value": [
+      1500000.0
+    ]
+  },
+  {
+    "iati_identifier": "XM-DAC-21-1-2018007816B4GEN-GEN3HQ001",
+    "transaction_value": [
+      250000.0
+    ]
+  },
+  {
+    "iati_identifier": "XM-DAC-21-1-2016002043B4GENGEN2HQ001",
+    "transaction_value": [
+      150000.0
+    ]
+  },
+  {
+    "iati_identifier": "XM-DAC-21-1-2022000013B1ETHOP1REIN-ETHOP1REGIN",
+    "transaction_value": [
+      30000.0
+    ]
+  },
+  {
+    "iati_identifier": "XM-DAC-21-1-2022002283E1UNVOL-UNHQ052",
+    "transaction_value": [
+      2000000.0
+    ]
+  },
+  {
+    "iati_identifier": "XM-DAC-21-1-2018007366B1RSAOB2GBV-GENRSUNWOMEN",
+    "transaction_value": [
+      70000.0
+    ]
+  },
+  {
+    "iati_identifier": "XM-DAC-21-1-2019002295B7UNTFPRO-GEN3HQ001",
+    "transaction_value": [
+      250000.0
+    ]
+  },
+  {
+    "iati_identifier": "XM-DAC-21-1-2019002296B7UNTFPRO-GEN3HQ001",
+    "transaction_value": [
+      250000.0
+    ]
+  },
+  {
+    "iati_identifier": "XM-DAC-21-1-2019002348E1UNVOL-UNHQ052",
+    "transaction_value": [
+      1500000.0
+    ]
+  },
+  {
+    "iati_identifier": "XM-DAC-21-1-2019002377NON DCAD-ODA",
+    "transaction_value": [
+      9500.0
+    ]
+  },
+  {
+    "iati_identifier": "XM-DAC-21-1-2016000372B1VIEOB1PRPVIEOB1P135",
+    "transaction_value": [
+      100000.0
+    ]
+  },
+  {
+    "iati_identifier": "XM-DAC-21-1-20179900463B1MOZOB2BHE-MOZOB2EDUS",
+    "transaction_value": [
+      75000.0
+    ]
+  },
+  {
+    "iati_identifier": "XM-DAC-21-1-20179900496B1RSAOB2GBV-GENRSUNWOMEN",
+    "transaction_value": [
+      160000.0
+    ]
+  },
+  {
+    "iati_identifier": "XM-DAC-21-1-2016002044B4GENGEN2HQ001",
+    "transaction_value": [
+      150000.0
+    ]
+  },
+  {
+    "iati_identifier": "XM-DAC-21-1-2016000278B1TANOB4GGATANOB4DOAC",
+    "transaction_value": [
+      400000.0
+    ]
+  },
+  {
+    "iati_identifier": "XM-DAC-21-1-2016002042B4GENGEN1HQ001",
+    "transaction_value": [
+      260000.0
+    ]
+  },
+  {
+    "iati_identifier": "XM-DAC-21-1-2016002000B3STABUNHQ052",
+    "transaction_value": [
+      100000.0
+    ]
+  },
+  {
+    "iati_identifier": "XM-DAC-21-1-2016002206E1UNVOLUNHQ052",
+    "transaction_value": [
+      1500000.0
+    ]
+  },
+  {
+    "iati_identifier": "XM-DAC-21-1-2018007753B1TANOP3DGHG-TANOP3CRWG",
+    "transaction_value": [
+      200000.0
+    ]
+  },
+  {
+    "iati_identifier": "XM-DAC-21-1-2018007830B4GEN-GEN2HQ001",
+    "transaction_value": [
+      250000.0
+    ]
+  },
+  {
+    "iati_identifier": "XM-DAC-21-1-2018007709B1SAREGOB2GBV-GENRSUNWOMEN",
+    "transaction_value": [
+      180000.0
+    ]
+  },
+  {
+    "iati_identifier": "XI-IATI-EC_NEAR-2024-PC-26015",
+    "transaction_value": [
+      2000000.0
+    ]
+  },
+  {
+    "iati_identifier": "XI-IATI-EC_NEAR-2024-PC-26015",
+    "transaction_value": [
+      606081.9
+    ]
+  },
+  {
+    "iati_identifier": "XI-IATI-EC_NEAR-2023-PC-25961",
+    "transaction_value": [
+      5000000.0
+    ]
+  },
+  {
+    "iati_identifier": "XI-IATI-EC_NEAR-2023-PC-25961",
+    "transaction_value": [
+      2163087.0
+    ]
+  },
+  {
+    "iati_identifier": "XI-IATI-EC_NEAR-2019-PCC-413989",
+    "transaction_value": [
+      1380000.0
+    ]
+  },
+  {
+    "iati_identifier": "XI-IATI-EC_NEAR-2019-PCC-413989",
+    "transaction_value": [
+      358255.0
+    ]
+  },
+  {
+    "iati_identifier": "XI-IATI-EC_NEAR-2019-PCC-413989",
+    "transaction_value": [
+      1500000.0
+    ]
+  },
+  {
+    "iati_identifier": "XI-IATI-EC_NEAR-2019-PCC-413989",
+    "transaction_value": [
+      1761745.0
+    ]
+  },
+  {
+    "iati_identifier": "XI-IATI-EC_NEAR-2019-PCC-413989",
+    "transaction_value": [
+      5000000.0
+    ]
+  },
+  {
+    "iati_identifier": "XI-IATI-EC_NEAR-2023-PC-29454",
+    "transaction_value": [
+      614018.0
+    ]
+  },
+  {
+    "iati_identifier": "XI-IATI-EC_NEAR-2023-PC-29454",
+    "transaction_value": [
+      1500000.0
+    ]
+  },
+  {
+    "iati_identifier": "XI-IATI-EC_NEAR-2023-PC-25413",
+    "transaction_value": [
+      1098857.0
+    ]
+  },
+  {
+    "iati_identifier": "XI-IATI-EC_NEAR-2023-PC-25413",
+    "transaction_value": [
+      5000000.0
+    ]
+  },
+  {
+    "iati_identifier": "XI-IATI-EC_NEAR-2020-PCC-420725",
+    "transaction_value": [
+      554671.14
+    ]
+  },
+  {
+    "iati_identifier": "XI-IATI-EC_NEAR-2020-PCC-420725",
+    "transaction_value": [
+      51015.86
+    ]
+  },
+  {
+    "iati_identifier": "XI-IATI-EC_NEAR-2020-PCC-420725",
+    "transaction_value": [
+      2000000.0
+    ]
+  },
+  {
+    "iati_identifier": "XI-IATI-EC_NEAR-2020-PCC-420725",
+    "transaction_value": [
+      693596.0
+    ]
+  },
+  {
+    "iati_identifier": "XI-IATI-EC_NEAR-2020-PCC-420725",
+    "transaction_value": [
+      700717.0
+    ]
+  },
+  {
+    "iati_identifier": "XI-IATI-EC_NEAR-2020-PCC-420550",
+    "transaction_value": [
+      1280605.21
+    ]
+  },
+  {
+    "iati_identifier": "XI-IATI-EC_NEAR-2020-PCC-420550",
+    "transaction_value": [
+      1361598.86
+    ]
+  },
+  {
+    "iati_identifier": "XI-IATI-EC_NEAR-2020-PCC-420550",
+    "transaction_value": [
+      4300000.0
+    ]
+  },
+  {
+    "iati_identifier": "XI-IATI-EC_NEAR-2020-PCC-420550",
+    "transaction_value": [
+      1657795.93
+    ]
+  },
+  {
+    "iati_identifier": "XI-IATI-EC_NEAR-2023-PC-25182",
+    "transaction_value": [
+      5000000.0
+    ]
+  },
+  {
+    "iati_identifier": "XI-IATI-EC_NEAR-2023-PC-25182",
+    "transaction_value": [
+      2061667.03
+    ]
+  },
+  {
+    "iati_identifier": "XI-IATI-UNPF-00094514",
+    "transaction_value": [
+      472673.0
+    ]
+  },
+  {
+    "iati_identifier": "XI-IATI-UNPF-00079235",
+    "transaction_value": [
+      211335.0
+    ]
+  },
+  {
+    "iati_identifier": "XI-IATI-UNPF-00079235",
+    "transaction_value": [
+      70073.61
+    ]
+  },
+  {
+    "iati_identifier": "XI-IATI-UNPF-00095744",
+    "transaction_value": [
+      128700.0
+    ]
+  },
+  {
+    "iati_identifier": "XI-IATI-UNPF-00115216",
+    "transaction_value": [
+      248935.5
+    ]
+  },
+  {
+    "iati_identifier": "XI-IATI-UNPF-00115216",
+    "transaction_value": [
+      220334.4
+    ]
+  },
+  {
+    "iati_identifier": "XI-IATI-UNPF-00084209",
+    "transaction_value": [
+      170000.0
+    ]
+  },
+  {
+    "iati_identifier": "XI-IATI-UNPF-00111134",
+    "transaction_value": [
+      749963.0
+    ]
+  },
+  {
+    "iati_identifier": "XI-IATI-UNPF-00101069",
+    "transaction_value": [
+      255709.0
+    ]
+  },
+  {
+    "iati_identifier": "XI-IATI-UNPF-00101069",
+    "transaction_value": [
+      375035.0
+    ]
+  },
+  {
+    "iati_identifier": "XI-IATI-UNPF-00101069",
+    "transaction_value": [
+      364335.0
+    ]
+  },
+  {
+    "iati_identifier": "XI-IATI-UNPF-00101069",
+    "transaction_value": [
+      375035.0
+    ]
+  },
+  {
+    "iati_identifier": "XI-IATI-UNPF-00101069",
+    "transaction_value": [
+      725500.0
+    ]
+  },
+  {
+    "iati_identifier": "XI-IATI-UNPF-00101069",
+    "transaction_value": [
+      160500.0
+    ]
+  },
+  {
+    "iati_identifier": "XI-IATI-UNPF-101069",
+    "transaction_value": [
+      502586.99
+    ]
+  },
+  {
+    "iati_identifier": "XI-IATI-UNPF-00119878",
+    "transaction_value": [
+      281400.0
+    ]
+  },
+  {
+    "iati_identifier": "XI-IATI-UNPF-00097355",
+    "transaction_value": [
+      1260000.0
+    ]
+  },
+  {
+    "iati_identifier": "XI-IATI-UNPF-00097355",
+    "transaction_value": [
+      300000.0
+    ]
+  },
+  {
+    "iati_identifier": "XI-IATI-UNPF-00088443",
+    "transaction_value": [
+      779561.0
+    ]
+  },
+  {
+    "iati_identifier": "XI-IATI-UNPF-00088443",
+    "transaction_value": [
+      286367.0
+    ]
+  },
+  {
+    "iati_identifier": "XI-IATI-UNPF-00071635",
+    "transaction_value": [
+      59475.0
+    ]
+  },
+  {
+    "iati_identifier": "XI-IATI-UNPF-00101638",
+    "transaction_value": [
+      124843.0
+    ]
+  },
+  {
+    "iati_identifier": "XI-IATI-UNPF-00101638",
+    "transaction_value": [
+      378875.0
+    ]
+  },
+  {
+    "iati_identifier": "XI-IATI-UNPF-00101638",
+    "transaction_value": [
+      227012.0
+    ]
+  },
+  {
+    "iati_identifier": "XI-IATI-UNPF-00097295",
+    "transaction_value": [
+      785640.0
+    ]
+  },
+  {
+    "iati_identifier": "XI-IATI-UNPF-00097295",
+    "transaction_value": [
+      558347.0
+    ]
+  },
+  {
+    "iati_identifier": "XI-IATI-UNPF-00097295",
+    "transaction_value": [
+      674919.0
+    ]
+  },
+  {
+    "iati_identifier": "XI-IATI-UNPF-00097295",
+    "transaction_value": [
+      325065.0
+    ]
+  },
+  {
+    "iati_identifier": "XI-IATI-UNPF-00097295",
+    "transaction_value": [
+      335753.0
+    ]
+  },
+  {
+    "iati_identifier": "XI-IATI-UNPF-00097295",
+    "transaction_value": [
+      336596.0
+    ]
+  },
+  {
+    "iati_identifier": "XI-IATI-UNPF-97295",
+    "transaction_value": [
+      360992.0
+    ]
+  },
+  {
+    "iati_identifier": "XI-IATI-UNPF-00101928",
+    "transaction_value": [
+      108284.0
+    ]
+  },
+  {
+    "iati_identifier": "XI-IATI-UNPF-00101928",
+    "transaction_value": [
+      247500.0
+    ]
+  },
+  {
+    "iati_identifier": "XI-IATI-UNPF-00081625",
+    "transaction_value": [
+      241802.0
+    ]
+  },
+  {
+    "iati_identifier": "XI-IATI-UNPF-00091552",
+    "transaction_value": [
+      29700.0
+    ]
+  },
+  {
+    "iati_identifier": "XI-IATI-UNPF-00091552",
+    "transaction_value": [
+      23099.67
+    ]
+  },
+  {
+    "iati_identifier": "XI-IATI-UNPF-00091553",
+    "transaction_value": [
+      29700.0
+    ]
+  },
+  {
+    "iati_identifier": "XI-IATI-UNPF-00091553",
+    "transaction_value": [
+      23099.67
+    ]
+  },
+  {
+    "iati_identifier": "XI-IATI-UNPF-00120604",
+    "transaction_value": [
+      425000.79
+    ]
+  },
+  {
+    "iati_identifier": "XI-IATI-UNPF-00120604",
+    "transaction_value": [
+      330000.0
+    ]
+  },
+  {
+    "iati_identifier": "XI-IATI-UNPF-00112818",
+    "transaction_value": [
+      90773.0
+    ]
+  },
+  {
+    "iati_identifier": "XI-IATI-UNPF-00112818",
+    "transaction_value": [
+      388345.0
+    ]
+  },
+  {
+    "iati_identifier": "XI-IATI-UNPF-117215",
+    "transaction_value": [
+      200000.0
+    ]
+  },
+  {
+    "iati_identifier": "XI-IATI-UNPF-00082723",
+    "transaction_value": [
+      50000.0
+    ]
+  },
+  {
+    "iati_identifier": "XI-IATI-UNPF-00082723",
+    "transaction_value": [
+      50000.0
+    ]
+  },
+  {
+    "iati_identifier": "XI-IATI-UNPF-00091268",
+    "transaction_value": [
+      1750074.0
+    ]
+  },
+  {
+    "iati_identifier": "XI-IATI-UNPF-00091268",
+    "transaction_value": [
+      2897982.0
+    ]
+  },
+  {
+    "iati_identifier": "XI-IATI-UNPF-00091268",
+    "transaction_value": [
+      119146.0
+    ]
+  },
+  {
+    "iati_identifier": "XI-IATI-UNPF-00105617",
+    "transaction_value": [
+      1163906.0
+    ]
+  },
+  {
+    "iati_identifier": "XI-IATI-UNPF-00105617",
+    "transaction_value": [
+      82179.0
+    ]
+  },
+  {
+    "iati_identifier": "XI-IATI-UNPF-00123121",
+    "transaction_value": [
+      100000.0
+    ]
+  },
+  {
+    "iati_identifier": "XI-IATI-UNPF-00123121",
+    "transaction_value": [
+      57364.37
+    ]
+  },
+  {
+    "iati_identifier": "XI-IATI-UNPF-123121",
+    "transaction_value": [
+      99841.0
+    ]
+  },
+  {
+    "iati_identifier": "XI-IATI-UNPF-00110573",
+    "transaction_value": [
+      248646.0
+    ]
+  },
+  {
+    "iati_identifier": "XI-IATI-UNPF-00110573",
+    "transaction_value": [
+      200750.0
+    ]
+  },
+  {
+    "iati_identifier": "XI-IATI-UNPF-00110573",
+    "transaction_value": [
+      309214.0
+    ]
+  },
+  {
+    "iati_identifier": "XI-IATI-UNPF-00110573",
+    "transaction_value": [
+      390026.0
+    ]
+  },
+  {
+    "iati_identifier": "XI-IATI-UNPF-00115407",
+    "transaction_value": [
+      1116290.0
+    ]
+  },
+  {
+    "iati_identifier": "XI-IATI-UNPF-00115407",
+    "transaction_value": [
+      2340182.0
+    ]
+  },
+  {
+    "iati_identifier": "XI-IATI-UNPF-00115407",
+    "transaction_value": [
+      451051.23
+    ]
+  },
+  {
+    "iati_identifier": "XI-IATI-UNPF-00115040",
+    "transaction_value": [
+      295938.51
+    ]
+  },
+  {
+    "iati_identifier": "XI-IATI-UNPF-00115040",
+    "transaction_value": [
+      126830.8
+    ]
+  },
+  {
+    "iati_identifier": "XI-IATI-UNPF-00119683",
+    "transaction_value": [
+      1461409.48
+    ]
+  },
+  {
+    "iati_identifier": "XI-IATI-UNPF-00083893",
+    "transaction_value": [
+      130000.0
+    ]
+  },
+  {
+    "iati_identifier": "XI-IATI-UNPF-00083893",
+    "transaction_value": [
+      331180.38
+    ]
+  },
+  {
+    "iati_identifier": "XI-IATI-UNPF-00083893",
+    "transaction_value": [
+      94829.96
+    ]
+  },
+  {
+    "iati_identifier": "XI-IATI-UNPF-00083896",
+    "transaction_value": [
+      750000.0
+    ]
+  },
+  {
+    "iati_identifier": "XI-IATI-UNPF-00083920",
+    "transaction_value": [
+      176704.0
+    ]
+  },
+  {
+    "iati_identifier": "XI-IATI-UNPF-00088009",
+    "transaction_value": [
+      50000.0
+    ]
+  },
+  {
+    "iati_identifier": "XI-IATI-UNPF-00088009",
+    "transaction_value": [
+      89386.0
+    ]
+  },
+  {
+    "iati_identifier": "XI-IATI-UNPF-00091844",
+    "transaction_value": [
+      755430.0
+    ]
+  },
+  {
+    "iati_identifier": "XI-IATI-UNPF-00091844",
+    "transaction_value": [
+      944321.0
+    ]
+  },
+  {
+    "iati_identifier": "XI-IATI-UNPF-00081835",
+    "transaction_value": [
+      111199.19
+    ]
+  },
+  {
+    "iati_identifier": "XI-IATI-UNPF-00084299",
+    "transaction_value": [
+      13931.0
+    ]
+  },
+  {
+    "iati_identifier": "XI-IATI-UNPF-00084301",
+    "transaction_value": [
+      119000.0
+    ]
+  },
+  {
+    "iati_identifier": "XI-IATI-UNPF-00084303",
+    "transaction_value": [
+      792500.0
+    ]
+  },
+  {
+    "iati_identifier": "XI-IATI-UNPF-00120809",
+    "transaction_value": [
+      102685.74
+    ]
+  },
+  {
+    "iati_identifier": "XI-IATI-UNPF-00123390",
+    "transaction_value": [
+      211758.44
+    ]
+  },
+  {
+    "iati_identifier": "XI-IATI-UNPF-00123390",
+    "transaction_value": [
+      625125.6
+    ]
+  },
+  {
+    "iati_identifier": "XI-IATI-UNPF-00096625",
+    "transaction_value": [
+      99000.0
+    ]
+  },
+  {
+    "iati_identifier": "XI-IATI-UNPF-00089767",
+    "transaction_value": [
+      450000.0
+    ]
+  },
+  {
+    "iati_identifier": "XI-IATI-UNPF-00089768",
+    "transaction_value": [
+      4718722.0
+    ]
+  },
+  {
+    "iati_identifier": "XI-IATI-UNPF-00089768",
+    "transaction_value": [
+      1470027.0
+    ]
+  },
+  {
+    "iati_identifier": "XI-IATI-UNPF-00089768",
+    "transaction_value": [
+      629652.0
+    ]
+  },
+  {
+    "iati_identifier": "XI-IATI-UNPF-00083218",
+    "transaction_value": [
+      84631.0
+    ]
+  },
+  {
+    "iati_identifier": "XI-IATI-UNPF-00083218",
+    "transaction_value": [
+      41332.0
+    ]
+  },
+  {
+    "iati_identifier": "XI-IATI-UNPF-00083219",
+    "transaction_value": [
+      158275.66
+    ]
+  },
+  {
+    "iati_identifier": "XI-IATI-UNPF-00083233",
+    "transaction_value": [
+      138996.34
+    ]
+  },
+  {
+    "iati_identifier": "XI-IATI-UNPF-00084224",
+    "transaction_value": [
+      170000.0
+    ]
+  },
+  {
+    "iati_identifier": "XI-IATI-UNPF-00084224",
+    "transaction_value": [
+      41310.0
+    ]
+  },
+  {
+    "iati_identifier": "XI-IATI-UNPF-00086368",
+    "transaction_value": [
+      2566.46
+    ]
+  },
+  {
+    "iati_identifier": "XI-IATI-UNPF-00091998",
+    "transaction_value": [
+      113599.0
+    ]
+  },
+  {
+    "iati_identifier": "XI-IATI-UNPF-00091998",
+    "transaction_value": [
+      180089.0
+    ]
+  },
+  {
+    "iati_identifier": "XI-IATI-UNPF-00091998",
+    "transaction_value": [
+      4886.0
+    ]
+  },
+  {
+    "iati_identifier": "XI-IATI-UNPF-00089769",
+    "transaction_value": [
+      2667005.0
+    ]
+  },
+  {
+    "iati_identifier": "XI-IATI-UNPF-00091508",
+    "transaction_value": [
+      109500.0
+    ]
+  },
+  {
+    "iati_identifier": "XI-IATI-UNPF-00091508",
+    "transaction_value": [
+      109500.0
+    ]
+  },
+  {
+    "iati_identifier": "XI-IATI-UNPF-00091511",
+    "transaction_value": [
+      366106.0
+    ]
+  },
+  {
+    "iati_identifier": "XI-IATI-UNPF-00091511",
+    "transaction_value": [
+      589076.0
+    ]
+  },
+  {
+    "iati_identifier": "XI-IATI-UNPF-00091513",
+    "transaction_value": [
+      236864.0
+    ]
+  },
+  {
+    "iati_identifier": "XI-IATI-UNPF-00091516",
+    "transaction_value": [
+      85600.0
+    ]
+  },
+  {
+    "iati_identifier": "XI-IATI-UNPF-00091539",
+    "transaction_value": [
+      412441.0
+    ]
+  },
+  {
+    "iati_identifier": "XI-IATI-UNPF-00096500",
+    "transaction_value": [
+      126200.0
+    ]
+  },
+  {
+    "iati_identifier": "XI-IATI-UNPF-00096500",
+    "transaction_value": [
+      125478.0
+    ]
+  },
+  {
+    "iati_identifier": "XI-IATI-UNPF-00101122",
+    "transaction_value": [
+      251840.0
+    ]
+  },
+  {
+    "iati_identifier": "XI-IATI-UNPF-00101587",
+    "transaction_value": [
+      109000.0
+    ]
+  },
+  {
+    "iati_identifier": "XI-IATI-UNPF-00101874",
+    "transaction_value": [
+      59006.22
+    ]
+  },
+  {
+    "iati_identifier": "XI-IATI-UNPF-00116960",
+    "transaction_value": [
+      178675.0
+    ]
+  },
+  {
+    "iati_identifier": "XI-IATI-UNPF-00121443",
+    "transaction_value": [
+      270000.0
+    ]
+  },
+  {
+    "iati_identifier": "XI-IATI-UNPF-00121444",
+    "transaction_value": [
+      130000.0
+    ]
+  },
+  {
+    "iati_identifier": "XI-IATI-UNPF-00121445",
+    "transaction_value": [
+      199020.0
+    ]
+  },
+  {
+    "iati_identifier": "XI-IATI-UNPF-00121448",
+    "transaction_value": [
+      214000.0
+    ]
+  },
+  {
+    "iati_identifier": "XI-IATI-UNPF-00121530",
+    "transaction_value": [
+      150000.0
+    ]
+  },
+  {
+    "iati_identifier": "XI-IATI-UNPF-00121617",
+    "transaction_value": [
+      100000.0
+    ]
+  },
+  {
+    "iati_identifier": "XI-IATI-UNPF-00121683",
+    "transaction_value": [
+      146790.0
+    ]
+  },
+  {
+    "iati_identifier": "XI-IATI-UNPF-00121739",
+    "transaction_value": [
+      200090.0
+    ]
+  },
+  {
+    "iati_identifier": "XI-IATI-UNPF-00121775",
+    "transaction_value": [
+      77275.0
+    ]
+  },
+  {
+    "iati_identifier": "XI-IATI-UNPF-00124306",
+    "transaction_value": [
+      330675.0
+    ]
+  },
+  {
+    "iati_identifier": "XI-IATI-UNPF-00124385",
+    "transaction_value": [
+      257530.0
+    ]
+  },
+  {
+    "iati_identifier": "XI-IATI-UNPF-00124563",
+    "transaction_value": [
+      283333.0
+    ]
+  },
+  {
+    "iati_identifier": "XI-IATI-UNPF-00124584",
+    "transaction_value": [
+      251434.0
+    ]
+  },
+  {
+    "iati_identifier": "XI-IATI-UNPF-00124584",
+    "transaction_value": [
+      141717.53
+    ]
+  },
+  {
+    "iati_identifier": "XI-IATI-UNPF-00124706",
+    "transaction_value": [
+      167803.0
+    ]
+  },
+  {
+    "iati_identifier": "XI-IATI-UNPF-00124712",
+    "transaction_value": [
+      244602.0
+    ]
+  },
+  {
+    "iati_identifier": "XI-IATI-UNPF-00124720",
+    "transaction_value": [
+      260914.0
+    ]
+  },
+  {
+    "iati_identifier": "XI-IATI-UNPF-00124786",
+    "transaction_value": [
+      612000.0
+    ]
+  },
+  {
+    "iati_identifier": "XI-IATI-UNPF-00124821",
+    "transaction_value": [
+      416075.0
+    ]
+  },
+  {
+    "iati_identifier": "XI-IATI-UNPF-00124996",
+    "transaction_value": [
+      255000.0
+    ]
+  },
+  {
+    "iati_identifier": "XI-IATI-UNPF-00125192",
+    "transaction_value": [
+      397687.0
+    ]
+  },
+  {
+    "iati_identifier": "XI-IATI-UNPF-00126205",
+    "transaction_value": [
+      75007.0
+    ]
+  },
+  {
+    "iati_identifier": "XI-IATI-UNPF-00127923",
+    "transaction_value": [
+      223000.0
+    ]
+  },
+  {
+    "iati_identifier": "XI-IATI-UNPF-00127925",
+    "transaction_value": [
+      94695.0
+    ]
+  },
+  {
+    "iati_identifier": "XI-IATI-UNPF-00127926",
+    "transaction_value": [
+      618514.0
+    ]
+  },
+  {
+    "iati_identifier": "XI-IATI-UNPF-00127927",
+    "transaction_value": [
+      1000000.0
+    ]
+  },
+  {
+    "iati_identifier": "XI-IATI-UNPF-00129533",
+    "transaction_value": [
+      170001.0
+    ]
+  },
+  {
+    "iati_identifier": "XI-IATI-UNPF-00113570",
+    "transaction_value": [
+      426442.0
+    ]
+  },
+  {
+    "iati_identifier": "XI-IATI-UNPF-00113570",
+    "transaction_value": [
+      693138.0
+    ]
+  },
+  {
+    "iati_identifier": "XI-IATI-UNPF-00093109",
+    "transaction_value": [
+      184823.0
+    ]
+  },
+  {
+    "iati_identifier": "XI-IATI-UNPF-00093109",
+    "transaction_value": [
+      221825.0
+    ]
+  },
+  {
+    "iati_identifier": "XI-IATI-UNPF-00097493",
+    "transaction_value": [
+      109936.19
+    ]
+  },
+  {
+    "iati_identifier": "XI-IATI-UNPF-00097493",
+    "transaction_value": [
+      94902.5
+    ]
+  },
+  {
+    "iati_identifier": "XI-IATI-UNPF-00097493",
+    "transaction_value": [
+      537879.0
+    ]
+  },
+  {
+    "iati_identifier": "XI-IATI-UNPF-00097493",
+    "transaction_value": [
+      337090.31
+    ]
+  },
+  {
+    "iati_identifier": "XI-IATI-UNPF-00097494",
+    "transaction_value": [
+      104701.13
+    ]
+  },
+  {
+    "iati_identifier": "XI-IATI-UNPF-00097494",
+    "transaction_value": [
+      213623.0
+    ]
+  },
+  {
+    "iati_identifier": "XI-IATI-UNPF-00097494",
+    "transaction_value": [
+      3133.87
+    ]
+  },
+  {
+    "iati_identifier": "XM-OCHA-CERF-12-WOM-002",
+    "transaction_value": [
+      128951.0
+    ],
+    "transaction_value_currency": [
+      "USD"
+    ]
+  },
+  {
+    "iati_identifier": "XM-OCHA-CERF-12-WOM-003",
+    "transaction_value": [
+      64200.0
+    ],
+    "transaction_value_currency": [
+      "USD"
+    ]
+  },
+  {
+    "iati_identifier": "XM-OCHA-CERF-14-UFE-WOM-002",
+    "transaction_value": [
+      101904.0
+    ],
+    "transaction_value_currency": [
+      "USD"
+    ]
+  },
+  {
+    "iati_identifier": "XM-OCHA-CERF-14-RR-WOM-003",
+    "transaction_value": [
+      129000.0
+    ],
+    "transaction_value_currency": [
+      "USD"
+    ]
+  },
+  {
+    "iati_identifier": "XM-OCHA-CERF-14-RR-WOM-004",
+    "transaction_value": [
+      295277.0
+    ],
+    "transaction_value_currency": [
+      "USD"
+    ]
+  },
+  {
+    "iati_identifier": "XM-OCHA-CERF-17-RR-WOM-002",
+    "transaction_value": [
+      248975.0
+    ],
+    "transaction_value_currency": [
+      "USD"
+    ]
+  },
+  {
+    "iati_identifier": "XM-OCHA-CERF-17-UF-WOM-001",
+    "transaction_value": [
+      351512.0
+    ],
+    "transaction_value_currency": [
+      "USD"
+    ]
+  },
+  {
+    "iati_identifier": "XM-OCHA-CERF-14-RR-WOM-001",
+    "transaction_value": [
+      155201.0
+    ],
+    "transaction_value_currency": [
+      "USD"
+    ]
+  },
+  {
+    "iati_identifier": "XM-OCHA-CERF-13-RR-WOM-003",
+    "transaction_value": [
+      93561.0
+    ],
+    "transaction_value_currency": [
+      "USD"
+    ]
+  },
+  {
+    "iati_identifier": "XM-OCHA-CERF-13-RR-WOM-002",
+    "transaction_value": [
+      327955.0
+    ],
+    "transaction_value_currency": [
+      "USD"
+    ]
+  },
+  {
+    "iati_identifier": "XM-OCHA-CERF-13-WOM-001",
+    "transaction_value": [
+      153652.0
+    ],
+    "transaction_value_currency": [
+      "USD"
+    ]
+  },
+  {
+    "iati_identifier": "XI-IATI-EC_NEAR-2019-PCC-412563",
+    "transaction_value": [
+      7500000.0
+    ]
+  },
+  {
+    "iati_identifier": "XI-IATI-EC_NEAR-2019-PCC-412563",
+    "transaction_value": [
+      2409908.0
+    ]
+  },
+  {
+    "iati_identifier": "XI-IATI-EC_NEAR-2019-PCC-412563",
+    "transaction_value": [
+      2654557.09
+    ]
+  },
+  {
+    "iati_identifier": "XI-IATI-EC_NEAR-2019-PCC-412563",
+    "transaction_value": [
+      2435534.91
+    ]
+  },
+  {
+    "iati_identifier": "XI-IATI-EC_NEAR-2020-PCC-420117",
+    "transaction_value": [
+      3763734.0
+    ]
+  },
+  {
+    "iati_identifier": "XI-IATI-EC_NEAR-2020-PCC-420117",
+    "transaction_value": [
+      18543.23
+    ]
+  },
+  {
+    "iati_identifier": "XI-IATI-EC_NEAR-2020-PCC-420117",
+    "transaction_value": [
+      1506161.79
+    ]
+  },
+  {
+    "iati_identifier": "XI-IATI-EC_NEAR-2020-PCC-420117",
+    "transaction_value": [
+      294643.47
+    ]
+  },
+  {
+    "iati_identifier": "XI-IATI-EC_NEAR-2020-PCC-420117",
+    "transaction_value": [
+      1944385.51
+    ]
+  },
+  {
+    "iati_identifier": "US-GOV-11-SAQMIP24CA5429",
+    "transaction_value": [
+      1381100.0
+    ]
+  },
+  {
+    "iati_identifier": "XI-IATI-EC_NEAR-2020-PCC-415186",
+    "transaction_value": [
+      1200000.0
+    ]
+  },
+  {
+    "iati_identifier": "XI-IATI-EC_NEAR-2020-PCC-415186",
+    "transaction_value": [
+      227591.94
+    ]
+  },
+  {
+    "iati_identifier": "XI-IATI-EC_NEAR-2020-PCC-416795",
+    "transaction_value": [
+      700000.0
+    ]
+  },
+  {
+    "iati_identifier": "XI-IATI-EC_NEAR-2020-PCC-416795",
+    "transaction_value": [
+      338312.32
+    ]
+  },
+  {
+    "iati_identifier": "XI-IATI-EC_NEAR-2020-PCC-416795",
+    "transaction_value": [
+      252018.0
+    ]
+  },
+  {
+    "iati_identifier": "XI-IATI-EC_NEAR-2020-PCC-415186",
+    "transaction_value": [
+      526369.13
+    ]
+  },
+  {
+    "iati_identifier": "XI-IATI-EC_NEAR-2020-PCC-415186",
+    "transaction_value": [
+      257069.7
+    ]
+  },
+  {
+    "iati_identifier": "XI-IATI-EC_NEAR-2020-PCC-415186",
+    "transaction_value": [
+      154298.0
+    ]
+  },
+  {
+    "iati_identifier": "XI-IATI-EC_NEAR-2020-PCC-416795",
+    "transaction_value": [
+      48753.48
+    ]
+  },
+  {
+    "iati_identifier": "XI-IATI-EC_NEAR-2020-PCC-418226",
+    "transaction_value": [
+      1331821.33
+    ]
+  },
+  {
+    "iati_identifier": "XI-IATI-EC_NEAR-2020-PCC-418226",
+    "transaction_value": [
+      885026.64
+    ]
+  },
+  {
+    "iati_identifier": "XI-IATI-EC_NEAR-2020-PCC-418226",
+    "transaction_value": [
+      3000000.0
+    ]
+  },
+  {
+    "iati_identifier": "XI-IATI-EC_NEAR-2022-PC-16410",
+    "transaction_value": [
+      1900000.0
+    ]
+  },
+  {
+    "iati_identifier": "XI-IATI-EC_NEAR-2022-PC-16410",
+    "transaction_value": [
+      300000.0
+    ]
+  },
+  {
+    "iati_identifier": "XI-IATI-EC_NEAR-2022-PC-16410",
+    "transaction_value": [
+      3000000.0
+    ]
+  },
+  {
+    "iati_identifier": "XI-IATI-EC_NEAR-2023-PC-25376",
+    "transaction_value": [
+      7000000.0
+    ]
+  },
+  {
+    "iati_identifier": "XI-IATI-EC_NEAR-2023-PC-25376",
+    "transaction_value": [
+      2164321.3
+    ]
+  },
+  {
+    "iati_identifier": "US-GOV-11-STI40022LA0002-88635",
+    "transaction_value": [
+      219365.0
+    ]
+  },
+  {
+    "iati_identifier": "US-GOV-11-STI40022LA0002-88635",
+    "transaction_value": [
+      235635.0
+    ]
+  },
+  {
+    "iati_identifier": "US-GOV-11-STI40022LA0002-88635",
+    "transaction_value": [
+      113750.0
+    ]
+  },
+  {
+    "iati_identifier": "US-GOV-11-STI40022LA0002-88635",
+    "transaction_value": [
+      121885.0
+    ]
+  },
+  {
+    "iati_identifier": "US-GOV-11-SPRMCO22VC0172",
+    "transaction_value": [
+      1900182.0
+    ]
+  },
+  {
+    "iati_identifier": "US-GOV-11-SPRMCO22VC0172",
+    "transaction_value": [
+      1299882.0
+    ]
+  },
+  {
+    "iati_identifier": "US-GOV-11-SPRMCO22VC0172",
+    "transaction_value": [
+      600300.0
+    ]
+  },
+  {
+    "iati_identifier": "US-GOV-11-SINTOA24VC0088-84549",
+    "transaction_value": [
+      12000000.0
+    ]
+  },
+  {
+    "iati_identifier": "US-GOV-11-SINTOA23VC0047-84415",
+    "transaction_value": [
+      1500000.0
+    ]
+  },
+  {
+    "iati_identifier": "US-GOV-11-SINTOA21VC3007-84033",
+    "transaction_value": [
+      1500000.0
+    ]
+  },
+  {
+    "iati_identifier": "US-GOV-11-SINTOA22VC0012-84171",
+    "transaction_value": [
+      1500000.0
+    ]
+  },
+  {
+    "iati_identifier": "US-GOV-11-SINTOA22VC0002-84145",
+    "transaction_value": [
+      -60000.0
+    ]
+  },
+  {
+    "iati_identifier": "US-GOV-11-SINTOA21VC3007-84034",
+    "transaction_value": [
+      1500000.0
+    ]
+  },
+  {
+    "iati_identifier": "US-GOV-11-SINTOA22VC0002-84144",
+    "transaction_value": [
+      4940000.0
+    ]
+  },
+  {
+    "iati_identifier": "US-GOV-11-SINTOA24VC0088-84548",
+    "transaction_value": [
+      12000000.0
+    ]
+  },
+  {
+    "iati_identifier": "US-GOV-11-SINTOA22VC0002-84143",
+    "transaction_value": [
+      5000000.0
+    ]
+  },
+  {
+    "iati_identifier": "US-GOV-11-SINTOA22VC0012-84170",
+    "transaction_value": [
+      1500000.0
+    ]
+  },
+  {
+    "iati_identifier": "US-GOV-11-SINTOA24VC0089-84550",
+    "transaction_value": [
+      1500000.0
+    ]
+  },
+  {
+    "iati_identifier": "US-GOV-11-82980",
+    "transaction_value": [
+      7670000.0
+    ]
+  },
+  {
+    "iati_identifier": "US-GOV-11-82980",
+    "transaction_value": [
+      7670000.0
+    ]
+  },
+  {
+    "iati_identifier": "US-GOV-11-82980",
+    "transaction_value": [
+      7250000.0
+    ]
+  },
+  {
+    "iati_identifier": "US-GOV-11-82980",
+    "transaction_value": [
+      7250000.0
+    ]
+  },
+  {
+    "iati_identifier": "US-GOV-11-82980",
+    "transaction_value": [
+      7790239.0
+    ]
+  },
+  {
+    "iati_identifier": "US-GOV-11-82980",
+    "transaction_value": [
+      7790239.0
+    ]
+  },
+  {
+    "iati_identifier": "US-GOV-11-82980",
+    "transaction_value": [
+      7500000.0
+    ]
+  },
+  {
+    "iati_identifier": "US-GOV-11-82980",
+    "transaction_value": [
+      7500000.0
+    ]
+  },
+  {
+    "iati_identifier": "US-GOV-11-82980",
+    "transaction_value": [
+      7700000.0
+    ]
+  },
+  {
+    "iati_identifier": "US-GOV-11-82980",
+    "transaction_value": [
+      1000000.0
+    ]
+  },
+  {
+    "iati_identifier": "US-GOV-11-82980",
+    "transaction_value": [
+      8500000.0
+    ]
+  },
+  {
+    "iati_identifier": "US-GOV-11-82980",
+    "transaction_value": [
+      1000000.0
+    ]
+  },
+  {
+    "iati_identifier": "US-GOV-11-82980",
+    "transaction_value": [
+      8500000.0
+    ]
+  },
+  {
+    "iati_identifier": "US-GOV-11-82980",
+    "transaction_value": [
+      1000000.0
+    ]
+  },
+  {
+    "iati_identifier": "US-GOV-11-82980",
+    "transaction_value": [
+      8500000.0
+    ]
+  },
+  {
+    "iati_identifier": "US-GOV-11-82980",
+    "transaction_value": [
+      1000000.0
+    ]
+  },
+  {
+    "iati_identifier": "US-GOV-11-82980",
+    "transaction_value": [
+      8500000.0
+    ]
+  },
+  {
+    "iati_identifier": "US-GOV-11-82980",
+    "transaction_value": [
+      7225000.0
+    ]
+  },
+  {
+    "iati_identifier": "US-GOV-11-82980",
+    "transaction_value": [
+      850000.0
+    ]
+  },
+  {
+    "iati_identifier": "US-GOV-11-82980",
+    "transaction_value": [
+      7225000.0
+    ]
+  },
+  {
+    "iati_identifier": "US-GOV-11-82980",
+    "transaction_value": [
+      850000.0
+    ]
+  },
+  {
+    "iati_identifier": "US-GOV-11-82980",
+    "transaction_value": [
+      11275000.0
+    ]
+  },
+  {
+    "iati_identifier": "US-GOV-11-82980",
+    "transaction_value": [
+      1650000.0
+    ]
+  },
+  {
+    "iati_identifier": "US-GOV-11-82980",
+    "transaction_value": [
+      11275000.0
+    ]
+  },
+  {
+    "iati_identifier": "US-GOV-11-82980",
+    "transaction_value": [
+      1650000.0
+    ]
+  },
+  {
+    "iati_identifier": "US-GOV-11-SINTOA22VC0015-84177",
+    "transaction_value": [
+      10000000.0
+    ]
+  },
+  {
+    "iati_identifier": "US-GOV-11-SINTOA22VC0015-84176",
+    "transaction_value": [
+      10000000.0
+    ]
+  },
+  {
+    "iati_identifier": "US-GOV-11-82981",
+    "transaction_value": [
+      200000.0
+    ]
+  },
+  {
+    "iati_identifier": "US-GOV-11-82981",
+    "transaction_value": [
+      200000.0
+    ]
+  },
+  {
+    "iati_identifier": "US-GOV-11-SINTOA24VC0089-84551",
+    "transaction_value": [
+      1500000.0
+    ]
+  },
+  {
+    "iati_identifier": "US-GOV-11-SINTOA21VC3004-84027",
+    "transaction_value": [
+      10000000.0
+    ]
+  },
+  {
+    "iati_identifier": "GB-1-202338-101",
+    "transaction_value": [
+      606664.0
+    ],
+    "transaction_value_currency": [
+      "GBP"
+    ]
+  },
+  {
+    "iati_identifier": "GB-1-202338-101",
+    "transaction_value": [
+      606664.0
+    ],
+    "transaction_value_currency": [
+      "GBP"
+    ]
+  },
+  {
+    "iati_identifier": "GB-1-202723-101",
+    "transaction_value": [
+      5000000.0
+    ],
+    "transaction_value_currency": [
+      "GBP"
+    ]
+  },
+  {
+    "iati_identifier": "GB-1-202723-101",
+    "transaction_value": [
+      5000000.0
+    ],
+    "transaction_value_currency": [
+      "GBP"
+    ]
+  },
+  {
+    "iati_identifier": "GB-1-202723-101",
+    "transaction_value": [
+      5000000.0
+    ],
+    "transaction_value_currency": [
+      "GBP"
+    ]
+  },
+  {
+    "iati_identifier": "GB-1-202723-101",
+    "transaction_value": [
+      5000000.0
+    ],
+    "transaction_value_currency": [
+      "GBP"
+    ]
+  },
+  {
+    "iati_identifier": "GB-1-202723-101",
+    "transaction_value": [
+      5000000.0
+    ],
+    "transaction_value_currency": [
+      "GBP"
+    ]
+  },
+  {
+    "iati_identifier": "GB-1-202723-101",
+    "transaction_value": [
+      5000000.0
+    ],
+    "transaction_value_currency": [
+      "GBP"
+    ]
+  },
+  {
+    "iati_identifier": "GB-1-202723-101",
+    "transaction_value": [
+      5000000.0
+    ],
+    "transaction_value_currency": [
+      "GBP"
+    ]
+  },
+  {
+    "iati_identifier": "GB-1-202723-101",
+    "transaction_value": [
+      5000000.0
+    ],
+    "transaction_value_currency": [
+      "GBP"
+    ]
+  },
+  {
+    "iati_identifier": "GB-1-202723-101",
+    "transaction_value": [
+      5000000.0
+    ],
+    "transaction_value_currency": [
+      "GBP"
+    ]
+  },
+  {
+    "iati_identifier": "GB-1-202723-101",
+    "transaction_value": [
+      5000000.0
+    ],
+    "transaction_value_currency": [
+      "GBP"
+    ]
+  },
+  {
+    "iati_identifier": "GB-1-202723-101",
+    "transaction_value": [
+      5000000.0
+    ],
+    "transaction_value_currency": [
+      "GBP"
+    ]
+  },
+  {
+    "iati_identifier": "GB-1-202723-101",
+    "transaction_value": [
+      5000000.0
+    ],
+    "transaction_value_currency": [
+      "GBP"
+    ]
+  },
+  {
+    "iati_identifier": "GB-1-202723-101",
+    "transaction_value": [
+      10000000.0
+    ],
+    "transaction_value_currency": [
+      "GBP"
+    ]
+  },
+  {
+    "iati_identifier": "GB-1-202723-101",
+    "transaction_value": [
+      5000000.0
+    ],
+    "transaction_value_currency": [
+      "GBP"
+    ]
+  },
+  {
+    "iati_identifier": "GB-1-202723-101",
+    "transaction_value": [
+      5000000.0
+    ],
+    "transaction_value_currency": [
+      "GBP"
+    ]
+  },
+  {
+    "iati_identifier": "GB-1-202723-101",
+    "transaction_value": [
+      10000000.0
+    ],
+    "transaction_value_currency": [
+      "GBP"
+    ]
+  },
+  {
+    "iati_identifier": "GB-1-202723-101",
+    "transaction_value": [
+      5000000.0
+    ],
+    "transaction_value_currency": [
+      "GBP"
+    ]
+  },
+  {
+    "iati_identifier": "GB-1-202723-101",
+    "transaction_value": [
+      5000000.0
+    ],
+    "transaction_value_currency": [
+      "GBP"
+    ]
+  },
+  {
+    "iati_identifier": "GB-1-202723-103",
+    "transaction_value": [
+      2500000.0
+    ],
+    "transaction_value_currency": [
+      "GBP"
+    ]
+  },
+  {
+    "iati_identifier": "GB-1-202723-103",
+    "transaction_value": [
+      2500000.0
+    ],
+    "transaction_value_currency": [
+      "GBP"
+    ]
+  },
+  {
+    "iati_identifier": "GB-1-202723-103",
+    "transaction_value": [
+      2500000.0
+    ],
+    "transaction_value_currency": [
+      "GBP"
+    ]
+  },
+  {
+    "iati_identifier": "GB-1-202723-103",
+    "transaction_value": [
+      1250000.0
+    ],
+    "transaction_value_currency": [
+      "GBP"
+    ]
+  },
+  {
+    "iati_identifier": "GB-1-202723-103",
+    "transaction_value": [
+      1250000.0
+    ],
+    "transaction_value_currency": [
+      "GBP"
+    ]
+  },
+  {
+    "iati_identifier": "GB-1-202723-103",
+    "transaction_value": [
+      2500000.0
+    ],
+    "transaction_value_currency": [
+      "GBP"
+    ]
+  },
+  {
+    "iati_identifier": "GB-1-202723-103",
+    "transaction_value": [
+      1250000.0
+    ],
+    "transaction_value_currency": [
+      "GBP"
+    ]
+  },
+  {
+    "iati_identifier": "GB-1-202723-103",
+    "transaction_value": [
+      1250000.0
+    ],
+    "transaction_value_currency": [
+      "GBP"
+    ]
+  },
+  {
+    "iati_identifier": "GB-1-202596-113",
+    "transaction_value": [
+      269803.0
+    ],
+    "transaction_value_currency": [
+      "GBP"
+    ]
+  },
+  {
+    "iati_identifier": "GB-1-202596-113",
+    "transaction_value": [
+      161882.0
+    ],
+    "transaction_value_currency": [
+      "GBP"
+    ]
+  },
+  {
+    "iati_identifier": "GB-1-202596-113",
+    "transaction_value": [
+      107921.0
+    ],
+    "transaction_value_currency": [
+      "GBP"
+    ]
+  },
+  {
+    "iati_identifier": "GB-1-204440-101",
+    "transaction_value": [
+      6000000.0
+    ],
+    "transaction_value_currency": [
+      "GBP"
+    ]
+  },
+  {
+    "iati_identifier": "GB-1-204440-101",
+    "transaction_value": [
+      2000000.0
+    ],
+    "transaction_value_currency": [
+      "GBP"
+    ]
+  },
+  {
+    "iati_identifier": "GB-1-204440-102",
+    "transaction_value": [
+      6000000.0
+    ],
+    "transaction_value_currency": [
+      "GBP"
+    ]
+  },
+  {
+    "iati_identifier": "GB-1-204440-102",
+    "transaction_value": [
+      2000000.0
+    ],
+    "transaction_value_currency": [
+      "GBP"
+    ]
+  },
+  {
+    "iati_identifier": "GB-1-204440-102",
+    "transaction_value": [
+      250000.0
+    ],
+    "transaction_value_currency": [
+      "GBP"
+    ]
+  },
+  {
+    "iati_identifier": "GB-1-204440-102",
+    "transaction_value": [
+      3750000.0
+    ],
+    "transaction_value_currency": [
+      "GBP"
+    ]
+  },
+  {
+    "iati_identifier": "GB-1-204440-102",
+    "transaction_value": [
+      17000000.0
+    ],
+    "transaction_value_currency": [
+      "GBP"
+    ]
+  },
+  {
+    "iati_identifier": "GB-1-204440-102",
+    "transaction_value": [
+      4000000.0
+    ],
+    "transaction_value_currency": [
+      "GBP"
+    ]
+  },
+  {
+    "iati_identifier": "GB-1-204440-102",
+    "transaction_value": [
+      1000000.0
+    ],
+    "transaction_value_currency": [
+      "GBP"
+    ]
+  },
+  {
+    "iati_identifier": "GB-1-204440-102",
+    "transaction_value": [
+      4000000.0
+    ],
+    "transaction_value_currency": [
+      "GBP"
+    ]
+  },
+  {
+    "iati_identifier": "GB-1-204440-102",
+    "transaction_value": [
+      4000000.0
+    ],
+    "transaction_value_currency": [
+      "GBP"
+    ]
+  },
+  {
+    "iati_identifier": "GB-1-204440-102",
+    "transaction_value": [
+      1000000.0
+    ],
+    "transaction_value_currency": [
+      "GBP"
+    ]
+  },
+  {
+    "iati_identifier": "GB-1-204440-102",
+    "transaction_value": [
+      3000000.0
+    ],
+    "transaction_value_currency": [
+      "GBP"
+    ]
+  },
+  {
+    "iati_identifier": "GB-1-204440-102",
+    "transaction_value": [
+      2500000.0
+    ],
+    "transaction_value_currency": [
+      "GBP"
+    ]
+  },
+  {
+    "iati_identifier": "GB-1-204440-102",
+    "transaction_value": [
+      500000.0
+    ],
+    "transaction_value_currency": [
+      "GBP"
+    ]
+  },
+  {
+    "iati_identifier": "GB-1-204440-102",
+    "transaction_value": [
+      2000000.0
+    ],
+    "transaction_value_currency": [
+      "GBP"
+    ]
+  },
+  {
+    "iati_identifier": "GB-1-204626-104",
+    "transaction_value": [
+      150000.0
+    ],
+    "transaction_value_currency": [
+      "GBP"
+    ]
+  },
+  {
+    "iati_identifier": "GB-1-204626-104",
+    "transaction_value": [
+      75000.0
+    ],
+    "transaction_value_currency": [
+      "GBP"
+    ]
+  },
+  {
+    "iati_identifier": "GB-1-204626-104",
+    "transaction_value": [
+      75000.0
+    ],
+    "transaction_value_currency": [
+      "GBP"
+    ]
+  },
+  {
+    "iati_identifier": "GB-1-114433-104",
+    "transaction_value": [
+      130000.0
+    ],
+    "transaction_value_currency": [
+      "GBP"
+    ]
+  },
+  {
+    "iati_identifier": "GB-1-114433-104",
+    "transaction_value": [
+      130000.0
+    ],
+    "transaction_value_currency": [
+      "GBP"
+    ]
+  },
+  {
+    "iati_identifier": "GB-1-114433-104",
+    "transaction_value": [
+      105613.0
+    ],
+    "transaction_value_currency": [
+      "GBP"
+    ]
+  },
+  {
+    "iati_identifier": "GB-1-114433-104",
+    "transaction_value": [
+      105613.0
+    ],
+    "transaction_value_currency": [
+      "GBP"
+    ]
+  },
+  {
+    "iati_identifier": "GB-GOV-1-300772-105",
+    "transaction_value": [
+      295925.0
+    ],
+    "transaction_value_currency": [
+      "GBP"
+    ]
+  },
+  {
+    "iati_identifier": "GB-GOV-1-300772-105",
+    "transaction_value": [
+      244681.6
+    ],
+    "transaction_value_currency": [
+      "GBP"
+    ]
+  },
+  {
+    "iati_identifier": "GB-GOV-1-300772-105",
+    "transaction_value": [
+      51243.0
+    ],
+    "transaction_value_currency": [
+      "GBP"
+    ]
+  },
+  {
+    "iati_identifier": "US-GOV-11-SINTOA23VC0046-84413",
+    "transaction_value": [
+      12000000.0
+    ]
+  },
+  {
+    "iati_identifier": "US-GOV-11-SINTOA23VC0047-84416",
+    "transaction_value": [
+      1500000.0
+    ]
+  },
+  {
+    "iati_identifier": "US-GOV-11-SPRMCO18VC0029",
+    "transaction_value": [
+      999000.0
+    ]
+  },
+  {
+    "iati_identifier": "US-GOV-11-SPRMCO18VC0029",
+    "transaction_value": [
+      170500.0
+    ]
+  },
+  {
+    "iati_identifier": "US-GOV-11-SPRMCO18VC0029",
+    "transaction_value": [
+      317000.0
+    ]
+  },
+  {
+    "iati_identifier": "US-GOV-11-SPRMCO18VC0029",
+    "transaction_value": [
+      225000.0
+    ]
+  },
+  {
+    "iati_identifier": "US-GOV-11-SPRMCO18VC0029",
+    "transaction_value": [
+      252430.0
+    ]
+  },
+  {
+    "iati_identifier": "US-GOV-11-SPRMCO18VC0029",
+    "transaction_value": [
+      34070.0
+    ]
+  },
+  {
+    "iati_identifier": "US-GOV-11-SINTOA21VC3004-84028",
+    "transaction_value": [
+      10000000.0
+    ]
+  },
+  {
+    "iati_identifier": "US-GOV-11-SINLEC22LA0240",
+    "transaction_value": [
+      3000000.0
+    ]
+  },
+  {
+    "iati_identifier": "US-GOV-11-SINLEC22LA0240",
+    "transaction_value": [
+      3000000.0
+    ]
+  },
+  {
+    "iati_identifier": "US-GOV-11-SINLEC24LA5136-88643",
+    "transaction_value": [
+      120000.0
+    ]
+  },
+  {
+    "iati_identifier": "US-GOV-11-SINLEC23LA0224-88351",
+    "transaction_value": [
+      787782.0
+    ]
+  },
+  {
+    "iati_identifier": "US-GOV-11-SINLEC23LA0224-88351",
+    "transaction_value": [
+      100000.0
+    ]
+  },
+  {
+    "iati_identifier": "US-GOV-11-STI40022LA0002-88636",
+    "transaction_value": [
+      219365.0
+    ]
+  },
+  {
+    "iati_identifier": "US-GOV-11-SINLEC22LA0375",
+    "transaction_value": [
+      1499850.0
+    ]
+  },
+  {
+    "iati_identifier": "US-GOV-11-SINLEC22LA0375",
+    "transaction_value": [
+      1499850.0
+    ]
+  },
+  {
+    "iati_identifier": "US-GOV-11-SPRMCO19VC0256-114722",
+    "transaction_value": [
+      979186.0
+    ]
+  },
+  {
+    "iati_identifier": "US-GOV-11-SPRMCO19VC0256-114722",
+    "transaction_value": [
+      23179.0
+    ]
+  },
+  {
+    "iati_identifier": "US-GOV-11-SPRMCO19VC0256-114722",
+    "transaction_value": [
+      89529.0
+    ]
+  },
+  {
+    "iati_identifier": "US-GOV-11-SPRMCO19VC0256-114722",
+    "transaction_value": [
+      261325.0
+    ]
+  },
+  {
+    "iati_identifier": "US-GOV-11-SPRMCO19VC0256-114722",
+    "transaction_value": [
+      278913.0
+    ]
+  },
+  {
+    "iati_identifier": "US-GOV-11-SPRMCO19VC0256-114722",
+    "transaction_value": [
+      520814.0
+    ]
+  },
+  {
+    "iati_identifier": "US-GOV-11-SPRMCO21VC3277",
+    "transaction_value": [
+      1315436.0
+    ]
+  },
+  {
+    "iati_identifier": "US-GOV-11-SPRMCO21VC3277",
+    "transaction_value": [
+      715879.0
+    ]
+  },
+  {
+    "iati_identifier": "US-GOV-11-SPRMCO21VC3277",
+    "transaction_value": [
+      599557.0
+    ]
+  },
+  {
+    "iati_identifier": "US-GOV-11-SPRMCO19VC0256-119694",
+    "transaction_value": [
+      472493.0
+    ]
+  },
+  {
+    "iati_identifier": "US-GOV-11-SPRMCO19VC0256-119694",
+    "transaction_value": [
+      374561.0
+    ]
+  },
+  {
+    "iati_identifier": "US-GOV-11-SPRMCO19VC0068-117694",
+    "transaction_value": [
+      749794.0
+    ]
+  },
+  {
+    "iati_identifier": "US-GOV-11-SPRMCO23VC0297",
+    "transaction_value": [
+      2280000.0
+    ]
+  },
+  {
+    "iati_identifier": "US-GOV-11-SPRMCO23VC0297",
+    "transaction_value": [
+      400000.0
+    ]
+  },
+  {
+    "iati_identifier": "US-GOV-11-SPRMCO23VC0297",
+    "transaction_value": [
+      1880000.0
+    ]
+  },
+  {
+    "iati_identifier": "US-GOV-11-SPRMCO24VC0274-119851",
+    "transaction_value": [
+      2300094.0
+    ]
+  },
+  {
+    "iati_identifier": "US-GOV-11-SINLEC23NBA1001",
+    "transaction_value": [
+      1000000.0
+    ]
+  },
+  {
+    "iati_identifier": "US-GOV-11-SINLEC23NBA1001",
+    "transaction_value": [
+      1000000.0
+    ]
+  },
+  {
+    "iati_identifier": "US-GOV-11-SPRMCO25VC0006-119853",
+    "transaction_value": [
+      2300094.0
+    ]
+  },
+  {
+    "iati_identifier": "US-GOV-11-SPRMCO24VC0274-119852",
+    "transaction_value": [
+      -2300094.0
+    ]
+  },
+  {
+    "iati_identifier": "US-GOV-11-SPRMCO20VC0221-116970",
+    "transaction_value": [
+      465000.0
+    ]
+  },
+  {
+    "iati_identifier": "US-GOV-11-SPRMCO21VC3051",
+    "transaction_value": [
+      1830000.0
+    ]
+  },
+  {
+    "iati_identifier": "US-GOV-11-SPRMCO21VC3051",
+    "transaction_value": [
+      175150.0
+    ]
+  },
+  {
+    "iati_identifier": "US-GOV-11-SPRMCO21VC3051",
+    "transaction_value": [
+      175150.0
+    ]
+  },
+  {
+    "iati_identifier": "US-GOV-11-SPRMCO21VC3051",
+    "transaction_value": [
+      802979.0
+    ]
+  },
+  {
+    "iati_identifier": "US-GOV-11-SPRMCO21VC3051",
+    "transaction_value": [
+      676721.0
+    ]
+  },
+  {
+    "iati_identifier": "US-GOV-11-SPRMCO25VC0006-119854",
+    "transaction_value": [
+      2300094.0
+    ]
+  },
+  {
+    "iati_identifier": "US-GOV-11-SPRMCO20VC0221-119860",
+    "transaction_value": [
+      465000.0
+    ]
+  },
+  {
+    "iati_identifier": "US-GOV-11-SPRMCO22VC0290",
+    "transaction_value": [
+      2300000.0
+    ]
+  },
+  {
+    "iati_identifier": "US-GOV-11-SPRMCO22VC0290",
+    "transaction_value": [
+      431000.0
+    ]
+  },
+  {
+    "iati_identifier": "US-GOV-11-SPRMCO22VC0290",
+    "transaction_value": [
+      713302.0
+    ]
+  },
+  {
+    "iati_identifier": "US-GOV-11-SPRMCO22VC0290",
+    "transaction_value": [
+      1155698.0
+    ]
+  },
+  {
+    "iati_identifier": "US-GOV-11-SINLEC24LA5002-91428",
+    "transaction_value": [
+      337500.0
+    ]
+  },
+  {
+    "iati_identifier": "XM-DAC-41146-EVA_D_1.2",
+    "transaction_value": [
+      377638.04
+    ],
+    "transaction_value_currency": [
+      "USD"
+    ]
+  },
+  {
+    "iati_identifier": "XM-DAC-41146-EVA_D_1.2",
+    "transaction_value": [
+      377638.04
+    ],
+    "transaction_value_currency": [
+      "USD"
+    ]
+  },
+  {
+    "iati_identifier": "XM-DAC-41146-EVA_D_1.2",
+    "transaction_value": [
+      36496.86
+    ],
+    "transaction_value_currency": [
+      "USD"
+    ]
+  },
+  {
+    "iati_identifier": "XM-DAC-41146-EVA_D_1.2",
+    "transaction_value": [
+      36496.86
+    ],
+    "transaction_value_currency": [
+      "USD"
+    ]
+  },
+  {
+    "iati_identifier": "XM-DAC-41146-EVA_D_1.3",
+    "transaction_value": [
+      1870.0
+    ],
+    "transaction_value_currency": [
+      "USD"
+    ]
+  },
+  {
+    "iati_identifier": "XM-DAC-41146-EVA_D_1.3",
+    "transaction_value": [
+      3360.0
+    ],
+    "transaction_value_currency": [
+      "USD"
+    ]
+  },
+  {
+    "iati_identifier": "XM-DAC-41146-EVA_D_1.3",
+    "transaction_value": [
+      6907.72
+    ],
+    "transaction_value_currency": [
+      "USD"
+    ]
+  },
+  {
+    "iati_identifier": "XM-DAC-41146-EVA_D_1.3",
+    "transaction_value": [
+      21142.0
+    ],
+    "transaction_value_currency": [
+      "USD"
+    ]
+  },
+  {
+    "iati_identifier": "XM-DAC-41146-EVA_D_1.3",
+    "transaction_value": [
+      57930.45
+    ],
+    "transaction_value_currency": [
+      "USD"
+    ]
+  },
+  {
+    "iati_identifier": "XM-DAC-41146-EVA_D_1.3",
+    "transaction_value": [
+      5001.0
+    ],
+    "transaction_value_currency": [
+      "USD"
+    ]
+  },
+  {
+    "iati_identifier": "XM-DAC-41146-EVA_D_1.3",
+    "transaction_value": [
+      5019.08
+    ],
+    "transaction_value_currency": [
+      "USD"
+    ]
+  },
+  {
+    "iati_identifier": "XM-DAC-41146-EVA_D_1.3",
+    "transaction_value": [
+      56501.0
+    ],
+    "transaction_value_currency": [
+      "USD"
+    ]
+  },
+  {
+    "iati_identifier": "XM-DAC-41146-EVA_D_1.3",
+    "transaction_value": [
+      196792.87
+    ],
+    "transaction_value_currency": [
+      "USD"
+    ]
+  },
+  {
+    "iati_identifier": "XM-DAC-41146-EVA_D_1.3",
+    "transaction_value": [
+      171.55
+    ],
+    "transaction_value_currency": [
+      "USD"
+    ]
+  },
+  {
+    "iati_identifier": "XM-DAC-41146-EVA_D_1.3",
+    "transaction_value": [
+      400.0
+    ],
+    "transaction_value_currency": [
+      "USD"
+    ]
+  },
+  {
+    "iati_identifier": "XM-DAC-41146-EVA_D_1.3",
+    "transaction_value": [
+      1870.0
+    ],
+    "transaction_value_currency": [
+      "USD"
+    ]
+  },
+  {
+    "iati_identifier": "XM-DAC-41146-EVA_D_1.3",
+    "transaction_value": [
+      3360.0
+    ],
+    "transaction_value_currency": [
+      "USD"
+    ]
+  },
+  {
+    "iati_identifier": "XM-DAC-41146-EVA_D_1.3",
+    "transaction_value": [
+      6907.72
+    ],
+    "transaction_value_currency": [
+      "USD"
+    ]
+  },
+  {
+    "iati_identifier": "XM-DAC-41146-EVA_D_1.3",
+    "transaction_value": [
+      21142.0
+    ],
+    "transaction_value_currency": [
+      "USD"
+    ]
+  },
+  {
+    "iati_identifier": "XM-DAC-41146-EVA_D_1.3",
+    "transaction_value": [
+      57930.45
+    ],
+    "transaction_value_currency": [
+      "USD"
+    ]
+  },
+  {
+    "iati_identifier": "XM-DAC-41146-EVA_D_1.3",
+    "transaction_value": [
+      5001.0
+    ],
+    "transaction_value_currency": [
+      "USD"
+    ]
+  },
+  {
+    "iati_identifier": "XM-DAC-41146-EVA_D_1.3",
+    "transaction_value": [
+      5019.08
+    ],
+    "transaction_value_currency": [
+      "USD"
+    ]
+  },
+  {
+    "iati_identifier": "XM-DAC-41146-EVA_D_1.3",
+    "transaction_value": [
+      56501.0
+    ],
+    "transaction_value_currency": [
+      "USD"
+    ]
+  },
+  {
+    "iati_identifier": "XM-DAC-41146-EVA_D_1.3",
+    "transaction_value": [
+      196792.87
+    ],
+    "transaction_value_currency": [
+      "USD"
+    ]
+  },
+  {
+    "iati_identifier": "XM-DAC-41146-EVA_D_1.3",
+    "transaction_value": [
+      171.55
+    ],
+    "transaction_value_currency": [
+      "USD"
+    ]
+  },
+  {
+    "iati_identifier": "XM-DAC-41146-EVA_D_1.3",
+    "transaction_value": [
+      400.0
+    ],
+    "transaction_value_currency": [
+      "USD"
+    ]
+  },
+  {
+    "iati_identifier": "XM-DAC-41146-EVA_D_1.3",
+    "transaction_value": [
+      1870.0
+    ],
+    "transaction_value_currency": [
+      "USD"
+    ]
+  },
+  {
+    "iati_identifier": "XM-DAC-41146-EVA_D_1.3",
+    "transaction_value": [
+      3360.0
+    ],
+    "transaction_value_currency": [
+      "USD"
+    ]
+  },
+  {
+    "iati_identifier": "XM-DAC-41146-EVA_D_1.3",
+    "transaction_value": [
+      6878.97
+    ],
+    "transaction_value_currency": [
+      "USD"
+    ]
+  },
+  {
+    "iati_identifier": "XM-DAC-41146-EVA_D_1.3",
+    "transaction_value": [
+      21142.0
+    ],
+    "transaction_value_currency": [
+      "USD"
+    ]
+  },
+  {
+    "iati_identifier": "XM-DAC-41146-EVA_D_1.3",
+    "transaction_value": [
+      57930.45
+    ],
+    "transaction_value_currency": [
+      "USD"
+    ]
+  },
+  {
+    "iati_identifier": "XM-DAC-41146-EVA_D_1.3",
+    "transaction_value": [
+      3160.0
+    ],
+    "transaction_value_currency": [
+      "USD"
+    ]
+  },
+  {
+    "iati_identifier": "XM-DAC-41146-EVA_D_1.3",
+    "transaction_value": [
+      32886.17
+    ],
+    "transaction_value_currency": [
+      "USD"
+    ]
+  },
+  {
+    "iati_identifier": "XM-DAC-41146-EVA_D_1.3",
+    "transaction_value": [
+      85373.82
+    ],
+    "transaction_value_currency": [
+      "USD"
+    ]
+  },
+  {
+    "iati_identifier": "XM-DAC-41146-EVA_D_1.3",
+    "transaction_value": [
+      400.0
+    ],
+    "transaction_value_currency": [
+      "USD"
+    ]
+  },
+  {
+    "iati_identifier": "XM-DAC-41146-EVA_D_1.3",
+    "transaction_value": [
+      1870.0
+    ],
+    "transaction_value_currency": [
+      "USD"
+    ]
+  },
+  {
+    "iati_identifier": "XM-DAC-41146-EVA_D_1.3",
+    "transaction_value": [
+      3360.0
+    ],
+    "transaction_value_currency": [
+      "USD"
+    ]
+  },
+  {
+    "iati_identifier": "XM-DAC-41146-EVA_D_1.3",
+    "transaction_value": [
+      6878.97
+    ],
+    "transaction_value_currency": [
+      "USD"
+    ]
+  },
+  {
+    "iati_identifier": "XM-DAC-41146-EVA_D_1.3",
+    "transaction_value": [
+      21142.0
+    ],
+    "transaction_value_currency": [
+      "USD"
+    ]
+  },
+  {
+    "iati_identifier": "XM-DAC-41146-EVA_D_1.3",
+    "transaction_value": [
+      57930.45
+    ],
+    "transaction_value_currency": [
+      "USD"
+    ]
+  },
+  {
+    "iati_identifier": "XM-DAC-41146-EVA_D_1.3",
+    "transaction_value": [
+      3160.0
+    ],
+    "transaction_value_currency": [
+      "USD"
+    ]
+  },
+  {
+    "iati_identifier": "XM-DAC-41146-EVA_D_1.3",
+    "transaction_value": [
+      32886.17
+    ],
+    "transaction_value_currency": [
+      "USD"
+    ]
+  },
+  {
+    "iati_identifier": "XM-DAC-41146-EVA_D_1.3",
+    "transaction_value": [
+      85373.82
+    ],
+    "transaction_value_currency": [
+      "USD"
+    ]
+  },
+  {
+    "iati_identifier": "XM-DAC-41146-EVA_D_1.3",
+    "transaction_value": [
+      400.0
+    ],
+    "transaction_value_currency": [
+      "USD"
+    ]
+  },
+  {
+    "iati_identifier": "XM-DAC-41146-EVA_D_1.4",
+    "transaction_value": [
+      337392.64
+    ],
+    "transaction_value_currency": [
+      "USD"
+    ]
+  },
+  {
+    "iati_identifier": "XM-DAC-41146-EVA_D_1.4",
+    "transaction_value": [
+      337392.64
+    ],
+    "transaction_value_currency": [
+      "USD"
+    ]
+  },
+  {
+    "iati_identifier": "XM-DAC-41146-EVA_D_1.4",
+    "transaction_value": [
+      242996.77
+    ],
+    "transaction_value_currency": [
+      "USD"
+    ]
+  },
+  {
+    "iati_identifier": "XM-DAC-41146-EVA_D_1.4",
+    "transaction_value": [
+      242996.77
+    ],
+    "transaction_value_currency": [
+      "USD"
+    ]
+  },
+  {
+    "iati_identifier": "XM-DAC-41146-EVA_D_1.5",
+    "transaction_value": [
+      717137.38
+    ],
+    "transaction_value_currency": [
+      "USD"
+    ]
+  },
+  {
+    "iati_identifier": "XM-DAC-41146-EVA_D_1.5",
+    "transaction_value": [
+      2604456.64
+    ],
+    "transaction_value_currency": [
+      "USD"
+    ]
+  },
+  {
+    "iati_identifier": "XM-DAC-41146-EVA_D_1.5",
+    "transaction_value": [
+      717137.38
+    ],
+    "transaction_value_currency": [
+      "USD"
+    ]
+  },
+  {
+    "iati_identifier": "XM-DAC-41146-EVA_D_1.5",
+    "transaction_value": [
+      2604456.64
+    ],
+    "transaction_value_currency": [
+      "USD"
+    ]
+  },
+  {
+    "iati_identifier": "XM-DAC-41146-EVA_D_1.5",
+    "transaction_value": [
+      187036.05
+    ],
+    "transaction_value_currency": [
+      "USD"
+    ]
+  },
+  {
+    "iati_identifier": "XM-DAC-41146-EVA_D_1.5",
+    "transaction_value": [
+      2414023.38
+    ],
+    "transaction_value_currency": [
+      "USD"
+    ]
+  },
+  {
+    "iati_identifier": "XM-DAC-41146-EVA_D_1.5",
+    "transaction_value": [
+      187036.05
+    ],
+    "transaction_value_currency": [
+      "USD"
+    ]
+  },
+  {
+    "iati_identifier": "XM-DAC-41146-EVA_D_1.5",
+    "transaction_value": [
+      2414023.38
+    ],
+    "transaction_value_currency": [
+      "USD"
+    ]
+  },
+  {
+    "iati_identifier": "XM-DAC-41146-EVA_O_1",
+    "transaction_value": [
+      27994.09
+    ],
+    "transaction_value_currency": [
+      "USD"
+    ]
+  },
+  {
+    "iati_identifier": "XM-DAC-41146-EVA_O_1",
+    "transaction_value": [
+      142924.06
+    ],
+    "transaction_value_currency": [
+      "USD"
+    ]
+  },
+  {
+    "iati_identifier": "XM-DAC-41146-EVA_O_1",
+    "transaction_value": [
+      230843.59
+    ],
+    "transaction_value_currency": [
+      "USD"
+    ]
+  },
+  {
+    "iati_identifier": "XM-DAC-41146-EVA_O_1",
+    "transaction_value": [
+      270226.93
+    ],
+    "transaction_value_currency": [
+      "USD"
+    ]
+  },
+  {
+    "iati_identifier": "XM-DAC-41146-EVA_O_1",
+    "transaction_value": [
+      490771.07
+    ],
+    "transaction_value_currency": [
+      "USD"
+    ]
+  },
+  {
+    "iati_identifier": "XM-DAC-41146-EVA_O_1",
+    "transaction_value": [
+      523955.65
+    ],
+    "transaction_value_currency": [
+      "USD"
+    ]
+  },
+  {
+    "iati_identifier": "XM-DAC-41146-EVA_O_1",
+    "transaction_value": [
+      1448.82
+    ],
+    "transaction_value_currency": [
+      "USD"
+    ]
+  },
+  {
+    "iati_identifier": "XM-DAC-41146-EVA_O_1",
+    "transaction_value": [
+      24149.98
+    ],
+    "transaction_value_currency": [
+      "USD"
+    ]
+  },
+  {
+    "iati_identifier": "XM-DAC-41146-EVA_O_1",
+    "transaction_value": [
+      112901.43
+    ],
+    "transaction_value_currency": [
+      "USD"
+    ]
+  },
+  {
+    "iati_identifier": "XM-DAC-41146-EVA_O_1",
+    "transaction_value": [
+      115392.42
+    ],
+    "transaction_value_currency": [
+      "USD"
+    ]
+  },
+  {
+    "iati_identifier": "XM-DAC-41146-EVA_O_1",
+    "transaction_value": [
+      227652.65
+    ],
+    "transaction_value_currency": [
+      "USD"
+    ]
+  },
+  {
+    "iati_identifier": "XM-DAC-41146-EVA_O_1",
+    "transaction_value": [
+      235871.85
+    ],
+    "transaction_value_currency": [
+      "USD"
+    ]
+  },
+  {
+    "iati_identifier": "XM-DAC-41146-EVA_O_1",
+    "transaction_value": [
+      255480.86
+    ],
+    "transaction_value_currency": [
+      "USD"
+    ]
+  },
+  {
+    "iati_identifier": "XM-DAC-41146-EVA_O_1",
+    "transaction_value": [
+      261984.88
+    ],
+    "transaction_value_currency": [
+      "USD"
+    ]
+  },
+  {
+    "iati_identifier": "XM-DAC-41146-EVA_O_1",
+    "transaction_value": [
+      275569.01
+    ],
+    "transaction_value_currency": [
+      "USD"
+    ]
+  },
+  {
+    "iati_identifier": "XM-DAC-41146-EVA_O_1",
+    "transaction_value": [
+      279879.88
+    ],
+    "transaction_value_currency": [
+      "USD"
+    ]
+  },
+  {
+    "iati_identifier": "XM-DAC-41146-EVA_O_1",
+    "transaction_value": [
+      295807.66
+    ],
+    "transaction_value_currency": [
+      "USD"
+    ]
+  },
+  {
+    "iati_identifier": "XM-DAC-41146-EVA_O_1",
+    "transaction_value": [
+      36245.47
+    ],
+    "transaction_value_currency": [
+      "USD"
+    ]
+  },
+  {
+    "iati_identifier": "XM-DAC-41146-EVA_O_1",
+    "transaction_value": [
+      53707.41
+    ],
+    "transaction_value_currency": [
+      "USD"
+    ]
+  },
+  {
+    "iati_identifier": "XM-DAC-41146-EVA_O_1",
+    "transaction_value": [
+      90280.49
+    ],
+    "transaction_value_currency": [
+      "USD"
+    ]
+  },
+  {
+    "iati_identifier": "XM-DAC-41146-EVA_O_1",
+    "transaction_value": [
+      270226.93
+    ],
+    "transaction_value_currency": [
+      "USD"
+    ]
+  },
+  {
+    "iati_identifier": "XM-DAC-41146-EVA_O_1",
+    "transaction_value": [
+      310147.42
+    ],
+    "transaction_value_currency": [
+      "USD"
+    ]
+  },
+  {
+    "iati_identifier": "XM-DAC-41146-EVA_O_1",
+    "transaction_value": [
+      187257.68
+    ],
+    "transaction_value_currency": [
+      "USD"
+    ]
+  },
+  {
+    "iati_identifier": "XM-DAC-41146-EVA_O_1",
+    "transaction_value": [
+      190039.51
+    ],
+    "transaction_value_currency": [
+      "USD"
+    ]
+  },
+  {
+    "iati_identifier": "XM-DAC-41146-EVA_O_1",
+    "transaction_value": [
+      0.62
+    ],
+    "transaction_value_currency": [
+      "USD"
+    ]
+  },
+  {
+    "iati_identifier": "XM-DAC-41146-EVA_O_1",
+    "transaction_value": [
+      50199.0
+    ],
+    "transaction_value_currency": [
+      "USD"
+    ]
+  },
+  {
+    "iati_identifier": "XM-DAC-41146-EVA_O_1",
+    "transaction_value": [
+      144922.52
+    ],
+    "transaction_value_currency": [
+      "USD"
+    ]
+  },
+  {
+    "iati_identifier": "XM-DAC-41146-EVA_O_1",
+    "transaction_value": [
+      165641.65
+    ],
+    "transaction_value_currency": [
+      "USD"
+    ]
+  },
+  {
+    "iati_identifier": "XM-DAC-41146-EVA_O_1",
+    "transaction_value": [
+      181218.54
+    ],
+    "transaction_value_currency": [
+      "USD"
+    ]
+  },
+  {
+    "iati_identifier": "XM-DAC-41146-EVA_O_1",
+    "transaction_value": [
+      183256.62
+    ],
+    "transaction_value_currency": [
+      "USD"
+    ]
+  },
+  {
+    "iati_identifier": "XM-DAC-41146-EVA_O_1",
+    "transaction_value": [
+      233744.33
+    ],
+    "transaction_value_currency": [
+      "USD"
+    ]
+  },
+  {
+    "iati_identifier": "XM-DAC-41146-EVA_O_1",
+    "transaction_value": [
+      273982.56
+    ],
+    "transaction_value_currency": [
+      "USD"
+    ]
+  },
+  {
+    "iati_identifier": "XM-DAC-41146-EVA_O_1",
+    "transaction_value": [
+      273982.56
+    ],
+    "transaction_value_currency": [
+      "USD"
+    ]
+  },
+  {
+    "iati_identifier": "XM-DAC-41146-EVA_O_1",
+    "transaction_value": [
+      314768.48
+    ],
+    "transaction_value_currency": [
+      "USD"
+    ]
+  },
+  {
+    "iati_identifier": "XM-DAC-41146-EVA_O_1",
+    "transaction_value": [
+      321921.07
+    ],
+    "transaction_value_currency": [
+      "USD"
+    ]
+  },
+  {
+    "iati_identifier": "XM-DAC-41146-EVA_O_1",
+    "transaction_value": [
+      457918.09
+    ],
+    "transaction_value_currency": [
+      "USD"
+    ]
+  },
+  {
+    "iati_identifier": "XM-DAC-41146-EVA_O_1",
+    "transaction_value": [
+      725652.92
+    ],
+    "transaction_value_currency": [
+      "USD"
+    ]
+  },
+  {
+    "iati_identifier": "XM-DAC-41146-EVA_O_1",
+    "transaction_value": [
+      165642.01
+    ],
+    "transaction_value_currency": [
+      "USD"
+    ]
+  },
+  {
+    "iati_identifier": "XM-DAC-41146-EVA_O_1",
+    "transaction_value": [
+      1723.59
+    ],
+    "transaction_value_currency": [
+      "USD"
+    ]
+  },
+  {
+    "iati_identifier": "XM-DAC-41146-EVA_O_1",
+    "transaction_value": [
+      27994.31
+    ],
+    "transaction_value_currency": [
+      "USD"
+    ]
+  },
+  {
+    "iati_identifier": "XM-DAC-41146-EVA_O_1",
+    "transaction_value": [
+      122073.24
+    ],
+    "transaction_value_currency": [
+      "USD"
+    ]
+  },
+  {
+    "iati_identifier": "XM-DAC-41146-EVA_O_1",
+    "transaction_value": [
+      242920.78
+    ],
+    "transaction_value_currency": [
+      "USD"
+    ]
+  },
+  {
+    "iati_identifier": "XM-DAC-41146-EVA_O_1",
+    "transaction_value": [
+      249587.17
+    ],
+    "transaction_value_currency": [
+      "USD"
+    ]
+  },
+  {
+    "iati_identifier": "XM-DAC-41146-EVA_O_1",
+    "transaction_value": [
+      426510.57
+    ],
+    "transaction_value_currency": [
+      "USD"
+    ]
+  },
+  {
+    "iati_identifier": "XM-DAC-41146-EVA_O_1",
+    "transaction_value": [
+      486804.95
+    ],
+    "transaction_value_currency": [
+      "USD"
+    ]
+  },
+  {
+    "iati_identifier": "XM-DAC-41146-EVA_O_1",
+    "transaction_value": [
+      1448.82
+    ],
+    "transaction_value_currency": [
+      "USD"
+    ]
+  },
+  {
+    "iati_identifier": "XM-DAC-41146-EVA_O_1",
+    "transaction_value": [
+      24149.98
+    ],
+    "transaction_value_currency": [
+      "USD"
+    ]
+  },
+  {
+    "iati_identifier": "XM-DAC-41146-EVA_O_1",
+    "transaction_value": [
+      112901.43
+    ],
+    "transaction_value_currency": [
+      "USD"
+    ]
+  },
+  {
+    "iati_identifier": "XM-DAC-41146-EVA_O_1",
+    "transaction_value": [
+      115392.42
+    ],
+    "transaction_value_currency": [
+      "USD"
+    ]
+  },
+  {
+    "iati_identifier": "XM-DAC-41146-EVA_O_1",
+    "transaction_value": [
+      227652.65
+    ],
+    "transaction_value_currency": [
+      "USD"
+    ]
+  },
+  {
+    "iati_identifier": "XM-DAC-41146-EVA_O_1",
+    "transaction_value": [
+      235871.85
+    ],
+    "transaction_value_currency": [
+      "USD"
+    ]
+  },
+  {
+    "iati_identifier": "XM-DAC-41146-EVA_O_1",
+    "transaction_value": [
+      255480.86
+    ],
+    "transaction_value_currency": [
+      "USD"
+    ]
+  },
+  {
+    "iati_identifier": "XM-DAC-41146-EVA_O_1",
+    "transaction_value": [
+      261984.88
+    ],
+    "transaction_value_currency": [
+      "USD"
+    ]
+  },
+  {
+    "iati_identifier": "XM-DAC-41146-EVA_O_1",
+    "transaction_value": [
+      275569.01
+    ],
+    "transaction_value_currency": [
+      "USD"
+    ]
+  },
+  {
+    "iati_identifier": "XM-DAC-41146-EVA_O_1",
+    "transaction_value": [
+      279879.88
+    ],
+    "transaction_value_currency": [
+      "USD"
+    ]
+  },
+  {
+    "iati_identifier": "XM-DAC-41146-EVA_O_1",
+    "transaction_value": [
+      295807.66
+    ],
+    "transaction_value_currency": [
+      "USD"
+    ]
+  },
+  {
+    "iati_identifier": "XM-DAC-41146-EVA_O_1",
+    "transaction_value": [
+      75344.55
+    ],
+    "transaction_value_currency": [
+      "USD"
+    ]
+  },
+  {
+    "iati_identifier": "XM-DAC-41146-EVA_O_1",
+    "transaction_value": [
+      27199.14
+    ],
+    "transaction_value_currency": [
+      "USD"
+    ]
+  },
+  {
+    "iati_identifier": "XM-DAC-41146-EVA_O_1",
+    "transaction_value": [
+      23267.93
+    ],
+    "transaction_value_currency": [
+      "USD"
+    ]
+  },
+  {
+    "iati_identifier": "XM-DAC-41146-EVA_O_1",
+    "transaction_value": [
+      256637.27
+    ],
+    "transaction_value_currency": [
+      "USD"
+    ]
+  },
+  {
+    "iati_identifier": "XM-DAC-41146-EVA_O_1",
+    "transaction_value": [
+      446058.03
+    ],
+    "transaction_value_currency": [
+      "USD"
+    ]
+  },
+  {
+    "iati_identifier": "XM-DAC-41146-EVA_O_1",
+    "transaction_value": [
+      185897.68
+    ],
+    "transaction_value_currency": [
+      "USD"
+    ]
+  },
+  {
+    "iati_identifier": "XM-DAC-41146-EVA_O_1",
+    "transaction_value": [
+      190039.51
+    ],
+    "transaction_value_currency": [
+      "USD"
+    ]
+  },
+  {
+    "iati_identifier": "XM-DAC-41146-EVA_O_1",
+    "transaction_value": [
+      50199.62
+    ],
+    "transaction_value_currency": [
+      "USD"
+    ]
+  },
+  {
+    "iati_identifier": "XM-DAC-41146-EVA_O_1",
+    "transaction_value": [
+      121174.49
+    ],
+    "transaction_value_currency": [
+      "USD"
+    ]
+  },
+  {
+    "iati_identifier": "XM-DAC-41146-EVA_O_1",
+    "transaction_value": [
+      165641.65
+    ],
+    "transaction_value_currency": [
+      "USD"
+    ]
+  },
+  {
+    "iati_identifier": "XM-DAC-41146-EVA_O_1",
+    "transaction_value": [
+      224988.91
+    ],
+    "transaction_value_currency": [
+      "USD"
+    ]
+  },
+  {
+    "iati_identifier": "XM-DAC-41146-EVA_O_1",
+    "transaction_value": [
+      194908.89
+    ],
+    "transaction_value_currency": [
+      "USD"
+    ]
+  },
+  {
+    "iati_identifier": "XM-DAC-41146-EVA_O_1",
+    "transaction_value": [
+      247036.5
+    ],
+    "transaction_value_currency": [
+      "USD"
+    ]
+  },
+  {
+    "iati_identifier": "XM-DAC-41146-EVA_O_1",
+    "transaction_value": [
+      252772.74
+    ],
+    "transaction_value_currency": [
+      "USD"
+    ]
+  },
+  {
+    "iati_identifier": "XM-DAC-41146-EVA_O_1",
+    "transaction_value": [
+      300093.69
+    ],
+    "transaction_value_currency": [
+      "USD"
+    ]
+  },
+  {
+    "iati_identifier": "XM-DAC-41146-EVA_O_1",
+    "transaction_value": [
+      351183.25
+    ],
+    "transaction_value_currency": [
+      "USD"
+    ]
+  },
+  {
+    "iati_identifier": "XM-DAC-41146-EVA_O_1",
+    "transaction_value": [
+      320790.48
+    ],
+    "transaction_value_currency": [
+      "USD"
+    ]
+  },
+  {
+    "iati_identifier": "XM-DAC-41146-EVA_O_1",
+    "transaction_value": [
+      456891.62
+    ],
+    "transaction_value_currency": [
+      "USD"
+    ]
+  },
+  {
+    "iati_identifier": "XM-DAC-41146-EVA_O_1",
+    "transaction_value": [
+      547213.23
+    ],
+    "transaction_value_currency": [
+      "USD"
+    ]
+  },
+  {
+    "iati_identifier": "XM-DAC-41146-EVA_O_1",
+    "transaction_value": [
+      165642.01
+    ],
+    "transaction_value_currency": [
+      "USD"
+    ]
+  },
+  {
+    "iati_identifier": "XM-DAC-41146-EVA_O_1",
+    "transaction_value": [
+      1723.59
+    ],
+    "transaction_value_currency": [
+      "USD"
+    ]
+  },
+  {
+    "iati_identifier": "XM-DAC-41146-EVA_O_3",
+    "transaction_value": [
+      2160.0
+    ],
+    "transaction_value_currency": [
+      "USD"
+    ]
+  },
+  {
+    "iati_identifier": "XM-DAC-41146-EVA_O_3",
+    "transaction_value": [
+      4000.0
+    ],
+    "transaction_value_currency": [
+      "USD"
+    ]
+  },
+  {
+    "iati_identifier": "XM-DAC-41146-EVA_O_3",
+    "transaction_value": [
+      5120.0
+    ],
+    "transaction_value_currency": [
+      "USD"
+    ]
+  },
+  {
+    "iati_identifier": "XM-DAC-41146-EVA_O_3",
+    "transaction_value": [
+      16100.0
+    ],
+    "transaction_value_currency": [
+      "USD"
+    ]
+  },
+  {
+    "iati_identifier": "XM-DAC-41146-EVA_O_3",
+    "transaction_value": [
+      6100.0
+    ],
+    "transaction_value_currency": [
+      "USD"
+    ]
+  },
+  {
+    "iati_identifier": "XM-DAC-41146-EVA_O_3",
+    "transaction_value": [
+      66066.71
+    ],
+    "transaction_value_currency": [
+      "USD"
+    ]
+  },
+  {
+    "iati_identifier": "XM-DAC-41146-EVA_O_3",
+    "transaction_value": [
+      83447.44
+    ],
+    "transaction_value_currency": [
+      "USD"
+    ]
+  },
+  {
+    "iati_identifier": "XM-DAC-41146-EVA_O_3",
+    "transaction_value": [
+      1138.15
+    ],
+    "transaction_value_currency": [
+      "USD"
+    ]
+  },
+  {
+    "iati_identifier": "XM-DAC-41146-EVA_O_3",
+    "transaction_value": [
+      5000.0
+    ],
+    "transaction_value_currency": [
+      "USD"
+    ]
+  },
+  {
+    "iati_identifier": "XM-DAC-41146-EVA_O_3",
+    "transaction_value": [
+      7250.0
+    ],
+    "transaction_value_currency": [
+      "USD"
+    ]
+  },
+  {
+    "iati_identifier": "XM-DAC-41146-EVA_O_3",
+    "transaction_value": [
+      10971.19
+    ],
+    "transaction_value_currency": [
+      "USD"
+    ]
+  },
+  {
+    "iati_identifier": "XM-DAC-41146-EVA_O_3",
+    "transaction_value": [
+      31321.36
+    ],
+    "transaction_value_currency": [
+      "USD"
+    ]
+  },
+  {
+    "iati_identifier": "XM-DAC-41146-EVA_O_3",
+    "transaction_value": [
+      88753.3
+    ],
+    "transaction_value_currency": [
+      "USD"
+    ]
+  },
+  {
+    "iati_identifier": "XM-DAC-41146-EVA_O_3",
+    "transaction_value": [
+      107852.71
+    ],
+    "transaction_value_currency": [
+      "USD"
+    ]
+  },
+  {
+    "iati_identifier": "XM-DAC-41146-EVA_O_3",
+    "transaction_value": [
+      2650.0
+    ],
+    "transaction_value_currency": [
+      "USD"
+    ]
+  },
+  {
+    "iati_identifier": "XM-DAC-41146-EVA_O_3",
+    "transaction_value": [
+      6500.0
+    ],
+    "transaction_value_currency": [
+      "USD"
+    ]
+  },
+  {
+    "iati_identifier": "XM-DAC-41146-EVA_O_3",
+    "transaction_value": [
+      19602.07
+    ],
+    "transaction_value_currency": [
+      "USD"
+    ]
+  },
+  {
+    "iati_identifier": "XM-DAC-41146-EVA_O_3",
+    "transaction_value": [
+      20193.08
+    ],
+    "transaction_value_currency": [
+      "USD"
+    ]
+  },
+  {
+    "iati_identifier": "XM-DAC-41146-EVA_O_3",
+    "transaction_value": [
+      45736.4
+    ],
+    "transaction_value_currency": [
+      "USD"
+    ]
+  },
+  {
+    "iati_identifier": "XM-DAC-41146-EVA_O_3",
+    "transaction_value": [
+      89077.24
+    ],
+    "transaction_value_currency": [
+      "USD"
+    ]
+  },
+  {
+    "iati_identifier": "XM-DAC-41146-EVA_O_3",
+    "transaction_value": [
+      3500.0
+    ],
+    "transaction_value_currency": [
+      "USD"
+    ]
+  },
+  {
+    "iati_identifier": "XM-DAC-41146-EVA_O_3",
+    "transaction_value": [
+      4252.24
+    ],
+    "transaction_value_currency": [
+      "USD"
+    ]
+  },
+  {
+    "iati_identifier": "XM-DAC-41146-EVA_O_3",
+    "transaction_value": [
+      13062.34
+    ],
+    "transaction_value_currency": [
+      "USD"
+    ]
+  },
+  {
+    "iati_identifier": "XM-DAC-41146-EVA_O_3",
+    "transaction_value": [
+      36589.7
+    ],
+    "transaction_value_currency": [
+      "USD"
+    ]
+  },
+  {
+    "iati_identifier": "XM-DAC-41146-EVA_O_3",
+    "transaction_value": [
+      4552.13
+    ],
+    "transaction_value_currency": [
+      "USD"
+    ]
+  },
+  {
+    "iati_identifier": "XM-DAC-41146-EVA_O_3",
+    "transaction_value": [
+      9044.73
+    ],
+    "transaction_value_currency": [
+      "USD"
+    ]
+  },
+  {
+    "iati_identifier": "XM-DAC-41146-EVA_O_3",
+    "transaction_value": [
+      18195.25
+    ],
+    "transaction_value_currency": [
+      "USD"
+    ]
+  },
+  {
+    "iati_identifier": "XM-DAC-41146-EVA_O_3",
+    "transaction_value": [
+      20543.33
+    ],
+    "transaction_value_currency": [
+      "USD"
+    ]
+  },
+  {
+    "iati_identifier": "XM-DAC-41146-EVA_O_3",
+    "transaction_value": [
+      166560.96
+    ],
+    "transaction_value_currency": [
+      "USD"
+    ]
+  },
+  {
+    "iati_identifier": "XM-DAC-41146-EVA_O_3",
+    "transaction_value": [
+      461.1
+    ],
+    "transaction_value_currency": [
+      "USD"
+    ]
+  },
+  {
+    "iati_identifier": "XM-DAC-41146-EVA_O_3",
+    "transaction_value": [
+      1890.0
+    ],
+    "transaction_value_currency": [
+      "USD"
+    ]
+  },
+  {
+    "iati_identifier": "XM-DAC-41146-EVA_O_3",
+    "transaction_value": [
+      33561.93
+    ],
+    "transaction_value_currency": [
+      "USD"
+    ]
+  },
+  {
+    "iati_identifier": "XM-DAC-41146-EVA_O_3",
+    "transaction_value": [
+      63346.09
+    ],
+    "transaction_value_currency": [
+      "USD"
+    ]
+  },
+  {
+    "iati_identifier": "XM-DAC-41146-EVA_O_3",
+    "transaction_value": [
+      705.33
+    ],
+    "transaction_value_currency": [
+      "USD"
+    ]
+  },
+  {
+    "iati_identifier": "XM-DAC-41146-EVA_O_3",
+    "transaction_value": [
+      2025.22
+    ],
+    "transaction_value_currency": [
+      "USD"
+    ]
+  },
+  {
+    "iati_identifier": "XM-DAC-41146-EVA_O_3",
+    "transaction_value": [
+      2600.0
+    ],
+    "transaction_value_currency": [
+      "USD"
+    ]
+  },
+  {
+    "iati_identifier": "XM-DAC-41146-EVA_O_3",
+    "transaction_value": [
+      7554.78
+    ],
+    "transaction_value_currency": [
+      "USD"
+    ]
+  },
+  {
+    "iati_identifier": "XM-DAC-41146-EVA_O_3",
+    "transaction_value": [
+      11272.11
+    ],
+    "transaction_value_currency": [
+      "USD"
+    ]
+  },
+  {
+    "iati_identifier": "XM-DAC-41146-EVA_O_3",
+    "transaction_value": [
+      86945.29
+    ],
+    "transaction_value_currency": [
+      "USD"
+    ]
+  },
+  {
+    "iati_identifier": "XM-DAC-41146-EVA_O_3",
+    "transaction_value": [
+      1812.95
+    ],
+    "transaction_value_currency": [
+      "USD"
+    ]
+  },
+  {
+    "iati_identifier": "XM-DAC-41146-EVA_O_3",
+    "transaction_value": [
+      2987.11
+    ],
+    "transaction_value_currency": [
+      "USD"
+    ]
+  },
+  {
+    "iati_identifier": "XM-DAC-41146-EVA_O_3",
+    "transaction_value": [
+      74096.02
+    ],
+    "transaction_value_currency": [
+      "USD"
+    ]
+  },
+  {
+    "iati_identifier": "XM-DAC-41146-EVA_O_3",
+    "transaction_value": [
+      588.44
+    ],
+    "transaction_value_currency": [
+      "USD"
+    ]
+  },
+  {
+    "iati_identifier": "XM-DAC-41146-EVA_O_3",
+    "transaction_value": [
+      151250.0
+    ],
+    "transaction_value_currency": [
+      "USD"
+    ]
+  },
+  {
+    "iati_identifier": "XM-DAC-41146-EVA_O_3",
+    "transaction_value": [
+      333488.6
+    ],
+    "transaction_value_currency": [
+      "USD"
+    ]
+  },
+  {
+    "iati_identifier": "XM-DAC-41146-EVA_O_3",
+    "transaction_value": [
+      1341.26
+    ],
+    "transaction_value_currency": [
+      "USD"
+    ]
+  },
+  {
+    "iati_identifier": "XM-DAC-41146-EVA_O_3",
+    "transaction_value": [
+      2080.0
+    ],
+    "transaction_value_currency": [
+      "USD"
+    ]
+  },
+  {
+    "iati_identifier": "XM-DAC-41146-EVA_O_3",
+    "transaction_value": [
+      14205.76
+    ],
+    "transaction_value_currency": [
+      "USD"
+    ]
+  },
+  {
+    "iati_identifier": "XM-DAC-41146-EVA_O_3",
+    "transaction_value": [
+      21545.04
+    ],
+    "transaction_value_currency": [
+      "USD"
+    ]
+  },
+  {
+    "iati_identifier": "XM-DAC-41146-EVA_O_3",
+    "transaction_value": [
+      2160.0
+    ],
+    "transaction_value_currency": [
+      "USD"
+    ]
+  },
+  {
+    "iati_identifier": "XM-DAC-41146-EVA_O_3",
+    "transaction_value": [
+      4000.0
+    ],
+    "transaction_value_currency": [
+      "USD"
+    ]
+  },
+  {
+    "iati_identifier": "XM-DAC-41146-EVA_O_3",
+    "transaction_value": [
+      5120.0
+    ],
+    "transaction_value_currency": [
+      "USD"
+    ]
+  },
+  {
+    "iati_identifier": "XM-DAC-41146-EVA_O_3",
+    "transaction_value": [
+      16100.0
+    ],
+    "transaction_value_currency": [
+      "USD"
+    ]
+  },
+  {
+    "iati_identifier": "XM-DAC-41146-EVA_O_3",
+    "transaction_value": [
+      6100.0
+    ],
+    "transaction_value_currency": [
+      "USD"
+    ]
+  },
+  {
+    "iati_identifier": "XM-DAC-41146-EVA_O_3",
+    "transaction_value": [
+      99599.32
+    ],
+    "transaction_value_currency": [
+      "USD"
+    ]
+  },
+  {
+    "iati_identifier": "XM-DAC-41146-EVA_O_3",
+    "transaction_value": [
+      77060.0
+    ],
+    "transaction_value_currency": [
+      "USD"
+    ]
+  },
+  {
+    "iati_identifier": "XM-DAC-41146-EVA_O_3",
+    "transaction_value": [
+      1138.15
+    ],
+    "transaction_value_currency": [
+      "USD"
+    ]
+  },
+  {
+    "iati_identifier": "XM-DAC-41146-EVA_O_3",
+    "transaction_value": [
+      5000.0
+    ],
+    "transaction_value_currency": [
+      "USD"
+    ]
+  },
+  {
+    "iati_identifier": "XM-DAC-41146-EVA_O_3",
+    "transaction_value": [
+      7250.0
+    ],
+    "transaction_value_currency": [
+      "USD"
+    ]
+  },
+  {
+    "iati_identifier": "XM-DAC-41146-EVA_O_3",
+    "transaction_value": [
+      10924.59
+    ],
+    "transaction_value_currency": [
+      "USD"
+    ]
+  },
+  {
+    "iati_identifier": "XM-DAC-41146-EVA_O_3",
+    "transaction_value": [
+      31321.36
+    ],
+    "transaction_value_currency": [
+      "USD"
+    ]
+  },
+  {
+    "iati_identifier": "XM-DAC-41146-EVA_O_3",
+    "transaction_value": [
+      88751.08
+    ],
+    "transaction_value_currency": [
+      "USD"
+    ]
+  },
+  {
+    "iati_identifier": "XM-DAC-41146-EVA_O_3",
+    "transaction_value": [
+      108023.37
+    ],
+    "transaction_value_currency": [
+      "USD"
+    ]
+  },
+  {
+    "iati_identifier": "XM-DAC-41146-EVA_O_3",
+    "transaction_value": [
+      2650.0
+    ],
+    "transaction_value_currency": [
+      "USD"
+    ]
+  },
+  {
+    "iati_identifier": "XM-DAC-41146-EVA_O_3",
+    "transaction_value": [
+      6500.0
+    ],
+    "transaction_value_currency": [
+      "USD"
+    ]
+  },
+  {
+    "iati_identifier": "XM-DAC-41146-EVA_O_3",
+    "transaction_value": [
+      16204.56
+    ],
+    "transaction_value_currency": [
+      "USD"
+    ]
+  },
+  {
+    "iati_identifier": "XM-DAC-41146-EVA_O_3",
+    "transaction_value": [
+      20193.08
+    ],
+    "transaction_value_currency": [
+      "USD"
+    ]
+  },
+  {
+    "iati_identifier": "XM-DAC-41146-EVA_O_3",
+    "transaction_value": [
+      45736.4
+    ],
+    "transaction_value_currency": [
+      "USD"
+    ]
+  },
+  {
+    "iati_identifier": "XM-DAC-41146-EVA_O_3",
+    "transaction_value": [
+      75744.08
+    ],
+    "transaction_value_currency": [
+      "USD"
+    ]
+  },
+  {
+    "iati_identifier": "XM-DAC-41146-EVA_O_3",
+    "transaction_value": [
+      3500.0
+    ],
+    "transaction_value_currency": [
+      "USD"
+    ]
+  },
+  {
+    "iati_identifier": "XM-DAC-41146-EVA_O_3",
+    "transaction_value": [
+      4252.24
+    ],
+    "transaction_value_currency": [
+      "USD"
+    ]
+  },
+  {
+    "iati_identifier": "XM-DAC-41146-EVA_O_3",
+    "transaction_value": [
+      13021.97
+    ],
+    "transaction_value_currency": [
+      "USD"
+    ]
+  },
+  {
+    "iati_identifier": "XM-DAC-41146-EVA_O_3",
+    "transaction_value": [
+      36589.7
+    ],
+    "transaction_value_currency": [
+      "USD"
+    ]
+  },
+  {
+    "iati_identifier": "XM-DAC-41146-EVA_O_3",
+    "transaction_value": [
+      4552.13
+    ],
+    "transaction_value_currency": [
+      "USD"
+    ]
+  },
+  {
+    "iati_identifier": "XM-DAC-41146-EVA_O_3",
+    "transaction_value": [
+      9044.73
+    ],
+    "transaction_value_currency": [
+      "USD"
+    ]
+  },
+  {
+    "iati_identifier": "XM-DAC-41146-EVA_O_3",
+    "transaction_value": [
+      16406.19
+    ],
+    "transaction_value_currency": [
+      "USD"
+    ]
+  },
+  {
+    "iati_identifier": "XM-DAC-41146-EVA_O_3",
+    "transaction_value": [
+      166474.31
+    ],
+    "transaction_value_currency": [
+      "USD"
+    ]
+  },
+  {
+    "iati_identifier": "XM-DAC-41146-EVA_O_3",
+    "transaction_value": [
+      446.23
+    ],
+    "transaction_value_currency": [
+      "USD"
+    ]
+  },
+  {
+    "iati_identifier": "XM-DAC-41146-EVA_O_3",
+    "transaction_value": [
+      33561.93
+    ],
+    "transaction_value_currency": [
+      "USD"
+    ]
+  },
+  {
+    "iati_identifier": "XM-DAC-41146-EVA_O_3",
+    "transaction_value": [
+      29812.78
+    ],
+    "transaction_value_currency": [
+      "USD"
+    ]
+  },
+  {
+    "iati_identifier": "XM-DAC-41146-EVA_O_3",
+    "transaction_value": [
+      705.33
+    ],
+    "transaction_value_currency": [
+      "USD"
+    ]
+  },
+  {
+    "iati_identifier": "XM-DAC-41146-EVA_O_3",
+    "transaction_value": [
+      2025.22
+    ],
+    "transaction_value_currency": [
+      "USD"
+    ]
+  },
+  {
+    "iati_identifier": "XM-DAC-41146-EVA_O_3",
+    "transaction_value": [
+      2600.0
+    ],
+    "transaction_value_currency": [
+      "USD"
+    ]
+  },
+  {
+    "iati_identifier": "XM-DAC-41146-EVA_O_3",
+    "transaction_value": [
+      7554.78
+    ],
+    "transaction_value_currency": [
+      "USD"
+    ]
+  },
+  {
+    "iati_identifier": "XM-DAC-41146-EVA_O_3",
+    "transaction_value": [
+      11272.11
+    ],
+    "transaction_value_currency": [
+      "USD"
+    ]
+  },
+  {
+    "iati_identifier": "XM-DAC-41146-EVA_O_3",
+    "transaction_value": [
+      86945.28
+    ],
+    "transaction_value_currency": [
+      "USD"
+    ]
+  },
+  {
+    "iati_identifier": "XM-DAC-41146-EVA_O_3",
+    "transaction_value": [
+      1812.95
+    ],
+    "transaction_value_currency": [
+      "USD"
+    ]
+  },
+  {
+    "iati_identifier": "XM-DAC-41146-EVA_O_3",
+    "transaction_value": [
+      2987.11
+    ],
+    "transaction_value_currency": [
+      "USD"
+    ]
+  },
+  {
+    "iati_identifier": "XM-DAC-41146-EVA_O_3",
+    "transaction_value": [
+      74095.99
+    ],
+    "transaction_value_currency": [
+      "USD"
+    ]
+  },
+  {
+    "iati_identifier": "XM-DAC-41146-EVA_O_3",
+    "transaction_value": [
+      588.44
+    ],
+    "transaction_value_currency": [
+      "USD"
+    ]
+  },
+  {
+    "iati_identifier": "XM-DAC-41146-EVA_O_3",
+    "transaction_value": [
+      116806.48
+    ],
+    "transaction_value_currency": [
+      "USD"
+    ]
+  },
+  {
+    "iati_identifier": "XM-DAC-41146-EVA_O_3",
+    "transaction_value": [
+      293297.35
+    ],
+    "transaction_value_currency": [
+      "USD"
+    ]
+  },
+  {
+    "iati_identifier": "XM-DAC-41146-EVA_O_3",
+    "transaction_value": [
+      1341.26
+    ],
+    "transaction_value_currency": [
+      "USD"
+    ]
+  },
+  {
+    "iati_identifier": "XM-DAC-41146-EVA_O_3",
+    "transaction_value": [
+      14205.77
+    ],
+    "transaction_value_currency": [
+      "USD"
+    ]
+  },
+  {
+    "iati_identifier": "XM-DAC-41146-EVA_O_3",
+    "transaction_value": [
+      988.56
+    ],
+    "transaction_value_currency": [
+      "USD"
+    ]
+  },
+  {
+    "iati_identifier": "XM-DAC-41146-FIJ_D_2.1",
+    "transaction_value": [
+      32647.36
+    ],
+    "transaction_value_currency": [
+      "USD"
+    ]
+  },
+  {
+    "iati_identifier": "XM-DAC-41146-FIJ_D_2.1",
+    "transaction_value": [
+      34652.64
+    ],
+    "transaction_value_currency": [
+      "USD"
+    ]
+  },
+  {
+    "iati_identifier": "XM-DAC-41146-FIJ_D_2.1",
+    "transaction_value": [
+      10945.4
+    ],
+    "transaction_value_currency": [
+      "USD"
+    ]
+  },
+  {
+    "iati_identifier": "XM-DAC-41146-FIJ_D_2.1",
+    "transaction_value": [
+      1500.0
+    ],
+    "transaction_value_currency": [
+      "USD"
+    ]
+  },
+  {
+    "iati_identifier": "XM-DAC-41146-FIJ_D_2.1",
+    "transaction_value": [
+      2258.71
+    ],
+    "transaction_value_currency": [
+      "USD"
+    ]
+  },
+  {
+    "iati_identifier": "XM-DAC-41146-FIJ_D_2.1",
+    "transaction_value": [
+      22000.0
+    ],
+    "transaction_value_currency": [
+      "USD"
+    ]
+  },
+  {
+    "iati_identifier": "XM-DAC-41146-FIJ_D_2.1",
+    "transaction_value": [
+      3147.3
+    ],
+    "transaction_value_currency": [
+      "USD"
+    ]
+  },
+  {
+    "iati_identifier": "XM-DAC-41146-FIJ_D_2.1",
+    "transaction_value": [
+      38371.0
+    ],
+    "transaction_value_currency": [
+      "USD"
+    ]
+  },
+  {
+    "iati_identifier": "XM-DAC-41146-FIJ_D_2.1",
+    "transaction_value": [
+      55358.0
+    ],
+    "transaction_value_currency": [
+      "USD"
+    ]
+  },
+  {
+    "iati_identifier": "XM-DAC-41146-FIJ_D_2.1",
+    "transaction_value": [
+      175000.0
+    ],
+    "transaction_value_currency": [
+      "USD"
+    ]
+  },
+  {
+    "iati_identifier": "XM-DAC-41146-FIJ_D_2.1",
+    "transaction_value": [
+      197389.2
+    ],
+    "transaction_value_currency": [
+      "USD"
+    ]
+  },
+  {
+    "iati_identifier": "XM-DAC-41146-FIJ_D_2.1",
+    "transaction_value": [
+      3793.92
+    ],
+    "transaction_value_currency": [
+      "USD"
+    ]
+  },
+  {
+    "iati_identifier": "XM-DAC-41146-FIJ_D_2.1",
+    "transaction_value": [
+      52885.1
+    ],
+    "transaction_value_currency": [
+      "USD"
+    ]
+  },
+  {
+    "iati_identifier": "XM-DAC-41146-FIJ_D_2.1",
+    "transaction_value": [
+      4091.36
+    ],
+    "transaction_value_currency": [
+      "USD"
+    ]
+  },
+  {
+    "iati_identifier": "XM-DAC-41146-FIJ_D_2.1",
+    "transaction_value": [
+      931.69
+    ],
+    "transaction_value_currency": [
+      "USD"
+    ]
+  },
+  {
+    "iati_identifier": "XM-DAC-41146-FIJ_D_2.1",
+    "transaction_value": [
+      2287.09
+    ],
+    "transaction_value_currency": [
+      "USD"
+    ]
+  },
+  {
+    "iati_identifier": "XM-DAC-41146-FIJ_D_2.1",
+    "transaction_value": [
+      757.19
+    ],
+    "transaction_value_currency": [
+      "USD"
+    ]
+  },
+  {
+    "iati_identifier": "XM-DAC-41146-FIJ_D_2.1",
+    "transaction_value": [
+      740.34
+    ],
+    "transaction_value_currency": [
+      "USD"
+    ]
+  },
+  {
+    "iati_identifier": "XM-DAC-41146-FIJ_D_2.1",
+    "transaction_value": [
+      78939.47
+    ],
+    "transaction_value_currency": [
+      "USD"
+    ]
+  },
+  {
+    "iati_identifier": "XM-DAC-41146-FIJ_D_2.1",
+    "transaction_value": [
+      9750.69
+    ],
+    "transaction_value_currency": [
+      "USD"
+    ]
+  },
+  {
+    "iati_identifier": "XM-DAC-41146-FIJ_D_2.1",
+    "transaction_value": [
+      114380.46
+    ],
+    "transaction_value_currency": [
+      "USD"
+    ]
+  },
+  {
+    "iati_identifier": "XM-DAC-41146-FIJ_D_2.2",
+    "transaction_value": [
+      64000.0
+    ],
+    "transaction_value_currency": [
+      "USD"
+    ]
+  },
+  {
+    "iati_identifier": "XM-DAC-41146-FIJ_D_2.2",
+    "transaction_value": [
+      2777.78
+    ],
+    "transaction_value_currency": [
+      "USD"
+    ]
+  },
+  {
+    "iati_identifier": "XM-DAC-41146-FIJ_D_2.2",
+    "transaction_value": [
+      5125.0
+    ],
+    "transaction_value_currency": [
+      "USD"
+    ]
+  },
+  {
+    "iati_identifier": "XM-DAC-41146-FIJ_D_2.2",
+    "transaction_value": [
+      33594.0
+    ],
+    "transaction_value_currency": [
+      "USD"
+    ]
+  },
+  {
+    "iati_identifier": "XM-DAC-41146-FIJ_D_2.2",
+    "transaction_value": [
+      0.01
+    ],
+    "transaction_value_currency": [
+      "USD"
+    ]
+  },
+  {
+    "iati_identifier": "XM-DAC-41146-FIJ_D_2.2",
+    "transaction_value": [
+      99570.0
+    ],
+    "transaction_value_currency": [
+      "USD"
+    ]
+  },
+  {
+    "iati_identifier": "XM-DAC-41146-FIJ_D_2.2",
+    "transaction_value": [
+      0.01
+    ],
+    "transaction_value_currency": [
+      "USD"
+    ]
+  },
+  {
+    "iati_identifier": "XM-DAC-41146-FIJ_D_2.2",
+    "transaction_value": [
+      183191.58
+    ],
+    "transaction_value_currency": [
+      "USD"
+    ]
+  },
+  {
+    "iati_identifier": "XM-DAC-41146-FIJ_D_2.2",
+    "transaction_value": [
+      2675.41
+    ],
+    "transaction_value_currency": [
+      "USD"
+    ]
+  },
+  {
+    "iati_identifier": "XM-DAC-41146-FIJ_D_2.2",
+    "transaction_value": [
+      3793.92
+    ],
+    "transaction_value_currency": [
+      "USD"
+    ]
+  },
+  {
+    "iati_identifier": "XM-DAC-41146-FIJ_D_2.2",
+    "transaction_value": [
+      15194.06
+    ],
+    "transaction_value_currency": [
+      "USD"
+    ]
+  },
+  {
+    "iati_identifier": "XM-DAC-41146-FIJ_D_2.2",
+    "transaction_value": [
+      86749.68
+    ],
+    "transaction_value_currency": [
+      "USD"
+    ]
+  },
+  {
+    "iati_identifier": "XM-DAC-41146-FIJ_D_2.2",
+    "transaction_value": [
+      3.05
+    ],
+    "transaction_value_currency": [
+      "USD"
+    ]
+  },
+  {
+    "iati_identifier": "XM-DAC-41146-FIJ_D_2.2",
+    "transaction_value": [
+      144335.32
+    ],
+    "transaction_value_currency": [
+      "USD"
+    ]
+  },
+  {
+    "iati_identifier": "XM-DAC-41146-FIJ_D_2.3",
+    "transaction_value": [
+      1431.0
+    ],
+    "transaction_value_currency": [
+      "USD"
+    ]
+  },
+  {
+    "iati_identifier": "XM-DAC-41146-FIJ_D_2.3",
+    "transaction_value": [
+      7650.0
+    ],
+    "transaction_value_currency": [
+      "USD"
+    ]
+  },
+  {
+    "iati_identifier": "XM-DAC-41146-FIJ_D_2.3",
+    "transaction_value": [
+      33015.21
+    ],
+    "transaction_value_currency": [
+      "USD"
+    ]
+  },
+  {
+    "iati_identifier": "XM-DAC-41146-FIJ_D_2.3",
+    "transaction_value": [
+      40945.0
+    ],
+    "transaction_value_currency": [
+      "USD"
+    ]
+  },
+  {
+    "iati_identifier": "XM-DAC-41146-FIJ_D_2.3",
+    "transaction_value": [
+      20000.0
+    ],
+    "transaction_value_currency": [
+      "USD"
+    ]
+  },
+  {
+    "iati_identifier": "XM-DAC-41146-FIJ_D_2.3",
+    "transaction_value": [
+      30000.0
+    ],
+    "transaction_value_currency": [
+      "USD"
+    ]
+  },
+  {
+    "iati_identifier": "XM-DAC-41146-FIJ_D_2.3",
+    "transaction_value": [
+      49488.0
+    ],
+    "transaction_value_currency": [
+      "USD"
+    ]
+  },
+  {
+    "iati_identifier": "XM-DAC-41146-FIJ_D_2.3",
+    "transaction_value": [
+      60353.0
+    ],
+    "transaction_value_currency": [
+      "USD"
+    ]
+  },
+  {
+    "iati_identifier": "XM-DAC-41146-FIJ_D_2.3",
+    "transaction_value": [
+      90000.0
+    ],
+    "transaction_value_currency": [
+      "USD"
+    ]
+  },
+  {
+    "iati_identifier": "XM-DAC-41146-FIJ_D_2.3",
+    "transaction_value": [
+      303095.6
+    ],
+    "transaction_value_currency": [
+      "USD"
+    ]
+  },
+  {
+    "iati_identifier": "XM-DAC-41146-FIJ_D_2.3",
+    "transaction_value": [
+      598.15
+    ],
+    "transaction_value_currency": [
+      "USD"
+    ]
+  },
+  {
+    "iati_identifier": "XM-DAC-41146-FIJ_D_2.3",
+    "transaction_value": [
+      3793.92
+    ],
+    "transaction_value_currency": [
+      "USD"
+    ]
+  },
+  {
+    "iati_identifier": "XM-DAC-41146-FIJ_D_2.3",
+    "transaction_value": [
+      28788.79
+    ],
+    "transaction_value_currency": [
+      "USD"
+    ]
+  },
+  {
+    "iati_identifier": "XM-DAC-41146-FIJ_D_2.3",
+    "transaction_value": [
+      2600.0
+    ],
+    "transaction_value_currency": [
+      "USD"
+    ]
+  },
+  {
+    "iati_identifier": "XM-DAC-41146-FIJ_D_2.3",
+    "transaction_value": [
+      7871.68
+    ],
+    "transaction_value_currency": [
+      "USD"
+    ]
+  },
+  {
+    "iati_identifier": "XM-DAC-41146-FIJ_D_2.3",
+    "transaction_value": [
+      1209.4
+    ],
+    "transaction_value_currency": [
+      "USD"
+    ]
+  },
+  {
+    "iati_identifier": "XM-DAC-41146-FIJ_D_2.3",
+    "transaction_value": [
+      281507.4
+    ],
+    "transaction_value_currency": [
+      "USD"
+    ]
+  },
+  {
+    "iati_identifier": "XM-DAC-41146-FIJ_D_2.4",
+    "transaction_value": [
+      11281.0
+    ],
+    "transaction_value_currency": [
+      "USD"
+    ]
+  },
+  {
+    "iati_identifier": "XM-DAC-41146-FIJ_D_2.4",
+    "transaction_value": [
+      23334.0
+    ],
+    "transaction_value_currency": [
+      "USD"
+    ]
+  },
+  {
+    "iati_identifier": "XM-DAC-41146-FIJ_D_2.4",
+    "transaction_value": [
+      1000.0
+    ],
+    "transaction_value_currency": [
+      "USD"
+    ]
+  },
+  {
+    "iati_identifier": "XM-DAC-41146-FIJ_D_2.4",
+    "transaction_value": [
+      1000.0
+    ],
+    "transaction_value_currency": [
+      "USD"
+    ]
+  },
+  {
+    "iati_identifier": "XM-DAC-41146-FIJ_D_2.4",
+    "transaction_value": [
+      12660.0
+    ],
+    "transaction_value_currency": [
+      "USD"
+    ]
+  },
+  {
+    "iati_identifier": "XM-DAC-41146-FIJ_D_2.4",
+    "transaction_value": [
+      18100.85
+    ],
+    "transaction_value_currency": [
+      "USD"
+    ]
+  },
+  {
+    "iati_identifier": "XM-DAC-41146-FIJ_D_2.4",
+    "transaction_value": [
+      3000.0
+    ],
+    "transaction_value_currency": [
+      "USD"
+    ]
+  },
+  {
+    "iati_identifier": "XM-DAC-41146-FIJ_D_2.4",
+    "transaction_value": [
+      64000.0
+    ],
+    "transaction_value_currency": [
+      "USD"
+    ]
+  },
+  {
+    "iati_identifier": "XM-DAC-41146-FIJ_D_2.4",
+    "transaction_value": [
+      10139.35
+    ],
+    "transaction_value_currency": [
+      "USD"
+    ]
+  },
+  {
+    "iati_identifier": "XM-DAC-41146-FIJ_D_2.4",
+    "transaction_value": [
+      32777.63
+    ],
+    "transaction_value_currency": [
+      "USD"
+    ]
+  },
+  {
+    "iati_identifier": "XM-DAC-41146-FIJ_D_2.4",
+    "transaction_value": [
+      7000.0
+    ],
+    "transaction_value_currency": [
+      "USD"
+    ]
+  },
+  {
+    "iati_identifier": "XM-DAC-41146-FIJ_D_2.4",
+    "transaction_value": [
+      12000.0
+    ],
+    "transaction_value_currency": [
+      "USD"
+    ]
+  },
+  {
+    "iati_identifier": "XM-DAC-41146-FIJ_D_2.4",
+    "transaction_value": [
+      35088.99
+    ],
+    "transaction_value_currency": [
+      "USD"
+    ]
+  },
+  {
+    "iati_identifier": "XM-DAC-41146-FIJ_D_2.4",
+    "transaction_value": [
+      7389.18
+    ],
+    "transaction_value_currency": [
+      "USD"
+    ]
+  },
+  {
+    "iati_identifier": "XM-DAC-41146-FIJ_D_2.4",
+    "transaction_value": [
+      35000.0
+    ],
+    "transaction_value_currency": [
+      "USD"
+    ]
+  },
+  {
+    "iati_identifier": "XM-DAC-41146-FIJ_D_2.4",
+    "transaction_value": [
+      54566.05
+    ],
+    "transaction_value_currency": [
+      "USD"
+    ]
+  },
+  {
+    "iati_identifier": "XM-DAC-41146-FIJ_D_2.4",
+    "transaction_value": [
+      79674.97
+    ],
+    "transaction_value_currency": [
+      "USD"
+    ]
+  },
+  {
+    "iati_identifier": "XM-DAC-41146-FIJ_D_2.4",
+    "transaction_value": [
+      174186.98
+    ],
+    "transaction_value_currency": [
+      "USD"
+    ]
+  },
+  {
+    "iati_identifier": "XM-DAC-41146-FIJ_D_2.4",
+    "transaction_value": [
+      37450.17
+    ],
+    "transaction_value_currency": [
+      "USD"
+    ]
+  },
+  {
+    "iati_identifier": "XM-DAC-41146-FIJ_D_2.4",
+    "transaction_value": [
+      7383.97
+    ],
+    "transaction_value_currency": [
+      "USD"
+    ]
+  },
+  {
+    "iati_identifier": "XM-DAC-41146-FIJ_D_2.4",
+    "transaction_value": [
+      1850.85
+    ],
+    "transaction_value_currency": [
+      "USD"
+    ]
+  },
+  {
+    "iati_identifier": "XM-DAC-41146-FIJ_D_2.4",
+    "transaction_value": [
+      382.9
+    ],
+    "transaction_value_currency": [
+      "USD"
+    ]
+  },
+  {
+    "iati_identifier": "XM-DAC-41146-FIJ_D_2.4",
+    "transaction_value": [
+      1095.02
+    ],
+    "transaction_value_currency": [
+      "USD"
+    ]
+  },
+  {
+    "iati_identifier": "XM-DAC-41146-FIJ_D_2.4",
+    "transaction_value": [
+      2997.42
+    ],
+    "transaction_value_currency": [
+      "USD"
+    ]
+  },
+  {
+    "iati_identifier": "XM-DAC-41146-FIJ_D_2.4",
+    "transaction_value": [
+      3793.92
+    ],
+    "transaction_value_currency": [
+      "USD"
+    ]
+  },
+  {
+    "iati_identifier": "XM-DAC-41146-FIJ_D_2.4",
+    "transaction_value": [
+      18100.85
+    ],
+    "transaction_value_currency": [
+      "USD"
+    ]
+  },
+  {
+    "iati_identifier": "XM-DAC-41146-FIJ_D_2.4",
+    "transaction_value": [
+      10527.9
+    ],
+    "transaction_value_currency": [
+      "USD"
+    ]
+  },
+  {
+    "iati_identifier": "XM-DAC-41146-FIJ_D_2.4",
+    "transaction_value": [
+      12167.7
+    ],
+    "transaction_value_currency": [
+      "USD"
+    ]
+  },
+  {
+    "iati_identifier": "XM-DAC-41146-FIJ_D_2.4",
+    "transaction_value": [
+      3608.42
+    ],
+    "transaction_value_currency": [
+      "USD"
+    ]
+  },
+  {
+    "iati_identifier": "XM-DAC-41146-FIJ_D_2.4",
+    "transaction_value": [
+      8472.54
+    ],
+    "transaction_value_currency": [
+      "USD"
+    ]
+  },
+  {
+    "iati_identifier": "XM-DAC-41146-FIJ_D_2.4",
+    "transaction_value": [
+      4858.34
+    ],
+    "transaction_value_currency": [
+      "USD"
+    ]
+  },
+  {
+    "iati_identifier": "XM-DAC-41146-FIJ_D_2.4",
+    "transaction_value": [
+      5600.0
+    ],
+    "transaction_value_currency": [
+      "USD"
+    ]
+  },
+  {
+    "iati_identifier": "XM-DAC-41146-FIJ_D_2.4",
+    "transaction_value": [
+      24755.39
+    ],
+    "transaction_value_currency": [
+      "USD"
+    ]
+  },
+  {
+    "iati_identifier": "XM-DAC-41146-FIJ_D_2.4",
+    "transaction_value": [
+      174186.95
+    ],
+    "transaction_value_currency": [
+      "USD"
+    ]
+  },
+  {
+    "iati_identifier": "XM-DAC-41146-FIJ_D_2.5",
+    "transaction_value": [
+      5898.0
+    ],
+    "transaction_value_currency": [
+      "USD"
+    ]
+  },
+  {
+    "iati_identifier": "XM-DAC-41146-FIJ_D_2.5",
+    "transaction_value": [
+      129000.0
+    ],
+    "transaction_value_currency": [
+      "USD"
+    ]
+  },
+  {
+    "iati_identifier": "XM-DAC-41146-FIJ_D_2.5",
+    "transaction_value": [
+      4823.0
+    ],
+    "transaction_value_currency": [
+      "USD"
+    ]
+  },
+  {
+    "iati_identifier": "XM-DAC-41146-FIJ_D_3.1",
+    "transaction_value": [
+      21512.21
+    ],
+    "transaction_value_currency": [
+      "USD"
+    ]
+  },
+  {
+    "iati_identifier": "XM-DAC-41146-FIJ_D_3.1",
+    "transaction_value": [
+      22884.22
+    ],
+    "transaction_value_currency": [
+      "USD"
+    ]
+  },
+  {
+    "iati_identifier": "XM-DAC-41146-FIJ_D_3.1",
+    "transaction_value": [
+      27043.0
+    ],
+    "transaction_value_currency": [
+      "USD"
+    ]
+  },
+  {
+    "iati_identifier": "XM-DAC-41146-FIJ_D_3.1",
+    "transaction_value": [
+      61886.56
+    ],
+    "transaction_value_currency": [
+      "USD"
+    ]
+  },
+  {
+    "iati_identifier": "XM-DAC-41146-FIJ_D_3.1",
+    "transaction_value": [
+      87436.84
+    ],
+    "transaction_value_currency": [
+      "USD"
+    ]
+  },
+  {
+    "iati_identifier": "XM-DAC-41146-FIJ_D_3.1",
+    "transaction_value": [
+      134154.98
+    ],
+    "transaction_value_currency": [
+      "USD"
+    ]
+  },
+  {
+    "iati_identifier": "XM-DAC-41146-FIJ_D_3.1",
+    "transaction_value": [
+      5300.0
+    ],
+    "transaction_value_currency": [
+      "USD"
+    ]
+  },
+  {
+    "iati_identifier": "XM-DAC-41146-FIJ_D_3.1",
+    "transaction_value": [
+      43830.0
+    ],
+    "transaction_value_currency": [
+      "USD"
+    ]
+  },
+  {
+    "iati_identifier": "XM-DAC-41146-FIJ_D_3.1",
+    "transaction_value": [
+      93969.02
+    ],
+    "transaction_value_currency": [
+      "USD"
+    ]
+  },
+  {
+    "iati_identifier": "XM-DAC-41146-FIJ_D_3.1",
+    "transaction_value": [
+      123661.0
+    ],
+    "transaction_value_currency": [
+      "USD"
+    ]
+  },
+  {
+    "iati_identifier": "XM-DAC-41146-FIJ_D_3.1",
+    "transaction_value": [
+      181700.0
+    ],
+    "transaction_value_currency": [
+      "USD"
+    ]
+  },
+  {
+    "iati_identifier": "XM-DAC-41146-FIJ_D_3.1",
+    "transaction_value": [
+      195420.0
+    ],
+    "transaction_value_currency": [
+      "USD"
+    ]
+  },
+  {
+    "iati_identifier": "XM-DAC-41146-FIJ_D_3.1",
+    "transaction_value": [
+      267700.0
+    ],
+    "transaction_value_currency": [
+      "USD"
+    ]
+  },
+  {
+    "iati_identifier": "XM-DAC-41146-FIJ_D_3.1",
+    "transaction_value": [
+      112756.72
+    ],
+    "transaction_value_currency": [
+      "USD"
+    ]
+  },
+  {
+    "iati_identifier": "XM-DAC-41146-FIJ_D_3.1",
+    "transaction_value": [
+      187119.64
+    ],
+    "transaction_value_currency": [
+      "USD"
+    ]
+  },
+  {
+    "iati_identifier": "XM-DAC-41146-FIJ_D_3.1",
+    "transaction_value": [
+      208100.0
+    ],
+    "transaction_value_currency": [
+      "USD"
+    ]
+  },
+  {
+    "iati_identifier": "XM-DAC-41146-FIJ_D_3.1",
+    "transaction_value": [
+      243241.12
+    ],
+    "transaction_value_currency": [
+      "USD"
+    ]
+  },
+  {
+    "iati_identifier": "XM-DAC-41146-FIJ_D_3.1",
+    "transaction_value": [
+      18236.0
+    ],
+    "transaction_value_currency": [
+      "USD"
+    ]
+  },
+  {
+    "iati_identifier": "XM-DAC-41146-FIJ_D_3.1",
+    "transaction_value": [
+      30000.03
+    ],
+    "transaction_value_currency": [
+      "USD"
+    ]
+  },
+  {
+    "iati_identifier": "XM-DAC-41146-FIJ_D_3.1",
+    "transaction_value": [
+      40000.0
+    ],
+    "transaction_value_currency": [
+      "USD"
+    ]
+  },
+  {
+    "iati_identifier": "XM-DAC-41146-FIJ_D_3.1",
+    "transaction_value": [
+      65000.0
+    ],
+    "transaction_value_currency": [
+      "USD"
+    ]
+  },
+  {
+    "iati_identifier": "XM-DAC-41146-FIJ_D_3.1",
+    "transaction_value": [
+      80000.0
+    ],
+    "transaction_value_currency": [
+      "USD"
+    ]
+  },
+  {
+    "iati_identifier": "XM-DAC-41146-FIJ_D_3.1",
+    "transaction_value": [
+      133896.72
+    ],
+    "transaction_value_currency": [
+      "USD"
+    ]
+  },
+  {
+    "iati_identifier": "XM-DAC-41146-FIJ_D_3.1",
+    "transaction_value": [
+      265568.91
+    ],
+    "transaction_value_currency": [
+      "USD"
+    ]
+  },
+  {
+    "iati_identifier": "XM-DAC-41146-FIJ_D_3.1",
+    "transaction_value": [
+      177270.0
+    ],
+    "transaction_value_currency": [
+      "USD"
+    ]
+  },
+  {
+    "iati_identifier": "XM-DAC-41146-FIJ_D_3.1",
+    "transaction_value": [
+      268728.0
+    ],
+    "transaction_value_currency": [
+      "USD"
+    ]
+  },
+  {
+    "iati_identifier": "XM-DAC-41146-FIJ_D_3.1",
+    "transaction_value": [
+      40000.0
+    ],
+    "transaction_value_currency": [
+      "USD"
+    ]
+  },
+  {
+    "iati_identifier": "XM-DAC-41146-FIJ_D_3.1",
+    "transaction_value": [
+      87000.0
+    ],
+    "transaction_value_currency": [
+      "USD"
+    ]
+  },
+  {
+    "iati_identifier": "XM-DAC-41146-FIJ_D_3.1",
+    "transaction_value": [
+      128570.0
+    ],
+    "transaction_value_currency": [
+      "USD"
+    ]
+  },
+  {
+    "iati_identifier": "XM-DAC-41146-FIJ_D_3.1",
+    "transaction_value": [
+      470000.0
+    ],
+    "transaction_value_currency": [
+      "USD"
+    ]
+  },
+  {
+    "iati_identifier": "XM-DAC-41146-FIJ_D_3.1",
+    "transaction_value": [
+      157413.62
+    ],
+    "transaction_value_currency": [
+      "USD"
+    ]
+  },
+  {
+    "iati_identifier": "XM-DAC-41146-FIJ_D_3.1",
+    "transaction_value": [
+      223750.0
+    ],
+    "transaction_value_currency": [
+      "USD"
+    ]
+  },
+  {
+    "iati_identifier": "XM-DAC-41146-FIJ_D_3.1",
+    "transaction_value": [
+      309490.0
+    ],
+    "transaction_value_currency": [
+      "USD"
+    ]
+  },
+  {
+    "iati_identifier": "XM-DAC-41146-FIJ_D_3.1",
+    "transaction_value": [
+      33008.18
+    ],
+    "transaction_value_currency": [
+      "USD"
+    ]
+  },
+  {
+    "iati_identifier": "XM-DAC-41146-FIJ_D_3.1",
+    "transaction_value": [
+      50000.0
+    ],
+    "transaction_value_currency": [
+      "USD"
+    ]
+  },
+  {
+    "iati_identifier": "XM-DAC-41146-FIJ_D_3.1",
+    "transaction_value": [
+      57500.0
+    ],
+    "transaction_value_currency": [
+      "USD"
+    ]
+  },
+  {
+    "iati_identifier": "XM-DAC-41146-FIJ_D_3.1",
+    "transaction_value": [
+      97199.08
+    ],
+    "transaction_value_currency": [
+      "USD"
+    ]
+  },
+  {
+    "iati_identifier": "XM-DAC-41146-FIJ_D_3.1",
+    "transaction_value": [
+      0.01
+    ],
+    "transaction_value_currency": [
+      "USD"
+    ]
+  },
+  {
+    "iati_identifier": "XM-DAC-41146-FIJ_D_3.1",
+    "transaction_value": [
+      0.01
+    ],
+    "transaction_value_currency": [
+      "USD"
+    ]
+  },
+  {
+    "iati_identifier": "XM-DAC-41146-FIJ_D_3.1",
+    "transaction_value": [
+      212001.73
+    ],
+    "transaction_value_currency": [
+      "USD"
+    ]
+  },
+  {
+    "iati_identifier": "XM-DAC-41146-FIJ_D_3.1",
+    "transaction_value": [
+      238890.0
+    ],
+    "transaction_value_currency": [
+      "USD"
+    ]
+  },
+  {
+    "iati_identifier": "XM-DAC-41146-FIJ_D_3.1",
+    "transaction_value": [
+      57500.01
+    ],
+    "transaction_value_currency": [
+      "USD"
+    ]
+  },
+  {
+    "iati_identifier": "XM-DAC-41146-FIJ_D_3.1",
+    "transaction_value": [
+      80326.27
+    ],
+    "transaction_value_currency": [
+      "USD"
+    ]
+  },
+  {
+    "iati_identifier": "XM-DAC-41146-FIJ_D_3.1",
+    "transaction_value": [
+      100738.75
+    ],
+    "transaction_value_currency": [
+      "USD"
+    ]
+  },
+  {
+    "iati_identifier": "XM-DAC-41146-FIJ_D_3.1",
+    "transaction_value": [
+      160852.6
+    ],
+    "transaction_value_currency": [
+      "USD"
+    ]
+  },
+  {
+    "iati_identifier": "XM-DAC-41146-FIJ_D_3.1",
+    "transaction_value": [
+      179513.42
+    ],
+    "transaction_value_currency": [
+      "USD"
+    ]
+  },
+  {
+    "iati_identifier": "XM-DAC-41146-FIJ_D_3.1",
+    "transaction_value": [
+      35.98
+    ],
+    "transaction_value_currency": [
+      "USD"
+    ]
+  },
+  {
+    "iati_identifier": "XM-DAC-41146-FIJ_D_3.1",
+    "transaction_value": [
+      20148.94
+    ],
+    "transaction_value_currency": [
+      "USD"
+    ]
+  },
+  {
+    "iati_identifier": "XM-DAC-41146-FIJ_D_3.1",
+    "transaction_value": [
+      22856.32
+    ],
+    "transaction_value_currency": [
+      "USD"
+    ]
+  },
+  {
+    "iati_identifier": "XM-DAC-41146-FIJ_D_3.1",
+    "transaction_value": [
+      61886.56
+    ],
+    "transaction_value_currency": [
+      "USD"
+    ]
+  },
+  {
+    "iati_identifier": "XM-DAC-41146-FIJ_D_3.1",
+    "transaction_value": [
+      88792.92
+    ],
+    "transaction_value_currency": [
+      "USD"
+    ]
+  },
+  {
+    "iati_identifier": "XM-DAC-41146-FIJ_D_3.1",
+    "transaction_value": [
+      50985.19
+    ],
+    "transaction_value_currency": [
+      "USD"
+    ]
+  },
+  {
+    "iati_identifier": "XM-DAC-41146-FIJ_D_3.1",
+    "transaction_value": [
+      90.91
+    ],
+    "transaction_value_currency": [
+      "USD"
+    ]
+  },
+  {
+    "iati_identifier": "XM-DAC-41146-FIJ_D_3.1",
+    "transaction_value": [
+      5366.5
+    ],
+    "transaction_value_currency": [
+      "USD"
+    ]
+  },
+  {
+    "iati_identifier": "XM-DAC-41146-FIJ_D_3.1",
+    "transaction_value": [
+      43100.8
+    ],
+    "transaction_value_currency": [
+      "USD"
+    ]
+  },
+  {
+    "iati_identifier": "XM-DAC-41146-FIJ_D_3.1",
+    "transaction_value": [
+      93968.45
+    ],
+    "transaction_value_currency": [
+      "USD"
+    ]
+  },
+  {
+    "iati_identifier": "XM-DAC-41146-FIJ_D_3.1",
+    "transaction_value": [
+      130837.41
+    ],
+    "transaction_value_currency": [
+      "USD"
+    ]
+  },
+  {
+    "iati_identifier": "XM-DAC-41146-FIJ_D_3.1",
+    "transaction_value": [
+      145782.85
+    ],
+    "transaction_value_currency": [
+      "USD"
+    ]
+  },
+  {
+    "iati_identifier": "XM-DAC-41146-FIJ_D_3.1",
+    "transaction_value": [
+      191373.54
+    ],
+    "transaction_value_currency": [
+      "USD"
+    ]
+  },
+  {
+    "iati_identifier": "XM-DAC-41146-FIJ_D_3.1",
+    "transaction_value": [
+      248983.59
+    ],
+    "transaction_value_currency": [
+      "USD"
+    ]
+  },
+  {
+    "iati_identifier": "XM-DAC-41146-FIJ_D_3.1",
+    "transaction_value": [
+      82359.07
+    ],
+    "transaction_value_currency": [
+      "USD"
+    ]
+  },
+  {
+    "iati_identifier": "XM-DAC-41146-FIJ_D_3.1",
+    "transaction_value": [
+      1073.12
+    ],
+    "transaction_value_currency": [
+      "USD"
+    ]
+  },
+  {
+    "iati_identifier": "XM-DAC-41146-FIJ_D_3.1",
+    "transaction_value": [
+      169515.37
+    ],
+    "transaction_value_currency": [
+      "USD"
+    ]
+  },
+  {
+    "iati_identifier": "XM-DAC-41146-FIJ_D_3.1",
+    "transaction_value": [
+      2596.47
+    ],
+    "transaction_value_currency": [
+      "USD"
+    ]
+  },
+  {
+    "iati_identifier": "XM-DAC-41146-FIJ_D_3.1",
+    "transaction_value": [
+      237769.01
+    ],
+    "transaction_value_currency": [
+      "USD"
+    ]
+  },
+  {
+    "iati_identifier": "XM-DAC-41146-FIJ_D_3.1",
+    "transaction_value": [
+      9214.94
+    ],
+    "transaction_value_currency": [
+      "USD"
+    ]
+  },
+  {
+    "iati_identifier": "XM-DAC-41146-FIJ_D_3.1",
+    "transaction_value": [
+      23598.07
+    ],
+    "transaction_value_currency": [
+      "USD"
+    ]
+  },
+  {
+    "iati_identifier": "XM-DAC-41146-FIJ_D_3.1",
+    "transaction_value": [
+      101664.99
+    ],
+    "transaction_value_currency": [
+      "USD"
+    ]
+  },
+  {
+    "iati_identifier": "XM-DAC-41146-FIJ_D_3.1",
+    "transaction_value": [
+      11277.34
+    ],
+    "transaction_value_currency": [
+      "USD"
+    ]
+  },
+  {
+    "iati_identifier": "XM-DAC-41146-FIJ_D_3.1",
+    "transaction_value": [
+      32721.34
+    ],
+    "transaction_value_currency": [
+      "USD"
+    ]
+  },
+  {
+    "iati_identifier": "XM-DAC-41146-FIJ_D_3.1",
+    "transaction_value": [
+      55967.54
+    ],
+    "transaction_value_currency": [
+      "USD"
+    ]
+  },
+  {
+    "iati_identifier": "XM-DAC-41146-FIJ_D_3.1",
+    "transaction_value": [
+      73308.96
+    ],
+    "transaction_value_currency": [
+      "USD"
+    ]
+  },
+  {
+    "iati_identifier": "XM-DAC-41146-FIJ_D_3.1",
+    "transaction_value": [
+      194012.0
+    ],
+    "transaction_value_currency": [
+      "USD"
+    ]
+  },
+  {
+    "iati_identifier": "XM-DAC-41146-FIJ_D_3.1",
+    "transaction_value": [
+      274559.82
+    ],
+    "transaction_value_currency": [
+      "USD"
+    ]
+  },
+  {
+    "iati_identifier": "XM-DAC-41146-FIJ_D_3.1",
+    "transaction_value": [
+      132909.31
+    ],
+    "transaction_value_currency": [
+      "USD"
+    ]
+  },
+  {
+    "iati_identifier": "XM-DAC-41146-FIJ_D_3.1",
+    "transaction_value": [
+      169.81
+    ],
+    "transaction_value_currency": [
+      "USD"
+    ]
+  },
+  {
+    "iati_identifier": "XM-DAC-41146-FIJ_D_3.1",
+    "transaction_value": [
+      164263.37
+    ],
+    "transaction_value_currency": [
+      "USD"
+    ]
+  },
+  {
+    "iati_identifier": "XM-DAC-41146-FIJ_D_3.1",
+    "transaction_value": [
+      208593.0
+    ],
+    "transaction_value_currency": [
+      "USD"
+    ]
+  },
+  {
+    "iati_identifier": "XM-DAC-41146-FIJ_D_3.1",
+    "transaction_value": [
+      139.42
+    ],
+    "transaction_value_currency": [
+      "USD"
+    ]
+  },
+  {
+    "iati_identifier": "XM-DAC-41146-FIJ_D_3.1",
+    "transaction_value": [
+      15710.0
+    ],
+    "transaction_value_currency": [
+      "USD"
+    ]
+  },
+  {
+    "iati_identifier": "XM-DAC-41146-FIJ_D_3.1",
+    "transaction_value": [
+      2495.0
+    ],
+    "transaction_value_currency": [
+      "USD"
+    ]
+  },
+  {
+    "iati_identifier": "XM-DAC-41146-FIJ_D_3.1",
+    "transaction_value": [
+      33804.87
+    ],
+    "transaction_value_currency": [
+      "USD"
+    ]
+  },
+  {
+    "iati_identifier": "XM-DAC-41146-FIJ_D_3.1",
+    "transaction_value": [
+      159445.31
+    ],
+    "transaction_value_currency": [
+      "USD"
+    ]
+  },
+  {
+    "iati_identifier": "XM-DAC-41146-FIJ_D_3.1",
+    "transaction_value": [
+      306119.93
+    ],
+    "transaction_value_currency": [
+      "USD"
+    ]
+  },
+  {
+    "iati_identifier": "XM-DAC-41146-FIJ_D_3.1",
+    "transaction_value": [
+      12600.0
+    ],
+    "transaction_value_currency": [
+      "USD"
+    ]
+  },
+  {
+    "iati_identifier": "XM-DAC-41146-FIJ_D_3.1",
+    "transaction_value": [
+      97850.87
+    ],
+    "transaction_value_currency": [
+      "USD"
+    ]
+  },
+  {
+    "iati_identifier": "XM-DAC-41146-FIJ_D_3.1",
+    "transaction_value": [
+      74400.0
+    ],
+    "transaction_value_currency": [
+      "USD"
+    ]
+  },
+  {
+    "iati_identifier": "XM-DAC-41146-FIJ_D_3.1",
+    "transaction_value": [
+      14158.14
+    ],
+    "transaction_value_currency": [
+      "USD"
+    ]
+  },
+  {
+    "iati_identifier": "XM-DAC-41146-FIJ_D_3.1",
+    "transaction_value": [
+      110585.38
+    ],
+    "transaction_value_currency": [
+      "USD"
+    ]
+  },
+  {
+    "iati_identifier": "XM-DAC-41146-FIJ_D_3.1",
+    "transaction_value": [
+      102003.38
+    ],
+    "transaction_value_currency": [
+      "USD"
+    ]
+  },
+  {
+    "iati_identifier": "XM-DAC-41146-FIJ_D_3.1",
+    "transaction_value": [
+      254661.73
+    ],
+    "transaction_value_currency": [
+      "USD"
+    ]
+  },
+  {
+    "iati_identifier": "XM-DAC-41146-FIJ_D_3.1",
+    "transaction_value": [
+      68822.59
+    ],
+    "transaction_value_currency": [
+      "USD"
+    ]
+  },
+  {
+    "iati_identifier": "XM-DAC-41146-FIJ_D_3.1",
+    "transaction_value": [
+      4437.56
+    ],
+    "transaction_value_currency": [
+      "USD"
+    ]
+  },
+  {
+    "iati_identifier": "XM-DAC-41146-FIJ_D_3.1",
+    "transaction_value": [
+      20091.65
+    ],
+    "transaction_value_currency": [
+      "USD"
+    ]
+  },
+  {
+    "iati_identifier": "XM-DAC-41146-FIJ_D_3.1",
+    "transaction_value": [
+      97761.57
+    ],
+    "transaction_value_currency": [
+      "USD"
+    ]
+  },
+  {
+    "iati_identifier": "XM-DAC-41146-FIJ_D_3.1",
+    "transaction_value": [
+      104716.63
+    ],
+    "transaction_value_currency": [
+      "USD"
+    ]
+  },
+  {
+    "iati_identifier": "XM-DAC-41146-FIJ_D_3.1",
+    "transaction_value": [
+      142584.1
+    ],
+    "transaction_value_currency": [
+      "USD"
+    ]
+  },
+  {
+    "iati_identifier": "XM-DAC-41146-FIJ_D_3.1",
+    "transaction_value": [
+      77458.1
+    ],
+    "transaction_value_currency": [
+      "USD"
+    ]
+  },
+  {
+    "iati_identifier": "XM-DAC-41146-FIJ_D_3.2",
+    "transaction_value": [
+      1070.0
+    ],
+    "transaction_value_currency": [
+      "USD"
+    ]
+  },
+  {
+    "iati_identifier": "XM-DAC-41146-FIJ_D_3.2",
+    "transaction_value": [
+      6840.0
+    ],
+    "transaction_value_currency": [
+      "USD"
+    ]
+  },
+  {
+    "iati_identifier": "XM-DAC-41146-FIJ_D_3.2",
+    "transaction_value": [
+      44167.61
+    ],
+    "transaction_value_currency": [
+      "USD"
+    ]
+  },
+  {
+    "iati_identifier": "XM-DAC-41146-FIJ_D_3.2",
+    "transaction_value": [
+      168110.0
+    ],
+    "transaction_value_currency": [
+      "USD"
+    ]
+  },
+  {
+    "iati_identifier": "XM-DAC-41146-FIJ_D_3.2",
+    "transaction_value": [
+      177482.0
+    ],
+    "transaction_value_currency": [
+      "USD"
+    ]
+  },
+  {
+    "iati_identifier": "XM-DAC-41146-FIJ_D_3.2",
+    "transaction_value": [
+      1493.69
+    ],
+    "transaction_value_currency": [
+      "USD"
+    ]
+  },
+  {
+    "iati_identifier": "XM-DAC-41146-FIJ_D_3.2",
+    "transaction_value": [
+      31353.12
+    ],
+    "transaction_value_currency": [
+      "USD"
+    ]
+  },
+  {
+    "iati_identifier": "XM-DAC-41146-FIJ_D_3.2",
+    "transaction_value": [
+      44267.69
+    ],
+    "transaction_value_currency": [
+      "USD"
+    ]
+  },
+  {
+    "iati_identifier": "XM-DAC-41146-FIJ_D_3.2",
+    "transaction_value": [
+      55847.11
+    ],
+    "transaction_value_currency": [
+      "USD"
+    ]
+  },
+  {
+    "iati_identifier": "XM-DAC-41146-FIJ_D_3.2",
+    "transaction_value": [
+      87046.0
+    ],
+    "transaction_value_currency": [
+      "USD"
+    ]
+  },
+  {
+    "iati_identifier": "XM-DAC-41146-FIJ_D_3.2",
+    "transaction_value": [
+      145506.0
+    ],
+    "transaction_value_currency": [
+      "USD"
+    ]
+  },
+  {
+    "iati_identifier": "XM-DAC-41146-FIJ_D_3.2",
+    "transaction_value": [
+      151800.0
+    ],
+    "transaction_value_currency": [
+      "USD"
+    ]
+  },
+  {
+    "iati_identifier": "XM-DAC-41146-FIJ_D_3.2",
+    "transaction_value": [
+      334894.02
+    ],
+    "transaction_value_currency": [
+      "USD"
+    ]
+  }
+]

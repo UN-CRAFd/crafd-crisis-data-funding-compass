@@ -1,0 +1,4858 @@
+[
+  {
+    "sector_code": [
+      "12240"
+    ],
+    "budget_value": [
+      64000000.0
+    ],
+    "iati_identifier": "GB-COH-09288843-Lesotho2020-2025",
+    "title_narrative": [
+      "Lesotho Nutrition and Health System Strengthening Programme"
+    ],
+    "reporting_org_ref": "GB-COH-09288843",
+    "transaction_value": [
+      5000000.0,
+      2155000.0
+    ],
+    "activity_date_type": [
+      "1"
+    ],
+    "activity_status_code": "2",
+    "description_narrative": [
+      "This investment aims to increase utilisation and quality of key nutrition and health services and improve nutrition-related behavior change. Over five years (2020-2025), the programme will support the Government of Lesotho (GOL) in the provision of nutrition-related interventions and essential health services at the community level and in public facilities. It will also strengthen the effectiveness of government in its stewardship function for health and in providing an enabling environment for nutrition."
+    ],
+    "activity_date_iso_date": [
+      "2020-10-01T00:00:00Z"
+    ],
+    "recipient_country_code": [
+      "LS"
+    ],
+    "reporting_org_narrative": [
+      "The Power of Nutrition"
+    ]
+  },
+  {
+    "sector_code": [
+      "12240"
+    ],
+    "budget_value": [
+      775220.0,
+      703629.0,
+      836129.0,
+      723629.0,
+      866129.0
+    ],
+    "iati_identifier": "GB-COH-09288843-Nigeria2018-2023",
+    "title_narrative": [
+      "The Power of Nutrition Bank-Executed Trust Fund for Nigeria"
+    ],
+    "reporting_org_ref": "GB-COH-09288843",
+    "transaction_value": [
+      1724000.0,
+      910000.0,
+      2000000.0
+    ],
+    "activity_date_type": [
+      "1",
+      "3"
+    ],
+    "activity_status_code": "2",
+    "description_narrative": [
+      "This $3.9 million investment into a World Bank-Executed Trust Fund (BETF) will provide critical technical assistance to strengthen the Government of Nigeria’s capacity to deliver the $232m Accelerating Nutrition Results in Nigeria (ANRiN) International Development Assistance (IDA) programme. The programme is a long-term investment to build and sustain national nutrition programme for the Government of Nigeria. ANRiN aims to increase utilisation of quality, cost-effective nutrition services for pregnant and lactating women, adolescent girls and children under-5 years of age in 12 of Nigeria’s 36 States. It has been designed to support the effective delivery of Nigeria’s National Policy on Food and Nutrition.",
+      "The Power of Nutrition’s BETF investment will support three key workstreams: enhance the delivery of nutrition interventions through new platforms by providing technical assistance to design and assess pilots across the 12 states, building an evidence base to support future iterations or scale up of successful approaches by Government; Facilitate learning between different stakeholders in nutrition across Nigeria, and; Demonstrate evidence of impact where initiatives under ANRiN are successful, facilitating course correction and fine-tuning where appropriate"
+    ],
+    "activity_date_iso_date": [
+      "2018-01-01T00:00:00Z",
+      "2023-01-01T00:00:00Z"
+    ],
+    "recipient_country_code": [
+      "NG"
+    ],
+    "reporting_org_narrative": [
+      "The Power of Nutrition"
+    ]
+  },
+  {
+    "sector_code": [
+      "11220"
+    ],
+    "budget_value": [
+      76041.0
+    ],
+    "iati_identifier": "GB-CHC-207544-57012",
+    "title_narrative": [
+      "Inclusive education for children with disabilities"
+    ],
+    "sector_narrative": [
+      "Primary Education"
+    ],
+    "reporting_org_ref": "GB-CHC-207544",
+    "transaction_value": [
+      95155.0,
+      76041.0,
+      60899.0,
+      7318.0,
+      1402.0,
+      6422.0
+    ],
+    "activity_date_type": [
+      "1",
+      "3"
+    ],
+    "activity_status_code": "4",
+    "description_narrative": [
+      "Short-term policy development project on inclusive education"
+    ],
+    "activity_date_iso_date": [
+      "2017-01-01T00:00:00Z",
+      "2017-12-31T00:00:00Z"
+    ],
+    "recipient_country_code": [
+      "SL"
+    ],
+    "reporting_org_narrative": [
+      "Sightsavers"
+    ],
+    "recipient_country_narrative": [
+      "Sierra Leone"
+    ]
+  },
+  {
+    "sector_code": [
+      "12220"
+    ],
+    "budget_value": [
+      339741.0,
+      48613.0
+    ],
+    "iati_identifier": "GB-CHC-207544-90000",
+    "title_narrative": [
+      "World Bank"
+    ],
+    "sector_narrative": [
+      "Basic health care"
+    ],
+    "reporting_org_ref": "GB-CHC-207544",
+    "transaction_value": [
+      359509.0,
+      339741.0,
+      48613.0,
+      24776.0,
+      1000.0,
+      3966.0,
+      47613.0,
+      131551.0,
+      179448.0
+    ],
+    "activity_date_type": [
+      "1",
+      "3"
+    ],
+    "activity_status_code": "4",
+    "description_narrative": [
+      "​The SHIP project seeks to combine de-worming and vision screening interventions in schools as a demonstration of the benefits of integrating school health interventions within developing countries"
+    ],
+    "activity_date_iso_date": [
+      "2015-01-12T00:00:00Z",
+      "2017-12-31T00:00:00Z"
+    ],
+    "reporting_org_narrative": [
+      "Sightsavers"
+    ]
+  },
+  {
+    "sector_code": [
+      "12220"
+    ],
+    "budget_value": [
+      62449.0,
+      7295.0
+    ],
+    "iati_identifier": "GB-CHC-207544-90001",
+    "title_narrative": [
+      "School Health Integrated Programming (SHIP) Project - Ghana"
+    ],
+    "sector_narrative": [
+      "Basic health care"
+    ],
+    "reporting_org_ref": "GB-CHC-207544",
+    "transaction_value": [
+      64223.0,
+      8076.0,
+      62449.0,
+      7295.0,
+      703.0,
+      726.0,
+      6123.0,
+      16322.0,
+      446.0,
+      45424.0,
+      7712.0
+    ],
+    "activity_date_type": [
+      "1",
+      "3"
+    ],
+    "activity_status_code": "4",
+    "description_narrative": [
+      "​The SHIP project seeks to combine de-worming and vision screening interventions in schools as a demonstration of the benefits of integrating school health interventions within developing countries"
+    ],
+    "activity_date_iso_date": [
+      "2015-01-12T00:00:00Z",
+      "2018-12-31T00:00:00Z"
+    ],
+    "recipient_country_code": [
+      "GH"
+    ],
+    "reporting_org_narrative": [
+      "Sightsavers"
+    ],
+    "recipient_country_narrative": [
+      "Ghana"
+    ]
+  },
+  {
+    "sector_code": [
+      "12220"
+    ],
+    "budget_value": [
+      65069.0,
+      7672.0
+    ],
+    "iati_identifier": "GB-CHC-207544-90002",
+    "title_narrative": [
+      "School Health Integrated Programming (SHIP) Project - Senegal"
+    ],
+    "sector_narrative": [
+      "Basic health care"
+    ],
+    "reporting_org_ref": "GB-CHC-207544",
+    "transaction_value": [
+      62584.0,
+      8076.0,
+      65069.0,
+      7672.0,
+      72.0,
+      7600.0,
+      24784.0,
+      40285.0,
+      7712.0
+    ],
+    "activity_date_type": [
+      "1",
+      "3"
+    ],
+    "activity_status_code": "4",
+    "description_narrative": [
+      "​The SHIP project seeks to combine de-worming and vision screening interventions in schools as a demonstration of the benefits of integrating school health interventions within developing countries"
+    ],
+    "activity_date_iso_date": [
+      "2015-01-12T00:00:00Z",
+      "2018-12-31T00:00:00Z"
+    ],
+    "recipient_country_code": [
+      "SN"
+    ],
+    "reporting_org_narrative": [
+      "Sightsavers"
+    ],
+    "recipient_country_narrative": [
+      "Senegal"
+    ]
+  },
+  {
+    "sector_code": [
+      "12220"
+    ],
+    "budget_value": [
+      42784.0,
+      -12158.0
+    ],
+    "iati_identifier": "GB-CHC-207544-90003",
+    "title_narrative": [
+      "School Health Integrated Programming (SHIP) Project - Ethiopia"
+    ],
+    "sector_narrative": [
+      "Basic health care"
+    ],
+    "reporting_org_ref": "GB-CHC-207544",
+    "transaction_value": [
+      69045.0,
+      42784.0,
+      -12158.0,
+      -12158.0,
+      2469.0,
+      40315.0
+    ],
+    "activity_date_type": [
+      "1",
+      "3"
+    ],
+    "activity_status_code": "4",
+    "description_narrative": [
+      "​The SHIP project seeks to combine de-worming and vision screening interventions in schools as a demonstration of the benefits of integrating school health interventions within developing countries"
+    ],
+    "activity_date_iso_date": [
+      "2015-01-12T00:00:00Z",
+      "2016-12-31T00:00:00Z"
+    ],
+    "recipient_country_code": [
+      "ET"
+    ],
+    "reporting_org_narrative": [
+      "Sightsavers"
+    ],
+    "recipient_country_narrative": [
+      "Ethiopia"
+    ]
+  },
+  {
+    "sector_code": [
+      "12220"
+    ],
+    "budget_value": [
+      23870.0
+    ],
+    "iati_identifier": "GB-CHC-207544-90004",
+    "title_narrative": [
+      "School Health Integrated Programming (SHIP) Project - Cambodia"
+    ],
+    "sector_narrative": [
+      "Basic health care"
+    ],
+    "reporting_org_ref": "GB-CHC-207544",
+    "transaction_value": [
+      64853.0,
+      23870.0,
+      23870.0
+    ],
+    "activity_date_type": [
+      "1",
+      "3"
+    ],
+    "activity_status_code": "4",
+    "description_narrative": [
+      "​The SHIP project seeks to combine de-worming and vision screening interventions in schools as a demonstration of the benefits of integrating school health interventions within developing countries"
+    ],
+    "activity_date_iso_date": [
+      "2015-01-12T00:00:00Z",
+      "2016-12-31T00:00:00Z"
+    ],
+    "recipient_country_code": [
+      "KH"
+    ],
+    "reporting_org_narrative": [
+      "Sightsavers"
+    ],
+    "recipient_country_narrative": [
+      "Cambodia"
+    ]
+  },
+  {
+    "sector_code": [
+      "12220"
+    ],
+    "budget_value": [
+      6435.0,
+      171835.0
+    ],
+    "iati_identifier": "GB-CHC-207544-90005",
+    "title_narrative": [
+      "World Bank extension"
+    ],
+    "sector_narrative": [
+      "Basic health care"
+    ],
+    "reporting_org_ref": "GB-CHC-207544",
+    "transaction_value": [
+      207781.0,
+      6435.0,
+      171835.0,
+      76599.0,
+      60221.0,
+      35015.0,
+      6435.0,
+      198411.0
+    ],
+    "activity_date_type": [
+      "1",
+      "3"
+    ],
+    "activity_status_code": "4",
+    "description_narrative": [
+      "School Health integrated programming"
+    ],
+    "activity_date_iso_date": [
+      "2017-01-10T00:00:00Z",
+      "2018-12-31T00:00:00Z"
+    ],
+    "reporting_org_narrative": [
+      "Sightsavers"
+    ]
+  },
+  {
+    "sector_code": [
+      "33110"
+    ],
+    "budget_value": [
+      400000.0
+    ],
+    "iati_identifier": "XM-DAC-1409-21",
+    "title_narrative": [
+      "Diagnostic Trade Integration Study"
+    ],
+    "reporting_org_ref": "XM-DAC-1409",
+    "activity_date_type": [
+      "1",
+      "4"
+    ],
+    "activity_status_code": "3",
+    "description_narrative": [
+      "Evidence-based analysis underpins priority identification needed to guide the trade agenda and the Aid for Trade needs of LDCs. These analytical studies help LDCs determine their biggest constraints to trade integration, prioritize actions to address them accordingly and serve as a basis for the development community to provide trade-related support."
+    ],
+    "activity_date_iso_date": [
+      "2008-12-22T00:00:00Z",
+      "2010-10-29T00:00:00Z"
+    ],
+    "recipient_country_code": [
+      "CD"
+    ],
+    "reporting_org_narrative": [
+      "Enhanced Integrated Framework"
+    ]
+  },
+  {
+    "sector_code": [
+      "33110"
+    ],
+    "budget_value": [
+      400000.0
+    ],
+    "iati_identifier": "XM-DAC-1409-3",
+    "title_narrative": [
+      "DTIS"
+    ],
+    "reporting_org_ref": "XM-DAC-1409",
+    "activity_date_type": [
+      "2",
+      "4"
+    ],
+    "activity_status_code": "4",
+    "description_narrative": [
+      "Evidence-based analysis underpins priority identification needed to guide the trade agenda and the Aid for Trade needs of LDCs. These analytical studies help LDCs determine their biggest constraints to trade integration, prioritize actions to address them accordingly and serve as a basis for the development community to provide trade-related support."
+    ],
+    "activity_date_iso_date": [
+      "2009-07-28T00:00:00Z",
+      "2012-10-31T00:00:00Z"
+    ],
+    "recipient_country_code": [
+      "AF"
+    ],
+    "reporting_org_narrative": [
+      "Enhanced Integrated Framework"
+    ]
+  },
+  {
+    "sector_code": [
+      "33110"
+    ],
+    "budget_value": [
+      200000.0
+    ],
+    "iati_identifier": "XM-DAC-1409-7",
+    "title_narrative": [
+      "DTIS Update"
+    ],
+    "reporting_org_ref": "XM-DAC-1409",
+    "activity_date_type": [
+      "2",
+      "4",
+      "1",
+      "3"
+    ],
+    "activity_status_code": "3",
+    "description_narrative": [
+      "Evidence-based analysis underpins priority identification needed to guide the trade agenda and the Aid for Trade needs of LDCs. These analytical studies help LDCs determine their biggest constraints to trade integration, prioritize actions to address them accordingly and serve as a basis for the development community to provide trade-related support."
+    ],
+    "activity_date_iso_date": [
+      "2013-03-11T00:00:00Z",
+      "2015-06-30T00:00:00Z",
+      "2013-02-24T00:00:00Z",
+      "2015-06-28T00:00:00Z"
+    ],
+    "recipient_country_code": [
+      "BJ"
+    ],
+    "reporting_org_narrative": [
+      "Enhanced Integrated Framework"
+    ]
+  },
+  {
+    "sector_code": [
+      "33110"
+    ],
+    "budget_value": [
+      224422.0
+    ],
+    "iati_identifier": "XM-DAC-1409-37",
+    "title_narrative": [
+      "DTIS Update"
+    ],
+    "reporting_org_ref": "XM-DAC-1409",
+    "activity_date_type": [
+      "2",
+      "4",
+      "1",
+      "3"
+    ],
+    "activity_status_code": "3",
+    "description_narrative": [
+      "Evidence-based analysis underpins priority identification needed to guide the trade agenda and the Aid for Trade needs of LDCs. These analytical studies help LDCs determine their biggest constraints to trade integration, prioritize actions to address them accordingly and serve as a basis for the development community to provide trade-related support."
+    ],
+    "activity_date_iso_date": [
+      "2013-08-06T00:00:00Z",
+      "2015-11-30T00:00:00Z",
+      "2013-07-22T00:00:00Z",
+      "2015-11-28T00:00:00Z"
+    ],
+    "recipient_country_code": [
+      "MG"
+    ],
+    "reporting_org_narrative": [
+      "Enhanced Integrated Framework"
+    ]
+  },
+  {
+    "sector_code": [
+      "33110"
+    ],
+    "budget_value": [
+      198868.52
+    ],
+    "iati_identifier": "XM-DAC-1409-39",
+    "title_narrative": [
+      "DTIS Update"
+    ],
+    "reporting_org_ref": "XM-DAC-1409",
+    "activity_date_type": [
+      "2",
+      "4",
+      "1",
+      "3"
+    ],
+    "activity_status_code": "4",
+    "description_narrative": [
+      "Evidence-based analysis underpins priority identification needed to guide the trade agenda and the Aid for Trade needs of LDCs. These analytical studies help LDCs determine their biggest constraints to trade integration, prioritize actions to address them accordingly and serve as a basis for the development community to provide trade-related support."
+    ],
+    "activity_date_iso_date": [
+      "2012-07-20T00:00:00Z",
+      "2013-12-31T00:00:00Z",
+      "2012-07-05T00:00:00Z",
+      "2013-12-29T00:00:00Z"
+    ],
+    "recipient_country_code": [
+      "MW"
+    ],
+    "reporting_org_narrative": [
+      "Enhanced Integrated Framework"
+    ]
+  },
+  {
+    "sector_code": [
+      "33110"
+    ],
+    "budget_value": [
+      400000.0
+    ],
+    "iati_identifier": "XM-DAC-1409-41",
+    "title_narrative": [
+      "DTIS Update"
+    ],
+    "reporting_org_ref": "XM-DAC-1409",
+    "activity_date_type": [
+      "2",
+      "4",
+      "1",
+      "3"
+    ],
+    "activity_status_code": "3",
+    "description_narrative": [
+      "Evidence-based analysis underpins priority identification needed to guide the trade agenda and the Aid for Trade needs of LDCs. These analytical studies help LDCs determine their biggest constraints to trade integration, prioritize actions to address them accordingly and serve as a basis for the development community to provide trade-related support."
+    ],
+    "activity_date_iso_date": [
+      "2014-09-09T00:00:00Z",
+      "2016-05-31T00:00:00Z",
+      "2014-08-25T00:00:00Z",
+      "2016-05-29T00:00:00Z"
+    ],
+    "recipient_country_code": [
+      "MR"
+    ],
+    "reporting_org_narrative": [
+      "Enhanced Integrated Framework"
+    ]
+  },
+  {
+    "sector_code": [
+      "33110"
+    ],
+    "budget_value": [
+      192387.86
+    ],
+    "iati_identifier": "XM-DAC-1409-59",
+    "title_narrative": [
+      "DTIS Update"
+    ],
+    "reporting_org_ref": "XM-DAC-1409",
+    "activity_date_type": [
+      "2",
+      "4",
+      "1",
+      "3"
+    ],
+    "activity_status_code": "4",
+    "description_narrative": [
+      "Evidence-based analysis underpins priority identification needed to guide the trade agenda and the Aid for Trade needs of LDCs. These analytical studies help LDCs determine their biggest constraints to trade integration, prioritize actions to address them accordingly and serve as a basis for the development community to provide trade-related support."
+    ],
+    "activity_date_iso_date": [
+      "2011-10-19T00:00:00Z",
+      "2013-03-29T00:00:00Z",
+      "2011-10-04T00:00:00Z",
+      "2013-03-27T00:00:00Z"
+    ],
+    "recipient_country_code": [
+      "UG"
+    ],
+    "reporting_org_narrative": [
+      "Enhanced Integrated Framework"
+    ]
+  },
+  {
+    "sector_code": [
+      "33110"
+    ],
+    "budget_value": [
+      397148.17
+    ],
+    "iati_identifier": "XM-DAC-1409-61",
+    "title_narrative": [
+      "DTIS Update"
+    ],
+    "reporting_org_ref": "XM-DAC-1409",
+    "activity_date_type": [
+      "2",
+      "4",
+      "1",
+      "3"
+    ],
+    "activity_status_code": "4",
+    "description_narrative": [
+      "Evidence-based analysis underpins priority identification needed to guide the trade agenda and the Aid for Trade needs of LDCs. These analytical studies help LDCs determine their biggest constraints to trade integration, prioritize actions to address them accordingly and serve as a basis for the development community to provide trade-related support."
+    ],
+    "activity_date_iso_date": [
+      "2012-07-12T00:00:00Z",
+      "2014-03-28T00:00:00Z",
+      "2012-06-27T00:00:00Z",
+      "2014-03-26T00:00:00Z"
+    ],
+    "recipient_country_code": [
+      "ZM"
+    ],
+    "reporting_org_narrative": [
+      "Enhanced Integrated Framework"
+    ]
+  },
+  {
+    "sector_code": [
+      "32161"
+    ],
+    "budget_value": [
+      1112847.0
+    ],
+    "iati_identifier": "XM-DAC-1409-65",
+    "title_narrative": [
+      "CEDEP I - Rice"
+    ],
+    "reporting_org_ref": "XM-DAC-1409",
+    "activity_date_type": [
+      "2",
+      "4",
+      "1",
+      "3"
+    ],
+    "activity_status_code": "3",
+    "description_narrative": [
+      "Cambodia Export Diversification and Expansion Program (CEDEP) I: Milled Rice, High-Value Silk, Program Monitoring Function"
+    ],
+    "activity_date_iso_date": [
+      "2012-12-14T00:00:00Z",
+      "2016-06-30T00:00:00Z",
+      "2012-11-29T00:00:00Z",
+      "2016-06-28T00:00:00Z"
+    ],
+    "recipient_country_code": [
+      "KH"
+    ],
+    "reporting_org_narrative": [
+      "Enhanced Integrated Framework"
+    ]
+  },
+  {
+    "sector_code": [
+      "33110"
+    ],
+    "budget_value": [
+      400000.0
+    ],
+    "iati_identifier": "XM-DAC-1409-57",
+    "title_narrative": [
+      "Diagnostic Trade Integration Study"
+    ],
+    "reporting_org_ref": "XM-DAC-1409",
+    "activity_date_type": [
+      "2",
+      "4"
+    ],
+    "activity_status_code": "3",
+    "description_narrative": [
+      "Evidence-based analysis underpins priority identification needed to guide the trade agenda and the Aid for Trade needs of LDCs. These analytical studies help LDCs determine their biggest constraints to trade integration, prioritize actions to address them accordingly and serve as a basis for the development community to provide trade-related support."
+    ],
+    "activity_date_iso_date": [
+      "2008-12-22T00:00:00Z",
+      "2010-10-29T00:00:00Z"
+    ],
+    "recipient_country_code": [
+      "TG"
+    ],
+    "reporting_org_narrative": [
+      "Enhanced Integrated Framework"
+    ]
+  },
+  {
+    "sector_code": [
+      "33110"
+    ],
+    "budget_value": [
+      460000.0
+    ],
+    "iati_identifier": "XM-DAC-1409-5",
+    "title_narrative": [
+      "DTIS"
+    ],
+    "reporting_org_ref": "XM-DAC-1409",
+    "activity_date_type": [
+      "2",
+      "4",
+      "1",
+      "3"
+    ],
+    "activity_status_code": "3",
+    "description_narrative": [
+      "Evidence-based analysis underpins priority identification needed to guide the trade agenda and the Aid for Trade needs of LDCs. These analytical studies help LDCs determine their biggest constraints to trade integration, prioritize actions to address them accordingly and serve as a basis for the development community to provide trade-related support."
+    ],
+    "activity_date_iso_date": [
+      "2011-05-19T00:00:00Z",
+      "2016-06-30T00:00:00Z",
+      "2011-05-04T00:00:00Z",
+      "2016-06-28T00:00:00Z"
+    ],
+    "recipient_country_code": [
+      "BD"
+    ],
+    "reporting_org_narrative": [
+      "Enhanced Integrated Framework"
+    ]
+  },
+  {
+    "sector_code": [
+      "33110"
+    ],
+    "budget_value": [
+      191119.09
+    ],
+    "iati_identifier": "XM-DAC-1409-10",
+    "title_narrative": [
+      "DTIS Update"
+    ],
+    "reporting_org_ref": "XM-DAC-1409",
+    "activity_date_type": [
+      "2",
+      "4",
+      "1",
+      "3"
+    ],
+    "activity_status_code": "4",
+    "description_narrative": [
+      "Evidence-based analysis underpins priority identification needed to guide the trade agenda and the Aid for Trade needs of LDCs. These analytical studies help LDCs determine their biggest constraints to trade integration, prioritize actions to address them accordingly and serve as a basis for the development community to provide trade-related support."
+    ],
+    "activity_date_iso_date": [
+      "2013-02-11T00:00:00Z",
+      "2014-05-30T00:00:00Z",
+      "2013-01-27T00:00:00Z",
+      "2014-05-28T00:00:00Z"
+    ],
+    "recipient_country_code": [
+      "BF"
+    ],
+    "reporting_org_narrative": [
+      "Enhanced Integrated Framework"
+    ]
+  },
+  {
+    "sector_code": [
+      "33110"
+    ],
+    "budget_value": [
+      198058.16
+    ],
+    "iati_identifier": "XM-DAC-1409-12",
+    "title_narrative": [
+      "DTIS Update"
+    ],
+    "reporting_org_ref": "XM-DAC-1409",
+    "activity_date_type": [
+      "2",
+      "4",
+      "1",
+      "3"
+    ],
+    "activity_status_code": "4",
+    "description_narrative": [
+      "Evidence-based analysis underpins priority identification needed to guide the trade agenda and the Aid for Trade needs of LDCs. These analytical studies help LDCs determine their biggest constraints to trade integration, prioritize actions to address them accordingly and serve as a basis for the development community to provide trade-related support."
+    ],
+    "activity_date_iso_date": [
+      "2011-05-19T00:00:00Z",
+      "2013-06-30T00:00:00Z",
+      "2011-05-04T00:00:00Z",
+      "2013-06-28T00:00:00Z"
+    ],
+    "recipient_country_code": [
+      "BI"
+    ],
+    "reporting_org_narrative": [
+      "Enhanced Integrated Framework"
+    ]
+  },
+  {
+    "sector_code": [
+      "33110"
+    ],
+    "budget_value": [
+      199661.24
+    ],
+    "iati_identifier": "XM-DAC-1409-50",
+    "title_narrative": [
+      "DTIS Update"
+    ],
+    "reporting_org_ref": "XM-DAC-1409",
+    "activity_date_type": [
+      "2",
+      "4",
+      "1",
+      "3"
+    ],
+    "activity_status_code": "4",
+    "description_narrative": [
+      "Evidence-based analysis underpins priority identification needed to guide the trade agenda and the Aid for Trade needs of LDCs. These analytical studies help LDCs determine their biggest constraints to trade integration, prioritize actions to address them accordingly and serve as a basis for the development community to provide trade-related support."
+    ],
+    "activity_date_iso_date": [
+      "2012-04-12T00:00:00Z",
+      "2014-06-30T00:00:00Z",
+      "2012-03-28T00:00:00Z",
+      "2014-06-28T00:00:00Z"
+    ],
+    "recipient_country_code": [
+      "SL"
+    ],
+    "reporting_org_narrative": [
+      "Enhanced Integrated Framework"
+    ]
+  },
+  {
+    "sector_code": [
+      "33110"
+    ],
+    "budget_value": [
+      400000.0
+    ],
+    "iati_identifier": "XM-DAC-1409-44",
+    "title_narrative": [
+      "DTIS"
+    ],
+    "reporting_org_ref": "XM-DAC-1409",
+    "activity_date_type": [
+      "2",
+      "4",
+      "1",
+      "3"
+    ],
+    "activity_status_code": "3",
+    "description_narrative": [
+      "Evidence-based analysis underpins priority identification needed to guide the trade agenda and the Aid for Trade needs of LDCs. These analytical studies help LDCs determine their biggest constraints to trade integration, prioritize actions to address them accordingly and serve as a basis for the development community to provide trade-related support."
+    ],
+    "activity_date_iso_date": [
+      "2014-06-19T00:00:00Z",
+      "2016-06-30T00:00:00Z",
+      "2014-06-04T00:00:00Z",
+      "2016-06-28T00:00:00Z"
+    ],
+    "recipient_country_code": [
+      "MM"
+    ],
+    "reporting_org_narrative": [
+      "Enhanced Integrated Framework"
+    ]
+  },
+  {
+    "sector_code": [
+      "33110"
+    ],
+    "budget_value": [
+      294640.6
+    ],
+    "iati_identifier": "XM-DAC-1409-30",
+    "title_narrative": [
+      "DTIS"
+    ],
+    "reporting_org_ref": "XM-DAC-1409",
+    "activity_date_type": [
+      "2",
+      "4",
+      "1",
+      "3"
+    ],
+    "activity_status_code": "4",
+    "description_narrative": [
+      "Evidence-based analysis underpins priority identification needed to guide the trade agenda and the Aid for Trade needs of LDCs. These analytical studies help LDCs determine their biggest constraints to trade integration, prioritize actions to address them accordingly and serve as a basis for the development community to provide trade-related support."
+    ],
+    "activity_date_iso_date": [
+      "2011-08-18T00:00:00Z",
+      "2013-12-31T00:00:00Z",
+      "2011-08-03T00:00:00Z",
+      "2013-12-29T00:00:00Z"
+    ],
+    "recipient_country_code": [
+      "HT"
+    ],
+    "reporting_org_narrative": [
+      "Enhanced Integrated Framework"
+    ]
+  },
+  {
+    "sector_code": [
+      "33110"
+    ],
+    "budget_value": [
+      200000.0
+    ],
+    "iati_identifier": "XM-DAC-1409-36",
+    "title_narrative": [
+      "DTIS Update"
+    ],
+    "reporting_org_ref": "XM-DAC-1409",
+    "activity_date_type": [
+      "2",
+      "4",
+      "1",
+      "3"
+    ],
+    "activity_status_code": "3",
+    "description_narrative": [
+      "Evidence-based analysis underpins priority identification needed to guide the trade agenda and the Aid for Trade needs of LDCs. These analytical studies help LDCs determine their biggest constraints to trade integration, prioritize actions to address them accordingly and serve as a basis for the development community to provide trade-related support."
+    ],
+    "activity_date_iso_date": [
+      "2012-08-21T00:00:00Z",
+      "2016-02-29T00:00:00Z",
+      "2012-08-06T00:00:00Z",
+      "2016-02-27T00:00:00Z"
+    ],
+    "recipient_country_code": [
+      "LR"
+    ],
+    "reporting_org_narrative": [
+      "Enhanced Integrated Framework"
+    ]
+  },
+  {
+    "sector_code": [
+      "33110"
+    ],
+    "budget_value": [
+      173520.91
+    ],
+    "iati_identifier": "XM-DAC-1409-48",
+    "title_narrative": [
+      "DTIS Update"
+    ],
+    "reporting_org_ref": "XM-DAC-1409",
+    "activity_date_type": [
+      "2",
+      "4",
+      "1",
+      "3"
+    ],
+    "activity_status_code": "4",
+    "description_narrative": [
+      "Evidence-based analysis underpins priority identification needed to guide the trade agenda and the Aid for Trade needs of LDCs. These analytical studies help LDCs determine their biggest constraints to trade integration, prioritize actions to address them accordingly and serve as a basis for the development community to provide trade-related support."
+    ],
+    "activity_date_iso_date": [
+      "2012-05-03T00:00:00Z",
+      "2014-06-30T00:00:00Z",
+      "2012-04-18T00:00:00Z",
+      "2014-06-28T00:00:00Z"
+    ],
+    "recipient_country_code": [
+      "ST"
+    ],
+    "reporting_org_narrative": [
+      "Enhanced Integrated Framework"
+    ]
+  },
+  {
+    "sector_code": [
+      "33110"
+    ],
+    "budget_value": [
+      197549.17
+    ],
+    "iati_identifier": "XM-DAC-1409-54",
+    "title_narrative": [
+      "DTIS Update"
+    ],
+    "reporting_org_ref": "XM-DAC-1409",
+    "activity_date_type": [
+      "2",
+      "4",
+      "1",
+      "3"
+    ],
+    "activity_status_code": "4",
+    "description_narrative": [
+      "Evidence-based analysis underpins priority identification needed to guide the trade agenda and the Aid for Trade needs of LDCs. These analytical studies help LDCs determine their biggest constraints to trade integration, prioritize actions to address them accordingly and serve as a basis for the development community to provide trade-related support."
+    ],
+    "activity_date_iso_date": [
+      "2013-04-24T00:00:00Z",
+      "2014-10-30T00:00:00Z",
+      "2013-04-09T00:00:00Z",
+      "2014-10-28T00:00:00Z"
+    ],
+    "recipient_country_code": [
+      "SD"
+    ],
+    "reporting_org_narrative": [
+      "Enhanced Integrated Framework"
+    ]
+  },
+  {
+    "sector_code": [
+      "33110"
+    ],
+    "iati_identifier": "XM-DAC-1409-1525",
+    "title_narrative": [
+      "DTIS Update (DTISU)"
+    ],
+    "reporting_org_ref": "XM-DAC-1409",
+    "transaction_value": [
+      146000.0,
+      204000.0
+    ],
+    "activity_date_type": [
+      "2",
+      "3"
+    ],
+    "activity_status_code": "2",
+    "description_narrative": [
+      "Evidence-based analysis underpins priority identification needed to guide the trade agenda and the Aid for Trade needs of LDCs. These analytical studies help LDCs determine their biggest constraints to trade integration, prioritize actions to address them accordingly and serve as a basis for the development community to provide trade-related support.",
+      "The DTISU seeks to provide a new perspective of trade priorities in Tanzania taking into account changes that have been unfolding at the national and international levels since the 2005 DTIS, enabling Tanzania to align its trade policy and strategies better to ongoing economic transformation initiatives, focused increasingly on the agricultural, mining and tourism sectors."
+    ],
+    "activity_date_iso_date": [
+      "2015-11-01T00:00:00Z",
+      "2017-07-30T00:00:00Z"
+    ],
+    "recipient_country_code": [
+      "TZ"
+    ],
+    "reporting_org_narrative": [
+      "Enhanced Integrated Framework"
+    ]
+  },
+  {
+    "sector_code": [
+      "12240"
+    ],
+    "budget_value": [
+      12700000.0,
+      12700000.0,
+      20700000.0,
+      21000000.0,
+      22900000.0
+    ],
+    "iati_identifier": "GB-COH-09288843-Madagascar 2018-2022",
+    "title_narrative": [
+      "An Integrated Approach to Improving Nutrition Outcomes in Madagascar"
+    ],
+    "reporting_org_ref": "GB-COH-09288843",
+    "transaction_value": [
+      10000000.0,
+      8120179.0
+    ],
+    "activity_date_type": [
+      "2",
+      "3"
+    ],
+    "activity_status_code": "2",
+    "description_narrative": [
+      "The Power of Nutrition is contributing $10m to this $90m, 5-year programme, co-financed with $80m of IDA. The $90m is the first in a multi-phase approach to be implemented over 10 years, which will contribute to the Government of Madagascar's long term vision of achieving greater human capital. Through Investment Project Financing (IPF) , the project aims to increase the utilization of an evidence-based package of reproductiv, maternal, neonatal, and child health and nutrition (RMCHN) services and improve key nutrition behaviours known to reduce stunting. This investment is providing the necessary analytic and technical assistance to build a knowledge base and develop recommendations which will inform the Government’s decisions on the more complex and longer term institutional, financing, and policy reforms required to achieve and sustain results over the medium to long term.",
+      "Increase percentage of children 6-23 months old with minimum meal frequency by 10 percentage points from 2018 baseline Increase percentage of infants 0-5 months old who are exclusively breastfed by 10 percentage points from 2018 baseline Increase percentage of children 6-59 months receiving vitamin A supplementation within the last 6 months by 15 percentage points from 2018 baseline Increase percentage of women receiving any IFA supplementation at last pregnancy by 15 percentage points from 2018 baseline Increase number of facility-based deliveries from 141,300 to 290,000"
+    ],
+    "activity_date_iso_date": [
+      "2017-12-12T00:00:00Z",
+      "2023-07-31T00:00:00Z"
+    ],
+    "recipient_country_code": [
+      "MG"
+    ],
+    "reporting_org_narrative": [
+      "The Power of Nutrition"
+    ]
+  },
+  {
+    "sector_code": [
+      "32164",
+      "W"
+    ],
+    "iati_identifier": "XI-BRIDGE-6385676864-10879",
+    "title_narrative": [
+      "Improved Management Of Ewaste And Healthcare Waste To Reduce Emissions Of Unintentionally Produced POPs (UPOPs)"
+    ],
+    "sector_narrative": [
+      "+![cdata[Chemicals]]+",
+      "Chemicals and Waste"
+    ],
+    "reporting_org_ref": "XI-BRIDGE-6385676864",
+    "transaction_value": [
+      0.0,
+      0.0,
+      700000.0,
+      9132421.0
+    ],
+    "activity_date_type": [
+      "1",
+      "2",
+      "3"
+    ],
+    "activity_status_code": "2",
+    "description_narrative": [
+      "To improve management of E-Waste and Healthcare Waste (HCW)",
+      "Note: Disbursement data provided is cumulative and covers disbursement made by the project Agency."
+    ],
+    "activity_date_iso_date": [
+      "2023-01-25T00:00:00Z",
+      "2023-02-28T00:00:00Z",
+      "2026-12-31T00:00:00Z"
+    ],
+    "recipient_country_code": [
+      "EG"
+    ],
+    "reporting_org_narrative": [
+      "Global Environment Facility"
+    ],
+    "recipient_country_narrative": [
+      "Egypt"
+    ]
+  },
+  {
+    "sector_code": [
+      "41010",
+      "M"
+    ],
+    "budget_value": [
+      800000.0,
+      800000.0,
+      800000.0,
+      800000.0,
+      800000.0
+    ],
+    "iati_identifier": "XI-BRIDGE-6385676864-1275",
+    "title_narrative": [
+      "Community-based Integrated Ecosytem Management Program under the Community Action Program"
+    ],
+    "sector_narrative": [
+      "+![cdata[Environmental policy and administrative management]]+",
+      "Multi Focal Area"
+    ],
+    "reporting_org_ref": "XI-BRIDGE-6385676864",
+    "transaction_value": [
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      4000000.0
+    ],
+    "activity_date_type": [
+      "1",
+      "2",
+      "3",
+      "4"
+    ],
+    "activity_status_code": "3",
+    "description_narrative": [
+      "NA",
+      "Note: Disbursement data provided is cumulative and covers disbursement made by the project Agency."
+    ],
+    "activity_date_iso_date": [
+      "2003-02-23T00:00:00Z",
+      "2003-03-20T00:00:00Z",
+      "2007-06-30T00:00:00Z",
+      "2011-06-27T00:00:00Z"
+    ],
+    "recipient_country_code": [
+      "NE"
+    ],
+    "reporting_org_narrative": [
+      "Global Environment Facility"
+    ],
+    "recipient_country_narrative": [
+      "Niger"
+    ]
+  },
+  {
+    "sector_code": [
+      "31130",
+      "L"
+    ],
+    "budget_value": [
+      934000.0,
+      934000.0,
+      934000.0,
+      934000.0,
+      934000.0
+    ],
+    "iati_identifier": "XI-BRIDGE-6385676864-3382",
+    "title_narrative": [
+      "SIP: Community Driven SLM for Environmental and Food Security"
+    ],
+    "sector_narrative": [
+      "+![cdata[Agricultural land resources]]+",
+      "Land Degradation"
+    ],
+    "reporting_org_ref": "XI-BRIDGE-6385676864",
+    "transaction_value": [
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      4670000.0
+    ],
+    "activity_date_type": [
+      "1",
+      "2",
+      "3",
+      "4"
+    ],
+    "activity_status_code": "3",
+    "description_narrative": [
+      "NA",
+      "Note: Disbursement data provided is cumulative and covers disbursement made by the project Agency."
+    ],
+    "activity_date_iso_date": [
+      "2008-07-08T00:00:00Z",
+      "2008-08-29T00:00:00Z",
+      "2013-04-30T00:00:00Z",
+      "2013-10-30T00:00:00Z"
+    ],
+    "recipient_country_code": [
+      "NE"
+    ],
+    "reporting_org_narrative": [
+      "Global Environment Facility"
+    ],
+    "recipient_country_narrative": [
+      "Niger"
+    ]
+  },
+  {
+    "sector_code": [
+      "41030",
+      "B"
+    ],
+    "budget_value": [
+      324970.0,
+      324970.0,
+      324970.0
+    ],
+    "iati_identifier": "XI-BRIDGE-6385676864-1642",
+    "title_narrative": [
+      "Formoso River -- Integrated Watershed Management and Protection"
+    ],
+    "sector_narrative": [
+      "+![cdata[Biodiversity]]+",
+      "Biodiversity"
+    ],
+    "reporting_org_ref": "XI-BRIDGE-6385676864",
+    "transaction_value": [
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      974910.0
+    ],
+    "activity_date_type": [
+      "1",
+      "2",
+      "3",
+      "4"
+    ],
+    "activity_status_code": "3",
+    "description_narrative": [
+      "NA",
+      "Note: Disbursement data provided is cumulative and covers disbursement made by the project Agency."
+    ],
+    "activity_date_iso_date": [
+      "2002-08-07T00:00:00Z",
+      "2005-06-27T00:00:00Z",
+      "2011-12-31T00:00:00Z",
+      "2010-12-31T00:00:00Z"
+    ],
+    "recipient_country_code": [
+      "BR"
+    ],
+    "reporting_org_narrative": [
+      "Global Environment Facility"
+    ],
+    "recipient_country_narrative": [
+      "Brazil"
+    ]
+  },
+  {
+    "sector_code": [
+      "41030",
+      "B"
+    ],
+    "budget_value": [
+      2000000.0,
+      2000000.0,
+      2000000.0,
+      2000000.0,
+      2000000.0
+    ],
+    "iati_identifier": "XI-BRIDGE-6385676864-58",
+    "title_narrative": [
+      "National Biodiversity Project (PROBIO)"
+    ],
+    "sector_narrative": [
+      "+![cdata[Biodiversity]]+",
+      "Biodiversity"
+    ],
+    "reporting_org_ref": "XI-BRIDGE-6385676864",
+    "transaction_value": [
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      10000000.0
+    ],
+    "activity_date_type": [
+      "1",
+      "2",
+      "3",
+      "4"
+    ],
+    "activity_status_code": "3",
+    "description_narrative": [
+      "NA",
+      "Note: Disbursement data provided is cumulative and covers disbursement made by the project Agency."
+    ],
+    "activity_date_iso_date": [
+      "1991-05-01T00:00:00Z",
+      "1996-04-16T00:00:00Z",
+      "2001-12-31T00:00:00Z",
+      "2006-06-29T00:00:00Z"
+    ],
+    "recipient_country_code": [
+      "BR"
+    ],
+    "reporting_org_narrative": [
+      "Global Environment Facility"
+    ],
+    "recipient_country_narrative": [
+      "Brazil"
+    ]
+  },
+  {
+    "sector_code": [
+      "C"
+    ],
+    "iati_identifier": "XI-BRIDGE-6385676864-63",
+    "title_narrative": [
+      "Biomass Power Commercial Demonstration"
+    ],
+    "sector_narrative": [
+      "Climate Change"
+    ],
+    "reporting_org_ref": "XI-BRIDGE-6385676864",
+    "transaction_value": [
+      0.0,
+      40000000.0
+    ],
+    "activity_date_type": [
+      "1"
+    ],
+    "activity_status_code": "5",
+    "description_narrative": [
+      "NA",
+      "Note: Disbursement data provided is cumulative and covers disbursement made by the project Agency."
+    ],
+    "activity_date_iso_date": [
+      "1997-04-02T00:00:00Z"
+    ],
+    "recipient_country_code": [
+      "BR"
+    ],
+    "reporting_org_narrative": [
+      "Global Environment Facility"
+    ],
+    "recipient_country_narrative": [
+      "Brazil"
+    ]
+  },
+  {
+    "sector_code": [
+      "41030",
+      "B"
+    ],
+    "budget_value": [
+      4000000.0,
+      4000000.0,
+      4000000.0,
+      4000000.0,
+      4000000.0
+    ],
+    "iati_identifier": "XI-BRIDGE-6385676864-126",
+    "title_narrative": [
+      "Brazilian Biodiversity Fund"
+    ],
+    "sector_narrative": [
+      "+![cdata[Biodiversity]]+",
+      "Biodiversity"
+    ],
+    "reporting_org_ref": "XI-BRIDGE-6385676864",
+    "transaction_value": [
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      20000000.0
+    ],
+    "activity_date_type": [
+      "1",
+      "2",
+      "3",
+      "4"
+    ],
+    "activity_status_code": "3",
+    "description_narrative": [
+      "NA",
+      "Note: Disbursement data provided is cumulative and covers disbursement made by the project Agency."
+    ],
+    "activity_date_iso_date": [
+      "1991-05-01T00:00:00Z",
+      "1996-04-16T00:00:00Z",
+      "2000-12-31T00:00:00Z",
+      "2004-10-18T00:00:00Z"
+    ],
+    "recipient_country_code": [
+      "BR"
+    ],
+    "reporting_org_narrative": [
+      "Global Environment Facility"
+    ],
+    "recipient_country_narrative": [
+      "Brazil"
+    ]
+  },
+  {
+    "sector_code": [
+      "41020",
+      "C"
+    ],
+    "budget_value": [
+      4000000.0,
+      4000000.0,
+      4000000.0,
+      4000000.0,
+      4000000.0
+    ],
+    "iati_identifier": "XI-BRIDGE-6385676864-128",
+    "title_narrative": [
+      "Energy Efficiency Project"
+    ],
+    "sector_narrative": [
+      "+![cdata[Biosphere protection]]+",
+      "Climate Change"
+    ],
+    "reporting_org_ref": "XI-BRIDGE-6385676864",
+    "transaction_value": [
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      20000000.0
+    ],
+    "activity_date_type": [
+      "1",
+      "2",
+      "3",
+      "4"
+    ],
+    "activity_status_code": "3",
+    "description_narrative": [
+      "NA",
+      "Note: Disbursement data provided is cumulative and covers disbursement made by the project Agency."
+    ],
+    "activity_date_iso_date": [
+      "1999-05-17T00:00:00Z",
+      "1999-10-05T00:00:00Z",
+      "2003-12-31T00:00:00Z",
+      "2007-01-30T00:00:00Z"
+    ],
+    "recipient_country_code": [
+      "BR"
+    ],
+    "reporting_org_narrative": [
+      "Global Environment Facility"
+    ],
+    "recipient_country_narrative": [
+      "Brazil"
+    ]
+  },
+  {
+    "sector_code": [
+      "31210",
+      "L"
+    ],
+    "budget_value": [
+      1550000.0,
+      1550000.0,
+      1550000.0,
+      1550000.0,
+      1550000.0
+    ],
+    "iati_identifier": "XI-BRIDGE-6385676864-2356",
+    "title_narrative": [
+      "Ecosystem Restoration of Riparian Forests in Sao Paulo"
+    ],
+    "sector_narrative": [
+      "+![cdata[Forestry policy and administrative management]]+",
+      "Land Degradation"
+    ],
+    "reporting_org_ref": "XI-BRIDGE-6385676864",
+    "transaction_value": [
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      7750000.0
+    ],
+    "activity_date_type": [
+      "1",
+      "2",
+      "3",
+      "4"
+    ],
+    "activity_status_code": "3",
+    "description_narrative": [
+      "NA",
+      "Note: Disbursement data provided is cumulative and covers disbursement made by the project Agency."
+    ],
+    "activity_date_iso_date": [
+      "2005-05-31T00:00:00Z",
+      "2005-06-21T00:00:00Z",
+      "2011-12-31T00:00:00Z",
+      "2011-10-27T00:00:00Z"
+    ],
+    "recipient_country_code": [
+      "BR"
+    ],
+    "reporting_org_narrative": [
+      "Global Environment Facility"
+    ],
+    "recipient_country_narrative": [
+      "Brazil"
+    ]
+  },
+  {
+    "sector_code": [
+      "41030",
+      "B"
+    ],
+    "budget_value": [
+      1000000.0,
+      1000000.0,
+      1000000.0,
+      1000000.0,
+      1000000.0
+    ],
+    "iati_identifier": "XI-BRIDGE-6385676864-2450",
+    "title_narrative": [
+      "Rio Grande Do Sul Biodiversity Conservation"
+    ],
+    "sector_narrative": [
+      "+![cdata[Biodiversity]]+",
+      "Biodiversity"
+    ],
+    "reporting_org_ref": "XI-BRIDGE-6385676864",
+    "transaction_value": [
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      5000000.0
+    ],
+    "activity_date_type": [
+      "1",
+      "2",
+      "3",
+      "4"
+    ],
+    "activity_status_code": "3",
+    "description_narrative": [
+      "NA",
+      "Note: Disbursement data provided is cumulative and covers disbursement made by the project Agency."
+    ],
+    "activity_date_iso_date": [
+      "2009-10-20T00:00:00Z",
+      "2009-12-22T00:00:00Z",
+      "2015-02-28T00:00:00Z",
+      "2016-09-30T00:00:00Z"
+    ],
+    "recipient_country_code": [
+      "BR"
+    ],
+    "reporting_org_narrative": [
+      "Global Environment Facility"
+    ],
+    "recipient_country_narrative": [
+      "Brazil"
+    ]
+  },
+  {
+    "sector_code": [
+      "41030",
+      "B"
+    ],
+    "budget_value": [
+      1436000.0,
+      1436000.0,
+      1436000.0,
+      1436000.0,
+      1436000.0
+    ],
+    "iati_identifier": "XI-BRIDGE-6385676864-1299",
+    "title_narrative": [
+      "Integrated Management of Aquatic Resources in the Amazon (AquaBio)"
+    ],
+    "sector_narrative": [
+      "+![cdata[Biodiversity]]+",
+      "Biodiversity"
+    ],
+    "reporting_org_ref": "XI-BRIDGE-6385676864",
+    "transaction_value": [
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      7180000.0
+    ],
+    "activity_date_type": [
+      "1",
+      "2",
+      "3",
+      "4"
+    ],
+    "activity_status_code": "3",
+    "description_narrative": [
+      "NA",
+      "Note: Disbursement data provided is cumulative and covers disbursement made by the project Agency."
+    ],
+    "activity_date_iso_date": [
+      "2006-05-16T00:00:00Z",
+      "2006-06-13T00:00:00Z",
+      "2007-12-13T00:00:00Z",
+      "2012-09-26T00:00:00Z"
+    ],
+    "recipient_country_code": [
+      "BR"
+    ],
+    "reporting_org_narrative": [
+      "Global Environment Facility"
+    ],
+    "recipient_country_narrative": [
+      "Brazil"
+    ]
+  },
+  {
+    "sector_code": [
+      "41030",
+      "B"
+    ],
+    "budget_value": [
+      1840000.0,
+      1840000.0,
+      1840000.0,
+      1840000.0,
+      1840000.0
+    ],
+    "iati_identifier": "XI-BRIDGE-6385676864-65",
+    "title_narrative": [
+      "El Kala National Park and Wetlands Complex Management"
+    ],
+    "sector_narrative": [
+      "+![cdata[Biodiversity]]+",
+      "Biodiversity"
+    ],
+    "reporting_org_ref": "XI-BRIDGE-6385676864",
+    "transaction_value": [
+      0.0,
+      9200000.0
+    ],
+    "activity_date_type": [
+      "1",
+      "2",
+      "3",
+      "4"
+    ],
+    "activity_status_code": "3",
+    "description_narrative": [
+      "NA",
+      "Note: Disbursement data provided is cumulative and covers disbursement made by the project Agency."
+    ],
+    "activity_date_iso_date": [
+      "1991-05-01T00:00:00Z",
+      "1994-04-29T00:00:00Z",
+      "1998-06-30T00:00:00Z",
+      "2000-02-08T00:00:00Z"
+    ],
+    "recipient_country_code": [
+      "DZ"
+    ],
+    "reporting_org_narrative": [
+      "Global Environment Facility"
+    ],
+    "recipient_country_narrative": [
+      "Algeria"
+    ]
+  },
+  {
+    "sector_code": [
+      "41010",
+      "M"
+    ],
+    "budget_value": [
+      2000000.0,
+      2000000.0,
+      2000000.0,
+      2000000.0,
+      2000000.0
+    ],
+    "iati_identifier": "XI-BRIDGE-6385676864-1476",
+    "title_narrative": [
+      "Caatinga Conservation and Sustainable Management Project"
+    ],
+    "sector_narrative": [
+      "+![cdata[Environmental policy and administrative management]]+",
+      "Multi Focal Area"
+    ],
+    "reporting_org_ref": "XI-BRIDGE-6385676864",
+    "transaction_value": [
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      10000000.0
+    ],
+    "activity_date_type": [
+      "1",
+      "2",
+      "3",
+      "4"
+    ],
+    "activity_status_code": "3",
+    "description_narrative": [
+      "NA",
+      "Note: Disbursement data provided is cumulative and covers disbursement made by the project Agency."
+    ],
+    "activity_date_iso_date": [
+      "2007-05-16T00:00:00Z",
+      "2007-06-26T00:00:00Z",
+      "2012-10-31T00:00:00Z",
+      "2014-06-27T00:00:00Z"
+    ],
+    "recipient_country_code": [
+      "BR"
+    ],
+    "reporting_org_narrative": [
+      "Global Environment Facility"
+    ],
+    "recipient_country_narrative": [
+      "Brazil"
+    ]
+  },
+  {
+    "sector_code": [
+      "41010",
+      "M"
+    ],
+    "budget_value": [
+      1350000.0,
+      1350000.0,
+      1350000.0,
+      1350000.0,
+      1350000.0
+    ],
+    "iati_identifier": "XI-BRIDGE-6385676864-1544",
+    "title_narrative": [
+      "Rio de Janeiro Integrated Ecosystem Management in Production Landscapes of the North-Northwestern Fluminense"
+    ],
+    "sector_narrative": [
+      "+![cdata[Environmental policy and administrative management]]+",
+      "Multi Focal Area"
+    ],
+    "reporting_org_ref": "XI-BRIDGE-6385676864",
+    "transaction_value": [
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      6750000.0
+    ],
+    "activity_date_type": [
+      "1",
+      "2",
+      "3",
+      "4"
+    ],
+    "activity_status_code": "3",
+    "description_narrative": [
+      "NA",
+      "Note: Disbursement data provided is cumulative and covers disbursement made by the project Agency."
+    ],
+    "activity_date_iso_date": [
+      "2005-05-04T00:00:00Z",
+      "2005-05-31T00:00:00Z",
+      "2010-11-30T00:00:00Z",
+      "2012-06-26T00:00:00Z"
+    ],
+    "recipient_country_code": [
+      "BR"
+    ],
+    "reporting_org_narrative": [
+      "Global Environment Facility"
+    ],
+    "recipient_country_narrative": [
+      "Brazil"
+    ]
+  },
+  {
+    "sector_code": [
+      "41030",
+      "B"
+    ],
+    "budget_value": [
+      800000.0,
+      800000.0,
+      800000.0,
+      800000.0,
+      800000.0
+    ],
+    "iati_identifier": "XI-BRIDGE-6385676864-969",
+    "title_narrative": [
+      "Securing the Environment for Economic Development (SEED)"
+    ],
+    "sector_narrative": [
+      "+![cdata[Biodiversity]]+",
+      "Biodiversity"
+    ],
+    "reporting_org_ref": "XI-BRIDGE-6385676864",
+    "transaction_value": [
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      4000000.0
+    ],
+    "activity_date_type": [
+      "1",
+      "2",
+      "3",
+      "4"
+    ],
+    "activity_status_code": "3",
+    "description_narrative": [
+      "NA",
+      "Note: Disbursement data provided is cumulative and covers disbursement made by the project Agency."
+    ],
+    "activity_date_iso_date": [
+      "2004-06-20T00:00:00Z",
+      "2004-07-29T00:00:00Z",
+      "2009-05-31T00:00:00Z",
+      "2012-06-29T00:00:00Z"
+    ],
+    "recipient_country_code": [
+      "ZM"
+    ],
+    "reporting_org_narrative": [
+      "Global Environment Facility"
+    ],
+    "recipient_country_narrative": [
+      "Zambia"
+    ]
+  },
+  {
+    "sector_code": [
+      "41010",
+      "M"
+    ],
+    "budget_value": [
+      249000.0,
+      249000.0,
+      249000.0
+    ],
+    "iati_identifier": "XI-BRIDGE-6385676864-1330",
+    "title_narrative": [
+      "Sustainable Land Management in the Zambian Miombo Woodland Ecosystem"
+    ],
+    "sector_narrative": [
+      "+![cdata[Environmental policy and administrative management]]+",
+      "Multi Focal Area"
+    ],
+    "reporting_org_ref": "XI-BRIDGE-6385676864",
+    "transaction_value": [
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      747000.0
+    ],
+    "activity_date_type": [
+      "1",
+      "2",
+      "3",
+      "4"
+    ],
+    "activity_status_code": "3",
+    "description_narrative": [
+      "NA",
+      "Note: Disbursement data provided is cumulative and covers disbursement made by the project Agency."
+    ],
+    "activity_date_iso_date": [
+      "2001-09-12T00:00:00Z",
+      "2002-05-14T00:00:00Z",
+      "2006-06-30T00:00:00Z",
+      "2010-12-31T00:00:00Z"
+    ],
+    "recipient_country_code": [
+      "ZM"
+    ],
+    "reporting_org_narrative": [
+      "Global Environment Facility"
+    ],
+    "recipient_country_narrative": [
+      "Zambia"
+    ]
+  },
+  {
+    "sector_code": [
+      "41020",
+      "C"
+    ],
+    "budget_value": [
+      900000.0,
+      900000.0,
+      900000.0,
+      900000.0,
+      900000.0
+    ],
+    "iati_identifier": "XI-BRIDGE-6385676864-1607",
+    "title_narrative": [
+      "Increased Access to Electricity Services"
+    ],
+    "sector_narrative": [
+      "+![cdata[Biosphere protection]]+",
+      "Climate Change"
+    ],
+    "reporting_org_ref": "XI-BRIDGE-6385676864",
+    "transaction_value": [
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      4500000.0
+    ],
+    "activity_date_type": [
+      "1",
+      "2",
+      "3",
+      "4"
+    ],
+    "activity_status_code": "3",
+    "description_narrative": [
+      "NA",
+      "Note: Disbursement data provided is cumulative and covers disbursement made by the project Agency."
+    ],
+    "activity_date_iso_date": [
+      "2008-04-17T00:00:00Z",
+      "2008-05-20T00:00:00Z",
+      "2015-06-30T00:00:00Z",
+      "2016-12-31T00:00:00Z"
+    ],
+    "recipient_country_code": [
+      "ZM"
+    ],
+    "reporting_org_narrative": [
+      "Global Environment Facility"
+    ],
+    "recipient_country_narrative": [
+      "Zambia"
+    ]
+  },
+  {
+    "sector_code": [
+      "41030",
+      "B"
+    ],
+    "budget_value": [
+      278333.33,
+      278333.33,
+      278333.33
+    ],
+    "iati_identifier": "XI-BRIDGE-6385676864-3668",
+    "title_narrative": [
+      "Extension of Kasanka Management System to Lavushi Manda National Park"
+    ],
+    "sector_narrative": [
+      "+![cdata[Biodiversity]]+",
+      "Biodiversity"
+    ],
+    "reporting_org_ref": "XI-BRIDGE-6385676864",
+    "transaction_value": [
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      835000.0
+    ],
+    "activity_date_type": [
+      "1",
+      "2",
+      "3",
+      "4"
+    ],
+    "activity_status_code": "3",
+    "description_narrative": [
+      "NA",
+      "Note: Disbursement data provided is cumulative and covers disbursement made by the project Agency."
+    ],
+    "activity_date_iso_date": [
+      "2010-06-03T00:00:00Z",
+      "2010-11-02T00:00:00Z",
+      "2014-06-30T00:00:00Z",
+      "2015-12-31T00:00:00Z"
+    ],
+    "recipient_country_code": [
+      "ZM"
+    ],
+    "reporting_org_narrative": [
+      "Global Environment Facility"
+    ],
+    "recipient_country_narrative": [
+      "Zambia"
+    ]
+  },
+  {
+    "sector_code": [
+      "31210",
+      "31220",
+      "B",
+      "C",
+      "L",
+      "M"
+    ],
+    "budget_value": [
+      1610091.6,
+      1610091.6,
+      1610091.6,
+      1610091.6,
+      1610091.6
+    ],
+    "iati_identifier": "XI-BRIDGE-6385676864-9213",
+    "title_narrative": [
+      "Zambia Integrated Forest Land Project (ZIFLP)"
+    ],
+    "sector_narrative": [
+      "+![cdata[Forestry policy and administrative management]]+",
+      "+![cdata[Forestry development]]+",
+      "Biodiversity",
+      "Climate Change",
+      "Land Degradation",
+      "Multi Focal Area"
+    ],
+    "reporting_org_ref": "XI-BRIDGE-6385676864",
+    "transaction_value": [
+      0.0,
+      552210.0,
+      427636.0,
+      1190600.0,
+      703268.0,
+      1622490.0,
+      3072358.0,
+      8532354.0,
+      8050458.0
+    ],
+    "activity_date_type": [
+      "1",
+      "2",
+      "3",
+      "4"
+    ],
+    "activity_status_code": "3",
+    "description_narrative": [
+      "NA",
+      "Note: Disbursement data provided is cumulative and covers disbursement made by the project Agency."
+    ],
+    "activity_date_iso_date": [
+      "2017-03-28T00:00:00Z",
+      "2017-05-04T00:00:00Z",
+      "2024-02-29T00:00:00Z",
+      "2024-02-29T00:00:00Z"
+    ],
+    "recipient_country_code": [
+      "ZM"
+    ],
+    "reporting_org_narrative": [
+      "Global Environment Facility"
+    ],
+    "recipient_country_narrative": [
+      "Zambia"
+    ]
+  },
+  {
+    "sector_code": [
+      "W"
+    ],
+    "budget_value": [
+      1651376.2,
+      1651376.2,
+      1651376.2,
+      1651376.2,
+      1651376.2
+    ],
+    "iati_identifier": "XI-BRIDGE-6385676864-9852",
+    "title_narrative": [
+      "Africa Environmental Health and Pollution Management Project â€“ Zambia"
+    ],
+    "sector_narrative": [
+      "Chemicals and Waste"
+    ],
+    "reporting_org_ref": "XI-BRIDGE-6385676864",
+    "transaction_value": [
+      500000.0,
+      520782.0,
+      870149.0,
+      922466.0,
+      1908221.0,
+      8256881.0
+    ],
+    "activity_date_type": [
+      "1",
+      "2",
+      "3"
+    ],
+    "activity_status_code": "2",
+    "description_narrative": [
+      "Zambia : To reduce exposure to uPOPs pollution in pilot sites and strengthen the institutional capacity to manage and regulate e-waste .\n\nOverall PDO: To reduce exposure to mercury and uPOPs pollution in pilot sites and strengthen the institutional capacity to manage and regulate mercury use in artisanal small-scale gold mining (ASGM) and e-waste in selected countries in Africa.",
+      "Note: Disbursement data provided is cumulative and covers disbursement made by the project Agency."
+    ],
+    "activity_date_iso_date": [
+      "2020-06-30T00:00:00Z",
+      "2020-07-27T00:00:00Z",
+      "2025-12-31T00:00:00Z"
+    ],
+    "recipient_country_code": [
+      "ZM"
+    ],
+    "reporting_org_narrative": [
+      "Global Environment Facility"
+    ],
+    "recipient_country_narrative": [
+      "Zambia"
+    ]
+  },
+  {
+    "sector_code": [
+      "L"
+    ],
+    "iati_identifier": "XI-BRIDGE-6385676864-11101",
+    "title_narrative": [
+      "Eastern Province Jurisdictional Sustainable Landscape Program"
+    ],
+    "sector_narrative": [
+      "Land Degradation"
+    ],
+    "reporting_org_ref": "XI-BRIDGE-6385676864",
+    "transaction_value": [
+      364202.0,
+      2000000.0
+    ],
+    "activity_date_type": [
+      "1",
+      "2",
+      "3"
+    ],
+    "activity_status_code": "2",
+    "description_narrative": [
+      "To generate payments for measured, reported, and verified Emission Reductions from reduced deforestation, forest degradation, enhancement of forest carbon stocks, agriculture, and other land use sectors, and to distribute the payments according to an agreed Benefit Sharing Plan.",
+      "Note: Disbursement data provided is cumulative and covers disbursement made by the project Agency.",
+      "Note: as per agreement with the GEF Secretariat (see email correspondence uploaded to the portal) and consistent with the World Bank harmonized templates, the World Bank is exempt from filling out sections in the GEF-8 one-step MSP template that are not included in the World Bank harmonized template. This section is addressed in the World Bank project document uploaded to the portal."
+    ],
+    "activity_date_iso_date": [
+      "2023-07-12T00:00:00Z",
+      "2024-05-20T00:00:00Z",
+      "2030-10-31T00:00:00Z"
+    ],
+    "recipient_country_code": [
+      "ZM"
+    ],
+    "reporting_org_narrative": [
+      "Global Environment Facility"
+    ],
+    "recipient_country_narrative": [
+      "Zambia"
+    ]
+  },
+  {
+    "sector_code": [
+      "31110",
+      "31310",
+      "43042",
+      "B",
+      "I",
+      "L"
+    ],
+    "budget_value": [
+      4049521.4,
+      4049521.4,
+      4049521.4,
+      4049521.4,
+      4049521.4
+    ],
+    "iati_identifier": "XI-BRIDGE-6385676864-9906",
+    "title_narrative": [
+      "West Africa Coastal Areas Resilience Investment Project"
+    ],
+    "sector_narrative": [
+      "+![cdata[Agricultural policy and administrative management]]+",
+      "+![cdata[Fishing policy and administrative management]]+",
+      "+![cdata[Rural development]]+",
+      "Biodiversity",
+      "International Waters",
+      "Land Degradation"
+    ],
+    "reporting_org_ref": "XI-BRIDGE-6385676864",
+    "transaction_value": [
+      0.0,
+      1789225.0,
+      1946641.0,
+      2585848.0,
+      3426458.0,
+      3617553.0,
+      20247607.0
+    ],
+    "activity_date_type": [
+      "1",
+      "2",
+      "3"
+    ],
+    "activity_status_code": "2",
+    "description_narrative": [
+      "NA",
+      "Note: Disbursement data provided is cumulative and covers disbursement made by the project Agency."
+    ],
+    "activity_date_iso_date": [
+      "2018-01-09T00:00:00Z",
+      "2018-04-09T00:00:00Z",
+      "2026-12-30T00:00:00Z"
+    ],
+    "recipient_country_code": [
+      "BJ",
+      "ST",
+      "TG"
+    ],
+    "reporting_org_narrative": [
+      "Global Environment Facility"
+    ],
+    "recipient_country_narrative": [
+      "Benin",
+      "Sao Tome and Principe",
+      "Togo"
+    ]
+  },
+  {
+    "sector_code": [
+      "43060",
+      "C"
+    ],
+    "budget_value": [
+      493333.33,
+      493333.33,
+      493333.33
+    ],
+    "iati_identifier": "XI-BRIDGE-6385676864-9935",
+    "title_narrative": [
+      "Global Green Residential Housing Finance Program - (GreenHF)"
+    ],
+    "sector_narrative": [
+      "+![cdata[Disaster Risk Reduction]]+",
+      "Climate Change"
+    ],
+    "reporting_org_ref": "XI-BRIDGE-6385676864",
+    "transaction_value": [
+      0.0,
+      462773.0,
+      161018.0,
+      101001.0,
+      249378.0,
+      477859.0,
+      1452029.0,
+      1480000.0
+    ],
+    "activity_date_type": [
+      "1",
+      "2",
+      "3",
+      "4"
+    ],
+    "activity_status_code": "3",
+    "description_narrative": [
+      "NA",
+      "Note: Disbursement data provided is cumulative and covers disbursement made by the project Agency."
+    ],
+    "activity_date_iso_date": [
+      "2018-02-01T00:00:00Z",
+      "2018-06-10T00:00:00Z",
+      "2024-06-30T00:00:00Z",
+      "2024-06-30T00:00:00Z"
+    ],
+    "reporting_org_narrative": [
+      "Global Environment Facility"
+    ]
+  },
+  {
+    "sector_code": [
+      "31130",
+      "31161",
+      "41030",
+      "43071",
+      "M"
+    ],
+    "budget_value": [
+      5825688.0,
+      5825688.0,
+      5825688.0,
+      5825688.0,
+      5825688.0
+    ],
+    "iati_identifier": "XI-BRIDGE-6385676864-10306",
+    "title_narrative": [
+      "FOLUR Global Knowledge to Action Platform to Support Transformational Shifts In Food and Land Use Systems"
+    ],
+    "sector_narrative": [
+      "+![cdata[Agricultural land resources]]+",
+      "+![cdata[Food crop production]]+",
+      "+![cdata[Biodiversity]]+",
+      "+![cdata[Food security policy and administrative management]]+",
+      "Multi Focal Area"
+    ],
+    "reporting_org_ref": "XI-BRIDGE-6385676864",
+    "transaction_value": [
+      377739.0,
+      3656970.0,
+      4420080.0,
+      6558604.0,
+      5047955.0,
+      29128440.0
+    ],
+    "activity_date_type": [
+      "1",
+      "2",
+      "3"
+    ],
+    "activity_status_code": "2",
+    "description_narrative": [
+      "To support transformational shifts in the use of environmentally sustainable practices and policies for priority global value chains.",
+      "Note: Disbursement data provided is cumulative and covers disbursement made by the project Agency."
+    ],
+    "activity_date_iso_date": [
+      "2020-09-18T00:00:00Z",
+      "2020-09-18T00:00:00Z",
+      "2026-09-16T00:00:00Z"
+    ],
+    "reporting_org_narrative": [
+      "Global Environment Facility"
+    ]
+  },
+  {
+    "sector_code": [
+      "14015",
+      "14040",
+      "31320",
+      "32164",
+      "41020",
+      "I",
+      "W"
+    ],
+    "iati_identifier": "XI-BRIDGE-6385676864-10531",
+    "title_narrative": [
+      "Integrated watershed management of the Putumayo-IÃ§Ã¡ river basin"
+    ],
+    "sector_narrative": [
+      "+![cdata[Water resources conservation (including data collection)]]+",
+      "+![cdata[River basins development]]+",
+      "+![cdata[Fishery development]]+",
+      "+![cdata[Chemicals]]+",
+      "+![cdata[Biosphere protection]]+",
+      "International Waters",
+      "Chemicals and Waste"
+    ],
+    "reporting_org_ref": "XI-BRIDGE-6385676864",
+    "transaction_value": [
+      0.0,
+      286297.0,
+      557138.0,
+      12844037.0
+    ],
+    "activity_date_type": [
+      "1",
+      "2",
+      "3"
+    ],
+    "activity_status_code": "2",
+    "description_narrative": [
+      "To strengthen the enabling conditions for the participant countries to manage the shared freshwater ecosystems of the Putumayo- IÃ§Ã¡ basin in the Amazon region \nTo be measured by:\nâ€¢\tRegional knowledge management strategy providing relevant information for decision making towards conservation and sustainable natural resource use\nâ€¢\tAction plan agreed for shared management of the basin designed and operational\nâ€¢\tShare of targeted subproject beneficiaries  with improved livelihood conditions",
+      "Note: Disbursement data provided is cumulative and covers disbursement made by the project Agency."
+    ],
+    "activity_date_iso_date": [
+      "2022-02-25T00:00:00Z",
+      "2022-07-05T00:00:00Z",
+      "2027-06-30T00:00:00Z"
+    ],
+    "reporting_org_narrative": [
+      "Global Environment Facility"
+    ]
+  },
+  {
+    "sector_code": [
+      "14015",
+      "14040",
+      "31320",
+      "41020",
+      "I"
+    ],
+    "iati_identifier": "XI-BRIDGE-6385676864-10553",
+    "title_narrative": [
+      "Sava and Drina Rivers Corridors Integrated Development Program"
+    ],
+    "sector_narrative": [
+      "+![cdata[Water resources conservation (including data collection)]]+",
+      "+![cdata[River basins development]]+",
+      "+![cdata[Fishery development]]+",
+      "+![cdata[Biosphere protection]]+",
+      "International Waters"
+    ],
+    "reporting_org_ref": "XI-BRIDGE-6385676864",
+    "transaction_value": [
+      478620.0,
+      171257.0,
+      0.0,
+      8000000.0
+    ],
+    "activity_date_type": [
+      "1",
+      "2",
+      "3"
+    ],
+    "activity_status_code": "2",
+    "description_narrative": [
+      "The objective of the Project is to enhance transboundary water cooperation and strengthen climate resilience in the Sava and Drina Rivers Corridors.",
+      "Note: Disbursement data provided is cumulative and covers disbursement made by the project Agency."
+    ],
+    "activity_date_iso_date": [
+      "2021-11-19T00:00:00Z",
+      "2021-01-26T00:00:00Z",
+      "2026-11-01T00:00:00Z"
+    ],
+    "reporting_org_narrative": [
+      "Global Environment Facility"
+    ]
+  },
+  {
+    "sector_code": [
+      "14015",
+      "14040",
+      "31320",
+      "41020",
+      "I"
+    ],
+    "iati_identifier": "XI-BRIDGE-6385676864-10563",
+    "title_narrative": [
+      "Blueing the Black Sea (BBSEA)"
+    ],
+    "sector_narrative": [
+      "+![cdata[Water resources conservation (including data collection)]]+",
+      "+![cdata[River basins development]]+",
+      "+![cdata[Fishery development]]+",
+      "+![cdata[Biosphere protection]]+",
+      "International Waters"
+    ],
+    "reporting_org_ref": "XI-BRIDGE-6385676864",
+    "transaction_value": [
+      947664.0,
+      6392694.0
+    ],
+    "activity_date_type": [
+      "1",
+      "2",
+      "3"
+    ],
+    "activity_status_code": "2",
+    "description_narrative": [
+      "To strengthen the preparedness of governments and the private sector in the Project Focus Countries  to take actions to reduce pollution in the Black Sea.",
+      "Note: Disbursement data provided is cumulative and covers disbursement made by the project Agency."
+    ],
+    "activity_date_iso_date": [
+      "2023-01-06T00:00:00Z",
+      "2024-09-12T00:00:00Z",
+      "2028-09-30T00:00:00Z"
+    ],
+    "reporting_org_narrative": [
+      "Global Environment Facility"
+    ]
+  },
+  {
+    "sector_code": [
+      "B"
+    ],
+    "iati_identifier": "XI-BRIDGE-6385676864-10647",
+    "title_narrative": [
+      "GEF-7 GWP Global Coordination Project"
+    ],
+    "sector_narrative": [
+      "Biodiversity"
+    ],
+    "reporting_org_ref": "XI-BRIDGE-6385676864",
+    "transaction_value": [
+      0.0,
+      1035680.0,
+      1447147.0,
+      1614377.0,
+      2288592.0,
+      9174313.0
+    ],
+    "activity_date_type": [
+      "1",
+      "2",
+      "3"
+    ],
+    "activity_status_code": "2",
+    "description_narrative": [
+      "To enhance knowledge and coordination services to promote wildlife-based economic development and combat illegal wildlife trade.",
+      "Note: Disbursement data provided is cumulative and covers disbursement made by the project Agency."
+    ],
+    "activity_date_iso_date": [
+      "2021-03-30T00:00:00Z",
+      "2021-04-01T00:00:00Z",
+      "2026-10-30T00:00:00Z"
+    ],
+    "reporting_org_narrative": [
+      "Global Environment Facility"
+    ]
+  },
+  {
+    "sector_code": [
+      "M"
+    ],
+    "iati_identifier": "XI-BRIDGE-6385676864-10737",
+    "title_narrative": [
+      "Amazon Regional Technical Assistance"
+    ],
+    "sector_narrative": [
+      "Multi Focal Area"
+    ],
+    "reporting_org_ref": "XI-BRIDGE-6385676864",
+    "transaction_value": [
+      191849.0,
+      608521.0,
+      1245712.0,
+      1823796.0,
+      8256881.0
+    ],
+    "activity_date_type": [
+      "1",
+      "2",
+      "3"
+    ],
+    "activity_status_code": "2",
+    "description_narrative": [
+      "To strengthen coordination, access to information and capacity of national projects stakeholders under the GEF 7 Amazon Sustainable Landscape Program",
+      "Note: Disbursement data provided is cumulative and covers disbursement made by the project Agency."
+    ],
+    "activity_date_iso_date": [
+      "2021-03-24T00:00:00Z",
+      "2021-04-20T00:00:00Z",
+      "2026-06-30T00:00:00Z"
+    ],
+    "reporting_org_narrative": [
+      "Global Environment Facility"
+    ]
+  },
+  {
+    "sector_code": [
+      "14015",
+      "14040",
+      "31320",
+      "41020",
+      "I"
+    ],
+    "iati_identifier": "XI-BRIDGE-6385676864-10778",
+    "title_narrative": [
+      "Gulf of Fonseca Transboundary Management"
+    ],
+    "sector_narrative": [
+      "+![cdata[Water resources conservation (including data collection)]]+",
+      "+![cdata[River basins development]]+",
+      "+![cdata[Fishery development]]+",
+      "+![cdata[Biosphere protection]]+",
+      "International Waters"
+    ],
+    "reporting_org_ref": "XI-BRIDGE-6385676864",
+    "transaction_value": [
+      0.0,
+      0.0,
+      5000000.0
+    ],
+    "activity_date_type": [
+      "1",
+      "2",
+      "3"
+    ],
+    "activity_status_code": "2",
+    "description_narrative": [
+      "To improve the capacity of participating countries to manage the transboundary natural resources of the Gulf of Fonseca, including for climate change adaptation",
+      "Note: Disbursement data provided is cumulative and covers disbursement made by the project Agency."
+    ],
+    "activity_date_iso_date": [
+      "2023-07-07T00:00:00Z",
+      "2024-02-01T00:00:00Z",
+      "2028-03-31T00:00:00Z"
+    ],
+    "reporting_org_narrative": [
+      "Global Environment Facility"
+    ]
+  },
+  {
+    "sector_code": [
+      "14015",
+      "14040",
+      "31320",
+      "41020",
+      "I"
+    ],
+    "iati_identifier": "XI-BRIDGE-6385676864-10797",
+    "title_narrative": [
+      "GEF Sustainable Groundwater Management In SADC Member States Project Phase 2"
+    ],
+    "sector_narrative": [
+      "+![cdata[Water resources conservation (including data collection)]]+",
+      "+![cdata[River basins development]]+",
+      "+![cdata[Fishery development]]+",
+      "+![cdata[Biosphere protection]]+",
+      "International Waters"
+    ],
+    "reporting_org_ref": "XI-BRIDGE-6385676864",
+    "transaction_value": [
+      0.0,
+      679500.0,
+      939180.0,
+      4566210.0
+    ],
+    "activity_date_type": [
+      "1",
+      "2",
+      "3"
+    ],
+    "activity_status_code": "2",
+    "description_narrative": [
+      "The objective of the project is to develop capacity and knowledge for inclusive groundwater management and use in the SADC region at national and transboundary levels specifically shared aquifers",
+      "Note: Disbursement data provided is cumulative and covers disbursement made by the project Agency."
+    ],
+    "activity_date_iso_date": [
+      "2022-12-08T00:00:00Z",
+      "2024-04-02T00:00:00Z",
+      "2025-11-30T00:00:00Z"
+    ],
+    "reporting_org_narrative": [
+      "Global Environment Facility"
+    ]
+  },
+  {
+    "sector_code": [
+      "C"
+    ],
+    "budget_value": [
+      566767.67,
+      566767.67,
+      566767.67
+    ],
+    "iati_identifier": "XI-BRIDGE-6385676864-10918",
+    "title_narrative": [
+      "Green Hydrogen Support in Developing Countries"
+    ],
+    "sector_narrative": [
+      "Climate Change"
+    ],
+    "reporting_org_ref": "XI-BRIDGE-6385676864",
+    "transaction_value": [
+      0.0,
+      556233.0,
+      544521.0,
+      1700303.0
+    ],
+    "activity_date_type": [
+      "1",
+      "2",
+      "3"
+    ],
+    "activity_status_code": "2",
+    "description_narrative": [
+      "Project Objective: to raise awareness of the value of green hydrogen, address barriers to production and use, and support the development of first-of-a-kind projects in developing countries.\n\nProject Description Summary: The proposed GEF-funded project (â€œGreen Hydrogen Support in Developing Countriesâ€) will consist of two main components. Component 1 will target Global Knowledge TA work through the establishment of a high-level Green Hydrogen Development Facility (Green Hydrogen Facility) that will serve as a global platform to disseminate best practices and facilitate global knowledge exchange to raise awareness between public and private sector stakeholders on different green hydrogen technology applications and policy solutions. Component 2 will target the development/operationalization of emerging green hydrogen opportunities through first-of-a-kind projects in 4 countries, namely, Chile, Morocco, Tunisia, and Ukraine to fast-track public-private investment mobilization for green hydrogen project development.\n\nOverall, the project will aim to promote policy innovations to support green hydrogen technology development and transfer in order to reduce global green house gas (GHG) emissions, which closely aligns with the GEF-7 Climate Change Mitigation (CCM) Focal Area objectives. As such, the project will focus on multiple policy, strategy, and  technology application use cases of green hydrogen across sectors starting in the power sector from long-duration storage and the integration of renewables to hard-to-abate heavy industry (cement, chemicals, steele, etc.) solutions. In addition, the proposal will focus on green hydrogen solutions across other key sectors such as transport (long-distance trucking, shipping, and aviation) and agriculture (ammonia production) including the building sector.",
+      "Note: Disbursement data provided is cumulative and covers disbursement made by the project Agency."
+    ],
+    "activity_date_iso_date": [
+      "2022-04-07T00:00:00Z",
+      "2024-02-12T00:00:00Z",
+      "2028-06-30T00:00:00Z"
+    ],
+    "reporting_org_narrative": [
+      "Global Environment Facility"
+    ]
+  },
+  {
+    "sector_code": [
+      "B"
+    ],
+    "budget_value": [
+      600000.0,
+      600000.0,
+      600000.0
+    ],
+    "iati_identifier": "XI-BRIDGE-6385676864-11020",
+    "title_narrative": [
+      "Global Biodiversity Data and Analytics"
+    ],
+    "sector_narrative": [
+      "Biodiversity"
+    ],
+    "reporting_org_ref": "XI-BRIDGE-6385676864",
+    "transaction_value": [
+      375510.0,
+      749339.0,
+      634816.0,
+      1800000.0
+    ],
+    "activity_date_type": [
+      "1",
+      "2",
+      "3"
+    ],
+    "activity_status_code": "2",
+    "description_narrative": [
+      "Facilitate development, curation and use of free, public-domain biodiversity data and analytics to facilitate investment assessments",
+      "Note: Disbursement data provided is cumulative and covers disbursement made by the project Agency."
+    ],
+    "activity_date_iso_date": [
+      "2022-06-03T00:00:00Z",
+      "2022-09-07T00:00:00Z",
+      "2025-12-31T00:00:00Z"
+    ],
+    "reporting_org_narrative": [
+      "Global Environment Facility"
+    ]
+  },
+  {
+    "sector_code": [
+      "B"
+    ],
+    "budget_value": [
+      608828.0,
+      608828.0,
+      608828.0
+    ],
+    "iati_identifier": "XI-BRIDGE-6385676864-11022",
+    "title_narrative": [
+      "Support to the scientific panel for the Amazon"
+    ],
+    "sector_narrative": [
+      "Biodiversity"
+    ],
+    "reporting_org_ref": "XI-BRIDGE-6385676864",
+    "transaction_value": [
+      400000.0,
+      354023.0,
+      848674.0,
+      1826484.0
+    ],
+    "activity_date_type": [
+      "1",
+      "2",
+      "3"
+    ],
+    "activity_status_code": "2",
+    "description_narrative": [
+      "Support the generation and dissemination of policy relevant knowledge for the Amazon region",
+      "Note: Disbursement data provided is cumulative and covers disbursement made by the project Agency."
+    ],
+    "activity_date_iso_date": [
+      "2022-05-27T00:00:00Z",
+      "2022-07-28T00:00:00Z",
+      "2026-01-30T00:00:00Z"
+    ],
+    "reporting_org_narrative": [
+      "Global Environment Facility"
+    ]
+  },
+  {
+    "sector_code": [
+      "B",
+      "C",
+      "L"
+    ],
+    "iati_identifier": "XI-BRIDGE-6385676864-11164",
+    "title_narrative": [
+      "Global Coordination, Monitoring and Learning Platform for Wildlife Conservation for Development Integrated Program"
+    ],
+    "sector_narrative": [
+      "Biodiversity",
+      "Climate Change",
+      "Land Degradation"
+    ],
+    "reporting_org_ref": "XI-BRIDGE-6385676864",
+    "transaction_value": [
+      14697248.0
+    ],
+    "activity_date_type": [
+      "1"
+    ],
+    "activity_status_code": "1",
+    "description_narrative": [
+      "To enhance collaboration, knowledge exchange, capacity development and partnerships for wildlife conservation, to facilitate maximum effectiveness in tackling interlinked threats to wildlife populations globally.",
+      "Note: Disbursement data provided is cumulative and covers disbursement made by the project Agency.",
+      "The coordination project will itself not directly create socioeconomic benefits. Instead, through the coordination, knowledge exchange and technical support it provides, it will facilitate and enhance the achievement of socioeconomic benefits in the 15 national projects. The achievement of meaningful socioeconomic benefits forms an integral part of the GEF-8 GWP, reflected in program component 3. Technical support needed for this program component is included in Output 2.4. The technical and knowledge support needs of the national projects to generate socioeconomic benefits have been considered in the development of this coordination project and will be adapted as needed during project implementation to reflect the needs of projects.  Socioeconomic benefits will be monitored and reported on via the GWP program-level M&amp;E framework (see Annex L). Relevant program indicators include indicator 3.3.1.  Number of countries and/or communities with new and/or strengthened arrangements related to ownership, access, or use rights of Indigenous Peoples, and of local communities; and indicator 3.4.1.  Number of community members (sex disaggregated) economically benefiting from wildlife economy through i) new jobs created; ii) increased income; iii) new enterprises/business created or supported; and iv) other diversified livelihood opportunities. The coordination project will aggregate and report progress towards these as part of program-level M&amp;E reporting."
+    ],
+    "activity_date_iso_date": [
+      "2025-07-23T00:00:00Z"
+    ],
+    "reporting_org_narrative": [
+      "Global Environment Facility"
+    ]
+  },
+  {
+    "sector_code": [
+      "B",
+      "C",
+      "L"
+    ],
+    "iati_identifier": "XI-BRIDGE-6385676864-11206",
+    "title_narrative": [
+      "Amazon Regional Project â€“ ASL Phase 3"
+    ],
+    "sector_narrative": [
+      "Biodiversity",
+      "Climate Change",
+      "Land Degradation"
+    ],
+    "reporting_org_ref": "XI-BRIDGE-6385676864",
+    "transaction_value": [
+      0.0,
+      9633028.0
+    ],
+    "activity_date_type": [
+      "1",
+      "2",
+      "3"
+    ],
+    "activity_status_code": "2",
+    "description_narrative": [
+      "To increase national and regional capacity and coordination among ASL stakeholders and partners for improved integrated landscape management and conservation in targeted areas in the Amazon.",
+      "Note: Disbursement data provided is cumulative and covers disbursement made by the project Agency.",
+      "The ASL3 Program’s environmental and social impacts overall are deemed to be positive, and negative environmental impacts are expected to be nil, or minimal, localized, and reversible. The Program will generate social benefits in critical aspects that influence well-being such as food security, health, and recovery of traditional knowledge, and at the same time, it will have an impact on better practices for conserving biodiversity and ecosystem resilience over generations. The Regional TA, focusing on knowledge management and cooperation, will not implement activities on the ground and as such very few environmental and social risks are associated with it. The main instruments of the Regional TA to guide its implementation, limiting risks are the Stakeholder Engagement Plan, the Gender plan and the associated Grievance Redress Mechanism, in which efforts to respect and promote Indigenous Peoples and other vulnerable communities as well as women and youth are described.  In regards to the ASL national projects, any E&amp;S risks will be mitigated through proper safeguard/standard instruments and procedures according to each GEF agency. The Program will facilitate, as needed, knowledge exchange and dialogue between projects in matters related to compliance with social and environmental safeguards and standards.Additional Summary on Risks:The risks to the implementation of the Regional TA and their mitigation strategy include:(i)         Increase in the number of countries participating in the ASL Program: Venezuela is joining the ASL, and thus all 8 sovereign countries of the Amazon will participate in the Program. Coordination and prioritization of activities with a larger number of stakeholders will be a new challenge. Continuous engagement with new members, and the previous experience from the addition of 4 more countries between ASL1 and ASL2, result in rating this as a low risk.(ii)       Differing needs from the national projects and readiness to initiate regional activities: While all the national projects are aligned to the ASL Theory of Change, there is heterogeneity in their activities, due to different contexts and priorities. In addition, as in ASL2, it is likely that not all 8 national projects will start at the same time and their implementation pace will also differ. Guyana for instance was included 6 months after the other national projects with an amended PFD and approved by GEF Council in December 2023. Negotiation processes between the executing and implementing agencies differ, resulting in different timelines. Those differences will mean that their needs related to the Regional TA may not coincide. The mitigation measures include the design and planning of regional activities so that they may start when enough projects are ready, or with a subgroup of countries that then expands, and that they adapt to respond to different stages of the projects.(iii)      Contrasting Government policies: The delivery of the knowledge exchange and coordination activities could be affected by different approaches to deforestation and other environmental and development issues in the countries. Experience from previous phases with different governments and political spectrums will facilitate managing the risk. In addition, the Belem Declaration and renewed efforts to strengthen ACTO have put regional coordination at the forefront of national agendas and the ASL will use its shared vision to lead countries toward common activities. Conflict over disputed areas between Guyana, Suriname, and Venezuela could bring tension over cartographic data. Updated guidance and advice from the World Bank will mitigate the risk or at least inform the team on how to address related issues. The Regional TA will abide by the disclaimer, which states that the boundaries, colors, denominations, and any other information shown on maps prepared by the institution do not imply, on the part of the World Bank, any judgment on the legal status of any territory, or any endorsement or acceptance of such boundaries.Government changes: The ASL has seen many elections and other government changes since its inception in 2015 that affected its preparation and implementation, slowing the pace of implementation and delaying some activities at regional level that required decisions from national governments. Mitigation measures include working with technical staff, as well as with regional/state governors and municipalities, which will also generate longer term commitments, and offset risks from potential political changes at the national level. There is also a need to reach out and inform new national-level staff on the Program. An orientation package has been designed and submitted to all new members of the PSC to inform about the program. Engagement with other types of stakeholders such as the private sector, scientists, and international NGOs also ensures continuation of the Program by including different types of interests in the ASL Program. During implementation of ASL3, similar approaches will be used whenever changes in government staff take place."
+    ],
+    "activity_date_iso_date": [
+      "2024-11-27T00:00:00Z",
+      "2024-07-06T00:00:00Z",
+      "2030-12-31T00:00:00Z"
+    ],
+    "reporting_org_narrative": [
+      "Global Environment Facility"
+    ]
+  },
+  {
+    "sector_code": [
+      "I",
+      "L"
+    ],
+    "iati_identifier": "XI-BRIDGE-6385676864-11300",
+    "title_narrative": [
+      "Global Program - Sustainable Cities Integrated Program"
+    ],
+    "sector_narrative": [
+      "International Waters",
+      "Land Degradation"
+    ],
+    "reporting_org_ref": "XI-BRIDGE-6385676864",
+    "transaction_value": [
+      17917431.0
+    ],
+    "activity_date_type": [
+      "1",
+      "2"
+    ],
+    "activity_status_code": "2",
+    "description_narrative": [
+      "The Global Platform will support cities and local governments by fostering knowledge generation and sharing, and facilitating partnership building to promote integrated urban planning, nature-positive, climate-resilient, and carbon-neutral urban development and investment.",
+      "Note: Disbursement data provided is cumulative and covers disbursement made by the project Agency.",
+      "The platform has thoroughly considered the socio-economic benefits to be delivered by the project, and these have been clearly described in the Project Description. The project aims to integrate gender equality into all phases, promote urban spaces that enhance women's health and economic opportunities, and ensure that 50% of project beneficiaries are women. Additionally, the project will support integrated urban planning, nature-positive, climate-resilient, and carbon-neutral urban development. The socio-economic benefits include strengthening local institutional capacity, fostering knowledge generation and sharing, and facilitating partnership building. The project will embed diverse infrastructure types—ecological, hydrological, and engineered—into urban resilience planning to deliver multi-dimensional benefits. This approach will enhance resilience, ensure sustainable outcomes, and drive project implementation through cross-cutting priorities such as financing and inclusion. The project will also focus on building circular economies in cities, emphasizing sustainable financing, job creation, resource efficiency, and increased revenue potential. These socio-economic benefits will be monitored and reported on during project implementation, ensuring that the project's impact on local communities is continuously assessed and optimized."
+    ],
+    "activity_date_iso_date": [
+      "2025-05-16T00:00:00Z",
+      "2025-04-04T00:00:00Z"
+    ],
+    "reporting_org_narrative": [
+      "Global Environment Facility"
+    ]
+  },
+  {
+    "sector_code": [
+      "41030",
+      "B"
+    ],
+    "budget_value": [
+      240000.0,
+      240000.0,
+      240000.0,
+      240000.0,
+      240000.0
+    ],
+    "iati_identifier": "XI-BRIDGE-6385676864-102",
+    "title_narrative": [
+      "Biodiversity Restoration"
+    ],
+    "sector_narrative": [
+      "+![cdata[Biodiversity]]+",
+      "Biodiversity"
+    ],
+    "reporting_org_ref": "XI-BRIDGE-6385676864",
+    "transaction_value": [
+      0.0,
+      0.0,
+      0.0,
+      1200000.0
+    ],
+    "activity_date_type": [
+      "1",
+      "2",
+      "3",
+      "4"
+    ],
+    "activity_status_code": "3",
+    "description_narrative": [
+      "NA",
+      "Note: Disbursement data provided is cumulative and covers disbursement made by the project Agency."
+    ],
+    "activity_date_iso_date": [
+      "1995-08-23T00:00:00Z",
+      "1995-11-09T00:00:00Z",
+      "2001-12-31T00:00:00Z",
+      "2003-02-12T00:00:00Z"
+    ],
+    "recipient_country_code": [
+      "MU"
+    ],
+    "reporting_org_narrative": [
+      "Global Environment Facility"
+    ],
+    "recipient_country_narrative": [
+      "Mauritius"
+    ]
+  },
+  {
+    "sector_code": [
+      "41020",
+      "C"
+    ],
+    "budget_value": [
+      660000.0,
+      660000.0,
+      660000.0,
+      660000.0,
+      660000.0
+    ],
+    "iati_identifier": "XI-BRIDGE-6385676864-577",
+    "title_narrative": [
+      "Sugar Bio-Energy Technology"
+    ],
+    "sector_narrative": [
+      "+![cdata[Biosphere protection]]+",
+      "Climate Change"
+    ],
+    "reporting_org_ref": "XI-BRIDGE-6385676864",
+    "transaction_value": [
+      0.0,
+      3300000.0
+    ],
+    "activity_date_type": [
+      "1",
+      "2",
+      "3",
+      "4"
+    ],
+    "activity_status_code": "3",
+    "description_narrative": [
+      "NA",
+      "Note: Disbursement data provided is cumulative and covers disbursement made by the project Agency."
+    ],
+    "activity_date_iso_date": [
+      "1991-05-01T00:00:00Z",
+      "1992-02-05T00:00:00Z",
+      "1997-12-31T00:00:00Z",
+      "1998-01-30T00:00:00Z"
+    ],
+    "recipient_country_code": [
+      "MU"
+    ],
+    "reporting_org_narrative": [
+      "Global Environment Facility"
+    ],
+    "recipient_country_narrative": [
+      "Mauritius"
+    ]
+  },
+  {
+    "sector_code": [
+      "14010",
+      "I"
+    ],
+    "budget_value": [
+      1780000.0,
+      1780000.0,
+      1780000.0,
+      1780000.0,
+      1780000.0
+    ],
+    "iati_identifier": "XI-BRIDGE-6385676864-2143",
+    "title_narrative": [
+      "DBSB Water Quality Protection Project - under WB-GEF Strategic Partnership for Nutrient Reduction in the Danube River and Black Sea"
+    ],
+    "sector_narrative": [
+      "+![cdata[Water sector policy and administrative management]]+",
+      "International Waters"
+    ],
+    "reporting_org_ref": "XI-BRIDGE-6385676864",
+    "transaction_value": [
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      8900000.0
+    ],
+    "activity_date_type": [
+      "1",
+      "2",
+      "3",
+      "4"
+    ],
+    "activity_status_code": "3",
+    "description_narrative": [
+      "NA",
+      "Note: Disbursement data provided is cumulative and covers disbursement made by the project Agency."
+    ],
+    "activity_date_iso_date": [
+      "2005-05-09T00:00:00Z",
+      "2005-06-07T00:00:00Z",
+      "2011-02-28T00:00:00Z",
+      "2017-12-31T00:00:00Z"
+    ],
+    "recipient_country_code": [
+      "BA"
+    ],
+    "reporting_org_narrative": [
+      "Global Environment Facility"
+    ],
+    "recipient_country_narrative": [
+      "Bosnia-Herzegovina"
+    ]
+  },
+  {
+    "sector_code": [
+      "31210",
+      "B"
+    ],
+    "budget_value": [
+      680000.0,
+      680000.0,
+      680000.0,
+      680000.0,
+      680000.0
+    ],
+    "iati_identifier": "XI-BRIDGE-6385676864-2372",
+    "title_narrative": [
+      "Forest and Mountain Protected Areas Project"
+    ],
+    "sector_narrative": [
+      "+![cdata[Forestry policy and administrative management]]+",
+      "Biodiversity"
+    ],
+    "reporting_org_ref": "XI-BRIDGE-6385676864",
+    "transaction_value": [
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      3400000.0
+    ],
+    "activity_date_type": [
+      "1",
+      "2",
+      "3",
+      "4"
+    ],
+    "activity_status_code": "3",
+    "description_narrative": [
+      "NA",
+      "Note: Disbursement data provided is cumulative and covers disbursement made by the project Agency."
+    ],
+    "activity_date_iso_date": [
+      "2008-04-29T00:00:00Z",
+      "2008-05-29T00:00:00Z",
+      "2013-04-30T00:00:00Z",
+      "2014-04-28T00:00:00Z"
+    ],
+    "recipient_country_code": [
+      "BA"
+    ],
+    "reporting_org_narrative": [
+      "Global Environment Facility"
+    ],
+    "recipient_country_narrative": [
+      "Bosnia-Herzegovina"
+    ]
+  },
+  {
+    "sector_code": [
+      "14010",
+      "I"
+    ],
+    "budget_value": [
+      1804000.0,
+      1804000.0,
+      1804000.0,
+      1804000.0,
+      1804000.0
+    ],
+    "iati_identifier": "XI-BRIDGE-6385676864-2141",
+    "title_narrative": [
+      "DBSB Reduction of Enterprise Nutrient Discharges Project - RENDR - under WB-GEF Strategic Partnership for Nutrient Reduction in the Danube River and Black Sea"
+    ],
+    "sector_narrative": [
+      "+![cdata[Water sector policy and administrative management]]+",
+      "International Waters"
+    ],
+    "reporting_org_ref": "XI-BRIDGE-6385676864",
+    "transaction_value": [
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      9020000.0
+    ],
+    "activity_date_type": [
+      "1",
+      "2",
+      "3",
+      "4"
+    ],
+    "activity_status_code": "3",
+    "description_narrative": [
+      "NA",
+      "Note: Disbursement data provided is cumulative and covers disbursement made by the project Agency."
+    ],
+    "activity_date_iso_date": [
+      "2005-04-18T00:00:00Z",
+      "2005-05-12T00:00:00Z",
+      "2011-12-31T00:00:00Z",
+      "2011-10-31T00:00:00Z"
+    ],
+    "recipient_country_code": [
+      "RS"
+    ],
+    "reporting_org_narrative": [
+      "Global Environment Facility"
+    ],
+    "recipient_country_narrative": [
+      "Serbia"
+    ]
+  },
+  {
+    "sector_code": [
+      "31210",
+      "C",
+      "L",
+      "M"
+    ],
+    "budget_value": [
+      1115151.4,
+      1115151.4,
+      1115151.4,
+      1115151.4,
+      1115151.4
+    ],
+    "iati_identifier": "XI-BRIDGE-6385676864-4779",
+    "title_narrative": [
+      "Sustainable Forest and Landscape Management"
+    ],
+    "sector_narrative": [
+      "+![cdata[Forestry policy and administrative management]]+",
+      "Climate Change",
+      "Land Degradation",
+      "Multi Focal Area"
+    ],
+    "reporting_org_ref": "XI-BRIDGE-6385676864",
+    "transaction_value": [
+      0.0,
+      0.0,
+      3571498.0,
+      4398052.0,
+      826554.0,
+      0.0,
+      5575757.0
+    ],
+    "activity_date_type": [
+      "1",
+      "2",
+      "3",
+      "4"
+    ],
+    "activity_status_code": "3",
+    "description_narrative": [
+      "NA",
+      "Note: Disbursement data provided is cumulative and covers disbursement made by the project Agency."
+    ],
+    "activity_date_iso_date": [
+      "2013-12-18T00:00:00Z",
+      "2014-01-15T00:00:00Z",
+      "2019-05-31T00:00:00Z",
+      "2019-05-31T00:00:00Z"
+    ],
+    "recipient_country_code": [
+      "BA"
+    ],
+    "reporting_org_narrative": [
+      "Global Environment Facility"
+    ],
+    "recipient_country_narrative": [
+      "Bosnia-Herzegovina"
+    ]
+  },
+  {
+    "sector_code": [
+      "14010",
+      "I"
+    ],
+    "budget_value": [
+      540000.0,
+      540000.0,
+      540000.0,
+      540000.0,
+      540000.0
+    ],
+    "iati_identifier": "XI-BRIDGE-6385676864-72",
+    "title_narrative": [
+      "Gulf of Aqaba Environmental Action Plan"
+    ],
+    "sector_narrative": [
+      "+![cdata[Water sector policy and administrative management]]+",
+      "International Waters"
+    ],
+    "reporting_org_ref": "XI-BRIDGE-6385676864",
+    "transaction_value": [
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      2700000.0
+    ],
+    "activity_date_type": [
+      "1",
+      "2",
+      "3",
+      "4"
+    ],
+    "activity_status_code": "3",
+    "description_narrative": [
+      "NA",
+      "Note: Disbursement data provided is cumulative and covers disbursement made by the project Agency."
+    ],
+    "activity_date_iso_date": [
+      "1996-05-13T00:00:00Z",
+      "1996-06-13T00:00:00Z",
+      "1999-12-31T00:00:00Z",
+      "2002-12-30T00:00:00Z"
+    ],
+    "recipient_country_code": [
+      "JO"
+    ],
+    "reporting_org_narrative": [
+      "Global Environment Facility"
+    ],
+    "recipient_country_narrative": [
+      "Jordan"
+    ]
+  },
+  {
+    "sector_code": [
+      "41030",
+      "B"
+    ],
+    "budget_value": [
+      1000000.0,
+      1000000.0,
+      1000000.0,
+      1000000.0,
+      1000000.0
+    ],
+    "iati_identifier": "XI-BRIDGE-6385676864-1184",
+    "title_narrative": [
+      "Conservation of Medicinal and Herbal Plants"
+    ],
+    "sector_narrative": [
+      "+![cdata[Biodiversity]]+",
+      "Biodiversity"
+    ],
+    "reporting_org_ref": "XI-BRIDGE-6385676864",
+    "transaction_value": [
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      5000000.0
+    ],
+    "activity_date_type": [
+      "1",
+      "2",
+      "3",
+      "4"
+    ],
+    "activity_status_code": "3",
+    "description_narrative": [
+      "NA",
+      "Note: Disbursement data provided is cumulative and covers disbursement made by the project Agency."
+    ],
+    "activity_date_iso_date": [
+      "2003-03-18T00:00:00Z",
+      "2003-05-06T00:00:00Z",
+      "2008-12-16T00:00:00Z",
+      "2010-12-15T00:00:00Z"
+    ],
+    "recipient_country_code": [
+      "JO"
+    ],
+    "reporting_org_narrative": [
+      "Global Environment Facility"
+    ],
+    "recipient_country_narrative": [
+      "Jordan"
+    ]
+  },
+  {
+    "sector_code": [
+      "41030",
+      "B"
+    ],
+    "budget_value": [
+      1230000.0,
+      1230000.0,
+      1230000.0,
+      1230000.0,
+      1230000.0
+    ],
+    "iati_identifier": "XI-BRIDGE-6385676864-1214",
+    "title_narrative": [
+      "Integrated Ecosystem and Natural Resource Management in the Jordan Rift Valley"
+    ],
+    "sector_narrative": [
+      "+![cdata[Biodiversity]]+",
+      "Biodiversity"
+    ],
+    "reporting_org_ref": "XI-BRIDGE-6385676864",
+    "transaction_value": [
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      6150000.0
+    ],
+    "activity_date_type": [
+      "1",
+      "2",
+      "3",
+      "4"
+    ],
+    "activity_status_code": "3",
+    "description_narrative": [
+      "NA",
+      "Note: Disbursement data provided is cumulative and covers disbursement made by the project Agency."
+    ],
+    "activity_date_iso_date": [
+      "2007-05-20T00:00:00Z",
+      "2007-06-12T00:00:00Z",
+      "2013-07-14T00:00:00Z",
+      "2014-01-14T00:00:00Z"
+    ],
+    "recipient_country_code": [
+      "JO"
+    ],
+    "reporting_org_narrative": [
+      "Global Environment Facility"
+    ],
+    "recipient_country_narrative": [
+      "Jordan"
+    ]
+  },
+  {
+    "sector_code": [
+      "41020",
+      "C"
+    ],
+    "budget_value": [
+      1200000.0,
+      1200000.0,
+      1200000.0,
+      1200000.0,
+      1200000.0
+    ],
+    "iati_identifier": "XI-BRIDGE-6385676864-2555",
+    "title_narrative": [
+      "Promotion of a Wind Power Market"
+    ],
+    "sector_narrative": [
+      "+![cdata[Biosphere protection]]+",
+      "Climate Change"
+    ],
+    "reporting_org_ref": "XI-BRIDGE-6385676864",
+    "transaction_value": [
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      6000000.0
+    ],
+    "activity_date_type": [
+      "1",
+      "2",
+      "3",
+      "4"
+    ],
+    "activity_status_code": "3",
+    "description_narrative": [
+      "NA",
+      "Note: Disbursement data provided is cumulative and covers disbursement made by the project Agency."
+    ],
+    "activity_date_iso_date": [
+      "2008-06-02T00:00:00Z",
+      "2008-06-26T00:00:00Z",
+      "2012-12-31T00:00:00Z",
+      "2016-04-07T00:00:00Z"
+    ],
+    "recipient_country_code": [
+      "JO"
+    ],
+    "reporting_org_narrative": [
+      "Global Environment Facility"
+    ],
+    "recipient_country_narrative": [
+      "Jordan"
+    ]
+  },
+  {
+    "sector_code": [
+      "41020",
+      "C"
+    ],
+    "budget_value": [
+      333333.33,
+      333333.33,
+      333333.33
+    ],
+    "iati_identifier": "XI-BRIDGE-6385676864-3671",
+    "title_narrative": [
+      "Energy Efficiency Investment Support Framework"
+    ],
+    "sector_narrative": [
+      "+![cdata[Biosphere protection]]+",
+      "Climate Change"
+    ],
+    "reporting_org_ref": "XI-BRIDGE-6385676864",
+    "transaction_value": [
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      1000000.0
+    ],
+    "activity_date_type": [
+      "1",
+      "2",
+      "3",
+      "4"
+    ],
+    "activity_status_code": "3",
+    "description_narrative": [
+      "NA",
+      "Note: Disbursement data provided is cumulative and covers disbursement made by the project Agency."
+    ],
+    "activity_date_iso_date": [
+      "2008-10-20T00:00:00Z",
+      "2009-02-24T00:00:00Z",
+      "2014-06-30T00:00:00Z",
+      "2014-12-31T00:00:00Z"
+    ],
+    "recipient_country_code": [
+      "JO"
+    ],
+    "reporting_org_narrative": [
+      "Global Environment Facility"
+    ],
+    "recipient_country_narrative": [
+      "Jordan"
+    ]
+  },
+  {
+    "sector_code": [
+      "41010",
+      "B",
+      "C",
+      "L"
+    ],
+    "budget_value": [
+      666111.0,
+      666111.0,
+      666111.0,
+      666111.0,
+      666111.0
+    ],
+    "iati_identifier": "XI-BRIDGE-6385676864-5026",
+    "title_narrative": [
+      "MENA: Badia Ecosystem and Livelihoods Project (BELP)"
+    ],
+    "sector_narrative": [
+      "+![cdata[Environmental policy and administrative management]]+",
+      "Biodiversity",
+      "Climate Change",
+      "Land Degradation"
+    ],
+    "reporting_org_ref": "XI-BRIDGE-6385676864",
+    "transaction_value": [
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      3330555.0
+    ],
+    "activity_date_type": [
+      "1",
+      "2",
+      "3",
+      "4"
+    ],
+    "activity_status_code": "3",
+    "description_narrative": [
+      "NA",
+      "Note: Disbursement data provided is cumulative and covers disbursement made by the project Agency."
+    ],
+    "activity_date_iso_date": [
+      "2012-07-30T00:00:00Z",
+      "2012-11-27T00:00:00Z",
+      "2017-06-30T00:00:00Z",
+      "2017-06-30T00:00:00Z"
+    ],
+    "recipient_country_code": [
+      "JO"
+    ],
+    "reporting_org_narrative": [
+      "Global Environment Facility"
+    ],
+    "recipient_country_narrative": [
+      "Jordan"
+    ]
+  },
+  {
+    "sector_code": [
+      "41030",
+      "41040",
+      "B",
+      "C",
+      "L",
+      "M"
+    ],
+    "budget_value": [
+      1521376.2,
+      1521376.2,
+      1521376.2,
+      1521376.2,
+      1521376.2
+    ],
+    "iati_identifier": "XI-BRIDGE-6385676864-10347",
+    "title_narrative": [
+      "Scaling up ecological corridors and transboundary connectivity through integrated natural resources management in the Ngotto Forest landscape and MbaÃ©rÃ©-BodinguÃ© National Park"
+    ],
+    "sector_narrative": [
+      "+![cdata[Biodiversity]]+",
+      "+![cdata[Site preservation]]+",
+      "Biodiversity",
+      "Climate Change",
+      "Land Degradation",
+      "Multi Focal Area"
+    ],
+    "reporting_org_ref": "XI-BRIDGE-6385676864",
+    "transaction_value": [
+      0.0,
+      644122.0,
+      728649.0,
+      1093648.0,
+      1846887.0,
+      7606881.0
+    ],
+    "activity_date_type": [
+      "1",
+      "2",
+      "3"
+    ],
+    "activity_status_code": "2",
+    "description_narrative": [
+      "To improve governance and strengthen capacity in the forest and mining sectors in the CAR. \n\nOverall Goal of the GEF AF is to improve integrated natural resources management and sustainable rural livelihoods in the Ngotto Forest landscape and MbaÃ©rÃ©-BodinguÃ© National Park.",
+      "Note: Disbursement data provided is cumulative and covers disbursement made by the project Agency."
+    ],
+    "activity_date_iso_date": [
+      "2020-12-11T00:00:00Z",
+      "2021-05-21T00:00:00Z",
+      "2025-12-30T00:00:00Z"
+    ],
+    "recipient_country_code": [
+      "CF"
+    ],
+    "reporting_org_narrative": [
+      "Global Environment Facility"
+    ],
+    "recipient_country_narrative": [
+      "Central African Republic"
+    ]
+  },
+  {
+    "sector_code": [
+      "41020",
+      "C"
+    ],
+    "budget_value": [
+      470000.0,
+      470000.0,
+      470000.0,
+      470000.0,
+      470000.0
+    ],
+    "iati_identifier": "XI-BRIDGE-6385676864-2489",
+    "title_narrative": [
+      "Rural Infrastructure (Electrification Sector)"
+    ],
+    "sector_narrative": [
+      "+![cdata[Biosphere protection]]+",
+      "Climate Change"
+    ],
+    "reporting_org_ref": "XI-BRIDGE-6385676864",
+    "transaction_value": [
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      2350000.0
+    ],
+    "activity_date_type": [
+      "1",
+      "2",
+      "3",
+      "4"
+    ],
+    "activity_status_code": "3",
+    "description_narrative": [
+      "NA",
+      "Note: Disbursement data provided is cumulative and covers disbursement made by the project Agency."
+    ],
+    "activity_date_iso_date": [
+      "2005-11-21T00:00:00Z",
+      "2005-12-15T00:00:00Z",
+      "2008-06-30T00:00:00Z",
+      "2016-12-27T00:00:00Z"
+    ],
+    "recipient_country_code": [
+      "HN"
+    ],
+    "reporting_org_narrative": [
+      "Global Environment Facility"
+    ],
+    "recipient_country_narrative": [
+      "Honduras"
+    ]
+  },
+  {
+    "sector_code": [
+      "41020",
+      "C"
+    ],
+    "budget_value": [
+      333077.33,
+      333077.33,
+      333077.33
+    ],
+    "iati_identifier": "XI-BRIDGE-6385676864-2649",
+    "title_narrative": [
+      "Rural Electrification and Renewable Energy Development"
+    ],
+    "sector_narrative": [
+      "+![cdata[Biosphere protection]]+",
+      "Climate Change"
+    ],
+    "reporting_org_ref": "XI-BRIDGE-6385676864",
+    "transaction_value": [
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      999232.0
+    ],
+    "activity_date_type": [
+      "1",
+      "2",
+      "3",
+      "4"
+    ],
+    "activity_status_code": "3",
+    "description_narrative": [
+      "NA",
+      "Note: Disbursement data provided is cumulative and covers disbursement made by the project Agency."
+    ],
+    "activity_date_iso_date": [
+      "2004-12-21T00:00:00Z",
+      "2005-02-04T00:00:00Z",
+      "2007-02-28T00:00:00Z",
+      "2008-12-31T00:00:00Z"
+    ],
+    "recipient_country_code": [
+      "YE"
+    ],
+    "reporting_org_narrative": [
+      "Global Environment Facility"
+    ],
+    "recipient_country_narrative": [
+      "Yemen"
+    ]
+  },
+  {
+    "sector_code": [
+      "41020",
+      "C"
+    ],
+    "budget_value": [
+      800000.0,
+      800000.0,
+      800000.0,
+      800000.0,
+      800000.0
+    ],
+    "iati_identifier": "XI-BRIDGE-6385676864-3267",
+    "title_narrative": [
+      "MENARID: Adaptation to Climate Change Using Agrobiodiversity Resources in the Rainfed Highlands of Yemen"
+    ],
+    "sector_narrative": [
+      "+![cdata[Biosphere protection]]+",
+      "Climate Change"
+    ],
+    "reporting_org_ref": "XI-BRIDGE-6385676864",
+    "transaction_value": [
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      4000000.0
+    ],
+    "activity_date_type": [
+      "1",
+      "2",
+      "3",
+      "4"
+    ],
+    "activity_status_code": "3",
+    "description_narrative": [
+      "NA",
+      "Note: Disbursement data provided is cumulative and covers disbursement made by the project Agency."
+    ],
+    "activity_date_iso_date": [
+      "2010-04-27T00:00:00Z",
+      "2010-05-27T00:00:00Z",
+      "2014-08-31T00:00:00Z",
+      "2017-05-31T00:00:00Z"
+    ],
+    "recipient_country_code": [
+      "YE"
+    ],
+    "reporting_org_narrative": [
+      "Global Environment Facility"
+    ],
+    "recipient_country_narrative": [
+      "Yemen"
+    ]
+  },
+  {
+    "sector_code": [
+      "C"
+    ],
+    "iati_identifier": "XI-BRIDGE-6385676864-11655",
+    "title_narrative": [
+      "Caribbean Efficient and Green-Energy Buildings (CEGEB) Project"
+    ],
+    "sector_narrative": [
+      "Climate Change"
+    ],
+    "reporting_org_ref": "XI-BRIDGE-6385676864",
+    "transaction_value": [
+      0.0,
+      1791900.0
+    ],
+    "activity_date_type": [
+      "1"
+    ],
+    "activity_status_code": "2",
+    "description_narrative": [
+      "To save energy, increase the use of renewable energy in public buildings and facilities and enhance regulatory framework for investments in EE and RE in participating Caribbean countries",
+      "Note: Disbursement data provided is cumulative and covers disbursement made by the project Agency.",
+      "The Project will benefit the regular users and employees of public buildings of ministries, other central and local government institutions, and public facilities. They will include the citizens of the participating countries who rely on services provided by retrofitted public buildings, such as school children, users of hospitals or clinics and critical services that will benefit from enhanced security against power outages. Taxpayers will also benefit, indirectly from the lower electricity bills of public services funded taxes. Ministries and local government offices can use the cost savings from reduced energy consumption for other public services. Additional beneficiaries will include professionals and skilled workers in engineering, equipment suppliers, installation, and other service providers for EE, RE services from increased demand for their goods and services across the region.      Furthermore, this WB CEGEB Regional Project will enable regional integration and multiply the benefits of a coordinated sustained development and maintenance of capacity at the regional level whilst giving individual countries the ability to pursue national-level activities best suited to their circumstances. Women seeking technical jobs in the energy sector will benefit too from support activities included in the Project designed to reduce the relatively low level of female employment in the energy sector’s technical jobs.  Additional economic benefits will result from: (i) economies of scale in procurement and transaction costs, (ii) expansion of the regional market for EE and solar PV equipment; (iii) creation of local jobs for installation, operation, and maintenance services of EE and DPV systems and (iii) development of a regional public good by knowledge-sharing in activities such as procurement, operations and maintenance, and capacity-building.         The Project will support investments in EE and PV systems in public buildings in participating countries that will contribute to substantial GHG emission reductions, both through reduced energy demand from public customers but also from increased RE generation currently heavily dependent on fossil fuels. Installations of DPV plus battery storage systems for critical public facilities, and upgrades on the grid for integration of RE, will also bring adaptation benefits increasing resilience of energy supply against extreme climate conditions, such as hurricanes, by reducing their reliance on grid supply."
+    ],
+    "activity_date_iso_date": [
+      "2024-12-10T00:00:00Z"
+    ],
+    "recipient_country_code": [
+      "LC"
+    ],
+    "reporting_org_narrative": [
+      "Global Environment Facility"
+    ],
+    "recipient_country_narrative": [
+      "St. Lucia"
+    ]
+  },
+  {
+    "sector_code": [
+      "41030",
+      "B"
+    ],
+    "budget_value": [
+      246666.67,
+      246666.67,
+      246666.67
+    ],
+    "iati_identifier": "XI-BRIDGE-6385676864-665",
+    "title_narrative": [
+      "Protected Areas Management"
+    ],
+    "sector_narrative": [
+      "+![cdata[Biodiversity]]+",
+      "Biodiversity"
+    ],
+    "reporting_org_ref": "XI-BRIDGE-6385676864",
+    "transaction_value": [
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      740000.0
+    ],
+    "activity_date_type": [
+      "1",
+      "2",
+      "3",
+      "4"
+    ],
+    "activity_status_code": "3",
+    "description_narrative": [
+      "NA",
+      "Note: Disbursement data provided is cumulative and covers disbursement made by the project Agency."
+    ],
+    "activity_date_iso_date": [
+      "1999-04-01T00:00:00Z",
+      "1999-04-02T00:00:00Z",
+      "2003-12-31T00:00:00Z",
+      "2005-12-31T00:00:00Z"
+    ],
+    "recipient_country_code": [
+      "YE"
+    ],
+    "reporting_org_narrative": [
+      "Global Environment Facility"
+    ],
+    "recipient_country_narrative": [
+      "Yemen"
+    ]
+  },
+  {
+    "sector_code": [
+      "41020",
+      "C"
+    ],
+    "budget_value": [
+      333333.33,
+      333333.33,
+      333333.33
+    ],
+    "iati_identifier": "XI-BRIDGE-6385676864-5812",
+    "title_narrative": [
+      "Geothermal Resource Development in Saint Lucia"
+    ],
+    "sector_narrative": [
+      "+![cdata[Biosphere protection]]+",
+      "Climate Change"
+    ],
+    "reporting_org_ref": "XI-BRIDGE-6385676864",
+    "transaction_value": [
+      300000.0,
+      0.0,
+      1000000.0
+    ],
+    "activity_date_type": [
+      "1",
+      "2",
+      "3",
+      "4"
+    ],
+    "activity_status_code": "3",
+    "description_narrative": [
+      "NA",
+      "Note: Disbursement data provided is cumulative and covers disbursement made by the project Agency."
+    ],
+    "activity_date_iso_date": [
+      "2014-11-19T00:00:00Z",
+      "2014-12-03T00:00:00Z",
+      "2019-01-25T00:00:00Z",
+      "2019-01-25T00:00:00Z"
+    ],
+    "recipient_country_code": [
+      "LC"
+    ],
+    "reporting_org_narrative": [
+      "Global Environment Facility"
+    ],
+    "recipient_country_narrative": [
+      "St. Lucia"
+    ]
+  },
+  {
+    "sector_code": [
+      "41030",
+      "B"
+    ],
+    "budget_value": [
+      241666.67,
+      241666.67,
+      241666.67
+    ],
+    "iati_identifier": "XI-BRIDGE-6385676864-666",
+    "title_narrative": [
+      "Coastal Zone Management along the Gulf of Aden"
+    ],
+    "sector_narrative": [
+      "+![cdata[Biodiversity]]+",
+      "Biodiversity"
+    ],
+    "reporting_org_ref": "XI-BRIDGE-6385676864",
+    "transaction_value": [
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      725000.0
+    ],
+    "activity_date_type": [
+      "1",
+      "2",
+      "3",
+      "4"
+    ],
+    "activity_status_code": "3",
+    "description_narrative": [
+      "NA",
+      "Note: Disbursement data provided is cumulative and covers disbursement made by the project Agency."
+    ],
+    "activity_date_iso_date": [
+      "1999-06-08T00:00:00Z",
+      "1999-04-02T00:00:00Z",
+      "2003-12-31T00:00:00Z",
+      "2005-12-31T00:00:00Z"
+    ],
+    "recipient_country_code": [
+      "YE"
+    ],
+    "reporting_org_narrative": [
+      "Global Environment Facility"
+    ],
+    "recipient_country_narrative": [
+      "Yemen"
+    ]
+  },
+  {
+    "sector_code": [
+      "41030",
+      "B"
+    ],
+    "budget_value": [
+      914000.0,
+      914000.0,
+      914000.0,
+      914000.0,
+      914000.0
+    ],
+    "iati_identifier": "XI-BRIDGE-6385676864-95",
+    "title_narrative": [
+      "Conservation and Sustainable Use of Medicinal Plants"
+    ],
+    "sector_narrative": [
+      "+![cdata[Biodiversity]]+",
+      "Biodiversity"
+    ],
+    "reporting_org_ref": "XI-BRIDGE-6385676864",
+    "transaction_value": [
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      4570000.0
+    ],
+    "activity_date_type": [
+      "1",
+      "2",
+      "3",
+      "4"
+    ],
+    "activity_status_code": "3",
+    "description_narrative": [
+      "NA",
+      "Note: Disbursement data provided is cumulative and covers disbursement made by the project Agency."
+    ],
+    "activity_date_iso_date": [
+      "1997-11-04T00:00:00Z",
+      "1997-12-18T00:00:00Z",
+      "2003-06-30T00:00:00Z",
+      "2004-12-16T00:00:00Z"
+    ],
+    "recipient_country_code": [
+      "LK"
+    ],
+    "reporting_org_narrative": [
+      "Global Environment Facility"
+    ],
+    "recipient_country_narrative": [
+      "Sri Lanka"
+    ]
+  },
+  {
+    "sector_code": [
+      "41020",
+      "C"
+    ],
+    "budget_value": [
+      1180000.0,
+      1180000.0,
+      1180000.0,
+      1180000.0,
+      1180000.0
+    ],
+    "iati_identifier": "XI-BRIDGE-6385676864-104",
+    "title_narrative": [
+      "Energy Services Delivery"
+    ],
+    "sector_narrative": [
+      "+![cdata[Biosphere protection]]+",
+      "Climate Change"
+    ],
+    "reporting_org_ref": "XI-BRIDGE-6385676864",
+    "transaction_value": [
+      0.0,
+      0.0,
+      0.0,
+      5900000.0
+    ],
+    "activity_date_type": [
+      "1",
+      "2",
+      "3",
+      "4"
+    ],
+    "activity_status_code": "3",
+    "description_narrative": [
+      "NA",
+      "Note: Disbursement data provided is cumulative and covers disbursement made by the project Agency."
+    ],
+    "activity_date_iso_date": [
+      "1997-02-09T00:00:00Z",
+      "1997-03-18T00:00:00Z",
+      "2002-12-31T00:00:00Z",
+      "2003-06-05T00:00:00Z"
+    ],
+    "recipient_country_code": [
+      "LK"
+    ],
+    "reporting_org_narrative": [
+      "Global Environment Facility"
+    ],
+    "recipient_country_narrative": [
+      "Sri Lanka"
+    ]
+  },
+  {
+    "sector_code": [
+      "41020",
+      "C"
+    ],
+    "budget_value": [
+      1600000.0,
+      1600000.0,
+      1600000.0,
+      1600000.0,
+      1600000.0
+    ],
+    "iati_identifier": "XI-BRIDGE-6385676864-1545",
+    "title_narrative": [
+      "Renewable Energy for Rural Economic Development"
+    ],
+    "sector_narrative": [
+      "+![cdata[Biosphere protection]]+",
+      "Climate Change"
+    ],
+    "reporting_org_ref": "XI-BRIDGE-6385676864",
+    "transaction_value": [
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      8000000.0
+    ],
+    "activity_date_type": [
+      "1",
+      "2",
+      "3",
+      "4"
+    ],
+    "activity_status_code": "3",
+    "description_narrative": [
+      "NA",
+      "Note: Disbursement data provided is cumulative and covers disbursement made by the project Agency."
+    ],
+    "activity_date_iso_date": [
+      "2002-06-05T00:00:00Z",
+      "2002-06-20T00:00:00Z",
+      "2008-06-30T00:00:00Z",
+      "2012-06-21T00:00:00Z"
+    ],
+    "recipient_country_code": [
+      "LK"
+    ],
+    "reporting_org_narrative": [
+      "Global Environment Facility"
+    ],
+    "recipient_country_narrative": [
+      "Sri Lanka"
+    ]
+  },
+  {
+    "sector_code": [
+      "41030",
+      "B"
+    ],
+    "budget_value": [
+      2600000.0,
+      2600000.0,
+      2600000.0,
+      2600000.0,
+      2600000.0
+    ],
+    "iati_identifier": "XI-BRIDGE-6385676864-2641",
+    "title_narrative": [
+      "Sustainable Cerrado Initiative"
+    ],
+    "sector_narrative": [
+      "+![cdata[Biodiversity]]+",
+      "Biodiversity"
+    ],
+    "reporting_org_ref": "XI-BRIDGE-6385676864",
+    "transaction_value": [
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      13000000.0
+    ],
+    "activity_date_type": [
+      "1",
+      "2",
+      "3",
+      "4"
+    ],
+    "activity_status_code": "3",
+    "description_narrative": [
+      "NA",
+      "Note: Disbursement data provided is cumulative and covers disbursement made by the project Agency."
+    ],
+    "activity_date_iso_date": [
+      "2009-12-07T00:00:00Z",
+      "2010-03-18T00:00:00Z",
+      "2013-12-01T00:00:00Z",
+      "2015-12-28T00:00:00Z"
+    ],
+    "recipient_country_code": [
+      "BR"
+    ],
+    "reporting_org_narrative": [
+      "Global Environment Facility"
+    ],
+    "recipient_country_narrative": [
+      "Brazil"
+    ]
+  },
+  {
+    "sector_code": [
+      "41030",
+      "B"
+    ],
+    "budget_value": [
+      4400000.0,
+      4400000.0,
+      4400000.0,
+      4400000.0,
+      4400000.0
+    ],
+    "iati_identifier": "XI-BRIDGE-6385676864-2764",
+    "title_narrative": [
+      "National Biodiversity Mainstreaming and  Institutional Consolidation Project"
+    ],
+    "sector_narrative": [
+      "+![cdata[Biodiversity]]+",
+      "Biodiversity"
+    ],
+    "reporting_org_ref": "XI-BRIDGE-6385676864",
+    "transaction_value": [
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      22000000.0
+    ],
+    "activity_date_type": [
+      "1",
+      "2",
+      "3",
+      "4"
+    ],
+    "activity_status_code": "3",
+    "description_narrative": [
+      "NA",
+      "Note: Disbursement data provided is cumulative and covers disbursement made by the project Agency."
+    ],
+    "activity_date_iso_date": [
+      "2007-12-19T00:00:00Z",
+      "2008-01-31T00:00:00Z",
+      "2013-12-31T00:00:00Z",
+      "2015-06-29T00:00:00Z"
+    ],
+    "recipient_country_code": [
+      "BR"
+    ],
+    "reporting_org_narrative": [
+      "Global Environment Facility"
+    ],
+    "recipient_country_narrative": [
+      "Brazil"
+    ]
+  },
+  {
+    "sector_code": [
+      "41030",
+      "B"
+    ],
+    "budget_value": [
+      800000.0,
+      800000.0,
+      800000.0,
+      800000.0,
+      800000.0
+    ],
+    "iati_identifier": "XI-BRIDGE-6385676864-2765",
+    "title_narrative": [
+      "Espirito Santo Biodiversity and Watershed Conservation and Restoration Project"
+    ],
+    "sector_narrative": [
+      "+![cdata[Biodiversity]]+",
+      "Biodiversity"
+    ],
+    "reporting_org_ref": "XI-BRIDGE-6385676864",
+    "transaction_value": [
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      4000000.0
+    ],
+    "activity_date_type": [
+      "1",
+      "2",
+      "3",
+      "4"
+    ],
+    "activity_status_code": "3",
+    "description_narrative": [
+      "NA",
+      "Note: Disbursement data provided is cumulative and covers disbursement made by the project Agency."
+    ],
+    "activity_date_iso_date": [
+      "2008-08-26T00:00:00Z",
+      "2005-10-25T00:00:00Z",
+      "2012-06-30T00:00:00Z",
+      "2015-12-28T00:00:00Z"
+    ],
+    "recipient_country_code": [
+      "BR"
+    ],
+    "reporting_org_narrative": [
+      "Global Environment Facility"
+    ],
+    "recipient_country_narrative": [
+      "Brazil"
+    ]
+  },
+  {
+    "sector_code": [
+      "41030",
+      "B"
+    ],
+    "budget_value": [
+      324578.0,
+      324578.0,
+      324578.0
+    ],
+    "iati_identifier": "XI-BRIDGE-6385676864-2817",
+    "title_narrative": [
+      "Tabuleiro State Park: Conservation of Biodiversity and Ecosystem Rehabilitation"
+    ],
+    "sector_narrative": [
+      "+![cdata[Biodiversity]]+",
+      "Biodiversity"
+    ],
+    "reporting_org_ref": "XI-BRIDGE-6385676864",
+    "transaction_value": [
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      973734.0
+    ],
+    "activity_date_type": [
+      "1",
+      "2",
+      "3",
+      "4"
+    ],
+    "activity_status_code": "3",
+    "description_narrative": [
+      "NA",
+      "Note: Disbursement data provided is cumulative and covers disbursement made by the project Agency."
+    ],
+    "activity_date_iso_date": [
+      "2005-07-20T00:00:00Z",
+      "2005-08-22T00:00:00Z",
+      "2009-10-31T00:00:00Z",
+      "2010-12-31T00:00:00Z"
+    ],
+    "recipient_country_code": [
+      "BR"
+    ],
+    "reporting_org_narrative": [
+      "Global Environment Facility"
+    ],
+    "recipient_country_narrative": [
+      "Brazil"
+    ]
+  },
+  {
+    "sector_code": [
+      "41030",
+      "B"
+    ],
+    "budget_value": [
+      6000000.0,
+      6000000.0,
+      6000000.0,
+      6000000.0,
+      6000000.0
+    ],
+    "iati_identifier": "XI-BRIDGE-6385676864-771",
+    "title_narrative": [
+      "Amazon Region Protected Areas Program (ARPA)"
+    ],
+    "sector_narrative": [
+      "+![cdata[Biodiversity]]+",
+      "Biodiversity"
+    ],
+    "reporting_org_ref": "XI-BRIDGE-6385676864",
+    "transaction_value": [
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      30000000.0
+    ],
+    "activity_date_type": [
+      "1",
+      "2",
+      "3",
+      "4"
+    ],
+    "activity_status_code": "3",
+    "description_narrative": [
+      "NA",
+      "Note: Disbursement data provided is cumulative and covers disbursement made by the project Agency."
+    ],
+    "activity_date_iso_date": [
+      "2002-07-16T00:00:00Z",
+      "2002-08-08T00:00:00Z",
+      "2007-06-30T00:00:00Z",
+      "2009-06-29T00:00:00Z"
+    ],
+    "recipient_country_code": [
+      "BR"
+    ],
+    "reporting_org_narrative": [
+      "Global Environment Facility"
+    ],
+    "recipient_country_narrative": [
+      "Brazil"
+    ]
+  },
+  {
+    "sector_code": [
+      "41030",
+      "B"
+    ],
+    "budget_value": [
+      1600000.0,
+      1600000.0,
+      1600000.0,
+      1600000.0,
+      1600000.0
+    ],
+    "iati_identifier": "XI-BRIDGE-6385676864-1287",
+    "title_narrative": [
+      "Parana Biodiversity Project"
+    ],
+    "sector_narrative": [
+      "+![cdata[Biodiversity]]+",
+      "Biodiversity"
+    ],
+    "reporting_org_ref": "XI-BRIDGE-6385676864",
+    "transaction_value": [
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      8000000.0
+    ],
+    "activity_date_type": [
+      "1",
+      "2",
+      "3",
+      "4"
+    ],
+    "activity_status_code": "3",
+    "description_narrative": [
+      "NA",
+      "Note: Disbursement data provided is cumulative and covers disbursement made by the project Agency."
+    ],
+    "activity_date_iso_date": [
+      "2002-04-24T00:00:00Z",
+      "2002-05-21T00:00:00Z",
+      "2007-01-31T00:00:00Z",
+      "2009-10-06T00:00:00Z"
+    ],
+    "recipient_country_code": [
+      "BR"
+    ],
+    "reporting_org_narrative": [
+      "Global Environment Facility"
+    ],
+    "recipient_country_narrative": [
+      "Brazil"
+    ]
+  },
+  {
+    "sector_code": [
+      "41030",
+      "B"
+    ],
+    "budget_value": [
+      3178000.0,
+      3178000.0,
+      3178000.0,
+      3178000.0,
+      3178000.0
+    ],
+    "iati_identifier": "XI-BRIDGE-6385676864-4085",
+    "title_narrative": [
+      "Amazon Region Protected Areas Program Phase 2"
+    ],
+    "sector_narrative": [
+      "+![cdata[Biodiversity]]+",
+      "Biodiversity"
+    ],
+    "reporting_org_ref": "XI-BRIDGE-6385676864",
+    "transaction_value": [
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      15890000.0,
+      15890000.0
+    ],
+    "activity_date_type": [
+      "1",
+      "2",
+      "3",
+      "4"
+    ],
+    "activity_status_code": "3",
+    "description_narrative": [
+      "NA",
+      "Note: Disbursement data provided is cumulative and covers disbursement made by the project Agency."
+    ],
+    "activity_date_iso_date": [
+      "2011-12-19T00:00:00Z",
+      "2012-02-23T00:00:00Z",
+      "2018-06-30T00:00:00Z",
+      "2017-07-31T00:00:00Z"
+    ],
+    "recipient_country_code": [
+      "BR"
+    ],
+    "reporting_org_narrative": [
+      "Global Environment Facility"
+    ],
+    "recipient_country_narrative": [
+      "Brazil"
+    ]
+  },
+  {
+    "sector_code": [
+      "41030",
+      "B"
+    ],
+    "budget_value": [
+      2000000.0,
+      2000000.0,
+      2000000.0,
+      2000000.0,
+      2000000.0
+    ],
+    "iati_identifier": "XI-BRIDGE-6385676864-1064",
+    "title_narrative": [
+      "Strengthening Capacity for Managing National Parks and Biodiversity"
+    ],
+    "sector_narrative": [
+      "+![cdata[Biodiversity]]+",
+      "Biodiversity"
+    ],
+    "reporting_org_ref": "XI-BRIDGE-6385676864",
+    "transaction_value": [
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      10000000.0
+    ],
+    "activity_date_type": [
+      "1",
+      "2",
+      "3",
+      "4"
+    ],
+    "activity_status_code": "3",
+    "description_narrative": [
+      "NA",
+      "Note: Disbursement data provided is cumulative and covers disbursement made by the project Agency."
+    ],
+    "activity_date_iso_date": [
+      "2006-02-28T00:00:00Z",
+      "2006-03-29T00:00:00Z",
+      "2012-06-30T00:00:00Z",
+      "2013-12-26T00:00:00Z"
+    ],
+    "recipient_country_code": [
+      "GA"
+    ],
+    "reporting_org_narrative": [
+      "Global Environment Facility"
+    ],
+    "recipient_country_narrative": [
+      "Gabon"
+    ]
+  },
+  {
+    "sector_code": [
+      "41030",
+      "B",
+      "L",
+      "M"
+    ],
+    "budget_value": [
+      1811009.2,
+      1811009.2,
+      1811009.2,
+      1811009.2,
+      1811009.2
+    ],
+    "iati_identifier": "XI-BRIDGE-6385676864-9212",
+    "title_narrative": [
+      "Wildlife and Human-Elephant Conflicts Management"
+    ],
+    "sector_narrative": [
+      "+![cdata[Biodiversity]]+",
+      "Biodiversity",
+      "Land Degradation",
+      "Multi Focal Area"
+    ],
+    "reporting_org_ref": "XI-BRIDGE-6385676864",
+    "transaction_value": [
+      0.0,
+      1156680.0,
+      1733054.0,
+      1442176.0,
+      1892017.0,
+      2669461.0,
+      161658.0,
+      9055046.0,
+      9055046.0
+    ],
+    "activity_date_type": [
+      "1",
+      "2",
+      "3",
+      "4"
+    ],
+    "activity_status_code": "3",
+    "description_narrative": [
+      "NA",
+      "Note: Disbursement data provided is cumulative and covers disbursement made by the project Agency."
+    ],
+    "activity_date_iso_date": [
+      "2016-07-20T00:00:00Z",
+      "2016-09-02T00:00:00Z",
+      "2023-01-31T00:00:00Z",
+      "2023-01-31T00:00:00Z"
+    ],
+    "recipient_country_code": [
+      "GA"
+    ],
+    "reporting_org_narrative": [
+      "Global Environment Facility"
+    ],
+    "recipient_country_narrative": [
+      "Gabon"
+    ]
+  },
+  {
+    "sector_code": [
+      "31110",
+      "41030",
+      "B",
+      "C",
+      "L",
+      "M"
+    ],
+    "budget_value": [
+      12066000.0,
+      12066000.0,
+      12066000.0,
+      12066000.0,
+      12066000.0
+    ],
+    "iati_identifier": "XI-BRIDGE-6385676864-9664",
+    "title_narrative": [
+      "Amazon Sustainable Landscapes Project"
+    ],
+    "sector_narrative": [
+      "+![cdata[Agricultural policy and administrative management]]+",
+      "+![cdata[Biodiversity]]+",
+      "Biodiversity",
+      "Climate Change",
+      "Land Degradation",
+      "Multi Focal Area"
+    ],
+    "reporting_org_ref": "XI-BRIDGE-6385676864",
+    "transaction_value": [
+      22821556.0,
+      0.0,
+      633240.0,
+      4098522.0,
+      3030917.0,
+      4008874.0,
+      6544893.0,
+      60330000.0
+    ],
+    "activity_date_type": [
+      "1",
+      "2",
+      "3"
+    ],
+    "activity_status_code": "2",
+    "description_narrative": [
+      "NA",
+      "Note: Disbursement data provided is cumulative and covers disbursement made by the project Agency."
+    ],
+    "activity_date_iso_date": [
+      "2017-08-21T00:00:00Z",
+      "2017-12-14T00:00:00Z",
+      "2026-12-31T00:00:00Z"
+    ],
+    "recipient_country_code": [
+      "BR"
+    ],
+    "reporting_org_narrative": [
+      "Global Environment Facility"
+    ],
+    "recipient_country_narrative": [
+      "Brazil"
+    ]
+  }
+]

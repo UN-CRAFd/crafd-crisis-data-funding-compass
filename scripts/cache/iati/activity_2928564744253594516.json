@@ -1,0 +1,749 @@
+[
+  {
+    "sector_code": [
+      "43060"
+    ],
+    "iati_identifier": "GB-CHC-1159483-GB-CHC-1159483",
+    "title_narrative": [
+      "Start Network Local Humanitarian Leadership Program"
+    ],
+    "reporting_org_ref": "GB-CHC-1159483",
+    "activity_date_type": [
+      "2",
+      "4"
+    ],
+    "activity_status_code": "2",
+    "description_narrative": [
+      "Start Network will tackle Policy Objective 3: A more equal dialogue among all partners throughout the humanitarian delivery chain about cooperation and the sharing of capacity and risks, facilitating increased local leadership; and Policy Objective 2: Increasingly, in response to crises caused by people as well, anticipatory humanitarian action is undertaken, reducing the upward pressure on humanitarian needs."
+    ],
+    "activity_date_iso_date": [
+      "2024-01-01T00:00:00Z",
+      "2025-06-01T00:00:00Z"
+    ],
+    "recipient_country_code": [
+      "CD",
+      "SV",
+      "GT",
+      "IN",
+      "BD",
+      "PK",
+      "LK"
+    ],
+    "reporting_org_narrative": [
+      "Start Network"
+    ],
+    "recipient_country_narrative": [
+      "Multi-country humanitarian leadership program implemented in countries with Start Network LNNGO members, focusing on strengthening local humanitarian capacity, enhancing access to funding, and developing anticipatory action tools adapted to specific country contexts.",
+      "Multi-country humanitarian leadership program implemented in countries with Start Network LNNGO members, focusing on strengthening local humanitarian capacity, enhancing access to funding, and developing anticipatory action tools adapted to specific country contexts.",
+      "Multi-country humanitarian leadership program implemented in countries with Start Network LNNGO members, focusing on strengthening local humanitarian capacity, enhancing access to funding, and developing anticipatory action tools adapted to specific country contexts.",
+      "Multi-country humanitarian leadership program implemented in countries with Start Network LNNGO members, focusing on strengthening local humanitarian capacity, enhancing access to funding, and developing anticipatory action tools adapted to specific country contexts.",
+      "Multi-country humanitarian leadership program implemented in countries with Start Network LNNGO members, focusing on strengthening local humanitarian capacity, enhancing access to funding, and developing anticipatory action tools adapted to specific country contexts.",
+      "Multi-country humanitarian leadership program implemented in countries with Start Network LNNGO members, focusing on strengthening local humanitarian capacity, enhancing access to funding, and developing anticipatory action tools adapted to specific country contexts.",
+      "Multi-country humanitarian leadership program implemented in countries with Start Network LNNGO members, focusing on strengthening local humanitarian capacity, enhancing access to funding, and developing anticipatory action tools adapted to specific country contexts."
+    ]
+  },
+  {
+    "sector_code": [
+      "72040",
+      "12261"
+    ],
+    "budget_value": [
+      115203.0
+    ],
+    "iati_identifier": "DE-CR-RA000220-VR3810-NER 1054-21",
+    "title_narrative": [
+      "Start Fund - Emergency Response to affected population in Niger"
+    ],
+    "reporting_org_ref": "DE-CR-RA000220-VR3810",
+    "activity_date_type": [
+      "1",
+      "3"
+    ],
+    "activity_status_code": "2",
+    "description_narrative": [
+      "After a terrorist attack by Boko Haram in north-eastern Nigeria, many people have fled to neighbouring Niger. Here they are staying with relatives or camping in designated areas. With money from an emergency relief fund, Welthungerhilfe supports refugees and host communities with food vouchers. This not only helps the people who urgently need help, but also the local markets. At the same time, the opportunity is taken to provide families with hygiene measures and information on healthy nutrition for young children.",
+      "5600"
+    ],
+    "activity_date_iso_date": [
+      "2021-04-25T00:00:00Z",
+      "2021-06-23T00:00:00Z"
+    ],
+    "recipient_country_code": [
+      "NE"
+    ],
+    "reporting_org_narrative": [
+      "Deutsche Welthungerhilfe"
+    ]
+  },
+  {
+    "sector_code": [
+      "72040"
+    ],
+    "budget_value": [
+      170492.0
+    ],
+    "iati_identifier": "DE-CR-RA000220-VR3810-MDG1082-21",
+    "title_narrative": [
+      "FbA - Early Action in Madagascar"
+    ],
+    "reporting_org_ref": "DE-CR-RA000220-VR3810",
+    "activity_date_type": [
+      "2",
+      "3"
+    ],
+    "activity_status_code": "2",
+    "description_narrative": [
+      "The project outlined is the first early action intervention implemented in the course of the Forecast-based Action Programme due to a trigger of the drought monitoring and trigger model.The model detected a drouth during a plant-critical growing phase which is expected to result in increased food insecurity of most vulnerable households. As a result, an early warning was issued.\r\n\r\nIn line with the previously developed Early Action Protocol, most appropriate early actions are unconditional cash transfers. These shall mitigate the impacts of the imminend food insecurity of the targeted population. The transfers will be provided in 6 installments, the 1st distributions are expected to begin before the harvest (mid may) and end before the welding period when food insecurity is expected to peak.",
+      "Objective of the early actions are the minimization of drought impacts on the most vulnerable households. Early actions identified to mitigate the impending impact of drought on food security are unconditional cash transfers to the targeted population. These early emergency measures are fit to protect the food and nutrition security of the most vulnerable households. In order to keep families above the survival threshold and reduce the adoption of negative copying strategies, the uncodnidtional cash transfers will provide food aid and protection of goods to avoid further deterioration of livelihoods.\r\n\r\nThe approach will focus on using a shock-appropriate approach to increase capacity and synergize resources, ensure the integration of different activities in medium time to address the underlying vulnerabilities and risks, by mobilizing and raising awareness of communities (nutrition, hygiene-COVID) and effective coordination at different levels between institutions (local and central), communities and other actors with ongoing programs.",
+      "The expected crop loss and increased food insecurity are expected to mainly affect the region's most vulnerable group of people, who will suffer a significant loss of income from work and a protected loss of food for self-supply.\r\n\r\nBased on the HEA result, households in the very poor socio-economic category will be covered by this project (analysis carried out in 2018-2019) whose number is estimated at 1496 households with a size of 5 people per household (Source LIAS HEA MG 7 2018-2019)."
+    ],
+    "activity_date_iso_date": [
+      "2021-05-10T00:00:00Z",
+      "2021-11-30T00:00:00Z"
+    ],
+    "recipient_country_code": [
+      "MG"
+    ],
+    "reporting_org_narrative": [
+      "Deutsche Welthungerhilfe"
+    ]
+  },
+  {
+    "sector_code": [
+      "72010"
+    ],
+    "budget_value": [
+      88911.0
+    ],
+    "iati_identifier": "DE-CR-RA000220-VR3810-ETH1185-20",
+    "title_narrative": [
+      "Emergency response to flood affected IDPs"
+    ],
+    "reporting_org_ref": "DE-CR-RA000220-VR3810",
+    "activity_date_type": [
+      "2",
+      "4"
+    ],
+    "activity_status_code": "4",
+    "description_narrative": [
+      "The proposed  emergency response project is designed  to respond to the priorities identified by the target community.  This proposed action will tackle the most urgent needs of 7320 flood displaced people via combining shelter and WASH needs .",
+      "To provide lifesaving shelter and WASH assistance to particularly the most vulnerable flood affected IDPs",
+      "The primary objective of the proposed action is to support extremely deprived and vulnerable flood  1220 IDP families through provision of emergency shelter and WASH solutions. Although all community members have been affected by the flood, it is mainly under five children, PLW, female/child headed households and elderly/disabled who are the most vulnerable to shocks and stresses. WHH and APDA  have  paid careful attention whilst designing the action to the different risks, needs, priorities of these groups. The action takes into consideration the vulnerability of these groups whose daily life is predominately focused on or around their shelters and WASH NFIs. Consequentially, these groups also the one  face bigger protection risks associated with not having a dignified and safe living space."
+    ],
+    "activity_date_iso_date": [
+      "2020-08-14T00:00:00Z",
+      "2020-12-31T00:00:00Z"
+    ],
+    "recipient_country_code": [
+      "ET"
+    ],
+    "reporting_org_narrative": [
+      "Deutsche Welthungerhilfe"
+    ]
+  },
+  {
+    "sector_code": [
+      "72040",
+      "14031",
+      "99810"
+    ],
+    "budget_value": [
+      200000.0
+    ],
+    "iati_identifier": "DE-CR-RA000220-VR3810-ETH1210-21",
+    "title_narrative": [
+      "Emergency live-saving Multi-Sectoral Response for drought affected communities in Ethiopia"
+    ],
+    "reporting_org_ref": "DE-CR-RA000220-VR3810",
+    "activity_date_type": [
+      "2",
+      "3"
+    ],
+    "activity_status_code": "2",
+    "description_narrative": [
+      "There is a severe drought due to shortage of Hageyya/Bega rain in the area. The expected rain in September and October is delayed resulted critical water shortage for both human and animals, shortage in livestock feed and pasture and animal death, displacement as well as disrupted and affected the socio-economic status of the pastoralist communities. More than half a million-pastoralist people are significantly affected by the drought with their livestock.",
+      "The overall goal of this intervention is to save the lives of drought affected communities and also to contribute toward resiliency of the affected community to the recurrent drought effect through the provision of multi-sectoral WASH, livestock feed and multi-sectoral cash.\r\n\r\nThe specific objectives are: Save the lives and livelihood of drought affected pastoralist community through provision of WASH, cash and livelihood support; Enhance the livelihood and self-resilience of drought hit pastoralist communities",
+      "As per the latest census data from Ethiopian Central statistical agency , the average household size is 5.7 to 6 persons and hence 2500 households (15,000 people) will benefit from animal feed and multi-purpose cash grant and and hygiene promotion as well as COVID control and prevention activities.  the targeting will consider the level of vulnerability and drought impact of each household and particularly target women, female headed households, elderly and people with disability."
+    ],
+    "activity_date_iso_date": [
+      "2021-11-05T00:00:00Z",
+      "2021-12-20T00:00:00Z"
+    ],
+    "recipient_country_code": [
+      "ET"
+    ],
+    "reporting_org_narrative": [
+      "Deutsche Welthungerhilfe"
+    ]
+  },
+  {
+    "sector_code": [
+      "720"
+    ],
+    "budget_value": [
+      100000.0
+    ],
+    "iati_identifier": "DE-CR-RA000220-VR3810-NER1054-21",
+    "title_narrative": [
+      "Start Fund - Emergency Response to affected population in Niger"
+    ],
+    "reporting_org_ref": "DE-CR-RA000220-VR3810",
+    "activity_date_type": [
+      "2",
+      "4"
+    ],
+    "activity_status_code": "4",
+    "description_narrative": [
+      "Activation of the Start Alert  - 518 was made on the 22nd of April 2021, the CO was called for a session to respond to committee questions on the same day. A full proposal was submitted on 23rd April 2021 based on recommendations from committee. Final decision made to allocate Welthungerhilfe in collaboration with Concern Worldwide a project budget of 100,000.00 pounds sterling covering a 45 day project",
+      "Overall Objective - To contribute to immediate relief for conflict affected IDPs , refugees, returnees and host communities through provision of multi-purpose CASH and WASH community sensitisation.",
+      "The project will support 800 HHs composed of IDPs, Refugees, Returnees and host community members who have been affected by the recent clashes in Damasack which caused thousands of people to flee their homes."
+    ],
+    "activity_date_iso_date": [
+      "2021-04-25T00:00:00Z",
+      "2021-06-23T00:00:00Z"
+    ],
+    "recipient_country_code": [
+      "NE"
+    ],
+    "reporting_org_narrative": [
+      "Deutsche Welthungerhilfe"
+    ]
+  },
+  {
+    "sector_code": [
+      "720"
+    ],
+    "budget_value": [
+      85761.0,
+      114349.0
+    ],
+    "iati_identifier": "DE-CR-RA000220-VR3810-PAK1107-20",
+    "title_narrative": [
+      "Start Network, Strengthen and support to DRF system in Pakistan"
+    ],
+    "reporting_org_ref": "DE-CR-RA000220-VR3810",
+    "activity_date_type": [
+      "2",
+      "3"
+    ],
+    "activity_status_code": "2",
+    "description_narrative": [
+      "WHH response objectives are to:\r\n\r\noverall development, agreement, and management of workplans, protocols, budgets and coordination structures to ensure that activities are happening as required for the set up of a national DRF system.\r\nCoordinate a number of different stakeholders including NGOs, Government counterparts, consultants and local civil society to ensure that the right stakeholders are able to support different parts of the project.\r\nWhen funding is triggered and released, the hub will monitor and support the implementation of pre-agreed standard operating procedures, convene project selection meetings and ensure that operations are delivered in a timely manner with humanitarian principles applied throughout.",
+      "The project will be run by START network through TWG and and local organizations, as START network response depending on emergency situation in Pakistan and following would be the expected beneficiaries based on emergency project/call:\r\n\r\n    Targeting approximately 1000 HH (for each emergency response)\r\n    Local NGO (for each emergency minimum 2 organizations)\r\n    Technical working groups (drought, flood and heatwave)\r\n\r\n \r\n\r\nThe number of beneficiaries will increase or decrease based on the nature of emergency / need"
+    ],
+    "activity_date_iso_date": [
+      "2020-04-01T00:00:00Z",
+      "2021-12-31T00:00:00Z"
+    ],
+    "recipient_country_code": [
+      "PK"
+    ],
+    "reporting_org_narrative": [
+      "Deutsche Welthungerhilfe"
+    ]
+  },
+  {
+    "sector_code": [
+      "72040"
+    ],
+    "budget_value": [
+      66125.0
+    ],
+    "iati_identifier": "DE-CR-RA000220-VR3810-MDG 1086-21",
+    "title_narrative": [
+      "Projet de réponse précoce lié aux effets néfaste de l'inondation au Madagascar"
+    ],
+    "reporting_org_ref": "DE-CR-RA000220-VR3810",
+    "activity_date_type": [
+      "1",
+      "3"
+    ],
+    "activity_status_code": "4",
+    "description_narrative": [
+      "L'absence des organismes humanitaires dans des régions eloignées fragilise la capacité des communautés se trouvant dans la région en cas d'une situation d'urgence et matérialisé par le retard d'intervention au detriment des personnes victimes. L'intervention permettra aux ménages cibles de couvrir leurs besoins en termes de nourriture pendant la durée de leur déplacement et leur permettra ainsi de se rétablir plus rapidement une fois rentrés chez eux. 6000 personnes seront ciblés comme \"participants\" de projet et auront un appui financier par des transferts monétaires (cfw et transferts conditionnels).",
+      "6000"
+    ],
+    "activity_date_iso_date": [
+      "2022-02-20T00:00:00Z",
+      "2022-04-30T00:00:00Z"
+    ],
+    "recipient_country_code": [
+      "MG"
+    ],
+    "reporting_org_narrative": [
+      "Deutsche Welthungerhilfe"
+    ]
+  },
+  {
+    "sector_code": [
+      "74010",
+      "72040"
+    ],
+    "budget_value": [
+      181485.0,
+      14980.0
+    ],
+    "iati_identifier": "DE-CR-RA000220-VR3810-MDG 1082-21",
+    "title_narrative": [
+      "FbA - Early Action in Madagascar"
+    ],
+    "reporting_org_ref": "DE-CR-RA000220-VR3810",
+    "activity_date_type": [
+      "1",
+      "3"
+    ],
+    "activity_status_code": "4",
+    "description_narrative": [
+      "In an important rice-growing area in Madagascar, the early warning system introduced by Welthungerhilfe has struck and predicted a drought. In accordance with the protocol agreed upon in advance, highly vulnerable farming families now receive cash in advance via mobile phones distributed in advance, so that they can prepare for the lean period and do not have to sell livestock later out of necessity, for example, or buy at inflated prices or take their children out of school. With the help of this anticipatory 'damage limitation', later - then much more costly - measures can be avoided.",
+      "7480"
+    ],
+    "activity_date_iso_date": [
+      "2021-05-10T00:00:00Z",
+      "2022-01-31T00:00:00Z"
+    ],
+    "recipient_country_code": [
+      "MG"
+    ],
+    "reporting_org_narrative": [
+      "Deutsche Welthungerhilfe"
+    ]
+  },
+  {
+    "sector_code": [
+      "74010",
+      "72040",
+      "73010"
+    ],
+    "budget_value": [
+      75022.0
+    ],
+    "iati_identifier": "DE-CR-RA000220-VR3810-ZWE 1169-22",
+    "title_narrative": [
+      "WASH response to tropical storm Ana in Zimbabwe"
+    ],
+    "reporting_org_ref": "DE-CR-RA000220-VR3810",
+    "activity_date_type": [
+      "1",
+      "3"
+    ],
+    "activity_status_code": "4",
+    "description_narrative": [
+      "The project aims to mitigate the effects of Tropical Storm Ana in selected wards in Zimbabwe by distributing 2000 hygiene kits to targeted households and rehabilitating of 2 piped water supply systems that were destroyed by the cyclone. Hygiene education campaigns will target 18000 people and water treatment chemicals will be distributed to 4839 households to prevent diarrheal outbreaks. Food aid to 100 most vulnerable households will be distributed. Capacity of local Disaster Risk Reduction structures (ward level) will be strengthened.",
+      "18000"
+    ],
+    "activity_date_iso_date": [
+      "2022-02-02T00:00:00Z",
+      "2022-03-19T00:00:00Z"
+    ],
+    "recipient_country_code": [
+      "ZW"
+    ],
+    "reporting_org_narrative": [
+      "Deutsche Welthungerhilfe"
+    ]
+  },
+  {
+    "sector_code": [
+      "72040",
+      "99810",
+      "14031"
+    ],
+    "budget_value": [
+      235639.0
+    ],
+    "iati_identifier": "DE-CR-RA000220-VR3810-ETH 1210-21",
+    "title_narrative": [
+      "Emergency live-saving Multi-Sectoral Response for drought affected communities in Oromia Region of Ethiopia"
+    ],
+    "reporting_org_ref": "DE-CR-RA000220-VR3810",
+    "activity_date_type": [
+      "1",
+      "3"
+    ],
+    "activity_status_code": "4",
+    "description_narrative": [
+      "There is a severe drought in Oromia due to shortage of Hageyya/Bega rain in the area. The expected rain in September and October is delayed resulted critical water shortage for both human and animals, shortage in livestock feed and pasture and animal death, displacement as well as disrupted and affected the socio-economic status of the pastoralist communities. More than half a million-pastoralist people are significantly affected by the drought with their livestock. The overall goal of this intervention is to save the lives of drought affected communities and also to contribute toward resilience of the affected community to the recurrent drought effect through the provision of multi-sectoral WASH, livestock feed and multi-sectoral cash. Outputs: Improved access to drinking water through water rationing, \r\nImproved access to basic WASH NFI kits; \r\nImproved hygienic practices and livelihood using the cash provision; livestock feed provision for selected most vulnerable pastoralist HHs that are affected by the drought",
+      "15000"
+    ],
+    "activity_date_iso_date": [
+      "2021-11-05T00:00:00Z",
+      "2022-01-31T00:00:00Z"
+    ],
+    "recipient_country_code": [
+      "ET"
+    ],
+    "reporting_org_narrative": [
+      "Deutsche Welthungerhilfe"
+    ]
+  },
+  {
+    "sector_code": [
+      "72040"
+    ],
+    "budget_value": [
+      77712.0
+    ],
+    "iati_identifier": "DE-CR-RA000220-VR3810-MDG 1085-21",
+    "title_narrative": [
+      "Projet de réponse précoce lié aux effets néfaste de l'inondation au Madagascar"
+    ],
+    "reporting_org_ref": "DE-CR-RA000220-VR3810",
+    "activity_date_type": [
+      "1",
+      "3"
+    ],
+    "activity_status_code": "2",
+    "description_narrative": [
+      "In the cyclone region in the southeast of Madagascar, especially in January and February, the poorest suffer from the consequences of the storms. Heavy rain and flooding are so predictable that Welthungerhilfe has set up an early warning system here, following the principles of the global \"START Network\", through which funds can be called up quickly and easily in the immediate run-up to a cyclone. In this way, the most vulnerable households in the affected communities can be provided with cash immediately after the storm, for example, so that they do not suffer for long, but can provide for themselves.",
+      "11620"
+    ],
+    "activity_date_iso_date": [
+      "2022-02-02T00:00:00Z",
+      "2022-05-30T00:00:00Z"
+    ],
+    "recipient_country_code": [
+      "MG"
+    ],
+    "reporting_org_narrative": [
+      "Deutsche Welthungerhilfe"
+    ]
+  },
+  {
+    "sector_code": [
+      "72040",
+      "72010",
+      "73010",
+      "14032"
+    ],
+    "budget_value": [
+      256557.0
+    ],
+    "iati_identifier": "DE-CR-RA000220-VR3810-COD-1143-19",
+    "title_narrative": [
+      "Emergency WASH and Cash Distribution, Nobili"
+    ],
+    "reporting_org_ref": "DE-CR-RA000220-VR3810",
+    "activity_date_type": [
+      "2",
+      "4"
+    ],
+    "activity_status_code": "4",
+    "description_narrative": [
+      "The proposed project is focusing on two main pillars of immediate relief activities: WASH and Multipurpose Cash Transfer 1. WASH 1.1. Water Supply: the project will ensure sufficient supply of drinking water, as this has been stated as one of the priorities by the local crisis committee, including representative of the displaced families. To achieve this objective, WHH will deploy its water pumping and purification system from Goma and run it for at least 4 weeks. The system will be installed at the nearby river and provide 45m³-60m³ of water per day and will be running within 14 days. Considering the daily need at this stage at 10ltr (average, according to SPHERE standard) per person/day, the system can supply water for 4.500 - 6.000 people per day. Further, the project will repair two water catchments sites with 15 water points in total (to be repaired within 1 week), and additional 11 emergency water points with water purification will be established at places not connected to the public system and too far from the river. With these 3 layers of water supply, we aim to cover the immediate needs of the displaced population and host communities in need for 1 month. 1.2. Sanitation facilities The project aims to install emergency latrines and/or extend existing latrines and sanitation facilities in the public spaces where people are seeking shelter. 15 sites will be identified in close cooperation with the local crisis committee. Installation will be supported with workforce by people living on the compounds. The emergency latrines & handwashing stands will bring first relief and an improvement of the sanitation situation for 1,000 HH. 2 WASH Experts will be transferred from WHH Bunia to Nobili to implement the WASH component. These experts will be supported by locals, hired by WHH to support the response. 2. Multipurpose Cash Transfer WHH will use its experience in unconditional cash transfers to provide one time distribution of 35 USD per HH for up to 6.300 registered IDP households in Nobili town. Markets show full functionality and supplies can be purchased from Uganda. The multipurpose cash transfer has been decided, as the displaced families have different priorities and mainly lack the purchasing power to buy goods of their choice in the market. With the slightly reduced amount of 35 USD it is possible to reach all 6.300 displaced families. WHH will contract a local financial service provider, potentially a bank already contracted for another project, to distribute the cash to the beneficiaries. Market Monitoring (availability and prices) and a Post-Distribution Monitoring is planned. 1 Cash-Expert will be transferred from WHH Beni to Nobili to oversee the distribution. Community Mobiliser will support the registration and distribution. In summary, the planned activities will cover water supply for for 1 month, improve sanitation/hygiene situation for 1,000 HH and distribute 35 USD/household for 6.300 Households.",
+      "The project targets IDPs which are living with host families or in public spaces, such as schools, churches and market places. The total number of direct beneficiaries: 6300 Households * 6 (average HH size) = 37.800 beneficiaries. The total number of people benefiting from the different layers of the emergency water supply activities will be clearer."
+    ],
+    "activity_date_iso_date": [
+      "2019-05-03T00:00:00Z",
+      "2019-07-30T00:00:00Z"
+    ],
+    "recipient_country_code": [
+      "CD"
+    ],
+    "reporting_org_narrative": [
+      "Deutsche Welthungerhilfe"
+    ]
+  },
+  {
+    "sector_code": [
+      "72010"
+    ],
+    "budget_value": [
+      117969.0
+    ],
+    "iati_identifier": "DE-CR-RA000220-VR3810-ZWE-1100-17",
+    "title_narrative": [
+      "START Thsolotsho Flood Response"
+    ],
+    "reporting_org_ref": "DE-CR-RA000220-VR3810",
+    "activity_date_type": [
+      "2",
+      "4"
+    ],
+    "activity_status_code": "4",
+    "description_narrative": [
+      "After two years of insufficient rains and El Nina induced drought Zimbabwe is seeing significantly more rains than normal this season which is very likely linked to a mild La Nina phenomenon. Additionally, tropical Cyclone Dineo graduated into a tropical depression on the 16th ot February however lt still caused heavy precipitation in Bulawayo, Tsholotsho, Matobo, Kezi, Umzingwane, Bulilima, Gokwe South and Mberengwa districts causing riverine and flash flooding and subsequent destruction of livelihoods and properties. Gwayi river in Matebeleland North burst is banks which culminated in the inundation of homes and schools infrastructure causing considerable damage to property and livelihoods. GoZ declared state of disaster on 1 of March 2017 due to the flooding arid seeks international support to respond also particularly with regard to rehabilitation of infrastructure. WHH has been providing response already under the standing PCA with UNICEF.",
+      "The project will contribute to reduction in the negative impact of the floods on affected families. And hence the outcome will be improved coping mechanisms for the families affected by floods.",
+      "Project targets 1,200 HHs in Tsholotsho district (app. 50% women). 1HH = 5 persons"
+    ],
+    "activity_date_iso_date": [
+      "2017-03-04T00:00:00Z",
+      "2017-04-18T00:00:00Z"
+    ],
+    "recipient_country_code": [
+      "ZW"
+    ],
+    "reporting_org_narrative": [
+      "Deutsche Welthungerhilfe"
+    ]
+  },
+  {
+    "sector_code": [
+      "72010"
+    ],
+    "budget_value": [
+      77186.0
+    ],
+    "iati_identifier": "DE-CR-RA000220-VR3810-PRK-1071-16",
+    "title_narrative": [
+      "Emergency Aid Typhoon Lionrock"
+    ],
+    "reporting_org_ref": "DE-CR-RA000220-VR3810",
+    "activity_date_type": [
+      "2",
+      "4"
+    ],
+    "activity_status_code": "4",
+    "description_narrative": [
+      "Unprecedented flooding, triggered by heavy rains as a result of remnants of Typhoon Lionrock, in north-eastern DPRK: \"Areas in the Tumen River floodplain and its tributaries are acutely impacted with the counties of Musan, Yonsa, Hoeryong, and Onsong in North Harngyong province particularly severely affected.\" Emergency aid will rehabilitate buildings and other structures; affected people will be able to rapidly recover. It is expected that during the corning months, the combined approach of all organizations will secure livelihoods.",
+      "Enable affected households to concentrate on quickly rebuilding their sources of livelihoods.",
+      "The number of disabled persons is based on the 2008 census indicating 5.9% male and 6.3% female people of the total population. This includes people with visual and hearing impairments, locomotor disability, mental disability, speech and intellectual disability. We will assess if special needs are required for these households, and if so, of what nature. We will ensure that the most vulnerable households, containing pregnant and lactating women, children under 5 years old, and those consisting only of the elderly, will have preferential access to the kitchen, hygiene, and shelter kits. The remaining kits will be distributed to the population-at-large on a needs basis."
+    ],
+    "activity_date_iso_date": [
+      "2016-09-15T00:00:00Z",
+      "2016-10-30T00:00:00Z"
+    ],
+    "recipient_country_code": [
+      "KP"
+    ],
+    "reporting_org_narrative": [
+      "Deutsche Welthungerhilfe"
+    ]
+  },
+  {
+    "sector_code": [
+      "72040",
+      "72010",
+      "73010"
+    ],
+    "budget_value": [
+      68828.0
+    ],
+    "iati_identifier": "DE-CR-RA000220-VR3810-MDG-1075-20",
+    "title_narrative": [
+      "Flood Response Project in Madagascar"
+    ],
+    "reporting_org_ref": "DE-CR-RA000220-VR3810",
+    "activity_date_type": [
+      "2",
+      "3"
+    ],
+    "activity_status_code": "4",
+    "description_narrative": [
+      "A tropical depression had brought heavy rain to the northwest and eastern parts of Madagascar for a period of seven days from the 19th to 23rd January, 2020. For the Alaotra region the rains continued until the 29th January, 2020. As a result of the flooding, a number of water sources, mainly wells, have been contaminated. Many of the impacted households, particularly economically vulnerable households, are already deprived of basic foods due to lack of accessibility and availability. Should an emergency intervention not be carried out, the risk from diseases and food insecurity are highly likely. In fact, WHH through this project will support vulnerable communities to enable them to meet their basic needs.",
+      "The overall objective of the Alaotra Flood Response Project is to contribute to the efforts of humanitarian and governmental actors assisting flood-affected vulnerable group. The intervention will enable the target households to recover within an convenient period of time so that they can regain their capacity and return to their normal lives. At the end of the operation, the results to be achieved are as follows: R1: Improvement of the beneficiaries' access to basic food R2: Reduction of the risk of contamination of water-related illnesses R3: Contribution to the improvement of the rebound capacity of affected and vulnerable communities Activities for each result: R1: A1: Selection of beneficiaries according to pre-established targeting criteria A2: To carry out an unconditional cash distribution for the benefit of the vulnerable while taking into account in advance the conditions of availability and accessibility of food products at the local level. A3: Creation of a temporary work opportunity through cash for work by prioritizing the sectors of intervention beforehand. R2: A1: Distribution of WASH kits to beneficiaries in a timely manner including water treatment products. A2: Identify the main sources of safe and accessible drinking water for the community for sanitation purposes A3: Sanitation of water sources through cash for work A4: Strengthen the dissemination of educational messages and continuous awareness raising for the actions to be taken in case of flooding, particularly in the field of WASH. R3 : Objectively verifiable indicators I1: At the end of the intervention, 100% of the target communities received timely assistance while taking into account the gender approach. I2: At the end of intervention, At the end of the intervention, 100% of the target communities were among the most vulnerable and needy communities. I3: At the end of the intervention, the allocated funds have been definitively and transparently spent on the project's objective.",
+      "WHH will target vulnerable households: - Households dependent on a daily income resource - Households deprived of their usual income resource - Households with low or insignificant food stocks - Households with problems of access to basic food for a fairly long period of time due to the lack of availability of labour as a main source of income. - Households affected by and affected by the flooding - Households that take longer to bounce back from the shock. The calculation of the number of beneficiaries is based on the results of studies on the Household Economy Analyses carried out in the area of this investment zone in 2018. At the end of this study, the proportion of socio-economic classes is distributed as follows: - The category of very poor covers 25% of the households in the zone. - The poor class category covers 38% of the households in the area. - The middle class category covers 23% of the households in the area. - The category for the wealthy class covers 14% of households in the area. As mentioned in the previous explanation, the beneficiaries of the project will be the economically vulnerable categories of households including the very poor and poor classes. For the target areas, the response will be focused on the six most impacted communes in Amparafaravola district. This gives us a total number of 1116 households i.e. 5580 persons with an average size of 5 persons per household."
+    ],
+    "activity_date_iso_date": [
+      "2020-02-03T00:00:00Z",
+      "2020-03-19T00:00:00Z"
+    ],
+    "recipient_country_code": [
+      "MG"
+    ],
+    "reporting_org_narrative": [
+      "Deutsche Welthungerhilfe"
+    ]
+  },
+  {
+    "sector_code": [
+      "72010"
+    ],
+    "budget_value": [
+      103637.0
+    ],
+    "iati_identifier": "DE-CR-RA000220-VR3810-ZWE-1098-17",
+    "title_narrative": [
+      "START - Emergency WASH response in Budiriro and Glenview/Harare"
+    ],
+    "reporting_org_ref": "DE-CR-RA000220-VR3810",
+    "activity_date_type": [
+      "2",
+      "4"
+    ],
+    "activity_status_code": "4",
+    "description_narrative": [
+      "The hygienic conditions in the affected areas in Budiriro and Glenview arc insufficient and chaotic. People neither have access to safe drinking water nor clean water for personal hygiene and cooking. Spread of water-borne diseases like typhoid fever is of very high risk. There is low use of household water treatment. The food sold in their areas is likely to contain typhoid bacteria. Sewage leaks occur and may be contaminating boreholes, Solid waste is not being collected and has formed dumps in open spaces. Typhoid in high density suburbs likely to spread further to other areas. Provision of NFI, namely soap and aqua tabs for three months arc the prinrary need. Furthermore, sensitizing and awareness rising of the population together with hygiene training is essential at this point; this includes mobilization, orientation and training of community health volunteers for response as well as provision of IEC material.",
+      "The project will contribute to reduction in morbidity and mortality due to typhoid diseases in Budiriro and Glen View minimize the risk of further spreading of Typhoid fever and other water-borne diseases in Harare. The outcome will be a significant decrease (80%) in the number of new suspected Tvphoid cases and reduced morbidity and mortality from typhoid and other water borne diseases in Glenview and Budiriro district of Harare.",
+      "The project will target 15,000 HHs (app. 75,000 people) in Budiriro and Glenview suburbs with NFI kits (soap and aquatabs/waterguard) tor 3 months. 20 boreholes will be repaired and fitted with in line chlorinators. 30,000 people will receive a hygiene message reminding them of the dangers of typhoid and how to avoid contracting the disease as well as what to do if they suspect they have contracted it."
+    ],
+    "activity_date_iso_date": [
+      "2017-01-13T00:00:00Z",
+      "2017-02-27T00:00:00Z"
+    ],
+    "recipient_country_code": [
+      "ZW"
+    ],
+    "reporting_org_narrative": [
+      "Deutsche Welthungerhilfe"
+    ]
+  },
+  {
+    "sector_code": [
+      "74010"
+    ],
+    "budget_value": [
+      47000.0
+    ],
+    "iati_identifier": "DE-CR-RA000220-VR3810-TJK-1107-17",
+    "title_narrative": [
+      "Strengthening the preparedness of local communities/authorities for natural disasters, esp. flooding in the Zeravshan valley/Tajikistan in summer 2017"
+    ],
+    "reporting_org_ref": "DE-CR-RA000220-VR3810",
+    "activity_date_type": [
+      "2",
+      "4"
+    ],
+    "activity_status_code": "4",
+    "description_narrative": [
+      "Tajikistan is prone to natural disasters, e.g. floods, earthquakes, landslides, mudflows, avalanches, droughts, and heavy snowfalls. Its mountainous terrain, coupled with the specific geological and hydrological conditions, translates into a high degrees of vulnerability towards climate change. At the same time, Tajikistan‘s deteriorating infrastructure has increased the population‘s vulnerability to extreme weather events and seismic risks. With most assets, including irrigation channels, river embankments, roads, bridges, and dams, built in the Soviet era, infrastructure maintenance remains weak due to limited financial resources and lack of knowledge by the government. Existing mudflow drainage systems along the villages are destroyed or slatted over the years, which when rapidly filled increase the risk of human casualties and physical damages. The costs of foreseen mudflows can be assessed much higher than for social and physical preparedness measures. With clear evidence of increased risk, combined with existing vulnerabilities in the most remote regions of Tajikistan, the Start Network voted in support of activating the Fund in anticipation of flooding and landslides.",
+      "- The negative impact of currently forecasted flooding/mudflows for the local population (human tools/destroyed infrastructure) will substantially be decreased and the resilience of the population towards disasters will be strengthened in the longer term. - The strengthened capacities of the local authorities and the better interaction between the local authorities and the local population will reduce the economic and human loss in the long term and can be copied to other areas at risk in the Zerafshan valley.",
+      "The pre-selected villages have been chosen upon strong request from the zonal CoES as there already smaller mudflows appeared. In total, the project will cover app. 2000 households with nearly 10.000 people. The whole community in the pre-selected high risk villages will benefit through the envisaged project activities like protecting infrastructure, capacity building including drills/simulation exercises, maintenance of EWSs etc. The beneficiaries are calculated on the basis of number of households with five members."
+    ],
+    "activity_date_iso_date": [
+      "2017-07-18T00:00:00Z",
+      "2017-08-31T00:00:00Z"
+    ],
+    "recipient_country_code": [
+      "TJ"
+    ],
+    "reporting_org_narrative": [
+      "Deutsche Welthungerhilfe"
+    ]
+  },
+  {
+    "sector_code": [
+      "43060"
+    ],
+    "budget_value": [
+      300000.0
+    ],
+    "iati_identifier": "GB-CHC-1047501-25SNDROS",
+    "title_narrative": [
+      "Start Ready - Senegal Drought response"
+    ],
+    "reporting_org_ref": "GB-CHC-1047501",
+    "transaction_value": [
+      300000.0
+    ],
+    "activity_date_type": [
+      "2",
+      "3"
+    ],
+    "activity_status_code": "2",
+    "description_narrative": [
+      "The project aims to lessen the immediate effects of drought on agropastoral households in Ranérou and Kanel and prevent worsening nutrition. It focuses on two main actions: providing anticipatory cash assistance to vulnerable families to meet essential food needs and avoid harmful coping strategies, and protecting the nutrition of young children and pregnant or breastfeeding women through community malnutrition screening, improved referrals, and promotion of good feeding practices. Targeting the areas hit hardest by low rainfall, the project relies on strong community engagement and local coordination to deliver a rapid, integrated response. Overall, it seeks to reduce livelihood losses, prevent acute malnutrition, and strengthen household resilience before the next lean season."
+    ],
+    "activity_date_iso_date": [
+      "2025-11-20T00:00:00Z",
+      "2026-02-02T00:00:00Z"
+    ],
+    "recipient_country_code": [
+      "SN"
+    ],
+    "reporting_org_narrative": [
+      "Action Against Hunger UK"
+    ]
+  },
+  {
+    "sector_code": [
+      "52010"
+    ],
+    "budget_value": [
+      245909.0
+    ],
+    "iati_identifier": "GB-CHC-1047501-25SNFOOS",
+    "title_narrative": [
+      "Start Alert 957 Senegal Food Insecurity"
+    ],
+    "reporting_org_ref": "GB-CHC-1047501",
+    "transaction_value": [
+      245909.0
+    ],
+    "activity_date_type": [
+      "2",
+      "4"
+    ],
+    "activity_status_code": "4",
+    "description_narrative": [
+      "The project aims to provide a rapid, proactive response to food and nutritional insecurity. It aims to prepare the populations most likely to be affected by the lean season by providing them with financial and nutritional assistance."
+    ],
+    "activity_date_iso_date": [
+      "2025-06-19T00:00:00Z",
+      "2025-08-02T00:00:00Z"
+    ],
+    "recipient_country_code": [
+      "SN"
+    ],
+    "reporting_org_narrative": [
+      "Action Against Hunger UK"
+    ]
+  },
+  {
+    "sector_code": [
+      "43060"
+    ],
+    "budget_value": [
+      26000.0
+    ],
+    "iati_identifier": "GB-CHC-1047501-25ZWDNRS",
+    "title_narrative": [
+      "Strengthening Drought Resilience in Zimbabwe: A Collaborative Approach to Anticipatory Actions in Beitbridge, Gwanda, Masvingo, Matobo, and Mwenezi"
+    ],
+    "reporting_org_ref": "GB-CHC-1047501",
+    "transaction_value": [
+      26000.0
+    ],
+    "activity_date_type": [
+      "1",
+      "4"
+    ],
+    "activity_status_code": "4",
+    "description_narrative": [
+      "The project’s readiness activities are designed to ensure that Mwenezi communities, stakeholders, and systems are prepared to act quickly and effectively when forecasted risks emerge. The main objectives are to strengthen preparedness capacities through training, SOPs, financing mechanisms, and improved coordination; validate and update the Anticipatory Action Plan (AAP) with clear triggers such as rainfall anomalies, river levels, and food price changes; pre-position resources and partnerships with suppliers, communities, and authorities; and enhance community readiness through knowledge, communication tools, and tailored preparedness plans.The project will begin by updating and finalizing the AAP with local stakeholders to ensure its relevance. Activation activities will then address critical needs in water access, livestock health, and agricultural sustainability. At least two high-yield boreholes will be drilled or rehabilitated and fitted with solar technology, supported by water point committees, pump minder training, and conservation awareness. To protect livelihoods, 3,000 beneficiaries (750 households) will receive supplementary feed and veterinary services, alongside training in sustainable livestock management. For food security, the project will support 100 households in poultry and gardens, and provide small grain seed to 250 households, coupled with training in climate-smart agriculture. These actions will diversify incomes, sustain food production, and strengthen resilience."
+    ],
+    "activity_date_iso_date": [
+      "2025-09-18T00:00:00Z",
+      "2025-10-18T00:00:00Z"
+    ],
+    "recipient_country_code": [
+      "ZW"
+    ],
+    "reporting_org_narrative": [
+      "Action Against Hunger UK"
+    ]
+  },
+  {
+    "sector_code": [
+      "43060"
+    ],
+    "budget_value": [
+      5000.0
+    ],
+    "iati_identifier": "GB-CHC-1047501-25UGAASF",
+    "title_narrative": [
+      "Start Anticipatory Action Plan Uganda"
+    ],
+    "reporting_org_ref": "GB-CHC-1047501",
+    "transaction_value": [
+      5000.0
+    ],
+    "activity_date_type": [
+      "2",
+      "3"
+    ],
+    "activity_status_code": "2",
+    "description_narrative": [
+      "The project will support coordination of partners within the sphere of anticipatory actions such as the anticipation hub for a harmonized implementation. With this grant, the participating organizations and other stakeholders will engage in consultative workshops to use the available forecast with support from the Ministry of water and environment, and office of the prime minister to engage communities timely before hazard onset. Developed plans will monitor available forecast and risk information, pre-agree thresholds for taking action, establish processes based on these thresholds for raising timely alerts, and identify, with communities, appropriate anticipatory actions. During the same consultative meetings, we will find out why some of the districts and their extension staff don't disseminate information to the persons usually affected so that  context specific means of dissemination are included in the plan."
+    ],
+    "activity_date_iso_date": [
+      "2025-09-08T00:00:00Z",
+      "2025-12-08T00:00:00Z"
+    ],
+    "recipient_country_code": [
+      "UG"
+    ],
+    "reporting_org_narrative": [
+      "Action Against Hunger UK"
+    ]
+  }
+]

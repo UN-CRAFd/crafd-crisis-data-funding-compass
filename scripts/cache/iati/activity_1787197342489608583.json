@@ -1,0 +1,168 @@
+[
+  {
+    "sector_code": [
+      "11182"
+    ],
+    "budget_value": [
+      90188.0
+    ],
+    "iati_identifier": "US-EIN-45-4535664-8381891-01",
+    "title_narrative": [
+      "The Gendered Impacts of Employment on Domestic Violence and Pyschosocial Wellbeing"
+    ],
+    "reporting_org_ref": "US-EIN-45-4535664",
+    "transaction_value": [
+      2436.66,
+      51150.0,
+      3377.01,
+      550.0,
+      32034.51
+    ],
+    "activity_date_type": [
+      "1",
+      "3"
+    ],
+    "activity_status_code": "2",
+    "description_narrative": [
+      "This study seeks to generate evidence on the relationship between the experience of employment – as distinct from cash transfers alone – and intimate partner violence, intra-household bargaining power, and gendered perceptions of self-worth vis-à-vis one’s family and the community at large. We do so in the context of the Rohingya refugee camps, the largest refugee camps in the world, and a setting in which pervasive unemployment, strong gender norms, and high rates of domestic violence mark daily refugee experience. We hope the findings of this work may inform the design of social protection policies for the world’s forcibly displaced and long-term unemployed in the developing world. The Harvard Center for International Development offers sponsored research administration services to its HKS affiliated faculty which focus on promoting and amplifying faculty research."
+    ],
+    "activity_date_iso_date": [
+      "2022-10-01T00:00:00Z",
+      "2024-09-30T00:00:00Z"
+    ],
+    "recipient_country_code": [
+      "US"
+    ],
+    "reporting_org_narrative": [
+      "Harvard Global Research and Support Services, Inc."
+    ]
+  },
+  {
+    "sector_code": [
+      "11182"
+    ],
+    "budget_value": [
+      702136.0,
+      13395.0,
+      215530.0
+    ],
+    "iati_identifier": "US-EIN-45-4535664-8165818-01",
+    "title_narrative": [
+      "Directorate for Research and Innovation Hub on Technology for Education (EdTech Hub)"
+    ],
+    "reporting_org_ref": "US-EIN-45-4535664",
+    "transaction_value": [
+      68824.76,
+      40428.04,
+      11290.32,
+      27588.62,
+      226858.44,
+      221990.0,
+      75741.64,
+      62762.4,
+      102756.89,
+      53296.49,
+      13838.8,
+      16684.83,
+      185794.99,
+      188811.0,
+      132950.01,
+      43178.0,
+      4066.32,
+      6156.93,
+      10526.89
+    ],
+    "activity_date_type": [
+      "1",
+      "3"
+    ],
+    "activity_status_code": "2",
+    "description_narrative": [
+      "The aim of the EDTech Hub programme is to “empower people by giving them the evidence they need to  make  decisions  about  technology  in  education  as  part  of  a  global  non-profit  partnership  focusing  on  research, innovation and engagement.”Specifically, this research study evaluates the impact of introducing education technology (edtech), such as school management apps and digital learning tools, to public schools in Pakistan. Previous work by Asim Khwaja and co-authors, funded through the Research on Improving Systems of Education (RISE), has shown that schools in Pakistan lack access to quality-enhancing education support services, including edtech. Yet, there is strong evidence that addressing the current learning crisis through technology-supported personalized learning can massively improve learning outcomes. This is particularly relevant when children have fallen even further behind on learning due to COVID-19 related school closures. This intervention tests how we can use technology to quickly and cheaply gather information about a student’s current learning levels, such as which concepts of third grade math they understand and which they struggle with, and provide parents and teachers with this information as well as suggestions on what to do to improve their child’s learning. This intervention will include student testing, communicating with teachers and parents through mobile phones, as well as student and parent surveys. This study builds on an ongoing Targeted Instruction intervention led by Dr. Tahir Andrabi in conjunction with federal and provincial Ministries of Education in Pakistan. The Harvard Center for International Development offers sponsored research administration services to its HKS affiliated faculty which focus on promoting and amplifying faculty research."
+    ],
+    "activity_date_iso_date": [
+      "2022-01-03T00:00:00Z",
+      "2024-12-20T00:00:00Z"
+    ],
+    "recipient_country_code": [
+      "US",
+      "PK"
+    ],
+    "reporting_org_narrative": [
+      "Harvard Global Research and Support Services, Inc."
+    ],
+    "recipient_country_narrative": [
+      "Payment to in-country partner for personnel, field expenses, and equipment."
+    ]
+  },
+  {
+    "sector_code": [
+      "11182"
+    ],
+    "budget_value": [
+      116749.0
+    ],
+    "iati_identifier": "US-EIN-45-4535664-8621722-01",
+    "title_narrative": [
+      "Building on “What Works” for Improving Education Quality in Pakistan using a Systems Model"
+    ],
+    "reporting_org_ref": "US-EIN-45-4535664",
+    "transaction_value": [
+      49642.07,
+      87369.87,
+      -29459.35
+    ],
+    "activity_date_type": [
+      "1",
+      "3"
+    ],
+    "activity_status_code": "2",
+    "description_narrative": [
+      "Throughout the inception period of this grant, HG will support the inception activities for all three studies. Main Study 1: Targeted Instruction and the Take-Up and Diffusion of Innovation - support government engagement in Pakistan, contribute to the research design, and advise on any preliminary field activities. Main Study 2: Accountability Gaps: Experimental Evidence on Improving Public Service Delivery - lead the final research design, advise on field activities including data collection, and support any research/academic paper writing that may emerge from Main Study 3: Linking Foundational Learning, Long-Term Outcomes, and Policymaker Preferences using LEAPS Longitudinal Data during the inception period."
+    ],
+    "activity_date_iso_date": [
+      "2023-07-12T00:00:00Z",
+      "2024-04-11T00:00:00Z"
+    ],
+    "recipient_country_code": [
+      "US"
+    ],
+    "reporting_org_narrative": [
+      "Harvard Global Research and Support Services, Inc."
+    ]
+  },
+  {
+    "sector_code": [
+      "11182"
+    ],
+    "budget_value": [
+      131080.0
+    ],
+    "iati_identifier": "US-EIN-45-4535664-8492990-01",
+    "title_narrative": [
+      "NAMASTE : Global Health Research Unit on Neurodevelopment and AutisM in South ASia Treatment and Evidence"
+    ],
+    "reporting_org_ref": "US-EIN-45-4535664",
+    "transaction_value": [
+      6407.0,
+      3535.0,
+      6367.0,
+      8228.0
+    ],
+    "activity_date_type": [
+      "1",
+      "3"
+    ],
+    "activity_status_code": "2",
+    "description_narrative": [
+      "The NAMASTE study aims to bridge the gap in early detection and delivery of evidence-based interventions to support young children with neurodevelopmental disabilities, especially autism."
+    ],
+    "activity_date_iso_date": [
+      "2022-09-01T00:00:00Z",
+      "2027-08-31T00:00:00Z"
+    ],
+    "reporting_org_narrative": [
+      "Harvard Global Research and Support Services, Inc."
+    ]
+  }
+]

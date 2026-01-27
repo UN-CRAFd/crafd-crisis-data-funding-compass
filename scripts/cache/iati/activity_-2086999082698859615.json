@@ -1,0 +1,1018 @@
+[
+  {
+    "sector_code": [
+      "720"
+    ],
+    "budget_value": [
+      355738.0
+    ],
+    "iati_identifier": "XM-OCHA-HPC9829-35BCR",
+    "title_narrative": [
+      "Third Party Monitoring (TPM) project of the Humanitarian and Resilience Programme (HARP) portfolio in Northeast Nigeria"
+    ],
+    "reporting_org_ref": "XM-OCHA-HPC9829",
+    "transaction_value": [
+      93551.15,
+      152845.43,
+      177183.21
+    ],
+    "activity_date_type": [
+      "2",
+      "4"
+    ],
+    "activity_status_code": "4",
+    "description_narrative": [
+      "CLEAR Global, in consortium with Fact Foundation (FACT) and IMPACT Initiatives (IMPACT), proposes to (1) conduct Third Party Monitoring (TPM) of the Humanitarian and Resilience Programme (HARP) to ensure HARP-funded humanitarian programming is performed effectively, compliantly, and is attuned towards the needs of affected populations, while promoting continuous learning through innovative best practises for HARP’s Implementing Partners (IPs), as well as the wider humanitarian response; and (2) gather cash recipients’ feedback on cash and voucher assistance with Ground Truth Solutions as a sub-contracted supplier."
+    ],
+    "activity_date_iso_date": [
+      "2024-02-01T00:00:00Z",
+      "2025-03-31T00:00:00Z"
+    ],
+    "recipient_country_code": [
+      "NG"
+    ],
+    "reporting_org_narrative": [
+      "IMPACT Initiatives"
+    ]
+  },
+  {
+    "sector_code": [
+      "720"
+    ],
+    "budget_value": [
+      1250000.0
+    ],
+    "iati_identifier": "XM-OCHA-HPC9829-32AZT",
+    "title_narrative": [
+      "Humanitarian Information Systems Strengthening evidence-based decision making in South Sudan (HARISS)"
+    ],
+    "reporting_org_ref": "XM-OCHA-HPC9829",
+    "transaction_value": [
+      1250000.0
+    ],
+    "activity_date_type": [
+      "2",
+      "4"
+    ],
+    "activity_status_code": "4",
+    "description_narrative": [
+      "(1) Increased understanding and use of crisis-affected communities’ perceptions and experience of humanitarian activities to enable a community-centred approach in humanitarian programming\r\n(2) Increased understanding of movement barriers and displacement routes to inform humanitarian decision-making at the county and hotspot level\r\n(3) Improved, timely sub-national monitoring of needs and shocks across South Sudan\r\n(4) Provision of an evidence-based contextualisation of livelihood coping strategies indicators to improve food security analysis and evidence-based prioritisation of aid delivery in South Sudan\r\n(5) Increased understanding of the magnitude and severity of malnutrition and severity need classification for evidence-based decision making in designing and implementing nutrition programs\r\n(6) Improved and informed evidence-based decision-making around emergency prioritisation by the ICCG and clusters, and around cash and resilience programming"
+    ],
+    "activity_date_iso_date": [
+      "2023-06-06T00:00:00Z",
+      "2024-03-31T00:00:00Z"
+    ],
+    "recipient_country_code": [
+      "SS"
+    ],
+    "reporting_org_narrative": [
+      "IMPACT Initiatives"
+    ]
+  },
+  {
+    "sector_code": [
+      "720"
+    ],
+    "budget_value": [
+      100000.0
+    ],
+    "iati_identifier": "XM-OCHA-HPC9829-11BILZI7",
+    "title_narrative": [
+      "Informing emergency planning and prioritisation through rapid assessments and needs monitoring in areas of displacement and conflict"
+    ],
+    "reporting_org_ref": "XM-OCHA-HPC9829",
+    "transaction_value": [
+      28624.62,
+      70000.0,
+      52593.05
+    ],
+    "activity_date_type": [
+      "2",
+      "4"
+    ],
+    "activity_status_code": "4",
+    "description_narrative": [
+      "1. Sectoral Analytical and Coordination Support\r\n2. Provide the humanitarian response in Lebanon with regular, data on the impact of displacement on humanitarian needs and access to services outside of collective sites, among IDPs and host communities.\r\n3. Providing Technical Coordination and Support\r\n4. Enhancing the Use of IM Services and Products"
+    ],
+    "activity_date_iso_date": [
+      "2024-12-01T00:00:00Z",
+      "2025-05-31T00:00:00Z"
+    ],
+    "recipient_country_code": [
+      "LB"
+    ],
+    "reporting_org_narrative": [
+      "IMPACT Initiatives"
+    ]
+  },
+  {
+    "sector_code": [
+      "720"
+    ],
+    "budget_value": [
+      500000.0,
+      500000.0,
+      500000.0,
+      500000.0,
+      500000.0
+    ],
+    "iati_identifier": "XM-OCHA-HPC9829-02ALE",
+    "title_narrative": [
+      "Joint Needs assessment for life saving assistance and evaluation of UK Aid"
+    ],
+    "reporting_org_ref": "XM-OCHA-HPC9829",
+    "transaction_value": [
+      500000.0,
+      500000.0,
+      500000.0,
+      500000.0,
+      2144492.46
+    ],
+    "activity_date_type": [
+      "2",
+      "3"
+    ],
+    "activity_status_code": "2",
+    "description_narrative": [
+      "The specific objectives of the multi-year WoAA are:\t--- To develop an inter-sectoral evidence base which identifies priority areas and population groups with inter-sectoral, overlapping needs in order to facilitate an evidence-based integrated humanitarian response and to identify Cluster-pairings that can address multi-facetted needs effectively.\r\n- To provide consolidated information about people in need and establish needs severity across the Whole of Afghanistan, supporting the annual People in Need calculations at sector and cross-sector level.\r\n-To complement existent sector-specific information in terms of required indicators, geographical coverage, or both.\r\n-To rationalise divergent approaches to identifying and categorising needs; a jointly agreed-upon process through the HCAWG. \r\n-\tTo identify sector-specific geographical and population group priorities through evidence-based severity ranking."
+    ],
+    "activity_date_iso_date": [
+      "2019-09-01T00:00:00Z",
+      "2024-03-31T00:00:00Z"
+    ],
+    "recipient_country_code": [
+      "AF"
+    ],
+    "reporting_org_narrative": [
+      "IMPACT Initiatives"
+    ],
+    "recipient_country_narrative": [
+      "With over 18 years of conflict, the effects of a devastating drought, and limited access to basic services, Afghanistan is entrenched in widespread poverty, displacement and great volatility. Therefore, unmet needs and vulnerability are exceedingly high, with a predicted 6.3 million people in need of humanitarian assistance across the country in 2019. \r\n\r\nDespite substantial improvements in the availability and quality of assessment data in Afghanistan, important gaps in terms of coordinating, analysing, and using this data - to inform the humanitarian response - remain\r\n\r\nIn 2018, the humanitarian community recognised the need for comprehensive, comparative and representative data, to appropriately respond to Afghanistan’s complex needs. This resulted in the first Whole of Afghanistan Assessment (WoAA). The WoAA was designed to increase humanitarian organisations’ understanding of the multi-sector needs and vulnerabilities of different population groups across Afghanistan by providing multi-sector baseline information for the 2019 Humanitarian Needs Overview (HNO) and for any subsequent adjustments in programming required to the current Humanitarian Response Plan (HRP) (2018-2021). This assessment took substantial steps to ‘Improve Joint and Impartial Needs Assessments’, as outlined in the Grand Bargain Agenda, by strengthening last year’s evidence-base used by the humanitarian community, which previously depended upon heavily localised and not statistically sound data, resulting in the limited capacity of findings to determine priorities and guide planning"
+    ]
+  },
+  {
+    "sector_code": [
+      "151"
+    ],
+    "budget_value": [
+      500000.0,
+      604010.0,
+      1008151.0,
+      943759.0
+    ],
+    "iati_identifier": "XM-OCHA-HPC9829-35iAHK",
+    "title_narrative": [
+      "Independent Third Party Monitoring to support and maximise UK aid delivery in North East Nigeria"
+    ],
+    "sector_narrative": [
+      "The ongoing humanitarian response has predominantly focused on relatively secure and accessible locations such as Maiduguri and other Local Government Area (LGA) capitals (e.g. Monguno, Bama, Gwoza, Mubi). However, almost 1 million people are believed to reside in inaccessible areas outside these towns, where persistent insecurity makes consistent humanitarian access challenging (HRP 2018). \r\nYears of conflict have disrupted agricultural activity, market functionality, and supply routes, leading to dire nutrition and food security conditions - an estimated 3.7 million and 3.5 million people to be in need of food and supplementary nutrition assistance, respectively. Borno State faces a particularly challenging food security situation, where 36% of the population are projected to face crisis or emergency phases of food and nutrition security from June-August 2018 (Cadre Harmonise, October 2017).\r\nDisplaced, non-displaced and returnee populations also face a deeply difficult protection situation, with the 2018 HRP estimating 5.8 million people in need of assistance. Protection concerns are wide-ranging, including conflict-related violence, gender-based violence, family separation, forced marriage, child marriage, forced displacement, arbitrary detention, seizure of belongings, and abduction. The protection threats facing populations are likely to be most acute in inaccessible rural areas with significant Armed Opposition Group (AOG) presence. A February 2018 REACH assessment focussing on recent displacement into the town of Pulka (Gwoza LGA, Borno State) found that, prior to escaping, civilians had been forcibly held captive in their villages for months by AOGs, who threatened them with beatings or execution if they tried to escape and frequently seized their harvests."
+    ],
+    "reporting_org_ref": "XM-OCHA-HPC9829",
+    "transaction_value": [
+      325330.32,
+      137354.59,
+      435510.7,
+      58469.23,
+      316880.48,
+      455716.52,
+      161266.33,
+      160816.59,
+      270384.83,
+      500000.0
+    ],
+    "activity_date_type": [
+      "2",
+      "4"
+    ],
+    "activity_status_code": "4",
+    "description_narrative": [
+      "IMPACT Initiatives, with operational support from its global partner ACTED, in Consortium with Ground Truth Solutions as a sub-contracted partner, propose to conduct a Third Party Monitoring of the DFID-funded North East Nigeria Transition to Development (NENTAD) programme to provide an objective, external verification of aid delivery and ensured clear monitoring, accountability and analysis of good practices"
+    ],
+    "activity_date_iso_date": [
+      "2018-07-16T00:00:00Z",
+      "2021-09-30T00:00:00Z"
+    ],
+    "recipient_country_code": [
+      "NG"
+    ],
+    "reporting_org_narrative": [
+      "IMPACT Initiatives"
+    ],
+    "recipient_country_narrative": [
+      "Adamawa, Borno and Yobe States of North East Nigeria"
+    ]
+  },
+  {
+    "sector_code": [
+      "430"
+    ],
+    "budget_value": [
+      400750.0,
+      400743.0
+    ],
+    "iati_identifier": "XM-OCHA-HPC9829-15AMK",
+    "title_narrative": [
+      "Independent Monitoring, Evaluation and Data Analysis"
+    ],
+    "reporting_org_ref": "XM-OCHA-HPC9829",
+    "transaction_value": [
+      6793.31,
+      80392.37,
+      35342.37
+    ],
+    "activity_date_type": [
+      "2",
+      "4"
+    ],
+    "activity_status_code": "4",
+    "description_narrative": [
+      "In the context of Yemen, where data collection and analysis processes face extensive barriers, REACH has identified humanitarian coordination actors – primarily the Cluster system – as the most effective means to build capacity and unblock administrative barriers to these processes. By working within the Cluster system, REACH is able to directly liaise with dozens of NNGO, INGO, and UN partners to enhance and harmonize data collection, analysis, and utilization processes, in line with Goal 5 of the Grand Bargain. In working with a wide variety of partners within a recognized coordination structure, REACH ensures a broad impact across the humanitarian response, building the capacity of partners to collect and utilize data. In addition, enhancing the capacity of coordination partners to facilitate data collection and analysis creates a higher level of buy-in from Cluster and Working Group partners, ensuring increased levels of collaboration. In this way, REACH seeks to achieve long-term, sustainable change within the Yemen humanitarian system, and ensure robust, evidence-based planning at all levels of the response."
+    ],
+    "activity_date_iso_date": [
+      "2020-05-01T00:00:00Z",
+      "2021-08-25T00:00:00Z"
+    ],
+    "recipient_country_code": [
+      "YE"
+    ],
+    "reporting_org_narrative": [
+      "IMPACT Initiatives"
+    ]
+  },
+  {
+    "sector_code": [
+      "na"
+    ],
+    "budget_value": [
+      102426.0
+    ],
+    "iati_identifier": "XM-OCHA-HPC9829-dk-cvr-20699310",
+    "title_narrative": [
+      "Regional strengthening of multi sector needs and analysis and drought response (24AWX)"
+    ],
+    "reporting_org_ref": "XM-OCHA-HPC9829",
+    "transaction_value": [
+      30727.8,
+      71698.2
+    ],
+    "activity_date_type": [
+      "2",
+      "4"
+    ],
+    "activity_status_code": "4",
+    "description_narrative": [
+      "Objective 1 Improving access to and quality of information on the impact of drought on the population and their humanitarian needs for informed, evidence-based policy- and decision- making at county and community levels  \r\n\r\nObjective 2 Provision of Remote Sensing and regional style analysis across the drought affected areas in the Horn of Africa Region (Kenya, Somalia, and Ethiopia)."
+    ],
+    "activity_date_iso_date": [
+      "2022-09-01T00:00:00Z",
+      "2023-01-11T00:00:00Z"
+    ],
+    "recipient_country_code": [
+      "KE"
+    ],
+    "reporting_org_narrative": [
+      "IMPACT Initiatives"
+    ],
+    "recipient_country_narrative": [
+      "Against the backdrop of an unprecedented drought, sharp price increases for commodities, reduced donor funding and a related slow humanitarian response across the region, vulnerable communities in the Arid lands in Kenya, South and Central Somalia, conflict- and drought-affected regions of Ethiopia are all facing potentially dire situations. REACH proposes a multi-pronged approach to fill information management gaps and enhance the response and prioritisation of humanitarian and government actors in all three drought affected countries. In Kenya REACH will conduct an assessment in Turkana and Marsabit counties, which are hard-hit by the drought and considered to be candidates to potentially deteriorate into IPC Phase 4 levels of food insecurity. REACH will provide a multi-sectoral lens to the National Drought Management Authority’s (NDMA) food security findings, to encourage implementing actors to take an integrated approach to humanitarian activities to minimise the risk of excess mortality. Under the proposed project’s second objective, REACH will strengthen the analysis and remote sensing capacity of its existing activities, to provide granular data culminating in an analysis output that highlights most vulnerable populations across all three countries."
+    ]
+  },
+  {
+    "sector_code": [
+      "151"
+    ],
+    "budget_value": [
+      1263650.0,
+      1120000.0,
+      1000000.0,
+      1000000.0
+    ],
+    "iati_identifier": "XM-OCHA-HPC9829-32AIE",
+    "title_narrative": [
+      "Humanitarian Information Systems, Strengthening evidence-based decision making in South Sudan: HARISS Programme"
+    ],
+    "reporting_org_ref": "XM-OCHA-HPC9829",
+    "transaction_value": [
+      1263650.0,
+      1120000.0,
+      1000000.0,
+      1000000.0,
+      2667644.55
+    ],
+    "activity_date_type": [
+      "2",
+      "4"
+    ],
+    "activity_status_code": "4",
+    "description_narrative": [
+      "The humanitarian response is South Sudan is faced with two central issues in terms of information management: 1) ability to regularly monitor humanitarian needs due to accessibility and security issues, inhibiting humanitarian planning and linked to this 2) the ability to effectively prioritise humanitarian assistance, which is becoming ever more urgent in the context of humanitarian needs increasing in severity and in geographic scale. To fill these identified information management gaps, REACH has been collaborating closely and feeding information into the humanitarian architecture in South Sudan to support in tracking of humanitarian needs. Primarily this has been conducted through its AoK remote monitoring (please see Section 4.5) and subsequent information sharing and collaboration with the clusters, the Inter-Cluster Working Group (ICWG) and the Integrated Phase Classification Technical Working Group (IPC TWG). To support improvements in the emergency response prioritization process, in early 2018, REACH played a central role in pushing for shifts in the humanitarian architecture to improve real-time analysis and evidence-based decision making through the set up and co-chairing of the Needs Analysis Working Group (NAWG), tasked with supporting ICWG in emergency response prioritization, and the development of the Integrated Needs Tracking System (INT), tasked by the FSL, WASH, Health and Nutrition clusters to develop an integrated needs monitoring system to support the clusters in prioritizing emergency areas for famine prevention responses."
+    ],
+    "activity_date_iso_date": [
+      "2018-11-10T00:00:00Z",
+      "2023-03-31T00:00:00Z"
+    ],
+    "recipient_country_code": [
+      "SS"
+    ],
+    "reporting_org_narrative": [
+      "IMPACT Initiatives"
+    ],
+    "recipient_country_narrative": [
+      "In the context of a widening and deepening humanitarian crisis in South Sudan, with needs escalating both in severity and geographic scale, effective aid prioritization has become an urgent priority. The IPC from October 2018 estimated 59% of South Sudan’s population to face crisis, emergency and catastrophic food insecurity, which makes evidence-based targeting of existing funds a critical necessity to save lives potentially at risk. \r\n\r\nAt the same time, the dynamic and multi-faceted nature of the South Sudan crisis has created significant challenges for humanitarian information management. Accessibility and security issues within South Sudan have impeded systematic direct data collection efforts – limiting the ability to monitor needs and therefore provide timely information for effective targeting inside the country. As a result, it is becoming increasingly important to adopt adaptive and innovative approaches to filling information gaps in a systematic manner to promote more effective humanitarian response and planning."
+    ]
+  },
+  {
+    "sector_code": [
+      "720"
+    ],
+    "budget_value": [
+      191540.0
+    ],
+    "iati_identifier": "XM-OCHA-HPC9829-08AXO",
+    "title_narrative": [
+      "REACH: Evidence-gathering on community perceptions, priority needs and preferences in Sri Lanka"
+    ],
+    "reporting_org_ref": "XM-OCHA-HPC9829",
+    "transaction_value": [
+      95000.0,
+      96540.0,
+      95531.27
+    ],
+    "activity_date_type": [
+      "2",
+      "4"
+    ],
+    "activity_status_code": "4",
+    "description_narrative": [
+      "accountability to affected population"
+    ],
+    "activity_date_iso_date": [
+      "2022-10-24T00:00:00Z",
+      "2023-05-31T00:00:00Z"
+    ],
+    "recipient_country_code": [
+      "LK"
+    ],
+    "reporting_org_narrative": [
+      "IMPACT Initiatives"
+    ],
+    "recipient_country_narrative": [
+      "As of July 2022, Sri Lanka is facing an economic crisis rooted in high inflation, fuel shortages and low foreign exchange reserves. The UN Humanitarian Needs and Priorities (HNP) Plan (launched 09 June) estimated 5.7 people in need.   \r\nWhile many, including WFP and FAO , expect a deterioration of the situation, there is still an absence of critical sources of information on community priorities in terms of humanitarian assistance as well as perceptions of ongoing programming among affected people. Moreover, humanitarian decision makers are faced with a critical gap of information on the differential impact of the crisis on various groups of people, especially in terms of how the compounding multi-dimensional crisis is exacerbating pre-existing vulnerabilities through a loss of access to resources and reduction in access to essential services among persons with disabilities, older people, female-headed households, persons with critical illnesses and others.\r\nTo support response actors to prioritize and plan with enhanced awareness of community preferences in terms of humanitarian assistance and modalities of assistance, REACH  proposes to launch a participatory assessment focused on Accountability to Affected People. The assessment will seek community triangulation of the assumptions that underly the current humanitarian response in terms of what the drivers of the crisis are, how the crisis is impacting the lives of people in crisis-affected areas, and what solutions should be pursued and supported by humanitarian actors from the point of view of local actors and affected people. The assessment would also aim to identify geographical areas and population groups that are particularly impacted by the crisis and whose needs and priorities should be monitored more closely by the response. REACH also proposes to collaborate with OCHA / the ISCG in country to facilitate a joint analysis session once preliminary findings are available, involving both the conventional coordination and response actors, such as ISCG members and key operational agency representatives, and local civil society organizations, including women-led groups, organizations of persons with disabilities (OPD), older people’s associations (OPA), and others.\r\nThe proposed activities are based on discussions with key actors operating in the country (OCHA, WFP, NGO consortia). Activities are also based on REACH’s previous experience responding to over 30 humanitarian crises and addressing critical information gaps in similar crises to Sri Lanka, including a growing portfolio of activities focusing on amplifying community voices through community engagement, as well as accountability to affected people."
+    ]
+  },
+  {
+    "sector_code": [
+      "720"
+    ],
+    "budget_value": [
+      200810.15
+    ],
+    "iati_identifier": "XM-OCHA-HPC9829-21AUC",
+    "title_narrative": [
+      "Independent Third Party Monitoring (TPM) of selected FCDO-funded emergency programmes to support and maximise UK Aid delivery in DRC – Year II."
+    ],
+    "sector_narrative": [
+      "Independent Third Party Monitoring"
+    ],
+    "reporting_org_ref": "XM-OCHA-HPC9829",
+    "transaction_value": [
+      22724.01,
+      73574.68,
+      83923.43,
+      20558.03,
+      108292.82
+    ],
+    "activity_date_type": [
+      "2",
+      "4"
+    ],
+    "activity_status_code": "4",
+    "description_narrative": [
+      "Intersectoral TPM",
+      "To provide independent oversight by combining regular light-touch verification with in-depth   thematic analysis to provide FCDO and partners with data and action points to contribute to increased aid effectiveness, accountability and evidence-based response planning. With the overall objective of both strengthening FCDO-funded aid interventions’ and partners’ effectiveness and efficiency, IMPACT Initiatives proposes to provide third party monitoring."
+    ],
+    "activity_date_iso_date": [
+      "2022-03-21T00:00:00Z",
+      "2023-03-20T00:00:00Z"
+    ],
+    "recipient_country_code": [
+      "CD"
+    ],
+    "reporting_org_narrative": [
+      "IMPACT Initiatives"
+    ],
+    "recipient_country_narrative": [
+      "The Democratic Republic of the Congo (DRC) faces one of the world’s most complex and long-standing humanitarian crises. In 2020, the country saw COVID-19 exacerbating existing vulnerabilities alongside a resurgence in armed conflict and violence, and 27 million people are currently in dire need of protection and humanitarian assistance (Humanitarian Needs Overview, 2022) - an increase of more than 5 million, especially due to the IPC food insecurity analysis. A combination of protracted conflict in parts of the country and additional shocks, including natural disasters and epidemics, has resulted in high sustained levels of humanitarian needs and large-scale population movement, with 5.7 million people affected by population movements in DRC, according to the 2022 HNO. \r\nIn light of this fluid context, in particular in provinces in eastern DRC, where new shocks regularly lead to shifting needs and population movement, emergency programming including through rapid response mechanisms, such as those funded by FCDO. An FCDO-funded ODI publication identified an increasing trend of cash and voucher programming in the DRC humanitarian response. There is a lack of independent verification of large-scale humanitarian interventions to ensure quality, appropriate design, and impact on affected communities. Moreover, humanitarian assistance delivered to vulnerable populations in DRC, including through rapid response mechanisms and cash modalities, suffered from various aid integrity risks, as found in the Humanitarian Country Team and Joint Anti‐Fraud Taskforce-commissioned Operational Review, published in July 2020. Aid integrity has been found to be a significant issue within the DRC humanitarian response, with exposure of fraud and sexual exploitation cases. Despite efforts made by humanitarian actors, the review outlines a number of gaps and measures that would decrease the occurrence of fraudulent systems. \r\nThird Party Monitoring (TPM) is referenced in the review as one of the potential avenues mitigating the challenges of monitoring and evaluating programme implementation in high risk contexts. For the year to March 2022, IMPACT Initiatives has been delivering a Third Party Monitoring (TPM) pilot of selected FCDO-funded humanitarian interventions of the World Food Programme (WFP) and two partners under the SAFER (Strategic Assistance for Humanitarian Response in DRC) consortium partners (Mercy Corps and Solidarités International). In line with the overall sector focus as well as the identification of risks, this TPM has focused on cash and transfer interventions, especially those taking place in harder-to-reach locations. This current TPM is set to include six visits with resulting reports including practical recommendations, as well as an overall thematic piece on Accountability to Affected Populations."
+    ]
+  },
+  {
+    "sector_code": [
+      "31120"
+    ],
+    "budget_value": [
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "iati_identifier": "XI-IATI-EC_INTPA-2024-PC-28128",
+    "title_narrative": [
+      "Market Price Monitoring and Cash Feasibility Analysis - II"
+    ],
+    "sector_narrative": [
+      "Agricultural development"
+    ],
+    "reporting_org_ref": "XI-IATI-EC_INTPA",
+    "transaction_value": [
+      500000.0,
+      1000000.0
+    ],
+    "activity_date_type": [
+      "1",
+      "2",
+      "3"
+    ],
+    "activity_status_code": "2",
+    "description_narrative": [
+      "Contract related to: Market Price Monitoring and Cash Feasibility Analysis - II - The action aims to support agricultural recovery in the regions of Ethiopia hit by natural and man-made disasters (drought, conflict), and to contribute improving domestic food production and food security in the entire country. It builds on, and extends the existing programmes with high food security impact for smallholder farmers and pastoralists with an emphasis of female-headed households. Given the multidimensional nature of the problem, the action targets in particular the security of food supply chains, notably highly nutritional commodities, and the transition to environmentally and socially sustainable food systems.&nbsp;The objective will be achieved through:·&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;The delivery of seeds of improved varieties for nutritional content and resilience to climate change;·&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;The domestic production of organic fertilisers;·&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;The restoration of the livestock assets lost and the livestock service delivery systems destroyed in conflict and drought affected parts of the country;·&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;The establishment of complementary activities, such as monitoring food price evolution, mainstreaming rural employment for women and youth, promoting equal access and control over resources for men and women,&nbsp;defining methodologies on conflict resolution, and tailoring behavioural changes on nutritios food, to improve the effectiveness of the main activities."
+    ],
+    "activity_date_iso_date": [
+      "2024-07-15T00:00:00Z",
+      "2024-07-16T00:00:00Z",
+      "2026-07-15T00:00:00Z"
+    ],
+    "recipient_country_code": [
+      "ET"
+    ],
+    "reporting_org_narrative": [
+      "European Commission - Directorate-General for International Partnerships"
+    ],
+    "recipient_country_narrative": [
+      "Ethiopia"
+    ]
+  },
+  {
+    "sector_code": [
+      "16070",
+      "15190",
+      "10.7",
+      "8.8",
+      "590075"
+    ],
+    "budget_value": [
+      792918.78,
+      386177.17
+    ],
+    "iati_identifier": "XM-DAC-41302-IP22-TUN129",
+    "title_narrative": [
+      "Capacités des mandants renforcées pour une meilleure gouvernance de la migration de main d'oeuvre et la protection des travailleurs migrants"
+    ],
+    "sector_narrative": [
+      "Facilitation of orderly, safe, regular and responsible migration and mobility",
+      "Facilitation of orderly, safe, regular and responsible migration and mobility",
+      "10.7 Facilitate orderly, safe, regular and responsible migration and mobility of people, including through the implementation of planned and well-managed migration policies",
+      "8.8 Protect labour rights and promote safe and secure working environments for all workers, including migrant workers, in particular women migrants, and those in precarious employment",
+      "Output 7.5. Increased capacity of Member States to develop fair and effective labour migration frameworks, institutions and services to protect migrant workers"
+    ],
+    "reporting_org_ref": "XM-DAC-41302",
+    "transaction_value": [
+      536909.68,
+      630.0,
+      73842.72,
+      44213.62,
+      62047.44,
+      97564.9,
+      353066.28,
+      10817.65,
+      3.66,
+      837.17,
+      1590.19,
+      3107.5,
+      63561.27,
+      6129.08,
+      6789.97,
+      8816.48,
+      21458.29,
+      71202.23,
+      15539.73,
+      22472.55,
+      15295.46,
+      16983.21,
+      16941.5,
+      29842.87,
+      18697.51,
+      14211.09,
+      28901.92,
+      4083.5,
+      4448.72,
+      13760.5,
+      15809.35,
+      25040.94,
+      7458.34,
+      474.9,
+      6431.23,
+      7501.93,
+      110991.24,
+      7023.38,
+      11556.79,
+      15068.23,
+      26680.74,
+      32865.11,
+      16769.75,
+      14280.92,
+      19480.26,
+      19288.24,
+      39955.99,
+      8695.08,
+      7950.68,
+      6101.47,
+      3489.94,
+      55151.8,
+      8506.0,
+      4841.89,
+      5591.84,
+      9476.45,
+      630.0,
+      7819.55,
+      15189.94,
+      22452.99,
+      28707.45,
+      10905.98,
+      24351.5,
+      3081.65,
+      18236.23,
+      34238.53,
+      5433.75,
+      22486.35,
+      3939.41,
+      1026.3,
+      7786.57,
+      9950.45
+    ],
+    "activity_date_type": [
+      "2",
+      "4"
+    ],
+    "activity_status_code": "4",
+    "description_narrative": [
+      "Capacités des mandants renforcées pour une meilleure gouvernance de la migration de main d'oeuvre et la protection des travailleurs migrants"
+    ],
+    "activity_date_iso_date": [
+      "2022-01-01T00:00:00Z",
+      "2023-12-31T00:00:00Z"
+    ],
+    "recipient_country_code": [
+      "TN"
+    ],
+    "reporting_org_narrative": [
+      "International Labour Organization (ILO)"
+    ],
+    "recipient_country_narrative": [
+      "Tunisia"
+    ]
+  },
+  {
+    "sector_code": [
+      "16062",
+      "16070",
+      "15190",
+      "10.7",
+      "8.8",
+      "710271",
+      "590075"
+    ],
+    "budget_value": [
+      1078074.67,
+      675728.04
+    ],
+    "iati_identifier": "XM-DAC-41302-IP22-MAR129",
+    "title_narrative": [
+      "Capacités des mandants renforcées pour une meilleure gouvernance de la migration de main d'oeuvre et la protection des travailleurs migrants"
+    ],
+    "sector_narrative": [
+      "Facilitation of orderly, safe, regular and responsible migration and mobility",
+      "Facilitation of orderly, safe, regular and responsible migration and mobility",
+      "Facilitation of orderly, safe, regular and responsible migration and mobility",
+      "10.7 Facilitate orderly, safe, regular and responsible migration and mobility of people, including through the implementation of planned and well-managed migration policies",
+      "8.8 Protect labour rights and promote safe and secure working environments for all workers, including migrant workers, in particular women migrants, and those in precarious employment",
+      "Output A.1. Enhanced decent work statistics using innovative sources and statistical standards",
+      "Output 7.5. Increased capacity of Member States to develop fair and effective labour migration frameworks, institutions and services to protect migrant workers"
+    ],
+    "reporting_org_ref": "XM-DAC-41302",
+    "transaction_value": [
+      109881.0,
+      159156.64,
+      4578.0,
+      2252.0,
+      1465106.84,
+      12826.0,
+      2.23,
+      3107.5,
+      3500.0,
+      57494.67,
+      15089.51,
+      165430.01,
+      39500.14,
+      706.21,
+      42241.65,
+      14813.43,
+      90727.61,
+      23886.63,
+      33958.09,
+      5288.32,
+      47348.89,
+      38929.48,
+      1599.25,
+      41548.54,
+      38334.36,
+      50969.59,
+      97936.69,
+      86796.54,
+      49856.29,
+      16485.09,
+      58231.18,
+      48849.69,
+      585.0,
+      62553.95,
+      21347.53,
+      55974.64,
+      45570.26,
+      1036.58,
+      13653.22,
+      191.6,
+      66619.09,
+      630.0,
+      55247.31,
+      -121.33,
+      8279.39,
+      7207.0,
+      7826.26,
+      43302.93,
+      45321.86,
+      209.25,
+      15889.36,
+      74376.85,
+      43562.73,
+      2412.5,
+      16624.05,
+      11031.19,
+      51317.1
+    ],
+    "activity_date_type": [
+      "2",
+      "4"
+    ],
+    "activity_status_code": "4",
+    "description_narrative": [
+      "Capacités des mandants renforcées pour une meilleure gouvernance de la migration de main d'oeuvre et la protection des travailleurs migrants"
+    ],
+    "activity_date_iso_date": [
+      "2022-01-01T00:00:00Z",
+      "2023-12-31T00:00:00Z"
+    ],
+    "recipient_country_code": [
+      "MA"
+    ],
+    "reporting_org_narrative": [
+      "International Labour Organization (ILO)"
+    ],
+    "recipient_country_narrative": [
+      "Morocco"
+    ]
+  },
+  {
+    "sector_code": [
+      "12182",
+      "12382"
+    ],
+    "budget_value": [
+      2177502.0
+    ],
+    "iati_identifier": "GB-CHC-1177110-R2HC",
+    "title_narrative": [
+      "Research for Health in Humanitarian Crises 2020-2026"
+    ],
+    "reporting_org_ref": "GB-CHC-1177110",
+    "transaction_value": [
+      484520.0,
+      159838.0,
+      5078.0,
+      92336.0,
+      6040.18,
+      105360.0,
+      9468.33,
+      676799.0,
+      8886.14,
+      4904.54,
+      1878.0,
+      48765.0,
+      7127.52,
+      9361.23,
+      6707.0,
+      10000.0,
+      647431.0,
+      10000.0,
+      691724.0,
+      3369.0,
+      4532.22,
+      2352.17,
+      6980.0,
+      61914.0,
+      4983.1,
+      327260.0,
+      352126.0,
+      259801.0,
+      82776.0,
+      42437.0,
+      8927.72,
+      2624.72,
+      3878.02,
+      1327.05,
+      129580.0,
+      3878.02,
+      323903.0,
+      1288.0,
+      3979.0,
+      3500.0,
+      7000.0,
+      9280.0,
+      9787.0,
+      9999.91,
+      3330.0,
+      4205.17,
+      9820.0,
+      6210.0,
+      5018.0,
+      8740.0,
+      9800.0,
+      3344.0,
+      207100.95,
+      3767.0,
+      9472.93,
+      54476.96,
+      36767.45,
+      38058.77,
+      -2548.93,
+      49307.37,
+      -11298.75,
+      7800.27,
+      512994.65,
+      74826.22,
+      41238.53,
+      76671.17,
+      -44282.75,
+      267175.58,
+      -3482.48,
+      58337.67,
+      195.05,
+      30152.09,
+      242103.4,
+      27990.53,
+      399560.0,
+      400000.0,
+      347984.0,
+      399843.0,
+      321650.0,
+      84429.0,
+      278078.0,
+      499180.62,
+      394197.0,
+      399171.0,
+      361317.46,
+      27500.0,
+      51990.0,
+      400000.0,
+      84206.54,
+      386422.0,
+      21488.69,
+      -35776.3,
+      12958.15,
+      254.08,
+      88918.86,
+      79102.66,
+      72646.7,
+      -195.04,
+      17898.06,
+      146777.99,
+      82033.81,
+      277820.13,
+      119157.08,
+      498404.94,
+      102563.74,
+      208790.4,
+      180000.0,
+      96605.5,
+      97327.3,
+      79596.8,
+      153141.24,
+      18535.35,
+      50000.0,
+      112577.5,
+      98549.25,
+      90329.37,
+      180000.0,
+      139709.85,
+      194229.3,
+      134550.15,
+      143982.4,
+      139846.0,
+      31194.0,
+      139945.05,
+      143640.6,
+      90329.37,
+      174713.22,
+      236879.65,
+      158819.2,
+      98549.25,
+      87757.0,
+      135359.8,
+      129402.8,
+      53437.8,
+      83160.21,
+      55615.6,
+      74560.25,
+      131045.93,
+      18691.6,
+      -36576.3,
+      7652.5,
+      84207.67,
+      71231.68,
+      1828345.23,
+      2862.84,
+      5125.36,
+      49921.5,
+      306282.3,
+      35133.66,
+      242103.4,
+      8277.6,
+      8159.6,
+      781.2,
+      42541.12,
+      4048.06,
+      188277.13,
+      308766.16,
+      93447.67,
+      13112.7,
+      77981.06,
+      -0.66,
+      13893.9,
+      81122.01,
+      188023.42,
+      16626.55,
+      90758.26,
+      51664.34,
+      11779.92,
+      59871.38,
+      118343.4,
+      39961.2,
+      31996.27,
+      20985.0,
+      237078.0,
+      19537.0,
+      10000.0,
+      41115.0,
+      54400.0,
+      32440.0,
+      20693.0,
+      52722.0,
+      142154.21,
+      -179336.62,
+      9481.21,
+      478802.0,
+      8129.0,
+      5664.0,
+      6606.96,
+      11581.64,
+      11297.56,
+      30727.35,
+      476.7,
+      463.3,
+      293347.64,
+      1468.54,
+      3684.99,
+      1020941.0,
+      6696.37,
+      5693.71,
+      563822.84,
+      32339.0,
+      20000.0,
+      15665.0,
+      98999.0,
+      25608.0,
+      3300.0,
+      430.62,
+      456011.74,
+      18437.51,
+      234754.0,
+      2002.0,
+      9222.0,
+      851068.63,
+      2908.75,
+      -4000.0,
+      11501.92,
+      3662.2,
+      29751.72,
+      -3612.7,
+      73152.6,
+      -200.66,
+      117298.62,
+      26045.15,
+      330052.59,
+      3057.9,
+      589.31,
+      986.32,
+      32896.24,
+      4074.5,
+      2856.81,
+      25802.64,
+      1152459.2,
+      -51660.16,
+      13951.12,
+      21385.29,
+      282348.34,
+      5107.68,
+      99899.0,
+      6256.0,
+      282035.5,
+      359956.0,
+      564071.0,
+      5743.32,
+      10947.0,
+      207100.95,
+      4400.6,
+      198992.0,
+      323507.0,
+      73781.0,
+      191520.8,
+      719912.0,
+      9800.0,
+      122969.0,
+      289613.0,
+      7568.0,
+      46466.0,
+      19997.0,
+      18950.0,
+      59618.0,
+      26005.91,
+      15499.02,
+      47945.16,
+      26134.15,
+      609636.6,
+      47685.88,
+      4191.91,
+      22275.65,
+      84739.69,
+      496.39,
+      187.31,
+      31733.27,
+      1700.0,
+      397984.0,
+      99903.0,
+      647014.0,
+      11000.0,
+      357329.35,
+      169582.0,
+      236879.65,
+      219392.5,
+      33110.4,
+      140850.4,
+      258972.4,
+      49951.5,
+      99843.0,
+      438785.0,
+      24113.48,
+      9999.0,
+      82163.9,
+      9708.0,
+      20885.0,
+      41770.0,
+      591717.0,
+      153235.0,
+      66060.0
+    ],
+    "activity_date_type": [
+      "2",
+      "3"
+    ],
+    "activity_status_code": "2",
+    "description_narrative": [
+      "The R2HC is a globally recognised research programme focuses on maximising the potential for public health research to bring about positive change in humanitarian response and helps inform decision making in humanitarian response.",
+      "To improve health outcomes by strengthening the evidence base for public health interventions in humanitarian crises."
+    ],
+    "activity_date_iso_date": [
+      "2020-05-18T00:00:00Z",
+      "2026-03-31T00:00:00Z"
+    ],
+    "reporting_org_narrative": [
+      "Elrha"
+    ]
+  }
+]

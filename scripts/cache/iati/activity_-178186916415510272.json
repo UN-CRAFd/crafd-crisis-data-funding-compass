@@ -1,0 +1,3573 @@
+[
+  {
+    "sector_code": [
+      "720"
+    ],
+    "iati_identifier": "GB-CHC-220949-P8942",
+    "title_narrative": [
+      "Mexico & Central American Migration Crisis 2022"
+    ],
+    "reporting_org_ref": "GB-CHC-220949",
+    "transaction_value": [
+      175000.0
+    ],
+    "activity_date_type": [
+      "2",
+      "4"
+    ],
+    "activity_status_code": "4",
+    "description_narrative": [
+      "Since the beginning of 2022, there has been a massive increase in the number of refugees, migrants, and returnees in transit by land northwards through Central America, compared to previous years. On 29 July 2022 the IFRC launched an Emergency Appeal.\nMigrants, returnees, and refugees are moving mostly through irregular channels. Many face bureaucratic barriers, suffer accidents and injuries, face extortion and sexual violence, or disappear and are separated from their families. Others are killed or die from disease or the harsh environmental conditions and weather. The majority of migrants and refugees in transit through Central America come from Cuba, Venezuela and Haiti. The situation is especially serious for the most vulnerable groups such as children and youth, women, indigenous populations, the elderly, disabled and LGBTIQ people. There is a particular concern for children; in 2022, out of every 100 migrants crossing the Darien Gap, one of the most dangerous migration routes in the world, 16 are minors.\nReasons for migrating include improving their income, escaping violence, reuniting with family members, recovering from the impact of recurring disasters and extreme weather events, and due to the devastating socioeconomic effects of the COVID-19 pandemic and continuing political crises.\nIt is estimated that up to 500,000 people have been affected considering the inflows and reports of irregular crossings from July to December 2021, representing a 45% increase scenario (most countries are above a 100% increase). The IFRC Emergency Appeal aims to reach 210,000 people regionally in all seven countries covered (Panama, Costa Rica, Nicaragua, Honduras, El Salvador, Guatemala, and Mexico) - 175,000 migrants in transit, 25,000 returnees and 10,000 people in host and origin communities.\nThe BRC Emergencies Team are continuing to monitor the situation. Due the low funding across the movement and low coverage of the emergency, BRC will be pledging £175,000 to the response."
+    ],
+    "activity_date_iso_date": [
+      "2022-07-29T00:00:00Z",
+      "2023-12-31T00:00:00Z"
+    ],
+    "recipient_country_code": [
+      "CR",
+      "SV",
+      "GT",
+      "HN",
+      "MX",
+      "NI",
+      "PA"
+    ],
+    "reporting_org_narrative": [
+      "British Red Cross"
+    ]
+  },
+  {
+    "budget_value": [
+      50000000.0
+    ],
+    "iati_identifier": "SE-0-SE-2-91693-91693A0101",
+    "title_narrative": [
+      "Kärnstöd till Disaster Response Emergency Fund (DREF) 2024",
+      "Kärnstöd till Disaster Response Emergency Fund (DREF) 2024 - Support to Disaster Response Emergency Fund (DREF) 2024"
+    ],
+    "reporting_org_ref": "SE-0",
+    "transaction_value": [
+      50000000.0,
+      50000000.0
+    ],
+    "activity_date_type": [
+      "4",
+      "2",
+      "3",
+      "1"
+    ],
+    "activity_status_code": "4",
+    "description_narrative": [
+      "Stöd till Disaster Response Emergency Fund (DREF) som hanteras av IFRC avseende år 2024.",
+      "Support to Disaster Response Emergency Fund (DREF) managed by IFRC year 2024"
+    ],
+    "activity_date_iso_date": [
+      "2025-06-30T00:00:00Z",
+      "2024-01-01T00:00:00Z",
+      "2025-06-30T00:00:00Z",
+      "2024-01-01T00:00:00Z"
+    ],
+    "reporting_org_narrative": [
+      "Sweden"
+    ]
+  },
+  {
+    "budget_value": [
+      9000000.0
+    ],
+    "iati_identifier": "SE-0-SE-2-92396-92396A0101-H",
+    "title_narrative": [
+      "Öronmärkt stöd IFRC Röda Korset Egypten 2025",
+      "Earmarked support IFRC Red Cross Egypt 2025"
+    ],
+    "reporting_org_ref": "SE-0",
+    "transaction_value": [
+      9000000.0,
+      9000000.0
+    ],
+    "activity_date_type": [
+      "2",
+      "3",
+      "1"
+    ],
+    "activity_status_code": "2",
+    "description_narrative": [
+      "Earmarked support IFRC Red Cross Egypt 2025 (Gaza)",
+      "Öronmärkt stöd IFRC Röda Korset Egypten 2025 (Gaza)"
+    ],
+    "activity_date_iso_date": [
+      "2025-01-01T00:00:00Z",
+      "2026-06-30T00:00:00Z",
+      "2025-01-01T00:00:00Z"
+    ],
+    "reporting_org_narrative": [
+      "Sweden"
+    ]
+  },
+  {
+    "budget_value": [
+      50000000.0
+    ],
+    "iati_identifier": "SE-0-SE-2-10920-10920A0101",
+    "title_narrative": [
+      "IFRC International Federation of the Red Cross, Core support 2017",
+      "IFRC International Federation of the Red Cross, Kärnstöd 2017"
+    ],
+    "reporting_org_ref": "SE-0",
+    "transaction_value": [
+      50000000.0,
+      50000000.0
+    ],
+    "activity_date_type": [
+      "4",
+      "2",
+      "3",
+      "1"
+    ],
+    "activity_status_code": "4",
+    "description_narrative": [
+      "Core contribution to the International Federation of the Red Cross and Red Crescent Societies (IFRC)",
+      "Core contribution to the International Federation of the Red Cross and Red Crescent Societies (IFRC)"
+    ],
+    "activity_date_iso_date": [
+      "2019-06-30T00:00:00Z",
+      "2017-01-01T00:00:00Z",
+      "2019-06-30T00:00:00Z",
+      "2017-01-01T00:00:00Z"
+    ],
+    "reporting_org_narrative": [
+      "Sweden"
+    ]
+  },
+  {
+    "budget_value": [
+      70000000.0
+    ],
+    "iati_identifier": "SE-0-SE-2-91254-91254A0101",
+    "title_narrative": [
+      "Core contribution to IFRC 2022",
+      "Kärnstöd till IFRC 2022"
+    ],
+    "reporting_org_ref": "SE-0",
+    "transaction_value": [
+      70000000.0,
+      70000000.0
+    ],
+    "activity_date_type": [
+      "4",
+      "2",
+      "3",
+      "1"
+    ],
+    "activity_status_code": "4",
+    "description_narrative": [
+      "Core contribution to IFRC 2022",
+      "Kärnstöd till IFRC 2022"
+    ],
+    "activity_date_iso_date": [
+      "2023-06-30T00:00:00Z",
+      "2022-01-01T00:00:00Z",
+      "2023-06-30T00:00:00Z",
+      "2022-01-01T00:00:00Z"
+    ],
+    "reporting_org_narrative": [
+      "Sweden"
+    ]
+  },
+  {
+    "budget_value": [
+      28000000.0
+    ],
+    "iati_identifier": "SE-0-SE-2-91692-91692A0101",
+    "title_narrative": [
+      "Kärnstöd till IFRC 2024",
+      "Contribution to IFRC 2024 - Core support to IFRC 2024"
+    ],
+    "reporting_org_ref": "SE-0",
+    "transaction_value": [
+      28000000.0,
+      28000000.0
+    ],
+    "activity_date_type": [
+      "4",
+      "2",
+      "3",
+      "1"
+    ],
+    "activity_status_code": "4",
+    "description_narrative": [
+      "Kärnstöd till IFRC för 2024",
+      "Core support to IFRC for 2024"
+    ],
+    "activity_date_iso_date": [
+      "2025-06-30T00:00:00Z",
+      "2024-01-01T00:00:00Z",
+      "2025-06-30T00:00:00Z",
+      "2024-01-01T00:00:00Z"
+    ],
+    "reporting_org_narrative": [
+      "Sweden"
+    ]
+  },
+  {
+    "budget_value": [
+      100000000.0
+    ],
+    "iati_identifier": "SE-0-SE-2-92221-92221A0101-H",
+    "title_narrative": [
+      "Ytterligare stöd IFRC Ukraina 2025",
+      "Additional support IFRC Ukraine 2025"
+    ],
+    "reporting_org_ref": "SE-0",
+    "transaction_value": [
+      100000000.0,
+      100000000.0
+    ],
+    "activity_date_type": [
+      "2",
+      "3",
+      "1"
+    ],
+    "activity_status_code": "4",
+    "description_narrative": [
+      "Ytterligare stöd till IFRC för vidareförmedling till Ukrainska Röda Korset 2025",
+      "Additional support to IFRC for forwarding to the Red Cross of Ukraine in 2025"
+    ],
+    "activity_date_iso_date": [
+      "2025-01-01T00:00:00Z",
+      "2026-06-30T00:00:00Z",
+      "2025-01-01T00:00:00Z"
+    ],
+    "reporting_org_narrative": [
+      "Sweden"
+    ]
+  },
+  {
+    "budget_value": [
+      860467.0
+    ],
+    "iati_identifier": "SE-0-SE-2-99992117-9999211701-H",
+    "title_narrative": [
+      "International Red Cross Dominica 2015",
+      "Internationella Röda Korset Dominica 2015"
+    ],
+    "reporting_org_ref": "SE-0",
+    "transaction_value": [
+      860467.0,
+      860466.7
+    ],
+    "activity_date_type": [
+      "4",
+      "2",
+      "3",
+      "1"
+    ],
+    "activity_status_code": "4",
+    "description_narrative": [
+      "Support to IFRC for reconstruction work in Dominica",
+      "Support to IFRC for reconstruction work in Dominica"
+    ],
+    "activity_date_iso_date": [
+      "2015-12-31T00:00:00Z",
+      "2015-11-01T00:00:00Z",
+      "2015-12-31T00:00:00Z",
+      "2015-11-01T00:00:00Z"
+    ],
+    "reporting_org_narrative": [
+      "Sweden"
+    ]
+  },
+  {
+    "budget_value": [
+      70000000.0
+    ],
+    "iati_identifier": "SE-0-SE-2-91633-91633A0101",
+    "title_narrative": [
+      "Ytterligare kärnstöd IFRC 2022",
+      "Additional core contribution IFRC 2022"
+    ],
+    "reporting_org_ref": "SE-0",
+    "transaction_value": [
+      70000000.0,
+      70000000.0
+    ],
+    "activity_date_type": [
+      "4",
+      "2",
+      "3",
+      "1"
+    ],
+    "activity_status_code": "4",
+    "description_narrative": [
+      "Ytterligare kärnstöd IFRC 2022",
+      "Additional core contribution IFRC 2022"
+    ],
+    "activity_date_iso_date": [
+      "2023-06-30T00:00:00Z",
+      "2022-01-01T00:00:00Z",
+      "2023-06-30T00:00:00Z",
+      "2022-01-01T00:00:00Z"
+    ],
+    "reporting_org_narrative": [
+      "Sweden"
+    ]
+  },
+  {
+    "budget_value": [
+      7000000.0
+    ],
+    "iati_identifier": "SE-0-SE-2-91921-91921A0101-H",
+    "title_narrative": [
+      "Earmarked support to IFRC 2023 Turkiet och Syrien",
+      "Öronmärkt stöd IFRC 2023 Turkiet och Syrien"
+    ],
+    "reporting_org_ref": "SE-0",
+    "transaction_value": [
+      7000000.0,
+      7000000.0
+    ],
+    "activity_date_type": [
+      "4",
+      "2",
+      "3",
+      "1"
+    ],
+    "activity_status_code": "4",
+    "description_narrative": [
+      "Öronmärkt del av Sveriges kärnstöd till IFRC 2023 för Turkiet och Syrien",
+      "Earmarked support to IFRC 2023 for Turkey and Syria"
+    ],
+    "activity_date_iso_date": [
+      "2024-06-30T00:00:00Z",
+      "2023-01-01T00:00:00Z",
+      "2024-06-30T00:00:00Z",
+      "2023-01-01T00:00:00Z"
+    ],
+    "reporting_org_narrative": [
+      "Sweden"
+    ]
+  },
+  {
+    "budget_value": [
+      70000000.0
+    ],
+    "iati_identifier": "SE-0-SE-2-12185-12185A0101",
+    "title_narrative": [
+      "International Federation of the Red Cross 2018",
+      "Internationella Rödakorsfederationen 2018"
+    ],
+    "reporting_org_ref": "SE-0",
+    "transaction_value": [
+      70000000.0,
+      70000000.0
+    ],
+    "activity_date_type": [
+      "4",
+      "2",
+      "3",
+      "1"
+    ],
+    "activity_status_code": "4",
+    "description_narrative": [
+      "Core Contribution to the International Federation of the Red Cross and Red Crescent Societies (IFCR)",
+      "Core Contribution to the International Federation of the Red Cross and Red Crescent Societies (IFCR)"
+    ],
+    "activity_date_iso_date": [
+      "2019-12-31T00:00:00Z",
+      "2018-01-01T00:00:00Z",
+      "2019-12-31T00:00:00Z",
+      "2018-01-01T00:00:00Z"
+    ],
+    "reporting_org_narrative": [
+      "Sweden"
+    ]
+  },
+  {
+    "budget_value": [
+      35000000.0
+    ],
+    "iati_identifier": "SE-0-SE-2-91622-91622A0101",
+    "title_narrative": [
+      "Core contribution to Disaster Response Emergency Fund (DREF) 2023",
+      "Kärnstöd till Disaster Response Emergency Fund (DREF) 2023"
+    ],
+    "reporting_org_ref": "SE-0",
+    "transaction_value": [
+      35000000.0,
+      35000000.0
+    ],
+    "activity_date_type": [
+      "4",
+      "2",
+      "3",
+      "1"
+    ],
+    "activity_status_code": "4",
+    "description_narrative": [
+      "Core contribution to Disaster Response Emergency Fund (DREF) 2023",
+      "Kärnstöd till Disaster Response Emergency Fund (DREF) 2023"
+    ],
+    "activity_date_iso_date": [
+      "2024-12-31T00:00:00Z",
+      "2023-01-01T00:00:00Z",
+      "2024-12-31T00:00:00Z",
+      "2023-01-01T00:00:00Z"
+    ],
+    "reporting_org_narrative": [
+      "Sweden"
+    ]
+  },
+  {
+    "budget_value": [
+      25000000.0
+    ],
+    "iati_identifier": "SE-0-SE-2-91774-91774A0101-H",
+    "title_narrative": [
+      "Additional contribution to IFRC for Ukraine - Additional contribution to IFRC for Red Cross Ukraine",
+      "Ytterligare stöd till IFRC för Röda korset Ukraina"
+    ],
+    "reporting_org_ref": "SE-0",
+    "transaction_value": [
+      25000000.0,
+      25000000.0
+    ],
+    "activity_date_type": [
+      "4",
+      "2",
+      "3",
+      "1"
+    ],
+    "activity_status_code": "4",
+    "description_narrative": [
+      "Additional contribution to IFRC for Ukraine",
+      "Som följd av den nuvarande humanitära krisen i Ukraina, som förvärrats ytterligare efter förstörelsen av kraftverksamdammen vid Novo Kahovka och översvämningskatastrofen som följde, ser regeringen behov av ytterligare kärnstödsfinansiering till IFRC för budgetåret 2023. UD MP rekommenderar ytterligare kärnstöd om 25 miljoner kronor till IFRC till förmån för ukrainska Röda Korsets humanitära respons. Detta belopp tilldelas utöver det belopp om 35 miljoner kronor i kärnstöd som redan har beslutats om för 2023 och de ytterligare 20 miljoner kronor som beslutades den 7 februari 2023 med anledning av jordbävningskatastrofen i Turkiet och Syrien."
+    ],
+    "activity_date_iso_date": [
+      "2024-09-30T00:00:00Z",
+      "2023-01-01T00:00:00Z",
+      "2024-09-30T00:00:00Z",
+      "2023-01-01T00:00:00Z"
+    ],
+    "reporting_org_narrative": [
+      "Sweden"
+    ]
+  },
+  {
+    "budget_value": [
+      20000000.0
+    ],
+    "iati_identifier": "SE-0-SE-2-91670-91670A0101",
+    "title_narrative": [
+      "Ytterligare stöd till IFRC 2023 - Support IFRC Turkey for 2023",
+      "Ytterligare stöd till IFRC 2023"
+    ],
+    "reporting_org_ref": "SE-0",
+    "transaction_value": [
+      20000000.0,
+      20000000.0
+    ],
+    "activity_date_type": [
+      "4",
+      "2",
+      "3",
+      "1"
+    ],
+    "activity_status_code": "4",
+    "description_narrative": [
+      "Ytterligare stöd till IFRC 2023 för jordbävning Turkiet/Syrien",
+      "Support IFRC Turkey for 2023"
+    ],
+    "activity_date_iso_date": [
+      "2024-12-31T00:00:00Z",
+      "2023-01-01T00:00:00Z",
+      "2024-12-31T00:00:00Z",
+      "2023-01-01T00:00:00Z"
+    ],
+    "reporting_org_narrative": [
+      "Sweden"
+    ]
+  },
+  {
+    "budget_value": [
+      28000000.0
+    ],
+    "iati_identifier": "SE-0-SE-2-91621-91621A0101",
+    "title_narrative": [
+      "Core contribution to IFRC 2023",
+      "Kärnstöd till IFRC 2023"
+    ],
+    "reporting_org_ref": "SE-0",
+    "transaction_value": [
+      28000000.0,
+      35000000.0,
+      -7000000.0
+    ],
+    "activity_date_type": [
+      "4",
+      "2",
+      "3",
+      "1"
+    ],
+    "activity_status_code": "4",
+    "description_narrative": [
+      "Kärnstöd till IFRC 2023",
+      "Core contribution to IFRC 2023"
+    ],
+    "activity_date_iso_date": [
+      "2024-12-31T00:00:00Z",
+      "2023-01-01T00:00:00Z",
+      "2024-12-31T00:00:00Z",
+      "2023-01-01T00:00:00Z"
+    ],
+    "reporting_org_narrative": [
+      "Sweden"
+    ]
+  },
+  {
+    "budget_value": [
+      70000000.0
+    ],
+    "iati_identifier": "SE-0-SE-2-90476-90476A0101-H",
+    "title_narrative": [
+      "Core contribution IFRC 2020",
+      "Internationella Rödakorsfederationen (IFRC) kärnstöd 2020"
+    ],
+    "reporting_org_ref": "SE-0",
+    "transaction_value": [
+      70000000.0,
+      70000000.0
+    ],
+    "activity_date_type": [
+      "4",
+      "2",
+      "3",
+      "1"
+    ],
+    "activity_status_code": "4",
+    "description_narrative": [
+      "Internationella Rödakorsfederationen (IFRC) kärnstöd 2020",
+      "Core contribution IFRC 2020"
+    ],
+    "activity_date_iso_date": [
+      "2021-12-31T00:00:00Z",
+      "2020-01-01T00:00:00Z",
+      "2021-12-31T00:00:00Z",
+      "2020-01-01T00:00:00Z"
+    ],
+    "reporting_org_narrative": [
+      "Sweden"
+    ]
+  },
+  {
+    "budget_value": [
+      70000000.0
+    ],
+    "iati_identifier": "SE-0-SE-2-90895-90895A0101",
+    "title_narrative": [
+      "Kärnstöd till IFRC 2021",
+      "Core contribution to IFRC 2021"
+    ],
+    "reporting_org_ref": "SE-0",
+    "transaction_value": [
+      70000000.0,
+      70000000.0
+    ],
+    "activity_date_type": [
+      "4",
+      "2",
+      "3",
+      "1"
+    ],
+    "activity_status_code": "4",
+    "description_narrative": [
+      "Kärnstöd till IFRC 2021",
+      "Core contribution to IFRC 2021"
+    ],
+    "activity_date_iso_date": [
+      "2022-12-31T00:00:00Z",
+      "2021-01-01T00:00:00Z",
+      "2022-12-31T00:00:00Z",
+      "2021-01-01T00:00:00Z"
+    ],
+    "reporting_org_narrative": [
+      "Sweden"
+    ]
+  },
+  {
+    "budget_value": [
+      55000000.0
+    ],
+    "iati_identifier": "SE-0-SE-2-92128-92128A0101-H",
+    "title_narrative": [
+      "Core support to IFRC 2025",
+      "Kärnstöd till IFRC 2025"
+    ],
+    "reporting_org_ref": "SE-0",
+    "transaction_value": [
+      55000000.0,
+      45000000.0,
+      10000000.0,
+      -9000000.0
+    ],
+    "activity_date_type": [
+      "2",
+      "3",
+      "1"
+    ],
+    "activity_status_code": "2",
+    "description_narrative": [
+      "Kärnstöd till Internationella Federationen Röda Korset rörelsen 2025",
+      "Core support to International Federation Red Crosses for 2025"
+    ],
+    "activity_date_iso_date": [
+      "2025-01-01T00:00:00Z",
+      "2026-06-30T00:00:00Z",
+      "2025-01-01T00:00:00Z"
+    ],
+    "reporting_org_narrative": [
+      "Sweden"
+    ]
+  },
+  {
+    "budget_value": [
+      70000000.0
+    ],
+    "iati_identifier": "SE-0-SE-2-13246-13246A0101",
+    "title_narrative": [
+      "IFRC, International Federation of the Red Cross, Kärnstöd 2019",
+      "IFRC, International Federation of the Red Cross, Core support 2019"
+    ],
+    "reporting_org_ref": "SE-0",
+    "transaction_value": [
+      70000000.0,
+      70000000.0
+    ],
+    "activity_date_type": [
+      "4",
+      "2",
+      "3",
+      "1"
+    ],
+    "activity_status_code": "4",
+    "description_narrative": [
+      "IFRC, International Federation of the Red Cross, Kärnstöd 2019",
+      "IFRC, International Federation of the Red Cross, Kärnstöd 2019"
+    ],
+    "activity_date_iso_date": [
+      "2021-02-28T00:00:00Z",
+      "2019-01-01T00:00:00Z",
+      "2021-02-28T00:00:00Z",
+      "2019-01-01T00:00:00Z"
+    ],
+    "reporting_org_narrative": [
+      "Sweden"
+    ]
+  },
+  {
+    "budget_value": [
+      7000000.0
+    ],
+    "iati_identifier": "SE-0-SE-2-91904-91904A0101-H",
+    "title_narrative": [
+      "Verksamhetsstöd till IFRC 2024",
+      "Support to IFRC 2024"
+    ],
+    "reporting_org_ref": "SE-0",
+    "transaction_value": [
+      7000000.0,
+      7000000.0
+    ],
+    "activity_date_type": [
+      "4",
+      "2",
+      "3",
+      "1"
+    ],
+    "activity_status_code": "4",
+    "description_narrative": [
+      "Earmarked support to IFRC 2024 - dialogue regarding Swedens choice of crisis to support will take place in 2024",
+      "Öronmärkt stöd till IFRC 2024 - dialog sker 2024 kring Sveriges val av vilken kris som kommer stödjas"
+    ],
+    "activity_date_iso_date": [
+      "2025-06-30T00:00:00Z",
+      "2024-01-01T00:00:00Z",
+      "2025-06-30T00:00:00Z",
+      "2024-01-01T00:00:00Z"
+    ],
+    "reporting_org_narrative": [
+      "Sweden"
+    ]
+  },
+  {
+    "budget_value": [
+      50000000.0
+    ],
+    "iati_identifier": "SE-0-SE-2-92115-92115A0101-H",
+    "title_narrative": [
+      "Ytterligare stöd IFRC Ukrainska Röda Korset",
+      "Additional support IFRC Ukrainian Red Cross"
+    ],
+    "reporting_org_ref": "SE-0",
+    "transaction_value": [
+      50000000.0,
+      50000000.0
+    ],
+    "activity_date_type": [
+      "4",
+      "2",
+      "3",
+      "1"
+    ],
+    "activity_status_code": "4",
+    "description_narrative": [
+      "Support to Ukrainian Red Cross operation in Ukraine preparation for winter",
+      "Stöd till Ukrainska Rödakorsets verksamhet i Ukraina inför vintern"
+    ],
+    "activity_date_iso_date": [
+      "2025-06-30T00:00:00Z",
+      "2024-10-01T00:00:00Z",
+      "2025-06-30T00:00:00Z",
+      "2024-10-01T00:00:00Z"
+    ],
+    "reporting_org_narrative": [
+      "Sweden"
+    ]
+  },
+  {
+    "budget_value": [
+      60000000.0
+    ],
+    "iati_identifier": "SE-0-SE-2-92127-92127A0101-H",
+    "title_narrative": [
+      "Core support to DREF",
+      "Kärnstöd till DREF 2025"
+    ],
+    "reporting_org_ref": "SE-0",
+    "transaction_value": [
+      60000000.0,
+      60000000.0
+    ],
+    "activity_date_type": [
+      "2",
+      "3",
+      "1"
+    ],
+    "activity_status_code": "2",
+    "description_narrative": [
+      "Support to Disaster Response Emergency Fund (DREF) which is handled through IFRC for 2025",
+      "Stöd till Disaster Response Emergency Fund (DREF) som hanteras av IFRC avseende år 2025"
+    ],
+    "activity_date_iso_date": [
+      "2025-01-01T00:00:00Z",
+      "2026-06-30T00:00:00Z",
+      "2025-01-01T00:00:00Z"
+    ],
+    "reporting_org_narrative": [
+      "Sweden"
+    ]
+  },
+  {
+    "sector_code": [
+      "15160",
+      "15150",
+      "11231"
+    ],
+    "budget_value": [
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "iati_identifier": "XI-IATI-EC_INTPA-2023-PC-26692",
+    "title_narrative": [
+      "EU Youth Empowerment Fund"
+    ],
+    "sector_narrative": [
+      "Human rights",
+      "Democratic participation and civil society",
+      "Basic life skills for youth"
+    ],
+    "reporting_org_ref": "XI-IATI-EC_INTPA",
+    "transaction_value": [
+      10000000.0,
+      4030038.0
+    ],
+    "activity_date_type": [
+      "1",
+      "2",
+      "3"
+    ],
+    "activity_status_code": "2",
+    "description_narrative": [
+      "<p>The <strong>Youth Empowerment Fund</strong> is a new pilot initiative that will provide direct financial support to youth-led initiatives in partner countries focusing on the implementation of the Sustainable Development Goals at local level, in particular on environment and climate change and the inclusion of vulnerable and marginalised youth.</p>"
+    ],
+    "activity_date_iso_date": [
+      "2023-12-18T00:00:00Z",
+      "2023-11-01T00:00:00Z",
+      "2028-06-30T00:00:00Z"
+    ],
+    "reporting_org_narrative": [
+      "European Commission - Directorate-General for International Partnerships"
+    ]
+  },
+  {
+    "sector_code": [
+      "73010",
+      "41010",
+      "74020"
+    ],
+    "iati_identifier": "CH-4-2024-2024000074",
+    "title_narrative": [
+      "Global Shelter Cluster via IFRC"
+    ],
+    "reporting_org_ref": "CH-4",
+    "transaction_value": [
+      150000.0,
+      250000.0
+    ],
+    "activity_date_type": [
+      "1",
+      "2",
+      "3"
+    ],
+    "activity_status_code": "2",
+    "description_narrative": [
+      "No description for this activity available at this point. Description indisponible pour cette activité."
+    ],
+    "activity_date_iso_date": [
+      "2024-01-01T00:00:00Z",
+      "2024-01-01T00:00:00Z",
+      "2024-12-31T00:00:00Z"
+    ],
+    "reporting_org_narrative": [
+      "Swiss Agency for Development and Cooperation (SDC)"
+    ]
+  },
+  {
+    "sector_code": [
+      "72050"
+    ],
+    "iati_identifier": "CH-4-2022-2012006928",
+    "title_narrative": [
+      "IFRC - Disaster Relief Emergency Fund"
+    ],
+    "reporting_org_ref": "CH-4",
+    "transaction_value": [
+      3000000.0,
+      3000000.0
+    ],
+    "activity_date_type": [
+      "1",
+      "2",
+      "3"
+    ],
+    "activity_status_code": "2",
+    "description_narrative": [
+      "Description indisponible pour cette activité um folgenden Text No description for this activity available at this point. Description indisponible pour cette activité."
+    ],
+    "activity_date_iso_date": [
+      "2022-01-01T00:00:00Z",
+      "2022-01-01T00:00:00Z",
+      "2024-12-31T00:00:00Z"
+    ],
+    "reporting_org_narrative": [
+      "Swiss Agency for Development and Cooperation (SDC)"
+    ]
+  },
+  {
+    "sector_code": [
+      "72050"
+    ],
+    "iati_identifier": "CH-4-2022-2012006929",
+    "title_narrative": [
+      "IFRC - Disaster Relief Emergency Fund"
+    ],
+    "reporting_org_ref": "CH-4",
+    "transaction_value": [
+      6000000.0,
+      0.0
+    ],
+    "activity_date_type": [
+      "1",
+      "2",
+      "3"
+    ],
+    "activity_status_code": "2",
+    "description_narrative": [
+      "Description indisponible pour cette activité um folgenden Text No description for this activity available at this point. Description indisponible pour cette activité."
+    ],
+    "activity_date_iso_date": [
+      "2022-01-01T00:00:00Z",
+      "2022-01-01T00:00:00Z",
+      "2024-12-31T00:00:00Z"
+    ],
+    "reporting_org_narrative": [
+      "Swiss Agency for Development and Cooperation (SDC)"
+    ]
+  },
+  {
+    "sector_code": [
+      "72050",
+      "14031",
+      "72010"
+    ],
+    "iati_identifier": "CH-4-2022-2022001257",
+    "title_narrative": [
+      "Afghanistan: IFRC Emergency Appeal 2022"
+    ],
+    "reporting_org_ref": "CH-4",
+    "transaction_value": [
+      800000.0,
+      800000.0
+    ],
+    "activity_date_type": [
+      "1",
+      "2",
+      "3"
+    ],
+    "activity_status_code": "2",
+    "description_narrative": [
+      "Description indisponible pour cette activité um folgenden Text No description for this activity available at this point. Description indisponible pour cette activité."
+    ],
+    "activity_date_iso_date": [
+      "2022-06-24T00:00:00Z",
+      "2022-06-24T00:00:00Z",
+      "2023-12-31T00:00:00Z"
+    ],
+    "recipient_country_code": [
+      "AF"
+    ],
+    "reporting_org_narrative": [
+      "Swiss Agency for Development and Cooperation (SDC)"
+    ],
+    "recipient_country_narrative": [
+      "Afghanistan"
+    ]
+  },
+  {
+    "sector_code": [
+      "15190",
+      "72050"
+    ],
+    "iati_identifier": "CH-4-2022-2021001130",
+    "title_narrative": [
+      "Europe - IFRC Migration Routes"
+    ],
+    "reporting_org_ref": "CH-4",
+    "transaction_value": [
+      0.0,
+      800000.0
+    ],
+    "activity_date_type": [
+      "1",
+      "2",
+      "3"
+    ],
+    "activity_status_code": "2",
+    "description_narrative": [
+      "Description indisponible pour cette activité um folgenden Text No description for this activity available at this point. Description indisponible pour cette activité."
+    ],
+    "activity_date_iso_date": [
+      "2021-12-01T00:00:00Z",
+      "2021-12-01T00:00:00Z",
+      "2024-11-30T00:00:00Z"
+    ],
+    "reporting_org_narrative": [
+      "Swiss Agency for Development and Cooperation (SDC)"
+    ]
+  },
+  {
+    "sector_code": [
+      "99810",
+      "72050",
+      "12220"
+    ],
+    "iati_identifier": "CH-4-2022-2018010925",
+    "title_narrative": [
+      "IFRC: Health, Protection and Capacity Building VRC"
+    ],
+    "reporting_org_ref": "CH-4",
+    "transaction_value": [
+      0.0,
+      300000.0
+    ],
+    "activity_date_type": [
+      "1",
+      "2",
+      "3"
+    ],
+    "activity_status_code": "2",
+    "description_narrative": [
+      "Description indisponible pour cette activité um folgenden Text No description for this activity available at this point. Description indisponible pour cette activité."
+    ],
+    "activity_date_iso_date": [
+      "2021-11-01T00:00:00Z",
+      "2021-11-01T00:00:00Z",
+      "2023-04-30T00:00:00Z"
+    ],
+    "recipient_country_code": [
+      "VE"
+    ],
+    "reporting_org_narrative": [
+      "Swiss Agency for Development and Cooperation (SDC)"
+    ],
+    "recipient_country_narrative": [
+      "Venezuela (République bolivarienne du)"
+    ]
+  },
+  {
+    "sector_code": [
+      "72050"
+    ],
+    "iati_identifier": "CH-4-2023-2000004008",
+    "title_narrative": [
+      "International Federation of Red Cross and Red Crescent Societies (IFRC), core contribution"
+    ],
+    "reporting_org_ref": "CH-4",
+    "transaction_value": [
+      3000000.0,
+      0.0
+    ],
+    "activity_date_type": [
+      "1",
+      "2",
+      "3"
+    ],
+    "activity_status_code": "2",
+    "description_narrative": [
+      "The Federation's work focuses on four core areas, out of which the first three are also key SDC priorities: promoting humanitarian values, disaster response, disaster preparedness, health and community care."
+    ],
+    "activity_date_iso_date": [
+      "2022-01-01T00:00:00Z",
+      "2022-01-01T00:00:00Z",
+      "2024-12-31T00:00:00Z"
+    ],
+    "reporting_org_narrative": [
+      "Swiss Agency for Development and Cooperation (SDC)"
+    ]
+  },
+  {
+    "sector_code": [
+      "72011",
+      "72010",
+      "73010"
+    ],
+    "iati_identifier": "CH-4-2022-2022000786",
+    "title_narrative": [
+      "Nigeria, IFRC Appeal Floods Oct. 2022"
+    ],
+    "reporting_org_ref": "CH-4",
+    "transaction_value": [
+      750000.0,
+      750000.0
+    ],
+    "activity_date_type": [
+      "1",
+      "2",
+      "3"
+    ],
+    "activity_status_code": "2",
+    "description_narrative": [
+      "Description indisponible pour cette activité um folgenden Text No description for this activity available at this point. Description indisponible pour cette activité."
+    ],
+    "activity_date_iso_date": [
+      "2022-11-01T00:00:00Z",
+      "2022-11-01T00:00:00Z",
+      "2023-07-31T00:00:00Z"
+    ],
+    "recipient_country_code": [
+      "NG"
+    ],
+    "reporting_org_narrative": [
+      "Swiss Agency for Development and Cooperation (SDC)"
+    ],
+    "recipient_country_narrative": [
+      "Nigéria"
+    ]
+  },
+  {
+    "sector_code": [
+      "72011",
+      "74020",
+      "72050"
+    ],
+    "iati_identifier": "CH-4-2022-2022001333",
+    "title_narrative": [
+      "oPT - PRCS Pal Red Crescent Soc"
+    ],
+    "reporting_org_ref": "CH-4",
+    "transaction_value": [
+      350000.0,
+      350000.0
+    ],
+    "activity_date_type": [
+      "1",
+      "2",
+      "3"
+    ],
+    "activity_status_code": "2",
+    "description_narrative": [
+      "Description indisponible pour cette activité um folgenden Text No description for this activity available at this point. Description indisponible pour cette activité."
+    ],
+    "activity_date_iso_date": [
+      "2022-10-15T00:00:00Z",
+      "2022-10-15T00:00:00Z",
+      "2024-12-31T00:00:00Z"
+    ],
+    "recipient_country_code": [
+      "PS"
+    ],
+    "reporting_org_narrative": [
+      "Swiss Agency for Development and Cooperation (SDC)"
+    ],
+    "recipient_country_narrative": [
+      "Territoire palestinien occupé"
+    ]
+  },
+  {
+    "sector_code": [
+      "72011",
+      "74020",
+      "72050"
+    ],
+    "iati_identifier": "CH-4-2022-2022001334",
+    "title_narrative": [
+      "oPT - PRCS Pal Red Crescent Soc"
+    ],
+    "reporting_org_ref": "CH-4",
+    "transaction_value": [
+      900000.0,
+      0.0
+    ],
+    "activity_date_type": [
+      "1",
+      "2",
+      "3"
+    ],
+    "activity_status_code": "2",
+    "description_narrative": [
+      "Description indisponible pour cette activité um folgenden Text No description for this activity available at this point. Description indisponible pour cette activité."
+    ],
+    "activity_date_iso_date": [
+      "2022-10-15T00:00:00Z",
+      "2022-10-15T00:00:00Z",
+      "2024-12-31T00:00:00Z"
+    ],
+    "recipient_country_code": [
+      "PS"
+    ],
+    "reporting_org_narrative": [
+      "Swiss Agency for Development and Cooperation (SDC)"
+    ],
+    "recipient_country_narrative": [
+      "Territoire palestinien occupé"
+    ]
+  },
+  {
+    "sector_code": [
+      "99810",
+      "72010",
+      "12220"
+    ],
+    "iati_identifier": "CH-4-2023-2018011512",
+    "title_narrative": [
+      "IFRC: Health, Protection and Capacity Building VRC"
+    ],
+    "reporting_org_ref": "CH-4",
+    "transaction_value": [
+      140000.0,
+      0.0
+    ],
+    "activity_date_type": [
+      "1",
+      "2",
+      "3"
+    ],
+    "activity_status_code": "2",
+    "description_narrative": [
+      "No description for this activity available at this point. Description indisponible pour cette activité."
+    ],
+    "activity_date_iso_date": [
+      "2021-11-01T00:00:00Z",
+      "2021-11-01T00:00:00Z",
+      "2024-12-31T00:00:00Z"
+    ],
+    "recipient_country_code": [
+      "VE"
+    ],
+    "reporting_org_narrative": [
+      "Swiss Agency for Development and Cooperation (SDC)"
+    ],
+    "recipient_country_narrative": [
+      "Venezuela (République bolivarienne du)"
+    ]
+  },
+  {
+    "sector_code": [
+      "72011",
+      "74020",
+      "72010"
+    ],
+    "iati_identifier": "CH-4-2023-2022001334",
+    "title_narrative": [
+      "IFRC Humanitarian Programme of the Palestinian Red Crescent Society (PRCS)"
+    ],
+    "reporting_org_ref": "CH-4",
+    "transaction_value": [
+      450000.0,
+      0.0
+    ],
+    "activity_date_type": [
+      "1",
+      "2",
+      "3"
+    ],
+    "activity_status_code": "2",
+    "description_narrative": [
+      "No description for this activity available at this point. Description indisponible pour cette activité."
+    ],
+    "activity_date_iso_date": [
+      "2022-10-15T00:00:00Z",
+      "2022-10-15T00:00:00Z",
+      "2024-12-31T00:00:00Z"
+    ],
+    "recipient_country_code": [
+      "PS"
+    ],
+    "reporting_org_narrative": [
+      "Swiss Agency for Development and Cooperation (SDC)"
+    ],
+    "recipient_country_narrative": [
+      "Territoire palestinien occupé"
+    ]
+  },
+  {
+    "sector_code": [
+      "72011",
+      "72010"
+    ],
+    "iati_identifier": "CH-4-2023-2023000646",
+    "title_narrative": [
+      "SYR IFRC Appeal Syria Earthquake"
+    ],
+    "reporting_org_ref": "CH-4",
+    "transaction_value": [
+      1000000.0,
+      1000000.0
+    ],
+    "activity_date_type": [
+      "1",
+      "2",
+      "3"
+    ],
+    "activity_status_code": "2",
+    "description_narrative": [
+      "No description for this activity available at this point. Description indisponible pour cette activité."
+    ],
+    "activity_date_iso_date": [
+      "2023-02-07T00:00:00Z",
+      "2023-02-07T00:00:00Z",
+      "2024-12-31T00:00:00Z"
+    ],
+    "recipient_country_code": [
+      "SY"
+    ],
+    "reporting_org_narrative": [
+      "Swiss Agency for Development and Cooperation (SDC)"
+    ],
+    "recipient_country_narrative": [
+      "Syrie (République arabe)"
+    ]
+  },
+  {
+    "sector_code": [
+      "72011",
+      "72010"
+    ],
+    "iati_identifier": "CH-4-2023-2023000874",
+    "title_narrative": [
+      "IFRC, National Societies urgent appeals"
+    ],
+    "reporting_org_ref": "CH-4",
+    "transaction_value": [
+      4000000.0,
+      4000000.0
+    ],
+    "activity_date_type": [
+      "1",
+      "2",
+      "3"
+    ],
+    "activity_status_code": "2",
+    "description_narrative": [
+      "No description for this activity available at this point. Description indisponible pour cette activité."
+    ],
+    "activity_date_iso_date": [
+      "2023-11-01T00:00:00Z",
+      "2023-11-01T00:00:00Z",
+      "2024-12-31T00:00:00Z"
+    ],
+    "reporting_org_narrative": [
+      "Swiss Agency for Development and Cooperation (SDC)"
+    ]
+  },
+  {
+    "sector_code": [
+      "72011",
+      "72010"
+    ],
+    "iati_identifier": "CH-4-2023-2023000875",
+    "title_narrative": [
+      "IFRC, National Societies urgent appeals"
+    ],
+    "reporting_org_ref": "CH-4",
+    "transaction_value": [
+      10000000.0,
+      10000000.0
+    ],
+    "activity_date_type": [
+      "1",
+      "2",
+      "3"
+    ],
+    "activity_status_code": "2",
+    "description_narrative": [
+      "No description for this activity available at this point. Description indisponible pour cette activité."
+    ],
+    "activity_date_iso_date": [
+      "2023-11-01T00:00:00Z",
+      "2023-11-01T00:00:00Z",
+      "2024-12-31T00:00:00Z"
+    ],
+    "recipient_country_code": [
+      "PS"
+    ],
+    "reporting_org_narrative": [
+      "Swiss Agency for Development and Cooperation (SDC)"
+    ],
+    "recipient_country_narrative": [
+      "Territoire palestinien occupé"
+    ]
+  },
+  {
+    "sector_code": [
+      "99810",
+      "15151",
+      "15150"
+    ],
+    "iati_identifier": "CH-4-2023-2023000834",
+    "title_narrative": [
+      "VE: IFRC: Asist. hum. Capacit. CRV"
+    ],
+    "reporting_org_ref": "CH-4",
+    "transaction_value": [
+      200000.0,
+      540000.0
+    ],
+    "activity_date_type": [
+      "1",
+      "2",
+      "3"
+    ],
+    "activity_status_code": "2",
+    "description_narrative": [
+      "No description for this activity available at this point. Description indisponible pour cette activité."
+    ],
+    "activity_date_iso_date": [
+      "2023-12-01T00:00:00Z",
+      "2023-12-01T00:00:00Z",
+      "2024-12-31T00:00:00Z"
+    ],
+    "recipient_country_code": [
+      "VE"
+    ],
+    "reporting_org_narrative": [
+      "Swiss Agency for Development and Cooperation (SDC)"
+    ],
+    "recipient_country_narrative": [
+      "Venezuela (République bolivarienne du)"
+    ]
+  },
+  {
+    "sector_code": [
+      "72011",
+      "72010"
+    ],
+    "iati_identifier": "CH-4-2023-2023000855",
+    "title_narrative": [
+      "Morocco IFRC Emergency Appeal Earthquake"
+    ],
+    "reporting_org_ref": "CH-4",
+    "transaction_value": [
+      1000000.0,
+      1000000.0
+    ],
+    "activity_date_type": [
+      "1",
+      "2",
+      "3"
+    ],
+    "activity_status_code": "2",
+    "description_narrative": [
+      "No description for this activity available at this point. Description indisponible pour cette activité."
+    ],
+    "activity_date_iso_date": [
+      "2023-09-12T00:00:00Z",
+      "2023-09-12T00:00:00Z",
+      "2025-12-31T00:00:00Z"
+    ],
+    "recipient_country_code": [
+      "MA"
+    ],
+    "reporting_org_narrative": [
+      "Swiss Agency for Development and Cooperation (SDC)"
+    ],
+    "recipient_country_narrative": [
+      "Maroc"
+    ]
+  },
+  {
+    "sector_code": [
+      "74020"
+    ],
+    "iati_identifier": "CH-4-2023-2023000871",
+    "title_narrative": [
+      "Global:IFRC Youth Innovat.Climate Enviro"
+    ],
+    "reporting_org_ref": "CH-4",
+    "transaction_value": [
+      200000.0,
+      250000.0
+    ],
+    "activity_date_type": [
+      "1",
+      "2",
+      "3"
+    ],
+    "activity_status_code": "2",
+    "description_narrative": [
+      "No description for this activity available at this point. Description indisponible pour cette activité."
+    ],
+    "activity_date_iso_date": [
+      "2023-03-01T00:00:00Z",
+      "2023-03-01T00:00:00Z",
+      "2024-12-31T00:00:00Z"
+    ],
+    "reporting_org_narrative": [
+      "Swiss Agency for Development and Cooperation (SDC)"
+    ]
+  },
+  {
+    "sector_code": [
+      "72011",
+      "72010"
+    ],
+    "iati_identifier": "CH-4-2023-2023000692",
+    "title_narrative": [
+      "TUR IFRC Appeal Turkey Earthquake"
+    ],
+    "reporting_org_ref": "CH-4",
+    "transaction_value": [
+      500000.0,
+      500000.0
+    ],
+    "activity_date_type": [
+      "1",
+      "2",
+      "3"
+    ],
+    "activity_status_code": "2",
+    "description_narrative": [
+      "No description for this activity available at this point. Description indisponible pour cette activité."
+    ],
+    "activity_date_iso_date": [
+      "2023-02-07T00:00:00Z",
+      "2023-02-07T00:00:00Z",
+      "2025-02-28T00:00:00Z"
+    ],
+    "recipient_country_code": [
+      "TR"
+    ],
+    "reporting_org_narrative": [
+      "Swiss Agency for Development and Cooperation (SDC)"
+    ],
+    "recipient_country_narrative": [
+      "Turquie"
+    ]
+  },
+  {
+    "sector_code": [
+      "72011",
+      "72010"
+    ],
+    "iati_identifier": "CH-4-2023-2023000693",
+    "title_narrative": [
+      "TUR IFRC Appeal Turkey Earthquake"
+    ],
+    "reporting_org_ref": "CH-4",
+    "transaction_value": [
+      650000.0,
+      650000.0
+    ],
+    "activity_date_type": [
+      "1",
+      "2",
+      "3"
+    ],
+    "activity_status_code": "2",
+    "description_narrative": [
+      "No description for this activity available at this point. Description indisponible pour cette activité."
+    ],
+    "activity_date_iso_date": [
+      "2023-02-07T00:00:00Z",
+      "2023-02-07T00:00:00Z",
+      "2025-02-28T00:00:00Z"
+    ],
+    "recipient_country_code": [
+      "TR"
+    ],
+    "reporting_org_narrative": [
+      "Swiss Agency for Development and Cooperation (SDC)"
+    ],
+    "recipient_country_narrative": [
+      "Turquie"
+    ]
+  },
+  {
+    "sector_code": [
+      "72010",
+      "15190"
+    ],
+    "iati_identifier": "CH-4-2015004920",
+    "title_narrative": [
+      "Renforcement du Croissant Rouge Tunisien en tant qu'acteur de changement"
+    ],
+    "reporting_org_ref": "CH-4",
+    "transaction_value": [
+      -141082.0
+    ],
+    "activity_date_type": [
+      "1",
+      "2",
+      "3",
+      "4"
+    ],
+    "activity_status_code": "2",
+    "description_narrative": [
+      "Disposant d'un réseau d'envirion 10'000 bénévoles, le Croissant Rouge Tunisien (CRT) constitue l'organisation caritative la plus importante en Tunisie. Ce projet vise à développer les capacités du CRT à travers le développement organisationnel, le renforcement des capacités des ressources humaines et le développement institutionnel afin qu'il puisse répondre à son mandat de manière fiable et professionnelle. Le partage des responsabilités entre le Gouvernement et le CRT comme acteur de la société civile et auxiliaire de l'État permettra une performance et un engagement plus importants par exemple dans la migration."
+    ],
+    "activity_date_iso_date": [
+      "2015-12-15T00:00:00Z",
+      "2015-12-15T00:00:00Z",
+      "2018-06-30T00:00:00Z",
+      "2018-06-30T00:00:00Z"
+    ],
+    "recipient_country_code": [
+      "TN"
+    ],
+    "reporting_org_narrative": [
+      "Swiss Agency for Development and Cooperation (SDC)"
+    ],
+    "recipient_country_narrative": [
+      "Tunisie"
+    ]
+  },
+  {
+    "sector_code": [
+      "12230",
+      "73010",
+      "14032"
+    ],
+    "iati_identifier": "CH-4-2017007449",
+    "title_narrative": [
+      "Bangladesh: IFRC Flood Appeal"
+    ],
+    "reporting_org_ref": "CH-4",
+    "transaction_value": [
+      500000.0,
+      500000.0
+    ],
+    "activity_date_type": [
+      "1",
+      "2",
+      "3",
+      "4"
+    ],
+    "activity_status_code": "2",
+    "description_narrative": [
+      "No description for this activity available at this point. Description indisponible pour cette activité."
+    ],
+    "activity_date_iso_date": [
+      "2019-07-18T00:00:00Z",
+      "2019-07-18T00:00:00Z",
+      "2021-01-30T00:00:00Z",
+      "2021-01-30T00:00:00Z"
+    ],
+    "recipient_country_code": [
+      "BD"
+    ],
+    "reporting_org_narrative": [
+      "Swiss Agency for Development and Cooperation (SDC)"
+    ],
+    "recipient_country_narrative": [
+      "Bangladesh"
+    ]
+  },
+  {
+    "sector_code": [
+      "11230",
+      "12220",
+      "72010"
+    ],
+    "iati_identifier": "CH-4-2013006060",
+    "title_narrative": [
+      "lmproving major incident response in Lebanon"
+    ],
+    "reporting_org_ref": "CH-4",
+    "transaction_value": [
+      14723.0
+    ],
+    "activity_date_type": [
+      "1",
+      "2",
+      "3",
+      "4"
+    ],
+    "activity_status_code": "2",
+    "description_narrative": [
+      "In its new 5-year strategy (2013-2017) one of the LRCS‘s strategic objectives is to prepare to adequately fultill its roles in major incident preparedness and response as determined by the government‘s National Response Plan. This project leverages the results of the SDC-funded Emergency Medical Training (EMT) project (2008-2013), and creates synergies with the other on-going initiatives in order to improve outcomes for victims of small to large-scale natural or man-made disasters all over Lebanon."
+    ],
+    "activity_date_iso_date": [
+      "2013-12-01T00:00:00Z",
+      "2013-12-01T00:00:00Z",
+      "2017-12-31T00:00:00Z",
+      "2017-12-31T00:00:00Z"
+    ],
+    "recipient_country_code": [
+      "LB"
+    ],
+    "reporting_org_narrative": [
+      "Swiss Agency for Development and Cooperation (SDC)"
+    ],
+    "recipient_country_narrative": [
+      "Liban"
+    ]
+  },
+  {
+    "sector_code": [
+      "12220",
+      "72050",
+      "15190"
+    ],
+    "iati_identifier": "CH-4-2018009189",
+    "title_narrative": [
+      "Border Assistance Colombia-Venezuela 2018"
+    ],
+    "reporting_org_ref": "CH-4",
+    "transaction_value": [
+      0.0,
+      42730.0
+    ],
+    "activity_date_type": [
+      "1",
+      "2",
+      "3",
+      "4"
+    ],
+    "activity_status_code": "2",
+    "description_narrative": [
+      "SDC will support IFRC and the Colombian Red Cross in reducing vulnerabilities of migrants along their routes between Venezuela and Colombia, in complementarity with the response of the Government of Colombia and the international community. The project –which is part of a regional strategy of IFRC– aims at providing humanitarian assistance to migrants along their migratory routes in terms of information, basic and primary health services, psychosocial support, family reunification and migration related issues. It will also contribute to strengthening the capacities of Red Cross National Society to respond to migrants’ needs and other kind of crisis in the future."
+    ],
+    "activity_date_iso_date": [
+      "2018-05-08T00:00:00Z",
+      "2018-05-08T00:00:00Z",
+      "2019-05-07T00:00:00Z",
+      "2019-05-07T00:00:00Z"
+    ],
+    "recipient_country_code": [
+      "VE"
+    ],
+    "reporting_org_narrative": [
+      "Swiss Agency for Development and Cooperation (SDC)"
+    ],
+    "recipient_country_narrative": [
+      "Venezuela (République bolivarienne du)"
+    ]
+  },
+  {
+    "sector_code": [
+      "12220",
+      "72050",
+      "15190"
+    ],
+    "iati_identifier": "CH-4-2018010362",
+    "title_narrative": [
+      "COL/VE: IFRC Asitencia Frontera COL/VZLA"
+    ],
+    "reporting_org_ref": "CH-4",
+    "transaction_value": [
+      510000.0,
+      200000.0
+    ],
+    "activity_date_type": [
+      "1",
+      "2",
+      "3",
+      "4"
+    ],
+    "activity_status_code": "2",
+    "description_narrative": [
+      "No description for this activity available at this point. Description indisponible pour cette activité."
+    ],
+    "activity_date_iso_date": [
+      "2019-12-01T00:00:00Z",
+      "2019-12-01T00:00:00Z",
+      "2021-05-31T00:00:00Z",
+      "2021-05-31T00:00:00Z"
+    ],
+    "recipient_country_code": [
+      "VE"
+    ],
+    "reporting_org_narrative": [
+      "Swiss Agency for Development and Cooperation (SDC)"
+    ],
+    "recipient_country_narrative": [
+      "Venezuela (République bolivarienne du)"
+    ]
+  },
+  {
+    "sector_code": [
+      "14031",
+      "72010"
+    ],
+    "iati_identifier": "CH-4-2019000541",
+    "title_narrative": [
+      "Iran, IRCS, Hochwasser Materialsupport"
+    ],
+    "reporting_org_ref": "CH-4",
+    "transaction_value": [
+      500000.0,
+      500000.0
+    ],
+    "activity_date_type": [
+      "1",
+      "2",
+      "3",
+      "4"
+    ],
+    "activity_status_code": "2",
+    "description_narrative": [
+      "No description for this activity available at this point. Description indisponible pour cette activité."
+    ],
+    "activity_date_iso_date": [
+      "2019-04-03T00:00:00Z",
+      "2019-04-03T00:00:00Z",
+      "2019-12-31T00:00:00Z",
+      "2019-12-31T00:00:00Z"
+    ],
+    "recipient_country_code": [
+      "IR"
+    ],
+    "reporting_org_narrative": [
+      "Swiss Agency for Development and Cooperation (SDC)"
+    ],
+    "recipient_country_narrative": [
+      "Iran (République islamique)"
+    ]
+  },
+  {
+    "sector_code": [
+      "15180",
+      "14032",
+      "12250"
+    ],
+    "iati_identifier": "CH-4-2019000604",
+    "title_narrative": [
+      "DRC, IFRC, Ebola Emergency Appeal 2019"
+    ],
+    "reporting_org_ref": "CH-4",
+    "transaction_value": [
+      1000000.0,
+      1000000.0
+    ],
+    "activity_date_type": [
+      "1",
+      "2",
+      "3",
+      "4"
+    ],
+    "activity_status_code": "2",
+    "description_narrative": [
+      "No description for this activity available at this point. Description indisponible pour cette activité."
+    ],
+    "activity_date_iso_date": [
+      "2019-01-01T00:00:00Z",
+      "2019-01-01T00:00:00Z",
+      "2020-02-21T00:00:00Z",
+      "2020-02-21T00:00:00Z"
+    ],
+    "recipient_country_code": [
+      "CD"
+    ],
+    "reporting_org_narrative": [
+      "Swiss Agency for Development and Cooperation (SDC)"
+    ],
+    "recipient_country_narrative": [
+      "Congo (République démocratique)"
+    ]
+  },
+  {
+    "sector_code": [
+      "73010"
+    ],
+    "iati_identifier": "CH-4-2019000694",
+    "title_narrative": [
+      "Albanien: SET Erdbeben November 2019"
+    ],
+    "reporting_org_ref": "CH-4",
+    "transaction_value": [
+      200000.0,
+      200000.0
+    ],
+    "activity_date_type": [
+      "1",
+      "2",
+      "3",
+      "4"
+    ],
+    "activity_status_code": "2",
+    "description_narrative": [
+      "No description for this activity available at this point. Description indisponible pour cette activité."
+    ],
+    "activity_date_iso_date": [
+      "2019-11-29T00:00:00Z",
+      "2019-11-29T00:00:00Z",
+      "2020-11-29T00:00:00Z",
+      "2020-11-29T00:00:00Z"
+    ],
+    "recipient_country_code": [
+      "AL"
+    ],
+    "reporting_org_narrative": [
+      "Swiss Agency for Development and Cooperation (SDC)"
+    ],
+    "recipient_country_narrative": [
+      "Albanie"
+    ]
+  },
+  {
+    "sector_code": [
+      "14032",
+      "73010"
+    ],
+    "iati_identifier": "CH-4-2019000696",
+    "title_narrative": [
+      "Philippines: IFRC Em.Ap.Typhoon Phanfone"
+    ],
+    "reporting_org_ref": "CH-4",
+    "transaction_value": [
+      200000.0,
+      0.0
+    ],
+    "activity_date_type": [
+      "1",
+      "2",
+      "3",
+      "4"
+    ],
+    "activity_status_code": "2",
+    "description_narrative": [
+      "No description for this activity available at this point. Description indisponible pour cette activité."
+    ],
+    "activity_date_iso_date": [
+      "2019-12-28T00:00:00Z",
+      "2019-12-28T00:00:00Z",
+      "2020-12-31T00:00:00Z",
+      "2020-12-31T00:00:00Z"
+    ],
+    "recipient_country_code": [
+      "PH"
+    ],
+    "reporting_org_narrative": [
+      "Swiss Agency for Development and Cooperation (SDC)"
+    ],
+    "recipient_country_narrative": [
+      "Philippines"
+    ]
+  },
+  {
+    "sector_code": [
+      "12220",
+      "72050",
+      "15190"
+    ],
+    "iati_identifier": "CH-4-2018000893",
+    "title_narrative": [
+      "COL/VE: IFRC Asitencia Frontera COL/VZLA"
+    ],
+    "reporting_org_ref": "CH-4",
+    "transaction_value": [
+      300000.0,
+      250000.0
+    ],
+    "activity_date_type": [
+      "1",
+      "2",
+      "3",
+      "4"
+    ],
+    "activity_status_code": "2",
+    "description_narrative": [
+      "No description for this activity available at this point. Description indisponible pour cette activité."
+    ],
+    "activity_date_iso_date": [
+      "2018-05-08T00:00:00Z",
+      "2018-05-08T00:00:00Z",
+      "2019-05-07T00:00:00Z",
+      "2019-05-07T00:00:00Z"
+    ],
+    "recipient_country_code": [
+      "VE"
+    ],
+    "reporting_org_narrative": [
+      "Swiss Agency for Development and Cooperation (SDC)"
+    ],
+    "recipient_country_narrative": [
+      "Venezuela (République bolivarienne du)"
+    ]
+  },
+  {
+    "sector_code": [
+      "12230",
+      "73010",
+      "14032"
+    ],
+    "iati_identifier": "CH-4-2018000993",
+    "title_narrative": [
+      "Lao PDR, IFRC Emerg. Appeal floods 2018"
+    ],
+    "reporting_org_ref": "CH-4",
+    "transaction_value": [
+      300000.0,
+      300000.0
+    ],
+    "activity_date_type": [
+      "1",
+      "2",
+      "3",
+      "4"
+    ],
+    "activity_status_code": "2",
+    "description_narrative": [
+      "No description for this activity available at this point. Description indisponible pour cette activité."
+    ],
+    "activity_date_iso_date": [
+      "2018-07-26T00:00:00Z",
+      "2018-07-26T00:00:00Z",
+      "2020-01-31T00:00:00Z",
+      "2020-01-31T00:00:00Z"
+    ],
+    "recipient_country_code": [
+      "LA"
+    ],
+    "reporting_org_narrative": [
+      "Swiss Agency for Development and Cooperation (SDC)"
+    ],
+    "recipient_country_narrative": [
+      "Laos (République démocratique populaire lao)"
+    ]
+  },
+  {
+    "sector_code": [
+      "14032",
+      "12230",
+      "73010"
+    ],
+    "iati_identifier": "CH-4-2018000998",
+    "title_narrative": [
+      "Indonesia:IFRC Em. Appeal Earthq. Lombok"
+    ],
+    "reporting_org_ref": "CH-4",
+    "transaction_value": [
+      300000.0,
+      300000.0
+    ],
+    "activity_date_type": [
+      "1",
+      "2",
+      "3",
+      "4"
+    ],
+    "activity_status_code": "2",
+    "description_narrative": [
+      "No description for this activity available at this point. Description indisponible pour cette activité."
+    ],
+    "activity_date_iso_date": [
+      "2018-08-17T00:00:00Z",
+      "2018-08-17T00:00:00Z",
+      "2020-01-30T00:00:00Z",
+      "2020-01-30T00:00:00Z"
+    ],
+    "recipient_country_code": [
+      "ID"
+    ],
+    "reporting_org_narrative": [
+      "Swiss Agency for Development and Cooperation (SDC)"
+    ],
+    "recipient_country_narrative": [
+      "Indonésie"
+    ]
+  },
+  {
+    "sector_code": [
+      "14032",
+      "73010"
+    ],
+    "iati_identifier": "CH-4-2018000999",
+    "title_narrative": [
+      "Indonesia:IFRC Em. Appeal Earthq. Lombok"
+    ],
+    "reporting_org_ref": "CH-4",
+    "transaction_value": [
+      500000.0,
+      500000.0
+    ],
+    "activity_date_type": [
+      "1",
+      "2",
+      "3",
+      "4"
+    ],
+    "activity_status_code": "2",
+    "description_narrative": [
+      "No description for this activity available at this point. Description indisponible pour cette activité."
+    ],
+    "activity_date_iso_date": [
+      "2018-10-01T00:00:00Z",
+      "2018-10-01T00:00:00Z",
+      "2020-03-31T00:00:00Z",
+      "2020-03-31T00:00:00Z"
+    ],
+    "recipient_country_code": [
+      "ID"
+    ],
+    "reporting_org_narrative": [
+      "Swiss Agency for Development and Cooperation (SDC)"
+    ],
+    "recipient_country_narrative": [
+      "Indonésie"
+    ]
+  },
+  {
+    "sector_code": [
+      "72050"
+    ],
+    "iati_identifier": "CH-4-2019002096",
+    "title_narrative": [
+      "Crédit global pour petites actions"
+    ],
+    "reporting_org_ref": "CH-4",
+    "transaction_value": [
+      30000.0,
+      0.0
+    ],
+    "activity_date_type": [
+      "1",
+      "2",
+      "3",
+      "4"
+    ],
+    "activity_status_code": "2",
+    "description_narrative": [
+      "Les crédits globaux pour petites actions permettent le financement d’opérations ponctuelles, peu coûteuses, significatives en termes de développement, à composantes diverses (techniques, sociales, organisationnelles et de gestion, politique, économique, informative, etc.)"
+    ],
+    "activity_date_iso_date": [
+      "2012-04-01T00:00:00Z",
+      "2012-04-01T00:00:00Z",
+      "2022-08-31T00:00:00Z",
+      "2022-08-31T00:00:00Z"
+    ],
+    "recipient_country_code": [
+      "KP"
+    ],
+    "reporting_org_narrative": [
+      "Swiss Agency for Development and Cooperation (SDC)"
+    ],
+    "recipient_country_narrative": [
+      "Corée (République populaire démocratique)"
+    ]
+  },
+  {
+    "sector_code": [
+      "14032"
+    ],
+    "iati_identifier": "CH-4-2018001012",
+    "title_narrative": [
+      "PHL: IFRC Em. Appeal Typhoon Mangkhut"
+    ],
+    "reporting_org_ref": "CH-4",
+    "transaction_value": [
+      215000.0,
+      215000.0
+    ],
+    "activity_date_type": [
+      "1",
+      "2",
+      "3",
+      "4"
+    ],
+    "activity_status_code": "2",
+    "description_narrative": [
+      "No description for this activity available at this point. Description indisponible pour cette activité."
+    ],
+    "activity_date_iso_date": [
+      "2018-09-19T00:00:00Z",
+      "2018-09-19T00:00:00Z",
+      "2019-09-18T00:00:00Z",
+      "2019-09-18T00:00:00Z"
+    ],
+    "recipient_country_code": [
+      "PH"
+    ],
+    "reporting_org_narrative": [
+      "Swiss Agency for Development and Cooperation (SDC)"
+    ],
+    "recipient_country_narrative": [
+      "Philippines"
+    ]
+  },
+  {
+    "sector_code": [
+      "72010",
+      "72010"
+    ],
+    "iati_identifier": "CH-4-2015004919",
+    "title_narrative": [
+      "Renforcement du Croissant Rouge Tunisien en tant qu'acteur de changement"
+    ],
+    "reporting_org_ref": "CH-4",
+    "transaction_value": [
+      -2.0
+    ],
+    "activity_date_type": [
+      "1",
+      "2",
+      "3",
+      "4"
+    ],
+    "activity_status_code": "2",
+    "description_narrative": [
+      "Disposant d'un réseau d'envirion 10'000 bénévoles, le Croissant Rouge Tunisien (CRT) constitue l'organisation caritative la plus importante en Tunisie. Ce projet vise à développer les capacités du CRT à travers le développement organisationnel, le renforcement des capacités des ressources humaines et le développement institutionnel afin qu'il puisse répondre à son mandat de manière fiable et professionnelle. Le partage des responsabilités entre le Gouvernement et le CRT comme acteur de la société civile et auxiliaire de l'État permettra une performance et un engagement plus importants par exemple dans la migration."
+    ],
+    "activity_date_iso_date": [
+      "2015-12-15T00:00:00Z",
+      "2015-12-15T00:00:00Z",
+      "2018-06-30T00:00:00Z",
+      "2018-06-30T00:00:00Z"
+    ],
+    "recipient_country_code": [
+      "TN"
+    ],
+    "reporting_org_narrative": [
+      "Swiss Agency for Development and Cooperation (SDC)"
+    ],
+    "recipient_country_narrative": [
+      "Tunisie"
+    ]
+  },
+  {
+    "sector_code": [
+      "72010",
+      "72010"
+    ],
+    "iati_identifier": "CH-4-2015004920",
+    "title_narrative": [
+      "Renforcement du Croissant Rouge Tunisien en tant qu'acteur de changement"
+    ],
+    "reporting_org_ref": "CH-4",
+    "transaction_value": [
+      7432.0
+    ],
+    "activity_date_type": [
+      "1",
+      "2",
+      "3",
+      "4"
+    ],
+    "activity_status_code": "2",
+    "description_narrative": [
+      "Disposant d'un réseau d'envirion 10'000 bénévoles, le Croissant Rouge Tunisien (CRT) constitue l'organisation caritative la plus importante en Tunisie. Ce projet vise à développer les capacités du CRT à travers le développement organisationnel, le renforcement des capacités des ressources humaines et le développement institutionnel afin qu'il puisse répondre à son mandat de manière fiable et professionnelle. Le partage des responsabilités entre le Gouvernement et le CRT comme acteur de la société civile et auxiliaire de l'État permettra une performance et un engagement plus importants par exemple dans la migration."
+    ],
+    "activity_date_iso_date": [
+      "2015-12-15T00:00:00Z",
+      "2015-12-15T00:00:00Z",
+      "2018-06-30T00:00:00Z",
+      "2018-06-30T00:00:00Z"
+    ],
+    "recipient_country_code": [
+      "TN"
+    ],
+    "reporting_org_narrative": [
+      "Swiss Agency for Development and Cooperation (SDC)"
+    ],
+    "recipient_country_narrative": [
+      "Tunisie"
+    ]
+  },
+  {
+    "sector_code": [
+      "72050"
+    ],
+    "iati_identifier": "CH-4-2012006747",
+    "title_narrative": [
+      "IFRC - Disaster Relief Emergency Fund"
+    ],
+    "reporting_org_ref": "CH-4",
+    "transaction_value": [
+      1000000.0,
+      1000000.0
+    ],
+    "activity_date_type": [
+      "1",
+      "2",
+      "3"
+    ],
+    "activity_status_code": "2",
+    "description_narrative": [
+      "No description for this activity available at this point. Description indisponible pour cette activité."
+    ],
+    "activity_date_iso_date": [
+      "2020-01-01T00:00:00Z",
+      "2020-01-01T00:00:00Z",
+      "2020-12-31T00:00:00Z"
+    ],
+    "reporting_org_narrative": [
+      "Swiss Agency for Development and Cooperation (SDC)"
+    ]
+  },
+  {
+    "sector_code": [
+      "72050"
+    ],
+    "iati_identifier": "CH-4-2012006748",
+    "title_narrative": [
+      "IFRC - Disaster Relief Emergency Fund"
+    ],
+    "reporting_org_ref": "CH-4",
+    "transaction_value": [
+      2000000.0,
+      2000000.0
+    ],
+    "activity_date_type": [
+      "1",
+      "2",
+      "3"
+    ],
+    "activity_status_code": "2",
+    "description_narrative": [
+      "No description for this activity available at this point. Description indisponible pour cette activité."
+    ],
+    "activity_date_iso_date": [
+      "2020-01-01T00:00:00Z",
+      "2020-01-01T00:00:00Z",
+      "2020-12-31T00:00:00Z"
+    ],
+    "reporting_org_narrative": [
+      "Swiss Agency for Development and Cooperation (SDC)"
+    ]
+  },
+  {
+    "sector_code": [
+      "72050"
+    ],
+    "iati_identifier": "CH-4-2016003474",
+    "title_narrative": [
+      "ICRC/IFRC Mechanism Investment in NS"
+    ],
+    "reporting_org_ref": "CH-4",
+    "transaction_value": [
+      1000000.0,
+      1000000.0
+    ],
+    "activity_date_type": [
+      "1",
+      "2",
+      "3"
+    ],
+    "activity_status_code": "2",
+    "description_narrative": [
+      "No description for this activity available at this point. Description indisponible pour cette activité."
+    ],
+    "activity_date_iso_date": [
+      "2020-11-28T00:00:00Z",
+      "2020-11-28T00:00:00Z",
+      "2021-11-27T00:00:00Z"
+    ],
+    "reporting_org_narrative": [
+      "Swiss Agency for Development and Cooperation (SDC)"
+    ]
+  },
+  {
+    "sector_code": [
+      "11230"
+    ],
+    "iati_identifier": "CH-4-2017005411",
+    "title_narrative": [
+      "HStab/Global/Öffentlichkeits- und Wissen"
+    ],
+    "reporting_org_ref": "CH-4",
+    "transaction_value": [
+      130000.0,
+      130000.0
+    ],
+    "activity_date_type": [
+      "1",
+      "2",
+      "3"
+    ],
+    "activity_status_code": "2",
+    "description_narrative": [
+      "No description for this activity available at this point. Description indisponible pour cette activité."
+    ],
+    "activity_date_iso_date": [
+      "2018-01-01T00:00:00Z",
+      "2018-01-01T00:00:00Z",
+      "2021-05-31T00:00:00Z"
+    ],
+    "reporting_org_narrative": [
+      "Swiss Agency for Development and Cooperation (SDC)"
+    ]
+  },
+  {
+    "sector_code": [
+      "72050"
+    ],
+    "iati_identifier": "CH-4-2017005505",
+    "title_narrative": [
+      "Grand Bargain Project 2017-2018"
+    ],
+    "reporting_org_ref": "CH-4",
+    "transaction_value": [
+      0.0,
+      -6512.0
+    ],
+    "activity_date_type": [
+      "1",
+      "2",
+      "3"
+    ],
+    "activity_status_code": "2",
+    "description_narrative": [
+      "The Grand Bargain is one of the concrete initiatives announced at the WHS to improve humanitarian action, as it provides avenues for how aid financing must be more efficient. The top 30 donors and aid agencies endorsed this so-called “Grand Bargain” to make aid more efficient, including long-term, flexible and less earmarked funding from the donors, reduced overhead costs and reporting requirements, a greater use of digital funding (cash transfers) and more means flowing to local and national responders. It also commits to more coherent and “impartial” needs assessments and less competition between aid agencies. In a nutshell, the Grand Bargain tries to address some of the structural reforms that are needed in the humanitarian system through the lenses of financing."
+    ],
+    "activity_date_iso_date": [
+      "2017-02-15T00:00:00Z",
+      "2017-02-15T00:00:00Z",
+      "2020-06-30T00:00:00Z"
+    ],
+    "reporting_org_narrative": [
+      "Swiss Agency for Development and Cooperation (SDC)"
+    ]
+  },
+  {
+    "sector_code": [
+      "72050"
+    ],
+    "iati_identifier": "CH-4-2015005546",
+    "title_narrative": [
+      "International Conferences RC/RC"
+    ],
+    "reporting_org_ref": "CH-4",
+    "transaction_value": [
+      0.0,
+      -2252.0
+    ],
+    "activity_date_type": [
+      "1",
+      "2",
+      "3"
+    ],
+    "activity_status_code": "2",
+    "description_narrative": [
+      "No description for this activity available at this point. Description indisponible pour cette activité."
+    ],
+    "activity_date_iso_date": [
+      "2018-11-20T00:00:00Z",
+      "2018-11-20T00:00:00Z",
+      "2020-06-30T00:00:00Z"
+    ],
+    "reporting_org_narrative": [
+      "Swiss Agency for Development and Cooperation (SDC)"
+    ]
+  },
+  {
+    "sector_code": [
+      "72050"
+    ],
+    "iati_identifier": "CH-4-2015005353",
+    "title_narrative": [
+      "International Conferences RC/RC"
+    ],
+    "reporting_org_ref": "CH-4",
+    "transaction_value": [
+      0.0,
+      150106.0
+    ],
+    "activity_date_type": [
+      "1",
+      "2",
+      "3"
+    ],
+    "activity_status_code": "2",
+    "description_narrative": [
+      "No description for this activity available at this point. Description indisponible pour cette activité."
+    ],
+    "activity_date_iso_date": [
+      "2018-11-20T00:00:00Z",
+      "2018-11-20T00:00:00Z",
+      "2020-06-30T00:00:00Z"
+    ],
+    "reporting_org_narrative": [
+      "Swiss Agency for Development and Cooperation (SDC)"
+    ]
+  },
+  {
+    "sector_code": [
+      "72050"
+    ],
+    "iati_identifier": "CH-4-2015005354",
+    "title_narrative": [
+      "International Conferences RC/RC"
+    ],
+    "reporting_org_ref": "CH-4",
+    "transaction_value": [
+      0.0,
+      47458.0
+    ],
+    "activity_date_type": [
+      "1",
+      "2",
+      "3"
+    ],
+    "activity_status_code": "2",
+    "description_narrative": [
+      "No description for this activity available at this point. Description indisponible pour cette activité."
+    ],
+    "activity_date_iso_date": [
+      "2018-11-20T00:00:00Z",
+      "2018-11-20T00:00:00Z",
+      "2020-06-30T00:00:00Z"
+    ],
+    "reporting_org_narrative": [
+      "Swiss Agency for Development and Cooperation (SDC)"
+    ]
+  },
+  {
+    "sector_code": [
+      "99810",
+      "99810",
+      "72050"
+    ],
+    "iati_identifier": "CH-4-2017007663",
+    "title_narrative": [
+      "Grand Bargain Project"
+    ],
+    "reporting_org_ref": "CH-4",
+    "transaction_value": [
+      350119.0,
+      180000.0
+    ],
+    "activity_date_type": [
+      "1",
+      "2",
+      "3"
+    ],
+    "activity_status_code": "2",
+    "description_narrative": [
+      "No description for this activity available at this point. Description indisponible pour cette activité."
+    ],
+    "activity_date_iso_date": [
+      "2020-05-01T00:00:00Z",
+      "2020-05-01T00:00:00Z",
+      "2021-07-31T00:00:00Z"
+    ],
+    "reporting_org_narrative": [
+      "Swiss Agency for Development and Cooperation (SDC)"
+    ]
+  },
+  {
+    "sector_code": [
+      "99810",
+      "99810",
+      "72050"
+    ],
+    "iati_identifier": "CH-4-2017007664",
+    "title_narrative": [
+      "Grand Bargain Project"
+    ],
+    "reporting_org_ref": "CH-4",
+    "transaction_value": [
+      14881.0,
+      0.0
+    ],
+    "activity_date_type": [
+      "1",
+      "2",
+      "3"
+    ],
+    "activity_status_code": "2",
+    "description_narrative": [
+      "No description for this activity available at this point. Description indisponible pour cette activité."
+    ],
+    "activity_date_iso_date": [
+      "2020-05-01T00:00:00Z",
+      "2020-05-01T00:00:00Z",
+      "2021-07-31T00:00:00Z"
+    ],
+    "reporting_org_narrative": [
+      "Swiss Agency for Development and Cooperation (SDC)"
+    ]
+  },
+  {
+    "sector_code": [
+      "99810",
+      "99810",
+      "74020"
+    ],
+    "iati_identifier": "CH-4-2020001239",
+    "title_narrative": [
+      "Support IFRC climate-smart risk analysis"
+    ],
+    "reporting_org_ref": "CH-4",
+    "transaction_value": [
+      800000.0,
+      260000.0
+    ],
+    "activity_date_type": [
+      "1",
+      "2",
+      "3"
+    ],
+    "activity_status_code": "2",
+    "description_narrative": [
+      "No description for this activity available at this point. Description indisponible pour cette activité."
+    ],
+    "activity_date_iso_date": [
+      "2020-08-01T00:00:00Z",
+      "2020-08-01T00:00:00Z",
+      "2022-07-31T00:00:00Z"
+    ],
+    "reporting_org_narrative": [
+      "Swiss Agency for Development and Cooperation (SDC)"
+    ]
+  },
+  {
+    "sector_code": [
+      "72050",
+      "14032",
+      "12250"
+    ],
+    "iati_identifier": "CH-4-2020001073",
+    "title_narrative": [
+      "China: IFRC Emergency Appeal Coronavirus"
+    ],
+    "reporting_org_ref": "CH-4",
+    "transaction_value": [
+      2000000.0,
+      2000000.0
+    ],
+    "activity_date_type": [
+      "1",
+      "2",
+      "3"
+    ],
+    "activity_status_code": "2",
+    "description_narrative": [
+      "No description for this activity available at this point. Description indisponible pour cette activité."
+    ],
+    "activity_date_iso_date": [
+      "2020-03-26T00:00:00Z",
+      "2020-03-26T00:00:00Z",
+      "2021-03-31T00:00:00Z"
+    ],
+    "reporting_org_narrative": [
+      "Swiss Agency for Development and Cooperation (SDC)"
+    ]
+  },
+  {
+    "sector_code": [
+      "72050",
+      "14032",
+      "12250"
+    ],
+    "iati_identifier": "CH-4-2020001074",
+    "title_narrative": [
+      "China: IFRC Emergency Appeal Coronavirus"
+    ],
+    "reporting_org_ref": "CH-4",
+    "transaction_value": [
+      3000000.0,
+      3000000.0
+    ],
+    "activity_date_type": [
+      "1",
+      "2",
+      "3"
+    ],
+    "activity_status_code": "2",
+    "description_narrative": [
+      "No description for this activity available at this point. Description indisponible pour cette activité."
+    ],
+    "activity_date_iso_date": [
+      "2020-05-28T00:00:00Z",
+      "2020-05-28T00:00:00Z",
+      "2021-12-31T00:00:00Z"
+    ],
+    "reporting_org_narrative": [
+      "Swiss Agency for Development and Cooperation (SDC)"
+    ]
+  },
+  {
+    "sector_code": [
+      "15190"
+    ],
+    "iati_identifier": "CH-4-2020001114",
+    "title_narrative": [
+      "Greece: IFRC Emergency Appeal"
+    ],
+    "reporting_org_ref": "CH-4",
+    "transaction_value": [
+      300000.0,
+      300000.0
+    ],
+    "activity_date_type": [
+      "1",
+      "2",
+      "3"
+    ],
+    "activity_status_code": "2",
+    "description_narrative": [
+      "No description for this activity available at this point. Description indisponible pour cette activité."
+    ],
+    "activity_date_iso_date": [
+      "2020-03-13T00:00:00Z",
+      "2020-03-13T00:00:00Z",
+      "2021-12-31T00:00:00Z"
+    ],
+    "reporting_org_narrative": [
+      "Swiss Agency for Development and Cooperation (SDC)"
+    ]
+  },
+  {
+    "sector_code": [
+      "14032",
+      "72040",
+      "73010"
+    ],
+    "iati_identifier": "CH-4-2020001402",
+    "title_narrative": [
+      "CA IFRC Appeal, Hurricane ETA-20"
+    ],
+    "reporting_org_ref": "CH-4",
+    "transaction_value": [
+      500000.0,
+      500000.0
+    ],
+    "activity_date_type": [
+      "1",
+      "2",
+      "3"
+    ],
+    "activity_status_code": "2",
+    "description_narrative": [
+      "No description for this activity available at this point. Description indisponible pour cette activité."
+    ],
+    "activity_date_iso_date": [
+      "2020-11-08T00:00:00Z",
+      "2020-11-08T00:00:00Z",
+      "2022-05-31T00:00:00Z"
+    ],
+    "reporting_org_narrative": [
+      "Swiss Agency for Development and Cooperation (SDC)"
+    ]
+  },
+  {
+    "sector_code": [
+      "72010"
+    ],
+    "iati_identifier": "CH-4-2020002255",
+    "title_narrative": [
+      "Crédit global pour petites actions"
+    ],
+    "reporting_org_ref": "CH-4",
+    "transaction_value": [
+      50000.0,
+      44696.0
+    ],
+    "activity_date_type": [
+      "1",
+      "2",
+      "3"
+    ],
+    "activity_status_code": "2",
+    "description_narrative": [
+      "Les crédits globaux pour petites actions permettent le financement d’opérations ponctuelles, peu coûteuses, significatives en termes de développement, à composantes diverses (techniques, sociales, organisationnelles et de gestion, politique, économique, informative, etc.)"
+    ],
+    "activity_date_iso_date": [
+      "2020-03-24T00:00:00Z",
+      "2020-03-24T00:00:00Z",
+      "2022-03-23T00:00:00Z"
+    ],
+    "reporting_org_narrative": [
+      "Swiss Agency for Development and Cooperation (SDC)"
+    ]
+  },
+  {
+    "sector_code": [
+      "12264"
+    ],
+    "iati_identifier": "CH-4-2021-2020009660",
+    "title_narrative": [
+      "China: IFRC Emergency Appeal Coronavirus"
+    ],
+    "reporting_org_ref": "CH-4",
+    "transaction_value": [
+      7000000.0,
+      7000000.0
+    ],
+    "activity_date_type": [
+      "1",
+      "2",
+      "3"
+    ],
+    "activity_status_code": "2",
+    "description_narrative": [
+      "No description for this activity available at this point. Description indisponible pour cette activité."
+    ],
+    "activity_date_iso_date": [
+      "2021-06-07T00:00:00Z",
+      "2021-06-07T00:00:00Z",
+      "2021-12-31T00:00:00Z"
+    ],
+    "reporting_org_narrative": [
+      "Swiss Agency for Development and Cooperation (SDC)"
+    ]
+  },
+  {
+    "sector_code": [
+      "99810",
+      "99810",
+      "74020"
+    ],
+    "iati_identifier": "CH-4-2021-2020001239",
+    "title_narrative": [
+      "Support IFRC climate-smart risk analysis"
+    ],
+    "reporting_org_ref": "CH-4",
+    "transaction_value": [
+      0.0,
+      335000.0
+    ],
+    "activity_date_type": [
+      "1",
+      "2",
+      "3"
+    ],
+    "activity_status_code": "2",
+    "description_narrative": [
+      "No description for this activity available at this point. Description indisponible pour cette activité."
+    ],
+    "activity_date_iso_date": [
+      "2020-08-01T00:00:00Z",
+      "2020-08-01T00:00:00Z",
+      "2022-07-31T00:00:00Z"
+    ],
+    "reporting_org_narrative": [
+      "Swiss Agency for Development and Cooperation (SDC)"
+    ]
+  },
+  {
+    "sector_code": [
+      "14032",
+      "73010"
+    ],
+    "iati_identifier": "CH-4-2021-2021001102",
+    "title_narrative": [
+      "HT: IFRC Emergency Appeal Earthquake 21"
+    ],
+    "reporting_org_ref": "CH-4",
+    "transaction_value": [
+      250000.0,
+      250000.0
+    ],
+    "activity_date_type": [
+      "1",
+      "2",
+      "3"
+    ],
+    "activity_status_code": "2",
+    "description_narrative": [
+      "No description for this activity available at this point. Description indisponible pour cette activité."
+    ],
+    "activity_date_iso_date": [
+      "2021-08-15T00:00:00Z",
+      "2021-08-15T00:00:00Z",
+      "2023-02-28T00:00:00Z"
+    ],
+    "recipient_country_code": [
+      "HT"
+    ],
+    "reporting_org_narrative": [
+      "Swiss Agency for Development and Cooperation (SDC)"
+    ],
+    "recipient_country_narrative": [
+      "Haïti"
+    ]
+  },
+  {
+    "sector_code": [
+      "14032",
+      "73010"
+    ],
+    "iati_identifier": "CH-4-2021-2021001153",
+    "title_narrative": [
+      "Philippines: IFRC EA Typhoon RAI-21"
+    ],
+    "reporting_org_ref": "CH-4",
+    "transaction_value": [
+      600000.0,
+      600000.0
+    ],
+    "activity_date_type": [
+      "1",
+      "2",
+      "3"
+    ],
+    "activity_status_code": "2",
+    "description_narrative": [
+      "No description for this activity available at this point. Description indisponible pour cette activité."
+    ],
+    "activity_date_iso_date": [
+      "2021-12-18T00:00:00Z",
+      "2021-12-18T00:00:00Z",
+      "2023-12-31T00:00:00Z"
+    ],
+    "recipient_country_code": [
+      "PH"
+    ],
+    "reporting_org_narrative": [
+      "Swiss Agency for Development and Cooperation (SDC)"
+    ],
+    "recipient_country_narrative": [
+      "Philippines"
+    ]
+  },
+  {
+    "sector_code": [
+      "72050"
+    ],
+    "iati_identifier": "CH-4-2012006594",
+    "title_narrative": [
+      "IFRC - Disaster Relief Emergency Fund"
+    ],
+    "reporting_org_ref": "CH-4",
+    "transaction_value": [
+      500000.0,
+      500000.0
+    ],
+    "activity_date_type": [
+      "1",
+      "2",
+      "3",
+      "4"
+    ],
+    "activity_status_code": "2",
+    "description_narrative": [
+      "No description for this activity available at this point. Description indisponible pour cette activité."
+    ],
+    "activity_date_iso_date": [
+      "2018-01-01T00:00:00Z",
+      "2018-01-01T00:00:00Z",
+      "2018-12-31T00:00:00Z",
+      "2018-12-31T00:00:00Z"
+    ],
+    "reporting_org_narrative": [
+      "Swiss Agency for Development and Cooperation (SDC)"
+    ]
+  },
+  {
+    "sector_code": [
+      "72050"
+    ],
+    "iati_identifier": "CH-4-2015005110",
+    "title_narrative": [
+      "International Conferences RC/RC"
+    ],
+    "reporting_org_ref": "CH-4",
+    "transaction_value": [
+      755000.0,
+      500000.0
+    ],
+    "activity_date_type": [
+      "1",
+      "2",
+      "3",
+      "4"
+    ],
+    "activity_status_code": "2",
+    "description_narrative": [
+      "No description for this activity available at this point. Description indisponible pour cette activité."
+    ],
+    "activity_date_iso_date": [
+      "2018-11-20T00:00:00Z",
+      "2018-11-20T00:00:00Z",
+      "2020-06-30T00:00:00Z",
+      "2020-06-30T00:00:00Z"
+    ],
+    "reporting_org_narrative": [
+      "Swiss Agency for Development and Cooperation (SDC)"
+    ]
+  },
+  {
+    "sector_code": [
+      "72050"
+    ],
+    "iati_identifier": "CH-4-2015005111",
+    "title_narrative": [
+      "International Conferences RC/RC"
+    ],
+    "reporting_org_ref": "CH-4",
+    "transaction_value": [
+      100000.0
+    ],
+    "activity_date_type": [
+      "1",
+      "2",
+      "3",
+      "4"
+    ],
+    "activity_status_code": "2",
+    "description_narrative": [
+      "No description for this activity available at this point. Description indisponible pour cette activité."
+    ],
+    "activity_date_iso_date": [
+      "2018-11-20T00:00:00Z",
+      "2018-11-20T00:00:00Z",
+      "2020-06-30T00:00:00Z",
+      "2020-06-30T00:00:00Z"
+    ],
+    "reporting_org_narrative": [
+      "Swiss Agency for Development and Cooperation (SDC)"
+    ]
+  },
+  {
+    "sector_code": [
+      "72050"
+    ],
+    "iati_identifier": "CH-4-2015005112",
+    "title_narrative": [
+      "International Conferences RC/RC"
+    ],
+    "reporting_org_ref": "CH-4",
+    "transaction_value": [
+      100000.0
+    ],
+    "activity_date_type": [
+      "1",
+      "2",
+      "3",
+      "4"
+    ],
+    "activity_status_code": "2",
+    "description_narrative": [
+      "No description for this activity available at this point. Description indisponible pour cette activité."
+    ],
+    "activity_date_iso_date": [
+      "2018-11-20T00:00:00Z",
+      "2018-11-20T00:00:00Z",
+      "2020-06-30T00:00:00Z",
+      "2020-06-30T00:00:00Z"
+    ],
+    "reporting_org_narrative": [
+      "Swiss Agency for Development and Cooperation (SDC)"
+    ]
+  },
+  {
+    "sector_code": [
+      "72050"
+    ],
+    "iati_identifier": "CH-4-2015005113",
+    "title_narrative": [
+      "International Conferences RC/RC"
+    ],
+    "reporting_org_ref": "CH-4",
+    "transaction_value": [
+      50000.0
+    ],
+    "activity_date_type": [
+      "1",
+      "2",
+      "3",
+      "4"
+    ],
+    "activity_status_code": "2",
+    "description_narrative": [
+      "No description for this activity available at this point. Description indisponible pour cette activité."
+    ],
+    "activity_date_iso_date": [
+      "2018-11-20T00:00:00Z",
+      "2018-11-20T00:00:00Z",
+      "2020-06-30T00:00:00Z",
+      "2020-06-30T00:00:00Z"
+    ],
+    "reporting_org_narrative": [
+      "Swiss Agency for Development and Cooperation (SDC)"
+    ]
+  },
+  {
+    "sector_code": [
+      "72050"
+    ],
+    "iati_identifier": "CH-4-2016003364",
+    "title_narrative": [
+      "ICRC/IFRC Mechanism Investment in NS"
+    ],
+    "reporting_org_ref": "CH-4",
+    "transaction_value": [
+      600000.0,
+      600000.0
+    ],
+    "activity_date_type": [
+      "1",
+      "2",
+      "3",
+      "4"
+    ],
+    "activity_status_code": "2",
+    "description_narrative": [
+      "No description for this activity available at this point. Description indisponible pour cette activité."
+    ],
+    "activity_date_iso_date": [
+      "2018-11-28T00:00:00Z",
+      "2018-11-28T00:00:00Z",
+      "2019-12-31T00:00:00Z",
+      "2019-12-31T00:00:00Z"
+    ],
+    "reporting_org_narrative": [
+      "Swiss Agency for Development and Cooperation (SDC)"
+    ]
+  },
+  {
+    "sector_code": [
+      "11230"
+    ],
+    "iati_identifier": "CH-4-2017005411",
+    "title_narrative": [
+      "HStab/Global/Öffentlichkeits- und Wissen"
+    ],
+    "reporting_org_ref": "CH-4",
+    "transaction_value": [
+      184000.0,
+      92000.0
+    ],
+    "activity_date_type": [
+      "1",
+      "2",
+      "3",
+      "4"
+    ],
+    "activity_status_code": "2",
+    "description_narrative": [
+      "No description for this activity available at this point. Description indisponible pour cette activité."
+    ],
+    "activity_date_iso_date": [
+      "2018-01-01T00:00:00Z",
+      "2018-01-01T00:00:00Z",
+      "2019-12-31T00:00:00Z",
+      "2019-12-31T00:00:00Z"
+    ],
+    "reporting_org_narrative": [
+      "Swiss Agency for Development and Cooperation (SDC)"
+    ]
+  },
+  {
+    "sector_code": [
+      "72050"
+    ],
+    "iati_identifier": "CH-4-2017005505",
+    "title_narrative": [
+      "OCHA, Grand Bargain Project"
+    ],
+    "reporting_org_ref": "CH-4",
+    "transaction_value": [
+      50000.0
+    ],
+    "activity_date_type": [
+      "1",
+      "2",
+      "3",
+      "4"
+    ],
+    "activity_status_code": "2",
+    "description_narrative": [
+      "No description for this activity available at this point. Description indisponible pour cette activité."
+    ],
+    "activity_date_iso_date": [
+      "2017-02-15T00:00:00Z",
+      "2017-02-15T00:00:00Z",
+      "2020-06-30T00:00:00Z",
+      "2020-06-30T00:00:00Z"
+    ],
+    "reporting_org_narrative": [
+      "Swiss Agency for Development and Cooperation (SDC)"
+    ]
+  },
+  {
+    "sector_code": [
+      "72050"
+    ],
+    "iati_identifier": "CH-4-2000003967",
+    "title_narrative": [
+      "International Federation of Red Cross and Red Crescent Societies (IFRC), core contribution"
+    ],
+    "reporting_org_ref": "CH-4",
+    "transaction_value": [
+      3000000.0,
+      3000000.0
+    ],
+    "activity_date_type": [
+      "1",
+      "2",
+      "3",
+      "4"
+    ],
+    "activity_status_code": "2",
+    "description_narrative": [
+      "The Federation's work focuses on four core areas, out of which the first three are also key SDC priorities: promoting humanitarian values, disaster response, disaster preparedness, health and community care."
+    ],
+    "activity_date_iso_date": [
+      "2017-01-01T00:00:00Z",
+      "2017-01-01T00:00:00Z",
+      "2017-12-31T00:00:00Z",
+      "2017-12-31T00:00:00Z"
+    ],
+    "reporting_org_narrative": [
+      "Swiss Agency for Development and Cooperation (SDC)"
+    ]
+  },
+  {
+    "sector_code": [
+      "72050"
+    ],
+    "iati_identifier": "CH-4-2000003970",
+    "title_narrative": [
+      "International Federation of Red Cross and Red Crescent Societies (IFRC), core contribution"
+    ],
+    "reporting_org_ref": "CH-4",
+    "transaction_value": [
+      3000000.0,
+      3000000.0
+    ],
+    "activity_date_type": [
+      "1",
+      "2",
+      "3",
+      "4"
+    ],
+    "activity_status_code": "2",
+    "description_narrative": [
+      "The Federation's work focuses on four core areas, out of which the first three are also key SDC priorities: promoting humanitarian values, disaster response, disaster preparedness, health and community care."
+    ],
+    "activity_date_iso_date": [
+      "2018-01-01T00:00:00Z",
+      "2018-01-01T00:00:00Z",
+      "2018-12-31T00:00:00Z",
+      "2018-12-31T00:00:00Z"
+    ],
+    "reporting_org_narrative": [
+      "Swiss Agency for Development and Cooperation (SDC)"
+    ]
+  },
+  {
+    "sector_code": [
+      "14032",
+      "72010",
+      "73010"
+    ],
+    "iati_identifier": "CH-4-2017005649",
+    "title_narrative": [
+      "Emergency response floods 08.2017"
+    ],
+    "reporting_org_ref": "CH-4",
+    "transaction_value": [
+      200000.0,
+      200000.0
+    ],
+    "activity_date_type": [
+      "1",
+      "2",
+      "3",
+      "4"
+    ],
+    "activity_status_code": "2",
+    "description_narrative": [
+      "No description available at this point of the project, Description indisponible pour cette activité"
+    ],
+    "activity_date_iso_date": [
+      "2017-08-23T00:00:00Z",
+      "2017-08-23T00:00:00Z",
+      "2018-08-24T00:00:00Z",
+      "2018-08-24T00:00:00Z"
+    ],
+    "recipient_country_code": [
+      "SL"
+    ],
+    "reporting_org_narrative": [
+      "Swiss Agency for Development and Cooperation (SDC)"
+    ],
+    "recipient_country_narrative": [
+      "Sierra Leone"
+    ]
+  },
+  {
+    "sector_code": [
+      "14032",
+      "73010"
+    ],
+    "iati_identifier": "CH-4-2017005675",
+    "title_narrative": [
+      "IFRC Appeal Irma Sept. 2017"
+    ],
+    "reporting_org_ref": "CH-4",
+    "transaction_value": [
+      500000.0,
+      500000.0
+    ],
+    "activity_date_type": [
+      "1",
+      "2",
+      "3",
+      "4"
+    ],
+    "activity_status_code": "2",
+    "description_narrative": [
+      "No description available at this point of the project, Description indisponible pour cette activité"
+    ],
+    "activity_date_iso_date": [
+      "2017-09-15T00:00:00Z",
+      "2017-09-15T00:00:00Z",
+      "2018-09-15T00:00:00Z",
+      "2018-09-15T00:00:00Z"
+    ],
+    "recipient_country_code": [
+      "CU"
+    ],
+    "reporting_org_narrative": [
+      "Swiss Agency for Development and Cooperation (SDC)"
+    ],
+    "recipient_country_narrative": [
+      "Cuba"
+    ]
+  },
+  {
+    "sector_code": [
+      "12230",
+      "73010",
+      "14032"
+    ],
+    "iati_identifier": "CH-4-2017005677",
+    "title_narrative": [
+      "IFRC Flood Appeal"
+    ],
+    "reporting_org_ref": "CH-4",
+    "transaction_value": [
+      200000.0,
+      200000.0
+    ],
+    "activity_date_type": [
+      "1",
+      "2",
+      "3",
+      "4"
+    ],
+    "activity_status_code": "2",
+    "description_narrative": [
+      "No description available at this point of the project, Description indisponible pour cette activité"
+    ],
+    "activity_date_iso_date": [
+      "2017-10-05T00:00:00Z",
+      "2017-10-05T00:00:00Z",
+      "2018-08-31T00:00:00Z",
+      "2018-08-31T00:00:00Z"
+    ],
+    "recipient_country_code": [
+      "BD"
+    ],
+    "reporting_org_narrative": [
+      "Swiss Agency for Development and Cooperation (SDC)"
+    ],
+    "recipient_country_narrative": [
+      "Bangladesh"
+    ]
+  },
+  {
+    "sector_code": [
+      "14032",
+      "73010"
+    ],
+    "iati_identifier": "CH-4-2017005696",
+    "title_narrative": [
+      "Dominica: IFRC Appeal Hurricane Maria"
+    ],
+    "reporting_org_ref": "CH-4",
+    "transaction_value": [
+      200000.0,
+      200000.0
+    ],
+    "activity_date_type": [
+      "1",
+      "2",
+      "3",
+      "4"
+    ],
+    "activity_status_code": "2",
+    "description_narrative": [
+      "No description available at this point of the project, Description indisponible pour cette activité"
+    ],
+    "activity_date_iso_date": [
+      "2017-09-21T00:00:00Z",
+      "2017-09-21T00:00:00Z",
+      "2018-09-21T00:00:00Z",
+      "2018-09-21T00:00:00Z"
+    ],
+    "recipient_country_code": [
+      "DM"
+    ],
+    "reporting_org_narrative": [
+      "Swiss Agency for Development and Cooperation (SDC)"
+    ],
+    "recipient_country_narrative": [
+      "Dominique"
+    ]
+  },
+  {
+    "sector_code": [
+      "72050"
+    ],
+    "iati_identifier": "CH-4-2017005713",
+    "title_narrative": [
+      "IFRC Emerg. Appeal Rohingya"
+    ],
+    "reporting_org_ref": "CH-4",
+    "transaction_value": [
+      500000.0,
+      500000.0
+    ],
+    "activity_date_type": [
+      "1",
+      "2",
+      "3",
+      "4"
+    ],
+    "activity_status_code": "2",
+    "description_narrative": [
+      "No description available at this point of the project, Description indisponible pour cette activité"
+    ],
+    "activity_date_iso_date": [
+      "2017-03-18T00:00:00Z",
+      "2017-03-18T00:00:00Z",
+      "2019-06-30T00:00:00Z",
+      "2019-06-30T00:00:00Z"
+    ],
+    "recipient_country_code": [
+      "BD"
+    ],
+    "reporting_org_narrative": [
+      "Swiss Agency for Development and Cooperation (SDC)"
+    ],
+    "recipient_country_narrative": [
+      "Bangladesh"
+    ]
+  },
+  {
+    "sector_code": [
+      "14032",
+      "12230",
+      "73010"
+    ],
+    "iati_identifier": "CH-4-2017005668",
+    "title_narrative": [
+      "Karibik: IFRC Appeal Irma Sept. 2017"
+    ],
+    "reporting_org_ref": "CH-4",
+    "transaction_value": [
+      100000.0,
+      100000.0
+    ],
+    "activity_date_type": [
+      "1",
+      "2",
+      "3",
+      "4"
+    ],
+    "activity_status_code": "2",
+    "description_narrative": [
+      "No description available at this point of the project, Description indisponible pour cette activité"
+    ],
+    "activity_date_iso_date": [
+      "2017-09-08T00:00:00Z",
+      "2017-09-08T00:00:00Z",
+      "2018-03-31T00:00:00Z",
+      "2018-03-31T00:00:00Z"
+    ],
+    "recipient_country_code": [
+      "AG"
+    ],
+    "reporting_org_narrative": [
+      "Swiss Agency for Development and Cooperation (SDC)"
+    ],
+    "recipient_country_narrative": [
+      "Antigua-et-Barbuda"
+    ]
+  },
+  {
+    "sector_code": [
+      "74010"
+    ],
+    "iati_identifier": "CH-4-2018000853",
+    "title_narrative": [
+      "SE Asia: IFRC, ASEAN SPDDM+SEPDM 2018-20"
+    ],
+    "reporting_org_ref": "CH-4",
+    "transaction_value": [
+      410609.0,
+      135000.0
+    ],
+    "activity_date_type": [
+      "1",
+      "2",
+      "3",
+      "4"
+    ],
+    "activity_status_code": "2",
+    "description_narrative": [
+      "No description for this activity available at this point. Description indisponible pour cette activité."
+    ],
+    "activity_date_iso_date": [
+      "2018-08-01T00:00:00Z",
+      "2018-08-01T00:00:00Z",
+      "2020-12-31T00:00:00Z",
+      "2020-12-31T00:00:00Z"
+    ],
+    "reporting_org_narrative": [
+      "Swiss Agency for Development and Cooperation (SDC)"
+    ]
+  },
+  {
+    "sector_code": [
+      "72050"
+    ],
+    "iati_identifier": "CH-4-2012006671",
+    "title_narrative": [
+      "IFRC - Disaster Relief Emergency Fund"
+    ],
+    "reporting_org_ref": "CH-4",
+    "transaction_value": [
+      1000000.0,
+      1000000.0
+    ],
+    "activity_date_type": [
+      "1",
+      "2",
+      "3",
+      "4"
+    ],
+    "activity_status_code": "2",
+    "description_narrative": [
+      "No description for this activity available at this point. Description indisponible pour cette activité."
+    ],
+    "activity_date_iso_date": [
+      "2019-01-01T00:00:00Z",
+      "2019-01-01T00:00:00Z",
+      "2019-12-31T00:00:00Z",
+      "2019-12-31T00:00:00Z"
+    ],
+    "reporting_org_narrative": [
+      "Swiss Agency for Development and Cooperation (SDC)"
+    ]
+  },
+  {
+    "sector_code": [
+      "72050"
+    ],
+    "iati_identifier": "CH-4-2012006672",
+    "title_narrative": [
+      "IFRC - Disaster Relief Emergency Fund"
+    ],
+    "reporting_org_ref": "CH-4",
+    "transaction_value": [
+      1000000.0,
+      1000000.0
+    ],
+    "activity_date_type": [
+      "1",
+      "2",
+      "3",
+      "4"
+    ],
+    "activity_status_code": "2",
+    "description_narrative": [
+      "No description for this activity available at this point. Description indisponible pour cette activité."
+    ],
+    "activity_date_iso_date": [
+      "2019-01-01T00:00:00Z",
+      "2019-01-01T00:00:00Z",
+      "2019-12-31T00:00:00Z",
+      "2019-12-31T00:00:00Z"
+    ],
+    "reporting_org_narrative": [
+      "Swiss Agency for Development and Cooperation (SDC)"
+    ]
+  },
+  {
+    "sector_code": [
+      "72050"
+    ],
+    "iati_identifier": "CH-4-2015005353",
+    "title_narrative": [
+      "International Conferences RC/RC"
+    ],
+    "reporting_org_ref": "CH-4",
+    "transaction_value": [
+      0.0,
+      55000.0
+    ],
+    "activity_date_type": [
+      "1",
+      "2",
+      "3",
+      "4"
+    ],
+    "activity_status_code": "2",
+    "description_narrative": [
+      "No description for this activity available at this point. Description indisponible pour cette activité."
+    ],
+    "activity_date_iso_date": [
+      "2018-11-20T00:00:00Z",
+      "2018-11-20T00:00:00Z",
+      "2020-06-30T00:00:00Z",
+      "2020-06-30T00:00:00Z"
+    ],
+    "reporting_org_narrative": [
+      "Swiss Agency for Development and Cooperation (SDC)"
+    ]
+  }
+]

@@ -21,7 +21,7 @@ import BaseModal, {
 import { getIconForInvestmentType } from "@/config/investmentTypeIcons";
 import labels from "@/config/labels.json";
 import { IATIProjectsList } from "./IATIProjectsList";
-import { IATITransactionsSummary } from "./IATITransactionsSummary";
+import { IATIActivitySummaryCard } from "./IATIActivitySummaryCard";
 import type { IATIOrganizationData } from "@/types/iati";
 
 interface OrganizationModalProps {
@@ -809,6 +809,31 @@ export default function OrganizationModal({
           })()}
         </div>
 
+        {/* IATI Data Section - Minimal */}
+        {organization.iati_data && organization.iati_data.activities && organization.iati_data.activities.length > 0 && (
+          <div className="mt-8 space-y-4">
+            <div className="mb-3 flex items-center gap-2">
+              <h3 className="font-roboto text-xl leading-normal font-black tracking-wide text-[#333333] uppercase">
+                IATI Data
+              </h3>
+              <span className="text-lg font-normal text-gray-500 tabular-nums">
+                ({organization.iati_data.activities.length})
+              </span>
+            </div>
+
+            {/* Summary metrics */}
+            {organization.iati_data.activity_summary && organization.iati_data.activity_summary.count > 0 && (
+              <IATIActivitySummaryCard
+                activitySummary={organization.iati_data.activity_summary}
+                totalActivities={organization.iati_data.stats.total_activities}
+                storedActivities={organization.iati_data.stats.stored_activities}
+                tooltipContainer={tooltipContainer}
+              />
+            )}
+
+            {/* Activities list */}
+            {organization.iati_data.activities && organization.iati_data.activities.length > 0 && (
+              <div className="mt-4 hidden flex flex-col gap-2">
         {/* IATI Data Section */}
         {organization.iati_data && (
           <div className="mt-6 space-y-6">

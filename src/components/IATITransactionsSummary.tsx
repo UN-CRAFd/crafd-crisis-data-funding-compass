@@ -1,19 +1,17 @@
 "use client";
 
-import { IATITransaction } from "@/types/iati";
-import { Card } from "@/components/ui/card";
-import { Badge } from "@/components/ui/badge";
+import { IATITransactionSummary } from "@/types/iati";
 
 interface IATITransactionsSummaryProps {
-  transactions: IATITransaction[];
+  transactionSummary: IATITransactionSummary;
   orgName: string;
 }
 
 export function IATITransactionsSummary({
-  transactions,
+  transactionSummary,
   orgName,
 }: IATITransactionsSummaryProps) {
-  if (!transactions || transactions.length === 0) {
+  if (!transactionSummary || transactionSummary.count === 0) {
     return null;
   }
 
@@ -44,18 +42,16 @@ export function IATITransactionsSummary({
     }).format(value);
   };
 
-  const getTypeName = (code: string) => {
-    const typeMap: Record<string, string> = {
-      "1": "Incoming Funds",
-      "2": "Outgoing Commitment",
-      "3": "Disbursement",
-      "4": "Expenditure",
-      "11": "Incoming Commitment",
-    };
-    return typeMap[code] || `Type ${code}`;
-  };
-
   return (
+    <div className="space-y-2">
+      <div className="text-xs font-medium text-slate-600 uppercase">Transactions</div>
+      <div className="rounded-md bg-slate-50 p-3">
+        <div className="flex items-center justify-between">
+          <span className="text-sm font-medium text-slate-600">{transactionSummary.count} Transactions</span>
+          <span className="text-lg font-bold text-slate-900">
+            {formatCurrency(transactionSummary.total_value)}
+          </span>
+        </div>
     <div className="space-y-4">
       <div className="flex items-center justify-between">
         <h3 className="text-lg font-semibold">
