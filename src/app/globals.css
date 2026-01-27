@@ -398,8 +398,8 @@ body::-webkit-scrollbar {
 .trapezoid-tab {
   position: relative;
   z-index: 1;
-  margin-right: 10px;
-  padding: 0.625rem 1.5rem;
+  margin-right: -16px;
+  padding: 0.625rem 1rem 0.625rem 1rem;
   background: transparent;
   color: #64748b;
   font-family: Qanelas, ui-sans-serif, system-ui, sans-serif !important;
@@ -413,13 +413,18 @@ body::-webkit-scrollbar {
   outline: none !important;
 }
 
+/* First tab aligns with card left edge */
+.trapezoid-tab:first-child {
+  margin-left: 1rem;
+}
+
 .trapezoid-tab::before {
   content: '';
   position: absolute;
   top: 0;
-  left: 0;
-  right: 0;
-  bottom: -2px;
+  left: -1rem;
+  right: -1.5rem;
+  bottom: 0;
   background: #e2e8f0;
   clip-path: polygon(12px 0, calc(100% - 12px) 0, 100% 100%, 0 100%);
   z-index: -1;
@@ -428,6 +433,7 @@ body::-webkit-scrollbar {
 
 .trapezoid-tab:hover {
   color: #475569;
+  z-index: 5;
 }
 
 .trapezoid-tab:hover::before {
@@ -435,7 +441,7 @@ body::-webkit-scrollbar {
 }
 
 .trapezoid-tab[data-state="active"] {
-  z-index: 10;
+  z-index: 20;
   color: var(--brand-primary);
 }
 
@@ -451,9 +457,9 @@ body::-webkit-scrollbar {
 .trapezoid-tabs-container {
   display: flex;
   align-items: flex-end;
-  border-bottom: 2px solid #cbd5e1;
+  border-bottom: none;
   padding-bottom: 0;
-  margin-bottom: 0;
+  margin-bottom: -1px;
   position: relative;
 }
 
@@ -461,8 +467,8 @@ body::-webkit-scrollbar {
 .trapezoid-settings {
   position: relative;
   z-index: 1;
-  margin-left: auto;
-  padding: 0.625rem 1.5rem;
+  margin-left: 0rem;
+  padding: 0rem 1.5rem;
   background: transparent;
   color: #64748b;
   transition: all 0.15s ease;
@@ -480,7 +486,7 @@ body::-webkit-scrollbar {
   top: 0;
   left: 0;
   right: 0;
-  bottom: -2px;
+  bottom: 0;
   background: #e2e8f0;
   clip-path: polygon(12px 0, calc(100% - 12px) 0, 100% 100%, 0 100%);
   z-index: -1;
@@ -492,5 +498,36 @@ body::-webkit-scrollbar {
 }
 
 .trapezoid-settings:hover::before {
+  background: #d1d5db;
+}
+
+/* Trapezoid Settings Container (sort + gear together) */
+.trapezoid-settings-container {
+  position: relative;
+  z-index: 1;
+  padding: 0.625rem 1.5rem;
+  background: transparent;
+  color: #64748b;
+  transition: all 0.15s ease;
+}
+
+.trapezoid-settings-container::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: #e2e8f0;
+  clip-path: polygon(12px 0, calc(100% - 12px) 0, 100% 100%, 0 100%);
+  z-index: -1;
+  transition: background 0.15s ease;
+}
+
+.trapezoid-settings-container:hover {
+  color: #475569;
+}
+
+.trapezoid-settings-container:hover::before {
   background: #d1d5db;
 }

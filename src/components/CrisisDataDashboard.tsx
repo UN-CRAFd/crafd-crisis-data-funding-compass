@@ -114,7 +114,6 @@ const NetworkGraph = dynamic(() => import("@/components/NetworkGraph"), {
 const TAB_TRIGGER_CLASS =
   "h-6 px-2.5 text-[14px] font-medium rounded-md transition-all duration-200 ease-out hover:bg-slate-100 hover:text-slate-700 data-[state=active]:bg-[var(--brand-bg-light)] data-[state=active]:shadow-sm data-[state=active]:border data-[state=active]:border-[var(--brand-border)] data-[state=active]:text-[var(--brand-primary-dark)] data-[state=active]:hover:bg-[var(--brand-bg-light)] text-slate-600 bg-slate-50 border-none";
 
-const TAB_TRIGGER_HEADER_CLASS = "trapezoid-tab";
 
 const TABS = [
   {
@@ -1068,8 +1067,8 @@ const CrisisDataDashboard = ({
                 className="flex w-full flex-col"
               >
                 {/* Tab List with Controls */}
-                <div className="flex w-full items-center">
-                  <TabsList className="trapezoid-tabs-container h-auto gap-0 rounded-none border-0 bg-transparent p-0">
+                <div className="flex w-full items-center gap-0">
+                  <TabsList className="trapezoid-tabs-container h-auto gap-0 p-0 rounded-none border-0 bg-transparent p-0">
                     <TooltipProvider delayDuration={0}>
                       {TABS.map(({ value, label, Icon, tooltip }) =>
                         tipsEnabled ? (
@@ -1078,7 +1077,7 @@ const CrisisDataDashboard = ({
                               <div>
                                 <TabsTrigger
                                   value={value}
-                                  className={TAB_TRIGGER_HEADER_CLASS}
+                                  className="trapezoid-tab -ml-8"
                                 >
                                   <Icon className="mr-2 h-5 w-5 sm:h-6 sm:w-6" />
                                   {label}
@@ -1106,7 +1105,7 @@ const CrisisDataDashboard = ({
                           <div key={value}>
                             <TabsTrigger
                               value={value}
-                              className={TAB_TRIGGER_HEADER_CLASS}
+                              className="trapezoid-tab -ml-8"
                             >
                               <Icon className="mr-2 h-5 w-5 sm:h-6 sm:w-6" />
                               {label}
@@ -1117,115 +1116,116 @@ const CrisisDataDashboard = ({
                     </TooltipProvider>
                   </TabsList>
 
-                  {/* Sort Dropdown and Settings right-aligned */}
-                  <div className="flex animate-in duration-300 slide-in-from-right-5 fade-in gap-0 items-center">
-                    {/* Sort Dropdown Box - Only for table/donors */}
-                    {(activeView === "table" || activeView === "donors") && (
-                      <div className="hidden h-7 items-center gap-1 rounded-md border border-slate-200 bg-slate-50/50 px-2 text-[14px] font-medium transition-all hover:border-slate-300 hover:bg-white sm:flex">
-                            <Button
-                              variant="ghost"
-                              size="sm"
-                              className="m-0 h-auto p-0 font-medium transition-all hover:bg-transparent"
-                              onClick={() => {
-                                const newDirection =
-                                  sortDirection === "asc" ? "desc" : "asc";
-                                onSortChange(sortBy, newDirection);
-                              }}
-                              title={
-                                sortDirection === "asc"
-                                  ? "Sort ascending"
-                                  : "Sort descending"
-                              }
-                            >
-                              {sortDirection === "asc" ? (
-                                <ArrowUpWideNarrow className="h-3 w-3" />
-                              ) : (
-                                <ArrowDownWideNarrow className="h-3 w-3" />
-                              )}
-                            </Button>
-                            <DropdownMenu
-                              onOpenChange={(open) => setSortMenuOpen(open)}
-                            >
-                              <div className="h-4 w-px bg-slate-200"></div>
-                              <DropdownMenuTrigger asChild>
-                                <Button
-                                  variant="ghost"
-                                  className="m-0 h-auto p-0 text-[14px] font-medium text-slate-700 hover:bg-transparent"
-                                >
-                                  <div className="flex min-w-0 items-center gap-1.5">
-                                    <span className="truncate">
-                                      {sortBy === "name"
-                                        ? "Alphabetically"
-                                        : sortBy === "donors"
-                                          ? activeView === "donors"
-                                            ? "Organizations"
-                                            : "Donors"
-                                          : sortBy === "assets"
-                                            ? "Assets"
-                                            : "Funding"}
-                                    </span>
-                                  </div>
-                                  <ChevronDown
-                                    className={`h-3 w-3 shrink-0 transform opacity-50 transition-transform ${
-                                      sortMenuOpen ? "rotate-180" : ""
-                                    }`}
-                                  />
-                                </Button>
-                              </DropdownMenuTrigger>
-                              <DropdownMenuContent
-                                align="end"
-                                side="bottom"
-                                sideOffset={4}
-                                className="w-auto min-w-[140px] border border-slate-200 bg-white shadow-lg"
+                  {/* Sort and Settings Trapezoid - Right-aligned */}
+                  {(
+                    <div className="ml-auto animate-in duration-300 slide-in-from-right-5 fade-in">
+                      <div className="relative z-1 flex items-center gap-0">
+                        {/* Trapezoid Container with Sort and Settings */}
+                        {((activeView === "table" || activeView === "donors") && <div className="trapezoid-settings-container hidden sm:flex items-center gap-0">
+                          <Button
+                            variant="ghost"
+                            size="sm"
+                            className="m-0 h-auto p-0 font-medium transition-all hover:bg-transparent"
+                            onClick={() => {
+                              const newDirection =
+                                sortDirection === "asc" ? "desc" : "asc";
+                              onSortChange(sortBy, newDirection);
+                            }}
+                            title={
+                              sortDirection === "asc"
+                                ? "Sort ascending"
+                                : "Sort descending"
+                            }
+                          >
+                            {sortDirection === "asc" ? (
+                              <ArrowUpWideNarrow className="h-3 w-3" />
+                            ) : (
+                              <ArrowDownWideNarrow className="h-3 w-3" />
+                            )}
+                          </Button>
+                          <div className="h-4 w-px bg-slate-400/50"></div>
+                          <DropdownMenu
+                            onOpenChange={(open) => setSortMenuOpen(open)}
+                          >
+                            <DropdownMenuTrigger asChild>
+                              <Button
+                                variant="ghost"
+                                className="m-0 h-auto p-0 text-[14px] font-medium text-slate-700 hover:bg-transparent"
                               >
+                                <div className="flex min-w-0 items-center gap-1.5">
+                                  <span className="truncate">
+                                    {sortBy === "name"
+                                      ? "Alphabetically"
+                                      : sortBy === "donors"
+                                        ? activeView === "donors"
+                                          ? "Organizations"
+                                          : "Donors"
+                                        : sortBy === "assets"
+                                          ? "Assets"
+                                          : "Funding"}
+                                  </span>
+                                </div>
+                                <ChevronDown
+                                  className={`h-3 w-3 shrink-0 transform opacity-50 transition-transform ${
+                                    sortMenuOpen ? "rotate-180" : ""
+                                  }`}
+                                />
+                              </Button>
+                            </DropdownMenuTrigger>
+                            <DropdownMenuContent
+                              align="end"
+                              side="bottom"
+                              sideOffset={4}
+                              className="w-auto min-w-[140px] border border-slate-200 bg-white shadow-lg"
+                            >
+                              <DropdownMenuItem
+                                onClick={() =>
+                                  onSortChange("name", sortDirection)
+                                }
+                                className="cursor-pointer py-1 text-[14px]"
+                              >
+                                Alphabetically
+                              </DropdownMenuItem>
+                              <DropdownMenuItem
+                                onClick={() =>
+                                  onSortChange("donors", sortDirection)
+                                }
+                                className="cursor-pointer py-1 text-[14px]"
+                              >
+                                {activeView === "donors"
+                                  ? "No. of Organizations"
+                                  : "No. of Donors"}
+                              </DropdownMenuItem>
+                              <DropdownMenuItem
+                                onClick={() =>
+                                  onSortChange("assets", sortDirection)
+                                }
+                                className="cursor-pointer py-1 text-[14px]"
+                              >
+                                No. of Assets
+                              </DropdownMenuItem>
+                              {activeView === "table" && (
                                 <DropdownMenuItem
                                   onClick={() =>
-                                    onSortChange("name", sortDirection)
+                                    onSortChange("funding", sortDirection)
                                   }
                                   className="cursor-pointer py-1 text-[14px]"
                                 >
-                                  Alphabetically
+                                  Funding
                                 </DropdownMenuItem>
-                                <DropdownMenuItem
-                                  onClick={() =>
-                                    onSortChange("donors", sortDirection)
-                                  }
-                                  className="cursor-pointer py-1 text-[14px]"
-                                >
-                                  {activeView === "donors"
-                                    ? "No. of Organizations"
-                                    : "No. of Donors"}
-                                </DropdownMenuItem>
-                                <DropdownMenuItem
-                                  onClick={() =>
-                                    onSortChange("assets", sortDirection)
-                                  }
-                                  className="cursor-pointer py-1 text-[14px]"
-                                >
-                                  No. of Assets
-                                </DropdownMenuItem>
-                                {activeView === "table" && (
-                                  <DropdownMenuItem
-                                    onClick={() =>
-                                      onSortChange("funding", sortDirection)
-                                    }
-                                    className="cursor-pointer py-1 text-[14px]"
-                                  >
-                                    Funding
-                                  </DropdownMenuItem>
-                                )}
-                              </DropdownMenuContent>
-                            </DropdownMenu>
-                      </div>
-                    )}
+                              )}
+                            </DropdownMenuContent>
+                          </DropdownMenu>
+                          <div className="h-4 w-px bg-slate-400/50"></div>
+                        </div>)}
+                        <div className="trapezoid-settings-container gap-0">
 
-                    {/* Settings Gear Icon - Trapezoid Button (always visible) */}
-                    <DropdownMenu>
-                      <DropdownMenuTrigger asChild>
-                        <button className="trapezoid-settings">
-                          <Settings className="h-4 w-4" />
-                        </button>
-                      </DropdownMenuTrigger>
+                          <DropdownMenu>
+                            <DropdownMenuTrigger asChild>
+                              <button className="p-0 bg-transparent border-none m-0">
+                                <Settings className="h-4 w-4" />
+                              </button>
+                            </DropdownMenuTrigger>
                             <DropdownMenuContent
                               align="end"
                               side="bottom"
@@ -1318,12 +1318,16 @@ const CrisisDataDashboard = ({
                                 <span>Select CRAF'd Donors</span>
                               </DropdownMenuItem>
                             </DropdownMenuContent>
-                    </DropdownMenu>
-                  </div>
+                          </DropdownMenu>
+                        </div>
+                      </div>
+                    </div>
+                  )}
+
                 </div>
 
                 {/* Card with Content and Tab Views */}
-                <Card className={STYLES.cardGlass}>
+                <Card className={`${STYLES.cardGlass} !mt-0 !border-t-0`}>
                   {/* Filters */}
                   <CardContent className="px-4 pt-0 pb-4 sm:px-6 sm:pb-6">
                     <FilterBar
