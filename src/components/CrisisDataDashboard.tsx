@@ -887,7 +887,7 @@ const CrisisDataDashboard = ({
   };
 
   return (
-    <div className="min-h-screen bg-slate-500">
+    <div className="min-h-screen bg-slate-100">
       {/* Header Section - Fixed */}
       <PageHeader
         onShare={handleShare}

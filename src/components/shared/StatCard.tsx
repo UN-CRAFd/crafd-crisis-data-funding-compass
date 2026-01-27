@@ -11,11 +11,6 @@ import {
   CardHeader,
 } from "@/components/ui/card";
 import {
-  Collapsible,
-  CollapsibleContent,
-  CollapsibleTrigger,
-} from "@/components/ui/collapsible";
-import {
   Tooltip as TooltipUI,
   TooltipContent,
   TooltipProvider,
@@ -24,6 +19,10 @@ import {
 import { SectionHeader } from "../SectionHeader";
 import { useTips } from "@/contexts/TipsContext";
 import { ChevronDown } from "lucide-react";
+import {
+  Collapsible,
+  CollapsibleContent,
+} from "@/components/ui/collapsible";
 
 interface StatCardProps {
   icon: React.ReactNode;
@@ -78,66 +77,57 @@ export const StatCard = React.memo(function StatCard({
 
   const colors = gradients[colorScheme];
 
-  const cardContent = children ? (
+  const cardContent = (
     <Collapsible open={isExpanded} onOpenChange={setIsExpanded}>
       <div className="relative">
         <Card className={`${STYLES.statCard} bg-gradient-to-br ${colors.bg}`}>
-          <CollapsibleTrigger className="w-full">
-            <CardHeader className="h-5 pb-0 mb-5">
+          {children ? (
+            <button
+              onClick={() => setIsExpanded(!isExpanded)}
+              className="w-full text-left"
+            >
+              <CardHeader className="h-5 pb-0 mb-5">
+                <CardDescription>
+                  <div className="flex items-center justify-between">
+                    <SectionHeader icon={icon} title={title} />
+                    <ChevronDown
+                      className={`h-4 w-4 text-slate-500 transition-transform duration-200 ${
+                        isExpanded ? "rotate-180" : ""
+                      }`}
+                    />
+                  </div>
+                </CardDescription>
+              </CardHeader>
+            </button>
+          ) : (
+            <CardHeader className="h-5 pb-0">
               <CardDescription>
-                <div className="flex items-center justify-between">
-                  <SectionHeader icon={icon} title={title} />
-                  <ChevronDown
-                    className={`h-4 w-4 text-slate-500 transition-transform duration-200 ${
-                      isExpanded ? "rotate-180" : ""
-                    }`}
-                  />
-                </div>
+                <SectionHeader icon={icon} title={title} />
               </CardDescription>
             </CardHeader>
-            <CardContent className="pt-0">
-              <div className="flex items-baseline gap-2">
-                <div
-                  className={`font-mono text-4xl leading-none font-bold tabular-nums sm:text-5xl ${colors.value}`}
-                >
-                  {value}
-                </div>
-                <div
-                  className={`text-sm leading-none font-medium sm:text-lg ${colors.label}`}
-                >
-                  {label}
-                </div>
+          )}
+          <CardContent className="pt-0">
+            <div className="flex items-baseline gap-2">
+              <div
+                className={`font-mono text-4xl leading-none font-bold tabular-nums sm:text-5xl ${colors.value}`}
+              >
+                {value}
               </div>
-            </CardContent>
-          </CollapsibleTrigger>
+              <div
+                className={`text-sm leading-none font-medium sm:text-lg ${colors.label}`}
+              >
+                {label}
+              </div>
+            </div>
+          </CardContent>
         </Card>
-        <CollapsibleContent className="absolute left-0 right-0 top-full z-50 mt-2 bg-white border border-[var(--brand-primary-light)]/40 rounded-lg overflow-hidden">
-          <CardContent className="p-4">{children}</CardContent>
-        </CollapsibleContent>
+        {children && (
+          <CollapsibleContent className="absolute left-0 right-0 top-full z-50 mt-2 bg-white border border-[var(--brand-primary-light)]/40 rounded-lg overflow-hidden">
+            <CardContent className="p-4">{children}</CardContent>
+          </CollapsibleContent>
+        )}
       </div>
     </Collapsible>
-  ) : (
-    <Card className={`${STYLES.statCard} bg-gradient-to-br ${colors.bg}`}>
-      <CardHeader className="h-5 pb-0">
-        <CardDescription>
-          <SectionHeader icon={icon} title={title} />
-        </CardDescription>
-      </CardHeader>
-      <CardContent className="pt-0">
-        <div className="flex items-baseline gap-2">
-          <div
-            className={`font-mono text-4xl leading-none font-bold tabular-nums sm:text-5xl ${colors.value}`}
-          >
-            {value}
-          </div>
-          <div
-            className={`text-sm leading-none font-medium sm:text-lg ${colors.label}`}
-          >
-            {label}
-          </div>
-        </div>
-      </CardContent>
-    </Card>
   );
 
   if (tooltip && tipsEnabled) {
