@@ -5,7 +5,6 @@ import * as countries from "i18n-iso-countries";
 // Load JSON locale using require to avoid needing `resolveJsonModule` in tsconfig
 let enLocale: any = null;
 try {
-   
   enLocale = require("i18n-iso-countries/langs/en.json");
   countries.registerLocale(
     enLocale as unknown as import("i18n-iso-countries").LocaleData,

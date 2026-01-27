@@ -93,6 +93,111 @@ export function IATIProjectsList({
           )}
         </button>
       )}
+    <div className="space-y-4">
+      <div className="flex items-center justify-between">
+        <h3 className="text-lg font-semibold">
+          IATI Projects ({activities.length})
+        </h3>
+        <Badge variant="outline" className="text-xs">
+          from iatistandard.org
+        </Badge>
+      </div>
+
+      <div className="space-y-3">
+        {activities.slice(0, 20).map((activity, index) => (
+          <Collapsible key={activity.iati_identifier || index}>
+            <Card className="p-4">
+              <CollapsibleTrigger className="w-full">
+                <div className="flex items-start justify-between gap-4">
+                  <div className="flex-1 text-left">
+                    <div className="flex items-start gap-2">
+                      <h4 className="leading-tight font-medium">
+                        {getTitle(activity)}
+                      </h4>
+                      <ChevronDown className="h-4 w-4 shrink-0 transition-transform duration-200 [[data-state=open]>&]:rotate-180" />
+                    </div>
+                    <div className="text-muted-foreground mt-1 flex items-center gap-2 text-sm">
+                      {activity.budget_value && (
+                        <span className="flex items-center gap-1">
+                          <DollarSign className="h-3 w-3" />
+                          {formatCurrency(activity.budget_value)}
+                        </span>
+                      )}
+                      {activity.activity_status_code &&
+                        getStatusBadge(activity.activity_status_code)}
+                    </div>
+                  </div>
+                </div>
+              </CollapsibleTrigger>
+
+              <CollapsibleContent>
+                <div className="mt-4 space-y-3">
+                  <Separator />
+
+                  {getDescription(activity) && (
+                    <p className="text-muted-foreground text-sm">
+                      {getDescription(activity)}
+                    </p>
+                  )}
+
+                  <div className="grid gap-2 text-sm">
+                    {activity.sector_narrative && (
+                      <div>
+                        <span className="font-medium">Sectors: </span>
+                        <span className="text-muted-foreground">
+                          {Array.isArray(activity.sector_narrative)
+                            ? activity.sector_narrative.join(", ")
+                            : activity.sector_narrative}
+                        </span>
+                      </div>
+                    )}
+
+                    {activity.recipient_country_code && (
+                      <div>
+                        <span className="font-medium">Countries: </span>
+                        <span className="text-muted-foreground">
+                          {Array.isArray(activity.recipient_country_code)
+                            ? activity.recipient_country_code.join(", ")
+                            : activity.recipient_country_code}
+                        </span>
+                      </div>
+                    )}
+
+                    {activity.activity_date_iso_date && (
+                      <div className="flex items-center gap-1">
+                        <Calendar className="h-3 w-3" />
+                        <span className="text-muted-foreground">
+                          {Array.isArray(activity.activity_date_iso_date)
+                            ? activity.activity_date_iso_date[0]
+                            : activity.activity_date_iso_date}
+                        </span>
+                      </div>
+                    )}
+
+                    <div className="mt-2">
+                      <a
+                        href={`https://d-portal.org/q.html?aid=${activity.iati_identifier}`}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="text-primary inline-flex items-center gap-1 text-xs hover:underline"
+                      >
+                        View on D-Portal
+                        <ExternalLink className="h-3 w-3" />
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </CollapsibleContent>
+            </Card>
+          </Collapsible>
+        ))}
+
+        {activities.length > 20 && (
+          <p className="text-muted-foreground text-center text-sm">
+            Showing 20 of {activities.length} projects
+          </p>
+        )}
+      </div>
     </div>
   );
 }
