@@ -123,7 +123,7 @@ export const StatCard = React.memo(function StatCard({
         </Card>
         {children && (
           <CollapsibleContent className="absolute left-0 right-0 top-full z-50 mt-2 bg-white border border-[var(--brand-primary-light)]/40 rounded-lg overflow-hidden">
-            <CardContent className="p-4">{children}</CardContent>
+            <CardContent className="p-0">{children}</CardContent>
           </CollapsibleContent>
         )}
       </div>
