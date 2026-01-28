@@ -337,7 +337,7 @@ const CrisisDataDashboard = ({
   const { projectCountsByType, projectCountsByTheme } = useProjectCounts({
     organizations: dashboardData?.allOrganizations || [],
     combinedDonors,
-    appliedSearchQuery: searchQuery,
+    appliedSearchQuery,
     investmentTypes,
     investmentThemes,
   });
@@ -624,7 +624,7 @@ const CrisisDataDashboard = ({
 
   // Shared export options for CSV/XLSX
   const getExportOptions = () => ({
-    searchQuery: searchQuery || undefined,
+    searchQuery: appliedSearchQuery || undefined,
     donorCountries: combinedDonors,
     investmentTypes: investmentTypes,
     investmentThemes: investmentThemes,
@@ -756,7 +756,7 @@ const CrisisDataDashboard = ({
       combinedDonors.length > 0 ||
       investmentTypes.length > 0 ||
       investmentThemes.length > 0 ||
-      searchQuery;
+      appliedSearchQuery;
 
     if (!hasFilters) {
       const template = labels.filterDescription.showingAll;
@@ -1156,6 +1156,7 @@ const CrisisDataDashboard = ({
                               className="w-auto min-w-[250px] border border-slate-200 bg-white shadow-lg"
                             >
                               <DropdownMenuItem
+                                onSelect={(e) => e.preventDefault()}
                                 onClick={() =>
                                   setTipsEnabled(!tipsEnabled)
                                 }
@@ -1163,14 +1164,15 @@ const CrisisDataDashboard = ({
                               >
                                 <div className="flex items-center">
                                   <Lightbulb className="mr-2 h-4 w-4" />
-                                  <span>Tips</span>
+                                  <span>Show Tips</span>
                                 </div>
-                                <div className={`h-4 w-7 rounded-full transition-colors ${tipsEnabled ? "bg-green-500" : "bg-slate-300"}`}>
+                                <div className={`h-4 w-7 rounded-full transition-colors ${tipsEnabled ? "bg-[var(--brand-primary-dark)]" : "bg-slate-300"}`}>
                                   <div className={`h-4 w-4 rounded-full bg-white transition-transform ${tipsEnabled ? "translate-x-3" : "translate-x-0"}`} />
                                 </div>
                               </DropdownMenuItem>
 
                               <DropdownMenuItem
+                                onSelect={(e) => e.preventDefault()}
                                 onClick={() => {
                                   const newValue =
                                     !showGeneralContributions;
@@ -1181,14 +1183,15 @@ const CrisisDataDashboard = ({
                               >
                                 <div className="flex items-center">
                                   <Landmark className="mr-2 h-4 w-4" />
-                                  <span>General Contributions</span>
+                                  <span>Include Core Contributions</span>
                                 </div>
-                                <div className={`h-4 w-7 rounded-full transition-colors ${showGeneralContributions ? "bg-green-500" : "bg-slate-300"}`}>
+                                <div className={`h-4 w-7 rounded-full transition-colors ${showGeneralContributions ? "bg-[var(--brand-primary-dark)]" : "bg-slate-300"}`}>
                                   <div className={`h-4 w-4 rounded-full bg-white transition-transform ${showGeneralContributions ? "translate-x-3" : "translate-x-0"}`} />
                                 </div>
                               </DropdownMenuItem>
 
                               <DropdownMenuItem
+                                onSelect={(e) => e.preventDefault()}
                                 onClick={() => {
                                   const raw = searchParams?.toString() || "";
                                   const params = new URLSearchParams(raw);
@@ -1235,10 +1238,48 @@ const CrisisDataDashboard = ({
                                     : "/";
                                   router.push(target);
                                 }}
-                                className="cursor-pointer py-2 text-sm"
+                                className="cursor-pointer flex items-center justify-between py-2 px-2 text-sm hover:bg-slate-100"
                               >
-                                <UserRoundPlus className="mr-2 h-4 w-4" />
-                                <span>Select CRAF'd Donors</span>
+                                <div className="flex items-center">
+                                  <UserRoundPlus className="mr-2 h-4 w-4" />
+                                  <span>Select CRAF'd Donors</span>
+                                </div>
+                                {(() => {
+                                  const raw = searchParams?.toString() || "";
+                                  const params = new URLSearchParams(raw);
+                                  const incoming = (
+                                    params.get("d") ??
+                                    params.get("donors") ??
+                                    ""
+                                  )
+                                    .split(",")
+                                    .filter(Boolean);
+                                  const crafdKey = "crafd-donors";
+                                  const crafdExpansion = [
+                                    "germany",
+                                    "netherlands",
+                                    "canada",
+                                    "finland",
+                                    "luxembourg",
+                                    "united-kingdom",
+                                    "european-union",
+                                    "usa",
+                                  ];
+
+                                  const hasCrafd =
+                                    incoming.includes(crafdKey) ||
+                                    (incoming.length ===
+                                      crafdExpansion.length &&
+                                      crafdExpansion.every((s) =>
+                                        incoming.includes(s)
+                                      ));
+
+                                  return (
+                                    <div className={`h-4 w-7 rounded-full transition-colors ${hasCrafd ? "bg-[var(--brand-primary-dark)]" : "bg-slate-300"}`}>
+                                      <div className={`h-4 w-4 rounded-full bg-white transition-transform ${hasCrafd ? "translate-x-3" : "translate-x-0"}`} />
+                                    </div>
+                                  );
+                                })()}
                               </DropdownMenuItem>
                             </DropdownMenuContent>
                           </DropdownMenu>

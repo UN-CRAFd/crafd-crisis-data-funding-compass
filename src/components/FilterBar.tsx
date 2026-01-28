@@ -102,15 +102,6 @@ const FilterBar: React.FC<FilterBarProps> = ({
     getMemberStates().then((states) => setMemberStates(states));
   }, []);
 
-  // Debounce search submission - wait 300ms after user stops typing
-  useEffect(() => {
-    const timeoutId = setTimeout(() => {
-      onSearchSubmit();
-    }, 300);
-
-    return () => clearTimeout(timeoutId);
-  }, [searchQuery, onSearchSubmit]);
-
   // Clear donor search when the selected donors change (so dropdown search resets)
   useEffect(() => {
     setDonorSearchQuery("");
@@ -158,6 +149,11 @@ const FilterBar: React.FC<FilterBarProps> = ({
             placeholder={labels.filters.searchPlaceholder}
             value={searchQuery}
             onChange={(e) => onSearchChange(e.target.value)}
+            onKeyDown={(e) => {
+              if (e.key === "Enter") {
+                onSearchSubmit();
+              }
+            }}
             className="h-10 w-full border-slate-200 bg-slate-50/50 pr-4 pl-10 font-normal transition-all hover:border-slate-300 hover:bg-white focus:border-[var(--brand-primary)] focus:bg-white focus:ring-2 focus:ring-[var(--brand-primary)]/20"
           />
         </div>
