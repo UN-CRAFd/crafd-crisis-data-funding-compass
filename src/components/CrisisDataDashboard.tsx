@@ -337,7 +337,7 @@ const CrisisDataDashboard = ({
   const { projectCountsByType, projectCountsByTheme } = useProjectCounts({
     organizations: dashboardData?.allOrganizations || [],
     combinedDonors,
-    appliedSearchQuery,
+    appliedSearchQuery: searchQuery,
     investmentTypes,
     investmentThemes,
   });
@@ -624,7 +624,7 @@ const CrisisDataDashboard = ({
 
   // Shared export options for CSV/XLSX
   const getExportOptions = () => ({
-    searchQuery: appliedSearchQuery || undefined,
+    searchQuery: searchQuery || undefined,
     donorCountries: combinedDonors,
     investmentTypes: investmentTypes,
     investmentThemes: investmentThemes,
@@ -756,7 +756,7 @@ const CrisisDataDashboard = ({
       combinedDonors.length > 0 ||
       investmentTypes.length > 0 ||
       investmentThemes.length > 0 ||
-      appliedSearchQuery;
+      searchQuery;
 
     if (!hasFilters) {
       const template = labels.filterDescription.showingAll;
