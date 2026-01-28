@@ -108,7 +108,7 @@ const TABS = [
   },
   {
     value: "network",
-    label: "Network",
+    label: "Network Analysis",
     Icon: Network,
     tooltip:
       "Visualize relationships between organizations, projects, and donors",
