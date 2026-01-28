@@ -1018,8 +1018,7 @@ const CrisisDataDashboard = ({
                                   value={value}
                                   className="trapezoid-tab -ml-8"
                                 >
-                                  <Icon className="mr-2 h-5 w-5 sm:h-6 sm:w-6" />
-                                  {label}
+                                  <SectionHeader icon={<Icon />} title={label} isActive={value === activeView} />
                                 </TabsTrigger>
                               </div>
                             </TooltipTrigger>
@@ -1040,8 +1039,7 @@ const CrisisDataDashboard = ({
                               value={value}
                               className="trapezoid-tab -ml-8"
                             >
-                              <Icon className="mr-2 h-5 w-5 sm:h-6 sm:w-6" />
-                              {label}
+                              <SectionHeader icon={<Icon />} title={label} isActive={value === activeView} />
                             </TabsTrigger>
                           </div>
                         ),
