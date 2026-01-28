@@ -27,21 +27,21 @@
     "dataProviders": {
       "title": "Who receives funds",
       "label": "Organizations",
-      "tooltip": "Organizations in the crisis data ecosystem who maintain essential assets."
+      "tooltip": "Organizations in the crisis data ecosystem who maintain essential products."
     },
     "dataProjects": {
       "title": "What funds are used for",
-      "label": "Assets",
-      "tooltip": "Essential assets that enable partners to anticipate, prevent, and respond to crises around the world."
+      "label": "Products",
+      "tooltip": "Essential products that enable partners to anticipate, prevent, and respond to crises around the world."
     },
     "donorCountries": {
       "title": "Where funds are from",
       "label": "Donors",
-      "tooltip": "Key donors in the crisis data ecosystem who provide funding to maintain essential assets."
+      "tooltip": "Key donors in the crisis data ecosystem who provide funding to maintain essential products."
     }
   },
   "filters": {
-    "searchPlaceholder": "Search Organizations & Assets...",
+    "searchPlaceholder": "Search Organizations & Products...",
     "donorPlaceholder": "Select Donor(s)...",
     "typePlaceholder": "Select Type(s)...",
     "themePlaceholder": "Select Theme(s)...",
@@ -53,7 +53,7 @@
   },
   "sections": {
     "organizationsAndProjects": "Funding Registry",
-    "projectCategories": "Assets by Type",
+    "projectCategories": "Products by Type",
     "organizationTypes": "Organizations by Type",
     "donorCount": "Co-Financing Donors"
   },
@@ -66,22 +66,22 @@
     "learning": "Learning & Exchange"
   },
   "product": {
-    "singular": "asset",
-    "plural": "assets",
-    "capitalizedSingular": "Asset",
-    "capitalizedPlural": "Assets"
+    "singular": "product",
+    "plural": "products",
+    "capitalizedSingular": "Product",
+    "capitalizedPlural": "Products"
   },
   "projectDetails": {
-    "donorCountries": "Asset Donor",
+    "donorCountries": "Product Donor",
     "investmentTypes": "Investment Types",
     "notSpecified": "Not specified"
   },
   "filterDescription": {
-    "showingAll": "Showing all {organizations} organizations, providing {projects} assets",
+    "showingAll": "Showing all {organizations} organizations, providing {projects} products",
     "showing": "Showing",
     "funds": "funds",
-    "project": "asset",
-    "projects": "assets",
+    "project": "product",
+    "projects": "products",
     "in": "in",
     "relatingTo": "relating to",
     "donor": "donor",
@@ -120,7 +120,7 @@
     "hdx": "HDX",
     "iati": "IATI",
     "openWebsite": "Open Website",
-    "providedAssets": "Provided Assets",
+    "providedAssets": "Provided Products",
     "organizationFunding": "Organization Funding",
     "estOrgBudget": "Est. Org Budget",
     "budgetSource": "Budget Source",
@@ -133,10 +133,10 @@
     "budgetlineUn": "Part of the general budget.",
     "noBudgetDisclosed": "No detailed budget amount is publicly disclosed.",
     "providerOrganizations": "Provider Organizations",
-    "assetTypeAndTheme": "Asset Type & Theme",
-    "assetFunding": "Asset Funding",
-    "noAssetDonorInfo": "No asset donor information available",
-    "assetDonorsNotSpecified": "Asset donors not specified",
+    "assetTypeAndTheme": "Product Type & Theme",
+    "assetFunding": "Product Funding",
+    "noAssetDonorInfo": "No product donor information available",
+    "assetDonorsNotSpecified": "Product donors not specified",
     "notesProjectDonors": "Project donor countries may differ from organization-level donor countries.",
     "hdxDataGrid": "HDX Data Grid",
     "visitProjectWebsite": "Visit Project Website",
@@ -144,7 +144,7 @@
     "clickToFilterByType": "Click to filter by this investment type",
     "similarProjects": "Similar Projects",
     "financedOrgs": "Financed Organizations",
-    "financedAssets": "Financed Assets",
+    "financedAssets": "Financed Products",
     "noAgenciesFound": "No agencies found for this donor.",
     "headquarteredIn": "Headquartered in"
   },
@@ -218,7 +218,7 @@
     "investmentTypingDescription": "Each project is classified into one or more investment types based on project descriptions and metadata:",
     "themeTagging": "Theme Tagging",
     "themeTaggingDescription": "Projects are tagged with thematic areas (e.g., health, displacement, food security) using keyword analysis and expert review.",
-    "assetTypeExplorer": "Asset Type Explorer",
+    "assetTypeExplorer": "Product Type Explorer",
     "clickOnInvestmentType": "Click on an investment type to explore",
     "relatedThemes": "Related Themes",
     "limitations": "Limitations",
@@ -279,9 +279,9 @@
     "networkGraphVisualization": "Network Graph Visualization",
     "exportFunctionality": "Export Functionality",
     "csvExport": "CSV Export",
-    "csvExportDescription": "Exports two CSV files (organization table and asset table) in a ZIP archive. Organizations CSV includes names, types, descriptions, and funding sources. Assets CSV includes names, associated organizations, types, themes, donors, descriptions, and website.",
+    "csvExportDescription": "Exports two CSV files (organization table and product table) in a ZIP archive. Organizations CSV includes names, types, descriptions, and funding sources. Products CSV includes names, associated organizations, types, themes, donors, descriptions, and website.",
     "excelExport": "Excel Export",
-    "excelExportDescription": "Export the same data as a professionally formatted Excel workbook. Includes organizations and assets sheets with styling and optimized column widths. Includes a README file with export metadata and current filter details.",
+    "excelExportDescription": "Export the same data as a professionally formatted Excel workbook. Includes organizations and products sheets with styling and optimized column widths. Includes a README file with export metadata and current filter details.",
     "sharingAndReproducibility": "Sharing & Reproducibility",
     "sharingAndReproducibilityDescription": "All exports respect your current filters (donors, investment types, themes, search query). The metadata and README file includes information about which filters were applied. Also, when sharing a link to the app, the same filters will be pre-applied for recipients, as the filter criteria are denoted in the URL.",
     "workingWithTheData": "Working with the Data",
