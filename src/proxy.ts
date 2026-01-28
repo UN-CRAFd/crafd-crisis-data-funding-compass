@@ -21,6 +21,7 @@ export function proxy(req: NextRequest) {
     pathname.startsWith("/_next") ||
     pathname.startsWith("/assets") ||
     pathname.startsWith("/static") ||
+    pathname.startsWith("/logos") ||
     pathname.startsWith("/api") // if you have other APIs that shouldn't be gated, remove this
   ) {
     return NextResponse.next();
