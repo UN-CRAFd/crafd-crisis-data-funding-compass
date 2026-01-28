@@ -51,6 +51,7 @@ import {
   Lightbulb,
   Landmark,
   UserRoundPlus,
+  Compass
 } from "lucide-react";
 import organizationsTableRaw from "../../public/data/organizations-table.json";
 import nestedOrganizationsRaw from "../../public/data/organizations-nested.json";
@@ -663,10 +664,8 @@ const CrisisDataDashboard = ({
   if (loading) {
     return (
       <div className="flex min-h-screen items-center justify-center bg-slate-50">
-        <div className="text-center">
-          <div className="border-black-600 mx-auto mb-4 h-12 w-12 animate-spin rounded-full border-b-2"></div>
-          <p className="text-slate-600">{labels.loading.message}</p>
-        </div>
+        <Compass className="h-10 w-10 animate-spin text-[var(--brand-primary)] mr-3" />
+        <span className="text-slate-600">{labels.loading.message}</span>
       </div>
     );
   }

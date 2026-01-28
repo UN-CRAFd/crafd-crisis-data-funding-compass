@@ -4,17 +4,18 @@ import { LogOut } from "lucide-react";
 import { cookies } from "next/headers";
 import { redirect } from "next/navigation";
 import { Suspense } from "react";
+import { Compass } from "lucide-react";
+// Update the import path to the correct relative location for labels.json
+import labels from "../config/labels.json";
 
 export default async function Home() {
   return (
     <Suspense
       fallback={
-        <div className="flex min-h-screen items-center justify-center bg-slate-50">
-          <div className="text-center">
-            <div className="mx-auto mb-4 h-12 w-12 animate-spin rounded-full border-b-2 border-slate-600"></div>
-            <p className="text-slate-600">Loading dashboard...</p>
+      <div className="flex min-h-screen items-center justify-center bg-slate-50">
+       <Compass className="h-10 w-10 animate-spin text-[var(--brand-primary)] mr-3" />
+       <span className="text-slate-600">{labels.loading.message}</span>
           </div>
-        </div>
       }
     >
       <CrisisDataDashboardWrapper />
