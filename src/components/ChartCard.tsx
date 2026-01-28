@@ -1,5 +1,5 @@
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import React, { useRef, useState } from "react";
+import React, { useRef, useState, useMemo, useEffect } from "react";
 import {
   Bar,
   BarChart,
@@ -34,6 +34,19 @@ interface LabelProps {
   index?: number;
 }
 
+// Helper function to measure text width
+const measureTextWidth = (text: string, fontSize: number = 13): number => {
+  if (typeof document === "undefined") return text.length * 8; // Fallback for SSR
+  
+  const canvas = document.createElement("canvas");
+  const ctx = canvas.getContext("2d");
+  if (!ctx) return text.length * 8;
+  
+  ctx.font = `${fontSize}px -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial`;
+  const metrics = ctx.measureText(text);
+  return metrics.width;
+};
+
 const ChartCard = React.memo(function ChartCard({
   title,
   icon,
@@ -42,7 +55,31 @@ const ChartCard = React.memo(function ChartCard({
   footnote,
 }: ChartCardProps) {
   const [hoveredIndex, setHoveredIndex] = useState<number | null>(null);
+  const [calculatedYAxisWidth, setCalculatedYAxisWidth] = useState<number>(240);
   const leaveTimeoutRef = useRef<NodeJS.Timeout | null>(null);
+
+  // Calculate optimal Y-axis width based on label content
+  useEffect(() => {
+    if (data.length === 0) return;
+
+    // Measure all label widths
+    const labelWidths = data.map((entry) =>
+      measureTextWidth(entry.name, 13)
+    );
+
+    // Get the maximum width and add padding
+    const maxLabelWidth = Math.max(...labelWidths);
+    const padding = 16; // Padding on both sides
+    const calculatedWidth = Math.max(
+      maxLabelWidth + padding,
+      100 // Minimum width
+    );
+
+    // Cap the maximum width to prevent extreme cases
+    const finalWidth = Math.min(calculatedWidth, 320);
+
+    setCalculatedYAxisWidth(finalWidth);
+  }, [data]);
 
   const handleMouseEnter = (_: unknown, index: number) => {
     // Clear any pending leave timeout to prevent hiding
@@ -79,6 +116,15 @@ const ChartCard = React.memo(function ChartCard({
   // Resolve color once for use in cells
   const resolvedColor = getColor(barColor);
 
+  // Calculate dynamic left margin to maintain proper spacing
+  // Original: width=240, left=-49, so total offset = 191
+  // Maintain the same ratio
+  const originalWidth = 240;
+  const originalMarginLeft = -17;
+  const dynamicLeftMargin = Math.round(
+    originalMarginLeft * (calculatedYAxisWidth / originalWidth)
+  );
+
   return (
     <Card className={`${CHART_STYLES.cardGlass} sticky top-28`}>
       <CardHeader className="h-6.5 pb-0">
@@ -99,7 +145,7 @@ const ChartCard = React.memo(function ChartCard({
           <BarChart
             data={data}
             layout="vertical"
-            margin={{ top: 0, right: 10, left: -49, bottom: 0 }}
+            margin={{ top: 0, right: 10, left: dynamicLeftMargin, bottom: 0 }}
           >
             <CartesianGrid
               strokeDasharray="3 3"
@@ -116,7 +162,7 @@ const ChartCard = React.memo(function ChartCard({
             <YAxis
               dataKey="name"
               type="category"
-              width={240}
+              width={calculatedYAxisWidth}
               stroke="var(--chart-axis-stroke)"
               tick={{ fontSize: 13, dx: 1 }}
               tickLine={false}
