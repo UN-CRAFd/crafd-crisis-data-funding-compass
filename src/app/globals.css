@@ -468,8 +468,14 @@ body::-webkit-scrollbar {
   background: white !important;
 }
 
+.trapezoid-tab-white:hover {
+  color: #475569 !important;
+  z-index: 5;
+}
+
 .trapezoid-tab-white:hover::before {
-  background: #f5f5f5 !important;
+  /* Match unselected trapezoid hover gray used by .trapezoid-tab */
+  background: #d1d5db !important;
 }
 
 /* Settings button - symmetric padding and no right margin */
