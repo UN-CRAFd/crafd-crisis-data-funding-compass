@@ -436,6 +436,7 @@ body::-webkit-scrollbar {
   bottom: 0;
   background: #e2e8f0;
   clip-path: polygon(12px 0, calc(100% - 12px) 0, 100% 100%, 0 100%);
+  border-radius: 12px 12px 0 0;
   z-index: -1;
   transition: background 0.15s ease;
 }
@@ -482,6 +483,7 @@ body::-webkit-scrollbar {
   left: 0 !important;
   right: 0 !important;
   clip-path: polygon(12px 0, calc(100% - 12px) 0, 100% 100%, 0 100%) !important;
+  border-radius: 12px 12px 0 0 !important;
 }
 
 /* Container for trapezoid tabs */
