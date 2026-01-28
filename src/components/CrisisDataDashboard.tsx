@@ -832,7 +832,7 @@ const CrisisDataDashboard = ({
     );
 
     // Add project count
-    const projectLabel = stats.dataProjects !== 1 ? "assets" : "asset";
+    const projectLabel = stats.dataProjects !== 1 ? "products" : "product";
     elements.push(
       <React.Fragment key="projects">
         {" "}
@@ -1088,7 +1088,7 @@ const CrisisDataDashboard = ({
                                         ? "Organizations"
                                         : "Donors"
                                       : sortBy === "assets"
-                                        ? "Assets"
+                                        ? "Products"
                                         : "Funding"}
                                 </span>
 
@@ -1124,7 +1124,7 @@ const CrisisDataDashboard = ({
                               onClick={() => onSortChange("assets", sortDirection)}
                               className="cursor-pointer py-1 text-[14px]"
                             >
-                              No. of Assets
+                              No. of Products
                             </DropdownMenuItem>
                             {activeView === "table" && (
                               <DropdownMenuItem
@@ -1576,9 +1576,9 @@ const CrisisDataDashboard = ({
                                         <div className="text-xs whitespace-nowrap text-slate-400 sm:text-xs">
                                           {org.projects.length > 0
                                             ? isExpanded
-                                              ? `Showing ${org.projects.length} asset${org.projects.length === 1 ? "" : "s"}`
-                                              : `Show ${org.projects.length} asset${org.projects.length === 1 ? "" : "s"}`
-                                            : `${org.projects.length} asset${org.projects.length === 1 ? "" : "s"}`}
+                                              ? `Showing ${org.projects.length} product${org.projects.length === 1 ? "" : "s"}`
+                                              : `Show ${org.projects.length} product${org.projects.length === 1 ? "" : "s"}`
+                                            : `${org.projects.length} product${org.projects.length === 1 ? "" : "s"}`}
                                         </div>
                                       </div>
                                     </div>
