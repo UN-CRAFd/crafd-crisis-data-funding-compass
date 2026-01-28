@@ -97,7 +97,7 @@ const TABS = [
   {
     value: "table",
     label: "Organizations",
-    Icon: Table,
+    Icon: Building2,
     tooltip: "View organizations and their projects in a table format",
   },
   {
@@ -917,17 +917,7 @@ const CrisisDataDashboard = ({
               : `Showing ${topDonors.length} donor${topDonors.length === 1 ? "" : "s"} funding the most organizations in the current view`;
 
             const statCardsConfig = [
-              {
-                icon: <Globe style={{ color: "var(--brand-primary)" }} />,
-                title: labels.stats.donorCountries.title,
-                value: stats.donorCountries,
-                label: labels.stats.donorCountries.label,
-                tooltip: labels.stats.donorCountries.tooltip,
-                chartTitle: labels.sections.donorCount,
-                chartData: donorChartData,
-                chartFootnote: donorChartFootnote,
-                mobileWidth: "w-[280px]",
-              },
+    
               {
                 icon: <Building2 style={{ color: "var(--brand-primary)" }} />,
                 title: labels.stats.dataProviders.title,
@@ -937,6 +927,17 @@ const CrisisDataDashboard = ({
                 chartTitle: labels.sections.organizationTypes,
                 chartData: organizationTypesChartData,
                 mobileWidth: "w-[290px]",
+              },
+                        {
+                icon: <Globe style={{ color: "var(--brand-primary)" }} />,
+                title: labels.stats.donorCountries.title,
+                value: stats.donorCountries,
+                label: labels.stats.donorCountries.label,
+                tooltip: labels.stats.donorCountries.tooltip,
+                chartTitle: labels.sections.donorCount,
+                chartData: donorChartData,
+                chartFootnote: donorChartFootnote,
+                mobileWidth: "w-[280px]",
               },
               {
                 icon: <Database style={{ color: "var(--brand-primary)" }} />,
