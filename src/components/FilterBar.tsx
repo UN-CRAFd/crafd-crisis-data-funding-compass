@@ -494,9 +494,42 @@ const FilterBar: React.FC<FilterBarProps> = ({
                         }
                       });
 
-                      // Render grouped themes
+                      // Render grouped themes - sort with selected types first
                       return Object.entries(themesByCategory)
-                        .sort(([typeA], [typeB]) => typeA.localeCompare(typeB))
+                        .sort(([typeA], [typeB]) => {
+                          const isTypeASelected = investmentTypes.some(
+                            (t) =>
+                              t.toLowerCase().trim() ===
+                              typeA.toLowerCase().trim(),
+                          );
+                          const isTypeBSelected = investmentTypes.some(
+                            (t) =>
+                              t.toLowerCase().trim() ===
+                              typeB.toLowerCase().trim(),
+                          );
+
+                          // Selected types come first
+                          if (isTypeASelected && !isTypeBSelected) return -1;
+                          if (!isTypeASelected && isTypeBSelected) return 1;
+
+                          // Within selected types, maintain the order from investmentTypes
+                          if (isTypeASelected && isTypeBSelected) {
+                            const indexA = investmentTypes.findIndex(
+                              (t) =>
+                                t.toLowerCase().trim() ===
+                                typeA.toLowerCase().trim(),
+                            );
+                            const indexB = investmentTypes.findIndex(
+                              (t) =>
+                                t.toLowerCase().trim() ===
+                                typeB.toLowerCase().trim(),
+                            );
+                            return indexA - indexB;
+                          }
+
+                          // Unselected types sorted alphabetically
+                          return typeA.localeCompare(typeB);
+                        })
                         .map(([investmentType, themes]) => {
                           // Filter themes based on search query
                           const filteredThemes = themes.filter((theme) =>
