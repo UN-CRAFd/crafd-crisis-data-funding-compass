@@ -832,7 +832,7 @@ const CrisisDataDashboard = ({
     );
 
     // Add project count
-    const projectLabel = stats.dataProjects !== 1 ? "products" : "product";
+    const projectLabel = stats.dataProjects !== 1 ? labels.product.plural : labels.product.singular;
     elements.push(
       <React.Fragment key="projects">
         {" "}
@@ -1089,7 +1089,7 @@ const CrisisDataDashboard = ({
                                         ? "Organizations"
                                         : "Donors"
                                       : sortBy === "assets"
-                                        ? "Products"
+                                        ? labels.product.capitalizedPlural
                                         : "Funding"}
                                 </span>
 
@@ -1125,7 +1125,7 @@ const CrisisDataDashboard = ({
                               onClick={() => onSortChange("assets", sortDirection)}
                               className="cursor-pointer py-1 text-[14px]"
                             >
-                              No. of Products
+                              No. of {labels.product.capitalizedPlural}
                             </DropdownMenuItem>
                             {activeView === "table" && (
                               <DropdownMenuItem
@@ -1655,9 +1655,9 @@ const CrisisDataDashboard = ({
                                         <div className="text-xs whitespace-nowrap text-slate-400 sm:text-xs">
                                           {org.projects.length > 0
                                             ? isExpanded
-                                              ? `Showing ${org.projects.length} product${org.projects.length === 1 ? "" : "s"}`
-                                              : `Show ${org.projects.length} product${org.projects.length === 1 ? "" : "s"}`
-                                            : `${org.projects.length} product${org.projects.length === 1 ? "" : "s"}`}
+                                              ? `Showing ${org.projects.length} ${org.projects.length === 1 ? labels.product.singular : labels.product.plural}`
+                                              : `Show ${org.projects.length} ${org.projects.length === 1 ? labels.product.singular : labels.product.plural}`
+                                            : `${org.projects.length} ${org.projects.length === 1 ? labels.product.singular : labels.product.plural}`}
                                         </div>
                                       </div>
                                     </div>
