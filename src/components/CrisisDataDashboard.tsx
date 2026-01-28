@@ -308,6 +308,7 @@ const CrisisDataDashboard = ({
   const [xlsxExportLoading, setXLSXExportLoading] = useState(false);
   const [pdfExportLoading, setPDFExportLoading] = useState(false);
   const [exportMenuOpen, setExportMenuOpen] = useState(false);
+  const [logoErrors, setLogoErrors] = useState<Set<string>>(new Set());
 
   // Load static organizations table for modals
   const organizationsTable: Array<{
@@ -1299,6 +1300,43 @@ const CrisisDataDashboard = ({
                                   <CollapsibleTrigger className="w-full">
                                     <div className="flex min-h-[80px] animate-in cursor-pointer flex-col gap-3 rounded-lg border border-slate-200 bg-slate-50/30 p-3 fade-in hover:bg-slate-50/70 sm:flex-row sm:justify-between sm:gap-0 sm:p-4">
                                       <div className="flex flex-1 items-center space-x-3">
+                                        {(() => {
+                                          const nestedOrg = nestedOrganizations.find((n) => n.id === org.id);
+                                          const orgKey = typeof nestedOrg?.fields?.["org_key"] === "string" ? nestedOrg.fields["org_key"] : "";
+                                          const logoExtensions = ["png", "jpg", "svg", "webp"];
+                                          const hasLogoError = logoErrors.has(org.id);
+                                          
+                                          if (orgKey && !hasLogoError) {
+                                            return (
+                                              <img
+                                                src={`/logos/${orgKey}.png`}
+                                                alt={`${org.organizationName} logo`}
+                                                className="h-8 w-8 flex-shrink-0 object-contain"
+                                                style={{ filter: "saturate(0) brightness(1.05)" }}
+                                                loading="lazy"
+                                                decoding="async"
+                                                onError={(e) => {
+                                                  // Try other extensions
+                                                  const currentSrc = (e.target as HTMLImageElement).src;
+                                                  const currentExt = currentSrc.split(".").pop()?.split("?")[0];
+                                                  const currentIndex = logoExtensions.indexOf(currentExt || "");
+                                                  
+                                                  if (currentIndex !== -1 && currentIndex < logoExtensions.length - 1) {
+                                                    // Try next extension
+                                                    (e.target as HTMLImageElement).src = `/logos/${orgKey}.${logoExtensions[currentIndex + 1]}`;
+                                                  } else {
+                                                    // All extensions failed
+                                                    setLogoErrors((prev) => new Set([...prev, org.id]));
+                                                  }
+                                                }}
+                                              />
+                                            );
+                                          }
+                                          
+                                          return (
+                                            <Building2 className="h-5 w-5 flex-shrink-0 text-slate-400" />
+                                          );
+                                        })()}
                                         <div className="flex h-4 w-4 flex-shrink-0 items-center justify-center">
                                           {" "}
                                           {/* Fixed size container with centering */}
