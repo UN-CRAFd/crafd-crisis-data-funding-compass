@@ -1,13 +1,41 @@
 import labels from "@/config/labels.json";
 
+/**
+ * Sanitize redirect path to prevent XSS and open redirect attacks
+ */
+function sanitizeRedirectPath(redirect: string | undefined): string {
+  if (!redirect) return "/";
+
+  const trimmed = redirect.trim();
+
+  // Must start with a single forward slash (not //)
+  if (!trimmed.startsWith("/") || trimmed.startsWith("//")) {
+    return "/";
+  }
+
+  // Block any URLs with protocol schemes
+  if (/^[a-zA-Z][a-zA-Z0-9+.-]*:/.test(trimmed)) {
+    return "/";
+  }
+
+  // Only keep the pathname portion
+  try {
+    const url = new URL(trimmed, "http://localhost");
+    return url.pathname.startsWith("/") ? url.pathname : "/";
+  } catch {
+    return "/";
+  }
+}
+
 export default async function LoginPage({
   searchParams,
 }: {
   searchParams: Promise<{ redirect?: string; error?: string }>;
 }) {
   const params = await searchParams;
-  const redirect = params?.redirect ?? "/";
-  const hasError = params?.error === "1";
+  // Sanitize the redirect parameter to prevent open redirect attacks
+  const redirect = sanitizeRedirectPath(params?.redirect);
+  const hasError = params?.error === "1" || params?.error === "config";
 
   return (
     <main className="flex min-h-screen items-center justify-center bg-gradient-to-br from-[#F1B434]/50 via-[#F1B434]/30 to-[#F1B434] p-4">
