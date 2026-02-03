@@ -23,13 +23,18 @@ export const GeneralContributionsProvider: React.FC<{
     try {
       const stored = localStorage.getItem("showGeneralContributions");
       if (stored !== null) {
-        setShowGeneralContributions(stored === "true");
+        // Validate the stored value is a valid string
+        const isValid = stored === "true" || stored === "false";
+        if (isValid) {
+          setShowGeneralContributions(stored === "true");
+        } else {
+          // Clear invalid data
+          localStorage.removeItem("showGeneralContributions");
+        }
       }
-    } catch (error) {
-      console.warn(
-        "Failed to load General Contributions state from localStorage:",
-        error,
-      );
+    } catch {
+      // localStorage access error - use default value silently
+      // Avoid logging error objects which might contain sensitive info
     }
     setIsLoaded(true);
   }, []);
@@ -42,11 +47,8 @@ export const GeneralContributionsProvider: React.FC<{
         "showGeneralContributions",
         String(showGeneralContributions),
       );
-    } catch (error) {
-      console.warn(
-        "Failed to save General Contributions state to localStorage:",
-        error,
-      );
+    } catch {
+      // localStorage might be full or unavailable - fail silently
     }
   }, [showGeneralContributions, isLoaded]);
 

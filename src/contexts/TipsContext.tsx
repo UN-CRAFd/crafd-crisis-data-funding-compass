@@ -15,9 +15,23 @@ export function TipsProvider({ children }: { children: React.ReactNode }) {
 
   // Load from localStorage on mount
   useEffect(() => {
-    const stored = localStorage.getItem("tipsEnabled");
-    if (stored !== null) {
-      setTipsEnabled(JSON.parse(stored));
+    try {
+      const stored = localStorage.getItem("tipsEnabled");
+      if (stored !== null) {
+        // Validate the stored value is a boolean before using it
+        const parsed = JSON.parse(stored);
+        if (typeof parsed === "boolean") {
+          setTipsEnabled(parsed);
+        }
+      }
+    } catch {
+      // Invalid JSON or localStorage access error - use default value
+      // Clear corrupted data
+      try {
+        localStorage.removeItem("tipsEnabled");
+      } catch {
+        // Ignore localStorage access errors
+      }
     }
     setIsHydrated(true);
   }, []);
@@ -25,7 +39,11 @@ export function TipsProvider({ children }: { children: React.ReactNode }) {
   // Save to localStorage when changed
   const handleSetTipsEnabled = (enabled: boolean) => {
     setTipsEnabled(enabled);
-    localStorage.setItem("tipsEnabled", JSON.stringify(enabled));
+    try {
+      localStorage.setItem("tipsEnabled", JSON.stringify(enabled));
+    } catch {
+      // localStorage might be full or unavailable - fail silently
+    }
   };
 
   // Don't render until hydrated to avoid hydration mismatch
