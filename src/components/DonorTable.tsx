@@ -19,6 +19,7 @@ import { matchesUrlSlug, toUrlSlug } from "@/lib/urlShortcuts";
 import type { OrganizationWithProjects, ProjectData } from "@/types/airtable";
 import { Badge } from "@/components/shared/Badge";
 import { INVESTMENT_TYPE_DESCRIPTIONS } from "@/config/investmentDescriptions";
+import { CountryFlag } from "@/components/CountryFlag";
 
 interface DonorTableProps {
   organizationsWithProjects: OrganizationWithProjects[];
@@ -239,6 +240,12 @@ export const DonorTable: React.FC<DonorTableProps> = ({
                 } min-h-[60px] animate-in cursor-pointer gap-3 fade-in sm:gap-0`}
               >
                 <div className="flex flex-1 items-center space-x-3">
+                  <CountryFlag
+                    country={donor}
+                    width={32}
+                    height={32}
+                    className="h-8 w-8 flex-shrink-0 object-cover"
+                  />
                   <div className="flex h-4 w-4 flex-shrink-0 items-center justify-center">
                     {isDonorExpanded ? (
                       <ChevronDown className="h-4 w-4 text-slate-500" />
