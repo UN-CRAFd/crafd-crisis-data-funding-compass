@@ -358,7 +358,7 @@ export const DonorTable: React.FC<DonorTableProps> = ({
               </div>
             </CollapsibleTrigger>
             <CollapsibleContent>
-              <div className="mt-2 ml-4 space-y-2 sm:ml-7">
+              <div className="mt-2 ml-4 space-y-2 sm:ml-14">
                 {organizations.map(({ org, projects, isOrgLevel }) => {
                   const isOrgExpanded = expandedOrgs.has(org.id);
                   const hasProjects = projects.length > 0;
@@ -548,7 +548,7 @@ export const DonorTable: React.FC<DonorTableProps> = ({
                         </OrganizationBox>
                       </CollapsibleTrigger>
                       <CollapsibleContent>
-                        <div className="mt-2 ml-7 space-y-2 sm:ml-12">
+                        <div className="mt-2 ml-7 space-y-2 sm:ml-14">
                           {projects.map((project: ProjectData) => (
                             <div
                               key={project.id}
