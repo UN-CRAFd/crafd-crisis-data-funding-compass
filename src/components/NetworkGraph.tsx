@@ -10,7 +10,7 @@ import React, {
 import { createPortal } from "react-dom";
 import { forceCollide } from "d3-force";
 import ForceGraph2D from "react-force-graph-2d";
-import { Maximize, Minimize, Crosshair } from "lucide-react";
+import { Maximize, Minimize, Crosshair, Layers, Package, DollarSign, Type, Zap, GitBranch } from "lucide-react";
 import type { OrganizationWithProjects } from "../types/airtable";
 import FilterBar from "./FilterBar";
 import NoResultsModal from "./NoResultsModal";
@@ -1654,25 +1654,125 @@ const NetworkGraph: React.FC<NetworkGraphProps> = ({
           className="absolute right-4 z-10 transition-all duration-200"
           style={{ top: isFullscreen ? `${filterBarHeight + 30}px` : "16px" }}
         >
-          <div className="flex gap-1 rounded-lg border border-slate-200 bg-white p-1.5 shadow-sm backdrop-blur-lg">
-            <button
-              onClick={centerView}
-              className="rounded p-1.5 transition-colors hover:bg-slate-200/50"
-              title="Center view"
-            >
-              <Crosshair className="h-4 w-4 text-slate-600" />
-            </button>
-            <button
-              onClick={toggleFullscreen}
-              className="rounded p-1.5 transition-colors hover:bg-slate-200/50"
-              title={isFullscreen ? "Exit fullscreen" : "Enter fullscreen"}
-            >
-              {isFullscreen ? (
-                <Minimize className="h-4 w-4 text-slate-600" />
-              ) : (
-                <Maximize className="h-4 w-4 text-slate-600" />
-              )}
-            </button>
+          <div className="rounded-lg border border-slate-200 bg-white shadow-sm backdrop-blur-lg">
+            <div className="flex items-center gap-0 p-2">
+              {/* Clustering Section */}
+              <div className="flex items-center gap-2 px-2">
+                <div className="text-[10px] font-semibold text-slate-600 uppercase tracking-wide">
+                  Cluster
+                </div>
+                <button
+                  onClick={() => setClusterByOrgType(!clusterByOrgType)}
+                  className={`rounded p-1.5 transition-colors ${
+                    clusterByOrgType
+                      ? "bg-amber-100 text-amber-700"
+                      : "text-slate-600 hover:bg-slate-200/50"
+                  }`}
+                  style={clusterByOrgType ? { backgroundColor: "rgba(243, 195, 92, 0.3)", color: "#BC840F" } : {}}
+                  title="Cluster by organization type"
+                >
+                  <Layers className="h-4 w-4" />
+                </button>
+                <button
+                  onClick={() => setClusterByAssetType(!clusterByAssetType)}
+                  className={`rounded p-1.5 transition-colors ${
+                    clusterByAssetType
+                      ? "text-indigo-700"
+                      : "text-slate-600 hover:bg-slate-200/50"
+                  }`}
+                  style={clusterByAssetType ? { backgroundColor: "rgba(215, 216, 245, 0.3)", color: "#4d479c" } : {}}
+                  title="Cluster by asset type"
+                >
+                  <Package className="h-4 w-4" />
+                </button>
+              </div>
+
+              {/* Divider */}
+              <div className="h-6 w-px bg-slate-200" />
+
+              {/* Scaling Section */}
+              <div className="flex items-center gap-1 px-2">
+                <div className="text-[10px] font-semibold text-slate-600 uppercase tracking-wide">
+                  Scale
+                </div>
+                <button
+                  onClick={() => setScalingMode("standard")}
+                  className={`rounded px-1.5 py-1.5 transition-colors text-xs font-medium ${
+                    scalingMode === "standard"
+                      ? "bg-slate-300 text-slate-800"
+                      : "text-slate-600 hover:bg-slate-200/50"
+                  }`}
+                  title="Standard node sizing"
+                >
+                  ●
+                </button>
+                <button
+                  onClick={() => setScalingMode("connections")}
+                  className={`rounded px-1.5 py-1.5 transition-colors text-xs font-medium ${
+                    scalingMode === "connections"
+                      ? "bg-slate-300 text-slate-800"
+                      : "text-slate-600 hover:bg-slate-200/50"
+                  }`}
+                  title="Size by connections"
+                >
+                  ⟿
+                </button>
+                <button
+                  onClick={() => setScalingMode("funding")}
+                  className={`rounded px-1.5 py-1.5 transition-colors text-xs font-medium ${
+                    scalingMode === "funding"
+                      ? "bg-slate-300 text-slate-800"
+                      : "text-slate-600 hover:bg-slate-200/50"
+                  }`}
+                  title="Size by funding"
+                >
+                  $$
+                </button>
+              </div>
+
+              {/* Divider */}
+              <div className="h-6 w-px bg-slate-200" />
+
+              {/* Names Section */}
+              <div className="flex items-center gap-2 px-2">
+                <button
+                  onClick={() => setShowAllNames(!showAllNames)}
+                  className={`rounded p-1.5 transition-colors ${
+                    showAllNames
+                      ? "bg-slate-300 text-slate-800"
+                      : "text-slate-600 hover:bg-slate-200/50"
+                  }`}
+                  title="Toggle entity names"
+                >
+                  <Type className="h-4 w-4" />
+                </button>
+              </div>
+
+              {/* Divider */}
+              <div className="h-6 w-px bg-slate-200" />
+
+              {/* View Section */}
+              <div className="flex items-center gap-1 px-2">
+                <button
+                  onClick={centerView}
+                  className="rounded p-1.5 transition-colors hover:bg-slate-200/50"
+                  title="Center view"
+                >
+                  <Crosshair className="h-4 w-4 text-slate-600" />
+                </button>
+                <button
+                  onClick={toggleFullscreen}
+                  className="rounded p-1.5 transition-colors hover:bg-slate-200/50"
+                  title={isFullscreen ? "Exit fullscreen" : "Enter fullscreen"}
+                >
+                  {isFullscreen ? (
+                    <Minimize className="h-4 w-4 text-slate-600" />
+                  ) : (
+                    <Maximize className="h-4 w-4 text-slate-600" />
+                  )}
+                </button>
+              </div>
+            </div>
           </div>
         </div>
 
@@ -1706,7 +1806,7 @@ const NetworkGraph: React.FC<NetworkGraphProps> = ({
           ) : (
             <div className="w-30 rounded-lg border border-slate-200 bg-white shadow-sm backdrop-blur-lg">
               {/* Legend */}
-              <div className="border-b border-slate-200 p-2.5">
+              <div className="p-2.5">
                 <div className="mb-2 flex items-center justify-between">
                   <div className="text-xs font-semibold text-slate-800/90">
                     Legend
@@ -1807,177 +1907,7 @@ const NetworkGraph: React.FC<NetworkGraphProps> = ({
                 </div>
               </div>
 
-              {/* Clustering Controls */}
-              <div className="p-2.5">
-                <div className="mb-2 text-xs font-semibold text-slate-800/90">
-                  Clustering
-                </div>
-                <div className="space-y-1.5">
-                  <button
-                    onClick={() => setClusterByOrgType(!clusterByOrgType)}
-                    className={`w-full rounded px-2 py-1 text-left text-xs transition-colors ${
-                      clusterByOrgType
-                        ? "border border-[var(--brand-primary)] bg-[var(--brand-bg-light)] text-[var(--brand-primary)]"
-                        : "border border-slate-200 bg-slate-50 text-slate-600 hover:bg-slate-100"
-                    }`}
-                    title="Group organizations by type"
-                  >
-                    <div className="flex items-center justify-between">
-                      <span className="text-[11px]">Org Type</span>
-                      <div
-                        className={`flex h-3 w-3 shrink-0 items-center justify-center rounded-sm border ${
-                          clusterByOrgType
-                            ? "border-[var(--brand-primary)] bg-[var(--brand-primary)]"
-                            : "border-slate-300"
-                        }`}
-                      >
-                        {clusterByOrgType && (
-                          <svg
-                            className="h-2.5 w-2.5 text-white"
-                            fill="none"
-                            stroke="currentColor"
-                            viewBox="0 0 24 24"
-                          >
-                            <path
-                              strokeLinecap="round"
-                              strokeLinejoin="round"
-                              strokeWidth={3}
-                              d="M5 13l4 4L19 7"
-                            />
-                          </svg>
-                        )}
-                      </div>
-                    </div>
-                  </button>
-                  <button
-                    onClick={() => setClusterByAssetType(!clusterByAssetType)}
-                    className={`w-full rounded px-2 py-1 text-left text-xs transition-colors ${
-                      clusterByAssetType
-                        ? "border border-[var(--badge-other-text)] bg-[var(--badge-other-bg)] text-[var(--badge-other-text)]"
-                        : "border border-slate-200 bg-slate-50 text-slate-600 hover:bg-slate-100"
-                    }`}
-                    title="Group assets by investment type"
-                  >
-                    <div className="flex items-center justify-between">
-                      <span className="text-[11px]">Asset Type</span>
-                      <div
-                        className={`flex h-3 w-3 shrink-0 items-center justify-center rounded-sm border ${
-                          clusterByAssetType
-                            ? "border-[var(--badge-other-text)] bg-[var(--badge-other-text)]"
-                            : "border-slate-300"
-                        }`}
-                      >
-                        {clusterByAssetType && (
-                          <svg
-                            className="h-2.5 w-2.5 text-white"
-                            fill="none"
-                            stroke="currentColor"
-                            viewBox="0 0 24 24"
-                          >
-                            <path
-                              strokeLinecap="round"
-                              strokeLinejoin="round"
-                              strokeWidth={3}
-                              d="M5 13l4 4L19 7"
-                            />
-                          </svg>
-                        )}
-                      </div>
-                    </div>
-                  </button>
-                </div>
-              </div>
 
-              {/* Scaling Controls */}
-              <div className="border-t border-slate-200 p-2.5">
-                <div className="mb-2 text-xs font-semibold text-slate-800/90">
-                  Scaling
-                </div>
-                <div className="space-y-1.5">
-                  <button
-                    onClick={() => setScalingMode("standard")}
-                    className={`w-full rounded px-2 py-1 text-left text-xs transition-colors ${
-                      scalingMode === "standard"
-                        ? "border border-slate-400 bg-slate-200 text-slate-800"
-                        : "border border-slate-200 bg-slate-50 text-slate-600 hover:bg-slate-100"
-                    }`}
-                    title="Standardized sizes by node type"
-                  >
-                    <div className="flex items-center justify-between">
-                      <span className="text-[11px]">Standard</span>
-                      {/* selection highlighted by button background; no dot indicator */}
-                    </div>
-                  </button>
-                  <button
-                    onClick={() => setScalingMode("connections")}
-                    className={`w-full rounded px-2 py-1 text-left text-xs transition-colors ${
-                      scalingMode === "connections"
-                        ? "border border-slate-400 bg-slate-200 text-slate-800"
-                        : "border border-slate-200 bg-slate-50 text-slate-600 hover:bg-slate-100"
-                    }`}
-                    title="Size nodes by number of connections"
-                  >
-                    <div className="flex items-center justify-between">
-                      <span className="text-[11px]">Connections</span>
-                      {/* selection highlighted by button background; no dot indicator */}
-                    </div>
-                  </button>
-                  <button
-                    onClick={() => setScalingMode("funding")}
-                    className={`w-full rounded px-2 py-1 text-left text-xs transition-colors ${
-                      scalingMode === "funding"
-                        ? "border border-slate-400 bg-slate-200 text-slate-800"
-                        : "border border-slate-200 bg-slate-50 text-slate-600 hover:bg-slate-100"
-                    }`}
-                    title="Size organization nodes by estimated budget"
-                  >
-                    <div className="flex items-center justify-between">
-                      <span className="text-[11px]">Funding</span>
-                      {/* selection highlighted by button background; no dot indicator */}
-                    </div>
-                  </button>
-                </div>
-              </div>
-
-              {/* Entity Names Toggle */}
-              <div className="border-t border-slate-200 p-2.5">
-                <button
-                  onClick={() => setShowAllNames(!showAllNames)}
-                  className={`w-full rounded px-2 py-1 text-left text-xs transition-colors ${
-                    showAllNames
-                      ? "border border-slate-400 bg-slate-200 text-slate-800"
-                      : "border border-slate-200 bg-slate-50 text-slate-600 hover:bg-slate-100"
-                  }`}
-                  title="Toggle display of entity names on all nodes"
-                >
-                  <div className="flex items-center justify-between">
-                    <span className="text-[11px]">Show Names</span>
-                    <div
-                      className={`flex h-3 w-3 shrink-0 items-center justify-center rounded-sm border ${
-                        showAllNames
-                          ? "border-slate-600 bg-slate-600"
-                          : "border-slate-300"
-                      }`}
-                    >
-                      {showAllNames && (
-                        <svg
-                          className="h-2.5 w-2.5 text-white"
-                          fill="none"
-                          stroke="currentColor"
-                          viewBox="0 0 24 24"
-                        >
-                          <path
-                            strokeLinecap="round"
-                            strokeLinejoin="round"
-                            strokeWidth={3}
-                            d="M5 13l4 4L19 7"
-                          />
-                        </svg>
-                      )}
-                    </div>
-                  </div>
-                </button>
-              </div>
             </div>
           )}
         </div>
