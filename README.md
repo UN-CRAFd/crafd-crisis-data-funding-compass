@@ -1,4 +1,4 @@
-# CRISIS DATA FUNDING COMPASS
+# CRISIS DATA FUNDING COMPASS (new release)
 
 A Next.js data dashboard for displaying and analyzing Airtable ecosystem data. Built with React, TypeScript, Tailwind CSS v4, and shadcn/ui components.
 
