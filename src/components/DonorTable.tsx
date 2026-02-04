@@ -390,7 +390,7 @@ const DonorTableComponent: React.FC<DonorTableProps> = ({
                           logoErrors={logoErrors}
                           onLogoError={handleLogoError}
                           headingLevel="h4"
-                          showDetailsButton={false}
+                          showDetailsButton={true}
                           projectCount={projects.length}
                           projectLabel={projects.length === 1 ? "asset" : "assets"}
                         >
