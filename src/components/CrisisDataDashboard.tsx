@@ -1356,7 +1356,7 @@ const CrisisDataDashboard = ({
                                       logoErrors={logoErrors}
                                       onLogoError={handleLogoError}
                                       headingLevel="h3"
-                                      showDetailsButton={false}
+                                      showDetailsButton={true}
                                       projectCount={org.projects.length}
                                       projectLabel={org.projects.length === 1 ? labels.product.singular : labels.product.plural}
                                     >
