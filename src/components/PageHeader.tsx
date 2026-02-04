@@ -1,5 +1,6 @@
 "use client";
 
+import { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
 import {
   TooltipContent,
@@ -72,6 +73,17 @@ export default function PageHeader({
   const pathname = usePathname();
   const router = useRouter();
   const searchParams = useSearchParams();
+  const [lastUpdated, setLastUpdated] = useState<string | null>(null);
+
+  // Fetch last updated date from API
+  useEffect(() => {
+    fetch("/api/last-updated")
+      .then((res) => res.json())
+      .then((data) => setLastUpdated(data.lastUpdated))
+      .catch((error) => {
+        console.error("Failed to fetch last updated date:", error);
+      });
+  }, []);
 
   // Safely use useTips with fallback defaults
   let tipsEnabled = false;
@@ -139,6 +151,11 @@ export default function PageHeader({
                   style={{ ...STYLES.chartTooltip }}
                 >
                   <p className="leading-relaxed">{labels.header.betaTooltip}</p>
+                  {lastUpdated && (
+                    <p className="mt-2 border-t border-slate-200 pt-2 text-slate-600">
+                      Last updated: <span className="font-semibold">{lastUpdated}</span>
+                    </p>
+                  )}
                 </TooltipContent>
               </TooltipUI>
             </TooltipProvider>
