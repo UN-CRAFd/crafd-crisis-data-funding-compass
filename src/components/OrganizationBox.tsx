@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { ChevronDown, ChevronRight, Building2, Info } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
@@ -39,6 +39,7 @@ export const OrganizationBox: React.FC<OrganizationBoxProps> = ({
   projectCount = 0,
   projectLabel = "assets",
 }) => {
+  const [isHovered, setIsHovered] = useState(false);
   const HeadingTag = headingLevel;
   
   const nestedOrg = nestedOrganizations.find((n) => n.id === orgId);
@@ -62,15 +63,19 @@ export const OrganizationBox: React.FC<OrganizationBoxProps> = ({
   const orgType = orgTableMatch?.fields["Org Type"] as string | undefined;
 
   return (
-    <div className="flex min-h-[80px] animate-in cursor-pointer flex-col gap-3 rounded-lg border border-slate-200 bg-slate-50/30 p-3 fade-in hover:bg-slate-50/70 sm:flex-row sm:justify-between sm:gap-0 sm:p-4">
+    <div 
+      className="group flex min-h-[80px] animate-in cursor-pointer flex-col gap-3 rounded-lg border border-slate-200 bg-slate-50/30 p-3 fade-in hover:bg-slate-50/70 sm:flex-row sm:justify-between sm:gap-0 sm:p-4"
+      onMouseEnter={() => setIsHovered(true)}
+      onMouseLeave={() => setIsHovered(false)}
+    >
       <div className="flex flex-1 items-center space-x-3">
         {/* Logo or fallback icon */}
         {orgKey && !hasLogoError ? (
           <img
             src={`/logos/${orgKey}.png`}
             alt={`${organizationName} logo`}
-            className="h-8 w-8 flex-shrink-0 object-contain"
-            style={{ filter: "grayscale(100%) brightness(1.1)" }}
+            className="h-8 w-8 flex-shrink-0 object-contain transition-all duration-300"
+            style={{ filter: isHovered ? "grayscale(0%) brightness(1.1)" : "grayscale(100%) brightness(1.1)" }}
             loading="lazy"
             decoding="async"
             onError={(e) => {
