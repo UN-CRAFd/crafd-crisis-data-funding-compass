@@ -608,7 +608,7 @@ export default function MethodologyPage({
                       </div>
                     </div>
                     <Screenshot
-                      src="/screenshots/collection.png"
+                      src="/methodology_screenshots/iati.png"
                       alt={labels.methodology.dataCollectionProcess}
                     />
                   </div>
@@ -1080,7 +1080,7 @@ export default function MethodologyPage({
                       </div>
                     </div>
                     <Screenshot
-                      src="/screenshots/network.png"
+                      src="/methodology_screenshots/graph.png"
                       alt={labels.methodology.networkGraphVisualization}
                     />
                   </div>
