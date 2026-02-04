@@ -1,5 +1,5 @@
 import React, { useState, useMemo } from "react";
-import { ChevronDown, ChevronRight, Info } from "lucide-react";
+import { ChevronDown, ChevronRight, Info, Building2 } from "lucide-react";
 import {
   Collapsible,
   CollapsibleContent,
@@ -20,6 +20,7 @@ import type { OrganizationWithProjects, ProjectData } from "@/types/airtable";
 import { Badge } from "@/components/shared/Badge";
 import { INVESTMENT_TYPE_DESCRIPTIONS } from "@/config/investmentDescriptions";
 import { CountryFlag } from "@/components/CountryFlag";
+import { OrganizationBox } from "@/components/OrganizationBox";
 
 interface DonorTableProps {
   organizationsWithProjects: OrganizationWithProjects[];
@@ -53,6 +54,7 @@ export const DonorTable: React.FC<DonorTableProps> = ({
   const [expandedAgencies, setExpandedAgencies] = useState<Set<string>>(
     new Set(),
   );
+  const [logoErrors, setLogoErrors] = useState<Set<string>>(new Set());
 
   // Helper to sanitize names for matching (remove parentheses and extra punctuation)
   const sanitizeForMatch = (input?: any) => {
@@ -377,99 +379,34 @@ export const DonorTable: React.FC<DonorTableProps> = ({
                       className="transition-all duration-500 ease-out"
                     >
                       <CollapsibleTrigger className="w-full">
-                        <div className="flex animate-in cursor-pointer flex-col gap-3 rounded-lg border border-slate-100 bg-white/50 p-4 fade-in hover:bg-slate-100/70 sm:flex-row sm:justify-between sm:gap-0 sm:p-5">
-                          <div className="flex flex-1 items-center space-x-3">
-                            <div className="flex h-4 w-4 flex-shrink-0 items-center justify-center">
-                              {hasProjects ? (
-                                isOrgExpanded ? (
-                                  <ChevronDown className="h-4 w-4 text-slate-500" />
-                                ) : (
-                                  <ChevronRight className="h-4 w-4 text-slate-500" />
-                                )
-                              ) : (
-                                <div
-                                  className="invisible h-4 w-4"
-                                  aria-hidden="true"
-                                />
-                              )}
-                            </div>
-                            <div className="min-w-0 flex-1 text-left">
-                              <div className="flex flex-col gap-1 sm:flex-row sm:flex-wrap sm:items-baseline sm:gap-2">
-                                <h4
-                                  className="sm:text-md cursor-pointer text-base font-medium text-slate-900 transition-colors hover:text-[var(--brand-primary)]"
-                                  onClick={(e) => {
-                                    e.stopPropagation();
-                                    const nestedOrg = nestedOrganizations.find(
-                                      (n) => n.id === org.id,
-                                    );
-                                    const orgKey =
-                                      nestedOrg?.fields?.["org_key"];
-                                    if (orgKey) {
-                                      onOpenOrganizationModal(orgKey);
-                                    }
-                                  }}
-                                >
-                                  {org.organizationName}
-                                </h4>
-                                {(() => {
-                                  const orgTableMatch = organizationsTable.find(
-                                    (rec) => {
-                                      const full =
-                                        (rec.fields[
-                                          "Org Full Name"
-                                        ] as string) || "";
-                                      const short =
-                                        (rec.fields[
-                                          "Org Short Name"
-                                        ] as string) || "";
-                                      const altFull =
-                                        (rec.fields[
-                                          "Org Fullname"
-                                        ] as string) || "";
-                                      const normalized = (name: string) =>
-                                        name
-                                          .replace(/\s+/g, " ")
-                                          .trim()
-                                          .toLowerCase();
-                                      const target = normalized(
-                                        org.organizationName || org.id,
-                                      );
-                                      return [full, short, altFull].some(
-                                        (s) =>
-                                          normalized(String(s || "")) ===
-                                          target,
-                                      );
-                                    },
-                                  );
-                                  const orgType = orgTableMatch?.fields[
-                                    "Org Type"
-                                  ] as string | undefined;
-                                  return orgType ? (
-                                    <div className="font-sm flex-shrink-0 items-center rounded bg-transparent px-0.5 py-0 text-[10px] whitespace-nowrap text-slate-400 sm:inline-flex">
-                                      {orgType}
-                                    </div>
-                                  ) : null;
-                                })()}
-                              </div>{" "}
-                              {/* Agency badges for organization */}
-                              <div className="mt-2 flex max-w-full flex-wrap gap-1">
-                                {!isOrgLevel && (
-                                  <Badge
-                                    text="Project-Level Funding"
-                                    variant="slate"
-                                    className="text-xs text-[9px] opacity-70 sm:text-[10px]"
-                                    title="This donor only funds specific projects, not the organization as a whole"
-                                  />
-                                )}
-                                {(() => {
-                                  const isAgenciesExpanded =
-                                    expandedAgencies.has(`org-${org.id}`);
-
-                                  // Get agencies for this org from nestedOrganizations
-                                  const nestedOrg = nestedOrganizations.find(
-                                    (n) => n.id === org.id,
-                                  );
-                                  const agencies = nestedOrg?.agencies || [];
+                        <OrganizationBox
+                          orgId={org.id}
+                          organizationName={org.organizationName}
+                          nestedOrganizations={nestedOrganizations}
+                          organizationsTable={organizationsTable}
+                          isExpanded={isOrgExpanded}
+                          hasProjects={hasProjects}
+                          onOpenOrganizationModal={onOpenOrganizationModal}
+                          logoErrors={logoErrors}
+                          onLogoError={(orgId) => setLogoErrors((prev) => new Set([...prev, orgId]))}
+                          headingLevel="h4"
+                          showDetailsButton={false}
+                          projectCount={projects.length}
+                          projectLabel={projects.length === 1 ? "asset" : "assets"}
+                        >
+                          {!isOrgLevel && (
+                            <Badge
+                              text="Project-Level Funding"
+                              variant="slate"
+                              className="text-xs text-[9px] opacity-70 sm:text-[10px]"
+                              title="This donor only funds specific projects, not the organization as a whole"
+                            />
+                          )}
+                          {(() => {
+                            const isAgenciesExpanded = expandedAgencies.has(`org-${org.id}`);
+                            // Get agencies for this org from nestedOrganizations
+                            const nestedOrg = nestedOrganizations.find((n) => n.id === org.id);
+                            const agencies = nestedOrg?.agencies || [];
 
                                   // Extract unique agency names that belong to the current donor
                                   const agencyNames = new Set<string>();
@@ -608,19 +545,7 @@ export const DonorTable: React.FC<DonorTableProps> = ({
                                     </>
                                   );
                                 })()}
-                              </div>{" "}
-                            </div>
-                          </div>
-                          <div className="flex min-w-[100px] flex-shrink-0 flex-col items-end justify-between self-stretch">
-                            <div className="text-xs whitespace-nowrap text-slate-400 sm:text-xs">
-                              {projects.length > 0
-                                ? isOrgExpanded
-                                  ? `Showing ${projects.length} asset${projects.length === 1 ? "" : "s"}`
-                                  : `Show ${projects.length} asset${projects.length === 1 ? "" : "s"}`
-                                : `${projects.length} asset${projects.length === 1 ? "" : "s"}`}
-                            </div>
-                          </div>
-                        </div>
+                        </OrganizationBox>
                       </CollapsibleTrigger>
                       <CollapsibleContent>
                         <div className="mt-2 ml-7 space-y-2 sm:ml-12">

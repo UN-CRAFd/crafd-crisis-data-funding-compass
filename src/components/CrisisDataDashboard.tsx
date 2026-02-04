@@ -12,6 +12,7 @@ import OrganizationModal from "@/components/OrganizationModal";
 import ProjectModal from "@/components/ProjectModal";
 import DonorModal from "@/components/DonorModal";
 import DonorTable from "@/components/DonorTable";
+import { OrganizationBox } from "@/components/OrganizationBox";
 import SurveyBanner from "@/components/SurveyBanner";
 import { Button } from "@/components/ui/button";
 import { matchesUrlSlug } from "@/lib/urlShortcuts";
@@ -1339,328 +1340,118 @@ const CrisisDataDashboard = ({
                                   className="transition-all duration-500 ease-out"
                                 >
                                   <CollapsibleTrigger className="w-full">
-                                    <div className="flex min-h-[80px] animate-in cursor-pointer flex-col gap-3 rounded-lg border border-slate-200 bg-slate-50/30 p-3 fade-in hover:bg-slate-50/70 sm:flex-row sm:justify-between sm:gap-0 sm:p-4">
-                                      <div className="flex flex-1 items-center space-x-3">
-                                        {(() => {
-                                          const nestedOrg = nestedOrganizations.find((n) => n.id === org.id);
-                                          const orgKey = typeof nestedOrg?.fields?.["org_key"] === "string" ? nestedOrg.fields["org_key"] : "";
-                                          const logoExtensions = ["png", "jpg", "svg", "webp"];
-                                          const hasLogoError = logoErrors.has(org.id);
-                                          
-                                          if (orgKey && !hasLogoError) {
-                                            return (
-                                              <img
-                                                src={`/logos/${orgKey}.png`}
-                                                alt={`${org.organizationName} logo`}
-                                                className="h-8 w-8 flex-shrink-0 object-contain"
-                                                style={{ filter: "saturate(0) brightness(1.05)" }}
-                                                loading="lazy"
-                                                decoding="async"
-                                                onError={(e) => {
-                                                  // Try other extensions
-                                                  const currentSrc = (e.target as HTMLImageElement).src;
-                                                  const currentExt = currentSrc.split(".").pop()?.split("?")[0];
-                                                  const currentIndex = logoExtensions.indexOf(currentExt || "");
-                                                  
-                                                  if (currentIndex !== -1 && currentIndex < logoExtensions.length - 1) {
-                                                    // Try next extension
-                                                    (e.target as HTMLImageElement).src = `/logos/${orgKey}.${logoExtensions[currentIndex + 1]}`;
-                                                  } else {
-                                                    // All extensions failed
-                                                    setLogoErrors((prev) => new Set([...prev, org.id]));
-                                                  }
-                                                }}
-                                              />
-                                            );
-                                          }
-                                          
-                                          return (
-                                            <Building2 className="h-5 w-5 flex-shrink-0 text-slate-400" />
-                                          );
-                                        })()}
-                                        <div className="flex h-4 w-4 flex-shrink-0 items-center justify-center">
-                                          {" "}
-                                          {/* Fixed size container with centering */}
-                                          {hasProjects ? (
-                                            isExpanded ? (
-                                              <ChevronDown className="h-4 w-4 text-slate-500" />
-                                            ) : (
-                                              <ChevronRight className="h-4 w-4 text-slate-500" />
-                                            )
-                                          ) : (
-                                            // Keep the same space but make the placeholder invisible when there are no projects
-                                            <div
-                                              className="invisible h-4 w-4"
-                                              aria-hidden="true"
-                                            />
-                                          )}
-                                        </div>
-                                        <div className="min-w-0 flex-1 text-left">
-                                          <div className="flex flex-col gap-1 sm:flex-row sm:flex-wrap sm:items-baseline sm:gap-2">
-                                            <h3
-                                              className="cursor-pointer text-sm font-medium text-slate-900 transition-colors hover:text-[var(--brand-primary)] sm:text-base"
-                                              onClick={(e) => {
-                                                e.stopPropagation();
-                                                // Get org_key from nested organizations data
-                                                const nestedOrg =
-                                                  nestedOrganizations.find(
-                                                    (n) => n.id === org.id,
-                                                  );
-                                                const orgKey =
-                                                  nestedOrg?.fields?.[
-                                                    "org_key"
-                                                  ];
-                                                if (orgKey) {
-                                                  onOpenOrganizationModal(
-                                                    orgKey,
-                                                  );
-                                                }
-                                              }}
-                                            >
-                                              {org.organizationName}
-                                            </h3>
-                                            {(() => {
-                                              // Find matching record in organizations-table.json
-                                              const orgTarget = normalizeOrgName(org.organizationName || org.id);
-                                              const orgTableMatch =
-                                                organizationsTable.find((rec) => {
-                                                  const full = (rec.fields["Org Full Name"] as string) || "";
-                                                  const short = (rec.fields["Org Short Name"] as string) || "";
-                                                  const altFull = (rec.fields["Org Fullname"] as string) || "";
-                                                  return [full, short, altFull].some(
-                                                    (s) => normalizeOrgName(String(s || "")) === orgTarget,
-                                                  );
-                                                });
-                                              const orgType = orgTableMatch
-                                                ?.fields["Org Type"] as
-                                                | string
-                                                | undefined;
-                                              return orgType ? (
-                                                <div className="font-sm flex-shrink-0 items-center rounded bg-transparent px-0.5 py-0 text-[10px] whitespace-nowrap text-slate-400 sm:inline-flex">
-                                                  {orgType}
-                                                </div>
-                                              ) : null;
-                                            })()}
-                                          </div>
-                                          <div className="mt-2 flex max-w-full flex-wrap gap-1">
-                                            {(() => {
-                                              const isCountriesExpanded =
-                                                expandedCountries.has(org.id);
+                                    <OrganizationBox
+                                      orgId={org.id}
+                                      organizationName={org.organizationName}
+                                      nestedOrganizations={nestedOrganizations}
+                                      organizationsTable={organizationsTable}
+                                      isExpanded={isExpanded}
+                                      hasProjects={hasProjects}
+                                      onOpenOrganizationModal={onOpenOrganizationModal}
+                                      logoErrors={logoErrors}
+                                      onLogoError={(orgId) => setLogoErrors((prev) => new Set([...prev, orgId]))}
+                                      headingLevel="h3"
+                                      showDetailsButton={true}
+                                      projectCount={org.projects.length}
+                                      projectLabel={org.projects.length === 1 ? labels.product.singular : labels.product.plural}
+                                    >
+                                      {(() => {
+                                        const isCountriesExpanded = expandedCountries.has(org.id);
+                                        const donorInfo = org.donorInfo || [];
 
-                                              // Use donorInfo instead of donorCountries to include project-only donors
-                                              const donorInfo =
-                                                org.donorInfo || [];
+                                        // Sort donors: selected + org-level first, then others
+                                        const sortedDonors = [...donorInfo].sort((a, b) => {
+                                          const aIsSelected = combinedDonors.includes(a.country);
+                                          const bIsSelected = combinedDonors.includes(b.country);
 
-                                              // Sort donors: selected + org-level first, then others
-                                              const sortedDonors = [
-                                                ...donorInfo,
-                                              ].sort((a, b) => {
-                                                const aIsSelected =
-                                                  combinedDonors.includes(
-                                                    a.country,
-                                                  );
-                                                const bIsSelected =
-                                                  combinedDonors.includes(
-                                                    b.country,
-                                                  );
+                                          if (aIsSelected && !bIsSelected) return -1;
+                                          if (!aIsSelected && bIsSelected) return 1;
 
-                                                // Selected donors first
-                                                if (aIsSelected && !bIsSelected)
-                                                  return -1;
-                                                if (!aIsSelected && bIsSelected)
-                                                  return 1;
+                                          if (a.isOrgLevel && !b.isOrgLevel) return -1;
+                                          if (!a.isOrgLevel && b.isOrgLevel) return 1;
 
-                                                // Then org-level donors before project-only
-                                                if (
-                                                  a.isOrgLevel &&
-                                                  !b.isOrgLevel
-                                                )
-                                                  return -1;
-                                                if (
-                                                  !a.isOrgLevel &&
-                                                  b.isOrgLevel
-                                                )
-                                                  return 1;
+                                          return a.country.localeCompare(b.country);
+                                        });
 
-                                                // Finally alphabetically
-                                                return a.country.localeCompare(
-                                                  b.country,
-                                                );
-                                              });
+                                        // Dynamic country limit based on available space
+                                        const calculateCollapsedLimit = () => {
+                                          const maxCharsMobile = 50;
+                                          const maxCharsDesktop = 100;
+                                          const maxChars = window.innerWidth < 640 ? maxCharsMobile : maxCharsDesktop;
 
-                                              // Dynamic country limit based on available space
-                                              const calculateCollapsedLimit =
-                                                () => {
-                                                  // Estimate available space (characters) - mobile vs desktop
-                                                  const maxCharsMobile = 50; // Approximate characters that fit on mobile
-                                                  const maxCharsDesktop = 100; // More space on desktop
-                                                  const maxChars =
-                                                    window.innerWidth < 640
-                                                      ? maxCharsMobile
-                                                      : maxCharsDesktop;
+                                          let totalChars = 0;
+                                          const countriesToShow = [];
 
-                                                  let totalChars = 0;
-                                                  const countriesToShow = [];
+                                          for (const donor of sortedDonors) {
+                                            const estimatedSize = donor.country.length + 8;
 
-                                                  for (const donor of sortedDonors) {
-                                                    // Estimate badge size: country name + padding/margins (roughly +8 chars)
-                                                    const estimatedSize =
-                                                      donor.country.length + 8;
-
-                                                    if (
-                                                      totalChars +
-                                                        estimatedSize <=
-                                                      maxChars
-                                                    ) {
-                                                      countriesToShow.push(
-                                                        donor,
-                                                      );
-                                                      totalChars +=
-                                                        estimatedSize;
-                                                    } else {
-                                                      break;
-                                                    }
-                                                  }
-
-                                                  // Ensure at least 1 country is shown, max 5 total
-                                                  return countriesToShow.length ===
-                                                    0
-                                                    ? 1
-                                                    : Math.min(
-                                                        countriesToShow.length,
-                                                        5,
-                                                      );
-                                                };
-
-                                              const maxCountriesToShowCollapsed =
-                                                calculateCollapsedLimit();
-                                              const donorsToShow =
-                                                isCountriesExpanded
-                                                  ? sortedDonors
-                                                  : sortedDonors.slice(
-                                                      0,
-                                                      maxCountriesToShowCollapsed,
-                                                    );
-
-                                              return (
-                                                <>
-                                                  {donorsToShow.map(
-                                                    (donor, idx: number) => (
-                                                      <Badge
-                                                        key={idx}
-                                                        text={donor.country}
-                                                        variant={
-                                                          combinedDonors.includes(
-                                                            donor.country,
-                                                          )
-                                                            ? "blue"
-                                                            : "slate"
-                                                        }
-                                                        className={
-                                                          donor.isOrgLevel
-                                                            ? ""
-                                                            : "opacity-50"
-                                                        }
-                                                        title={
-                                                          donor.isOrgLevel
-                                                            ? `${donor.country} (Organization Donor)`
-                                                            : `${donor.country} (Project-Only Donor)`
-                                                        }
-                                                      />
-                                                    ),
-                                                  )}
-                                                  {sortedDonors.length >
-                                                    maxCountriesToShowCollapsed &&
-                                                    !isCountriesExpanded && (
-                                                      <div
-                                                        onClick={(e) => {
-                                                          e.stopPropagation();
-                                                          const newExpanded =
-                                                            new Set(
-                                                              expandedCountries,
-                                                            );
-                                                          newExpanded.add(
-                                                            org.id,
-                                                          );
-                                                          setExpandedCountries(
-                                                            newExpanded,
-                                                          );
-                                                        }}
-                                                        className="bg-slate-000 inline-flex cursor-pointer items-center rounded-md px-2 py-1 text-xs font-medium text-slate-900 transition-colors hover:bg-slate-100"
-                                                      >
-                                                        +
-                                                        {sortedDonors.length -
-                                                          maxCountriesToShowCollapsed}{" "}
-                                                        {
-                                                          labels.filters
-                                                            .showMore
-                                                        }
-                                                      </div>
-                                                    )}
-                                                  {isCountriesExpanded &&
-                                                    sortedDonors.length >
-                                                      maxCountriesToShowCollapsed && (
-                                                      <div
-                                                        onClick={(e) => {
-                                                          e.stopPropagation();
-                                                          const newExpanded =
-                                                            new Set(
-                                                              expandedCountries,
-                                                            );
-                                                          newExpanded.delete(
-                                                            org.id,
-                                                          );
-                                                          setExpandedCountries(
-                                                            newExpanded,
-                                                          );
-                                                        }}
-                                                        className="bg-slate-000 inline-flex cursor-pointer items-center rounded-md px-2 py-1 text-xs font-medium text-slate-900 transition-colors hover:bg-slate-100"
-                                                      >
-                                                        {
-                                                          labels.filters
-                                                            .showLess
-                                                        }
-                                                      </div>
-                                                    )}
-                                                </>
-                                              );
-                                            })()}
-                                          </div>
-                                        </div>
-                                      </div>
-                                      <div className="flex min-w-[100px] flex-shrink-0 flex-col items-end justify-between self-stretch">
-                                        <Button
-                                          asChild
-                                          variant="outline"
-                                          size="sm"
-                                          onClick={(e) => {
-                                            e.stopPropagation();
-                                            const nestedOrg =
-                                              nestedOrganizations.find(
-                                                (n) => n.id === org.id,
-                                              );
-                                            const orgKey =
-                                              nestedOrg?.fields?.["org_key"];
-                                            if (orgKey) {
-                                              onOpenOrganizationModal(orgKey);
+                                            if (totalChars + estimatedSize <= maxChars) {
+                                              countriesToShow.push(donor);
+                                              totalChars += estimatedSize;
+                                            } else {
+                                              break;
                                             }
-                                          }}
-                                          className="hidden h-6 items-center justify-center gap-1 rounded-md bg-[var(--badge-slate-text)] px-2 text-[10px] text-[var(--badge-slate-bg)] duration-150 hover:bg-slate-400 sm:inline-flex"
-                                        >
-                                          <div className="hidden items-center justify-center gap-1 border-none sm:inline-flex">
-                                            <Info className="h-3 w-3" />
-                                            <span>Details</span>
-                                          </div>
-                                        </Button>
-                                        <div className="text-xs whitespace-nowrap text-slate-400 sm:text-xs">
-                                          {org.projects.length > 0
-                                            ? isExpanded
-                                              ? `Showing ${org.projects.length} ${org.projects.length === 1 ? labels.product.singular : labels.product.plural}`
-                                              : `Show ${org.projects.length} ${org.projects.length === 1 ? labels.product.singular : labels.product.plural}`
-                                            : `${org.projects.length} ${org.projects.length === 1 ? labels.product.singular : labels.product.plural}`}
-                                        </div>
-                                      </div>
-                                    </div>
+                                          }
+
+                                          return countriesToShow.length === 0 ? 1 : Math.min(countriesToShow.length, 5);
+                                        };
+
+                                        const maxCountriesToShowCollapsed = calculateCollapsedLimit();
+                                        const donorsToShow = isCountriesExpanded
+                                          ? sortedDonors
+                                          : sortedDonors.slice(0, maxCountriesToShowCollapsed);
+
+                                        return (
+                                          <>
+                                            {donorsToShow.map((donor, idx: number) => {
+                                              return (
+                                                <Badge
+                                                  key={idx}
+                                                  text={donor.country}
+                                                  variant={
+                                                    combinedDonors.includes(donor.country)
+                                                      ? "blue"
+                                                      : "slate"
+                                                  }
+                                                  className={donor.isOrgLevel ? "" : "opacity-50"}
+                                                  title={
+                                                    donor.isOrgLevel
+                                                      ? `${donor.country} (Organization Donor)`
+                                                      : `${donor.country} (Project-Only Donor)`
+                                                  }
+                                                />
+                                              );
+                                            })}
+                                            {sortedDonors.length > maxCountriesToShowCollapsed && !isCountriesExpanded && (
+                                              <div
+                                                onClick={(e) => {
+                                                  e.stopPropagation();
+                                                  const newExpanded = new Set(expandedCountries);
+                                                  newExpanded.add(org.id);
+                                                  setExpandedCountries(newExpanded);
+                                                }}
+                                                className="bg-slate-000 inline-flex cursor-pointer items-center rounded-md px-2 py-1 text-xs font-medium text-slate-900 transition-colors hover:bg-slate-100"
+                                              >
+                                                +{sortedDonors.length - maxCountriesToShowCollapsed} {labels.filters.showMore}
+                                              </div>
+                                            )}
+                                            {isCountriesExpanded && sortedDonors.length > maxCountriesToShowCollapsed && (
+                                              <div
+                                                onClick={(e) => {
+                                                  e.stopPropagation();
+                                                  const newExpanded = new Set(expandedCountries);
+                                                  newExpanded.delete(org.id);
+                                                  setExpandedCountries(newExpanded);
+                                                }}
+                                                className="bg-slate-000 inline-flex cursor-pointer items-center rounded-md px-2 py-1 text-xs font-medium text-slate-900 transition-colors hover:bg-slate-100"
+                                              >
+                                                {labels.filters.showLess}
+                                              </div>
+                                            )}
+                                          </>
+                                        );
+                                      })()}
+                                    </OrganizationBox>
                                   </CollapsibleTrigger>
                                   <CollapsibleContent>
                                     <div className="mt-2 ml-8 space-y-2 sm:ml-14">
