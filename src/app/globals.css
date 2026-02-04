@@ -501,7 +501,45 @@ body::-webkit-scrollbar {
   margin-bottom: 0;
   position: relative;
   gap: 0;
-  flex-wrap: nowrap;
+  flex-wrap: wrap;
+  overflow-x: auto;
+}
+
+/* Mobile: reduce trapezoid tab size and spacing */
+@media (max-width: 640px) {
+  .trapezoid-tabs-container {
+    flex-wrap: wrap;
+  }
+
+  .trapezoid-tab {
+    padding: 0.5rem 1rem 0.5rem 1rem !important;
+    margin-right: -8px !important;
+    font-size: 0.75rem;
+    height: 36px;
+  }
+
+  .trapezoid-tab:first-child {
+    margin-left: 0.5rem;
+  }
+
+  .trapezoid-tab::before {
+    left: -0.5rem !important;
+    right: -0.75rem !important;
+  }
+
+  .trapezoid-tab-white {
+    padding: 0.5rem 1rem !important;
+    margin-right: 0 !important;
+  }
+
+  .trapezoid-tab-white.mr-0 {
+    padding: 0.5rem 1rem !important;
+  }
+
+  .trapezoid-tab-white.mr-0::before {
+    left: 0 !important;
+    right: 0 !important;
+  }
 }
 
 /* Container for right-aligned trapezoid tabs (sort + settings) */

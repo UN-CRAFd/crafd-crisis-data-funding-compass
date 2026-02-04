@@ -1016,41 +1016,43 @@ const CrisisDataDashboard = ({
                   {/* Left Side Tabs */}
                   <div className="flex items-center gap-0">
                     <TooltipProvider delayDuration={0}>
-                      {TABS.map(({ value, label, Icon, tooltip }) =>
-                        tipsEnabled ? (
-                          <TooltipUI key={value}>
-                            <TooltipTrigger asChild>
-                              <div>
-                                <TabsTrigger
-                                  value={value}
-                                  className="trapezoid-tab -ml-8"
-                                >
-                                  <SectionHeader icon={<Icon />} title={label} isActive={value === activeView} />
-                                </TabsTrigger>
-                              </div>
-                            </TooltipTrigger>
-                            <TooltipContent
-                              side="bottom"
-                              align="center"
-                              className="max-w-100 rounded-lg border border-slate-200 bg-white p-3 text-xs text-slate-800"
-                              sideOffset={5}
-                              avoidCollisions={true}
-                              style={TOOLTIP_STYLE}
-                            >
-                              {tooltip}
-                            </TooltipContent>
-                          </TooltipUI>
-                        ) : (
-                          <div key={value}>
-                            <TabsTrigger
-                              value={value}
-                              className="trapezoid-tab -ml-8"
-                            >
-                              <SectionHeader icon={<Icon />} title={label} isActive={value === activeView} />
-                            </TabsTrigger>
-                          </div>
-                        ),
-                      )}
+                      {TABS.map(({ value, label, Icon, tooltip }) => (
+                        <div key={value} className={value === "network" ? "hidden sm:block" : ""}>
+                          {tipsEnabled ? (
+                            <TooltipUI>
+                              <TooltipTrigger asChild>
+                                <div>
+                                  <TabsTrigger
+                                    value={value}
+                                    className="trapezoid-tab -ml-4 sm:-ml-8"
+                                  >
+                                    <SectionHeader icon={<Icon />} title={label} isActive={value === activeView} />
+                                  </TabsTrigger>
+                                </div>
+                              </TooltipTrigger>
+                              <TooltipContent
+                                side="bottom"
+                                align="center"
+                                className="max-w-100 rounded-lg border border-slate-200 bg-white p-3 text-xs text-slate-800"
+                                sideOffset={5}
+                                avoidCollisions={true}
+                                style={TOOLTIP_STYLE}
+                              >
+                                {tooltip}
+                              </TooltipContent>
+                            </TooltipUI>
+                          ) : (
+                            <div>
+                              <TabsTrigger
+                                value={value}
+                                className="trapezoid-tab -ml-4 sm:-ml-8"
+                              >
+                                <SectionHeader icon={<Icon />} title={label} isActive={value === activeView} />
+                              </TabsTrigger>
+                            </div>
+                          )}
+                        </div>
+                      ))}
                     </TooltipProvider>
                   </div>
 
@@ -1486,7 +1488,7 @@ const CrisisDataDashboard = ({
                                           >
                                             <div className="mb-2">
                                               <div className="flex flex-wrap items-center gap-2 gap-y-1">
-                                                <span className="font-medium text-slate-900 transition-colors group-hover:text-[var(--badge-other-border)]">
+                                                <span className="text-sm sm:text-base font-medium text-slate-900 transition-colors group-hover:text-[var(--badge-other-border)]">
                                                   {project.projectName}
                                                 </span>
                                                 {project.investmentTypes
