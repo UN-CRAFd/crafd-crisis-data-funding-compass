@@ -70,7 +70,7 @@ export const OrganizationBox: React.FC<OrganizationBoxProps> = ({
             src={`/logos/${orgKey}.png`}
             alt={`${organizationName} logo`}
             className="h-8 w-8 flex-shrink-0 object-contain"
-            style={{ filter: "saturate(0) brightness(1.05)" }}
+            style={{ filter: "grayscale(100%) brightness(1.1)" }}
             loading="lazy"
             decoding="async"
             onError={(e) => {
