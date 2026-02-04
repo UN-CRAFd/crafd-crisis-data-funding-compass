@@ -181,11 +181,64 @@ export const DonorTable: React.FC<DonorTableProps> = ({
           });
         });
 
+        // Count unique agencies for this donor
+        const agencySet = new Set<string>();
+        orgsArray.forEach((orgData) => {
+          const nestedOrg = nestedOrganizations.find(
+            (n) => n.id === orgData.org.id,
+          );
+          const agencies = nestedOrg?.agencies || [];
+
+          agencies.forEach((agency: any) => {
+            const agencyCountry =
+              agency.fields?.["Country Name"] ||
+              agency.fields?.["Country"] ||
+              agency.fields?.["Agency Associated Country"] ||
+              agency.fields?.["Agency/Department Country"];
+
+            let belongsToDonor = false;
+            if (agencyCountry) {
+              const countryValues = Array.isArray(agencyCountry)
+                ? agencyCountry
+                : [agencyCountry];
+              const aliases = donorAliasesFor(donor);
+              belongsToDonor = countryValues.some((c: any) => {
+                const candidate = String(c || "");
+                return aliases.some((alias) => {
+                  return (
+                    sanitizeForMatch(candidate).toLowerCase() ===
+                    sanitizeForMatch(alias).toLowerCase()
+                  );
+                });
+              });
+            }
+
+            if (belongsToDonor) {
+              const agencyName =
+                agency.fields?.["Agency Name"] ||
+                agency.fields?.["Funding Agency"] ||
+                agency.fields?.["Agency/Department Name"];
+              if (agencyName) {
+                if (Array.isArray(agencyName)) {
+                  agencyName.forEach((name) => {
+                    if (name && name.trim()) {
+                      agencySet.add(name);
+                    }
+                  });
+                } else if (agencyName.trim()) {
+                  agencySet.add(agencyName);
+                }
+              }
+            }
+          });
+        });
+
         return {
           donor,
           organizations: orgsArray,
           totalOrgs: data.organizations.size,
           totalProjects: projectIdSet.size,
+          totalAgencies: agencySet.size,
         };
       })
       .sort((a, b) => {
@@ -212,7 +265,7 @@ export const DonorTable: React.FC<DonorTableProps> = ({
 
   return (
     <div className="space-y-2 transition-all duration-500">
-      {donorData.map(({ donor, organizations, totalOrgs, totalProjects }) => {
+      {donorData.map(({ donor, organizations, totalOrgs, totalProjects, totalAgencies }) => {
         const isDonorExpanded = expandedDonors.has(donor);
         const isSelected = combinedDonors.includes(donor);
 
@@ -270,6 +323,7 @@ export const DonorTable: React.FC<DonorTableProps> = ({
                       {donor}
                     </h3>
                     <div className="mt-0 text-xs text-slate-500 sm:text-sm">
+                      {totalAgencies} agenc{totalAgencies !== 1 ? "ies" : "y"} ·{" "}
                       {totalOrgs} organization{totalOrgs !== 1 ? "s" : ""} ·{" "}
                       {totalProjects} asset{totalProjects !== 1 ? "s" : ""}
                     </div>
