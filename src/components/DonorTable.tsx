@@ -1,5 +1,5 @@
-import React, { useState, useMemo } from "react";
-import { ChevronDown, ChevronRight, Info, Building2 } from "lucide-react";
+import React, { useState, useMemo, useCallback, memo } from "react";
+import { ChevronDown, ChevronRight, Info } from "lucide-react";
 import {
   Collapsible,
   CollapsibleContent,
@@ -14,7 +14,6 @@ import {
   TooltipTrigger,
   Tooltip as TooltipUI,
 } from "@/components/ui/tooltip";
-import labels from "@/config/labels.json";
 import { matchesUrlSlug, toUrlSlug } from "@/lib/urlShortcuts";
 import type { OrganizationWithProjects, ProjectData } from "@/types/airtable";
 import { Badge } from "@/components/shared/Badge";
@@ -38,7 +37,45 @@ interface DonorTableProps {
   sortDirection: "asc" | "desc";
 }
 
-export const DonorTable: React.FC<DonorTableProps> = ({
+// Helper functions moved outside component to prevent recreation on each render
+const sanitizeForMatch = (input?: unknown): string => {
+  if (input === null || input === undefined) return "";
+  try {
+    const s = String(input);
+    // Remove parenthetical content e.g. "Norway (Ministry)" -> "Norway"
+    const noParens = s.replace(/\s*\([^)]*\)\s*/g, " ");
+    // Collapse whitespace and trim
+    return noParens.replace(/\s+/g, " ").trim();
+  } catch {
+    return String(input || "");
+  }
+};
+
+// Generate possible donor aliases to match against agency fields.
+// For example: "International Financial Institutions (IFIs)" -> ["International Financial Institutions (IFIs)", "International Financial Institutions", "IFIs"]
+const donorAliasesFor = (d?: string): string[] => {
+  if (!d) return [];
+  const original = String(d).trim();
+  const aliases = new Set<string>();
+  aliases.add(original);
+
+  // Remove parenthetical content
+  const noParens = original
+    .replace(/\s*\([^)]*\)\s*/g, " ")
+    .replace(/\s+/g, " ")
+    .trim();
+  if (noParens) aliases.add(noParens);
+
+  // Extract parenthetical content if present
+  const parenMatch = original.match(/\(([^)]+)\)/);
+  if (parenMatch?.[1]) {
+    aliases.add(parenMatch[1].trim());
+  }
+
+  return Array.from(aliases);
+};
+
+const DonorTableComponent: React.FC<DonorTableProps> = ({
   organizationsWithProjects,
   nestedOrganizations,
   organizationsTable,
@@ -52,55 +89,18 @@ export const DonorTable: React.FC<DonorTableProps> = ({
   const [expandedDonors, setExpandedDonors] = useState<Set<string>>(new Set());
   const [expandedOrgs, setExpandedOrgs] = useState<Set<string>>(new Set());
   const [expandedAgencies, setExpandedAgencies] = useState<Set<string>>(
-    new Set(),
+    new Set()
   );
   const [logoErrors, setLogoErrors] = useState<Set<string>>(new Set());
 
-  // Helper to sanitize names for matching (remove parentheses and extra punctuation)
-  const sanitizeForMatch = (input?: any) => {
-    if (input === null || input === undefined) return "";
-    try {
-      const s = String(input);
-      // Remove parenthetical content e.g. "Norway (Ministry)" -> "Norway"
-      const noParens = s.replace(/\s*\([^)]*\)\s*/g, " ");
-      // Collapse whitespace and trim
-      return noParens.replace(/\s+/g, " ").trim();
-    } catch (e) {
-      return String(input || "");
-    }
-  };
+  // Get tips enabled state - useTips must be called unconditionally (React hooks rules)
+  const tipsContext = useTips();
+  const tipsEnabled = tipsContext?.tipsEnabled ?? false;
 
-  // Generate possible donor aliases to match against agency fields.
-  // For example: "International Financial Institutions (IFIs)" -> ["International Financial Institutions (IFIs)", "International Financial Institutions", "IFIs"]
-  const donorAliasesFor = (d?: string) => {
-    if (!d) return [] as string[];
-    const original = String(d).trim();
-    const aliases = new Set<string>();
-    aliases.add(original);
-
-    // Remove parenthetical content
-    const noParens = original
-      .replace(/\s*\([^)]*\)\s*/g, " ")
-      .replace(/\s+/g, " ")
-      .trim();
-    if (noParens) aliases.add(noParens);
-
-    // Extract parenthetical content if present
-    const parenMatch = original.match(/\(([^)]+)\)/);
-    if (parenMatch && parenMatch[1]) {
-      aliases.add(parenMatch[1].trim());
-    }
-
-    return Array.from(aliases);
-  };
-  // Get tips enabled state
-  let tipsEnabled = false;
-  try {
-    const tipsContext = useTips();
-    tipsEnabled = tipsContext.tipsEnabled;
-  } catch (e) {
-    tipsEnabled = false;
-  }
+  // Memoized callback for logo errors to prevent recreation on each render
+  const handleLogoError = useCallback((orgId: string) => {
+    setLogoErrors((prev) => new Set([...prev, orgId]));
+  }, []);
 
   // Group organizations and projects by donor
   const donorData = useMemo(() => {
@@ -388,7 +388,7 @@ export const DonorTable: React.FC<DonorTableProps> = ({
                           hasProjects={hasProjects}
                           onOpenOrganizationModal={onOpenOrganizationModal}
                           logoErrors={logoErrors}
-                          onLogoError={(orgId) => setLogoErrors((prev) => new Set([...prev, orgId]))}
+                          onLogoError={handleLogoError}
                           headingLevel="h4"
                           showDetailsButton={false}
                           projectCount={projects.length}
@@ -847,5 +847,11 @@ export const DonorTable: React.FC<DonorTableProps> = ({
     </div>
   );
 };
+
+// Memoize component to prevent unnecessary re-renders
+export const DonorTable = memo(DonorTableComponent);
+
+// Display name for debugging
+DonorTable.displayName = "DonorTable";
 
 export default DonorTable;

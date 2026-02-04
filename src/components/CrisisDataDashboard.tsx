@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useEffect, useMemo, useState } from "react";
+import React, { useEffect, useMemo, useState, useCallback } from "react";
 // Image import removed because it's not used in this file
 import ChartCard from "@/components/ChartCard";
 import FilterBar from "@/components/FilterBar";
@@ -311,6 +311,11 @@ const CrisisDataDashboard = ({
   const [pdfExportLoading, setPDFExportLoading] = useState(false);
   const [exportMenuOpen, setExportMenuOpen] = useState(false);
   const [logoErrors, setLogoErrors] = useState<Set<string>>(new Set());
+
+  // Memoized callback for logo errors to prevent recreation on each render
+  const handleLogoError = useCallback((orgId: string) => {
+    setLogoErrors((prev) => new Set([...prev, orgId]));
+  }, []);
 
   // Load static organizations table for modals
   const organizationsTable: Array<{
@@ -1349,7 +1354,7 @@ const CrisisDataDashboard = ({
                                       hasProjects={hasProjects}
                                       onOpenOrganizationModal={onOpenOrganizationModal}
                                       logoErrors={logoErrors}
-                                      onLogoError={(orgId) => setLogoErrors((prev) => new Set([...prev, orgId]))}
+                                      onLogoError={handleLogoError}
                                       headingLevel="h3"
                                       showDetailsButton={true}
                                       projectCount={org.projects.length}
