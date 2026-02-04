@@ -1663,7 +1663,7 @@ const CrisisDataDashboard = ({
                                     </div>
                                   </CollapsibleTrigger>
                                   <CollapsibleContent>
-                                    <div className="mt-2 ml-8 space-y-2 sm:ml-20">
+                                    <div className="mt-2 ml-8 space-y-2 sm:ml-14">
                                       {org.projects.map(
                                         (project: ProjectData) => (
                                           <div
