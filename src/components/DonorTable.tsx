@@ -569,7 +569,7 @@ const DonorTableComponent: React.FC<DonorTableProps> = ({
                             >
                               <div className="mt-1 mb-0">
                                 <div className="flex flex-wrap items-center gap-1.5 gap-y-0.5">
-                                  <span className="ml-2group-hover:text-[var(--badge-other-border)] text-md sm:text-md font-medium text-slate-900 transition-colors">
+                                  <span className="ml-2group-hover:text-[var(--badge-other-border)] text-sm sm:text-base font-medium text-slate-900 transition-colors">
                                     {project.projectName}
                                   </span>
                                   {project.investmentTypes &&
