@@ -255,7 +255,7 @@ body {
 *::before,
 *::after {
   box-shadow: none !important;
-  filter: none !important;
+  filter: var(--tw-filter);
   -webkit-box-shadow: none !important;
   -moz-box-shadow: none !important;
 }
