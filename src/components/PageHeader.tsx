@@ -29,6 +29,7 @@ import {
   Landmark,
   UserRoundPlus,
   LayoutDashboard,
+  Compass
 } from "lucide-react";
 import { useTips } from "@/contexts/TipsContext";
 import { useGeneralContributions } from "@/contexts/GeneralContributionsContext";
@@ -128,10 +129,13 @@ export default function PageHeader({
       <div className="mx-auto max-w-[82rem] px-4 py-3 sm:px-6 sm:py-4 lg:px-8">
         <div className="flex items-center justify-between gap-3">
           <div className="flex min-w-0 flex-1 items-center gap-2 sm:gap-3">
-            <h1 className="truncate bg-gradient-to-r from-slate-800 to-slate-600 bg-clip-text text-lg text-transparent sm:text-3xl">
+            <div className="flex items-center gap-2">
+              <Compass className="hidden sm:block h-7 w-7 text-[var(--brand-primary)]" aria-label="Compass" />
+              <h1 className="truncate bg-gradient-to-r from-slate-800 to-slate-600 bg-clip-text text-lg text-transparent sm:text-3xl flex items-center gap-2">
               <span className="qanelas-title">{labels.header.title}</span>{" "}
               <span className="font-roboto">{labels.header.subtitle}</span>
-            </h1>
+              </h1>
+            </div>
             <TooltipProvider>
               <TooltipUI>
                 <TooltipTrigger asChild>
