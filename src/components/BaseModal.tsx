@@ -256,12 +256,11 @@ export function ModalHeader({
       <div className="flex shrink-0 items-center gap-2">
         <button
           onClick={onShare}
-          className={`flex h-12 w-12 shrink-0 cursor-pointer touch-manipulation items-center justify-center rounded-full shadow-lg transition-all duration-200 ease-out focus:outline-none sm:h-10 sm:w-10 sm:rounded-lg sm:shadow-none ${
+          className={`flex h-12 w-12 shrink-0 cursor-pointer touch-manipulation items-center justify-center rounded-full transition-all duration-200 ease-out focus:outline-none sm:h-10 sm:w-10 sm:rounded-lg ${
             showCopied
-              ? "text-white"
-              : "bg-slate-600 text-white hover:bg-slate-700 focus:bg-slate-700 sm:bg-gray-200 sm:text-gray-600 sm:hover:bg-gray-400 sm:hover:text-gray-100 sm:focus:bg-gray-400 sm:focus:text-gray-100"
+              ? "bg-[#10b981] text-white hover:bg-[#059669] focus:bg-[#059669] sm:bg-[#10b981] sm:text-white sm:hover:bg-[#059669] sm:hover:text-white sm:focus:bg-[#059669] sm:focus:text-white shadow-lg sm:shadow-none"
+              : "bg-slate-600 text-white hover:bg-slate-700 focus:bg-slate-700 sm:bg-gray-200 sm:text-gray-600 sm:hover:bg-gray-400 sm:hover:text-gray-100 sm:focus:bg-gray-400 sm:focus:text-gray-100 shadow-lg sm:shadow-none"
           }`}
-          style={showCopied ? { backgroundColor: "var(--color-success)" } : {}}
           aria-label="Share"
           title="Share"
         >

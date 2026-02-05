@@ -911,7 +911,7 @@ const CrisisDataDashboard = ({
       />
 
       {/* Main Content - Add top padding to account for fixed header */}
-      <div className="mx-auto max-w-[82rem] px-4 py-4 pt-20 sm:px-6 sm:py-6 sm:pt-24 lg:px-8">
+      <div className="mx-auto max-w-[82rem] overflow-x-hidden px-4 py-4 pt-20 sm:px-6 sm:py-6 sm:pt-24 lg:px-8">
         <div className="space-y-4 sm:space-y-[var(--spacing-section)]">
           {/* Survey Banner */}
           <SurveyBanner />
@@ -1296,7 +1296,7 @@ const CrisisDataDashboard = ({
                 </TabsList>
 
                 {/* Card with Content and Tab Views */}
-                <Card className={`${STYLES.cardGlass} card-bottom-rounded !border-t-0`}>
+                <Card className={`${STYLES.cardGlass} card-bottom-rounded !border-t-0 overflow-x-hidden`}>
                   {/* Filters */}
                   <CardContent className="px-4 pt-0 pb-4 sm:px-6 sm:pb-6">
                     <FilterBar

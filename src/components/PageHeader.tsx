@@ -249,16 +249,11 @@ export default function PageHeader({
                 variant="ghost"
                 size="sm"
                 onClick={onShare}
-                className={`rounded-md bg-transparent px-4 py-4 text-xs text-slate-700 transition hover:text-[var(--brand-primary)] sm:text-sm ${
+                className={`rounded-md px-4 py-4 text-xs transition-all duration-200 sm:text-sm ${
                   shareSuccess
-                    ? "bg-[var(--color-success)] text-white hover:bg-[var(--color-success-hover)] hover:text-slate-100"
-                    : ""
+                    ? "bg-[#10b981] text-white hover:bg-[#059669] hover:text-white"
+                    : "bg-transparent text-slate-700 hover:text-[var(--brand-primary)]"
                 }`}
-                style={
-                  shareSuccess
-                    ? { backgroundColor: "var(--color-success)" }
-                    : {}
-                }
                 title={labels.ui.copyToClipboard}
               >
                 <Share2 className="h-4 w-4 sm:mr-2" />
