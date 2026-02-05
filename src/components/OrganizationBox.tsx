@@ -102,6 +102,7 @@ const OrganizationBoxComponent: React.FC<OrganizationBoxProps> = ({
   const handleOpenModal = useCallback(
     (e: React.MouseEvent) => {
       e.stopPropagation();
+      e.preventDefault();
       if (orgKey) {
         onOpenOrganizationModal(orgKey);
       }
@@ -186,7 +187,10 @@ const OrganizationBoxComponent: React.FC<OrganizationBoxProps> = ({
           <div className="flex flex-col gap-1 sm:flex-row sm:flex-wrap sm:items-baseline sm:gap-2">
             <HeadingTag
               className="cursor-pointer text-sm font-medium text-slate-900 transition-colors hover:text-[var(--brand-primary)] sm:text-base"
-              onClick={handleOpenModal}
+              onClick={(e) => {
+                e.stopPropagation();
+                handleOpenModal(e as React.MouseEvent);
+              }}
             >
               {organizationName}
             </HeadingTag>
@@ -207,8 +211,10 @@ const OrganizationBoxComponent: React.FC<OrganizationBoxProps> = ({
       </div>
 
       {/* Right section: Details button and/or project count */}
-      {/* Right section: Details button and/or project count */}
-      <div className="flex min-w-[100px] flex-shrink-0 flex-col items-end justify-between self-stretch">
+      <div 
+        className="flex min-w-[100px] flex-shrink-0 flex-col items-end justify-between self-stretch"
+        onClick={(e) => e.stopPropagation()}
+      >
         {showDetailsButton && (
           <Button
             variant="outline"

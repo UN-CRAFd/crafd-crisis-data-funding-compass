@@ -1346,7 +1346,18 @@ const CrisisDataDashboard = ({
                                   }}
                                   className="transition-all duration-500 ease-out"
                                 >
-                                  <CollapsibleTrigger className="w-full">
+                                  <div 
+                                    className="w-full cursor-pointer"
+                                    onClick={() => {
+                                      const newExpanded = new Set(expandedOrgs);
+                                      if (isExpanded) {
+                                        newExpanded.delete(org.id);
+                                      } else {
+                                        newExpanded.add(org.id);
+                                      }
+                                      setExpandedOrgs(newExpanded);
+                                    }}
+                                  >
                                     <OrganizationBox
                                       orgId={org.id}
                                       organizationName={org.organizationName}
@@ -1459,7 +1470,7 @@ const CrisisDataDashboard = ({
                                         );
                                       })()}
                                     </OrganizationBox>
-                                  </CollapsibleTrigger>
+                                  </div>
                                   <CollapsibleContent>
                                     <div className="mt-2 ml-8 space-y-2 sm:ml-14">
                                       {org.projects.map(
