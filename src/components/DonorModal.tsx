@@ -569,21 +569,6 @@ export default function DonorModal({
                               const content = (
                                 <div>
                                   {projectButton}
-                                  {/* Show agency badge indicating this project's funding agency within this donor's agency section */}
-                                  <div className="mt-1">
-                                    <span
-                                      className="inline-block rounded px-2 py-0.5 text-xs font-medium"
-                                      style={{
-                                        backgroundColor:
-                                          "var(--badge-agency-bg)",
-                                        color: "var(--badge-agency-text)",
-                                        borderColor:
-                                          "var(--badge-agency-border)",
-                                      }}
-                                    >
-                                      {agency.name}
-                                    </span>
-                                  </div>
                                 </div>
                               );
 
