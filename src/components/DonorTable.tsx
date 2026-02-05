@@ -378,7 +378,18 @@ const DonorTableComponent: React.FC<DonorTableProps> = ({
                       }}
                       className="transition-all duration-500 ease-out"
                     >
-                      <CollapsibleTrigger className="w-full">
+                      <div 
+                        className="w-full cursor-pointer"
+                        onClick={() => {
+                          const newExpanded = new Set(expandedOrgs);
+                          if (isOrgExpanded) {
+                            newExpanded.delete(org.id);
+                          } else {
+                            newExpanded.add(org.id);
+                          }
+                          setExpandedOrgs(newExpanded);
+                        }}
+                      >
                         <OrganizationBox
                           orgId={org.id}
                           organizationName={org.organizationName}
@@ -546,7 +557,7 @@ const DonorTableComponent: React.FC<DonorTableProps> = ({
                                   );
                                 })()}
                         </OrganizationBox>
-                      </CollapsibleTrigger>
+                      </div>
                       <CollapsibleContent>
                         <div className="mt-2 ml-7 space-y-2 sm:ml-14">
                           {projects.map((project: ProjectData) => (
