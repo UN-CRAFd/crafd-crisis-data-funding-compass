@@ -567,7 +567,7 @@ export default function DonorModal({
                               );
                               // Only wrap in tooltip if there's a description
                               const content = (
-                                <>
+                                <div>
                                   {projectButton}
                                   {/* Show agency badge indicating this project's funding agency within this donor's agency section */}
                                   <div className="mt-1">
@@ -584,7 +584,7 @@ export default function DonorModal({
                                       {agency.name}
                                     </span>
                                   </div>
-                                </>
+                                </div>
                               );
 
                               if (firstSentence) {
