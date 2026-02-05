@@ -433,7 +433,7 @@ export default function DonorModal({
           <CompactStatCard
             icon={Package}
             value={totalProjects}
-            label={totalProjects === 1 ? "Asset" : "Assets"}
+            label={totalProjects === 1 ? "Product" : "Products"}
           />
         </div>
 
@@ -530,7 +530,7 @@ export default function DonorModal({
                         <div>
                           <div className="mb-3 flex items-center gap-2">
                             <span className="text-xs font-semibold tracking-wider text-slate-500 uppercase">
-                              {labels.modals.financedAssets || "Assets"}
+                              {labels.modals.financedAssets || "Products"}
                             </span>
                             <span className="text-xs font-normal text-slate-400 tabular-nums">
                               ({projects.length})
@@ -593,7 +593,7 @@ export default function DonorModal({
                       {/* Show message if agency has no direct funding */}
                       {organizations.length === 0 && projects.length === 0 && (
                         <p className="text-sm text-slate-400 italic">
-                          No directly funded organizations or assets.
+                          No directly funded organizations or products.
                         </p>
                       )}
                     </div>
@@ -650,7 +650,7 @@ export default function DonorModal({
                           {org.projectCount > 0 && (
                             <span className="text-var(--brand-primary-dark) text-xs">
                               {org.projectCount}{" "}
-                              {org.projectCount === 1 ? "asset" : "assets"}
+                              {org.projectCount === 1 ? "product" : "products"}
                             </span>
                           )}
                         </div>
