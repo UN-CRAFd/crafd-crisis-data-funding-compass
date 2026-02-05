@@ -1773,7 +1773,7 @@ const NetworkGraph: React.FC<NetworkGraphProps> = ({
               <button
                 onClick={() => setSettingsCollapsed(!settingsCollapsed)}
                 className="rounded p-1.5 transition-colors hover:bg-slate-200/50 flex-shrink-0"
-                title={settingsCollapsed ? "Expand settings" : "Collapse settings"}
+                title={settingsCollapsed ? "Expand controls" : "Collapse controls"}
               >
                 {settingsCollapsed ? (
                   <ChevronRight className="h-4 w-4 text-slate-600" />
@@ -1826,7 +1826,7 @@ const NetworkGraph: React.FC<NetworkGraphProps> = ({
               {/* Legend */}
               <div className="p-2.5">
                 <div className="mb-2 flex items-center justify-between">
-                  <div className="text-xs font-semibold text-slate-800/90">
+                  <div className="text-[10px] font-semibold text-slate-600 uppercase tracking-wide">
                     Legend
                   </div>
                   <button
