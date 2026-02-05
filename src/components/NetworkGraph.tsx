@@ -10,7 +10,7 @@ import React, {
 import { createPortal } from "react-dom";
 import { forceCollide } from "d3-force";
 import ForceGraph2D from "react-force-graph-2d";
-import { Maximize, Minimize, Crosshair, Layers, Package, DollarSign, Type, Zap, GitBranch } from "lucide-react";
+import { Maximize, Minimize, Crosshair, Layers, Package, Building2, DollarSign, Type, Zap, GitBranch, ChevronLeft, ChevronRight } from "lucide-react";
 import type { OrganizationWithProjects } from "../types/airtable";
 import FilterBar from "./FilterBar";
 import NoResultsModal from "./NoResultsModal";
@@ -119,10 +119,11 @@ const NetworkGraph: React.FC<NetworkGraphProps> = ({
   const [clusterByOrgType, setClusterByOrgType] = useState(false);
   const [clusterByAssetType, setClusterByAssetType] = useState(false);
   const [scalingMode, setScalingMode] = useState<
-    "standard" | "connections" | "funding"
-  >("standard");
+    "connections" | "funding" | null
+  >(null);
   const [showAllNames, setShowAllNames] = useState(false);
   const [legendCollapsed, setLegendCollapsed] = useState(false);
+  const [settingsCollapsed, setSettingsCollapsed] = useState(false);
   const lastClusterStateRef = useRef<string>(""); // Track last clustering state to prevent unnecessary updates
   const [filterBarContainer, setFilterBarContainer] =
     useState<HTMLElement | null>(null);
@@ -356,7 +357,7 @@ const NetworkGraph: React.FC<NetworkGraphProps> = ({
     const minBudget = orgBudgets.length > 0 ? Math.min(...orgBudgets) : 0;
 
     // Scale node visual size based on scalingMode
-    // 'standard' = fixed size by node type (donors biggest, orgs medium, assets smallest)
+    // null/'standard' = fixed size by node type (donors biggest, orgs medium, assets smallest)
     // 'connections' = size by degree (number of links)
     // 'funding' = organizations sized by budget, others by connections
     const SIZE_SCALE = 6; // multiplier for the log-scaling term
@@ -368,8 +369,8 @@ const NetworkGraph: React.FC<NetworkGraphProps> = ({
       const minSize =
         n.type === "donor" ? 28 : n.type === "organization" ? 24 : 18;
 
-      if (scalingMode === "standard") {
-        // Standard mode: fixed sizes based on node type
+      if (!scalingMode || scalingMode === null) {
+        // Standard/default mode: fixed sizes based on node type
         // Donors: 40, Organizations: 30, Assets: 20
         n.value = n.type === "donor" ? 45 : n.type === "organization" ? 40 : 30;
       } else if (scalingMode === "funding" && n.type === "organization") {
@@ -477,8 +478,8 @@ const NetworkGraph: React.FC<NetworkGraphProps> = ({
       const minSize =
         n.type === "donor" ? 28 : n.type === "organization" ? 24 : 18;
 
-      if (scalingMode === "standard") {
-        // Standard mode: fixed sizes based on node type
+      if (!scalingMode || scalingMode === null) {
+        // Standard/default mode: fixed sizes based on node type
         return n.type === "donor" ? 40 : n.type === "organization" ? 30 : 20;
       } else if (scalingMode === "funding" && n.type === "organization") {
         if (n.estimatedBudget && n.estimatedBudget > 0) {
@@ -1656,100 +1657,130 @@ const NetworkGraph: React.FC<NetworkGraphProps> = ({
         >
           <div className="rounded-lg border border-slate-200 bg-white shadow-sm backdrop-blur-lg">
             <div className="flex items-center gap-0 p-2">
-              {/* Clustering Section */}
-              <div className="flex items-center gap-2 px-2">
-                <div className="text-[10px] font-semibold text-slate-600 uppercase tracking-wide">
-                  Cluster
+              {/* Collapsible Content */}
+              <div 
+                className={`flex items-center gap-0 overflow-hidden transition-all duration-300 ease-in-out ${
+                  settingsCollapsed 
+                    ? 'max-w-0 opacity-0' 
+                    : 'max-w-96 opacity-100'
+                }`}
+                style={{
+                  maxWidth: settingsCollapsed ? '0px' : '24rem'
+                }}
+              >
+                {/* Clustering Section */}
+                <div className="flex items-center gap-2 px-2">
+                  <div className="text-[10px] font-semibold text-slate-600 uppercase tracking-wide">
+                    Cluster
+                  </div>
+                  <button
+                    onClick={() => setClusterByOrgType(!clusterByOrgType)}
+                    className={`rounded p-1.5 transition-colors ${
+                      clusterByOrgType
+                        ? "bg-amber-100 text-amber-700"
+                        : "text-slate-600 hover:bg-slate-200/50"
+                    }`}
+                    style={clusterByOrgType ? { backgroundColor: "rgba(243, 195, 92, 0.3)", color: "#BC840F" } : {}}
+                    title="Cluster by organization type"
+                  >
+                    <Building2 className="h-4 w-4" />
+                  </button>
+                  <button
+                    onClick={() => setClusterByAssetType(!clusterByAssetType)}
+                    className={`rounded p-1.5 transition-colors ${
+                      clusterByAssetType
+                        ? "text-indigo-700"
+                        : "text-slate-600 hover:bg-slate-200/50"
+                    }`}
+                    style={clusterByAssetType ? { backgroundColor: "rgba(215, 216, 245, 0.3)", color: "#4d479c" } : {}}
+                    title="Cluster by asset type"
+                  >
+                    <Package className="h-4 w-4" />
+                  </button>
                 </div>
-                <button
-                  onClick={() => setClusterByOrgType(!clusterByOrgType)}
-                  className={`rounded p-1.5 transition-colors ${
-                    clusterByOrgType
-                      ? "bg-amber-100 text-amber-700"
-                      : "text-slate-600 hover:bg-slate-200/50"
-                  }`}
-                  style={clusterByOrgType ? { backgroundColor: "rgba(243, 195, 92, 0.3)", color: "#BC840F" } : {}}
-                  title="Cluster by organization type"
-                >
-                  <Layers className="h-4 w-4" />
-                </button>
-                <button
-                  onClick={() => setClusterByAssetType(!clusterByAssetType)}
-                  className={`rounded p-1.5 transition-colors ${
-                    clusterByAssetType
-                      ? "text-indigo-700"
-                      : "text-slate-600 hover:bg-slate-200/50"
-                  }`}
-                  style={clusterByAssetType ? { backgroundColor: "rgba(215, 216, 245, 0.3)", color: "#4d479c" } : {}}
-                  title="Cluster by asset type"
-                >
-                  <Package className="h-4 w-4" />
-                </button>
-              </div>
 
-              {/* Divider */}
-              <div className="h-6 w-px bg-slate-200" />
+                {/* Divider */}
+                <div className="h-6 w-px bg-slate-200" />
 
-              {/* Scaling Section */}
-              <div className="flex items-center gap-1 px-2">
-                <div className="text-[10px] font-semibold text-slate-600 uppercase tracking-wide">
-                  Scale
+                {/* Scaling Section */}
+                <div className="flex items-center gap-2 px-2">
+                  <div className="text-[10px] font-semibold text-slate-600 uppercase tracking-wide">
+                    Scale
+                  </div>
+                  <button
+                    onClick={() => {
+                      if (scalingMode === "connections") {
+                        // Toggle off
+                        setScalingMode(null);
+                      } else {
+                        // Toggle on, deselect funding
+                        setScalingMode("connections");
+                      }
+                    }}
+                    className={`rounded p-1.5 transition-colors ${
+                      scalingMode === "connections"
+                        ? "bg-slate-300 text-slate-800"
+                        : "text-slate-600 hover:bg-slate-200/50"
+                    }`}
+                    title="Size by connections"
+                  >
+                    <GitBranch className="h-4 w-4" />
+                  </button>
+                  <button
+                    onClick={() => {
+                      if (scalingMode === "funding") {
+                        // Toggle off
+                        setScalingMode(null);
+                      } else {
+                        // Toggle on, deselect connections
+                        setScalingMode("funding");
+                      }
+                    }}
+                    className={`rounded p-1.5 transition-colors ${
+                      scalingMode === "funding"
+                        ? "bg-slate-300 text-slate-800"
+                        : "text-slate-600 hover:bg-slate-200/50"
+                    }`}
+                    title="Size by funding"
+                  >
+                    <DollarSign className="h-4 w-4" />
+                  </button>
                 </div>
-                <button
-                  onClick={() => setScalingMode("standard")}
-                  className={`rounded px-1.5 py-1.5 transition-colors text-xs font-medium ${
-                    scalingMode === "standard"
-                      ? "bg-slate-300 text-slate-800"
-                      : "text-slate-600 hover:bg-slate-200/50"
-                  }`}
-                  title="Standard node sizing"
-                >
-                  ●
-                </button>
-                <button
-                  onClick={() => setScalingMode("connections")}
-                  className={`rounded px-1.5 py-1.5 transition-colors text-xs font-medium ${
-                    scalingMode === "connections"
-                      ? "bg-slate-300 text-slate-800"
-                      : "text-slate-600 hover:bg-slate-200/50"
-                  }`}
-                  title="Size by connections"
-                >
-                  ⟿
-                </button>
-                <button
-                  onClick={() => setScalingMode("funding")}
-                  className={`rounded px-1.5 py-1.5 transition-colors text-xs font-medium ${
-                    scalingMode === "funding"
-                      ? "bg-slate-300 text-slate-800"
-                      : "text-slate-600 hover:bg-slate-200/50"
-                  }`}
-                  title="Size by funding"
-                >
-                  $$
-                </button>
+
+                {/* Divider */}
+                <div className="h-6 w-px bg-slate-200" />
+
+                {/* Names Section */}
+                <div className="flex items-center gap-2 px-2">
+                  <button
+                    onClick={() => setShowAllNames(!showAllNames)}
+                    className={`rounded p-1.5 transition-colors ${
+                      showAllNames
+                        ? "bg-slate-300 text-slate-800"
+                        : "text-slate-600 hover:bg-slate-200/50"
+                    }`}
+                    title="Toggle entity names"
+                  >
+                    <Type className="h-4 w-4" />
+                  </button>
+                </div>
+
+                {/* Divider */}
+                <div className="h-6 w-px bg-slate-200" />
               </div>
 
-              {/* Divider */}
-              <div className="h-6 w-px bg-slate-200" />
-
-              {/* Names Section */}
-              <div className="flex items-center gap-2 px-2">
-                <button
-                  onClick={() => setShowAllNames(!showAllNames)}
-                  className={`rounded p-1.5 transition-colors ${
-                    showAllNames
-                      ? "bg-slate-300 text-slate-800"
-                      : "text-slate-600 hover:bg-slate-200/50"
-                  }`}
-                  title="Toggle entity names"
-                >
-                  <Type className="h-4 w-4" />
-                </button>
-              </div>
-
-              {/* Divider */}
-              <div className="h-6 w-px bg-slate-200" />
+              {/* Settings Toggle Chevron */}
+              <button
+                onClick={() => setSettingsCollapsed(!settingsCollapsed)}
+                className="rounded p-1.5 transition-colors hover:bg-slate-200/50 flex-shrink-0"
+                title={settingsCollapsed ? "Expand settings" : "Collapse settings"}
+              >
+                {settingsCollapsed ? (
+                  <ChevronRight className="h-4 w-4 text-slate-600" />
+                ) : (
+                  <ChevronLeft className="h-4 w-4 text-slate-600" />
+                )}
+              </button>
 
               {/* View Section */}
               <div className="flex items-center gap-1 px-2">
@@ -1781,30 +1812,17 @@ const NetworkGraph: React.FC<NetworkGraphProps> = ({
           className="absolute left-4 z-10 transition-all duration-200"
           style={{ top: isFullscreen ? `${filterBarHeight + 30}px` : "16px" }}
         >
-          {legendCollapsed ? (
-            <button
-              onClick={() => setLegendCollapsed(false)}
-              className="rounded-full border border-slate-200 bg-white p-2 shadow-sm transition-colors hover:bg-slate-50"
-              title="Show legend"
-            >
-              <svg
-                width="18"
-                height="18"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                className="text-slate-700"
-              >
-                <path
-                  d="M9 18l6-6-6-6"
-                  strokeWidth="2"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                />
-              </svg>
-            </button>
-          ) : (
-            <div className="w-30 rounded-lg border border-slate-200 bg-white shadow-sm backdrop-blur-lg">
+          {/* Expanded Legend */}
+          <div 
+            className={`w-30 rounded-lg border border-slate-200 bg-white shadow-sm backdrop-blur-lg overflow-hidden transition-all duration-300 ease-in-out absolute ${
+              legendCollapsed 
+                ? 'max-w-0 opacity-0 pointer-events-none' 
+                : 'max-w-64 opacity-100'
+            }`}
+            style={{
+              maxWidth: legendCollapsed ? '0px' : '16rem'
+            }}
+          >
               {/* Legend */}
               <div className="p-2.5">
                 <div className="mb-2 flex items-center justify-between">
@@ -1906,10 +1924,34 @@ const NetworkGraph: React.FC<NetworkGraphProps> = ({
                   </div>
                 </div>
               </div>
-
-
             </div>
-          )}
+
+          {/* Collapsed Legend Button */}
+          <button
+            onClick={() => setLegendCollapsed(false)}
+            className={`rounded border border-slate-200 bg-white p-2 shadow-sm transition-all duration-300 ease-in-out ${
+              legendCollapsed 
+                ? 'opacity-100 pointer-events-auto' 
+                : 'opacity-0 pointer-events-none'
+            }`}
+            title="Show legend"
+          >
+            <svg
+              width="18"
+              height="18"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              className="text-slate-700"
+            >
+              <path
+                d="M9 18l6-6-6-6"
+                strokeWidth="2"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+              />
+            </svg>
+          </button>
         </div>
 
         <ForceGraph2D
