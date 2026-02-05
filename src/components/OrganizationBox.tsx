@@ -184,7 +184,7 @@ const OrganizationBoxComponent: React.FC<OrganizationBoxProps> = ({
 
         {/* Organization name and content */}
         <div className="min-w-0 flex-1 text-left">
-          <div className="flex flex-col gap-1 sm:flex-row sm:flex-wrap sm:items-baseline sm:gap-2">
+          <div className={`flex flex-col gap-1 sm:flex-row sm:flex-wrap sm:items-baseline sm:gap-2 ${children ? "mb-1" : ""}`}>
             <HeadingTag
               className="cursor-pointer text-sm font-medium text-slate-900 transition-colors hover:text-[var(--brand-primary)] sm:text-base"
               onClick={(e) => {
@@ -203,7 +203,7 @@ const OrganizationBoxComponent: React.FC<OrganizationBoxProps> = ({
           
           {/* Badges section */}
           {children && (
-            <div className="mt-2 flex max-w-full flex-wrap gap-1">
+            <div className="flex max-w-full flex-wrap gap-1">
               {children}
             </div>
           )}
