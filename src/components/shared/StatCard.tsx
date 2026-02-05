@@ -32,6 +32,7 @@ interface StatCardProps {
   colorScheme: "amber";
   tooltip?: React.ReactNode | string;
   children?: React.ReactNode;
+  onExpandChange?: (expanded: boolean) => void;
 }
 
 const STYLES = {
@@ -56,6 +57,7 @@ export const StatCard = React.memo(function StatCard({
   colorScheme,
   tooltip,
   children,
+  onExpandChange,
 }: StatCardProps) {
   const [isExpanded, setIsExpanded] = useState(false);
   let tipsEnabled = false;
@@ -77,13 +79,18 @@ export const StatCard = React.memo(function StatCard({
 
   const colors = gradients[colorScheme];
 
+  const handleExpandChange = (expanded: boolean) => {
+    setIsExpanded(expanded);
+    onExpandChange?.(expanded);
+  };
+
   const cardContent = (
-    <Collapsible open={isExpanded} onOpenChange={setIsExpanded}>
+    <Collapsible open={isExpanded} onOpenChange={handleExpandChange}>
       <div className="relative">
         <Card className={`${STYLES.statCard} bg-gradient-to-br ${colors.bg}`}>
-          {children ? (
+          {children || onExpandChange ? (
             <button
-              onClick={() => setIsExpanded(!isExpanded)}
+              onClick={() => handleExpandChange(!isExpanded)}
               className="w-full text-left"
             >
               <CardHeader className="h-5 pb-0 mb-5">

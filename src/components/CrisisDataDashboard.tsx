@@ -312,6 +312,7 @@ const CrisisDataDashboard = ({
   const [pdfExportLoading, setPDFExportLoading] = useState(false);
   const [exportMenuOpen, setExportMenuOpen] = useState(false);
   const [logoErrors, setLogoErrors] = useState<Set<string>>(new Set());
+  const [expandedMobileStatCard, setExpandedMobileStatCard] = useState<number | null>(null);
 
   // Memoized callback for logo errors to prevent recreation on each render
   const handleLogoError = useCallback((orgId: string) => {
@@ -959,7 +960,7 @@ const CrisisDataDashboard = ({
               },
             ];
 
-            const renderStatCard = (config: typeof statCardsConfig[0], key: number) => (
+            const renderStatCard = (config: typeof statCardsConfig[0], key: number, withChildren: boolean = true) => (
               <StatCard
                 key={key}
                 icon={config.icon}
@@ -968,35 +969,54 @@ const CrisisDataDashboard = ({
                 label={config.label}
                 colorScheme="amber"
                 tooltip={config.tooltip}
+                onExpandChange={withChildren ? undefined : (expanded) => {
+                  setExpandedMobileStatCard(expanded ? key : null);
+                }}
               >
-                <ChartCard
-                  title={config.chartTitle}
-                  icon={config.icon}
-                  data={config.chartData}
-                  barColor="var(--brand-primary-lighter)"
-                  footnote={config.chartFootnote}
-                />
+                {withChildren && (
+                  <ChartCard
+                    title={config.chartTitle}
+                    icon={config.icon}
+                    data={config.chartData}
+                    barColor="var(--brand-primary-lighter)"
+                    footnote={config.chartFootnote}
+                  />
+                )}
               </StatCard>
             );
+
+            const expandedCardConfig = expandedMobileStatCard !== null ? statCardsConfig[expandedMobileStatCard] : null;
 
             return (
               <>
                 {/* Mobile Carousel */}
                 <div className="sm:hidden">
-                  <div className="relative overflow-hidden">
+                  <div className="relative overflow-x-hidden">
                     <div className="scrollbar-hide flex snap-x snap-mandatory gap-4 overflow-x-auto px-1 pb-2">
                       {statCardsConfig.map((config, idx) => (
                         <div key={idx} className={`${config.mobileWidth} flex-shrink-0 snap-center`}>
-                          {renderStatCard(config, idx)}
+                          {renderStatCard(config, idx, false)}
                         </div>
                       ))}
                     </div>
                   </div>
+                  {/* Expanded chart below carousel */}
+                  {expandedCardConfig && (
+                    <div className="mt-4">
+                      <ChartCard
+                        title={expandedCardConfig.chartTitle}
+                        icon={expandedCardConfig.icon}
+                        data={expandedCardConfig.chartData}
+                        barColor="var(--brand-primary-lighter)"
+                        footnote={expandedCardConfig.chartFootnote}
+                      />
+                    </div>
+                  )}
                 </div>
 
                 {/* Desktop Grid */}
                 <div className="hidden gap-4 sm:grid sm:grid-cols-2 sm:gap-[var(--spacing-section)] lg:grid-cols-3">
-                  {statCardsConfig.map((config, idx) => renderStatCard(config, idx))}
+                  {statCardsConfig.map((config, idx) => renderStatCard(config, idx, true))}
                 </div>
               </>
             );
