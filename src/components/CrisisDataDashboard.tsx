@@ -13,6 +13,7 @@ import ProjectModal from "@/components/ProjectModal";
 import DonorModal from "@/components/DonorModal";
 import DonorTable from "@/components/DonorTable";
 import { OrganizationBox } from "@/components/OrganizationBox";
+import { ProjectBox } from "@/components/ProjectBox";
 import SurveyBanner from "@/components/SurveyBanner";
 import { Button } from "@/components/ui/button";
 import { matchesUrlSlug } from "@/lib/urlShortcuts";
@@ -1474,132 +1475,30 @@ const CrisisDataDashboard = ({
                                   <CollapsibleContent>
                                     <div className="mt-2 ml-8 space-y-2 sm:ml-14">
                                       {org.projects.map(
-                                        (project: ProjectData) => (
-                                          <div
-                                            key={project.id}
-                                            className="group animate-in cursor-pointer rounded-lg border border-slate-200 bg-white p-3 transition-colors duration-200 fade-in hover:bg-slate-50"
-                                            onClick={() => {
-                                              // Get product_key from nested data
-                                              const nestedOrg =
-                                                nestedOrganizations.find(
-                                                  (n: any) => n.id === org.id,
-                                                );
-                                              const nestedProject =
-                                                nestedOrg?.projects?.find(
-                                                  (p: any) =>
-                                                    p.id === project.id,
-                                                );
-                                              const projectKey =
-                                                nestedProject?.fields
-                                                  ?.product_key;
-                                              if (projectKey) {
-                                                onOpenProjectModal(projectKey);
-                                              }
-                                            }}
-                                          >
-                                            <div className="mb-2">
-                                              <div className="flex flex-wrap items-center gap-2 gap-y-1">
-                                                <span className="text-sm sm:text-base font-medium text-slate-900 transition-colors group-hover:text-[var(--badge-other-border)]">
-                                                  {project.projectName}
-                                                </span>
-                                                {project.investmentTypes
-                                                  .length > 0 && (
-                                                  <div className="flex flex-wrap items-center gap-1">
-                                                    {project.investmentTypes.map(
-                                                      (type, idx) => {
-                                                        const IconComponent =
-                                                          getIconForInvestmentType(
-                                                            type,
-                                                          );
-                                                        const description =
-                                                          INVESTMENT_TYPE_DESCRIPTIONS[
-                                                            type
-                                                          ];
-                                                        const badge = (
-                                                          <span
-                                                            key={idx}
-                                                            className="inline-flex cursor-help items-center gap-1 rounded-md px-2 py-1 text-xs font-semibold"
-                                                            style={{
-                                                              backgroundColor:
-                                                                "var(--badge-other-bg)",
-                                                              color:
-                                                                "var(--badge-other-text)",
-                                                            }}
-                                                          >
-                                                            <IconComponent className="h-3.5 w-3.5" />
-                                                            {type}
-                                                          </span>
-                                                        );
-
-                                                        // Wrap in tooltip if description exists and tips are enabled
-                                                        if (
-                                                          description &&
-                                                          tipsEnabled
-                                                        ) {
-                                                          return (
-                                                            <TooltipProvider
-                                                              key={idx}
-                                                            >
-                                                              <TooltipUI
-                                                                delayDuration={
-                                                                  200
-                                                                }
-                                                              >
-                                                                <TooltipTrigger
-                                                                  asChild
-                                                                >
-                                                                  {badge}
-                                                                </TooltipTrigger>
-                                                                <TooltipContent
-                                                                  side="top"
-                                                                  className="!z-[300] max-w-xs border border-gray-200 bg-white/70 text-xs backdrop-blur-md"
-                                                                  sideOffset={5}
-                                                                >
-                                                                  {description}
-                                                                </TooltipContent>
-                                                              </TooltipUI>
-                                                            </TooltipProvider>
-                                                          );
-                                                        }
-
-                                                        return badge;
-                                                      },
-                                                    )}
-                                                  </div>
-                                                )}
-                                              </div>
-                                            </div>
-                                            <div>
-                                              <div className="flex flex-wrap gap-1">
-                                                {project.donorCountries.length >
-                                                0 ? (
-                                                  project.donorCountries.map(
-                                                    (country, idx) => (
-                                                      <Badge
-                                                        key={idx}
-                                                        text={country}
-                                                        variant={
-                                                          combinedDonors.includes(
-                                                            country,
-                                                          )
-                                                            ? "blue"
-                                                            : "slate"
-                                                        }
-                                                      />
-                                                    ),
-                                                  )
-                                                ) : (
-                                                  <span className="text-xs text-slate-500">
-                                                    {
-                                                      labels.modals
-                                                        .assetDonorsNotSpecified
-                                                    }
-                                                  </span>
-                                                )}
-                                              </div>
-                                            </div>
-                                          </div>
-                                        ),
+                                        (project: ProjectData) => {
+                                          // Get product_key from nested data
+                                          const nestedOrg = nestedOrganizations.find(
+                                            (n: any) => n.id === org.id,
+                                          );
+                                          const nestedProject = nestedOrg?.projects?.find(
+                                            (p: any) => p.id === project.id,
+                                          );
+                                          const projectKey = nestedProject?.fields?.product_key;
+                                          
+                                          return (
+                                            <ProjectBox
+                                              key={project.id}
+                                              project={project}
+                                              onClick={() => {
+                                                if (projectKey) {
+                                                  onOpenProjectModal(projectKey);
+                                                }
+                                              }}
+                                              tipsEnabled={tipsEnabled}
+                                              combinedDonors={combinedDonors}
+                                            />
+                                          );
+                                        },
                                       )}
                                     </div>
                                   </CollapsibleContent>
