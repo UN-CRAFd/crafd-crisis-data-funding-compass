@@ -75,6 +75,7 @@ export default function PageHeader({
   const router = useRouter();
   const searchParams = useSearchParams();
   const [lastUpdated, setLastUpdated] = useState<string | null>(null);
+  const [isCompassRotating, setIsCompassRotating] = useState(false);
 
   // Fetch last updated date from API
   useEffect(() => {
@@ -85,6 +86,14 @@ export default function PageHeader({
         console.error("Failed to fetch last updated date:", error);
       });
   }, []);
+
+  const handleCompassClick = () => {
+    setIsCompassRotating(true);
+    // Reset the animation after 1 second so it can be triggered again
+    setTimeout(() => {
+      setIsCompassRotating(false);
+    }, 1000);
+  };
 
   // Safely use useTips with fallback defaults
   let tipsEnabled = false;
@@ -130,7 +139,17 @@ export default function PageHeader({
         <div className="flex items-center justify-between gap-3">
           <div className="flex min-w-0 flex-1 items-center gap-2 sm:gap-3">
             <div className="flex items-center gap-2">
-              <Compass className="hidden sm:block h-7 w-7 text-[var(--brand-primary)]" aria-label="Compass" />
+              <button
+                onClick={handleCompassClick}
+                className="hidden sm:block focus:outline-none transition-transform duration-500"
+                aria-label="Compass"
+              >
+                <Compass
+                  className={`h-7 w-7 text-[var(--brand-primary)] ${
+                    isCompassRotating ? "animate-compass-spin" : ""
+                  }`}
+                />
+              </button>
               <h1 className="truncate bg-gradient-to-r from-slate-800 to-slate-600 bg-clip-text text-lg text-transparent sm:text-3xl flex items-center gap-2">
               <span className="qanelas-title">{labels.header.title}</span>{" "}
               <span className="font-roboto">{labels.header.subtitle}</span>
