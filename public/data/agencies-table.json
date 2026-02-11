@@ -11,7 +11,7 @@
   {
     "id": "rec0QlT9YlTVhHfEn",
     "fields": {
-      "Agency/Department Name": "Federal Foreign Office (AA)",
+      "Agency/Department Name": "Federal Foreign Office (FFO)",
       "Country Name": "Germany",
       "Agency Website": "https://www.auswaertiges-amt.de"
     }
@@ -536,7 +536,7 @@
   {
     "id": "recGNTHL9SKZxLDcw",
     "fields": {
-      "Agency/Department Name": "European Commission (EC)",
+      "Agency/Department Name": "European Commission (not specified)",
       "Agency Data Portal": "Maybe https://ec.europa.eu/info/funding-tenders/opportunities/portal/",
       "Country Name": "European Union",
       "Agency Website": "https://ec.europa.eu"
@@ -585,7 +585,7 @@
   {
     "id": "recHSsEaPuaG3h2PQ",
     "fields": {
-      "Agency/Department Name": "Directorate-General for European Civil Protection and Humanitarian Aid Operations (DG ECHO)",
+      "Agency/Department Name": "DG for European Civil Protection and Humanitarian Aid Operations (ECHO)",
       "Agency Data Portal": "funding overview, not portal https://civil-protection-humanitarian-aid.ec.europa.eu/funding-evaluations/funding-humanitarian-aid_en",
       "Country Name": "European Union",
       "Agency Website": "https://civil-protection-humanitarian-aid.ec.europa.eu/"
@@ -1160,7 +1160,7 @@
   {
     "id": "recatUveyYdfEOdbu",
     "fields": {
-      "Agency/Department Name": "INTPA: Directorate-General for International Partnerships",
+      "Agency/Department Name": "DG for International Partnerships (INTPA)",
       "Country Name": "European Union",
       "Agency Website": "https://international-partnerships.ec.europa.eu/"
     }
