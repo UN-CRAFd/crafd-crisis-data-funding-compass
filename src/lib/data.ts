@@ -596,8 +596,23 @@ function applyFilters(
       const hasSearchFilter = filters.searchQuery && filters.searchQuery.trim();
       const hasDonorFilter =
         filters.donorCountries && filters.donorCountries.length > 0;
-      const hasAgencyFilter =
+      
+      // Check if agency filter should be applied
+      // If ALL available agencies for the donor are selected, treat it as no filter
+      let hasAgencyFilter =
         filters.donorAgencies && filters.donorAgencies.length > 0;
+      
+      if (hasAgencyFilter && hasDonorFilter && filters.donorCountries!.length === 1 && cachedCountryAgenciesMap) {
+        const selectedDonor = filters.donorCountries[0];
+        const allAvailableAgencies = cachedCountryAgenciesMap.get(selectedDonor) || [];
+        
+        // If all available agencies are selected, disable agency filtering
+        if (allAvailableAgencies.length > 0 && 
+            filters.donorAgencies!.length >= allAvailableAgencies.length &&
+            allAvailableAgencies.every(agency => filters.donorAgencies!.includes(agency))) {
+          hasAgencyFilter = false;
+        }
+      }
       const hasTypeFilter =
         filters.investmentTypes && filters.investmentTypes.length > 0;
       const hasThemeFilter =
@@ -811,8 +826,9 @@ function applyFilters(
           // Only search filter: show org if it matches search OR has projects matching search
           shouldShowOrg = orgMatchesSearch || visibleProjects.length > 0;
         } else {
-          // Type/theme/agency filter active: only show if org has visible projects
-          shouldShowOrg = visibleProjects.length > 0;
+          // Type/theme/agency filter active: show if org has visible projects
+          // OR if org has the selected agency at org-level (even with no projects)
+          shouldShowOrg = visibleProjects.length > 0 || (hasAgencyFilter && orgHasSelectedAgency());
         }
       } else {
         // Org doesn't meet donor at org level, but show if it has projects with matching donors
