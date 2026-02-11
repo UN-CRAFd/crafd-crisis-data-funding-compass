@@ -531,6 +531,24 @@ function convertToOrganizationWithProjects(
       return a.country.localeCompare(b.country);
     });
 
+  // Extract org-level agencies by country
+  const orgAgencies: Record<string, string[]> = {};
+  const orgAgenciesArray = org.agencies || [];
+  orgAgenciesArray.forEach((a) => {
+    const aFields = (a && a.fields) || {};
+    const country = aFields["Country Name"] || aFields["Country"];
+    const agencyName = aFields["Agency/Department Name"];
+    
+    if (country && agencyName) {
+      if (!orgAgencies[country]) {
+        orgAgencies[country] = [];
+      }
+      if (!orgAgencies[country].includes(agencyName)) {
+        orgAgencies[country].push(agencyName);
+      }
+    }
+  });
+
   // Extract organization type, handling both string and array formats
   const orgTypeRaw = org.fields?.["Org Type"];
   let orgType = "Unknown";
@@ -554,6 +572,7 @@ function convertToOrganizationWithProjects(
     description: org.fields?.["Org Description"] || "",
     donorCountries: orgLevelDonors, // Legacy field: org-level only
     donorInfo, // New field: all donors with metadata
+    orgAgencies, // Org-level agencies by country
     projects: projectsData,
     projectCount: projectsData.length,
     estimatedBudget: budgetValue,
@@ -658,9 +677,25 @@ function applyFilters(
           allOrgDonors.includes(selectedDonor),
         );
 
+      // Check if organization has selected agency at org level
+      const orgHasSelectedAgency = (): boolean => {
+        if (!hasAgencyFilter) return false;
+        if (!hasDonorFilter || !filters.donorCountries || filters.donorCountries.length !== 1) {
+          return false;
+        }
+        const selectedDonor = filters.donorCountries[0];
+        const orgAgenciesForDonor = org.orgAgencies[selectedDonor] || [];
+        return filters.donorAgencies!.some(
+          (selectedAgency) => orgAgenciesForDonor.includes(selectedAgency),
+        );
+      };
+
       // Helper function to check if project matches agency filter
       const projectMatchesAgencyFilter = (project: ProjectData): boolean => {
         if (!hasAgencyFilter) return true;
+        // If org has the agency at org level, show all projects
+        if (orgHasSelectedAgency()) return true;
+        // Otherwise, check project-level agencies
         // Agency filter should only work with exactly 1 donor selected
         if (!hasDonorFilter || !filters.donorCountries || filters.donorCountries.length !== 1) {
           return true;
