@@ -802,6 +802,18 @@ const CrisisDataDashboard = ({
         donorString = `${combinedDonors.slice(0, -1).join(", ")} & ${combinedDonors[combinedDonors.length - 1]}`;
       }
 
+      // Build agency string if agencies are selected
+      let agencyString: string = "";
+      if (selectedAgencies.length > 0) {
+        if (selectedAgencies.length === 1) {
+          agencyString = selectedAgencies[0];
+        } else if (selectedAgencies.length === 2) {
+          agencyString = `${selectedAgencies[0]} & ${selectedAgencies[1]}`;
+        } else {
+          agencyString = `${selectedAgencies.slice(0, -1).join(", ")} & ${selectedAgencies[selectedAgencies.length - 1]}`;
+        }
+      }
+
       // Get all donors from the currently filtered organizations
       const currentDonors = new Set<string>();
       organizationsWithProjects.forEach((org) => {
@@ -819,15 +831,27 @@ const CrisisDataDashboard = ({
         const verb = combinedDonors.length === 1 ? "co-finances" : "co-finance";
         elements.push(
           <React.Fragment key="donors">
-            <strong>{donorString}</strong>, together with{" "}
-            <strong>{otherDonorsCount}</strong> other {otherDonorLabel}, {verb}
+            <strong>{donorString}</strong>
+            {agencyString && (
+              <>
+                , through the <strong>{agencyString}</strong>
+              </>
+            )}
+            , together with <strong>{otherDonorsCount}</strong> other {otherDonorLabel}, {verb}
           </React.Fragment>,
         );
       } else {
         const verb = combinedDonors.length === 1 ? "funds" : "co-finance";
         elements.push(
           <React.Fragment key="donors">
-            <strong>{donorString}</strong> {verb}
+            <strong>{donorString}</strong>
+            {agencyString && (
+              <>
+                , through the <strong>{agencyString}</strong>
+              </>
+            )}
+            {" "}
+            {verb}
           </React.Fragment>,
         );
       }
