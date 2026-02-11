@@ -11,6 +11,7 @@ import {
   themeNameToKey,
   ensureThemesMappingsLoaded,
   getMemberStates,
+  getAgenciesForDonors,
 } from "@/lib/data";
 import { useGeneralContributions } from "@/contexts/GeneralContributionsContext";
 import { usePathname, useRouter, useSearchParams } from "next/navigation";
@@ -155,6 +156,45 @@ const CrisisDataDashboardWrapper = ({
       .filter((d): d is string => d !== undefined);
   }, [donorSlugsFromUrl, dashboardData, memberStates]);
 
+  // Parse agencies from URL
+  const agencySlugsFromUrl = useMemo(() => {
+    const raw = searchParams.get("a") ?? searchParams.get("agencies");
+    return raw?.split(",").filter(Boolean) || [];
+  }, [searchParams]);
+
+  // State for available agencies based on selected donors
+  const [availableAgencies, setAvailableAgencies] = useState<Map<string, string[]>>(new Map());
+
+  // Load available agencies when exactly one donor is selected
+  useEffect(() => {
+    if (combinedDonors.length === 1) {
+      getAgenciesForDonors(combinedDonors).then(setAvailableAgencies);
+    } else {
+      setAvailableAgencies(new Map());
+    }
+  }, [combinedDonors]);
+
+  // Parse selected agencies from URL (validate against available agencies)
+  const selectedAgencies = useMemo(() => {
+    // Don't parse agencies if no donor is selected or if not exactly 1 donor
+    if (combinedDonors.length !== 1) return [];
+    if (agencySlugsFromUrl.length === 0) return [];
+    
+    // Wait for availableAgencies to load (they load async in useEffect)
+    if (availableAgencies.size === 0) return [];
+    
+    // Get all available agency names
+    const allAvailableAgencies: Set<string> = new Set();
+    availableAgencies.forEach((agencies) => {
+      agencies.forEach((agency) => allAvailableAgencies.add(agency));
+    });
+
+    // Match slugs to actual agency names
+    return agencySlugsFromUrl
+      .map((slug) => Array.from(allAvailableAgencies).find((a) => matchesUrlSlug(slug, a)))
+      .filter((a): a is string => a !== undefined);
+  }, [agencySlugsFromUrl, availableAgencies, combinedDonors]);
+
   // Parse investment types from URL
   const typeSlugsFromUrl = useMemo(() => {
     const raw = searchParams.get("t") ?? searchParams.get("types");
@@ -205,6 +245,7 @@ const CrisisDataDashboardWrapper = ({
   const updateFilterParams = useCallback(
     (params: {
       donors?: string[];
+      agencies?: string[];
       types?: string[];
       themes?: string[];
       search?: string;
@@ -230,6 +271,27 @@ const CrisisDataDashboardWrapper = ({
           combinedDonors.map((d) => toUrlSlug(d)).join(","),
         );
       }
+
+      // Handle agencies - only preserve if exactly 1 donor is selected
+      const effectiveDonors = params.donors !== undefined ? params.donors : combinedDonors;
+      if (effectiveDonors.length === 1) {
+        if (params.agencies !== undefined && params.agencies.length > 0) {
+          newSearchParams.set(
+            "a",
+            params.agencies.map((a) => toUrlSlug(a)).join(","),
+          );
+        } else if (params.agencies === undefined && selectedAgencies.length > 0) {
+          // Preserve current agencies only if donors haven't changed and still exactly 1
+          if (params.donors === undefined) {
+            newSearchParams.set(
+              "a",
+              selectedAgencies.map((a) => toUrlSlug(a)).join(","),
+            );
+          }
+          // If donors changed, clear agencies (they need to re-select)
+        }
+      }
+      // If not exactly 1 donor, agencies are automatically cleared (not set)
 
       if (params.types !== undefined && params.types.length > 0) {
         const slugs = params.types.map((t) => typeLabelToSlug(t));
@@ -280,6 +342,7 @@ const CrisisDataDashboardWrapper = ({
     [
       modalParams,
       combinedDonors,
+      selectedAgencies,
       investmentTypes,
       investmentThemes,
       searchQuery,
@@ -335,6 +398,7 @@ const CrisisDataDashboardWrapper = ({
       try {
         const filterSignature = JSON.stringify({
           donors: combinedDonors.sort(),
+          agencies: selectedAgencies.sort(),
           types: investmentTypes.sort(),
           themes: investmentThemes.sort(),
           search: searchQuery,
@@ -351,6 +415,8 @@ const CrisisDataDashboardWrapper = ({
         const filters: DashboardFilters = {
           donorCountries:
             combinedDonors.length > 0 ? combinedDonors : undefined,
+          donorAgencies:
+            selectedAgencies.length > 0 ? selectedAgencies : undefined,
           investmentTypes:
             investmentTypes.length > 0 ? investmentTypes : undefined,
           investmentThemes:
@@ -372,6 +438,7 @@ const CrisisDataDashboardWrapper = ({
     fetchData();
   }, [
     combinedDonors,
+    selectedAgencies,
     investmentTypes,
     investmentThemes,
     searchQuery,
@@ -392,7 +459,15 @@ const CrisisDataDashboardWrapper = ({
   // ===========================================
   const handleDonorsChange = useCallback(
     (newDonors: string[]) => {
-      updateFilterParams({ donors: newDonors });
+      // When donors change, clear agencies (they will need to re-select from new donor's agencies)
+      updateFilterParams({ donors: newDonors, agencies: [] });
+    },
+    [updateFilterParams],
+  );
+
+  const handleAgenciesChange = useCallback(
+    (newAgencies: string[]) => {
+      updateFilterParams({ agencies: newAgencies });
     },
     [updateFilterParams],
   );
@@ -414,6 +489,7 @@ const CrisisDataDashboardWrapper = ({
   const handleResetFilters = useCallback(() => {
     updateFilterParams({
       donors: [],
+      agencies: [],
       types: [],
       themes: [],
       search: "",
@@ -437,7 +513,7 @@ const CrisisDataDashboardWrapper = ({
     updateFilterParams({ search: localSearchQuery });
   }, [localSearchQuery, updateFilterParams]);
 
-  // ===========================================
+  // ==========================================
   // MODAL HANDLERS
   // ===========================================
   const handleOpenOrganizationModal = useCallback(
@@ -517,6 +593,8 @@ const CrisisDataDashboardWrapper = ({
       loading={loading}
       error={error}
       combinedDonors={combinedDonors}
+      selectedAgencies={selectedAgencies}
+      availableAgencies={availableAgencies}
       investmentTypes={investmentTypes}
       investmentThemes={investmentThemes}
       searchQuery={localSearchQuery}
@@ -527,6 +605,7 @@ const CrisisDataDashboardWrapper = ({
       sortBy={sortBy}
       sortDirection={sortDirection}
       onDonorsChange={handleDonorsChange}
+      onAgenciesChange={handleAgenciesChange}
       onTypesChange={handleTypesChange}
       onThemesChange={handleThemesChange}
       onSearchChange={handleSearchChange}
