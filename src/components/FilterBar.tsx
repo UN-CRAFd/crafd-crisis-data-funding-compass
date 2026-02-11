@@ -126,11 +126,13 @@ const FilterBar: React.FC<FilterBarProps> = ({
   // Build flat list of available agencies from all selected donors
   const allAvailableAgenciesList = useMemo(() => {
     const agencies: Array<{ agency: string; country: string }> = [];
-    availableAgencies.forEach((agencyList, country) => {
-      agencyList.forEach((agency) => {
-        agencies.push({ agency, country });
+    if (availableAgencies) {
+      availableAgencies.forEach((agencyList, country) => {
+        agencyList.forEach((agency) => {
+          agencies.push({ agency, country });
+        });
       });
-    });
+    }
     return agencies;
   }, [availableAgencies]);
 
@@ -847,7 +849,7 @@ const FilterBar: React.FC<FilterBarProps> = ({
       {/* Reset Button Only (when no filterDescription) */}
       {!filterDescription &&
         (combinedDonors.length > 0 ||
-          selectedAgencies.length > 0 ||
+          (selectedAgencies?.length ?? 0) > 0 ||
           investmentTypes.length > 0 ||
           investmentThemes.length > 0 ||
           appliedSearchQuery) && (
