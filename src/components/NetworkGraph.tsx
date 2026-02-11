@@ -45,6 +45,10 @@ interface NetworkGraphProps {
   onResetFilters?: () => void;
   filterDescription?: React.ReactNode;
   orgAgenciesMap?: Record<string, Record<string, string[]>>; // Map of org ID -> country -> agencies
+  // Agencies filter
+  selectedAgencies?: string[];
+  availableAgencies?: Map<string, string[]>;
+  onAgenciesChange?: (values: string[]) => void;
 }
 
 interface GraphNode {
@@ -103,6 +107,9 @@ const NetworkGraph: React.FC<NetworkGraphProps> = ({
   onResetFilters = () => {},
   filterDescription,
   orgAgenciesMap = {},
+  selectedAgencies = [],
+  availableAgencies,
+  onAgenciesChange = () => {},
 }) => {
   const graphRef = useRef<any>(null);
   const [dimensions, setDimensions] = useState({ width: 800, height: 600 });
@@ -2061,6 +2068,9 @@ const NetworkGraph: React.FC<NetworkGraphProps> = ({
               combinedDonors={combinedDonors}
               availableDonorCountries={availableDonorCountries}
               onDonorsChange={onDonorsChange}
+              selectedAgencies={selectedAgencies}
+              availableAgencies={availableAgencies ?? new Map()}
+              onAgenciesChange={onAgenciesChange}
               investmentTypes={investmentTypes}
               allKnownInvestmentTypes={allKnownInvestmentTypes}
               onTypesChange={onTypesChange}
