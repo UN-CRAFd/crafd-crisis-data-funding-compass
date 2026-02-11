@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useMemo } from "react";
 import { Button } from "@/components/ui/button";
 import {
   DropdownMenu,
@@ -14,6 +14,7 @@ import { Input } from "@/components/ui/input";
 import labels from "@/config/labels.json";
 import { getIconForInvestmentType } from "@/config/investmentTypeIcons";
 import {
+  Building,
   ChevronDown,
   DatabaseBackup,
   DatabaseZap,
@@ -35,6 +36,11 @@ interface FilterBarProps {
   combinedDonors: string[];
   availableDonorCountries: string[];
   onDonorsChange: (values: string[]) => void;
+
+  // Agencies
+  selectedAgencies: string[];
+  availableAgencies: Map<string, string[]>;
+  onAgenciesChange: (values: string[]) => void;
 
   // Investment Types
   investmentTypes: string[];
@@ -75,6 +81,9 @@ const FilterBar: React.FC<FilterBarProps> = ({
   combinedDonors,
   availableDonorCountries,
   onDonorsChange,
+  selectedAgencies,
+  availableAgencies,
+  onAgenciesChange,
   investmentTypes,
   allKnownInvestmentTypes,
   onTypesChange,
@@ -91,9 +100,11 @@ const FilterBar: React.FC<FilterBarProps> = ({
   isFullscreen = false,
 }) => {
   const [donorsMenuOpen, setDonorsMenuOpen] = useState(false);
+  const [agenciesMenuOpen, setAgenciesMenuOpen] = useState(false);
   const [typesMenuOpen, setTypesMenuOpen] = useState(false);
   const [themesMenuOpen, setThemesMenuOpen] = useState(false);
   const [donorSearchQuery, setDonorSearchQuery] = useState<string>("");
+  const [agencySearchQuery, setAgencySearchQuery] = useState<string>("");
   const [themeSearchQuery, setThemeSearchQuery] = useState<string>("");
   const [memberStates, setMemberStates] = useState<string[]>([]);
 
@@ -106,6 +117,30 @@ const FilterBar: React.FC<FilterBarProps> = ({
   useEffect(() => {
     setDonorSearchQuery("");
   }, [combinedDonors]);
+
+  // Clear agency search when the selected agencies change
+  useEffect(() => {
+    setAgencySearchQuery("");
+  }, [selectedAgencies]);
+
+  // Build flat list of available agencies from all selected donors
+  const allAvailableAgenciesList = useMemo(() => {
+    const agencies: Array<{ agency: string; country: string }> = [];
+    availableAgencies.forEach((agencyList, country) => {
+      agencyList.forEach((agency) => {
+        agencies.push({ agency, country });
+      });
+    });
+    return agencies;
+  }, [availableAgencies]);
+
+  // Filter agencies based on search query
+  const filteredAgencies = useMemo(() => {
+    if (!agencySearchQuery.trim()) return allAvailableAgenciesList;
+    return allAvailableAgenciesList.filter(({ agency }) =>
+      agency.toLowerCase().includes(agencySearchQuery.toLowerCase())
+    );
+  }, [allAvailableAgenciesList, agencySearchQuery]);
 
   // Combine available donors with selected member states to ensure they remain visible
   const allAvailableDonors = [
@@ -158,105 +193,224 @@ const FilterBar: React.FC<FilterBarProps> = ({
           />
         </div>
 
-        {/* Donor Countries Multi-Select */}
-        <div className="min-w-0 flex-1">
-          <DropdownMenu onOpenChange={(open) => setDonorsMenuOpen(open)}>
-            <DropdownMenuTrigger asChild>
-              <Button
-                variant="outline"
-                className={`h-10 w-full justify-between font-medium transition-all ${
-                  combinedDonors.length > 0
-                    ? "border-[var(--brand-primary)] bg-[var(--brand-bg-lighter)] text-[var(--brand-primary)] hover:bg-[var(--brand-bg-light)]"
-                    : "border-slate-200 bg-slate-50/50 hover:border-slate-300 hover:bg-white"
-                }`}
-              >
-                <div className="flex min-w-0 flex-1 items-center gap-2">
-                  <Globe className="h-4 w-4 shrink-0" />
-                  <span className="truncate">
-                    {combinedDonors.length === 0
-                      ? labels.filters.donorPlaceholder
-                      : combinedDonors.length === 1
-                        ? combinedDonors[0]
-                        : `${combinedDonors.length} ${labels.filterDescription.donors}`}
-                  </span>
-                </div>
-                <ChevronDown
-                  className={`ml-2 h-4 w-4 shrink-0 transform opacity-50 transition-transform ${
-                    donorsMenuOpen ? "rotate-180" : ""
+        {/* Donor Countries and Agencies Container */}
+        <div className={`flex min-w-0 gap-2 ${combinedDonors.length > 0 && allAvailableAgenciesList.length > 0 ? "flex-1" : "flex-1"}`}>
+          {/* Donor Countries Multi-Select */}
+          <div className={`min-w-0 ${combinedDonors.length > 0 && allAvailableAgenciesList.length > 0 ? "flex-1" : "flex-1"}`}>
+            <DropdownMenu onOpenChange={(open) => setDonorsMenuOpen(open)}>
+              <DropdownMenuTrigger asChild>
+                <Button
+                  variant="outline"
+                  className={`h-10 w-full justify-between font-medium transition-all ${
+                    combinedDonors.length > 0
+                      ? "border-[var(--brand-primary)] bg-[var(--brand-bg-lighter)] text-[var(--brand-primary)] hover:bg-[var(--brand-bg-light)]"
+                      : "border-slate-200 bg-slate-50/50 hover:border-slate-300 hover:bg-white"
                   }`}
-                />
-              </Button>
-            </DropdownMenuTrigger>
-            <DropdownMenuContent
-              align="start"
-              side="bottom"
-              sideOffset={4}
-              className="max-h-[300px] w-[var(--radix-dropdown-menu-trigger-width)] overflow-y-auto border border-slate-200 bg-white shadow-lg"
-              onCloseAutoFocus={(e) => e.preventDefault()}
-              container={portalContainer}
-            >
-              {/* Search Input */}
-              <div className="p-2">
-                <div className="relative">
-                  <Search className="absolute top-1/2 left-2 h-3 w-3 -translate-y-1/2 text-slate-400" />
-                  <Input
-                    placeholder={labels.filters.donorSearchPlaceholder}
-                    value={donorSearchQuery}
-                    onChange={(e) => setDonorSearchQuery(e.target.value)}
-                    className="h-7 border-slate-200 bg-slate-50 pl-7 text-xs focus:bg-white"
-                    onKeyDown={(e) => e.stopPropagation()}
-                  />
-                </div>
-              </div>
-
-              {combinedDonors.length > 0 && (
-                <>
-                  <DropdownMenuLabel className="flex items-center gap-1.5 text-xs font-semibold text-[var(--brand-primary)]">
-                    <Filter className="h-3 w-3" />
-                    {combinedDonors.length} {labels.filters.selected}
-                  </DropdownMenuLabel>
-                  <DropdownMenuSeparator />
-                </>
-              )}
-
-              <div className="max-h-[200px] overflow-y-auto">
-                {allFilteredDonors.length === 0 ? (
-                  <div className="p-4 text-center text-sm text-slate-500">
-                    {labels.filters.noMatchingDonors}
+                >
+                  <div className="flex min-w-0 flex-1 items-center gap-2">
+                    <Globe className="h-4 w-4 shrink-0" />
+                    <span className="truncate">
+                      {combinedDonors.length === 0
+                        ? labels.filters.donorPlaceholder
+                        : combinedDonors.length === 1
+                          ? combinedDonors[0]
+                          : `${combinedDonors.length} ${labels.filterDescription.donors}`}
+                    </span>
                   </div>
-                ) : (
-                  allFilteredDonors.map((donor) => (
-                    <DropdownMenuCheckboxItem
-                      key={donor}
-                      checked={combinedDonors.includes(donor)}
-                      onCheckedChange={(checked) => {
-                        if (checked) {
-                          // Limit to maximum 16 donors
-                          if (combinedDonors.length < 16) {
+                  <ChevronDown
+                    className={`ml-2 h-4 w-4 shrink-0 transform opacity-50 transition-transform ${
+                      donorsMenuOpen ? "rotate-180" : ""
+                    }`}
+                  />
+                </Button>
+              </DropdownMenuTrigger>
+              <DropdownMenuContent
+                align="start"
+                side="bottom"
+                sideOffset={4}
+                className="max-h-[300px] w-[var(--radix-dropdown-menu-trigger-width)] overflow-y-auto border border-slate-200 bg-white shadow-lg"
+                onCloseAutoFocus={(e) => e.preventDefault()}
+                container={portalContainer}
+              >
+                {/* Search Input */}
+                <div className="p-2">
+                  <div className="relative">
+                    <Search className="absolute top-1/2 left-2 h-3 w-3 -translate-y-1/2 text-slate-400" />
+                    <Input
+                      placeholder={labels.filters.donorSearchPlaceholder}
+                      value={donorSearchQuery}
+                      onChange={(e) => setDonorSearchQuery(e.target.value)}
+                      className="h-7 border-slate-200 bg-slate-50 pl-7 text-xs focus:bg-white"
+                      onKeyDown={(e) => e.stopPropagation()}
+                    />
+                  </div>
+                </div>
+
+                {combinedDonors.length > 0 && (
+                  <>
+                    <DropdownMenuLabel className="flex items-center gap-1.5 text-xs font-semibold text-[var(--brand-primary)]">
+                      <Filter className="h-3 w-3" />
+                      {combinedDonors.length} {labels.filters.selected}
+                    </DropdownMenuLabel>
+                    <DropdownMenuSeparator />
+                  </>
+                )}
+
+                <div className="max-h-[200px] overflow-y-auto">
+                  {allFilteredDonors.length === 0 ? (
+                    <div className="p-4 text-center text-sm text-slate-500">
+                      {labels.filters.noMatchingDonors}
+                    </div>
+                  ) : (
+                    allFilteredDonors.map((donor) => (
+                      <DropdownMenuCheckboxItem
+                        key={donor}
+                        checked={combinedDonors.includes(donor)}
+                        onCheckedChange={(checked) => {
+                          if (checked) {
+                            // Limit to maximum 16 donors
+                            if (combinedDonors.length < 16) {
+                              onDonorsChange(
+                                Array.from(new Set([...combinedDonors, donor])),
+                              );
+                            }
+                          } else {
                             onDonorsChange(
-                              Array.from(new Set([...combinedDonors, donor])),
+                              combinedDonors.filter((d) => d !== donor),
                             );
                           }
-                        } else {
-                          onDonorsChange(
-                            combinedDonors.filter((d) => d !== donor),
-                          );
+                        }}
+                        onSelect={(e) => e.preventDefault()}
+                        className="cursor-pointer"
+                        disabled={
+                          !combinedDonors.includes(donor) &&
+                          combinedDonors.length >= 16
                         }
-                      }}
-                      onSelect={(e) => e.preventDefault()}
-                      className="cursor-pointer"
-                      disabled={
-                        !combinedDonors.includes(donor) &&
-                        combinedDonors.length >= 16
-                      }
-                    >
-                      {donor}
-                    </DropdownMenuCheckboxItem>
-                  ))
-                )}
-              </div>
-            </DropdownMenuContent>
-          </DropdownMenu>
+                      >
+                        {donor}
+                      </DropdownMenuCheckboxItem>
+                    ))
+                  )}
+                </div>
+              </DropdownMenuContent>
+            </DropdownMenu>
+          </div>
+
+          {/* Agencies Multi-Select - Only shown when exactly ONE donor is selected and agencies are available */}
+          {combinedDonors.length === 1 && allAvailableAgenciesList.length > 0 && (
+            <div className="min-w-0 flex-1">
+              <DropdownMenu onOpenChange={(open) => setAgenciesMenuOpen(open)}>
+                <DropdownMenuTrigger asChild>
+                  <Button
+                    variant="outline"
+                    className={`h-10 w-full justify-between font-medium transition-all ${
+                      selectedAgencies.length > 0
+                        ? "border-[var(--brand-primary)] bg-[var(--brand-bg-lighter)] text-[var(--brand-primary)] hover:bg-[var(--brand-bg-light)]"
+                        : "border-slate-200 bg-slate-50/50 hover:border-slate-300 hover:bg-white"
+                    }`}
+                  >
+                    <div className="flex min-w-0 flex-1 items-center gap-2">
+                      <Building className="h-4 w-4 shrink-0" />
+                      <span className="truncate">
+                        {selectedAgencies.length === 0
+                          ? "Select Agency(ies)..."
+                          : selectedAgencies.length === 1
+                            ? selectedAgencies[0]
+                            : `${selectedAgencies.length} agencies`}
+                      </span>
+                    </div>
+                    <ChevronDown
+                      className={`ml-2 h-4 w-4 shrink-0 transform opacity-50 transition-transform ${
+                        agenciesMenuOpen ? "rotate-180" : ""
+                      }`}
+                    />
+                  </Button>
+                </DropdownMenuTrigger>
+                <DropdownMenuContent
+                  align="start"
+                  side="bottom"
+                  sideOffset={4}
+                  className="max-h-[300px] w-[var(--radix-dropdown-menu-trigger-width)] overflow-y-auto border border-slate-200 bg-white shadow-lg"
+                  onCloseAutoFocus={(e) => e.preventDefault()}
+                  container={portalContainer}
+                >
+                  {/* Search Input */}
+                  <div className="p-2">
+                    <div className="relative">
+                      <Search className="absolute top-1/2 left-2 h-3 w-3 -translate-y-1/2 text-slate-400" />
+                      <Input
+                        placeholder="Search agencies..."
+                        value={agencySearchQuery}
+                        onChange={(e) => setAgencySearchQuery(e.target.value)}
+                        className="h-7 border-slate-200 bg-slate-50 pl-7 text-xs focus:bg-white"
+                        onKeyDown={(e) => e.stopPropagation()}
+                      />
+                    </div>
+                  </div>
+
+                  {selectedAgencies.length > 0 && (
+                    <>
+                      <DropdownMenuLabel className="flex items-center gap-1.5 text-xs font-semibold text-[var(--brand-primary)]">
+                        <Filter className="h-3 w-3" />
+                        {selectedAgencies.length} {labels.filters.selected}
+                      </DropdownMenuLabel>
+                      <DropdownMenuSeparator />
+                    </>
+                  )}
+
+                  <div className="max-h-[200px] overflow-y-auto">
+                    {filteredAgencies.length === 0 ? (
+                      <div className="p-4 text-center text-sm text-slate-500">
+                        No matching agencies
+                      </div>
+                    ) : (
+                      // Group agencies by country
+                      (() => {
+                        const agenciesByCountry = new Map<string, string[]>();
+                        filteredAgencies.forEach(({ agency, country }) => {
+                          const list = agenciesByCountry.get(country) || [];
+                          if (!list.includes(agency)) {
+                            list.push(agency);
+                            agenciesByCountry.set(country, list);
+                          }
+                        });
+
+                        return Array.from(agenciesByCountry.entries()).map(([country, agencies]) => (
+                          <div key={country}>
+                            {/* Country Header */}
+                            <div className="sticky top-0 z-10 flex items-center gap-1.5 border-b border-slate-200 bg-slate-100 px-2 py-1.5 text-xs font-semibold text-slate-600">
+                              <Globe className="h-3 w-3" />
+                              {country}
+                            </div>
+                            {/* Agencies under this country */}
+                            {agencies.map((agency) => (
+                              <DropdownMenuCheckboxItem
+                                key={`${country}-${agency}`}
+                                checked={selectedAgencies.includes(agency)}
+                                onCheckedChange={(checked) => {
+                                  if (checked) {
+                                    onAgenciesChange([...selectedAgencies, agency]);
+                                  } else {
+                                    onAgenciesChange(
+                                      selectedAgencies.filter((a) => a !== agency)
+                                    );
+                                  }
+                                }}
+                                onSelect={(e) => e.preventDefault()}
+                                className="cursor-pointer py-1 pl-6"
+                              >
+                                <span className="truncate">{agency}</span>
+                              </DropdownMenuCheckboxItem>
+                            ))}
+                          </div>
+                        ));
+                      })()
+                    )}
+                  </div>
+                </DropdownMenuContent>
+              </DropdownMenu>
+            </div>
+          )}
         </div>
       </div>
 
@@ -673,6 +827,7 @@ const FilterBar: React.FC<FilterBarProps> = ({
             {filterDescription}
           </p>
           {(combinedDonors.length > 0 ||
+            selectedAgencies.length > 0 ||
             investmentTypes.length > 0 ||
             investmentThemes.length > 0 ||
             appliedSearchQuery) && (
@@ -692,6 +847,7 @@ const FilterBar: React.FC<FilterBarProps> = ({
       {/* Reset Button Only (when no filterDescription) */}
       {!filterDescription &&
         (combinedDonors.length > 0 ||
+          selectedAgencies.length > 0 ||
           investmentTypes.length > 0 ||
           investmentThemes.length > 0 ||
           appliedSearchQuery) && (

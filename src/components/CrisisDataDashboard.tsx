@@ -183,6 +183,8 @@ interface CrisisDataDashboardProps {
   loading: boolean;
   error: string | null;
   combinedDonors: string[];
+  selectedAgencies: string[];
+  availableAgencies: Map<string, string[]>;
   investmentTypes: string[];
   investmentThemes: string[];
   searchQuery: string; // Current input value
@@ -192,6 +194,7 @@ interface CrisisDataDashboardProps {
   sortBy: "name" | "donors" | "assets" | "funding"; // Sort field from URL
   sortDirection: "asc" | "desc"; // Sort direction from URL
   onDonorsChange: (values: string[]) => void;
+  onAgenciesChange: (values: string[]) => void;
   onTypesChange: (values: string[]) => void;
   onThemesChange: (values: string[]) => void;
   onSearchChange: (value: string) => void;
@@ -220,6 +223,8 @@ const CrisisDataDashboard = ({
   loading,
   error,
   combinedDonors,
+  selectedAgencies,
+  availableAgencies,
   investmentTypes,
   investmentThemes,
   searchQuery,
@@ -228,6 +233,7 @@ const CrisisDataDashboard = ({
   selectedProjectKey,
   selectedDonorCountry,
   onDonorsChange,
+  onAgenciesChange,
   onTypesChange,
   onThemesChange,
   onSearchChange,
@@ -1327,7 +1333,10 @@ const CrisisDataDashboard = ({
                       onSearchSubmit={onSearchSubmit}
                       combinedDonors={combinedDonors}
                       availableDonorCountries={availableDonorCountries}
+                      selectedAgencies={selectedAgencies}
+                      availableAgencies={availableAgencies}
                       onDonorsChange={onDonorsChange}
+                      onAgenciesChange={onAgenciesChange}
                       investmentTypes={investmentTypes}
                       allKnownInvestmentTypes={allKnownInvestmentTypes}
                       onTypesChange={onTypesChange}

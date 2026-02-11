@@ -54,6 +54,7 @@ export interface ProjectData {
   id: string;
   projectName: string;
   donorCountries: string[];
+  donorAgencies: Record<string, string[]>; // Map of country -> agencies that fund this project
   investmentTypes: string[];
   investmentThemes: string[];
   description: string;
@@ -106,6 +107,7 @@ export interface OrganizationProjectData {
 export interface DashboardFilters {
   searchQuery?: string;
   donorCountries?: string[];
+  donorAgencies?: string[]; // Agencies of the selected donors to filter by
   investmentTypes?: string[];
   investmentThemes?: string[];
 }
