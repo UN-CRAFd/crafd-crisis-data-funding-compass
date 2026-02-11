@@ -326,9 +326,9 @@ const DonorTableComponent: React.FC<DonorTableProps> = ({
                       {donor}
                     </h3>
                     <div className="mt-0 text-xs text-slate-500 sm:text-sm">
-                      {totalAgencies} agenc{totalAgencies !== 1 ? "ies" : "y"} ·{" "}
+                      {totalAgencies} donor agenc{totalAgencies !== 1 ? "ies" : "y"} ·{" "}
                       {totalOrgs} organization{totalOrgs !== 1 ? "s" : ""} ·{" "}
-                      {totalProjects} asset{totalProjects !== 1 ? "s" : ""}
+                      {totalProjects} product{totalProjects !== 1 ? "s" : ""}
                     </div>
                   </div>
                 </div>
@@ -404,7 +404,7 @@ const DonorTableComponent: React.FC<DonorTableProps> = ({
                           headingLevel="h4"
                           showDetailsButton={true}
                           projectCount={projects.length}
-                          projectLabel={projects.length === 1 ? "asset" : "assets"}
+                          projectLabel={projects.length === 1 ? "product" : "products"}
                         >
                           {/* Show agencies for project-level funding */}
                           {!isOrgLevel && (() => {
