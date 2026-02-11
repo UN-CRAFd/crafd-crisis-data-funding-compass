@@ -406,14 +406,111 @@ const DonorTableComponent: React.FC<DonorTableProps> = ({
                           projectCount={projects.length}
                           projectLabel={projects.length === 1 ? "asset" : "assets"}
                         >
-                          {!isOrgLevel && (
-                            <Badge
-                              text="Project-Level Funding"
-                              variant="slate"
-                              className="text-xs text-[9px] opacity-70 sm:text-[10px]"
-                              title="This donor only funds specific projects, not the organization as a whole"
-                            />
-                          )}
+                          {/* Show agencies for project-level funding */}
+                          {!isOrgLevel && (() => {
+                            const isAgenciesExpanded = expandedAgencies.has(`org-project-${org.id}-${donor}`);
+                            
+                            // Collect agencies from all projects for this donor
+                            const agencyNames = new Set<string>();
+                            projects.forEach((project) => {
+                              const nestedProject = nestedOrganizations
+                                .find((n) => n.id === org.id)
+                                ?.projects?.find((p: any) => p.id === project.id);
+                              const agencies = nestedProject?.agencies || [];
+                              
+                              agencies.forEach((agency: any) => {
+                                // Get the country/donor from this agency
+                                const agencyCountry =
+                                  agency.fields?.["Country Name"] ||
+                                  agency.fields?.["Country"] ||
+                                  agency.fields?.["Agency Associated Country"] ||
+                                  agency.fields?.["Agency/Department Country"];
+
+                                // Check if this agency's country matches the current donor
+                                let belongsToDonor = false;
+                                if (agencyCountry) {
+                                  const countryValues = Array.isArray(agencyCountry)
+                                    ? agencyCountry
+                                    : [agencyCountry];
+                                  const aliases = donorAliasesFor(donor);
+                                  belongsToDonor = countryValues.some((c: any) => {
+                                    const candidate = String(c || "");
+                                    return aliases.some((alias) => {
+                                      try {
+                                        return matchesUrlSlug(toUrlSlug(alias), candidate);
+                                      } catch {
+                                        return (
+                                          sanitizeForMatch(candidate).toLowerCase() ===
+                                          sanitizeForMatch(alias).toLowerCase()
+                                        );
+                                      }
+                                    });
+                                  });
+                                }
+
+                                if (belongsToDonor) {
+                                  const agencyName =
+                                    agency.fields?.["Agency Name"] ||
+                                    agency.fields?.["Funding Agency"] ||
+                                    agency.fields?.["Agency/Department Name"];
+                                  if (agencyName) {
+                                    if (Array.isArray(agencyName)) {
+                                      agencyName.forEach((name) => {
+                                        if (name && name.trim() !== "Unspecified Agency") {
+                                          agencyNames.add(name);
+                                        }
+                                      });
+                                    } else if (agencyName.trim() !== "Unspecified Agency") {
+                                      agencyNames.add(agencyName);
+                                    }
+                                  }
+                                }
+                              });
+                            });
+
+                            const agencyArray = Array.from(agencyNames).sort();
+                            const maxAgenciesToShow = 3;
+                            const agenciesToShow = isAgenciesExpanded
+                              ? agencyArray
+                              : agencyArray.slice(0, maxAgenciesToShow);
+
+                            if (agencyArray.length === 0) return null;
+
+                            return (
+                              <>
+                                {agenciesToShow.map((agency, idx) => (
+                                  <Badge
+                                    key={idx}
+                                    text={agency}
+                                    variant="agency"
+                                    className="text-sm px-3 py-1.5 sm:text-sm sm:px-3 sm:py-1.5 opacity-40"
+                                  />
+                                ))}
+                                {agencyArray.length > maxAgenciesToShow && (
+                                  <button
+                                    onClick={(e) => {
+                                      e.stopPropagation();
+                                      setExpandedAgencies((prev) => {
+                                        const next = new Set(prev);
+                                        const key = `org-project-${org.id}-${donor}`;
+                                        if (next.has(key)) {
+                                          next.delete(key);
+                                        } else {
+                                          next.add(key);
+                                        }
+                                        return next;
+                                      });
+                                    }}
+                                    className="text-xs text-muted-foreground hover:text-foreground transition-colors"
+                                  >
+                                    {isAgenciesExpanded
+                                      ? "Show less"
+                                      : `+${agencyArray.length - maxAgenciesToShow} more`}
+                                  </button>
+                                )}
+                              </>
+                            );
+                          })()}
                           {(() => {
                             const isAgenciesExpanded = expandedAgencies.has(`org-${org.id}`);
                             // Get agencies for this org from nestedOrganizations
@@ -512,7 +609,7 @@ const DonorTableComponent: React.FC<DonorTableProps> = ({
                                           key={idx}
                                           text={agency}
                                           variant="agency"
-                                          className="text-[9px] sm:text-[10px]"
+                                          className="text-xs sm:text-sm px-2.5 sm:px-3 py-1 sm:py-1.5"
                                           title={`Funding Agency: ${agency}`}
                                         />
                                       ))}
@@ -722,7 +819,7 @@ const DonorTableComponent: React.FC<DonorTableProps> = ({
                                           key={idx}
                                           text={agency}
                                           variant="agency"
-                                          className="text-[9px] sm:text-[10px]"
+                                          className="text-xs sm:text-sm px-2.5 sm:px-3 py-1 sm:py-1.5"
                                           title={`Funding Agency: ${agency}`}
                                         />
                                       ))}
