@@ -1826,6 +1826,9 @@ export default function AnalyticsPage({ logoutButton }: AnalyticsPageProps) {
                 combinedDonors={selectedDonors}
                 availableDonorCountries={availableDonorCountries}
                 onDonorsChange={setSelectedDonors}
+                selectedAgencies={[]}
+                availableAgencies={new Map()}
+                onAgenciesChange={() => {}}
                 investmentTypes={investmentTypes}
                 allKnownInvestmentTypes={allKnownInvestmentTypes}
                 onTypesChange={setInvestmentTypes}

@@ -41,14 +41,12 @@
  * 
  * See: https://tailwindcss.com/docs/theme
  */
-@theme {
+:root {
   /* Font families - these create font-* utility classes (e.g., font-qanelas, font-sans) */
   --font-family-sans: Roboto, ui-sans-serif, system-ui, sans-serif;
   --font-family-qanelas: Qanelas, ui-sans-serif, system-ui, sans-serif;
   --font-family-roboto: Roboto, ui-sans-serif, system-ui, sans-serif;
-}
 
-:root {
   /* Regular CSS variables below - these do NOT create Tailwind utility classes */
   /* Use these with var(--variable-name) in your custom CSS */
 
@@ -410,7 +408,7 @@ body::-webkit-scrollbar {
 
 /* Card with bottom-only rounding */
 .card-bottom-rounded {
-  @apply rounded-b-lg rounded-t-none;
+  border-radius: 0 0 0.5rem 0.5rem;
 }
 
 /* Trapezoid Tab Styles */
