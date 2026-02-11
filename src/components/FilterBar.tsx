@@ -313,7 +313,7 @@ const FilterBar: React.FC<FilterBarProps> = ({
                       <Building className="h-4 w-4 shrink-0" />
                       <span className="truncate">
                         {selectedAgencies.length === 0
-                          ? "Select Agency(ies)..."
+                          ? "Select Agencies..."
                           : selectedAgencies.length === 1
                             ? selectedAgencies[0]
                             : `${selectedAgencies.length} agencies`}
