@@ -81,6 +81,7 @@ export interface OrganizationWithProjects {
   description?: string;
   donorCountries: string[]; // Legacy: org-level donors only
   donorInfo: DonorInfo[]; // New: all donors with metadata
+  orgAgencies: Record<string, string[]>; // Org-level agencies by country
   projects: ProjectData[];
   projectCount: number;
   estimatedBudget?: number;
