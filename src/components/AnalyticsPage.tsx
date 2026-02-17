@@ -64,10 +64,6 @@ import {
   getProjectColorIntensity,
 } from "@/lib/colorUtils";
 
-interface AnalyticsPageProps {
-  logoutButton?: React.ReactNode;
-}
-
 interface OrganizationData {
   id: string;
   name: string;
@@ -124,7 +120,7 @@ const MATRIX_MODES = [
   { value: "unified", label: "Overview", Icon: Columns },
 ] as const;
 
-export default function AnalyticsPage({ logoutButton }: AnalyticsPageProps) {
+export default function AnalyticsPage() {
   const router = useRouter();
   const searchParams = useSearchParams();
   const [organizationsData, setOrganizationsData] = useState<

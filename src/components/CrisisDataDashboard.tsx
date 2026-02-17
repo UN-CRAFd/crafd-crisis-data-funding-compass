@@ -215,7 +215,6 @@ interface CrisisDataDashboardProps {
   onTypeClick?: (type: string) => void;
   onThemeClick?: (theme: string) => void;
   onViewChange?: (view: "table" | "network" | "donors") => void;
-  logoutButton?: React.ReactNode;
 }
 
 const CrisisDataDashboard = ({
@@ -249,7 +248,6 @@ const CrisisDataDashboard = ({
   onTypeClick,
   onThemeClick,
   onViewChange,
-  logoutButton,
   sortBy,
   sortDirection,
   onSortChange,

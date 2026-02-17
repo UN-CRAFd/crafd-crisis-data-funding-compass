@@ -22,7 +22,6 @@ import {
   Share2,
   Menu,
   Lightbulb,
-  LogOut,
   Home,
   BarChart3,
   BookOpen,

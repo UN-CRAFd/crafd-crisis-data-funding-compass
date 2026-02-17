@@ -157,9 +157,7 @@
     "tryAgain": "Try Again",
     "exportPdfFailed": "Failed to export PDF. Please try again.",
     "exportCsvFailed": "Failed to export CSV. Please try again.",
-    "exportXlsxFailed": "Failed to export XLSX. Please try again.",
-    "incorrectPassword": "Incorrect password",
-    "contactUs": "Please try again or contact us for assistance."
+    "exportXlsxFailed": "Failed to export XLSX. Please try again."
   },
   "noResults": {
     "title": "No Results Found",
@@ -176,13 +174,6 @@
     "prev": "Prev",
     "next": "Next",
     "done": "Done"
-  },
-  "login": {
-    "title": "CRISIS DATA Funding Compass",
-    "passwordPlaceholder": "Enter password",
-    "submitButton": "Login",
-    "errorTitle": "Incorrect password",
-    "errorMessage": "Please try again or contact us for assistance."
   },
   "codeBlock": {
     "language": "Python",
@@ -289,8 +280,7 @@
   },
   "pageHeader": {
     "settings": "Settings",
-    "selectCrafdDonors": "Select CRAF'd Donors",
-    "logout": "Logout"
+    "selectCrafdDonors": "Select CRAF'd Donors"
   },
   "dashboard": {
     "organizationsTab": "Organizations",

@@ -304,10 +304,6 @@ const CodeBlock = ({ code }: { code: string }) => {
 // DATA & CONFIG
 // ============================================================================
 
-interface MethodologyPageProps {
-  logoutButton?: React.ReactNode;
-}
-
 const INVESTMENT_TYPE_COLORS: Record<
   string,
   { bg: string; border: string; text: string; step: string }
@@ -478,9 +474,7 @@ const INVESTMENT_TYPES = Object.keys(INVESTMENT_TYPE_DATA);
 // MAIN COMPONENT
 // ============================================================================
 
-export default function MethodologyPage({
-  logoutButton,
-}: MethodologyPageProps) {
+export default function MethodologyPage() {
   const [shareSuccess, setShareSuccess] = useState(false);
   const [selectedType, setSelectedType] = useState<string | null>(
     "Data Sets & Commons",

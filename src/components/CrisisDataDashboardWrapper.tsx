@@ -36,11 +36,7 @@ import CrisisDataDashboard from "./CrisisDataDashboard";
  * - Modal changes never trigger filter validation or data refetching
  * - All URL updates go through a single source of truth
  */
-const CrisisDataDashboardWrapper = ({
-  logoutButton,
-}: {
-  logoutButton?: React.ReactNode;
-}) => {
+const CrisisDataDashboardWrapper = () => {
   const router = useRouter();
   const pathname = usePathname();
   const searchParams = useSearchParams();
@@ -622,7 +618,6 @@ const CrisisDataDashboardWrapper = ({
       onTypeClick={handleTypeClick}
       onThemeClick={handleThemeClick}
       onViewChange={handleViewChange}
-      logoutButton={logoutButton}
     />
   );
 };
