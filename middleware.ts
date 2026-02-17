@@ -11,62 +11,13 @@ const securityHeaders = {
 };
 
 export function middleware(req: NextRequest) {
-  const { pathname } = req.nextUrl;
-
-  // Allow these paths without auth:
-  const publicPaths = [
-    "/login",
-    "/auth", // our Route Handler
-    "/logout",
-    "/favicon.ico",
-    "/robots.txt",
-    "/sitemap.xml",
-  ];
-  const isPublic = publicPaths.some(
-    (p) => pathname === p || pathname.startsWith(p + "/"),
-  );
-
-  // Ignore Next.js internals & static assets (but NOT /api or /data without auth):
-  const isStaticAsset =
-    pathname.startsWith("/_next") ||
-    pathname.startsWith("/assets") ||
-    pathname.startsWith("/static") ||
-    pathname.startsWith("/logos") ||
-    pathname.startsWith("/fonts");
-
-  if (isStaticAsset) {
-    const response = NextResponse.next();
-    // Add security headers even to static assets
-    Object.entries(securityHeaders).forEach(([key, value]) => {
-      response.headers.set(key, value);
-    });
-    return response;
-  }
-
-  // Validate auth cookie - check for expected format
-  const authCookie = req.cookies.get("site_auth")?.value;
-  const authorized = authCookie === "1";
-
-  if (!authorized && !isPublic) {
-    const url = req.nextUrl.clone();
-    url.pathname = "/login";
-    // Only allow internal redirects - validate pathname is relative
-    const safeRedirect = pathname.startsWith("/") ? pathname : "/";
-    url.searchParams.set("redirect", safeRedirect);
-    
-    const response = NextResponse.redirect(url);
-    // Add security headers to redirects
-    Object.entries(securityHeaders).forEach(([key, value]) => {
-      response.headers.set(key, value);
-    });
-    return response;
-  }
-
   const response = NextResponse.next();
+  
   // Add security headers to all responses
   Object.entries(securityHeaders).forEach(([key, value]) => {
     response.headers.set(key, value);
   });
+  
   return response;
 }
 
