@@ -545,10 +545,8 @@ def main():
 
         schema_dir = (
             config["project_root"]
-            / "databases"
-            / "crafd"
-            / "schemas"
-            / "funding_compass"
+            / "sql"
+            / "schema"
         )
 
         # --- Database connection ------------------------------------------
