@@ -514,7 +514,7 @@ body::-webkit-scrollbar {
   position: relative;
   gap: 0;
   flex-wrap: wrap;
-  overflow-x: auto;
+  overflow: hidden;
 }
 
 /* Mobile: reduce trapezoid tab size and spacing */
