@@ -533,19 +533,6 @@ export default function OrganizationModal({
                 </div>
 
                 <div className="mt-4 mb-2 flex flex-col gap-2">
-                  {(() => {
-                    const orgProjects = orgProjectsMap[organization.id];
-                    if (!orgProjects || orgProjects.length === 0) return null;
-
-                    return (
-                      <ModalOrganizationFocus
-                        projects={orgProjects}
-                        onTypeClick={onTypeClick}
-                        tooltipContainer={tooltipContainer}
-                        SubHeader={undefined}
-                      />
-                    );
-                  })()}
                   {displayedProjects.map((proj, i) => {
                     const description = projectDescriptionMap[proj.id] || "";
                     const firstSentence = getFirstSentence(description);
@@ -628,6 +615,21 @@ export default function OrganizationModal({
                     )}
                   </button>
                 )}
+                {(() => {
+                  const orgProjects = orgProjectsMap[organization.id];
+                  if (!orgProjects || orgProjects.length === 0) return null;
+
+                  return (
+                    <div className="mt-4 pt-4 border-t border-slate-200">
+                      <ModalOrganizationFocus
+                        projects={orgProjects}
+                        onTypeClick={onTypeClick}
+                        tooltipContainer={tooltipContainer}
+                        SubHeader={undefined}
+                      />
+                    </div>
+                  );
+                })()}
               </div>
             );
           })()}

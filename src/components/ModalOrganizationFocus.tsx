@@ -42,24 +42,24 @@ const ModalOrganizationFocus: React.FC<ModalOrganizationFocusProps> = ({
 
   return (
     <div>
-      <div className="mb-2 grid grid-cols-2 gap-2">
+      <div className="mb-2 flex flex-wrap gap-1.5">
         {investmentTypeCounts.map(({ type, count }) => {
           const IconComponent = getIconForInvestmentType(type);
           const button = (
             <button
               onClick={() => onTypeClick?.(type)}
-              className="inline-flex w-full cursor-pointer items-center justify-between gap-1.5 rounded-md px-3 py-1.5 text-sm font-semibold transition-opacity hover:opacity-80"
+              className="inline-flex cursor-pointer items-center justify-between gap-1 rounded-md px-2 py-1 text-xs font-semibold transition-opacity hover:opacity-80"
               style={{
                 backgroundColor: "var(--badge-other-bg)",
                 color: "var(--badge-other-text)",
               }}
             >
-              <div className="inline-flex items-center gap-1">
-                <IconComponent className="h-4 w-4" />
-                <span>{type}</span>
+              <div className="inline-flex items-center gap-0.5">
+                <IconComponent className="h-3 w-3" />
+                <span className="truncate">{type}</span>
               </div>
               <span
-                className="inline-flex h-4 w-4 items-center justify-center rounded-full text-xs font-bold"
+                className="inline-flex h-3 w-3 shrink-0 items-center justify-center rounded-full text-xs font-bold"
                 style={{
                   backgroundColor: "var(--badge-other-text)",
                   color: "var(--badge-other-bg)",
