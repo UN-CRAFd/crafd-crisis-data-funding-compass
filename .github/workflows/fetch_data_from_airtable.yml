@@ -5,9 +5,6 @@ on:
     - cron: "0 5 * * *" # Runs every midnight New York time (UTC-5)
   workflow_dispatch: # Allows manual trigger
 
-permissions:
-  contents: write # This grants permission to push changes
-
 jobs:
   update-data:
     runs-on: ubuntu-latest
@@ -24,7 +21,7 @@ jobs:
       - name: Install dependencies from lockfile
         run: uv sync --frozen
 
-      - name: Run data fetching script
+      - name: Run data fetching script to PostgreSQL
         env:
           # GitHub: "settings/secrets/actions" | Repository secrets
           AIRTABLE_API_KEY: ${{ secrets.AIRTABLE_API_KEY }}
@@ -32,28 +29,11 @@ jobs:
           AIRTABLE_TABLE_ID_AGENCIES: ${{ secrets.AIRTABLE_TABLE_ID_AGENCIES }}
           AIRTABLE_TABLE_ID_ORGANIZATIONS: ${{ secrets.AIRTABLE_TABLE_ID_ORGANIZATIONS }}
           AIRTABLE_TABLE_ID_PROJECTS: ${{ secrets.AIRTABLE_TABLE_ID_PROJECTS }}
+          AZURE_POSTGRES_HOST: ${{ secrets.AZURE_POSTGRES_HOST }}
+          AZURE_POSTGRES_PORT: ${{ secrets.AZURE_POSTGRES_PORT }}
+          AZURE_POSTGRES_USER: ${{ secrets.AZURE_POSTGRES_USER }}
+          AZURE_POSTGRES_PASSWORD: ${{ secrets.AZURE_POSTGRES_PASSWORD }}
         run: |
-          echo "Starting data fetch with validation..."
-          uv run python scripts/01_fetch_airtable.py
-          echo "✅ Data validation passed - ready to commit"
-
-      - name: Commit and push validated changes
-        run: |
-          git config --global user.name "github-actions[bot]"
-          git config --global user.email "github-actions[bot]@users.noreply.github.com"
-          git add public/data/
-          if git diff --staged --quiet; then
-            echo "No data changes detected - skipping commit"
-          else
-            echo "Data changes detected - committing..."
-            git commit -m "Automated data update: Refresh entities data [GitHub Actions]
-
-            ✅ Data validation passed:
-            - Minimum 100 projects verified
-            - Minimum 50 organizations verified  
-            - All required fields present
-            
-            Generated: $(date -u '+%Y-%m-%d %H:%M:%S UTC')"
-            git push
-            echo "✅ Data successfully updated and pushed"
-          fi
+          echo "Starting data fetch to PostgreSQL with validation..."
+          uv run python scripts/01b_fetch_airtable_to_sql.py
+          echo "✅ Data validation passed and synced to PostgreSQL"
