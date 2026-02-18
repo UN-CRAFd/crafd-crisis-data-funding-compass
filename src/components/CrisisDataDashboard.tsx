@@ -332,11 +332,11 @@ const CrisisDataDashboard = ({
     [dashboardData?.investmentThemesByType],
   );
 
-  // Extract agencies that actually have funding in the filtered data
+  // Extract agencies that actually have funding in the full (unfiltered) data
   const agenciesWithFunding = useMemo(() => {
     const agencies = new Set<string>();
-    if (dashboardData?.organizationsWithProjects) {
-      for (const org of dashboardData.organizationsWithProjects) {
+    if (dashboardData?.allOrganizations) {
+      for (const org of dashboardData.allOrganizations) {
         // Add org-level agencies
         if (org.orgAgencies) {
           Object.values(org.orgAgencies).forEach((agencyList) => {
@@ -360,7 +360,7 @@ const CrisisDataDashboard = ({
       }
     }
     return agencies;
-  }, [dashboardData?.organizationsWithProjects]);
+  }, [dashboardData?.allOrganizations]);
 
   // Calculate project counts using shared hook
   const { projectCountsByType, projectCountsByTheme } = useProjectCounts({
