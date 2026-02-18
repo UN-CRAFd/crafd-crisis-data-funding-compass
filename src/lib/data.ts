@@ -599,11 +599,11 @@ function applyFilters(
       
       // Check if agency filter should be applied
       // If ALL available agencies for the donor are selected, treat it as no filter
-      let hasAgencyFilter =
-        filters.donorAgencies && filters.donorAgencies.length > 0;
+      let hasAgencyFilter: boolean =
+        filters.donorAgencies && filters.donorAgencies.length > 0 ? true : false;
       
       if (hasAgencyFilter && hasDonorFilter && filters.donorCountries!.length === 1 && cachedCountryAgenciesMap) {
-        const selectedDonor = filters.donorCountries[0];
+        const selectedDonor = filters.donorCountries![0];
         const allAvailableAgencies = cachedCountryAgenciesMap.get(selectedDonor) || [];
         
         // If all available agencies are selected, disable agency filtering
