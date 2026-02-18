@@ -652,10 +652,10 @@ export default function MethodologyPage({
                               <button
                                 key={type}
                                 onClick={() => setSelectedType(type)}
-                                className={`flex items-center gap-2 rounded-lg px-3 py-2 text-xs font-medium transition-all duration-200 ${
+                                className={`flex items-center gap-2 rounded-lg border px-3 py-2 text-xs font-medium transition-all duration-200 ${
                                   isSelected
-                                    ? "border-2 shadow-sm"
-                                    : "border border-slate-200 bg-white text-slate-600 hover:border-slate-300 hover:bg-slate-50"
+                                    ? "shadow-sm"
+                                    : "border-slate-200 bg-white text-slate-600 hover:border-slate-300 hover:bg-slate-50"
                                 }`}
                                 style={
                                   isSelected
