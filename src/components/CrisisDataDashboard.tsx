@@ -1240,7 +1240,7 @@ const CrisisDataDashboard = ({
                               >
                                 <div className="flex items-center">
                                   <Landmark className="mr-2 h-4 w-4" />
-                                  <span>Include Core Contributions</span>
+                                  <span>Show UN Core Contributions</span>
                                 </div>
                                 <div className={`h-4 w-7 rounded-full transition-colors ${showGeneralContributions ? "bg-[var(--brand-primary-dark)]" : "bg-slate-300"}`}>
                                   <div className={`h-4 w-4 rounded-full bg-white transition-transform ${showGeneralContributions ? "translate-x-3" : "translate-x-0"}`} />
