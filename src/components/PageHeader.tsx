@@ -157,12 +157,7 @@ export default function PageHeader({
             <TooltipProvider>
               <TooltipUI>
                 <TooltipTrigger asChild>
-                  <div className="hidden cursor-help items-center gap-1.5 rounded-full border border-slate-200 bg-slate-100 px-2.5 py-1 text-slate-600 sm:flex">
-                    <span className="text-xs font-semibold">
-                      {labels.header.betaBadge}
-                    </span>
-                    <Info className="ml-2 h-3.5 w-3.5 text-slate-400" />
-                  </div>
+                  <Info className="h-4 w-4 cursor-help text-slate-400 hover:text-slate-600 transition-colors" />
                 </TooltipTrigger>
                 <TooltipContent
                   side="bottom"
