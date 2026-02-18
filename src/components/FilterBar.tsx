@@ -40,6 +40,7 @@ interface FilterBarProps {
   // Agencies
   selectedAgencies: string[];
   availableAgencies: Map<string, string[]>;
+  agenciesWithFunding?: Set<string>; // Agencies that actually have organizations or products in filtered data
   onAgenciesChange: (values: string[]) => void;
 
   // Investment Types
@@ -83,6 +84,7 @@ const FilterBar: React.FC<FilterBarProps> = ({
   onDonorsChange,
   selectedAgencies,
   availableAgencies,
+  agenciesWithFunding = new Set(),
   onAgenciesChange,
   investmentTypes,
   allKnownInvestmentTypes,
@@ -136,13 +138,20 @@ const FilterBar: React.FC<FilterBarProps> = ({
     return agencies;
   }, [availableAgencies]);
 
+  // Filter out agencies that don't have any funding in the current data
+  const agenciesWithoutUnspecified = useMemo(() => {
+    return allAvailableAgenciesList.filter(({ agency }) => 
+      agenciesWithFunding.size === 0 || agenciesWithFunding.has(agency)
+    );
+  }, [allAvailableAgenciesList, agenciesWithFunding]);
+
   // Filter agencies based on search query
   const filteredAgencies = useMemo(() => {
-    if (!agencySearchQuery.trim()) return allAvailableAgenciesList;
-    return allAvailableAgenciesList.filter(({ agency }) =>
+    if (!agencySearchQuery.trim()) return agenciesWithoutUnspecified;
+    return agenciesWithoutUnspecified.filter(({ agency }) =>
       agency.toLowerCase().includes(agencySearchQuery.toLowerCase())
     );
-  }, [allAvailableAgenciesList, agencySearchQuery]);
+  }, [agenciesWithoutUnspecified, agencySearchQuery]);
 
   // Combine available donors with selected member states to ensure they remain visible
   const allAvailableDonors = [
@@ -196,9 +205,9 @@ const FilterBar: React.FC<FilterBarProps> = ({
         </div>
 
         {/* Donor Countries and Agencies Container */}
-        <div className={`flex min-w-0 gap-2 ${combinedDonors.length > 0 && allAvailableAgenciesList.length > 0 ? "flex-1" : "flex-1"}`}>
+        <div className={`flex min-w-0 gap-2 ${combinedDonors.length > 0 && agenciesWithoutUnspecified.length > 0 ? "flex-1" : "flex-1"}`}>
           {/* Donor Countries Multi-Select */}
-          <div className={`min-w-0 ${combinedDonors.length > 0 && allAvailableAgenciesList.length > 0 ? "flex-1" : "flex-1"}`}>
+          <div className={`min-w-0 ${combinedDonors.length > 0 && agenciesWithoutUnspecified.length > 0 ? "flex-1" : "flex-1"}`}>
             <DropdownMenu onOpenChange={(open) => setDonorsMenuOpen(open)}>
               <DropdownMenuTrigger asChild>
                 <Button
@@ -298,8 +307,8 @@ const FilterBar: React.FC<FilterBarProps> = ({
             </DropdownMenu>
           </div>
 
-          {/* Agencies Multi-Select - Only shown when exactly ONE donor is selected and agencies are available */}
-          {combinedDonors.length === 1 && allAvailableAgenciesList.length > 0 && (
+          {/* Agencies Multi-Select - Only shown when exactly ONE donor is selected and agencies (other than Unspecified) are available */}
+          {combinedDonors.length === 1 && agenciesWithoutUnspecified.length > 0 && (
             <div className="min-w-0 flex-1">
               <DropdownMenu onOpenChange={(open) => setAgenciesMenuOpen(open)}>
                 <DropdownMenuTrigger asChild>

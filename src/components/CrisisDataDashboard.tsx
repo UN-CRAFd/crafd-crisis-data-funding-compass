@@ -332,6 +332,36 @@ const CrisisDataDashboard = ({
     [dashboardData?.investmentThemesByType],
   );
 
+  // Extract agencies that actually have funding in the filtered data
+  const agenciesWithFunding = useMemo(() => {
+    const agencies = new Set<string>();
+    if (dashboardData?.organizationsWithProjects) {
+      for (const org of dashboardData.organizationsWithProjects) {
+        // Add org-level agencies
+        if (org.orgAgencies) {
+          Object.values(org.orgAgencies).forEach((agencyList) => {
+            agencyList.forEach((agency) => {
+              if (agency) agencies.add(agency);
+            });
+          });
+        }
+        // Add project-level agencies
+        if (org.projects) {
+          for (const project of org.projects) {
+            if (project.donorAgencies) {
+              Object.values(project.donorAgencies).forEach((agencyList) => {
+                agencyList.forEach((agency) => {
+                  if (agency) agencies.add(agency);
+                });
+              });
+            }
+          }
+        }
+      }
+    }
+    return agencies;
+  }, [dashboardData?.organizationsWithProjects]);
+
   // Calculate project counts using shared hook
   const { projectCountsByType, projectCountsByTheme } = useProjectCounts({
     organizations: dashboardData?.allOrganizations || [],
@@ -1324,6 +1354,7 @@ const CrisisDataDashboard = ({
                       availableDonorCountries={availableDonorCountries}
                       selectedAgencies={selectedAgencies}
                       availableAgencies={availableAgencies}
+                      agenciesWithFunding={agenciesWithFunding}
                       onDonorsChange={onDonorsChange}
                       onAgenciesChange={onAgenciesChange}
                       investmentTypes={investmentTypes}
