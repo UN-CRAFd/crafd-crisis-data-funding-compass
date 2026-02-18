@@ -698,7 +698,7 @@ function applyFilters(
         if (!hasDonorFilter || !filters.donorCountries || filters.donorCountries.length !== 1) {
           return false;
         }
-        const selectedDonor = filters.donorCountries[0];
+        const selectedDonor = filters.donorCountries![0];
         const orgAgenciesForDonor = org.orgAgencies[selectedDonor] || [];
         return filters.donorAgencies!.some(
           (selectedAgency) => orgAgenciesForDonor.includes(selectedAgency),
@@ -715,7 +715,7 @@ function applyFilters(
         if (!hasDonorFilter || !filters.donorCountries || filters.donorCountries.length !== 1) {
           return true;
         }
-        const selectedDonor = filters.donorCountries[0];
+        const selectedDonor = filters.donorCountries![0];
         const projectAgencies = project.donorAgencies || {};
         const agenciesForDonor = projectAgencies[selectedDonor] || [];
         return filters.donorAgencies!.some(
