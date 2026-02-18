@@ -145,13 +145,18 @@ const FilterBar: React.FC<FilterBarProps> = ({
     );
   }, [allAvailableAgenciesList, agenciesWithFunding]);
 
+  // Check if there are multiple agencies total
+  const hasMultipleAgencies = agenciesWithoutUnspecified.length > 1;
+
   // Filter agencies based on search query
+  // Show all agencies if there are multiple, otherwise show only specific ones
   const filteredAgencies = useMemo(() => {
-    if (!agencySearchQuery.trim()) return agenciesWithoutUnspecified;
-    return agenciesWithoutUnspecified.filter(({ agency }) =>
+    const agenciesToShow = hasMultipleAgencies ? agenciesWithoutUnspecified : agenciesWithoutUnspecified;
+    if (!agencySearchQuery.trim()) return agenciesToShow;
+    return agenciesToShow.filter(({ agency }) =>
       agency.toLowerCase().includes(agencySearchQuery.toLowerCase())
     );
-  }, [agenciesWithoutUnspecified, agencySearchQuery]);
+  }, [agenciesWithoutUnspecified, agencySearchQuery, hasMultipleAgencies]);
 
   // Combine available donors with selected member states to ensure they remain visible
   const allAvailableDonors = [
@@ -205,9 +210,9 @@ const FilterBar: React.FC<FilterBarProps> = ({
         </div>
 
         {/* Donor Countries and Agencies Container */}
-        <div className={`flex min-w-0 gap-2 ${combinedDonors.length > 0 && agenciesWithoutUnspecified.length > 0 ? "flex-1" : "flex-1"}`}>
+        <div className={`flex min-w-0 gap-2 ${combinedDonors.length > 0 && hasMultipleAgencies ? "flex-1" : "flex-1"}`}>
           {/* Donor Countries Multi-Select */}
-          <div className={`min-w-0 ${combinedDonors.length > 0 && agenciesWithoutUnspecified.length > 0 ? "flex-1" : "flex-1"}`}>
+          <div className={`min-w-0 ${combinedDonors.length > 0 && hasMultipleAgencies ? "flex-1" : "flex-1"}`}>
             <DropdownMenu onOpenChange={(open) => setDonorsMenuOpen(open)}>
               <DropdownMenuTrigger asChild>
                 <Button
@@ -307,8 +312,8 @@ const FilterBar: React.FC<FilterBarProps> = ({
             </DropdownMenu>
           </div>
 
-          {/* Agencies Multi-Select - Only shown when exactly ONE donor is selected and agencies (other than Unspecified) are available */}
-          {combinedDonors.length === 1 && agenciesWithoutUnspecified.length > 0 && (
+          {/* Agencies Multi-Select - Only shown when exactly ONE donor is selected and multiple agencies are available */}
+          {combinedDonors.length === 1 && hasMultipleAgencies && (
             <div className="min-w-0 flex-1">
               <DropdownMenu onOpenChange={(open) => setAgenciesMenuOpen(open)}>
                 <DropdownMenuTrigger asChild>
@@ -400,7 +405,9 @@ const FilterBar: React.FC<FilterBarProps> = ({
                                 checked={selectedAgencies.includes(agency)}
                                 onCheckedChange={(checked) => {
                                   if (checked) {
-                                    onAgenciesChange([...selectedAgencies, agency]);
+                                    // If selecting a specific agency and "Unspecified Agency" is selected, remove it
+                                    const newSelection = selectedAgencies.filter(a => a !== "Unspecified Agency");
+                                    onAgenciesChange([...newSelection, agency]);
                                   } else {
                                     onAgenciesChange(
                                       selectedAgencies.filter((a) => a !== agency)
