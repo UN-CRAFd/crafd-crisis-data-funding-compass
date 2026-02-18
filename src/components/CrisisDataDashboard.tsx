@@ -1063,7 +1063,7 @@ const CrisisDataDashboard = ({
                   <div className="flex items-center gap-0">
                     <TooltipProvider delayDuration={0}>
                       {TABS.map(({ value, label, Icon, tooltip }) => (
-                        <div key={value} className={value === "network" ? "hidden sm:block" : ""}>
+                        <div key={value} className={value === "network" || value === "donors" ? "hidden sm:block" : ""}>
                           {tipsEnabled ? (
                             <TooltipUI>
                               <TooltipTrigger asChild>

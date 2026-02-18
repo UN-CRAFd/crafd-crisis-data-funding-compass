@@ -137,10 +137,10 @@ export default function PageHeader({
       <div className="mx-auto max-w-[82rem] px-4 py-3 sm:px-6 sm:py-4 lg:px-8">
         <div className="flex items-center justify-between gap-3">
           <div className="flex min-w-0 flex-1 items-center gap-2 sm:gap-3">
-            <div className="flex items-center gap-2">
+            <div className="flex min-w-0 items-center gap-2">
               <button
                 onClick={handleCompassClick}
-                className="hidden sm:block focus:outline-none transition-transform duration-500"
+                className="block shrink-0 focus:outline-none transition-transform duration-500"
                 aria-label="Compass"
               >
                 <Compass
@@ -149,9 +149,9 @@ export default function PageHeader({
                   }`}
                 />
               </button>
-              <h1 className="truncate bg-gradient-to-r from-slate-800 to-slate-600 bg-clip-text text-lg text-transparent sm:text-3xl flex items-center gap-2">
-              <span className="qanelas-title">{labels.header.title}</span>{" "}
-              <span className="font-roboto">{labels.header.subtitle}</span>
+              <h1 className="min-w-0 flex flex-col lg:flex-row items-start lg:items-center gap-0 lg:gap-2 bg-gradient-to-r from-slate-800 to-slate-600 bg-clip-text text-base sm:text-xl lg:text-3xl text-transparent">
+              <span className="qanelas-title whitespace-nowrap">{labels.header.title}</span>
+              <span className="font-roboto whitespace-nowrap">{labels.header.subtitle}</span>
               </h1>
             </div>
             <TooltipProvider>
