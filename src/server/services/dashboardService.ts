@@ -5,7 +5,7 @@
  * applies filters, calculates statistics, and returns the DashboardDataDTO.
  *
  * This file replaces the client-side `processDashboardData()` from data.ts.
- * No SQL here — all data comes from repositories.
+ * No SQL here — all data comes from the server-side cache.
  */
 
 import type {
@@ -27,64 +27,10 @@ import type {
   ProjectThemeRow,
   ProjectAgencyRow,
 } from "../repositories";
-import {
-  findAllOrganizations,
-  findAllOrgAgencies,
-  findAllOrgProjects,
-  findAllProjectThemes,
-  findAllProjectAgencies,
-  findAllInvestmentTypes,
-} from "../repositories";
-import { findAllMemberStates } from "../repositories/memberStateRepository";
-import { findAllAgencies } from "../repositories/agencyRepository";
+import { getCoreData } from "../cache";
+import { groupBy, unique, buildFieldsObject } from "../utils";
 import { getThemeMappings } from "./themeService";
 import labels from "@/config/labels.json";
-
-// ─────────────────────────────────────────────────────────
-// Data Assembly (SQL rows → DTOs)
-// ─────────────────────────────────────────────────────────
-
-/** Build a lookup map grouping rows by a key */
-function groupBy<T>(rows: T[], keyFn: (row: T) => string): Map<string, T[]> {
-  const map = new Map<string, T[]>();
-  for (const row of rows) {
-    const key = keyFn(row);
-    const list = map.get(key);
-    if (list) list.push(row);
-    else map.set(key, [row]);
-  }
-  return map;
-}
-
-/** Reconstruct the raw `fields` object from SQL columns (backward compat) */
-function buildFieldsObject(org: OrgRow): Record<string, unknown> {
-  return {
-    "Org Full Name": org.full_name,
-    "Org Short Name": org.short_name,
-    "org_key": org.org_key,
-    "Org Website": org.website,
-    "Org Description": org.description,
-    "Est. Org Budget": org.estimated_budget,
-    "Org Programme Budget": org.programme_budget,
-    "Budget Source": org.budget_source,
-    "Link to Budget Source": org.budget_source_link,
-    "Funding Type": org.funding_type,
-    "Org Type": org.org_type,
-    "Org HQ Country": org.hq_country,
-    "HDX Org Key": org.hdx_org_key,
-    "IATI Org Key": org.iati_org_key,
-    "Org MPTFO Name": org.mptfo_name,
-    "Org MPTFO URL [Formula]": org.mptfo_url,
-    "Org Transparency Portal": org.transparency_portal_url,
-    "Link to Data Products Overview": org.data_products_overview_url,
-    "Last Updated": org.last_updated,
-  };
-}
-
-/** Deduplicate a string array */
-function unique(arr: string[]): string[] {
-  return [...new Set(arr)];
-}
 
 /** Assemble OrganizationDTO[] from raw SQL rows (5 batch queries) */
 function assembleOrganizations(
@@ -645,56 +591,35 @@ function getFilterOptions(
 }
 
 // ─────────────────────────────────────────────────────────
-// Country → Agencies Map (for agency filter bypass logic)
-// ─────────────────────────────────────────────────────────
-
-async function buildCountryAgenciesMap(): Promise<Map<string, string[]>> {
-  const rows = await findAllAgencies();
-  const map = new Map<string, string[]>();
-  for (const row of rows) {
-    if (row.country_name && row.agency_name) {
-      let list = map.get(row.country_name);
-      if (!list) {
-        list = [];
-        map.set(row.country_name, list);
-      }
-      if (!list.includes(row.agency_name)) list.push(row.agency_name);
-    }
-  }
-  // Sort agencies within each country
-  for (const [country, agencies] of map) {
-    map.set(country, agencies.sort());
-  }
-  return map;
-}
-
-// ─────────────────────────────────────────────────────────
 // Main Entry Point
 // ─────────────────────────────────────────────────────────
 
 export async function processDashboardData(
   filters: DashboardFiltersDTO = {},
 ): Promise<DashboardDataDTO> {
-  // Load all data in parallel (5 batch queries + support data)
-  const [
-    orgs,
-    orgAgencies,
-    orgProjects,
-    projectThemes,
-    projectAgencies,
-    memberStates,
-    countryAgenciesMap,
-    themeMappings,
-  ] = await Promise.all([
-    findAllOrganizations(),
-    findAllOrgAgencies(),
-    findAllOrgProjects(),
-    findAllProjectThemes(),
-    findAllProjectAgencies(),
-    filters.showGeneralContributions !== false ? findAllMemberStates() : Promise.resolve([]),
-    buildCountryAgenciesMap(),
+  // Single cached fetch — all 8 queries resolved in one round-trip (TTL 60s)
+  const [core, themeMappings] = await Promise.all([
+    getCoreData(),
     getThemeMappings(),
   ]);
+
+  const { orgs, orgAgencies, orgProjects, projectThemes, projectAgencies, agencies, memberStates: allMemberStates } = core;
+
+  // Build country → agencies map from cached agency rows
+  const countryAgenciesMap = new Map<string, string[]>();
+  for (const row of agencies) {
+    if (row.country_name && row.agency_name) {
+      let list = countryAgenciesMap.get(row.country_name);
+      if (!list) {
+        list = [];
+        countryAgenciesMap.set(row.country_name, list);
+      }
+      if (!list.includes(row.agency_name)) list.push(row.agency_name);
+    }
+  }
+  for (const [, list] of countryAgenciesMap) list.sort();
+
+  const memberStates = filters.showGeneralContributions !== false ? allMemberStates : [];
 
   // Assemble
   let allOrganizations = assembleOrganizations(
@@ -755,9 +680,9 @@ export async function processDashboardData(
  * Get all organization types (for the org type chart).
  */
 export async function getAllOrganizationTypes(): Promise<string[]> {
-  const rows = await findAllOrganizations();
+  const { orgs } = await getCoreData();
   const types = new Set<string>();
-  for (const r of rows) {
+  for (const r of orgs) {
     if (r.org_type) types.add(r.org_type);
   }
   return Array.from(types).sort();

@@ -304,6 +304,10 @@ const CodeBlock = ({ code }: { code: string }) => {
 // DATA & CONFIG
 // ============================================================================
 
+interface MethodologyPageProps {
+  logoutButton?: React.ReactNode;
+}
+
 const INVESTMENT_TYPE_COLORS: Record<
   string,
   { bg: string; border: string; text: string; step: string }
@@ -474,7 +478,9 @@ const INVESTMENT_TYPES = Object.keys(INVESTMENT_TYPE_DATA);
 // MAIN COMPONENT
 // ============================================================================
 
-export default function MethodologyPage() {
+export default function MethodologyPage({
+  logoutButton,
+}: MethodologyPageProps) {
   const [shareSuccess, setShareSuccess] = useState(false);
   const [selectedType, setSelectedType] = useState<string | null>(
     "Data Sets & Commons",
@@ -618,27 +624,7 @@ export default function MethodologyPage() {
                       <SectionTitle icon={FileText}>
                         {labels.methodology.dataClassification}
                       </SectionTitle>
-                      <div className="space-y-4">
-                        <InfoCard title={labels.methodology.entityMapping}>
-                          {labels.methodology.entityMappingDescription}
-                        </InfoCard>
-                        <div className="rounded-lg border border-slate-200 bg-slate-50 p-4">
-                          <h4 className="mb-2 font-semibold text-slate-800">
-                            {labels.methodology.investmentTyping}
-                          </h4>
-                          <p className="mb-3 text-sm leading-relaxed text-slate-600">
-                            {labels.methodology.investmentTypingDescription}
-                          </p>
-                          <ul className="space-y-2 text-sm text-slate-600">
-                            {INVESTMENT_TYPES.map((type) => (
-                              <BulletItem key={type}>{type}</BulletItem>
-                            ))}
-                          </ul>
-                        </div>
-                        <InfoCard title={labels.methodology.themeTagging}>
-                          {labels.methodology.themeTaggingDescription}
-                        </InfoCard>
-                      </div>
+
                     </div>
 
                     {/* Interactive Classification Explorer */}
@@ -708,7 +694,7 @@ export default function MethodologyPage() {
                                 className="flex items-center gap-3 rounded-lg p-3"
                                 style={{
                                   backgroundColor: "var(--badge-other-bg)",
-                                  border: "1px solid var(--badge-other-border)",
+                                  border: "solid var(--badge-other-border)",
                                 }}
                               >
                                 <div

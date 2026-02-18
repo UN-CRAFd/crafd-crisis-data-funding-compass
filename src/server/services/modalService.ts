@@ -2,43 +2,25 @@
  * Modal Service
  *
  * Builds all the lookup maps used by OrganizationModal, ProjectModal,
- * and DonorModal. Replaces the client-side build*Map() functions that
- * previously operated on the static nestedOrganizationsRaw import.
+ * and DonorModal. Uses the shared server-side cache so no extra DB queries.
  */
 
 import type { DonorInfoDTO, ModalMapsDTO } from "../dto";
-import {
-  findAllOrganizations,
-  findAllOrgAgencies,
-  findAllOrgProjects,
-  findAllProjectThemes,
-  findAllProjectAgencies,
-} from "../repositories";
-import type {
-  OrgAgencyRow,
-  OrgProjectRow,
-  ProjectThemeRow,
-  ProjectAgencyRow,
-} from "../repositories";
+import { getCoreData } from "../cache";
+import { groupBy, buildFieldsObject } from "../utils";
 
 /**
- * Build all modal maps in a single call (avoids repeated DB round-trips).
+ * Build all modal maps in a single call (uses cached data).
  */
 export async function buildModalMaps(): Promise<ModalMapsDTO> {
-  const [orgs, orgAgencies, orgProjects, projectThemes, projectAgencies] =
-    await Promise.all([
-      findAllOrganizations(),
-      findAllOrgAgencies(),
-      findAllOrgProjects(),
-      findAllProjectThemes(),
-      findAllProjectAgencies(),
-    ]);
+  const { orgs, orgAgencies, orgProjects, projectThemes, projectAgencies } =
+    await getCoreData();
 
   // Group rows by ID
-  const orgAgenciesByOrg = group(orgAgencies, (r) => r.org_id);
-  const orgProjectsByOrg = group(orgProjects, (r) => r.org_id);
-  const themesByProject = group(projectThemes, (r) => r.project_id);
-  const agenciesByProject = group(projectAgencies, (r) => r.project_id);
+  const orgAgenciesByOrg = groupBy(orgAgencies, (r) => r.org_id);
+  const orgProjectsByOrg = groupBy(orgProjects, (r) => r.org_id);
+  const themesByProject = groupBy(projectThemes, (r) => r.project_id);
+  const agenciesByProject = groupBy(projectAgencies, (r) => r.project_id);
 
   // Build maps
   const projectNameMap: Record<string, string> = {};
@@ -213,19 +195,13 @@ export async function getNestedOrganizationsForDonorModal(): Promise<
     }>;
   }>
 > {
-  const [orgs, orgAgencies, orgProjects, projectThemes, projectAgencies] =
-    await Promise.all([
-      findAllOrganizations(),
-      findAllOrgAgencies(),
-      findAllOrgProjects(),
-      findAllProjectThemes(),
-      findAllProjectAgencies(),
-    ]);
+  const { orgs, orgAgencies, orgProjects, projectThemes, projectAgencies } =
+    await getCoreData();
 
-  const orgAgenciesByOrg = group(orgAgencies, (r) => r.org_id);
-  const orgProjectsByOrg = group(orgProjects, (r) => r.org_id);
-  const themesByProject = group(projectThemes, (r) => r.project_id);
-  const agenciesByProject = group(projectAgencies, (r) => r.project_id);
+  const orgAgenciesByOrg = groupBy(orgAgencies, (r) => r.org_id);
+  const orgProjectsByOrg = groupBy(orgProjects, (r) => r.org_id);
+  const themesByProject = groupBy(projectThemes, (r) => r.project_id);
+  const agenciesByProject = groupBy(projectAgencies, (r) => r.project_id);
 
   return orgs.map((org) => {
     const myAgencies = orgAgenciesByOrg.get(org.id) || [];
@@ -234,17 +210,7 @@ export async function getNestedOrganizationsForDonorModal(): Promise<
     return {
       id: org.id,
       name: org.full_name || org.short_name || "",
-      fields: {
-        "Org Full Name": org.full_name,
-        "Org Short Name": org.short_name,
-        "org_key": org.org_key,
-        "Org Type": org.org_type,
-        "Org HQ Country": org.hq_country,
-        "Funding Type": org.funding_type,
-        "Org Description": org.description,
-        "Est. Org Budget": org.estimated_budget,
-        "Org Website": org.website,
-      },
+      fields: buildFieldsObject(org),
       agencies: myAgencies.map((a) => ({
         id: a.agency_id,
         fields: {
@@ -284,16 +250,4 @@ export async function getNestedOrganizationsForDonorModal(): Promise<
       }),
     };
   });
-}
-
-// Utility
-function group<T>(rows: T[], keyFn: (r: T) => string): Map<string, T[]> {
-  const map = new Map<string, T[]>();
-  for (const row of rows) {
-    const key = keyFn(row);
-    const list = map.get(key);
-    if (list) list.push(row);
-    else map.set(key, [row]);
-  }
-  return map;
 }

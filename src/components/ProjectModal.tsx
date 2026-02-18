@@ -2,6 +2,7 @@
 
 import { Building2, ExternalLink, Package, PackageOpen } from "lucide-react";
 import type { OrganizationWithProjects, ProjectData } from "../lib/data";
+import { getThemeToTypeMapping } from "../lib/data";
 import { getIconForInvestmentType } from "@/config/investmentTypeIcons";
 import { INVESTMENT_TYPE_DESCRIPTIONS } from "@/config/tooltipDescriptions";
 import labels from "@/config/labels.json";
@@ -80,20 +81,12 @@ export default function ProjectModal({
   // Load theme mapping and descriptions from API
   useEffect(() => {
     Promise.all([
-      fetch("/api/themes").then((r) => r.ok ? r.json() : null),
+      getThemeToTypeMapping(),
+      fetch("/api/themes/descriptions").then((r) => r.ok ? r.json() : {}),
     ])
-      .then(([themesData]) => {
-        if (!themesData) return;
-
-        // The API returns { themeToType, themeToKey, keyToThemes }
-        // We need themeToType mapping and descriptions (loaded separately)
-        setThemeToTypeMapping(themesData.themeToType || {});
-
-        // Fetch theme descriptions via a dedicated fetch
-        fetch("/api/themes/descriptions")
-          .then((r) => r.ok ? r.json() : {})
-          .then((descs) => setThemeDescriptions(descs))
-          .catch(() => {});
+      .then(([themeToType, descs]) => {
+        setThemeToTypeMapping(themeToType);
+        setThemeDescriptions(descs);
       })
       .catch((error) => console.error("Error loading theme mapping:", error));
   }, []);

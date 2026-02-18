@@ -1,10 +1,10 @@
 /**
  * Agency Service
  *
- * Country → agencies lookup from SQL.
+ * Country → agencies lookup from cached data.
  */
 
-import { findAllAgencies } from "../repositories/agencyRepository";
+import { getCoreData } from "../cache";
 
 /**
  * Get agencies grouped by country name.
@@ -13,10 +13,10 @@ import { findAllAgencies } from "../repositories/agencyRepository";
 export async function getAgenciesByCountry(
   donorCountries?: string[],
 ): Promise<Record<string, string[]>> {
-  const rows = await findAllAgencies();
+  const { agencies } = await getCoreData();
   const map: Record<string, string[]> = {};
 
-  for (const row of rows) {
+  for (const row of agencies) {
     if (!row.country_name || !row.agency_name) continue;
     if (donorCountries && !donorCountries.includes(row.country_name)) continue;
 
@@ -26,7 +26,6 @@ export async function getAgenciesByCountry(
     }
   }
 
-  // Sort agencies within each country
   for (const country of Object.keys(map)) {
     map[country].sort();
   }

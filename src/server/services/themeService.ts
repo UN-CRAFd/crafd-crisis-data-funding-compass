@@ -1,10 +1,10 @@
 /**
  * Theme Service
  *
- * Builds theme ↔ investment-type and theme ↔ key mappings from SQL.
+ * Builds theme ↔ investment-type and theme ↔ key mappings from cached data.
  */
 
-import { findAllThemes } from "../repositories/themeRepository";
+import { getCoreData } from "../cache";
 
 export interface ThemeMappings {
   themeToType: Record<string, string>;
@@ -13,12 +13,12 @@ export interface ThemeMappings {
 }
 
 export async function getThemeMappings(): Promise<ThemeMappings> {
-  const rows = await findAllThemes();
+  const { themes } = await getCoreData();
   const themeToType: Record<string, string> = {};
   const themeToKey: Record<string, string> = {};
   const keyToThemes: Record<string, string[]> = {};
 
-  for (const row of rows) {
+  for (const row of themes) {
     if (row.name && row.type_name) {
       themeToType[row.name] = row.type_name;
     }
@@ -39,9 +39,9 @@ export async function getThemeMappings(): Promise<ThemeMappings> {
  * Get theme descriptions keyed by theme name.
  */
 export async function getThemeDescriptions(): Promise<Record<string, string>> {
-  const rows = await findAllThemes();
+  const { themes } = await getCoreData();
   const map: Record<string, string> = {};
-  for (const row of rows) {
+  for (const row of themes) {
     if (row.name && row.description) {
       map[row.name] = row.description;
     }

@@ -6,11 +6,11 @@
  */
 
 import { NextResponse } from "next/server";
-import { getMemberStates } from "@/server/services/memberStateService";
+import { findAllMemberStates } from "@/server/repositories/memberStateRepository";
 
 export async function GET() {
   try {
-    const states = await getMemberStates();
+    const states = await findAllMemberStates();
     return NextResponse.json(states, {
       headers: { "Cache-Control": "s-maxage=86400, stale-while-revalidate=86400" },
     });

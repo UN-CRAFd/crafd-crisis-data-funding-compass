@@ -38,6 +38,7 @@ import {
 } from "@/components/ui/tooltip";
 import labels from "@/config/labels.json";
 import { getIconForInvestmentType } from "@/config/investmentTypeIcons";
+import type { ModalMapsDTO } from "@/server/dto";
 import {
   Building2,
   ChevronDown,
@@ -343,37 +344,20 @@ const CrisisDataDashboard = ({
   // Load nested data for modals
   const [nestedOrganizations, setNestedOrganizations] = useState<any[]>([]);
 
-  // Centralized data maps for modals
-  const [projectNameMap, setProjectNameMap] = useState<Record<string, string>>(
-    {},
-  );
-  const [projectIdToKeyMap, setProjectIdToKeyMap] = useState<
-    Record<string, string>
-  >({});
-  const [projectDescriptionMap, setProjectDescriptionMap] = useState<
-    Record<string, string>
-  >({});
-  const [orgProjectsMap, setOrgProjectsMap] = useState<
-    Record<string, Array<{ id: string; investmentTypes: string[] }>>
-  >({});
-  const [orgDonorCountriesMap, setOrgDonorCountriesMap] = useState<
-    Record<string, string[]>
-  >({});
-  const [orgDonorInfoMap, setOrgDonorInfoMap] = useState<
-    Record<string, import("@/types/airtable").DonorInfo[]>
-  >({});
-  const [orgAgenciesMap, setOrgAgenciesMap] = useState<
-    Record<string, Record<string, string[]>>
-  >({});
-  const [orgProjectDonorsMap, setOrgProjectDonorsMap] = useState<
-    Record<string, Record<string, string[]>>
-  >({});
-  const [orgProjectDonorAgenciesMap, setOrgProjectDonorAgenciesMap] = useState<
-    Record<string, Record<string, Record<string, string[]>>>
-  >({});
-  const [projectAgenciesMap, setProjectAgenciesMap] = useState<
-    Record<string, Record<string, string[]>>
-  >({});
+  // Centralized data maps for modals (single state object instead of 10 individual useState hooks)
+  const emptyModalMaps: ModalMapsDTO = {
+    projectNameMap: {},
+    projectIdToKeyMap: {},
+    projectDescriptionMap: {},
+    orgProjectsMap: {},
+    orgDonorCountriesMap: {},
+    orgDonorInfoMap: {},
+    orgAgenciesMap: {},
+    orgProjectDonorsMap: {},
+    orgProjectDonorAgenciesMap: {},
+    projectAgenciesMap: {},
+  };
+  const [modalMaps, setModalMaps] = useState<ModalMapsDTO>(emptyModalMaps);
 
   // Load modal maps and nested organization data from API
   useEffect(() => {
@@ -386,16 +370,7 @@ const CrisisDataDashboard = ({
 
         if (mapsResponse.ok) {
           const maps = await mapsResponse.json();
-          setProjectNameMap(maps.projectNameMap || {});
-          setProjectIdToKeyMap(maps.projectIdToKeyMap || {});
-          setProjectDescriptionMap(maps.projectDescriptionMap || {});
-          setOrgProjectsMap(maps.orgProjectsMap || {});
-          setOrgDonorCountriesMap(maps.orgDonorCountriesMap || {});
-          setOrgDonorInfoMap(maps.orgDonorInfoMap || {});
-          setOrgAgenciesMap(maps.orgAgenciesMap || {});
-          setOrgProjectDonorsMap(maps.orgProjectDonorsMap || {});
-          setOrgProjectDonorAgenciesMap(maps.orgProjectDonorAgenciesMap || {});
-          setProjectAgenciesMap(maps.projectAgenciesMap || {});
+          setModalMaps({ ...emptyModalMaps, ...maps });
         }
 
         if (nestedResponse.ok) {
@@ -1607,7 +1582,7 @@ const CrisisDataDashboard = ({
                             onThemesChange={onThemesChange}
                             onResetFilters={onResetFilters}
                             filterDescription={getFilterDescription()}
-                            orgAgenciesMap={orgAgenciesMap}
+                            orgAgenciesMap={modalMaps.orgAgenciesMap}
                           />
                         </div>
                       </TabsContent>
@@ -1653,7 +1628,7 @@ const CrisisDataDashboard = ({
           organizationName={selectedProject.organizationName}
           allOrganizations={allOrganizations}
           loading={false}
-          projectAgenciesMap={projectAgenciesMap}
+          projectAgenciesMap={modalMaps.projectAgenciesMap}
           onOpenOrganizationModal={onOpenOrganizationModal}
           onOpenProjectModal={onOpenProjectModal}
           onOpenDonorModal={onOpenDonorModal}
@@ -1704,17 +1679,17 @@ const CrisisDataDashboard = ({
           return (
             <OrganizationModal
               organization={orgRecord}
-              projectNameMap={projectNameMap}
-              projectDescriptionMap={projectDescriptionMap}
-              orgProjectsMap={orgProjectsMap}
-              orgDonorCountriesMap={orgDonorCountriesMap}
-              orgDonorInfoMap={orgDonorInfoMap}
-              orgAgenciesMap={orgAgenciesMap}
-              orgProjectDonorsMap={orgProjectDonorsMap}
-              orgProjectDonorAgenciesMap={orgProjectDonorAgenciesMap}
+              projectNameMap={modalMaps.projectNameMap}
+              projectDescriptionMap={modalMaps.projectDescriptionMap}
+              orgProjectsMap={modalMaps.orgProjectsMap}
+              orgDonorCountriesMap={modalMaps.orgDonorCountriesMap}
+              orgDonorInfoMap={modalMaps.orgDonorInfoMap}
+              orgAgenciesMap={modalMaps.orgAgenciesMap}
+              orgProjectDonorsMap={modalMaps.orgProjectDonorsMap}
+              orgProjectDonorAgenciesMap={modalMaps.orgProjectDonorAgenciesMap}
               loading={false}
               onOpenProjectModal={onOpenProjectModal}
-              projectIdToKeyMap={projectIdToKeyMap}
+              projectIdToKeyMap={modalMaps.projectIdToKeyMap}
               onOpenDonorModal={onOpenDonorModal}
               onTypeClick={onTypeClick}
             />

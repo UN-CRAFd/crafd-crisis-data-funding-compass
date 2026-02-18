@@ -79,6 +79,11 @@ export async function ensureThemesMappingsLoaded(): Promise<void> {
   await loadThemesMappings();
 }
 
+export async function getThemeToTypeMapping(): Promise<Record<string, string>> {
+  const mappings = await loadThemesMappings();
+  return mappings.themeToType;
+}
+
 export function themeNameToKey(themeName: string): string {
   if (!cachedThemesMappings) return themeName;
   return cachedThemesMappings.themeToKey[themeName] || themeName;
@@ -189,11 +194,6 @@ export async function processDashboardData(
   return response.json();
 }
 
-// Legacy alias
-export async function loadEcosystemData() {
-  return processDashboardData();
-}
-
 // ================================================================
 // Calculation functions (pure — no data loading)
 // Used by CrisisDataDashboard for client-side aggregation.
@@ -215,68 +215,6 @@ export function calculateOrganizationTypesFromOrganizationsWithProjects(
   return Array.from(typeCounts.entries())
     .map(([name, count]) => ({ name, count }))
     .sort((a, b) => b.count - a.count);
-}
-
-export function calculateTopCoFinancingDonors(
-  organizations: OrganizationWithProjects[],
-  excludedDonors: string[] = [],
-  limit: number = 5,
-): Array<{ name: string; value: number }> {
-  const donorOrgCounts = new Map<string, Set<string>>();
-
-  for (const org of organizations) {
-    for (const donor of org.donorCountries) {
-      if (excludedDonors.includes(donor)) continue;
-      let s = donorOrgCounts.get(donor);
-      if (!s) {
-        s = new Set();
-        donorOrgCounts.set(donor, s);
-      }
-      s.add(org.id);
-    }
-  }
-
-  return Array.from(donorOrgCounts.entries())
-    .map(([name, orgSet]) => ({ name, value: orgSet.size }))
-    .sort((a, b) => b.value - a.value)
-    .slice(0, limit);
-}
-
-/**
- * Inject member state donors into core-funded organizations.
- * Kept on the client for the wrapper to use if needed.
- */
-export function injectMemberStateDonors(
-  organizations: OrganizationWithProjects[],
-  selectedMemberStates: string[],
-): OrganizationWithProjects[] {
-  if (!showGeneralContributions || selectedMemberStates.length === 0) {
-    return organizations;
-  }
-
-  return organizations.map((org) => {
-    const fundingType = org.fields?.["Funding Type"];
-    if (fundingType !== "Core") return org;
-
-    const newDonorCountries = [
-      ...new Set([...org.donorCountries, ...selectedMemberStates]),
-    ];
-
-    const existingCountries = new Set(org.donorInfo.map((d) => d.country));
-    const newDonorInfo = [...org.donorInfo];
-    for (const ms of selectedMemberStates) {
-      if (!existingCountries.has(ms)) {
-        newDonorInfo.push({ country: ms, isOrgLevel: true });
-      }
-    }
-    newDonorInfo.sort((a, b) => {
-      if (a.isOrgLevel && !b.isOrgLevel) return -1;
-      if (!a.isOrgLevel && b.isOrgLevel) return 1;
-      return a.country.localeCompare(b.country);
-    });
-
-    return { ...org, donorCountries: newDonorCountries, donorInfo: newDonorInfo };
-  });
 }
 
 // ================================================================
