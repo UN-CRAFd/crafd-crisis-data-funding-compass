@@ -55,27 +55,14 @@ import {
   UserRoundPlus,
   Compass
 } from "lucide-react";
-import organizationsTableRaw from "../../public/data/organizations-table.json";
-import nestedOrganizationsRaw from "../../public/data/organizations-nested.json";
 import {
-  buildOrgDonorCountriesMap,
-  buildOrgDonorInfoMap,
-  buildOrgProjectsMap,
-  buildProjectNameMap,
-  buildProjectIdToKeyMap,
-  buildOrgAgenciesMap,
-  buildOrgProjectDonorsMap,
-  buildOrgProjectDonorAgenciesMap,
-  buildProjectAgenciesMap,
-  buildProjectDescriptionMap,
   calculateOrganizationTypesFromOrganizationsWithProjects,
-  getNestedOrganizationsForModals,
+  setGeneralContributionsEnabled,
 } from "../lib/data";
 import { exportDashboardToPDF } from "../lib/exportPDF";
 import { exportViewAsCSV, exportViewAsXLSX } from "../lib/exportCSV";
 import { useTips } from "@/contexts/TipsContext";
 import { useGeneralContributions } from "@/contexts/GeneralContributionsContext";
-import { setGeneralContributionsEnabled } from "@/lib/data";
 import { useRouter, useSearchParams } from "next/navigation";
 import type {
   DashboardStats,
@@ -323,16 +310,14 @@ const CrisisDataDashboard = ({
     setLogoErrors((prev) => new Set([...prev, orgId]));
   }, []);
 
-  // Load static organizations table for modals
-  const organizationsTable: Array<{
-    id: string;
-    createdTime?: string;
-    fields: Record<string, unknown>;
-  }> = organizationsTableRaw as Array<{
-    id: string;
-    createdTime?: string;
-    fields: Record<string, unknown>;
-  }>;
+  // Organizations table data (loaded from API via allOrganizations)
+  const organizationsTable = useMemo(() => {
+    if (!dashboardData?.allOrganizations) return [];
+    return dashboardData.allOrganizations.map((org: any) => ({
+      id: org.id,
+      fields: org.fields || {},
+    }));
+  }, [dashboardData?.allOrganizations]);
 
   // Get all investment themes from dashboardData (must be before early returns)
   const allKnownInvestmentThemes = useMemo(
@@ -390,26 +375,33 @@ const CrisisDataDashboard = ({
     Record<string, Record<string, string[]>>
   >({});
 
-  // Load nested organization data for modal maps
+  // Load modal maps and nested organization data from API
   useEffect(() => {
     const loadModalData = async () => {
       try {
-        const nestedOrgs = await getNestedOrganizationsForModals();
-        setNestedOrganizations(nestedOrgs);
-        setProjectNameMap(buildProjectNameMap(nestedOrgs));
-        setProjectIdToKeyMap(buildProjectIdToKeyMap(nestedOrgs));
-        setProjectDescriptionMap(buildProjectDescriptionMap(nestedOrgs));
-        setOrgProjectsMap(buildOrgProjectsMap(nestedOrgs));
-        setOrgDonorCountriesMap(buildOrgDonorCountriesMap(nestedOrgs));
-        setOrgDonorInfoMap(buildOrgDonorInfoMap(nestedOrgs));
+        const [mapsResponse, nestedResponse] = await Promise.all([
+          fetch("/api/modal-maps"),
+          fetch("/api/nested-organizations"),
+        ]);
 
-        // Build org and project-specific agencies maps
-        setOrgAgenciesMap(buildOrgAgenciesMap(nestedOrgs));
-        setOrgProjectDonorsMap(buildOrgProjectDonorsMap(nestedOrgs));
-        setOrgProjectDonorAgenciesMap(
-          buildOrgProjectDonorAgenciesMap(nestedOrgs),
-        );
-        setProjectAgenciesMap(buildProjectAgenciesMap(nestedOrgs));
+        if (mapsResponse.ok) {
+          const maps = await mapsResponse.json();
+          setProjectNameMap(maps.projectNameMap || {});
+          setProjectIdToKeyMap(maps.projectIdToKeyMap || {});
+          setProjectDescriptionMap(maps.projectDescriptionMap || {});
+          setOrgProjectsMap(maps.orgProjectsMap || {});
+          setOrgDonorCountriesMap(maps.orgDonorCountriesMap || {});
+          setOrgDonorInfoMap(maps.orgDonorInfoMap || {});
+          setOrgAgenciesMap(maps.orgAgenciesMap || {});
+          setOrgProjectDonorsMap(maps.orgProjectDonorsMap || {});
+          setOrgProjectDonorAgenciesMap(maps.orgProjectDonorAgenciesMap || {});
+          setProjectAgenciesMap(maps.projectAgenciesMap || {});
+        }
+
+        if (nestedResponse.ok) {
+          const nestedOrgs = await nestedResponse.json();
+          setNestedOrganizations(nestedOrgs);
+        }
       } catch (error) {
         console.error("Error loading modal data:", error);
       }
@@ -1694,7 +1686,7 @@ const CrisisDataDashboard = ({
           };
 
           // Find matching organization in nested data to get IATI data
-          const nestedMatch = nestedOrganizationsRaw.find((nestedOrg: any) => {
+          const nestedMatch = nestedOrganizations.find((nestedOrg: any) => {
             const nestedName = normalizeOrgName(nestedOrg.name || "");
             const nestedFull = normalizeOrgName(nestedOrg.fields?.["Org Full Name"] || "");
             const nestedShort = normalizeOrgName(nestedOrg.fields?.["Org Short Name"] || "");
@@ -1732,7 +1724,7 @@ const CrisisDataDashboard = ({
       {selectedDonorCountry && (
         <DonorModal
           donorCountry={selectedDonorCountry}
-          nestedOrganizations={nestedOrganizationsRaw as any}
+          nestedOrganizations={nestedOrganizations as any}
           loading={false}
           onOpenOrganizationModal={onOpenOrganizationModal}
           onOpenProjectModal={onOpenProjectModal}

@@ -237,7 +237,7 @@ export default function AnalyticsPage() {
   }, [organizationsData]);
 
   useEffect(() => {
-    fetch("/data/organizations-nested.json")
+    fetch("/api/nested-organizations")
       .then((res) => res.json())
       .then((data) => {
         setOrganizationsData(data);

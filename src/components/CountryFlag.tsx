@@ -1,5 +1,6 @@
 "use client";
 
+import { Globe } from "lucide-react";
 import * as countries from "i18n-iso-countries";
 
 // Load JSON locale using require to avoid needing `resolveJsonModule` in tsconfig
@@ -115,7 +116,15 @@ export function CountryFlag({
 }: CountryFlagProps) {
   const flagUrl = getCountryFlagUrl(country);
 
-  if (!flagUrl) return null;
+  if (!flagUrl) {
+    return (
+      <Globe
+        width={width}
+        height={height}
+        className={`shrink-0 rounded text-slate-400 ${className}`}
+      />
+    );
+  }
 
   return (
     <img
@@ -123,7 +132,7 @@ export function CountryFlag({
       alt={`${country} flag`}
       width={width}
       height={height}
-      className={`shrink-0 rounded border border-gray-200 shadow-sm ${className}`}
+      className={`shrink-0 rounded ${className}`}
     />
   );
 }

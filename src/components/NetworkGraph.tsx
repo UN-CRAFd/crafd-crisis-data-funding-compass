@@ -1700,7 +1700,7 @@ const NetworkGraph: React.FC<NetworkGraphProps> = ({
                         : "text-slate-600 hover:bg-slate-200/50"
                     }`}
                     style={clusterByAssetType ? { backgroundColor: "rgba(215, 216, 245, 0.3)", color: "#4d479c" } : {}}
-                    title="Cluster by asset type"
+                    title="Cluster by product type"
                   >
                     <Package className="h-4 w-4" />
                   </button>
@@ -1927,7 +1927,7 @@ const NetworkGraph: React.FC<NetworkGraphProps> = ({
                         strokeWidth="1.5"
                       />
                     </svg>
-                    <span className="text-xs text-slate-600">Assets</span>
+                    <span className="text-xs text-slate-600">Products</span>
                   </div>
                 </div>
               </div>

@@ -77,30 +77,23 @@ export default function ProjectModal({
     return uniqueProjects;
   }, [project, allOrganizations]);
 
-  // Load theme mapping and descriptions from themes-table.json on mount
+  // Load theme mapping and descriptions from API
   useEffect(() => {
-    fetch("/data/themes-table.json")
-      .then((response) => response.json())
-      .then((data) => {
-        const mapping: Record<string, string> = {};
-        const descriptions: Record<string, string> = {};
+    Promise.all([
+      fetch("/api/themes").then((r) => r.ok ? r.json() : null),
+    ])
+      .then(([themesData]) => {
+        if (!themesData) return;
 
-        // Build mapping from themes JSON
-        data.forEach((record: any) => {
-          const theme = record.fields?.["Investment Themes [Text Key]"];
-          const type = record.fields?.["Investment Type"]?.[0]; // First item from array
-          const description = record.fields?.["theme_description"];
+        // The API returns { themeToType, themeToKey, keyToThemes }
+        // We need themeToType mapping and descriptions (loaded separately)
+        setThemeToTypeMapping(themesData.themeToType || {});
 
-          if (theme && type) {
-            mapping[theme] = type;
-          }
-          if (theme && description) {
-            descriptions[theme] = description;
-          }
-        });
-
-        setThemeToTypeMapping(mapping);
-        setThemeDescriptions(descriptions);
+        // Fetch theme descriptions via a dedicated fetch
+        fetch("/api/themes/descriptions")
+          .then((r) => r.ok ? r.json() : {})
+          .then((descs) => setThemeDescriptions(descs))
+          .catch(() => {});
       })
       .catch((error) => console.error("Error loading theme mapping:", error));
   }, []);

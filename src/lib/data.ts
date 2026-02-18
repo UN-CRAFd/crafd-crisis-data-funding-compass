@@ -1,14 +1,20 @@
-// data.ts - Data layer for Crisis Data Dashboard
-// Loads organizations-nested.json and applies filtering logic
+/**
+ * data.ts — Client-side data layer
+ *
+ * Thin wrapper calling server-side API endpoints.
+ * All heavy lifting (SQL queries, filtering, assembly) happens server-side.
+ *
+ * Replaces the previous version that loaded static JSON files and
+ * performed all filtering in the browser.
+ */
 
-import labels from "@/config/labels.json";
 import type {
-  NestedOrganization,
   OrganizationProjectData,
   OrganizationTypeData,
   OrganizationWithProjects,
   ProjectData,
   ProjectTypeData,
+  DashboardFilters,
 } from "@/types/airtable";
 
 // Re-export types for backward compatibility
@@ -20,7 +26,10 @@ export type {
   ProjectTypeData,
 } from "@/types/airtable";
 
-// Global state for general contributions (member states) visibility
+// ================================================================
+// General Contributions (member states) toggle
+// ================================================================
+
 let showGeneralContributions = true;
 
 export function setGeneralContributionsEnabled(enabled: boolean) {
@@ -31,912 +40,183 @@ export function isGeneralContributionsEnabled(): boolean {
   return showGeneralContributions;
 }
 
-// Load nested organizations data
-let cachedNestedData: NestedOrganization[] | null = null;
+// ================================================================
+// Theme Mappings (loaded from /api/themes)
+// ================================================================
 
-async function loadNestedOrganizations(): Promise<NestedOrganization[]> {
-  if (cachedNestedData) {
-    return cachedNestedData;
-  }
-
-  try {
-    const response = await fetch("/data/organizations-nested.json");
-    if (!response.ok) {
-      throw new Error(`Failed to load nested data: ${response.status}`);
-    }
-    cachedNestedData = await response.json();
-    return cachedNestedData || [];
-  } catch (error) {
-    console.error("Error loading nested organizations:", error);
-    return [];
-  }
+interface ThemeMappings {
+  themeToType: Record<string, string>;
+  themeToKey: Record<string, string>;
+  keyToThemes: Record<string, string[]>;
 }
 
-// Load themes table to map themes to their investment types and keys
-interface ThemesMappings {
-  themeToType: Map<string, string>;
-  themeToKey: Map<string, string>;
-  keyToThemes: Map<string, string[]>; // Changed from keyToTheme to handle multiple themes per key
-}
+let cachedThemesMappings: ThemeMappings | null = null;
+let themesLoadPromise: Promise<ThemeMappings> | null = null;
 
-let cachedThemesMappings: ThemesMappings | null = null;
-let themesTableLoadPromise: Promise<ThemesMappings> | null = null;
+async function loadThemesMappings(): Promise<ThemeMappings> {
+  if (cachedThemesMappings) return cachedThemesMappings;
+  if (themesLoadPromise) return themesLoadPromise;
 
-async function loadThemesTable(): Promise<ThemesMappings> {
-  // Return cached mappings if available
-  if (cachedThemesMappings) {
-    return cachedThemesMappings;
-  }
-
-  // If already loading, return the existing promise
-  if (themesTableLoadPromise) {
-    return themesTableLoadPromise;
-  }
-
-  // Start loading
-  themesTableLoadPromise = (async () => {
+  themesLoadPromise = (async () => {
     try {
-      const response = await fetch("/data/themes-table.json");
+      const response = await fetch("/api/themes");
       if (!response.ok) {
-        console.warn(`Failed to load themes data: ${response.status}`);
-        return {
-          themeToType: new Map(),
-          themeToKey: new Map(),
-          keyToThemes: new Map(),
-        };
+        console.warn(`Failed to load themes: ${response.status}`);
+        return { themeToType: {}, themeToKey: {}, keyToThemes: {} };
       }
-      const themesData = await response.json();
-      const themeToType = new Map<string, string>();
-      const themeToKey = new Map<string, string>();
-      const keyToThemes = new Map<string, string[]>();
-
-      themesData?.forEach((theme: any) => {
-        const themeName = theme.fields?.["Investment Themes [Text Key]"];
-        const investmentTypes = theme.fields?.["Investment Type"];
-        const themeKeyObj = theme.fields?.["theme_key"];
-        const themeKey = themeKeyObj?.value || themeKeyObj;
-
-        if (themeName) {
-          // Map theme to type
-          if (Array.isArray(investmentTypes) && investmentTypes.length > 0) {
-            themeToType.set(themeName, investmentTypes[0]);
-          }
-
-          // Map theme to key and key to themes (multiple themes can have the same key)
-          if (themeKey && typeof themeKey === "string") {
-            themeToKey.set(themeName, themeKey);
-
-            // Add theme name to the array for this key
-            const existingThemes = keyToThemes.get(themeKey) || [];
-            if (!existingThemes.includes(themeName)) {
-              existingThemes.push(themeName);
-              keyToThemes.set(themeKey, existingThemes);
-            }
-          }
-        }
-      });
-
-      cachedThemesMappings = { themeToType, themeToKey, keyToThemes };
-      return cachedThemesMappings;
+      cachedThemesMappings = await response.json();
+      return cachedThemesMappings!;
     } catch (error) {
-      console.error("Error loading themes table:", error);
-      cachedThemesMappings = {
-        themeToType: new Map(),
-        themeToKey: new Map(),
-        keyToThemes: new Map(),
-      };
-      return cachedThemesMappings;
+      console.error("Error loading themes:", error);
+      return { themeToType: {}, themeToKey: {}, keyToThemes: {} };
     }
   })();
 
-  return themesTableLoadPromise;
+  return themesLoadPromise;
 }
 
-// Export the load function so it can be called early
 export async function ensureThemesMappingsLoaded(): Promise<void> {
-  await loadThemesTable();
+  await loadThemesMappings();
 }
 
-// Load current member states from CSV
+export function themeNameToKey(themeName: string): string {
+  if (!cachedThemesMappings) return themeName;
+  return cachedThemesMappings.themeToKey[themeName] || themeName;
+}
+
+export function themeKeyToNames(themeKey: string): string[] {
+  if (!cachedThemesMappings) return [themeKey];
+  return cachedThemesMappings.keyToThemes[themeKey] || [themeKey];
+}
+
+export function themeKeyToName(themeKey: string): string {
+  return themeKeyToNames(themeKey)[0] || themeKey;
+}
+
+// ================================================================
+// Member States (loaded from /api/member-states)
+// ================================================================
+
 let cachedMemberStates: string[] | null = null;
 let memberStatesLoadPromise: Promise<string[]> | null = null;
 
 async function loadMemberStates(): Promise<string[]> {
-  // Return cached member states if available
-  if (cachedMemberStates) {
-    return cachedMemberStates;
-  }
+  if (cachedMemberStates) return cachedMemberStates;
+  if (memberStatesLoadPromise) return memberStatesLoadPromise;
 
-  // If already loading, return the existing promise
-  if (memberStatesLoadPromise) {
-    return memberStatesLoadPromise;
-  }
-
-  // Start loading
   memberStatesLoadPromise = (async () => {
     try {
-      const response = await fetch("/data/current_member_states.csv");
+      const response = await fetch("/api/member-states");
       if (!response.ok) {
-        console.warn(`Failed to load member states CSV: ${response.status}`);
+        console.warn(`Failed to load member states: ${response.status}`);
         return [];
       }
-      const csvText = await response.text();
-
-      // Parse CSV (skip header row)
-      const lines = csvText.split("\n");
-      const memberStates = lines
-        .slice(1) // Skip header
-        .map((line) => line.trim())
-        .filter((line) => line.length > 0);
-
-      cachedMemberStates = memberStates;
-      return cachedMemberStates;
+      cachedMemberStates = await response.json();
+      return cachedMemberStates!;
     } catch (error) {
       console.error("Error loading member states:", error);
-      cachedMemberStates = [];
-      return cachedMemberStates;
+      return [];
     }
   })();
 
   return memberStatesLoadPromise;
 }
 
-/**
- * Get all member states (cached)
- */
 export async function getMemberStates(): Promise<string[]> {
-  if (showGeneralContributions) {
-    return loadMemberStates();
-  } else {
-    return [];
-  }
+  if (!showGeneralContributions) return [];
+  return loadMemberStates();
 }
-/**
- * Check if a country is a member state
- * Only returns true if general contributions are enabled
- */
+
 export async function isMemberState(country: string): Promise<boolean> {
-  if (!showGeneralContributions) {
-    return false;
-  }
-  const memberStates = await loadMemberStates();
-  return memberStates.includes(country);
-}
-
-/**
- * Inject member state donors into core-funded organizations
- * This modifies the organizations array to add selected member states as donors
- * Only injects if general contributions are enabled
- */
-export function injectMemberStateDonors(
-  organizations: OrganizationWithProjects[],
-  selectedMemberStates: string[],
-): OrganizationWithProjects[] {
-  // Do not inject member states if general contributions are disabled
-  if (!showGeneralContributions || selectedMemberStates.length === 0) {
-    return organizations;
-  }
-
-  return organizations.map((org) => {
-    // Check if this organization has "Core" funding type
-    const fundingType = org.fields?.["Funding Type"];
-    const isCoreFunded = fundingType === "Core";
-
-    if (!isCoreFunded) {
-      return org; // No modification for non-core organizations
-    }
-
-    // Add member states to donor lists
-    const newDonorCountries = [
-      ...new Set([...org.donorCountries, ...selectedMemberStates]),
-    ];
-
-    // Update donorInfo to include member states as org-level donors
-    const existingDonorCountries = new Set(org.donorInfo.map((d) => d.country));
-    const newDonorInfo = [...org.donorInfo];
-
-    selectedMemberStates.forEach((memberState) => {
-      if (!existingDonorCountries.has(memberState)) {
-        newDonorInfo.push({
-          country: memberState,
-          isOrgLevel: true,
-        });
-      }
-    });
-
-    // Sort donor info (org-level first, then alphabetically)
-    newDonorInfo.sort((a, b) => {
-      if (a.isOrgLevel && !b.isOrgLevel) return -1;
-      if (!a.isOrgLevel && b.isOrgLevel) return 1;
-      return a.country.localeCompare(b.country);
-    });
-
-    return {
-      ...org,
-      donorCountries: newDonorCountries,
-      donorInfo: newDonorInfo,
-    };
-  });
-}
-
-// Helper functions for theme key conversion
-export function themeNameToKey(themeName: string): string {
-  if (!cachedThemesMappings) {
-    return themeName; // Fallback to theme name if not loaded yet
-  }
-  return cachedThemesMappings.themeToKey.get(themeName) || themeName;
+  if (!showGeneralContributions) return false;
+  const states = await loadMemberStates();
+  return states.includes(country);
 }
 
 // ================================================================
-// Agency Data Loading and Mapping
+// Agency Data (loaded from /api/agencies)
 // ================================================================
 
-// Cached agencies data: Map from country name -> array of agency names
-let cachedCountryAgenciesMap: Map<string, string[]> | null = null;
-let agenciesLoadPromise: Promise<Map<string, string[]>> | null = null;
-
-/**
- * Load agencies table and build country -> agencies mapping
- */
-async function loadAgenciesData(): Promise<Map<string, string[]>> {
-  // Return cached data if available
-  if (cachedCountryAgenciesMap) {
-    return cachedCountryAgenciesMap;
-  }
-
-  // If already loading, return the existing promise
-  if (agenciesLoadPromise) {
-    return agenciesLoadPromise;
-  }
-
-  // Start loading
-  agenciesLoadPromise = (async () => {
-    try {
-      const response = await fetch("/data/agencies-table.json");
-      if (!response.ok) {
-        console.warn(`Failed to load agencies data: ${response.status}`);
-        return new Map();
-      }
-      const agenciesData = await response.json();
-      const countryMap = new Map<string, string[]>();
-
-      agenciesData?.forEach((agency: any) => {
-        const countryName = agency.fields?.["Country Name"];
-        const agencyName = agency.fields?.["Agency/Department Name"];
-
-        if (countryName && agencyName) {
-          const existing = countryMap.get(countryName) || [];
-          if (!existing.includes(agencyName)) {
-            existing.push(agencyName);
-            countryMap.set(countryName, existing);
-          }
-        }
-      });
-
-      // Sort agencies within each country
-      countryMap.forEach((agencies, country) => {
-        countryMap.set(country, agencies.sort());
-      });
-
-      cachedCountryAgenciesMap = countryMap;
-      return cachedCountryAgenciesMap;
-    } catch (error) {
-      console.error("Error loading agencies data:", error);
-      cachedCountryAgenciesMap = new Map();
-      return cachedCountryAgenciesMap;
-    }
-  })();
-
-  return agenciesLoadPromise;
-}
-
-/**
- * Get all agencies for given donor countries
- * Returns a map of country -> agencies for only the specified countries
- */
 export async function getAgenciesForDonors(
   donorCountries: string[],
 ): Promise<Map<string, string[]>> {
-  const allAgencies = await loadAgenciesData();
-  const result = new Map<string, string[]>();
+  if (donorCountries.length === 0) return new Map();
 
-  donorCountries.forEach((country) => {
-    const agencies = allAgencies.get(country);
-    if (agencies && agencies.length > 0) {
-      result.set(country, agencies);
-    }
-  });
-
-  return result;
+  try {
+    const response = await fetch(
+      `/api/agencies?donors=${encodeURIComponent(donorCountries.join(","))}`,
+    );
+    if (!response.ok) return new Map();
+    const data: Record<string, string[]> = await response.json();
+    return new Map(Object.entries(data));
+  } catch (error) {
+    console.error("Error loading agencies:", error);
+    return new Map();
+  }
 }
 
-/**
- * Get flat list of all agencies for given donor countries
- */
 export async function getAgencyListForDonors(
   donorCountries: string[],
 ): Promise<string[]> {
-  const agenciesMap = await getAgenciesForDonors(donorCountries);
-  const agencies: string[] = [];
+  const map = await getAgenciesForDonors(donorCountries);
+  const set = new Set<string>();
+  for (const agencies of map.values()) {
+    for (const a of agencies) set.add(a);
+  }
+  return Array.from(set).sort();
+}
 
-  agenciesMap.forEach((agencyList) => {
-    agencyList.forEach((agency) => {
-      if (!agencies.includes(agency)) {
-        agencies.push(agency);
-      }
-    });
+// ================================================================
+// Dashboard Data (from /api/dashboard)
+// ================================================================
+
+export async function processDashboardData(
+  filters: DashboardFilters = {},
+) {
+  const response = await fetch("/api/dashboard", {
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify({
+      ...filters,
+      showGeneralContributions,
+    }),
   });
 
-  return agencies.sort();
-}
-
-// Get all theme names for a given key (since keys may not be unique)
-export function themeKeyToNames(themeKey: string): string[] {
-  if (!cachedThemesMappings) {
-    return [themeKey]; // Fallback to theme key if not loaded yet
-  }
-  return cachedThemesMappings.keyToThemes.get(themeKey) || [themeKey];
-}
-
-// Get the first theme name for a key (for backwards compatibility)
-export function themeKeyToName(themeKey: string): string {
-  const names = themeKeyToNames(themeKey);
-  return names[0] || themeKey;
-}
-
-// Extract donor countries from agencies
-// Helper function to safely get donor countries from organization data
-function getDonorCountries(org: NestedOrganization): string[] {
-  // Ensure uniqueness and sort alphabetically
-  const countries = org.donor_countries || [];
-  return Array.from(new Set(countries)).sort();
-}
-
-// Extract investment types from projects
-function extractInvestmentTypesFromProjects(
-  projects: Array<{ fields?: Record<string, unknown> }>,
-): string[] {
-  const types = new Set<string>();
-
-  for (const project of projects) {
-    const fields = project.fields || {};
-    const investmentTypes =
-      fields["Investment Type(s)"] || fields["Investment Types"] || [];
-
-    if (Array.isArray(investmentTypes)) {
-      investmentTypes.forEach((type) => {
-        if (typeof type === "string" && type.trim()) {
-          types.add(type.trim());
-        }
-      });
-    } else if (typeof investmentTypes === "string" && investmentTypes.trim()) {
-      // Handle comma-separated string
-      investmentTypes.split(",").forEach((type) => {
-        const cleaned = type.trim();
-        if (cleaned) {
-          types.add(cleaned);
-        }
-      });
-    }
+  if (!response.ok) {
+    throw new Error(`Dashboard API error: ${response.status}`);
   }
 
-  return Array.from(types).sort();
+  return response.json();
 }
 
-// Convert nested organization to OrganizationWithProjects format
-function convertToOrganizationWithProjects(
-  org: NestedOrganization,
-): OrganizationWithProjects {
-  const projects = org.projects || [];
-
-  // Get pre-computed donor countries (org-level)
-  const orgLevelDonors = getDonorCountries(org);
-
-  // Convert projects to ProjectData format and collect project-level donors
-  const projectLevelDonorsSet = new Set<string>();
-
-  const projectsData: ProjectData[] = projects.map((project) => {
-    const fields = project.fields || {};
-    // Extract donor countries and agencies from the project's own agencies (if any)
-    // Do NOT fall back to organization-level donor countries
-    const projectAgencies = project.agencies || [];
-    const projectDonorCountriesSet = new Set<string>();
-    const projectDonorAgencies: Record<string, string[]> = {};
-    
-    if (Array.isArray(projectAgencies) && projectAgencies.length > 0) {
-      projectAgencies.forEach((a) => {
-        const aFields = (a && a.fields) || {};
-        const c =
-          aFields["Country Name"] ||
-          aFields["Country"] ||
-          aFields["Agency Associated Country"];
-        const agencyName = aFields["Agency/Department Name"];
-        
-        if (Array.isArray(c)) {
-          c.forEach((cc: unknown) => {
-            if (typeof cc === "string" && cc.trim()) {
-              const country = cc.trim();
-              projectDonorCountriesSet.add(country);
-              projectLevelDonorsSet.add(country);
-              
-              // Add agency to country's agency list
-              if (agencyName) {
-                if (!projectDonorAgencies[country]) {
-                  projectDonorAgencies[country] = [];
-                }
-                if (!projectDonorAgencies[country].includes(agencyName)) {
-                  projectDonorAgencies[country].push(agencyName);
-                }
-              }
-            }
-          });
-        } else if (typeof c === "string" && c.trim()) {
-          const country = c.trim();
-          projectDonorCountriesSet.add(country);
-          projectLevelDonorsSet.add(country);
-          
-          // Add agency to country's agency list
-          if (agencyName) {
-            if (!projectDonorAgencies[country]) {
-              projectDonorAgencies[country] = [];
-            }
-            if (!projectDonorAgencies[country].includes(agencyName)) {
-              projectDonorAgencies[country].push(agencyName);
-            }
-          }
-        }
-      });
-    }
-
-    // Only use project-level agencies; empty array if no agencies found
-    const projectDonorCountries = Array.from(projectDonorCountriesSet);
-
-    return {
-      id: project.id,
-      productKey: String(
-        fields["product_key"] ||
-          fields["Product Key"] ||
-          fields["Product/Product Key"] ||
-          fields["Product Key (Airtable)"] ||
-          project.id,
-      ).trim(),
-      projectName: fields["Project/Product Name"] || "Unnamed Project",
-      donorCountries: projectDonorCountries,
-      donorAgencies: projectDonorAgencies,
-      investmentTypes: extractInvestmentTypesFromProjects([project]),
-      investmentThemes: fields["Investment Theme(s)"] || [],
-      description: fields["Project Description"] || "",
-      projectDescription: fields["Project Description"] || "",
-      website: fields["Project Website"] || "",
-      projectWebsite: fields["Project Website"] || "",
-      isCrafdFunded: fields["CRAF'd-Funded Project?"] || false,
-      provider: org.name || "Unknown Provider",
-    };
-  });
-
-  // Create combined donor info
-  const allDonorsSet = new Set<string>([
-    ...orgLevelDonors,
-    ...Array.from(projectLevelDonorsSet),
-  ]);
-  const donorInfo = Array.from(allDonorsSet)
-    .map((country) => ({
-      country,
-      isOrgLevel: orgLevelDonors.includes(country),
-    }))
-    .sort((a, b) => {
-      // Sort org-level donors first, then project-only donors
-      if (a.isOrgLevel && !b.isOrgLevel) return -1;
-      if (!a.isOrgLevel && b.isOrgLevel) return 1;
-      return a.country.localeCompare(b.country);
-    });
-
-  // Extract org-level agencies by country
-  const orgAgencies: Record<string, string[]> = {};
-  const orgAgenciesArray = org.agencies || [];
-  orgAgenciesArray.forEach((a) => {
-    const aFields = (a && a.fields) || {};
-    const country = aFields["Country Name"] || aFields["Country"];
-    const agencyName = aFields["Agency/Department Name"];
-    
-    if (country && agencyName) {
-      if (!orgAgencies[country]) {
-        orgAgencies[country] = [];
-      }
-      if (!orgAgencies[country].includes(agencyName)) {
-        orgAgencies[country].push(agencyName);
-      }
-    }
-  });
-
-  // Extract organization type, handling both string and array formats
-  const orgTypeRaw = org.fields?.["Org Type"];
-  let orgType = "Unknown";
-  if (typeof orgTypeRaw === "string") {
-    orgType = orgTypeRaw;
-  } else if (Array.isArray(orgTypeRaw) && orgTypeRaw.length > 0) {
-    orgType = orgTypeRaw[0];
-  }
-
-  // Extract organization budget
-  const estimatedBudget = org.fields?.["Est. Org Budget"];
-  const budgetValue =
-    typeof estimatedBudget === "number" ? estimatedBudget : undefined;
-
-  return {
-    id: org.id,
-    organizationName: org.name || "Unnamed Organization",
-    orgShortName: org.fields?.["Org Short Name"] || "",
-    orgKey: org.fields?.["org_key"] || "",
-    type: orgType,
-    description: org.fields?.["Org Description"] || "",
-    donorCountries: orgLevelDonors, // Legacy field: org-level only
-    donorInfo, // New field: all donors with metadata
-    orgAgencies, // Org-level agencies by country
-    projects: projectsData,
-    projectCount: projectsData.length,
-    estimatedBudget: budgetValue,
-    fields: org.fields, // Include raw fields for accessing "Funding Type" and other metadata
-  };
+// Legacy alias
+export async function loadEcosystemData() {
+  return processDashboardData();
 }
 
-// Apply dashboard filters
-function applyFilters(
-  organizations: OrganizationWithProjects[],
-  filters: {
-    searchQuery?: string;
-    donorCountries?: string[];
-    donorAgencies?: string[];
-    investmentTypes?: string[];
-    investmentThemes?: string[];
-  },
-): OrganizationWithProjects[] {
-  return organizations
-    .map((org) => {
-      const hasSearchFilter = filters.searchQuery && filters.searchQuery.trim();
-      const hasDonorFilter =
-        filters.donorCountries && filters.donorCountries.length > 0;
-      
-      // Check if agency filter should be applied
-      // If ALL available agencies for the donor are selected, treat it as no filter
-      let hasAgencyFilter: boolean =
-        filters.donorAgencies && filters.donorAgencies.length > 0 ? true : false;
-      
-      if (hasAgencyFilter && hasDonorFilter && filters.donorCountries!.length === 1 && cachedCountryAgenciesMap) {
-        const selectedDonor = filters.donorCountries![0];
-        const allAvailableAgencies = cachedCountryAgenciesMap.get(selectedDonor) || [];
-        
-        // If all available agencies are selected, disable agency filtering
-        if (allAvailableAgencies.length > 0 && 
-            filters.donorAgencies!.length >= allAvailableAgencies.length &&
-            allAvailableAgencies.every(agency => filters.donorAgencies!.includes(agency))) {
-          hasAgencyFilter = false;
-        }
-      }
-      const hasTypeFilter =
-        filters.investmentTypes && filters.investmentTypes.length > 0;
-      const hasThemeFilter =
-        filters.investmentThemes && filters.investmentThemes.length > 0;
+// ================================================================
+// Calculation functions (pure — no data loading)
+// Used by CrisisDataDashboard for client-side aggregation.
+// ================================================================
 
-      // Step 1: Check if organization matches search filter
-      let orgMatchesSearch = false;
-      if (hasSearchFilter) {
-        const query = filters.searchQuery!.toLowerCase().trim();
-        orgMatchesSearch =
-          org.organizationName.toLowerCase().includes(query) ||
-          org.type.toLowerCase().includes(query);
-      }
-
-      // Step 2: Determine which projects should be visible
-      let visibleProjects: ProjectData[] = [];
-
-      // Helper function to check if a project matches donor filter at project level
-      const projectMatchesDonorFilter = (project: ProjectData): boolean => {
-        if (!hasDonorFilter) return true;
-        // Check if project has all selected donors at project level
-        const matchesDonors = filters.donorCountries!.every(
-          (selectedDonor) =>
-            Array.isArray(project.donorCountries) &&
-            project.donorCountries.includes(selectedDonor),
-        );
-        return matchesDonors;
-      };
-
-      // Helper function to check if project matches current filters (excluding donor)
-      const projectMatchesOtherFilters = (project: ProjectData): boolean => {
-        // Search filter check
-        if (hasSearchFilter) {
-          const query = filters.searchQuery!.toLowerCase().trim();
-          const projectMatchesSearch = project.projectName
-            .toLowerCase()
-            .includes(query);
-          if (!projectMatchesSearch) return false;
-        }
-
-        // Type filter check (OR logic)
-        if (hasTypeFilter) {
-          const projectMatchesType = project.investmentTypes.some((type) =>
-            filters.investmentTypes!.some(
-              (filterType) =>
-                type.toLowerCase().includes(filterType.toLowerCase()) ||
-                filterType.toLowerCase().includes(type.toLowerCase()),
-            ),
-          );
-          if (!projectMatchesType) return false;
-        }
-
-        // Theme filter check (OR logic)
-        if (hasThemeFilter) {
-          const projectMatchesTheme =
-            Array.isArray(project.investmentThemes) &&
-            project.investmentThemes.some((theme) =>
-              filters.investmentThemes!.some(
-                (filterTheme) =>
-                  typeof theme === "string" &&
-                  theme.toLowerCase().trim() ===
-                    filterTheme.toLowerCase().trim(),
-              ),
-            );
-          if (!projectMatchesTheme) return false;
-        }
-
-        return true;
-      };
-
-      // Check if organization meets donor requirements (considering both org-level and project-level donors)
-      const allOrgDonors =
-        org.donorInfo?.map((d) => d.country) || org.donorCountries || [];
-      const orgMeetsDonorRequirement =
-        !hasDonorFilter ||
-        filters.donorCountries!.every((selectedDonor) =>
-          allOrgDonors.includes(selectedDonor),
-        );
-
-      // Check if organization has selected agency at org level
-      const orgHasSelectedAgency = (): boolean => {
-        if (!hasAgencyFilter) return false;
-        if (!hasDonorFilter || !filters.donorCountries || filters.donorCountries.length !== 1) {
-          return false;
-        }
-        const selectedDonor = filters.donorCountries![0];
-        const orgAgenciesForDonor = org.orgAgencies[selectedDonor] || [];
-        return filters.donorAgencies!.some(
-          (selectedAgency) => orgAgenciesForDonor.includes(selectedAgency),
-        );
-      };
-
-      // Helper function to check if project matches agency filter
-      const projectMatchesAgencyFilter = (project: ProjectData): boolean => {
-        if (!hasAgencyFilter) return true;
-        // If org has the agency at org level, show all projects
-        if (orgHasSelectedAgency()) return true;
-        // Otherwise, check project-level agencies
-        // Agency filter should only work with exactly 1 donor selected
-        if (!hasDonorFilter || !filters.donorCountries || filters.donorCountries.length !== 1) {
-          return true;
-        }
-        const selectedDonor = filters.donorCountries![0];
-        const projectAgencies = project.donorAgencies || {};
-        const agenciesForDonor = projectAgencies[selectedDonor] || [];
-        return filters.donorAgencies!.some(
-          (selectedAgency) => agenciesForDonor.includes(selectedAgency),
-        );
-      };
-
-      if (orgMeetsDonorRequirement) {
-        // Organization meets donor requirement - filter projects by other filters only
-        if (orgMatchesSearch) {
-          // Organization matches search: show all its projects (apply type/theme/agency filter if exists)
-          visibleProjects =
-            hasTypeFilter || hasThemeFilter || hasAgencyFilter
-              ? org.projects.filter((project) => {
-                  // Check agency filter first
-                  if (hasAgencyFilter && !projectMatchesAgencyFilter(project)) {
-                    return false;
-                  }
-                  // Only apply type and theme filters, skip search filter since org already matches
-                  if (hasTypeFilter) {
-                    const matchesType = project.investmentTypes.some((type) =>
-                      filters.investmentTypes!.some(
-                        (filterType) =>
-                          type
-                            .toLowerCase()
-                            .includes(filterType.toLowerCase()) ||
-                          filterType.toLowerCase().includes(type.toLowerCase()),
-                      ),
-                    );
-                    if (!matchesType) return false;
-                  }
-                  if (hasThemeFilter) {
-                    const matchesTheme =
-                      Array.isArray(project.investmentThemes) &&
-                      project.investmentThemes.some((theme) =>
-                        filters.investmentThemes!.some(
-                          (filterTheme) =>
-                            typeof theme === "string" &&
-                            theme.toLowerCase().trim() ===
-                              filterTheme.toLowerCase().trim(),
-                        ),
-                      );
-                    if (!matchesTheme) return false;
-                  }
-                  return true;
-                })
-              : [...org.projects];
-        } else if (!hasSearchFilter) {
-          // No search filter: apply type/theme/agency filter if exists, otherwise show all projects
-          visibleProjects =
-            hasTypeFilter || hasThemeFilter || hasAgencyFilter
-              ? org.projects.filter((project) => {
-                  // Check agency filter first
-                  if (hasAgencyFilter && !projectMatchesAgencyFilter(project)) {
-                    return false;
-                  }
-                  if (hasTypeFilter) {
-                    const matchesType = project.investmentTypes.some((type) =>
-                      filters.investmentTypes!.some(
-                        (filterType) =>
-                          type
-                            .toLowerCase()
-                            .includes(filterType.toLowerCase()) ||
-                          filterType.toLowerCase().includes(type.toLowerCase()),
-                      ),
-                    );
-                    if (!matchesType) return false;
-                  }
-                  if (hasThemeFilter) {
-                    const matchesTheme =
-                      Array.isArray(project.investmentThemes) &&
-                      project.investmentThemes.some((theme) =>
-                        filters.investmentThemes!.some(
-                          (filterTheme) =>
-                            typeof theme === "string" &&
-                            theme.toLowerCase().trim() ===
-                              filterTheme.toLowerCase().trim(),
-                        ),
-                      );
-                    if (!matchesTheme) return false;
-                  }
-                  return true;
-                })
-              : [...org.projects];
-        } else {
-          // Organization doesn't match search, check individual projects
-          visibleProjects = org.projects.filter(projectMatchesOtherFilters);
-        }
-      } else {
-        // Organization doesn't meet donor requirement at org level
-        // BUT check if any projects have the donor at project level
-        visibleProjects = org.projects.filter(
-          (project) =>
-            projectMatchesDonorFilter(project) &&
-            projectMatchesAgencyFilter(project) &&
-            projectMatchesOtherFilters(project),
-        );
-      }
-
-      // Step 3: Decide if organization should be shown
-      let shouldShowOrg = false;
-
-      if (orgMeetsDonorRequirement) {
-        if (!hasTypeFilter && !hasThemeFilter && !hasSearchFilter && !hasAgencyFilter) {
-          // No filters except donor: show all orgs that meet donor requirement
-          shouldShowOrg = true;
-        } else if (!hasTypeFilter && !hasThemeFilter && hasSearchFilter && !hasAgencyFilter) {
-          // Only search filter: show org if it matches search OR has projects matching search
-          shouldShowOrg = orgMatchesSearch || visibleProjects.length > 0;
-        } else {
-          // Type/theme/agency filter active: show if org has visible projects
-          // OR if org has the selected agency at org-level (even with no projects)
-          shouldShowOrg = visibleProjects.length > 0 || (hasAgencyFilter && orgHasSelectedAgency());
-        }
-      } else {
-        // Org doesn't meet donor at org level, but show if it has projects with matching donors
-        shouldShowOrg = visibleProjects.length > 0;
-      }
-
-      if (!shouldShowOrg) {
-        return null;
-      }
-
-      // Return organization with visible projects
-      return {
-        ...org,
-        projects: visibleProjects,
-        projectCount: visibleProjects.length,
-      };
-    })
-    .filter((org): org is OrganizationWithProjects => org !== null);
-}
-
-// Calculate dashboard statistics
-function calculateDashboardStats(
-  organizations: OrganizationWithProjects[],
-): DashboardStats {
-  const donorCountries = new Set<string>();
-  const dataProviders = organizations.length;
-  const uniqueProjects = new Set<string>();
-
-  organizations.forEach((org) => {
-    org.donorCountries.forEach((country) => donorCountries.add(country));
-    // Deduplicate projects by ID and name to avoid counting the same project multiple times
-    org.projects.forEach((project) => {
-      // Use both ID and name for better deduplication
-      const projectKey = `${project.id}-${project.projectName}`;
-      uniqueProjects.add(projectKey);
-    });
-  });
-
-  return {
-    donorCountries: donorCountries.size,
-    dataProviders,
-    dataProjects: uniqueProjects.size,
-  };
-}
-
-// Calculate project types for chart
-function calculateProjectTypes(
-  organizations: OrganizationWithProjects[],
-  allKnownInvestmentTypes: string[],
-): ProjectTypeData[] {
-  // Use Map of Sets to deduplicate projects within each investment type
-  const typeProjectSets = new Map<string, Set<string>>();
-
-  // Initialize with all known investment types
-  allKnownInvestmentTypes.forEach((type) => {
-    typeProjectSets.set(type, new Set<string>());
-  });
-
-  organizations.forEach((org) => {
-    org.projects.forEach((project) => {
-      // Create unique project identifier
-      const projectKey = `${project.id}-${project.projectName}`;
-
-      project.investmentTypes.forEach((type) => {
-        // Add project to the set for this type (automatically deduplicates)
-        if (typeProjectSets.has(type)) {
-          typeProjectSets.get(type)!.add(projectKey);
-        } else {
-          // Handle investment types not in the known list
-          const newSet = new Set<string>();
-          newSet.add(projectKey);
-          typeProjectSets.set(type, newSet);
-        }
-      });
-    });
-  });
-
-  // Convert sets to counts
-  return Array.from(typeProjectSets.entries())
-    .map(([name, projectSet]) => ({ name, count: projectSet.size }))
-    .sort((a, b) => b.count - a.count);
-}
-
-// Calculate organization types for chart
 export function calculateOrganizationTypesFromOrganizationsWithProjects(
   organizations: OrganizationWithProjects[],
   allKnownTypes: string[],
 ): OrganizationTypeData[] {
   const typeCounts = new Map<string, number>();
+  for (const t of allKnownTypes) typeCounts.set(t, 0);
 
-  // Initialize with all known types
-  allKnownTypes.forEach((type) => {
-    typeCounts.set(type, 0);
-  });
-
-  // Count actual organizations
-  organizations.forEach((org) => {
+  for (const org of organizations) {
     if (org.type && org.type !== "Unknown") {
       typeCounts.set(org.type, (typeCounts.get(org.type) || 0) + 1);
     }
-  });
+  }
 
   return Array.from(typeCounts.entries())
     .map(([name, count]) => ({ name, count }))
     .sort((a, b) => b.count - a.count);
 }
 
-// Calculate top co-financing donors (excluding selected donors)
 export function calculateTopCoFinancingDonors(
   organizations: OrganizationWithProjects[],
   excludedDonors: string[] = [],
@@ -944,575 +224,67 @@ export function calculateTopCoFinancingDonors(
 ): Array<{ name: string; value: number }> {
   const donorOrgCounts = new Map<string, Set<string>>();
 
-  // Count unique organizations each donor funds
-  organizations.forEach((org) => {
-    org.donorCountries.forEach((donor) => {
-      // Skip excluded donors
-      if (excludedDonors.includes(donor)) {
-        return;
+  for (const org of organizations) {
+    for (const donor of org.donorCountries) {
+      if (excludedDonors.includes(donor)) continue;
+      let s = donorOrgCounts.get(donor);
+      if (!s) {
+        s = new Set();
+        donorOrgCounts.set(donor, s);
       }
+      s.add(org.id);
+    }
+  }
 
-      if (!donorOrgCounts.has(donor)) {
-        donorOrgCounts.set(donor, new Set<string>());
-      }
-      // Add organization ID to this donor's set (automatically deduplicates)
-      donorOrgCounts.get(donor)!.add(org.id);
-    });
-  });
-
-  // Convert to array with counts and sort
   return Array.from(donorOrgCounts.entries())
     .map(([name, orgSet]) => ({ name, value: orgSet.size }))
     .sort((a, b) => b.value - a.value)
     .slice(0, limit);
 }
 
-// Calculate organization-project data
-function calculateOrganizationProjects(
+/**
+ * Inject member state donors into core-funded organizations.
+ * Kept on the client for the wrapper to use if needed.
+ */
+export function injectMemberStateDonors(
   organizations: OrganizationWithProjects[],
-): OrganizationProjectData[] {
-  return organizations.map((org) => ({
-    organizationName: org.organizationName,
-    projectCount: org.projects.length,
-    type: org.type,
-    donorCountries: org.donorCountries,
-  }));
-}
+  selectedMemberStates: string[],
+): OrganizationWithProjects[] {
+  if (!showGeneralContributions || selectedMemberStates.length === 0) {
+    return organizations;
+  }
 
-// Get available filter options
-async function getAvailableFilterOptions(
-  organizations: OrganizationWithProjects[],
-) {
-  const donorCountries = new Set<string>();
-  const investmentTypes = new Set<string>();
-  const investmentThemes = new Set<string>();
+  return organizations.map((org) => {
+    const fundingType = org.fields?.["Funding Type"];
+    if (fundingType !== "Core") return org;
 
-  organizations.forEach((org) => {
-    org.donorCountries.forEach((country) => donorCountries.add(country));
-    org.projects.forEach((project) => {
-      project.investmentTypes.forEach((type) => investmentTypes.add(type));
-      // Extract investment themes
-      if (Array.isArray(project.investmentThemes)) {
-        project.investmentThemes.forEach((theme) => {
-          if (typeof theme === "string" && theme.trim()) {
-            investmentThemes.add(theme.trim());
-          }
-        });
+    const newDonorCountries = [
+      ...new Set([...org.donorCountries, ...selectedMemberStates]),
+    ];
+
+    const existingCountries = new Set(org.donorInfo.map((d) => d.country));
+    const newDonorInfo = [...org.donorInfo];
+    for (const ms of selectedMemberStates) {
+      if (!existingCountries.has(ms)) {
+        newDonorInfo.push({ country: ms, isOrgLevel: true });
       }
+    }
+    newDonorInfo.sort((a, b) => {
+      if (a.isOrgLevel && !b.isOrgLevel) return -1;
+      if (!a.isOrgLevel && b.isOrgLevel) return 1;
+      return a.country.localeCompare(b.country);
     });
+
+    return { ...org, donorCountries: newDonorCountries, donorInfo: newDonorInfo };
   });
-
-  // Note: Member states are NOT added here - they will be shown only when searching
-  // and no other results are found (handled in FilterBar component)
-
-  // Load theme mappings (non-blocking with fallback)
-  let themesMappings: ThemesMappings;
-  try {
-    themesMappings = await loadThemesTable();
-  } catch (error) {
-    console.warn("Failed to load themes table, using ungrouped themes:", error);
-    themesMappings = {
-      themeToType: new Map(),
-      themeToKey: new Map(),
-      keyToThemes: new Map(),
-    };
-  }
-
-  // Group themes by their investment type
-  const themesByType: Record<string, string[]> = {};
-  const themesArray = Array.from(investmentThemes);
-
-  themesArray.forEach((theme) => {
-    const investmentType = themesMappings.themeToType.get(theme);
-    if (investmentType) {
-      if (!themesByType[investmentType]) {
-        themesByType[investmentType] = [];
-      }
-      themesByType[investmentType].push(theme);
-    } else {
-      // Fallback for themes without a mapped type
-      if (!themesByType["Other"]) {
-        themesByType["Other"] = [];
-      }
-      themesByType["Other"].push(theme);
-    }
-  });
-
-  // Sort themes within each type
-  Object.keys(themesByType).forEach((type) => {
-    themesByType[type].sort();
-  });
-
-  return {
-    donorCountries: Array.from(donorCountries).sort(),
-    investmentTypes: Array.from(investmentTypes).sort(),
-    investmentThemes: themesArray.sort(), // Keep flat array for backward compatibility
-    investmentThemesByType: themesByType, // New grouped structure
-  };
 }
 
-// Main function to process dashboard data with filters
-export async function processDashboardData(
-  filters: {
-    searchQuery?: string;
-    donorCountries?: string[];
-    donorAgencies?: string[];
-    investmentTypes?: string[];
-    investmentThemes?: string[];
-  } = {},
-) {
-  try {
-    // Load themes table first to ensure theme key mappings are available
-    await loadThemesTable();
+// ================================================================
+// Dashboard stats type re-export
+// ================================================================
 
-    // Load member states only if general contributions are enabled
-    const memberStates = showGeneralContributions
-      ? await loadMemberStates()
-      : [];
-
-    // Load nested organizations
-    const nestedOrgs = await loadNestedOrganizations();
-
-    // Convert to OrganizationWithProjects format
-    let allOrganizations = nestedOrgs.map(convertToOrganizationWithProjects);
-
-    // Identify which selected donors are member states (only if general contributions enabled)
-    const selectedMemberStates = showGeneralContributions
-      ? (filters.donorCountries || []).filter((donor) =>
-          memberStates.includes(donor),
-        )
-      : [];
-
-    // Inject member state donors into core-funded organizations BEFORE filtering
-    // This ensures they appear as donors in all views (only if general contributions enabled)
-    if (selectedMemberStates.length > 0 && showGeneralContributions) {
-      allOrganizations = injectMemberStateDonors(
-        allOrganizations,
-        selectedMemberStates,
-      );
-    }
-
-    // Apply filters
-    const filteredOrganizations = applyFilters(allOrganizations, filters);
-
-    // Calculate statistics and chart data
-    const stats = calculateDashboardStats(filteredOrganizations);
-
-    // Get all known investment types from labels
-    const allKnownInvestmentTypes = Object.values(labels.investmentTypes);
-    const projectTypes = calculateProjectTypes(
-      filteredOrganizations,
-      allKnownInvestmentTypes,
-    );
-    const organizationProjects = calculateOrganizationProjects(
-      filteredOrganizations,
-    );
-
-    // Calculate top co-financing donors (excluding selected donors)
-    const topDonors = calculateTopCoFinancingDonors(
-      filteredOrganizations,
-      filters.donorCountries || [],
-      5,
-    );
-
-    // Get available filter options from filtered organizations (viewport)
-    // This ensures dropdowns only show options that are currently available
-    const filterOptions = await getAvailableFilterOptions(
-      filteredOrganizations,
-    );
-
-    // Also get all available filter options from unfiltered data for theme dropdown
-    const allFilterOptions = await getAvailableFilterOptions(allOrganizations);
-
-    return {
-      stats,
-      projectTypes,
-      organizationTypes: [], // Will be calculated separately with all known types
-      organizationProjects,
-      organizationsWithProjects: filteredOrganizations,
-      allOrganizations, // Add unfiltered organizations for modal use
-      donorCountries: filterOptions.donorCountries,
-      investmentTypes: filterOptions.investmentTypes,
-      investmentThemes: allFilterOptions.investmentThemes, // Use unfiltered themes
-      investmentThemesByType: allFilterOptions.investmentThemesByType, // Use unfiltered grouped themes by type
-      topDonors, // Add top co-financing donors
-    };
-  } catch (error) {
-    console.error("Error processing dashboard data:", error);
-    throw error;
-  }
-}
-
-// Legacy function for backward compatibility
-export async function loadEcosystemData() {
-  return processDashboardData();
-}
-
-// Export interface for dashboard stats
 export interface DashboardStats {
   donorCountries: number;
   dataProviders: number;
   dataProjects: number;
-}
-
-// Helper functions for modal data processing
-
-/**
- * Build a map from project ID to project name for quick lookup
- * Used by modals to resolve project IDs to human-readable names
- */
-export function buildProjectNameMap(
-  organizations: NestedOrganization[],
-): Record<string, string> {
-  const map: Record<string, string> = {};
-
-  organizations.forEach((org) => {
-    (org.projects || []).forEach((project) => {
-      if (project && project.id) {
-        const fields = project.fields || {};
-        const name =
-          ((fields["Project/Product Name"] ||
-            fields["Project Name"]) as string) || "";
-        map[project.id] = String(name || "").trim() || project.id;
-      }
-    });
-  });
-
-  return map;
-}
-
-/**
- * Build a map from project ID to product_key
- * Used by modals to navigate to project detail by product_key
- */
-export function buildProjectIdToKeyMap(
-  organizations: NestedOrganization[],
-): Record<string, string> {
-  const map: Record<string, string> = {};
-
-  organizations.forEach((org) => {
-    (org.projects || []).forEach((project) => {
-      if (project && project.id) {
-        const fields = project.fields || {};
-        const productKey =
-          fields["product_key"] ||
-          fields["Product Key"] ||
-          fields["Product/Product Key"] ||
-          fields["Product Key (Airtable)"];
-        if (productKey) {
-          map[project.id] = String(productKey).trim();
-        }
-      }
-    });
-  });
-
-  return map;
-}
-
-/**
- * Build a map from project ID to project description
- * Used by organization modal to display project descriptions in tooltips
- */
-export function buildProjectDescriptionMap(
-  organizations: NestedOrganization[],
-): Record<string, string> {
-  const map: Record<string, string> = {};
-
-  organizations.forEach((org) => {
-    (org.projects || []).forEach((project) => {
-      if (project && project.id) {
-        const fields = project.fields || {};
-        const description = fields["Project Description"] || "";
-        map[project.id] = String(description).trim();
-      }
-    });
-  });
-
-  return map;
-}
-
-/**
- * Build a map from organization ID to its projects with investment types
- * Used by organization modal to display project investment types
- */
-export function buildOrgProjectsMap(
-  organizations: NestedOrganization[],
-): Record<string, Array<{ id: string; investmentTypes: string[] }>> {
-  const map: Record<
-    string,
-    Array<{ id: string; investmentTypes: string[] }>
-  > = {};
-
-  organizations.forEach((org) => {
-    if (org && org.id) {
-      const projects = (org.projects || []).map((project) => {
-        const fields = project?.fields || {};
-        const investmentTypes =
-          fields["Investment Type(s)"] || fields["Investment Types"] || [];
-        return {
-          id: project.id,
-          investmentTypes: Array.isArray(investmentTypes)
-            ? investmentTypes
-            : [],
-        };
-      });
-      map[org.id] = projects;
-    }
-  });
-
-  return map;
-}
-
-/**
- * Get nested organization data for modal use
- * Returns the raw nested organization structure
- */
-export async function getNestedOrganizationsForModals(): Promise<
-  NestedOrganization[]
-> {
-  return loadNestedOrganizations();
-}
-
-/**
- * Build a map from organization ID to donor countries
- * Used by modals to display organization donor countries
- */
-export function buildOrgDonorCountriesMap(
-  organizations: NestedOrganization[],
-): Record<string, string[]> {
-  const map: Record<string, string[]> = {};
-
-  organizations.forEach((org) => {
-    if (org && org.id) {
-      map[org.id] = getDonorCountries(org);
-    }
-  });
-
-  return map;
-}
-
-/**
- * Build a map from organization ID to DonorInfo[] (includes both org-level and project-only donors)
- */
-export function buildOrgDonorInfoMap(
-  organizations: NestedOrganization[],
-): Record<string, import("@/types/airtable").DonorInfo[]> {
-  const map: Record<string, import("@/types/airtable").DonorInfo[]> = {};
-
-  organizations.forEach((org) => {
-    if (!org || !org.id) return;
-
-    // Get org-level donors
-    const orgLevelDonors = getDonorCountries(org);
-
-    // Get project-level donors
-    const projectLevelDonorsSet = new Set<string>();
-    if (org.projects && Array.isArray(org.projects)) {
-      org.projects.forEach((project) => {
-        if (project.agencies && Array.isArray(project.agencies)) {
-          project.agencies.forEach((agency: any) => {
-            const fields = agency.fields || {};
-            const countryName = fields["Country Name"];
-            if (countryName && typeof countryName === "string") {
-              projectLevelDonorsSet.add(countryName);
-            }
-          });
-        }
-      });
-    }
-
-    // Create combined donor info
-    const allDonorsSet = new Set<string>([
-      ...orgLevelDonors,
-      ...Array.from(projectLevelDonorsSet),
-    ]);
-    const donorInfo = Array.from(allDonorsSet)
-      .map((country) => ({
-        country,
-        isOrgLevel: orgLevelDonors.includes(country),
-      }))
-      .sort((a, b) => {
-        // Sort org-level donors first, then project-only donors
-        if (a.isOrgLevel && !b.isOrgLevel) return -1;
-        if (!a.isOrgLevel && b.isOrgLevel) return 1;
-        return a.country.localeCompare(b.country);
-      });
-
-    map[org.id] = donorInfo;
-  });
-
-  return map;
-}
-
-/**
- * Build a map from organization ID to a map of country -> agency names
- * Used by organization modals to show which agencies finance each organization
- */
-export function buildOrgAgenciesMap(
-  organizations: NestedOrganization[],
-): Record<string, Record<string, string[]>> {
-  const map: Record<string, Record<string, string[]>> = {};
-
-  organizations.forEach((org) => {
-    if (org && org.id && org.agencies) {
-      const countryToAgencies: Record<string, string[]> = {};
-
-      org.agencies.forEach((agency: any) => {
-        const fields = agency.fields || {};
-        const countryName = fields["Country Name"];
-        const agencyName = fields["Agency/Department Name"];
-
-        if (countryName && agencyName) {
-          if (!countryToAgencies[countryName]) {
-            countryToAgencies[countryName] = [];
-          }
-          if (!countryToAgencies[countryName].includes(agencyName)) {
-            countryToAgencies[countryName].push(agencyName);
-          }
-        }
-      });
-
-      map[org.id] = countryToAgencies;
-    }
-  });
-
-  return map;
-}
-
-/**
- * Build a map from organization ID to donor country to project names
- * Used by organization modals to show which projects are funded by project-level donors
- */
-export function buildOrgProjectDonorsMap(
-  organizations: NestedOrganization[],
-): Record<string, Record<string, string[]>> {
-  const map: Record<string, Record<string, string[]>> = {};
-
-  organizations.forEach((org) => {
-    if (org && org.id && org.projects) {
-      const countryToProjects: Record<string, string[]> = {};
-
-      org.projects.forEach((project: any) => {
-        const projectName =
-          project.fields?.["Project/Product Name"] ||
-          project.fields?.["Project Name"] ||
-          project.name ||
-          `Project ${project.id}`;
-
-        if (project.agencies && Array.isArray(project.agencies)) {
-          project.agencies.forEach((agency: any) => {
-            const fields = agency.fields || {};
-            const countryName = fields["Country Name"];
-
-            if (countryName && projectName) {
-              if (!countryToProjects[countryName]) {
-                countryToProjects[countryName] = [];
-              }
-              if (!countryToProjects[countryName].includes(projectName)) {
-                countryToProjects[countryName].push(projectName);
-              }
-            }
-          });
-        }
-      });
-
-      map[org.id] = countryToProjects;
-    }
-  });
-
-  return map;
-}
-
-/**
- * Build a map from organization ID to donor country to project name to agency names
- * Used by organization modals to show which agencies fund each project at the project level
- */
-export function buildOrgProjectDonorAgenciesMap(
-  organizations: NestedOrganization[],
-): Record<string, Record<string, Record<string, string[]>>> {
-  const map: Record<string, Record<string, Record<string, string[]>>> = {};
-
-  organizations.forEach((org) => {
-    if (org && org.id && org.projects) {
-      const countryToProjectAgencies: Record<
-        string,
-        Record<string, string[]>
-      > = {};
-
-      org.projects.forEach((project: any) => {
-        const projectName =
-          project.fields?.["Project/Product Name"] ||
-          project.fields?.["Project Name"] ||
-          project.name ||
-          `Project ${project.id}`;
-
-        if (project.agencies && Array.isArray(project.agencies)) {
-          project.agencies.forEach((agency: any) => {
-            const fields = agency.fields || {};
-            const countryName = fields["Country Name"];
-            const agencyName = fields["Agency/Department Name"];
-
-            if (countryName && projectName && agencyName) {
-              if (!countryToProjectAgencies[countryName]) {
-                countryToProjectAgencies[countryName] = {};
-              }
-              if (!countryToProjectAgencies[countryName][projectName]) {
-                countryToProjectAgencies[countryName][projectName] = [];
-              }
-              if (
-                !countryToProjectAgencies[countryName][projectName].includes(
-                  agencyName,
-                )
-              ) {
-                countryToProjectAgencies[countryName][projectName].push(
-                  agencyName,
-                );
-              }
-            }
-          });
-        }
-      });
-
-      map[org.id] = countryToProjectAgencies;
-    }
-  });
-
-  return map;
-}
-
-/**
- * Build a map from project ID to a map of country -> agency names
- * Used by project modals to show which agencies finance each project
- */
-export function buildProjectAgenciesMap(
-  organizations: NestedOrganization[],
-): Record<string, Record<string, string[]>> {
-  const map: Record<string, Record<string, string[]>> = {};
-
-  organizations.forEach((org) => {
-    (org.projects || []).forEach((project) => {
-      if (project && project.id && project.agencies) {
-        const countryToAgencies: Record<string, string[]> = {};
-
-        project.agencies.forEach((agency: any) => {
-          const fields = agency.fields || {};
-          const countryName = fields["Country Name"];
-          const agencyName = fields["Agency/Department Name"];
-
-          if (countryName && agencyName) {
-            if (!countryToAgencies[countryName]) {
-              countryToAgencies[countryName] = [];
-            }
-            if (!countryToAgencies[countryName].includes(agencyName)) {
-              countryToAgencies[countryName].push(agencyName);
-            }
-          }
-        });
-
-        map[project.id] = countryToAgencies;
-      }
-    });
-  });
-
-  return map;
 }
