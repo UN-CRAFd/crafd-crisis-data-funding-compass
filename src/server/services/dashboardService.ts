@@ -440,10 +440,42 @@ function applyFilters(
 
       if (!shouldShowOrg) return null;
 
+      // Rebuild donorInfo to reflect only donors from visible projects
+      // Org-level donors always show, project-level donors only if their projects are visible
+      const visibleProjectDonors = new Set<string>();
+      visibleProjects.forEach((project) => {
+        project.donorCountries?.forEach((country) => {
+          visibleProjectDonors.add(country);
+        });
+      });
+
+      // Get org-level donors
+      const orgLevelDonors = org.donorInfo
+        ?.filter((d) => d.isOrgLevel)
+        .map((d) => d.country) || [];
+      
+      // Combine org-level with visible project-level donors
+      const allVisibleDonors = new Set<string>([
+        ...orgLevelDonors,
+        ...visibleProjectDonors,
+      ]);
+
+      const updatedDonorInfo = Array.from(allVisibleDonors)
+        .map((country) => ({
+          country,
+          isOrgLevel: orgLevelDonors.includes(country),
+        }))
+        .sort((a, b) => {
+          if (a.isOrgLevel && !b.isOrgLevel) return -1;
+          if (!a.isOrgLevel && b.isOrgLevel) return 1;
+          return a.country.localeCompare(b.country);
+        });
+
       return {
         ...org,
         projects: visibleProjects,
         projectCount: visibleProjects.length,
+        donorInfo: updatedDonorInfo,
       };
     })
     .filter((org): org is OrganizationDTO => org !== null);

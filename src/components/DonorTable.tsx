@@ -76,6 +76,120 @@ const donorAliasesFor = (d?: string): string[] => {
   return Array.from(aliases);
 };
 
+// ─── Agency helpers ────────────────────────────────────────────────────────────
+
+/** Returns true if any value in `values` matches any of `aliases` via slug-compare or normalised equality */
+function fieldValuesMatchAliases(values: unknown[], aliases: string[]): boolean {
+  return values.some((v) => {
+    const candidate = String(v || "");
+    return aliases.some((alias) => {
+      try {
+        return matchesUrlSlug(toUrlSlug(alias), candidate);
+      } catch {
+        return (
+          sanitizeForMatch(candidate).toLowerCase() ===
+          sanitizeForMatch(alias).toLowerCase()
+        );
+      }
+    });
+  });
+}
+
+/** Returns true if a raw agency object belongs to the given donor aliases.
+ *  Checks explicit donor/funding fields first, then falls back to country fields. */
+function agencyBelongsToDonor(agencyRaw: any, aliases: string[]): boolean {
+  const donorField =
+    agencyRaw.fields?.["Donor"] ||
+    agencyRaw.fields?.["Funding Country"] ||
+    agencyRaw.fields?.["Organization Donor"];
+  if (donorField) {
+    const values = Array.isArray(donorField) ? donorField : [donorField];
+    if (fieldValuesMatchAliases(values, aliases)) return true;
+  }
+  const countryField =
+    agencyRaw.fields?.["Country Name"] ||
+    agencyRaw.fields?.["Country"] ||
+    agencyRaw.fields?.["Agency Associated Country"] ||
+    agencyRaw.fields?.["Agency/Department Country"];
+  if (countryField) {
+    const values = Array.isArray(countryField) ? countryField : [countryField];
+    if (fieldValuesMatchAliases(values, aliases)) return true;
+  }
+  return false;
+}
+
+/** Adds the agency name(s) from a raw agency object into `into` (skips "Unspecified Agency") */
+function collectRawAgencyName(agencyRaw: any, into: Set<string>): void {
+  const name =
+    agencyRaw.fields?.["Agency Name"] ||
+    agencyRaw.fields?.["Funding Agency"] ||
+    agencyRaw.fields?.["Agency/Department Name"];
+  if (!name) return;
+  const names = Array.isArray(name) ? name : [name];
+  names.forEach((n) => {
+    const s = String(n || "").trim();
+    if (s && s !== "Unspecified Agency") into.add(s);
+  });
+}
+
+/** Returns all agency names from `rawAgencies` that match the given `donor` */
+function getMatchingAgencyNames(rawAgencies: any[], donor: string): Set<string> {
+  const aliases = donorAliasesFor(donor);
+  const result = new Set<string>();
+  rawAgencies.forEach((a) => {
+    if (agencyBelongsToDonor(a, aliases)) collectRawAgencyName(a, result);
+  });
+  return result;
+}
+
+// ─── AgencyBadgeList ────────────────────────────────────────────────────────
+
+const MAX_AGENCIES_SHOWN = 3;
+
+interface AgencyBadgeListProps {
+  agencies: string[];
+  expandKey: string;
+  isExpanded: boolean;
+  onToggle: (e: React.MouseEvent) => void;
+  /** Render badges at reduced opacity (project-level / pulled-up agencies) */
+  faint?: boolean;
+}
+
+const AgencyBadgeList: React.FC<AgencyBadgeListProps> = ({
+  agencies,
+  expandKey,
+  isExpanded,
+  onToggle,
+  faint = false,
+}) => {
+  if (agencies.length === 0) return null;
+  const visible = isExpanded ? agencies : agencies.slice(0, MAX_AGENCIES_SHOWN);
+  const overflow = agencies.length - MAX_AGENCIES_SHOWN;
+  return (
+    <>
+      {visible.map((agency, idx) => (
+        <Badge
+          key={`${expandKey}-${idx}`}
+          text={agency}
+          variant="agency"
+          className={faint ? "opacity-40" : ""}
+          title={
+            faint ? `${agency} (Project-level agency)` : `Funding Agency: ${agency}`
+          }
+        />
+      ))}
+      {overflow > 0 && (
+        <button
+          onClick={onToggle}
+          className="text-xs text-muted-foreground hover:text-foreground transition-colors"
+        >
+          {isExpanded ? "Show less" : `+${overflow} more`}
+        </button>
+      )}
+    </>
+  );
+};
+
 const DonorTableComponent: React.FC<DonorTableProps> = ({
   organizationsWithProjects,
   nestedOrganizations,
@@ -406,254 +520,86 @@ const DonorTableComponent: React.FC<DonorTableProps> = ({
                           projectCount={projects.length}
                           projectLabel={projects.length === 1 ? "product" : "products"}
                         >
-                          {/* Show agencies for project-level funding */}
+                          {/* Show agencies for project-only orgs (faint, all projects combined) */}
                           {!isOrgLevel && (() => {
-                            const isAgenciesExpanded = expandedAgencies.has(`org-project-${org.id}-${donor}`);
-                            
-                            // Collect agencies from all projects for this donor
-                            const agencyNames = new Set<string>();
-                            projects.forEach((project) => {
-                              const nestedProject = nestedOrganizations
-                                .find((n) => n.id === org.id)
-                                ?.projects?.find((p: any) => p.id === project.id);
-                              const agencies = nestedProject?.agencies || [];
-                              
-                              agencies.forEach((agency: any) => {
-                                // Get the country/donor from this agency
-                                const agencyCountry =
-                                  agency.fields?.["Country Name"] ||
-                                  agency.fields?.["Country"] ||
-                                  agency.fields?.["Agency Associated Country"] ||
-                                  agency.fields?.["Agency/Department Country"];
-
-                                // Check if this agency's country matches the current donor
-                                let belongsToDonor = false;
-                                if (agencyCountry) {
-                                  const countryValues = Array.isArray(agencyCountry)
-                                    ? agencyCountry
-                                    : [agencyCountry];
-                                  const aliases = donorAliasesFor(donor);
-                                  belongsToDonor = countryValues.some((c: any) => {
-                                    const candidate = String(c || "");
-                                    return aliases.some((alias) => {
-                                      try {
-                                        return matchesUrlSlug(toUrlSlug(alias), candidate);
-                                      } catch {
-                                        return (
-                                          sanitizeForMatch(candidate).toLowerCase() ===
-                                          sanitizeForMatch(alias).toLowerCase()
-                                        );
-                                      }
-                                    });
+                            const key = `org-project-${org.id}-${donor}`;
+                            const nestedOrg = nestedOrganizations.find((n) => n.id === org.id);
+                            const allProjectAgencies = projects.flatMap((p) =>
+                              nestedOrg?.projects?.find((np: any) => np.id === p.id)?.agencies ?? []
+                            );
+                            const agencyNames = Array.from(
+                              getMatchingAgencyNames(allProjectAgencies, donor)
+                            ).sort();
+                            if (agencyNames.length === 0) return null;
+                            return (
+                              <AgencyBadgeList
+                                agencies={agencyNames}
+                                expandKey={key}
+                                isExpanded={expandedAgencies.has(key)}
+                                onToggle={(e) => {
+                                  e.stopPropagation();
+                                  setExpandedAgencies((prev) => {
+                                    const next = new Set(prev);
+                                    next.has(key) ? next.delete(key) : next.add(key);
+                                    return next;
                                   });
-                                }
-
-                                if (belongsToDonor) {
-                                  const agencyName =
-                                    agency.fields?.["Agency Name"] ||
-                                    agency.fields?.["Funding Agency"] ||
-                                    agency.fields?.["Agency/Department Name"];
-                                  if (agencyName) {
-                                    if (Array.isArray(agencyName)) {
-                                      agencyName.forEach((name) => {
-                                        if (name && name.trim() !== "Unspecified Agency") {
-                                          agencyNames.add(name);
-                                        }
-                                      });
-                                    } else if (agencyName.trim() !== "Unspecified Agency") {
-                                      agencyNames.add(agencyName);
-                                    }
-                                  }
+                                }}
+                                faint
+                              />
+                            );
+                          })()}
+                          {/* Org-level agencies (normal opacity) */}
+                          {(() => {
+                            const key = `org-${org.id}`;
+                            const nestedOrg = nestedOrganizations.find((n) => n.id === org.id);
+                            const agencyNames = Array.from(
+                              getMatchingAgencyNames(nestedOrg?.agencies ?? [], donor)
+                            ).sort();
+                            if (agencyNames.length === 0) return null;
+                            return (
+                              <AgencyBadgeList
+                                agencies={agencyNames}
+                                expandKey={key}
+                                isExpanded={expandedAgencies.has(key)}
+                                onToggle={(e) => {
+                                  e.stopPropagation();
+                                  setExpandedAgencies((prev) => {
+                                    const next = new Set(prev);
+                                    next.has(key) ? next.delete(key) : next.add(key);
+                                    return next;
+                                  });
+                                }}
+                              />
+                            );
+                          })()}
+                          {/* Pull up extra project-level agencies (faint), deduped against org-level ones */}
+                          {isOrgLevel && (() => {
+                            const nestedOrg = nestedOrganizations.find((n) => n.id === org.id);
+                            const orgAgencyNames = getMatchingAgencyNames(nestedOrg?.agencies ?? [], donor);
+                            const aliases = donorAliasesFor(donor);
+                            const projectOnlyAgencies = new Set<string>();
+                            projects.forEach((project: ProjectData) => {
+                              Object.entries(project.donorAgencies || {}).forEach(([country, agencyList]) => {
+                                if (fieldValuesMatchAliases([country], aliases)) {
+                                  agencyList.forEach((a) => {
+                                    const s = a.trim();
+                                    if (s && s !== "Unspecified Agency" && !orgAgencyNames.has(s))
+                                      projectOnlyAgencies.add(s);
+                                  });
                                 }
                               });
                             });
-
-                            const agencyArray = Array.from(agencyNames).sort();
-                            const maxAgenciesToShow = 3;
-                            const agenciesToShow = isAgenciesExpanded
-                              ? agencyArray
-                              : agencyArray.slice(0, maxAgenciesToShow);
-
-                            if (agencyArray.length === 0) return null;
-
-                            return (
-                              <>
-                                {agenciesToShow.map((agency, idx) => (
-                                  <Badge
-                                    key={idx}
-                                    text={agency}
-                                    variant="agency"
-                                    className="text-sm px-3 py-1.5 sm:text-sm sm:px-3 sm:py-1.5 opacity-40"
-                                  />
-                                ))}
-                                {agencyArray.length > maxAgenciesToShow && (
-                                  <button
-                                    onClick={(e) => {
-                                      e.stopPropagation();
-                                      setExpandedAgencies((prev) => {
-                                        const next = new Set(prev);
-                                        const key = `org-project-${org.id}-${donor}`;
-                                        if (next.has(key)) {
-                                          next.delete(key);
-                                        } else {
-                                          next.add(key);
-                                        }
-                                        return next;
-                                      });
-                                    }}
-                                    className="text-xs text-muted-foreground hover:text-foreground transition-colors"
-                                  >
-                                    {isAgenciesExpanded
-                                      ? "Show less"
-                                      : `+${agencyArray.length - maxAgenciesToShow} more`}
-                                  </button>
-                                )}
-                              </>
-                            );
+                            if (projectOnlyAgencies.size === 0) return null;
+                            return Array.from(projectOnlyAgencies).sort().map((a, idx) => (
+                              <Badge
+                                key={`pa-pulled-${idx}`}
+                                text={a}
+                                variant="agency"
+                                className="opacity-40"
+                                title={`${a} (Project-level agency)`}
+                              />
+                            ));
                           })()}
-                          {(() => {
-                            const isAgenciesExpanded = expandedAgencies.has(`org-${org.id}`);
-                            // Get agencies for this org from nestedOrganizations
-                            const nestedOrg = nestedOrganizations.find((n) => n.id === org.id);
-                            const agencies = nestedOrg?.agencies || [];
-
-                                  // Extract unique agency names that belong to the current donor
-                                  const agencyNames = new Set<string>();
-                                  agencies.forEach((agency: any) => {
-                                    // Get the country/donor from this agency
-                                    const agencyCountry =
-                                      agency.fields?.["Country Name"] ||
-                                      agency.fields?.["Country"] ||
-                                      agency.fields?.[
-                                        "Agency Associated Country"
-                                      ] ||
-                                      agency.fields?.[
-                                        "Agency/Department Country"
-                                      ];
-
-                                    // Check if this agency's country matches the current donor we're iterating
-                                    let belongsToDonor = false;
-                                    if (agencyCountry) {
-                                      const countryValues = Array.isArray(
-                                        agencyCountry,
-                                      )
-                                        ? agencyCountry
-                                        : [agencyCountry];
-                                      const aliases = donorAliasesFor(donor);
-                                      belongsToDonor = countryValues.some(
-                                        (c: any) => {
-                                          const candidate = String(c || "");
-                                          // Try matching against any alias (slug compare preferred)
-                                          return aliases.some((alias) => {
-                                            try {
-                                              return matchesUrlSlug(
-                                                toUrlSlug(alias),
-                                                candidate,
-                                              );
-                                            } catch {
-                                              return (
-                                                sanitizeForMatch(
-                                                  candidate,
-                                                ).toLowerCase() ===
-                                                sanitizeForMatch(
-                                                  alias,
-                                                ).toLowerCase()
-                                              );
-                                            }
-                                          });
-                                        },
-                                      );
-                                    }
-
-                                    if (belongsToDonor) {
-                                      const agencyName =
-                                        agency.fields?.["Agency Name"] ||
-                                        agency.fields?.["Funding Agency"] ||
-                                        agency.fields?.[
-                                          "Agency/Department Name"
-                                        ];
-                                      if (agencyName) {
-                                        if (Array.isArray(agencyName)) {
-                                          agencyName.forEach((name) => {
-                                            if (
-                                              name &&
-                                              name.trim() !==
-                                                "Unspecified Agency"
-                                            ) {
-                                              agencyNames.add(name);
-                                            }
-                                          });
-                                        } else if (
-                                          agencyName.trim() !==
-                                          "Unspecified Agency"
-                                        ) {
-                                          agencyNames.add(agencyName);
-                                        }
-                                      }
-                                    }
-                                  });
-
-                                  const agencyArray =
-                                    Array.from(agencyNames).sort();
-                                  const maxAgenciesToShow = 3;
-                                  const agenciesToShow = isAgenciesExpanded
-                                    ? agencyArray
-                                    : agencyArray.slice(0, maxAgenciesToShow);
-
-                                  if (agencyArray.length === 0) return null;
-
-                                  return (
-                                    <>
-                                      {agenciesToShow.map((agency, idx) => (
-                                        <Badge
-                                          key={idx}
-                                          text={agency}
-                                          variant="agency"
-                                          className="text-xs sm:text-sm px-2.5 sm:px-3 py-1 sm:py-1.5"
-                                          title={`Funding Agency: ${agency}`}
-                                        />
-                                      ))}
-                                      {agencyArray.length > maxAgenciesToShow &&
-                                        !isAgenciesExpanded && (
-                                          <div
-                                            onClick={(e) => {
-                                              e.stopPropagation();
-                                              const newExpanded = new Set(
-                                                expandedAgencies,
-                                              );
-                                              newExpanded.add(`org-${org.id}`);
-                                              setExpandedAgencies(newExpanded);
-                                            }}
-                                            className="bg-slate-000 inline-flex cursor-pointer items-center rounded-md px-2 py-1 text-xs font-medium text-slate-900 transition-colors hover:bg-slate-100"
-                                          >
-                                            +
-                                            {agencyArray.length -
-                                              maxAgenciesToShow}{" "}
-                                            more
-                                          </div>
-                                        )}
-                                      {isAgenciesExpanded &&
-                                        agencyArray.length >
-                                          maxAgenciesToShow && (
-                                          <div
-                                            onClick={(e) => {
-                                              e.stopPropagation();
-                                              const newExpanded = new Set(
-                                                expandedAgencies,
-                                              );
-                                              newExpanded.delete(
-                                                `org-${org.id}`,
-                                              );
-                                              setExpandedAgencies(newExpanded);
-                                            }}
-                                            className="bg-slate-000 inline-flex cursor-pointer items-center rounded-md px-2 py-1 text-xs font-medium text-slate-900 transition-colors hover:bg-slate-100"
-                                          >
-                                            Show less
-                                          </div>
-                                        )}
-                                    </>
-                                  );
-                                })()}
                         </OrganizationBox>
                       </div>
                       <CollapsibleContent>
@@ -678,196 +624,29 @@ const DonorTableComponent: React.FC<DonorTableProps> = ({
                                 }}
                                 tipsEnabled={tipsEnabled}
                               >
-                                {/* Agency badges for project */}
+                                {/* Agency badges for this project */}
                                 {(() => {
-                                  const isAgenciesExpanded =
-                                    expandedAgencies.has(
-                                      `project-${project.id}`,
-                                    );
-
-                                  // Get agencies for this project from nestedOrganizations
-                                  const agencies =
-                                    nestedProject?.agencies || [];
-
-                                  // Extract unique agency names that belong to the current donor
-                                  const agencyNames = new Set<string>();
-                                  agencies.forEach((agency: any) => {
-                                    // Check if this agency belongs to the current donor
-                                    // Look for donor field first, then fall back to country fields
-                                    const donorField =
-                                      agency.fields?.["Donor"] ||
-                                      agency.fields?.["Funding Country"] ||
-                                      agency.fields?.["Organization Donor"];
-                                    const agencyCountry =
-                                      agency.fields?.["Country Name"] ||
-                                      agency.fields?.["Country"] ||
-                                      agency.fields?.[
-                                        "Agency Associated Country"
-                                      ] ||
-                                      agency.fields?.[
-                                        "Agency/Department Country"
-                                      ];
-
-                                    // Check if agency belongs to current donor
-                                    let belongsToDonor = false;
-
-                                    // Check donor field first
-                                    if (donorField) {
-                                      const donorValues = Array.isArray(
-                                        donorField,
-                                      )
-                                        ? donorField
-                                        : [donorField];
-                                      const aliases = donorAliasesFor(donor);
-                                      belongsToDonor = donorValues.some(
-                                        (d: any) => {
-                                          const candidate = String(d || "");
-                                          return aliases.some((alias) => {
-                                            try {
-                                              return matchesUrlSlug(
-                                                toUrlSlug(alias),
-                                                candidate,
-                                              );
-                                            } catch {
-                                              return (
-                                                sanitizeForMatch(
-                                                  candidate,
-                                                ).toLowerCase() ===
-                                                sanitizeForMatch(
-                                                  alias,
-                                                ).toLowerCase()
-                                              );
-                                            }
-                                          });
-                                        },
-                                      );
-                                    }
-
-                                    // Fall back to country field if no donor field match
-                                    if (!belongsToDonor && agencyCountry) {
-                                      const countryValues = Array.isArray(
-                                        agencyCountry,
-                                      )
-                                        ? agencyCountry
-                                        : [agencyCountry];
-                                      const aliases = donorAliasesFor(donor);
-                                      belongsToDonor = countryValues.some(
-                                        (c: any) => {
-                                          const candidate = String(c || "");
-                                          return aliases.some((alias) => {
-                                            try {
-                                              return matchesUrlSlug(
-                                                toUrlSlug(alias),
-                                                candidate,
-                                              );
-                                            } catch {
-                                              return (
-                                                sanitizeForMatch(
-                                                  candidate,
-                                                ).toLowerCase() ===
-                                                sanitizeForMatch(
-                                                  alias,
-                                                ).toLowerCase()
-                                              );
-                                            }
-                                          });
-                                        },
-                                      );
-                                    }
-
-                                    if (belongsToDonor) {
-                                      const agencyName =
-                                        agency.fields?.["Agency Name"] ||
-                                        agency.fields?.["Funding Agency"] ||
-                                        agency.fields?.[
-                                          "Agency/Department Name"
-                                        ];
-                                      if (agencyName) {
-                                        if (Array.isArray(agencyName)) {
-                                          agencyName.forEach((name) => {
-                                            if (
-                                              name &&
-                                              name.trim() !==
-                                                "Unspecified Agency"
-                                            ) {
-                                              agencyNames.add(name);
-                                            }
-                                          });
-                                        } else if (
-                                          agencyName.trim() !==
-                                          "Unspecified Agency"
-                                        ) {
-                                          agencyNames.add(agencyName);
-                                        }
-                                      }
-                                    }
-                                  });
-
-                                  const agencyArray =
-                                    Array.from(agencyNames).sort();
-                                  const maxAgenciesToShow = 3;
-                                  const agenciesToShow = isAgenciesExpanded
-                                    ? agencyArray
-                                    : agencyArray.slice(0, maxAgenciesToShow);
-
-                                  if (agencyArray.length === 0) return null;
-
+                                  const key = `project-${project.id}`;
+                                  const agencies = nestedProject?.agencies ?? [];
+                                  const agencyNames = Array.from(
+                                    getMatchingAgencyNames(agencies, donor)
+                                  ).sort();
+                                  if (agencyNames.length === 0) return null;
                                   return (
                                     <div className="mt-1 flex flex-wrap gap-1">
-                                      {agenciesToShow.map((agency, idx) => (
-                                        <Badge
-                                          key={idx}
-                                          text={agency}
-                                          variant="agency"
-                                          className="text-xs sm:text-sm px-2.5 sm:px-3 py-1 sm:py-1.5"
-                                          title={`Funding Agency: ${agency}`}
-                                        />
-                                      ))}
-                                      {agencyArray.length >
-                                        maxAgenciesToShow &&
-                                        !isAgenciesExpanded && (
-                                          <div
-                                            onClick={(e) => {
-                                              e.stopPropagation();
-                                              const newExpanded = new Set(
-                                                expandedAgencies,
-                                              );
-                                              newExpanded.add(
-                                                `project-${project.id}`,
-                                              );
-                                              setExpandedAgencies(
-                                                newExpanded,
-                                              );
-                                            }}
-                                            className="bg-slate-000 inline-flex cursor-pointer items-center rounded-md px-2 py-1 text-xs font-medium text-slate-900 transition-colors hover:bg-slate-100"
-                                          >
-                                            +
-                                            {agencyArray.length -
-                                              maxAgenciesToShow}{" "}
-                                              more
-                                            </div>
-                                          )}
-                                        {isAgenciesExpanded &&
-                                          agencyArray.length >
-                                            maxAgenciesToShow && (
-                                            <div
-                                              onClick={(e) => {
-                                                e.stopPropagation();
-                                                const newExpanded = new Set(
-                                                  expandedAgencies,
-                                                );
-                                                newExpanded.delete(
-                                                  `project-${project.id}`,
-                                                );
-                                                setExpandedAgencies(
-                                                  newExpanded,
-                                                );
-                                              }}
-                                              className="bg-slate-000 inline-flex cursor-pointer items-center rounded-md px-2 py-1 text-xs font-medium text-slate-900 transition-colors hover:bg-slate-100"
-                                            >
-                                              Show less
-                                            </div>
-                                          )}
+                                      <AgencyBadgeList
+                                        agencies={agencyNames}
+                                        expandKey={key}
+                                        isExpanded={expandedAgencies.has(key)}
+                                        onToggle={(e) => {
+                                          e.stopPropagation();
+                                          setExpandedAgencies((prev) => {
+                                            const next = new Set(prev);
+                                            next.has(key) ? next.delete(key) : next.add(key);
+                                            return next;
+                                          });
+                                        }}
+                                      />
                                     </div>
                                   );
                                 })()}
