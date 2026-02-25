@@ -1,0 +1,15 @@
+{
+    "recommendations": [
+        "ms-python.python",
+        "ms-toolsai.jupyter",
+        "ms-toolsai.datawrangler",
+        "ms-python.vscode-python-envs",
+        "eamodio.gitlens", // https://www.gitkraken.com/gitlens
+        "knisterpeter.vscode-commitizen", // https://www.conventionalcommits.org/
+        "pkief.material-icon-theme",
+        "gruntfuggly.todo-tree",
+        "github.vscode-pull-request-github",
+        "github.remotehub",
+        "charliermarsh.vscode-ruff", // https://docs.astral.sh/ruff/
+    ]
+}

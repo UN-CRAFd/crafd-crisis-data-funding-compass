@@ -7,7 +7,7 @@
 
 ### Maintenance
 
-```
-uvx ruff check --select I --fix scripts/
-uvx ruff format scripts/
+```bash
+uvx ruff check --select I --fix python/
+uvx ruff format python/
 ```

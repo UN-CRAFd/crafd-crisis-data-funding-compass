@@ -6,9 +6,6 @@ This script:
 2. Normalizes the data into the funding_compass relational schema
 3. Generates deterministic UUIDs from Airtable record IDs
 4. Pushes everything to PostgreSQL, recreating tables on each run
-
-Usage:
-    python scripts/01b_fetch_airtable_to_sql.py
 """
 
 import os

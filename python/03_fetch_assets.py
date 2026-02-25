@@ -8,7 +8,7 @@ This script:
 4. Handles multiple image formats (PNG, JPG, SVG, WebP)
 
 Usage:
-    python scripts/03_fetch_assets.py [--logos] [--screenshots]
+    uv run python python/03_fetch_assets.py [--logos] [--screenshots]
     
 Options:
     --logos: Download only logos

@@ -1,39 +1,39 @@
 name: Fetch Data from Airtable
 
 on:
-  schedule:
-    - cron: "0 5 * * *" # Runs every midnight New York time (UTC-5)
-  workflow_dispatch: # Allows manual trigger
+    schedule:
+        - cron: "0 5 * * *" # Runs every day at midnight New York time (UTC-5)
+    workflow_dispatch: # Allows manual trigger
 
 jobs:
-  update-data:
-    runs-on: ubuntu-latest
-    environment: Production
-    steps:
-      - name: Checkout repository
-        uses: actions/checkout@v4
+    update-data:
+        runs-on: ubuntu-latest
+        environment: Production
+        steps:
+            - name: Checkout repository
+              uses: actions/checkout@v4
 
-      - name: Set up uv
-        uses: astral-sh/setup-uv@v6
-        with:
-          enable-cache: true
+            - name: Set up uv
+              uses: astral-sh/setup-uv@v6
+              with:
+                  enable-cache: true
 
-      - name: Install dependencies from lockfile
-        run: uv sync --frozen
+            - name: Install dependencies from lockfile
+              run: uv sync --frozen
 
-      - name: Run data fetching script to PostgreSQL
-        env:
-          # GitHub: "settings/secrets/actions" | Repository secrets
-          AIRTABLE_API_KEY: ${{ secrets.AIRTABLE_API_KEY }}
-          AIRTABLE_BASE_ID: ${{ secrets.AIRTABLE_BASE_ID }}
-          AIRTABLE_TABLE_ID_AGENCIES: ${{ secrets.AIRTABLE_TABLE_ID_AGENCIES }}
-          AIRTABLE_TABLE_ID_ORGANIZATIONS: ${{ secrets.AIRTABLE_TABLE_ID_ORGANIZATIONS }}
-          AIRTABLE_TABLE_ID_PROJECTS: ${{ secrets.AIRTABLE_TABLE_ID_PROJECTS }}
-          AZURE_POSTGRES_HOST: ${{ secrets.AZURE_POSTGRES_HOST }}
-          AZURE_POSTGRES_PORT: ${{ secrets.AZURE_POSTGRES_PORT }}
-          AZURE_POSTGRES_USER: ${{ secrets.AZURE_POSTGRES_USER }}
-          AZURE_POSTGRES_PASSWORD: ${{ secrets.AZURE_POSTGRES_PASSWORD }}
-        run: |
-          echo "Starting data fetch to PostgreSQL with validation..."
-          uv run python scripts/01b_fetch_airtable_to_sql.py
-          echo "✅ Data validation passed and synced to PostgreSQL"
+            - name: Run data fetching script to PostgreSQL
+              env:
+                  # GitHub: "settings/secrets/actions" | Repository secrets
+                  AIRTABLE_API_KEY: ${{ secrets.AIRTABLE_API_KEY }}
+                  AIRTABLE_BASE_ID: ${{ secrets.AIRTABLE_BASE_ID }}
+                  AIRTABLE_TABLE_ID_AGENCIES: ${{ secrets.AIRTABLE_TABLE_ID_AGENCIES }}
+                  AIRTABLE_TABLE_ID_ORGANIZATIONS: ${{ secrets.AIRTABLE_TABLE_ID_ORGANIZATIONS }}
+                  AIRTABLE_TABLE_ID_PROJECTS: ${{ secrets.AIRTABLE_TABLE_ID_PROJECTS }}
+                  AZURE_POSTGRES_HOST: ${{ secrets.AZURE_POSTGRES_HOST }}
+                  AZURE_POSTGRES_PORT: ${{ secrets.AZURE_POSTGRES_PORT }}
+                  AZURE_POSTGRES_USER: ${{ secrets.AZURE_POSTGRES_USER }}
+                  AZURE_POSTGRES_PASSWORD: ${{ secrets.AZURE_POSTGRES_PASSWORD }}
+              run: |
+                  echo "Starting data fetch to PostgreSQL with validation..."
+                  uv run python python/01b_fetch_airtable_to_sql.py
+                  echo "✅ Data validation passed and synced to PostgreSQL"

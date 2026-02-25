@@ -95,16 +95,16 @@ IATI_PRIMARY_KEY=your_iati_api_key
 
 ```bash
 # Run main Airtable to PostgreSQL pipeline
-python scripts/01b_fetch_airtable_to_sql.py
+uv run python python/01b_fetch_airtable_to_sql.py
 
 # Download assets
-python scripts/03_fetch_assets.py
+uv run python python/03_fetch_assets.py
 
 # Clean member states
-python scripts/04_clean_member_states.py
+uv run python python/04_clean_member_states.py
 
 # Fetch IATI data (optional)
-python scripts/05_fetch_iati.py
+uv run python python/05_fetch_iati.py
 ```
 
 ## CI/CD Integration

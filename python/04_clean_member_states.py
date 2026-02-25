@@ -8,7 +8,7 @@ This script:
 4. Saves to current_member_states.csv
 
 Usage:
-    python scripts/04_clean_member_states.py
+    uv run python python/04_clean_member_states.py
 """
 
 from pathlib import Path
