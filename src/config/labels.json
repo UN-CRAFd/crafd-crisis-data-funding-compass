@@ -1,0 +1,288 @@
+{
+  "header": {
+    "title": "CRISIS DATA",
+    "subtitle": "Funding Compass",
+    "betaBadge": "Beta Version",
+    "betaTooltip": "This website is based on publicly available information. Updates are ongoing. If you have any feedback, please use the form in the upper right corner.",
+    "shareButton": "Share",
+    "shareButtonSuccess": "Copied",
+    "feedbackButton": "Contribute Data",
+    "feedbackTooltip": "Give us more information to improve the Data Set",
+    "exportButton": "Export as One-Pager",
+    "exportButtonLoading": "Exporting...",
+    "exportTooltip": "Export current view as PDF",
+    "tipsOn": "Tips on",
+    "tipsOff": "Tips off",
+    "exportMenuCsv": "Export as CSV (ZIP)",
+    "exportMenuXlsx": "Export as Excel (XLSX)",
+    "exportingCsv": "Exporting CSV...",
+    "exportingXlsx": "Exporting Excel...",
+    "exportingPdf": "Exporting PDF...",
+    "exportView": "Export View",
+    "navigation": "Navigation",
+    "dashboard": "Dashboard",
+    "methodology": "Methodology"
+  },
+  "stats": {
+    "dataProviders": {
+      "title": "Who receives funds",
+      "label": "Organizations",
+      "tooltip": "Organizations in the crisis data ecosystem who maintain essential products."
+    },
+    "dataProjects": {
+      "title": "What funds are used for",
+      "label": "Products",
+      "tooltip": "Essential products that enable partners to anticipate, prevent, and respond to crises around the world."
+    },
+    "donorCountries": {
+      "title": "Where funds are from",
+      "label": "Donors",
+      "tooltip": "Key donors in the crisis data ecosystem who provide funding to maintain essential products."
+    }
+  },
+  "filters": {
+    "searchPlaceholder": "Search Organizations & Products...",
+    "donorPlaceholder": "Select Donor(s)...",
+    "typePlaceholder": "Select Type(s)...",
+    "themePlaceholder": "Select Theme(s)...",
+    "donorSearchPlaceholder": "Search Donor...",
+    "selected": "selected",
+    "showMore": "more",
+    "showLess": "Show less",
+    "noMatchingDonors": "No matching donors found"
+  },
+  "sections": {
+    "organizationsAndProjects": "Funding Registry",
+    "projectCategories": "Products by Type",
+    "organizationTypes": "Organizations by Type",
+    "donorCount": "Co-Financing Donors"
+  },
+  "investmentTypes": {
+    "data": "Data Sets & Commons",
+    "infrastructure": "Infrastructure & Platforms",
+    "analytics": "Crisis Analytics & Insights",
+    "human": "Human Capital & Know-how",
+    "standards": "Standards & Coordination",
+    "learning": "Learning & Exchange"
+  },
+  "product": {
+    "singular": "product",
+    "plural": "products",
+    "capitalizedSingular": "Product",
+    "capitalizedPlural": "Products"
+  },
+  "projectDetails": {
+    "donorCountries": "Product Donor",
+    "investmentTypes": "Investment Types",
+    "notSpecified": "Not specified"
+  },
+  "filterDescription": {
+    "showingAll": "Showing all {organizations} organizations, providing {projects} products",
+    "showing": "Showing",
+    "funds": "funds",
+    "in": "in",
+    "relatingTo": "relating to",
+    "donor": "donor",
+    "donors": "donors",
+    "types": "types"
+  },
+  "footer": {
+    "dataGatheredBy": "Data gathered by the",
+    "organization": "Complex Risk Analytics Fund (CRAF'd)",
+    "copyright": "© {year} United Nations. All rights reserved."
+  },
+  "loading": {
+    "message": "Loading Compass..."
+  },
+  "error": {
+    "message": "Failed to load dashboard data."
+  },
+  "ui": {
+    "resetFilters": "Reset all filters",
+    "copyToClipboard": "Copy link to clipboard",
+    "chartFootnote": "Note: A project can be assigned to multiple types.",
+    "share": "Share",
+    "showLess": "Show less",
+    "showMore": "Show {count} more"
+  },
+  "modals": {
+    "organizationNotFound": "Organization Not Found",
+    "organizationNotFoundMessage": "The requested organization could not be found.",
+    "projectNotFound": "Project Not Found",
+    "projectNotFoundMessage": "The requested project could not be found.",
+    "donorNotFound": "Donor not found",
+    "memberState": "UN Member State",
+    "learnMore": "Learn more",
+    "viewOnHdx": "View Data on",
+    "viewOnIati": "View Funding on",
+    "hdx": "HDX",
+    "iati": "IATI",
+    "openWebsite": "Open Website",
+    "providedAssets": "Provided Products",
+    "organizationFunding": "Organization Funding",
+    "estOrgBudget": "Est. Org Budget",
+    "budgetSource": "Budget Source",
+    "lastUpdated": "Last Updated",
+    "viewBudgetSource": "View Budget Source",
+    "budgetInfoTooltip": "This Data was extracted from publicly available sources and collected by the Complex Risk Analytics Fund (CRAF'd). It may not reflect the most current information.",
+    "notes": "NOTES",
+    "notesInsights": "All insights are based on publicly accessible information and data.",
+    "notesUn": "For simplification, donors were limited to the 30 highest contributors to UN organizations. Therefore, some donors may not be displayed. UN System Donors are added in the table and network view, but will not show up here unless there part of those 30 contributors.",
+    "budgetlineUn": "Part of the general budget.",
+    "noBudgetDisclosed": "No detailed budget amount is publicly disclosed.",
+    "providerOrganizations": "Provider Organizations",
+    "assetTypeAndTheme": "Product Type & Theme",
+    "assetFunding": "Product Funding",
+    "noAssetDonorInfo": "No product donor information available",
+    "assetDonorsNotSpecified": "Product donors not specified",
+    "notesProjectDonors": "Project donor countries may differ from organization-level donor countries.",
+    "hdxDataGrid": "HDX Data Grid",
+    "visitProjectWebsite": "Visit Project Website",
+    "financingAgencies": "Financed through:",
+    "clickToFilterByType": "Click to filter by this investment type",
+    "similarProjects": "Similar Projects",
+    "financedOrgs": "Financed Organizations",
+    "financedAssets": "Financed Products",
+    "noAgenciesFound": "No agencies found for this donor.",
+    "headquarteredIn": "Headquartered in"
+  },
+  "notFound": {
+    "title": "404",
+    "subtitle": "Page not found",
+    "button": "Go Home"
+  },
+  "errors": {
+    "somethingWentWrong": "Something went wrong",
+    "thereWasAnError": "There was an error loading this page. Please try refreshing or go back to the home page.",
+    "tryAgain": "Try Again",
+    "exportPdfFailed": "Failed to export PDF. Please try again.",
+    "exportCsvFailed": "Failed to export CSV. Please try again.",
+    "exportXlsxFailed": "Failed to export XLSX. Please try again."
+  },
+  "noResults": {
+    "title": "No Results Found",
+    "message": "No data matches your current filters. Try adjusting your criteria or reset all filters.",
+    "resetButton": "Reset Filters",
+    "feedbackButton": "Send Feedback"
+  },
+  "survey": {
+    "title": "Share Your Insights!",
+    "subtitle": "Help shape the crisis data ecosystem"
+  },
+  "onboarding": {
+    "dontShowAgain": "Don't show again",
+    "prev": "Prev",
+    "next": "Next",
+    "done": "Done"
+  },
+  "codeBlock": {
+    "language": "Python",
+    "copyButton": "Copy",
+    "copyButtonSuccess": "Copied",
+    "copyToClipboard": "Copy to clipboard"
+  },
+  "methodology": {
+    "title": "Methodology",
+    "subtitle": "Understand how our data was collected and how to use it best for your research",
+    "tabs": {
+      "collection": "Collection",
+      "classification": "Classification",
+      "limitations": "Limitations",
+      "filtering": "Filtering",
+      "network": "Network",
+      "export": "Export"
+    },
+    "dataCollection": "Data Collection",
+    "sourceIdentification": "Source Identification",
+    "sourceIdentificationDescription": "We aggregate data from a curated set of public and partner sources, including international organizations, government portals, and open data repositories relevant to crisis funding and humanitarian response.",
+    "automatedManualGathering": "Automated & Manual Gathering",
+    "automatedManualGatheringDescription": "Data is collected through a combination of automated pipelines (APIs, web scraping) and manual curation to ensure completeness and accuracy.",
+    "regularUpdates": "Regular Updates",
+    "regularUpdatesDescription": "The dataset is refreshed periodically to capture new funding flows, projects, and organizational changes.",
+    "dataCollectionProcess": "Data Collection Process",
+    "dataClassification": "Data Classification",
+    "entityMapping": "Entity Mapping",
+    "entityMappingDescription": "Organizations, donors, and projects are mapped to unique identifiers to avoid duplication and enable cross-referencing.",
+
+    "themeTaggingDescription": "Projects are tagged with thematic areas (e.g., health, displacement, food security) using keyword analysis and expert review.",
+    "assetTypeExplorer": "Product Type Explorer",
+    "clickOnInvestmentType": "Click on an investment type to explore",
+    "relatedThemes": "Related Themes",
+    "limitations": "Limitations",
+    "dataGaps": "Data Gaps",
+    "dataGapsDescription": "Not all funding flows or projects are publicly reported; some data may be incomplete or delayed.",
+    "classificationSubjectivity": "Classification Subjectivity",
+    "classificationSubjectivityDescription": "Investment type and theme assignments may involve interpretation, especially for multi-sector projects.",
+    "simplification": "Simplification",
+    "simplificationDescription": "For clarity, some visualizations (e.g., UN donor lists) are simplified and do not reflect the full complexity of funding relationships.",
+    "filteringQuery": "Filtering & Query",
+    "searchLogic": "Search Logic",
+    "searchLogicDescription": "Search operates on project titles and organization names.",
+    "donorFilter": "Donor Filter",
+    "donorFilterDescription": "Multiple donors trigger a conjunction. Returned projects must be co-financed by every selected donor.",
+    "typeFilter": "Type Filter",
+    "typeFilterDescription": "Multiple types trigger a disjunction. Organizations appear if any of their projects match at least one selected type.",
+    "themeFilter": "Theme Filter",
+    "themeFilterDescription": "Multiple themes trigger a disjunction. Projects appear if they match at least one of the selected themes.",
+    "typeThemeRelationship": "Type–Theme Relationship",
+    "typeThemeRelationshipDescription": "Themes are nested under types. Selecting a type restricts theme options to those linked to that type. Themes from other types can still surface when projects span multiple types and carry overlapping themes.",
+    "filteringProcess": "Filtering Process",
+    "donorFilterGatekeeper": "Donor Filter (Gatekeeper)",
+    "donorFilterQuestion": "Check: Does org have ALL selected donors?",
+    "donorFilterYes": "YES → Continue to Step 2",
+    "donorFilterNo": "NO → Hide org entirely",
+    "searchFilterCheck": "Search Filter Check",
+    "searchFilterQuestion": "Check: Does org name match search?",
+    "searchFilterYes": "YES → Show ALL org projects",
+    "searchFilterYesHint": "Then filter by Type/Theme if selected",
+    "searchFilterNo": "NO → Check each project",
+    "searchFilterNoHint": "Go to Step 3 for project-level filtering",
+    "projectLevelFilters": "Project-Level Filters",
+    "searchIfOrgDidntMatch": "A. Search (if org didn't match)",
+    "mustMatchForProjectVisible": "Must match for project to be visible",
+    "typeFilterLabel": "B. Type Filter",
+    "typeFilterLogic": "(OR logic)",
+    "projectNeedsMatchingType": "Project needs ≥1 matching type",
+    "themeFilterLabel": "C. Theme Filter",
+    "themeFilterLogic": "(OR logic)",
+    "projectNeedsMatchingTheme": "Project needs ≥1 matching theme",
+    "finalDecision": "Final Decision",
+    "showOrganizationIf": "Show Organization IF:",
+    "passesDonorCheck": "Passes donor check (Step 1)",
+    "hasVisibleProject": "AND has ≥1 visible project after filtering",
+    "orgNameMatches": "OR org name matches search (shows all projects)",
+    "hideOrganizationIf": "Hide Organization IF:",
+    "failsDonorCheck": "Fails donor check",
+    "hasZeroVisibleProjects": "OR has 0 visible projects after filtering",
+    "networkAnalysis": "Network Analysis",
+    "graphStructure": "Graph Structure",
+    "graphStructureDescription": "The network view displays the filtered dataset as an undirected graph, showing relationships between donors, organizations, and projects.",
+    "clusteringOptions": "Clustering Options",
+    "clusteringOptionsDescription": "Clustering options aggregate projects and organizations by type, making it easier to identify patterns and connections within specific investment categories.",
+    "interactiveNodes": "Interactive Nodes",
+    "interactiveNodesDescription": "Project and organization nodes are interactive and open a detail modal when clicked, providing in-depth information about entities and their relationships.",
+    "spatialInterpretation": "Spatial Interpretation",
+    "spatialInterpretationDescription": "Spatial proximity in the graph has no geographic or ideological meaning. Node positions are determined by the force-directed layout algorithm to optimize visualization clarity.",
+    "networkGraphVisualization": "Network Graph Visualization",
+    "exportFunctionality": "Export Functionality",
+    "csvExport": "CSV Export",
+    "csvExportDescription": "Exports two CSV files (organization table and product table) in a ZIP archive. Organizations CSV includes names, types, descriptions, and funding sources. Products CSV includes names, associated organizations, types, themes, donors, descriptions, and website.",
+    "excelExport": "Excel Export",
+    "excelExportDescription": "Export the same data as a professionally formatted Excel workbook. Includes organizations and products sheets with styling and optimized column widths. Includes a README file with export metadata and current filter details.",
+    "sharingAndReproducibility": "Sharing & Reproducibility",
+    "sharingAndReproducibilityDescription": "All exports respect your current filters (donors, investment types, themes, search query). The metadata and README file includes information about which filters were applied. Also, when sharing a link to the app, the same filters will be pre-applied for recipients, as the filter criteria are denoted in the URL.",
+    "workingWithTheData": "Working with the Data",
+    "feedbackTitle": "Questions or Feedback?",
+    "feedbackSubtitle": "We welcome your input to improve our methodology and data quality.",
+    "feedbackButton": "Provide Feedback"
+  },
+  "pageHeader": {
+    "settings": "Settings",
+    "selectCrafdDonors": "Select CRAF'd Donors"
+  },
+  "dashboard": {
+    "organizationsTab": "Organizations",
+    "donorsTab": "Donors",
+    "networkTab": "Network"
+  }
+}

@@ -10,14 +10,28 @@ import { Pool, type PoolConfig, type QueryResult, type QueryResultRow } from "pg
 const SCHEMA = "funding_compass";
 
 function buildPoolConfig(): PoolConfig {
+  // Set search_path at connection startup via the PostgreSQL options parameter
+  // instead of a separate SET query, to avoid pg deprecation warnings.
+  const pgOptions = `-c search_path=${SCHEMA},public`;
+
   const databaseUrl = process.env.DATABASE_URL;
 
   if (databaseUrl) {
+    // Strip sslmode from the connection string to avoid pg-connection-string
+    // SSL warnings; SSL behaviour is controlled explicitly via ssl option below.
+    const url = new URL(databaseUrl);
+    url.searchParams.delete("sslmode");
+    url.searchParams.delete("uselibpqcompat");
     return {
-      connectionString: databaseUrl,
+      connectionString: url.toString(),
       ssl: { rejectUnauthorized: false },
-      max: 10,
-      idleTimeoutMillis: 30_000,
+      options: pgOptions,
+      // Vercel serverless: keep max=1 to avoid exhausting Azure PostgreSQL's
+      // connection limit. Each cold start creates a new pool, so multiple
+      // concurrent function instances × a larger pool = connection storm.
+      max: 1,
+      allowExitOnIdle: true,
+      idleTimeoutMillis: 5_000,
       connectionTimeoutMillis: 10_000,
     };
   }
@@ -42,8 +56,10 @@ function buildPoolConfig(): PoolConfig {
     user,
     password,
     ssl: { rejectUnauthorized: false },
-    max: 10,
-    idleTimeoutMillis: 30_000,
+    options: pgOptions,
+    max: 1,
+    allowExitOnIdle: true,
+    idleTimeoutMillis: 5_000,
     connectionTimeoutMillis: 10_000,
   };
 }
@@ -54,11 +70,6 @@ let pool: Pool | null = null;
 function getPool(): Pool {
   if (!pool) {
     pool = new Pool(buildPoolConfig());
-
-    // Set search_path so we don't need to prefix every table
-    pool.on("connect", (client) => {
-      client.query(`SET search_path TO ${SCHEMA}, public`);
-    });
 
     pool.on("error", (err) => {
       console.error("Unexpected database pool error:", err);
@@ -108,7 +119,6 @@ export async function withTransaction<T>(
 ): Promise<T> {
   const client = await getPool().connect();
   try {
-    await client.query(`SET search_path TO ${SCHEMA}, public`);
     await client.query("BEGIN");
 
     const txQuery = async <R extends QueryResultRow = QueryResultRow>(
