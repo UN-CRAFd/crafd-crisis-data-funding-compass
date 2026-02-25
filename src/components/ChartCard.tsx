@@ -37,11 +37,11 @@ interface LabelProps {
 // Helper function to measure text width
 const measureTextWidth = (text: string, fontSize: number = 13): number => {
   if (typeof document === "undefined") return text.length * 8; // Fallback for SSR
-  
+
   const canvas = document.createElement("canvas");
   const ctx = canvas.getContext("2d");
   if (!ctx) return text.length * 8;
-  
+
   ctx.font = `${fontSize}px -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial`;
   const metrics = ctx.measureText(text);
   return metrics.width;
@@ -63,16 +63,14 @@ const ChartCard = React.memo(function ChartCard({
     if (data.length === 0) return;
 
     // Measure all label widths
-    const labelWidths = data.map((entry) =>
-      measureTextWidth(entry.name, 13)
-    );
+    const labelWidths = data.map((entry) => measureTextWidth(entry.name, 13));
 
     // Get the maximum width and add padding
     const maxLabelWidth = Math.max(...labelWidths);
     const padding = 16; // Padding on both sides
     const calculatedWidth = Math.max(
       maxLabelWidth + padding,
-      100 // Minimum width
+      100, // Minimum width
     );
 
     // Cap the maximum width to prevent extreme cases
@@ -122,7 +120,7 @@ const ChartCard = React.memo(function ChartCard({
   const originalWidth = 240;
   const originalMarginLeft = -17;
   const dynamicLeftMargin = Math.round(
-    originalMarginLeft * (calculatedYAxisWidth / originalWidth)
+    originalMarginLeft * (calculatedYAxisWidth / originalWidth),
   );
 
   return (

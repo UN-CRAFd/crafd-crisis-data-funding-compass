@@ -12,7 +12,9 @@ export async function GET() {
   try {
     const mappings = await getThemeMappings();
     return NextResponse.json(mappings, {
-      headers: { "Cache-Control": "s-maxage=3600, stale-while-revalidate=7200" },
+      headers: {
+        "Cache-Control": "s-maxage=3600, stale-while-revalidate=7200",
+      },
     });
   } catch (error) {
     console.error("Themes API error:", error);

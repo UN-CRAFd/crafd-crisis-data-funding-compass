@@ -82,7 +82,7 @@ export default function ProjectModal({
   useEffect(() => {
     Promise.all([
       getThemeToTypeMapping(),
-      fetch("/api/themes/descriptions").then((r) => r.ok ? r.json() : {}),
+      fetch("/api/themes/descriptions").then((r) => (r.ok ? r.json() : {})),
     ])
       .then(([themeToType, descs]) => {
         setThemeToTypeMapping(themeToType);

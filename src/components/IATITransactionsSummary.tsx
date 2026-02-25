@@ -41,7 +41,7 @@ export function IATITransactionsSummary({
 
   return (
     <div className="space-y-2">
-      <div className="text-xs font-medium uppercase text-slate-600">
+      <div className="text-xs font-medium text-slate-600 uppercase">
         Transactions
       </div>
       <div className="rounded-md bg-slate-50 p-3">
@@ -78,7 +78,7 @@ export function IATITransactionsSummary({
                         {formatCurrency(data.total_value)}
                       </span>
                     </div>
-                  )
+                  ),
                 )}
               </div>
             </div>

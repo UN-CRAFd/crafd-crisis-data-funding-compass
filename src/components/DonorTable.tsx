@@ -79,7 +79,10 @@ const donorAliasesFor = (d?: string): string[] => {
 // ─── Agency helpers ────────────────────────────────────────────────────────────
 
 /** Returns true if any value in `values` matches any of `aliases` via slug-compare or normalised equality */
-function fieldValuesMatchAliases(values: unknown[], aliases: string[]): boolean {
+function fieldValuesMatchAliases(
+  values: unknown[],
+  aliases: string[],
+): boolean {
   return values.some((v) => {
     const candidate = String(v || "");
     return aliases.some((alias) => {
@@ -133,7 +136,10 @@ function collectRawAgencyName(agencyRaw: any, into: Set<string>): void {
 }
 
 /** Returns all agency names from `rawAgencies` that match the given `donor` */
-function getMatchingAgencyNames(rawAgencies: any[], donor: string): Set<string> {
+function getMatchingAgencyNames(
+  rawAgencies: any[],
+  donor: string,
+): Set<string> {
   const aliases = donorAliasesFor(donor);
   const result = new Set<string>();
   rawAgencies.forEach((a) => {
@@ -174,14 +180,16 @@ const AgencyBadgeList: React.FC<AgencyBadgeListProps> = ({
           variant="agency"
           className={faint ? "opacity-40" : ""}
           title={
-            faint ? `${agency} (Project-level agency)` : `Funding Agency: ${agency}`
+            faint
+              ? `${agency} (Project-level agency)`
+              : `Funding Agency: ${agency}`
           }
         />
       ))}
       {overflow > 0 && (
         <button
           onClick={onToggle}
-          className="text-xs text-muted-foreground hover:text-foreground transition-colors"
+          className="text-muted-foreground hover:text-foreground text-xs transition-colors"
         >
           {isExpanded ? "Show less" : `+${overflow} more`}
         </button>
@@ -204,7 +212,7 @@ const DonorTableComponent: React.FC<DonorTableProps> = ({
   const [expandedDonors, setExpandedDonors] = useState<Set<string>>(new Set());
   const [expandedOrgs, setExpandedOrgs] = useState<Set<string>>(new Set());
   const [expandedAgencies, setExpandedAgencies] = useState<Set<string>>(
-    new Set()
+    new Set(),
   );
   const [logoErrors, setLogoErrors] = useState<Set<string>>(new Set());
 
@@ -382,120 +390,109 @@ const DonorTableComponent: React.FC<DonorTableProps> = ({
 
   return (
     <div className="space-y-2 transition-all duration-500">
-      {donorData.map(({ donor, organizations, totalOrgs, totalProjects, totalAgencies }) => {
-        const isDonorExpanded = expandedDonors.has(donor);
-        const isSelected = combinedDonors.includes(donor);
+      {donorData.map(
+        ({ donor, organizations, totalOrgs, totalProjects, totalAgencies }) => {
+          const isDonorExpanded = expandedDonors.has(donor);
+          const isSelected = combinedDonors.includes(donor);
 
-        return (
-          <Collapsible
-            key={donor}
-            open={isDonorExpanded}
-            onOpenChange={() => {
-              const newExpanded = new Set(expandedDonors);
-              if (isDonorExpanded) {
-                newExpanded.delete(donor);
-              } else {
-                newExpanded.add(donor);
-              }
-              setExpandedDonors(newExpanded);
-            }}
-            className="transition-all duration-500 ease-out"
-          >
-            <CollapsibleTrigger className="w-full">
-              <div
-                className={`flex flex-col rounded-lg border p-3 sm:flex-row sm:justify-between sm:p-4 ${
-                  isSelected
-                    ? "border-[var(--brand-primary)] bg-[var(--brand-bg-lighter)] hover:bg-[var(--brand-bg-light)]/90"
-                    : "border-slate-200 bg-slate-50/30 hover:bg-slate-50/70"
-                } min-h-[60px] animate-in cursor-pointer gap-3 fade-in sm:gap-0`}
-              >
-                <div className="flex flex-1 items-center space-x-3">
-                  <CountryFlag
-                    country={donor}
-                    width={32}
-                    height={32}
-                    className="h-8 w-8 flex-shrink-0 object-cover"
-                  />
-                  <div className="flex h-4 w-4 flex-shrink-0 items-center justify-center">
-                    {isDonorExpanded ? (
-                      <ChevronDown className="h-4 w-4 text-slate-500" />
-                    ) : (
-                      <ChevronRight className="h-4 w-4 text-slate-500" />
-                    )}
+          return (
+            <Collapsible
+              key={donor}
+              open={isDonorExpanded}
+              onOpenChange={() => {
+                const newExpanded = new Set(expandedDonors);
+                if (isDonorExpanded) {
+                  newExpanded.delete(donor);
+                } else {
+                  newExpanded.add(donor);
+                }
+                setExpandedDonors(newExpanded);
+              }}
+              className="transition-all duration-500 ease-out"
+            >
+              <CollapsibleTrigger className="w-full">
+                <div
+                  className={`flex flex-col rounded-lg border p-3 sm:flex-row sm:justify-between sm:p-4 ${
+                    isSelected
+                      ? "border-[var(--brand-primary)] bg-[var(--brand-bg-lighter)] hover:bg-[var(--brand-bg-light)]/90"
+                      : "border-slate-200 bg-slate-50/30 hover:bg-slate-50/70"
+                  } min-h-[60px] animate-in cursor-pointer gap-3 fade-in sm:gap-0`}
+                >
+                  <div className="flex flex-1 items-center space-x-3">
+                    <CountryFlag
+                      country={donor}
+                      width={32}
+                      height={32}
+                      className="h-8 w-8 flex-shrink-0 object-cover"
+                    />
+                    <div className="flex h-4 w-4 flex-shrink-0 items-center justify-center">
+                      {isDonorExpanded ? (
+                        <ChevronDown className="h-4 w-4 text-slate-500" />
+                      ) : (
+                        <ChevronRight className="h-4 w-4 text-slate-500" />
+                      )}
+                    </div>
+                    <div className="mt-0 mb-0 min-w-0 flex-1 space-y-0 text-left">
+                      <h3
+                        className={`cursor-pointer text-sm font-medium transition-colors hover:text-[var(--brand-primary)] sm:text-base ${
+                          isSelected
+                            ? "text-[var(--brand-primary)]"
+                            : "text-slate-900"
+                        }`}
+                        onClick={(e) => {
+                          e.stopPropagation();
+                          if (onOpenDonorModal) {
+                            onOpenDonorModal(donor);
+                          }
+                        }}
+                      >
+                        {donor}
+                      </h3>
+                      <div className="mt-0 text-xs text-slate-500 sm:text-sm">
+                        {totalAgencies} donor agenc
+                        {totalAgencies !== 1 ? "ies" : "y"} · {totalOrgs}{" "}
+                        organization{totalOrgs !== 1 ? "s" : ""} ·{" "}
+                        {totalProjects} product{totalProjects !== 1 ? "s" : ""}
+                      </div>
+                    </div>
                   </div>
-                  <div className="mt-0 mb-0 min-w-0 flex-1 space-y-0 text-left">
-                    <h3
-                      className={`cursor-pointer text-sm font-medium transition-colors hover:text-[var(--brand-primary)] sm:text-base ${
-                        isSelected
-                          ? "text-[var(--brand-primary)]"
-                          : "text-slate-900"
-                      }`}
+                  <div className="flex min-w-[100px] flex-shrink-0 flex-col items-end justify-between self-stretch">
+                    <Button
+                      asChild
+                      variant="outline"
+                      size="sm"
                       onClick={(e) => {
                         e.stopPropagation();
                         if (onOpenDonorModal) {
                           onOpenDonorModal(donor);
                         }
                       }}
+                      className="hidden h-6 items-center justify-center gap-1 rounded-md bg-[var(--badge-slate-text)] px-2 text-[10px] text-[var(--badge-slate-bg)] duration-150 hover:bg-slate-400 sm:inline-flex"
                     >
-                      {donor}
-                    </h3>
-                    <div className="mt-0 text-xs text-slate-500 sm:text-sm">
-                      {totalAgencies} donor agenc{totalAgencies !== 1 ? "ies" : "y"} ·{" "}
-                      {totalOrgs} organization{totalOrgs !== 1 ? "s" : ""} ·{" "}
-                      {totalProjects} product{totalProjects !== 1 ? "s" : ""}
+                      <div className="hidden items-center justify-center gap-1 border-none sm:inline-flex">
+                        <Info className="h-3 w-3" />
+                        <span>Details</span>
+                      </div>
+                    </Button>
+                    <div className="text-xs whitespace-nowrap text-slate-400 sm:text-xs">
+                      {isDonorExpanded
+                        ? `Showing ${totalOrgs} organization${totalOrgs === 1 ? "" : "s"}`
+                        : `Show ${totalOrgs} organization${totalOrgs === 1 ? "" : "s"}`}
                     </div>
                   </div>
                 </div>
-                <div className="flex min-w-[100px] flex-shrink-0 flex-col items-end justify-between self-stretch">
-                  <Button
-                    asChild
-                    variant="outline"
-                    size="sm"
-                    onClick={(e) => {
-                      e.stopPropagation();
-                      if (onOpenDonorModal) {
-                        onOpenDonorModal(donor);
-                      }
-                    }}
-                    className="hidden h-6 items-center justify-center gap-1 rounded-md bg-[var(--badge-slate-text)] px-2 text-[10px] text-[var(--badge-slate-bg)] duration-150 hover:bg-slate-400 sm:inline-flex"
-                  >
-                    <div className="hidden items-center justify-center gap-1 border-none sm:inline-flex">
-                      <Info className="h-3 w-3" />
-                      <span>Details</span>
-                    </div>
-                  </Button>
-                  <div className="text-xs whitespace-nowrap text-slate-400 sm:text-xs">
-                    {isDonorExpanded
-                      ? `Showing ${totalOrgs} organization${totalOrgs === 1 ? "" : "s"}`
-                      : `Show ${totalOrgs} organization${totalOrgs === 1 ? "" : "s"}`}
-                  </div>
-                </div>
-              </div>
-            </CollapsibleTrigger>
-            <CollapsibleContent>
-              <div className="mt-2 ml-4 space-y-2 sm:ml-14">
-                {organizations.map(({ org, projects, isOrgLevel }) => {
-                  const isOrgExpanded = expandedOrgs.has(org.id);
-                  const hasProjects = projects.length > 0;
+              </CollapsibleTrigger>
+              <CollapsibleContent>
+                <div className="mt-2 ml-4 space-y-2 sm:ml-14">
+                  {organizations.map(({ org, projects, isOrgLevel }) => {
+                    const isOrgExpanded = expandedOrgs.has(org.id);
+                    const hasProjects = projects.length > 0;
 
-                  return (
-                    <Collapsible
-                      key={org.id}
-                      open={isOrgExpanded}
-                      onOpenChange={() => {
-                        const newExpanded = new Set(expandedOrgs);
-                        if (isOrgExpanded) {
-                          newExpanded.delete(org.id);
-                        } else {
-                          newExpanded.add(org.id);
-                        }
-                        setExpandedOrgs(newExpanded);
-                      }}
-                      className="transition-all duration-500 ease-out"
-                    >
-                      <div 
-                        className="w-full cursor-pointer"
-                        onClick={() => {
+                    return (
+                      <Collapsible
+                        key={org.id}
+                        open={isOrgExpanded}
+                        onOpenChange={() => {
                           const newExpanded = new Set(expandedOrgs);
                           if (isOrgExpanded) {
                             newExpanded.delete(org.id);
@@ -504,165 +501,222 @@ const DonorTableComponent: React.FC<DonorTableProps> = ({
                           }
                           setExpandedOrgs(newExpanded);
                         }}
+                        className="transition-all duration-500 ease-out"
                       >
-                        <OrganizationBox
-                          orgId={org.id}
-                          organizationName={org.organizationName}
-                          nestedOrganizations={nestedOrganizations}
-                          organizationsTable={organizationsTable}
-                          isExpanded={isOrgExpanded}
-                          hasProjects={hasProjects}
-                          onOpenOrganizationModal={onOpenOrganizationModal}
-                          logoErrors={logoErrors}
-                          onLogoError={handleLogoError}
-                          headingLevel="h4"
-                          showDetailsButton={true}
-                          projectCount={projects.length}
-                          projectLabel={projects.length === 1 ? "product" : "products"}
+                        <div
+                          className="w-full cursor-pointer"
+                          onClick={() => {
+                            const newExpanded = new Set(expandedOrgs);
+                            if (isOrgExpanded) {
+                              newExpanded.delete(org.id);
+                            } else {
+                              newExpanded.add(org.id);
+                            }
+                            setExpandedOrgs(newExpanded);
+                          }}
                         >
-                          {/* Show agencies for project-only orgs (faint, all projects combined) */}
-                          {!isOrgLevel && (() => {
-                            const key = `org-project-${org.id}-${donor}`;
-                            const nestedOrg = nestedOrganizations.find((n) => n.id === org.id);
-                            const allProjectAgencies = projects.flatMap((p) =>
-                              nestedOrg?.projects?.find((np: any) => np.id === p.id)?.agencies ?? []
-                            );
-                            const agencyNames = Array.from(
-                              getMatchingAgencyNames(allProjectAgencies, donor)
-                            ).sort();
-                            if (agencyNames.length === 0) return null;
-                            return (
-                              <AgencyBadgeList
-                                agencies={agencyNames}
-                                expandKey={key}
-                                isExpanded={expandedAgencies.has(key)}
-                                onToggle={(e) => {
-                                  e.stopPropagation();
-                                  setExpandedAgencies((prev) => {
-                                    const next = new Set(prev);
-                                    next.has(key) ? next.delete(key) : next.add(key);
-                                    return next;
+                          <OrganizationBox
+                            orgId={org.id}
+                            organizationName={org.organizationName}
+                            nestedOrganizations={nestedOrganizations}
+                            organizationsTable={organizationsTable}
+                            isExpanded={isOrgExpanded}
+                            hasProjects={hasProjects}
+                            onOpenOrganizationModal={onOpenOrganizationModal}
+                            logoErrors={logoErrors}
+                            onLogoError={handleLogoError}
+                            headingLevel="h4"
+                            showDetailsButton={true}
+                            projectCount={projects.length}
+                            projectLabel={
+                              projects.length === 1 ? "product" : "products"
+                            }
+                          >
+                            {/* Show agencies for project-only orgs (faint, all projects combined) */}
+                            {!isOrgLevel &&
+                              (() => {
+                                const key = `org-project-${org.id}-${donor}`;
+                                const nestedOrg = nestedOrganizations.find(
+                                  (n) => n.id === org.id,
+                                );
+                                const allProjectAgencies = projects.flatMap(
+                                  (p) =>
+                                    nestedOrg?.projects?.find(
+                                      (np: any) => np.id === p.id,
+                                    )?.agencies ?? [],
+                                );
+                                const agencyNames = Array.from(
+                                  getMatchingAgencyNames(
+                                    allProjectAgencies,
+                                    donor,
+                                  ),
+                                ).sort();
+                                if (agencyNames.length === 0) return null;
+                                return (
+                                  <AgencyBadgeList
+                                    agencies={agencyNames}
+                                    expandKey={key}
+                                    isExpanded={expandedAgencies.has(key)}
+                                    onToggle={(e) => {
+                                      e.stopPropagation();
+                                      setExpandedAgencies((prev) => {
+                                        const next = new Set(prev);
+                                        next.has(key)
+                                          ? next.delete(key)
+                                          : next.add(key);
+                                        return next;
+                                      });
+                                    }}
+                                    faint
+                                  />
+                                );
+                              })()}
+                            {/* Org-level agencies (normal opacity) */}
+                            {(() => {
+                              const key = `org-${org.id}`;
+                              const nestedOrg = nestedOrganizations.find(
+                                (n) => n.id === org.id,
+                              );
+                              const agencyNames = Array.from(
+                                getMatchingAgencyNames(
+                                  nestedOrg?.agencies ?? [],
+                                  donor,
+                                ),
+                              ).sort();
+                              if (agencyNames.length === 0) return null;
+                              return (
+                                <AgencyBadgeList
+                                  agencies={agencyNames}
+                                  expandKey={key}
+                                  isExpanded={expandedAgencies.has(key)}
+                                  onToggle={(e) => {
+                                    e.stopPropagation();
+                                    setExpandedAgencies((prev) => {
+                                      const next = new Set(prev);
+                                      next.has(key)
+                                        ? next.delete(key)
+                                        : next.add(key);
+                                      return next;
+                                    });
+                                  }}
+                                />
+                              );
+                            })()}
+                            {/* Pull up extra project-level agencies (faint), deduped against org-level ones */}
+                            {isOrgLevel &&
+                              (() => {
+                                const nestedOrg = nestedOrganizations.find(
+                                  (n) => n.id === org.id,
+                                );
+                                const orgAgencyNames = getMatchingAgencyNames(
+                                  nestedOrg?.agencies ?? [],
+                                  donor,
+                                );
+                                const aliases = donorAliasesFor(donor);
+                                const projectOnlyAgencies = new Set<string>();
+                                projects.forEach((project: ProjectData) => {
+                                  Object.entries(
+                                    project.donorAgencies || {},
+                                  ).forEach(([country, agencyList]) => {
+                                    if (
+                                      fieldValuesMatchAliases(
+                                        [country],
+                                        aliases,
+                                      )
+                                    ) {
+                                      agencyList.forEach((a) => {
+                                        const s = a.trim();
+                                        if (
+                                          s &&
+                                          s !== "Unspecified Agency" &&
+                                          !orgAgencyNames.has(s)
+                                        )
+                                          projectOnlyAgencies.add(s);
+                                      });
+                                    }
                                   });
-                                }}
-                                faint
-                              />
-                            );
-                          })()}
-                          {/* Org-level agencies (normal opacity) */}
-                          {(() => {
-                            const key = `org-${org.id}`;
-                            const nestedOrg = nestedOrganizations.find((n) => n.id === org.id);
-                            const agencyNames = Array.from(
-                              getMatchingAgencyNames(nestedOrg?.agencies ?? [], donor)
-                            ).sort();
-                            if (agencyNames.length === 0) return null;
-                            return (
-                              <AgencyBadgeList
-                                agencies={agencyNames}
-                                expandKey={key}
-                                isExpanded={expandedAgencies.has(key)}
-                                onToggle={(e) => {
-                                  e.stopPropagation();
-                                  setExpandedAgencies((prev) => {
-                                    const next = new Set(prev);
-                                    next.has(key) ? next.delete(key) : next.add(key);
-                                    return next;
-                                  });
-                                }}
-                              />
-                            );
-                          })()}
-                          {/* Pull up extra project-level agencies (faint), deduped against org-level ones */}
-                          {isOrgLevel && (() => {
-                            const nestedOrg = nestedOrganizations.find((n) => n.id === org.id);
-                            const orgAgencyNames = getMatchingAgencyNames(nestedOrg?.agencies ?? [], donor);
-                            const aliases = donorAliasesFor(donor);
-                            const projectOnlyAgencies = new Set<string>();
-                            projects.forEach((project: ProjectData) => {
-                              Object.entries(project.donorAgencies || {}).forEach(([country, agencyList]) => {
-                                if (fieldValuesMatchAliases([country], aliases)) {
-                                  agencyList.forEach((a) => {
-                                    const s = a.trim();
-                                    if (s && s !== "Unspecified Agency" && !orgAgencyNames.has(s))
-                                      projectOnlyAgencies.add(s);
-                                  });
-                                }
-                              });
-                            });
-                            if (projectOnlyAgencies.size === 0) return null;
-                            return Array.from(projectOnlyAgencies).sort().map((a, idx) => (
-                              <Badge
-                                key={`pa-pulled-${idx}`}
-                                text={a}
-                                variant="agency"
-                                className="opacity-40"
-                                title={`${a} (Project-level agency)`}
-                              />
-                            ));
-                          })()}
-                        </OrganizationBox>
-                      </div>
-                      <CollapsibleContent>
-                        <div className="mt-2 ml-7 space-y-2 sm:ml-14">
-                          {projects.map((project: ProjectData) => {
-                            const nestedOrg = nestedOrganizations.find(
-                              (n: any) => n.id === org.id,
-                            );
-                            const nestedProject = nestedOrg?.projects?.find(
-                              (p: any) => p.id === project.id,
-                            );
-                            const projectKey = nestedProject?.fields?.product_key;
-                            
-                            return (
-                              <ProjectBox
-                                key={project.id}
-                                project={project}
-                                onClick={() => {
-                                  if (projectKey) {
-                                    onOpenProjectModal(projectKey);
-                                  }
-                                }}
-                                tipsEnabled={tipsEnabled}
-                              >
-                                {/* Agency badges for this project */}
-                                {(() => {
-                                  const key = `project-${project.id}`;
-                                  const agencies = nestedProject?.agencies ?? [];
-                                  const agencyNames = Array.from(
-                                    getMatchingAgencyNames(agencies, donor)
-                                  ).sort();
-                                  if (agencyNames.length === 0) return null;
-                                  return (
-                                    <div className="mt-1 flex flex-wrap gap-1">
-                                      <AgencyBadgeList
-                                        agencies={agencyNames}
-                                        expandKey={key}
-                                        isExpanded={expandedAgencies.has(key)}
-                                        onToggle={(e) => {
-                                          e.stopPropagation();
-                                          setExpandedAgencies((prev) => {
-                                            const next = new Set(prev);
-                                            next.has(key) ? next.delete(key) : next.add(key);
-                                            return next;
-                                          });
-                                        }}
-                                      />
-                                    </div>
-                                  );
-                                })()}
-                              </ProjectBox>
-                            );
-                          })}
+                                });
+                                if (projectOnlyAgencies.size === 0) return null;
+                                return Array.from(projectOnlyAgencies)
+                                  .sort()
+                                  .map((a, idx) => (
+                                    <Badge
+                                      key={`pa-pulled-${idx}`}
+                                      text={a}
+                                      variant="agency"
+                                      className="opacity-40"
+                                      title={`${a} (Project-level agency)`}
+                                    />
+                                  ));
+                              })()}
+                          </OrganizationBox>
                         </div>
-                      </CollapsibleContent>
-                    </Collapsible>
-                  );
-                })}
-              </div>
-            </CollapsibleContent>
-          </Collapsible>
-        );
-      })}
+                        <CollapsibleContent>
+                          <div className="mt-2 ml-7 space-y-2 sm:ml-14">
+                            {projects.map((project: ProjectData) => {
+                              const nestedOrg = nestedOrganizations.find(
+                                (n: any) => n.id === org.id,
+                              );
+                              const nestedProject = nestedOrg?.projects?.find(
+                                (p: any) => p.id === project.id,
+                              );
+                              const projectKey =
+                                nestedProject?.fields?.product_key;
+
+                              return (
+                                <ProjectBox
+                                  key={project.id}
+                                  project={project}
+                                  onClick={() => {
+                                    if (projectKey) {
+                                      onOpenProjectModal(projectKey);
+                                    }
+                                  }}
+                                  tipsEnabled={tipsEnabled}
+                                >
+                                  {/* Agency badges for this project */}
+                                  {(() => {
+                                    const key = `project-${project.id}`;
+                                    const agencies =
+                                      nestedProject?.agencies ?? [];
+                                    const agencyNames = Array.from(
+                                      getMatchingAgencyNames(agencies, donor),
+                                    ).sort();
+                                    if (agencyNames.length === 0) return null;
+                                    return (
+                                      <div className="mt-1 flex flex-wrap gap-1">
+                                        <AgencyBadgeList
+                                          agencies={agencyNames}
+                                          expandKey={key}
+                                          isExpanded={expandedAgencies.has(key)}
+                                          onToggle={(e) => {
+                                            e.stopPropagation();
+                                            setExpandedAgencies((prev) => {
+                                              const next = new Set(prev);
+                                              next.has(key)
+                                                ? next.delete(key)
+                                                : next.add(key);
+                                              return next;
+                                            });
+                                          }}
+                                        />
+                                      </div>
+                                    );
+                                  })()}
+                                </ProjectBox>
+                              );
+                            })}
+                          </div>
+                        </CollapsibleContent>
+                      </Collapsible>
+                    );
+                  })}
+                </div>
+              </CollapsibleContent>
+            </Collapsible>
+          );
+        },
+      )}
     </div>
   );
 };

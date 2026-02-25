@@ -23,7 +23,9 @@ export function IATIProjectsList({
   orgName,
 }: IATIProjectsListProps) {
   const [isExpanded, setIsExpanded] = useState(false);
-  const [hoveredActivityId, setHoveredActivityId] = useState<string | null>(null);
+  const [hoveredActivityId, setHoveredActivityId] = useState<string | null>(
+    null,
+  );
 
   if (!activities || activities.length === 0) {
     return null;
@@ -55,21 +57,29 @@ export function IATIProjectsList({
   };
 
   const getStatusBadge = (statusCode: string) => {
-    const statusMap: Record<string, { label: string; variant: "default" | "secondary" | "destructive" | "outline" }> = {
+    const statusMap: Record<
+      string,
+      {
+        label: string;
+        variant: "default" | "secondary" | "destructive" | "outline";
+      }
+    > = {
       "1": { label: "Pipeline", variant: "outline" },
       "2": { label: "Active", variant: "default" },
       "3": { label: "Completed", variant: "secondary" },
       "4": { label: "Suspended", variant: "destructive" },
       "5": { label: "Cancelled", variant: "destructive" },
     };
-    const status = statusMap[statusCode] || { label: statusCode, variant: "outline" };
+    const status = statusMap[statusCode] || {
+      label: statusCode,
+      variant: "outline",
+    };
     return <Badge variant={status.variant}>{status.label}</Badge>;
   };
 
   const showCollapsible = activities.length > 5;
-  const displayedActivities = showCollapsible && !isExpanded
-    ? activities.slice(0, 5)
-    : activities;
+  const displayedActivities =
+    showCollapsible && !isExpanded ? activities.slice(0, 5) : activities;
 
   return (
     <div className="space-y-2">
@@ -80,7 +90,7 @@ export function IATIProjectsList({
             window.open(
               `https://d-portal.org/q.html?aid=${activity.iati_identifier}`,
               "_blank",
-              "noopener,noreferrer"
+              "noopener,noreferrer",
             );
           }}
           onMouseEnter={() => setHoveredActivityId(activity.iati_identifier)}

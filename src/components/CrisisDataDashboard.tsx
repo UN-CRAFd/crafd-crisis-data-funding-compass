@@ -54,7 +54,7 @@ import {
   Lightbulb,
   Landmark,
   UserRoundPlus,
-  Compass
+  Compass,
 } from "lucide-react";
 import {
   calculateOrganizationTypesFromOrganizationsWithProjects,
@@ -134,7 +134,7 @@ const sortOrganizations = (
   a: OrganizationWithProjects,
   b: OrganizationWithProjects,
   sortBy: "name" | "donors" | "assets" | "funding",
-  sortDirection: "asc" | "desc"
+  sortDirection: "asc" | "desc",
 ): number => {
   let comparison = 0;
   switch (sortBy) {
@@ -258,8 +258,7 @@ const CrisisDataDashboard = ({
   try {
     const genContContext = useGeneralContributions();
     showGeneralContributions = genContContext.showGeneralContributions;
-    setShowGeneralContributions =
-      genContContext.setShowGeneralContributions;
+    setShowGeneralContributions = genContContext.setShowGeneralContributions;
   } catch (e) {
     // GeneralContributionsProvider not available - use defaults
   }
@@ -304,7 +303,9 @@ const CrisisDataDashboard = ({
   const [pdfExportLoading, setPDFExportLoading] = useState(false);
   const [exportMenuOpen, setExportMenuOpen] = useState(false);
   const [logoErrors, setLogoErrors] = useState<Set<string>>(new Set());
-  const [expandedMobileStatCard, setExpandedMobileStatCard] = useState<number | null>(null);
+  const [expandedMobileStatCard, setExpandedMobileStatCard] = useState<
+    number | null
+  >(null);
 
   // Memoized callback for logo errors to prevent recreation on each render
   const handleLogoError = useCallback((orgId: string) => {
@@ -641,21 +642,23 @@ const CrisisDataDashboard = ({
   });
 
   // Generic export handler factory
-  const createExportHandler = (
-    exportFn: typeof exportViewAsCSV | typeof exportViewAsXLSX,
-    setLoading: (loading: boolean) => void,
-    errorMessage: string,
-  ) => async () => {
-    try {
-      setLoading(true);
-      await exportFn(organizationsWithProjects, getExportOptions());
-    } catch (error) {
-      console.error(`Export failed:`, error);
-      alert(errorMessage);
-    } finally {
-      setLoading(false);
-    }
-  };
+  const createExportHandler =
+    (
+      exportFn: typeof exportViewAsCSV | typeof exportViewAsXLSX,
+      setLoading: (loading: boolean) => void,
+      errorMessage: string,
+    ) =>
+    async () => {
+      try {
+        setLoading(true);
+        await exportFn(organizationsWithProjects, getExportOptions());
+      } catch (error) {
+        console.error(`Export failed:`, error);
+        alert(errorMessage);
+      } finally {
+        setLoading(false);
+      }
+    };
 
   const handleExportCSV = createExportHandler(
     exportViewAsCSV,
@@ -673,7 +676,7 @@ const CrisisDataDashboard = ({
   if (loading) {
     return (
       <div className="flex min-h-screen items-center justify-center bg-slate-50">
-        <Compass className="h-10 w-10 animate-spin text-[var(--brand-primary)] mr-3" />
+        <Compass className="mr-3 h-10 w-10 animate-spin text-[var(--brand-primary)]" />
         <span className="text-slate-600">{labels.loading.message}</span>
       </div>
     );
@@ -832,7 +835,8 @@ const CrisisDataDashboard = ({
                 , through the <strong>{agencyString}</strong>
               </>
             )}
-            , together with <strong>{otherDonorsCount}</strong> other {otherDonorLabel}, {verb}
+            , together with <strong>{otherDonorsCount}</strong> other{" "}
+            {otherDonorLabel}, {verb}
           </React.Fragment>,
         );
       } else {
@@ -844,8 +848,7 @@ const CrisisDataDashboard = ({
               <>
                 , through the <strong>{agencyString}</strong>
               </>
-            )}
-            {" "}
+            )}{" "}
             {verb}
           </React.Fragment>,
         );
@@ -865,7 +868,10 @@ const CrisisDataDashboard = ({
     );
 
     // Add project count
-    const projectLabel = stats.dataProjects !== 1 ? labels.product.plural : labels.product.singular;
+    const projectLabel =
+      stats.dataProjects !== 1
+        ? labels.product.plural
+        : labels.product.singular;
     elements.push(
       <React.Fragment key="projects">
         {" "}
@@ -945,12 +951,12 @@ const CrisisDataDashboard = ({
 
           {/* Statistics Cards - Configuration-driven rendering */}
           {(() => {
-            const donorChartFootnote = combinedDonors.length > 0
-              ? `Showing ${topDonors.length} donor${topDonors.length === 1 ? "" : "s"} co-financing the most organizations together with ${formatDonorList(combinedDonors)}`
-              : `Showing ${topDonors.length} donor${topDonors.length === 1 ? "" : "s"} funding the most organizations in the current view`;
+            const donorChartFootnote =
+              combinedDonors.length > 0
+                ? `Showing ${topDonors.length} donor${topDonors.length === 1 ? "" : "s"} co-financing the most organizations together with ${formatDonorList(combinedDonors)}`
+                : `Showing ${topDonors.length} donor${topDonors.length === 1 ? "" : "s"} funding the most organizations in the current view`;
 
             const statCardsConfig = [
-    
               {
                 icon: <Building2 style={{ color: "var(--brand-primary)" }} />,
                 title: labels.stats.dataProviders.title,
@@ -961,7 +967,7 @@ const CrisisDataDashboard = ({
                 chartData: organizationTypesChartData,
                 mobileWidth: "w-[290px]",
               },
-                        {
+              {
                 icon: <Globe style={{ color: "var(--brand-primary)" }} />,
                 title: labels.stats.donorCountries.title,
                 value: stats.donorCountries,
@@ -985,7 +991,11 @@ const CrisisDataDashboard = ({
               },
             ];
 
-            const renderStatCard = (config: typeof statCardsConfig[0], key: number, withChildren: boolean = true) => (
+            const renderStatCard = (
+              config: (typeof statCardsConfig)[0],
+              key: number,
+              withChildren: boolean = true,
+            ) => (
               <StatCard
                 key={key}
                 icon={config.icon}
@@ -994,9 +1004,13 @@ const CrisisDataDashboard = ({
                 label={config.label}
                 colorScheme="amber"
                 tooltip={config.tooltip}
-                onExpandChange={withChildren ? undefined : (expanded) => {
-                  setExpandedMobileStatCard(expanded ? key : null);
-                }}
+                onExpandChange={
+                  withChildren
+                    ? undefined
+                    : (expanded) => {
+                        setExpandedMobileStatCard(expanded ? key : null);
+                      }
+                }
               >
                 {withChildren && (
                   <ChartCard
@@ -1010,7 +1024,10 @@ const CrisisDataDashboard = ({
               </StatCard>
             );
 
-            const expandedCardConfig = expandedMobileStatCard !== null ? statCardsConfig[expandedMobileStatCard] : null;
+            const expandedCardConfig =
+              expandedMobileStatCard !== null
+                ? statCardsConfig[expandedMobileStatCard]
+                : null;
 
             return (
               <>
@@ -1019,7 +1036,10 @@ const CrisisDataDashboard = ({
                   <div className="relative overflow-x-hidden">
                     <div className="scrollbar-hide flex snap-x snap-mandatory gap-4 overflow-x-auto px-1 pb-2">
                       {statCardsConfig.map((config, idx) => (
-                        <div key={idx} className={`${config.mobileWidth} flex-shrink-0 snap-center`}>
+                        <div
+                          key={idx}
+                          className={`${config.mobileWidth} flex-shrink-0 snap-center`}
+                        >
                           {renderStatCard(config, idx, false)}
                         </div>
                       ))}
@@ -1041,7 +1061,9 @@ const CrisisDataDashboard = ({
 
                 {/* Desktop Grid */}
                 <div className="hidden gap-4 sm:grid sm:grid-cols-2 sm:gap-[var(--spacing-section)] lg:grid-cols-3">
-                  {statCardsConfig.map((config, idx) => renderStatCard(config, idx, true))}
+                  {statCardsConfig.map((config, idx) =>
+                    renderStatCard(config, idx, true),
+                  )}
                 </div>
               </>
             );
@@ -1049,112 +1071,129 @@ const CrisisDataDashboard = ({
 
           {/* Main Layout - Full Width */}
           <div>
-              {/* View Tabs - Outside Card */}
-              <Tabs
-                value={activeView}
-                onValueChange={(v) =>
-                  setActiveView(v as "table" | "donors" | "network")
-                }
-                className="flex w-full flex-col gap-0 -mb-px"
-              >
-                {/* Tab List with Controls - Unified */}
-                <TabsList className="trapezoid-tabs-container h-auto gap-0 p-0 rounded-none border-0 bg-transparent p-0 w-full justify-between">
-                  {/* Left Side Tabs */}
-                  <div className="flex items-center gap-0">
-                    <TooltipProvider delayDuration={0}>
-                      {TABS.map(({ value, label, Icon, tooltip }) => (
-                        <div key={value} className={value === "network" || value === "donors" ? "hidden sm:block" : ""}>
-                          {tipsEnabled ? (
-                            <TooltipUI>
-                              <TooltipTrigger asChild>
-                                <div>
-                                  <TabsTrigger
-                                    value={value}
-                                    className="trapezoid-tab -ml-4 sm:-ml-8"
-                                  >
-                                    <SectionHeader icon={<Icon />} title={label} isActive={value === activeView} />
-                                  </TabsTrigger>
-                                </div>
-                              </TooltipTrigger>
-                              <TooltipContent
-                                side="bottom"
-                                align="center"
-                                className="max-w-100 rounded-lg border border-slate-200 bg-white p-3 text-xs text-slate-800"
-                                sideOffset={5}
-                                avoidCollisions={true}
-                                style={TOOLTIP_STYLE}
-                              >
-                                {tooltip}
-                              </TooltipContent>
-                            </TooltipUI>
+            {/* View Tabs - Outside Card */}
+            <Tabs
+              value={activeView}
+              onValueChange={(v) =>
+                setActiveView(v as "table" | "donors" | "network")
+              }
+              className="-mb-px flex w-full flex-col gap-0"
+            >
+              {/* Tab List with Controls - Unified */}
+              <TabsList className="trapezoid-tabs-container h-auto w-full justify-between gap-0 rounded-none border-0 bg-transparent p-0">
+                {/* Left Side Tabs */}
+                <div className="flex items-center gap-0">
+                  <TooltipProvider delayDuration={0}>
+                    {TABS.map(({ value, label, Icon, tooltip }) => (
+                      <div
+                        key={value}
+                        className={
+                          value === "network" || value === "donors"
+                            ? "hidden sm:block"
+                            : ""
+                        }
+                      >
+                        {tipsEnabled ? (
+                          <TooltipUI>
+                            <TooltipTrigger asChild>
+                              <div>
+                                <TabsTrigger
+                                  value={value}
+                                  className="trapezoid-tab -ml-4 sm:-ml-8"
+                                >
+                                  <SectionHeader
+                                    icon={<Icon />}
+                                    title={label}
+                                    isActive={value === activeView}
+                                  />
+                                </TabsTrigger>
+                              </div>
+                            </TooltipTrigger>
+                            <TooltipContent
+                              side="bottom"
+                              align="center"
+                              className="max-w-100 rounded-lg border border-slate-200 bg-white p-3 text-xs text-slate-800"
+                              sideOffset={5}
+                              avoidCollisions={true}
+                              style={TOOLTIP_STYLE}
+                            >
+                              {tooltip}
+                            </TooltipContent>
+                          </TooltipUI>
+                        ) : (
+                          <div>
+                            <TabsTrigger
+                              value={value}
+                              className="trapezoid-tab -ml-4 sm:-ml-8"
+                            >
+                              <SectionHeader
+                                icon={<Icon />}
+                                title={label}
+                                isActive={value === activeView}
+                              />
+                            </TabsTrigger>
+                          </div>
+                        )}
+                      </div>
+                    ))}
+                  </TooltipProvider>
+                </div>
+
+                {/* Sort and Settings Trapezoid - Right-aligned */}
+                <div className="flex animate-in items-center gap-0 duration-300 slide-in-from-right-5 fade-in">
+                  {/* Sort Dropdown Tab */}
+                  {(activeView === "table" || activeView === "donors") && (
+                    <div className="hidden sm:block">
+                      {/* Trapezoid Container */}
+                      <div className="trapezoid-tab trapezoid-tab-white flex items-center">
+                        {/* Sort Direction Button */}
+                        <button
+                          onClick={() => {
+                            const newDirection =
+                              sortDirection === "asc" ? "desc" : "asc";
+                            onSortChange(sortBy, newDirection);
+                          }}
+                          title={
+                            sortDirection === "asc"
+                              ? "Sort ascending"
+                              : "Sort descending"
+                          }
+                          className="p-0 transition-opacity hover:opacity-70"
+                        >
+                          {sortDirection === "asc" ? (
+                            <ArrowUpWideNarrow className="h-4 w-4" />
                           ) : (
-                            <div>
-                              <TabsTrigger
-                                value={value}
-                                className="trapezoid-tab -ml-4 sm:-ml-8"
-                              >
-                                <SectionHeader icon={<Icon />} title={label} isActive={value === activeView} />
-                              </TabsTrigger>
-                            </div>
+                            <ArrowDownWideNarrow className="h-4 w-4" />
                           )}
-                        </div>
-                      ))}
-                    </TooltipProvider>
-                  </div>
+                        </button>
 
-                  {/* Sort and Settings Trapezoid - Right-aligned */}
-                  <div className="animate-in duration-300 slide-in-from-right-5 fade-in flex items-center gap-0">
-                    {/* Sort Dropdown Tab */}
-                    {(activeView === "table" || activeView === "donors") && (
-                      <div className="hidden sm:block">
-                        {/* Trapezoid Container */}
-                        <div className="trapezoid-tab trapezoid-tab-white flex items-center">
-                          {/* Sort Direction Button */}
-                          <button
-                            onClick={() => {
-                              const newDirection =
-                                sortDirection === "asc" ? "desc" : "asc";
-                              onSortChange(sortBy, newDirection);
-                            }}
-                            title={
-                              sortDirection === "asc"
-                                ? "Sort ascending"
-                                : "Sort descending"
-                            }
-                            className="p-0 hover:opacity-70 transition-opacity"
-                          >
-                            {sortDirection === "asc" ? (
-                              <ArrowUpWideNarrow className="h-4 w-4" />
-                            ) : (
-                              <ArrowDownWideNarrow className="h-4 w-4" />
-                            )}
-                          </button>
+                        {/* Sort Field Dropdown */}
+                        <DropdownMenu
+                          onOpenChange={(open) => setSortMenuOpen(open)}
+                        >
+                          <DropdownMenuTrigger asChild>
+                            <button className="flex items-center gap-0 border-none bg-transparent p-0 transition-opacity hover:opacity-70">
+                              {/* Sort Field Text */}
+                              <span className="font-roboto ml-2 text-sm font-semibold">
+                                {sortBy === "name"
+                                  ? "Alphabetically"
+                                  : sortBy === "donors"
+                                    ? activeView === "donors"
+                                      ? "Organizations"
+                                      : "Donors"
+                                    : sortBy === "assets"
+                                      ? labels.product.capitalizedPlural
+                                      : "Funding"}
+                              </span>
 
-                          {/* Sort Field Dropdown */}
-                          <DropdownMenu onOpenChange={(open) => setSortMenuOpen(open)}>
-                            <DropdownMenuTrigger asChild>
-                              <button className="flex items-center gap-0 border-none bg-transparent p-0 hover:opacity-70 transition-opacity">
-                                {/* Sort Field Text */}
-                                 <span className="ml-2 text-sm font-semibold font-roboto">
-                                  {sortBy === "name"
-                                    ? "Alphabetically"
-                                    : sortBy === "donors"
-                                      ? activeView === "donors"
-                                        ? "Organizations"
-                                        : "Donors"
-                                      : sortBy === "assets"
-                                        ? labels.product.capitalizedPlural
-                                        : "Funding"}
-                                </span>
-
-                                {/* Dropdown Chevron */}
-                                <ChevronDown
-                                  className={`ml-2 h-3 w-3 shrink-0 transform opacity-50 transition-transform ${
-                                    sortMenuOpen ? "rotate-180" : ""
-                                  }`}
-                                />
-                              </button>
-                            </DropdownMenuTrigger>
+                              {/* Dropdown Chevron */}
+                              <ChevronDown
+                                className={`ml-2 h-3 w-3 shrink-0 transform opacity-50 transition-transform ${
+                                  sortMenuOpen ? "rotate-180" : ""
+                                }`}
+                              />
+                            </button>
+                          </DropdownMenuTrigger>
                           <DropdownMenuContent
                             align="end"
                             side="bottom"
@@ -1162,13 +1201,17 @@ const CrisisDataDashboard = ({
                             className="w-auto min-w-[140px] border border-slate-200 bg-white shadow-lg"
                           >
                             <DropdownMenuItem
-                              onClick={() => onSortChange("name", sortDirection)}
+                              onClick={() =>
+                                onSortChange("name", sortDirection)
+                              }
                               className="cursor-pointer py-1 text-[14px]"
                             >
                               Alphabetically
                             </DropdownMenuItem>
                             <DropdownMenuItem
-                              onClick={() => onSortChange("donors", sortDirection)}
+                              onClick={() =>
+                                onSortChange("donors", sortDirection)
+                              }
                               className="cursor-pointer py-1 text-[14px]"
                             >
                               {activeView === "donors"
@@ -1176,14 +1219,18 @@ const CrisisDataDashboard = ({
                                 : "No. of Donors"}
                             </DropdownMenuItem>
                             <DropdownMenuItem
-                              onClick={() => onSortChange("assets", sortDirection)}
+                              onClick={() =>
+                                onSortChange("assets", sortDirection)
+                              }
                               className="cursor-pointer py-1 text-[14px]"
                             >
                               No. of {labels.product.capitalizedPlural}
                             </DropdownMenuItem>
                             {activeView === "table" && (
                               <DropdownMenuItem
-                                onClick={() => onSortChange("funding", sortDirection)}
+                                onClick={() =>
+                                  onSortChange("funding", sortDirection)
+                                }
                                 className="cursor-pointer py-1 text-[14px]"
                               >
                                 Funding
@@ -1191,435 +1238,497 @@ const CrisisDataDashboard = ({
                             )}
                           </DropdownMenuContent>
                         </DropdownMenu>
-                        </div>
                       </div>
-                    )}
-
-                    {/* Settings Tab */}
-                    <div>
-                      <DropdownMenu>
-                        <DropdownMenuTrigger asChild>
-                          <button className="trapezoid-tab trapezoid-tab-white mr-0">
-                            <Settings className="h-4 w-4" />
-                          </button>
-                        </DropdownMenuTrigger>
-                            <DropdownMenuContent
-                              align="end"
-                              side="bottom"
-                              sideOffset={4}
-                              className="w-auto min-w-[250px] border border-slate-200 bg-white shadow-lg"
-                            >
-                              <DropdownMenuItem
-                                onSelect={(e) => e.preventDefault()}
-                                onClick={() =>
-                                  setTipsEnabled(!tipsEnabled)
-                                }
-                                className="cursor-pointer flex items-center justify-between py-2 px-2 text-sm hover:bg-slate-100"
-                              >
-                                <div className="flex items-center">
-                                  <Lightbulb className="mr-2 h-4 w-4" />
-                                  <span>Show Tips</span>
-                                </div>
-                                <div className={`h-4 w-7 rounded-full transition-colors ${tipsEnabled ? "bg-[var(--brand-primary-dark)]" : "bg-slate-300"}`}>
-                                  <div className={`h-4 w-4 rounded-full bg-white transition-transform ${tipsEnabled ? "translate-x-3" : "translate-x-0"}`} />
-                                </div>
-                              </DropdownMenuItem>
-
-                              <DropdownMenuItem
-                                onSelect={(e) => e.preventDefault()}
-                                onClick={() => {
-                                  const newValue =
-                                    !showGeneralContributions;
-                                  setShowGeneralContributions(newValue);
-                                  setGeneralContributionsEnabled(newValue);
-                                }}
-                                className="cursor-pointer flex items-center justify-between py-2 px-2 text-sm hover:bg-slate-100"
-                              >
-                                <div className="flex items-center">
-                                  <Landmark className="mr-2 h-4 w-4" />
-                                  <span>Show UN Core Contributions</span>
-                                </div>
-                                <div className={`h-4 w-7 rounded-full transition-colors ${showGeneralContributions ? "bg-[var(--brand-primary-dark)]" : "bg-slate-300"}`}>
-                                  <div className={`h-4 w-4 rounded-full bg-white transition-transform ${showGeneralContributions ? "translate-x-3" : "translate-x-0"}`} />
-                                </div>
-                              </DropdownMenuItem>
-
-                              <DropdownMenuItem
-                                onSelect={(e) => e.preventDefault()}
-                                onClick={() => {
-                                  const raw = searchParams?.toString() || "";
-                                  const params = new URLSearchParams(raw);
-                                  const incoming = (
-                                    params.get("d") ??
-                                    params.get("donors") ??
-                                    ""
-                                  )
-                                    .split(",")
-                                    .filter(Boolean);
-                                  const crafdKey = "crafd-donors";
-                                  const crafdExpansion = [
-                                    "germany",
-                                    "netherlands",
-                                    "canada",
-                                    "finland",
-                                    "luxembourg",
-                                    "united-kingdom",
-                                    "european-union",
-                                    "usa",
-                                  ];
-
-                                  const hasCrafd =
-                                    incoming.includes(crafdKey) ||
-                                    (incoming.length ===
-                                      crafdExpansion.length &&
-                                      crafdExpansion.every((s) =>
-                                        incoming.includes(s)
-                                      ));
-
-                                  if (hasCrafd) {
-                                    // Remove donor filter entirely
-                                    params.delete("d");
-                                    params.delete("donors");
-                                  } else {
-                                    // Set the short key so expansion logic handles it downstream
-                                    params.set("d", crafdKey);
-                                    // keep 'donors' cleared to avoid duplicates
-                                    params.delete("donors");
-                                  }
-
-                                  const target = params.toString()
-                                    ? `?${params.toString()}`
-                                    : "/";
-                                  router.push(target);
-                                }}
-                                className="cursor-pointer flex items-center justify-between py-2 px-2 text-sm hover:bg-slate-100"
-                              >
-                                <div className="flex items-center">
-                                  <UserRoundPlus className="mr-2 h-4 w-4" />
-                                  <span>Select CRAF'd Donors</span>
-                                </div>
-                                {(() => {
-                                  const raw = searchParams?.toString() || "";
-                                  const params = new URLSearchParams(raw);
-                                  const incoming = (
-                                    params.get("d") ??
-                                    params.get("donors") ??
-                                    ""
-                                  )
-                                    .split(",")
-                                    .filter(Boolean);
-                                  const crafdKey = "crafd-donors";
-                                  const crafdExpansion = [
-                                    "germany",
-                                    "netherlands",
-                                    "canada",
-                                    "finland",
-                                    "luxembourg",
-                                    "united-kingdom",
-                                    "european-union",
-                                    "usa",
-                                  ];
-
-                                  const hasCrafd =
-                                    incoming.includes(crafdKey) ||
-                                    (incoming.length ===
-                                      crafdExpansion.length &&
-                                      crafdExpansion.every((s) =>
-                                        incoming.includes(s)
-                                      ));
-
-                                  return (
-                                    <div className={`h-4 w-7 rounded-full transition-colors ${hasCrafd ? "bg-[var(--brand-primary-dark)]" : "bg-slate-300"}`}>
-                                      <div className={`h-4 w-4 rounded-full bg-white transition-transform ${hasCrafd ? "translate-x-3" : "translate-x-0"}`} />
-                                    </div>
-                                  );
-                                })()}
-                              </DropdownMenuItem>
-                            </DropdownMenuContent>
-                          </DropdownMenu>
                     </div>
-                  </div>
-                </TabsList>
+                  )}
 
-                {/* Card with Content and Tab Views */}
-                <Card className={`${STYLES.cardGlass} card-bottom-rounded !border-t-0 overflow-x-hidden`}>
-                  {/* Filters */}
-                  <CardContent className="px-4 pt-0 pb-4 sm:px-6 sm:pb-6">
-                    <FilterBar
-                      searchQuery={searchQuery}
-                      appliedSearchQuery={appliedSearchQuery}
-                      onSearchChange={onSearchChange}
-                      onSearchSubmit={onSearchSubmit}
-                      combinedDonors={combinedDonors}
-                      availableDonorCountries={availableDonorCountries}
-                      selectedAgencies={selectedAgencies}
-                      availableAgencies={availableAgencies}
-                      agenciesWithFunding={agenciesWithFunding}
-                      onDonorsChange={onDonorsChange}
-                      onAgenciesChange={onAgenciesChange}
-                      investmentTypes={investmentTypes}
-                      allKnownInvestmentTypes={allKnownInvestmentTypes}
-                      onTypesChange={onTypesChange}
-                      investmentThemes={investmentThemes}
-                      allKnownInvestmentThemes={allKnownInvestmentThemes}
-                      investmentThemesByType={investmentThemesByType}
-                      onThemesChange={onThemesChange}
-                      onResetFilters={onResetFilters}
-                      projectCountsByType={projectCountsByType}
-                      projectCountsByTheme={projectCountsByTheme}
-                      filterDescription={getFilterDescription()}
-                      className="-mb-6 sm:-mb-7"
-                    />
-                  </CardContent>
-                  {/* Tab Content Views */}
-                  <CardContent className="px-4 pt-2 sm:px-6 sm:pt-0">
-                    <TabsContent value="table" className="mt-0">
-                        <div className="space-y-2 transition-all duration-500">
-                          {organizationsWithProjects
-                            .sort((a, b) => sortOrganizations(a, b, sortBy, sortDirection))
-                            .map((org) => {
-                              const isExpanded = expandedOrgs.has(org.id);
-                              const hasProjects = org.projects.length > 0;
+                  {/* Settings Tab */}
+                  <div>
+                    <DropdownMenu>
+                      <DropdownMenuTrigger asChild>
+                        <button className="trapezoid-tab trapezoid-tab-white mr-0">
+                          <Settings className="h-4 w-4" />
+                        </button>
+                      </DropdownMenuTrigger>
+                      <DropdownMenuContent
+                        align="end"
+                        side="bottom"
+                        sideOffset={4}
+                        className="w-auto min-w-[250px] border border-slate-200 bg-white shadow-lg"
+                      >
+                        <DropdownMenuItem
+                          onSelect={(e) => e.preventDefault()}
+                          onClick={() => setTipsEnabled(!tipsEnabled)}
+                          className="flex cursor-pointer items-center justify-between px-2 py-2 text-sm hover:bg-slate-100"
+                        >
+                          <div className="flex items-center">
+                            <Lightbulb className="mr-2 h-4 w-4" />
+                            <span>Show Tips</span>
+                          </div>
+                          <div
+                            className={`h-4 w-7 rounded-full transition-colors ${tipsEnabled ? "bg-[var(--brand-primary-dark)]" : "bg-slate-300"}`}
+                          >
+                            <div
+                              className={`h-4 w-4 rounded-full bg-white transition-transform ${tipsEnabled ? "translate-x-3" : "translate-x-0"}`}
+                            />
+                          </div>
+                        </DropdownMenuItem>
 
-                              return (
-                                <Collapsible
-                                  key={org.id}
-                                  open={isExpanded}
-                                  onOpenChange={() => {
-                                    const newExpanded = new Set(expandedOrgs);
-                                    if (isExpanded) {
-                                      newExpanded.delete(org.id);
-                                    } else {
-                                      newExpanded.add(org.id);
-                                    }
-                                    setExpandedOrgs(newExpanded);
-                                  }}
-                                  className="transition-all duration-500 ease-out"
-                                >
-                                  <div 
-                                    className="w-full cursor-pointer"
-                                    onClick={() => {
-                                      const newExpanded = new Set(expandedOrgs);
-                                      if (isExpanded) {
-                                        newExpanded.delete(org.id);
-                                      } else {
-                                        newExpanded.add(org.id);
-                                      }
-                                      setExpandedOrgs(newExpanded);
-                                    }}
-                                  >
-                                    <OrganizationBox
-                                      orgId={org.id}
-                                      organizationName={org.organizationName}
-                                      nestedOrganizations={nestedOrganizations}
-                                      organizationsTable={organizationsTable}
-                                      isExpanded={isExpanded}
-                                      hasProjects={hasProjects}
-                                      onOpenOrganizationModal={onOpenOrganizationModal}
-                                      logoErrors={logoErrors}
-                                      onLogoError={handleLogoError}
-                                      headingLevel="h3"
-                                      showDetailsButton={true}
-                                      projectCount={org.projects.length}
-                                      projectLabel={org.projects.length === 1 ? labels.product.singular : labels.product.plural}
-                                    >
-                                      {(() => {
-                                        const isCountriesExpanded = expandedCountries.has(org.id);
-                                        const donorInfo = org.donorInfo || [];
+                        <DropdownMenuItem
+                          onSelect={(e) => e.preventDefault()}
+                          onClick={() => {
+                            const newValue = !showGeneralContributions;
+                            setShowGeneralContributions(newValue);
+                            setGeneralContributionsEnabled(newValue);
+                          }}
+                          className="flex cursor-pointer items-center justify-between px-2 py-2 text-sm hover:bg-slate-100"
+                        >
+                          <div className="flex items-center">
+                            <Landmark className="mr-2 h-4 w-4" />
+                            <span>Show UN Core Contributions</span>
+                          </div>
+                          <div
+                            className={`h-4 w-7 rounded-full transition-colors ${showGeneralContributions ? "bg-[var(--brand-primary-dark)]" : "bg-slate-300"}`}
+                          >
+                            <div
+                              className={`h-4 w-4 rounded-full bg-white transition-transform ${showGeneralContributions ? "translate-x-3" : "translate-x-0"}`}
+                            />
+                          </div>
+                        </DropdownMenuItem>
 
-                                        // Sort donors: selected + org-level first, then others
-                                        const sortedDonors = [...donorInfo].sort((a, b) => {
-                                          const aIsSelected = combinedDonors.includes(a.country);
-                                          const bIsSelected = combinedDonors.includes(b.country);
+                        <DropdownMenuItem
+                          onSelect={(e) => e.preventDefault()}
+                          onClick={() => {
+                            const raw = searchParams?.toString() || "";
+                            const params = new URLSearchParams(raw);
+                            const incoming = (
+                              params.get("d") ??
+                              params.get("donors") ??
+                              ""
+                            )
+                              .split(",")
+                              .filter(Boolean);
+                            const crafdKey = "crafd-donors";
+                            const crafdExpansion = [
+                              "germany",
+                              "netherlands",
+                              "canada",
+                              "finland",
+                              "luxembourg",
+                              "united-kingdom",
+                              "european-union",
+                              "usa",
+                            ];
 
-                                          if (aIsSelected && !bIsSelected) return -1;
-                                          if (!aIsSelected && bIsSelected) return 1;
+                            const hasCrafd =
+                              incoming.includes(crafdKey) ||
+                              (incoming.length === crafdExpansion.length &&
+                                crafdExpansion.every((s) =>
+                                  incoming.includes(s),
+                                ));
 
-                                          if (a.isOrgLevel && !b.isOrgLevel) return -1;
-                                          if (!a.isOrgLevel && b.isOrgLevel) return 1;
-
-                                          return a.country.localeCompare(b.country);
-                                        });
-
-                                        // Dynamic country limit based on available space
-                                        const calculateCollapsedLimit = () => {
-                                          const maxCharsMobile = 50;
-                                          const maxCharsDesktop = 100;
-                                          const maxChars = window.innerWidth < 640 ? maxCharsMobile : maxCharsDesktop;
-
-                                          let totalChars = 0;
-                                          const countriesToShow = [];
-
-                                          for (const donor of sortedDonors) {
-                                            const estimatedSize = donor.country.length + 8;
-
-                                            if (totalChars + estimatedSize <= maxChars) {
-                                              countriesToShow.push(donor);
-                                              totalChars += estimatedSize;
-                                            } else {
-                                              break;
-                                            }
-                                          }
-
-                                          return countriesToShow.length === 0 ? 1 : Math.min(countriesToShow.length, 5);
-                                        };
-
-                                        const maxCountriesToShowCollapsed = calculateCollapsedLimit();
-                                        const donorsToShow = isCountriesExpanded
-                                          ? sortedDonors
-                                          : sortedDonors.slice(0, maxCountriesToShowCollapsed);
-
-                                        return (
-                                          <>
-                                            {donorsToShow.map((donor, idx: number) => {
-                                              return (
-                                                <Badge
-                                                  key={idx}
-                                                  text={donor.country}
-                                                  variant={
-                                                    combinedDonors.includes(donor.country)
-                                                      ? "blue"
-                                                      : "slate"
-                                                  }
-                                                  className={donor.isOrgLevel ? "" : "opacity-50"}
-                                                  title={
-                                                    donor.isOrgLevel
-                                                      ? `${donor.country} (Organization Donor)`
-                                                      : `${donor.country} (Project-Only Donor)`
-                                                  }
-                                                />
-                                              );
-                                            })}
-                                            {sortedDonors.length > maxCountriesToShowCollapsed && !isCountriesExpanded && (
-                                              <div
-                                                onClick={(e) => {
-                                                  e.stopPropagation();
-                                                  const newExpanded = new Set(expandedCountries);
-                                                  newExpanded.add(org.id);
-                                                  setExpandedCountries(newExpanded);
-                                                }}
-                                                className="bg-slate-000 inline-flex cursor-pointer items-center rounded-md px-2 py-1 text-xs font-medium text-slate-900 transition-colors hover:bg-slate-100"
-                                              >
-                                                +{sortedDonors.length - maxCountriesToShowCollapsed} {labels.filters.showMore}
-                                              </div>
-                                            )}
-                                            {isCountriesExpanded && sortedDonors.length > maxCountriesToShowCollapsed && (
-                                              <div
-                                                onClick={(e) => {
-                                                  e.stopPropagation();
-                                                  const newExpanded = new Set(expandedCountries);
-                                                  newExpanded.delete(org.id);
-                                                  setExpandedCountries(newExpanded);
-                                                }}
-                                                className="bg-slate-000 inline-flex cursor-pointer items-center rounded-md px-2 py-1 text-xs font-medium text-slate-900 transition-colors hover:bg-slate-100"
-                                              >
-                                                {labels.filters.showLess}
-                                              </div>
-                                            )}
-                                          </>
-                                        );
-                                      })()}
-                                    </OrganizationBox>
-                                  </div>
-                                  <CollapsibleContent>
-                                    <div className="mt-2 ml-8 space-y-2 sm:ml-14">
-                                      {org.projects.map(
-                                        (project: ProjectData) => {
-                                          // Get product_key from nested data
-                                          const nestedOrg = nestedOrganizations.find(
-                                            (n: any) => n.id === org.id,
-                                          );
-                                          const nestedProject = nestedOrg?.projects?.find(
-                                            (p: any) => p.id === project.id,
-                                          );
-                                          const projectKey = nestedProject?.fields?.product_key;
-                                          
-                                          return (
-                                            <ProjectBox
-                                              key={project.id}
-                                              project={project}
-                                              onClick={() => {
-                                                if (projectKey) {
-                                                  onOpenProjectModal(projectKey);
-                                                }
-                                              }}
-                                              tipsEnabled={tipsEnabled}
-                                              combinedDonors={combinedDonors}
-                                            />
-                                          );
-                                        },
-                                      )}
-                                    </div>
-                                  </CollapsibleContent>
-                                </Collapsible>
-                              );
-                            })}
-                        </div>
-                        {organizationsWithProjects.length === 0 &&
-                          activeView === "table" && (
-                            <NoResultsPopup onResetFilters={onResetFilters} />
-                          )}
-                      </TabsContent>
-
-                      <TabsContent value="donors" className="mt-0">
-                        <DonorTable
-                          organizationsWithProjects={organizationsWithProjects}
-                          nestedOrganizations={nestedOrganizations}
-                          organizationsTable={organizationsTable}
-                          onOpenOrganizationModal={onOpenOrganizationModal}
-                          onOpenProjectModal={onOpenProjectModal}
-                          onOpenDonorModal={onOpenDonorModal}
-                          combinedDonors={combinedDonors}
-                          sortBy={
-                            sortBy === "funding"
-                              ? "assets"
-                              : sortBy === "donors"
-                                ? "orgs"
-                                : sortBy
-                          }
-                          sortDirection={sortDirection}
-                        />
-                        {organizationsWithProjects.length === 0 &&
-                          activeView === "donors" && (
-                            <NoResultsPopup onResetFilters={onResetFilters} />
-                          )}
-                      </TabsContent>
-
-                      <TabsContent value="network" className="mt-0">
-                        <div className="w-full" style={{ height: "600px" }}>
-                          <NetworkGraph
-                            organizationsWithProjects={
-                              organizationsWithProjects
+                            if (hasCrafd) {
+                              // Remove donor filter entirely
+                              params.delete("d");
+                              params.delete("donors");
+                            } else {
+                              // Set the short key so expansion logic handles it downstream
+                              params.set("d", crafdKey);
+                              // keep 'donors' cleared to avoid duplicates
+                              params.delete("donors");
                             }
-                            allOrganizations={allOrganizations}
-                            onOpenOrganizationModal={onOpenOrganizationModal}
-                            onOpenProjectModal={onOpenProjectModal}
-                            onOpenDonorModal={onOpenDonorModal}
-                            selectedOrgKey={selectedOrgKey}
-                            selectedProjectKey={selectedProjectKey}
-                            searchQuery={searchQuery}
-                            appliedSearchQuery={appliedSearchQuery}
-                            onSearchChange={onSearchChange}
-                            onSearchSubmit={onSearchSubmit}
-                            combinedDonors={combinedDonors}
-                            availableDonorCountries={availableDonorCountries}
-                            onDonorsChange={onDonorsChange}
-                            investmentTypes={investmentTypes}
-                            allKnownInvestmentTypes={allKnownInvestmentTypes}
-                            onTypesChange={onTypesChange}
-                            investmentThemes={investmentThemes}
-                            allKnownInvestmentThemes={allKnownInvestmentThemes}
-                            investmentThemesByType={investmentThemesByType}
-                            onThemesChange={onThemesChange}
-                            onResetFilters={onResetFilters}
-                            filterDescription={getFilterDescription()}
-                            orgAgenciesMap={modalMaps.orgAgenciesMap}
-                          />
-                        </div>
-                      </TabsContent>
-                  </CardContent>
-                </Card>
-              </Tabs>
+
+                            const target = params.toString()
+                              ? `?${params.toString()}`
+                              : "/";
+                            router.push(target);
+                          }}
+                          className="flex cursor-pointer items-center justify-between px-2 py-2 text-sm hover:bg-slate-100"
+                        >
+                          <div className="flex items-center">
+                            <UserRoundPlus className="mr-2 h-4 w-4" />
+                            <span>Select CRAF'd Donors</span>
+                          </div>
+                          {(() => {
+                            const raw = searchParams?.toString() || "";
+                            const params = new URLSearchParams(raw);
+                            const incoming = (
+                              params.get("d") ??
+                              params.get("donors") ??
+                              ""
+                            )
+                              .split(",")
+                              .filter(Boolean);
+                            const crafdKey = "crafd-donors";
+                            const crafdExpansion = [
+                              "germany",
+                              "netherlands",
+                              "canada",
+                              "finland",
+                              "luxembourg",
+                              "united-kingdom",
+                              "european-union",
+                              "usa",
+                            ];
+
+                            const hasCrafd =
+                              incoming.includes(crafdKey) ||
+                              (incoming.length === crafdExpansion.length &&
+                                crafdExpansion.every((s) =>
+                                  incoming.includes(s),
+                                ));
+
+                            return (
+                              <div
+                                className={`h-4 w-7 rounded-full transition-colors ${hasCrafd ? "bg-[var(--brand-primary-dark)]" : "bg-slate-300"}`}
+                              >
+                                <div
+                                  className={`h-4 w-4 rounded-full bg-white transition-transform ${hasCrafd ? "translate-x-3" : "translate-x-0"}`}
+                                />
+                              </div>
+                            );
+                          })()}
+                        </DropdownMenuItem>
+                      </DropdownMenuContent>
+                    </DropdownMenu>
+                  </div>
+                </div>
+              </TabsList>
+
+              {/* Card with Content and Tab Views */}
+              <Card
+                className={`${STYLES.cardGlass} card-bottom-rounded overflow-x-hidden !border-t-0`}
+              >
+                {/* Filters */}
+                <CardContent className="px-4 pt-0 pb-4 sm:px-6 sm:pb-6">
+                  <FilterBar
+                    searchQuery={searchQuery}
+                    appliedSearchQuery={appliedSearchQuery}
+                    onSearchChange={onSearchChange}
+                    onSearchSubmit={onSearchSubmit}
+                    combinedDonors={combinedDonors}
+                    availableDonorCountries={availableDonorCountries}
+                    selectedAgencies={selectedAgencies}
+                    availableAgencies={availableAgencies}
+                    agenciesWithFunding={agenciesWithFunding}
+                    onDonorsChange={onDonorsChange}
+                    onAgenciesChange={onAgenciesChange}
+                    investmentTypes={investmentTypes}
+                    allKnownInvestmentTypes={allKnownInvestmentTypes}
+                    onTypesChange={onTypesChange}
+                    investmentThemes={investmentThemes}
+                    allKnownInvestmentThemes={allKnownInvestmentThemes}
+                    investmentThemesByType={investmentThemesByType}
+                    onThemesChange={onThemesChange}
+                    onResetFilters={onResetFilters}
+                    projectCountsByType={projectCountsByType}
+                    projectCountsByTheme={projectCountsByTheme}
+                    filterDescription={getFilterDescription()}
+                    className="-mb-6 sm:-mb-7"
+                  />
+                </CardContent>
+                {/* Tab Content Views */}
+                <CardContent className="px-4 pt-2 sm:px-6 sm:pt-0">
+                  <TabsContent value="table" className="mt-0">
+                    <div className="space-y-2 transition-all duration-500">
+                      {organizationsWithProjects
+                        .sort((a, b) =>
+                          sortOrganizations(a, b, sortBy, sortDirection),
+                        )
+                        .map((org) => {
+                          const isExpanded = expandedOrgs.has(org.id);
+                          const hasProjects = org.projects.length > 0;
+
+                          return (
+                            <Collapsible
+                              key={org.id}
+                              open={isExpanded}
+                              onOpenChange={() => {
+                                const newExpanded = new Set(expandedOrgs);
+                                if (isExpanded) {
+                                  newExpanded.delete(org.id);
+                                } else {
+                                  newExpanded.add(org.id);
+                                }
+                                setExpandedOrgs(newExpanded);
+                              }}
+                              className="transition-all duration-500 ease-out"
+                            >
+                              <div
+                                className="w-full cursor-pointer"
+                                onClick={() => {
+                                  const newExpanded = new Set(expandedOrgs);
+                                  if (isExpanded) {
+                                    newExpanded.delete(org.id);
+                                  } else {
+                                    newExpanded.add(org.id);
+                                  }
+                                  setExpandedOrgs(newExpanded);
+                                }}
+                              >
+                                <OrganizationBox
+                                  orgId={org.id}
+                                  organizationName={org.organizationName}
+                                  nestedOrganizations={nestedOrganizations}
+                                  organizationsTable={organizationsTable}
+                                  isExpanded={isExpanded}
+                                  hasProjects={hasProjects}
+                                  onOpenOrganizationModal={
+                                    onOpenOrganizationModal
+                                  }
+                                  logoErrors={logoErrors}
+                                  onLogoError={handleLogoError}
+                                  headingLevel="h3"
+                                  showDetailsButton={true}
+                                  projectCount={org.projects.length}
+                                  projectLabel={
+                                    org.projects.length === 1
+                                      ? labels.product.singular
+                                      : labels.product.plural
+                                  }
+                                >
+                                  {(() => {
+                                    const isCountriesExpanded =
+                                      expandedCountries.has(org.id);
+                                    const donorInfo = org.donorInfo || [];
+
+                                    // Sort donors: selected + org-level first, then others
+                                    const sortedDonors = [...donorInfo].sort(
+                                      (a, b) => {
+                                        const aIsSelected =
+                                          combinedDonors.includes(a.country);
+                                        const bIsSelected =
+                                          combinedDonors.includes(b.country);
+
+                                        if (aIsSelected && !bIsSelected)
+                                          return -1;
+                                        if (!aIsSelected && bIsSelected)
+                                          return 1;
+
+                                        if (a.isOrgLevel && !b.isOrgLevel)
+                                          return -1;
+                                        if (!a.isOrgLevel && b.isOrgLevel)
+                                          return 1;
+
+                                        return a.country.localeCompare(
+                                          b.country,
+                                        );
+                                      },
+                                    );
+
+                                    // Dynamic country limit based on available space
+                                    const calculateCollapsedLimit = () => {
+                                      const maxCharsMobile = 50;
+                                      const maxCharsDesktop = 100;
+                                      const maxChars =
+                                        window.innerWidth < 640
+                                          ? maxCharsMobile
+                                          : maxCharsDesktop;
+
+                                      let totalChars = 0;
+                                      const countriesToShow = [];
+
+                                      for (const donor of sortedDonors) {
+                                        const estimatedSize =
+                                          donor.country.length + 8;
+
+                                        if (
+                                          totalChars + estimatedSize <=
+                                          maxChars
+                                        ) {
+                                          countriesToShow.push(donor);
+                                          totalChars += estimatedSize;
+                                        } else {
+                                          break;
+                                        }
+                                      }
+
+                                      return countriesToShow.length === 0
+                                        ? 1
+                                        : Math.min(countriesToShow.length, 5);
+                                    };
+
+                                    const maxCountriesToShowCollapsed =
+                                      calculateCollapsedLimit();
+                                    const donorsToShow = isCountriesExpanded
+                                      ? sortedDonors
+                                      : sortedDonors.slice(
+                                          0,
+                                          maxCountriesToShowCollapsed,
+                                        );
+
+                                    return (
+                                      <>
+                                        {donorsToShow.map(
+                                          (donor, idx: number) => {
+                                            return (
+                                              <Badge
+                                                key={idx}
+                                                text={donor.country}
+                                                variant={
+                                                  combinedDonors.includes(
+                                                    donor.country,
+                                                  )
+                                                    ? "blue"
+                                                    : "slate"
+                                                }
+                                                className={
+                                                  donor.isOrgLevel
+                                                    ? ""
+                                                    : "opacity-50"
+                                                }
+                                                title={
+                                                  donor.isOrgLevel
+                                                    ? `${donor.country} (Organization Donor)`
+                                                    : `${donor.country} (Project-Only Donor)`
+                                                }
+                                              />
+                                            );
+                                          },
+                                        )}
+                                        {sortedDonors.length >
+                                          maxCountriesToShowCollapsed &&
+                                          !isCountriesExpanded && (
+                                            <div
+                                              onClick={(e) => {
+                                                e.stopPropagation();
+                                                const newExpanded = new Set(
+                                                  expandedCountries,
+                                                );
+                                                newExpanded.add(org.id);
+                                                setExpandedCountries(
+                                                  newExpanded,
+                                                );
+                                              }}
+                                              className="bg-slate-000 inline-flex cursor-pointer items-center rounded-md px-2 py-1 text-xs font-medium text-slate-900 transition-colors hover:bg-slate-100"
+                                            >
+                                              +
+                                              {sortedDonors.length -
+                                                maxCountriesToShowCollapsed}{" "}
+                                              {labels.filters.showMore}
+                                            </div>
+                                          )}
+                                        {isCountriesExpanded &&
+                                          sortedDonors.length >
+                                            maxCountriesToShowCollapsed && (
+                                            <div
+                                              onClick={(e) => {
+                                                e.stopPropagation();
+                                                const newExpanded = new Set(
+                                                  expandedCountries,
+                                                );
+                                                newExpanded.delete(org.id);
+                                                setExpandedCountries(
+                                                  newExpanded,
+                                                );
+                                              }}
+                                              className="bg-slate-000 inline-flex cursor-pointer items-center rounded-md px-2 py-1 text-xs font-medium text-slate-900 transition-colors hover:bg-slate-100"
+                                            >
+                                              {labels.filters.showLess}
+                                            </div>
+                                          )}
+                                      </>
+                                    );
+                                  })()}
+                                </OrganizationBox>
+                              </div>
+                              <CollapsibleContent>
+                                <div className="mt-2 ml-8 space-y-2 sm:ml-14">
+                                  {org.projects.map((project: ProjectData) => {
+                                    // Get product_key from nested data
+                                    const nestedOrg = nestedOrganizations.find(
+                                      (n: any) => n.id === org.id,
+                                    );
+                                    const nestedProject =
+                                      nestedOrg?.projects?.find(
+                                        (p: any) => p.id === project.id,
+                                      );
+                                    const projectKey =
+                                      nestedProject?.fields?.product_key;
+
+                                    return (
+                                      <ProjectBox
+                                        key={project.id}
+                                        project={project}
+                                        onClick={() => {
+                                          if (projectKey) {
+                                            onOpenProjectModal(projectKey);
+                                          }
+                                        }}
+                                        tipsEnabled={tipsEnabled}
+                                        combinedDonors={combinedDonors}
+                                      />
+                                    );
+                                  })}
+                                </div>
+                              </CollapsibleContent>
+                            </Collapsible>
+                          );
+                        })}
+                    </div>
+                    {organizationsWithProjects.length === 0 &&
+                      activeView === "table" && (
+                        <NoResultsPopup onResetFilters={onResetFilters} />
+                      )}
+                  </TabsContent>
+
+                  <TabsContent value="donors" className="mt-0">
+                    <DonorTable
+                      organizationsWithProjects={organizationsWithProjects}
+                      nestedOrganizations={nestedOrganizations}
+                      organizationsTable={organizationsTable}
+                      onOpenOrganizationModal={onOpenOrganizationModal}
+                      onOpenProjectModal={onOpenProjectModal}
+                      onOpenDonorModal={onOpenDonorModal}
+                      combinedDonors={combinedDonors}
+                      sortBy={
+                        sortBy === "funding"
+                          ? "assets"
+                          : sortBy === "donors"
+                            ? "orgs"
+                            : sortBy
+                      }
+                      sortDirection={sortDirection}
+                    />
+                    {organizationsWithProjects.length === 0 &&
+                      activeView === "donors" && (
+                        <NoResultsPopup onResetFilters={onResetFilters} />
+                      )}
+                  </TabsContent>
+
+                  <TabsContent value="network" className="mt-0">
+                    <div className="w-full" style={{ height: "600px" }}>
+                      <NetworkGraph
+                        organizationsWithProjects={organizationsWithProjects}
+                        allOrganizations={allOrganizations}
+                        onOpenOrganizationModal={onOpenOrganizationModal}
+                        onOpenProjectModal={onOpenProjectModal}
+                        onOpenDonorModal={onOpenDonorModal}
+                        selectedOrgKey={selectedOrgKey}
+                        selectedProjectKey={selectedProjectKey}
+                        searchQuery={searchQuery}
+                        appliedSearchQuery={appliedSearchQuery}
+                        onSearchChange={onSearchChange}
+                        onSearchSubmit={onSearchSubmit}
+                        combinedDonors={combinedDonors}
+                        availableDonorCountries={availableDonorCountries}
+                        onDonorsChange={onDonorsChange}
+                        investmentTypes={investmentTypes}
+                        allKnownInvestmentTypes={allKnownInvestmentTypes}
+                        onTypesChange={onTypesChange}
+                        investmentThemes={investmentThemes}
+                        allKnownInvestmentThemes={allKnownInvestmentThemes}
+                        investmentThemesByType={investmentThemesByType}
+                        onThemesChange={onThemesChange}
+                        onResetFilters={onResetFilters}
+                        filterDescription={getFilterDescription()}
+                        orgAgenciesMap={modalMaps.orgAgenciesMap}
+                      />
+                    </div>
+                  </TabsContent>
+                </CardContent>
+              </Card>
+            </Tabs>
           </div>
         </div>
       </div>
@@ -1671,11 +1780,15 @@ const CrisisDataDashboard = ({
       {selectedOrganization &&
         (() => {
           // Find matching record in organizations table using clean field names
-          const target = normalizeOrgName(selectedOrganization.organizationName || selectedOrganization.id);
+          const target = normalizeOrgName(
+            selectedOrganization.organizationName || selectedOrganization.id,
+          );
           const match = organizationsTable.find((rec) => {
             const full = (rec.fields["Org Full Name"] as string) || "";
             const short = (rec.fields["Org Short Name"] as string) || "";
-            return [full, short].some((s) => normalizeOrgName(String(s || "")) === target);
+            return [full, short].some(
+              (s) => normalizeOrgName(String(s || "")) === target,
+            );
           });
 
           // Use the matched record directly, or create a minimal fallback
@@ -1694,9 +1807,18 @@ const CrisisDataDashboard = ({
           // Find matching organization in nested data to get IATI data
           const nestedMatch = nestedOrganizations.find((nestedOrg: any) => {
             const nestedName = normalizeOrgName(nestedOrg.name || "");
-            const nestedFull = normalizeOrgName(nestedOrg.fields?.["Org Full Name"] || "");
-            const nestedShort = normalizeOrgName(nestedOrg.fields?.["Org Short Name"] || "");
-            return nestedName === target || nestedFull === target || nestedShort === target || nestedOrg.id === orgRecord.id;
+            const nestedFull = normalizeOrgName(
+              nestedOrg.fields?.["Org Full Name"] || "",
+            );
+            const nestedShort = normalizeOrgName(
+              nestedOrg.fields?.["Org Short Name"] || "",
+            );
+            return (
+              nestedName === target ||
+              nestedFull === target ||
+              nestedShort === target ||
+              nestedOrg.id === orgRecord.id
+            );
           });
 
           // Add IATI data if available from nested organization

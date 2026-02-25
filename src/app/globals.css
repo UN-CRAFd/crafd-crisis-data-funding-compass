@@ -149,7 +149,7 @@
   /* slate-600: darker than current slate-600 */
   --background-color: #d7dbdf
     /* Success/confirmation colors - vibrant green for share/copy success states */
-  --color-success: #10b981;
+    --color-success: #10b981;
   /* emerald-500: vibrant green for success states */
   --color-success-hover: #059669;
   /* emerald-600: slightly darker green for hover */
@@ -440,7 +440,7 @@ body::-webkit-scrollbar {
 }
 
 .trapezoid-tab::before {
-  content: '';
+  content: "";
   position: absolute;
   top: 0;
   left: -1rem;
@@ -583,7 +583,7 @@ body::-webkit-scrollbar {
 }
 
 .trapezoid-settings::before {
-  content: '';
+  content: "";
   position: absolute;
   top: 0;
   left: 0;
@@ -619,7 +619,7 @@ body::-webkit-scrollbar {
 }
 
 .trapezoid-settings-container::before {
-  content: '';
+  content: "";
   position: absolute;
   top: 0;
   left: 0;

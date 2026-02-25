@@ -10,7 +10,20 @@ import React, {
 import { createPortal } from "react-dom";
 import { forceCollide } from "d3-force";
 import ForceGraph2D from "react-force-graph-2d";
-import { Maximize, Minimize, Crosshair, Layers, Package, Building2, DollarSign, Type, Zap, GitBranch, ChevronLeft, ChevronRight } from "lucide-react";
+import {
+  Maximize,
+  Minimize,
+  Crosshair,
+  Layers,
+  Package,
+  Building2,
+  DollarSign,
+  Type,
+  Zap,
+  GitBranch,
+  ChevronLeft,
+  ChevronRight,
+} from "lucide-react";
 import type { OrganizationWithProjects } from "../types/airtable";
 import FilterBar from "./FilterBar";
 import NoResultsModal from "./NoResultsModal";
@@ -1665,19 +1678,19 @@ const NetworkGraph: React.FC<NetworkGraphProps> = ({
           <div className="rounded-lg border border-slate-200 bg-white shadow-sm backdrop-blur-lg">
             <div className="flex items-center gap-0 p-2">
               {/* Collapsible Content */}
-              <div 
+              <div
                 className={`flex items-center gap-0 overflow-hidden transition-all duration-300 ease-in-out ${
-                  settingsCollapsed 
-                    ? 'max-w-0 opacity-0' 
-                    : 'max-w-96 opacity-100'
+                  settingsCollapsed
+                    ? "max-w-0 opacity-0"
+                    : "max-w-96 opacity-100"
                 }`}
                 style={{
-                  maxWidth: settingsCollapsed ? '0px' : '24rem'
+                  maxWidth: settingsCollapsed ? "0px" : "24rem",
                 }}
               >
                 {/* Clustering Section */}
                 <div className="flex items-center gap-2 px-2">
-                  <div className="text-[10px] font-semibold text-slate-600 uppercase tracking-wide">
+                  <div className="text-[10px] font-semibold tracking-wide text-slate-600 uppercase">
                     Cluster
                   </div>
                   <button
@@ -1687,7 +1700,14 @@ const NetworkGraph: React.FC<NetworkGraphProps> = ({
                         ? "bg-amber-100 text-amber-700"
                         : "text-slate-600 hover:bg-slate-200/50"
                     }`}
-                    style={clusterByOrgType ? { backgroundColor: "rgba(243, 195, 92, 0.3)", color: "#BC840F" } : {}}
+                    style={
+                      clusterByOrgType
+                        ? {
+                            backgroundColor: "rgba(243, 195, 92, 0.3)",
+                            color: "#BC840F",
+                          }
+                        : {}
+                    }
                     title="Cluster by organization type"
                   >
                     <Building2 className="h-4 w-4" />
@@ -1699,7 +1719,14 @@ const NetworkGraph: React.FC<NetworkGraphProps> = ({
                         ? "text-indigo-700"
                         : "text-slate-600 hover:bg-slate-200/50"
                     }`}
-                    style={clusterByAssetType ? { backgroundColor: "rgba(215, 216, 245, 0.3)", color: "#4d479c" } : {}}
+                    style={
+                      clusterByAssetType
+                        ? {
+                            backgroundColor: "rgba(215, 216, 245, 0.3)",
+                            color: "#4d479c",
+                          }
+                        : {}
+                    }
                     title="Cluster by product type"
                   >
                     <Package className="h-4 w-4" />
@@ -1711,7 +1738,7 @@ const NetworkGraph: React.FC<NetworkGraphProps> = ({
 
                 {/* Scaling Section */}
                 <div className="flex items-center gap-2 px-2">
-                  <div className="text-[10px] font-semibold text-slate-600 uppercase tracking-wide">
+                  <div className="text-[10px] font-semibold tracking-wide text-slate-600 uppercase">
                     Scale
                   </div>
                   <button
@@ -1779,8 +1806,10 @@ const NetworkGraph: React.FC<NetworkGraphProps> = ({
               {/* Settings Toggle Chevron */}
               <button
                 onClick={() => setSettingsCollapsed(!settingsCollapsed)}
-                className="rounded p-1.5 transition-colors hover:bg-slate-200/50 flex-shrink-0"
-                title={settingsCollapsed ? "Expand controls" : "Collapse controls"}
+                className="flex-shrink-0 rounded p-1.5 transition-colors hover:bg-slate-200/50"
+                title={
+                  settingsCollapsed ? "Expand controls" : "Collapse controls"
+                }
               >
                 {settingsCollapsed ? (
                   <ChevronRight className="h-4 w-4 text-slate-600" />
@@ -1820,65 +1849,46 @@ const NetworkGraph: React.FC<NetworkGraphProps> = ({
           style={{ top: isFullscreen ? `${filterBarHeight + 30}px` : "16px" }}
         >
           {/* Expanded Legend */}
-          <div 
-            className={`w-30 rounded-lg border border-slate-200 bg-white shadow-sm backdrop-blur-lg overflow-hidden transition-all duration-300 ease-in-out absolute ${
-              legendCollapsed 
-                ? 'max-w-0 opacity-0 pointer-events-none' 
-                : 'max-w-64 opacity-100'
+          <div
+            className={`absolute w-30 overflow-hidden rounded-lg border border-slate-200 bg-white shadow-sm backdrop-blur-lg transition-all duration-300 ease-in-out ${
+              legendCollapsed
+                ? "pointer-events-none max-w-0 opacity-0"
+                : "max-w-64 opacity-100"
             }`}
             style={{
-              maxWidth: legendCollapsed ? '0px' : '16rem'
+              maxWidth: legendCollapsed ? "0px" : "16rem",
             }}
           >
-              {/* Legend */}
-              <div className="p-2.5">
-                <div className="mb-2 flex items-center justify-between">
-                  <div className="text-[10px] font-semibold text-slate-600 uppercase tracking-wide">
-                    Legend
-                  </div>
-                  <button
-                    onClick={() => setLegendCollapsed(true)}
-                    className="rounded p-1 transition-colors hover:bg-slate-200/50"
-                    title="Hide legend"
-                  >
-                    <svg
-                      width="14"
-                      height="14"
-                      viewBox="0 0 24 24"
-                      fill="none"
-                      stroke="currentColor"
-                      className="text-slate-600"
-                    >
-                      <path
-                        d="M15 18l-6-6 6-6"
-                        strokeWidth="2"
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                      />
-                    </svg>
-                  </button>
+            {/* Legend */}
+            <div className="p-2.5">
+              <div className="mb-2 flex items-center justify-between">
+                <div className="text-[10px] font-semibold tracking-wide text-slate-600 uppercase">
+                  Legend
                 </div>
-                <div className="space-y-1.5">
-                  {combinedDonors && combinedDonors.length > 0 && (
-                    <div className="flex items-center gap-2">
-                      <svg
-                        width="14"
-                        height="14"
-                        viewBox="0 0 14 14"
-                        className="shrink-0"
-                      >
-                        <polygon
-                          points="7,1 12,4 12,10 7,13 2,10 2,4"
-                          fill="#94a3b8"
-                          stroke="#64748b"
-                          strokeWidth="1.5"
-                        />
-                      </svg>
-                      <span className="text-xs text-slate-600">
-                        Sel. Donors
-                      </span>
-                    </div>
-                  )}
+                <button
+                  onClick={() => setLegendCollapsed(true)}
+                  className="rounded p-1 transition-colors hover:bg-slate-200/50"
+                  title="Hide legend"
+                >
+                  <svg
+                    width="14"
+                    height="14"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    className="text-slate-600"
+                  >
+                    <path
+                      d="M15 18l-6-6 6-6"
+                      strokeWidth="2"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                    />
+                  </svg>
+                </button>
+              </div>
+              <div className="space-y-1.5">
+                {combinedDonors && combinedDonors.length > 0 && (
                   <div className="flex items-center gap-2">
                     <svg
                       width="14"
@@ -1888,58 +1898,73 @@ const NetworkGraph: React.FC<NetworkGraphProps> = ({
                     >
                       <polygon
                         points="7,1 12,4 12,10 7,13 2,10 2,4"
-                        fill="#cbd5e1"
-                        stroke="var(--badge-slate-text)"
+                        fill="#94a3b8"
+                        stroke="#64748b"
                         strokeWidth="1.5"
                       />
                     </svg>
-                    <span className="text-xs text-slate-600">Donors</span>
+                    <span className="text-xs text-slate-600">Sel. Donors</span>
                   </div>
-                  <div className="flex items-center gap-2">
-                    <svg
-                      width="14"
-                      height="14"
-                      viewBox="0 0 14 14"
-                      className="shrink-0"
-                    >
-                      <polygon
-                        points="7,1 12,4 12,10 7,13 2,10 2,4"
-                        fill="var(--brand-primary-light)"
-                        stroke="var(--brand-primary-dark)"
-                        strokeWidth="1.5"
-                      />
-                    </svg>
-                    <span className="text-xs text-slate-600">
-                      Organizations
-                    </span>
-                  </div>
-                  <div className="flex items-center gap-2">
-                    <svg
-                      width="14"
-                      height="14"
-                      viewBox="0 0 14 14"
-                      className="shrink-0"
-                    >
-                      <polygon
-                        points="7,1 12,4 12,10 7,13 2,10 2,4"
-                        fill="var(--badge-other-bg)"
-                        stroke="var(--badge-other-text)"
-                        strokeWidth="1.5"
-                      />
-                    </svg>
-                    <span className="text-xs text-slate-600">Products</span>
-                  </div>
+                )}
+                <div className="flex items-center gap-2">
+                  <svg
+                    width="14"
+                    height="14"
+                    viewBox="0 0 14 14"
+                    className="shrink-0"
+                  >
+                    <polygon
+                      points="7,1 12,4 12,10 7,13 2,10 2,4"
+                      fill="#cbd5e1"
+                      stroke="var(--badge-slate-text)"
+                      strokeWidth="1.5"
+                    />
+                  </svg>
+                  <span className="text-xs text-slate-600">Donors</span>
+                </div>
+                <div className="flex items-center gap-2">
+                  <svg
+                    width="14"
+                    height="14"
+                    viewBox="0 0 14 14"
+                    className="shrink-0"
+                  >
+                    <polygon
+                      points="7,1 12,4 12,10 7,13 2,10 2,4"
+                      fill="var(--brand-primary-light)"
+                      stroke="var(--brand-primary-dark)"
+                      strokeWidth="1.5"
+                    />
+                  </svg>
+                  <span className="text-xs text-slate-600">Organizations</span>
+                </div>
+                <div className="flex items-center gap-2">
+                  <svg
+                    width="14"
+                    height="14"
+                    viewBox="0 0 14 14"
+                    className="shrink-0"
+                  >
+                    <polygon
+                      points="7,1 12,4 12,10 7,13 2,10 2,4"
+                      fill="var(--badge-other-bg)"
+                      stroke="var(--badge-other-text)"
+                      strokeWidth="1.5"
+                    />
+                  </svg>
+                  <span className="text-xs text-slate-600">Products</span>
                 </div>
               </div>
             </div>
+          </div>
 
           {/* Collapsed Legend Button */}
           <button
             onClick={() => setLegendCollapsed(false)}
             className={`rounded border border-slate-200 bg-white p-2 shadow-sm transition-all duration-300 ease-in-out ${
-              legendCollapsed 
-                ? 'opacity-100 pointer-events-auto' 
-                : 'opacity-0 pointer-events-none'
+              legendCollapsed
+                ? "pointer-events-auto opacity-100"
+                : "pointer-events-none opacity-0"
             }`}
             title="Show legend"
           >

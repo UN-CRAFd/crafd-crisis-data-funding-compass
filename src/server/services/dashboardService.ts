@@ -80,9 +80,7 @@ function assembleOrganizations(
 
       // Project-level donors
       const projectDonorCountries = unique(
-        pAgencies
-          .map((a) => a.country_name)
-          .filter((c): c is string => !!c),
+        pAgencies.map((a) => a.country_name).filter((c): c is string => !!c),
       );
       for (const d of projectDonorCountries) projectLevelDonorsSet.add(d);
 
@@ -186,7 +184,11 @@ function injectMemberStateDonors(
       return a.country.localeCompare(b.country);
     });
 
-    return { ...org, donorCountries: newDonorCountries, donorInfo: newDonorInfo };
+    return {
+      ...org,
+      donorCountries: newDonorCountries,
+      donorInfo: newDonorInfo,
+    };
   });
 }
 
@@ -201,14 +203,17 @@ function applyFilters(
 ): OrganizationDTO[] {
   return organizations
     .map((org) => {
-      const hasSearchFilter = !!(filters.searchQuery && filters.searchQuery.trim());
+      const hasSearchFilter = !!(
+        filters.searchQuery && filters.searchQuery.trim()
+      );
       const hasDonorFilter = !!(
         filters.donorCountries && filters.donorCountries.length > 0
       );
 
       // Agency filter bypass: if ALL available agencies of the selected donor are selected
-      let hasAgencyFilter =
-        !!(filters.donorAgencies && filters.donorAgencies.length > 0);
+      let hasAgencyFilter = !!(
+        filters.donorAgencies && filters.donorAgencies.length > 0
+      );
 
       if (
         hasAgencyFilter &&
@@ -246,7 +251,8 @@ function applyFilters(
       const projectMatchesDonorFilter = (p: ProjectDTO): boolean => {
         if (!hasDonorFilter) return true;
         return filters.donorCountries!.every(
-          (d) => Array.isArray(p.donorCountries) && p.donorCountries.includes(d),
+          (d) =>
+            Array.isArray(p.donorCountries) && p.donorCountries.includes(d),
         );
       };
 
@@ -316,9 +322,7 @@ function applyFilters(
           return true;
         const selectedDonor = filters.donorCountries![0];
         const agenciesForDonor = p.donorAgencies?.[selectedDonor] || [];
-        return filters.donorAgencies!.some((a) =>
-          agenciesForDonor.includes(a),
-        );
+        return filters.donorAgencies!.some((a) => agenciesForDonor.includes(a));
       };
 
       // Step 2: Determine visible projects
@@ -450,10 +454,9 @@ function applyFilters(
       });
 
       // Get org-level donors
-      const orgLevelDonors = org.donorInfo
-        ?.filter((d) => d.isOrgLevel)
-        .map((d) => d.country) || [];
-      
+      const orgLevelDonors =
+        org.donorInfo?.filter((d) => d.isOrgLevel).map((d) => d.country) || [];
+
       // Combine org-level with visible project-level donors
       const allVisibleDonors = new Set<string>([
         ...orgLevelDonors,
@@ -635,7 +638,15 @@ export async function processDashboardData(
     getThemeMappings(),
   ]);
 
-  const { orgs, orgAgencies, orgProjects, projectThemes, projectAgencies, agencies, memberStates: allMemberStates } = core;
+  const {
+    orgs,
+    orgAgencies,
+    orgProjects,
+    projectThemes,
+    projectAgencies,
+    agencies,
+    memberStates: allMemberStates,
+  } = core;
 
   // Build country → agencies map from cached agency rows
   const countryAgenciesMap = new Map<string, string[]>();
@@ -651,7 +662,8 @@ export async function processDashboardData(
   }
   for (const [, list] of countryAgenciesMap) list.sort();
 
-  const memberStates = filters.showGeneralContributions !== false ? allMemberStates : [];
+  const memberStates =
+    filters.showGeneralContributions !== false ? allMemberStates : [];
 
   // Assemble
   let allOrganizations = assembleOrganizations(

@@ -131,12 +131,18 @@ export interface ModalMapsDTO {
   projectNameMap: Record<string, string>;
   projectIdToKeyMap: Record<string, string>;
   projectDescriptionMap: Record<string, string>;
-  orgProjectsMap: Record<string, Array<{ id: string; investmentTypes: string[] }>>;
+  orgProjectsMap: Record<
+    string,
+    Array<{ id: string; investmentTypes: string[] }>
+  >;
   orgDonorCountriesMap: Record<string, string[]>;
   orgDonorInfoMap: Record<string, DonorInfoDTO[]>;
   orgAgenciesMap: Record<string, Record<string, string[]>>;
   orgProjectDonorsMap: Record<string, Record<string, string[]>>;
-  orgProjectDonorAgenciesMap: Record<string, Record<string, Record<string, string[]>>>;
+  orgProjectDonorAgenciesMap: Record<
+    string,
+    Record<string, Record<string, string[]>>
+  >;
   projectAgenciesMap: Record<string, Record<string, string[]>>;
 }
 

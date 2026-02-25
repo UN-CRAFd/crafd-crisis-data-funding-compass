@@ -620,7 +620,7 @@ export default function OrganizationModal({
                   if (!orgProjects || orgProjects.length === 0) return null;
 
                   return (
-                    <div className="mt-4 pt-4 border-t border-slate-200">
+                    <div className="mt-4 border-t border-slate-200 pt-4">
                       <ModalOrganizationFocus
                         projects={orgProjects}
                         onTypeClick={onTypeClick}
@@ -812,38 +812,46 @@ export default function OrganizationModal({
         </div>
 
         {/* IATI Data Section - Minimal */}
-        {organization.iati_data && organization.iati_data.activities && organization.iati_data.activities.length > 0 && (
-          <div className="mt-8 space-y-4">
-            <div className="mb-3 flex items-center gap-2">
-              <h3 className="font-roboto text-xl leading-normal font-black tracking-wide text-[#333333] uppercase">
-                IATI Data
-              </h3>
-              <span className="text-lg font-normal text-gray-500 tabular-nums">
-                ({organization.iati_data.activities.length})
-              </span>
-            </div>
-
-            {/* Summary metrics */}
-            {organization.iati_data.activity_summary && organization.iati_data.activity_summary.count > 0 && (
-              <IATIActivitySummaryCard
-                activitySummary={organization.iati_data.activity_summary}
-                totalActivities={organization.iati_data.stats.total_activities}
-                storedActivities={organization.iati_data.stats.stored_activities}
-                tooltipContainer={tooltipContainer}
-              />
-            )}
-
-            {/* Activities list */}
-            {organization.iati_data.activities && organization.iati_data.activities.length > 0 && (
-              <div className="mt-4 hidden flex flex-col gap-2">
-                <IATIProjectsList
-                  activities={organization.iati_data.activities}
-                  orgName={displayName}
-                />
+        {organization.iati_data &&
+          organization.iati_data.activities &&
+          organization.iati_data.activities.length > 0 && (
+            <div className="mt-8 space-y-4">
+              <div className="mb-3 flex items-center gap-2">
+                <h3 className="font-roboto text-xl leading-normal font-black tracking-wide text-[#333333] uppercase">
+                  IATI Data
+                </h3>
+                <span className="text-lg font-normal text-gray-500 tabular-nums">
+                  ({organization.iati_data.activities.length})
+                </span>
               </div>
-            )}
-          </div>
-        )}
+
+              {/* Summary metrics */}
+              {organization.iati_data.activity_summary &&
+                organization.iati_data.activity_summary.count > 0 && (
+                  <IATIActivitySummaryCard
+                    activitySummary={organization.iati_data.activity_summary}
+                    totalActivities={
+                      organization.iati_data.stats.total_activities
+                    }
+                    storedActivities={
+                      organization.iati_data.stats.stored_activities
+                    }
+                    tooltipContainer={tooltipContainer}
+                  />
+                )}
+
+              {/* Activities list */}
+              {organization.iati_data.activities &&
+                organization.iati_data.activities.length > 0 && (
+                  <div className="mt-4 flex hidden flex-col gap-2">
+                    <IATIProjectsList
+                      activities={organization.iati_data.activities}
+                      orgName={displayName}
+                    />
+                  </div>
+                )}
+            </div>
+          )}
 
         {/* Flexible spacer to push notes to bottom */}
         <div className="min-h-8 grow"></div>

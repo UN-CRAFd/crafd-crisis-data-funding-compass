@@ -28,7 +28,7 @@ import {
   Landmark,
   UserRoundPlus,
   LayoutDashboard,
-  Compass
+  Compass,
 } from "lucide-react";
 import { useTips } from "@/contexts/TipsContext";
 import { useGeneralContributions } from "@/contexts/GeneralContributionsContext";
@@ -140,7 +140,7 @@ export default function PageHeader({
             <div className="flex min-w-0 items-center gap-2">
               <button
                 onClick={handleCompassClick}
-                className="block shrink-0 focus:outline-none transition-transform duration-500"
+                className="block shrink-0 transition-transform duration-500 focus:outline-none"
                 aria-label="Compass"
               >
                 <Compass
@@ -149,15 +149,19 @@ export default function PageHeader({
                   }`}
                 />
               </button>
-              <h1 className="min-w-0 flex flex-col lg:flex-row items-start lg:items-center gap-0 lg:gap-2 bg-gradient-to-r from-slate-800 to-slate-600 bg-clip-text text-base sm:text-xl lg:text-3xl text-transparent">
-              <span className="qanelas-title whitespace-nowrap">{labels.header.title}</span>
-              <span className="font-roboto whitespace-nowrap">{labels.header.subtitle}</span>
+              <h1 className="flex min-w-0 flex-col items-start gap-0 bg-gradient-to-r from-slate-800 to-slate-600 bg-clip-text text-base text-transparent sm:text-xl lg:flex-row lg:items-center lg:gap-2 lg:text-3xl">
+                <span className="qanelas-title whitespace-nowrap">
+                  {labels.header.title}
+                </span>
+                <span className="font-roboto whitespace-nowrap">
+                  {labels.header.subtitle}
+                </span>
               </h1>
             </div>
             <TooltipProvider>
               <TooltipUI>
                 <TooltipTrigger asChild>
-                  <Info className="h-4 w-4 cursor-help text-slate-400 hover:text-slate-600 transition-colors" />
+                  <Info className="h-4 w-4 cursor-help text-slate-400 transition-colors hover:text-slate-600" />
                 </TooltipTrigger>
                 <TooltipContent
                   side="bottom"
@@ -170,7 +174,8 @@ export default function PageHeader({
                   <p className="leading-relaxed">{labels.header.betaTooltip}</p>
                   {lastUpdated && (
                     <p className="mt-2 border-t border-slate-200 pt-2 text-slate-600">
-                      Last updated: <span className="font-semibold">{lastUpdated}</span>
+                      Last updated:{" "}
+                      <span className="font-semibold">{lastUpdated}</span>
                     </p>
                   )}
                 </TooltipContent>
@@ -389,8 +394,6 @@ export default function PageHeader({
                     </span>
                   </div>
                 </DropdownMenuItem>
-
-
               </DropdownMenuContent>
             </DropdownMenu>
           </div>

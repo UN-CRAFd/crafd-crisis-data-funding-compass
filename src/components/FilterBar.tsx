@@ -140,8 +140,9 @@ const FilterBar: React.FC<FilterBarProps> = ({
 
   // Filter out agencies that don't have any funding in the current data
   const agenciesWithoutUnspecified = useMemo(() => {
-    return allAvailableAgenciesList.filter(({ agency }) => 
-      agenciesWithFunding.size === 0 || agenciesWithFunding.has(agency)
+    return allAvailableAgenciesList.filter(
+      ({ agency }) =>
+        agenciesWithFunding.size === 0 || agenciesWithFunding.has(agency),
     );
   }, [allAvailableAgenciesList, agenciesWithFunding]);
 
@@ -151,10 +152,12 @@ const FilterBar: React.FC<FilterBarProps> = ({
   // Filter agencies based on search query
   // Show all agencies if there are multiple, otherwise show only specific ones
   const filteredAgencies = useMemo(() => {
-    const agenciesToShow = hasMultipleAgencies ? agenciesWithoutUnspecified : agenciesWithoutUnspecified;
+    const agenciesToShow = hasMultipleAgencies
+      ? agenciesWithoutUnspecified
+      : agenciesWithoutUnspecified;
     if (!agencySearchQuery.trim()) return agenciesToShow;
     return agenciesToShow.filter(({ agency }) =>
-      agency.toLowerCase().includes(agencySearchQuery.toLowerCase())
+      agency.toLowerCase().includes(agencySearchQuery.toLowerCase()),
     );
   }, [agenciesWithoutUnspecified, agencySearchQuery, hasMultipleAgencies]);
 
@@ -210,9 +213,13 @@ const FilterBar: React.FC<FilterBarProps> = ({
         </div>
 
         {/* Donor Countries and Agencies Container */}
-        <div className={`flex min-w-0 gap-2 ${combinedDonors.length > 0 && hasMultipleAgencies ? "flex-1" : "flex-1"}`}>
+        <div
+          className={`flex min-w-0 gap-2 ${combinedDonors.length > 0 && hasMultipleAgencies ? "flex-1" : "flex-1"}`}
+        >
           {/* Donor Countries Multi-Select */}
-          <div className={`min-w-0 ${combinedDonors.length > 0 && hasMultipleAgencies ? "flex-1" : "flex-1"}`}>
+          <div
+            className={`min-w-0 ${combinedDonors.length > 0 && hasMultipleAgencies ? "flex-1" : "flex-1"}`}
+          >
             <DropdownMenu onOpenChange={(open) => setDonorsMenuOpen(open)}>
               <DropdownMenuTrigger asChild>
                 <Button
@@ -391,37 +398,47 @@ const FilterBar: React.FC<FilterBarProps> = ({
                           }
                         });
 
-                        return Array.from(agenciesByCountry.entries()).map(([country, agencies]) => (
-                          <div key={country}>
-                            {/* Country Header */}
-                            <div className="sticky top-0 z-10 flex items-center gap-1.5 border-b border-slate-200 bg-slate-100 px-2 py-1.5 text-xs font-semibold text-slate-600">
-                              <Globe className="h-3 w-3" />
-                              {country}
+                        return Array.from(agenciesByCountry.entries()).map(
+                          ([country, agencies]) => (
+                            <div key={country}>
+                              {/* Country Header */}
+                              <div className="sticky top-0 z-10 flex items-center gap-1.5 border-b border-slate-200 bg-slate-100 px-2 py-1.5 text-xs font-semibold text-slate-600">
+                                <Globe className="h-3 w-3" />
+                                {country}
+                              </div>
+                              {/* Agencies under this country */}
+                              {agencies.map((agency) => (
+                                <DropdownMenuCheckboxItem
+                                  key={`${country}-${agency}`}
+                                  checked={selectedAgencies.includes(agency)}
+                                  onCheckedChange={(checked) => {
+                                    if (checked) {
+                                      // If selecting a specific agency and "Unspecified Agency" is selected, remove it
+                                      const newSelection =
+                                        selectedAgencies.filter(
+                                          (a) => a !== "Unspecified Agency",
+                                        );
+                                      onAgenciesChange([
+                                        ...newSelection,
+                                        agency,
+                                      ]);
+                                    } else {
+                                      onAgenciesChange(
+                                        selectedAgencies.filter(
+                                          (a) => a !== agency,
+                                        ),
+                                      );
+                                    }
+                                  }}
+                                  onSelect={(e) => e.preventDefault()}
+                                  className="cursor-pointer py-1 pl-6"
+                                >
+                                  <span className="truncate">{agency}</span>
+                                </DropdownMenuCheckboxItem>
+                              ))}
                             </div>
-                            {/* Agencies under this country */}
-                            {agencies.map((agency) => (
-                              <DropdownMenuCheckboxItem
-                                key={`${country}-${agency}`}
-                                checked={selectedAgencies.includes(agency)}
-                                onCheckedChange={(checked) => {
-                                  if (checked) {
-                                    // If selecting a specific agency and "Unspecified Agency" is selected, remove it
-                                    const newSelection = selectedAgencies.filter(a => a !== "Unspecified Agency");
-                                    onAgenciesChange([...newSelection, agency]);
-                                  } else {
-                                    onAgenciesChange(
-                                      selectedAgencies.filter((a) => a !== agency)
-                                    );
-                                  }
-                                }}
-                                onSelect={(e) => e.preventDefault()}
-                                className="cursor-pointer py-1 pl-6"
-                              >
-                                <span className="truncate">{agency}</span>
-                              </DropdownMenuCheckboxItem>
-                            ))}
-                          </div>
-                        ));
+                          ),
+                        );
                       })()
                     )}
                   </div>

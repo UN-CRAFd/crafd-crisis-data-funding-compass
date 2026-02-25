@@ -12,7 +12,9 @@ export async function GET() {
   try {
     const descriptions = await getThemeDescriptions();
     return NextResponse.json(descriptions, {
-      headers: { "Cache-Control": "s-maxage=3600, stale-while-revalidate=7200" },
+      headers: {
+        "Cache-Control": "s-maxage=3600, stale-while-revalidate=7200",
+      },
     });
   } catch (error) {
     console.error("Theme descriptions API error:", error);

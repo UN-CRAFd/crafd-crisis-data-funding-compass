@@ -59,12 +59,12 @@ export interface IATIActivitySummary {
 export interface IATIOrganizationData {
   org_ref: string;
   org_name: string;
-  activities: IATIActivity[];  // Limited to 50 most relevant
-  transaction_summary: IATITransactionSummary;  // Aggregated data
-  activity_summary: IATIActivitySummary;  // Aggregated data
+  activities: IATIActivity[]; // Limited to 50 most relevant
+  transaction_summary: IATITransactionSummary; // Aggregated data
+  activity_summary: IATIActivitySummary; // Aggregated data
   stats: {
-    total_activities: number;  // Total found in IATI
-    stored_activities: number;  // Actually stored (limited)
+    total_activities: number; // Total found in IATI
+    stored_activities: number; // Actually stored (limited)
     total_transactions: number;
   };
 }

@@ -25,15 +25,16 @@ const ProjectBoxComponent: React.FC<ProjectBoxProps> = ({
   combinedDonors = [],
   children,
 }) => {
-  
   return (
     <div
       className="group animate-in cursor-pointer rounded-lg border border-slate-200 bg-white p-3 transition-colors duration-200 fade-in hover:bg-slate-50"
       onClick={onClick}
     >
-      <div className={project.donorCountries?.length > 0 || children ? "mb-2" : ""}>
+      <div
+        className={project.donorCountries?.length > 0 || children ? "mb-2" : ""}
+      >
         <div className="flex flex-wrap items-center gap-2 gap-y-1">
-          <span className="text-sm sm:text-base font-medium text-slate-900 transition-colors group-hover:text-[var(--badge-other-border)]">
+          <span className="text-sm font-medium text-slate-900 transition-colors group-hover:text-[var(--badge-other-border)] sm:text-base">
             {project.projectName}
           </span>
           {project.investmentTypes && project.investmentTypes.length > 0 && (
@@ -79,19 +80,19 @@ const ProjectBoxComponent: React.FC<ProjectBoxProps> = ({
         </div>
       </div>
       <div>
-        {!children && project.donorCountries && project.donorCountries.length > 0 && (
-          <div className="flex flex-wrap gap-1">
-            {project.donorCountries.map((country, idx) => (
-              <Badge
-                key={idx}
-                text={country}
-                variant={
-                  combinedDonors.includes(country) ? "blue" : "slate"
-                }
-              />
-            ))}
-          </div>
-        )}
+        {!children &&
+          project.donorCountries &&
+          project.donorCountries.length > 0 && (
+            <div className="flex flex-wrap gap-1">
+              {project.donorCountries.map((country, idx) => (
+                <Badge
+                  key={idx}
+                  text={country}
+                  variant={combinedDonors.includes(country) ? "blue" : "slate"}
+                />
+              ))}
+            </div>
+          )}
         {children}
       </div>
     </div>

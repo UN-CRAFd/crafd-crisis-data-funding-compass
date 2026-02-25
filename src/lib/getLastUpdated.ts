@@ -8,10 +8,9 @@ import { execSync } from "child_process";
 export function getLastUpdatedDate(): string {
   try {
     // Get the date of the most recent commit
-    const timestamp = execSync(
-      "git log -1 --format=%aI",
-      { encoding: "utf-8" }
-    ).trim();
+    const timestamp = execSync("git log -1 --format=%aI", {
+      encoding: "utf-8",
+    }).trim();
 
     if (!timestamp) {
       return getFormattedDate(new Date());

@@ -566,11 +566,7 @@ export default function DonorModal({
                                 </button>
                               );
                               // Only wrap in tooltip if there's a description
-                              const content = (
-                                <div>
-                                  {projectButton}
-                                </div>
-                              );
+                              const content = <div>{projectButton}</div>;
 
                               if (firstSentence) {
                                 return (

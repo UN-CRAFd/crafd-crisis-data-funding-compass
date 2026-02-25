@@ -19,10 +19,7 @@ import {
 import { SectionHeader } from "../SectionHeader";
 import { useTips } from "@/contexts/TipsContext";
 import { ChevronDown } from "lucide-react";
-import {
-  Collapsible,
-  CollapsibleContent,
-} from "@/components/ui/collapsible";
+import { Collapsible, CollapsibleContent } from "@/components/ui/collapsible";
 
 interface StatCardProps {
   icon: React.ReactNode;
@@ -92,8 +89,10 @@ export const StatCard = React.memo(function StatCard({
             onClick={() => handleExpandChange(!isExpanded)}
             className="w-full text-left"
           >
-            <Card className={`${STYLES.statCard} bg-gradient-to-br ${colors.bg}`}>
-              <CardHeader className="h-5 pb-0 mb-5">
+            <Card
+              className={`${STYLES.statCard} bg-gradient-to-br ${colors.bg}`}
+            >
+              <CardHeader className="mb-5 h-5 pb-0">
                 <CardDescription>
                   <div className="flex items-center justify-between">
                     <SectionHeader icon={icon} title={title} />
@@ -145,7 +144,7 @@ export const StatCard = React.memo(function StatCard({
           </Card>
         )}
         {children && (
-          <CollapsibleContent className="absolute left-0 right-0 top-full z-50 mt-2 bg-white border border-[var(--brand-primary-light)]/40 rounded-lg overflow-hidden">
+          <CollapsibleContent className="absolute top-full right-0 left-0 z-50 mt-2 overflow-hidden rounded-lg border border-[var(--brand-primary-light)]/40 bg-white">
             <CardContent className="p-0">{children}</CardContent>
           </CollapsibleContent>
         )}

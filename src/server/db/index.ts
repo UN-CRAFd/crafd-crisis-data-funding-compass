@@ -5,7 +5,12 @@
  * All queries go through this pool. Never import `pg` directly elsewhere.
  */
 
-import { Pool, type PoolConfig, type QueryResult, type QueryResultRow } from "pg";
+import {
+  Pool,
+  type PoolConfig,
+  type QueryResult,
+  type QueryResultRow,
+} from "pg";
 
 const SCHEMA = "funding_compass";
 

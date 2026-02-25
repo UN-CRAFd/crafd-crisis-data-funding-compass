@@ -159,7 +159,9 @@ const CrisisDataDashboardWrapper = () => {
   }, [searchParams]);
 
   // State for available agencies based on selected donors
-  const [availableAgencies, setAvailableAgencies] = useState<Map<string, string[]>>(new Map());
+  const [availableAgencies, setAvailableAgencies] = useState<
+    Map<string, string[]>
+  >(new Map());
 
   // Load available agencies when exactly one donor is selected
   useEffect(() => {
@@ -175,10 +177,10 @@ const CrisisDataDashboardWrapper = () => {
     // Don't parse agencies if no donor is selected or if not exactly 1 donor
     if (combinedDonors.length !== 1) return [];
     if (agencySlugsFromUrl.length === 0) return [];
-    
+
     // Wait for availableAgencies to load (they load async in useEffect)
     if (availableAgencies.size === 0) return [];
-    
+
     // Get all available agency names
     const allAvailableAgencies: Set<string> = new Set();
     availableAgencies.forEach((agencies) => {
@@ -187,7 +189,9 @@ const CrisisDataDashboardWrapper = () => {
 
     // Match slugs to actual agency names
     return agencySlugsFromUrl
-      .map((slug) => Array.from(allAvailableAgencies).find((a) => matchesUrlSlug(slug, a)))
+      .map((slug) =>
+        Array.from(allAvailableAgencies).find((a) => matchesUrlSlug(slug, a)),
+      )
       .filter((a): a is string => a !== undefined);
   }, [agencySlugsFromUrl, availableAgencies, combinedDonors]);
 
@@ -269,14 +273,18 @@ const CrisisDataDashboardWrapper = () => {
       }
 
       // Handle agencies - only preserve if exactly 1 donor is selected
-      const effectiveDonors = params.donors !== undefined ? params.donors : combinedDonors;
+      const effectiveDonors =
+        params.donors !== undefined ? params.donors : combinedDonors;
       if (effectiveDonors.length === 1) {
         if (params.agencies !== undefined && params.agencies.length > 0) {
           newSearchParams.set(
             "a",
             params.agencies.map((a) => toUrlSlug(a)).join(","),
           );
-        } else if (params.agencies === undefined && selectedAgencies.length > 0) {
+        } else if (
+          params.agencies === undefined &&
+          selectedAgencies.length > 0
+        ) {
           // Preserve current agencies only if donors haven't changed and still exactly 1
           if (params.donors === undefined) {
             newSearchParams.set(

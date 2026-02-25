@@ -80,9 +80,7 @@ export async function buildModalMaps(): Promise<ModalMapsDTO> {
     // orgDonorCountriesMap (org-level donors only)
     const orgLevelDonors = [
       ...new Set(
-        myAgencies
-          .map((a) => a.country_name)
-          .filter((c): c is string => !!c),
+        myAgencies.map((a) => a.country_name).filter((c): c is string => !!c),
       ),
     ].sort();
     orgDonorCountriesMap[org.id] = orgLevelDonors;
@@ -227,14 +225,12 @@ export async function getNestedOrganizationsForDonorModal(): Promise<
           id: p.project_id,
           fields: {
             "Project/Product Name": p.project_name,
-            "product_key": p.product_key,
+            product_key: p.product_key,
             "Project Description": p.project_description,
             "Project Website": p.project_website,
-            "HDX_SOHD": p.hdx_sohd,
+            HDX_SOHD: p.hdx_sohd,
             "Investment Type(s)": [
-              ...new Set(
-                themes.map((t) => t.type_name).filter(Boolean),
-              ),
+              ...new Set(themes.map((t) => t.type_name).filter(Boolean)),
             ],
             "Investment Theme(s)": themes.map((t) => t.theme_name),
           },

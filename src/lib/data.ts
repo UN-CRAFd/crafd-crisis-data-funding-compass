@@ -175,9 +175,7 @@ export async function getAgencyListForDonors(
 // Dashboard Data (from /api/dashboard)
 // ================================================================
 
-export async function processDashboardData(
-  filters: DashboardFilters = {},
-) {
+export async function processDashboardData(filters: DashboardFilters = {}) {
   const response = await fetch("/api/dashboard", {
     method: "POST",
     headers: { "Content-Type": "application/json" },

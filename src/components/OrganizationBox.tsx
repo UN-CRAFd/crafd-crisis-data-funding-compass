@@ -70,7 +70,7 @@ const OrganizationBoxComponent: React.FC<OrganizationBoxProps> = ({
   // Memoize nested org lookup to prevent recalculation on every render
   const nestedOrg = useMemo(
     () => nestedOrganizations.find((n) => n.id === orgId),
-    [nestedOrganizations, orgId]
+    [nestedOrganizations, orgId],
   );
 
   // Memoize orgKey with sanitization for security
@@ -89,7 +89,7 @@ const OrganizationBoxComponent: React.FC<OrganizationBoxProps> = ({
       const short = (rec.fields["Org Short Name"] as string) || "";
       const altFull = (rec.fields["Org Fullname"] as string) || "";
       return [full, short, altFull].some(
-        (s) => normalizeForMatch(String(s || "")) === orgTarget
+        (s) => normalizeForMatch(String(s || "")) === orgTarget,
       );
     });
     return orgTableMatch?.fields["Org Type"] as string | undefined;
@@ -107,7 +107,7 @@ const OrganizationBoxComponent: React.FC<OrganizationBoxProps> = ({
         onOpenOrganizationModal(orgKey);
       }
     },
-    [orgKey, onOpenOrganizationModal]
+    [orgKey, onOpenOrganizationModal],
   );
 
   const handleLogoError = useCallback(
@@ -116,7 +116,7 @@ const OrganizationBoxComponent: React.FC<OrganizationBoxProps> = ({
       const currentSrc = img.src;
       const currentExt = currentSrc.split(".").pop()?.split("?")[0];
       const currentIndex = LOGO_EXTENSIONS.indexOf(
-        currentExt as (typeof LOGO_EXTENSIONS)[number]
+        currentExt as (typeof LOGO_EXTENSIONS)[number],
       );
 
       if (currentIndex !== -1 && currentIndex < LOGO_EXTENSIONS.length - 1) {
@@ -125,7 +125,7 @@ const OrganizationBoxComponent: React.FC<OrganizationBoxProps> = ({
         onLogoError(orgId);
       }
     },
-    [orgKey, orgId, onLogoError]
+    [orgKey, orgId, onLogoError],
   );
 
   // Memoize filter style to prevent object recreation
@@ -135,7 +135,7 @@ const OrganizationBoxComponent: React.FC<OrganizationBoxProps> = ({
         ? "grayscale(0%) brightness(1.1)"
         : "grayscale(100%) brightness(1.1)",
     }),
-    [isHovered]
+    [isHovered],
   );
 
   return (
@@ -184,7 +184,9 @@ const OrganizationBoxComponent: React.FC<OrganizationBoxProps> = ({
 
         {/* Organization name and content */}
         <div className="min-w-0 flex-1 text-left">
-          <div className={`flex flex-col gap-1 sm:flex-row sm:flex-wrap sm:items-baseline sm:gap-2 ${children ? "mb-1" : ""}`}>
+          <div
+            className={`flex flex-col gap-1 sm:flex-row sm:flex-wrap sm:items-baseline sm:gap-2 ${children ? "mb-1" : ""}`}
+          >
             <HeadingTag
               className="cursor-pointer text-sm font-medium text-slate-900 transition-colors hover:text-[var(--brand-primary)] sm:text-base"
               onClick={(e) => {
@@ -200,18 +202,16 @@ const OrganizationBoxComponent: React.FC<OrganizationBoxProps> = ({
               </span>
             )}
           </div>
-          
+
           {/* Badges section */}
           {children && (
-            <div className="flex max-w-full flex-wrap gap-1">
-              {children}
-            </div>
+            <div className="flex max-w-full flex-wrap gap-1">{children}</div>
           )}
         </div>
       </div>
 
       {/* Right section: Details button and/or project count */}
-      <div 
+      <div
         className="flex min-w-[100px] flex-shrink-0 flex-col items-end justify-between self-stretch"
         onClick={(e) => e.stopPropagation()}
       >

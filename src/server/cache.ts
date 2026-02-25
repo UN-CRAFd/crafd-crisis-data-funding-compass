@@ -76,7 +76,16 @@ async function loadAll(): Promise<CoreData> {
     findAllMemberStates(),
   ]);
 
-  return { orgs, orgAgencies, orgProjects, projectThemes, projectAgencies, agencies, themes, memberStates };
+  return {
+    orgs,
+    orgAgencies,
+    orgProjects,
+    projectThemes,
+    projectAgencies,
+    agencies,
+    themes,
+    memberStates,
+  };
 }
 
 /**
@@ -88,15 +97,17 @@ export async function getCoreData(): Promise<CoreData> {
   if (cached && now - cachedAt < TTL_MS) return cached;
 
   if (!loadPromise) {
-    loadPromise = loadAll().then((data) => {
-      cached = data;
-      cachedAt = Date.now();
-      loadPromise = null;
-      return data;
-    }).catch((err) => {
-      loadPromise = null;
-      throw err;
-    });
+    loadPromise = loadAll()
+      .then((data) => {
+        cached = data;
+        cachedAt = Date.now();
+        loadPromise = null;
+        return data;
+      })
+      .catch((err) => {
+        loadPromise = null;
+        throw err;
+      });
   }
 
   return loadPromise;

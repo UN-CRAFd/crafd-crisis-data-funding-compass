@@ -7,7 +7,10 @@ import type { OrgRow } from "./repositories";
 /**
  * Group an array of rows by a string key into a Map.
  */
-export function groupBy<T>(rows: T[], keyFn: (row: T) => string): Map<string, T[]> {
+export function groupBy<T>(
+  rows: T[],
+  keyFn: (row: T) => string,
+): Map<string, T[]> {
   const map = new Map<string, T[]>();
   for (const row of rows) {
     const key = keyFn(row);
@@ -32,7 +35,7 @@ export function buildFieldsObject(org: OrgRow): Record<string, unknown> {
   return {
     "Org Full Name": org.full_name,
     "Org Short Name": org.short_name,
-    "org_key": org.org_key,
+    org_key: org.org_key,
     "Org Website": org.website,
     "Org Description": org.description,
     "Est. Org Budget": org.estimated_budget,

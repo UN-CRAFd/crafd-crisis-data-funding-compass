@@ -624,7 +624,6 @@ export default function MethodologyPage({
                       <SectionTitle icon={FileText}>
                         {labels.methodology.dataClassification}
                       </SectionTitle>
-
                     </div>
 
                     {/* Interactive Classification Explorer */}

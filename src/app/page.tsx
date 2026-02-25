@@ -8,10 +8,10 @@ export default async function Home() {
   return (
     <Suspense
       fallback={
-      <div className="flex min-h-screen items-center justify-center bg-slate-50">
-       <Compass className="h-10 w-10 animate-spin text-[var(--brand-primary)] mr-3" />
-       <span className="text-slate-600">{labels.loading.message}</span>
-          </div>
+        <div className="flex min-h-screen items-center justify-center bg-slate-50">
+          <Compass className="mr-3 h-10 w-10 animate-spin text-[var(--brand-primary)]" />
+          <span className="text-slate-600">{labels.loading.message}</span>
+        </div>
       }
     >
       <CrisisDataDashboardWrapper />

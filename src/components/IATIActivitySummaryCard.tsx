@@ -24,10 +24,8 @@ export function IATIActivitySummaryCard({
   const formatCurrency = (value: number) => {
     if (value >= 1_000_000_000)
       return `$${(value / 1_000_000_000).toFixed(1)}B`;
-    if (value >= 1_000_000)
-      return `$${(value / 1_000_000).toFixed(1)}M`;
-    if (value >= 1_000)
-      return `$${(value / 1_000).toFixed(1)}K`;
+    if (value >= 1_000_000) return `$${(value / 1_000_000).toFixed(1)}M`;
+    if (value >= 1_000) return `$${(value / 1_000).toFixed(1)}K`;
     return `$${value}`;
   };
 
@@ -37,9 +35,7 @@ export function IATIActivitySummaryCard({
     <div className="rounded-lg border border-slate-200 bg-slate-100 p-4 shadow-sm">
       <div className="mt-0 grid grid-cols-[3fr_3fr_3fr_0.2fr] gap-4">
         <div className="flex flex-col">
-          <span className="text-sm tracking-wide text-slate-400">
-            Budget
-          </span>
+          <span className="text-sm tracking-wide text-slate-400">Budget</span>
           <span className="text-base font-medium text-slate-600">
             {activitySummary.total_budget > 0
               ? formatCurrency(activitySummary.total_budget)
@@ -57,9 +53,7 @@ export function IATIActivitySummaryCard({
         </div>
 
         <div className="flex flex-col">
-          <span className="text-sm tracking-wide text-slate-400">
-            Active
-          </span>
+          <span className="text-sm tracking-wide text-slate-400">Active</span>
           <span className="text-base font-medium text-slate-600">
             {activeCount}
           </span>
