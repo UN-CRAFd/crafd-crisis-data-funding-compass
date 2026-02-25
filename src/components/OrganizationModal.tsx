@@ -419,7 +419,7 @@ export default function OrganizationModal({
                 className="inline-flex items-center gap-2 rounded-md border border-slate-200 bg-slate-100 px-3 py-1.5 text-sm font-medium text-slate-600 transition-colors hover:border-slate-400 hover:bg-slate-200"
               >
                 <img
-                  src="/hdx_logo.png"
+                  src="images/hdx-logo.png"
                   alt="HDX logo"
                   className="h-5 w-5 rounded-none"
                 />
@@ -440,7 +440,7 @@ export default function OrganizationModal({
                 className="inline-flex items-center gap-2 rounded-md border border-slate-200 bg-slate-100 px-3 py-1.5 text-sm font-medium text-slate-600 transition-colors hover:border-slate-400 hover:bg-slate-200"
               >
                 <img
-                  src="/iati_logo.png"
+                  src="images/iati-logo.png"
                   alt="IATI logo"
                   className="h-5 rounded-none"
                 />

@@ -181,7 +181,7 @@ export default function ProjectModal({
               className="inline-flex items-center gap-2 rounded-md border border-slate-200 bg-slate-100 px-3 py-1.5 text-sm font-medium text-slate-600"
             >
               <img
-                src="/hdx_logo.png"
+                src="images/hdx-logo.png"
                 alt="HDX logo"
                 className="h-4 w-4 rounded-none"
               />
