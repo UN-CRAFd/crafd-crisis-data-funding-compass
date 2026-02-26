@@ -642,7 +642,6 @@ export default function OrganizationModal({
                         projects={orgProjects}
                         onTypeClick={onTypeClick}
                         tooltipContainer={tooltipContainer}
-                        SubHeader={undefined}
                       />
                     </div>
                   );

@@ -5,47 +5,41 @@ import labels from "@/config/labels.json";
 import { ModalTooltip } from "./BaseModal";
 
 interface ModalOrganizationFocusProps {
-  projects: Array<{
-    investmentTypes: string[];
-  }>;
-  SubHeader?: React.ComponentType<{ children: React.ReactNode }>;
+  projects: Array<{ investmentTypes: string[] }>;
   onTypeClick?: (type: string) => void;
   tooltipContainer?: Element | null;
 }
 
 const ModalOrganizationFocus: React.FC<ModalOrganizationFocusProps> = ({
   projects,
-  SubHeader,
   onTypeClick,
   tooltipContainer,
 }) => {
-  // Count investment types across all projects
   const investmentTypeCounts = React.useMemo(() => {
     const counts = new Map<string, number>();
-
     projects.forEach((project) => {
       project.investmentTypes.forEach((type) => {
         counts.set(type, (counts.get(type) || 0) + 1);
       });
     });
-
-    // Convert to array and sort by count (descending), then alphabetically
     return Array.from(counts.entries())
-      .sort((a, b) => {
-        if (b[1] !== a[1]) return b[1] - a[1]; // Sort by count descending
-        return a[0].localeCompare(b[0]); // Then alphabetically
-      })
+      .sort((a, b) => b[1] - a[1] || a[0].localeCompare(b[0]))
       .map(([type, count]) => ({ type, count }));
   }, [projects]);
 
   if (investmentTypeCounts.length === 0) return null;
 
   return (
-    <div>
-      <div className="grid grid-cols-2 gap-0.5 sm:gap-2">
-        {investmentTypeCounts.map(({ type, count }) => {
-          const IconComponent = getIconForInvestmentType(type);
-          const button = (
+    <div className="grid grid-cols-2 gap-0.5 sm:gap-2">
+      {investmentTypeCounts.map(({ type, count }) => {
+        const IconComponent = getIconForInvestmentType(type);
+        return (
+          <ModalTooltip
+            key={type}
+            content={INVESTMENT_TYPE_DESCRIPTIONS[type] || labels.modals.clickToFilterByType}
+            side="top"
+            tooltipContainer={tooltipContainer}
+          >
             <button
               onClick={() => onTypeClick?.(type)}
               className="inline-flex cursor-pointer items-center gap-1 p-0 text-xs font-medium leading-none text-slate-700 transition-opacity hover:opacity-60"
@@ -54,23 +48,9 @@ const ModalOrganizationFocus: React.FC<ModalOrganizationFocusProps> = ({
               <span className="truncate">{type}</span>
               <span className="text-slate-400">({count})</span>
             </button>
-          );
-
-          return (
-            <ModalTooltip
-              key={type}
-              content={
-                INVESTMENT_TYPE_DESCRIPTIONS[type] ||
-                labels.modals.clickToFilterByType
-              }
-              side="top"
-              tooltipContainer={tooltipContainer}
-            >
-              {button}
-            </ModalTooltip>
-          );
-        })}
-      </div>
+          </ModalTooltip>
+        );
+      })}
     </div>
   );
 };
