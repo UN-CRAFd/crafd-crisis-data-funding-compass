@@ -552,16 +552,33 @@ export default function OrganizationModal({
                         className="inline-flex w-full cursor-pointer items-center justify-between gap-1.5 rounded-md bg-slate-100 px-3 py-1.5 text-left text-base font-medium text-slate-600 transition-colors hover:bg-slate-200"
                       >
                         <div className="inline-flex min-w-0 items-center gap-1.5">
-                          {hoveredProjectId === proj.id ? (
-                            <PackageOpen className="h-4 w-4 shrink-0 text-slate-600" />
-                          ) : (
-                            <Package className="h-4 w-4 shrink-0 text-slate-600" />
-                          )}
+                          {(() => {
+                            if (investmentTypes.length === 0) {
+                              return hoveredProjectId === proj.id ? (
+                                <PackageOpen className="h-4 w-4 shrink-0 text-slate-600" />
+                              ) : (
+                                <Package className="h-4 w-4 shrink-0 text-slate-600" />
+                              );
+                            }
+                            if (investmentTypes.length === 1) {
+                              const TypeIcon = getIconForInvestmentType(investmentTypes[0]);
+                              return <TypeIcon className="h-4 w-4 shrink-0 text-slate-600" />;
+                            }
+                            // Two or more types - show first two diagonally
+                            const Icon1 = getIconForInvestmentType(investmentTypes[0]);
+                            const Icon2 = getIconForInvestmentType(investmentTypes[1]);
+                            return (
+                              <div className="relative h-4 w-4 shrink-0">
+                                <Icon1 className="absolute left-0 top-0 h-2 w-2 text-slate-600" />
+                                <Icon2 className="absolute bottom-0 right-0 h-2 w-2 text-slate-600" />
+                              </div>
+                            );
+                          })()}
                           <span className="truncate">{proj.name}</span>
                         </div>
-                        {investmentTypes.length > 0 && (
+                        {investmentTypes.length > 2 && (
                           <div className="inline-flex shrink-0 items-center gap-1">
-                            {investmentTypes.map((type, idx) => {
+                            {investmentTypes.slice(2).map((type, idx) => {
                               const TypeIcon = getIconForInvestmentType(type);
                               return (
                                 <TypeIcon
