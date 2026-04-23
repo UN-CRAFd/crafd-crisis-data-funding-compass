@@ -491,6 +491,7 @@ export default function MethodologyPage({
     { id: "filtering", icon: Layers, label: labels.methodology.tabs.filtering },
     { id: "network", icon: TrendingUp, label: labels.methodology.tabs.network },
     { id: "export", icon: Download, label: labels.methodology.tabs.export },
+    { id: "repository", icon: Settings, label: labels.methodology.tabs.repository },
   ];
 
   const handleShare = () => {
@@ -1109,6 +1110,224 @@ print(f"\\nAssets by type:\\n{by_type}")`}
                           />
                         </div>
                       </div>
+                    </div>
+                  </div>
+                    )}
+
+                    {/* Repository Tab */}
+                    {activeArticle === "repository" && (
+                  <div className="space-y-8">
+                    <div>
+                      <SectionTitle icon={Settings}>
+                        {labels.methodology.repositoryOverview}
+                      </SectionTitle>
+                      <div className="space-y-4">
+                        <InfoCard title={labels.methodology.repositoryOverview}>
+                          {labels.methodology.repositoryDescription}
+                        </InfoCard>
+                        <div className="rounded-lg border border-slate-200 bg-slate-50 p-4">
+                          <h4 className="mb-3 flex items-center gap-2 font-semibold text-slate-800">
+                            <FileText className="h-4 w-4" style={{ color: "var(--brand-primary)" }} />
+                            GitHub Repository
+                          </h4>
+                          <p className="mb-4 text-sm text-slate-600">
+                            Visit our open-source repository to explore the codebase, report issues, and contribute improvements:
+                          </p>
+                          <a
+                            href="https://github.com/UN-CRAFd/crafd-crisis-data-funding-compass"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="inline-flex items-center gap-2 rounded-lg px-4 py-2 font-medium text-white transition-all hover:shadow-lg"
+                            style={{ backgroundColor: "var(--brand-primary)" }}
+                          >
+                            <Settings className="h-4 w-4" />
+                            View on GitHub
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div>
+                      <SectionTitle icon={Layers}>
+                        {labels.methodology.projectStructure}
+                      </SectionTitle>
+                      <div className="space-y-4">
+                        <div className="rounded-lg border border-slate-200 bg-slate-50 p-4">
+                          <h4 className="mb-3 font-semibold text-slate-800">Frontend</h4>
+                          <p className="mb-2 text-xs font-medium text-slate-600">{labels.methodology.frontendSubtitle}</p>
+                          <ul className="space-y-1 text-sm text-slate-700">
+                            <li>📁 <strong>src/app/</strong> - Next.js app directory with pages and API routes</li>
+                            <li>📁 <strong>src/components/</strong> - React components (Dashboard, Methodology, modals, filters)</li>
+                            <li>📁 <strong>src/config/</strong> - Configuration files (labels, colors, investment types)</li>
+                            <li>📁 <strong>src/lib/</strong> - Utility functions (data fetching, exports, color handling)</li>
+                            <li>📁 <strong>src/server/</strong> - Backend services (database, caching, API logic)</li>
+                            <li>📁 <strong>public/</strong> - Static assets (images, logos, methodology screenshots)</li>
+                          </ul>
+                        </div>
+
+                        <div className="rounded-lg border border-slate-200 bg-slate-50 p-4">
+                          <h4 className="mb-3 font-semibold text-slate-800">Backend & Database</h4>
+                          <p className="mb-2 text-xs font-medium text-slate-600">{labels.methodology.backendSubtitle}</p>
+                          <ul className="space-y-1 text-sm text-slate-700">
+                            <li>📁 <strong>src/server/db/</strong> - Database client and connection management</li>
+                            <li>📁 <strong>src/server/repositories/</strong> - Database query abstractions for entities</li>
+                            <li>📁 <strong>src/server/services/</strong> - Business logic layer (dashboard service)</li>
+                            <li>📁 <strong>src/server/cache.ts</strong> - In-memory caching for performance</li>
+                            <li>📁 <strong>sql/</strong> - PostgreSQL schema files and migrations</li>
+                          </ul>
+                        </div>
+
+                        <div className="rounded-lg border border-slate-200 bg-slate-50 p-4">
+                          <h4 className="mb-3 font-semibold text-slate-800">Data & Python</h4>
+                          <p className="mb-2 text-xs font-medium text-slate-600">{labels.methodology.pythonSubtitle}</p>
+                          <ul className="space-y-1 text-sm text-slate-700">
+                            <li>📁 <strong>python/</strong> - Data collection and ETL scripts</li>
+                            <li>📁 <strong>python/iati_api/</strong> - IATI data integration and fetching</li>
+                            <li>📁 <strong>docs/</strong> - Integration guides (IATI, database setup)</li>
+                          </ul>
+                        </div>
+
+                        <div className="rounded-lg border border-slate-200 bg-slate-50 p-4">
+                          <h4 className="mb-3 font-semibold text-slate-800">Key Configuration Files</h4>
+                          <ul className="space-y-1 text-sm text-slate-700">
+                            <li>📄 <strong>next.config.mjs</strong> - Next.js configuration</li>
+                            <li>📄 <strong>tailwind.config.ts</strong> - Tailwind CSS configuration</li>
+                            <li>📄 <strong>tsconfig.json</strong> - TypeScript configuration</li>
+                            <li>📄 <strong>eslint.config.mjs</strong> - Code linting rules</li>
+                            <li>📄 <strong>package.json</strong> - Dependencies and npm scripts</li>
+                          </ul>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div>
+                      <SectionTitle icon={Database}>
+                        {labels.methodology.gettingStarted}
+                      </SectionTitle>
+                      <div className="space-y-4">
+                        <div className="rounded-lg border border-slate-200 bg-slate-50 p-4">
+                          <div className="mb-3 flex items-center gap-3">
+                            <div
+                              className="flex h-8 w-8 items-center justify-center rounded-full text-sm font-bold text-white"
+                              style={{ backgroundColor: "var(--brand-primary)" }}
+                            >
+                              1
+                            </div>
+                            <h4 className="font-semibold text-slate-800">Clone & Install</h4>
+                          </div>
+                          <CodeBlock
+                            code={`git clone https://github.com/UN-CRAFd/crafd-crisis-data-funding-compass.git
+cd crafd-crisis-data-funding-compass
+pnpm install`}
+                          />
+                        </div>
+
+                        <div className="rounded-lg border border-slate-200 bg-slate-50 p-4">
+                          <div className="mb-3 flex items-center gap-3">
+                            <div
+                              className="flex h-8 w-8 items-center justify-center rounded-full text-sm font-bold text-white"
+                              style={{ backgroundColor: "var(--brand-primary)" }}
+                            >
+                              2
+                            </div>
+                            <h4 className="font-semibold text-slate-800">Environment Setup</h4>
+                          </div>
+                          <p className="mb-3 text-sm text-slate-600">Create a <code className="rounded bg-slate-100 px-2 py-1 font-mono text-xs">.env.local</code> file with required variables:</p>
+                          <CodeBlock
+                            code={`DATABASE_URL=postgresql://user:password@localhost:5432/your_db_name
+NODE_ENV=development`}
+                          />
+                        </div>
+
+                        <div className="rounded-lg border border-slate-200 bg-slate-50 p-4">
+                          <div className="mb-3 flex items-center gap-3">
+                            <div
+                              className="flex h-8 w-8 items-center justify-center rounded-full text-sm font-bold text-white"
+                              style={{ backgroundColor: "var(--brand-primary)" }}
+                            >
+                              3
+                            </div>
+                            <h4 className="font-semibold text-slate-800">Database Setup</h4>
+                          </div>
+                          <p className="mb-3 text-sm text-slate-600">Run PostgreSQL and execute the schema files:</p>
+                          <CodeBlock
+                            code={`cd sql/schema
+psql -U postgres < 001_create_schema.sql
+psql -U postgres < 002_lookup_tables.sql
+psql -U postgres < 003_entity_tables.sql
+psql -U postgres < 004_junction_tables.sql`}
+                          />
+                        </div>
+
+                        <div className="rounded-lg border border-slate-200 bg-slate-50 p-4">
+                          <div className="mb-3 flex items-center gap-3">
+                            <div
+                              className="flex h-8 w-8 items-center justify-center rounded-full text-sm font-bold text-white"
+                              style={{ backgroundColor: "var(--brand-primary)" }}
+                            >
+                              4
+                            </div>
+                            <h4 className="font-semibold text-slate-800">Start Development</h4>
+                          </div>
+                          <CodeBlock code={`pnpm dev`} />
+                          <p className="mt-3 text-xs text-slate-600">Open http://localhost:3000 in your browser</p>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div>
+                      <SectionTitle icon={Workflow}>
+                        {labels.methodology.adaptingForYourProject}
+                      </SectionTitle>
+                      <div className="space-y-4">
+                        <InfoCard title="Customize Colors & Branding">
+                          Edit <code className="rounded bg-slate-100 px-2 py-1 font-mono text-xs">src/app/globals.css</code> to define your brand colors, then update the theme reference throughout the app.
+                        </InfoCard>
+
+                        <InfoCard title="Modify Data Structure">
+                          Update <code className="rounded bg-slate-100 px-2 py-1 font-mono text-xs">sql/schema/</code> files with your entity definitions, then regenerate repositories and services accordingly.
+                        </InfoCard>
+
+                        <InfoCard title="Add New Visualizations">
+                          Create new React components in <code className="rounded bg-slate-100 px-2 py-1 font-mono text-xs">src/components/</code> and integrate them into pages in <code className="rounded bg-slate-100 px-2 py-1 font-mono text-xs">src/app/</code>.
+                        </InfoCard>
+
+                        <InfoCard title="Integrate Your Data">
+                          Use the Python scripts in <code className="rounded bg-slate-100 px-2 py-1 font-mono text-xs">python/</code> as templates to create ETL pipelines for your own data sources.
+                        </InfoCard>
+
+                        <div className="rounded-lg border border-slate-200 bg-slate-50 p-4">
+                          <h4 className="mb-2 font-semibold text-slate-800">Deploy to Production</h4>
+                          <p className="mb-3 text-sm leading-relaxed text-slate-600">Build and test locally:</p>
+                          <CodeBlock code={`pnpm build && pnpm start`} />
+                          <p className="mt-3 text-sm leading-relaxed text-slate-600">This project is configured for Vercel deployment with automatic CI/CD. Connect your GitHub fork and follow Vercel's setup instructions.</p>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div
+                      className="rounded-lg border-2 p-4"
+                      style={{
+                        backgroundColor: "var(--brand-bg-light)",
+                        borderColor: "var(--brand-border)",
+                      }}
+                    >
+                      <h4
+                        className="mb-2 flex items-center gap-2 font-semibold"
+                        style={{ color: "var(--brand-primary-dark)" }}
+                      >
+                        <BookCheck className="h-4 w-4" />
+                        Need Help?
+                      </h4>
+                      <ul
+                        className="space-y-2 text-sm"
+                        style={{ color: "var(--brand-primary-dark)" }}
+                      >
+                        <li>• Check <strong>docs/</strong> folder for integration guides</li>
+                        <li>• Review <strong>README.md</strong> for project overview</li>
+                        <li>• Open an issue on GitHub for questions or problems</li>
+                        <li>• Review CONTRIBUTING.md for contribution guidelines</li>
+                      </ul>
                     </div>
                   </div>
                     )}
