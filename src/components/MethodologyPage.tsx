@@ -3,12 +3,10 @@
 import { useState } from "react";
 import PageHeader from "@/components/PageHeader";
 import { Card, CardContent } from "@/components/ui/card";
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import labels from "@/config/labels.json";
 import {
   BookOpen,
   Database,
-  CheckCircle2,
   AlertTriangle,
   Layers,
   Users,
@@ -16,7 +14,6 @@ import {
   Search,
   MessageCircle,
   TrendingUp,
-  Shield,
   Server,
   BarChart3,
   Settings,
@@ -485,6 +482,16 @@ export default function MethodologyPage({
   const [selectedType, setSelectedType] = useState<string | null>(
     "Data Sets & Commons",
   );
+  const [activeArticle, setActiveArticle] = useState("collection");
+
+  const ARTICLES = [
+    { id: "collection", icon: Search, label: labels.methodology.tabs.collection },
+    { id: "classification", icon: FileText, label: labels.methodology.tabs.classification },
+    { id: "limitations", icon: AlertTriangle, label: labels.methodology.tabs.limitations },
+    { id: "filtering", icon: Layers, label: labels.methodology.tabs.filtering },
+    { id: "network", icon: TrendingUp, label: labels.methodology.tabs.network },
+    { id: "export", icon: Download, label: labels.methodology.tabs.export },
+  ];
 
   const handleShare = () => {
     const url = window.location.href;
@@ -502,8 +509,7 @@ export default function MethodologyPage({
 
       {/* Main Content */}
       <div className="mx-auto max-w-[82rem] px-4 py-0 pt-20 sm:px-6 sm:py-0 sm:pt-24 lg:px-8">
-        <Tabs defaultValue="collection" className="w-full">
-          <div className="space-y-4 sm:space-y-4">
+          <div className="space-y-6">
             {/* Hero Section */}
             <div className="relative overflow-hidden rounded-xl border border-[var(--brand-primary-light)]/40 bg-gradient-to-br from-[var(--brand-bg-lighter)] to-[var(--brand-bg-light)] p-6 sm:p-8">
               <div className="relative z-10">
@@ -519,65 +525,55 @@ export default function MethodologyPage({
                     {labels.methodology.title}
                   </h1>
                 </div>
-                <p className="mb-6 max-w-3xl text-base leading-relaxed text-slate-700 sm:text-lg">
+                <p className="max-w-3xl text-base leading-relaxed text-slate-700 sm:text-lg">
                   {labels.methodology.subtitle}
                 </p>
-                <TabsList className="grid h-auto w-full grid-cols-2 gap-2 bg-white/60 p-2 lg:grid-cols-6">
-                  {[
-                    {
-                      value: "collection",
-                      icon: Search,
-                      label: labels.methodology.tabs.collection,
-                    },
-                    {
-                      value: "classification",
-                      icon: FileText,
-                      label: labels.methodology.tabs.classification,
-                    },
-                    {
-                      value: "limitations",
-                      icon: AlertTriangle,
-                      label: labels.methodology.tabs.limitations,
-                    },
-                    {
-                      value: "filtering",
-                      icon: Layers,
-                      label: labels.methodology.tabs.filtering,
-                    },
-                    {
-                      value: "network",
-                      icon: TrendingUp,
-                      label: labels.methodology.tabs.network,
-                    },
-                    {
-                      value: "export",
-                      icon: Download,
-                      label: labels.methodology.tabs.export,
-                    },
-                  ].map(({ value, icon: Icon, label }) => (
-                    <TabsTrigger
-                      key={value}
-                      value={value}
-                      className="text-xs data-[state=active]:bg-white data-[state=active]:shadow-sm sm:text-sm"
-                    >
-                      <Icon className="mr-2 h-4 w-4" />
-                      {label}
-                    </TabsTrigger>
-                  ))}
-                </TabsList>
               </div>
             </div>
 
-            {/* Overview Cards */}
+            {/* Wiki Layout */}
+            <div className="flex items-start gap-6">
+              {/* Left Sidebar */}
+              <aside className="hidden w-52 shrink-0 md:block lg:w-60">
+                <div className="sticky top-24 overflow-hidden rounded-xl border border-slate-200 bg-white">
+                  <div className="border-b border-slate-100 bg-slate-50 px-4 py-3">
+                    <h2 className="text-xs font-semibold tracking-wider text-slate-500 uppercase">
+                      Contents
+                    </h2>
+                  </div>
+                  <nav className="p-2">
+                    {ARTICLES.map(({ id, icon: ArticleIcon, label: articleLabel }) => (
+                      <button
+                        key={id}
+                        onClick={() => setActiveArticle(id)}
+                        className={`flex w-full items-center gap-2.5 rounded-lg px-3 py-2.5 text-left text-sm transition-colors ${
+                          activeArticle === id
+                            ? "font-medium"
+                            : "text-slate-600 hover:bg-slate-50 hover:text-slate-900"
+                        }`}
+                        style={
+                          activeArticle === id
+                            ? {
+                                backgroundColor: "var(--brand-bg-light)",
+                                color: "var(--brand-primary)",
+                              }
+                            : {}
+                        }
+                      >
+                        <ArticleIcon className="h-4 w-4 shrink-0" />
+                        <span>{articleLabel}</span>
+                      </button>
+                    ))}
+                  </nav>
+                </div>
+              </aside>
 
-            {/* Main Methodology Content */}
-            <Card className="!border-0 bg-white">
-              <CardContent className="px-4 pt-0 pb-0 sm:px-6 sm:pb-0">
-                {/* Data Collection Tab */}
-                <TabsContent
-                  value="collection"
-                  className="animate-tab-enter mt-0 mb-0"
-                >
+              {/* Main Content */}
+              <main className="min-w-0 flex-1">
+                <Card className="!border-0 bg-white">
+                  <CardContent className="px-4 pt-6 pb-6 sm:px-8">
+                    {/* Data Collection Tab */}
+                    {activeArticle === "collection" && (
                   <div className="grid grid-cols-1 gap-6 lg:grid-cols-2">
                     <div>
                       <SectionTitle icon={Search}>
@@ -612,13 +608,10 @@ export default function MethodologyPage({
                       alt={labels.methodology.dataCollectionProcess}
                     />
                   </div>
-                </TabsContent>
+                    )}
 
-                {/* Classification Tab */}
-                <TabsContent
-                  value="classification"
-                  className="animate-tab-enter mt-0"
-                >
+                    {/* Classification Tab */}
+                    {activeArticle === "classification" && (
                   <div className="space-y-6">
                     <div>
                       <SectionTitle icon={FileText}>
@@ -741,13 +734,10 @@ export default function MethodologyPage({
                         })()}
                     </div>
                   </div>
-                </TabsContent>
+                    )}
 
-                {/* Limitations Tab */}
-                <TabsContent
-                  value="limitations"
-                  className="animate-tab-enter mt-0"
-                >
+                    {/* Limitations Tab */}
+                    {activeArticle === "limitations" && (
                   <div className="space-y-6">
                     <div>
                       <SectionTitle icon={AlertTriangle}>
@@ -771,13 +761,10 @@ export default function MethodologyPage({
                       </div>
                     </div>
                   </div>
-                </TabsContent>
+                    )}
 
-                {/* Filtering & Query Tab */}
-                <TabsContent
-                  value="filtering"
-                  className="animate-tab-enter mt-0"
-                >
+                    {/* Filtering Tab */}
+                    {activeArticle === "filtering" && (
                   <div className="space-y-6">
                     <div>
                       <SectionTitle icon={Layers}>
@@ -1032,10 +1019,10 @@ export default function MethodologyPage({
                       </div>
                     </div>
                   </div>
-                </TabsContent>
+                    )}
 
-                {/* Network Analysis Tab */}
-                <TabsContent value="network" className="animate-tab-enter mt-0">
+                    {/* Network Tab */}
+                    {activeArticle === "network" && (
                   <div className="grid grid-cols-1 gap-6 lg:grid-cols-2">
                     <div>
                       <SectionTitle icon={TrendingUp}>
@@ -1063,10 +1050,10 @@ export default function MethodologyPage({
                       alt={labels.methodology.networkGraphVisualization}
                     />
                   </div>
-                </TabsContent>
+                    )}
 
-                {/* Export Tab */}
-                <TabsContent value="export" className="animate-tab-enter mt-0">
+                    {/* Export Tab */}
+                    {activeArticle === "export" && (
                   <div className="space-y-8">
                     <div>
                       <SectionTitle icon={Download}>
@@ -1124,9 +1111,11 @@ print(f"\\nAssets by type:\\n{by_type}")`}
                       </div>
                     </div>
                   </div>
-                </TabsContent>
-              </CardContent>
-            </Card>
+                    )}
+                  </CardContent>
+                </Card>
+              </main>
+            </div>
 
             {/* Contact Section */}
             <Card className="!border-0 bg-gradient-to-br from-[var(--brand-bg-lighter)] to-[var(--brand-bg-light)]">
@@ -1160,7 +1149,6 @@ print(f"\\nAssets by type:\\n{by_type}")`}
               </CardContent>
             </Card>
           </div>
-        </Tabs>
       </div>
 
       {/* Footer */}
