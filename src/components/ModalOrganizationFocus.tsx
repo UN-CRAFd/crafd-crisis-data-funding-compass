@@ -36,13 +36,16 @@ const ModalOrganizationFocus: React.FC<ModalOrganizationFocusProps> = ({
         return (
           <ModalTooltip
             key={type}
-            content={INVESTMENT_TYPE_DESCRIPTIONS[type] || labels.modals.clickToFilterByType}
+            content={
+              INVESTMENT_TYPE_DESCRIPTIONS[type] ||
+              labels.modals.clickToFilterByType
+            }
             side="top"
             tooltipContainer={tooltipContainer}
           >
             <button
               onClick={() => onTypeClick?.(type)}
-              className="inline-flex cursor-pointer items-center gap-1 p-0 text-xs font-medium leading-none text-slate-700 transition-opacity hover:opacity-60"
+              className="inline-flex cursor-pointer items-center gap-1 p-0 text-xs leading-none font-medium text-slate-700 transition-opacity hover:opacity-60"
             >
               <IconComponent className="h-4 w-4" />
               <span className="truncate">{type}</span>

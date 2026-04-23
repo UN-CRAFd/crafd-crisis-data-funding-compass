@@ -561,16 +561,24 @@ export default function OrganizationModal({
                               );
                             }
                             if (investmentTypes.length === 1) {
-                              const TypeIcon = getIconForInvestmentType(investmentTypes[0]);
-                              return <TypeIcon className="h-4 w-4 shrink-0 text-slate-600" />;
+                              const TypeIcon = getIconForInvestmentType(
+                                investmentTypes[0],
+                              );
+                              return (
+                                <TypeIcon className="h-4 w-4 shrink-0 text-slate-600" />
+                              );
                             }
                             // Two or more types - show first two diagonally
-                            const Icon1 = getIconForInvestmentType(investmentTypes[0]);
-                            const Icon2 = getIconForInvestmentType(investmentTypes[1]);
+                            const Icon1 = getIconForInvestmentType(
+                              investmentTypes[0],
+                            );
+                            const Icon2 = getIconForInvestmentType(
+                              investmentTypes[1],
+                            );
                             return (
                               <div className="relative h-4 w-4 shrink-0">
-                                <Icon1 className="absolute left-0 top-0 h-2 w-2 text-slate-600" />
-                                <Icon2 className="absolute bottom-0 right-0 h-2 w-2 text-slate-600" />
+                                <Icon1 className="absolute top-0 left-0 h-2 w-2 text-slate-600" />
+                                <Icon2 className="absolute right-0 bottom-0 h-2 w-2 text-slate-600" />
                               </div>
                             );
                           })()}
