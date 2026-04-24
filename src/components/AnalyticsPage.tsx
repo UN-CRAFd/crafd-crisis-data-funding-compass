@@ -36,7 +36,17 @@ import {
   Columns,
   Radar as RadarIcon,
   AlertCircle,
+  Settings,
+  Lightbulb,
+  Landmark,
+  UserRoundPlus,
 } from "lucide-react";
+import {
+  DropdownMenu,
+  DropdownMenuContent,
+  DropdownMenuItem,
+  DropdownMenuTrigger,
+} from "@/components/ui/dropdown-menu";
 import {
   Radar,
   RadarChart,
@@ -123,6 +133,11 @@ const MATRIX_MODES = [
 export default function AnalyticsPage() {
   const router = useRouter();
   const searchParams = useSearchParams();
+
+  // Use contexts for tips and general contributions
+  const { tipsEnabled, setTipsEnabled } = useTips();
+  const { showGeneralContributions, setShowGeneralContributions } =
+    useGeneralContributions();
   const [organizationsData, setOrganizationsData] = useState<
     OrganizationData[]
   >([]);
@@ -1645,14 +1660,7 @@ export default function AnalyticsPage() {
     });
   };
 
-  // Get General Contributions state
-  let showGeneralContributions = true;
-  try {
-    const genContContext = useGeneralContributions();
-    showGeneralContributions = genContContext.showGeneralContributions;
-  } catch (e) {
-    // GeneralContributionsProvider not available
-  }
+  // General contributions state is now loaded from context at the top of the component
 
   return (
     <div className="min-h-screen bg-slate-50">
@@ -1810,6 +1818,163 @@ export default function AnalyticsPage() {
                   icon={<Filter style={{ color: "var(--brand-primary)" }} />}
                   title="SUBSET FILTER"
                 />
+                {/* Settings Gear Icon */}
+                <DropdownMenu>
+                  <DropdownMenuTrigger asChild>
+                    <Button
+                      variant="ghost"
+                      size="sm"
+                      className="h-8 w-8 p-0 text-slate-600 hover:bg-slate-100"
+                    >
+                      <Settings className="h-5 w-5" />
+                    </Button>
+                  </DropdownMenuTrigger>
+                  <DropdownMenuContent
+                    align="end"
+                    side="bottom"
+                    sideOffset={4}
+                    className="w-auto min-w-[250px] border border-slate-200 bg-white shadow-lg"
+                  >
+                    <DropdownMenuItem
+                      onSelect={(e) => e.preventDefault()}
+                      onClick={() => setTipsEnabled(!tipsEnabled)}
+                      className="flex cursor-pointer items-center justify-between px-2 py-2 text-sm hover:bg-slate-100"
+                    >
+                      <div className="flex items-center">
+                        <Lightbulb className="mr-2 h-4 w-4" />
+                        <span>Show Tips</span>
+                      </div>
+                      <div
+                        className={`h-4 w-7 rounded-full transition-colors ${
+                          tipsEnabled
+                            ? "bg-[var(--brand-primary-dark)]"
+                            : "bg-slate-300"
+                        }`}
+                      >
+                        <div
+                          className={`h-4 w-4 rounded-full bg-white transition-transform ${
+                            tipsEnabled ? "translate-x-3" : "translate-x-0"
+                          }`}
+                        />
+                      </div>
+                    </DropdownMenuItem>
+
+                    <DropdownMenuItem
+                      onSelect={(e) => e.preventDefault()}
+                      onClick={() =>
+                        setShowGeneralContributions(!showGeneralContributions)
+                      }
+                      className="flex cursor-pointer items-center justify-between px-2 py-2 text-sm hover:bg-slate-100"
+                    >
+                      <div className="flex items-center">
+                        <Landmark className="mr-2 h-4 w-4" />
+                        <span>Show UN Core Contributions</span>
+                      </div>
+                      <div
+                        className={`h-4 w-7 rounded-full transition-colors ${
+                          showGeneralContributions
+                            ? "bg-[var(--brand-primary-dark)]"
+                            : "bg-slate-300"
+                        }`}
+                      >
+                        <div
+                          className={`h-4 w-4 rounded-full bg-white transition-transform ${
+                            showGeneralContributions ? "translate-x-3" : "translate-x-0"
+                          }`}
+                        />
+                      </div>
+                    </DropdownMenuItem>
+
+                    <DropdownMenuItem
+                      onSelect={(e) => e.preventDefault()}
+                      onClick={() => {
+                        const params = new URLSearchParams(searchParams?.toString() || "");
+                        const incoming = (
+                          params.get("d") ??
+                          params.get("donors") ??
+                          ""
+                        )
+                          .split(",")
+                          .filter(Boolean);
+                        const crafdKey = "crafd-donors";
+                        const crafdExpansion = [
+                          "germany",
+                          "netherlands",
+                          "canada",
+                          "finland",
+                          "luxembourg",
+                          "united-kingdom",
+                          "european-union",
+                          "usa",
+                        ];
+
+                        const hasCrafd =
+                          incoming.includes(crafdKey) ||
+                          (incoming.length === crafdExpansion.length &&
+                            crafdExpansion.every((s) => incoming.includes(s)));
+
+                        if (hasCrafd) {
+                          params.delete("d");
+                          params.delete("donors");
+                        } else {
+                          params.set("d", crafdKey);
+                          params.delete("donors");
+                        }
+
+                        const target = params.toString() ? `?${params.toString()}` : "/analytics";
+                        router.push(target);
+                      }}
+                      className="flex cursor-pointer items-center justify-between px-2 py-2 text-sm hover:bg-slate-100"
+                    >
+                      <div className="flex items-center">
+                        <UserRoundPlus className="mr-2 h-4 w-4" />
+                        <span>Select CRAF'd Donors</span>
+                      </div>
+                      {(() => {
+                        const params = new URLSearchParams(searchParams?.toString() || "");
+                        const incoming = (
+                          params.get("d") ??
+                          params.get("donors") ??
+                          ""
+                        )
+                          .split(",")
+                          .filter(Boolean);
+                        const crafdKey = "crafd-donors";
+                        const crafdExpansion = [
+                          "germany",
+                          "netherlands",
+                          "canada",
+                          "finland",
+                          "luxembourg",
+                          "united-kingdom",
+                          "european-union",
+                          "usa",
+                        ];
+
+                        const hasCrafd =
+                          incoming.includes(crafdKey) ||
+                          (incoming.length === crafdExpansion.length &&
+                            crafdExpansion.every((s) => incoming.includes(s)));
+
+                        return (
+                          <div
+                            className={`h-4 w-7 rounded-full transition-colors ${
+                              hasCrafd
+                                ? "bg-[var(--brand-primary-dark)]"
+                                : "bg-slate-300"
+                            }`}
+                          >
+                            <div
+                              className={`h-4 w-4 rounded-full bg-white transition-transform ${
+                                hasCrafd ? "translate-x-3" : "translate-x-0"
+                              }`}
+                            />
+                          </div>
+                        );
+                      })()}
+                    </DropdownMenuItem>
+                  </DropdownMenuContent>
+                </DropdownMenu>
               </CardTitle>
             </CardHeader>
 
