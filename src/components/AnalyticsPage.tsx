@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useEffect, useMemo, useState } from "react";
+import React, { useEffect, useMemo, useRef, useState } from "react";
 import { useRouter, useSearchParams } from "next/navigation";
 import PageHeader from "@/components/PageHeader";
 import ChartCard from "@/components/ChartCard";
@@ -289,9 +289,20 @@ export default function AnalyticsPage() {
     }
   }, [availableDonorCountries]);
 
+  // Flag to track if we're currently loading URL params to avoid the URL update effect
+  // from running while we're still populating state from URL
+  const isLoadingFromUrlRef = useRef(true);
+
+  useEffect(() => {
+    // Once we've processed the URL and populated initial state, we can re-enable URL updates
+    if (!isInitialized) return;
+    
+    isLoadingFromUrlRef.current = false;
+  }, [isInitialized]);
+
   // Update URL when filters change (but only after initialization to avoid overwriting URL params)
   useEffect(() => {
-    if (!isInitialized) return;
+    if (!isInitialized || isLoadingFromUrlRef.current) return;
 
     const params = new URLSearchParams();
 
@@ -318,7 +329,12 @@ export default function AnalyticsPage() {
     const newUrl = params.toString()
       ? `/analytics?${params.toString()}`
       : "/analytics";
-    router.push(newUrl);
+    
+    // Only push if the URL actually changed to avoid infinite loops
+    const currentUrl = window.location.pathname + window.location.search;
+    if (currentUrl !== newUrl) {
+      router.push(newUrl);
+    }
   }, [
     selectedDonors,
     investmentTypes,
