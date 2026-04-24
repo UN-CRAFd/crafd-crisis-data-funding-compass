@@ -143,6 +143,7 @@ export default function AnalyticsPage() {
   >([]);
   const [shareSuccess, setShareSuccess] = useState(false);
   const [selectedDonors, setSelectedDonors] = useState<string[]>([]);
+  const [urlDonorsTrigger, setUrlDonorsTrigger] = useState(0);
   const [investmentTypes, setInvestmentTypes] = useState<string[]>([]);
   const [investmentThemes, setInvestmentThemes] = useState<string[]>([]);
   const [searchQuery, setSearchQuery] = useState("");
@@ -215,6 +216,9 @@ export default function AnalyticsPage() {
 
       // Store URL donor slugs temporarily to decode them later
       (window as any).__urlDonorSlugs = urlDonorSlugs;
+      
+      // Trigger donor decoding effect
+      setUrlDonorsTrigger((prev) => prev + 1);
 
       setIsInitialized(true);
       
@@ -278,8 +282,7 @@ export default function AnalyticsPage() {
 
   // Decode URL donor slugs to actual names once available donors are loaded
   useEffect(() => {
-    if (availableDonorCountries.length === 0 || selectedDonors.length > 0)
-      return;
+    if (availableDonorCountries.length === 0) return;
 
     const urlDonorSlugs = (window as any).__urlDonorSlugs;
     if (urlDonorSlugs && urlDonorSlugs.length > 0) {
@@ -296,13 +299,16 @@ export default function AnalyticsPage() {
         )
         .filter(Boolean);
 
-      if (decodedDonors.length > 0) {
-        setSelectedDonors(decodedDonors);
-      }
+      // Always update selectedDonors when URL slugs exist (handles both initial load and CRAF'd toggle)
+      setSelectedDonors(decodedDonors);
 
       delete (window as any).__urlDonorSlugs;
+    } else if (urlDonorSlugs && urlDonorSlugs.length === 0) {
+      // If URL slugs is explicitly an empty array, clear selected donors
+      setSelectedDonors([]);
+      delete (window as any).__urlDonorSlugs;
     }
-  }, [availableDonorCountries]);
+  }, [availableDonorCountries, urlDonorsTrigger]);
 
   // Flag to track if we're currently loading URL params to avoid the URL update effect
   // from running while we're still populating state from URL
