@@ -160,6 +160,16 @@ export default function AnalyticsPage() {
   // Load filter state from URL on mount — accept both long and short param keys
   useEffect(() => {
     (async () => {
+      // Check if this URL has already been processed
+      const currentUrl = searchParams.toString();
+      if (currentUrl === lastProcessedUrlRef.current) {
+        return; // Skip processing if URL hasn't changed
+      }
+      
+      // Mark that we're loading from URL to prevent the URL writing effect from running
+      isLoadingFromUrlRef.current = true;
+      lastProcessedUrlRef.current = currentUrl;
+      
       const rawDonors =
         searchParams.get("d") ?? searchParams.get("donors") ?? "";
       const incomingDonorSlugs = rawDonors.split(",").filter(Boolean);
@@ -207,6 +217,11 @@ export default function AnalyticsPage() {
       (window as any).__urlDonorSlugs = urlDonorSlugs;
 
       setIsInitialized(true);
+      
+      // Allow URL writing effect to run after a short delay to ensure state updates have completed
+      setTimeout(() => {
+        isLoadingFromUrlRef.current = false;
+      }, 50);
     })();
   }, [searchParams]);
 
@@ -292,13 +307,9 @@ export default function AnalyticsPage() {
   // Flag to track if we're currently loading URL params to avoid the URL update effect
   // from running while we're still populating state from URL
   const isLoadingFromUrlRef = useRef(true);
-
-  useEffect(() => {
-    // Once we've processed the URL and populated initial state, we can re-enable URL updates
-    if (!isInitialized) return;
-    
-    isLoadingFromUrlRef.current = false;
-  }, [isInitialized]);
+  
+  // Track the last URL we processed to avoid re-processing the same URL
+  const lastProcessedUrlRef = useRef<string>("");
 
   // Update URL when filters change (but only after initialization to avoid overwriting URL params)
   useEffect(() => {
