@@ -1711,21 +1711,20 @@ export default function AnalyticsPage() {
                   style={{ color: "var(--brand-primary)" }}
                 />
                 <h1
-                  className="font-qanelas-subtitle text-3xl font-bold sm:text-4xl"
-                  style={{ color: "black" }}
+                  className="font-qanelas-subtitle text-3xl font-bold text-slate-900 dark:text-white sm:text-4xl"
                 >
                   Analytics
                 </h1>
               </div>
-              <p className="max-w-3xl text-base leading-relaxed text-slate-700 sm:text-lg">
+              <p className="max-w-3xl text-base leading-relaxed text-slate-700 dark:text-slate-300 sm:text-lg">
                 Explore co-financing relationships and funding patterns across
                 the crisis data ecosystem
               </p>
               {/* Warning note if General Contributions enabled */}
               {showGeneralContributions && (
-                <div className="mt-4 flex gap-3 rounded-lg border border-[var(--brand-primary-light)]/40 bg-white/60 p-4 backdrop-blur-sm">
-                  <AlertCircle className="mt-0.5 h-5 w-5 flex-shrink-0 text-amber-600" />
-                  <p className="text-sm text-amber-900">
+                <div className="mt-4 flex gap-3 rounded-lg border border-[var(--brand-primary-light)]/40 bg-white/60 p-4 backdrop-blur-sm dark:bg-slate-800/60">
+                  <AlertCircle className="mt-0.5 h-5 w-5 flex-shrink-0 text-amber-600 dark:text-amber-400" />
+                  <p className="text-sm text-amber-900 dark:text-amber-200">
                     <span className="font-semibold">Note:</span> General
                     Contributions beyond the highest voluntary donors are
                     excluded from the analytics page. Therefore, numbers might

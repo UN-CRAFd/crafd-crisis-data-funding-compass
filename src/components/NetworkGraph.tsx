@@ -94,6 +94,15 @@ interface GraphData {
   links: GraphLink[];
 }
 
+// Fixed colors for network graph nodes — must not change with light/dark theme
+const GRAPH_NODE_COLORS = {
+  donorFill: "#e2e8f0",
+  donorStroke: "#475569",
+  donorSelectedFill: "#94a3b8",
+  projectFill: "#d7d8f5",
+  projectStroke: "#4d479c",
+};
+
 const NetworkGraph: React.FC<NetworkGraphProps> = ({
   organizationsWithProjects,
   allOrganizations,
@@ -215,13 +224,9 @@ const NetworkGraph: React.FC<NetworkGraphProps> = ({
       org.donorCountries.forEach((donor) => donorSet.add(donor));
     });
 
-    // Get brand colors from CSS variables (cached)
+    // Get brand colors from CSS variables (cached) — only for values that don't change with theme
     const brandColors = getBrandColors();
-    const brandPrimary = brandColors.brandPrimary;
     const brandBgLight = brandColors.brandPrimaryLight;
-    const badgeOtherBg = brandColors.badgeOtherBg;
-    const badgeSlateBg = brandColors.badgeSlateBg;
-    const selectedDonorColor = "#94a3b8"; // Medium gray for filtered donors (slate-400)
 
     // Add donor nodes - largest, using slate colors (like in tables)
     // Arrange donors in a circle around the top of the canvas
@@ -259,7 +264,7 @@ const NetworkGraph: React.FC<NetworkGraphProps> = ({
         name: donor,
         type: "donor",
         value: 25, // Larger nodes for donors
-        color: isFiltered ? selectedDonorColor : badgeSlateBg, // Medium gray for filtered donors
+        color: isFiltered ? GRAPH_NODE_COLORS.donorSelectedFill : GRAPH_NODE_COLORS.donorFill,
         hasAgencies, // Flag whether this donor has agencies
         x,
         y,
@@ -323,7 +328,7 @@ const NetworkGraph: React.FC<NetworkGraphProps> = ({
             name: project.projectName,
             type: "project",
             value: 20, // Slightly larger nodes for projects (assets)
-            color: badgeOtherBg, // Uses --badge-other-bg (purple/indigo from asset type badges)
+            color: GRAPH_NODE_COLORS.projectFill,
             projectKey: project.productKey, // Use productKey for modal/URL
             assetTypes: project.investmentTypes || [], // Store asset types for clustering
             x: px,
@@ -1413,14 +1418,13 @@ const NetworkGraph: React.FC<NetworkGraphProps> = ({
       // Reset shadow
       ctx.shadowBlur = 0;
 
-      // Use specific borders per node type to match badges/modals
+      // Use fixed borders per node type (theme-independent)
       if (node.type === "organization") {
         ctx.strokeStyle = themeColors.brandPrimaryDark;
       } else if (node.type === "project") {
-        ctx.strokeStyle = themeColors.badgeOtherText;
+        ctx.strokeStyle = GRAPH_NODE_COLORS.projectStroke;
       } else if (node.type === "donor") {
-        // Use the slate/gray badge text color for donor borders to match legend/tables
-        ctx.strokeStyle = themeColors.badgeSlateText || "#64748b";
+        ctx.strokeStyle = GRAPH_NODE_COLORS.donorStroke;
       } else {
         ctx.strokeStyle = "#000";
       }
@@ -1915,8 +1919,8 @@ const NetworkGraph: React.FC<NetworkGraphProps> = ({
                   >
                     <polygon
                       points="7,1 12,4 12,10 7,13 2,10 2,4"
-                      fill="#cbd5e1"
-                      stroke="var(--badge-slate-text)"
+                      fill={GRAPH_NODE_COLORS.donorFill}
+                      stroke={GRAPH_NODE_COLORS.donorStroke}
                       strokeWidth="1.5"
                     />
                   </svg>
@@ -1947,8 +1951,8 @@ const NetworkGraph: React.FC<NetworkGraphProps> = ({
                   >
                     <polygon
                       points="7,1 12,4 12,10 7,13 2,10 2,4"
-                      fill="var(--badge-other-bg)"
-                      stroke="var(--badge-other-text)"
+                      fill={GRAPH_NODE_COLORS.projectFill}
+                      stroke={GRAPH_NODE_COLORS.projectStroke}
                       strokeWidth="1.5"
                     />
                   </svg>

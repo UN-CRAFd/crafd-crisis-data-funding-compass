@@ -1,7 +1,6 @@
 "use client";
 
 import { useState, useEffect } from "react";
-import { useTheme } from "next-themes";
 import { Button } from "@/components/ui/button";
 import {
   TooltipContent,
@@ -77,8 +76,6 @@ export default function PageHeader({
   const searchParams = useSearchParams();
   const [lastUpdated, setLastUpdated] = useState<string | null>(null);
   const [isCompassRotating, setIsCompassRotating] = useState(false);
-  const { theme } = useTheme();
-  const [isDark, setIsDark] = useState(false);
 
   // Fetch last updated date from API
   useEffect(() => {
@@ -89,11 +86,6 @@ export default function PageHeader({
         console.error("Failed to fetch last updated date:", error);
       });
   }, []);
-
-  // Update isDark when theme changes
-  useEffect(() => {
-    setIsDark(theme === "dark");
-  }, [theme]);
 
   const handleCompassClick = () => {
     setIsCompassRotating(true);
@@ -158,10 +150,7 @@ export default function PageHeader({
                   }`}
                 />
               </button>
-              <h1 
-                className="flex min-w-0 flex-col items-start gap-0 text-base text-slate-800 sm:text-xl lg:flex-row lg:items-center lg:gap-2 lg:text-3xl"
-                style={{ color: isDark ? 'white' : '#0f172a' }}
-              >
+              <h1 className="flex min-w-0 flex-col items-start gap-0 text-base text-slate-800 dark:text-white sm:text-xl lg:flex-row lg:items-center lg:gap-2 lg:text-3xl">
                 <span className="qanelas-title whitespace-nowrap">
                   {labels.header.title}
                 </span>
@@ -185,7 +174,7 @@ export default function PageHeader({
                 >
                   <p className="leading-relaxed">{labels.header.betaTooltip}</p>
                   {lastUpdated && (
-                    <p className="mt-2 border-t border-slate-200 pt-2 text-slate-600">
+                    <p className="mt-2 border-t border-slate-200 pt-2 text-slate-600 dark:border-slate-700 dark:text-slate-400">
                       Last updated:{" "}
                       <span className="font-semibold">{lastUpdated}</span>
                     </p>
@@ -205,7 +194,7 @@ export default function PageHeader({
                   "_blank",
                 )
               }
-              className="rounded-md bg-transparent px-4 py-4 text-xs text-slate-700 transition hover:text-[var(--brand-primary)] focus:text-[var(--brand-primary)] active:text-[var(--brand-primary)] dark:text-slate-300 sm:text-sm"
+              className="rounded-md bg-transparent px-4 py-4 text-xs text-slate-700 transition hover:text-[var(--brand-primary)] focus:text-[var(--brand-primary)] active:text-[var(--brand-primary)] dark:text-slate-300 dark:hover:text-[var(--brand-primary)] sm:text-sm"
               title={labels.header.feedbackTooltip}
             >
               <MessageCircle className="h-4 w-4 sm:mr-2" />
@@ -227,7 +216,7 @@ export default function PageHeader({
                     disabled={
                       csvExportLoading || xlsxExportLoading || pdfExportLoading
                     }
-                    className="hidden rounded-md bg-transparent px-4 py-4 text-xs text-slate-700 transition hover:text-[var(--brand-primary)] focus:text-[var(--brand-primary)] dark:text-slate-300 sm:flex sm:text-sm"
+                    className="hidden rounded-md bg-transparent px-4 py-4 text-xs text-slate-700 transition hover:text-[var(--brand-primary)] focus:text-[var(--brand-primary)] dark:text-slate-300 dark:hover:text-[var(--brand-primary)] sm:flex sm:text-sm"
                     title="Export current view"
                   >
                     <FileDown className="h-4 w-4 sm:mr-2" />
@@ -276,7 +265,7 @@ export default function PageHeader({
                 </DropdownMenuContent>
               </DropdownMenu>
             )}
-            <div className="hidden h-8 w-px bg-slate-200 sm:block"></div>
+            <div className="hidden h-8 w-px bg-slate-200 dark:bg-slate-700 sm:block"></div>
             {/* Share Button */}
             {onShare && (
               <Button
@@ -286,7 +275,7 @@ export default function PageHeader({
                 className={`rounded-md px-4 py-4 text-xs transition-all duration-200 sm:text-sm ${
                   shareSuccess
                     ? "bg-[#10b981] text-white hover:bg-[#059669] hover:text-white"
-                    : "bg-transparent text-slate-700 hover:text-[var(--brand-primary)] dark:text-slate-300"
+                    : "bg-transparent text-slate-700 hover:text-[var(--brand-primary)] dark:text-slate-300 dark:hover:text-[var(--brand-primary)]"
                 }`}
                 title={labels.ui.copyToClipboard}
               >
@@ -314,7 +303,7 @@ export default function PageHeader({
                 <Button
                   variant="ghost"
                   size="sm"
-                  className="rounded-md bg-transparent px-4 py-4 text-xs text-slate-700 transition hover:text-[var(--brand-primary)] dark:text-slate-300 sm:text-sm"
+                  className="rounded-md bg-transparent px-4 py-4 text-xs text-slate-700 transition hover:text-[var(--brand-primary)] dark:text-slate-300 dark:hover:text-[var(--brand-primary)] sm:text-sm"
                   title="Navigation"
                 >
                   <Menu className="h-6 w-6" />

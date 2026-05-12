@@ -520,13 +520,12 @@ export default function MethodologyPage({
                     style={{ color: "var(--brand-primary)" }}
                   />
                   <h1
-                    className="font-qanelas-subtitle text-3xl font-bold sm:text-4xl"
-                    style={{ color: "black" }}
+                    className="font-qanelas-subtitle text-3xl font-bold text-slate-900 dark:text-white sm:text-4xl"
                   >
                     {labels.methodology.title}
                   </h1>
                 </div>
-                <p className="max-w-3xl text-base leading-relaxed text-slate-700 sm:text-lg">
+                <p className="max-w-3xl text-base leading-relaxed text-slate-700 dark:text-slate-300 sm:text-lg">
                   {labels.methodology.subtitle}
                 </p>
               </div>
