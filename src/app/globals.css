@@ -2,6 +2,26 @@
 @import "tailwindcss";
 @import "tw-animate-css";
 
+@custom-variant dark (&:is(.dark *));
+
+@theme inline {
+  --color-background: var(--bg);
+  --color-foreground: var(--fg);
+  --color-card: var(--card-bg);
+  --color-card-foreground: var(--card-fg);
+  --color-popover: var(--popover-bg);
+  --color-popover-foreground: var(--popover-fg);
+  --color-primary: var(--brand-primary);
+  --color-primary-foreground: #ffffff;
+  --color-muted: var(--muted-bg);
+  --color-muted-foreground: var(--muted-fg);
+  --color-accent: var(--accent-bg);
+  --color-accent-foreground: var(--accent-fg);
+  --color-border: var(--border-color);
+  --color-input: var(--input-border);
+  --color-ring: var(--brand-primary);
+}
+
 /* Custom font declarations */
 @font-face {
   font-family: "Qanelas";
@@ -42,6 +62,20 @@
  * See: https://tailwindcss.com/docs/theme
  */
 :root {
+  /* Semantic tokens for theme-aware shadcn components */
+  --bg: #ffffff;
+  --fg: #0f172a;
+  --card-bg: #ffffff;
+  --card-fg: #0f172a;
+  --popover-bg: #ffffff;
+  --popover-fg: #0f172a;
+  --muted-bg: #f1f5f9;
+  --muted-fg: #64748b;
+  --accent-bg: #f1f5f9;
+  --accent-fg: #0f172a;
+  --border-color: #e2e8f0;
+  --input-border: #e2e8f0;
+
   /* Font families - these create font-* utility classes (e.g., font-qanelas, font-sans) */
   --font-family-sans: Roboto, ui-sans-serif, system-ui, sans-serif;
   --font-family-qanelas: Qanelas, ui-sans-serif, system-ui, sans-serif;
@@ -173,6 +207,289 @@
   --drop-shadow-lg: none !important;
   --drop-shadow-xl: none !important;
   --drop-shadow-2xl: none !important;
+}
+
+/* ========================================
+ * Dark mode overrides
+ * Uses next-themes class strategy (.dark on <html>)
+ * ======================================== */
+.dark {
+  color-scheme: dark;
+
+  /* Semantic tokens */
+  --bg: #0f172a;
+  --fg: #e2e8f0;
+  --card-bg: #1e293b;
+  --card-fg: #e2e8f0;
+  --popover-bg: #1e293b;
+  --popover-fg: #e2e8f0;
+  --muted-bg: #334155;
+  --muted-fg: #94a3b8;
+  --accent-bg: #334155;
+  --accent-fg: #e2e8f0;
+  --border-color: #334155;
+  --input-border: #475569;
+
+  /* Card / Glass surfaces */
+  --card-glass: rgba(30, 41, 59, 0.85);
+  --card-glass-light: rgba(30, 41, 59, 0.7);
+
+  /* Chart styles */
+  --chart-axis-stroke: #94a3b8;
+  --chart-grid-stroke: #334155;
+  --chart-text-color: #e2e8f0;
+
+  /* Tooltip */
+  --tooltip-bg: #1e293b;
+  --tooltip-border: #334155;
+
+  /* Badge variants */
+  --badge-other-bg: #312e5c;
+  --badge-other-border: #6366f1;
+  --badge-other-text: #c7d2fe;
+  --badge-other-icon: #818cf8;
+
+  --badge-agency-bg: #0c2d48;
+  --badge-agency-text: #7dd3fc;
+  --badge-agency-border: #0c4a6e;
+
+  --badge-blue-bg: #1e3a5f;
+  --badge-blue-text: #fcd34d;
+  --badge-slate-bg: #334155;
+  --badge-slate-text: #cbd5e1;
+
+  /* Detail colors */
+  --detail: #475569;
+  --detail-text: #e2e8f0;
+  --detail-border: #64748b;
+  --detail-light: #334155;
+
+  /* Background */
+  --background-color: #0f172a;
+
+  /* Success colors (keep vibrant) */
+  --color-success: #10b981;
+  --color-success-hover: #059669;
+  --color-success-light: #064e3b;
+  --color-success-text: #a7f3d0;
+
+  /* Brand – slightly brighter for dark backgrounds */
+  --brand-bg-light: #3b2a0a;
+  --brand-bg-lighter: #2a1f0a;
+  --brand-border: #d9b206;
+}
+
+/* Dark mode: global element overrides */
+.dark body {
+  background-color: #0f172a;
+  color: #e2e8f0;
+}
+
+.dark ::-webkit-scrollbar-track {
+  background: #1e293b;
+}
+
+.dark ::-webkit-scrollbar-thumb {
+  background: #475569;
+}
+
+.dark ::-webkit-scrollbar-thumb:hover {
+  background: #64748b;
+}
+
+/* Dark mode: trapezoid tab overrides */
+.dark .trapezoid-tab {
+  color: #94a3b8;
+}
+
+.dark .trapezoid-tab::before {
+  background: #334155;
+}
+
+.dark .trapezoid-tab:hover {
+  color: #cbd5e1;
+}
+
+.dark .trapezoid-tab:hover::before {
+  background: #475569;
+}
+
+.dark .trapezoid-tab[data-state="active"] {
+  color: var(--brand-primary);
+}
+
+.dark .trapezoid-tab[data-state="active"]::before {
+  background: #1e293b;
+}
+
+.dark .trapezoid-tab-white::before {
+  background: #1e293b !important;
+}
+
+.dark .trapezoid-tab-white:hover::before {
+  background: #475569 !important;
+}
+
+.dark .trapezoid-settings {
+  color: #94a3b8;
+}
+
+.dark .trapezoid-settings::before {
+  background: #334155;
+}
+
+.dark .trapezoid-settings:hover {
+  color: #cbd5e1;
+}
+
+.dark .trapezoid-settings:hover::before {
+  background: #475569;
+}
+
+.dark .trapezoid-settings-container {
+  color: #94a3b8;
+}
+
+.dark .trapezoid-settings-container::before {
+  background: #334155;
+}
+
+.dark .trapezoid-settings-container:hover {
+  color: #cbd5e1;
+}
+
+.dark .trapezoid-settings-container:hover::before {
+  background: #475569;
+}
+
+/* Dark mode: common component overrides via selectors */
+/* Input fields */
+.dark input,
+.dark textarea {
+  background-color: #1e293b;
+  border-color: #475569;
+  color: #e2e8f0;
+}
+
+.dark input::placeholder,
+.dark textarea::placeholder {
+  color: #64748b;
+}
+
+.dark input:focus,
+.dark textarea:focus {
+  background-color: #1e293b;
+}
+
+/* Override hardcoded dark text colors in dark mode */
+.dark .text-\[\#333333\] {
+  color: #e2e8f0 !important;
+}
+
+.dark .text-\[\#334155\] {
+  color: #cbd5e1 !important;
+}
+
+/* Override hardcoded bg-white in common patterns */
+.dark .bg-gray-200 {
+  background-color: #334155;
+}
+
+.dark .border-gray-200 {
+  border-color: #475569;
+}
+
+.dark .border-gray-300 {
+  border-color: #475569;
+}
+
+.dark .text-gray-500 {
+  color: #94a3b8;
+}
+
+.dark .text-gray-600 {
+  color: #94a3b8;
+}
+
+.dark .text-gray-700 {
+  color: #cbd5e1;
+}
+
+/* Broad slate overrides for common Tailwind utilities in dark mode */
+.dark .bg-slate-50 {
+  background-color: #0f172a;
+}
+
+.dark .bg-slate-100 {
+  background-color: #0f172a;
+}
+
+.dark .bg-slate-50\/50 {
+  background-color: rgba(15, 23, 42, 0.5);
+}
+
+.dark .bg-slate-50\/30 {
+  background-color: rgba(15, 23, 42, 0.3);
+}
+
+.dark .border-slate-100 {
+  border-color: #334155;
+}
+
+.dark .border-slate-200 {
+  border-color: #334155;
+}
+
+.dark .border-slate-300 {
+  border-color: #475569;
+}
+
+.dark .text-slate-400 {
+  color: #64748b;
+}
+
+.dark .text-slate-500 {
+  color: #94a3b8;
+}
+
+.dark .text-slate-600 {
+  color: #94a3b8;
+}
+
+.dark .text-slate-700 {
+  color: #cbd5e1;
+}
+
+.dark .text-slate-800 {
+  color: #e2e8f0;
+}
+
+.dark .text-slate-900 {
+  color: #f1f5f9;
+}
+
+.dark .bg-white {
+  background-color: #1e293b;
+}
+
+.dark .hover\:bg-white:hover {
+  background-color: #334155;
+}
+
+.dark .hover\:bg-slate-50:hover {
+  background-color: #334155;
+}
+
+.dark .hover\:bg-slate-50\/70:hover {
+  background-color: rgba(51, 65, 85, 0.7);
+}
+
+.dark .hover\:border-slate-300:hover {
+  border-color: #475569;
+}
+
+.dark .focus\:bg-white:focus {
+  background-color: #1e293b;
 }
 
 /* Force Roboto font globally, but allow explicit font overrides */

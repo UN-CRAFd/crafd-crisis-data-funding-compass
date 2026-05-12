@@ -54,7 +54,7 @@ const SurveyBanner: React.FC<SurveyBannerProps> = ({
         className="relative rounded-lg p-[1px] shadow-sm transition-all duration-150"
         style={{ boxShadow: "0 6px 18px rgba(0,0,0,0.06)" }}
       >
-        <div className="border-var(--brand-primary-light) relative overflow-hidden rounded-lg bg-white">
+        <div className="border-var(--brand-primary-light) relative overflow-hidden rounded-lg bg-white dark:bg-slate-800">
           <div className="relative flex items-center justify-between gap-4 p-4">
             <div className="flex min-w-0 flex-1 items-center gap-4">
               {/* Simple icon container */}

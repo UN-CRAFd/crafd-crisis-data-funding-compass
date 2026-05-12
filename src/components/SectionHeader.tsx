@@ -14,7 +14,7 @@ export const SectionHeader = ({
   isActive = false,
 }: SectionHeaderProps) => (
   <div
-    className={`font-qanelas-subtitle mt-0 mb-0 flex items-center gap-2 text-base font-black uppercase sm:text-lg ${isActive ? "text-[var(--brand-primary)]" : "text-slate-800"}`}
+    className={`font-qanelas-subtitle mt-0 mb-0 flex items-center gap-2 text-base font-black uppercase sm:text-lg ${isActive ? "text-[var(--brand-primary)]" : "text-slate-800 dark:text-slate-200"}`}
   >
     <span className="flex h-5 w-5 items-center justify-center sm:h-6 sm:w-6">
       {icon}

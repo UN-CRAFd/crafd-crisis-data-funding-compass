@@ -27,7 +27,7 @@ const ProjectBoxComponent: React.FC<ProjectBoxProps> = ({
 }) => {
   return (
     <div
-      className="group animate-in cursor-pointer rounded-lg border border-slate-200 bg-white p-3 transition-colors duration-200 fade-in hover:bg-slate-50"
+      className="group animate-in cursor-pointer rounded-lg border border-slate-200 bg-white p-3 transition-colors duration-200 fade-in hover:bg-slate-50 dark:border-slate-700 dark:bg-slate-800 dark:hover:bg-slate-700"
       onClick={onClick}
     >
       <div
@@ -63,7 +63,7 @@ const ProjectBoxComponent: React.FC<ProjectBoxProps> = ({
                         <TooltipTrigger asChild>{badge}</TooltipTrigger>
                         <TooltipContent
                           side="top"
-                          className="!z-[300] max-w-xs border border-gray-200 bg-white/70 text-xs backdrop-blur-md"
+                          className="!z-[300] max-w-xs border border-gray-200 bg-white/70 text-xs backdrop-blur-md dark:border-slate-600 dark:bg-slate-800/90 dark:text-slate-200"
                           sideOffset={5}
                         >
                           {description}

@@ -1668,14 +1668,14 @@ const NetworkGraph: React.FC<NetworkGraphProps> = ({
     <>
       <div
         ref={containerRef}
-        className="relative h-full w-full overflow-hidden rounded-lg border border-slate-200 bg-white"
+        className="relative h-full w-full overflow-hidden rounded-lg border border-slate-200 bg-white dark:border-slate-700 dark:bg-slate-900"
       >
         {/* Graph Controls - Top Right */}
         <div
           className="absolute right-4 z-10 transition-all duration-200"
           style={{ top: isFullscreen ? `${filterBarHeight + 30}px` : "16px" }}
         >
-          <div className="rounded-lg border border-slate-200 bg-white shadow-sm backdrop-blur-lg">
+          <div className="rounded-lg border border-slate-200 bg-white shadow-sm backdrop-blur-lg dark:border-slate-700 dark:bg-slate-800">
             <div className="flex items-center gap-0 p-2">
               {/* Collapsible Content */}
               <div
@@ -2083,7 +2083,7 @@ const NetworkGraph: React.FC<NetworkGraphProps> = ({
         createPortal(
           <div
             ref={filterBarRef}
-            className="fixed top-4 right-4 left-4 z-[100] rounded-lg border border-slate-200 bg-white p-4 shadow-lg backdrop-blur-lg"
+            className="fixed top-4 right-4 left-4 z-[100] rounded-lg border border-slate-200 bg-white p-4 shadow-lg backdrop-blur-lg dark:border-slate-700 dark:bg-slate-800"
           >
             <FilterBar
               searchQuery={searchQuery}

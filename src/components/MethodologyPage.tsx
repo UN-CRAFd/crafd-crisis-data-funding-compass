@@ -117,7 +117,7 @@ const SectionTitle = ({
 
 /** Screenshot display */
 const Screenshot = ({ src, alt }: { src: string; alt: string }) => (
-  <div className="flex min-h-[400px] items-center justify-center rounded-lg border border-none bg-white p-8">
+  <div className="flex min-h-[400px] items-center justify-center rounded-lg border border-none bg-white p-8 dark:bg-slate-800">
     <img
       src={src}
       alt={alt}
@@ -505,7 +505,7 @@ export default function MethodologyPage({
   };
 
   return (
-    <div className="min-h-screen bg-slate-50">
+    <div className="min-h-screen bg-slate-50 dark:bg-slate-950">
       <PageHeader onShare={handleShare} shareSuccess={shareSuccess} />
 
       {/* Main Content */}
@@ -536,7 +536,7 @@ export default function MethodologyPage({
             <div className="flex items-start gap-6">
               {/* Left Sidebar */}
               <aside className="hidden w-52 shrink-0 md:block lg:w-60">
-                <div className="sticky top-24 overflow-hidden rounded-xl border border-slate-200 bg-white">
+                <div className="sticky top-24 overflow-hidden rounded-xl border border-slate-200 bg-white dark:border-slate-700 dark:bg-slate-800">
                   <div className="border-b border-slate-100 bg-slate-50 px-4 py-3">
                     <h2 className="text-xs font-semibold tracking-wider text-slate-500 uppercase">
                       Contents
@@ -571,7 +571,7 @@ export default function MethodologyPage({
 
               {/* Main Content */}
               <main className="min-w-0 flex-1">
-                <Card className="!border-0 bg-white">
+                <Card className="!border-0 bg-white dark:bg-slate-800">
                   <CardContent className="px-4 pt-6 pb-6 sm:px-8">
                     {/* Data Collection Tab */}
                     {activeArticle === "collection" && (
@@ -621,7 +621,7 @@ export default function MethodologyPage({
                     </div>
 
                     {/* Interactive Classification Explorer */}
-                    <div className="overflow-hidden rounded-lg border-2 border-slate-200 bg-white shadow-sm">
+                    <div className="overflow-hidden rounded-lg border-2 border-slate-200 bg-white shadow-sm dark:border-slate-700 dark:bg-slate-800">
                       <div className="border-b border-slate-200 bg-slate-50 p-4">
                         <h4 className="flex items-center gap-2 text-sm font-semibold text-slate-700">
                           <Layers
@@ -797,7 +797,7 @@ export default function MethodologyPage({
                       {labels.methodology.filteringProcess}
                     </SectionTitle>
 
-                    <div className="rounded-lg border-2 border-none bg-white p-6 shadow-sm">
+                    <div className="rounded-lg border-2 border-none bg-white p-6 shadow-sm dark:bg-slate-800">
                       {/* Flow Diagram */}
                       <div className="space-y-3 text-xs">
                         {/* Step 1: Donor Check */}
@@ -1371,7 +1371,7 @@ psql -U postgres < 004_junction_tables.sql`}
       </div>
 
       {/* Footer */}
-      <footer className="mt-8 border-t border-slate-200 bg-white sm:mt-16">
+      <footer className="mt-8 border-t border-slate-200 bg-white dark:border-slate-700 dark:bg-slate-900 sm:mt-16">
         <div className="mx-auto max-w-[82rem] px-4 py-4 sm:px-6 sm:py-6 lg:px-8">
           <div className="flex flex-col items-center justify-center gap-2 sm:flex-row sm:justify-between sm:gap-0">
             <div className="flex-1 text-center">

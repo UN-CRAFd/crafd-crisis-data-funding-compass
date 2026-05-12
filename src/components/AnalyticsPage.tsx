@@ -1696,7 +1696,7 @@ export default function AnalyticsPage() {
   // General contributions state is now loaded from context at the top of the component
 
   return (
-    <div className="min-h-screen bg-slate-50">
+    <div className="min-h-screen bg-slate-50 dark:bg-slate-950">
       <PageHeader onShare={handleShare} shareSuccess={shareSuccess} />
 
       {/* Main Content */}
@@ -1844,7 +1844,7 @@ export default function AnalyticsPage() {
           {/* Per-donor profiles removed — use `donorInvestmentFocus` chart below */}
 
           {/* Filter Bar */}
-          <Card className="!border-0 bg-white">
+          <Card className="!border-0 bg-white dark:bg-slate-800">
             <CardHeader className="h-0 pb-0">
               <CardTitle className="mb-0 flex w-full flex-row items-center justify-between">
                 <SectionHeader
@@ -1866,7 +1866,7 @@ export default function AnalyticsPage() {
                     align="end"
                     side="bottom"
                     sideOffset={4}
-                    className="w-auto min-w-[250px] border border-slate-200 bg-white shadow-lg"
+                    className="w-auto min-w-[250px] border border-slate-200 bg-white shadow-lg dark:border-slate-600 dark:bg-slate-800"
                   >
                     <DropdownMenuItem
                       onSelect={(e) => e.preventDefault()}
@@ -2043,7 +2043,7 @@ export default function AnalyticsPage() {
           {/* Co-Financing Matrix with View Toggle */}
           {/* Hide entire card when no donors selected */}
           <Card
-            className={`${selectedDonors.length === 0 ? "hidden" : ""} !border-0 bg-white`}
+            className={`${selectedDonors.length === 0 ? "hidden" : ""} !border-0 bg-white dark:bg-slate-800`}
           >
             <CardHeader className="pb-0">
               <div className="flex items-center justify-between gap-4">
@@ -2433,7 +2433,7 @@ export default function AnalyticsPage() {
           {/* Investment Focus Radar Chart */}
           {/* Hide entire card when no donors selected */}
           {selectedDonors.length > 0 && donorInvestmentFocus.length > 0 && (
-            <Card className="hidden !border-0 bg-white">
+            <Card className="hidden !border-0 bg-white dark:bg-slate-800">
               <CardHeader className="pb-2">
                 <div className="flex flex-col gap-1">
                   <SectionHeader
@@ -2653,7 +2653,7 @@ export default function AnalyticsPage() {
             </div>
 
             {/* Organizations List */}
-            <Card className="!border-0 bg-white">
+            <Card className="!border-0 bg-white dark:bg-slate-800">
               <CardHeader className="pb-3">
                 <CardTitle>
                   <SectionHeader
@@ -2712,7 +2712,7 @@ export default function AnalyticsPage() {
       </div>
 
       {/* Footer */}
-      <footer className="mt-8 border-t border-slate-200 bg-white sm:mt-16">
+      <footer className="mt-8 border-t border-slate-200 bg-white dark:border-slate-700 dark:bg-slate-900 sm:mt-16">
         <div className="mx-auto max-w-[82rem] px-4 py-4 sm:px-6 sm:py-6 lg:px-8">
           <div className="flex flex-col items-center justify-center gap-2 sm:flex-row sm:justify-between sm:gap-0">
             <div className="flex-1 text-center">

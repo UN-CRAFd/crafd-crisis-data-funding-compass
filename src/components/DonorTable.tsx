@@ -415,7 +415,7 @@ const DonorTableComponent: React.FC<DonorTableProps> = ({
                   className={`flex flex-col rounded-lg border p-3 sm:flex-row sm:justify-between sm:p-4 ${
                     isSelected
                       ? "border-[var(--brand-primary)] bg-[var(--brand-bg-lighter)] hover:bg-[var(--brand-bg-light)]/90"
-                      : "border-slate-200 bg-slate-50/30 hover:bg-slate-50/70"
+                      : "border-slate-200 bg-slate-50/30 hover:bg-slate-50/70 dark:border-slate-700 dark:bg-slate-800/50 dark:hover:bg-slate-800"
                   } min-h-[60px] animate-in cursor-pointer gap-3 fade-in sm:gap-0`}
                 >
                   <div className="flex flex-1 items-center space-x-3">

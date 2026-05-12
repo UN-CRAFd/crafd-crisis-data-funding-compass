@@ -1,6 +1,7 @@
 "use client";
 
 import { useState, useEffect } from "react";
+import { useTheme } from "next-themes";
 import { Button } from "@/components/ui/button";
 import {
   TooltipContent,
@@ -30,6 +31,7 @@ import {
   LayoutDashboard,
   Compass,
 } from "lucide-react";
+import { ThemeToggle } from "@/components/ThemeToggle";
 import { useTips } from "@/contexts/TipsContext";
 import { useGeneralContributions } from "@/contexts/GeneralContributionsContext";
 import { setGeneralContributionsEnabled } from "@/lib/data";
@@ -39,9 +41,9 @@ import { usePathname, useRouter, useSearchParams } from "next/navigation";
 
 const STYLES = {
   chartTooltip: {
-    backgroundColor: "#FFFFFF",
-    color: "#333333",
-    border: "1px solid #CBD5E1",
+    backgroundColor: "var(--tooltip-bg)",
+    color: "var(--chart-text-color)",
+    border: "1px solid var(--tooltip-border)",
     borderRadius: "8px",
     padding: "12px",
   },
@@ -75,6 +77,8 @@ export default function PageHeader({
   const searchParams = useSearchParams();
   const [lastUpdated, setLastUpdated] = useState<string | null>(null);
   const [isCompassRotating, setIsCompassRotating] = useState(false);
+  const { theme } = useTheme();
+  const [isDark, setIsDark] = useState(false);
 
   // Fetch last updated date from API
   useEffect(() => {
@@ -85,6 +89,11 @@ export default function PageHeader({
         console.error("Failed to fetch last updated date:", error);
       });
   }, []);
+
+  // Update isDark when theme changes
+  useEffect(() => {
+    setIsDark(theme === "dark");
+  }, [theme]);
 
   const handleCompassClick = () => {
     setIsCompassRotating(true);
@@ -133,7 +142,7 @@ export default function PageHeader({
   };
 
   return (
-    <div className="fixed top-0 right-0 left-0 z-50 border-b border-slate-200 bg-white">
+    <div className="fixed top-0 right-0 left-0 z-50 border-b border-slate-200 bg-white dark:border-slate-700 dark:bg-slate-900">
       <div className="mx-auto max-w-[82rem] px-4 py-3 sm:px-6 sm:py-4 lg:px-8">
         <div className="flex items-center justify-between gap-3">
           <div className="flex min-w-0 flex-1 items-center gap-2 sm:gap-3">
@@ -149,7 +158,10 @@ export default function PageHeader({
                   }`}
                 />
               </button>
-              <h1 className="flex min-w-0 flex-col items-start gap-0 bg-gradient-to-r from-slate-800 to-slate-600 bg-clip-text text-base text-transparent sm:text-xl lg:flex-row lg:items-center lg:gap-2 lg:text-3xl">
+              <h1 
+                className="flex min-w-0 flex-col items-start gap-0 text-base text-slate-800 sm:text-xl lg:flex-row lg:items-center lg:gap-2 lg:text-3xl"
+                style={{ color: isDark ? 'white' : '#0f172a' }}
+              >
                 <span className="qanelas-title whitespace-nowrap">
                   {labels.header.title}
                 </span>
@@ -161,12 +173,12 @@ export default function PageHeader({
             <TooltipProvider>
               <TooltipUI>
                 <TooltipTrigger asChild>
-                  <Info className="h-4 w-4 cursor-help text-slate-400 transition-colors hover:text-slate-600" />
+                  <Info className="h-4 w-4 cursor-help text-slate-400 transition-colors hover:text-slate-600 dark:text-slate-500 dark:hover:text-slate-300" />
                 </TooltipTrigger>
                 <TooltipContent
                   side="bottom"
                   align="center"
-                  className="max-w-115 rounded-lg border border-slate-200 bg-white p-1 text-xs text-slate-800"
+                  className="max-w-115 rounded-lg border border-slate-200 bg-white p-1 text-xs text-slate-800 dark:border-slate-600 dark:bg-slate-800 dark:text-slate-200"
                   sideOffset={6}
                   avoidCollisions={true}
                   style={{ ...STYLES.chartTooltip }}
@@ -193,7 +205,7 @@ export default function PageHeader({
                   "_blank",
                 )
               }
-              className="rounded-md bg-transparent px-4 py-4 text-xs text-slate-700 transition hover:text-[var(--brand-primary)] focus:text-[var(--brand-primary)] active:text-[var(--brand-primary)] sm:text-sm"
+              className="rounded-md bg-transparent px-4 py-4 text-xs text-slate-700 transition hover:text-[var(--brand-primary)] focus:text-[var(--brand-primary)] active:text-[var(--brand-primary)] dark:text-slate-300 sm:text-sm"
               title={labels.header.feedbackTooltip}
             >
               <MessageCircle className="h-4 w-4 sm:mr-2" />
@@ -202,7 +214,7 @@ export default function PageHeader({
               </span>
             </Button>
             {pathname === "/" && (
-              <div className="hidden h-8 w-px bg-slate-200 sm:block"></div>
+              <div className="hidden h-8 w-px bg-slate-200 dark:bg-slate-700 sm:block"></div>
             )}
 
             {/* Export Dropdown - only show on dashboard */}
@@ -215,7 +227,7 @@ export default function PageHeader({
                     disabled={
                       csvExportLoading || xlsxExportLoading || pdfExportLoading
                     }
-                    className="hidden rounded-md bg-transparent px-4 py-4 text-xs text-slate-700 transition hover:text-[var(--brand-primary)] focus:text-[var(--brand-primary)] sm:flex sm:text-sm"
+                    className="hidden rounded-md bg-transparent px-4 py-4 text-xs text-slate-700 transition hover:text-[var(--brand-primary)] focus:text-[var(--brand-primary)] dark:text-slate-300 sm:flex sm:text-sm"
                     title="Export current view"
                   >
                     <FileDown className="h-4 w-4 sm:mr-2" />
@@ -239,7 +251,7 @@ export default function PageHeader({
                   align="end"
                   side="bottom"
                   sideOffset={4}
-                  className="w-auto min-w-[200px] border border-slate-200 bg-white shadow-lg"
+                  className="w-auto min-w-[200px] border border-slate-200 bg-white shadow-lg dark:border-slate-600 dark:bg-slate-800"
                 >
                   <DropdownMenuItem
                     onClick={onExportCSV}
@@ -274,7 +286,7 @@ export default function PageHeader({
                 className={`rounded-md px-4 py-4 text-xs transition-all duration-200 sm:text-sm ${
                   shareSuccess
                     ? "bg-[#10b981] text-white hover:bg-[#059669] hover:text-white"
-                    : "bg-transparent text-slate-700 hover:text-[var(--brand-primary)]"
+                    : "bg-transparent text-slate-700 hover:text-[var(--brand-primary)] dark:text-slate-300"
                 }`}
                 title={labels.ui.copyToClipboard}
               >
@@ -288,7 +300,13 @@ export default function PageHeader({
             )}
 
             {/* Vertical line separator */}
-            <div className="hidden h-8 w-px bg-slate-200 sm:block"></div>
+            <div className="hidden h-8 w-px bg-slate-200 dark:bg-slate-700 sm:block"></div>
+
+            {/* Dark mode toggle */}
+            <ThemeToggle />
+
+            {/* Vertical line separator */}
+            <div className="hidden h-8 w-px bg-slate-200 dark:bg-slate-700 sm:block"></div>
 
             {/* Page Navigation Menu - Rightmost */}
             <DropdownMenu>
@@ -296,7 +314,7 @@ export default function PageHeader({
                 <Button
                   variant="ghost"
                   size="sm"
-                  className="rounded-md bg-transparent px-4 py-4 text-xs text-slate-700 transition hover:text-[var(--brand-primary)] sm:text-sm"
+                  className="rounded-md bg-transparent px-4 py-4 text-xs text-slate-700 transition hover:text-[var(--brand-primary)] dark:text-slate-300 sm:text-sm"
                   title="Navigation"
                 >
                   <Menu className="h-6 w-6" />
@@ -306,7 +324,7 @@ export default function PageHeader({
                 align="end"
                 side="bottom"
                 sideOffset={4}
-                className="w-auto min-w-[180px] border border-slate-200 bg-white shadow-lg"
+                className="w-auto min-w-[180px] border border-slate-200 bg-white shadow-lg dark:border-slate-600 dark:bg-slate-800"
               >
                 <DropdownMenuItem
                   onClick={() => {
@@ -332,10 +350,10 @@ export default function PageHeader({
                       : "/";
                     router.push(target);
                   }}
-                  className={`cursor-pointer px-2 py-2 text-sm ${pathname === "/" ? "bg-slate-100" : ""}`}
+                  className={`cursor-pointer px-2 py-2 text-sm ${pathname === "/" ? "bg-slate-100 dark:bg-slate-700" : ""}`}
                 >
                   <div className="flex items-center">
-                    <LayoutDashboard className="mr-2 h-3 w-3 text-slate-600" />
+                    <LayoutDashboard className="mr-2 h-3 w-3 text-slate-600 dark:text-slate-400" />
                     <span className={pathname === "/" ? "!font-bold" : ""}>
                       {labels.header.dashboard}
                     </span>
@@ -364,10 +382,10 @@ export default function PageHeader({
                       : "/analytics";
                     router.push(target);
                   }}
-                  className={`cursor-pointer px-2 py-2 text-sm ${pathname === "/analytics" || pathname === "/analytics/" ? "bg-slate-100" : ""}`}
+                  className={`cursor-pointer px-2 py-2 text-sm ${pathname === "/analytics" || pathname === "/analytics/" ? "bg-slate-100 dark:bg-slate-700" : ""}`}
                 >
                   <div className="flex items-center">
-                    <BarChart3 className="mr-2 h-3 w-3 text-slate-600" />
+                    <BarChart3 className="mr-2 h-3 w-3 text-slate-600 dark:text-slate-400" />
                     <span
                       className={
                         pathname === "/analytics" || pathname === "/analytics/"
@@ -381,10 +399,10 @@ export default function PageHeader({
                 </DropdownMenuItem>
                 <DropdownMenuItem
                   onClick={() => router.push("/methodology/")}
-                  className={`cursor-pointer px-2 py-2 text-sm ${pathname === "/methodology/" ? "bg-slate-100" : ""}`}
+                  className={`cursor-pointer px-2 py-2 text-sm ${pathname === "/methodology/" ? "bg-slate-100 dark:bg-slate-700" : ""}`}
                 >
                   <div className="flex items-center">
-                    <BookOpen className="mr-2 h-3 w-3 text-slate-600" />
+                    <BookOpen className="mr-2 h-3 w-3 text-slate-600 dark:text-slate-400" />
                     <span
                       className={
                         pathname === "/methodology/" ? "!font-bold" : ""

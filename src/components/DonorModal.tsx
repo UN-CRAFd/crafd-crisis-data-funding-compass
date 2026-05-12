@@ -380,7 +380,7 @@ export default function DonorModal({
         title={donorDisplayName}
         subtitle={
           isMemberState ? (
-            <span className="inline-flex items-center rounded bg-slate-200 px-2 py-1 text-xs font-semibold text-slate-700">
+            <span className="inline-flex items-center rounded bg-slate-200 px-2 py-1 text-xs font-semibold text-slate-700 dark:bg-slate-700 dark:text-slate-200">
               {labels.modals.memberState}
             </span>
           ) : null
@@ -553,7 +553,7 @@ export default function DonorModal({
                                     setHoveredProjectId(project.id)
                                   }
                                   onMouseLeave={() => setHoveredProjectId(null)}
-                                  className="flex w-full cursor-pointer items-center gap-1.5 rounded-md bg-slate-100 px-3 py-2 text-left text-sm font-medium text-slate-600 transition-colors hover:bg-slate-200"
+                                  className="flex w-full cursor-pointer items-center gap-1.5 rounded-md bg-slate-100 px-3 py-2 text-left text-sm font-medium text-slate-600 transition-colors hover:bg-slate-200 dark:bg-slate-800 dark:text-slate-300 dark:hover:bg-slate-700"
                                 >
                                   {hoveredProjectId === project.id ? (
                                     <PackageOpen className="h-4 w-4 shrink-0 text-slate-600" />

@@ -14,7 +14,7 @@ import { SectionHeader } from "./SectionHeader";
 
 // Chart-specific styles
 const CHART_STYLES = {
-  cardGlass: "!border-0 bg-white",
+  cardGlass: "!border-0 bg-white dark:bg-slate-800",
 } as const;
 
 interface ChartCardProps {

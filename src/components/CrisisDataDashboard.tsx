@@ -107,7 +107,7 @@ const TABS = [
 
 // Consolidated style constants
 const STYLES = {
-  cardGlass: "!border-0 bg-white",
+  cardGlass: "!border-0 bg-white dark:bg-slate-800",
 } as const;
 
 // Tooltip style for reuse
@@ -929,7 +929,7 @@ const CrisisDataDashboard = ({
   };
 
   return (
-    <div className="min-h-screen bg-slate-100">
+    <div className="min-h-screen bg-slate-100 dark:bg-slate-950">
       {/* Header Section - Fixed */}
       <PageHeader
         onShare={handleShare}
@@ -1112,7 +1112,7 @@ const CrisisDataDashboard = ({
                             <TooltipContent
                               side="bottom"
                               align="center"
-                              className="max-w-100 rounded-lg border border-slate-200 bg-white p-3 text-xs text-slate-800"
+                              className="max-w-100 rounded-lg border border-slate-200 bg-white p-3 text-xs text-slate-800 dark:border-slate-600 dark:bg-slate-800 dark:text-slate-200"
                               sideOffset={5}
                               avoidCollisions={true}
                               style={TOOLTIP_STYLE}
@@ -1198,7 +1198,7 @@ const CrisisDataDashboard = ({
                             align="end"
                             side="bottom"
                             sideOffset={4}
-                            className="w-auto min-w-[140px] border border-slate-200 bg-white shadow-lg"
+                            className="w-auto min-w-[140px] border border-slate-200 bg-white shadow-lg dark:border-slate-600 dark:bg-slate-800"
                           >
                             <DropdownMenuItem
                               onClick={() =>
@@ -1254,7 +1254,7 @@ const CrisisDataDashboard = ({
                         align="end"
                         side="bottom"
                         sideOffset={4}
-                        className="w-auto min-w-[250px] border border-slate-200 bg-white shadow-lg"
+                        className="w-auto min-w-[250px] border border-slate-200 bg-white shadow-lg dark:border-slate-600 dark:bg-slate-800"
                       >
                         <DropdownMenuItem
                           onSelect={(e) => e.preventDefault()}
@@ -1734,11 +1734,11 @@ const CrisisDataDashboard = ({
       </div>
 
       {/* Impressum Footer */}
-      <footer className="mt-8 border-t border-slate-200 bg-white sm:mt-16">
+      <footer className="mt-8 border-t border-slate-200 bg-white dark:border-slate-700 dark:bg-slate-900 sm:mt-16">
         <div className="mx-auto max-w-[82rem] px-4 py-4 sm:px-6 sm:py-6 lg:px-8">
           <div className="flex flex-col items-center justify-center gap-2 sm:flex-row sm:justify-between sm:gap-0">
             <div className="flex-1 text-center">
-              <p className="text-xs text-slate-600 sm:text-sm">
+              <p className="text-xs text-slate-600 dark:text-slate-400 sm:text-sm">
                 {labels.footer.dataGatheredBy}{" "}
                 <a
                   href="https://crafd.io"
@@ -1750,7 +1750,7 @@ const CrisisDataDashboard = ({
                   {labels.footer.organization}
                 </a>{" "}
               </p>
-              <p className="mt-1 text-xs text-slate-500">
+              <p className="mt-1 text-xs text-slate-500 dark:text-slate-500">
                 {labels.footer.copyright.replace(
                   "{year}",
                   new Date().getFullYear().toString(),

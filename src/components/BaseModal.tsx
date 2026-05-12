@@ -170,7 +170,7 @@ export default function BaseModal({
     >
       <div
         ref={modalRef}
-        className={`relative flex h-full w-full flex-col bg-white shadow-2xl transition-transform duration-300 ease-out sm:w-3/5 sm:min-w-[435px] md:w-[45%] lg:w-[37%] lg:min-w-[500px] xl:w-[29%] xl:min-w-[550px] ${
+        className={`relative flex h-full w-full flex-col bg-white shadow-2xl transition-transform duration-300 ease-out dark:bg-slate-900 dark:text-slate-100 sm:w-3/5 sm:min-w-[435px] md:w-[45%] lg:w-[37%] lg:min-w-[500px] xl:w-[29%] xl:min-w-[550px] ${
           isVisible && !isClosing ? "translate-x-0" : "translate-x-full"
         }`}
         onTouchStart={onTouchStart}
@@ -179,7 +179,7 @@ export default function BaseModal({
       >
         {/* Header */}
         <div
-          className={`shrink-0 border-b border-gray-300 px-6 pt-4 pb-4 sm:px-8 sm:pt-6 sm:pb-5 ${isOpen ? "bg-white" : ""}`}
+          className={`shrink-0 border-b border-gray-300 px-6 pt-4 pb-4 dark:border-slate-700 sm:px-8 sm:pt-6 sm:pb-5 ${isOpen ? "bg-white dark:bg-slate-900" : ""}`}
         >
           {renderHeader({
             showCopied,
@@ -259,7 +259,7 @@ export function ModalHeader({
           className={`flex h-12 w-12 shrink-0 cursor-pointer touch-manipulation items-center justify-center rounded-full transition-all duration-200 ease-out focus:outline-none sm:h-10 sm:w-10 sm:rounded-lg ${
             showCopied
               ? "bg-[#10b981] text-white shadow-lg hover:bg-[#059669] focus:bg-[#059669] sm:bg-[#10b981] sm:text-white sm:shadow-none sm:hover:bg-[#059669] sm:hover:text-white sm:focus:bg-[#059669] sm:focus:text-white"
-              : "bg-slate-600 text-white shadow-lg hover:bg-slate-700 focus:bg-slate-700 sm:bg-gray-200 sm:text-gray-600 sm:shadow-none sm:hover:bg-gray-400 sm:hover:text-gray-100 sm:focus:bg-gray-400 sm:focus:text-gray-100"
+              : "bg-slate-600 text-white shadow-lg hover:bg-slate-700 focus:bg-slate-700 sm:bg-gray-200 sm:text-gray-600 sm:shadow-none sm:hover:bg-gray-400 sm:hover:text-gray-100 sm:focus:bg-gray-400 sm:focus:text-gray-100 dark:bg-slate-700 dark:text-slate-200 dark:hover:bg-slate-600 sm:dark:bg-slate-700 sm:dark:text-slate-200 sm:dark:hover:bg-slate-600 sm:dark:hover:text-white"
           }`}
           aria-label="Share"
           title="Share"
@@ -306,9 +306,9 @@ export function CountryBadge({
   const badgeContent = (
     <div className="inline-flex items-center gap-2">
       <span
-        className={`inline-flex items-center gap-2 rounded-md bg-slate-100 px-3 py-1.5 text-sm font-medium text-slate-600 ${
+        className={`inline-flex items-center gap-2 rounded-md bg-slate-100 px-3 py-1.5 text-sm font-medium text-slate-600 dark:bg-slate-700 dark:text-slate-300 ${
           isClickable
-            ? "cursor-pointer transition-colors hover:bg-slate-200"
+            ? "cursor-pointer transition-colors hover:bg-slate-200 dark:hover:bg-slate-600"
             : ""
         } ${className}`}
         onClick={isClickable ? () => onClick(country) : undefined}
@@ -431,12 +431,12 @@ export function ModalTooltip({
         <TooltipTrigger asChild>{children}</TooltipTrigger>
         <TooltipContent
           side={side}
-          className="!z-[9999] max-h-[80vh] max-w-[90vw] overflow-auto border border-gray-300 bg-white p-2 text-xs"
+          className="!z-[9999] max-h-[80vh] max-w-[90vw] overflow-auto border border-gray-300 bg-white p-2 text-xs dark:border-slate-600 dark:bg-slate-800 dark:text-slate-200"
           sideOffset={5}
           container={tooltipContainer as HTMLElement | null}
           style={{
-            backgroundColor: "rgb(255, 255, 255)",
-            color: "var(--tooltip-text)",
+            backgroundColor: "var(--tooltip-bg)",
+            color: "var(--chart-text-color)",
             border: "1px solid var(--tooltip-border)",
             opacity: 1,
             zIndex: 9999,

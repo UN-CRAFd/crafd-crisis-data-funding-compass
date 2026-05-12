@@ -703,6 +703,14 @@ def main():
             pt_rows,
         )
 
+        # --- Grant read permissions to app user ----------------------------
+        log(SCRIPT_NAME, "Granting permissions to funding_compass_app …")
+        with conn.cursor() as cur:
+            cur.execute("GRANT USAGE ON SCHEMA funding_compass TO funding_compass_app;")
+            cur.execute("GRANT SELECT ON ALL TABLES IN SCHEMA funding_compass TO funding_compass_app;")
+        conn.commit()
+        log(SCRIPT_NAME, "  Permissions granted ✓")
+
         # --- Summary ------------------------------------------------------
         log(SCRIPT_NAME, "")
         log(SCRIPT_NAME, "=== PIPELINE SUMMARY ===")

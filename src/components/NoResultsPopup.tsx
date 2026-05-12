@@ -15,7 +15,7 @@ export default function NoResultsPopup({
 }: NoResultsPopupProps) {
   return (
     <div className="flex items-center justify-center py-12 sm:py-16">
-      <div className="mx-4 w-full max-w-sm animate-in rounded-lg border border-slate-200 bg-white shadow-xl duration-200 zoom-in-95 fade-in">
+      <div className="mx-4 w-full max-w-sm animate-in rounded-lg border border-slate-200 bg-white shadow-xl duration-200 zoom-in-95 fade-in dark:border-slate-700 dark:bg-slate-800">
         <div className="flex flex-col items-center p-6 text-center">
           <div className="mb-3 flex h-12 w-12 items-center justify-center rounded-full bg-slate-100">
             <AlertCircle className="h-6 w-6 text-slate-400" />

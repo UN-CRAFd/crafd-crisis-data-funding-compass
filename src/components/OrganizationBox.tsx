@@ -140,7 +140,7 @@ const OrganizationBoxComponent: React.FC<OrganizationBoxProps> = ({
 
   return (
     <div
-      className="group flex min-h-[80px] animate-in cursor-pointer flex-col gap-3 rounded-lg border border-slate-200 bg-slate-50/30 p-3 fade-in hover:bg-slate-50/70 sm:flex-row sm:justify-between sm:gap-0 sm:p-4"
+      className="group flex min-h-[80px] animate-in cursor-pointer flex-col gap-3 rounded-lg border border-slate-200 bg-slate-50/30 p-3 fade-in hover:bg-slate-50/70 dark:border-slate-700 dark:bg-slate-800/50 dark:hover:bg-slate-800 sm:flex-row sm:justify-between sm:gap-0 sm:p-4"
       onMouseEnter={handleMouseEnter}
       onMouseLeave={handleMouseLeave}
       role="article"

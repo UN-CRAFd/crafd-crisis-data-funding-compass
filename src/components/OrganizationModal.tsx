@@ -549,7 +549,7 @@ export default function OrganizationModal({
                         onClick={() => onOpenProjectModal?.(proj.productKey)}
                         onMouseEnter={() => setHoveredProjectId(proj.id)}
                         onMouseLeave={() => setHoveredProjectId(null)}
-                        className="inline-flex w-full cursor-pointer items-center justify-between gap-1.5 rounded-md bg-slate-100 px-3 py-1.5 text-left text-base font-medium text-slate-600 transition-colors hover:bg-slate-200"
+                        className="inline-flex w-full cursor-pointer items-center justify-between gap-1.5 rounded-md bg-slate-100 px-3 py-1.5 text-left text-base font-medium text-slate-600 transition-colors hover:bg-slate-200 dark:bg-slate-800 dark:text-slate-300 dark:hover:bg-slate-700"
                       >
                         <div className="inline-flex min-w-0 items-center gap-1.5">
                           {(() => {

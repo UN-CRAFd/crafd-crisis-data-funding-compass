@@ -1,6 +1,7 @@
 import { GoogleAnalytics } from "@next/third-parties/google";
 
 import ErrorBoundary from "@/components/ErrorBoundary";
+import { ThemeProvider } from "@/components/ThemeProvider";
 import { TipsProvider } from "@/contexts/TipsContext";
 import { GeneralContributionsProvider } from "@/contexts/GeneralContributionsContext";
 import type { Metadata } from "next";
@@ -27,18 +28,20 @@ export default function RootLayout({
   const isProduction = process.env.VERCEL_ENV === "production";
 
   return (
-    <html lang="en">
-      <body className="font-sans antialiased">
-        <ErrorBoundary>
-          <TipsProvider>
-            <GeneralContributionsProvider>
-              {children}
-              {/* <Suspense fallback={null}>
-                                <OnboardingTour />
-                            </Suspense> */}
-            </GeneralContributionsProvider>
-          </TipsProvider>
-        </ErrorBoundary>
+    <html lang="en" suppressHydrationWarning>
+      <body className="font-sans antialiased bg-white text-slate-900 dark:bg-slate-950 dark:text-slate-100">
+        <ThemeProvider>
+          <ErrorBoundary>
+            <TipsProvider>
+              <GeneralContributionsProvider>
+                {children}
+                {/* <Suspense fallback={null}>
+                                  <OnboardingTour />
+                              </Suspense> */}
+              </GeneralContributionsProvider>
+            </TipsProvider>
+          </ErrorBoundary>
+        </ThemeProvider>
       </body>
       {isProduction && <GoogleAnalytics gaId="G-GECPTVLE68" />}
     </html>
