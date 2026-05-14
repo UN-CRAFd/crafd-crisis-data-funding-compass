@@ -134,8 +134,9 @@ const OrganizationBoxComponent: React.FC<OrganizationBoxProps> = ({
   const logoFilterStyle = useMemo(
     () => ({
       filter: isHovered
+      
         ? "grayscale(0%) brightness(1.1)"
-        : `grayscale(100%) brightness(${isDark ? 2 : 1.1})`,
+        : `contrast(${isDark ? 2.5 : 1}) grayscale(100%) brightness(${isDark ? 1.7 : 1.1}) `,
     }),
     [isHovered, isDark],
   );
