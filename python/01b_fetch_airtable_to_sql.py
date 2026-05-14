@@ -119,7 +119,7 @@ def get_db_connection():
     """Create a PostgreSQL connection using env vars."""
     return psycopg2.connect(
         host=os.getenv("AZURE_POSTGRES_HOST"),
-        port=int(os.getenv("AZURE_POSTGRES_PORT", "5432")),
+        port=int(os.getenv("AZURE_POSTGRES_PORT") or "5432"),
         dbname="crafd",  # Use crafd database, not postgres
         user=os.getenv("AZURE_POSTGRES_USER"),
         password=os.getenv("AZURE_POSTGRES_PASSWORD"),
