@@ -222,7 +222,7 @@ const OrganizationBoxComponent: React.FC<OrganizationBoxProps> = ({
             variant="outline"
             size="sm"
             onClick={handleOpenModal}
-            className="hidden h-6 items-center justify-center gap-1 rounded-md bg-[var(--badge-slate-text)] px-2 text-[10px] text-[var(--badge-slate-bg)] duration-150 hover:bg-slate-400 sm:inline-flex"
+            className="hidden h-6 items-center justify-center gap-1 rounded-md bg-[var(--badge-slate-text)] px-2 text-[10px] text-[var(--badge-slate-bg)] duration-150 hover:bg-slate-400 dark:bg-slate-500 dark:text-slate-100 dark:hover:bg-slate-400 sm:inline-flex"
             aria-label={`View details for ${organizationName}`}
           >
             <Info className="h-3 w-3" aria-hidden="true" />
