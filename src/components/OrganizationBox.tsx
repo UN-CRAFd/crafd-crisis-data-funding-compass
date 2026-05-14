@@ -1,4 +1,5 @@
 import React, { useState, useMemo, useCallback, memo } from "react";
+import { useTheme } from "next-themes";
 import { ChevronDown, ChevronRight, Building2, Info } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
@@ -65,6 +66,8 @@ const OrganizationBoxComponent: React.FC<OrganizationBoxProps> = ({
   projectLabel = "assets",
 }) => {
   const [isHovered, setIsHovered] = useState(false);
+  const { resolvedTheme } = useTheme();
+  const isDark = resolvedTheme === "dark";
   const HeadingTag = headingLevel;
 
   // Memoize nested org lookup to prevent recalculation on every render
@@ -128,14 +131,13 @@ const OrganizationBoxComponent: React.FC<OrganizationBoxProps> = ({
     [orgKey, orgId, onLogoError],
   );
 
-  // Memoize filter style to prevent object recreation
   const logoFilterStyle = useMemo(
     () => ({
       filter: isHovered
         ? "grayscale(0%) brightness(1.1)"
-        : "grayscale(100%) brightness(1.1)",
+        : `grayscale(100%) brightness(${isDark ? 2 : 1.1})`,
     }),
-    [isHovered],
+    [isHovered, isDark],
   );
 
   return (
