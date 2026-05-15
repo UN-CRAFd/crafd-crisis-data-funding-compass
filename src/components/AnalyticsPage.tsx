@@ -1856,7 +1856,7 @@ export default function AnalyticsPage() {
                     <Button
                       variant="ghost"
                       size="sm"
-                      className="h-8 w-8 p-0 text-slate-600 hover:bg-slate-100"
+                      className="h-8 w-8 p-0 text-slate-600 hover:bg-slate-100 dark:hover:bg-slate-700"
                     >
                       <Settings className="h-5 w-5" />
                     </Button>
@@ -2062,8 +2062,8 @@ export default function AnalyticsPage() {
                         onClick={() => setMatrixViewMode(value)}
                         className={`${MATRIX_BUTTON_CLASS} ${
                           active
-                            ? "bg-slate-200 text-slate-700"
-                            : "bg-slate-100 text-slate-600 hover:bg-slate-200"
+                            ? "bg-slate-200 text-slate-700 dark:bg-slate-600 dark:text-slate-100"
+                            : "bg-slate-100 text-slate-600 hover:bg-slate-200 dark:bg-slate-700 dark:text-slate-300 dark:hover:bg-slate-600"
                         }`}
                       >
                         <Icon className="h-3 w-3" />

@@ -476,8 +476,20 @@
   background-color: #334155;
 }
 
+.dark .bg-slate-200 {
+  background-color: #334155;
+}
+
 .dark .hover\:bg-slate-50:hover {
   background-color: #334155;
+}
+
+.dark .hover\:bg-slate-100:hover {
+  background-color: #334155;
+}
+
+.dark .hover\:bg-slate-200:hover {
+  background-color: #475569;
 }
 
 .dark .hover\:bg-slate-50\/70:hover {
