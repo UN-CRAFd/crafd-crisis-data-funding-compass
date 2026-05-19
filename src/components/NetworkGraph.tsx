@@ -14,12 +14,10 @@ import {
   Maximize,
   Minimize,
   Crosshair,
-  Layers,
   Package,
   Building2,
   DollarSign,
   Type,
-  Zap,
   GitBranch,
   ChevronLeft,
   ChevronRight,
@@ -27,9 +25,8 @@ import {
 import type { OrganizationWithProjects } from "../types/airtable";
 import FilterBar from "./FilterBar";
 import NoResultsModal from "./NoResultsModal";
-import { Button } from "./ui/button";
 import { getCountryFlagUrl } from "./CountryFlag";
-import { getBrandColor, getBrandColors } from "@/lib/colorUtils";
+import { getBrandColors } from "@/lib/colorUtils";
 import { useProjectCounts } from "@/hooks/useProjectCounts";
 
 interface NetworkGraphProps {
@@ -463,7 +460,7 @@ const NetworkGraph: React.FC<NetworkGraphProps> = ({
     }
 
     return { nodes, links };
-  }, [organizationsWithProjects]); // scalingMode removed - handled in separate effect for smooth transitions
+  }, [organizationsWithProjects, combinedDonors, dimensions, orgAgenciesMap]); // scalingMode removed - handled in separate effect for smooth transitions
 
   // Smoothly update node sizes when scalingMode changes (without rebuilding the graph)
   useEffect(() => {
@@ -752,9 +749,6 @@ const NetworkGraph: React.FC<NetworkGraphProps> = ({
       ); // Moderate collision force
 
       const clusterCenters = new Map<string, { x: number; y: number }>();
-      // Make clusters much more spread out
-      const clusterRadius =
-        Math.min(dimensions.width, dimensions.height) * 0.45;
 
       // Calculate the center of the canvas
       const centerX = dimensions.width / 2;
@@ -1668,6 +1662,46 @@ const NetworkGraph: React.FC<NetworkGraphProps> = ({
     [clusterData],
   );
 
+  const getLinkColor = useCallback(
+    (link: any) => {
+      const sourceId =
+        typeof link.source === "object" ? link.source.id : link.source;
+      const targetId =
+        typeof link.target === "object" ? link.target.id : link.target;
+      const linkId = `${sourceId}-${targetId}`;
+
+      if (link.value === 0) return "rgba(203, 213, 225, 0.5)";
+
+      const isHoverHighlight =
+        hoverHighlightLinks.size > 0 && hoverHighlightLinks.has(linkId);
+
+      if (hoverHighlightLinks.size === 0) return "#cbd5e1";
+      if (isHoverHighlight) return themeColors.brandPrimary;
+      return "rgba(203, 213, 225, 0.6)";
+    },
+    [hoverHighlightLinks, themeColors.brandPrimary],
+  );
+
+  const getLinkWidth = useCallback(
+    (link: any) => {
+      const sourceId =
+        typeof link.source === "object" ? link.source.id : link.source;
+      const targetId =
+        typeof link.target === "object" ? link.target.id : link.target;
+      const linkId = `${sourceId}-${targetId}`;
+
+      if (link.value === 0) return 0.7 * globalScaleRef.current;
+
+      const isHoverHighlight =
+        hoverHighlightLinks.size > 0 && hoverHighlightLinks.has(linkId);
+
+      const baseWidth =
+        hoverHighlightLinks.size === 0 ? 1 : isHoverHighlight ? 2 : 1;
+      return baseWidth * globalScaleRef.current * 1.1;
+    },
+    [hoverHighlightLinks],
+  );
+
   return (
     <>
       <div
@@ -2017,55 +2051,8 @@ const NetworkGraph: React.FC<NetworkGraphProps> = ({
             // Draw cluster labels on top of everything
             drawClusters(ctx, globalScale, "labels");
           }}
-          linkColor={(link) => {
-            const sourceId =
-              typeof link.source === "object"
-                ? (link.source as any).id
-                : link.source;
-            const targetId =
-              typeof link.target === "object"
-                ? (link.target as any).id
-                : link.target;
-            const linkId = `${sourceId}-${targetId}`;
-
-            // Donor-project links (value 0) should be more visible
-            if (link.value === 0) {
-              return "rgba(203, 213, 225, 0.5)"; // More visible than before
-            }
-
-            // Hover-based highlights only
-            const isHoverHighlight =
-              hoverHighlightLinks.size > 0 && hoverHighlightLinks.has(linkId);
-
-            if (hoverHighlightLinks.size === 0) return "#cbd5e1";
-            if (isHoverHighlight) return themeColors.brandPrimary;
-            // Make non-highlighted links more visible when something is highlighted
-            return "rgba(203, 213, 225, 0.6)";
-          }}
-          linkWidth={(link) => {
-            const sourceId =
-              typeof link.source === "object"
-                ? (link.source as any).id
-                : link.source;
-            const targetId =
-              typeof link.target === "object"
-                ? (link.target as any).id
-                : link.target;
-            const linkId = `${sourceId}-${targetId}`;
-
-            // Donor-project links (value 0) should be more visible
-            if (link.value === 0) {
-              return 0.7 * globalScaleRef.current; // More visible than before
-            }
-
-            const isHoverHighlight =
-              hoverHighlightLinks.size > 0 && hoverHighlightLinks.has(linkId);
-
-            // Scale line width with zoom: thicker when zoomed out, thinner when zoomed in
-            const baseWidth =
-              hoverHighlightLinks.size === 0 ? 1 : isHoverHighlight ? 2 : 1;
-            return baseWidth * globalScaleRef.current * 1.1;
-          }}
+          linkColor={getLinkColor}
+          linkWidth={getLinkWidth}
           d3VelocityDecay={0.6}
           d3AlphaDecay={0.02}
           cooldownTicks={300}

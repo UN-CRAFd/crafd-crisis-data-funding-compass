@@ -15,14 +15,9 @@ import DonorTable from "@/components/DonorTable";
 import { OrganizationBox } from "@/components/OrganizationBox";
 import { ProjectBox } from "@/components/ProjectBox";
 import SurveyBanner from "@/components/SurveyBanner";
-import { Button } from "@/components/ui/button";
 import { matchesUrlSlug } from "@/lib/urlShortcuts";
 import { Card, CardContent } from "@/components/ui/card";
-import {
-  Collapsible,
-  CollapsibleContent,
-  CollapsibleTrigger,
-} from "@/components/ui/collapsible";
+import { Collapsible, CollapsibleContent } from "@/components/ui/collapsible";
 import {
   DropdownMenu,
   DropdownMenuContent,
@@ -37,16 +32,12 @@ import {
   Tooltip as TooltipUI,
 } from "@/components/ui/tooltip";
 import labels from "@/config/labels.json";
-import { getIconForInvestmentType } from "@/config/investmentTypeIcons";
 import type { ModalMapsDTO } from "@/server/dto";
 import {
   Building2,
   ChevronDown,
-  ChevronRight,
   Database,
-  Table,
   Globe,
-  Info,
   ArrowUpWideNarrow,
   ArrowDownWideNarrow,
   Network,
@@ -60,7 +51,6 @@ import {
   calculateOrganizationTypesFromOrganizationsWithProjects,
   setGeneralContributionsEnabled,
 } from "../lib/data";
-import { exportDashboardToPDF } from "../lib/exportPDF";
 import { exportViewAsCSV, exportViewAsXLSX } from "../lib/exportCSV";
 import { useTips } from "@/contexts/TipsContext";
 import { useGeneralContributions } from "@/contexts/GeneralContributionsContext";
@@ -75,7 +65,6 @@ import type {
 } from "../types/airtable";
 import { Badge } from "@/components/shared/Badge";
 import { StatCard } from "@/components/shared/StatCard";
-import { INVESTMENT_TYPE_DESCRIPTIONS } from "@/config/investmentDescriptions";
 import { useProjectCounts } from "@/hooks/useProjectCounts";
 
 // Eagerly load NetworkGraph on client side to avoid lazy loading delay
@@ -154,6 +143,19 @@ const sortOrganizations = (
   return sortDirection === "asc" ? comparison : -comparison;
 };
 
+const EMPTY_MODAL_MAPS: ModalMapsDTO = {
+  projectNameMap: {},
+  projectIdToKeyMap: {},
+  projectDescriptionMap: {},
+  orgProjectsMap: {},
+  orgDonorCountriesMap: {},
+  orgDonorInfoMap: {},
+  orgAgenciesMap: {},
+  orgProjectDonorsMap: {},
+  orgProjectDonorAgenciesMap: {},
+  projectAgenciesMap: {},
+};
+
 interface CrisisDataDashboardProps {
   dashboardData: {
     stats: DashboardStats;
@@ -208,7 +210,6 @@ interface CrisisDataDashboardProps {
 const CrisisDataDashboard = ({
   dashboardData,
   loading,
-  error,
   combinedDonors,
   selectedAgencies,
   availableAgencies,
@@ -232,7 +233,6 @@ const CrisisDataDashboard = ({
   onCloseOrganizationModal,
   onCloseProjectModal,
   onCloseDonorModal,
-  onDonorClick,
   onTypeClick,
   onThemeClick,
   onViewChange,
@@ -300,7 +300,6 @@ const CrisisDataDashboard = ({
   const [shareSuccess, setShareSuccess] = useState(false);
   const [csvExportLoading, setCSVExportLoading] = useState(false);
   const [xlsxExportLoading, setXLSXExportLoading] = useState(false);
-  const [pdfExportLoading, setPDFExportLoading] = useState(false);
   const [exportMenuOpen, setExportMenuOpen] = useState(false);
   const [logoErrors, setLogoErrors] = useState<Set<string>>(new Set());
   const [expandedMobileStatCard, setExpandedMobileStatCard] = useState<
@@ -375,20 +374,7 @@ const CrisisDataDashboard = ({
   // Load nested data for modals
   const [nestedOrganizations, setNestedOrganizations] = useState<any[]>([]);
 
-  // Centralized data maps for modals (single state object instead of 10 individual useState hooks)
-  const emptyModalMaps: ModalMapsDTO = {
-    projectNameMap: {},
-    projectIdToKeyMap: {},
-    projectDescriptionMap: {},
-    orgProjectsMap: {},
-    orgDonorCountriesMap: {},
-    orgDonorInfoMap: {},
-    orgAgenciesMap: {},
-    orgProjectDonorsMap: {},
-    orgProjectDonorAgenciesMap: {},
-    projectAgenciesMap: {},
-  };
-  const [modalMaps, setModalMaps] = useState<ModalMapsDTO>(emptyModalMaps);
+  const [modalMaps, setModalMaps] = useState<ModalMapsDTO>(EMPTY_MODAL_MAPS);
 
   // Load modal maps and nested organization data from API
   useEffect(() => {
@@ -401,7 +387,7 @@ const CrisisDataDashboard = ({
 
         if (mapsResponse.ok) {
           const maps = await mapsResponse.json();
-          setModalMaps({ ...emptyModalMaps, ...maps });
+          setModalMaps({ ...EMPTY_MODAL_MAPS, ...maps });
         }
 
         if (nestedResponse.ok) {
@@ -585,54 +571,6 @@ const CrisisDataDashboard = ({
     }
   };
 
-  // Export to PDF functionality
-  const handleExportPDF = async () => {
-    try {
-      setPDFExportLoading(true);
-      await exportDashboardToPDF({
-        stats: {
-          dataProjects: stats.dataProjects,
-          dataProviders: stats.dataProviders,
-          donorCountries: stats.donorCountries,
-        },
-        projectTypes: projectTypes,
-        organizationTypes: organizationTypes,
-        organizationsWithProjects: organizationsWithProjects,
-        getFilterDescription: () => {
-          if (
-            combinedDonors.length === 0 &&
-            investmentTypes.length === 0 &&
-            !appliedSearchQuery
-          ) {
-            return "Showing all projects";
-          }
-          const parts: string[] = [];
-          if (combinedDonors.length > 0) {
-            parts.push(
-              `${combinedDonors.length} donor ${combinedDonors.length === 1 ? "donor" : "donors"}`,
-            );
-          }
-          if (investmentTypes.length > 0) {
-            parts.push(
-              `${investmentTypes.length} investment ${investmentTypes.length === 1 ? "type" : "types"}`,
-            );
-          }
-          if (appliedSearchQuery) {
-            parts.push(`search: "${appliedSearchQuery}"`);
-          }
-          return parts.length > 0
-            ? `Showing ${parts.join(", ")}`
-            : "Showing all projects";
-        },
-      });
-    } catch (error) {
-      console.error("Failed to export PDF:", error);
-      alert(labels.errors.exportPdfFailed);
-    } finally {
-      setPDFExportLoading(false);
-    }
-  };
-
   // Shared export options for CSV/XLSX
   const getExportOptions = () => ({
     searchQuery: appliedSearchQuery || undefined,
@@ -672,6 +610,16 @@ const CrisisDataDashboard = ({
     labels.errors.exportXlsxFailed,
   );
 
+  const sortedOrganizations = useMemo(
+    () =>
+      dashboardData
+        ? [...dashboardData.organizationsWithProjects].sort((a, b) =>
+            sortOrganizations(a, b, sortBy, sortDirection),
+          )
+        : [],
+    [dashboardData?.organizationsWithProjects, sortBy, sortDirection],
+  );
+
   // Loading state
   if (loading) {
     return (
@@ -694,7 +642,6 @@ const CrisisDataDashboard = ({
     organizationsWithProjects,
     allOrganizations,
     donorCountries: availableDonorCountries,
-    investmentTypes: availableInvestmentTypes,
     topDonors,
   } = dashboardData;
 
@@ -938,7 +885,7 @@ const CrisisDataDashboard = ({
         onExportXLSX={handleExportXLSX}
         csvExportLoading={csvExportLoading}
         xlsxExportLoading={xlsxExportLoading}
-        pdfExportLoading={pdfExportLoading}
+        pdfExportLoading={false}
         exportMenuOpen={exportMenuOpen}
         onExportMenuChange={setExportMenuOpen}
       />
@@ -1431,11 +1378,7 @@ const CrisisDataDashboard = ({
                 <CardContent className="px-4 pt-2 sm:px-6 sm:pt-0">
                   <TabsContent value="table" className="mt-0">
                     <div className="space-y-2 transition-all duration-500">
-                      {organizationsWithProjects
-                        .sort((a, b) =>
-                          sortOrganizations(a, b, sortBy, sortDirection),
-                        )
-                        .map((org) => {
+                      {sortedOrganizations.map((org) => {
                           const isExpanded = expandedOrgs.has(org.id);
                           const hasProjects = org.projects.length > 0;
 

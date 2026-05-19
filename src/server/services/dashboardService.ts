@@ -325,84 +325,47 @@ function applyFilters(
         return filters.donorAgencies!.some((a) => agenciesForDonor.includes(a));
       };
 
+      // Helper: project matches type/theme/agency filters (excludes search)
+      const projectMatchesTypeThemeAgency = (p: ProjectDTO): boolean => {
+        if (hasAgencyFilter && !projectMatchesAgencyFilter(p)) return false;
+        if (hasTypeFilter) {
+          if (
+            !p.investmentTypes.some((type) =>
+              filters.investmentTypes!.some(
+                (ft) =>
+                  type.toLowerCase().includes(ft.toLowerCase()) ||
+                  ft.toLowerCase().includes(type.toLowerCase()),
+              ),
+            )
+          )
+            return false;
+        }
+        if (hasThemeFilter) {
+          if (
+            !(
+              Array.isArray(p.investmentThemes) &&
+              p.investmentThemes.some((theme) =>
+                filters.investmentThemes!.some(
+                  (ft) =>
+                    typeof theme === "string" &&
+                    theme.toLowerCase().trim() === ft.toLowerCase().trim(),
+                ),
+              )
+            )
+          )
+            return false;
+        }
+        return true;
+      };
+
       // Step 2: Determine visible projects
       let visibleProjects: ProjectDTO[] = [];
 
       if (orgMeetsDonorRequirement) {
-        if (orgMatchesSearch) {
-          // Org matches search: show all projects (apply type/theme/agency)
+        if (orgMatchesSearch || !hasSearchFilter) {
           visibleProjects =
             hasTypeFilter || hasThemeFilter || hasAgencyFilter
-              ? org.projects.filter((p) => {
-                  if (hasAgencyFilter && !projectMatchesAgencyFilter(p))
-                    return false;
-                  if (hasTypeFilter) {
-                    if (
-                      !p.investmentTypes.some((type) =>
-                        filters.investmentTypes!.some(
-                          (ft) =>
-                            type.toLowerCase().includes(ft.toLowerCase()) ||
-                            ft.toLowerCase().includes(type.toLowerCase()),
-                        ),
-                      )
-                    )
-                      return false;
-                  }
-                  if (hasThemeFilter) {
-                    if (
-                      !(
-                        Array.isArray(p.investmentThemes) &&
-                        p.investmentThemes.some((theme) =>
-                          filters.investmentThemes!.some(
-                            (ft) =>
-                              typeof theme === "string" &&
-                              theme.toLowerCase().trim() ===
-                                ft.toLowerCase().trim(),
-                          ),
-                        )
-                      )
-                    )
-                      return false;
-                  }
-                  return true;
-                })
-              : [...org.projects];
-        } else if (!hasSearchFilter) {
-          visibleProjects =
-            hasTypeFilter || hasThemeFilter || hasAgencyFilter
-              ? org.projects.filter((p) => {
-                  if (hasAgencyFilter && !projectMatchesAgencyFilter(p))
-                    return false;
-                  if (hasTypeFilter) {
-                    if (
-                      !p.investmentTypes.some((type) =>
-                        filters.investmentTypes!.some(
-                          (ft) =>
-                            type.toLowerCase().includes(ft.toLowerCase()) ||
-                            ft.toLowerCase().includes(type.toLowerCase()),
-                        ),
-                      )
-                    )
-                      return false;
-                  }
-                  if (hasThemeFilter) {
-                    if (
-                      !(
-                        Array.isArray(p.investmentThemes) &&
-                        p.investmentThemes.some((theme) =>
-                          filters.investmentThemes!.some(
-                            (ft) =>
-                              typeof theme === "string" &&
-                              theme.toLowerCase().trim() ===
-                                ft.toLowerCase().trim(),
-                          ),
-                        )
-                      )
-                    )
-                      return false;
-                  }
-                  return true;
-                })
+              ? org.projects.filter(projectMatchesTypeThemeAgency)
               : [...org.projects];
         } else {
           visibleProjects = org.projects.filter(projectMatchesOtherFilters);

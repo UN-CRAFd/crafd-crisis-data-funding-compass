@@ -1,6 +1,12 @@
 "use client";
 
-import React, { createContext, useContext, useState, useEffect } from "react";
+import React, {
+  createContext,
+  useContext,
+  useState,
+  useEffect,
+  useMemo,
+} from "react";
 
 interface GeneralContributionsContextType {
   showGeneralContributions: boolean;
@@ -52,10 +58,13 @@ export const GeneralContributionsProvider: React.FC<{
     }
   }, [showGeneralContributions, isLoaded]);
 
+  const contextValue = useMemo(
+    () => ({ showGeneralContributions, setShowGeneralContributions }),
+    [showGeneralContributions],
+  );
+
   return (
-    <GeneralContributionsContext.Provider
-      value={{ showGeneralContributions, setShowGeneralContributions }}
-    >
+    <GeneralContributionsContext.Provider value={contextValue}>
       {children}
     </GeneralContributionsContext.Provider>
   );

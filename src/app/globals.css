@@ -753,7 +753,6 @@ body::-webkit-scrollbar {
   font-size: 1rem;
   text-transform: uppercase;
   letter-spacing: 0.03em;
-  transition: all 0.15s ease;
   cursor: pointer;
   border: none !important;
   outline: none !important;
@@ -779,7 +778,6 @@ body::-webkit-scrollbar {
   clip-path: polygon(12px 0, calc(100% - 12px) 0, 100% 100%, 0 100%);
   border-radius: 12px 12px 0 0;
   z-index: -1;
-  transition: background 0.15s ease;
 }
 
 .trapezoid-tab:hover {
@@ -902,7 +900,6 @@ body::-webkit-scrollbar {
   padding: 0rem 1.5rem;
   background: transparent;
   color: #64748b;
-  transition: all 0.15s ease;
   cursor: pointer;
   border: none !important;
   outline: none !important;
@@ -921,7 +918,6 @@ body::-webkit-scrollbar {
   background: #e2e8f0;
   clip-path: polygon(12px 0, calc(100% - 12px) 0, 100% 100%, 0 100%);
   z-index: -1;
-  transition: background 0.15s ease;
 }
 
 .trapezoid-settings:hover {
@@ -940,7 +936,6 @@ body::-webkit-scrollbar {
   padding: 0.625rem 2rem 0.625rem 1.5rem;
   background: transparent;
   color: #64748b;
-  transition: all 0.15s ease;
   min-height: 36px;
   display: flex;
   align-items: center;
@@ -957,7 +952,6 @@ body::-webkit-scrollbar {
   background: #e2e8f0;
   clip-path: polygon(12px 0, calc(100% - 12px) 0, 100% 100%, 0 100%);
   z-index: -1;
-  transition: background 0.15s ease;
 }
 
 .trapezoid-settings-container:hover {

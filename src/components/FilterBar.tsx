@@ -74,6 +74,9 @@ interface FilterBarProps {
   isFullscreen?: boolean;
 }
 
+const EMPTY_SET = new Set<string>();
+const EMPTY_THEMES_BY_TYPE: Record<string, string[]> = {};
+
 const FilterBar: React.FC<FilterBarProps> = ({
   searchQuery,
   appliedSearchQuery,
@@ -84,14 +87,14 @@ const FilterBar: React.FC<FilterBarProps> = ({
   onDonorsChange,
   selectedAgencies,
   availableAgencies,
-  agenciesWithFunding = new Set(),
+  agenciesWithFunding = EMPTY_SET,
   onAgenciesChange,
   investmentTypes,
   allKnownInvestmentTypes,
   onTypesChange,
   investmentThemes,
   allKnownInvestmentThemes,
-  investmentThemesByType = {},
+  investmentThemesByType = EMPTY_THEMES_BY_TYPE,
   onThemesChange,
   projectCountsByType = {},
   projectCountsByTheme = {},
@@ -162,28 +165,39 @@ const FilterBar: React.FC<FilterBarProps> = ({
   }, [agenciesWithoutUnspecified, agencySearchQuery, hasMultipleAgencies]);
 
   // Combine available donors with selected member states to ensure they remain visible
-  const allAvailableDonors = [
-    ...new Set([
-      ...availableDonorCountries,
-      ...combinedDonors.filter((donor) => memberStates.includes(donor)),
-    ]),
-  ];
+  const allAvailableDonors = useMemo(
+    () => [
+      ...new Set([
+        ...availableDonorCountries,
+        ...combinedDonors.filter((donor) => memberStates.includes(donor)),
+      ]),
+    ],
+    [availableDonorCountries, combinedDonors, memberStates],
+  );
 
   // Filter donors based on search query
-  const filteredAvailableDonors = allAvailableDonors.filter((donor) =>
-    donor.toLowerCase().includes(donorSearchQuery.toLowerCase()),
+  const filteredAvailableDonors = useMemo(
+    () =>
+      allAvailableDonors.filter((donor) =>
+        donor.toLowerCase().includes(donorSearchQuery.toLowerCase()),
+      ),
+    [allAvailableDonors, donorSearchQuery],
   );
 
   // Show member states only when searching and no results found in actual donors
   const shouldShowMemberStates =
     donorSearchQuery.trim().length > 0 && filteredAvailableDonors.length === 0;
-  const filteredMemberStates = shouldShowMemberStates
-    ? memberStates.filter(
-        (state) =>
-          state.toLowerCase().includes(donorSearchQuery.toLowerCase()) &&
-          !allAvailableDonors.includes(state),
-      )
-    : [];
+  const filteredMemberStates = useMemo(
+    () =>
+      shouldShowMemberStates
+        ? memberStates.filter(
+            (state) =>
+              state.toLowerCase().includes(donorSearchQuery.toLowerCase()) &&
+              !allAvailableDonors.includes(state),
+          )
+        : [],
+    [shouldShowMemberStates, memberStates, donorSearchQuery, allAvailableDonors],
+  );
 
   const allFilteredDonors = [
     ...filteredAvailableDonors,
