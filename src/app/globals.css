@@ -326,6 +326,10 @@
   background: #1e293b !important;
 }
 
+.dark .trapezoid-tab-white:hover {
+  color: #f1f5f9 !important;
+}
+
 .dark .trapezoid-tab-white:hover::before {
   background: #475569 !important;
 }
@@ -339,7 +343,7 @@
 }
 
 .dark .trapezoid-settings:hover {
-  color: #cbd5e1;
+  color: #f1f5f9;
 }
 
 .dark .trapezoid-settings:hover::before {
@@ -355,7 +359,7 @@
 }
 
 .dark .trapezoid-settings-container:hover {
-  color: #cbd5e1;
+  color: #f1f5f9;
 }
 
 .dark .trapezoid-settings-container:hover::before {
