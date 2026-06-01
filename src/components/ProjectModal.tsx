@@ -121,11 +121,30 @@ export default function ProjectModal({
       );
     }
 
+    // Display investment type icons
+    const iconElement =
+      project.investmentTypes && project.investmentTypes.length > 0 ? (
+        <div className="flex items-center gap-1.5">
+          {project.investmentTypes.map((type) => {
+            const IconComponent = getIconForInvestmentType(type);
+            return (
+              <div
+                key={type}
+                title={type}
+                className="flex items-center justify-center"
+              >
+                <IconComponent className="h-6 w-6 shrink-0 text-[#333333] sm:h-7 sm:w-7" />
+              </div>
+            );
+          })}
+        </div>
+      ) : (
+        <Package className="h-6 w-6 shrink-0 text-[#333333] sm:h-7 sm:w-7" />
+      );
+
     return (
       <ModalHeader
-        icon={
-          <Package className="h-6 w-6 shrink-0 text-[#333333] sm:h-7 sm:w-7" />
-        }
+        icon={iconElement}
         title={project.projectName}
         showCopied={showCopied}
         onShare={onShare}
