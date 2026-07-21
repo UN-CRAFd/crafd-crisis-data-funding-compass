@@ -216,7 +216,7 @@ export default function PageHeader({
                     disabled={
                       csvExportLoading || xlsxExportLoading || pdfExportLoading
                     }
-                    className="hidden rounded-md bg-transparent px-4 py-4 text-xs text-slate-700 transition hover:text-[var(--brand-primary)] focus:text-[var(--brand-primary)] dark:text-slate-300 dark:hover:text-[var(--brand-primary)] sm:flex sm:text-sm"
+                    className="rounded-md bg-transparent px-4 py-4 text-xs text-slate-700 transition hover:text-[var(--brand-primary)] focus:text-[var(--brand-primary)] dark:text-slate-300 dark:hover:text-[var(--brand-primary)] sm:flex sm:text-sm"
                     title="Export current view"
                   >
                     <FileDown className="h-4 w-4 sm:mr-2" />
