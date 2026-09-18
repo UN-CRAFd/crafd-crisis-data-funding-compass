@@ -956,15 +956,6 @@ const CrisisDataDashboard = ({
                       }
                 }
               >
-                {withChildren && (
-                  <ChartCard
-                    title={config.chartTitle}
-                    icon={config.icon}
-                    data={config.chartData}
-                    barColor="var(--brand-primary-lighter)"
-                    footnote={config.chartFootnote}
-                  />
-                )}
               </StatCard>
             );
 
