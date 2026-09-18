@@ -14,7 +14,6 @@ import DonorModal from "@/components/DonorModal";
 import DonorTable from "@/components/DonorTable";
 import { OrganizationBox } from "@/components/OrganizationBox";
 import { ProjectBox } from "@/components/ProjectBox";
-import SurveyBanner from "@/components/SurveyBanner";
 import { matchesUrlSlug } from "@/lib/urlShortcuts";
 import { Card, CardContent } from "@/components/ui/card";
 import { Collapsible, CollapsibleContent } from "@/components/ui/collapsible";
@@ -893,8 +892,6 @@ const CrisisDataDashboard = ({
       {/* Main Content - Add top padding to account for fixed header */}
       <div className="mx-auto max-w-[82rem] overflow-x-hidden px-4 py-4 pt-20 sm:px-6 sm:py-6 sm:pt-24 lg:px-8">
         <div className="space-y-4 sm:space-y-[var(--spacing-section)]">
-          {/* Survey Banner */}
-          <SurveyBanner />
 
           {/* Statistics Cards - Configuration-driven rendering */}
           {(() => {
