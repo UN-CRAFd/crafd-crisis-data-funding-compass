@@ -32,7 +32,6 @@ import {
   Users,
   Target,
   SearchCheck,
-  LayoutGrid,
   Columns,
   Radar as RadarIcon,
   AlertCircle,
@@ -122,13 +121,6 @@ const STYLES = {
   },
 } as const;
 
-const MATRIX_BUTTON_CLASS =
-  "px-3 py-1 text-xs font-medium rounded-md transition-colors flex items-center gap-1.5";
-
-const MATRIX_MODES = [
-  { value: "split", label: "Split Matrix", Icon: LayoutGrid },
-  { value: "unified", label: "Overview", Icon: Columns },
-] as const;
 
 export default function AnalyticsPage() {
   const router = useRouter();
@@ -154,7 +146,7 @@ export default function AnalyticsPage() {
     donor2: string;
   } | null>(null);
   const [hoveredDonor, setHoveredDonor] = useState<string | null>(null);
-  const [matrixViewMode, setMatrixViewMode] = useState<"unified" | "split">(
+  const [matrixViewMode] = useState<"unified" | "split">(
     "split",
   );
 
@@ -1948,26 +1940,6 @@ export default function AnalyticsPage() {
                     title="Which donors are collaborating on Data Investment?"
                   />
                 </CardTitle>
-                <div className="flex items-center gap-2">
-                  {MATRIX_MODES.map(({ value, label, Icon }) => {
-                    const active = matrixViewMode === value;
-
-                    return (
-                      <Button
-                        key={value}
-                        onClick={() => setMatrixViewMode(value)}
-                        className={`${MATRIX_BUTTON_CLASS} ${
-                          active
-                            ? "bg-slate-200 text-slate-700 dark:bg-slate-600 dark:text-slate-100"
-                            : "bg-slate-100 text-slate-600 hover:bg-slate-200 dark:bg-slate-700 dark:text-slate-300 dark:hover:bg-slate-600"
-                        }`}
-                      >
-                        <Icon className="h-3 w-3" />
-                        {label}
-                      </Button>
-                    );
-                  })}
-                </div>
               </div>
             </CardHeader>
             <CardContent className="pt-4">
