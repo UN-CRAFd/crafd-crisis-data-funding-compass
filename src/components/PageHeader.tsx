@@ -18,7 +18,6 @@ import {
   ChevronDown,
   FileDown,
   Info,
-  MessageCircle,
   Share2,
   Menu,
   Lightbulb,
@@ -185,23 +184,6 @@ export default function PageHeader({
           </div>
           <div className="flex flex-shrink-0 gap-1 sm:gap-2">
             {/* Tips moved into Settings (see navigation menu) */}
-            <Button
-              variant="ghost"
-              size="sm"
-              onClick={() =>
-                window.open(
-                  "https://airtable.com/apprObB2AsvMwfAAl/pagcre1SPjT0nJxa4/form",
-                  "_blank",
-                )
-              }
-              className="rounded-md bg-transparent px-4 py-4 text-xs text-slate-700 transition hover:text-[var(--brand-primary)] focus:text-[var(--brand-primary)] active:text-[var(--brand-primary)] dark:text-slate-300 dark:hover:text-[var(--brand-primary)] sm:text-sm"
-              title={labels.header.feedbackTooltip}
-            >
-              <MessageCircle className="h-4 w-4 sm:mr-2" />
-              <span className="hidden sm:inline">
-                {labels.header.feedbackButton}
-              </span>
-            </Button>
             {pathname === "/" && (
               <div className="hidden h-8 w-px bg-slate-200 dark:bg-slate-700 sm:block"></div>
             )}
