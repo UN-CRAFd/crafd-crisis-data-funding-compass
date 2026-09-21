@@ -197,7 +197,6 @@ const MEMBER_STATES: string[] = [
   "United Arab Emirates",
   "United Kingdom",
   "United Republic of Tanzania",
-  "Unknown",
   "Uruguay",
   "USA",
   "Uzbekistan",
