@@ -491,6 +491,7 @@ const CrisisDataDashboardWrapper = () => {
   );
 
   const handleResetFilters = useCallback(() => {
+    setLocalSearchQuery("");
     updateFilterParams({
       donors: [],
       agencies: [],
