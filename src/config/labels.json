@@ -1,6 +1,6 @@
 {
   "header": {
-    "title": "CRISIS DATA",
+    "title": "Crisis Data",
     "subtitle": "Funding Compass",
     "betaBadge": "Beta Version",
     "betaTooltip": "This website is based on publicly available information. Updates are ongoing. If you have any feedback, please use the form in the upper right corner.",
@@ -183,7 +183,7 @@
   },
   "methodology": {
     "title": "Methodology",
-    "subtitle": "Understand how our data was collected and how to use it best for your research",
+    "subtitle": "How the data was collected and classified, and where its limits are.",
     "tabs": {
       "collection": "Collection",
       "classification": "Classification",

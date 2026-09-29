@@ -1,54 +1,30 @@
 "use client";
 
-import { useState, useEffect } from "react";
+import { Roboto } from "next/font/google";
+import { useState } from "react";
+
+// Loaded only for the header wordmark — weights 300 (light) and 700 (bold).
+const headerFont = Roboto({
+  subsets: ["latin"],
+  weight: ["300", "700"],
+  display: "swap",
+});
 import { Button } from "@/components/ui/button";
-import {
-  TooltipContent,
-  TooltipProvider,
-  Tooltip as TooltipUI,
-  TooltipTrigger,
-} from "@/components/ui/tooltip";
 import {
   DropdownMenu,
   DropdownMenuContent,
   DropdownMenuItem,
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
-import {
-  Info,
-  Menu,
-  BookOpen,
-  Compass,
-} from "lucide-react";
+import { Menu, BookOpen, Compass } from "lucide-react";
 import labels from "@/config/labels.json";
 import Link from "next/link";
 import { usePathname, useRouter } from "next/navigation";
 
-const STYLES = {
-  chartTooltip: {
-    backgroundColor: "var(--tooltip-bg)",
-    color: "var(--chart-text-color)",
-    border: "1px solid var(--tooltip-border)",
-    borderRadius: "8px",
-    padding: "12px",
-  },
-};
-
 export default function PageHeader() {
   const pathname = usePathname();
   const router = useRouter();
-  const [lastUpdated, setLastUpdated] = useState<string | null>(null);
   const [isCompassRotating, setIsCompassRotating] = useState(false);
-
-  // Fetch last updated date from API
-  useEffect(() => {
-    fetch("/api/last-updated")
-      .then((res) => res.json())
-      .then((data) => setLastUpdated(data.lastUpdated))
-      .catch((error) => {
-        console.error("Failed to fetch last updated date:", error);
-      });
-  }, []);
 
   const handleCompassClick = () => {
     setIsCompassRotating(true);
@@ -72,38 +48,15 @@ export default function PageHeader() {
                   }`}
                 />
               </button>
-              <h1 className="flex min-w-0 flex-col items-start gap-0 text-base text-slate-800 dark:text-white sm:text-xl lg:flex-row lg:items-center lg:gap-2 lg:text-3xl">
-                <span className="qanelas-title whitespace-nowrap">
+              <h1 className={`${headerFont.className} flex min-w-0 flex-col items-start gap-0 text-base text-black sm:text-xl lg:flex-row lg:items-center lg:gap-2 lg:text-3xl`}>
+                <span className="whitespace-nowrap font-bold">
                   {labels.header.title}
                 </span>
-                <span className="font-roboto whitespace-nowrap">
+                <span className="whitespace-nowrap font-light">
                   {labels.header.subtitle}
                 </span>
               </h1>
             </div>
-            <TooltipProvider>
-              <TooltipUI>
-                <TooltipTrigger asChild>
-                  <Info className="h-4 w-4 cursor-help text-slate-400 transition-colors hover:text-slate-600 dark:text-slate-500 dark:hover:text-slate-300" />
-                </TooltipTrigger>
-                <TooltipContent
-                  side="bottom"
-                  align="center"
-                  className="max-w-115 rounded-lg border border-slate-200 bg-white p-1 text-xs text-slate-800 dark:border-slate-600 dark:bg-slate-800 dark:text-slate-200"
-                  sideOffset={6}
-                  avoidCollisions={true}
-                  style={{ ...STYLES.chartTooltip }}
-                >
-                  <p className="leading-relaxed">{labels.header.betaTooltip}</p>
-                  {lastUpdated && (
-                    <p className="mt-2 border-t border-slate-200 pt-2 text-slate-600 dark:border-slate-700 dark:text-slate-400">
-                      Last updated:{" "}
-                      <span className="font-semibold">{lastUpdated}</span>
-                    </p>
-                  )}
-                </TooltipContent>
-              </TooltipUI>
-            </TooltipProvider>
           </div>
           <div className="flex flex-shrink-0 items-center gap-1 sm:gap-2">
             {/* Inline nav links — visible on desktop */}

@@ -213,7 +213,7 @@ const CrisisDataDashboardWrapper = () => {
   // Sort params
   const sortBy = useMemo(() => {
     const raw = searchParams.get("sb") ?? searchParams.get("sortBy");
-    if (raw === "donors" || raw === "assets" || raw === "funding") return raw;
+    if (raw === "donors" || raw === "assets" || raw === "funding" || raw === "overlap") return raw;
     return "name" as const;
   }, [searchParams]);
 
@@ -223,12 +223,15 @@ const CrisisDataDashboardWrapper = () => {
     return "desc" as const;
   }, [searchParams]);
 
-  // Read initial tab from URL (?tab=donors) — evaluated once on mount
-  const [activeView, setActiveView] = useState<"table" | "donors">(() => {
-    if (typeof window === "undefined") return "table";
-    const raw = new URLSearchParams(window.location.search).get("tab");
-    return raw === "donors" ? "donors" : "table";
-  });
+  // True when the user has explicitly set a sort field in the URL
+  const isSortExplicit = useMemo(
+    () => searchParams.has("sb") || searchParams.has("sortBy"),
+    [searchParams],
+  );
+
+  // Derive active tab from URL — works on SSR and after client-side navigation
+  const activeView: "table" | "donors" =
+    searchParams.get("tab") === "donors" ? "donors" : "table";
   const [localSearchQuery, setLocalSearchQuery] = useState(searchQuery);
 
   const lastFetchedFiltersRef = useRef<string>("");
@@ -252,15 +255,16 @@ const CrisisDataDashboardWrapper = () => {
       types?: string[];
       themes?: string[];
       search?: string;
-      sortBy?: "name" | "donors" | "assets" | "funding";
+      sortBy?: "name" | "donors" | "assets" | "funding" | "overlap";
       sortDirection?: "asc" | "desc";
     }) => {
       const newSearchParams = new URLSearchParams();
 
-      // Always preserve current modal params
+      // Always preserve current modal params and active tab
       if (modalParams.org) newSearchParams.set("org", modalParams.org);
       if (modalParams.asset) newSearchParams.set("asset", modalParams.asset);
       if (modalParams.donor) newSearchParams.set("donor", modalParams.donor);
+      if (activeView === "donors") newSearchParams.set("tab", "donors");
 
       // Set filter params
       if (params.donors !== undefined && params.donors.length > 0) {
@@ -333,7 +337,9 @@ const CrisisDataDashboardWrapper = () => {
       }
 
       const finalSortBy = params.sortBy ?? sortBy;
-      if (finalSortBy !== "name") {
+      // Write sb only when the user explicitly changed sort, or it was already in the URL.
+      // Never add sb on donor/filter changes — that would override the overlap default.
+      if (params.sortBy !== undefined || isSortExplicit) {
         newSearchParams.set("sb", finalSortBy);
       }
 
@@ -348,6 +354,7 @@ const CrisisDataDashboardWrapper = () => {
     },
     [
       modalParams,
+      activeView,
       combinedDonors,
       selectedAgencies,
       investmentTypes,
@@ -355,6 +362,7 @@ const CrisisDataDashboardWrapper = () => {
       searchQuery,
       sortBy,
       sortDirection,
+      isSortExplicit,
       pathname,
       router,
     ],
@@ -495,13 +503,14 @@ const CrisisDataDashboardWrapper = () => {
 
   const handleResetFilters = useCallback(() => {
     setLocalSearchQuery("");
-    // Hard replace to the bare pathname — no filter params at all.
-    // This is reliable: a page refresh of the clean URL starts with zero filters.
-    router.replace(pathname, { scroll: false });
-  }, [pathname, router]);
+    // Preserve the active tab so "Clear all" on the Donors tab stays on Donors.
+    const url =
+      activeView === "donors" ? `${pathname}?tab=donors` : pathname;
+    router.replace(url, { scroll: false });
+  }, [activeView, pathname, router]);
 
   const handleSortChange = (
-    newSortBy: "name" | "donors" | "assets" | "funding",
+    newSortBy: "name" | "donors" | "assets" | "funding" | "overlap",
     newSortDirection: "asc" | "desc",
   ) => {
     updateFilterParams({ sortBy: newSortBy, sortDirection: newSortDirection });
@@ -584,9 +593,12 @@ const CrisisDataDashboardWrapper = () => {
 
   const handleViewChange = useCallback(
     (view: "table" | "donors") => {
-      setActiveView(view);
+      const newParams = new URLSearchParams(searchParams.toString());
+      if (view === "donors") newParams.set("tab", "donors");
+      else newParams.delete("tab");
+      router.replace(`${pathname}?${newParams.toString()}`, { scroll: false });
     },
-    [],
+    [searchParams, pathname, router],
   );
 
   return (
@@ -606,6 +618,7 @@ const CrisisDataDashboardWrapper = () => {
       selectedDonorCountry={modalParams.donor}
       sortBy={sortBy}
       sortDirection={sortDirection}
+      isSortExplicit={isSortExplicit}
       onDonorsChange={handleDonorsChange}
       onAgenciesChange={handleAgenciesChange}
       onTypesChange={handleTypesChange}
@@ -623,6 +636,7 @@ const CrisisDataDashboardWrapper = () => {
       onDonorClick={handleDonorClick}
       onTypeClick={handleTypeClick}
       onThemeClick={handleThemeClick}
+      activeView={activeView}
       onViewChange={handleViewChange}
     />
   );

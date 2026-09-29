@@ -34,7 +34,7 @@ interface DonorTableProps {
   onOpenProjectModal: (projectKey: string) => void;
   onOpenDonorModal?: (donorCountry: string) => void;
   combinedDonors: string[];
-  sortBy: "name" | "orgs" | "assets";
+  sortBy: "name" | "orgs" | "assets" | "overlap";
   sortDirection: "asc" | "desc";
 }
 
@@ -381,6 +381,14 @@ const DonorTableComponent: React.FC<DonorTableProps> = ({
           comparison = a.totalOrgs - b.totalOrgs;
         } else if (sortBy === "assets") {
           comparison = a.totalProjects - b.totalProjects;
+        } else if (sortBy === "overlap") {
+          // Sort by shared org count; ties always A→Z regardless of sort direction
+          const orgDiff = a.totalOrgs - b.totalOrgs;
+          if (orgDiff !== 0) {
+            comparison = orgDiff;
+          } else {
+            return a.donor.localeCompare(b.donor);
+          }
         }
 
         // Apply sort direction
@@ -391,13 +399,24 @@ const DonorTableComponent: React.FC<DonorTableProps> = ({
   return (
     <div className="space-y-2 transition-all duration-500">
       {donorData.map(
-        ({ donor, organizations, totalOrgs, totalProjects, totalAgencies }) => {
+        ({ donor, organizations, totalOrgs, totalProjects, totalAgencies }, idx) => {
           const isDonorExpanded = expandedDonors.has(donor);
           const isSelected = combinedDonors.includes(donor);
+          // Show "Other donors" subheading at the transition from selected → non-selected
+          const showSubheading =
+            combinedDonors.length > 0 &&
+            !isSelected &&
+            idx > 0 &&
+            combinedDonors.includes(donorData[idx - 1].donor);
 
           return (
+            <React.Fragment key={donor}>
+              {showSubheading && (
+                <p className="mt-3 mb-1 text-xs font-medium text-slate-500 dark:text-slate-400">
+                  Other donors funding the same organizations
+                </p>
+              )}
             <Collapsible
-              key={donor}
               open={isDonorExpanded}
               onOpenChange={() => {
                 const newExpanded = new Set(expandedDonors);
@@ -434,7 +453,7 @@ const DonorTableComponent: React.FC<DonorTableProps> = ({
                     </div>
                     <div className="mt-0 mb-0 min-w-0 flex-1 space-y-0 text-left">
                       <h3
-                        className={`cursor-pointer text-sm font-medium transition-colors hover:text-[var(--brand-primary)] sm:text-base ${
+                        className={`flex cursor-pointer items-center gap-1.5 text-sm font-medium transition-colors hover:text-[var(--brand-primary)] sm:text-base ${
                           isSelected
                             ? "text-[var(--brand-primary)]"
                             : "text-slate-900"
@@ -447,6 +466,17 @@ const DonorTableComponent: React.FC<DonorTableProps> = ({
                         }}
                       >
                         {donor}
+                        {isSelected && (
+                          <span
+                            className="inline-flex items-center rounded-full px-1.5 py-0.5 text-[10px] font-semibold"
+                            style={{
+                              backgroundColor: "var(--brand-bg-light)",
+                              color: "var(--brand-primary)",
+                            }}
+                          >
+                            Selected
+                          </span>
+                        )}
                       </h3>
                       <div className="mt-0 text-xs text-slate-500 sm:text-sm">
                         {totalAgencies} donor agenc
@@ -714,6 +744,7 @@ const DonorTableComponent: React.FC<DonorTableProps> = ({
                 </div>
               </CollapsibleContent>
             </Collapsible>
+            </React.Fragment>
           );
         },
       )}

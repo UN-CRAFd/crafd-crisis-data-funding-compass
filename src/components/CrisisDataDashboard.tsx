@@ -107,7 +107,7 @@ const formatDonorList = (donors: string[]): string => {
 const sortOrganizations = (
   a: OrganizationWithProjects,
   b: OrganizationWithProjects,
-  sortBy: "name" | "donors" | "assets" | "funding",
+  sortBy: "name" | "donors" | "assets" | "funding" | "overlap",
   sortDirection: "asc" | "desc",
 ): number => {
   let comparison = 0;
@@ -123,6 +123,10 @@ const sortOrganizations = (
       break;
     case "funding":
       comparison = (a.estimatedBudget || 0) - (b.estimatedBudget || 0);
+      break;
+    case "overlap":
+      // overlap not used in org sort; fall back to name
+      comparison = b.organizationName.localeCompare(a.organizationName);
       break;
   }
   return sortDirection === "asc" ? comparison : -comparison;
@@ -166,8 +170,9 @@ interface CrisisDataDashboardProps {
   appliedSearchQuery: string; // Applied search query (from URL)
   selectedOrgKey: string; // Organization key from URL
   selectedProjectKey: string; // Asset key from URL
-  sortBy: "name" | "donors" | "assets" | "funding"; // Sort field from URL
+  sortBy: "name" | "donors" | "assets" | "funding" | "overlap"; // Sort field from URL
   sortDirection: "asc" | "desc"; // Sort direction from URL
+  isSortExplicit?: boolean; // True when sb param is present in URL (user made an explicit choice)
   onDonorsChange: (values: string[]) => void;
   onAgenciesChange: (values: string[]) => void;
   onTypesChange: (values: string[]) => void;
@@ -176,7 +181,7 @@ interface CrisisDataDashboardProps {
   onSearchSubmit: () => void;
   onResetFilters: () => void;
   onSortChange: (
-    sortBy: "name" | "donors" | "assets" | "funding",
+    sortBy: "name" | "donors" | "assets" | "funding" | "overlap",
     sortDirection: "asc" | "desc",
   ) => void;
   onOpenOrganizationModal: (orgKey: string) => void;
@@ -190,6 +195,7 @@ interface CrisisDataDashboardProps {
   onTypeClick?: (type: string) => void;
   onThemeClick?: (theme: string) => void;
   onViewChange?: (view: "table" | "donors") => void;
+  activeView?: "table" | "donors";
 }
 
 const CrisisDataDashboard = ({
@@ -221,8 +227,10 @@ const CrisisDataDashboard = ({
   onTypeClick,
   onThemeClick,
   onViewChange,
+  activeView: activeViewProp,
   sortBy,
   sortDirection,
+  isSortExplicit = false,
   onSortChange,
 }: CrisisDataDashboardProps) => {
   // Get tips enabled state with fallback for SSR
@@ -257,7 +265,15 @@ const CrisisDataDashboard = ({
     new Set(),
   );
   const [sortMenuOpen, setSortMenuOpen] = useState(false);
-  const [activeView, setActiveView] = useState<"table" | "donors">("table"); // Add view state
+  const [activeView, setActiveView] = useState<"table" | "donors">(activeViewProp ?? "table");
+
+  // When donors are selected and the user hasn't explicitly chosen a sort, default to "Most overlap"
+  const effectiveSortBy = useMemo(() => {
+    if (activeView === "donors" && combinedDonors.length > 0 && !isSortExplicit) {
+      return "overlap" as const;
+    }
+    return sortBy;
+  }, [activeView, combinedDonors.length, isSortExplicit, sortBy]);
 
   // Enforce table-only on small screens (mobile).
   useEffect(() => {
@@ -271,13 +287,9 @@ const CrisisDataDashboard = ({
     return () => window.removeEventListener("resize", handleResize);
   }, []);
 
-  useEffect(() => {
-    onViewChange?.(activeView);
-  }, [activeView, onViewChange]);
 
-  // Full reset: URL + component state (active tab, expanded rows)
+  // Full reset: URL + component state (expanded rows). Tab is preserved — driven by URL.
   const handleClearAll = useCallback(() => {
-    setActiveView("table");
     setExpandedOrgs(new Set());
     setExpandedCountries(new Set());
     onResetFilters();
@@ -668,63 +680,83 @@ const CrisisDataDashboard = ({
       // Calculate other donors (current donors minus the selected ones)
       const otherDonorsCount = currentDonors.size - combinedDonors.length;
 
+      const orgCount = stats.dataProviders;
+      const projectCount = stats.dataProjects;
+      const orgLabel = orgCount !== 1 ? "organizations" : "organization";
+      const productLabel =
+        projectCount !== 1 ? labels.product.plural : labels.product.singular;
+
       if (otherDonorsCount > 0) {
-        const otherDonorLabel =
-          otherDonorsCount !== 1
-            ? labels.filterDescription.donors
-            : labels.filterDescription.donor;
-        const verb = combinedDonors.length === 1 ? "co-finances" : "co-finance";
-        elements.push(
-          <React.Fragment key="donors">
-            <strong>{donorString}</strong>
-            {agencyString && (
-              <>
-                , through the <strong>{agencyString}</strong>
-              </>
-            )}
-            , together with <strong>{otherDonorsCount}</strong> other{" "}
-            {otherDonorLabel}, {verb}
-          </React.Fragment>,
-        );
+        const otherDonorLabel = otherDonorsCount !== 1 ? "donors" : "donor";
+        if (combinedDonors.length === 1) {
+          elements.push(
+            <React.Fragment key="donors">
+              <strong>{donorString}</strong>
+              {agencyString && (
+                <> (through <strong>{agencyString}</strong>)</>
+              )}{" "}
+              funds <strong>{orgCount}</strong> {orgLabel} (
+              <strong>{projectCount}</strong> {productLabel}).{" "}
+              <strong>{otherDonorsCount}</strong> other {otherDonorLabel} also
+              fund at least one of them.
+            </React.Fragment>,
+          );
+        } else {
+          elements.push(
+            <React.Fragment key="donors">
+              The selected donors fund <strong>{orgCount}</strong> {orgLabel} (
+              <strong>{projectCount}</strong> {productLabel}).{" "}
+              <strong>{otherDonorsCount}</strong> other {otherDonorLabel} also
+              fund at least one of them.
+            </React.Fragment>,
+          );
+        }
       } else {
-        const verb = combinedDonors.length === 1 ? "funds" : "co-finance";
-        elements.push(
-          <React.Fragment key="donors">
-            <strong>{donorString}</strong>
-            {agencyString && (
-              <>
-                , through the <strong>{agencyString}</strong>
-              </>
-            )}{" "}
-            {verb}
-          </React.Fragment>,
-        );
+        if (combinedDonors.length === 1) {
+          elements.push(
+            <React.Fragment key="donors">
+              <strong>{donorString}</strong>
+              {agencyString && (
+                <> (through <strong>{agencyString}</strong>)</>
+              )}{" "}
+              funds <strong>{orgCount}</strong> {orgLabel} (
+              <strong>{projectCount}</strong> {productLabel}).
+            </React.Fragment>,
+          );
+        } else {
+          elements.push(
+            <React.Fragment key="donors">
+              The selected donors fund <strong>{orgCount}</strong> {orgLabel} (
+              <strong>{projectCount}</strong> {productLabel}).
+            </React.Fragment>,
+          );
+        }
       }
     } else {
       elements.push("Showing");
+
+      // Add organization count (donor fragment includes stats when donors are active)
+      const organizationLabel =
+        stats.dataProviders !== 1 ? "organizations" : "organization";
+      elements.push(
+        <React.Fragment key="orgs">
+          {" "}
+          <strong>{stats.dataProviders}</strong> {organizationLabel}, providing
+        </React.Fragment>,
+      );
+
+      // Add project count
+      const projectLabel =
+        stats.dataProjects !== 1
+          ? labels.product.plural
+          : labels.product.singular;
+      elements.push(
+        <React.Fragment key="projects">
+          {" "}
+          <strong>{stats.dataProjects}</strong> {projectLabel}
+        </React.Fragment>,
+      );
     }
-
-    // Add organization count
-    const organizationLabel =
-      stats.dataProviders !== 1 ? "organizations" : "organization";
-    elements.push(
-      <React.Fragment key="orgs">
-        {elements.length > 0 ? " " : ""}
-        <strong>{stats.dataProviders}</strong> {organizationLabel}, providing
-      </React.Fragment>,
-    );
-
-    // Add project count
-    const projectLabel =
-      stats.dataProjects !== 1
-        ? labels.product.plural
-        : labels.product.singular;
-    elements.push(
-      <React.Fragment key="projects">
-        {" "}
-        <strong>{stats.dataProjects}</strong> {projectLabel}
-      </React.Fragment>,
-    );
 
     // Add investment types
     if (investmentTypes.length > 0) {
@@ -789,9 +821,11 @@ const CrisisDataDashboard = ({
             {/* View Tabs - Outside Card */}
             <Tabs
               value={activeView}
-              onValueChange={(v) =>
-                setActiveView(v as "table" | "donors")
-              }
+              onValueChange={(v) => {
+                const view = v as "table" | "donors";
+                setActiveView(view);
+                onViewChange?.(view);
+              }}
               className="-mb-px flex w-full flex-col gap-0"
             >
               {/* Tab List with Controls - Unified */}
@@ -890,15 +924,17 @@ const CrisisDataDashboard = ({
                             <button className="flex items-center gap-0 border-none bg-transparent p-0 transition-opacity hover:opacity-70">
                               {/* Sort Field Text */}
                               <span className="font-roboto ml-2 text-sm font-semibold">
-                                {sortBy === "name"
-                                  ? "Alphabetically"
-                                  : sortBy === "donors"
-                                    ? activeView === "donors"
-                                      ? "Organizations"
-                                      : "Donors"
-                                    : sortBy === "assets"
-                                      ? labels.product.capitalizedPlural
-                                      : "Funding"}
+                                {effectiveSortBy === "overlap"
+                                  ? "Most overlap"
+                                  : effectiveSortBy === "name"
+                                    ? "Alphabetically"
+                                    : effectiveSortBy === "donors"
+                                      ? activeView === "donors"
+                                        ? "Organizations"
+                                        : "Donors"
+                                      : effectiveSortBy === "assets"
+                                        ? labels.product.capitalizedPlural
+                                        : "Funding"}
                               </span>
 
                               {/* Dropdown Chevron */}
@@ -949,6 +985,16 @@ const CrisisDataDashboard = ({
                                 className="cursor-pointer py-1 text-[14px]"
                               >
                                 Funding
+                              </DropdownMenuItem>
+                            )}
+                            {activeView === "donors" && (
+                              <DropdownMenuItem
+                                onClick={() =>
+                                  onSortChange("overlap", sortDirection)
+                                }
+                                className="cursor-pointer py-1 text-[14px]"
+                              >
+                                Most overlap
                               </DropdownMenuItem>
                             )}
                           </DropdownMenuContent>
@@ -1310,11 +1356,11 @@ const CrisisDataDashboard = ({
                       onOpenDonorModal={onOpenDonorModal}
                       combinedDonors={combinedDonors}
                       sortBy={
-                        sortBy === "funding"
+                        effectiveSortBy === "funding"
                           ? "assets"
-                          : sortBy === "donors"
+                          : effectiveSortBy === "donors"
                             ? "orgs"
-                            : sortBy
+                            : (effectiveSortBy as "name" | "orgs" | "assets" | "overlap")
                       }
                       sortDirection={sortDirection}
                     />
