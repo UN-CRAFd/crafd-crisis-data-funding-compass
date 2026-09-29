@@ -15,27 +15,14 @@ import {
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
 import {
-  ChevronDown,
-  FileDown,
   Info,
-  Share2,
   Menu,
-  Lightbulb,
-  Home,
-  BarChart3,
   BookOpen,
-  Landmark,
-  UserRoundPlus,
-  LayoutDashboard,
   Compass,
 } from "lucide-react";
-import { ThemeToggle } from "@/components/ThemeToggle";
-import { useTips } from "@/contexts/TipsContext";
-import { useGeneralContributions } from "@/contexts/GeneralContributionsContext";
-import { setGeneralContributionsEnabled } from "@/lib/data";
 import labels from "@/config/labels.json";
 import Link from "next/link";
-import { usePathname, useRouter, useSearchParams } from "next/navigation";
+import { usePathname, useRouter } from "next/navigation";
 
 const STYLES = {
   chartTooltip: {
@@ -47,32 +34,9 @@ const STYLES = {
   },
 };
 
-interface PageHeaderProps {
-  onShare?: () => void;
-  shareSuccess?: boolean;
-  onExportCSV?: () => void;
-  onExportXLSX?: () => void;
-  csvExportLoading?: boolean;
-  xlsxExportLoading?: boolean;
-  pdfExportLoading?: boolean;
-  exportMenuOpen?: boolean;
-  onExportMenuChange?: (open: boolean) => void;
-}
-
-export default function PageHeader({
-  onShare,
-  shareSuccess = false,
-  onExportCSV,
-  onExportXLSX,
-  csvExportLoading = false,
-  xlsxExportLoading = false,
-  pdfExportLoading = false,
-  exportMenuOpen = false,
-  onExportMenuChange,
-}: PageHeaderProps) {
+export default function PageHeader() {
   const pathname = usePathname();
   const router = useRouter();
-  const searchParams = useSearchParams();
   const [lastUpdated, setLastUpdated] = useState<string | null>(null);
   const [isCompassRotating, setIsCompassRotating] = useState(false);
 
@@ -88,48 +52,7 @@ export default function PageHeader({
 
   const handleCompassClick = () => {
     setIsCompassRotating(true);
-    // Reset the animation after 1 second so it can be triggered again
-    setTimeout(() => {
-      setIsCompassRotating(false);
-    }, 1000);
-  };
-
-  // Safely use useTips with fallback defaults
-  let tipsEnabled = false;
-  let setTipsEnabled: (enabled: boolean) => void = () => {};
-  try {
-    const tipsContext = useTips();
-    tipsEnabled = tipsContext.tipsEnabled;
-    setTipsEnabled = tipsContext.setTipsEnabled;
-  } catch (e) {
-    // TipsProvider not available (e.g., during prerendering)
-    // Use default values
-  }
-
-  // Use General Contributions context - will render without provider as fallback
-  let showGeneralContributions = true;
-  let setShowGeneralContributionsLocal: (enabled: boolean) => void = () => {};
-
-  try {
-    const genContContext = useGeneralContributions();
-    showGeneralContributions = genContContext.showGeneralContributions;
-    setShowGeneralContributionsLocal =
-      genContContext.setShowGeneralContributions;
-  } catch (e) {
-    // GeneralContributionsProvider not available - use defaults
-  }
-
-  const handleGeneralContributionsToggle = () => {
-    const newValue = !showGeneralContributions;
-    setShowGeneralContributionsLocal(newValue);
-    setGeneralContributionsEnabled(newValue);
-    // Refresh current route so views update without full page reload
-    try {
-      router.refresh();
-    } catch (e) {
-      // Fallback: full reload if router.refresh isn't available
-      window.location.reload();
-    }
+    setTimeout(() => setIsCompassRotating(false), 1000);
   };
 
   return (
@@ -182,201 +105,65 @@ export default function PageHeader({
               </TooltipUI>
             </TooltipProvider>
           </div>
-          <div className="flex flex-shrink-0 gap-1 sm:gap-2">
-            {/* Tips moved into Settings (see navigation menu) */}
-            {pathname === "/" && (
-              <div className="hidden h-8 w-px bg-slate-200 dark:bg-slate-700 sm:block"></div>
-            )}
-
-            {/* Export Dropdown - only show on dashboard */}
-            {pathname === "/" && onExportCSV && onExportXLSX && (
-              <DropdownMenu onOpenChange={onExportMenuChange}>
-                <DropdownMenuTrigger asChild>
-                  <Button
-                    variant="ghost"
-                    size="sm"
-                    disabled={
-                      csvExportLoading || xlsxExportLoading || pdfExportLoading
-                    }
-                    className="rounded-md bg-transparent px-4 py-4 text-xs text-slate-700 transition hover:text-[var(--brand-primary)] focus:text-[var(--brand-primary)] dark:text-slate-300 dark:hover:text-[var(--brand-primary)] sm:flex sm:text-sm"
-                    title="Export current view"
+          <div className="flex flex-shrink-0 items-center gap-1 sm:gap-2">
+            {/* Inline nav links — visible on desktop */}
+            <nav className="hidden items-center gap-0.5 sm:flex">
+              {[
+                { href: "/", label: "Home" },
+                { href: "/explore", label: "Explore" },
+                { href: "/insights", label: "Insights" },
+              ].map(({ href, label }) => {
+                const isActive =
+                  pathname === href ||
+                  (href === "/explore" && pathname.startsWith("/explore")) ||
+                  (href === "/insights" && pathname.startsWith("/insights"));
+                return (
+                  <Link
+                    key={href}
+                    href={href}
+                    className={`rounded-md px-3 py-1.5 text-sm transition-colors ${
+                      isActive
+                        ? "font-semibold text-[var(--brand-primary)]"
+                        : "text-slate-600 hover:text-[var(--brand-primary)] dark:text-slate-300 dark:hover:text-[var(--brand-primary)]"
+                    }`}
                   >
-                    <FileDown className="h-4 w-4 sm:mr-2" />
-                    <span className="hidden sm:inline">
-                      {csvExportLoading
-                        ? labels.header.exportingCsv
-                        : xlsxExportLoading
-                          ? labels.header.exportingXlsx
-                          : pdfExportLoading
-                            ? labels.header.exportingPdf
-                            : labels.header.exportView}
-                    </span>
-                    <ChevronDown
-                      className={`ml-1.5 h-4 w-4 shrink-0 transform opacity-50 transition-transform ${
-                        exportMenuOpen ? "rotate-180" : ""
-                      }`}
-                    />
-                  </Button>
-                </DropdownMenuTrigger>
-                <DropdownMenuContent
-                  align="end"
-                  side="bottom"
-                  sideOffset={4}
-                  className="w-auto min-w-[200px] border border-slate-200 bg-white shadow-lg dark:border-slate-600 dark:bg-slate-800"
-                >
-                  <DropdownMenuItem
-                    onClick={onExportCSV}
-                    disabled={
-                      csvExportLoading || xlsxExportLoading || pdfExportLoading
-                    }
-                    className="cursor-pointer py-2 text-[11px]"
-                  >
-                    <FileDown className="mr-2 h-3 w-3" />
-                    {labels.header.exportMenuCsv}
-                  </DropdownMenuItem>
-                  <DropdownMenuItem
-                    onClick={onExportXLSX}
-                    disabled={
-                      csvExportLoading || xlsxExportLoading || pdfExportLoading
-                    }
-                    className="cursor-pointer py-2 text-[11px]"
-                  >
-                    <FileDown className="mr-2 h-3 w-3" />
-                    {labels.header.exportMenuXlsx}
-                  </DropdownMenuItem>
-                </DropdownMenuContent>
-              </DropdownMenu>
-            )}
-            <div className="hidden h-8 w-px bg-slate-200 dark:bg-slate-700 sm:block"></div>
-            {/* Share Button */}
-            {onShare && (
-              <Button
-                variant="ghost"
-                size="sm"
-                onClick={onShare}
-                className={`rounded-md px-4 py-4 text-xs transition-all duration-200 sm:text-sm ${
-                  shareSuccess
-                    ? "bg-[#10b981] text-white hover:bg-[#059669] hover:text-white"
-                    : "bg-transparent text-slate-700 hover:text-[var(--brand-primary)] dark:text-slate-300 dark:hover:text-[var(--brand-primary)]"
-                }`}
-                title={labels.ui.copyToClipboard}
-              >
-                <Share2 className="h-4 w-4 sm:mr-2" />
-                <span className="hidden sm:inline">
-                  {shareSuccess
-                    ? labels.header.shareButtonSuccess
-                    : labels.header.shareButton}
-                </span>
-              </Button>
-            )}
+                    {label}
+                  </Link>
+                );
+              })}
+            </nav>
 
-            {/* Vertical line separator */}
-            <div className="hidden h-8 w-px bg-slate-200 dark:bg-slate-700 sm:block"></div>
+            <div className="hidden h-8 w-px bg-slate-200 dark:bg-slate-700 sm:block" />
 
-            {/* Dark mode toggle */}
-            <ThemeToggle />
-
-            {/* Vertical line separator */}
-            <div className="hidden h-8 w-px bg-slate-200 dark:bg-slate-700 sm:block"></div>
-
-            {/* Page Navigation Menu - Rightmost */}
+            {/* Menu — Methodology only */}
             <DropdownMenu>
               <DropdownMenuTrigger asChild>
                 <Button
                   variant="ghost"
                   size="sm"
-                  className="rounded-md bg-transparent px-4 py-4 text-xs text-slate-700 transition hover:text-[var(--brand-primary)] dark:text-slate-300 dark:hover:text-[var(--brand-primary)] sm:text-sm"
-                  title="Navigation"
+                  className="rounded-md bg-transparent px-3 py-4 text-xs text-slate-700 transition hover:text-[var(--brand-primary)] dark:text-slate-300 dark:hover:text-[var(--brand-primary)] sm:text-sm"
+                  title="More"
                 >
-                  <Menu className="h-6 w-6" />
+                  <Menu className="h-5 w-5" />
                 </Button>
               </DropdownMenuTrigger>
               <DropdownMenuContent
                 align="end"
                 side="bottom"
                 sideOffset={4}
-                className="w-auto min-w-[180px] border border-slate-200 bg-white shadow-lg dark:border-slate-600 dark:bg-slate-800"
+                className="w-auto min-w-[160px] border border-slate-200 bg-white shadow-lg dark:border-slate-600 dark:bg-slate-800"
               >
                 <DropdownMenuItem
-                  onClick={() => {
-                    const raw = searchParams?.toString() || "";
-                    const params = new URLSearchParams(raw);
-
-                    // Ensure dashboard uses short keys expected by the dashboard wrapper
-                    // Map long keys to short ones if present
-                    if (params.has("types") && !params.has("t")) {
-                      params.set("t", params.get("types") || "");
-                      params.delete("types");
-                    }
-                    if (params.has("themes") && !params.has("th")) {
-                      params.set("th", params.get("themes") || "");
-                      params.delete("themes");
-                    }
-                    if (params.has("q") && !params.has("search")) {
-                      params.set("search", params.get("q") || "");
-                    }
-
-                    const target = params.toString()
-                      ? `/?${params.toString()}`
-                      : "/";
-                    router.push(target);
-                  }}
-                  className={`cursor-pointer px-2 py-2 text-sm ${pathname === "/" ? "bg-slate-100 dark:bg-slate-700" : ""}`}
-                >
-                  <div className="flex items-center">
-                    <LayoutDashboard className="mr-2 h-3 w-3 text-slate-600 dark:text-slate-400" />
-                    <span className={pathname === "/" ? "!font-bold" : ""}>
-                      {labels.header.dashboard}
-                    </span>
-                  </div>
-                </DropdownMenuItem>
-                <DropdownMenuItem
-                  onClick={() => {
-                    const raw = searchParams?.toString() || "";
-                    const params = new URLSearchParams(raw);
-
-                    // Analytics expects 'types' and 'themes' and 'q'
-                    if (params.has("t") && !params.has("types")) {
-                      params.set("types", params.get("t") || "");
-                      // keep 't' for backwards compatibility
-                    }
-                    if (params.has("th") && !params.has("themes")) {
-                      params.set("themes", params.get("th") || "");
-                      // keep 'th' as well
-                    }
-                    if (params.has("search") && !params.has("q")) {
-                      params.set("q", params.get("search") || "");
-                    }
-
-                    const target = params.toString()
-                      ? `/analytics?${params.toString()}`
-                      : "/analytics";
-                    router.push(target);
-                  }}
-                  className={`cursor-pointer px-2 py-2 text-sm ${pathname === "/analytics" || pathname === "/analytics/" ? "bg-slate-100 dark:bg-slate-700" : ""}`}
-                >
-                  <div className="flex items-center">
-                    <BarChart3 className="mr-2 h-3 w-3 text-slate-600 dark:text-slate-400" />
-                    <span
-                      className={
-                        pathname === "/analytics" || pathname === "/analytics/"
-                          ? "!font-bold"
-                          : ""
-                      }
-                    >
-                      Analytics
-                    </span>
-                  </div>
-                </DropdownMenuItem>
-                <DropdownMenuItem
                   onClick={() => router.push("/methodology/")}
-                  className={`cursor-pointer px-2 py-2 text-sm ${pathname === "/methodology/" ? "bg-slate-100 dark:bg-slate-700" : ""}`}
+                  className={`cursor-pointer px-2 py-2 text-sm ${pathname === "/methodology/" || pathname === "/methodology" ? "bg-slate-100 dark:bg-slate-700" : ""}`}
                 >
                   <div className="flex items-center">
                     <BookOpen className="mr-2 h-3 w-3 text-slate-600 dark:text-slate-400" />
                     <span
                       className={
-                        pathname === "/methodology/" ? "!font-bold" : ""
+                        pathname === "/methodology/" || pathname === "/methodology"
+                          ? "!font-bold"
+                          : ""
                       }
                     >
                       {labels.header.methodology}

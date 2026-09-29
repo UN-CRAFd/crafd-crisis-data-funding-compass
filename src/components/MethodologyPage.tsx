@@ -506,29 +506,19 @@ export default function MethodologyPage({
 
   return (
     <div className="min-h-screen bg-slate-50 dark:bg-slate-950">
-      <PageHeader onShare={handleShare} shareSuccess={shareSuccess} />
+      <PageHeader />
 
       {/* Main Content */}
       <div className="mx-auto max-w-[82rem] px-4 py-0 pt-20 sm:px-6 sm:py-0 sm:pt-24 lg:px-8">
           <div className="space-y-6">
-            {/* Hero Section */}
-            <div className="relative overflow-hidden rounded-xl border border-[var(--brand-primary-light)]/40 bg-gradient-to-br from-[var(--brand-bg-lighter)] to-[var(--brand-bg-light)] p-6 sm:p-8">
-              <div className="relative z-10">
-                <div className="mb-4 flex items-center gap-3">
-                  <BookOpen
-                    className="h-8 w-8"
-                    style={{ color: "var(--brand-primary)" }}
-                  />
-                  <h1
-                    className="font-qanelas-subtitle text-3xl font-bold text-slate-900 dark:text-white sm:text-4xl"
-                  >
-                    {labels.methodology.title}
-                  </h1>
-                </div>
-                <p className="max-w-3xl text-base leading-relaxed text-slate-700 dark:text-slate-300 sm:text-lg">
-                  {labels.methodology.subtitle}
-                </p>
-              </div>
+            {/* Page title */}
+            <div>
+              <h1 className="text-2xl font-bold text-slate-900 dark:text-white sm:text-3xl">
+                {labels.methodology.title}
+              </h1>
+              <p className="mt-1 text-sm text-slate-500 dark:text-slate-400">
+                {labels.methodology.subtitle}
+              </p>
             </div>
 
             {/* Wiki Layout */}

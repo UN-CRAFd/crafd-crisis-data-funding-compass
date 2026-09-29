@@ -100,6 +100,14 @@ const GRAPH_NODE_COLORS = {
   projectStroke: "#4d479c",
 };
 
+// Stable empty defaults — module-level so default-param references never change across renders.
+// This prevents useMemo/useEffect deps from seeing new references on every render when a
+// prop is omitted (e.g. orgAgenciesMap lives in graphData's dep array).
+const _EMPTY_STR_ARR: string[] = [];
+const _EMPTY_AGENCIES_MAP: Record<string, Record<string, string[]>> = {};
+const _EMPTY_THEMES_BY_TYPE: Record<string, string[]> = {};
+const _NOOP = () => {};
+
 const NetworkGraph: React.FC<NetworkGraphProps> = ({
   organizationsWithProjects,
   allOrganizations,
@@ -111,24 +119,24 @@ const NetworkGraph: React.FC<NetworkGraphProps> = ({
   // Filter props
   searchQuery = "",
   appliedSearchQuery = "",
-  onSearchChange = () => {},
-  onSearchSubmit = () => {},
-  combinedDonors = [],
-  availableDonorCountries = [],
-  onDonorsChange = () => {},
-  investmentTypes = [],
-  allKnownInvestmentTypes = [],
-  onTypesChange = () => {},
-  investmentThemes = [],
-  allKnownInvestmentThemes = [],
-  investmentThemesByType = {},
-  onThemesChange = () => {},
-  onResetFilters = () => {},
+  onSearchChange = _NOOP,
+  onSearchSubmit = _NOOP,
+  combinedDonors = _EMPTY_STR_ARR,
+  availableDonorCountries = _EMPTY_STR_ARR,
+  onDonorsChange = _NOOP,
+  investmentTypes = _EMPTY_STR_ARR,
+  allKnownInvestmentTypes = _EMPTY_STR_ARR,
+  onTypesChange = _NOOP,
+  investmentThemes = _EMPTY_STR_ARR,
+  allKnownInvestmentThemes = _EMPTY_STR_ARR,
+  investmentThemesByType = _EMPTY_THEMES_BY_TYPE,
+  onThemesChange = _NOOP,
+  onResetFilters = _NOOP,
   filterDescription,
-  orgAgenciesMap = {},
-  selectedAgencies = [],
+  orgAgenciesMap = _EMPTY_AGENCIES_MAP,
+  selectedAgencies = _EMPTY_STR_ARR,
   availableAgencies,
-  onAgenciesChange = () => {},
+  onAgenciesChange = _NOOP,
 }) => {
   const graphRef = useRef<any>(null);
   const [dimensions, setDimensions] = useState({ width: 800, height: 600 });

@@ -1689,7 +1689,7 @@ export default function AnalyticsPage() {
 
   return (
     <div className="min-h-screen bg-slate-50 dark:bg-slate-950">
-      <PageHeader onShare={handleShare} shareSuccess={shareSuccess} />
+      <PageHeader />
 
       {/* Main Content */}
       <div className="mx-auto max-w-[82rem] px-4 py-0 pt-20 sm:px-6 sm:py-0 sm:pt-24 lg:px-8">

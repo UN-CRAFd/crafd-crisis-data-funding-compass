@@ -2,7 +2,6 @@
 
 import React, { useEffect, useMemo, useState, useCallback } from "react";
 // Image import removed because it's not used in this file
-import ChartCard from "@/components/ChartCard";
 import FilterBar from "@/components/FilterBar";
 import NoResultsPopup from "@/components/NoResultsPopup";
 import PageHeader from "@/components/PageHeader";
@@ -36,10 +35,10 @@ import {
   Building2,
   ChevronDown,
   Database,
+  FileDown,
   Globe,
   ArrowUpWideNarrow,
   ArrowDownWideNarrow,
-  Network,
   Settings,
   Lightbulb,
   Landmark,
@@ -47,7 +46,6 @@ import {
   Compass,
 } from "lucide-react";
 import {
-  calculateOrganizationTypesFromOrganizationsWithProjects,
   setGeneralContributionsEnabled,
 } from "../lib/data";
 import { exportViewAsCSV, exportViewAsXLSX } from "../lib/exportCSV";
@@ -62,14 +60,9 @@ import type {
   ProjectData,
   ProjectTypeData,
 } from "../types/airtable";
-import { Badge } from "@/components/shared/Badge";
-import { StatCard } from "@/components/shared/StatCard";
 import { useProjectCounts } from "@/hooks/useProjectCounts";
 
-// Eagerly load NetworkGraph on client side to avoid lazy loading delay
-const NetworkGraph = dynamic(() => import("@/components/NetworkGraph"), {
-  ssr: false,
-});
+// NetworkGraph moved to /insights — no longer imported here
 
 const TABS = [
   {
@@ -83,13 +76,6 @@ const TABS = [
     label: "Donors",
     Icon: Globe,
     tooltip: "View funding by donor countries and organizations",
-  },
-  {
-    value: "network",
-    label: "Network Analysis",
-    Icon: Network,
-    tooltip:
-      "Visualize relationships between organizations, projects, and donors",
   },
 ] as const;
 
@@ -203,7 +189,7 @@ interface CrisisDataDashboardProps {
   onDonorClick?: (country: string) => void;
   onTypeClick?: (type: string) => void;
   onThemeClick?: (theme: string) => void;
-  onViewChange?: (view: "table" | "network" | "donors") => void;
+  onViewChange?: (view: "table" | "donors") => void;
 }
 
 const CrisisDataDashboard = ({
@@ -271,39 +257,37 @@ const CrisisDataDashboard = ({
     new Set(),
   );
   const [sortMenuOpen, setSortMenuOpen] = useState(false);
-  const [activeView, setActiveView] = useState<"table" | "network" | "donors">(
-    "table",
-  ); // Add view state
+  const [activeView, setActiveView] = useState<"table" | "donors">("table"); // Add view state
 
-  // Enforce table-only on small screens (mobile). Hide view switcher on mobile via responsive classes.
+  // Enforce table-only on small screens (mobile).
   useEffect(() => {
     const handleResize = () => {
       if (typeof window !== "undefined" && window.innerWidth < 640) {
         setActiveView("table");
       }
     };
-
     handleResize();
     window.addEventListener("resize", handleResize);
     return () => window.removeEventListener("resize", handleResize);
   }, []);
 
-  // Notify parent when view changes
   useEffect(() => {
-    if (onViewChange) {
-      onViewChange(activeView);
-    }
+    onViewChange?.(activeView);
   }, [activeView, onViewChange]);
 
+  // Full reset: URL + component state (active tab, expanded rows)
+  const handleClearAll = useCallback(() => {
+    setActiveView("table");
+    setExpandedOrgs(new Set());
+    setExpandedCountries(new Set());
+    onResetFilters();
+  }, [onResetFilters]);
+
   // Modal and UI states
-  const [shareSuccess, setShareSuccess] = useState(false);
   const [csvExportLoading, setCSVExportLoading] = useState(false);
   const [xlsxExportLoading, setXLSXExportLoading] = useState(false);
   const [exportMenuOpen, setExportMenuOpen] = useState(false);
   const [logoErrors, setLogoErrors] = useState<Set<string>>(new Set());
-  const [expandedMobileStatCard, setExpandedMobileStatCard] = useState<
-    number | null
-  >(null);
 
   // Memoized callback for logo errors to prevent recreation on each render
   const handleLogoError = useCallback((orgId: string) => {
@@ -549,27 +533,6 @@ const CrisisDataDashboard = ({
     } as OrganizationWithProjects;
   }, [selectedOrgKey, nestedOrganizations, dashboardData?.allOrganizations]);
 
-  // Share functionality
-  const handleShare = async () => {
-    try {
-      const currentUrl = window.location.href;
-      await navigator.clipboard.writeText(currentUrl);
-      setShareSuccess(true);
-      setTimeout(() => setShareSuccess(false), 2000); // Reset after 2 seconds
-    } catch (err) {
-      console.error("Failed to copy to clipboard:", err);
-      // Fallback for browsers that don't support clipboard API
-      const textArea = document.createElement("textarea");
-      textArea.value = window.location.href;
-      document.body.appendChild(textArea);
-      textArea.select();
-      document.execCommand("copy");
-      document.body.removeChild(textArea);
-      setShareSuccess(true);
-      setTimeout(() => setShareSuccess(false), 2000);
-    }
-  };
-
   // Shared export options for CSV/XLSX
   const getExportOptions = () => ({
     searchQuery: appliedSearchQuery || undefined,
@@ -637,75 +600,13 @@ const CrisisDataDashboard = ({
   // Extract data for use in component
   const {
     stats,
-    projectTypes,
     organizationsWithProjects,
     allOrganizations,
     donorCountries: availableDonorCountries,
-    topDonors,
   } = dashboardData;
-
-  // Add a 6th bar to the co-financing donor chart for 'n other donors'
-  let donorChartData = topDonors;
-  if (availableDonorCountries && topDonors && topDonors.length > 0) {
-    const shownDonors = topDonors.map((d) => d.name);
-    const otherDonors = availableDonorCountries.filter(
-      (donor) => !shownDonors.includes(donor),
-    );
-    donorChartData = [
-      ...topDonors,
-      {
-        name: `+ ${otherDonors.length} other donor${otherDonors.length === 1 ? "" : "s"}`,
-        value: 0,
-      },
-    ];
-  }
 
   // Always show all investment types in the type filter
   const allKnownInvestmentTypes = Object.values(labels.investmentTypes);
-  // Get all types from the pre-generated organizations-with-types.json dictionary
-  // and combine with any types inferred from the current organizations list.
-  // Get all organization types from organizations-table.json and organizationsWithProjects
-  const typesFromTable = Array.from(
-    new Set(
-      organizationsTable
-        .map((rec) => {
-          const orgType = rec.fields["Org Type"];
-          if (typeof orgType === "string") {
-            return orgType.trim();
-          } else if (Array.isArray(orgType) && orgType.length > 0) {
-            // Handle array case - take first element if it's a string
-            return typeof orgType[0] === "string"
-              ? orgType[0].trim()
-              : undefined;
-          }
-          return undefined;
-        })
-        .filter((v): v is string => typeof v === "string" && v.length > 0),
-    ),
-  );
-  const inferredTypes = Array.from(
-    new Set(organizationsWithProjects.map((org) => org.type).filter(Boolean)),
-  );
-  const allOrgTypes = Array.from(
-    new Set([...typesFromTable, ...inferredTypes]),
-  );
-
-  // Calculate organization types using both organizationsWithProjects and organizationsTable
-  const organizationTypes: OrganizationTypeData[] =
-    calculateOrganizationTypesFromOrganizationsWithProjects(
-      organizationsWithProjects,
-      allOrgTypes,
-    );
-
-  // Convert data for ChartCard components (they expect 'value' instead of 'count')
-  const organizationTypesChartData = organizationTypes.map((item) => ({
-    name: item.name,
-    value: item.count,
-  }));
-  const projectTypesChartData = projectTypes.map((item) => ({
-    name: item.name,
-    value: item.count,
-  }));
 
   // Generate dynamic filter description for Organizations & Projects section
   const getFilterDescription = () => {
@@ -877,132 +778,11 @@ const CrisisDataDashboard = ({
   return (
     <div className="min-h-screen bg-slate-100 dark:bg-slate-950">
       {/* Header Section - Fixed */}
-      <PageHeader
-        onShare={handleShare}
-        shareSuccess={shareSuccess}
-        onExportCSV={handleExportCSV}
-        onExportXLSX={handleExportXLSX}
-        csvExportLoading={csvExportLoading}
-        xlsxExportLoading={xlsxExportLoading}
-        pdfExportLoading={false}
-        exportMenuOpen={exportMenuOpen}
-        onExportMenuChange={setExportMenuOpen}
-      />
+      <PageHeader />
 
       {/* Main Content - Add top padding to account for fixed header */}
       <div className="mx-auto max-w-[82rem] overflow-x-hidden px-4 py-4 pt-20 sm:px-6 sm:py-6 sm:pt-24 lg:px-8">
         <div className="space-y-4 sm:space-y-[var(--spacing-section)]">
-
-          {/* Statistics Cards - Configuration-driven rendering */}
-          {(() => {
-            const donorChartFootnote =
-              combinedDonors.length > 0
-                ? `Showing ${topDonors.length} donor${topDonors.length === 1 ? "" : "s"} co-financing the most organizations together with ${formatDonorList(combinedDonors)}`
-                : `Showing ${topDonors.length} donor${topDonors.length === 1 ? "" : "s"} funding the most organizations in the current view`;
-
-            const statCardsConfig = [
-              {
-                icon: <Building2 style={{ color: "var(--brand-primary)" }} />,
-                title: labels.stats.dataProviders.title,
-                value: stats.dataProviders,
-                label: labels.stats.dataProviders.label,
-                tooltip: labels.stats.dataProviders.tooltip,
-                chartTitle: labels.sections.organizationTypes,
-                chartData: organizationTypesChartData,
-                mobileWidth: "w-[290px]",
-              },
-              {
-                icon: <Globe style={{ color: "var(--brand-primary)" }} />,
-                title: labels.stats.donorCountries.title,
-                value: stats.donorCountries,
-                label: labels.stats.donorCountries.label,
-                tooltip: labels.stats.donorCountries.tooltip,
-                chartTitle: labels.sections.donorCount,
-                chartData: donorChartData,
-                chartFootnote: donorChartFootnote,
-                mobileWidth: "w-[280px]",
-              },
-              {
-                icon: <Database style={{ color: "var(--brand-primary)" }} />,
-                title: labels.stats.dataProjects.title,
-                value: stats.dataProjects,
-                label: labels.stats.dataProjects.label,
-                tooltip: labels.stats.dataProjects.tooltip,
-                chartTitle: labels.sections.projectCategories,
-                chartData: projectTypesChartData,
-                chartFootnote: labels.ui.chartFootnote,
-                mobileWidth: "w-[280px]",
-              },
-            ];
-
-            const renderStatCard = (
-              config: (typeof statCardsConfig)[0],
-              key: number,
-              withChildren: boolean = true,
-            ) => (
-              <StatCard
-                key={key}
-                icon={config.icon}
-                title={config.title}
-                value={config.value}
-                label={config.label}
-                colorScheme="amber"
-                tooltip={config.tooltip}
-                onExpandChange={
-                  withChildren
-                    ? undefined
-                    : (expanded) => {
-                        setExpandedMobileStatCard(expanded ? key : null);
-                      }
-                }
-              >
-              </StatCard>
-            );
-
-            const expandedCardConfig =
-              expandedMobileStatCard !== null
-                ? statCardsConfig[expandedMobileStatCard]
-                : null;
-
-            return (
-              <>
-                {/* Mobile Carousel */}
-                <div className="sm:hidden">
-                  <div className="relative overflow-x-hidden">
-                    <div className="scrollbar-hide flex snap-x snap-mandatory gap-4 overflow-x-auto px-1 pb-2">
-                      {statCardsConfig.map((config, idx) => (
-                        <div
-                          key={idx}
-                          className={`${config.mobileWidth} flex-shrink-0 snap-center`}
-                        >
-                          {renderStatCard(config, idx, false)}
-                        </div>
-                      ))}
-                    </div>
-                  </div>
-                  {/* Expanded chart below carousel */}
-                  {expandedCardConfig && (
-                    <div className="mt-4">
-                      <ChartCard
-                        title={expandedCardConfig.chartTitle}
-                        icon={expandedCardConfig.icon}
-                        data={expandedCardConfig.chartData}
-                        barColor="var(--brand-primary-lighter)"
-                        footnote={expandedCardConfig.chartFootnote}
-                      />
-                    </div>
-                  )}
-                </div>
-
-                {/* Desktop Grid */}
-                <div className="hidden gap-4 sm:grid sm:grid-cols-2 sm:gap-[var(--spacing-section)] lg:grid-cols-3">
-                  {statCardsConfig.map((config, idx) =>
-                    renderStatCard(config, idx, true),
-                  )}
-                </div>
-              </>
-            );
-          })()}
 
           {/* Main Layout - Full Width */}
           <div>
@@ -1010,7 +790,7 @@ const CrisisDataDashboard = ({
             <Tabs
               value={activeView}
               onValueChange={(v) =>
-                setActiveView(v as "table" | "donors" | "network")
+                setActiveView(v as "table" | "donors")
               }
               className="-mb-px flex w-full flex-col gap-0"
             >
@@ -1023,7 +803,7 @@ const CrisisDataDashboard = ({
                       <div
                         key={value}
                         className={
-                          value === "network" || value === "donors"
+                          value === "donors"
                             ? "hidden sm:block"
                             : ""
                         }
@@ -1355,11 +1135,54 @@ const CrisisDataDashboard = ({
                     allKnownInvestmentThemes={allKnownInvestmentThemes}
                     investmentThemesByType={investmentThemesByType}
                     onThemesChange={onThemesChange}
-                    onResetFilters={onResetFilters}
+                    onResetFilters={handleClearAll}
                     projectCountsByType={projectCountsByType}
                     projectCountsByTheme={projectCountsByTheme}
                     filterDescription={getFilterDescription()}
                     className="-mb-6 sm:-mb-7"
+                    rightActions={
+                      <DropdownMenu onOpenChange={setExportMenuOpen}>
+                        <DropdownMenuTrigger asChild>
+                          <button
+                            disabled={csvExportLoading || xlsxExportLoading}
+                            className="inline-flex items-center gap-1.5 rounded-md px-3 py-1.5 text-xs font-medium text-slate-600 transition-colors hover:bg-slate-100 hover:text-slate-800 disabled:opacity-50 dark:text-slate-400 dark:hover:bg-slate-700 dark:hover:text-slate-200"
+                          >
+                            <FileDown className="h-3.5 w-3.5" />
+                            {csvExportLoading
+                              ? labels.header.exportingCsv
+                              : xlsxExportLoading
+                                ? labels.header.exportingXlsx
+                                : labels.header.exportView}
+                            <ChevronDown
+                              className={`h-3 w-3 opacity-50 transition-transform ${exportMenuOpen ? "rotate-180" : ""}`}
+                            />
+                          </button>
+                        </DropdownMenuTrigger>
+                        <DropdownMenuContent
+                          align="end"
+                          side="bottom"
+                          sideOffset={4}
+                          className="w-auto min-w-[180px] border border-slate-200 bg-white shadow-lg dark:border-slate-600 dark:bg-slate-800"
+                        >
+                          <DropdownMenuItem
+                            onClick={handleExportCSV}
+                            disabled={csvExportLoading || xlsxExportLoading}
+                            className="cursor-pointer py-2 text-[11px]"
+                          >
+                            <FileDown className="mr-2 h-3 w-3" />
+                            {labels.header.exportMenuCsv}
+                          </DropdownMenuItem>
+                          <DropdownMenuItem
+                            onClick={handleExportXLSX}
+                            disabled={csvExportLoading || xlsxExportLoading}
+                            className="cursor-pointer py-2 text-[11px]"
+                          >
+                            <FileDown className="mr-2 h-3 w-3" />
+                            {labels.header.exportMenuXlsx}
+                          </DropdownMenuItem>
+                        </DropdownMenuContent>
+                      </DropdownMenu>
+                    }
                   />
                 </CardContent>
                 {/* Tab Content Views */}
@@ -1418,149 +1241,23 @@ const CrisisDataDashboard = ({
                                       : labels.product.plural
                                   }
                                 >
-                                  {(() => {
-                                    const isCountriesExpanded =
-                                      expandedCountries.has(org.id);
-                                    const donorInfo = org.donorInfo || [];
-
-                                    // Sort donors: selected + org-level first, then others
-                                    const sortedDonors = [...donorInfo].sort(
-                                      (a, b) => {
-                                        const aIsSelected =
-                                          combinedDonors.includes(a.country);
-                                        const bIsSelected =
-                                          combinedDonors.includes(b.country);
-
-                                        if (aIsSelected && !bIsSelected)
-                                          return -1;
-                                        if (!aIsSelected && bIsSelected)
-                                          return 1;
-
-                                        if (a.isOrgLevel && !b.isOrgLevel)
-                                          return -1;
-                                        if (!a.isOrgLevel && b.isOrgLevel)
-                                          return 1;
-
-                                        return a.country.localeCompare(
-                                          b.country,
-                                        );
-                                      },
-                                    );
-
-                                    // Dynamic country limit based on available space
-                                    const calculateCollapsedLimit = () => {
-                                      const maxCharsMobile = 50;
-                                      const maxCharsDesktop = 100;
-                                      const maxChars =
-                                        window.innerWidth < 640
-                                          ? maxCharsMobile
-                                          : maxCharsDesktop;
-
-                                      let totalChars = 0;
-                                      const countriesToShow = [];
-
-                                      for (const donor of sortedDonors) {
-                                        const estimatedSize =
-                                          donor.country.length + 8;
-
-                                        if (
-                                          totalChars + estimatedSize <=
-                                          maxChars
-                                        ) {
-                                          countriesToShow.push(donor);
-                                          totalChars += estimatedSize;
-                                        } else {
-                                          break;
-                                        }
-                                      }
-
-                                      return countriesToShow.length === 0
-                                        ? 1
-                                        : Math.min(countriesToShow.length, 5);
-                                    };
-
-                                    const maxCountriesToShowCollapsed =
-                                      calculateCollapsedLimit();
-                                    const donorsToShow = isCountriesExpanded
-                                      ? sortedDonors
-                                      : sortedDonors.slice(
-                                          0,
-                                          maxCountriesToShowCollapsed,
-                                        );
-
-                                    return (
-                                      <>
-                                        {donorsToShow.map(
-                                          (donor, idx: number) => {
-                                            return (
-                                              <Badge
-                                                key={idx}
-                                                text={donor.country}
-                                                variant={
-                                                  combinedDonors.includes(
-                                                    donor.country,
-                                                  )
-                                                    ? "blue"
-                                                    : "slate"
-                                                }
-                                                className={
-                                                  donor.isOrgLevel
-                                                    ? ""
-                                                    : "opacity-50"
-                                                }
-                                                title={
-                                                  donor.isOrgLevel
-                                                    ? `${donor.country} (Organization Donor)`
-                                                    : `${donor.country} (Project-Only Donor)`
-                                                }
-                                              />
-                                            );
-                                          },
-                                        )}
-                                        {sortedDonors.length >
-                                          maxCountriesToShowCollapsed &&
-                                          !isCountriesExpanded && (
-                                            <div
-                                              onClick={(e) => {
-                                                e.stopPropagation();
-                                                const newExpanded = new Set(
-                                                  expandedCountries,
-                                                );
-                                                newExpanded.add(org.id);
-                                                setExpandedCountries(
-                                                  newExpanded,
-                                                );
-                                              }}
-                                              className="bg-slate-000 inline-flex cursor-pointer items-center rounded-md px-2 py-1 text-xs font-medium text-slate-900 transition-colors hover:bg-slate-100"
-                                            >
-                                              +
-                                              {sortedDonors.length -
-                                                maxCountriesToShowCollapsed}{" "}
-                                              {labels.filters.showMore}
-                                            </div>
-                                          )}
-                                        {isCountriesExpanded &&
-                                          sortedDonors.length >
-                                            maxCountriesToShowCollapsed && (
-                                            <div
-                                              onClick={(e) => {
-                                                e.stopPropagation();
-                                                const newExpanded = new Set(
-                                                  expandedCountries,
-                                                );
-                                                newExpanded.delete(org.id);
-                                                setExpandedCountries(
-                                                  newExpanded,
-                                                );
-                                              }}
-                                              className="bg-slate-000 inline-flex cursor-pointer items-center rounded-md px-2 py-1 text-xs font-medium text-slate-900 transition-colors hover:bg-slate-100"
-                                            >
-                                              {labels.filters.showLess}
-                                            </div>
-                                          )}
-                                      </>
-                                    );
-                                  })()}
+                                  {/* Donor summary — replaces per-donor chips */}
+                                  <span className="text-xs text-slate-500 dark:text-slate-400">
+                                    Funded by{" "}
+                                    <strong className="text-slate-700 dark:text-slate-300">
+                                      {org.donorCountries.length}
+                                    </strong>{" "}
+                                    {org.donorCountries.length === 1
+                                      ? "donor"
+                                      : "donors"}{" "}
+                                    ·{" "}
+                                    <strong className="text-slate-700 dark:text-slate-300">
+                                      {org.projects.length}
+                                    </strong>{" "}
+                                    {org.projects.length === 1
+                                      ? labels.product.singular
+                                      : labels.product.plural}
+                                  </span>
                                 </OrganizationBox>
                               </div>
                               <CollapsibleContent>
@@ -1627,36 +1324,7 @@ const CrisisDataDashboard = ({
                       )}
                   </TabsContent>
 
-                  <TabsContent value="network" className="mt-0">
-                    <div className="w-full" style={{ height: "600px" }}>
-                      <NetworkGraph
-                        organizationsWithProjects={organizationsWithProjects}
-                        allOrganizations={allOrganizations}
-                        onOpenOrganizationModal={onOpenOrganizationModal}
-                        onOpenProjectModal={onOpenProjectModal}
-                        onOpenDonorModal={onOpenDonorModal}
-                        selectedOrgKey={selectedOrgKey}
-                        selectedProjectKey={selectedProjectKey}
-                        searchQuery={searchQuery}
-                        appliedSearchQuery={appliedSearchQuery}
-                        onSearchChange={onSearchChange}
-                        onSearchSubmit={onSearchSubmit}
-                        combinedDonors={combinedDonors}
-                        availableDonorCountries={availableDonorCountries}
-                        onDonorsChange={onDonorsChange}
-                        investmentTypes={investmentTypes}
-                        allKnownInvestmentTypes={allKnownInvestmentTypes}
-                        onTypesChange={onTypesChange}
-                        investmentThemes={investmentThemes}
-                        allKnownInvestmentThemes={allKnownInvestmentThemes}
-                        investmentThemesByType={investmentThemesByType}
-                        onThemesChange={onThemesChange}
-                        onResetFilters={onResetFilters}
-                        filterDescription={getFilterDescription()}
-                        orgAgenciesMap={modalMaps.orgAgenciesMap}
-                      />
-                    </div>
-                  </TabsContent>
+                  {/* Network Analysis tab removed — see /insights */}
                 </CardContent>
               </Card>
             </Tabs>

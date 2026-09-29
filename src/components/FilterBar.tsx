@@ -22,6 +22,7 @@ import {
   Globe,
   RotateCcw,
   Search,
+  X,
 } from "lucide-react";
 import { getMemberStates } from "@/lib/data";
 
@@ -67,6 +68,9 @@ interface FilterBarProps {
   // Optional styling
   className?: string;
 
+  // Extra actions rendered to the right of Clear all in the filter description row
+  rightActions?: React.ReactNode;
+
   // Portal container for dropdowns (needed for fullscreen mode)
   portalContainer?: HTMLElement | null;
 
@@ -102,6 +106,7 @@ const FilterBar: React.FC<FilterBarProps> = ({
   filterDescription,
   className = "",
   portalContainer = null,
+  rightActions,
   isFullscreen = false,
 }) => {
   const [donorsMenuOpen, setDonorsMenuOpen] = useState(false);
@@ -871,29 +876,30 @@ const FilterBar: React.FC<FilterBarProps> = ({
 
       {/* Filter Description and Reset Button */}
       {filterDescription && (
-        <div className="mt-2 flex items-center justify-between gap-4">
+        <div className="mt-2 flex items-center justify-between gap-2">
           <p className="text-xs text-slate-600 sm:text-sm">
             {filterDescription}
           </p>
-          {(combinedDonors.length > 0 ||
-            selectedAgencies.length > 0 ||
-            investmentTypes.length > 0 ||
-            investmentThemes.length > 0 ||
-            appliedSearchQuery) && (
-            <Button
-              variant="outline"
-              size="sm"
-              onClick={onResetFilters}
-              className="h-7 border-slate-300 bg-slate-100 px-3 text-xs text-slate-700 hover:border-slate-300 hover:bg-slate-200"
-            >
-              <RotateCcw className="mr-1.5 h-3 w-3" />
-              Reset
-            </Button>
-          )}
+          <div className="flex flex-shrink-0 items-center gap-1">
+            {(combinedDonors.length > 0 ||
+              selectedAgencies.length > 0 ||
+              investmentTypes.length > 0 ||
+              investmentThemes.length > 0 ||
+              appliedSearchQuery) && (
+              <button
+                onClick={onResetFilters}
+                className="inline-flex items-center gap-1.5 rounded-md px-3 py-1.5 text-xs font-medium text-slate-600 transition-colors hover:bg-slate-100 hover:text-slate-800 dark:text-slate-400 dark:hover:bg-slate-700 dark:hover:text-slate-200"
+              >
+                <X className="h-3.5 w-3.5" />
+                Clear all
+              </button>
+            )}
+            {rightActions}
+          </div>
         </div>
       )}
 
-      {/* Reset Button Only (when no filterDescription) */}
+      {/* Clear all Button Only (when no filterDescription) */}
       {!filterDescription &&
         (combinedDonors.length > 0 ||
           (selectedAgencies?.length ?? 0) > 0 ||
@@ -908,7 +914,7 @@ const FilterBar: React.FC<FilterBarProps> = ({
               className="h-7 border-slate-300 bg-slate-100 px-3 text-xs text-slate-700 hover:border-slate-300 hover:bg-slate-200"
             >
               <RotateCcw className="mr-1.5 h-3 w-3" />
-              Reset
+              Clear all
             </Button>
           </div>
         )}

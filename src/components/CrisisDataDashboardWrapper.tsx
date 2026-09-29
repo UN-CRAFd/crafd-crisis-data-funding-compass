@@ -223,9 +223,12 @@ const CrisisDataDashboardWrapper = () => {
     return "desc" as const;
   }, [searchParams]);
 
-  const [activeView, setActiveView] = useState<"table" | "network" | "donors">(
-    "table",
-  );
+  // Read initial tab from URL (?tab=donors) — evaluated once on mount
+  const [activeView, setActiveView] = useState<"table" | "donors">(() => {
+    if (typeof window === "undefined") return "table";
+    const raw = new URLSearchParams(window.location.search).get("tab");
+    return raw === "donors" ? "donors" : "table";
+  });
   const [localSearchQuery, setLocalSearchQuery] = useState(searchQuery);
 
   const lastFetchedFiltersRef = useRef<string>("");
@@ -492,16 +495,10 @@ const CrisisDataDashboardWrapper = () => {
 
   const handleResetFilters = useCallback(() => {
     setLocalSearchQuery("");
-    updateFilterParams({
-      donors: [],
-      agencies: [],
-      types: [],
-      themes: [],
-      search: "",
-      sortBy: "name",
-      sortDirection: "desc",
-    });
-  }, [updateFilterParams]);
+    // Hard replace to the bare pathname — no filter params at all.
+    // This is reliable: a page refresh of the clean URL starts with zero filters.
+    router.replace(pathname, { scroll: false });
+  }, [pathname, router]);
 
   const handleSortChange = (
     newSortBy: "name" | "donors" | "assets" | "funding",
@@ -586,7 +583,7 @@ const CrisisDataDashboardWrapper = () => {
   );
 
   const handleViewChange = useCallback(
-    (view: "table" | "network" | "donors") => {
+    (view: "table" | "donors") => {
       setActiveView(view);
     },
     [],
