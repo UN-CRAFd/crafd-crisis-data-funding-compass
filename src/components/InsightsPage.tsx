@@ -17,12 +17,14 @@ import {
   ChevronDown,
   X,
   Search,
-  Landmark,
   ArrowRight,
   AlertCircle,
 } from "lucide-react";
 import { toUrlSlug, matchesUrlSlug } from "@/lib/urlShortcuts";
 import { processDashboardData, getAgenciesForDonors, setGeneralContributionsEnabled } from "@/lib/data";
+
+// Always use project-level (non-core) contributions on this page
+setGeneralContributionsEnabled(false);
 import labels from "@/config/labels.json";
 import type { OrganizationWithProjects } from "@/types/airtable";
 
@@ -108,7 +110,6 @@ export default function InsightsPage() {
   const [funderSearch, setFunderSearch] = useState("");
   const [hasShownInsights, setHasShownInsights] = useState(false);
   const [showNetwork, setShowNetwork] = useState(false);
-  const [showGC, setShowGC] = useState(false);
   const [isInitialized, setIsInitialized] = useState(false);
   const [addFunderOpen, setAddFunderOpen] = useState(false);
   const [addFunderSearch, setAddFunderSearch] = useState("");
@@ -120,6 +121,7 @@ export default function InsightsPage() {
   const [showOrgTable, setShowOrgTable] = useState(false);
   const [expandedTypes, setExpandedTypes] = useState<Set<string>>(new Set());
   const [showAllSimilar, setShowAllSimilar] = useState(false);
+  const [showAllSharedOrgs, setShowAllSharedOrgs] = useState(false);
 
   // --------------- data fetching ----------------------------------------
 
@@ -142,12 +144,12 @@ export default function InsightsPage() {
       .catch(() => {});
   }, []);
 
-  // unfiltered data — refetch when showGC changes
+  // unfiltered data
   useEffect(() => {
-    fetchDashboard({ showGeneralContributions: showGC })
+    fetchDashboard({ showGeneralContributions: false })
       .then(setAllOrgData)
       .catch(() => {});
-  }, [showGC]);
+  }, []);
 
   // URL init
   useEffect(() => {
@@ -206,7 +208,7 @@ export default function InsightsPage() {
     if (current !== newUrl) router.replace(newUrl, { scroll: false });
   }, [selectedFunders, isInitialized, router]);
 
-  // filtered data when funders or showGC changes
+  // filtered data when funders change
   useEffect(() => {
     if (!hasShownInsights || selectedFunders.length === 0) {
       setFilteredData(null);
@@ -215,28 +217,25 @@ export default function InsightsPage() {
     setLoading(true);
     fetchDashboard({
       donorCountries: selectedFunders,
-      showGeneralContributions: showGC,
+      showGeneralContributions: false,
     })
       .then((data) => {
         setFilteredData(data);
         setLoading(false);
       })
       .catch(() => setLoading(false));
-  }, [selectedFunders, hasShownInsights, showGC]);
+  }, [selectedFunders, hasShownInsights]);
 
   // per-funder profile data
   useEffect(() => {
     if (selectedFunders.length === 0) return;
     let cancelled = false;
-    const gcKey = showGC ? "_gc" : "";
     selectedFunders.forEach(async (f) => {
-      const cacheKey = f + gcKey;
-      if (funderDataMap.has(cacheKey)) return;
+      if (funderDataMap.has(f)) return;
       try {
-        setGeneralContributionsEnabled(showGC);
         const data = await processDashboardData({ donorCountries: [f] });
         if (!cancelled) {
-          setFunderDataMap((prev) => new Map(prev).set(cacheKey, data));
+          setFunderDataMap((prev) => new Map(prev).set(f, data));
         }
       } catch {}
     });
@@ -244,7 +243,7 @@ export default function InsightsPage() {
       cancelled = true;
     };
   // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [selectedFunders, showGC]);
+  }, [selectedFunders]);
 
   // agencies for selected funders
   useEffect(() => {
@@ -271,8 +270,8 @@ export default function InsightsPage() {
 
   const getFunderData = useCallback(
     // eslint-disable-next-line @typescript-eslint/no-explicit-any
-    (f: string): any => funderDataMap.get(f + (showGC ? "_gc" : "")) ?? null,
-    [funderDataMap, showGC],
+    (f: string): any => funderDataMap.get(f) ?? null,
+    [funderDataMap],
   );
 
   // popular funders: top 8 by org count
@@ -320,22 +319,6 @@ export default function InsightsPage() {
     }>;
   }, [nestedOrgs, selectedFunders]);
 
-  // other funders ranked by shared org count
-  const coFundersRanked = useMemo(() => {
-    if (selectedFunders.length === 0 || sharedOrgsData.length === 0) return [];
-    const counts = new Map<string, number>();
-    sharedOrgsData.forEach((org) => {
-      org.allFunders.forEach((f) => {
-        if (!selectedFunders.includes(f)) {
-          counts.set(f, (counts.get(f) ?? 0) + 1);
-        }
-      });
-    });
-    return Array.from(counts.entries())
-      .sort((a, b) => b[1] - a[1])
-      .slice(0, 15);
-  }, [sharedOrgsData, selectedFunders]);
-
   // truly shared orgs for comparison
   const sharedOrgsDisplayed = useMemo(() => {
     if (selectedFunders.length === 0) return [];
@@ -345,29 +328,6 @@ export default function InsightsPage() {
     return sharedOrgsData.filter((o) => o.selectedFundersForOrg.length >= 2);
   }, [sharedOrgsData, selectedFunders]);
 
-  // funders with no orgs
-  const fundersWithNoOrgs = useMemo(
-    () =>
-      selectedFunders.filter(
-        (f) => !sharedOrgsData.some((o) => o.allFunders.includes(f)),
-      ),
-    [selectedFunders, sharedOrgsData],
-  );
-
-  // matrix columns
-  const matrixCols = useMemo(() => {
-    if (selectedFunders.length === 0) return [];
-    if (selectedFunders.length === 1) {
-      return [selectedFunders[0], ...coFundersRanked.slice(0, 5).map(([f]) => f)];
-    }
-    return selectedFunders;
-  }, [selectedFunders, coFundersRanked]);
-
-  // matrix rows
-  const matrixOrgs = useMemo(
-    () => sharedOrgsDisplayed.slice(0, 15),
-    [sharedOrgsDisplayed],
-  );
 
   // single-funder: similar funders by portfolio overlap %
   const similarFunders = useMemo(() => {
@@ -440,13 +400,11 @@ export default function InsightsPage() {
           getDonorsForOrg(org).includes(f),
         ).length;
         const productCount = data?.stats?.dataProjects ?? 0;
-        const coFunders = (() => {
-          const coSet = new Set<string>();
-          nestedOrgs.forEach((org) => {
-            const donors = getDonorsForOrg(org);
-            if (donors.includes(f)) donors.forEach((d) => { if (d !== f) coSet.add(d); });
-          });
-          return coSet.size;
+        const avgFunders = (() => {
+          const orgsList = nestedOrgs.filter((org) => getDonorsForOrg(org).includes(f));
+          if (orgsList.length === 0) return "—";
+          const total = orgsList.reduce((sum, org) => sum + getDonorsForOrg(org).length, 0);
+          return (total / orgsList.length).toFixed(1);
         })();
         const onlyOrgs = nestedOrgs.filter((org) => {
           const donors = getDonorsForOrg(org);
@@ -456,13 +414,13 @@ export default function InsightsPage() {
           f,
           orgCount,
           productCount,
-          coFunders,
+          avgFunders,
           onlyOrgs,
           color: COMPARISON_COLORS[i % COMPARISON_COLORS.length],
         };
       }),
     // eslint-disable-next-line react-hooks/exhaustive-deps
-    [selectedFunders, nestedOrgs, funderDataMap, showGC],
+    [selectedFunders, nestedOrgs, funderDataMap],
   );
 
   // --------------- handlers ---------------------------------------------
@@ -654,52 +612,8 @@ export default function InsightsPage() {
         Clear all
       </button>
 
-      {/* Core / institutional support toggle */}
-      <button
-        onClick={() => selectedFunders.length > 0 && setShowGC((v) => !v)}
-        disabled={selectedFunders.length === 0}
-        title={
-          selectedFunders.length === 0
-            ? "Select a funder to include core budget contributions to UN entities."
-            : undefined
-        }
-        className={`flex items-center gap-1.5 text-xs transition-colors ${
-          selectedFunders.length === 0
-            ? "cursor-not-allowed text-slate-300 dark:text-slate-600"
-            : "text-slate-500 hover:text-slate-700 dark:text-slate-400 dark:hover:text-slate-300"
-        }`}
-      >
-        <Landmark className="h-3.5 w-3.5" />
-        <span>Core / institutional support</span>
-        <div
-          className={`h-4 w-7 rounded-full transition-colors ${
-            selectedFunders.length === 0
-              ? "bg-slate-200 dark:bg-slate-700"
-              : showGC
-                ? "bg-[var(--brand-primary-dark)]"
-                : "bg-slate-300"
-          }`}
-        >
-          <div
-            className={`h-4 w-4 rounded-full bg-white transition-transform ${
-              showGC && selectedFunders.length > 0 ? "translate-x-3" : "translate-x-0"
-            }`}
-          />
-        </div>
-      </button>
     </div>
   );
-
-  const renderZeroOrgNote = () =>
-    fundersWithNoOrgs.length > 0 ? (
-      <div className="rounded-lg border border-amber-200 bg-amber-50 px-4 py-3 text-sm text-amber-800 dark:border-amber-800 dark:bg-amber-900/20 dark:text-amber-300">
-        {fundersWithNoOrgs.map((f) => (
-          <p key={f}>
-            <strong>{f}</strong> has no documented support outside core budget contributions to UN entities. Turn on &quot;Core / institutional support&quot; to include it.
-          </p>
-        ))}
-      </div>
-    ) : null;
 
   const renderNetworkGraph = () => (
     <div className="rounded-xl border border-slate-200 bg-white dark:border-slate-700 dark:bg-slate-800">
@@ -742,128 +656,142 @@ export default function InsightsPage() {
     </div>
   );
 
-  const renderSharedOrgsSection = () => (
-    <div className="rounded-xl border border-slate-200 bg-white p-6 dark:border-slate-700 dark:bg-slate-800">
-      <h2 className="mb-4 flex items-center gap-2 text-sm font-semibold text-slate-900 dark:text-white">
-        <Building2 className="h-4 w-4 text-[var(--brand-primary)]" />
-        Shared organizations ({sharedOrgsDisplayed.length})
-      </h2>
-      {sharedOrgsDisplayed.length === 0 ? (
-        <p className="text-sm text-slate-500 dark:text-slate-400">
-          {selectedFunders.length === 2
-            ? `${selectedFunders[0]} and ${selectedFunders[1]} don't fund any of the same organizations.`
-            : "The selected funders don't fund any of the same organizations."}
-        </p>
-      ) : (
-        <div className="grid gap-8 lg:grid-cols-2">
-          {/* List */}
-          <div>
-            <h3 className="mb-2 text-xs font-semibold uppercase tracking-wide text-slate-400">
-              By selected funders
-            </h3>
-            <div className="max-h-72 space-y-0.5 overflow-y-auto">
-              {sharedOrgsDisplayed.map((org) => (
+  const renderSharedOrgsSection = () => {
+    const A = selectedFunders[0];
+    const B = selectedFunders[1];
+    const onlyA = selectedFunders.length === 2
+      ? sharedOrgsData.filter((o) => o.selectedFundersForOrg.length === 1 && o.selectedFundersForOrg[0] === A).length
+      : 0;
+    const onlyB = selectedFunders.length === 2
+      ? sharedOrgsData.filter((o) => o.selectedFundersForOrg.length === 1 && o.selectedFundersForOrg[0] === B).length
+      : 0;
+    const both = selectedFunders.length === 2
+      ? sharedOrgsData.filter((o) => o.selectedFundersForOrg.length === 2).length
+      : 0;
+    const total2 = onlyA + both + onlyB || 1;
+
+    return (
+      <div className="rounded-xl border border-slate-200 bg-white p-6 dark:border-slate-700 dark:bg-slate-800">
+        <h2 className="mb-4 flex items-center gap-2 text-sm font-semibold text-slate-900 dark:text-white">
+          <Building2 className="h-4 w-4 text-[var(--brand-primary)]" />
+          Shared organizations ({sharedOrgsDisplayed.length})
+        </h2>
+
+        {/* Overlap breakdown */}
+        {selectedFunders.length === 2 ? (
+          <div className="mb-6">
+            <div className="flex h-6 w-full overflow-hidden rounded-full">
+              {onlyA > 0 && (
+                <div
+                  title={`Only ${A}: ${onlyA}`}
+                  style={{ width: `${(onlyA / total2) * 100}%`, backgroundColor: COMPARISON_COLORS[0] }}
+                />
+              )}
+              {both > 0 && (
+                <div
+                  title={`Both: ${both}`}
+                  style={{ width: `${(both / total2) * 100}%`, backgroundColor: "var(--brand-primary)" }}
+                />
+              )}
+              {onlyB > 0 && (
+                <div
+                  title={`Only ${B}: ${onlyB}`}
+                  style={{ width: `${(onlyB / total2) * 100}%`, backgroundColor: COMPARISON_COLORS[1] }}
+                />
+              )}
+            </div>
+            <div className="mt-2 flex justify-between text-xs text-slate-500">
+              <span>
+                <span className="font-medium" style={{ color: COMPARISON_COLORS[0] }}>■</span>{" "}
+                Only {A}: {onlyA}
+              </span>
+              <span>
+                <span className="font-medium" style={{ color: "var(--brand-primary)" }}>■</span>{" "}
+                Both: {both}
+              </span>
+              <span>
+                <span className="font-medium" style={{ color: COMPARISON_COLORS[1] }}>■</span>{" "}
+                Only {B}: {onlyB}
+              </span>
+            </div>
+          </div>
+        ) : selectedFunders.length >= 3 ? (
+          <div className="mb-6 overflow-x-auto">
+            <table className="w-full border-collapse text-xs">
+              <thead>
+                <tr className="border-b border-slate-200 dark:border-slate-700">
+                  <th className="py-1.5 pr-4 text-left text-xs font-semibold text-slate-500">Funder</th>
+                  <th className="py-1.5 px-3 text-right text-xs font-semibold text-slate-500">Organizations</th>
+                  <th className="py-1.5 px-3 text-right text-xs font-semibold text-slate-500">Shared with ≥1 other</th>
+                  <th className="py-1.5 pl-3 text-right text-xs font-semibold text-slate-500">Only this funder</th>
+                </tr>
+              </thead>
+              <tbody>
+                {selectedFunders.map((f, i) => {
+                  const fOrgs = sharedOrgsData.filter((o) => o.selectedFundersForOrg.includes(f));
+                  const sharedCount = fOrgs.filter((o) => o.selectedFundersForOrg.length > 1).length;
+                  const onlyCount = fOrgs.filter((o) => o.selectedFundersForOrg.length === 1).length;
+                  return (
+                    <tr key={f} className="border-b border-slate-100 dark:border-slate-800">
+                      <td className="py-1.5 pr-4">
+                        <span className="flex items-center gap-1.5">
+                          <span className="inline-block h-2 w-2 rounded-full shrink-0" style={{ backgroundColor: COMPARISON_COLORS[i % COMPARISON_COLORS.length] }} />
+                          <span className="truncate max-w-[140px] text-slate-700 dark:text-slate-300">{f}</span>
+                        </span>
+                      </td>
+                      <td className="py-1.5 px-3 text-right text-slate-600 dark:text-slate-400">{fOrgs.length}</td>
+                      <td className="py-1.5 px-3 text-right text-slate-600 dark:text-slate-400">{sharedCount}</td>
+                      <td className="py-1.5 pl-3 text-right text-slate-600 dark:text-slate-400">{onlyCount}</td>
+                    </tr>
+                  );
+                })}
+              </tbody>
+            </table>
+          </div>
+        ) : null}
+
+        {/* List */}
+        {sharedOrgsDisplayed.length === 0 ? (
+          <p className="text-sm text-slate-500 dark:text-slate-400">
+            {selectedFunders.length === 2
+              ? `${A} and ${B} don't fund any of the same organizations.`
+              : "The selected funders don't fund any of the same organizations."}
+          </p>
+        ) : (
+          <>
+            <div className="space-y-0.5">
+              {(showAllSharedOrgs ? sharedOrgsDisplayed : sharedOrgsDisplayed.slice(0, 10)).map((org) => (
                 <div
                   key={org.id}
                   className="flex items-start justify-between gap-2 rounded px-2 py-1.5 hover:bg-slate-50 dark:hover:bg-slate-700/50"
                 >
                   <div className="min-w-0 flex-1">
                     <p className="truncate text-xs text-slate-700 dark:text-slate-300">{org.name}</p>
-                    <p className="truncate text-xs text-slate-400">
-                      {org.selectedFundersForOrg.join(", ")}
-                    </p>
+                    <p className="truncate text-xs text-slate-400">{org.selectedFundersForOrg.join(", ")}</p>
                   </div>
                   <span
                     className="shrink-0 rounded px-1.5 py-0.5 text-xs font-semibold"
-                    style={{
-                      backgroundColor: "var(--brand-primary-lighter)",
-                      color: "var(--brand-primary)",
-                    }}
+                    style={{ backgroundColor: "var(--brand-primary-lighter)", color: "var(--brand-primary)" }}
                   >
                     {org.totalFunders} {org.totalFunders === 1 ? "funder" : "funders"}
                   </span>
                 </div>
               ))}
             </div>
-          </div>
-
-          {/* Matrix */}
-          {matrixCols.length > 0 && matrixOrgs.length > 0 && (
-            <div>
-              <h3 className="mb-2 text-xs font-semibold uppercase tracking-wide text-slate-400">
-                Funding matrix
-              </h3>
-              <div className="overflow-x-auto">
-                <table className="border-collapse text-xs">
-                  <thead>
-                    <tr>
-                      <th className="border-b-2 border-slate-200 py-1 pr-3 text-left text-xs font-semibold text-slate-500 dark:border-slate-600">
-                        Organization
-                      </th>
-                      {matrixCols.map((col) => (
-                        <th
-                          key={col}
-                          className="whitespace-nowrap border-b-2 border-slate-200 px-2 py-1 text-center text-xs font-semibold text-slate-500 dark:border-slate-600"
-                          title={col}
-                        >
-                          {col.length > 14 ? col.slice(0, 12) + "…" : col}
-                        </th>
-                      ))}
-                    </tr>
-                  </thead>
-                  <tbody>
-                    {matrixOrgs.map((org) => (
-                      <tr key={org.id}>
-                        <td
-                          className="whitespace-nowrap border-r-2 border-slate-200 py-1 pr-3 text-xs text-slate-600 dark:border-slate-600"
-                          title={org.name}
-                        >
-                          {org.name.length > 22 ? org.name.slice(0, 20) + "…" : org.name}
-                        </td>
-                        {matrixCols.map((col) => {
-                          const funds = org.allFunders.includes(col);
-                          const isSelected = selectedFunders.includes(col);
-                          return (
-                            <td
-                              key={col}
-                              className={`border border-slate-100 px-2 py-1 text-center dark:border-slate-700 ${
-                                funds
-                                  ? isSelected
-                                    ? "bg-[var(--brand-bg-lighter)]"
-                                    : "bg-amber-50 dark:bg-amber-900/20"
-                                  : ""
-                              }`}
-                            >
-                              {funds ? (
-                                <span
-                                  className={`inline-block h-3 w-3 rounded-sm ${
-                                    isSelected ? "bg-[var(--brand-primary)]" : "bg-amber-400"
-                                  }`}
-                                />
-                              ) : null}
-                            </td>
-                          );
-                        })}
-                      </tr>
-                    ))}
-                  </tbody>
-                </table>
-                <p className="mt-2 text-xs text-slate-400">
-                  Filled square = that funder funds that organization.
-                  {selectedFunders.length === 1
-                    ? " Top 5 co-funders shown as additional columns."
-                    : ""}
-                  {matrixOrgs.length < sharedOrgsDisplayed.length && (
-                    <> Showing {matrixOrgs.length} of {sharedOrgsDisplayed.length} organizations.</>
-                  )}
-                </p>
-              </div>
-            </div>
-          )}
-        </div>
-      )}
-    </div>
-  );
+            {sharedOrgsDisplayed.length > 10 && (
+              <button
+                onClick={() => setShowAllSharedOrgs((v) => !v)}
+                className="mt-3 text-xs hover:underline"
+                style={{ color: "var(--brand-primary)" }}
+              >
+                {showAllSharedOrgs ? "Show fewer" : `Show all (${sharedOrgsDisplayed.length})`}
+              </button>
+            )}
+          </>
+        )}
+      </div>
+    );
+  };
 
   // --------------- render -----------------------------------------------
 
@@ -991,7 +919,6 @@ export default function InsightsPage() {
           /* ===== RESULTS STATE ===== */
           <div className="space-y-6">
             {renderToolbar()}
-            {renderZeroOrgNote()}
 
             {loading ? (
               <div className="flex items-center justify-center py-16">
@@ -1069,30 +996,35 @@ export default function InsightsPage() {
                     </p>
 
                     {/* 3. Big numbers */}
-                    <div className="grid grid-cols-2 gap-4 sm:grid-cols-4">
-                      {[
+                    {(() => {
+                      const avgFundersPerOrg = funderOrgs.length === 0
+                        ? "—"
+                        : (funderOrgs.reduce((s, o) => s + o.totalFunders, 0) / funderOrgs.length).toFixed(1);
+                      const statCards: Array<{ count: string | number; label: string }> = [
                         { count: orgCount, label: "organizations supported" },
                         { count: productCount, label: "data products" },
-                        { count: coFundersRanked.length, label: "co-funders" },
-                        {
-                          count: onlyFunderOrgs.length,
-                          label: "organizations where it's the only documented funder",
-                        },
-                      ].map(({ count, label }) => (
-                        <div
-                          key={label}
-                          className="flex flex-col rounded-xl border border-slate-200 bg-white p-5 dark:border-slate-700 dark:bg-slate-900"
-                        >
-                          <span
-                            className="text-3xl font-bold"
-                            style={{ color: "var(--brand-primary)" }}
-                          >
-                            {count}
-                          </span>
-                          <p className="mt-1 text-sm text-slate-600 dark:text-slate-400">{label}</p>
+                        { count: avgFundersPerOrg, label: "avg. funders per organization" },
+                        { count: onlyFunderOrgs.length, label: "organizations where it's the only documented funder" },
+                      ];
+                      return (
+                        <div className="grid grid-cols-2 gap-4 sm:grid-cols-4">
+                          {statCards.map(({ count, label }) => (
+                            <div
+                              key={label}
+                              className="flex flex-col rounded-xl border border-slate-200 bg-white p-5 dark:border-slate-700 dark:bg-slate-900"
+                            >
+                              <span
+                                className="text-3xl font-bold"
+                                style={{ color: "var(--brand-primary)" }}
+                              >
+                                {count}
+                              </span>
+                              <p className="mt-1 text-sm text-slate-600 dark:text-slate-400">{label}</p>
+                            </div>
+                          ))}
                         </div>
-                      ))}
-                    </div>
+                      );
+                    })()}
 
                     {/* 4. Portfolio by type + Only funder orgs */}
                     <div className="grid gap-4 lg:grid-cols-2">
@@ -1427,7 +1359,7 @@ export default function InsightsPage() {
                           [
                             { key: "orgCount", label: "Organizations" },
                             { key: "productCount", label: "Data products" },
-                            { key: "coFunders", label: "Co-funders" },
+                            { key: "avgFunders", label: "Avg. funders per org" },
                             { key: "onlyOrgs", label: "Only-funder orgs" },
                           ] as const
                         ).map((row) => (
@@ -1442,7 +1374,7 @@ export default function InsightsPage() {
                                   className="text-xl font-bold"
                                   style={{ color: fs.color }}
                                 >
-                                  {fs[row.key]}
+                                  {String(fs[row.key])}
                                 </span>
                               </td>
                             ))}
@@ -1451,35 +1383,37 @@ export default function InsightsPage() {
                       </tbody>
                     </table>
                   </div>
-                  <div className="mt-4 grid grid-cols-2 gap-4">
-                    <div className="rounded-lg border border-slate-100 bg-slate-50 p-4 dark:border-slate-700 dark:bg-slate-900">
-                      <span
-                        className="text-2xl font-bold"
-                        style={{ color: "var(--brand-primary)" }}
-                      >
-                        {
-                          sharedOrgsData.filter(
-                            (o) =>
-                              o.selectedFundersForOrg.length === selectedFunders.length,
-                          ).length
-                        }
-                      </span>
-                      <p className="mt-1 text-xs text-slate-600 dark:text-slate-400">
-                        organizations supported by all selected funders
-                      </p>
+                  {selectedFunders.length === 2 ? (
+                    <div className="mt-4">
+                      <div className="rounded-lg border border-slate-100 bg-slate-50 p-4 dark:border-slate-700 dark:bg-slate-900">
+                        <span className="text-2xl font-bold" style={{ color: "var(--brand-primary)" }}>
+                          {sharedOrgsData.filter((o) => o.selectedFundersForOrg.length === 2).length}
+                        </span>
+                        <p className="mt-1 text-xs text-slate-600 dark:text-slate-400">
+                          organizations supported by both
+                        </p>
+                      </div>
                     </div>
-                    <div className="rounded-lg border border-slate-100 bg-slate-50 p-4 dark:border-slate-700 dark:bg-slate-900">
-                      <span
-                        className="text-2xl font-bold"
-                        style={{ color: "var(--brand-primary)" }}
-                      >
-                        {sharedOrgsDisplayed.length}
-                      </span>
-                      <p className="mt-1 text-xs text-slate-600 dark:text-slate-400">
-                        organizations supported by at least two of the selected funders
-                      </p>
+                  ) : (
+                    <div className="mt-4 grid grid-cols-2 gap-4">
+                      <div className="rounded-lg border border-slate-100 bg-slate-50 p-4 dark:border-slate-700 dark:bg-slate-900">
+                        <span className="text-2xl font-bold" style={{ color: "var(--brand-primary)" }}>
+                          {sharedOrgsData.filter((o) => o.selectedFundersForOrg.length === selectedFunders.length).length}
+                        </span>
+                        <p className="mt-1 text-xs text-slate-600 dark:text-slate-400">
+                          organizations supported by all selected funders
+                        </p>
+                      </div>
+                      <div className="rounded-lg border border-slate-100 bg-slate-50 p-4 dark:border-slate-700 dark:bg-slate-900">
+                        <span className="text-2xl font-bold" style={{ color: "var(--brand-primary)" }}>
+                          {sharedOrgsData.filter((o) => o.selectedFundersForOrg.length >= 2).length}
+                        </span>
+                        <p className="mt-1 text-xs text-slate-600 dark:text-slate-400">
+                          organizations supported by at least two of the selected funders
+                        </p>
+                      </div>
                     </div>
-                  </div>
+                  )}
                 </div>
 
                 {/* 2. Portfolio by type */}
