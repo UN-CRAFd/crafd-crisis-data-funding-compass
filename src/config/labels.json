@@ -36,26 +36,26 @@
     },
     "donorCountries": {
       "title": "Where funds are from",
-      "label": "Donors",
-      "tooltip": "Key donors in the crisis data ecosystem who provide funding to maintain essential products."
+      "label": "Funders",
+      "tooltip": "Key funders in the crisis data ecosystem who provide funding to maintain essential products."
     }
   },
   "filters": {
     "searchPlaceholder": "Search Organizations & Products...",
-    "donorPlaceholder": "Select Donor(s)...",
+    "donorPlaceholder": "Select Funder(s)...",
     "typePlaceholder": "Select Type(s)...",
     "themePlaceholder": "Select Theme(s)...",
-    "donorSearchPlaceholder": "Search Donor...",
+    "donorSearchPlaceholder": "Search Funder...",
     "selected": "selected",
     "showMore": "more",
     "showLess": "Show less",
-    "noMatchingDonors": "No matching donors found"
+    "noMatchingDonors": "No matching funders found"
   },
   "sections": {
     "organizationsAndProjects": "Funding Registry",
     "projectCategories": "Products by Type",
     "organizationTypes": "Organizations by Type",
-    "donorCount": "Co-Financing Donors"
+    "donorCount": "Co-Financing Funders"
   },
   "investmentTypes": {
     "data": "Data Sets & Commons",
@@ -72,7 +72,7 @@
     "capitalizedPlural": "Products"
   },
   "projectDetails": {
-    "donorCountries": "Product Donor",
+    "donorCountries": "Product Funder",
     "investmentTypes": "Investment Types",
     "notSpecified": "Not specified"
   },
@@ -82,8 +82,8 @@
     "funds": "funds",
     "in": "in",
     "relatingTo": "relating to",
-    "donor": "donor",
-    "donors": "donors",
+    "donor": "funder",
+    "donors": "funders",
     "types": "types"
   },
   "footer": {
@@ -133,8 +133,8 @@
     "providerOrganizations": "Provider Organizations",
     "assetTypeAndTheme": "Product Type & Theme",
     "assetFunding": "Product Funding",
-    "noAssetDonorInfo": "No product donor information available",
-    "assetDonorsNotSpecified": "Product donors not specified",
+    "noAssetDonorInfo": "No product funder information available",
+    "assetDonorsNotSpecified": "Product funders not specified",
     "notesProjectDonors": "Project donor countries may differ from organization-level donor countries.",
     "hdxDataGrid": "HDX Data Grid",
     "visitProjectWebsite": "Visit Project Website",
