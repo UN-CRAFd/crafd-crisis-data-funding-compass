@@ -13,17 +13,16 @@ import PageHeader from "@/components/PageHeader";
 import { Button } from "@/components/ui/button";
 import {
   Network,
-  Globe,
   Building2,
   ChevronDown,
   X,
   Search,
   Landmark,
   ArrowRight,
-  Layers,
   AlertCircle,
 } from "lucide-react";
 import { toUrlSlug, matchesUrlSlug } from "@/lib/urlShortcuts";
+import { processDashboardData, getAgenciesForDonors, setGeneralContributionsEnabled } from "@/lib/data";
 import labels from "@/config/labels.json";
 import type { OrganizationWithProjects } from "@/types/airtable";
 
@@ -52,6 +51,10 @@ interface DashboardData {
   investmentThemes: string[];
   investmentThemesByType: Record<string, string[]>;
 }
+
+// ---------- constants ---------------------------------------------------
+
+const COMPARISON_COLORS = ["#0ea5e9", "#f59e0b", "#16a34a", "#9333ea", "#e11d48"];
 
 // ---------- helpers -----------------------------------------------------
 
@@ -82,31 +85,6 @@ async function fetchDashboard(body: {
   return r.json();
 }
 
-// ---------- preview cards for empty state -------------------------------
-
-const PREVIEW_CARDS = [
-  {
-    icon: <Globe className="h-5 w-5" />,
-    title: "Who else funds the same organizations",
-    desc: "Other funders ranked by how many organizations they share",
-  },
-  {
-    icon: <Building2 className="h-5 w-5" />,
-    title: "Shared organizations",
-    desc: "A list and matrix of organizations the selected funders co-fund",
-  },
-  {
-    icon: <Layers className="h-5 w-5" />,
-    title: "Overlaps by theme",
-    desc: "Themes where the selected funders' investments concentrate",
-  },
-  {
-    icon: <AlertCircle className="h-5 w-5" />,
-    title: "Gaps",
-    desc: "Organizations relying on one funder and themes with sparse support",
-  },
-];
-
 // ---------- component ---------------------------------------------------
 
 export default function InsightsPage() {
@@ -131,10 +109,17 @@ export default function InsightsPage() {
   const [hasShownInsights, setHasShownInsights] = useState(false);
   const [showNetwork, setShowNetwork] = useState(false);
   const [showGC, setShowGC] = useState(false);
-  const [showAllCoFunders, setShowAllCoFunders] = useState(false);
   const [isInitialized, setIsInitialized] = useState(false);
   const [addFunderOpen, setAddFunderOpen] = useState(false);
   const [addFunderSearch, setAddFunderSearch] = useState("");
+
+  // new state
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  const [funderDataMap, setFunderDataMap] = useState<Map<string, any>>(new Map());
+  const [funderAgencies, setFunderAgencies] = useState<Map<string, string[]>>(new Map());
+  const [showOrgTable, setShowOrgTable] = useState(false);
+  const [expandedTypes, setExpandedTypes] = useState<Set<string>>(new Set());
+  const [showAllSimilar, setShowAllSimilar] = useState(false);
 
   // --------------- data fetching ----------------------------------------
 
@@ -239,6 +224,36 @@ export default function InsightsPage() {
       .catch(() => setLoading(false));
   }, [selectedFunders, hasShownInsights, showGC]);
 
+  // per-funder profile data
+  useEffect(() => {
+    if (selectedFunders.length === 0) return;
+    let cancelled = false;
+    const gcKey = showGC ? "_gc" : "";
+    selectedFunders.forEach(async (f) => {
+      const cacheKey = f + gcKey;
+      if (funderDataMap.has(cacheKey)) return;
+      try {
+        setGeneralContributionsEnabled(showGC);
+        const data = await processDashboardData({ donorCountries: [f] });
+        if (!cancelled) {
+          setFunderDataMap((prev) => new Map(prev).set(cacheKey, data));
+        }
+      } catch {}
+    });
+    return () => {
+      cancelled = true;
+    };
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [selectedFunders, showGC]);
+
+  // agencies for selected funders
+  useEffect(() => {
+    if (selectedFunders.length === 0) return;
+    getAgenciesForDonors(selectedFunders)
+      .then((map) => setFunderAgencies(map))
+      .catch(() => {});
+  }, [selectedFunders]);
+
   // click-outside handler for add-funder dropdown
   useEffect(() => {
     if (!addFunderOpen) return;
@@ -253,6 +268,26 @@ export default function InsightsPage() {
   }, [addFunderOpen]);
 
   // --------------- derived data -----------------------------------------
+
+  const getFunderData = useCallback(
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
+    (f: string): any => funderDataMap.get(f + (showGC ? "_gc" : "")) ?? null,
+    [funderDataMap, showGC],
+  );
+
+  // popular funders: top 8 by org count
+  const popularFunders = useMemo(() => {
+    const counts = new Map<string, number>();
+    nestedOrgs.forEach((org) =>
+      getDonorsForOrg(org).forEach((f) =>
+        counts.set(f, (counts.get(f) ?? 0) + 1),
+      ),
+    );
+    return Array.from(counts.entries())
+      .sort((a, b) => b[1] - a[1])
+      .slice(0, 8)
+      .map(([f]) => f);
+  }, [nestedOrgs]);
 
   // orgs funded by ANY selected funder (union)
   const sharedOrgsData = useMemo(() => {
@@ -301,7 +336,7 @@ export default function InsightsPage() {
       .slice(0, 15);
   }, [sharedOrgsData, selectedFunders]);
 
-  // sharedOrgsDisplayed: "truly shared" — co-funded by ≥2 selected funders (or for 1 funder: co-funded by anyone)
+  // truly shared orgs for comparison
   const sharedOrgsDisplayed = useMemo(() => {
     if (selectedFunders.length === 0) return [];
     if (selectedFunders.length === 1) {
@@ -310,7 +345,7 @@ export default function InsightsPage() {
     return sharedOrgsData.filter((o) => o.selectedFundersForOrg.length >= 2);
   }, [sharedOrgsData, selectedFunders]);
 
-  // funders that appear in no shared org
+  // funders with no orgs
   const fundersWithNoOrgs = useMemo(
     () =>
       selectedFunders.filter(
@@ -319,7 +354,7 @@ export default function InsightsPage() {
     [selectedFunders, sharedOrgsData],
   );
 
-  // matrix columns = selected funders (or selected + top co-funders when 1 selected)
+  // matrix columns
   const matrixCols = useMemo(() => {
     if (selectedFunders.length === 0) return [];
     if (selectedFunders.length === 1) {
@@ -328,91 +363,107 @@ export default function InsightsPage() {
     return selectedFunders;
   }, [selectedFunders, coFundersRanked]);
 
-  // matrix rows = top 15 shared orgs
+  // matrix rows
   const matrixOrgs = useMemo(
     () => sharedOrgsDisplayed.slice(0, 15),
     [sharedOrgsDisplayed],
   );
 
-  // overlaps by theme — uses allOrgData filtered to shared org union
-  const themeOverlaps = useMemo(() => {
-    if (!allOrgData || sharedOrgsData.length === 0) return [];
-    const sharedIds = new Set(sharedOrgsData.map((o) => o.id));
-    const orgThemeCounts = new Map<string, Set<string>>();
-    allOrgData.allOrganizations.forEach((org) => {
-      if (!sharedIds.has(org.id)) return;
-      org.projects.forEach((p) => {
-        p.investmentThemes.forEach((t) => {
-          const theme = t.trim();
-          if (!theme) return;
-          if (!orgThemeCounts.has(theme)) orgThemeCounts.set(theme, new Set());
-          orgThemeCounts.get(theme)!.add(org.id);
-        });
+  // single-funder: similar funders by portfolio overlap %
+  const similarFunders = useMemo(() => {
+    if (selectedFunders.length !== 1 || sharedOrgsData.length === 0) return [];
+    const F = selectedFunders[0];
+    const overlap = new Map<string, number>();
+    sharedOrgsData.forEach((org) => {
+      org.allFunders.forEach((f) => {
+        if (f !== F) overlap.set(f, (overlap.get(f) ?? 0) + 1);
       });
     });
-    return Array.from(orgThemeCounts.entries())
-      .sort((a, b) => b[1].size - a[1].size)
-      .slice(0, 10)
-      .map(([name, orgs]) => ({ name, count: orgs.size }));
-  }, [allOrgData, sharedOrgsData]);
-
-  // gaps: orgs with only one total funder
-  const singleFunderOrgs = useMemo(
-    () => sharedOrgsData.filter((o) => o.totalFunders === 1).slice(0, 10),
-    [sharedOrgsData],
-  );
-
-  // gaps: themes with fewest total funders — uses allOrgData filtered to shared org union
-  const themeGaps = useMemo(() => {
-    if (!allOrgData || sharedOrgsData.length === 0) return [];
-    const sharedIds = new Set(sharedOrgsData.map((o) => o.id));
-    const touchedThemes = new Set<string>();
-    allOrgData.allOrganizations.forEach((org) => {
-      if (!sharedIds.has(org.id)) return;
-      org.projects.forEach((p) =>
-        p.investmentThemes.forEach((t) => {
-          if (t.trim()) touchedThemes.add(t.trim());
-        }),
-      );
-    });
-    if (touchedThemes.size === 0) return [];
-    const themeAllFunders = new Map<string, Set<string>>();
-    allOrgData.allOrganizations.forEach((org) => {
-      const funders = org.donorCountries ?? [];
-      org.projects.forEach((p) => {
-        p.investmentThemes.forEach((t) => {
-          const theme = t.trim();
-          if (!theme || !touchedThemes.has(theme)) return;
-          if (!themeAllFunders.has(theme)) themeAllFunders.set(theme, new Set());
-          funders.forEach((f) => themeAllFunders.get(theme)!.add(f));
-        });
-      });
-    });
-    return Array.from(touchedThemes)
-      .map((theme) => ({
-        theme,
-        funderCount: themeAllFunders.get(theme)?.size ?? 0,
+    return Array.from(overlap.entries())
+      .map(([f, count]) => ({
+        f,
+        count,
+        pct: Math.round((count / sharedOrgsData.length) * 100),
       }))
-      .filter((t) => t.funderCount > 0)
-      .sort((a, b) => a.funderCount - b.funderCount)
+      .sort((a, b) => b.pct - a.pct)
       .slice(0, 8);
-  }, [allOrgData, sharedOrgsData]);
+  }, [selectedFunders, sharedOrgsData]);
 
-  const summarySentence = useMemo(() => {
-    if (selectedFunders.length === 0) return "";
-    const orgCount = sharedOrgsData.length;
-    const coFunderCount = coFundersRanked.length;
-    const coSuffix =
-      coFunderCount > 0
-        ? ` ${coFunderCount} other funder${coFunderCount !== 1 ? "s" : ""} fund at least one of the same ones.`
-        : "";
-    if (selectedFunders.length === 1) {
-      return `${selectedFunders[0]} funds ${orgCount} organization${orgCount !== 1 ? "s" : ""}.${coSuffix}`;
-    }
-    return `Together, the selected funders fund ${orgCount} organization${orgCount !== 1 ? "s" : ""}.${coSuffix}`;
-  }, [selectedFunders, sharedOrgsData, coFundersRanked]);
+  // single-funder: type gaps
+  const typeGaps = useMemo(() => {
+    if (selectedFunders.length !== 1) return [];
+    const F = selectedFunders[0];
+    const profileData = getFunderData(F);
+    const funderTypes = new Set(
+      // eslint-disable-next-line @typescript-eslint/no-explicit-any
+      (profileData?.projectTypes ?? []).filter((t: any) => t.count > 0).map((t: any) => t.name as string),
+    );
+    return Object.values(labels.investmentTypes)
+      .filter((typeName) => !funderTypes.has(typeName))
+      .map((typeName) => {
+        const allFundersForType = new Set<string>();
+        allOrgData?.allOrganizations.forEach((org) => {
+          if (org.projects.some((p) => p.investmentTypes?.includes(typeName))) {
+            (org.donorCountries ?? []).forEach((d) => allFundersForType.add(d));
+          }
+        });
+        return { typeName, funderCount: allFundersForType.size };
+      });
+  }, [selectedFunders, getFunderData, allOrgData]);
 
-  const maxCoFunder = coFundersRanked[0]?.[1] ?? 1;
+  // comparison: type gaps (none of the selected funders)
+  const comparisonTypeGaps = useMemo(() => {
+    if (selectedFunders.length < 2) return [];
+    return Object.values(labels.investmentTypes).filter((typeName) =>
+      selectedFunders.every((f) => {
+        const data = getFunderData(f);
+        // eslint-disable-next-line @typescript-eslint/no-explicit-any
+        return ((data?.projectTypes ?? []).find((t: any) => t.name === typeName)?.count ?? 0) === 0;
+      }),
+    );
+  }, [selectedFunders, getFunderData]);
+
+  // comparison: orgs funded by only one selected funder
+  const onlyOneFunderOrgs = useMemo(() => {
+    if (selectedFunders.length < 2) return [];
+    return sharedOrgsData
+      .filter((o) => o.selectedFundersForOrg.length === 1)
+      .map((o) => ({ ...o, theFunder: o.selectedFundersForOrg[0] }));
+  }, [sharedOrgsData, selectedFunders]);
+
+  // per-funder stats for comparison table
+  const funderStats = useMemo(
+    () =>
+      selectedFunders.map((f, i) => {
+        const data = getFunderData(f);
+        const orgCount = nestedOrgs.filter((org) =>
+          getDonorsForOrg(org).includes(f),
+        ).length;
+        const productCount = data?.stats?.dataProjects ?? 0;
+        const coFunders = (() => {
+          const coSet = new Set<string>();
+          nestedOrgs.forEach((org) => {
+            const donors = getDonorsForOrg(org);
+            if (donors.includes(f)) donors.forEach((d) => { if (d !== f) coSet.add(d); });
+          });
+          return coSet.size;
+        })();
+        const onlyOrgs = nestedOrgs.filter((org) => {
+          const donors = getDonorsForOrg(org);
+          return donors.includes(f) && donors.length === 1;
+        }).length;
+        return {
+          f,
+          orgCount,
+          productCount,
+          coFunders,
+          onlyOrgs,
+          color: COMPARISON_COLORS[i % COMPARISON_COLORS.length],
+        };
+      }),
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+    [selectedFunders, nestedOrgs, funderDataMap, showGC],
+  );
 
   // --------------- handlers ---------------------------------------------
 
@@ -459,6 +510,33 @@ export default function InsightsPage() {
     );
   }, []);
 
+  const downloadProfileCSV = useCallback(
+    (funder: string) => {
+      const orgs = sharedOrgsData;
+      const rows: string[][] = [["Organization", "Types", "Product count", "Other funders"]];
+      orgs.forEach((org) => {
+        const orgData = allOrgData?.allOrganizations.find((o) => o.id === org.id);
+        const types = [
+          ...new Set(orgData?.projects.flatMap((p) => p.investmentTypes) ?? []),
+        ].join("; ");
+        const productCount = orgData?.projects.length ?? 0;
+        const otherFunders = org.totalFunders - 1;
+        rows.push([org.name, types, String(productCount), String(otherFunders)]);
+      });
+      const csv = rows
+        .map((r) => r.map((c) => `"${c.replace(/"/g, '""')}"`).join(","))
+        .join("\n");
+      const blob = new Blob([csv], { type: "text/csv" });
+      const url = URL.createObjectURL(blob);
+      const a = document.createElement("a");
+      a.href = url;
+      a.download = `${funder.replace(/\s+/g, "-").toLowerCase()}-profile.csv`;
+      a.click();
+      URL.revokeObjectURL(url);
+    },
+    [sharedOrgsData, allOrgData],
+  );
+
   const EMPTY_STRINGS = useMemo(() => [] as string[], []);
   const NOOP = useCallback(() => {}, []);
   const allKnownInvestmentTypes = useMemo(
@@ -481,6 +559,312 @@ export default function InsightsPage() {
         f.toLowerCase().includes(addFunderSearch.toLowerCase())),
   );
 
+  // --------------- shared sub-renders -----------------------------------
+
+  const renderToolbar = () => (
+    <div className="flex flex-wrap items-center gap-2">
+      {selectedFunders.length === 1 ? (
+        <span className="text-xs font-semibold uppercase tracking-wide text-slate-400">
+          Funder profile
+        </span>
+      ) : (
+        <span className="text-sm font-medium text-slate-500 dark:text-slate-400">
+          Comparing:
+        </span>
+      )}
+
+      {selectedFunders.map((f) => (
+        <span
+          key={f}
+          className="inline-flex items-center gap-1 rounded-full bg-[var(--brand-bg-lighter)] px-2.5 py-1 text-xs font-medium text-[var(--brand-primary)]"
+        >
+          {f}
+          <button
+            onClick={() => removeFunder(f)}
+            className="ml-0.5 rounded-full p-0.5 hover:bg-[var(--brand-primary-lighter)]"
+            aria-label={`Remove ${f}`}
+          >
+            <X className="h-2.5 w-2.5" />
+          </button>
+        </span>
+      ))}
+
+      {/* Add funder */}
+      <div ref={addFunderRef} className="relative">
+        <button
+          onClick={() => setAddFunderOpen((o) => !o)}
+          className="inline-flex items-center gap-1 rounded-full border border-dashed border-slate-300 px-2.5 py-1 text-xs text-slate-500 transition-colors hover:border-[var(--brand-primary)] hover:text-[var(--brand-primary)] dark:border-slate-600"
+        >
+          + Add funder
+        </button>
+        {addFunderOpen && (
+          <div className="absolute left-0 top-8 z-20 w-56 rounded-lg border border-slate-200 bg-white shadow-lg dark:border-slate-700 dark:bg-slate-800">
+            <div className="p-2">
+              <input
+                autoFocus
+                type="text"
+                value={addFunderSearch}
+                onChange={(e) => setAddFunderSearch(e.target.value)}
+                placeholder="Search…"
+                className="w-full rounded border border-slate-200 px-2 py-1 text-xs focus:border-[var(--brand-primary)] focus:outline-none dark:border-slate-600 dark:bg-slate-700 dark:text-white"
+              />
+            </div>
+            <div className="max-h-52 overflow-y-auto">
+              {addFunderList.length === 0 ? (
+                <p className="px-3 py-2 text-xs text-slate-400">No funders found.</p>
+              ) : (
+                addFunderList.slice(0, 40).map((f) => (
+                  <button
+                    key={f}
+                    onClick={() => addFunder(f)}
+                    className="flex w-full px-3 py-1.5 text-left text-xs text-slate-700 hover:bg-slate-50 dark:text-slate-200 dark:hover:bg-slate-700"
+                  >
+                    {f}
+                  </button>
+                ))
+              )}
+            </div>
+          </div>
+        )}
+      </div>
+
+      {/* Copy link */}
+      <button
+        onClick={() => navigator.clipboard.writeText(window.location.href)}
+        className="inline-flex items-center gap-1 rounded-md border border-slate-200 px-2.5 py-1 text-xs text-slate-500 hover:text-slate-700 dark:border-slate-600 dark:text-slate-400 dark:hover:text-slate-200"
+      >
+        Copy link
+      </button>
+
+      {/* Download CSV (profile only) */}
+      {selectedFunders.length === 1 && (
+        <button
+          onClick={() => downloadProfileCSV(selectedFunders[0])}
+          className="inline-flex items-center gap-1 rounded-md border border-slate-200 px-2.5 py-1 text-xs text-slate-500 hover:text-slate-700 dark:border-slate-600 dark:text-slate-400 dark:hover:text-slate-200"
+        >
+          Download profile (CSV)
+        </button>
+      )}
+
+      <button
+        onClick={clearAll}
+        className="ml-auto inline-flex items-center gap-1 text-xs text-slate-400 hover:text-slate-600 dark:hover:text-slate-300"
+      >
+        <X className="h-3 w-3" />
+        Clear all
+      </button>
+
+      {/* Core / institutional support toggle */}
+      <button
+        onClick={() => selectedFunders.length > 0 && setShowGC((v) => !v)}
+        disabled={selectedFunders.length === 0}
+        title={
+          selectedFunders.length === 0
+            ? "Select a funder to include core budget contributions to UN entities."
+            : undefined
+        }
+        className={`flex items-center gap-1.5 text-xs transition-colors ${
+          selectedFunders.length === 0
+            ? "cursor-not-allowed text-slate-300 dark:text-slate-600"
+            : "text-slate-500 hover:text-slate-700 dark:text-slate-400 dark:hover:text-slate-300"
+        }`}
+      >
+        <Landmark className="h-3.5 w-3.5" />
+        <span>Core / institutional support</span>
+        <div
+          className={`h-4 w-7 rounded-full transition-colors ${
+            selectedFunders.length === 0
+              ? "bg-slate-200 dark:bg-slate-700"
+              : showGC
+                ? "bg-[var(--brand-primary-dark)]"
+                : "bg-slate-300"
+          }`}
+        >
+          <div
+            className={`h-4 w-4 rounded-full bg-white transition-transform ${
+              showGC && selectedFunders.length > 0 ? "translate-x-3" : "translate-x-0"
+            }`}
+          />
+        </div>
+      </button>
+    </div>
+  );
+
+  const renderZeroOrgNote = () =>
+    fundersWithNoOrgs.length > 0 ? (
+      <div className="rounded-lg border border-amber-200 bg-amber-50 px-4 py-3 text-sm text-amber-800 dark:border-amber-800 dark:bg-amber-900/20 dark:text-amber-300">
+        {fundersWithNoOrgs.map((f) => (
+          <p key={f}>
+            <strong>{f}</strong> has no documented support outside core budget contributions to UN entities. Turn on &quot;Core / institutional support&quot; to include it.
+          </p>
+        ))}
+      </div>
+    ) : null;
+
+  const renderNetworkGraph = () => (
+    <div className="rounded-xl border border-slate-200 bg-white dark:border-slate-700 dark:bg-slate-800">
+      <button
+        onClick={() => setShowNetwork((v) => !v)}
+        className="flex w-full items-center justify-between p-6 text-left"
+      >
+        <span className="flex items-center gap-2 text-sm font-semibold text-slate-900 dark:text-white">
+          <Network className="h-4 w-4 text-[var(--brand-primary)]" />
+          Network graph
+        </span>
+        <ChevronDown
+          className={`h-4 w-4 text-slate-400 transition-transform ${showNetwork ? "rotate-180" : ""}`}
+        />
+      </button>
+      {showNetwork && filteredData && (
+        <div className="border-t border-slate-100 dark:border-slate-700">
+          <div style={{ height: 520 }}>
+            <NetworkGraph
+              organizationsWithProjects={filteredData.organizationsWithProjects}
+              allOrganizations={filteredData.allOrganizations}
+              onOpenOrganizationModal={(key) => router.push(`/explore?org=${key}`)}
+              onOpenProjectModal={(key) => router.push(`/explore?asset=${key}`)}
+              combinedDonors={selectedFunders}
+              availableDonorCountries={availableFunders}
+              onDonorsChange={setSelectedFunders}
+              investmentThemes={EMPTY_STRINGS}
+              allKnownInvestmentThemes={filteredData.investmentThemes}
+              investmentThemesByType={filteredData.investmentThemesByType}
+              onThemesChange={NOOP}
+              investmentTypes={EMPTY_STRINGS}
+              allKnownInvestmentTypes={allKnownInvestmentTypes}
+              onTypesChange={NOOP}
+              onResetFilters={clearAll}
+              orgAgenciesMap={orgAgenciesMap}
+            />
+          </div>
+        </div>
+      )}
+    </div>
+  );
+
+  const renderSharedOrgsSection = () => (
+    <div className="rounded-xl border border-slate-200 bg-white p-6 dark:border-slate-700 dark:bg-slate-800">
+      <h2 className="mb-4 flex items-center gap-2 text-sm font-semibold text-slate-900 dark:text-white">
+        <Building2 className="h-4 w-4 text-[var(--brand-primary)]" />
+        Shared organizations ({sharedOrgsDisplayed.length})
+      </h2>
+      {sharedOrgsDisplayed.length === 0 ? (
+        <p className="text-sm text-slate-500 dark:text-slate-400">
+          {selectedFunders.length === 2
+            ? `${selectedFunders[0]} and ${selectedFunders[1]} don't fund any of the same organizations.`
+            : "The selected funders don't fund any of the same organizations."}
+        </p>
+      ) : (
+        <div className="grid gap-8 lg:grid-cols-2">
+          {/* List */}
+          <div>
+            <h3 className="mb-2 text-xs font-semibold uppercase tracking-wide text-slate-400">
+              By selected funders
+            </h3>
+            <div className="max-h-72 space-y-0.5 overflow-y-auto">
+              {sharedOrgsDisplayed.map((org) => (
+                <div
+                  key={org.id}
+                  className="flex items-start justify-between gap-2 rounded px-2 py-1.5 hover:bg-slate-50 dark:hover:bg-slate-700/50"
+                >
+                  <div className="min-w-0 flex-1">
+                    <p className="truncate text-xs text-slate-700 dark:text-slate-300">{org.name}</p>
+                    <p className="truncate text-xs text-slate-400">
+                      {org.selectedFundersForOrg.join(", ")}
+                    </p>
+                  </div>
+                  <span
+                    className="shrink-0 rounded px-1.5 py-0.5 text-xs font-semibold"
+                    style={{
+                      backgroundColor: "var(--brand-primary-lighter)",
+                      color: "var(--brand-primary)",
+                    }}
+                  >
+                    {org.totalFunders} {org.totalFunders === 1 ? "funder" : "funders"}
+                  </span>
+                </div>
+              ))}
+            </div>
+          </div>
+
+          {/* Matrix */}
+          {matrixCols.length > 0 && matrixOrgs.length > 0 && (
+            <div>
+              <h3 className="mb-2 text-xs font-semibold uppercase tracking-wide text-slate-400">
+                Funding matrix
+              </h3>
+              <div className="overflow-x-auto">
+                <table className="border-collapse text-xs">
+                  <thead>
+                    <tr>
+                      <th className="border-b-2 border-slate-200 py-1 pr-3 text-left text-xs font-semibold text-slate-500 dark:border-slate-600">
+                        Organization
+                      </th>
+                      {matrixCols.map((col) => (
+                        <th
+                          key={col}
+                          className="whitespace-nowrap border-b-2 border-slate-200 px-2 py-1 text-center text-xs font-semibold text-slate-500 dark:border-slate-600"
+                          title={col}
+                        >
+                          {col.length > 14 ? col.slice(0, 12) + "…" : col}
+                        </th>
+                      ))}
+                    </tr>
+                  </thead>
+                  <tbody>
+                    {matrixOrgs.map((org) => (
+                      <tr key={org.id}>
+                        <td
+                          className="whitespace-nowrap border-r-2 border-slate-200 py-1 pr-3 text-xs text-slate-600 dark:border-slate-600"
+                          title={org.name}
+                        >
+                          {org.name.length > 22 ? org.name.slice(0, 20) + "…" : org.name}
+                        </td>
+                        {matrixCols.map((col) => {
+                          const funds = org.allFunders.includes(col);
+                          const isSelected = selectedFunders.includes(col);
+                          return (
+                            <td
+                              key={col}
+                              className={`border border-slate-100 px-2 py-1 text-center dark:border-slate-700 ${
+                                funds
+                                  ? isSelected
+                                    ? "bg-[var(--brand-bg-lighter)]"
+                                    : "bg-amber-50 dark:bg-amber-900/20"
+                                  : ""
+                              }`}
+                            >
+                              {funds ? (
+                                <span
+                                  className={`inline-block h-3 w-3 rounded-sm ${
+                                    isSelected ? "bg-[var(--brand-primary)]" : "bg-amber-400"
+                                  }`}
+                                />
+                              ) : null}
+                            </td>
+                          );
+                        })}
+                      </tr>
+                    ))}
+                  </tbody>
+                </table>
+                <p className="mt-2 text-xs text-slate-400">
+                  Filled square = that funder funds that organization.
+                  {selectedFunders.length === 1
+                    ? " Top 5 co-funders shown as additional columns."
+                    : ""}
+                  {matrixOrgs.length < sharedOrgsDisplayed.length && (
+                    <> Showing {matrixOrgs.length} of {sharedOrgsDisplayed.length} organizations.</>
+                  )}
+                </p>
+              </div>
+            </div>
+          )}
+        </div>
+      )}
+    </div>
+  );
+
   // --------------- render -----------------------------------------------
 
   return (
@@ -496,21 +880,20 @@ export default function InsightsPage() {
                 Insights
               </h1>
               <p className="mt-1 text-sm text-slate-500 dark:text-slate-400">
-                See funding overlaps, shared organizations, and where support is
-                concentrated or thin.
+                Explore what a funder supports, who else supports the same organizations, and where support is thin.
               </p>
             </div>
 
-            {/* STEP 1 box */}
+            {/* STEP 1 */}
             <div className="rounded-xl border border-slate-200 bg-white p-6 dark:border-slate-700 dark:bg-slate-800">
               <div className="mb-3 inline-flex items-center gap-1.5 rounded-full bg-[var(--brand-bg-lighter)] px-2.5 py-0.5 text-xs font-semibold text-[var(--brand-primary)]">
                 STEP 1
               </div>
               <h2 className="mb-1 text-base font-semibold text-slate-900 dark:text-white">
-                Which funders do you want to explore?
+                Which funder do you want to explore?
               </h2>
               <p className="mb-4 text-sm text-slate-500 dark:text-slate-400">
-                Select one or more funders to see how their investments overlap.
+                Pick one funder for a profile, or several to compare them.
               </p>
 
               <div className="relative mb-3">
@@ -524,14 +907,12 @@ export default function InsightsPage() {
                 />
               </div>
 
-              {availableFunders.length > 0 && (
+              {funderSearch && (
                 <div className="mb-4 max-h-52 overflow-y-auto rounded-md border border-slate-100 dark:border-slate-700">
                   {step1List.length === 0 ? (
-                    <p className="px-3 py-2 text-xs text-slate-400">
-                      No funders found.
-                    </p>
+                    <p className="px-3 py-2 text-xs text-slate-400">No funders found.</p>
                   ) : (
-                    step1List.slice(0, 60).map((f) => {
+                    step1List.slice(0, 40).map((f) => {
                       const selected = pendingFunders.includes(f);
                       return (
                         <button
@@ -579,420 +960,245 @@ export default function InsightsPage() {
                 Show insights
                 <ArrowRight className="ml-1.5 h-4 w-4" />
               </Button>
-
-              <p className="mt-3 text-xs text-slate-400">
-                You can compare multiple funders or start with just one.
-              </p>
             </div>
 
-            {/* WHAT YOU'LL SEE */}
-            <div>
-              <p className="mb-3 text-xs font-semibold uppercase tracking-wide text-slate-400">
-                What you&apos;ll see
-              </p>
-              <div className="grid grid-cols-1 gap-3 sm:grid-cols-2 lg:grid-cols-4">
-                {PREVIEW_CARDS.map((c) => (
-                  <div
-                    key={c.title}
-                    className="rounded-xl border border-slate-100 bg-white p-4 opacity-50 dark:border-slate-700 dark:bg-slate-800"
-                  >
-                    <div className="mb-2 text-slate-300 dark:text-slate-600">
-                      {c.icon}
-                    </div>
-                    <p className="mb-1 text-sm font-semibold text-slate-600 dark:text-slate-400">
-                      {c.title}
-                    </p>
-                    <p className="text-xs text-slate-400 dark:text-slate-500">
-                      {c.desc}
-                    </p>
-                  </div>
-                ))}
+            {/* Popular starting points */}
+            {popularFunders.length > 0 && (
+              <div>
+                <p className="mb-3 text-xs font-semibold uppercase tracking-wide text-slate-400">
+                  Popular starting points
+                </p>
+                <div className="flex flex-wrap gap-2">
+                  {popularFunders.map((f) => (
+                    <button
+                      key={f}
+                      onClick={() => {
+                        setSelectedFunders([f]);
+                        setPendingFunders([f]);
+                        setHasShownInsights(true);
+                      }}
+                      className="inline-flex items-center gap-1.5 rounded-full border border-slate-200 bg-white px-4 py-2 text-sm text-slate-700 transition-all hover:border-[var(--brand-primary)] hover:text-[var(--brand-primary)] hover:shadow-sm dark:border-slate-700 dark:bg-slate-900 dark:text-slate-300"
+                    >
+                      <ArrowRight className="h-3.5 w-3.5 shrink-0" />
+                      {f}
+                    </button>
+                  ))}
+                </div>
               </div>
-            </div>
+            )}
           </div>
         ) : (
           /* ===== RESULTS STATE ===== */
           <div className="space-y-6">
-            {/* Comparing bar */}
-            <div className="flex flex-wrap items-center gap-2">
-              <span className="text-sm font-medium text-slate-500 dark:text-slate-400">
-                Comparing:
-              </span>
-
-              {selectedFunders.map((f) => (
-                <span
-                  key={f}
-                  className="inline-flex items-center gap-1 rounded-full bg-[var(--brand-bg-lighter)] px-2.5 py-1 text-xs font-medium text-[var(--brand-primary)]"
-                >
-                  {f}
-                  <button
-                    onClick={() => removeFunder(f)}
-                    className="ml-0.5 rounded-full p-0.5 hover:bg-[var(--brand-primary-lighter)]"
-                    aria-label={`Remove ${f}`}
-                  >
-                    <X className="h-2.5 w-2.5" />
-                  </button>
-                </span>
-              ))}
-
-              {/* Add funder */}
-              <div ref={addFunderRef} className="relative">
-                <button
-                  onClick={() => setAddFunderOpen((o) => !o)}
-                  className="inline-flex items-center gap-1 rounded-full border border-dashed border-slate-300 px-2.5 py-1 text-xs text-slate-500 transition-colors hover:border-[var(--brand-primary)] hover:text-[var(--brand-primary)] dark:border-slate-600"
-                >
-                  + Add funder
-                </button>
-                {addFunderOpen && (
-                  <div className="absolute left-0 top-8 z-20 w-56 rounded-lg border border-slate-200 bg-white shadow-lg dark:border-slate-700 dark:bg-slate-800">
-                    <div className="p-2">
-                      <input
-                        autoFocus
-                        type="text"
-                        value={addFunderSearch}
-                        onChange={(e) => setAddFunderSearch(e.target.value)}
-                        placeholder="Search…"
-                        className="w-full rounded border border-slate-200 px-2 py-1 text-xs focus:border-[var(--brand-primary)] focus:outline-none dark:border-slate-600 dark:bg-slate-700 dark:text-white"
-                      />
-                    </div>
-                    <div className="max-h-52 overflow-y-auto">
-                      {addFunderList.length === 0 ? (
-                        <p className="px-3 py-2 text-xs text-slate-400">
-                          No funders found.
-                        </p>
-                      ) : (
-                        addFunderList.slice(0, 40).map((f) => (
-                          <button
-                            key={f}
-                            onClick={() => addFunder(f)}
-                            className="flex w-full px-3 py-1.5 text-left text-xs text-slate-700 hover:bg-slate-50 dark:text-slate-200 dark:hover:bg-slate-700"
-                          >
-                            {f}
-                          </button>
-                        ))
-                      )}
-                    </div>
-                  </div>
-                )}
-              </div>
-
-              <button
-                onClick={clearAll}
-                className="ml-auto inline-flex items-center gap-1 text-xs text-slate-400 hover:text-slate-600 dark:hover:text-slate-300"
-              >
-                <X className="h-3 w-3" />
-                Clear all
-              </button>
-
-              {/* Core / institutional support toggle */}
-              <button
-                onClick={() => selectedFunders.length > 0 && setShowGC((v) => !v)}
-                disabled={selectedFunders.length === 0}
-                title={
-                  selectedFunders.length === 0
-                    ? "Select a funder to include core budget contributions to UN entities."
-                    : undefined
-                }
-                className={`flex items-center gap-1.5 text-xs transition-colors ${
-                  selectedFunders.length === 0
-                    ? "cursor-not-allowed text-slate-300 dark:text-slate-600"
-                    : "text-slate-500 hover:text-slate-700 dark:text-slate-400 dark:hover:text-slate-300"
-                }`}
-              >
-                <Landmark className="h-3.5 w-3.5" />
-                <span>Core / institutional support</span>
-                <div
-                  className={`h-4 w-7 rounded-full transition-colors ${
-                    selectedFunders.length === 0
-                      ? "bg-slate-200 dark:bg-slate-700"
-                      : showGC
-                        ? "bg-[var(--brand-primary-dark)]"
-                        : "bg-slate-300"
-                  }`}
-                >
-                  <div
-                    className={`h-4 w-4 rounded-full bg-white transition-transform ${
-                      showGC && selectedFunders.length > 0
-                        ? "translate-x-3"
-                        : "translate-x-0"
-                    }`}
-                  />
-                </div>
-              </button>
-            </div>
-
-            {/* Summary sentence */}
-            {summarySentence && (
-              <p className="text-sm text-slate-600 dark:text-slate-400">
-                {summarySentence}
-              </p>
-            )}
-
-            {/* Zero-org funder note */}
-            {fundersWithNoOrgs.length > 0 && (
-              <div className="rounded-lg border border-amber-200 bg-amber-50 px-4 py-3 text-sm text-amber-800 dark:border-amber-800 dark:bg-amber-900/20 dark:text-amber-300">
-                {fundersWithNoOrgs.map((f) => (
-                  <p key={f}>
-                    <strong>{f}</strong> has no documented support outside core budget contributions to UN entities. Turn on &quot;Core / institutional support&quot; to include it.
-                  </p>
-                ))}
-              </div>
-            )}
+            {renderToolbar()}
+            {renderZeroOrgNote()}
 
             {loading ? (
               <div className="flex items-center justify-center py-16">
                 <div className="h-6 w-6 animate-spin rounded-full border-2 border-[var(--brand-primary)] border-t-transparent" />
-                <span className="ml-3 text-sm text-slate-500">
-                  Loading insights…
-                </span>
+                <span className="ml-3 text-sm text-slate-500">Loading insights…</span>
               </div>
-            ) : (
-              <>
-                {/* Section 1: Who else funds */}
-                {coFundersRanked.length > 0 && (
-                  <div className="rounded-xl border border-slate-200 bg-white p-6 dark:border-slate-700 dark:bg-slate-800">
-                    <h2 className="mb-4 flex items-center gap-2 text-sm font-semibold text-slate-900 dark:text-white">
-                      <Globe className="h-4 w-4 text-[var(--brand-primary)]" />
-                      Who else funds the same organizations
-                    </h2>
-                    <div className="space-y-2">
-                      {(showAllCoFunders
-                        ? coFundersRanked
-                        : coFundersRanked.slice(0, 10)
-                      ).map(([funder, count]) => (
-                        <div key={funder} className="flex items-center gap-3">
-                          <span
-                            className="w-36 shrink-0 truncate text-xs text-slate-600 dark:text-slate-400"
-                            title={funder}
-                          >
-                            {funder}
-                          </span>
-                          <div className="flex-1">
-                            <div className="h-2.5 w-full rounded-full bg-slate-100 dark:bg-slate-700">
-                              <div
-                                className="h-2.5 rounded-full"
-                                style={{
-                                  width: `${(count / maxCoFunder) * 100}%`,
-                                  minWidth: count > 0 ? "4px" : "0",
-                                  backgroundColor: "var(--brand-primary)",
-                                }}
-                              />
-                            </div>
-                          </div>
-                          <span className="w-32 shrink-0 text-right text-xs text-slate-500">
-                            {count} shared {count === 1 ? "organization" : "organizations"}
-                          </span>
-                        </div>
-                      ))}
-                    </div>
-                    {coFundersRanked.length > 10 && (
-                      <button
-                        onClick={() => setShowAllCoFunders((v) => !v)}
-                        className="mt-3 text-xs hover:underline"
-                        style={{ color: "var(--brand-primary)" }}
-                      >
-                        {showAllCoFunders
-                          ? "Show fewer"
-                          : `Show all (${coFundersRanked.length})`}
-                      </button>
-                    )}
-                  </div>
-                )}
+            ) : selectedFunders.length === 1 ? (
+              /* ===== SINGLE FUNDER PROFILE ===== */
+              (() => {
+                const F = selectedFunders[0];
+                const profileData = getFunderData(F);
+                const funderOrgs = sharedOrgsData;
+                const orgCount = funderOrgs.length;
+                const productCount = profileData?.stats?.dataProjects ?? 0;
+                const onlyFunderOrgs = funderOrgs.filter((o) => o.totalFunders === 1);
+                const agencies: string[] = funderAgencies.get(F) ?? [];
+                // eslint-disable-next-line @typescript-eslint/no-explicit-any
+                const typesSupported = (profileData?.projectTypes ?? []).filter((t: any) => t.count > 0).length;
+                const maxTypeCount = Math.max(
+                  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+                  ...(profileData?.projectTypes ?? []).map((t: any) => t.count as number),
+                  1,
+                );
 
-                {/* Section 2: Shared organizations */}
-                <div className="rounded-xl border border-slate-200 bg-white p-6 dark:border-slate-700 dark:bg-slate-800">
-                  <h2 className="mb-4 flex items-center gap-2 text-sm font-semibold text-slate-900 dark:text-white">
-                    <Building2 className="h-4 w-4 text-[var(--brand-primary)]" />
-                    Shared organizations ({sharedOrgsDisplayed.length})
-                  </h2>
-                  {sharedOrgsDisplayed.length === 0 ? (
-                    <p className="text-sm text-slate-500 dark:text-slate-400">
-                      {selectedFunders.length === 2
-                        ? `${selectedFunders[0]} and ${selectedFunders[1]} don’t fund any of the same organizations.`
-                        : selectedFunders.length === 1
-                          ? `No co-funded organizations found for ${selectedFunders[0]}.`
-                          : "The selected funders don’t fund any of the same organizations."}
-                    </p>
-                  ) : (
-                    <div className="grid gap-8 lg:grid-cols-2">
-                      {/* List */}
-                      <div>
-                        <h3 className="mb-2 text-xs font-semibold uppercase tracking-wide text-slate-400">
-                          {selectedFunders.length === 1
-                            ? "Co-funded organizations"
-                            : "By selected funders"}
-                        </h3>
-                        <div className="max-h-72 space-y-0.5 overflow-y-auto">
-                          {sharedOrgsDisplayed.map((org) => (
-                            <div
-                              key={org.id}
-                              className="flex items-start justify-between gap-2 rounded px-2 py-1.5 hover:bg-slate-50 dark:hover:bg-slate-700/50"
+                const funderOrgIds = new Set(funderOrgs.map((o) => o.id));
+                const thinlySupported = funderOrgs.filter((o) => o.totalFunders <= 2);
+
+                const funderOrgsWithData = funderOrgs.map((org) => {
+                  const orgData = allOrgData?.allOrganizations.find((o) => o.id === org.id);
+                  const types = [
+                    ...new Set(orgData?.projects.flatMap((p) => p.investmentTypes ?? []) ?? []),
+                  ];
+                  const productCount2 = orgData?.projects.length ?? 0;
+                  return { ...org, types, productCount: productCount2 };
+                });
+
+                return (
+                  <div className="space-y-6">
+                    {/* 1. Header card */}
+                    <div className="rounded-xl border border-slate-200 bg-white p-6 dark:border-slate-700 dark:bg-slate-800">
+                      <p className="mb-1 text-xs font-semibold uppercase tracking-wide text-[var(--brand-primary)]">
+                        Funder profile
+                      </p>
+                      <h1 className="mb-3 text-2xl font-bold text-slate-900 dark:text-white sm:text-3xl">
+                        {F}
+                      </h1>
+                      {agencies.length > 0 && (
+                        <div className="flex flex-wrap gap-1.5">
+                          {agencies.slice(0, 6).map((a) => (
+                            <span
+                              key={a}
+                              className="rounded-full bg-slate-100 px-2.5 py-0.5 text-xs text-slate-600 dark:bg-slate-700 dark:text-slate-300"
                             >
-                              <div className="min-w-0 flex-1">
-                                <p className="truncate text-xs text-slate-700 dark:text-slate-300">
-                                  {org.name}
-                                </p>
-                                {selectedFunders.length > 1 && (
-                                  <p className="truncate text-xs text-slate-400">
-                                    {org.selectedFundersForOrg.join(", ")}
-                                  </p>
-                                )}
-                              </div>
-                              <span
-                                className="shrink-0 rounded px-1.5 py-0.5 text-xs font-semibold"
-                                style={{
-                                  backgroundColor: "var(--brand-primary-lighter)",
-                                  color: "var(--brand-primary)",
-                                }}
-                              >
-                                {org.totalFunders}{" "}
-                                {org.totalFunders === 1 ? "funder" : "funders"}
-                              </span>
-                            </div>
+                              {a}
+                            </span>
                           ))}
-                        </div>
-                      </div>
-
-                      {/* Matrix — orgs as rows, funders as columns */}
-                      {matrixCols.length > 0 && matrixOrgs.length > 0 && (
-                        <div>
-                          <h3 className="mb-2 text-xs font-semibold uppercase tracking-wide text-slate-400">
-                            Funding matrix
-                          </h3>
-                          <div className="overflow-x-auto">
-                            <table className="border-collapse text-xs">
-                              <thead>
-                                <tr>
-                                  <th className="border-b-2 border-slate-200 py-1 pr-3 text-left text-xs font-semibold text-slate-500 dark:border-slate-600">
-                                    Organization
-                                  </th>
-                                  {matrixCols.map((col) => (
-                                    <th
-                                      key={col}
-                                      className="whitespace-nowrap border-b-2 border-slate-200 px-2 py-1 text-center text-xs font-semibold text-slate-500 dark:border-slate-600"
-                                      title={col}
-                                    >
-                                      {col.length > 14
-                                        ? col.slice(0, 12) + "…"
-                                        : col}
-                                    </th>
-                                  ))}
-                                </tr>
-                              </thead>
-                              <tbody>
-                                {matrixOrgs.map((org) => (
-                                  <tr key={org.id}>
-                                    <td
-                                      className="whitespace-nowrap border-r-2 border-slate-200 py-1 pr-3 text-xs text-slate-600 dark:border-slate-600"
-                                      title={org.name}
-                                    >
-                                      {org.name.length > 22
-                                        ? org.name.slice(0, 20) + "…"
-                                        : org.name}
-                                    </td>
-                                    {matrixCols.map((col) => {
-                                      const funds = org.allFunders.includes(col);
-                                      const isSelected =
-                                        selectedFunders.includes(col);
-                                      return (
-                                        <td
-                                          key={col}
-                                          className={`border border-slate-100 px-2 py-1 text-center dark:border-slate-700 ${
-                                            funds
-                                              ? isSelected
-                                                ? "bg-[var(--brand-bg-lighter)]"
-                                                : "bg-amber-50 dark:bg-amber-900/20"
-                                              : ""
-                                          }`}
-                                        >
-                                          {funds ? (
-                                            <span
-                                              className={`inline-block h-3 w-3 rounded-sm ${
-                                                isSelected
-                                                  ? "bg-[var(--brand-primary)]"
-                                                  : "bg-amber-400"
-                                              }`}
-                                            />
-                                          ) : null}
-                                        </td>
-                                      );
-                                    })}
-                                  </tr>
-                                ))}
-                              </tbody>
-                            </table>
-                            <p className="mt-2 text-xs text-slate-400">
-                              Filled square = that funder funds that organization.{" "}
-                              {selectedFunders.length === 1
-                                ? "Top 5 co-funders shown as additional columns."
-                                : ""}
-                              {matrixOrgs.length < sharedOrgsDisplayed.length && (
-                                <>
-                                  {" "}
-                                  Showing {matrixOrgs.length} of{" "}
-                                  {sharedOrgsDisplayed.length} organizations.
-                                </>
-                              )}
-                            </p>
-                          </div>
+                          {agencies.length > 6 && (
+                            <span className="rounded-full bg-slate-100 px-2.5 py-0.5 text-xs text-slate-500 dark:bg-slate-700">
+                              +{agencies.length - 6} more
+                            </span>
+                          )}
                         </div>
                       )}
                     </div>
-                  )}
-                </div>
 
-                {/* Section 3: Overlaps by theme */}
-                {themeOverlaps.length > 0 && (
-                  <div className="rounded-xl border border-slate-200 bg-white p-6 dark:border-slate-700 dark:bg-slate-800">
-                    <h2 className="mb-4 flex items-center gap-2 text-sm font-semibold text-slate-900 dark:text-white">
-                      <Layers className="h-4 w-4 text-[var(--brand-primary)]" />
-                      Overlaps by theme
-                    </h2>
-                    <div className="space-y-2">
-                      {themeOverlaps.map(({ name, count }) => (
-                        <div key={name} className="flex items-center gap-3">
+                    {/* 2. Summary line */}
+                    <p className="text-sm text-slate-600 dark:text-slate-400">
+                      Documented support to{" "}
+                      <strong className="text-slate-800 dark:text-slate-200">{orgCount}</strong>{" "}
+                      organizations and{" "}
+                      <strong className="text-slate-800 dark:text-slate-200">{productCount}</strong>{" "}
+                      data products across{" "}
+                      <strong className="text-slate-800 dark:text-slate-200">{typesSupported}</strong>{" "}
+                      of 6 types.
+                    </p>
+
+                    {/* 3. Big numbers */}
+                    <div className="grid grid-cols-2 gap-4 sm:grid-cols-4">
+                      {[
+                        { count: orgCount, label: "organizations supported" },
+                        { count: productCount, label: "data products" },
+                        { count: coFundersRanked.length, label: "co-funders" },
+                        {
+                          count: onlyFunderOrgs.length,
+                          label: "organizations where it's the only documented funder",
+                        },
+                      ].map(({ count, label }) => (
+                        <div
+                          key={label}
+                          className="flex flex-col rounded-xl border border-slate-200 bg-white p-5 dark:border-slate-700 dark:bg-slate-900"
+                        >
                           <span
-                            className="w-44 shrink-0 truncate text-xs text-slate-600 dark:text-slate-400"
-                            title={name}
+                            className="text-3xl font-bold"
+                            style={{ color: "var(--brand-primary)" }}
                           >
-                            {name}
+                            {count}
                           </span>
-                          <div className="flex-1">
-                            <div className="h-2.5 w-full rounded-full bg-slate-100 dark:bg-slate-700">
-                              <div
-                                className="h-2.5 rounded-full"
-                                style={{
-                                  width: `${(count / (themeOverlaps[0]?.count ?? 1)) * 100}%`,
-                                  minWidth: count > 0 ? "4px" : "0",
-                                  backgroundColor: "var(--brand-primary)",
-                                }}
-                              />
-                            </div>
-                          </div>
-                          <span className="w-20 shrink-0 text-right text-xs text-slate-500">
-                            {count} {count === 1 ? "org" : "orgs"}
-                          </span>
+                          <p className="mt-1 text-sm text-slate-600 dark:text-slate-400">{label}</p>
                         </div>
                       ))}
                     </div>
-                  </div>
-                )}
 
-                {/* Section 4: Gaps */}
-                {(singleFunderOrgs.length > 0 || themeGaps.length > 0) && (
-                  <div className="rounded-xl border border-slate-200 bg-white p-6 dark:border-slate-700 dark:bg-slate-800">
-                    <h2 className="mb-4 flex items-center gap-2 text-sm font-semibold text-slate-900 dark:text-white">
-                      <AlertCircle className="h-4 w-4 text-amber-500" />
-                      Gaps
-                    </h2>
-                    <div className="grid gap-8 lg:grid-cols-2">
-                      {singleFunderOrgs.length > 0 && (
-                        <div>
-                          <h3 className="mb-2 text-xs font-semibold uppercase tracking-wide text-slate-400">
-                            Organizations relying on one funder
-                          </h3>
-                          <div className="space-y-0.5">
-                            {singleFunderOrgs.map((org) => (
+                    {/* 4. Portfolio by type + Only funder orgs */}
+                    <div className="grid gap-4 lg:grid-cols-2">
+                      {/* Portfolio by type */}
+                      <div className="rounded-xl border border-slate-200 bg-white p-6 dark:border-slate-700 dark:bg-slate-800">
+                        <h2 className="mb-4 text-sm font-semibold text-slate-900 dark:text-white">
+                          Portfolio by type
+                        </h2>
+                        <div className="space-y-3">
+                          {Object.entries(labels.investmentTypes).map(([key, typeName]) => {
+                            // eslint-disable-next-line @typescript-eslint/no-explicit-any
+                            const apiType = (profileData?.projectTypes ?? []).find((t: any) => t.name === typeName);
+                            const count = apiType?.count ?? 0;
+                            const expanded = expandedTypes.has(key);
+
+                            // top themes in this type for this funder's orgs
+                            const funderThemes = new Map<string, number>();
+                            allOrgData?.allOrganizations
+                              .filter((o) => funderOrgIds.has(o.id))
+                              .forEach((org) =>
+                                org.projects.forEach((p) => {
+                                  if (p.investmentTypes?.includes(typeName)) {
+                                    p.investmentThemes?.forEach((t) =>
+                                      funderThemes.set(t, (funderThemes.get(t) ?? 0) + 1),
+                                    );
+                                  }
+                                }),
+                              );
+                            const topThemes = Array.from(funderThemes.entries())
+                              .sort((a, b) => b[1] - a[1])
+                              .slice(0, 3)
+                              .map(([t]) => t);
+
+                            return (
+                              <div key={key}>
+                                <div className="flex items-center gap-3">
+                                  <span
+                                    className="w-44 shrink-0 truncate text-xs text-slate-600 dark:text-slate-400"
+                                    title={typeName}
+                                  >
+                                    {typeName}
+                                  </span>
+                                  <div className="flex-1">
+                                    <div className="h-2.5 w-full rounded-full bg-slate-100 dark:bg-slate-700">
+                                      <div
+                                        className="h-2.5 rounded-full"
+                                        style={{
+                                          width:
+                                            count > 0
+                                              ? `${(count / maxTypeCount) * 100}%`
+                                              : "0",
+                                          minWidth: count > 0 ? "4px" : "0",
+                                          backgroundColor: "var(--brand-primary)",
+                                        }}
+                                      />
+                                    </div>
+                                  </div>
+                                  <span className="w-20 shrink-0 text-right text-xs text-slate-500">
+                                    {count} {count === 1 ? "product" : "products"}
+                                  </span>
+                                  {topThemes.length > 0 && (
+                                    <button
+                                      onClick={() =>
+                                        setExpandedTypes((prev) => {
+                                          const s = new Set(prev);
+                                          s.has(key) ? s.delete(key) : s.add(key);
+                                          return s;
+                                        })
+                                      }
+                                      className="shrink-0 text-xs"
+                                      style={{ color: "var(--brand-primary)" }}
+                                    >
+                                      {expanded ? "▲" : "▼"}
+                                    </button>
+                                  )}
+                                </div>
+                                {expanded && topThemes.length > 0 && (
+                                  <div className="mt-1 flex flex-wrap gap-1 pl-48">
+                                    {topThemes.map((t) => (
+                                      <span
+                                        key={t}
+                                        className="rounded bg-slate-100 px-1.5 py-0.5 text-xs text-slate-500 dark:bg-slate-700"
+                                      >
+                                        {t}
+                                      </span>
+                                    ))}
+                                  </div>
+                                )}
+                              </div>
+                            );
+                          })}
+                        </div>
+                      </div>
+
+                      {/* Only funder orgs */}
+                      <div className="rounded-xl border border-slate-200 bg-white p-6 dark:border-slate-700 dark:bg-slate-800">
+                        <h2 className="mb-4 text-sm font-semibold text-slate-900 dark:text-white">
+                          Where it is the only funder
+                        </h2>
+                        {onlyFunderOrgs.length === 0 ? (
+                          <p className="text-sm text-slate-500 dark:text-slate-400">
+                            None: every organization it supports has at least one other funder.
+                          </p>
+                        ) : (
+                          <div className="max-h-72 space-y-0.5 overflow-y-auto">
+                            {onlyFunderOrgs.map((org) => (
                               <div
                                 key={org.id}
                                 className="flex items-center justify-between gap-2 rounded px-2 py-1.5 hover:bg-slate-50 dark:hover:bg-slate-700/50"
@@ -1000,92 +1206,413 @@ export default function InsightsPage() {
                                 <span className="min-w-0 flex-1 truncate text-xs text-slate-700 dark:text-slate-300">
                                   {org.name}
                                 </span>
-                                <span className="shrink-0 text-xs text-slate-400">
-                                  {org.allFunders[0]}
-                                </span>
+                                <span className="shrink-0 text-xs text-slate-400">1 funder</span>
                               </div>
                             ))}
                           </div>
-                        </div>
-                      )}
+                        )}
+                      </div>
+                    </div>
 
-                      {themeGaps.length > 0 && (
+                    {/* 5. Similar portfolios */}
+                    {similarFunders.length > 0 && (
+                      <div className="rounded-xl border border-slate-200 bg-white p-6 dark:border-slate-700 dark:bg-slate-800">
+                        <h2 className="mb-4 text-sm font-semibold text-slate-900 dark:text-white">
+                          Funders with similar portfolios
+                        </h2>
+                        <div className="space-y-2">
+                          {(showAllSimilar
+                            ? similarFunders
+                            : similarFunders.slice(0, 8)
+                          ).map(({ f, count, pct }) => (
+                            <div key={f} className="flex items-center gap-3">
+                              <span
+                                className="w-36 shrink-0 truncate text-xs text-slate-600 dark:text-slate-400"
+                                title={f}
+                              >
+                                {f}
+                              </span>
+                              <div className="flex-1">
+                                <div className="h-2.5 w-full rounded-full bg-slate-100 dark:bg-slate-700">
+                                  <div
+                                    className="h-2.5 rounded-full"
+                                    style={{
+                                      width: `${pct}%`,
+                                      minWidth: pct > 0 ? "4px" : "0",
+                                      backgroundColor: "var(--brand-primary)",
+                                    }}
+                                  />
+                                </div>
+                              </div>
+                              <span className="w-28 shrink-0 text-right text-xs text-slate-500">
+                                {pct}% · {count} orgs
+                              </span>
+                            </div>
+                          ))}
+                        </div>
+                        {similarFunders.length >= 3 && (
+                          <button
+                            onClick={() => {
+                              const top3 = similarFunders.slice(0, 3).map((s) => s.f);
+                              const next = [...new Set([...selectedFunders, ...top3])];
+                              setSelectedFunders(next);
+                              setPendingFunders(next);
+                            }}
+                            className="mt-3 text-xs hover:underline"
+                            style={{ color: "var(--brand-primary)" }}
+                          >
+                            Compare with the top 3
+                          </button>
+                        )}
+                      </div>
+                    )}
+
+                    {/* 6. Gaps */}
+                    <div className="rounded-xl border border-slate-200 bg-white p-6 dark:border-slate-700 dark:bg-slate-800">
+                      <h2 className="mb-4 flex items-center gap-2 text-sm font-semibold text-slate-900 dark:text-white">
+                        <AlertCircle className="h-4 w-4 text-amber-500" />
+                        Gaps
+                      </h2>
+                      <div className="grid gap-8 lg:grid-cols-2">
                         <div>
                           <h3 className="mb-2 text-xs font-semibold uppercase tracking-wide text-slate-400">
-                            Themes with the fewest funders
+                            Types it doesn&apos;t support yet
                           </h3>
-                          <div className="space-y-1.5">
-                            {themeGaps.map(({ theme, funderCount }) => (
-                              <div
-                                key={theme}
-                                className="flex items-center justify-between gap-2"
+                          {typeGaps.length === 0 ? (
+                            <p className="text-xs text-slate-400">It supports all 6 types.</p>
+                          ) : (
+                            <div className="space-y-1">
+                              {typeGaps.map(({ typeName, funderCount }) => (
+                                <div
+                                  key={typeName}
+                                  className="flex items-center justify-between gap-2"
+                                >
+                                  <span className="min-w-0 flex-1 truncate text-xs text-slate-600 dark:text-slate-400">
+                                    {typeName}
+                                  </span>
+                                  <span className="shrink-0 rounded bg-amber-50 px-1.5 py-0.5 text-xs font-semibold text-amber-600 dark:bg-amber-900/20 dark:text-amber-400">
+                                    {funderCount} funders overall
+                                  </span>
+                                </div>
+                              ))}
+                            </div>
+                          )}
+                        </div>
+                        <div>
+                          <h3 className="mb-2 text-xs font-semibold uppercase tracking-wide text-slate-400">
+                            Thinly supported organizations in its portfolio
+                          </h3>
+                          {thinlySupported.length === 0 ? (
+                            <p className="text-xs text-slate-400">
+                              All organizations it supports have 3 or more funders.
+                            </p>
+                          ) : (
+                            <div className="max-h-48 space-y-0.5 overflow-y-auto">
+                              {thinlySupported.map((org) => (
+                                <div
+                                  key={org.id}
+                                  className="flex items-center justify-between gap-2 rounded px-2 py-1.5 hover:bg-slate-50 dark:hover:bg-slate-700/30"
+                                >
+                                  <span className="min-w-0 flex-1 truncate text-xs text-slate-700 dark:text-slate-300">
+                                    {org.name}
+                                  </span>
+                                  <span className="shrink-0 text-xs text-slate-400">
+                                    {org.totalFunders}{" "}
+                                    {org.totalFunders === 1 ? "funder" : "funders"}
+                                  </span>
+                                </div>
+                              ))}
+                            </div>
+                          )}
+                        </div>
+                      </div>
+                    </div>
+
+                    {/* 7. Supported organizations table */}
+                    <div className="rounded-xl border border-slate-200 bg-white p-6 dark:border-slate-700 dark:bg-slate-800">
+                      <h2 className="mb-4 text-sm font-semibold text-slate-900 dark:text-white">
+                        Supported organizations ({funderOrgs.length})
+                      </h2>
+                      <div className="overflow-x-auto">
+                        <table className="w-full border-collapse text-xs">
+                          <thead>
+                            <tr className="border-b border-slate-200 dark:border-slate-700">
+                              <th className="py-2 pr-4 text-left text-xs font-semibold text-slate-500">
+                                Organization
+                              </th>
+                              <th className="py-2 pr-4 text-left text-xs font-semibold text-slate-500">
+                                Types
+                              </th>
+                              <th className="py-2 pr-4 text-left text-xs font-semibold text-slate-500">
+                                Products
+                              </th>
+                              <th className="py-2 text-left text-xs font-semibold text-slate-500">
+                                Other funders
+                              </th>
+                            </tr>
+                          </thead>
+                          <tbody>
+                            {(showOrgTable
+                              ? funderOrgsWithData
+                              : funderOrgsWithData.slice(0, 10)
+                            ).map((org) => (
+                              <tr
+                                key={org.id}
+                                className="border-b border-slate-100 dark:border-slate-800 hover:bg-slate-50 dark:hover:bg-slate-700/30"
                               >
-                                <span className="min-w-0 flex-1 truncate text-xs text-slate-600 dark:text-slate-400">
-                                  {theme}
-                                </span>
-                                <span className="shrink-0 rounded bg-amber-50 px-1.5 py-0.5 text-xs font-semibold text-amber-600 dark:bg-amber-900/20 dark:text-amber-400">
-                                  {funderCount}{" "}
-                                  {funderCount === 1 ? "funder" : "funders"}
-                                </span>
-                              </div>
+                                <td className="py-2 pr-4">
+                                  <span className="block max-w-[180px] truncate text-slate-700 dark:text-slate-300">
+                                    {org.name}
+                                  </span>
+                                </td>
+                                <td className="py-2 pr-4 text-slate-500">
+                                  <span className="block max-w-[160px] truncate">
+                                    {org.types.join(", ") || "—"}
+                                  </span>
+                                </td>
+                                <td className="py-2 pr-4 text-slate-500">{org.productCount}</td>
+                                <td className="py-2 text-slate-500">{org.totalFunders - 1}</td>
+                              </tr>
                             ))}
+                          </tbody>
+                        </table>
+                      </div>
+                      {funderOrgsWithData.length > 10 && (
+                        <button
+                          onClick={() => setShowOrgTable((v) => !v)}
+                          className="mt-3 text-xs hover:underline"
+                          style={{ color: "var(--brand-primary)" }}
+                        >
+                          {showOrgTable
+                            ? "Show fewer"
+                            : `Show all (${funderOrgsWithData.length})`}
+                        </button>
+                      )}
+                    </div>
+
+                    {/* 8. Network */}
+                    {renderNetworkGraph()}
+                  </div>
+                );
+              })()
+            ) : (
+              /* ===== COMPARISON VIEW ===== */
+              <div className="space-y-6">
+                {/* 1. Overview table */}
+                <div className="rounded-xl border border-slate-200 bg-white p-6 dark:border-slate-700 dark:bg-slate-800">
+                  <h2 className="mb-4 text-sm font-semibold text-slate-900 dark:text-white">Overview</h2>
+                  <div className="overflow-x-auto">
+                    <table className="w-full border-collapse text-sm">
+                      <thead>
+                        <tr>
+                          <th className="w-40 py-2 pr-4 text-left text-xs font-semibold text-slate-400" />
+                          {funderStats.map((fs) => (
+                            <th
+                              key={fs.f}
+                              className="px-3 py-2 text-center text-xs font-semibold text-slate-700 dark:text-slate-200"
+                            >
+                              <span
+                                className="inline-block max-w-[120px] truncate"
+                                title={fs.f}
+                                style={{ color: fs.color }}
+                              >
+                                {fs.f}
+                              </span>
+                            </th>
+                          ))}
+                        </tr>
+                      </thead>
+                      <tbody>
+                        {(
+                          [
+                            { key: "orgCount", label: "Organizations" },
+                            { key: "productCount", label: "Data products" },
+                            { key: "coFunders", label: "Co-funders" },
+                            { key: "onlyOrgs", label: "Only-funder orgs" },
+                          ] as const
+                        ).map((row) => (
+                          <tr
+                            key={row.key}
+                            className="border-t border-slate-100 dark:border-slate-800"
+                          >
+                            <td className="py-2 pr-4 text-xs text-slate-500">{row.label}</td>
+                            {funderStats.map((fs) => (
+                              <td key={fs.f} className="px-3 py-2 text-center">
+                                <span
+                                  className="text-xl font-bold"
+                                  style={{ color: fs.color }}
+                                >
+                                  {fs[row.key]}
+                                </span>
+                              </td>
+                            ))}
+                          </tr>
+                        ))}
+                      </tbody>
+                    </table>
+                  </div>
+                  <div className="mt-4 grid grid-cols-2 gap-4">
+                    <div className="rounded-lg border border-slate-100 bg-slate-50 p-4 dark:border-slate-700 dark:bg-slate-900">
+                      <span
+                        className="text-2xl font-bold"
+                        style={{ color: "var(--brand-primary)" }}
+                      >
+                        {
+                          sharedOrgsData.filter(
+                            (o) =>
+                              o.selectedFundersForOrg.length === selectedFunders.length,
+                          ).length
+                        }
+                      </span>
+                      <p className="mt-1 text-xs text-slate-600 dark:text-slate-400">
+                        organizations supported by all selected funders
+                      </p>
+                    </div>
+                    <div className="rounded-lg border border-slate-100 bg-slate-50 p-4 dark:border-slate-700 dark:bg-slate-900">
+                      <span
+                        className="text-2xl font-bold"
+                        style={{ color: "var(--brand-primary)" }}
+                      >
+                        {sharedOrgsDisplayed.length}
+                      </span>
+                      <p className="mt-1 text-xs text-slate-600 dark:text-slate-400">
+                        organizations supported by at least two of the selected funders
+                      </p>
+                    </div>
+                  </div>
+                </div>
+
+                {/* 2. Portfolio by type */}
+                <div className="rounded-xl border border-slate-200 bg-white p-6 dark:border-slate-700 dark:bg-slate-800">
+                  <h2 className="mb-1 text-sm font-semibold text-slate-900 dark:text-white">
+                    Portfolio by type
+                  </h2>
+                  {/* Legend */}
+                  <div className="mb-4 flex flex-wrap gap-3">
+                    {funderStats.map((fs) => (
+                      <span
+                        key={fs.f}
+                        className="flex items-center gap-1.5 text-xs text-slate-600 dark:text-slate-300"
+                      >
+                        <span
+                          className="inline-block h-2.5 w-2.5 rounded-full"
+                          style={{ backgroundColor: fs.color }}
+                        />
+                        <span className="max-w-[100px] truncate" title={fs.f}>
+                          {fs.f}
+                        </span>
+                      </span>
+                    ))}
+                  </div>
+                  <div className="space-y-4">
+                    {Object.entries(labels.investmentTypes).map(([key, typeName]) => {
+                      const maxCount = Math.max(
+                        ...funderStats.map((fs) => {
+                          const data = getFunderData(fs.f);
+                          // eslint-disable-next-line @typescript-eslint/no-explicit-any
+                          return (data?.projectTypes ?? []).find((t: any) => t.name === typeName)?.count ?? 0;
+                        }),
+                        1,
+                      );
+                      return (
+                        <div key={key}>
+                          <p className="mb-1 text-xs font-medium text-slate-600 dark:text-slate-400">
+                            {typeName}
+                          </p>
+                          <div className="space-y-1">
+                            {funderStats.map((fs) => {
+                              const data = getFunderData(fs.f);
+                              // eslint-disable-next-line @typescript-eslint/no-explicit-any
+                              const count = (data?.projectTypes ?? []).find((t: any) => t.name === typeName)?.count ?? 0;
+                              return (
+                                <div key={fs.f} className="flex items-center gap-3">
+                                  <span
+                                    className="w-32 shrink-0 truncate text-xs text-slate-500"
+                                    title={fs.f}
+                                  >
+                                    {fs.f}
+                                  </span>
+                                  <div className="flex-1">
+                                    <div className="h-2 w-full rounded-full bg-slate-100 dark:bg-slate-700">
+                                      <div
+                                        className="h-2 rounded-full"
+                                        style={{
+                                          width: `${(count / maxCount) * 100}%`,
+                                          minWidth: count > 0 ? "4px" : "0",
+                                          backgroundColor: fs.color,
+                                        }}
+                                      />
+                                    </div>
+                                  </div>
+                                  <span className="w-16 shrink-0 text-right text-xs text-slate-500">
+                                    {count} prods
+                                  </span>
+                                </div>
+                              );
+                            })}
                           </div>
+                        </div>
+                      );
+                    })}
+                  </div>
+                </div>
+
+                {/* 3. Shared organizations */}
+                {renderSharedOrgsSection()}
+
+                {/* 4. Gaps */}
+                <div className="rounded-xl border border-slate-200 bg-white p-6 dark:border-slate-700 dark:bg-slate-800">
+                  <h2 className="mb-4 flex items-center gap-2 text-sm font-semibold text-slate-900 dark:text-white">
+                    <AlertCircle className="h-4 w-4 text-amber-500" />
+                    Gaps
+                  </h2>
+                  <div className="grid gap-8 lg:grid-cols-2">
+                    <div>
+                      <h3 className="mb-2 text-xs font-semibold uppercase tracking-wide text-slate-400">
+                        Types none of them support
+                      </h3>
+                      {comparisonTypeGaps.length === 0 ? (
+                        <p className="text-xs text-slate-400">Together they cover all 6 types.</p>
+                      ) : (
+                        <div className="space-y-1">
+                          {comparisonTypeGaps.map((t) => (
+                            <p key={t} className="text-xs text-slate-600 dark:text-slate-400">
+                              {t}
+                            </p>
+                          ))}
+                        </div>
+                      )}
+                    </div>
+                    <div>
+                      <h3 className="mb-2 text-xs font-semibold uppercase tracking-wide text-slate-400">
+                        Organizations relying on only one of the selected funders
+                      </h3>
+                      {onlyOneFunderOrgs.length === 0 ? (
+                        <p className="text-xs text-slate-400">None.</p>
+                      ) : (
+                        <div className="max-h-48 space-y-0.5 overflow-y-auto">
+                          {onlyOneFunderOrgs.map((org) => (
+                            <div
+                              key={org.id}
+                              className="flex items-center justify-between gap-2 rounded px-2 py-1.5 hover:bg-slate-50 dark:hover:bg-slate-700/30"
+                            >
+                              <span className="min-w-0 flex-1 truncate text-xs text-slate-700 dark:text-slate-300">
+                                {org.name}
+                              </span>
+                              <span className="shrink-0 text-xs text-slate-400">
+                                {org.theFunder}
+                              </span>
+                            </div>
+                          ))}
                         </div>
                       )}
                     </div>
                   </div>
-                )}
-
-                {/* Section 5: Network graph (collapsed by default) */}
-                <div className="rounded-xl border border-slate-200 bg-white dark:border-slate-700 dark:bg-slate-800">
-                  <button
-                    onClick={() => setShowNetwork((v) => !v)}
-                    className="flex w-full items-center justify-between p-6 text-left"
-                  >
-                    <span className="flex items-center gap-2 text-sm font-semibold text-slate-900 dark:text-white">
-                      <Network className="h-4 w-4 text-[var(--brand-primary)]" />
-                      Network graph
-                    </span>
-                    <ChevronDown
-                      className={`h-4 w-4 text-slate-400 transition-transform ${showNetwork ? "rotate-180" : ""}`}
-                    />
-                  </button>
-                  {showNetwork && filteredData && (
-                    <div className="border-t border-slate-100 dark:border-slate-700">
-                      <div style={{ height: 520 }}>
-                        <NetworkGraph
-                          organizationsWithProjects={
-                            filteredData.organizationsWithProjects
-                          }
-                          allOrganizations={filteredData.allOrganizations}
-                          onOpenOrganizationModal={(key) =>
-                            router.push(`/explore?org=${key}`)
-                          }
-                          onOpenProjectModal={(key) =>
-                            router.push(`/explore?asset=${key}`)
-                          }
-                          combinedDonors={selectedFunders}
-                          availableDonorCountries={availableFunders}
-                          onDonorsChange={setSelectedFunders}
-                          investmentThemes={EMPTY_STRINGS}
-                          allKnownInvestmentThemes={
-                            filteredData.investmentThemes
-                          }
-                          investmentThemesByType={
-                            filteredData.investmentThemesByType
-                          }
-                          onThemesChange={NOOP}
-                          investmentTypes={EMPTY_STRINGS}
-                          allKnownInvestmentTypes={allKnownInvestmentTypes}
-                          onTypesChange={NOOP}
-                          onResetFilters={clearAll}
-                          orgAgenciesMap={orgAgenciesMap}
-                        />
-                      </div>
-                    </div>
-                  )}
                 </div>
-              </>
+
+                {/* 5. Network */}
+                {renderNetworkGraph()}
+              </div>
             )}
           </div>
         )}
