@@ -1,14 +1,14 @@
 "use client";
 
 import { useEffect, useMemo, useRef, useState } from "react";
-import Link from "next/link";
+import { useRouter } from "next/navigation";
+import { ArrowRight, Info } from "lucide-react";
 import {
-  ArrowRight,
-  BarChart3,
-  Search,
-  HelpCircle,
-  Database,
-} from "lucide-react";
+  Tooltip,
+  TooltipContent,
+  TooltipProvider,
+  TooltipTrigger,
+} from "@/components/ui/tooltip";
 import PageHeader from "@/components/PageHeader";
 import HomePageRepository, {
   type HomePageRepositoryHandle,
@@ -16,6 +16,7 @@ import HomePageRepository, {
 import { useGeneralContributions } from "@/contexts/GeneralContributionsContext";
 import { processDashboardData } from "@/lib/data";
 import labels from "@/config/labels.json";
+import { INVESTMENT_TYPE_DESCRIPTIONS } from "@/config/investmentDescriptions";
 import type { OrganizationWithProjects, ProjectData } from "@/types/airtable";
 
 // ─────────────────────────────────────────────────────────
@@ -30,7 +31,6 @@ interface ComputedStats {
   fivePlusFunderProducts: number;
   singleFunderOrgs: number;
   fivePlusFunderOrgs: number;
-  noProductLevelDocsPercent: number;
   topFunder: string | null;
   wellKnownProduct: { name: string; funderCount: number } | null;
   typeStats: Array<{
@@ -87,15 +87,6 @@ function computeStats(
   const fivePlusFunderOrgs = allOrganizations.filter(
     (o) => (o.donorCountries?.length ?? 0) >= 5,
   ).length;
-
-  // Percent of products with no product-level funder documentation
-  const productsWithNoProductFunders = allProjects.filter(
-    (p) => (p.donorCountries?.length ?? 0) === 0,
-  ).length;
-  const noProductLevelDocsPercent =
-    allProjects.length > 0
-      ? Math.round((productsWithNoProductFunders / allProjects.length) * 100)
-      : 0;
 
   // Top funder (most products funded)
   const funderProductCount = new Map<string, number>();
@@ -157,7 +148,6 @@ function computeStats(
     fivePlusFunderProducts,
     singleFunderOrgs,
     fivePlusFunderOrgs,
-    noProductLevelDocsPercent,
     topFunder,
     wellKnownProduct,
     typeStats,
@@ -166,37 +156,15 @@ function computeStats(
 }
 
 // ─────────────────────────────────────────────────────────
-// Sub-components
-// ─────────────────────────────────────────────────────────
-
-function QuestionChip({
-  label,
-  onClick,
-}: {
-  label: string;
-  onClick: () => void;
-}) {
-  return (
-    <button
-      onClick={onClick}
-      className="inline-flex items-center gap-1.5 rounded-full border border-slate-200 bg-white px-4 py-2 text-sm text-slate-700 transition-all hover:border-[var(--brand-primary)] hover:text-[var(--brand-primary)] hover:shadow-sm dark:border-slate-700 dark:bg-slate-900 dark:text-slate-300"
-    >
-      <ArrowRight className="h-3.5 w-3.5 shrink-0" />
-      {label}
-    </button>
-  );
-}
-
-// ─────────────────────────────────────────────────────────
 // Main component
 // ─────────────────────────────────────────────────────────
 
 export default function HomePage() {
   const { showGeneralContributions } = useGeneralContributions();
+  const router = useRouter();
   const repoRef = useRef<HomePageRepositoryHandle>(null);
 
   const [stats, setStats] = useState<ComputedStats | null>(null);
-  const [introSearch, setIntroSearch] = useState("");
 
   // Fetch unfiltered dashboard data for homepage stats
   useEffect(() => {
@@ -235,116 +203,6 @@ export default function HomePage() {
     }, 50);
   };
 
-  const handleIntroSearch = () => {
-    if (!introSearch.trim()) {
-      goToRepository();
-      return;
-    }
-    goToRepository({
-      searchQuery: introSearch.trim(),
-      appliedSearchQuery: introSearch.trim(),
-    });
-  };
-
-  // Question chips (computed once stats load)
-  const questionChips = useMemo(() => {
-    if (!stats) return [];
-    const chips: Array<{ label: string; onClick: () => void }> = [];
-
-    if (stats.topFunder) {
-      chips.push({
-        label: `What does ${stats.topFunder} support?`,
-        onClick: () => goToRepository({ donors: [stats.topFunder!] }),
-      });
-    }
-    if (stats.wellKnownProduct) {
-      chips.push({
-        label: `Who supports ${stats.wellKnownProduct.name}?`,
-        onClick: () =>
-          goToRepository({
-            searchQuery: stats.wellKnownProduct!.name,
-            appliedSearchQuery: stats.wellKnownProduct!.name,
-          }),
-      });
-    }
-    chips.push({
-      label: "Which organizations rely on a single funder?",
-      onClick: () => goToRepository({ singleFunderOrg: true }),
-    });
-    chips.push({
-      label: "Which organizations have five or more funders?",
-      onClick: () => goToRepository({ fivePlusFunderOrg: true }),
-    });
-    return chips;
-  }, [stats]);
-
-  // "Start with a question" cards
-  const entryCards = [
-    {
-      key: "funder",
-      title: "What does a funder support?",
-      description:
-        "Select a funder to see which organizations and products they support.",
-      onClick: () => goToRepository(),
-      icon: Database,
-    },
-    {
-      key: "product",
-      title: "Who supports a data product?",
-      description:
-        "Find a product and see every funder documented for it.",
-      onClick: () => goToRepository(),
-      icon: Search,
-    },
-    {
-      key: "insights",
-      title: "Where is support shared or thin?",
-      description:
-        "Explore overlaps, concentration, and gaps across the ecosystem.",
-      href: "/insights",
-      icon: BarChart3,
-    },
-    {
-      key: "gap",
-      title: "Spotted a gap or an error?",
-      description: "Help improve the data by suggesting a correction.",
-      // TODO: replace placeholder with real correction form URL
-      href: "#",
-      icon: HelpCircle,
-    },
-  ];
-
-  // "At a glance" cards
-  const glanceCards = useMemo(() => {
-    if (!stats) return [];
-    return [
-      {
-        key: "single-org",
-        count: stats.singleFunderOrgs,
-        label: "organizations rely on a single documented funder.",
-        onClick: () => goToRepository({ singleFunderOrg: true }),
-        href: undefined as string | undefined,
-        linkLabel: undefined as string | undefined,
-      },
-      {
-        key: "five-plus-org",
-        count: stats.fivePlusFunderOrgs,
-        label: "organizations are supported by five or more funders.",
-        onClick: () => goToRepository({ fivePlusFunderOrg: true }),
-        href: undefined as string | undefined,
-        linkLabel: undefined as string | undefined,
-      },
-      {
-        key: "no-product-docs",
-        count: `${stats.noProductLevelDocsPercent}%`,
-        label: "of data products have funding documented only at organization level.",
-        onClick: undefined as (() => void) | undefined,
-        // TODO: replace href with the real correction form URL
-        href: "#" as string | undefined,
-        linkLabel: "Know who funds a specific product? Suggest an update" as string | undefined,
-      },
-    ];
-  }, [stats]);
 
   // "Browse by theme" type cards
   const maxProductCount = useMemo(
@@ -365,171 +223,175 @@ export default function HomePage() {
             Who supports the data behind crisis response?
           </h1>
 
-          {/* One-line stats */}
-          {stats ? (
-            <p className="mt-4 max-w-2xl text-base leading-relaxed text-slate-600 dark:text-slate-400 sm:text-lg">
-              A public map of documented support between{" "}
-              <strong className="text-slate-800 dark:text-slate-200">
-                {stats.totalFunders}
-              </strong>{" "}
-              funders,{" "}
-              <strong className="text-slate-800 dark:text-slate-200">
-                {stats.totalOrgs}
-              </strong>{" "}
-              organizations and{" "}
-              <strong className="text-slate-800 dark:text-slate-200">
-                {stats.totalProducts}
-              </strong>{" "}
-              data products, compiled from open sources. It shows who supports
-              whom, not how much.
-            </p>
-          ) : (
-            <p className="mt-4 max-w-2xl text-base leading-relaxed text-slate-600 dark:text-slate-400 sm:text-lg">
-              A public map of documented support between funders, organizations,
-              and data products. Shows who supports whom, not how much.
-            </p>
-          )}
+          <p className="mt-4 max-w-2xl text-base leading-relaxed text-slate-600 dark:text-slate-400 sm:text-lg">
+            The Crisis Data Funding Compass maps who funds the organizations and
+            data products that support crisis response. Use it to see what a
+            funder supports, who else supports the same organizations, and where
+            support is thin. Compiled from public sources, it shows who supports
+            whom, not how much.
+          </p>
 
-          {/* Intro search */}
-          <div className="mt-6 flex max-w-xl gap-2">
-            <div className="relative flex-1">
-              <Search className="pointer-events-none absolute top-1/2 left-3 h-4 w-4 -translate-y-1/2 text-slate-400" />
-              <input
-                type="text"
-                value={introSearch}
-                onChange={(e) => setIntroSearch(e.target.value)}
-                onKeyDown={(e) => {
-                  if (e.key === "Enter") handleIntroSearch();
-                }}
-                placeholder="Search funders, organizations, or products…"
-                className="h-11 w-full rounded-lg border border-slate-200 bg-white pl-10 pr-4 text-sm text-slate-900 placeholder-slate-400 transition-colors focus:border-[var(--brand-primary)] focus:outline-none focus:ring-2 focus:ring-[var(--brand-primary)]/20 dark:border-slate-700 dark:bg-slate-900 dark:text-white"
-              />
-            </div>
-            <button
-              onClick={handleIntroSearch}
-              className="rounded-lg px-5 py-2 text-sm font-medium text-white transition-opacity hover:opacity-90"
-              style={{ backgroundColor: "var(--brand-primary)" }}
-            >
-              Explore
-            </button>
-          </div>
-
-          {/* Question chips */}
-          {questionChips.length > 0 && (
-            <div className="mt-5 flex flex-wrap gap-2">
-              {questionChips.map((chip) => (
-                <QuestionChip
-                  key={chip.label}
-                  label={chip.label}
-                  onClick={chip.onClick}
-                />
-              ))}
-            </div>
-          )}
-        </section>
-
-        {/* ── 2. Start with a question ── */}
-        <section className="pb-12">
-          <h2 className="mb-4 text-base font-semibold uppercase tracking-wide text-slate-500 dark:text-slate-400">
-            Start with a question
-          </h2>
-          <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-4">
-            {entryCards.map(({ key, title, description, href, onClick, icon: Icon }) => {
-              const cardClass =
-                "group flex flex-col rounded-xl border border-slate-200 bg-white p-5 transition-all hover:shadow-md dark:border-slate-700 dark:bg-slate-900 dark:hover:border-slate-600";
-
-              const inner = (
-                <>
-                  <div className="mb-3 flex h-9 w-9 items-center justify-center rounded-lg bg-slate-100 dark:bg-slate-800">
-                    <Icon
-                      className="h-5 w-5"
-                      style={{ color: "var(--brand-primary)" }}
-                    />
-                  </div>
-                  <div className="flex items-center gap-1.5">
-                    <span className="text-sm font-semibold text-slate-900 dark:text-white">
-                      {title}
-                    </span>
-                    <ArrowRight
-                      className="h-3.5 w-3.5 shrink-0 transition-transform group-hover:translate-x-0.5"
-                      style={{ color: "var(--brand-primary)" }}
-                    />
-                  </div>
-                  <p className="mt-1.5 text-xs leading-relaxed text-slate-500 dark:text-slate-400">
-                    {description}
-                  </p>
-                </>
-              );
-
-              if (href) {
-                return (
-                  <Link key={key} href={href} className={cardClass}>
-                    {inner}
-                  </Link>
-                );
-              }
-              return (
-                <button
-                  key={key}
-                  onClick={onClick}
-                  className={`${cardClass} text-left`}
-                >
-                  {inner}
-                </button>
-              );
-            })}
+          {/* Question cards */}
+          <div className="mt-6 grid grid-cols-1 gap-4 md:grid-cols-2">
+            {(
+              [
+                {
+                  title: "What does a funder support?",
+                  body: "See a funder's profile: the organizations it supports, its portfolio and who funds alongside it.",
+                  action: () => router.push("/insights"),
+                },
+                {
+                  title: "Where do funders overlap?",
+                  body: "Compare funders side by side and see which organizations they share.",
+                  action: () => router.push("/insights"),
+                },
+                {
+                  title: "Who supports an organization or data product?",
+                  body: "Search and filter every organization, its data products and their funders.",
+                  action: () =>
+                    document
+                      .getElementById("repository")
+                      ?.scrollIntoView({ behavior: "smooth" }),
+                },
+                {
+                  title: "What kinds of data work get funded?",
+                  body: "Browse organizations and products by type of data work.",
+                  action: () =>
+                    document
+                      .getElementById("browse-by-type")
+                      ?.scrollIntoView({ behavior: "smooth" }),
+                },
+              ] as const
+            ).map(({ title, body, action }) => (
+              <button
+                key={title}
+                onClick={action}
+                className="group flex flex-col rounded-xl border border-slate-200 bg-white p-5 text-left transition-all hover:shadow-md dark:border-slate-700 dark:bg-slate-900 dark:hover:border-slate-600"
+              >
+                <div className="flex items-center gap-1.5">
+                  <span className="text-sm font-semibold text-slate-900 dark:text-white">
+                    {title}
+                  </span>
+                  <ArrowRight
+                    className="h-3.5 w-3.5 shrink-0 transition-transform group-hover:translate-x-0.5"
+                    style={{ color: "var(--brand-primary)" }}
+                  />
+                </div>
+                <p className="mt-1.5 text-xs leading-relaxed text-slate-500 dark:text-slate-400">
+                  {body}
+                </p>
+              </button>
+            ))}
           </div>
         </section>
 
-        {/* ── 3. At a glance ── */}
+        {/* ── 2. At a glance ── */}
         <section className="pb-12">
           <h2 className="mb-4 text-base font-semibold uppercase tracking-wide text-slate-500 dark:text-slate-400">
             At a glance
           </h2>
-          <div className="grid grid-cols-1 gap-4 sm:grid-cols-3">
-            {glanceCards.map(({ key, count, label, onClick, href, linkLabel }) => (
-              <div
-                key={key}
-                className="flex flex-col justify-between rounded-xl border border-slate-200 bg-white p-5 dark:border-slate-700 dark:bg-slate-900"
-              >
-                <div>
-                  <span
-                    className="text-3xl font-bold"
-                    style={{ color: "var(--brand-primary)" }}
+          {stats && (
+            <>
+              {/* Row 1: headline numbers */}
+              <div className="mb-4 grid grid-cols-3 gap-4">
+                {(
+                  [
+                    { count: stats.totalFunders, label: "funders" },
+                    { count: stats.totalOrgs, label: "organizations" },
+                    { count: stats.totalProducts, label: "data products" },
+                  ] as const
+                ).map(({ count, label }) => (
+                  <div
+                    key={label}
+                    className="flex flex-col rounded-xl border border-slate-200 bg-white p-5 dark:border-slate-700 dark:bg-slate-900"
                   >
-                    {count}
-                  </span>
-                  <p className="mt-1 text-sm text-slate-600 dark:text-slate-400">
-                    {label}
-                  </p>
-                </div>
-                {href ? (
-                  <Link
-                    href={href}
-                    className="mt-4 inline-flex items-center gap-1 text-xs font-medium transition-opacity hover:opacity-75"
-                    style={{ color: "var(--brand-primary)" }}
-                  >
-                    {linkLabel ?? "Learn more"}
-                    <ArrowRight className="h-3 w-3" />
-                  </Link>
-                ) : onClick ? (
+                    <span
+                      className="text-3xl font-bold"
+                      style={{ color: "var(--brand-primary)" }}
+                    >
+                      {count}
+                    </span>
+                    <p className="mt-1 text-sm text-slate-600 dark:text-slate-400">
+                      {label}
+                    </p>
+                  </div>
+                ))}
+              </div>
+
+              {/* Row 2: org cards + CTA */}
+              <div className="grid grid-cols-1 gap-4 sm:grid-cols-3">
+                <div className="flex flex-col justify-between rounded-xl border border-slate-200 bg-white p-5 dark:border-slate-700 dark:bg-slate-900">
+                  <div>
+                    <span
+                      className="text-3xl font-bold"
+                      style={{ color: "var(--brand-primary)" }}
+                    >
+                      {stats.singleFunderOrgs}
+                    </span>
+                    <p className="mt-1 text-sm text-slate-600 dark:text-slate-400">
+                      organizations rely on a single documented funder.
+                    </p>
+                  </div>
                   <button
-                    onClick={onClick}
+                    onClick={() => goToRepository({ singleFunderOrg: true })}
                     className="mt-4 inline-flex items-center gap-1 text-xs font-medium transition-opacity hover:opacity-75"
                     style={{ color: "var(--brand-primary)" }}
                   >
                     See which ones
                     <ArrowRight className="h-3 w-3" />
                   </button>
-                ) : null}
+                </div>
+
+                <div className="flex flex-col justify-between rounded-xl border border-slate-200 bg-white p-5 dark:border-slate-700 dark:bg-slate-900">
+                  <div>
+                    <span
+                      className="text-3xl font-bold"
+                      style={{ color: "var(--brand-primary)" }}
+                    >
+                      {stats.fivePlusFunderOrgs}
+                    </span>
+                    <p className="mt-1 text-sm text-slate-600 dark:text-slate-400">
+                      organizations are supported by five or more funders.
+                    </p>
+                  </div>
+                  <button
+                    onClick={() => goToRepository({ fivePlusFunderOrg: true })}
+                    className="mt-4 inline-flex items-center gap-1 text-xs font-medium transition-opacity hover:opacity-75"
+                    style={{ color: "var(--brand-primary)" }}
+                  >
+                    See which ones
+                    <ArrowRight className="h-3 w-3" />
+                  </button>
+                </div>
+
+                <div className="flex flex-col justify-between rounded-xl border border-slate-200 bg-white p-5 dark:border-slate-700 dark:bg-slate-900">
+                  <div>
+                    <p className="text-sm font-semibold text-slate-800 dark:text-slate-200">
+                      Help us fill the gaps
+                    </p>
+                    <p className="mt-1 text-sm text-slate-600 dark:text-slate-400">
+                      Know who funds an organization or data product we&apos;re
+                      missing? Share it with us.
+                    </p>
+                  </div>
+                  {/* TODO: link to information-request form once it exists */}
+                  <a
+                    href="#"
+                    className="mt-4 inline-flex items-center gap-1 text-xs font-medium transition-opacity hover:opacity-75"
+                    style={{ color: "var(--brand-primary)" }}
+                  >
+                    Share information
+                    <ArrowRight className="h-3 w-3" />
+                  </a>
+                </div>
               </div>
-            ))}
-          </div>
+            </>
+          )}
         </section>
 
         {/* ── 4. Browse by type ── */}
         {stats && stats.typeStats.length > 0 && (
-          <section className="pb-12">
+          <section id="browse-by-type" className="pb-12">
             <div className="mb-1 flex items-baseline gap-3">
               <h2 className="text-base font-semibold uppercase tracking-wide text-slate-500 dark:text-slate-400">
                 Browse by type
@@ -538,48 +400,66 @@ export default function HomePage() {
                 Proposed taxonomy, to be confirmed
               </span>
             </div>
-            <div className="mt-4 grid grid-cols-1 gap-3 sm:grid-cols-2 lg:grid-cols-3">
-              {stats.typeStats
-                .slice()
-                .sort((a, b) => b.productCount - a.productCount)
-                .map(({ key, typeName, productCount, funderCount }) => {
-                  const barWidth = Math.round(
-                    (productCount / maxProductCount) * 100,
-                  );
-                  return (
-                    <button
-                      key={key}
-                      onClick={() =>
-                        goToRepository({ types: [typeName] })
-                      }
-                      className="group flex flex-col rounded-xl border border-slate-200 bg-white p-4 text-left transition-all hover:border-[var(--brand-primary)] hover:shadow-sm dark:border-slate-700 dark:bg-slate-900"
-                    >
-                      <span className="text-sm font-medium text-slate-800 dark:text-slate-200">
-                        {typeName}
-                      </span>
-                      <span className="mt-0.5 text-xs text-slate-500 dark:text-slate-400">
-                        {productCount}{" "}
-                        {productCount === 1
-                          ? labels.product.singular
-                          : labels.product.plural}{" "}
-                        · {funderCount}{" "}
-                        {funderCount === 1 ? "funder" : "funders"}
-                      </span>
-                      {/* Bar */}
-                      <div className="mt-3 h-1 w-full rounded-full bg-slate-100 dark:bg-slate-800">
-                        <div
-                          className="h-1 rounded-full transition-all"
-                          style={{
-                            width: `${barWidth}%`,
-                            backgroundColor: "var(--brand-primary)",
-                            opacity: 0.6,
-                          }}
-                        />
-                      </div>
-                    </button>
-                  );
-                })}
-            </div>
+            <TooltipProvider>
+              <div className="mt-4 grid grid-cols-1 gap-3 sm:grid-cols-2 lg:grid-cols-3">
+                {stats.typeStats
+                  .slice()
+                  .sort((a, b) => b.productCount - a.productCount)
+                  .map(({ key, typeName, productCount, funderCount }) => {
+                    const barWidth = Math.round(
+                      (productCount / maxProductCount) * 100,
+                    );
+                    const description = INVESTMENT_TYPE_DESCRIPTIONS[typeName];
+                    return (
+                      <button
+                        key={key}
+                        onClick={() => goToRepository({ types: [typeName] })}
+                        className="group flex flex-col rounded-xl border border-slate-200 bg-white p-4 text-left transition-all hover:border-[var(--brand-primary)] hover:shadow-sm dark:border-slate-700 dark:bg-slate-900"
+                      >
+                        <div className="flex items-center gap-1.5">
+                          <span className="text-sm font-medium text-slate-800 dark:text-slate-200">
+                            {typeName}
+                          </span>
+                          {description && (
+                            <Tooltip>
+                              <TooltipTrigger asChild>
+                                <span
+                                  onClick={(e) => e.stopPropagation()}
+                                  className="cursor-default"
+                                >
+                                  <Info className="h-3 w-3 shrink-0 text-slate-400" />
+                                </span>
+                              </TooltipTrigger>
+                              <TooltipContent side="top" className="max-w-xs text-xs">
+                                {description}
+                              </TooltipContent>
+                            </Tooltip>
+                          )}
+                        </div>
+                        <span className="mt-0.5 text-xs text-slate-500 dark:text-slate-400">
+                          {productCount}{" "}
+                          {productCount === 1
+                            ? labels.product.singular
+                            : labels.product.plural}{" "}
+                          · {funderCount}{" "}
+                          {funderCount === 1 ? "funder" : "funders"}
+                        </span>
+                        {/* Bar */}
+                        <div className="mt-3 h-1 w-full rounded-full bg-slate-100 dark:bg-slate-800">
+                          <div
+                            className="h-1 rounded-full transition-all"
+                            style={{
+                              width: `${barWidth}%`,
+                              backgroundColor: "var(--brand-primary)",
+                              opacity: 0.6,
+                            }}
+                          />
+                        </div>
+                      </button>
+                    );
+                  })}
+              </div>
+            </TooltipProvider>
           </section>
         )}
       </div>

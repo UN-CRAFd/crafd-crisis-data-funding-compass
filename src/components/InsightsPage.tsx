@@ -122,6 +122,7 @@ export default function InsightsPage() {
   const [expandedTypes, setExpandedTypes] = useState<Set<string>>(new Set());
   const [showAllSimilar, setShowAllSimilar] = useState(false);
   const [showAllSharedOrgs, setShowAllSharedOrgs] = useState(false);
+  const [includeUN, setIncludeUN] = useState(false);
 
   // --------------- data fetching ----------------------------------------
 
@@ -162,10 +163,11 @@ export default function InsightsPage() {
     if (slugs.length > 0) {
       (window as Record<string, unknown>).__insightsFunderSlugs = slugs;
     }
+    if (searchParams.get("un") === "1") setIncludeUN(true);
     setIsInitialized(true);
   }, [searchParams]);
 
-  // available funders from nestedOrgs
+  // available funders from ALL nestedOrgs (always unfiltered — needed for funder selection)
   const availableFunders = useMemo(() => {
     const set = new Set<string>();
     nestedOrgs.forEach((org) =>
@@ -173,6 +175,42 @@ export default function InsightsPage() {
     );
     return Array.from(set).sort();
   }, [nestedOrgs]);
+
+  // UN entity names from allOrgData (for filtering nestedOrgs by name)
+  const unOrgNames = useMemo(
+    () =>
+      new Set(
+        (allOrgData?.allOrganizations ?? [])
+          .filter((o) => o.type === "United Nations")
+          .map((o) => o.organizationName),
+      ),
+    [allOrgData],
+  );
+
+  // nestedOrgs with UN entities optionally removed
+  const filteredNestedOrgs = useMemo(
+    () =>
+      includeUN
+        ? nestedOrgs
+        : nestedOrgs.filter((o) => {
+            const name = String(
+              o.name ?? o.fields?.["Organization Name"] ?? "",
+            );
+            return !unOrgNames.has(name);
+          }),
+    [nestedOrgs, includeUN, unOrgNames],
+  );
+
+  // allOrganizations with UN entities optionally removed
+  const visibleAllOrgs = useMemo(
+    () =>
+      includeUN
+        ? (allOrgData?.allOrganizations ?? [])
+        : (allOrgData?.allOrganizations ?? []).filter(
+            (o) => o.type !== "United Nations",
+          ),
+    [allOrgData, includeUN],
+  );
 
   // resolve URL slugs once orgs are loaded
   useEffect(() => {
@@ -201,12 +239,13 @@ export default function InsightsPage() {
     if (selectedFunders.length > 0) {
       params.set("funders", selectedFunders.map(toUrlSlug).join(","));
     }
+    if (includeUN) params.set("un", "1");
     const newUrl = params.toString()
       ? `/insights?${params.toString()}`
       : "/insights";
     const current = window.location.pathname + window.location.search;
     if (current !== newUrl) router.replace(newUrl, { scroll: false });
-  }, [selectedFunders, isInitialized, router]);
+  }, [selectedFunders, includeUN, isInitialized, router]);
 
   // filtered data when funders change
   useEffect(() => {
@@ -274,10 +313,10 @@ export default function InsightsPage() {
     [funderDataMap],
   );
 
-  // popular funders: top 8 by org count
+  // popular funders: top 8 by org count (respects UN filter)
   const popularFunders = useMemo(() => {
     const counts = new Map<string, number>();
-    nestedOrgs.forEach((org) =>
+    filteredNestedOrgs.forEach((org) =>
       getDonorsForOrg(org).forEach((f) =>
         counts.set(f, (counts.get(f) ?? 0) + 1),
       ),
@@ -286,12 +325,12 @@ export default function InsightsPage() {
       .sort((a, b) => b[1] - a[1])
       .slice(0, 8)
       .map(([f]) => f);
-  }, [nestedOrgs]);
+  }, [filteredNestedOrgs]);
 
-  // orgs funded by ANY selected funder (union)
+  // orgs funded by ANY selected funder (union, respects UN filter)
   const sharedOrgsData = useMemo(() => {
     if (selectedFunders.length === 0) return [];
-    return nestedOrgs
+    return filteredNestedOrgs
       .map((org) => {
         const orgFunders = getDonorsForOrg(org);
         const hasAny = selectedFunders.some((f) => orgFunders.includes(f));
@@ -317,7 +356,7 @@ export default function InsightsPage() {
       allFunders: string[];
       selectedFundersForOrg: string[];
     }>;
-  }, [nestedOrgs, selectedFunders]);
+  }, [filteredNestedOrgs, selectedFunders]);
 
   // truly shared orgs for comparison
   const sharedOrgsDisplayed = useMemo(() => {
@@ -362,14 +401,14 @@ export default function InsightsPage() {
       .filter((typeName) => !funderTypes.has(typeName))
       .map((typeName) => {
         const allFundersForType = new Set<string>();
-        allOrgData?.allOrganizations.forEach((org) => {
+        visibleAllOrgs.forEach((org) => {
           if (org.projects.some((p) => p.investmentTypes?.includes(typeName))) {
             (org.donorCountries ?? []).forEach((d) => allFundersForType.add(d));
           }
         });
         return { typeName, funderCount: allFundersForType.size };
       });
-  }, [selectedFunders, getFunderData, allOrgData]);
+  }, [selectedFunders, getFunderData, visibleAllOrgs]);
 
   // comparison: type gaps (none of the selected funders)
   const comparisonTypeGaps = useMemo(() => {
@@ -391,22 +430,22 @@ export default function InsightsPage() {
       .map((o) => ({ ...o, theFunder: o.selectedFundersForOrg[0] }));
   }, [sharedOrgsData, selectedFunders]);
 
-  // per-funder stats for comparison table
+  // per-funder stats for comparison table (respects UN filter)
   const funderStats = useMemo(
     () =>
       selectedFunders.map((f, i) => {
         const data = getFunderData(f);
-        const orgCount = nestedOrgs.filter((org) =>
+        const orgCount = filteredNestedOrgs.filter((org) =>
           getDonorsForOrg(org).includes(f),
         ).length;
         const productCount = data?.stats?.dataProjects ?? 0;
         const avgFunders = (() => {
-          const orgsList = nestedOrgs.filter((org) => getDonorsForOrg(org).includes(f));
+          const orgsList = filteredNestedOrgs.filter((org) => getDonorsForOrg(org).includes(f));
           if (orgsList.length === 0) return "—";
           const total = orgsList.reduce((sum, org) => sum + getDonorsForOrg(org).length, 0);
           return (total / orgsList.length).toFixed(1);
         })();
-        const onlyOrgs = nestedOrgs.filter((org) => {
+        const onlyOrgs = filteredNestedOrgs.filter((org) => {
           const donors = getDonorsForOrg(org);
           return donors.includes(f) && donors.length === 1;
         }).length;
@@ -420,7 +459,7 @@ export default function InsightsPage() {
         };
       }),
     // eslint-disable-next-line react-hooks/exhaustive-deps
-    [selectedFunders, nestedOrgs, funderDataMap],
+    [selectedFunders, filteredNestedOrgs, funderDataMap],
   );
 
   // --------------- handlers ---------------------------------------------
@@ -501,6 +540,21 @@ export default function InsightsPage() {
     () => Object.values(labels.investmentTypes),
     [],
   );
+
+  // filtered data for network graph (respects UN filter)
+  const networkData = useMemo(() => {
+    if (!filteredData) return null;
+    if (includeUN) return filteredData;
+    return {
+      ...filteredData,
+      allOrganizations: filteredData.allOrganizations.filter(
+        (o) => o.type !== "United Nations",
+      ),
+      organizationsWithProjects: filteredData.organizationsWithProjects.filter(
+        (o) => o.type !== "United Nations",
+      ),
+    };
+  }, [filteredData, includeUN]);
 
   // --------------- filtered lists for UI --------------------------------
 
@@ -612,6 +666,31 @@ export default function InsightsPage() {
         Clear all
       </button>
 
+      {/* Include UN entities toggle */}
+      <div className="flex flex-col gap-0.5">
+        <button
+          onClick={() => setIncludeUN((v) => !v)}
+          className={`flex items-center gap-2 rounded-full border px-3 py-1.5 text-xs transition-colors ${
+            includeUN
+              ? "border-blue-300 bg-blue-50 text-blue-700 dark:border-blue-700 dark:bg-blue-900/30 dark:text-blue-300"
+              : "border-slate-200 bg-white text-slate-600 hover:border-slate-300 dark:border-slate-700 dark:bg-slate-800 dark:text-slate-400"
+          }`}
+        >
+          <div
+            className={`h-4 w-7 rounded-full transition-colors ${includeUN ? "bg-blue-500" : "bg-slate-300 dark:bg-slate-600"}`}
+          >
+            <div
+              className={`h-4 w-4 rounded-full bg-white shadow transition-transform ${includeUN ? "translate-x-3" : "translate-x-0"}`}
+            />
+          </div>
+          <span>Include UN entities</span>
+        </button>
+        <p className="max-w-[260px] pl-1 text-[10px] text-slate-400 dark:text-slate-500">
+          UN entities are funded by many member states, which makes most funders
+          look alike. They&apos;re hidden by default.
+        </p>
+      </div>
+
     </div>
   );
 
@@ -629,20 +708,20 @@ export default function InsightsPage() {
           className={`h-4 w-4 text-slate-400 transition-transform ${showNetwork ? "rotate-180" : ""}`}
         />
       </button>
-      {showNetwork && filteredData && (
+      {showNetwork && networkData && (
         <div className="border-t border-slate-100 dark:border-slate-700">
           <div style={{ height: 520 }}>
             <NetworkGraph
-              organizationsWithProjects={filteredData.organizationsWithProjects}
-              allOrganizations={filteredData.allOrganizations}
+              organizationsWithProjects={networkData.organizationsWithProjects}
+              allOrganizations={networkData.allOrganizations}
               onOpenOrganizationModal={(key) => router.push(`/explore?org=${key}`)}
               onOpenProjectModal={(key) => router.push(`/explore?asset=${key}`)}
               combinedDonors={selectedFunders}
               availableDonorCountries={availableFunders}
               onDonorsChange={setSelectedFunders}
               investmentThemes={EMPTY_STRINGS}
-              allKnownInvestmentThemes={filteredData.investmentThemes}
-              investmentThemesByType={filteredData.investmentThemesByType}
+              allKnownInvestmentThemes={networkData.investmentThemes}
+              investmentThemesByType={networkData.investmentThemesByType}
               onThemesChange={NOOP}
               investmentTypes={EMPTY_STRINGS}
               allKnownInvestmentTypes={allKnownInvestmentTypes}
