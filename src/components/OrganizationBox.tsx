@@ -36,6 +36,8 @@ interface OrganizationBoxProps {
   showDetailsButton?: boolean;
   projectCount?: number;
   projectLabel?: string;
+  /** When set, the chevron becomes its own button that toggles products and the row opens the modal. */
+  onToggleExpand?: () => void;
 }
 
 // Utility function moved outside component
@@ -64,7 +66,9 @@ const OrganizationBoxComponent: React.FC<OrganizationBoxProps> = ({
   showDetailsButton = false,
   projectCount = 0,
   projectLabel = "assets",
+  onToggleExpand,
 }) => {
+  const simplified = !!onToggleExpand;
   const [isHovered, setIsHovered] = useState(false);
   const { resolvedTheme } = useTheme();
   const isDark = resolvedTheme === "dark";
@@ -113,6 +117,21 @@ const OrganizationBoxComponent: React.FC<OrganizationBoxProps> = ({
     [orgKey, onOpenOrganizationModal],
   );
 
+  const handleRowClick = useCallback(() => {
+    if (simplified && orgKey) onOpenOrganizationModal(orgKey);
+  }, [simplified, orgKey, onOpenOrganizationModal]);
+
+  const handleRowKeyDown = useCallback(
+    (e: React.KeyboardEvent) => {
+      if (e.target !== e.currentTarget) return;
+      if (e.key === "Enter" || e.key === " ") {
+        e.preventDefault();
+        handleRowClick();
+      }
+    },
+    [handleRowClick],
+  );
+
   const handleLogoError = useCallback(
     (e: React.SyntheticEvent<HTMLImageElement>) => {
       const img = e.currentTarget;
@@ -146,8 +165,18 @@ const OrganizationBoxComponent: React.FC<OrganizationBoxProps> = ({
       className="group flex min-h-[80px] animate-in cursor-pointer flex-col gap-3 rounded-lg border border-slate-200 bg-slate-50/30 p-3 fade-in hover:bg-slate-50/70 dark:border-slate-700 dark:bg-slate-800/50 dark:hover:bg-slate-800 sm:flex-row sm:justify-between sm:gap-0 sm:p-4"
       onMouseEnter={handleMouseEnter}
       onMouseLeave={handleMouseLeave}
-      role="article"
-      aria-label={`Organization: ${organizationName}`}
+      {...(simplified
+        ? {
+            role: "button",
+            tabIndex: 0,
+            onClick: handleRowClick,
+            onKeyDown: handleRowKeyDown,
+            "aria-label": `Open details for ${organizationName}`,
+          }
+        : {
+            role: "article",
+            "aria-label": `Organization: ${organizationName}`,
+          })}
     >
       <div className="flex flex-1 items-center space-x-3">
         {/* Logo or fallback icon */}
@@ -170,6 +199,29 @@ const OrganizationBoxComponent: React.FC<OrganizationBoxProps> = ({
         )}
 
         {/* Chevron indicator */}
+        {simplified ? (
+          hasProjects ? (
+            <button
+              type="button"
+              aria-expanded={isExpanded}
+              aria-label={`${isExpanded ? "Collapse" : "Expand"} products of ${organizationName}`}
+              onClick={(e) => {
+                e.stopPropagation();
+                onToggleExpand?.();
+              }}
+              onKeyDown={(e) => e.stopPropagation()}
+              className="flex h-6 w-6 flex-shrink-0 items-center justify-center rounded text-slate-500 hover:bg-slate-200 dark:hover:bg-slate-700"
+            >
+              {isExpanded ? (
+                <ChevronDown className="h-4 w-4" />
+              ) : (
+                <ChevronRight className="h-4 w-4" />
+              )}
+            </button>
+          ) : (
+            <div className="invisible h-6 w-6 flex-shrink-0" />
+          )
+        ) : (
         <div
           className="flex h-4 w-4 flex-shrink-0 items-center justify-center"
           aria-hidden="true"
@@ -184,6 +236,7 @@ const OrganizationBoxComponent: React.FC<OrganizationBoxProps> = ({
             <div className="invisible h-4 w-4" />
           )}
         </div>
+        )}
 
         {/* Organization name and content */}
         <div className="min-w-0 flex-1 text-left">
@@ -214,6 +267,7 @@ const OrganizationBoxComponent: React.FC<OrganizationBoxProps> = ({
       </div>
 
       {/* Right section: Details button and/or project count */}
+      {!simplified && (
       <div
         className="flex min-w-[100px] flex-shrink-0 flex-col items-end justify-between self-stretch"
         onClick={(e) => e.stopPropagation()}
@@ -240,6 +294,7 @@ const OrganizationBoxComponent: React.FC<OrganizationBoxProps> = ({
           </p>
         )}
       </div>
+      )}
     </div>
   );
 };

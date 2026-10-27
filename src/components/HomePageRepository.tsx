@@ -37,12 +37,6 @@ import {
   RotateCcw,
   X,
 } from "lucide-react";
-import {
-  Tooltip,
-  TooltipContent,
-  TooltipProvider,
-  TooltipTrigger,
-} from "@/components/ui/tooltip";
 import type { ModalMapsDTO } from "@/server/dto";
 import type {
   OrganizationWithProjects,
@@ -433,55 +427,33 @@ const HomePageRepository = forwardRef<HomePageRepositoryHandle>(
             Repository
           </h2>
           <div className="flex items-center gap-3">
-            {/* General contributions toggle */}
-            <TooltipProvider delayDuration={200}>
-              <Tooltip>
-                <TooltipTrigger asChild>
-                  <button
-                    onClick={() => {
-                      if (filters.donors.length === 0) return;
-                      const newValue = !showGeneralContributions;
-                      setShowGeneralContributions(newValue);
-                      setGeneralContributionsEnabled(newValue);
-                    }}
-                    disabled={filters.donors.length === 0}
-                    className={`flex items-center gap-2 text-xs transition-colors ${
-                      filters.donors.length === 0
-                        ? "cursor-not-allowed text-slate-300 dark:text-slate-600"
-                        : "text-slate-500 hover:text-slate-700 dark:text-slate-400 dark:hover:text-slate-300"
+            {/* General contributions toggle: only once a funder is selected */}
+            {filters.donors.length > 0 && (
+              <button
+                onClick={() => {
+                  const newValue = !showGeneralContributions;
+                  setShowGeneralContributions(newValue);
+                  setGeneralContributionsEnabled(newValue);
+                }}
+                className="flex items-center gap-2 text-xs text-slate-500 transition-colors hover:text-slate-700 dark:text-slate-400 dark:hover:text-slate-300"
+              >
+                <Landmark className="h-3.5 w-3.5" />
+                <span>Include core / institutional support</span>
+                <div
+                  className={`h-4 w-7 rounded-full transition-colors ${
+                    showGeneralContributions
+                      ? "bg-[var(--brand-primary-dark)]"
+                      : "bg-slate-300"
+                  }`}
+                >
+                  <div
+                    className={`h-4 w-4 rounded-full bg-white transition-transform ${
+                      showGeneralContributions ? "translate-x-3" : "translate-x-0"
                     }`}
-                  >
-                    <Landmark className="h-3.5 w-3.5" />
-                    <span>Include core / institutional support</span>
-                    <div
-                      className={`h-4 w-7 rounded-full transition-colors ${
-                        filters.donors.length === 0
-                          ? "bg-slate-200 dark:bg-slate-700"
-                          : showGeneralContributions
-                            ? "bg-[var(--brand-primary-dark)]"
-                            : "bg-slate-300"
-                      }`}
-                    >
-                      <div
-                        className={`h-4 w-4 rounded-full bg-white transition-transform ${
-                          showGeneralContributions && filters.donors.length > 0
-                            ? "translate-x-3"
-                            : "translate-x-0"
-                        }`}
-                      />
-                    </div>
-                  </button>
-                </TooltipTrigger>
-                {filters.donors.length === 0 && (
-                  <TooltipContent
-                    side="bottom"
-                    className="max-w-xs text-xs"
-                  >
-                    Select a funder to include core budget contributions to UN entities.
-                  </TooltipContent>
-                )}
-              </Tooltip>
-            </TooltipProvider>
+                  />
+                </div>
+              </button>
+            )}
 
             {/* Export */}
             <DropdownMenu onOpenChange={setExportMenuOpen}>
@@ -657,17 +629,7 @@ const HomePageRepository = forwardRef<HomePageRepositoryHandle>(
                       });
                     }}
                   >
-                    <div
-                      className="w-full cursor-pointer"
-                      onClick={() => {
-                        setExpandedOrgs((prev) => {
-                          const next = new Set(prev);
-                          if (isExpanded) next.delete(org.id);
-                          else next.add(org.id);
-                          return next;
-                        });
-                      }}
-                    >
+                    <div className="w-full">
                       <OrganizationBox
                         orgId={org.id}
                         organizationName={org.organizationName}
@@ -683,7 +645,14 @@ const HomePageRepository = forwardRef<HomePageRepositoryHandle>(
                         logoErrors={logoErrors}
                         onLogoError={handleLogoError}
                         headingLevel="h3"
-                        showDetailsButton={true}
+                        onToggleExpand={() =>
+                          setExpandedOrgs((prev) => {
+                            const next = new Set(prev);
+                            if (next.has(org.id)) next.delete(org.id);
+                            else next.add(org.id);
+                            return next;
+                          })
+                        }
                         projectCount={org.projects.length}
                         projectLabel={
                           org.projects.length === 1

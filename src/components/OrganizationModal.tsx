@@ -11,6 +11,8 @@ import {
   PackageOpen,
 } from "lucide-react";
 import { useState, useEffect } from "react";
+import { useRouter } from "next/navigation";
+import { toUrlSlug } from "@/lib/urlShortcuts";
 import { getMemberStates } from "@/lib/data";
 import ModalOrganizationFocus from "./ModalOrganizationFocus";
 import BaseModal, {
@@ -80,6 +82,16 @@ export default function OrganizationModal({
   onTypeClick,
 }: OrganizationModalProps): React.ReactElement {
   const [memberStates, setMemberStates] = useState<string[]>([]);
+  const router = useRouter();
+  const [descExpanded, setDescExpanded] = useState(false);
+  useEffect(() => {
+    setDescExpanded(false);
+  }, [organization?.id]);
+
+  const openFunderProfile = (country: string) => {
+    window.dispatchEvent(new CustomEvent("closeOrganizationModal"));
+    router.push(`/insights?funders=${toUrlSlug(country)}`);
+  };
 
   // Load member states on mount
   useEffect(() => {
@@ -375,112 +387,92 @@ export default function OrganizationModal({
       /\bUN\b/.test(String(displayName)) ||
       /\bUN\b/.test(String(orgType));
 
+    const isLongDescription =
+      typeof fields["Org Description"] === "string" &&
+      String(fields["Org Description"]).length > 240;
+
     return (
       <div className="font-roboto flex h-full flex-col px-6 pt-4 pb-6 sm:px-8 sm:pt-5 sm:pb-8">
-        {/* Description with inline Learn more link */}
-        {typeof fields["Org Description"] === "string" &&
-          String(fields["Org Description"]).length > 0 && (
-            <p className="font-roboto text-base leading-relaxed font-normal text-gray-700">
-              {String(fields["Org Description"])}
-              {websiteValue && websiteValue.trim() !== "" && (
-                <>
-                  {" "}
-                  <a
-                    href={websiteValue.replace(/^<|>$/g, "")}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="align-baseline font-semibold whitespace-nowrap underline underline-offset-2 transition-colors"
-                    style={{ color: "var(--brand-primary)" }}
-                    onMouseEnter={(e) =>
-                      (e.currentTarget.style.color =
-                        "var(--brand-primary-dark)")
-                    }
-                    onMouseLeave={(e) =>
-                      (e.currentTarget.style.color = "var(--brand-primary)")
-                    }
-                  >
-                    {labels.modals.learnMore}
-                    <ExternalLink className="ml-0.5 inline-block h-3.5 w-3.5 align-text-bottom" />
-                  </a>
-                </>
-              )}
-            </p>
-          )}
-
-        {/* HDX + IATI Buttons */}
-        <div className="mt-3 flex items-center gap-3">
-          {/* HDX */}
-          {typeof fields["HDX Org Key"] === "string" &&
-            fields["HDX Org Key"].trim() !== "" && (
-              <a
-                href={`https://data.humdata.org/organization/${fields["HDX Org Key"].trim()}`}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 rounded-md border border-slate-200 bg-slate-100 px-3 py-1.5 text-sm font-medium text-slate-600 transition-colors hover:border-slate-400 hover:bg-slate-200"
-              >
-                <img
-                  src="images/hdx-logo.png"
-                  alt="HDX logo"
-                  className="h-5 w-5 rounded-none"
-                />
-                <span className="font-normal">
-                  {labels.modals.viewOnHdx}{" "}
-                  <strong className="font-bold">{labels.modals.hdx}</strong>
-                </span>
-              </a>
-            )}
-
-          {/* IATI */}
-          {typeof fields["IATI Org Key"] === "string" &&
-            fields["IATI Org Key"].trim() !== "" && (
-              <a
-                href={`https://d-portal.org/ctrack.html?publisher=${fields["IATI Org Key"].trim()}#view=main`}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 rounded-md border border-slate-200 bg-slate-100 px-3 py-1.5 text-sm font-medium text-slate-600 transition-colors hover:border-slate-400 hover:bg-slate-200"
-              >
-                <img
-                  src="images/iati-logo.png"
-                  alt="IATI logo"
-                  className="h-5 rounded-none"
-                />
-                <span className="font-normal">
-                  {labels.modals.viewOnIati}{" "}
-                  <strong className="font-bold">{labels.modals.iati}</strong>
-                </span>
-              </a>
-            )}
-        </div>
-        {/* If website exists but description didn't show it, render a prominent Website button */}
-        {!fields["Org Description"] &&
-          websiteValue &&
-          websiteValue.trim() !== "" && (
-            <div>
-              <Field label="Website">
-                <button
-                  type="button"
-                  onClick={() => {
-                    const cleaned = websiteValue.replace(/^<|>$/g, "");
-                    window.open(cleaned, "_blank", "noopener,noreferrer");
-                  }}
-                  className="mt-1 inline-flex items-center justify-center gap-2 rounded-full bg-(--brand-primary) px-4 py-2 text-sm font-medium text-white shadow transition-colors hover:bg-(--brand-primary-dark)"
-                >
-                  <ExternalLink className="h-4 w-4" />
-                  <span className="flex items-center">
-                    {labels.modals.openWebsite}
-                  </span>
-                </button>
-              </Field>
-            </div>
-          )}
-        <div className="mt-4 mb-4 flex items-center justify-between">
-          <div className="ml-4 flex-1 border-t border-gray-200"></div>
-        </div>
-
         {/* Metadata - Single column layout */}
         {/* Organization Funding*/}
 
         <div className="mt-2 space-y-8">
+          {/* Funders */}
+          {(() => {
+            // Get donor info from the centralized map (includes both org-level and project-only donors)
+            const donorInfo = orgDonorInfoMap[organization.id] || [];
+
+            // Use the budget fields already extracted at the top
+            const linkRaw = fields["Link to Budget Source"];
+            const linkToBudgetSource =
+              typeof linkRaw === "string" && linkRaw.trim() !== ""
+                ? linkRaw.trim()
+                : null;
+
+            // Get org_key to find local screenshots
+            const orgKey = fields["org_key"] as string | undefined;
+
+            // Try to load downloaded screenshots from public/screenshots/ directory
+            // For now, we'll try the first screenshot (index 0)
+            const budgetScreenshotUrl = orgKey
+              ? `/screenshots/${orgKey}.png`
+              : null;
+
+            if (donorInfo.length === 0) return null;
+
+            return (
+              <div>
+                <div className="mb-3 flex items-center gap-2">
+                  <h3 className="font-roboto text-xl leading-normal font-black tracking-wide text-[#333333] uppercase">
+                    {labels.modals.organizationFunding}
+                  </h3>
+                  <span className="text-lg font-normal text-gray-500 tabular-nums">
+                    ({donorInfo.length})
+                  </span>
+                </div>
+                <div className="flex flex-wrap gap-2">
+                  {donorInfo.map((donor, idx) => {
+                    const orgAgencies = orgAgenciesMap[organization.id] || {};
+                    const orgProjectDonors =
+                      orgProjectDonorsMap[organization.id] || {};
+                    const orgProjectDonorAgencies =
+                      orgProjectDonorAgenciesMap[organization.id] || {};
+
+                    // For project-level donors, get the projects they fund and corresponding agencies
+                    const projectsForDonor = !donor.isOrgLevel
+                      ? orgProjectDonors[donor.country] || []
+                      : undefined;
+                    const projectAgenciesForDonor =
+                      !donor.isOrgLevel && projectsForDonor
+                        ? getUniqueAgenciesForProjects(
+                            projectsForDonor,
+                            orgProjectDonorAgencies[donor.country] || {},
+                          )
+                        : undefined;
+                    const isMemberState = memberStates.includes(donor.country);
+
+                    return (
+                      <div
+                        key={donor.country}
+                        className={donor.isOrgLevel ? "" : "opacity-50"}
+                      >
+                        <CountryBadge
+                          country={donor.country}
+                          onClick={openFunderProfile}
+                          agencies={orgAgencies[donor.country]}
+                          projectsForDonor={projectsForDonor}
+                          projectAgenciesForDonor={projectAgenciesForDonor}
+                          tooltipContainer={tooltipContainer}
+                          isMemberState={isMemberState}
+                        />
+                      </div>
+                    );
+                  })}
+                </div>
+              </div>
+            );
+          })()}
+
           {/* Provided Assets - Simple field access matching FIELDS_ORGANIZATIONS */}
           {(() => {
             // Use the clean field name from FIELDS_ORGANIZATIONS: "Provided Data Ecosystem Projects"
@@ -650,47 +642,20 @@ export default function OrganizationModal({
             );
           })()}
 
-          {/* Organization Donors - Clean field access from centralized data */}
+          {/* Budget */}
           {(() => {
-            // Get donor info from the centralized map (includes both org-level and project-only donors)
-            const donorInfo = orgDonorInfoMap[organization.id] || [];
-
-            // Use the budget fields already extracted at the top
             const linkRaw = fields["Link to Budget Source"];
             const linkToBudgetSource =
               typeof linkRaw === "string" && linkRaw.trim() !== ""
                 ? linkRaw.trim()
                 : null;
-
-            // Get org_key to find local screenshots
             const orgKey = fields["org_key"] as string | undefined;
-
-            // Try to load downloaded screenshots from public/screenshots/ directory
-            // For now, we'll try the first screenshot (index 0)
             const budgetScreenshotUrl = orgKey
               ? `/screenshots/${orgKey}.png`
               : null;
-
-            // Only show the whole section if there are donors OR budget data
-            if (
-              donorInfo.length === 0 &&
-              !estBudget &&
-              !budgetSourceStr &&
-              !lastUpdated
-            ) {
-              return null;
-            }
-
+            if (!estBudget && !budgetSourceStr && !lastUpdated) return null;
             return (
               <div>
-                <div className="mb-3 flex items-center gap-2">
-                  <h3 className="font-roboto text-xl leading-normal font-black tracking-wide text-[#333333] uppercase">
-                    {labels.modals.organizationFunding}
-                  </h3>
-                  <span className="text-lg font-normal text-gray-500 tabular-nums">
-                    ({donorInfo.length})
-                  </span>
-                </div>
                 {(estBudget || budgetSourceStr || lastUpdated) && (
                   <div className="rounded-lg border border-slate-200 bg-slate-100 p-4 shadow-sm">
                     <div className="mt-0 grid grid-cols-[3fr_3fr_3fr_0.2fr] gap-4">
@@ -783,48 +748,124 @@ export default function OrganizationModal({
                     </div>
                   </div>
                 )}
-                <div className="mt-4 flex flex-wrap gap-2">
-                  {donorInfo.map((donor, idx) => {
-                    const orgAgencies = orgAgenciesMap[organization.id] || {};
-                    const orgProjectDonors =
-                      orgProjectDonorsMap[organization.id] || {};
-                    const orgProjectDonorAgencies =
-                      orgProjectDonorAgenciesMap[organization.id] || {};
-
-                    // For project-level donors, get the projects they fund and corresponding agencies
-                    const projectsForDonor = !donor.isOrgLevel
-                      ? orgProjectDonors[donor.country] || []
-                      : undefined;
-                    const projectAgenciesForDonor =
-                      !donor.isOrgLevel && projectsForDonor
-                        ? getUniqueAgenciesForProjects(
-                            projectsForDonor,
-                            orgProjectDonorAgencies[donor.country] || {},
-                          )
-                        : undefined;
-                    const isMemberState = memberStates.includes(donor.country);
-
-                    return (
-                      <div
-                        key={donor.country}
-                        className={donor.isOrgLevel ? "" : "opacity-50"}
-                      >
-                        <CountryBadge
-                          country={donor.country}
-                          onClick={onOpenDonorModal}
-                          agencies={orgAgencies[donor.country]}
-                          projectsForDonor={projectsForDonor}
-                          projectAgenciesForDonor={projectAgenciesForDonor}
-                          tooltipContainer={tooltipContainer}
-                          isMemberState={isMemberState}
-                        />
-                      </div>
-                    );
-                  })}
-                </div>
               </div>
             );
           })()}
+        </div>
+
+        {/* Description (last) */}
+        <div className="mt-8 border-t border-gray-200 pt-4">
+        {typeof fields["Org Description"] === "string" &&
+          String(fields["Org Description"]).length > 0 && (
+            <div>
+            <p
+              className={`font-roboto text-base leading-relaxed font-normal text-gray-700 ${
+                !descExpanded && isLongDescription ? "line-clamp-3" : ""
+              }`}
+            >
+              {String(fields["Org Description"])}
+              {websiteValue && websiteValue.trim() !== "" && (
+                <>
+                  {" "}
+                  <a
+                    href={websiteValue.replace(/^<|>$/g, "")}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="align-baseline font-semibold whitespace-nowrap underline underline-offset-2 transition-colors"
+                    style={{ color: "var(--brand-primary)" }}
+                    onMouseEnter={(e) =>
+                      (e.currentTarget.style.color =
+                        "var(--brand-primary-dark)")
+                    }
+                    onMouseLeave={(e) =>
+                      (e.currentTarget.style.color = "var(--brand-primary)")
+                    }
+                  >
+                    {labels.modals.learnMore}
+                    <ExternalLink className="ml-0.5 inline-block h-3.5 w-3.5 align-text-bottom" />
+                  </a>
+                </>
+              )}
+            </p>
+            {isLongDescription && (
+              <button
+                type="button"
+                onClick={() => setDescExpanded((v) => !v)}
+                aria-expanded={descExpanded}
+                className="mt-1 text-sm font-medium text-slate-600 underline underline-offset-2 hover:text-slate-900"
+              >
+                {descExpanded ? "Show less" : "Read more"}
+              </button>
+            )}
+            </div>
+          )}
+
+        {/* HDX + IATI Buttons */}
+        <div className="mt-4 flex items-center gap-3">
+          {/* HDX */}
+          {typeof fields["HDX Org Key"] === "string" &&
+            fields["HDX Org Key"].trim() !== "" && (
+              <a
+                href={`https://data.humdata.org/organization/${fields["HDX Org Key"].trim()}`}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 rounded-md border border-slate-200 bg-slate-100 px-3 py-1.5 text-sm font-medium text-slate-600 transition-colors hover:border-slate-400 hover:bg-slate-200"
+              >
+                <img
+                  src="images/hdx-logo.png"
+                  alt="HDX logo"
+                  className="h-5 w-5 rounded-none"
+                />
+                <span className="font-normal">
+                  {labels.modals.viewOnHdx}{" "}
+                  <strong className="font-bold">{labels.modals.hdx}</strong>
+                </span>
+              </a>
+            )}
+
+          {/* IATI */}
+          {typeof fields["IATI Org Key"] === "string" &&
+            fields["IATI Org Key"].trim() !== "" && (
+              <a
+                href={`https://d-portal.org/ctrack.html?publisher=${fields["IATI Org Key"].trim()}#view=main`}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 rounded-md border border-slate-200 bg-slate-100 px-3 py-1.5 text-sm font-medium text-slate-600 transition-colors hover:border-slate-400 hover:bg-slate-200"
+              >
+                <img
+                  src="images/iati-logo.png"
+                  alt="IATI logo"
+                  className="h-5 rounded-none"
+                />
+                <span className="font-normal">
+                  {labels.modals.viewOnIati}{" "}
+                  <strong className="font-bold">{labels.modals.iati}</strong>
+                </span>
+              </a>
+            )}
+        </div>
+        {/* If website exists but description didn't show it, render a prominent Website button */}
+        {!fields["Org Description"] &&
+          websiteValue &&
+          websiteValue.trim() !== "" && (
+            <div>
+              <Field label="Website">
+                <button
+                  type="button"
+                  onClick={() => {
+                    const cleaned = websiteValue.replace(/^<|>$/g, "");
+                    window.open(cleaned, "_blank", "noopener,noreferrer");
+                  }}
+                  className="mt-1 inline-flex items-center justify-center gap-2 rounded-full bg-(--brand-primary) px-4 py-2 text-sm font-medium text-white shadow transition-colors hover:bg-(--brand-primary-dark)"
+                >
+                  <ExternalLink className="h-4 w-4" />
+                  <span className="flex items-center">
+                    {labels.modals.openWebsite}
+                  </span>
+                </button>
+              </Field>
+            </div>
+          )}
         </div>
 
         {/* IATI Data Section - Minimal */}

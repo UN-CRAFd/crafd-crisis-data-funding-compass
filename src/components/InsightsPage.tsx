@@ -19,7 +19,14 @@ import {
   Search,
   ArrowRight,
   AlertCircle,
+  Info,
 } from "lucide-react";
+import {
+  Tooltip,
+  TooltipContent,
+  TooltipProvider,
+  TooltipTrigger,
+} from "@/components/ui/tooltip";
 import { toUrlSlug, matchesUrlSlug } from "@/lib/urlShortcuts";
 import { processDashboardData, getAgenciesForDonors, setGeneralContributionsEnabled } from "@/lib/data";
 
@@ -56,7 +63,9 @@ interface DashboardData {
 
 // ---------- constants ---------------------------------------------------
 
-const COMPARISON_COLORS = ["#0ea5e9", "#f59e0b", "#16a34a", "#9333ea", "#e11d48"];
+const COMPARISON_COLORS = ["#2563eb", "#7c3aed", "#0d9488", "#e11d48", "#16a34a"];
+
+const EXCLUDED_STARTING_POINTS = new Set(["United Nations", "Foundations"]);
 
 // ---------- helpers -----------------------------------------------------
 
@@ -307,10 +316,52 @@ export default function InsightsPage() {
 
   // --------------- derived data -----------------------------------------
 
+  // Per-funder API data, re-derived without UN entities when the toggle is off
+  // (product counts and per-type counts come from the funder's non-UN organizations,
+  // products deduplicated by `${id}-${projectName}`).
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  const funderViews = useMemo<Map<string, any>>(() => {
+    if (includeUN) return funderDataMap;
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
+    const out = new Map<string, any>();
+    funderDataMap.forEach((data, f) => {
+      const orgs: OrganizationWithProjects[] = (
+        data?.allOrganizations ?? []
+      ).filter((o: OrganizationWithProjects) => o.type !== "United Nations");
+      const products = new Map<string, OrganizationWithProjects["projects"][number]>();
+      orgs.forEach((o) =>
+        o.projects.forEach((p) => {
+          const key = `${p.id}-${p.projectName}`;
+          if (!products.has(key)) products.set(key, p);
+        }),
+      );
+      const projectTypes = Object.values(labels.investmentTypes).map((typeName) => {
+        const tn = typeName.toLowerCase();
+        let count = 0;
+        products.forEach((p) => {
+          if (
+            p.investmentTypes?.some((t) => {
+              const tl = t.toLowerCase();
+              return tl.includes(tn) || tn.includes(tl);
+            })
+          )
+            count++;
+        });
+        return { name: typeName, count };
+      });
+      out.set(f, {
+        ...data,
+        stats: { ...(data?.stats ?? {}), dataProjects: products.size },
+        projectTypes,
+      });
+    });
+    return out;
+  }, [funderDataMap, includeUN]);
+
   const getFunderData = useCallback(
     // eslint-disable-next-line @typescript-eslint/no-explicit-any
-    (f: string): any => funderDataMap.get(f) ?? null,
-    [funderDataMap],
+    (f: string): any => funderViews.get(f) ?? null,
+    [funderViews],
   );
 
   // popular funders: top 8 by org count (respects UN filter)
@@ -322,6 +373,7 @@ export default function InsightsPage() {
       ),
     );
     return Array.from(counts.entries())
+      .filter(([f]) => !EXCLUDED_STARTING_POINTS.has(f))
       .sort((a, b) => b[1] - a[1])
       .slice(0, 8)
       .map(([f]) => f);
@@ -459,7 +511,7 @@ export default function InsightsPage() {
         };
       }),
     // eslint-disable-next-line react-hooks/exhaustive-deps
-    [selectedFunders, filteredNestedOrgs, funderDataMap],
+    [selectedFunders, filteredNestedOrgs, funderViews],
   );
 
   // --------------- handlers ---------------------------------------------
@@ -575,11 +627,7 @@ export default function InsightsPage() {
 
   const renderToolbar = () => (
     <div className="flex flex-wrap items-center gap-2">
-      {selectedFunders.length === 1 ? (
-        <span className="text-xs font-semibold uppercase tracking-wide text-slate-400">
-          Funder profile
-        </span>
-      ) : (
+      {selectedFunders.length > 1 && (
         <span className="text-sm font-medium text-slate-500 dark:text-slate-400">
           Comparing:
         </span>
@@ -667,7 +715,7 @@ export default function InsightsPage() {
       </button>
 
       {/* Include UN entities toggle */}
-      <div className="flex flex-col gap-0.5">
+      <div className="flex items-center gap-1.5">
         <button
           onClick={() => setIncludeUN((v) => !v)}
           className={`flex items-center gap-2 rounded-full border px-3 py-1.5 text-xs transition-colors ${
@@ -683,14 +731,22 @@ export default function InsightsPage() {
               className={`h-4 w-4 rounded-full bg-white shadow transition-transform ${includeUN ? "translate-x-3" : "translate-x-0"}`}
             />
           </div>
-          <span>Include UN entities</span>
+          <span className="whitespace-nowrap">Include UN entities</span>
         </button>
-        <p className="max-w-[260px] pl-1 text-[10px] text-slate-400 dark:text-slate-500">
-          UN entities are funded by many member states, which makes most funders
-          look alike. They&apos;re hidden by default.
-        </p>
+        <TooltipProvider>
+          <Tooltip>
+            <TooltipTrigger asChild>
+              <span className="cursor-default text-slate-400" aria-label="About UN entities">
+                <Info className="h-3.5 w-3.5" />
+              </span>
+            </TooltipTrigger>
+            <TooltipContent side="bottom" className="max-w-xs text-xs">
+              UN entities are funded by many member states, which makes most
+              funders look alike. They&apos;re hidden by default.
+            </TooltipContent>
+          </Tooltip>
+        </TooltipProvider>
       </div>
-
     </div>
   );
 
@@ -891,11 +947,8 @@ export default function InsightsPage() {
               </p>
             </div>
 
-            {/* STEP 1 */}
+            {/* Funder picker */}
             <div className="rounded-xl border border-slate-200 bg-white p-6 dark:border-slate-700 dark:bg-slate-800">
-              <div className="mb-3 inline-flex items-center gap-1.5 rounded-full bg-[var(--brand-bg-lighter)] px-2.5 py-0.5 text-xs font-semibold text-[var(--brand-primary)]">
-                STEP 1
-              </div>
               <h2 className="mb-1 text-base font-semibold text-slate-900 dark:text-white">
                 Which funder do you want to explore?
               </h2>
@@ -1598,7 +1651,7 @@ export default function InsightsPage() {
                     </div>
                     <div>
                       <h3 className="mb-2 text-xs font-semibold uppercase tracking-wide text-slate-400">
-                        Organizations relying on only one of the selected funders
+                        Supported by only one of the selected funders
                       </h3>
                       {onlyOneFunderOrgs.length === 0 ? (
                         <p className="text-xs text-slate-400">None.</p>

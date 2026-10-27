@@ -250,7 +250,7 @@ export default function HomePage() {
             Who supports the data behind crisis response?
           </h1>
 
-          <p className="mt-4 max-w-2xl text-base leading-relaxed text-slate-600 dark:text-slate-400 sm:text-lg">
+          <p className="mt-4 max-w-4xl text-base leading-relaxed text-slate-600 dark:text-slate-400 sm:text-lg">
             The Crisis Data Funding Compass maps who funds the organizations and
             data products that support crisis response. Use it to see what a
             funder supports, who else supports the same organizations, and where
@@ -316,24 +316,38 @@ export default function HomePage() {
           </h2>
           {(
             <>
-              {/* Row 1: headline numbers */}
-              <div className="mb-4 grid grid-cols-3 gap-4">
+              {/* Headline numbers strip */}
+              <div className="mb-4 flex flex-wrap items-center gap-x-2 gap-y-1 rounded-xl border border-slate-200 bg-white px-4 py-2.5 text-sm text-slate-600 dark:border-slate-700 dark:bg-slate-900 dark:text-slate-400">
                 {(
                   [
                     { count: stats?.totalFunders, label: "funders" },
                     { count: stats?.totalOrgs, label: "organizations" },
                     { count: stats?.totalProducts, label: "data products" },
                   ] as const
-                ).map(({ count, label }) => (
-                  <div
-                    key={label}
-                    className="flex flex-col rounded-xl border border-slate-200 bg-white p-5 dark:border-slate-700 dark:bg-slate-900"
-                  >
-                    <GlanceNumber value={count} />
-                    <p className="mt-1 text-sm text-slate-600 dark:text-slate-400">
-                      {label}
-                    </p>
-                  </div>
+                ).map(({ count, label }, i) => (
+                  <span key={label} className="inline-flex items-center gap-2">
+                    {i > 0 && (
+                      <span aria-hidden="true" className="text-slate-300 dark:text-slate-600">
+                        ·
+                      </span>
+                    )}
+                    <span className="inline-flex h-5 items-center gap-1.5">
+                      {count === undefined ? (
+                        <span
+                          aria-hidden="true"
+                          className="inline-block h-4 w-8 animate-pulse rounded bg-slate-200 dark:bg-slate-700"
+                        />
+                      ) : (
+                        <strong
+                          className="font-bold"
+                          style={{ color: "var(--brand-primary)" }}
+                        >
+                          {count}
+                        </strong>
+                      )}
+                      <span>{label}</span>
+                    </span>
+                  </span>
                 ))}
               </div>
 
