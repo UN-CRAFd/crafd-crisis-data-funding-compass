@@ -155,6 +155,25 @@ function computeStats(
   };
 }
 
+// Fixed-height number slot (h-9 = text-3xl line height) so placeholders match loaded cards
+function GlanceNumber({ value }: { value: number | undefined }) {
+  if (value === undefined) {
+    return (
+      <div className="flex h-9 items-center" aria-hidden="true">
+        <div className="h-7 w-16 animate-pulse rounded bg-slate-200 dark:bg-slate-700" />
+      </div>
+    );
+  }
+  return (
+    <span
+      className="block h-9 text-3xl font-bold"
+      style={{ color: "var(--brand-primary)" }}
+    >
+      {value}
+    </span>
+  );
+}
+
 // ─────────────────────────────────────────────────────────
 // Main component
 // ─────────────────────────────────────────────────────────
@@ -165,31 +184,39 @@ export default function HomePage() {
   const repoRef = useRef<HomePageRepositoryHandle>(null);
 
   const [stats, setStats] = useState<ComputedStats | null>(null);
+  const [lastUpdated, setLastUpdated] = useState<string | null>(null);
+  const loading = stats === null;
 
   // Fetch unfiltered dashboard data for homepage stats
   useEffect(() => {
     let cancelled = false;
 
-    Promise.all([
-      processDashboardData({}),
-      fetch("/api/last-updated")
-        .then((r) => r.json())
-        .then((d) => d?.lastUpdated ?? null)
-        .catch(() => null),
-    ]).then(([data, lastUpdated]) => {
-      if (cancelled) return;
-      if (data?.allOrganizations) {
-        setStats(computeStats(
-          data.allOrganizations as OrganizationWithProjects[],
-          data.stats ?? null,
-          Array.isArray(data.projectTypes) ? data.projectTypes : null,
-          lastUpdated,
-        ));
-      }
-    }).catch(() => {});
+    processDashboardData({})
+      .then((data) => {
+        if (cancelled) return;
+        if (data?.allOrganizations) {
+          setStats(computeStats(
+            data.allOrganizations as OrganizationWithProjects[],
+            data.stats ?? null,
+            Array.isArray(data.projectTypes) ? data.projectTypes : null,
+            null,
+          ));
+        }
+      })
+      .catch(() => {});
 
     return () => { cancelled = true; };
   }, [showGeneralContributions]);
+
+  // Footer timestamp loads independently so it never delays the boxes
+  useEffect(() => {
+    let cancelled = false;
+    fetch("/api/last-updated")
+      .then((r) => r.json())
+      .then((d) => { if (!cancelled) setLastUpdated(d?.lastUpdated ?? null); })
+      .catch(() => {});
+    return () => { cancelled = true; };
+  }, []);
 
   // Scroll to repository and apply a filter
   const goToRepository = (filters?: Parameters<HomePageRepositoryHandle["resetAndSetFilters"]>[0]) => {
@@ -266,18 +293,15 @@ export default function HomePage() {
               <button
                 key={title}
                 onClick={action}
-                className="group flex flex-col rounded-xl border border-slate-200 bg-white p-5 text-left transition-all hover:shadow-md dark:border-slate-700 dark:bg-slate-900 dark:hover:border-slate-600"
+                className="group flex flex-col rounded-xl border border-slate-200 bg-white p-5 text-left transition-all duration-200 hover:border-[var(--brand-border)] hover:bg-[var(--brand-primary-light)] hover:shadow-md dark:border-slate-700 dark:bg-slate-900 dark:hover:border-[var(--brand-border)] dark:hover:bg-[var(--brand-primary-light)]"
               >
                 <div className="flex items-center gap-1.5">
-                  <span className="text-sm font-semibold text-slate-900 dark:text-white">
+                  <span className="text-sm font-semibold text-slate-900 transition-colors duration-200 dark:text-white dark:group-hover:text-slate-900">
                     {title}
                   </span>
-                  <ArrowRight
-                    className="h-3.5 w-3.5 shrink-0 transition-transform group-hover:translate-x-0.5"
-                    style={{ color: "var(--brand-primary)" }}
-                  />
+                  <ArrowRight className="h-3.5 w-3.5 shrink-0 text-[var(--brand-primary)] transition-all duration-200 group-hover:translate-x-0.5 group-hover:text-slate-900" />
                 </div>
-                <p className="mt-1.5 text-xs leading-relaxed text-slate-500 dark:text-slate-400">
+                <p className="mt-1.5 text-xs leading-relaxed text-slate-500 transition-colors duration-200 group-hover:text-slate-800 dark:text-slate-400 dark:group-hover:text-slate-800">
                   {body}
                 </p>
               </button>
@@ -290,27 +314,22 @@ export default function HomePage() {
           <h2 className="mb-4 text-base font-semibold uppercase tracking-wide text-slate-500 dark:text-slate-400">
             At a glance
           </h2>
-          {stats && (
+          {(
             <>
               {/* Row 1: headline numbers */}
               <div className="mb-4 grid grid-cols-3 gap-4">
                 {(
                   [
-                    { count: stats.totalFunders, label: "funders" },
-                    { count: stats.totalOrgs, label: "organizations" },
-                    { count: stats.totalProducts, label: "data products" },
+                    { count: stats?.totalFunders, label: "funders" },
+                    { count: stats?.totalOrgs, label: "organizations" },
+                    { count: stats?.totalProducts, label: "data products" },
                   ] as const
                 ).map(({ count, label }) => (
                   <div
                     key={label}
                     className="flex flex-col rounded-xl border border-slate-200 bg-white p-5 dark:border-slate-700 dark:bg-slate-900"
                   >
-                    <span
-                      className="text-3xl font-bold"
-                      style={{ color: "var(--brand-primary)" }}
-                    >
-                      {count}
-                    </span>
+                    <GlanceNumber value={count} />
                     <p className="mt-1 text-sm text-slate-600 dark:text-slate-400">
                       {label}
                     </p>
@@ -322,12 +341,7 @@ export default function HomePage() {
               <div className="grid grid-cols-1 gap-4 sm:grid-cols-3">
                 <div className="flex flex-col justify-between rounded-xl border border-slate-200 bg-white p-5 dark:border-slate-700 dark:bg-slate-900">
                   <div>
-                    <span
-                      className="text-3xl font-bold"
-                      style={{ color: "var(--brand-primary)" }}
-                    >
-                      {stats.singleFunderOrgs}
-                    </span>
+                    <GlanceNumber value={stats?.singleFunderOrgs} />
                     <p className="mt-1 text-sm text-slate-600 dark:text-slate-400">
                       organizations rely on a single documented funder.
                     </p>
@@ -344,12 +358,7 @@ export default function HomePage() {
 
                 <div className="flex flex-col justify-between rounded-xl border border-slate-200 bg-white p-5 dark:border-slate-700 dark:bg-slate-900">
                   <div>
-                    <span
-                      className="text-3xl font-bold"
-                      style={{ color: "var(--brand-primary)" }}
-                    >
-                      {stats.fivePlusFunderOrgs}
-                    </span>
+                    <GlanceNumber value={stats?.fivePlusFunderOrgs} />
                     <p className="mt-1 text-sm text-slate-600 dark:text-slate-400">
                       organizations are supported by five or more funders.
                     </p>
@@ -390,7 +399,7 @@ export default function HomePage() {
         </section>
 
         {/* ── 4. Browse by type ── */}
-        {stats && stats.typeStats.length > 0 && (
+        {(loading || (stats && stats.typeStats.length > 0)) && (
           <section id="browse-by-type" className="pb-12">
             <div className="mb-1 flex items-baseline gap-3">
               <h2 className="text-base font-semibold uppercase tracking-wide text-slate-500 dark:text-slate-400">
@@ -402,7 +411,23 @@ export default function HomePage() {
             </div>
             <TooltipProvider>
               <div className="mt-4 grid grid-cols-1 gap-3 sm:grid-cols-2 lg:grid-cols-3">
-                {stats.typeStats
+                {loading &&
+                  Object.entries(labels.investmentTypes).map(([key, typeName]) => (
+                    <div
+                      key={key}
+                      aria-hidden="true"
+                      className="flex flex-col rounded-xl border border-slate-200 bg-white p-4 dark:border-slate-700 dark:bg-slate-900"
+                    >
+                      <span className="text-sm font-medium text-slate-800 dark:text-slate-200">
+                        {typeName}
+                      </span>
+                      <div className="mt-0.5 flex h-4 items-center">
+                        <div className="h-3 w-24 animate-pulse rounded bg-slate-200 dark:bg-slate-700" />
+                      </div>
+                      <div className="mt-3 h-1 w-full rounded-full bg-slate-100 dark:bg-slate-800" />
+                    </div>
+                  ))}
+                {stats?.typeStats
                   .slice()
                   .sort((a, b) => b.productCount - a.productCount)
                   .map(({ key, typeName, productCount, funderCount }) => {
@@ -477,7 +502,7 @@ export default function HomePage() {
           <p className="text-center text-xs text-slate-500 dark:text-slate-500">
             Compiled from public sources · Shows who supports whom, not how
             much · Last updated{" "}
-            {stats?.lastUpdated ?? "—"}
+            {lastUpdated ?? "—"}
           </p>
         </div>
       </footer>
