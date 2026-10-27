@@ -29,7 +29,6 @@ jobs:
                   AIRTABLE_TABLE_ID_AGENCIES: ${{ secrets.AIRTABLE_TABLE_ID_AGENCIES }}
                   AIRTABLE_TABLE_ID_ORGANIZATIONS: ${{ secrets.AIRTABLE_TABLE_ID_ORGANIZATIONS }}
                   AIRTABLE_TABLE_ID_PROJECTS: ${{ secrets.AIRTABLE_TABLE_ID_PROJECTS }}
-                  AIRTABLE_TABLE_ID_THEMES: ${{ secrets.AIRTABLE_TABLE_ID_THEMES }}
                   AZURE_POSTGRES_HOST: ${{ secrets.AZURE_POSTGRES_HOST }}
                   AZURE_POSTGRES_PORT: ${{ secrets.AZURE_POSTGRES_PORT }}
                   AZURE_POSTGRES_USER: ${{ secrets.AZURE_POSTGRES_USER }}
