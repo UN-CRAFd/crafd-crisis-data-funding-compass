@@ -4,7 +4,7 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 CRAF'd Crisis Data Funding Compass (compass.crafd.io): a Next.js 16 / React 19 / Tailwind CSS v4 / shadcn/ui dashboard that maps donors → agencies → organizations → projects → themes in the crisis-data funding ecosystem. It is deployed on Vercel as a server-rendered app with API routes (not a static export).
 
-> `README.md`, `docs/IATI_INTEGRATION.md` and parts of `python/README.md` are partly stale: they describe the old Airtable→JSON (`public/data/*.json`, `scripts/…`) setup and npm. The app now reads everything from PostgreSQL, and the package manager is pnpm.
+> Some leftovers from the old Airtable→JSON setup (`public/data/*.json`) still exist. Scripts that read those files (`04_…`, `05_fetch_iati.py`, `python/misc/`) no longer run, and the in-app IATI activity view gets no data. `python/README.md` and `docs/IATI_INTEGRATION.md` describe what is current. The app reads everything from PostgreSQL, and the package manager is pnpm.
 
 ## Commands
 
@@ -57,7 +57,7 @@ Airtable → `python/01b_fetch_airtable_to_sql.py` → PostgreSQL schema `fundin
 - `AIRTABLE_API_KEY` is read-only, by design. Airtable fixes made from scripts use a separate `AIRTABLE_WRITE_API_KEY` from `.env`, which is local only and never goes in CI.
 - IDs are deterministic UUIDs derived from Airtable record IDs.
 - A schema change touches three places: `sql/schema/`, the normalizer in `01b_…py`, and the repositories in `src/server/repositories/`.
-- `docs/DATA.md` is the data dictionary.
+- `docs/DATA.md` is the data dictionary. `docs/FULL_DATASET_README.md` is the README that goes out with full database exports; keep both in sync with the schema.
 
 Env vars differ by side:
 

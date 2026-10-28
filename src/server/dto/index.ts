@@ -147,7 +147,7 @@ export interface ModalMapsDTO {
 }
 
 // ─────────────────────────────────────────────────────────
-// IATI DTO (passthrough — already stored in JSON within the DB)
+// IATI DTO (currently unused — nothing fetches IATI data, see docs/IATI_INTEGRATION.md)
 // ─────────────────────────────────────────────────────────
 
 export interface IATIOrganizationDataDTO {

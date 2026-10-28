@@ -1275,16 +1275,16 @@ print(f"\\nAssets by type:\\n{by_type}")`}
                             </p>
                             <ul className="space-y-1 text-sm text-slate-700">
                               <li>
-                                📁 <strong>python/</strong> - Data collection
-                                and ETL scripts
+                                📁 <strong>python/</strong> - Daily Airtable to
+                                PostgreSQL pipeline
                               </li>
                               <li>
-                                📁 <strong>python/iati_api/</strong> - IATI data
-                                integration and fetching
+                                📁 <strong>sql/schema/</strong> - Database
+                                schema
                               </li>
                               <li>
-                                📁 <strong>docs/</strong> - Integration guides
-                                (IATI, database setup)
+                                📁 <strong>docs/</strong> - Data dictionary and
+                                integration notes
                               </li>
                             </ul>
                           </div>

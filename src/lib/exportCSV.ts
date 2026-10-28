@@ -48,13 +48,6 @@ export function generateOrganizationsCSV(
 
   // Generate rows
   const rows = organizations.map((org) => {
-    // Get unique investment types from all projects
-    const investmentTypesSet = new Set<string>();
-    org.projects.forEach((project) => {
-      project.investmentTypes.forEach((type) => investmentTypesSet.add(type));
-    });
-    const investmentTypes = Array.from(investmentTypesSet).sort().join("; ");
-
     // Format supporting countries
     const supportingCountries = [...org.donorCountries].sort().join("; ");
 
@@ -184,17 +177,15 @@ function generateReadme(
 
   readme += `## Export Contents\n\n`;
   readme += `This export includes two CSV files:\n\n`;
-  readme += `1. organizations.csv - Information about data provider organizations\n`;
+  readme += `1. organizations-<date>.csv - Information about data provider organizations\n`;
   readme += `   - Organization Name\n`;
   readme += `   - Organization Type\n`;
   readme += `   - Description\n`;
-  readme += `   - Supporting Donors (donor donors funding the organization)\n`;
-  readme += `   - Investment Types (types of data assets provided)\n\n`;
-  readme += `2. assets.csv - Information about specific data products/projects\n`;
+  readme += `   - Supporting Donors (donors funding the organization)\n\n`;
+  readme += `2. assets-<date>.csv - Information about specific data products/projects\n`;
   readme += `   - Asset Name\n`;
-  readme += `   - Organization Name (provider)\n`;
-  readme += `   - Investment Types\n`;
-  readme += `   - Investment Themes\n`;
+  readme += `   - Organization Name (one or more providers)\n`;
+  readme += `   - Asset Types (investment types of the asset)\n`;
   readme += `   - Supporting Donors\n`;
   readme += `   - Description\n`;
   readme += `   - Website\n\n`;
@@ -234,12 +225,12 @@ function generateReadme(
   readme += `## Data Summary\n\n`;
   readme += `- Total Organizations: ${filterInfo.totalOrganizations}\n`;
   readme += `- Total Assets/Projects: ${filterInfo.totalProjects}\n`;
-  readme += `- Unique Donor Countries: ${new Set(organizations.flatMap((org) => org.donorCountries)).size}\n\n`;
+  readme += `- Unique Donors: ${new Set(organizations.flatMap((org) => org.donorCountries)).size}\n\n`;
 
   readme += `## Data Notes\n\n`;
   readme += `- Multiple values in a single field are separated by semicolons (;)\n`;
   readme += `- Empty fields indicate that information was not available\n`;
-  readme += `- Supporting Countries refers to donor countries that fund the organization or asset\n`;
+  readme += `- Supporting Donors are the donors (countries or groups of funders) that fund the organization or asset\n`;
   readme += `- For assets without specific donor information, organization-level donors are used\n\n`;
 
   readme += `## Source\n\n`;
@@ -460,7 +451,7 @@ export async function exportViewAsXLSX(
 
       if (filterInfo?.donorCountries && filterInfo.donorCountries.length > 0) {
         const row = readmeSheet.getRow(rowIndex++);
-        row.getCell(1).value = "Donor Countries:";
+        row.getCell(1).value = "Donors:";
         row.getCell(2).value = filterInfo.donorCountries.join(", ");
         row.getCell(1).font = { name: "Roboto", size: 11 };
         row.getCell(2).font = { name: "Roboto", size: 11 };
@@ -521,7 +512,7 @@ export async function exportViewAsXLSX(
       ["Total Organizations:", organizations.length],
       ["Total Assets/Projects:", totalProjects],
       [
-        "Unique Donor Countries:",
+        "Unique Donors:",
         new Set(organizations.flatMap((org) => org.donorCountries)).size,
       ],
     ].forEach(([label, value]) => {

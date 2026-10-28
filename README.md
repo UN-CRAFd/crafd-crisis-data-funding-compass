@@ -1,66 +1,31 @@
-# CRISIS DATA FUNDING COMPASS v2
+# Crisis Data Funding Compass
 
-A Next.js crisis data dashboard for displaying and analyzing Airtable ecosystem data. Built with React, TypeScript, Tailwind CSS v4, and shadcn/ui components.
+**[compass.crafd.io](https://compass.crafd.io)**
 
-## Features
+The Crisis Data Funding Compass maps who funds the crisis data ecosystem, which organizations receive that funding, and which data products it sustains. It is built and maintained by the [Complex Risk Analytics Fund (CRAF'd)](https://crafd.io).
 
-- **Real-time Dashboard**: Displays live data from Airtable ecosystem
-- **Interactive Analytics**: Project types, organization types, and funding statistics
-- **Filtering System**: Real-time filtering by donor countries and investment types
-- **Organization Explorer**: Expandable table showing organizations with their projects
-- **Project Details**: Slide-in modal with comprehensive project information
-- **Responsive Design**: Mobile-first design that works on all screen sizes
-- **Modern Stack**: Next.js 15, React 19, TypeScript, Tailwind CSS v4
-- **Component Library**: Pre-built components using shadcn/ui
-- **Static Export**: Ready for deployment to GitHub Pages or any static host
+The Compass is meant to help donors, UN entities and partners see where investment in crisis data goes, find co-financing partners, and spot gaps in coverage.
 
-## Dev & Deploy
+## What you can do
 
-1. **Install Dependencies**  
-   Run the following command to install all required dependencies:
+- **See the ecosystem at a glance.** Find out who receives funds, what funds are used for, and where funds are from.
+- **Filter and search.** Narrow the view by donor, product type and theme, or search for an organization or product by name.
+- **Explore details.** Open any organization, product or donor to see its description, links, funders and related products.
+- **Explore the network.** Switch to the network view to see how donors, organizations and products connect.
+- **Compare donors.** The Analytics page shows which donors co-finance the same organizations and where their investments focus.
+- **Export.** Download the current view as a PDF one-pager, or the underlying data as CSV or Excel. Exports respect your active filters.
+- **Share.** The page URL contains your filters, so a shared link opens the same view for the recipient.
 
-   ```bash
-   npm install
-   ```
+## About the data
 
-2. **Run Development Server**  
-   Start the development server with:
+CRAF'd curates the dataset from publicly available information and partner input, and the Compass updates from it daily. The data is not exhaustive: not all funding is publicly reported, and classifications involve judgement.
 
-   ```bash
-   npm run dev
-   ```
+The [Methodology page](https://compass.crafd.io/methodology) explains how the data is collected and classified, and its limitations.
 
-   The application will be available at `http://localhost:3000`.
+## Feedback and corrections
 
-3. **Build for Production**  
-   To create a production build, use:
-   ```bash
-   npm run build
-   ```
+To suggest a correction, flag missing information or ask a question, use the **Provide Feedback** button at the bottom of the [Methodology page](https://compass.crafd.io/methodology). To learn more about CRAF'd, visit [crafd.io](https://crafd.io).
 
-## Getting Started
+## For developers
 
-1. **Clone repository** and install dependencies
-2. **Configure Airtable** by setting up your `.env.local` file with Airtable credentials
-3. **Fetch Data** using `python scripts/01_fetch_airtable.py` to populate data files in `public/data/`
-4. **Customize styling** in `src/app/globals.css` to match your brand colors
-5. **Deploy** to GitHub Pages or any static hosting service
-
-## Data Structure
-
-Crisis data is stored in `public/data/ecosystem-table.json` fetched from Airtable. Each record contains:
-- **Organization Info**: Provider organization names, types, donor countries
-- **Project Details**: Names, descriptions, websites, funding status
-- **Investment Data**: Types, themes, budgets, donor countries
-- **Metadata**: Creation dates, IDs, status
-
-Data processing logic is in `src/lib/data.ts` with TypeScript interfaces for type safety.
-
-## Maintenance
-
-- `npx shadcn --version`
-- `npx next --version`
-- `npx tsc --noEmit`
-- `npm run lint`
-- `npx eslint . --ext .js,.jsx,.ts,.tsx`
-- `npm run format`
+This repository contains the web app and the data pipeline that feeds it. See [CONTRIBUTING.md](CONTRIBUTING.md) for setup and conventions.
