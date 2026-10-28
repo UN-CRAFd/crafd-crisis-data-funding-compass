@@ -63,7 +63,7 @@ const ProjectBoxComponent: React.FC<ProjectBoxProps> = ({
                         <TooltipTrigger asChild>{badge}</TooltipTrigger>
                         <TooltipContent
                           side="top"
-                          className="!z-[300] max-w-xs border border-gray-200 bg-white/70 text-xs backdrop-blur-md dark:border-slate-600 dark:bg-slate-800/90 dark:text-slate-200"
+                          className="!z-[300] max-w-xs border border-(--tooltip-border) bg-popover text-xs text-popover-foreground shadow-md"
                           sideOffset={5}
                         >
                           {description}
