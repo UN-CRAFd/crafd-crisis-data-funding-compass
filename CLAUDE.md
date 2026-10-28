@@ -102,3 +102,4 @@ Dark mode is a work in progress:
 - Learn the API and page structure before making isolated changes.
 - Don't build parallel infrastructure. Prefer global solutions, and don't hard-code things where they would be hard to find.
 - Use context7 for up-to-date Next.js, Tailwind, shadcn/ui and React docs.
+- Don't commit, push or open PRs unless asked. Leave changes uncommitted for review.
