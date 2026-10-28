@@ -189,7 +189,7 @@ const AgencyBadgeList: React.FC<AgencyBadgeListProps> = ({
       {overflow > 0 && (
         <button
           onClick={onToggle}
-          className="text-muted-foreground hover:text-foreground text-xs transition-colors"
+          className="text-xs text-muted-foreground transition-colors hover:text-foreground"
         >
           {isExpanded ? "Show less" : `+${overflow} more`}
         </button>
@@ -561,9 +561,8 @@ const DonorTableComponent: React.FC<DonorTableProps> = ({
                                       e.stopPropagation();
                                       setExpandedAgencies((prev) => {
                                         const next = new Set(prev);
-                                        next.has(key)
-                                          ? next.delete(key)
-                                          : next.add(key);
+                                        if (next.has(key)) next.delete(key);
+                                        else next.add(key);
                                         return next;
                                       });
                                     }}
@@ -593,9 +592,8 @@ const DonorTableComponent: React.FC<DonorTableProps> = ({
                                     e.stopPropagation();
                                     setExpandedAgencies((prev) => {
                                       const next = new Set(prev);
-                                      next.has(key)
-                                        ? next.delete(key)
-                                        : next.add(key);
+                                      if (next.has(key)) next.delete(key);
+                                      else next.add(key);
                                       return next;
                                     });
                                   }}
@@ -693,9 +691,9 @@ const DonorTableComponent: React.FC<DonorTableProps> = ({
                                             e.stopPropagation();
                                             setExpandedAgencies((prev) => {
                                               const next = new Set(prev);
-                                              next.has(key)
-                                                ? next.delete(key)
-                                                : next.add(key);
+                                              if (next.has(key))
+                                                next.delete(key);
+                                              else next.add(key);
                                               return next;
                                             });
                                           }}
