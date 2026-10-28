@@ -154,7 +154,7 @@ export const StatCard = React.memo(function StatCard({
           <TooltipContent
             side="bottom"
             align="center"
-            className="max-w-100 rounded-lg border border-slate-200 bg-white p-3 text-sm text-slate-800"
+            className="max-w-100 rounded-lg border border-(--tooltip-border) bg-popover p-3 text-sm text-popover-foreground"
             sideOffset={5}
             avoidCollisions={true}
             style={{ ...STYLES.chartTooltip }}

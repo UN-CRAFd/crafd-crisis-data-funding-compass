@@ -423,7 +423,7 @@ export function ModalTooltip({
         <TooltipTrigger asChild>{children}</TooltipTrigger>
         <TooltipContent
           side={side}
-          className="!z-[9999] max-h-[80vh] max-w-[90vw] overflow-auto border border-gray-300 bg-white p-2 text-xs dark:border-slate-600 dark:bg-slate-800 dark:text-slate-200"
+          className="!z-[9999] max-h-[80vh] max-w-[90vw] overflow-auto border border-(--tooltip-border) bg-popover p-2 text-xs text-popover-foreground"
           sideOffset={5}
           container={tooltipContainer as HTMLElement | null}
           style={{

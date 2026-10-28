@@ -151,7 +151,7 @@ export default function PageHeader({
                 <TooltipContent
                   side="bottom"
                   align="center"
-                  className="max-w-115 rounded-lg border border-slate-200 bg-white p-1 text-xs text-slate-800 dark:border-slate-600 dark:bg-slate-800 dark:text-slate-200"
+                  className="max-w-115 rounded-lg border border-(--tooltip-border) bg-popover p-1 text-xs text-popover-foreground"
                   sideOffset={6}
                   avoidCollisions={true}
                   style={{ ...STYLES.chartTooltip }}

@@ -2073,7 +2073,7 @@ export default function AnalyticsPage() {
                                     <TooltipContent
                                       side="bottom"
                                       align="center"
-                                      className="rounded-lg border border-slate-200 bg-white px-3 py-2 text-sm text-slate-800"
+                                      className="rounded-lg border border-(--tooltip-border) bg-popover px-3 py-2 text-sm text-popover-foreground"
                                       sideOffset={5}
                                       avoidCollisions={true}
                                       style={{ ...STYLES.chartTooltip }}
@@ -2168,7 +2168,7 @@ export default function AnalyticsPage() {
                                       <TooltipContent
                                         side="bottom"
                                         align="center"
-                                        className="rounded-lg border border-slate-200 bg-white px-3 py-2 text-sm text-slate-800"
+                                        className="rounded-lg border border-(--tooltip-border) bg-popover px-3 py-2 text-sm text-popover-foreground"
                                         sideOffset={5}
                                         avoidCollisions={true}
                                         style={{ ...STYLES.chartTooltip }}
@@ -2261,7 +2261,7 @@ export default function AnalyticsPage() {
                                       <TooltipContent
                                         side="bottom"
                                         align="center"
-                                        className="rounded-lg border border-slate-200 bg-white px-3 py-2 text-sm text-slate-800"
+                                        className="rounded-lg border border-(--tooltip-border) bg-popover px-3 py-2 text-sm text-popover-foreground"
                                         sideOffset={5}
                                         avoidCollisions={true}
                                         style={{ ...STYLES.chartTooltip }}
