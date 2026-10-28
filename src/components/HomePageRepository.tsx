@@ -34,7 +34,6 @@ import {
   Compass,
   FileDown,
   Landmark,
-  RotateCcw,
   X,
 } from "lucide-react";
 import type { ModalMapsDTO } from "@/server/dto";
@@ -115,6 +114,22 @@ const HomePageRepository = forwardRef<HomePageRepositoryHandle>(
     useEffect(() => {
       setGeneralContributionsEnabled(showGeneralContributions);
     }, [showGeneralContributions]);
+
+    // BaseModal only fades out on close and relies on these events to unmount.
+    // Without listeners its transparent full-screen overlay stays mounted and blocks all clicks.
+    useEffect(() => {
+      const closeOrg = () => setSelectedOrgKey("");
+      const closeProject = () => setSelectedProjectKey("");
+      const closeDonor = () => setSelectedDonorCountry("");
+      window.addEventListener("closeOrganizationModal", closeOrg);
+      window.addEventListener("closeProjectModal", closeProject);
+      window.addEventListener("closeDonorModal", closeDonor);
+      return () => {
+        window.removeEventListener("closeOrganizationModal", closeOrg);
+        window.removeEventListener("closeProjectModal", closeProject);
+        window.removeEventListener("closeDonorModal", closeDonor);
+      };
+    }, []);
 
     // Expose imperative handle to parent
     useImperativeHandle(ref, () => ({
@@ -528,12 +543,18 @@ const HomePageRepository = forwardRef<HomePageRepositoryHandle>(
             onResetFilters={handleClearAll}
             filterDescription={filterDescription}
             rightActions={
-              hasAnyFilter ? (
+              hasAnyFilter &&
+              !(
+                filters.donors.length > 0 ||
+                filters.types.length > 0 ||
+                filters.themes.length > 0 ||
+                filters.appliedSearchQuery
+              ) ? (
                 <button
                   onClick={handleClearAll}
                   className="inline-flex items-center gap-1.5 rounded-md px-3 py-1.5 text-xs font-medium text-slate-600 transition-colors hover:bg-slate-100 hover:text-slate-800 dark:text-slate-400 dark:hover:bg-slate-700 dark:hover:text-slate-200"
                 >
-                  <RotateCcw className="h-3.5 w-3.5" />
+                  <X className="h-3.5 w-3.5" />
                   Clear all
                 </button>
               ) : null

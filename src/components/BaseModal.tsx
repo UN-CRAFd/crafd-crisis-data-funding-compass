@@ -45,6 +45,7 @@ export default function BaseModal({
 }: BaseModalProps): React.ReactElement {
   const [isVisible, setIsVisible] = useState(false);
   const [isClosing, setIsClosing] = useState(false);
+  const [isGone, setIsGone] = useState(false);
   const modalRef = useRef<HTMLDivElement>(null);
   const [touchStart, setTouchStart] = useState<number | null>(null);
   const [touchEnd, setTouchEnd] = useState<number | null>(null);
@@ -82,10 +83,13 @@ export default function BaseModal({
       setIsVisible(false);
       setIsClosing(false);
     }
+    setIsGone(false);
   }, [isOpen]);
 
   const handleClose = useCallback(() => {
     setIsClosing(true);
+    // Fallback: even if the parent never unmounts us, stop rendering after the fade-out
+    setTimeout(() => setIsGone(true), 350);
     setTimeout(() => {
       try {
         window.dispatchEvent(new CustomEvent(closeEventName));
@@ -164,7 +168,9 @@ export default function BaseModal({
   const modalContent = (
     <div
       className={`fixed inset-0 z-[200] flex items-center justify-end bg-black/50 transition-all duration-300 ease-out ${
-        isVisible && !isClosing ? "opacity-100" : "opacity-0"
+        isVisible && !isClosing
+          ? "opacity-100"
+          : "pointer-events-none opacity-0"
       }`}
       onClick={handleBackdropClick}
     >
@@ -198,7 +204,7 @@ export default function BaseModal({
 
   // Portal the modal into the appropriate container (fullscreen element or body)
   // Wait for portalContainer to be set before rendering
-  if (!portalContainer) {
+  if (!portalContainer || isGone) {
     return <></>;
   }
 
