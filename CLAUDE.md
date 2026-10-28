@@ -37,6 +37,8 @@ Airtable → `python/01b_fetch_airtable_to_sql.py` → PostgreSQL schema `fundin
 
 - The pipeline runs daily through `.github/workflows/fetch_data_from_airtable.yml` (05:00 UTC, or on manual dispatch).
 - Each run **drops and recreates** the schema from `sql/schema/*.sql`, applied in filename order.
+- The script fetches every Airtable table first. The drop, create and all inserts then run in one transaction, so a failed run leaves the previous data in place. Keep it that way: no commits inside helpers, and no `BEGIN`/`COMMIT` in the schema files.
+- If `AIRTABLE_TABLE_ID_THEMES` is unset, themes are skipped silently, and investment types end up empty too, because they are built from the theme records.
 - IDs are deterministic UUIDs derived from Airtable record IDs.
 - A schema change touches three places: `sql/schema/`, the normalizer in `01b_…py`, and the repositories in `src/server/repositories/`.
 - `docs/DATA.md` is the data dictionary.
