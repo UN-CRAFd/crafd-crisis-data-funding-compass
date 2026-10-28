@@ -1,18 +1,18 @@
 "use client";
 
-import { Check, Share2 } from "lucide-react";
-import { useCallback, useEffect, useRef, useState } from "react";
-import { createPortal } from "react-dom";
-import CloseButton from "./CloseButton";
-import { CountryFlag } from "./CountryFlag";
 import {
   Tooltip,
   TooltipContent,
   TooltipProvider,
   TooltipTrigger,
 } from "@/components/ui/tooltip";
-import { useTips } from "@/contexts/TipsContext";
 import labels from "@/config/labels.json";
+import { useTips } from "@/contexts/TipsContext";
+import { Check, Share2 } from "lucide-react";
+import { useCallback, useEffect, useRef, useState } from "react";
+import { createPortal } from "react-dom";
+import CloseButton from "./CloseButton";
+import { CountryFlag } from "./CountryFlag";
 
 interface BaseModalProps {
   isOpen: boolean;
@@ -170,7 +170,7 @@ export default function BaseModal({
     >
       <div
         ref={modalRef}
-        className={`relative flex h-full w-full flex-col bg-white shadow-2xl transition-transform duration-300 ease-out dark:bg-slate-900 dark:text-slate-100 sm:w-3/5 sm:min-w-[435px] md:w-[45%] lg:w-[37%] lg:min-w-[500px] xl:w-[29%] xl:min-w-[550px] ${
+        className={`relative flex h-full w-full flex-col bg-white shadow-2xl transition-transform duration-300 ease-out sm:w-3/5 sm:min-w-[435px] md:w-[45%] lg:w-[37%] lg:min-w-[500px] xl:w-[29%] xl:min-w-[550px] dark:bg-slate-900 dark:text-slate-100 ${
           isVisible && !isClosing ? "translate-x-0" : "translate-x-full"
         }`}
         onTouchStart={onTouchStart}
@@ -179,7 +179,7 @@ export default function BaseModal({
       >
         {/* Header */}
         <div
-          className={`shrink-0 border-b border-gray-300 px-6 pt-4 pb-4 dark:border-slate-700 sm:px-8 sm:pt-6 sm:pb-5 ${isOpen ? "bg-white dark:bg-slate-900" : ""}`}
+          className={`shrink-0 border-b border-gray-300 px-6 pt-4 pb-4 sm:px-8 sm:pt-6 sm:pb-5 dark:border-slate-700 ${isOpen ? "bg-white dark:bg-slate-900" : ""}`}
         >
           {renderHeader({
             showCopied,
@@ -415,7 +415,7 @@ export function ModalTooltip({
   try {
     const tipsContext = useTips();
     tipsEnabled = tipsContext.tipsEnabled;
-  } catch (e) {
+  } catch {
     // TipsProvider not available (e.g., during server-side rendering)
     tipsEnabled = false;
   }

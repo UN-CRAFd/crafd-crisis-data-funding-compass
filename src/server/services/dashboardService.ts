@@ -8,6 +8,8 @@
  * No SQL here — all data comes from the server-side cache.
  */
 
+import labels from "@/config/labels.json";
+import { getCoreData } from "../cache";
 import type {
   DashboardDataDTO,
   DashboardFiltersDTO,
@@ -21,16 +23,14 @@ import type {
   TopDonorDTO,
 } from "../dto";
 import type {
-  OrgRow,
   OrgAgencyRow,
   OrgProjectRow,
-  ProjectThemeRow,
+  OrgRow,
   ProjectAgencyRow,
+  ProjectThemeRow,
 } from "../repositories";
-import { getCoreData } from "../cache";
-import { groupBy, unique, buildFieldsObject } from "../utils";
+import { buildFieldsObject, groupBy, unique } from "../utils";
 import { getThemeMappings } from "./themeService";
-import labels from "@/config/labels.json";
 
 /** Assemble OrganizationDTO[] from raw SQL rows (5 batch queries) */
 function assembleOrganizations(
@@ -341,18 +341,16 @@ function applyFilters(
             return false;
         }
         if (hasThemeFilter) {
-          if (
-            !(
-              Array.isArray(p.investmentThemes) &&
-              p.investmentThemes.some((theme) =>
-                filters.investmentThemes!.some(
-                  (ft) =>
-                    typeof theme === "string" &&
-                    theme.toLowerCase().trim() === ft.toLowerCase().trim(),
-                ),
-              )
+          if (!(
+            Array.isArray(p.investmentThemes) &&
+            p.investmentThemes.some((theme) =>
+              filters.investmentThemes!.some(
+                (ft) =>
+                  typeof theme === "string" &&
+                  theme.toLowerCase().trim() === ft.toLowerCase().trim(),
+              ),
             )
-          )
+          ))
             return false;
         }
         return true;

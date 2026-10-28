@@ -3,20 +3,20 @@
  */
 
 export {
-  findAllOrganizations,
+  findAllInvestmentTypes,
   findAllOrgAgencies,
   findAllOrgProjects,
-  findAllProjectThemes,
-  findAllProjectAgencies,
   findAllOrganizationTypes,
-  findAllInvestmentTypes,
+  findAllOrganizations,
+  findAllProjectAgencies,
+  findAllProjectThemes,
 } from "./organizationRepository";
 export type {
-  OrgRow,
   OrgAgencyRow,
   OrgProjectRow,
-  ProjectThemeRow,
+  OrgRow,
   ProjectAgencyRow,
+  ProjectThemeRow,
 } from "./organizationRepository";
 
 export { findAllThemes } from "./themeRepository";

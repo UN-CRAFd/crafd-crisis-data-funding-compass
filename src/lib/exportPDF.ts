@@ -1,10 +1,10 @@
-import jsPDF from "jspdf";
 import type {
   DashboardStats,
-  ProjectTypeData,
   OrganizationTypeData,
   OrganizationWithProjects,
+  ProjectTypeData,
 } from "@/types/airtable";
+import jsPDF from "jspdf";
 
 interface ExportPDFParams {
   stats: DashboardStats;
@@ -90,7 +90,7 @@ export async function exportDashboardToPDF({
     // Draw bars
     pdf.setFontSize(8);
 
-    data.forEach((item, index) => {
+    data.forEach((item) => {
       if (currentY > pageHeight - 40) {
         pdf.addPage();
         currentY = margin;

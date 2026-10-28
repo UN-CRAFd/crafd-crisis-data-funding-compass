@@ -5,8 +5,8 @@
  * Returns: ThemeMappingsDTO
  */
 
-import { NextResponse } from "next/server";
 import { getThemeMappings } from "@/server/services/themeService";
+import { NextResponse } from "next/server";
 
 export async function GET() {
   try {

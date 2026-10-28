@@ -6,9 +6,9 @@
  * Returns: DashboardDataDTO
  */
 
-import { NextRequest, NextResponse } from "next/server";
-import { processDashboardData } from "@/server/services/dashboardService";
 import type { DashboardFiltersDTO } from "@/server/dto";
+import { processDashboardData } from "@/server/services/dashboardService";
+import { NextRequest, NextResponse } from "next/server";
 
 export async function POST(request: NextRequest) {
   try {

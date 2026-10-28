@@ -1,6 +1,6 @@
 import CrisisDataDashboardWrapper from "@/components/CrisisDataDashboardWrapper";
-import { Suspense } from "react";
 import { Compass } from "lucide-react";
+import { Suspense } from "react";
 // Update the import path to the correct relative location for labels.json
 import labels from "../config/labels.json";
 

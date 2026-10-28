@@ -1,8 +1,7 @@
 "use client";
 
-import { IATITransactionSummary } from "@/types/iati";
-import { Card } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
+import { IATITransactionSummary } from "@/types/iati";
 
 interface IATITransactionsSummaryProps {
   transactionSummary: IATITransactionSummary;

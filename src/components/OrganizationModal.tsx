@@ -1,28 +1,27 @@
 "use client";
 
+import { getIconForInvestmentType } from "@/config/investmentTypeIcons";
+import labels from "@/config/labels.json";
+import { getMemberStates } from "@/lib/data";
+import type { IATIOrganizationData } from "@/types/iati";
 import {
   Building2,
   ChevronDown,
   ChevronUp,
   ExternalLink,
-  Image,
   Info,
   Package,
   PackageOpen,
 } from "lucide-react";
-import { useState, useEffect } from "react";
-import { getMemberStates } from "@/lib/data";
-import ModalOrganizationFocus from "./ModalOrganizationFocus";
+import { useEffect, useState } from "react";
 import BaseModal, {
-  ModalHeader,
   CountryBadge,
+  ModalHeader,
   ModalTooltip,
 } from "./BaseModal";
-import { getIconForInvestmentType } from "@/config/investmentTypeIcons";
-import labels from "@/config/labels.json";
-import { IATIProjectsList } from "./IATIProjectsList";
 import { IATIActivitySummaryCard } from "./IATIActivitySummaryCard";
-import type { IATIOrganizationData } from "@/types/iati";
+import { IATIProjectsList } from "./IATIProjectsList";
+import ModalOrganizationFocus from "./ModalOrganizationFocus";
 
 interface OrganizationModalProps {
   // Accept the full organization record coming from `public/data/organizations-table.json`
@@ -275,10 +274,7 @@ export default function OrganizationModal({
 
     // Extract budget-related fields early so they're available for both the budget box and notes
     const estBudget = fields["Est. Org Budget"] as
-      | number
-      | string
-      | null
-      | undefined;
+      number | string | null | undefined;
     const budgetSourceRaw = fields["Budget Source"];
     const budgetSourceStr =
       budgetSourceRaw != null ? String(budgetSourceRaw) : null;
@@ -561,16 +557,24 @@ export default function OrganizationModal({
                               );
                             }
                             if (investmentTypes.length === 1) {
-                              const TypeIcon = getIconForInvestmentType(investmentTypes[0]);
-                              return <TypeIcon className="h-4 w-4 shrink-0 text-slate-600" />;
+                              const TypeIcon = getIconForInvestmentType(
+                                investmentTypes[0],
+                              );
+                              return (
+                                <TypeIcon className="h-4 w-4 shrink-0 text-slate-600" />
+                              );
                             }
                             // Two or more types - show first two diagonally
-                            const Icon1 = getIconForInvestmentType(investmentTypes[0]);
-                            const Icon2 = getIconForInvestmentType(investmentTypes[1]);
+                            const Icon1 = getIconForInvestmentType(
+                              investmentTypes[0],
+                            );
+                            const Icon2 = getIconForInvestmentType(
+                              investmentTypes[1],
+                            );
                             return (
                               <div className="relative h-4 w-4 shrink-0">
-                                <Icon1 className="absolute left-0 top-0 h-2 w-2 text-slate-600" />
-                                <Icon2 className="absolute bottom-0 right-0 h-2 w-2 text-slate-600" />
+                                <Icon1 className="absolute top-0 left-0 h-2 w-2 text-slate-600" />
+                                <Icon2 className="absolute right-0 bottom-0 h-2 w-2 text-slate-600" />
                               </div>
                             );
                           })()}
@@ -784,7 +788,7 @@ export default function OrganizationModal({
                   </div>
                 )}
                 <div className="mt-4 flex flex-wrap gap-2">
-                  {donorInfo.map((donor, idx) => {
+                  {donorInfo.map((donor) => {
                     const orgAgencies = orgAgenciesMap[organization.id] || {};
                     const orgProjectDonors =
                       orgProjectDonorsMap[organization.id] || {};

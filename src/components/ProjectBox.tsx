@@ -1,14 +1,14 @@
-import React, { memo } from "react";
 import { Badge } from "@/components/shared/Badge";
 import {
-  Tooltip as TooltipUI,
   TooltipContent,
   TooltipProvider,
   TooltipTrigger,
+  Tooltip as TooltipUI,
 } from "@/components/ui/tooltip";
-import { getIconForInvestmentType } from "@/config/investmentTypeIcons";
 import { INVESTMENT_TYPE_DESCRIPTIONS } from "@/config/investmentDescriptions";
+import { getIconForInvestmentType } from "@/config/investmentTypeIcons";
 import type { ProjectData } from "@/types/airtable";
+import React, { memo } from "react";
 
 interface ProjectBoxProps {
   project: ProjectData;

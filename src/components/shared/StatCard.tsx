@@ -3,23 +3,23 @@
  * Unified statistics card used for displaying metrics across Analytics and Dashboard
  */
 
-import React, { useState } from "react";
 import {
   Card,
   CardContent,
   CardDescription,
   CardHeader,
 } from "@/components/ui/card";
+import { Collapsible, CollapsibleContent } from "@/components/ui/collapsible";
 import {
-  Tooltip as TooltipUI,
   TooltipContent,
   TooltipProvider,
   TooltipTrigger,
+  Tooltip as TooltipUI,
 } from "@/components/ui/tooltip";
-import { SectionHeader } from "../SectionHeader";
 import { useTips } from "@/contexts/TipsContext";
 import { ChevronDown } from "lucide-react";
-import { Collapsible, CollapsibleContent } from "@/components/ui/collapsible";
+import React, { useState } from "react";
+import { SectionHeader } from "../SectionHeader";
 
 interface StatCardProps {
   icon: React.ReactNode;
@@ -61,7 +61,7 @@ export const StatCard = React.memo(function StatCard({
   try {
     const tipsContext = useTips();
     tipsEnabled = tipsContext.tipsEnabled;
-  } catch (e) {
+  } catch {
     tipsEnabled = false;
   }
 

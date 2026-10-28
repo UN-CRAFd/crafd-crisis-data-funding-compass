@@ -9,12 +9,9 @@
  */
 
 import type {
-  OrganizationProjectData,
+  DashboardFilters,
   OrganizationTypeData,
   OrganizationWithProjects,
-  ProjectData,
-  ProjectTypeData,
-  DashboardFilters,
 } from "@/types/airtable";
 
 // Re-export types for backward compatibility

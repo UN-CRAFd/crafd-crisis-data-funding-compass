@@ -1,13 +1,7 @@
 "use client";
 
-import { useState, useEffect } from "react";
+import { ThemeToggle } from "@/components/ThemeToggle";
 import { Button } from "@/components/ui/button";
-import {
-  TooltipContent,
-  TooltipProvider,
-  Tooltip as TooltipUI,
-  TooltipTrigger,
-} from "@/components/ui/tooltip";
 import {
   DropdownMenu,
   DropdownMenuContent,
@@ -15,27 +9,28 @@ import {
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
 import {
-  ChevronDown,
-  FileDown,
-  Info,
-  Share2,
-  Menu,
-  Lightbulb,
-  Home,
+  TooltipContent,
+  TooltipProvider,
+  TooltipTrigger,
+  Tooltip as TooltipUI,
+} from "@/components/ui/tooltip";
+import labels from "@/config/labels.json";
+import { useGeneralContributions } from "@/contexts/GeneralContributionsContext";
+import { useTips } from "@/contexts/TipsContext";
+import { setGeneralContributionsEnabled } from "@/lib/data";
+import {
   BarChart3,
   BookOpen,
-  Landmark,
-  UserRoundPlus,
-  LayoutDashboard,
+  ChevronDown,
   Compass,
+  FileDown,
+  Info,
+  LayoutDashboard,
+  Menu,
+  Share2,
 } from "lucide-react";
-import { ThemeToggle } from "@/components/ThemeToggle";
-import { useTips } from "@/contexts/TipsContext";
-import { useGeneralContributions } from "@/contexts/GeneralContributionsContext";
-import { setGeneralContributionsEnabled } from "@/lib/data";
-import labels from "@/config/labels.json";
-import Link from "next/link";
 import { usePathname, useRouter, useSearchParams } from "next/navigation";
+import { useEffect, useState } from "react";
 
 const STYLES = {
   chartTooltip: {
@@ -101,7 +96,7 @@ export default function PageHeader({
     const tipsContext = useTips();
     tipsEnabled = tipsContext.tipsEnabled;
     setTipsEnabled = tipsContext.setTipsEnabled;
-  } catch (e) {
+  } catch {
     // TipsProvider not available (e.g., during prerendering)
     // Use default values
   }
@@ -115,7 +110,7 @@ export default function PageHeader({
     showGeneralContributions = genContContext.showGeneralContributions;
     setShowGeneralContributionsLocal =
       genContContext.setShowGeneralContributions;
-  } catch (e) {
+  } catch {
     // GeneralContributionsProvider not available - use defaults
   }
 
@@ -126,7 +121,7 @@ export default function PageHeader({
     // Refresh current route so views update without full page reload
     try {
       router.refresh();
-    } catch (e) {
+    } catch {
       // Fallback: full reload if router.refresh isn't available
       window.location.reload();
     }
@@ -149,7 +144,7 @@ export default function PageHeader({
                   }`}
                 />
               </button>
-              <h1 className="flex min-w-0 flex-col items-start gap-0 text-base text-slate-800 dark:text-white sm:text-xl lg:flex-row lg:items-center lg:gap-2 lg:text-3xl">
+              <h1 className="flex min-w-0 flex-col items-start gap-0 text-base text-slate-800 sm:text-xl lg:flex-row lg:items-center lg:gap-2 lg:text-3xl dark:text-white">
                 <span className="qanelas-title whitespace-nowrap">
                   {labels.header.title}
                 </span>
@@ -185,7 +180,7 @@ export default function PageHeader({
           <div className="flex flex-shrink-0 gap-1 sm:gap-2">
             {/* Tips moved into Settings (see navigation menu) */}
             {pathname === "/" && (
-              <div className="hidden h-8 w-px bg-slate-200 dark:bg-slate-700 sm:block"></div>
+              <div className="hidden h-8 w-px bg-slate-200 sm:block dark:bg-slate-700"></div>
             )}
 
             {/* Export Dropdown - only show on dashboard */}
@@ -198,7 +193,7 @@ export default function PageHeader({
                     disabled={
                       csvExportLoading || xlsxExportLoading || pdfExportLoading
                     }
-                    className="rounded-md bg-transparent px-4 py-4 text-xs text-slate-700 transition hover:text-[var(--brand-primary)] focus:text-[var(--brand-primary)] dark:text-slate-300 dark:hover:text-[var(--brand-primary)] sm:flex sm:text-sm"
+                    className="rounded-md bg-transparent px-4 py-4 text-xs text-slate-700 transition hover:text-[var(--brand-primary)] focus:text-[var(--brand-primary)] sm:flex sm:text-sm dark:text-slate-300 dark:hover:text-[var(--brand-primary)]"
                     title="Export current view"
                   >
                     <FileDown className="h-4 w-4 sm:mr-2" />
@@ -247,7 +242,7 @@ export default function PageHeader({
                 </DropdownMenuContent>
               </DropdownMenu>
             )}
-            <div className="hidden h-8 w-px bg-slate-200 dark:bg-slate-700 sm:block"></div>
+            <div className="hidden h-8 w-px bg-slate-200 sm:block dark:bg-slate-700"></div>
             {/* Share Button */}
             {onShare && (
               <Button
@@ -271,13 +266,13 @@ export default function PageHeader({
             )}
 
             {/* Vertical line separator */}
-            <div className="hidden h-8 w-px bg-slate-200 dark:bg-slate-700 sm:block"></div>
+            <div className="hidden h-8 w-px bg-slate-200 sm:block dark:bg-slate-700"></div>
 
             {/* Dark mode toggle */}
             <ThemeToggle />
 
             {/* Vertical line separator */}
-            <div className="hidden h-8 w-px bg-slate-200 dark:bg-slate-700 sm:block"></div>
+            <div className="hidden h-8 w-px bg-slate-200 sm:block dark:bg-slate-700"></div>
 
             {/* Page Navigation Menu - Rightmost */}
             <DropdownMenu>
@@ -285,7 +280,7 @@ export default function PageHeader({
                 <Button
                   variant="ghost"
                   size="sm"
-                  className="rounded-md bg-transparent px-4 py-4 text-xs text-slate-700 transition hover:text-[var(--brand-primary)] dark:text-slate-300 dark:hover:text-[var(--brand-primary)] sm:text-sm"
+                  className="rounded-md bg-transparent px-4 py-4 text-xs text-slate-700 transition hover:text-[var(--brand-primary)] sm:text-sm dark:text-slate-300 dark:hover:text-[var(--brand-primary)]"
                   title="Navigation"
                 >
                   <Menu className="h-6 w-6" />

@@ -1,5 +1,5 @@
-import { CountryFlag } from "./CountryFlag";
 import type { DonorInfo } from "@/types/airtable";
+import { CountryFlag } from "./CountryFlag";
 
 interface DonorListProps {
   donorInfo: DonorInfo[];

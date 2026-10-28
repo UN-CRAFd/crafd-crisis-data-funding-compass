@@ -1,13 +1,7 @@
 // Essential Airtable types for ecosystem dashboard
 
 export type AirtableFieldValue =
-  | string
-  | number
-  | boolean
-  | string[]
-  | number[]
-  | null
-  | undefined;
+  string | number | boolean | string[] | number[] | null | undefined;
 
 export interface AirtableRecord<T = Record<string, AirtableFieldValue>> {
   id: string;

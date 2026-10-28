@@ -1,8 +1,8 @@
 "use client";
 
-import { AlertCircle, RotateCcw, MessageSquare } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import labels from "@/config/labels.json";
+import { AlertCircle, MessageSquare, RotateCcw } from "lucide-react";
 
 interface NoResultsModalProps {
   onResetFilters?: () => void;

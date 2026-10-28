@@ -3,8 +3,8 @@
  * Shared filtering and counting logic for project types and themes
  */
 
-import { useMemo } from "react";
 import type { OrganizationWithProjects } from "@/types/airtable";
+import { useMemo } from "react";
 
 interface ProjectCountsParams {
   organizations: OrganizationWithProjects[];

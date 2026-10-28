@@ -5,8 +5,8 @@
  * Returns: Record<string, string> — theme name → description
  */
 
-import { NextResponse } from "next/server";
 import { getThemeDescriptions } from "@/server/services/themeService";
+import { NextResponse } from "next/server";
 
 export async function GET() {
   try {

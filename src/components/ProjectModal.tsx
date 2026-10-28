@@ -1,17 +1,17 @@
 ﻿"use client";
 
+import { getIconForInvestmentType } from "@/config/investmentTypeIcons";
+import labels from "@/config/labels.json";
+import { INVESTMENT_TYPE_DESCRIPTIONS } from "@/config/tooltipDescriptions";
 import { Building2, ExternalLink, Package, PackageOpen } from "lucide-react";
+import { useEffect, useMemo, useState } from "react";
 import type { OrganizationWithProjects, ProjectData } from "../lib/data";
 import { getThemeToTypeMapping } from "../lib/data";
-import { getIconForInvestmentType } from "@/config/investmentTypeIcons";
-import { INVESTMENT_TYPE_DESCRIPTIONS } from "@/config/tooltipDescriptions";
-import labels from "@/config/labels.json";
 import BaseModal, {
-  ModalHeader,
   CountryBadge,
+  ModalHeader,
   ModalTooltip,
 } from "./BaseModal";
-import { useEffect, useState, useMemo } from "react";
 
 interface ProjectModalProps {
   project: ProjectData | null;

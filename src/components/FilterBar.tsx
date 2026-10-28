@@ -1,6 +1,5 @@
 "use client";
 
-import React, { useState, useEffect, useMemo } from "react";
 import { Button } from "@/components/ui/button";
 import {
   DropdownMenu,
@@ -11,8 +10,9 @@ import {
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
 import { Input } from "@/components/ui/input";
-import labels from "@/config/labels.json";
 import { getIconForInvestmentType } from "@/config/investmentTypeIcons";
+import labels from "@/config/labels.json";
+import { getMemberStates } from "@/lib/data";
 import {
   Building,
   ChevronDown,
@@ -23,7 +23,7 @@ import {
   RotateCcw,
   Search,
 } from "lucide-react";
-import { getMemberStates } from "@/lib/data";
+import React, { useEffect, useMemo, useState } from "react";
 
 interface FilterBarProps {
   // Search
@@ -196,7 +196,12 @@ const FilterBar: React.FC<FilterBarProps> = ({
               !allAvailableDonors.includes(state),
           )
         : [],
-    [shouldShowMemberStates, memberStates, donorSearchQuery, allAvailableDonors],
+    [
+      shouldShowMemberStates,
+      memberStates,
+      donorSearchQuery,
+      allAvailableDonors,
+    ],
   );
 
   const allFilteredDonors = [

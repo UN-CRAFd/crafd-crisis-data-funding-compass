@@ -1,26 +1,25 @@
 "use client";
 
 import {
+  Collapsible,
+  CollapsibleContent,
+  CollapsibleTrigger,
+} from "@/components/ui/collapsible";
+import labels from "@/config/labels.json";
+import { getMemberStates } from "@/lib/data";
+import { matchesUrlSlug } from "@/lib/urlShortcuts";
+import {
+  Building,
   Building2,
   ChevronDown,
   ChevronRight,
   ExternalLink,
   Package,
   PackageOpen,
-  Building,
-  MapPin,
 } from "lucide-react";
-import { useState, useMemo, useEffect } from "react";
-import { getMemberStates } from "@/lib/data";
+import { useEffect, useMemo, useState } from "react";
 import BaseModal, { ModalHeader, ModalTooltip } from "./BaseModal";
-import {
-  Collapsible,
-  CollapsibleContent,
-  CollapsibleTrigger,
-} from "@/components/ui/collapsible";
 import { CountryFlag } from "./CountryFlag";
-import labels from "@/config/labels.json";
-import { matchesUrlSlug } from "@/lib/urlShortcuts";
 
 interface Agency {
   id: string;

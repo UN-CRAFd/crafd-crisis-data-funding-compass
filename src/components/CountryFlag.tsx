@@ -1,19 +1,10 @@
 "use client";
 
-import { Globe } from "lucide-react";
 import * as countries from "i18n-iso-countries";
+import enLocale from "i18n-iso-countries/langs/en.json";
+import { Globe } from "lucide-react";
 
-// Load JSON locale using require to avoid needing `resolveJsonModule` in tsconfig
-let enLocale: any = null;
-try {
-  enLocale = require("i18n-iso-countries/langs/en.json");
-  countries.registerLocale(
-    enLocale as unknown as import("i18n-iso-countries").LocaleData,
-  );
-} catch (_e) {
-  // If registration fails, we'll still attempt simple fallbacks below
-  console.warn("Failed to register i18n-iso-countries locale", _e);
-}
+countries.registerLocale(enLocale);
 
 /**
  * Helper function to map country names to ISO alpha-2 codes for flag display
@@ -60,7 +51,7 @@ export function getCountryAlpha2(input: string): string | null {
   // Normalize (remove diacritics) and try direct lookup by name
   try {
     s = s.normalize("NFD").replace(/[\u0300-\u036f]/g, "");
-  } catch (e) {
+  } catch {
     /* ignore */
   }
 

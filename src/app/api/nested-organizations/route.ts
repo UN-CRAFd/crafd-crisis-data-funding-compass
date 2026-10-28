@@ -5,8 +5,8 @@
  * Returns nested org structures for DonorModal
  */
 
-import { NextResponse } from "next/server";
 import { getNestedOrganizationsForDonorModal } from "@/server/services/modalService";
+import { NextResponse } from "next/server";
 
 export async function GET() {
   try {

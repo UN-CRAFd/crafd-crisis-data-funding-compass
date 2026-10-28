@@ -1,26 +1,18 @@
-import React, { useState, useMemo, useCallback, memo } from "react";
-import { ChevronDown, ChevronRight, Info } from "lucide-react";
+import { CountryFlag } from "@/components/CountryFlag";
+import { OrganizationBox } from "@/components/OrganizationBox";
+import { ProjectBox } from "@/components/ProjectBox";
+import { Badge } from "@/components/shared/Badge";
+import { Button } from "@/components/ui/button";
 import {
   Collapsible,
   CollapsibleContent,
   CollapsibleTrigger,
 } from "@/components/ui/collapsible";
-import { Button } from "@/components/ui/button";
-import { getIconForInvestmentType } from "@/config/investmentTypeIcons";
 import { useTips } from "@/contexts/TipsContext";
-import {
-  TooltipContent,
-  TooltipProvider,
-  TooltipTrigger,
-  Tooltip as TooltipUI,
-} from "@/components/ui/tooltip";
 import { matchesUrlSlug, toUrlSlug } from "@/lib/urlShortcuts";
 import type { OrganizationWithProjects, ProjectData } from "@/types/airtable";
-import { Badge } from "@/components/shared/Badge";
-import { INVESTMENT_TYPE_DESCRIPTIONS } from "@/config/investmentDescriptions";
-import { CountryFlag } from "@/components/CountryFlag";
-import { OrganizationBox } from "@/components/OrganizationBox";
-import { ProjectBox } from "@/components/ProjectBox";
+import { ChevronDown, ChevronRight, Info } from "lucide-react";
+import React, { memo, useCallback, useMemo, useState } from "react";
 
 interface DonorTableProps {
   organizationsWithProjects: OrganizationWithProjects[];

@@ -78,7 +78,7 @@ export default function OnboardingTour({ forceOpen }: { forceOpen?: boolean }) {
       if (!seen) {
         setOpen(true);
       }
-    } catch (e) {
+    } catch {
       // ignore localStorage errors
       setOpen(true);
     }
@@ -88,7 +88,7 @@ export default function OnboardingTour({ forceOpen }: { forceOpen?: boolean }) {
     if (dontShowAgain) {
       try {
         localStorage.setItem(STORAGE_KEY, "1");
-      } catch (e) {
+      } catch {
         // ignore
       }
     }

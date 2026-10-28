@@ -1,8 +1,8 @@
 "use client";
 
+import labels from "@/config/labels.json";
 import Link from "next/link";
 import React from "react";
-import labels from "@/config/labels.json";
 
 interface ErrorBoundaryState {
   hasError: boolean;

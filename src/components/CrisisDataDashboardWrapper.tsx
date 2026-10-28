@@ -1,19 +1,19 @@
 "use client";
 
+import { useGeneralContributions } from "@/contexts/GeneralContributionsContext";
 import {
-  typeLabelToSlug,
-  typeSlugToLabel,
-  toUrlSlug,
-  matchesUrlSlug,
-} from "@/lib/urlShortcuts";
-import {
+  ensureThemesMappingsLoaded,
+  getAgenciesForDonors,
+  getMemberStates,
   themeKeyToNames,
   themeNameToKey,
-  ensureThemesMappingsLoaded,
-  getMemberStates,
-  getAgenciesForDonors,
 } from "@/lib/data";
-import { useGeneralContributions } from "@/contexts/GeneralContributionsContext";
+import {
+  matchesUrlSlug,
+  toUrlSlug,
+  typeLabelToSlug,
+  typeSlugToLabel,
+} from "@/lib/urlShortcuts";
 import { usePathname, useRouter, useSearchParams } from "next/navigation";
 import { useCallback, useEffect, useMemo, useRef, useState } from "react";
 import { processDashboardData } from "../lib/data";
@@ -46,7 +46,7 @@ const CrisisDataDashboardWrapper = () => {
   try {
     const { showGeneralContributions: value } = useGeneralContributions();
     showGeneralContributions = value;
-  } catch (e) {
+  } catch {
     // Provider not available
   }
 

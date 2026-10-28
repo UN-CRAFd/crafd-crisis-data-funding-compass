@@ -5,8 +5,8 @@
  * Returns: string[]
  */
 
-import { NextResponse } from "next/server";
 import { findAllMemberStates } from "@/server/repositories/memberStateRepository";
+import { NextResponse } from "next/server";
 
 export async function GET() {
   try {

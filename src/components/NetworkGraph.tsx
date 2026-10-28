@@ -1,5 +1,20 @@
 "use client";
 
+import { useProjectCounts } from "@/hooks/useProjectCounts";
+import { getBrandColors } from "@/lib/colorUtils";
+import { forceCollide } from "d3-force";
+import {
+  Building2,
+  ChevronLeft,
+  ChevronRight,
+  Crosshair,
+  DollarSign,
+  GitBranch,
+  Maximize,
+  Minimize,
+  Package,
+  Type,
+} from "lucide-react";
 import React, {
   useCallback,
   useEffect,
@@ -8,26 +23,11 @@ import React, {
   useState,
 } from "react";
 import { createPortal } from "react-dom";
-import { forceCollide } from "d3-force";
 import ForceGraph2D from "react-force-graph-2d";
-import {
-  Maximize,
-  Minimize,
-  Crosshair,
-  Package,
-  Building2,
-  DollarSign,
-  Type,
-  GitBranch,
-  ChevronLeft,
-  ChevronRight,
-} from "lucide-react";
 import type { OrganizationWithProjects } from "../types/airtable";
+import { getCountryFlagUrl } from "./CountryFlag";
 import FilterBar from "./FilterBar";
 import NoResultsModal from "./NoResultsModal";
-import { getCountryFlagUrl } from "./CountryFlag";
-import { getBrandColors } from "@/lib/colorUtils";
-import { useProjectCounts } from "@/hooks/useProjectCounts";
 
 interface NetworkGraphProps {
   organizationsWithProjects: OrganizationWithProjects[];
@@ -261,7 +261,9 @@ const NetworkGraph: React.FC<NetworkGraphProps> = ({
         name: donor,
         type: "donor",
         value: 25, // Larger nodes for donors
-        color: isFiltered ? GRAPH_NODE_COLORS.donorSelectedFill : GRAPH_NODE_COLORS.donorFill,
+        color: isFiltered
+          ? GRAPH_NODE_COLORS.donorSelectedFill
+          : GRAPH_NODE_COLORS.donorFill,
         hasAgencies, // Flag whether this donor has agencies
         x,
         y,

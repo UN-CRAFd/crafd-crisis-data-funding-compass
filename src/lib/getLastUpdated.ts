@@ -18,7 +18,7 @@ export function getLastUpdatedDate(): string {
 
     const date = new Date(timestamp);
     return getFormattedDate(date);
-  } catch (error) {
+  } catch {
     // If git is unavailable or not in a git repo, return current date
     return getFormattedDate(new Date());
   }

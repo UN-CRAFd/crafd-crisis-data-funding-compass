@@ -1,7 +1,7 @@
 // exportCSV.ts - CSV export functionality for Crisis Data Dashboard
-import JSZip from "jszip";
+import type { OrganizationWithProjects } from "@/types/airtable";
 import ExcelJS from "exceljs";
-import type { OrganizationWithProjects, ProjectData } from "@/types/airtable";
+import JSZip from "jszip";
 
 /**
  * Escape CSV field value by wrapping in quotes if it contains special characters
@@ -56,7 +56,7 @@ export function generateOrganizationsCSV(
     const investmentTypes = Array.from(investmentTypesSet).sort().join("; ");
 
     // Format supporting countries
-    const supportingCountries = org.donorCountries.sort().join("; ");
+    const supportingCountries = [...org.donorCountries].sort().join("; ");
 
     return [
       org.organizationName,
@@ -633,7 +633,7 @@ export async function exportViewAsXLSX(
         org.organizationName,
         org.type,
         org.description || "",
-        org.donorCountries.sort().join("; "),
+        [...org.donorCountries].sort().join("; "),
       ]);
 
       // Style data row

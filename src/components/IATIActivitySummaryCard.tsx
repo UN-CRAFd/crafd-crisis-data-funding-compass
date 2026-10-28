@@ -2,7 +2,7 @@
 
 import { IATIActivitySummary } from "@/types/iati";
 import { Info } from "lucide-react";
-import BaseModal, { ModalTooltip } from "./BaseModal";
+import { ModalTooltip } from "./BaseModal";
 
 interface IATIActivitySummaryProps {
   activitySummary: IATIActivitySummary;

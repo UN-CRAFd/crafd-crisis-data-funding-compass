@@ -1,7 +1,7 @@
-import React, { useState, useMemo, useCallback, memo } from "react";
-import { useTheme } from "next-themes";
-import { ChevronDown, ChevronRight, Building2, Info } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { Building2, ChevronDown, ChevronRight, Info } from "lucide-react";
+import { useTheme } from "next-themes";
+import React, { memo, useCallback, useMemo, useState } from "react";
 
 // Constants moved outside component to prevent recreation on each render
 const LOGO_EXTENSIONS = ["png", "jpg", "svg", "webp"] as const;
@@ -134,7 +134,6 @@ const OrganizationBoxComponent: React.FC<OrganizationBoxProps> = ({
   const logoFilterStyle = useMemo(
     () => ({
       filter: isHovered
-      
         ? "grayscale(0%) brightness(1.1)"
         : `contrast(${isDark ? 2.5 : 1}) grayscale(100%) brightness(${isDark ? 1.7 : 1.1}) `,
     }),
@@ -143,7 +142,7 @@ const OrganizationBoxComponent: React.FC<OrganizationBoxProps> = ({
 
   return (
     <div
-      className="group flex min-h-[80px] animate-in cursor-pointer flex-col gap-3 rounded-lg border border-slate-200 bg-slate-50/30 p-3 fade-in hover:bg-slate-50/70 dark:border-slate-700 dark:bg-slate-800/50 dark:hover:bg-slate-800 sm:flex-row sm:justify-between sm:gap-0 sm:p-4"
+      className="group flex min-h-[80px] animate-in cursor-pointer flex-col gap-3 rounded-lg border border-slate-200 bg-slate-50/30 p-3 fade-in hover:bg-slate-50/70 sm:flex-row sm:justify-between sm:gap-0 sm:p-4 dark:border-slate-700 dark:bg-slate-800/50 dark:hover:bg-slate-800"
       onMouseEnter={handleMouseEnter}
       onMouseLeave={handleMouseLeave}
       role="article"
@@ -223,7 +222,7 @@ const OrganizationBoxComponent: React.FC<OrganizationBoxProps> = ({
             variant="outline"
             size="sm"
             onClick={handleOpenModal}
-            className="hidden h-6 items-center justify-center gap-1 rounded-md bg-[var(--badge-slate-text)] px-2 text-[10px] text-[var(--badge-slate-bg)] duration-150 hover:bg-slate-400 dark:bg-slate-500 dark:text-slate-100 dark:hover:bg-slate-400 sm:inline-flex"
+            className="hidden h-6 items-center justify-center gap-1 rounded-md bg-[var(--badge-slate-text)] px-2 text-[10px] text-[var(--badge-slate-bg)] duration-150 hover:bg-slate-400 sm:inline-flex dark:bg-slate-500 dark:text-slate-100 dark:hover:bg-slate-400"
             aria-label={`View details for ${organizationName}`}
           >
             <Info className="h-3 w-3" aria-hidden="true" />

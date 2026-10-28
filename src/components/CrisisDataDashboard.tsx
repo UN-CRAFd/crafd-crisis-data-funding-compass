@@ -1,20 +1,20 @@
 "use client";
 
-import React, { useEffect, useMemo, useState, useCallback } from "react";
+import React, { useCallback, useEffect, useMemo, useState } from "react";
 // Image import removed because it's not used in this file
 import ChartCard from "@/components/ChartCard";
-import FilterBar from "@/components/FilterBar";
-import NoResultsPopup from "@/components/NoResultsPopup";
-import PageHeader from "@/components/PageHeader";
-import { SectionHeader } from "@/components/SectionHeader";
-import dynamic from "next/dynamic";
-import OrganizationModal from "@/components/OrganizationModal";
-import ProjectModal from "@/components/ProjectModal";
 import DonorModal from "@/components/DonorModal";
 import DonorTable from "@/components/DonorTable";
+import FilterBar from "@/components/FilterBar";
+import NoResultsPopup from "@/components/NoResultsPopup";
 import { OrganizationBox } from "@/components/OrganizationBox";
+import OrganizationModal from "@/components/OrganizationModal";
+import PageHeader from "@/components/PageHeader";
 import { ProjectBox } from "@/components/ProjectBox";
-import { matchesUrlSlug } from "@/lib/urlShortcuts";
+import ProjectModal from "@/components/ProjectModal";
+import { SectionHeader } from "@/components/SectionHeader";
+import { Badge } from "@/components/shared/Badge";
+import { StatCard } from "@/components/shared/StatCard";
 import { Card, CardContent } from "@/components/ui/card";
 import { Collapsible, CollapsibleContent } from "@/components/ui/collapsible";
 import {
@@ -31,29 +31,32 @@ import {
   Tooltip as TooltipUI,
 } from "@/components/ui/tooltip";
 import labels from "@/config/labels.json";
+import { useGeneralContributions } from "@/contexts/GeneralContributionsContext";
+import { useTips } from "@/contexts/TipsContext";
+import { useProjectCounts } from "@/hooks/useProjectCounts";
+import { matchesUrlSlug } from "@/lib/urlShortcuts";
 import type { ModalMapsDTO } from "@/server/dto";
 import {
+  ArrowDownWideNarrow,
+  ArrowUpWideNarrow,
   Building2,
   ChevronDown,
+  Compass,
   Database,
   Globe,
-  ArrowUpWideNarrow,
-  ArrowDownWideNarrow,
+  Landmark,
+  Lightbulb,
   Network,
   Settings,
-  Lightbulb,
-  Landmark,
   UserRoundPlus,
-  Compass,
 } from "lucide-react";
+import dynamic from "next/dynamic";
+import { useRouter, useSearchParams } from "next/navigation";
 import {
   calculateOrganizationTypesFromOrganizationsWithProjects,
   setGeneralContributionsEnabled,
 } from "../lib/data";
 import { exportViewAsCSV, exportViewAsXLSX } from "../lib/exportCSV";
-import { useTips } from "@/contexts/TipsContext";
-import { useGeneralContributions } from "@/contexts/GeneralContributionsContext";
-import { useRouter, useSearchParams } from "next/navigation";
 import type {
   DashboardStats,
   OrganizationProjectData,
@@ -62,9 +65,6 @@ import type {
   ProjectData,
   ProjectTypeData,
 } from "../types/airtable";
-import { Badge } from "@/components/shared/Badge";
-import { StatCard } from "@/components/shared/StatCard";
-import { useProjectCounts } from "@/hooks/useProjectCounts";
 
 // Eagerly load NetworkGraph on client side to avoid lazy loading delay
 const NetworkGraph = dynamic(() => import("@/components/NetworkGraph"), {
@@ -246,7 +246,7 @@ const CrisisDataDashboard = ({
     const tipsContext = useTips();
     tipsEnabled = tipsContext.tipsEnabled;
     setTipsEnabled = tipsContext.setTipsEnabled;
-  } catch (e) {
+  } catch {
     // TipsProvider not available (e.g., during server-side rendering)
     tipsEnabled = false;
   }
@@ -258,7 +258,7 @@ const CrisisDataDashboard = ({
     const genContContext = useGeneralContributions();
     showGeneralContributions = genContContext.showGeneralContributions;
     setShowGeneralContributions = genContContext.setShowGeneralContributions;
-  } catch (e) {
+  } catch {
     // GeneralContributionsProvider not available - use defaults
   }
 
@@ -892,7 +892,6 @@ const CrisisDataDashboard = ({
       {/* Main Content - Add top padding to account for fixed header */}
       <div className="mx-auto max-w-[82rem] overflow-x-hidden px-4 py-4 pt-20 sm:px-6 sm:py-6 sm:pt-24 lg:px-8">
         <div className="space-y-4 sm:space-y-[var(--spacing-section)]">
-
           {/* Statistics Cards - Configuration-driven rendering */}
           {(() => {
             const donorChartFootnote =
@@ -955,8 +954,7 @@ const CrisisDataDashboard = ({
                         setExpandedMobileStatCard(expanded ? key : null);
                       }
                 }
-              >
-              </StatCard>
+              ></StatCard>
             );
 
             const expandedCardConfig =
@@ -1367,14 +1365,27 @@ const CrisisDataDashboard = ({
                   <TabsContent value="table" className="mt-0">
                     <div className="space-y-2 transition-all duration-500">
                       {sortedOrganizations.map((org) => {
-                          const isExpanded = expandedOrgs.has(org.id);
-                          const hasProjects = org.projects.length > 0;
+                        const isExpanded = expandedOrgs.has(org.id);
+                        const hasProjects = org.projects.length > 0;
 
-                          return (
-                            <Collapsible
-                              key={org.id}
-                              open={isExpanded}
-                              onOpenChange={() => {
+                        return (
+                          <Collapsible
+                            key={org.id}
+                            open={isExpanded}
+                            onOpenChange={() => {
+                              const newExpanded = new Set(expandedOrgs);
+                              if (isExpanded) {
+                                newExpanded.delete(org.id);
+                              } else {
+                                newExpanded.add(org.id);
+                              }
+                              setExpandedOrgs(newExpanded);
+                            }}
+                            className="transition-all duration-500 ease-out"
+                          >
+                            <div
+                              className="w-full cursor-pointer"
+                              onClick={() => {
                                 const newExpanded = new Set(expandedOrgs);
                                 if (isExpanded) {
                                   newExpanded.delete(org.id);
@@ -1383,219 +1394,199 @@ const CrisisDataDashboard = ({
                                 }
                                 setExpandedOrgs(newExpanded);
                               }}
-                              className="transition-all duration-500 ease-out"
                             >
-                              <div
-                                className="w-full cursor-pointer"
-                                onClick={() => {
-                                  const newExpanded = new Set(expandedOrgs);
-                                  if (isExpanded) {
-                                    newExpanded.delete(org.id);
-                                  } else {
-                                    newExpanded.add(org.id);
-                                  }
-                                  setExpandedOrgs(newExpanded);
-                                }}
+                              <OrganizationBox
+                                orgId={org.id}
+                                organizationName={org.organizationName}
+                                nestedOrganizations={nestedOrganizations}
+                                organizationsTable={organizationsTable}
+                                isExpanded={isExpanded}
+                                hasProjects={hasProjects}
+                                onOpenOrganizationModal={
+                                  onOpenOrganizationModal
+                                }
+                                logoErrors={logoErrors}
+                                onLogoError={handleLogoError}
+                                headingLevel="h3"
+                                showDetailsButton={true}
+                                projectCount={org.projects.length}
+                                projectLabel={
+                                  org.projects.length === 1
+                                    ? labels.product.singular
+                                    : labels.product.plural
+                                }
                               >
-                                <OrganizationBox
-                                  orgId={org.id}
-                                  organizationName={org.organizationName}
-                                  nestedOrganizations={nestedOrganizations}
-                                  organizationsTable={organizationsTable}
-                                  isExpanded={isExpanded}
-                                  hasProjects={hasProjects}
-                                  onOpenOrganizationModal={
-                                    onOpenOrganizationModal
-                                  }
-                                  logoErrors={logoErrors}
-                                  onLogoError={handleLogoError}
-                                  headingLevel="h3"
-                                  showDetailsButton={true}
-                                  projectCount={org.projects.length}
-                                  projectLabel={
-                                    org.projects.length === 1
-                                      ? labels.product.singular
-                                      : labels.product.plural
-                                  }
-                                >
-                                  {(() => {
-                                    const isCountriesExpanded =
-                                      expandedCountries.has(org.id);
-                                    const donorInfo = org.donorInfo || [];
+                                {(() => {
+                                  const isCountriesExpanded =
+                                    expandedCountries.has(org.id);
+                                  const donorInfo = org.donorInfo || [];
 
-                                    // Sort donors: selected + org-level first, then others
-                                    const sortedDonors = [...donorInfo].sort(
-                                      (a, b) => {
-                                        const aIsSelected =
-                                          combinedDonors.includes(a.country);
-                                        const bIsSelected =
-                                          combinedDonors.includes(b.country);
+                                  // Sort donors: selected + org-level first, then others
+                                  const sortedDonors = [...donorInfo].sort(
+                                    (a, b) => {
+                                      const aIsSelected =
+                                        combinedDonors.includes(a.country);
+                                      const bIsSelected =
+                                        combinedDonors.includes(b.country);
 
-                                        if (aIsSelected && !bIsSelected)
-                                          return -1;
-                                        if (!aIsSelected && bIsSelected)
-                                          return 1;
+                                      if (aIsSelected && !bIsSelected)
+                                        return -1;
+                                      if (!aIsSelected && bIsSelected) return 1;
 
-                                        if (a.isOrgLevel && !b.isOrgLevel)
-                                          return -1;
-                                        if (!a.isOrgLevel && b.isOrgLevel)
-                                          return 1;
+                                      if (a.isOrgLevel && !b.isOrgLevel)
+                                        return -1;
+                                      if (!a.isOrgLevel && b.isOrgLevel)
+                                        return 1;
 
-                                        return a.country.localeCompare(
-                                          b.country,
-                                        );
-                                      },
-                                    );
+                                      return a.country.localeCompare(b.country);
+                                    },
+                                  );
 
-                                    // Dynamic country limit based on available space
-                                    const calculateCollapsedLimit = () => {
-                                      const maxCharsMobile = 50;
-                                      const maxCharsDesktop = 100;
-                                      const maxChars =
-                                        window.innerWidth < 640
-                                          ? maxCharsMobile
-                                          : maxCharsDesktop;
+                                  // Dynamic country limit based on available space
+                                  const calculateCollapsedLimit = () => {
+                                    const maxCharsMobile = 50;
+                                    const maxCharsDesktop = 100;
+                                    const maxChars =
+                                      window.innerWidth < 640
+                                        ? maxCharsMobile
+                                        : maxCharsDesktop;
 
-                                      let totalChars = 0;
-                                      const countriesToShow = [];
+                                    let totalChars = 0;
+                                    const countriesToShow = [];
 
-                                      for (const donor of sortedDonors) {
-                                        const estimatedSize =
-                                          donor.country.length + 8;
+                                    for (const donor of sortedDonors) {
+                                      const estimatedSize =
+                                        donor.country.length + 8;
 
-                                        if (
-                                          totalChars + estimatedSize <=
-                                          maxChars
-                                        ) {
-                                          countriesToShow.push(donor);
-                                          totalChars += estimatedSize;
-                                        } else {
-                                          break;
-                                        }
+                                      if (
+                                        totalChars + estimatedSize <=
+                                        maxChars
+                                      ) {
+                                        countriesToShow.push(donor);
+                                        totalChars += estimatedSize;
+                                      } else {
+                                        break;
                                       }
+                                    }
 
-                                      return countriesToShow.length === 0
-                                        ? 1
-                                        : Math.min(countriesToShow.length, 5);
-                                    };
+                                    return countriesToShow.length === 0
+                                      ? 1
+                                      : Math.min(countriesToShow.length, 5);
+                                  };
 
-                                    const maxCountriesToShowCollapsed =
-                                      calculateCollapsedLimit();
-                                    const donorsToShow = isCountriesExpanded
-                                      ? sortedDonors
-                                      : sortedDonors.slice(
-                                          0,
-                                          maxCountriesToShowCollapsed,
-                                        );
-
-                                    return (
-                                      <>
-                                        {donorsToShow.map(
-                                          (donor, idx: number) => {
-                                            return (
-                                              <Badge
-                                                key={idx}
-                                                text={donor.country}
-                                                variant={
-                                                  combinedDonors.includes(
-                                                    donor.country,
-                                                  )
-                                                    ? "blue"
-                                                    : "slate"
-                                                }
-                                                className={
-                                                  donor.isOrgLevel
-                                                    ? ""
-                                                    : "opacity-50"
-                                                }
-                                                title={
-                                                  donor.isOrgLevel
-                                                    ? `${donor.country} (Organization Donor)`
-                                                    : `${donor.country} (Project-Only Donor)`
-                                                }
-                                              />
-                                            );
-                                          },
-                                        )}
-                                        {sortedDonors.length >
-                                          maxCountriesToShowCollapsed &&
-                                          !isCountriesExpanded && (
-                                            <div
-                                              onClick={(e) => {
-                                                e.stopPropagation();
-                                                const newExpanded = new Set(
-                                                  expandedCountries,
-                                                );
-                                                newExpanded.add(org.id);
-                                                setExpandedCountries(
-                                                  newExpanded,
-                                                );
-                                              }}
-                                              className="bg-slate-000 inline-flex cursor-pointer items-center rounded-md px-2 py-1 text-xs font-medium text-slate-900 transition-colors hover:bg-slate-100"
-                                            >
-                                              +
-                                              {sortedDonors.length -
-                                                maxCountriesToShowCollapsed}{" "}
-                                              {labels.filters.showMore}
-                                            </div>
-                                          )}
-                                        {isCountriesExpanded &&
-                                          sortedDonors.length >
-                                            maxCountriesToShowCollapsed && (
-                                            <div
-                                              onClick={(e) => {
-                                                e.stopPropagation();
-                                                const newExpanded = new Set(
-                                                  expandedCountries,
-                                                );
-                                                newExpanded.delete(org.id);
-                                                setExpandedCountries(
-                                                  newExpanded,
-                                                );
-                                              }}
-                                              className="bg-slate-000 inline-flex cursor-pointer items-center rounded-md px-2 py-1 text-xs font-medium text-slate-900 transition-colors hover:bg-slate-100"
-                                            >
-                                              {labels.filters.showLess}
-                                            </div>
-                                          )}
-                                      </>
-                                    );
-                                  })()}
-                                </OrganizationBox>
-                              </div>
-                              <CollapsibleContent>
-                                <div className="mt-2 ml-8 space-y-2 sm:ml-14">
-                                  {org.projects.map((project: ProjectData) => {
-                                    // Get product_key from nested data
-                                    const nestedOrg = nestedOrganizations.find(
-                                      (n: any) => n.id === org.id,
-                                    );
-                                    const nestedProject =
-                                      nestedOrg?.projects?.find(
-                                        (p: any) => p.id === project.id,
+                                  const maxCountriesToShowCollapsed =
+                                    calculateCollapsedLimit();
+                                  const donorsToShow = isCountriesExpanded
+                                    ? sortedDonors
+                                    : sortedDonors.slice(
+                                        0,
+                                        maxCountriesToShowCollapsed,
                                       );
-                                    const projectKey =
-                                      nestedProject?.fields?.product_key;
 
-                                    return (
-                                      <ProjectBox
-                                        key={project.id}
-                                        project={project}
-                                        onClick={() => {
-                                          if (projectKey) {
-                                            onOpenProjectModal(projectKey);
-                                          }
-                                        }}
-                                        tipsEnabled={tipsEnabled}
-                                        combinedDonors={combinedDonors}
-                                      />
+                                  return (
+                                    <>
+                                      {donorsToShow.map(
+                                        (donor, idx: number) => {
+                                          return (
+                                            <Badge
+                                              key={idx}
+                                              text={donor.country}
+                                              variant={
+                                                combinedDonors.includes(
+                                                  donor.country,
+                                                )
+                                                  ? "blue"
+                                                  : "slate"
+                                              }
+                                              className={
+                                                donor.isOrgLevel
+                                                  ? ""
+                                                  : "opacity-50"
+                                              }
+                                              title={
+                                                donor.isOrgLevel
+                                                  ? `${donor.country} (Organization Donor)`
+                                                  : `${donor.country} (Project-Only Donor)`
+                                              }
+                                            />
+                                          );
+                                        },
+                                      )}
+                                      {sortedDonors.length >
+                                        maxCountriesToShowCollapsed &&
+                                        !isCountriesExpanded && (
+                                          <div
+                                            onClick={(e) => {
+                                              e.stopPropagation();
+                                              const newExpanded = new Set(
+                                                expandedCountries,
+                                              );
+                                              newExpanded.add(org.id);
+                                              setExpandedCountries(newExpanded);
+                                            }}
+                                            className="bg-slate-000 inline-flex cursor-pointer items-center rounded-md px-2 py-1 text-xs font-medium text-slate-900 transition-colors hover:bg-slate-100"
+                                          >
+                                            +
+                                            {sortedDonors.length -
+                                              maxCountriesToShowCollapsed}{" "}
+                                            {labels.filters.showMore}
+                                          </div>
+                                        )}
+                                      {isCountriesExpanded &&
+                                        sortedDonors.length >
+                                          maxCountriesToShowCollapsed && (
+                                          <div
+                                            onClick={(e) => {
+                                              e.stopPropagation();
+                                              const newExpanded = new Set(
+                                                expandedCountries,
+                                              );
+                                              newExpanded.delete(org.id);
+                                              setExpandedCountries(newExpanded);
+                                            }}
+                                            className="bg-slate-000 inline-flex cursor-pointer items-center rounded-md px-2 py-1 text-xs font-medium text-slate-900 transition-colors hover:bg-slate-100"
+                                          >
+                                            {labels.filters.showLess}
+                                          </div>
+                                        )}
+                                    </>
+                                  );
+                                })()}
+                              </OrganizationBox>
+                            </div>
+                            <CollapsibleContent>
+                              <div className="mt-2 ml-8 space-y-2 sm:ml-14">
+                                {org.projects.map((project: ProjectData) => {
+                                  // Get product_key from nested data
+                                  const nestedOrg = nestedOrganizations.find(
+                                    (n: any) => n.id === org.id,
+                                  );
+                                  const nestedProject =
+                                    nestedOrg?.projects?.find(
+                                      (p: any) => p.id === project.id,
                                     );
-                                  })}
-                                </div>
-                              </CollapsibleContent>
-                            </Collapsible>
-                          );
-                        })}
+                                  const projectKey =
+                                    nestedProject?.fields?.product_key;
+
+                                  return (
+                                    <ProjectBox
+                                      key={project.id}
+                                      project={project}
+                                      onClick={() => {
+                                        if (projectKey) {
+                                          onOpenProjectModal(projectKey);
+                                        }
+                                      }}
+                                      tipsEnabled={tipsEnabled}
+                                      combinedDonors={combinedDonors}
+                                    />
+                                  );
+                                })}
+                              </div>
+                            </CollapsibleContent>
+                          </Collapsible>
+                        );
+                      })}
                     </div>
                     {organizationsWithProjects.length === 0 &&
                       activeView === "table" && (
@@ -1665,11 +1656,11 @@ const CrisisDataDashboard = ({
       </div>
 
       {/* Impressum Footer */}
-      <footer className="mt-8 border-t border-slate-200 bg-white dark:border-slate-700 dark:bg-slate-900 sm:mt-16">
+      <footer className="mt-8 border-t border-slate-200 bg-white sm:mt-16 dark:border-slate-700 dark:bg-slate-900">
         <div className="mx-auto max-w-[82rem] px-4 py-4 sm:px-6 sm:py-6 lg:px-8">
           <div className="flex flex-col items-center justify-center gap-2 sm:flex-row sm:justify-between sm:gap-0">
             <div className="flex-1 text-center">
-              <p className="text-xs text-slate-600 dark:text-slate-400 sm:text-sm">
+              <p className="text-xs text-slate-600 sm:text-sm dark:text-slate-400">
                 {labels.footer.dataGatheredBy}{" "}
                 <a
                   href="https://crafd.io"

@@ -1,9 +1,9 @@
 "use client";
 
-import React, { useEffect, useState } from "react";
-import { X, ExternalLink, Megaphone } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import labels from "@/config/labels.json";
+import { ExternalLink, Megaphone, X } from "lucide-react";
+import React, { useEffect, useState } from "react";
 
 interface SurveyBannerProps {
   surveyUrl?: string;

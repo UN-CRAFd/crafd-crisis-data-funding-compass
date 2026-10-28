@@ -1,45 +1,10 @@
 "use client";
 
-import React, { useEffect, useMemo, useRef, useState } from "react";
-import { useRouter, useSearchParams } from "next/navigation";
-import PageHeader from "@/components/PageHeader";
 import ChartCard from "@/components/ChartCard";
 import FilterBar from "@/components/FilterBar";
-import {
-  Card,
-  CardContent,
-  CardDescription,
-  CardHeader,
-  CardTitle,
-} from "@/components/ui/card";
+import PageHeader from "@/components/PageHeader";
 import { Button } from "@/components/ui/button";
-import {
-  Tooltip as TooltipUI,
-  TooltipContent,
-  TooltipProvider,
-  TooltipTrigger,
-} from "@/components/ui/tooltip";
-import {
-  Globe,
-  Search,
-  Filter,
-  ChevronDown,
-  Building2,
-  Database,
-  BarChart3,
-  Network,
-  GitBranch,
-  Users,
-  Target,
-  SearchCheck,
-  Columns,
-  Radar as RadarIcon,
-  AlertCircle,
-  Settings,
-  Lightbulb,
-  Landmark,
-  UserRoundPlus,
-} from "lucide-react";
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import {
   DropdownMenu,
   DropdownMenuContent,
@@ -47,31 +12,49 @@ import {
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
 import {
-  Radar,
-  RadarChart,
-  PolarGrid,
-  PolarAngleAxis,
-  PolarRadiusAxis,
-  ResponsiveContainer,
-  Legend,
-  Label,
-} from "recharts";
+  TooltipContent,
+  TooltipProvider,
+  TooltipTrigger,
+  Tooltip as TooltipUI,
+} from "@/components/ui/tooltip";
 import { getIconForInvestmentType } from "@/config/investmentTypeIcons";
+import labels from "@/config/labels.json";
+import { useGeneralContributions } from "@/contexts/GeneralContributionsContext";
+import { useTips } from "@/contexts/TipsContext";
+import {
+  getOrgColorIntensity,
+  getProjectColorIntensity,
+} from "@/lib/colorUtils";
 import {
   ensureThemesMappingsLoaded,
   themeKeyToNames,
   themeNameToKey,
 } from "@/lib/data";
-import { SectionHeader } from "./SectionHeader";
-import { useTips } from "@/contexts/TipsContext";
-import { useGeneralContributions } from "@/contexts/GeneralContributionsContext";
-import { toUrlSlug, matchesUrlSlug } from "@/lib/urlShortcuts";
-import labels from "@/config/labels.json";
-import { StatCard } from "@/components/shared/StatCard";
+import { matchesUrlSlug, toUrlSlug } from "@/lib/urlShortcuts";
 import {
-  getOrgColorIntensity,
-  getProjectColorIntensity,
-} from "@/lib/colorUtils";
+  AlertCircle,
+  BarChart3,
+  Building2,
+  Filter,
+  Globe,
+  Landmark,
+  Lightbulb,
+  Network,
+  Settings,
+  UserRoundPlus,
+} from "lucide-react";
+import { useRouter, useSearchParams } from "next/navigation";
+import { useEffect, useMemo, useRef, useState } from "react";
+import {
+  Legend,
+  PolarAngleAxis,
+  PolarGrid,
+  PolarRadiusAxis,
+  Radar,
+  RadarChart,
+  ResponsiveContainer,
+} from "recharts";
+import { SectionHeader } from "./SectionHeader";
 
 interface OrganizationData {
   id: string;
@@ -121,7 +104,6 @@ const STYLES = {
   },
 } as const;
 
-
 export default function AnalyticsPage() {
   const router = useRouter();
   const searchParams = useSearchParams();
@@ -146,9 +128,7 @@ export default function AnalyticsPage() {
     donor2: string;
   } | null>(null);
   const [hoveredDonor, setHoveredDonor] = useState<string | null>(null);
-  const [matrixViewMode] = useState<"unified" | "split">(
-    "split",
-  );
+  const [matrixViewMode] = useState<"unified" | "split">("split");
 
   // Load filter state from URL on mount — accept both long and short param keys
   useEffect(() => {
@@ -158,11 +138,11 @@ export default function AnalyticsPage() {
       if (currentUrl === lastProcessedUrlRef.current) {
         return; // Skip processing if URL hasn't changed
       }
-      
+
       // Mark that we're loading from URL to prevent the URL writing effect from running
       isLoadingFromUrlRef.current = true;
       lastProcessedUrlRef.current = currentUrl;
-      
+
       const rawDonors =
         searchParams.get("d") ?? searchParams.get("donors") ?? "";
       const incomingDonorSlugs = rawDonors.split(",").filter(Boolean);
@@ -208,12 +188,12 @@ export default function AnalyticsPage() {
 
       // Store URL donor slugs temporarily to decode them later
       (window as any).__urlDonorSlugs = urlDonorSlugs;
-      
+
       // Trigger donor decoding effect
       setUrlDonorsTrigger((prev) => prev + 1);
 
       setIsInitialized(true);
-      
+
       // Allow URL writing effect to run after a short delay to ensure state updates have completed
       setTimeout(() => {
         isLoadingFromUrlRef.current = false;
@@ -305,7 +285,7 @@ export default function AnalyticsPage() {
   // Flag to track if we're currently loading URL params to avoid the URL update effect
   // from running while we're still populating state from URL
   const isLoadingFromUrlRef = useRef(true);
-  
+
   // Track the last URL we processed to avoid re-processing the same URL
   const lastProcessedUrlRef = useRef<string>("");
 
@@ -338,7 +318,7 @@ export default function AnalyticsPage() {
     const newUrl = params.toString()
       ? `/analytics?${params.toString()}`
       : "/analytics";
-    
+
     // Only push if the URL actually changed to avoid infinite loops
     const currentUrl = window.location.pathname + window.location.search;
     if (currentUrl !== newUrl) {
@@ -1702,13 +1682,11 @@ export default function AnalyticsPage() {
                   className="h-8 w-8"
                   style={{ color: "var(--brand-primary)" }}
                 />
-                <h1
-                  className="font-qanelas-subtitle text-3xl font-bold text-slate-900 dark:text-white sm:text-4xl"
-                >
+                <h1 className="font-qanelas-subtitle text-3xl font-bold text-slate-900 sm:text-4xl dark:text-white">
                   Analytics
                 </h1>
               </div>
-              <p className="max-w-3xl text-base leading-relaxed text-slate-700 dark:text-slate-300 sm:text-lg">
+              <p className="max-w-3xl text-base leading-relaxed text-slate-700 sm:text-lg dark:text-slate-300">
                 Explore co-financing relationships and funding patterns across
                 the crisis data ecosystem
               </p>
@@ -1799,7 +1777,9 @@ export default function AnalyticsPage() {
                       >
                         <div
                           className={`h-4 w-4 rounded-full bg-white transition-transform ${
-                            showGeneralContributions ? "translate-x-3" : "translate-x-0"
+                            showGeneralContributions
+                              ? "translate-x-3"
+                              : "translate-x-0"
                           }`}
                         />
                       </div>
@@ -1808,7 +1788,9 @@ export default function AnalyticsPage() {
                     <DropdownMenuItem
                       onSelect={(e) => e.preventDefault()}
                       onClick={() => {
-                        const params = new URLSearchParams(searchParams?.toString() || "");
+                        const params = new URLSearchParams(
+                          searchParams?.toString() || "",
+                        );
                         const incoming = (
                           params.get("d") ??
                           params.get("donors") ??
@@ -1841,7 +1823,9 @@ export default function AnalyticsPage() {
                           params.delete("donors");
                         }
 
-                        const target = params.toString() ? `?${params.toString()}` : "/analytics";
+                        const target = params.toString()
+                          ? `?${params.toString()}`
+                          : "/analytics";
                         router.push(target);
                       }}
                       className="flex cursor-pointer items-center justify-between px-2 py-2 text-sm hover:bg-slate-100"
@@ -1851,7 +1835,9 @@ export default function AnalyticsPage() {
                         <span>Select CRAF'd Donors</span>
                       </div>
                       {(() => {
-                        const params = new URLSearchParams(searchParams?.toString() || "");
+                        const params = new URLSearchParams(
+                          searchParams?.toString() || "",
+                        );
                         const incoming = (
                           params.get("d") ??
                           params.get("donors") ??
@@ -2135,12 +2121,12 @@ export default function AnalyticsPage() {
                           </tr>
                         </thead>
                         <tbody>
-                          {selectedDonors.map((donor1, i) => (
+                          {selectedDonors.map((donor1) => (
                             <tr key={donor1}>
                               <td className="border-r-2 border-slate-200 p-2 text-sm font-semibold text-slate-600">
                                 {donor1}
                               </td>
-                              {selectedDonors.map((donor2, j) => {
+                              {selectedDonors.map((donor2) => {
                                 const isDiagonal = donor1 === donor2;
                                 const orgCount =
                                   coFinancingMatrix[donor1]?.[donor2]?.orgs
@@ -2228,12 +2214,12 @@ export default function AnalyticsPage() {
                           </tr>
                         </thead>
                         <tbody>
-                          {selectedDonors.map((donor1, i) => (
+                          {selectedDonors.map((donor1) => (
                             <tr key={donor1}>
                               <td className="border-r-2 border-slate-200 p-2 text-sm font-semibold text-slate-600">
                                 {donor1}
                               </td>
-                              {selectedDonors.map((donor2, j) => {
+                              {selectedDonors.map((donor2) => {
                                 const isDiagonal = donor1 === donor2;
                                 const projectCount =
                                   coFinancingMatrix[donor1]?.[donor2]?.projects
@@ -2579,7 +2565,7 @@ export default function AnalyticsPage() {
       </div>
 
       {/* Footer */}
-      <footer className="mt-8 border-t border-slate-200 bg-white dark:border-slate-700 dark:bg-slate-900 sm:mt-16">
+      <footer className="mt-8 border-t border-slate-200 bg-white sm:mt-16 dark:border-slate-700 dark:bg-slate-900">
         <div className="mx-auto max-w-[82rem] px-4 py-4 sm:px-6 sm:py-6 lg:px-8">
           <div className="flex flex-col items-center justify-center gap-2 sm:flex-row sm:justify-between sm:gap-0">
             <div className="flex-1 text-center">

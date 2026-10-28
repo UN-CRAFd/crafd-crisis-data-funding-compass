@@ -1,17 +1,9 @@
 "use client";
 
-import { IATIActivity } from "@/types/iati";
-import { DollarSign, ChevronUp, ChevronDown } from "lucide-react";
-import { useState } from "react";
 import { Badge } from "@/components/ui/badge";
-import { Card } from "@/components/ui/card";
-import { Separator } from "@/components/ui/separator";
-import {
-  Collapsible,
-  CollapsibleContent,
-  CollapsibleTrigger,
-} from "@/components/ui/collapsible";
-import { Calendar, ExternalLink } from "lucide-react";
+import { IATIActivity } from "@/types/iati";
+import { ChevronDown, ChevronUp, DollarSign } from "lucide-react";
+import { useState } from "react";
 
 interface IATIProjectsListProps {
   activities: IATIActivity[];

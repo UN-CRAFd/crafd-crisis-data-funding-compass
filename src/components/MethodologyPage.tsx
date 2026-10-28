@@ -1,30 +1,30 @@
 "use client";
 
-import { useState } from "react";
 import PageHeader from "@/components/PageHeader";
 import { Card, CardContent } from "@/components/ui/card";
 import labels from "@/config/labels.json";
 import {
-  BookOpen,
-  Database,
   AlertTriangle,
-  Layers,
-  Users,
-  FileText,
-  Search,
-  MessageCircle,
-  TrendingUp,
-  Server,
   BarChart3,
-  Settings,
-  Download,
-  Copy,
-  Check,
-  LucideIcon,
-  CalendarSync,
-  Workflow,
   BookCheck,
+  BookOpen,
+  CalendarSync,
+  Check,
+  Copy,
+  Database,
+  Download,
+  FileText,
+  Layers,
+  LucideIcon,
+  MessageCircle,
+  Search,
+  Server,
+  Settings,
+  TrendingUp,
+  Users,
+  Workflow,
 } from "lucide-react";
+import { useState } from "react";
 
 // ============================================================================
 // REUSABLE COMPONENTS
@@ -485,13 +485,29 @@ export default function MethodologyPage({
   const [activeArticle, setActiveArticle] = useState("collection");
 
   const ARTICLES = [
-    { id: "collection", icon: Search, label: labels.methodology.tabs.collection },
-    { id: "classification", icon: FileText, label: labels.methodology.tabs.classification },
-    { id: "limitations", icon: AlertTriangle, label: labels.methodology.tabs.limitations },
+    {
+      id: "collection",
+      icon: Search,
+      label: labels.methodology.tabs.collection,
+    },
+    {
+      id: "classification",
+      icon: FileText,
+      label: labels.methodology.tabs.classification,
+    },
+    {
+      id: "limitations",
+      icon: AlertTriangle,
+      label: labels.methodology.tabs.limitations,
+    },
     { id: "filtering", icon: Layers, label: labels.methodology.tabs.filtering },
     { id: "network", icon: TrendingUp, label: labels.methodology.tabs.network },
     { id: "export", icon: Download, label: labels.methodology.tabs.export },
-    { id: "repository", icon: Settings, label: labels.methodology.tabs.repository },
+    {
+      id: "repository",
+      icon: Settings,
+      label: labels.methodology.tabs.repository,
+    },
   ];
 
   const handleShare = () => {
@@ -510,39 +526,38 @@ export default function MethodologyPage({
 
       {/* Main Content */}
       <div className="mx-auto max-w-[82rem] px-4 py-0 pt-20 sm:px-6 sm:py-0 sm:pt-24 lg:px-8">
-          <div className="space-y-6">
-            {/* Hero Section */}
-            <div className="relative overflow-hidden rounded-xl border border-[var(--brand-primary-light)]/40 bg-gradient-to-br from-[var(--brand-bg-lighter)] to-[var(--brand-bg-light)] p-6 sm:p-8">
-              <div className="relative z-10">
-                <div className="mb-4 flex items-center gap-3">
-                  <BookOpen
-                    className="h-8 w-8"
-                    style={{ color: "var(--brand-primary)" }}
-                  />
-                  <h1
-                    className="font-qanelas-subtitle text-3xl font-bold text-slate-900 dark:text-white sm:text-4xl"
-                  >
-                    {labels.methodology.title}
-                  </h1>
-                </div>
-                <p className="max-w-3xl text-base leading-relaxed text-slate-700 dark:text-slate-300 sm:text-lg">
-                  {labels.methodology.subtitle}
-                </p>
+        <div className="space-y-6">
+          {/* Hero Section */}
+          <div className="relative overflow-hidden rounded-xl border border-[var(--brand-primary-light)]/40 bg-gradient-to-br from-[var(--brand-bg-lighter)] to-[var(--brand-bg-light)] p-6 sm:p-8">
+            <div className="relative z-10">
+              <div className="mb-4 flex items-center gap-3">
+                <BookOpen
+                  className="h-8 w-8"
+                  style={{ color: "var(--brand-primary)" }}
+                />
+                <h1 className="font-qanelas-subtitle text-3xl font-bold text-slate-900 sm:text-4xl dark:text-white">
+                  {labels.methodology.title}
+                </h1>
               </div>
+              <p className="max-w-3xl text-base leading-relaxed text-slate-700 sm:text-lg dark:text-slate-300">
+                {labels.methodology.subtitle}
+              </p>
             </div>
+          </div>
 
-            {/* Wiki Layout */}
-            <div className="flex items-start gap-6">
-              {/* Left Sidebar */}
-              <aside className="hidden w-52 shrink-0 md:block lg:w-60">
-                <div className="sticky top-24 overflow-hidden rounded-xl border border-slate-200 bg-white dark:border-slate-700 dark:bg-slate-800">
-                  <div className="border-b border-slate-100 bg-slate-50 px-4 py-3">
-                    <h2 className="text-xs font-semibold tracking-wider text-slate-500 uppercase">
-                      Contents
-                    </h2>
-                  </div>
-                  <nav className="p-2">
-                    {ARTICLES.map(({ id, icon: ArticleIcon, label: articleLabel }) => (
+          {/* Wiki Layout */}
+          <div className="flex items-start gap-6">
+            {/* Left Sidebar */}
+            <aside className="hidden w-52 shrink-0 md:block lg:w-60">
+              <div className="sticky top-24 overflow-hidden rounded-xl border border-slate-200 bg-white dark:border-slate-700 dark:bg-slate-800">
+                <div className="border-b border-slate-100 bg-slate-50 px-4 py-3">
+                  <h2 className="text-xs font-semibold tracking-wider text-slate-500 uppercase">
+                    Contents
+                  </h2>
+                </div>
+                <nav className="p-2">
+                  {ARTICLES.map(
+                    ({ id, icon: ArticleIcon, label: articleLabel }) => (
                       <button
                         key={id}
                         onClick={() => setActiveArticle(id)}
@@ -563,527 +578,551 @@ export default function MethodologyPage({
                         <ArticleIcon className="h-4 w-4 shrink-0" />
                         <span>{articleLabel}</span>
                       </button>
-                    ))}
-                  </nav>
-                </div>
-              </aside>
+                    ),
+                  )}
+                </nav>
+              </div>
+            </aside>
 
-              {/* Main Content */}
-              <main className="min-w-0 flex-1">
-                <Card className="!border-0 bg-white dark:bg-slate-800">
-                  <CardContent className="px-4 pt-6 pb-6 sm:px-8">
-                    {/* Data Collection Tab */}
-                    {activeArticle === "collection" && (
-                  <div className="grid grid-cols-1 gap-6 lg:grid-cols-2">
-                    <div>
-                      <SectionTitle icon={Search}>
-                        {labels.methodology.dataCollection}
-                      </SectionTitle>
-                      <div className="space-y-4">
-                        <IconInfoCard
-                          icon={BookCheck}
-                          title={labels.methodology.sourceIdentification}
-                        >
-                          {labels.methodology.sourceIdentificationDescription}
-                        </IconInfoCard>
-                        <IconInfoCard
-                          icon={Workflow}
-                          title={labels.methodology.automatedManualGathering}
-                        >
-                          {
-                            labels.methodology
-                              .automatedManualGatheringDescription
-                          }
-                        </IconInfoCard>
-                        <IconInfoCard
-                          icon={CalendarSync}
-                          title={labels.methodology.regularUpdates}
-                        >
-                          {labels.methodology.regularUpdatesDescription}
-                        </IconInfoCard>
-                      </div>
-                    </div>
-                    <Screenshot
-                      src="/methodology_screenshots/iati.png"
-                      alt={labels.methodology.dataCollectionProcess}
-                    />
-                  </div>
-                    )}
-
-                    {/* Classification Tab */}
-                    {activeArticle === "classification" && (
-                  <div className="space-y-6">
-                    <div>
-                      <SectionTitle icon={FileText}>
-                        {labels.methodology.dataClassification}
-                      </SectionTitle>
-                    </div>
-
-                    {/* Interactive Classification Explorer */}
-                    <div className="overflow-hidden rounded-lg border-2 border-slate-200 bg-white shadow-sm dark:border-slate-700 dark:bg-slate-800">
-                      <div className="border-b border-slate-200 bg-slate-50 p-4">
-                        <h4 className="flex items-center gap-2 text-sm font-semibold text-slate-700">
-                          <Layers
-                            className="h-4 w-4"
-                            style={{ color: "var(--brand-primary)" }}
-                          />
-                          {labels.methodology.assetTypeExplorer}
-                        </h4>
-                        <p className="mt-1 text-xs text-slate-500">
-                          {labels.methodology.clickOnInvestmentType}
-                        </p>
-                      </div>
-
-                      {/* Type Selector Buttons */}
-                      <div className="border-b border-slate-100 bg-slate-50/50 p-3">
-                        <div className="grid grid-cols-2 gap-2">
-                          {INVESTMENT_TYPES.map((type) => {
-                            const TypeIcon = INVESTMENT_TYPE_DATA[type].icon;
-                            const isSelected = selectedType === type;
-                            return (
-                              <button
-                                key={type}
-                                onClick={() => setSelectedType(type)}
-                                className={`flex items-center gap-2 rounded-lg border px-3 py-2 text-xs font-medium transition-all duration-200 ${
-                                  isSelected
-                                    ? "shadow-sm"
-                                    : "border-slate-200 bg-white text-slate-600 hover:border-slate-300 hover:bg-slate-50"
-                                }`}
-                                style={
-                                  isSelected
-                                    ? {
-                                        backgroundColor:
-                                          "var(--badge-other-bg)",
-                                        color: "var(--badge-other-text)",
-                                        borderColor:
-                                          "var(--badge-other-border)",
-                                      }
-                                    : {}
-                                }
-                              >
-                                <TypeIcon
-                                  className={`h-4 w-4 shrink-0 ${isSelected ? "" : "text-slate-400"}`}
-                                />
-                                <span className="truncate">{type}</span>
-                              </button>
-                            );
-                          })}
+            {/* Main Content */}
+            <main className="min-w-0 flex-1">
+              <Card className="!border-0 bg-white dark:bg-slate-800">
+                <CardContent className="px-4 pt-6 pb-6 sm:px-8">
+                  {/* Data Collection Tab */}
+                  {activeArticle === "collection" && (
+                    <div className="grid grid-cols-1 gap-6 lg:grid-cols-2">
+                      <div>
+                        <SectionTitle icon={Search}>
+                          {labels.methodology.dataCollection}
+                        </SectionTitle>
+                        <div className="space-y-4">
+                          <IconInfoCard
+                            icon={BookCheck}
+                            title={labels.methodology.sourceIdentification}
+                          >
+                            {labels.methodology.sourceIdentificationDescription}
+                          </IconInfoCard>
+                          <IconInfoCard
+                            icon={Workflow}
+                            title={labels.methodology.automatedManualGathering}
+                          >
+                            {
+                              labels.methodology
+                                .automatedManualGatheringDescription
+                            }
+                          </IconInfoCard>
+                          <IconInfoCard
+                            icon={CalendarSync}
+                            title={labels.methodology.regularUpdates}
+                          >
+                            {labels.methodology.regularUpdatesDescription}
+                          </IconInfoCard>
                         </div>
                       </div>
+                      <Screenshot
+                        src="/methodology_screenshots/iati.png"
+                        alt={labels.methodology.dataCollectionProcess}
+                      />
+                    </div>
+                  )}
 
-                      {/* Selected Type Details */}
-                      {selectedType &&
-                        INVESTMENT_TYPE_DATA[selectedType] &&
-                        (() => {
-                          const {
-                            icon: TypeIcon,
-                            description,
-                            themes,
-                          } = INVESTMENT_TYPE_DATA[selectedType];
-                          return (
-                            <div className="space-y-4 p-4">
-                              <div
-                                className="flex items-center gap-3 rounded-lg p-3"
-                                style={{
-                                  backgroundColor: "var(--badge-other-bg)",
-                                  border: "solid var(--badge-other-border)",
-                                }}
-                              >
+                  {/* Classification Tab */}
+                  {activeArticle === "classification" && (
+                    <div className="space-y-6">
+                      <div>
+                        <SectionTitle icon={FileText}>
+                          {labels.methodology.dataClassification}
+                        </SectionTitle>
+                      </div>
+
+                      {/* Interactive Classification Explorer */}
+                      <div className="overflow-hidden rounded-lg border-2 border-slate-200 bg-white shadow-sm dark:border-slate-700 dark:bg-slate-800">
+                        <div className="border-b border-slate-200 bg-slate-50 p-4">
+                          <h4 className="flex items-center gap-2 text-sm font-semibold text-slate-700">
+                            <Layers
+                              className="h-4 w-4"
+                              style={{ color: "var(--brand-primary)" }}
+                            />
+                            {labels.methodology.assetTypeExplorer}
+                          </h4>
+                          <p className="mt-1 text-xs text-slate-500">
+                            {labels.methodology.clickOnInvestmentType}
+                          </p>
+                        </div>
+
+                        {/* Type Selector Buttons */}
+                        <div className="border-b border-slate-100 bg-slate-50/50 p-3">
+                          <div className="grid grid-cols-2 gap-2">
+                            {INVESTMENT_TYPES.map((type) => {
+                              const TypeIcon = INVESTMENT_TYPE_DATA[type].icon;
+                              const isSelected = selectedType === type;
+                              return (
+                                <button
+                                  key={type}
+                                  onClick={() => setSelectedType(type)}
+                                  className={`flex items-center gap-2 rounded-lg border px-3 py-2 text-xs font-medium transition-all duration-200 ${
+                                    isSelected
+                                      ? "shadow-sm"
+                                      : "border-slate-200 bg-white text-slate-600 hover:border-slate-300 hover:bg-slate-50"
+                                  }`}
+                                  style={
+                                    isSelected
+                                      ? {
+                                          backgroundColor:
+                                            "var(--badge-other-bg)",
+                                          color: "var(--badge-other-text)",
+                                          borderColor:
+                                            "var(--badge-other-border)",
+                                        }
+                                      : {}
+                                  }
+                                >
+                                  <TypeIcon
+                                    className={`h-4 w-4 shrink-0 ${isSelected ? "" : "text-slate-400"}`}
+                                  />
+                                  <span className="truncate">{type}</span>
+                                </button>
+                              );
+                            })}
+                          </div>
+                        </div>
+
+                        {/* Selected Type Details */}
+                        {selectedType &&
+                          INVESTMENT_TYPE_DATA[selectedType] &&
+                          (() => {
+                            const {
+                              icon: TypeIcon,
+                              description,
+                              themes,
+                            } = INVESTMENT_TYPE_DATA[selectedType];
+                            return (
+                              <div className="space-y-4 p-4">
                                 <div
-                                  className="rounded-lg p-2"
+                                  className="flex items-center gap-3 rounded-lg p-3"
                                   style={{
-                                    backgroundColor: "var(--badge-other-text)",
+                                    backgroundColor: "var(--badge-other-bg)",
+                                    border: "solid var(--badge-other-border)",
                                   }}
                                 >
-                                  <TypeIcon className="h-5 w-5 text-white" />
+                                  <div
+                                    className="rounded-lg p-2"
+                                    style={{
+                                      backgroundColor:
+                                        "var(--badge-other-text)",
+                                    }}
+                                  >
+                                    <TypeIcon className="h-5 w-5 text-white" />
+                                  </div>
+                                  <h5
+                                    className="font-bold"
+                                    style={{ color: "var(--badge-other-text)" }}
+                                  >
+                                    {selectedType}
+                                  </h5>
                                 </div>
-                                <h5
-                                  className="font-bold"
-                                  style={{ color: "var(--badge-other-text)" }}
-                                >
-                                  {selectedType}
-                                </h5>
+                                <p className="text-sm leading-relaxed text-slate-600">
+                                  {description}
+                                </p>
+                                <div>
+                                  <h6 className="mb-2 text-xs font-semibold tracking-wide text-slate-700 uppercase">
+                                    {labels.methodology.relatedThemes}
+                                  </h6>
+                                  <div className="flex flex-wrap gap-1.5">
+                                    {themes.map((theme, idx) => (
+                                      <span
+                                        key={idx}
+                                        className="inline-flex items-center rounded px-2 py-1 text-xs"
+                                        style={{
+                                          backgroundColor:
+                                            "var(--badge-other-bg)",
+                                          color: "var(--badge-other-text)",
+                                          border:
+                                            "1px solid var(--badge-other-border)",
+                                        }}
+                                      >
+                                        {theme}
+                                      </span>
+                                    ))}
+                                  </div>
+                                </div>
                               </div>
-                              <p className="text-sm leading-relaxed text-slate-600">
-                                {description}
-                              </p>
+                            );
+                          })()}
+                      </div>
+                    </div>
+                  )}
+
+                  {/* Limitations Tab */}
+                  {activeArticle === "limitations" && (
+                    <div className="space-y-6">
+                      <div>
+                        <SectionTitle icon={AlertTriangle}>
+                          {labels.methodology.limitations}
+                        </SectionTitle>
+                        <div className="space-y-4">
+                          <InfoCard title={labels.methodology.dataGaps}>
+                            {labels.methodology.dataGapsDescription}
+                          </InfoCard>
+                          <InfoCard
+                            title={
+                              labels.methodology.classificationSubjectivity
+                            }
+                          >
+                            {
+                              labels.methodology
+                                .classificationSubjectivityDescription
+                            }
+                          </InfoCard>
+                          <InfoCard title={labels.methodology.simplification}>
+                            {labels.methodology.simplificationDescription}
+                          </InfoCard>
+                        </div>
+                      </div>
+                    </div>
+                  )}
+
+                  {/* Filtering Tab */}
+                  {activeArticle === "filtering" && (
+                    <div className="space-y-6">
+                      <div>
+                        <SectionTitle icon={Layers}>
+                          {labels.methodology.filteringQuery}
+                        </SectionTitle>
+                        <div className="space-y-4">
+                          <InfoCard title={labels.methodology.searchLogic}>
+                            {labels.methodology.searchLogicDescription}
+                          </InfoCard>
+                          <InfoCard title={labels.methodology.donorFilter}>
+                            {labels.methodology.donorFilterDescription}
+                          </InfoCard>
+                          <InfoCard title={labels.methodology.typeFilter}>
+                            {labels.methodology.typeFilterDescription}
+                          </InfoCard>
+                          <InfoCard title={labels.methodology.themeFilter}>
+                            {labels.methodology.themeFilterDescription}
+                          </InfoCard>
+                          <InfoCard
+                            title={labels.methodology.typeThemeRelationship}
+                          >
+                            {
+                              labels.methodology
+                                .typeThemeRelationshipDescription
+                            }
+                          </InfoCard>
+                        </div>
+                      </div>
+
+                      {/* Interactive Filter Logic Flow */}
+                      <SectionTitle icon={Search}>
+                        {labels.methodology.filteringProcess}
+                      </SectionTitle>
+
+                      <div className="rounded-lg border-2 border-none bg-white p-6 shadow-sm dark:bg-slate-800">
+                        {/* Flow Diagram */}
+                        <div className="space-y-3 text-xs">
+                          {/* Step 1: Donor Check */}
+                          <div className="rounded-lg border-2 border-slate-300 bg-slate-100 p-3">
+                            <div className="mb-2 flex items-center gap-2 font-bold text-slate-800">
+                              <span className="flex h-5 w-5 items-center justify-center rounded-full bg-slate-700 text-xs text-white">
+                                1
+                              </span>
+                              {labels.methodology.donorFilterGatekeeper}
+                            </div>
+                            <div className="space-y-1 pl-7 text-slate-700">
                               <div>
-                                <h6 className="mb-2 text-xs font-semibold tracking-wide text-slate-700 uppercase">
-                                  {labels.methodology.relatedThemes}
-                                </h6>
-                                <div className="flex flex-wrap gap-1.5">
-                                  {themes.map((theme, idx) => (
-                                    <span
-                                      key={idx}
-                                      className="inline-flex items-center rounded px-2 py-1 text-xs"
-                                      style={{
-                                        backgroundColor:
-                                          "var(--badge-other-bg)",
-                                        color: "var(--badge-other-text)",
-                                        border:
-                                          "1px solid var(--badge-other-border)",
-                                      }}
-                                    >
-                                      {theme}
-                                    </span>
-                                  ))}
+                                🔍 {labels.methodology.donorFilterQuestion}
+                              </div>
+                              <div className="rounded border-2 border-slate-200 bg-white px-2 py-1 font-mono text-[10px]">
+                                donors.every(d → org.donors.includes(d))
+                              </div>
+                              <div className="mt-2 flex gap-2">
+                                <div className="flex-1 rounded border-2 border-slate-300 bg-slate-50 px-2 py-1 text-slate-700">
+                                  ✓ {labels.methodology.donorFilterYes}
+                                </div>
+                                <div className="flex-1 rounded border-2 border-slate-400 bg-slate-200 px-2 py-1 text-slate-800">
+                                  ✗ {labels.methodology.donorFilterNo}
                                 </div>
                               </div>
                             </div>
-                          );
-                        })()}
-                    </div>
-                  </div>
-                    )}
-
-                    {/* Limitations Tab */}
-                    {activeArticle === "limitations" && (
-                  <div className="space-y-6">
-                    <div>
-                      <SectionTitle icon={AlertTriangle}>
-                        {labels.methodology.limitations}
-                      </SectionTitle>
-                      <div className="space-y-4">
-                        <InfoCard title={labels.methodology.dataGaps}>
-                          {labels.methodology.dataGapsDescription}
-                        </InfoCard>
-                        <InfoCard
-                          title={labels.methodology.classificationSubjectivity}
-                        >
-                          {
-                            labels.methodology
-                              .classificationSubjectivityDescription
-                          }
-                        </InfoCard>
-                        <InfoCard title={labels.methodology.simplification}>
-                          {labels.methodology.simplificationDescription}
-                        </InfoCard>
-                      </div>
-                    </div>
-                  </div>
-                    )}
-
-                    {/* Filtering Tab */}
-                    {activeArticle === "filtering" && (
-                  <div className="space-y-6">
-                    <div>
-                      <SectionTitle icon={Layers}>
-                        {labels.methodology.filteringQuery}
-                      </SectionTitle>
-                      <div className="space-y-4">
-                        <InfoCard title={labels.methodology.searchLogic}>
-                          {labels.methodology.searchLogicDescription}
-                        </InfoCard>
-                        <InfoCard title={labels.methodology.donorFilter}>
-                          {labels.methodology.donorFilterDescription}
-                        </InfoCard>
-                        <InfoCard title={labels.methodology.typeFilter}>
-                          {labels.methodology.typeFilterDescription}
-                        </InfoCard>
-                        <InfoCard title={labels.methodology.themeFilter}>
-                          {labels.methodology.themeFilterDescription}
-                        </InfoCard>
-                        <InfoCard
-                          title={labels.methodology.typeThemeRelationship}
-                        >
-                          {labels.methodology.typeThemeRelationshipDescription}
-                        </InfoCard>
-                      </div>
-                    </div>
-
-                    {/* Interactive Filter Logic Flow */}
-                    <SectionTitle icon={Search}>
-                      {labels.methodology.filteringProcess}
-                    </SectionTitle>
-
-                    <div className="rounded-lg border-2 border-none bg-white p-6 shadow-sm dark:bg-slate-800">
-                      {/* Flow Diagram */}
-                      <div className="space-y-3 text-xs">
-                        {/* Step 1: Donor Check */}
-                        <div className="rounded-lg border-2 border-slate-300 bg-slate-100 p-3">
-                          <div className="mb-2 flex items-center gap-2 font-bold text-slate-800">
-                            <span className="flex h-5 w-5 items-center justify-center rounded-full bg-slate-700 text-xs text-white">
-                              1
-                            </span>
-                            {labels.methodology.donorFilterGatekeeper}
                           </div>
-                          <div className="space-y-1 pl-7 text-slate-700">
-                            <div>
-                              🔍 {labels.methodology.donorFilterQuestion}
+
+                          <div className="flex justify-center">
+                            <div className="h-4 w-0.5 bg-slate-300"></div>
+                          </div>
+
+                          {/* Step 2: Search Check */}
+                          <div className="rounded-lg border-2 border-slate-300 bg-slate-100 p-3">
+                            <div className="mb-2 flex items-center gap-2 font-bold text-slate-800">
+                              <span className="flex h-5 w-5 items-center justify-center rounded-full bg-slate-700 text-xs text-white">
+                                2
+                              </span>
+                              {labels.methodology.searchFilterCheck}
                             </div>
-                            <div className="rounded border-2 border-slate-200 bg-white px-2 py-1 font-mono text-[10px]">
-                              donors.every(d → org.donors.includes(d))
-                            </div>
-                            <div className="mt-2 flex gap-2">
-                              <div className="flex-1 rounded border-2 border-slate-300 bg-slate-50 px-2 py-1 text-slate-700">
-                                ✓ {labels.methodology.donorFilterYes}
+                            <div className="space-y-1 pl-7 text-slate-700">
+                              <div>
+                                🔍 {labels.methodology.searchFilterQuestion}
                               </div>
-                              <div className="flex-1 rounded border-2 border-slate-400 bg-slate-200 px-2 py-1 text-slate-800">
-                                ✗ {labels.methodology.donorFilterNo}
+                              <div className="rounded border-2 border-slate-200 bg-white px-2 py-1 font-mono text-[10px]">
+                                org.name.includes(searchQuery)
+                              </div>
+                              <div className="mt-2 space-y-2">
+                                <div className="rounded border-2 border-slate-300 bg-slate-50 px-2 py-1.5 text-slate-700">
+                                  <div className="mb-1 font-semibold">
+                                    ✓ {labels.methodology.searchFilterYes}
+                                  </div>
+                                  <div className="pl-4 text-[10px]">
+                                    {labels.methodology.searchFilterYesHint}
+                                  </div>
+                                </div>
+                                <div className="rounded border-2 border-slate-400 bg-slate-200 px-2 py-1.5 text-slate-800">
+                                  <div className="mb-1 font-semibold">
+                                    ✗ {labels.methodology.searchFilterNo}
+                                  </div>
+                                  <div className="pl-4 text-[10px]">
+                                    {labels.methodology.searchFilterNoHint}
+                                  </div>
+                                </div>
                               </div>
                             </div>
                           </div>
-                        </div>
 
-                        <div className="flex justify-center">
-                          <div className="h-4 w-0.5 bg-slate-300"></div>
-                        </div>
-
-                        {/* Step 2: Search Check */}
-                        <div className="rounded-lg border-2 border-slate-300 bg-slate-100 p-3">
-                          <div className="mb-2 flex items-center gap-2 font-bold text-slate-800">
-                            <span className="flex h-5 w-5 items-center justify-center rounded-full bg-slate-700 text-xs text-white">
-                              2
-                            </span>
-                            {labels.methodology.searchFilterCheck}
+                          <div className="flex justify-center">
+                            <div className="h-4 w-0.5 bg-slate-300"></div>
                           </div>
-                          <div className="space-y-1 pl-7 text-slate-700">
-                            <div>
-                              🔍 {labels.methodology.searchFilterQuestion}
+
+                          {/* Step 3: Project-Level Filters */}
+                          <div className="rounded-lg border-2 border-slate-300 bg-slate-100 p-3">
+                            <div className="mb-2 flex items-center gap-2 font-bold text-slate-800">
+                              <span className="flex h-5 w-5 items-center justify-center rounded-full bg-slate-700 text-xs text-white">
+                                3
+                              </span>
+                              {labels.methodology.projectLevelFilters}
                             </div>
-                            <div className="rounded border-2 border-slate-200 bg-white px-2 py-1 font-mono text-[10px]">
-                              org.name.includes(searchQuery)
-                            </div>
-                            <div className="mt-2 space-y-2">
-                              <div className="rounded border-2 border-slate-300 bg-slate-50 px-2 py-1.5 text-slate-700">
+                            <div className="space-y-2 pl-7 text-slate-700">
+                              <div className="rounded border-2 border-slate-200 bg-white px-3 py-2">
                                 <div className="mb-1 font-semibold">
-                                  ✓ {labels.methodology.searchFilterYes}
+                                  {labels.methodology.searchIfOrgDidntMatch}
                                 </div>
-                                <div className="pl-4 text-[10px]">
-                                  {labels.methodology.searchFilterYesHint}
+                                <div className="rounded bg-slate-50 px-2 py-1 font-mono text-[10px]">
+                                  project.name.includes(searchQuery)
                                 </div>
-                              </div>
-                              <div className="rounded border-2 border-slate-400 bg-slate-200 px-2 py-1.5 text-slate-800">
-                                <div className="mb-1 font-semibold">
-                                  ✗ {labels.methodology.searchFilterNo}
-                                </div>
-                                <div className="pl-4 text-[10px]">
-                                  {labels.methodology.searchFilterNoHint}
+                                <div className="mt-1 text-[10px]">
+                                  {
+                                    labels.methodology
+                                      .mustMatchForProjectVisible
+                                  }
                                 </div>
                               </div>
-                            </div>
-                          </div>
-                        </div>
 
-                        <div className="flex justify-center">
-                          <div className="h-4 w-0.5 bg-slate-300"></div>
-                        </div>
+                              <div className="rounded border-2 border-slate-200 bg-white px-3 py-2">
+                                <div className="mb-1 flex items-center gap-1 font-semibold">
+                                  {labels.methodology.typeFilterLabel}{" "}
+                                  <span
+                                    style={{
+                                      color: "var(--brand-primary-dark)",
+                                    }}
+                                    className="font-bold"
+                                  >
+                                    {labels.methodology.typeFilterLogic}
+                                  </span>
+                                </div>
+                                <div className="rounded bg-slate-50 px-2 py-1 font-mono text-[10px]">
+                                  project.types.some(t →
+                                  selectedTypes.includes(t))
+                                </div>
+                                <div className="mt-1 text-[10px]">
+                                  {labels.methodology.projectNeedsMatchingType}
+                                </div>
+                              </div>
 
-                        {/* Step 3: Project-Level Filters */}
-                        <div className="rounded-lg border-2 border-slate-300 bg-slate-100 p-3">
-                          <div className="mb-2 flex items-center gap-2 font-bold text-slate-800">
-                            <span className="flex h-5 w-5 items-center justify-center rounded-full bg-slate-700 text-xs text-white">
-                              3
-                            </span>
-                            {labels.methodology.projectLevelFilters}
-                          </div>
-                          <div className="space-y-2 pl-7 text-slate-700">
-                            <div className="rounded border-2 border-slate-200 bg-white px-3 py-2">
-                              <div className="mb-1 font-semibold">
-                                {labels.methodology.searchIfOrgDidntMatch}
-                              </div>
-                              <div className="rounded bg-slate-50 px-2 py-1 font-mono text-[10px]">
-                                project.name.includes(searchQuery)
-                              </div>
-                              <div className="mt-1 text-[10px]">
-                                {labels.methodology.mustMatchForProjectVisible}
-                              </div>
-                            </div>
-
-                            <div className="rounded border-2 border-slate-200 bg-white px-3 py-2">
-                              <div className="mb-1 flex items-center gap-1 font-semibold">
-                                {labels.methodology.typeFilterLabel}{" "}
-                                <span
-                                  style={{ color: "var(--brand-primary-dark)" }}
-                                  className="font-bold"
-                                >
-                                  {labels.methodology.typeFilterLogic}
-                                </span>
-                              </div>
-                              <div className="rounded bg-slate-50 px-2 py-1 font-mono text-[10px]">
-                                project.types.some(t →
-                                selectedTypes.includes(t))
-                              </div>
-                              <div className="mt-1 text-[10px]">
-                                {labels.methodology.projectNeedsMatchingType}
-                              </div>
-                            </div>
-
-                            <div className="rounded border-2 border-slate-200 bg-white px-3 py-2">
-                              <div className="mb-1 flex items-center gap-1 font-semibold">
-                                {labels.methodology.themeFilterLabel}{" "}
-                                <span
-                                  style={{ color: "var(--brand-primary-dark)" }}
-                                  className="font-bold"
-                                >
-                                  {labels.methodology.themeFilterLogic}
-                                </span>
-                              </div>
-                              <div className="rounded bg-slate-50 px-2 py-1 font-mono text-[10px]">
-                                project.themes.some(th →
-                                selectedThemes.includes(th))
-                              </div>
-                              <div className="mt-1 text-[10px]">
-                                {labels.methodology.projectNeedsMatchingTheme}
+                              <div className="rounded border-2 border-slate-200 bg-white px-3 py-2">
+                                <div className="mb-1 flex items-center gap-1 font-semibold">
+                                  {labels.methodology.themeFilterLabel}{" "}
+                                  <span
+                                    style={{
+                                      color: "var(--brand-primary-dark)",
+                                    }}
+                                    className="font-bold"
+                                  >
+                                    {labels.methodology.themeFilterLogic}
+                                  </span>
+                                </div>
+                                <div className="rounded bg-slate-50 px-2 py-1 font-mono text-[10px]">
+                                  project.themes.some(th →
+                                  selectedThemes.includes(th))
+                                </div>
+                                <div className="mt-1 text-[10px]">
+                                  {labels.methodology.projectNeedsMatchingTheme}
+                                </div>
                               </div>
                             </div>
                           </div>
-                        </div>
 
-                        <div className="flex justify-center">
-                          <div className="h-4 w-0.5 bg-slate-300"></div>
-                        </div>
-
-                        {/* Step 4: Final Decision */}
-                        <div className="rounded-lg border-2 border-slate-300 bg-slate-100 p-3">
-                          <div className="mb-2 flex items-center gap-2 font-bold text-slate-800">
-                            <span className="flex h-5 w-5 items-center justify-center rounded-full bg-slate-700 text-xs text-white">
-                              4
-                            </span>
-                            {labels.methodology.finalDecision}
+                          <div className="flex justify-center">
+                            <div className="h-4 w-0.5 bg-slate-300"></div>
                           </div>
-                          <div className="space-y-2 pl-7 text-slate-700">
-                            <div className="rounded border-2 border-slate-300 bg-slate-50 px-2 py-1.5">
-                              <div className="font-semibold text-slate-800">
-                                {labels.methodology.showOrganizationIf}
-                              </div>
-                              <ul className="mt-1 space-y-0.5 text-[10px] text-slate-700">
-                                <li>• {labels.methodology.passesDonorCheck}</li>
-                                <li>
-                                  • {labels.methodology.hasVisibleProject}
-                                </li>
-                                <li>• {labels.methodology.orgNameMatches}</li>
-                              </ul>
+
+                          {/* Step 4: Final Decision */}
+                          <div className="rounded-lg border-2 border-slate-300 bg-slate-100 p-3">
+                            <div className="mb-2 flex items-center gap-2 font-bold text-slate-800">
+                              <span className="flex h-5 w-5 items-center justify-center rounded-full bg-slate-700 text-xs text-white">
+                                4
+                              </span>
+                              {labels.methodology.finalDecision}
                             </div>
-                            <div className="rounded border-2 border-slate-400 bg-slate-200 px-2 py-1.5">
-                              <div className="font-semibold text-slate-800">
-                                {labels.methodology.hideOrganizationIf}
+                            <div className="space-y-2 pl-7 text-slate-700">
+                              <div className="rounded border-2 border-slate-300 bg-slate-50 px-2 py-1.5">
+                                <div className="font-semibold text-slate-800">
+                                  {labels.methodology.showOrganizationIf}
+                                </div>
+                                <ul className="mt-1 space-y-0.5 text-[10px] text-slate-700">
+                                  <li>
+                                    • {labels.methodology.passesDonorCheck}
+                                  </li>
+                                  <li>
+                                    • {labels.methodology.hasVisibleProject}
+                                  </li>
+                                  <li>• {labels.methodology.orgNameMatches}</li>
+                                </ul>
                               </div>
-                              <ul className="mt-1 space-y-0.5 text-[10px] text-slate-700">
-                                <li>• {labels.methodology.failsDonorCheck}</li>
-                                <li>
-                                  • {labels.methodology.hasZeroVisibleProjects}
-                                </li>
-                              </ul>
+                              <div className="rounded border-2 border-slate-400 bg-slate-200 px-2 py-1.5">
+                                <div className="font-semibold text-slate-800">
+                                  {labels.methodology.hideOrganizationIf}
+                                </div>
+                                <ul className="mt-1 space-y-0.5 text-[10px] text-slate-700">
+                                  <li>
+                                    • {labels.methodology.failsDonorCheck}
+                                  </li>
+                                  <li>
+                                    •{" "}
+                                    {labels.methodology.hasZeroVisibleProjects}
+                                  </li>
+                                </ul>
+                              </div>
                             </div>
                           </div>
-                        </div>
 
-                        {/* Key Insights */}
-                        <div
-                          className="mt-4 rounded-lg border-2 p-3"
-                          style={{
-                            backgroundColor: "var(--brand-bg-light)",
-                            borderColor: "var(--brand-border)",
-                          }}
-                        >
+                          {/* Key Insights */}
                           <div
-                            className="mb-2 text-xs font-bold"
-                            style={{ color: "var(--brand-primary-dark)" }}
+                            className="mt-4 rounded-lg border-2 p-3"
+                            style={{
+                              backgroundColor: "var(--brand-bg-light)",
+                              borderColor: "var(--brand-border)",
+                            }}
                           >
-                            🔑 Key Insights:
+                            <div
+                              className="mb-2 text-xs font-bold"
+                              style={{ color: "var(--brand-primary-dark)" }}
+                            >
+                              🔑 Key Insights:
+                            </div>
+                            <ul
+                              className="space-y-1 text-[10px]"
+                              style={{ color: "var(--brand-primary-dark)" }}
+                            >
+                              <li className="flex gap-2">
+                                <span className="font-bold">1.</span>
+                                <span>
+                                  <strong>Donor filter</strong> is a gatekeeper
+                                  — fails = entire org hidden
+                                </span>
+                              </li>
+                              <li className="flex gap-2">
+                                <span className="font-bold">2.</span>
+                                <span>
+                                  <strong>Search on org name</strong> shows ALL
+                                  org projects (bypasses project search)
+                                </span>
+                              </li>
+                              <li className="flex gap-2">
+                                <span className="font-bold">3.</span>
+                                <span>
+                                  <strong>Type uses OR</strong> (any match) →{" "}
+                                  <strong>Theme uses OR</strong> (any match)
+                                </span>
+                              </li>
+                              <li className="flex gap-2">
+                                <span className="font-bold">4.</span>
+                                <span>
+                                  Filters cascade: Donor → Search → Type → Theme
+                                </span>
+                              </li>
+                            </ul>
                           </div>
-                          <ul
-                            className="space-y-1 text-[10px]"
-                            style={{ color: "var(--brand-primary-dark)" }}
-                          >
-                            <li className="flex gap-2">
-                              <span className="font-bold">1.</span>
-                              <span>
-                                <strong>Donor filter</strong> is a gatekeeper —
-                                fails = entire org hidden
-                              </span>
-                            </li>
-                            <li className="flex gap-2">
-                              <span className="font-bold">2.</span>
-                              <span>
-                                <strong>Search on org name</strong> shows ALL
-                                org projects (bypasses project search)
-                              </span>
-                            </li>
-                            <li className="flex gap-2">
-                              <span className="font-bold">3.</span>
-                              <span>
-                                <strong>Type uses OR</strong> (any match) →{" "}
-                                <strong>Theme uses OR</strong> (any match)
-                              </span>
-                            </li>
-                            <li className="flex gap-2">
-                              <span className="font-bold">4.</span>
-                              <span>
-                                Filters cascade: Donor → Search → Type → Theme
-                              </span>
-                            </li>
-                          </ul>
                         </div>
                       </div>
                     </div>
-                  </div>
-                    )}
+                  )}
 
-                    {/* Network Tab */}
-                    {activeArticle === "network" && (
-                  <div className="grid grid-cols-1 gap-6 lg:grid-cols-2">
-                    <div>
-                      <SectionTitle icon={TrendingUp}>
-                        {labels.methodology.networkAnalysis}
-                      </SectionTitle>
-                      <div className="space-y-4">
-                        <InfoCard title={labels.methodology.graphStructure}>
-                          {labels.methodology.graphStructureDescription}
-                        </InfoCard>
-                        <InfoCard title={labels.methodology.clusteringOptions}>
-                          {labels.methodology.clusteringOptionsDescription}
-                        </InfoCard>
-                        <InfoCard title={labels.methodology.interactiveNodes}>
-                          {labels.methodology.interactiveNodesDescription}
-                        </InfoCard>
-                        <InfoCard
-                          title={labels.methodology.spatialInterpretation}
-                        >
-                          {labels.methodology.spatialInterpretationDescription}
-                        </InfoCard>
+                  {/* Network Tab */}
+                  {activeArticle === "network" && (
+                    <div className="grid grid-cols-1 gap-6 lg:grid-cols-2">
+                      <div>
+                        <SectionTitle icon={TrendingUp}>
+                          {labels.methodology.networkAnalysis}
+                        </SectionTitle>
+                        <div className="space-y-4">
+                          <InfoCard title={labels.methodology.graphStructure}>
+                            {labels.methodology.graphStructureDescription}
+                          </InfoCard>
+                          <InfoCard
+                            title={labels.methodology.clusteringOptions}
+                          >
+                            {labels.methodology.clusteringOptionsDescription}
+                          </InfoCard>
+                          <InfoCard title={labels.methodology.interactiveNodes}>
+                            {labels.methodology.interactiveNodesDescription}
+                          </InfoCard>
+                          <InfoCard
+                            title={labels.methodology.spatialInterpretation}
+                          >
+                            {
+                              labels.methodology
+                                .spatialInterpretationDescription
+                            }
+                          </InfoCard>
+                        </div>
                       </div>
+                      <Screenshot
+                        src="/methodology_screenshots/graph.png"
+                        alt={labels.methodology.networkGraphVisualization}
+                      />
                     </div>
-                    <Screenshot
-                      src="/methodology_screenshots/graph.png"
-                      alt={labels.methodology.networkGraphVisualization}
-                    />
-                  </div>
-                    )}
+                  )}
 
-                    {/* Export Tab */}
-                    {activeArticle === "export" && (
-                  <div className="space-y-8">
-                    <div>
-                      <SectionTitle icon={Download}>
-                        {labels.methodology.exportFunctionality}
-                      </SectionTitle>
-                      <div className="space-y-4">
-                        <InfoCard title={labels.methodology.csvExport}>
-                          {labels.methodology.csvExportDescription}
-                        </InfoCard>
-                        <InfoCard title={labels.methodology.excelExport}>
-                          {labels.methodology.excelExportDescription}
-                        </InfoCard>
-                        <InfoCard
-                          title={labels.methodology.sharingAndReproducibility}
-                        >
-                          {
-                            labels.methodology
-                              .sharingAndReproducibilityDescription
-                          }
-                        </InfoCard>
+                  {/* Export Tab */}
+                  {activeArticle === "export" && (
+                    <div className="space-y-8">
+                      <div>
+                        <SectionTitle icon={Download}>
+                          {labels.methodology.exportFunctionality}
+                        </SectionTitle>
+                        <div className="space-y-4">
+                          <InfoCard title={labels.methodology.csvExport}>
+                            {labels.methodology.csvExportDescription}
+                          </InfoCard>
+                          <InfoCard title={labels.methodology.excelExport}>
+                            {labels.methodology.excelExportDescription}
+                          </InfoCard>
+                          <InfoCard
+                            title={labels.methodology.sharingAndReproducibility}
+                          >
+                            {
+                              labels.methodology
+                                .sharingAndReproducibilityDescription
+                            }
+                          </InfoCard>
+                        </div>
                       </div>
-                    </div>
-                    <div>
-                      <SectionTitle icon={FileText}>
-                        {labels.methodology.workingWithTheData}
-                      </SectionTitle>
-                      <div className="space-y-4">
-                        <div>
-                          <CodeBlock
-                            code={`import pandas as pd
+                      <div>
+                        <SectionTitle icon={FileText}>
+                          {labels.methodology.workingWithTheData}
+                        </SectionTitle>
+                        <div className="space-y-4">
+                          <div>
+                            <CodeBlock
+                              code={`import pandas as pd
 import zipfile
 from pathlib import Path
 
@@ -1106,271 +1145,419 @@ print(f"\\nAssets from [Example Country] donors: {len(filtered)}")
 # Group assets by type
 by_type = assets_df.groupby('Investment Type').size()
 print(f"\\nAssets by type:\\n{by_type}")`}
-                          />
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                    )}
-
-                    {/* Repository Tab */}
-                    {activeArticle === "repository" && (
-                  <div className="space-y-8">
-                    <div>
-                      <SectionTitle icon={Settings}>
-                        {labels.methodology.repositoryOverview}
-                      </SectionTitle>
-                      <div className="space-y-4">
-                        <InfoCard title={labels.methodology.repositoryOverview}>
-                          {labels.methodology.repositoryDescription}
-                        </InfoCard>
-                        <div className="rounded-lg border border-slate-200 bg-slate-50 p-4">
-                          <h4 className="mb-3 flex items-center gap-2 font-semibold text-slate-800">
-                            <FileText className="h-4 w-4" style={{ color: "var(--brand-primary)" }} />
-                            GitHub Repository
-                          </h4>
-                          <p className="mb-4 text-sm text-slate-600">
-                            Visit our open-source repository to explore the codebase, report issues, and contribute improvements:
-                          </p>
-                          <a
-                            href="https://github.com/UN-CRAFd/crafd-crisis-data-funding-compass"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            className="inline-flex items-center gap-2 rounded-lg px-4 py-2 font-medium text-white transition-all hover:shadow-lg"
-                            style={{ backgroundColor: "var(--brand-primary)" }}
-                          >
-                            <Settings className="h-4 w-4" />
-                            View on GitHub
-                          </a>
-                        </div>
-                      </div>
-                    </div>
-
-                    <div>
-                      <SectionTitle icon={Layers}>
-                        {labels.methodology.projectStructure}
-                      </SectionTitle>
-                      <div className="space-y-4">
-                        <div className="rounded-lg border border-slate-200 bg-slate-50 p-4">
-                          <h4 className="mb-3 font-semibold text-slate-800">Frontend</h4>
-                          <p className="mb-2 text-xs font-medium text-slate-600">{labels.methodology.frontendSubtitle}</p>
-                          <ul className="space-y-1 text-sm text-slate-700">
-                            <li>📁 <strong>src/app/</strong> - Next.js app directory with pages and API routes</li>
-                            <li>📁 <strong>src/components/</strong> - React components (Dashboard, Methodology, modals, filters)</li>
-                            <li>📁 <strong>src/config/</strong> - Configuration files (labels, colors, investment types)</li>
-                            <li>📁 <strong>src/lib/</strong> - Utility functions (data fetching, exports, color handling)</li>
-                            <li>📁 <strong>src/server/</strong> - Backend services (database, caching, API logic)</li>
-                            <li>📁 <strong>public/</strong> - Static assets (images, logos, methodology screenshots)</li>
-                          </ul>
-                        </div>
-
-                        <div className="rounded-lg border border-slate-200 bg-slate-50 p-4">
-                          <h4 className="mb-3 font-semibold text-slate-800">Backend & Database</h4>
-                          <p className="mb-2 text-xs font-medium text-slate-600">{labels.methodology.backendSubtitle}</p>
-                          <ul className="space-y-1 text-sm text-slate-700">
-                            <li>📁 <strong>src/server/db/</strong> - Database client and connection management</li>
-                            <li>📁 <strong>src/server/repositories/</strong> - Database query abstractions for entities</li>
-                            <li>📁 <strong>src/server/services/</strong> - Business logic layer (dashboard service)</li>
-                            <li>📁 <strong>src/server/cache.ts</strong> - In-memory caching for performance</li>
-                            <li>📁 <strong>sql/</strong> - PostgreSQL schema files and migrations</li>
-                          </ul>
-                        </div>
-
-                        <div className="rounded-lg border border-slate-200 bg-slate-50 p-4">
-                          <h4 className="mb-3 font-semibold text-slate-800">Data & Python</h4>
-                          <p className="mb-2 text-xs font-medium text-slate-600">{labels.methodology.pythonSubtitle}</p>
-                          <ul className="space-y-1 text-sm text-slate-700">
-                            <li>📁 <strong>python/</strong> - Data collection and ETL scripts</li>
-                            <li>📁 <strong>python/iati_api/</strong> - IATI data integration and fetching</li>
-                            <li>📁 <strong>docs/</strong> - Integration guides (IATI, database setup)</li>
-                          </ul>
-                        </div>
-
-                        <div className="rounded-lg border border-slate-200 bg-slate-50 p-4">
-                          <h4 className="mb-3 font-semibold text-slate-800">Key Configuration Files</h4>
-                          <ul className="space-y-1 text-sm text-slate-700">
-                            <li>📄 <strong>next.config.mjs</strong> - Next.js configuration</li>
-                            <li>📄 <strong>tailwind.config.ts</strong> - Tailwind CSS configuration</li>
-                            <li>📄 <strong>tsconfig.json</strong> - TypeScript configuration</li>
-                            <li>📄 <strong>eslint.config.mjs</strong> - Code linting rules</li>
-                            <li>📄 <strong>package.json</strong> - Dependencies and npm scripts</li>
-                          </ul>
-                        </div>
-                      </div>
-                    </div>
-
-                    <div>
-                      <SectionTitle icon={Database}>
-                        {labels.methodology.gettingStarted}
-                      </SectionTitle>
-                      <div className="space-y-4">
-                        <div className="rounded-lg border border-slate-200 bg-slate-50 p-4">
-                          <div className="mb-3 flex items-center gap-3">
-                            <div
-                              className="flex h-8 w-8 items-center justify-center rounded-full text-sm font-bold text-white"
-                              style={{ backgroundColor: "var(--brand-primary)" }}
-                            >
-                              1
-                            </div>
-                            <h4 className="font-semibold text-slate-800">Clone & Install</h4>
+                            />
                           </div>
-                          <CodeBlock
-                            code={`git clone https://github.com/UN-CRAFd/crafd-crisis-data-funding-compass.git
+                        </div>
+                      </div>
+                    </div>
+                  )}
+
+                  {/* Repository Tab */}
+                  {activeArticle === "repository" && (
+                    <div className="space-y-8">
+                      <div>
+                        <SectionTitle icon={Settings}>
+                          {labels.methodology.repositoryOverview}
+                        </SectionTitle>
+                        <div className="space-y-4">
+                          <InfoCard
+                            title={labels.methodology.repositoryOverview}
+                          >
+                            {labels.methodology.repositoryDescription}
+                          </InfoCard>
+                          <div className="rounded-lg border border-slate-200 bg-slate-50 p-4">
+                            <h4 className="mb-3 flex items-center gap-2 font-semibold text-slate-800">
+                              <FileText
+                                className="h-4 w-4"
+                                style={{ color: "var(--brand-primary)" }}
+                              />
+                              GitHub Repository
+                            </h4>
+                            <p className="mb-4 text-sm text-slate-600">
+                              Visit our open-source repository to explore the
+                              codebase, report issues, and contribute
+                              improvements:
+                            </p>
+                            <a
+                              href="https://github.com/UN-CRAFd/crafd-crisis-data-funding-compass"
+                              target="_blank"
+                              rel="noopener noreferrer"
+                              className="inline-flex items-center gap-2 rounded-lg px-4 py-2 font-medium text-white transition-all hover:shadow-lg"
+                              style={{
+                                backgroundColor: "var(--brand-primary)",
+                              }}
+                            >
+                              <Settings className="h-4 w-4" />
+                              View on GitHub
+                            </a>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div>
+                        <SectionTitle icon={Layers}>
+                          {labels.methodology.projectStructure}
+                        </SectionTitle>
+                        <div className="space-y-4">
+                          <div className="rounded-lg border border-slate-200 bg-slate-50 p-4">
+                            <h4 className="mb-3 font-semibold text-slate-800">
+                              Frontend
+                            </h4>
+                            <p className="mb-2 text-xs font-medium text-slate-600">
+                              {labels.methodology.frontendSubtitle}
+                            </p>
+                            <ul className="space-y-1 text-sm text-slate-700">
+                              <li>
+                                📁 <strong>src/app/</strong> - Next.js app
+                                directory with pages and API routes
+                              </li>
+                              <li>
+                                📁 <strong>src/components/</strong> - React
+                                components (Dashboard, Methodology, modals,
+                                filters)
+                              </li>
+                              <li>
+                                📁 <strong>src/config/</strong> - Configuration
+                                files (labels, colors, investment types)
+                              </li>
+                              <li>
+                                📁 <strong>src/lib/</strong> - Utility functions
+                                (data fetching, exports, color handling)
+                              </li>
+                              <li>
+                                📁 <strong>src/server/</strong> - Backend
+                                services (database, caching, API logic)
+                              </li>
+                              <li>
+                                📁 <strong>public/</strong> - Static assets
+                                (images, logos, methodology screenshots)
+                              </li>
+                            </ul>
+                          </div>
+
+                          <div className="rounded-lg border border-slate-200 bg-slate-50 p-4">
+                            <h4 className="mb-3 font-semibold text-slate-800">
+                              Backend & Database
+                            </h4>
+                            <p className="mb-2 text-xs font-medium text-slate-600">
+                              {labels.methodology.backendSubtitle}
+                            </p>
+                            <ul className="space-y-1 text-sm text-slate-700">
+                              <li>
+                                📁 <strong>src/server/db/</strong> - Database
+                                client and connection management
+                              </li>
+                              <li>
+                                📁 <strong>src/server/repositories/</strong> -
+                                Database query abstractions for entities
+                              </li>
+                              <li>
+                                📁 <strong>src/server/services/</strong> -
+                                Business logic layer (dashboard service)
+                              </li>
+                              <li>
+                                📁 <strong>src/server/cache.ts</strong> -
+                                In-memory caching for performance
+                              </li>
+                              <li>
+                                📁 <strong>sql/</strong> - PostgreSQL schema
+                                files and migrations
+                              </li>
+                            </ul>
+                          </div>
+
+                          <div className="rounded-lg border border-slate-200 bg-slate-50 p-4">
+                            <h4 className="mb-3 font-semibold text-slate-800">
+                              Data & Python
+                            </h4>
+                            <p className="mb-2 text-xs font-medium text-slate-600">
+                              {labels.methodology.pythonSubtitle}
+                            </p>
+                            <ul className="space-y-1 text-sm text-slate-700">
+                              <li>
+                                📁 <strong>python/</strong> - Data collection
+                                and ETL scripts
+                              </li>
+                              <li>
+                                📁 <strong>python/iati_api/</strong> - IATI data
+                                integration and fetching
+                              </li>
+                              <li>
+                                📁 <strong>docs/</strong> - Integration guides
+                                (IATI, database setup)
+                              </li>
+                            </ul>
+                          </div>
+
+                          <div className="rounded-lg border border-slate-200 bg-slate-50 p-4">
+                            <h4 className="mb-3 font-semibold text-slate-800">
+                              Key Configuration Files
+                            </h4>
+                            <ul className="space-y-1 text-sm text-slate-700">
+                              <li>
+                                📄 <strong>next.config.mjs</strong> - Next.js
+                                configuration
+                              </li>
+                              <li>
+                                📄 <strong>tailwind.config.ts</strong> -
+                                Tailwind CSS configuration
+                              </li>
+                              <li>
+                                📄 <strong>tsconfig.json</strong> - TypeScript
+                                configuration
+                              </li>
+                              <li>
+                                📄 <strong>eslint.config.mjs</strong> - Code
+                                linting rules
+                              </li>
+                              <li>
+                                📄 <strong>package.json</strong> - Dependencies
+                                and npm scripts
+                              </li>
+                            </ul>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div>
+                        <SectionTitle icon={Database}>
+                          {labels.methodology.gettingStarted}
+                        </SectionTitle>
+                        <div className="space-y-4">
+                          <div className="rounded-lg border border-slate-200 bg-slate-50 p-4">
+                            <div className="mb-3 flex items-center gap-3">
+                              <div
+                                className="flex h-8 w-8 items-center justify-center rounded-full text-sm font-bold text-white"
+                                style={{
+                                  backgroundColor: "var(--brand-primary)",
+                                }}
+                              >
+                                1
+                              </div>
+                              <h4 className="font-semibold text-slate-800">
+                                Clone & Install
+                              </h4>
+                            </div>
+                            <CodeBlock
+                              code={`git clone https://github.com/UN-CRAFd/crafd-crisis-data-funding-compass.git
 cd crafd-crisis-data-funding-compass
 pnpm install`}
-                          />
-                        </div>
-
-                        <div className="rounded-lg border border-slate-200 bg-slate-50 p-4">
-                          <div className="mb-3 flex items-center gap-3">
-                            <div
-                              className="flex h-8 w-8 items-center justify-center rounded-full text-sm font-bold text-white"
-                              style={{ backgroundColor: "var(--brand-primary)" }}
-                            >
-                              2
-                            </div>
-                            <h4 className="font-semibold text-slate-800">Environment Setup</h4>
+                            />
                           </div>
-                          <p className="mb-3 text-sm text-slate-600">Create a <code className="rounded bg-slate-100 px-2 py-1 font-mono text-xs">.env.local</code> file with required variables:</p>
-                          <CodeBlock
-                            code={`DATABASE_URL=postgresql://user:password@localhost:5432/your_db_name
+
+                          <div className="rounded-lg border border-slate-200 bg-slate-50 p-4">
+                            <div className="mb-3 flex items-center gap-3">
+                              <div
+                                className="flex h-8 w-8 items-center justify-center rounded-full text-sm font-bold text-white"
+                                style={{
+                                  backgroundColor: "var(--brand-primary)",
+                                }}
+                              >
+                                2
+                              </div>
+                              <h4 className="font-semibold text-slate-800">
+                                Environment Setup
+                              </h4>
+                            </div>
+                            <p className="mb-3 text-sm text-slate-600">
+                              Create a{" "}
+                              <code className="rounded bg-slate-100 px-2 py-1 font-mono text-xs">
+                                .env.local
+                              </code>{" "}
+                              file with required variables:
+                            </p>
+                            <CodeBlock
+                              code={`DATABASE_URL=postgresql://user:password@localhost:5432/your_db_name
 NODE_ENV=development`}
-                          />
-                        </div>
-
-                        <div className="rounded-lg border border-slate-200 bg-slate-50 p-4">
-                          <div className="mb-3 flex items-center gap-3">
-                            <div
-                              className="flex h-8 w-8 items-center justify-center rounded-full text-sm font-bold text-white"
-                              style={{ backgroundColor: "var(--brand-primary)" }}
-                            >
-                              3
-                            </div>
-                            <h4 className="font-semibold text-slate-800">Database Setup</h4>
+                            />
                           </div>
-                          <p className="mb-3 text-sm text-slate-600">Run PostgreSQL and execute the schema files:</p>
-                          <CodeBlock
-                            code={`cd sql/schema
+
+                          <div className="rounded-lg border border-slate-200 bg-slate-50 p-4">
+                            <div className="mb-3 flex items-center gap-3">
+                              <div
+                                className="flex h-8 w-8 items-center justify-center rounded-full text-sm font-bold text-white"
+                                style={{
+                                  backgroundColor: "var(--brand-primary)",
+                                }}
+                              >
+                                3
+                              </div>
+                              <h4 className="font-semibold text-slate-800">
+                                Database Setup
+                              </h4>
+                            </div>
+                            <p className="mb-3 text-sm text-slate-600">
+                              Run PostgreSQL and execute the schema files:
+                            </p>
+                            <CodeBlock
+                              code={`cd sql/schema
 psql -U postgres < 001_create_schema.sql
 psql -U postgres < 002_lookup_tables.sql
 psql -U postgres < 003_entity_tables.sql
 psql -U postgres < 004_junction_tables.sql`}
-                          />
-                        </div>
-
-                        <div className="rounded-lg border border-slate-200 bg-slate-50 p-4">
-                          <div className="mb-3 flex items-center gap-3">
-                            <div
-                              className="flex h-8 w-8 items-center justify-center rounded-full text-sm font-bold text-white"
-                              style={{ backgroundColor: "var(--brand-primary)" }}
-                            >
-                              4
-                            </div>
-                            <h4 className="font-semibold text-slate-800">Start Development</h4>
+                            />
                           </div>
-                          <CodeBlock code={`pnpm dev`} />
-                          <p className="mt-3 text-xs text-slate-600">Open http://localhost:3000 in your browser</p>
+
+                          <div className="rounded-lg border border-slate-200 bg-slate-50 p-4">
+                            <div className="mb-3 flex items-center gap-3">
+                              <div
+                                className="flex h-8 w-8 items-center justify-center rounded-full text-sm font-bold text-white"
+                                style={{
+                                  backgroundColor: "var(--brand-primary)",
+                                }}
+                              >
+                                4
+                              </div>
+                              <h4 className="font-semibold text-slate-800">
+                                Start Development
+                              </h4>
+                            </div>
+                            <CodeBlock code={`pnpm dev`} />
+                            <p className="mt-3 text-xs text-slate-600">
+                              Open http://localhost:3000 in your browser
+                            </p>
+                          </div>
                         </div>
                       </div>
-                    </div>
 
-                    <div>
-                      <SectionTitle icon={Workflow}>
-                        {labels.methodology.adaptingForYourProject}
-                      </SectionTitle>
-                      <div className="space-y-4">
-                        <InfoCard title="Customize Colors & Branding">
-                          Edit <code className="rounded bg-slate-100 px-2 py-1 font-mono text-xs">src/app/globals.css</code> to define your brand colors, then update the theme reference throughout the app.
-                        </InfoCard>
+                      <div>
+                        <SectionTitle icon={Workflow}>
+                          {labels.methodology.adaptingForYourProject}
+                        </SectionTitle>
+                        <div className="space-y-4">
+                          <InfoCard title="Customize Colors & Branding">
+                            Edit{" "}
+                            <code className="rounded bg-slate-100 px-2 py-1 font-mono text-xs">
+                              src/app/globals.css
+                            </code>{" "}
+                            to define your brand colors, then update the theme
+                            reference throughout the app.
+                          </InfoCard>
 
-                        <InfoCard title="Modify Data Structure">
-                          Update <code className="rounded bg-slate-100 px-2 py-1 font-mono text-xs">sql/schema/</code> files with your entity definitions, then regenerate repositories and services accordingly.
-                        </InfoCard>
+                          <InfoCard title="Modify Data Structure">
+                            Update{" "}
+                            <code className="rounded bg-slate-100 px-2 py-1 font-mono text-xs">
+                              sql/schema/
+                            </code>{" "}
+                            files with your entity definitions, then regenerate
+                            repositories and services accordingly.
+                          </InfoCard>
 
-                        <InfoCard title="Add New Visualizations">
-                          Create new React components in <code className="rounded bg-slate-100 px-2 py-1 font-mono text-xs">src/components/</code> and integrate them into pages in <code className="rounded bg-slate-100 px-2 py-1 font-mono text-xs">src/app/</code>.
-                        </InfoCard>
+                          <InfoCard title="Add New Visualizations">
+                            Create new React components in{" "}
+                            <code className="rounded bg-slate-100 px-2 py-1 font-mono text-xs">
+                              src/components/
+                            </code>{" "}
+                            and integrate them into pages in{" "}
+                            <code className="rounded bg-slate-100 px-2 py-1 font-mono text-xs">
+                              src/app/
+                            </code>
+                            .
+                          </InfoCard>
 
-                        <InfoCard title="Integrate Your Data">
-                          Use the Python scripts in <code className="rounded bg-slate-100 px-2 py-1 font-mono text-xs">python/</code> as templates to create ETL pipelines for your own data sources.
-                        </InfoCard>
+                          <InfoCard title="Integrate Your Data">
+                            Use the Python scripts in{" "}
+                            <code className="rounded bg-slate-100 px-2 py-1 font-mono text-xs">
+                              python/
+                            </code>{" "}
+                            as templates to create ETL pipelines for your own
+                            data sources.
+                          </InfoCard>
 
-                        <div className="rounded-lg border border-slate-200 bg-slate-50 p-4">
-                          <h4 className="mb-2 font-semibold text-slate-800">Deploy to Production</h4>
-                          <p className="mb-3 text-sm leading-relaxed text-slate-600">Build and test locally:</p>
-                          <CodeBlock code={`pnpm build && pnpm start`} />
-                          <p className="mt-3 text-sm leading-relaxed text-slate-600">This project is configured for Vercel deployment with automatic CI/CD. Connect your GitHub fork and follow Vercel's setup instructions.</p>
+                          <div className="rounded-lg border border-slate-200 bg-slate-50 p-4">
+                            <h4 className="mb-2 font-semibold text-slate-800">
+                              Deploy to Production
+                            </h4>
+                            <p className="mb-3 text-sm leading-relaxed text-slate-600">
+                              Build and test locally:
+                            </p>
+                            <CodeBlock code={`pnpm build && pnpm start`} />
+                            <p className="mt-3 text-sm leading-relaxed text-slate-600">
+                              This project is configured for Vercel deployment
+                              with automatic CI/CD. Connect your GitHub fork and
+                              follow Vercel's setup instructions.
+                            </p>
+                          </div>
                         </div>
                       </div>
-                    </div>
 
-                    <div
-                      className="rounded-lg border-2 p-4"
-                      style={{
-                        backgroundColor: "var(--brand-bg-light)",
-                        borderColor: "var(--brand-border)",
-                      }}
-                    >
-                      <h4
-                        className="mb-2 flex items-center gap-2 font-semibold"
-                        style={{ color: "var(--brand-primary-dark)" }}
+                      <div
+                        className="rounded-lg border-2 p-4"
+                        style={{
+                          backgroundColor: "var(--brand-bg-light)",
+                          borderColor: "var(--brand-border)",
+                        }}
                       >
-                        <BookCheck className="h-4 w-4" />
-                        Need Help?
-                      </h4>
-                      <ul
-                        className="space-y-2 text-sm"
-                        style={{ color: "var(--brand-primary-dark)" }}
-                      >
-                        <li>• Check <strong>docs/</strong> folder for integration guides</li>
-                        <li>• Review <strong>README.md</strong> for project overview</li>
-                        <li>• Open an issue on GitHub for questions or problems</li>
-                        <li>• Review CONTRIBUTING.md for contribution guidelines</li>
-                      </ul>
+                        <h4
+                          className="mb-2 flex items-center gap-2 font-semibold"
+                          style={{ color: "var(--brand-primary-dark)" }}
+                        >
+                          <BookCheck className="h-4 w-4" />
+                          Need Help?
+                        </h4>
+                        <ul
+                          className="space-y-2 text-sm"
+                          style={{ color: "var(--brand-primary-dark)" }}
+                        >
+                          <li>
+                            • Check <strong>docs/</strong> folder for
+                            integration guides
+                          </li>
+                          <li>
+                            • Review <strong>README.md</strong> for project
+                            overview
+                          </li>
+                          <li>
+                            • Open an issue on GitHub for questions or problems
+                          </li>
+                          <li>
+                            • Review CONTRIBUTING.md for contribution guidelines
+                          </li>
+                        </ul>
+                      </div>
                     </div>
-                  </div>
-                    )}
-                  </CardContent>
-                </Card>
-              </main>
-            </div>
-
-            {/* Contact Section */}
-            <Card className="!border-0 bg-gradient-to-br from-[var(--brand-bg-lighter)] to-[var(--brand-bg-light)]">
-              <CardContent className="p-6 sm:p-8">
-                <div className="flex flex-col items-center justify-between gap-4 sm:flex-row">
-                  <div className="flex items-center gap-3">
-                    <MessageCircle
-                      className="h-6 w-6"
-                      style={{ color: "var(--brand-primary)" }}
-                    />
-                    <div>
-                      <h3 className="text-lg font-semibold text-slate-800">
-                        {labels.methodology.feedbackTitle}
-                      </h3>
-                      <p className="text-sm text-slate-600">
-                        {labels.methodology.feedbackSubtitle}
-                      </p>
-                    </div>
-                  </div>
-                  <a
-                    href="https://forms.gle/GEbp7ccRZm1XQLX18"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="inline-flex items-center gap-2 rounded-lg px-4 py-2 font-medium whitespace-nowrap text-white transition-all hover:shadow-lg"
-                    style={{ backgroundColor: "var(--brand-primary)" }}
-                  >
-                    <MessageCircle className="h-4 w-4" />
-                    {labels.methodology.feedbackButton}
-                  </a>
-                </div>
-              </CardContent>
-            </Card>
+                  )}
+                </CardContent>
+              </Card>
+            </main>
           </div>
+
+          {/* Contact Section */}
+          <Card className="!border-0 bg-gradient-to-br from-[var(--brand-bg-lighter)] to-[var(--brand-bg-light)]">
+            <CardContent className="p-6 sm:p-8">
+              <div className="flex flex-col items-center justify-between gap-4 sm:flex-row">
+                <div className="flex items-center gap-3">
+                  <MessageCircle
+                    className="h-6 w-6"
+                    style={{ color: "var(--brand-primary)" }}
+                  />
+                  <div>
+                    <h3 className="text-lg font-semibold text-slate-800">
+                      {labels.methodology.feedbackTitle}
+                    </h3>
+                    <p className="text-sm text-slate-600">
+                      {labels.methodology.feedbackSubtitle}
+                    </p>
+                  </div>
+                </div>
+                <a
+                  href="https://forms.gle/GEbp7ccRZm1XQLX18"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-2 rounded-lg px-4 py-2 font-medium whitespace-nowrap text-white transition-all hover:shadow-lg"
+                  style={{ backgroundColor: "var(--brand-primary)" }}
+                >
+                  <MessageCircle className="h-4 w-4" />
+                  {labels.methodology.feedbackButton}
+                </a>
+              </div>
+            </CardContent>
+          </Card>
+        </div>
       </div>
 
       {/* Footer */}
-      <footer className="mt-8 border-t border-slate-200 bg-white dark:border-slate-700 dark:bg-slate-900 sm:mt-16">
+      <footer className="mt-8 border-t border-slate-200 bg-white sm:mt-16 dark:border-slate-700 dark:bg-slate-900">
         <div className="mx-auto max-w-[82rem] px-4 py-4 sm:px-6 sm:py-6 lg:px-8">
           <div className="flex flex-col items-center justify-center gap-2 sm:flex-row sm:justify-between sm:gap-0">
             <div className="flex-1 text-center">

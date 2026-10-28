@@ -5,8 +5,8 @@
  * Returns: ModalMapsDTO
  */
 
-import { NextResponse } from "next/server";
 import { buildModalMaps } from "@/server/services/modalService";
+import { NextResponse } from "next/server";
 
 export async function GET() {
   try {

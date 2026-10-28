@@ -5,8 +5,8 @@
  * Returns: Record<string, string[]>
  */
 
-import { NextRequest, NextResponse } from "next/server";
 import { getAgenciesByCountry } from "@/server/services/agencyService";
+import { NextRequest, NextResponse } from "next/server";
 
 export async function GET(request: NextRequest) {
   try {
