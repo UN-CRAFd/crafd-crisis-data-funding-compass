@@ -1,0 +1,94 @@
+# CLAUDE.md
+
+This file provides guidance to Claude Code (claude.ai/code) when working with code in this repository.
+
+CRAF'd Crisis Data Funding Compass (compass.crafd.io): a Next.js 16 / React 19 / Tailwind CSS v4 / shadcn/ui dashboard that maps donors → agencies → organizations → projects → themes in the crisis-data funding ecosystem. It is deployed on Vercel as a server-rendered app with API routes (not a static export).
+
+> `README.md`, `docs/IATI_INTEGRATION.md` and parts of `python/README.md` are partly stale: they describe the old Airtable→JSON (`public/data/*.json`, `scripts/…`) setup and npm. The app now reads everything from PostgreSQL, and the package manager is pnpm.
+
+## Commands
+
+Web app (pnpm):
+
+```bash
+pnpm install
+pnpm dev          # usually already running on http://localhost:3000
+pnpm build
+pnpm typecheck    # tsc --noEmit
+pnpm lint         # eslint
+pnpm format       # prettier (src/ only, with tailwind plugin)
+```
+
+There is no test suite. Check changes with `pnpm typecheck` and `pnpm lint`, and look at the running app (Playwright MCP is available for that).
+
+Python data pipeline (uv, Python ≥3.13):
+
+```bash
+uv sync
+uv run python python/01b_fetch_airtable_to_sql.py   # Airtable → Postgres (the only step the app depends on)
+uvx ruff check --select I --fix python/ && uvx ruff format python/
+```
+
+## Architecture
+
+### Data flow
+
+Airtable → `python/01b_fetch_airtable_to_sql.py` → PostgreSQL schema `funding_compass` (Azure) → Next.js API routes → client.
+
+- The pipeline runs daily through `.github/workflows/fetch_data_from_airtable.yml` (05:00 UTC, or on manual dispatch).
+- Each run **drops and recreates** the schema from `sql/schema/*.sql`, applied in filename order.
+- IDs are deterministic UUIDs derived from Airtable record IDs.
+- A schema change touches three places: `sql/schema/`, the normalizer in `01b_…py`, and the repositories in `src/server/repositories/`.
+- `docs/DATA.md` is the data dictionary.
+
+Env vars differ by side:
+
+- The Next app needs `DATABASE_URL`. `NEXT_PUBLIC_SURVEY_URL` is optional: it sets the survey banner link and has a fallback.
+- The 01b pipeline uses `AZURE_POSTGRES_HOST/PORT/USER/PASSWORD` plus the `AIRTABLE_*` vars.
+- Python loads `.env.local` first, falling back to `.env`.
+
+### Server layer (`src/server/`), strictly layered
+
+1. `db/index.ts`: the singleton `pg` pool (max 1 connection per serverless instance). It is the only module that may import `pg`.
+2. `repositories/`: raw SQL only, returning typed row shapes (`OrgRow`, …) with no business logic.
+3. `cache.ts`: `getCoreData()` runs all batch repository queries in parallel and caches the result with a 60s TTL, sharing one in-flight promise between concurrent callers. **API routes and services get data through `getCoreData()`, never from repositories directly.** One existing exception: `api/member-states` calls its repository directly.
+4. `services/`: business logic with no SQL. It assembles rows into DTOs, applies filters and computes stats. `dashboardService.processDashboardData(filters)` is the core function.
+5. `dto/`: response and filter shapes.
+6. `src/app/api/*/route.ts`: thin handlers. `/api/dashboard` accepts POST with a filters body, or GET for the unfiltered data.
+
+The frontend still uses the legacy Airtable record shape. `server/utils.ts#buildFieldsObject` rebuilds `org.fields["Org Full Name"]` and similar from SQL columns so that components and `src/types/airtable.ts` keep working. When you add a DB column the UI needs, add it there too.
+
+### Client
+
+- `src/lib/data.ts` is the client data layer: thin `fetch` wrappers over `/api/*`, plus cached theme and member-state mappings. It also keeps the old function names (e.g. `processDashboardData`), which now call the API.
+- `CrisisDataDashboardWrapper.tsx` owns routing and URL state and fetches the data. `CrisisDataDashboard.tsx` renders it.
+- Filter URL params and modal URL params (`org`, `asset`, `donor`) are deliberately independent: changing a modal never triggers a refetch or filter validation.
+- Filter params have short and long names: `d`/`donors`, `a`/`agencies`, `t`/`types`, `th`/`themes`, `q`/`search`, `sb`/`sortBy`, `sd`/`sortDirection`. Shared links use both forms, so keep reading both.
+- `src/lib/urlShortcuts.ts` maps investment-type labels to the short URL slugs.
+- `src/config/labels.json` holds all user-facing text, and both server and client code import it. Investment-type display names also come from here. Other copy lives in `src/config/*Descriptions.ts`.
+- The routes are `/` (dashboard), `/analytics` and `/methodology`.
+- The "last updated" date (`/api/last-updated`, `src/lib/getLastUpdated.ts`) is the date of the latest git commit, not of the last data sync. If git isn't available, it shows today's date instead.
+
+### Styling
+
+Tailwind v4 is configured entirely in `src/app/globals.css`, **not** in `tailwind.config.ts`. Many v3 patterns no longer work, so check the current Tailwind v4 docs (via context7) rather than relying on memory.
+
+- `@theme inline` holds the tokens that should become utility classes: fonts, colors and the like.
+- `:root` holds plain CSS variables such as `--brand-primary`, used as `var(--…)`.
+- Use colors from these tokens; don't add new hard-coded values.
+
+Dark mode is a work in progress:
+
+- `next-themes` uses the class strategy (`.dark` on `<html>`, `@custom-variant dark`), defaults to light and has `enableSystem=false`.
+- Semantic tokens are redefined in the `.dark` block of `globals.css`.
+- Many components still use hard-coded utilities (`bg-white`, `text-slate-600`, `text-[#333333]` …). `globals.css` overrides these with explicit `.dark .bg-white {…}` rules. New code should use the theme tokens, so the override list doesn't keep growing.
+
+## Conventions
+
+- shadcn/ui:
+  - Install primitives with `npx shadcn@latest add <component>`.
+  - `src/components/ui/` contains only primitives as installed: don't edit them there.
+  - Custom components go in `src/components/`, with shared bits in `src/components/shared/`.
+- Learn the API and page structure before making isolated changes.
+- Don't build parallel infrastructure. Prefer global solutions, and don't hard-code things where they would be hard to find.
+- Use context7 for up-to-date Next.js, Tailwind, shadcn/ui and React docs.
