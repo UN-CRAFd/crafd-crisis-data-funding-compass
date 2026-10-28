@@ -10,9 +10,18 @@ This script:
 All Airtable data is fetched before the database is touched, and the drop,
 create and inserts run in a single transaction. A failed run therefore leaves
 the previous data in place instead of an empty schema.
+
+Safety checks (any failure aborts before the database is changed):
+- all four table IDs must be configured
+- every table must return at least one record
+- no table may shrink below MIN_KEEP_RATIO of its current row count
+  (set ALLOW_LARGE_DROP=1 for an intentional large deletion)
+Data-quality problems that don't block the import are printed as GitHub
+Actions warnings.
 """
 
 import os
+import re
 import sys
 import uuid
 from datetime import date
@@ -34,6 +43,9 @@ from _utils import (
 # ---------------------------------------------------------------------------
 
 SCRIPT_NAME = "01b_fetch_airtable_to_sql"
+
+# Abort if a table would shrink below this fraction of its current row count
+MIN_KEEP_RATIO = 0.5
 
 # UUID namespace for deterministic ID generation (custom namespace for CRAF'd)
 CRAFD_UUID_NAMESPACE = uuid.UUID("a1b2c3d4-e5f6-7890-abcd-ef1234567890")
@@ -128,7 +140,31 @@ def get_db_connection():
         user=os.getenv("AZURE_POSTGRES_USER"),
         password=os.getenv("AZURE_POSTGRES_PASSWORD"),
         sslmode="require",
+        connect_timeout=30,
     )
+
+
+def check_no_large_drop(conn, new_counts: Dict[str, int]):
+    """Abort if any table would lose more than (1 - MIN_KEEP_RATIO) of its rows.
+
+    Guards against a misconfigured Airtable view, filter or table ID wiping
+    most of the site. Set ALLOW_LARGE_DROP=1 to override intentionally.
+    """
+    if os.getenv("ALLOW_LARGE_DROP") == "1":
+        log(SCRIPT_NAME, "  ALLOW_LARGE_DROP=1 — skipping row-count guard")
+        return
+    with conn.cursor() as cur:
+        for table, new in new_counts.items():
+            cur.execute("SELECT to_regclass(%s)", (f"funding_compass.{table}",))
+            if cur.fetchone()[0] is None:
+                continue  # first run, nothing to compare against
+            cur.execute(f"SELECT count(*) FROM funding_compass.{table}")
+            old = cur.fetchone()[0]
+            if old and new < old * MIN_KEEP_RATIO:
+                raise RuntimeError(
+                    f"{table}: Airtable returned {new} records but the database has {old}. "
+                    f"Refusing to drop below {MIN_KEEP_RATIO:.0%}; set ALLOW_LARGE_DROP=1 if intended."
+                )
 
 
 def run_sql_file(conn, filepath: Path):
@@ -168,6 +204,56 @@ def bulk_upsert(conn, table: str, columns: List[str], rows: List[tuple], conflic
 def get_field(record: Dict, field_name: str, default=None):
     """Safely extract a field from an Airtable record."""
     return record.get("fields", {}).get(field_name, default)
+
+
+def clean_records(records: List[Dict]) -> None:
+    """Strip surrounding whitespace from all string values (in place).
+
+    Airtable text often carries trailing spaces or newlines, which otherwise
+    end up in names, URL keys and links on the site.
+    """
+    for rec in records:
+        fields = rec.get("fields", {})
+        for k, v in fields.items():
+            if isinstance(v, str):
+                fields[k] = v.strip()
+            elif isinstance(v, list):
+                fields[k] = [x.strip() if isinstance(x, str) else x for x in v]
+
+
+def warn(message: str) -> None:
+    """Print a non-fatal data-quality warning (shown as an annotation in GitHub Actions)."""
+    print(f"::warning title=Airtable data quality::{message}")
+
+
+def report_quality_warnings(
+    projects: List[Dict],
+    organizations: List[Dict],
+    themes: List[Dict],
+) -> None:
+    """Warn about data problems that break things on the site without failing the import."""
+    for rec in themes:
+        if not get_field(rec, "theme_key"):
+            warn(f"Theme {rec['id']} ({get_field(rec, 'Investment Themes [Text Key]')!r}) has no theme_key")
+
+    linked_projects: Set[str] = set()
+    for rec in organizations:
+        name = get_field(rec, "Org Full Name")
+        linked_projects.update(get_field(rec, "Provided Data Ecosystem Projects") or [])
+        if not get_field(rec, "org_key"):
+            warn(f"Organization {rec['id']} ({name!r}) has no org_key")
+        for field in ("Org Website", "Link to Budget Source"):
+            url = get_field(rec, field)
+            if url and not re.match(r"^https?://", url):
+                warn(f"Organization {rec['id']} ({name!r}) {field} is not an http(s) link: {url!r}")
+
+    for rec in projects:
+        name = get_field(rec, "Project/Product Name")
+        if rec["id"] not in linked_projects:
+            warn(f"Project {rec['id']} ({name!r}) is not linked to any organization and won't appear on the site")
+        url = get_field(rec, "Project Website")
+        if url and not re.match(r"^https?://", url):
+            warn(f"Project {rec['id']} ({name!r}) website is not an http(s) link: {url!r}")
 
 
 def safe_float(value) -> Optional[float]:
@@ -541,7 +627,10 @@ def main():
 
         # --- Environment --------------------------------------------------
         config = setup_environment()
-        validate_config(config, ["api_key", "base_id", "table_projects"])
+        validate_config(
+            config,
+            ["api_key", "base_id", "table_projects", "table_organizations", "table_agencies", "table_themes"],
+        )
 
         schema_dir = (
             config["project_root"]
@@ -594,6 +683,21 @@ def main():
             )
             log(SCRIPT_NAME, f"  Themes: {len(themes_raw)} records")
 
+        # --- Clean & sanity-check -----------------------------------------
+        raw_by_table = {
+            "projects": projects_raw,
+            "organizations": organizations_raw,
+            "agencies": agencies_raw,
+            "themes": themes_raw,
+        }
+        for records in raw_by_table.values():
+            clean_records(records)
+        new_counts = {table: len(records) for table, records in raw_by_table.items()}
+        empty = [table for table, n in new_counts.items() if n == 0]
+        if empty:
+            raise RuntimeError(f"Airtable returned no records for: {', '.join(empty)}")
+        report_quality_warnings(projects_raw, organizations_raw, themes_raw)
+
         # --- Extract lookup tables ----------------------------------------
         log(SCRIPT_NAME, "Extracting lookup tables …")
 
@@ -612,6 +716,7 @@ def main():
         log(SCRIPT_NAME, "Connecting to PostgreSQL …")
         conn = get_db_connection()
         log(SCRIPT_NAME, f"  Connected to {os.getenv('AZURE_POSTGRES_HOST')}")
+        check_no_large_drop(conn, new_counts)
 
         # --- Apply schema -------------------------------------------------
         apply_schema(conn, schema_dir)

@@ -38,7 +38,15 @@ Airtable → `python/01b_fetch_airtable_to_sql.py` → PostgreSQL schema `fundin
 - The pipeline runs daily through `.github/workflows/fetch_data_from_airtable.yml` (05:00 UTC, or on manual dispatch).
 - Each run **drops and recreates** the schema from `sql/schema/*.sql`, applied in filename order.
 - The script fetches every Airtable table first. The drop, create and all inserts then run in one transaction, so a failed run leaves the previous data in place. Keep it that way: no commits inside helpers, and no `BEGIN`/`COMMIT` in the schema files.
-- If `AIRTABLE_TABLE_ID_THEMES` is unset, themes are skipped silently, and investment types end up empty too, because they are built from the theme records.
+- Safety checks run before the database is touched:
+  - All four `AIRTABLE_TABLE_ID_*` vars are required.
+  - Every table must return records.
+  - No table may shrink below 50% of its current row count. Set `ALLOW_LARGE_DROP=1` to override for an intentional deletion.
+- All Airtable string values are whitespace-stripped on import.
+- Data-quality problems (missing keys, non-http links, projects with no organization) print as `::warning::` annotations on the Actions run. They don't fail the import.
+- Investment types are built from the Themes table, so missing theme data also empties the types.
+- Projects' `Investment Theme(s)` is a lookup of an old dropdown on Themes, not of the theme names. The authoritative project↔theme links are the Themes table's `Data Ecosystem Projects` record links.
+- `AIRTABLE_API_KEY` is read-only, by design. Airtable fixes made from scripts use a separate `AIRTABLE_WRITE_API_KEY` from `.env`, which is local only and never goes in CI.
 - IDs are deterministic UUIDs derived from Airtable record IDs.
 - A schema change touches three places: `sql/schema/`, the normalizer in `01b_…py`, and the repositories in `src/server/repositories/`.
 - `docs/DATA.md` is the data dictionary.

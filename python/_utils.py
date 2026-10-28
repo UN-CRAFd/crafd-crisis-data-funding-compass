@@ -5,6 +5,7 @@ This module provides common functionality used across all data fetching and proc
 
 import os
 import sys
+import time
 from pathlib import Path
 from typing import Any, Dict, List, Optional
 
@@ -102,16 +103,22 @@ def build_airtable_url(base_id: str, table_identifier: str, params: Optional[Dic
     return base_url + ("?" + "&".join(parts) if parts else "")
 
 
+RETRY_DELAYS = (5, 15, 30)  # seconds between attempts; Airtable asks for 30s after a 429
+
+
 def fetch_airtable_page(url: str, api_key: str) -> Dict[str, Any]:
     """Fetch a single page from Airtable API.
-    
+
+    Retries on rate limits (429), server errors (5xx) and network errors.
+    Other errors (401/403/404/422) fail immediately since retrying won't help.
+
     Args:
         url: Complete API URL
         api_key: Airtable API key
-        
+
     Returns:
         JSON response as dictionary
-        
+
     Raises:
         RuntimeError if API request fails
     """
@@ -119,14 +126,24 @@ def fetch_airtable_page(url: str, api_key: str) -> Dict[str, Any]:
         "Authorization": f"Bearer {api_key}",
         "Content-Type": "application/json",
     }
-    
-    response = requests.get(url, headers=headers, timeout=30)
-    if not response.ok:
-        raise RuntimeError(
-            f"Airtable API error: {response.status_code} {response.reason}\n{response.text}"
-        )
-    
-    return response.json()
+
+    for attempt, delay in enumerate((*RETRY_DELAYS, None), start=1):
+        try:
+            response = requests.get(url, headers=headers, timeout=30)
+        except requests.RequestException as err:
+            error = f"Airtable request failed: {err}"
+        else:
+            if response.ok:
+                return response.json()
+            error = f"Airtable API error: {response.status_code} {response.reason}\n{response.text}"
+            if response.status_code != 429 and response.status_code < 500:
+                break
+        if delay is None:
+            break
+        print(f"  {error.splitlines()[0]} — retrying in {delay}s (attempt {attempt}/{len(RETRY_DELAYS) + 1})")
+        time.sleep(delay)
+
+    raise RuntimeError(error)
 
 
 def fetch_all_records(
