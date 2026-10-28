@@ -239,17 +239,7 @@ const CrisisDataDashboard = ({
   sortDirection,
   onSortChange,
 }: CrisisDataDashboardProps) => {
-  // Get tips enabled state with fallback for SSR
-  let tipsEnabled = false;
-  let setTipsEnabled: (enabled: boolean) => void = () => {};
-  try {
-    const tipsContext = useTips();
-    tipsEnabled = tipsContext.tipsEnabled;
-    setTipsEnabled = tipsContext.setTipsEnabled;
-  } catch {
-    // TipsProvider not available (e.g., during server-side rendering)
-    tipsEnabled = false;
-  }
+  const { tipsEnabled, setTipsEnabled } = useTips();
 
   // Get general contributions state with fallback for SSR
   let showGeneralContributions = true;

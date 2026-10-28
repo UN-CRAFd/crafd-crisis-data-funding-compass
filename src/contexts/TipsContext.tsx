@@ -11,7 +11,6 @@ const TipsContext = createContext<TipsContextType | undefined>(undefined);
 
 export function TipsProvider({ children }: { children: React.ReactNode }) {
   const [tipsEnabled, setTipsEnabled] = useState(true);
-  const [isHydrated, setIsHydrated] = useState(false);
 
   // Load from localStorage on mount
   useEffect(() => {
@@ -33,7 +32,6 @@ export function TipsProvider({ children }: { children: React.ReactNode }) {
         // Ignore localStorage access errors
       }
     }
-    setIsHydrated(true);
   }, []);
 
   // Save to localStorage when changed
@@ -45,11 +43,6 @@ export function TipsProvider({ children }: { children: React.ReactNode }) {
       // localStorage might be full or unavailable - fail silently
     }
   };
-
-  // Don't render until hydrated to avoid hydration mismatch
-  if (!isHydrated) {
-    return <>{children}</>;
-  }
 
   return (
     <TipsContext.Provider

@@ -89,17 +89,7 @@ export default function PageHeader({
     }, 1000);
   };
 
-  // Safely use useTips with fallback defaults
-  let tipsEnabled = false;
-  let setTipsEnabled: (enabled: boolean) => void = () => {};
-  try {
-    const tipsContext = useTips();
-    tipsEnabled = tipsContext.tipsEnabled;
-    setTipsEnabled = tipsContext.setTipsEnabled;
-  } catch {
-    // TipsProvider not available (e.g., during prerendering)
-    // Use default values
-  }
+  const { tipsEnabled, setTipsEnabled } = useTips();
 
   // Use General Contributions context - will render without provider as fallback
   let showGeneralContributions = true;

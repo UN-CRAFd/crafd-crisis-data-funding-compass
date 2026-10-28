@@ -57,13 +57,7 @@ export const StatCard = React.memo(function StatCard({
   onExpandChange,
 }: StatCardProps) {
   const [isExpanded, setIsExpanded] = useState(false);
-  let tipsEnabled = false;
-  try {
-    const tipsContext = useTips();
-    tipsEnabled = tipsContext.tipsEnabled;
-  } catch {
-    tipsEnabled = false;
-  }
+  const { tipsEnabled } = useTips();
 
   const gradients = {
     amber: {
