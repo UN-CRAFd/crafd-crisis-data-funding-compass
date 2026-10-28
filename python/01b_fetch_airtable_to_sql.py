@@ -6,6 +6,10 @@ This script:
 2. Normalizes the data into the funding_compass relational schema
 3. Generates deterministic UUIDs from Airtable record IDs
 4. Pushes everything to PostgreSQL, recreating tables on each run
+
+All Airtable data is fetched before the database is touched, and the drop,
+create and inserts run in a single transaction. A failed run therefore leaves
+the previous data in place instead of an empty schema.
 """
 
 import os
@@ -128,11 +132,10 @@ def get_db_connection():
 
 
 def run_sql_file(conn, filepath: Path):
-    """Execute a .sql file against the connection."""
+    """Execute a .sql file against the connection (no commit)."""
     sql = filepath.read_text(encoding="utf-8")
     with conn.cursor() as cur:
         cur.execute(sql)
-    conn.commit()
     log(SCRIPT_NAME, f"  Executed {filepath.name}")
 
 
@@ -146,7 +149,7 @@ def apply_schema(conn, schema_dir: Path):
 
 
 def bulk_upsert(conn, table: str, columns: List[str], rows: List[tuple], conflict_col: str = "id"):
-    """Insert rows with ON CONFLICT DO NOTHING (idempotent)."""
+    """Insert rows with ON CONFLICT DO NOTHING (idempotent, no commit)."""
     if not rows:
         return
     cols = ", ".join(columns)
@@ -154,7 +157,6 @@ def bulk_upsert(conn, table: str, columns: List[str], rows: List[tuple], conflic
     sql = f"INSERT INTO funding_compass.{table} ({cols}) VALUES ({placeholders}) ON CONFLICT ({conflict_col}) DO NOTHING"
     with conn.cursor() as cur:
         psycopg2.extras.execute_batch(cur, sql, rows, page_size=500)
-    conn.commit()
     log(SCRIPT_NAME, f"  {table}: upserted {len(rows)} rows")
 
 
@@ -533,6 +535,7 @@ def build_project_themes(
 
 def main():
     """Fetch Airtable data and push to PostgreSQL."""
+    conn = None
     try:
         log(SCRIPT_NAME, "Starting Airtable → PostgreSQL pipeline …")
 
@@ -545,14 +548,6 @@ def main():
             / "sql"
             / "schema"
         )
-
-        # --- Database connection ------------------------------------------
-        log(SCRIPT_NAME, "Connecting to PostgreSQL …")
-        conn = get_db_connection()
-        log(SCRIPT_NAME, f"  Connected to {os.getenv('AZURE_POSTGRES_HOST')}")
-
-        # --- Apply schema -------------------------------------------------
-        apply_schema(conn, schema_dir)
 
         # --- Fetch from Airtable ------------------------------------------
         log(SCRIPT_NAME, "Fetching Airtable tables …")
@@ -611,6 +606,15 @@ def main():
         log(SCRIPT_NAME, f"  Organization types: {len(org_type_map)}")
         log(SCRIPT_NAME, f"  Investment types: {len(inv_type_map)}")
         log(SCRIPT_NAME, f"  Donors: {len(donor_map)}")
+
+        # --- Database connection ------------------------------------------
+        # Everything from here to the final commit is one transaction.
+        log(SCRIPT_NAME, "Connecting to PostgreSQL …")
+        conn = get_db_connection()
+        log(SCRIPT_NAME, f"  Connected to {os.getenv('AZURE_POSTGRES_HOST')}")
+
+        # --- Apply schema -------------------------------------------------
+        apply_schema(conn, schema_dir)
 
         # --- Insert lookup tables -----------------------------------------
         log(SCRIPT_NAME, "Inserting lookup tables …")
@@ -708,8 +712,11 @@ def main():
         with conn.cursor() as cur:
             cur.execute("GRANT USAGE ON SCHEMA funding_compass TO funding_compass_app;")
             cur.execute("GRANT SELECT ON ALL TABLES IN SCHEMA funding_compass TO funding_compass_app;")
-        conn.commit()
         log(SCRIPT_NAME, "  Permissions granted ✓")
+
+        # --- Commit -------------------------------------------------------
+        conn.commit()
+        log(SCRIPT_NAME, "Transaction committed ✓")
 
         # --- Summary ------------------------------------------------------
         log(SCRIPT_NAME, "")
@@ -733,6 +740,10 @@ def main():
 
     except Exception as err:
         log(SCRIPT_NAME, f"Script failed: {err}")
+        if conn is not None:
+            conn.rollback()
+            conn.close()
+            log(SCRIPT_NAME, "Rolled back — existing data left unchanged")
         import traceback
         traceback.print_exc()
         sys.exit(1)
