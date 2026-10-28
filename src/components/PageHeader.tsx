@@ -29,6 +29,7 @@ import {
   Menu,
   Share2,
 } from "lucide-react";
+import Link from "next/link";
 import { usePathname, useRouter, useSearchParams } from "next/navigation";
 import { useEffect, useState } from "react";
 
@@ -134,13 +135,18 @@ export default function PageHeader({
                   }`}
                 />
               </button>
-              <h1 className="flex min-w-0 flex-col items-start gap-0 text-base text-slate-800 sm:text-xl lg:flex-row lg:items-center lg:gap-2 lg:text-3xl dark:text-white">
-                <span className="qanelas-title whitespace-nowrap">
-                  {labels.header.title}
-                </span>
-                <span className="font-roboto whitespace-nowrap">
-                  {labels.header.subtitle}
-                </span>
+              <h1 className="min-w-0 text-base text-slate-800 sm:text-xl lg:text-3xl dark:text-white">
+                <Link
+                  href="/"
+                  className="flex flex-col items-start gap-0 lg:flex-row lg:items-center lg:gap-2"
+                >
+                  <span className="qanelas-title whitespace-nowrap">
+                    {labels.header.title}
+                  </span>
+                  <span className="font-roboto whitespace-nowrap">
+                    {labels.header.subtitle}
+                  </span>
+                </Link>
               </h1>
             </div>
             <TooltipProvider>
