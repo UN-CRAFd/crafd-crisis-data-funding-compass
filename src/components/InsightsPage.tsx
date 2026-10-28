@@ -316,18 +316,22 @@ export default function InsightsPage() {
 
   // --------------- derived data -----------------------------------------
 
-  // Per-funder API data, re-derived without UN entities when the toggle is off
-  // (product counts and per-type counts come from the funder's non-UN organizations,
-  // products deduplicated by `${id}-${projectName}`).
+  // Per-funder data re-derived client-side: the per-funder API response lists ALL
+  // organizations, so keep only those the funder supports (org.donorCountries), drop
+  // UN entities when the toggle is off, and count products deduplicated by
+  // `${id}-${projectName}`.
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
   const funderViews = useMemo<Map<string, any>>(() => {
-    if (includeUN) return funderDataMap;
     // eslint-disable-next-line @typescript-eslint/no-explicit-any
     const out = new Map<string, any>();
     funderDataMap.forEach((data, f) => {
       const orgs: OrganizationWithProjects[] = (
         data?.allOrganizations ?? []
-      ).filter((o: OrganizationWithProjects) => o.type !== "United Nations");
+      ).filter(
+        (o: OrganizationWithProjects) =>
+          (o.donorCountries ?? []).includes(f) &&
+          (includeUN || o.type !== "United Nations"),
+      );
       const products = new Map<string, OrganizationWithProjects["projects"][number]>();
       orgs.forEach((o) =>
         o.projects.forEach((p) => {
