@@ -1,6 +1,7 @@
 # Read-only check: which agencies in the database are linked to "USA" vs "United States"
 import os
 
+
 def load_env(path=".env.local"):
     env = {}
     with open(path) as f:
@@ -12,14 +13,17 @@ def load_env(path=".env.local"):
             env[k.strip()] = v.strip().strip('"').strip("'")
     return env
 
+
 env = load_env()
 url = env.get("DATABASE_URL")
 
 try:
     import psycopg
+
     conn = psycopg.connect(url)
 except ImportError:
     import psycopg2
+
     conn = psycopg2.connect(url)
 
 query = """

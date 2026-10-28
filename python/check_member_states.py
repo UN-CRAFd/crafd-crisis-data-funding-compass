@@ -10,13 +10,17 @@ def load_env(path=".env.local"):
             env[k.strip()] = v.strip().strip('"').strip("'")
     return env
 
+
 import psycopg2
+
 conn = psycopg2.connect(load_env()["DATABASE_URL"])
 cur = conn.cursor()
 try:
     cur.execute("SELECT COUNT(*) FROM member_states;")
     print("member_states table exists, rows:", cur.fetchone()[0])
-    cur.execute("SELECT name FROM member_states WHERE name IN ('USA', 'United States', 'Unknown') ORDER BY name;")
+    cur.execute(
+        "SELECT name FROM member_states WHERE name IN ('USA', 'United States', 'Unknown') ORDER BY name;"
+    )
     for (name,) in cur.fetchall():
         print("  contains:", name)
 except Exception as e:

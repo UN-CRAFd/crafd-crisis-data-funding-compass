@@ -17,15 +17,23 @@ pnpm build
 pnpm typecheck    # tsc --noEmit
 pnpm lint         # eslint
 pnpm format       # prettier (src/ only, with tailwind plugin)
+pnpm test         # vitest run
 ```
 
-There is no test suite. Check changes with `pnpm typecheck` and `pnpm lint`, and look at the running app (Playwright MCP is available for that).
+Tests cover logic only, not components:
+
+- Vitest tests sit next to the code as `src/**/*.test.ts`. `dashboardService.test.ts` mocks `getCoreData()` with a small fixture dataset and tests through `processDashboardData(filters)`. When you change filtering or stats logic, update or extend those fixtures.
+- pytest covers the pure functions of the 01b pipeline (`python/tests/`, run with `uv run pytest`).
+- `.github/workflows/ci.yml` runs typecheck, lint, both test suites and `pnpm build` on PRs and pushes to `main`. The build needs no database.
+
+For UI changes, also look at the running app (Playwright MCP is available for that).
 
 Python data pipeline (uv, Python ≥3.13):
 
 ```bash
 uv sync
 uv run python python/01b_fetch_airtable_to_sql.py   # Airtable → Postgres (the only step the app depends on)
+uv run pytest                                       # pipeline tests (python/tests/)
 uvx ruff check --select I --fix python/ && uvx ruff format python/
 ```
 
@@ -45,7 +53,7 @@ Airtable → `python/01b_fetch_airtable_to_sql.py` → PostgreSQL schema `fundin
 - All Airtable string values are whitespace-stripped on import.
 - Data-quality problems (missing keys, non-http links, projects with no organization) print as `::warning::` annotations on the Actions run. They don't fail the import.
 - Investment types are built from the Themes table, so missing theme data also empties the types.
-- Projects' `Investment Theme(s)` is a lookup of an old dropdown on Themes, not of the theme names. The authoritative project↔theme links are the Themes table's `Data Ecosystem Projects` record links.
+- Projects' `Investment Theme(s)` is a lookup of an old dropdown on Themes, not of the theme names, and the import ignores it. Project↔theme links come only from the Themes table's `Data Ecosystem Projects` record links.
 - `AIRTABLE_API_KEY` is read-only, by design. Airtable fixes made from scripts use a separate `AIRTABLE_WRITE_API_KEY` from `.env`, which is local only and never goes in CI.
 - IDs are deterministic UUIDs derived from Airtable record IDs.
 - A schema change touches three places: `sql/schema/`, the normalizer in `01b_…py`, and the repositories in `src/server/repositories/`.
@@ -103,3 +111,4 @@ Dark mode is a work in progress:
 - Don't build parallel infrastructure. Prefer global solutions, and don't hard-code things where they would be hard to find.
 - Use context7 for up-to-date Next.js, Tailwind, shadcn/ui and React docs.
 - Don't commit, push or open PRs unless asked. Leave changes uncommitted for review.
+- When a decision is the user's to make (product behavior, open questions at the end of a task, choosing between approaches), ask it with the question dialog (AskUserQuestion) rather than in prose.

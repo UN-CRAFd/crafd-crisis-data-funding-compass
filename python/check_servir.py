@@ -10,7 +10,9 @@ def load_env(path=".env.local"):
             env[k.strip()] = v.strip().strip('"').strip("'")
     return env
 
+
 import psycopg2
+
 conn = psycopg2.connect(load_env()["DATABASE_URL"])
 cur = conn.cursor()
 cur.execute("SELECT * FROM organizations WHERE full_name ILIKE '%servir%';")

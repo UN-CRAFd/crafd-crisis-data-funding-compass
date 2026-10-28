@@ -30,7 +30,6 @@ from typing import Any, Dict, List, Optional, Set, Tuple
 
 import psycopg2
 import psycopg2.extras
-
 from _utils import (
     fetch_all_records,
     log,
@@ -57,7 +56,6 @@ FIELDS = {
         "product_key",
         "Provider Orgs Full Name",
         "Investment Type(s)",
-        "Investment Theme(s)",
         "Project Website",
         "Project Description",
         "Project Donor Agencies",
@@ -184,7 +182,9 @@ def apply_schema(conn, schema_dir: Path):
     log(SCRIPT_NAME, "Schema applied successfully")
 
 
-def bulk_upsert(conn, table: str, columns: List[str], rows: List[tuple], conflict_col: str = "id"):
+def bulk_upsert(
+    conn, table: str, columns: List[str], rows: List[tuple], conflict_col: str = "id"
+):
     """Insert rows with ON CONFLICT DO NOTHING (idempotent, no commit)."""
     if not rows:
         return
@@ -234,7 +234,9 @@ def report_quality_warnings(
     """Warn about data problems that break things on the site without failing the import."""
     for rec in themes:
         if not get_field(rec, "theme_key"):
-            warn(f"Theme {rec['id']} ({get_field(rec, 'Investment Themes [Text Key]')!r}) has no theme_key")
+            warn(
+                f"Theme {rec['id']} ({get_field(rec, 'Investment Themes [Text Key]')!r}) has no theme_key"
+            )
 
     linked_projects: Set[str] = set()
     for rec in organizations:
@@ -245,15 +247,21 @@ def report_quality_warnings(
         for field in ("Org Website", "Link to Budget Source"):
             url = get_field(rec, field)
             if url and not re.match(r"^https?://", url):
-                warn(f"Organization {rec['id']} ({name!r}) {field} is not an http(s) link: {url!r}")
+                warn(
+                    f"Organization {rec['id']} ({name!r}) {field} is not an http(s) link: {url!r}"
+                )
 
     for rec in projects:
         name = get_field(rec, "Project/Product Name")
         if rec["id"] not in linked_projects:
-            warn(f"Project {rec['id']} ({name!r}) is not linked to any organization and won't appear on the site")
+            warn(
+                f"Project {rec['id']} ({name!r}) is not linked to any organization and won't appear on the site"
+            )
         url = get_field(rec, "Project Website")
         if url and not re.match(r"^https?://", url):
-            warn(f"Project {rec['id']} ({name!r}) website is not an http(s) link: {url!r}")
+            warn(
+                f"Project {rec['id']} ({name!r}) website is not an http(s) link: {url!r}"
+            )
 
 
 def safe_float(value) -> Optional[float]:
@@ -285,7 +293,7 @@ def extract_countries(
 
     for rec in organizations:
         hq = get_field(rec, "Org HQ Country") or []
-        for c in (hq if isinstance(hq, list) else [hq]):
+        for c in hq if isinstance(hq, list) else [hq]:
             if c:
                 names.add(c.strip())
 
@@ -311,7 +319,7 @@ def extract_investment_types(
     names: Set[str] = set()
     for rec in themes:
         types = get_field(rec, "Investment Type") or []
-        for t in (types if isinstance(types, list) else [types]):
+        for t in types if isinstance(types, list) else [types]:
             if t:
                 names.add(t.strip())
     return {name: make_uuid(f"inv_type::{name}") for name in sorted(names) if name}
@@ -348,7 +356,9 @@ def build_agencies_rows(
         at_to_uuid[at_id] = uid
 
         name = get_field(rec, "Agency/Department Name") or ""
-        website = get_field(rec, "Agency Website") or get_field(rec, "Agency Data Portal")
+        website = get_field(rec, "Agency Website") or get_field(
+            rec, "Agency Data Portal"
+        )
         country_name = (get_field(rec, "Country Name") or "").strip()
         donor_id = donor_map.get(country_name)
         country_id = country_map.get(country_name)
@@ -360,15 +370,10 @@ def build_agencies_rows(
 def build_themes_rows(
     themes: List[Dict],
     type_map: Dict[str, str],
-) -> Tuple[List[tuple], Dict[str, str], Dict[str, str]]:
-    """Build theme rows + mappings.
-
-    Returns:
-        (rows, airtable_id→uuid, theme_text_name→uuid)
-    """
+) -> Tuple[List[tuple], Dict[str, str]]:
+    """Build theme rows + airtable_id → uuid mapping."""
     rows = []
     at_to_uuid: Dict[str, str] = {}
-    name_to_uuid: Dict[str, str] = {}
     for rec in themes:
         at_id = rec["id"]
         uid = make_uuid(f"theme::{at_id}")
@@ -380,14 +385,16 @@ def build_themes_rows(
 
         # Link to first investment type
         inv_types = get_field(rec, "Investment Type") or []
-        first_type = inv_types[0].strip() if isinstance(inv_types, list) and inv_types else (inv_types.strip() if isinstance(inv_types, str) else "")
+        first_type = (
+            inv_types[0].strip()
+            if isinstance(inv_types, list) and inv_types
+            else (inv_types.strip() if isinstance(inv_types, str) else "")
+        )
         type_id = type_map.get(first_type)
 
         rows.append((uid, theme_key, theme_name, description, type_id))
-        if theme_name:
-            name_to_uuid[theme_name.strip()] = uid
 
-    return rows, at_to_uuid, name_to_uuid
+    return rows, at_to_uuid
 
 
 def build_organizations_rows(
@@ -407,7 +414,11 @@ def build_organizations_rows(
         org_type_id = org_type_map.get(org_type_name)
 
         hq_countries = get_field(rec, "Org HQ Country") or []
-        first_country = hq_countries[0].strip() if isinstance(hq_countries, list) and hq_countries else ""
+        first_country = (
+            hq_countries[0].strip()
+            if isinstance(hq_countries, list) and hq_countries
+            else ""
+        )
         country_id = country_map.get(first_country)
 
         est_budget = get_field(rec, "Est. Org Budget")
@@ -422,28 +433,30 @@ def build_organizations_rows(
             except (ValueError, TypeError):
                 pass
 
-        rows.append((
-            uid,
-            get_field(rec, "org_key"),
-            get_field(rec, "Org Full Name"),
-            get_field(rec, "Org Short Name"),
-            get_field(rec, "Org Website"),
-            get_field(rec, "Org Description"),
-            org_type_id,
-            country_id,
-            safe_float(est_budget),
-            safe_float(programme_budget),
-            get_field(rec, "Budget Source"),
-            get_field(rec, "Link to Budget Source"),
-            get_field(rec, "HDX Org Key"),
-            get_field(rec, "IATI Org Key"),
-            get_field(rec, "Org MPTFO Name"),
-            get_field(rec, "Org MPTFO URL [Formula]"),
-            get_field(rec, "Org Transparency Portal"),
-            get_field(rec, "Link to Data Products Overview"),
-            get_field(rec, "Funding Type"),
-            last_updated,
-        ))
+        rows.append(
+            (
+                uid,
+                get_field(rec, "org_key"),
+                get_field(rec, "Org Full Name"),
+                get_field(rec, "Org Short Name"),
+                get_field(rec, "Org Website"),
+                get_field(rec, "Org Description"),
+                org_type_id,
+                country_id,
+                safe_float(est_budget),
+                safe_float(programme_budget),
+                get_field(rec, "Budget Source"),
+                get_field(rec, "Link to Budget Source"),
+                get_field(rec, "HDX Org Key"),
+                get_field(rec, "IATI Org Key"),
+                get_field(rec, "Org MPTFO Name"),
+                get_field(rec, "Org MPTFO URL [Formula]"),
+                get_field(rec, "Org Transparency Portal"),
+                get_field(rec, "Link to Data Products Overview"),
+                get_field(rec, "Funding Type"),
+                last_updated,
+            )
+        )
     return rows, at_to_uuid
 
 
@@ -466,14 +479,16 @@ def build_projects_rows(
             elif isinstance(hdx_raw, str):
                 hdx_sohd = hdx_raw.lower() not in ("none", "", "false", "0", "no")
 
-        rows.append((
-            uid,
-            get_field(rec, "product_key"),
-            get_field(rec, "Project/Product Name") or "",
-            get_field(rec, "Project Description"),
-            get_field(rec, "Project Website"),
-            hdx_sohd,
-        ))
+        rows.append(
+            (
+                uid,
+                get_field(rec, "product_key"),
+                get_field(rec, "Project/Product Name") or "",
+                get_field(rec, "Project Description"),
+                get_field(rec, "Project Website"),
+                hdx_sohd,
+            )
+        )
     return rows, at_to_uuid
 
 
@@ -500,11 +515,13 @@ def build_agency_project_funding(
             agency_uuid = agency_at_map.get(agency_at_id)
             if agency_uuid and (agency_uuid, proj_uuid) not in seen:
                 seen.add((agency_uuid, proj_uuid))
-                rows.append((
-                    make_junction_uuid(agency_at_id, proj_at_id),
-                    agency_uuid,
-                    proj_uuid,
-                ))
+                rows.append(
+                    (
+                        make_junction_uuid(agency_at_id, proj_at_id),
+                        agency_uuid,
+                        proj_uuid,
+                    )
+                )
     return rows
 
 
@@ -526,11 +543,13 @@ def build_agency_organization_funding(
             agency_uuid = agency_at_map.get(agency_at_id)
             if agency_uuid and (agency_uuid, org_uuid) not in seen:
                 seen.add((agency_uuid, org_uuid))
-                rows.append((
-                    make_junction_uuid(agency_at_id, org_at_id),
-                    agency_uuid,
-                    org_uuid,
-                ))
+                rows.append(
+                    (
+                        make_junction_uuid(agency_at_id, org_at_id),
+                        agency_uuid,
+                        org_uuid,
+                    )
+                )
     return rows
 
 
@@ -552,30 +571,28 @@ def build_organization_project(
             proj_uuid = project_at_map.get(proj_at_id)
             if proj_uuid and (org_uuid, proj_uuid) not in seen:
                 seen.add((org_uuid, proj_uuid))
-                rows.append((
-                    make_junction_uuid(org_at_id, proj_at_id),
-                    org_uuid,
-                    proj_uuid,
-                ))
+                rows.append(
+                    (
+                        make_junction_uuid(org_at_id, proj_at_id),
+                        org_uuid,
+                        proj_uuid,
+                    )
+                )
     return rows
 
 
 def build_project_themes(
     themes: List[Dict],
-    projects: List[Dict],
     theme_at_map: Dict[str, str],
-    theme_name_map: Dict[str, str],
     project_at_map: Dict[str, str],
 ) -> List[tuple]:
-    """project_themes from two sources:
+    """project_themes from themes' `Data Ecosystem Projects`.
 
-    1. Theme records' `Data Ecosystem Projects` (Airtable linked IDs)
-    2. Project records' `Investment Theme(s)` (text names → match to theme)
+    Projects' `Investment Theme(s)` is not used: it looks up an outdated
+    single-select on Themes, not the theme names.
     """
     rows = []
     seen: Set[Tuple[str, str]] = set()
-
-    # Source 1: theme → projects link
     for rec in themes:
         theme_at_id = rec["id"]
         theme_uuid = theme_at_map.get(theme_at_id)
@@ -586,31 +603,13 @@ def build_project_themes(
             proj_uuid = project_at_map.get(proj_at_id)
             if proj_uuid and (proj_uuid, theme_uuid) not in seen:
                 seen.add((proj_uuid, theme_uuid))
-                rows.append((
-                    make_junction_uuid(proj_at_id, theme_at_id),
-                    proj_uuid,
-                    theme_uuid,
-                ))
-
-    # Source 2: project → theme name matching
-    for rec in projects:
-        proj_at_id = rec["id"]
-        proj_uuid = project_at_map.get(proj_at_id)
-        if not proj_uuid:
-            continue
-        theme_names = get_field(rec, "Investment Theme(s)") or []
-        for tname in (theme_names if isinstance(theme_names, list) else [theme_names]):
-            if not tname:
-                continue
-            theme_uuid = theme_name_map.get(tname.strip())
-            if theme_uuid and (proj_uuid, theme_uuid) not in seen:
-                seen.add((proj_uuid, theme_uuid))
-                rows.append((
-                    make_junction_uuid(proj_at_id, f"theme_name::{tname.strip()}"),
-                    proj_uuid,
-                    theme_uuid,
-                ))
-
+                rows.append(
+                    (
+                        make_junction_uuid(proj_at_id, theme_at_id),
+                        proj_uuid,
+                        theme_uuid,
+                    )
+                )
     return rows
 
 
@@ -629,14 +628,17 @@ def main():
         config = setup_environment()
         validate_config(
             config,
-            ["api_key", "base_id", "table_projects", "table_organizations", "table_agencies", "table_themes"],
+            [
+                "api_key",
+                "base_id",
+                "table_projects",
+                "table_organizations",
+                "table_agencies",
+                "table_themes",
+            ],
         )
 
-        schema_dir = (
-            config["project_root"]
-            / "sql"
-            / "schema"
-        )
+        schema_dir = config["project_root"] / "sql" / "schema"
 
         # --- Fetch from Airtable ------------------------------------------
         log(SCRIPT_NAME, "Fetching Airtable tables …")
@@ -725,59 +727,86 @@ def main():
         log(SCRIPT_NAME, "Inserting lookup tables …")
 
         bulk_upsert(
-            conn, "countries", ["id", "name"],
+            conn,
+            "countries",
+            ["id", "name"],
             [(uid, name) for name, uid in country_map.items()],
         )
         bulk_upsert(
-            conn, "organization_types", ["id", "name"],
+            conn,
+            "organization_types",
+            ["id", "name"],
             [(uid, name) for name, uid in org_type_map.items()],
         )
         bulk_upsert(
-            conn, "types", ["id", "name"],
+            conn,
+            "types",
+            ["id", "name"],
             [(uid, name) for name, uid in inv_type_map.items()],
         )
 
         # --- Insert donors ------------------------------------------------
         log(SCRIPT_NAME, "Inserting donors …")
         donor_rows = [
-            (uid, name, country_map.get(name))
-            for name, uid in donor_map.items()
+            (uid, name, country_map.get(name)) for name, uid in donor_map.items()
         ]
         bulk_upsert(conn, "donors", ["id", "name", "country_id"], donor_rows)
 
         # --- Build & insert entities --------------------------------------
         log(SCRIPT_NAME, "Building entity rows …")
 
-        agency_rows, agency_at_map = build_agencies_rows(agencies_raw, donor_map, country_map)
-        theme_rows, theme_at_map, theme_name_map = build_themes_rows(themes_raw, inv_type_map)
-        org_rows, org_at_map = build_organizations_rows(organizations_raw, org_type_map, country_map)
+        agency_rows, agency_at_map = build_agencies_rows(
+            agencies_raw, donor_map, country_map
+        )
+        theme_rows, theme_at_map = build_themes_rows(themes_raw, inv_type_map)
+        org_rows, org_at_map = build_organizations_rows(
+            organizations_raw, org_type_map, country_map
+        )
         project_rows, project_at_map = build_projects_rows(projects_raw)
 
         log(SCRIPT_NAME, "Inserting entities …")
         bulk_upsert(
-            conn, "agencies",
+            conn,
+            "agencies",
             ["id", "name", "website", "donor_id", "country_id"],
             agency_rows,
         )
         bulk_upsert(
-            conn, "themes",
+            conn,
+            "themes",
             ["id", "theme_key", "name", "description", "type_id"],
             theme_rows,
         )
         bulk_upsert(
-            conn, "organizations",
+            conn,
+            "organizations",
             [
-                "id", "org_key", "full_name", "short_name", "website",
-                "description", "organization_type_id", "country_id",
-                "estimated_budget", "programme_budget", "budget_source",
-                "budget_source_link", "hdx_org_key", "iati_org_key",
-                "mptfo_name", "mptfo_url", "transparency_portal_url",
-                "data_products_overview_url", "funding_type", "last_updated",
+                "id",
+                "org_key",
+                "full_name",
+                "short_name",
+                "website",
+                "description",
+                "organization_type_id",
+                "country_id",
+                "estimated_budget",
+                "programme_budget",
+                "budget_source",
+                "budget_source_link",
+                "hdx_org_key",
+                "iati_org_key",
+                "mptfo_name",
+                "mptfo_url",
+                "transparency_portal_url",
+                "data_products_overview_url",
+                "funding_type",
+                "last_updated",
             ],
             org_rows,
         )
         bulk_upsert(
-            conn, "projects",
+            conn,
+            "projects",
             ["id", "product_key", "name", "description", "website", "hdx_sohd"],
             project_rows,
         )
@@ -785,29 +814,39 @@ def main():
         # --- Junction tables ----------------------------------------------
         log(SCRIPT_NAME, "Building junction tables …")
 
-        apf_rows = build_agency_project_funding(projects_raw, agency_at_map, project_at_map)
-        aof_rows = build_agency_organization_funding(organizations_raw, agency_at_map, org_at_map)
-        op_rows = build_organization_project(organizations_raw, org_at_map, project_at_map)
-        pt_rows = build_project_themes(themes_raw, projects_raw, theme_at_map, theme_name_map, project_at_map)
+        apf_rows = build_agency_project_funding(
+            projects_raw, agency_at_map, project_at_map
+        )
+        aof_rows = build_agency_organization_funding(
+            organizations_raw, agency_at_map, org_at_map
+        )
+        op_rows = build_organization_project(
+            organizations_raw, org_at_map, project_at_map
+        )
+        pt_rows = build_project_themes(themes_raw, theme_at_map, project_at_map)
 
         log(SCRIPT_NAME, "Inserting junction tables …")
         bulk_upsert(
-            conn, "agency_project_funding",
+            conn,
+            "agency_project_funding",
             ["id", "agency_id", "project_id"],
             apf_rows,
         )
         bulk_upsert(
-            conn, "agency_organization_funding",
+            conn,
+            "agency_organization_funding",
             ["id", "agency_id", "organization_id"],
             aof_rows,
         )
         bulk_upsert(
-            conn, "organization_project",
+            conn,
+            "organization_project",
             ["id", "organization_id", "project_id"],
             op_rows,
         )
         bulk_upsert(
-            conn, "project_themes",
+            conn,
+            "project_themes",
             ["id", "project_id", "theme_id"],
             pt_rows,
         )
@@ -816,7 +855,9 @@ def main():
         log(SCRIPT_NAME, "Granting permissions to funding_compass_app …")
         with conn.cursor() as cur:
             cur.execute("GRANT USAGE ON SCHEMA funding_compass TO funding_compass_app;")
-            cur.execute("GRANT SELECT ON ALL TABLES IN SCHEMA funding_compass TO funding_compass_app;")
+            cur.execute(
+                "GRANT SELECT ON ALL TABLES IN SCHEMA funding_compass TO funding_compass_app;"
+            )
         log(SCRIPT_NAME, "  Permissions granted ✓")
 
         # --- Commit -------------------------------------------------------
@@ -850,6 +891,7 @@ def main():
             conn.close()
             log(SCRIPT_NAME, "Rolled back — existing data left unchanged")
         import traceback
+
         traceback.print_exc()
         sys.exit(1)
 

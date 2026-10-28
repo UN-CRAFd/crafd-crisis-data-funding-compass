@@ -10,3 +10,12 @@ dependencies = [
     "pandas>=2.3.3",
     "psycopg2-binary>=2.9.12",
 ]
+
+[dependency-groups]
+dev = [
+    "pytest>=9.2.0",
+]
+
+[tool.pytest.ini_options]
+testpaths = ["python/tests"]
+pythonpath = ["python"]

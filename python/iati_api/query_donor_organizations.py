@@ -4,7 +4,6 @@ from pathlib import Path
 import pandas as pd
 import requests_cache
 from dotenv import load_dotenv
-
 from src.iati_api.fetch_iati_api_cached import query_iati_api_cached
 
 load_dotenv()

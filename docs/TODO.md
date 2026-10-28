@@ -32,7 +32,7 @@ Most of these appear as warnings on each run of the nightly "Fetch Data from Air
 - [ ] **Org Programme Budget** is a URL field in Airtable, but the import reads it as a number, so the database column is always empty.
   - Either turn it into a number field and fill it in, or treat it as a link in `python/01b_fetch_airtable_to_sql.py` and the schema.
   - The column appears in the data export.
-- [ ] The **Investment Theme(s)** field on Themes is an outdated single-select. Projects' **Investment Theme(s)** looks it up, so it shows old names such as "PiN Calculation" and "Displacement & Migration Analytics". Either repoint the lookup to **Investment Themes [Text Key]** or remove it, then drop the name-matching fallback ("Source 2") in `build_project_themes`.
+- [ ] The **Investment Theme(s)** field on Themes is an outdated single-select. Projects' **Investment Theme(s)** looks it up, so it shows old names such as "PiN Calculation" and "Displacement & Migration Analytics". Either repoint the lookup to **Investment Themes [Text Key]** or remove it. The import no longer reads this field.
 - [ ] **Org Short Name** "Pacific Disaster Center " has a trailing space in the select option. The import trims it.
 - [ ] Possible duplicate agency: "International Development Research Centre (IDRC)" exists twice.
 

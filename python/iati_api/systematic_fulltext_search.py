@@ -1,7 +1,7 @@
 import pandas as pd
-from src.iati_api.fetch_iati_api import query_activity_narrative_fulltext
 from sankey_plot import create_sankey_plot
 from sankey_process_data import process_sankey_data
+from src.iati_api.fetch_iati_api import query_activity_narrative_fulltext
 
 narrative_search = "afrobarometer"
 iati_json_parsed = query_activity_narrative_fulltext(
