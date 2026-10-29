@@ -48,7 +48,7 @@ def test_build_organizations_rows():
                 "Org Type": "NGO",
                 "Org HQ Country": ["Germany", "France"],
                 "Est. Org Budget": "1500000",
-                "Org Programme Budget": "n/a",
+                "Org Programme Budget": "https://example.org/budget.pdf",
                 "Last Updated": "2024",
             },
         )
@@ -61,7 +61,12 @@ def test_build_organizations_rows():
     assert at_map == {"recOrg": pipeline.make_uuid("org::recOrg")}
     assert row[0] == at_map["recOrg"]
     assert row[2] == "Alpha Org"
-    assert row[6:10] == ("type-ngo", "country-de", 1500000.0, None)
+    assert row[6:10] == (
+        "type-ngo",
+        "country-de",
+        1500000.0,
+        "https://example.org/budget.pdf",
+    )
     assert row[-1] == date(2024, 1, 1)
 
 

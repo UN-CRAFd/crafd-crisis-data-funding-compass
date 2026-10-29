@@ -38,7 +38,7 @@ CREATE TABLE IF NOT EXISTS funding_compass.organizations (
     organization_type_id UUID REFERENCES funding_compass.organization_types(id),
     country_id UUID REFERENCES funding_compass.countries(id),
     estimated_budget FLOAT,
-    programme_budget FLOAT,
+    programme_budget TEXT, -- link to the programme budget, not an amount
     budget_source TEXT,
     budget_source_link TEXT,
     hdx_org_key TEXT,

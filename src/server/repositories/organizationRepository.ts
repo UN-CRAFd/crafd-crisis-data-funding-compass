@@ -19,7 +19,7 @@ export interface OrgRow {
   website: string | null;
   description: string | null;
   estimated_budget: number | null;
-  programme_budget: number | null;
+  programme_budget: string | null;
   budget_source: string | null;
   budget_source_link: string | null;
   hdx_org_key: string | null;

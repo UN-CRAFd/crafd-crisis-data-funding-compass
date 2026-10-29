@@ -40,7 +40,7 @@ The data is relational: the tables are linked by IDs and must be joined. It is i
 - Funding relationships are **binary**: they record that an agency funds an organization or project, not how much.
 - Organization-level budget fields are included where available. `last_updated` is the year the budget information was last updated, stored as 1 January of that year.
   - `estimated_budget`
-  - `programme_budget`
+  - `programme_budget` (a link to the programme budget, not an amount)
   - `budget_source`
   - `budget_source_link`
 - `funding_type` is `Core`, `Voluntary` or empty. `Core` marks organizations funded through core contributions.

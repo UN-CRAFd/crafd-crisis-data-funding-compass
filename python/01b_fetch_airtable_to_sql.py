@@ -260,7 +260,7 @@ def report_quality_warnings(
         linked_projects.update(get_field(rec, "Provided Data Ecosystem Projects") or [])
         if not get_field(rec, "org_key"):
             warn(f"Organization {rec['id']} ({name!r}) has no org_key")
-        for field in ("Org Website", "Link to Budget Source"):
+        for field in ("Org Website", "Link to Budget Source", "Org Programme Budget"):
             url = get_field(rec, field)
             if url and not re.match(r"^https?://", url):
                 warn(
@@ -496,7 +496,6 @@ def build_organizations_rows(
         country_id = country_map.get(first_country)
 
         est_budget = get_field(rec, "Est. Org Budget")
-        programme_budget = get_field(rec, "Org Programme Budget")
 
         last_updated_raw = get_field(rec, "Last Updated")
         last_updated = None
@@ -518,7 +517,7 @@ def build_organizations_rows(
                 org_type_id,
                 country_id,
                 safe_float(est_budget),
-                safe_float(programme_budget),
+                get_field(rec, "Org Programme Budget"),  # a link, not an amount
                 get_field(rec, "Budget Source"),
                 get_field(rec, "Link to Budget Source"),
                 get_field(rec, "HDX Org Key"),

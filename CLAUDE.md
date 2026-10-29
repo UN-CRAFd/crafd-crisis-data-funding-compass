@@ -113,5 +113,5 @@ Dark mode is a work in progress:
 - Learn the API and page structure before making isolated changes.
 - Don't build parallel infrastructure. Prefer global solutions, and don't hard-code things where they would be hard to find.
 - Use context7 for up-to-date Next.js, Tailwind, shadcn/ui and React docs.
-- Don't commit, push or open PRs unless asked. Leave changes uncommitted for review.
+- Commit small, low-risk changes straight to `main` and push; no PR needed. Use a branch and PR only for larger or risky changes (e.g. schema changes that need a coordinated pipeline run), and ask first.
 - When a decision is the user's to make (product behavior, open questions at the end of a task, choosing between approaches), ask it with the question dialog (AskUserQuestion) rather than in prose.

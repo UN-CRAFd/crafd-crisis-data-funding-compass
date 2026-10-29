@@ -34,7 +34,6 @@ Most of these appear as warnings on each run of the nightly "Fetch Data from Air
   - FNRS (Belgium, `rec4K8WmVji37YMCr`), THW (Germany, `recLZauHkiDI0nwAy`), OPW (Ireland, `recKqqMmG0fzm1WSr`), ISTAT (Italy, `rec1qQDNbg7E8mqD3`) and Fund for Development (Qatar, `recnzDLPx803fXQqf`)
   - Tableau Foundation (`recdfJ8kc29BrRxi8`), Geneva International Centre for Humanitarian Demining (`recLWqEZrThg4Drwo`), IFAD (`recvvJF6VEfKjphtY`), UNFPA (`rec7AphhRvNQfntpA`) and German Red Cross (`recYMaEogEDwsfBG7`)
   - Action Against Hunger (`reciQBMKhngwpZwbU`), Global Nutrition Cluster (`rec4XXzzXi0jHT1Fv`), Oxfam (`recvWXGo3NuHLKMUq`) and Save the Children (`recdtoV4UFwh3YJXi`)
-- [ ] Delete three records in **Donors [High-level]** that nothing links to and that aren't donors: "Agency country", "Danish Refugee Council (DRC)" and "Norwegian Refugee Council (NRC / NORCAP)".
 - [ ] Fill in **ISO alpha-3** for every new country added to **Donors [High-level]**. Leave it empty for groups of funders and sub-national donors. Countries without a code get no flag and aren't matched to UN member states.
 - [ ] Replace or remove the six "Unspecified Agency" placeholders, which fund nothing. They belong to Bulgaria (`recv4vpcDjXJM69YS`), Croatia (`recF2yzhW3jQCPdAt`), Georgia (`recsVZH4EnaUp9rJt`), Panama (`rectFh51oqrsA5MNt`), Private Firms (`recpoSWjCWxlFL5FM`) and Scotland (`recbtCkeJk3QthFZj`). Scotland's only agency is its placeholder, so the data lists Scotland as a donor with no funding.
 - [ ] Complete the budget data:
@@ -45,18 +44,14 @@ Most of these appear as warnings on each run of the nightly "Fetch Data from Air
 
 ### Cleanup (no visible effect)
 
-- [ ] **Org Programme Budget** is a URL field in Airtable, but the import reads it as a number, so the database column is always empty.
-  - Either turn it into a number field and fill it in, or treat it as a link in `python/01b_fetch_airtable_to_sql.py` and the schema.
-  - The column appears in the data export.
+- Rename to programme_budget_link. Clear name, consistent with budget_source_link. Merge, deploy, then run the pipeline straight away. The site errors for the few minutes in between, unless you trigger the pipeline right after the deploy finishes.
 - [ ] The **Investment Theme(s)** field on Themes is an outdated single-select. Projects' **Investment Theme(s)** looks it up, so it shows old names such as "PiN Calculation" and "Displacement & Migration Analytics". Either repoint the lookup to **Investment Themes [Text Key]** or remove it. The import no longer reads this field.
 - [ ] **Org Short Name** "Pacific Disaster Center " has a trailing space in the select option. The import trims it.
-- [ ] Possible duplicate agency: "International Development Research Centre (IDRC)" exists twice.
 
 ## Code
 
 - [ ] Separate countries from other donors. Donors are derived from agencies' "Country Name", so `countries` and `donors` mix countries with funder groups (European Union, Foundations, United Nations, CRAF'd, …) and one sub-national government (Scotland). `countries.iso_alpha3` is empty for all non-countries, but groups and sub-national donors can't be told apart. Add a donor type (country, group, sub-national) in Donors [High-level].
 - [ ] Fill in the **Export Date** in `docs/FULL_DATASET_README.md` whenever a full export goes out, ideally automatically. It is currently blank, so exports are undated.
-- [ ] Update `README.md`, `docs/IATI_INTEGRATION.md` and `python/README.md`. They still describe the old Airtable → JSON setup (`public/data/*.json`, `scripts/…`), npm and Next 15.
 
 ## Methodology questions
 
@@ -66,7 +61,3 @@ Most of these appear as warnings on each run of the nightly "Fetch Data from Air
   - "Admin Boundaries" is used by WFP (`admin-b`) and UNICEF (`admin-b2`).
   - "Information Management Services" is used by iMMAP and 3iS.
   - "Monitoring & Evaluation" is used by PANDA and 3iS.
-
-## Access
-
-- [ ] `AIRTABLE_WRITE_API_KEY` (local `.env` only) has write access to the base. Revoke it at <https://airtable.com/create/tokens> when it's no longer needed, and never add it to CI. The nightly job uses the read-only `AIRTABLE_API_KEY`.

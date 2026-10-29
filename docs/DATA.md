@@ -49,7 +49,7 @@ Organizations that maintain crisis data products.
 - `organization_type_id`: type of organization (links to `organization_types.id`).
 - `country_id`: headquarters country (links to `countries.id`). If several are given in Airtable, only the first is stored.
 - `estimated_budget`: estimated annual budget, from "Est. Org Budget".
-- `programme_budget`: programme budget, from "Org Programme Budget".
+- `programme_budget`: link to the organization's programme budget (a page or document), from "Org Programme Budget". Despite the name, it is a URL, not an amount.
 - `budget_source`: source of the budget figures.
 - `budget_source_link`: link to the budget source.
 - `funding_type`: `Core`, `Voluntary`, or empty. When the dashboard is filtered by UN member states, those states count as donors to every `Core`-funded organization.

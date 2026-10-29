@@ -16,7 +16,7 @@ This is the only script the app depends on.
 uv run python python/01b_fetch_airtable_to_sql.py
 ```
 
-It fetches the projects, organizations, agencies and themes tables from Airtable. It then normalizes them and rebuilds the `funding_compass` schema from [`sql/schema/`](../sql/schema/) in a single transaction, so a failed run leaves the previous data in place. Safety checks run before the database is touched; the module docstring describes them. The resulting tables are documented in [`docs/DATA.md`](../docs/DATA.md).
+It fetches the projects, organizations, agencies, themes and Donors [High-level] tables from Airtable, and reads the UN member states from [`data/un_member_states.csv`](../data/un_member_states.csv). It then normalizes them and rebuilds the `funding_compass` schema from [`sql/schema/`](../sql/schema/) in a single transaction, so a failed run leaves the previous data in place. Safety checks run before the database is touched; the module docstring describes them. The resulting tables are documented in [`docs/DATA.md`](../docs/DATA.md).
 
 The script needs the `AIRTABLE_*` and `AZURE_POSTGRES_*` variables. It runs daily via [`.github/workflows/fetch_data_from_airtable.yml`](../.github/workflows/fetch_data_from_airtable.yml), and you can also start that workflow by hand from the Actions tab.
 
