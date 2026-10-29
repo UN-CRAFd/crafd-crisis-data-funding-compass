@@ -12,7 +12,7 @@ create and inserts run in a single transaction. A failed run therefore leaves
 the previous data in place instead of an empty schema.
 
 Safety checks (any failure aborts before the database is changed):
-- all four table IDs must be configured
+- all five table IDs must be configured
 - every table must return at least one record
 - no table may shrink below MIN_KEEP_RATIO of its current row count
   (set ALLOW_LARGE_DROP=1 for an intentional large deletion)
@@ -20,13 +20,14 @@ Data-quality problems that don't block the import are printed as GitHub
 Actions warnings.
 """
 
+import csv
 import os
 import re
 import sys
 import uuid
 from datetime import date
 from pathlib import Path
-from typing import Any, Dict, List, Optional, Set, Tuple
+from typing import Dict, List, Optional, Set, Tuple
 
 import psycopg2
 import psycopg2.extras
@@ -45,6 +46,13 @@ SCRIPT_NAME = "01b_fetch_airtable_to_sql"
 
 # Abort if a table would shrink below this fraction of its current row count
 MIN_KEEP_RATIO = 0.5
+
+# UN member states (ISO alpha-3 + UN M49 name), from UN-CRAFd/crafd-reference-datasets
+UN_MEMBER_STATES_CSV = (
+    Path(__file__).resolve().parent.parent / "data" / "un_member_states.csv"
+)
+
+ISO_ALPHA3_RE = re.compile(r"[A-Z]{3}")
 
 # UUID namespace for deterministic ID generation (custom namespace for CRAF'd)
 CRAFD_UUID_NAMESPACE = uuid.UUID("a1b2c3d4-e5f6-7890-abcd-ef1234567890")
@@ -75,6 +83,7 @@ FIELDS = {
         "Org Short Name",
         "Org Website",
         "Org HQ Country",
+        "HQ Country",
         "Org Description",
         "Link to Data Products Overview",
         "Org IATI Name",
@@ -92,6 +101,13 @@ FIELDS = {
         "Agency Data Portal",
         "Agency Website",
         "Country Name",
+        "Agency Associated Country",
+    ],
+    # Donors [High-level]: the countries and donor groups that agencies and
+    # organization HQs link to
+    "donors": [
+        "Donor Name",
+        "ISO alpha-3",
     ],
     "themes": [
         "THEME_ID",
@@ -298,6 +314,64 @@ def extract_countries(
                 names.add(c.strip())
 
     return {name: make_uuid(f"country::{name}") for name in sorted(names) if name}
+
+
+def build_country_codes(
+    agencies: List[Dict],
+    organizations: List[Dict],
+    donors: List[Dict],
+) -> Dict[str, Optional[str]]:
+    """Country name → ISO 3166-1 alpha-3 code, following record links.
+
+    Agencies (`Agency Associated Country`) and organizations (`HQ Country`)
+    link to Donors [High-level] records, which hold the code in `ISO alpha-3`.
+    Donor groups (European Union, Foundations, …) and sub-national donors have
+    no code.
+    """
+    donors_by_id = {rec["id"]: rec for rec in donors}
+    linked: Set[str] = set()
+    for rec in agencies:
+        linked.update(get_field(rec, "Agency Associated Country") or [])
+    for rec in organizations:
+        linked.update(get_field(rec, "HQ Country") or [])
+
+    codes: Dict[str, Optional[str]] = {}
+    for rec_id in sorted(linked):
+        rec = donors_by_id.get(rec_id)
+        name = get_field(rec, "Donor Name") if rec else None
+        if not name:
+            continue
+        code = (get_field(rec, "ISO alpha-3") or "").upper() or None
+        if code and not ISO_ALPHA3_RE.fullmatch(code):
+            warn(
+                f"Donor {rec_id} ({name!r}) ISO alpha-3 is not a 3-letter code: {code!r}"
+            )
+            code = None
+        if name in codes and codes[name] != code:
+            warn(
+                f"Several Donors [High-level] records are named {name!r} but have different "
+                f"ISO alpha-3 codes ({codes[name]!r}, {code!r}); using {codes[name]!r}"
+            )
+            continue
+        codes[name] = code
+
+    names_by_code: Dict[str, List[str]] = {}
+    for name, code in codes.items():
+        if code:
+            names_by_code.setdefault(code, []).append(name)
+    for code, names in names_by_code.items():
+        if len(names) > 1:
+            warn(f"ISO alpha-3 {code} is used by several countries: {sorted(names)}")
+    return codes
+
+
+def load_un_member_states(path: Path = UN_MEMBER_STATES_CSV) -> List[Tuple[str, str]]:
+    """(iso_alpha3, name) rows of the UN member-state reference list."""
+    with path.open(encoding="utf-8", newline="") as f:
+        rows = [(r["iso_alpha3"], r["name"]) for r in csv.DictReader(f)]
+    if not rows:
+        raise RuntimeError(f"No UN member states in {path}")
+    return rows
 
 
 def extract_organization_types(
@@ -635,6 +709,7 @@ def main():
                 "table_organizations",
                 "table_agencies",
                 "table_themes",
+                "table_donors",
             ],
         )
 
@@ -685,6 +760,18 @@ def main():
             )
             log(SCRIPT_NAME, f"  Themes: {len(themes_raw)} records")
 
+        donors_raw = fetch_all_records(
+            config["base_id"],
+            config["table_donors"],
+            config["api_key"],
+            FIELDS["donors"],
+            SCRIPT_NAME,
+        )
+        log(SCRIPT_NAME, f"  Donors [High-level]: {len(donors_raw)} records")
+
+        un_member_states = load_un_member_states()
+        log(SCRIPT_NAME, f"  UN member states: {len(un_member_states)}")
+
         # --- Clean & sanity-check -----------------------------------------
         raw_by_table = {
             "projects": projects_raw,
@@ -692,10 +779,12 @@ def main():
             "agencies": agencies_raw,
             "themes": themes_raw,
         }
-        for records in raw_by_table.values():
+        for records in [*raw_by_table.values(), donors_raw]:
             clean_records(records)
         new_counts = {table: len(records) for table, records in raw_by_table.items()}
         empty = [table for table, n in new_counts.items() if n == 0]
+        if not donors_raw:
+            empty.append("donors")
         if empty:
             raise RuntimeError(f"Airtable returned no records for: {', '.join(empty)}")
         report_quality_warnings(projects_raw, organizations_raw, themes_raw)
@@ -704,6 +793,7 @@ def main():
         log(SCRIPT_NAME, "Extracting lookup tables …")
 
         country_map = extract_countries(agencies_raw, organizations_raw)
+        country_codes = build_country_codes(agencies_raw, organizations_raw, donors_raw)
         org_type_map = extract_organization_types(organizations_raw)
         inv_type_map = extract_investment_types(themes_raw)
         donor_map = extract_donors(agencies_raw, country_map)
@@ -729,8 +819,15 @@ def main():
         bulk_upsert(
             conn,
             "countries",
-            ["id", "name"],
-            [(uid, name) for name, uid in country_map.items()],
+            ["id", "name", "iso_alpha3"],
+            [(uid, name, country_codes.get(name)) for name, uid in country_map.items()],
+        )
+        bulk_upsert(
+            conn,
+            "un_member_states",
+            ["iso_alpha3", "name"],
+            un_member_states,
+            conflict_col="iso_alpha3",
         )
         bulk_upsert(
             conn,

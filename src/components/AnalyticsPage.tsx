@@ -30,7 +30,12 @@ import {
   themeKeyToNames,
   themeNameToKey,
 } from "@/lib/data";
-import { matchesUrlSlug, toUrlSlug } from "@/lib/urlShortcuts";
+import {
+  matchesUrlSlug,
+  toUrlSlug,
+  typeLabelToSlug,
+  typeSlugToLabel,
+} from "@/lib/urlShortcuts";
 import {
   AlertCircle,
   BarChart3,
@@ -143,8 +148,7 @@ export default function AnalyticsPage() {
       isLoadingFromUrlRef.current = true;
       lastProcessedUrlRef.current = currentUrl;
 
-      const rawDonors =
-        searchParams.get("d") ?? searchParams.get("donors") ?? "";
+      const rawDonors = searchParams.get("d") ?? "";
       const incomingDonorSlugs = rawDonors.split(",").filter(Boolean);
       const crafdExpansion = [
         "germany",
@@ -160,14 +164,13 @@ export default function AnalyticsPage() {
         s === "crafd-donors" ? crafdExpansion : [s],
       );
 
-      const rawTypes = searchParams.get("types") ?? searchParams.get("t") ?? "";
+      const rawTypes = searchParams.get("t") ?? "";
       const urlTypes = rawTypes
         .split(",")
-        .map((s) => decodeURIComponent(s))
-        .filter(Boolean);
+        .filter(Boolean)
+        .map((s) => typeSlugToLabel(s));
 
-      const rawThemes =
-        searchParams.get("th") ?? searchParams.get("themes") ?? "";
+      const rawThemes = searchParams.get("th") ?? "";
       const themeKeys = rawThemes
         .split(",")
         .map((s) => decodeURIComponent(s))
@@ -177,8 +180,7 @@ export default function AnalyticsPage() {
       await ensureThemesMappingsLoaded();
       const urlThemes = themeKeys.flatMap((k) => themeKeyToNames(k));
 
-      const urlQuery =
-        searchParams.get("q") ?? searchParams.get("search") ?? "";
+      const urlQuery = searchParams.get("q") ?? "";
 
       // Apply decoded values to state
       setInvestmentTypes(urlTypes);
@@ -300,7 +302,7 @@ export default function AnalyticsPage() {
     }
 
     if (investmentTypes.length > 0) {
-      params.set("types", investmentTypes.join(","));
+      params.set("t", investmentTypes.map(typeLabelToSlug).join(","));
     }
 
     if (investmentThemes.length > 0) {
@@ -1640,7 +1642,7 @@ export default function AnalyticsPage() {
     params.set("d", donorSlugs);
 
     if (investmentTypes.length > 0) {
-      params.set("t", investmentTypes.join(","));
+      params.set("t", investmentTypes.map(typeLabelToSlug).join(","));
     }
 
     if (investmentThemes.length > 0) {
@@ -1791,11 +1793,7 @@ export default function AnalyticsPage() {
                         const params = new URLSearchParams(
                           searchParams?.toString() || "",
                         );
-                        const incoming = (
-                          params.get("d") ??
-                          params.get("donors") ??
-                          ""
-                        )
+                        const incoming = (params.get("d") ?? "")
                           .split(",")
                           .filter(Boolean);
                         const crafdKey = "crafd-donors";
@@ -1817,10 +1815,8 @@ export default function AnalyticsPage() {
 
                         if (hasCrafd) {
                           params.delete("d");
-                          params.delete("donors");
                         } else {
                           params.set("d", crafdKey);
-                          params.delete("donors");
                         }
 
                         const target = params.toString()
@@ -1838,11 +1834,7 @@ export default function AnalyticsPage() {
                         const params = new URLSearchParams(
                           searchParams?.toString() || "",
                         );
-                        const incoming = (
-                          params.get("d") ??
-                          params.get("donors") ??
-                          ""
-                        )
+                        const incoming = (params.get("d") ?? "")
                           .split(",")
                           .filter(Boolean);
                         const crafdKey = "crafd-donors";

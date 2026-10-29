@@ -24,7 +24,8 @@ The data is relational: the tables are linked by IDs and must be joined. It is i
 - **themes**: thematic areas of the products.
 - **types**: investment types, the higher-level categories that group themes.
 - **organization_types**: classification of organizations, e.g. United Nations, NGO, Research.
-- **countries**: reference list of donor and headquarters countries.
+- **countries**: reference list of donor and headquarters countries, with ISO 3166-1 alpha-3 codes.
+- **un_member_states**: the 193 UN member states by ISO alpha-3 code. Join to countries on `iso_alpha3`.
 
 ### Relationship Tables
 

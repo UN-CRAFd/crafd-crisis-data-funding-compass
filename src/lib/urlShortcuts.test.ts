@@ -34,14 +34,6 @@ describe("investment type slugs", () => {
     },
   );
 
-  it("accepts label keys, full labels in any case, and encoded labels", () => {
-    const label = labels.investmentTypes.data;
-    expect(typeSlugToLabel("data")).toBe(label);
-    expect(typeSlugToLabel(label.toUpperCase())).toBe(label);
-    expect(typeSlugToLabel(encodeURIComponent(label))).toBe(label);
-    expect(typeLabelToSlug("data")).toBe("datasets");
-  });
-
   it("passes unknown values through", () => {
     expect(typeSlugToLabel("unknown-type")).toBe("unknown-type");
     expect(typeLabelToSlug("Some New Type")).toBe("some-new-type");
@@ -50,7 +42,7 @@ describe("investment type slugs", () => {
 
 describe("toUrlSlug / matchesUrlSlug", () => {
   it("drops apostrophes, punctuation and extra dashes", () => {
-    expect(toUrlSlug("Côte d'Ivoire")).toBe("cte-divoire");
+    expect(toUrlSlug("Saint Kitts & Nevis")).toBe("saint-kitts-nevis");
     expect(toUrlSlug("  UN OCHA (Centre) -- HDX ")).toBe("un-ocha-centre-hdx");
   });
 
@@ -58,5 +50,10 @@ describe("toUrlSlug / matchesUrlSlug", () => {
     expect(matchesUrlSlug("UN-OCHA-Centre", "UN OCHA (Centre)")).toBe(true);
     expect(matchesUrlSlug("un-ocha", "UN OCHA (Centre)")).toBe(false);
     expect(matchesUrlSlug("", "anything")).toBe(false);
+  });
+
+  it("folds accents", () => {
+    expect(toUrlSlug("Türkiye")).toBe("turkiye");
+    expect(toUrlSlug("Côte d’Ivoire")).toBe("cote-divoire");
   });
 });

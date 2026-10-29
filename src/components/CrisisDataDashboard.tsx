@@ -1224,11 +1224,7 @@ const CrisisDataDashboard = ({
                           onClick={() => {
                             const raw = searchParams?.toString() || "";
                             const params = new URLSearchParams(raw);
-                            const incoming = (
-                              params.get("d") ??
-                              params.get("donors") ??
-                              ""
-                            )
+                            const incoming = (params.get("d") ?? "")
                               .split(",")
                               .filter(Boolean);
                             const crafdKey = "crafd-donors";
@@ -1253,12 +1249,9 @@ const CrisisDataDashboard = ({
                             if (hasCrafd) {
                               // Remove donor filter entirely
                               params.delete("d");
-                              params.delete("donors");
                             } else {
                               // Set the short key so expansion logic handles it downstream
                               params.set("d", crafdKey);
-                              // keep 'donors' cleared to avoid duplicates
-                              params.delete("donors");
                             }
 
                             const target = params.toString()
@@ -1275,11 +1268,7 @@ const CrisisDataDashboard = ({
                           {(() => {
                             const raw = searchParams?.toString() || "";
                             const params = new URLSearchParams(raw);
-                            const incoming = (
-                              params.get("d") ??
-                              params.get("donors") ??
-                              ""
-                            )
+                            const incoming = (params.get("d") ?? "")
                               .split(",")
                               .filter(Boolean);
                             const crafdKey = "crafd-donors";

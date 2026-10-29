@@ -136,6 +136,50 @@ export async function isMemberState(country: string): Promise<boolean> {
 }
 
 // ================================================================
+// Country Codes (loaded from /api/country-codes)
+// ================================================================
+
+let cachedCountryCodes: Record<string, string> | null = null;
+let countryCodesLoadPromise: Promise<Record<string, string>> | null = null;
+
+/** Load the country name → ISO alpha-3 map (cached after the first call). */
+export async function ensureCountryCodesLoaded(): Promise<
+  Record<string, string>
+> {
+  if (cachedCountryCodes) return cachedCountryCodes;
+  if (countryCodesLoadPromise) return countryCodesLoadPromise;
+
+  countryCodesLoadPromise = (async () => {
+    try {
+      const response = await fetch("/api/country-codes");
+      if (!response.ok) {
+        console.warn(`Failed to load country codes: ${response.status}`);
+        return {};
+      }
+      cachedCountryCodes = await response.json();
+      return cachedCountryCodes!;
+    } catch (error) {
+      console.error("Error loading country codes:", error);
+      return {};
+    }
+  })();
+
+  return countryCodesLoadPromise;
+}
+
+export function areCountryCodesLoaded(): boolean {
+  return cachedCountryCodes !== null;
+}
+
+/**
+ * ISO alpha-3 code of a country as named in the data, or undefined for donor
+ * groups and while the codes are still loading.
+ */
+export function getCountryIsoAlpha3(country: string): string | undefined {
+  return cachedCountryCodes?.[country];
+}
+
+// ================================================================
 // Agency Data (loaded from /api/agencies)
 // ================================================================
 

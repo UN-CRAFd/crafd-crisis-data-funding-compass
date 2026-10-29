@@ -11,6 +11,14 @@ All IDs are deterministic UUIDs:
 
 - `id`: unique identifier.
 - `name`: country or entity name. Collected from agencies' "Country Name" and organizations' "Org HQ Country".
+- `iso_alpha3`: ISO 3166-1 alpha-3 code, from the "ISO alpha-3" field of the linked Donors [High-level] record. Empty for groups of funders (e.g. European Union, Foundations) and sub-national donors (Scotland). Join countries to other country data, such as `un_member_states`, on this code, not on the name.
+
+## un_member_states
+
+The 193 UN member states, used for general contributions (see `funding_type` under organizations). The list is static reference data in [`data/un_member_states.csv`](../data/un_member_states.csv), taken from `data/output/full_country_list_with_stats.csv` (rows with `is_UN_member`) in [UN-CRAFd/crafd-reference-datasets](https://github.com/UN-CRAFd/crafd-reference-datasets) at commit `c4cd6a8`. There, names and codes come from UNSD M49 and membership from the UN member-state list.
+
+- `iso_alpha3`: ISO 3166-1 alpha-3 code (primary key). Joins to `countries.iso_alpha3`.
+- `name`: the UN M49 name, e.g. "Netherlands (Kingdom of the)". Where the state is also in `countries`, the site shows the `countries.name` instead.
 
 ## donors
 

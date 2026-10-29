@@ -15,3 +15,4 @@ DROP TABLE IF EXISTS funding_compass.donors CASCADE;
 DROP TABLE IF EXISTS funding_compass.types CASCADE;
 DROP TABLE IF EXISTS funding_compass.organization_types CASCADE;
 DROP TABLE IF EXISTS funding_compass.countries CASCADE;
+DROP TABLE IF EXISTS funding_compass.un_member_states CASCADE;

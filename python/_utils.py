@@ -43,6 +43,7 @@ def setup_environment() -> Dict[str, Any]:
         "table_agencies": os.getenv("AIRTABLE_TABLED_ID_AGENCIES")
         or os.getenv("AIRTABLE_TABLE_ID_AGENCIES"),
         "table_themes": os.getenv("AIRTABLE_TABLE_ID_THEMES"),
+        "table_donors": os.getenv("AIRTABLE_TABLE_ID_DONORS"),
         "timezone": os.getenv("AIRTABLE_TIMEZONE", "UTC"),
         "locale": os.getenv("AIRTABLE_USER_LOCALE", "en-US"),
     }

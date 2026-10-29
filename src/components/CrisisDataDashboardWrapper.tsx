@@ -90,7 +90,7 @@ const CrisisDataDashboardWrapper = () => {
       await ensureThemesMappingsLoaded();
       setThemesLoaded(true);
 
-      const raw = searchParams.get("th") ?? searchParams.get("themes");
+      const raw = searchParams.get("th");
       const keys = raw?.split(",").filter(Boolean) || [];
       const themeNames = keys.flatMap((key) => themeKeyToNames(key));
       setInvestmentThemes(themeNames);
@@ -99,7 +99,7 @@ const CrisisDataDashboardWrapper = () => {
 
   // Read filter values from URL
   const donorSlugsFromUrl = useMemo(() => {
-    const raw = searchParams.get("d") ?? searchParams.get("donors");
+    const raw = searchParams.get("d");
     const incoming = raw?.split(",").filter(Boolean) || [];
     const crafdExpansion = [
       "germany",
@@ -154,7 +154,7 @@ const CrisisDataDashboardWrapper = () => {
 
   // Parse agencies from URL
   const agencySlugsFromUrl = useMemo(() => {
-    const raw = searchParams.get("a") ?? searchParams.get("agencies");
+    const raw = searchParams.get("a");
     return raw?.split(",").filter(Boolean) || [];
   }, [searchParams]);
 
@@ -197,7 +197,7 @@ const CrisisDataDashboardWrapper = () => {
 
   // Parse investment types from URL
   const typeSlugsFromUrl = useMemo(() => {
-    const raw = searchParams.get("t") ?? searchParams.get("types");
+    const raw = searchParams.get("t");
     return raw?.split(",").filter(Boolean) || [];
   }, [searchParams]);
 
@@ -207,18 +207,18 @@ const CrisisDataDashboardWrapper = () => {
 
   // Search query
   const searchQuery = useMemo(() => {
-    return searchParams.get("q") ?? searchParams.get("search") ?? "";
+    return searchParams.get("q") ?? "";
   }, [searchParams]);
 
   // Sort params
   const sortBy = useMemo(() => {
-    const raw = searchParams.get("sb") ?? searchParams.get("sortBy");
+    const raw = searchParams.get("sb");
     if (raw === "donors" || raw === "assets" || raw === "funding") return raw;
     return "name" as const;
   }, [searchParams]);
 
   const sortDirection = useMemo(() => {
-    const raw = searchParams.get("sd") ?? searchParams.get("sortDirection");
+    const raw = searchParams.get("sd");
     if (raw === "asc") return "asc";
     return "desc" as const;
   }, [searchParams]);

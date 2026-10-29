@@ -124,6 +124,7 @@ const core: CoreData = {
     },
   ],
   memberStates: ["Sweden"],
+  countryCodes: [],
 };
 
 beforeEach(() => {
@@ -315,6 +316,25 @@ describe("member state general contributions", () => {
     expect(result.organizationsWithProjects[0].donorCountries).toContain(
       "Sweden",
     );
+  });
+
+  it("merges general contributions with a member state's own funding", async () => {
+    // findAllMemberStates gives a member state that is also a donor in the
+    // data the data's name (joined on ISO code), so it matches the donor.
+    vi.mocked(getCoreData).mockResolvedValue({
+      ...core,
+      memberStates: ["Germany", "Sweden"],
+    });
+    const result = await processDashboardData({ donorCountries: ["Germany"] });
+    expect(names(result.organizationsWithProjects)).toEqual([
+      "Alpha Org",
+      "Beta Institute",
+    ]);
+    const beta = result.organizationsWithProjects[1];
+    expect(beta.donorInfo).toContainEqual({
+      country: "Germany",
+      isOrgLevel: true,
+    });
   });
 
   it("does nothing when general contributions are switched off", async () => {
