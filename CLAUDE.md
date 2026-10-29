@@ -12,7 +12,7 @@ Web app (pnpm):
 
 ```bash
 pnpm install
-pnpm dev          # usually already running on http://localhost:3000
+pnpm dev          # usually already running on http://localhost:3000; clears .next first
 pnpm build
 pnpm typecheck    # tsc --noEmit
 pnpm lint         # eslint
@@ -26,7 +26,9 @@ Tests cover logic only, not components:
 - pytest covers the pure functions of the 01b pipeline (`python/tests/`, run with `uv run pytest`).
 - `.github/workflows/ci.yml` runs typecheck, lint, both test suites and `pnpm build` on PRs and pushes to `main`. The build needs no database.
 
-For UI changes, also look at the running app (Playwright MCP is available for that).
+For UI changes, also look at the running app (Playwright MCP is available for that). Check that the page finishes loading and stays loaded, not just that it renders once.
+
+`pnpm dev` deletes `.next` before starting. A stale `.next` (a production build next to old dev output) once sent every page into an endless reload loop: "[Fast Refresh] rebuilding" repeating in the browser console and "✓ Compiled" repeating in the server log. If that ever happens, restart `pnpm dev`. Don't run `pnpm build` while the dev server is running.
 
 Python data pipeline (uv, Python ≥3.13):
 
