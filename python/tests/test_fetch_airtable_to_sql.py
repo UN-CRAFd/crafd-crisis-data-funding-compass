@@ -86,6 +86,69 @@ def test_build_projects_rows_parses_hdx_sohd(raw, expected):
 
 
 # ---------------------------------------------------------------------------
+# Countries and UN member states
+# ---------------------------------------------------------------------------
+
+
+def donor(record_id, name, iso=None):
+    fields = {"Donor Name": name}
+    if iso is not None:
+        fields["ISO alpha-3"] = iso
+    return rec(record_id, **fields)
+
+
+def test_country_codes_follow_record_links():
+    agencies = [rec("recA1", **{"Agency Associated Country": ["recNL"]})]
+    orgs = [rec("recO1", **{"HQ Country": ["recKH", "recEU"]})]
+    donors = [
+        donor("recNL", "Netherlands", "nld"),
+        donor("recKH", "Cambodia", "KHM"),
+        donor("recEU", "European Union"),
+        donor("recXX", "Unlinked", "XXX"),
+    ]
+    assert pipeline.build_country_codes(agencies, orgs, donors) == {
+        "Netherlands": "NLD",
+        "Cambodia": "KHM",
+        "European Union": None,
+    }
+
+
+def test_country_codes_warn_on_conflicts_and_bad_codes(capsys):
+    # Two records named "Netherlands" with different codes is how a renamed UK
+    # record shows up; a code used twice is e.g. "USA" next to "United States".
+    agencies = [
+        rec("recA1", **{"Agency Associated Country": ["rec1"]}),
+        rec("recA2", **{"Agency Associated Country": ["rec2"]}),
+        rec("recA3", **{"Agency Associated Country": ["rec3", "rec4", "rec5"]}),
+    ]
+    donors = [
+        donor("rec1", "Netherlands", "NLD"),
+        donor("rec2", "Netherlands", "GBR"),
+        donor("rec3", "USA", "USA"),
+        donor("rec4", "United States", "USA"),
+        donor("rec5", "Atlantis", "AT"),
+    ]
+    codes = pipeline.build_country_codes(agencies, [], donors)
+
+    assert codes["Netherlands"] == "NLD"
+    assert codes["Atlantis"] is None
+    out = capsys.readouterr().out
+    assert "named 'Netherlands' but have different ISO alpha-3 codes" in out
+    assert "ISO alpha-3 USA is used by several countries" in out
+    assert "rec5 ('Atlantis') ISO alpha-3 is not a 3-letter code" in out
+
+
+def test_un_member_state_list():
+    rows = pipeline.load_un_member_states()
+    codes = [code for code, _ in rows]
+    assert len(rows) == 193
+    assert len(set(codes)) == 193
+    assert all(pipeline.ISO_ALPHA3_RE.fullmatch(code) for code in codes)
+    # Cambodia was missing from the old hard-coded list
+    assert ("KHM", "Cambodia") in rows
+
+
+# ---------------------------------------------------------------------------
 # Junction tables
 # ---------------------------------------------------------------------------
 

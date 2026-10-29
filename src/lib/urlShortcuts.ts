@@ -18,31 +18,9 @@ const slugToTypeKey: Record<string, string> = Object.fromEntries(
  * Convert a compact slug (from URL) to the full display label used in the app.
  * Falls back to the original string if no mapping found.
  */
-export function typeSlugToLabel(slugOrLabel: string): string {
-  if (!slugOrLabel) return slugOrLabel;
-  const normalized = decodeURIComponent(slugOrLabel).toString();
-
-  // If slug maps to a key, return the display label from labels.json
-  const key =
-    slugToTypeKey[normalized] ||
-    (Object.keys(labels.investmentTypes).includes(normalized)
-      ? normalized
-      : undefined);
-  if (key) {
-    const labMap = labels.investmentTypes as Record<string, string>;
-    return labMap[key] || normalized;
-  }
-
-  // Otherwise, try to match by display label case-insensitively
-  const foundKey = Object.keys(labels.investmentTypes).find(
-    (k) =>
-      (labels.investmentTypes as Record<string, string>)[k].toLowerCase() ===
-      normalized.toLowerCase(),
-  );
-  if (foundKey)
-    return (labels.investmentTypes as Record<string, string>)[foundKey];
-
-  return normalized;
+export function typeSlugToLabel(slug: string): string {
+  const key = slugToTypeKey[slug];
+  return key ? (labels.investmentTypes as Record<string, string>)[key] : slug;
 }
 
 /**
@@ -81,6 +59,8 @@ export const urlShortcuts = {
 // Handles special characters like apostrophes, parentheses, etc.
 export const toUrlSlug = (str: string) =>
   str
+    .normalize("NFD")
+    .replace(/[\u0300-\u036f]/g, "") // Fold accents (ü → u)
     .toLowerCase()
     .replace(/['']/g, "") // Remove apostrophes
     .replace(/[^a-z0-9\s-]/g, "") // Remove special chars except spaces and dashes

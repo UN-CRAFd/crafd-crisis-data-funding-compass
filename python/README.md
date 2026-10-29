@@ -42,13 +42,13 @@ It needs `AIRTABLE_API_KEY`, `AIRTABLE_BASE_ID` and `AIRTABLE_TABLE_ID_ORGANIZAT
 
 The app doesn't use these, and most no longer run as they are. They are kept for reference only.
 
-| Path                        | Status                                                                                                                                                   |
-| --------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `04_clean_member_states.py` | Reads `public/data/member-states.csv`, which no longer exists. The UN member-state list now lives in `src/server/repositories/memberStateRepository.ts`. |
-| `05_fetch_iati.py`          | Reads `public/data/organizations-table.json`, which no longer exists. See [`docs/IATI_INTEGRATION.md`](../docs/IATI_INTEGRATION.md).                     |
-| `iati_api/`                 | Exploratory IATI Datastore queries.                                                                                                                      |
-| `misc/`                     | One-off analyses of the old `organizations-nested.json` export.                                                                                          |
-| `check_*.py`                | Ad-hoc, read-only database checks.                                                                                                                       |
+| Path                        | Status                                                                                                                                              |
+| --------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `04_clean_member_states.py` | Reads `public/data/member-states.csv`, which no longer exists. The UN member states now come from `data/un_member_states.csv` (see `docs/DATA.md`). |
+| `05_fetch_iati.py`          | Reads `public/data/organizations-table.json`, which no longer exists. See [`docs/IATI_INTEGRATION.md`](../docs/IATI_INTEGRATION.md).                |
+| `iati_api/`                 | Exploratory IATI Datastore queries.                                                                                                                 |
+| `misc/`                     | One-off analyses of the old `organizations-nested.json` export.                                                                                     |
+| `check_*.py`                | Ad-hoc, read-only database checks.                                                                                                                  |
 
 ## Formatting
 

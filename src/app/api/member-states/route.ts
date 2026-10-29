@@ -5,13 +5,13 @@
  * Returns: string[]
  */
 
-import { findAllMemberStates } from "@/server/repositories/memberStateRepository";
+import { getCoreData } from "@/server/cache";
 import { NextResponse } from "next/server";
 
 export async function GET() {
   try {
-    const states = await findAllMemberStates();
-    return NextResponse.json(states, {
+    const { memberStates } = await getCoreData();
+    return NextResponse.json(memberStates, {
       headers: {
         "Cache-Control": "s-maxage=86400, stale-while-revalidate=86400",
       },

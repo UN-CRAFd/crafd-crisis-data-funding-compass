@@ -1,7 +1,7 @@
 "use client";
 
 import React from "react";
-import { getCountryAlpha2 } from "./CountryFlag";
+import { getCountryAlpha2, useCountryCodes } from "./CountryFlag";
 
 interface HeadquartersCountryProps {
   countryValue: string;
@@ -20,27 +20,26 @@ export default function HeadquartersCountry({
   FieldValue,
   renderValue,
 }: HeadquartersCountryProps): React.ReactElement | null {
+  useCountryCodes();
   if (!countryValue || countryValue.trim().length === 0) {
     return null;
   }
 
   const iso = getCountryAlpha2(countryValue);
   const label = countryValue;
-  const src = iso
-    ? `https://flagcdn.com/${iso}.svg`
-    : `https://flagcdn.com/${encodeURIComponent(label.toLowerCase())}.svg`;
 
   return (
     <Field label="Headquarters Country">
       <div className="flex items-center gap-2">
-        {/* Flag image */}
-        <img
-          src={src}
-          alt={`${label} flag`}
-          width={32}
-          height={24}
-          className="rounded border border-gray-200 shadow"
-        />
+        {iso && (
+          <img
+            src={`https://flagcdn.com/${iso}.svg`}
+            alt={`${label} flag`}
+            width={32}
+            height={24}
+            className="rounded border border-gray-200 shadow"
+          />
+        )}
         <FieldValue>{renderValue(countryValue)}</FieldValue>
       </div>
     </Field>

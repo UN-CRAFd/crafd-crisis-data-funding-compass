@@ -25,7 +25,7 @@ import React, {
 import { createPortal } from "react-dom";
 import ForceGraph2D from "react-force-graph-2d";
 import type { OrganizationWithProjects } from "../types/airtable";
-import { getCountryFlagUrl } from "./CountryFlag";
+import { getCountryFlagUrl, useCountryCodes } from "./CountryFlag";
 import FilterBar from "./FilterBar";
 import NoResultsModal from "./NoResultsModal";
 
@@ -130,6 +130,7 @@ const NetworkGraph: React.FC<NetworkGraphProps> = ({
   availableAgencies,
   onAgenciesChange = () => {},
 }) => {
+  useCountryCodes();
   const graphRef = useRef<any>(null);
   const [dimensions, setDimensions] = useState({ width: 800, height: 600 });
   const containerRef = useRef<HTMLDivElement>(null);

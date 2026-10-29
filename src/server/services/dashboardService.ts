@@ -593,7 +593,7 @@ function getFilterOptions(
 export async function processDashboardData(
   filters: DashboardFiltersDTO = {},
 ): Promise<DashboardDataDTO> {
-  // Single cached fetch — all 8 queries resolved in one round-trip (TTL 60s)
+  // Single cached fetch — all core queries resolved in one round-trip (TTL 60s)
   const [core, themeMappings] = await Promise.all([
     getCoreData(),
     getThemeMappings(),

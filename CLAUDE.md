@@ -12,7 +12,7 @@ Web app (pnpm):
 
 ```bash
 pnpm install
-pnpm dev          # usually already running on http://localhost:3000
+pnpm dev          # usually already running on http://localhost:3000; clears .next first
 pnpm build
 pnpm typecheck    # tsc --noEmit
 pnpm lint         # eslint
@@ -26,7 +26,9 @@ Tests cover logic only, not components:
 - pytest covers the pure functions of the 01b pipeline (`python/tests/`, run with `uv run pytest`).
 - `.github/workflows/ci.yml` runs typecheck, lint, both test suites and `pnpm build` on PRs and pushes to `main`. The build needs no database.
 
-For UI changes, also look at the running app (Playwright MCP is available for that).
+For UI changes, also look at the running app (Playwright MCP is available for that). Check that the page finishes loading and stays loaded, not just that it renders once.
+
+`pnpm dev` deletes `.next` before starting. A stale `.next` (a production build next to old dev output) once sent every page into an endless reload loop: "[Fast Refresh] rebuilding" repeating in the browser console and "✓ Compiled" repeating in the server log. If that ever happens, restart `pnpm dev`. Don't run `pnpm build` while the dev server is running.
 
 Python data pipeline (uv, Python ≥3.13):
 
@@ -47,13 +49,14 @@ Airtable → `python/01b_fetch_airtable_to_sql.py` → PostgreSQL schema `fundin
 - Each run **drops and recreates** the schema from `sql/schema/*.sql`, applied in filename order.
 - The script fetches every Airtable table first. The drop, create and all inserts then run in one transaction, so a failed run leaves the previous data in place. Keep it that way: no commits inside helpers, and no `BEGIN`/`COMMIT` in the schema files.
 - Safety checks run before the database is touched:
-  - All four `AIRTABLE_TABLE_ID_*` vars are required.
+  - All five `AIRTABLE_TABLE_ID_*` vars are required (projects, organizations, agencies, themes, donors).
   - Every table must return records.
   - No table may shrink below 50% of its current row count. Set `ALLOW_LARGE_DROP=1` to override for an intentional deletion.
 - All Airtable string values are whitespace-stripped on import.
 - Data-quality problems (missing keys, non-http links, projects with no organization) print as `::warning::` annotations on the Actions run. They don't fail the import.
 - Investment types are built from the Themes table, so missing theme data also empties the types.
 - Projects' `Investment Theme(s)` is a lookup of an old dropdown on Themes, not of the theme names, and the import ignores it. Project↔theme links come only from the Themes table's `Data Ecosystem Projects` record links.
+- Countries are matched on ISO alpha-3 codes, never on names. The code is the "ISO alpha-3" field of Airtable's Donors [High-level] table, which agencies and organization HQs link to; groups of funders have none. The pipeline stores it in `countries.iso_alpha3`, and loads the UN member states from `data/un_member_states.csv` (from UN-CRAFd/crafd-reference-datasets) into `un_member_states`. Member-state names and flags come from joining the two on the code.
 - `AIRTABLE_API_KEY` is read-only, by design. Airtable fixes made from scripts use a separate `AIRTABLE_WRITE_API_KEY` from `.env`, which is local only and never goes in CI.
 - IDs are deterministic UUIDs derived from Airtable record IDs.
 - A schema change touches three places: `sql/schema/`, the normalizer in `01b_…py`, and the repositories in `src/server/repositories/`.
@@ -69,7 +72,7 @@ Env vars differ by side:
 
 1. `db/index.ts`: the singleton `pg` pool (max 1 connection per serverless instance). It is the only module that may import `pg`.
 2. `repositories/`: raw SQL only, returning typed row shapes (`OrgRow`, …) with no business logic.
-3. `cache.ts`: `getCoreData()` runs all batch repository queries in parallel and caches the result with a 60s TTL, sharing one in-flight promise between concurrent callers. **API routes and services get data through `getCoreData()`, never from repositories directly.** One existing exception: `api/member-states` calls its repository directly.
+3. `cache.ts`: `getCoreData()` runs all batch repository queries in parallel and caches the result with a 60s TTL, sharing one in-flight promise between concurrent callers. **API routes and services get data through `getCoreData()`, never from repositories directly.**
 4. `services/`: business logic with no SQL. It assembles rows into DTOs, applies filters and computes stats. `dashboardService.processDashboardData(filters)` is the core function.
 5. `dto/`: response and filter shapes.
 6. `src/app/api/*/route.ts`: thin handlers. `/api/dashboard` accepts POST with a filters body, or GET for the unfiltered data.
@@ -78,10 +81,10 @@ The frontend still uses the legacy Airtable record shape. `server/utils.ts#build
 
 ### Client
 
-- `src/lib/data.ts` is the client data layer: thin `fetch` wrappers over `/api/*`, plus cached theme and member-state mappings. It also keeps the old function names (e.g. `processDashboardData`), which now call the API.
+- `src/lib/data.ts` is the client data layer: thin `fetch` wrappers over `/api/*`, plus cached theme, member-state and country-code mappings. `CountryFlag` looks flags up by ISO code through `useCountryCodes()`. It also keeps the old function names (e.g. `processDashboardData`), which now call the API.
 - `CrisisDataDashboardWrapper.tsx` owns routing and URL state and fetches the data. `CrisisDataDashboard.tsx` renders it.
 - Filter URL params and modal URL params (`org`, `asset`, `donor`) are deliberately independent: changing a modal never triggers a refetch or filter validation.
-- Filter params have short and long names: `d`/`donors`, `a`/`agencies`, `t`/`types`, `th`/`themes`, `q`/`search`, `sb`/`sortBy`, `sd`/`sortDirection`. Shared links use both forms, so keep reading both.
+- Filter params are the same on `/` and `/analytics`: `d` (donor slugs), `a` (agency slugs), `t` (investment-type slugs), `th` (theme keys), `q` (search), `sb`/`sd` (sort, dashboard only). Old long names (`donors`, `types`, …) are no longer read.
 - `src/lib/urlShortcuts.ts` maps investment-type labels to the short URL slugs.
 - `src/config/labels.json` holds all user-facing text, and both server and client code import it. Investment-type display names also come from here. Other copy lives in `src/config/*Descriptions.ts`.
 - The routes are `/` (dashboard), `/analytics` and `/methodology`.

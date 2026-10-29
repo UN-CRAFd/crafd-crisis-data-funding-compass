@@ -1,73 +1,56 @@
 "use client";
 
+import {
+  areCountryCodesLoaded,
+  ensureCountryCodesLoaded,
+  getCountryIsoAlpha3,
+} from "@/lib/data";
 import * as countries from "i18n-iso-countries";
-import enLocale from "i18n-iso-countries/langs/en.json";
 import { Globe } from "lucide-react";
+import { useEffect, useState } from "react";
 
-countries.registerLocale(enLocale);
+// Donor groups have no ISO code, so their flags are looked up by name
+const GROUP_FLAGS: Record<string, string> = {
+  "european union": "eu",
+  "african union": "aun",
+  "craf'd": "crafd",
+  "united nations": "un",
+};
 
 /**
- * Helper function to map country names to ISO alpha-2 codes for flag display
+ * Lower-case ISO alpha-2 code for a country's flag (or a key of the custom
+ * flags below). Countries are matched on their ISO alpha-3 code from the data,
+ * never on their name; until the codes have loaded, this returns null.
  */
 export function getCountryAlpha2(input: string): string | null {
-  let s = input.trim();
-  if (!s) return null;
+  const name = input.trim();
+  if (!name) return null;
 
-  // If already a 2-letter code
-  if (/^[A-Za-z]{2}$/.test(s)) return s.toLowerCase();
+  const iso3 = getCountryIsoAlpha3(name);
+  if (iso3) return countries.alpha3ToAlpha2(iso3)?.toLowerCase() ?? null;
 
-  // Try parentheses like "Country (GB)"
-  const paren = s.match(/\(([^)]+)\)/);
-  if (paren) {
-    const code = paren[1].trim();
-    if (/^[A-Za-z]{2}$/.test(code)) return code.toLowerCase();
+  const lower = name.toLowerCase().replace(/\u2019/g, "'");
+  if (GROUP_FLAGS[lower]) return GROUP_FLAGS[lower];
+  if (
+    lower.startsWith("united nations ") ||
+    lower.startsWith("office of the united nations ")
+  ) {
+    return "un";
   }
-
-  // Check known aliases BEFORE normalization (to preserve apostrophes, etc.)
-  const aliasLower = s.toLowerCase();
-  const knownAliases: Record<string, string> = {
-    usa: "us",
-    us: "us",
-    "u.s.": "us",
-    "u.s.a.": "us",
-    uk: "gb",
-    "u.k.": "gb",
-    "european union": "eu",
-    "craf'd": "crafd", // Regular apostrophe
-    "african union": "aun",
-    eu: "eu",
-    turkiye: "tr",
-    "united nations": "un",
-    un: "un",
-    "u.n.": "un",
-    "united nations (un)": "un",
-  };
-  // Also check for curly quote variant (U+2019)
-  if (aliasLower.includes("\u2019") && aliasLower.startsWith("craf")) {
-    return "crafd";
-  }
-  if (knownAliases[aliasLower]) return knownAliases[aliasLower];
-
-  // Normalize (remove diacritics) and try direct lookup by name
-  try {
-    s = s.normalize("NFD").replace(/[\u0300-\u036f]/g, "");
-  } catch {
-    /* ignore */
-  }
-
-  // The library expects exact English names; try direct and comma-first variant
-  const direct = countries.getAlpha2Code(s, "en");
-  if (direct) return direct.toLowerCase();
-
-  const commaFirst = s.split(",")[0].trim();
-  const commaLookup = countries.getAlpha2Code(commaFirst, "en");
-  if (commaLookup) return commaLookup.toLowerCase();
-
-  // Check if the string starts with "United Nations" (for various UN agencies)
-  if (aliasLower.startsWith("united nations ")) return "un";
-  if (aliasLower.startsWith("office of the united nations ")) return "un";
-
   return null;
+}
+
+/**
+ * Load the country codes and re-render once they are available. Call it in
+ * components that show flags.
+ */
+export function useCountryCodes(): void {
+  const [, setLoaded] = useState(areCountryCodesLoaded);
+  useEffect(() => {
+    if (!areCountryCodesLoaded()) {
+      ensureCountryCodesLoaded().then(() => setLoaded(true));
+    }
+  }, []);
 }
 
 /**
@@ -105,6 +88,7 @@ export function CountryFlag({
   height = 15,
   className = "",
 }: CountryFlagProps) {
+  useCountryCodes();
   const flagUrl = getCountryFlagUrl(country);
 
   if (!flagUrl) {

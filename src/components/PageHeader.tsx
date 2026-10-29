@@ -290,26 +290,9 @@ export default function PageHeader({
               >
                 <DropdownMenuItem
                   onClick={() => {
-                    const raw = searchParams?.toString() || "";
-                    const params = new URLSearchParams(raw);
-
-                    // Ensure dashboard uses short keys expected by the dashboard wrapper
-                    // Map long keys to short ones if present
-                    if (params.has("types") && !params.has("t")) {
-                      params.set("t", params.get("types") || "");
-                      params.delete("types");
-                    }
-                    if (params.has("themes") && !params.has("th")) {
-                      params.set("th", params.get("themes") || "");
-                      params.delete("themes");
-                    }
-                    if (params.has("q") && !params.has("search")) {
-                      params.set("search", params.get("q") || "");
-                    }
-
-                    const target = params.toString()
-                      ? `/?${params.toString()}`
-                      : "/";
+                    // Both pages use the same filter params
+                    const query = searchParams?.toString() || "";
+                    const target = query ? `/?${query}` : "/";
                     router.push(target);
                   }}
                   className={`cursor-pointer px-2 py-2 text-sm ${pathname === "/" ? "bg-slate-100 dark:bg-slate-700" : ""}`}
@@ -323,25 +306,8 @@ export default function PageHeader({
                 </DropdownMenuItem>
                 <DropdownMenuItem
                   onClick={() => {
-                    const raw = searchParams?.toString() || "";
-                    const params = new URLSearchParams(raw);
-
-                    // Analytics expects 'types' and 'themes' and 'q'
-                    if (params.has("t") && !params.has("types")) {
-                      params.set("types", params.get("t") || "");
-                      // keep 't' for backwards compatibility
-                    }
-                    if (params.has("th") && !params.has("themes")) {
-                      params.set("themes", params.get("th") || "");
-                      // keep 'th' as well
-                    }
-                    if (params.has("search") && !params.has("q")) {
-                      params.set("q", params.get("search") || "");
-                    }
-
-                    const target = params.toString()
-                      ? `/analytics?${params.toString()}`
-                      : "/analytics";
+                    const query = searchParams?.toString() || "";
+                    const target = query ? `/analytics?${query}` : "/analytics";
                     router.push(target);
                   }}
                   className={`cursor-pointer px-2 py-2 text-sm ${pathname === "/analytics" || pathname === "/analytics/" ? "bg-slate-100 dark:bg-slate-700" : ""}`}

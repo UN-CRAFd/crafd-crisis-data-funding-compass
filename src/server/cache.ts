@@ -1,7 +1,7 @@
 /**
  * Server-side TTL Cache
  *
- * Caches the results of the 5 core batch queries that power every endpoint.
+ * Caches the results of the core batch queries that power every endpoint.
  * The dataset is small (~92 orgs, ~226 projects) and changes only via an
  * offline data pipeline, so a 60-second TTL eliminates redundant DB traffic
  * without risking stale data.
@@ -12,6 +12,7 @@
 
 import type {
   AgencyRow,
+  CountryCodeRow,
   OrgAgencyRow,
   OrgProjectRow,
   OrgRow,
@@ -27,6 +28,7 @@ import {
   findAllProjectThemes,
 } from "./repositories";
 import { findAllAgencies } from "./repositories/agencyRepository";
+import { findAllCountryCodes } from "./repositories/countryRepository";
 import { findAllMemberStates } from "./repositories/memberStateRepository";
 import { findAllThemes } from "./repositories/themeRepository";
 
@@ -43,6 +45,7 @@ export interface CoreData {
   agencies: AgencyRow[];
   themes: ThemeRow[];
   memberStates: string[];
+  countryCodes: CountryCodeRow[];
 }
 
 // ─────────────────────────────────────────────────────────
@@ -65,6 +68,7 @@ async function loadAll(): Promise<CoreData> {
     agencies,
     themes,
     memberStates,
+    countryCodes,
   ] = await Promise.all([
     findAllOrganizations(),
     findAllOrgAgencies(),
@@ -74,6 +78,7 @@ async function loadAll(): Promise<CoreData> {
     findAllAgencies(),
     findAllThemes(),
     findAllMemberStates(),
+    findAllCountryCodes(),
   ]);
 
   return {
@@ -85,6 +90,7 @@ async function loadAll(): Promise<CoreData> {
     agencies,
     themes,
     memberStates,
+    countryCodes,
   };
 }
 

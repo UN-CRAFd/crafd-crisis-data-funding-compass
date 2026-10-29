@@ -26,3 +26,6 @@ export { findAllAgencies } from "./agencyRepository";
 export type { AgencyRow } from "./agencyRepository";
 
 export { findAllMemberStates } from "./memberStateRepository";
+
+export { findAllCountryCodes } from "./countryRepository";
+export type { CountryCodeRow } from "./countryRepository";
