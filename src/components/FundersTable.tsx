@@ -46,6 +46,7 @@ export default function FundersTable({
   const router = useRouter();
   const [query, setQuery] = useState("");
   const [sortKey, setSortKey] = useState<SortKey>("organizations");
+  const [includeUN, setIncludeUN] = useState(true);
 
   // Same definition as Insights' per-funder product count: distinct products
   // (`${id}-${projectName}`) of every organization that lists the funder.
@@ -53,6 +54,8 @@ export default function FundersTable({
     if (!organizations) return [];
     const byFunder = new Map<string, { orgs: Set<string>; products: Set<string> }>();
     organizations.forEach((org) => {
+      // Same UN-entity rule as Insights
+      if (!includeUN && org.type === "United Nations") return;
       (org.donorCountries ?? []).forEach((f) => {
         let entry = byFunder.get(f);
         if (!entry) {
@@ -70,7 +73,7 @@ export default function FundersTable({
         products: e.products.size,
       }))
       .sort((a, b) => a.funder.localeCompare(b.funder));
-  }, [organizations]);
+  }, [organizations, includeUN]);
 
   const visible = useMemo(() => {
     const q = query.trim().toLowerCase();
@@ -87,7 +90,9 @@ export default function FundersTable({
   }, [rows, query, sortKey]);
 
   const open = (funder: string) =>
-    router.push(`/insights?funders=${toUrlSlug(funder)}&un=1`);
+    router.push(
+      `/insights?funders=${toUrlSlug(funder)}`,
+    );
 
   const th = "px-4 py-2.5 text-xs font-semibold text-slate-500 dark:text-slate-400";
 
@@ -118,21 +123,46 @@ export default function FundersTable({
             </button>
           )}
         </div>
-        <Select value={sortKey} onValueChange={(v) => setSortKey(v as SortKey)}>
-          <SelectTrigger
-            aria-label="Sort funders"
-            className="h-9 w-full border-slate-200 bg-white text-sm dark:border-slate-700 dark:bg-slate-900 sm:w-[200px]"
-          >
-            <SelectValue />
-          </SelectTrigger>
-          <SelectContent>
-            {SORT_OPTIONS.map((o) => (
-              <SelectItem key={o.value} value={o.value}>
-                {o.label}
-              </SelectItem>
-            ))}
-          </SelectContent>
-        </Select>
+        <div className="flex flex-col gap-3 sm:flex-row sm:items-center">
+          <Select value={sortKey} onValueChange={(v) => setSortKey(v as SortKey)}>
+            <SelectTrigger
+              aria-label="Sort funders"
+              className="h-9 w-full border-slate-200 bg-white text-sm dark:border-slate-700 dark:bg-slate-900 sm:w-[200px]"
+            >
+              <SelectValue />
+            </SelectTrigger>
+            <SelectContent>
+              {SORT_OPTIONS.map((o) => (
+                <SelectItem key={o.value} value={o.value}>
+                  {o.label}
+                </SelectItem>
+              ))}
+            </SelectContent>
+          </Select>
+          <div className="flex items-center gap-1.5">
+            <button
+              type="button"
+              role="switch"
+              aria-checked={includeUN}
+              onClick={() => setIncludeUN((v) => !v)}
+              className={`flex items-center gap-2 rounded-full border px-3 py-1.5 text-xs transition-colors focus-visible:ring-2 focus-visible:ring-[var(--brand-primary)] focus-visible:outline-none ${
+                includeUN
+                  ? "border-[var(--brand-border)] bg-[var(--brand-bg-lighter)] text-slate-800 dark:border-[var(--brand-border)] dark:bg-slate-800 dark:text-slate-200"
+                  : "border-slate-200 bg-white text-slate-600 hover:border-slate-300 dark:border-slate-700 dark:bg-slate-800 dark:text-slate-400"
+              }`}
+            >
+              <span
+                aria-hidden="true"
+                className={`h-4 w-7 rounded-full transition-colors ${includeUN ? "bg-[var(--brand-primary)]" : "bg-slate-300 dark:bg-slate-600"}`}
+              >
+                <span
+                  className={`block h-4 w-4 rounded-full bg-white shadow transition-transform ${includeUN ? "translate-x-3" : "translate-x-0"}`}
+                />
+              </span>
+              <span className="whitespace-nowrap">Include UN entities</span>
+            </button>
+          </div>
+        </div>
       </div>
       <div className="overflow-x-auto rounded-xl border border-slate-200 bg-white dark:border-slate-700 dark:bg-slate-900">
         <table className="w-full min-w-[640px] border-collapse text-sm">

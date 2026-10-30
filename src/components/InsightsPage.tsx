@@ -132,6 +132,11 @@ export default function InsightsPage() {
   const [showAllSimilar, setShowAllSimilar] = useState(false);
   const [showAllSharedOrgs, setShowAllSharedOrgs] = useState(false);
   const [includeUN, setIncludeUN] = useState(false);
+  const [showAllAgencies, setShowAllAgencies] = useState(false);
+
+  useEffect(() => {
+    setShowAllAgencies(false);
+  }, [selectedFunders]);
 
   // --------------- data fetching ----------------------------------------
 
@@ -1103,7 +1108,7 @@ export default function InsightsPage() {
                       </h1>
                       {agencies.length > 0 && (
                         <div className="flex flex-wrap gap-1.5">
-                          {agencies.slice(0, 6).map((a) => (
+                          {(showAllAgencies ? agencies : agencies.slice(0, 6)).map((a) => (
                             <span
                               key={a}
                               className="rounded-full bg-slate-100 px-2.5 py-0.5 text-xs text-slate-600 dark:bg-slate-700 dark:text-slate-300"
@@ -1112,9 +1117,15 @@ export default function InsightsPage() {
                             </span>
                           ))}
                           {agencies.length > 6 && (
-                            <span className="rounded-full bg-slate-100 px-2.5 py-0.5 text-xs text-slate-500 dark:bg-slate-700">
-                              +{agencies.length - 6} more
-                            </span>
+                            <button
+                              type="button"
+                              onClick={() => setShowAllAgencies((v) => !v)}
+                              className="cursor-pointer rounded-full bg-slate-100 px-2.5 py-0.5 text-xs text-slate-500 transition-colors hover:bg-slate-200 hover:text-slate-700 dark:bg-slate-700 dark:hover:bg-slate-600 dark:hover:text-slate-200"
+                            >
+                              {showAllAgencies
+                                ? "Show fewer"
+                                : `+${agencies.length - 6} more`}
+                            </button>
                           )}
                         </div>
                       )}
