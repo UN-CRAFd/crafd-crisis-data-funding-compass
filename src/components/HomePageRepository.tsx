@@ -9,6 +9,7 @@ import React, {
 
   useState,
 } from "react";
+import { useSearchParams } from "next/navigation";
 import FilterBar from "@/components/FilterBar";
 import OrganizationModal from "@/components/OrganizationModal";
 import ProjectModal from "@/components/ProjectModal";
@@ -95,6 +96,7 @@ const HomePageRepository = forwardRef<HomePageRepositoryHandle>(
     const { showGeneralContributions, setShowGeneralContributions } =
       useGeneralContributions();
 
+    const searchParams = useSearchParams();
     const [filters, setFiltersState] = useState<RepositoryFilters>(DEFAULT_FILTERS);
     const [dashboardData, setDashboardData] = useState<any>(null);
     const [loading, setLoading] = useState(true);
@@ -114,6 +116,29 @@ const HomePageRepository = forwardRef<HomePageRepositoryHandle>(
     useEffect(() => {
       setGeneralContributionsEnabled(showGeneralContributions);
     }, [showGeneralContributions]);
+
+    // Apply filters from URL params on mount (?type=&theme=&donor=&q=&single=1&fiveplus=1)
+    useEffect(() => {
+      const list = (key: string) =>
+        (searchParams.get(key) ?? "")
+          .split(",")
+          .map((v) => v.trim())
+          .filter(Boolean);
+      const q = searchParams.get("q") ?? "";
+      const urlFilters: Partial<RepositoryFilters> = {};
+      if (list("type").length) urlFilters.types = list("type");
+      if (list("theme").length) urlFilters.themes = list("theme");
+      if (list("donor").length) urlFilters.donors = list("donor");
+      if (q) {
+        urlFilters.searchQuery = q;
+        urlFilters.appliedSearchQuery = q;
+      }
+      if (searchParams.get("single") === "1") urlFilters.singleFunderOrg = true;
+      if (searchParams.get("fiveplus") === "1") urlFilters.fivePlusFunderOrg = true;
+      if (Object.keys(urlFilters).length === 0) return;
+      setFiltersState({ ...DEFAULT_FILTERS, ...urlFilters });
+      setExpandedOrgs(new Set());
+    }, []);
 
     // BaseModal only fades out on close and relies on these events to unmount.
     // Without listeners its transparent full-screen overlay stays mounted and blocks all clicks.
@@ -432,15 +457,11 @@ const HomePageRepository = forwardRef<HomePageRepositoryHandle>(
 
     return (
       <section
-        id="repository"
         className="mx-auto max-w-[82rem] px-4 pb-16 sm:px-6 lg:px-8"
-        aria-label="Repository"
+        aria-label="Organizations"
       >
         {/* Section title row */}
-        <div className="mb-4 flex items-center justify-between">
-          <h2 className="text-lg font-semibold text-slate-900 dark:text-white">
-            Repository
-          </h2>
+        <div className="mb-4 flex items-center justify-end">
           <div className="flex items-center gap-3">
             {/* General contributions toggle: only once a funder is selected */}
             {filters.donors.length > 0 && (

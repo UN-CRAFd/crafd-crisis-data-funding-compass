@@ -1,7 +1,7 @@
 "use client";
 
 import { Roboto } from "next/font/google";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import {
   DropdownMenu,
@@ -23,7 +23,7 @@ const headerFont = Roboto({
 
 const NAV_ITEMS = [
   { label: "Home", href: "/" },
-  { label: "Repository", href: "/#repository" },
+  { label: "Organizations", href: "/organizations" },
   { label: "Insights", href: "/insights" },
   { label: "About", href: "/methodology" },
 ];
@@ -32,22 +32,6 @@ export default function PageHeader() {
   const pathname = usePathname();
   const router = useRouter();
   const [isCompassRotating, setIsCompassRotating] = useState(false);
-  const [repositoryVisible, setRepositoryVisible] = useState(false);
-
-  useEffect(() => {
-    if (pathname !== "/") {
-      setRepositoryVisible(false);
-      return;
-    }
-    const el = document.getElementById("repository");
-    if (!el) return;
-    const observer = new IntersectionObserver(
-      ([entry]) => setRepositoryVisible(entry.isIntersecting),
-      { rootMargin: "-80px 0px 0px 0px", threshold: 0 },
-    );
-    observer.observe(el);
-    return () => observer.disconnect();
-  }, [pathname]);
 
   const handleCompassClick = () => {
     setIsCompassRotating(true);
@@ -55,22 +39,11 @@ export default function PageHeader() {
   };
 
   const handleNavClick = (href: string) => {
-    if (href === "/#repository") {
-      if (pathname === "/") {
-        document
-          .getElementById("repository")
-          ?.scrollIntoView({ behavior: "smooth" });
-      } else {
-        router.push("/#repository");
-      }
-    } else {
-      router.push(href);
-    }
+    router.push(href);
   };
 
   const isActive = (href: string) => {
-    if (href === "/") return pathname === "/" && !repositoryVisible;
-    if (href === "/#repository") return pathname === "/" && repositoryVisible;
+    if (href === "/") return pathname === "/";
     return pathname.startsWith(href);
   };
 

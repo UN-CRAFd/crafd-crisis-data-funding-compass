@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useMemo, useRef, useState } from "react";
+import { useEffect, useMemo, useState } from "react";
 import { useRouter } from "next/navigation";
 import { ArrowRight, Info } from "lucide-react";
 import {
@@ -10,11 +10,9 @@ import {
   TooltipTrigger,
 } from "@/components/ui/tooltip";
 import PageHeader from "@/components/PageHeader";
-import HomePageRepository, {
-  type HomePageRepositoryHandle,
-} from "@/components/HomePageRepository";
+import FundersTable from "@/components/FundersTable";
 import { useGeneralContributions } from "@/contexts/GeneralContributionsContext";
-import { processDashboardData } from "@/lib/data";
+import { processDashboardData, setGeneralContributionsEnabled } from "@/lib/data";
 import labels from "@/config/labels.json";
 import { INVESTMENT_TYPE_DESCRIPTIONS } from "@/config/investmentDescriptions";
 import type { OrganizationWithProjects, ProjectData } from "@/types/airtable";
@@ -155,25 +153,6 @@ function computeStats(
   };
 }
 
-// Fixed-height number slot (h-9 = text-3xl line height) so placeholders match loaded cards
-function GlanceNumber({ value }: { value: number | undefined }) {
-  if (value === undefined) {
-    return (
-      <div className="flex h-9 items-center" aria-hidden="true">
-        <div className="h-7 w-16 animate-pulse rounded bg-slate-200 dark:bg-slate-700" />
-      </div>
-    );
-  }
-  return (
-    <span
-      className="block h-9 text-3xl font-bold"
-      style={{ color: "var(--brand-primary)" }}
-    >
-      {value}
-    </span>
-  );
-}
-
 // ─────────────────────────────────────────────────────────
 // Main component
 // ─────────────────────────────────────────────────────────
@@ -181,11 +160,17 @@ function GlanceNumber({ value }: { value: number | undefined }) {
 export default function HomePage() {
   const { showGeneralContributions } = useGeneralContributions();
   const router = useRouter();
-  const repoRef = useRef<HomePageRepositoryHandle>(null);
 
   const [stats, setStats] = useState<ComputedStats | null>(null);
+  const [organizations, setOrganizations] = useState<OrganizationWithProjects[] | null>(null);
   const [lastUpdated, setLastUpdated] = useState<string | null>(null);
   const loading = stats === null;
+
+  // Keep the module-level general-contributions flag in sync with the context
+  // (previously done by the repository section, which no longer lives on Home)
+  useEffect(() => {
+    setGeneralContributionsEnabled(showGeneralContributions);
+  }, [showGeneralContributions]);
 
   // Fetch unfiltered dashboard data for homepage stats
   useEffect(() => {
@@ -195,6 +180,7 @@ export default function HomePage() {
       .then((data) => {
         if (cancelled) return;
         if (data?.allOrganizations) {
+          setOrganizations(data.allOrganizations as OrganizationWithProjects[]);
           setStats(computeStats(
             data.allOrganizations as OrganizationWithProjects[],
             data.stats ?? null,
@@ -217,19 +203,6 @@ export default function HomePage() {
       .catch(() => {});
     return () => { cancelled = true; };
   }, []);
-
-  // Scroll to repository and apply a filter
-  const goToRepository = (filters?: Parameters<HomePageRepositoryHandle["resetAndSetFilters"]>[0]) => {
-    if (filters) {
-      repoRef.current?.resetAndSetFilters(filters);
-    }
-    setTimeout(() => {
-      document
-        .getElementById("repository")
-        ?.scrollIntoView({ behavior: "smooth" });
-    }, 50);
-  };
-
 
   // "Browse by theme" type cards
   const maxProductCount = useMemo(
@@ -257,9 +230,56 @@ export default function HomePage() {
             support is thin. Compiled from public sources, it shows who supports
             whom, not how much.
           </p>
+        </section>
 
-          {/* Question cards */}
-          <div className="mt-6 grid grid-cols-1 gap-4 md:grid-cols-2">
+        {/* ── 2. At a glance ── */}
+        <section className="pb-12">
+          <h2 className="mb-4 text-base font-semibold uppercase tracking-wide text-slate-500 dark:text-slate-400">
+            At a glance
+          </h2>
+          {(
+            <>
+              {/* Key figures */}
+              <div className="grid grid-cols-1 gap-4 sm:grid-cols-3">
+                {(
+                  [
+                    { count: stats?.totalFunders, label: "funders" },
+                    { count: stats?.totalOrgs, label: "organizations" },
+                    { count: stats?.totalProducts, label: "data products" },
+                  ] as const
+                ).map(({ count, label }) => (
+                  <div
+                    key={label}
+                    className="rounded-xl border border-slate-200 bg-white p-5 dark:border-slate-700 dark:bg-slate-900"
+                  >
+                    <div className="flex h-9 items-center sm:h-10">
+                      {count === undefined ? (
+                        <div
+                          aria-hidden="true"
+                          className="h-7 w-20 animate-pulse rounded bg-slate-200 dark:bg-slate-700 sm:h-8"
+                        />
+                      ) : (
+                        <span
+                          className="text-3xl leading-none font-bold sm:text-4xl"
+                          style={{ color: "var(--brand-primary)" }}
+                        >
+                          {count}
+                        </span>
+                      )}
+                    </div>
+                    <p className="mt-1 text-sm text-slate-600 dark:text-slate-400">
+                      {label}
+                    </p>
+                  </div>
+                ))}
+              </div>
+            </>
+          )}
+        </section>
+
+        {/* ── 3. Question cards ── */}
+        <section className="pb-12">
+          <div className="grid grid-cols-1 gap-4 md:grid-cols-3">
             {(
               [
                 {
@@ -271,14 +291,6 @@ export default function HomePage() {
                   title: "Where do funders overlap?",
                   body: "Compare funders side by side and see which organizations they share.",
                   action: () => router.push("/insights"),
-                },
-                {
-                  title: "Who supports an organization or data product?",
-                  body: "Search and filter every organization, its data products and their funders.",
-                  action: () =>
-                    document
-                      .getElementById("repository")
-                      ?.scrollIntoView({ behavior: "smooth" }),
                 },
                 {
                   title: "What kinds of data work get funded?",
@@ -293,7 +305,7 @@ export default function HomePage() {
               <button
                 key={title}
                 onClick={action}
-                className="group flex flex-col rounded-xl border border-slate-200 bg-white p-5 text-left transition-all duration-200 hover:border-[var(--brand-border)] hover:bg-[var(--brand-primary-light)] hover:shadow-md dark:border-slate-700 dark:bg-slate-900 dark:hover:border-[var(--brand-border)] dark:hover:bg-[var(--brand-primary-light)]"
+                className="group flex flex-col rounded-xl border border-slate-200 bg-white px-4 py-3 text-left transition-all duration-200 hover:border-[var(--brand-border)] hover:bg-[var(--brand-primary-light)] hover:shadow-md dark:border-slate-700 dark:bg-slate-900 dark:hover:border-[var(--brand-border)] dark:hover:bg-[var(--brand-primary-light)]"
               >
                 <div className="flex items-center gap-1.5">
                   <span className="text-sm font-semibold text-slate-900 transition-colors duration-200 dark:text-white dark:group-hover:text-slate-900">
@@ -301,115 +313,12 @@ export default function HomePage() {
                   </span>
                   <ArrowRight className="h-3.5 w-3.5 shrink-0 text-[var(--brand-primary)] transition-all duration-200 group-hover:translate-x-0.5 group-hover:text-slate-900" />
                 </div>
-                <p className="mt-1.5 text-xs leading-relaxed text-slate-500 transition-colors duration-200 group-hover:text-slate-800 dark:text-slate-400 dark:group-hover:text-slate-800">
+                <p className="mt-1 text-xs leading-relaxed text-slate-500 transition-colors duration-200 group-hover:text-slate-800 dark:text-slate-400 dark:group-hover:text-slate-800">
                   {body}
                 </p>
               </button>
             ))}
           </div>
-        </section>
-
-        {/* ── 2. At a glance ── */}
-        <section className="pb-12">
-          <h2 className="mb-4 text-base font-semibold uppercase tracking-wide text-slate-500 dark:text-slate-400">
-            At a glance
-          </h2>
-          {(
-            <>
-              {/* Headline numbers strip */}
-              <div className="mb-4 flex flex-wrap items-center gap-x-2 gap-y-1 rounded-xl border border-slate-200 bg-white px-4 py-2.5 text-sm text-slate-600 dark:border-slate-700 dark:bg-slate-900 dark:text-slate-400">
-                {(
-                  [
-                    { count: stats?.totalFunders, label: "funders" },
-                    { count: stats?.totalOrgs, label: "organizations" },
-                    { count: stats?.totalProducts, label: "data products" },
-                  ] as const
-                ).map(({ count, label }, i) => (
-                  <span key={label} className="inline-flex items-center gap-2">
-                    {i > 0 && (
-                      <span aria-hidden="true" className="text-slate-300 dark:text-slate-600">
-                        ·
-                      </span>
-                    )}
-                    <span className="inline-flex h-5 items-center gap-1.5">
-                      {count === undefined ? (
-                        <span
-                          aria-hidden="true"
-                          className="inline-block h-4 w-8 animate-pulse rounded bg-slate-200 dark:bg-slate-700"
-                        />
-                      ) : (
-                        <strong
-                          className="font-bold"
-                          style={{ color: "var(--brand-primary)" }}
-                        >
-                          {count}
-                        </strong>
-                      )}
-                      <span>{label}</span>
-                    </span>
-                  </span>
-                ))}
-              </div>
-
-              {/* Row 2: org cards + CTA */}
-              <div className="grid grid-cols-1 gap-4 sm:grid-cols-3">
-                <div className="flex flex-col justify-between rounded-xl border border-slate-200 bg-white p-5 dark:border-slate-700 dark:bg-slate-900">
-                  <div>
-                    <GlanceNumber value={stats?.singleFunderOrgs} />
-                    <p className="mt-1 text-sm text-slate-600 dark:text-slate-400">
-                      organizations rely on a single documented funder.
-                    </p>
-                  </div>
-                  <button
-                    onClick={() => goToRepository({ singleFunderOrg: true })}
-                    className="mt-4 inline-flex items-center gap-1 text-xs font-medium transition-opacity hover:opacity-75"
-                    style={{ color: "var(--brand-primary)" }}
-                  >
-                    See which ones
-                    <ArrowRight className="h-3 w-3" />
-                  </button>
-                </div>
-
-                <div className="flex flex-col justify-between rounded-xl border border-slate-200 bg-white p-5 dark:border-slate-700 dark:bg-slate-900">
-                  <div>
-                    <GlanceNumber value={stats?.fivePlusFunderOrgs} />
-                    <p className="mt-1 text-sm text-slate-600 dark:text-slate-400">
-                      organizations are supported by five or more funders.
-                    </p>
-                  </div>
-                  <button
-                    onClick={() => goToRepository({ fivePlusFunderOrg: true })}
-                    className="mt-4 inline-flex items-center gap-1 text-xs font-medium transition-opacity hover:opacity-75"
-                    style={{ color: "var(--brand-primary)" }}
-                  >
-                    See which ones
-                    <ArrowRight className="h-3 w-3" />
-                  </button>
-                </div>
-
-                <div className="flex flex-col justify-between rounded-xl border border-slate-200 bg-white p-5 dark:border-slate-700 dark:bg-slate-900">
-                  <div>
-                    <p className="text-sm font-semibold text-slate-800 dark:text-slate-200">
-                      Help us fill the gaps
-                    </p>
-                    <p className="mt-1 text-sm text-slate-600 dark:text-slate-400">
-                      Know who funds an organization or data product we&apos;re
-                      missing? Share it with us.
-                    </p>
-                  </div>
-                  {/* TODO: link to information-request form once it exists */}
-                  <a
-                    href="#"
-                    className="mt-4 inline-flex items-center gap-1 text-xs font-medium transition-opacity hover:opacity-75"
-                    style={{ color: "var(--brand-primary)" }}
-                  >
-                    Share information
-                    <ArrowRight className="h-3 w-3" />
-                  </a>
-                </div>
-              </div>
-            </>
-          )}
         </section>
 
         {/* ── 4. Browse by type ── */}
@@ -452,7 +361,11 @@ export default function HomePage() {
                     return (
                       <button
                         key={key}
-                        onClick={() => goToRepository({ types: [typeName] })}
+                        onClick={() =>
+                          router.push(
+                            `/organizations?type=${encodeURIComponent(typeName)}`,
+                          )
+                        }
                         className="group flex flex-col rounded-xl border border-slate-200 bg-white p-4 text-left transition-all hover:border-[var(--brand-primary)] hover:shadow-sm dark:border-slate-700 dark:bg-slate-900"
                       >
                         <div className="flex items-center gap-1.5">
@@ -503,11 +416,9 @@ export default function HomePage() {
         )}
       </div>
 
-      {/* ── 5. Repository ── */}
-      <div className="mt-4 border-t border-slate-200 bg-white pt-10 dark:border-slate-700 dark:bg-slate-950">
-        <div className="mx-auto max-w-[82rem] px-4 sm:px-6 lg:px-8">
-          <HomePageRepository ref={repoRef} />
-        </div>
+      {/* ── 5. Funders ── */}
+      <div className="mx-auto max-w-[82rem] px-4 sm:px-6 lg:px-8">
+        <FundersTable organizations={organizations} />
       </div>
 
       {/* ── Footer ── */}

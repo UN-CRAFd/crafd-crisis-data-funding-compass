@@ -118,7 +118,7 @@ export default function InsightsPage() {
   const [pendingFunders, setPendingFunders] = useState<string[]>([]);
   const [funderSearch, setFunderSearch] = useState("");
   const [hasShownInsights, setHasShownInsights] = useState(false);
-  const [showNetwork, setShowNetwork] = useState(false);
+  const [showNetwork, setShowNetwork] = useState(true);
   const [isInitialized, setIsInitialized] = useState(false);
   const [addFunderOpen, setAddFunderOpen] = useState(false);
   const [addFunderSearch, setAddFunderSearch] = useState("");
